@@ -1,13 +1,13 @@
 ---
-title: カスタム属性の作成 (Visual Basic)
+title: カスタム属性の作成
 ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
-ms.openlocfilehash: 3b1b03f69229bd4d824d6fff734b83400c2aab44
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: MT
+ms.openlocfilehash: 84b400c2fa1b2d4019eec32092f954d680e64978
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524289"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400695"
 ---
 # <a name="creating-custom-attributes-visual-basic"></a>カスタム属性の作成 (Visual Basic)
 
@@ -66,9 +66,9 @@ End Class
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Reflection>
-- [Visual Basic のプログラミング ガイド](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic プログラミング ガイド](../../index.md)
 - [カスタム属性の記述](../../../../standard/attributes/writing-custom-attributes.md)
-- [リフレクション (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [属性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
-- [リフレクションを使用した属性へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
-- [AttributeUsage (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
+- [リフレクション (Visual Basic)](../reflection.md)
+- [属性 (Visual Basic)](../../../language-reference/attributes.md)
+- [リフレクションを使用した属性へのアクセス (Visual Basic)](accessing-attributes-by-using-reflection.md)
+- [AttributeUsage (Visual Basic)](attributeusage.md)

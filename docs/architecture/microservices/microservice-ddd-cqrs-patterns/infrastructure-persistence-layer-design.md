@@ -2,12 +2,12 @@
 title: インフラストラクチャの永続レイヤーの設計
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | インフラストラクチャの永続レイヤーの設計でリポジトリ パターンを調べる。
 ms.date: 10/08/2018
-ms.openlocfilehash: 76f545403a1b595ce7a541a96d212b9406d89c10
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3c18582eb5db61a61b366c06f361d297e698b39a
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674119"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100848"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>インフラストラクチャの永続レイヤーの設計
 
@@ -33,9 +33,11 @@ ms.locfileid: "68674119"
 
 もう一度強調しますが、図 7-17 に示すように、集約ルートごとにリポジトリを 1 つのみ定義することが重要です。 集約内のすべてのオブジェクト間のトランザクションの一貫性を維持するという集約ルートの目標を達成するため、データベース内の各テーブルのリポジトリは作成しません。
 
-![ドメイン レイヤーとインフラストラクチャ レイヤー間のリレーションシップ:バイヤー集約は IBuyerRepository に依存し、Order Aggregate は IOrderRepository インターフェイスに依存し、これらのインターフェイスは UnitOfWork に依存する対応するリポジトリによってインフラストラクチャ レイヤーに実装され、データ層のテーブルにアクセスする場所にも実装されます。](./media/image18.png)
+![ドメインとその他のインフラストラクチャの関係を示す図。](./media/infrastructure-persistence-layer-design/repository-aggregate-database-table-relationships.png)
 
 **図 7-17**。 リポジトリ、集約、およびデータベース テーブル間のリレーションシップ
+
+上の図は、ドメインとインフラストラクチャのレイヤー間の関係を示しています。バイヤー集約は IBuyerRepository に依存し、Order Aggregate は IOrderRepository インターフェイスに依存し、これらのインターフェイスは UnitOfWork に依存する対応するリポジトリによってインフラストラクチャ レイヤーに実装され、データ層のテーブルにアクセスする場所にも実装されます。
 
 ### <a name="enforce-one-aggregate-root-per-repository"></a>リポジトリごとに 1 つの集約ルートを適用
 
@@ -108,9 +110,6 @@ eShopOnContainers に実装されたリポジトリは、その変更追跡を�
 
 ### <a name="repository-pattern"></a>リポジトリ パターン
 
-- **リポジトリ パターン** \
-  <https://deviq.com/repository-pattern/>
-
 - **Edward Hieatt、Rob Mee。リポジトリ パターン。** \
   <https://martinfowler.com/eaaCatalog/repository.html>
 
@@ -130,4 +129,4 @@ eShopOnContainers に実装されたリポジトリは、その変更追跡を�
 
 >[!div class="step-by-step"]
 >[前へ](domain-events-design-implementation.md)
->[次へ](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+>[次へ](infrastructure-persistence-layer-implementation-entity-framework-core.md)

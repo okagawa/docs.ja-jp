@@ -15,12 +15,12 @@ helpviewer_keywords:
 - SortedList class, culture-insensitive string operations
 - culture parameter
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
-ms.openlocfilehash: 5bd6e49f23ca5b694664393f3eb18cc72ada7bdd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 377fa58e052e8f8e35a546c21fe2b4fb00cb103d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120815"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288265"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>カルチャの影響を受けないコレクションの操作の実行
 
@@ -78,7 +78,6 @@ internalHashtable = new Hashtable(new CaseInsensitiveHashCodeProvider
 `SortedList`は、キーによって並べ替えられ、キーとインデックスを使ってアクセスできる、キーと値のペアのコレクションを表します。 文字列がキーであるときに `SortedList` を使用すると、並べ替えと検索が `Thread.CurrentCulture` プロパティの影響を受けることがあります。 `SortedList` でカルチャを認識しない動作を実行するには、`comparer` パラメーターを受け取るコンストラクターの 1 つを使用して `SortedList` を作成します。 `comparer` パラメーターは、キーの比較に使用される <xref:System.Collections.IComparer> の実装を指定します。 このパラメーターには、キーを比較するために `CultureInfo.InvariantCulture` を使用するカスタム comparer クラスを指定してください。 次の例は、カルチャを認識しないカスタム comparer クラスです。これは `SortedList`コンストラクターの `comparer` パラメーターとして指定できます。
 
 ```vb
-Imports System
 Imports System.Collections
 Imports System.Globalization
 
@@ -138,7 +137,7 @@ internal class InvariantComparer : IComparer
 
 `ArrayList.Sort` メソッドのオーバーロードは、`Thread.CurrentCulture`プロパティを使用して、カルチャを認識する並べ替えを既定で実行します。 結果は、さまざまな並べ替え順序のためカルチャによって変わることがあります。 カルチャを認識した動作を回避するには、`IComparer`実装を受け入れるこのメソッドのオーバーロードを使用します。 `comparer` パラメーターには、`CultureInfo.InvariantCulture` を使用するカスタム invariant comparer クラスを指定してください。 カスタム invariant comparer クラスの例は、「[SortedList クラスの使用](#cpconperformingculture-insensitivestringoperationsincollectionsanchor1)」のトピックをご覧ください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Collections.CaseInsensitiveComparer>
 - <xref:System.Collections.CaseInsensitiveHashCodeProvider>
@@ -146,5 +145,5 @@ internal class InvariantComparer : IComparer
 - <xref:System.Collections.SortedList>
 - <xref:System.Collections.Hashtable>
 - <xref:System.Collections.IComparer>
-- [カルチャを認識しない文字列操作の実行](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+- [カルチャを認識しない文字列操作の実行](performing-culture-insensitive-string-operations.md)
 - <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType>

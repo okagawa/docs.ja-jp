@@ -1,13 +1,13 @@
 ---
-title: '方法: 任意の単語またはフィールドを基準にテキスト データの並べ替えまたはフィルター処理を実行する (LINQ) (Visual Basic)'
+title: '方法: 任意の単語またはフィールドを基準にテキスト データの並べ替えまたはフィルター処理を実行する (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: fa9efc51f72a47acfa32d42fc9ff8e5aadf61721
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: MT
+ms.openlocfilehash: 798f30d39b4f805001c8c28b9ad6212061550775
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524129"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397727"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>方法: 任意の単語またはフィールドを基準にテキスト データの並べ替えまたはフィルター処理を実行する (LINQ) (Visual Basic)
 
@@ -15,7 +15,7 @@ ms.locfileid: "72524129"
 
 ### <a name="to-create-a-file-that-contains-data"></a>データを含むファイルを作成するには
 
-トピック「[方法: 異種ファイルのコンテンツを結合する (LINQ) (Visual Basic)」の「方法: コンテンツ](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)をソリューションフォルダーに保存する」を参照してください。
+「[方法:異種ファイルのコンテンツを結合する (LINQ) (Visual Basic)](how-to-join-content-from-dissimilar-files-linq.md)」トピックから scores.csv のデータをコピーし、ソリューション フォルダーに保存します。
 
 ## <a name="example"></a>例
 
@@ -70,12 +70,12 @@ End Class
 ' 115, 35, 72, 91, 70
 ```
 
-また、この例では、関数からクエリ変数を返す方法も示しています。
+この例では、関数からクエリ変数を返す方法についても示します。
 
-## <a name="compiling-the-code"></a>コードのコンパイル
+## <a name="compile-the-code"></a>コードのコンパイル
 
-VB.NET コンソールアプリケーションプロジェクトを作成します。このプロジェクトには、名前空間の `Imports` ステートメントが含まれています。
+System.Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソール アプリケーション プロジェクトを作成します。
 
 ## <a name="see-also"></a>関連項目
 
-- [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ と文字列 (Visual Basic)](linq-and-strings.md)

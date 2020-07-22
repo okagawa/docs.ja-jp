@@ -1,5 +1,5 @@
 ---
-title: RemoveHandler ステートメント (Visual Basic)
+title: RemoveHandler ステートメント
 ms.date: 07/20/2015
 f1_keywords:
 - vb.RemoveHandlerMethod
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - RemoveHandler keyword [Visual Basic]
 - RemoveHandler statement [Visual Basic]
 ms.assetid: 647cd825-e877-4910-b4f1-8d168beebe6a
-ms.openlocfilehash: 47f35bd76d7734878e7b5b206b4aecd856276593
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
-ms.translationtype: MT
+ms.openlocfilehash: 3514a79f2430b148e6a3727b83029b4e207a677b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582022"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404253"
 ---
 # <a name="removehandler-statement"></a>RemoveHandler ステートメント
-イベントとイベントハンドラーの間の関連付けを削除します。  
+イベントとイベント ハンドラー間の関連付けを削除します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,17 +33,17 @@ RemoveHandler event, AddressOf eventhandler
 |`eventhandler`|イベントを現在処理しているプロシージャの名前。|  
   
 ## <a name="remarks"></a>Remarks  
- @No__t_0 および `RemoveHandler` ステートメントを使用すると、プログラムの実行中に、特定のイベントのイベント処理をいつでも開始および停止できます。  
+ `AddHandler` および `RemoveHandler` ステートメントを使用すると、プログラムの実行中に、特定のイベントのイベント処理をいつでも開始および停止できます。  
   
 > [!NOTE]
-> カスタムイベントの場合は、`RemoveHandler` ステートメントによって、イベントの `RemoveHandler` アクセサーが呼び出されます。 カスタムイベントの詳細については、「 [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md)」を参照してください。  
+> カスタム イベントの場合は、`RemoveHandler` ステートメントによってイベントの `RemoveHandler` アクセサーが呼び出されます。 カスタム イベントの詳細については、「[Event ステートメント](event-statement.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [AddHandler ステートメント](../../../visual-basic/language-reference/statements/addhandler-statement.md)
-- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
-- [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)
-- [イベント](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [AddHandler ステートメント](addhandler-statement.md)
+- [Handles](handles-clause.md)
+- [Event ステートメント](event-statement.md)
+- [イベント](../../programming-guide/language-features/events/index.md)

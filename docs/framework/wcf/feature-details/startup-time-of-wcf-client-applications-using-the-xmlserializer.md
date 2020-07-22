@@ -2,12 +2,12 @@
 title: '方法: XmlSerializer を使用する WCF クライアント アプリケーションの起動時間を短縮する'
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
-ms.openlocfilehash: f8766a5dfa2bcfc715a0f0e21274f7c6ac04ad15
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 91712963908ecc56ff17fbac028389207544b82f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944887"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600258"
 ---
 # <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>方法: XmlSerializer を使用する WCF クライアント アプリケーションの起動時間を短縮する
 <xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化できるデータ型を使用するサービスおよびクライアント アプリケーションは、実行時にこのようなデータ型のシリアル化コードを生成およびコンパイルします。このため、起動時のパフォーマンスが低下することがあります。  
@@ -15,7 +15,7 @@ ms.locfileid: "69944887"
 > [!NOTE]
 > 事前生成済みシリアル化コードはクライアント アプリケーションでのみ使用できます。サービスでは使用できません。  
   
- [ServiceModel メタデータユーティリティツール (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)を使用すると、アプリケーションのコンパイル済みアセンブリから必要なシリアル化コードを生成することで、これらのアプリケーションの起動時のパフォーマンスを向上させることができます。 Svcutil.exe は、<xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化できるコンパイル済みアプリケーション アセンブリに格納されたサービス コントラクトで使用されるすべてのデータ型に対して、シリアル化コードを生成します。 <xref:System.Xml.Serialization.XmlSerializer> を使用するサービスおよび操作コントラクトは、<xref:System.ServiceModel.XmlSerializerFormatAttribute> でマークされます。  
+ [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を使用すると、アプリケーションのコンパイル済みアセンブリから必要なシリアル化コードを生成することで、これらのアプリケーションの起動時のパフォーマンスを向上させることができます。 Svcutil.exe は、<xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化できるコンパイル済みアプリケーション アセンブリに格納されたサービス コントラクトで使用されるすべてのデータ型に対して、シリアル化コードを生成します。 <xref:System.Xml.Serialization.XmlSerializer> を使用するサービスおよび操作コントラクトは、<xref:System.ServiceModel.XmlSerializerFormatAttribute> でマークされます。  
   
 ### <a name="to-generate-xmlserializer-serialization-code"></a>XmlSerializer シリアル化コードを生成するには  
   
@@ -25,7 +25,7 @@ ms.locfileid: "69944887"
   
 3. コマンド プロンプトで、次の形式を使用して Svcutil.exe ツールを起動します。  
   
-    ```  
+    ```console  
     svcutil.exe /t:xmlSerializer  <assemblyPath>*  
     ```  
   
@@ -47,13 +47,13 @@ ms.locfileid: "69944887"
   
 1. Visual Studio で WCF サービスとクライアントプロジェクトを作成します。 次に、クライアントプロジェクトにサービス参照を追加します。  
   
-2.  -> クライアントアプリプロジェクトの*reference.cs*ファイルの**serviceReference**の下に、サービスコントラクトにを追加します。<xref:System.ServiceModel.XmlSerializerFormatAttribute> これらのファイルを表示するには、**ソリューションエクスプローラー**内のすべてのファイルを表示する必要があることに注意してください。  
+2. <xref:System.ServiceModel.XmlSerializerFormatAttribute>クライアントアプリプロジェクトの*reference.cs*ファイルの**serviceReference**の下に、サービスコントラクトにを追加  ->  **reference.svcmap**します。 これらのファイルを表示するには、**ソリューションエクスプローラー**内のすべてのファイルを表示する必要があることに注意してください。  
   
 3. クライアントアプリをビルドします。  
   
-4. [ServiceModel メタデータユーティリティツール (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)を使用して、次のコマンドを使用して、事前に生成さ*れ*たシリアライザーファイルを作成します。  
+4. [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を使用して、次のコマンドを使用して、事前に生成さ*れ*たシリアライザーファイルを作成します。  
   
-    ```  
+    ```console  
     svcutil.exe /t:xmlSerializer  <assemblyPath>*  
     ```  
   
@@ -61,7 +61,7 @@ ms.locfileid: "69944887"
   
      例:  
   
-    ```  
+    ```console  
     svcutil.exe /t:xmlSerializer wcfclient.exe  
     ```  
   
@@ -71,7 +71,7 @@ ms.locfileid: "69944887"
   
      前の手順の例に基づいて、compile コマンドは次のようになります。  
   
-    ```  
+    ```console  
     csc /r:wcfclient.exe /out:WCFClient.XmlSerializers.dll /t:library WCFClient.XmlSerializers.dll.cs  
     ```  
   
@@ -82,10 +82,10 @@ ms.locfileid: "69944887"
 ## <a name="example"></a>例  
  次のコマンドにより、アセンブリに含まれているサービス コントラクトが使用する `XmlSerializer` 型用のシリアル化型を生成します。  
   
-```  
+```console  
 svcutil /t:xmlserializer myContractLibrary.exe  
 ```  
   
 ## <a name="see-also"></a>関連項目
 
-- [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)

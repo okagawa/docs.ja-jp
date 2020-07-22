@@ -1,5 +1,6 @@
 ---
-title: Windows フォームにおけるマウス イベント
+title: マウス イベント
+description: マウスイベントからマウスの位置を取得し、Windows フォームコントロールでマウスクリックイベントが発生する順序を理解する方法について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MouseLeave event [Windows Forms]
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: a61f4eedde611cfb7598d55465103924516e06c6
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 640448109961ea5fdf3600ef9e72d7d10e8c9e49
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834608"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174381"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows フォームにおけるマウス イベント
 
@@ -66,7 +67,7 @@ ms.locfileid: "71834608"
 
 8. <xref:System.Windows.Forms.Control.MouseUp> イベント。
 
-マウスクリックイベントの順序を示すコード例については、@no__t を参照してください。Windows フォームコントロール @ no__t のユーザー入力イベントを処理します。
+マウスクリックイベントの順序を示すコード例については、「[方法: Windows フォームコントロールでユーザー入力イベントを処理する](how-to-handle-user-input-events-in-windows-forms-controls.md)」を参照してください。
 
 ### <a name="individual-controls"></a>個別のコントロール
 
@@ -82,11 +83,11 @@ ms.locfileid: "71834608"
 
   - 左クリック : <xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>
 
-  - 右クリック:Click イベントが発生していません
+  - 右クリック : クリック イベントは発生しません
 
   - 左ダブルクリック : <xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>、<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>
 
-  - 右ダブルクリック:Click イベントが発生していません
+  - 右ダブルクリック : クリック イベントは発生しません
 
 - <xref:System.Windows.Forms.TextBox>、<xref:System.Windows.Forms.RichTextBox>、<xref:System.Windows.Forms.ListBox>、<xref:System.Windows.Forms.MaskedTextBox> および <xref:System.Windows.Forms.CheckedListBox> の各コントロール
 
@@ -95,11 +96,11 @@ ms.locfileid: "71834608"
 
   - 左クリック : <xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>
 
-  - 右クリック:Click イベントが発生していません
+  - 右クリック : クリック イベントは発生しません
 
   - 左ダブルクリック : <xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>、<xref:System.Windows.Forms.Control.DoubleClick>、<xref:System.Windows.Forms.Control.MouseDoubleClick>
 
-  - 右ダブルクリック:Click イベントが発生していません
+  - 右ダブルクリック : クリック イベントは発生しません
 
 - <xref:System.Windows.Forms.ListView> コントロール
 

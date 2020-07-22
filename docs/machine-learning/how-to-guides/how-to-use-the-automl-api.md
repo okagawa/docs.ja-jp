@@ -1,14 +1,14 @@
 ---
 title: ML.NET の自動 ML API を使用する方法
 description: ML.NET の自動 ML API によって、モデル構築プロセスが自動化され、展開できる状態のモデルが生成されます。 自動機械学習タスクの構成に使用できるオプションについて説明します。
-ms.date: 04/24/2019
+ms.date: 12/18/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: bb1cd66e7341f2ada57d533d8b2dcbb48f08f726
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: b322c484282d025033d747d2093f7b5b4d216fde
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774553"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "75636563"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>ML.NET の自動機械学習 API を使用する方法
 
@@ -32,11 +32,13 @@ using Microsoft.ML.AutoML;
 ```
 
 ## <a name="select-the-machine-learning-task-type"></a>機械学習タスクの種類を選択する
+
 実験を作成する前に、解決する機械学習の問題の種類を決定します。 自動機械学習は、以下の ML タスクをサポートします。
 
 * 二項分類
 * 多クラス分類
 * 回帰
+* 推奨事項
 
 ## <a name="create-experiment-settings"></a>実験設定を作成する
 
@@ -60,9 +62,15 @@ using Microsoft.ML.AutoML;
   var experimentSettings = new RegressionExperimentSettings();
   ```
 
+* 推奨事項
+
+  ```csharp
+  var experimentSettings = new RecommendationExperimentSettings();
+  ```
+
 ## <a name="configure-experiment-settings"></a>実験設定を構成する
 
-実験は高度な構成が可能です。 構成設定の詳細な一覧については、[AutoML API ドキュメント](https://docs.microsoft.com/dotnet/api/?view=automl-dotnet)を参照してください。
+実験は高度な構成が可能です。 構成設定の詳細な一覧については、[AutoML API ドキュメント](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview)を参照してください。
 
 次に、それらの例の一部を示します。
 
@@ -109,12 +117,13 @@ ML タスクごとにサポートされるトレーナーの一覧は、以下�
 * [サポートされる二項分類アルゴリズム](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
 * [サポートされる多クラス分類アルゴリズム](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
 * [サポートされる回帰アルゴリズム](xref:Microsoft.ML.AutoML.RegressionTrainer)
+* [サポートされるレコメンデーション アルゴリズム](xref:Microsoft.ML.AutoML.RecommendationTrainer)
 
 ## <a name="optimizing-metric"></a>最適化メトリック
 
 上の例に示すように、最適化メトリックによって、モデルのトレーニング中に最適化されるメトリックが決まります。 選択できる最適化メトリックは、選択したタスクの種類によって決まります。 利用できるメトリックの一覧を次に示します。
 
-|[二項分類](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [多クラス分類](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[回帰](xref:Microsoft.ML.AutoML.RegressionMetric)
+|[二項分類](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [多クラス分類](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[回帰とレコメンデーション](xref:Microsoft.ML.AutoML.RegressionMetric)
 |-- |-- |--
 |正確度| LogLoss | RSquared
 |AreaUnderPrecisionRecallCurve | LogLossReduction | MeanAbsoluteError
@@ -218,7 +227,7 @@ ML タスクごとに利用できるすべてのメトリックを次に示し�
 
 * [二項分類メトリック](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
 * [多クラス分類メトリック](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
-* [回帰メトリック](xref:Microsoft.ML.AutoML.RegressionMetric)
+* [回帰とレコメンデーション メトリック](xref:Microsoft.ML.AutoML.RegressionMetric)
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,18 +1,18 @@
 ---
 title: アルファベット順の C# コンパイラ オプションの一覧
-ms.date: 05/15/2018
+ms.date: 06/04/2020
 helpviewer_keywords:
 - compiler options [C#], listed alphabetically
 - C# language, compiler options listed alphabetically
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 450463100782f98b6ded0781b1d3c19b0db97534
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 9765d13191f862a2e92bb00aa66a92c3a64ac303
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151773"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446940"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>アルファベット順の C# コンパイラ オプションの一覧
 
@@ -60,6 +60,7 @@ ms.locfileid: "71151773"
 |[-nostdlib](nostdlib-compiler-option.md)|標準ライブラリ (mscorlib.dll) を参照しないようコンパイラに指示します。|
 |[-nowarn](nowarn-compiler-option.md)|特定の警告メッセージを無効にします。|
 |[-nowin32manifest](nowin32manifest-compiler-option.md)|アプリケーション マニフェストを実行可能ファイルに埋め込まないようコンパイラに指定します。|
+|[-nullable](nullable-compiler-option.md)|Null 許容コンテキスト オプションを指定します。|
 |[-optimize](optimize-compiler-option.md)|最適化を有効または無効にします。|
 |[-out](out-compiler-option.md)|出力ファイル名を指定します (既定では、メイン クラスまたは最初のファイルの基本名)。|
 |-parallel[+&#124;-]|同時実行ビルドを使用する (+) かどうかを指定します。|
@@ -90,5 +91,5 @@ ms.locfileid: "71151773"
 
 - [C# コンパイラ オプション](index.md)
 - [カテゴリ別の C# コンパイラ オプションの一覧](listed-by-category.md)
-- [方法: Visual Studio のコマンドラインのための環境変数を設定する](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Visual Studio のコマンドラインのための環境変数を設定する方法](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [\<compiler> 要素](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)

@@ -1,6 +1,5 @@
 ---
 title: do - C# リファレンス
-ms.custom: seodec18
 ms.date: 05/28/2018
 f1_keywords:
 - do_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: 08f964b1e5c78a429dc50f81398d840f58ec4b13
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: d75dd816278a876fa05d133e5eb189d606300a5c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422846"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401928"
 ---
 # <a name="do-c-reference"></a>do (C# リファレンス)
 
@@ -29,7 +28,7 @@ ms.locfileid: "73422846"
 
 `do` ステートメントの使用方法を次の例に示します。 **[実行]** を選択して、コード例を実行します。 その後に、コードを変更し、もう一度実行することができます。
 
-[!code-csharp-interactive[do loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#4)]
+[!code-csharp-interactive[do loop example](snippets/IterationKeywordsExamples.cs#4)]
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 

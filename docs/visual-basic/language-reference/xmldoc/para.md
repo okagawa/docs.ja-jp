@@ -1,18 +1,18 @@
 ---
-title: <para> (Visual Basic)
+title: <para>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <para> XML tag
 - para XML tag
 ms.assetid: a3a18b6c-6416-4358-94ec-37b22675fd37
-ms.openlocfilehash: aa4e4c14717b69b9ca4595e20c768a2b91aac1e4
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: MT
+ms.openlocfilehash: 0e2051d1b00b881c06082b3af483890d8595899f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524742"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400074"
 ---
-# <a name="para-visual-basic"></a>\<para > (Visual Basic)
+# <a name="para-visual-basic"></a>\<para> (Visual Basic)
 コンテンツが段落として書式設定されることを指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -26,15 +26,15 @@ ms.locfileid: "72524742"
  段落のテキストです。  
   
 ## <a name="remarks"></a>Remarks  
- @No__t_0 タグは、 [\<summary >](../../../visual-basic/language-reference/xmldoc/summary.md)、 [\<remarks >](../../../visual-basic/language-reference/xmldoc/remarks.md)、 [\<returns](../../../visual-basic/language-reference/xmldoc/returns.md)> などのタグ内で使用するためのものであり、テキストに構造を追加することができます。  
+ `<para>` タグは、[\<summary>](summary.md)、[\<remarks>](remarks.md)、または [\<returns>](returns.md) などのタグ内で使用します。このタグを使用すると、テキストに構造を追加することができます。  
   
- コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
+ コンパイル時に [-doc](../../reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- この例では、`<para>` タグを使用して、`UpdateRecord` メソッドの解説セクションを2つの段落に分割します。  
+ この例では、`<para>` タグを使用して、`UpdateRecord` メソッドの解説セクションを 2 つの段落に分割します。  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)
+- [XML のコメント用タグ](index.md)

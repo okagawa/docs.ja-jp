@@ -3,16 +3,16 @@ title: イベントの概要
 description: この概要では、.NET Core のイベントと、イベントの言語上の設計目標について説明します。
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: b1fd2ebe2ae91b55c9179f280d8894f6b40ced9b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 4e660f85eecfd5668919baf21a0d26f858faf5a6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771916"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146115"
 ---
 # <a name="introduction-to-events"></a>イベントの概要
 
-[前へ](delegates-patterns.md)
+[[戻る]](delegates-patterns.md)
 
 デリゲートのようなイベントは*遅延バインディング* メカニズムになっています。 実際、イベントはデリゲートの言語サポートに基づいて構築されます。
 
@@ -28,11 +28,11 @@ ms.locfileid: "72771916"
 
 イベントの言語デザインには次のような目標があります。
 
-最初の目標は、イベント ソースとイベント シンクの間で最小限の結合を有効にすることです。 これら 2 つのコンポーネントは、別々の組織に記述されることがあります。まったく異なる日程で更新されることもあります。
+- イベント ソースとイベント シンクの間で最小限の結合を有効にすること。 これら 2 つのコンポーネントは、別々の組織に記述されることがあります。まったく異なる日程で更新されることもあります。
 
-2 つ目の目標は、イベントの受信登録と登録解除を非常にシンプルにすることです。
+- イベントの受信登録と、同じイベントの登録解除を非常にシンプルにすること。
 
-最後の目標は、イベント ソースで複数のイベント サブスクライバーに対応することです。 イベント サブスクライバーをアタッチしないことにも対応する必要があります。
+- イベント ソースで複数のイベント サブスクライバーに対応すること。 イベント サブスクライバーをアタッチしないことにも対応する必要があります。
 
 イベントの目標はデリゲートの目標とよく似ています。
 そのような理由から、イベント言語サポートはデリゲート言語サポートに基づいて構築されます。
@@ -59,17 +59,17 @@ Progress?.Invoke(this, new FileListArgs(file));
 
 [デリゲート](delegates-patterns.md)に関するセクションで説明したように、
 ?. 演算子を利用すると、イベントのサブスクライバーが存在しないとき、そのイベントの発生を試行しないように容易に確保できます。
- 
+
 `+=` 演算子を利用し、イベントを受信登録します。
 
 ```csharp
-EventHandler<FileListArgs> onProgress = (sender, eventArgs) => 
+EventHandler<FileListArgs> onProgress = (sender, eventArgs) =>
     Console.WriteLine(eventArgs.FoundFile);
 
 fileLister.Progress += onProgress;
 ```
 
-上の画像のように、一般的にハンドラー メソッドはプレフィックス 'On' の後にイベント名を続けたものになります。
+上に示すように、一般的にハンドラー メソッドはプレフィックス 'On' の後にイベント名を続けたものになります。
 
 `-=` 演算子を利用して受信登録を解除します。
 

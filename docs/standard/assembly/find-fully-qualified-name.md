@@ -1,5 +1,6 @@
 ---
 title: '方法: アセンブリの完全修飾名を検索する'
+description: この記事では、.NET Framework アセンブリまたは .NET Core アセンブリの完全修飾名を取得する方法について説明します。
 ms.date: 08/20/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
@@ -10,12 +11,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: bf24db03ca1dc4fbf3041f5e83d740029d87928f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 346d50dc7f279ce46c9803ad60479d3111739c25
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740501"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378944"
 ---
 # <a name="how-to-find-an-assemblys-fully-qualified-name"></a>方法: アセンブリの完全修飾名を検索する
 
@@ -23,7 +24,7 @@ ms.locfileid: "73740501"
 
 .NET Core アセンブリの場合、およびグローバル アセンブリ キャッシュにない .NET Framework アセンブリの場合、完全修飾アセンブリ名をいくつかの方法で取得できます。
 
-- コードを使用しコンソールや変数に情報を出力したり、[Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) を使用して完全修飾名を含むアセンブリのメタデータを調べたりできます。
+- コードを使用しコンソールや変数に情報を出力したり、[Ildasm.exe (IL 逆アセンブラー)](../../framework/tools/ildasm-exe-il-disassembler.md) を使用して完全修飾名を含むアセンブリのメタデータを調べたりできます。
 
 - アセンブリがアプリケーションによって既に読み込まれている場合、<xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> プロパティの値を取得して、完全修飾名を取得できます。 アセンブリに定義されている <xref:System.Type> の <xref:System.Type.Assembly> プロパティを使用して、<xref:System.Reflection.Assembly> オブジェクトへの参照を取得できます。 具体的な例を次に示します。
 
@@ -106,7 +107,6 @@ class asmname
 ```
 
 ```vb
-Imports System
 Imports System.Reflection
 
 Class asmname

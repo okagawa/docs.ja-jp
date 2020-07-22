@@ -1,16 +1,17 @@
 ---
 title: '方法: 署名のないフレンド アセンブリを作成する'
+description: この記事では、署名のないアセンブリと共にフレンド アセンブリを使用する方法を示します。 .NET セキュリティについての情報が含まれています。
 ms.date: 08/19/2019
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: d8fdc3061067d85498dc5bbed7bf324f99169a36
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8d3e13669c36048759fedeb3df1bfb59fd476317
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774341"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378967"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies"></a>方法: 署名のないフレンド アセンブリを作成する
 
@@ -55,7 +56,6 @@ ms.locfileid: "72774341"
    ' Compile with:
    ' vbc -target:library friend_unsigned_A.vb
    Imports System.Runtime.CompilerServices
-   Imports System
 
    <Assembly: InternalsVisibleTo("friend_unsigned_B")>
 

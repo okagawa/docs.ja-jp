@@ -9,39 +9,39 @@ helpviewer_keywords:
 - templates [WPF], TextBox
 - TextBox [WPF], styles and templates
 ms.assetid: aa99130c-43a1-450f-9b46-c40ae0db0cca
-ms.openlocfilehash: 7c4680a3ea9352e94d628e786fc8e4fd71018d00
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
-ms.translationtype: MT
+ms.openlocfilehash: 41e390c261836909240cc146a48729d48c4a410e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458255"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283697"
 ---
 # <a name="textbox-styles-and-templates"></a>TextBox のスタイルとテンプレート
-このトピックでは、<xref:System.Windows.Controls.TextBox> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
+このトピックでは、<xref:System.Windows.Controls.TextBox> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[コントロールのためにテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)」をご覧ください。  
   
-## <a name="textbox-parts"></a>TextBox の部分  
- 次の表に、<xref:System.Windows.Controls.TextBox> コントロールの名前付きの部分を示します。  
+## <a name="textbox-parts"></a>TextBox のパーツ  
+ 次の表は、<xref:System.Windows.Controls.TextBox> コントロールの名前付きパーツの一覧を示します。  
   
-|パーツ|[種類]|説明|  
+|パーツ|種類|説明|  
 |-|-|-|  
-|PART_ContentHost|<xref:System.Windows.FrameworkElement>|<xref:System.Windows.FrameworkElement>を含むことができるビジュアル要素。 <xref:System.Windows.Controls.TextBox> のテキストがこの要素に表示されます。|  
+|PART_ContentHost|<xref:System.Windows.FrameworkElement>|<xref:System.Windows.FrameworkElement> を含めることができるビジュアル要素。 <xref:System.Windows.Controls.TextBox> のテキストがこの要素に表示されます。|  
   
-## <a name="textbox-states"></a>テキストボックスの状態  
- 次の表は、<xref:System.Windows.Controls.TextBox> コントロールの表示状態を示しています。  
+## <a name="textbox-states"></a>TextBox の状態  
+ 次の表は、<xref:System.Windows.Controls.TextBox> コントロールの表示状態の一覧を示します。  
   
 |VisualState 名|VisualStateGroup 名|説明|  
 |----------------------|---------------------------|-----------------|  
 |標準|CommonStates|既定の状態です。|  
 |MouseOver|CommonStates|マウス ポインターがコントロール上に配置されます。|  
-|Disabled|CommonStates|コントロールが無効になっています。|  
-|ReadOnly|CommonStates|ユーザーは、<xref:System.Windows.Controls.TextBox>内のテキストを変更することはできません。|  
+|無効|CommonStates|コントロールが無効になっています。|  
+|ReadOnly|CommonStates|ユーザーは、<xref:System.Windows.Controls.TextBox> のテキストを変更することはできません。|  
 |フォーカスされている|FocusStates|コントロールにフォーカスがあります。|  
 |フォーカスされていない|FocusStates|コントロールにフォーカスがありません。|  
-|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
+|有効|ValidationStates|このコントロールで <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false` です。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|  
   
-## <a name="textbox-controltemplate-example"></a>TextBox ControlTemplate の例  
+## <a name="textbox-controltemplate-example"></a>TextBox の ControlTemplate の例  
  次の例は、<xref:System.Windows.Controls.TextBox> コントロールの <xref:System.Windows.Controls.ControlTemplate> を定義する方法を示しています。  
   
  [!code-xaml[ControlTemplateExamples#TextBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/textbox.xaml#textbox)]  
@@ -59,4 +59,4 @@ ms.locfileid: "73458255"
 - [コントロールのスタイルとテンプレート](control-styles-and-templates.md)
 - [コントロールのカスタマイズ](control-customization.md)
 - [スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)
+- [コントロールのためのテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)

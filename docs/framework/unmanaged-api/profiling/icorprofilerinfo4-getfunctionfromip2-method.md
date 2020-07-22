@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 46ff70f4-13e9-40a0-802a-0a40abcfc6a0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8c133338ec0edac19f49d435df41e3081c486f51
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ea66474e809b3813faceef79a69dd8a639a72a3b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948460"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502796"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a>ICorProfilerInfo4::GetFunctionFromIP2 メソッド
 マネージコード命令ポインターを JIT 再コンパイルされた関数のバージョンにマップします。  
@@ -46,21 +44,21 @@ HRESULT GetFunctionFromIP2(
  `pReJitId`  
  入出力関数の JIT 再コンパイルバージョンの id。  
   
-## <a name="remarks"></a>Remarks  
- `GetFunctionFromIP2`はと似`GetFunctionFromIP`ていますが、指定された IP アドレスを含む関数の関数 id ではなく、JIT 再コンパイルされた id を取得する点が異なります。  
+## <a name="remarks"></a>解説  
+ `GetFunctionFromIP2`はと似てい `GetFunctionFromIP` ますが、指定された IP アドレスを含む関数の関数 id ではなく、JIT 再コンパイルされた id を取得する点が異なります。  
   
 > [!NOTE]
-> `GetFunctionFromIP2``GetFunctionFromIP`はガベージコレクションをトリガーできますが、では発生しません。  詳細については、「 [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)」を参照してください。  
+> `GetFunctionFromIP2`はガベージコレクションをトリガーできますが、で `GetFunctionFromIP` は発生しません。  詳細については、「 [HRESULT CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](corprof-e-unsupported-call-sequence-hresult.md)」を参照してください。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Corprof.idl、Corprof.idl  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo インターフェイス](icorprofilerinfo-interface.md)

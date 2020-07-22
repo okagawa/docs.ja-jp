@@ -7,12 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 22d70d0ee976d9c1a6aabd57e5d13dc70cd2d081
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8a85614e441ba6e5782cbbbf5fe12432c053a101
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454260"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244154"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework のアクセシビリティの新機能
 
@@ -22,7 +22,7 @@ ms.locfileid: "73454260"
 
 アプリのターゲットが .NET Framework 4.7 である場合、またはそれより前のバージョンがターゲットであっても実行環境が .NET Framework 4.7.1 以降である場合は、ユーザー補助機能を使用するようにアプリを構成できます。 また、アプリのターゲットが 4.7.1 .NET Framework 以降である場合は、従来の機能を使用するように (そして、ユーザー補助機能を利用しないように) アプリを構成することもできます。 ユーザー補助機能が含まれる .NET Framework の各バージョンには、バージョン固有のアクセシビリティ スイッチがあります。これを、アプリケーションの構成ファイルの [`<runtime>`](../configure-apps/file-schema/runtime/index.md) セクションの [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 要素に追加します。 サポートされているスイッチは次のとおりです。
 
-|Version|Switch|
+|バージョン|Switch|
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
@@ -78,7 +78,7 @@ ms.locfileid: "73454260"
 
 - [Windows Workflow Foundation (WF) ワークフロー デザイナー](#wf48)
 
-<a name="winforms48" />
+<a name="winforms48"></a>
 
 ### <a name="windows-forms"></a>Windows フォーム
 
@@ -136,7 +136,7 @@ namespace WindowsFormsApplication
 
 **UIA 通知イベント**
 
-Windows 10 Fall Creators Update で導入された UIA 通知イベントをアプリで使用すると、UIA イベントを発生させ、対応するコントロールを UI に準備することなく、イベント用に指定したテキストに基づいてナレーターに単純に読み上げさせることができます。 一部のシナリオでは、これはアプリのアクセシビリティを飛躍的に向上させる最も簡単な方法です。 長時間かかる可能性のあるいくつかのプロセスの進行状況を通知するのにも便利です。 UIA 通知イベントの詳細については、[デスクトップ アプリで新しい UI 通知イベントを使用する方法](https://blogs.msdn.microsoft.com/winuiautomation/2017/11/08/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need/)に関する記事を参照してください。
+Windows 10 Fall Creators Update で導入された UIA 通知イベントをアプリで使用すると、UIA イベントを発生させ、対応するコントロールを UI に準備することなく、イベント用に指定したテキストに基づいてナレーターに単純に読み上げさせることができます。 一部のシナリオでは、これはアプリのアクセシビリティを飛躍的に向上させる最も簡単な方法です。 長時間かかる可能性のあるいくつかのプロセスの進行状況を通知するのにも便利です。 UIA 通知イベントの詳細については、[デスクトップ アプリで新しい UI 通知イベントを使用する方法](https://docs.microsoft.com/archive/blogs/winuiautomation/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need)に関する記事を参照してください。
 
 次の例では、[通知イベント](xref:System.Windows.Forms.AccessibleObject.RaiseAutomationNotification%2A)を発生させています。
 
@@ -167,9 +167,9 @@ if (raiseMethod != null) {
 
 次の図は、ユーザーがキーボードを使用してボタンを選択したときのツールヒントを示しています。
 
-![ユーザーがキーボードを使用してボタンに移動したときのツールヒント](./media/tooltip.png)
+![ユーザーがキーボードを使用してボタンに移動したときのツールヒントのスクリーンショット。](./media/whats-new-in-accessibility/select-tooltip-with-keyboard.png)
 
-<a name="wpf48" />
+<a name="wpf48"></a>
 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
@@ -187,7 +187,7 @@ if (raiseMethod != null) {
 
 このプロパティを使用するには、単に XAML コードに追加して、適切なブラシまたはバインドを使用します。 結果のテキスト選択は次のようになります。
 
-![ユーザーがキーボードを使用してボタンに移動したときのツールヒント](./media/selectiontextbrush-property.png)
+![実行中のアプリのスクリーンショット。Hello World という言葉が選択されています。](./media/whats-new-in-accessibility/selectiontextbrush-property.png)
 
 `SelectionBrush` と `SelectionTextBrush` プロパティを組み合わせて使用することで、背景色と前景色の適切な組み合わせを生成することができます。
 
@@ -305,7 +305,7 @@ Windows 10 では 2 つの新しい UIAutomation プロパティである `SizeO
 </configuration>
 ```
 
-<a name="wf48" />
+<a name="wf48"></a>
 
 ### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Windows Workflow Foundation (WF) ワークフロー デザイナー
 
@@ -478,79 +478,79 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   フォーカスを合わせたとき、<xref:System.Windows.Controls.Expander> コントロールが見やすくなりました。 <xref:System.Windows.Controls.ComboBox>、<xref:System.Windows.Controls.ListBox>、<xref:System.Windows.Controls.RadioButton> コントロールのキーボードも見やすくなりました。 次に例を示します。
 
-  前: 
+  前:
 
-  ![フォーカスを合わせた Expander コントロール (アクセシビリティ機能改善前)](./media/expander-before.png)
+  ![展開コントロールのスクリーンショット。フォーカスありとフォーカスなしのビジュアル。](./media/whats-new-in-accessibility/expander-control-before.png)
 
-  後: 
+  後:
 
-  ![フォーカスを合わせた Expander コントロール (アクセシビリティ機能改善後)](./media/expander-after.png)
+  ![展開コントロールのスクリーンショット。コントロールのテキストが点線で囲まれています。](./media/whats-new-in-accessibility/expander-control-after.png)
 
 - <xref:System.Windows.Controls.CheckBox> コントロールと <xref:System.Windows.Controls.RadioButton> コントロール
 
   <xref:System.Windows.Controls.CheckBox> コントロールと <xref:System.Windows.Controls.RadioButton> コントロールのテキストは、ハイ コントラスト テーマで選択されているとき、見やすくなりました。 次に例を示します。
 
-  前: 
+  前:
 
-  ![フォーカスを合わせたハイ コントラストのラジオ ボタン (アクセシビリティ機能改善前)](./media/radio-button-before.png)
+  ![ラジオ ボタンとチェック ボタンのスクリーンショット。ハイ コントラストのテーマでテキストが読みにくくなっています。](./media/whats-new-in-accessibility/high-contrast-radio-button-before.png)
 
-  後: 
+  後:
 
-  ![フォーカスを合わせたハイ コントラストのラジオ ボタン (アクセシビリティ機能改善後)](./media/radio-button-after.png)
+  ![ラジオ ボタンとチェック ボタンのスクリーンショット。ハイ コントラストのテーマでテキストが読みやすくなっています。](./media/whats-new-in-accessibility/high-contrast-radio-button-after.png)
 
 - <xref:System.Windows.Controls.ComboBox> コントロール
 
   .NET Framework 4.7.1 以降、無効にした <xref:System.Windows.Controls.ComboBox> コントロールの枠線が無効にしたテキストと同じ色になります。 次に例を示します。
 
-  前: 
+  前:
 
-  ![無効にした ComboBox の枠線とテキスト (アクセシビリティ機能改善前)](./media/combo-disabled-before.png)
+  ![無効になっている ComboBox のスクリーンショット。さまざまな色の罫線とコントロール テキスト。](./media/whats-new-in-accessibility/combo-disabled-before.png)
 
-  後:   
+  後:
 
-  ![無効にした ComboBox の枠線とテキスト (アクセシビリティ機能改善後)](./media/combo-disabled-after.png)
+  ![無効になっている ComboBox のスクリーンショット。罫線とコントロール テキストが同じ色です。](./media/whats-new-in-accessibility/combo-disabled-after.png)
 
   また、無効にしているボタンにフォーカスを合わせたとき、正しいテーマ色が使用されます。
 
   前:
 
-  ![ボタンのテーマ色 (アクセシビリティ機能改善前)](./media/button-themes-before.png) 
+  ![黒色ボタンのスクリーンショット。"Focus Me" というテキストが灰色です。](./media/whats-new-in-accessibility/button-theme-colors-before.png)
 
-  後: 
+  後:
 
-  ![ボタンのテーマ色 (アクセシビリティ機能改善後)](./media/button-themes-after.png) 
+  ![青色ボタンのスクリーンショット。"Focus Me" というテキストが黒色です。](./media/whats-new-in-accessibility/button-theme-colors-after.png)
 
   最後になりますが、.NET Framework 4.7 以前のバージョンでは、<xref:System.Windows.Controls.ComboBox> コントロールのスタイルを `Toolbar.ComboBoxStyleKey` に設定すると、ドロップダウンの矢印が見えなくなりました。 この問題は .NET Framework 4.7.1 以降で修正されています。 次に例を示します。
 
-  前: 
+  前:
 
-  ![Toolbar.ComboBoxStyleKey (アクセシビリティ機能改善前)](./media/comboboxstylekey-before.png) 
+  ![ComboBox コントロールのスクリーンショット。ドロップダウンの矢印が見えません。](./media/whats-new-in-accessibility/combo-box-style-key-before.png)
 
-  後: 
+  後:
 
-  ![Toolbar.ComboBoxStyleKey (アクセシビリティ機能改善後)](./media/comboboxstylekey-after.png) 
+  ![ComboBox コントロールのスクリーンショット。ドロップダウンの矢印が見えます。](./media/whats-new-in-accessibility/combo-box-style-key-after.png)
 
 - <xref:System.Windows.Controls.DataGrid> コントロール
 
   .NET Framework 4.7.1 以降、<xref:System.Windows.Controls.DataGrid> コントロールの並べ替えインジケーターで正しいテーマ色が使われるようになりました。 次に例を示します。
 
-  前: 
+  前:
 
-  ![並べ替えインジケーターの矢印 (アクセシビリティ機能改善前)](./media/sort-indicator-before.png) 
+  ![並べ替えインジケーター矢印のスクリーンショット (機能改善前)](./media/whats-new-in-accessibility/sort-indicator-before.png)
 
-  後:   
+  後:
 
-  ![並べ替えインジケーターの矢印 (アクセシビリティ機能改善後)](./media/sort-indicator-after.png) 
+  ![並べ替えインジケーター矢印のスクリーンショット (機能改善後)](./media/whats-new-in-accessibility/sort-indicator-after.png)
 
   また、.NET Framework 4.7 以前のバージョンでは、ハイ コントラスト モードでカーソルを合わせたとき、既定のリンク スタイルが正しくない色に変化しました。 これは .NET Framework 4.7.1 以降で修正されています。 同様に、.NET Framework 4.7.1 以降、<xref:System.Windows.Controls.DataGrid> チェックボックス列でキーボード フォーカス フィードバックに既定の色が使用されます。
 
-  前: 
+  前:
 
-  ![DataGrid の既定のリンク スタイル (アクセシビリティ機能改善前)](./media/default-link-style-before.png) 
+  ![リンクのスクリーンショット。"Click Me!" という文字を 赤色で確認できます。](./media/whats-new-in-accessibility/default-link-style-before.png)
 
-  後:    
+  後:
 
-  ![DataGrid の既定のリンク スタイル (アクセシビリティ機能改善後)](./media/default-link-style-after.png) 
+  ![リンクのスクリーンショット。"Click Me!" という文字を 黄色で確認できます。](./media/whats-new-in-accessibility/default-link-style-after.png)
 
 .NET Framework 4.7.1 での WPF アクセシビリティ機能改善の詳細については、「[WPF でのアクセシビリティの向上](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf)」を参照してください。
 
@@ -566,7 +566,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 ```xml
 <!-- Windows 10 -->
-<supportedOS Id=”{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}” />
+<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />
 ```
 
 ハイ コントラストの変更例:
@@ -581,11 +581,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   前:
 
-  ![無効にしたテキスト (アクセシビリティ機能改善前)](./media/wf-disabled-before.png) 
+  ![ハイ コントラスト モードでさまざまなコントロールを使用するアプリのスクリーンショット (アクセシビリティ前)。](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-before.png)
 
   後:
 
-  ![無効にしたテキスト (アクセシビリティ機能改善後)](./media/wf-disabled-after.png) 
+  ![ハイ コントラスト モードでさまざまなコントロールを使用するアプリのスクリーンショット (アクセシビリティ後)。](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-after.png)
 
 - スレッド例外ダイアログのハイ コントラストが改善されました。
 

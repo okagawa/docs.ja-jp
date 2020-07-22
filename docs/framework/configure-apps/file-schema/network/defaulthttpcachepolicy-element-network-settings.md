@@ -8,21 +8,21 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: f3b029e8b931e976bee85c98dd926e020c5b8743
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: c5029a7d1e53c28d0abb232efdc3e0bd2c9658d4
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698277"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "74088418"
 ---
 # <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy> 要素 (ネットワーク設定)
 HTTP キャッシュがアクティブかどうか、および既定のキャッシュポリシーについて説明します。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t 47 >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t @ no__t-2 @ no__t-3[ **\<requestcaching >** ](requestcaching-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t @ no__t-5 **\<defaultHttpCachePolicy >** を行います。  
-  
+
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<requestCaching>**](requestcaching-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<defaultHttpCachePolicy>**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -51,14 +51,14 @@ HTTP キャッシュがアクティブかどうか、および既定のキャッ
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
-|[requestCaching](requestcaching-element-network-settings.md)|ネットワーク要求のキャッシュメカニズムを制御します。|  
+|[Requestcaching>](requestcaching-element-network-settings.md)|ネットワーク要求のキャッシュメカニズムを制御します。|  
   
-## <a name="remarks"></a>コメント  
- @No__t-0 属性の値は、`BypassCache` または `Default` のいずれかです。  
+## <a name="remarks"></a>解説  
+ 属性の値 `policyLevel` がまたはのいずれか `BypassCache` `Default` です。  
   
- @No__t-0、`maximumStale`、`minimumFresh` の各要素の値は、明示的な時間間隔であり、形式は*d*です。*hh*:*mm*:*ss* (日数、時間、分、秒)、または必要に応じて `minValue` または `maxValue` の定数。  
+ `maximumAge`、、およびの各要素の値 `maximumStale` は、明示的な時間間隔であり、形式は `minimumFresh` *d*です。*hh*:*mm*:*ss* (日数、時間、分、秒)、または必要に応じ `minValue` て定数または `maxValue` 。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  

@@ -1,13 +1,13 @@
 ---
-title: '方法: XmlReader からツリーを作成する (Visual Basic)'
+title: '方法: XmlReader からツリーを作成する'
 ms.date: 07/20/2015
 ms.assetid: 6de683d8-177d-402b-b0de-d0539f1ce5d8
-ms.openlocfilehash: c90fbee29a380824cdc32dd62622e55ea40044fd
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
-ms.translationtype: MT
+ms.openlocfilehash: 25c15ff08563b12b26041a536dfbca1c9cce260a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583025"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414609"
 ---
 # <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>方法: XmlReader からツリーを作成する (Visual Basic)
 
@@ -15,7 +15,7 @@ ms.locfileid: "72583025"
 
 ## <a name="example"></a>例
 
-この例では、「[サンプル XML ファイル: 書籍 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)」の XML ドキュメントを使用します。
+この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:書籍 (LINQ to XML)](sample-xml-file-books-linq-to-xml.md)」。
 
 次のコードでは、`T:System.Xml.XmlReader` オブジェクトを作成し、最初の要素ノードが見つかるまでノードを読み取ります。 次に <xref:System.Xml.Linq.XElement> オブジェクトを読み込みます。
 
@@ -56,4 +56,4 @@ Console.WriteLine(e)
 
 ## <a name="see-also"></a>関連項目
 
-- [XML の解析 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [XML の解析 (Visual Basic)](parsing-xml.md)

@@ -1,5 +1,6 @@
 ---
 title: 正規表現のオプション
+description: .NET で大文字と小文字を区別しない一致、複数行モード、右から左モードなどの正規表現オプションを使用する方法について説明します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,35 +13,35 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: 4cc62696cb6589151e3abc59bbea64b693e8b3a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 268e05c2212539b030ccc3c7195f618bb3afa707
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121731"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662876"
 ---
 # <a name="regular-expression-options"></a>正規表現のオプション
 
-<a name="Top"></a>正規表現パターンでの入力文字列とリテラル文字列の比較では、大文字と小文字が区別されます。正規表現パターンに含まれる空白は、リテラルの空白文字として解釈されます。正規表現で使用されるキャプチャ グループは、暗黙的に指定される場合と明示的に指定される場合があります。これらはすべて、正規表現の既定の動作です。 正規表現のオプションを指定することで、これらの正規表現の既定の動作とそのいくつかの側面を変更できます。 次の表に示す各オプションは、正規表現パターンの一部としてインラインで記述することも、<xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> クラス コンストラクターまたは静的パターン一致メソッドに <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 列挙値として渡すこともできます。
+正規表現パターンでの入力文字列とリテラル文字列の比較では、大文字と小文字が区別されます。正規表現パターンに含まれる空白は、リテラルの空白文字として解釈されます。正規表現で使用されるキャプチャ グループは、暗黙的に指定される場合と明示的に指定される場合があります。これらはすべて、正規表現の既定の動作です。 正規表現のオプションを指定することで、これらの正規表現の既定の動作とそのいくつかの側面を変更できます。 次の表に示す各オプションは、正規表現パターンの一部としてインラインで記述することも、<xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> クラス コンストラクターまたは静的パターン一致メソッドに <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 列挙値として渡すこともできます。
 
 |RegexOptions のメンバー|インライン文字|効果|
 |-------------------------|----------------------|------------|
-|<xref:System.Text.RegularExpressions.RegexOptions.None>|使用できません|既定の動作を使用します。 詳細については、「[既定のオプション](#Default)」を参照してください。|
-|<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|大文字と小文字を区別しない一致を使用します。 詳細については、「[大文字と小文字を区別しない一致](#Case)」を参照してください。|
-|<xref:System.Text.RegularExpressions.RegexOptions.Multiline>|`m`|複数行モードを使用します。`^` と `$` は、(入力文字列の先頭および末尾ではなく) 各行の先頭および末尾と一致します。 詳細については、「[複数行モード](#Multiline)」を参照してください。|
-|<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|単一行モードを使用します。このモードでは、ピリオド (.) は任意の 1 文字と一致します (`\n` を除くすべての文字の代用)。 詳細については、「[単一行モード](#Singleline)」を参照してください。|
-|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|名前のないグループをキャプチャしません。 `(?<`*name*`>` *subexpression*`)` という形式で、明示的に名前または番号が付加されたグループのみを有効なキャプチャ対象とします。 詳細については、「[明示的なキャプチャのみ](#Explicit)」を参照してください。|
-|<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|使用できません|正規表現をアセンブリにコンパイルします。 詳細については、「[コンパイルされた正規表現](#Compiled)」を参照してください。|
-|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|エスケープされていない空白をパターンから除外し、シャープ記号 (`#`) の後ろのコメントを有効にします。 詳細については、「[空白を無視](#Whitespace)」を参照してください。|
-|<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|使用できません|検索の方向を変更します。 左から右ではなく、右から左に検索します。 詳細については、「[右から左モード](#RightToLeft)」を参照してください。|
-|<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|使用できません|式の ECMAScript 準拠の動作を有効にします。 詳細については、「[ECMAScript 一致の動作](#ECMAScript)」を参照してください。|
-|<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|使用できません|言語のカルチャの違いを無視します。 詳細については、「[インバリアント カルチャを使用した比較](#Invariant)」を参照してください。|
+|<xref:System.Text.RegularExpressions.RegexOptions.None>|使用できません|既定の動作を使用します。 詳細については、「[既定のオプション](#default-options)」を参照してください。|
+|<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|大文字と小文字を区別しない一致を使用します。 詳細については、「[大文字と小文字を区別しない一致](#case-insensitive-matching)」を参照してください。|
+|<xref:System.Text.RegularExpressions.RegexOptions.Multiline>|`m`|複数行モードを使用します。`^` と `$` は、(入力文字列の先頭および末尾ではなく) 各行の先頭および末尾と一致します。 詳細については、「[複数行モード](#multiline-mode)」を参照してください。|
+|<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|単一行モードを使用します。このモードでは、ピリオド (.) は任意の 1 文字と一致します (`\n` を除くすべての文字の代用)。 詳細については、「[単一行モード](#single-line-mode)」を参照してください。|
+|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|名前のないグループをキャプチャしません。 `(?<`*name*`>` *subexpression*`)` という形式で、明示的に名前または番号が付加されたグループのみを有効なキャプチャ対象とします。 詳細については、「[明示的なキャプチャのみ](#explicit-captures-only)」を参照してください。|
+|<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|使用できません|正規表現をアセンブリにコンパイルします。 詳細については、「[コンパイルされた正規表現](#compiled-regular-expressions)」を参照してください。|
+|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|エスケープされていない空白をパターンから除外し、シャープ記号 (`#`) の後ろのコメントを有効にします。 詳細については、「[空白を無視](#ignore-white-space)」を参照してください。|
+|<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|使用できません|検索の方向を変更します。 左から右ではなく、右から左に検索します。 詳細については、「[右から左モード](#right-to-left-mode)」を参照してください。|
+|<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|使用できません|式の ECMAScript 準拠の動作を有効にします。 詳細については、「[ECMAScript 一致の動作](#ecmascript-matching-behavior)」を参照してください。|
+|<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|使用できません|言語のカルチャの違いを無視します。 詳細については、「[インバリアント カルチャを使用した比較](#comparison-using-the-invariant-culture)」を参照してください。|
 
 ## <a name="specifying-the-options"></a>オプションの指定
 
 正規表現のオプションは、次の 3 種類の方法のいずれかで指定できます。
 
-- `options` や <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> など、`Shared` クラス コンストラクターまたは、静的 (Visual Basic の場合は <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>) パターン一致メソッドの <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> パラメーターで指定します。 `options` パラメーターは、<xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 列挙値のビットごとの OR の組み合わせです。
+- `options` や <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> など、`Shared` クラス コンストラクターまたは、静的 (Visual Basic の場合は <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29>) パターン一致メソッドの <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> パラメーターで指定します。 `options` パラメーターは、<xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 列挙値のビットごとの OR の組み合わせです。
 
   クラス コンストラクターの `options` パラメーターを使用して、オプションが <xref:System.Text.RegularExpressions.Regex> インスタンスに指定されると、それらのオプションは <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> プロパティに割り当てられます。 ただし、<xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> プロパティは、正規表現パターン自体でのインライン オプションを反映しません。
 
@@ -49,14 +50,14 @@ ms.locfileid: "73121731"
   [!code-csharp[Conceptual.Regex.Language.Options#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#6)]
   [!code-vb[Conceptual.Regex.Language.Options#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#6)]
 
-- `(?imnsx-imnsx)` という構文で、インライン オプションを正規表現パターンに適用します。 この場合、オプションが定義されているパターンの先頭から、パターンの末尾を含むポイントまで、または別のインライン オプションでオプションが定義されていないポイントまでを範囲として、オプションがパターンに適用されます。 <xref:System.Text.RegularExpressions.Regex> インスタンスの <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> プロパティは、これらのインライン オプションを反映しないことに注意してください。 詳しくは、「[その他の構成体](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)」のトピックをご覧ください。
+- `(?imnsx-imnsx)` という構文で、インライン オプションを正規表現パターンに適用します。 この場合、オプションが定義されているパターンの先頭から、パターンの末尾を含むポイントまで、または別のインライン オプションでオプションが定義されていないポイントまでを範囲として、オプションがパターンに適用されます。 <xref:System.Text.RegularExpressions.Regex> インスタンスの <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> プロパティは、これらのインライン オプションを反映しないことに注意してください。 詳しくは、「[その他の構成体](miscellaneous-constructs-in-regular-expressions.md)」のトピックをご覧ください。
 
   具体的な例を次に示します。 インライン オプションを使用して、文字 "d" で始まる単語を識別するときに、大文字と小文字を区別しない一致を有効にすると同時に、パターンの空白を無視します。
 
   [!code-csharp[Conceptual.Regex.Language.Options#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#7)]
   [!code-vb[Conceptual.Regex.Language.Options#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#7)]
 
-- `(?imnsx-imnsx:`*subexpression*`)` という構文で、特定のグループ化構成体のインライン オプションを正規表現パターンに適用します。 オプション セットの前にマイナス記号を付けないとそのオプション セットはオンになり、マイナス記号を付けるとオフになります (`?` は言語構成要素の構文の固定部分であり、オプションが有効であるか無効であるかにかかわらず、必要になります)。オプションは、そのグループに対してのみ適用されます。 詳しくは、「[正規表現でのグループ化構成体](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)」をご覧ください。
+- `(?imnsx-imnsx:`*subexpression*`)` という構文で、特定のグループ化構成体のインライン オプションを正規表現パターンに適用します。 オプション セットの前にマイナス記号を付けないとそのオプション セットはオンになり、マイナス記号を付けるとオフになります (`?` は言語構成要素の構文の固定部分であり、オプションが有効であるか無効であるかにかかわらず、必要になります)。オプションは、そのグループに対してのみ適用されます。 詳しくは、「[正規表現でのグループ化構成体](grouping-constructs-in-regular-expressions.md)」をご覧ください。
 
   具体的な例を次に示します。 グループ化構成体のインライン オプションを使用して、文字 "d" で始まる単語を識別するときに、大文字と小文字を区別しない一致を有効にすると同時に、パターンの空白を無視します。
 
@@ -108,8 +109,6 @@ ms.locfileid: "73121731"
 
 以降のセクションでは、.NET の正規表現でサポートされているオプションについて説明します。
 
-<a name="Default"></a>
-
 ## <a name="default-options"></a>既定のオプション
 
 <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> オプションは、オプションが指定されていないことを示します。正規表現エンジンは、このオプションの既定の動作を使用します。 次に例を示します。
@@ -135,10 +134,6 @@ ms.locfileid: "73121731"
 
 <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> オプションは正規表現エンジンの既定の動作を表しているので、メソッド呼び出しで明示的に指定されることはほとんどありません。 代わりに、`options` パラメーターを使用せずにコンストラクターまたは静的パターン一致メソッドが呼び出されます。
 
-[ページのトップへ](#Top)
-
-<a name="Case"></a>
-
 ## <a name="case-insensitive-matching"></a>大文字と小文字を区別しない一致
 
 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase> オプションまたは `i` インライン オプションを指定すると、大文字と小文字を区別しない一致が実行されます。 既定では、現在のカルチャの大文字と小文字の表記規則が使用されます。
@@ -152,10 +147,6 @@ ms.locfileid: "73121731"
 
 [!code-csharp[Conceptual.Regex.Language.Options#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/case2.cs#2)]
 [!code-vb[Conceptual.Regex.Language.Options#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/case2.vb#2)]
-
-[ページのトップへ](#Top)
-
-<a name="Multiline"></a>
 
 ## <a name="multiline-mode"></a>複数行モード
 
@@ -184,10 +175,6 @@ ms.locfileid: "73121731"
 [!code-csharp[Conceptual.Regex.Language.Options#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/multiline2.cs#4)]
 [!code-vb[Conceptual.Regex.Language.Options#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/multiline2.vb#4)]
 
-[ページのトップへ](#Top)
-
-<a name="Singleline"></a>
-
 ## <a name="single-line-mode"></a>単一行モード
 
 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> オプションまたは `s` インライン オプションを指定すると、正規表現エンジンでは、入力文字列が単一行で構成されているかのように処理されます。 具体的には、ピリオド (`.`) 言語要素の動作を変更して、改行文字 (`\n` または \u000A) を除く任意の文字ではなく、改行文字を含む任意の 1 文字と一致するようにします。
@@ -201,10 +188,6 @@ ms.locfileid: "73121731"
 
 [!code-csharp[Conceptual.Regex.Language.Options#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/singleline1.cs#5)]
 [!code-vb[Conceptual.Regex.Language.Options#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/singleline1.vb#5)]
-
-[ページのトップへ](#Top)
-
-<a name="Explicit"></a>
 
 ## <a name="explicit-captures-only"></a>明示的なキャプチャのみ
 
@@ -244,10 +227,6 @@ ms.locfileid: "73121731"
 [!code-csharp[Conceptual.Regex.Language.Options#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/explicit3.cs#11)]
 [!code-vb[Conceptual.Regex.Language.Options#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/explicit3.vb#11)]
 
-[ページのトップへ](#Top)
-
-<a name="Compiled"></a>
-
 ## <a name="compiled-regular-expressions"></a>コンパイルされた正規表現
 
 既定では、.NET の正規表現は解釈の対象になります。 <xref:System.Text.RegularExpressions.Regex> オブジェクトがインスタンス化されるか、静的 <xref:System.Text.RegularExpressions.Regex> メソッドが呼び出されたときに、正規表現パターンはカスタム オペコードのセットに解析され、インタープリターがこのオペコードに基づいて正規表現を実行します。 この場合、正規表現エンジンの初期化処理を優先すると、実行時のパフォーマンスが低下するというトレードオフが伴います。
@@ -269,10 +248,6 @@ ms.locfileid: "73121731"
 
 > [!NOTE]
 > <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> オプションは <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> メソッドとは関係なく、定義済みのコンパイルされた正規表現を含む、特殊な目的のアセンブリを作成します。
-
-[ページのトップへ](#Top)
-
-<a name="Whitespace"></a>
 
 ## <a name="ignore-white-space"></a>空白を無視
 
@@ -302,7 +277,7 @@ ms.locfileid: "73121731"
 
 `\b \(? ( (?>\w+) ,?\s? )+  [\.!?] \)? # Matches an entire sentence.`
 
-このパターンは、「[明示的なキャプチャのみ](#Explicit)」セクションで定義したパターンと似ています。ただし、<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> オプションを使用して、パターンの空白を無視している点が異なります。
+このパターンは、「[明示的なキャプチャのみ](#explicit-captures-only)」セクションで定義したパターンと似ています。ただし、<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> オプションを使用して、パターンの空白を無視している点が異なります。
 
 [!code-csharp[Conceptual.Regex.Language.Options#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/whitespace1.cs#12)]
 [!code-vb[Conceptual.Regex.Language.Options#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/whitespace1.vb#12)]
@@ -311,10 +286,6 @@ ms.locfileid: "73121731"
 
 [!code-csharp[Conceptual.Regex.Language.Options#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/whitespace2.cs#13)]
 [!code-vb[Conceptual.Regex.Language.Options#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/whitespace2.vb#13)]
-
-[ページのトップへ](#Top)
-
-<a name="RightToLeft"></a>
 
 ## <a name="right-to-left-mode"></a>右から左モード
 
@@ -328,7 +299,7 @@ ms.locfileid: "73121731"
 [!code-csharp[Conceptual.Regex.Language.Options#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/righttoleft1.cs#17)]
 [!code-vb[Conceptual.Regex.Language.Options#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/righttoleft1.vb#17)]
 
-先読みアサーション (`(?=`*subexpression*`)` 言語要素) と後読みアサーション (`(?<=`*subexpression*`)` 言語要素) では、方向が変更されないことにも注意してください。 先読みアサーションでは右方向へ、後読みアサーションでは左方向へ参照が行われます。 たとえば、正規表現 `(?<=\d{1,2}\s)\w+,?\s\d{4}` は後読みアサーションを使用して、月の名前の前にある日付をテストします。 次に、この正規表現は、月と年を照合しています。 先読みアサーションと後読みアサーションについて詳しくは、「[グループ化構成体](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)」をご覧ください。
+先読みアサーション (`(?=`*subexpression*`)` 言語要素) と後読みアサーション (`(?<=`*subexpression*`)` 言語要素) では、方向が変更されないことにも注意してください。 先読みアサーションでは右方向へ、後読みアサーションでは左方向へ参照が行われます。 たとえば、正規表現 `(?<=\d{1,2}\s)\w+,?\s\d{4}` は後読みアサーションを使用して、月の名前の前にある日付をテストします。 次に、この正規表現は、月と年を照合しています。 先読みアサーションと後読みアサーションについて詳しくは、「[グループ化構成体](grouping-constructs-in-regular-expressions.md)」をご覧ください。
 
 [!code-csharp[Conceptual.Regex.Language.Options#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/righttoleft2.cs#18)]
 [!code-vb[Conceptual.Regex.Language.Options#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/righttoleft2.vb#18)]
@@ -343,10 +314,6 @@ ms.locfileid: "73121731"
 |`\s`|空白文字と一致します。|
 |`\d{4}`|4 桁の 10 進数と一致します。|
 
-[ページのトップへ](#Top)
-
-<a name="ECMAScript"></a>
-
 ## <a name="ecmascript-matching-behavior"></a>ECMAScript 一致の動作
 
 既定では、正規表現パターンを入力テキストに照合するときに、正規表現エンジンは標準の動作を使用します。 ただし、<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType> オプションを使用することで、ECMAScript 一致の動作を使用するように正規表現エンジンに指示できます。
@@ -358,7 +325,7 @@ ms.locfileid: "73121731"
 
 ECMAScript と標準正規表現は、文字クラスの構文、自己参照キャプチャ グループ、および 8 進数と前方参照の解釈という 3 つの点で動作が異なります。
 
-- 文字クラスの構文。 標準正規表現が Unicode をサポートしているのに対して、ECMAScript は Unicode をサポートしていないので、ECMAScript の文字クラスの構文には制限が多く、文字クラスの言語要素によっては意味が異なります。 たとえば ECMAScript は、Unicode カテゴリやブロック要素 (`\p` および `\P`) などの言語要素をサポートしていません。 同様に、単語文字と一致する `\w` 要素は、ECMAScript を使用した場合は `[a-zA-Z_0-9]` 文字クラスと等価になり、標準の動作を使用した場合は `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]` と等価になります。 詳しくは、「[文字クラス](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)」をご覧ください。
+- 文字クラスの構文。 標準正規表現が Unicode をサポートしているのに対して、ECMAScript は Unicode をサポートしていないので、ECMAScript の文字クラスの構文には制限が多く、文字クラスの言語要素によっては意味が異なります。 たとえば ECMAScript は、Unicode カテゴリやブロック要素 (`\p` および `\P`) などの言語要素をサポートしていません。 同様に、単語文字と一致する `\w` 要素は、ECMAScript を使用した場合は `[a-zA-Z_0-9]` 文字クラスと等価になり、標準の動作を使用した場合は `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]` と等価になります。 詳しくは、「[文字クラス](character-classes-in-regular-expressions.md)」をご覧ください。
 
   次の例は、標準パターン一致と ECMAScript パターン一致の違いを示しています。 この例では、単語とそれに続く空白文字と一致する正規表現 `\b(\w+\s*)+` を定義しています。 入力は 2 つの文字列で構成され、一方の文字列ではラテン語文字セットが使用され、もう一方の文字列ではキリル文字セットが使用されています。 出力結果が示すように、ECMAScript 一致を使用した <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> メソッドの呼び出しではキリル文字の単語が照合されないのに対して、標準一致を使用したメソッドの呼び出しではキリル文字の単語が照合されています。
 
@@ -387,10 +354,6 @@ ECMAScript と標準正規表現は、文字クラスの構文、自己参照キ
   |`\` の後に 1 ～ 9 の数字が続き、その後に 10 進数字が続かない場合|前方参照として解釈されます。 たとえば、9 番目のキャプチャ グループが存在しない場合でも、`\9` は常に前方参照 9 です。 キャプチャ グループが存在しない場合は、正規表現パーサーは <xref:System.ArgumentException> をスローします。|単一の 10 進数字のキャプチャ グループが存在する場合は、その数字への前方参照です。 それ以外の場合は、値はリテラルとして解釈されます。|
   |`\` の後に 1 ～ 9 の数字が続き、その後に 10 進数字が続く場合|数字は 10 進数値として解釈されます。 そのキャプチャ グループが存在する場合は、式は前方参照として解釈されます。<br /><br /> それ以外の場合は、先行する数字が 377 までの範囲で 8 進数として解釈されます。つまり、値の下位 8 ビットのみが処理の対象になります。 残りの数字はリテラルとして解釈されます。 たとえば、式 `\3000` では、キャプチャ グループ 300 が存在する場合は前方参照 300 として解釈されます。キャプチャ グループ 300 が存在しない場合は 8 進数 300 とそれに続く 0 として解釈されます。|キャプチャを参照できる範囲で、できるだけ多くの桁数が 10 進値に変換され、前方参照として解釈されます。 変換できる数字がない場合は、先行する数字が 377 までの範囲で 8 進数として解釈され、残りの数字はリテラルとして解釈されます。|
 
-[ページのトップへ](#Top)
-
-<a name="Invariant"></a>
-
 ## <a name="comparison-using-the-invariant-culture"></a>インバリアント カルチャを使用した比較
 
 既定では、大文字と小文字を区別しない比較を実行するときに、正規表現エンジンは現在のカルチャの大文字と小文字の表記規則を使用して、等価な大文字および小文字を決定します。
@@ -401,7 +364,7 @@ ECMAScript と標準正規表現は、文字クラスの構文、自己参照キ
 [!code-vb[Conceptual.Regex.Language.Options#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/culture1.vb#14)]
 
 > [!NOTE]
-> 大文字と小文字を区別する文字列比較とインバリアント カルチャを使用する文字列比較の詳細については、「[文字列を使用するためのベスト プラクティス](../../../docs/standard/base-types/best-practices-strings.md)」を参照してください。
+> 大文字と小文字を区別する文字列比較とインバリアント カルチャを使用する文字列比較の詳細については、「[文字列を使用するためのベスト プラクティス](best-practices-strings.md)」を参照してください。
 
 現在のカルチャで大文字と小文字を区別しない比較を行う代わりに、<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant?displayProperty=nameWithType> オプションを指定すると、言語のカルチャの違いを無視して、インバリアント カルチャの規則を使用できます。
 
@@ -415,4 +378,4 @@ ECMAScript と標準正規表現は、文字クラスの構文、自己参照キ
 
 ## <a name="see-also"></a>関連項目
 
-- [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [正規表現言語 - クイック リファレンス](regular-expression-language-quick-reference.md)

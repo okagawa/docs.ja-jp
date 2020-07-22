@@ -2,23 +2,23 @@
 title: カスタム追跡
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: 32abf1dc4c9607b4a86f836fa2c759af1dbf1b69
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 2b100b877bbc8c6d830f09a4a59decffde511511
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989411"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182848"
 ---
 # <a name="custom-tracking"></a>カスタム追跡
 このサンプルでは、カスタムの追跡参加要素を作成し、追跡データをコンソールに出力する方法を示します。 また、ユーザー定義データが設定された <xref:System.Activities.Tracking.CustomTrackingRecord> オブジェクトを出力する方法も示します。 コンソール ベースの追跡参加要素は、コードで作成された追跡プロファイル オブジェクトを使用して、ワークフローで出力された <xref:System.Activities.Tracking.TrackingRecord> オブジェクトをフィルター処理します。
 
 ## <a name="sample-details"></a>サンプルの詳細
- Windows Workflow Foundation (WF) は、ワークフローインスタンスの実行を追跡するための追跡インフラストラクチャを提供します。 追跡ランタイムは、ワークフロー ライフサイクルに関連するイベント、ワークフロー アクティビティのイベント、およびカスタム追跡イベントを出力するワークフロー インスタンスを実装しています。 次の表で、追跡インフラストラクチャの主要コンポーネントの詳細を説明します。
+ Windows ワークフロー基盤 (WF) は、ワークフロー インスタンスの実行を追跡するための追跡インフラストラクチャを提供します。 追跡ランタイムは、ワークフロー ライフサイクルに関連するイベント、ワークフロー アクティビティのイベント、およびカスタム追跡イベントを出力するワークフロー インスタンスを実装しています。 次の表で、追跡インフラストラクチャの主要コンポーネントの詳細を説明します。
 
 |コンポーネント|説明|
 |---------------|-----------------|
 |追跡ランタイム|追跡レコードを出力するためのインフラストラクチャを提供します。|
-|追跡参加要素|追跡レコードを処理します。 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] には、追跡レコードを Event Tracing for Windows (ETW) イベントとして書き込む追跡参加要素が用意されています。|
+|追跡参加要素|追跡レコードを処理します。 .NET Framework 4 には、追跡レコードを Windows イベント トレース (ETW) イベントとして書き込む追跡参加要素が付属しています。|
 |追跡プロファイル|ワークフロー インスタンスから出力された追跡レコードのサブセットを追跡参加要素から定期受信するためのフィルター機構。|
 
  次の表で、ワークフロー ランタイムが出力する追跡レコードの詳細を説明します。
@@ -47,7 +47,7 @@ public abstract class TrackingParticipant
 }
 ```
 
- 完全な追跡参加要素は、ConsoleTrackingParticipant.cs ファイルに実装されます。 カスタム追跡参加要素の<xref:System.Activities.Tracking.TrackingParticipant.Track%2A>メソッドを次のコード例に示します。
+ 完全な追跡参加要素は、ConsoleTrackingParticipant.cs ファイルに実装されます。 カスタム追跡参加要素のメソッド<xref:System.Activities.Tracking.TrackingParticipant.Track%2A>を次のコード例に示します。
 
 ```csharp
 protected override void Track(TrackingRecord record, TimeSpan timeout)
@@ -112,7 +112,7 @@ invoker.Extensions.Add(customTrackingParticipant);
 
 - <xref:System.Activities.Tracking.CustomTrackingRecord> オブジェクトは、レコードと一緒に出力する必要があるユーザー定義データを使用して作成および設定します。
 
-- は、<xref:System.Activities.ActivityContext>の track メソッドを呼び出すことによって出力されます。<xref:System.Activities.Tracking.CustomTrackingRecord>
+- の<xref:System.Activities.Tracking.CustomTrackingRecord>トラック メソッドを呼び出すことによって生成されます<xref:System.Activities.ActivityContext>。
 
  次の例では、カスタム アクティビティ内で <xref:System.Activities.Tracking.CustomTrackingRecord> オブジェクトを出力する方法を示します。
 
@@ -133,7 +133,7 @@ context.Track(customRecord);
 
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには
 
-1. Visual Studio 2010 を使用して、CustomTrackingSample .sln ソリューションファイルを開きます。
+1. Visual Studio 2010 を使用して、カスタム追跡サンプル.sln ソリューション ファイルを開きます。
 
 2. ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。
 
@@ -141,13 +141,13 @@ context.Track(customRecord);
 
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780)にアクセスして、すべての[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (wcf) とサンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
->   
+>
+> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
 ## <a name="see-also"></a>関連項目
 
-- [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric の監視のサンプル](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

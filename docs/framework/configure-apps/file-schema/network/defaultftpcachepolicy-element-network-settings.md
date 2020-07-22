@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: fd1649edbf7a2c8546992019df667f27df68e02c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 9261a430642cb4d5ac4507835bd0fd3561bd8c02
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698316"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "74088428"
 ---
 # <a name="defaultftpcachepolicy-element-network-settings"></a>\<defaultFtpCachePolicy> 要素 (ネットワーク設定)
-FTP キャッシュがアクティブでかどうかし、既定のキャッシュ ポリシーを記述について説明します。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t 47 >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t @ no__t-2 @ no__t-3[ **\<requestcaching >** ](requestcaching-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t @ no__t-5 **\<defaultFtpCachePolicy >** を行います。  
-  
+FTP キャッシュがアクティブかどうか、および既定のキャッシュポリシーについて説明します。  
+
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<requestCaching>**](requestcaching-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<defaultFtpCachePolicy>**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -42,7 +42,7 @@ FTP キャッシュがアクティブでかどうかし、既定のキャッシ�
   
 ## <a name="policylevel-attribute"></a>policyLevel 属性  
   
-|値|説明|  
+|値|Description|  
 |-----------|-----------------|  
 |`Default`|リソースが最新で、コンテンツの長さが正確で、有効期限、変更、およびコンテンツの長さの属性が存在する場合、キャッシュされたリソースを返します。|  
 |`BypassCache`|サーバーからリソースを返します。|  
@@ -51,21 +51,21 @@ FTP キャッシュがアクティブでかどうかし、既定のキャッシ�
 |`Revalidate`|キャッシュされたリソースのタイムスタンプがサーバー上のリソースのタイムスタンプと同じ場合は、キャッシュされたリソースを返します。それ以外の場合は、リソースがサーバーからダウンロードされ、キャッシュに格納されて、呼び出し元に返されます。|  
 |`Reload`|サーバーからリソースをダウンロードし、キャッシュに格納して、リソースを呼び出し元に返します。|  
 |`NoCacheNoStore`|キャッシュされたリソースが存在する場合は、削除されます。 リソースはサーバーからダウンロードされ、呼び出し元に返されます。|  
-|`Revalidate`|タイムスタンプがサーバー上のリソースのタイムスタンプと同じ場合は、リソースのキャッシュされたコピーを使用して要求を満たします。それ以外の場合は、リソースがサーバーからダウンロードされ、呼び出し元に提示されて、キャッシュに格納されます。|  
+|`Revalidate`|タイムスタンプがサーバーのリソースのタイムスタンプと同じ場合は、キャッシュされたリソースのコピーを使用して要求に応じます。それ以外の場合は、リソースがサーバーからダウンロードされ、呼び出し元に提示され、キャッシュに格納されます。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
-|[requestCaching](requestcaching-element-network-settings.md)|ネットワーク要求のキャッシュメカニズムを制御します。|  
+|[Requestcaching>](requestcaching-element-network-settings.md)|ネットワーク要求のキャッシュメカニズムを制御します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="example"></a>例  
- 次の例では、`NoCacheNoStore` の FTP キャッシュポリシーを指定する方法を示します。  
+ 次の例は、の FTP キャッシュポリシーを指定する方法を示して `NoCacheNoStore` います。  
   
 ```xml  
 <configuration>  

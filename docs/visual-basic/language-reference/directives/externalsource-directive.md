@@ -1,5 +1,5 @@
 ---
-title: '#ExternalSource ディレクティブ (Visual Basic)'
+title: '#ExternalSource ディレクティブ'
 ms.date: 07/20/2015
 f1_keywords:
 - '#Externalsource'
@@ -12,15 +12,16 @@ helpviewer_keywords:
 - ExternalSource directive (#ExternalSource)
 - '#ExternalSource directive'
 ms.assetid: 243bc6a2-34c3-4eeb-a776-9fd2bf988149
-ms.openlocfilehash: ac7096e998dd8d2a416dc739e1d7625e1abff7a6
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
-ms.translationtype: MT
+ms.openlocfilehash: e4c7704c32c3a6c73e069d0b7129d5386696b438
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696825"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402993"
 ---
 # <a name="externalsource-directive"></a>#ExternalSource ディレクティブ
-ソースコードの特定の行と、ソースの外部のテキストとの間のマッピングを示します。  
+
+ソース コードの特定の行と、ソースの外部のテキストとの間のマッピングを示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,25 +32,27 @@ ms.locfileid: "71696825"
 ```  
   
 ## <a name="parts"></a>指定項目  
+
  `StringLiteral`  
- 外部ソースへのパス。  
+ 外部ソースへのパスです。  
   
  `IntLiteral`  
- 外部ソースの最初の行の行番号。  
+ 外部ソースの最初の行の行番号です。  
   
  `LogicalLine`  
- 外部ソースでエラーが発生した行。  
+ 外部ソースでエラーが発生した行です。  
   
  `#End ExternalSource`  
  `#ExternalSource` ブロックを終了します。  
   
-## <a name="remarks"></a>コメント  
- このディレクティブは、コンパイラとデバッガーでのみ使用されます。  
+## <a name="remarks"></a>Remarks  
+
+ このディレクティブは、コンパイラとデバッガーによってのみ使用されます。  
   
- ソースファイルには、ソースファイル内の特定のコード行と、.aspx ファイルなどのソースの外部テキストとの間のマッピングを示す、外部ソースディレクティブを含めることができます。 コンパイル時に指定したソースコードでエラーが発生した場合は、外部ソースからのものとして識別されます。  
+ ソース ファイルには、外部ソース ディレクティブを含めることができます。これは、ソース ファイル内の特定のコード行と、.aspx ファイルなどのソースの外部のテキストとの間のマッピングを示します。 コンパイル時に指定されたソース コードでエラーが発生した場合、外部ソースからのものとして識別されます。  
   
- 外部ソースディレクティブはコンパイルには影響しません。入れ子にすることはできません。 アプリケーションでの内部使用のみを目的としています。  
+ 外部ソース ディレクティブはコンパイルには影響しません。また、入れ子にすることはできません。 これらはアプリケーションによる内部使用のみを目的としています。  
   
 ## <a name="see-also"></a>関連項目
 
-- [条件付きコンパイル](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [条件付きコンパイル](../../programming-guide/program-structure/conditional-compilation.md)

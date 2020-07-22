@@ -1,37 +1,36 @@
 ---
-title: GRPC クライアントライブラリの作成-WCF 開発者向け gRPC
-description: GRPC サービス用の共有クライアントライブラリ/パッケージについて説明します。
-author: markrendle
+title: gRPC クライアント ライブラリを作成する - gRPC WCF 開発者向け
+description: gRPC サービス用の共有クライアントライブラリ/パッケージの説明
 ms.date: 09/02/2019
-ms.openlocfilehash: b403e7e1638496947ac7f6fc976cbeab2f435bbf
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bb58cb3cda4b0cbb3a5d34129961349bcb0093e9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73842063"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401773"
 ---
-# <a name="create-grpc-client-libraries"></a>GRPC クライアントライブラリを作成する
+# <a name="create-grpc-client-libraries"></a>gRPC クライアント ライブラリの作成
 
-GRPC アプリケーション用のクライアントライブラリを配布する必要はありません。 組織内に `.proto` ファイルの共有ライブラリを作成することができます。また、他のチームはこれらのファイルを使用して、独自のプロジェクトでクライアントコードを生成できます。 ただし、プライベート NuGet リポジトリがあり、他の多くのチームが .NET Core を使用している場合は、サービスプロジェクトの一部としてクライアント NuGet パッケージを作成して発行すると、サービスを共有して昇格させることができます。
+gRPC アプリケーション用のクライアントライブラリを配布する必要はありません。 組織内のファイルの共有ライブラリを`.proto`作成でき、他のチームは、それらのファイルを使用して、独自のプロジェクトでクライアント コードを生成できます。 ただし、プライベートな NuGet リポジトリがあり、他の多くのチームが .NET Core を使用している場合は、クライアントの NuGet パッケージを作成してサービス プロジェクトの一部として発行できます。 これは、サービスを共有し、促進するための良い方法です。
 
-クライアントライブラリを配布する利点の1つは、生成された gRPC および Protobuf クラスを、便利な "便利な" メソッドとプロパティを使用して拡張できることです。 クライアントコードでは、サーバーと同様に、すべてのクラスが `partial` として宣言されているため、生成されたコードを編集せずに、すべてのクラスを拡張できます。 これは、コンストラクター、メソッド、計算されたプロパティなどを基本型に簡単に追加できることを意味します。
+クライアント ライブラリを配布する利点の 1 つは、便利な "便利な" メソッドとプロパティを使用して、生成された gRPC クラスと Protobuf クラスを強化できることです。 クライアント コードでは、サーバーと同様に、すべてのクラスが として`partial`宣言されるため、生成されたコードを編集せずに拡張できます。 つまり、基本型にコンストラクター、メソッド、および計算プロパティを簡単に追加できます。
 
 > [!CAUTION]
-> 重要な機能を提供するためにカスタムコードを使用し**ない**でください。これは、機能が、他の言語や Python や Java などのプラットフォームを使用しているチームではなく、共有ライブラリを使用して .net チームに限定されることを意味します。
+> カスタム コードを使用して、重要な機能を提供しないでください。 共有ライブラリを使用する .NET チームに対してこの重要な機能を制限したり、Python や Java などの他の言語やプラットフォームを使用するチームに提供したりすることは望ましくない。
 
-複数のチームが頻繁に異なるプログラミング言語とフレームワークを使用している場合、または API に外部からアクセスできる場合は、`.proto` ファイルを共有するだけで、開発者が独自のクライアントを生成できるようになります。これは、可能な限り多くのチームが gRPC サービスにアクセスできるようにするための最善の方法です。
+できるだけ多くのチームが gRPC サービスにアクセスできることを確認します。 これを行う最善の方法は、開発者`.proto`が独自のクライアントを生成できるようにファイルを共有することです。 これは、異なるチームが異なるプログラミング言語やフレームワークを頻繁に使用するマルチプラットフォーム環境や、API が外部からアクセス可能な場合に特に当てはまります。
 
 ## <a name="useful-extensions"></a>便利な拡張機能
 
-.NET には、オブジェクトのストリームを処理するために一般的に使用されるインターフェイスとして、<xref:System.Collections.Generic.IEnumerable%601> と <xref:System.IObservable%601>の2つがあります。 .NET Core 3.0 およびC# 8.0 以降では、ストリームを非同期処理するための <xref:System.Collections.Generic.IAsyncEnumerable%601> インターフェイスと、インターフェイスを使用するための `await foreach` 構文があります。 このセクションでは、これらのインターフェイスを gRPC ストリームに適用する再利用可能なコードを示します。
+NET には、オブジェクトのストリームを処理するためによく使用されるインターフェイスが<xref:System.Collections.Generic.IEnumerable%601>2<xref:System.IObservable%601>つあります。 NET Core 3.0 および C# 8.0 以降、<xref:System.Collections.Generic.IAsyncEnumerable%601>ストリームを非同期に処理するためのインターフェイスと、`await foreach`インターフェイスを使用するための構文があります。 このセクションでは、これらのインターフェイスを gRPC ストリームに適用するための再利用可能なコードを示します。
 
-.NET Core gRPC クライアントライブラリには、`IAsyncEnumerable<T>`を作成する `IAsyncStreamReader<T>` の `ReadAllAsync` 拡張メソッドがあります。 事後対応型プログラミングを使用している開発者にとっては、`IObservable<T>` を作成するための同等の拡張メソッドは、次のようになります。
+NET Core gRPC クライアント ライブラリには、`ReadAllAsync``IAsyncStreamReader<T>``IAsyncEnumerable<T>`インターフェイスを作成するための拡張メソッドがあります。 リアクティブ プログラミングを使用する開発者の場合、インターフェイスを作成するための`IObservable<T>`同等の拡張メソッドは、次のセクションの例のようになります。
 
-### <a name="iobservable"></a>IObservable
+### <a name="iobservable"></a>Iobservable
 
-`IObservable<T>` インターフェイスは、`IEnumerable<T>`の "リアクティブな" 逆関数です。 ストリームから項目をプルするのではなく、事後対応型のアプローチによって、ストリームをサブスクライバーにプッシュすることができます。 これは gRPC ストリームとよく似ており、`IAsyncStreamReader<T>`の `IObservable<T>` を簡単にラップできます。
+インターフェイス`IObservable<T>`は の "反応" 逆です`IEnumerable<T>`。 ストリームから項目をプルするのではなく、リアクティブな方法で、ストリームがサブスクライバーに項目をプッシュできます。 これは gRPC ストリームと非常によく似ており、`IObservable<T>`インターフェイスを囲むのは簡単です`IAsyncStreamReader<T>`。
 
-このコードは `IAsyncEnumerable<T>` コードC#よりも長くなっています。では observable を操作するためのサポートが組み込まれていないため、実装クラスを手動で作成する必要があります。 ただし、これはジェネリッククラスです。そのため、1つの実装がすべての型で動作します。
+C# には、監視`IAsyncEnumerable<T>`可能な処理に対する組み込みのサポートがないため、このコードはコードよりも長くなります。 実装クラスを手動で作成する必要があります。 しかし、これはジェネリッククラスなので、すべての型で単一の実装が機能します。
 
 ```csharp
 using System;
@@ -64,9 +63,9 @@ namespace Grpc.Core
 ```
 
 > [!IMPORTANT]
-> この観測可能な実装では、`Subscribe` メソッドを1回だけ呼び出すことができます。これは、複数のサブスクライバーがストリームからの読み取りを試みた場合に混乱が生じるためです。 Observable のバッファリングと反復可能な共有を有効にする、のよう `Replay` な演算子が[あります。](https://www.nuget.org/packages/System.Reactive.Linq)これは、この実装で使用できます。
+> この観察可能な実装では`Subscribe`、ストリームから読み取ろうとする複数のサブスクライバを持つと混乱が生じるため、メソッドを 1 回だけ呼び出すことができます。 `Replay` [System.Reactive.Linq](https://www.nuget.org/packages/System.Reactive.Linq)など、この実装で使用できる監視可能なバッファリングと反復可能な共有を可能にする演算子があります。
 
-`GrpcStreamSubscription` クラスは、`IAsyncStreamReader`の列挙体を処理します。
+クラス`GrpcStreamSubscription`は、 の列挙体`IAsyncStreamReader`を処理します。
 
 ```csharp
 public class GrpcStreamSubscription : IDisposable
@@ -128,7 +127,7 @@ public class GrpcStreamSubscription : IDisposable
 }
 ```
 
-ここで必要なのは、ストリームリーダーから観測可能なを作成するための単純な拡張メソッドです。
+ここで必要なのは、ストリーム リーダーから監視可能なオブジェクトを作成するための単純な拡張メソッドです。
 
 ```csharp
 using System;
@@ -148,8 +147,8 @@ namespace Grpc.Core
 
 ## <a name="summary"></a>まとめ
 
-`IAsyncEnumerable` モデルと `IObservable` モデルは、.NET でのデータの非同期ストリームを処理するための適切にサポートされ、適切に記述された方法です。 gRPC ストリームは、最新の .NET Core フレームワークとリアクティブ/非同期プログラミングスタイルとの密接な統合を実現するために、両方のパラダイムに適しています。
+`IAsyncEnumerable`および`IObservable`モデルは、よくサポートされ、よく文書化された方法で、.NET の非同期データ ストリームを処理します。 gRPC ストリームは両方のパラダイムに適切に対応し、.NET Core との密接な統合と、反応型および非同期プログラミング スタイルを提供します。
 
 >[!div class="step-by-step"]
->[前へ](streaming-versus-repeated.md)
->[次へ](security.md)
+>[前次](streaming-versus-repeated.md)
+>[Next](security.md)

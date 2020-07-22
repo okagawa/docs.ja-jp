@@ -1,15 +1,15 @@
 ---
-title: '方法: 直前の兄弟 (XPath LINQ to XML) を検索する (Visual Basic)'
+title: '方法: 直前の兄弟を検索する (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: ec046283-9fe2-4440-b295-860bf700099d
-ms.openlocfilehash: 46f5b0d2d32e8dcba5f8c9e164a027a8e8118f4d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
-ms.translationtype: MT
+ms.openlocfilehash: 8b0071b2f39b8debdd52083718fe928c1f9fb6f3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582693"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364527"
 ---
-# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-visual-basic"></a>方法: 直前の兄弟 (XPath LINQ to XML) を検索する (Visual Basic)
+# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-visual-basic"></a>方法: 直前の兄弟を検索する (XPath-LINQ to XML) (Visual Basic)
 
 ノードの直前の兄弟を検索することが必要になる場合があります。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] とは対照的に、XPath では先行する兄弟軸の位置述語にはセマンティクス上の違いがあります。この  と XPath の相違点は、注目すべき特徴といえます。
 
@@ -52,4 +52,4 @@ Results are identical
 
 ## <a name="see-also"></a>関連項目
 
-- [XPath ユーザーの LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath ユーザー向けの LINQ to XML (Visual Basic)](linq-to-xml-for-xpath-users.md)

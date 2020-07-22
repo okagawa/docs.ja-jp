@@ -1,18 +1,18 @@
 ---
-title: <summary> (Visual Basic)
+title: <summary>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <summary> XML tag
 - summary XML tag
 ms.assetid: 861c847d-dd94-478a-aa23-bf4899cdc848
-ms.openlocfilehash: 25a0b307756401bed4d4c77d3668c2af53ba8b42
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: MT
+ms.openlocfilehash: 893ed299b46bd6255ca0e87d008ac53265698614
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524632"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411500"
 ---
-# <a name="summary-visual-basic"></a>\<summary > (Visual Basic)
+# <a name="summary-visual-basic"></a>\<summary> (Visual Basic)
 メンバーの概要を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -26,17 +26,17 @@ ms.locfileid: "72524632"
  オブジェクトの概要。  
   
 ## <a name="remarks"></a>Remarks  
- 型または型のメンバーを記述するには、`<summary>` タグを使用します。 型の説明に補足情報を追加するには、[\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md) タグを使用します。  
+ `<summary>` タグを使用して、型または型メンバーを記述します。 型の説明に補足情報を追加するには、[\<remarks>](remarks.md) を使用します。  
   
- @No__t_0 タグのテキストは、IntelliSense の型に関する唯一の情報源であり、オブジェクトブラウザーにも表示されます。 オブジェクトブラウザーの詳細については、「[コードの構造の表示](/visualstudio/ide/viewing-the-structure-of-code)」を参照してください。  
+ `<summary>` タグのテキストは、IntelliSense での型に関する唯一のソースで、オブジェクト ブラウザーにも表示されます。 オブジェクト ブラウザーについては、「[コードの構造の表示](/visualstudio/ide/viewing-the-structure-of-code)」を参照してください。  
   
- コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
+ コンパイル時に [-doc](../../reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- この例では、`<summary>` タグを使用して、`ResetCounter` メソッドと `Counter` プロパティを記述します。  
+ この例では、`<summary>` タグを使用して `ResetCounter` メソッドと `Counter` プロパティを記述します。  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)
+- [XML のコメント用タグ](index.md)

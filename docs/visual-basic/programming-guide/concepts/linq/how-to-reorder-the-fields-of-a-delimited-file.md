@@ -1,15 +1,15 @@
 ---
-title: '方法: 区切られたファイルのフィールドの順序を変更する (LINQ) (Visual Basic)'
+title: '方法: 区切り記号入りファイルのフィールドの順序を変更する (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: c451c7db-663b-4daf-b8ba-a2093095d672
-ms.openlocfilehash: 21c887dbcf008cbdd9a8a4197f4739f9271ba95f
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
-ms.translationtype: MT
+ms.openlocfilehash: 6f87374978425e0d51542c6eceda23697d7a3a67
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582796"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397896"
 ---
-# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>方法: 区切られたファイルのフィールドの順序を変更する (LINQ) (Visual Basic)
+# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>方法: 区切りファイルのフィールドの順序を変更する (LINQ) (Visual Basic)
 
 コンマ区切り (CSV) ファイルは、テキスト ファイルです。多くの場合、行と列で表されるスプレッドシート データや他の表形式データの格納に使用されます。 <xref:System.String.Split%2A> メソッドを使用してフィールドを区切ると、LINQ を使用した CSV ファイルのクエリと操作がとても簡単になります。 この手法は、CSV ファイルに限らず、行が構造化されているテキストの一部を並べ替えるときに利用できます。
 
@@ -77,6 +77,6 @@ End Class
 
 ## <a name="see-also"></a>関連項目
 
-- [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
-- [方法: CSV ファイルから XML を生成する](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)
+- [LINQ と文字列 (Visual Basic)](linq-and-strings.md)
+- [LINQ とファイル ディレクトリ (Visual Basic)](linq-and-file-directories.md)
+- [方法: CSV ファイルから XML を生成する](how-to-generate-xml-from-csv-files.md)

@@ -1,13 +1,13 @@
 ---
-title: 遅延実行の例 (Visual Basic)
+title: 遅延実行の例
 ms.date: 07/20/2015
 ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
-ms.openlocfilehash: e0bb7f3d125cc48607a534e2c24cbf7083353945
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
-ms.translationtype: MT
+ms.openlocfilehash: 863b018b6047d61f6fb4a5c1ac68151ed69d24a1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583329"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410800"
 ---
 # <a name="deferred-execution-example-visual-basic"></a>遅延実行の例 (Visual Basic)
 
@@ -63,4 +63,4 @@ Main: str GHI
 
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: 遅延実行 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [チュートリアル: 遅延実行 (Visual Basic)](tutorial-deferred-execution.md)

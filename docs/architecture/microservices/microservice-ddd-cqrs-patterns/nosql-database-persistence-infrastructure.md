@@ -1,13 +1,13 @@
 ---
 title: 永続インフラストラクチャとして NoSQL データベースを使用する
-description: コンテナー化された .NET アプリケーションの .NET マイクロサービス | 永続性実装のオプションとして、NoSql データベースを使用することについて (特に Azure Cosmos DB)。
-ms.date: 10/08/2018
-ms.openlocfilehash: b184586dede6331e0babfa976c6fd641933d018e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+description: 永続性実装のオプションとしての NoSql データベースの一般的な使用と、特に Azure Cosmos DB の使用について理解します。
+ms.date: 01/30/2020
+ms.openlocfilehash: a478809895b0c20824f08f20558f2d47e10223d0
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089868"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100809"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>永続インフラストラクチャとして NoSQL データベースを使用する
 
@@ -54,7 +54,7 @@ NoSQL データベースを使用する場合の利点は、エンティティ�
 
 [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) は、ミッション クリティカルなアプリケーションのために、世界各地に分散された Microsoft のデータベース サービスです。 Azure Cosmos DB では、[ターン キー グローバル配布](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally)、世界規模での[スループットとストレージのエラスティック スケーリング](https://docs.microsoft.com/azure/cosmos-db/partition-data)、99 パーセンタイルで 10 ミリ秒未満の待機時間、[5 つの明確に定義された整合性レベル](https://docs.microsoft.com/azure/cosmos-db/consistency-levels)、および保証された高可用性を提供しており、これらすべてが[業界トップの SLA](https://azure.microsoft.com/support/legal/sla/cosmos-db/) でサポートされています。 Azure Cosmos DB により、[データが自動的にインデックス付けされる](https://www.vldb.org/pvldb/vol8/p1668-shukla.pdf)ため、スキーマとインデックスの管理に対処する必要がなくなります。 これはマルチモデルで、ドキュメント、キー値、グラフ、および列指向データ モデルをサポートします。
 
-![Azure Cosmos DB はグローバルに配布された、低待機時間が保証されたデータベースであり、4 つの API プロトコルでアクセスできます。 ](./media/image19.1.png)
+![Azure Cosmos DB のグローバル配布を示す図。](./media/nosql-database-persistence-infrastructure/azure-cosmos-db-global-distribution.png)
 
 **図 7-19** Azure Cosmos DB のグローバル配布
 
@@ -64,7 +64,7 @@ C\# モデルを使用して Azure Cosmos DB API で使用される集約を実�
 // C# EXAMPLE OF AN ORDER AGGREGATE BEING PERSISTED WITH AZURE COSMOS DB API
 // *** Domain Model Code ***
 // Aggregate: Create an Order object with its child entities and/or value objects.
-// Then, use AggregateRoot’s methods to add the nested objects so invariants and
+// Then, use AggregateRoot's methods to add the nested objects so invariants and
 // logic is consistent across the nested properties (value objects and entities).
 
 Order orderAggregate = new Order
@@ -122,9 +122,9 @@ await client.CreateDocumentAsync(collectionUri, newOrder);
 
 他の .NET アプリケーションからアクセスする場合と同じように、コンテナーで実行されている .NET コードから Azure Cosmos DB データベースにアクセスできます。 たとえば、eShopOnContainers の Locations.API と Marketing.API のマイクロサービスは、Azure Cosmos DB データベースを使用できるように実装されています。
 
-ただし、Docker 開発環境の観点から、Azure Cosmos DB には制限があります。 2017 年末時点では、ローカルの開発マシン (PC など) で実行できるオンプレミスの [Azure Cosmos DB エミュレーター](https://docs.microsoft.com/azure/cosmos-db/local-emulator)がある場合でも、Linux ではなく、Windows がサポートされます。
+ただし、Docker 開発環境の観点から、Azure Cosmos DB には制限があります。 ローカルの開発用コンピューターで実行できるオンプレミスの [Azure Cosmos DB エミュレーター](https://docs.microsoft.com/azure/cosmos-db/local-emulator)がある場合でも、Windows のみがサポートされます。 Linux と macOS はサポートされません。
 
-また、このエミュレーターを Docker で実行する可能性がありますが、Windows コンテナーのみであり、Linux コンテナーではありません。 現在、Docker for Windows に Linux コンテナーと Windows コンテナーを同時に展開することはできないため、アプリケーションを Linux コンテナーとして展開する場合、これが開発環境にとって最初のハンディキャップとなります。 展開されるすべてのコンテナーは、Linux または Windows 用のどちらかにする必要があります。
+このエミュレーターを Docker で実行する可能性もありますが、可能性があるのは Windows コンテナーのみであり、Linux コンテナーではありません。 現在、Docker for Windows に Linux コンテナーと Windows コンテナーを同時に展開することはできないため、アプリケーションを Linux コンテナーとして展開する場合、これが開発環境にとって最初のハンディキャップとなります。 展開されるすべてのコンテナーは、Linux または Windows 用のどちらかにする必要があります。
 
 開発およびテスト ソリューションにとって理想的でより簡単な展開は、開発およびテスト環境に常に整合性を持たせるために、データベース システムをカスタム コンテナーと共にコンテナーとして展開できることです。
 
@@ -132,7 +132,7 @@ await client.CreateDocumentAsync(collectionUri, newOrder);
 
 Cosmos DB データベースでは、.NET とネイティブ MongoDB ワイヤ プロトコルのために MongoDB API をサポートしています。 つまり、既存のドライバーを使用することで、図 7-20 に示すように、MongoDB 用に記述されたアプリケーションで Cosmos DB と通信し、MongoDB データベースの代わりに Cosmos DB データベースを使用できるようになります。
 
-![Cosmos DB では、MongoDB API for .NET と MongoDB ワイヤ プロトコルがサポートされています。MongoDb から Cosmos DB に簡単に切り替えることができます。](./media/image19.2.png)
+![Cosmos DB で .NET と MongoDB のワイヤ プロトコルをサポートしていることを示す図。](./media/nosql-database-persistence-infrastructure/mongodb-api-wire-protocol.png)
 
 **図 7-20** MongoDB API とプロトコルを使用して Azure Cosmos DB にアクセスする
 
@@ -140,13 +140,13 @@ Cosmos DB データベースでは、.NET とネイティブ MongoDB ワイヤ �
 
 次の画像に示すように、MongoDB API を使用することで、eShopOnContainers でローカル開発環境に対して MongoDB Linux コンテナーと Windows コンテナーの両方がサポートされますが、その後、[MongoDB の接続文字列を Azure Cosmos DB をポイントするように変更](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)するだけで、Azure Cosmos DB と同じようなスケーラブルな PaaS クラウド ソリューションに移行できます。
 
-![eShopOnContainers の Location マイクロサービスは MongoDB によって実装されますが、接続文字列を変更するだけで Cosmos DB に切り替えることができます。](./media/image20-bis.png)
+![eShopOnContainers の Location マイクロサービスで Cosmos DB または Mongo DB を使用できることを示す図。](./media/nosql-database-persistence-infrastructure/eshoponcontainers-mongodb-containers.png)
 
 **図 7-21** 開発環境に MongoDB コンテナーまたは運用に Azure Cosmos DB を使用する eShopOnContainers
 
-実稼働の Azure Cosmos DB は、PaaS およびスケーラブルなサービスとして Azure のクラウドで実行されます。
+運用環境の Azure Cosmos DB は、PaaS およびスケーラブルなサービスとして Azure のクラウドで実行されます。
 
-.NET Core のカスタム コンテナーは、(Windows 10 コンピューターで Docker for Windows を使用して) ローカルの Docker の開発用ホストで実行することも、Azure AKS または Azure Service Fabric での Kubernetes のように、運用環境に展開することもできます。 この 2 つ目の環境では、稼働中のデータを処理するため、クラウド内で Azure Cosmos DB を使用しているため、.NET Core のカスタム コンテナーのみを展開し、MongoDB コンテナーは展開しません。
+.NET Core のカスタム コンテナーは、(Windows 10 コンピューターで Docker for Windows を使用して) ローカルの Docker の開発用ホストで実行することも、Azure AKS または Azure Service Fabric での Kubernetes のように、運用環境に展開することもできます。 この 2 つ目の環境では、運用中のデータの処理にクラウド内の Azure Cosmos DB を使用しているため、.NET Core のカスタム コンテナーのみが展開され、MongoDB コンテナーは展開されません。
 
 MongoDB API を使用することの明らかな利点は、MongoDB と Azure Cosmos DB の両方のデータベース エンジンでソリューションを実行できるため、異なる環境への移行が容易になることです。 ただし、特定のデータベース エンジンの機能をフル活用するために、ネイティブ API (ネイティブ Cosmos DB API) を使用することには意義がある場合があります。
 
@@ -154,19 +154,19 @@ MongoDB API を使用することの明らかな利点は、MongoDB と Azure Co
 
 ### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>実稼働アプリケーションのアプローチを分析する:MongoDB API とCosmos DB API
 
-Microsoft の優先度が根本的に Azure Cosmos DB でも動作する NoSQL データベースを使用して一貫性のある開発/テスト環境を持つことだったため、eShopOnContainers では MongoDB API を使用しています。
+Microsoft では、根本的に、Azure Cosmos DB でも動作する NoSQL データベースを使用して一貫性のある開発/テスト環境を持つことを優先したため、eShopOnContainers では MongoDB API を使用しています。
 
 ただし、MongoDB API を使用して、実稼働アプリケーションの Azure で Azure Cosmos DB にアクセスするように計画している場合は、ネイティブ Azure Cosmos DB API を使用した場合と比較して、MongoDB API を使用して Azure Cosmos DB データベースにアクセスした場合の機能とパフォーマンスの違いを分析する必要があります。 同様の場合は、MongoDB API を使用でき、同時に 2 つの NoSQL データベース エンジンをサポートするという利点が得られます。
 
 また、[MongoDB Azure Service](https://www.mongodb.com/scale/mongodb-azure-service) を使用して、MongoDB クラスターを Azure のクラウドで運用データベースとして使用することもできます。 ただしこれは、Microsoft が提供している PaaS サービスではありません。 このケースでは、Azure は MongoDB からのそのソリューションをホスティングしているだけです。
 
-基本的にこれは、Azure Cosmos DB に対して MongoDB API を常に使用しないように記述している単なる免責事項です。eShopOnContainers ではそのようにしましたが、Linux コンテナーにとってはそれが便利な選択だったからです。 決定は、特定のニーズと、実稼働アプリケーションに対して行う必要があるテストに基づいて行う必要があります。
+基本的に、これは、Linux コンテナーには便利な選択だったため、eShopOnContainers では MongoDB API を使用しましたが、Azure Cosmos DB に対して MongoDB API を常に使用すべきではないことを言明する免責事項にすぎません。 決定は、特定のニーズと、実稼働アプリケーションに対して行う必要があるテストに基づいて行う必要があります。
 
 ### <a name="the-code-use-mongodb-api-in-net-core-applications"></a>コード:.NET Core アプリケーションで MongoDB API を使用する
 
 .NET 用の MongoDB API は、次の図に示されている Locations.API プロジェクトのような、プロジェクトに追加する必要のある NuGet パッケージに基づいています。
 
-![ソリューション エクスプローラー ビュー。MongoDB NuGet パッケージの依存関係を確認できます。](./media/image21-bis.png)
+![MongoDB NuGet パッケージの依存関係のスクリーンショット。](./media/nosql-database-persistence-infrastructure/mongodb-api-nuget-packages.png)
 
 **図 7-22**。 .NET Core プロジェクト内の MongoDB API NuGet パッケージの参照
 
@@ -266,21 +266,21 @@ public async Task<Locations> GetAsync(int locationId)
 
 #### <a name="use-an-env-var-in-the-docker-composeoverrideyml-file-for-the-mongodb-connection-string"></a>MongoDB の接続文字列に対して docker-compose.override.yml ファイル内の環境変数を使用する
 
-MongoClient オブジェクトを作成するときには、正確に適切なデータベースをポイントしている `ConnectionString` パラメーターと同じ、基本的なパラメーターが必要です。 eShopOnContainers の場合、接続文字列はローカル MongoDB Docker コンテナーまたは "実稼働の" Azure Cosmos DB データベースをポイントすることができます。  次の yml コードにあるように、その接続文字列は、docker-compose または Visual Studio を使用して展開するときに使用される、`docker-compose.override.yml` ファイルで定義されている環境変数から取得されます。
+MongoClient オブジェクトを作成するときには、正確に適切なデータベースをポイントしている `ConnectionString` パラメーターと同じ、基本的なパラメーターが必要です。 eShopOnContainers の場合、接続文字列はローカル MongoDB Docker コンテナーまたは "運用中の" Azure Cosmos DB データベースをポイントすることができます。  次の yml コードにあるように、その接続文字列は、docker-compose または Visual Studio を使用して展開するときに使用される、`docker-compose.override.yml` ファイルで定義されている環境変数から取得されます。
 
 ```yml
 # docker-compose.override.yml
 version: '3.4'
 services:
   # Other services
-  locations.api:
+  locations-api:
     environment:
       # Other settings
-      - ConnectionString=${ESHOP_AZURE_COSMOSDB:-mongodb://nosql.data}
+      - ConnectionString=${ESHOP_AZURE_COSMOSDB:-mongodb://nosqldata}
 
 ```
 
-`ConnectionString` 環境変数はこの方法で解決されます:`ESHOP_AZURE_COSMOSDB` グローバル変数が Azure Cosmos DB 接続文字列を使用して `.env` ファイルで定義されている場合、そのグローバル変数を使用してクラウド内の Azure Cosmos DB データベースにアクセスします。 定義されていない場合、`mongodb://nosql.data` 値を取得し、開発 mongodb コンテナーを使用します。
+`ConnectionString` 環境変数はこの方法で解決されます:`ESHOP_AZURE_COSMOSDB` グローバル変数が Azure Cosmos DB 接続文字列を使用して `.env` ファイルで定義されている場合、そのグローバル変数を使用してクラウド内の Azure Cosmos DB データベースにアクセスします。 定義されていない場合は `mongodb://nosqldata` 値が取得され、開発 MongoDB コンテナーが使用されます。
 
 次のコードは、eShopOnContainers に実装されているように、Azure Cosmos DB グローバル環境変数を持つ `.env` ファイルを示しています。
 
@@ -299,16 +299,16 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 #ESHOP_AZURE_SERVICE_BUS=<YourAzureServiceBusInfo>
 ```
 
-「[Azure Cosmos DB への MongoDB アプリケーションの接続](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)」で説明したように、ESHOP_AZURE_COSMOSDB 行をコメント解除し、Azure Portal から取得した Azure Cosmos DB 接続文字列を使用してそれを更新する必要があります。
+「[Azure Cosmos DB への MongoDB アプリケーションの接続](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)」で説明したように、ESHOP_AZURE_COSMOSDB 行をコメント解除し、Azure portal から取得した Azure Cosmos DB 接続文字列を使用してそれを更新する必要があります。
 
-`ESHOP_AZURE_COSMOSDB` グローバル変数が空、つまり、`.env` ファイル内でコメント アウトされている場合、次の .yml コードに示されているように、`nosql.data` という名前で、Docker Compose ファイルで定義された eShopOnContainers で展開されているローカルの MongoDB コンテナーをポイントする既定の MongoDB 接続文字列がコンテナーで使用されます。
+`ESHOP_AZURE_COSMOSDB` グローバル変数が空の場合 (つまり、`.env` ファイルでコメントアウトされている場合)、コンテナーでは既定の MongoDB 接続文字列が使用されます。 この接続文字列は、次の .yml コードに示すように、`nosqldata` という名前の eShopOnContainers に配置されたローカル MongoDB コンテナーをポイントし、docker-compose ファイルに定義されていました。
 
 ``` yml
 # docker-compose.yml
 version: '3.4'
 services:
   # ...Other services...
-  nosql.data:
+  nosqldata:
     image: mongo
 ```
 
@@ -342,5 +342,5 @@ services:
   <https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef>
 
 >[!div class="step-by-step"]
->[前へ](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+>[前へ](infrastructure-persistence-layer-implementation-entity-framework-core.md)
 >[次へ](microservice-application-layer-web-api-design.md)

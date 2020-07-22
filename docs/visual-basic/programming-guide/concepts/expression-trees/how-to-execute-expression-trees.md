@@ -1,15 +1,15 @@
 ---
-title: '方法: 式ツリーの実行 (Visual Basic)'
+title: '方法: 式ツリーを実行する'
 ms.date: 07/20/2015
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
-ms.openlocfilehash: 135c295070ea591f3b494734f9d236e36b9c3c5d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: MT
+ms.openlocfilehash: 7b7b08ea1a7a1310b1d98876be96f1fa28ecba91
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916502"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375331"
 ---
-# <a name="how-to-execute-expression-trees-visual-basic"></a>方法: 式ツリーの実行 (Visual Basic)
+# <a name="how-to-execute-expression-trees-visual-basic"></a>方法: 式ツリーを実行する (Visual Basic)
 このトピックでは、式ツリーを実行する方法について説明します。 式ツリーを実行すると値が返される場合がありますが、メソッドの呼び出しなどの処理が実行されるだけの場合もあります。  
   
  実行できるのは、ラムダ式を表す式ツリーのみです。 ラムダ式を表す式ツリーの型は、<xref:System.Linq.Expressions.LambdaExpression> または <xref:System.Linq.Expressions.Expression%601> です。 このような式ツリーを実行するには、<xref:System.Linq.Expressions.LambdaExpression.Compile%2A> メソッドを呼び出して実行可能なデリゲートを作成した後、そのデリゲートを呼び出します。  
@@ -42,11 +42,11 @@ MsgBox(result)
 ' 8  
 ```  
   
-## <a name="compiling-the-code"></a>コードのコンパイル  
+## <a name="compile-the-code"></a>コードのコンパイル  
   
 - System.Linq.Expressions 名前空間をインクルードします。  
   
 ## <a name="see-also"></a>関連項目
 
-- [式ツリー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [方法: 式ツリーの変更 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+- [式ツリー (Visual Basic)](index.md)
+- [方法: 式ツリーを変更する (Visual Basic)](how-to-modify-expression-trees.md)

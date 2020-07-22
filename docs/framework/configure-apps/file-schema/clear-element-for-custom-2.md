@@ -1,5 +1,5 @@
 ---
-title: NameValueSectionHandler および DictionarySectionHandler の <clear> 要素
+title: <clear>NameValueSectionHandler および DictionarySectionHandler の要素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/clear
@@ -7,22 +7,20 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3e27bb7e21baf2eb4990d0107db4aae1b5f9a7d1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f6d860f35d22002030ffa3d09dd0d8a96116bf5e
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119075"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "77214750"
 ---
-# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler および DictionarySectionHandler の \<clear > 要素
+# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<clear>NameValueSectionHandler および DictionarySectionHandler の要素
 
 セクションで以前に定義したすべての設定を消去します。
 
-[ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<sectionName >** ](custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<クリア >**
+[**\<configuration>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<sectionName>**](custom-element-2.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
 ## <a name="syntax"></a>構文
 
@@ -32,27 +30,27 @@ ms.locfileid: "73119075"
 
 ## <a name="attributes"></a>属性
 
-None
+なし
 
 ## <a name="parent-element"></a>親要素
 
 |     | 説明 |
 | --- | ------------|
-| [ **\<sectionName >** Element](custom-element-2.md) | <xref:System.Configuration.NameValueSectionHandler> クラスと <xref:System.Configuration.DictionarySectionHandler> クラスを使用するカスタム構成セクションの設定を定義します。 |
+| [**\<sectionName>** Element](custom-element-2.md) | クラスおよびクラスを使用するカスタム構成セクションの設定を定義し <xref:System.Configuration.NameValueSectionHandler> <xref:System.Configuration.DictionarySectionHandler> ます。 |
 
 ## <a name="child-elements"></a>子要素
 
-None
+なし
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**\<clear >** 要素を使用して、構成ファイル階層の上位レベルで定義されているすべての設定をアプリケーションから削除できます。
+要素を使用して、 **\<clear>** 構成ファイル階層の上位レベルで定義されているすべての設定をアプリケーションから削除できます。
 
 ## <a name="example"></a>例
 
-この例では、マシン構成ファイルとアプリケーション構成ファイルを定義し、アプリケーション構成ファイルで **\<clear >** 要素を使用して、マシン構成ファイルで以前に定義したセクションをクリアする方法を示します。
+この例では、コンピューター構成ファイルとアプリケーション構成ファイルを定義し、 **\<clear>** アプリケーション構成ファイルで要素を使用して、マシン構成ファイルで以前に定義したセクションをクリアする方法を示します。
 
-次のマシン構成ファイルのコードでは、セクション **\<mysection >** が宣言されています。
+次のマシン構成ファイルのコードでは、セクションを宣言してい **\<mySection>** ます。
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +65,7 @@ None
 </configuration>
 ```
 
-次のアプリケーション構成ファイルのコードは、 **\<mySection >** からすべての設定を削除します。 アプリケーションは、コンピューター構成ファイルの **\<mysection >** セクションので宣言された設定を取得できません。
+次のアプリケーション構成ファイルのコードは、からすべての設定を削除し **\<mySection>** ます。 アプリケーションは、 **\<mySection>** コンピューター構成ファイルのセクションので宣言された設定を取得できません。
 
 ```xml
 <!-- Application configuration file -->

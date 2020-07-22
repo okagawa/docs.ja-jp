@@ -1,24 +1,25 @@
 ---
 title: アセンブリのシャドウ コピー
+description: アプリケーション ドメインをアンロードしなくても、アプリケーション ドメインで使用されるアセンブリを更新できるように、.NET でのアセンブリのシャドウ コピーについて調べます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], shadow copying
 - application domains, shadow copying assemblies
 - shadow copying assemblies
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
-ms.openlocfilehash: 40a1b5062d45b7b540af7058b82b77c664070d2e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.openlocfilehash: a7ff72763dd26dbc50cd37e070c2d25ababa00f3
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119779"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104565"
 ---
 # <a name="shadow-copying-assemblies"></a>アセンブリのシャドウ コピー
 
 シャドウ コピーにより、アプリケーション ドメインをアンロードしなくても、アプリケーション ドメインで使用されるアセンブリを更新できます。 これは、ASP.NET サイトなど、継続的に使用可能であることが必要なアプリケーションで特に役立ちます。
 
 > [!IMPORTANT]
-> シャドウ コピーは、[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリではサポートされていません。
+> シャドウ コピーは、Windows 8.x Store アプリではサポートされていません。
 
 共通言語ランタイムは、アセンブリがアンロードされるまでファイルを更新できないように、アセンブリがロードされるときにアセンブリ ファイルをロックします。 アプリケーション ドメインからアセンブリをアンロードする唯一の方法は、アプリケーション ドメインをアンロードすることなので、通常の状況では、アセンブリを使用しているすべてのアプリケーション ドメインがアンロードされるまで、そのアセンブリをディスク上で更新することはできません。
 
@@ -74,7 +75,7 @@ ms.locfileid: "73119779"
 
 .NET Framework 4 以降は、起動時の既定の動作として、アプリケーション ディレクトリ内にある各アセンブリのファイルの日時を、シャドウ コピーのディレクトリ内にあるコピーのファイルの日時と直接比較します。 アセンブリが更新されている場合は、.NET Framework の以前のバージョンと同じ手順を使用してそれをコピーし、そうでない場合は、シャドウ コピーのディレクトリ内にあるコピーが読み込まれます。
 
-結果としてのパフォーマンスの改善は、アセンブリの変更頻度が小さく、通常はアセンブリの小さなサブセット内で変更が生じるようなアプリケーションで最大となります。 アプリケーション内のアセンブリの大部分が頻繁に変更される場合は、新しい既定動作によって、パフォーマンスが低下する可能性があります。 [\<shadowCopyVerifyByTimestamp> 要素](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)を構成ファイルに `enabled="false"` と共に追加することによって、.NET Framework の以前のバージョンの起動動作を復元できます。
+結果としてのパフォーマンスの改善は、アセンブリの変更頻度が小さく、通常はアセンブリの小さなサブセット内で変更が生じるようなアプリケーションで最大となります。 アプリケーション内のアセンブリの大部分が頻繁に変更される場合は、新しい既定動作によって、パフォーマンスが低下する可能性があります。 構成ファイルに [\<shadowCopyVerifyByTimestamp> 要素](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)と `enabled="false"` を追加すると、.NET Framework の以前のバージョンの起動動作を復元することができます。
 
 <a name="ObsoleteMethods"></a>
 

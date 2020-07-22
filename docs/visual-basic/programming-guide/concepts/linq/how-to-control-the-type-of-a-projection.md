@@ -1,21 +1,21 @@
 ---
-title: '方法: プロジェクションの種類を制御する (Visual Basic)'
+title: '方法: 射影の型を制御する'
 ms.date: 07/20/2015
 ms.assetid: a0171276-0b46-4817-aee5-a8d5191b12fe
-ms.openlocfilehash: 8ec53d1f8e0ae4957857d4b71fddd05205dee6b5
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
-ms.translationtype: MT
+ms.openlocfilehash: 6b809188f68805afcca960bd809e079d997e79c9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351737"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357258"
 ---
-# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>方法: プロジェクションの種類を制御する (Visual Basic)
+# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>方法: プロジェクションの型を制御する (Visual Basic)
 射影は、1 つのデータのセットを取得し、フィルター処理し、その形式を変更し、その型も変更するプロセスです。 ほとんどのクエリ式は射影を実行します。 このセクション内のクエリ式は、ほとんどが <xref:System.Collections.Generic.IEnumerable%601> の <xref:System.Xml.Linq.XElement> に評価されますが、射影の型を制御して別の型のコレクションを作成することができます。 このトピックでは、その方法について説明します。  
   
 ## <a name="example"></a>例  
  次の例では、`Customer` という新しい型を定義します。 次に、クエリ式の `Customer` 句で新しい `Select` オブジェクトをインスタンス化します。 これによって、クエリ式の型が <xref:System.Collections.Generic.IEnumerable%601> の `Customer` になります。  
   
- この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:顧客と注文 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)」。  
+ この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:顧客と注文 (LINQ to XML)](sample-xml-file-customers-and-orders-linq-to-xml.md)」。  
   
 ```vb  
 Public Class Customer  
@@ -89,4 +89,4 @@ LETSS:Let's Stop N Shop:Jaime Yorres
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq.Enumerable.Select%2A>
-- [プロジェクションと変換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [プロジェクションと変換 (LINQ to XML) (Visual Basic)](projections-and-transformations-linq-to-xml.md)

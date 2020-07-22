@@ -2,17 +2,17 @@
 title: 永続性発行済みトークン プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: f1bb95ba676b47d29d5b527b5b93eddcf48f4bde
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: fed5f44e6cc40cfe2ca963077b6371c14b3b086a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989940"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600562"
 ---
 # <a name="durable-issued-token-provider"></a>永続性発行済みトークン プロバイダー
 このサンプルでは、カスタム クライアントの発行済みトークン プロバイダーを実装する方法を示します。  
   
-## <a name="discussion"></a>説明  
+## <a name="discussion"></a>ディスカッション  
  Windows Communication Foundation (WCF) のトークンプロバイダーは、セキュリティインフラストラクチャに資格情報を提供するために使用されます。 一般的に、トークン プロバイダーは、ターゲットをチェックし、適切な証明書を発行して、セキュリティ インフラストラクチャがメッセージのセキュリティを保護できるようにします。 WCF には、CardSpace トークンプロバイダーが付属しています。 カスタム トークン プロバイダーは、次の場合に便利です。  
   
 - 組み込みのトークン プロバイダが連係動作できない資格情報ストアがある場合。  
@@ -36,16 +36,16 @@ ms.locfileid: "70989940"
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
   
- このサンプルでは、 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)を使用して ICalculator コントラクトを公開します。 このバインディングのクライアント側の構成は、次のコードに示すとおりです。  
+ このサンプルでは、を使用して ICalculator コントラクトを公開し [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) ます。 このバインディングのクライアント側の構成は、次のコードに示すとおりです。  
   
 ```xml  
 <bindings>
   <wsFederationHttpBinding>
     <binding name="ServiceFed">
       <security mode="Message">
-        <message issuedKeyType="SymmetricKey" 
+        <message issuedKeyType="SymmetricKey"
                  issuedTokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1">
-          <issuer address="http://localhost:8000/sts/windows" 
+          <issuer address="http://localhost:8000/sts/windows"
                   binding="wsHttpBinding" />
         </message>
       </security>
@@ -63,13 +63,13 @@ ms.locfileid: "70989940"
   <wsFederationHttpBinding>
     <binding name="ServiceFed">
       <security mode="Message">
-        <message issuedKeyType="SymmetricKey" 
+        <message issuedKeyType="SymmetricKey"
                  issuedTokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1">
           <issuerMetadata address="http://localhost:8000/sts/mex">
             <identity>
-              <certificateReference storeLocation="CurrentUser" 
-                                    storeName="TrustedPeople" 
-                                    x509FindType="FindBySubjectDistinguishedName" 
+              <certificateReference storeLocation="CurrentUser"
+                                    storeName="TrustedPeople"
+                                    x509FindType="FindBySubjectDistinguishedName"
                                     findValue="CN=STS" />
             </identity>
           </issuerMetadata>
@@ -91,15 +91,15 @@ ms.locfileid: "70989940"
   <serviceCredentials>
     <issuedTokenAuthentication>
       <knownCertificates>
-        <add storeLocation="LocalMachine" 
-              storeName="TrustedPeople" 
-              x509FindType="FindBySubjectDistinguishedName" 
+        <add storeLocation="LocalMachine"
+              storeName="TrustedPeople"
+              x509FindType="FindBySubjectDistinguishedName"
               findValue="CN=STS" />
       </knownCertificates>
     </issuedTokenAuthentication>
-    <serviceCertificate storeLocation="LocalMachine" 
-                        storeName="My" 
-                        x509FindType="FindBySubjectDistinguishedName" 
+    <serviceCertificate storeLocation="LocalMachine"
+                        storeName="My"
+                        x509FindType="FindBySubjectDistinguishedName"
                         findValue="CN=localhost" />
   </serviceCredentials>
 </behavior>  
@@ -137,7 +137,7 @@ ms.locfileid: "70989940"
   
      <xref:System.IdentityModel.Selectors.SecurityTokenManager> は、<xref:System.IdentityModel.Selectors.SecurityTokenProvider> メソッド内で渡される特定の <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> の `CreateSecurityTokenProvider` の作成に使用されます。 セキュリティ トークン マネージャーは、トークン認証システムとトークン シリアライザーの作成にも使用されますが、このサンプルでは扱っていません。 このサンプルでは、カスタム セキュリティ トークン マネージャーは <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> クラスを継承し、`CreateSecurityTokenProvider` メソッドをオーバーライドして、渡されたトークンの要件で発行済みトークンが必要であることが示されている場合にはカスタム トークン プロバイダーを返します。  
   
-    ```csharp  
+    ```csharp
     class DurableIssuedTokenClientCredentialsTokenManager :  
      ClientCredentialsSecurityTokenManager  
     {  
@@ -154,7 +154,7 @@ ms.locfileid: "70989940"
         {  
           return new DurableIssuedSecurityTokenProvider ((IssuedSecurityTokenProvider)base.CreateSecurityTokenProvider( tokenRequirement), this.cache);  
         }  
-        else  
+        else
         {  
           return base.CreateSecurityTokenProvider(tokenRequirement);  
         }  
@@ -166,7 +166,7 @@ ms.locfileid: "70989940"
   
      クライアント資格情報クラスは、クライアント プロキシ用に構成された資格情報を表すために使用され、トークン認証システム、トークン プロバイダ、およびトークン シリアライザの取得に使用されるセキュリティ トークン マネージャを作成します。  
   
-    ```csharp  
+    ```csharp
     public class DurableIssuedTokenClientCredentials : ClientCredentials  
     {  
       IssuedTokenCache cache;  
@@ -206,7 +206,7 @@ ms.locfileid: "70989940"
   
 4. トークン キャッシュを実装します。 サンプルの実装では抽象基本クラスを使用し、トークン キャッシュの利用先ではこのクラスを通じてキャッシュとやり取りします。  
   
-    ```csharp  
+    ```csharp
     public abstract class IssuedTokenCache  
     {  
       public abstract void AddToken ( GenericXmlSecurityToken token, EndpointAddress target, EndpointAddress issuer);  
@@ -217,7 +217,7 @@ ms.locfileid: "70989940"
   
      クライアントがカスタム クライアント資格情報を使用するため、サンプルでは既定のクライアント資格情報を削除し、新しいクライアント資格情報クラスを提供しています。  
   
-    ```csharp  
+    ```csharp
     clientFactory.Endpoint.Behaviors.Remove<ClientCredentials>();  
     DurableIssuedTokenClientCredentials durableCreds = new DurableIssuedTokenClientCredentials();  
     durableCreds.IssuedTokenCache = cache;  
@@ -235,7 +235,7 @@ ms.locfileid: "70989940"
   
 1. setup.cmd ファイルを実行して、必要な証明書を作成します。  
   
-2. ソリューションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。 ソリューション内のすべてのプロジェクトがビルドされていることを確認します (Shared、RSTRSTR、Service、SecurityTokenService、Client)。  
+2. ソリューションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](building-the-samples.md)」の手順に従います。 ソリューション内のすべてのプロジェクトがビルドされていることを確認します (Shared、RSTRSTR、Service、SecurityTokenService、Client)。  
   
 3. Service.exe と SecurityTokenService.exe がどちらも管理者権限で実行されていることを確認します。  
   
@@ -247,9 +247,9 @@ ms.locfileid: "70989940"
   
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780)にアクセスして、すべての[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (wcf) とサンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
->   
+>
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  

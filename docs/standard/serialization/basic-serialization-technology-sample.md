@@ -1,13 +1,14 @@
 ---
 title: 基本的なシリアル化の技術サンプル
+description: このサンプルでは、メモリ内のオブジェクト グラフをシリアル化してストリームに変換する、CLR の機能の例を示します。 このサンプルは、SoapFormatter または BinaryFormatter を使用できます。
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: e5dcc9ec7cf6f996c97262b14020552286c530da
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
-ms.translationtype: MT
+ms.openlocfilehash: 3f2273e6afb3a72f9734444ffe92d30871fb762b
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353138"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84276570"
 ---
 # <a name="basic-serialization-technology-sample"></a>基本的なシリアル化の技術サンプル
 
@@ -25,7 +26,7 @@ ms.locfileid: "71353138"
 
 ### <a name="to-build-the-sample-using-visual-studio"></a>Visual Studio を使用してサンプルをビルドするには
 
-1. ファイルエクスプローラーを開き、サンプルの言語固有のサブディレクトリのいずれかに移動します。
+1. エクスプローラーを開き、サンプルが格納されている、言語固有のサブディレクトリのいずれかに移動します。
 
 2. 使用しているプログラミング言語に応じて、SerializationCS.sln ファイル、SerializationJSL.sln ファイル、または SerializationVB.sln ファイルのアイコンをダブルクリックして、このファイルを Visual Studio で開きます。
 
@@ -42,7 +43,7 @@ ms.locfileid: "71353138"
   > [!NOTE]
   > このサンプルでは、コンソール アプリケーションをビルドします。 出力を表示するには、コマンド プロンプトでこれを実行する必要があります。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このサンプル アプリケーションは、実行するテストを示すコマンド ライン パラメーターを受け取ります。 SOAP フォーマッタを使用して、ノード数 10 個のリストを **Test.xml** というファイルにシリアル化するには、**sx Test.xml 10** というパラメーターを使用します。
 
@@ -72,11 +73,11 @@ Serialize.exe -sb Test.bin 10000 >somefile.txt
 
 - ランタイム シリアル化
 
-  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> @no__t または @no__t 2 つのオブジェクトのいずれかを参照するために使用されます。
+  - <xref:System.Runtime.Serialization.IFormatter> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> または <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> オブジェクトを参照するために使用されます。
 
-  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> バイナリ形式でリンクリストをストリームにシリアル化するために使用されます。 バイナリ フォーマッタでは、<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 型でのみ理解できる形式を使用します。 ただし、データは簡潔です。
+  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> リンク リストをバイナリ形式でストリームにシリアル化するために使用されます。 バイナリ フォーマッタでは、<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 型でのみ理解できる形式を使用します。 ただし、データは簡潔です。
 
-  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> は、SOAP 形式でリンクリストをストリームにシリアル化するために使用されます。 SOAP は標準の形式です。
+  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> リンク リストを SOAP 形式のストリームにシリアル化するために使用されます。 SOAP は標準の形式です。
 
 - ストリーム入出力
 
@@ -99,9 +100,9 @@ Serialize.exe -sb Test.bin 10000 >somefile.txt
 - <xref:System.Runtime.Serialization.IFormatter>
 - <xref:System.SerializableAttribute>
 - <xref:System.Xml.Serialization>
-- [基本的なシリアル化](../../../docs/standard/serialization/basic-serialization.md)
-- [バイナリ シリアル化](../../../docs/standard/serialization/binary-serialization.md)
-- [属性を使用した XML シリアル化の制御](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [XML シリアル化の概要](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [シリアル化](../../../docs/standard/serialization/index.md)
-- [XML シリアル化および SOAP シリアル化](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [基本的なシリアル化](basic-serialization.md)
+- [バイナリ シリアル化](binary-serialization.md)
+- [属性を使用した XML シリアル化の制御](controlling-xml-serialization-using-attributes.md)
+- [XML シリアル化の概要](introducing-xml-serialization.md)
+- [シリアル化](index.md)
+- [XML シリアル化および SOAP シリアル化](xml-and-soap-serialization.md)

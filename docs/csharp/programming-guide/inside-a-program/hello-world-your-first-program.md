@@ -1,6 +1,5 @@
 ---
 title: Hello World -- Windows または Mac 上での Visual Studio を使用する最初のプログラム -C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 09/12/2019
 f1_keywords:
 - cs.program
@@ -9,16 +8,16 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 0807e46d36a4cf031bc44ae0dc4efab79dd51d03
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 6d78ec83fec72b30f5cee398af1816d0cac35886
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991342"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241865"
 ---
 # <a name="hello-world----your-first-program"></a>Hello World -- 最初のプログラム
 
-この記事では、Visual Studio を使用して従来の "Hello World!" プログラムを 作成します。 Visual Studio は、.NET 開発向けに設計された多くの機能を備えた、本格的な統合開発環境 (IDE) です。 Visual Studio の一部の機能のみを使用して、このプログラムを作成します。 Visual Studio の詳細については、[Visual C# および Visual Basic の概要](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)に関するページを参照してください。
+この記事では、Visual Studio を使用して従来の "Hello World!" プログラムを 作成します。 Visual Studio は、.NET 開発向けに設計された多くの機能を備えた、本格的な統合開発環境 (IDE) です。 Visual Studio の一部の機能のみを使用して、このプログラムを作成します。 Visual Studio の詳細については、[Visual C# の概要](/visualstudio/ide/quickstart-csharp-console)に関するページを参照してください。
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
@@ -26,7 +25,7 @@ ms.locfileid: "70991342"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
 Visual Studio を起動します。 Windows 上に次のようなイメージが表示されます。
 
@@ -52,7 +51,7 @@ Press any key to close this window . . .
 
 任意のキーを押して、ウィンドウを閉じます。
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 Visual Studio for Mac を起動します。 Mac 上に次のようなイメージが表示されます。
 
@@ -105,7 +104,7 @@ C# コンソールアプリケーションには、`Main` メソッドが必要�
 
 [!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
 
-または
+\- または -
 
 [!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
 
@@ -115,7 +114,7 @@ C# コンソールアプリケーションには、`Main` メソッドが必要�
 
 ## <a name="input-and-output"></a>入出力
 
-C# プログラムは、普通、.NET Framework のランタイムライブラリが提供する入出力サービスを使用します。 `System.Console.WriteLine("Hello World!");` 命令文では、<xref:System.Console.WriteLine%2A> メソッドを使用しています。 これは、ランタイム ライブラリの <xref:System.Console> クラスの出力メソッドの 1 つです。 文字列パラメーターを標準出力ストリームに出力し、最後に改行を付け加えます。 別の入出力操作には、他の <xref:System.Console> メソッドを使用できます。 `using System;` ディレクティブをプログラムの開始時にインクルードした場合は、完全に修飾せずに <xref:System> クラスおよびメソッドを直接使用できます。 たとえば、`Console.WriteLine` の代わりに `System.Console.WriteLine` を呼び出すことができます。
+C# プログラムは通常、.NET のランタイム ライブラリが提供する入出力サービスを使用します。 `System.Console.WriteLine("Hello World!");` 命令文では、<xref:System.Console.WriteLine%2A> メソッドを使用しています。 これは、ランタイム ライブラリの <xref:System.Console> クラスの出力メソッドの 1 つです。 文字列パラメーターを標準出力ストリームに出力し、最後に改行を付け加えます。 別の入出力操作には、他の <xref:System.Console> メソッドを使用できます。 `using System;` ディレクティブをプログラムの開始時にインクルードした場合は、完全に修飾せずに <xref:System> クラスおよびメソッドを直接使用できます。 たとえば、`Console.WriteLine` の代わりに `System.Console.WriteLine` を呼び出すことができます。
 
 [!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]
 
@@ -128,4 +127,4 @@ C# プログラムは、普通、.NET Framework のランタイムライブラ�
 - [C# プログラミング ガイド](../index.md)
 - [サンプルおよびチュートリアル](../../../samples-and-tutorials/index.md)
 - [Main() とコマンドライン引数](../main-and-command-args/index.md)
-- [Visual C# と Visual Basic の概要](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [Visual C# 入門](/visualstudio/ide/quickstart-csharp-console)

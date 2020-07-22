@@ -1,13 +1,14 @@
 ---
 title: 基本-WF
+description: この記事では、組み込みアクティビティやカスタムアクティビティなどの基本的な Windows Workflow Foundation 機能を示すサンプルについて説明します。
 ms.date: 03/30/2017
 ms.assetid: 84a315b6-3f96-4959-8306-49be37936a23
-ms.openlocfilehash: be8dc4fc66a2adc337ddcd0bcfd0b67fdf9fae41
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 2f5ba92b6bb2718773f6ae965596ff175f92cbfc
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869035"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421372"
 ---
 # <a name="basic"></a>Basic
 このセクションでは、基本的な Windows Workflow Foundation (WF) 機能を示すサンプルについて説明します。  
@@ -20,9 +21,9 @@ ms.locfileid: "68869035"
  カスタム アクティビティの作成を示すサンプルが含まれます。  
   
  [Designer](designer.md)  
- [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]の使用方法を示すサンプルが含まれます。  
+ Windows ワークフローデザイナーの使用方法を示すサンプルが含まれています。  
   
- [デザイナーのホスト変更](designer-rehosting.md)  
+ [デザイナーのホスト](designer-rehosting.md)  
  アクティビティ デザイナーの再ホストを示すサンプルが含まれます。  
   
  [実行](execution.md)  

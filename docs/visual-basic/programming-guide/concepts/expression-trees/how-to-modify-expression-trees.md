@@ -1,15 +1,15 @@
 ---
-title: '方法: 式ツリーの変更 (Visual Basic)'
+title: '方法: 式ツリーを変更する'
 ms.date: 07/20/2015
 ms.assetid: d1309fff-28bd-4d8e-a2cf-75725999e8f2
-ms.openlocfilehash: ac196b56f178659765437a97a25f46c04f8040fa
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.openlocfilehash: 1f052120a2e7e12f5a985adce3ae193afec0e9af
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054210"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410993"
 ---
-# <a name="how-to-modify-expression-trees-visual-basic"></a>方法: 式ツリーの変更 (Visual Basic)
+# <a name="how-to-modify-expression-trees-visual-basic"></a>方法: 式ツリーを変更する (Visual Basic)
 
 このトピックでは、式ツリーを変更する方法について説明します。 式ツリーは変更不可であるため、直接変更を加えることができません。 式ツリーを変更するには、既存の式ツリーのコピーを作成する必要があります。コピーを作成する際に、必要な変更を加えます。 <xref:System.Linq.Expressions.ExpressionVisitor> クラスを使用して、既存の式ツリーを走査し、走査した各ノードをコピーすることができます。
 
@@ -17,7 +17,7 @@ ms.locfileid: "71054210"
 
 1. 新しい**コンソール アプリケーション** プロジェクトを作成します。
 
-2. 名前空間`System.Linq.Expressions`のファイルにステートメントを`Imports`追加します。
+2. ファイルに `System.Linq.Expressions` 名前空間の `Imports` ステートメントを追加します。
 
 3. `AndAlsoModifier` クラスをプロジェクトに追加します。
 
@@ -47,9 +47,9 @@ ms.locfileid: "71054210"
 
     このクラスは、`AND` 条件演算を表す式を変更するための特別なクラスで、<xref:System.Linq.Expressions.ExpressionVisitor> クラスを継承します。 このクラスによって条件 `AND` が条件 `OR` に変更されます。 そのために、クラスは基本データ型の <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> メソッドをオーバーライドします。`AND` 条件式は二項式で表されるためです。 `VisitBinary` メソッドでは、渡される式が `AND` 条件演算を表す場合、`AND` 条件演算子ではなく `OR` 条件演算子を含む新しい式がコードによって作成されます。 `VisitBinary` に渡される式が `AND` 条件演算を表さない場合は、基底クラスの実装が延期されます。 基底クラスのメソッドによって、渡された式ツリーに似たノードが作成されますが、そのノードのサブツリーは、ビジターによって再帰的に作成される式ツリーに置き換えられます。
 
-4. 名前空間`System.Linq.Expressions`のファイルにステートメントを`Imports`追加します。
+4. ファイルに `System.Linq.Expressions` 名前空間の `Imports` ステートメントを追加します。
 
-5. Module1.vb ファイルの`Main`メソッドにコードを追加して式ツリーを作成し、それを変更するメソッドに渡します。
+5. 式ツリーを作成し、それをメソッドに渡して変更するコードを、Module1.vb ファイルの `Main` メソッドに追加します。
 
     ```vb
     Dim expr As Expression(Of Func(Of String, Boolean)) = _
@@ -73,5 +73,5 @@ ms.locfileid: "71054210"
 
 ## <a name="see-also"></a>関連項目
 
-- [方法: 式ツリーの実行 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
-- [式ツリー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+- [方法: 式ツリーを実行する (Visual Basic)](how-to-execute-expression-trees.md)
+- [式ツリー (Visual Basic)](index.md)

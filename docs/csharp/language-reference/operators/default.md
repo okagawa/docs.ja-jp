@@ -1,39 +1,43 @@
 ---
-title: default 演算子 - C# リファレンス
-ms.custom: seodec18
-description: 型の既定値を生成するには、default 演算子を使います
-ms.date: 08/01/2019
+title: 既定値式 - C# リファレンス
+description: 既定値式を使用して、型の既定値を取得します
+ms.date: 03/13/2020
+f1_keywords:
+- default_CSharpKeyword
+- default
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 5623cb9dc3790b5bb99635c41cb3f122f4c71d8e
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 2adfd8d24066e9dad50c3c18407d3ade71b4b68e
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796941"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507179"
 ---
-# <a name="default-operator-c-reference"></a>default 演算子 (C# リファレンス)
+# <a name="default-value-expressions-c-reference"></a>既定値式 (C# リファレンス)
 
-`default` 演算子では、型の[既定値](../keywords/default-values-table.md)が生成されます。 `default` 演算子への引数では、型または型パラメーターの名前を指定する必要があります。
-
-`default` 演算子の使い方を次の例に示します。
-
-[!code-csharp-interactive[default of T](~/samples/csharp/language-reference/operators/DefaultOperator.cs#WithOperand)]
+既定値式を使用すると、型の[既定値](../builtin-types/default-values.md)が生成されます。 既定値式には、次の 2 種類があります: [default 演算子](#default-operator)の呼び出しと、[default リテラル](#default-literal)です。
 
 また、[`switch` ステートメント](../keywords/switch.md)内の既定の case ラベルとして、`default` キーワードを使うこともできます。
+
+## <a name="default-operator"></a>default 演算子
+
+`default` 演算子への引数では、次の例で示すように、型または型パラメーターの名前を指定する必要があります。
+
+[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
 
 ## <a name="default-literal"></a>default リテラル
 
 C# 7.1 以降では、`default` リテラルを使って、コンパイラが式の型を推論できる場合に、型の既定値を生成できます。 `default` リテラル式では、`T` が推定型である式 `default(T)` と同じ値が生成されます。 `default` リテラルは、次のいずれの場合でも使用できます。
 
 - 変数の代入または初期化。
-- 省略可能なメソッド パラメーターの既定値の宣言。
+- [省略可能なメソッド パラメーター](../../methods.md#optional-parameters-and-arguments)の既定値の宣言。
 - メソッド呼び出しでの引数値の指定。
-- `return` ステートメント内、または式のようなメンバー内の式として。
+- [`return` ステートメント](../keywords/return.md)内、または[式のようなメンバー](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)内の式として。
 
 `default` リテラルの使い方の例を次に示します。
 
-[!code-csharp-interactive[default literal](~/samples/csharp/language-reference/operators/DefaultOperator.cs#DefaultLiteral)]
+[!code-csharp-interactive[default literal](snippets/DefaultOperator.cs#DefaultLiteral)]
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
@@ -45,4 +49,5 @@ C# 7.1 以降では、`default` リテラルを使って、コンパイラが式
 
 - [C# リファレンス](../index.md)
 - [C# 演算子](index.md)
-- [既定値の一覧表](../keywords/default-values-table.md)
+- [C# 型の既定値](../builtin-types/default-values.md)
+- [.NET のジェネリック](../../../standard/generics/index.md)

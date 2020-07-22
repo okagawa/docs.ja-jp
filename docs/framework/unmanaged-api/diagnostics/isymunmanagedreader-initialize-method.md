@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8f0dd2fe-7df7-464e-91f4-5518c586bb5f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f2dceeb2f0b3aa9f3147157e77087dffbf2d5f85
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 07d2de5d12fd769cb5cce243d9e721bb6fc185a7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939032"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615476"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize メソッド
 このリーダーが関連付けられるメタデータインポーターインターフェイスと、モジュールのファイル名を使用して、シンボルリーダーを初期化します。  
@@ -45,23 +43,23 @@ HRESULT Initialize (
  からこのリーダーが関連付けられるメタデータインポーターインターフェイス。  
   
  `filename`  
- からモジュールのファイル名。 代わりに、 `pIStream`パラメーターを使用できます。  
+ からモジュールのファイル名。 代わりに、パラメーターを使用でき `pIStream` ます。  
   
  `searchPath`  
- から検索するパス。 このパラメーターは省略できます。  
+ から検索するパス。 このパラメーターは省略可能です。  
   
  `pIStream`  
  からファイルストリーム。 filename パラメーターの代わりに使用されます。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK を返します。それ以外の場合は E_FAIL またはその他のエラーコードを返します。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="remarks"></a>Remarks  
- または`filename`パラメーターのいずれか1つだけを指定する必要があります。両方を指定することはできません。 `pIStream` `searchPath` パラメーターは省略可能です。  
+## <a name="remarks"></a>解説  
+ またはパラメーターのいずれか1つだけを指定する必要があります。両方を指定すること `filename` はでき `pIStream` ません。 `searchPath` パラメーターは省略可能です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader インターフェイス](isymunmanagedreader-interface.md)

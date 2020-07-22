@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4a17d723-86b9-4f27-bd0d-b70c3259011c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d84d4fccb2cb4e500f07f6bfbfb93b8c7b81f5d6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ccc787aa1c820a486d9a513055c9c9834b90bd1a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939005"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615437"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>ISymUnmanagedReader::UpdateSymbolStore メソッド
 既存のシンボル ストアをデルタ シンボル ストアで更新します。 このメソッドは、元のポータブル実行可能 (PE) ファイルにデルタを一致するようにシンボルストアを更新するために、エディットコンティニュシナリオで使用されます。  
   
 > [!NOTE]
-> `filename`またはパラメーターのいずれか1つ`pIStream`だけを指定する必要があります。両方を指定することはできません。 を`filename`指定した場合、シンボルストアはそのファイル内のシンボルで更新されます。 を`pIStream`指定した場合、ストアは<xref:System.Runtime.InteropServices.ComTypes.IStream>からのデータで更新されます。  
+> またはパラメーターのいずれか1つだけを指定する必要があります。両方を指定すること `filename` はでき `pIStream` ません。 を `filename` 指定した場合、シンボルストアはそのファイル内のシンボルで更新されます。 を指定した場合、 `pIStream` ストアはからのデータで更新され <xref:System.Runtime.InteropServices.ComTypes.IStream> ます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,14 +41,14 @@ HRESULT UpdateSymbolStore (
  からシンボルストアが格納されているファイルの名前。  
   
  `pIStream`  
- からパラメーターの`filename`代わりに使用されるファイルストリーム。  
+ からパラメーターの代わりに使用されるファイルストリーム `filename` 。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK を返します。それ以外の場合は E_FAIL またはその他のエラーコードを返します。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader インターフェイス](isymunmanagedreader-interface.md)

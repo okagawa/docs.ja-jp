@@ -1,13 +1,13 @@
 ---
-title: リフレクション (Visual Basic)
+title: リフレクション
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
-ms.openlocfilehash: 6d1206d84dec4202a7dad8f03c3d88c8a97ff5ba
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: MT
+ms.openlocfilehash: 43c05a0b3bbfc3dfc304b1aed3f689625a40229a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972120"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413181"
 ---
 # <a name="reflection-visual-basic"></a>リフレクション (Visual Basic)
 リフレクションは、アセンブリ、モジュール、および型を記述する (<xref:System.Type> 型の) オブジェクトを提供します。 リフレクションを使用すると、動的に型のインスタンスを作成したり、作成したインスタンスを既存のオブジェクトにバインドしたり、さらに既存のオブジェクトから型を取得してそのオブジェクトのメソッドを呼び出したり、フィールドやプロパティにアクセスしたりできます。 コードで属性を使用している場合は、リフレクションを使用してそれらにアクセスできます。 詳細については、「[属性](../../../standard/attributes/index.md)」を参照してください。  
@@ -49,7 +49,7 @@ System.Console.WriteLine(info)
 - 遅延バインディングを実行するために、実行時に作成された型でメソッドにアクセスする。 「[型の動的な読み込みおよび使用](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md)」を参照してください。  
   
 ## <a name="related-sections"></a>関連項目  
- 詳しくは、次のトピックをご覧ください。  
+ 詳細情報  
   
 - [リフレクション](../../../framework/reflection-and-codedom/reflection.md)  
   
@@ -63,5 +63,5 @@ System.Console.WriteLine(info)
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic プログラミング ガイド](../../../visual-basic/programming-guide/index.md)
+- [Visual Basic プログラミング ガイド](../index.md)
 - [.NET のアセンブリ](../../../standard/assembly/index.md)

@@ -1,17 +1,17 @@
 ---
-title: -out (Visual Basic)
+title: -out
 ms.date: 07/20/2015
 helpviewer_keywords:
 - /out compiler option [Visual Basic]
 - -out compiler option [Visual Basic]
 - out compiler option [Visual Basic]
 ms.assetid: 9f148c15-0909-4cb8-a2db-777f8a8b45ae
-ms.openlocfilehash: 6b005ac26e3fffad350cb4ce52f7757c9fff2ac1
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: MT
+ms.openlocfilehash: 75f3ee7f24112f911803732ccb8d39eeafa95e3d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005334"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400514"
 ---
 # <a name="-out-visual-basic"></a>-out (Visual Basic)
 出力ファイルの名前を指定します。  
@@ -24,18 +24,18 @@ ms.locfileid: "72005334"
   
 ## <a name="arguments"></a>引数  
   
-|項目|定義|  
+|用語|定義|  
 |---|---|  
-|`filename`|必須。 コンパイラによって作成される出力ファイルの名前。 ファイル名にスペースが含まれている場合は、名前を引用符 ("") で囲みます。|  
+|`filename`|必須です。 コンパイラによって作成される出力ファイルの名前。 ファイル名に空白が含まれている場合は、名前を二重引用符 (" ") で囲みます。|  
   
-## <a name="remarks"></a>コメント  
- 作成するファイルの完全な名前と拡張子を指定します。 そうしないと、.exe ファイルの名前が `Sub Main` プロシージャを含むソースコードファイルから取得され、.dll ファイルの名前が最初のソースコードファイルの名前になります。  
+## <a name="remarks"></a>Remarks  
+ 作成するファイルの完全な名前と拡張子を指定します。 そうしない場合、.exe ファイル名は `Sub Main` プロシージャを含むソースコード ファイルの名前になり、.dll ファイル名は最初のソースコード ファイルの名前になります。  
   
- .Exe または .dll 拡張子のないファイル名を指定すると、コンパイラは、`-target` コンパイラオプションに指定された値に応じて、自動的に拡張機能を追加します。  
+ .exe または .dll 拡張子のないファイル名を指定すると、コンパイラによって、`-target` コンパイラ オプションに指定された値に応じて、自動的に拡張子が追加されます。  
   
-|Visual Studio 統合開発環境でを設定するには|  
+|Visual Studio 統合開発環境で -out を設定するには|  
 |---|  
-|1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[アプリケーション]** タブをクリックします。<br />3. **[アセンブリ名]** ボックスの値を変更します。|  
+|1.**ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[アプリケーション]** タブをクリックします。<br />3. **[アセンブリ名]** ボックスで値を変更します。|  
   
 ## <a name="example"></a>例  
  次のコードでは `T2.vb` をコンパイルし、出力ファイル `T2.exe` を作成します。  
@@ -46,6 +46,6 @@ vbc t2.vb -out:t3.exe
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [-target (Visual Basic)](target.md)
+- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)

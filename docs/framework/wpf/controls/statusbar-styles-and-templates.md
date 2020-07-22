@@ -9,46 +9,46 @@ helpviewer_keywords:
 - parts [WPF], StatusBar
 - StatusBar [WPF], styles and templates
 ms.assetid: 9f5e1c25-81eb-4756-a0ac-d9e1fbe33ee2
-ms.openlocfilehash: b1dd575d58571b845fc849ca432ad440d1ce3ec4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
-ms.translationtype: MT
+ms.openlocfilehash: 843c9003edbe94115719a63a968eda3833515a85
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458258"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283369"
 ---
 # <a name="statusbar-styles-and-templates"></a>StatusBar のスタイルとテンプレート
-このトピックでは、<xref:System.Windows.Controls.Primitives.StatusBar> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
+このトピックでは、<xref:System.Windows.Controls.Primitives.StatusBar> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[コントロールのためにテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)」をご覧ください。  
   
-## <a name="statusbar-parts"></a>StatusBar パーツ  
- <xref:System.Windows.Controls.Primitives.StatusBar> コントロールには、名前付きの部分がありません。  
+## <a name="statusbar-parts"></a>StatusBar のパーツ  
+ <xref:System.Windows.Controls.Primitives.StatusBar> コントロールに名前付きパーツはありません。  
   
-## <a name="statusbar-states"></a>ステータスバーの状態  
- 次の表は、<xref:System.Windows.Controls.Primitives.StatusBar> コントロールの表示状態を示しています。  
-  
-|VisualState 名|VisualStateGroup 名|説明|  
-|-|-|-|  
-|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|  
-  
-## <a name="statusbaritem-parts"></a>StatusBarItem パーツ  
- <xref:System.Windows.Controls.Primitives.StatusBarItem> コントロールには、名前付きの部分がありません。  
-  
-## <a name="statusbar-states"></a>ステータスバーの状態  
- 次の表は、<xref:System.Windows.Controls.Primitives.StatusBarItem> コントロールの表示状態を示しています。  
+## <a name="statusbar-states"></a>StatusBar の状態  
+ 次の表は、<xref:System.Windows.Controls.Primitives.StatusBar> コントロールの表示状態の一覧を示します。  
   
 |VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
-|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
+|有効|ValidationStates|このコントロールで <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false` です。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|  
   
-## <a name="statusbar-controltemplate-example"></a>StatusBar ControlTemplate の例  
+## <a name="statusbaritem-parts"></a>StatusBarItem のパーツ  
+ <xref:System.Windows.Controls.Primitives.StatusBarItem> コントロールに名前付きパーツはありません。  
+  
+## <a name="statusbar-states"></a>StatusBar の状態  
+ 次の表は、<xref:System.Windows.Controls.Primitives.StatusBarItem> コントロールの表示状態の一覧を示します。  
+  
+|VisualState 名|VisualStateGroup 名|説明|  
+|-|-|-|  
+|有効|ValidationStates|このコントロールで <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false` です。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|  
+  
+## <a name="statusbar-controltemplate-example"></a>StatusBar の ControlTemplate の例  
  次の例は、<xref:System.Windows.Controls.Primitives.StatusBar> コントロールの <xref:System.Windows.Controls.ControlTemplate> を定義する方法を示しています。  
   
  [!code-xaml[ControlTemplateExamples#StatusBar](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/statusbar.xaml#statusbar)]  
   
- <xref:System.Windows.Controls.ControlTemplate> では、次のリソースの1つ以上を使用します。  
+ <xref:System.Windows.Controls.ControlTemplate> では、次のリソースを 1 つ以上使用します。  
   
  [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
@@ -61,4 +61,4 @@ ms.locfileid: "73458258"
 - [コントロールのスタイルとテンプレート](control-styles-and-templates.md)
 - [コントロールのカスタマイズ](control-customization.md)
 - [スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)
+- [コントロールのためのテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)

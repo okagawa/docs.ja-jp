@@ -1,5 +1,5 @@
 ---
-title: 拡張インデクサー プロパティ (Visual Basic)
+title: 拡張インデクサー プロパティ
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlPropertyExtensionIndexer
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-ms.openlocfilehash: 660cebadc78d260350f2849f7f4926f9cef7c8d2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
-ms.translationtype: MT
+ms.openlocfilehash: c91061d49e22e648b7bf75a812071b352793abcb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582186"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401343"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>拡張インデクサー プロパティ (Visual Basic)
 コレクション内の個々の要素にアクセスできます。  
@@ -29,25 +29,25 @@ object(index)
   
 |用語|定義|  
 |---|---|  
-|`object`|必須です。 クエリ可能なコレクション。 つまり、<xref:System.Collections.Generic.IEnumerable%601> または <xref:System.Linq.IQueryable%601> を実装するコレクションです。|  
-|(|必須です。 インデクサープロパティの開始を示します。|  
-|`index`|必須です。 コレクションの要素の0から始まる位置を指定する整数式。|  
-|)|必須です。 インデクサープロパティの末尾を示します。|  
+|`object`|必須です。 クエリ可能なコレクション。 つまり、<xref:System.Collections.Generic.IEnumerable%601> または <xref:System.Linq.IQueryable%601> を実装するコレクション。|  
+|(|必須です。 インデクサー プロパティの先頭を表します。|  
+|`index`|必須です。 コレクションの要素の 0 から始まる位置を指定する整数式。|  
+|)|必須です。 インデクサー プロパティの末尾を表します。|  
   
 ## <a name="return-value"></a>戻り値  
- コレクション内の指定した位置にあるオブジェクト。インデックスが範囲外の場合は `Nothing`。  
+ コレクション内の指定した位置からのオブジェクト、または `Nothing` (インデックスが範囲外の場合)。  
   
 ## <a name="remarks"></a>Remarks  
- 拡張インデクサープロパティを使用して、コレクション内の個々の要素にアクセスできます。 このインデクサープロパティは、通常、XML 軸プロパティの出力に使用されます。 XML 子および XML 子孫軸プロパティは、<xref:System.Xml.Linq.XElement> オブジェクトまたは属性値のコレクションを返します。  
+ 拡張インデクサー プロパティを使用して、コレクションの個別の要素にアクセスできます。 このインデクサー プロパティは、通常、XML 軸プロパティの出力で使用されます。 XML 子軸プロパティおよび XML 子孫軸プロパティは、<xref:System.Xml.Linq.XElement> オブジェクトのコレクションまたは属性値を返します。  
   
- Visual Basic コンパイラは、拡張インデクサープロパティを `ElementAtOrDefault` メソッドの呼び出しに変換します。 配列インデクサーとは異なり、`ElementAtOrDefault` メソッドは、インデックスが範囲外の場合に `Nothing` を返します。 この動作は、コレクション内の要素の数を簡単に判断できない場合に便利です。  
+ 拡張インデクサーのプロパティは、Visual Basic コンパイラによって、`ElementAtOrDefault` メソッドへの呼び出しに変換されます。 配列インデクサーとは異なり、`ElementAtOrDefault` メソッドは、インデックスが範囲外の場合に `Nothing` を返します。 この動作は、コレクション内の要素の数を簡単には判断できない場合に便利です。  
   
- このインデクサープロパティは、<xref:System.Collections.Generic.IEnumerable%601> または <xref:System.Linq.IQueryable%601> を実装するコレクションの拡張プロパティに似ています。このプロパティは、コレクションにインデクサーまたは default プロパティがない場合にのみ使用されます。  
+ このインデクサー プロパティは、<xref:System.Collections.Generic.IEnumerable%601> または <xref:System.Linq.IQueryable%601> を実装するコレクションの拡張プロパティと似ています。つまり、コレクションにインデクサーまたは既定のプロパティがない場合にのみ使用されます。  
   
- @No__t_0 または <xref:System.Xml.Linq.XAttribute> オブジェクトのコレクション内の最初の要素の値にアクセスするには、XML `Value` プロパティを使用できます。 詳細については、「 [XML 値プロパティ](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)」を参照してください。  
+ <xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XAttribute> オブジェクト コレクションの最初の要素の値には、XML `Value` プロパティを使用してアクセスできます。 詳細については、「[XML Value プロパティ](xml-value-property.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、拡張インデクサーを使用して、<xref:System.Xml.Linq.XElement> オブジェクトのコレクション内の2番目の子ノードにアクセスする方法を示します。 コレクションにアクセスするには、子軸プロパティを使用します。このプロパティは、`contact` オブジェクト内の `phone` という名前のすべての子要素を取得します。  
+ 次の例は、拡張インデクサーを使用して、<xref:System.Xml.Linq.XElement> オブジェクト コレクションの 2 番目の子ノードにアクセスする方法を示しています。 コレクションには子軸プロパティを使用してアクセスします。これにより、`contact` オブジェクトの `phone` という名前の子要素すべてが取得されます。  
   
  [!code-vb[VbXMLSamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#24)]  
   
@@ -58,7 +58,7 @@ object(index)
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Xml.Linq.XElement>
-- [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)
-- [XML リテラル](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Visual Basic での XML の作成](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [XML Value プロパティ](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
+- [XML 軸プロパティ](index.md)
+- [XML リテラル](../xml-literals/index.md)
+- [Visual Basic での XML の作成](../../programming-guide/language-features/xml/creating-xml.md)
+- [XML Value プロパティ](xml-value-property.md)

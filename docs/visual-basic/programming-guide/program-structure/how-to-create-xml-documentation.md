@@ -1,44 +1,44 @@
 ---
-title: '方法 : Visual Basic で XML ドキュメントを作成する'
+title: '方法: XML ドキュメントを作成する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
-ms.openlocfilehash: 5b317706e3e8e0c5958f5a3d0fd859d68600bc7a
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: MT
+ms.openlocfilehash: 1421cc85beba42b3cf3656c34b1d02347fbaf164
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524492"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403240"
 ---
-# <a name="how-to-create-xml-documentation-in-visual-basic"></a>方法 : Visual Basic で XML ドキュメントを作成する
+# <a name="how-to-create-xml-documentation-in-visual-basic"></a>方法: Visual Basic で XML ドキュメントを作成する
 
-この例では、XML ドキュメントコメントをコードに追加する方法を示します。
+この例では、XML ドキュメント コメントをコードに追加する方法を示します。
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
 ## <a name="to-create-xml-documentation-for-a-type-or-member"></a>型またはメンバーの XML ドキュメントを作成するには
 
-1. **コードエディター**で、ドキュメントを作成する型またはメンバーの上の行にカーソルを置きます。
+1. **コード エディター**で、ドキュメントを作成する型またはメンバーの上の行にカーソルを置きます。
 
-2. 「@No__t_0 (3 つの単一引用符)」と入力します。
+2. `'''` (3 つの単一引用符) を入力します。
 
-    型またはメンバーの XML スケルトンが**コードエディター**に追加されます。
+    型またはメンバーの XML スケルトンが**コード エディター**に追加されます。
 
 3. 適切なタグの間に説明情報を追加します。
 
     > [!NOTE]
-    > XML ドキュメントブロック内に行を追加する場合は、各行を `'''` で始める必要があります。
+    > XML ドキュメント ブロック内に行を追加する場合は、各行が `'''` で始まる必要があります。
 
-4. 新しい XML ドキュメントコメントと共に型またはメンバーを使用するコードを追加します。
+4. 新しい XML ドキュメント コメントと共に型またはメンバーを使用するコードを追加します。
 
-    IntelliSense では、型またはメンバーの \<summary > タグのテキストが表示されます。
+    IntelliSense により、型またはメンバーの \<summary> タグのテキストが表示されます。
 
-5. コードをコンパイルして、ドキュメントコメントを含む XML ファイルを生成します。 詳細については、「[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)」を参照してください。
+5. コードをコンパイルして、ドキュメント コメントを含む XML ファイルを生成します。 詳細については、「[-doc](../../reference/command-line-compiler/doc.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-- [XML の使用によるコードのドキュメントの作成](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)
-- [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)
+- [XML の使用によるコードのドキュメントの作成](documenting-your-code-with-xml.md)
+- [XML のコメント用タグ](../../language-reference/xmldoc/index.md)
+- [-doc](../../reference/command-line-compiler/doc.md)

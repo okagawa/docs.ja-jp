@@ -1,13 +1,13 @@
 ---
-title: LINQ to XML イベント (Visual Basic)
+title: LINQ to XML イベント
 ms.date: 07/20/2015
 ms.assetid: 34923928-b99c-4004-956e-38f6db25e910
-ms.openlocfilehash: d35f8063fe87ee4be3dd49a3c0221cb9c47cb22e
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
-ms.translationtype: MT
+ms.openlocfilehash: d00f6f1b2a14ac73c1bcd4a1f74b9714ca304da3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834981"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84368817"
 ---
 # <a name="linq-to-xml-events-visual-basic"></a>LINQ to XML イベント (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] イベントを使うと、XML ツリーが変更されるときに通知を受けることができます。  
@@ -116,4 +116,4 @@ Total:308
   
 ## <a name="see-also"></a>関連項目
 
-- [高度な LINQ to XML プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [高度な LINQ to XML プログラミング (Visual Basic)](advanced-linq-to-xml-programming.md)

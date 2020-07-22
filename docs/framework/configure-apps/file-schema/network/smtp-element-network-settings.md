@@ -1,5 +1,6 @@
 ---
 title: <smtp> 要素 (ネットワーク設定)
+description: <smtp>ネットワーク設定要素は、.NET Framework の電子メールオプションを送信するための配信形式、配信方法、および差出人アドレスを構成します。
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/mailSettings/smtp
@@ -8,20 +9,20 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: 2105a6dd25a7f6e5e4c1ce286be7f60beae1dca0
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: b30b82922a69ea660f4c4abfd808e89fa9945183
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697609"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504512"
 ---
-# <a name="smtp-element-network-settings"></a>\<smtp > 要素 (ネットワーク設定)
+# <a name="smtp-element-network-settings"></a>\<smtp> 要素 (ネットワーク設定)
 電子メールの送信に使用する配信形式、配信方法、差出人アドレスを構成します。  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t 47 >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t @ no__t-2 @ no__t-3[ **\<mailSettings >** ](mailsettings-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t @ no__t-5 **\< smtp >** のようになります。  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<mailSettings>**](mailsettings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<smtp>**
   
 ## <a name="syntax"></a>構文  
   
@@ -55,9 +56,9 @@ ms.locfileid: "71697609"
   
 ### <a name="parent-elements"></a>親要素  
   
-|**要素**|**[説明]**|  
+|**要素**|**説明**|  
 |-----------------|---------------------|  
-|[\<mailSettings> 要素 (ネットワーク設定)](mailsettings-element-network-settings.md)|電子メールの送信オプションを設定します。|  
+|[\<mailSettings>要素 (ネットワーク設定)](mailsettings-element-network-settings.md)|電子メールの送信オプションを設定します。|  
   
 ## <a name="example"></a>例  
  次の例では、既定のネットワーク資格情報を使用して電子メールを送信するための適切な SMTP パラメーターを指定しています。  

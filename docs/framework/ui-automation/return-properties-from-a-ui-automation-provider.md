@@ -1,5 +1,6 @@
 ---
 title: UI オートメーション プロバイダーからのプロパティの返却
+description: UI オートメーションプロバイダーが要素のプロパティを .NET のクライアントアプリケーションに返す方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - properties, returned by UI Automation providers
 - UI Automation, providers returning properties
 ms.assetid: 5eba950e-b9e1-48eb-ab8e-b69db76bf589
-ms.openlocfilehash: 5d073af121eae04a973667739c68a90d6dae9f2d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 14a42c73d1dfb942a7e60ce7a72c3a5aea2b820c
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042733"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903845"
 ---
 # <a name="return-properties-from-a-ui-automation-provider"></a>UI オートメーション プロバイダーからのプロパティの返却
 > [!NOTE]
-> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
  このトピックのサンプル コードでは、UI オートメーション プロバイダーが、要素のプロパティをクライアント アプリケーションへどのように返すかを示します。  
   

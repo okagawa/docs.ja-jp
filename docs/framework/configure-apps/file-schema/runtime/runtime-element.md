@@ -9,19 +9,19 @@ helpviewer_keywords:
 - runtime element
 - container tags, <runtime> element
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
-ms.openlocfilehash: e703b9739ea93d3c7bf08371bc264bbdcb05b716
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3825ae7c3e35193cb835981600fe1ef83097cd2d
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252322"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "74430462"
 ---
 # <a name="runtime-element"></a>\<runtime> 要素
 
 アプリケーションを構成するために共通言語ランタイムによって使用される情報を提供します。
 
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp; **\<runtime>**  
+[\<configuration>](../configuration-element.md)\
+&nbsp;&nbsp;\<runtime>
 
 ## <a name="syntax"></a>構文
 
@@ -61,22 +61,26 @@ ms.locfileid: "70252322"
 |[\<gcAllowVeryLargeObjects>](gcallowverylargeobjects-element.md)|64 ビット プラットフォームで、合計サイズが 2 GB (ギガバイト) を超える配列を有効にします。|
 |[\<gcConcurrent>](gcconcurrent-element.md)|共通言語ランタイムがガベージコレクションを同時に実行するかどうかを指定します。|
 |[\<GCCpuGroup>](gccpugroup-element.md)|ガベージ コレクションが複数の CPU グループをサポートするかどうかを指定します。|
+|[\<GCHeapAffinitizeMask>](gcheapaffinitizemask-element.md)|ガベージコレクションヒープと個々のプロセッサ間の関係を定義します。|
+|[\<GCHeapCount>](gcheapcount-element.md)|サーバーのガベージコレクションに使用するヒープまたはスレッドの数を指定します。|
+|[\<GCLOHThreshold>](gclohthreshold-element.md)|ガベージコレクターが大きなオブジェクトヒープにオブジェクトを配置するしきい値のサイズを指定します。|
+|[\<GCNoAffinitize>](gcnoaffinitize-element.md)|Cpu を使用してサーバーガベージコレクションスレッドを関係付けするかどうかを指定します。|
 |[\<gcServer>](gcserver-element.md)|共通言語ランタイムがサーバーのガベージ コレクションを実行するかどうかを指定します。|
 |[\<generatePublisherEvidence>](generatepublisherevidence-element.md)|ランタイムがコード アクセス セキュリティ (CAS) の発行元ポリシーを使用するかどうかを指定します。|
 |[\<legacyCorruptedStateExceptionsPolicy>](legacycorruptedstateexceptionspolicy-element.md)|ランタイムがアクセス違反およびその他の破損状態例外をキャッチするマネージド コードを許可するかどうかを指定します。|
 |[\<legacyImpersonationPolicy>](legacyimpersonationpolicy-element.md)|Windows ID が、現在のスレッドの実行コンテキストのフロー設定に関係なく、非同期ポイント間でフローしないことを指定します。|
 |[\<loadfromRemoteSources>](loadfromremotesources-element.md)|リモート ソースからのアセンブリを完全な信頼として読み込むかどうかを指定します。|
-|[\<NetFx40_LegacySecurityPolicy >](netfx40-legacysecuritypolicy-element.md)|ランタイムがレガシ コード アクセス セキュリティ (CAS) ポリシーを使用するかどうかを指定します。|
+|[\<NetFx40_LegacySecurityPolicy>](netfx40-legacysecuritypolicy-element.md)|ランタイムがレガシ コード アクセス セキュリティ (CAS) ポリシーを使用するかどうかを指定します。|
 |[\<NetFx40_PInvokeStackResilience>](netfx40-pinvokestackresilience-element.md)|ランタイムが実行時の不適切なプラットフォーム呼び出し宣言を自動的に修正するかどうかを指定します。これにより、マネージド コードとアンマネージド コード間の遷移が遅くなります。|
-|[\<NetFx45_CultureAwareComparerGetHashCode_LongStrings >](netfx45-cultureawarecomparergethashcode-longstrings-element.md)|ランタイムが <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> メソッドで固定量のメモリを使用してハッシュ コードを計算するかどうかを指定します。|
-|[\<PreferComInsteadOfRemoting >](prefercominsteadofmanagedremoting-element.md)|ランタイムが、アプリケーション ドメインの境界間のリモート処理ではなく COM 相互運用を使用することを指定します。|
+|[\<NetFx45_CultureAwareComparerGetHashCode_LongStrings>](netfx45-cultureawarecomparergethashcode-longstrings-element.md)|ランタイムが <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> メソッドで固定量のメモリを使用してハッシュ コードを計算するかどうかを指定します。|
+|[\<PreferComInsteadOfRemoting>](prefercominsteadofmanagedremoting-element.md)|ランタイムが、アプリケーション ドメインの境界間のリモート処理ではなく COM 相互運用を使用することを指定します。|
 |[\<relativeBindForResources>](relativebindforresources-element.md)|サテライト アセンブリのプローブを最適化します。|
 |[\<shadowCopyVerifyByTimeStamp>](shadowcopyverifybytimestamp-element.md)|シャドウコピーで .NET Framework 4 で導入された既定の起動動作を使用するか、以前のバージョンの .NET Framework の起動動作に戻すかを指定します。|
 |[\<supportPortability>](supportportability-element.md)|.NET Framework の 2 つの異なる実装にある同じアセンブリを 1 つのアプリケーションから参照できるように、既定の動作を無効にすることができます。既定の動作では、アプリケーションの移植性を高めるために、このようなアセンブリは同等のものとして扱われます。|
 |[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|既定のメモリ内オブジェクト キャッシュの構成情報を提供します。|
-|[\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md)|ランタイムによって、すべての CPU グループにマネージド スレッドを分散するかどうかを指定します。|
+|[\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md)|ランタイムによって、すべての CPU グループにマネージド スレッドを分散するかどうかを指定します。|
 |[\<ThrowUnobservedTaskExceptions>](throwunobservedtaskexceptions-element.md)|タスクがハンドルされない例外によって実行中のプロセスを終了するかどうかを指定します。|
-|[\<TimeSpan_LegacyFormatMode >](timespan-legacyformatmode-element.md)|ランタイムで <xref:System.TimeSpan> の値に従来の書式を使用するかどうかを指定します。|
+|[\<TimeSpan_LegacyFormatMode>](timespan-legacyformatmode-element.md)|ランタイムで <xref:System.TimeSpan> の値に従来の書式を使用するかどうかを指定します。|
 |[\<useLegacyJit>](uselegacyjit-element.md)|共通言語ランタイムが Just-In-Time コンパイルの従来の 64 ビット JIT コンパイラを使用するかどうかを決定します。|
 |[\<UseRandomizedStringHashAlgorithm>](userandomizedstringhashalgorithm-element.md)|ランタイムがアプリケーション ドメインごとに文字列のハッシュ コードを計算するかどうかを指定します。|
 |[\<UseSmallInternalThreadStacks>](usesmallinternalthreadstacks-element.md)|ランタイムが内部的に使用する特定のスレッド作成時に、既定のスタック サイズではなく明示的なスタック サイズを使用することを要求します。|
@@ -87,11 +91,11 @@ ms.locfileid: "70252322"
 |-------------|-----------------|
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-構成ファイルの[ \<runtime >](runtime-element.md)セクションの子要素は、アプリケーションの実行方法を構成するために共通言語ランタイムによって使用されます。 たとえば、 [ \<gcServer >](gcserver-element.md)要素は、ガベージコレクターがワークステーションのガベージコレクションまたはサーバーの[ \<](userandomizedstringhashalgorithm-element.md)ガベージコレクションを使用するかどうか、UseRandomizedStringHashAlgorithm > 要素を決定します。共通言語ランタイムが、アプリケーションごとに、またはアプリケーションドメインごとに文字列のハッシュコードを計算するかどうかを`AppContextSwitchOverrides`決定します。また、要素を使用すると、ライブラリユーザーはライブラリによって提供される機能を選択または無効にすることができます。
+[\<runtime>](runtime-element.md)構成ファイルのセクションの子要素は、アプリケーションの実行方法を構成するために共通言語ランタイムによって使用されます。 たとえば、要素は、 [\<gcServer>](gcserver-element.md) ガベージコレクターがワークステーションのガベージコレクションまたはサーバーのガベージコレクションを使用するかどうかを決定します。要素は、 [\<UseRandomizedStringHashAlgorithm>](userandomizedstringhashalgorithm-element.md) 共通言語ランタイムが、アプリケーションごとに、またはアプリケーションドメインごとに文字列のハッシュコードを計算するかどうかを決定し `AppContextSwitchOverrides` ます
 
-ランタイム > セクションの要素[ \<](runtime-element.md)は、アプリケーションの起動時に共通言語ランタイムによって自動的に読み取られます。 既定以外のアプリケーションドメインの構成ファイルは、 <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType>プロパティに名前を指定することによって定義することもできます。アプリケーションドメインが読み込まれると、その設定が自動的に読み取られます。 ほとんどの場合、アプリケーションの構成ファイルの [ [ \<ランタイム >](runtime-element.md) ] セクションの設定を直接読み取る必要があります。
+セクションの要素は、 [\<runtime>](runtime-element.md) アプリケーションの起動時に共通言語ランタイムによって自動的に読み取られます。 既定以外のアプリケーションドメインの構成ファイルは、プロパティに名前を指定することによって定義することもできます <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> 。アプリケーションドメインが読み込まれると、その設定が自動的に読み取られます。 ほとんどの場合、 [\<runtime>](runtime-element.md) アプリケーションの構成ファイルのセクションで設定を直接読み取る必要があります。
 
 ## <a name="see-also"></a>関連項目
 

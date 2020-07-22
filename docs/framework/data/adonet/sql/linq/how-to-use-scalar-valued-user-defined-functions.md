@@ -7,7 +7,7 @@ dev_langs:
 ms.assetid: 714e252f-c053-4bbb-b1f3-924111cd4d97
 ms.openlocfilehash: dfe82fd50eb3eedeaff9082a4288901f72197795
 ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72003240"
@@ -16,7 +16,7 @@ ms.locfileid: "72003240"
 <xref:System.Data.Linq.Mapping.FunctionAttribute> 属性を使用することによって、クラスで定義されているクライアント メソッドを、ユーザー定義関数に対応付けることができます。 メソッドの本体は、メソッド呼び出しの目的を反映する式を構築し、変換および実行のためにその式を <xref:System.Data.Linq.DataContext> に渡します。  
   
 > [!NOTE]
-> 直接実行は、関数がクエリの外部で呼び出される場合のみ発生します。 詳細については、「[方法 :ユーザー定義関数をインライン @ no__t から呼び出します。  
+> 直接実行は、関数がクエリの外部で呼び出される場合のみ発生します。 詳細については、[ユーザー定義関数をインラインで呼び出す](how-to-call-user-defined-functions-inline.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の SQL コードは、スカラー値のユーザー定義関数 `ReverseCustName()` を示しています。  

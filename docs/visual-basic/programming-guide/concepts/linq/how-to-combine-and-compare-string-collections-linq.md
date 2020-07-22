@@ -1,19 +1,19 @@
 ---
-title: '方法: 文字列コレクションを結合および比較する (LINQ) (Visual Basic)'
+title: '方法: 文字列コレクションを結合および比較する (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: d521e56f9ae311eea53028ba189416db289839cd
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
-ms.translationtype: MT
+ms.openlocfilehash: 271ef7805cd2285fa2d8796a31257c0f31bb9a76
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352886"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374863"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>方法: 文字列コレクションを結合および比較する (LINQ) (Visual Basic)
 
 この例では、複数行のテキストが含まれるファイルをマージし、結果を並び替える方法を示します。 具体的には、複数のテキスト行からなる 2 つの集合の単純な連結、和集合、積集合を求める方法を示します。
 
-### <a name="to-set-up-the-project-and-the-text-files"></a>プロジェクトとテキスト ファイルを設定するには
+## <a name="set-up-the-project-and-the-text-files"></a>プロジェクトとテキスト ファイルを設定する
 
 1. 次の名前を names1.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。
 
@@ -163,11 +163,11 @@ End Class
 ' 2 total names in list
 ```
 
-## <a name="compiling-the-code"></a>コードのコンパイル
+## <a name="compile-the-code"></a>コードのコンパイル
 
-VB.NET コンソールアプリケーションプロジェクトを作成します。これには、名前空間の @no__t 0 ステートメントを使用します。
+Visual Basic コンソール アプリケーションのプロジェクトを作成します。 System.Linq 名前空間の `Imports` ステートメントを追加します。
 
 ## <a name="see-also"></a>関連項目
 
-- [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ と文字列 (Visual Basic)](linq-and-strings.md)
+- [LINQ とファイル ディレクトリ (Visual Basic)](linq-and-file-directories.md)

@@ -7,22 +7,20 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 09864ea8f174d0c23f26db49f8cc0d43608522a0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5c7de79ec626966e71d461dd3865b294a8979db2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119334"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "77214804"
 ---
-# <a name="add-element-for-appsettings"></a>\<appSettings > の > 要素を追加 \<には
+# <a name="add-element-for-appsettings"></a>\<appSettings> の \<add> 要素
 
 カスタムアプリケーション設定を追加します。
 
-[ **\<configuration>** ](../configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<追加 >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>構文
 
@@ -41,13 +39,13 @@ ms.locfileid: "73119334"
 
 ## <a name="parent-element"></a>親要素
 
-|     | 説明 |
+|     | Description |
 | --- | ----------- |
-| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | ファイル パス、XML Web サービス URL、またはアプリケーションのその他のカスタム構成情報など、カスタム アプリケーションの設定が含まれています。 |
+| [**\<appSettings>**](appsettings-element-for-configuration.md) | ファイル パス、XML Web サービス URL、またはアプリケーションのその他のカスタム構成情報など、カスタム アプリケーションの設定が含まれています。 |
 
 ## <a name="child-elements"></a>子要素
 
-None
+なし
 
 ## <a name="example"></a>例
 
@@ -59,7 +57,7 @@ None
 </appSettings>
 ```
 
-次の例では、`<add>` 要素を使用して、ASP.NET アプリケーションで2つの互換性設定を定義します。
+次の例では、要素を使用して、 `<add>` ASP.NET アプリケーションで2つの互換性設定を定義します。
 
 ```xml
 <appSettings>

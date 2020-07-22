@@ -1,5 +1,5 @@
 ---
-title: '方法: データサービスメッセージのインターセプト (WCF Data Services)'
+title: '方法: データ サービス メッセージを先に取得する (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
-ms.openlocfilehash: cecfdd74779e3ab1c908957afac3c9fccf79f383
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
-ms.translationtype: MT
+ms.openlocfilehash: 4f2d6cf34c820c60181d5287298898af5eb8d038
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780036"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569040"
 ---
-# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>方法: データサービスメッセージのインターセプト (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、要求メッセージを先に取得して、操作にカスタム ロジックを追加することができます。 メッセージをインターセプトするには、データサービスで特別な属性付きメソッドを使用します。 詳細については、「[インターセプター](interceptors-wcf-data-services.md)」を参照してください。  
+# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>方法: データ サービス メッセージを先に取得する (WCF Data Services)
+WCF Data Services では、要求メッセージを先に取得して、操作にカスタム ロジックを追加することができます。 メッセージを先に取得するには、データ サービスで特別なメソッドを使用する必要があります。 詳細については、「[インターセプター](interceptors-wcf-data-services.md)」を参照してください。  
   
- このトピックの例では、Northwind サンプル データ サービスを使用します。 このサービスは、 [WCF Data Services のクイックスタート](quickstart-wcf-data-services.md)を完了したときに作成されます。  
+ このトピックの例では、Northwind サンプル データ サービスを使用します。 このサービスは、[WCF Data Services クイック スタート](quickstart-wcf-data-services.md)を完了したときに作成されます。  
   
 ### <a name="to-define-a-query-interceptor-for-the-orders-entity-set"></a>Orders エンティティ セットのクエリ インターセプターを定義するには  
   
@@ -57,5 +57,5 @@ ms.locfileid: "70780036"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: サービス操作の定義](how-to-define-a-service-operation-wcf-data-services.md)
+- [方法: サービス操作を定義する](how-to-define-a-service-operation-wcf-data-services.md)
 - [WCF Data Services の定義](defining-wcf-data-services.md)

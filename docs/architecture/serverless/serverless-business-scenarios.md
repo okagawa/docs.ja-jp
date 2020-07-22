@@ -1,101 +1,122 @@
 ---
-title: サーバーレスアプリのビジネスシナリオとユースケースの例
-description: 画像処理からモバイルバックエンドおよび ETL パイプラインまでの範囲のサンプルにアクセスすることにより、サーバーレスで実践的なアプローチを学ぶことができます。
+title: サーバーレス アプリのサンプルのビジネス シナリオとユースケース
+description: 画像処理からモバイル サポートや ETL パイプラインまで、サンプルへのアクセスによるハンズオン アプローチを使用してサーバーレスについて学習します。
 author: JEREMYLIKNESS
 ms.author: jeliknes
-ms.date: 06/26/2018
-ms.openlocfilehash: 8a2301b3c7a5f4a1f465677f31371d5b94783692
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: MT
+ms.date: 04/17/2020
+ms.openlocfilehash: 3cb3b73325fccc327ccf17f7298048f2eeb3577a
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522393"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158451"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>サーバーレスのビジネス シナリオとユース ケース
 
-サーバーレスアプリケーションには、多くのユースケースとシナリオがあります。 この章には、さまざまなシナリオを示すサンプルが含まれています。 このシナリオには、関連するドキュメントやパブリックソースコードリポジトリへのリンクが含まれています。 この章のサンプルを使用すると、サーバーレスソリューションを独自に構築して実装することができます。
+サーバーレス アプリケーションには、多くのユースケースとシナリオがあります。 この章には、さまざまなシナリオを示すサンプルが含まれています。 シナリオには、関連するドキュメントおよびパブリック ソース コード リポジトリへのリンクが含まれています。 この章のサンプルを使用して、サーバーレス ソリューションの独自の構築および実装を開始することができます。
 
-## <a name="analyze-and-archive-images"></a>画像の分析とアーカイブ
+## <a name="big-data-processing"></a>ビッグ データの処理
 
-このサンプルでは、サーバーレスイベント (Event Grid)、ワークフロー (ロジックアプリ)、およびコード (Azure Functions) を示します。 また、別のリソースと統合する方法についても説明します。この場合 Cognitive Services イメージ分析に使用します。
+![map/reduce の図](https://docs.microsoft.com/samples/azure-samples/durablefunctions-mapreduce-dotnet/big-data-processing-serverless-mapreduce-on-azure/media/mapreducearchitecture.png)
 
-コンソールアプリケーションを使用すると、web 上の URL へのリンクを渡すことができます。 アプリは、この URL をイベントグリッドメッセージとして公開します。 並列では、サーバーレス関数アプリとロジックアプリがメッセージをサブスクライブします。 サーバーレス関数アプリは、イメージを blob ストレージにシリアル化します。 また、Azure Table Storage に情報を格納します。 メタデータには、元のイメージの URL と blob イメージの名前が格納されます。 ロジックアプリは、Custom Vision API とやり取りしてイメージを分析し、コンピューターによって生成されたキャプションを作成します。 キャプションはメタデータテーブルに格納されます。
+この例では、サーバーレスを使用して、ビッグ データ セットに対して map/reduce 操作を実行します。 ニューヨークのタクシーの 2017 年における 1 日の平均速度を決定します。
 
-![イメージアーキテクチャの分析とアーカイブ](./media/image-processing-example.png)
+[ビッグ データ処理: Azure でのサーバーレス MapReduce](https://docs.microsoft.com/samples/azure-samples/durablefunctions-mapreduce-dotnet/big-data-processing-serverless-mapreduce-on-azure/)
 
-個別のシングルページアプリケーション (SPA) は、サーバーレス関数を呼び出して、イメージとメタデータの一覧を取得します。 イメージごとに、アーカイブからイメージデータを配信する別の関数を呼び出します。 最終的な結果は、キャプションが自動であるギャラリーです。
+## <a name="create-serverless-applications-hands-on-lab"></a>サーバーレス アプリケーションを作成する: ハンズオン ラボ
 
-![自動イメージギャラリー](./media/automated-image-gallery.png)
+関数を使用してサーバー側のロジックを実行し、サーバーレス アーキテクチャを構築する方法について説明します。
 
-完全なリポジトリとロジックアプリを構築するための手順については、「[イベントグリッドの接着](https://github.com/JeremyLikness/Event-Grid-Glue)」を参照してください。
+- ビジネスに最適な Azure サービスの選択
+- Azure 関数の作成
+- トリガーの使用
+- 関数のチェーン
+- 実行時間の長いワークフロー
+- 監視
+- 開発、テスト、展開
 
-## <a name="cross-platform-mobile-client-using-xamarinforms-and-functions"></a>Xamarin. Forms と functions を使用したクロスプラットフォームモバイルクライアント
+[サーバーレス アプリケーションの作成](https://docs.microsoft.com/learn/paths/create-serverless-applications/)
 
-Azure Web ポータルまたは Visual Studio で、単純なサーバーレス Azure 関数を実装する方法について説明します。 Android、iOS、Windows で実行される Xamarin. フォームを使用してクライアントを構築します。 次に、サーバーとサーバーレスバックエンドを使用したモバイルクライアントの間の通信メディアとして JavaScript Object Notation (JSON) を使用するようにアプリケーションを調整します。
+## <a name="customer-reviews"></a>顧客レビュー
 
-詳細については、「 [Xamarin. Forms クライアントを使用した単純な Azure 関数の実装](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)」を参照してください。
+このサンプルでは、Visual Studio の C# クラス ライブラリ用の新しい Azure Functions ツールを紹介します。 Azure Storage Blob および CosmosDB に格納される製品レビューを顧客が送信する Web サイトを作成します。 Azure Cognitive Services を使用して顧客レビューの自動モデレーションを実行する Azure 関数を追加します。 Azure ストレージ キューを使用して、Web サイトを関数から分離します。
 
-## <a name="generate-a-photo-mosaic-with-serverless-image-recognition"></a>サーバーレスイメージ認識で photo モザイクを生成します
+[Cognitive Services による顧客レビュー アプリ](https://docs.microsoft.com/samples/azure-samples/functions-customer-reviews/customer-reviews-cognitive-services/)
 
-このサンプルでは、Azure Functions と Microsoft Cognitive Services Custom Vision Service を使用して、入力画像から photo モザイクを生成します。 モデルは画像を認識するようにトレーニングされています。 画像がアップロードされると、画像が認識され、Bing で検索されます。 元のイメージは、検索結果を使用して再構成されます。
+## <a name="docker-linux-image-support"></a>Docker Linux イメージのサポート
 
-![州オーランド目の写真とモザイク](./media/orlando-eye-both.png)
+このサンプルでは、Linux Docker コンテナーで Azure 関数をビルドして実行するための `Dockerfile` を作成する方法を示します。
 
-たとえば、州オーランドの目印 (州オーランドアイなど) を使用してモデルをトレーニングできます。 Custom Vision は州オーランド目の画像を認識し、この関数は "州オーランドアイ" の Bing イメージの検索結果で構成される写真のモザイクを作成します。
+[Linux 上の Azure 関数](https://docs.microsoft.com/samples/azure-samples/functions-linux-custom-image/azure-functions-on-linux-custom-image-tutorial-sample-project/)
 
-詳細については、「 [photo モザイクジェネレーターの Azure Functions](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)」を参照してください。
+## <a name="file-processing-and-validation"></a>ファイルの処理と検証
 
-## <a name="migrate-an-existing-application-to-the-cloud"></a>既存のアプリケーションをクラウドに移行する
+この例では、架空の顧客からの一連の CSV ファイルを解析します。 顧客の "バッチ" に必要なすべてのファイルの準備ができていることを確認した後、各ファイルの構造を検証します。 Azure Functions、Logic Apps、Durable Functions を使用して、異なるソリューションを示します。
 
-前の章で説明したように、アプリケーションをオンプレミスでホストするための N 層アーキテクチャを採用するのが一般的です。 「仮想マシンを使用したリソースの移行」はクラウドへの最も危険なパスですが、多くの企業では、アプリケーションをリファクターする機会を使用することを選択しています。 幸い、リファクタリングは、"すべての" 労力である必要はありません。 実際には、アプリケーションを移行してから、コンポーネントをクラウドネイティブに置き換えることができます。
+[Azure Functions、Logic Apps、Durable Functions を使用した、ファイルの処理と検証](https://docs.microsoft.com/samples/azure-samples/serverless-file-validation/file-processing-and-validation-using-azure-functions-logic-apps-and-durable-functions/)
 
-アプリケーションでは、Azure Functions のプロキシ機能を使用して、従来のオンプレミスコードからサーバーレスエンドポイントへのエンドポイントのリファクタリングを有効にします。
+## <a name="game-data-visualization"></a>ゲーム データの視覚化
 
-![移行のアーキテクチャ](./media/migration-architecture.png)
+![ゲーム テレメトリ](https://docs.microsoft.com/samples/azure-samples/gaming-in-editor-telemetry/in-editor-telemetry-visualization/media/points.png)
 
-プロキシは、サーバーレス関数に移動されるたびに個々の要求を再ルーティングするために更新される1つの API エンドポイントを提供します。
+開発者がゲーム用にエディター内データ視覚化ソリューションを実装する方法の例です。 実際、Unreal Engine 4 プラグインと Unity プラグインは、このサンプルをバックエンドとして使用して開発されました。 サービス コンポーネントは、ゲーム エンジンに依存しません。
 
-移行全体の手順を説明したビデオを見ることができます。[サーバーレスの Azure functions を使用したリフトアンドシフト](https://channel9.msdn.com/Events/Connect/2017/E102)です。 サンプルコードにアクセスします。[独自のアプリを持参](https://github.com/JeremyLikness/bring-own-app-connect-17)します。
+[エディター内でのゲーム テレメトリの視覚化](https://docs.microsoft.com/samples/azure-samples/gaming-in-editor-telemetry/in-editor-telemetry-visualization/)
 
-## <a name="parse-a-csv-file-and-insert-into-a-database"></a>CSV ファイルを解析してデータベースに挿入する
+## <a name="graphql"></a>GraphQL
 
-抽出、変換、読み込み (ETL) は、さまざまなシステムを統合する共通のビジネス機能です。 従来の方法では、多くの場合、専用の FTP サーバーを設定し、スケジュールされたジョブを展開してファイルを解析し、ビジネスで使用できるように変換します。 サーバーレスアーキテクチャを使用すると、ファイルがアップロードされたときにトリガーが起動するため、ジョブが簡単になります。 どんなのようなタスクは、特定の問題に焦点を当てる小さなコードの理想的な構成によって、ETL などのタスクを実行します。 Azure Functions
+GraphQL API を公開するサーバーレス関数を作成します。
 
-![Csv 解析プロセスを示すスクリーンショット。](./media/serverless-business-scenarios/csv-parse-database-import.png)
+[GraphQL 用のサーバーレス関数](https://github.com/softchris/graphql-workshop-dotnet/blob/master/docs/workshop/4.md)
 
-ソースコードとハンズオンラボについては、「 [CSV インポートラボ](https://github.com/JeremyLikness/azure-fn-file-process-hol)」を参照してください。
+## <a name="internet-of-things-iot-reliable-edge-relay"></a>モノのインターネット (IoT) の高信頼性エッジ リレー
 
-## <a name="shorten-links-and-track-metrics"></a>リンクを短くしてメトリックを追跡する
+![IoT アーキテクチャ](https://docs.microsoft.com/samples/azure-samples/iot-reliable-edge-relay/iot-reliable-edge-relay/media/architecture.png)
 
-リンクの短縮ツールでは、最初に、短い twitter の投稿での Url のエンコードが140文字の制限に対応しました。 多くの用途が含まれるようになっており、分析のためにクリックスルーを追跡するのが最も一般的です。 リンク短縮のシナリオは、リンクとレポートのメトリックを管理する完全なサーバーレスアプリケーションです。
+このサンプルでは、IoT デバイスからの高信頼性のアップストリーム通信を可能にする新しい通信プロトコルを実装します。 データ ギャップの検出とバックフィルを自動化します。
 
-Azure Functions は、長い URL を貼り付けて短い Url を生成できるシングルページアプリケーション (SPA) を提供するために使用されます。 これらの Url には、キャンペーン (トピック) やメディア (リンクが投稿されているソーシャルネットワークなど) を追跡するタグが付けられます。 短いコードはキーとして Azure Table Storage に格納され、長い URL は値として格納されます。 ショートリンクをクリックすると、別の関数によって長い URL が検索され、リダイレクトが送信され、イベントに関する情報がキューに格納されます。 別の Azure 関数がキューを処理し、情報を Azure Cosmos DB に配置します。
+[IoT 高信頼性エッジ リレー](https://docs.microsoft.com/samples/azure-samples/iot-reliable-edge-relay/iot-reliable-edge-relay/)
 
-![リンク短縮のアーキテクチャ](./media/link-shortener-architecture.png)
+## <a name="microservices-reference-architecture"></a>マイクロサービス参照アーキテクチャ
 
-次に、Power BI ダッシュボードを作成して、収集されたデータに関する洞察を収集できます。 バックエンドでは、Application Insights は重要なメトリックを提供します。 テレメトリには、平均的なユーザーのリダイレクトにかかる時間と、Azure Table Storage にアクセスするためにかかる時間が含まれます。
+![参照アーキテクチャ](https://docs.microsoft.com/samples/azure-samples/serverless-microservices-reference-architecture/serverless-microservices-reference-architecture/media/macro-architecture.png)
 
-![Power BI の例](./media/power-bi-example.png)
+Relecloud (架空の会社) による Rideshare アプリケーションの設計、開発、配布に関連する意思決定プロセスの手順を示す参照アーキテクチャです。 アーキテクチャのすべてのコンポーネントを構成して展開するための実践的な手順が含まれています。
 
-手順が記載された完全なリンク短縮リポジトリについては、「[サーバーレス URL 短縮](https://github.com/jeremylikness/serverless-url-shortener)」を参照してください。 簡略化されたバージョンについては、「[サーバーレス .net アプリを数分で Azure Storage」](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)を参照してください。
+[サーバーレス マイクロサービス参照アーキテクチャ](https://docs.microsoft.com/samples/azure-samples/serverless-microservices-reference-architecture/serverless-microservices-reference-architecture/)
 
-## <a name="verify-device-connectivity-using-a-ping"></a>Ping を使用してデバイスの接続を確認する
+## <a name="migrate-console-apps-to-serverless"></a>コンソール アプリをサーバーレスに移行する
 
-このサンプルは、Azure IoT Hub と Azure 関数で構成されています。 IoT Hub に新しいメッセージが表示され、Azure 関数がトリガーされます。 サーバーレスコードは、送信元のデバイスに同じメッセージの内容を送り返します。 このプロジェクトには、ソリューションに必要なすべてのコードと配置の構成が含まれています。
+このサンプルは、任意のコンソール アプリケーションを Azure Functions の HTTP Web サービスに変換するために使用できる汎用関数 (`.csx` ファイル) です。 必要な作業は、構成ファイルを編集し、`.exe` に引数として渡す入力パラメーターを指定することだけです。
 
-詳細については、「 [ping の Azure IoT Hub](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)」を参照してください。
+[Azure Functions でコンソール アプリを実行する](https://docs.microsoft.com/samples/azure-samples/functions-dotnet-migrating-console-apps/run-console-apps-on-azure-functions/)
 
-## <a name="recommended-resources"></a>推奨されるリソース
+## <a name="serverless-for-mobile"></a>モバイル用のサーバーレス
 
-- [Photo モザイクジェネレーターの Azure Functions](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
-- [Ping の Azure IoT Hub](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
-- [サーバーレスの .NET アプリを数分で Azure Storage](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
-- [独自のアプリを持ち込む](https://github.com/JeremyLikness/bring-own-app-connect-17)
-- [CSV インポートラボ](https://github.com/JeremyLikness/azure-fn-file-process-hol)
-- [イベントグリッドの接着](https://github.com/JeremyLikness/Event-Grid-Glue)
-- [Xamarin クライアントを使用した単純な Azure 関数の実装](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
-- [サーバーレス Azure functions を使用したリフトアンドシフト](https://channel9.msdn.com/Events/Connect/2017/E102)
-- [サーバーレス URL 短縮](https://github.com/jeremylikness/serverless-url-shortener)
+Azure Functions は実装と保守が簡単で、HTTP を介してアクセスできます。 モバイル アプリケーション用の API を実装する優れた方法です。 Microsoft では、iOS、Android、Windows 向けの優れたクロスプラットフォーム ツールが Xamarin で提供されています。 そのため、Xamarin と Azure Functions は連携して機能します。 この記事では、最初に Azure portal または Visual Studio で Azure 関数を実装してから、Android、iOS、Windows で実行される Xamarin.Forms を使用してクロスプラットフォーム クライアントを構築する方法について説明します。
+
+[Xamarin.Forms クライアントを使用するシンプルな Azure 関数の実装](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)
+
+## <a name="serverless-messaging"></a>サーバーレス メッセージング
+
+このサンプルでは、Durable Functions のファンアウト パターンを使用して、任意の数のセッションまたはパーティションから任意の数のメッセージを読み込む方法を示します。 Service Bus、Event Hubs、またはストレージ キューを対象としています。 また、このサンプルでは、それらのメッセージを別の Azure 関数で使用し、結果のタイミング データを別のイベント ハブに読み込む機能を追加します。 その後、データは、Azure Data Explorer などの分析サービスに取り込まれます。
+
+[Service Bus、Event Hubs、ストレージ キューと Azure Functions によりメッセージを生成して使用する](https://docs.microsoft.com/samples/azure-samples/durable-functions-producer-consumer/product-consume-messages-az-functions/)
+
+## <a name="recommended-resources"></a>推奨リソース
+
+- [Linux 上の Azure 関数](https://docs.microsoft.com/samples/azure-samples/functions-linux-custom-image/azure-functions-on-linux-custom-image-tutorial-sample-project/)
+- [ビッグ データ処理: Azure でのサーバーレス MapReduce](https://docs.microsoft.com/samples/azure-samples/durablefunctions-mapreduce-dotnet/big-data-processing-serverless-mapreduce-on-azure/)
+- [サーバーレス アプリケーションの作成](https://docs.microsoft.com/learn/paths/create-serverless-applications/)
+- [Cognitive Services による顧客レビュー アプリ](https://docs.microsoft.com/samples/azure-samples/functions-customer-reviews/customer-reviews-cognitive-services/)
+- [Azure Functions、Logic Apps、Durable Functions を使用した、ファイルの処理と検証](https://docs.microsoft.com/samples/azure-samples/serverless-file-validation/file-processing-and-validation-using-azure-functions-logic-apps-and-durable-functions/)
+- [Xamarin.Forms クライアントを使用するシンプルな Azure 関数の実装](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)
+- [エディター内でのゲーム テレメトリの視覚化](https://docs.microsoft.com/samples/azure-samples/gaming-in-editor-telemetry/in-editor-telemetry-visualization/)
+- [IoT 高信頼性エッジ リレー](https://docs.microsoft.com/samples/azure-samples/iot-reliable-edge-relay/iot-reliable-edge-relay/)
+- [Service Bus、Event Hubs、ストレージ キューと Azure Functions によりメッセージを生成して使用する](https://docs.microsoft.com/samples/azure-samples/durable-functions-producer-consumer/product-consume-messages-az-functions/)
+- [Azure Functions でコンソール アプリを実行する](https://docs.microsoft.com/samples/azure-samples/functions-dotnet-migrating-console-apps/run-console-apps-on-azure-functions/)
+- [GraphQL 用のサーバーレス関数](https://github.com/softchris/graphql-workshop-dotnet/blob/master/docs/workshop/4.md)
+- [サーバーレス マイクロサービス参照アーキテクチャ](https://docs.microsoft.com/samples/azure-samples/serverless-microservices-reference-architecture/serverless-microservices-reference-architecture/)
 
 >[!div class="step-by-step"]
 >[前へ](orchestration-patterns.md)

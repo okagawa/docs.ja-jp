@@ -1,13 +1,13 @@
 ---
-title: '方法: 異種ファイルのコンテンツを結合する (LINQ) (Visual Basic)'
+title: '方法: 異種ファイルのコンテンツを結合する (LINQ)'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: f5bdfecc91f5b2f0ed3764d0f38dee99570d66d4
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: MT
+ms.openlocfilehash: 7dac73a16d0d3fbf409f58628bc5c69716dcee14
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524208"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398371"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>方法: 異種ファイルのコンテンツを結合する (LINQ) (Visual Basic)
 
@@ -122,5 +122,5 @@ End Class
 
 ## <a name="see-also"></a>関連項目
 
-- [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ と文字列 (Visual Basic)](linq-and-strings.md)
+- [LINQ とファイル ディレクトリ (Visual Basic)](linq-and-file-directories.md)

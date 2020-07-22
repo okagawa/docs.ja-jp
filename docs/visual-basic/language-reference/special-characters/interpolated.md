@@ -1,12 +1,12 @@
 ---
-title: $ (Visual Basic リファレンス)
+title: $
 ms.date: 10/31/2017
-ms.openlocfilehash: f9de6f0d8289b4f37ced347eda0683a4db331369
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: 007f64e3bee9ba7fa310d500eb8938d7e1633d58
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423658"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349586"
 ---
 # <a name="-visual-basic-reference"></a>$ (Visual Basic リファレンス)
 
@@ -21,4 +21,4 @@ ms.locfileid: "73423658"
 ## <a name="see-also"></a>関連項目
 
 - [Visual Basic リファレンス](../index.md)
-- [特殊文字の Visual Basic](index.md)
+- [Visual Basic 特殊文字](index.md)

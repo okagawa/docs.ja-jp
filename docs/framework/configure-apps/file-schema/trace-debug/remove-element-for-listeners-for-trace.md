@@ -1,5 +1,5 @@
 ---
-title: <trace> の <listeners> の <remove> 要素
+title: <remove>のの <listeners> 要素<trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-ms.openlocfilehash: 56d1e56514aed98d5f3b9f7363e461af6ac68a8c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: f06973ec30d5061e4a200d6bf7e68adcf6302018
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697212"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "74088845"
 ---
-# <a name="remove-element-for-listeners-for-trace"></a>\<trace > の \< リスナーの > 要素を削除 @no__t
+# <a name="remove-element-for-listeners-for-trace"></a>\<remove>のの \<listeners> 要素\<trace>
 **リスナーコレクションから**リスナーを削除します。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t-3[ **\<trace >** ](trace-element.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t @ no__t-5[ **\<listeners >** します。](listeners-element-for-trace.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t @ no__t-5 @ no__t-6 @ no__t-7 **\<remove を削除**します。  
-  
+
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<trace>**](trace-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<listeners>**](listeners-element-for-trace.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -43,17 +43,17 @@ ms.locfileid: "71697212"
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`listeners`|メッセージを収集、格納、およびルーティングするリスナーを指定します。 リスナーは、適切なターゲットにトレース出力を送信します。|  
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
-|`trace`|ASP.NET トレースサービスを構成します。|  
+|`trace`|ASP.NET トレース サービスを設定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
-> @No__t-0 を `Listeners` のコレクションから削除すると、<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>、<xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>、@no__t 4、および @no__t 5 の各メソッドの動作が変更されます。 通常、`Assert` または `Fail` メソッドを呼び出すと、メッセージボックスが表示されますが、<xref:System.Diagnostics.DefaultTraceListener> が @no__t 3 コレクションに含まれていない場合、メッセージボックスは表示されません。  
+> コレクションからを削除する <xref:System.Diagnostics.DefaultTraceListener> `Listeners` と、、、、およびの各メソッドの動作が変更され <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> ます。 通常、 `Assert` メソッドまたはメソッドを呼び出すと、 `Fail` メッセージボックスが表示されますが、 <xref:System.Diagnostics.DefaultTraceListener> がコレクションに含まれていない場合は、メッセージボックスは表示されません `Listeners` 。  
   
 ## <a name="example"></a>例  
  次の例は、トレース**リスナー**コレクションから既定のトレースリスナーを削除する方法を示しています。  

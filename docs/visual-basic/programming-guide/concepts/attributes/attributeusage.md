@@ -1,13 +1,13 @@
 ---
-title: AttributeUsage (Visual Basic)
+title: AttributeUsage
 ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-ms.openlocfilehash: dbfbfaa6124eacfd9e4043eab9e4769103e554ca
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: MT
+ms.openlocfilehash: 677d49aba38801f2adf42cc745983af30b3eddc5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524306"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400733"
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
 
@@ -36,10 +36,6 @@ End Class
 最初の `AttributeUsage` 引数は、<xref:System.AttributeTargets> 列挙型の 1 つまたは複数の要素でなければなりません。 次のように、複数のターゲット型を OR 演算子で 1 つにまとめることができます。
 
 ```vb
-Imports System
-```
-
-```vb
 <AttributeUsage(AttributeTargets.Property Or AttributeTargets.Field)>
 Class NewPropertyOrFieldAttribute
     Inherits Attribute
@@ -47,10 +43,6 @@ End Class
 ```
 
 `AllowMultiple` 引数を `true` に設定すると、次のように、結果の属性を 1 つのエンティティに複数回適用できます。
-
-```vb
-Imports System
-```
 
 ```vb
 <AttributeUsage(AttributeTargets.Class, AllowMultiple:=True)>
@@ -65,11 +57,7 @@ End Class
 
 この例では、`AllowMultiple` が `true` に設定されているので、`MultiUseAttr` を繰り返し適用できます。 示されているどちらの形式でも、複数の属性を適用できます。
 
-`Inherited` を `false` に設定すると、属性化されたクラスから派生するクラスは属性を継承しません。 (例:
-
-```vb
-Imports System
-```
+`Inherited` を `false` に設定すると、属性化されたクラスから派生するクラスは属性を継承しません。 次に例を示します。
 
 ```vb
 <AttributeUsage(AttributeTargets.Class, Inherited:=False)>
@@ -93,15 +81,11 @@ End Class
 
 `AttributeUsage` 属性は、1 回だけ使用できる属性です。同じクラスに複数回適用することはできません。 `AttributeUsage` は <xref:System.AttributeUsageAttribute> の別名です。
 
-詳細については、「[リフレクションを使用した属性へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)」を参照してください。
+詳細については、「[リフレクションを使用した属性へのアクセス (Visual Basic)](accessing-attributes-by-using-reflection.md)」を参照してください。
 
 ## <a name="example"></a>例
 
 次の例を見ると、`AttributeUsage` 属性に対する `Inherited` 引数と `AllowMultiple` 引数の効果、およびクラスに適用されているカスタム属性の列挙方法がわかります。
-
-```vb
-Imports System
-```
 
 ```vb
 ' Create some custom attributes:
@@ -168,9 +152,9 @@ A2
 
 - <xref:System.Attribute>
 - <xref:System.Reflection>
-- [Visual Basic のプログラミング ガイド](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic プログラミング ガイド](../../index.md)
 - [属性](../../../../standard/attributes/index.md)
-- [リフレクション (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [属性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
-- [カスタム属性の作成 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
-- [リフレクションを使用した属性へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [リフレクション (Visual Basic)](../reflection.md)
+- [属性 (Visual Basic)](../../../language-reference/attributes.md)
+- [カスタム属性の作成 (Visual Basic)](creating-custom-attributes.md)
+- [リフレクションを使用した属性へのアクセス (Visual Basic)](accessing-attributes-by-using-reflection.md)

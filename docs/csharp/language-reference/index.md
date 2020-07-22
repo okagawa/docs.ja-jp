@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 4fed33272dbed50100a37aa9fcd30befc46435f9
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 4875e53327e24c4b5983a4a3b79b5beced368725
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771836"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "74428607"
 ---
 # <a name="c-reference"></a>C# リファレンス
 
@@ -27,7 +27,7 @@ ms.locfileid: "72771836"
  [C# 演算子](./operators/index.md)  
  C# の演算子と構文に関する情報へのリンクを示します。  
 
- [C# 特殊文字](./tokens/index.md)  
+ [C# の特殊文字](./tokens/index.md)  
  C# のコンテキスト特殊文字とその使用方法に関する情報へのリンクを提供します。  
 
  [C# プリプロセッサ ディレクティブ](./preprocessor-directives/index.md)  
@@ -61,11 +61,8 @@ C# 6.0 より後のバージョンで実装された機能は、言語仕様の�
   
 ## <a name="related-sections"></a>関連項目  
 
- [C# のガイド](../index.md)  
- Visual C# ドキュメントへのポータルを提供します。  
-  
  [Visual C# 開発環境の使用](/visualstudio/get-started/csharp)  
  IDE およびエディターについて説明する概念トピックおよびタスク トピックへのリンクを提供します。  
   
- [C# プログラミング ガイド](../programming-guide/index.md)  
+ [C# プログラミングガイド](../programming-guide/index.md)  
  C# プログラミング言語の使用方法について説明します。

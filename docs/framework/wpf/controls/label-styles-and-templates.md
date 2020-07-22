@@ -9,34 +9,34 @@ helpviewer_keywords:
 - Label [WPF], styles and templates
 - states [WPF], Label
 ms.assetid: c1d5359a-8e4a-4925-ab3e-e92bf6694859
-ms.openlocfilehash: c3bf4dc629bbb3e4ea21862c6893b001749f4649
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
-ms.translationtype: MT
+ms.openlocfilehash: 35fcd9c15bf44d15a08c16d58847698c5ec6e574
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459391"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283503"
 ---
 # <a name="label-styles-and-templates"></a>ラベルのスタイルとテンプレート
-このトピックでは、<xref:System.Windows.Controls.Label> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
+このトピックでは、<xref:System.Windows.Controls.Label> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[コントロールのためにテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)」をご覧ください。  
   
-## <a name="label-parts"></a>ラベルパーツ  
- <xref:System.Windows.Controls.Label> コントロールには、名前付きの部分がありません。  
+## <a name="label-parts"></a>Label のパーツ  
+ <xref:System.Windows.Controls.Label> コントロールに名前付きパーツはありません。  
   
-## <a name="label-states"></a>ラベルの状態  
- 次の表は、<xref:System.Windows.Controls.Label> コントロールの表示状態を示しています。  
+## <a name="label-states"></a>Label の状態  
+ 次の表は、<xref:System.Windows.Controls.Label> コントロールの表示状態の一覧を示します。  
   
 |VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
-|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
+|有効|ValidationStates|このコントロールで <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false` です。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|  
   
-## <a name="label-controltemplate-example"></a>ラベル ControlTemplate の例  
+## <a name="label-controltemplate-example"></a>Label の ControlTemplate の例  
  次の例は、<xref:System.Windows.Controls.Label> コントロールの <xref:System.Windows.Controls.ControlTemplate> を定義する方法を示しています。  
   
  [!code-xaml[ControlTemplateExamples#Label](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/label.xaml#label)]  
   
- <xref:System.Windows.Controls.ControlTemplate> では、次のリソースの1つ以上を使用します。  
+ <xref:System.Windows.Controls.ControlTemplate> では、次のリソースを 1 つ以上使用します。  
   
  [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
@@ -49,4 +49,4 @@ ms.locfileid: "73459391"
 - [コントロールのスタイルとテンプレート](control-styles-and-templates.md)
 - [コントロールのカスタマイズ](control-customization.md)
 - [スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)
+- [コントロールのためのテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)

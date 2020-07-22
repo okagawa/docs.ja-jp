@@ -8,24 +8,24 @@ helpviewer_keywords:
 - UseRandomizedStringHashAlgorithm element
 - <UseRandomizedStringHashAlgorithm> element
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
-ms.openlocfilehash: cc9708b8cca6520932fbf0e1975a05cad5fad485
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a9afa0db516a542b74d08a4c3754a3244abbbea7
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115043"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "79153778"
 ---
-# <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm > 要素
+# <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm> 要素
 共通言語ランタイムがアプリケーション ドメインごとに文字列のハッシュ コードを計算するかどうかを判定します。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<UseRandomizedStringHashAlgorithm >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<UseRandomizedStringHashAlgorithm>**  
   
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<UseRandomizedStringHashAlgorithm   
+<UseRandomizedStringHashAlgorithm
    enabled=0|1 />  
 ```  
   
@@ -40,7 +40,7 @@ ms.locfileid: "73115043"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|[値]|説明|  
+|値|Description|  
 |-----------|-----------------|  
 |`0`|共通言語ランタイムは、アプリケーション ドメインごとに文字列のハッシュ コードを計算しません。1 つのアルゴリズムを使用して文字列のハッシュ コードを計算します。 既定値です。|  
 |`1`|共通言語ランタイムは、アプリケーション ドメインごとに文字列のハッシュ コードを計算します。 異なるアプリケーション ドメインや異なるプロセスで同一の文字列のハッシュ コードは異なります。|  
@@ -50,12 +50,12 @@ ms.locfileid: "73115043"
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  既定では、<xref:System.StringComparer> のクラスと <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> のメソッドは、アプリケーション ドメイン間で一貫したハッシュ コードを生成する単一のハッシュ アルゴリズムを使用します。 これは、`enabled` 要素の `<UseRandomizedStringHashAlgorithm>` 属性を `0` に設定することと同じです。 これは、.NET Framework 4 で使用されるハッシュアルゴリズムです。  
   
  <xref:System.StringComparer> クラスと <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> メソッドは、別のハッシュ アルゴリズムを使用してアプリケーション ドメインごとのハッシュ コードを計算することもできます。 その結果、同じ文字列のハッシュ コードが、アプリケーション ドメイン間で異なります。 これはオプトイン機能であり、この機能を利用するには、`enabled` 要素の `<UseRandomizedStringHashAlgorithm>` 属性を `1` に設定する必要があります。  
@@ -70,7 +70,7 @@ ms.locfileid: "73115043"
   
  構成ファイルを指定せずにこの例を実行すると、次のような出力が表示されます。 文字列のハッシュ コードが 2 つアプリケーション ドメインで同じであることに注意してください。  
   
-```  
+```console
 String 'This is a string.' in domain 'PerDomain.exe': 941BCEAC  
 String 'This is a string.' in domain 'NewDomain': 941BCEAC  
 ```  
@@ -88,7 +88,7 @@ String 'This is a string.' in domain 'NewDomain': 941BCEAC
   
  構成ファイルが存在する場合、次の出力が表示されます。  
   
-```  
+```console
 String 'This is a string.' in domain 'PerDomain.exe': 5435776D  
 String 'This is a string.' in domain 'NewDomain': 75CC8236  
 ```  

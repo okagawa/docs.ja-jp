@@ -1,21 +1,21 @@
 ---
-title: '方法: XML からテキストファイルを生成する (Visual Basic)'
+title: '方法: XML からテキスト ファイルを生成する'
 ms.date: 07/20/2015
 ms.assetid: 3b33f191-4abe-4419-b81b-3cb81d9a317f
-ms.openlocfilehash: 1b383a0f3656558286bfe449ed72c633426b9410
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
-ms.translationtype: MT
+ms.openlocfilehash: 9d89d8d5e929574fa26cc5c11346980e8b235ac5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320529"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396572"
 ---
-# <a name="how-to-generate-text-files-from-xml-visual-basic"></a>方法: XML からテキストファイルを生成する (Visual Basic)
+# <a name="how-to-generate-text-files-from-xml-visual-basic"></a>方法: XML からテキスト ファイルを生成する (Visual Basic)
 この例では、XML ファイルからコンマ区切り (CSV) ファイルを生成する方法について説明します。  
   
 ## <a name="example"></a>例  
- Visual Basic バージョンでは、手続き型のコードを使用して、文字列のコレクションを1つの文字列に集約します。  
+ Visual Basic バージョンのコードでは、プロシージャ コードを使用して文字列のコレクションを 1 つの文字列に集約します。  
   
- この例では、「[サンプル XML ファイル: 顧客と注文 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)」の XML ドキュメントを使用します。  
+ この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:顧客と注文 (LINQ to XML)](sample-xml-file-customers-and-orders-linq-to-xml.md)」。  
   
 ```vb  
 Dim custOrd As XElement = XElement.Load("CustomersOrders.xml")  
@@ -53,4 +53,4 @@ LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,Sa
   
 ## <a name="see-also"></a>関連項目
 
-- [プロジェクションと変換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [プロジェクションと変換 (LINQ to XML) (Visual Basic)](projections-and-transformations-linq-to-xml.md)

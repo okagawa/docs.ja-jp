@@ -1,5 +1,6 @@
 ---
 title: authenticationModules の <add> 要素 (ネットワーク設定)
+description: <add>Connectionmanagement のネットワーク設定要素によって、.NET Framework の接続管理リストに IP アドレスまたは DNS 名が追加されます。
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -10,26 +11,26 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: a68434aaa118db60a502c2bcc0bb188b83b0f463
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 1a6d0f79f076a69cec33ac14f0e0f33f7c3c6577
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698433"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504642"
 ---
-# <a name="add-element-for-authenticationmodules-network-settings"></a>authenticationModules (ネットワーク設定) の @no__t 0add > 要素
+# <a name="add-element-for-authenticationmodules-network-settings"></a>authenticationModules の \<add> 要素 (ネットワーク設定)
 アプリケーションに認証モジュールを追加します。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t 47 >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t @-3[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> の追加**  
-  
+
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<authenticationModules>**](authenticationmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
 <add
-  type="type_fullname, assembly_fullname"   
+  type="type_fullname, assembly_fullname"
 />  
 ```  
   
@@ -38,23 +39,23 @@ ms.locfileid: "71698433"
   
 ### <a name="attributes"></a>属性  
   
-|**属性**|**[説明]**|  
+|**属性**|**説明**|  
 |-------------------|---------------------|  
-|`type`|コンマで区切られた、完全修飾型名 (<xref:System.Type.FullName%2A> プロパティによって示されます) とアセンブリ名 (<xref:System.Reflection.Assembly.FullName%2A> プロパティによって示されます)。|  
+|`type`|コンマで区切られた、完全修飾型名 (プロパティによって示され <xref:System.Type.FullName%2A> ます) とアセンブリ名 (プロパティによって示され <xref:System.Reflection.Assembly.FullName%2A> ます)。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|**要素**|**[説明]**|  
+|**要素**|**説明**|  
 |-----------------|---------------------|  
 |[authenticationModules](authenticationmodules-element-network-settings.md)|ネットワーク要求を認証するために使用するモジュールを指定します。|  
   
-## <a name="remarks"></a>コメント  
- @No__t-0 要素は、登録されている認証モジュールの一覧の末尾に認証モジュールを追加します。 認証モジュールは、一覧に追加された順序で呼び出されます。  
+## <a name="remarks"></a>解説  
+ 要素は、 `add` 登録されている認証モジュールの一覧の末尾に認証モジュールを追加します。 認証モジュールは、一覧に追加された順序で呼び出されます。  
   
- @No__t-0 属性の値には、有効な型名と、対応するアセンブリ名をコンマで区切って指定する必要があります。  
+ 属性の値は、 `type` 有効な型名と、それに対応するアセンブリ名をコンマで区切って指定する必要があります。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  

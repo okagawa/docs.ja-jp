@@ -9,33 +9,33 @@ helpviewer_keywords:
 - states [WPF], Frame
 - styles [WPF], Frame
 ms.assetid: a01c32e2-c951-46a0-a82f-2614ca241f0b
-ms.openlocfilehash: 89f4fc21637d20ca226507463093bc6bae2241fc
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
-ms.translationtype: MT
+ms.openlocfilehash: de853198c97c99319bea4a816c9a6eca5dc5d917
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460313"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283742"
 ---
 # <a name="frame-styles-and-templates"></a>フレームのスタイルとテンプレート
-このトピックでは、<xref:System.Windows.Controls.Frame> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
+このトピックでは、<xref:System.Windows.Controls.Frame> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[コントロールのためにテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)」をご覧ください。  
   
-## <a name="frame-parts"></a>フレームパーツ  
- 次の表に、<xref:System.Windows.Controls.Frame> コントロールの名前付きの部分を示します。  
+## <a name="frame-parts"></a>Frame のパーツ  
+ 次の表は、<xref:System.Windows.Controls.Frame> コントロールの名前付きパーツの一覧を示します。  
   
-|パーツ|[種類]|説明|  
+|パーツ|種類|説明|  
 |-|-|-|  
 |PART_FrameCP|<xref:System.Windows.Controls.ContentPresenter>|コンテンツ領域。|  
   
-## <a name="frame-states"></a>フレームの状態  
- 次の表は、<xref:System.Windows.Controls.Frame> コントロールの表示状態を示しています。  
+## <a name="frame-states"></a>Frame の状態  
+ 次の表は、<xref:System.Windows.Controls.Frame> コントロールの表示状態の一覧を示します。  
   
 |VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
-|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
+|有効|ValidationStates|このコントロールで <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false` です。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|  
   
-## <a name="frame-controltemplate-example"></a>フレーム ControlTemplate の例  
+## <a name="frame-controltemplate-example"></a>Frame の ControlTemplate の例  
  次の例は、<xref:System.Windows.Controls.Frame> コントロールの <xref:System.Windows.Controls.ControlTemplate> を定義する方法を示しています。  
   
  [!code-xaml[ControlTemplateExamples#Frame](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/frame.xaml#frame)]  
@@ -53,4 +53,4 @@ ms.locfileid: "73460313"
 - [コントロールのスタイルとテンプレート](control-styles-and-templates.md)
 - [コントロールのカスタマイズ](control-customization.md)
 - [スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)
+- [コントロールのためのテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)

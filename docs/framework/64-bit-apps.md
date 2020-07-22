@@ -1,17 +1,18 @@
 ---
 title: 64 ビット アプリケーション
+description: ネイティブ 64 ビット アプリケーションとしてか WOW64 (Windows 64 ビット上の Windows 32 ビット) の下で、Windows 64 ビット OS 上でアプリケーションを構成する方法に関する情報を取得します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - applications [C++], 64-bit
 - 64-bit applications [C++]
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
-ms.openlocfilehash: 3ef6d02023570f5ec4013b070317c272a94b8212
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4589d7a070a477dcb229fbaea686f6c6ff7d7e08
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120107"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989982"
 ---
 # <a name="64-bit-applications"></a>64 ビット アプリケーション
 アプリケーションをコンパイルするときに、Windows 64 ビット オペレーティング システム上で、ネイティブ アプリケーションとして実行するか、WOW64 (Windows 64 ビット上の Windows 32 ビット) の制御下で実行するかを指定できます。 WOW64 は互換環境であり、32 ビット アプリケーションを 64 ビット オペレーティング システム上で実行できるようにします。 WOW64 は、Windows オペレーティング システムのすべての 64 ビット バージョンに含まれています。  
@@ -24,7 +25,7 @@ ms.locfileid: "73120107"
 > [!NOTE]
 > x86 エミュレーションと、Itanium プロセッサ ファミリ向け WOW64 サブシステムの設計のために、アプリケーションの実行は単一のプロセッサ上に制限されます。 これらの要因により、Itanium ベースのシステム上で実行する 32 ビット .NET Framework アプリケーションのパフォーマンスとスケーラビリティは低下します。 パフォーマンスおよびスケーラビリティを向上させるために、Itanium ベースのシステム用のネイティブ 64 ビット サポートを含む .NET Framework 4 を使用することをお勧めします。  
   
- 既定では、64 ビット Windows オペレーティング システムで 64 ビット マネージド アプリケーションを実行するときに、最大 2 GB のオブジェクトを作成できます。 ただし、.NET Framework 4.5 ではこの制限を上げることができます。  詳細については、「[\<gcAllowVeryLargeObjects> 要素](./configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)」を参照してください。  
+ 既定では、64 ビット Windows オペレーティング システムで 64 ビット マネージド アプリケーションを実行するときに、最大 2 GB のオブジェクトを作成できます。 ただし、.NET Framework 4.5 ではこの制限を上げることができます。  詳細については、[\<gcAllowVeryLargeObjects> 要素](./configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)を参照してください。  
   
  多くのアセンブリは 32 ビットの CLR と 64 ビットの CLR で同じように実行します。 しかし、次の条件が当てはまる場合、一部のプログラムでは動作が CLR によって異なります。  
   
@@ -41,11 +42,7 @@ ms.locfileid: "73120107"
 ## <a name="general-64-bit-programming-information"></a>一般的な 64 ビット プログラミングについて  
  64 ビット プログラミングの一般的な問題については、次のドキュメントを参照してください。  
   
-- 64 ビット Windows コンピューター上の 64 ビット版 CLR の詳細については、MSDN Web サイトの「[.NET Framework Developer Center (.NET Framework デベロッパー センター)](https://go.microsoft.com/fwlink/?LinkId=37079)」を参照してください。  
-  
-- Windows SDK ドキュメントの「[Programming Guide for 64-bit Windows](https://go.microsoft.com/fwlink/p/?LinkId=253512)」 (64 ビット Windows のプログラミング ガイド) を参照してください。  
-  
-- 64 ビット版 CLR をダウンロードする方法については、MSDN Web サイトの「[.NET Framework ダウンロード](https://go.microsoft.com/fwlink/?LinkId=50953)」を参照してください。  
+- Windows SDK ドキュメントの「[Programming Guide for 64-bit Windows](/windows/win32/winprog64/programming-guide-for-64-bit-windows)」 (64 ビット Windows のプログラミング ガイド) を参照してください。  
   
 - 64 ビット アプリケーションを作成するための Visual Studio のサポート機能については、「[Visual Studio 開発環境の 64 ビット サポート](/visualstudio/ide/visual-studio-ide-64-bit-support)」を参照してください。  
   

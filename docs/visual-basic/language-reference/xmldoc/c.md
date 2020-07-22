@@ -1,18 +1,18 @@
 ---
-title: <c> (Visual Basic)
+title: <c>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - c XML tag
 - <c> XML tag
 ms.assetid: 36ad5d1b-11f7-4012-8932-41962ac327d1
-ms.openlocfilehash: 4ea19ed5330dcbb8fcd84708d1546a81d909b04e
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: MT
+ms.openlocfilehash: c8ba03d9cc01c4751d15c01530c6cbf7d499dc3b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523941"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400164"
 ---
-# <a name="c-visual-basic"></a>\<c > (Visual Basic)
+# <a name="c-visual-basic"></a>\<c> (Visual Basic)
 説明内のテキストがコードであることを示します。  
   
 ## <a name="syntax"></a>構文  
@@ -28,15 +28,15 @@ ms.locfileid: "72523941"
 |`text`|コードとして指定するテキストです。|  
   
 ## <a name="remarks"></a>Remarks  
- @No__t_0 タグを使用すると、説明内のテキストをコードとしてマークする必要があることを示すことができます。 複数行をコードとして指定する場合は、[\<code>](../../../visual-basic/language-reference/xmldoc/code.md) タグを使用します。  
+ `<c>` タグを使用すると、説明内のテキストをコードとしてマークする必要があることを指定できます。 複数行をコードとして示す場合は、[\<code>](code.md) を使用します。  
   
- コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
+ コンパイル時に [-doc](../../reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- この例では、summary セクションの `<c>` タグを使用して、`Counter` がコードであることを示します。  
+ この例では、summary セクションで `<c>` タグを使用して、`Counter` がコードであることを示します。  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)
+- [XML のコメント用タグ](index.md)

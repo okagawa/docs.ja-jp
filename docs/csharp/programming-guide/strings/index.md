@@ -1,17 +1,16 @@
 ---
 title: 文字列 - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 06/27/2019
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: ad8d7075e609a1b03ec403b91126bbce7084923f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7bf5cba51a2e72d3a648f795f018220a452e51f5
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423157"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226596"
 ---
 # <a name="strings-c-programming-guide"></a>文字列 (C# プログラミング ガイド)
 文字列は、値がテキストの <xref:System.String> 型のオブジェクトです。 内部では、テキストは <xref:System.Char> オブジェクトの順次読み取り専用コレクションとして格納されます。 C# の文字列の末尾には null 終端文字はありません。したがって、C# の文字列には任意の数の null 文字 ('\0') を埋め込むことができます。 文字列の <xref:System.String.Length%2A> プロパティは、Unicode 文字の数ではなく、文字列に含まれている `Char` オブジェクトの数を表します。 文字列内の個別の Unicode コード ポイントにアクセスするには、<xref:System.Globalization.StringInfo> オブジェクトを使用します。  
@@ -37,7 +36,7 @@ ms.locfileid: "73423157"
   
  [!code-csharp[csProgGuideStrings#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#25)]  
   
- 元の文字列での検索操作や置換操作などの変更に基づく新しい文字列を作成する方法の詳細については、「[方法: 文字列の内容を変更する](../../how-to/modify-string-contents.md)」を参照してください。  
+ 元の文字列での検索操作や置換操作などの変更に基づく新しい文字列を作成する方法の詳細については、[文字列の内容を変更する方法](../../how-to/modify-string-contents.md)に関する記事をご覧ください。  
   
 ## <a name="regular-and-verbatim-string-literals"></a>標準リテラル文字列と逐語的リテラル文字列  
  次の例に示すように、C# で提供されるエスケープ文字を埋め込む必要がある場合は、標準リテラル文字列を使用します。  
@@ -91,9 +90,9 @@ C# 6.0 以降で使用できる ["*補間文字列*"](../../language-reference/t
 .NET 型の書式設定について詳しくは、「[.NET での型の書式設定](../../../standard/base-types/formatting-types.md)」をご覧ください。
   
 ## <a name="substrings"></a>部分文字列  
- 部分文字列は、1 つの文字列に含まれる一連の文字です。 元の文字列の一部から新しい文字列を作成するには、<xref:System.String.Substring%2A> メソッドを使用します。 <xref:System.String.IndexOf%2A> メソッドを使用して、1 つまたは複数の部分文字列を検索できます。 指定されたすべての部分文字列を新しい文字列に置換するには、<xref:System.String.Replace%2A> メソッドを使用します。 <xref:System.String.Substring%2A> メソッドと同様に、<xref:System.String.Replace%2A> は実際に新しい文字列を返し、元の文字列は変更しません。 詳細については、「[方法: 文字列を検索する](../../how-to/search-strings.md)」(方法: 文字列を検索する) および「[方法: 文字列の内容を変更する](../../how-to/modify-string-contents.md)」を参照してください。  
+ 部分文字列は、1 つの文字列に含まれる一連の文字です。 元の文字列の一部から新しい文字列を作成するには、<xref:System.String.Substring%2A> メソッドを使用します。 <xref:System.String.IndexOf%2A> メソッドを使用して、1 つまたは複数の部分文字列を検索できます。 指定されたすべての部分文字列を新しい文字列に置換するには、<xref:System.String.Replace%2A> メソッドを使用します。 <xref:System.String.Substring%2A> メソッドと同様に、<xref:System.String.Replace%2A> は実際に新しい文字列を返し、元の文字列は変更しません。 詳細については、「[文字列を検索する方法](../../how-to/search-strings.md)」と[文字列の内容を変更する方法](../../how-to/modify-string-contents.md)に関する記事をご覧ください。
   
- [!code-csharp[csProgGuideStrings#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#9)]  
+ [!code-csharp[csProgGuideStrings#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#7)]  
   
 ## <a name="accessing-individual-characters"></a>各文字へのアクセス  
  次の例に示すように、配列表記とインデックス値を使用すると、それぞれの文字への読み取り専用アクセスが可能になります。  
@@ -125,18 +124,18 @@ string s = String.Empty;
  [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>文字列、拡張メソッド、LINQ  
- <xref:System.String> 型は、<xref:System.Collections.Generic.IEnumerable%601> を実装するので、文字列には <xref:System.Linq.Enumerable> クラスで定義した拡張メソッドを使用できます。 見やすさを考慮して、これらのメソッドは <xref:System.String> 型の IntelliSense からは除外されていますが、使用できます。 文字列で [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ式を使用することもできます。 詳細については、「[LINQ と文字列](../concepts/linq/linq-and-strings.md)」を参照してください。  
+ <xref:System.String> 型は、<xref:System.Collections.Generic.IEnumerable%601> を実装するので、文字列には <xref:System.Linq.Enumerable> クラスで定義した拡張メソッドを使用できます。 見やすさを考慮して、これらのメソッドは <xref:System.String> 型の IntelliSense からは除外されていますが、使用できます。 文字列で LINQ クエリ式を使用することもできます。 詳細については、「[LINQ と文字列](../concepts/linq/linq-and-strings.md)」を参照してください。  
   
 ## <a name="related-topics"></a>関連トピック  
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[方法: 文字列の内容を変更する](../../how-to/modify-string-contents.md)|文字列の変換および文字列の内容を変更する手法を示します。|  
-|[方法: 文字列を比較する](../../how-to/compare-strings.md)|文字列の序数とカルチャ固有の比較を実行する方法を示します。|  
-|[方法: 複数の文字列を連結する](../../how-to/concatenate-multiple-strings.md)|複数の文字列を 1 つに結合するさまざまな方法を示します。|
-|[方法: String.Split を使用して文字列を解析する](../../how-to/parse-strings-using-split.md)|`String.Split` メソッドを使用して文字列を解析するコード例を紹介します。|  
-|[方法: 文字列を検索する](../../how-to/search-strings.md)|特定のテキストまたは文字列のパターンの検索を使用する方法について説明します。|  
-|[方法: 文字列が数値を表しているかどうかを確認する](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|文字列を安全に解析して、有効な数値があるかどうかを確認する方法を示します。|  
+|[文字列の内容を変更する方法](../../how-to/modify-string-contents.md)|文字列の変換および文字列の内容を変更する手法を示します。|  
+|[文字列を比較する方法](../../how-to/compare-strings.md)|文字列の序数とカルチャ固有の比較を実行する方法を示します。|  
+|[複数の文字列を連結する方法](../../how-to/concatenate-multiple-strings.md)|複数の文字列を 1 つに結合するさまざまな方法を示します。|
+|[String.Split を使用して文字列を解析する方法](../../how-to/parse-strings-using-split.md)|`String.Split` メソッドを使用して文字列を解析するコード例を紹介します。|  
+|[文字列を検索する方法](../../how-to/search-strings.md)|特定のテキストまたは文字列のパターンの検索を使用する方法について説明します。|  
+|[文字列が数値を表しているかどうかを確認する方法](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|文字列を安全に解析して、有効な数値があるかどうかを確認する方法を示します。|  
 |[文字列補間](../../language-reference/tokens/interpolated.md)|書式指定文字列に便利な構文を提供する文字列補間機能について説明します。|
 |[基本的な文字列操作](../../../standard/base-types/basic-string-operations.md)|<xref:System.String?displayProperty=nameWithType> メソッドおよび <xref:System.Text.StringBuilder?displayProperty=nameWithType> メソッドを使用し文字列の基本操作を実行する、トピックへのリンクがあります。|  
 |[文字列の解析](../../../standard/base-types/parsing-strings.md)|.NET の基本データ型の文字列形式を対応する型のインスタンスに変換する方法について説明します。|  

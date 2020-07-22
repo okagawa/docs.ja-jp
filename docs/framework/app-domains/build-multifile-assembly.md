@@ -1,5 +1,6 @@
 ---
-title: '方法: マルチファイルアセンブリをビルドする'
+title: '方法: マルチファイル アセンブリをビルドする'
+description: プロシージャの各手順を示すサンプル コードを使用して、.NET のマルチファイル アセンブリをビルド (作成) する方法について説明します。
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -17,14 +18,14 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
-ms.openlocfilehash: 150c0f63d52590ea9cf80a3e991375f10ce1a124
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.openlocfilehash: a4c298284950ba2989bb73e6d3383b3c4024e6e7
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119932"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104949"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>方法: マルチファイルアセンブリをビルドする
+# <a name="how-to-build-a-multifile-assembly"></a>方法: マルチファイル アセンブリをビルドする
 
 この記事では、マルチファイル アセンブリを作成する方法を説明し、プロシージャの各手順を示すコードを提供します。
 
@@ -72,8 +73,6 @@ ms.locfileid: "73119932"
 
    ```vb
    ' Assembly building example in the .NET Framework.
-   Imports System
-
    Namespace myStringer
        Public Class Stringer
            Public Sub StringerMethod()
@@ -144,7 +143,6 @@ ms.locfileid: "73119932"
    ```
 
    ```vb
-   Imports System
    Imports myStringer
 
    Class MainClientApp
@@ -212,7 +210,7 @@ ms.locfileid: "73119932"
 
     コマンド プロンプトに次のコマンドを入力します。
 
-    **al** \<*module name*> \<*module name*> … **/main:** \<*method name*>  **/out:** \<*file name*>  **/target:** \<*assembly file type*>
+    **al** \<*module name*> \<*module name*> … **/main:** \<*method name*> **/out:** \<*file name*> **/target:** \<*assembly file type*>
 
     このコマンドで、*module name* 引数はアセンブリに含める各モジュールの名前を指定します。 **/main:** オプションは、アセンブリのエントリ ポイントであるメソッド名を指定します。 **/out:** オプションは、アセンブリ メタデータを格納する出力ファイルの名前を指定します。 **/target:** オプションは、アセンブリがコンソール アプリケーション実行可能 ( *.exe*) ファイル、Windows 実行可能 ( *.win*) ファイル、またはライブラリ ( *.lib*) ファイルであることを指定します。
 

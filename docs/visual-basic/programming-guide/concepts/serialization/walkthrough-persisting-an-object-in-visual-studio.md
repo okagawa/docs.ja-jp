@@ -1,19 +1,19 @@
 ---
-title: Visual Studio でのオブジェクトの永続化 (Visual Basic)
+title: オブジェクトの永続化 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 6f25c2a6f06b56dcbb5ba7e63165d06ff77d9ca8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: MT
+ms.openlocfilehash: e4eaf87c99ea1577d7f3ca40e628c00cc2700511
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937363"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413130"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>チュートリアル: Visual Studio でのオブジェクトの永続化 (Visual Basic)
 オブジェクトのプロパティはデザイン時に既定値に設定できますが、そのオブジェクトが破棄されると、実行時に入力した値はすべて失われます。 シリアル化によってインスタンス間でオブジェクトのデータを永続化すると、値を保存しておき、次にそのオブジェクトをインスタンス化するときに、その値を取得することができます。  
   
 > [!NOTE]
-> Visual Basic では、`My.Settings` オブジェクトを使用して、名前や数値などの単純なデータを保存できます。 詳細については、「[My.Settings オブジェクト](../../../../visual-basic/language-reference/objects/my-settings-object.md)」を参照してください。  
+> Visual Basic では、`My.Settings` オブジェクトを使用して、名前や数値などの単純なデータを保存できます。 詳細については、「[My.Settings オブジェクト](../../../language-reference/objects/my-settings-object.md)」を参照してください。  
   
  このチュートリアルでは、簡単な `Loan` オブジェクトを作成し、そのデータをファイルに永続化します。 その後、オブジェクトを再作成するときに、そのファイルからデータを取得します。  
   
@@ -217,5 +217,5 @@ ms.locfileid: "69937363"
   
 ## <a name="see-also"></a>関連項目
 
-- [シリアル化 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
-- [Visual Basic プログラミング ガイド](../../../../visual-basic/programming-guide/index.md)
+- [シリアル化 (Visual Basic)](index.md)
+- [Visual Basic プログラミング ガイド](../../index.md)

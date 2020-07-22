@@ -1,19 +1,19 @@
 ---
-title: Func および Action 汎用デリゲートでの分散の使用 (Visual Basic)
+title: Func および Action 汎用デリゲートでの分散の使用
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-ms.openlocfilehash: a85d6ae2fa32547958e557bbe45b9405e9b660ef
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: MT
+ms.openlocfilehash: f824d2422d67f1395d21a0863ca8c95d9f108989
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524245"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375759"
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Func および Action 汎用デリゲートでの分散の使用 (Visual Basic)
+# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Func および Action 汎用デリゲートでの変性の使用 (Visual Basic)
 
 以下の例では、`Func` 汎用デリゲートと `Action` 汎用デリゲートの共変性と反変性を使用して、メソッドの再利用を可能にし、コードの柔軟性を高める方法を示します。
 
-共変性と反変性の詳細については、「[デリゲートの分散 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)」を参照してください。
+共変性と反変性の詳細については、「[デリゲートの変性 (Visual Basic)](variance-in-delegates.md)」を参照してください。
 
 ## <a name="using-delegates-with-covariant-type-parameters"></a>デリゲートと共変の型パラメーターの使用
 
@@ -94,5 +94,5 @@ End Class
 
 ## <a name="see-also"></a>関連項目
 
-- [共変性と反変性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
+- [共変性と反変性 (Visual Basic)](index.md)
 - [ジェネリック](../../../../standard/generics/index.md)

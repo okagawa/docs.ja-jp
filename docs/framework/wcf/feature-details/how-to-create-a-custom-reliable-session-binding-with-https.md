@@ -2,20 +2,20 @@
 title: '方法: カスタムの信頼できるセッションによる HTTPS を使用したバインディングを作成する'
 ms.date: 03/30/2017
 ms.assetid: fa772232-da1f-4c66-8c94-e36c0584b549
-ms.openlocfilehash: 7f22eeaae39b4d9a83c77c7f3e9db1d7d3f04e8e
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 70f8f4f33626ab0d1705e03750bfd9baa324e60a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895202"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598997"
 ---
 # <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>方法: カスタムの信頼できるセッションによる HTTPS を使用したバインディングを作成する
 
-ここでは、信頼できるセッションを使用した SSL (Secure Sockets Layer) トランスポート セキュリティの使用方法について説明します。 HTTPS 上で信頼できるセッションを使用するには、信頼できるセッションと HTTPS トランスポートを使用するカスタム バインドを作成する必要があります。 信頼できるセッションは、コードを使用するか、構成ファイルで宣言によって、強制的に有効にします。 この手順では、クライアントとサービスの構成ファイルを使用して、信頼できるセッションと[ **\<httpsTransport >** ](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md)要素を有効にします。
+ここでは、信頼できるセッションを使用した SSL (Secure Sockets Layer) トランスポート セキュリティの使用方法について説明します。 HTTPS 上で信頼できるセッションを使用するには、信頼できるセッションと HTTPS トランスポートを使用するカスタム バインドを作成する必要があります。 信頼できるセッションは、コードを使用するか、構成ファイルで宣言によって、強制的に有効にします。 この手順では、クライアントとサービスの構成ファイルを使用して、信頼できるセッションと要素を有効にし [**\<httpsTransport>**](../../configure-apps/file-schema/wcf/httpstransport.md) ます。
 
-この手順の重要な部分は、  **\<エンドポイント >** `bindingConfiguration`構成要素に、という名前`reliableSessionOverHttps`のカスタムバインディング構成を参照する属性が含まれていることです。 [ **\<Binding >** ](../../../../docs/framework/misc/binding.md) configuration 要素は、この名前を参照して、  **\<reliableSession >** と **\<httpsTransport を含めることで、信頼できるセッションと HTTPS トランスポートを使用することを指定し >** 要素。
+この手順の重要な部分は、 **\<endpoint>** 構成要素に `bindingConfiguration` という名前のカスタムバインディング構成を参照する属性が含まれていることです `reliableSessionOverHttps` 。 [**\<binding>**](../../configure-apps/file-schema/wcf/bindings.md)構成要素は、この名前を参照して、信頼できるセッションと HTTPS トランスポートを使用して **\<reliableSession>** 、要素と要素を含めることを指定し **\<httpsTransport>** ます。
 
-この例のソースコピーについては、「HTTPS を使用した[カスタムバインディングの信頼できるセッション](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md)」を参照してください。
+この例のソースコピーについては、「HTTPS を使用した[カスタムバインディングの信頼できるセッション](../samples/custom-binding-reliable-session-over-https.md)」を参照してください。
 
 ### <a name="configure-the-service-with-a-custombinding-to-use-a-reliable-session-with-https"></a>HTTPS で信頼できるセッションを使用するための CustomBinding でサービスを構成する
 
@@ -27,7 +27,7 @@ ms.locfileid: "70895202"
 
    [!code-csharp[c_HowTo_CreateReliableSessionHTTPS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/service.cs#1122)]
 
-1. *Web.config ファイルを*作成して、 `CalculatorService`信頼できるセッションと HTTPS トランスポートを使用すると`reliableSessionOverHttps`いう名前のカスタムバインドを持つのエンドポイントを構成します。
+1. *Web.config ファイルを*作成して、 `CalculatorService` `reliableSessionOverHttps` 信頼できるセッションと HTTPS トランスポートを使用するという名前のカスタムバインドを持つのエンドポイントを構成します。
 
    [!code-xml[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]
 
@@ -39,13 +39,13 @@ ms.locfileid: "70895202"
 
 ### <a name="configure-the-client-with-a-custombinding-to-use-a-reliable-session-with-https"></a>HTTPS で信頼できるセッションを使用するようにクライアントを構成する (CustomBinding)
 
-1. コマンドラインから[ServiceModel メタデータユーティリティツール (*svcutil.exe*)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)を使用して、サービスメタデータからコードを生成します。
+1. コマンドラインから[ServiceModel メタデータユーティリティツール (*svcutil.exe*)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を使用して、サービスメタデータからコードを生成します。
 
    ```console
    Svcutil.exe <Metadata Exchange (MEX) address or HTTP GET address>
    ```
 
-1. 生成されるクライアントには、 `ICalculator`クライアント実装が満たす必要のあるサービスコントラクトを定義するインターフェイスが含まれています。
+1. 生成されるクライアントには、 `ICalculator` クライアント実装が満たす必要のあるサービスコントラクトを定義するインターフェイスが含まれています。
 
    [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1221)]
 
@@ -53,7 +53,7 @@ ms.locfileid: "70895202"
 
    [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1222)]
 
-1. HTTPS トランスポートと信頼できる`reliableSessionOverHttps`セッションを使用するように、という名前のカスタムバインディングを構成します。
+1. `reliableSessionOverHttps`HTTPS トランスポートと信頼できるセッションを使用するように、という名前のカスタムバインディングを構成します。
 
    [!code-xml[C_HowTo_CreateReliableSessionHTTPS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/app.config#2211)]
 
@@ -65,8 +65,8 @@ ms.locfileid: "70895202"
 
 ## <a name="net-framework-security"></a>.NET Framework のセキュリティ
 
-このサンプルで使用される証明書は、 *Makecert*で作成されたテスト証明書であるため、ブラウザーからなどの HTTPS アドレス`https://localhost/servicemodelsamples/service.svc`にアクセスしようとすると、セキュリティの警告が表示されます。
+このサンプルで使用される証明書は、 *Makecert*で作成されたテスト証明書であるため、ブラウザーからなどの HTTPS アドレスにアクセスしようとすると、セキュリティの警告が表示されます `https://localhost/servicemodelsamples/service.svc` 。
 
 ## <a name="see-also"></a>関連項目
 
-- [信頼できるセッション](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
+- [信頼できるセッション](reliable-sessions.md)

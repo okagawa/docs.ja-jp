@@ -1,19 +1,19 @@
 ---
-title: '方法: Visual Basic でバイナリ ファイルに書き込む'
+title: '方法 : バイナリ ファイルに書き込む'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], binary access
 - WriteAllBytes method [Visual Basic]
 - binary files [Visual Basic], writing in Visual Basic
 ms.assetid: 59fae125-de5b-4c96-883c-209f4a55112c
-ms.openlocfilehash: ab42fa50aaf39397ac51db8a4cc3a3b00f6ce878
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b36da82060b930101cb54dd852d050ac0155bd10
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039417"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411552"
 ---
-# <a name="how-to-write-to-binary-files-in-visual-basic"></a>方法: Visual Basic でバイナリ ファイルに書き込む
+# <a name="how-to-write-to-binary-files-in-visual-basic"></a>方法 : Visual Basic でバイナリ ファイルに書き込む
 
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> メソッドは、バイナリ ファイルにデータを書き込みます。 `append` パラメーターが `True` の場合、データはファイルに追加されます。それ以外の場合は、ファイル内のデータが上書きされます。
 
@@ -43,7 +43,7 @@ ms.locfileid: "71039417"
 
 - ユーザーがパスを参照するのに必要なアクセス許可がない (<xref:System.Security.SecurityException>)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
-- [方法: ファイルにテキストを書き込む](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)
+- [方法: ファイルにテキストを書き込む](how-to-write-text-to-files.md)

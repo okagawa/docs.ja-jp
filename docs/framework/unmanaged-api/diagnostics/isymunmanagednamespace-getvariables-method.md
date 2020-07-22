@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea7c1617-f3ce-4220-8288-f2b50eaf0f0f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 813f57377c1885b09190ada3c73f4391a3f2d931
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 091f497024b48589953456e1ea6daf6635738240
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895051"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615086"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>ISymUnmanagedNamespace::GetVariables メソッド
 この名前空間内のグローバルスコープで定義されているすべての変数を返します。  
@@ -39,20 +37,20 @@ HRESULT GetVariables(
   
 ## <a name="parameters"></a>パラメーター  
  `cVars`  
- から配列の`pVars`サイズを示す。 `ULONG32`  
+ から`ULONG32`配列のサイズを示す `pVars` 。  
   
  `pcVars`  
- 入出力名前空間を格納`ULONG32`するために必要なバッファーのサイズを受け取るへのポインター。  
+ 入出力`ULONG32`名前空間を格納するために必要なバッファーのサイズを受け取るへのポインター。  
   
  `pVars`  
  入出力名前空間を格納しているバッファーへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK を返します。それ以外の場合は E_FAIL またはその他のエラーコードを返します。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedNamespace インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+- [ISymUnmanagedNamespace インターフェイス](isymunmanagednamespace-interface.md)

@@ -1,13 +1,13 @@
 ---
-title: '方法: エンコードされたドキュメントを読み書きする (Visual Basic)'
+title: '方法: エンコードされたドキュメントを読み書きする'
 ms.date: 07/20/2015
 ms.assetid: 159d868f-5ac8-40f2-95ca-07dd925f35c6
-ms.openlocfilehash: 02311a572afac427329b051251639a10d2e7f5f8
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
-ms.translationtype: MT
+ms.openlocfilehash: f66737429950e04f447dfbd58cf47b6434a22976
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582814"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397909"
 ---
 # <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>方法: エンコードされたドキュメントを読み書きする (Visual Basic)
 
@@ -81,4 +81,4 @@ Encoding of loaded document is:utf-16
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>
-- [高度な LINQ to XML プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [高度な LINQ to XML プログラミング (Visual Basic)](advanced-linq-to-xml-programming.md)

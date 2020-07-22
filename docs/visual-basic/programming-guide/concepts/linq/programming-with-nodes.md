@@ -1,15 +1,15 @@
 ---
-title: ノードを使用したプログラミング (Visual Basic)
+title: ノードでのプログラミング
 ms.date: 07/20/2015
 ms.assetid: d8422a9b-dd37-44a3-8aac-2237ed9561e0
-ms.openlocfilehash: 2a331d77f1c54f6428d36b6ccb403dcc01094c98
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
-ms.translationtype: MT
+ms.openlocfilehash: 4cae85d99e7e28506faad8ca39347cf8f271718e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834925"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396377"
 ---
-# <a name="programming-with-nodes-visual-basic"></a>ノードを使用したプログラミング (Visual Basic)
+# <a name="programming-with-nodes-visual-basic"></a>ノードでのプログラミング (Visual Basic)
 XML エディター、変換システム、レポート作成プログラムなどのプログラムを作成する [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の開発者は、要素や属性よりも細かい粒度レベルで動作するプログラムを作成しなければならないことがよくあります。 また場合によっては、ノード レベルで、テキスト ノード、処理命令、およびコメントを操作する必要があります。 このトピックでは、ノード レベルでのプログラミングについて詳しく説明します。  
   
 ## <a name="node-details"></a>ノードの詳細  
@@ -104,7 +104,7 @@ Console.WriteLine(child2)
  <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A> プロパティによって、属性が名前空間宣言であるかどうかが示されます。  
   
 ```vb  
-Dim root As XElement = _   
+Dim root As XElement = _
 <Root  
     xmlns='http://www.adventure-works.com'  
     xmlns:fc='www.fourthcoffee.com'  
@@ -167,10 +167,10 @@ Console.WriteLine(doc.Nodes().Count())
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
-<Root />  
-1  
+<Root />
+1
 ```  
   
 ## <a name="see-also"></a>関連項目
 
-- [高度な LINQ to XML プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [高度な LINQ to XML プログラミング (Visual Basic)](advanced-linq-to-xml-programming.md)
