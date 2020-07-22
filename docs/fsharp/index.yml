@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: F#書
+title: F#ドキュメント
 summary: .NET でF#プログラミング言語を使用してアプリケーションを作成する方法について説明します。
 metadata:
   title: F#ドキュメント-入門、チュートリアル、リファレンス。
-  description: プログラミングF#について学習するF#-開発者向けF# 、経験豊富な開発者向け
+  description: F#について学習する - F#が初めての開発者向け、そして経験豊富な F# / .NET開発者向け
   ms.topic: landing-page
   author: cartermp
   ms.author: phcart
@@ -23,15 +23,15 @@ landingContent:
       url: what-is-fsharp.md
     - text: F# をインストールする
       url: get-started/install-fsharp.md
-    - text: Visual Studio でF#の作業の開始
+    - text: Visual Studio における F#
       url: get-started/get-started-visual-studio.md
-    - text: Visual Studio Code でのF#使用を開始する
+    - text: Visual Studio Code における F#
       url: get-started/get-started-vscode.md
   - linkListType: download
     links:
     - text: .NET Core SDK をダウンロードする
       url: https://dotnet.microsoft.com/download
-- title: F#技術
+- title: F#の基礎
   linkLists:
   - linkListType: overview
     links:
@@ -51,17 +51,17 @@ landingContent:
       url: style-guide/conventions.md
   - linkListType: tutorial
     links:
-    - text: での非同期プログラミングF#
+    - text: F# での非同期プログラミング
       url: tutorials/asynchronous-and-concurrent-programming/async.md
-- title: の新機能F#
+- title: F# の新機能
   linkLists:
   - linkListType: whats-new
     links:
-    - text: 4.7 のF#新機能
+    - text: F# 4.7 の新機能
       url: whats-new/fsharp-47.md
-    - text: 4.6 のF#新機能
+    - text: F# 4.6 の新機能
       url: whats-new/fsharp-46.md
-    - text: 4.5 のF#新機能
+    - text: F# 4.5 の新機能
       url: whats-new/fsharp-45.md
 - title: F#言語リファレンス
   linkLists:
@@ -75,5 +75,5 @@ landingContent:
       url: language-reference/symbol-and-operator-reference/index.md
     - text: 関数
       url: language-reference/functions/index.md
-    - text: F#な
+    - text: F#の型
       url: language-reference/fsharp-types.md
