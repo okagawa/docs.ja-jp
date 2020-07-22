@@ -1,6 +1,6 @@
 ---
-title: Visual Studio for Mac でのF#使用を開始する
-description: を Visual Studio for Mac と共F#に使用する方法について説明します。
+title: Visual Studio for Mac でF#の使用を開始する
+description: F#を Visual Studio for Macで使用する方法について説明します。
 ms.date: 07/03/2018
 ms.openlocfilehash: cd45ab9c59cef76e4bf85a93f39d8e2ee063d200
 ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
@@ -9,19 +9,19 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/27/2019
 ms.locfileid: "74552369"
 ---
-# <a name="get-started-with-f-in-visual-studio-for-mac"></a>Visual Studio for Mac でのF#使用を開始する
+# <a name="get-started-with-f-in-visual-studio-for-mac"></a>Visual Studio for MacでF#の使用を開始する
 
-F#また、ビジュアルF#ツールは Visual Studio for Mac IDE でもサポートされています。 [Visual Studio for Mac がインストールされ](install-fsharp.md#install-f-with-visual-studio-for-mac)ていることを確認します。
+F# や Visual F# ツールは Visual Studio for Mac IDEにおいてもサポートされます。 [Visual Studio for Mac がインストールされ](install-fsharp.md#install-f-with-visual-studio-for-mac)ていることを確認します。
 
 ## <a name="creating-a-console-application"></a>コンソールアプリケーションの作成
 
-Visual Studio for Mac の最も基本的なプロジェクトの1つは、コンソールアプリケーションです。  これを行う方法を次に示します。  Visual Studio for Mac が開いたら、次のようになります。
+Visual Studio for Mac の最も基本的なプロジェクトの1つは、コンソールアプリケーションです。これを行う方法を次に示します。 Visual Studio for Mac を開いて、以下を実行します。
 
-1. **[ファイル]** メニューの **[新しいソリューション]** をポイントします。
+1. **[ファイル]** メニューの **[新しいソリューション]** をポイントする。
 
-2. [新しいプロジェクト] ダイアログには、コンソールアプリケーションに2つの異なるテンプレートがあります。  .NET Framework をターゲットとする > .NET の下に1つあります。  その他のテンプレートは .net core > アプリの下にあり、.NET Core を対象としています。  どちらのテンプレートも、この記事の目的で機能します。
+2. [新しいプロジェクト] ダイアログには、コンソールアプリケーション用の2つの異なるテンプレートがあります。.NET Framework をターゲットとするテンプレートは > .NET の下にあります。もう一方のテンプレートは .net core > アプリの下にあり、.NET Core を対象としています。この記事ではいずれのテンプレートを選んでも問題ありません。
 
-3. [コンソールアプリ] でC# 、 F#必要に応じてをに変更します。  **[次へ]** ボタンをクリックして先に進みます。  
+3. [コンソール アプリケーション] で、必要に応じて C# を F# に変更します。  **[次へ]** ボタンをクリックして先に進みます。  
 
 4. プロジェクトに名前を付け、アプリに必要なオプションを選択します。  プレビューウィンドウには、選択したオプションに基づいて作成されるディレクトリ構造が表示されます。  
 
@@ -115,7 +115,7 @@ val it : bool = true
 
 ## <a name="see-also"></a>参照
 
-- [F#ルビ](../index.yml)
+- [F#ガイド](../index.yml)
 - [F# のツアー](../tour.md)
 - [F#言語リファレンス](../language-reference/index.md)
 - [型の推論](../language-reference/type-inference.md)
