@@ -7,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
-ms.openlocfilehash: e90ad1905123a3c5426ada15e21179abe5c078ab
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: a772167966c4ec858197cc2032f4ae3d4e86070c
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874413"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163416"
 ---
-# <a name="error-creating-assembly-manifest-error-message"></a>アセンブリ マニフェストを作成中にエラーが発生しました : \<error message>
+# <a name="bc30140-error-creating-assembly-manifest-error-message"></a>BC30140:アセンブリ マニフェストを作成中にエラーが発生しました : \<error message>
 
-Visual Basic コンパイラはアセンブリ リンカー (Al.exe、Alink とも呼ばれる) を呼び出し、マニフェストを伴うアセンブリを生成します。 リンカーが、アセンブリの生成前の段階でのエラーを報告しています。  
-  
- 指定したキー ファイルまたはキー コンテナーに原因がある場合があります。 アセンブリに完全署名するには、公開キーと秘密キーに関する情報を含む有効なキー ファイルを提供する必要があります。 アセンブリに遅延署名するには、 **[遅延署名のみ]** チェック ボックスをオンにし、公開キー情報を含む有効なキー ファイルを提供する必要があります。 アセンブリに遅延署名する場合、秘密キーは必要ありません。 詳細については、[厳密な名前でアセンブリに署名する](../../../standard/assembly/sign-strong-name.md)」を参照してください。  
-  
- **エラー ID:** BC30140  
-  
-## <a name="to-correct-this-error"></a>このエラーを解決するには  
-  
-1. 引用符で囲まれたエラー メッセージを調べ、トピック「[Al.exe](../../../framework/tools/al-exe-assembly-linker.md)」で エラー AL1019 の詳細な説明とアドバイスを参照してください  
-  
-2. エラーが続く場合は、状況に関する情報を収集し、マイクロソフト プロダクト サポート サービスに通知してください。  
-  
+Visual Basic コンパイラはアセンブリ リンカー (Al.exe、Alink とも呼ばれる) を呼び出し、マニフェストを伴うアセンブリを生成します。 リンカーが、アセンブリの生成前の段階でのエラーを報告しています。
+
+ 指定したキー ファイルまたはキー コンテナーに原因がある場合があります。 アセンブリに完全署名するには、公開キーと秘密キーに関する情報を含む有効なキー ファイルを提供する必要があります。 アセンブリに遅延署名するには、 **[遅延署名のみ]** チェック ボックスをオンにし、公開キー情報を含む有効なキー ファイルを提供する必要があります。 アセンブリに遅延署名する場合、秘密キーは必要ありません。 詳細については、[厳密な名前でアセンブリに署名する](../../../standard/assembly/sign-strong-name.md)」を参照してください。
+
+ **エラー ID:** BC30140
+
+## <a name="to-correct-this-error"></a>このエラーを解決するには
+
+1. 引用符で囲まれたエラー メッセージを調べ、トピック「[Al.exe](../../../framework/tools/al-exe-assembly-linker.md)」で エラー AL1019 の詳細な説明とアドバイスを参照してください
+
+2. エラーが続く場合は、状況に関する情報を収集し、マイクロソフト プロダクト サポート サービスに通知してください。
+
 ## <a name="see-also"></a>関連項目
 
 - [方法: 厳密な名前でアセンブリに署名する](../../../standard/assembly/sign-strong-name.md)

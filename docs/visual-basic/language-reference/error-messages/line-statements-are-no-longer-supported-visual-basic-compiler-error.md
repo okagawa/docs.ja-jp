@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30830
 ms.assetid: 4734bc1d-882e-4555-b498-1f1ec0399d16
-ms.openlocfilehash: 4ca1538dbde0d585b7b421d60cde4531c00e9145
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: f34095becf321c6cb4b316b6378a2da0107577ba
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873831"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162480"
 ---
-# <a name="line-statements-are-no-longer-supported-visual-basic-compiler-error"></a>'Line' ステートメントはサポートされていません (Visual Basic コンパイラ エラー)
+# <a name="bc30830-line-statements-are-no-longer-supported"></a>BC30830:'Line' ステートメントは現在サポートされていません
 
-Line ステートメントは現在サポートされていません。 ファイル I/O 機能は `Microsoft.VisualBasic.FileSystem.LineInput` として使用でき、グラフィックス機能は `System.Drawing.Graphics.DrawLine` として使用できます。  
-  
- **エラー ID:** BC30830  
-  
-## <a name="to-correct-this-error"></a>このエラーを解決するには  
-  
-1. ファイル アクセスを実行する場合は、`Microsoft.VisualBasic.FileSystem.LineInput` を使用します。  
-  
-2. グラフィックス処理を行っている場合は、 `System.Drawing.Graphics.Drawline`を使用します。  
-  
+Line ステートメントは現在サポートされていません。 ファイル I/O 機能は `Microsoft.VisualBasic.FileSystem.LineInput` として使用でき、グラフィックス機能は `System.Drawing.Graphics.DrawLine` として使用できます。
+
+ **エラー ID:** BC30830
+
+## <a name="to-correct-this-error"></a>このエラーを解決するには
+
+- ファイル アクセスを実行する場合は、`Microsoft.VisualBasic.FileSystem.LineInput` を使用します。
+
+- グラフィックス処理を行っている場合は、 `System.Drawing.Graphics.Drawline`を使用します。
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.IO>

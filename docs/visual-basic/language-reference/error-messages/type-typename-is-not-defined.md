@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC30002
 ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
-ms.openlocfilehash: 3c22e6a5199bd52cb9fae66a15a66ac9ce095e81
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 195e749e29494d438dbd052e8e308250f4cce1ca
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90872195"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161895"
 ---
-# <a name="type-typename-is-not-defined"></a>型 '\<typename>' が定義されていません。
+# <a name="bc30002-type-typename-is-not-defined"></a>BC30002:型 '\<typename>' が定義されていません。
 
-ステートメントで、定義されていない型の参照が行われました。 `Enum`、`Structure`、`Class`、`Interface` などの宣言ステートメントで型を定義できます。  
-  
- **エラー ID:** BC30002  
-  
-## <a name="to-correct-this-error"></a>このエラーを解決するには  
-  
-- 型定義とその参照の両方で同じスペルが使用されていることを確認します。  
-  
-- 参照から型定義にアクセスできることを確認してください。 たとえば、型が別のモジュールにあり、`Private` と宣言されている場合は、型定義を参照元のモジュールに移動するか、それを `Public` と宣言します。  
-  
-- 型の名前空間がプロジェクト内で再定義されていないことを確認します。 その場合は、`Global` キーワードを使用して、型名を完全修飾します。 たとえば、プロジェクトで `System` という名前の名前空間を定義している場合、`Global` キーワード: `Global.System.Object` で完全修飾していない限り、<xref:System.Object?displayProperty=nameWithType> 型にアクセスできません。  
-  
-- 型が定義されていても、それが定義されているオブジェクト ライブラリまたはタイプ ライブラリが Visual Basic に登録されていない場合は、 **[プロジェクト]** メニューの **[参照の追加]** クリックし、該当するオブジェクト ライブラリまたはタイプ ライブラリを選択します。  
-  
-- 型が、対象の .NET Framework プロファイルの一部であるアセンブリに含まれていることを確認してください。 詳細については、「[.NET Framework を対象とするエラーのトラブルシューティング](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)」を参照してください。  
-  
+ステートメントで、定義されていない型の参照が行われました。 `Enum`、`Structure`、`Class`、`Interface` などの宣言ステートメントで型を定義できます。
+
+ **エラー ID:** BC30002
+
+## <a name="to-correct-this-error"></a>このエラーを解決するには
+
+- 型定義とその参照の両方で同じスペルが使用されていることを確認します。
+
+- 参照から型定義にアクセスできることを確認してください。 たとえば、型が別のモジュールにあり、`Private` と宣言されている場合は、型定義を参照元のモジュールに移動するか、それを `Public` と宣言します。
+
+- 型の名前空間がプロジェクト内で再定義されていないことを確認します。 その場合は、`Global` キーワードを使用して、型名を完全修飾します。 たとえば、プロジェクトで `System` という名前の名前空間を定義している場合、`Global` キーワード: `Global.System.Object` で完全修飾していない限り、<xref:System.Object?displayProperty=nameWithType> 型にアクセスできません。
+
+- 型が定義されていても、それが定義されているオブジェクト ライブラリまたはタイプ ライブラリが Visual Basic に登録されていない場合は、 **[プロジェクト]** メニューの **[参照の追加]** クリックし、該当するオブジェクト ライブラリまたはタイプ ライブラリを選択します。
+
+- 型が、対象の .NET Framework プロファイルの一部であるアセンブリに含まれていることを確認してください。 詳細については、「[.NET Framework を対象とするエラーのトラブルシューティング](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)」を参照してください。
+
 ## <a name="see-also"></a>関連項目
 
 - [Visual Basic における名前空間](../../programming-guide/program-structure/namespaces.md)

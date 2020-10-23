@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30594
 ms.assetid: 5b9fceb4-ab11-41bb-ad3b-6f1a9da8ae7e
-ms.openlocfilehash: d519463e036de215143efad5be3745484ac17d82
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 02039b81251e59a951a0fe37ec2c9534b458b6a5
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874284"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161921"
 ---
-# <a name="events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods"></a>共有 WithEvents 変数のイベントを、非共有メソッドで処理できません。
+# <a name="bc30594-events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods"></a>BC30594:共有 WithEvents 変数のイベントを、非共有メソッドで処理できません。
 
-`Shared` 修飾子で宣言される変数は共有変数です。 共有変数は、格納場所を 1 つだけ識別します。 `WithEvents` 修飾子で宣言される変数は、変数が属する型によって、変数で起動するイベントのセットが処理されることをアサートします。 変数に値が代入されると、`WithEvents` 宣言によって作成されるプロパティは、既存のイベント ハンドラーをアンフックし、`Add` メソッドを使用して新しいイベント ハンドラーをフックします。  
-  
- **エラー ID:** BC30594  
-  
-## <a name="to-correct-this-error"></a>このエラーを解決するには  
-  
-- イベント ハンドラー `Shared` を宣言します。  
-  
+`Shared` 修飾子で宣言される変数は共有変数です。 共有変数は、格納場所を 1 つだけ識別します。 `WithEvents` 修飾子で宣言される変数は、変数が属する型によって、変数で起動するイベントのセットが処理されることをアサートします。 変数に値が代入されると、`WithEvents` 宣言によって作成されるプロパティは、既存のイベント ハンドラーをアンフックし、`Add` メソッドを使用して新しいイベント ハンドラーをフックします。
+
+ **エラー ID:** BC30594
+
+## <a name="to-correct-this-error"></a>このエラーを解決するには
+
+- イベント ハンドラー `Shared` を宣言します。
+
 ## <a name="see-also"></a>関連項目
 
 - [Shared](../modifiers/shared.md)

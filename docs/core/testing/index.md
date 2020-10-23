@@ -1,80 +1,87 @@
 ---
-title: .NET Core と .NET Standard の単体テスト
-description: この記事では、.NET Core と .NET Standard プロジェクト用の単体テストの概要を簡単に説明します。
-author: ardalis
-ms.author: wiwagn
-ms.date: 05/18/2020
-zone_pivot_groups: unit-testing-framework-set-one
-ms.openlocfilehash: e15f80b173389cdff86c6e62013e9c0f21171dd6
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+title: .NET でのテスト
+description: この記事では、.NET でのテストにおけるテストの概念、用語、ツールについて簡単に説明します。
+author: IEvangelist
+ms.author: dapine
+ms.date: 10/19/2020
+ms.openlocfilehash: 36e88cc059447a98931593e0535c70cbc92a2cf4
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703105"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223477"
 ---
-# <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core と .NET Standard の単体テスト
+# <a name="testing-in-net"></a>.NET でのテスト
 
-.NET core では、簡単に単体テストを作成できます。 この記事では、単体テストについて紹介し、その他の種類のテストとの違いを示します。 ページの下部にあるリンクされたリソースは、テスト プロジェクトをソリューションに追加する方法を示します。 テスト プロジェクトを設定した後は、コマンドラインまたは Visual Studio を使用して単体テストを実行することができます。
+この記事では、テストの概念と、コードの検証に使用できるさまざまな種類のテストについて説明します。 .NET アプリケーションのテストには、[.NET CLI](#net-cli) や[統合開発環境 (IDE)](#ide) など、さまざまなツールを使用できます。
 
-**ASP.NET Core** プロジェクトをテストしている場合は、「[ASP.NET Core の統合テスト](/aspnet/core/test/integration-tests#test-app-prerequisites)」を参照してください。
+## <a name="test-types"></a>テストの種類
 
-.NET Core 2.0 以降では [.NET Standard 2.0](../../standard/net-standard.md) がサポートされます。単体テストはそのライブラリを使用して説明します。
+アプリケーション コードが作成者の意図どおりに動作するように自動テストを行うのは、最良の方法です。 この記事では、単体テスト、統合テスト、およびロード テストについて説明します。
 
-C#、F#、Visual Basic 向けに組み込まれている .NET Core 2.0 以降の単体テスト プロジェクト テンプレートを個人プロジェクトの開始点として使用することができます。
+### <a name="unit-tests"></a>単体テスト
 
-## <a name="what-are-unit-tests"></a>単体テストとは
+"*単体テスト*" とは、"作業単位" とも呼ばれるソフトウェアの個々のコンポーネントまたはメソッドを動かすテストです。 単体テストでは、開発者の管理下でのみ、コードをテストする必要があります。 インフラストラクチャに対する懸念はテストしません。 インフラストラクチャに対する懸念とは、データベース、ファイル システム、ネットワーク リソースなどとのやりとりです。
 
-自動テストを備えることは、ソフトウェア アプリケーションを作成者の意図どおりに確実に動作させるための最良の方法です。 ソフトウェア アプリケーションには複数の種類のテストがあります。 統合テスト、Web テスト、ロード テストなどが含まれます。 **単体テスト**は、個々 のソフトウェア コンポーネントとメソッドをテストします。 単体テストでは、開発者のコントロール内のコードのみがテストされる必要があります。 インフラストラクチャの懸念事項をテストすべきではありません。 インフラストラクチャの懸念事項には、データベース、ファイル システム、ネットワーク リソースが含まれます。
+単体テストの作成の詳細については、[テスト ツール](#testing-tools)に関する説明を参照してください。
 
-テストを記述するためのベスト プラクティスもあります。 たとえば、[テスト駆動開発 (TDD)](https://deviq.com/test-driven-development/) では、チェックされるコードよりも前に単体テストが記述されます。 TDD は本を書く前にアウトラインを作成するのと似ています。 開発者が簡潔で読みやすく、効率的なコードを記述できるように支援します。
+### <a name="integration-tests"></a>統合テスト
 
-> [!NOTE]
-> ASP.NET チームは[この規則](https://github.com/dotnet/aspnetcore/wiki/Engineering-guidelines#unit-tests-and-functional-tests)に従って、開発者がテスト クラスとメソッドに適した名前を考えられるように支援します。
+"*統合テスト*" とは、2 つ以上のソフトウェア コンポーネントの連携機能、つまりそれらの "統合" を動かすという点で単体テストとは異なります。 単体テストでは個々のコンポーネントに着目するのに対し、これらのテストでは、テスト対象のシステムの広範な部分を動作させます。 多くの場合、統合テストにはインフラストラクチャに対する懸念も含まれます。
 
-単体テストを記述するときは、インフラストラクチャに対する依存関係を設けようとしないでください。 テストが低速で不安定になるため、これは統合テストで行います。 アプリケーションでこれらの依存関係を回避するには、[明示的な依存関係の原則](https://deviq.com/explicit-dependencies-principle/)に従い、[依存関係の挿入](/aspnet/core/fundamentals/dependency-injection)を使用します。 個別のプロジェクトの単体テストを統合テストと区別することもできます。 これにより、単体テスト プロジェクトとインフラストラクチャ パッケージの間に参照や依存関係がなくなります。
+### <a name="load-tests"></a>ロード テスト
 
-## <a name="next-steps"></a>次の手順
+"*ロード テスト*" では、アプリケーションを使用する同時ユーザー数や、やりとりに対するアプリの即時応答性など、システムが指定の負荷を処理できるかどうかを判断します。 Web アプリケーションのロード テストの詳細については、「[ASP.NET Core のロード テスト/ストレス テスト](/aspnet/core/test/load-tests)」を参照してください。
 
-.NET Core プロジェクトでの単体テストの詳細については、次を参照してください。
+## <a name="test-considerations"></a>テストに関する留意点
 
-次に対する .NET Core 単体テスト プロジェクトがサポートされます。
+テストの記述には、[ベスト プラクティス](unit-testing-best-practices.md)があります。 たとえば、[テスト駆動開発 (TDD)](https://deviq.com/test-driven-development) では、単体テストを記述してからチェック対象のコードを記述します。 TDD は、本を書く前にアウトラインを作成するのと似ています。 開発者が簡潔で読みやすく、効率的なコードを記述できるように支援します。
 
-- [C#](../../csharp/index.yml)
-- [F#](../../fsharp/index.yml)
-- [Visual Basic](../../visual-basic/index.yml)
+## <a name="testing-tools"></a>テスト ツール
 
-複数の単体テスト フレームワークから選択することもできます。
+.NET は、複数の言語を使用できる開発プラットフォームであり、[C#](../../csharp/index.yml)、[F#](../../fsharp/index.yml)、[Visual Basic](../../visual-basic/index.yml) 向けのさまざまな種類のテストを作成できます。 これら各言語に、いくつかのテスト フレームワークを選択できます。
 
-- [xUnit](https://xunit.net/)
-- [NUnit](https://nunit.org)
-- [MSTest](https://github.com/Microsoft/testfx-docs)
+### <a name="xunit"></a>xUnit
 
-次のチュートリアルでさらに詳しく学習できます。
+[xUnit](https://xunit.net) は、.NET 用の無料のオープン ソースのコミュニティ向け単体テスト ツールです。 xUnit.net は、NUnit v2 の最初の発明者によって記述された、.NET アプリを単体テストする最新のテクノロジです。 xUnit.net は、ReSharper、CodeRush、TestDriven.NET および [Xamarin](/apps/xamarin) と共に動作します。 これは、[.NET Foundation](https://dotnetfoundation.org) のプロジェクトであり、その行動規範の下で動作します。
 
-:::zone pivot="mstest"
+詳細については、次のリソースを参照してください。
 
-- [*MSTest* と *C#* を使用して .NET Core CLI で単体テストを作成する](unit-testing-with-mstest.md)。
-- [*MSTest* と *F#* を使用して .NET Core CLI で単体テストを作成する](unit-testing-fsharp-with-mstest.md)。
-- [*MSTest* と *Visual Basic* を使用して .NET Core CLI で単体テストを作成する](unit-testing-visual-basic-with-mstest.md)。
+- [C# を使用した単体テスト](unit-testing-with-dotnet-test.md)
+- [F# を使用した単体テスト](unit-testing-fsharp-with-dotnet-test.md)
+- [Visual Basic を使用した単体テスト](unit-testing-visual-basic-with-dotnet-test.md)
 
-:::zone-end
-:::zone pivot="xunit"
+### <a name="nunit"></a>NUnit
 
-- [*xUnit* と *C#* を使用して .NET Core CLI で単体テストを作成する](unit-testing-with-dotnet-test.md)。
-- [*xUnit* と *F#* を使用して .NET Core CLI で単体テストを作成する](unit-testing-fsharp-with-dotnet-test.md)。
-- [*xUnit* と *Visual Basic* を使用して .NET Core CLI で単体テストを作成する](unit-testing-visual-basic-with-dotnet-test.md)。
+[NUnit](https://nunit.org) は、.NET の全言語で使用できる単体テスト フレームワークです。 最初に JUnit から移植された現在の運用リリースは、さまざまな .NET プラットフォーム向けの多数の新機能とサポートで書き換えられています。 これは、[.NET Foundation](https://dotnetfoundation.org) のプロジェクトです。
 
-:::zone-end
-:::zone pivot="nunit"
+詳細については、次のリソースを参照してください。
 
-- [*NUnit* と *C#* を使用して .NET Core CLI で単体テストを作成する](unit-testing-with-nunit.md)。
-- [*NUnit* と *F#* を使用して .NET Core CLI](unit-testing-fsharp-with-nunit.md) で単体テストを作成する。
-- [*NUnit* と *Visual Basic* を使用して .NET Core CLI で単体テストを作成する](unit-testing-visual-basic-with-nunit.md)。
+- [C# を使用した単体テスト](unit-testing-with-nunit.md)
+- [F# を使用した単体テスト](unit-testing-fsharp-with-nunit.md)
+- [Visual Basic を使用した単体テスト](unit-testing-visual-basic-with-nunit.md)
 
-:::zone-end
+### <a name="mstest"></a>MSTest
 
-次の記事でさらに詳しく学習できます。
+[MSTest](https://github.com/Microsoft/testfx-docs) は、.NET の全言語で使用できる Microsoft のテスト フレームワークです。 これは拡張可能で、.NET CLI でも Visual Studio でも動作します。 詳細については、次のリソースを参照してください。
 
-- Visual Studio Enterprise は、.NET Core の優れたテスト ツールを提供します。 [Live Unit Testing](/visualstudio/test/live-unit-testing) または[コード カバレッジ](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage)をご確認ください。
-- 選択的単体テストの実行方法に関する詳細については、「[選択的単体テストの実行](selective-unit-tests.md)」、または [Visual Studio を使用したテストの組み込みと除外](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods)に関するトピックをご覧ください。
-- [.NET Core と Visual Studio で xUnit を使用する方法](https://xunit.github.io/docs/getting-started-dotnet-core.html)
+- [C# を使用した単体テスト](unit-testing-with-mstest.md)
+- [F# を使用した単体テスト](unit-testing-fsharp-with-mstest.md)
+- [Visual Basic を使用した単体テスト](unit-testing-visual-basic-with-mstest.md)
+
+### <a name="net-cli"></a>.NET CLI
+
+[.NET CLI](../tools/index.md) からソリューションの単体テストを実行するには、[dotnet test](../tools/dotnet-test.md) コマンドを使用します。 .NET CLI では、[統合開発環境 (IDE)](#ide) からユーザー インターフェイスで使用できる機能の大部分が公開されています。 .NET CLI はクロスプラットフォームであり、継続的インテグレーションおよび配信パイプラインの一部として使用できます。 .NET CLI は、一般的なタスクを自動化するスクリプト化されたプロセスで使用されます。
+
+### <a name="ide"></a>IDE
+
+Visual Studio、Visual Studio for Mac、Visual Studio Code のどれを使用していても、機能のテストには、グラフィカル ユーザー インターフェイスが用意されています。 IDE には CLI よりも、[Live Unit Testing](/visualstudio/test/live-unit-testing) など多くの機能があります。 詳細については、[Visual Studio でのテストの追加と除外](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods)に関する説明を参照してください。
+
+## <a name="see-also"></a>関連項目
+
+詳細については、以下の記事を参照してください。
+
+- [.NET での単体テストのベスト プラクティス](unit-testing-best-practices.md)
+- [ASP.NET Core での統合テスト](/aspnet/core/test/integration-tests#test-app-prerequisites)
+- [選択的単体テストの実行](selective-unit-tests.md)
+- [単体テストにコードカバレッジを使用する](unit-testing-code-coverage.md)

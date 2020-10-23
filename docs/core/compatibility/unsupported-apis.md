@@ -1,25 +1,25 @@
 ---
-title: .NET Core でサポートされていない API
+title: .NET Core と .NET 5 以降でサポートされていない API
 titleSuffix: ''
-description: .NET Core で常に例外をスローする .NET Framework の API について説明します。
-ms.date: 12/23/2019
-ms.openlocfilehash: 94f334d7e4b7daf407f489ba274172ced9eefa81
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+description: .Net Core と .NET 5.0 以降のバージョンで常に例外をスローする .NET API について学習します。
+ms.date: 10/13/2020
+ms.openlocfilehash: 0164ebff51de82d548a02f9fde754c1052a9c2b5
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414436"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92159340"
 ---
-# <a name="apis-that-always-throw-exceptions-on-net-core"></a>.NET Core で常に例外をスローする API
+# <a name="apis-that-always-throw-exceptions-on-net-core-and-net-5"></a>.NET Core と .NET 5 以降で常に例外をスローする API
 
-次の API は、すべてまたは一部のプラットフォームの .NET Core で <xref:System.PlatformNotSupportedException> を常にスローします。
+次の API を使用すると、プラットフォームのすべてまたはサブセットの .NET 5.0 以降 (.NET Core のすべてのバージョンを含む) で、<xref:System.PlatformNotSupportedException> が常にスローされます。
 
-この記事では、影響を受ける API メンバーを名前空間別に整理しています。
+この記事では、影響を受ける API を名前空間別に整理しています。
 
 > [!NOTE]
 >
-> - この記事は、作業中です。 .NET Core で例外をスローする API の完全な一覧ではありません。
-> - この記事には、.NET Core でスローされるバイナリ シリアル化の明示的なインターフェイス実装は含まれていません。 詳細については、[.NET Core でのバイナリ シリアル化](../../standard/serialization/binary-serialization.md#net-core)に関する記事を参照してください。
+> - この記事は、作業中です。 .NET 5 以降で例外をスローする API の完全な一覧ではありません。
+> - この記事には、.NET 5 以降でスローされるバイナリ シリアル化用の明示的なインターフェイス実装は含まれていません。 詳細については、[.NET Core でのバイナリ シリアル化](../../standard/serialization/binary-serialization.md#net-core)に関する記事を参照してください。
 
 ## <a name="system"></a>システム
 

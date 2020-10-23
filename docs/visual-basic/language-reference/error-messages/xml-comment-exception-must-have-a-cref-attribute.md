@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-ms.openlocfilehash: c498675ab6ae616fb63d3d76ef60bcac7e247145
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 18e7aa5f6905eaa9c509aa21fe6f5bfcd54d46f0
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406509"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163299"
 ---
-# <a name="xml-comment-exception-must-have-a-cref-attribute"></a>XML コメントの例外には 'cref' 属性を指定しなければなりません
+# <a name="bc42319-xml-comment-exception-must-have-a-cref-attribute"></a>BC42319:XML コメントの例外には 'cref' 属性を指定しなければなりません
 
 \<exception> タグは、メソッドによってスローされる可能性のある例外を文書化する方法を提供します。 必須の `cref` 属性は、ドキュメント生成機能によってチェックされるメンバーの名前を指定します。 メンバーが存在する場合、そのメンバーはドキュメント ファイル内の正規要素名に変換されます。
 

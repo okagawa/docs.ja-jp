@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC30996
 ms.assetid: 6e183fe0-8888-43ed-a062-01571079455f
-ms.openlocfilehash: 2c5a65443dc16a600e25fcf6dfd11c4597b3a086
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: cbe77bab3e4f8bf2094c70c1c16d95ee897c729e
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873955"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163013"
 ---
-# <a name="initializer-expected"></a>初期化子が必要です
+# <a name="bc30996-initializer-expected"></a>BC30996:初期化子が必要です
 
-次の例に示すように、初期化リストが空のオブジェクト初期化子を使用して、クラスのインスタンスを宣言しようとしました。  
-  
- `' Not valid.`  
-  
- `' Dim aStudent As New Student With {}`  
-  
- 次の例に示すように、初期化子リストの少なくとも 1 つのフィールドまたはプロパティを初期化する必要があります。  
-  
- `Dim aStudent As New Student With {.year = "Senior"}`  
-  
- **エラー ID:** BC30996  
-  
-## <a name="to-correct-this-error"></a>このエラーを解決するには  
-  
-1. 初期化子の少なくとも 1 つのフィールドまたはプロパティを初期化するか、オブジェクト初期化子を使用しないようにしてください。  
-  
+次の例に示すように、初期化リストが空のオブジェクト初期化子を使用して、クラスのインスタンスを宣言しようとしました。
+
+ `' Not valid.`
+
+ `' Dim aStudent As New Student With {}`
+
+ 次の例に示すように、初期化子リストの少なくとも 1 つのフィールドまたはプロパティを初期化する必要があります。
+
+ `Dim aStudent As New Student With {.year = "Senior"}`
+
+ **エラー ID:** BC30996
+
+## <a name="to-correct-this-error"></a>このエラーを解決するには
+
+- 初期化子の少なくとも 1 つのフィールドまたはプロパティを初期化するか、オブジェクト初期化子を使用しないようにしてください。
+
 ## <a name="see-also"></a>関連項目
 
 - [オブジェクト初期化子: 名前付きの型と匿名型](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)

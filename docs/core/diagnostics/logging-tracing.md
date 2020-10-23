@@ -1,13 +1,13 @@
 ---
 title: ログとトレース - .NET Core
 description: .NET Core のログとトレースの概要について説明します。
-ms.date: 08/05/2019
-ms.openlocfilehash: 392b88c9ea3c31c919a605ac0a5c886f7d63f79a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 10/12/2020
+ms.openlocfilehash: 33c78ecc839b552267ad43dd00b7d627e756a939
+ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714423"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91997694"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core のログとトレース
 
@@ -78,10 +78,10 @@ ms.locfileid: "75714423"
 
 <xref:Microsoft.Extensions.Logging.ILogger> インターフェイスは、依存関係の挿入を通じてロガーを挿入できる共通のログ インターフェイスを作成するために使用されています。
 
-たとえば、アプリケーションに最適な選択を可能にするために、`ASP.NET` では、組み込みおよびサードパーティのフレームワークを選択できるようにしています。
+たとえば、アプリケーションに最適な選択を可能にするために、.NET では、組み込みおよびサード パーティのフレームワークのサポートが提供されています。
 
-- [ASP.NET の組み込みのログ プロバイダー](/aspnet/core/fundamentals/logging/#built-in-logging-providers)
-- [ASP.NET のサードパーティ製のログ プロバイダー](/aspnet/core/fundamentals/logging/#third-party-logging-providers)
+- [.NET の組み込みのログ プロバイダー](../extensions/logging-providers.md#built-in-logging-providers)
+- [.NET のサード パーティ製のログ プロバイダー](../extensions/logging-providers.md#third-party-logging-providers)
 
 ## <a name="logging-related-references"></a>ログ関連の参照
 
@@ -89,7 +89,7 @@ ms.locfileid: "75714423"
 
 - [方法 : アプリケーション コードにトレース ステートメントを追加する](../../framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 
-- [ASP.NET のログ記録](/aspnet/core/fundamentals/logging)に関する記事では、サポートしているログ記録技法の概要を示しています。
+- 「[.NET のログ記録](../extensions/logging.md)」では、サポートしているログ記録技法の概要を示しています。
 
 - [C# の文字列補間](../../csharp/language-reference/tokens/interpolated.md)を使用すると、ログ記録コードを簡単に記述できます。
 

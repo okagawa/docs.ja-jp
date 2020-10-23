@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30491
 ms.assetid: 8399d7ae-bc0a-49e6-81dc-2e7229708bc9
-ms.openlocfilehash: eaa6633996b6fef8ba949e1d8aa7f19d7d5fb6a4
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: f48159d91afef1f5d1b19dce5b0d2262cdab082f
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874263"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163078"
 ---
-# <a name="expression-does-not-produce-a-value"></a>式は値を生成しません。
+# <a name="bc30491-expression-does-not-produce-a-value"></a>BC30491:式は値を生成しません。
 
-`Function` が想定されるコンテキストで `Sub` を呼び出すなど、値が生成されるコンテキストで値を生成しない式を使用しようとしました。  
-  
- **エラー ID:** BC30491  
-  
-## <a name="to-correct-this-error"></a>このエラーを解決するには  
-  
-- 値を生成する式に、式を変更します。  
-  
+`Function` が想定されるコンテキストで `Sub` を呼び出すなど、値が生成されるコンテキストで値を生成しない式を使用しようとしました。
+
+ **エラー ID:** BC30491
+
+## <a name="to-correct-this-error"></a>このエラーを解決するには
+
+- 値を生成する式に、式を変更します。
+
 ## <a name="see-also"></a>関連項目
 
 - [エラーの種類](../../programming-guide/language-features/error-types.md)

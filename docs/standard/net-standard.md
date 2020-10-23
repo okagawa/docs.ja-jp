@@ -1,70 +1,66 @@
 ---
 title: .NET Standard
 description: .NET Standard、そのバージョン、それをサポートする .NET 実装について学習します。
-ms.date: 02/13/2020
+ms.date: 10/05/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: e96a03ca55682d3e30bc13fb20a8e443105301fc
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: a4a59fea3ab1a6bc93a12e3f0aa13dea726d8121
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359312"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050399"
 ---
 # <a name="net-standard"></a>.NET Standard
 
-[.NET Standard](https://github.com/dotnet/standard) は、すべての .NET 実装で使用できるようにすることを目的とした .NET API の正式な仕様です。 .NET Standard の背後にある意図は、.NET エコシステムの高度な統一性を確立することです。 [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) では引き続き .NET 実装の動作に対する統一性が確立されます。ECMA 335 では標準ライブラリの小さなセットが指定されていますが、.NET Standard 仕様には幅広い .NET API が含まれています。
-
-.NET Standard により、次の主なシナリオが可能になります。
-
-- ワークロードに関係なく、すべての .NET 実装用に統一された BCL API のセットを定義し、実装する。
-- 開発者が、この同じ API のセットを使用して、.NET 実装間で使用可能なポータブル ライブラリを生成できるようにする。
-- .NET API による共有ソースの条件付きコンパイルを削減あるいはなくして、OS API に対してのみにする。
-
-さまざまな .NET 実装が、.NET Standard の特定のバージョンを対象とします。 各 .NET 実装バージョンは、それがサポートしている最高の .NET Standard バージョンをアドバタイズし、そのことは以前のバージョンもサポートしていることを意味します。 たとえば、.NET Framework 4.6 は .NET Standard 1.3 を実装しており、このことは、.NET Standard のバージョン 1.0 ～ 1.3 で定義されているすべての API を公開していることを意味します。 同様に、.NET Framework 4.6.1 は .NET Standard 1.4 を実装し、.NET Core 1.0 は .NET Standard 1.6 を実装しています。
+[.NET Standard](https://github.com/dotnet/standard) は、複数の .NET 実装で使用できる .NET API の正式な仕様です。 .NET Standard の背後にある意図は、.NET エコシステムの高度な統一性を確立することでした。 しかし、.NET 5 には統一性を確立するための別のアプローチが採用されており、この新しいアプローチによって、多くのシナリオで .NET Standard が不要になります。 詳細については、後の「[.NET 5 と .NET Standard](#net-5-and-net-standard)」を参照してください。
 
 ## <a name="net-implementation-support"></a>.NET 実装のサポート
 
-次の表は、.NET Standard の各バージョンをサポートするプラットフォームの**最小**バージョンを一覧表示します。 つまり、一覧に示されたプラットフォームの以降のバージョンでは、対応する .NET Standard バージョンもサポートされます。 たとえば、.NET Core 2.2 では、.NET Standard 2.0 以前がサポートされます。
+さまざまな .NET 実装が、.NET Standard の特定のバージョンを対象とします。 各 .NET 実装バージョンは、それがサポートしている最高の .NET Standard バージョンをアドバタイズし、そのことは以前のバージョンもサポートしていることを意味します。 たとえば、.NET Framework 4.6 は .NET Standard 1.3 を実装しており、このことは、.NET Standard のバージョン 1.0 ～ 1.3 で定義されているすべての API を公開していることを意味します。 同様に、.NET Framework 4.6.1 には .NET Standard 1.4 が実装されていますが、.NET 5.0 には .NET Standard 2.1 が実装されています。
+
+次の表は、.NET Standard の各バージョンがサポートされている**最小**の実装バージョンの一覧です。 つまり、一覧に示されている実装以降のバージョンでも、対応する .NET Standard バージョンがサポートされています。 たとえば、.NET Core 2.1 以降のバージョンによって .NET Standard 2.0 以前のバージョンがサポートされています。
 
 [!INCLUDE [net-standard-table](../../includes/net-standard-table.md)]
 
 対象にすることができる最高バージョンの .NET Standard を確認するには、次の手順を実行します。
 
 1. 実行する .NET 実装を示す行を探します。
-2. この行内で、右から左の方向に、バージョンを示す列を探します。
-3. 列ヘッダーには、ターゲットでサポートされている .NET Standard バージョンが示されます。 任意の古い .NET Standard バージョンをターゲットにすることもできます。 .NET Standard の今後のバージョンでも実装はサポートされます。
-4. 対象にするプラットフォームごとに、この手順を繰り返します。 複数のターゲット プラットフォームがある場合は、その中から低いバージョンを選択することをお勧めします。 たとえば、.NET Framework 4.5 と .NET Core 1.0 で実行する場合、使用できる .NET Standard の最高のバージョンは .NET Standard 1.1 です。
+1. この行内で、右から左の方向に、バージョンを示す列を探します。
+1. 列ヘッダーには、ターゲットでサポートされている .NET Standard バージョンが示されます。 任意の古い .NET Standard バージョンをターゲットにすることもできます。 .NET Standard の今後のバージョンでも実装はサポートされます。
+1. 対象にするプラットフォームごとに、この手順を繰り返します。 複数のターゲット プラットフォームがある場合は、その中から低いバージョンを選択することをお勧めします。 たとえば、.NET Framework 4.8 と .NET 5.0 で実行する場合、使用できる .NET Standard の最高のバージョンは .NET Standard 2.0 です。
 
 ### <a name="which-net-standard-version-to-target"></a>対象にする .NET Standard バージョン
 
-.NET Standard バージョンを選択する場合、次のトレードオフを考慮する必要があります。
+.NET Standard バージョンをターゲットに選択する場合、次のトレードオフを考慮する必要があります。
 
-- バージョンが高くなるほど、使用できる API が多くなる。
-- バージョンが低くなるほど、実装しているプラットフォームが多くなる。
+- バージョンが高くなるほど、ユーザーのライブラリのコードで使用できる API は多くなります。
+- バージョンが低くなるほど、ユーザーのライブラリを使用できるアプリやライブラリが増えます。
 
-一般的に、可能な限り*最小*バージョンの .NET Standard を対象にすることが推奨されます。 そのため、対象にする最高バージョンの .NET Standard を見つけたら、次の手順を実行します。
+可能な限り "*最小*" のバージョンの .NET Standard をターゲットにすることをお勧めします。 そのため、対象にする最高バージョンの .NET Standard を見つけたら、次の手順を実行します。
 
 1. 1 つ低いバージョンの .NET Standard を対象にしてプロジェクトをビルドします。
 2. プロジェクトのビルドが成功したら、手順 1 を繰り返します。 失敗した場合は、対象を次に高いバージョンに変更します。これが対象のバージョンです。
 
-ただし、下位バージョンの .NET Standard を対象にしている場合、さまざまな依存関係のサポートが導入されます。 お使いのプロジェクトが .NET Standard 1.x を対象としている場合、.NET Standard 2.0 "*も*" 対象にすることをお勧めします。 これにより、.NET Standard 2.0 と互換性のあるフレームワーク上で実行されるライブラリのユーザーでは、依存関係グラフが簡素化され、ダウンロードが必要になるパッケージ数が減少します。
+ただし、下位バージョンの .NET Standard を対象にしている場合、さまざまな依存関係のサポートが導入されます。 お使いのプロジェクトが .NET Standard 1.x を対象としている場合、.NET Standard 2.0 "*も*" 対象にすることをお勧めします。 これにより、.NET Standard 2.0 と互換性のある実装上で実行されるライブラリのユーザーに対しては、依存関係グラフが簡略化され、ダウンロードの必要なパッケージの数が減ります。
 
 ### <a name="net-standard-versioning-rules"></a>.NET Standard のバージョン管理規則
 
 バージョン管理規則は主に 2 つあります。
 
 - 追加式: .NET Standard バージョンは論理的に同心円形です。高位のバージョンには、旧バージョンのすべての API が組み込まれています。 バージョン間に互換性に影響する変更はありません。
-- 不変:出荷後、.NET Standard のバージョンは固定されます。 新しい API は、特定の .NET 実装 (.NET Core など) でまず使用できるようになります。 .NET Standard の審査会が、新しい API をすべての .NET 実装で使用できるようにした方がよいと判断すると、新しい .NET Standard バージョンに追加されます。
+- 不変:出荷後、.NET Standard のバージョンは固定されます。
+
+2\.1 より後に .NET Standard の新しいバージョンはありません。 詳細については、後の「[.NET 5 と .NET Standard](#net-5-and-net-standard)」を参照してください。
 
 ## <a name="specification"></a>仕様
 
-.NET Standard の仕様は、標準化された API のセットです。 この仕様は、.NET 実装、具体的には Microsoft (.NET Framework、.NET Core、Mono を含む) と Unity によって管理されています。 [GitHub](https://github.com/dotnet/standard) 経由の新しい .NET Standard のバージョンの構築の一環として、公開フィードバック プロセスが使われています。
+.NET Standard の仕様は、標準化された API のセットです。 この仕様は、.NET 実装、具体的には Microsoft (.NET Framework、.NET Core、Mono を含む) と Unity によって管理されています。
 
 ### <a name="official-artifacts"></a>正式な成果物
 
-正式な仕様は標準に含まれる API を定義する一連の .cs ファイルです。 [dotnet/standard リポジトリ](https://github.com/dotnet/standard)の [ref](https://github.com/dotnet/standard/tree/master/src/netstandard/ref) ディレクトリに.NET Standard API が定義されています。
+正式な仕様は、標準に含まれる API を定義する一連の *.cs* ファイルです。 [dotnet/standard リポジトリ](https://github.com/dotnet/standard)の [ref](https://github.com/dotnet/standard/tree/master/src/netstandard/ref) ディレクトリに.NET Standard API が定義されています。
 
 [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) メタパッケージ ([ソース](https://github.com/dotnet/standard/blob/master/src/netstandard/pkg/NETStandard.Library.dependencies.props)) は、1 つ以上の .NET Standard のバージョンを定義する (一部) ライブラリのセットについて説明しています。
 
@@ -82,27 +78,21 @@ ms.locfileid: "89359312"
 
 .NET Standard 参照アセンブリの主要な配布手段は NuGet パッケージです。 実装は、各 .NET 実装に適切なさまざまな方法で配布されます。
 
-NuGet パッケージは 1 つまたは複数の[フレームワーク](frameworks.md)を対象にしています。 .NET Standard パッケージは、".NET Standard" フレームワークを対象にしています。 `netstandard` [コンパクト TFM](frameworks.md) (`netstandard1.4` など) を使用して、.NET Standard フレームワークを対象にすることができます。 複数のランタイムでの実行を意図したライブラリは、このフレームワークを対象とする必要があります。 広範なセットの API の場合、.NET Standard 1.6 から 2.0 の間に使用できる API の数は 2 倍以上になったため、`netstandard2.0` を対象としてください。
+NuGet パッケージは 1 つまたは複数の[フレームワーク](frameworks.md)を対象にしています。 .NET Standard パッケージは、".NET Standard" フレームワークを対象にしています。 `netstandard` [コンパクト TFM](frameworks.md) (`netstandard1.4` など) を使用して、.NET Standard フレームワークを対象にすることができます。 .NET の複数の実装で実行することが意図されたライブラリは、このフレームワークをターゲットにする必要があります。 広範なセットの API の場合、.NET Standard 1.6 から 2.0 の間に使用できる API の数は 2 倍以上になったため、`netstandard2.0` を対象としてください。
 
 [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) メタパッケージは .NET Standard を定義する NuGet パッケージの完全なセットを参照しています。  `netstandard` を対象とする最も一般的な方法は、このメタパッケージを参照することです。 それは、.NET Standard を定義する約 40 の .NET ライブラリと関連する API について説明しており、それらにアクセスできるようにしています。 `netstandard` を対象とする追加のパッケージを参照して、追加の API にアクセスできます。
 
 ### <a name="versioning"></a>バージョン管理
 
-仕様は 1 つだけではありませんが、段階的に拡張され、直線的にバージョン管理された API のセットです。 標準の最初のバージョンは、API のベースライン セットを構築しています。 それ以降のバージョンでは、API が追加され、以前のバージョンによって定義された API を継承しています。 標準から API を削除するために確立された取り決めはありません。
+仕様は 1 つだけではありませんが、直線的にバージョン管理された API のセットです。 標準の最初のバージョンは、API のベースライン セットを構築しています。 それ以降のバージョンでは、API が追加され、以前のバージョンによって定義された API を継承しています。 標準から API を削除するために確立された取り決めはありません。
 
 .NET Standard は、1 つの .NET 実装に固有ではなく、それらの実装のいずれかのバージョン管理スキームに一致することもありません。
 
-いずれかの .NET 実装 (.NET Framework、.NET Core、Mono など) に追加された API は、本質的に基本的であると考えられる場合に、仕様に追加される候補とみなされる可能性があります。 新しい[.NET Standard のバージョン](https://github.com/dotnet/standard/blob/master/docs/versions.md) は、.NET 実装のリリースに基づいて作成されるので、.NET Standard ポータブル クラス ライブラリ (PCL) から新しい API を対象にすることができます。 バージョン管理メカニズムの詳細は、「[.NET Core のバージョン管理](../core/versions/index.md)」に関するページで説明されています。
-
-.NET Standard のバージョン管理は、使用する場合に重要です。 .NET Standard のバージョンが指定されている場合、それと同じか以下のバージョンを対象とするライブラリを使用できます。 次の方法では、.NET Standard の対象設定に固有の、.NET Standard PCL の使用のワークフローを説明します。
-
-- PCL に使用する .NET Standard のバージョンを選択します。
-- .NET Standard と同じかそれ以下のバージョンに依存するライブラリを使用します。
-- それより上の .NET Standard バージョンに依存するライブラリを見つけた場合は、それと同じバージョンを採用するか、そのライブラリを使用しないようにする必要があります。
+既に説明したように、2.1 より後に .NET Standard の新しいバージョンはありません。
 
 ## <a name="target-net-standard"></a>ターゲットの .NET Standard
 
-`netstandard` フレームワークと NETStandard.Library メタパッケージの組み合わせを使用して、[.NET Standard Library をビルド](../core/tutorials/libraries.md)できます。
+`netstandard` フレームワークと `NETStandard.Library` メタパッケージの組み合わせを使用して、[.NET Standard Library をビルド](../core/tutorials/libraries.md)できます。
 
 ## <a name="net-framework-compatibility-mode"></a>.NET Framework 互換モード
 
@@ -116,51 +106,66 @@ Visual Studio で .NET Standard ライブラリを作成するには、Windows �
 
 プロジェクトで .NET Standard 2.0 ライブラリを使用するだけである場合は、Visual Studio 2015 でこれを行うこともできます。 ただし、NuGet クライアント 3.6 以降がインストールされている必要があります。 Visual Studio 2015 用の NuGet クライアントは、[NuGet のダウンロード](https://www.nuget.org/downloads)のページからダウンロードできます。
 
-## <a name="comparison-to-portable-class-libraries"></a>ポータブル クラス ライブラリとの比較
+## <a name="net-5-and-net-standard"></a>.NET 5 と .NET Standard
 
-.NET Standard は、[ポータブル クラス ライブラリ (PCL)](./cross-platform/cross-platform-development-with-the-portable-class-library.md) に代わるものです。 .NET Standard では、標準 BCL を整理し、結果として、.NET 実装全体で高度な統一性を確立することによって、ポータブル ライブラリの作成の方法を向上させています。 .NET Standard を対象とするライブラリは、PCL つまり ".NET Standard ベースの PCL" です。 既存の PCL は、"プロファイルベースの PCL" です。
+.NET 5 は、Microsoft が積極的に開発している .NET の実装です。 Windows デスクトップ アプリとクロスプラットフォーム コンソール アプリ、クラウド サービス、Web サイトに使用できる統一された機能と API のセットを備えた単一の製品です。 .NET 5.0 [TFM](frameworks.md) には、次のような幅広いシナリオが反映されています。
 
-.NET Standard と PCL プロファイルは、似たような目的で作成されましたが、主な点が異なります。
+* `net5.0`
 
-類似点:
+  この TFM は、どこでも実行できるコードを対象としています。 いくつか例外はありますが、クロスプラットフォームで動作するテクノロジだけが含まれています。 .NET 5 コードの場合、`net5.0` によって `netcoreapp` と `netstandard` 両方の TFM が置き換えられます。
 
-- バイナリ コード共有に使用できる API を定義します。
+* `net5.0-windows`
 
-相違点:
+  これは、`net5.0` によって参照されているすべてのものに OS 固有の機能を追加する [OS 固有の TFM](frameworks.md#net-5-os-specific-tfms) の例です。
 
-- .NET Standard は精選された API のセットで、PCL プロファイルは、既存のプラットフォームの交差部分によって定義されています。
-- .NET Standard は線形的にバージョン管理されていますが、PCL プロファイルはそうではありません。
-- PCL プロファイルは Microsoft のプラットフォームを表し、.NET Standard はプラットフォームに依存しません。
+### <a name="when-to-target-net50-vs-netstandard"></a>net5.0 と netstandard をターゲットにするタイミング
 
-### <a name="pcl-compatibility"></a>PCL 互換性
+`netstandard` がターゲットの既存のコードの場合は、TFM を `net5.0` に変更する必要はありません。 .NET 5.0 により、.NET Standard 2.1 以前が実装されています。 .NET Standard から .NET 5.0 にターゲットを変更する唯一の理由は、より多くのランタイム機能、言語機能、または API にアクセスできるようにすることです。 たとえば、C# 9 を使用するには、.NET 5.0 をターゲットにする必要があります。 .NET 5.0 と .NET Standard をマルチターゲットにして、新しい機能にアクセスしながら、他の .NET 実装でライブラリを使用できるようにすることができます。
 
-.NET Standard は、PCL プロファイルのサブセットと互換性があります。 .NET Standard 1.0、1.1、1.2 はそれぞれ PCL プロファイルのセットと重複します。 この重複は 2 つの理由で作成されました。
+.NET 5 用の新しいコードのガイドラインを次に示します。
 
-- .NET Standard ベースの PCL がプロファイルベースの PCL を参照できるようにする。
-- プロファイルベースの PCL を .NET Standard ベースの PCL としてパッケージできるようにする。
+* アプリのコンポーネント
 
-プロファイルベースの PCL の互換性は、[Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) NuGet パッケージで提供されています。 プロファイルベースの PCL を含む NuGet パッケージを参照するときに、この依存関係が必要です。
+  アプリケーションを複数のコンポーネントに分割するためにライブラリを使用している場合は、`net5.x` をターゲットにすることをお勧めします。`5.x` は、アプリケーションでターゲットにできる最も古い .NET 5 バージョンです。 わかりやすくするために、アプリケーションを構成するすべてのプロジェクトを、同じバージョンの .NET にするのが最善の方法です。 このようにすると、同じ BCL 機能をどこでも使用できます。
 
-`netstandard` としてパッケージされたプロファイルベースの PCL は、通常パッケージされるプロファイルベースの PCL より使いやすくなります。 `netstandard` パッケージは、既存のユーザーと互換性があります。
+* 再利用可能なライブラリ
 
-.NET Standard と互換性がある PCL プロファイルのセットを確認できます。
+  NuGet で配布する予定の再利用可能なライブラリを構築している場合は、リーチと使用可能な機能セットの間のトレードオフを検討してください。 .NET Standard 2.0 は .NET Framework によってサポートされている最新バージョンであるため、非常に大きな機能セットで良好なリーチが提供されます。 リーチの増加が最小限で、使用可能な機能セットが制限されるため、.NET Standard 1.x をターゲットにすることはお勧めしません。
 
-| PCL プロファイル | .NET Standard | PCL プラットフォーム
-|:-----------:|:-------------:|------------------------------------------------------------------------------
-| Profile7    | 1.1           | .NET Framework 4.5、Windows 8
-| Profile31   | 1           | Windows 8.1、Windows Phone Silverlight 8.1
-| Profile32   | 1.2           | Windows 8.1、Windows Phone 8.1
-| Profile44   | 1.2           | .NET Framework 4.5.1、Windows 8.1
-| Profile49   | 1           | .NET Framework 4.5、Windows Phone Silverlight 8
-| Profile78   | 1.0           | .NET Framework 4.5、Windows 8、Windows Phone Silverlight 8
-| Profile84   | 1           | Windows Phone 8.1、Windows Phone Silverlight 8.1
-| Profile111  | 1.1           | .NET Framework 4.5、Windows 8、Windows Phone 8.1
-| Profile151  | 1.2           | .NET Framework 4.5.1、Windows 8.1、Windows Phone 8.1
-| Profile157  | 1           | Windows 8.1、Windows Phone 8.1、Windows Phone Silverlight 8.1
-| Profile259  | 1           | .NET Framework 4.5、Windows 8、Windows Phone 8.1、Windows Phone Silverlight 8
+  .NET Framework をサポートする必要がない場合は、.NET Standard 2.1 または .NET 5 を使用することもできます。 .NET Standard 2.1 は使わずに、.NET 5 に直接進むことをお勧めします。 最も広く使用されているライブラリは、最終的に .NET Standard 2.0 と .NET 5 の両方のマルチターゲットになります。 .NET Standard 2.0 をサポートすると、最大のリーチになります。一方、.NET 5 をサポートすると、.NET 5 を既に使用している顧客に対して最新のプラットフォーム機能を利用できるようになります。
+
+### <a name="net-standard-problems"></a>.NET Standard の問題
+
+ここで .NET Standard にあるいくつかの問題を示しておくと、.NET 5 がプラットフォームとワークロード間でコードを共有するための優れた方法である理由を説明するのに役立ちます。
+
+- 新しい API が追加されるのが遅い
+
+  .NET Standard は、すべての .NET 実装でサポートする必要がある API セットとして作成されているため、新しい API を追加する提案に対してレビュー プロセスがありました。 目標は、現在および将来のすべての .NET プラットフォームで実装できる API のみを標準化することでした。 その結果、ある機能が特定のリリースにない場合、Standard のバージョンに追加されるまで数年待たなければならないことがありました。 新しいバージョンの .NET Standard が広くサポートされるようになるまでは、さらに長く待ちました。
+
+  **.NET 5 での解決策:** コード ベースが共有されているため、機能が実装されるときには、.NET 5 のすべてのアプリとライブラリで既に使用できるようになっています。 また、API の仕様とその実装に違いがないため、.NET Standard の場合よりはるかに早く、新機能を利用できるようになります。
+
+- 複雑なバージョン管理
+
+  API の仕様とその実装が分かれているため、API の仕様のバージョンと実装のバージョンの間のマッピングが複雑になります。 このような複雑さは、この記事で前に示した表と、その解釈方法の説明を見れば明らかです。
+
+  **.NET 5 での解決策:** .NET 5.x の場合は、API の仕様とその実装は分かれていません。 その結果、TFM のスキームが簡単になります。 TFM のプレフィックスは、すべてのワークロードに対して 1 つです。`net5.0` が、ライブラリ、コンソール アプリ、Web アプリに使用されます。 唯一のバリエーションは、特定のプラットフォームに対する[プラットフォーム固有の API を指定するサフィックス](frameworks.md#net-5-os-specific-tfms)です (`net5.0-windows` など)。 このような TFM の名前付け規則のおかげで、特定のアプリで特定のライブラリを使用できるかどうかを簡単に判断できます。 .NET Standard のようなバージョン番号対応テーブルは必要ありません。
+
+- 実行時のプラットフォーム非サポート例外
+
+  .NET Standard の場合、プラットフォーム固有の API が公開されます。 移植できない場合であっても、コードはエラーなしでコンパイルされ、任意のプラットフォームに移植できるように見えます。 特定の API の実装がないプラットフォームで実行すると、実行時エラーが発生します。
+
+  **.NET 5 での解決策:** .NET 5 SDK には、既定で有効になるコード アナライザーが含まれています。 実行しようとしているプラットフォームでサポートされていない API をうっかり使用すると、プラットフォーム互換性アナライザーによって検出されます。 詳細については、「[プラットフォーム互換性アナライザー](analyzers/platform-compat-analyzer.md)」を参照してください。
+
+### <a name="net-standard-not-deprecated"></a>.NET Standard は非推奨ではない
+
+.NET Standard は、複数の .NET 実装で使用できるライブラリにまだ必要です。 次のシナリオの場合、.NET Standard をターゲットにすることをお勧めします。
+
+* `netstandard2.0` を使用して、.NET Framework と .NET の他のすべての実装の間でコードを共有する。
+* `netstandard2.1` を使用して、Mono、Xamarin、.NET Core 3.x の間でコードを共有する。
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Standard のバージョン](https://github.com/dotnet/standard/blob/master/docs/versions.md)
+- [.NET Standard のバージョン (ソース)](https://github.com/dotnet/standard/blob/master/docs/versions.md)
+- [.NET Standard のバージョン (対話型 UI)](https://dotnet.microsoft.com/platform/dotnet-standard#versions)
 - [.NET Standard ライブラリを構築する](../core/tutorials/library-with-visual-studio.md)
 - [クロス プラットフォーム ターゲット](./library-guidance/cross-platform-targeting.md)

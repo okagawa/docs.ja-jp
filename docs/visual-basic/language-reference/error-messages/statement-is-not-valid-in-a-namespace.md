@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30001
 ms.assetid: 43c1b509-15f9-4e91-bcad-90bcb5f6f191
-ms.openlocfilehash: f1887e0cf71ee79f3fd0a991cd3038bcc910588c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 5307b7354d3c6b91ea2a1993f5f84384784a61e5
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90870671"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92159691"
 ---
-# <a name="statement-is-not-valid-in-a-namespace"></a>名前空間のステートメントが無効です。
+# <a name="bc30001-statement-is-not-valid-in-a-namespace"></a>BC30001:名前空間のステートメントが無効です。
 
-ステートメントを名前空間のレベルで表示することはできません。 名前空間レベルで許可されている宣言は、モジュール、インターフェイス、クラス、デリゲート、列挙型、および構造体の宣言だけです。  
-  
- **エラー ID:** BC30001  
-  
-## <a name="to-correct-this-error"></a>このエラーを解決するには  
-  
-- ステートメントを、モジュール、クラス、インターフェイス、構造体、列挙型、またはデリゲートの定義内の場所に移動します。  
-  
+ステートメントを名前空間のレベルで表示することはできません。 名前空間レベルで許可されている宣言は、モジュール、インターフェイス、クラス、デリゲート、列挙型、および構造体の宣言だけです。
+
+ **エラー ID:** BC30001
+
+## <a name="to-correct-this-error"></a>このエラーを解決するには
+
+- ステートメントを、モジュール、クラス、インターフェイス、構造体、列挙型、またはデリゲートの定義内の場所に移動します。
+
 ## <a name="see-also"></a>関連項目
 
 - [Visual Basic におけるスコープ](../../programming-guide/language-features/declared-elements/scope.md)

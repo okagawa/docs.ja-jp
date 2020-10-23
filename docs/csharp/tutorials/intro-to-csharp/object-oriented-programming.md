@@ -2,12 +2,12 @@
 title: オブジェクト指向プログラミング (C#)
 description: C# は、抽象化、カプセル化、継承、ポリモーフィズムなど、オブジェクト指向プログラミングを完全にサポートします。
 ms.date: 09/30/2020
-ms.openlocfilehash: 8a8dc8dc6d40c539b988ea203654d994e88c357a
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 6e0155621be544b01453b8c107debb3a9b6c38f9
+ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91614661"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91997665"
 ---
 # <a name="object-oriented-programming-c"></a>オブジェクト指向プログラミング (C#)
 
@@ -162,7 +162,7 @@ public void MakeWithdrawal(decimal amount, DateTime date, string note)
 
 :::code language="csharp" source="./snippets/object-oriented-programming/BankAccount.cs" ID="RefactoredMakeWithdrawal":::
 
-追加されたメソッドは です。これは、派生クラスからのみ呼び出せることを意味します。 この宣言によって、他のクライアントがこのメソッドを呼び出せなくなります。 これは `virtual` でもあるため、派生クラスで動作を変更できます。 戻り値の型は `Transaction?` です。 `?` の注釈は、メソッドが `null` を返す可能性があることを示します。 次の実装を `LineOfCreditAccount` に追加して、引き出しの限度額を超えたときに手数料を請求します。
+追加されたメソッドは `protected` です。これは、派生クラスからのみ呼び出せることを意味します。 この宣言によって、他のクライアントがこのメソッドを呼び出せなくなります。 これは `virtual` でもあるため、派生クラスで動作を変更できます。 戻り値の型は `Transaction?` です。 `?` の注釈は、メソッドが `null` を返す可能性があることを示します。 次の実装を `LineOfCreditAccount` に追加して、引き出しの限度額を超えたときに手数料を請求します。
 
 :::code language="csharp" source="./snippets/object-oriented-programming/LineOfCreditAccount.cs" ID="AddOverdraftFee":::
 

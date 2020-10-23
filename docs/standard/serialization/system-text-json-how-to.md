@@ -1,7 +1,7 @@
 ---
 title: C# を使用して JSON をシリアル化および逆シリアル化する方法 - .NET
-description: この記事では、System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について説明します。 これにはサンプル コードが含まれます。
-ms.date: 05/13/2020
+description: System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について学習します。 これにはサンプル コードが含まれます。
+ms.date: 10/09/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 72ba79784d3eb1beb43eab8db0a448a7e3b18eb6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0fda248b7d2e5a7cfa748447d0265565cb160b7e
+ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557841"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91997782"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET 内で JSON のシリアル化と逆シリアル化 (マーシャリングとマーシャリングの解除) を行う方法
 
-この記事では、<xref:System.Text.Json> 名前空間を使用して JavaScript Object Notation (JSON) のシリアル化と逆シリアル化を行う方法について説明します。 `Newtonsoft.Json` から既存のコードを移植する場合は、[`System.Text.Json` に移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md)に関する記事を参照してください。
+この記事では、<xref:System.Text.Json?displayProperty=fullName> 名前空間を使用して JavaScript Object Notation (JSON) のシリアル化と逆シリアル化を行う方法について示します。 `Newtonsoft.Json` から既存のコードを移植する場合は、[`System.Text.Json` に移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md)に関する記事を参照してください。
 
 指示とサンプル コードでは、ライブラリを [ASP.NET Core](/aspnet/core/) などのフレームワーク経由ではなく直接使用します。
 
@@ -62,9 +62,12 @@ JSON を文字列またはファイルに書き込むには、<xref:System.Text.
 
 ### <a name="serialization-example"></a>シリアル化の例
 
-コレクションと入れ子になったクラスを含むクラスの例を次に示します。
+コレクション型のプロパティとユーザー定義型を含むクラスの例を次に示します。
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithPOCOs)]
+
+> [!TIP]
+> "POCO" は、[Plain Old CLR Object (単純な従来の CLR オブジェクト)](https://en.wikipedia.org/wiki/Plain_old_CLR_object) を表します。 POCO は、継承や属性からなど、フレームワーク固有の型に依存しない .NET 型です。
 
 前の型のインスタンスをシリアル化した場合の JSON 出力は、次の例のようになります。 JSON 出力は既定で縮小されます。
 
@@ -72,7 +75,7 @@ JSON を文字列またはファイルに書き込むには、<xref:System.Text.
 {"Date":"2019-08-01T00:00:00-07:00","TemperatureCelsius":25,"Summary":"Hot","DatesAvailable":["2019-08-01T00:00:00-07:00","2019-08-02T00:00:00-07:00"],"TemperatureRanges":{"Cold":{"High":20,"Low":-10},"Hot":{"High":60,"Low":20}},"SummaryWords":["Cool","Windy","Humid"]}
 ```
 
-次の例では、同じ JSON が書式設定されて示されています (空白とインデントで整形されています)。
+次の例では、同じ JSON ですが、書式設定されているもの (空白とインデントで整形されています) を示しています。
 
 ```json
 {
@@ -123,7 +126,7 @@ UTF-8 へのシリアル化は、文字列ベースのメソッドを使用す�
 サポートされる型には次のようなものがあります。
 
 * 数値型、文字列、ブール値など、JavaScript プリミティブにマップされる .NET プリミティブ。
-* ユーザー定義の [Plain Old CLR Objects (POCO)](https://stackoverflow.com/questions/250001/poco-definition)。
+* ユーザー定義の[単純な従来の CLR オブジェクト (POCO)](https://en.wikipedia.org/wiki/Plain_old_CLR_object)。
 * 1 次元配列とジャグ配列 (`ArrayName[][]`)。
 * `Dictionary<string,TValue>`。`TValue` は `object`、`JsonElement`、または POCO です。
 * 次の名前空間からのコレクション。
@@ -137,7 +140,7 @@ UTF-8 へのシリアル化は、文字列ベースのメソッドを使用す�
 
 文字列またはファイルから逆シリアル化するには、<xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> メソッドを呼び出します。
 
-次の例では、文字列から JSON を読み取り、前に[シリアル化の例](#serialization-example)で示した `WeatherForecast` クラスのインスタンスを作成します。
+次の例では、文字列から JSON を読み取り、前に[シリアル化の例](#serialization-example)で示した `WeatherForecastWithPOCOs` クラスのインスタンスを作成します。
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripToString.cs?name=SnippetDeserialize)]
 
@@ -159,9 +162,13 @@ UTF-8 から逆シリアル化するには、次の例に示すように、`Utf8
 
 ## <a name="deserialization-behavior"></a>逆シリアル化の動作
 
+JSON を逆シリアル化する場合、次の動作が適用されます。
+
 * 既定では、プロパティ名の照合では大文字と小文字が区別されます。 [大文字と小文字を区別しないことを指定](#case-insensitive-property-matching)できます。
 * JSON に読み取り専用プロパティの値が含まれている場合、その値は無視され、例外はスローされません。
-* パラメーターなしのコンストラクターがない参照型への逆シリアル化はサポートされていません。
+* 逆シリアル化のコンストラクター:
+  - .NET Core 3.0 および 3.1 により、パラメーターなしのコンストラクター (public、internal、private のいずれか) が逆シリアル化に使用されます。
+  - .NET 5.0 以降は、非パブリック コンストラクターはシリアライザーにより無視されます。 ただし、パラメーターなしのコンストラクターを使用できない場合は、パラメーター化されたコンストラクターを使用できます。
 * 不変オブジェクトまたは読み取り専用プロパティへの逆シリアル化はサポートされていません。
 * 既定では、列挙型は数値としてサポートされています。 [列挙型名を文字列としてシリアル化](#enums-as-strings)することができます。
 * フィールドはサポートされません。
@@ -383,7 +390,7 @@ Summary が `Hot` の場合、既定では、シリアル化された JSON に�
 
 シリアル化するオブジェクトと JSON 出力の例を次に示します。
 
-|プロパティ |[値]  |
+|プロパティ |値  |
 |---------|---------|
 | Date    | 8/1/2019 12:00:00 AM -07:00|
 | TemperatureCelsius| 25 |
@@ -639,7 +646,7 @@ Summary が `Hot` の場合、既定では、シリアル化された JSON に�
 
 前に示した JSON をこのサンプル型に逆シリアル化すると、余分なデータが `ExtensionData` プロパティのキーと値のペアになります。
 
-|プロパティ |[値]  |メモ  |
+|プロパティ |値  |メモ  |
 |---------|---------|---------|
 | Date    | 8/1/2019 12:00:00 AM -07:00||
 | TemperatureCelsius| 0 | 大文字と小文字の区別が一致しないため (JSON では `temperatureCelsius`)、プロパティは設定されません。 |

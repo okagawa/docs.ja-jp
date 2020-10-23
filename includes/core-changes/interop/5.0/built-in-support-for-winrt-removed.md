@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d21b2e092d460fdfc367d0f490228ed44ad5c6cc
-ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
+ms.openlocfilehash: 47c676122df4f0990949a7bfbcd7af8c6144d870
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85365652"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160544"
 ---
 ### <a name="built-in-support-for-winrt-is-removed-from-net"></a>WinRT の組み込みサポートは .NET から削除されています
 
@@ -29,7 +29,11 @@ ms.locfileid: "85365652"
 
 #### <a name="recommended-action"></a>推奨アクション
 
-- [Microsoft.Windows.SDK.Contracts パッケージ](https://www.nuget.org/packages/Microsoft.Windows.SDK.Contracts)への参照を削除し、[Microsoft.Windows.SDK.NET パッケージ](https://www.nuget.org/packages/microsoft.windows.sdk.net)への参照に置き換えます。
+- [Microsoft.Windows.SDK.Contracts パッケージ](https://www.nuget.org/packages/Microsoft.Windows.SDK.Contracts)の参照を削除します。  代わりに、プロジェクトの `TargetFramework` プロパティ経由でアクセスする Windows API のバージョンを指定します。  次に例を示します。
+
+  ```xml
+  <TargetFramework>net5.0-windows10.0.19041</TargetFramework>
+  ```
 
 - [C#/WinRT](/windows/uwp/csharp-winrt/) ツール チェーンを使用し、.NET 5.0 以降のバージョンで WinRT の API と型を生成するか、カスタマイズします。
 

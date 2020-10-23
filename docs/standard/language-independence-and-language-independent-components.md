@@ -13,16 +13,16 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: b440bce7ad73cfd526b1589e7f19b4cc06be238c
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 1097d156aad06b7a17141e4d6786e5411cbaa571
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679613"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160842"
 ---
 # <a name="language-independence-and-language-independent-components"></a>言語への非依存性、および言語非依存コンポーネント
 
-.NET Framework は言語に依存しません。 つまり、C#、C++/CLI、Eiffel、F#、IronPython、IronRuby、PowerBuilder、Visual Basic、Visual COBOL、Windows PowerShell など、.NET Framework を対象とする多くの言語の 1 つを開発に使用できます。 .NET Framework 用に開発されたクラス ライブラリの型とメンバーには、最初に記述された言語を知らなくてもアクセスできます。元の言語の規則に従う必要もありません。 コンポーネントを開発しているのであれば、コンポーネントの言語にかかわらず、すべての .NET Framework アプリからそのコンポーネントにアクセスできます。
+.NET は言語に依存しません。 つまり、開発者は、C#、C++/CLI、Eiffel、F#、IronPython、IronRuby、PowerBuilder、Visual Basic、Visual COBOL、Windows PowerShell など、.NET を対象とする多くの言語の 1 つで開発できます。 .NET 用に開発されたクラス ライブラリの型とメンバーには、最初に記述された言語を知らなくてもアクセスできます。元の言語の規則に従う必要もありません。 コンポーネントの開発者であれば、その言語にかかわらず、すべての .NET アプリからコンポーネントにアクセスできます。
 
 > [!NOTE]
 > この記事の最初の部分では、言語に依存しないコンポーネント、つまり、どの言語で記述されたアプリからでも使用できるコンポーネントの作成について説明します。 また、複数の言語で記述されたソース コードから 1 つのコンポーネントまたはアプリを作成することもできます。この記事の 2 番目のパートにある「[言語間の相互運用性](#CrossLang)」を参照してください。
@@ -157,7 +157,7 @@ CLS 準拠の規則を次の表に示します。 これらの規則のテキス
 
 ### <a name="types-and-type-member-signatures"></a>型および型メンバーのシグネチャ
 
-<xref:System.Object?displayProperty=nameWithType> 型は CLS に準拠しており、.NET Framework 型システムのすべてのオブジェクト型の基本型です。 .NET Framework の継承は暗黙的また明示的に行われます。たとえば、<xref:System.String> クラスは <xref:System.Object> クラスから暗黙的に継承します。また、<xref:System.Globalization.CultureNotFoundException> クラスは、<xref:System.ArgumentException> クラスから明示的に継承し、これは <xref:System.SystemException> クラスから明示的に継承します。そして、このクラスは <xref:System.Exception> クラスから明示的に継承します。 派生型を CLS 準拠にするには、その基本型も CLS に準拠している必要があります。
+<xref:System.Object?displayProperty=nameWithType> 型は CLS に準拠しており、.NET 型システムのすべてのオブジェクト型の基本型です。 .NET の継承は、暗黙的 (たとえば、<xref:System.String> クラスは <xref:System.Object> クラスから暗黙的に継承します) または明示的 (たとえば、<xref:System.Globalization.CultureNotFoundException> クラスは、<xref:System.ArgumentException> クラスから明示的に継承し、これは <xref:System.SystemException> クラスから明示的に継承し、これは <xref:System.Exception> クラスから明示的に継承します) に行われます。 派生型を CLS 準拠にするには、その基本型も CLS に準拠している必要があります。
 
 次の例は、基本型が CLS に準拠していない派生型を示しています。 これは、符号なし 32 ビット整数をカウンターとして使用する `Counter` 基底クラスを定義します。 クラスには、符号なし整数をラップすることでカウンター機能が用意されます。このため、クラスは CLS 非準拠としてマークされます。 結果として、派生クラス `NonZeroCounter` も CLS に準拠しなくなります。
 
@@ -170,7 +170,7 @@ CLS 準拠の規則を次の表に示します。 これらの規則のテキス
 
 - ジェネリック パラメーターで制約として使用されるすべての型が、CLS に準拠する必要があります。
 
-.NET Framework の[共通型システム](base-types/common-type-system.md)には、共通言語ランタイムが直接サポートする組み込み型がいくつか含まれ、アセンブリのメタデータで特別にエンコードされています。 これらの組み込み型のうち、次の表に示す型は CLS に準拠しています。
+.NET [共通型システム](base-types/common-type-system.md)には、共通言語ランタイムが直接サポートする組み込み型がいくつか含まれ、アセンブリのメタデータで特別にエンコードされています。 これらの組み込み型のうち、次の表に示す型は CLS に準拠しています。
 
 |CLS 準拠型|説明|
 |-------------------------|-----------------|
@@ -197,13 +197,13 @@ CLS 準拠の規則を次の表に示します。 これらの規則のテキス
 |<xref:System.UInt64>|64 ビット符号なし整数|<xref:System.Int64> (オーバーフローの可能性あり)、<xref:System.Numerics.BigInteger>、または <xref:System.Double>|
 |<xref:System.UIntPtr>|符号なしポインターまたはハンドル|<xref:System.IntPtr>|
 
-.NET Framework のクラス ライブラリまたはその他のクラス ライブラリには、CLS に準拠していない他の型が含まれる場合があります。次に例を示します。
+.NET クラス ライブラリまたはその他のクラス ライブラリには、CLS に準拠していない他の型が含まれる場合があります。次に例を示します。
 
 - ボックス化された値型。 次の C# コード例では、`int*` という名前の型 `Value` のパブリック プロパティを持つクラスを作成します。 `int*` はボックス化された値型であるため、コンパイラは CLS 非準拠としてフラグを設定します。
 
   [!code-csharp[Conceptual.CLSCompliant#26](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/box2.cs#26)]
 
-- 型指定された参照。オブジェクトへの参照および型への参照を含む特別なコンストラクトです。 型指定された参照は、.NET Framework では <xref:System.TypedReference> クラスによって表されます。
+- 型指定された参照。オブジェクトへの参照および型への参照を含む特別なコンストラクトです。 型指定された参照は、.NET では <xref:System.TypedReference> クラスによって表されます。
 
 型が CLS に準拠していない場合は、<xref:System.CLSCompliantAttribute> 値が `isCompliant` に指定された `false` 属性を適用する必要があります。 詳細については、「[CLSCompliantAttribute 属性](#CLSAttribute)」を参照してください。
 
@@ -487,7 +487,7 @@ CLS 準拠型のプロパティは、次の規則に従う必要があります�
 
 ### <a name="attributes"></a>属性
 
-.NET Framework アセンブリでは、カスタム属性に拡張可能機構が用意されており、そのカスタム属性を格納し、アセンブリ、型、メンバー、メソッド パラメーターなどのプログラミング オブジェクトに関するメタデータを取得します。 カスタム属性は <xref:System.Attribute?displayProperty=nameWithType>、または <xref:System.Attribute?displayProperty=nameWithType> の派生型から派生する必要があります。
+.NET アセンブリでは、カスタム属性を格納し、アセンブリ、型、メンバー、メソッド パラメーターなどのプログラミング オブジェクトに関するメタデータを取得するため、カスタム属性に拡張可能機構が用意されています。 カスタム属性は <xref:System.Attribute?displayProperty=nameWithType>、または <xref:System.Attribute?displayProperty=nameWithType> の派生型から派生する必要があります。
 
 規則に違反する例を次に示します。 この例では、`NumericAttribute` から派生していない <xref:System.Attribute?displayProperty=nameWithType> クラスを定義します。 コンパイラ エラーは、CLS 非準拠の属性が適用されている場合にのみ発生します。クラスが定義されているときではありません。
 
@@ -533,7 +533,7 @@ CLS 準拠の属性のコンストラクターまたはプロパティは、次�
 
 コンポーネント開発者は、次の 2 とおりの目的で <xref:System.CLSCompliantAttribute> 属性を使用できます。
 
-- コンポーネントによって公開されたパブリック インターフェイスの CLS 準拠部分と CLS 非準拠部分を定義する。 この属性を使用して特定のプログラム要素を CLS 準拠としてマークすると、.NET Framework を対象とするすべてのツールおよび言語から、これらの要素に必ずアクセスできるようになります。
+- コンポーネントによって公開されたパブリック インターフェイスの CLS 準拠部分と CLS 非準拠部分を定義する。 この属性を使用して特定のプログラム要素を CLS 準拠としてマークすると、.NET を対象とするすべてのツールおよび言語から、これらの要素に必ずアクセスできるようになります。
 
 - コンポーネント ライブラリのパブリック インターフェイスが CLS に準拠するプログラム要素のみを公開するように保証する。 要素が CLS 非準拠の場合は、通常、警告が表示されます。
 
@@ -571,7 +571,7 @@ CLS 準拠のコンポーネントを作成するには:
 
 ## <a name="cross-language-interoperability"></a>言語間の相互運用性
 
-言語に依存しないということは、いくつか意味があります。 たとえば、ある言語で記述された型を、別の言語で記述されたアプリからシームレスに利用することができます。これについては、記事「[言語への非依存性、および言語非依存コンポーネント](language-independence-and-language-independent-components.md)」で説明されています。 また、複数の言語で記述されたコードを 1 つの .NET .NET Framework アセンブリにまとめることもできます。ここでは、この点について焦点を当てて説明します。
+言語に依存しないということは、いくつか意味があります。 たとえば、ある言語で記述された型を、別の言語で記述されたアプリからシームレスに利用することができます。これについては、記事「[言語への非依存性、および言語非依存コンポーネント](language-independence-and-language-independent-components.md)」で説明されています。 また、この記事での焦点になりますが、複数の言語で記述されたコードを 1 つの .NET アセンブリにまとめることもできます。
 
 次の例では、`NumericLib` および `StringLib` という 2 つのクラスを含む Utilities.dll という名前のクラス ライブラリを作成して言語間の相互運用性を示します。 `NumericLib` クラスは C# で記述され、`StringLib` クラスは Visual Basic で記述されています。 以下は StringUtil.vb のソース コードで、`ToTitleCase` クラスに `StringLib` という単一のメンバーが含まれます。
 

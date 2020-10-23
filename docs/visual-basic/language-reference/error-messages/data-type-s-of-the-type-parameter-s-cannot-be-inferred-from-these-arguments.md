@@ -10,14 +10,14 @@ helpviewer_keywords:
 - BC36644
 - BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
-ms.openlocfilehash: b278dcc10a8a4e9e67aacdb16dca2588d2ebd0f1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 85798e6453bc6cea6174ecc536b35835865e0459
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409786"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163455"
 ---
-# <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>型パラメーターのデータ型を、これらの引数から推論することはできません
+# <a name="bc36647-and-bc36644-data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>BC36647 と BC36644:型パラメーターのデータ型を、これらの引数から推論することはできません
 
 型パラメーターのデータ型を、これらの引数から推論することはできません。 データ型を明示的に指定すると、このエラーが修正される可能性があります。
 

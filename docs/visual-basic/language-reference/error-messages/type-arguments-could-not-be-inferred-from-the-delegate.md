@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC36564
 ms.assetid: 21312807-e1cd-4ac1-ae1c-c28a9c25164d
-ms.openlocfilehash: 51b0bbf2e346acdd84a1bc2283db4a71adc9f7dc
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: f7937a34ab425da684f892250884d21e020e4c57
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90870428"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161245"
 ---
-# <a name="type-arguments-could-not-be-inferred-from-the-delegate"></a>型引数をデリゲートから推論できませんでした
+# <a name="bc36564-type-arguments-could-not-be-inferred-from-the-delegate"></a>BC36564:型引数をデリゲートから推論できませんでした
 
-代入ステートメントは、 `AddressOf` を使用してジェネリック プロシージャのアドレスをデリゲートに割り当てますが、ジェネリック プロシージャに型引数を指定していません。  
-  
- 通常、ジェネリック型を呼び出す場合は、ジェネリック型が定義する型パラメーターごとに型引数を指定します。 型引数を指定しない場合、コンパイラは型パラメーターに渡される型を推論しようとします。 コンテキストにコンパイラが型を推論するのに十分な情報が提供されていない場合は、エラーが生成されます。  
-  
- **エラー ID:** BC36564  
-  
-## <a name="to-correct-this-error"></a>このエラーを解決するには  
-  
-- ジェネリック プロシージャの型引数を `AddressOf` 式で指定します。  
-  
+代入ステートメントは、 `AddressOf` を使用してジェネリック プロシージャのアドレスをデリゲートに割り当てますが、ジェネリック プロシージャに型引数を指定していません。
+
+ 通常、ジェネリック型を呼び出す場合は、ジェネリック型が定義する型パラメーターごとに型引数を指定します。 型引数を指定しない場合、コンパイラは型パラメーターに渡される型を推論しようとします。 コンテキストにコンパイラが型を推論するのに十分な情報が提供されていない場合は、エラーが生成されます。
+
+ **エラー ID:** BC36564
+
+## <a name="to-correct-this-error"></a>このエラーを解決するには
+
+- ジェネリック プロシージャの型引数を `AddressOf` 式で指定します。
+
 ## <a name="see-also"></a>関連項目
 
 - [Generic Types in Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)

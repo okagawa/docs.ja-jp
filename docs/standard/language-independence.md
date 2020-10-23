@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 813558299b40e0b90e8047f22b788c8f1419eb5e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 524f8dc9838d7c438e8155da683c4fa5b01f36a3
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504655"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162987"
 ---
 # <a name="language-independence-and-language-independent-components"></a>言語への非依存性、および言語非依存コンポーネント
 
@@ -184,7 +184,7 @@ CLS 準拠の規則を次の表に示します。 これらの規則のテキス
 
 ### <a name="types-and-type-member-signatures"></a>型および型メンバーのシグネチャ
 
-[System.Object](xref:System.Object) 型は CLS に準拠しており、.NET Framework 型システムのすべてのオブジェクト型の基本型です。 .NET Framework の継承は暗黙的また明示的に行われます。たとえば、[String](xref:System.String) クラスは `Object` クラスから暗黙的に継承します。また、[CultureNotFoundException](xref:System.Globalization.CultureNotFoundException) クラスは、[ArgumentException](xref:System.ArgumentException) クラスから明示的に継承し、これは [Exception](xref:System.Exception) クラスから明示的に継承します。 派生型を CLS 準拠にするには、その基本型も CLS に準拠している必要があります。
+[System.Object](xref:System.Object) 型は CLS に準拠しており、.NET 型システムのすべてのオブジェクト型の基本型です。 .NET の継承は暗黙的また明示的に行われます。たとえば、[String](xref:System.String) クラスは `Object` クラスから暗黙的に継承します。また、[CultureNotFoundException](xref:System.Globalization.CultureNotFoundException) クラスは、[ArgumentException](xref:System.ArgumentException) クラスから明示的に継承し、これは [Exception](xref:System.Exception) クラスから明示的に継承します。 派生型を CLS 準拠にするには、その基本型も CLS に準拠している必要があります。
 
 次の例は、基本型が CLS に準拠していない派生型を示しています。 これは、符号なし 32 ビット整数をカウンターとして使用する `Counter` 基底クラスを定義します。 クラスには、符号なし整数をラップすることでカウンター機能が用意されます。このため、クラスは CLS 非準拠としてマークされます。 結果として、派生クラス `NonZeroCounter` も CLS に準拠しなくなります。
 
@@ -319,7 +319,7 @@ CLS 準拠型 | 説明
 [UInt64](xref:System.UInt64) | 64 ビット符号なし整数 | [Int64](xref:System.Int64) (オーバーフローの可能性あり)、[BigInteger](xref:System.Numerics.BigInteger)、または [Double](xref:System.Double)
 [UIntPtr](xref:System.UIntPtr) | 符号なしポインターまたはハンドル | [IntPtr](xref:System.IntPtr)
 
-.NET Framework のクラス ライブラリまたはその他のクラス ライブラリには、CLS に準拠していない他の型が含まれる場合があります。次に例を示します。
+.NET クラス ライブラリまたはその他のクラス ライブラリには、CLS に準拠していない他の型が含まれる場合があります。次に例を示します。
 
 * ボックス化された値型。 次の C# コード例では、`int*` という名前の型 `Value` のパブリック プロパティを持つクラスを作成します。 `int*` はボックス化された値型であるため、コンパイラは CLS 非準拠としてフラグを設定します。
 
@@ -2479,7 +2479,7 @@ End Module
 
 ### <a name="attributes"></a>属性
 
-.NET Framework アセンブリでは、カスタム属性に拡張可能機構が用意されており、そのカスタム属性を格納し、アセンブリ、型、メンバー、メソッド パラメーターなどのプログラミング オブジェクトに関するメタデータを取得します。 カスタム属性は [System.Attribute](xref:System.Attribute)、または `System.Attribute` の派生型から派生する必要があります。
+.NET アセンブリでは、カスタム属性を格納し、アセンブリ、型、メンバー、メソッド パラメーターなどのプログラミング オブジェクトに関するメタデータを取得するため、カスタム属性に拡張可能機構が用意されています。 カスタム属性は [System.Attribute](xref:System.Attribute)、または `System.Attribute` の派生型から派生する必要があります。
 
 規則に違反する例を次に示します。 この例では、`NumericAttribute` から派生していない `System.Attribute` クラスを定義します。 コンパイラ エラーは、CLS 非準拠の属性が適用されるときにのみ発生します。クラスが定義されるときではありません。
 
@@ -2636,7 +2636,7 @@ End Class
 
 コンポーネント開発者は、次の 2 とおりの目的で `CLSCompliantAttribute` 属性を使用できます。
 
-* コンポーネントによって公開されたパブリック インターフェイスの CLS 準拠部分と CLS 非準拠部分を定義する。 この属性を使用して特定のプログラム要素を CLS 準拠としてマークすると、.NET Framework を対象とするすべてのツールおよび言語から、これらの要素に必ずアクセスできるようになります。
+* コンポーネントによって公開されたパブリック インターフェイスの CLS 準拠部分と CLS 非準拠部分を定義する。 この属性を使用して特定のプログラム要素を CLS 準拠としてマークすると、.NET を対象とするすべてのツールおよび言語から、これらの要素に必ずアクセスできるようになります。
 
 * コンポーネント ライブラリのパブリック インターフェイスが CLS に準拠するプログラム要素のみを公開するように保証する。 要素が CLS 非準拠の場合は、通常、警告が表示されます。
 
@@ -2788,7 +2788,7 @@ End Class
 
 ## <a name="cross-language-interoperability"></a>言語間の相互運用性
 
-言語に依存しないということは、いくつか意味があります。 1 つには、ある言語で記述された型を、別の言語で記述されたアプリからシームレスに使用できることを意味します。 また、複数の言語で記述されたコードを 1 つの .NET .NET Framework アセンブリにまとめることもできます。ここでは、この点について焦点を当てて説明します。
+言語に依存しないということは、いくつか意味があります。 1 つには、ある言語で記述された型を、別の言語で記述されたアプリからシームレスに使用できることを意味します。 また、この記事での焦点になりますが、複数の言語で記述されたコードを 1 つの .NET アセンブリにまとめることもできます。
 
 次の例では、`NumericLib` および `StringLib` という 2 つのクラスを含む Utilities.dll という名前のクラス ライブラリを作成して言語間の相互運用性を示します。 `NumericLib` クラスは C# で記述され、`StringLib` クラスは Visual Basic で記述されています。 以下は `StringUtil.vb` のソース コードで、`StringLib` クラスに `ToTitleCase` という単一のメンバーが含まれます。
 

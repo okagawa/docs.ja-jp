@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30043
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
-ms.openlocfilehash: af436b8fd57ff0d2747c766a64af175760931009
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: ad39ade294b362b20f2dfb93455445bf41d056cd
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873897"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163325"
 ---
-# <a name="keyword-is-valid-only-within-an-instance-method"></a>'\<keyword>' は、インスタンス メソッド内でのみ有効です。
+# <a name="bc30043-keyword-is-valid-only-within-an-instance-method"></a>BC30043: '\<keyword>' はインスタンス メソッド内でのみ有効です
 
-`Me`、`MyClass`、および `MyBase` キーワードは、特定のクラス インスタンスを参照します。 それらを共有の `Function` または `Sub` プロシージャ内で使用することはできません。  
-  
- **エラー ID:** BC30043  
-  
-## <a name="to-correct-this-error"></a>このエラーを解決するには  
-  
-- プロシージャからキーワードを削除するか、プロシージャ宣言から `Shared` キーワードを削除します。  
-  
+`Me`、`MyClass`、および `MyBase` キーワードは、特定のクラス インスタンスを参照します。 それらを共有の `Function` または `Sub` プロシージャ内で使用することはできません。
+
+"*エラー ID:* " * BC30043
+
+## <a name="to-correct-this-error"></a>このエラーを解決するには
+
+- プロシージャからキーワードを削除するか、プロシージャ宣言から `Shared` キーワードを削除します。
+
 ## <a name="see-also"></a>関連項目
 
 - [オブジェクト変数の代入](../../programming-guide/language-features/variables/object-variable-assignment.md)

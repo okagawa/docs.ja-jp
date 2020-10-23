@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: cf4449618c2b57f21855354f2250d41a403b4d57
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 9523ba99f877fde7207042ecb8d28548168a68cb
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381646"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162727"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>型の値の等価性を定義する方法 (C# プログラミング ガイド)
 
@@ -32,9 +32,9 @@ ms.locfileid: "87381646"
   
 5. 非 null 値は null と等しくありません。 ただし、CLR ではすべてのメソッド呼び出しで null がチェックされ、`this` 参照が null の場合、`NullReferenceException` がスローされます。 そのため、`x.Equals(y)` では、`x` が null のときに例外がスローされます。 それにより、`Equals` の引数に基づき、ルール 1 または 2 が破られます。
 
- 構造体を定義すると、<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> メソッドの <xref:System.ValueType?displayProperty=nameWithType> オーバーライドから継承された値の等価性が既定で実装されます。 この実装では、リフレクションを使用して、型のフィールドとプロパティをすべて調べます。 この実装によって正しい結果が生成されますが、その型専用に記述したカスタム実装と比較すると、処理にかなり時間がかかります。  
+構造体を定義すると、<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> メソッドの <xref:System.ValueType?displayProperty=nameWithType> オーバーライドから継承された値の等価性が既定で実装されます。 この実装では、リフレクションを使用して、型のフィールドとプロパティをすべて調べます。 この実装によって正しい結果が生成されますが、その型専用に記述したカスタム実装と比較すると、処理にかなり時間がかかります。  
   
- 値の等価性に関する実装の詳細は、クラスと構造体で異なりますが、 等価性を実装するための基本的な手順については、両方とも同じです。  
+値の等価性に関する実装の詳細は、クラスと構造体で異なりますが、 等価性を実装するための基本的な手順については、両方とも同じです。  
   
 1. [仮想](../../language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> メソッドをオーバーライドします。 ほとんどの場合、`bool Equals( object obj )` の実装には、<xref:System.IEquatable%601?displayProperty=nameWithType> インターフェイスの実装である型固有の `Equals` メソッドを呼び出すだけで済みます (手順 2 を参照)。  
   
@@ -45,29 +45,30 @@ ms.locfileid: "87381646"
 4. 値の等価性を持つ 2 つのオブジェクトによって同じハッシュ コードが生成されるように、<xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> をオーバーライドします。  
   
 5. 省略可能:"大なり" または "小なり" の定義をサポートするには、型に対して <xref:System.IComparable%601> インターフェイスを実装したうえで、[<=](../../language-reference/operators/comparison-operators.md#less-than-or-equal-operator-) および [>=](../../language-reference/operators/comparison-operators.md#greater-than-or-equal-operator-) 演算子をオーバーロードします。  
-  
- 次に示す最初の例は、クラスの実装です。 2 番目の例は、構造体の実装を示しています。  
 
-## <a name="example"></a>例
+> [!NOTE]
+> C# 9.0 以降、レコードを利用し、不要な定型コードなしで値の等価性セマンティクスを取得できます。
 
- 次の例は、クラス (参照型) で値の等価性を実装する方法を示しています。  
-  
- [!code-csharp[csProgGuideStatements#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#19)]  
-  
- クラス (参照型) の場合、両方の <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> メソッドの既定の実装で、参照の等価性の比較は実行されますが、値の等価性のチェックは実行されません。 実装が仮想メソッドをオーバーライドする場合、その目的は、仮想メソッドに値の等価性のセマンティクスを提供することです。  
-  
- `==` 演算子と `!=` 演算子は、オーバーロードされなくてもクラスで使用できます。 ただし、既定の動作として参照の等価性のチェックが実行されます。 クラスで `Equals` メソッドをオーバーロードする場合は、`==` 演算子と `!=` 演算子をオーバーロードすることをお勧めしますが、必須ではありません。  
+## <a name="class-example"></a>クラスの例
 
-## <a name="example"></a>例
+次の例は、クラス (参照型) で値の等価性を実装する方法を示しています。
 
- 次の例は、構造体 (値型) で値の等価性を実装する方法を示しています。  
+[!code-csharp[csProgGuideStatements#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#19)]
+
+クラス (参照型) の場合、両方の <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> メソッドの既定の実装で、参照の等価性の比較は実行されますが、値の等価性のチェックは実行されません。 実装が仮想メソッドをオーバーライドする場合、その目的は、仮想メソッドに値の等価性のセマンティクスを提供することです。
+
+`==` 演算子と `!=` 演算子は、オーバーロードされなくてもクラスで使用できます。 ただし、既定の動作として参照の等価性のチェックが実行されます。 クラスで `Equals` メソッドをオーバーロードする場合は、`==` 演算子と `!=` 演算子をオーバーロードすることをお勧めしますが、必須ではありません。
+
+## <a name="struct-example"></a>構造体の例
+
+次の例は、構造体 (値型) で値の等価性を実装する方法を示しています。
+
+[!code-csharp[csProgGuideStatements#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#20)]
   
- [!code-csharp[csProgGuideStatements#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#20)]  
+構造体の場合、<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> (<xref:System.ValueType?displayProperty=nameWithType> でオーバーライドされるバージョン) の既定の実装で、リフレクションを使用して値の等価性のチェックが実行され、型のすべてのフィールドの値が比較されます。 実装が構造体の仮想 `Equals` メソッドをオーバーライドする場合、その目的は、値の等価性のチェックをより効率的に実行することと、オプションで、構造体のフィールドまたはプロパティの一部のサブセットに基づいて比較を行うことです。
   
- 構造体の場合、<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> (<xref:System.ValueType?displayProperty=nameWithType> でオーバーライドされるバージョン) の既定の実装で、リフレクションを使用して値の等価性のチェックが実行され、型のすべてのフィールドの値が比較されます。 実装が構造体の仮想 `Equals` メソッドをオーバーライドする場合、その目的は、値の等価性のチェックをより効率的に実行することと、オプションで、構造体のフィールドまたはプロパティの一部のサブセットに基づいて比較を行うことです。  
-  
- [==](../../language-reference/operators/equality-operators.md#equality-operator-) 演算子および [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) 演算子は、構造体が明示的にその演算子をオーバーロードしない限り、その構造体を操作できません。  
-  
+[==](../../language-reference/operators/equality-operators.md#equality-operator-) 演算子および [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) 演算子は、構造体が明示的にその演算子をオーバーロードしない限り、その構造体を操作できません。
+
 ## <a name="see-also"></a>関連項目
 
 - [等価比較](equality-comparisons.md)

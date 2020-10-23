@@ -3,12 +3,12 @@ title: null 許容参照型
 description: この記事では、C# 8.0 で追加された null 許容参照型の概要を説明します。 新規および既存のプロジェクトにおいて、その機能によって null 参照例外に対する安全性がどのように提供されるかを学習します。
 ms.technology: csharp-null-safety
 ms.date: 04/21/2020
-ms.openlocfilehash: 6d068760805a21e41712a4f70735bef41ce2052f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9c253d02c287d7a113536ac148b352486d450cc2
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446673"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160881"
 ---
 # <a name="nullable-reference-types"></a>null 許容参照型
 
@@ -124,6 +124,84 @@ null 許容警告コンテキストで **null かもしれない**変数また�
 ## <a name="attributes-describe-apis"></a>属性で API を記述する
 
 引数または戻り値を null にできるとき、またはできないときについての詳細情報をコンパイラに提供する属性を、API に追加します。 これらの属性の詳細については、[null 許容属性](language-reference/attributes/nullable-analysis.md)について説明されている言語リファレンスの記事を参照してください。 これらの属性は、現在および今後のリリースで .NET ライブラリに追加されます。 最もよく使用される API が最初に更新されます。
+
+## <a name="known-pitfalls"></a>既知の落とし穴
+
+参照型を含む配列および構造体は、null 許容参照型機能の既知の落とし穴です。
+
+### <a name="structs"></a>構造体
+
+null 非許容の参照型を含む構造体により、警告なしで `default` を割り当てることができます。 次の例を確認してください。
+
+```csharp
+using System;
+
+#nullable enable
+
+public struct Student
+{
+    public string FirstName;
+    public string? MiddleName;
+    public string LastName;
+}
+
+public static class Program
+{
+    public static void PrintStudent(Student student)
+    {
+        Console.WriteLine($"First name: {student.FirstName.ToUpper()}");
+        Console.WriteLine($"Middle name: {student.MiddleName.ToUpper()}");
+        Console.WriteLine($"Last name: {student.LastName.ToUpper()}");
+    }
+
+    public static void Main() => PrintStudent(default);
+}
+```
+
+前の例では `PrintStudent(default)` に警告はありませんが、null 非許容の参照型 `FirstName` と `LastName` は null です。
+
+もう 1 つの一般的なケースは、ジェネリック構造体を扱う場合です。 次の例を確認してください。
+
+```csharp
+#nullable enable
+
+public struct Foo<T>
+{
+    public T Bar { get; set; }
+}
+
+public static class Program
+{
+    public static void Main()
+    {
+        string s = default(Foo<string>).Bar;
+    }
+}
+```
+
+前の例では、プロパティ `Bar` は実行時に `null` になり、null 非許容の文字列には警告なしで割り当てられます。
+
+### <a name="arrays"></a>配列
+
+配列も null 許容参照型の既知の落とし穴です。 警告が生成されない次の例を考えてみます。
+
+```csharp
+using System;
+
+#nullable enable
+
+public static class Program
+{
+    public static void Main()
+    {
+        string[] values = new string[10];
+        string s = values[0];
+        Console.WriteLine(s.ToUpper());
+    }
+}
+```
+
+前の例では、null 非許容の文字列が保持され、その要素がすべて null に初期化されることが配列の宣言からわかります。 その後、変数 `s` に null 値が割り当てられます (配列の最初の要素)。 最後に、変数 `s` が逆参照され、ランタイム例外が発生します。
 
 ## <a name="see-also"></a>関連項目
 

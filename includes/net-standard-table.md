@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 9e95db8a1530fabd30b5344c87728b9210c0ad69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 72b371dc2a6475efa2e0353f87dbdfa96c4c7c0e
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74802833"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050398"
 ---
 | .NET Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]              | [1.6]              | [2.0]               | [2.1] |
 |----------------------------|--------|--------|-------|-------|-------|--------------------|--------------------|---------------------|---------------------
-| .NET Core                  | 1    | 1    | 1   | 1   | 1   | 1                | 1                | 2.0                 | 3.0 |
+| .NET Core と .NET 5       | 1    | 1    | 1   | 1   | 1   | 1                | 1                | 2.0                 | 3.0 |
 | .NET Framework <sup>1</sup>| 4.5    | 4.5    | 4.5.1 | 4.6   | 4.6.1 | 4.6.1 <sup>2</sup> | 4.6.1 <sup>2</sup> | 4.6.1 <sup>2</sup>  | 該当なし<sup>3</sup> |
 | Mono                       | 4.6    | 4.6    | 4.6   | 4.6   | 4.6   | 4.6                | 4.6                | 5.4                 | 6.4 |
 | Xamarin.iOS                | 10.0   | 10.0   | 10.0  | 10.0  | 10.0  | 10.0               | 10.0               | 10.14               | 12.16 |
@@ -21,7 +21,7 @@ ms.locfileid: "74802833"
 
 <sup>2 ここに挙げたバージョンは、特定の .NET Standard ライブラリを適用できるかどうかの判断で NuGet が使用する規則を表します。NuGet では .NET Framework 4.6.1 が .NET Standard 1.5 から 2.0 をサポートすると見なしますが、.NET Framework 4.6.1 プロジェクトのそれらのバージョンでビルドされた .NET Standard ライブラリを使用する際にいくつかの問題が発生します。そのようなライブラリを使用する必要がある .NET Framework プロジェクトでは、.NET Framework 4.7.2 以降を対象とするプロジェクトにアップグレードすることをお勧めします。</sup>
 
-<sup>3 .NET Framework では、.NET Standard 2.1 以降のバージョンがサポートされません。詳細については、[.NET Standard 2.1 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-1/)</sup>に関するページを参照してください。
+<sup>3 .NET Framework により .NET Standard 2.1 はサポートされていません。詳細については、[.NET Standard 2.1 のお知らせ](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-1/)に関するページを参照してください。</sup>
 
 - 列は .NET Standard バージョンです。 各見出しセルは、そのバージョンの .NET Standard に追加された API に関するドキュメントのリンクになっています。
 - 行は、各 .NET 実装です。

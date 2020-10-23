@@ -7,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - BC30014
 ms.assetid: 5215585e-2efa-485a-9efe-9833a1cc83a0
-ms.openlocfilehash: 06af269508db6a2b258251272fdc18ef20eb1c0f
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 142c142afe0d9be0ecd4d8a0340f0f1957b20470
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874440"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162779"
 ---
-# <a name="elseif-must-be-preceded-by-a-matching-if-or-elseif"></a>'#Else' の前には、対応する '#If' または '#ElseIf' が必要です。
+# <a name="bc30014-elseif-must-be-preceded-by-a-matching-if-or-elseif"></a>BC30014: '#ElseIf' の前には、対応する '#If' または '#ElseIf' が必要です
 
-`#ElseIf` は条件付きコンパイル ディレクティブです。 `#If` または `#ElseIf` 句の前には、対応する `#ElseIf` が必要です。  
-  
- **エラー ID:** BC30014  
-  
-## <a name="to-correct-this-error"></a>このエラーを解決するには  
-  
-1. 先行する `#If` または `#ElseIf` が、中間の条件付きコンパイル ブロックまたは正しくない位置にある `#ElseIf` によって、この `#End If` と分離されていないことを確認します。  
-  
-2. `#ElseIf` の前に `#Else` ディレクティブがある場合は、`#Else` を削除するか、`#ElseIf` に変更します。  
-  
-3. 他のすべての順序が正しい場合、 `#If` ディレクティブを条件付きコンパイル ブロックの先頭に追加します。  
-  
+`#ElseIf` は条件付きコンパイル ディレクティブです。 `#If` または `#ElseIf` 句の前には、対応する `#ElseIf` が必要です。
+
+ **エラー ID:** BC30014
+
+## <a name="to-correct-this-error"></a>このエラーを解決するには
+
+1. 先行する `#If` または `#ElseIf` が、中間の条件付きコンパイル ブロックまたは正しくない位置にある `#ElseIf` によって、この `#End If` と分離されていないことを確認します。
+
+2. `#ElseIf` の前に `#Else` ディレクティブがある場合は、`#Else` を削除するか、`#ElseIf` に変更します。
+
+3. 他のすべての順序が正しい場合、 `#If` ディレクティブを条件付きコンパイル ブロックの先頭に追加します。
+
 ## <a name="see-also"></a>関連項目
 
 - [#If...Then...#Else ディレクティブ](../directives/if-then-else-directives.md)

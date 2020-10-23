@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC36563
 ms.assetid: 3ca8b873-e98d-419b-95f2-d75bd2a9eb6c
-ms.openlocfilehash: 45df056b71e3536dabc9f7725f623e818c10075d
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 62801552a39d29983c322e9a95a0494f155a2633
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873768"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160419"
 ---
-# <a name="method-does-not-have-a-signature-compatible-with-the-delegate"></a>メソッドに、デリゲートと互換性のあるシグネチャがありません。
+# <a name="bc36563-method-does-not-have-a-signature-compatible-with-the-delegate"></a>BC36563:メソッドに、デリゲートと互換性のあるシグネチャがありません。
 
-使用しようとしているメソッドとデリゲートのシグネチャに互換性がありません。 `Delegate` ステートメントでは、デリゲート クラスのパラメーターの型と戻り値の型を定義します。 互換性のある型と戻り値の型の一致するパラメーターを持つ任意のプロシージャを使用して、このデリゲート型のインスタンスを作成できます。  
-  
- **エラー ID**: BC36563  
-  
+使用しようとしているメソッドとデリゲートのシグネチャに互換性がありません。 `Delegate` ステートメントでは、デリゲート クラスのパラメーターの型と戻り値の型を定義します。 互換性のある型と戻り値の型の一致するパラメーターを持つ任意のプロシージャを使用して、このデリゲート型のインスタンスを作成できます。
+
+ **エラー ID:** BC36563
+
 ## <a name="see-also"></a>関連項目
 
 - [AddressOf 演算子](../operators/addressof-operator.md)

@@ -1,14 +1,14 @@
 ---
 title: .NET 用語集
 description: .NET のドキュメントで使われている用語からいくつか選択してその意味を説明します。
-ms.date: 01/22/2019
+ms.date: 10/13/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: b79580baa12cc8081346678f06d49a9d0455375c
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 1d9330b68f80da934777cb3aee6d2b3cb52c8256
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89415011"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050345"
 ---
 # <a name="net-glossary"></a>.NET 用語集
 
@@ -21,6 +21,18 @@ Ahead Of Time コンパイラ。
 [JIT](#jit) と同様に、このコンパイラも [IL](#il) をマシン コードに変換します。 JIT コンパイルとは異なり、AOT コンパイルはアプリケーションが実行される前に行われ、通常は、別のコンピューターで実行されます。 AOT ツール チェーンは実行時にコンパイルされないので、コンパイルに費やされる時間を最小限に抑える必要はありません。 つまり、より多くの時間を最適化に費やすことができます。 AOT のコンテキストはアプリケーション全体であるため、AOT コンパイラはモジュール間のリンクとプログラム全体の分析も実行します。これは、すべての参照が追跡されて、1 つの実行可能ファイルが生成されることを意味します。
 
 「[CoreRT](#corert)」と「[.NET Native](#net-native)」を参照してください。
+
+## <a name="app-model"></a>アプリ モデル
+
+[ワークロード](#workload)固有の API。 次に例をいくつか示します。
+
+* ASP.NET
+* ASP.NET Web API
+* Entity Framework (EF)
+* Windows Presentation Foundation (WPF)
+* Windows Communication Foundation (WCF)
+* Windows Workflow Foundation (WF)
+* Windows フォーム (WinForms)
 
 ## <a name="aspnet"></a>ASP.NET
 
@@ -291,6 +303,12 @@ NuGet パッケージ &mdash; または単にパッケージ &mdash; は、同�
 ユニバーサル Windows プラットフォーム (Universal Windows Platform)。
 
 モノのインターネット (IoT) のために最新のタッチ対応の Windows アプリケーションとソフトウェアを構築するために使われる .NET の実装。 PC、タブレット、携帯電話、Xbox など、ターゲットにされる可能性があるさまざまな種類のデバイスを統一するように設計されています。 UWP は、一元的なアプリ ストア、実行環境 (AppContainer)、Win32 の代わりに使う Windows API のセット (WinRT) など、多くのサービスを提供します。 アプリは、C++、C#、Visual Basic、および JavaScript で記述することができます。 C# と Visual Basic を使用する場合は、.NET 5 (および .NET Core) 以降のバージョンで .NET API が提供されます。
+
+## <a name="workload"></a>ワークロード
+
+誰かがビルドしているアプリの種類。 [アプリ モデル](#app-model)よりも一般的です。 たとえば、これを含むすべての .NET ドキュメント ページの上部には、 **[ワークロード]** のドロップダウン リストがあります。これにより、 **[Web]** 、 **[モバイル]** 、 **[クラウド]** 、 **[デスクトップ]** 、 **[機械学習 \& データ]** 用のドキュメントに切り替えることができます。
+
+コンテキストによっては、"*ワークロード*" は、特定の種類のアプリをサポートするために、インストールできる Visual Studio 機能のコレクションを指します。 例については、「[ワークロードを選択する](../core/install/windows.md#select-a-workload)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

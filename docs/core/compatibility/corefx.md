@@ -2,12 +2,12 @@
 title: 基本クラス ライブラリの破壊的変更
 description: Core .NET ライブラリにおける破壊的変更の一覧を示します。
 ms.date: 07/27/2020
-ms.openlocfilehash: d4deef295479b1f32bd72a69369a11c7375835f4
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 3ecf0e81a3adef097aafb760dc44498d7263f0b6
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955560"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050567"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Core .NET ライブラリの破壊的変更
 
@@ -17,6 +17,7 @@ Core .NET ライブラリでは、.NET Core で使用されるプリミティブ
 
 | 互換性に影響する変更点 | 導入されたバージョン |
 | - | :-: |
+| [FrameworkDescription の値が .NET Core ではなく .NET になる](#frameworkdescriptions-value-is-net-instead-of-net-core) | 5.0 |
 | [単一ファイル発行形式のアセンブリ関連 API 動作の変更](#assembly-related-api-behavior-changes-for-single-file-publishing-format) | 5.0 |
 | [Activity.Tags 内のタグの順序が逆になっている](#order-of-tags-in-activitytags-is-reversed) | 5.0 |
 | [RC1 でパラメーター名が変更されている](#parameter-names-changed-in-rc1) | 5.0 |
@@ -57,6 +58,10 @@ Core .NET ライブラリでは、.NET Core で使用されるプリミティブ
 | [開始されなかったプロセスについて Process.StartInfo が InvalidOperationException をスローする](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [frameworkdescription-returns-net-not-net-core](../../../includes/core-changes/corefx/5.0/frameworkdescription-returns-net-not-net-core.md)]
+
+***
 
 [!INCLUDE [assembly-api-behavior-changes-for-single-file-publish](../../../includes/core-changes/corefx/5.0/assembly-api-behavior-changes-for-single-file-publish.md)]
 

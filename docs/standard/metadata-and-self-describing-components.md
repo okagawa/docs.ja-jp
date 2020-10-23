@@ -13,18 +13,18 @@ helpviewer_keywords:
 - metadata, about metadata
 - common language runtime, metadata
 - PE files, metadata
-- components [.NET Framework], metadata
+- components [.NET], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-ms.openlocfilehash: 5327bd70b05bac8970fa9802fb15e94ba5f686c8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2ed09882ba722ace0b7f7be2a35fffc362af2742
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290059"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92159353"
 ---
 # <a name="metadata-and-self-describing-components"></a>メタデータと自己言及的なコンポーネント
 
-以前は、ある 1 つの言語で記述されたソフトウェア コンポーネント (.exe または .dll) で、別の言語で記述されたコンポーネントを使用するのは簡単ではありませんでした。 COM により、この問題が解決するための手段が提供されるようになりました。 .NET Framework では、コンパイラからすべてのモジュールやアセンブリに追加の宣言情報を挿入できるようになり、コンポーネントの相互運用性が大幅に強化されています。 メタデータと呼ばれるこの情報により、コンポーネント間のシームレスな相互作用がサポートされます。
+以前は、ある 1 つの言語で記述されたソフトウェア コンポーネント (.exe または .dll) で、別の言語で記述されたコンポーネントを使用するのは簡単ではありませんでした。 COM により、この問題が解決するための手段が提供されるようになりました。 .NET により、コンパイラからすべてのモジュールやアセンブリに追加の宣言情報を挿入できるようすることで、コンポーネントの相互運用性がより簡易化されています。 メタデータと呼ばれるこの情報により、コンポーネント間のシームレスな相互作用がサポートされます。
 
  メタデータはプログラムを説明するバイナリ情報であり、共通言語ランタイムのポータブル実行可能 (PE) ファイルまたはメモリのいずれかに格納されます。 コードを PE ファイルとしてコンパイルすると、PE ファイルの特定の部分にメタデータが挿入され、コードは Microsoft Intermediate Language (MSIL) に変換されて PE ファイル内の別の部分に挿入されます。 モジュール内またはアセンブリ内で定義され、参照されているすべての型およびメンバーは、メタデータ内部に記述されます。 コードを実行すると、ランタイムはメタデータをメモリに読み込み、コードのクラス、メンバー、継承などの情報を検索するためにメタデータを参照します。
 
@@ -52,7 +52,7 @@ ms.locfileid: "84290059"
 
 ## <a name="benefits-of-metadata"></a>メタデータの利点
 
-メタデータは、プログラミング モデルを簡素化するうえで重要な役割を果たします。これにより、インターフェイス定義言語 (IDL: Interface Definition Language) ファイル、ヘッダー ファイル、およびその他のコンポーネント参照の外部メソッドは一切不要になります。 メタデータを使用すると、.NET Framework の各言語は、開発者やユーザーからは見えない、言語に依存しない形式で自動的に記述されるようになります。 また、属性を使用することにより、メタデータを拡張することもできます。 メタデータの主な利点は、次のとおりです。
+メタデータは、プログラミング モデルを簡素化するうえで重要な役割を果たします。これにより、インターフェイス定義言語 (IDL: Interface Definition Language) ファイル、ヘッダー ファイル、およびその他のコンポーネント参照の外部メソッドは一切不要になります。 メタデータを使用すると、.NET の各言語は、開発者やユーザーからは見えない、言語に依存しない形式で自動的に記述されるようになります。 また、属性を使用することにより、メタデータを拡張することもできます。 メタデータの主な利点は、次のとおりです。
 
 - 自己言及的なファイル
 
@@ -64,11 +64,11 @@ ms.locfileid: "84290059"
 
 - 属性。
 
-  .NET Framework を使用すると、コンパイル済みファイル内で "属性" と呼ばれる特定の種類のメタデータを宣言できます。 属性は、.NET Framework 全体で使用され、実行時のプログラムの動作を詳細に制御します。 また、ユーザー定義のカスタム属性によって、独自に作成したメタデータを .NET Framework のファイルに挿入できます。 詳細については、「[属性](attributes/index.md)」を参照してください。
+  .NET を使用すると、コンパイル済みファイル内で "属性" と呼ばれる特定の種類のメタデータを宣言できます。 属性は、.NET 全体で使用され、実行時のプログラムの動作を詳細に制御します。 また、ユーザー定義のカスタム属性によって、独自に作成したメタデータを .NET のファイルに挿入できます。 詳細については、「[属性](attributes/index.md)」を参照してください。
 
 ## <a name="metadata-and-the-pe-file-structure"></a>メタデータと PE ファイルの構造
 
-メタデータと Microsoft Intermediate Language (MSIL) は、それぞれ、.NET Framework のポータブル実行可能 (PE) ファイルの別のセクションに格納されます。 ファイルのメタデータ部分には、一連のテーブルとヒープ データの構造が格納されています。 MSIL 部分には、PE ファイルのメタデータ部分を参照する MSIL とメタデータ トークンが格納されています。 コードの MSIL を表示する [MSIL 逆アセンブラー (Ildasm.exe)](../framework/tools/ildasm-exe-il-disassembler.md) のようなツールを使用すると、メタデータ トークンが表示される場合があります。
+メタデータと Microsoft Intermediate Language (MSIL) は、それぞれ、.NET のポータブル実行可能 (PE) ファイルの別のセクションに格納されます。 ファイルのメタデータ部分には、一連のテーブルとヒープ データの構造が格納されています。 MSIL 部分には、PE ファイルのメタデータ部分を参照する MSIL とメタデータ トークンが格納されています。 コードの MSIL を表示する [MSIL 逆アセンブラー (Ildasm.exe)](../framework/tools/ildasm-exe-il-disassembler.md) のようなツールを使用すると、メタデータ トークンが表示される場合があります。
 
 ### <a name="metadata-tables-and-heaps"></a>メタデータのテーブルおよびヒープ
 
@@ -134,7 +134,7 @@ public class MyApp
 
 このコードを実行すると、ランタイムがモジュールをメモリに読み込み、このクラスのメタデータを調べます。 モジュールを読み込んだ後、ランタイムはメソッドの Microsoft Intermediate Language (MSIL) ストリームを詳細に分析して、そのストリームを高速のネイティブ機械語命令に変換します。 ランタイムはジャスト イン タイム (JIT) コンパイラを使用して、それぞれのメソッドを必要なときに 1 つずつ、MSIL 命令からネイティブ マシン語コードに変換します。
 
-上記のコードの `Main` 関数によって生成された MSIL の一部の例を次に示します。 MSIL とメタデータは、[MSIL 逆アセンブラー (Ildasm.exe)](../framework/tools/ildasm-exe-il-disassembler.md) を使用することにより、任意の .NET Framework アプリケーションから表示できます。
+上記のコードの `Main` 関数によって生成された MSIL の一部の例を次に示します。 MSIL とメタデータは、[MSIL 逆アセンブラー (Ildasm.exe)](../framework/tools/ildasm-exe-il-disassembler.md) を使用することにより、任意の .NET アプリケーションから表示できます。
 
 ```console
 .entrypoint

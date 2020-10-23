@@ -7,33 +7,33 @@ f1_keywords:
 helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
-ms.openlocfilehash: 78b47601bf0a013d079f638f6dac27511e01aec4
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d605243c213166f20592fdc440a3362f957ebbf2
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874206"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163065"
 ---
-# <a name="expression-of-type-type-is-not-queryable"></a>型 \<type> の式はクエリ不可能です
+# <a name="bc36593-expression-of-type-type-is-not-queryable"></a>BC36593:型 \<type> の式はクエリ不可能です
 
-型 \<type> の式はクエリ不可能です。 LINQ プロバイダーに対してアセンブリ参照や名前空間インポートが不足していないことを確認してください。  
-  
- クエリ可能型は、<xref:System.Linq>、<xref:System.Data.Linq>、および <xref:System.Xml.Linq> 名前空間で定義します。 LINQ クエリを実行するには、これらの名前空間の 1 つ以上をインポートする必要があります。  
-  
- <xref:System.Linq> 名前空間により、LINQ を使用してコレクションや配列などのオブジェクトに対してクエリを実行できます。  
-  
- <xref:System.Data.Linq> 名前空間により、LINQ を使用して ADO.NET データセットと SQL Server データベースに対してクエリを実行できます。  
-  
- <xref:System.Xml.Linq> 名前空間により、LINQ を使用して XML に対してクエリを実行し、Visual Basic の XML 機能を使用できます。  
-  
- **エラー ID:** BC36593  
-  
-## <a name="to-correct-this-error"></a>このエラーを解決するには  
-  
-1. <xref:System.Linq>、<xref:System.Data.Linq>、または <xref:System.Xml.Linq> 名前空間の `Import` ステートメントをコード ファイルに追加します。 プロジェクト デザイナー (**マイ プロジェクト**) の **[参照]** ページを使用して、プロジェクトの名前空間をインポートすることもできます。  
-  
-2. クエリのソースとして指定した型がクエリ可能型であることを確認します。 つまり、<xref:System.Collections.Generic.IEnumerable%601> または <xref:System.Linq.IQueryable%601> を実装する型です。  
-  
+型 \<type> の式はクエリ不可能です。 LINQ プロバイダーに対してアセンブリ参照や名前空間インポートが不足していないことを確認してください。
+
+ クエリ可能型は、<xref:System.Linq>、<xref:System.Data.Linq>、および <xref:System.Xml.Linq> 名前空間で定義します。 LINQ クエリを実行するには、これらの名前空間の 1 つ以上をインポートする必要があります。
+
+ <xref:System.Linq> 名前空間により、LINQ を使用してコレクションや配列などのオブジェクトに対してクエリを実行できます。
+
+ <xref:System.Data.Linq> 名前空間により、LINQ を使用して ADO.NET データセットと SQL Server データベースに対してクエリを実行できます。
+
+ <xref:System.Xml.Linq> 名前空間により、LINQ を使用して XML に対してクエリを実行し、Visual Basic の XML 機能を使用できます。
+
+ **エラー ID:** BC36593
+
+## <a name="to-correct-this-error"></a>このエラーを解決するには
+
+1. <xref:System.Linq>、<xref:System.Data.Linq>、または <xref:System.Xml.Linq> 名前空間の `Import` ステートメントをコード ファイルに追加します。 プロジェクト デザイナー (**マイ プロジェクト**) の **[参照]** ページを使用して、プロジェクトの名前空間をインポートすることもできます。
+
+2. クエリのソースとして指定した型がクエリ可能型であることを確認します。 つまり、<xref:System.Collections.Generic.IEnumerable%601> または <xref:System.Linq.IQueryable%601> を実装する型です。
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq>

@@ -2,12 +2,12 @@
 title: 暗号での破壊的変更
 description: .NET Core で暗号化に関連する破壊的変更の一覧を示します。
 ms.date: 04/22/2020
-ms.openlocfilehash: 667d983fc6f2592c2169f97d328cd7947c8bcc81
-ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
+ms.openlocfilehash: 6f37e5caacadc276562e63a728162c6b26f2e435
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91406149"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92159555"
 ---
 # <a name="cryptography-breaking-changes"></a>暗号での破壊的変更
 
@@ -15,6 +15,8 @@ ms.locfileid: "91406149"
 
 | 互換性に影響する変更点 | 導入されたバージョン |
 | - | :-: |
+| [暗号抽象化の既定の実装のインスタンス化はサポートされていない](#instantiating-default-implementations-of-cryptographic-abstractions-is-not-supported) | 5.0 |
+| [Linux 上の .NET 用の既定の TLS 暗号スイート](#default-tls-cipher-suites-for-net-on-linux) | 5.0 |
 | [Blazor WebAssembly で System.Security.Cryptography API がサポートされない](#systemsecuritycryptography-apis-not-supported-on-blazor-webassembly) | 5.0 |
 | [System.Security.Cryptography.Oid は機能的に初期化専用](#systemsecuritycryptographyoid-is-functionally-init-only) | 5.0 |
 | [Linux で BEGIN TRUSTED CERTIFICATE 構文がサポートされなくなった](#begin-trusted-certificate-syntax-no-longer-supported-for-root-certificates-on-linux) | 3.0 |
@@ -25,6 +27,14 @@ ms.locfileid: "91406149"
 | [SignedCms.ComputeSignature のブール型パラメーターの尊重](#boolean-parameter-of-signedcmscomputesignature-is-respected) | 2.1 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [instantiating-default-implementations-of-cryptographic-abstractions-not-supported](../../../includes/core-changes/cryptography/5.0/instantiating-default-implementations-of-cryptographic-abstractions-not-supported.md)]
+
+***
+
+[!INCLUDE [default-cipher-suites-for-tls-on-linux](../../../includes/core-changes/cryptography/5.0/default-cipher-suites-for-tls-on-linux.md)]
+
+***
 
 [!INCLUDE[Cryptography APIs not supported on Blazor WebAssembly](~/includes/core-changes/cryptography/5.0/cryptography-apis-not-supported-on-blazor-webassembly.md)]
 

@@ -2,49 +2,60 @@
 title: .NET アーキテクチャ コンポーネント
 description: .NET Standard、.NET 実装、.NET ランタイム、ツールなど、.NET アーキテクチャ コンポーネントについて説明します。
 author: cartermp
-ms.date: 08/23/2017
+ms.date: 10/05/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: fc34cf35e82e3a401f32561aa239996c7697aa03
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0cdd2485e81626ffc9d17380427c29fee0f82083
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547676"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050254"
 ---
 # <a name="net-architectural-components"></a>.NET アーキテクチャ コンポーネント
 
-.NET アプリは、1 つまたは複数の *.NET 実装*向けに開発され、実行されます。  .NET 実装には、.NET Framework、.NET Core、および Mono が含まれます。 すべての .NET 実装に共通する API 仕様があり、それを.NET Standard と呼びます。 この記事では、それぞれの概念について簡単に説明します。
+.NET アプリは、1 つまたは複数の *.NET 実装*向けに開発され、実行されます。 .NET の実装には、.NET Framework、.NET 5 (および .NET Core)、Mono が含まれます。 .NET の複数の実装に共通する API 仕様があり、.NET Standard と呼ばれます。 この記事では、それぞれの概念について簡単に説明します。
 
 ## <a name="net-standard"></a>.NET Standard
 
-.NET Standard は、.NET 実装の基本クラス ライブラリで実装されている API のセットです。 さらに厳密に言うと、コードのコンパイル対象である統一されたコントラクトのセットを構成する .NET API の仕様です。 これらのコントラクトが各 .NET 実装に実装されています。 これにより異なる .NET 実装間で移植することができるため、実質的にコードをどこでも実行できるようになります。
+.NET Standard は、.NET 実装の基本クラス ライブラリで実装されている API のセットです。 さらに厳密に言うと、コードのコンパイル対象である統一されたコントラクトのセットを構成する .NET API の仕様です。 これらのコントラクトが、.NET の複数の実装に実装されています。
 
-.NET Standard は、[ターゲット フレームワーク](glossary.md#target-framework)でもあります。 コードで .NET Standard の 1 つのバージョンをターゲットにした場合、そのバージョンの .NET Standard をサポートするすべての .NET 実装でそのコードを実行できます。
+.NET Standard は、[ターゲット フレームワーク](glossary.md#target-framework)です。 コードで .NET Standard の 1 つのバージョンをターゲットにした場合、そのバージョンの .NET Standard をサポートするすべての .NET 実装でそのコードを実行できます。
 
-.NET Standard とそのターゲットの設定方法については、「[.NET Standard](net-standard.md)」を参照してください。
+.NET Standard は .NET の異なる実装間での移植性を実現するために作成されましたが、現在は、.NET 5 によって、複数のプラットフォームやワークロードの間でコードを共有するための、より優れた方法が提供されています。 詳細については、「[.NET 5 と .NET Standard](net-standard.md#net-5-and-net-standard)」を参照してください。
 
 ## <a name="net-implementations"></a>.NET 実装
 
 各 .NET 実装には、次のコンポーネントが含まれています。
 
-- 1 つまたは複数のランタイム。 次に例を示します。 CLR for .NET Framework、CoreCLR、CoreRT for .NET Core などです。
-- .NET Standard を実装し、他の API も実装する可能性があるクラス ライブラリ。 たとえば、.NET Framework 基本クラス ライブラリや .NET Core 基本クラス ライブラリなどです。
-- 必要に応じて、1 つまたは複数のアプリケーション フレームワーク。 次に例を示します。 .NET Framework と .NET Core には、[ASP.NET](https://www.asp.net/)、[Windows フォーム](/dotnet/desktop/winforms/windows-forms-overview)、[Windows Presentation Foundation (WPF)](/dotnet/desktop/wpf/) が含まれます。
+- 1 つまたは複数のランタイム。 例: .NET Framework CLR、.NET 5 CLR。
+- クラス ライブラリ。 例: .NET Framework 基本クラス ライブラリ、.NET 5 基本クラス ライブラリ。
+- 必要に応じて、1 つまたは複数のアプリケーション フレームワーク。 次に例を示します。 .NET Framework と .NET 5 には、[ASP.NET](https://www.asp.net/)、[Windows フォーム](/dotnet/desktop/winforms/windows-forms-overview)、[Windows Presentation Foundation (WPF)](/dotnet/desktop/wpf/) が含まれています。
 - 必要に応じて、開発ツール。 一部の開発ツールは、複数の実装間で共有されます。
 
-Microsoft が積極的に開発し保守している主要な .NET 実装としては、.NET Core、.NET Framework、Mono、UWP の 4 つがあります。
+Microsoft によって、次の 4 つの .NET 実装がサポートされています。
 
-### <a name="net-core"></a>.NET Core
+- .NET 5 (および .NET Core) 以降のバージョン
+- .NET Framework
+- Mono
+- UWP
 
-.NET Core は .NET のクラスプラットフォーム実装であり、サーバーとクラウドのワークロードをその規模に応じて処理するように設計されています。 Windows、macOS、および Linux で実行されます。 .NET Standard を実装しているので、.NET Standard をターゲットとするすべてのコードを .NET Core 上で実行できます。 [ASP.NET](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core)、[Windows フォーム](/dotnet/desktop/winforms/windows-forms-overview)、[Windows Presentation Foundation (WPF)](/dotnet/desktop/wpf/) はすべて、.NET Core で実行されます。
+今では .NET 5 が主要な実装であり、現在進行中の開発の対象になっています。 .NET 5 は、複数のプラットフォームと、Windows デスクトップ アプリ、クロスプラットフォーム コンソール アプリ、クラウド サービス、Web サイトなどの多くのワークロードをサポートする、単一のコード ベースを基にして構築されています。
 
-.NET Core の詳細については、[.NET Core の概要](../core/introduction.md)に関するページと、[サーバー アプリに .NET Core か .NET Framework を選択する](choosing-core-framework-server.md)方法に関するページを参照してください。
+### <a name="net-5"></a>.NET 5
+
+.NET 5 は .NET のクラスプラットフォームの実装であり、サーバーとクラウドの大規模なワークロードを処理するように設計されています。 また、デスクトップ アプリなどの他のワークロードもサポートされています。 Windows、macOS、および Linux で実行されます。 .NET Standard が実装されているので、.NET Standard をターゲットとするコードは .NET 5 上で実行できます。 [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core)、[Windows フォーム](/dotnet/desktop/winforms/windows-forms-overview)、[Windows Presentation Foundation (WPF)](/dotnet/desktop/wpf/) はすべて、.NET 5 で実行されます。
+
+詳細については、次のリソースを参照してください。
+
+- [.NET の概要](../core/introduction.md)
+- [サーバー アプリ用 .NET 5 と .NET Framework の選択](choosing-core-framework-server.md)
+- [.NET 5 と .NET Standard](net-standard.md#net-5-and-net-standard)
 
 ### <a name="net-framework"></a>.NET Framework
 
 .Net Framework は、2002 年からリリースされている元の .NET 実装です。 バージョン 4.5 以降では .NET Standard が実装されているので、.NET Standard をターゲットとするすべてのコードが .NET Framework 4.5 以降で実行できます。 Windows フォームと WPF での Windows デスクトップ開発用 API など、追加の Windows 固有 API が含まれます。 .NET Framework は、Windows デスクトップ アプリケーション開発用に最適化されています。
 
-.NET Framework について詳しくは、[.NET Framework のガイド](../framework/index.yml)に関するページをご覧ください。
+詳細については、[.NET Framework ガイド](../framework/index.yml)に関する記事を参照してください。
 
 ### <a name="mono"></a>Mono
 
@@ -56,20 +67,20 @@ Mono は、主に小規模なランタイムが必要な場合に使用される
 
 一般的に Mono は、Just-In-Time コンパイラと共に使用されますが、iOS のようなプラットフォームに使用される完全な静的コンパイラ (Ahead Of Time コンパイル) としても機能します。
 
-Mono について詳しくは、[Mono のドキュメント](https://www.mono-project.com/docs/)をご覧ください。
+詳細については、[Mono のドキュメント](https://www.mono-project.com/docs/)を参照してください。
 
 ### <a name="universal-windows-platform-uwp"></a>ユニバーサル Windows プラットフォーム (UWP)
 
-UWP は、モノのインターネット (IoT) 用に最新のタッチ対応の Windows アプリケーションとソフトウェアを構築するために使われる .NET 実装です。 PC、タブレット、携帯電話、Xbox など、ターゲットにされる可能性があるさまざまな種類のデバイスを統一するように設計されています。 UWP は、一元的なアプリ ストア、実行環境 (AppContainer)、Win32 の代わりに使う Windows API のセット (WinRT) など、多くのサービスを提供します。 アプリは、C++、C#、Visual Basic、および JavaScript で記述することができます。 C# と Visual Basic を使うときは、.NET Core によって .NET API が提供されます。
+UWP は、モノのインターネット (IoT) 用に最新のタッチ対応の Windows アプリケーションとソフトウェアを構築するために使われる .NET 実装です。 PC、タブレット、携帯電話、Xbox など、ターゲットにされる可能性があるさまざまな種類のデバイスを統一するように設計されています。 UWP は、一元的なアプリ ストア、実行環境 (AppContainer)、Win32 の代わりに使う Windows API のセット (WinRT) など、多くのサービスを提供します。 アプリは、C++、C#、Visual Basic、および JavaScript で記述することができます。
 
-UWP の詳細については、「[ユニバーサル Windows プラットフォームの紹介](/windows/uwp/get-started/universal-application-platform-guide)」を参照してください。
+詳細については、[ユニバーサル Windows プラットフォームの概要](/windows/uwp/get-started/universal-application-platform-guide)に関する記事を参照してください。
 
 ## <a name="net-runtimes"></a>.NET ランタイム
 
 ランタイムは、マネージド プログラムの実行環境です。 OS は、ランタイム環境の一部ですが、.NET ランタイムの一部ではありません。 .NET ランタイムの例を次に示します。
 
 - .NET Framework 用共通言語ランタイム (CLR)
-- .NET Core 用共通言語ランタイム (CoreCLR)
+- .NET 5 用共通言語ランタイム (CLR)
 - ユニバーサル Windows プラットフォーム用 .NET Native
 - Xamarin.iOS、Xamarin.Android、Xamarin.Mac、Mono デスクトップ フレームワーク用ランタイム
 
@@ -82,6 +93,8 @@ UWP の詳細については、「[ユニバーサル Windows プラットフォ
 - [MSBuild](/visualstudio/msbuild/msbuild) (プロジェクトのビルドに使用されるビルド エンジン)
 - [NuGet](/nuget/) (Microsoft の .NET 用パッケージ マネージャー)
 - オープン ソースのビルド オーケストレーション ツール ([CAKE](https://cakebuild.net/)、[FAKE](https://fake.build/) など)
+
+詳細については、「[ツールと生産性](../core/introduction.md#tools-and-productivity)」を参照してください。
 
 ## <a name="applicable-standards"></a>適用可能な標準
 
@@ -105,9 +118,9 @@ C# 言語および共通言語基盤 (CLI) の仕様は、[エクマ インタ�
 
 ## <a name="see-also"></a>関連項目
 
-- [サーバー アプリ用 .NET Core と .NET Framework の選択](choosing-core-framework-server.md)
+- [.NET の概要](../core/introduction.md)
 - [.NET Standard の概要](net-standard.md)
-- [.NET Core の概要](../core/introduction.md)
+- [サーバー アプリ用 .NET 5 と .NET Framework の選択](choosing-core-framework-server.md)
 - [.NET Framework ガイド](../framework/index.yml)
 - [C# のガイド](../csharp/index.yml)
 - [F# のガイド](../fsharp/index.yml)
