@@ -1,15 +1,17 @@
 ---
 title: .NET for Apache Spark でブロードキャスト変数を使用する
 description: .NET for Apache Spark アプリケーションでブロードキャスト変数を使用する方法について説明します。
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 3cf2215f59ce28878f44138386c01597ec852905
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 55a52754439020bd2a925aa3e987fb4ad99c9c3d
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955024"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223996"
 ---
 # <a name="use-broadcast-variables-in-net-for-apache-spark"></a>.NET for Apache Spark でブロードキャスト変数を使用する
 

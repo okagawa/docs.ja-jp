@@ -2,12 +2,12 @@
 title: C# 8.0 の新機能 - C# ガイド
 description: C# 8.0 で使用できる新しい機能の概要を説明します。
 ms.date: 04/07/2020
-ms.openlocfilehash: 43b9c69c649b83d4cf78ef4c7d131ce900a49d11
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 1d6d33a36092ba685247f894375888da278b7e6e
+ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654869"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434804"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 の新機能
 
@@ -38,7 +38,7 @@ C# 8.0 は **.NET Core 3.x** と **.NET Standard 2.1** でサポートされて�
 
 1. [dotnet try](https://github.com/dotnet/try/blob/master/README.md#setup) グローバル ツールをインストールします。
 1. [dotnet/try-samples](https://github.com/dotnet/try-samples) リポジトリを複製します。
-1. 現在のディレクトリを、*try-samples* リポジトリの *csharp8* サブディレクトリに設定します。
+1. 現在のディレクトリを、 *try-samples* リポジトリの *csharp8* サブディレクトリに設定します。
 1. `dotnet try` を実行します。
 
 ## <a name="readonly-members"></a>読み取り専用メンバー
@@ -94,21 +94,21 @@ public readonly void Translate(int xOffset, int yOffset)
 
 ## <a name="default-interface-methods"></a>既定のインターフェイス メソッド
 
-ここでインターフェイスにメンバーを追加し、それらのメンバーの実装を提供できます。 この言語機能を使用することで、API 作成者は、インターフェイスの既存の実装とのソースやバイナリの互換性を損なうことなく、新しいバージョンのそのインターフェイスにメソッドを追加できます。 既存の実装では既定の実装が*継承*されます。 さらに、この機能により、同様の機能をサポートする Android や Swift を対象とする API を、C# と連携させることができます。 既定のインターフェイス メソッドでは、"traits" 言語機能のようなシナリオも可能になります。
+ここでインターフェイスにメンバーを追加し、それらのメンバーの実装を提供できます。 この言語機能を使用することで、API 作成者は、インターフェイスの既存の実装とのソースやバイナリの互換性を損なうことなく、新しいバージョンのそのインターフェイスにメソッドを追加できます。 既存の実装では既定の実装が *継承* されます。 さらに、この機能により、同様の機能をサポートする Android や Swift を対象とする API を、C# と連携させることができます。 既定のインターフェイス メソッドでは、"traits" 言語機能のようなシナリオも可能になります。
 
 既定のインターフェイス メソッドにより、多くのシナリオと言語要素が影響を受けます。 最初のチュートリアルでは、[既定の実装でのインターフェイスの更新](../tutorials/default-interface-methods-versions.md)について取り上げています。 その他のチュートリアルとリファレンスの更新は、一般公開に間に合うように提供されます。
 
 ## <a name="more-patterns-in-more-places"></a>より多くの場所でより多くのパターン
 
-**パターン マッチング**では、関連はあっても種類が異なるデータをまたがってシェイプに依存する機能を提供するツールが用意されています。 C# 7.0 では、[`is`](../language-reference/keywords/is.md) 式と [`switch`](../language-reference/keywords/switch.md) ステートメントを使用することで、型パターンと定数パターンの構文が導入されました。 これらの機能では、データと機能が分かれて存在するプログラミング パラダイムのサポートに向けた最初の試験的なステップが示されました。 業界はマイクロサービスと他のクラウド ベース アーキテクチャに向けて移動しており、他の言語ツールが必要になっています。
+**パターン マッチング** では、関連はあっても種類が異なるデータをまたがってシェイプに依存する機能を提供するツールが用意されています。 C# 7.0 では、[`is`](../language-reference/keywords/is.md) 式と [`switch`](../language-reference/keywords/switch.md) ステートメントを使用することで、型パターンと定数パターンの構文が導入されました。 これらの機能では、データと機能が分かれて存在するプログラミング パラダイムのサポートに向けた最初の試験的なステップが示されました。 業界はマイクロサービスと他のクラウド ベース アーキテクチャに向けて移動しており、他の言語ツールが必要になっています。
 
 C# 8.0 では、このボキャブラリが展開されて、コードのより多くの場所で、より多くのパターン式を使用できます。 データと機能が分かれているときは、これらの機能を検討してください。 アルゴリズムがオブジェクトのランタイム型以外の事実に依存している場合は、パターン マッチングを検討してください。 これらの手法では、設計を表現する別の方法が提供されます。
 
-新しい場所での新しいパターンだけでなく、C# 8.0 では**再帰パターン**が追加されています。 パターン式の結果は式です。 再帰パターンは、単に、別のパターン式の出力に適用されるパターン式です。
+新しい場所での新しいパターンだけでなく、C# 8.0 では **再帰パターン** が追加されています。 パターン式の結果は式です。 再帰パターンは、単に、別のパターン式の出力に適用されるパターン式です。
 
 ### <a name="switch-expressions"></a>switch 式
 
-多くの場合、[`switch`](../language-reference/keywords/switch.md) ステートメントでは、その各 `case` ブロックで値が生成されます。 **switch 式**を使用すると、より簡潔な式の構文を使用できます。 反復的な `case` や `break` キーワード、および中かっこの数が少なくなります。  たとえば、虹の色を示す次のような列挙型について考えます。
+多くの場合、[`switch`](../language-reference/keywords/switch.md) ステートメントでは、その各 `case` ブロックで値が生成されます。 **switch 式** を使用すると、より簡潔な式の構文を使用できます。 反復的な `case` や `break` キーワード、および中かっこの数が少なくなります。  たとえば、虹の色を示す次のような列挙型について考えます。
 
 ```csharp
 public enum Rainbow
@@ -176,7 +176,7 @@ public static RGBColor FromRainbowClassic(Rainbow colorBand)
 
 ### <a name="property-patterns"></a>プロパティ パターン
 
-**プロパティ パターン**を使用すると、調査対象のオブジェクトのプロパティと照合することができます。 購入者の住所に基づいて消費税を計算する必要がある eコマース サイトについて考えます。 そのような計算は、`Address` クラスの主な役割ではありません。 時間とともに、おそらくは住所の形式の変更より頻繁に、変更されます。 消費税の金額は、住所の `State` プロパティに依存します。 次のメソッドでは、プロパティ パターンを使用して、住所と価格から消費税を計算しています。
+**プロパティ パターン** を使用すると、調査対象のオブジェクトのプロパティと照合することができます。 購入者の住所に基づいて消費税を計算する必要がある eコマース サイトについて考えます。 そのような計算は、`Address` クラスの主な役割ではありません。 時間とともに、おそらくは住所の形式の変更より頻繁に、変更されます。 消費税の金額は、住所の `State` プロパティに依存します。 次のメソッドでは、プロパティ パターンを使用して、住所と価格から消費税を計算しています。
 
 ```csharp
 public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
@@ -194,7 +194,7 @@ public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
 
 ### <a name="tuple-patterns"></a>タプル パターン
 
-いくつかのアルゴリズムは複数の入力に依存しています。 **タプル パターン**を使うと、[タプル](../language-reference/builtin-types/value-tuples.md)として表現された複数の値に基づいて切り替えを行うことができます。  "*rock、paper、scissors (じゃんけん)* " ゲーム用の switch 式を示すコードを以下に示します。
+いくつかのアルゴリズムは複数の入力に依存しています。 **タプル パターン** を使うと、 [タプル](../language-reference/builtin-types/value-tuples.md)として表現された複数の値に基づいて切り替えを行うことができます。  " *rock、paper、scissors (じゃんけん)* " ゲーム用の switch 式を示すコードを以下に示します。
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -214,7 +214,7 @@ public static string RockPaperScissors(string first, string second)
 
 ### <a name="positional-patterns"></a>位置指定パターン
 
-一部の型には、そのプロパティを個別の変数に分解する `Deconstruct` メソッドが含まれています。 `Deconstruct` メソッドにアクセスできる場合、**位置指定パターン**を使ってオブジェクトのプロパティを検査し、パターン用にそれらのプロパティを使うことができます。  `X` と `Y` の個別の変数を作成する `Deconstruct` メソッドを含む `Point` クラスの例を次に示します。
+一部の型には、そのプロパティを個別の変数に分解する `Deconstruct` メソッドが含まれています。 `Deconstruct` メソッドにアクセスできる場合、 **位置指定パターン** を使ってオブジェクトのプロパティを検査し、パターン用にそれらのプロパティを使うことができます。  `X` と `Y` の個別の変数を作成する `Deconstruct` メソッドを含む `Point` クラスの例を次に示します。
 
 ```csharp
 public class Point
@@ -244,7 +244,7 @@ public enum Quadrant
 }
 ```
 
-次のメソッドでは、**位置指定パターン**を使用して、`x` と `y` の値を抽出しています。 その後、`when` 句を使用して、点の `Quadrant` を決定します。
+次のメソッドでは、 **位置指定パターン** を使用して、`x` と `y` の値を抽出しています。 その後、`when` 句を使用して、点の `Quadrant` を決定します。
 
 ```csharp
 static Quadrant GetQuadrant(Point point) => point switch
@@ -265,13 +265,12 @@ static Quadrant GetQuadrant(Point point) => point switch
 
 ## <a name="using-declarations"></a>using 宣言
 
-**using 宣言**は、`using` キーワードが前に付いている変数宣言です。 宣言されている変数を外側のスコープの最後に破棄する必要があることを、コンパイラに伝えます。 たとえば、テキスト ファイルを書き込む次のようなコードについて考えます。
+**using 宣言** は、`using` キーワードが前に付いている変数宣言です。 宣言されている変数を外側のスコープの最後に破棄する必要があることを、コンパイラに伝えます。 たとえば、テキスト ファイルを書き込む次のようなコードについて考えます。
 
 ```csharp
 static int WriteLinesToFile(IEnumerable<string> lines)
 {
     using var file = new System.IO.StreamWriter("WriteLines2.txt");
-    // Notice how we declare skippedLines after the using statement.
     int skippedLines = 0;
     foreach (string line in lines)
     {
@@ -295,11 +294,9 @@ static int WriteLinesToFile(IEnumerable<string> lines)
 ```csharp
 static int WriteLinesToFile(IEnumerable<string> lines)
 {
-    // We must declare the variable outside of the using block
-    // so that it is in scope to be returned.
-    int skippedLines = 0;
     using (var file = new System.IO.StreamWriter("WriteLines2.txt"))
     {
+        int skippedLines = 0;
         foreach (string line in lines)
         {
             if (!line.Contains("Second"))
@@ -356,7 +353,7 @@ int M()
 
 ## <a name="nullable-reference-types"></a>null 許容参照型
 
-null 許容注釈コンテキスト内では、参照型のすべての変数は、**null 非許容参照型**と見なされます。 変数が null 許容であることを示したい場合は、型名に `?` を追加し、**null 許容参照型**として変数を宣言する必要があります。
+null 許容注釈コンテキスト内では、参照型のすべての変数は、 **null 非許容参照型** と見なされます。 変数が null 許容であることを示したい場合は、型名に `?` を追加し、 **null 許容参照型** として変数を宣言する必要があります。
 
 null 非許容参照型の場合は、コンパイラでフロー分析を使用して、ローカル変数が宣言時に null 以外の値に初期化されることが確認されます。 フィールドは、構築時に初期化される必要があります。 変数が使用可能ないずれかのコンストラクターの呼び出しまたは初期化子によって設定されていない場合、コンパイラで警告が生成されます。 さらに、null 非許容参照型に、null になる可能性がある値を割り当てることはできません。
 
@@ -413,7 +410,7 @@ C# 8.0 以降、この言語では <xref:System.IAsyncDisposable?displayProperty
 
 インデックスのルールから始めましょう。 配列 `sequence` を考えます。 `0` インデックスは `sequence[0]` と同じです。 `^0` インデックスは `sequence[sequence.Length]` と同じです。 `sequence[sequence.Length]` と同様に、`sequence[^0]` は例外をスローすることに注意してください。 任意の数値 `n` の場合、インデックス `^n` は `sequence.Length - n` と同じです。
 
-範囲は、範囲の*先頭*と*末尾*を指定します。 範囲の先頭は包含ですが、範囲の末尾は排他です。つまり、"*先頭*" は範囲に含まれますが、"*末尾*" は範囲に含まれません。 範囲 `[0..^0]` は、`[0..sequence.Length]` が範囲全体を表すのと同じように、範囲全体を表します。
+範囲は、範囲の *先頭* と *末尾* を指定します。 範囲の先頭は包含ですが、範囲の末尾は排他です。つまり、" *先頭* " は範囲に含まれますが、" *末尾* " は範囲に含まれません。 範囲 `[0..^0]` は、`[0..sequence.Length]` が範囲全体を表すのと同じように、範囲全体を表します。
 
 いくつか例を見てみましょう。 先頭および末尾からのインデックスの注釈が付けられた、次のような配列について考えます。
 

@@ -1,15 +1,17 @@
 ---
 title: .NET for Apache Spark を MongoDB に接続する
 description: .NET for Apache Spark アプリケーションから MongoDB インスタンスに接続する方法について説明します。
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4cb78998ddb54621a84e9d224a814047e3c40246
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: 928cc8e3559e13af66268f3d1b3766cf2df9041f
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91878013"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223978"
 ---
 # <a name="connect-net-for-apache-spark-to-mongodb"></a>.NET for Apache Spark を MongoDB に接続する
 
@@ -41,17 +43,17 @@ ms.locfileid: "91878013"
 ## <a name="configure-your-net-for-apache-spark-application"></a>.NET for Apache Spark アプリケーションを構成する
 
 1. 次の変数を設定して、MongoDB インスタンスと通信し、コレクションから読み取るようにアプリケーションを構成します。
-    1. **authURI**:"アプリケーションが必要な MongoDB インスタンスに接続することを承認する接続文字列"。 この形式は次のとおりです。
+    1. **authURI** :"アプリケーションが必要な MongoDB インスタンスに接続することを承認する接続文字列"。 この形式は次のとおりです。
 
         ```
         "mongodb+srv://<username>:<password>@<cluster_address>/<database>.<collection>"
         ```
 
-    2. **username**:前のセクションの手順 1 で作成したアカウントのユーザー名
-    3. **password**:作成したユーザー アカウントのパスワード
-    4. **cluster_address**: MongoDB クラスターのホスト名またはアドレス
-    5. **database**:接続先の MongoDB データベース
-    6. **collection**:読み取る MongoDB コレクション。 (この例では、すべての Apache Spark インストールに用意されている標準の [`people.json`](https://github.com/apache/spark/blob/master/examples/src/main/resources/people.json) サンプル ファイルを使用します)。
+    2. **username** :前のセクションの手順 1 で作成したアカウントのユーザー名
+    3. **password** :作成したユーザー アカウントのパスワード
+    4. **cluster_address** : MongoDB クラスターのホスト名またはアドレス
+    5. **database** :接続先の MongoDB データベース
+    6. **collection** :読み取る MongoDB コレクション。 (この例では、すべての Apache Spark インストールに用意されている標準の [`people.json`](https://github.com/apache/spark/blob/master/examples/src/main/resources/people.json) サンプル ファイルを使用します)。
 
 2. 次の簡単なコード スニペットに示すように、`com.mongodb.spark.sql.DefaultSource` 形式は `spark.Read()` を使用します。
 

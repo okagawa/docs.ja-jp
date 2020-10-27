@@ -21,11 +21,11 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.openlocfilehash: c2c03f47babd9ccf87eb60d33b9d65d1a9c82e2e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398311"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223509"
 ---
 # <a name="built-in-reference-types-c-reference"></a>組み込みの参照型 (C# リファレンス)
 
@@ -33,7 +33,7 @@ C# には複数の組み込み参照型があります。 それらには、.NET
 
 ## <a name="the-object-type"></a>オブジェクトの型
 
-`object` 型は .NET での <xref:System.Object?displayProperty=nameWithType> の別名です。 C# の統一型システムでは、すべての型 (定義済み、ユーザー定義、参照型、および値型) が、直接または間接的に <xref:System.Object?displayProperty=nameWithType> を継承します。 `object` 型の変数には、任意の型の値を割り当てることができます。 すべての `object` 変数には、リテラル `null` を使って既定値を割り当てることができます。 値型の変数が object に変換されることを、*ボックス化*されると言います。 `object` 型の変数が値型に変換されることを、*ボックス化解除*されると言います。 詳細については、「[ボックス化とボックス化解除](../../programming-guide/types/boxing-and-unboxing.md)」を参照してください。
+`object` 型は .NET での <xref:System.Object?displayProperty=nameWithType> の別名です。 C# の統一型システムでは、すべての型 (定義済み、ユーザー定義、参照型、および値の型) が、直接または間接的に <xref:System.Object?displayProperty=nameWithType> を継承します。 `object` 型の変数には、任意の型の値を割り当てることができます。 すべての `object` 変数には、リテラル `null` を使って既定値を割り当てることができます。 値型の変数が object に変換されることを、 *ボックス化* されると言います。 `object` 型の変数が値型に変換されることを、 *ボックス化解除* されると言います。 詳細については、「[ボックス化とボックス化解除](../../programming-guide/types/boxing-and-unboxing.md)」を参照してください。
 
 ## <a name="the-string-type"></a>文字列型
 
@@ -60,7 +60,7 @@ string a = "good " + "morning";
 
 これは、"good morning" を含む文字列オブジェクトを作成します。
 
-文字列は "*変更不可*" です。文字列オブジェクトの作成後、そのコンテンツを変更することはできません。構文では変更可能に見えても、変更不可です。 たとえば、このコードを作成すると、コンパイラによって新しい文字列オブジェクトを格納する新しいシーケンス オブジェクトが生成され、その新しいオブジェクトが `b` に割り当てられます。 `b` に割り当てられたメモリは (文字列 "h" が含まれている場合)、ガベージ コレクションの対象になります。
+文字列は " *変更不可* " です。文字列オブジェクトの作成後、そのコンテンツを変更することはできません。構文では変更可能に見えても、変更不可です。 たとえば、このコードを作成すると、コンパイラによって新しい文字列オブジェクトを格納する新しいシーケンス オブジェクトが生成され、その新しいオブジェクトが `b` に割り当てられます。 `b` に割り当てられたメモリは (文字列 "h" が含まれている場合)、ガベージ コレクションの対象になります。
 
 ```csharp
 string b = "h";
@@ -111,13 +111,13 @@ Console.WriteLine(a);
 @"good morning"  // a string literal
 ```
 
-verbatim 文字列の場合の利点は、エスケープ シーケンスが "*処理されない*" ため、たとえば、完全修飾 Windows ファイル名が書きやすくなることです。
+verbatim 文字列の場合の利点は、エスケープ シーケンスが " *処理されない* " ため、たとえば、完全修飾 Windows ファイル名が書きやすくなることです。
 
 ```csharp
 @"c:\Docs\Source\a.txt"  // rather than "c:\\Docs\\Source\\a.txt"
 ```
 
-@-quoted に続いて引用符で囲まれた文字列に二重引用符を含めるには、二重引用符を二重にします。
+@-quoted 文字列に二重引用符を含めるには、二重引用符を二重にします。
 
 ```csharp
 @"""Ahoy!"" cried the captain." // "Ahoy!" cried the captain.
@@ -144,7 +144,7 @@ public delegate int AnotherDelegate(MyType m, long num);
 
 ほとんどの環境で、`dynamic` 型は `object` 型のように動作します。 具体的には、null 以外の任意の式を `dynamic` 型に変換できます。 `dynamic` 型は `object` と異なり、`dynamic` 型の式を含む演算はコンパイラによって解決または型チェックされません。 コンパイラは演算に関する情報をまとめてパッケージ化します。その情報が後で実行時に演算を評価するために使用されます。 このプロセスの過程で、`dynamic` 型の変数は `object` 型の変数にコンパイルされます。 そのため、`dynamic` 型はコンパイル時にのみ存在し、実行時には存在しません。
 
-`dynamic` 型の変数と `object` 型の変数の違いを次に示します。 コンパイル時に各変数の型を確認するには、`WriteLine` ステートメントの `dyn` または `obj` にマウス ポインターを置きます。 IntelliSense が使用可能なエディターに、次のコードをコピーします。 IntelliSense 機能によって、`dyn` には **dynamic**、`obj` には **object** が表示されます。
+`dynamic` 型の変数と `object` 型の変数の違いを次に示します。 コンパイル時に各変数の型を確認するには、`WriteLine` ステートメントの `dyn` または `obj` にマウス ポインターを置きます。 IntelliSense が使用可能なエディターに、次のコードをコピーします。 IntelliSense 機能によって、`dyn` には **dynamic** 、`obj` には **object** が表示されます。
 
 [!code-csharp[csrefKeywordsTypes#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic1.cs#21)]
 
@@ -168,7 +168,7 @@ obj = obj + 3;
 
 [!code-csharp[csrefKeywordsTypes#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic2.cs#25)]
 
-### <a name="see-also"></a>参照
+### <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
 - [C# のキーワード](../keywords/index.md)

@@ -3,11 +3,11 @@ title: データ変換
 description: ML.NET でサポートされている機能エンジニアリングのコンポーネントについて検証します。
 ms.date: 04/02/2019
 ms.openlocfilehash: ca410b475c556db5ad4c3862fb79755b455d6830
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397753"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224204"
 ---
 # <a name="data-transformations"></a>データ変換
 
@@ -109,7 +109,7 @@ ms.locfileid: "79397753"
 | <xref:Microsoft.ML.ExtensionsCatalog.IndicateMissingValues%2A> | 新しいブール出力列を作成します。入力列の値が欠落している場合、その値は true です。 |
 | <xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues%2A> | 新しい出力列を作成します。値が入力列にない場合は値が既定値に設定され、それ以外の場合は入力値が設定されます |
 
-## <a name="feature-selection"></a>特徴選択
+## <a name="feature-selection"></a>機能の選択
 
 | 変換 | 定義 |
 | --- | --- |

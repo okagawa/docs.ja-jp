@@ -4,11 +4,11 @@ description: ML.NET でカスタム モデルをビルドする際に役立つ�
 ms.topic: reference
 ms.date: 07/31/2019
 ms.openlocfilehash: 32ccb6df1cb08db45ebd25a0d1c0ea4396a6c50b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397765"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223742"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>機械学習の重要な用語の用語集
 
@@ -20,13 +20,13 @@ ML.NET でカスタム モデルをビルドする際に役立つ機械学習の
 
 ## <a name="area-under-the-curve-auc"></a>曲線下面積 (AUC)
 
-[二項分類](#binary-classification)における評価メトリックであり、偽陽性率 (x 軸上) に対する真陽性率 (y 軸上) を描画する曲線下面積の値です。 0\.5 (最低) ～ 1 (最高) の値になります。 ROC 曲線 (受信者操作特性曲線) 下面積とも呼ばれます。 詳しくは、Wikipedia の[受信者操作特性](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)の記事を参照してください。
+[二項分類](#binary-classification)における評価メトリックであり、偽陽性率 (x 軸上) に対する真陽性率 (y 軸上) を描画する曲線下面積の値です。 0.5 (最低) ～ 1 (最高) の値になります。 ROC 曲線 (受信者操作特性曲線) 下面積とも呼ばれます。 詳しくは、Wikipedia の[受信者操作特性](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)の記事を参照してください。
 
 ## <a name="binary-classification"></a>二項分類
 
 [ラベル](#label)が 2 つのクラスのうちの 1 つである[分類](#classification)です。 詳細については、トピック「[機械学習のタスク](tasks.md)」のセクションの「[二項分類](tasks.md#binary-classification)」を参照してください。
 
-## <a name="calibration"></a>較正
+## <a name="calibration"></a>調整
 
 調整は、二項分類と多クラス分類のために、生のスコアをクラスのメンバーシップにマップするプロセスです。 一部 ML.NET トレーナーには `NonCalibrated` サフィックスがあります。 これらのアルゴリズムからは、後でクラスの確率にマップする必要がある生のスコアが生成されます。
 
@@ -66,9 +66,9 @@ ML.NET では、カタログは、共通の目的でグループ化された拡�
 
 ## <a name="feature"></a>機能
 
-測定対象となる事象の測定可能なプロパティです。通常は数 (倍精度) 値になります。 複数の特徴は**特徴ベクトル**と呼ばれ、通常は `double[]` として格納されます。 特徴では、測定対象となる事象の重要な特性を定義します。 詳しくは、Wikipedia の[特徴](https://en.wikipedia.org/wiki/Feature_(machine_learning))の記事を参照してください。
+測定対象となる事象の測定可能なプロパティです。通常は数 (倍精度) 値になります。 複数の特徴は **特徴ベクトル** と呼ばれ、通常は `double[]` として格納されます。 特徴では、測定対象となる事象の重要な特性を定義します。 詳しくは、Wikipedia の[特徴](https://en.wikipedia.org/wiki/Feature_(machine_learning))の記事を参照してください。
 
-## <a name="feature-engineering"></a>特徴エンジニアリング
+## <a name="feature-engineering"></a>機能エンジニアリング
 
 特徴エンジニアリングは、一連の[特徴](#feature)の定義、および使用可能な事象データから特徴ベクトルを生成する (特徴抽出) ソフトウェアの開発を含むプロセスです。 詳しくは、Wikipedia の[特徴エンジニアリング](https://en.wikipedia.org/wiki/Feature_engineering)の記事を参照してください。
 
@@ -78,9 +78,9 @@ ML.NET では、カタログは、共通の目的でグループ化された拡�
 
 ## <a name="hyperparameter"></a>ハイパーパラメーター
 
-機械学習アルゴリズムのパラメーターです。 例として、デシジョン フォレストにおける学習するツリー数や勾配降下アルゴリズムにおけるステップ サイズなどがあります。 *ハイパーパラメーター*の値は、モデルのトレーニング前に設定され、予測関数のパラメーターを検出するプロセスを管理します。例として、デシジョン ツリーにおける比較ポイントや線形回帰モデルにおける重みなどがあります。 詳しくは、Wikipedia の[ハイパーパラメーター](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning))の記事を参照してください。
+機械学習アルゴリズムのパラメーターです。 例として、デシジョン フォレストにおける学習するツリー数や勾配降下アルゴリズムにおけるステップ サイズなどがあります。 *ハイパーパラメーター* の値は、モデルのトレーニング前に設定され、予測関数のパラメーターを検出するプロセスを管理します。例として、デシジョン ツリーにおける比較ポイントや線形回帰モデルにおける重みなどがあります。 詳しくは、Wikipedia の[ハイパーパラメーター](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning))の記事を参照してください。
 
-## <a name="label"></a>Label
+## <a name="label"></a>ラベル
 
 機械学習モデルで予測される要素です。 たとえば、犬種や将来の株価などです。
 
@@ -126,7 +126,7 @@ ML.NET では、カタログは、共通の目的でグループ化された拡�
 
 [分類](#classification)におけるクラスの精度は、そのクラスに属していると正確に予測された項目の数を、クラスに属していると予測された項目の総数で割ったものです。
 
-## <a name="recall"></a>再現率
+## <a name="recall"></a>Recall
 
 [分類](#classification)におけるクラスの再現率は、そのクラスに属していると正確に予測された項目の数を、実際にクラスに属している項目の総数で割ったものです。
 
@@ -153,7 +153,7 @@ ML.NET では、カタログは、共通の目的でグループ化された拡�
 
 [回帰](#regression)における評価メトリックであり、誤差を 2 乗した値の平均値の平方根です。
 
-## <a name="scoring"></a>スコアリング
+## <a name="scoring"></a>ポイントの計算
 
 スコアリングは、トレーニング済みの機械学習モデルに新しいデータを適用し、予測を生成するプロセスです。 スコアリングは推論とも呼ばれます。 モデルの種類に応じて、スコアは場合によって、未処理の値、確率、またはカテゴリになります。
 

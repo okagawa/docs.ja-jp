@@ -4,16 +4,16 @@ title: アンマネージド型 - C# リファレンス
 ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: b5a689ca3ade36ef77da958549894f76e074986e
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 4374872af13c94e1a1af6b9f2c431f076c6f7dff
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89143533"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471800"
 ---
 # <a name="unmanaged-types-c-reference"></a>アンマネージド型 (C# リファレンス)
 
-型は、次のいずれかの型である場合、**アンマネージド型**です。
+型は、次のいずれかの型である場合、 **アンマネージド型** です。
 
 - `sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char`、`float`、`double`、`decimal`、または `bool`
 - すべての[列挙](enum.md)型
@@ -22,13 +22,13 @@ ms.locfileid: "89143533"
 
 C# 7.3 以降、[`unmanaged` 制約](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint)を使用して、型パラメーターが非ポインターで、null 非許容で、アンマネージド型であることを指定できます。
 
-C# 8.0 以降では、次の例に示すように、アンマネージド型のフィールドのみが含まれる "*構築された*" 構造体型もアンマネージド型になります。
+C# 8.0 以降では、次の例に示すように、アンマネージド型のフィールドのみが含まれる " *構築された* " 構造体型もアンマネージド型になります。
 
-[!code-csharp[unmanaged constructed types](snippets/UnmanagedTypes.cs#ProgramExample)]
+[!code-csharp[unmanaged constructed types](snippets/shared/UnmanagedTypes.cs#ProgramExample)]
 
-ジェネリック構造体は、構築されたアンマネージド型およびアンマネージドでない型の両方のソースになる場合があります。 前の例では、ジェネリック構造体 `Coords<T>` を定義し、構築されたアンマネージド型の例を示します。 アンマネージド型でない例は `Coords<object>` です。 アンマネージドでない `object` 型のフィールドがあるため、これはアンマネージドではありません。 構築された "*すべての*" 型をアンマネージド型にする場合は、ジェネリック構造体の定義で `unmanaged` 制約を使用します。
+ジェネリック構造体は、構築されたアンマネージド型およびアンマネージドでない型の両方のソースになる場合があります。 前の例では、ジェネリック構造体 `Coords<T>` を定義し、構築されたアンマネージド型の例を示します。 アンマネージド型でない例は `Coords<object>` です。 アンマネージドでない `object` 型のフィールドがあるため、これはアンマネージドではありません。 構築された " *すべての* " 型をアンマネージド型にする場合は、ジェネリック構造体の定義で `unmanaged` 制約を使用します。
 
-[!code-csharp[unmanaged constraint in type definition](snippets/UnmanagedTypes.cs#AlwaysUnmanaged)]
+[!code-csharp[unmanaged constraint in type definition](snippets/shared/UnmanagedTypes.cs#AlwaysUnmanaged)]
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 

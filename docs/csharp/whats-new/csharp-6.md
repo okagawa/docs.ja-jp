@@ -3,11 +3,11 @@ title: C# 6 の新機能 - C# ガイド
 description: C# バージョン 6 の新機能について説明します
 ms.date: 12/12/2018
 ms.openlocfilehash: da40b4c9d4af0094fdd907c542e971ba55086e0f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398155"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224240"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 の新機能
 
@@ -17,7 +17,7 @@ C# の 6.0 リリースには、開発者の生産性を向上させる多くの
 
 ## <a name="read-only-auto-properties"></a>読み取り専用の自動プロパティ
 
-*読み取り専用の自動プロパティ*を使用すると、より簡潔な構文で不変型を作成できます。 自動プロパティは、get アクセサーのみを使用して宣言します。
+*読み取り専用の自動プロパティ* を使用すると、より簡潔な構文で不変型を作成できます。 自動プロパティは、get アクセサーのみを使用して宣言します。
 
 [!code-csharp[ReadOnlyAutoProperty](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadOnlyAutoProperty)]
 
@@ -46,7 +46,7 @@ public class Student
 
 ## <a name="auto-property-initializers"></a>自動プロパティ初期化子
 
-*自動プロパティ初期化子*を使用すると、プロパティ宣言の一部として自動プロパティの初期値を宣言できます。
+*自動プロパティ初期化子* を使用すると、プロパティ宣言の一部として自動プロパティの初期値を宣言できます。
 
 [!code-csharp[Initialization](../../../samples/snippets/csharp/new-in-6/newcode.cs#Initialization)]
 
@@ -87,13 +87,13 @@ public class Student
 
 ## <a name="null-conditional-operators"></a>Null 条件演算子
 
-*null 条件演算子*を使用すれば、これらの null チェックをより簡単で円滑なものにすることができます。 メンバー アクセス `.` を `?.` に置き換えます。
+*null 条件演算子* を使用すれば、これらの null チェックをより簡単で円滑なものにすることができます。 メンバー アクセス `.` を `?.` に置き換えます。
 
 [!code-csharp[NullConditional](../../../samples/snippets/csharp/new-in-6/program.cs#NullConditional)]
 
 上記の例では、person オブジェクトが `null` の場合に、変数 `first` に `null` が割り当てられます。 それ以外の場合には、`FirstName` プロパティの値が割り当てられます。 特に重要なのは、`?.` を使用した場合、変数 `person` が `null` の場合、このコード行では `NullReferenceException` が生成されないということです。 代わりに、処理がショートサーキットされ、`null` が返されます。 null 条件演算子は配列アクセスまたはインデクサー アクセスにも使用できます。 インデックス式の `[]` を `?[]` に置き換えます。
 
-次の式では、`person` の値に関係なく、`string` が返されます。 このコンストラクトは、いずれかのプロパティが `null` の場合に既定値を割り当てる目的で、*null 結合*演算子と共によく使用されます。 式がショート サーキットされると、返された `null` 値が式全体に一致するように入力されます。
+次の式では、`person` の値に関係なく、`string` が返されます。 このコンストラクトは、いずれかのプロパティが `null` の場合に既定値を割り当てる目的で、 *null 結合* 演算子と共によく使用されます。 式がショート サーキットされると、返された `null` 値が式全体に一致するように入力されます。
 
 [!code-csharp[NullCoalescing](../../../samples/snippets/csharp/new-in-6/program.cs#NullCoalescing)]
 
@@ -131,7 +131,7 @@ var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 
 ## <a name="exception-filters"></a>例外フィルター
 
-*例外フィルター*は、特定の catch 句がいつ適用されるのかを決定する句です。 例外フィルターに使用されている式が `true` と評価された場合、catch 句は例外に対して通常の処理を実行します。 式が `false` と評価された場合、`catch` 句はスキップされます。 用途としては、例外に関する情報を調べて、`catch` 句で例外を処理できるかどうかを確認するという使い方があります。
+*例外フィルター* は、特定の catch 句がいつ適用されるのかを決定する句です。 例外フィルターに使用されている式が `true` と評価された場合、catch 句は例外に対して通常の処理を実行します。 式が `false` と評価された場合、`catch` 句はスキップされます。 用途としては、例外に関する情報を調べて、`catch` 句で例外を処理できるかどうかを確認するという使い方があります。
 
 [!code-csharp[ExceptionFilter](../../../samples/snippets/csharp/new-in-6/NetworkClient.cs#ExceptionFilter)]
 
@@ -158,7 +158,7 @@ C# 5 では、`await` 式を配置できる位置について、いくつかの�
 
 ## <a name="initialize-associative-collections-using-indexers"></a>インデクサーを使用して関連コレクションを初期化する
 
-*インデックス初期化子*は、インデックスの使用によってコレクション初期化子の一貫性を高める 2 つの機能のうちの 1 つです。 C# の以前のリリースでは、キーと値のペアを中かっこで囲むことで <xref:System.Collections.Generic.Dictionary%602> を含めたシーケンス スタイルのコレクションで*コレクション初期化子*を使用できました。
+*インデックス初期化子* は、インデックスの使用によってコレクション初期化子の一貫性を高める 2 つの機能のうちの 1 つです。 C# の以前のリリースでは、キーと値のペアを中かっこで囲むことで <xref:System.Collections.Generic.Dictionary%602> を含めたシーケンス スタイルのコレクションで *コレクション初期化子* を使用できました。
 
 [!code-csharp[ListInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#CollectionInitializer)]
 
@@ -170,7 +170,7 @@ C# 5 では、`await` 式を配置できる位置について、いくつかの�
 
 ## <a name="extension-add-methods-in-collection-initializers"></a>コレクション初期化子内の拡張 `Add` メソッド
 
-コレクション初期化を使いやすくするもう 1 つの機能として、 *メソッドの*拡張メソッド`Add`を使用できるようになりました。 この機能は、Visual Basic との同等性を確保するために追加されました。 この機能は、新しい項目を意味的に追加するために、カスタム コレクション クラスで別の名前のメソッドを使用している場合に特に便利です。
+コレクション初期化を使いやすくするもう 1 つの機能として、 *メソッドの* 拡張メソッド`Add`を使用できるようになりました。 この機能は、Visual Basic との同等性を確保するために追加されました。 この機能は、新しい項目を意味的に追加するために、カスタム コレクション クラスで別の名前のメソッドを使用している場合に特に便利です。
 
 ## <a name="improved-overload-resolution"></a>オーバーロード解決の改善
 

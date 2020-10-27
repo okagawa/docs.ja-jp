@@ -1,15 +1,17 @@
 ---
 title: .NET for Apache Spark 対話型環境で、UDF を記述して呼び出します。
 description: .NET for Apache Spark 対話型シェルで UDF を記述して呼び出す方法について説明します。
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 7f050b39b1d2f0e2f506c522259485d87c7a185a
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: d07d757f9e47a84c75f46b190bdb613b8d2db7c1
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955011"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224126"
 ---
 # <a name="write-and-call-udfs-in-net-for-apache-spark-interactive-environments"></a>.NET for Apache Spark 対話型環境で UDF を記述して呼び出す
 
@@ -59,7 +61,7 @@ ms.locfileid: "91955011"
 
     `udf2_fails` の場合と同様に、型 `Submission#7` がシリアル化可能としてマークされていないことを示すエラー メッセージが表示されます。これは、実行時に生成されるために `Serializable` としてマークされていない、セルに定義されているすべてのオブジェクトが、NET Interactive によって `Submission#` クラスでラップされるためです。
 
-    したがって、**カスタム オブジェクトを参照する UDF は、そのオブジェクトと同じセルに定義されている必要があります**。
+    したがって、 **カスタム オブジェクトを参照する UDF は、そのオブジェクトと同じセルに定義されている必要があります** 。
 
 2. **.NET Interactive でブロードキャスト変数が機能しないのはなぜですか。**
     前に説明した理由により、ブロードキャスト変数は .NET Interactive では機能しません。 [ブロードキャスト変数に関するこのガイド](broadcast-guide.md)を参照して、ブロードキャスト変数の詳細とその使用方法について理解を深めることをお勧めします。 ブロードキャスト変数が対話型のシナリオでは機能しないのは、セルに定義されている各オブジェクトにセル送信クラスを追加する .NET Interactive の設計によるものです。これは、シリアル化可能としてマークされていないため、前に示したものと同じ例外で失敗します。

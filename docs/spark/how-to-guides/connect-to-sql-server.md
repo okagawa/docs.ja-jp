@@ -1,15 +1,17 @@
 ---
 title: .NET for Apache Spark を SQL Server に接続する
 description: .NET for Apache Spark アプリケーションから SQL Server インスタンスに接続する方法について説明します。
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 773e743a67c066438cb86d983ebfa34f73692c2d
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: b20710000d8717b5df238aa9a782371fbe586037
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91878009"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224034"
 ---
 # <a name="connect-net-for-apache-spark-to-sql-server"></a>.NET for Apache Spark を SQL Server に接続する
 
@@ -37,15 +39,15 @@ ms.locfileid: "91878009"
 
 1. ご使用のアプリケーションを介してデータベース接続を提供するには、Microsoft JDBC Driver for SQL Server を使用します ([この公式 Web サイト](https://docs.microsoft.com/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15)からダウンロードしてください)。
 2. ご使用のアプリケーションから SQL Server インスタンスとデータベースに接続するには、次の構成を設定します。
-    1. **connection_url**: これは、SQL Server インスタンスまたはデータベースへの接続に使用される URL です。形式は次のとおりです。
+    1. **connection_url** : これは、SQL Server インスタンスまたはデータベースへの接続に使用される URL です。形式は次のとおりです。
 
         ```
         jdbc:sqlserver://<SQL_server_IP_address>:1433;instanceName=<instance_name>;databaseName=<database_name>;
         ```
 
-    2. **dbtable**: アクセスされているテーブルの名前。
-    3. **user**: SQL Server の構成の手順 1 で設定したログイン ユーザー。
-    4. **password**: SQL Server の構成の手順 1 で設定したパスワード。
+    2. **dbtable** : アクセスされているテーブルの名前。
+    3. **user** : SQL Server の構成の手順 1 で設定したログイン ユーザー。
+    4. **password** : SQL Server の構成の手順 1 で設定したパスワード。
 3. 次に示すように、上記の構成をご使用のアプリケーション コードで使用して、テーブルからデータを読み取ります。
 
     ```csharp

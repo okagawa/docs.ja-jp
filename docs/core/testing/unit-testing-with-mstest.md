@@ -3,13 +3,13 @@ title: MSTest と .NET Core による単体テスト C#
 description: dotnet テストおよび MSTest を使用したサンプル ソリューションを段階的に構築していく対話型エクスペリエンスを通じて、C# および .NET Core の単体テストの概念について説明します。
 author: ncarandini
 ms.author: wiwagn
-ms.date: 09/08/2017
-ms.openlocfilehash: 765b57dce323c10dc5fcbf395cb7d52be76046c2
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.date: 10/21/2020
+ms.openlocfilehash: c6132251ecc4f453189937f93cf8024dcb8b91f5
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656359"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471610"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>MSTest と .NET Core による単体テスト C#
 
@@ -19,7 +19,7 @@ ms.locfileid: "88656359"
 
 ## <a name="create-the-source-project"></a>ソース プロジェクトを作成する
 
-シェル ウィンドウを開きます。 ソリューションを保存するための *unit-testing-using-mstest* というディレクトリを作成します。 この新しいディレクトリ内で [`dotnet new sln`](../tools/dotnet-new.md) を実行して、クラス ライブラリとテスト プロジェクト用の新しいソリューション ファイルを作成します。 次に、*PrimeService* ディレクトリを作成します。 現時点のディレクトリとファイルの構造は次のアウトラインのようになっています。
+シェル ウィンドウを開きます。 ソリューションを保存するための *unit-testing-using-mstest* というディレクトリを作成します。 この新しいディレクトリ内で [`dotnet new sln`](../tools/dotnet-new.md) を実行して、クラス ライブラリとテスト プロジェクト用の新しいソリューション ファイルを作成します。 次に、 *PrimeService* ディレクトリを作成します。 現時点のディレクトリとファイルの構造は次のアウトラインのようになっています。
 
 ```console
 /unit-testing-using-mstest
@@ -27,7 +27,7 @@ ms.locfileid: "88656359"
     /PrimeService
 ```
 
-*PrimeService* を現在のディレクトリにし、[`dotnet new classlib`](../tools/dotnet-new.md) を実行してソース プロジェクトを作成します。 *Class1.cs* の名前を *PrimeService.cs* に変更します。 `PrimeService` クラスのエラーが発生する実装を作成します。
+*PrimeService* を現在のディレクトリにし、 [`dotnet new classlib`](../tools/dotnet-new.md) を実行してソース プロジェクトを作成します。 *Class1.cs* の名前を *PrimeService.cs* に変更します。 `PrimeService` クラスのエラーが発生する実装を作成します。
 
 ```csharp
 using System;
@@ -48,7 +48,7 @@ namespace Prime.Services
 
 ## <a name="create-the-test-project"></a>テスト プロジェクトの作成
 
-次に、*PrimeService.Tests* ディレクトリを作成します。 次の一覧はディレクトリ構造を示したものです。
+次に、 *PrimeService.Tests* ディレクトリを作成します。 次の一覧はディレクトリ構造を示したものです。
 
 ```console
 /unit-testing-using-mstest
@@ -59,7 +59,7 @@ namespace Prime.Services
     /PrimeService.Tests
 ```
 
-*PrimeService.Tests* ディレクトリを現在のディレクトリにし、[`dotnet new mstest`](../tools/dotnet-new.md) を使用して新しいプロジェクトを作成します。 dotnet new コマンドによって、テスト ライブラリとして MSTest を使用するテスト プロジェクトが作成されます。 生成されたテンプレートで、*PrimeServiceTests.csproj* ファイルのテスト ランナーが構成されます。
+*PrimeService.Tests* ディレクトリを現在のディレクトリにし、 [`dotnet new mstest`](../tools/dotnet-new.md) を使用して新しいプロジェクトを作成します。 dotnet new コマンドによって、テスト ライブラリとして MSTest を使用するテスト プロジェクトが作成されます。 生成されたテンプレートで、 *PrimeServiceTests.csproj* ファイルのテスト ランナーが構成されます。
 
 ```xml
 <ItemGroup>
@@ -94,7 +94,7 @@ dotnet add reference ../PrimeService/PrimeService.csproj
 
 ## <a name="create-the-first-test"></a>最初のテストを作成する
 
-失敗するテストを 1 つ作成してそれを合格させる、というプロセスを繰り返します。 *PrimeService.Tests* ディレクトリから *UnitTest1.cs* を削除し、*PrimeService_IsPrimeShould.cs* という名前の新しい C# ファイルを作成します。コンテンツは次のようになります。
+失敗するテストを 1 つ作成してそれを合格させる、というプロセスを繰り返します。 *PrimeService.Tests* ディレクトリから *UnitTest1.cs* を削除し、 *PrimeService_IsPrimeShould.cs* という名前の新しい C# ファイルを作成します。コンテンツは次のようになります。
 
 ```csharp
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -105,17 +105,11 @@ namespace Prime.UnitTests.Services
     [TestClass]
     public class PrimeService_IsPrimeShould
     {
-        private readonly PrimeService _primeService;
-
-        public PrimeService_IsPrimeShould()
-        {
-            _primeService = new PrimeService();
-        }
-
         [TestMethod]
         public void IsPrime_InputIs1_ReturnFalse()
         {
-            var result = _primeService.IsPrime(1);
+            var primeService = new PrimeService();
+            bool result = primeService.IsPrime(1);
 
             Assert.IsFalse(result, "1 should not be prime");
         }

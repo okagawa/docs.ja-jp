@@ -11,16 +11,16 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 617c5ec037ad7a47b43cca2c13da4a77aa682997
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 930efdbdc6a20ea301331c1ce6fc664da43bfc5f
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739086"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471851"
 ---
 # <a name="enumeration-types-c-reference"></a>列挙型 (C# リファレンス)
 
-"*列挙型*" は、基になる[整数値](integral-numeric-types.md)型の一連の名前付き定数によって定義された[値の型](value-types.md)です。 列挙型を定義するには、`enum` キーワードを使用して "*列挙型メンバー*" の名前を指定します。
+" *列挙型* " は、基になる [整数値](integral-numeric-types.md)型の一連の名前付き定数によって定義された [値の型](value-types.md)です。 列挙型を定義するには、`enum` キーワードを使用して " *列挙型メンバー* " の名前を指定します。
 
 ```csharp
 enum Season
@@ -54,7 +54,7 @@ enum ErrorCode : ushort
 
 列挙型で選択肢の組み合わせを表したいときは、個々の選択肢がビット フィールドになるように、列挙型メンバーをそれらの選択肢に対して定義します。 つまり、これらの列挙型メンバーの関連する値は、2 の累乗である必要があります。 次に、[ビットごとの論理演算子 `|` または `&`](../operators/bitwise-and-shift-operators.md#enumeration-logical-operators) を使用し、選択肢を組み合わせたり、選択肢の組み合わせを交差させたりすることができます。 列挙型によってビット フィールドが宣言されていることを示すには、[フラグ](xref:System.FlagsAttribute)属性を適用します。 次の例に示すように、列挙型の定義に一般的な組み合わせをいくつか含めることもできます。
 
-[!code-csharp[enum flags](snippets/EnumType.cs#Flags)]
+[!code-csharp[enum flags](snippets/shared/EnumType.cs#Flags)]
 
 詳細と例については、<xref:System.FlagsAttribute?displayProperty=nameWithType> API リファレンス ページ、および <xref:System.Enum?displayProperty=nameWithType> API リファレンス ページの「[非排他的メンバーと Flags 属性](/dotnet/api/system.enum#non-exclusive-members-and-the-flags-attribute)」セクションを参照してください。
 
@@ -68,7 +68,7 @@ C# 7.3 以降、基底クラス制約 ([列挙の制約](../../programming-guide
 
 列挙型については、列挙型とその基になる整数型との間に明示的な変換が存在します。 列挙値をその基になる型に[キャスト](../operators/type-testing-and-cast.md#cast-expression)すると、結果は列挙メンバーの関連する整数値になります。
 
-[!code-csharp[enum conversions](snippets/EnumType.cs#Conversions)]
+[!code-csharp[enum conversions](snippets/shared/EnumType.cs#Conversions)]
 
 <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> メソッドを使用して、列挙型に、関連する特定の値を持つ列挙型メンバーが含まれているかどうかを確認します。
 
