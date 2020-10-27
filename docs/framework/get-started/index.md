@@ -1,24 +1,23 @@
 ---
-title: .NET Framework の概要
-description: .NET の使用を開始します。これは、アプリを管理するランタイム実行環境です。 これには、共通言語ランタイム (CLR) と広範なクラス ライブラリが含まれています。
-ms.date: 04/02/2019
+title: .NET Framework の使用を開始する
+description: アプリを管理するランタイム実行環境である、.NET Framework の概要について説明します。 これには、共通言語ランタイム (CLR) と広範なクラス ライブラリが含まれています。
+ms.date: 10/21/2020
 helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: 85ba856fd695f264f75a6dab2dca3aded4e5cdc1
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 02480641af5ad2c973f7dbbbc233d3d89ff4617e
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414969"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471673"
 ---
 # <a name="get-started-with-net-framework"></a>.NET Framework の使用を開始する
 
 .NET Framework は、.NET Framework を対象としたアプリを管理するランタイム実行環境です。 これは、メモリ管理やその他のシステム サービスを提供する共通言語ランタイムと、プログラマがアプリ開発のすべての主要領域で堅牢性と信頼性の高いコードを利用できるようにするための広範なクラス ライブラリから構成されています。
 
-> [!NOTE]
-> .NET Framework は、Windows システムでのみ使用できます。 Windows、macOS、Linux 上で [.NET Core](../../core/introduction.md) を使用してアプリを開発および実行できます。
+[!INCLUDE [net-framework-future](../../../includes/net-framework-future.md)]
 
 ## <a name="what-is-net-framework"></a>.NET Framework とは
 
@@ -41,7 +40,7 @@ ms.locfileid: "89414969"
 - 複数バージョン対応。 [.NET Standard](../../standard/net-standard.md) に対応することで、開発者は、.NET Standard の特定のバージョンでサポートされる、複数の .NET Framework プラットフォームで機能するクラス ライブラリを作成できます。 たとえば、.NET Standard 2.0 に対応するライブラリは、.NET Framework 4.6.1、.NET Core 2.0、および UWP 10.0.16299 に対応するアプリで使用できます。
 
 <a name="ForUsers"></a>
-## <a name="the-net-framework-for-users"></a>ユーザーにとっての .NET Framework
+## <a name="net-framework-for-users"></a>ユーザーにとっての .NET Framework
 
 .NET Framework アプリを開発しなくても、使用するユーザーは、.NET Framework やその操作に関する知識を持つ必要はありません。 ほとんどの場合、フレームワークは、ユーザーにとって完全に透過的に機能します。
 
@@ -76,7 +75,7 @@ Windows 8 よりも前の Windows バージョンで .NET Framework を削除す
 | Title | 説明 |
 | ----- |------------ |
 | [概要](overview.md) | .NET Framework を対象としたアプリを作成する開発者向けの詳細情報を提供します。 |
-| [インストール ガイド](../install/index.md) | .NET Framework のインストールに関する情報を提供します。 |  
+| [インストール ガイド](../install/index.md) | .NET Framework のインストールに関する情報を提供します。 |
 | [.NET Framework および特別なリリース](the-net-framework-and-out-of-band-releases.md) | .NET Framework のアウトオブバンド リリースと、これらをアプリ内で使用する方法について説明します。 |
 | [システム要件](system-requirements.md) | .NET Framework を実行するためのハードウェアおよびソフトウェアの要件を示します。 |
 | [.NET Core とオープン ソース](net-core-and-open-source.md) | .NET Core と .NET Framework の関係性、およびオープン ソースの .NET Core プロジェクトにアクセスする方法について説明します。 |
