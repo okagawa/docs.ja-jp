@@ -2,12 +2,12 @@
 title: ポータブル サブセット プロジェクトでサービス参照を追加する
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: 8bedfb44523b4f67845d40fadfaa72d64622ba26
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: e9a0d3fbc75a8c64af892f74acedfc41dc115da3
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449479"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687709"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>ポータブル サブセット プロジェクトでサービス参照を追加する
 
@@ -44,7 +44,7 @@ ms.locfileid: "77449479"
   
 14. ポータブル サブセット プロジェクトでは <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> はサポートされません。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [WCF クライアントを使用したサービスへのアクセス](accessing-services-using-a-wcf-client.md)
-- [ポータブル クラス ライブラリ](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)
+- [ポータブル クラス ライブラリ](../cross-platform/portable-class-library.md)
