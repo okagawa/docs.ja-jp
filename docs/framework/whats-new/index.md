@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 6bbadd05187946cfdc601f9c026d685609251193
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: 13346836b6cc1c9db4a1b6fd93a11615c2a843c0
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471944"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687562"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework の新機能
 
@@ -1855,7 +1855,7 @@ NGen PDB を使用すれば、IL PDB に依存することなく、NGen で IL �
 
   - ポータブル クラス ライブラリのような Windows ストアまたは Windows Phone ストア クラス ライブラリを再ターゲットできます。
 
-  これらの変更の詳細については、[ポータブル クラス ライブラリ](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)に関するページを参照してください。
+  これらの変更の詳細については、[ポータブル クラス ライブラリ](../cross-platform/portable-class-library.md)に関するページを参照してください。
 
 - .NET Framework のコンテンツ セットには、Windows アプリをビルドして配置するためのプリコンパイル テクノロジである .NET Native のドキュメントが含まれます。 .NET Native は、中間言語 (IL) ではなくネイティブ コードへアプリを直接コンパイルすることにより、パフォーマンスを向上させます。 詳しくは、「[.NET ネイティブによるアプリのコンパイル](../net-native/index.md)」をご覧ください。
 
@@ -2125,13 +2125,12 @@ Windows 8.x ストア アプリは、特定のフォーム ファクターに合
 
 ### <a name="portable-class-libraries"></a>ポータブル クラス ライブラリ <a name="portable"></a>
 
-Visual Studio 2012 (および以降のバージョン) のポータブル クラス ライブラリ プロジェクトを使うと、複数の .NET Framework プラットフォームで動作するマネージド アセンブリを作成してビルドできます。 ポータブル クラス ライブラリ プロジェクトを使って、対象とするプラットフォーム (Windows Phone や Windows 8.x ストア アプリ用 .NET など) を選択できます。 プロジェクトで使用できる型およびメンバーは、自動的にこれらのプラットフォーム間で共通の型とメンバーに制限されます。 詳細については、[ポータブル クラス ライブラリ](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)に関するページを参照してください。
+Visual Studio 2012 (および以降のバージョン) のポータブル クラス ライブラリ プロジェクトを使うと、複数の .NET Framework プラットフォームで動作するマネージド アセンブリを作成してビルドできます。 ポータブル クラス ライブラリ プロジェクトを使って、対象とするプラットフォーム (Windows Phone や Windows 8.x ストア アプリ用 .NET など) を選択できます。 プロジェクトで使用できる型およびメンバーは、自動的にこれらのプラットフォーム間で共通の型とメンバーに制限されます。 詳細については、[ポータブル クラス ライブラリ](../cross-platform/portable-class-library.md)に関するページを参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 - [NET Framework および特別なリリース](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [.NET Framework のアクセシビリティの新機能](whats-new-in-accessibility.md)
-- [Visual Studio 2017 の新機能](/visualstudio/ide/whats-new-visual-studio-2017)
 - [Visual Studio 2019 の新機能](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Visual Studio での C++ の新機能](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
