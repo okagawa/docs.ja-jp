@@ -15,22 +15,20 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: 83799b0f4c6d6503825ce271fed4bffa7a9775b9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 47021873956f971709b49c1b224e43e4c7f482d0
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545704"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687287"
 ---
-# <a name="handling-and-raising-events"></a>イベントの処理と発生
+# <a name="handle-and-raising-events"></a>イベントの処理と発生
 
-.NET でのイベントは、デリゲート モデルに基づいています。 デリゲート モデルは[オブザーバー デザイン パターン](observer-design-pattern.md)に従って、サブスクライバーがプロバイダーに登録して通知を受信できるようにします。 イベントの送信元がイベント発生の通知をプッシュしたら、イベント レシーバーはその通知を受信して、通知に対する応答を定義します。 ここでは、デリゲート モデルの主要コンポーネント、アプリケーションでイベントを利用する方法、およびコードでイベントを実装する方法について説明します。  
-  
- Windows 8.x ストア アプリでのイベントの処理については、「[Events and routed events overview](/previous-versions/windows/apps/hh758286(v=win.10))」(イベントとルーティング イベントの概要) を参照してください。  
+.NET でのイベントは、デリゲート モデルに基づいています。 デリゲート モデルは[オブザーバー デザイン パターン](observer-design-pattern.md)に従って、サブスクライバーがプロバイダーに登録して通知を受信できるようにします。 イベントの送信元がイベント発生の通知をプッシュしたら、イベント レシーバーはその通知を受信して、通知に対する応答を定義します。 ここでは、デリゲート モデルの主要コンポーネント、アプリケーションでイベントを利用する方法、およびコードでイベントを実装する方法について説明します。
   
 ## <a name="events"></a>イベント
 
-イベントは、アクションの発生を知らせるために、オブジェクトによって送信されるメッセージです。 アクションは、ユーザーがボタンのクリックなどの対話的操作を行った場合や、プロパティの値の変更など、なんらかのプログラム ロジックによって発生します。 イベントを発生させるオブジェクトを "*イベントの送信元*" と呼びます。 イベントの送信元は、発生させたイベントをどのオブジェクトまたはメソッドが受信する (処理する) かについての情報を持っていません。 このイベントはイベントの送信元のメンバーです。たとえば、<xref:System.Web.UI.WebControls.Button.Click> イベントは <xref:System.Web.UI.WebControls.Button> クラスのメンバーであり、<xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> イベントは <xref:System.ComponentModel.INotifyPropertyChanged> インターフェイスを実装するクラスのメンバーです。  
+イベントは、アクションの発生を知らせるために、オブジェクトによって送信されるメッセージです。 アクションは、ユーザーがボタンのクリックなどの対話的操作を行った場合や、プロパティの値の変更など、なんらかのプログラム ロジックによって発生します。 イベントを発生させるオブジェクトを " *イベントの送信元* " と呼びます。 イベントの送信元は、発生させたイベントをどのオブジェクトまたはメソッドが受信する (処理する) かについての情報を持っていません。 このイベントはイベントの送信元のメンバーです。たとえば、<xref:System.Web.UI.WebControls.Button.Click> イベントは <xref:System.Web.UI.WebControls.Button> クラスのメンバーであり、<xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> イベントは <xref:System.ComponentModel.INotifyPropertyChanged> インターフェイスを実装するクラスのメンバーです。  
   
 イベントを定義するには、イベント クラスのシグネチャで C# の [`event`](../../csharp/language-reference/keywords/event.md) または Visual Basic の [`Event`](../../visual-basic/language-reference/statements/event-statement.md) キーワードを使用し、イベント用のデリゲートの型を指定します。 デリゲートについては、次のセクションで説明します。  
   
@@ -82,19 +80,19 @@ ms.locfileid: "90545704"
 
 .NET を使用すると、静的または動的にイベント通知のためのサブスクライバーを登録できます。 静的なイベント ハンドラーは、処理対象のイベントのクラスの有効期間にわたって有効になります。 動的なイベント ハンドラーは、プログラムの実行中、通常は条件付きのプログラム ロジックに応答する形で、明示的にアクティブ化または非アクティブ化されます。 たとえば、特定の条件下でのみイベント通知が必要な場合や、複数のイベント ハンドラーを持つアプリケーションで、実行時の条件に応じて適切なハンドラーを決定する場合などに使用できます。 前のセクションの例は、イベント ハンドラーを動的に追加する方法を示しています。 詳細については、[イベント](../../visual-basic/programming-guide/language-features/events/index.md) (Visual Basic の場合) と[イベント](../../csharp/programming-guide/events/index.md) (C# の場合) を参照してください。  
   
-## <a name="raising-multiple-events"></a>複数のイベントの発生  
+## <a name="raising-multiple-events"></a>複数のイベントの発生
+
  クラスで複数のイベントを発生させる場合、コンパイラでは、イベント デリゲートのインスタンスごとに 1 つのフィールドが生成されます。 イベントの数が多い場合は、デリゲート 1 つあたり 1 フィールドというストレージ コストが許容されない可能性があります。 そのような状況に備えて、.NET には、イベント デリゲートを格納するために任意に選択した別のデータ構造と一緒に使用できる、イベント プロパティが用意されています。  
   
  イベント プロパティは、イベント アクセサーを伴うイベント宣言によって構成されます。 イベント アクセサーは、ストレージ データ構造におけるイベント デリゲート インスタンスの追加または削除を定義するメソッドです。 イベント プロパティを使用すると、イベント プロパティは各イベント デリゲートを呼び出す前に取得する必要があるので、イベント フィールドよりも低速です。 つまり、メモリを取るか、速度を取るかの比較検討になります。 クラスで、発生頻度の低いイベントを数多く定義する場合は、イベント プロパティを実装することをお勧めします。 詳細については、[イベント プロパティを使用して複数のイベントを処理する](how-to-handle-multiple-events-using-event-properties.md)」をご覧ください。  
   
-## <a name="related-topics"></a>関連トピック  
+## <a name="related-articles"></a>関連記事
   
 |Title|説明|  
 |-----------|-----------------|  
 |[方法: イベントを発生させる/処理する](how-to-raise-and-consume-events.md)|イベントの発生例と実装例が含まれます。|  
 |[方法: イベント プロパティを使用して複数のイベントを処理する](how-to-handle-multiple-events-using-event-properties.md)|イベント プロパティを使用して複数のイベントを処理する方法を示します。|  
-|[オブサーバー デザイン パターン](observer-design-pattern.md)|サブスクライバーがプロバイダーに登録して、通知を受信できるようにするデザイン パターンについて説明します。|  
-|[方法: Web フォーム アプリケーションでイベントを利用する](how-to-consume-events-in-a-web-forms-application.md)|Web フォーム コントロールによって発生したイベントを処理する方法を示します。|  
+|[オブサーバー デザイン パターン](observer-design-pattern.md)|サブスクライバーがプロバイダーに登録して、通知を受信できるようにするデザイン パターンについて説明します。|
   
 ## <a name="see-also"></a>関連項目
 
@@ -105,3 +103,4 @@ ms.locfileid: "90545704"
 - [イベント (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)
 - [イベント (C# プログラミング ガイド)](../../csharp/programming-guide/events/index.md)
 - [イベントとルーティング イベントの概要 (UWP アプリ)](/windows/uwp/xaml-platform/events-and-routed-events-overview)
+- [Windows ストア 8.x アプリのイベント](/previous-versions/windows/apps/hh758286(v=win.10))
