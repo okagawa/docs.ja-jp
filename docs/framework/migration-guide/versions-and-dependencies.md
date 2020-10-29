@@ -5,18 +5,20 @@ ms.date: 01/17/2020
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: 74a1e244fa47cf7c6ea36454013b46b6e44f62c9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f807a9d9a7ccebf2ae71d47e01fbfba7338b1799
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557672"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471998"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework のバージョンおよび依存関係
 
 .NET Framework の各バージョンには、共通言語ランタイム (CLR)、基底クラス ライブラリ、およびその他のマネージド ライブラリが含まれています。 この記事では、.NET Framework の各バージョンの主要な機能について説明し、基になっている CLR のバージョンおよび関連する開発環境に関する情報と、Windows オペレーティング システム (OS) でインストールされるバージョンを示します。
 
 新しい各バージョンの .NET Framework には、以前のバージョンの機能が含まれると共に、新機能が追加されています。
+
+[!INCLUDE [net-framework-future](../../../includes/net-framework-future.md)]
 
 CLR は独自のバージョン番号で識別されます。 .NET Framework のバージョン番号はリリースごとにインクリメントされますが、CLR のバージョンは必ずしもインクリメントされるわけではありません。 たとえば、.NET Framework 4、4.5、およびそれ以降のリリースには CLR 4 が含まれますが、.NET Framework 2.0、3.0、3.5 には CLR 2.0 が含まれます。 (CLR の Version 3 はありません)。
 
@@ -32,7 +34,7 @@ CLR は独自のバージョン番号で識別されます。 .NET Framework の
 
 - チェック マーク アイコン ✔️ は、.NET Framework が既定でインストールされている OS バージョンを示します。
 - プラス記号アイコン ➕ は、.NET Framework がインストールされていないがインストールできる OS バージョンを示します。
-- アスタリスク **\*** は、[[コントロール パネル]](../install/dotnet-35-windows-10.md) で、またはサーバー マネージャーを介した Windows Server で有効にする必要がある (プレインストール済みかどうかには関係のない) .NET Framework の OS バージョンを示します。
+- アスタリスク * *\** は、[[コントロール パネル]](../install/dotnet-35-windows-10.md) で、またはサーバー マネージャーを介した Windows Server で有効にする必要がある (プレインストール済みかどうかには関係のない) .NET Framework の OS バージョンを示します。
 
 | | |
 | - | - |
@@ -49,7 +51,7 @@ CLR は独自のバージョン番号で識別されます。 .NET Framework の
 
 |||
 |-|-|
-|**CLR バージョン**|4|
+|"_ *CLR バージョン* "*|4|
 |**Windows バージョン**|✔️ 10 May 2019 Update<br/>➕ 10 October 2018 Update (バージョン 1809)<br/>➕ 10 April 2018 Update (バージョン 1803)<br/>➕ 10 Fall Creators Update (バージョン 1709)<br/>➕ 10 Creators Update (バージョン 1703)<br/>➕ 10 Anniversary Update (バージョン 1607)<br/>➕ 8.1<br/>➕ 7|
 |**Windows Server バージョン**|➕ Windows Server 2019<br/>➕ Windows Server、バージョン 1809<br/>➕ Windows Server、バージョン 1803<br/>➕ 2016<br/>➕ 2012 R2<br/>➕ 2012<br/>➕ 2008 R2 SP1|
 |**インストールされた .NET バージョンを確認するには**|`Release` DWORD を使用:<br/>- 528040 (Windows 10 May 2019 Update)<br/>- 528049 (その他すべての OS バージョン)<br/>([手順](how-to-determine-which-versions-are-installed.md)に関するページを参照)|
@@ -68,7 +70,7 @@ CLR は独自のバージョン番号で識別されます。 .NET Framework の
 |**Windows Server バージョン**|✔️ Windows Server 2019<br/>✔️ Windows Server、バージョン 1809<br/>✔️ Windows Server、バージョン 1803<br/>➕ Windows Server、バージョン 1709<br/>➕ 2016<br/>➕ 2012 R2<br/>➕ 2012<br/>➕ 2008 R2 SP1|
 |**インストールされた .NET バージョンを確認するには**|`Release` DWORD を使用:<br/>- 461814 (Windows 10 October 2018 Update)<br/>- 461808 (Windows 10 April 2018 Update および Windows Server、バージョン 1803)<br/>- 461814 (その他すべての OS バージョン)<br/>([手順](how-to-determine-which-versions-are-installed.md)に関するページを参照)|
 
-<sup>1</sup> **.NET デスクトップ開発**、**ASP.NET および Web の開発**、**Azure 開発**、**Office/SharePoint 開発**、 **.NET によるモバイル開発**、または **.NET Core クロスプラットフォームの開発**のワークロードをインストールする必要があります。
+<sup>1</sup> **.NET デスクトップ開発** 、 **ASP.NET および Web の開発** 、 **Azure 開発** 、 **Office/SharePoint 開発** 、 **.NET によるモバイル開発** 、または **.NET Core クロスプラットフォームの開発** のワークロードをインストールする必要があります。
 
 ### <a name="net-framework-471"></a>.NET Framework 4.7.1
 
@@ -120,7 +122,7 @@ CLR は独自のバージョン番号で識別されます。 .NET Framework の
 |**Windows Server バージョン**|➕ 2012 R2<br />➕ 2012<br />➕ 2008 R2 SP1|
 |**インストールされた .NET バージョンを確認するには**|`Release` DWORD を使用:<br /><br/>- 394254 (Windows 10 November Update)<br />- 394271 (その他すべての OS バージョン)<br /><br/>([手順](how-to-determine-which-versions-are-installed.md)に関するページを参照)|
 
-<sup>1</sup> **.NET デスクトップ開発**、**ASP.NET および Web の開発**、**Azure 開発**、**Office/SharePoint 開発**、 **.NET によるモバイル開発**、または **.NET Core クロスプラットフォームの開発**のワークロードをインストールする必要があります。
+<sup>1</sup> **.NET デスクトップ開発** 、 **ASP.NET および Web の開発** 、 **Azure 開発** 、 **Office/SharePoint 開発** 、 **.NET によるモバイル開発** 、または **.NET Core クロスプラットフォームの開発** のワークロードをインストールする必要があります。
 
 ### <a name="net-framework-46"></a>.NET Framework 4.6
 
