@@ -3,12 +3,12 @@ title: .NET Core にライブラリを移植する
 description: ライブラリ プロジェクトを .NET Framework から .NET Core に移植する方法を説明します。
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: ac9da2f850bf1e4e36367ad2154849a0c7efd535
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: dcacf4d59964e0ef2009b4e9694d7f562e3a1547
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164282"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223571"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>.NET Framework ライブラリを .NET Core に移植する
 
@@ -31,14 +31,14 @@ ms.locfileid: "87164282"
 この記事では、.NET Core CLI を使用してライブラリを作成する方法について説明します。
 
 [.NET Core の *csproj* 形式に追加されたもの](../tools/csproj.md)\
-この記事では、*csproj* および MSBuild への移行に伴ってプロジェクト ファイルに追加された変更について説明します。
+この記事では、 *csproj* および MSBuild への移行に伴ってプロジェクト ファイルに追加された変更について説明します。
 
 [.NET Core への移植 - サード パーティの依存関係の分析](third-party-deps.md)\
 この記事では、サード パーティの依存関係の移植性と、NuGet パッケージの依存関係が .NET Core で機能しない場合の対処方法について説明します。
 
 ## <a name="retarget-to-net-framework-472"></a>.NET Framework 4.7.2 に再ターゲット設定する
 
-コードのターゲットが .NET Framework 4.7.2 でない場合、.NET Framework 4.7.2 に再ターゲット設定することをお勧めします。 ターゲット設定することで、.NET Standard が既存の API をサポートしていない場合に、最新の代替 API を使用できるようになります。
+コードのターゲットが .NET Framework 4.7.2 でない場合、.NET Framework 4.7.2 に再ターゲット設定することをお勧めします。 これにより、.NET Standard が既存の API をサポートしていない場合に、最新の代替 API を使用できるようになります。
 
 移植するプロジェクトごとに、Visual Studio で次の手順を実行します。
 
@@ -117,7 +117,7 @@ ms.locfileid: "87164282"
 
 ## <a name="recommended-approach"></a>推奨されるアプローチ
 
-最終的に、移植作業は .NET Framework コードの構成内容に大きく左右されます。 コードを移植するのに良い方法は、コードの基本コンポーネントであるライブラリの "*ベース*" から始めることです。 ベースは、その他すべてが直接または間接的に使用するデータ モデル、または他の基本クラスやメソッドの場合があります。
+最終的に、移植作業は .NET Framework コードの構成内容に大きく左右されます。 コードを移植するのに良い方法は、コードの基本コンポーネントであるライブラリの " *ベース* " から始めることです。 ベースは、その他すべてが直接または間接的に使用するデータ モデル、または他の基本クラスやメソッドの場合があります。
 
 1. 移植対象のライブラリのレイヤーをテストするテスト プロジェクトを移植します。
 1. ライブラリのベースを新しい .NET Core プロジェクトにコピーし、サポートする .NET Standard のバージョンを選択します。

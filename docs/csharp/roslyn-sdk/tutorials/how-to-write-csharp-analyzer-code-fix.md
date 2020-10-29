@@ -3,42 +3,22 @@ title: 'チュートリアル: 最初のアナライザーとコード修正を�
 description: このチュートリアルでは、.NET Compiler SDK (Roslyn API) を使用してアナライザーとコード修正を作成する手順を詳しく説明します。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: e79907f364939462b7d0d5814c4752be23bcfdf3
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 33c00e90d768021e36a7987be0ddd7daec4cfcec
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381594"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224038"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>チュートリアル: 最初のアナライザーとコード修正を作成する
 
-.NET Compiler Platform SDK には、C# または Visual Basic コードをターゲットとするカスタム警告を作成するために必要なツールが用意されています。 **アナライザー**には、規則違反を認識するコードが含まれています。 **コード修正**には、違反を修正するコードが含まれています。 実装する規則には、コード構造から、コーディング スタイル、名前付け規則などがあります。 .NET Compiler Platform には、開発者がコードを作成するときに分析を実行するためのフレームワークと、コードを修正するためのすべての Visual Studio UI 機能が用意されています。具体的には、エディターに波線を表示する、Visual Studio のエラー一覧を表示する、"電球" の提案を作成する、推奨される修正の豊富なプレビューを表示するなどの機能です。
+.NET Compiler Platform SDK には、C# または Visual Basic コードをターゲットとするカスタム警告を作成するために必要なツールが用意されています。 **アナライザー** には、規則違反を認識するコードが含まれています。 **コード修正** には、違反を修正するコードが含まれています。 実装する規則には、コード構造から、コーディング スタイル、名前付け規則などがあります。 .NET Compiler Platform には、開発者がコードを作成するときに分析を実行するためのフレームワークと、コードを修正するためのすべての Visual Studio UI 機能が用意されています。具体的には、エディターに波線を表示する、Visual Studio のエラー一覧を表示する、"電球" の提案を作成する、推奨される修正の豊富なプレビューを表示するなどの機能です。
 
-このチュートリアルでは、Roslyn API を使用して**アナライザー**とそれに付随する**コード修正**の作成について説明します。 アナライザーは、ソース コードの分析を実行し、問題をユーザーに報告する方法の 1 つです。 必要に応じて、アナライザーは、ユーザーのソース コードに対する変更を表すコード修正を提供することもできます。 このチュートリアルでは、`const` 修飾子を使用して宣言できますが、実際は宣言されていないローカル変数宣言を検出するアナライザーを作成します。 付随するコード修正は、それらの宣言を修正して `const` 修飾子を追加します。
+このチュートリアルでは、Roslyn API を使用して **アナライザー** とそれに付随する **コード修正** の作成について説明します。 アナライザーは、ソース コードの分析を実行し、問題をユーザーに報告する方法の 1 つです。 必要に応じて、アナライザーは、ユーザーのソース コードに対する変更を表すコード修正を提供することもできます。 このチュートリアルでは、`const` 修飾子を使用して宣言できますが、実際は宣言されていないローカル変数宣言を検出するアナライザーを作成します。 付随するコード修正は、それらの宣言を修正して `const` 修飾子を追加します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-> [!NOTE]
-> 現行の Visual Studio **コード修正付きアナライザー (.NET Standard)** テンプレートには既知のバグが含まれていますが、Visual Studio 2019 バージョン 16.7 で修正されます。 テンプレートのプロジェクトは、次の変更が行われない限り、コンパイルされません。
->
-> 1. **[ツール]** 、 **[オプション]** 、 **[NuGet パッケージ マネージャー]** 、 **[パッケージ ソース]** の順に選択します。
->    - プラス記号ボタンを選択すると、新しいソースが追加されます。
->    - **[ソース]** を `https://dotnet.myget.org/F/roslyn-analyzers/api/v3/index.json` に設定し、 **[更新]** を選択します。
-> 1. **[ソリューション エクスプローラー]** で **[MakeConst.Vsix]** プロジェクトを右クリックし、 **[プロジェクト ファイルの編集]** を選択します。
->    - `<AssemblyName>` ノードを更新し、`.Visx` サフィックスを追加します。
->      - `<AssemblyName>MakeConst.Vsix</AssemblyName>`
->    - 41 行目の `<ProjectReference>` ノードを更新し、`TargetFramework` の値を変更します。
->      - `<ProjectReference Update="@(ProjectReference)" AdditionalProperties="TargetFramework=netstandard2.0" />`
-> 1. *[MakeConst.Test]* プロジェクトで *MakeConstUnitTests.cs* ファイルを更新します。
->    - 9 行目を次のように変更します。名前空間の変更に注目してください。
->      - `using Verify = Microsoft.CodeAnalysis.CSharp.Testing.MSTest.CodeFixVerifier<`
->    - 24 行目を次のメソッドに変更します。
->      - `await Verify.VerifyAnalyzerAsync(test);`
->    - 62 行目を次のメソッドに変更します。
->      - `await Verify.VerifyCodeFixAsync(test, expected, fixtest);`
-
-- [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
-- [Visual Studio 2019](https://www.visualstudio.com/downloads)
+- [Visual Studio 2019](https://www.visualstudio.com/downloads) バージョン 16.7 以降
 
 Visual Studio インストーラーで **.NET Compiler Platform SDK** をインストールする必要があります。
 
@@ -68,11 +48,11 @@ const int x = 0;
 Console.WriteLine(x);
 ```
 
-変数を定数にすることができるかどうかを判断するために、構文解析、初期化子式の定数分析、および変数に書き込まれないというデータフロー分析が必要です。 .NET Compiler Platform には、この分析を簡単に実行できる API が用意されています。 最初の手順は、新しい C# の**コード修正を含むアナライザー** プロジェクトを作成することです。
+変数を定数にすることができるかどうかを判断するために、構文解析、初期化子式の定数分析、および変数に書き込まれないというデータフロー分析が必要です。 .NET Compiler Platform には、この分析を簡単に実行できる API が用意されています。 最初の手順は、新しい C# の **コード修正を含むアナライザー** プロジェクトを作成することです。
 
 - Visual Studio で、 **[ファイル] > [新規] > [プロジェクト]** の順に選択して、[新しいプロジェクト] ダイアログを表示します。
 - **[Visual C#] > [Extensibility]** で、 **[Analyzer with code fix (.NET Standard)]\(コード修正付きアナライザー (.NET Standard)\)** を選択します。
-- プロジェクトに「**MakeConst**」という名前を付けて、[OK] をクリックします。
+- プロジェクトに「 **MakeConst** 」という名前を付けて、[OK] をクリックします。
 
 コード修正テンプレート付きアナライザー テンプレートを使用すると、アナライザーとコード修正を含むプロジェクト、単体テスト プロジェクト、VSIX プロジェクトという 3 つのプロジェクトが作成されます。 既定のスタートアップ プロジェクトは VSIX プロジェクトです。 <kbd>F5</kbd> キーを押して、VSIX プロジェクトを開始します。 これにより、新しいアナライザーが読み込まれた Visual Studio の 2 つ目のインスタンスが開始されます。
 
@@ -94,7 +74,7 @@ Console.WriteLine(x);
 
 ## <a name="create-analyzer-registrations"></a>アナライザーの登録を作成する
 
-このテンプレートを使用すると、**MakeConstAnalyzer.cs** ファイルに初期の `DiagnosticAnalyzer` クラスが作成されます。 この初期のアナライザーは、あらゆるアナライザーが持つ 2 つの重要な特性を示しています。
+このテンプレートを使用すると、 **MakeConstAnalyzer.cs** ファイルに初期の `DiagnosticAnalyzer` クラスが作成されます。 この初期のアナライザーは、あらゆるアナライザーが持つ 2 つの重要な特性を示しています。
 
 - すべての診断アナライザーは、動作する言語を記述する `[DiagnosticAnalyzer]` 属性を提供する必要があります。
 - すべての診断アナライザーは、<xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer> クラスから派生する必要があります。
@@ -104,7 +84,7 @@ Console.WriteLine(x);
 1. アクションを登録します。 アクションは、アナライザーをトリガーしてコード違反を調べるコードの変更を表します。 Visual Studio で、登録済みのアクションと一致するコード編集が検出されると、アナライザーの登録済みメソッドが呼び出されます。
 1. 診断を作成します。 アナライザーで違反を検出されると、違反をユーザーに通知するために Visual Studio で使用される診断オブジェクトが作成されます。
 
-<xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)?displayProperty=nameWithType> メソッドのオーバーライドでアクションを登録します。 このチュートリアルでは、**構文ノード**にアクセスしてローカル宣言を探し、定数値を持つものを調べます。 宣言が定数であれば、アナライザーによって診断が作成され、報告されます。
+<xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)?displayProperty=nameWithType> メソッドのオーバーライドでアクションを登録します。 このチュートリアルでは、 **構文ノード** にアクセスしてローカル宣言を探し、定数値を持つものを調べます。 宣言が定数であれば、アナライザーによって診断が作成され、報告されます。
 
 最初の手順は、登録定数が "Make Const" アナライザーを示すように、登録定数と `Initialize` メソッドを更新することです。 ほとんどの文字列定数は、文字列リソース ファイルで定義されています。 ローカリゼーションを容易にするには、この手法に従うことをお勧めします。 **MakeConst** アナライザー プロジェクト用に **Resources.resx** ファイルを開きます。 これでリソース エディターが表示されます。 文字列リソースを次のように更新します。
 
@@ -134,7 +114,7 @@ private void AnalyzeNode(SyntaxNodeAnalysisContext context)
 }
 ```
 
-次のコードに示すように、**MakeConstAnalyzer.cs**  の `Category` を "Usage" に変更します。
+次のコードに示すように、 **MakeConstAnalyzer.cs**  の `Category` を "Usage" に変更します。
 
 ```csharp
 private const string Category = "Usage";
@@ -329,7 +309,7 @@ public void WhenDiagnosticIsRaisedFixUpdatesCode(
 
 [!code-csharp[string constants for fix test](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "string constants for fix test")]
 
-これらの 2 つのテストを実行して、合格することを確認します。 Visual Studio で、 **[テスト]**  >  **[Windows]**  >  **[テスト エクスプローラー]** の順に選択して、**テスト エクスプローラー**を開きます。 次に、 **[すべて実行]** リンクを選択します。
+これらの 2 つのテストを実行して、合格することを確認します。 Visual Studio で、 **[テスト]**  >  **[Windows]**  >  **[テスト エクスプローラー]** の順に選択して、 **テスト エクスプローラー** を開きます。 次に、 **[すべて実行]** リンクを選択します。
 
 ## <a name="create-tests-for-valid-declarations"></a>有効な宣言のテストを作成する
 
@@ -464,7 +444,7 @@ foreach (var variable in localDeclaration.Declaration.Variables)
 
 幸いにも、上記のすべてのバグは、ここで学んだテクニックを使って解決できます。
 
-最初のバグを修正するには、まず **DiagnosticAnalyzer.cs** を開き、各ローカル宣言の初期化子が検査される foreach ループを見つけて、それらに定数値が割り当てられていることを確認します。 最初の foreach ループの_直前_に `context.SemanticModel.GetTypeInfo()` を呼び出し、宣言されたローカル宣言の型に関する詳細情報を取得します。
+最初のバグを修正するには、まず **DiagnosticAnalyzer.cs** を開き、各ローカル宣言の初期化子が検査される foreach ループを見つけて、それらに定数値が割り当てられていることを確認します。 最初の foreach ループの _直前_ に `context.SemanticModel.GetTypeInfo()` を呼び出し、宣言されたローカル宣言の型に関する詳細情報を取得します。
 
 ```csharp
 var variableTypeName = localDeclaration.Declaration.Type;

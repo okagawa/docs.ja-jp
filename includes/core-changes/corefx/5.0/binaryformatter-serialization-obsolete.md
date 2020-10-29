@@ -1,25 +1,23 @@
 ---
-ms.openlocfilehash: 7cb146d19486618a4cee9976abe2220ea4b72790
-ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
+ms.openlocfilehash: 43bd1481ca6c3d3444afda2e2a2c67e7236b4402
+ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88203996"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434971"
 ---
 ### <a name="binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps"></a>BinaryFormatter シリアル化メソッドが古い形式になり、ASP.NET アプリでは使用不可に
 
-<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>、<xref:System.Runtime.Serialization.Formatter>、および <xref:System.Runtime.Serialization.IFormatter> の `Serialize` メソッドと `Deserialize` メソッドが古い形式になりました。 また、ASP.NET アプリでは、<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> のシリアル化が既定で禁止されます。
+<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>、<xref:System.Runtime.Serialization.Formatter>、および <xref:System.Runtime.Serialization.IFormatter> の `Serialize` と `Deserialize` のメソッドが古いと見なされ、警告が示されるようになりました。 また、ASP.NET アプリでは、<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> のシリアル化が既定で禁止されます。
 
 #### <a name="change-description"></a>変更の説明
 
-<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> の[セキュリティ脆弱性](../../../../docs/standard/serialization/binaryformatter-security-guide.md#binaryformatter-security-vulnerabilities)により、次のメソッドは古い形式になりました。 また、ASP.NET Core 5.0 以降のアプリでは、Web アプリによって <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 機能が再有効化されていない限り、<xref:System.NotSupportedException> がスローされます。
+<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> の[セキュリティ脆弱性](../../../../docs/standard/serialization/binaryformatter-security-guide.md#binaryformatter-security-vulnerabilities)により、次のメソッドは古いと見なされ、ID `SYSLIB0011` のコンパイル時警告が生成されるようになりました。 また、ASP.NET Core 5.0 以降のアプリでは、Web アプリによって <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 機能が再有効化されていない限り、<xref:System.NotSupportedException> がスローされます。
 
 - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType>
 - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType>
 
-.NET エコシステム内における <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> の使用を段階的に縮小するための取り組みの一環として、これらのメソッドが古い形式としてマークされています。
-
-次のシリアル化メソッドも古い形式になりましたが、動作変更はありません。
+次のシリアル化メソッドも古いと見なされ、警告 `SYSLIB0011` が生成されますが、動作変更はありません。
 
 - <xref:System.Runtime.Serialization.Formatter.Serialize(System.IO.Stream,System.Object)?displayProperty=nameWithType>
 - <xref:System.Runtime.Serialization.Formatter.Deserialize(System.IO.Stream)?displayProperty=nameWithType>
@@ -29,6 +27,10 @@ ms.locfileid: "88203996"
 #### <a name="version-introduced"></a>導入されたバージョン
 
 5.0 Preview 8
+
+#### <a name="reason-for-change"></a>変更理由
+
+.NET エコシステム内における <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> の使用を段階的に縮小するための取り組みの一環として、これらのメソッドが古い形式としてマークされています。
 
 #### <a name="recommended-action"></a>推奨アクション
 
@@ -58,7 +60,7 @@ ms.locfileid: "88203996"
   </PropertyGroup>
   ```
 
-  プロジェクト ファイルで警告を抑制すると、プロジェクト内のすべてのコード ファイルに対して警告が抑制されます。 SYSLIB0011 を抑制しても、他の古い API の使用によって発生した警告は抑制されません。
+  プロジェクト ファイルで警告を抑制すると、プロジェクト内のすべてのコード ファイルに対して警告が抑制されます。 `SYSLIB0011` を抑制しても、他の古い API の使用によって発生した警告は抑制されません。
 
 - ASP.NET アプリで引き続き <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> を使用する場合は、プロジェクト ファイルで再有効化することができます。 ただし、そうしないことを強くお勧めします。 詳しくは、「[BinaryFormatter セキュリティ ガイド](../../../../docs/standard/serialization/binaryformatter-security-guide.md)」をご覧ください。
 

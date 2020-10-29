@@ -4,12 +4,12 @@ description: .NET アプリとライブラリのターゲット フレームワ�
 ms.date: 09/08/2020
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 22689f6c1f161a67978dc0f41c6bc9a6b5acfad7
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: 85bc05f07cfcc5f59a8a27790ee3d78a497cecdc
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065254"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223468"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK スタイルのプロジェクトでのターゲット フレームワーク
 
@@ -21,7 +21,7 @@ ms.locfileid: "90065254"
 
 一部のターゲット フレームワーク (.NET Framework など) では、API はフレームワークがシステムにインストールするアセンブリによって定義され、アプリケーション フレームワーク API (ASP.NET など) を含む場合があります。
 
-パッケージ ベースのターゲット フレームワーク (.NET Standard、.NET Core など) では、API はアプリまたはライブラリに含まれるパッケージによって定義されます。 "*メタパッケージ*" は、それ独自の内容はなく、依存するもの (他のパッケージ) のリストを保持している NuGet パッケージです。 NuGet パッケージ ベースのターゲット フレームワークでは、全体としてフレームワークを構成するすべてのパッケージを参照するメタパッケージが暗黙的に指定されます。
+パッケージ ベースのターゲット フレームワーク (.NET Standard、.NET Core など) では、API はアプリまたはライブラリに含まれるパッケージによって定義されます。 " *メタパッケージ* " は、それ独自の内容はなく、依存するもの (他のパッケージ) のリストを保持している NuGet パッケージです。 NuGet パッケージ ベースのターゲット フレームワークでは、全体としてフレームワークを構成するすべてのパッケージを参照するメタパッケージが暗黙的に指定されます。
 
 ## <a name="latest-versions"></a>最新バージョン
 
@@ -69,7 +69,7 @@ ms.locfileid: "90065254"
 
 ## <a name="how-to-specify-a-target-framework"></a>ターゲット フレームワークを指定する方法
 
-ターゲット フレームワークはプロジェクト ファイルで指定します。 単一のターゲット フレームワークを指定するときは、**TargetFramework** 要素を使います。 次のコンソール アプリのプロジェクト ファイルでは、.NET 5.0 をターゲットにする方法が示されています。
+ターゲット フレームワークはプロジェクト ファイルで指定します。 単一のターゲット フレームワークを指定するときは、 **TargetFramework** 要素を使います。 次のコンソール アプリのプロジェクト ファイルでは、.NET 5.0 をターゲットにする方法が示されています。
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -116,7 +116,7 @@ public class MyClass
     {
 #if NET40
         Console.WriteLine("Target framework: .NET Framework 4.0");
-#elif NET45  
+#elif NET45
         Console.WriteLine("Target framework: .NET Framework 4.5");
 #else
         Console.WriteLine("Target framework: .NET Standard 1.4");

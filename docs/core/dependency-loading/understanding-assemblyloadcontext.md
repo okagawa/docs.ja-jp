@@ -4,12 +4,12 @@ description: .NET Core での AssemblyLoadContext の用途と動作を理解す
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: 43fb0d792ddeb20b8a141af452a86dd50f37ba43
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 4d3f0e50e7c336469bd9af4d1589427388684434
+ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523609"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92332823"
 ---
 # <a name="understanding-systemruntimeloaderassemblyloadcontext"></a>System.Runtime.Loader.AssemblyLoadContext について
 
@@ -52,11 +52,11 @@ ms.locfileid: "80523609"
 
 ここでは、関連するイベントおよび関数の一般原則について説明します。
 
-- **反復可能にする**。 特定の依存関係に対するクエリは、常に同じ応答になる必要があります。 同じ読み込み済みの依存関係インスタンスを返す必要があります。 この要件は、キャッシュの整合性の基本となります。 特にマネージド アセンブリについては、<xref:System.Reflection.Assembly> キャッシュが作成されます。 キャッシュ キーは、単純なアセンブリ名 <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> です。
-- **通常はスローしない**。  これらの関数は、要求された依存関係を見つけることができない場合、スローするのではなく `null` を返すことが想定されています。 スローすると、検索が途中で終了し、例外が呼び出し元に伝達されます。 スローは、破損したアセンブリやメモリ不足の状態など、予期しないエラーに限定する必要があります。
-- **再帰を回避する**。 これらの関数とハンドラーは、依存関係を検索するための読み込みルールを実装することに注意してください。 実装では、再帰をトリガーする API を呼び出さないでください。 コードでは、通常、特定のパスまたはメモリ参照の引数を必要とする **AssemblyLoadContext**  読み込み関数を呼び出す必要があります。
-- **正しい AssemblyLoadContext に読み込む**。 依存関係を読み込む場所の選択は、アプリケーション固有です。  この選択は、これらのイベントと関数によって実装されます。 コードによって **AssemblyLoadContext** のパスによる読み込み関数を呼び出すときは、コードを読み込むインスタンス上でそれらを呼び出します。 `null` を返し、<xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> により読み込みを処理させるのが最も単純なオプションの場合があります。
-- **スレッドの競合に注意する**。 読み込みは複数のスレッドによってトリガーできます。 AssemblyLoadContext は、キャッシュにアセンブリをアトミックに追加することで、スレッドの競合を処理します。 競合の敗者のインスタンスは破棄されます。 実装ロジックでは、複数のスレッドを適切に処理しない余分なロジックを追加しないでください。
+- **反復可能にする** 。 特定の依存関係に対するクエリは、常に同じ応答になる必要があります。 同じ読み込み済みの依存関係インスタンスを返す必要があります。 この要件は、キャッシュの整合性の基本となります。 特にマネージド アセンブリについては、<xref:System.Reflection.Assembly> キャッシュが作成されます。 キャッシュ キーは、単純なアセンブリ名 <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> です。
+- **通常はスローしない** 。  これらの関数は、要求された依存関係を見つけることができない場合、スローするのではなく `null` を返すことが想定されています。 スローすると、検索が途中で終了し、例外が呼び出し元に伝達されます。 スローは、破損したアセンブリやメモリ不足の状態など、予期しないエラーに限定する必要があります。
+- **再帰を回避する** 。 これらの関数とハンドラーは、依存関係を検索するための読み込みルールを実装することに注意してください。 実装では、再帰をトリガーする API を呼び出さないでください。 コードでは、通常、特定のパスまたはメモリ参照の引数を必要とする **AssemblyLoadContext**  読み込み関数を呼び出す必要があります。
+- **正しい AssemblyLoadContext に読み込む** 。 依存関係を読み込む場所の選択は、アプリケーション固有です。  この選択は、これらのイベントと関数によって実装されます。 コードによって **AssemblyLoadContext** のパスによる読み込み関数を呼び出すときは、コードを読み込むインスタンス上でそれらを呼び出します。 `null` を返し、<xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> により読み込みを処理させるのが最も単純なオプションの場合があります。
+- **スレッドの競合に注意する** 。 読み込みは複数のスレッドによってトリガーできます。 AssemblyLoadContext は、キャッシュにアセンブリをアトミックに追加することで、スレッドの競合を処理します。 競合の敗者のインスタンスは破棄されます。 実装ロジックでは、複数のスレッドを適切に処理しない余分なロジックを追加しないでください。
 
 ## <a name="how-are-dynamic-dependencies-isolated"></a>動的な依存関係はどのように分離されるか
 

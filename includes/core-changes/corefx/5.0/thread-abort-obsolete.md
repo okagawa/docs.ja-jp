@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 85488de561a2298f2ff4009ec78b9a6e294053f3
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: ee67b32b093ebd42f8ac685b34b12f2f6833be86
+ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598174"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92332928"
 ---
 ### <a name="threadabort-is-obsolete"></a>Thread.Abort は古い形式
 
-<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> API は非推奨になっています。 .NET 5.0 以降のバージョンを対象とするプロジェクトでは、これらのメソッドが呼び出されると、コンパイル時の警告が発生します。 警告を抑制すると、実行時に <xref:System.PlatformNotSupportedException> がスローされます。
+<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> API は非推奨になっています。 .NET 5.0 以降のバージョンを対象とするプロジェクトでは、これらのメソッドが呼び出されると、コンパイル時の警告 `SYSLIB0006` が発生します。
 
 #### <a name="change-description"></a>変更内容
 

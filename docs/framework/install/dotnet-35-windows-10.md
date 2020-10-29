@@ -2,12 +2,12 @@
 title: Windows 10、8.1、8 に .NET Framework 3.5 をインストールする
 description: Windows 10、Windows 8.1、および Windows 8 に .NET Framework 3.5 をインストールする方法について説明します
 ms.date: 07/16/2018
-ms.openlocfilehash: cfe21c0821b8f3223301dcc802533e1aaf024a79
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a385c46d2b3b384bc0a413d1dfa80e88ba7fb00a
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76965946"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223810"
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Windows 8、Windows 8.1、および Windows 10 への .NET Framework 3.5 のインストール
 
@@ -43,7 +43,7 @@ Windows のコントロール パネルを使用して .NET Framework 3.5 を有
 
 インストール中にエラー 0x800f0906、0x800f0907、0x800f081f、0x800F0922 が発生することがあります。その場合は、「[.NET Framework 3.5 インストール エラー: 0x800f0906、0x800f0907、または 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09)」を参照し、問題の解決方法をご確認ください。
 
-インストールの問題をまだ解決できない場合、またはインターネット接続がない場合は、Windows のインストール メディアを使ってインストールしてみることができます。 詳細については、「[Deploy .NET Framework 3.5 by using Deployment Image Servicing and Management (DISM)](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism)」 (展開イメージのサービスと管理 (DISM) を利用して .NET Framework 3.5 を展開する) を参照してください。 インストール メディアがない場合は、「[Windows 用のインストール メディアを作成する](https://support.microsoft.com/help/15088/windows-create-installation-media)」を参照してください。
+インストールの問題をまだ解決できない場合、またはインターネット接続がない場合は、Windows のインストール メディアを使ってインストールしてみることができます。 詳細については、「[Deploy .NET Framework 3.5 by using Deployment Image Servicing and Management (DISM)](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism)」 (展開イメージのサービスと管理 (DISM) を利用して .NET Framework 3.5 を展開する) を参照してください。 Windows 7、Windows 8.1、または最新バージョンの Windows 10 を使用していても、インストール メディアがない場合は、ここで次のように最新のインストール メディアを作成します。[Windows 用のインストール メディアを作成します](https://support.microsoft.com/help/15088/windows-create-installation-media)。 Windows 10 のオンデマンド機能に関する追加情報: [オンデマンド機能](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities)。
 
 > [!WARNING]
-> .NET Framework 3.5 のインストールのソースとして Windows Update に依存していない場合は、同じ対応する Windows オペレーティング システムのバージョンからのソースを厳密に使用していることを確認する必要があります。 同じバージョンの Windows に対応しないソース パスを使用しても、一致しないバージョンの .NET Framework 3.5 のインストールは中止されません。 ただし、これによりシステムはサポートされていない使用不能の状態になります。
+> .NET Framework 3.5 のインストールのソースとして Windows Update に依存していない場合は、同じ対応する Windows オペレーティング システムのバージョンからのソースを厳密に使用していることを確認する必要があります。 バージョンが異なる Windows オペレーティング システムのソースを使用している場合は、バージョンが一致しない .NET Framework 3.5 がインストールされるか、インストールが失敗し、システムがサポートされていない状態になります。

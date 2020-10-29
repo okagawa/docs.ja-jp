@@ -5,12 +5,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/01/2020
-ms.openlocfilehash: 70297cfe15732716b9ceacae091abe3c8957fb61
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 4a4c8e2806fee663b5f6aa255a6f24250a072a85
+ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495474"
+ms.lasthandoff: 10/26/2020
+ms.locfileid: "92526615"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -49,7 +49,7 @@ dotnet new -h|--help
 
   コマンドが呼び出されたときにインスタンス化するテンプレート。 各テンプレートには、渡すことができるオプションが存在する場合があります。 詳細については、[テンプレートのオプション](#template-options)を参照してください。
 
-  `dotnet new --list` または `dotnet new -l` を実行すると、インストールされているすべてのテンプレートの一覧を表示できます。 `TEMPLATE` の値が返されたテーブルの「**テンプレート**」列または「**短い形式の名前**」列のテキストと完全に一致しない場合、それら 2 つの列で部分文字列一致が実行されます。
+  `dotnet new --list` または `dotnet new -l` を実行すると、インストールされているすべてのテンプレートの一覧を表示できます。 `TEMPLATE` の値が返されたテーブルの「 **テンプレート** 」列または「 **短い形式の名前** 」列のテキストと完全に一致しない場合、それら 2 つの列で部分文字列一致が実行されます。
 
   .NET Core 3.0 SDK 以降では、次の条件で `dotnet new` コマンドを呼び出すと、CLI によって NuGet.org 内のテンプレートが検索されます。
 
@@ -143,7 +143,7 @@ dotnet new -h|--help
 
 - **`--type <TYPE>`**
 
-  使用可能な種類に基づいて、テンプレートをフィルター処理します。 事前定義されている値は `project`、`item`、`other` です。
+  使用可能な種類に基づいて、テンプレートをフィルター処理します。 事前定義されている値は `project` および `item` です。
 
 - **`-u|--uninstall [PATH|NUGET_ID]`**
 
@@ -152,7 +152,7 @@ dotnet new -h|--help
   このオプションにパラメーターを指定しないと、コマンドによって、インストールされたテンプレートとそれらに関する詳細が表示されます。
 
   > [!NOTE]
-  > `PATH` を使用してテンプレートをアンインストールするには、完全修飾パスを使用する必要があります。 たとえば、*C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* は有効ですが、 *./GarciaSoftware.ConsoleTemplate.CSharp* が含まれるフォルダーから、そのパスを指定することはできません。
+  > `PATH` を使用してテンプレートをアンインストールするには、完全修飾パスを使用する必要があります。 たとえば、 *C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* は有効ですが、 *./GarciaSoftware.ConsoleTemplate.CSharp* が含まれるフォルダーから、そのパスを指定することはできません。
   > テンプレートのパスの最後にある終端ディレクトリのスラッシュは含めないでください。
 
 - **`--update-apply`**
@@ -190,11 +190,11 @@ dotnet new -h|--help
 
   指定した場合、プロジェクトの作成中には暗黙的な復元が実行されません。 .NET Core 2.2 SDK 以降で利用できます。
 
-***
+**_
 
 ### <a name="classlib"></a>classlib
 
-- **`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   ターゲットにする[フレームワーク](../../standard/frameworks.md)が指定されます。 値: .NET Core クラス ライブラリを作成するには `netcoreapp<version>`、.NET 標準クラス ライブラリを作成するには `netstandard<version>` です。 既定値は `netstandard2.0` です。
 
@@ -208,11 +208,11 @@ dotnet new -h|--help
 
   プロジェクトの作成中に暗黙的な復元は実行されません。
 
-***
+**_
 
 ### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a> wpf、wpflib、wpfcustomcontrollib、wpfusercontrollib
 
-- **`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   ターゲットにする[フレームワーク](../../standard/frameworks.md)が指定されます。 既定値は `netcoreapp3.1` です。 .NET Core 3.1 SDK 以降で利用できます。
 
@@ -226,11 +226,11 @@ dotnet new -h|--help
 
   プロジェクトの作成中に暗黙的な復元は実行されません。
 
-***
+**_
 
 ### <a name="winforms-winformslib"></a><a name="winforms"></a> winforms、winformslib
 
-- **`--langVersion <VERSION_NUMBER>`**
+- _ *`--langVersion <VERSION_NUMBER>`**
 
   作成されたプロジェクト ファイルの `LangVersion` プロパティが設定されます。 たとえば、C# 7.3 を使うには `--langVersion 7.3` を使います。
 
@@ -240,11 +240,11 @@ dotnet new -h|--help
 
   プロジェクトの作成中に暗黙的な復元は実行されません。
 
-***
+**_
 
 ### <a name="worker-grpc"></a><a name="web-others"></a> worker、grpc
 
-- **`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   ターゲットにする[フレームワーク](../../standard/frameworks.md)が指定されます。 既定値は `netcoreapp3.1` です。 .NET Core 3.1 SDK 以降で利用できます。
 
@@ -256,11 +256,11 @@ dotnet new -h|--help
 
   プロジェクトの作成中に暗黙的な復元は実行されません。
 
-***
+**_
 
 ### <a name="mstest-xunit"></a><a name="test"></a> mstest、xunit
 
-- **`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   ターゲットにする[フレームワーク](../../standard/frameworks.md)が指定されます。 .NET Core 3.0 SDK 以降で利用できるオプションです。
 
@@ -279,11 +279,11 @@ dotnet new -h|--help
 
   プロジェクトの作成中に暗黙的な復元は実行されません。
 
-***
+**_
 
 ### <a name="nunit"></a>nunit
 
-- **`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   ターゲットにする[フレームワーク](../../standard/frameworks.md)が指定されます。
 
@@ -304,11 +304,11 @@ dotnet new -h|--help
 
   プロジェクトの作成中に暗黙的な復元は実行されません。
 
-***
+**_
 
 ### <a name="page"></a>ページ (page)
 
-- **`-na|--namespace <NAMESPACE_NAME>`**
+- _ *`-na|--namespace <NAMESPACE_NAME>`**
 
   生成されるコードの名前空間です。 既定値は `MyApp.Namespace` です。
 
@@ -316,19 +316,19 @@ dotnet new -h|--help
 
   PageModel なしでページが作成されます。
 
-***
+**_
 
 ### <a name="viewimports-proto"></a><a name="namespace"></a> viewimports、proto
 
-- **`-na|--namespace <NAMESPACE_NAME>`**
+- _ *`-na|--namespace <NAMESPACE_NAME>`**
 
   生成されるコードの名前空間です。 既定値は `MyApp.Namespace` です。
 
-***
+**_
 
 ### <a name="blazorserver"></a>blazorserver
 
-- **`-au|--auth <AUTHENTICATION_TYPE>`**
+- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
 
   使う認証の種類。 次の値を指定できます。
 
@@ -395,11 +395,11 @@ dotnet new -h|--help
 
   プロジェクトの作成中に暗黙的な復元は実行されません。
 
-***
+**_
 
-### <a name="web"></a>Web
+### <a name="web"></a>web
 
-- **`--exclude-launch-settings`**
+- _ *`--exclude-launch-settings`**
 
   生成されたテンプレートから *launchSettings.json* が除外されます。
 
@@ -423,11 +423,11 @@ dotnet new -h|--help
 
   HTTPS を無効にします。
 
-***
+**_
 
 ### <a name="mvc-webapp"></a><a name="web-options"></a> mvc、webapp
 
-- **`-au|--auth <AUTHENTICATION_TYPE>`**
+- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
 
   使う認証の種類。 次の値を指定できます。
 
@@ -513,11 +513,11 @@ dotnet new -h|--help
 
   デバッグ ビルドで [Razor ランタイム コンパイル](/aspnet/core/mvc/views/view-compilation#runtime-compilation)を使用するようにプロジェクトが構成されているかどうかを判断します。 .NET Core 3.1.201 SDK 以降で利用できるオプションです。
 
-***
+**_
 
 ### <a name="angular-react"></a><a name="spa"></a> angular、react
 
-- **`-au|--auth <AUTHENTICATION_TYPE>`**
+- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
 
   使う認証の種類。 .NET Core 3.0 SDK 以降で使用できます。
   
@@ -554,11 +554,11 @@ dotnet new -h|--help
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
 
-***
+**_
 
 ### <a name="reactredux"></a>reactredux
 
-- **`--exclude-launch-settings`**
+- _ *`--exclude-launch-settings`**
 
   生成されたテンプレートから *launchSettings.json* が除外されます。
 
@@ -582,11 +582,11 @@ dotnet new -h|--help
 
   HTTPS を無効にします。
 
-***
+**_
 
 ### <a name="razorclasslib"></a>razorclasslib
 
-- **`--no-restore`**
+- _ *`--no-restore`**
 
   プロジェクトの作成中に暗黙的な復元は実行されません。
 
@@ -594,11 +594,11 @@ dotnet new -h|--help
 
   このライブラリへのコンポーネントに加え、従来の Razor ページとビューの追加がサポートされます。 .NET Core 3.0 SDK 以降で使用できます。
 
-***
+**_
   
 ### <a name="webapi"></a>webapi
 
-- **`-au|--auth <AUTHENTICATION_TYPE>`**
+- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
 
   使う認証の種類。 次の値を指定できます。
 
@@ -663,11 +663,11 @@ dotnet new -h|--help
 
   プロジェクトの作成中に暗黙的な復元は実行されません。
 
-***
+**_
 
 ### <a name="globaljson"></a>globaljson
 
-- **`--sdk-version <VERSION_NUMBER>`**
+- _ *`--sdk-version <VERSION_NUMBER>`**
 
   *global.json* ファイル内で使用する .NET Core SDK のバージョンが指定されます。
 

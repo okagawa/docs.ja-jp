@@ -4,12 +4,12 @@ description: .NET for Apache Spark アプリケーションを Azure HDInsight �
 ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 8ef1429d265c87347bb8771dc01b319fcb9e84d0
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: c745231f76142c11002ac6663906c8c44c69cdae
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955371"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223357"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>チュートリアル: .NET for Apache Spark アプリケーションを Azure HDInsight にデプロイする
 
@@ -65,9 +65,9 @@ ms.locfileid: "91955371"
     |場所   | リソース グループの場所を選びます。 テンプレートでは、この場所をクラスターの作成および既定のクラスター ストレージに使用します。 |
     |クラスターの種類| クラスターの種類として **[Spark]** を選択します。|
     |クラスターのバージョン|クラスターの種類が選択されると、このフィールドに既定のバージョンが自動的に入力されます。 Spark バージョン 2.3 または 2.4 を選択します。|
-    |クラスター ログイン ユーザー名| クラスターのログイン ユーザー名を入力します。  既定の名前は *admin*です。 |
+    |クラスター ログイン ユーザー名| クラスターのログイン ユーザー名を入力します。  既定の名前は *admin* です。 |
     |クラスター ログイン パスワード| ログイン パスワードを入力します。 |
-    |Secure Shell (SSH) ユーザー名| SSH ユーザー名を入力します。 既定では、このアカウントは "*クラスター ログイン ユーザー名*" アカウントと同じパスワードを共有します。 |
+    |Secure Shell (SSH) ユーザー名| SSH ユーザー名を入力します。 既定では、このアカウントは " *クラスター ログイン ユーザー名* " アカウントと同じパスワードを共有します。 |
 
 4. **ストレージ >>** を選択して **ストレージ** ページに進みます。 **[ストレージ]** で次の値を指定します。
 
@@ -82,9 +82,9 @@ ms.locfileid: "91955371"
 
 ## <a name="publish-your-app"></a>アプリケーションの発行
 
-次に、チュートリアル「[.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)」 (.NET for Apache Spark - 10 分で開始する) で作成した *mySparkApp* を公開します。これにより、Spark クラスターは、アプリケーションを実行するために必要なすべてのファイルにアクセスできます。
+次に、チュートリアル「 [.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)」 (.NET for Apache Spark - 10 分で開始する) で作成した *mySparkApp* を公開します。これにより、Spark クラスターは、アプリケーションを実行するために必要なすべてのファイルにアクセスできます。
 
-1. *mySparkApp*を公開するには、次のコマンドを実行します。
+1. *mySparkApp* を公開するには、次のコマンドを実行します。
 
    **Windows の場合:**
 
@@ -100,11 +100,11 @@ ms.locfileid: "91955371"
    foo@bar:~/path/to/app$ dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
    ```
 
-2. 公開するアプリケーション ファイルを HDInsight クラスターに簡単にアップロードできるように、次のタスクを実行してファイルを圧縮します。
+2. 公開するアプリケーション ファイルを HDInsight クラスターに簡単にアップロードできるように、次のタスクを実行してファイルを圧縮します。 発行フォルダーの内容 (たとえば、手順 1 の結果として作成された *publish.zip* ) を圧縮します。 すべてのアセンブリは ZIP ファイルの最初のレイヤーにある必要があり、中間フォルダーのレイヤーに存在してはいけません。 つまり、 *publish.zip* を解凍すると、すべてのアセンブリが現在の作業ディレクトリに抽出されます。
 
    **Windows の場合:**
 
-   *mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64* に移動します。 次に、**発行**フォルダーを右クリックして、 **[送信先]、[圧縮 (zip 形式) フォルダー]** の順に選択します。 新しいフォルダーに **publish.zip** という名前を付けます。
+   7-Zip や WinZip のような抽出プログラムを使用して、発行されたすべてのバイナリを含むファイルを bin ディレクトリに抽出します。
 
    **Linux の場合は、次のコマンドを実行します。**
 
@@ -130,15 +130,15 @@ ms.locfileid: "91955371"
 
 3. *install-worker.sh* は、.NET for Apache Spark 依存ファイルをクラスターのノードにコピーできるスクリプトです。
 
-   ご使用のローカル コンピューターで、**install-worker.sh** という名前の新しいファイルを作成し、GitHub 上にある [install-worker.sh のコンテンツ](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh)を貼り付けます。 次に、*install-worker.sh* を BLOB コンテナーにアップロードします。
+   ご使用のローカル コンピューターで、 **install-worker.sh** という名前の新しいファイルを作成し、GitHub 上にある [install-worker.sh のコンテンツ](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh)を貼り付けます。 次に、 *install-worker.sh* を BLOB コンテナーにアップロードします。
 
-4. クラスターは、アプリケーションの発行済みファイルを含む publish.zip ファイルを必要とします。 発行済みフォルダー **mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64** に移動し、**publish.zip** を見つけます。 次に、BLOB コンテナーに *publish.zip* をアップロードします。
+4. クラスターは、アプリケーションの発行済みファイルを含む publish.zip ファイルを必要とします。 発行済みフォルダー **mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64** に移動し、 **publish.zip** を見つけます。 次に、BLOB コンテナーに *publish.zip* をアップロードします。
 
-5. クラスターは、jar ファイルにパッケージ化されたアプリケーション コードを必要とします。 発行済みフォルダー **mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64** に移動し、**microsoft-spark-2.3.x-0.3.0.jar** を見つけます。 次に、BLOB コンテナーに jar ファイルをアップロードします。
+5. クラスターは、jar ファイルにパッケージ化されたアプリケーション コードを必要とします。 発行済みフォルダー **mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64** に移動し、 **microsoft-spark-2.3.x-0.3.0.jar** を見つけます。 次に、BLOB コンテナーに jar ファイルをアップロードします。
 
-   複数の .jar ファイル (Spark のバージョン 2.3.x 用と 2.4.x 用) が存在する場合があります。 クラスターの作成時に選択した Spark のバージョンと一致する .jar ファイルを選択する必要があります。 たとえば、クラスターの作成時に Spark 2.3.2 を選択した場合、*microsoft-spark-2.3.x-0.3.0.jar* を選択します。
+   複数の .jar ファイル (Spark のバージョン 2.3.x 用と 2.4.x 用) が存在する場合があります。 クラスターの作成時に選択した Spark のバージョンと一致する .jar ファイルを選択する必要があります。 たとえば、クラスターの作成時に Spark 2.3.2 を選択した場合、 *microsoft-spark-2.3.x-0.3.0.jar* を選択します。
 
-6. クラスターは、アプリケーションへの入力を必要とします。 **mySparkApp**ディレクトリに移動して、**input.txt** を見つけます。 BLOB コンテナー内の **user/sshuser** ディレクトリに入力ファイルをアップロードします。 ssh を使用してクラスターに接続すると、クラスターはこのフォルダーで入力を検索します。 特定のディレクトリにアップロードされるのは、*input.txt* ファイルのみです。
+6. クラスターは、アプリケーションへの入力を必要とします。 **mySparkApp** ディレクトリに移動して、 **input.txt** を見つけます。 BLOB コンテナー内の **user/sshuser** ディレクトリに入力ファイルをアップロードします。 ssh を使用してクラスターに接続すると、クラスターはこのフォルダーで入力を検索します。 特定のディレクトリにアップロードされるのは、 *input.txt* ファイルのみです。
 
 ## <a name="run-the-hdinsight-script-action"></a>HDInsight スクリプト アクションを実行する
 
@@ -158,7 +158,7 @@ ms.locfileid: "91955371"
 
 3. **[作成]** を選択して、スクリプトを送信します。
 
-## <a name="run-your-app"></a>アプリの実行
+## <a name="run-your-app"></a>アプリを実行する
 
 1. Azure portal の HDInsight Spark クラスターに移動し、 **[SSH およびクラスターのログイン]** を選択します。
 
@@ -174,7 +174,7 @@ ms.locfileid: "91955371"
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/publish.zip mySparkApp
    ```
 
-   アプリケーションが実行されると、ローカル実行が開始されてからコンソールに書き込まれた文字数と同じ文字数のテーブルが表示されます。 これで、クラウド内の最初の .NET for Apache Spark アプリケーションが実行されました。
+   アプリケーションが実行されると、ローカル実行が開始されてからコンソールに書き込まれた文字数と同じ文字数のテーブルが表示されます。 これで、初めての .NET for Apache Spark アプリケーションをクラウドで実行できました。
 
 ## <a name="clean-up-resources"></a>リソースをクリーンアップする
 

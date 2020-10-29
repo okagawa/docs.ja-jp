@@ -3,12 +3,12 @@ title: コードを .NET Core に移植するために依存関係を分析す�
 description: .NET Framework から .NET Core にプロジェクトを移植するために、外部の依存関係を分析する方法を説明します。
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: 2aa09e551a99358d3a6961fafcfc0aa8dbd976b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 430da45052e3953ab49f182b1773fc6d74bd2221
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397921"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223605"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>コードを .NET Core に移植するために依存関係を分析する
 
@@ -34,7 +34,7 @@ ms.locfileid: "79397921"
 
 [nuget.org](https://www.nuget.org/) のパッケージのページの **[Dependencies]\(依存関係\)** のセクションで、各パッケージでサポートされる TFM (ターゲット フレームワーク モニカー) を確認できます。
 
-互換性はこのサイトを使用して確認するのが簡単ですが、**依存関係**の情報はすべてのパッケージのサイトにはありません。
+互換性はこのサイトを使用して確認するのが簡単ですが、 **依存関係** の情報はすべてのパッケージのサイトにはありません。
 
 ### <a name="analyze-nuget-packages-using-nuget-package-explorer"></a>NuGet パッケージ エクスプローラーを使用して NuGet パッケージを分析する
 

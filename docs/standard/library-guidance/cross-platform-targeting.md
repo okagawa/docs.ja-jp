@@ -2,12 +2,12 @@
 title: .NET ライブラリのクロス プラットフォーム ターゲット
 description: クロス プラットフォームの .NET ライブラリを作成する際のベスト プラクティスの推奨事項。
 ms.date: 08/12/2019
-ms.openlocfilehash: 61adff3759984554bb83531b4f9d8a49e29c929c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6309e300861ab286dcaba3256267b3459e6e0d10
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76731450"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223342"
 ---
 # <a name="cross-platform-targeting"></a>クロス プラットフォーム ターゲット
 

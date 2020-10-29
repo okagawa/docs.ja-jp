@@ -5,12 +5,12 @@ ms.date: 10/05/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: a4a59fea3ab1a6bc93a12e3f0aa13dea726d8121
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: a4736e46eb7c25b64278bed8f2c2457002936b81
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050399"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224163"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -20,7 +20,7 @@ ms.locfileid: "92050399"
 
 さまざまな .NET 実装が、.NET Standard の特定のバージョンを対象とします。 各 .NET 実装バージョンは、それがサポートしている最高の .NET Standard バージョンをアドバタイズし、そのことは以前のバージョンもサポートしていることを意味します。 たとえば、.NET Framework 4.6 は .NET Standard 1.3 を実装しており、このことは、.NET Standard のバージョン 1.0 ～ 1.3 で定義されているすべての API を公開していることを意味します。 同様に、.NET Framework 4.6.1 には .NET Standard 1.4 が実装されていますが、.NET 5.0 には .NET Standard 2.1 が実装されています。
 
-次の表は、.NET Standard の各バージョンがサポートされている**最小**の実装バージョンの一覧です。 つまり、一覧に示されている実装以降のバージョンでも、対応する .NET Standard バージョンがサポートされています。 たとえば、.NET Core 2.1 以降のバージョンによって .NET Standard 2.0 以前のバージョンがサポートされています。
+次の表は、.NET Standard の各バージョンがサポートされている **最小** の実装バージョンの一覧です。 つまり、一覧に示されている実装以降のバージョンでも、対応する .NET Standard バージョンがサポートされています。 たとえば、.NET Core 2.1 以降のバージョンによって .NET Standard 2.0 以前のバージョンがサポートされています。
 
 [!INCLUDE [net-standard-table](../../includes/net-standard-table.md)]
 
@@ -38,12 +38,12 @@ ms.locfileid: "92050399"
 - バージョンが高くなるほど、ユーザーのライブラリのコードで使用できる API は多くなります。
 - バージョンが低くなるほど、ユーザーのライブラリを使用できるアプリやライブラリが増えます。
 
-可能な限り "*最小*" のバージョンの .NET Standard をターゲットにすることをお勧めします。 そのため、対象にする最高バージョンの .NET Standard を見つけたら、次の手順を実行します。
+可能な限り " *最小* " のバージョンの .NET Standard をターゲットにすることをお勧めします。 そのため、対象にする最高バージョンの .NET Standard を見つけたら、次の手順を実行します。
 
 1. 1 つ低いバージョンの .NET Standard を対象にしてプロジェクトをビルドします。
 2. プロジェクトのビルドが成功したら、手順 1 を繰り返します。 失敗した場合は、対象を次に高いバージョンに変更します。これが対象のバージョンです。
 
-ただし、下位バージョンの .NET Standard を対象にしている場合、さまざまな依存関係のサポートが導入されます。 お使いのプロジェクトが .NET Standard 1.x を対象としている場合、.NET Standard 2.0 "*も*" 対象にすることをお勧めします。 これにより、.NET Standard 2.0 と互換性のある実装上で実行されるライブラリのユーザーに対しては、依存関係グラフが簡略化され、ダウンロードの必要なパッケージの数が減ります。
+ただし、下位バージョンの .NET Standard を対象にしている場合、さまざまな依存関係のサポートが導入されます。 お使いのプロジェクトが .NET Standard 1.x を対象としている場合、.NET Standard 2.0 " *も* " 対象にすることをお勧めします。 これにより、.NET Standard 2.0 と互換性のある実装上で実行されるライブラリのユーザーに対しては、依存関係グラフが簡略化され、ダウンロードの必要なパッケージの数が減ります。
 
 ### <a name="net-standard-versioning-rules"></a>.NET Standard のバージョン管理規則
 

@@ -2,12 +2,12 @@
 title: .NET Core 2.0 の新機能
 description: .NET Core の新機能について。
 ms.date: 08/13/2017
-ms.openlocfilehash: 115b3adc72b6798c6a7bac9cc18044a8822808a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bdca38d1584107727fe8e20b80ab2337f4cb05f1
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397843"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223721"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0 の新機能
 
@@ -72,7 +72,7 @@ ms.locfileid: "79397843"
 
 1. `dotnet new console -lang vb` コマンドを入力します。
 
-   このコマンドにより、*Program.vb* というファイル名の Visual Basic ソース コードとともに、ファイル拡張子が `.vbproj` のプロジェクト ファイルが作成されます。 このファイル内に、"Hello World!" という文字列を コンソール ウィンドウに表示するためのソース コードが含まれています。
+   このコマンドにより、 *Program.vb* というファイル名の Visual Basic ソース コードとともに、ファイル拡張子が `.vbproj` のプロジェクト ファイルが作成されます。 このファイル内に、"Hello World!" という文字列を コンソール ウィンドウに表示するためのソース コードが含まれています。
 
 1. `dotnet run` コマンドを入力します。 [.NET Core CLI ](../tools/index.md)によりアプリケーションが自動的にコンパイルされて実行され、"Hello World!" メッセージが表示されます。 コンソール ウィンドウに表示します。
 
@@ -104,13 +104,13 @@ macOS の .NET Core 1.x では、OpenSSL ツールキットの暗号化ライブ
 
 ### <a name="support-for-net-standard-20"></a>.NET Standard 2.0 のサポート
 
-.NET Standard は、そのバージョンの標準に準拠した .NET 実装で使用する必要がある、バージョン管理された API のセットを定義します。 .NET Standard はライブラリ開発者を対象としています。 .NET Standard の目的は、.NET 実装ごとの .NET Standard のバージョンに対応するライブラリで使用できる機能を保証することです。 .NET Core 1.x では、.NET Standard バージョン 1.6 がサポートされており、.NET Core 2.0 では最新の .NET Standard 2.0 がサポートされています。 詳細については、「[.NET Standard](../../standard/net-standard.md)」をご覧ください。
+.NET Standard は、そのバージョンの標準に準拠した .NET 実装で使用する必要がある、バージョン管理された API のセットを定義します。 .NET Standard はライブラリ開発者を対象としています。 その目的は、.NET 実装ごとの .NET Standard のバージョンに対応するライブラリで使用できる機能を保証することです。 .NET Core 1.x では、.NET Standard バージョン 1.6 がサポートされており、.NET Core 2.0 では最新バージョンの .NET Standard 2.0 がサポートされています。 詳細については、「[.NET Standard](../../standard/net-standard.md)」をご覧ください。
 
 .NET Standard 2.0 には、.NET Standard 1.6 で使用できた 20,000 個以上の API が含まれています。 この拡張されたアクセス領域の多くは、.NET Framework と Xamarin に共通する API を .NET Standard に組み込んだ結果です。
 
-.NET Standard 2.0 クラス ライブラリは、.NET Framework クラス ライブラリを参照することもできます。ただし、呼び出す API が .NET Standard 2.0 内に存在している必要があります。 .NET Framework ライブラリを再コンパイルする必要はありません。
+.NET Standard 2.0 クラスライブラリにより、.NET Standard 2.0 に存在する API を呼び出して、.NET Framework クラス ライブラリを参照することもできます。 .NET Framework ライブラリを再コンパイルする必要はありません。
 
-最新バージョンの .NET Standard 1.6 以降に、.NET Standard に追加された API の一覧については、「[.NET Standard 2.0 vs. 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md)」をご覧ください。
+最新バージョンの .NET Standard 1.6 以降に、.NET Standard に追加された API の一覧については、「[.NET Standard 2.0 と 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md)」をご覧ください。
 
 ### <a name="expanded-surface-area"></a>拡張されたアクセス領域
 
@@ -130,7 +130,7 @@ Visual Studio 2017 バージョン 15.3 (場合によって Visual Studio for Ma
 
 .NET Core 2.0 SDK がインストールされていれば、.NET Core 1.x プロジェクトを .NET Core 2.0 に、.NET Standard 1.x ライブラリを .NET Standard 2.0 に再ターゲットすることができます。
 
-Visual Studio のプロジェクトを再ターゲットするには、そのプロジェクトのプロパティ ダイアログの **[アプリケーション]** タブを開き、 **[ターゲット フレームワーク]** の値を「 **.NET Core 2.0**」または「 **.NET Standard 2.0**」に変更します。 プロジェクトを右クリックして**編集\*.csproj ファイル** オプションを選択することで、変更することもできます。 詳細については、前述の「[ツール](#tooling)」セクションをご覧ください。
+Visual Studio のプロジェクトを再ターゲットするには、そのプロジェクトのプロパティ ダイアログの **[アプリケーション]** タブを開き、 **[ターゲット フレームワーク]** の値を「 **.NET Core 2.0** 」または「 **.NET Standard 2.0** 」に変更します。 プロジェクトを右クリックして **編集\*.csproj ファイル** オプションを選択することで、変更することもできます。 詳細については、前述の「[ツール](#tooling)」セクションをご覧ください。
 
 ### <a name="live-unit-testing-support-for-net-core"></a>.NET Core のライブ単体テスト対応
 

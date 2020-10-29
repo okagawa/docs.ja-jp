@@ -1,7 +1,7 @@
 ---
-description: C# での構造体型について
 title: 構造体型 - C# リファレンス
-ms.date: 04/21/2020
+description: C# での構造体型について
+ms.date: 10/23/2020
 f1_keywords:
 - struct_CSharpKeyword
 helpviewer_keywords:
@@ -9,35 +9,35 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 7f3940ce487b9e382150234f317cf1dba34bb060
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: daf332dae483d75ef27e78dad5ee912734ccdb5f
+ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89132730"
+ms.lasthandoff: 10/26/2020
+ms.locfileid: "92526599"
 ---
 # <a name="structure-types-c-reference"></a>構造体型 (C# リファレンス)
 
-"*構造体型*" (または "*構造体型*") とは、データおよび関連する機能をカプセル化できる[値の型](value-types.md)です。 構造体型を定義するには、`struct` キーワードを使用します。
+" *構造体型* " (または " *構造体型* ") とは、データおよび関連する機能をカプセル化できる [値の型](value-types.md)です。 構造体型を定義するには、`struct` キーワードを使用します。
 
-[!code-csharp[struct example](snippets/StructType.cs#StructExample)]
+[!code-csharp[struct example](snippets/shared/StructType.cs#StructExample)]
 
-構造体型には、"*値のセマンティクス*" があります。 つまり、構造体型の変数には、型のインスタンスが含まれます。 既定では、変数値が代入時にコピーされ、引数がメソッドに渡され、メソッドの結果が返されます。 構造体型の変数の場合は、型のインスタンスがコピーされます。 詳細については、[値の型](value-types.md)に関するページを参照してください。
+構造体型には、" *値のセマンティクス* " があります。 つまり、構造体型の変数には、型のインスタンスが含まれます。 既定では、変数値が代入時にコピーされ、引数がメソッドに渡され、メソッドの結果が返されます。 構造体型の変数の場合は、型のインスタンスがコピーされます。 詳細については、[値の型](value-types.md)に関するページを参照してください。
 
-通常は、構造体型を使用して、ほとんどまたはまったく動作を提供しない小さなデータ中心型を設計します。 たとえば、.NET では、構造体型を使用して数値 ([整数](integral-numeric-types.md)と[実数](floating-point-numeric-types.md)の両方)、[ブール値](bool.md)、[Unicode 文字](char.md)、[時刻インスタンス](xref:System.DateTime)が表現されます。 型の動作に重点を置いている場合は、[class](../keywords/class.md) を定義することを検討してください。 クラス型には "*参照セマンティクス*" があります。 つまり、クラス型の変数には、インスタンス自体ではなく、型のインスタンスへの参照が含まれています。
+通常は、構造体型を使用して、ほとんどまたはまったく動作を提供しない小さなデータ中心型を設計します。 たとえば、.NET では、構造体型を使用して数値 ([整数](integral-numeric-types.md)と[実数](floating-point-numeric-types.md)の両方)、[ブール値](bool.md)、[Unicode 文字](char.md)、[時刻インスタンス](xref:System.DateTime)が表現されます。 型の動作に重点を置いている場合は、[class](../keywords/class.md) を定義することを検討してください。 クラス型には " *参照セマンティクス* " があります。 つまり、クラス型の変数には、インスタンス自体ではなく、型のインスタンスへの参照が含まれています。
 
-構造体型には値セマンティクスがあるため、"*変更不可*" の構造体型を定義することをお勧めします。
+構造体型には値セマンティクスがあるため、" *変更不可* " の構造体型を定義することをお勧めします。
 
 ## <a name="readonly-struct"></a>`readonly` 構造体
 
 C# 7.2 以降では、構造体型が変更不可であることを宣言するには、`readonly` 修飾子を使用します。
 
-[!code-csharp[readonly struct](snippets/StructType.cs#ReadonlyStruct)]
+[!code-csharp[readonly struct](snippets/shared/StructType.cs#ReadonlyStruct)]
 
 `readonly` 構造体のすべてのデータ メンバーを、次のように読み取り専用にする必要があります。
 
 - すべてのフィールド宣言には、[`readonly` 修飾子が必要です](../keywords/readonly.md)
-- 自動的に実装されるプロパティも含めて、すべてのプロパティは、読み取り専用である必要があります
+- 自動的に実装されるものも含めて、すべてのプロパティは、読み取り専用である必要があります。 C# 9.0 以降では、プロパティに [`init` アクセサー](../../whats-new/csharp-9.md#init-only-setters)が含まれる場合があります。
 
 それにより、`readonly` 構造体のどのメンバーも構造体の状態を変更しないことが保証されます。 C# 8.0 以降では、コンストラクターを除く他のインスタンス メンバーは、暗黙的に [`readonly`](#readonly-instance-members) になるということです。
 
@@ -54,20 +54,24 @@ C# 8.0 以降では、`readonly` 修飾子を使用して、インスタンス �
 
 - メソッド:
 
-  [!code-csharp[readonly method](snippets/StructType.cs#ReadonlyMethod)]
+  [!code-csharp[readonly method](snippets/shared/StructType.cs#ReadonlyMethod)]
 
   <xref:System.Object?displayProperty=nameWithType> で宣言されたメソッドをオーバーライドするメソッドに `readonly` 修飾子を適用することもできます。
 
-  [!code-csharp[readonly override](snippets/StructType.cs#ReadonlyOverride)]
+  [!code-csharp[readonly override](snippets/shared/StructType.cs#ReadonlyOverride)]
 
 - プロパティとインデクサー:
 
-  [!code-csharp[readonly property get](snippets/StructType.cs#ReadonlyProperty)]
+  [!code-csharp[readonly property get](snippets/shared/StructType.cs#ReadonlyProperty)]
 
   プロパティまたはインデクサーの両方のアクセサーに `readonly` 修飾子を適用する必要がある場合は、プロパティまたはインデクサーの宣言でそれを適用します。
 
   > [!NOTE]
   > プロパティの宣言に `readonly` 修飾子が存在するかどうかに関係なく、コンパイラによって[自動実装プロパティ](../../programming-guide/classes-and-structs/auto-implemented-properties.md)の `get` アクセサーが `readonly` として宣言されます。
+
+  C# 9.0 以降では、`init` アクセサーを持つプロパティまたはインデクサーに `readonly` 修飾子を適用することができます。
+
+  :::code language="csharp" source="snippets/shared/StructType.cs" id="ReadonlyWithInit":::
 
 `readonly` 修飾子を構造体型の静的メンバーに適用することはできません。
 
@@ -95,7 +99,7 @@ C# では、宣言された変数を使用するには、事前にこれを初�
 
 構造体型のすべてのインスタンス フィールドにアクセスできる場合は、それを `new` 演算子なしでインスタンス化することもできます。 その場合は、インスタンスを初めて使用する前に、すべてのインスタンス フィールドを初期化する必要があります。 その方法を次の例に示します。
 
-[!code-csharp[without new](snippets/StructType.cs#WithoutNew)]
+[!code-csharp[without new](snippets/shared/StructType.cs#WithoutNew)]
 
 [組み込みの値型](value-types.md#built-in-value-types)の場合は、対応するリテラルを使用して型の値を指定します。
 
@@ -118,11 +122,11 @@ C# 7.2 以降、`ref` 修飾子は、構造体型の宣言内で使用できま�
 
 通常、`ref` 構造体型のデータ メンバーも含む型が必要な場合は、`ref` 構造体型を定義します。
 
-[!code-csharp[ref struct](snippets/StructType.cs#RefStruct)]
+[!code-csharp[ref struct](snippets/shared/StructType.cs#RefStruct)]
 
 `ref` 構造体を [`readonly`](#readonly-struct) として宣言するには、型宣言内で `readonly` 修飾子と `ref` 修飾子を組み合わせます (`readonly` 修飾子は `ref` 修飾子よりも前にある必要があります)。
 
-[!code-csharp[readonly ref struct](snippets/StructType.cs#ReadonlyRef)]
+[!code-csharp[readonly ref struct](snippets/shared/StructType.cs#ReadonlyRef)]
 
 .NET では、`ref` 構造体の例として <xref:System.Span%601?displayProperty=nameWithType> と <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> があります。
 

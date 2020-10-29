@@ -2,13 +2,14 @@
 title: .NET Core CLI を使用したライブラリの開発
 description: .NET Core CLI を使用して .NET Core ライブラリを作成する方法について説明します。 複数のフレームワークをサポートするライブラリを作成します。
 author: cartermp
+ms.topic: how-to
 ms.date: 05/01/2017
-ms.openlocfilehash: c23c1f027b4d6d09c50eb2257d34f72ec56302f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e98ce9e08c8d92bb4c89348e21cece60de811848
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503511"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223709"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>.NET Core CLI を使用したライブラリの開発
 
@@ -32,7 +33,7 @@ ms.locfileid: "77503511"
 | 4.0                    | Windows SDK for Windows 7 および .NET Framework 4         |
 | 2.0、3.0、および 3.5      | .NET Framework 3.5 SP1 Runtime (または Windows 8 以降のバージョン) |
 
-## <a name="how-to-target-the-net-standard"></a>.NET Standard をターゲット設定する方法
+## <a name="how-to-target-net-standard"></a>.NET Standard をターゲット設定する方法
 
 .NET Standard にあまりなじみがない場合、詳細については、「[.NET Standard](../../standard/net-standard.md)」をご覧ください。
 
@@ -96,7 +97,7 @@ ms.locfileid: "77503511"
 </Project>
 ```
 
-これで終了です。 これは .NET Framework 4 向けにのみコンパイルされていますが、新しいバージョンの .NET Framework のライブラリを使用できます。
+以上で作業は終了です。 これは .NET Framework 4 向けにのみコンパイルされていますが、新しいバージョンの .NET Framework のライブラリを使用できます。
 
 ## <a name="how-to-multitarget"></a>マルチターゲットを設定する方法
 
@@ -257,7 +258,7 @@ netstandard1.4/
 
 1. `dotnet test` コマンドを実行して、xUnit が実行されることを確認します。 MSTest を使用する場合は、MSTest コンソール実行ツールが実行されることを確認します。
 
-これで終了です。 コマンド ライン ツールを使用して、すべてのプラットフォームでライブラリをテストできるようになりました。 すべてをセットアップしてテストに進む場合、ライブラリのテストはとても単純です。
+以上で作業は終了です。 コマンド ライン ツールを使用して、すべてのプラットフォームでライブラリをテストできるようになりました。 すべてをセットアップしてテストに進む場合、ライブラリのテストはとても単純です。
 
 1. ライブラリに変更を加えます。
 1. コマンド ラインから、`dotnet test` コマンドを使用してテスト ディレクトリでテストを実行します。
@@ -298,7 +299,7 @@ let doWork data = async {
 * **AwesomeLibrary.CSharp** - C# で使用するためのパブリック API を含むプロジェクト
 * **AwesomeLibrary.FSharp** - F# で使用するためのパブリック API を含むプロジェクト
 
-自分のターミナルで次のコマンドを実行し、このガイドと同じ構造を作成することができます。
+自分の端末で次のコマンドを実行し、このガイドと同じ構造を作成することができます。
 
 ```dotnetcli
 mkdir AwesomeLibrary && cd AwesomeLibrary
