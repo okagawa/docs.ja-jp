@@ -3,12 +3,12 @@ title: .NET Framework から .NET Core への移植
 description: 移植プロセスを理解し、.NET Framework プロジェクトを .NET Core に移植する際に役立つツールを確認します。
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: 74fe4519e41a07bc78a4dc346f8d1b52b5c7d092
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c206e56e095d1ca068fa2aa6f60e891895f7f999
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502770"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888575"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>.NET Framework から .NET Core への移植の概要
 
@@ -55,7 +55,7 @@ ms.locfileid: "84502770"
 
    .NET Core では、.NET Framework よりも簡素化された (異なる) [プロジェクト ファイル形式](../tools/csproj.md)が使用されます。 続行するには、プロジェクト ファイルをこの形式に変換する必要があります。 このプロジェクト形式では、この時点では、まだターゲットとしたい .NET Framework もターゲットにすることができます。
 
-   [dotnet try-convert](https://github.com/dotnet/try-convert) ツールを使用すると、より小規模なソリューションや個々のプロジェクトを、1 回の操作で .NET Core プロジェクトのファイル形式に移植することが可能です。 `dotnet try-convert` がすべてのプロジェクトに対して動作する保証はありません。また、これが原因となって、依存していた動作に微妙な変更が生じる可能性があります。 これは、自動化できる基本的なことを自動化するための "_開始点_" としてお使いください。 SDK 形式のプロジェクトで使用されるターゲットと旧形式のプロジェクト ファイルで使用されるものとの間には違いが多数あるため、このソリューションではプロジェクトの移行は保証されません。
+   [dotnet try-convert](https://github.com/dotnet/try-convert) ツールを使用すると、より小規模なソリューションや個々のプロジェクトを、1 回の操作で .NET Core プロジェクトのファイル形式に移植することが可能です。 `dotnet try-convert` がすべてのプロジェクトに対して動作する保証はありません。また、これが原因となって、依存していた動作に微妙な変更が生じる可能性があります。 これは、自動化できる基本的なことを自動化するための " _開始点_ " としてお使いください。 SDK 形式のプロジェクトで使用されるターゲットと旧形式のプロジェクト ファイルで使用されるものとの間には違いが多数あるため、このソリューションではプロジェクトの移行は保証されません。
 
 1. 移植するすべてのプロジェクトを、.NET Framework 4.7.2 以降をターゲットとするように再ターゲットします。
 
@@ -112,6 +112,11 @@ ms.locfileid: "84502770"
 ## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [依存関係を分析する](third-party-deps.md)
+> [依存関係の分析](third-party-deps.md)
 > [NuGet パッケージのパッケージ化](../deploying/creating-nuget-packages.md)
-> [ASP.NET から ASP.NET Core への移行](/aspnet/core/migration/proper-to-2x)
+
+## <a name="see-also"></a>こちらもご覧ください
+
+- [ASP.NET から ASP.NET Core への移行](/aspnet/core/migration/proper-to-2x)
+- [WPF アプリを .NET Core に移行する](/dotnet/desktop/wpf/migration/convert-project-from-net-framework)
+- [Windows フォーム アプリを .NET Core に移行する](winforms.md)

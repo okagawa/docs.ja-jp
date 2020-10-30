@@ -5,22 +5,22 @@ ms.date: 10/16/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - asynchronous design patterns, .NET
-- .NET Framework, asynchronous design patterns
+- .NET, asynchronous design patterns
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
-ms.openlocfilehash: bd4d44d8de8a64be82e9ce6af593a86719b59fcf
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d8a68295836fb1e87ab82425ab0973fc1b65f4b2
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84583506"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888764"
 ---
 # <a name="asynchronous-programming-patterns"></a>非同期プログラミングのパターン
 
 .NET には、非同期操作を実行するための 3 つのパターンが用意されています。  
 
-- **タスク ベースの非同期パターン (TAP)** 。1 つのメソッドを使用して非同期操作の開始と完了を表します。 TAP は、.NET Framework 4 で導入されました。 **.NET で非同期プログラミングを行う場合、これが推奨される方法となります。** C# の [async](../../csharp/language-reference/keywords/async.md) キーワードと [await](../../csharp/language-reference/operators/await.md) キーワード、および Visual Basic の [Async](../../visual-basic/language-reference/modifiers/async.md) 演算子と [Await](../../visual-basic/language-reference/operators/await-operator.md) 演算子により、TAP の言語サポートが追加されます。 詳細については、「[タスク ベースの非同期パターン (TAP)](task-based-asynchronous-pattern-tap.md)」を参照してください。  
+- **タスク ベースの非同期パターン (TAP)** 。1 つのメソッドを使用して非同期操作の開始と完了を表します。 TAP は .NET Framework 4 で導入されました。 **.NET で非同期プログラミングを行う場合、これが推奨される方法となります。** C# の [async](../../csharp/language-reference/keywords/async.md) キーワードと [await](../../csharp/language-reference/operators/await.md) キーワード、および Visual Basic の [Async](../../visual-basic/language-reference/modifiers/async.md) 演算子と [Await](../../visual-basic/language-reference/operators/await-operator.md) 演算子により、TAP の言語サポートが追加されます。 詳細については、「[タスク ベースの非同期パターン (TAP)](task-based-asynchronous-pattern-tap.md)」を参照してください。  
 
-- **イベント ベースの非同期パターン (EAP)** は、非同期動作を提供するための、イベント ベースの従来のモデルです。 これは、`Async` サフィックスを持つメソッドと、1 つ以上のイベント、イベント ハンドラー デリゲート型、および `EventArg` 派生型を必要とします。 EAP は、.NET Framework 2.0 で導入されました。 新規の開発では推奨されなくなりました。 詳細については、「[イベント ベースの非同期パターン (EAP)](event-based-asynchronous-pattern-eap.md)」を参照してください。  
+- **イベント ベースの非同期パターン (EAP)** は、非同期動作を提供するための、イベント ベースの従来のモデルです。 これは、`Async` サフィックスを持つメソッドと、1 つ以上のイベント、イベント ハンドラー デリゲート型、および `EventArg` 派生型を必要とします。 EAP は .NET Framework 2.0 で導入されました。 新規の開発では推奨されなくなりました。 詳細については、「[イベント ベースの非同期パターン (EAP)](event-based-asynchronous-pattern-eap.md)」を参照してください。  
 
 - **非同期プログラミング モデル (APM)** パターン (<xref:System.IAsyncResult> パターンとも呼ばれます) は、<xref:System.IAsyncResult> インターフェイスを使用して非同期動作を提供する従来のモデルです。 このパターンでは、同期操作に `Begin` と `End` メソッドが必要になります (たとえば、非同期書き込み操作を実装するための `BeginWrite` と `EndWrite`)。 このパターンは、新規の開発では推奨されなくなりました。 詳細については、「[非同期プログラミング モデル (APM)](asynchronous-programming-model-apm.md)」を参照してください。  
   
