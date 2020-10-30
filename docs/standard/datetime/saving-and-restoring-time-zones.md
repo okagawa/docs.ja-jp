@@ -7,22 +7,22 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - restoring time zones
-- deserialization [.NET Framework], time zones
-- serialization [.NET Framework], time zones
-- time zone objects [.NET Framework], restoring
+- deserialization [.NET], time zones
+- serialization [.NET], time zones
+- time zone objects [.NET], restoring
 - saving time zones
-- time zone objects [.NET Framework], deserializing
-- time zones [.NET Framework], saving
-- time zones [.NET Framework], restoring
-- time zone objects [.NET Framework], serializing
-- time zone objects [.NET Framework], saving
+- time zone objects [.NET], deserializing
+- time zones [.NET], saving
+- time zones [.NET], restoring
+- time zone objects [.NET], serializing
+- time zone objects [.NET], saving
 ms.assetid: 4028b310-e7ce-49d4-a646-1e83bfaf6f9d
-ms.openlocfilehash: 8da26988d2e141ac704f0d3756cd8a50602cb3fd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6a05bf4ce062a3f4e539e9b89779cb468b9782a6
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281051"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063392"
 ---
 # <a name="saving-and-restoring-time-zones"></a>タイム ゾーンの保存と復元
 
@@ -70,7 +70,7 @@ ms.locfileid: "84281051"
 
 この方法でシリアル化されたタイムゾーン文字列を格納すると、タイムゾーン作成ルーチンもアプリケーション自体から分離されます。 たとえば、タイムゾーン作成ルーチンを実行して、アプリケーションが使用できる履歴タイムゾーン情報を含むデータファイルを作成できます。 その後、データファイルをアプリケーションと共にインストールすることができます。これを開くと、アプリケーションで必要になったときに1つ以上のタイムゾーンを逆シリアル化できます。
 
-埋め込みリソースを使用してシリアル化されたタイムゾーンデータを格納する例については、「方法: 埋め込みリソース[にタイムゾーンを保存](save-time-zones-to-an-embedded-resource.md)する」および「[方法: 埋め込みリソースからタイムゾーンを復元する](restore-time-zones-from-an-embedded-resource.md)」を参照してください。
+埋め込みリソースを使用してシリアル化されたタイムゾーンデータを格納する例については、「方法: 埋め込みリソース [にタイムゾーンを保存](save-time-zones-to-an-embedded-resource.md) する」および「 [方法: 埋め込みリソースからタイムゾーンを復元する](restore-time-zones-from-an-embedded-resource.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

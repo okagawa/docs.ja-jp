@@ -6,19 +6,19 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- time zones [.NET Framework], deserializing
-- time zones [.NET Framework], restoring
+- time zones [.NET], deserializing
+- time zones [.NET], restoring
 ms.assetid: 6b7b4de9-da07-47e3-8f4c-823f81798ee7
-ms.openlocfilehash: b1cece13c88b3a49c9c4c90045a07dd009d4282d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1dd3dff2441ac5e21f3ebf97d58919a7c65d42c5
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281324"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063431"
 ---
 # <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>方法: 埋め込みリソースからタイム ゾーンを復元する
 
-このトピックでは、リソースファイルに保存されているタイムゾーンを復元する方法について説明します。 タイムゾーンの保存に関する情報および手順については、「[方法: 埋め込みリソースにタイムゾーンを保存する](save-time-zones-to-an-embedded-resource.md)」を参照してください。
+このトピックでは、リソースファイルに保存されているタイムゾーンを復元する方法について説明します。 タイムゾーンの保存に関する情報および手順については、「 [方法: 埋め込みリソースにタイムゾーンを保存する](save-time-zones-to-an-embedded-resource.md)」を参照してください。
 
 ### <a name="to-deserialize-a-timezoneinfo-object-from-an-embedded-resource"></a>埋め込みリソースから TimeZoneInfo オブジェクトを逆シリアル化するには
 
@@ -26,7 +26,7 @@ ms.locfileid: "84281324"
 
 2. <xref:System.Resources.ResourceManager>埋め込みリソースファイルの完全修飾名と、リソースファイルを含むアセンブリへの参照を渡すことによって、オブジェクトをインスタンス化します。
 
-   埋め込まれたリソースファイルの完全修飾名を特定できない場合は、 [ildasm.exe (IL 逆アセンブラー)](../../framework/tools/ildasm-exe-il-disassembler.md)を使用して、アセンブリのマニフェストを確認します。 `.mresource`リソースを識別するエントリ。 この例では、リソースの完全修飾名は `SerializeTimeZoneData.SerializedTimeZones` です。
+   埋め込みリソースファイルの完全修飾名を特定できない場合は、 [Ildasm.exe (IL 逆アセンブラー)](../../framework/tools/ildasm-exe-il-disassembler.md) を使用してアセンブリのマニフェストを確認します。 `.mresource`リソースを識別するエントリ。 この例では、リソースの完全修飾名は `SerializeTimeZoneData.SerializedTimeZones` です。
 
    リソースファイルが、タイムゾーンのインスタンス化コードを含む同じアセンブリに埋め込まれている場合は、 `static` (Visual Basic) メソッドを呼び出すことによって、そのファイルへの参照を取得でき `Shared` <xref:System.Reflection.Assembly.GetExecutingAssembly%2A> ます。
 
@@ -49,7 +49,7 @@ ms.locfileid: "84281324"
 
 この例で必要な要素は次のとおりです。
 
-- このプロジェクトには、System. .dll と system.servicemodel への参照を追加する必要があります。
+- System.Windows.Forms.dll および System.Core.dll への参照をプロジェクトに追加します。
 
 - 次の名前空間がインポートされます。
 
@@ -60,4 +60,4 @@ ms.locfileid: "84281324"
 
 - [日付、時刻、およびタイム ゾーン](index.md)
 - [タイム ゾーンの概要](time-zone-overview.md)
-- [方法: 埋め込みリソースにタイム ゾーンを保存する](save-time-zones-to-an-embedded-resource.md)
+- [方法: 埋め込みリソースにタイムゾーンを保存する](save-time-zones-to-an-embedded-resource.md)

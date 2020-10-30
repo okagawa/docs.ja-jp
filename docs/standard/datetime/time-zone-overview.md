@@ -3,24 +3,24 @@ title: タイム ゾーンの概要
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- time zones [.NET Framework], about time zones
-- transition time [.NET Framework]
+- time zones [.NET], about time zones
+- transition time [.NET]
 - TimeZoneInfo class, about TimeZoneInfo class
-- time zones [.NET Framework], creating
-- invalid time [.NET Framework]
-- fixed rule [.NET Framework]
-- ambiguous time [.NET Framework]
-- floating rule [.NET Framework]
-- daylight saving time [.NET Framework]
-- adjustment rule [.NET Framework]
-- time zones [.NET Framework], terminology
+- time zones [.NET], creating
+- invalid time [.NET]
+- fixed rule [.NET]
+- ambiguous time [.NET]
+- floating rule [.NET]
+- daylight saving time [.NET]
+- adjustment rule [.NET]
+- time zones [.NET], terminology
 ms.assetid: c4b7ed01-5e38-4959-a3b6-ef9765d6ccf1
-ms.openlocfilehash: 9cb50357931cb22fd2862ba7558154a4782e4557
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0f0fdbe4b63ddc9d55f7397fa71198d72e60e669
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281038"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064107"
 ---
 # <a name="time-zone-overview"></a>タイム ゾーンの概要
 
@@ -40,7 +40,7 @@ ms.locfileid: "84281038"
 
 次の表は、タイム ゾーンを使用し、タイム ゾーン対応アプリケーションを開発するときに一般的に使用される用語の定義一覧です。
 
-| 項目            | 定義 |
+| 用語            | 定義 |
 | --------------- | ---------- |
 | 調整規則 | 標準時間から夏時間へ、および夏時間から標準時間への移行が行われるタイミングを定義した規則。 各調整規則には、規則が適用されるタイミングを定義する開始日と終了日があります (たとえば、調整規則は、1986年1月1日から2006年12月31日まで)、デルタ (調整規則の適用結果として標準時間が変化する時間)、および調整期間中に遷移が発生する特定の日時に関する情報を示しています。 移行は、固定規則または浮動規則に従う可能性があります。 |
 | あいまいな時刻  | 1 つのタイム ゾーンで 2 つの時刻にマップできる時刻です。 あいまいな時刻は、あるタイム ゾーンの夏時間から標準時間に移行する際など、時計の時刻を前に戻すときに発生します。 たとえば、移行が特定の日付の午前 2:00 に行われ、 時刻が午前 1:00 に変更される場合、午前 1:00 から 午前 1:59:99 までの時刻は 標準時間または夏時間のいずれにでも解釈できます。 |
@@ -57,7 +57,7 @@ ms.locfileid: "84281038"
 
 レジストリにクラスが依存していることは、 <xref:System.TimeZoneInfo> タイムゾーン対応アプリケーションが、特定のタイムゾーンがレジストリで定義されていることを特定できないことを意味します。 そのため、(ローカルのタイム ゾーンまたは UTC を示すタイム ゾーン以外の) 特定のタイム ゾーンをインスタンス化する場合、例外処理を使用する必要があります。 また、必要な <xref:System.TimeZoneInfo> オブジェクトをレジストリからインスタンス化できない場合に、アプリケーションの続行を可能にする方法も提供する必要があります。
 
-必要なタイムゾーンが存在しない場合に対処するために、クラスには <xref:System.TimeZoneInfo> メソッドが含まれています。このメソッドを使用して、 <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> レジストリに見つからないカスタムタイムゾーンを作成できます。 カスタムタイムゾーンの作成の詳細については、「[方法: 調整規則のないタイムゾーンを作成](create-time-zones-without-adjustment-rules.md)する」および「[方法: 調整規則を使用してタイムゾーンを作成する](create-time-zones-with-adjustment-rules.md)」を参照してください。 また、メソッドを使用して、 <xref:System.TimeZoneInfo.ToSerializedString%2A> 新しく作成されたタイムゾーンを文字列に変換し、データストア (データベース、テキストファイル、レジストリ、アプリケーションリソースなど) に保存することもできます。 次に、メソッドを使用して、 <xref:System.TimeZoneInfo.FromSerializedString%2A> この文字列をオブジェクトに変換して戻し <xref:System.TimeZoneInfo> ます。 詳細については、「[方法: 埋め込みリソースにタイムゾーンを保存](save-time-zones-to-an-embedded-resource.md)する」および「[方法: 埋め込みリソースからタイムゾーンを復元](restore-time-zones-from-an-embedded-resource.md)する」を参照してください。
+必要なタイムゾーンが存在しない場合に対処するために、クラスには <xref:System.TimeZoneInfo> メソッドが含まれています。このメソッドを使用して、 <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> レジストリに見つからないカスタムタイムゾーンを作成できます。 カスタムタイムゾーンの作成の詳細については、「 [方法: 調整規則のないタイムゾーンを作成](create-time-zones-without-adjustment-rules.md) する」および「 [方法: 調整規則を使用してタイムゾーンを作成する](create-time-zones-with-adjustment-rules.md)」を参照してください。 また、メソッドを使用して、 <xref:System.TimeZoneInfo.ToSerializedString%2A> 新しく作成されたタイムゾーンを文字列に変換し、データストア (データベース、テキストファイル、レジストリ、アプリケーションリソースなど) に保存することもできます。 次に、メソッドを使用して、 <xref:System.TimeZoneInfo.FromSerializedString%2A> この文字列をオブジェクトに変換して戻し <xref:System.TimeZoneInfo> ます。 詳細については、「 [方法: 埋め込みリソースにタイムゾーンを保存](save-time-zones-to-an-embedded-resource.md) する」および「 [方法: 埋め込みリソースからタイムゾーンを復元](restore-time-zones-from-an-embedded-resource.md)する」を参照してください。
 
 各タイム ゾーンは、UTC からのベース オフセットと、既存の調整規則を反映した UTC からのオフセットによって表されるため、あるタイム ゾーンの時刻は、簡単に別のタイム ゾーンの時間に変換できます。 このため、オブジェクトには <xref:System.TimeZoneInfo> 次のようないくつかの変換メソッドが含まれています。
 

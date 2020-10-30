@@ -7,18 +7,18 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- times [.NET Framework], converting
-- time zones [.NET Framework], conversions
+- times [.NET], converting
+- time zones [.NET], conversions
 - UTC times, converting
 - converting times
 - local time conversions
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
-ms.openlocfilehash: 156c3d8b360d62ba72f9a4447646fafe170ea658
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3539b3c2b71be331bdea3161b7e8ba6da407cbab
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547331"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063834"
 ---
 # <a name="converting-times-between-time-zones"></a>タイム ゾーン間での時刻の変換
 
@@ -26,7 +26,7 @@ ms.locfileid: "90547331"
 
 ## <a name="converting-to-coordinated-universal-time"></a>世界協定時刻への変換
 
-世界協定時刻 (UTC) は、高精度の原子時標準です。 世界のタイム ゾーンは、UTC からの正または負のオフセットとして表現されます。 したがって、UTC はタイム ゾーンの影響を受けない、またはタイム ゾーンに依存しない種類の時刻を提供します。 コンピューター間の日時の移植性が重要となる場合には、UTC 時刻の使用が推奨されます。 (日付と時刻を使用した詳細およびその他のベストプラクティスについては、「 [.NET Framework での DateTime を使用したコーディングのベストプラクティス](/previous-versions/dotnet/articles/ms973825(v=msdn.10))」を参照してください)。個々のタイムゾーンを UTC に変換すると、時間の比較が簡単になります。
+世界協定時刻 (UTC) は、高精度の原子時標準です。 世界のタイムゾーンは、UTC からの正または負のオフセットとして表されます。 したがって、UTC はタイム ゾーンの影響を受けない、またはタイム ゾーンに依存しない種類の時刻を提供します。 コンピューター間の日時の移植性が重要となる場合には、UTC 時刻の使用が推奨されます。 (日付と時刻を使用した詳細およびその他のベストプラクティスについては、「 [.NET Framework での DateTime を使用したコーディングのベストプラクティス](/previous-versions/dotnet/articles/ms973825(v=msdn.10))」を参照してください)。個々のタイムゾーンを UTC に変換すると、時間の比較が簡単になります。
 
 > [!NOTE]
 > また、構造体をシリアル化して <xref:System.DateTimeOffset> 、特定の時点を明確に表すこともできます。 <xref:System.DateTimeOffset>オブジェクトは日付と時刻の値を utc からのオフセットと共に格納するので、utc との関係において常に特定の時点を表します。

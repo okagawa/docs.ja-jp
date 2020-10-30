@@ -6,20 +6,20 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- times [.NET Framework], arithmetic operations
-- dates [.NET Framework], arithmetic operations
-- time zones [.NET Framework], arithmetic operations
-- arithmetic operations [.NET Framework], dates and times
-- dates [.NET Framework], comparing
+- times [.NET], arithmetic operations
+- dates [.NET], arithmetic operations
+- time zones [.NET], arithmetic operations
+- arithmetic operations [.NET], dates and times
+- dates [.NET], comparing
 - DateTime structure, arithmetic operations
 - DateTimeOffset structure, arithmetic operations
 ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
-ms.openlocfilehash: c212397f99bd09195f298d7d704c879705b14f02
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8350454c0570bcf0ba82fa5d83639da0433c785c
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281545"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063561"
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>日付と時刻を使用した算術演算の実行
 
@@ -68,15 +68,15 @@ ms.locfileid: "84281545"
 
 ## <a name="arithmetic-operations-with-times-in-time-zones"></a>タイムゾーンの時刻を使用した算術演算
 
-クラスには <xref:System.TimeZoneInfo> 、あるタイムゾーンから別のタイムゾーンに時刻を変換するときに調整を自動的に適用する多くの変換メソッドが含まれています。 次に例を示します。
+クラスには <xref:System.TimeZoneInfo> 、あるタイムゾーンから別のタイムゾーンに時刻を変換するときに調整を自動的に適用する多くの変換メソッドが含まれています。 これらには、次のものが含まれます。
 
 - <xref:System.TimeZoneInfo.ConvertTime%2A>メソッドと <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A> メソッド。2つのタイムゾーン間で時刻を変換します。
 
 - <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A>メソッドと <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A> メソッド。特定のタイムゾーンの時刻を utc に変換するか、utc を特定のタイムゾーンの時刻に変換します。
 
-詳細については、「[タイムゾーン間での時刻の変換](converting-between-time-zones.md)」を参照してください。
+詳細については、「 [タイムゾーン間での時刻の変換](converting-between-time-zones.md)」を参照してください。
 
-<xref:System.TimeZoneInfo>クラスには、日付と時刻の演算を実行するときに調整規則を自動的に適用するメソッドは用意されていません。 ただし、あるタイム ゾーンの時刻を UTC に変換してから算術演算を実行し、その後 UTC から元のタイム ゾーンの時刻に再変換することで、調整規則を適用したときと同じ結果を得ることができます。 詳細については、「[方法: 日付と時刻の演算でタイムゾーンを使用する](use-time-zones-in-arithmetic.md)」を参照してください。
+<xref:System.TimeZoneInfo>クラスには、日付と時刻の演算を実行するときに調整規則を自動的に適用するメソッドは用意されていません。 ただし、あるタイム ゾーンの時刻を UTC に変換してから算術演算を実行し、その後 UTC から元のタイム ゾーンの時刻に再変換することで、調整規則を適用したときと同じ結果を得ることができます。 詳細については、「 [方法: 日付と時刻の演算でタイムゾーンを使用する](use-time-zones-in-arithmetic.md)」を参照してください。
 
 たとえば、次のコードは、2008 年 3 月 9 日の午前 2 時に 2 時間 30 分を加算する 発生します。 ただし、中部標準時を UTC に変換した後に日付と時刻の算術演算を実行し、その結果を UTC から中部標準時に変換するため、得られた時刻は中部標準時タイム ゾーンの夏時間への移行を反映しています。
 

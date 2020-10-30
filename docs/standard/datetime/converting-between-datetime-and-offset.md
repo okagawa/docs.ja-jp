@@ -8,28 +8,28 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - DateTime structure, converting
-- time zones [.NET Framework], conversions
+- time zones [.NET], conversions
 - UTC times, converting
 - DateTimeOffset structure, converting
 - converting DateTimeOffset and DateTime values
-- dates [.NET Framework], converting
+- dates [.NET], converting
 - converting times
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-ms.openlocfilehash: 86f2c982d7f87e83102933d1de73d6e13086dc87
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: cccfa37663e5a046b08f70a89ebb7f3566486139
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924904"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063847"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>DateTime と DateTimeOffset 間の変換
 
 構造体は、 <xref:System.DateTimeOffset> 構造体よりも高い範囲のタイムゾーンを認識し <xref:System.DateTime> <xref:System.DateTime> ますが、メソッドの呼び出しでは、より一般的にパラメーターが使用されます。 このため、値を値に変換したり、その逆の変換を行ったりすること <xref:System.DateTimeOffset> <xref:System.DateTime> は、特に重要です。 このトピックでは、できるだけ多くのタイムゾーン情報を保持する方法でこれらの変換を実行する方法について説明します。
 
 > [!NOTE]
-> との両方の型には、 <xref:System.DateTime> <xref:System.DateTimeOffset> タイムゾーンの時刻を表すときにいくつかの制限があります。 プロパティを使用 <xref:System.DateTime.Kind%2A> すると、 <xref:System.DateTime> は世界協定時刻 (UTC) とシステムのローカルタイムゾーンのみを反映できます。 <xref:System.DateTimeOffset>UTC からの時刻のオフセットを反映しますが、そのオフセットが属する実際のタイムゾーンは反映されません。 時刻の値とタイムゾーンのサポートの詳細については、「 [DateTime、DateTimeOffset、TimeSpan、および TimeZoneInfo の使い分け](choosing-between-datetime.md)」を参照してください。
+> との両方の型には、 <xref:System.DateTime> <xref:System.DateTimeOffset> タイムゾーンの時刻を表すときにいくつかの制限があります。 プロパティを使用 <xref:System.DateTime.Kind%2A> すると、 <xref:System.DateTime> は世界協定時刻 (UTC) とシステムのローカルタイムゾーンのみを反映できます。 <xref:System.DateTimeOffset> UTC からの時刻のオフセットを反映しますが、そのオフセットが属する実際のタイムゾーンは反映されません。 時刻の値とタイムゾーンのサポートの詳細については、「 [DateTime、DateTimeOffset、TimeSpan、および TimeZoneInfo の使い分け](choosing-between-datetime.md)」を参照してください。
 
 ## <a name="conversions-from-datetime-to-datetimeoffset"></a>DateTime から DateTimeOffset への変換
 

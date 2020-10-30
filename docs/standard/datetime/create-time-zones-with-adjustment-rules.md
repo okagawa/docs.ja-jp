@@ -6,16 +6,16 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- time zones [.NET Framework], creating
-- time zones [.NET Framework], and adjustment rules
-- adjustment rule [.NET Framework]
+- time zones [.NET], creating
+- time zones [.NET], and adjustment rules
+- adjustment rule [.NET]
 ms.assetid: c52ef192-13a9-435f-8015-3b12eae8c47c
-ms.openlocfilehash: b7e938581dfde3f1566aa2506302292686c2fc5c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 28ab7c8ceabcfd64a6797cf5a85869c469963983
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278169"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063821"
 ---
 # <a name="how-to-create-time-zones-with-adjustment-rules"></a>方法: 調整規則のあるタイム ゾーンを作成する
 
@@ -27,12 +27,12 @@ ms.locfileid: "84278169"
 
 - タイムゾーンには、特定の履歴期間のタイムゾーン調整に関する正確な情報がありません。
 
-このような場合は、メソッドを呼び出し <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> て、アプリケーションで必要とされるタイムゾーンを定義できます。 このメソッドのオーバーロードを使用して、調整規則の有無に関係なくタイムゾーンを作成できます。 タイムゾーンで夏時間がサポートされている場合は、固定調整規則または浮動調整規則のいずれかを使用して調整を定義できます。 (これらの用語の定義については、「タイムゾーンの[概要](time-zone-overview.md)」の「タイムゾーンの用語」セクションを参照してください)。
+このような場合は、メソッドを呼び出し <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> て、アプリケーションで必要とされるタイムゾーンを定義できます。 このメソッドのオーバーロードを使用して、調整規則の有無に関係なくタイムゾーンを作成できます。 タイムゾーンで夏時間がサポートされている場合は、固定調整規則または浮動調整規則のいずれかを使用して調整を定義できます。 (これらの用語の定義については、「タイムゾーンの [概要](time-zone-overview.md)」の「タイムゾーンの用語」セクションを参照してください)。
 
 > [!IMPORTANT]
 > メソッドを呼び出すことによって作成されたカスタムタイムゾーン <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> は、レジストリには追加されません。 代わりに、メソッド呼び出しによって返されるオブジェクト参照を使用してのみアクセスでき <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> ます。
 
-このトピックでは、調整規則を使用してタイムゾーンを作成する方法について説明します。 夏時間調整規則をサポートしていないタイムゾーンを作成するには、「[方法: 調整規則のないタイムゾーンを作成](create-time-zones-without-adjustment-rules.md)する」を参照してください。
+このトピックでは、調整規則を使用してタイムゾーンを作成する方法について説明します。 夏時間調整規則をサポートしていないタイムゾーンを作成するには、「 [方法: 調整規則のないタイムゾーンを作成](create-time-zones-without-adjustment-rules.md)する」を参照してください。
 
 ### <a name="to-create-a-time-zone-with-floating-adjustment-rules"></a>浮動調整規則を使用してタイムゾーンを作成するには
 
@@ -93,4 +93,4 @@ ms.locfileid: "84278169"
 
 - [日付、時刻、およびタイム ゾーン](index.md)
 - [タイム ゾーンの概要](time-zone-overview.md)
-- [方法: 調整規則のないタイム ゾーンを作成する](create-time-zones-without-adjustment-rules.md)
+- [方法: 調整規則のないタイムゾーンを作成する](create-time-zones-without-adjustment-rules.md)

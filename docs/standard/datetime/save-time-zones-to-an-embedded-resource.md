@@ -6,16 +6,16 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- time zones [.NET Framework], saving
-- time zone objects [.NET Framework], serializing
-- time zone objects [.NET Framework], saving
+- time zones [.NET], saving
+- time zone objects [.NET], serializing
+- time zone objects [.NET], saving
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
-ms.openlocfilehash: c8084cb8edff64b9d598f4fd0a62a362491c7aa7
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3d355003b3e6309644fa1ccaf779b2e63b0523d2
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281246"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063405"
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>方法: 埋め込みリソースにタイム ゾーンを保存する
 
@@ -23,9 +23,9 @@ ms.locfileid: "84281246"
 
 通常、オブジェクトのシリアル化は、 <xref:System.TimeZoneInfo> タイムゾーン対応アプリケーションとは別に行われます。 シリアル化されたオブジェクトを保持するために使用するデータストアに応じて <xref:System.TimeZoneInfo> 、タイムゾーンデータは、セットアップまたはインストールルーチンの一部としてシリアル化できます (たとえば、データがレジストリのアプリケーションキーに格納されている場合)。または、最終的なアプリケーションをコンパイルする前に実行されるユーティリティルーチンの一部としてシリアル化されます (たとえば、シリアル化されたデータが .NET XML リソース (.resx) ファイル
 
-アプリケーションと共にコンパイルされるリソースファイルに加えて、他のいくつかのデータストアをタイムゾーン情報に使用できます。 次に例を示します。
+アプリケーションと共にコンパイルされるリソースファイルに加えて、他のいくつかのデータストアをタイムゾーン情報に使用できます。 これらには、次のものが含まれます。
 
-- レジストリ。 アプリケーションでは、独自のアプリケーションキーのサブキーを使用して、HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones のサブキーを使用するのではなく、カスタムタイムゾーンデータを格納する必要があることに注意してください。
+- レジストリ。 アプリケーションでは、独自のアプリケーションキーのサブキーを使用して、HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones のサブキーを使用するのではなく、カスタムタイムゾーンデータを格納する必要があることに注意してください。
 
 - 構成ファイル。
 
@@ -35,9 +35,9 @@ ms.locfileid: "84281246"
 
 1. 既存のタイムゾーンを取得するか、新しいタイムゾーンを作成します。
 
-   既存のタイムゾーンを取得する方法については、「[方法: 定義済みの UTC オブジェクトおよびローカルタイムゾーンオブジェクトにアクセス](access-utc-and-local.md)する」および「[方法: TimeZoneInfo オブジェクトをインスタンス化](instantiate-time-zone-info.md)する」を参照してください。
+   既存のタイムゾーンを取得する方法については、「 [方法: 定義済みの UTC オブジェクトおよびローカルタイムゾーンオブジェクトにアクセス](access-utc-and-local.md) する」および「 [方法: TimeZoneInfo オブジェクトをインスタンス化](instantiate-time-zone-info.md)する」を参照してください。
 
-   新しいタイムゾーンを作成するには、メソッドのいずれかのオーバーロードを呼び出し <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> ます。 詳細については、「[方法: 調整規則のないタイムゾーンを作成](create-time-zones-without-adjustment-rules.md)する」および「[方法: 調整規則を使用してタイムゾーンを作成する](create-time-zones-with-adjustment-rules.md)」を参照してください。
+   新しいタイムゾーンを作成するには、メソッドのいずれかのオーバーロードを呼び出し <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> ます。 詳細については、「 [方法: 調整規則のないタイムゾーンを作成](create-time-zones-without-adjustment-rules.md) する」および「 [方法: 調整規則を使用してタイムゾーンを作成する](create-time-zones-with-adjustment-rules.md)」を参照してください。
 
 2. メソッドを呼び出し <xref:System.TimeZoneInfo.ToSerializedString%2A> て、タイムゾーンのデータを含む文字列を作成します。
 
@@ -55,7 +55,7 @@ ms.locfileid: "84281246"
 
 9. 生成された .resx ファイルをアプリケーションの Visual Studio プロジェクトに追加します。
 
-10. Visual Studio の [**プロパティ**] ウィンドウを使用して、.resx ファイルの [**ビルドアクション**] プロパティが [**埋め込みリソース**] に設定されていることを確認します。
+10. Visual Studio の [ **プロパティ** ] ウィンドウを使用して、.resx ファイルの [ **ビルドアクション** ] プロパティが [ **埋め込みリソース** ] に設定されていることを確認します。
 
 ## <a name="example"></a>例
 
@@ -68,13 +68,13 @@ ms.locfileid: "84281246"
 
 メソッドは、 <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> 完全なヘッダー情報を .NET XML リソースファイルに追加するため、既存のファイルにリソースを追加するために使用することはできません。 この例では、SerializedTimeZones ファイルを確認し、存在する場合は、2つのシリアル化されたタイムゾーン以外のすべてのリソースを汎用オブジェクトに格納することで、この処理を行い <xref:System.Collections.Generic.Dictionary%602> ます。 その後、既存のファイルが削除され、既存のリソースが新しい SerializedTimeZones ファイルに追加されます。 シリアル化されたタイムゾーンデータもこのファイルに追加されます。
 
-リソースのキー (または**名前**) フィールドには、空白を埋め込むことはできません。 <xref:System.String.Replace%28System.String%2CSystem.String%29>メソッドは、リソースファイルに割り当てられる前に、タイムゾーン識別子内のすべての埋め込みスペースを削除するために呼び出されます。
+リソースのキー (または **名前** ) フィールドには、空白を埋め込むことはできません。 <xref:System.String.Replace%28System.String%2CSystem.String%29>メソッドは、リソースファイルに割り当てられる前に、タイムゾーン識別子内のすべての埋め込みスペースを削除するために呼び出されます。
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
 この例で必要な要素は次のとおりです。
 
-- このプロジェクトには、System. .dll と system.servicemodel への参照を追加する必要があります。
+- System.Windows.Forms.dll および System.Core.dll への参照をプロジェクトに追加します。
 
 - 次の名前空間がインポートされます。
 
@@ -85,4 +85,4 @@ ms.locfileid: "84281246"
 
 - [日付、時刻、およびタイム ゾーン](index.md)
 - [タイム ゾーンの概要](time-zone-overview.md)
-- [方法: 埋め込みリソースからタイム ゾーンを復元する](restore-time-zones-from-an-embedded-resource.md)
+- [方法: 埋め込みリソースからタイムゾーンを復元する](restore-time-zones-from-an-embedded-resource.md)
