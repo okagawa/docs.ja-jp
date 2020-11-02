@@ -3,15 +3,15 @@ title: ジェネリック コレクションを使用する状況
 ms.date: 04/30/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- collections [.NET Framework], generic
-- generic collections [.NET Framework]
+- collections [.NET], generic
+- generic collections [.NET]
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
-ms.openlocfilehash: c59a125a8df95e3c4fe6e1839956d800bd6ee910
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e528c712aaddfdc4182940c36e52b968a071daa7
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290384"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888535"
 ---
 # <a name="when-to-use-generic-collections"></a>ジェネリック コレクションを使用する状況
 

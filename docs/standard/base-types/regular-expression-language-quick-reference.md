@@ -11,16 +11,16 @@ helpviewer_keywords:
 - searching with regular expressions, language elements
 - pattern-matching with regular expressions, language elements
 - regular expressions, language elements
-- regular expressions [.NET Framework]
+- regular expressions [.NET]
 - cheat sheet
-- .NET Framework regular expressions, language elements
+- .NET regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-ms.openlocfilehash: 4788c84be76a5cc9a9a6327fcd054e08db4d1872
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 986e7417d85655acc66a5c308aa79477c96fd629
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556801"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889310"
 ---
 # <a name="regular-expression-language---quick-reference"></a>正規表現言語 - クイック リファレンス
 
@@ -47,10 +47,10 @@ ms.locfileid: "87556801"
 |`\f`|フォーム フィードの \u000C と一致します。|`[\f]{2,}`|『`"\f\f\f"`』の「`"\f\f\f"`」|
 |`\n`|改行文字の \u000A と一致します。|`\r\n(\w+)`|『`"\r\nThese are\ntwo lines."`』の「`"\r\nThese"`」|
 |`\e`|エスケープ文字の \u001B と一致します。|`\e`|『`"\x001B"`』の「`"\x001B"`」|
-|`\` *nnn*|8 進数表現で文字を指定します (*nnn* は 2 桁または 3 桁で構成されます)。|`\w\040\w`|『`"a bc d"`』の「`"a b"`」、「`"c d"`」|
-|`\x` *nn*|16 進数表現で文字を指定します (*nn* は 2 桁で構成されます)。|`\w\x20\w`|『`"a bc d"`』の「`"a b"`」、「`"c d"`」|
-|`\c` *X*<br /><br /> `\c` *x*|*X* または *x*で指定された ASCII の制御文字と一致します。 *X* または *x* は制御文字です。|`\cC`|『`"\x0003"`』(Ctrl-C) の「`"\x0003"`」|
-|`\u` *nnnn*|16 進数形式で表される Unicode 文字 ( *nnnn*で表される 4 桁の数字) と一致します。|`\w\u0020\w`|『`"a bc d"`』の「`"a b"`」、「`"c d"`」|
+|`\` *nnn*|8 進数表現で文字を指定します ( *nnn* は 2 桁または 3 桁で構成されます)。|`\w\040\w`|『`"a bc d"`』の「`"a b"`」、「`"c d"`」|
+|`\x` *nn*|16 進数表現で文字を指定します ( *nn* は 2 桁で構成されます)。|`\w\x20\w`|『`"a bc d"`』の「`"a b"`」、「`"c d"`」|
+|`\c` *X*<br /><br /> `\c` *x*|*X* または *x* で指定された ASCII の制御文字と一致します。 *X* または *x* は制御文字です。|`\cC`|『`"\x0003"`』(Ctrl-C) の「`"\x0003"`」|
+|`\u` *nnnn*|16 進数形式で表される Unicode 文字 ( *nnnn* で表される 4 桁の数字) と一致します。|`\w\u0020\w`|『`"a bc d"`』の「`"a b"`」、「`"c d"`」|
 |`\`|このトピック内の表に示されているエスケープ文字として認識されない文字が後ろに付いている場合は、その文字と一致します。 たとえば、`\*` は `\x2A`と同じであり、`\.` は `\x2E`と同じです。 これを使用すると、正規表現エンジンによって言語要素 (\* や ? など) と文字リテラル (`\*` や `\?` など) のあいまいさが解消されます。|`\d+[\+-x\*]\d+`|『`"(2+2) * 3*9"`』の「`"2+2"`」と「`"3*9"`」|
 
 ## <a name="character-classes"></a>文字クラス
@@ -59,12 +59,12 @@ ms.locfileid: "87556801"
 
 |文字クラス|説明|パターン|一致件数|
 |---------------------|-----------------|-------------|-------------|
-|`[` *character_group* `]`|*character_group*内の任意の 1 文字と一致します。 既定では、大文字と小文字が区別されます。|`[ae]`|『`"gray"`』の「`"a"`」<br /><br /> 『`"lane"`』の「`"a"`」、「`"e"`」|
-|`[^` *character_group* `]`|否定:*character_group* 内にない任意の 1 文字と一致します。 既定では、*character_group* の文字について、大文字と小文字が区別されます。|`[^aei]`|『`"reign"`』の「`"r"`」、「`"g"`」、「`"n"`」|
-|`[` *first* `-` *last* `]`|文字範囲:*first* から *last* までの範囲にある任意の 1 文字と一致します。|`[A-Z]`|『`"AB123"`』の「`"A"`」、「`"B"`」|
+|`[` *character_group* `]`|*character_group* 内の任意の 1 文字と一致します。 既定では、大文字と小文字が区別されます。|`[ae]`|『`"gray"`』の「`"a"`」<br /><br /> 『`"lane"`』の「`"a"`」、「`"e"`」|
+|`[^` *character_group* `]`|否定: *character_group* 内にない任意の 1 文字と一致します。 既定では、 *character_group* の文字について、大文字と小文字が区別されます。|`[^aei]`|『`"reign"`』の「`"r"`」、「`"g"`」、「`"n"`」|
+|`[` *first* `-` *last* `]`|文字範囲: *first* から *last* までの範囲にある任意の 1 文字と一致します。|`[A-Z]`|『`"AB123"`』の「`"A"`」、「`"B"`」|
 |`.`|ワイルドカード:\n を除く任意の 1 文字と一致します。<br /><br /> リテラルのピリオド文字 (. または `\u002E`) と一致させるには、この文字の前にエスケープ文字 (`\.`) を指定します。|`a.e`|『`"nave"`』の「`"ave"`」<br /><br /> 『`"water"`』の「`"ate"`」|
-|`\p{` *name* `}`|*name*で指定された名前付きブロックまたは Unicode 一般カテゴリ内の任意の 1 文字と一致します。|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|『`"City Lights"`』の「`"C"`」、「`"L"`」<br /><br /> 『`"ДЖem"`』の「`"Д"`」、「`"Ж"`」|
-|`\P{` *name* `}`|*name*で指定された名前付きブロックまたは Unicode 一般カテゴリにない任意の 1 文字と一致します。|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|『`"City"`』の「`"i"`」、「`"t"`」、「`"y"`」<br /><br /> 『`"ДЖem"`』の「`"e"`」、「`"m"`」|
+|`\p{` *name* `}`|*name* で指定された名前付きブロックまたは Unicode 一般カテゴリ内の任意の 1 文字と一致します。|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|『`"City Lights"`』の「`"C"`」、「`"L"`」<br /><br /> 『`"ДЖem"`』の「`"Д"`」、「`"Ж"`」|
+|`\P{` *name* `}`|*name* で指定された名前付きブロックまたは Unicode 一般カテゴリにない任意の 1 文字と一致します。|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|『`"City"`』の「`"i"`」、「`"t"`」、「`"y"`」<br /><br /> 『`"ДЖem"`』の「`"e"`」、「`"m"`」|
 |`\w`|単語に使用される任意の文字と一致します。|`\w`|『`"ID A1.3"`』の「`"I"`」、「`"D"`」、「`"A"`」、「`"1"`」、「`"3"`」|
 |`\W`|単語に使用される文字以外の任意の文字と一致します。|`\W`|『`"ID A1.3"`』の「`" "`」、「`"."`」|
 |`\s`|空白文字と一致します。|`\w\s`|『`"ID A1.3"`』の「`"D "`」|
@@ -94,10 +94,10 @@ ms.locfileid: "87556801"
 |グループ化構成体|説明|パターン|一致件数|
 |------------------------|-----------------|-------------|-------------|
 |`(` *subexpression* `)`|一致した部分式をキャプチャして、1 から始まる序数を代入します。|`(\w)\1`|『`"deep"`』の「`"ee"`」|
-|`(?<` *name* `>` *subexpression* `)`<br /> または <br />`(?'` *name* `'` *subexpression* `)`|一致した部分式を名前付きグループにキャプチャします。|`(?<double>\w)\k<double>`|『`"deep"`』の「`"ee"`」|
-|`(?<` *name1* `-` *name2* `>` *subexpression* `)` <br /> または <br /> `(?'` *name1* `-` *name2* `'` *subexpression* `)`|グループ定義の均等化を定義します。 詳細については、「 [グループ化構成体](grouping-constructs-in-regular-expressions.md)」の「グループ定義の均等化」を参照してください。|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|『`"3+2^((1-3)*(3-1))"`』の「`"((1-3)*(3-1))"`」|
+|`(?<` *name* `>` *subexpression* `)`<br /> or <br />`(?'` *name* `'` *subexpression* `)`|一致した部分式を名前付きグループにキャプチャします。|`(?<double>\w)\k<double>`|『`"deep"`』の「`"ee"`」|
+|`(?<` *name1* `-` *name2* `>` *subexpression* `)` <br /> or <br /> `(?'` *name1* `-` *name2* `'` *subexpression* `)`|グループ定義の均等化を定義します。 詳細については、「 [グループ化構成体](grouping-constructs-in-regular-expressions.md)」の「グループ定義の均等化」を参照してください。|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|『`"3+2^((1-3)*(3-1))"`』の「`"((1-3)*(3-1))"`」|
 |`(?:` *subexpression* `)`|非キャプチャ グループを定義します。|`Write(?:Line)?`|『`"Console.WriteLine()"`』の「`"WriteLine"`」<br /><br /> 『`"Console.Write(value)"`』の「`"Write"`」|
-|`(?imnsx-imnsx:` *subexpression* `)`|指定したオプションを *subexpression*に適用するか、または無効にします。 詳細については、「 [正規表現のオプション](regular-expression-options.md)」を参照してください。|`A\d{2}(?i:\w+)\b`|『`"A12xl A12XL a12xl"`』の「`"A12xl"`」、「`"A12XL"`」|
+|`(?imnsx-imnsx:` *subexpression* `)`|指定したオプションを *subexpression* に適用するか、または無効にします。 詳細については、「 [正規表現のオプション](regular-expression-options.md)」を参照してください。|`A\d{2}(?i:\w+)\b`|『`"A12xl A12XL a12xl"`』の「`"A12xl"`」、「`"A12XL"`」|
 |`(?=` *subexpression* `)`|ゼロ幅の肯定先読みアサーションです。|`\w+(?=\.)`|『`"He is. The dog ran. The sun is out."`』の「`"is"`」、「`"ran"`」、および「`"out"`」|
 |`(?!` *subexpression* `)`|ゼロ幅の否定先読みアサーションです。|`\b(?!un)\w+\b`|『`"unsure sure unity used"`』の「`"sure"`」、「`"used"`」|
 |`(?<=` *subexpression* `)`|ゼロ幅の正の後読みアサーションです。|`(?<=19)\d{2}\b`|『`"1851 1999 1950 1905 2003"`』の「`"99"`」、「`"50"`」、「`"05"`」|
@@ -139,8 +139,8 @@ ms.locfileid: "87556801"
 |代替構成体|説明|パターン|一致件数|
 |---------------------------|-----------------|-------------|-------------|
 |<code>&#124;</code>|縦棒 (<code>&#124;</code>) 文字で区切られたいずれかの要素と一致します。|<code>th(e&#124;is&#124;at)</code>|『`"this is the day."`』の「`"the"`」、「`"this"`」|
-|`(?(` *expression* `)` *yes* <code>&#124;</code> *no* `)`|*expression* で指定される正規表現パターンが一致する場合は *yes* と一致します。それ以外の場合は、*no* (省略可能) 部分と一致します。 *expression* はゼロ幅アサーションとして解釈されます。|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|『`"A10 C103 910"`』の「`"A10"`」、「`"910"`」|
-|`(?(` *name* `)` *yes* <code>&#124;</code> *no* `)`|名前付きまたは番号付きのキャプチャ グループ *name* に一致が見つかった場合は *yes*と一致します。それ以外の場合は *no*(省略可能) と一致します。|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|『`"Dogs.jpg \"Yiska playing.jpg\""`』の「`"Dogs.jpg "`」、「`"\"Yiska playing.jpg\""`」|
+|`(?(` *expression* `)` *yes* <code>&#124;</code> *no* `)`|*expression* で指定される正規表現パターンが一致する場合は *yes* と一致します。それ以外の場合は、 *no* (省略可能) 部分と一致します。 *expression* はゼロ幅アサーションとして解釈されます。|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|『`"A10 C103 910"`』の「`"A10"`」、「`"910"`」|
+|`(?(` *name* `)` *yes* <code>&#124;</code> *no* `)`|名前付きまたは番号付きのキャプチャ グループ *name* に一致が見つかった場合は *yes* と一致します。それ以外の場合は *no* (省略可能) と一致します。|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|『`"Dogs.jpg \"Yiska playing.jpg\""`』の「`"Dogs.jpg "`」、「`"\"Yiska playing.jpg\""`」|
 
 ## <a name="substitutions"></a>置換
 
@@ -148,8 +148,8 @@ ms.locfileid: "87556801"
 
 |文字|説明|パターン|置換パターン|入力文字列|結果文字列|
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|
-|`$` *number*|グループの *number*と一致した部分文字列に置換されます。|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|`"one two"`|`"two one"`|
-|`${` *name* `}`|名前付きグループの *name*と一致した部分文字列に置換されます。|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|`"one two"`|`"two one"`|
+|`$` *number*|グループの *number* と一致した部分文字列に置換されます。|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|`"one two"`|`"two one"`|
+|`${` *name* `}`|名前付きグループの *name* と一致した部分文字列に置換されます。|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|`"one two"`|`"two one"`|
 |`$$`|"$" リテラルに置換されます。|`\b(\d+)\s?USD`|`$$$1`|`"103 USD"`|`"$103"`|
 |`$&`|一致したパターン全体と同じパターンに置換されます。|`\$?\d*\.?\d+`|`**$&**`|`"$1.30"`|`"**$1.30**"`|
 |``$` ``|一致した場所より前にある入力文字列のすべてに置換されます。|`B+`|``$` ``|`"AABBCC"`|`"AAAACC"`|
@@ -164,7 +164,7 @@ ms.locfileid: "87556801"
 インライン オプションは、次の 2 種類の方法で指定できます。
 
 - [その他の構成体](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`の使用。オプションまたはオプション セットの前に負符号 (-) がある場合、そのオプションが無効になります。 たとえば、`(?i-mn)` では、大文字と小文字を区別しない一致 (`i`) がオン、複数行モード (`m`) がオフ、名前のないグループ キャプチャ (`n`) がオフになります。 このオプションは、このオプションが定義されている位置から正規表現パターンに適用され、パターンの末尾まで、または別の構成体によってオプションが反転する位置まで有効になります。
-- [グループ化構造体 ](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*subexpression*`)` を使用する。これは、指定されたグループのみに対してオプションを定義します。
+- [グループ化構造体](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*subexpression*`)` を使用する。これは、指定されたグループのみに対してオプションを定義します。
 
 .NET の正規表現エンジンでは、次のインライン オプションがサポートされます。
 

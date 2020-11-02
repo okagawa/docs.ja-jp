@@ -10,18 +10,19 @@ dev_langs:
 helpviewer_keywords:
 - streams, reading and writing data
 - BinaryReader class, examples
-- I/O [.NET Framework], reading data
-- I/O [.NET Framework], writing data
+- I/O [.NET], reading data
+- I/O [.NET], writing data
 - BinaryWriter class, examples
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
-ms.openlocfilehash: 9a6b2985b7f532476c0f4c0f998d710f95e55d3a
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 236d50260efa66f21db6d0abba6cc5c258a74d8d
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769159"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188732"
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>方法: 新しく作成されたデータ ファイルに対して読み書きする
+
 <xref:System.IO.BinaryWriter?displayProperty=nameWithType> クラスおよび <xref:System.IO.BinaryReader?displayProperty=nameWithType> クラスは、文字列ではない形式でデータを書き込んだり読み取ったりするために使用します。 次の例では、空のファイル ストリームを作成し、それにデータを書き込み、それからデータを読み取る方法を示します。
 
 この例では、現在のディレクトリに *Test.data* という名前のデータ ファイルが作成され、関連する <xref:System.IO.BinaryWriter> オブジェクトと <xref:System.IO.BinaryReader> オブジェクトが作成され、<xref:System.IO.BinaryWriter> オブジェクトを使用し、0 から 10 までの整数が *Test.data* に書き込まれます。ファイル ポインターがファイルの末尾に残ります。 次に、<xref:System.IO.BinaryReader> オブジェクトによってファイル ポインターが起点に戻され、指定された内容が読み出されます。  

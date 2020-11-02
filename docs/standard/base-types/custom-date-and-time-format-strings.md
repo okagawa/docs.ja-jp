@@ -8,27 +8,27 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- formatting [.NET Framework], dates
+- formatting [.NET], dates
 - custom DateTime format string
 - format specifiers, custom date and time
 - format strings
 - custom date and time format strings
-- formatting [.NET Framework], time
+- formatting [.NET], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: b6197acf9ceee5862cf13eceab178df513eb91d7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d58bcc4008c706395aaeee3b5dc9ea3fa96cce9b
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541670"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888712"
 ---
 # <a name="custom-date-and-time-format-strings"></a>カスタム日時形式文字列
 
 日時書式指定文字列は、<xref:System.DateTime> 値または <xref:System.DateTimeOffset> 値の書式設定操作によって生成されるテキスト表現を定義します。 また、文字列を日時に正常に変換するために解析操作で必要となる日時値の表現も定義します。 カスタム書式指定文字列は、1 つ以上のカスタム日時書式指定子で構成されます。 [標準の日時書式指定文字列](standard-date-and-time-format-strings.md)以外の文字列は、すべてカスタム日時書式指定文字列として解釈されます。
 
 > [!TIP]
-> **書式指定ユーティリティ**である .NET Core Windows Forms をダウンロードできます。このアプリケーションを使用すると、書式指定文字列を数値または日付と時刻の値に適用して、結果の文字列を表示できます。 ソース コードは [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) と [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb) で利用できます。
+> **書式指定ユーティリティ** である .NET Core Windows Forms をダウンロードできます。このアプリケーションを使用すると、書式指定文字列を数値または日付と時刻の値に適用して、結果の文字列を表示できます。 ソース コードは [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) と [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb) で利用できます。
 
 カスタム日時書式指定文字列は、<xref:System.DateTime> 値で使用することも、<xref:System.DateTimeOffset> 値で使用することもできます。
 
@@ -92,7 +92,7 @@ ms.locfileid: "90541670"
 | "zzz" | UTC を基準とする時間および分単位のオフセット。<br /><br /> 詳細情報:["zzz" カスタム書式指定子](#zzzSpecifier)。 | 2009-06-15T13:45:30-07:00 -> -07:00 |
 | ":" | 時刻の区切り記号。<br /><br /> 詳細情報:[":"カスタム書式指定子](#timeSeparator)。 | 2009-06-15T13:45:30 -> : (en-US)<br /><br /> 2009-06-15T13:45:30 -> . (it-IT)<br /><br /> 2009-06-15T13:45:30 -> : (ja-JP) |
 | "/" | 日付の区切り記号。<br /><br /> 詳細情報:["/" カスタム書式指定子](#dateSeparator)。 | 2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR) |
-| "*文字列*"<br /><br /> '*文字列*' | リテラル文字列の区切り記号。<br /><br /> 詳細情報:[文字リテラル](#Literals)。 | 2009-06-15T13:45:30 ("arr:" h:m t) -> arr:1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr:1:45 P |
+| " *文字列* "<br /><br /> ' *文字列* ' | リテラル文字列の区切り記号。<br /><br /> 詳細情報:[文字リテラル](#Literals)。 | 2009-06-15T13:45:30 ("arr:" h:m t) -> arr:1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr:1:45 P |
 | % | 後続の文字をカスタム書式指定子として定義します。<br /><br /> 詳細については、「[単一のカスタム書式指定子の使用](#UsingSingleSpecifiers)」を参照してください。 | 2009-06-15T13:45:30 (%h) -> 1 |
 | &#92; | エスケープ文字。<br /><br /> 詳細情報:「[文字リテラル](#Literals)」、「[エスケープ文字の使用](#escape)」。 | 2009-06-15T13:45:30 (h \h) -> 1 h |
 | その他の文字 | 文字が結果の文字列にそのままコピーされます。<br /><br /> 詳細情報:[文字リテラル](#Literals)。 | 2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A |

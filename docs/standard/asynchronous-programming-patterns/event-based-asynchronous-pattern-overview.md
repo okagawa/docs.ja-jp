@@ -10,19 +10,19 @@ helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
 - BackgroundWorker component
-- events [.NET Framework], asynchronous
+- events [.NET], asynchronous
 - Asynchronous Pattern
 - AsyncOperationManager class
-- threading [.NET Framework], asynchronous features
+- threading [.NET], asynchronous features
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: f0d3e2e8f1d1f58c9df8026b38fc0264812b092a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5ab3229f71e264bbcd26d3d4c7bb52430b02865a
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555680"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888829"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>イベントベースの非同期パターンの概要
 多数のタスクを同時に実行しながら、ユーザーの操作にも応答するアプリケーションには、通常、複数のスレッドを使用するデザインが必要です。 <xref:System.Threading> 名前空間は、高性能なマルチスレッド アプリケーションを作成するのに必要なすべてのツールを提供します。ただし、これらのツールを効果的に使用するには、マルチスレッド ソフトウェア エンジニアリングの豊富な経験が必要です。 比較的単純なマルチスレッド アプリケーションの場合は、<xref:System.ComponentModel.BackgroundWorker> コンポーネントが簡単なソリューションを提供します。 より高度な非同期アプリケーションの場合は、イベント ベースの非同期パターンに準拠したクラスの実装を検討してください。  
@@ -37,7 +37,7 @@ ms.locfileid: "90555680"
   
 - 使い慣れたイベントおよびデリゲートのモデルを使用して、保留中の非同期操作と通信できます。 イベント ハンドラーおよびデリゲートの使い方の詳細については、[イベント](../events/index.md)に関するページを参照してください。  
   
- イベント ベースの非同期パターンをサポートするクラスには、1 つまたは複数の _MethodName_**Async** という名前のメソッドが含まれます。 これらのメソッドは、同期バージョンに対応するもので、現在のスレッドで同じ操作を行います。 クラスには、_MethodName_**Completed** イベントや _MethodName_**AsyncCancel** (または単に **CancelAsync**) メソッドが含まれる場合もあります。  
+ イベント ベースの非同期パターンをサポートするクラスには、1 つまたは複数の _MethodName_**Async** という名前のメソッドが含まれます。 これらのメソッドは、同期バージョンに対応するもので、現在のスレッドで同じ操作を行います。 クラスには、 _MethodName_**Completed** イベントや _MethodName_**AsyncCancel** (または単に **CancelAsync** ) メソッドが含まれる場合もあります。  
   
  <xref:System.Windows.Forms.PictureBox> は、イベント ベースの非同期パターンをサポートする一般的なコンポーネントです。 イメージを同期的にダウンロードするには、その <xref:System.Windows.Forms.PictureBox.Load%2A>メソッドを呼び出します。ただし、イメージのサイズが大きい場合や、ネットワークの接続速度が遅い場合は、ダウンロード操作が完了して <xref:System.Windows.Forms.PictureBox.Load%2A> の呼び出しが返されるまで、アプリケーションが応答を停止します。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "90555680"
  イベント ベースの非同期パターンでは、非同期操作をキャンセルできる必要があります。<xref:System.Windows.Forms.PictureBox> コントロールでは、その <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> メソッドでこの要件をサポートしています。 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> を呼び出すと、保留中のダウンロードを停止する要求が送信されます。タスクがキャンセルされると、<xref:System.Windows.Forms.PictureBox.LoadCompleted> イベントが発生します。  
   
 > [!CAUTION]
-> <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 要求が作成されると同時に、ダウンロードが終了する可能性もあります。このような場合、<xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> にはキャンセルの要求が反映されません。 これは*競合状態*と呼ばれる、マルチスレッド プログラミングの一般的な問題です。 マルチスレッド プログラミングの問題の詳細については、「[マネージド スレッド処理のベスト プラクティス](../threading/managed-threading-best-practices.md)」 (管理されたスレッドのベスト プラクティス) を参照してください。  
+> <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 要求が作成されると同時に、ダウンロードが終了する可能性もあります。このような場合、<xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> にはキャンセルの要求が反映されません。 これは *競合状態* と呼ばれる、マルチスレッド プログラミングの一般的な問題です。 マルチスレッド プログラミングの問題の詳細については、「[マネージド スレッド処理のベスト プラクティス](../threading/managed-threading-best-practices.md)」 (管理されたスレッドのベスト プラクティス) を参照してください。  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>イベント ベースの非同期パターンの特性  
  イベント ベースの非同期パターンには、特定のクラスでサポートされている操作の複雑さに応じて、複数の形式があります。 最もシンプルなクラスには、単一の _MethodName_**Async** メソッドと、このメソッドに対応する _MethodName_**Completed** イベントが含まれる場合があります。 より複雑なクラスには、複数の _MethodName_**Async** メソッドと、それぞれに対応する _MethodName_**Completed** イベント、およびこれらのメソッドの同期バージョンが含まれる場合があります。 クラスでは、各非同期メソッドの、キャンセル、進行状況のレポート、およびインクリメンタル結果をオプションでサポートできます。  

@@ -10,16 +10,17 @@ helpviewer_keywords:
 - log files, opening
 - streams, opening and appending to log file
 - log files, appending to
-- I/O [.NET Framework], log files
+- I/O [.NET], log files
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
-ms.openlocfilehash: a66dadd24cc327824e91df733f11a23112cd384a
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: ed8345901dc5f44e947bd076944d7e61eac561da
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769172"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188173"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>方法: ログ ファイルを開いて情報を追加する
+
 <xref:System.IO.StreamWriter> および <xref:System.IO.StreamReader> は、ストリームから文字の書き込んだり、読み取りを行います。 次のコード例は、入力用に *log.txt* ファイルを開くか、まだファイルがない場合、ファイルを作成し、ファイルの末尾に情報を追加します。 次に、ファイルの内容が表示用に標準出力に書き込まれます。
 
 この例の代わりとして、情報を 1 つの文字列または文字列配列として格納し、<xref:System.IO.File.WriteAllText%2A?displayProperty=nameWithType> または <xref:System.IO.File.WriteAllLines%2A?displayProperty=nameWithType> メソッドを使用して同じ機能を実現できます。  

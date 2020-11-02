@@ -8,17 +8,17 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- event properties [.NET Framework]
-- multiple events [.NET Framework]
-- event handling [.NET Framework], with multiple events
-- events [.NET Framework], multiple
+- event properties [.NET]
+- multiple events [.NET]
+- event handling [.NET], with multiple events
+- events [.NET], multiple
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
-ms.openlocfilehash: 5b528aa2145ba703ce605ce22ae7d643f1e5b8d0
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: fa0bdc26eba872a62cd5f7a773df0d7a53c83975
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769016"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064237"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>方法: イベント プロパティを使用して複数のイベントを処理する
 イベント プロパティを使用するには、イベントを発生させるクラスにイベント プロパティを定義し、そのイベントを処理するクラスにイベント プロパティのデリゲートを設定します。 1 つのクラスにイベント プロパティを複数実装するには、そのクラス内部に、各イベント用に定義されたデリゲートを格納および保持する必要があります。 通常は、イベント キーをインデックスとするデリゲート コレクションを実装することによってこれを実現します。  

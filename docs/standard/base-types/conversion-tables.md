@@ -9,15 +9,15 @@ helpviewer_keywords:
 - converting types, narrowing conversions
 - converting types, widening conversions
 - base types, converting
-- tables [.NET Framework], type conversions
-- data types [.NET Framework], converting
+- tables [.NET], type conversions
+- data types [.NET], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
-ms.openlocfilehash: bb696c65078a5dae0b81a48bffc786d2257496c3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 27578d46a80b0372c6ddc2266a751cd0e6e9aa91
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290566"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889453"
 ---
 # <a name="type-conversion-tables-in-net"></a>.NET の型変換の表
 拡大変換は、1 つの型の値が、サイズが同じかそれ以上の別の型に変換されるときに発生します。 縮小変換は、1 つの型の値が、サイズがより小さい別の型の値に変換されるときに発生します。 このトピックの表は、両方の種類の変換の動作を示しています。  

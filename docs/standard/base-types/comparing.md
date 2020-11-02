@@ -13,18 +13,18 @@ helpviewer_keywords:
 - CompareTo method
 - IndexOf method
 - Compare method
-- strings [.NET Framework], comparing
+- strings [.NET], comparing
 - CompareOrdinal method
 - EndsWith method
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-ms.openlocfilehash: 5ed73d18341c3b9c6e61e12fdf322b9a67affd4a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 658f8b2cf7d7b2431654df1caebdac8118b3674b
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602194"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889492"
 ---
 # <a name="comparing-strings-in-net"></a>.NET で文字列を比較する
 .NET は、文字列の値を比較するためのメソッドをいくつか提供します。 これらの値の比較メソッドとその説明を次の表に示します。  

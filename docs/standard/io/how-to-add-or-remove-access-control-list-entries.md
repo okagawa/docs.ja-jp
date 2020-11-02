@@ -13,14 +13,15 @@ helpviewer_keywords:
 - I/O [.NET Framework], access control list entries
 - access control lists [.NET Framework]
 ms.assetid: 53758b39-bd9b-4640-bb04-cad5ed8d0abf
-ms.openlocfilehash: 5f41c518b8732adff95593cab29d7085adcc9ab3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ff5a09207b3a1d810f9611dd6bb8cfd206adf1e8
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708129"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93187971"
 ---
 # <a name="how-to-add-or-remove-access-control-list-entries-net-framework-only"></a>方法: アクセス制御リスト エントリを追加または削除する (.NET Framework のみ)
+
 ファイルまたはディレクトリでアクセス制御リスト (ACL) エントリを追加したり、削除したりするには、<xref:System.Security.AccessControl.FileSecurity> または <xref:System.Security.AccessControl.DirectorySecurity> オブジェクトをファイルまたはディレクトリから取得します。 オブジェクトを変更し、ファイルまたはディレクトリに戻します。  
   
 ## <a name="add-or-remove-an-acl-entry-from-a-file"></a>ACL エントリをファイルに追加するか、ファイルから削除する  

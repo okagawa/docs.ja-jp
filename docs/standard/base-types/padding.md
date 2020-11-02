@@ -8,22 +8,22 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- strings [.NET Framework], padding
+- strings [.NET], padding
 - white space
 - PadRight method
 - PadLeft method
 - padding strings
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
-ms.openlocfilehash: 5bf7023a3429e932a44ad0a0bd3409012f77cbf9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f90a95f0ceb5ad7cc32d451897544fffe56afb6d
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594531"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889050"
 ---
 # <a name="padding-strings-in-net"></a>.NET での文字列の埋め込み
 
-ある文字の先頭または末尾に文字を埋め込み、合計を指定の長さにするとき、元の文字列で構成される新しい文字列を次の <xref:System.String> メソッドの 1 つを利用して作成します。 埋め込み文字は、スペースまたは指定した文字にすることができます。 結果の文字列は右揃えまたは左揃えのように見えます。 元の文字列の長さが既に必要な合計の長さ以上である場合、埋め込みメソッドは元の文字列をそのまま返します。詳細については、<xref:System.String.PadLeft%2A?displayProperty=nameWithType> および <xref:System.String.PadRight%2A?displayProperty=nameWithType> メソッドの 2 つのオーバーロードの**戻り値**に関するセクションを参照してください。
+ある文字の先頭または末尾に文字を埋め込み、合計を指定の長さにするとき、元の文字列で構成される新しい文字列を次の <xref:System.String> メソッドの 1 つを利用して作成します。 埋め込み文字は、スペースまたは指定した文字にすることができます。 結果の文字列は右揃えまたは左揃えのように見えます。 元の文字列の長さが既に必要な合計の長さ以上である場合、埋め込みメソッドは元の文字列をそのまま返します。詳細については、<xref:System.String.PadLeft%2A?displayProperty=nameWithType> および <xref:System.String.PadRight%2A?displayProperty=nameWithType> メソッドの 2 つのオーバーロードの **戻り値** に関するセクションを参照してください。
   
 |メソッド名|使用|  
 |-----------------|---------|  

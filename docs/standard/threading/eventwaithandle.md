@@ -3,19 +3,20 @@ title: EventWaitHandle
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- threading [.NET Framework], EventWaitHandle class
+- threading [.NET], EventWaitHandle class
 - EventWaitHandle class
-- event wait handles [.NET Framework]
-- threading [.NET Framework], cross-process synchronization
+- event wait handles [.NET]
+- threading [.NET], cross-process synchronization
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
-ms.openlocfilehash: 80c90254978495a58d228c4302eda84d6165c800
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d8c4745af9c5336d013dc0ca7ef1030b208c8b68
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138072"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188342"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
+
 <xref:System.Threading.EventWaitHandle> クラスを使用すると、スレッドは通知および通知の待機により、互いに通信できます。 イベント待機ハンドル (単にイベントとも呼ばれます) は、通知を受けて、1 つ以上の待機中のイベントを解放できる待機ハンドルです。 通知を受けると、イベント待機ハンドルは手動または自動でリセットされます。 <xref:System.Threading.EventWaitHandle> クラスは、ローカルのイベント待機ハンドル (ローカル イベント) または名前付きのシステム イベント待機ハンドル (名前付きのイベントまたはシステム イベント。すべてのプロセスから参照できます) を表すことができます。  
   
 > [!NOTE]

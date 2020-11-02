@@ -10,19 +10,19 @@ dev_langs:
 helpviewer_keywords:
 - multiple attribute instances
 - AttributeTargets enumeration
-- attributes [.NET Framework], custom
+- attributes [.NET], custom
 - AllowMultiple property
 - custom attributes
 - AttributeUsageAttribute class, custom attributes
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: f047e18531b46f0c89be9a6feaa9aa50341205e3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 670f34083834b35d26e6018372948022eec17d47
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550926"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889193"
 ---
 # <a name="writing-custom-attributes"></a>カスタム属性の記述
 独自のカスタム属性をデザインするために、多くの新しい概念を習得する必要はありません。 オブジェクト指向プログラミングに精通してクラスをデザインする方法を理解しているなら、必要な知識をほぼすべて持っています。 カスタム属性は、基本的には、 <xref:System.Attribute?displayProperty=nameWithType>から直接的に派生したか間接的に派生した従来のクラスです。 従来のクラスと同じように、カスタム属性には、データを格納したり取得したりするメソッドが含まれます。  
@@ -104,7 +104,7 @@ ms.locfileid: "90550926"
   
 - 属性クラスはパブリック クラスとして宣言する必要があります。  
   
-- 規則により、属性クラスの名前の終わりに **Attribute**という単語を付けます。 必須ではありませんが、読みやすさの向上のために、この規定をお勧めします。 属性を適用すると、Attribute という単語を含める必要はなくなります。  
+- 規則により、属性クラスの名前の終わりに **Attribute** という単語を付けます。 必須ではありませんが、読みやすさの向上のために、この規定をお勧めします。 属性を適用すると、Attribute という単語を含める必要はなくなります。  
   
 - すべての属性クラスは、<xref:System.Attribute?displayProperty=nameWithType> から直接的に継承するか間接的に継承する必要があります。  
   

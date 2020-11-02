@@ -7,15 +7,15 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - constructs, miscellaneous
-- .NET Framework regular expressions, miscellaneous constructs
+- .NET regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-ms.openlocfilehash: 8ca888074aa757a1bfba786a7bec5928b75b1da2
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f7800dee67513f885339fad67c7a999cc06cca36
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290410"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889271"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>正規表現でのその他の構成体
 .NET の正規表現には、次の 3 つのその他の言語コンストラクトが含まれます。 1 つは、正規表現パターンの途中で特定の一致オプションを有効または無効にすることができます。 残りの 2 つは、正規表現にコメントを含めることができます。  

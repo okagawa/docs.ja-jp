@@ -10,21 +10,21 @@ helpviewer_keywords:
 - regular expressions, examples
 - user input, examples
 - Regex.IsMatch method
-- regular expressions [.NET Framework], examples
+- regular expressions [.NET], examples
 - examples [Visual Basic], strings
 - IsValidEmail
 - validation, email strings
 - input, checking
-- strings [.NET Framework], examples [Visual Basic]
-- email [.NET Framework], validating
+- strings [.NET], examples [Visual Basic]
+- email [.NET], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-ms.openlocfilehash: 90e79af649727330c2afa1ccb8c64ffe34733f92
-ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
+ms.openlocfilehash: 07b8e31e4a0203b87492eb01ab686a1c56f5565d
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90022949"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889076"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>文字列が有効な電子メール形式であるかどうかを検証する方法
 
@@ -38,7 +38,7 @@ ms.locfileid: "90022949"
 
 ❌ 電子メールを検証する唯一の方法として、正規表現を使用しないでください。
 
-電子メールの構造が正しいことを検証するために "_完全な_" 正規表現を作成しようとすると、正規表現が非常に複雑になり、デバッグや改善が非常に困難になります。 正規表現では、電子メールが正しく構成されていても、それが存在することを検証できません。 電子メールを検証する最善の方法は、そのアドレスにテスト メールを送信することです。
+電子メールの構造が正しいことを検証するために " _完全な_ " 正規表現を作成しようとすると、正規表現が非常に複雑になり、デバッグや改善が非常に困難になります。 正規表現では、電子メールが正しく構成されていても、それが存在することを検証できません。 電子メールを検証する最善の方法は、そのアドレスにテスト メールを送信することです。
 
 [!INCLUDE [regex](../../../includes/regex.md)]
 
@@ -84,5 +84,5 @@ ms.locfileid: "90022949"
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework 正規表現](regular-expressions.md)
+- [.NET の正規表現](regular-expressions.md)
 - [メール アドレスの検証はどこまで行う必要があるか](https://softwareengineering.stackexchange.com/questions/78353/how-far-should-one-take-e-mail-address-validation#78363)

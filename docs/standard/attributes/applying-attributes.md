@@ -7,15 +7,15 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- assemblies [.NET Framework], attributes
-- attributes [.NET Framework], applying
+- assemblies [.NET], attributes
+- attributes [.NET], applying
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
-ms.openlocfilehash: 76591de6a4305b21b89d348f9ffe53f4e67e7334
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 24fe58ddf48e40b422652baa4c5bba86eea6b84f
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162831"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889232"
 ---
 # <a name="apply-attributes"></a>属性を適用する
 
@@ -29,11 +29,11 @@ ms.locfileid: "92162831"
 
 3. 属性に、位置指定パラメーターと名前付きパラメーターを指定します。
 
-     "*位置指定*" パラメーターは必須で、名前付きパラメーターの前に指定する必要があり、1 つの属性のコンストラクターのパラメーターに対応します。 "*名前付き*" パラメーターは省略可能で、属性の読み取り/書き込みプロパティに対応します。 C++ と C# では、オプションのパラメーターごとに `name=value` を指定します。`name` はプロパティの名前です。 Visual Basic では、`name:=value` を指定します。
+     " *位置指定* " パラメーターは必須で、名前付きパラメーターの前に指定する必要があり、1 つの属性のコンストラクターのパラメーターに対応します。 " *名前付き* " パラメーターは省略可能で、属性の読み取り/書き込みプロパティに対応します。 C++ と C# では、オプションのパラメーターごとに `name=value` を指定します。`name` はプロパティの名前です。 Visual Basic では、`name:=value` を指定します。
 
  コードをコンパイルすると属性がメタデータに格納され、ランタイム リフレクション サービスを通じて共通言語ランタイム、すべてのカスタム ツールやアプリケーションで使用できるようになります。
 
- 規則では、属性の名前の最後は "Attribute" にします。 ただし、Visual Basic や C# など、ランタイムを対象とする言語では、属性をフルネームで指定する必要はありません。 たとえば、<xref:System.ObsoleteAttribute?displayProperty=nameWithType> を初期化する場合は、**Obsolete** と指定するだけで参照できます。
+ 規則では、属性の名前の最後は "Attribute" にします。 ただし、Visual Basic や C# など、ランタイムを対象とする言語では、属性をフルネームで指定する必要はありません。 たとえば、<xref:System.ObsoleteAttribute?displayProperty=nameWithType> を初期化する場合は、 **Obsolete** と指定するだけで参照できます。
 
 ## <a name="apply-an-attribute-to-a-method"></a>メソッドに属性を適用する
 

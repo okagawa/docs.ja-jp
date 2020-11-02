@@ -9,23 +9,24 @@ helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
 - BackgroundWorker component
-- events [.NET Framework], asynchronous
+- events [.NET], asynchronous
 - Asynchronous Pattern
 - AsyncOperationManager class
-- threading [.NET Framework], asynchronous features
-- components [.NET Framework], asynchronous
+- threading [.NET], asynchronous features
+- components [.NET], asynchronous
 - AsyncOperation class
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 8ea767976d82881d8f983c1b1e3cbf9475c73995
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2294379d37d4cd9e7fae494a6548561258743d74
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536042"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888881"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>方法 : イベントベースの非同期パターンをサポートするコンポーネントを実装する
+
 顕著な遅延が発生する可能性がある操作を伴うクラスを作成する場合は、[イベント ベースの非同期パターン](event-based-asynchronous-pattern-overview.md)を実装することによって、非同期機能を与えることを検討します。  
   
  このチュートリアルでは、イベント ベースの非同期パターンを実装するコンポーネントの作成方法を示します。 これは、<xref:System.ComponentModel?displayProperty=nameWithType> 名前空間のヘルパー クラスを使用して実装します。これにより、コンポーネントは任意のアプリケーション モデルで正常に動作します (ASP.NET、コンソール アプリケーション、Windows フォーム アプリケーションなど)。 また、このコンポーネントは、<xref:System.Windows.Forms.PropertyGrid> コントロールや独自のカスタム デザイナーで設計可能です。  
@@ -58,7 +59,7 @@ ms.locfileid: "90536042"
 - <xref:System.ComponentModel.Component> を継承する `PrimeNumberCalculator` というクラスを作成します。  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>パブリックの非同期イベントとデリゲートの定義  
- コンポーネントは、イベントを使ってクライアントと通信します。 _MethodName_**Completed** イベントは非同期タスクの完了をクライアントに通知し、_MethodName_**ProgressChanged** イベントは非同期タスクの進行状況をクライアントに通知します。  
+ コンポーネントは、イベントを使ってクライアントと通信します。 _MethodName_**Completed** イベントは非同期タスクの完了をクライアントに通知し、 _MethodName_**ProgressChanged** イベントは非同期タスクの進行状況をクライアントに通知します。  
   
 ### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>コンポーネントのクライアント用の非同期イベントを定義するには:  
   

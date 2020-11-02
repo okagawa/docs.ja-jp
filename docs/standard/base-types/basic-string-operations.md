@@ -4,16 +4,16 @@ description: 文字列で実行できる基本的な操作について説明し�
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- strings [.NET Framework], basic string operations
+- strings [.NET], basic string operations
 - custom strings
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
 ms.custom: seadec18
-ms.openlocfilehash: 8c19f6bcbdf5e4829c91aee1e2fd631537ed2e0a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6ec244ab6935f4a92b0f59fa6c1cb8bc45638ce4
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277753"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889115"
 ---
 # <a name="basic-string-operations-in-net"></a>.NET の基本的な文字列操作
 

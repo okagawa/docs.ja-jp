@@ -13,15 +13,15 @@ helpviewer_keywords:
 - anchors, in regular expressions
 - metacharacters, atomic zero-width assertions
 - metacharacters, anchors
-- .NET Framework regular expressions, anchors
-- .NET Framework regular expressions, atomic zero-width assertions
+- .NET regular expressions, anchors
+- .NET regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-ms.openlocfilehash: e86bae8a687e89acba9a0b713630b43809f081d1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a6330eebbc69b9a3877a99a4373810d5a124c570
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290630"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889167"
 ---
 # <a name="anchors-in-regular-expressions"></a>正規表現のアンカー
 アンカー (アトミック ゼロ幅アサーション) は、文字列が一致する位置を指定します。 検索式でアンカーを使用した場合、正規表現エンジンは、後方の文字列を読み込んだり、文字に一致させたりすることはしません。指定された位置での一致のみが検索されます。 たとえば、 `^` は、行または文字列の先頭に一致する必要があることを指定します。 したがって、正規表現 `^http:` は、"http:" が行の先頭にある場合にのみ一致します。 次の表は、.NET の正規表現でサポートされているアンカーの一覧です。  

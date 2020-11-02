@@ -6,36 +6,40 @@ helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
 - BackgroundWorker component
-- events [.NET Framework], asynchronous
+- events [.NET], asynchronous
 - AsyncOperationManager class
-- threading [.NET Framework], asynchronous features
+- threading [.NET], asynchronous features
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: 66979415f2951acc78dc4eb7b2aafe3c84e85397
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8f2b1b4d6793be3e4de6fbc9fc09e8a7e690762c
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289942"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888920"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>イベントベースの非同期パターンを実装するための推奨される手順
+
 イベントベースの非同期パターンは、使い慣れたイベントおよびデリゲートのセマンティクスと共に、クラス内の非同期動作を公開する効果的な方法を提供します。 イベント ベースの非同期パターンを実装するには、いくつかの固有の動作要件に従う必要があります。 以降のセクションでは、イベントベースの非同期パターンに従うクラスを実装する際に検討すべき要件とガイドラインについて説明します。  
   
  概要については、「[イベントベースの非同期パターンの実装](implementing-the-event-based-asynchronous-pattern.md)」を参照してください。  
   
-## <a name="required-behavioral-guarantees"></a>必要な動作保証  
+## <a name="required-behavioral-guarantees"></a>必要な動作保証
+
  イベントベースの非同期パターンを実装する場合は、クラスが適切に動作し、クラスのクライアントがそのような動作に依存できるようにするため、多数の保証を提供する必要があります。  
   
-### <a name="completion"></a>完了  
+### <a name="completion"></a>完了
+
  正常完了、エラー、またはキャンセルの場合に常に <em>MethodName</em>**Completed** イベント ハンドラーを呼び出します。 アプリケーションがアイドルになり完了しない状態が発生してはなりません。 この規則の唯一の例外として、非同期操作自体は完了することがないように設計されている場合があります。  
   
-### <a name="completed-event-and-eventargs"></a>完了イベントおよび EventArg  
- 個別の <em>MethodName</em>**Async** メソッドごとに、次の設計要件を適用します。  
+### <a name="completed-event-and-eventargs"></a>完了イベントおよび EventArg
+
+個別の <em>MethodName</em>**Async** メソッドごとに、次の設計要件を適用します。  
   
 - メソッドと同じクラスで <em>MethodName</em>**Completed** イベントを定義します。  
   
-- <xref:System.ComponentModel.AsyncCompletedEventArgs> クラスから派生した <em>MethodName</em>**Completed** イベントの <xref:System.EventArgs> クラスと、これに付随するデリゲートを定義します。 既定のクラス名の形式は、<em>MethodName</em>**CompletedEventArgs** です。  
+- <xref:System.ComponentModel.AsyncCompletedEventArgs> クラスから派生した <em>MethodName</em>**Completed** イベントの <xref:System.EventArgs> クラスと、これに付随するデリゲートを定義します。 既定のクラス名の形式は、 <em>MethodName</em>**CompletedEventArgs** です。  
   
 - <xref:System.EventArgs> クラスは、<em>MethodName</em> メソッドの戻り値に固有のクラスにしてください。 <xref:System.EventArgs> クラスを使用する場合は、開発者に対して結果をキャストすることを義務付けないでください。  
   
@@ -63,7 +67,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - タスクの実行中にエラーが発生した場合は、結果にアクセスできないようにしてください。 <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> プロパティが `null` ではない場合は、<xref:System.EventArgs> 構造体のプロパティにアクセスすると例外が発生するようにしてください。 この検証を行うには、<xref:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary%2A> メソッドを使用します。  
   
-- タイムアウトをエラーとしてモデル化します。 タイムアウトが発生したら、<em>MethodName</em>**Completed** イベントを発生させ、<xref:System.TimeoutException> を <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> プロパティに割り当てます。  
+- タイムアウトをエラーとしてモデル化します。 タイムアウトが発生したら、 <em>MethodName</em>**Completed** イベントを発生させ、<xref:System.TimeoutException> を <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> プロパティに割り当てます。  
   
 - クラスで複数の同時呼び出しがサポートされている場合は、必ず <em>MethodName</em>**Completed** イベントに適切な `userSuppliedState` オブジェクトが含まれるようにします。  
   
@@ -99,7 +103,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - クラスが複数の同時呼び出しをサポートしている場合は、`IsBusy` プロパティを公開しないでください。 たとえば XML Web サービス プロキシは、非同期メソッドの複数同時呼び出しをサポートしているため、`IsBusy` プロパティを公開しません。  
   
-- `IsBusy` プロパティは、<em>MethodName</em>**Async** メソッドが呼び出されてから、<em>MethodName</em>**Completed** イベントが発生するまでの間は、`true` を返す必要があります。 それ以外の場合は、`false` を返す必要があります。 <xref:System.ComponentModel.BackgroundWorker> プロパティを公開するクラスの例として、<xref:System.Net.WebClient> および `IsBusy` コンポーネントがあります。  
+- `IsBusy` プロパティは、 <em>MethodName</em>**Async** メソッドが呼び出されてから、 <em>MethodName</em>**Completed** イベントが発生するまでの間は、`true` を返す必要があります。 それ以外の場合は、`false` を返す必要があります。 <xref:System.ComponentModel.BackgroundWorker> プロパティを公開するクラスの例として、<xref:System.Net.WebClient> および `IsBusy` コンポーネントがあります。  
   
 ### <a name="cancellation"></a>キャンセル  
   
@@ -111,13 +115,14 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - キャンセル メソッドの呼び出しは常に正常に戻り、例外を発生させないようにしてください。 一般に、特定の時点で操作が実際にキャンセル可能かどうかと、前に発行したキャンセルが正常に実行されたかどうかはクライアントに通知されません。 ただし、キャンセルが正常に完了すると常にアプリケーションに通知が送られます。これは、アプリケーションが完了ステータスに関与しているためです。  
   
-- 操作がキャンセルされた場合は、<em>MethodName</em>**Completed** イベントを発生させます。  
+- 操作がキャンセルされた場合は、 <em>MethodName</em>**Completed** イベントを発生させます。  
   
 ### <a name="errors-and-exceptions"></a>エラーおよび例外  
   
 - 非同期操作で発生した例外をすべてキャッチし、その例外の <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> プロパティの値を設定します。  
   
-### <a name="threading-and-contexts"></a>スレッド処理およびコンテキスト  
+### <a name="threading-and-contexts"></a>スレッド処理およびコンテキスト
+
  クラスを正しく操作するには、特定のアプリケーション モデル (ASP.NET および Windows フォーム アプリケーションを含む) の適切なスレッドまたはコンテキストで、クライアントのイベント ハンドラーが呼び出されることが重要です。 非同期クラスがどのアプリケーション モデルでも正しく動作するように、<xref:System.ComponentModel.AsyncOperation> と <xref:System.ComponentModel.AsyncOperationManager> という 2 つの重要なヘルパー クラスが用意されています。  
   
  <xref:System.ComponentModel.AsyncOperationManager> にはメソッド <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> が含まれています。このメソッドは <xref:System.ComponentModel.AsyncOperation> を返します。 <em>MethodName</em>**Async** メソッドは <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> を呼び出し、クラスは返される <xref:System.ComponentModel.AsyncOperation> を使用して非同期タスクの有効期間を追跡します。  
