@@ -3,12 +3,12 @@ title: .NET Framework から .NET Core への移植
 description: 移植プロセスを理解し、.NET Framework プロジェクトを .NET Core に移植する際に役立つツールを確認します。
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: c206e56e095d1ca068fa2aa6f60e891895f7f999
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 00d6bb513a6bd8ee511b69c07272f605c39e5619
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888575"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063242"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>.NET Framework から .NET Core への移植の概要
 
@@ -65,7 +65,7 @@ ms.locfileid: "92888575"
 
 1. [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) を使ってアセンブリを分析し、それらが .NET Core に移植可能かどうかを確認します。
 
-   .NET Portability Analyzer ツールでは、ご自分のコンパイル済みのアセンブリを分析し、レポートを生成します。 このレポートには、移植性に関する大まかな概要と、使用している API のうち NET Core では利用できないものそれぞれについての内訳が表示されます。 このツールを使用する場合、変更する必要がある可能性がある API に集中して取り組めるよう、変更するプロジェクトを個々に送信してください。 .NET Core には、多くの API と同等の、ユーザーが切り替えたいと思うものが用意されています。
+   .NET Portability Analyzer ツールでは、ご自分のコンパイル済みのアセンブリを分析し、レポートを生成します。 このレポートには、移植性に関する大まかな概要と、使用している API のうち .NET Core では利用できないものそれぞれについての内訳が表示されます。 このツールを使用する場合、変更する必要がある可能性がある API に集中して取り組めるよう、変更するプロジェクトを個々に送信してください。 .NET Core には、多くの API と同等の、ユーザーが切り替えたいと思うものが用意されています。
 
    Analyzer で生成されたレポートを確認するときの重要な情報は、使用されている実際の API です。必ずしもターゲットのプラットフォームのサポートのパーセンテージではありません。 .NET Standard と Core には、多くの API と同等の選択肢があります。そのため、お使いのライブラリまたはアプリケーションでの API の使われ方のシナリオを理解しておくと、移植において何をする必要があるかを判断することができます。
 

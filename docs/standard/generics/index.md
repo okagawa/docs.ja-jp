@@ -9,30 +9,30 @@ dev_langs:
 - cpp
 helpviewer_keywords:
 - generic methods, type inference
-- generics [.NET Framework], collections
-- generic interfaces [.NET Framework]
+- generics [.NET], collections
+- generic interfaces [.NET]
 - constructed generic types
 - nested generic types
 - generic type definitions
-- generic classes [.NET Framework]
-- generics [.NET Framework], interfaces
-- generics [.NET Framework], about
-- generics [.NET Framework]
-- generic collections [.NET Framework]
-- generic delegates [.NET Framework]
+- generic classes [.NET]
+- generics [.NET], interfaces
+- generics [.NET], about
+- generics [.NET]
+- generic collections [.NET]
+- generic delegates [.NET]
 - generic type arguments
-- generics [.NET Framework], delegates
-- generics [.NET Framework], features
-- constraints [.NET Framework]
+- generics [.NET], delegates
+- generics [.NET], features
+- constraints [.NET]
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 91bb96c04c8a5d410f0a88c7e8eedf622fe66c94
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6455de8e6b874547be7838090fc0527a6ce72b71
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599816"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063157"
 ---
 # <a name="generics-in-net"></a>.NET のジェネリック
 
@@ -56,15 +56,15 @@ ms.locfileid: "84599816"
   
 - *ジェネリック型定義* は、テンプレートとして機能するクラス、構造体、またはインターフェイスの宣言で、格納または使用できる型のプレースホルダーを含みます。 たとえば、 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> クラスには、キーと値の 2 つの型を含めることができます。 ジェネリック型定義は単なるテンプレートであるため、ジェネリック型定義のクラス、構造体、またはインターフェイスのインスタンスを作成することはできません。  
   
-- *ジェネリック型パラメーター*(または *型パラメーター*) は、ジェネリック型定義またはジェネリック メソッド定義のプレースホルダーです。 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> ジェネリック型には、そのキーと値の型を表す 2 つの型パラメーター `TKey` と `TValue`があります。  
+- *ジェネリック型パラメーター* (または *型パラメーター* ) は、ジェネリック型定義またはジェネリック メソッド定義のプレースホルダーです。 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> ジェネリック型には、そのキーと値の型を表す 2 つの型パラメーター `TKey` と `TValue`があります。  
   
-- *構築ジェネリック型*(または *構築型*) は、ジェネリック型定義のジェネリック型パラメーターに型を指定することによって得られる結果です。  
+- *構築ジェネリック型* (または *構築型* ) は、ジェネリック型定義のジェネリック型パラメーターに型を指定することによって得られる結果です。  
   
 - *ジェネリック型引数* は、ジェネリック型パラメーターを置き換える任意の型です。  
   
 - 一般的な用語である *ジェネリック型* には、構築型とジェネリック型定義の両方が含まれます。  
   
-- ジェネリック型パラメーターの*共変性*と*反変性*を使用すると、型引数がターゲットの構築型よりも強い派生型 (共変性) または弱い派生型 (反変性) である構築ジェネリック型を使用できます。 共変性と反変性は、 *"変性"* と総称されます。 詳細については、「[共変性と反変性](covariance-and-contravariance.md)」を参照してください。  
+- ジェネリック型パラメーターの *共変性* と *反変性* を使用すると、型引数がターゲットの構築型よりも強い派生型 (共変性) または弱い派生型 (反変性) である構築ジェネリック型を使用できます。 共変性と反変性は、 *"変性"* と総称されます。 詳細については、「[共変性と反変性](covariance-and-contravariance.md)」を参照してください。  
   
 - *制約* は、ジェネリック型パラメーターに適用される制限です。 たとえば、型パラメーターを、 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> ジェネリック インターフェイスを実装する型に制限して、型のインスタンスを並べ替えることができるようにできます。 また、型パラメーターを、特定の基底クラスを持つ型、パラメーターなしのコンストラクターを持つ型、または参照型や値型に制約することもできます。 ジェネリック型のユーザーは、制約を満たさない型引数に置き換えることはできません。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "84599816"
   
  ジェネリックの制限事項を次に示します。  
   
-- ジェネリック型は、 <xref:System.MarshalByRefObject> などのほとんどの基本クラスから派生できます (制約を使用して、ジェネリック型パラメーターが <xref:System.MarshalByRefObject>のような基本クラスから派生することを要求できます)。 ただし、.NET Framework では、コンテキスト バインドのジェネリック型はサポートしていません。 ジェネリック型は、 <xref:System.ContextBoundObject>から派生できますが、その型のインスタンスを作成しようとすると、 <xref:System.TypeLoadException>が発生します。  
+- ジェネリック型は、 <xref:System.MarshalByRefObject> などのほとんどの基本クラスから派生できます (制約を使用して、ジェネリック型パラメーターが <xref:System.MarshalByRefObject>のような基本クラスから派生することを要求できます)。 ただし、.NET では、コンテキスト バインドのジェネリック型はサポートしていません。 ジェネリック型は、 <xref:System.ContextBoundObject>から派生できますが、その型のインスタンスを作成しようとすると、 <xref:System.TypeLoadException>が発生します。  
   
 - 列挙型にジェネリック型パラメーターを含めることはできません。 列挙型が、単なる偶然によってジェネリックのみになる可能性はあります (たとえば、Visual Basic、C#、または C++ を使用して定義されたジェネリック型に入れ子にされているため)。 詳細については、「 [共通型システム](../base-types/common-type-system.md)」の「列挙型」を参照してください。  
   
