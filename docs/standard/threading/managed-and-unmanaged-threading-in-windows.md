@@ -3,18 +3,18 @@ title: Windows でのマネージド スレッド処理とアンマネージド 
 ms.date: 10/24/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- threading [.NET Framework], unmanaged
-- threading [.NET Framework], managed
+- threading [.NET], unmanaged
+- threading [.NET], managed
 - threading [.NET], managed
 - threads and fibers [.NET]
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-ms.openlocfilehash: de823297540d5ce3740a26614dbb9a82881decf3
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 7b2eca1275aba5139bd19662674cd76d95e92fd0
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924384"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189161"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows でのマネージド スレッド処理とアンマネージド スレッド処理
 
@@ -35,7 +35,7 @@ ms.locfileid: "86924384"
 |**SuspendThread**|<xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>|  
 |**ResumeThread**|<xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType>|  
 |**Sleep**|<xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>|  
-|スレッド ハンドルの**WaitForSingleObject**|<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>|  
+|スレッド ハンドルの **WaitForSingleObject**|<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>|  
 |**ExitThread**|同等の機能がありません|  
 |**GetCurrentThread**|<xref:System.Threading.Thread.CurrentThread%2A?displayProperty=nameWithType>|  
 |**SetThreadPriority**|<xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType>|  
@@ -52,7 +52,7 @@ ms.locfileid: "86924384"
  スレッド開始前にアパートメントの状態が設定されていない場合、このスレッドはマルチスレッド アパートメント (MTA) として初期化されます。 ファイナライザー スレッドと、 <xref:System.Threading.ThreadPool> により制御されるすべてのスレッドは MTA です。  
   
 > [!IMPORTANT]
-> アプリケーションのスタートアップ コードでは、アパートメントの状態を制御する方法は、 <xref:System.MTAThreadAttribute> または <xref:System.STAThreadAttribute> をエントリ ポイント プロシージャに適用する方法だけです。 .NET Framework 1.0 と 1.1 では、 <xref:System.Threading.Thread.ApartmentState%2A> プロパティを最初のコード行として設定できます。 .NET Framework 2.0 ではこの設定は許可されていません。  
+> アプリケーションのスタートアップ コードでは、アパートメントの状態を制御する方法は、 <xref:System.MTAThreadAttribute> または <xref:System.STAThreadAttribute> をエントリ ポイント プロシージャに適用する方法だけです。
   
  COM に対して公開されるマネージド オブジェクトは、フリー スレッド マーシャラーを集約した場合と同様に動作します。 つまり、フリースレッドな方法ですべての COM アパートメントから呼び出すことができます。 このフリー スレッドな動作を示さないマネージド オブジェクトは、<xref:System.EnterpriseServices.ServicedComponent> または <xref:System.Runtime.InteropServices.StandardOleMarshalObject> から派生したオブジェクトだけです。  
   

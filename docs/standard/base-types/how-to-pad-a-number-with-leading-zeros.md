@@ -7,17 +7,17 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- numeric format strings [.NET Framework]
-- formatting [.NET Framework], numbers
-- number formatting [.NET Framework]
-- numbers [.NET Framework], format strings
+- numeric format strings [.NET]
+- formatting [.NET], numbers
+- number formatting [.NET]
+- numbers [.NET], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-ms.openlocfilehash: 6ef0ddb37f1bc73254aa639d7c018ec6a01abd9b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7c3ee376fde34663ee0599c0b1ae654871a71206
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447187"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888457"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>方法: 数値に先行するゼロを埋め込む
 
@@ -29,9 +29,9 @@ ms.locfileid: "84447187"
 
 1. 整数値を 10 進数値と 16 進数値のどちらで表示するかを決定します。
 
-    - 整数値を 10 進数値として表示するには、`ToString(String)` メソッドを呼び出し、`format` パラメーターの値として文字列 "D*n*" を渡します。この *n* は、文字列の最小長を表します。
+    - 整数値を 10 進数値として表示するには、`ToString(String)` メソッドを呼び出し、`format` パラメーターの値として文字列 "D *n* " を渡します。この *n* は、文字列の最小長を表します。
 
-    - 整数値を 16 進数値として表示するには、`ToString(String)` メソッドを呼び出し、format パラメーターの値として文字列 "X*n*" を渡します。この *n* は、文字列の最小長を表します。
+    - 整数値を 16 進数値として表示するには、`ToString(String)` メソッドを呼び出し、format パラメーターの値として文字列 "X *n* " を渡します。この *n* は、文字列の最小長を表します。
 
 また、[C#](../../csharp/language-reference/tokens/interpolated.md) と [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) の両方で挿入文字列に書式指定文字列を使用することも、[複合書式指定](composite-formatting.md)を使用するメソッド (<xref:System.String.Format%2A?displayProperty=nameWithType> や <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> など) を呼び出すこともできます。
 
@@ -54,7 +54,7 @@ ms.locfileid: "84447187"
 
 1. 書式指定した文字列に埋め込む先行ゼロの数を、埋め込まれていない数値の文字列の長さに加算します。 先行ゼロの数を加算すると、埋め込み文字列の全体の長さが定義されます。
 
-1. 整数値の `ToString(String)` メソッドを呼び出し、10 進数値文字列の場合は "D*n*"、16 進数値の場合は "X*n*" を渡します。*n* は埋め込み文字列全体の長さを表します。 書式指定文字列 "D*n*" または "X*n*"は、複合書式指定をサポートするメソッドでも使用できます。
+1. 整数値の `ToString(String)` メソッドを呼び出し、10 進数値文字列の場合は "D *n* "、16 進数値の場合は "X *n* " を渡します。 *n* は埋め込み文字列全体の長さを表します。 書式指定文字列 "D *n* " または "X *n* "は、複合書式指定をサポートするメソッドでも使用できます。
 
 次の例は、整数値に 5 つの先行ゼロを埋め込みます。
 

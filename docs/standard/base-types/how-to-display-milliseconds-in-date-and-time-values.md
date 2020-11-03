@@ -9,16 +9,16 @@ dev_langs:
 helpviewer_keywords:
 - DateTime.ToString method
 - displaying date and time data
-- time [.NET Framework], milliseconds
-- dates [.NET Framework], milliseconds
-- milliseconds [.NET Framework]
+- time [.NET], milliseconds
+- dates [.NET], milliseconds
+- milliseconds [.NET]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-ms.openlocfilehash: a6dbe6a3bf4f8c08493ec925bea4316d071f4182
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bff458e73d603781155b18160bc7d088d8bd78cb
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447070"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888470"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>方法: 日付および時刻の値のミリ秒部分を表示する
 <xref:System.DateTime.ToString?displayProperty=nameWithType> などの既定の日付および時刻書式指定メソッドは時刻値の時間、分、秒を含めますが、ミリ秒の部分は含めません。 ここでは、書式設定された日付および時刻文字列の中にミリ秒部分を含める方法について説明します。  

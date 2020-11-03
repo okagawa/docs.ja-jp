@@ -3,7 +3,7 @@ title: アセンブリ属性を設定する
 description: アセンブリ ID 属性、情報属性、アセンブリ マニフェスト属性、厳密な名前の属性など、.NET アセンブリのアセンブリ属性を設定できます。
 ms.date: 08/20/2019
 helpviewer_keywords:
-- assemblies [.NET Framework], attributes
+- assemblies [.NET], attributes
 - assembly binding, attributes
 - assembly manifest, attributes
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
@@ -11,12 +11,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: e3a077dcd1b62a4676a3ac6492a90e38c548e41b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 32318d647dee8f3f397e3497e7c2da640bd492d0
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378644"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687676"
 ---
 # <a name="set-assembly-attributes"></a>アセンブリ属性を設定する
 
@@ -40,7 +40,7 @@ ms.locfileid: "83378644"
 |---------------------------------|-----------------|
 |<xref:System.Reflection.AssemblyCultureAttribute>|アセンブリがサポートするカルチャを示す列挙フィールド。 アセンブリがカルチャに依存しないように指定することもできます。その場合は、アセンブリが既定のカルチャのリソースを格納することを意味します。 **注:** ランタイムは、カルチャ属性が null に設定されていないすべてのアセンブリを、サテライト アセンブリとして扱います。 そのようなアセンブリには、サテライト アセンブリ バインディング規則が適用されます。 詳細については、「[ランタイムがアセンブリを検索する方法](../../framework/deployment/how-the-runtime-locates-assemblies.md)」を参照してください。|
 |<xref:System.Reflection.AssemblyFlagsAttribute>|アセンブリを並列で実行できるかどうかなどのアセンブリ属性を設定する値。|
-|<xref:System.Reflection.AssemblyVersionAttribute>|*major*.*minor*.*build*.*revision* 形式の数値 (たとえば、2.4.0.0)。 共通言語ランタイムは、この値を使用して、厳密な名前付きアセンブリでのバインディング操作を実行します。 **注:** <xref:System.Reflection.AssemblyInformationalVersionAttribute> 属性がアセンブリに適用されない場合、<xref:System.Reflection.AssemblyVersionAttribute> 属性によって指定されたバージョン番号が <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>、<xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>、および <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> の各プロパティで使用されます。|
+|<xref:System.Reflection.AssemblyVersionAttribute>|*major* . *minor* . *build* . *revision* 形式の数値 (たとえば、2.4.0.0)。 共通言語ランタイムは、この値を使用して、厳密な名前付きアセンブリでのバインディング操作を実行します。 **注:** <xref:System.Reflection.AssemblyInformationalVersionAttribute> 属性がアセンブリに適用されない場合、<xref:System.Reflection.AssemblyVersionAttribute> 属性によって指定されたバージョン番号が <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>、<xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>、および <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> の各プロパティで使用されます。|
 
 バージョン属性とカルチャ属性をアセンブリに適用する方法を次のコード例で示します。
 
@@ -89,7 +89,7 @@ ms.locfileid: "83378644"
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|Retail (製品版) や Debug (デバッグ) など、アセンブリの構成を示す文字列値。 ランタイムはこの値を使用しません。|
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|アセンブリの参照に使用する既定のエイリアスを指定する文字列値。 この値は、アセンブリ自体の名前がフレンドリ名ではない場合 (GUID 値の場合など) に、フレンドリ名を指定します。 この値は、完全なアセンブリ名の短い形式としても使用できます。|
 |<xref:System.Reflection.AssemblyDescriptionAttribute>|アセンブリの特性と目的を要約した短い説明を指定する文字列値。|
-|<xref:System.Reflection.AssemblyTitleAttribute>|アセンブリのフレンドリ名を指定する文字列値。 たとえば、*comdlg* という名前のアセンブリに Microsoft Common Dialog Control というタイトルを付けることができます。|
+|<xref:System.Reflection.AssemblyTitleAttribute>|アセンブリのフレンドリ名を指定する文字列値。 たとえば、 *comdlg* という名前のアセンブリに Microsoft Common Dialog Control というタイトルを付けることができます。|
 
 ## <a name="strong-name-attributes"></a>厳密な名前の属性
 
@@ -98,10 +98,10 @@ ms.locfileid: "83378644"
 |厳密な名前の属性|説明|
 |----------------------------|-----------------|
 |<xref:System.Reflection.AssemblyDelaySignAttribute>|遅延署名が使用されていることを示すブール値。|
-|<xref:System.Reflection.AssemblyKeyFileAttribute>|この属性のコンストラクターにパラメーターとして渡される公開キー (遅延署名を使用する場合) または公開キーと秘密キーの両方を格納するファイルの名前を示す文字列値。 なお、このファイル名は、ソース ファイルのパスではなく出力ファイルのパスから見た相対パス名 ( *.exe* または *.dll*) です。|
+|<xref:System.Reflection.AssemblyKeyFileAttribute>|この属性のコンストラクターにパラメーターとして渡される公開キー (遅延署名を使用する場合) または公開キーと秘密キーの両方を格納するファイルの名前を示す文字列値。 なお、このファイル名は、ソース ファイルのパスではなく出力ファイルのパスから見た相対パス名 ( *.exe* または *.dll* ) です。|
 |<xref:System.Reflection.AssemblyKeyNameAttribute>|この属性のコンストラクターにパラメーターとして渡されるキー ペアを格納するキー コンテナーを示します。|
 
-次のコード例では、遅延署名を使用し、*myKey.snk* という公開キー ファイルを使用する厳密な名前付きアセンブリを作成する場合に適用する属性を示します。
+次のコード例では、遅延署名を使用し、 *myKey.snk* という公開キー ファイルを使用する厳密な名前付きアセンブリを作成する場合に適用する属性を示します。
 
 ```cpp
 [assembly:AssemblyKeyFileAttribute("myKey.snk")];

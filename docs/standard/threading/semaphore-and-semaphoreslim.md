@@ -6,19 +6,20 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - counting semaphores
 - semaphores
-- threading [.NET Framework], cross-process synchronization
+- threading [.NET], cross-process synchronization
 - Semaphore class, about Semaphore class
 - SemaphoreSlim class, about SemaphoreSlim class
-- threading [.NET Framework], Semaphore class
+- threading [.NET], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-ms.openlocfilehash: 21f0d7e3fb446a7b750c45cfe8ef3f087a77888a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b9c13ace086b4df08108a844aea78e5d550e6958
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600452"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188940"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore と SemaphoreSlim
+
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> クラスは、名前付きセマフォ (システム全体) またはローカル セマフォを表します。 これは、Win32 セマフォ オブジェクトの Thin ラッパーです。 Win32 セマフォは、リソースのプールへのアクセスの制御に使用できるカウント セマフォです。  
   
  <xref:System.Threading.SemaphoreSlim> クラスは軽量で高速のセマフォを表しており、非常に短い待機時間が期待されている場合に単一プロセス内で待機のために使用できます。 <xref:System.Threading.SemaphoreSlim> は、共通言語ランタイム (CLR) により提供される同期プリミティブに可能な限り依存します。 ただし、複数のセマフォでの待機をサポートする必要がある場合は、遅れて初期化されるカーネル ベースの待機ハンドルも提供します。 <xref:System.Threading.SemaphoreSlim> はキャンセル トークンの使用もサポートしていますが、名前付きセマフォや、同期での待機ハンドルの使用はサポートしていません。  

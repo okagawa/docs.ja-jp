@@ -8,22 +8,23 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- message-based communication [.NET Framework], named pipes
-- named pipes [.NET Framework]
-- pipes [.NET Framework]
+- message-based communication [.NET], named pipes
+- named pipes [.NET]
+- pipes [.NET]
 - multiple connections via named pipes
-- network communications [.NET Framework], named pipes
-- impersonation [.NET Framework], named pipes
-- full duplex communication [.NET Framework], named pipes
+- network communications [.NET], named pipes
+- impersonation [.NET], named pipes
+- full duplex communication [.NET], named pipes
 ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
-ms.openlocfilehash: a529d1d44a903df36099a59e07f4582554d230f2
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 8657597bee5855061bb5529d80d2fa5f0318e817
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662564"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189317"
 ---
 # <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>方法: ネットワークのプロセス間通信で名前付きパイプを使用する
+
 名前付きパイプは、パイプ サーバーと 1 つ以上のパイプ クライアントとの間でのプロセス間通信を提供します。 名前付きパイプには、ローカル コンピューター上のプロセス間通信を提供する匿名パイプと比較して、より多くの機能が用意されています。 名前付きパイプは、ネットワーク上の複数のサーバー インスタンスでの全二重通信、メッセージ ベースの通信、およびクライアント偽装をサポートしています。偽装を使用すると、プロセスを接続してリモート サーバー上で独自のアクセス許可セットを使用できます。  
   
  名前付きパイプを実装するには、<xref:System.IO.Pipes.NamedPipeServerStream> クラスと <xref:System.IO.Pipes.NamedPipeClientStream> クラスを使用します。  

@@ -9,14 +9,14 @@ dev_langs:
 helpviewer_keywords:
 - format specifiers, enumeration format strings
 - enumeration format strings
-- formatting [.NET Framework], enumeration
+- formatting [.NET], enumeration
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
-ms.openlocfilehash: 825357cf4a56132dae0870972d316eff89b0c94f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e4d8ca27d99c211653269b2477be8f5632b78229
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84583428"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888660"
 ---
 # <a name="enumeration-format-strings"></a>列挙型形式文字列
 
@@ -33,7 +33,7 @@ ms.locfileid: "84583428"
 
 ## <a name="f-or-f"></a>F または f
 
-可能な場合には列挙エントリを文字列値として表示します。 (**Flags** 属性が存在しない場合でも) 値が列挙内のエントリの総和として完全に表示できる場合、有効な各エントリの文字列値はコンマで区切られて連結されます。 値が列挙エントリによって完全に特定できない場合、その値は整数値として書式設定されます。 次の例は、F 書式指定子を示しています。
+可能な場合には列挙エントリを文字列値として表示します。 ( **Flags** 属性が存在しない場合でも) 値が列挙内のエントリの総和として完全に表示できる場合、有効な各エントリの文字列値はコンマで区切られて連結されます。 値が列挙エントリによって完全に特定できない場合、その値は整数値として書式設定されます。 次の例は、F 書式指定子を示しています。
 
 [!code-csharp[Formatting.Enum#2](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#2)]
 [!code-vb[Formatting.Enum#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#2)]

@@ -13,24 +13,24 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 1c573712f458d3e22cd59112b9e79e85391270c1
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 020e6903069da2c5d8761c86e890c4e9575a3fae
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854894"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188758"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>TimeOffset support in での DateTime と DateTimeOffset のサポート
 
 ライブラリの System.Text.Jsは、 <xref:System.DateTime> <xref:System.DateTimeOffset> ISO 8601:-2019 拡張プロファイルに従って、との値を解析して書き込みます。
-[コンバーター](xref:System.Text.Json.Serialization.JsonConverter%601)は、を使用したシリアル化と逆シリアル化のためのカスタムサポートを提供 <xref:System.Text.Json.JsonSerializer> します。
+[コンバーター](xref:System.Text.Json.Serialization.JsonConverter%601) は、を使用したシリアル化と逆シリアル化のためのカスタムサポートを提供 <xref:System.Text.Json.JsonSerializer> します。
 およびを使用する場合は、カスタムサポートを実装することもでき <xref:System.Text.Json.Utf8JsonReader> <xref:System.Text.Json.Utf8JsonWriter> ます。
 
 ## <a name="support-for-the-iso-8601-12019-format"></a>ISO 8601-1:2019 形式のサポート
 
 、、、およびの各型は、 <xref:System.Text.Json.JsonSerializer> <xref:System.Text.Json.Utf8JsonReader> <xref:System.Text.Json.Utf8JsonWriter> <xref:System.Text.Json.JsonElement> <xref:System.DateTime> <xref:System.DateTimeOffset> ISO 8601-1:2019 形式の拡張プロファイルに従って、解析および書き込みとテキスト表現を行います。たとえば、2019-07-26t16:59:57-05:00 のようになります。
 
-<xref:System.DateTime>および <xref:System.DateTimeOffset> データは、次の方法でシリアル化でき <xref:System.Text.Json.JsonSerializer> ます。
+<xref:System.DateTime> および <xref:System.DateTimeOffset> データは、次の方法でシリアル化でき <xref:System.Text.Json.JsonSerializer> ます。
 
 [!code-csharp[example-serializing-with-jsonserializer](~/samples/snippets/standard/datetime/json/csharp/serializing-with-jsonserializer/Program.cs)]
 
@@ -65,16 +65,16 @@ ms.locfileid: "87854894"
 
 ## <a name="custom-support-for-xrefsystemdatetime-and-xrefsystemdatetimeoffset"></a>およびのカスタムサポート <xref:System.DateTime><xref:System.DateTimeOffset>
 
-### <a name="when-using-xrefsystemtextjsonjsonserializer"></a>使用する場合<xref:System.Text.Json.JsonSerializer>
+### <a name="when-using-xrefsystemtextjsonjsonserializer"></a>使用する場合 <xref:System.Text.Json.JsonSerializer>
 
-シリアライザーでカスタムの解析または書式設定を実行する場合は、[カスタムコンバーター](xref:System.Text.Json.Serialization.JsonConverter%601)を実装できます。
+シリアライザーでカスタムの解析または書式設定を実行する場合は、 [カスタムコンバーター](xref:System.Text.Json.Serialization.JsonConverter%601)を実装できます。
 次に例をいくつか示します。
 
 #### <a name="using-datetimeoffsetparse-and-datetimeoffsettostring"></a>およびを使用する `DateTime(Offset).Parse``DateTime(Offset).ToString`
 
 入力またはテキスト表現の形式を特定できない場合は <xref:System.DateTime> <xref:System.DateTimeOffset> 、 `DateTime(Offset).Parse` コンバーターの読み取りロジックでメソッドを使用できます。 これにより、を使用できるようになります。さまざまな <xref:System.DateTime> 形式とテキスト形式のサポート <xref:System.DateTimeOffset> (iso 8601 以外の文字列や iso 8601 形式の拡張 iso 8601-1:2019 プロファイルに準拠していないなど) のサポート。 この方法では、シリアライザーのネイティブ実装よりもパフォーマンスが大幅に低下します。
 
-シリアル化の場合は、 `DateTime(Offset).ToString` コンバーターの書き込みロジックでメソッドを使用できます。 これにより、 <xref:System.DateTime> 標準の <xref:System.DateTimeOffset> [日付と時刻の形式](../base-types/standard-date-and-time-format-strings.md)、および[カスタムの日付と時刻](../base-types/custom-date-and-time-format-strings.md)の書式を使用して、との値を書き込むことができます。
+シリアル化の場合は、 `DateTime(Offset).ToString` コンバーターの書き込みロジックでメソッドを使用できます。 これにより、 <xref:System.DateTime> 標準の <xref:System.DateTimeOffset> [日付と時刻の形式](../base-types/standard-date-and-time-format-strings.md)、および [カスタムの日付と時刻](../base-types/custom-date-and-time-format-strings.md)の書式を使用して、との値を書き込むことができます。
 これは、シリアライザーのネイティブ実装を使用する場合よりも、パフォーマンスが大幅に低下します。
 
 [!code-csharp[example-showing-datetime-parse](~/samples/snippets/standard/datetime/json/csharp/datetime-converter-examples/example1/Program.cs)]
@@ -85,7 +85,7 @@ ms.locfileid: "87854894"
 
 #### <a name="using-xrefsystembufferstextutf8parser-and-xrefsystembufferstextutf8formatter"></a>およびを使用する <xref:System.Buffers.Text.Utf8Parser><xref:System.Buffers.Text.Utf8Formatter>
 
-入力 <xref:System.DateTime> または <xref:System.DateTimeOffset> テキスト表現が "R"、"l"、"O"、"G" のいずれかの[日付/時刻書式指定文字列](../base-types/standard-date-and-time-format-strings.md)に準拠している場合、またはこれらの形式のいずれかに従って記述する場合は、コンバーターロジックで utf-8 ベースの高速な解析および書式指定メソッドを使用できます。 これは、およびを使用するよりもはるかに高速です `DateTime(Offset).Parse` `DateTime(Offset).ToString` 。
+入力 <xref:System.DateTime> または <xref:System.DateTimeOffset> テキスト表現が "R"、"l"、"O"、"G" のいずれかの [日付/時刻書式指定文字列](../base-types/standard-date-and-time-format-strings.md)に準拠している場合、またはこれらの形式のいずれかに従って記述する場合は、コンバーターロジックで utf-8 ベースの高速な解析および書式指定メソッドを使用できます。 これは、およびを使用するよりもはるかに高速です `DateTime(Offset).Parse` `DateTime(Offset).ToString` 。
 
 次の例は、 <xref:System.DateTime> ["R" 標準形式](../base-types/standard-date-and-time-format-strings.md#the-rfc1123-r-r-format-specifier)に従って値をシリアル化および逆シリアル化するカスタムコンバーターを示しています。
 
@@ -94,7 +94,7 @@ ms.locfileid: "87854894"
 > [!NOTE]
 > "R" 標準形式の長さは常に29文字です。
 >
-> "L" (小文字の "L") 形式は、および型でのみサポートされているため、他の[標準の日時書式指定文字列](../base-types/standard-date-and-time-format-strings.md)には記載されていません `Utf8Parser` `Utf8Formatter` 。 形式は、小文字の RFC 1123 ("R" 形式の小文字バージョン) です。たとえば、"thu, 25 月 2019 06:36:07 gmt" のようになります。
+> "L" (小文字の "L") 形式は、および型でのみサポートされているため、他の [標準の日時書式指定文字列](../base-types/standard-date-and-time-format-strings.md) には記載されていません `Utf8Parser` `Utf8Formatter` 。 形式は、小文字の RFC 1123 ("R" 形式の小文字バージョン) です。たとえば、"thu, 25 月 2019 06:36:07 gmt" のようになります。
 
 #### <a name="using-datetimeoffsetparse-as-a-fallback-to-the-serializers-native-parsing"></a>`DateTime(Offset).Parse`シリアライザーのネイティブ解析へのフォールバックとしての使用
 
@@ -103,7 +103,7 @@ ms.locfileid: "87854894"
 
 [!code-csharp[example-showing-datetime-parse-as-fallback](~/samples/snippets/standard/datetime/json/csharp/datetime-converter-examples/example3/Program.cs)]
 
-### <a name="when-writing-with-xrefsystemtextjsonutf8jsonwriter"></a>書き込み時に<xref:System.Text.Json.Utf8JsonWriter>
+### <a name="when-writing-with-xrefsystemtextjsonutf8jsonwriter"></a>書き込み時に <xref:System.Text.Json.Utf8JsonWriter>
 
 でカスタムまたはテキスト表現を記述する場合は、 <xref:System.DateTime> <xref:System.DateTimeOffset> <xref:System.Text.Json.Utf8JsonWriter> カスタム表現を <xref:System.String> 、、 `ReadOnlySpan<Byte>` 、またはに書式設定 `ReadOnlySpan<Char>` <xref:System.Text.Json.JsonEncodedText> し、それを対応するメソッドまたはメソッドに渡すことができ <xref:System.Text.Json.Utf8JsonWriter.WriteStringValue%2A?displayProperty=nameWithType> <xref:System.Text.Json.Utf8JsonWriter.WriteString%2A?displayProperty=nameWithType> ます。
 
@@ -111,7 +111,7 @@ ms.locfileid: "87854894"
 
 [!code-csharp[example-custom-writing-with-utf8jsonwriter](~/samples/snippets/standard/datetime/json/csharp/custom-writing-with-utf8jsonwriter/Program.cs)]
 
-### <a name="when-reading-with-xrefsystemtextjsonutf8jsonreader"></a>読み取り時の<xref:System.Text.Json.Utf8JsonReader>
+### <a name="when-reading-with-xrefsystemtextjsonutf8jsonreader"></a>読み取り時の <xref:System.Text.Json.Utf8JsonReader>
 
 を使用してカスタムまたはテキスト表現を読み取る場合は、 <xref:System.DateTime> <xref:System.DateTimeOffset> 現在の <xref:System.Text.Json.Utf8JsonReader> JSON トークンの値をを使用して取得し <xref:System.String> 、その値を <xref:System.Text.Json.Utf8JsonReader.GetString> カスタムロジックを使用して解析することができます。
 
@@ -164,7 +164,13 @@ ms.locfileid: "87854894"
     3. "yyyy'-'mm'-'dd't'hh-' MM'-' Dd' T' HH ': ' mm ': ' ss (' + '/'-') HH ': ' mm '
     4. "yyyy'-'mm'-'dd't'hh-' MM'-' Dd' T' HH ': ' MM ': ' ss '. 'FFFFFFF (' + '/'-') HH ': ' mm "
 
-秒の小数部がある場合は、少なくとも1つの数字が必要です。`2019-07-26T00:00:00.`は使用できません。
+    このレベルの粒度は、 [RFC 3339](https://tools.ietf.org/html/rfc3339#section-5.6)に準拠しています。これは、日付と時刻の情報を交換するために使用される ISO 8601 の広く採用されたプロファイルです。 ただし、実装の System.Text.Jsにはいくつかの制限があります。
+
+    - RFC 3339 では、秒の小数部の最大桁数が指定されていませんが、秒の小数部が存在する場合は、少なくとも1つの数字がピリオドの後に続く必要があることを指定します。 System.Text.Jsでのの実装では、(他のプログラミング言語やフレームワークとの相互運用をサポートするために) 最大16桁まで使用できますが、最初の7つだけを解析します。 <xref:System.Text.Json.JsonException>とのインスタンスを読み取るときに、秒の小数点以下桁数が16を超えると、がスローされ `DateTime` `DateTimeOffset` ます。
+    - RFC 3339 では、"T" と "Z" の文字をそれぞれ "t" または "z" にすることができますが、アプリケーションでサポートを大文字のバリアントのみに制限することができます。 System.Text.Jsでの実装では、"T" および "Z" である必要があります。 <xref:System.Text.Json.JsonException>とのインスタンスを読み取るときに、入力ペイロードに "t" または "z" が含まれている場合は、がスローされ `DateTime` `DateTimeOffset` ます。
+    - RFC 3339 では、日付と時刻のセクションを "T" で区切って指定しますが、アプリケーションでは、代わりにスペース ("") で区切ることができます。 の System.Text.Jsでは、日付と時刻のセクションを "T" で区切る必要があります。 <xref:System.Text.Json.JsonException>とのインスタンスを読み取るときに、入力ペイロードにスペース ("") が含まれていると、がスローされ `DateTime` `DateTimeOffset` ます。
+
+秒の小数部がある場合は、少なくとも1つの数字が必要です。 `2019-07-26T00:00:00.` は使用できません。
 最大16桁の小数部を使用できますが、最初の7だけが解析されます。 それを超えるものはゼロと見なされます。
 たとえば、はの `2019-07-26T00:00:00.1234567890` ように解析され `2019-07-26T00:00:00.1234567` ます。
 これは、 <xref:System.DateTime> この解決に限定された実装との互換性を維持するためのものです。
@@ -201,11 +207,13 @@ ms.locfileid: "87854894"
 
         <xref:System.DateTime>秒の小数部とローカルオフセットを使用して、またはの書式を設定するために使用し <xref:System.DateTimeOffset> ます。
 
-またはインスタンスの[ラウンドトリップ形式](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier)表現の <xref:System.DateTime> <xref:System.DateTimeOffset> 秒の小数部に後続のゼロがある場合、 <xref:System.Text.Json.JsonSerializer> とは、末尾に0を <xref:System.Text.Json.Utf8JsonWriter> 付けずにインスタンスの表現を書式設定します。
-たとえば、 <xref:System.DateTime> [ラウンドトリップ形式](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier)表現がであるインスタンスは、 `2019-04-24T14:50:17.1010000Z` とによって書式設定され `2019-04-24T14:50:17.101Z` <xref:System.Text.Json.JsonSerializer> <xref:System.Text.Json.Utf8JsonWriter> ます。
+    このレベルの粒度は、 [RFC 3339](https://tools.ietf.org/html/rfc3339#section-5.6)に準拠しています。
 
-またはインスタンスの[ラウンドトリップ形式](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier)表現で <xref:System.DateTime> 、 <xref:System.DateTimeOffset> 秒の小数部にゼロがすべて含まれている場合、 <xref:System.Text.Json.JsonSerializer> と <xref:System.Text.Json.Utf8JsonWriter> は秒の小数部なしでインスタンスの表現を書式設定します。
-たとえば、 <xref:System.DateTime> [ラウンドトリップ形式](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier)表現がであるインスタンスは、 `2019-04-24T14:50:17.0000000+02:00` とによって書式設定され `2019-04-24T14:50:17+02:00` <xref:System.Text.Json.JsonSerializer> <xref:System.Text.Json.Utf8JsonWriter> ます。
+またはインスタンスの [ラウンドトリップ形式](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) 表現の <xref:System.DateTime> <xref:System.DateTimeOffset> 秒の小数部に後続のゼロがある場合、 <xref:System.Text.Json.JsonSerializer> とは、末尾に0を <xref:System.Text.Json.Utf8JsonWriter> 付けずにインスタンスの表現を書式設定します。
+たとえば、 <xref:System.DateTime> [ラウンドトリップ形式](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) 表現がであるインスタンスは、 `2019-04-24T14:50:17.1010000Z` とによって書式設定され `2019-04-24T14:50:17.101Z` <xref:System.Text.Json.JsonSerializer> <xref:System.Text.Json.Utf8JsonWriter> ます。
+
+またはインスタンスの [ラウンドトリップ形式](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) 表現で <xref:System.DateTime> 、 <xref:System.DateTimeOffset> 秒の小数部にゼロがすべて含まれている場合、 <xref:System.Text.Json.JsonSerializer> と <xref:System.Text.Json.Utf8JsonWriter> は秒の小数部なしでインスタンスの表現を書式設定します。
+たとえば、 <xref:System.DateTime> [ラウンドトリップ形式](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) 表現がであるインスタンスは、 `2019-04-24T14:50:17.0000000+02:00` とによって書式設定され `2019-04-24T14:50:17+02:00` <xref:System.Text.Json.JsonSerializer> <xref:System.Text.Json.Utf8JsonWriter> ます。
 
 秒の小数点以下桁数で0を切り捨てた場合、書き込まれるラウンドトリップに関する情報を保持するために必要な最小の出力が可能になります。
 

@@ -3,34 +3,35 @@ title: アセンブリのセキュリティに関する考慮事項
 description: .NET アセンブリを作成するときに、アセンブリの実行に必要となるアクセス許可を指定できます。 この記事では、厳密な名前付きアセンブリと署名ツールについて説明します。
 ms.date: 08/20/2019
 helpviewer_keywords:
-- assemblies [.NET Framework], security
+- assemblies [.NET], security
 - signcodes
-- names [.NET Framework], assemblies
+- names [.NET], assemblies
 - strong-named assemblies, security considerations
 - signing assemblies
-- assemblies [.NET Framework], signing
+- assemblies [.NET], signing
 - granting permissions, assemblies
-- assemblies [.NET Framework], strong-named
-- names [.NET Framework], strong names
-- permissions [.NET Framework], assemblies
-- security [.NET Framework], assemblies
+- assemblies [.NET], strong-named
+- names [.NET], strong names
+- permissions [.NET], assemblies
+- security [.NET], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-ms.openlocfilehash: d0b822f725444248d1037c21ffea9afe1cebb7e2
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 91ea206abf80da275651854b9f13aa0116b7a1c5
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290020"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687262"
 ---
 # <a name="assembly-security-considerations"></a>アセンブリのセキュリティに関する考慮事項
+
 アセンブリを作成する場合は、アセンブリの実行に必要となるアクセス許可セットを指定できます。 アセンブリに対して特定のアクセス許可を付与するかどうかは、証拠に基づいて決定されます。  
   
  証拠には 2 つの使い方があります。  
   
-- 入力された証拠をローダーによって収集された証拠とマージして、ポリシーの解決に使用される最終的な証拠のセットを作成します。 この形式を使用するメソッドには、**Assembly.Load**、**Assembly.LoadFrom**、**Activator.CreateInstance** があります。  
+- 入力された証拠をローダーによって収集された証拠とマージして、ポリシーの解決に使用される最終的な証拠のセットを作成します。 この形式を使用するメソッドには、 **Assembly.Load** 、 **Assembly.LoadFrom** 、 **Activator.CreateInstance** があります。  
   
-- 入力された証拠を変更せずに、ポリシーの解決に使用する最終的な証拠のセットとして使用します。 この形式を使用するメソッドには、**Assembly.Load(byte[])** と **AppDomain.DefineDynamicAssembly()** があります。  
+- 入力された証拠を変更せずに、ポリシーの解決に使用する最終的な証拠のセットとして使用します。 この形式を使用するメソッドには、 **Assembly.Load(byte[])** と **AppDomain.DefineDynamicAssembly()** があります。  
   
   アセンブリが実行されるコンピューターで設定されている[セキュリティ ポリシー](../../framework/misc/code-access-security-basics.md)により、オプションのアクセス許可を与えることもできます。 発生する可能性があるセキュリティ例外をすべて処理するコードを作成するには、次のいずれかを行います。  
   
