@@ -25,12 +25,12 @@ helpviewer_keywords:
 - cryptography [.NET], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: 651231dcc41926307e3a46b67c80ba3df1fb25e9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 463ccec5f60ff10331d501d39144a979d95eff95
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90549981"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281728"
 ---
 # <a name="cryptographic-services"></a>暗号化サービス
 
@@ -56,7 +56,7 @@ ms.locfileid: "90549981"
 
 これらの目標を達成するために、暗号プリミティブと呼ばれるアルゴリズムと手法の組み合わせを使用して暗号スキームを作成します。 暗号プリミティブとその用途の一覧を次の表に示します。
 
-|暗号プリミティブ|vmmblue_2|
+|暗号プリミティブ|使用|
 |-----------------------------|---------|
 |共有キー暗号方式 (対称暗号化方式)|データに対して変換処理を実行し、データが第三者に読み取られるのを防ぎます。 このタイプの暗号方式では、単一の共有キーを使用してデータの暗号化と復号化が行われます。|
 |公開キー暗号方式 (非対称暗号化方式)|データに対して変換処理を実行し、データが第三者に読み取られるのを防ぎます。 このタイプの暗号方式では、公開キーと秘密キーのペアを使用してデータの暗号化と復号化が行われます。|
@@ -71,7 +71,7 @@ ms.locfileid: "90549981"
 
 データをブロック単位で暗号化するときには、ブロック暗号と呼ばれる共有キー アルゴリズムの種類が使用されます。 DES (Data Encryption Standard)、TripleDES、AES (Advanced Encryption Standard) などのブロック暗号では、 *n* バイトの入力ブロックが、暗号化されたバイト数の出力ブロックに変換されます。 バイト シーケンスを暗号化または復号化する場合は、ブロック単位で行う必要があります。 *8* は小さいため (DES および TripleDES では 8 バイト、AES では 16 バイト (既定)、24 バイト、または 32 バイト)、 *8* よりも大きいデータ値は 1 ブロックずつ暗号化する必要があります。 *8* よりも小さいデータ値を処理するためには、 *8* に拡張する必要があります。
 
-ブロック暗号の 1 つに、ECB (Electronic Codebook) モードと呼ばれる単純な形式があります。 ECB モードは、初期化ベクターを使用して最初の平文ブロックを初期化しないため、安全とは見なされません。 秘密キーを *k*とする場合、初期化ベクターを使用しない単純なブロック暗号では、同じ平文の入力ブロックは同じ暗号文の出力ブロックに暗号化されます。 したがって、入力平文ストリーム内に重複するブロックがある場合、暗号文ストリームにも重複するブロックが生成されることになります。 このような重複する出力ブロックが存在すると、アルゴリズムで弱い暗号化が使用されていて、攻撃が可能なモードであることが、承認されていないユーザーにわかります。 このため、ECB 暗号モードは分析に対してきわめて脆弱で、最終的にキーが検出されます。
+ブロック暗号の 1 つに、ECB (Electronic Codebook) モードと呼ばれる単純な形式があります。 ECB モードは、初期化ベクターを使用して最初の平文ブロックを初期化しないため、安全とは見なされません。 秘密キーを *k* とする場合、初期化ベクターを使用しない単純なブロック暗号では、同じ平文の入力ブロックは同じ暗号文の出力ブロックに暗号化されます。 したがって、入力平文ストリーム内に重複するブロックがある場合、暗号文ストリームにも重複するブロックが生成されることになります。 このような重複する出力ブロックが存在すると、アルゴリズムで弱い暗号化が使用されていて、攻撃が可能なモードであることが、承認されていないユーザーにわかります。 このため、ECB 暗号モードは分析に対してきわめて脆弱で、最終的にキーが検出されます。
 
 基底クラス ライブラリに用意されているブロック暗号クラスでは、暗号ブロック チェイン (CBC: Cipher Block Chaining) と呼ばれる既定のチェイン モードが使用されます。ただし、この既定のモードは必要に応じて変更できます。
 
@@ -123,7 +123,7 @@ Alice の公開キーの転送中に、承認されていないエージェン�
 
 - <xref:System.Security.Cryptography.DSA>
 
-RSA では暗号化と署名の両方が許可されますが、DSA は署名にのみ使用できます。 DSA は RSA ほど安全ではないため、RSA をお勧めします。 Diffie-hellman は、キーの生成にのみ使用できます。 一般に、秘密キー アルゴリズムに比べて、公開キー アルゴリズムの使用には多くの制限があります。
+RSA では暗号化と署名の両方が許可されますが、DSA は署名にのみ使用できます。 DSA は RSA ほど安全ではないため、RSA をお勧めします。 Diffie-Hellman は、キーの生成にのみ使用できます。 一般に、秘密キー アルゴリズムに比べて、公開キー アルゴリズムの使用には多くの制限があります。
 
 ## <a name="digital-signatures"></a>デジタル署名
 
@@ -178,13 +178,13 @@ Alice のメッセージはプレーンテキストで送信されるため、�
 
 ## <a name="random-number-generation"></a>乱数生成
 
-乱数生成は、多くの暗号化操作に欠かせない部分です。 たとえば、暗号キーはできるだけランダムにして、再現できないようにする必要があります。 暗号乱数ジェネレーターは、予測される確率が 50% よりも低い、計算上は不可能な出力を生成しなければなりません。 したがって、当て推量をされた場合でも予測できないような手段を使用する必要があります。 .NET Framework のクラスは、乱数ジェネレーターを使用して暗号化キーを生成します。
+乱数生成は、多くの暗号化操作に欠かせない部分です。 たとえば、暗号キーはできるだけランダムにして、再現できないようにする必要があります。 暗号乱数ジェネレーターは、予測される確率が 50% よりも低い、計算上は不可能な出力を生成しなければなりません。 したがって、当て推量をされた場合でも予測できないような手段を使用する必要があります。 .NET のクラスは、乱数ジェネレーターを使用して暗号化キーを生成します。
 
 乱数ジェネレーター アルゴリズムは、 <xref:System.Security.Cryptography.RandomNumberGenerator> クラスに実装されています。
 
 ## <a name="clickonce-manifests"></a>ClickOnce マニフェスト
 
-.NET Framework 3.5 では、次の暗号化クラスを使用して、 [ClickOnce テクノロジ](/visualstudio/deployment/clickonce-security-and-deployment)を使用して配置されたアプリケーションのマニフェスト署名に関する情報を取得および検証できます。
+次の暗号化クラスを使用すると、 [ClickOnce テクノロジ](/visualstudio/deployment/clickonce-security-and-deployment)を使用して配置されたアプリケーションのマニフェスト署名に関する情報を取得および検証できます。
 
 - <xref:System.Security.Cryptography.ManifestSignatureInformation> クラスは、 <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A> メソッド オーバーロードの使用時に、マニフェストの署名に関する情報を取得します。
 
@@ -192,7 +192,7 @@ Alice のメッセージはプレーンテキストで送信されるため、�
 
 - <xref:System.Security.Cryptography.ManifestSignatureInformationCollection> クラスは、検証された署名の <xref:System.Security.Cryptography.ManifestSignatureInformation> オブジェクトの読み取り専用コレクションを提供します。
 
- 特定の署名情報を提供するクラスとしては、他にも次のようなものがあります。
+特定の署名情報を提供するクラスとしては、他にも次のようなものがあります。
 
 - <xref:System.Security.Cryptography.StrongNameSignatureInformation> は、マニフェストの厳密な名前の署名情報を保持します。
 
@@ -204,11 +204,11 @@ Alice のメッセージはプレーンテキストで送信されるため、�
 
 ## <a name="cryptography-next-generation-cng-classes"></a>CNG (Cryptography Next Generation) クラス
 
-.NET Framework 3.5 以降のバージョンでは、Cryptography Next Generation (CNG) クラスは、ネイティブ CNG 関数をラップするマネージラッパーを提供します。 (CNG は CryptoAPI に代わるものです)。これらのクラスは、名前の一部として "Cng" を持ちます。 CNG ラッパー クラスの中心は、CNG キーのストレージと使用を抽象化する <xref:System.Security.Cryptography.CngKey> キー コンテナー クラスです。 このクラスにより、キー ペアまたは公開キーを安全に格納したり、単純な文字列名を使って参照したりすることが可能になります。 楕円曲線ベースの <xref:System.Security.Cryptography.ECDsaCng> 署名クラスおよび <xref:System.Security.Cryptography.ECDiffieHellmanCng> 暗号化クラスは、 <xref:System.Security.Cryptography.CngKey> オブジェクトを使用できます。
+CNG のクラスには、ネイティブ CNG 関数を扱うマネージド ラッパーが用意されています (CNG は CryptoAPI に代わるものです)。これらのクラスは、名前の一部として "Cng" を持ちます。 CNG ラッパー クラスの中心は、CNG キーのストレージと使用を抽象化する <xref:System.Security.Cryptography.CngKey> キー コンテナー クラスです。 このクラスにより、キー ペアまたは公開キーを安全に格納したり、単純な文字列名を使って参照したりすることが可能になります。 楕円曲線ベースの <xref:System.Security.Cryptography.ECDsaCng> 署名クラスおよび <xref:System.Security.Cryptography.ECDiffieHellmanCng> 暗号化クラスは、 <xref:System.Security.Cryptography.CngKey> オブジェクトを使用できます。
 
 <xref:System.Security.Cryptography.CngKey> クラスは、キーを開く、作成する、削除する、エクスポートするなど、さまざまな補足的な操作に使用されます。 また、ネイティブ関数を直接呼び出すときに使用する、基になるキー ハンドルへのアクセスも提供します。
 
-.NET Framework 3.5 には、次のようなさまざまなサポート CNG クラスも含まれています。
+.NET には、次のようなさまざまなサポート CNG クラスも含まれています。
 
 - <xref:System.Security.Cryptography.CngProvider> は、キー ストレージ プロバイダーを管理します。
 

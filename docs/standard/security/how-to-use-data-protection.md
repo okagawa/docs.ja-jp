@@ -17,25 +17,25 @@ helpviewer_keywords:
 - decryption
 - data [.NET], encryption
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
-ms.openlocfilehash: 263a07ddf357734e819fffdd41cdff60657adf15
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: d3fe7ef3ddbc6e75a248101829b11a8abcb3c15a
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557061"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282047"
 ---
 # <a name="how-to-use-data-protection"></a>方法: データ保護の使用
 
 > [!NOTE]
 > この記事は、Windows に適用されます。
 >
-> ASP.NET Core の詳細については、「[データ保護の ASP.NET Core](/aspnet/core/security/data-protection/introduction)」を参照してください。
+> ASP.NET Core の詳細については、「 [データ保護の ASP.NET Core](/aspnet/core/security/data-protection/introduction)」を参照してください。
 
 .NET では、データ保護 API (DPAPI) にアクセスできます。これにより、現在のユーザーアカウントまたはコンピューターの情報を使用してデータを暗号化することができます。  DPAPI を使用すると、暗号化キーを明示的に生成および格納するという困難な問題を軽減できます。  
   
 バイト配列のコピーを暗号化するには、<xref:System.Security.Cryptography.ProtectedData> クラスを使用します。 この機能は、.NET Framework、.NET Core、.NET 5 で使用できます。  現在のユーザー アカウントによって暗号化されたデータは、同じユーザー アカウントによってのみ復号化できることを指定できます。あるいは、現在のユーザー アカウントによって暗号化されたデータは、コンピューター上の任意のアカウントによって復号化できることを指定できます。  <xref:System.Security.Cryptography.ProtectedData> オプションの詳しい説明については、「<xref:System.Security.Cryptography.DataProtectionScope> 列挙型」を参照してください。  
   
-### <a name="to-encrypt-data-to-a-file-or-stream-using-data-protection"></a>データ保護を使用してファイルやストリームのデータを暗号化するには  
+## <a name="encrypt-data-to-a-file-or-stream-using-data-protection"></a>データ保護を使用してデータをファイルまたはストリームに暗号化する  
   
 1. ランダム エントロピを作成します。  
   

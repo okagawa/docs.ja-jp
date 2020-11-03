@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cryptography [.NET], model
 - encryption [.NET], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: 0b3e07238bf0932572c222f7b947cfa7ae0221a9
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: a157a9a76f87a2a56c616b76c933e6d8d6415b03
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556996"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281585"
 ---
 # <a name="net-cryptography-model"></a>.NET 暗号化モデル
 
@@ -25,7 +25,7 @@ ms.locfileid: "87556996"
 
 .NET 暗号化システムは、派生クラスの継承の拡張可能なパターンを実装します。 階層は次のとおりです。
 
-- アルゴリズムの種類クラス (、、など) <xref:System.Security.Cryptography.SymmetricAlgorithm> <xref:System.Security.Cryptography.AsymmetricAlgorithm> <xref:System.Security.Cryptography.HashAlgorithm> 。 このレベルは抽象レベルです。
+- アルゴリズムの種類クラス (、、など) <xref:System.Security.Cryptography.SymmetricAlgorithm>  <xref:System.Security.Cryptography.AsymmetricAlgorithm> <xref:System.Security.Cryptography.HashAlgorithm> 。 このレベルは抽象レベルです。
 
 - <xref:System.Security.Cryptography.Aes>、<xref:System.Security.Cryptography.RSA>、または <xref:System.Security.Cryptography.ECDiffieHellman> など、アルゴリズム型クラスから継承されるアルゴリズム クラス。 このレベルは抽象レベルです。
 
@@ -37,15 +37,15 @@ ms.locfileid: "87556996"
 
 アルゴリズムに使用できるさまざまな実装例として、対称アルゴリズムを検討します。 すべての対称アルゴリズムの基本は、、 <xref:System.Security.Cryptography.SymmetricAlgorithm> <xref:System.Security.Cryptography.Aes> <xref:System.Security.Cryptography.TripleDES> 、および推奨されなくなった他のすべての対称アルゴリズムによって継承されます。
 
-<xref:System.Security.Cryptography.Aes>は、、、およびによって継承され <xref:System.Security.Cryptography.AesCryptoServiceProvider> <xref:System.Security.Cryptography.AesCng> <xref:System.Security.Cryptography.AesManaged> ます。
+<xref:System.Security.Cryptography.Aes> は、、、およびによって継承され <xref:System.Security.Cryptography.AesCryptoServiceProvider> <xref:System.Security.Cryptography.AesCng> <xref:System.Security.Cryptography.AesManaged> ます。
 
 Windows の .NET Framework:
 
-* `*CryptoServiceProvider`アルゴリズムクラス (など) <xref:System.Security.Cryptography.AesCryptoServiceProvider> は、アルゴリズムの Windows CRYPTOGRAPHY API (CAPI) 実装のラッパーです。
-* `*Cng`などのアルゴリズムクラス <xref:System.Security.Cryptography.ECDiffieHellmanCng> は、Windows Cryptography Next Generation (CNG) 実装のラッパーです。
-* `*Managed`などのクラス <xref:System.Security.Cryptography.AesManaged> は、完全にマネージコードで記述されます。 `*Managed`実装は、連邦情報処理規格 (FIPS) によって認定されていないため、およびラッパークラスよりも低速になる可能性があり `*CryptoServiceProvider` `*Cng` ます。
+* `*CryptoServiceProvider` アルゴリズムクラス (など) <xref:System.Security.Cryptography.AesCryptoServiceProvider> は、アルゴリズムの Windows CRYPTOGRAPHY API (CAPI) 実装のラッパーです。
+* `*Cng` などのアルゴリズムクラス <xref:System.Security.Cryptography.ECDiffieHellmanCng> は、Windows Cryptography Next Generation (CNG) 実装のラッパーです。
+* `*Managed` などのクラス <xref:System.Security.Cryptography.AesManaged> は、完全にマネージコードで記述されます。 `*Managed` 実装は、連邦情報処理規格 (FIPS) によって認定されていないため、およびラッパークラスよりも低速になる可能性があり `*CryptoServiceProvider` `*Cng` ます。
 
-.NET Core と .NET 5 以降のバージョンでは、すべての実装クラス ( `*CryptoServiceProvider` 、 `*Managed` 、および `*Cng` ) は、オペレーティングシステム (os) アルゴリズムのラッパーです。 OS アルゴリズムが FIPS 認定の場合、.NET は FIPS 認定アルゴリズムを使用します。 詳細については、「[クロスプラットフォーム暗号化](cross-platform-cryptography.md)」を参照してください。
+.NET Core と .NET 5 以降のバージョンでは、すべての実装クラス ( `*CryptoServiceProvider` 、 `*Managed` 、および `*Cng` ) は、オペレーティングシステム (os) アルゴリズムのラッパーです。 OS アルゴリズムが FIPS 認定の場合、.NET は FIPS 認定アルゴリズムを使用します。 詳細については、「 [クロスプラットフォーム暗号化](cross-platform-cryptography.md)」を参照してください。
 
 ほとんどの場合、などのアルゴリズム実装クラスを直接参照する必要はありません `AesCryptoServiceProvider` 。 通常必要なメソッドとプロパティは、のような基本アルゴリズムクラスにあり `Aes` ます。 基本アルゴリズムクラスのファクトリメソッドを使用して、既定の実装クラスのインスタンスを作成し、基本アルゴリズムクラスを参照します。 たとえば、次の例で強調表示されているコード行を確認します。
 
