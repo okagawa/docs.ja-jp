@@ -2,12 +2,12 @@
 title: eShopOnContainers を Azure サービスにマッピングする
 description: Azure Kubernetes Service、API Gateway、Azure Service Bus などの Azure サービスへの eShopOnContainers のマッピング。
 ms.date: 05/13/2020
-ms.openlocfilehash: e938bf9a8f93f9e375a22ffb94395b9e85b0fe63
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c4627a4b6d9d8b62737984b507e638019544ab67
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155264"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400449"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>eShopOnContainers を Azure サービスにマッピングする
 
@@ -16,7 +16,7 @@ ms.locfileid: "91155264"
 図2-5 に、アプリケーションのアーキテクチャを示します。 左側にはクライアントアプリがあり、モバイル、従来の Web、および Web シングルページアプリケーション (SPA) のフレーバーに分割されています。 右側には、システムを構成するサーバー側コンポーネントがあります。各コンポーネントは、Docker コンテナーと Kubernetes クラスターでホストできます。 従来の web アプリには、黄色で示されている ASP.NET Core MVC アプリケーションが搭載されています。 このアプリとモバイルおよび web SPA アプリケーションは、1つまたは複数の API ゲートウェイを介して個々のマイクロサービスと通信します。 API ゲートウェイは、"バックエンドのフロントエンド" (BFF) パターンに従います。つまり、各ゲートウェイは、特定のフロントエンドクライアントをサポートするように設計されています。 個々のマイクロサービスは API ゲートウェイの右側に一覧表示され、ビジネスロジックといくつかの永続化ストアが含まれます。 さまざまなサービスで、SQL Server データベース、Redis cache インスタンス、および MongoDB/CosmosDB ストアを使用します。 一番右には、マイクロサービス間の通信に使用されるシステムのイベントバスがあります。
 
 ![eShopOnContainers アーキテクチャ ](./media/eshoponcontainers-architecture.png)
- **図 2-5**。 EShopOnContainers アーキテクチャ。
+ **図 2-5** 。 EShopOnContainers アーキテクチャ。
 
 このアーキテクチャのサーバー側コンポーネントはすべて、Azure サービスに簡単にマップできます。
 
@@ -24,7 +24,7 @@ ms.locfileid: "91155264"
 
 Azure Kubernetes Service (AKS) では、アプリケーションのコンテナーでホストされるサービスを ASP.NET Core MVC アプリから個々のカタログおよび注文マイクロサービスに対してホストし、管理することができます。 アプリケーションは Docker と Kubernetes でローカルに実行でき、同じコンテナーを AKS でホストされているステージング環境と運用環境に配置できます。 このプロセスは、次のセクションで説明するように自動化できます。
 
-AKS は、コンテナーの個々のクラスターの管理サービスを提供します。 アプリケーションでは、上のアーキテクチャ図に示されているマイクロサービスごとに個別の AKS クラスターをデプロイします。 この方法では、各サービスがリソース要求に応じて個別にスケールできます。 各マイクロサービスは個別にデプロイすることもできます。このような展開では、システムのダウンタイムをゼロにすることが理想的です。
+AKS は、コンテナーの個々のクラスターの管理サービスを提供します。 上のアーキテクチャ図に示すように、アプリケーションでは、AKS クラスター内のマイクロサービスごとに個別のコンテナーをデプロイします。 この方法では、各サービスがリソース要求に応じて個別にスケールできます。 各マイクロサービスは個別にデプロイすることもできます。このような展開では、システムのダウンタイムをゼロにすることが理想的です。
 
 ## <a name="api-gateway"></a>API ゲートウェイ
 
@@ -42,7 +42,7 @@ APIM を使用すると、アプリケーションは複数の異なるサービ
 
 アプリケーションが AKS を使用している場合のもう1つのオプションは、AKS クラスター内のポッドとして Azure ゲートウェイの受信コントローラーをデプロイすることです。 これにより、クラスターを Azure アプリケーションゲートウェイと統合し、ゲートウェイがトラフィックを AKS ポッドに負荷分散できるようになります。 [詳細については、AKS 用の Azure ゲートウェイの受信コントローラーに関するページを参照して](https://github.com/Azure/application-gateway-kubernetes-ingress)ください。
 
-## <a name="data"></a>Data
+## <a name="data"></a>データ
 
 EShopOnContainers で使用されるさまざまなバックエンドサービスには、異なる記憶域要件があります。 複数のマイクロサービスで SQL Server データベースを使用します。 バスケットマイクロサービスは、永続化のために Redis キャッシュを活用します。 場所マイクロサービスでは、データに MongoDB API が必要です。 Azure では、これらの各データ形式をサポートしています。
 
