@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 9d061aeccb914cce80e02bb7df44dae2edf25412
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ef02662a5492f117b252e464e92ec46e7484ef66
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557020"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282173"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows フォーム アプリケーションの基礎 (Visual Basic)
 
@@ -28,9 +28,9 @@ Visual Studio を使用して、Windows フォームおよび Windows サービ�
 
 ## <a name="building-rich-interactive-user-interfaces"></a>リッチで対話型のユーザー インターフェイスの構築
 
-Windows フォームは、.NET Framework のスマートクライアント コンポーネントであり、ファイル システムへの読み書きなど、アプリケーションの一般的なタスクを有効にするマネージド ライブラリのセットです。 Visual Studio などの開発環境を使用すると、情報を表示して、ユーザーからの入力を要求し、ネットワーク経由でリモート コンピューターと通信する Windows フォーム アプリケーションを作成できます。
+Windows フォームは、.NET Framework および .NET Core (.NET Core 3.0 以降) のスマート クライアント コンポーネントです。 これは、ファイル システムへの読み書きなど、アプリケーションの一般的なタスクを実現するマネージド ライブラリのセットです。 Visual Studio などの開発環境を使用すると、情報を表示して、ユーザーからの入力を要求し、ネットワーク経由でリモート コンピューターと通信する Windows フォーム アプリケーションを作成できます。
 
-Windows フォームでは、フォームはユーザーに情報を表示するビジュアル サーフェイスです。 通常は、コントロールをフォーム上に配置して、マウスのクリックやキーの押下などのユーザー アクションへの応答を開発することで、Windows フォーム アプリケーションを開発します。 "*コントロール*" は、データを表示したりデータ入力を受け入れたりする独立したユーザー インターフェイス (UI) 要素です。
+Windows フォームでは、フォームはユーザーに情報を表示するビジュアル サーフェイスです。 通常は、コントロールをフォーム上に配置して、マウスのクリックやキーの押下などのユーザー アクションへの応答を開発することで、Windows フォーム アプリケーションを開発します。 " *コントロール* " は、データを表示したりデータ入力を受け入れたりする独立したユーザー インターフェイス (UI) 要素です。
 
 ### <a name="events"></a>イベント
 
@@ -97,7 +97,7 @@ ClickOnce の完全な概要については、「[ClickOnce のセキュリテ�
 
 ## <a name="other-controls-and-features"></a>その他のコントロールおよび機能
 
-Windows フォームには、ダイアログ ボックスの作成、ヘルプやドキュメントの印刷や追加、アプリケーションの複数言語へのローカライズのサポートなど、一般的なタスクを高速で簡単に実装できる機能が他にも多数あります。 さらに、Windows フォームは .NET Framework の堅牢なセキュリティ システムに依存しているため、より安全なアプリケーションを顧客にリリースできます。
+Windows フォームには、ダイアログ ボックスの作成、ドキュメントの印刷や追加、アプリケーションの複数言語へのローカライズのサポートなど、一般的なタスクを高速で簡単に実装できる機能が他にも多数あります。 さらに、Windows フォームは .NET の堅牢なセキュリティ システムに依存しているため、より安全なアプリケーションを顧客にリリースできます。
 
 これらの機能の使用に関する手順を追った説明については、次のヘルプ トピックを参照してください。
 
