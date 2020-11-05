@@ -4,12 +4,12 @@ description: F# インタラクティブ (dotnet fsi) を使用して、コン�
 ms.date: 10/31/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 770ac24feababcfc840ae26196ba8b6180d378a0
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: ba9111efccceca03fda43ff11c3f111610541595
+ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282014"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93342684"
 ---
 # <a name="interactive-programming-with-f"></a>F\# による対話型プログラミング
 
@@ -86,11 +86,12 @@ dotnet fsi Script.fsx
 [1; 9; 25; 49; 81]
 ```
 
-F# スクリプトは [Visual Studio](../../get-started/get-started-visual-studio.md)、[Visual Studio Code](../../get-started/get-started-vscode.md)、[Visual Studio for Mac](../../get-started/get-started-visual-studio-for-mac.md) でネイティブにサポートされています。
+F# スクリプトは [Visual Studio](../../get-started/get-started-visual-studio.md)、[Visual Studio Code](../../get-started/get-started-vscode.md)、[Visual Studio for Mac](../../get-started/get-started-with-visual-studio-for-mac.md) でネイティブにサポートされています。
 
 ## <a name="referencing-packages-in-f-interactive"></a>F# インタラクティブでのパッケージの参照
 
-> [!NOTE] パッケージ管理は F# 5 の機能であり、現時点では最新の .NET 5 SDK を使用して利用できます。
+> [!NOTE]
+> パッケージ管理は F# 5 の機能であり、現時点では最新の .NET 5 SDK を使用して利用できます。
 
 F# インタラクティブでは、`#r "nuget:"` 構文と省略可能なバージョンを使用した、NuGet パッケージの参照がサポートされています。
 
