@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel programming, pitfalls
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
-ms.openlocfilehash: 05d934b80e60a8630db5b70e16a07c014598487a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c66eae48df54b330843b4967f957264f2bddee1d
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599764"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925312"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>データとタスクの並列化における注意点
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> を使用すると、多くの場合、通常の順次ループよりもパフォーマンスが大幅に向上します。 ただし、ループを並列化すると複雑になるため、逐次コードでは一般的でない、またはまったく発生しない問題の原因になる可能性があります。 このトピックでは、並列ループを記述するときに回避すべきプラクティスをいくつか説明します。  
@@ -45,7 +45,7 @@ ms.locfileid: "84599764"
  [!code-vb[TPL_Pitfalls#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#04)]  
   
 ## <a name="limit-calls-to-thread-safe-methods"></a>スレッド セーフなメソッドの呼び出しを制限する  
- .NET Framework のほとんどの静的メソッドはスレッド セーフであり、複数のスレッドから同時に呼び出すことができます。 ただし、このような場合でも、関連する同期によっては、クエリの処理速度が大幅に低下する可能性があります。  
+ .NET のほとんどの静的メソッドはスレッド セーフであり、複数のスレッドから同時に呼び出すことができます。 ただし、このような場合でも、関連する同期によっては、クエリの処理速度が大幅に低下する可能性があります。  
   
 > [!NOTE]
 > これは、クエリに <xref:System.Console.WriteLine%2A> の呼び出しをいくつか挿入することで自分でテストできます。 このメソッドは、ドキュメントの例でデモのために使用されていますが、必要がない限り並列ループでは使用しないでください。  

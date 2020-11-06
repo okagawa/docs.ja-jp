@@ -10,17 +10,18 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-ms.openlocfilehash: 74d821aff8308618f7c0efeb1b453db8214b877e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e6f9a760d7673eecf161b1d84d890cc14d09235e
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555947"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189018"
 ---
 # <a name="memory-mapped-files"></a>メモリ マップト ファイル
-メモリ マップト ファイルには、仮想メモリ内のファイルの内容が含まれています。 ファイルとメモリ空間の間のこのマッピングによって、複数のプロセスを含むアプリケーションは、メモリを直接読み書きすることでファイルを変更できます。 .NET Framework 4 以降では、「[Managing Memory-Mapped Files](/previous-versions/ms810613(v=msdn.10))」 (メモリ マップ ファイルの管理) で説明されているように、マネージド コードを使用して、ネイティブ Windows 関数がメモリ マップ ファイルにアクセスする場合と同じ方法でメモリ マップ ファイルにアクセスできます。  
+
+メモリ マップト ファイルには、仮想メモリ内のファイルの内容が含まれています。 ファイルとメモリ空間の間のこのマッピングによって、複数のプロセスを含むアプリケーションは、メモリを直接読み書きすることでファイルを変更できます。 「[メモリマップ ファイルの管理](/previous-versions/ms810613(v=msdn.10))」で説明されているように、マネージド コードを使用して、ネイティブ Windows 関数がメモリ マップ済みファイルにアクセスする場合と同じ方法でメモリ マップ済みファイルにアクセスできます。  
   
- メモリ マップト ファイルには次の 2 種類があります。  
+メモリ マップト ファイルには次の 2 種類があります。  
   
 - 永続化メモリ マップト ファイル  
   

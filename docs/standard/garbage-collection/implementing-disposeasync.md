@@ -3,19 +3,19 @@ title: DisposeAsync メソッドの実装
 description: DisposeAsync メソッドと DisposeAsyncCore メソッドを実装し、非同期リソース クリーンアップを実行する方法について説明します。
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/16/2020
+ms.date: 10/26/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 6ddfd860571d883e20fdb18985fe2bc2d9477dec
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 5aa82c507c22a4795f39267ac8f435599fb9cd92
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720284"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687716"
 ---
 # <a name="implement-a-disposeasync-method"></a>DisposeAsync メソッドの実装
 
@@ -102,9 +102,34 @@ public async ValueTask DisposeAsync()
 
 ## <a name="stacked-usings"></a>using の積み重ね
 
-<xref:System.IAsyncDisposable> を実装する複数のオブジェクトを作成して使用する場合、`using` ステートメントを誤った条件で積み重ねると、<xref:System.IAsyncDisposable.DisposeAsync> を呼び出すことができなくなる可能性があります。 潜在的な問題を防ぐため、積み重ねを避け、次の例のパターンに従う必要があります。
+<xref:System.IAsyncDisposable> を実装する複数のオブジェクトを作成して使用する場合、<xref:System.Threading.Tasks.ValueTask.ConfigureAwait%2A> で `await using` ステートメントを積み重ねると、誤った条件で <xref:System.IAsyncDisposable.DisposeAsync> を呼び出すことができなくなるおそれがあります。 常に <xref:System.IAsyncDisposable.DisposeAsync> が確実に呼び出されるようにするには、スタックを避ける必要があります。 次の 3 つのコード例に、代わりに使用できるパターンを示します。
 
-:::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+### <a name="acceptable-pattern-one"></a>使用可能なパターン 1
+
+:::code language="csharp" id="one" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+
+前の例では、各非同期クリーンアップ操作は、`await using` ブロックの下で明示的にスコープ設定されています。 外側のスコープは、`objOne` が `objTwo` を囲む中かっこを設定する方法によって定義されます。そのため、最初に `objTwo` が、その後に `objOne` が破棄されます。 どちらの `IAsyncDisposable` インスタンスの <xref:System.IAsyncDisposable.DisposeAsync> メソッドも待機状態になっているので、非同期のクリーンアップ操作が実行されます。 呼び出しは、積み重ねではなく、入れ子になっています。
+
+### <a name="acceptable-pattern-two"></a>使用可能なパターン 2
+
+:::code language="csharp" id="two" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+
+前の例では、各非同期クリーンアップ操作は、`await using` ブロックの下で明示的にスコープ設定されています。 各ブロックの最後で、対応する `IAsyncDisposable` インスタンスの <xref:System.IAsyncDisposable.DisposeAsync> メソッドが待機状態になっているので、非同期クリーンアップ操作が実行されます。 呼び出しは、積み重ねではなく、シーケンシャルになっています。 このシナリオでは、`objOne` が最初に破棄され、次に `objTwo` が破棄されます。
+
+### <a name="acceptable-pattern-three"></a>使用可能なパターン 3
+
+:::code language="csharp" id="three" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+
+前の例では、各非同期クリーンアップ操作は、含まれているメソッド本体で暗黙的にスコープ設定されています。 外側のブロックの最後で、`IAsyncDisposable` インスタンスによって、非同期のクリーンアップ操作が実行されます。 これは、宣言された順序と逆の順序で実行されます。つまり、`objOne` の前に `objTwo` が破棄されることを意味します。
+
+### <a name="unacceptable-pattern"></a>許容できないパターン
+
+`AnotherAsyncDisposable` コンストラクターから例外がスローされた場合、`objOne` は正しく破棄されません。
+
+:::code language="csharp" id="dontdothis" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+
+> [!TIP]
+> 予期しない動作につながるおそれがあるため、このパターンは避けてください。
 
 ## <a name="see-also"></a>関連項目
 

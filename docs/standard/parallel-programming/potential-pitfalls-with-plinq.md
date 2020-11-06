@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
-ms.openlocfilehash: b4d58734fba4b834d5f5819a6bf19da0b7b7e8db
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 012ac4078c1e2f17d6eef88ee295b11161a0e24a
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285314"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925273"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>PLINQ の非利便性
 
@@ -62,7 +62,7 @@ a.AsParallel().Where(...).OrderBy(...).Select(...).ForAll(x => fs.Write(x));
 
 ## <a name="limit-calls-to-thread-safe-methods"></a>スレッド セーフなメソッドの呼び出しを制限する
 
-.NET Framework のほとんどの静的メソッドはスレッド セーフであり、複数のスレッドから同時に呼び出すことができます。 ただし、このような場合でも、関連する同期によっては、クエリの処理速度が大幅に低下する可能性があります。
+.NET のほとんどの静的メソッドはスレッド セーフであり、複数のスレッドから同時に呼び出すことができます。 ただし、このような場合でも、関連する同期によっては、クエリの処理速度が大幅に低下する可能性があります。
 
 > [!NOTE]
 > これは、クエリに <xref:System.Console.WriteLine%2A> の呼び出しをいくつか挿入することで自分でテストできます。 このメソッドは、ドキュメントの例でデモのために使用されていますが、PLINQ クエリでは使用しないでください。

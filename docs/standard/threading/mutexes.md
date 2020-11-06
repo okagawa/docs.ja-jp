@@ -4,18 +4,19 @@ ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - wait handles
-- threading [.NET Framework], Mutex class
+- threading [.NET], Mutex class
 - Mutex class, about Mutex class
-- threading [.NET Framework], cross-process synchronization
+- threading [.NET], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
-ms.openlocfilehash: f9267bdd19a14995851f2689651c001815812912
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ba31fff03cfffda7cf2a40a3a82b2222e8951035
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291176"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188992"
 ---
 # <a name="mutexes"></a>ミューテックス
+
 <xref:System.Threading.Mutex> オブジェクトを使用して、リソースへの排他的アクセスを提供できます。 <xref:System.Threading.Mutex> クラスは <xref:System.Threading.Monitor> クラスよりも多くのシステム リソースを使用しますが、アプリケーション ドメイン境界を越えてマーシャリングしたり、複数の待機操作とともに使用したり、異なるプロセスのスレッドを同期するために使用できます。 マネージド同期メカニズムの比較については、「[同期プリミティブの概要](overview-of-synchronization-primitives.md)」を参照してください。  
   
  コード例については、<xref:System.Threading.Mutex.%23ctor%2A> コンストラクターのリファレンス ドキュメントを参照してください。  
@@ -30,10 +31,7 @@ ms.locfileid: "84291176"
  スレッドが <xref:System.Threading.Mutex> を所有している場合、そのスレッドは待機要求呼び出しを繰り返し行うときに、実行をブロックせずに同じ <xref:System.Threading.Mutex> を指定できます。ただし、呼び出しと同じ回数だけ <xref:System.Threading.Mutex> を解放して、その所有権を解放する必要があります。  
   
 ## <a name="abandoned-mutexes"></a>破棄済みミューテックス  
- <xref:System.Threading.Mutex> を解放せずにスレッドが終了すると、ミューテックスは破棄されたと見なされます。 ミューテックスが保護しているリソースが矛盾した状態で残る可能性があるため、多くの場合、これは重大なプログラミング エラーを示します。 .NET Framework Version 2.0 では、ミューテックスを取得する次のスレッドで <xref:System.Threading.AbandonedMutexException> がスローされます。  
-  
-> [!NOTE]
-> .NET Framework Version 1.0 および 1.1 では、破棄された <xref:System.Threading.Mutex> はシグナル状態に設定され、次の待機スレッドが所有権を取得します。 待機しているスレッドがない場合、<xref:System.Threading.Mutex> はシグナル状態のままになります。 例外をスローすることはありません。  
+ <xref:System.Threading.Mutex> を解放せずにスレッドが終了すると、ミューテックスは破棄されたと見なされます。 ミューテックスが保護しているリソースが矛盾した状態で残る可能性があるため、多くの場合、これは重大なプログラミング エラーを示します。 ミューテックスを取得する次のスレッドで <xref:System.Threading.AbandonedMutexException> がスローされます。
   
  システム全体でミューテックスが有効な場合にミューテックスが破棄されたときは、アプリケーションが強制終了されたことを示している可能性があります (たとえば、Windows タスク マネージャを使用した終了)。  
   
@@ -43,7 +41,8 @@ ms.locfileid: "84291176"
  ローカル ミューテックスは、現在のプロセス内にのみ存在します。 ローカル <xref:System.Threading.Mutex> オブジェクトを参照するプロセス内のすべてのスレッドから使用できます。 <xref:System.Threading.Mutex> オブジェクトはそれぞれ別のローカル ミューテックスです。  
   
 ### <a name="access-control-security-for-system-mutexes"></a>システム ミューテックスのアクセス制御セキュリティ  
- .NET Framework Version 2.0 では、名前付きシステム オブジェクトに対して Windows アクセス制御セキュリティを照会して設定できます。 システム オブジェクトはグローバルであり、所有するコード以外のコードによってロックできるため、作成時からシステム ミューテックスを保護することをお勧めします。  
+
+.NET では、名前付きシステム オブジェクトに対して Windows アクセス制御セキュリティを照会して設定できます。 システム オブジェクトはグローバルであり、所有するコード以外のコードによってロックできるため、作成時からシステム ミューテックスを保護することをお勧めします。  
   
  ミューテックスのアクセス制御セキュリティについては、<xref:System.Security.AccessControl.MutexSecurity> および <xref:System.Security.AccessControl.MutexAccessRule> クラス、<xref:System.Security.AccessControl.MutexRights> 列挙体、<xref:System.Threading.Mutex> クラスの <xref:System.Threading.Mutex.GetAccessControl%2A>、<xref:System.Threading.Mutex.SetAccessControl%2A>、<xref:System.Threading.Mutex.OpenExisting%2A> メソッド、<xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29> コンストラクターに関するページを参照してください。  
   

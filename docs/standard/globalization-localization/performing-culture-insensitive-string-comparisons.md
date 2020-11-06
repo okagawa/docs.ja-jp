@@ -8,17 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - String.CompareTo method
 - String.Compare method
-- string comparison [.NET Framework], culture-insensitive
-- strings [.NET Framework], comparing
+- string comparison [.NET], culture-insensitive
+- strings [.NET], comparing
 - culture-insensitive string operations, comparisons
 - culture parameter
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
-ms.openlocfilehash: 91996bc721db55b24521be97e4d9accd53ef7924
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1d8dc3f1bf686550eb94d7fb3003d4c21741739e
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288616"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064146"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>カルチャを認識しない文字列比較の実行
 既定では、<xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドはカルチャを認識し、大文字と小文字を区別する比較を実行します。 また、このメソッドには、使用するカルチャを `culture` パラメーターで指定し、使用する比較規則を `comparisonType` パラメーターで指定できる、複数のオーバーロードが含まれています。 既定のオーバーロードの代わりにこれらのメソッドを呼び出すと、特定のメソッド呼び出しで使用する規則に関するあいまいさが解消され、特定の比較がカルチャに依存するかどうかが明確になります。  
@@ -30,7 +30,7 @@ ms.locfileid: "84288616"
   
  <xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドでサポートされている、カルチャに依存しない文字列比較は、言語的な比較 (インバリアント カルチャの並べ替え規則に基づきます) または非言語的な比較 (文字列内の文字の序数値に基づきます) です。 カルチャに依存しないほとんどの文字列比較は非言語的な比較です。 このような比較の場合は、<xref:System.StringComparison.Ordinal?displayProperty=nameWithType> パラメーターとして <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 列挙値または `comparisonType` 列挙値を指定します。 たとえば、セキュリティに関する決定 (ユーザー名やパスワードの比較など) が文字列比較の結果に基づいて行われる場合は、この操作をカルチャに依存しない非言語的な比較に指定して、操作の結果が特定のカルチャまたは言語の規則に影響されないようにする必要があります  
   
- 複数のカルチャからの対応する文字列を一貫した方法で言語的に処理する場合は、カルチャに依存しない言語的な文字列比較を使用します。 たとえば、アプリケーションのリスト ボックスに表示する単語の一覧で複数の文字セットが使用されている場合などに、現在のカルチャに関係なく同じ順序で単語を表示することが必要になります。 カルチャに依存しない言語的な比較用に、英語の言語規則に基づくインバリアント カルチャが .NET Framework によって定義されています。 カルチャに依存しない言語的な比較を実行するには、<xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> パラメーターとして <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> または `comparisonType` を指定します。  
+ 複数のカルチャからの対応する文字列を一貫した方法で言語的に処理する場合は、カルチャに依存しない言語的な文字列比較を使用します。 たとえば、アプリケーションのリスト ボックスに表示する単語の一覧で複数の文字セットが使用されている場合などに、現在のカルチャに関係なく同じ順序で単語を表示することが必要になります。 カルチャに依存しない言語的な比較用に、英語の言語規則に基づくインバリアント カルチャが .NET によって定義されています。 カルチャに依存しない言語的な比較を実行するには、<xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> パラメーターとして <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> または `comparisonType` を指定します。  
   
  次の例では、カルチャに依存しない 2 つの非言語的な文字列比較を実行します。 最初の例では大文字小文字が区別されますが、2 番目の例では区別されません。  
   

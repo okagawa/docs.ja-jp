@@ -9,12 +9,12 @@ helpviewer_keywords:
 - threading [.NET], thread pool
 - threading [.NET], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-ms.openlocfilehash: 2671ce7c9721b15de8a3805da27040e973a62804
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 099670f8451e9e2cf78b372d3a4d393882a30407
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223795"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188693"
 ---
 # <a name="the-managed-thread-pool"></a>マネージド スレッド プール
 
@@ -40,7 +40,7 @@ ms.locfileid: "92223795"
   
 ### <a name="maximum-number-of-thread-pool-threads"></a>スレッド プールのスレッドの最大数
 
-スレッド プールのキューに登録できる操作の数は、使用可能なメモリによってのみ制限されます。 ただし、スレッド プールによって、プロセスで同時にアクティブにできるスレッドの数が制限されます。 すべてのスレッド プールのスレッドがビジー状態の場合、追加の作業項目は、それらを実行するスレッドが空くまでキューに登録されます。 .NET Framework 4 以降では、プロセスのスレッド プールの既定のサイズは、仮想アドレス空間のサイズなど、いくつかの要素によって決まります。 スレッドの数は、プロセスで <xref:System.Threading.ThreadPool.GetMaxThreads%2A?displayProperty=nameWithType> メソッドを呼び出せば確認できます。  
+スレッド プールのキューに登録できる操作の数は、使用可能なメモリによってのみ制限されます。 ただし、スレッド プールによって、プロセスで同時にアクティブにできるスレッドの数が制限されます。 すべてのスレッド プールのスレッドがビジー状態の場合、追加の作業項目は、それらを実行するスレッドが空くまでキューに登録されます。 プロセスのスレッド プールの既定のサイズは、仮想アドレス空間のサイズなど、いくつかの要素によって決まります。 スレッドの数は、プロセスで <xref:System.Threading.ThreadPool.GetMaxThreads%2A?displayProperty=nameWithType> メソッドを呼び出せば確認できます。  
   
 スレッドの最大数を制御するには、<xref:System.Threading.ThreadPool.GetMaxThreads%2A?displayProperty=nameWithType> メソッドと <xref:System.Threading.ThreadPool.SetMaxThreads%2A?displayProperty=nameWithType> メソッドを使用します。  
 
@@ -54,14 +54,14 @@ ms.locfileid: "92223795"
 > [!NOTE]
 > 要求が少ないときは、スレッド プールの実際のスレッド数が最小値を下回る場合があります。  
   
-スレッド プールの最小値に達すると、追加のスレッドが作成されるか、いくつかのタスクが完了するまで待機状態になります。 .NET Framework 4 以降では、スループットを最適化するために、スレッド プールでワーカー スレッドの作成と破棄が行われます。スループットは、タスクの単位時間あたりの完了数として定義されます。 スレッドが少なすぎると使用可能なリソースが最適に使用されない可能性があり、スレッドが多すぎるとリソースの競合が増える可能性があります。  
+スレッド プールの最小値に達すると、追加のスレッドが作成されるか、いくつかのタスクが完了するまで待機状態になります。 スループットを最適化するために、スレッド プールでワーカー スレッドの作成と破棄が行われます。スループットは、タスクの単位時間あたりの完了数として定義されます。 スレッドが少なすぎると使用可能なリソースが最適に使用されない可能性があり、スレッドが多すぎるとリソースの競合が増える可能性があります。  
   
 > [!CAUTION]
 > アイドル スレッドの最小数は、<xref:System.Threading.ThreadPool.SetMinThreads%2A?displayProperty=nameWithType> メソッドを使用して増やすことができます。 ただし、これらの値を必要以上に大きくすると、パフォーマンスの問題が発生する可能性があります。 同時に開始するタスクの数が多すぎる場合は、すべてのタスクで処理速度が低下する可能性があります。 ほとんどの場合、スレッドを割り当てるためのスレッド プール独自のアルゴリズムを使用することでスレッド プールのパフォーマンスが向上します。  
 
 ## <a name="using-the-thread-pool"></a>スレッド プールの使用
 
-.NET Framework 4 以降でスレッド プールを使用する場合は、[タスク並列ライブラリ (TPL)](../parallel-programming/task-parallel-library-tpl.md) を使用すると最も簡単です。 <xref:System.Threading.Tasks.Task> や <xref:System.Threading.Tasks.Task%601> などの TPL の型では、既定でスレッド プールのスレッドを使用してタスクが実行されます。
+スレッド プールを使用する場合は、[タスク並列ライブラリ (TPL)](../parallel-programming/task-parallel-library-tpl.md) を使用すると最も簡単です。 <xref:System.Threading.Tasks.Task> や <xref:System.Threading.Tasks.Task%601> などの TPL の型では、既定でスレッド プールのスレッドを使用してタスクが実行されます。
 
 また、マネージド コードから <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> (またはアンマネージド コードから [`ICorThreadpool::CorQueueUserWorkItem`](../../framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md)) を呼び出し、タスクを実行するメソッドを表す <xref:System.Threading.WaitCallback?displayProperty=nameWithType> デリゲートを渡すことによってスレッド プールを使用することもできます。
 

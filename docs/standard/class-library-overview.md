@@ -1,55 +1,53 @@
 ---
 title: .NET クラス ライブラリの概要
-description: .NET クラス ライブラリについて説明します。 .NET 実装には、システム機能へのアクセスを提供する、クラス、インターフェイス、デリゲート、および値の型が含まれます。
+description: .NET クラス ライブラリについて説明します。 .NET API には、システム機能へのアクセスを提供する、クラス、インターフェイス、デリゲート、および値の型が含まれます。
 ms.date: 02/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- classes [.NET Framework], library overview
-- classes [.NET Core], library overview
+- classes [.NET], library overview
 - .NET, library overview
 - class objects value type
-- naming conventions [.NET Framework]
-- types, .NET Framework
+- naming conventions [.NET]
+- types, .NET
 - user-defined types
 - Visual Basic, data types
-- data types [.NET Framework], C++
+- data types [.NET], C++
 - Visual C#, data types
-- libraries, .NET Framework class library
-- data types [.NET Framework], F#
+- libraries, .NET
+- data types [.NET], F#
 - System namespace
 - F#, data types
-- .NET Framework, class library
-- type system [.NET Framework]
-- data types [.NET Framework]
+- .NET, class library
+- type system [.NET]
+- data types [.NET]
 - value types
-- data types [.NET Framework], Visual Basic
+- data types [.NET], Visual Basic
 - Common Language Specification
-- namespaces [.NET Framework]
+- namespaces [.NET]
 - floating point value type
-- class library [.NET Framework]
+- class library [.NET]
 - CLS
 - logical value type
-- .NET Framework class library, about
 - built-in types
-- namespaces [.NET Framework], about namespaces
+- namespaces [.NET], about namespaces
 - Visual C++, data types
-- members [.NET Framework], type
-- data types [.NET Framework], C#
+- members [.NET], type
+- data types [.NET], C#
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: cf2137c2ebd2f4901401ed25746febaa440a08f5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 95dcbea6e0b3f2cd91bd6955a11ede7c9731caca
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554763"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687518"
 ---
 # <a name="net-class-library-overview"></a>.NET クラス ライブラリの概要
 
-.NET 実装には、開発プロセスを高速化および最適化し、システム機能へのアクセスを提供する、クラス、インターフェイス、デリゲート、および値の型が含まれます。 言語間での相互運用性を確保するために、.NET のほとんどの型は CLS (共通言語仕様) に準拠しています。そのため、コンパイラが CLS に準拠しているすべてのプログラミング言語でこれらの型を使用できます。  
+.NET API には、開発プロセスを高速化および最適化し、システム機能へのアクセスを提供する、クラス、インターフェイス、デリゲート、および値の型が含まれます。 言語間での相互運用性を確保するために、.NET のほとんどの型は CLS (共通言語仕様) に準拠しています。そのため、コンパイラが CLS に準拠しているすべてのプログラミング言語でこれらの型を使用できます。  
   
- .NET の型は、.NET アプリケーション、.NET コンポーネント、およびコントロールを構築するときの基礎となります。 .NET 実装には、次の機能を実行する型が含まれます。  
+.NET の型は、.NET アプリケーション、.NET コンポーネント、およびコントロールを構築するときの基礎となります。 .NET には、次の機能を実行する型が用意されています。  
   
 - 基本データ型と例外を表す。  
   
@@ -59,19 +57,19 @@ ms.locfileid: "90554763"
   
 - 読み込まれた型についての情報にアクセスする。  
   
-- .NET Framework セキュリティ チェックを呼び出す。  
+- .NET セキュリティ チェックを呼び出す。  
   
 - データ アクセス、豊富なクライアント側 GUI、およびサーバー制御式のクライアント側 GUI を提供する。  
   
- .NET には、豊富なインターフェイスのセットに加えて、抽象クラスと具象 (抽象ではない) クラスが用意されています。 具象クラスはそのまま使用できますが、多くの場合は、具象クラスから独自のクラスを派生させます。 インターフェイスの機能を使用するには、インターフェイスを実装するクラスを作成するか、またはインターフェイスを実装する .NET クラスの 1 つからクラスを派生させます。  
+.NET には、豊富なインターフェイスのセットに加えて、抽象クラスと具象 (抽象ではない) クラスが用意されています。 具象クラスはそのまま使用できますが、多くの場合は、それらから独自のクラスを派生させます。 インターフェイスの機能を使用するには、インターフェイスを実装するクラスを作成するか、またはインターフェイスを実装する .NET クラスの 1 つからクラスを派生させます。  
   
 ## <a name="naming-conventions"></a>名前付け規則
 
  .NET の型では、階層構造を伴うドット構文の名前付けスキームが使用されます。 この方法では、関連する型が名前空間にグループ化されるため、検索と参照を簡単に行うことができます。 フルネームのうち右端のドットまでの最初の部分は、名前空間の名前です。 名前の最後の部分は型名です。 たとえば、`System.Collections.Generic.List<T>` は `System.Collections.Generic` 名前空間に属する `List<T>` 型を表します。 <xref:System.Collections.Generic> の型は、ジェネリック コレクションの操作で使用できます。  
   
- この名前付け方法によって、.NET Framework を拡張するライブラリ開発者は、型の階層構造のグループを簡単に作成し、一貫性のあるわかりやすい名前を付けることができます。 また、型の完全名 (つまり名前空間と型名) によって型を明確に特定できるため、型名の競合を防ぐことができます。 ライブラリ開発者は、次の規則に従って名前空間の名前を付けてください。  
+ この名前付け方法によって、.NET を拡張するライブラリ開発者は、型の階層構造のグループを作成して一貫性のあるわかりやすい名前を付けることが容易になります。 また、型の完全名 (つまり名前空間と型名) によって型を明確に特定できるため、型名の競合を防ぐことができます。 ライブラリ開発者は、次の規則に従って名前空間の名前を付けてください。  
   
- *CompanyName*.*TechnologyName*  
+ *CompanyName*. *TechnologyName*  
   
  たとえば、名前空間 `Microsoft.Word` はこのガイドラインに従っています。  
   
@@ -81,7 +79,7 @@ ms.locfileid: "90554763"
   
 ## <a name="system-namespace"></a>System 名前空間
 
- <xref:System> 名前空間は、.NET における基本的な型のルート名前空間です。 この名前空間には、<xref:System.Object> (継承階層構造のルート)、<xref:System.Byte>、<xref:System.Char>、<xref:System.Array>、<xref:System.Int32>、<xref:System.String> など、すべてのアプリケーションで使用される基本データ型を表すクラスが含まれます。 これらの型の多くは、プログラミング言語で使われるプリミティブなデータ型に対応します。 .NET Framework の型を使用してコードを記述するときには、.NET Framework の基本データ型が使用されるところに、プログラミング言語側の対応するキーワードを使用できます。  
+ <xref:System> 名前空間は、.NET における基本的な型のルート名前空間です。 この名前空間には、<xref:System.Object> (継承階層構造のルート)、<xref:System.Byte>、<xref:System.Char>、<xref:System.Array>、<xref:System.Int32>、<xref:System.String> など、すべてのアプリケーションで使用される基本データ型を表すクラスが含まれます。 これらの型の多くは、プログラミング言語で使われるプリミティブなデータ型に対応します。 .NET の型を使用してコードを記述するときには、.NET の基本データ型が使用されるところに、プログラミング言語側の対応するキーワードを使用できます。  
   
  次の表では、.NET に用意されているそれぞれの基本型の一覧を示し、各型について簡単に説明し、Visual Basic、C#、C++、F# での対応する型を示します。  
   

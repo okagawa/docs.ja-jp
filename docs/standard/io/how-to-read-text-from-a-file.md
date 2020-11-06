@@ -11,26 +11,27 @@ helpviewer_keywords:
 - reading text files
 - reading data, text files
 - data streams, reading text from files
-- I/O [.NET Framework], reading text from files
+- I/O [.NET], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-ms.openlocfilehash: fafd1cda13b46e56183489aa15d3c4df9051ae06
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0e90887c2cc4a54355c51facf91c9cc3da7e4320
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553936"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189330"
 ---
 # <a name="how-to-read-text-from-a-file"></a>方法: ファイルのテキストの読み取り
+
 次に、.NET デスクトップ アプリを使用してテキスト ファイルから同期でテキストを読み取る方法と非同期でテキストを読み取る方法の例を示します。 どちらの例でも、<xref:System.IO.StreamReader> クラスのインスタンスを作成する場合に、ファイルの相対パスまたは絶対パスを指定します。
   
 > [!NOTE]
-> Windows ランタイムではファイルに対する読み取りと書き込みに別のストリーム型が用意されているため、これらのコード例はユニバーサル Windows プラットフォーム (UWP) アプリの開発には適用されません。 UWP アプリのファイルからテキストを読み取る方法を示す例については、「[Quickstart: Reading and writing files](/previous-versions/windows/apps/hh758325(v=win.10))」 (クイック スタート: ファイルの読み取りと書き込み) を参照してください。 .NET Framework ストリームと Windows ランタイム ストリーム間で変換を行う方法を示す例については、「[方法: .NET Framework ストリームと Windows ランタイム ストリームの間で変換を行う](how-to-convert-between-dotnet-streams-and-winrt-streams.md)」を参照してください。  
+> Windows ランタイムではファイルに対する読み取りと書き込みに別のストリーム型が用意されているため、これらのコード例はユニバーサル Windows プラットフォーム (UWP) アプリには適用されません。 UWP アプリのファイルからテキストを読み取る方法を示す例については、「[Quickstart: Reading and writing files](/previous-versions/windows/apps/hh758325(v=win.10))」 (クイック スタート: ファイルの読み取りと書き込み) を参照してください。 .NET Framework ストリームと Windows ランタイム ストリーム間で変換を行う方法を示す例については、「[方法: .NET Framework ストリームと Windows ランタイム ストリームの間で変換を行う](how-to-convert-between-dotnet-streams-and-winrt-streams.md)」を参照してください。  
   
 ## <a name="example-synchronous-read-in-a-console-app"></a>例:コンソール アプリの同期読み取り  
 次の例では、コンソール アプリ内での同期読み取り操作を示します。 この例では、ストリーム リーダーを使用してテキスト ファイルを開き、コンテンツが文字列にコピーされ、文字列がコンソールに出力されます。  
   
 > [!IMPORTANT]
-> サンプルでは、*TestFile.txt* という名前のファイルがアプリと同じフォルダーに入っていると想定しています。  
+> サンプルでは、 *TestFile.txt* という名前のファイルがアプリと同じフォルダーに入っていると想定しています。  
 
 :::code language="csharp" source="snippets/how-to-read-text-from-a-file/csharp/sync-console/Program.cs":::
 :::code language="vb" source="snippets/how-to-read-text-from-a-file/vb/sync-console/Program.vb":::
@@ -39,7 +40,7 @@ ms.locfileid: "90553936"
  次の例では、Windows Presentation Foundation (WPF) アプリ内での非同期読み取り操作を示します。  
   
 > [!IMPORTANT]
-> サンプルでは、*TestFile.txt* という名前のファイルがアプリと同じフォルダーに入っていると想定しています。  
+> サンプルでは、 *TestFile.txt* という名前のファイルがアプリと同じフォルダーに入っていると想定しています。  
 
 :::code language="csharp" source="snippets/how-to-read-text-from-a-file/csharp/async-wpf/MainWindow.xaml.cs":::
 :::code language="vb" source="snippets/how-to-read-text-from-a-file/vb/async-wpf/MainWindow.xaml.vb":::

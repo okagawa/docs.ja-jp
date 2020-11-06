@@ -6,7 +6,7 @@ helpviewer_keywords:
 - assembly manifest, viewing information
 - Ildasm.exe
 - MSIL Disassembler
-- assemblies [.NET Framework], viewing contents
+- assemblies [.NET], viewing contents
 - viewing assembly information
 - MSIL
 - viewing MSIL information
@@ -15,18 +15,18 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: aed490459252466c6da06e5422b83b1bc20fb885
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: be2311c601effbebd519e33b7a5e13d49f44bd05
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380064"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687495"
 ---
 # <a name="how-to-view-assembly-contents"></a>方法: アセンブリの内容を表示する
 
 [Ildasm.exe (IL 逆アセンブラー)](../../framework/tools/ildasm-exe-il-disassembler.md) を使用して、ファイル内の MSIL (Microsoft Intermediate Language) 情報を表示できます。 調べる対象のファイルがアセンブリの場合、この情報にはアセンブリの属性と他のモジュールやアセンブリへの参照が含まれることがあります。 この情報は、ファイルがアセンブリまたはアセンブリの一部かどうか、およびファイルに他のモジュールまたはアセンブリへの参照があるかどうかを判断するために役立ちます。
 
-*Ildasm.exe* を使用してアセンブリの内容を表示するには、コマンド プロンプトで「**ildasm \<assembly name>** 」と入力します。 たとえば、次のコマンドでは、*Hello.exe* アセンブリが逆アセンブルされます。
+*Ildasm.exe* を使用してアセンブリの内容を表示するには、コマンド プロンプトで「 **ildasm \<assembly name>** 」と入力します。 たとえば、次のコマンドでは、 *Hello.exe* アセンブリが逆アセンブルされます。
 
 ```cmd
 ildasm Hello.exe
@@ -36,7 +36,7 @@ ildasm Hello.exe
 
 ## <a name="example"></a>例
 
-次の例では、基本の "Hello World" プログラムを使用します。 プログラムをコンパイルした後、*Ildasm.exe* を使用して *Hello.exe* アセンブリを逆アセンブルし、アセンブリ マニフェストを表示します。
+次の例では、基本の "Hello World" プログラムを使用します。 プログラムをコンパイルした後、 *Ildasm.exe* を使用して *Hello.exe* アセンブリを逆アセンブルし、アセンブリ マニフェストを表示します。
 
 ```cpp
 using namespace System;
@@ -107,14 +107,14 @@ End Class
 
 |ディレクティブ|説明|
 |---------------|-----------------|
-|**.assembly extern \<アセンブリ名>**|現在のモジュールによって参照される項目を含む別のアセンブリを指定します (この例では `mscorlib`)。|
-|**.publickeytoken \<トークン>**|参照されるアセンブリの実際のキーのトークンを指定します。|
-|**.ver \<バージョン番号>**|参照されるアセンブリのバージョン番号を指定します。|
-|**.assembly \<アセンブリ名>**|アセンブリ名を指定します。|
-|**.hash algorithm \<Int32 値>**|使用されるハッシュ アルゴリズムを指定します。|
-|**.ver \<バージョン番号>**|アセンブリのバージョン番号を指定します。|
-|**.module \<ファイル名>**|アセンブリを構成するモジュールの名前を指定します。 この例では、アセンブリは 1 つのファイルだけで構成されています。|
-|**.subsystem \<値>**|プログラムに必要なアプリケーション環境を指定します。 この例では、値 3 は、この実行可能ファイルがコンソールで実行されることを示します。|
+|**.assembly extern \<assembly name>**|現在のモジュールによって参照される項目を含む別のアセンブリを指定します (この例では `mscorlib`)。|
+|**.publickeytoken \<token>**|参照されるアセンブリの実際のキーのトークンを指定します。|
+|**.ver \<version number>**|参照されるアセンブリのバージョン番号を指定します。|
+|**.assembly \<assembly name>**|アセンブリ名を指定します。|
+|**.hash algorithm \<int32 value>**|使用されるハッシュ アルゴリズムを指定します。|
+|**.ver \<version number>**|アセンブリのバージョン番号を指定します。|
+|**.module \<file name>**|アセンブリを構成するモジュールの名前を指定します。 この例では、アセンブリは 1 つのファイルだけで構成されています。|
+|**.subsystem \<value>**|プログラムに必要なアプリケーション環境を指定します。 この例では、値 3 は、この実行可能ファイルがコンソールで実行されることを示します。|
 |**.corflags**|現在メタデータ内で予約済みのフィールドです。|
 
 アセンブリ マニフェストは、アセンブリの内容に応じて、多くの異なるディレクティブを格納できます。 アセンブリ マニフェストに含まれる多様なディレクティブの一覧については、ECMA のドキュメント、特に「Partition II: Metadata Definition and Semantics」(パーティション II: メタデータの定義とセマンティクス) および「Partition III:CIL Instruction Set」(パーティション III: CIL 命令セット) を参照してください。

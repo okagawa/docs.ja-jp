@@ -16,21 +16,21 @@ helpviewer_keywords:
 - WaitHandle class, code examples
 - asynchronous programming, status polling
 - polling asynchronous operation status
-- delegates [.NET Framework], asynchronous
+- delegates [.NET], asynchronous
 - synchronous calling in asynchronous manner
 - waiting for asynchronous calls
-- status information [.NET Framework], asynchronous operations
+- status information [.NET], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-ms.openlocfilehash: ff2d30c00e7b6becb0c3ff910d825c2e9d6f78e3
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: d518e5f64096fde5c9b14222dc4fe0634e6bb7b1
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662642"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888894"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>同期メソッドの非同期呼び出し
 
-.NET Framework では、すべてのメソッドを非同期的に呼び出すことができます。 これを行うには、呼び出すメソッドと同じシグネチャを持つデリゲートを定義します。これにより、共通言語ランタイムによって、適切なシグネチャを持つ、このデリゲートの `BeginInvoke` メソッドと `EndInvoke` メソッドが自動的に定義されます。
+.NET では、すべてのメソッドを非同期的に呼び出すことができます。 これを行うには、呼び出すメソッドと同じシグネチャを持つデリゲートを定義します。 このデリゲートには、共通言語ランタイムにより、適切なシグネチャが使用された `BeginInvoke` および `EndInvoke` メソッドが自動的に定義されます。
 
 > [!NOTE]
 > 非同期デリゲート (具体的には `BeginInvoke` メソッドと `EndInvoke` メソッド) は、.NET Compact Framework ではサポートされていません。

@@ -1,7 +1,7 @@
 ---
 title: 等値演算子 - C# リファレンス
 description: C# の等値比較演算子と C# の型の等価性について学習します。
-ms.date: 06/26/2019
+ms.date: 10/30/2020
 author: pkulikov
 f1_keywords:
 - ==_CSharpKeyword
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 33215e2440b14fb888a6f0df5c220c891ebed0e2
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 39461157c33fea0effb5c8808ded1c9981900e17
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063095"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063216"
 ---
 # <a name="equality-operators-c-reference"></a>等値演算子 (C# リファレンス)
 
@@ -47,11 +47,19 @@ C# 7.3 より、`==` および `!=` 演算子は C# の[タプル](../builtin-ty
 
 ### <a name="reference-types-equality"></a>参照型の等価性
 
-既定では、2 つの参照型オペランドは、同じオブジェクトを参照しているときに等しくなります。
+既定では、レコードではない 2 つの参照型オペランドは、同じオブジェクトを参照しているときに等しくなります。
 
 [!code-csharp[reference type equality](snippets/shared/EqualityOperators.cs#ReferenceTypesEquality)]
 
 次の例は、ユーザー定義の参照型が既定で `==` 演算子をサポートしていることを示しています。 ただし、参照型は `==` 演算子をオーバーロードできます。 参照型が `==` 演算子をオーバーロードする場合、その型の 2 つの参照が同じオブジェクトを参照しているかどうかを調べるには <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> メソッドを使用します。
+
+### <a name="record-types-equality"></a>レコードの型の等価性
+
+C# 9.0 以降で利用できる[レコードの型](../../whats-new/csharp-9.md#record-types)では、既定で値の等価性セマンティクスを提供する `==` 演算子と `!=` 演算子をサポートします。 つまり、2 つのレコード オペランドは、いずれも `null` であるか、すべてのフィールドと自動実装プロパティの該当値が等しいときに等しくなります。
+
+:::code language="csharp" source="snippets/shared/EqualityOperators.cs" id="RecordTypesEquality":::
+
+前の例からわかるように、レコードではない参照型メンバーの場合、参照されるインスタンスではなく、参照値が比較されます。
 
 ### <a name="string-equality"></a>文字列の等価性
 
@@ -85,9 +93,17 @@ C# 7.3 より、`==` および `!=` 演算子は C# の[タプル](../builtin-ty
 
 ユーザー定義型は `==` 演算子と `!=` 演算子を[オーバーロード](operator-overloading.md)できます。 ある型でこの 2 つの演算子の 1 つをオーバーロードする場合は、もう 1 つの演算子もオーバーロードする必要があります。
 
+レコードの型で `==` 演算子と `!=` 演算子を明示的にオーバーロードすることはできません。 レコードの型 `T` の `==` 演算子と `!=` 演算子の動作を変更する必要がある場合、次のシグネチャで <xref:System.IEquatable%601.Equals%2A?displayProperty=nameWithType> メソッドを実装します。
+
+```csharp
+public virtual bool Equals(T? other);
+```
+
 ## <a name="c-language-specification"></a>C# 言語仕様
 
 詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)に関するページの「[関係演算子と型検査演算子](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators)」のセクションを参照してください。
+
+レコードの型の等価性に関する詳細については、[レコード機能提案メモ](~/_csharplang/proposals/csharp-9.0/records.md) ページの「[等値メンバー](~/_csharplang/proposals/csharp-9.0/records.md#equality-members)」セクションを参照してください。
 
 ## <a name="see-also"></a>関連項目
 

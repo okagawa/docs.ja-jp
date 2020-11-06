@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - SpinLock, how to use
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
-ms.openlocfilehash: ad254cb6208bff868e5fc689c502b7ddcc175ad5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3fb19c2b36d97710685cac4ecd10f47a119814ce
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73137963"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189187"
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a>方法: 下位レベルの同期に SpinLock を使用する
 
@@ -24,9 +24,9 @@ ms.locfileid: "73137963"
   
  <xref:System.Threading.SpinLock> は、共有リソースのロックが非常に長い期間使用されない場合に有用なことがあります。 そのような場合、マルチコア コンピューターでは、ロックが解除されるまで数回のサイクルの間、ブロックされたスレッドをスピンさせると効率が高まることがあります。 スピンするとスレッドはブロックされなくなりますが、これは CPU 負荷の高いプロセスです。 ハイパースレッディングを使用するシステムでは、<xref:System.Threading.SpinLock> は特定の状況でスピンを停止して、論理プロセッサの不足や優先順位の逆転が発生するのを回避します。  
   
- この例では、<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> クラスを使用するため、マルチスレッド アクセスにはユーザーによる同期が必要になります。 .NET Framework Version 4 をターゲットにしているアプリケーションでは、ユーザーのロックが不要な <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> を使用することもできます。  
+ この例では、<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> クラスを使用するため、マルチスレッド アクセスにはユーザーによる同期が必要になります。 別の選択肢としては <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> を使用します。その場合、ユーザー ロックは不要です。  
   
- <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType> の呼び出しに `false` (Visual Basic では `False`) が使用されていることに注目してください。 これにより、最適なパフォーマンスを得られます。 メモリ フェンスを使用するには、IA64 アーキテクチャで `true` (Visual Basic では `True`) を指定します。これにより、書き込みバッファーがフラッシュされるので、ロックを使用して他のスレッドを終了できるようになります。  
+ <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType> の呼び出しに `false` が使用されていることに注目してください。 これにより、最適なパフォーマンスを得られます。 メモリ フェンスを使用するには、IA64 アーキテクチャで `true` を指定します。これにより、書き込みバッファーがフラッシュされるので、ロックを使用して他のスレッドを確実に終了できるようになります。  
   
 ## <a name="see-also"></a>参照
 

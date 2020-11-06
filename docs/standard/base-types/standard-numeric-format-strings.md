@@ -8,21 +8,21 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- numeric format strings [.NET Framework]
-- formatting [.NET Framework], numbers
+- numeric format strings [.NET]
+- formatting [.NET], numbers
 - standard format strings, numeric
 - format strings
-- numbers [.NET Framework], formatting
+- numbers [.NET], formatting
 - format specifiers, numeric
 - standard numeric format strings
-- formatting numbers [.NET Framework]
+- formatting numbers [.NET]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: 857e8803d27ae634dec6e19c6d183943e1c4cc41
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e5e1aa16d8df3d0cfce6dac00c91ca8e99e16e3d
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557373"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888972"
 ---
 # <a name="standard-numeric-format-strings"></a>標準の数値書式指定文字列
 
@@ -32,12 +32,12 @@ ms.locfileid: "90557373"
 
 - `xx` は *精度指定子* です。これは省略可能な整数値です。 精度指定子は 0 ～ 99 の範囲で指定され、結果の桁数に影響します。 精度指定子は、文字列形式の数値の桁数を制御することに注意してください。 精度指定子では、数値を丸めません。 丸め操作を実行するには、<xref:System.Math.Ceiling%2A?displayProperty=nameWithType>、<xref:System.Math.Floor%2A?displayProperty=nameWithType>、または <xref:System.Math.Round%2A?displayProperty=nameWithType> の各メソッドを使用します。
 
-  *精度指定子*によって結果文字列内の小数部の桁数を制御する場合、結果文字列では無限に正確な結果に最も近い表現可能な結果に丸められた数値が反映されます。 同じように近い表現可能な結果が 2 つある場合は、次のようになります。
-  - **.NET Framework および .NET Core 2.0 までの .NET Core の場合**、最下位の数字が大きい方の結果が選択されます (つまり、<xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType> が使用されます)。
-  - **.NET Core 2.1 以降の場合**、ランタイムでは最下位の数字が同一である結果が選択されます (つまり、<xref:System.MidpointRounding.ToEven?displayProperty=nameWithType> が使用されます)。
+  *精度指定子* によって結果文字列内の小数部の桁数を制御する場合、結果文字列では無限に正確な結果に最も近い表現可能な結果に丸められた数値が反映されます。 同じように近い表現可能な結果が 2 つある場合は、次のようになります。
+  - **.NET Framework および .NET Core 2.0 までの .NET Core の場合** 、ランタイムにより最下位の数字が大きい方の結果が選択されます (つまり、<xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType> が使用されます)。
+  - **.NET Core 2.1 以降の場合** 、ランタイムでは最下位の数字が同一である結果が選択されます (つまり、<xref:System.MidpointRounding.ToEven?displayProperty=nameWithType> が使用されます)。
 
   > [!NOTE]
-  > 精度指定子は、結果文字列の桁数を決定します。 結果文字列に先頭または末尾のスペースを埋め込むには、[複合書式指定](composite-formatting.md)機能を使用して、書式指定項目に *alignment コンポーネント*を定義します。
+  > 精度指定子は、結果文字列の桁数を決定します。 結果文字列に先頭または末尾のスペースを埋め込むには、 [複合書式指定](composite-formatting.md)機能を使用して、書式指定項目に *alignment コンポーネント* を定義します。
 
 標準の数値書式指定文字列は、以下をサポートしています。
 
@@ -48,13 +48,13 @@ ms.locfileid: "90557373"
 - C# と Visual Basic の[補間文字列](../../csharp/language-reference/tokens/interpolated.md)。複合書式指定文字列と比較すると、構文は単純です。
 
 > [!TIP]
-> **書式指定ユーティリティ**である .NET Core Windows Forms をダウンロードできます。このアプリケーションを使用すると、書式指定文字列を数値または日付と時刻の値に適用して、結果の文字列を表示できます。 ソース コードは [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) と [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb) で利用できます。
+> **書式指定ユーティリティ** である .NET Core Windows Forms をダウンロードできます。このアプリケーションを使用すると、書式指定文字列を数値または日付と時刻の値に適用して、結果の文字列を表示できます。 ソース コードは [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) と [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb) で利用できます。
 
 <a name="table"></a>次の表に、標準数値書式指定子の説明および書式指定子ごとのサンプル出力を示します。 標準の数値書式指定文字列の使用方法については、「[メモ](#NotesStandardFormatting)」をご覧ください。それらを使用する包括的な例については、「[例](#example)」をご覧ください。
 
 |書式指定子|名前|説明|使用例|
 |----------------------|----------|-----------------|--------------|
-|"C" または "c"|通貨|結果: 通貨値。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:小数部の桁数。<br /><br /> 既定の精度指定子:<xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> によって定義されます。<br /><br /> 詳細情報:[通貨 ("C") 書式指定子](#CFormatString)。|123.456 ("C", en-US) -> \\$123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> (\\$123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
+|"C" または "c"|通貨|結果: 通貨値。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:小数部の桁数。<br /><br /> 既定の精度指定子:<xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> によって定義されます。<br /><br /> 詳細情報:[通貨 ("C") 書式指定子](#CFormatString)。|123.456 ("C", en-US) -> \\$123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 &euro;<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> (\\$123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 &euro;<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
 |"D" または "d"|Decimal (10 進数型)|結果: 必要に応じて負の符号が付く整数。<br /><br /> サポート:整数型のみ。<br /><br /> 精度指定子:最小桁数。<br /><br /> 既定の精度指定子:必要な最小桁数。<br /><br /> 詳細情報:[10 進数 ("D") 書式指定子](#DFormatString)。|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|
 |"E" または "e"|指数|結果: 指数表記。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:小数部の桁数。<br /><br /> 既定の精度指定子:6.<br /><br /> 詳細情報:[指数 ("E") 書式指定子](#EFormatString)。|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1,05E+003|
 |"F" または "f"|固定小数点|結果: 必要に応じて負の符号が付く整数と小数。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:小数部の桁数。<br /><br /> 既定の精度指定子:<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> によって定義されます。<br /><br /> 詳細情報:[固定小数点 ("F") 書式指定子](#FFormatString)。|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|

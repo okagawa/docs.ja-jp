@@ -2,16 +2,16 @@
 title: 型のマーシャリング - .NET
 description: .NET が型をネイティブ表現にマーシャリングする方法について説明します。
 ms.date: 01/18/2019
-ms.openlocfilehash: 91b8f3d6cb53fd7a0adea7ea9669e7459e81445f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bedaf49a5f7c5274f5e1bc7774490fec73651259
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706267"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188394"
 ---
 # <a name="type-marshaling"></a>型のマーシャリング
 
-**マーシャリング**とは、マネージド コードとネイティブ コードの間でやり取りする必要がある場合に型を変換するプロセスです。
+**マーシャリング** とは、マネージド コードとネイティブ コードの間でやり取りする必要がある場合に型を変換するプロセスです。
 
 マネージド コードとアンマネージド コード内の型は異なるため、マーシャリングが必要です。 マネージド コードで、たとえば、`String` があるとします。アンマネージド環境では、文字列は Unicode ("ワイド")、Unicode 以外、Null 終了、ASCII などです。既定で、P/Invoke サブシステムは、この記事で説明する既定の動作に基づいて適切な処理を実行しようと試みます。 しかし、追加の制御が必要な状況では、[MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) 属性を採用して、アンマネージ側で期待する型を指定します。 たとえば、文字列を null で終わる ANSI 文字列として送信させる場合は、次のように指定できます。
 
@@ -87,7 +87,7 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 | `bool`    | `VARIANT_BOOL`                 |
 | `StringBuilder` | `LPWSTR`                 |
 | `string`  | `BSTR`                         |
-| デリゲート型 | .NET Framework では `_Delegate*`。 .NET Core では許可されていません。 |
+| デリゲート型 | .NET Framework では `_Delegate*`。 .NET Core および .NET 5+ では許可されていません。 |
 | `System.Drawing.Color` | `OLECOLOR`        |
 | .NET 配列 | `SAFEARRAY`                   |
 | `string[]` | `BSTR` の `SAFEARRAY`        |

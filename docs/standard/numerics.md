@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: 3b95a322377e82249a0375af589df74c658fcbf4
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 0fdf1b3ec1141dd637f817115bd1d2351c8af7a0
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507417"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687727"
 ---
 # <a name="numerics-in-net"></a>.NET における数値
 
@@ -88,10 +88,11 @@ ms.locfileid: "82507417"
 - 3 次元物理回転をエンコードするために使用されるベクトルを表す <xref:System.Numerics.Quaternion> 型。
 
 - 指定の数値型のベクトルを表し、SIMD サポートが活かされる広範囲の演算子セットを提供する <xref:System.Numerics.Vector%601> 型。 <xref:System.Numerics.Vector%601> インスタンスの数は固定ですが、その値 <xref:System.Numerics.Vector%601.Count%2A?displayProperty=nameWithType> はコードが実行されるコンピューターの CPU に依存します。
+
   > [!NOTE]
-  > <xref:System.Numerics.Vector%601> 型は .NET Framework に含まれません。 この型にアクセスするには、[System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors) NuGet パッケージをインストールする必要があります。
+  > <xref:System.Numerics.Vector%601> 型は、.NET Core および .NET 5 以上に含まれていますが、.NET Framework には含まれていません。 .NET Framework を使用している場合、この型にアクセスするには、[System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors) NuGet パッケージをインストールしてください。
   
-SIMD 対応の型は、それが SIMD 非対応のハードウェアや JIT コンパイラと共に使用できるように実装されます。 SIMD 命令を活用するために、64 ビット アプリは RyuJIT コンパイラを使用するランタイムで実行する必要があります。このコンパイラは .NET Core と 4.6 以降の .NET Framework に含まれています。 64 ビット プロセッサを対象にするとき、SIMD サポートが追加されます。
+SIMD 対応の型は、それが SIMD 非対応のハードウェアや JIT コンパイラと共に使用できるように実装されます。 SIMD 命令を活用するには、64 ビット アプリを、RyuJIT コンパイラを使用するランタイムで実行する必要があります。これは .NET Core と 4.6 以降のバージョンの .NET Framework に含まれています。 64 ビット プロセッサを対象にするとき、SIMD サポートが追加されます。
 
 詳細については、[SIMD アクセラレータの数値型の使用](simd.md)に関するページを参照してください。
 

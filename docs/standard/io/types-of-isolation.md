@@ -9,8 +9,8 @@ dev_langs:
 helpviewer_keywords:
 - storing data using isolated storage, accessing isolated storage
 - storing data using isolated storage, isolation types
-- authentication [.NET Framework], isolated storage
-- assemblies [.NET Framework], identity
+- authentication [.NET], isolated storage
+- assemblies [.NET], identity
 - isolated storage, accessing
 - data storage using isolated storage, isolation types
 - data storage using isolated storage, accessing isolated storage
@@ -18,14 +18,15 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: 244bd9c25040b39c9349d28f57981f29d7a32d0a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a1d64f0dfe8a457ae551792a852bd816941f2777
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542035"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189033"
 ---
 # <a name="types-of-isolation"></a>分離のタイプ
+
 分離ストレージへのアクセスは、常にそのストレージを作成したユーザーに限定されます。 この種の分離を実装するために、共通言語ランタイムは、オペレーティング システムが認識するユーザー ID (ストアを開くときにコードが実行しているプロセスに関連付けられた ID) と同じ概念を使用します。 この ID は認証されたユーザーの ID ですが、偽装によって現在のユーザーの ID が動的に変更される可能性があります。  
   
  また、分離ストレージへのアクセスは、アプリケーションのドメインおよびアセンブリ、またはアセンブリのみに関連付けられた ID に従って制限されます。 ランタイムは、以下の方法でこのような ID を取得します。  

@@ -2,12 +2,12 @@
 title: .NET ライブラリのクロス プラットフォーム ターゲット
 description: クロス プラットフォームの .NET ライブラリを作成する際のベスト プラクティスの推奨事項。
 ms.date: 08/12/2019
-ms.openlocfilehash: 6309e300861ab286dcaba3256267b3459e6e0d10
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 038a03904c4cfe49758562b5748fef06ae1afa4b
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223342"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189252"
 ---
 # <a name="cross-platform-targeting"></a>クロス プラットフォーム ターゲット
 
@@ -33,7 +33,7 @@ ms.locfileid: "92223342"
 
 ❌ `netstandard1.x` ターゲットを含めることは避けてください。
 
-> .NET Standard 1.x は、NuGet の細かいパッケージ セットとして配布されます。大きなパッケージの依存関係グラフが作成されるため、開発者は構築時に多くのパッケージをダウンロードすることになります。 .NET Framework 4.6.1、UWP および Xamarin など、最新の .NET プラットフォームではすべて、.NET Standard 2.0 がサポートされます。 特に古いプラットフォームをターゲットにする必要がある場合は、.NET Standard 1.x のみをターゲットにしてください。
+> .NET Standard 1.x は、NuGet の細かいパッケージ セットとして配布されます。大きなパッケージの依存関係グラフが作成されるため、開発者は構築時に多くのパッケージをダウンロードすることになります。 最新の .NET 実装は .NET Standard 2.0 をサポートしています。 特に古いプラットフォームをターゲットにする必要がある場合は、.NET Standard 1.x のみをターゲットにしてください。
 
 ✔️ `netstandard1.x` ターゲットを必要とする場合は、`netstandard2.0` ターゲットを含めてください。
 

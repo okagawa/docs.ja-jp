@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: 4d528c54816961caa251ce054abf2c6cf07e9d01
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 63ee85f3d8bab865ce34566ec381d23676b27991
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769107"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188589"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>マルチスレッド処理のためのデータの同期
 
@@ -25,7 +25,7 @@ ms.locfileid: "84769107"
   
 - 手動での同期。 .NET クラス ライブラリによって提供されている同期オブジェクトを使用できます。 「[同期プリミティブの概要](overview-of-synchronization-primitives.md)」を参照してください。これには、<xref:System.Threading.Monitor> クラスの説明が含まれています。  
   
-- 同期されたコンテキスト。 .NET Framework および Xamarin アプリケーションでは、<xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> を使用することで、<xref:System.ContextBoundObject> オブジェクトの単純な自動同期を有効にすることができます。  
+- 同期されたコンテキスト。 .NET Framework および Xamarin アプリケーションでのみ、<xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> を使用することで、<xref:System.ContextBoundObject> オブジェクトの単純な自動同期を有効にすることができます。  
   
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType> 名前空間のコレクション クラス。 これらのクラスには、同期された追加操作および削除操作が組み込まれています。 詳しくは、「[スレッド セーフなコレクション](../collections/thread-safe/index.md)」を参照してください。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "84769107"
 ### <a name="compiler-support"></a>コンパイラ サポート  
  Visual Basic と C# は、どちらも <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> と <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> を使用してオブジェクトをロックする言語キーワードをサポートします。 Visual Basic は [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) ステートメントをサポートしており、C# は [lock](../../csharp/language-reference/keywords/lock-statement.md) ステートメントをサポートしています。  
   
- 両方とも、コード ブロックで例外がスローされると、**lock** または **SyncLock** によって取得されたロックは自動的に解放されます。 C# コンパイラおよび Visual Basic コンパイラは **try**/**finally** ブロックを生成します。tryブロックは先頭に **Monitor.Enter** を含み、**finally** ブロックは **Monitor.Exit** を含みます。 **lock** ブロックまたは **SyncLock** ブロック内部で例外がスローされると、**finally** ハンドラーが実行され、任意のクリーンアップ作業を行えるようになります。  
+ 両方とも、コード ブロックで例外がスローされると、 **lock** または **SyncLock** によって取得されたロックは自動的に解放されます。 C# コンパイラおよび Visual Basic コンパイラは **try**/**finally** ブロックを生成します。tryブロックは先頭に **Monitor.Enter** を含み、 **finally** ブロックは **Monitor.Exit** を含みます。 **lock** ブロックまたは **SyncLock** ブロック内部で例外がスローされると、 **finally** ハンドラーが実行され、任意のクリーンアップ作業を行えるようになります。  
   
 ## <a name="synchronized-context"></a>同期されたコンテキスト  
 

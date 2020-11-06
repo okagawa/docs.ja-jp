@@ -2,12 +2,12 @@
 title: 厳密な名前付けと .NET ライブラリ
 description: .NET ライブラリに対する厳密な名前付けに関するベスト プラクティスの推奨事項。
 ms.date: 10/16/2018
-ms.openlocfilehash: b72d4a8c320ac857fbcd6abe44f467805f72b5b3
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 6f9533d768331964a8e640243536b12ddde158e5
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654561"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189213"
 ---
 # <a name="strong-naming"></a>厳密な名前付け
 
@@ -28,7 +28,7 @@ ms.locfileid: "91654561"
 </configuration>
 ```
 
-.NET 開発者が厳密な名前付けについて不満を持つ場合、通常、その内容は厳密なアセンブリの読み込みに関するものです。 さいわい、この問題は .NET Framework に特定されます。 .NET Core、Xamarin、UWP、およびその他のほとんどの .NET 実装では厳密なアセンブリの読み込みは行われず、厳密な名前付けの主な欠点はなくなります。
+.NET 開発者が厳密な名前付けについて不満を持つ場合、通常、その内容は厳密なアセンブリの読み込みに関するものです。 さいわい、この問題は .NET Framework に特定されます。 .NET 5+、.NET Core、Xamarin、UWP、その他のほとんどの .NET 実装には、厳密な名前付けの主な欠点である厳密なアセンブリ読み込みがありません。
 
 厳密な名前付けの重要な側面の 1 つはウイルスです。厳密な名前付きのアセンブリで参照できるのは、他の厳密な名前付きのアセンブリのみです。 ご利用のライブラリに厳密な名前が付けられていない場合、厳密な名前付けが必要なアプリケーションやライブラリを構築している開発者はその使用から除外されています。
 

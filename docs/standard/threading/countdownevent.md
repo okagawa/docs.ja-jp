@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - synchronization primitives, CountdownEvent
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
-ms.openlocfilehash: 8ed1414ad377015400d9e126d924bf426fbc753d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: de9b49de86eb6489181afc8d8f5fbb1222bf877d
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277857"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188407"
 ---
 # <a name="countdownevent"></a>CountdownEvent
+
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> は同期プリミティブであり、特定の回数シグナル状態になった後、待機スレッドのブロックを解除します。 <xref:System.Threading.CountdownEvent> は、通常は <xref:System.Threading.ManualResetEvent> または <xref:System.Threading.ManualResetEventSlim> を使用して、イベントをシグナル化する前に変数を手動でデクリメントする必要があるシナリオ用に設計されています。 たとえば、fork/join シナリオでは、単にシグナル数 5 の <xref:System.Threading.CountdownEvent> を作成し、スレッド プールで 5 つの作業項目を開始し、完了時に各作業項目呼び出し <xref:System.Threading.CountdownEvent.Signal%2A> を使用できます。 <xref:System.Threading.CountdownEvent.Signal%2A> を呼び出すたびに、シグナル数が 1 だけデクリメントします。 メイン スレッドでは、シグナル数がゼロになるまで、<xref:System.Threading.CountdownEvent.Wait%2A> の呼び出しがブロックされます。  
   
 > [!NOTE]
@@ -29,7 +30,7 @@ ms.locfileid: "84277857"
   
 - <xref:System.Threading.CountdownEvent.Reset%2A> メソッドを呼び出すことで <xref:System.Threading.CountdownEvent.Wait%2A> が返された後、インスタンスを再利用できます。  
   
-- インスタンスは、<xref:System.Threading.WaitHandle.WaitAll%2A> などの他の .NET Framework の同期 API との統合のために <xref:System.Threading.WaitHandle> を公開します。  
+- インスタンスは、<xref:System.Threading.WaitHandle.WaitAll%2A> などの他の .NET の同期 API との統合のために <xref:System.Threading.WaitHandle> を公開します。  
   
 ## <a name="basic-usage"></a>基本的な使用方法  
  <xref:System.Threading.CountdownEvent> と <xref:System.Threading.ThreadPool> 作業項目を使用する方法を次の例に示します。  

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - character classes
 - regular expressions, character classes
 - characters, matching syntax
-- .NET Framework regular expressions, character classes
+- .NET regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.openlocfilehash: 85107bf2234eda1705126e524acd5b35952094bc
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 619a32d98d697b3b1d461921bfe581acb720be68
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292099"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888725"
 ---
 # <a name="character-classes-in-regular-expressions"></a>正規表現での文字クラス
 
@@ -48,7 +48,7 @@ ms.locfileid: "84292099"
  .NET は、文字クラスの減算式をサポートしています。これにより、ある文字クラスから別の文字クラスを除外した結果を文字のセットとして定義できます。 詳細については、「[文字クラス減算](#CharacterClassSubtraction)」を参照してください。  
   
 > [!NOTE]
-> カテゴリ別の文字に一致する文字クラス (単語文字に一致する [\w](#WordCharacter)、Unicode カテゴリに一致する [\p{}](#CategoryOrBlock) など) は、<xref:System.Globalization.CharUnicodeInfo> クラスを使用して文字カテゴリに関する情報を提供します。  .NET Framework 4.6.2 以降の文字カテゴリは、[Unicode 標準バージョン 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/) に基づいています。 .NET Framework 4 から .NET Framework 4.6.1 では、[Unicode Standard バージョン 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/) に基づいています。  
+> カテゴリ別の文字に一致する文字クラス (単語文字に一致する [\w](#WordCharacter)、Unicode カテゴリに一致する [\p{}](#CategoryOrBlock) など) は、<xref:System.Globalization.CharUnicodeInfo> クラスを使用して文字カテゴリに関する情報を提供します。 .NET Framework 4.6.2 以降のバージョンでは、文字カテゴリは、[Unicode 標準バージョン 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/) に基づいています。
   
 <a name="PositiveGroup"></a>
 ## <a name="positive-character-group--"></a>文字グループの肯定: [ ]  
@@ -58,20 +58,20 @@ ms.locfileid: "84292099"
 
 `[*character_group*]`
 
- ここで、*character_group* は、入力文字列に含まれるなら一致と見なされる個別の文字の一覧です。 *character_group* は、リテラル文字、[エスケープ文字](character-escapes-in-regular-expressions.md)、または文字クラスを 1 つ以上組み合わせて構成されます。  
+ ここで、 *character_group* は、入力文字列に含まれるなら一致と見なされる個別の文字の一覧です。 *character_group* は、リテラル文字、[エスケープ文字](character-escapes-in-regular-expressions.md)、または文字クラスを 1 つ以上組み合わせて構成されます。  
   
  文字の範囲を指定する構文は次のとおりです。  
   
 `[firstCharacter-lastCharacter]`  
   
- ここで、*firstCharacter* は範囲の最初の文字で、*lastCharacter* は範囲の最後の文字です。 文字範囲は連続する一連の文字で、範囲の最初の文字、ハイフン (-)、および範囲の最後の文字を指定することで定義されます。 2 つの文字の Unicode コード ポイントが隣接している場合、それらの文字は連続しています。 *firstCharacter* は、より低いコード ポイントを持つ文字にする必要があります。*lastCharacter* はより高いコード ポイントを持つ文字にする必要があります。
+ ここで、 *firstCharacter* は範囲の最初の文字で、 *lastCharacter* は範囲の最後の文字です。 文字範囲は連続する一連の文字で、範囲の最初の文字、ハイフン (-)、および範囲の最後の文字を指定することで定義されます。 2 つの文字の Unicode コード ポイントが隣接している場合、それらの文字は連続しています。 *firstCharacter* は、より低いコード ポイントを持つ文字にする必要があります。 *lastCharacter* はより高いコード ポイントを持つ文字にする必要があります。
 
 > [!NOTE]
 > 正の文字グループには文字セットと文字範囲の両方を含めることができるため、ハイフン文字 (`-`) は、グループの最初の文字または最後の文字でない限り、常に範囲の区切り文字として解釈されます。
 
 文字クラスの肯定を含む一般的な正規表現パターンをいくつか次の表に示します。  
   
-|パターン|説明|  
+|Pattern|説明|  
 |-------------|-----------------|  
 |`[aeiou]`|すべての母音と一致します。|  
 |`[\p{P}\d]`|すべての句読点および 10 進数字と一致します。|  
@@ -84,7 +84,7 @@ ms.locfileid: "84292099"
   
  正規表現パターン `gr[ae]y\s\S+?[\s|\p{P}]` は、次のように定義されます。  
   
-|パターン|説明|  
+|Pattern|説明|  
 |-------------|-----------------|  
 |`gr`|リテラル文字 "gr" と一致します。|  
 |`[ae]`|"a" または "e" と一致します。|  
@@ -114,13 +114,13 @@ ms.locfileid: "84292099"
 
 `[*^character_group*]`
 
- ここで、*character_group* は、入力文字列に含まれない場合に一致と見なされる個別の文字の一覧です。 *character_group* は、リテラル文字、[エスケープ文字](character-escapes-in-regular-expressions.md)、または文字クラスを 1 つ以上組み合わせて構成されます。  
+ ここで、 *character_group* は、入力文字列に含まれない場合に一致と見なされる個別の文字の一覧です。 *character_group* は、リテラル文字、[エスケープ文字](character-escapes-in-regular-expressions.md)、または文字クラスを 1 つ以上組み合わせて構成されます。  
   
  文字の範囲を指定する構文は次のとおりです。  
 
 `[^*firstCharacter*-*lastCharacter*]`
 
-ここで、*firstCharacter* は範囲の最初の文字で、*lastCharacter* は範囲の最後の文字です。 文字範囲は連続する一連の文字で、範囲の最初の文字、ハイフン (-)、および範囲の最後の文字を指定することで定義されます。 2 つの文字の Unicode コード ポイントが隣接している場合、それらの文字は連続しています。 *firstCharacter* は、より低いコード ポイントを持つ文字にする必要があります。*lastCharacter* はより高いコード ポイントを持つ文字にする必要があります。
+ここで、 *firstCharacter* は範囲の最初の文字で、 *lastCharacter* は範囲の最後の文字です。 文字範囲は連続する一連の文字で、範囲の最初の文字、ハイフン (-)、および範囲の最後の文字を指定することで定義されます。 2 つの文字の Unicode コード ポイントが隣接している場合、それらの文字は連続しています。 *firstCharacter* は、より低いコード ポイントを持つ文字にする必要があります。 *lastCharacter* はより高いコード ポイントを持つ文字にする必要があります。
 
 > [!NOTE]
 > 負の文字グループには文字セットと文字範囲の両方を含めることができるため、ハイフン文字 (`-`) は、グループの最初の文字または最後の文字でない限り、常に範囲の区切り文字として解釈されます。
@@ -134,7 +134,7 @@ ms.locfileid: "84292099"
   
  文字グループの否定を含む一般的な正規表現パターンをいくつか次の表に示します。  
   
-|パターン|説明|  
+|Pattern|説明|  
 |-------------|-----------------|  
 |`[^aeiou]`|母音を除くすべての文字と一致します。|  
 |`[^\p{P}\d]`|句読点および 10 進数字を除くすべての文字と一致します。|  
@@ -184,7 +184,7 @@ ms.locfileid: "84292099"
   
  `\p{` *name* `}`  
   
- Unicode 一般カテゴリまたは名前付きブロックに属する任意の文字と一致します。ここで、*name* はカテゴリの省略形または名前付きブロックの名前です。 カテゴリの省略形の一覧については、このトピックで後述する「[サポートされている Unicode 一般カテゴリ](#SupportedUnicodeGeneralCategories)」を参照してください。 名前付きブロックの一覧については、このトピックで後述する「[サポートされている名前付きブロック](#SupportedNamedBlocks)」を参照してください。  
+ Unicode 一般カテゴリまたは名前付きブロックに属する任意の文字と一致します。ここで、 *name* はカテゴリの省略形または名前付きブロックの名前です。 カテゴリの省略形の一覧については、このトピックで後述する「[サポートされている Unicode 一般カテゴリ](#SupportedUnicodeGeneralCategories)」を参照してください。 名前付きブロックの一覧については、このトピックで後述する「[サポートされている名前付きブロック](#SupportedNamedBlocks)」を参照してください。  
   
  `\p{`*name*`}` 構成要素を使用して Unicode 一般カテゴリ (この場合は `Pd` (Punctuation, Dash: 句読点、ダッシュ) カテゴリ) と名前付きブロック (`IsGreek` 名前付きブロックおよび `IsBasicLatin` 名前付きブロック) の両方を照合する例を次に示します。  
   
@@ -213,7 +213,7 @@ ms.locfileid: "84292099"
   
  `\P{` *name* `}`  
   
- Unicode 一般カテゴリにも名前付きブロックにも属さない任意の文字と一致します。ここで、*name* はカテゴリの省略形または名前付きブロックの名前です。 カテゴリの省略形の一覧については、このトピックで後述する「[サポートされている Unicode 一般カテゴリ](#SupportedUnicodeGeneralCategories)」を参照してください。 名前付きブロックの一覧については、このトピックで後述する「[サポートされている名前付きブロック](#SupportedNamedBlocks)」を参照してください。  
+ Unicode 一般カテゴリにも名前付きブロックにも属さない任意の文字と一致します。ここで、 *name* はカテゴリの省略形または名前付きブロックの名前です。 カテゴリの省略形の一覧については、このトピックで後述する「[サポートされている Unicode 一般カテゴリ](#SupportedUnicodeGeneralCategories)」を参照してください。 名前付きブロックの一覧については、このトピックで後述する「[サポートされている名前付きブロック](#SupportedNamedBlocks)」を参照してください。  
   
  `\P{`*name*`}` 構成要素を使用して通貨記号 (この場合は `Sc` (Symbol, Currency: 記号、通貨) カテゴリ) を数値文字列から削除する例を次に示します。  
   
@@ -229,7 +229,7 @@ ms.locfileid: "84292099"
 |カテゴリ|説明|  
 |--------------|-----------------|  
 |Ll|Letter, Lowercase (字、小文字)|  
-|Lu|Letter, Uppercase (字、大文字)|  
+|ルー語|Letter, Uppercase (字、大文字)|  
 |Lt|Letter, Titlecase (字、タイトル文字)|  
 |Lo|Letter, Other (字、その他)|  
 |Lm|Letter, Modifier (字、修飾)|  
@@ -263,7 +263,7 @@ ms.locfileid: "84292099"
 |カテゴリ|説明|  
 |--------------|-----------------|  
 |Ll|Letter, Lowercase (字、小文字)|  
-|Lu|Letter, Uppercase (字、大文字)|  
+|ルー語|Letter, Uppercase (字、大文字)|  
 |Lt|Letter, Titlecase (字、タイトル文字)|  
 |Lo|Letter, Other (字、その他)|  
 |Lm|Letter, Modifier (字、修飾)|  
@@ -274,7 +274,7 @@ ms.locfileid: "84292099"
  ECMAScript 準拠の動作が指定された場合、`\W` は `[^a-zA-Z_0-9]` と同じになります。 ECMAScript 正規表現の詳細については、「[正規表現のオプション](regular-expression-options.md)」の「ECMAScript 一致の動作」のセクションを参照してください。  
   
 > [!NOTE]
-> `\W` 言語要素は単語に使用されない任意の文字と一致するので、正規表現パターンが単語に使用されない任意の文字の後に特定の単語に使用されない文字が続く語と複数回一致する場合に最短一致の量指定子と共によく使用されます。 詳細については、「[正規表現での量指定子](quantifiers-in-regular-expressions.md)」を参照してください。  
+> `\W` 言語要素は単語に使用されない任意の文字と一致するので、正規表現パターンが単語に使用されない任意の文字の後に特定の単語に使用されない文字が続く語と複数回一致する場合に最短一致の量指定子と共によく使用されます。 詳細については、「 [量指定子](quantifiers-in-regular-expressions.md)」を参照してください。  
   
  `\W` 文字クラスの例を次に示します。  この例では、単語の後に 1 つまたは 2 つの単語に使用されない文字 (空白や句読点など) が続く場合に一致する正規表現パターン `\b(\w+)(\W){1,2}` を定義しています。 この正規表現の解釈を次の表に示します。  
   
@@ -439,7 +439,7 @@ ms.locfileid: "84292099"
 |0250 ～ 02AF|`IsIPAExtensions`|  
 |02B0 ～ 02FF|`IsSpacingModifierLetters`|  
 |0300 ～ 036F|`IsCombiningDiacriticalMarks`|  
-|0370 ～ 03FF|`IsGreek`<br /><br /> \- または -<br /><br /> `IsGreekandCoptic`|  
+|0370 ～ 03FF|`IsGreek`<br /><br /> または<br /><br /> `IsGreekandCoptic`|  
 |0400 ～ 04FF|`IsCyrillic`|  
 |0500 ～ 052F|`IsCyrillicSupplement`|  
 |0530 ～ 058F|`IsArmenian`|  
@@ -483,7 +483,7 @@ ms.locfileid: "84292099"
 |2000 ～ 206F|`IsGeneralPunctuation`|  
 |2070 ～ 209F|`IsSuperscriptsandSubscripts`|  
 |20A0 ～ 20CF|`IsCurrencySymbols`|  
-|20D0 ～ 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> \- または -<br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0 ～ 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> または<br /><br /> `IsCombiningMarksforSymbols`|  
 |2100 ～ 214F|`IsLetterlikeSymbols`|  
 |2150 ～ 218F|`IsNumberForms`|  
 |2190 ～ 21FF|`IsArrows`|  
@@ -546,7 +546,7 @@ ms.locfileid: "84292099"
   
  `[` *base_group* `-[` *excluded_group* `]]`  
   
- 角かっこ (`[]`) とハイフン (`-`) は省略できません。 *base_group* は、[文字グループの肯定](#PositiveGroup)または[文字グループの否定](#NegativeGroup)です。 *excluded_group* は、別の文字グループの肯定または文字グループの否定、あるいは別の文字クラス減算式です (つまり文字クラス減算式は入れ子にすることができます)。  
+ 角かっこ (`[]`) とハイフン (`-`) は省略できません。 *base_group* は、 [文字グループの肯定](#PositiveGroup)または [文字グループの否定](#NegativeGroup)です。 *excluded_group* は、別の文字グループの肯定または文字グループの否定、あるいは別の文字クラス減算式です (つまり文字クラス減算式は入れ子にすることができます)。  
   
  たとえば、"a" ～ "z" の文字範囲で構成される基本グループがあるとします。 "m" を除外した基本グループで構成される文字のセットを定義するには、`[a-z-[m]]` を使用します。 "d"、"j" および "p" の文字を除外した基本グループで構成される文字のセットを定義するには、`[a-z-[djp]]` を使用します。 "m" ～ "p" の文字範囲を除外した基本グループで構成される文字のセットを定義するには、`[a-z-[m-p]]` を使用します。  
   

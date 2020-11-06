@@ -10,20 +10,20 @@ helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
 - BackgroundWorker component
-- events [.NET Framework], asynchronous
+- events [.NET], asynchronous
 - Asynchronous Pattern
 - AsyncOperationManager class
-- threading [.NET Framework], asynchronous features
-- components [.NET Framework], asynchronous
+- threading [.NET], asynchronous features
+- components [.NET], asynchronous
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 466a0dd8a827cd869894106a0901bdab89601e25
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ca4b1b3ff1fb7180250de7436db9a4d642e8118c
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559097"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888790"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>イベントベースの非同期パターンの実装
 
@@ -75,7 +75,7 @@ ms.locfileid: "90559097"
 
 - 複数の呼び出しを受け入れます。
 
-必要に応じて、_MethodName_**Async** と同一の _MethodName_**Async** オーバーロードを定義しますが、`userState` という追加のオブジェクト値パラメーターを使用して定義します。 これは、メソッドの複数の同時呼び出しを管理するために実行します。この場合、メソッドの呼び出しを区別するために `userState` 値がすべてのイベント ハンドラーに返されます。 単純に後で取得するためにユーザーの状態を格納する場所として実行することもできます。
+必要に応じて、 _MethodName_**Async** と同一の _MethodName_**Async** オーバーロードを定義しますが、`userState` という追加のオブジェクト値パラメーターを使用して定義します。 これは、メソッドの複数の同時呼び出しを管理するために実行します。この場合、メソッドの呼び出しを区別するために `userState` 値がすべてのイベント ハンドラーに返されます。 単純に後で取得するためにユーザーの状態を格納する場所として実行することもできます。
 
 個別の _MethodName_**Async** メソッドのシグネチャに対して、次の手順を実行します。
 
@@ -125,7 +125,7 @@ ms.locfileid: "90559097"
 
 - 今後の予想される追加機能を含め、クラスには、キャンセルをサポートする非同期操作が 1 つだけあるかどうか。
 
-- キャンセルをサポートする非同期操作が、複数の保留中の操作をサポートできるかどうか。 これは、_MethodName_**Async** メソッドが `userState` パラメーターを受け取り、いずれかの呼び出しが終了するまで待機する前に、複数の呼び出しを許可できるかどうかを意味します。
+- キャンセルをサポートする非同期操作が、複数の保留中の操作をサポートできるかどうか。 これは、 _MethodName_**Async** メソッドが `userState` パラメーターを受け取り、いずれかの呼び出しが終了するまで待機する前に、複数の呼び出しを許可できるかどうかを意味します。
 
 これら 2 つの質問に対する回答を次の表に当てはめて、キャンセル メソッドで使用するシグネチャを決定します。
 
@@ -149,13 +149,13 @@ ms.locfileid: "90559097"
 
 同じクラスに上の表の複数のメソッドを定義しないでください。 それは意味のない行為であるか、メソッドの増加によってクラス インターフェイスがわかりにくくなります。
 
-これらのメソッドは、通常は直ちに結果が戻り、操作が実際にキャンセルされる場合もキャンセルされない場合もあります。 _MethodName_**Completed** イベント用のイベント ハンドラーでは、_MethodName_**CompletedEventArgs** オブジェクトに `Cancelled` フィールドが含まれます。クライアントはこれを使用して、キャンセルが発生したかどうかを判断できます。
+これらのメソッドは、通常は直ちに結果が戻り、操作が実際にキャンセルされる場合もキャンセルされない場合もあります。 _MethodName_**Completed** イベント用のイベント ハンドラーでは、 _MethodName_**CompletedEventArgs** オブジェクトに `Cancelled` フィールドが含まれます。クライアントはこれを使用して、キャンセルが発生したかどうかを判断できます。
 
 「[イベントベースの非同期パターンを実装するための推奨される手順](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)」に説明されているキャンセルのセマンティクスに従ってください。
 
 ## <a name="optionally-support-the-isbusy-property"></a>IsBusy プロパティの任意のサポート
 
-クラスが複数の同時呼び出しをサポートしない場合は、`IsBusy` プロパティを公開することを検討してください。 開発者は、このプロパティによって、_MethodName_**Async** メソッドが _MethodName_**Async** メソッドからの例外をキャッチせずに実行されているかどうかを判断できます。
+クラスが複数の同時呼び出しをサポートしない場合は、`IsBusy` プロパティを公開することを検討してください。 開発者は、このプロパティによって、 _MethodName_**Async** メソッドが _MethodName_**Async** メソッドからの例外をキャッチせずに実行されているかどうかを判断できます。
 
 「[イベントベースの非同期パターンを実装するための推奨される手順](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)」に説明されている `IsBusy` のセマンティクスに従ってください。
 
@@ -175,9 +175,9 @@ ms.locfileid: "90559097"
 
 このイベントは、<xref:System.ComponentModel.ProgressChangedEventHandler> デリゲート シグネチャと <xref:System.ComponentModel.ProgressChangedEventArgs> クラスを使用する必要があります。 別の方法として、ドメイン固有の進行状況インジケーター (読み取られたバイト数やダウンロード操作の合計バイト数など) を提供できる場合は、<xref:System.ComponentModel.ProgressChangedEventArgs> の派生クラスを定義します。
 
-サポートされる非同期メソッドの数にかかわらず、クラスの `ProgressChanged` または _MethodName_**ProgressChanged** イベントは 1 つしかないことに注意してください。 クライアントは、_MethodName_**Async** メソッドに渡される `userState` オブジェクトを使用して、複数の同時操作に対する進行状況の更新を区別することが期待されています。
+サポートされる非同期メソッドの数にかかわらず、クラスの `ProgressChanged` または _MethodName_**ProgressChanged** イベントは 1 つしかないことに注意してください。 クライアントは、 _MethodName_**Async** メソッドに渡される `userState` オブジェクトを使用して、複数の同時操作に対する進行状況の更新を区別することが期待されています。
 
-複数の操作で進行状況がサポートされ、それぞれが異なる進行状況インジケーターを返す状況が発生することがあります。 この場合は、1 つの `ProgressChanged` イベントでは不適切であり、複数の `ProgressChanged` のサポートを検討することができます。 この場合は、各 _MethodName_**Async** メソッドに対して、_MethodName_**ProgressChanged** の名前付けパターンを使用します。
+複数の操作で進行状況がサポートされ、それぞれが異なる進行状況インジケーターを返す状況が発生することがあります。 この場合は、1 つの `ProgressChanged` イベントでは不適切であり、複数の `ProgressChanged` のサポートを検討することができます。 この場合は、各 _MethodName_**Async** メソッドに対して、 _MethodName_**ProgressChanged** の名前付けパターンを使用します。
 
 「[イベントベースの非同期パターンを実装するための推奨される手順](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)」に説明されている進行状況報告のセマンティクスに従ってください。
 
@@ -193,13 +193,13 @@ ms.locfileid: "90559097"
 
 - 報告する増分結果があるときに、この _MethodName_**ProgressChanged** イベントを発生させます。
 
-このソリューションは、_MethodName_**ProgressChanged** イベントと同じように、同じイベントの発生で "すべての操作" に対して増分結果を返しても何の問題もないため、特に単一非同期操作のクラスに適用されます。
+このソリューションは、 _MethodName_**ProgressChanged** イベントと同じように、同じイベントの発生で "すべての操作" に対して増分結果を返しても何の問題もないため、特に単一非同期操作のクラスに適用されます。
 
 ### <a name="multiple-operation-class-with-homogeneous-incremental-results"></a>同じ型の増分結果を持つ複数操作クラス
 
 この場合、クラスは、それぞれが増分結果を返すことができる複数の非同期メソッドをサポートし、増分結果はすべて同じ型のデータを持っています。
 
-同じ <xref:System.EventArgs> 構造体がすべての増分結果で機能するため、上記の単一操作クラスで説明したモデルに従います。 複数の非同期メソッドに適用するため、_MethodName_**ProgressChanged** イベントの代わりに `ProgressChanged` イベントを定義します。
+同じ <xref:System.EventArgs> 構造体がすべての増分結果で機能するため、上記の単一操作クラスで説明したモデルに従います。 複数の非同期メソッドに適用するため、 _MethodName_**ProgressChanged** イベントの代わりに `ProgressChanged` イベントを定義します。
 
 ### <a name="multiple-operation-class-with-heterogeneous-incremental-results"></a>異なる型の増分結果を持つ複数操作クラス
 
@@ -213,13 +213,13 @@ ms.locfileid: "90559097"
 
 ## <a name="handling-out-and-ref-parameters-in-methods"></a>メソッドでの Out パラメーターと Ref パラメーターの処理
 
-一般に、.NET Framework では、`out` と `ref` の使用は避けることを推奨していますが、それらが存在するときのルールを次に示します。
+.NET での `out` と `ref` の使用は、一般に推奨されていませんが、それらが存在する場合は、次のルールに従います。
 
 非同期メソッド *MethodName* の場合:
 
-- *MethodName* に対する `out` パラメーターは、_MethodName_**Async** の一部にしないでください。 代わりに、*MethodName* での同等のパラメーターと同じ名前の _MethodName_**CompletedEventArgs** の一部にする必要があります (より適切な名前がない限り)。
+- *MethodName* に対する `out` パラメーターは、 _MethodName_**Async** の一部にしないでください。 代わりに、 *MethodName* での同等のパラメーターと同じ名前の _MethodName_**CompletedEventArgs** の一部にする必要があります (より適切な名前がない限り)。
 
-- *MethodName* に対する `ref` パラメーターは、_MethodName_**Async** の一部として出現し、*MethodName* での同等のパラメーターと同じ名前の _MethodName_**CompletedEventArgs** の一部として出現する必要があります (より適切な名前がない限り)。
+- *MethodName* に対する `ref` パラメーターは、 _MethodName_**Async** の一部として出現し、 *MethodName* での同等のパラメーターと同じ名前の _MethodName_**CompletedEventArgs** の一部として出現する必要があります (より適切な名前がない限り)。
 
 次に例を示します。
 

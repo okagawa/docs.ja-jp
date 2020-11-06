@@ -8,16 +8,16 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- threading [.NET Framework], creating
-- threading [.NET Framework], passing data to threads
-- threading [.NET Framework], retrieving data from threads
+- threading [.NET], creating
+- threading [.NET], passing data to threads
+- threading [.NET], retrieving data from threads
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
-ms.openlocfilehash: 811028d3c853441ff3a61d3628a44e5c65ba7059
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: a1e8f8f6e017d29f352d79ea08c09b2d97041bba
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84661915"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188381"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>スレッドを作成し、開始時にデータを渡す
 
@@ -40,9 +40,9 @@ ms.locfileid: "84661915"
   
 ## <a name="passing-data-to-threads"></a>データをスレッドに渡す
 
- .NET framework Version 2.0 では、<xref:System.Threading.ParameterizedThreadStart> デリゲートは、<xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> メソッド オーバーロードの呼び出し時にスレッドにデータを含むオブジェクトを渡すための簡単な方法を提供します。 コード例については、「<xref:System.Threading.ParameterizedThreadStart>」を参照してください。  
+<xref:System.Threading.ParameterizedThreadStart> デリゲートは、<xref:System.Threading.Thread.Start(System.Object)?displayProperty=nameWithType> の呼び出し時にスレッドにデータを含むオブジェクトを渡すための簡単な方法を提供します。 コード例については、「<xref:System.Threading.ParameterizedThreadStart>」を参照してください。
   
- <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> メソッド オーバーロードではすべてのオブジェクトを受け入れるため、<xref:System.Threading.ParameterizedThreadStart> デリゲートの使用はデータを渡すためのタイプ セーフな方法ではありません。 代わりに、ヘルパー クラスにデータとスレッド プロシージャをカプセル化し、<xref:System.Threading.ThreadStart> デリゲートを使用して、スレッド プロシージャを実行することができます。 この手法を示す例を、次に示します。
+ <xref:System.Threading.Thread.Start(System.Object)?displayProperty=nameWithType> メソッドではすべてのオブジェクトを受け入れるため、<xref:System.Threading.ParameterizedThreadStart> デリゲートの使用はデータを渡すためのタイプ セーフな方法ではありません。 代わりに、ヘルパー クラスにデータとスレッド プロシージャをカプセル化し、<xref:System.Threading.ThreadStart> デリゲートを使用して、スレッド プロシージャを実行することができます。 この手法を示す例を、次に示します。
 
  [!code-cpp[System.Threading.ThreadStart2#3](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CPP/source3.cpp#3)]
  [!code-csharp[System.Threading.ThreadStart2#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source3.cs#3)]

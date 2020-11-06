@@ -4,22 +4,22 @@ description: この記事では、System.Runtime.InteropServices 名前空間の
 ms.date: 03/30/2017
 helpviewer_keywords:
 - design-time attributes
-- .NET Framework, exposing components to COM
-- attributes [.NET Framework], design-time functionality
+- .NET, exposing components to COM
+- attributes [.NET], design-time functionality
 - conversion-tool attributes
-- attributes [.NET Framework], interop-specific
-- attributes [.NET Framework], conversion-tool
+- attributes [.NET], interop-specific
+- attributes [.NET], conversion-tool
 - interoperation with unmanaged code, applying attributes
-- interoperation with unmanaged code, exposing .NET Framework components
+- interoperation with unmanaged code, exposing .NET components
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-ms.openlocfilehash: f9ccf59e52c1ef27649cd70a57f7b24bb5a8e9bf
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7b9e557e36d2ff6aa978eb28d3c82764ffb1980a
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291332"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188680"
 ---
 # <a name="applying-interop-attributes"></a>相互運用固有の属性の適用
 <xref:System.Runtime.InteropServices> 名前空間では、デザイン時にユーザーが適用する属性、変換処理中に COM 相互運用ツールおよび API によって適用される属性、ユーザーまたは COM 相互運用機能によって適用される属性という 3 つのカテゴリの相互運用固有の属性が提供されます。  
@@ -41,8 +41,8 @@ ms.locfileid: "84291332"
 |<xref:System.Runtime.InteropServices.ComVisibleAttribute>|属性値が **false** の場合、型は COM から参照できなくなります。 この属性は、COM の参照可能範囲を制御するために、個別の型またはアセンブリ全体に適用できます。 既定では、すべてのパブリックなマネージド型は参照可能なので、この属性でこれらの型を参照可能にする必要はありません。|  
 |<xref:System.Runtime.InteropServices.DispIdAttribute>|メソッドまたはフィールドの COM ディスパッチ識別子 (DISPID) を指定します。 この属性には、対象のメソッド、フィールド、またはプロパティの DISPID が含まれています。<br /><br /> COM 相互運用ツールでは、この属性を適用できます。|
 |<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute>|.NET に実装されている COM クラスの既定のインターフェイスを示します。<br /><br /> COM 相互運用ツールでは、この属性を適用できます。|
-|<xref:System.Runtime.InteropServices.FieldOffsetAttribute>|**StructLayoutAttribute** と共に使用される場合は、クラス内の各フィールドの物理的位置を示します。**LayoutKind** は Explicit に設定されます。|  
-|<xref:System.Runtime.InteropServices.GuidAttribute>|クラス、インターフェイス、またはタイプ ライブラリ全体のグローバル一意識別子 (GUID) を指定します。 属性に渡される文字列は、**System.Guid** 型の受け入れ可能なコンストラクター引数の形式である必要があります。<br /><br /> COM 相互運用ツールでは、この属性を適用できます。|  
+|<xref:System.Runtime.InteropServices.FieldOffsetAttribute>|**StructLayoutAttribute** と共に使用される場合は、クラス内の各フィールドの物理的位置を示します。 **LayoutKind** は Explicit に設定されます。|  
+|<xref:System.Runtime.InteropServices.GuidAttribute>|クラス、インターフェイス、またはタイプ ライブラリ全体のグローバル一意識別子 (GUID) を指定します。 属性に渡される文字列は、 **System.Guid** 型の受け入れ可能なコンストラクター引数の形式である必要があります。<br /><br /> COM 相互運用ツールでは、この属性を適用できます。|  
 |<xref:System.Runtime.InteropServices.IDispatchImplAttribute>|COM にデュアル インターフェイスやディスパッチ インターフェイスを公開するときに、共通言語ランタイムで使用する **IDispatch** インターフェイスの実装の種類を示します。|  
 |<xref:System.Runtime.InteropServices.InAttribute>|呼び出し元にデータをマーシャリングすることを示します。 属性パラメーターに使用できます。|  
 |<xref:System.Runtime.InteropServices.InterfaceTypeAttribute>|マネージド インターフェイスを COM クライアントに公開する方法を制御します (デュアル、IUnknown から派生、または IDispatch のみ)。<br /><br /> COM 相互運用ツールでは、この属性を適用できます。|  
@@ -51,7 +51,7 @@ ms.locfileid: "84291332"
 |<xref:System.Runtime.InteropServices.OptionalAttribute>|パラメーターが省略可能であることを示します。<br /><br /> COM 相互運用ツールでは、この属性を適用できます。|  
 |<xref:System.Runtime.InteropServices.OutAttribute>|フィールドまたはパラメーター内のデータが、呼び出されたオブジェクトから呼び出し元に返されるときに、マーシャリングされる必要があることを示します。|  
 |<xref:System.Runtime.InteropServices.PreserveSigAttribute>|通常は相互運用呼び出し時に発生する、HRESULT または retval シグネチャ変換を抑止します。 この属性は、タイプ ライブラリのエクスポートだけでなく、マーシャリングにも影響します。<br /><br /> COM 相互運用ツールでは、この属性を適用できます。|  
-|<xref:System.Runtime.InteropServices.ProgIdAttribute>|.NET Framework クラスの ProgID を指定します。 属性パラメーターに使用できます。|  
+|<xref:System.Runtime.InteropServices.ProgIdAttribute>|.NET クラスの ProgID を指定します。 属性パラメーターに使用できます。|  
 |<xref:System.Runtime.InteropServices.StructLayoutAttribute>|クラスのフィールドの物理レイアウトを制御します。<br /><br /> COM 相互運用ツールでは、この属性を適用できます。|  
   
 ## <a name="conversion-tool-attributes"></a>変換ツール属性  

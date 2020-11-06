@@ -1,26 +1,27 @@
 ---
-title: 文字列の .NET Framework データ型への変換
+title: 文字列から .NET データ型への変換
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: fda5441c58d14b91a9eca16fff9149c8795f95b9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 28c84b04bde045643158d8d2b9fed44b74334e77
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289227"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92688010"
 ---
-# <a name="converting-strings-to-net-framework-data-types"></a>文字列の .NET Framework データ型への変換
-文字列を .NET Framework データ型に変換するには、アプリケーションの要件に適合する **XmlConvert** メソッドを使用します。 **XmlConvert** クラスで利用可能なすべての変換メソッドの一覧については、「<xref:System.Xml.XmlConvert>」を参照してください。  
+# <a name="convert-strings-to-net-data-types"></a>文字列を .NET データ型に変換する
+
+文字列を .NET データ型に変換する場合は、アプリケーションの要件に適合する **XmlConvert** メソッドを使用します。 **XmlConvert** クラスで利用可能なすべての変換メソッドの一覧については、「<xref:System.Xml.XmlConvert>」を参照してください。  
   
- **ToString** メソッドから返される文字列は、渡したデータを文字列に変換したものです。 変換に **XmlConvert** クラスを使用する .NET Framework 型の中には、**System.Convert** クラスのメソッドを使用しないものがいくつかあります。 **XmlConvert** クラスは XML Schema (XSD) のデータ型に準拠しており、**XmlConvert** によって変換できるデータ型は決まっています。  
+ **ToString** メソッドから返される文字列は、渡したデータを文字列に変換したものです。 さらに、変換に **XmlConvert** クラスを使用する .NET 型の中には、 **System.Convert** クラスのメソッドを使用しないものがいくつかあります。 **XmlConvert** クラスは XML Schema (XSD) のデータ型に準拠しており、 **XmlConvert** によって変換できるデータ型は決まっています。  
   
- 次の表は、.NET Framework データ型の一覧と、XML スキーマ (XSD) のデータ型マップを使用した場合に返される文字列を示しています。 これらの .NET Framework 型は、**System.Convert** で処理することはできません。  
+ 次の表に、.NET データ型と、XML スキーマ (XSD) のデータ型マッピングを使用した場合に返される文字列を一覧表示します。 これらの .NET 型は、 **System.Convert** で処理することはできません。  
   
-|.NET Framework 型|返される文字列|  
+|.NET の種類|返される文字列|  
 |-------------------------|---------------------|  
 |ブール型|"true"、"false"|  
 |Single.PositiveInfinity|"INF"|  
@@ -31,9 +32,9 @@ ms.locfileid: "84289227"
 |Timespan|PnYnMnTnHnMnS の形式。つまり、`P2Y10M15DT10H30M20S` は 2 年 10 か月 15 日 10 時間 30 分 20 秒の期間です。|  
   
 > [!NOTE]
-> 表中の .NET Framework 型を **ToString** メソッドを使用して文字列に変換したときに返される文字列は基本型ではなく、XML スキーマ (XSD) 文字列型です。  
+> 表中の .NET 型を **ToString** メソッドを使用して文字列に変換したときに返される文字列は基本型ではなく、XML スキーマ (XSD) 文字列型です。  
   
- **DateTime** 値型と **Timespan** 値型の違いは、**DateTime** が瞬間を表すのに対して、**TimeSpan** が時間間隔を表すことです。 **DateTime** および **Timespan** の形式は、XML スキーマ (XSD) のデータ型仕様で指定されています。 次に例を示します。  
+ **DateTime** 値型と **Timespan** 値型の違いは、 **DateTime** が瞬間を表すのに対して、 **TimeSpan** が時間間隔を表すことです。 **DateTime** および **Timespan** の形式は、XML スキーマ (XSD) のデータ型仕様で指定されています。 次に例を示します。  
   
 ```vb  
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
@@ -69,12 +70,12 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
  `<Number>200</Number>`  
   
- ただし、文字列を **Boolean**、**Single**、または **Double** に変換する場合、返される .NET Framework 型は、**System.Convert** クラスを使用したときに返される型とは異なります。  
+ ただし、文字列を **Boolean** 、 **Single** 、または **Double** に変換する場合、返される .NET 型は、 **System.Convert** クラスを使用したときに返される型とは異なります。  
   
 ## <a name="string-to-boolean"></a>String から Boolean  
  **ToBoolean** メソッドを使用して文字列を **Boolean** に変換するときの入力文字列と生成される型の対応を次の表に示します。  
   
-|有効な文字列入力パラメーター|出力される .NET Framework 型|  
+|有効な文字列入力パラメーター|.NET 出力の種類|  
 |----------------------------------|--------------------------------|  
 |"true"|Boolean.True|  
 |"1"|Boolean.True|  
@@ -90,7 +91,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
 <Boolean>1</Boolean>
 ```  
   
- いずれも次のコードによって解釈することができ、**bvalue** は **System.Boolean.True** になります。  
+ いずれも次のコードによって解釈することができ、 **bvalue** は **System.Boolean.True** になります。  
   
 ```vb  
 Dim bvalue As Boolean = _  
@@ -106,7 +107,7 @@ Console.WriteLine(bvalue);
 ## <a name="string-to-single"></a>String から Single  
  **ToSingle** メソッドを使用して文字列を **Single** に変換するときの入力文字列と生成される型の対応を次の表に示します。  
   
-|有効な文字列入力パラメーター|出力される .NET Framework 型|  
+|有効な文字列入力パラメーター|.NET 出力の種類|  
 |----------------------------------|--------------------------------|  
 |"INF"|Single.PositiveInfinity|  
 |"-INF"|Single.NegativeInfinity|  
@@ -114,7 +115,7 @@ Console.WriteLine(bvalue);
 ## <a name="string-to-double"></a>String から Double  
  **ToDouble** メソッドを使用して文字列を **Single** に変換するときの入力文字列と生成される型の対応を次の表に示します。  
   
-|有効な文字列入力パラメーター|出力される .NET Framework 型|  
+|有効な文字列入力パラメーター|.NET 出力の種類|  
 |----------------------------------|--------------------------------|  
 |"INF"|Double.PositiveInfinity|  
 |"-INF"|Double.NegativeInfinity|  
@@ -134,4 +135,4 @@ writer.WriteElementString("Infinity", XmlConvert.ToString(value));
 ## <a name="see-also"></a>関連項目
 
 - [XML データ型の変換](conversion-of-xml-data-types.md)
-- [.NET Framework 型の文字列への変換](converting-dotnet-types-to-strings.md)
+- [.NET 型から文字列への変換](converting-dotnet-types-to-strings.md)

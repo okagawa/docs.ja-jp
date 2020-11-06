@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b6f2af7af77398d5e902aae995590b5dde4cf76a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 56f5d27eb9be2f8eb3e335c5ec161dba1bcfdb1e
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602682"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93135758"
 ---
 
 ### <a name="install-the-sdk"></a>SDK のインストール
@@ -19,7 +19,7 @@ sudo apt-get update; \
 ```
 
 > [!IMPORTANT]
-> "**パッケージ dotnet-sdk-3.1 が見つかりません**" のようなエラー メッセージが表示される場合は、「[APT のトラブルシューティング](#apt-troubleshooting)」セクションをご覧ください。
+> " **パッケージ dotnet-sdk-3.1 が見つかりません** " のようなエラー メッセージが表示される場合は、「 [APT のトラブルシューティング](#apt-troubleshooting)」セクションをご覧ください。
 
 ### <a name="install-the-runtime"></a>ランタイムをインストールする
 
@@ -33,9 +33,9 @@ sudo apt-get update; \
 ```
 
 > [!IMPORTANT]
-> "**パッケージ aspnetcore-runtime-3.1 が見つかりません**" のようなエラー メッセージが表示される場合は、「[APT のトラブルシューティング](#apt-troubleshooting)」セクションをご覧ください。
+> " **パッケージ aspnetcore-runtime-3.1 が見つかりません** " のようなエラー メッセージが表示される場合は、「 [APT のトラブルシューティング](#apt-troubleshooting)」セクションをご覧ください。
 
-ASP.NET Core ランタイムの代替手段として、ASP.NET Core サポートを含まない .NET Core ランタイムをインストールできます。それには、前述のコマンドの `aspnetcore-runtime-3.1` を `dotnet-runtime-3.1` で置き換えます。
+ASP.NET Core ランタイムの代替手段として、ASP.NET Core サポートを含まない .NET Core ランタイムをインストールできます。それには、前のコマンドの `aspnetcore-runtime-3.1` を `dotnet-runtime-3.1` で置き換えます。
 
 ```bash
 sudo apt-get install -y dotnet-runtime-3.1

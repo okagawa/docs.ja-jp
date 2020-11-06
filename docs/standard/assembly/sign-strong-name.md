@@ -5,19 +5,19 @@ ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-named assemblies, signing with strong names
 - signing assemblies
-- assemblies [.NET Framework], signing
-- assemblies [.NET Framework], strong-named
+- assemblies [.NET], signing
+- assemblies [.NET], strong-named
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: d4888a12ac0494ca34eac3553a5374c3517fee38
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 5192f7f372b9ef7927930c3599aebc6fca9f1f0f
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378617"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687660"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>方法: 厳密な名前でアセンブリに署名する
 
@@ -38,7 +38,7 @@ ms.locfileid: "83378617"
   
 ## <a name="create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>Visual Studio を使用してアセンブリを作成し、厳密な名前でそのアセンブリに署名する  
   
-1. **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、 **[プロパティ]** を選択します。  
+1. **ソリューション エクスプローラー** で、プロジェクトのショートカット メニューを開き、 **[プロパティ]** を選択します。  
   
 2. **[署名]** タブを選択します。  
   
@@ -53,11 +53,11 @@ ms.locfileid: "83378617"
   
 [Visual Studio 用開発者コマンド プロンプト](../../framework/tools/developer-command-prompt-for-vs.md)で次のコマンドを入力します。  
 
-**al** **/out:** \<*assemblyName*>  *\<moduleName>* **/keyfile:** \<*keyfileName*>  
+**al** **/out:** \<*assemblyName*> *\<moduleName>* **/keyfile:** \<*keyfileName*>  
 
 この場合、  
 
-- *assemblyName*は、アセンブリ リンカーが生成する、厳密な名前で署名されたアセンブリ ( *.dll* ファイルまたは *.exe* ファイル) の名前です。  
+- *assemblyName* は、アセンブリ リンカーが生成する、厳密な名前で署名されたアセンブリ ( *.dll* ファイルまたは *.exe* ファイル) の名前です。  
   
 - *moduleName* は、1 つ以上の型を含む、.NET Framework コード モジュール ( *.netmodule* ファイル) の名前です。 C# または Visual Basic で `/target:module` スイッチを使ってコードをコンパイルすることにより、 *.netmodule* ファイルを作成できます。
   
@@ -80,7 +80,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
    > [!NOTE]
    > C# および Visual Basic コンパイラは、ソース コードで <xref:System.Reflection.AssemblyKeyFileAttribute> または <xref:System.Reflection.AssemblyKeyNameAttribute> 属性が見つかった場合、コンパイラ警告を発行します (CS1699 と BC41008)。 この警告は無視してかまいません。  
 
-次の例は、*keyfile.snk* という名前のキー ファイルを指定して、<xref:System.Reflection.AssemblyKeyFileAttribute> 属性を使用します。このキー ファイルは、アセンブリがコンパイルされるディレクトリにあります。  
+次の例は、 *keyfile.snk* という名前のキー ファイルを指定して、<xref:System.Reflection.AssemblyKeyFileAttribute> 属性を使用します。このキー ファイルは、アセンブリがコンパイルされるディレクトリにあります。  
 
 ```cpp
 [assembly:AssemblyKeyFileAttribute("keyfile.snk")];

@@ -6,22 +6,22 @@ helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
 - BackgroundWorker component
-- events [.NET Framework], asynchronous
+- events [.NET], asynchronous
 - AsyncOperationManager class
-- threading [.NET Framework], asynchronous features
+- threading [.NET], asynchronous features
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-ms.openlocfilehash: c235a838504889a105ef98df47f7373a145503da
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b9c3edeb468445e6f7a58ead194559bed5636579
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289448"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888855"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>イベントベースの非同期パターンの実装時期を決定する
 
-イベント ベースの非同期パターンは、クラスの非同期動作を公開します。 このパターンを導入すると、.NET Framework では、非同期動作を公開する 2 つのパターンが定義されます。<xref:System.IAsyncResult?displayProperty=nameWithType> インターフェイスに基づく非同期パターンとイベント ベースのパターンです。 このトピックでは、両方のパターンをどのような状況で実装するべきか説明します。
+イベント ベースの非同期パターンは、クラスの非同期動作を公開します。 このパターンの導入に伴い、.NET では、非同期動作を公開する 2 つのパターンとして、<xref:System.IAsyncResult?displayProperty=nameWithType> インターフェイスに基づく非同期パターンとイベント ベースのパターンが定義されています。 この記事では、両方のパターンをどのような状況で実装するべきか説明します。
 
 <xref:System.IAsyncResult> インターフェイスによる非同期プログラミングについて詳しくは、「[非同期プログラミング モデル (APM)](asynchronous-programming-model-apm.md)」をご覧ください。
 

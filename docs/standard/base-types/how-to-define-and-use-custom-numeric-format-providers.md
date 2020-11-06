@@ -6,24 +6,25 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- numeric format strings [.NET Framework]
-- formatting [.NET Framework], numbers
-- number formatting [.NET Framework]
+- numeric format strings [.NET]
+- formatting [.NET], numbers
+- number formatting [.NET]
 - custom numeric format strings
-- numbers [.NET Framework], custom numeric format strings
+- numbers [.NET], custom numeric format strings
 - displaying date and time data
-- format providers [.NET Framework]
+- format providers [.NET]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-ms.openlocfilehash: d12899fff7d9e6cb63728ba0b160b70fa2a41a1a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 38c1890684bd89b2bc4719637209569f01bd17a2
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290514"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888483"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>方法: カスタム数値書式プロバイダーを定義して使用する
-.NET Framework では、数値の文字列形式を広範囲に制御できます。 数値の書式をカスタマイズするため、次の機能をサポートしています。  
+
+.NET では、数値の文字列形式を広範囲に制御できます。 数値の書式をカスタマイズするため、次の機能をサポートしています。  
   
 - 標準の数値書式指定文字列: 数値をその文字列形式に変換するための定義済みの書式セットを提供します。 これらは、`format` パラメーターを持つ <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> などの数値書式指定メソッドと共に使用できます。 詳細については、「[標準の数値書式指定文字列](standard-numeric-format-strings.md)」を参照してください。  
   
@@ -31,9 +32,9 @@ ms.locfileid: "84290514"
   
 - カスタムの <xref:System.Globalization.CultureInfo> オブジェクトまたは <xref:System.Globalization.NumberFormatInfo> オブジェクト: 記号を定義し、数値の文字列形式を表示するために使用されるパターンの書式を設定します。 これらは、`provider` パラメーターを持つ <xref:System.Int32.ToString%2A> などの数値書式指定メソッドと共に使用できます。 通常、`provider` パラメーターは、カルチャに固有の書式を指定するために使用されます。  
   
- 一部の例には (アプリケーションで書式設定されたアカウント番号や ID 番号、郵便番号を表示する必要がある場合など)、これら 3 つの方法は適していません。 .NET Framework では、<xref:System.Globalization.CultureInfo> オブジェクトでも <xref:System.Globalization.NumberFormatInfo> オブジェクトでもない書式設定オブジェクトを定義して、数値を書式設定する方法を決定することもできます。 このトピックでは、このようなオブジェクトを実装するため、詳細な手順を説明し、電話番号の書式を設定する例について説明します。  
+ 一部の例には (アプリケーションで書式設定されたアカウント番号や ID 番号、郵便番号を表示する必要がある場合など)、これら 3 つの方法は適していません。 .NET では、<xref:System.Globalization.CultureInfo> または <xref:System.Globalization.NumberFormatInfo> オブジェクトのいずれでもない書式設定オブジェクトを定義して、数値を書式設定する方法を決定することもできます。 このトピックでは、このようなオブジェクトを実装するため、詳細な手順を説明し、電話番号の書式を設定する例について説明します。  
   
-### <a name="to-define-a-custom-format-provider"></a>カスタム書式プロバイダーを定義するには  
+## <a name="define-a-custom-format-provider"></a>カスタム書式プロバイダーを定義する  
   
 1. <xref:System.IFormatProvider> および <xref:System.ICustomFormatter>インターフェイスを実装するクラスを定義します。  
   
@@ -55,13 +56,14 @@ ms.locfileid: "84290514"
   
     4. `arg` パラメーターの文字列表現を返します。  
   
-### <a name="to-use-a-custom-numeric-formatting-object"></a>カスタム数値書式設定オブジェクトを使用するには  
+## <a name="use-a-custom-numeric-formatting-object"></a>カスタム数値書式設定オブジェクトを使用する  
   
 1. カスタム書式指定クラスの新しいインスタンスを作成します。  
   
 2. それをカスタム書式指定オブジェクト、書式指定子 (使用されていない場合は <xref:System.String.Empty?displayProperty=nameWithType>)、および書式設定する数値に渡す、<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 書式指定メソッドを呼び出します。  
   
-## <a name="example"></a>例  
+## <a name="example"></a>例
+
  次の例では、米国の電話番号を表す数値を NANP または E.123 形式に変換する、`TelephoneFormatter` という名前のカスタム数値書式プロバイダーを定義します。 このメソッドは、"N" (NANP 形式を出力) と "I" (国際 E.123 形式を出力) の 2 つの書式指定子を処理します。  
   
  [!code-csharp[Formatting.HowTo.NumericValue#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.NumericValue/cs/Telephone1.cs#1)]

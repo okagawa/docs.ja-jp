@@ -4,25 +4,26 @@ description: 非同期操作を行う場合のタスク ベースの非同期パ
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- .NET Framework, and TAP
-- asynchronous design patterns, .NET Framework
-- TAP, .NET Framework support for
-- Task-based Asynchronous Pattern, .NET Framework support for
-- .NET Framework, asynchronous design patterns
+- .NET and TAP
+- asynchronous design patterns, .NET
+- TAP, .NET support for
+- Task-based Asynchronous Pattern, .NET support for
+- .NET, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
-ms.openlocfilehash: 68b1f723b3dcc4fd16073a653a778aa480cfa32e
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 4a2715ab6572c33a1564986c5cfda112d5fa11db
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621757"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888868"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>タスク ベースの非同期パターンの利用
 
-タスク ベースの非同期パターン (TAP) を使用して非同期操作を行うと、コールバックを使用して、ブロックすることなく待機できます。  タスクの場合、これは <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> などのメソッドによって行われます。 言語ベースの非同期サポートが、通常の制御フロー内での非同期操作の待機を許可することで、コールバックを隠し、コンパイラにより生成されたコードはこの同じ API レベルのサポートを提供します。
+タスク ベースの非同期パターン (TAP) を使用して非同期操作を行うと、コールバックを使用して、ブロックすることなく待機できます。 タスクの場合、これは <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> などのメソッドによって行われます。 言語ベースの非同期サポートが、通常の制御フロー内での非同期操作の待機を許可することで、コールバックを隠し、コンパイラにより生成されたコードはこの同じ API レベルのサポートを提供します。
 
 ## <a name="suspending-execution-with-await"></a>Await による実行の中断
- .NET Framework 4.5 以降では、C# の [await](../../csharp/language-reference/operators/await.md) キーワードおよび Visual Basic の [Await 演算子](../../visual-basic/language-reference/operators/await-operator.md)を使用して <xref:System.Threading.Tasks.Task> と <xref:System.Threading.Tasks.Task%601> オブジェクトを非同期に待機できます。 <xref:System.Threading.Tasks.Task> を待っているとき、`await` 式は型 `void` になります。 <xref:System.Threading.Tasks.Task%601> を待っているとき、`await` 式は型 `TResult` になります。 `await` 式は、非同期メソッドの本体内に含める必要があります。 .NET Framework 4.5 における C# および Visual Basic の言語サポートの詳細については、C# および Visual Basic の言語仕様を参照してください。
+
+<xref:System.Threading.Tasks.Task> オブジェクトおよび <xref:System.Threading.Tasks.Task%601> オブジェクトの非同期での待機には、C# では [await](../../csharp/language-reference/operators/await.md) キーワード、Visual Basic では [Await 演算子](../../visual-basic/language-reference/operators/await-operator.md)を使用できます。 <xref:System.Threading.Tasks.Task> を待っているとき、`await` 式は型 `void` になります。 <xref:System.Threading.Tasks.Task%601> を待っているとき、`await` 式は型 `TResult` になります。 `await` 式は、非同期メソッドの本体内に含める必要があります。 (これらの言語機能は .NET Framework 4.5 で導入されました)。
 
  待機機能は、隠れた状態で継続を使用してタスクにコールバックをインストールします。  このコールバックは中断ポイントから非同期メソッドを再開します。 非同期メソッドが再開され、待機していた操作が正常に完了し、<xref:System.Threading.Tasks.Task%601> であった場合に、その `TResult` が返されます。  待っていた <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> が <xref:System.Threading.Tasks.TaskStatus.Canceled> 状態で終わった場合、<xref:System.OperationCanceledException> 例外がスローされます。  待っていた <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> が <xref:System.Threading.Tasks.TaskStatus.Faulted> 状態で終わった場合、エラーの原因となった例外がスローされます。 `Task` は複数の例外の結果としてエラーになることがありますが、反映されるのはこれらの例外の中の 1 つのみです。 ただし、<xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> プロパティは、すべてのエラーが含まれる <xref:System.AggregateException> 例外を返します。
 
@@ -63,7 +64,8 @@ await someTask.ConfigureAwait(continueOnCapturedContext:false);
 ```
 
 ## <a name="canceling-an-asynchronous-operation"></a>非同期操作の取り消し
- .NET Framework 4 以降では、取り消しをサポートする TAP メソッドによって、取り消しトークン (<xref:System.Threading.CancellationToken> オブジェクト) を受け取るオーバーロードが少なくとも 1 つ提供されます。
+
+.NET Framework 4 以降、取り消しをサポートする TAP メソッドには、取り消しトークン (<xref:System.Threading.CancellationToken> オブジェクト) を受け取るオーバーロードが少なくとも 1 つあります。
 
  キャンセル トークンは、キャンセル トークンのソース (<xref:System.Threading.CancellationTokenSource> オブジェクト) によって作成されます。  ソースの <xref:System.Threading.CancellationTokenSource.Token%2A> プロパティからキャンセル トークンが返され、ソースの <xref:System.Threading.CancellationTokenSource.Cancel%2A> メソッドが呼び出されたときにこのトークンに信号が送られます。  たとえば、単一の Web ページをダウンロードする際に操作を取り消せるようにする場合は、<xref:System.Threading.CancellationTokenSource> オブジェクトを作成し、TAP メソッドにそのオブジェクトのトークンを渡し、操作を取り消す準備ができたらソースの <xref:System.Threading.CancellationTokenSource.Cancel%2A> メソッドを呼び出します。
 
@@ -535,7 +537,7 @@ public async void btnDownload_Click(object sender, RoutedEventArgs e)
 ```
 
 ## <a name="building-task-based-combinators"></a>タスク ベースの連結子のビルド
- タスクは、非同期操作を完全に表現し、操作の結合、その結果の取得などの同期機能と非同期機能を提供することができるため、大きなパターンをビルドするためのタスクを構成する有益な連結子ライブラリを構築できるようになります。  前のセクションで説明したように、.NET Framework には、いくつかの組み込み連結子が用意されていますが、独自にビルドすることもできます。 以下のセクションでは、有効な連結子メソッドと型の例をいくつか示します。
+ タスクは、非同期操作を完全に表現し、操作の結合、その結果の取得などの同期機能と非同期機能を提供することができるため、大きなパターンをビルドするためのタスクを構成する有益な連結子ライブラリを構築できるようになります。 前のセクションで説明したとおり、.NET には、いくつか連結子が組み込まれていますが、自分独自のものをビルドすることもできます。 以下のセクションでは、有効な連結子メソッドと型の例をいくつか示します。
 
 ### <a name="retryonfault"></a>RetryOnFault
  多くの状況では、前の操作が失敗した場合に再試行することが望まれます。  同期コードの場合は、次の例のように `RetryOnFault` などのヘルパー メソッドをビルドしてこれを行うことができます。
@@ -832,7 +834,7 @@ private static void Produce(int data)
 ```
 
 > [!NOTE]
-> <xref:System.Threading.Tasks.Dataflow> 名前空間は .NET Framework 4.5 にあります。**NuGet** を利用してください。 <xref:System.Threading.Tasks.Dataflow> 名前空間が含まれるアセンブリをインストールするには、Visual Studio でプロジェクトを開き、 **[プロジェクト] メニューの [NuGet パッケージの管理]** を選択し、Microsoft.Tpl.Dataflow パッケージをオンライン検索します。
+> <xref:System.Threading.Tasks.Dataflow> 名前空間は、NuGet パッケージとして使用できます。 <xref:System.Threading.Tasks.Dataflow> 名前空間が含まれるアセンブリをインストールするには、Visual Studio で自分のプロジェクトを開き、[プロジェクト] メニューの **[NuGet パッケージの管理]** を選択し、`System.Threading.Tasks.Dataflow` パッケージをオンライン検索します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -4,12 +4,12 @@ description: 自己完結型アプリケーションをトリミングしてサ�
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 1ebcac51331407069e26b49e40bb6e071cefb752
-ms.sourcegitcommit: 261e0c98a111357692b3b63c596edf0cacf72991
+ms.openlocfilehash: bf38ffe4d47986ae78c6cf2b2e5ecb292411ba6c
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90770456"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925286"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>自己完結型の展開と実行可能ファイルのトリミング
 
@@ -24,7 +24,7 @@ ms.locfileid: "90770456"
 アプリケーションのトリミング モードは、`TrimMode` 設定で構成されます。 既定値は `copyused` で、参照されるアセンブリがアプリケーションとバンドルされます。 Blazor WebAssembly では、`link` 値が使用され、アセンブリ内の使用されていないコードがトリミングされます。 トリミング分析の警告により、完全な依存関係分析が不可能なコード パターンに関する情報が示されます。 これらの警告は、既定では非表示となり、フラグ `SuppressTrimAnalysisWarnings` を `false` に設定することで有効にすることができます。 使用可能なトリミング オプションの詳細については、「[トリミング オプション](trimming-options.md)」を参照してください。
 
 > [!NOTE]
-> トリミングは、.NET Core 3.1 および .NET 5.0 の実験的な機能です。 トリミングは、自己完結型で公開されるアプリケーション "_のみ_" で使用できます。
+> トリミングは、.NET Core 3.1 および .NET 5.0 の実験的な機能です。 トリミングは、自己完結型で公開されるアプリケーション " _のみ_ " で使用できます。
 
 ## <a name="prevent-assemblies-from-being-trimmed"></a>アセンブリがトリミングされないようにする
 
@@ -36,6 +36,39 @@ ms.locfileid: "90770456"
 <ItemGroup>
     <TrimmerRootAssembly Include="System.Security" />
 </ItemGroup>
+```
+
+### <a name="support-for-ssl-certificates"></a>SSL 証明書のサポート
+
+ASP.NET Core アプリなどのお使いのアプリで SSL 証明書が読み込まれる場合、トリミング時に、SSL 証明書の読み込みを支援するトリミング アセンブリが確実に使用されないようにする必要があります。
+
+ASP.NET Core 3.1 では、次を含むようにプロジェクト ファイルを更新します。
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>...</PropertyGroup>
+  <!--Include the following for .aspnetcore 3.1-->
+  <ItemGroup>
+    <TrimmerRootAssembly Include="System.Net" />
+    <TrimmerRootAssembly Include="System.Net.Security" />
+    <TrimmerRootAssembly Include="System.Security" />
+  </ItemGroup>
+  ...
+</Project>
+```
+
+.Net 5.0 を使用している場合は、次を含むようにプロジェクト ファイルを更新します。
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk.Web">
+ <PropertyGroup>...</PropertyGroup>
+ <!--Include the following for .net 5.0-->
+ <ItemGroup>
+    <TrimmerRootAssembly Include="System.Net.Security" />
+    <TrimmerRootAssembly Include="System.Security" />
+  </ItemGroup>
+  ...
+</Project>
 ```
 
 ## <a name="trim-your-app---cli"></a>アプリをトリミングする - CLI

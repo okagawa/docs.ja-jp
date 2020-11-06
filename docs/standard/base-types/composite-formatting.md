@@ -8,25 +8,25 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - parameter specifiers
-- strings [.NET Framework], alignment
+- strings [.NET], alignment
 - format specifiers, composite formatting
-- strings [.NET Framework], composite
+- strings [.NET], composite
 - composite formatting
-- objects [.NET Framework], formatting multiple objects
+- objects [.NET], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: 36197b382c449a2570e1d5530f307c4e66b0d983
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e15452016aa61cf44950e8b9e7fca58f23471ae7
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447265"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889466"
 ---
 # <a name="composite-formatting"></a>複合書式指定
 
 .NET の複合書式指定機能は、オブジェクトのリストおよび複合書式指定文字列を入力として使用します。 複合書式指定文字列は、固定テキストに、書式指定項目と呼ばれるインデックス化されたプレースホルダーが混合されて構成されます。このプレースホルダーはリスト内のオブジェクトに対応します。 書式設定操作によって生成される結果の文字列は、元の固定テキストに文字列で表されたリスト内のオブジェクトが混合されて構成されます。  
   
 > [!IMPORTANT]
-> 使用している言語と言語バージョンでサポートされている場合、複合書式指定文字列を使用する代わりに、*挿入文字列*を使用することができます。 挿入文字列は、*挿入式*が含まれている文字列です。 各挿入式は式の値によって解かれ、文字列が割り当てられるとき、結果文字列に含まれます。 詳細については、[文字列補間 (C# リファレンス)](../../csharp/language-reference/tokens/interpolated.md) および[補間文字列 (Visual Basic リファレンス)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) に関するページを参照してください。
+> 使用している言語と言語バージョンでサポートされている場合、複合書式指定文字列を使用する代わりに、 *挿入文字列* を使用することができます。 挿入文字列は、 *挿入式* が含まれている文字列です。 各挿入式は式の値によって解かれ、文字列が割り当てられるとき、結果文字列に含まれます。 詳細については、[文字列補間 (C# リファレンス)](../../csharp/language-reference/tokens/interpolated.md) および[補間文字列 (Visual Basic リファレンス)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) に関するページを参照してください。
 
 複合書式指定機能をサポートするメソッドには、次のようなものがあります。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "84447265"
 ## <a name="format-item-syntax"></a>書式指定項目の構文  
  各書式指定項目は、次の形式を使用し、次のコンポーネントで構成されます。  
   
- `{` *index*[`,`*alignment*][`:`*formatString*]`}`  
+ `{` *index* [`,`*alignment* ][`:`*formatString* ]`}`  
   
  対になった中かっこ ("{" と "}") が必要です。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "84447265"
  各書式指定項目は、リスト内のどのオブジェクトでも参照できます。 たとえば、3 つのオブジェクトがある場合は、"{1} {0} {2}" などの複合書式文字列を指定して、2 番目、1 番目、3 番目のオブジェクトの書式を指定できます。 書式指定項目で参照されないオブジェクトは無視されます。 パラメーター指定子がオブジェクトのリストの範囲外の項目を指定する場合は、実行時に <xref:System.FormatException> がスローされます。  
   
 ### <a name="alignment-component"></a>Alignment コンポーネント  
- 省略可能な *alignment* コンポーネントは、書式設定フィールドの幅を指定する符号付き整数です。 *alignment* の値が書式設定する文字列の長さよりも小さい場合、*alignment* は無視され、書式設定する文字列の長さがフィールドの幅として使用されます。 フィールド内の書式設定されたデータは、*alignment* が正の場合は右揃え、*alignment* が負の場合は左揃えされます。 埋め込みが必要な場合は、空白が使用されます。 *alignment* を指定する場合は、コンマが必要です。  
+ 省略可能な *alignment* コンポーネントは、書式設定フィールドの幅を指定する符号付き整数です。 *alignment* の値が書式設定する文字列の長さよりも小さい場合、 *alignment* は無視され、書式設定する文字列の長さがフィールドの幅として使用されます。 フィールド内の書式設定されたデータは、 *alignment* が正の場合は右揃え、 *alignment* が負の場合は左揃えされます。 埋め込みが必要な場合は、空白が使用されます。 *alignment* を指定する場合は、コンマが必要です。  
   
  次の例では、2 つの配列を定義します。1 つの配列には従業員の名前が含まれていて、もう 1 つの配列には従業員が 2 週間にわたって作業した時間数が含まれています。 複合書式指定文字列では、名前が 20 文字のフィールドに左揃えに指定され、時間数が 5 文字のフィールドに右揃えに指定されます。 "N1" 標準書式指定文字列も、時間を 1 桁の小数部で書式設定するために使用されることに注意してください。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "84447265"
 ### <a name="format-string-component"></a>Format String コンポーネント  
  オプションの *formatString* コンポーネントは、書式設定されるオブジェクトの種類に適した書式指定文字列です。 対応するオブジェクトが数値の場合は標準またはカスタムの数値書式指定文字列を指定し、対応するオブジェクトが <xref:System.DateTime> オブジェクトの場合は標準またはカスタムの日時書式指定文字列を指定し、対応するオブジェクトが列挙値の場合は[列挙型書式指定文字列](enumeration-format-strings.md)を指定します。 *formatString* が指定されない場合は、数値、日付と時刻、または列挙型の汎用 ("G") 書式指定子が使用されます。 *formatString* を指定する場合はコロンが必要です。  
   
- 次の表は、定義済みの一連の書式指定文字列をサポートする .NET Framework クラス ライブラリ内の型または型のカテゴリの一覧です。サポートされている書式指定文字列が示されているトピックへのリンクも含まれています。 文字列の書式設定とは拡張可能な機構で、既存のすべての型に対する新しい書式指定文字列を定義できるだけでなく、アプリケーション定義の型でサポートされる一連の書式指定文字列も定義できます。 詳しくは、<xref:System.IFormattable> および <xref:System.ICustomFormatter> のインターフェイスに関するトピックを参照してください。  
+ 次の表に、事前定義された一連の書式指定文字列がサポートされる .NET クラス ライブラリの型または型のカテゴリの一覧、およびサポートされる書式指定文字列について記述されているトピックへのリンクを示します。 文字列の書式設定とは拡張可能な機構で、既存のすべての型に対する新しい書式指定文字列を定義できるだけでなく、アプリケーション定義の型でサポートされる一連の書式指定文字列も定義できます。 詳しくは、<xref:System.IFormattable> および <xref:System.ICustomFormatter> のインターフェイスに関するトピックを参照してください。  
   
 |型または型のカテゴリ|解決方法については、|  
 |---------------------------|---------|  
@@ -123,7 +123,7 @@ ms.locfileid: "84447265"
   
 2. <xref:System.ICustomFormatter> 実装が利用できる場合、ランタイムはその <xref:System.ICustomFormatter.Format%2A> メソッドを呼び出します。 メソッドには書式指定項目の *formatString* 値 (ある場合) または `null` (ない場合) と、<xref:System.IFormatProvider> 実装が渡されます。 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> メソッドの呼び出しから `null` が返ると、実行は次のステップに進みます。それ以外の場合は、<xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> の呼び出しの結果が返されます。
   
-3. 値が <xref:System.IFormattable> インターフェイスを実装している場合は、インターフェイスの <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> メソッドが呼び出されます。 メソッドは、*formatString* 値 (書式指定項目内に値がある場合) または `null` (ない場合) を受け取ります。 <xref:System.IFormatProvider> 引数は、次のように判断されます。  
+3. 値が <xref:System.IFormattable> インターフェイスを実装している場合は、インターフェイスの <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> メソッドが呼び出されます。 メソッドは、 *formatString* 値 (書式指定項目内に値がある場合) または `null` (ない場合) を受け取ります。 <xref:System.IFormatProvider> 引数は、次のように判断されます。  
   
     - 数値の場合、null 以外の <xref:System.IFormatProvider> 引数を持つ複合書式指定メソッドが呼び出されると、ランタイムは <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> メソッドから <xref:System.Globalization.NumberFormatInfo> オブジェクトを要求します。 オブジェクトを 1 つも取得できないか、引数の値が `null` であるか、または複合書式指定メソッドに <xref:System.IFormatProvider> パラメーターがない場合は、現在のスレッド カルチャの <xref:System.Globalization.NumberFormatInfo> オブジェクトが使用されます。  
   

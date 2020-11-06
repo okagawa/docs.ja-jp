@@ -5,19 +5,19 @@ ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-named assemblies, compile-time references
 - compile-time assembly referencing
-- assemblies [.NET Framework], strong-named
+- assemblies [.NET], strong-named
 - assembly binding, strong-named
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: e42c1b461da16d7000605b9b9321138bbfebd307
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 478f786995cfc4b57f0b18b2159775db104e9cfb
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379873"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687690"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>方法: 厳密な名前のアセンブリを参照する
 通常、厳密な名前付きアセンブリ内にある型またはリソースを参照するプロセスは透過的です。 コンパイル時 (事前バインディング) または実行時に参照を作成できます。  
@@ -31,9 +31,9 @@ ms.locfileid: "83379873"
 
 コマンド プロンプトに次のコマンドを入力します。  
 
-\<*compiler command*>  **/reference:** \<*assembly name*>  
+\<*compiler command*> **/reference:** \<*assembly name*>  
 
-このコマンドで、*compiler command* は、使用している言語のコンパイラ コマンドです。*assembly name* は、参照される厳密な名前付きアセンブリの名前です。 ライブラリ アセンブリを作成するための **/t:library** オプションなどの他のコンパイラ オプションも使用できます。  
+このコマンドで、 *compiler command* は、使用している言語のコンパイラ コマンドです。 *assembly name* は、参照される厳密な名前付きアセンブリの名前です。 ライブラリ アセンブリを作成するための **/t:library** オプションなどの他のコンパイラ オプションも使用できます。  
 
 *myAssembly.cs* というコード モジュールから厳密な名前付きアセンブリ *myLibAssembly.dll* を参照する *myAssembly.dll* というアセンブリを作成する例を次に示します。  
 
@@ -45,7 +45,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> メソッドを使用するなどの方法で、実行時に厳密な名前付きアセンブリ参照を作成する場合は、参照される厳密な名前付きアセンブリの表示名を使用する必要があります。 表示名の構文は次のとおりです。  
 
-\<*アセンブリ名*> **、** \<*バージョン番号*> **、** \<*カルチャ*> **、** \<*公開キー トークン*>  
+\<*assembly name*>**,** \<*version number*>**,** \<*culture*>**,** \<*public key token*>  
 
 次に例を示します。  
 
@@ -74,11 +74,11 @@ Dim myDll As Assembly = _
 
 特定のアセンブリの 16 進形式の公開キーと公開キー トークンは、次の[厳密名 (Sn.exe)](../../framework/tools/sn-exe-strong-name-tool.md) コマンドを使用して出力できます。  
 
-**sn -Tp \<** *アセンブリ* **>**  
+**sn -Tp \<** *assembly* **>**  
 
 公開キーファイルがある場合は、代わりに次のコマンドを使用できます (コマンド ライン オプションの大文字と小文字の違いに注意してください)。  
 
-**sn -tp \<** *公開キー ファイル* **>**  
+**sn -tp \<** *public key file* **>**  
 
 ## <a name="see-also"></a>関連項目
 

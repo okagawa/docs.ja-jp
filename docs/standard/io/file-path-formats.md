@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 36ecbe763ed47e95d9339d1d748b3faab100c15e
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: e24772ee9c9d22786c9cfece43017f8526434601
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679600"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188056"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows システムのファイル パス形式
 
@@ -90,7 +90,7 @@ DOS デバイス パスは次の要素から構成されます。
 - デバイス パス指定子 (`\\.\` か `\\?\`)。この指定子により、DOS デバイス パスとしてパスが識別されます。
 
    > [!NOTE]
-   > `\\?\` は、あらゆるバージョンの .NET Core とバージョン 4.6.2 以降の .NET Framework でサポートされます。
+   > `\\?\` は、あらゆるバージョンの .NET Core および .NET 5+ とバージョン 4.6.2 以降の .NET Framework でサポートされます。
 
 - "実際の" デバイス オブジェクトへのシンボリック リンク (ドライブ名の場合は C:、ボリュームの GUID の場合は Volume{b75e2c83-0000-0000-0000-602f00000000})。
 
@@ -182,7 +182,7 @@ Windows API に渡されるパスはほとんどすべて正規化されます�
    このルールによると、スペースの後に区切り記号を追加することで、スペースが後ろに続くディレクトリ名を作成できます。
 
    > [!IMPORTANT]
-   > スペースが後ろに続くディレクトリやファイル名は**決して**作成しないでください。 後続スペースはディレクトリへのアクセスを困難または不可能にします。一般的に、名前に後続スペースが含まれるディレクトリやファイルを処理しようとすると、アプリケーションは失敗します。
+   > スペースが後ろに続くディレクトリやファイル名は **決して** 作成しないでください。 後続スペースはディレクトリへのアクセスを困難または不可能にします。一般的に、名前に後続スペースが含まれるディレクトリやファイルを処理しようとすると、アプリケーションは失敗します。
 
 ## <a name="skip-normalization"></a>正規化の省略
 
@@ -197,7 +197,7 @@ Windows API に渡されるパスはほとんどすべて正規化されます�
 1. .NET Framework でのみ、259 文字を超えるパスの場合、パス長の `MAX_PATH` チェックを省略できます。 一部例外がありますが、ほとんどの API でこれが可能です。
 
 > [!NOTE]
-> .NET Core は長いパスを暗黙的に処理し、`MAX_PATH` チェックを実行しません。 `MAX_PATH` は .NET Framework にのみ適用されます。
+> .NET Core および .NET 5+ は長いパスを暗黙的に処理し、`MAX_PATH` チェックを実行しません。 `MAX_PATH` は .NET Framework にのみ適用されます。
 
 正規化と MAX_PATH チェックの省略は、2 つのデバイス パス構文の間の唯一の違いです。それ以外、この 2 つは同じです。 正規化の省略には注意してください。"普通の" アプリケーションでは処理できないパスが簡単に作られてしまいます。
 

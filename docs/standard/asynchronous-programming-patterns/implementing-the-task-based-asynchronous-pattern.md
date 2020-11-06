@@ -6,18 +6,17 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- .NET Framework, and TAP
-- asynchronous design patterns, .NET Framework
-- TAP, .NET Framework support for
-- Task-based Asynchronous Pattern, .NET Framework support for
-- .NET Framework, asynchronous design patterns
+- asynchronous design patterns, .NET
+- TAP, .NET support for
+- Task-based Asynchronous Pattern, .NET support for
+- .NET, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-ms.openlocfilehash: 1f2f44b6b92f66f95816778c6dc8e893f1291abe
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8bac9d265211d2f266db634d4bcebb87c2debd9a
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289357"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888777"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>タスク ベースの非同期パターンの実装
 タスク ベースの非同期パターン (TAP) は、3 つの方法 (Visual Studio の C# および Visual Basic コンパイラを使用する方法、手動で行う方法、またはコンパイラと手動による方法を組み合わせた方法) で実装できます。 以下のセクションでは、それぞれの方法について詳しく説明します。 TAP パターンを使用し、計算主体の非同期操作と I/O バインドの非同期操作の両方を実装できます。 [[ワークロード]](#workloads) セクションでは、操作の各種類を確認します。
@@ -49,9 +48,9 @@ TAP パターンは、実装の制御を強化するために手動で実装す�
 
 計算主体のタスクは、次の方法で生成できます。
 
-- .NET Framework 4 では、デリゲート (通常、<xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> または <xref:System.Action%601>) の非同期実行を許容する <xref:System.Func%601> メソッドを使用します。 <xref:System.Action%601> のデリゲートを指定する場合、メソッドはデリゲートの非同期実行を表す <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> オブジェクトを返します。 <xref:System.Func%601> のデリゲートを指定する場合、メソッドは <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> オブジェクトを返します。 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> メソッドのオーバーロードは、キャンセル トークン (<xref:System.Threading.CancellationToken>)、タスクの作成オプション (<xref:System.Threading.Tasks.TaskCreationOptions>)、およびタスク スケジューラ (<xref:System.Threading.Tasks.TaskScheduler>) を受け取ります。 たとえば、<xref:System.Threading.Tasks.Task.Factory%2A> など、現在のタスク スケジューラをターゲットとするファクトリ インスタンスを、<xref:System.Threading.Tasks.Task> クラスの静的プロパティ (`Task.Factory.StartNew(…)`) として使用できます。
+- .NET Framework 4.5 以降のバージョンでは (.NET Core と .NET 5 以降を含む)、<xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> へのショートカットとして静的 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> メソッドを使用します。 スレッド プールをターゲットとする計算主体のタスクを簡単に起動するには、<xref:System.Threading.Tasks.Task.Run%2A> を使用します。 これが計算主体のタスクで推奨される開始方法です。 タスクによりきめの細かい制御を行う場合のみ `StartNew` を直接使用します。
 
-- .NET Framework 4.5 以降のバージョンの場合 (.NET Core と .NET Standard を含む)、<xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> のショートカットとして静的 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> メソッドを使用します。 スレッド プールをターゲットとする計算主体のタスクを簡単に起動するには、<xref:System.Threading.Tasks.Task.Run%2A> を使用します。 .NET Framework 4.5 以降のバージョンでは、これが計算主体のタスクの推奨起動方法です。 タスクによりきめの細かい制御を行う場合のみ `StartNew` を直接使用します。
+- .NET Framework 4 では、デリゲート (通常は <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> または <xref:System.Action%601>) の非同期実行を許容する <xref:System.Func%601> メソッドを使用します。 <xref:System.Action%601> のデリゲートを指定する場合、メソッドはデリゲートの非同期実行を表す <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> オブジェクトを返します。 <xref:System.Func%601> のデリゲートを指定する場合、メソッドは <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> オブジェクトを返します。 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> メソッドのオーバーロードは、キャンセル トークン (<xref:System.Threading.CancellationToken>)、タスクの作成オプション (<xref:System.Threading.Tasks.TaskCreationOptions>)、およびタスク スケジューラ (<xref:System.Threading.Tasks.TaskScheduler>) を受け取ります。 たとえば、<xref:System.Threading.Tasks.Task.Factory%2A> など、現在のタスク スケジューラをターゲットとするファクトリ インスタンスを、<xref:System.Threading.Tasks.Task> クラスの静的プロパティ (`Task.Factory.StartNew(…)`) として使用できます。
 
 - タスクを個別に生成およびスケジュールする場合は、`Task` 型のコンストラクターまたは `Start` メソッドを使用します。 パブリック メソッドは、既に開始されているタスクのみを返す必要があります。
 
@@ -82,7 +81,7 @@ TAP パターンは、実装の制御を強化するために手動で実装す�
 [!code-csharp[Conceptual.TAP_Patterns#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#4)]
 [!code-vb[Conceptual.TAP_Patterns#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#4)]
 
-.NET Framework 4.5 以降では、このような目的のために <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> メソッドが用意されており、別の非同期メソッド内で使用して、たとえば、非同期ポーリング ループを実装することもできます。
+この用途には、別の非同期メソッドで使用できる <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> メソッドが用意されています。たとえば、これは次のような非同期でのポーリング ループの実装に使用できます。
 
 [!code-csharp[Conceptual.TAP_Patterns#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#5)]
 [!code-vb[Conceptual.TAP_Patterns#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#5)]

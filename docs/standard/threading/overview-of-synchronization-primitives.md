@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
-ms.openlocfilehash: 7347c9b40f150febc6a163ae3aa3267123ea0e9d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: d5ae0fe5813952742950582a4282cd1c6ab6a870
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739371"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188979"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同期プリミティブの概要
 
@@ -34,11 +34,11 @@ ms.locfileid: "81739371"
 
 .NET Framework では、<xref:System.Threading.WaitHandle> は <xref:System.MarshalByRefObject?displayProperty=nameWithType> から派生するため、これらの型を使用して、アプリケーション ドメインの境界を越えてスレッドのアクティビティを同期させることができます。
 
-.NET Framework と .NET Core では、これらの型のいくつかで名前付きのシステム同期ハンドルを表すことができます。ハンドルはオペレーティング システム全体で表示され、プロセス間同期で使用できます。
+.NET Framework、.NET Core、.NET 5+ では、これらの型のいくつかで名前付きのシステム同期ハンドルを表すことができます。ハンドルはオペレーティング システム全体で表示され、プロセス間同期で使用できます。
 
-- <xref:System.Threading.Mutex> (.NET Framework と .NET Core)、
-- <xref:System.Threading.Semaphore> (Windows 上の .NET Framework と .NET Core)、
-- <xref:System.Threading.EventWaitHandle> (Windows 上の .NET Framework と .NET Core)。
+- <xref:System.Threading.Mutex>
+- <xref:System.Threading.Semaphore> (Windows で)
+- <xref:System.Threading.EventWaitHandle> (Windows で)
 
 詳細については、<xref:System.Threading.WaitHandle> API リファレンスを参照してください。
 

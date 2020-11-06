@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 703452492eb47c5720fdaad23a3e699585233419
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 787b0a04c5bf312ad3f3e7834664e70dae9678e0
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602814"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93135867"
 ---
 
 ### <a name="install-the-sdk"></a>SDK のインストール
@@ -23,7 +23,7 @@ sudo dnf install dotnet-sdk-2.0
 sudo dnf install aspnetcore-runtime-2.0
 ```
 
-ASP.NET Core ランタイムの代替手段として、ASP.NET Core サポートを含まない .NET Core ランタイムをインストールできます。それには、前述のコマンドの `aspnetcore-runtime-2.0` を `dotnet-runtime-2.0` で置き換えます。
+ASP.NET Core ランタイムの代替手段として、ASP.NET Core サポートを含まない .NET Core ランタイムをインストールできます。それには、前のコマンドの `aspnetcore-runtime-2.0` を `dotnet-runtime-2.0` で置き換えます。
 
 ```bash
 sudo dnf install dotnet-runtime-2.0

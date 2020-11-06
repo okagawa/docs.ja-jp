@@ -3,18 +3,19 @@ title: オブサーバー デザイン パターンのベスト プラクティ�
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- observer design pattern [.NET Framework], best practices
-- best practices [.NET Framework], observer design pattern
+- observer design pattern [.NET], best practices
+- best practices [.NET], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
-ms.openlocfilehash: b4f8e568dcb6790dac1dc8fc5c969d6fa1367c4e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8e75343e1ca1c7f69306ee45148f2dc0eec3585f
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288460"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064081"
 ---
 # <a name="observer-design-pattern-best-practices"></a>オブサーバー デザイン パターンのベスト プラクティス
-.NET Framework では、オブザーバー デザイン パターンは、一連のインターフェイスとして実装されます。 <xref:System.IObservable%601?displayProperty=nameWithType> インターフェイスはデータ プロバイダーを表し、データ プロバイダーはオブザーバーで通知のサブスクリプションを解除できるようにする <xref:System.IDisposable> 実装も提供します。 <xref:System.IObserver%601?displayProperty=nameWithType> インターフェイスはオブザーバーを表します。 このトピックでは、これらのインターフェイスを使用してオブザーバー デザイン パターンを実装するときに、開発者が適用することが望ましいベスト プラクティスについて説明します。  
+
+.NET では、オブザーバー デザイン パターンは、一連のインターフェイスとして実装されます。 <xref:System.IObservable%601?displayProperty=nameWithType> インターフェイスはデータ プロバイダーを表し、データ プロバイダーはオブザーバーで通知のサブスクリプションを解除できるようにする <xref:System.IDisposable> 実装も提供します。 <xref:System.IObserver%601?displayProperty=nameWithType> インターフェイスはオブザーバーを表します。 このトピックでは、これらのインターフェイスを使用してオブザーバー デザイン パターンを実装するときに、開発者が適用することが望ましいベスト プラクティスについて説明します。  
   
 ## <a name="threading"></a>スレッド  
  通常、プロバイダーは、何らかのコレクション オブジェクトで表されるサブスクライバー リストに特定のオブザーバーを追加することで、<xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> メソッドを実装し、サブスクライバー リストから特定のオブザーバーを削除することで、<xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> メソッドを実装します。 オブザーバーは、これらのメソッドをいつでも呼び出すことができます。 また、プロバイダー/オブザーバーのコントラクトでは、<xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> コールバック メソッドの後にだれがサブスクリプションを解除するかが指定されていないため、プロバイダーとオブザーバーの両方で同じメンバーをリストから削除しようとする可能性があります。 このような可能性があるため、<xref:System.IObservable%601.Subscribe%2A> メソッドと <xref:System.IDisposable.Dispose%2A> メソッドはどちらもスレッド セーフである必要があります。 通常、これには、[同時実行コレクション](../parallel-programming/data-structures-for-parallel-programming.md)またはロックの使用が必要です。 非スレッド セーフの実装では、スレッド セーフではないことが明示的に記載されている必要があります。  

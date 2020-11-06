@@ -7,18 +7,17 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- .NET Framework, and TAP
-- asynchronous design patterns, .NET Framework
-- TAP, .NET Framework support for
-- Task-based Asynchronous Pattern, .NET Framework support for
-- .NET Framework, asynchronous design patterns
+- asynchronous design patterns, .NET
+- TAP, .NET support for
+- Task-based Asynchronous Pattern, .NET support for
+- .NET, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-ms.openlocfilehash: 21675d26fa2f11d93801e2ba4ffec96b238b97b8
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 2987e7baa52f627d1da41af21d05bfa22a247fbb
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325076"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889245"
 ---
 # <a name="task-based-asynchronous-pattern"></a>タスク ベースの非同期パターン
 
@@ -26,13 +25,13 @@ ms.locfileid: "85325076"
   
 ## <a name="naming-parameters-and-return-types"></a>名前付け、パラメーター、および戻り値の型
 
-TAP では、非同期操作の開始と終了を表すために単一のメソッドが使用されます。 これは、非同期プログラミング モデル (APM または `IAsyncResult`) パターンとイベントベースの非同期パターン (EAP) の両方とは対照的です。 APM では、`Begin` と `End` メソッドが必要です。 EAP では、`Async` サフィックスを持つメソッドが必要であり、1 つ以上のイベント、イベント ハンドラー デリゲート型、および `EventArg` 派生型も必要です。 TAP の非同期メソッドには、待機可能な型を返すメソッドの操作名の後ろに `Async` サフィックスが含まれます (<xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.ValueTask>、<xref:System.Threading.Tasks.ValueTask%601> など)。 たとえば、`Task<String>` を返す非同期の `Get` 操作を `GetAsync` と名付けることができます。 既に `Async` サフィックスの付いた EAP メソッド名を含むクラスに TAP メソッドを追加する場合は、代わりに `TaskAsync` サフィックスを使用します。 たとえば、既にクラスに `GetAsync` メソッドが含まれている場合は、`GetTaskAsync` という名前を使用します。 メソッドによって非同期操作が開始されるが、待機可能な型が返らない場合は、その名前を `Begin`、`Start`、またはこのメソッドが操作の結果を返したりスローしたりしないことを示すその他の動詞で始める必要があります。  
+TAP では、非同期操作の開始と終了を表すために単一のメソッドが使用されます。 これは、非同期プログラミング モデル (APM または `IAsyncResult`) パターンとイベントベースの非同期パターン (EAP) の両方とは対照的です。 APM では、`Begin` と `End` メソッドが必要です。 EAP では、`Async` サフィックスを持つメソッドが必要であり、1 つ以上のイベント、イベント ハンドラー デリゲート型、および `EventArg` 派生型も必要です。 TAP の非同期メソッドには、待機可能な型を返すメソッドの操作名の後ろに `Async` サフィックスが含まれます (<xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.ValueTask>、<xref:System.Threading.Tasks.ValueTask%601> など)。 たとえば、`Task<String>` を返す非同期の `Get` 操作を `GetAsync` と名付けることができます。 既に `Async` サフィックスの付いた EAP メソッド名を含むクラスに TAP メソッドを追加する場合は、代わりに `TaskAsync` サフィックスを使用します。 たとえば、既にクラスに `GetAsync` メソッドが含まれている場合は、`GetTaskAsync` という名前を使用します。 メソッドによって非同期操作が開始されるが、待機可能な型が返らない場合は、その名前を `Begin`、`Start`、またはこのメソッドが操作の結果を返したりスローしたりしないことを示すその他の動詞で始める必要があります。  
   
  対応する同期メソッドにより void または `TResult` 型が返されるかどうかに応じて、TAP メソッドは <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> または <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> を返します。  
   
  TAP メソッドのパラメーターには、対応する同期メソッドと同じパラメーターを、同じ順序で指定する必要があります。  ただし、`out` パラメーターと `ref` パラメーターはこの規則に該当せず、すべて回避する必要があります。 `out` パラメーターまたは `ref` パラメーターで返されるデータは、代わりに複数の値を格納するために、タプルまたはカスタム データ構造を使用して、`TResult` により返される <xref:System.Threading.Tasks.Task%601> の一部として返す必要があります。 また、TAP メソッドに対応する同期メソッドでは提供されていない場合でも、<xref:System.Threading.CancellationToken> パラメーターの追加を検討してください。
 
- タスクの作成、操作、または組み合わせのためだけに使用されるメソッド (メソッド名またはメソッドが属する型の名前でメソッドの非同期の意図が明確な場合) は、この名前付けパターンに従う必要はありません。このようなメソッドは、*連結子*と呼ばれることもあります。 連結子の例には、<xref:System.Threading.Tasks.Task.WhenAll%2A> および <xref:System.Threading.Tasks.Task.WhenAny%2A> があります。詳細については、記事「[タスク ベースの非同期パターンの利用](consuming-the-task-based-asynchronous-pattern.md)」の「[タスク ベースの組み込み連結子の使用](consuming-the-task-based-asynchronous-pattern.md#combinators)」セクションを参照してください。  
+ タスクの作成、操作、または組み合わせのためだけに使用されるメソッド (メソッド名またはメソッドが属する型の名前でメソッドの非同期の意図が明確な場合) は、この名前付けパターンに従う必要はありません。このようなメソッドは、 *連結子* と呼ばれることもあります。 連結子の例には、<xref:System.Threading.Tasks.Task.WhenAll%2A> および <xref:System.Threading.Tasks.Task.WhenAny%2A> があります。詳細については、記事「[タスク ベースの非同期パターンの利用](consuming-the-task-based-asynchronous-pattern.md)」の「[タスク ベースの組み込み連結子の使用](consuming-the-task-based-asynchronous-pattern.md#combinators)」セクションを参照してください。  
   
  非同期プログラミング モデル (APM) やイベント ベースの非同期パターン (EAP) など、従来の非同期プログラミング パターンで使用される構文とは異なる TAP 構文の例については、「[非同期プログラミングのパターン](index.md)」を参照してください。  
   
@@ -54,7 +53,7 @@ TAP では、非同期操作の開始と終了を表すために単一のメソ�
  TAP メソッドの呼び出し元は、結果的に生成されるタスクに同期的に応答することで、TAP メソッドの完了を待つことをブロックできます。あるいは、非同期操作の完了時に追加 (継続) コードを実行できます。 継続コードの作成者は、そのコードが実行される場所を制御できます。 継続コードは、<xref:System.Threading.Tasks.Task> クラス (<xref:System.Threading.Tasks.Task.ContinueWith%2A> など) のメソッドによって明示的に作成するか、継続の上位にビルドされる言語サポート (C# の `await`、Visual Basic の `Await`、F# の `AwaitValue` など) を使用して暗黙のうちに作成できます。  
   
 ## <a name="task-status"></a>タスクの状態  
- <xref:System.Threading.Tasks.Task> クラスは、非同期操作の有効期間を提供し、そのサイクルは、<xref:System.Threading.Tasks.TaskStatus> 列挙型によって表されます。 <xref:System.Threading.Tasks.Task> および <xref:System.Threading.Tasks.Task%601> から派生する型のコーナー ケースに加え、スケジューリングからの構造の分離をサポートするために、<xref:System.Threading.Tasks.Task> クラスは <xref:System.Threading.Tasks.Task.Start%2A> メソッドを公開します。 <xref:System.Threading.Tasks.Task> パブリック コンストラクターにより作成されるタスクは、ライフ サイクルがスケジュールされていない <xref:System.Threading.Tasks.TaskStatus.Created> 状態から始まり、これらのインスタンスで <xref:System.Threading.Tasks.Task.Start%2A> が呼び出されるときにのみスケジュールされることから、*コールド タスク*と呼ばれます。
+ <xref:System.Threading.Tasks.Task> クラスは、非同期操作の有効期間を提供し、そのサイクルは、<xref:System.Threading.Tasks.TaskStatus> 列挙型によって表されます。 <xref:System.Threading.Tasks.Task> および <xref:System.Threading.Tasks.Task%601> から派生する型のコーナー ケースに加え、スケジューリングからの構造の分離をサポートするために、<xref:System.Threading.Tasks.Task> クラスは <xref:System.Threading.Tasks.Task.Start%2A> メソッドを公開します。 <xref:System.Threading.Tasks.Task> パブリック コンストラクターにより作成されるタスクは、ライフ サイクルがスケジュールされていない <xref:System.Threading.Tasks.TaskStatus.Created> 状態から始まり、これらのインスタンスで <xref:System.Threading.Tasks.Task.Start%2A> が呼び出されるときにのみスケジュールされることから、 *コールド タスク* と呼ばれます。
 
  他のすべてのタスクは、ホットな状態からライフ サイクルが始まります。つまり、タスクが表す非同期操作が既に開始され、それらのタスクの状態は <xref:System.Threading.Tasks.TaskStatus.Created?displayProperty=nameWithType> 以外の列挙値であることを意味します。 TAP メソッドから返されるすべてのタスクをアクティブにする必要があります。 **TAP メソッドで、返すタスクをインスタンス化するためにタスクのコンストラクターを内部使用する場合、その TAP メソッドでは、タスクを返す前に <xref:System.Threading.Tasks.Task> オブジェクトで <xref:System.Threading.Tasks.Task.Start%2A> を呼び出す必要があります。** TAP メソッドのコンシューマーは、返されたタスクがアクティブであるものと推定しても問題はなく、TAP メソッドから返された <xref:System.Threading.Tasks.Task.Start%2A> 上で <xref:System.Threading.Tasks.Task> 呼び出しを試行しないようにする必要があります。 アクティブなタスク上で <xref:System.Threading.Tasks.Task.Start%2A> を呼び出すと、<xref:System.InvalidOperationException> 例外になります。  
   
@@ -95,7 +94,7 @@ TAP では、非同期操作の開始と終了を表すために単一のメソ�
  TAP の実装で、`progress` パラメーターを受け入れるオーバーロードが提供される場合、`null` の引数を許可する必要があります。この場合、進行状況は報告されません。 TAP の実装では、進行状況を <xref:System.Progress%601> オブジェクトに同期的に報告する必要があります。これにより、非同期メソッドで迅速に進行状況を提供できます。 また、進行状況のコンシューマーが、情報の処理に最適な方法と場所を決定できるようにします。 たとえば、進行状況のインスタンスはコールバックをマーシャリングし、キャプチャされた同期コンテキストでイベントを発生するように選択することができます。  
   
 ## <a name="iprogresst-implementations"></a>IProgress\<T> の実装  
- .NET Framework 4.5 では、単一の <xref:System.IProgress%601> implementation: <xref:System.Progress%601> が実施されます。 <xref:System.Progress%601> クラスは次のように宣言されます。  
+.NET には、<xref:System.Progress%601> を実装する <xref:System.IProgress%601> クラスがあります。 <xref:System.Progress%601> クラスは次のように宣言されます。  
   
 ```csharp  
 public class Progress<T> : IProgress<T>  
@@ -103,18 +102,9 @@ public class Progress<T> : IProgress<T>
     public Progress();  
     public Progress(Action<T> handler);  
     protected virtual void OnReport(T value);  
-    public event EventHandler<T> ProgressChanged;  
+    public event EventHandler<T>? ProgressChanged;  
 }  
-```  
-  
-```vb  
-Public Class Progress(Of T) : Inherits IProgress(Of T)  
-    Public Sub New()  
-    Public Sub New(handler As Action(Of T))  
-    Protected Overridable Sub OnReport(value As T)  
-    Public Event ProgressChanged As EventHandler(Of T>  
-End Class  
-```  
+```
   
  <xref:System.Progress%601> のインスタンスは、非同期操作が進行状況の更新を報告するたびに発生する <xref:System.Progress%601.ProgressChanged> イベントを公開します。 <xref:System.Progress%601.ProgressChanged> イベントは、<xref:System.Threading.SynchronizationContext> インスタンスがインスタンス化されたときにキャプチャされた <xref:System.Progress%601> オブジェクトで発生します。 同期コンテキストを利用できない場合は、スレッド プールをターゲットとして、既定のコンテキストが使用されます。 ハンドラーは、このイベントに登録することができます。 1 つのハンドラーは、利便性のために <xref:System.Progress%601> コンストラクターにも提供でき、<xref:System.Progress%601.ProgressChanged> イベントのイベント ハンドラーと同様に作動します。 進行状況の更新は、イベント ハンドラーの実行中、非同期操作を遅延しないように、非同期に発生します。 別のセマンティクスを適用するため、別の <xref:System.IProgress%601> の実装を選択できます。  
   

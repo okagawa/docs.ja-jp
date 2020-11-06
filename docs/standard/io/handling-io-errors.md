@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 45f3951b727d3b615d8384541ff169e8840acab0
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bd7112b3052f246a01e4a36d6d425b37cb6174dd
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599803"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188043"
 ---
 # <a name="handling-io-errors-in-net"></a>.NET での I/O エラーの処理
 
@@ -46,7 +46,7 @@ ms.locfileid: "84599803"
 
 オペレーティング システムへのこの依存性によって、同じ例外条件 (例に示したディレクトリが見つからないというエラーなど) で、I/O メソッドが I/O 例外クラス全体のいずれかをスルーする可能性があります。 これは、I/O API を呼び出すときは、次の表に示すように、これらの例外のほとんどまたはすべてを処理するようにコードを準備する必要があることを意味します。
 
-| 例外の種類 | .NET Core | .NET Framework |
+| 例外の種類 | .NET Core/.NET 5+ | .NET Framework |
 |---|---|---|
 | <xref:System.IO.IOException> | [はい] | はい |
 | <xref:System.IO.FileNotFoundException> | はい | はい |

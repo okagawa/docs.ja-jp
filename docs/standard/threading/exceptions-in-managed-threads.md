@@ -1,28 +1,26 @@
 ---
 title: マネージド スレッドの例外
-description: .NET でハンドルされない例外をハンドルする方法について参照します。 .NET バージョン 2.0 では、ほとんどのハンドルされないスレッド例外がそのまま続行して、アプリケーションが終了します。
+description: .NET でハンドルされない例外をハンドルする方法について参照します。 ほとんどのハンドルされないスレッド例外がそのまま続行して、アプリケーションが終了します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - unhandled exceptions,in managed threads
-- threading [.NET Framework],unhandled exceptions
-- threading [.NET Framework],exceptions in managed threads
+- threading [.NET],unhandled exceptions
+- threading [.NET],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-ms.openlocfilehash: 2facb68c77815de7a6fb97ab8f2ee683ffbad724
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: b7cf7e94156eedc82c7ec5c863ee013b75d22e73
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767885"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188329"
 ---
 # <a name="exceptions-in-managed-threads"></a>マネージド スレッドの例外
-.NET Framework バージョン 2.0 以降では、共通言語ランタイムはスレッド内のほとんどのハンドルされない例外をそのまま続行させます。 ほとんどの場合、これはハンドルされない例外によってアプリケーションが終了することを意味します。  
+
+共通言語ランタイムはスレッド内のほとんどのハンドルされない例外をそのまま続行させます。 ほとんどの場合、これはハンドルされない例外によってアプリケーションが終了することを意味します。
   
-> [!NOTE]
-> これは、スレッド プールのスレッド内でのハンドルされない例外など、多数のハンドルされない例外に関する安全策を提供している、.NET Framework バージョン 1.0 および 1.1 からの重要な変更です。 このトピックの「[以前のバージョンからの変更](#ChangeFromPreviousVersions)」を参照してください。  
-  
- 共通言語ランタイムには、プログラム フローの制御に使用する特定のハンドルされない例外について、次のような安全策が用意されています。  
+共通言語ランタイムには、プログラム フローの制御に使用する特定のハンドルされない例外について、次のような安全策が用意されています。  
   
 - <xref:System.Threading.Thread.Abort%2A> が呼び出されたため、スレッドで <xref:System.Threading.ThreadAbortException> がスローされる。  
   
@@ -42,9 +40,9 @@ ms.locfileid: "84767885"
   
  スレッド内でハンドルされない例外を続行させておき、結果としてオペレーティング システムにそのプログラムを終了させることで、開発およびテスト中にこのような問題が明らかになります。 プログラムの終了に関するエラー報告はデバッグをサポートします。  
   
-<a name="ChangeFromPreviousVersions"></a>
-## <a name="change-from-previous-versions"></a>以前のバージョンからの変更  
- 最も重要な変更は、マネージド スレッドに関する変更です。 .NET Framework バージョン 1.0 および 1.1 では、共通言語ランタイムには、次の状況でのハンドルされない例外に関する安全策が用意されています。  
+## <a name="change-from-previous-versions"></a>以前のバージョンからの変更
+
+.NET Framework バージョン 1.0 および 1.1 では、共通言語ランタイムには、次の状況でのハンドルされない例外に関する安全策が用意されています。  
   
 - スレッド プールのスレッドのハンドルされない例外は存在しません。 タスクが例外をスローし、その例外がハンドルされない場合、ランタイムは例外のスタック トレースをコンソールに出力し、スレッドをスレッド プールに戻します。  
   
@@ -54,10 +52,11 @@ ms.locfileid: "84767885"
   
  マネージド スレッドのフォアグラウンドまたはバックグラウンドのステータスは、この動作に影響しません。  
   
- アンマネージ コードで作成されたスレッドのハンドルされない例外の場合、微妙な相違点があります。 ランタイムの JIT アタッチ ダイアログは、ネイティブ コードを通ってきたスレッド内でのマネージド例外またはネイティブ例外に関する、オペレーティング システム ダイアログより優先されます。 プロセスは常に終了します。  
-  
-### <a name="migrating-code"></a>コードの移行  
- 通常は、この変更によってこれまでに認識されていないプログラミングの問題が明らかになるため、問題を修正できます。 ただし、プログラマがランタイムの安全策 (スレッドを終了するなど) を利用する場合もあります。 状況によっては、プログラマは次の移行方法のいずれかを検討する必要があります。  
+ アンマネージ コードで作成されたスレッドのハンドルされない例外の場合、微妙な相違点があります。 ランタイムの JIT アタッチ ダイアログは、ネイティブ コードを通ってきたスレッド内でのマネージド例外またはネイティブ例外に関する、オペレーティング システム ダイアログより優先されます。 プロセスは常に終了します。
+
+### <a name="migration"></a>移行
+
+.NET Framework 1.0 または 1.1 から移行するとき、スレッドを強制終了するなどのためにランタイムの安全策を活用した場合、次の移行戦略のいずれかを検討してください。  
   
 - シグナルを受信したときに、スレッドが適切に終了するようにコードを再構築します。  
   
@@ -65,17 +64,17 @@ ms.locfileid: "84767885"
   
 - プロセスを終了できるように、スレッドを中止する必要がある場合は、スレッドをバックグラウンド スレッドにして、プロセス終了時にスレッドが自動的に終了するようにします。  
   
- どのような場合でも、方法は例外に関するデザイン ガイドラインに従う必要があります。 「[例外のデザイン ガイドライン](../design-guidelines/exceptions.md)」を参照してください。  
+どのような場合でも、方法は例外に関するデザイン ガイドラインに従う必要があります。 「[例外のデザイン ガイドライン](../design-guidelines/exceptions.md)」を参照してください。  
   
-### <a name="application-compatibility-flag"></a>アプリケーション互換性フラグ  
- 一時的な互換性対策として、管理者はアプリケーション構成ファイルの `<runtime>` セクションに互換性フラグを配置できます。 これにより、共通言語ランタイムをバージョン 1.0 および 1.1 の動作に戻すことができます。  
+一時的な互換性対策として、管理者はアプリケーション構成ファイルの `<runtime>` セクションに互換性フラグを配置できます。 これにより、共通言語ランタイムをバージョン 1.0 および 1.1 の動作に戻すことができます。  
   
 ```xml  
 <legacyUnhandledExceptionPolicy enabled="1"/>  
 ```  
   
-## <a name="host-override"></a>ホストのオーバーライド  
- .NET Framework バージョン 2.0 では、アンマネージ ホストはホスト API の [ICLRPolicyManager](../../framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) インターフェイスを使用して、共通言語ランタイムの既定のハンドルされない例外ポリシーをオーバーライドできます。 [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) 関数を使用して、ハンドルされない例外のポリシーを設定します。  
+## <a name="host-override"></a>ホストのオーバーライド
+
+アンマネージ ホストはホスト API の [ICLRPolicyManager](../../framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) インターフェイスを使用して、共通言語ランタイムの既定のハンドルされない例外ポリシーをオーバーライドできます。 [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) 関数を使用して、ハンドルされない例外のポリシーを設定します。  
   
 ## <a name="see-also"></a>関連項目
 

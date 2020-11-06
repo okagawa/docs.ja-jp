@@ -8,20 +8,21 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - directory copying
-- I/O [.NET Framework], copying directories
+- I/O [.NET], copying directories
 - subdirectory copying
 - copying directories
-- directories [.NET Framework], copying
+- directories [.NET], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
-ms.openlocfilehash: 65fe28c90a6cd6f0b3c8c32da19c1d9603900670
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 476473d5c25ce29d070abbeef7fa29a7cb9621e1
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662590"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93187984"
 ---
 # <a name="how-to-copy-directories"></a>方法: ディレクトリをコピーする
-このトピックでは、I/O クラスを使用して、別の場所にディレクトリの内容を同期的にコピーする方法について説明します。
+
+この記事では、I/O クラスを使用して、別の場所にディレクトリの内容を同期的にコピーする方法について説明します。
 
 ファイルを非同期的にコピーする例については、「[非同期ファイル I/O](asynchronous-file-i-o.md)」を参照してください。
 

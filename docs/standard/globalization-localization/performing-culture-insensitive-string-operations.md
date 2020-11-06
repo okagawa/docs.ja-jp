@@ -11,17 +11,18 @@ helpviewer_keywords:
 - culture, custom case mappings
 - culture-insensitive string operations, method overloads
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
-ms.openlocfilehash: 79ff899e2964ae2c1e90b7178616c612dddf6d86
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0f7e8dde395feb548e6808547a223a3fa8855561
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287507"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063912"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>カルチャを認識しない文字列操作の実行
-カルチャを認識する文字列操作を既定で実行するほとんどの .NET Framework メソッドには、<xref:System.Globalization.CultureInfo> パラメーターを渡すことによって使用するカルチャを明示的に指定できるメソッド オーバーロードが用意されています。 これらのオーバーロードによって、大文字小文字のマップおよび並べ替え規則のカルチャによる違いを排除し、カルチャを認識しない結果を確保できます。  
+
+カルチャを認識する文字列操作を既定で実行するほとんどの .NET メソッドには、<xref:System.Globalization.CultureInfo> パラメーターを渡すことによって使用するカルチャを明示的に指定できるメソッド オーバーロードが用意されています。 これらのオーバーロードによって、大文字小文字のマップおよび並べ替え規則のカルチャによる違いを排除し、カルチャを認識しない結果を確保できます。  
   
- ここでは、既定ではカルチャを認識する .NET Framework のメソッドを使用して、カルチャを認識しない文字列操作を実行する方法を説明します。  
+ このセクションの次の記事では、既定ではカルチャを認識する .NET のメソッドを使用し、カルチャを認識しない文字列操作を実行する方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [カルチャを認識しない文字列比較の実行](performing-culture-insensitive-string-comparisons.md)  

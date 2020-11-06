@@ -8,17 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - synchronization primitives, SpinWait
 ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
-ms.openlocfilehash: 8b98e7d8b8ea4578fb446a0587f9a46ba4271348
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fb70697fd14f9f8734ca1a7896fc06c6bca5a71d
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291111"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188927"
 ---
 # <a name="spinwait"></a>SpinWait
-<xref:System.Threading.SpinWait?displayProperty=nameWithType> は軽量な同期型であり、負荷が高いコンテキスト スイッチとカーネル イベントに必要なカーネル遷移を避けるために低レベルのシナリオで使用できます。 マルチコア コンピューターでは、リソースの保持期間が長くならないと予測される場合、待機中のスレッドを数十または数百サイクルの間ユーザー モードでスピンさせてから、リソースの取得を再試行した方が効率的です。 スピン後にリソースを使用できる場合は、数千サイクルを節約したことになります。 リソースをまだ使用できない場合でも、数サイクルを消費しただけであり、カーネル ベースの待機に移行できます。 スピン後に待機というこの組み合わせは、*2 フェーズ待機操作* と呼ばれることがあります。  
+
+<xref:System.Threading.SpinWait?displayProperty=nameWithType> は軽量な同期型であり、負荷が高いコンテキスト スイッチとカーネル イベントに必要なカーネル遷移を避けるために低レベルのシナリオで使用できます。 マルチコア コンピューターでは、リソースの保持期間が長くならないと予測される場合、待機中のスレッドを数十または数百サイクルの間ユーザー モードでスピンさせてから、リソースの取得を再試行した方が効率的です。 スピン後にリソースを使用できる場合は、数千サイクルを節約したことになります。 リソースをまだ使用できない場合でも、数サイクルを消費しただけであり、カーネル ベースの待機に移行できます。 スピン後に待機というこの組み合わせは、 *2 フェーズ待機操作* と呼ばれることがあります。  
   
- <xref:System.Threading.SpinWait> は、<xref:System.Threading.ManualResetEvent> などのカーネル イベントをラップする .NET Framework 型と共に使用するように設計されています。 また、<xref:System.Threading.SpinWait> は、1 つのプログラムのみで基本的なスピン機能のために単独で使用することもできます。  
+ <xref:System.Threading.SpinWait> は、<xref:System.Threading.ManualResetEvent> などのカーネル イベントをラップする .NET 型と共に使用するように設計されています。 また、<xref:System.Threading.SpinWait> は、1 つのプログラムのみで基本的なスピン機能のために単独で使用することもできます。  
   
  <xref:System.Threading.SpinWait> は単なる空のループではありません。 一般的に、適切なスピン動作を提供するためには慎重に実装する必要があり、長時間 (おおよそ、カーネル遷移に要する時間) スピンすると、コンテキスト スイッチが開始されます。 たとえば、シングルコア コンピューターでは、スピンはすべてのスレッドの進行をブロックするため、<xref:System.Threading.SpinWait> によって、スレッドのタイム スライスがすぐに生成されます。 マルチコア コンピューターでも、待機中のスレッドがより優先順位の高いスレッドやガベージ コレクターをブロックしないように、<xref:System.Threading.SpinWait> によってタイム スライスが生成されます。 したがって、<xref:System.Threading.SpinWait> を 2 フェーズ待機操作で使用する場合は、<xref:System.Threading.SpinWait> 自体がコンテキスト スイッチを開始する前にカーネル待機を呼び出すことをお勧めします。 <xref:System.Threading.SpinWait> では <xref:System.Threading.SpinWait.NextSpinWillYield%2A> プロパティが提供され、<xref:System.Threading.SpinWait.SpinOnce%2A> のすべての呼び出しの前に確認できます。 プロパティが `true` を返したときに、独自の待機操作を開始します。 例については、「[方法: SpinWait を使用して 2 フェーズ待機操作を実装する](how-to-use-spinwait-to-implement-a-two-phase-wait-operation.md)」を参照してください。  
   

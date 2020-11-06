@@ -8,18 +8,18 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - destroying threads
-- threading [.NET Framework], destroying threads
+- threading [.NET], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-ms.openlocfilehash: baf9289413de0e99533f121eb2a404ff0d873511
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: caf7e29742bd7c0481badeeace91b7851520ad12
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768509"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188368"
 ---
 # <a name="destroying-threads"></a>スレッドの破棄
 
-スレッドの実行を終了するには、通常、[協調的なキャンセル モデル](cancellation-in-managed-threads.md)を使用します。 協調的なキャンセルを行うように設計されていないサード パーティのコードがスレッドで実行されているために、スレッドを協調的に停止できない場合があります。 .NET Framework の <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> メソッドを使用すると、マネージド スレッドを強制的に終了できます。 <xref:System.Threading.Thread.Abort%2A> を呼び出すと、共通言語ランタイムにより対象スレッド内で <xref:System.Threading.ThreadAbortException> がスローされます。対象スレッドはこれをキャッチできます。 詳細については、「<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>」を参照してください。 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> メソッドは、.NET Core ではサポートされていません。 .NET Core でサード パーティのコードの実行を強制的に終了する必要がある場合は、それを別のプロセスで実行し、<xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType> を使用します。
+スレッドの実行を終了するには、通常、[協調的なキャンセル モデル](cancellation-in-managed-threads.md)を使用します。 協調的なキャンセルを行うように設計されていないサード パーティのコードがスレッドで実行されているために、スレッドを協調的に停止できない場合があります。 .NET Framework の <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> メソッドを使用すると、マネージド スレッドを強制的に終了できます。 <xref:System.Threading.Thread.Abort%2A> を呼び出すと、共通言語ランタイムにより対象スレッド内で <xref:System.Threading.ThreadAbortException> がスローされます。対象スレッドはこれをキャッチできます。 詳細については、「<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>」を参照してください。 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> メソッドは .NET 5 (.NET Core を含む) 以降のバージョンではサポートされていません。 .NET 5+ でサード パーティのコードの実行を強制的に終了する必要がある場合は、それを別のプロセスで実行し、<xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType> を使用します。
 
 > [!NOTE]
 > スレッドが <xref:System.Threading.Thread.Abort%2A> メソッドの呼び出し時にアンマネージ コードを実行する場合、ランタイムはそれを <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType> としてマークします。 スレッドがマネージド コードに戻ると、例外がスローされます。  

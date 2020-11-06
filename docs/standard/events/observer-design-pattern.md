@@ -11,18 +11,18 @@ helpviewer_keywords:
 - IObservable<T> interface
 - IObserver<T> interface
 - IObservable(Of T) interface
-- observer design pattern [.NET Framework]
+- observer design pattern [.NET]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-ms.openlocfilehash: 80dac36199dd13abeab295d4b53a52615e7ae625
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e1f8dad2c19d3e11281cda5ef749730c5c6334d7
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559162"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064068"
 ---
 # <a name="observer-design-pattern"></a>オブサーバー デザイン パターン
 
-オブザーバー デザイン パターンでは、プロバイダーにサブスクライバーを登録して通知を受信することができます。 このデザイン パターンは、プッシュ ベースの通知を必要とするあらゆるシナリオに適しています。 このパターンでは、1 つの*プロバイダー* (*サブジェクト*または*観察可能なオブジェクト*とも呼ばれます) と、0 個以上の*オブザーバー*を定義します。 プロバイダーにオブザーバーを登録すると、あらかじめ定義した条件、イベント、または状態変化が発生するたびに、プロバイダーのいずれかのメソッドが呼び出されて自動的にすべてのオブザーバーに通知されます。 このメソッド呼び出しで、プロバイダーからオブザーバーに現在の状態の情報を提供することもできます。 .NET Framework でオブザーバー デザイン パターンを適用するには、ジェネリック インターフェイスの <xref:System.IObservable%601?displayProperty=nameWithType> および <xref:System.IObserver%601?displayProperty=nameWithType> を実装します。 ジェネリック型パラメーターは、通知情報を提供する型を表します。
+オブザーバー デザイン パターンでは、プロバイダーにサブスクライバーを登録して通知を受信することができます。 このデザイン パターンは、プッシュ ベースの通知を必要とするあらゆるシナリオに適しています。 このパターンでは、1 つの *プロバイダー* ( *サブジェクト* または *観察可能なオブジェクト* とも呼ばれます) と、0 個以上の *オブザーバー* を定義します。 プロバイダーにオブザーバーを登録すると、あらかじめ定義した条件、イベント、または状態変化が発生するたびに、プロバイダーのいずれかのメソッドが呼び出されて自動的にすべてのオブザーバーに通知されます。 このメソッド呼び出しで、プロバイダーからオブザーバーに現在の状態の情報を提供することもできます。 .NET でオブザーバー デザイン パターンを適用するには、ジェネリック インターフェイスの <xref:System.IObservable%601?displayProperty=nameWithType> および <xref:System.IObserver%601?displayProperty=nameWithType> を実装します。 ジェネリック型パラメーターは、通知情報を提供する型を表します。
 
 ## <a name="applying-the-pattern"></a>パターンの適用
 

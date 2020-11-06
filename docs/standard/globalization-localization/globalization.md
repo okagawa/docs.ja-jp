@@ -6,19 +6,19 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- globalization [.NET Framework], about globalization
+- globalization [.NET], about globalization
 - global applications, globalization
-- international applications [.NET Framework], globalization
+- international applications [.NET], globalization
 - world-ready applications, globalization
-- application development [.NET Framework], globalization
+- application development [.NET], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: adc617362cf3ba07ff63f1095968e2bd88df88d9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 66ed197f102583553112083e3a21f89e33cd3e3f
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291917"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064172"
 ---
 # <a name="globalization"></a>グローバリゼーション
 
@@ -102,7 +102,7 @@ Unicode を使用することで、同じコード単位を必ず同じ文字に
 
 カルチャに依存した文字列比較は、各カルチャの <xref:System.Globalization.CompareInfo> プロパティによって返される <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> オブジェクトによって定義されます。 <xref:System.String.Compare%2A?displayProperty=nameWithType> メソッド オーバーロードを使用するカルチャに依存した文字列比較では、<xref:System.Globalization.CompareInfo> オブジェクトも使用します。
 
-.NET は、文字列データのカルチャに依存した並べ替えを実行するためにテーブルを使用します。 並べ替えのウェイトと文字列の正規化に関するデータが入ったこれらのテーブルの内容は、特定のバージョンの .NET によって実装される Unicode 標準のバージョンによって決まります。 次の表は、特定のバージョンの .NET Framework と .NET Core によって実装される Unicode のバージョンです。 サポートされている Unicode バージョンの一覧は、文字の比較と並べ替えに対してのみ適用されます。カテゴリ別での Unicode 文字の分類には適用されません。 詳細については、記事「<xref:System.String>」 の「Strings and The Unicode Standard」 (文字列と Unicode 標準) セクションを参照してください。
+.NET は、文字列データのカルチャに依存した並べ替えを実行するためにテーブルを使用します。 並べ替えのウェイトと文字列の正規化に関するデータが入ったこれらのテーブルの内容は、特定のバージョンの .NET によって実装される Unicode 標準のバージョンによって決まります。 次の表は、特定のバージョンの .NET によって実装される Unicode のバージョンです。 サポートされている Unicode バージョンの一覧は、文字の比較と並べ替えに対してのみ適用されます。カテゴリ別での Unicode 文字の分類には適用されません。 詳細については、記事「<xref:System.String>」 の「Strings and The Unicode Standard」 (文字列と Unicode 標準) セクションを参照してください。
 
 |.NET Framework のバージョン|オペレーティング システム|Unicode バージョン|
 |----------------------------|----------------------|---------------------|
@@ -112,9 +112,9 @@ Unicode を使用することで、同じコード単位を必ず同じ文字に
 |.NET Framework 4|すべてのオペレーティング システム|Unicode 5.0|
 |Windows 7 の .NET Framework 4.5 以降|Unicode 5.0|
 |Windows 8 以降のオペレーティング システムの .NET Framework 4.5 以降|Unicode 6.3.0|
-|.NET Core (すべてのバージョン)|基になるオペレーティング システムでサポートされている Unicode 標準のバージョンによって異なります。|
+|.NET Core および .NET 5+|基になるオペレーティング システムでサポートされている Unicode 標準のバージョンによって異なります。|
 
-.NET Framework 4.5 以降と .NET Core のすべてのバージョンでは、文字列の比較と並べ替えはオペレーティング システムによって異なります。 Windows 7 で実行される NET Framework 4.5 以降は、Unicode 5.0 を実装する独自のテーブルからデータを取得します。 Windows 8 以降で実行される NET Framework 4.5 以降は、Unicode 6.3 を実装するオペレーティング システムのテーブルからデータを取得します。 .NET Core では、サポートされている Unicode のバージョンは基になるオペレーティング システムによって異なります。 カルチャに依存した並べ替えが実行されたデータをシリアル化する場合は、<xref:System.Globalization.SortVersion> クラスを使用して、.NET およびオペレーティング システムの並べ替え順序と一致するように、シリアル化されたデータをいつ並べ替える必要があるかを判断できます。 例については、<xref:System.Globalization.SortVersion> クラスに関するトピックを参照してください。
+.NET Framework 4.5 以降と .NET Core および .NET 5+ のすべてのバージョンでは、文字列の比較と並べ替えはオペレーティング システムによって異なります。 Windows 7 で実行される NET Framework 4.5 以降は、Unicode 5.0 を実装する独自のテーブルからデータを取得します。 Windows 8 以降で実行される NET Framework 4.5 以降は、Unicode 6.3 を実装するオペレーティング システムのテーブルからデータを取得します。 .NET Core と .NET 5+ では、サポートされている Unicode のバージョンは基になるオペレーティング システムによって異なります。 カルチャに依存した並べ替えが実行されたデータをシリアル化する場合は、<xref:System.Globalization.SortVersion> クラスを使用して、.NET およびオペレーティング システムの並べ替え順序と一致するように、シリアル化されたデータをいつ並べ替える必要があるかを判断できます。 例については、<xref:System.Globalization.SortVersion> クラスに関するトピックを参照してください。
 
 広範なカルチャ固有の並べ替えを文字列データに対して実行するアプリの場合、<xref:System.Globalization.SortKey> クラスを使用して文字列を比較できます。 並べ替えキーは、特定の文字列のアルファベット順、大文字と小文字の区別、発音の区別など、カルチャ固有の並べ替えウェイトを反映しています。 並べ替えキーを使用した比較はバイナリであるため、<xref:System.Globalization.CompareInfo> オブジェクトを暗黙的または明示的に使用する比較よりも高速です。 <xref:System.Globalization.CompareInfo.GetSortKey%2A?displayProperty=nameWithType> メソッドに文字列を渡すことによって、特定の文字列のカルチャ固有の並べ替えキーを作成します。
 

@@ -4,21 +4,21 @@ description: ハッシュ テーブル、キュー、スタック、バッグ、
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- collections [.NET Framework], generic
-- objects [.NET Framework], grouping in collections
-- generics [.NET Framework], collections
+- collections [.NET], generic
+- objects [.NET], grouping in collections
+- generics [.NET], collections
 - IList interface, grouping data in collections
 - IDictionary interface, grouping data in collections
 - grouping data in collections, generic collection types
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-ms.openlocfilehash: d0f2abc71524408c2bd2fa35a1a2dde0e664d273
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8677ba5b4404d49e2f6e07cda19ac437254a5897
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600842"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889388"
 ---
 # <a name="commonly-used-collection-types"></a>一般的に使用されるコレクション型
 コレクション型は、ハッシュ テーブル、キュー、スタック、バッグ、ディクショナリ、リストなど、一般的な種類のデータ コレクションです。  
@@ -35,10 +35,10 @@ ms.locfileid: "84600842"
   
 |Title|説明|  
 |-----------|-----------------|  
-|[コレクションとデータ構造体](index.md)|.NET Framework で利用できるスタック、キュー、リスト、配列、ディクショナリなどのさまざまなコレクション型について説明します。|  
+|[コレクションとデータ構造体](index.md)|.NET で利用できる、スタック、キュー、リスト、配列、ディクショナリなどのさまざまなコレクション型について説明します。|  
 |[Hashtable コレクション型と Dictionary コレクション型](hashtable-and-dictionary-collection-types.md)|ジェネリックと非ジェネリックのハッシュ ベースのディクショナリ型の機能について説明します。|  
 |[Sorted コレクション型](sorted-collection-types.md)|リストとセットの並べ替え機能を提供するクラスについて説明します。|  
-|[ジェネリック](../generics/index.md)|ジェネリック コレクション、ジェネリック デリゲート、ジェネリック インターフェイスなど、.NET Framework に用意されているジェネリック機能について説明します。 C#、Visual Basic、および Visual C++ の機能についてのドキュメント、およびリフレクションなどのサポート テクノロジへのリンクを示します。|  
+|[ジェネリック](../generics/index.md)|.NET に用意されている、ジェネリック コレクション、汎用デリゲート、ジェネリック インターフェイスなどのジェネリック機能について説明します。 C#、Visual Basic、および Visual C++ の機能についてのドキュメント、およびリフレクションなどのサポート テクノロジへのリンクを示します。|  
   
 ## <a name="reference"></a>関連項目  
  <xref:System.Collections?displayProperty=nameWithType>  

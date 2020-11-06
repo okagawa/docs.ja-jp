@@ -9,17 +9,18 @@ helpviewer_keywords:
 - calling synchronous methods in asynchronous manner
 - EndInvoke method
 - calling asynchronous methods
-- delegates [.NET Framework], asynchronous
+- delegates [.NET], asynchronous
 - synchronous calling in asynchronous manner
 ms.assetid: 38a345ca-6963-4436-9608-5c9defef9c64
-ms.openlocfilehash: 82e0a57c3d8e180456aed48886e38ca466db16c8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 05e574536abe4eac823b7b74369f5b191724e5b5
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289968"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889258"
 ---
 # <a name="asynchronous-programming-using-delegates"></a>デリゲートを使用した非同期プログラミング
+
 デリゲートを使用すると、同期メソッドを非同期的に呼び出すことができます。 デリゲートを同期的に呼び出すと、`Invoke` メソッドによって対象メソッドが現在のスレッドで直接呼び出されます。 `BeginInvoke` メソッドが呼び出されると、共通言語ランタイム (CLR) は要求をキューに置き、すぐに呼び出し元に戻ります。 対象メソッドは、スレッド プールのスレッドで非同期的に呼び出されます。 要求を送信した元のスレッドは、対象メソッドと並行して継続実行できます。 `BeginInvoke` メソッドの呼び出しにコールバック メソッドを指定した場合、対象メソッドの終了時に、そのコールバック メソッドが呼び出されます。 コールバック メソッドでは、`EndInvoke` メソッドを使用して、戻り値と、入出力パラメーターまたは出力専用パラメーターを取得します。 `BeginInvoke` の呼び出しにコールバック メソッドを指定しなかった場合は、`BeginInvoke` を呼び出したスレッドから `EndInvoke` を呼び出すことができます。  
   
 > [!IMPORTANT]
@@ -31,7 +32,7 @@ ms.locfileid: "84289968"
   
 ## <a name="related-sections"></a>関連項目  
  [イベント ベースの非同期パターン (EAP)](event-based-asynchronous-pattern-eap.md)  
- .NET Framework での非同期プログラミングについて説明します。  
+ .NET での非同期プログラミングについて説明しています。  
   
 ## <a name="see-also"></a>参照
 

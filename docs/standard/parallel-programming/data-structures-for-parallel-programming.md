@@ -5,20 +5,21 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-ms.openlocfilehash: f9c130b73044440f24b7b8bbebe9527490a165c1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cea9264a30469881e3ec54fc378af3ddb70bff8e
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288525"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925325"
 ---
 # <a name="data-structures-for-parallel-programming"></a>並列プログラミング向けのデータ構造
-.NET Framework バージョン 4 では、同時実行コレクション クラスのセット、軽量な同期プリミティブ、遅延初期化用の型など、並列プログラミングに役立つ複数の新しい型が導入されています。 これらの型は、タスク並列ライブラリや PLINQ などの任意のマルチスレッド アプリケーション コードで使うことができます。  
+
+.NET には、同時実行コレクション クラスのセット、軽量な同期プリミティブ、遅延初期化用の型など、並列プログラミングに役立つ型がいくつかあります。 これらの型は、タスク並列ライブラリや PLINQ などの任意のマルチスレッド アプリケーション コードで使うことができます。  
   
 ## <a name="concurrent-collection-classes"></a>同時実行コレクション クラス  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType> 名前空間のコレクション クラスは、できる限りロックを回避するスレッドセーフな追加と削除の操作を提供し、ロックが必要なときは粒度の細かいロックを使います。 .NET Framework バージョン 1.0 および 2.0 で導入されたコレクションとは異なり、同時実行コレクション クラスでは、項目にアクセスするときにユーザー コードでロックを取得する必要はありません。 複数のスレッドがコレクションの項目を追加および削除するシナリオでは、同時実行コレクション クラスを使うと、<xref:System.Collections.ArrayList?displayProperty=nameWithType> や <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> (ユーザー実装のロックを使用) などの型に対するパフォーマンスが大幅に向上します。  
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType> 名前空間のコレクション クラスは、できる限りロックを回避するスレッドセーフな追加と削除の操作を提供し、ロックが必要なときは粒度の細かいロックを使います。 同時実行コレクション クラスでは、項目にアクセスするときにロックを取得するユーザー コードが不要です。 複数のスレッドがコレクションの項目を追加および削除するシナリオでは、同時実行コレクション クラスを使うと、<xref:System.Collections.ArrayList?displayProperty=nameWithType> や <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> (ユーザー実装のロックを使用) などの型に対するパフォーマンスが大幅に向上します。  
   
- 次の表は、新しい同時実行コレクション クラスの一覧です。  
+ 次の表は、同時実行コレクション クラスの一覧です。  
   
 |[種類]|[説明]|  
 |----------|-----------------|  
@@ -31,31 +32,31 @@ ms.locfileid: "84288525"
  詳しくは、「[スレッド セーフなコレクション](../collections/thread-safe/index.md)」を参照してください。  
   
 ## <a name="synchronization-primitives"></a>同期プリミティブ  
- <xref:System.Threading?displayProperty=nameWithType> 名前空間の新しい同期プリミティブを使うと、従来のマルチスレッド コードに見られるような高コストのロック メカニズムを回避することで、粒度の細かいコンカレンシーと高速のパフォーマンスが提供されます。 <xref:System.Threading.Barrier?displayProperty=nameWithType> や <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> などの一部の新しい型には、.NET Framework の以前のリリースに対応するものがありません。  
+ <xref:System.Threading?displayProperty=nameWithType> 名前空間の同期プリミティブを使うと、従来のマルチスレッド コードに見られるような高コストのロック メカニズムを回避することで、細かいコンカレンシーを設定でき、高速のパフォーマンスが提供されます。
   
- 次の表は、新しい同期型の一覧です。  
+ 次の表は、同期型の一覧です。  
   
-|[種類]|[説明]|  
+|Type|説明|  
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|各タスクが到着を通知し、一部または全部のタスクが到着するまでブロックすることができるポイントを提供することにより、複数のスレッドが 1 つのアルゴリズムで並列に動作できるようにします。 詳細については、「[バリア](../threading/barrier.md)」を参照してください|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|簡単なランデブー メカニズムを提供することにより、フォークと結合のシナリオを簡略化します。 詳しくは、「[CountdownEvent](../threading/countdownevent.md)」をご覧ください。|  
 |<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|<xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> と同様の同期プリミティブです。 <xref:System.Threading.ManualResetEventSlim> の方が軽量ですが、プロセス内通信にしか使えません。|  
 |<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|リソースまたはリソースのプールに同時にアクセスできるスレッドの数を制限する同期プリミティブです。 詳しくは、「[Semaphore と SemaphoreSlim](../threading/semaphore-and-semaphoreslim.md)」をご覧ください。|  
-|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|ロックを取得しようとしているスレッドがクォンタムを生成する前にしばらくループ ("*スピン*") で待機するようになる、相互排他ロック プリミティブです。 ロックの待機が短いと予想されるシナリオでは、他のロック形式より <xref:System.Threading.SpinLock> の方がよいパフォーマンスを提供します。 詳しくは、「[SpinLock](../threading/spinlock.md)」をご覧ください。|  
+|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|ロックを取得しようとしているスレッドがクォンタムを生成する前にしばらくループ (" *スピン* ") で待機するようになる、相互排他ロック プリミティブです。 ロックの待機が短いと予想されるシナリオでは、他のロック形式より <xref:System.Threading.SpinLock> の方がよいパフォーマンスを提供します。 詳しくは、「[SpinLock](../threading/spinlock.md)」をご覧ください。|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|指定された時間だけスピンし、スピン カウントを超過した場合は最終的にスレッドを待機状態にする、小型で軽量の型です。  詳しくは、「[SpinWait](../threading/spinwait.md)」をご覧ください。|  
   
- 詳細については次を参照してください:  
+ 詳細については、次を参照してください。  
   
 - [方法: 下位レベルの同期に SpinLock を使用する](../threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
-- [方法: バリアを使用して同時実行操作を同期する](../threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)。  
+- [方法:バリアを使用して同時実行操作を同期する](../threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)。  
   
 ## <a name="lazy-initialization-classes"></a>遅延初期化クラス  
  遅延初期化では、オブジェクトのメモリは必要になるまで割り当てられません。 遅延初期化を使うと、オブジェクトの割り当てがプログラムの有効期間全体に均等に分散されるので、パフォーマンスが向上します。 <xref:System.Lazy%601> 型をラッピングすることにより、任意のカスタム型で遅延初期化を有効にできます。  
   
  次の表は、遅延初期化型の一覧です。  
   
-|[種類]|[説明]|  
+|Type|説明|  
 |----------|-----------------|  
 |<xref:System.Lazy%601?displayProperty=nameWithType>|軽量でスレッドセーフの遅延初期化を提供します。|  
 |<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|スレッドごとに遅延初期化された値を提供し、各スレッドは初期化関数を遅延して呼び出します。|  
@@ -66,7 +67,7 @@ ms.locfileid: "84288525"
 ## <a name="aggregate-exceptions"></a>例外集約  
  <xref:System.AggregateException?displayProperty=nameWithType> 型を使うと、別のスレッドで同時にスローされた複数の例外をキャプチャし、1 つの例外として結合スレッドに戻すことができます。 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 型、<xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 型、PLINQ は、この目的に <xref:System.AggregateException> を広範に使います。 詳細については、「[例外処理](exception-handling-task-parallel-library.md)」および「[方法: PLINQ クエリの例外を処理する](how-to-handle-exceptions-in-a-plinq-query.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - <xref:System.Threading?displayProperty=nameWithType>

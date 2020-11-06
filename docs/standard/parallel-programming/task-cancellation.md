@@ -10,15 +10,16 @@ helpviewer_keywords:
 - tasks, cancellation
 - asynchronous task cancellation
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
-ms.openlocfilehash: 1d9b7b35341961c27107f007e0eafa51ef49e232
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: dba2f2ad9733f8881276bdb2705a6c8457351f9c
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768665"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925299"
 ---
 # <a name="task-cancellation"></a>タスクのキャンセル
-<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> クラスおよび <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> クラスは、.NET Framework のキャンセル トークンを使用したキャンセルをサポートしています。 詳細については、「[マネージド スレッドのキャンセル](../threading/cancellation-in-managed-threads.md)」を参照してください。 Task クラスのキャンセル処理では、キャンセル可能な操作を表すユーザー デリゲートと、キャンセルを要求したコードが連携します。  キャンセル処理が正常に実行されるためには、要求コードが <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> メソッドを呼び出し、ユーザー デリゲートが操作を適時に終了する必要があります。 次のオプションのいずれかを使用して操作を終了できます。  
+
+<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> の各クラスでは、キャンセル トークンを使用した取り消し処理をサポートしています。 詳細については、「[マネージド スレッドのキャンセル](../threading/cancellation-in-managed-threads.md)」を参照してください。 Task クラスのキャンセル処理には、キャンセル可能な操作を表すユーザー デリゲートと、キャンセルを要求したコードとの連携が含まれます。 キャンセル処理が正常に実行されるには、要求コードが <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> メソッドを呼び出し、ユーザー デリゲートが操作を適時に終了する必要があります。 次のオプションのいずれかを使用して操作を終了できます。  
   
 - デリゲートから戻ります。 多くの場合、この処理で十分ですが、この方法で取り消されたタスク インスタンスは、 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 状態ではなく、 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType> 状態に遷移します。  
   

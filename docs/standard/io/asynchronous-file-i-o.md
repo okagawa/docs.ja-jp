@@ -11,19 +11,19 @@ helpviewer_keywords:
 - asynchronous I/O
 - synchronous I/O
 - streams, asynchronous streams
-- I/O [.NET Framework], asynchronous I/O
+- I/O [.NET], asynchronous I/O
 - Stream class, synchronous I/O
 - data streams, asynchronous streams
 - Stream class, asynchronous I/O
 - multiple I/O requests
 - data streams, synchronous streams
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
-ms.openlocfilehash: 9506a366b6f1e363ec13550e5ed68c7176dd4d0a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a148e6e13ec0ee4ee469a0630f150199c5a3af13
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598620"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188602"
 ---
 # <a name="asynchronous-file-io"></a>非同期ファイル I/O
 
@@ -31,7 +31,7 @@ ms.locfileid: "84598620"
 
 .NET Framework 4.5 以降の I/O 型には非同期操作を単純化する非同期メソッドが含まれています。 非同期のメソッドの名前には `Async` が含まれます ( <xref:System.IO.Stream.ReadAsync%2A>、 <xref:System.IO.Stream.WriteAsync%2A>、 <xref:System.IO.Stream.CopyToAsync%2A>、 <xref:System.IO.Stream.FlushAsync%2A>、 <xref:System.IO.TextReader.ReadLineAsync%2A>、 <xref:System.IO.TextReader.ReadToEndAsync%2A>など)。 これらの非同期のメソッドは、 <xref:System.IO.Stream>、 <xref:System.IO.FileStream>、 <xref:System.IO.MemoryStream>などのストリーム クラスと、 <xref:System.IO.TextReader> 、 <xref:System.IO.TextWriter>などのストリームとの間の読み取り/書き込みに使用されるクラスに実装されます。
 
-.NET Framework 4 およびそれ以前のバージョンで非同期 I/O 操作を実装するには、 <xref:System.IO.Stream.BeginRead%2A> 、 <xref:System.IO.Stream.EndRead%2A> などのメソッドを使用する必要があります。 これらのメソッドは、レガシ コードをサポートするために .NET Framework 4.5 でも使用できますが、非同期 I/O 操作は非同期のメソッドを使用して実装する方が簡単です。
+.NET Framework 4 およびそれ以前のバージョンで非同期 I/O 操作を実装するには、<xref:System.IO.Stream.BeginRead%2A>、<xref:System.IO.Stream.EndRead%2A> などのメソッドを使用する必要があります。 これらのメソッドは、レガシ コードをサポートするために現行の .NET バージョンでも使用できますが、非同期 I/O 操作は非同期のメソッドを使用して実装する方が簡単です。
 
 C# と Visual Basic には、非同期プログラミング用のキーワードがそれぞれ 2 つあります。
 

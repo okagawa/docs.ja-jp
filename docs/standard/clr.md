@@ -1,7 +1,8 @@
 ---
-title: 共通言語ランタイム (CLR) の概要 - .NET Framework
+title: 共通言語ランタイム (CLR) の概要 - .NET
+titleSuffix: ''
 description: .NET のランタイム環境である共通言語ランタイム (CLR) の概要について説明します。 CLR ではコードを実行でき、また開発プロセスを容易にするサービスがあります。
-ms.date: 04/02/2019
+ms.date: 10/22/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - compiling source code, runtime functionality
@@ -10,32 +11,32 @@ helpviewer_keywords:
 - runtime
 - common language runtime
 - metadata, runtime functionality
-- .NET Framework, common language runtime
+- .NET, common language runtime
 - language compilers
 - managed code
 - source code execution
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
-ms.openlocfilehash: ef455ac1c49c1f457d0fa432db91b5375c045840
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 39543a511e8f405d9205df2697bcf4fd1194bd7a
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769211"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687514"
 ---
 # <a name="common-language-runtime-clr-overview"></a>共通言語ランタイム (CLR) の概要
 
-.NET Framework には、共通言語ランタイムと呼ばれるランタイム環境が用意されています。共通言語ランタイムは、コードを実行し、開発プロセスを支援するサービスを提供します。
+.NET には、共通言語ランタイムと呼ばれるランタイム環境が用意されています。それによってコードが実行され、開発プロセスを支援するサービスが提供されます。
 
-コンパイラとツールにより、共通言語ランタイムの機能が公開されることによって、このマネージド実行環境の利点を活用するコードを記述できるようになります。 このような共通言語ランタイムに対応した言語コンパイラを使用して作成したコードはマネージド コードと呼ばれます。マネージド コードは、言語間の統合、言語間の例外処理、強化されたセキュリティ、バージョン管理と配置のサポート、コンポーネント間の対話の簡易モデル、デバッグ サービスとプロファイル サービスなど、さまざまな機能を利用できます。
+コンパイラとツールにより、共通言語ランタイムの機能が公開されることによって、このマネージド実行環境の利点を活用するコードを記述できるようになります。 ランタイムをターゲットとする言語コンパイラを使用して開発したコードは、マネージド コードと呼ばれます。 マネージド コードでは、言語間の統合、言語間の例外処理、強化されたセキュリティ、バージョン管理と配置のサポート、コンポーネント間の対話の簡易モデル、デバッグ サービスとプロファイル サービスなど、さまざまな機能を活用できます。
 
 > [!NOTE]
-> 型システム、メタデータの書式、およびランタイム環境 (仮想実行システム) はすべて公的な標準規格の ECMA 共通言語基盤仕様により定義されているため、コンパイラおよびツールは共通言語ランタイムが使用できる出力を生成できます。 詳細については、「[ECMA C# and Common Language Infrastructure Specifications (ECMA C# および共通言語基盤の仕様)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)」を参照してください。
+> 型システム、メタデータの書式、およびランタイム環境 (仮想実行システム) はすべて公的な標準規格の ECMA 共通言語基盤仕様により定義されているため、コンパイラおよびツールで、共通言語ランタイムが使用できる出力を生成できます。 詳細については、「[ECMA C# and Common Language Infrastructure Specifications (ECMA C# および共通言語基盤の仕様)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)」を参照してください。
 
 マネージド コードが共通言語ランタイムからサービスを受けられるようにするために、言語コンパイラは、そのコード内の型、メンバー、および参照を記述したメタデータを生成する必要があります。 メタデータはコード内に格納されます。つまり、共通言語ランタイムの読み込み可能なすべてのポータブル実行可能 (PE) ファイルには、メタデータが含まれていることになります。 共通言語ランタイムは、クラスの検索と読み込み、メモリ内でのインスタンスのレイアウト、メソッドの呼び出しの解決、ネイティブ コードの生成、セキュリティの強化、およびランタイムのコンテキスト境界の設定にメタデータを使用します。
 
-共通言語ランタイムはオブジェクトのレイアウトを自動的に処理し、それらのオブジェクトへの参照を管理し、不要になったオブジェクトを解放します。 このような方法で有効期間を管理されるオブジェクトをマネージド データと呼びます。 ガベージ コレクションによって、一般的なプログラミング エラーだけでなくメモリ リークもなくなります。 コードがマネージド コードの場合、作成する .NET Framework アプリケーションではマネージド データ、アンマネージド データ、またはマネージド データとアンマネージド データの両方を使用できます。 プリミティブ型などのデータ型は言語コンパイラが独自に提供しているため、データがマネージド データかどうかが不明な (または把握する必要がない) 場合もあります。
+共通言語ランタイムはオブジェクトのレイアウトを自動的に処理し、それらのオブジェクトへの参照を管理し、不要になったオブジェクトを解放します。 このような方法で有効期間を管理されるオブジェクトをマネージド データと呼びます。 ガベージ コレクションによって、一般的なプログラミング エラーだけでなくメモリ リークもなくなります。 コードがマネージドである場合、作成する .NET アプリケーションではマネージド データもしくはアンマネージド データ、またはマネージドおよびアンマネージドの両方のデータを使用できます。 プリミティブ型などのデータ型は言語コンパイラが独自に提供しているため、データがマネージド データかどうかが不明な (または把握する必要がない) 場合もあります。
 
 共通言語ランタイムでは、複数の言語間で対話できるオブジェクトを含むコンポーネントやアプリケーションを簡単にデザインできます。 異なる言語で記述されたオブジェクトが相互に対話でき、それらのオブジェクトの動作が緊密に統合されます。 たとえば、あるクラスを定義してから、そのクラスの派生クラスを別の言語で作成したり、そのクラスに対して別の言語で記述したメソッドを呼び出したりできます。 また、あるクラスのインスタンスを別の言語で記述されたクラスのメソッドに渡すこともできます。 このような言語間の統合を実現できるのは、共通言語ランタイムに対応した言語コンパイラとツールが、共通言語ランタイムによって定義されている共通型システムを採用し、型の作成、使用、永続化、型へのバインディング、および新しい型の定義に関する共通言語ランタイムの規則に従っているためです。
 
@@ -63,7 +64,9 @@ ms.locfileid: "84769211"
 
 ## <a name="clr-versions"></a>CLR のバージョン
 
-.NET Framework のバージョン番号はそれに含まれている CLR のバージョン番号には必ずしも対応しません。 .NET Framework のバージョンとそれに対応する CLR バージョンの一覧については、「[.NET Framework のバージョンおよび依存関係](../framework/migration-guide/versions-and-dependencies.md)」を参照してください。 .NET Core のリリースの製品バージョンは 1 つです。つまり、個別の CLR バージョンはありません。 .NET Core バージョンの一覧については、「[Download .NET Core](https://dotnet.microsoft.com/download/dotnet-core)」(.NET Core のダウンロード) を参照してください。
+.NET Core および .NET 5 以上のリリースの製品バージョンは 1 つです。つまり、個別の CLR バージョンはありません。 .NET Core バージョンの一覧については、「[Download .NET Core](https://dotnet.microsoft.com/download/dotnet-core)」(.NET Core のダウンロード) を参照してください。
+
+ただし、.NET Framework のバージョン番号はそれに含まれている CLR のバージョン番号には必ずしも対応しません。 .NET Framework のバージョンとそれに対応する CLR バージョンの一覧については、「[.NET Framework のバージョンおよび依存関係](../framework/migration-guide/versions-and-dependencies.md)」を参照してください。
 
 ## <a name="related-topics"></a>関連トピック
 

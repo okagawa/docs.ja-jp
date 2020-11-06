@@ -4,12 +4,12 @@ description: .NET SDK によって認識される MSBuild のプロパティと�
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: ac5d082acae582352680782deadb71a86f977f3b
-ms.sourcegitcommit: 2e4adc490c1d2a705a0592b295d606b10b9f51f1
+ms.openlocfilehash: 463e2a163e6a20f5631b0ab82462614834156ae3
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91354454"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063229"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK プロジェクトの MSBuild リファレンス
 
@@ -111,7 +111,7 @@ ms.locfileid: "91354454"
 
 ### <a name="trimmerrootassembly"></a>TrimmerRootAssembly
 
-`TrimmerRootAssembly` 項目ではアセンブリを "[*トリミング*](../deploying/trim-self-contained.md)" から除外できます。 トリミングとは、パッケージ化されたアプリケーションからランタイムの未使用部分を削除するプロセスです。 必要な参照がトリミングによって間違って削除されることもあります。
+`TrimmerRootAssembly` 項目ではアセンブリを " [*トリミング*](../deploying/trim-self-contained.md)" から除外できます。 トリミングとは、パッケージ化されたアプリケーションからランタイムの未使用部分を削除するプロセスです。 必要な参照がトリミングによって間違って削除されることもあります。
 
 次の XML では、トリミングから `System.Security` アセンブリが除外されます。
 
@@ -142,7 +142,7 @@ ms.locfileid: "91354454"
 
 ### <a name="embeddedresourceusedependentuponconvention"></a>EmbeddedResourceUseDependentUponConvention
 
-`EmbeddedResourceUseDependentUponConvention` プロパティは、リソース マニフェスト ファイル名が、リソース ファイルと併置されているソース ファイルの型情報から生成されるかどうかを定義します。 たとえば、*Form1.vb* が *Form1.cs* と同じフォルダーにあり、`EmbeddedResourceUseDependentUponConvention` が `true` に設定されている場合、生成された *.resources* ファイルは *Form1.cs* で定義されている最初の型から名前を受け取ります。 たとえば、`MyNamespace.Form1` が *Form1.cs* で定義されている最初の型である場合、生成されたファイル名は *MyNamespace.Form1.resources* になります。
+`EmbeddedResourceUseDependentUponConvention` プロパティは、リソース マニフェスト ファイル名が、リソース ファイルと併置されているソース ファイルの型情報から生成されるかどうかを定義します。 たとえば、 *Form1.vb* が *Form1.cs* と同じフォルダーにあり、`EmbeddedResourceUseDependentUponConvention` が `true` に設定されている場合、生成された *.resources* ファイルは *Form1.cs* で定義されている最初の型から名前を受け取ります。 たとえば、`MyNamespace.Form1` が *Form1.cs* で定義されている最初の型である場合、生成されたファイル名は *MyNamespace.Form1.resources* になります。
 
 > [!NOTE]
 > `LogicalName`、`ManifestResourceName`、または `DependentUpon` メタデータが `EmbeddedResource` 項目に対して指定されている場合、そのリソース ファイルに対して生成されたマニフェスト ファイル名は、代わりにそのメタデータがベースになります。
@@ -230,6 +230,9 @@ ms.locfileid: "91354454"
 > .Net 5.0 より前の .NET バージョンを対象とするプロジェクトで .NET コード分析を有効にするもう 1 つの方法は、[AnalysisLevel](#analysislevel) プロパティを `latest` に設定することです。
 
 ### <a name="enforcecodestyleinbuild"></a>EnforceCodeStyleInBuild
+
+> [!NOTE]
+> この機能は現在試験段階にあり、.NET 5 リリースと .NET 6 リリースの間で変更される可能性があります。
 
 すべての .NET プロジェクトのビルドでは、[.NET コード スタイル分析](../../fundamentals/code-analysis/overview.md#code-style-analysis)は既定で無効になっています。 `EnforceCodeStyleInBuild` プロパティを `true` に設定して、.NET プロジェクトのコード スタイル分析を有効にできます。
 

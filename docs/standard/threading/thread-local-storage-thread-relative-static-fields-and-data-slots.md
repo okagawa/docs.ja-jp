@@ -3,20 +3,21 @@ title: 'スレッド ローカル ストレージ : スレッド相対静的フ�
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- threading [.NET Framework], local storage
-- threading [.NET Framework], thread-relative static fields
+- threading [.NET], local storage
+- threading [.NET], thread-relative static fields
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-ms.openlocfilehash: adeeb6c95769d8e1ac120d4fb26d8aaedf7a1d4d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f80cc09d87116d3daff8047c1d1398c5e6104178
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291085"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188160"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>スレッド ローカル ストレージ : スレッド相対静的フィールドとデータ スロット
-1 つのスレッドとアプリケーション ドメインに固有のデータを格納するには、マネージド スレッド ローカル ストレージ (TLS: Thread Local Storage) を使用します。 .NET Framework は、マネージド TLS の使用に関して、スレッド相対静的フィールドとデータ スロットという 2 つの機構を備えています。  
+
+1 つのスレッドとアプリケーション ドメインに固有のデータを格納するには、マネージド スレッド ローカル ストレージ (TLS: Thread Local Storage) を使用します。 .NET は、マネージド TLS の使用に関して、スレッド相対静的フィールドとデータ スロットという 2 つの機構を備えています。  
   
 - コンパイル時に要件を正確に予測できる場合は、スレッド相対静的フィールド (Visual Basic ではスレッド相対 `Shared` フィールド) を使用します。 スレッド相対静的フィールドは、最適なパフォーマンスを提供します。 また、コンパイル時に型チェックを利用することもできます。  
   
@@ -24,7 +25,7 @@ ms.locfileid: "84291085"
   
  アンマネージ C++ では、`TlsAlloc` を使用してスロットを動的に割り当て、`__declspec(thread)` を使用して、変数をスレッド相対ストレージに割り当てることを宣言します。 スレッド相対静的フィールドおよびデータ スロットには、この動作のマネージド バージョンが用意されています。  
   
- .NET Framework 4 では、<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> クラスを使用して、最初に利用されるときに遅れて初期化されるスレッド ローカル オブジェクトを作成できます。 詳細については、「[限定的な初期化](../../framework/performance/lazy-initialization.md)」を参照してください。  
+<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> クラスを使用して、最初に利用されるときに遅れて初期化されるスレッドローカル オブジェクトを作成できます。 詳細については、「[限定的な初期化](../../framework/performance/lazy-initialization.md)」を参照してください。  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>マネージド TLS でのデータの一意性  
  スレッド相対静的フィールドとデータ スロットのどちらを使用しても、マネージド TLS でのデータはスレッドとアプリケーション ドメインの組み合わせに対して一意になります。  
@@ -45,7 +46,8 @@ ms.locfileid: "84291085"
  クラス コンストラクター コードはいずれも、そのフィールドにアクセスする最初のコンテキストの最初のスレッドで実行されることに注意してください。 同じアプリケーション ドメイン内にある、その他のすべてのスレッドまたはコンテキストについては、これらのフィールドが参照型の場合は `null` (Visual Basic では `Nothing`) に、値型の場合は既定値に初期化されます。 したがって、クラス コンストラクターを使用してスレッド相対静的フィールドを初期化しないでください。 スレッド相対静的フィールドの初期化は回避し、これらのフィールドが `null` (`Nothing`) または既定値に初期化されると仮定します。  
   
 ## <a name="data-slots"></a>データ スロット  
- .NET Framework には、スレッドとアプリケーション ドメインの組み合わせに対して一意の、動的なデータ スロットが用意されています。 このデータ スロットには 2 つのタイプがあります。名前付きスロットと名前のないスロットです。 いずれも、<xref:System.LocalDataStoreSlot> 構造体を使用して実装されます。  
+
+.NET には、スレッドとアプリケーション ドメインの組み合わせに対して一意の、動的なデータ スロットが用意されています。 このデータ スロットには 2 つのタイプがあります。名前付きスロットと名前のないスロットです。 いずれも、<xref:System.LocalDataStoreSlot> 構造体を使用して実装されます。  
   
 - 名前付きデータ スロットを作成するには、<xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType> メソッドを使用します。 既存の名前付きスロットへの参照を取得するには、その名前を <xref:System.Threading.Thread.GetNamedDataSlot%2A> メソッドに渡します。  
   

@@ -9,16 +9,16 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: 968da880fc7e0e811f5e8712ccb43726426a019e
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: d735cb56c5914dd33ba694c95a8e92446ca47088
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720164"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925247"
 ---
 # <a name="task-based-asynchronous-programming"></a>タスク ベースの非同期プログラミング
 
-タスク並列ライブラリ (TPL) は、非同期操作を表す*タスク*の概念に基づいています。 いくつかの点で、タスクはスレッドまたは <xref:System.Threading.ThreadPool> 作業項目に似ていますが、高いレベルで抽象化しています。 *タスクの並列化*とは、1 つ以上の独立したタスクを同時に実行することです。 タスクが提供する主な利点は次の 2 つです。
+タスク並列ライブラリ (TPL) は、非同期操作を表す *タスク* の概念に基づいています。 いくつかの点で、タスクはスレッドまたは <xref:System.Threading.ThreadPool> 作業項目に似ていますが、高いレベルで抽象化しています。 *タスクの並列化* とは、1 つ以上の独立したタスクを同時に実行することです。 タスクが提供する主な利点は次の 2 つです。
 
 - システム リソースをより効率的かつスケーラブルに利用する。
 
@@ -28,7 +28,7 @@ ms.locfileid: "88720164"
 
      タスクおよびタスクを中心に構築されたフレームワークでは、待機、キャンセル、継続、信頼性の高い例外処理、詳細なステータス、カスタムのスケジュール設定などをサポートする豊富な API が用意されています。
 
-この 2 つの理由により、.NET Framework では、マルチスレッド、非同期および並列コードを記述するために、TPL で API を使用することをお勧めしています。
+この 2 つの理由により、.NET でマルチスレッド、非同期および並列コードを記述する場合に推奨される API は TPL になります。
 
 ## <a name="creating-and-running-tasks-implicitly"></a>暗黙的なタスクの作成と実行
 
@@ -94,45 +94,33 @@ ms.locfileid: "88720164"
 
 ## <a name="task-creation-options"></a>タスクの作成オプション
 
-タスクを作成するほとんどの API には、<xref:System.Threading.Tasks.TaskCreationOptions> パラメーターを受け入れるオーバーロードが用意されています。 これらのオプションのいずれかを指定することで、タスク スケジューラにスレッド プール上のタスクをスケジュールする方法を指示できます。 タスクの作成オプションの一覧を次に示します。
+タスクを作成するほとんどの API には、<xref:System.Threading.Tasks.TaskCreationOptions> パラメーターを受け入れるオーバーロードが用意されています。 これらのオプションを 1 つ以上指定すると、タスク スケジューラにスレッド プール上のタスクをスケジュールする方法を指定できます。 ビット **OR** 演算を使用して、オプションを組み合わせることもできます。
 
-|<xref:System.Threading.Tasks.TaskCreationOptions> パラメーター値|説明|
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
-|<xref:System.Threading.Tasks.TaskCreationOptions.None>|オプションを指定しなかった場合の既定値です。 スケジューラは既定のヒューリスティックを使用してタスクをスケジュールします。|
-|<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|先に作成されたタスクが先に実行され、後から作成されたタスクは後から実行されるように、タスクのスケジュールを指定します。|
-|<xref:System.Threading.Tasks.TaskCreationOptions.LongRunning>|実行に時間のかかる操作を表すタスクであることを示します。|
-|<xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent>|子が存在する場合、現在のタスクにアタッチされた子としてタスクを作成するように指定します。 詳細については、「[アタッチされた子タスクとデタッチされた子タスク](attached-and-detached-child-tasks.md)」を参照してください。|
-|<xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach>|内側のタスクが `AttachedToParent` オプションを指定すると、そのタスクはアタッチされた子タスクにならないことを指定します。|
-|<xref:System.Threading.Tasks.TaskCreationOptions.HideScheduler>|<xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> または <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> などのメソッドを特定のタスクから呼び出して作成されたタスクのタスク スケジューラは、このタスクが実行されているスケジューラではなく、既定のスケジューラであることを指定します。|
-
-このオプションは、ビットごとの **OR** 演算を使用して組み合わせることができます。 次の例は、<xref:System.Threading.Tasks.TaskCreationOptions.LongRunning> オプションと <xref:System.Threading.Tasks.TaskContinuationOptions.PreferFairness> オプションが指定されたタスクを示しています。
+次の例は、<xref:System.Threading.Tasks.TaskCreationOptions.LongRunning> および <xref:System.Threading.Tasks.TaskContinuationOptions.PreferFairness> オプションが指定されたタスクを示しています。
 
 [!code-csharp[TPL_TaskIntro#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/taskintro.cs#03)]
 [!code-vb[TPL_TaskIntro#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/tpl_intro.vb#03)]
 
 ## <a name="tasks-threads-and-culture"></a>タスク、スレッド、およびカルチャ
 
-各スレッドにはカルチャと UI カルチャが関連付けられています。それぞれのカルチャは <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> と <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> プロパティにより定義されています。 スレッドのカルチャは、書式設定、解析、並べ替え、文字列比較などの操作で使用されます。 スレッドの UI カルチャはリソースの検索で使用されます。 通常、<xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> プロパティと <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> プロパティを使用してアプリケーション ドメイン内のすべてのスレッドの既定のカルチャを指定していない限り、スレッドの既定のカルチャと既定の UI カルチャはシステム カルチャによって定義されます。 スレッドのカルチャを明示的に設定して新しいスレッドを開始すると、新しいスレッドは呼び出し元スレッドのカルチャを継承せず、既定のシステム カルチャがそのカルチャとして使用されます。 .NET Framework 4.6 より前のバージョンの .NET Framework を対象とするアプリのタスク ベース プログラミング モデルは、この方針に準拠します。
+各スレッドには、それぞれのカルチャが <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> および <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> プロパティで定義された、カルチャと UI カルチャが関連付けられています。 スレッドのカルチャは、書式設定、解析、並べ替え、文字列比較などの操作で使用されます。 スレッドの UI カルチャはリソースの検索で使用されます。
 
-> [!IMPORTANT]
-> 呼び出し元スレッドのカルチャは、タスクのコンテキストの一部として、.NET Framework 4.6 で*実行される*アプリではなく、.NET Framework 4.6 を*対象*としたアプリに適用されます。 Visual Studio 内部でプロジェクトを作成する場合、 **[新しいプロジェクト]** ダイアログ ボックスの上部にあるドロップダウン リストから特定バージョンの .NET Framework を選択すると、そのバージョンを対象にできます。また、Visual Studio 外部では <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性を使用できます。 .NET Framework 4.6 より前のバージョンの .NET Framework を対象とするアプリ、または特定のバージョンの .NET Framework を対象としないアプリでは、タスクのカルチャは継続的に、それが実行されているスレッドのカルチャによって決まります。
+<xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> および <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> プロパティを使用してアプリケーション ドメイン内のすべてのスレッドに既定のカルチャを指定していない限り、スレッドの既定のカルチャと UI カルチャはシステム カルチャで定義されます。 スレッドのカルチャを明示的に設定して新しいスレッドを開始すると、新しいスレッドは呼び出し元スレッドのカルチャを継承せず、既定のシステム カルチャがそのカルチャとして使用されます。 ただし、タスクベースのプログラミングでは、タスクが別のスレッドで非同期で実行される場合でも、呼び出し元スレッドのカルチャが使用されます。
 
-.NET Framework 4.6 以降を対象とするアプリでは、タスクがスレッド プールのスレッドで非同期に実行されている場合でも、呼び出し元スレッドのカルチャが各タスクに継承されます。
+簡単な例を次に示します。 アプリの現在のカルチャがフランス語 (フランス) に変更されます (現在のカルチャがフランス語 (フランス) である場合、英語 (米国) に変更されます)。 次に、変更後のカルチャの通貨値として書式設定された数値を返す `formatDelegate` という名前のデリゲートを呼び出します。 デリゲートがタスクによって同期的にまたは非同期的に呼び出されるかどうかに関わらず、タスクにより呼び出し元スレッドのカルチャが使用されます。
 
-簡単な例を次に示します。 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性を使用して .NET Framework 4.6 を対象とし、アプリの現在のカルチャをフランス語 (フランス)、またはフランス語 (フランス) が現在のカルチャである場合は英語 (米国) に変更します。 次に、変更後のカルチャの通貨値として書式設定された数値を返す `formatDelegate` という名前のデリゲートを呼び出します。 デリゲートは、同期タスクまたは非同期タスクのいずれの場合でも、予期される結果を返すことに注意してください。これは、非同期タスクは呼び出し元スレッドのカルチャを継承するためです。
+:::code language="csharp" source="snippets/cs/asyncculture1.cs" id="1":::
 
-[!code-csharp[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/cs/asyncculture1.cs#5)]
-[!code-vb[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/vb/asyncculture1.vb#5)]
+:::code language="vbnet" source="snippets/vb/asyncculture1.vb" id="1":::
 
-Visual Studio を使用している場合、プロジェクトを **[新しいプロジェクト]** ダイアログで作成する際に、<xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性を省略して、代わりに .NET Framework 4.6 を対象として選択できます。
-
-.NET Framework 4.6 より前のバージョンの .NET Framework を対象とするアプリの動作が出力に反映されるようにするため、ソース コードから <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性を削除します。 出力には、呼び出し元スレッドのカルチャではなく、既定のシステム カルチャの書式指定規則が反映されます。
+> [!NOTE]
+> .NET Framework 4.6 より前の .NET Framework のバージョンでは、タスクのカルチャは、" *呼び出し元スレッド* " のカルチャではなく、" *実行されている* " スレッドのそれによって決定されていました。 これは非同期タスクの場合、タスクが使用するカルチャは、呼び出し元スレッドのカルチャと異なる可能性があることを意味します。
 
 非同期タスクとカルチャの詳細については、「<xref:System.Globalization.CultureInfo>」トピックの「カルチャおよび非同期タスク ベースの操作」を参照してください。
 
 ## <a name="creating-task-continuations"></a>タスクの継続の作成
 
-<xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> メソッドおよび <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> メソッドで、"*継続元タスク*" が終了したときに開始されるタスクを指定できます。 継続タスクのデリゲートは継続元タスクへの参照を渡し、継続元タスクのステータスを調査できるようにし、また <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> プロパティの値を取得して、継続元の出力を継続への入力として使用できるようにします。
+<xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> メソッドおよび <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> メソッドで、" *継続元タスク* " が終了したときに開始されるタスクを指定できます。 継続タスクのデリゲートは継続元タスクへの参照を渡し、継続元タスクのステータスを調査できるようにし、また <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> プロパティの値を取得して、継続元の出力を継続への入力として使用できるようにします。
 
 次の例では、`getData` タスクは <xref:System.Threading.Tasks.TaskFactory.StartNew%60%601%28System.Func%7B%60%600%7D%29?displayProperty=nameWithType> メソッドの呼び出しによって開始されます。 `processData` タスクは `getData` が終了したときに自動的に開始され、`displayData` は `processData` が終了したときに開始されます。 `getData` は、`processData` タスクの `getData` プロパティを使用して <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> タスクがアクセス可能な、整数の配列を生成します。 `processData` タスクはその配列を処理し、<xref:System.Threading.Tasks.Task%601.ContinueWith%60%601%28System.Func%7BSystem.Threading.Tasks.Task%7B%600%7D%2C%60%600%7D%29?displayProperty=nameWithType> メソッドに渡されるラムダ式の戻り値の型から推論される型を持つ結果を返します。 `displayData` タスクは、`processData` が終了したときに自動的に実行され、<xref:System.Tuple%603> ラムダ式が返した `processData` オブジェクトは、`displayData` タスクの `processData` プロパティを使用して、<xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> タスクからアクセス可能です。 `displayData` タスクは `processData` タスクから結果を受け取り、同様の方法を使用して (プログラムで使用できるようになったと) 推論される型を持つ結果を <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティで生成します。
 
@@ -150,7 +138,7 @@ Visual Studio を使用している場合、プロジェクトを **[新しい�
 
 ## <a name="creating-detached-child-tasks"></a>デタッチされた子タスクの作成
 
-タスクで実行中のユーザー コードで新しいタスクを作成し、<xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> オプションを指定しない場合、新しいタスクはどのような方法でも親タスクとは同期されません。 非同期タスクのこの型は、*デタッチされた入れ子のタスク*、または*デタッチされた子タスク*と呼ばれます。 次の例は、デタッチされた子タスクを 1 つ作成するタスクを示しています。
+タスクで実行中のユーザー コードで新しいタスクを作成し、<xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> オプションを指定しない場合、新しいタスクはどのような方法でも親タスクとは同期されません。 非同期タスクのこの型は、 *デタッチされた入れ子のタスク* 、または *デタッチされた子タスク* と呼ばれます。 次の例は、デタッチされた子タスクを 1 つ作成するタスクを示しています。
 
 [!code-csharp[TPL_TaskIntro#07](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/taskintro.cs#07)]
 [!code-vb[TPL_TaskIntro#07](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/tpl_intro.vb#07)]
@@ -159,7 +147,7 @@ Visual Studio を使用している場合、プロジェクトを **[新しい�
 
 ## <a name="creating-child-tasks"></a>子タスクの作成
 
-タスクで実行中のユーザー コードで <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> オプションを使用してタスクが作成されると、その新しいタスクは、親タスクに "*アタッチされた子タスク*" になります。 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> オプションを使用すると、構成されたタスクの並列化を表現できます。親タスクは、すべてのアタッチされた子タスクが終了するのを暗黙的に待機するためです。 次の例は、アタッチされた子タスクを 10 個作成する親タスクを示しています。 この例は <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> メソッドを呼び出して親タスクの完了を待機しているが、アタッチされた子タスクの完了を明示的には待機する必要がないことに注意してください。
+タスクで実行中のユーザー コードで <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> オプションを使用してタスクが作成されると、その新しいタスクは、親タスクに " *アタッチされた子タスク* " になります。 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> オプションを使用すると、構成されたタスクの並列化を表現できます。親タスクは、すべてのアタッチされた子タスクが終了するのを暗黙的に待機するためです。 次の例は、アタッチされた子タスクを 10 個作成する親タスクを示しています。 この例は <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> メソッドを呼び出して親タスクの完了を待機しているが、アタッチされた子タスクの完了を明示的には待機する必要がないことに注意してください。
 
 [!code-csharp[TPL_TaskIntro#8](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/child1.cs#8)]
 [!code-vb[TPL_TaskIntro#8](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/child1.vb#8)]

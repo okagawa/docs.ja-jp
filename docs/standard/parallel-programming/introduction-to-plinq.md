@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-ms.openlocfilehash: 9dbc4fde3f72d01aee91978ed5cb0baf0895de26
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 37414c7963a3803518b41a5c6d262740313e2b37
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662460"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925351"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ の概要
 
@@ -109,7 +109,7 @@ LINQ の順次クエリでは、`foreach` (Visual Basic の場合は `For Each`)
 
 ## <a name="cancellation"></a>キャンセル
 
-PLINQ は、.NET Framework 4 のキャンセルの型に統合されています。 詳細については、「[Cancellation in Managed Threads (マネージド スレッドのキャンセル)](../threading/cancellation-in-managed-threads.md)」を参照してください。そのため、順次的な LINQ to Objects クエリとは異なり、PLINQ クエリは取り消すことができます。 キャンセル可能な PLINQ クエリを作成するには、クエリで <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> 演算子を使用し、引数として <xref:System.Threading.CancellationToken> インスタンスを指定します。 トークンの <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> プロパティが true に設定されていると、PLINQ はそれに気付き、すべてのスレッドの処理を中止して <xref:System.OperationCanceledException> をスローします。
+PLINQ は、.NET のキャンセルの型に統合されています。 詳細については、「[Cancellation in Managed Threads (マネージド スレッドのキャンセル)](../threading/cancellation-in-managed-threads.md)」を参照してください。そのため、順次的な LINQ to Objects クエリとは異なり、PLINQ クエリは取り消すことができます。 キャンセル可能な PLINQ クエリを作成するには、クエリで <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> 演算子を使用し、引数として <xref:System.Threading.CancellationToken> インスタンスを指定します。 トークンの <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> プロパティが true に設定されていると、PLINQ はそれに気付き、すべてのスレッドの処理を中止して <xref:System.OperationCanceledException> をスローします。
 
 キャンセル トークンが設定された後も、PLINQ クエリが一部の要素の処理を継続する可能性があります。
 
