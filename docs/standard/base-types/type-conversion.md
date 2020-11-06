@@ -1,5 +1,5 @@
 ---
-title: .NET Framework における型変換
+title: .NET での型変換
 description: .NET での型変換について確認します。ここでは、変換元の値と等価な値が新しい型で作成されますが、それが元のものと同一であるとは限りません。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
@@ -23,19 +23,20 @@ helpviewer_keywords:
 - Convert class
 - implicit conversions
 - Implicit operator
-- data types [.NET Framework], converting
+- data types [.NET], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-ms.openlocfilehash: 11345081610459dbf053d846aa04369301010732
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 4f7e4400aa15532b04fd4e39219775af34068685
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769224"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687543"
 ---
-# <a name="type-conversion-in-the-net-framework"></a>.NET Framework における型変換
+# <a name="type-conversion-in-net"></a>.NET での型変換
+
 すべての値には関連付けられた型があり、その値に割り振られる容量、可能な値の範囲、使用できるメンバーなどの属性を定義しています。 多くの値は複数の型として表現できます。 たとえば、値 4 は整数または浮動小数点数として表現できます。 型変換を実行すると、変換元の型の値と等価な値が新しい型で作成されますが、それが元のオブジェクトと同一である (値が正確に一致する) とは限りません。  
   
- 次の変換は、.NET Framework によって自動的にサポートされます。  
+次の変換は、.NET によって自動的にサポートされます。  
   
 - 派生クラスから基底クラスへの変換。 これは、たとえば、任意のクラスまたは構造体のインスタンスを <xref:System.Object> インスタンスに変換できることを意味します。  この変換では、キャスト演算子または変換演算子は必要ありません。  
   
@@ -45,20 +46,21 @@ ms.locfileid: "84769224"
   
 - インターフェイス オブジェクトから、そのインターフェイスを実装する元の型への変換。  C# の場合、この変換ではキャスト演算子が必要です。 Visual Basic では、`Option Strict` がオンの場合、`CType` 演算子が必要です。  
   
- これらの自動変換に加えて、.NET Framework ではカスタムの型変換をサポートするいくつかの機能を提供しています。 次に例を示します。  
+これらの自動変換に加えて、.NET ではカスタムの型変換をサポートするいくつかの機能を提供しています。 次に例を示します。  
   
 - `Implicit` 演算子。型の間で使用できる拡大変換を定義します。 詳細については、「[Implicit 演算子を使用する暗黙的な変換](#implicit-conversion-with-the-implicit-operator)」を参照してください。  
   
 - `Explicit` 演算子。型の間で使用できる縮小変換を定義します。 詳細については、「[Explicit 演算子を使用する明示的な変換](#explicit-conversion-with-the-explicit-operator)」を参照してください。  
   
-- <xref:System.IConvertible> インターフェイス。 .NET Framework の各基本データ型への変換を定義します。 詳細については、「[IConvertible インターフェイス](#the-iconvertible-interface)」を参照してください。  
+- <xref:System.IConvertible> インターフェイス。 .NET の各基本データ型への変換を定義します。 詳細については、「[IConvertible インターフェイス](#the-iconvertible-interface)」を参照してください。  
   
 - <xref:System.Convert> クラス。<xref:System.IConvertible> インターフェイスにメソッドを実装する一連のメソッドを提供します。 詳細については、「[Convert クラス](#the-convert-class)」を参照してください。  
   
 - <xref:System.ComponentModel.TypeConverter> クラス。指定された型から他の型への変換をサポートするように拡張できる基本クラスです。 詳細については、「[TypeConverter クラス](#the-typeconverter-class)」を参照してください。  
 
-## <a name="implicit-conversion-with-the-implicit-operator"></a>Implicit 演算子を使用する暗黙的な変換  
- 拡大変換では、変換後の型より範囲の制限が厳しい既存の型またはメンバー リストが制限されている既存の型の値から新しい値が作成されます。 拡大変換でデータ損失が発生することはありません (ただし、精度が失われることはあります)。 データが失われないため、コンパイラは明示的な変換メソッドまたはキャスト演算子を使用するように要求する必要がなく、暗黙的または透過的に変換を処理できます。  
+## <a name="implicit-conversion-with-the-implicit-operator"></a>implicit 演算子を使用する暗黙的な変換
+
+拡大変換では、変換後の型より範囲の制限が厳しい既存の型またはメンバー リストが制限されている既存の型の値から新しい値が作成されます。 拡大変換でデータ損失が発生することはありません (ただし、精度が失われることはあります)。 データが失われないため、コンパイラは明示的な変換メソッドまたはキャスト演算子を使用するように要求する必要がなく、暗黙的または透過的に変換を処理できます。  
   
 > [!NOTE]
 > 暗黙的な変換を実行するコードで変換メソッドを呼び出したり、キャスト演算子を使用したりすることはできますが、暗黙的な変換がサポートされるコンパイラでは必要ありません。  
@@ -78,8 +80,9 @@ ms.locfileid: "84769224"
  [!code-csharp[Conceptual.Conversion#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/implicit1.cs#3)]
  [!code-vb[Conceptual.Conversion#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/implicit1.vb#3)]  
 
-## <a name="explicit-conversion-with-the-explicit-operator"></a>Explicit 演算子を使用する明示的な変換  
- 縮小変換では、変換後の型より範囲が広い既存の型またはメンバー リストが多い既存の型の値から新しい値が作成されます。 縮小変換ではデータ損失が発生する可能性があるため、コンパイラでは多くの場合、変換メソッドの呼び出しまたはキャスト演算子を通じて変換を明示的に行うことが要求されます。 つまり、変換は、開発者のコード内で明示的に処理する必要があります。  
+## <a name="explicit-conversion-with-the-explicit-operator"></a>explicit 演算子を使用する明示的な変換
+
+縮小変換では、変換後の型より範囲が広い既存の型またはメンバー リストが多い既存の型の値から新しい値が作成されます。 縮小変換ではデータ損失が発生する可能性があるため、コンパイラでは多くの場合、変換メソッドの呼び出しまたはキャスト演算子を通じて変換を明示的に行うことが要求されます。 つまり、変換は、開発者のコード内で明示的に処理する必要があります。  
   
 > [!NOTE]
 > 縮小変換で変換メソッドまたはキャスト演算子を必須とする主な目的は、コード内で処理できるように、データ損失の可能性または <xref:System.OverflowException>  について開発者に認識してもらうことにあります。 ただし、一部のコンパイラでは、この要件が緩和されている場合もあります。 たとえば、Visual Basic で `Option Strict` がオフの場合 (既定の設定)、Visual Basic コンパイラは縮小変換を暗黙的に実行します。  
@@ -92,12 +95,12 @@ ms.locfileid: "84769224"
 |<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType> が <xref:System.Int32.MaxValue?displayProperty=nameWithType> より大きくなっています。|  
 |<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType> が <xref:System.Int32.MaxValue?displayProperty=nameWithType> より大きくなっています。|  
   
- このような縮小変換を処理するため、.NET Framework では、型で `Explicit` 演算子を定義できます。 これにより、個別の言語コンパイラで独自の構文を使用してこの演算子を実装するか、または <xref:System.Convert> クラスのメンバーを呼び出して変換を実行できます (<xref:System.Convert> クラスの詳細については、このトピックの下記の「[Convert クラス](#the-convert-class)」を参照してください)。これらの範囲外の可能性がある整数値を <xref:System.Int32> 値に明示的に変換する処理を行う言語機能の使用例を次に示します。  
+ このような縮小変換を処理するため、.NET では、型で `Explicit` 演算子を定義できます。 これにより、個別の言語コンパイラで独自の構文を使用してこの演算子を実装するか、または <xref:System.Convert> クラスのメンバーを呼び出して変換を実行できます (<xref:System.Convert> クラスの詳細については、このトピックの下記の「[Convert クラス](#the-convert-class)」を参照してください)。これらの範囲外の可能性がある整数値を <xref:System.Int32> 値に明示的に変換する処理を行う言語機能の使用例を次に示します。  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  
   
- 明示的な変換で生成される結果は言語によって異なることがあり、これらの結果は対応する <xref:System.Convert> メソッドによって返される値とは異なる可能性があります。 たとえば、<xref:System.Double> 型の値 12.63251 を <xref:System.Int32> に変換する場合、Visual Basic の `CInt` メソッドと .NET Framework の <xref:System.Convert.ToInt32%28System.Double%29?displayProperty=nameWithType> メソッドは <xref:System.Double> を丸めて値 13 を返しますが、C# の `(int)` 演算子は <xref:System.Double> を切り捨てて値 12 を返します。 同様に、C# の `(int)` 演算子はブール型から整数型への変換をサポートしませんが、Visual Basic の `CInt` メソッドは値 `true` を -1 に変換します。 一方、<xref:System.Convert.ToInt32%28System.Boolean%29?displayProperty=nameWithType> メソッドは値 `true` を 1 に変換します。  
+ 明示的な変換で生成される結果は言語によって異なることがあり、これらの結果は対応する <xref:System.Convert> メソッドによって返される値とは異なる可能性があります。 たとえば、<xref:System.Double> 型の値 12.63251 を <xref:System.Int32> に変換する場合、Visual Basic の `CInt` メソッドと .NET の <xref:System.Convert.ToInt32%28System.Double%29?displayProperty=nameWithType> メソッドは <xref:System.Double> を丸めて値 13 を返しますが、C# の `(int)` 演算子は <xref:System.Double> を切り捨てて値 12 を返します。 同様に、C# の `(int)` 演算子はブール型から整数型への変換をサポートしませんが、Visual Basic の `CInt` メソッドは値 `true` を -1 に変換します。 一方、<xref:System.Convert.ToInt32%28System.Boolean%29?displayProperty=nameWithType> メソッドは値 `true` を 1 に変換します。  
   
  ほとんどのコンパイラでは、チェックを行う形でも行わない形でも明示的な変換を実行できます。 チェックを行う変換を実行すると、変換する型の値が変換先の型の範囲外になる場合に <xref:System.OverflowException> がスローされます。 チェックを行わない変換を同じ条件で実行した場合、例外がスローされることがなくても、実際の動作は不定となり、結果が正しくない値になる可能性があります。  
   
@@ -118,8 +121,9 @@ ms.locfileid: "84769224"
  [!code-csharp[Conceptual.Conversion#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#6)]
  [!code-vb[Conceptual.Conversion#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#6)]  
 
-## <a name="the-iconvertible-interface"></a>IConvertible インターフェイス  
- 任意の型から共通言語ランタイムの基本型への変換をサポートするため、.NET Framework には <xref:System.IConvertible> インターフェイスが用意されています。 実装する型には、次のメソッドが必要です。  
+## <a name="the-iconvertible-interface"></a>IConvertible インターフェイス
+
+任意の型から共通言語ランタイムの基本型への変換をサポートするため、.NET には <xref:System.IConvertible> インターフェイスが用意されています。 実装する型には、次のメソッドが必要です。  
   
 - 実装する型の <xref:System.TypeCode> を返すメソッド。  
   
@@ -135,20 +139,22 @@ ms.locfileid: "84769224"
  実装する型ではなく、そのインターフェイス上で変換メソッドを呼び出すという要件があるため、明示的なインターフェイスの実装の負荷は相対的に大きくなります。 代わりに、<xref:System.Convert> クラスの適切なメンバーを呼び出して共通言語ランタイムの基本型間の変換を行うことをお勧めします。 詳細については、次のセクションの「[Convert クラス](#the-convert-class)」を参照してください。  
   
 > [!NOTE]
-> .NET Framework で提供される <xref:System.IConvertible> インターフェイスおよび <xref:System.Convert> クラスに加えて、各言語独自の変換方法が提供されている場合もあります。 たとえば C# ではキャスト演算子が使用され、Visual Basic ではコンパイラで実装された `CType`、`CInt`、`DirectCast` などの変換関数が使用されます。  
+> .NET で提供される <xref:System.IConvertible> インターフェイスおよび <xref:System.Convert> クラスに加えて、各言語独自の変換方法が提供されている場合もあります。 たとえば C# ではキャスト演算子が使用され、Visual Basic ではコンパイラで実装された `CType`、`CInt`、`DirectCast` などの変換関数が使用されます。  
   
- 一般に、<xref:System.IConvertible> インターフェイスは、.NET Framework の基本型間の変換をサポートするために設計されています。 ただし、このインターフェイスをカスタム型に実装して、その型から他のカスタム型への変換をサポートすることもできます。 詳細については、このトピックの「[ChangeType メソッドを使用するカスタム変換](#custom-conversions-with-the-changetype-method)」を参照してください。
+ 一般に、<xref:System.IConvertible> インターフェイスは、.NET の基本型間の変換をサポートするために設計されています。 ただし、このインターフェイスをカスタム型に実装して、その型から他のカスタム型への変換をサポートすることもできます。 詳細については、このトピックの「[ChangeType メソッドを使用するカスタム変換](#custom-conversions-with-the-changetype-method)」を参照してください。
 
 ## <a name="the-convert-class"></a>Convert クラス
- 型変換を実行するために基本型の <xref:System.IConvertible> インターフェイス実装を呼び出すこともできますが、ある基本型から他の基本型への変換では、言語に依存しない方法である <xref:System.Convert?displayProperty=nameWithType> クラスのメソッドの呼び出しを推奨します。 また、<xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> メソッドは、特定のカスタム型から他のカスタム型への変換にも使用できます。  
+
+型変換を実行するために基本型の <xref:System.IConvertible> インターフェイス実装を呼び出すこともできますが、ある基本型から他の基本型への変換では、言語に依存しない方法である <xref:System.Convert?displayProperty=nameWithType> クラスのメソッドの呼び出しを推奨します。 また、<xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> メソッドは、特定のカスタム型から他のカスタム型への変換にも使用できます。  
   
-### <a name="conversions-between-base-types"></a>基本型どうしの変換  
- <xref:System.Convert> クラスは、言語に依存しない方法で基本型どうしの変換を実行し、共通言語ランタイムに対応するすべての言語で使用できます。 このクラスには、拡大変換と縮小変換のための一連のメソッドがすべて用意されています。また、サポートされない変換 (<xref:System.InvalidCastException> 値から整数値への変換など) に対しては <xref:System.DateTime> がスローされます。 縮小変換は checked コンテキストで実行され、変換が失敗すると <xref:System.OverflowException> がスローされます。  
+### <a name="conversions-between-base-types"></a>基本型どうしの変換
+
+<xref:System.Convert> クラスは、言語に依存しない方法で基本型どうしの変換を実行し、共通言語ランタイムに対応するすべての言語で使用できます。 このクラスには、拡大変換と縮小変換のための一連のメソッドがすべて用意されています。また、サポートされない変換 (<xref:System.InvalidCastException> 値から整数値への変換など) に対しては <xref:System.DateTime> がスローされます。 縮小変換は checked コンテキストで実行され、変換が失敗すると <xref:System.OverflowException> がスローされます。  
   
 > [!IMPORTANT]
 > <xref:System.Convert> クラスには各基本型どうしの変換を実行するメソッドが含まれているため、各基本型の明示的な <xref:System.IConvertible> インターフェイス実装を呼び出す必要はありません。  
   
- <xref:System.Convert?displayProperty=nameWithType> クラスを使用して .NET Framework 基本型どうしの拡大変換および縮小変換を実行する例を次に示します。  
+ <xref:System.Convert?displayProperty=nameWithType> クラスを使用して .NET 基本型どうしの拡大および縮小の各変換を実行する例を次に示します。  
   
  [!code-csharp[Conceptual.Conversion#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/convert1.cs#8)]
  [!code-vb[Conceptual.Conversion#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/convert1.vb#8)]  
@@ -160,8 +166,9 @@ ms.locfileid: "84769224"
   
  <xref:System.Convert> クラスでサポートされる拡大変換と縮小変換の一覧表については、「[型変換の表](conversion-tables.md)」を参照してください。  
 
-### <a name="custom-conversions-with-the-changetype-method"></a>ChangeType メソッドを使用するカスタム変換  
- <xref:System.Convert> クラスは、各基本型どうしの変換をサポートするだけでなく、カスタム型を 1 つ以上の定義済みの型に変換できます。 この変換は <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> メソッドによって実行されます。さらに、このメソッドが、<xref:System.IConvertible.ToType%2A?displayProperty=nameWithType> パラメーターの `value` メソッドに対する呼び出しをラップします。 したがって、`value` パラメーターで指定されるオブジェクトに、<xref:System.IConvertible> インターフェイスが実装されている必要があります。  
+### <a name="custom-conversions-with-the-changetype-method"></a>ChangeType メソッドを使用するカスタム変換
+
+<xref:System.Convert> クラスは、各基本型どうしの変換をサポートするだけでなく、カスタム型を 1 つ以上の定義済みの型に変換できます。 この変換は <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> メソッドによって実行されます。さらに、このメソッドが、<xref:System.IConvertible.ToType%2A?displayProperty=nameWithType> パラメーターの `value` メソッドに対する呼び出しをラップします。 したがって、`value` パラメーターで指定されるオブジェクトに、<xref:System.IConvertible> インターフェイスが実装されている必要があります。  
   
 > [!NOTE]
 > <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%29?displayProperty=nameWithType> および <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> メソッドは <xref:System.Type> オブジェクトを使用して `value` の変換後の型を指定するため、コンパイル時には型がわからないオブジェクトへの動的な変換に使用することができます。 ただし、<xref:System.IConvertible> の `value` の実装も、この変換をサポートする必要があることに注意してください。  
@@ -176,8 +183,9 @@ ms.locfileid: "84769224"
  [!code-csharp[Conceptual.Conversion#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/iconvertible2.cs#11)]
  [!code-vb[Conceptual.Conversion#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/iconvertible2.vb#11)]  
 
-## <a name="the-typeconverter-class"></a>TypeConverter クラス  
- .NET Framework では、<xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType> クラスを拡張し、<xref:System.ComponentModel.TypeConverterAttribute?displayProperty=nameWithType> 属性を使用して型コンバーターを型に関連付けることによって、カスタム型の型コンバーターも定義できます。 次の表に、この方法と、カスタム型に対して <xref:System.IConvertible> インターフェイスを実装する方法の相違点をまとめます。  
+## <a name="the-typeconverter-class"></a>TypeConverter クラス
+
+<xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType> クラスを拡張し、<xref:System.ComponentModel.TypeConverterAttribute?displayProperty=nameWithType> 属性を使用して型コンバーターを型に関連付けることで、.NET によりカスタム型の型コンバーターも定義できます。 次の表に、この方法と、カスタム型に対して <xref:System.IConvertible> インターフェイスを実装する方法の相違点をまとめます。  
   
 > [!NOTE]
 > カスタム型に対してデザイン時サポートが有効になるのは、そのカスタム型の型コンバーターが定義されている場合だけです。  
