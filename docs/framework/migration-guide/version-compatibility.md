@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: 824765e1f3ecfd1381f9c5f8b144b7b11aee8f0b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2be9c4e12d6a613e7f1062ec7492b0b99203f39d
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550385"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400697"
 ---
 # <a name="version-compatibility"></a>バージョンの互換性
 
@@ -61,7 +61,7 @@ ms.locfileid: "90550385"
 
 - アプリが正常に動作しない原因が .NET Framework 4.5 での変更によるものとわかった場合は、「[ランタイム設定スキーマ](../configure-apps/file-schema/runtime/index.md)」の特に [\<AppContextSwitchOverrides> 要素](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)を確認して、アプリの構成ファイル内のランタイム設定を使用して以前の動作を復元できるかどうかを判断してください。
 
-- 説明されていない問題が発生した場合は、[.NET の開発者コミュニティ サイト](https://developercommunity.visualstudio.com/spaces/61/index.html)上で問題を提起するか、[Microsoft/dotnet GitHub リポジトリ](https://github.com/microsoft/dotnet/issues)で問題を作成してください。
+- 説明されていない問題が発生した場合は、[.NET の開発者コミュニティ サイト](https://aka.ms/feedback/report?space=61)上で問題を提起するか、[Microsoft/dotnet GitHub リポジトリ](https://github.com/microsoft/dotnet/issues)で問題を作成してください。
 
 ## <a name="side-by-side-execution"></a>side-by-side 実行
 

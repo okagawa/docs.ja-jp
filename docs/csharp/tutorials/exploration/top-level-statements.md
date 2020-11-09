@@ -2,12 +2,12 @@
 title: 最上位レベルのステートメント - C# チュートリアル
 description: このチュートリアルでは、最上位レベルのステートメントを使用して、アイデアを探索しながら概念を試して証明する方法を示します
 ms.date: 10/28/2020
-ms.openlocfilehash: 210fbd83bf4677061cab303089d0b27f1a4a7d01
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 5e5dc6cec382baa69ac8cb4625684315bb2cd5e0
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189368"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282259"
 ---
 # <a name="tutorial-explore-ideas-using-top-level-statements-to-build-code-as-you-learn"></a>チュートリアル: 学習しながらコードをビルドするために最上位レベルのステートメントを使用してアイデアを探索する
 
@@ -210,7 +210,7 @@ static async Task ShowConsoleAnimation()
 
 最後に、アニメーション コードをクリーンアップして、いくつか重複しているものを削除することができます。
 
-:::code language="csharp" source="snippets/top-level-statements/Utiliities.cs" ID="Animation":::
+:::code language="csharp" source="snippets/top-level-statements/Utilities.cs" ID="Animation":::
 
 これでアプリケーションが完成し、後で使用するために再利用可能な部分がリファクタリングされました。
 

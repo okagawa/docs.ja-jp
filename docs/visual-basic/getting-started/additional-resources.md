@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: ea645e33c67bf1d39b477d8e4ce82b7a69a177fd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4b2d671e310763e6ddfa114bd63b031afba83a20
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398234"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400618"
 ---
 # <a name="additional-resources"></a>その他の技術情報
 
@@ -51,7 +51,7 @@ ms.locfileid: "84398234"
 |URL|説明|
 |----------|----------------|
 |[Microsoft サポート](https://support.microsoft.com)|サポート技術情報 (KB: Knowledge Base) の文書、ダウンロード ファイルや更新プログラム、サポート ウェブキャスト、およびその他のサービスへのアクセスを提供します。|
-|[Visual Studio に関する質問](https://developercommunity.visualstudio.com)|.NET および Visual Studio に関するバグを報告したり、提案を Microsoft に送信したりできます。 Visual Studio で **[ヘルプ]**  >  **[フィードバックの送信]**  >  **[問題の報告]** の順に選択して、バグを報告することもできます。|
+|[Visual Studio に関する質問](https://aka.ms/feedback/report?space=61)|.NET および Visual Studio に関するバグを報告したり、提案を Microsoft に送信したりできます。 Visual Studio で **[ヘルプ]**  >  **[フィードバックの送信]**  >  **[問題の報告]** の順に選択して、バグを報告することもできます。|
 
 ## <a name="third-party-resources"></a>サードパーティのリソース
 

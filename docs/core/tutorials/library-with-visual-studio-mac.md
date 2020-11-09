@@ -2,24 +2,24 @@
 title: Visual Studio for Mac を使用して .NET Standard クラス ライブラリを作成する
 description: Visual Studio for Mac を使用して .NET Standard クラス ライブラリを作成する方法について説明します。
 ms.date: 06/08/2020
-ms.openlocfilehash: 433f6e0e2d784878c9a1616139b39ec56d695bcf
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a78cc68d29095e4fefcaf1d3b2158d673b8892ec
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537640"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400566"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-for-mac"></a>チュートリアル: Visual Studio for Mac を使用して .NET Standard ライブラリを作成する
 
 このチュートリアルでは、1 つの文字列処理メソッドを含むクラス ライブラリを作成します。 それを[拡張メソッド](../../csharp/programming-guide/classes-and-structs/extension-methods.md)として実装し、<xref:System.String> クラスのメンバーと同じように呼び出すことができるようにします。
 
-"*クラス ライブラリ*" は、アプリケーションから呼び出される型とメソッドを定義します。 .NET Standard 2.1 をターゲットとするクラス ライブラリは、バージョン 2.1 の .NET Standard をサポートする任意の .NET 実装をターゲットとするアプリケーションで使用できます。 クラス ライブラリが完成したら、サードパーティ製のコンポーネントとして配布するか、1 つ以上のアプリケーションを含むバンドルされたコンポーネントとして配布することができます。
+" *クラス ライブラリ* " は、アプリケーションから呼び出される型とメソッドを定義します。 .NET Standard 2.1 をターゲットとするクラス ライブラリは、バージョン 2.1 の .NET Standard をサポートする任意の .NET 実装をターゲットとするアプリケーションで使用できます。 クラス ライブラリが完成したら、サードパーティ製のコンポーネントとして配布するか、1 つ以上のアプリケーションを含むバンドルされたコンポーネントとして配布することができます。
 
 > [!NOTE]
 > お客様のフィードバックは非常に貴重です。 次の 2 つの方法で Visual Studio for Mac の開発チームにフィードバックを送信できます。
 >
-> - Visual Studio for Mac で、メニューから **[ヘルプ]**  >  **[問題の報告]** の順に選択するか、ようこそ画面から **[問題の報告]** を選択して、バグ報告を提出するためのウィンドウを開きます。 お客様のフィードバックは、[開発者コミュニティ](https://developercommunity.visualstudio.com/spaces/41/index.html) ポータルで追跡することができます。
-> - 提案するには、メニューから **[ヘルプ]**  >  **[提案の送信]** の順に選択するか、ようこそ画面から **[提案の送信]** を選択し、[Visual Studio for Mac の開発者コミュニティの Web ページ](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)に移動します。
+> - Visual Studio for Mac で、メニューから **[ヘルプ]**  >  **[問題の報告]** の順に選択するか、ようこそ画面から **[問題の報告]** を選択して、バグ報告を提出するためのウィンドウを開きます。 お客様のフィードバックは、[開発者コミュニティ](https://aka.ms/feedback/report?space=41) ポータルで追跡することができます。
+> - 提案するには、メニューから **[ヘルプ]**  >  **[提案の送信]** の順に選択するか、ようこそ画面から **[提案の送信]** を選択し、 [Visual Studio for Mac の開発者コミュニティの Web ページ](https://aka.ms/feedback/suggest?space=41)に移動します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -73,11 +73,11 @@ ms.locfileid: "90537640"
 
 このクラス ライブラリを使用するコンソール アプリケーションを追加します。 アプリによって、ユーザーに文字列の入力が求められ、文字列が大文字で始まるかどうかが報告されます。
 
-1. **[ソリューション]** パッドで、<kbd>ctrl</kbd> キーを押しながら `ClassLibraryProjects` ソリューションをクリックします。 **[Web and Console]\(Web とコンソール\)**  >  **[アプリ]** テンプレートからテンプレートを選択することで、新しい **[コンソール アプリケーション]** プロジェクトを追加し、 **[次へ]** を選択します。
+1. **[ソリューション]** パッドで、 <kbd>ctrl</kbd> キーを押しながら `ClassLibraryProjects` ソリューションをクリックします。 **[Web and Console]\(Web とコンソール\)**  >  **[アプリ]** テンプレートからテンプレートを選択することで、新しい **[コンソール アプリケーション]** プロジェクトを追加し、 **[次へ]** を選択します。
 
 1. **[ターゲット フレームワーク]** として **[.NET Core 3.1]** を選択し、 **[次へ]** を選択します。
 
-1. プロジェクトに「**ShowCase**」という名前を付けます。 **[作成]** を選択し、ソリューションでプロジェクトを作成します。
+1. プロジェクトに「 **ShowCase** 」という名前を付けます。 **[作成]** を選択し、ソリューションでプロジェクトを作成します。
 
    :::image type="content" source="media/library-with-visual-studio-mac/add-showcase-project.png" alt-text="ShowCase プロジェクトを追加する":::
 
@@ -93,7 +93,7 @@ ms.locfileid: "90537640"
 
 最初は、新しいコンソール アプリ プロジェクトにクラス ライブラリへのアクセス権はありません。 クラス ライブラリでメソッドを呼び出せるようにするには、クラス ライブラリ プロジェクトへのプロジェクト参照を作成します。
 
-1. **[ソリューション]** パッドで、<kbd>ctrl</kbd> キーを押しながら、新しい **ShowCase** プロジェクトの **[依存関係]** ノードをクリックします。 コンテキスト メニューから **[参照の追加]** を選択します。
+1. **[ソリューション]** パッドで、 <kbd>ctrl</kbd> キーを押しながら、新しい **ShowCase** プロジェクトの **[依存関係]** ノードをクリックします。 コンテキスト メニューから **[参照の追加]** を選択します。
 
 1. **[参照]** ダイアログで、 **[StringLibrary]** を選択して **[OK]** を選択します。
 

@@ -12,18 +12,18 @@ helpviewer_keywords:
 - arrays, serializing
 - XML serialization, attributes
 - preventing serialization
-- attributes [.NET Framework], XML serialization
+- attributes [.NET], XML serialization
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: 79c5541b4c384e91fbec8c8f1b2130887e79a252
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 36456d373b7482c4a4267b69e031c1e45baa9abb
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289682"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281776"
 ---
-# <a name="controlling-xml-serialization-using-attributes"></a>属性を使用した XML シリアル化の制御
+# <a name="control-xml-serialization-using-attributes"></a>属性を使用した XML シリアル化の制御
 
 属性を使用すると、オブジェクトの XML シリアル化を制御したり、同じ一連のクラスから代替 XML ストリームを作成したりできます。 代替 XML ストリームの作成の詳細については、「[方法: XML ストリームの代替要素名を指定する](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)」を参照してください。
 

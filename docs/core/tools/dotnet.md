@@ -2,12 +2,12 @@
 title: dotnet コマンド
 description: dotnet コマンド (.NET Core CLI の汎用ドライバー) とその使用方法について説明します。
 ms.date: 02/13/2020
-ms.openlocfilehash: 4476dcf36455e0dc1b89712409818cf7e0352f2c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4e182e1b8dff725c479297f7f1587ceaccf2942f
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537666"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281624"
 ---
 # <a name="dotnet-command"></a>dotnet コマンド
 
@@ -262,7 +262,7 @@ dotnet myapp.dll
 
   .NET Core ランタイムが既定の場所にインストールされていない場合、それらの場所を指定します。 Windows 上の既定の場所は `C:\Program Files\dotnet` です。 Linux と macOS 上の既定の場所は `/usr/share/dotnet` です。 この環境変数は、生成された実行可能ファイル (apphosts) を介してアプリを実行する場合にのみ使用されます。 64 ビット OS 上で 32 ビット実行可能ファイルを実行する場合は、代わりに `DOTNET_ROOT(x86)` が使用されます。
 
-- `DOTNET_PACKAGES`
+- `NUGET_PACKAGES`
 
   グローバル パッケージ フォルダー。 設定されていない場合は、既定で `~/.nuget/packages` (Unix の場合) または `%userprofile%\.nuget\packages` (Windows の場合) になります。
 

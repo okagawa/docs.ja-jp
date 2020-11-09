@@ -158,21 +158,21 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool, error messages
 - error messages, Winmdexp.exe
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
-ms.openlocfilehash: 2c0b4a6f1f10f0c575b3f5a1aeb9baffa74dba17
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 69a3cc8e9c32a3981de2c978011a140602a501ed
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543252"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400775"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe のエラー メッセージ
 
-Visual Studio 2012 で **Windows ランタイム コンポーネント** テンプレートを使用すると、ビルド プロセスで [Winmdexp.exe (Windows ランタイム メタデータ エクスポート ツール)](winmdexp-exe-windows-runtime-metadata-export-tool.md) が呼び出されるため、Winmdexp.exe のエラー メッセージが **[エラー一覧]** に表示されます。 Winmdexp.exe は `/target:winmdobj` オプションでコンパイルされるモジュールで動作します。 コンパイルされたモジュールが入力として必要となるため、コンパイルが成功した場合を除き、そのエラー メッセージは表示されません。  
-  
- エラー メッセージは、報告されるエラー条件への対処に必要なすべての情報が含まれるように設計されています。 ただし、一部の問題ではメッセージに収まりきらない、より多くの情報が必要となります。 追加の情報は、「[Windows ランタイム コンポーネントのエラー条件の診断](/previous-versions/hh977010(v=vs.110))」で確認できます。  
-  
- エラーがその記事で取り上げられていない場合や、問題に対処するために十分な情報がメッセージに含まれていないと思われる場合は、その記事のフィードバック リンクを使用し、エラー メッセージを追加します。 また、[開発者コミュニティ Web サイト](https://developercommunity.visualstudio.com/)でバグを報告できます。 [MSDN フォーラム](https://social.msdn.microsoft.com/Forums/)で詳細な情報を参照することもできます。  
-  
+Visual Studio 2012 で **Windows ランタイム コンポーネント** テンプレートを使用すると、ビルド プロセスで [Winmdexp.exe (Windows ランタイム メタデータ エクスポート ツール)](winmdexp-exe-windows-runtime-metadata-export-tool.md) が呼び出されるため、Winmdexp.exe のエラー メッセージが **[エラー一覧]** に表示されます。 Winmdexp.exe は `/target:winmdobj` オプションでコンパイルされるモジュールで動作します。 コンパイルされたモジュールが入力として必要となるため、コンパイルが成功した場合を除き、そのエラー メッセージは表示されません。
+
+エラー メッセージは、報告されるエラー条件への対処に必要なすべての情報が含まれるように設計されています。 ただし、一部の問題ではメッセージに収まりきらない、より多くの情報が必要となります。 追加の情報は、「[Windows ランタイム コンポーネントのエラー条件の診断](/previous-versions/hh977010(v=vs.110))」で確認できます。
+
+エラーがその記事で取り上げられていない場合や、問題に対処するために十分な情報がメッセージに含まれていないと思われる場合は、その記事のフィードバック リンクを使用し、エラー メッセージを追加します。 また、[開発者コミュニティ Web サイト](https://aka.ms/feedback/report?space=61)でバグを報告できます。 [MSDN フォーラム](https://social.msdn.microsoft.com/Forums/)で詳細な情報を参照することもできます。
+
 ## <a name="see-also"></a>関連項目
 
 - [Winmdexp.exe (Windows ランタイム メタデータのエクスポート ツール)](winmdexp-exe-windows-runtime-metadata-export-tool.md)
