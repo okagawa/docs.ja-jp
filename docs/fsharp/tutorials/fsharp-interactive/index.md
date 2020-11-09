@@ -4,12 +4,12 @@ description: F# インタラクティブ (dotnet fsi) を使用して、コン�
 ms.date: 10/31/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: ba9111efccceca03fda43ff11c3f111610541595
-ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
+ms.openlocfilehash: 89570a54ecebe625a1612e4b97b01c3693e4707c
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93342684"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400867"
 ---
 # <a name="interactive-programming-with-f"></a>F\# による対話型プログラミング
 
@@ -17,7 +17,7 @@ F# インタラクティブ (dotnet fsi) は、コンソールで F# コード�
 
 コンソールから F# インタラクティブを実行するには、`dotnet fsi` を実行します。 `dotnet fsi` はすべての .NET SDK に備わっています。
 
-使用できるコマンド ライン オプションについては、「[F# Interactive Options](../../language-reference/fsharp-interactive-options.md)」 (F# Interactive オプション) を参照してください。
+使用できるコマンド ライン オプションについては、「[F# Interactive オプション](../../language-reference/fsharp-interactive-options.md)」を参照してください。
 
 ## <a name="executing-code-directly-in-f-interactive"></a>F# インタラクティブでコードを直接実行する
 
@@ -204,7 +204,7 @@ from
 fsi
 ```
 
-`System.Environment.GetCommandLineArgs()` を使用しても同じ引数にアクセスできることに注意してください。
+同じ引数にアクセスするために `System.Environment.GetCommandLineArgs()` を使用することもできます。
 
 ## <a name="f-interactive-directive-reference"></a>F# インタラクティブのディレクティブのリファレンス
 
@@ -212,7 +212,7 @@ fsi
 
 |ディレクティブ|説明|
 |---------|-----------|
-|`#r "nuget:..."`|Nuget からパッケージを参照します|
+|`#r "nuget:..."`|NuGet からパッケージを参照します|
 |`#r "assembly-name.dll"`|ディスク上のアセンブリを参照します|
 |`#load "file-name.fsx"`|ソース ファイルを読み取り、コンパイルして実行します。|
 |`#help`|使用できるディレクティブに関する情報を表示します。|
@@ -245,7 +245,7 @@ F# Interactive によってコードがコンパイルされ、成功すると�
 
 Visual Studio で実行する場合、F# Interactive はプロジェクトとは独立して動作します。このため、たとえば、プロジェクトで定義された構成要素を F# Interactive で使用することはできません。使用するには、関数のコードを対話形式のウィンドウにコピーする必要があります。
 
-設定を調整することで、F# Interactive コマンド ライン引数 (オプション) を制御できます。 **[ツール]** メニューの **[オプション]** をクリックし、 **[F# ツール]** を展開します。 変更できる 2 つの設定は、F# Interactive オプションおよび 64 ビット コンピューターで F# Interactive を実行する場合にのみ関連する **64 ビット F# Interactive** 設定です。 この設定によって、専用 64 ビット バージョンの **fsi.exe** を実行するか、コンピューター アーキテクチャを使用して 32 ビットまたは 64 ビットどちらのプロセスで実行するかを判断する **fsianycpu.exe** を実行するかを決定できます。
+設定を調整することで、F# インタラクティブのコマンド ライン引数 (省略可能) を制御できます。 **[ツール]** メニューの **[オプション]** をクリックし、 **[F# ツール]** を展開します。 変更できる 2 つの設定は、F# Interactive オプションおよび 64 ビット コンピューターで F# Interactive を実行する場合にのみ関連する **64 ビット F# Interactive** 設定です。 この設定によって、専用 64 ビット バージョンの **fsi.exe** を実行するか、コンピューター アーキテクチャを使用して 32 ビットまたは 64 ビットどちらのプロセスで実行するかを判断する **fsianycpu.exe** を実行するかを決定できます。
 
 ## <a name="related-articles"></a>関連記事
 
