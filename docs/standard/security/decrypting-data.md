@@ -12,12 +12,12 @@ helpviewer_keywords:
 - asymmetric decryption
 - decryption
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
-ms.openlocfilehash: 2ba4c3ba43d688aeb66c67ec3f94f4a503d47892
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 7e8fe5a8b7ed7c217a31a8ee91a5d111257fed45
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556983"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440986"
 ---
 # <a name="decrypting-data"></a>データの復号化
 
@@ -27,7 +27,7 @@ ms.locfileid: "87556983"
 
 対称アルゴリズムで暗号化されたデータの復号化は、対称アルゴリズムでデータを暗号化する際に使用するプロセスと似ています。 クラスは、 <xref:System.Security.Cryptography.CryptoStream> 任意のマネージストリームオブジェクトから読み取られたデータの暗号化を解除するために .net によって提供される対称暗号化クラスと共に使用されます。
 
-次の例は、アルゴリズムの既定の実装クラスの新しいインスタンスを作成する方法を示してい <xref:System.Security.Cryptography.Aes> ます。 インスタンスは、オブジェクトの復号化を実行するために使用され <xref:System.Security.Cryptography.CryptoStream> ます。 この例では、最初に**Aes**実装クラスの新しいインスタンスを作成します。 次に、 **CryptoStream** オブジェクトを作成して、 `myStream`というマネージド ストリームの値に初期化します。 次に、 **Aes**クラスの**createdecryptor**化メソッドに、暗号化に使用されたキーと IV が渡され、 **CryptoStream**コンストラクターに渡されます。
+次の例は、アルゴリズムの既定の実装クラスの新しいインスタンスを作成する方法を示してい <xref:System.Security.Cryptography.Aes> ます。 インスタンスは、オブジェクトの復号化を実行するために使用され <xref:System.Security.Cryptography.CryptoStream> ます。 この例では、まず、実装クラスの新しいインスタンスを作成し <xref:System.Security.Cryptography.Aes> ます。 このメソッドは、マネージストリーム変数から初期化ベクター (IV) 値を読み取り `myStream` ます。 次 <xref:System.Security.Cryptography.CryptoStream> に、オブジェクトをインスタンス化し、インスタンスの値に初期化し `myStream` ます。 <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor%2A?displayProperty=nameWithType>インスタンスのメソッドに <xref:System.Security.Cryptography.Aes> は、IV の値と、暗号化に使用されたキーが渡されます。
 
 ```vb
 Dim aes As Aes = Aes.Create()
@@ -39,98 +39,12 @@ Aes aes = Aes.Create();
 CryptoStream cryptStream = new CryptoStream(myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read);
 ```
 
-次の例は、ストリームの作成、ストリームの復号化、ストリームからの読み取り、およびストリームを閉じるプロセス全体を示しています。 *TestData.txt*という名前のファイルを読み取るファイルストリームオブジェクトが作成されます。 ファイルストリームは、 **CryptoStream**クラスと**Aes**クラスを使用して復号化されます。 この例では、[データの暗号化](encrypting-data.md)に対称暗号化の例で使用されるキーと IV の値を指定します。 これらの値の暗号化および転送に必要なコードは示されていません。
+次の例は、ストリームの作成、ストリームの復号化、ストリームからの読み取り、およびストリームを閉じるプロセス全体を示しています。 *TestData.txt* という名前のファイルを読み取るファイルストリームオブジェクトが作成されます。 ファイルストリームは、 **CryptoStream** クラスと **Aes** クラスを使用して復号化されます。 この例では、 [データを暗号化](encrypting-data.md)するための対称暗号化の例で使用されるキー値を指定します。 これらの値の暗号化および転送に必要なコードは示されていません。
 
-```vb
-Imports System
-Imports System.IO
-Imports System.Security.Cryptography
+:::code language="csharp" source="snippets/decrypting-data/csharp/aes-decrypt.cs":::
+:::code language="vb" source="snippets/decrypting-data/vb/aes-decrypt.vb":::
 
-Module Module1
-    Sub Main()
-            'The key and IV must be the same values that were used
-            'to encrypt the stream.
-            Dim key As Byte() = {&H1, &H2, &H3, &H4, &H5, &H6, &H7, &H8, &H9, &H10, &H11, &H12, &H13, &H14, &H15, &H16}
-            Dim iv As Byte() = {&H1, &H2, &H3, &H4, &H5, &H6, &H7, &H8, &H9, &H10, &H11, &H12, &H13, &H14, &H15, &H16}
-        Try
-            'Create a file stream.
-            Dim myStream As FileStream = new FileStream("TestData.txt", FileMode.Open)
-
-            'Create a new instance of the default Aes implementation class
-            'and decrypt the stream.
-            Dim aes As Aes = Aes.Create()
-
-            'Create an instance of the CryptoStream class, pass it the file stream, and decrypt
-            'it with the Rijndael class using the key and IV.
-            Dim cryptStream As New CryptoStream(myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read)
-
-            'Read the stream.
-            Dim sReader As New StreamReader(cryptStream)
-
-            'Display the message.
-            Console.WriteLine("The decrypted original message: {0}", sReader.ReadToEnd())
-
-            'Close the streams.
-            sReader.Close()
-            myStream.Close()
-            'Catch any exceptions.
-        Catch
-            Console.WriteLine("The decryption Failed.")
-            Throw
-        End Try
-    End Sub
-End Module
-```
-
-```csharp
-using System;
-using System.IO;
-using System.Security.Cryptography;
-
-class Class1
-{
-    static void Main(string[] args)
-    {
-        //The key and IV must be the same values that were used
-        //to encrypt the stream.
-        byte[] key = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
-        byte[] iv = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
-        try
-        {
-            //Create a file stream.
-            FileStream myStream = new FileStream("TestData.txt", FileMode.Open);
-
-            //Create a new instance of the default Aes implementation class
-            Aes aes = Aes.Create();
-
-            //Create a CryptoStream, pass it the file stream, and decrypt
-            //it with the Aes class using the key and IV.
-            CryptoStream cryptStream = new CryptoStream(
-               myStream,
-               aes.CreateDecryptor(key, iv),
-               CryptoStreamMode.Read);
-
-            //Read the stream.
-            StreamReader sReader = new StreamReader(cryptStream);
-
-            //Display the message.
-            Console.WriteLine("The decrypted original message: {0}", sReader.ReadToEnd());
-
-            //Close the streams.
-            sReader.Close();
-            myStream.Close();
-        }
-        //Catch any exceptions.
-        catch
-        {
-            Console.WriteLine("The decryption failed.");
-            throw;
-        }
-    }
-}
-```
-
-前の例では、対称暗号化の例で使用したのと同じキー、IV、およびアルゴリズムを使用して[データを暗号化](encrypting-data.md)しています。 この例で作成された*TestData.txt*ファイルの暗号化を解除し、元のテキストをコンソールに表示します。
+前の例では、 [データを暗号化](encrypting-data.md)するために、対称暗号化の例で使用されているのと同じキーとアルゴリズムを使用しています。 この例で作成された *TestData.txt* ファイルの暗号化を解除し、元のテキストをコンソールに表示します。
 
 ## <a name="asymmetric-decryption"></a>非対称復号化
 

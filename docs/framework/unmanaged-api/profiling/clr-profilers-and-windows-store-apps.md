@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: 8922f057cb59258e2dd002cec4015af518dc255f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 04b4b529a5a1adaa40e804988dee506942c863c4
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553357"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440081"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR プロファイラと Windows ストア アプリ
 
@@ -47,7 +47,7 @@ CLR プロファイル API を初めて使用する場合は、このトピッ�
 
 このトピックでは、次の用語を使用します。
 
-**アプリケーション**。
+**Application**
 
 これは、プロファイラーが分析しているアプリケーションです。 通常、このアプリケーションの開発者は、アプリケーションの問題を診断するためにプロファイラーを使用しています。 従来、このアプリケーションは Windows デスクトップアプリケーションですが、このトピックでは Windows ストアアプリについて見ていきます。
 
@@ -94,7 +94,7 @@ Windows RT デバイスは非常にロックダウンされています。 サ�
 
 **プロファイラー DLL に署名しています**
 
-Windows がプロファイラー DLL を読み込もうとすると、プロファイラー DLL が正しく署名されているかどうかが検証されます。 それ以外の場合、既定では読み込みに失敗します。 この作業を実行する 2 つの方法があります。
+Windows がプロファイラー DLL を読み込もうとすると、プロファイラー DLL が正しく署名されているかどうかが検証されます。 それ以外の場合、既定では読み込みに失敗します。 これには、2 つの方法があります。
 
 - プロファイラー DLL が署名されていることを確認します。
 
@@ -249,7 +249,7 @@ Windows ストアアプリは最後にプロファイラー DLL を読み込み�
 
 ### <a name="stick-to-the-windows-store-app-apis"></a>Windows ストアアプリ Api に従う
 
-Windows API を参照すると、すべての API がデスクトップアプリ、Windows ストアアプリ、またはその両方に適用されることがわかります。 たとえば、 [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount)関数のドキュメントの「**要件**」セクションでは、関数がデスクトップアプリにのみ適用されることを示しています。 これに対し、 [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex) 関数は、デスクトップアプリと Windows ストアアプリの両方で使用できます。
+Windows API を参照すると、すべての API がデスクトップアプリ、Windows ストアアプリ、またはその両方に適用されることがわかります。 たとえば、 [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount)関数のドキュメントの「 **要件** 」セクションでは、関数がデスクトップアプリにのみ適用されることを示しています。 これに対し、 [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex) 関数は、デスクトップアプリと Windows ストアアプリの両方で使用できます。
 
 プロファイラー DLL を開発するときは、それを Windows ストアアプリであるかのように扱い、Windows ストアアプリで使用可能なものとしてドキュメント化されている Api のみを使用します。 依存関係を分析し (たとえば、プロファイラー DLL に対して実行して監査することができ `link /dump /imports` ます)、ドキュメントを検索して、どの依存関係が ok であるかを確認します。 ほとんどの場合、違反を修正するには、安全として記述されている API の新しい形式を使用します (たとえば、 [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) を [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)に置き換えます)。
 
@@ -356,7 +356,7 @@ CLR に関する限り、すべての WinMD ファイルはモジュールです
 
 ### <a name="reading-metadata-from-winmds"></a>WinMDs からのメタデータの読み取り
 
-WinMD ファイル (通常のモジュールなど) には、 [メタデータ api](../metadata/index.md)を使用して読み取ることができるメタデータが含まれています。 ただし、CLR は、WinMD ファイルを読み取るときに、Windows ランタイム型を .NET Framework 型にマップします。これにより、マネージコードをプログラミングして WinMD ファイルを使用する開発者は、より自然なプログラミングエクスペリエンスを実現できます。 これらのマッピングの例については、「 [Windows ストアアプリおよび Windows ランタイムの .NET Framework サポート](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)」を参照してください。
+WinMD ファイル (通常のモジュールなど) には、 [メタデータ api](../metadata/index.md)を使用して読み取ることができるメタデータが含まれています。 ただし、CLR は、WinMD ファイルを読み取るときに、Windows ランタイム型を .NET Framework 型にマップします。これにより、マネージコードをプログラミングして WinMD ファイルを使用する開発者は、より自然なプログラミングエクスペリエンスを実現できます。 これらのマッピングの例については、「 [Windows ストアアプリおよび Windows ランタイムの .NET Framework サポート](../../cross-platform/support-for-windows-store-apps-and-windows-runtime.md)」を参照してください。
 
 これにより、プロファイラーがメタデータ Api を使用したときに取得するビュー (未加工の Windows ランタイムビュー、またはマップされた .NET Framework ビュー) を確認できます。  答えは、ユーザーによって異なります。
 
@@ -388,7 +388,7 @@ WinMDs でのメタデータの変更はサポートされていません。 Win
 
 ### <a name="conditionalweaktablereferences"></a>ConditionalWeakTableReferences
 
-.NET Framework 4.5 以降では、新しい GC コールバックである [Conditional/Tableelementreferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md)が使用されます。これにより、プロファイラーは *依存ハンドル*に関するより詳細な情報を得ることができます。 これらのハンドルは、GC 有効期間管理の目的で、ソースオブジェクトからターゲットオブジェクトへの参照を効果的に追加します。 依存ハンドルはまったく新しいものではなく、マネージコードをプログラミングする開発者は、 <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType> Windows 8 および .NET Framework 4.5 の前であっても、クラスを使用して独自の依存ハンドルを作成できるようになりました。
+.NET Framework 4.5 以降では、新しい GC コールバックである [Conditional/Tableelementreferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md)が使用されます。これにより、プロファイラーは *依存ハンドル* に関するより詳細な情報を得ることができます。 これらのハンドルは、GC 有効期間管理の目的で、ソースオブジェクトからターゲットオブジェクトへの参照を効果的に追加します。 依存ハンドルはまったく新しいものではなく、マネージコードをプログラミングする開発者は、 <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType> Windows 8 および .NET Framework 4.5 の前であっても、クラスを使用して独自の依存ハンドルを作成できるようになりました。
 
 ただし、マネージ XAML Windows ストアアプリでは、依存ハンドルが頻繁に使用されるようになりました。 特に、CLR では、マネージオブジェクトとアンマネージ Windows ランタイムオブジェクトの間の参照サイクルの管理を支援するために使用されます。 これは、メモリプロファイラーがこれらの依存ハンドルを通知して、ヒープグラフの残りの部分と共に視覚化できるようにするために、これまでよりも重要であることを意味します。 プロファイラー DLL は、RootReferences2、 [ObjectReferences](icorprofilercallback-objectreferences-method.md)、および[Conditional tableelementreferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md)を一緒に使用して、ヒープグラフの完全なビューを形成する必要があります。 [RootReferences2](icorprofilercallback2-rootreferences2-method.md)
 
@@ -406,9 +406,9 @@ CLR プロファイル API を使用して、Windows ストアアプリ内で実
 
 **CLR と Windows ランタイムの相互作用**
 
-- [Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 
-**Windows ストアアプリ**
+**Windows ストア アプリ**
 
 - [ファイルアクセスとアクセス許可 (Windows ランタイムアプリ](/previous-versions/windows/apps/hh967755(v=win.10))
 

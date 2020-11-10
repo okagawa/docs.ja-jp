@@ -1,26 +1,25 @@
 ---
 title: F# とは
-description: プログラミング言語のF#概要とF#プログラミングについて説明します。 豊富なデータ型、関数、およびそれらがどのように組み合わされているかについて説明します。
+description: 'F # プログラミング言語の概要と F # プログラミングについて説明します。 豊富なデータ型、関数、およびそれらがどのように組み合わされているかについて説明します。'
 ms.date: 08/03/2018
-ms.openlocfilehash: 3cba509f59a8e81e1a0264de7451e9d80304d768
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 37dc2f472d65a046e4bf67e672e2a96f4d4afded
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332732"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439654"
 ---
-# <a name="what-is-f"></a>F#の概要
+# <a name="what-is-f"></a>F とは\#
 
-F#は、適切で保守が容易なコードを簡単に記述できるようにする関数型プログラミング言語です。
+F # は、適切で保守が容易なコードを簡単に記述できるようにする関数型プログラミング言語です。
 
-F#プログラミングでは、主に、型が推論され、自動的に一般化される型と関数を定義する必要があります。 これにより、プログラミングの詳細ではなく、問題のドメインにとどまり、そのデータを操作することができます。
+F # プログラミングでは、主に型の推論と一般化が自動的に行われる型と関数の定義が必要です。 これにより、プログラミングの詳細ではなく、問題のドメインにとどまり、そのデータを操作することができます。
 
 ```fsharp
 open System // Gets access to functionality in System namespace.
 
 // Defines a function that takes a name and produces a greeting.
-let getGreeting name =
-    sprintf "Hello, %s! Isn't F# great?" name
+let getGreeting name = $"Hello, {name}! Isn't F# great?"
 
 [<EntryPoint>]
 let main args =
@@ -35,7 +34,7 @@ let main args =
     0
 ```
 
-F#には、次のようなさまざまな機能があります。
+F # には、次のようなさまざまな機能があります。
 
 * 簡易構文
 * 既定で変更不可
@@ -45,7 +44,7 @@ F#には、次のようなさまざまな機能があります。
 * パターン マッチング
 * 非同期プログラミング
 
-機能の完全なセットについては、「 [ F#言語リファレンス](./language-reference/index.md)」を参照してください。
+すべての機能のセットについては、「 [F # 言語リファレンス](./language-reference/index.md)」で説明されています。
 
 ## <a name="rich-data-types"></a>豊富なデータ型
 
@@ -72,11 +71,11 @@ type WithdrawalResult =
     | UndisclosedFailure
 ```
 
-F#レコードと判別共用体は、null ではなく、変更できず、既定では比較可能であるため、非常に使いやすくなっています。
+F # のレコードと判別共用体は、既定では非 null、不変、および比較可能であるため、非常に簡単に使用できます。
 
 ## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>関数とパターンマッチングでの強制的な正確性
 
-F#関数は、実際には簡単に宣言でき、非常に強力です。 [パターンマッチング](./language-reference/pattern-matching.md)と組み合わせると、コンパイラによって正確性が強制される動作を定義できます。
+F # の関数は、簡単に宣言でき、非常に強力です。 [パターンマッチング](./language-reference/pattern-matching.md)と組み合わせると、コンパイラによって正確性が強制される動作を定義できます。
 
 ```fsharp
 // Returns a WithdrawalResult
@@ -93,11 +92,11 @@ let handleWithdrawal amount =
     | UndisclosedFailure -> printfn "Failed: unknown :("
 ```
 
-F#関数もファーストクラスであり、パラメーターとして渡し、他の関数から返すことができます。
+F # 関数もファーストクラスであり、パラメーターとして渡し、他の関数から返すことができます。
 
 ## <a name="functions-to-define-operations-on-objects"></a>オブジェクトに対する操作を定義する関数
 
-F#では、オブジェクトが完全にサポートされています。これは、データと機能をブレンドする必要がある場合に便利なデータ型です。 F#関数は、オブジェクトの操作に使用されます。
+F # では、オブジェクトが完全にサポートされています。これは、データと機能をブレンドする必要がある場合に便利なデータ型です。 F # 関数は、オブジェクトの操作に使用されます。
 
 ```fsharp
 type Set<'T when 'T: comparison>(elements: seq<'T>) =
@@ -118,8 +117,8 @@ module Set =
     let add value (set: Set<'T>) = set.Add(value)
 ```
 
-でF#は、オブジェクト指向のコードを記述するのではなく、多くの場合、オブジェクトを操作する関数の別のデータ型として扱うコードを記述します。 [汎用インターフェイス](./language-reference/interfaces.md)、[オブジェクト式](./language-reference/object-expressions.md)、[メンバー](./language-reference/members/index.md)の慎重な使用などの機能は、大規模F#なプログラムでよく見られます。
+F # では、オブジェクト指向のコードを記述するのではなく、多くの場合、オブジェクトを操作する関数の別のデータ型として扱うコードを記述します。 [ジェネリックインターフェイス](./language-reference/interfaces.md)、[オブジェクト式](./language-reference/object-expressions.md)、[メンバー](./language-reference/members/index.md)の慎重な使用などの機能は、大きな F # プログラムでよく見られます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-より大きなF#機能セットの詳細については、 [ F#ツアー](tour.md)をご覧ください。
+より大きな F # 機能セットの詳細については、 [f # ツアー](tour.md)をご覧ください。

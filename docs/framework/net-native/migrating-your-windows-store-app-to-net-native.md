@@ -2,12 +2,12 @@
 title: Windows ストア アプリの .NET ネイティブへの移行
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: cef985200efaf2ed7488d5e99394a5f01cc38594
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ee17e50590a80d8973197b46910d5e22296c265f
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556929"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440895"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>Windows ストアアプリを .NET ネイティブに移行する
 
@@ -105,7 +105,7 @@ Windows ストアアプリ用 .NET と .NET ネイティブの動作には、リ
 
 - [HttpClient](#HttpClient)
 
-- [Interop](#Interop)
+- [相互運用](#Interop)
 
 - [サポートされていない API](#APIs)
 
@@ -208,7 +208,9 @@ Windows ストア アプリ用 .NET では、 <xref:System.Net.Http.HttpClientHa
 - 応答の `SetCookie2` ヘッダーは廃止されたものとして無視されます。
 
 <a name="Interop"></a>
+
 ### <a name="interop-differences"></a>相互運用の違い
+
  **非推奨の API**
 
  マネージド コードで相互運用性のために使用される頻度が低い API のいくつかが、非推奨にされました。 これらの Api を .NET ネイティブと共に使用すると、または例外がスローされるか、コンパイラエラーが発生する可能性があり <xref:System.NotImplementedException> <xref:System.PlatformNotSupportedException> ます。 Windows ストア アプリ用 .NET では、これらの API は廃止としてマークされていますが、これらの API を呼び出すとコンパイラ エラーではなくコンパイラの警告が生成されます。
@@ -666,4 +668,4 @@ Windows ストアアプリプロジェクトの単体テストライブラリで
 - [はじめに](getting-started-with-net-native.md)
 - [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Windows ストアアプリ用 .NET の概要](/previous-versions/windows/apps/br230302(v=vs.140))
-- [Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
