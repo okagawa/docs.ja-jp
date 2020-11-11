@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: fca2c641520bd9cd19a48bff2119a6f09c3713ea
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 41a666fd5f368e6990e08a36700e18f648939213
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87382101"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440342"
 ---
 # <a name="namespaces-c-programming-guide"></a>名前空間 (C# プログラミング ガイド)
 
@@ -23,7 +23,7 @@ C# プログラミングでは、名前空間が 2 つの方法でよく使用�
 
 [!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]
 
-[!code-csharp[csProgGuide#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#25)]
+[!code-csharp[csProgGuide#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#23)]
 
 詳細については、「[using ディレクティブ](../../language-reference/keywords/using-directive.md)」をご覧ください。
 
@@ -48,7 +48,7 @@ C# プログラミングでは、名前空間が 2 つの方法でよく使用�
 
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [名前空間の使用](using-namespaces.md)
 - [My 名前空間を使用する方法](how-to-use-the-my-namespace.md)
 - [識別子名](../inside-a-program/identifier-names.md)

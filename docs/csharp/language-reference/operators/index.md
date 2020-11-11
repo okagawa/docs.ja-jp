@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 854d7c1278319869104e1758ba91eb3594741126
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 9e7ca2087938317f7369043e21fd455dbad7f07b
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063186"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439663"
 ---
 # <a name="c-operators-and-expressions-c-reference"></a>C# 演算子と式 (C# リファレンス)
 
@@ -81,6 +81,7 @@ Console.WriteLine(a); //  output: 8
 | [+x](arithmetic-operators.md#unary-plus-and-minus-operators)、[-x](arithmetic-operators.md#unary-plus-and-minus-operators)、[\!x](boolean-logical-operators.md#logical-negation-operator-)、[~x](bitwise-and-shift-operators.md#bitwise-complement-operator-)、[++x](arithmetic-operators.md#increment-operator-)、[--x](arithmetic-operators.md#decrement-operator---)、[^x](member-access-operators.md#index-from-end-operator-)、[(T)x](type-testing-and-cast.md#cast-expression)、[await](await.md)、[&x](pointer-related-operators.md#address-of-operator-)、[*x](pointer-related-operators.md#pointer-indirection-operator-)、[true and false](true-false-operators.md) | 単項 |
 | [x..y](member-access-operators.md#range-operator-) | 範囲 |
 | [switch](switch-expression.md) | `switch` 式 |
+| [ある場合](with-expression.md) | `with` 式 |
 | [x * y](arithmetic-operators.md#multiplication-operator-)、[x / y](arithmetic-operators.md#division-operator-)、[x % y](arithmetic-operators.md#remainder-operator-) | 乗法|
 | [x + y](arithmetic-operators.md#addition-operator-)、[x – y](arithmetic-operators.md#subtraction-operator--) | 加法 |
 | [x \<\<  y](bitwise-and-shift-operators.md#left-shift-operator-), [x >> y](bitwise-and-shift-operators.md#right-shift-operator-) | シフト |
@@ -99,8 +100,8 @@ Console.WriteLine(a); //  output: 8
 
 演算子の優先順位が同じ場合は、演算子の結合規則によって、操作の実行順序が決まります。
 
-- *結合規則が左から右*の演算子は、左から右に順番に評価されます。 [代入演算子](assignment-operator.md)と [null 合体演算子](null-coalescing-operator.md)を除き、2 項演算子はすべて左からの結合です。 たとえば、`a + b - c` は `(a + b) - c` と評価されます。
-- *結合規則が右から左*の演算子は、右から左に評価されます。 代入演算子、null 合体演算子、および[条件演算子`?:`](conditional-operator.md)は、右からの結合です。 たとえば、`x = y = z` は `x = (y = z)` と評価されます。
+- *結合規則が左から右* の演算子は、左から右に順番に評価されます。 [代入演算子](assignment-operator.md)と [null 合体演算子](null-coalescing-operator.md)を除き、2 項演算子はすべて左からの結合です。 たとえば、`a + b - c` は `(a + b) - c` と評価されます。
+- *結合規則が右から左* の演算子は、右から左に評価されます。 代入演算子、null 合体演算子、および[条件演算子`?:`](conditional-operator.md)は、右からの結合です。 たとえば、`x = y = z` は `x = (y = z)` と評価されます。
 
 演算子の結合規則によって定められた評価の順序を変更するには、かっこを使用します。
 

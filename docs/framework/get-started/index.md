@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: 02480641af5ad2c973f7dbbbc233d3d89ff4617e
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: 3ab1c502508dd042940a6c5d2a73a5b71af6a9f4
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471673"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440843"
 ---
 # <a name="get-started-with-net-framework"></a>.NET Framework の使用を開始する
 
@@ -40,6 +40,7 @@ ms.locfileid: "92471673"
 - 複数バージョン対応。 [.NET Standard](../../standard/net-standard.md) に対応することで、開発者は、.NET Standard の特定のバージョンでサポートされる、複数の .NET Framework プラットフォームで機能するクラス ライブラリを作成できます。 たとえば、.NET Standard 2.0 に対応するライブラリは、.NET Framework 4.6.1、.NET Core 2.0、および UWP 10.0.16299 に対応するアプリで使用できます。
 
 <a name="ForUsers"></a>
+
 ## <a name="net-framework-for-users"></a>ユーザーにとっての .NET Framework
 
 .NET Framework アプリを開発しなくても、使用するユーザーは、.NET Framework やその操作に関する知識を持つ必要はありません。 ほとんどの場合、フレームワークは、ユーザーにとって完全に透過的に機能します。
@@ -78,7 +79,6 @@ Windows 8 よりも前の Windows バージョンで .NET Framework を削除す
 | [インストール ガイド](../install/index.md) | .NET Framework のインストールに関する情報を提供します。 |
 | [.NET Framework および特別なリリース](the-net-framework-and-out-of-band-releases.md) | .NET Framework のアウトオブバンド リリースと、これらをアプリ内で使用する方法について説明します。 |
 | [システム要件](system-requirements.md) | .NET Framework を実行するためのハードウェアおよびソフトウェアの要件を示します。 |
-| [.NET Core とオープン ソース](net-core-and-open-source.md) | .NET Core と .NET Framework の関係性、およびオープン ソースの .NET Core プロジェクトにアクセスする方法について説明します。 |
 | [.NET Core ドキュメント](../../core/introduction.md) | .NET Core の概念と API リファレンス ドキュメントを提供します。 |
 | [.NET Standard](../../standard/net-standard.md) | 統一された API のセットを複数のプラットフォームで使用できるようにするために、個々の .NET 実装がサポートするバージョン管理された仕様である、.NET Standard について説明します。
 
