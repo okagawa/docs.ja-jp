@@ -1,53 +1,53 @@
 ---
 title: ローカライズされた IntelliSense ファイルをインストールする
-description: Visual Studio で .NET Core プロジェクトのローカライズされた IntelliSense ファイルを使用するように開発用マシンを設定する方法について説明します。
-ms.date: 01/23/2020
-ms.openlocfilehash: e45e225e58865ca2b529000ada0984fbeca850f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+description: Visual Studio で .NET 5+ プロジェクト (.NET Core を含む) のローカライズされた IntelliSense ファイルを使用するように開発用マシンを設定する方法について説明します。
+ms.date: 11/06/2020
+ms.openlocfilehash: 121439199f0de6d29a18ea55031976680fc1f833
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157714"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439821"
 ---
-# <a name="how-to-install-localized-intellisense-files-for-net-core"></a>.NET Core のローカライズされた IntelliSense ファイルをインストールする方法
+# <a name="how-to-install-localized-intellisense-files-for-net"></a>.NET のローカライズされた IntelliSense ファイルをインストールする方法
 
-[IntelliSense](/visualstudio/ide/using-intellisense) は、Visual Studio などのさまざまな統合開発環境 (IDE) で使用できるコード補完機能です。 既定では、.NET Core プロジェクトを開発している場合、SDK には、英語版の IntelliSense ファイルのみが含まれます。 この記事では、以下の内容について説明しています。
+[IntelliSense](/visualstudio/ide/using-intellisense) は、Visual Studio などのさまざまな統合開発環境 (IDE) で使用できるコード補完機能です。 既定では、.NET プロジェクトを開発している場合、SDK には、英語版の IntelliSense ファイルのみが含まれます。 この記事では、以下の内容について説明しています。
 
 - ローカライズ版のファイルをインストールする方法。
 - 別の言語を使用するように Visual Studio のインストールを変更する方法。
 
 ## <a name="prerequisites"></a>前提条件
 
-- [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) 以降のバージョン。
+- [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) 以降のバージョン ([.NET 5 SDK](https://dotnet.microsoft.com/download/dotnet/5.0) など)。
 - [Visual Studio 2019 バージョン 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 以降のバージョン。
 
 ## <a name="download-and-install-the-localized-intellisense-files"></a>ローカライズされた IntelliSense ファイルをダウンロードしてインストールする
 
 > [!IMPORTANT]
-> この手順では、IntelliSense ファイルを .NET Core のインストール フォルダーにコピーするための管理者権限が必要です。
+> この手順では、IntelliSense ファイルを .NET のインストール フォルダーにコピーするための管理者権限が必要です。
 
-1. [IntelliSense ファイルのダウンロード](https://dotnet.microsoft.com/download/dotnet-core/intellisense)のページに移動します。
+1. [IntelliSense ファイルのダウンロード](https://dotnet.microsoft.com/download/intellisense)のページに移動します。
 
 1. 使用したい言語とバージョンの IntelliSense ファイルをダウンロードします。
 
 1. .zip ファイルの内容を抽出します。
 
-1. .NET Core の IntelliSense フォルダーに移動します。
+1. .NET の IntelliSense フォルダーに移動します。
 
-   1. .NET Core のインストール フォルダーに移動します。 既定では *%ProgramFiles%\dotnet\packs* の下にあります。
+   1. .NET のインストール フォルダーに移動します。 既定では *%ProgramFiles%\dotnet\packs* の下にあります。
    1. IntelliSense をインストールする SDK を選択し、関連付けられているパスに移動します。 次のオプションがあります。
 
-      | SDK の種類        | Path                               |
-      | --------------- | ---------------------------------- |
-      | .NET Core       | *Microsoft.NETCore.App.Ref*        |
-      | Windows デスクトップ | *Microsoft.WindowsDesktop.App.Ref* |
-      | .NET Standard   | *NETStandard.Library.Ref*          |
+      | SDK の種類              | Path                               |
+      |-----------------------|------------------------------------|
+      | .NET 5+ および .NET Core | *Microsoft.NETCore.App.Ref*        |
+      | Windows デスクトップ       | *Microsoft.WindowsDesktop.App.Ref* |
+      | .NET Standard         | *NETStandard.Library.Ref*          |
 
-   1. ローカライズされた IntelliSense をインストールするバージョンに移動します。 たとえば、*3.1.0* です。
+   1. ローカライズされた IntelliSense をインストールするバージョンに移動します。 たとえば、 *3.1.0* です。
    1. *ref* フォルダーを開きます。
-   1. モニカー フォルダーを開きます。 たとえば、*netcoreapp3.1* です。
+   1. モニカー フォルダーを開きます。 たとえば、 *net5.0* です。
 
-   したがって、移動先の完全なパスは *C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1* のようになります。
+   したがって、移動先の完全なパスは *C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0* のようになります。
 
 1. 開いたばかりのモニカー フォルダー内にサブフォルダーを作成します。 フォルダーの名前は、使用する言語を示します。 次の表に、さまざまなオプションを示します。
 
@@ -79,7 +79,7 @@ Visual Studio で IntelliSense に別の言語を使用するには、適切な�
 
 1. コンピューター上で Visual Studio インストーラーを見つけます。
 
-   たとえば、Windows 10 を実行しているコンピューター上で、 **[スタート]** を選択し、**Visual Studio インストーラー**としてリスト表示される **V** の文字までスクロールします。
+   たとえば、Windows 10 を実行しているコンピューター上で、 **[スタート]** を選択し、 **Visual Studio インストーラー** としてリスト表示される **V** の文字までスクロールします。
 
    ![Windows から Visual Studio インストーラーを開く](./media/localized-intellisense/vs-installer-windows-start.png)
 
@@ -122,7 +122,7 @@ Visual Studio で IntelliSense に別の言語を使用するには、適切な�
 
 1. Visual Studio を再起動します。
 
-その後、インストールした IntelliSense ファイルのバージョンを対象とする .NET Core プロジェクトを開くと、IntelliSense が期待どおりに動作するようになります。
+その後、インストールした IntelliSense ファイルのバージョンを対象とする .NET プロジェクトを開くと、IntelliSense が期待どおりに動作するようになります。
 
 ## <a name="see-also"></a>参照
 

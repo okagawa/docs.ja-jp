@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 13346836b6cc1c9db4a1b6fd93a11615c2a843c0
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: da0e92f394507a37b0b6c163b41a575abc1c1a2b
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687562"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441110"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework の新機能
 
@@ -1585,9 +1585,9 @@ NGen PDB を使用すれば、IL PDB に依存することなく、NGen で IL �
 
     スイッチは、ライブラリによって公開される正式なコントラクトであるため、一貫性のある形式を使用することをお勧めします。 2 つの明確な形式を次に示します。
 
-    - *Switch* . *namespace* . *switchname*
+    - *Switch*. *namespace*. *switchname*
 
-    - *Switch* . *library* . *switchname*
+    - *Switch*. *library*. *switchname*
 
   - **タスク ベースの非同期パターン (TAP) の変更点**
 
@@ -1758,7 +1758,7 @@ NGen PDB を使用すれば、IL PDB に依存することなく、NGen で IL �
 
 - **オープン ソースの .NET Framework パッケージ**
 
-  .NET Core のパッケージ (変更できないコレクションなど)、[SIMD API](https://www.nuget.org/packages/Microsoft.Bcl.Simd)、およびネットワーク API (<xref:System.Net.Http> 名前空間に含まれるものなど) は、[GitHub](https://github.com/) でオープンソース パッケージとして入手できるようになりました。 このコードにアクセスするには、[GitHub 上の .NET](https://github.com/dotnet/runtime) をご覧ください。 これらのパッケージの詳細、および投稿方法については、「[.NET Core とオープン ソース](../get-started/net-core-and-open-source.md)」および [GitHub の .NET ホーム ページ](https://github.com/dotnet/home)を参照してください。
+  .NET Core のパッケージ (変更できないコレクションなど)、[SIMD API](https://www.nuget.org/packages/Microsoft.Bcl.Simd)、およびネットワーク API (<xref:System.Net.Http> 名前空間に含まれるものなど) は、[GitHub](https://github.com/) でオープンソース パッケージとして入手できるようになりました。 このコードにアクセスするには、[GitHub 上の .NET](https://github.com/dotnet/runtime) をご覧ください。 これらのパッケージの詳細、および投稿方法については、「[.NET の概要](../../core/introduction.md)」および [GitHub の .NET ホーム ページ](https://github.com/dotnet/home)を参照してください。
 
 <a name="v452"></a>
 
