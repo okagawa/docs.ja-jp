@@ -2,12 +2,12 @@
 title: インターフェイス
 description: 'F # インターフェイスが、他のクラスが実装する関連メンバーのセットを指定する方法について説明します。'
 ms.date: 08/15/2020
-ms.openlocfilehash: 36272b52fcff83e8e8a54ccc4e6ecd1252a91819
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 0cef2932045dae401f5aa069107815543457ca4a
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558128"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557052"
 ---
 # <a name="interfaces"></a>インターフェイス
 
@@ -100,6 +100,67 @@ type INumeric2 =
 インターフェイスは、1つまたは複数の基本インターフェイスから継承できます。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2805.fs)]
+
+## <a name="implementing-interfaces-with-default-implementations"></a>既定の実装でのインターフェイスの実装
+
+C# では、次のように、既定の実装でインターフェイスを定義できます。
+
+```csharp
+using System;
+
+namespace CSharp
+{
+    public interface MyDim
+    {
+        public int Z => 0;
+    }
+}
+```
+
+これらは F # から直接利用できます。
+
+```fsharp
+open CSharp
+
+// You can implement the interface via a class
+type MyType() =
+    member _.M() = ()
+
+    interface MyDim
+
+let md = MyType() :> MyDim
+printfn $"DIM from C#: %d{md.Z}"
+
+// You can also implement it via an object expression
+let md' = { new MyDim }
+printfn $"DIM from C# but via Object Expression: %d{md'.Z}"
+```
+
+仮想メンバーをオーバーライドするのと同様に、を使用して既定の実装をオーバーライドでき `override` ます。
+
+既定のを実装していないインターフェイスのメンバーは、引き続き明示的に実装する必要があります。
+
+## <a name="implementing-the-same-interface-at-different-generic-instantiations"></a>異なるジェネリックインスタンスでの同じインターフェイスの実装
+
+F # では、次のように、異なるジェネリックインスタンスで同じインターフェイスを実装できます。
+
+```fsharp
+type IA<'T> =
+    abstract member Get : unit -> 'T
+
+type MyClass() =
+    interface IA<int> with
+        member x.Get() = 1
+    interface IA<string> with
+        member x.Get() = "hello"
+
+let mc = MyClass()
+let iaInt = mc :> IA<int>
+let iaString = mc :> IA<string>
+
+iaInt.Get() // 1
+iaString.Get() // "hello"
+```
 
 ## <a name="see-also"></a>関連項目
 

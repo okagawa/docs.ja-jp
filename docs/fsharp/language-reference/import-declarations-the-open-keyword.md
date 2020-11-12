@@ -2,28 +2,29 @@
 title: 'インポート宣言: open キーワード'
 description: 'F # インポート宣言と、完全修飾名を使用せずに参照できる要素を持つモジュールまたは名前空間を指定する方法について説明します。'
 ms.date: 08/15/2020
-ms.openlocfilehash: 6420df071f86159c44606c2710331d5f587023cc
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: ab208c53809e120bc216c8f8b4d04a322d67cf2f
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557608"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557182"
 ---
 # <a name="import-declarations-the-open-keyword"></a>インポート宣言: `open` キーワード
 
-*インポート宣言*は、完全修飾名を使用せずに参照できる要素を持つモジュールまたは名前空間を指定します。
+*インポート宣言* は、完全修飾名を使用せずに参照できる要素を持つモジュールまたは名前空間を指定します。
 
 ## <a name="syntax"></a>構文
 
 ```fsharp
 open module-or-namespace-name
+open type type-name
 ```
 
 ## <a name="remarks"></a>解説
 
 常に完全修飾名前空間またはモジュールパスを使用してコードを参照すると、書き込み、読み取り、および保守が困難なコードを作成できます。 代わりに、 `open` 頻繁に使用されるモジュールと名前空間にキーワードを使用して、そのモジュールまたは名前空間のメンバーを参照するときに、完全修飾名の代わりに短い形式の名前を使用できます。 このキーワードは、C# の `using` キーワード、 `using namespace` Visual C++、Visual Basic に似てい `Imports` ます。
 
-指定されたモジュールまたは名前空間は、同じプロジェクトまたは参照されるプロジェクトまたはアセンブリ内に存在する必要があります。 そうでない場合は、プロジェクトへの参照を追加するか、 `-reference` コマンドラインオプション (またはその省略形) を使用することができ `-r` ます。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。
+指定されたモジュールまたは名前空間は、同じプロジェクトまたは参照されるプロジェクトまたはアセンブリ内に存在する必要があります。 そうでない場合は、プロジェクトへの参照を追加するか、 `-reference` コマンドラインオプション (またはその省略形) を使用することができ `-r` ます。 詳細については、「 [コンパイラオプション](compiler-options.md)」を参照してください。
 
 インポート宣言は、外側の名前空間、モジュール、またはファイルの末尾まで、宣言の後のコードで名前を使用できるようにします。
 
@@ -42,6 +43,31 @@ printfn "%A" empty
 ```
 
 したがって、同じ名前を持つメンバーが含まれているモジュールまたは名前空間を開く場合は注意が必要です。 `List` `Seq` 代わりに、修飾名の使用を検討してください。 コードがインポート宣言の順序に依存している状況を避ける必要があります。
+
+## <a name="open-type-declarations"></a>オープン型の宣言
+
+F # `open` は、次のような型でサポートされます。
+
+```fsharp
+open type System.Math
+PI
+```
+
+これにより、型のアクセス可能なすべての静的フィールドとメンバーが公開されます。
+
+また、 `open` F # で定義された [レコード](records.md) と [判別共用体](discriminated-unions.md) の型を使用して、静的メンバーを公開することもできます。 判別共用体の場合は、共用体ケースを公開することもできます。 これは、次のように、モジュール内で宣言された型の共用体ケースにアクセスする場合に役立ちます。
+
+```fsharp
+module M =
+    type DU = A | B | C
+
+    let someOtherFunction x = x + 1
+
+// Open only the type inside the module
+open type M.DU
+
+printfn "%A" A
+```
 
 ## <a name="namespaces-that-are-open-by-default"></a>既定で開かれている名前空間
 

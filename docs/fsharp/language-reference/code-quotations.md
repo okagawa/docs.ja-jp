@@ -2,20 +2,20 @@
 title: コード クォート
 description: 'F # コードの引用符について説明します。これは、プログラムで F # コード式を生成して操作できる言語機能です。'
 ms.date: 08/13/2020
-ms.openlocfilehash: 070e127397a5da7d70281d08ef7cafdb9b4f4fe5
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: dc37fdbd6cd29e5ee94e5c0186dfe2bfeb666f32
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558336"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557195"
 ---
 # <a name="code-quotations"></a>コード引用符
 
-この記事では、 *コードの引用符*について説明します。これは、プログラムによって F # コード式を生成して操作できる言語機能です。 この機能を使用すると、F # コードを表す抽象構文ツリーを生成できます。 次に、アプリケーションのニーズに応じて、抽象構文ツリーを走査して処理できます。 たとえば、ツリーを使用すると、F # コードを生成したり、他の言語でコードを生成したりできます。
+この記事では、 *コードの引用符* について説明します。これは、プログラムによって F # コード式を生成して操作できる言語機能です。 この機能を使用すると、F # コードを表す抽象構文ツリーを生成できます。 次に、アプリケーションのニーズに応じて、抽象構文ツリーを走査して処理できます。 たとえば、ツリーを使用すると、F # コードを生成したり、他の言語でコードを生成したりできます。
 
 ## <a name="quoted-expressions"></a>引用符で囲まれた式
 
-*引用符で囲ま*れた式は、コード内の f # 式であり、プログラムの一部としてコンパイルされるのではなく、f # の式を表すオブジェクトにコンパイルされます。 引用符で囲まれた式は、型情報を持つか、型情報のない2つの方法のいずれかでマークできます。 型情報を含める場合は、記号とを使用して、引用符で囲まれた `<@` `@>` 式を区切ります。 型情報が不要な場合は、との記号を使用し `<@@` `@@>` ます。 次のコードは、型指定された型指定のない引用符を示しています。
+*引用符で囲ま* れた式は、コード内の f # 式であり、プログラムの一部としてコンパイルされるのではなく、f # の式を表すオブジェクトにコンパイルされます。 引用符で囲まれた式は、型情報を持つか、型情報のない2つの方法のいずれかでマークできます。 型情報を含める場合は、記号とを使用して、引用符で囲まれた `<@` `@>` 式を区切ります。 型情報が不要な場合は、との記号を使用し `<@@` `@@>` ます。 次のコードは、型指定された型指定のない引用符を示しています。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet501.fs)]
 
@@ -37,6 +37,21 @@ ms.locfileid: "88558336"
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet502.fs)]
 
 F # の引用符を評価するには、 [f # の引用符](https://github.com/fsprojects/FSharp.Quotations.Evaluator)を使用する必要があります。 F # expression オブジェクトの評価と実行のサポートを提供します。
+
+F # の引用符には、型の制約情報も保持します。 次の例を確認してください。
+
+```fsharp
+open FSharp.Linq.RuntimeHelpers
+
+let eval q = LeafExpressionConverter.EvaluateQuotation q
+
+let inline negate x = -x
+// val inline negate: x: ^a ->  ^a when  ^a : (static member ( ~- ) :  ^a ->  ^a)
+
+<@ negate 1.0 @>  |> eval
+```
+
+関数によって生成される制約 `inline` は、コードに保持されます。 関数の順序によって表さ `negate` れるフォームを評価できるようになりました。
 
 ## <a name="expr-type"></a>Expr 型
 

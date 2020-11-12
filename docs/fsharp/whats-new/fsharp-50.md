@@ -2,16 +2,18 @@
 title: 'F # 5.0 の新機能-F # ガイド'
 description: 'F # 5.0 で利用可能な新機能の概要を説明します。'
 ms.date: 11/06/2020
-ms.openlocfilehash: 0c4c9f42c63a1dc8c90213c43edbadd4061c132d
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 51d6dd2457ee9966a86d0d9ac686f2af15772999
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94445842"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557143"
 ---
-# <a name="whats-new-in-f-50"></a>F # 5.0 の新機能
+# <a name="whats-new-in-f-50"></a>F# 5.0 の新機能
 
 F # 5.0 では、F # 言語と F# インタラクティブにいくつかの機能強化が加えられています。 **.Net 5** でリリースされます。
+
+最新の .NET SDK は、 [.net ダウンロードページ](https://dotnet.microsoft.com/download)からダウンロードできます。
 
 ## <a name="get-started"></a>作業開始
 
@@ -149,7 +151,6 @@ nameof op_Addition // "op_Addition"
 型パラメーターの名前を取得するには、次のように若干異なる構文が必要です。
 
 ```fsharp
-
 type C<'TType> =
     member _.TypeName = nameof<'TType>
 ```
@@ -228,16 +229,16 @@ F # 5.0 では、組み込みの3D および4D 配列型の固定インデック
 これを説明するために、次の3D 配列について考えてみます。
 
 *z = 0*
-|x\y|0|1|
-|---|-|-|
-|**0**|0|1|
-|**1**|2|3|
+| x\y   | 0 | 1 |
+|-------|---|---|
+| **0** | 0 | 1 |
+| **1** | 2 | 3 |
 
 *z = 1*
-|x\y|0|1|
-|---|-|-|
-|**0**|4|5|
-|**1**|6|7|
+| x\y   | 0 | 1 |
+|-------|---|---|
+| **0** | 4 | 5 |
+| **1** | 6 | 7 |
 
 配列からスライスを抽出する場合はどうすればよい `[| 4; 5 |]` でしょうか。 これは非常に単純です。
 
@@ -258,6 +259,23 @@ for z in 0..dim-1 do
 // Now let's get the [4;5] slice!
 m.[*, 0, 1]
 ```
+
+## <a name="f-quotations-improvements"></a>F # による引用符の機能強化
+
+F # の [コード引用符](../language-reference/code-quotations.md) で、型の制約情報を保持できるようになりました。 次の例を確認してください。
+
+```fsharp
+open FSharp.Linq.RuntimeHelpers
+
+let eval q = LeafExpressionConverter.EvaluateQuotation q
+
+let inline negate x = -x
+// val inline negate: x: ^a ->  ^a when  ^a : (static member ( ~- ) :  ^a ->  ^a)
+
+<@ negate 1.0 @>  |> eval
+```
+
+関数によって生成される制約 `inline` は、コードに保持されます。 関数の順序によって表さ `negate` れるフォームを評価できるようになりました。
 
 ## <a name="applicative-computation-expressions"></a>アプリケーションの計算式
 
