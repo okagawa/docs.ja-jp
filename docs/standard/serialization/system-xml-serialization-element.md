@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
-ms.openlocfilehash: f69e80592e9321de64421b977a63b83d8be2ad9e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6291799aadc429e943996f2256d773ac36dd370f
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289487"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282386"
 ---
 # <a name="systemxmlserialization-element"></a>\<system.xml.serialization> 要素
 
@@ -41,7 +41,7 @@ XML シリアル化を制御する最上位の要素です。 構成ファイル
 |要素|説明|
 |-------------|-----------------|
 |[\<dateTimeSerialization> 要素](datetimeserialization-element.md)|<xref:System.DateTime> オブジェクトのシリアル化モードを決定します。|
-|[\<schemaImporterExtensions> 要素](schemaimporterextensions-element.md)|XSD の型を .NET Framework の型にマッピングするために <xref:System.Xml.Serialization.XmlSchemaImporter> によって使用される型を含みます。|
+|[\<schemaImporterExtensions> 要素](schemaimporterextensions-element.md)|XSD の型を .NET の型にマッピングするために <xref:System.Xml.Serialization.XmlSchemaImporter> によって使用される型が含まれます。|
 
 ### <a name="parent-elements"></a>親要素
 
@@ -51,7 +51,7 @@ XML シリアル化を制御する最上位の要素です。 構成ファイル
 
 ## <a name="example"></a>例
 
-次のコード例は、<xref:System.DateTime> オブジェクトのシリアル化モードを指定し、XSD の型を .NET Framework の型にマッピングするために <xref:System.Xml.Serialization.XmlSchemaImporter> によって使用される型を追加する方法を示します。
+次のコード例では、<xref:System.DateTime> オブジェクトのシリアル化モードを指定し、XSD の型を .NET の型にマッピングするために <xref:System.Xml.Serialization.XmlSchemaImporter> によって使用される型を追加する方法を示します。
 
 ```xml
 <system.xml.serialization>

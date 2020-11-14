@@ -4,12 +4,12 @@ description: .NET Core プロジェクトと .NET Standard プロジェクトの
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 18f17839361d0cb60a52fbf4415665855f1d53be
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 6c1e9a665ad541bf6109634a6df857880ee47042
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223492"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281650"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core と .NET Standard での単体テストのベスト プラクティス
 
@@ -227,7 +227,7 @@ Assert.True(mockOrder.Validated);
 
 ### <a name="prefer-helper-methods-to-setup-and-teardown"></a>設定と破棄よりもヘルパー メソッドを優先する
 
-テストに同様のオブジェクトまたは状態が必要な場合は、設定属性と破棄属性を利用する (存在する場合) よりもヘルパー メソッドを優先します。
+テストに同様のオブジェクトまたは状態が必要な場合は、`Setup` 属性と `Teardown` 属性を利用する (存在する場合) より、ヘルパー メソッドを優先します。
 
 #### <a name="why"></a>なぜでしょうか。
 

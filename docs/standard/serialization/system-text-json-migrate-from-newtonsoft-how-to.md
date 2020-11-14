@@ -1,36 +1,36 @@
 ---
 title: Newtonsoft.Json から System.Text.Json に移行する - .NET
+description: Newtonsoft.Json から System.Text.Json に移行する方法について説明します。 サンプル コードが含まれています。
 author: tdykstra
 ms.author: tdykstra
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-ms.date: 01/10/2020
+ms.date: 11/05/2020
+zone_pivot_groups: dotnet-version
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 11de13a6674411bbad52678b59879ed26366e0f1
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: cd40b6f6daac267342f54631075e4640f9a77d94
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811055"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329769"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>Newtonsoft.Json から System.Text.Json に移行する方法
 
 この記事では、[Newtonsoft.Json](https://www.newtonsoft.com/json) から <xref:System.Text.Json> に移行する方法を示します。
 
-`System.Text.Json` 名前空間は、JavaScript Object Notation (JSON) との間でのシリアル化と逆シリアル化の機能を提供します。 `System.Text.Json` ライブラリは、[.NET Core 3.0](https://aka.ms/netcore3download) 共有フレームワークに含まれています。 その他のターゲット フレームワークの場合は、[System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet パッケージをインストールします。 このパッケージで以下がサポートされます。
+`System.Text.Json` 名前空間は、JavaScript Object Notation (JSON) との間でのシリアル化と逆シリアル化の機能を提供します。 `System.Text.Json` ライブラリは、[.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1) 以降のバージョン用のランタイムに含まれています。 その他のターゲット フレームワークの場合は、[System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet パッケージをインストールします。 このパッケージで以下がサポートされます。
 
 * .NET Standard 2.0 以降のバージョン
 * .NET Framework 4.7.2 以降のバージョン
 * .NET Core 2.0、2.1、および 2.2
 
 `System.Text.Json` は、主にパフォーマンス、セキュリティ、標準への準拠に焦点を当てています。 これには既定の動作について重要な違いがいくつかあり、`Newtonsoft.Json` との機能パリティを持つことがこの目的ではありません。 一部のシナリオでは、`System.Text.Json` に組み込み機能がなくても、推奨される回避策があります。 それ以外のシナリオでは、回避策は実用的ではありません。 お使いのアプリケーションで、欠如している機能を利用する必要がある場合は、ご自分のシナリオのサポートを追加できるかどうかを確認するために、[問題を申請](https://github.com/dotnet/runtime/issues/new)することを検討してください。
-
-<!-- For information about which features might be added in future releases, see the [Roadmap](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md). [Restore this when the roadmap is updated.]-->
 
 この記事のほとんどの内容は、<xref:System.Text.Json.JsonSerializer> API の使用方法に関するものですが、<xref:System.Text.Json.JsonDocument> (ドキュメント オブジェクト モデル: DOM を表します)、<xref:System.Text.Json.Utf8JsonReader>、<xref:System.Text.Json.Utf8JsonWriter> の型の使用方法に関するガイダンスも含まれています。
 
@@ -42,34 +42,76 @@ ms.locfileid: "88811055"
 * サポートされていませんが、回避策を適用できます。 回避策とは[カスタム コンバーター](system-text-json-converters-how-to.md)のことですが、これによって `Newtonsoft.Json` の機能との完全なパリティが得られるとは限りません。 これらの一部については、サンプル コードが例として提供されます。 `Newtonsoft.Json` のこれらの機能を利用する必要がある場合、移行するには、.NET オブジェクト モデルに対する変更やその他のコード変更が必要になります。
 * サポートされていません。回避策は実用的でないか不可能です。 `Newtonsoft.Json` のこれらの機能を利用する必要がある場合、移行を可能にするには大幅な変更が必要です。
 
+::: zone pivot="dotnet-5-0"
 | Newtonsoft.Json の機能                               | System.Text.Json での同等機能 |
 |-------------------------------------------------------|-----------------------------|
 | 既定での大文字と小文字の区別のない逆シリアル化           | ✔️ [PropertyNameCaseInsensitive グローバル設定](#case-insensitive-deserialization) |
 | キャメルケースのプロパティ名                             | ✔️ [PropertyNamingPolicy グローバル設定](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) |
 | 最小限の文字のエスケープ                            | ✔️ [厳密な文字エスケープ、構成可能](#minimal-character-escaping) |
-| `NullValueHandling.Ignore` グローバル設定             | ✔️ [IgnoreNullValues グローバル オプション](system-text-json-how-to.md#exclude-all-null-value-properties) |
+| `NullValueHandling.Ignore` グローバル設定             | ✔️ [DefaultIgnoreCondition グローバル オプション](system-text-json-how-to.md#ignore-all-null-value-properties) |[プロパティを条件付きで無視する](#conditionally-ignore-a-property)
+| コメントを許可する                                        | ✔️ [ReadCommentHandling グローバル設定](#comments) |
+| 末尾のコンマを許可する                                 | ✔️ [AllowTrailingCommas グローバル設定](#trailing-commas) |
+| カスタム コンバーターの登録                         | ✔️ [優先順位の順序が異なる](#converter-registration-precedence) |
+| 既定では最大深度がない                           | ✔️ [既定の最大深度は 64、構成可能](#maximum-depth) |
+| `PreserveReferencesHandling` グローバル設定           | ✔️ [ReferenceHandling グローバル設定](#preserve-object-references-and-handle-loops) |
+| `ReferenceLoopHandling` グローバル設定                | ✔️ [ReferenceHandling グローバル設定](#preserve-object-references-and-handle-loops) |
+| 引用符で囲まれた数値をシリアル化または逆シリアル化する            | ✔️ [NumberHandling グローバル設定、[JsonNumberHandling] 属性](#allow-or-write-numbers-in-quotes) |
+| 不変のクラスと構造体への逆シリアル化          | ✔️ [JsonConstructor、C# 9 のレコード](#deserialize-to-immutable-classes-and-structs) |
+| フィールドのサポート                                    | ✔️ [IncludeFields グローバル設定、[JsonInclude] 属性](#public-and-non-public-fields) |
+| `DefaultValueHandling` グローバル設定                 | ✔️ [DefaultIgnoreCondition グローバル設定](#conditionally-ignore-a-property) |
+| `[JsonProperty]` での `NullValueHandling` の設定       | ✔️ [JsonIgnore 属性](#conditionally-ignore-a-property)  |
+| `[JsonProperty]` での `DefaultValueHandling` の設定    | ✔️ [JsonIgnore 属性](#conditionally-ignore-a-property)  |
+| 文字列以外のキーを含む `Dictionary` を逆シリアル化する          | ✔️ [Supported](#dictionary-with-non-string-key) |
+| 非パブリック プロパティのセッターとゲッターのサポート   | ✔️ [JsonInclude 属性](#non-public-property-setters-and-getters) |
+| `[JsonConstructor]` 属性                         | ✔️ [[JsonConstructor] 属性](#specify-constructor-to-use-when-deserializing) |
+| さまざまな型のサポート                    | ⚠️ [一部の型にはカスタム コンバーターが必要である](#types-without-built-in-support) |
+| ポリモーフィックなシリアル化                             | ⚠️ [サポートされていない、回避策、サンプル](#polymorphic-serialization) |
+| ポリモーフィックな逆シリアル化                           | ⚠️ [サポートされていない、回避策、サンプル](#polymorphic-deserialization) |
+| 推論された型を `object` のプロパティに逆シリアル化する      | ⚠️ [サポートされていない、回避策、サンプル](#deserialization-of-object-properties) |
+| JSON の `null` リテラルを null 非許容値の型に逆シリアル化する | ⚠️ [サポートされていない、回避策、サンプル](#deserialize-null-to-non-nullable-type) |
+| `[JsonProperty]` 属性での `Required` の設定        | ⚠️ [サポートされていない、回避策、サンプル](#required-properties) |
+| プロパティを無視するための `DefaultContractResolver`       | ⚠️ [サポートされていない、回避策、サンプル](#conditionally-ignore-a-property) |
+| `DateTimeZoneHandling`、`DateFormatString` の設定   | ⚠️ [サポートされていない、回避策、サンプル](#specify-date-format) |
+| コールバック                                             | ⚠️ [サポートされていない、回避策、サンプル](#callbacks) |
+| `JsonConvert.PopulateObject` メソッド                   | ⚠️ [サポートされていない、回避策](#populate-existing-objects) |
+| `ObjectCreationHandling` グローバル設定               | ⚠️ [サポートされていない、回避策](#reuse-rather-than-replace-properties) |
+| セッターなしでコレクションに追加する                    | ⚠️ [サポートされていない、回避策](#add-to-collections-without-setters) |
+| `System.Runtime.Serialization` 属性のサポート | ❌ [サポートされていない](#systemruntimeserialization-attributes) |
+| `MissingMemberHandling` グローバル設定                | ❌ [サポートされていない](#missingmemberhandling) |
+| 引用符なしのプロパティ名を許可する                   | ❌ [サポートされていない](#json-strings-property-names-and-string-values) |
+| 文字列値を囲む単一引用符を許可する              | ❌ [サポートされていない](#json-strings-property-names-and-string-values) |
+| 文字列のプロパティに対して文字列ではない JSON 値を許可する    | ❌ [サポートされていない](#non-string-values-for-string-properties) |
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+| Newtonsoft.Json の機能                               | System.Text.Json での同等機能 |
+|-------------------------------------------------------|-----------------------------|
+| 既定での大文字と小文字の区別のない逆シリアル化           | ✔️ [PropertyNameCaseInsensitive グローバル設定](#case-insensitive-deserialization) |
+| キャメルケースのプロパティ名                             | ✔️ [PropertyNamingPolicy グローバル設定](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) |
+| 最小限の文字のエスケープ                            | ✔️ [厳密な文字エスケープ、構成可能](#minimal-character-escaping) |
+| `NullValueHandling.Ignore` グローバル設定             | ✔️ [IgnoreNullValues グローバル オプション](system-text-json-how-to.md#ignore-all-null-value-properties) |
 | コメントを許可する                                        | ✔️ [ReadCommentHandling グローバル設定](#comments) |
 | 末尾のコンマを許可する                                 | ✔️ [AllowTrailingCommas グローバル設定](#trailing-commas) |
 | カスタム コンバーターの登録                         | ✔️ [優先順位の順序が異なる](#converter-registration-precedence) |
 | 既定では最大深度がない                           | ✔️ [既定の最大深度は 64、構成可能](#maximum-depth) |
 | さまざまな型のサポート                    | ⚠️ [一部の型にはカスタム コンバーターが必要である](#types-without-built-in-support) |
-| 文字列を数値として逆シリアル化する                        | ⚠️ [サポートされていない、回避策、サンプル](#quoted-numbers) |
+| 文字列を数値として逆シリアル化する                        | ⚠️ [サポートされていない、回避策、サンプル](#allow-or-write-numbers-in-quotes) |
 | 文字列以外のキーを含む `Dictionary` を逆シリアル化する          | ⚠️ [サポートされていない、回避策、サンプル](#dictionary-with-non-string-key) |
 | ポリモーフィックなシリアル化                             | ⚠️ [サポートされていない、回避策、サンプル](#polymorphic-serialization) |
 | ポリモーフィックな逆シリアル化                           | ⚠️ [サポートされていない、回避策、サンプル](#polymorphic-deserialization) |
 | 推論された型を `object` のプロパティに逆シリアル化する      | ⚠️ [サポートされていない、回避策、サンプル](#deserialization-of-object-properties) |
 | JSON の `null` リテラルを null 非許容値の型に逆シリアル化する | ⚠️ [サポートされていない、回避策、サンプル](#deserialize-null-to-non-nullable-type) |
 | 不変のクラスと構造体への逆シリアル化          | ⚠️ [サポートされていない、回避策、サンプル](#deserialize-to-immutable-classes-and-structs) |
-| `[JsonConstructor]` 属性                         | ⚠️ [サポートされていない、回避策、サンプル](#specify-constructor-to-use) |
+| `[JsonConstructor]` 属性                         | ⚠️ [サポートされていない、回避策、サンプル](#specify-constructor-to-use-when-deserializing) |
 | `[JsonProperty]` 属性での `Required` の設定        | ⚠️ [サポートされていない、回避策、サンプル](#required-properties) |
 | `[JsonProperty]` 属性での `NullValueHandling` の設定 | ⚠️ [サポートされていない、回避策、サンプル](#conditionally-ignore-a-property)  |
 | `[JsonProperty]` 属性での `DefaultValueHandling` の設定 | ⚠️ [サポートされていない、回避策、サンプル](#conditionally-ignore-a-property)  |
 | `DefaultValueHandling` グローバル設定                 | ⚠️ [サポートされていない、回避策、サンプル](#conditionally-ignore-a-property) |
-| プロパティを除外するための `DefaultContractResolver`       | ⚠️ [サポートされていない、回避策、サンプル](#conditionally-ignore-a-property) |
+| プロパティを無視するための `DefaultContractResolver`       | ⚠️ [サポートされていない、回避策、サンプル](#conditionally-ignore-a-property) |
 | `DateTimeZoneHandling`、`DateFormatString` の設定   | ⚠️ [サポートされていない、回避策、サンプル](#specify-date-format) |
 | コールバック                                             | ⚠️ [サポートされていない、回避策、サンプル](#callbacks) |
 | パブリックおよび非パブリック フィールドのサポート              | ⚠️ [サポートされていない、回避策](#public-and-non-public-fields) |
-| 内部およびプライベートのプロパティのセッターとゲッターのサポート | ⚠️ [サポートされていない、回避策](#internal-and-private-property-setters-and-getters) |
+| 非パブリック プロパティのセッターとゲッターのサポート   | ⚠️ [サポートされていない、回避策](#non-public-property-setters-and-getters) |
 | `JsonConvert.PopulateObject` メソッド                   | ⚠️ [サポートされていない、回避策](#populate-existing-objects) |
 | `ObjectCreationHandling` グローバル設定               | ⚠️ [サポートされていない、回避策](#reuse-rather-than-replace-properties) |
 | セッターなしでコレクションに追加する                    | ⚠️ [サポートされていない、回避策](#add-to-collections-without-setters) |
@@ -80,6 +122,7 @@ ms.locfileid: "88811055"
 | 引用符なしのプロパティ名を許可する                   | ❌ [サポートされていない](#json-strings-property-names-and-string-values) |
 | 文字列値を囲む単一引用符を許可する              | ❌ [サポートされていない](#json-strings-property-names-and-string-values) |
 | 文字列のプロパティに対して文字列ではない JSON 値を許可する    | ❌ [サポートされていない](#non-string-values-for-string-properties) |
+::: zone-end
 
 これは `Newtonsoft.Json` 機能の包括的なリストではありません。 この一覧には、[GitHub の問題](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)または [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) の投稿でリクエストされたシナリオの多くが含まれています。 ここに一覧表示されたシナリオのうち、現在サンプル コードがないシナリオの 1 つに回避策を実装する場合、およびご自分の解決策を共有する場合は、このページの下部にある **[フィードバック]** セクションで **[このページ]** を選択してください。 これにより、問題がこのドキュメントの GitHub リポジトリに作成され、このページの **[フィードバック]** セクションにも記載されます。
 
@@ -91,7 +134,11 @@ ms.locfileid: "88811055"
 
 逆シリアル化中、`Newtonsoft.Json` では、大文字と小文字の区別のないプロパティ名の照合が既定で行われます。 <xref:System.Text.Json> の既定では大文字と小文字が区別されます。完全一致が行われるため、これによってパフォーマンスが向上します。 大文字と小文字の区別のない照合の実行方法については、「[大文字と小文字を区別しないプロパティ照合](system-text-json-how-to.md#case-insensitive-property-matching)」を参照してください。
 
-ASP.NET Core を使用して `System.Text.Json` を間接的に使用している場合、`Newtonsoft.Json` のような動作を得るために何かをする必要はありません。 ASP.NET Core では、`System.Text.Json` を使用するときに、[Camel 形式のプロパティ名](system-text-json-how-to.md#use-camel-case-for-all-json-property-names)および大文字と小文字を区別しない照合のための設定が指定されます。 既定値は [JsonOptions クラス](https://github.com/dotnet/aspnetcore/blob/1f56888ea03f6a113587a6c4ac4d8b2ded326ffa/src/Mvc/Mvc.Core/src/JsonOptions.cs#L22-L28)で設定されます。
+ASP.NET Core を使用して `System.Text.Json` を間接的に使用している場合、`Newtonsoft.Json` のような動作を得るために何かをする必要はありません。 ASP.NET Core では、`System.Text.Json` を使用するときに、[Camel 形式のプロパティ名](system-text-json-how-to.md#use-camel-case-for-all-json-property-names)および大文字と小文字を区別しない照合のための設定が指定されます。
+
+::: zone pivot="dotnet-5-0"
+ASP.NET Core を使用すると、[引用符で囲まれた数値](#allow-or-write-numbers-in-quotes)を既定で逆シリアル化することもできます。
+::: zone-end
 
 ### <a name="minimal-character-escaping"></a>最小限の文字のエスケープ
 
@@ -178,9 +225,156 @@ public class ExampleClass
 The JSON value could not be converted to System.String.
 ```
 
-## <a name="scenarios-using-jsonserializer-that-require-workarounds"></a>回避策を必要とする JsonSerializer を使用するシナリオ
+## <a name="scenarios-using-jsonserializer"></a>JsonSerializer を使用するシナリオ
 
-次のシナリオは、組み込み機能ではサポートされていませんが、回避策を適用できます。 回避策とは[カスタム コンバーター](system-text-json-converters-how-to.md)のことですが、これによって `Newtonsoft.Json` の機能との完全なパリティが得られるとは限りません。 これらの一部については、サンプル コードが例として提供されます。 `Newtonsoft.Json` のこれらの機能を利用する必要がある場合、移行するには、.NET オブジェクト モデルに対する変更やその他のコード変更が必要になります。
+次のシナリオの一部は、組み込み機能ではサポートされていませんが、回避策を適用できます。 回避策とは[カスタム コンバーター](system-text-json-converters-how-to.md)のことですが、これによって `Newtonsoft.Json` の機能との完全なパリティが得られるとは限りません。 これらの一部については、サンプル コードが例として提供されます。 `Newtonsoft.Json` のこれらの機能を利用する必要がある場合、移行するには、.NET オブジェクト モデルに対する変更やその他のコード変更が必要になります。
+
+次のシナリオの一部では、回避策は実用的でないか不可能です。 `Newtonsoft.Json` のこれらの機能を利用する必要がある場合、移行を可能にするには大幅な変更が必要です。
+
+### <a name="allow-or-write-numbers-in-quotes"></a>引用符で囲まれた数値を許可または記述する
+
+::: zone pivot="dotnet-5-0"
+`Newtonsoft.Json` では、JSON 文字列によって表された (引用符で囲まれた) 数値をシリアル化または逆シリアル化できます。 たとえば、`{"DegreesCelsius":23}` ではなく `{"DegreesCelsius":"23"}` を受け入れることができます。 <xref:System.Text.Json> でその動作を有効にするには、<xref:System.Text.Json.JsonSerializerOptions.NumberHandling%2A?displayProperty=nameWithType> を <xref:System.Text.Json.Serialization.JsonNumberHandling.WriteAsString> または <xref:System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString> に設定するか、[[JsonNumberHandling]](xref:System.Text.Json.Serialization.JsonNumberHandlingAttribute) 属性を使用します。
+
+ASP.NET Core を使用して `System.Text.Json` を間接的に使用している場合、`Newtonsoft.Json` のような動作を得るために何かをする必要はありません。 `System.Text.Json` が使用されていて、Web の既定値で引用符で囲まれた数値が許可されている場合、ASP.NET Core により [Web の既定値](system-text-json-how-to.md#web-defaults-for-jsonserializeroptions)が指定されます。
+
+詳細については、「[引用符で囲まれた数値を許可または記述する](system-text-json-how-to.md#allow-or-write-numbers-in-quotes)」を参照してください。
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+`Newtonsoft.Json` では、JSON 文字列によって表された (引用符で囲まれた) 数値をシリアル化または逆シリアル化できます。 たとえば、`{"DegreesCelsius":23}` ではなく `{"DegreesCelsius":"23"}` を受け入れることができます。 .NET Core 3.1 の <xref:System.Text.Json> でその動作を有効にするには、次の例のようなカスタム コンバーターを実装します。 このコンバーターでは、`long` として定義されたプロパティが処理されます。
+
+* JSON 文字列としてシリアル化されます。
+* 逆シリアル化中に、JSON の数値と引用符で囲まれた数値が受け入れられます。
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/LongToStringConverter.cs)]
+
+このカスタム コンバーターを登録するには、個々の `long` プロパティで[属性を使用](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property)するか、<xref:System.Text.Json.JsonSerializerOptions.Converters> コレクションに[コンバーター を追加](system-text-json-converters-how-to.md#registration-sample---converters-collection)します。
+::: zone-end
+
+### <a name="specify-constructor-to-use-when-deserializing"></a>逆シリアル化のときに使用するコンストラクターを指定する
+
+`Newtonsoft.Json` の `[JsonConstructor]` 属性を使用すると、POCO への逆シリアル化時に呼び出すコンストラクターを指定できます。
+
+::: zone pivot="dotnet-5-0"
+`System.Text.Json` には、[[JsonConstructor]](xref:System.Text.Json.Serialization.JsonConstructorAttribute) 属性もあります。 詳細については、「[不変の型とレコード](system-text-json-how-to.md#immutable-types-and-records)」を参照してください。
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+.NET Core 3.1 の <xref:System.Text.Json> では、パラメーターなしのコンストラクターのみがサポートされます。 回避策として、必要なコンストラクターをカスタム コンバーターで呼び出すことができます。 「[不変のクラスと構造体への逆シリアル化](#deserialize-to-immutable-classes-and-structs)」の例を参照してください。
+::: zone-end
+
+### <a name="conditionally-ignore-a-property"></a>プロパティを条件付きで無視する
+
+`Newtonsoft.Json` には、シリアル化または逆シリアル化時にプロパティを条件付きで無視する方法がいくつか用意されています。
+
+* `DefaultContractResolver` を使用すると、任意の条件に基づいて含めたり無視したりするプロパティを選択できます。
+* `JsonSerializerSettings` の `NullValueHandling` と `DefaultValueHandling` の設定を使用すると、null 値または既定値のすべてのプロパティを無視することを指定できます。
+* `[JsonProperty]` 属性の `NullValueHandling` と `DefaultValueHandling` の設定を使用すると、null または既定値に設定されている場合に無視する個々のプロパティを指定できます。
+
+::: zone pivot="dotnet-5-0"
+
+<xref:System.Text.Json> には、シリアル化中にプロパティまたはフィールドを無視するために次の方法が用意されています。
+
+* プロパティで [[JsonIgnore]](system-text-json-how-to.md#ignore-individual-properties) 属性を使用すると、シリアル化中にそのプロパティが JSON から除外されます。
+* [IgnoreReadOnlyProperties](system-text-json-how-to.md#ignore-all-read-only-properties) グローバル オプションを使用すると、すべての読み取り専用プロパティを無視できます。
+* [フィールドを含める](system-text-json-how-to.md#include-fields)場合は、<xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyFields%2A?displayProperty=nameWithType> グローバル オプションを使用して、すべての読み取り専用フィールドを無視できます。
+* `DefaultIgnoreCondition` グローバル オプションを使用すると、[既定値が設定されているすべての値型プロパティを無視する](system-text-json-how-to.md#ignore-all-default-value-properties)こと、または[null 値が設定されているすべての参照型プロパティを無視する](system-text-json-how-to.md#ignore-all-null-value-properties)ことができます。
+
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
+.NET Core 3.1 の <xref:System.Text.Json> には、シリアル化中にプロパティを無視するために次の方法が用意されています。
+
+* プロパティで [[JsonIgnore]](system-text-json-how-to.md#ignore-individual-properties) 属性を使用すると、シリアル化中にそのプロパティが JSON から除外されます。
+* [IgnoreNullValues](system-text-json-how-to.md#ignore-all-null-value-properties) グローバル オプションを使用すると、すべての null 値プロパティを無視できます。
+* [IgnoreReadOnlyProperties](system-text-json-how-to.md#ignore-all-read-only-properties) グローバル オプションを使用すると、すべての読み取り専用プロパティを無視できます。
+::: zone-end
+
+これらのオプションでは、以下を行うことは **できません** 。
+
+::: zone pivot="dotnet-5-0"
+
+* 実行時に評価される任意の基準に基づいて、選択したプロパティを無視する。
+
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
+* 型に対して既定値を持つすべてのプロパティを無視する。
+* 型に対して既定値を持つ、選択したプロパティを無視する。
+* 選択したプロパティを、値が null である場合に無視する。
+* 実行時に評価される任意の基準に基づいて、選択したプロパティを無視する。
+
+::: zone-end
+
+この機能のために、カスタム コンバーターを記述できます。 この方法を紹介するサンプルの POCO とそれに対するカスタム コンバーターを、次に示します。
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWF)]
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRuntimeIgnoreConverter.cs)]
+
+このコンバーターでは、`Summary` プロパティは、値が null、空の文字列、または "N/A" の場合、シリアル化から除外されます。
+
+このカスタム コンバーターを登録するには、[クラスで属性を使用](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type)するか、<xref:System.Text.Json.JsonSerializerOptions.Converters> コレクションに[コンバーター を追加](system-text-json-converters-how-to.md#registration-sample---converters-collection)します。
+
+この方法では、次の場合に追加のロジックが必要になります。
+
+* POCO に複合プロパティが含まれている。
+* `[JsonIgnore]` などの属性や、カスタム エンコーダーなどのオプションを処理する必要がある。
+
+### <a name="public-and-non-public-fields"></a>パブリックおよび非パブリック フィールド
+
+`Newtonsoft.Json` では、フィールドおよびプロパティをシリアル化および逆シリアル化できます。
+
+::: zone pivot="dotnet-5-0"
+<xref:System.Text.Json> では、シリアル化または逆シリアル化のときにフィールドを含めるには、<xref:System.Text.Json.JsonSerializerOptions.IncludeFields?displayProperty=nameWithType> グローバル設定または [[JsonInclude]](xref:System.Text.Json.Serialization.JsonIncludeAttribute) 属性を使用します。 例については、「[フィールドを含める](system-text-json-how-to.md#include-fields)」を参照してください。
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+.NET Core 3.1 の <xref:System.Text.Json> は、パブリック プロパティでのみ機能します。 この機能は、カスタム コンバーターによって得られます。
+::: zone-end
+
+### <a name="preserve-object-references-and-handle-loops"></a>オブジェクト参照を保持してループを処理する
+
+既定では、`Newtonsoft.Json` では値によってシリアル化します。 たとえば、オブジェクトに同じ `Person` オブジェクトへの参照を含む 2 つのプロパティが含まれている場合、その `Person` オブジェクトのプロパティの値は JSON 内で複製されます。
+
+`Newtonsoft.Json` には、`JsonSerializerSettings` に、参照によってシリアル化できるようにする `PreserveReferencesHandling` 設定があります。
+
+* 最初の `Person` オブジェクト用に作成された JSON に識別子メタデータが追加されます。
+* 2番目の `Person` オブジェクト用に作成された JSON には、プロパティ値ではなく、その識別子への参照が含まれます。
+
+`Newtonsoft.Json` には、例外をスローするのではなく循環参照を無視できるようにする `ReferenceLoopHandling` 設定もあります。
+
+::: zone pivot="dotnet-5-0"
+<xref:System.Text.Json> で参照を保持し、循環参照を処理するには、<xref:System.Text.Json.JsonSerializerOptions.ReferenceHandler%2A?displayProperty=nameWithType> を <xref:System.Text.Json.Serialization.ReferenceHandler.Preserve%2A> に設定します。 `ReferenceHandler.Preserve` 設定は、`Newtonsoft.Json` での `PreserveReferencesHandling` = `PreserveReferencesHandling.All` に相当します。
+
+Newtonsoft.Json の [ReferenceResolver](https://www.newtonsoft.com/json/help/html/P_Newtonsoft_Json_JsonSerializer_ReferenceResolver.htm) のように、シリアル化および逆シリアル化で参照を維持するための動作は、<xref:System.Text.Json.Serialization.ReferenceResolver?displayProperty=fullName> クラスによって定義されます。 カスタム動作を指定するには、派生クラスを作成します。 例については、[GuidReferenceResolver](https://github.com/dotnet/docs/blob/9d5e88edbd7f12be463775ffebbf07ac8415fe18/docs/standard/serialization/snippets/system-text-json-how-to-5-0/csharp/GuidReferenceResolverExample.cs) に関するページを参照してください。
+
+一部の関連する `Newtonsoft.Json` 機能はサポートされていません。
+
+* [JsonPropertyAttribute.IsReference](https://www.newtonsoft.com/json/help/html/P_Newtonsoft_Json_JsonPropertyAttribute_IsReference.htm)
+* [JsonPropertyAttribute.ReferenceLoopHandling](https://www.newtonsoft.com/json/help/html/P_Newtonsoft_Json_JsonPropertyAttribute_ReferenceLoopHandling.htm)
+
+詳細については、「[参照を保持し、循環参照を処理する](system-text-json-how-to.md#preserve-references-and-handle-circular-references)」を参照してください
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+.NET Core 3.1 の <xref:System.Text.Json> でサポートされているのは値によるシリアル化のみであり、循環参照の場合は例外がスローされます。
+::: zone-end
+
+### <a name="dictionary-with-non-string-key"></a>文字列以外のキーを含むディクショナリ
+
+::: zone pivot="dotnet-5-0"
+`Newtonsoft.Json` と `System.Text.Json` のどちらでも、`Dictionary<TKey, TValue>` 型のコレクションがサポートされています。
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+`Newtonsoft.Json` では、`Dictionary<TKey, TValue>` 型のコレクションがサポートされます。 .NET Core 3.1 の <xref:System.Text.Json> では、ディクショナリ コレクションに対する組み込みサポートは `Dictionary<string, TValue>` に限定されています。 つまり、キーは文字列である必要があります。
+
+.NET Core 3.1 でキーとして整数やその他の型を含むディクショナリをサポートするには、「[カスタム コンバーターを記述する方法](system-text-json-converters-how-to.md#support-dictionary-with-non-string-key)」の例にあるようなコンバーターを作成します。
+::: zone-end
 
 ### <a name="types-without-built-in-support"></a>組み込みサポートのない型
 
@@ -198,23 +392,6 @@ The JSON value could not be converted to System.String.
 
 カスタム コンバーターは、組み込みサポートのない型に対して実装できます。
 
-### <a name="quoted-numbers"></a>引用符で囲まれた数値
-
-`Newtonsoft.Json` では、JSON 文字列によって表された (引用符で囲まれた) 数値をシリアル化または逆シリアル化できます。 たとえば、`{"DegreesCelsius":23}` ではなく `{"DegreesCelsius":"23"}` を受け入れることができます。 <xref:System.Text.Json> でこの動作を有効にするには、次の例のようなカスタム コンバーターを実装します。 このコンバーターでは、`long` として定義されたプロパティが処理されます。
-
-* JSON 文字列としてシリアル化されます。
-* 逆シリアル化中に、JSON の数値と引用符で囲まれた数値が受け入れられます。
-
-[!code-csharp[](snippets/system-text-json-how-to/csharp/LongToStringConverter.cs)]
-
-このカスタム コンバーターを登録するには、個々の `long` プロパティで[属性を使用](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property)するか、<xref:System.Text.Json.JsonSerializerOptions.Converters> コレクションに[コンバーター を追加](system-text-json-converters-how-to.md#registration-sample---converters-collection)します。
-
-### <a name="dictionary-with-non-string-key"></a>文字列以外のキーを含むディクショナリ
-
-`Newtonsoft.Json` では、`Dictionary<TKey, TValue>` 型のコレクションがサポートされます。 <xref:System.Text.Json> では、ディクショナリ コレクションに対する組み込みサポートは `Dictionary<string, TValue>` に限定されています。 つまり、キーは文字列である必要があります。
-
-キーとして整数やその他の型を含むディクショナリをサポートするには、[カスタム コンバーターを記述する方法](system-text-json-converters-how-to.md#support-dictionary-with-non-string-key)に関する記事の例にあるようなコンバーターを作成します。
-
 ### <a name="polymorphic-serialization"></a>ポリモーフィックなシリアル化
 
 `Newtonsoft.Json` では、ポリモーフィックなシリアル化が自動的に行われます。 <xref:System.Text.Json> の制限付きのポリモーフィックなシリアル化機能については、「[派生クラスのプロパティのシリアル化](system-text-json-how-to.md#serialize-properties-of-derived-classes)」を参照してください。
@@ -231,8 +408,8 @@ The JSON value could not be converted to System.String.
 
 `Newtonsoft.Json` では、<xref:System.Object> への逆シリアル化中に以下が行われます。
 
-* JSON ペイロード内のプリミティブ値 (`null` 以外) の型を推測し、格納されている `string`、`long`、`double`、`boolean`、または `DateTime` をボックス化されたオブジェクトとして返します。 "*プリミティブ値*" は、JSON の数値、文字列、`true`、`false`、`null` などの 1 つの JSON 値です。
-* JSON ペイロード内の複合値の `JObject` または `JArray` を返します。 "*複合値*" は、中かっこ (`{}`) 内の JSON のキーと値のペアのコレクション、または角かっこ (`[]`) 内の値のリストです。 中かっこまたは角かっこ内のプロパティと値には、追加のプロパティまたは値を含めることができます。
+* JSON ペイロード内のプリミティブ値 (`null` 以外) の型を推測し、格納されている `string`、`long`、`double`、`boolean`、または `DateTime` をボックス化されたオブジェクトとして返します。 " *プリミティブ値* " は、JSON の数値、文字列、`true`、`false`、`null` などの 1 つの JSON 値です。
+* JSON ペイロード内の複合値の `JObject` または `JArray` を返します。 " *複合値* " は、中かっこ (`{}`) 内の JSON のキーと値のペアのコレクション、または角かっこ (`[]`) 内の値のリストです。 中かっこまたは角かっこ内のプロパティと値には、追加のプロパティまたは値を含めることができます。
 * ペイロードに `null` JSON リテラルが含まれている場合は、null 参照を返します。
 
 <xref:System.Text.Json> では、<xref:System.Object> への逆シリアル化中には常に、プリミティブと複合の両方の値に対してボックス化された `JsonElement` が格納されます。例えば、以下のようなものです。
@@ -253,7 +430,7 @@ The JSON value could not be converted to System.String.
 * `NullValueHandling` が `Ignore` に設定されている。さらに
 * 逆シリアル化中に、JSON の null 非許容値型に null 値が含まれている。
 
-<xref:System.Text.Json> では、同じシナリオで例外がスローされます。 (対応する null 処理設定は <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType>です。)
+<xref:System.Text.Json> では、同じシナリオで例外がスローされます。 (`System.Text.Json` での対応する null 処理設定は <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType> = `true` です。)
 
 ターゲット型を所有している場合、最適な回避策は、問題のプロパティを null 許容にすることです (たとえば、`int` を `int?` に変更します)。
 
@@ -263,7 +440,7 @@ The JSON value could not be converted to System.String.
 
 このカスタム コンバーターを登録するには、[プロパティで属性を使用](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property)するか、<xref:System.Text.Json.JsonSerializerOptions.Converters> コレクションに[コンバーター を追加](system-text-json-converters-how-to.md#registration-sample---converters-collection)します。
 
-**注:** 上記のコンバーターでは、既定値を指定する POCO に対して `Newtonsoft.Json` が処理する場合とは**異なる方法で null 値が処理**されます。 たとえば、次のコードがターゲット オブジェクトを表しているとします。
+**注:** 上記のコンバーターでは、既定値を指定する POCO に対して `Newtonsoft.Json` が処理する場合とは **異なる方法で null 値が処理** されます。 たとえば、次のコードがターゲット オブジェクトを表しているとします。
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithDefault)]
 
@@ -281,7 +458,14 @@ The JSON value could not be converted to System.String.
 
 ### <a name="deserialize-to-immutable-classes-and-structs"></a>不変のクラスと構造体への逆シリアル化
 
-`Newtonsoft.Json` では、パラメーターを持つコンストラクターを使用できるため、不変のクラスと構造体に逆シリアル化できます。 <xref:System.Text.Json> では、パラメーターなしのパブリック コンストラクターのみがサポートされます。 回避策として、カスタム コンバーターでパラメーターを持つコンストラクターを呼び出すことができます。
+`Newtonsoft.Json` では、パラメーターを持つコンストラクターを使用できるため、不変のクラスと構造体に逆シリアル化できます。
+
+::: zone pivot="dotnet-5-0"
+<xref:System.Text.Json> では、パラメーター化されたコンストラクターの使用を指定するには [[JsonConstructor]](xref:System.Text.Json.Serialization.JsonConstructorAttribute) 属性を使用します。 C# 9 のレコードも不変であり、逆シリアル化ターゲットとしてサポートされています。 詳細については、「[不変の型とレコード](system-text-json-how-to.md#immutable-types-and-records)」を参照してください。
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+.NET Core 3.1 の <xref:System.Text.Json> では、パラメーターなしのパブリック コンストラクターのみがサポートされます。 回避策として、カスタム コンバーターでパラメーターを持つコンストラクターを呼び出すことができます。
 
 複数のコンストラクター パラメーターを持つ不変の構造体を次に示します。
 
@@ -294,10 +478,7 @@ The JSON value could not be converted to System.String.
 このカスタム コンバーターを登録するには、<xref:System.Text.Json.JsonSerializerOptions.Converters> コレクションに[コンバーターを追加](system-text-json-converters-how-to.md#registration-sample---converters-collection)します。
 
 オープン ジェネリック プロパティを処理する同様のコンバーターの例については、[キーと値のペアの組み込みコンバーター](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters/JsonValueConverterKeyValuePair.cs)に関する記事を参照してください。
-
-### <a name="specify-constructor-to-use"></a>使用するコンストラクターを指定する
-
-`Newtonsoft.Json` の `[JsonConstructor]` 属性を使用すると、POCO への逆シリアル化時に呼び出すコンストラクターを指定できます。 <xref:System.Text.Json> では、パラメーターなしのコンストラクターのみがサポートされます。 回避策として、必要なコンストラクターをカスタム コンバーターで呼び出すことができます。 「[不変のクラスと構造体への逆シリアル化](#deserialize-to-immutable-classes-and-structs)」の例を参照してください。
+::: zone-end
 
 ### <a name="required-properties"></a>必須プロパティ
 
@@ -346,42 +527,6 @@ JSON に `Date` プロパティがない場合に逆シリアル化が失敗す�
 * null 非許容型のプロパティが JSON に存在するが、値がその型の既定である (たとえば、`int` ではゼロ)。
 * null 許容値型のプロパティが JSON に存在するが、値が null である。
 
-### <a name="conditionally-ignore-a-property"></a>プロパティを条件付きで無視する
-
-`Newtonsoft.Json` には、シリアル化または逆シリアル化時にプロパティを条件付きで無視する方法がいくつか用意されています。
-
-* `DefaultContractResolver` を使用すると、任意の条件に基づいて含めたり除外したりするプロパティを選択できます。
-* `JsonSerializerSettings` の `NullValueHandling` と `DefaultValueHandling` の設定を使用すると、null 値または既定値のすべてのプロパティを無視することを指定できます。
-* `[JsonProperty]` 属性の `NullValueHandling` と `DefaultValueHandling` の設定を使用すると、null または既定値に設定されている場合に無視する個々のプロパティを指定できます。
-
-<xref:System.Text.Json> には、シリアル化中にプロパティを除外するために次の方法が用意されています。
-
-* プロパティで [[JsonIgnore]](system-text-json-how-to.md#exclude-individual-properties) 属性を使用すると、シリアル化中にそのプロパティが JSON から除外されます。
-* [IgnoreNullValues](system-text-json-how-to.md#exclude-all-null-value-properties) グローバル オプションを使用すると、すべての null 値プロパティを除外できます。
-* [IgnoreReadOnlyProperties](system-text-json-how-to.md#exclude-all-read-only-properties) グローバル オプションを使用すると、すべての読み取り専用プロパティを除外できます。
-
-これらのオプションでは、以下を行うことは**できません**。
-
-* 型に対して既定値を持つすべてのプロパティを無視する。
-* 型に対して既定値を持つ、選択したプロパティを無視する。
-* 選択したプロパティを、値が null である場合に無視する。
-* 実行時に評価される任意の基準に基づいて、選択したプロパティを無視する。
-
-この機能のために、カスタム コンバーターを記述できます。 この方法を紹介するサンプルの POCO とそれに対するカスタム コンバーターを、次に示します。
-
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWF)]
-
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRuntimeIgnoreConverter.cs)]
-
-このコンバーターでは、`Summary` プロパティは、値が null、空の文字列、または "N/A" の場合、シリアル化から除外されます。
-
-このカスタム コンバーターを登録するには、[クラスで属性を使用](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type)するか、<xref:System.Text.Json.JsonSerializerOptions.Converters> コレクションに[コンバーター を追加](system-text-json-converters-how-to.md#registration-sample---converters-collection)します。
-
-この方法では、次の場合に追加のロジックが必要になります。
-
-* POCO に複合プロパティが含まれている。
-* `[JsonIgnore]` などの属性や、カスタム エンコーダーなどのオプションを処理する必要がある。
-
 ### <a name="specify-date-format"></a>日付形式を指定する
 
 `Newtonsoft.Json` には、`DateTime` および `DateTimeOffset` 型のプロパティをどのようにシリアル化および逆シリアル化するかを制御する方法がいくつか用意されています。
@@ -413,13 +558,17 @@ JSON に `Date` プロパティがない場合に逆シリアル化が失敗す�
 
 `Serialize` または `Deserialize` を再帰的に呼び出すカスタム コンバーターの詳細については、この記事の前半にある「[必須プロパティ](#required-properties)」セクションをご覧ください。
 
-### <a name="public-and-non-public-fields"></a>パブリックおよび非パブリック フィールド
+### <a name="non-public-property-setters-and-getters"></a>非パブリック プロパティのセッターとゲッター
 
-`Newtonsoft.Json` では、フィールドおよびプロパティをシリアル化および逆シリアル化できます。 <xref:System.Text.Json> は、パブリック プロパティでのみ機能します。 この機能は、カスタム コンバーターによって得られます。
+`Newtonsoft.Json` では、`JsonProperty` 属性を通じて、プライベートおよび内部プロパティのセッターとゲッターを使用できます。
 
-### <a name="internal-and-private-property-setters-and-getters"></a>内部およびプライベート プロパティのセッターとゲッター
+::: zone pivot="dotnet-5-0"
+<xref:System.Text.Json> では、[[JsonInclude]](xref:System.Text.Json.Serialization.JsonIncludeAttribute) 属性を通じて、プライベートおよび内部プロパティのセッターとゲッターがサポートされます。 サンプル コードについては、「[パブリックでないプロパティ アクセサー](system-text-json-how-to.md#non-public-property-accessors)」を参照してください。
+::: zone-end
 
-`Newtonsoft.Json` では、`JsonProperty` 属性を通じて、プライベートおよび内部プロパティのセッターとゲッターを使用できます。 <xref:System.Text.Json> ではパブリック セッターのみがサポートされます。 この機能は、カスタム コンバーターによって得られます。
+::: zone pivot="dotnet-core-3-1"
+.NET Core 3.1 の <xref:System.Text.Json> では、パブリック セッターのみがサポートされています。 この機能は、カスタム コンバーターによって得られます。
+::: zone-end
 
 ### <a name="populate-existing-objects"></a>既存のオブジェクトの設定
 
@@ -432,23 +581,6 @@ JSON に `Date` プロパティがない場合に逆シリアル化が失敗す�
 ### <a name="add-to-collections-without-setters"></a>セッターなしでコレクションに追加する
 
 逆シリアル化中、`Newtonsoft.Json` ではプロパティにセッターがない場合でも、オブジェクトがコレクションに追加されます。 <xref:System.Text.Json> では、セッターのないプロパティは無視されます。 この機能は、カスタム コンバーターによって得られます。
-
-## <a name="scenarios-that-jsonserializer-currently-doesnt-support"></a>現在 JsonSerializer でサポートされていないシナリオ
-
-次のシナリオでは、回避策は実用的でないか不可能です。 `Newtonsoft.Json` のこれらの機能を利用する必要がある場合、移行を可能にするには大幅な変更が必要です。
-
-### <a name="preserve-object-references-and-handle-loops"></a>オブジェクト参照を保持してループを処理する
-
-既定では、`Newtonsoft.Json` では値によってシリアル化します。 たとえば、オブジェクトに同じ `Person` オブジェクトへの参照を含む 2 つのプロパティが含まれている場合、その `Person` オブジェクトのプロパティの値は JSON 内で複製されます。
-
-`Newtonsoft.Json` には、`JsonSerializerSettings` に、参照によってシリアル化できるようにする `PreserveReferencesHandling` 設定があります。
-
-* 最初の `Person` オブジェクト用に作成された JSON に識別子メタデータが追加されます。
-* 2番目の `Person` オブジェクト用に作成された JSON には、プロパティ値ではなく、その識別子への参照が含まれます。
-
-`Newtonsoft.Json` には、例外をスローするのではなく循環参照を無視できるようにする `ReferenceLoopHandling` 設定もあります。
-
-<xref:System.Text.Json> では値によるシリアル化のみがサポートされ、循環参照に対しては例外がスローされます。
 
 ### <a name="systemruntimeserialization-attributes"></a>System.Runtime.Serialization 属性
 
@@ -468,7 +600,7 @@ JSON に `Date` プロパティがない場合に逆シリアル化が失敗す�
 
 ## <a name="jsondocument-and-jsonelement-compared-to-jtoken-like-jobject-jarray"></a>JToken (JObject、JArray など) と比較した JsonDocument と JsonElement
 
-<xref:System.Text.Json.JsonDocument?displayProperty=fullName> には、既存の JSON ペイロードから**読み取り専用**のドキュメント オブジェクト モデル (DOM) を解析して作成する機能が用意されています。 DOM では、JSON ペイロード内のデータへのランダム アクセスが提供されます。 ペイロードを構成する JSON 要素には、<xref:System.Text.Json.JsonElement> 型を使用してアクセスできます。 `JsonElement` 型には、JSON テキストを一般的な .NET 型に変換するための API が用意されています。 `JsonDocument` では <xref:System.Text.Json.JsonDocument.RootElement> プロパティが公開されます。
+<xref:System.Text.Json.JsonDocument?displayProperty=fullName> には、既存の JSON ペイロードから **読み取り専用** のドキュメント オブジェクト モデル (DOM) を解析して作成する機能が用意されています。 DOM では、JSON ペイロード内のデータへのランダム アクセスが提供されます。 ペイロードを構成する JSON 要素には、<xref:System.Text.Json.JsonElement> 型を使用してアクセスできます。 `JsonElement` 型には、JSON テキストを一般的な .NET 型に変換するための API が用意されています。 `JsonDocument` では <xref:System.Text.Json.JsonDocument.RootElement> プロパティが公開されます。
 
 ### <a name="jsondocument-is-idisposable"></a>JsonDocument は IDisposable
 
@@ -530,7 +662,7 @@ public JsonElement ReturnFileName(JsonElement source)
 
 ### <a name="utf8jsonreader-is-a-ref-struct"></a>Utf8JsonReader は ref 構造体
 
-`Utf8JsonReader` 型は "*ref 構造体*" であるため、[特定の制限](../../csharp/language-reference/builtin-types/struct.md#ref-struct)があります。 たとえば、ref 構造体以外のクラスまたは構造体にフィールドとして格納することはできません。 ハイ パフォーマンスを実現するには、この型が `ref struct` である必要があります。これは、入力の [ReadOnlySpan\<byte>](xref:System.ReadOnlySpan%601) (これ自体が ref 構造体です) をキャッシュする必要があるためです。 さらに、この型は状態が保持されるため変更可能です。 そのため、これは、値ではなく **ref で渡してください**。 値で渡すと、構造体のコピーが生成され、呼び出し元が状態の変更を確認できません。 これは `Newtonsoft.Json` とは異なります。`Newtonsoft.Json` `JsonTextReader` がクラスであるためです。 ref 構造体の使用方法の詳細については、「[安全で効率的な C# コードを記述する](../../csharp/write-safe-efficient-code.md)」をご覧ください。
+`Utf8JsonReader` 型は " *ref 構造体* " であるため、 [特定の制限](../../csharp/language-reference/builtin-types/struct.md#ref-struct)があります。 たとえば、ref 構造体以外のクラスまたは構造体にフィールドとして格納することはできません。 ハイ パフォーマンスを実現するには、この型が `ref struct` である必要があります。これは、入力の [ReadOnlySpan\<byte>](xref:System.ReadOnlySpan%601) (これ自体が ref 構造体です) をキャッシュする必要があるためです。 さらに、この型は状態が保持されるため変更可能です。 そのため、これは、値ではなく **ref で渡してください** 。 値で渡すと、構造体のコピーが生成され、呼び出し元が状態の変更を確認できません。 これは `Newtonsoft.Json` とは異なります。`Newtonsoft.Json` `JsonTextReader` がクラスであるためです。 ref 構造体の使用方法の詳細については、「[安全で効率的な C# コードを記述する](../../csharp/write-safe-efficient-code.md)」をご覧ください。
 
 ### <a name="read-utf-8-text"></a>UTF-8 テキストを読み取る
 
@@ -638,7 +770,7 @@ doc.WriteTo(writer);
 
 ### <a name="customize-character-escaping"></a>文字のエスケープ処理をカスタマイズする
 
-`JsonTextWriter` の [StringEscapeHandling](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_StringEscapeHandling.htm) 設定には、すべての ASCII 以外の文字**または** HTML 文字をエスケープするオプションが用意されています。 既定では、`Utf8JsonWriter` ではすべての ASCII 以外**および** HTML 文字がエスケープされます。 このエスケープ処理は、多層防御セキュリティ上の理由で行われます。 別のエスケープ処理ポリシーを指定するには、<xref:System.Text.Encodings.Web.JavaScriptEncoder> を作成し、<xref:System.Text.Json.JsonWriterOptions.Encoder?displayProperty=nameWithType> を設定します。 詳細については、「[文字エンコードをカスタマイズする](system-text-json-how-to.md#customize-character-encoding)」を参照してください。
+`JsonTextWriter` の [StringEscapeHandling](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_StringEscapeHandling.htm) 設定には、すべての ASCII 以外の文字 **または** HTML 文字をエスケープするオプションが用意されています。 既定では、`Utf8JsonWriter` ではすべての ASCII 以外 **および** HTML 文字がエスケープされます。 このエスケープ処理は、多層防御セキュリティ上の理由で行われます。 別のエスケープ処理ポリシーを指定するには、<xref:System.Text.Encodings.Web.JavaScriptEncoder> を作成し、<xref:System.Text.Json.JsonWriterOptions.Encoder?displayProperty=nameWithType> を設定します。 詳細については、「[文字エンコードをカスタマイズする](system-text-json-how-to.md#customize-character-encoding)」を参照してください。
 
 ### <a name="customize-json-format"></a>JSON 形式をカスタマイズする
 

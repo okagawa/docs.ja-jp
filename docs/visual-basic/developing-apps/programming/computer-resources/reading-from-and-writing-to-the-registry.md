@@ -6,18 +6,18 @@ helpviewer_keywords:
 - registry [Visual Basic], writing to
 - registry [Visual Basic], reading
 ms.assetid: a13da106-185b-41d7-b23c-416da65e21e4
-ms.openlocfilehash: bb400ef89edaa4eb743aee3a7f2cc5b9dfec4534
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fe0714f25cd41ca9ce4eabf135c82d1dbb1fe524
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84360060"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282223"
 ---
 # <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>レジストリからの読み取りとレジストリへの書き込み (Visual Basic)
 
 このトピックでは、レジストリに関連するタスクおよび概念説明のトピックについて説明します。  
   
- Visual Basic のプログラミングでは、レジストリへのアクセスには、Visual Basic に用意されている関数を使用する方法と、.NET Framework のレジストリ クラスを使用する方法のいずれかを選択できます。 レジストリは、オペレーティング システムからの情報と、コンピューターにホストされるアプリケーションからの情報をホストします。 レジストリを操作すると、システム リソースや保護情報への不適切なアクセスが許可され、セキュリティが損なわれる場合があります。  
+ Visual Basic のプログラミングでレジストリにアクセスするときは、Visual Basic で提供されている関数を使用するか、または.NET のレジストリ クラスを使用するかを選択できます。 レジストリは、オペレーティング システムからの情報と、コンピューターにホストされるアプリケーションからの情報をホストします。 レジストリを操作すると、システム リソースや保護情報への不適切なアクセスが許可され、セキュリティが損なわれる場合があります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
 
@@ -31,7 +31,7 @@ ms.locfileid: "84360060"
  `My.Computer.Registry.CurrentUser` プロパティの `DeleteSubKey` メソッドを使用して、レジストリ キーを削除する方法について説明します。  
   
  [Microsoft.Win32 名前空間を使用したレジストリの読み取りと書き込み](reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
- .NET Framework の `Registry` および `RegistryKey` クラスを使用して、レジストリにアクセスする方法について説明します。  
+ .NET の `Registry` および `RegistryKey` クラスを使用してレジストリにアクセスする方法について説明します。  
   
  [セキュリティとレジストリ](security-and-the-registry.md)  
  レジストリに関連するセキュリティの問題について説明します。  

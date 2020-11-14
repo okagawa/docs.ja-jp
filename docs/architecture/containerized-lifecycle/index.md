@@ -1,19 +1,21 @@
 ---
 title: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
 description: Docker および Microsoft のプラットフォームとツールでコンテナー化されたアプリケーションを開発およびデプロイするための、開発とデプロイのプロセスの概要を説明します。
-ms.date: 07/30/2020
-ms.openlocfilehash: c506a3423ac4511f23452192e361e88dce6efec4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/10/2020
+ms.openlocfilehash: cf20ea97ec252649cdb14add40ead67b6319520a
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160698"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506663"
 ---
 # <a name="containerized-docker-application-lifecycle-with-microsoft-platform-and-tools"></a>Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
 
 ![本の表紙](./media/devops-book-cover-large-we.png)
 
 **エディション v3.1** - ASP.NET Core 3.1 に更新
+
+書籍の更新とコミュニティへの投稿については、「[changelog](https://aka.ms/DockerLifecycleEbookChangelog)」を参照してください。
 
 このガイドは、Microsoft のプラットフォームとツールを使用して、コンテナー化された ASP.NET Core アプリケーションを Docker で開発およびデプロイするための一般的な概要です。 このガイドには、CI/CD パイプラインを実装するための Azure DevOps の概要、Azure Container Registry (ACR)、デプロイ用の Azure Kubernetes Services AKS が含まれています。
 
@@ -27,7 +29,7 @@ ms.locfileid: "91160698"
 
 作成者:
 
-> **Cesar de la Torre**、Microsoft Corp.、.NET 製品チーム、シニア PM
+> **Cesar de la Torre** 、Microsoft Corp.、.NET 製品チーム、シニア PM
 
 総合編集者:
 
@@ -35,9 +37,9 @@ ms.locfileid: "91160698"
 
 監修者:
 
-> **Bob Russell**、Microsoft、ソリューション プロフェッショナル
+> **Bob Russell** 、Microsoft、ソリューション プロフェッショナル
 >
-> [**Octal Publishing, Inc.** ](http://www.octalpub.com/)
+> [**Octal Publishing, Inc.**](http://www.octalpub.com/)
 
 制作者:
 
@@ -47,15 +49,15 @@ ms.locfileid: "91160698"
 
 原稿整理編集者:
 
-> **Bob Russell**、Microsoft、ソリューション プロフェッショナル
+> **Bob Russell** 、Microsoft、ソリューション プロフェッショナル
 
 参加者とレビュー担当者:
 
-> **Nish Anil**、Microsoft、.NET チーム、シニア プログラム マネージャー
+> **Nish Anil** 、Microsoft、.NET チーム、シニア プログラム マネージャー
 >
-> **Miguel Veloso**、Plain Concepts のソフトウェア開発エンジニア
+> **Miguel Veloso** 、Plain Concepts のソフトウェア開発エンジニア
 >
-> **Sumit Ghosh**、Neudesic、主席コンサルタント
+> **Sumit Ghosh** 、Neudesic、主席コンサルタント
 
 ## <a name="copyright"></a>Copyright
 

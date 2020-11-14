@@ -4,12 +4,12 @@ description: この記事では、.NET Standard の新しいバージョンご�
 ms.custom: updateeachrelease
 ms.date: 04/12/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 28d6a3546e08bbc3a7d4a26f08ba9cc5e16a901b
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: 419988901923b890aaf0a540d155775214e62c52
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438203"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282110"
 ---
 # <a name="whats-new-in-net-standard"></a>.NET Standard の新機能
 
@@ -53,7 +53,7 @@ ms.locfileid: "80438203"
 
 ### <a name="support-for-net-framework-libraries"></a>.NET Framework ライブラリのサポート
 
-ライブラリの圧倒的多数が、.NET Standard ではなく .NET Framework をターゲットとしています。 ただし、このようなライブラリの呼び出しのほとんどは、.NET Standard 2.0 に含まれている API に対するものです。 .NET Standard 2.0 以降、[互換性 shim](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#assembly-unification) を使用して .NET Standard ライブラリから .NET Framework ライブラリにアクセスできるようになりました。 この互換レイヤーは開発者に対して透過的です。 .NET Framework ライブラリを利用するために必要なことはありません。
+多くのライブラリで、.NET Standard ではなく .NET Framework がターゲットになっています。 ただし、このようなライブラリの呼び出しのほとんどは、.NET Standard 2.0 に含まれている API に対するものです。 .NET Standard 2.0 以降、[互換性 shim](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#assembly-unification) を使用して .NET Standard ライブラリから .NET Framework ライブラリにアクセスできるようになりました。 この互換レイヤーは開発者に対して透過的です。 .NET Framework ライブラリを利用するために必要なことはありません。
 
 唯一の要件は、.NET Framework クラス ライブラリから呼び出される API が .NET Standard 2.0 に含まれている必要があることです。
 
@@ -65,7 +65,7 @@ Visual Basic で .NET Standard ライブラリを開発できるようになり�
 
 .NET Core 2.0 と .NET Standard 2.0 がリリースされ、Visual Studio 2017 と [.NET Core CLI](../../core/tools/index.md) の両方に .NET Standard ライブラリの作成をサポートするツールが追加されました。
 
-**.NET Core クロスプラットフォーム開発**ワークロードを使用して Visual Studio をインストールする場合は、次の図に示すように、プロジェクト テンプレートを使用して .NET Standard 2.0 ライブラリ プロジェクトを作成できます。
+**.NET Core クロスプラットフォーム開発** ワークロードを使用して Visual Studio をインストールする場合は、次の図に示すように、プロジェクト テンプレートを使用して .NET Standard 2.0 ライブラリ プロジェクトを作成できます。
 
 <!-- markdownlint-disable MD025 -->
 

@@ -4,13 +4,13 @@ description: dotnet new コマンドは、指定されたテンプレートに�
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 09/01/2020
-ms.openlocfilehash: 4a4c8e2806fee663b5f6aa255a6f24250a072a85
-ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
+ms.date: 09/04/2020
+ms.openlocfilehash: 2ee06c37cd950f3b9771db2f30fe353435641d67
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2020
-ms.locfileid: "92526615"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400592"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -78,7 +78,7 @@ dotnet new -h|--help
 | MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
 | MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2.0        |
 | Blazor サーバー アプリ                            | [blazorserver](#blazorserver)   | [C#]         | Web/Blazor                            | 3.0        |
-| Blazor WebAssembly アプリ                       | `blazorwasm`                    | [C#]         | Web/Blazor/WebAssembly                | 3.1.300    |
+| Blazor WebAssembly アプリ                       | [blazorwasm](#blazorwasm)       | [C#]         | Web/Blazor/WebAssembly                | 3.1.300    |
 | ASP.NET Core 空                           | [web](#web)                     | [C#], F#     | Web/Empty                             | 1.0        |
 | ASP.NET Core Web アプリ (モデル ビュー コントローラー) | [mvc](#web-options)             | [C#], F#     | Web/MVC                               | 1.0        |
 | ASP.NET Core Web アプリ                         | [webapp、razor](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2.2、2.0   |
@@ -394,6 +394,110 @@ dotnet new -h|--help
 - **`--no-restore`**
 
   プロジェクトの作成中に暗黙的な復元は実行されません。
+
+**_
+
+### <a name="blazorwasm"></a>blazorwasm
+
+- _ *`-f|--framework <FRAMEWORK>`**
+
+  ターゲットにする[フレームワーク](../../standard/frameworks.md)が指定されます。
+
+  次の表は、使用する SDK バージョン番号に対応した既定値を示しています。
+
+  | SDK バージョン | 既定値   |
+  |-------------|-----------------|
+  | 5.0         | `net5.0`        |
+  | 3.1         | `netcoreapp3.1` |
+
+- **`--no-restore`**
+
+  プロジェクトの作成中に暗黙的な復元は実行されません。
+
+- **`-ho|--hosted`**
+
+  Blazor WebAssembly アプリ用の ASP.NET Core ホストが含まれています。
+
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
+
+  使う認証の種類。 次の値を指定できます。
+
+  - `None` - 認証は行われません (既定)。
+  - `Individual` - 個別認証です。
+  - `IndividualB2C` - Azure AD B2C での個別認証。
+  - `SingleOrg` - 単一のテナントに対する組織認証。
+
+- **`--authority <AUTHORITY>`**
+
+  OIDC プロバイダーの機関。 `Individual` 認証で使用します。 既定値は `https://login.microsoftonline.com/` です。
+
+- **`--aad-b2c-instance <INSTANCE>`**
+
+  接続先の Azure Active Directory B2C インスタンス。 `IndividualB2C` 認証で使用します。 既定値は `https://aadB2CInstance.b2clogin.com/` です。
+
+- **`-ssp|--susi-policy-id <ID>`**
+
+  このプロジェクト用のサインインおよびサインアップ ポリシー ID です。 `IndividualB2C` 認証で使用します。
+
+- **`--aad-instance <INSTANCE>`**
+
+  接続先の Azure Active Directory インスタンスです。 `SingleOrg` 認証で使用します。 既定値は `https://login.microsoftonline.com/` です。
+
+- **`--client-id <ID>`**
+
+  このプロジェクトのクライアント ID です。 スタンドアロンのシナリオで、`IndividualB2C`、`SingleOrg`、または `Individual` 認証と共に使用します。 既定値は `33333333-3333-3333-33333333333333333` です。
+
+- **`--domain <DOMAIN>`**
+
+  ディレクトリ テナントのドメインです。 `SingleOrg` 認証または `IndividualB2C` 認証で使用します。 既定値は `qualified.domain.name` です。
+
+- **`--app-id-uri <URI>`**
+
+  呼び出すサーバー API のアプリ ID URI。 `SingleOrg` 認証または `IndividualB2C` 認証で使用します。 既定値は `api.id.uri` です。
+
+- **`--api-client-id <ID>`**
+
+  サーバーでホストされる API のクライアント ID。 `SingleOrg` 認証または `IndividualB2C` 認証で使用します。 既定値は `11111111-1111-1111-11111111111111111` です。
+
+- **`-s|--default-scope <SCOPE>`**
+
+  アクセス トークンをプロビジョニングするためにクライアントが要求する必要のある API スコープ。 `SingleOrg` 認証または `IndividualB2C` 認証で使用します。 既定値は `user_impersonation` です。
+
+- **`--tenant-id <ID>`**
+
+  接続先のディレクトリの TenantId ID です。 `SingleOrg` 認証で使用します。 既定値は `22222222-2222-2222-2222-222222222222` です。
+
+- **`-r|--org-read-access`**
+
+  このアプリケーションにディレクトリへの読み取りアクセスを許可します。 `SingleOrg` 認証にのみ適用されます。
+
+- **`--exclude-launch-settings`**
+
+  生成されたテンプレートから *launchSettings.json* が除外されます。
+
+- **`-p|--pwa`**
+
+  インストールとオフライン使用をサポートするプログレッシブ Web アプリケーション (PWA) が生成されます。
+
+- **`--no-https`**
+
+  HTTPS を無効にします。 このオプションは、`Individual`、`IndividualB2C`、または `SingleOrg` が `--auth` 用に使用されていない場合にのみ適用されます。
+
+- **`-uld|--use-local-db`**
+
+  SQLite ではなく LocalDB が使用されるように指定されます。 `Individual` 認証または `IndividualB2C` 認証にのみ適用されます。
+
+- **`--called-api-url <URL>`**
+
+  Web アプリから呼び出すための API の URL。 ASP.NET Core ホストが指定されていない `SingleOrg` または `IndividualB2C` 認証にのみ適用されます。 既定値は `https://graph.microsoft.com/v1.0/me` です。
+
+- **`--calls-graph`**
+
+  Web アプリによって Microsoft Graph が呼び出されるかどうかを指定します。 `SingleOrg` 認証にのみ適用されます。
+
+- **`--called-api-scopes <SCOPES>`**
+
+  Web アプリから API を呼び出すように要求するスコープ。 ASP.NET Core ホストが指定されていない `SingleOrg` または `IndividualB2C` 認証にのみ適用されます。 既定値は、`user.read` です。
 
 **_
 

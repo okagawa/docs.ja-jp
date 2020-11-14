@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d899d43c-335a-433e-a589-cd187192984f
 dev_langs:
 - CSharp
-ms.openlocfilehash: 98ea6f23467b85dc270aa323e72a8a9b0934994a
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 2b75ba6875b2a4430b6776c27dead72476884fff
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378424"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282078"
 ---
 # <a name="basic-serialization"></a>基本的なシリアル化
 
@@ -59,7 +59,7 @@ Console.WriteLine("n2: {0}", obj.n2);
 Console.WriteLine("str: {0}", obj.str);  
 ```  
   
-前の例で使用している <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> は非常に効率的であり、コンパクトなバイト ストリームを生成します。 このフォーマッタでシリアル化されたすべてのオブジェクトは、同じフォーマッタで逆シリアル化することもできるため、これは .NET Framework で逆シリアル化されるオブジェクトをシリアル化するための最適なツールです。 オブジェクトの逆シリアル化中は、コンストラクターが呼び出されないことに注意してください。 パフォーマンス上の理由から、逆シリアル化に対してこの制約が設けられています。 ただし、この制約はランタイムがオブジェクト作成者と結ぶ通常の協定の一部に違反するため、開発者は、オブジェクトをシリアル化可能としてマークするときに生じる影響を理解する必要があります。  
+前の例で使用している <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> は非常に効率的であり、コンパクトなバイト ストリームを生成します。 このフォーマッタでシリアル化されたすべてのオブジェクトは、同じフォーマッタで逆シリアル化することもできるため、これは .NET で逆シリアル化されるオブジェクトをシリアル化するための最適なツールです。 オブジェクトの逆シリアル化中は、コンストラクターが呼び出されないことに注意してください。 パフォーマンス上の理由から、逆シリアル化に対してこの制約が設けられています。 ただし、この制約はランタイムがオブジェクト作成者と結ぶ通常の協定の一部に違反するため、開発者は、オブジェクトをシリアル化可能としてマークするときに生じる影響を理解する必要があります。  
   
 移植性が必要な場合には、代わりに <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> を使用します。 その場合は、コード内の **BinaryFormatter** を **SoapFormatter** に置き換え、前のコードと同様に **Serialize** および **Deserialize** を呼び出します。 前の例では、このフォーマッタの出力は、次のようになります。  
   

@@ -1,7 +1,7 @@
 ---
 title: 標準の日時書式指定文字列
-description: この記事では、.NET で、標準の日時書式指定文字列を使用して、日付と時刻の値のテキスト表現を定義する方法について説明します。
-ms.date: 03/30/2017
+description: .NET で、標準の日時書式指定文字列を使用して、日付と時刻の値のテキスト表現を定義する方法について説明します。
+ms.date: 11/05/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,30 +14,30 @@ helpviewer_keywords:
 - custom date and time format strings
 - formatting [.NET], time
 - date and time strings
-ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: 36aaef2676383263b2009fd283f1671ef970f20e
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.custom: contperfq2
+ms.openlocfilehash: dc294322317560344a6e3cdba1dbe2cce4f6a3fd
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888634"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329756"
 ---
 # <a name="standard-date-and-time-format-strings"></a>標準の日時書式指定文字列
 
-標準の日時書式指定文字列は、単一の書式指定子を使用して日付と時刻の値のテキスト表現を定義します。 空白を含む複数の文字で構成される日時書式指定文字列は、カスタム日時書式指定文字列として解釈されます。詳細については、「[カスタム日時書式指定文字列](custom-date-and-time-format-strings.md)」をご覧ください。 標準またはカスタムの書式指定文字列には、次の 2 とおりの使用方法があります。
+標準の日時書式指定文字列では、単一の文字を書式指定子として使用して、<xref:System.DateTime> または <xref:System.DateTimeOffset> の値のテキスト表現を定義します。 空白を含む複数の文字で構成される日時書式指定文字列は、[カスタム日時書式指定文字列](custom-date-and-time-format-strings.md)として解釈されます。 標準またはカスタムの書式指定文字列には、次の 2 とおりの使用方法があります。
 
 - 書式設定操作によって生成される文字列を定義する。
 
 - 解析操作によって <xref:System.DateTime> 値または <xref:System.DateTimeOffset> 値に変換できる日付と時刻の値のテキスト表現を定義する。
 
 > [!TIP]
-> **書式指定ユーティリティ** である .NET Core Windows Forms をダウンロードできます。このアプリケーションを使用すると、書式指定文字列を数値または日付と時刻の値に適用して、結果の文字列を表示できます。 ソース コードは [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) と [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb) で利用できます。
-
-標準の日時書式指定文字列は、<xref:System.DateTime> 値で使用することも、<xref:System.DateTimeOffset> 値で使用することもできます。
+> **書式指定ユーティリティ** である .NET Windows Forms をダウンロードできます。このアプリケーションを使用すると、書式指定文字列を数値または日付と時刻の値に適用して、結果の文字列を表示できます。 ソース コードは [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) と [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb) で利用できます。
 
 [!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)]
 
-<a name="table"></a>標準日時書式指定子を次の表に示します。 特に明記されない限り、特定の標準日時書式指定子は、<xref:System.DateTime> 値で使用しても、<xref:System.DateTimeOffset> 値で使用してもまったく同じ文字列形式を生成します。 標準の日時書式指定文字列の使用方法については、「[メモ](#Notes)」をご覧ください。
+## <a name="table-of-format-specifiers"></a>書式指定子の表
+
+<a name="table"></a>標準日時書式指定子を次の表に示します。 特に明記されない限り、特定の標準日時書式指定子は、<xref:System.DateTime> 値で使用しても、<xref:System.DateTimeOffset> 値で使用してもまったく同じ文字列形式を生成します。 標準日時書式指定文字列の使用に関する詳細については、「[コントロール パネルの設定](#control-panel-settings)」と「[DateTimeFormatInfo のプロパティ](#datetimeformatinfo-properties)」を参照してください。
 
 |書式指定子|説明|使用例|
 |----------------------|-----------------|--------------|
@@ -98,9 +98,16 @@ ms.locfileid: "92888634"
 
 以降では、<xref:System.DateTime> 値および <xref:System.DateTimeOffset> 値の標準書式指定子について説明します。
 
+## <a name="date-formats"></a>日付の形式
+
+このグループには、次の形式が含まれます。
+
+- [短い形式の日付 ("d") 書式指定子](#the-short-date-d-format-specifier)
+- [長い形式の日付 ("D") 書式指定子](#the-long-date-d-format-specifier)
+
 <a name="ShortDate"></a>
 
-## <a name="the-short-date-d-format-specifier"></a>短い形式の日付 ("d") 書式指定子
+### <a name="the-short-date-d-format-specifier"></a>短い形式の日付 ("d") 書式指定子
 
 "d" 標準書式指定子は、特定のカルチャの <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> プロパティで定義されるカスタム日時書式指定文字列を表します。 たとえば、インバリアント カルチャの <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A> プロパティによって返されるカスタム書式指定文字列は "MM/dd/yyyy" です。
 
@@ -120,7 +127,7 @@ ms.locfileid: "92888634"
 
 <a name="LongDate"></a>
 
-## <a name="the-long-date-d-format-specifier"></a>長い形式の日付 ("D") 書式指定子
+### <a name="the-long-date-d-format-specifier"></a>長い形式の日付 ("D") 書式指定子
 
 "D" 標準書式指定子は、現在の <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> プロパティで定義されるカスタム日時書式指定文字列を表します。 たとえば、インバリアント カルチャのカスタム書式指定文字列は "dddd, dd MMMM yyyy" です。
 
@@ -139,9 +146,23 @@ ms.locfileid: "92888634"
 
 [表のトップへ](#table)
 
+## <a name="date-and-time-formats"></a>日付と時刻の形式
+
+このグループには、次の形式が含まれます。
+
+- [完全な日付と短い形式の時刻 ("f") 書式指定子](#the-full-date-short-time-f-format-specifier)
+- [完全な日付と長い形式の時刻 ("F") 書式指定子](#the-full-date-long-time-f-format-specifier)
+- [一般の日付と短い形式の時刻 ("g") 書式指定子](#the-general-date-short-time-g-format-specifier)
+- [一般の日付と長い形式の時刻 ("G") 書式指定子](#the-general-date-long-time-g-format-specifier)
+- [ラウンドトリップ ("O"、"o") 書式指定子](#the-round-trip-o-o-format-specifier)
+- [RFC1123 ("R"、"r") 書式指定子](#the-rfc1123-r-r-format-specifier)
+- [並べ替え可能な日付と時刻 ("s") 書式指定子](#the-sortable-s-format-specifier)
+- [世界共通の並べ替え可能な日付と時刻 ("u") 書式指定子](#the-universal-sortable-u-format-specifier)
+- [世界共通の完全な日付と時刻 ("U") 書式指定子](#the-universal-full-u-format-specifier)
+
 <a name="FullDateShortTime"></a>
 
-## <a name="the-full-date-short-time-f-format-specifier"></a>完全な日付と短い形式の時刻 ("f") 書式指定子
+### <a name="the-full-date-short-time-f-format-specifier"></a>完全な日付と短い形式の時刻 ("f") 書式指定子
 
 "f" 標準書式指定子は、長い形式の日付 ("D") パターンと短い形式の時刻 ("t") パターンを空白で区切って組み合わせて表します。
 
@@ -166,7 +187,7 @@ ms.locfileid: "92888634"
 
 <a name="FullDateLongTime"></a>
 
-## <a name="the-full-date-long-time-f-format-specifier"></a>完全な日付と長い形式の時刻 ("F") 書式指定子
+### <a name="the-full-date-long-time-f-format-specifier"></a>完全な日付と長い形式の時刻 ("F") 書式指定子
 
 "F" 標準書式指定子は、現在の <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=nameWithType> プロパティで定義されるカスタム日時書式指定文字列を表します。 たとえば、インバリアント カルチャのカスタム書式指定文字列は "dddd, dd MMMM yyyy HH:mm:ss" です。
 
@@ -190,7 +211,7 @@ ms.locfileid: "92888634"
 
 <a name="GeneralDateShortTime"></a>
 
-## <a name="the-general-date-short-time-g-format-specifier"></a>一般の日付と短い形式の時刻 ("g") 書式指定子
+### <a name="the-general-date-short-time-g-format-specifier"></a>一般の日付と短い形式の時刻 ("g") 書式指定子
 
 "g" 標準書式指定子は、短い形式の日付 ("d") パターンと短い形式の時刻 ("t") パターンを空白で区切って組み合わせて表します。
 
@@ -214,7 +235,7 @@ ms.locfileid: "92888634"
 
 <a name="GeneralDateLongTime"></a>
 
-## <a name="the-general-date-long-time-g-format-specifier"></a>一般の日付と長い形式の時刻 ("G") 書式指定子
+### <a name="the-general-date-long-time-g-format-specifier"></a>一般の日付と長い形式の時刻 ("G") 書式指定子
 
 "G" 標準書式指定子は、短い形式の日付 ("d") パターンと長い形式の時刻 ("T") パターンを空白で区切って組み合わせて表します。
 
@@ -236,29 +257,9 @@ ms.locfileid: "92888634"
 
 [表のトップへ](#table)
 
-<a name="MonthDay"></a>
-
-## <a name="the-month-m-m-format-specifier"></a>月 ("M"、"m") 書式指定子
-
-"M" または "m" 標準書式指定子は、現在の <xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A?displayProperty=nameWithType> プロパティで定義されるカスタム日時書式指定文字列を表します。 たとえば、インバリアント カルチャのカスタム書式指定文字列は "MMMM dd" です。
-
-返される文字列の書式を制御する <xref:System.Globalization.DateTimeFormatInfo> オブジェクト プロパティの一覧を次の表に示します。
-
-|プロパティ|説明|
-|--------------|-----------------|
-|<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|結果文字列の全体的な書式を定義します。|
-|<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|結果文字列に含まれるローカライズされた月の名前を定義します。|
-
-次の例では、"m" 書式指定子を使用して、日付と時刻の値を表示します。
-
-[!code-csharp[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
-[!code-vb[Formatting.DateAndTime.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#7)]
-
-[表のトップへ](#table)
-
 <a name="Roundtrip"></a>
 
-## <a name="the-round-trip-o-o-format-specifier"></a>ラウンドトリップ ("O"、"o") 書式指定子
+### <a name="the-round-trip-o-o-format-specifier"></a>ラウンドトリップ ("O"、"o") 書式指定子
 
 "O" または "o" 標準書式指定子は、タイム ゾーン情報を保持するパターンを使用するカスタム日時書式指定文字列を表し、ISO 8601 に準拠する結果文字列を生成します。 この書式指定子は、<xref:System.DateTime> 値の日付と時刻の値を、<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> プロパティと共にテキストとして保持できるように設計されています。 <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> パラメーターが <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> に設定されている場合は、`styles` メソッドまたは <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> メソッドを使用して、書式設定された文字列を変換前の文字列に戻すことができます。
 
@@ -290,7 +291,7 @@ ms.locfileid: "92888634"
 
 <a name="RFC1123"></a>
 
-## <a name="the-rfc1123-r-r-format-specifier"></a>RFC1123 ("R"、"r") 書式指定子
+### <a name="the-rfc1123-r-r-format-specifier"></a>RFC1123 ("R"、"r") 書式指定子
 
 "R" または "r" 標準書式指定子は、<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A?displayProperty=nameWithType> プロパティで定義されるカスタム日時書式指定文字列を表します。 このパターンは定義済みの標準を反映し、プロパティは読み取り専用です。 したがって、使用されるカルチャまたは指定された書式プロバイダーに関係なく、常に同じです。 カスタム書式指定文字列は、"ddd, dd MMM yyyy HH':'mm':'ss 'GMT'" です。 この標準書式指定子を使用した場合、書式設定操作または解析操作で常にインバリアント カルチャが使用されます。
 
@@ -313,7 +314,7 @@ RFC 1123 標準では、時刻は世界協定時刻 (UTC: Coordinated Universal 
 
 <a name="Sortable"></a>
 
-## <a name="the-sortable-s-format-specifier"></a>並べ替え可能な日付と時刻 ("s") 書式指定子
+### <a name="the-sortable-s-format-specifier"></a>並べ替え可能な日付と時刻 ("s") 書式指定子
 
 "s" 標準書式指定子は、<xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern%2A?displayProperty=nameWithType> プロパティで定義されるカスタム日時書式指定文字列を表します。 このパターンは定義済みの標準 (ISO 8601) を反映し、プロパティは読み取り専用です。 したがって、使用されるカルチャまたは指定された書式プロバイダーに関係なく、常に同じです。 カスタム書式指定文字列は、"yyyy'-'MM'-'dd'T'HH':'mm':'ss" です。
 
@@ -328,53 +329,9 @@ RFC 1123 標準では、時刻は世界協定時刻 (UTC: Coordinated Universal 
 
 [表のトップへ](#table)
 
-<a name="ShortTime"></a>
-
-## <a name="the-short-time-t-format-specifier"></a>短い形式の時刻 ("t") 書式指定子
-
-"t" 標準書式指定子は、現在の <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> プロパティで定義されるカスタム日時書式指定文字列を表します。 たとえば、インバリアント カルチャのカスタム書式指定文字列は "HH:mm" です。
-
-結果文字列は、特定の <xref:System.Globalization.DateTimeFormatInfo> オブジェクトの書式情報に影響されます。 返される文字列の書式を制御できる <xref:System.Globalization.DateTimeFormatInfo> オブジェクト プロパティの一覧を次の表に示します。 一部のカルチャの <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> プロパティによって返されるカスタム書式指定子では、一部のプロパティが使用されない場合があります。
-
-|プロパティ|説明|
-|--------------|-----------------|
-|<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|結果文字列の時刻要素の書式を定義します。|
-|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|時刻の構成要素、つまり時間、分、および秒を区切る文字列を定義します。|
-|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|午前 0 時から正午前までの時刻を 12 時間形式で示す文字列を定義します。|
-|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|正午から午前 0 時前までの時刻を 12 時間形式で示す文字列を定義します。|
-
-次の例では、"t" 書式指定子を使用して、日付と時刻の値を表示します。
-
-[!code-csharp[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
-[!code-vb[Formatting.DateAndTime.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#11)]
-
-[表のトップへ](#table)
-
-<a name="LongTime"></a>
-
-## <a name="the-long-time-t-format-specifier"></a>長い形式の時刻 ("T") 書式指定子
-
-"T" 標準書式指定子は、特定のカルチャの <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> プロパティで定義されるカスタム日時書式指定文字列を表します。 たとえば、インバリアント カルチャのカスタム書式指定文字列は "HH:mm:ss" です。
-
-返される文字列の書式を制御できる <xref:System.Globalization.DateTimeFormatInfo> オブジェクト プロパティの一覧を次の表に示します。 一部のカルチャの <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> プロパティによって返されるカスタム書式指定子では、一部のプロパティが使用されない場合があります。
-
-|プロパティ|説明|
-|--------------|-----------------|
-|<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|結果文字列の時刻要素の書式を定義します。|
-|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|時刻の構成要素、つまり時間、分、および秒を区切る文字列を定義します。|
-|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|午前 0 時から正午前までの時刻を 12 時間形式で示す文字列を定義します。|
-|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|正午から午前 0 時前までの時刻を 12 時間形式で示す文字列を定義します。|
-
-次の例では、"T" 書式指定子を使用して、日付と時刻の値を表示します。
-
-[!code-csharp[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
-[!code-vb[Formatting.DateAndTime.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#12)]
-
-[表のトップへ](#table)
-
 <a name="UniversalSortable"></a>
 
-## <a name="the-universal-sortable-u-format-specifier"></a>世界共通の並べ替え可能な日付と時刻 ("u") 書式指定子
+### <a name="the-universal-sortable-u-format-specifier"></a>世界共通の並べ替え可能な日付と時刻 ("u") 書式指定子
 
 "u" 標準書式指定子は、<xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A?displayProperty=nameWithType> プロパティで定義されるカスタム日時書式指定文字列を表します。 このパターンは定義済みの標準を反映し、プロパティは読み取り専用です。 したがって、使用されるカルチャまたは指定された書式プロバイダーに関係なく、常に同じです。 カスタム書式指定文字列は、"yyyy'-'MM'-'dd HH':'mm':'ss'Z'" です。 この標準書式指定子を使用した場合、書式設定操作または解析操作で常にインバリアント カルチャが使用されます。
 
@@ -389,7 +346,7 @@ RFC 1123 標準では、時刻は世界協定時刻 (UTC: Coordinated Universal 
 
 <a name="UniversalFull"></a>
 
-## <a name="the-universal-full-u-format-specifier"></a>世界共通の完全な日付と時刻 ("U") 書式指定子
+### <a name="the-universal-full-u-format-specifier"></a>世界共通の完全な日付と時刻 ("U") 書式指定子
 
 "U" 標準書式指定子は、特定のカルチャの <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=nameWithType> プロパティで定義されるカスタム日時書式指定文字列を表します。 このパターンは、"F" パターンと同じです。 ただし、<xref:System.DateTime> 値は、書式設定される前に、自動的に UTC に変換されます。
 
@@ -413,9 +370,87 @@ RFC 1123 標準では、時刻は世界協定時刻 (UTC: Coordinated Universal 
 
 [表のトップへ](#table)
 
+## <a name="time-formats"></a>時刻の形式
+
+このグループには、次の形式が含まれます。
+
+- [短い形式の時刻 ("t") 書式指定子](#the-short-time-t-format-specifier)
+- [長い形式の時刻 ("T") 書式指定子](#the-long-time-t-format-specifier)
+
+<a name="ShortTime"></a>
+
+### <a name="the-short-time-t-format-specifier"></a>短い形式の時刻 ("t") 書式指定子
+
+"t" 標準書式指定子は、現在の <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> プロパティで定義されるカスタム日時書式指定文字列を表します。 たとえば、インバリアント カルチャのカスタム書式指定文字列は "HH:mm" です。
+
+結果文字列は、特定の <xref:System.Globalization.DateTimeFormatInfo> オブジェクトの書式情報に影響されます。 返される文字列の書式を制御できる <xref:System.Globalization.DateTimeFormatInfo> オブジェクト プロパティの一覧を次の表に示します。 一部のカルチャの <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> プロパティによって返されるカスタム書式指定子では、一部のプロパティが使用されない場合があります。
+
+|プロパティ|説明|
+|--------------|-----------------|
+|<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|結果文字列の時刻要素の書式を定義します。|
+|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|時刻の構成要素、つまり時間、分、および秒を区切る文字列を定義します。|
+|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|午前 0 時から正午前までの時刻を 12 時間形式で示す文字列を定義します。|
+|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|正午から午前 0 時前までの時刻を 12 時間形式で示す文字列を定義します。|
+
+次の例では、"t" 書式指定子を使用して、日付と時刻の値を表示します。
+
+[!code-csharp[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
+[!code-vb[Formatting.DateAndTime.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#11)]
+
+[表のトップへ](#table)
+
+<a name="LongTime"></a>
+
+### <a name="the-long-time-t-format-specifier"></a>長い形式の時刻 ("T") 書式指定子
+
+"T" 標準書式指定子は、特定のカルチャの <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> プロパティで定義されるカスタム日時書式指定文字列を表します。 たとえば、インバリアント カルチャのカスタム書式指定文字列は "HH:mm:ss" です。
+
+返される文字列の書式を制御できる <xref:System.Globalization.DateTimeFormatInfo> オブジェクト プロパティの一覧を次の表に示します。 一部のカルチャの <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> プロパティによって返されるカスタム書式指定子では、一部のプロパティが使用されない場合があります。
+
+|プロパティ|説明|
+|--------------|-----------------|
+|<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|結果文字列の時刻要素の書式を定義します。|
+|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|時刻の構成要素、つまり時間、分、および秒を区切る文字列を定義します。|
+|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|午前 0 時から正午前までの時刻を 12 時間形式で示す文字列を定義します。|
+|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|正午から午前 0 時前までの時刻を 12 時間形式で示す文字列を定義します。|
+
+次の例では、"T" 書式指定子を使用して、日付と時刻の値を表示します。
+
+[!code-csharp[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
+[!code-vb[Formatting.DateAndTime.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#12)]
+
+[表のトップへ](#table)
+
+## <a name="partial-date-formats"></a>部分的な日付形式
+
+このグループには、次の形式が含まれます。
+
+- [月 ("M"、"m") 書式指定子](#the-month-m-m-format-specifier)
+- [年月 ("Y"、"y") 書式指定子](#the-year-month-y-y-format-specifier)
+
+<a name="MonthDay"></a>
+
+### <a name="the-month-m-m-format-specifier"></a>月 ("M"、"m") 書式指定子
+
+"M" または "m" 標準書式指定子は、現在の <xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A?displayProperty=nameWithType> プロパティで定義されるカスタム日時書式指定文字列を表します。 たとえば、インバリアント カルチャのカスタム書式指定文字列は "MMMM dd" です。
+
+返される文字列の書式を制御する <xref:System.Globalization.DateTimeFormatInfo> オブジェクト プロパティの一覧を次の表に示します。
+
+|プロパティ|説明|
+|--------------|-----------------|
+|<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|結果文字列の全体的な書式を定義します。|
+|<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|結果文字列に含まれるローカライズされた月の名前を定義します。|
+
+次の例では、"m" 書式指定子を使用して、日付と時刻の値を表示します。
+
+[!code-csharp[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
+[!code-vb[Formatting.DateAndTime.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#7)]
+
+[表のトップへ](#table)
+
 <a name="YearMonth"></a>
 
-## <a name="the-year-month-y-y-format-specifier"></a>年月 ("Y"、"y") 書式指定子
+### <a name="the-year-month-y-y-format-specifier"></a>年月 ("Y"、"y") 書式指定子
 
 "Y" または "y" 標準書式指定子は、特定のカルチャの <xref:System.Globalization.DateTimeFormatInfo.YearMonthPattern%2A?displayProperty=nameWithType> プロパティで定義されるカスタム日時書式指定文字列を表します。 たとえば、インバリアント カルチャのカスタム書式指定文字列は "yyyy MMMM" です。
 
@@ -435,15 +470,13 @@ RFC 1123 標準では、時刻は世界協定時刻 (UTC: Coordinated Universal 
 
 <a name="Notes"></a>
 
-## <a name="notes"></a>メモ
+## <a name="control-panel-settings"></a>コントロール パネルの設定
 
-### <a name="control-panel-settings"></a>コントロール パネルの設定
-
-コントロール パネルの **[地域と言語のオプション]** での設定は、書式設定操作によって生成される結果の文字列に影響します。 これらの設定は、書式設定の制御に使用される値を提供する現在のスレッド カルチャに関連付けられた <xref:System.Globalization.DateTimeFormatInfo> オブジェクトを初期化するために使用されます。 コンピューターで使用する設定が異なる場合は、生成される文字列も異なります。
+Windows のコントロール パネルの **[地域と言語のオプション]** での設定は、書式設定操作によって生成される結果の文字列に影響します。 これらの設定は、書式設定の制御に使用される値を提供する現在のスレッド カルチャに関連付けられた <xref:System.Globalization.DateTimeFormatInfo> オブジェクトを初期化するために使用されます。 コンピューターで使用する設定が異なる場合は、生成される文字列も異なります。
 
 また、 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29> コンストラクターを使用して、現在のシステム カルチャと同じカルチャを表す新しい <xref:System.Globalization.CultureInfo> オブジェクトをインスタンス化した場合、コントロール パネルの **[地域と言語のオプション]** 項目で設定されたカスタマイズが新しい <xref:System.Globalization.CultureInfo> オブジェクトに適用されます。 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> コンストラクターを使用すると、システムに対するカスタマイズが反映されない <xref:System.Globalization.CultureInfo> オブジェクトを作成できます。
 
-### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo のプロパティ
+## <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo のプロパティ
 
 書式設定は、現在の <xref:System.Globalization.DateTimeFormatInfo> オブジェクトのプロパティの影響を受けます。このオブジェクトは、現在のスレッド カルチャによって暗黙的に指定されるか、または書式設定を実行するメソッドの <xref:System.IFormatProvider> パラメーターによって明示的に指定されます。 <xref:System.IFormatProvider> パラメーターには、カルチャを表す <xref:System.Globalization.CultureInfo> オブジェクトを指定するか、特定のカルチャの日時書式設定規則を表す <xref:System.Globalization.DateTimeFormatInfo> オブジェクトを指定する必要があります。 標準日時書式指定子の多くは、現在の <xref:System.Globalization.DateTimeFormatInfo> オブジェクトのプロパティによって定義されている書式設定パターンのエイリアスです。 標準日時書式指定子によって生成される結果は、対応する <xref:System.Globalization.DateTimeFormatInfo> プロパティの、対応する日時形式パターンを変更することによって変えることができます。
 

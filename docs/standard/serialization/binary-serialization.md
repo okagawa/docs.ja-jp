@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serialization, cross-framework
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
-ms.openlocfilehash: 2ede74dd8a48735a7ded450d1da6d9cda8fc5ae6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bfb504862232345db07bdc92993069fc87afdbeb
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554496"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282089"
 ---
 # <a name="binary-serialization"></a>バイナリ シリアル化
 
@@ -25,7 +25,7 @@ ms.locfileid: "90554496"
 オブジェクト指向環境でシリアル化機構を実装する場合は、使いやすさと柔軟性の間での数多くのトレードオフについて考慮する必要があります。 プロセスを十分に制御できる場合は、プロセスの大部分を自動化できます。 たとえば、単純なバイナリ シリアル化では不十分な状況が発生する場合や、シリアル化が必要なクラス内のフィールドを決定するだけの明確な理由がある場合があります。 以下のセクションでは、.NET に用意されている堅牢なシリアル化機構について検討し、必要に応じてプロセスをカスタマイズするためのいくつかの重要な機能について説明します。
 
 > [!NOTE]
-> オブジェクトのシリアル化と逆シリアル化を行う際に使用した .NET Framework のバージョンが異なる場合、UTF-8 または UTF-7 でエンコードされたオブジェクトの状態は保持されません。
+> オブジェクトのシリアル化と逆シリアル化を行うときに使用した .NET のバージョンが異なる場合、UTF-8 または UTF-7 でエンコードされたオブジェクトの状態は保持されません。
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
@@ -351,7 +351,7 @@ ms.locfileid: "90554496"
 シリアル化を実行するコードを記述する際に従う必要がある、安全なコーディングのガイドラインについて説明します。
 
 - [.NET リモート処理](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
-.NET Framework で開始されたリモート通信のためのさまざまな方法について説明します。
+.NET Framework でのリモート通信のためのさまざまな方法について説明します。
 
 - [ASP.NET と XML Web サービス クライアントを使用して作成した XML Web サービス](/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
 ASP.NET を使用して作成する XML Web サービスのプログラミング方法について説明した記事です。

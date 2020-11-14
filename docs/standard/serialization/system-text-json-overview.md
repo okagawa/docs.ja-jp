@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 909d979d46b30939e304af071de65d230febd92d
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: d8bd5bcf78db534bd722972db01253cbd13a7a06
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380137"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282399"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>.NET での JSON のシリアル化と逆シリアル化 (マーシャリングとマーシャリング解除) - 概要
 
@@ -27,8 +27,9 @@ ms.locfileid: "83380137"
 
 ## <a name="how-to-get-the-library"></a>ライブラリの入手方法
 
-* このライブラリは [.NET Core 3.0](https://aka.ms/netcore3download) 共有フレームワークの一部として組み込まれています。
-* その他のターゲット フレームワークの場合は、[System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet パッケージをインストールします。 このパッケージで以下がサポートされます。
+* ライブラリは、.NET Core 3.0 以降のバージョン用の共有フレームワークの一部として組み込まれています。
+* それより前のバージョンの Framework では、[System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet パッケージをインストールします。 このパッケージで以下がサポートされます。
+
   * .NET Standard 2.0 以降のバージョン
   * .NET Framework 4.7.2 以降のバージョン
   * .NET Core 2.0、2.1、および 2.2

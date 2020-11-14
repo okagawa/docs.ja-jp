@@ -18,23 +18,25 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 1532c4eeb09e7110d0f369ec47f342256889e576
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8e8d8d38ab8170a9bf9fae098e267be1a38f27d0
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289656"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281794"
 ---
 # <a name="custom-serialization"></a>カスタムのシリアル化
+
 カスタムのシリアル化は、型のシリアル化と逆シリアル化を制御するプロセスです。 シリアル化を制御することで、シリアル化の互換性を保証できます。つまり、型のコア機能を損なうことなく、1 つの型の複数のバージョン間でシリアル化および逆シリアル化を行うことができます。 たとえば、最初のバージョンの型では、フィールドが 2 つだけあるとします。 新しいバージョンでは、これにいくつかのフィールドが追加されています。 この場合、2 番目のバージョンのアプリケーションでは、両方の型をシリアル化および逆シリアル化できる必要があります。 以下のセクションでは、シリアル化の制御方法について説明します。
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
 > [!IMPORTANT]
-> .NET Framework 4.0 よりも前のバージョンでは、部分的に信頼されたアセンブリでのカスタム ユーザー データのシリアル化は GetObjectData を使用して実行していました。 バージョン 4.0 以降では、そのメソッドは、部分的に信頼されたアセンブリで実行できないようにする <xref:System.Security.SecurityCriticalAttribute> 属性でマークされています。 この状況に対処するには、<xref:System.Runtime.Serialization.ISafeSerializationData> インターフェイスを実装します。  
+> .NET Framework 4.0 より前のバージョンでは、部分的に信頼されたアセンブリでのカスタム ユーザー データのシリアル化は `GetObjectData` を使用して実行されていました。 バージョン 4.0 以降では、そのメソッドは、部分的に信頼されたアセンブリで実行できないようにする <xref:System.Security.SecurityCriticalAttribute> 属性でマークされています。 この状況に対処するには、<xref:System.Runtime.Serialization.ISafeSerializationData> インターフェイスを実装します。  
   
-## <a name="running-custom-methods-during-and-after-serialization"></a>シリアル化時およびシリアル化後のカスタム メソッドの実行  
- ベスト プラクティスかつ最も簡単な方法 (.Net Framework Version 2.0 で導入されました) は、シリアル化時およびシリアル化後にデータを修正するための各メソッドに、以下の属性を適用することです。  
+## <a name="running-custom-methods-during-and-after-serialization"></a>シリアル化時およびシリアル化後のカスタム メソッドの実行
+
+シリアル化時およびシリアル化後にカスタム メソッドを実行するための推奨される方法は、シリアル化時およびシリアル化後にデータを修正するために使用されるメソッドに、以下の属性を適用することです。  
   
 - <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
@@ -114,9 +116,9 @@ End Class
   
  シリアル化によって、他の方法ではアクセスできないオブジェクト インスタンス データを他のコードから参照または変更できるようになります。 したがって、シリアル化を実行するコードには、<xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter> フラグが指定された [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) が必要です。 既定のポリシーでは、インターネットからダウンロードしたコードまたはイントラネット コードにはこのアクセス許可は与えられず、ローカル コンピューター上のコードにだけ付与されます。 **GetObjectData** メソッドは、<xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter> フラグが指定された [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) を要求するか、特にプライベート データの保護に役立つ他のアクセス許可を要求することによって、明示的に保護する必要があります。  
   
- プライベート フィールドに機密情報が格納されている場合は、**GetObjectData** で適切なアクセス許可を要求してデータを保護してください。 **SerializationFormatter** フラグが指定された [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) を付与されているコードは、プライベート フィールドに格納されているデータを参照および変更できることに注意してください。 この [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) が付与されている悪意のある呼び出し元によって、隠しディレクトリの位置や付与されたアクセス許可などのデータが参照され、コンピューター上のセキュリティの脆弱性が悪用される可能性があります。 指定できるセキュリティ アクセス許可フラグの完全な一覧については、「[SecurityPermissionFlag 列挙体](xref:System.Security.Permissions.SecurityPermissionFlag)」を参照してください。  
+ プライベート フィールドに機密情報が格納されている場合は、 **GetObjectData** で適切なアクセス許可を要求してデータを保護してください。 **SerializationFormatter** フラグが指定された [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) を付与されているコードは、プライベート フィールドに格納されているデータを参照および変更できることに注意してください。 この [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) が付与されている悪意のある呼び出し元によって、隠しディレクトリの位置や付与されたアクセス許可などのデータが参照され、コンピューター上のセキュリティの脆弱性が悪用される可能性があります。 指定できるセキュリティ アクセス許可フラグの完全な一覧については、「[SecurityPermissionFlag 列挙体](xref:System.Security.Permissions.SecurityPermissionFlag)」を参照してください。  
   
- <xref:System.Runtime.Serialization.ISerializable> をクラスに追加する場合は、**GetObjectData** と専用のコンストラクターの両方を実装する必要があることに注意してください。 **GetObjectData** がない場合、コンパイラから警告が出力されます。 ただし、コンストラクターの実装を強制することはできないため、コンストラクターが指定されていなくても警告は表示されず、コンストラクターがないクラスの逆シリアル化が試行された時点で例外がスローされます。  
+ <xref:System.Runtime.Serialization.ISerializable> をクラスに追加する場合は、 **GetObjectData** と専用のコンストラクターの両方を実装する必要があることに注意してください。 **GetObjectData** がない場合、コンパイラから警告が出力されます。 ただし、コンストラクターの実装を強制することはできないため、コンストラクターが指定されていなくても警告は表示されず、コンストラクターがないクラスの逆シリアル化が試行された時点で例外がスローされます。  
   
  セキュリティやバージョン管理に関して発生する可能性がある問題を回避するために、現在のデザインは <xref:System.Runtime.Serialization.ISerializationSurrogate.SetObjectData%2A> メソッドよりも優先されています。 たとえば、`SetObjectData` メソッドは、インターフェイスの一部として定義された場合にはパブリックである必要があるため、ユーザーは **SetObjectData** メソッドが複数回呼び出されることを防ぐためにコードを記述する必要があります。 そうしないと、操作を実行しているオブジェクトで **SetObjectData** メソッドを呼び出す悪意のあるアプリケーションによって、さまざまな問題が発生する可能性があります。  
   

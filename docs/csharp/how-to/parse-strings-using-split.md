@@ -1,6 +1,6 @@
 ---
-title: String.Split を使用して文字列を解析する (C# ガイド)
-description: Split メソッドは、一連の区切り記号で分割された文字列の配列を返します。 文字列を解析する簡単な方法です。
+title: String.Split を使用して文字列を分割する (C# ガイド)
+description: Split メソッドは、一連の区切り記号で分割された文字列の配列を返します。 文字列から部分文字列を抽出する簡単な方法です。
 ms.date: 01/03/2018
 helpviewer_keywords:
 - splitting strings [C#]
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: 7c5d8fa462775c6f3a9981693129997dda6c2286
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 5361a3c60905edd19b180c5ddb14064a85f64337
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324140"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400501"
 ---
-# <a name="how-to-parse-strings-using-stringsplit-in-c"></a>C\# で String.Split を使用して文字列を解析する方法
+# <a name="how-to-separate-strings-using-stringsplit-in-c"></a>C\# で String.Split を使用して文字列を分割する方法
 
 <xref:System.String.Split%2A?displayProperty=nameWithType> メソッドは、1 つまたは複数の区切り記号に基づいて入力文字列を分割することで部分文字列の配列を作成します。 このメソッドは、英語のように単語の間にスペースがある文章の場合に、単語の境界で文字列を分割する最も簡単な方法になります。 他の特定の文字や文字列で文字列を分割する際にも利用されます。
 
@@ -50,6 +50,7 @@ ms.locfileid: "85324140"
 
 ## <a name="see-also"></a>関連項目
 
+- [文字列から要素を抽出する](../../standard/base-types/divide-up-strings.md)
 - [C# プログラミング ガイド](../programming-guide/index.md)
 - [文字列](../programming-guide/strings/index.md)
 - [.NET 正規表現](../../standard/base-types/regular-expressions.md)

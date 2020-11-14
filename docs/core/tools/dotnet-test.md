@@ -2,12 +2,12 @@
 title: dotnet test コマンド
 description: dotnet test コマンドは、指定されたプロジェクトで単体テストを実行する場合に使用されます。
 ms.date: 04/29/2020
-ms.openlocfilehash: 5ecfa24905537a663cd967142b765c258495fb22
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6805564ccd8a8b4911c7c687d97a06df2910c015
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537739"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281611"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -61,7 +61,7 @@ dotnet test -h|--help
   - テスト プロジェクトへのパス。
   - ソリューションへのパス。
   - プロジェクトまたはソリューションを含むディレクトリへのパス。
-  - テスト プロジェクト " *.dll*" ファイルへのパス。
+  - テスト プロジェクト " *.dll* " ファイルへのパス。
 
   指定されていない場合、プロジェクトまたはソリューションが現在のディレクトリで検索されます。
 
@@ -69,7 +69,7 @@ dotnet test -h|--help
 
 - **`-a|--test-adapter-path <ADAPTER_PATH>`**
 
-  追加のテスト アダプターを検索するディレクトリへのパス。 サフィックス `.TestAdapter.dll` を持つ " *.dll*" ファイルのみが検査されます。 指定しない場合、テスト " *.dll*" のディレクトリが検索されます。
+  追加のテスト アダプターを検索するディレクトリへのパス。 サフィックス `.TestAdapter.dll` を持つ " *.dll* " ファイルのみが検査されます。 指定しない場合、テスト " *.dll* " のディレクトリが検索されます。
 
 - **`--blame`**
 
@@ -77,7 +77,13 @@ dotnet test -h|--help
 
 - **`--blame-crash`** (.NET 5.0 プレビュー SDK 以降で利用可能)
 
-  テスト ホストが予期せずに終了した場合に、変更履歴モードでテストを実行して、クラッシュ ダンプを収集します。 このオプションは、Windows 上でのみサポートされます。 *procdump.exe* および *procdump64.exe* を含むディレクトリが、PATH または PROCDUMP_PATH 環境変数に指定されている必要があります。 [ツールをダウンロード](/sysinternals/downloads/procdump)します。 `--blame` を意味します。
+  テスト ホストが予期せずに終了した場合に、変更履歴モードでテストを実行して、クラッシュ ダンプを収集します。 このオプションは、使用されている .NET のバージョン、エラーの種類、およびオペレーティング システムによって異なります。
+  
+  マネージド コードでの例外の場合、ダンプは .NET 5.0 以降のバージョンで自動的に収集されます。 testhost や、やはり .NET 5.0 で実行されてクラッシュした子プロセスのダンプが生成されます。 ネイティブ コードでのクラッシュの場合、ダンプは生成されません。 このオプションは、Windows、macOS、Linux で動作します。
+  
+  ネイティブ コードでのクラッシュ ダンプ、または .NET Core 3.1 以前のバージョンを使用しているときのクラッシュ ダンプは、Windows 上でのみ、Procdump を使用して収集できます。 *procdump.exe* および *procdump64.exe* を含むディレクトリが、PATH または PROCDUMP_PATH 環境変数に指定されている必要があります。 [ツールをダウンロード](/sysinternals/downloads/procdump)します。 `--blame` を意味します。
+  
+  .NET 5.0 以降で実行されているネイティブ アプリケーションからクラッシュ ダンプを収集するには、`VSTEST_DUMP_FORCEPROCDUMP` 環境変数を `1` に設定することで、Procdump を強制的に使用できます。
 
 - **`--blame-crash-dump-type <DUMP_TYPE>`** (.NET 5.0 プレビュー SDK 以降で利用可能)
 
@@ -97,14 +103,14 @@ dotnet test -h|--help
 
 - **`--blame-hang-timeout <TIMESPAN>`** (.NET 5.0 プレビュー SDK 以降で利用可能)
 
-  テストごとのタイムアウト。その後、ハング ダンプがトリガーされ、テスト ホスト プロセスが終了されます。 タイムアウト値は、次のいずれかの形式で指定されます。
+  テストごとのタイムアウト。それが過ぎると、ハング ダンプがトリガーされ、テスト ホスト プロセスとそのすべての子プロセスは、ダンプされて終了されます。 タイムアウト値は、次のいずれかの形式で指定されます。
   
-  - 1.5h (時間)
-  - 90m (分)
-  - 5400s (秒)
-  - 5400000ms (ミリ秒)
+  - 1.5h、1.5hour、1.5hours
+  - 90m、90min、90minute、90minutes
+  - 5400s、5400sec、5400second、5400seconds
+  - 5400000ms、5400000mil、5400000millisecond、5400000milliseconds
 
-  単位が使用されていない場合 (例: 5400000)、値はミリ秒単位であると見なされます。 データ ドリブン テストと共に使用すると、タイムアウトの動作は、利用するテスト アダプターに応じて異なります。 xUnit および NUnit の場合、タイムアウトはテスト ケースの後に毎回更新されます。 MSTest の場合、すべてのテスト ケースにこのタイムアウトが使用されます。 このオプションは、netcoreapp 2.1 以降がインストールされている Windows と、netcoreapp 3.1 以降がインストールされている Linux でサポートされています。 macOS はサポートされていません。
+  単位が使用されていない場合 (例: 5400000)、値はミリ秒単位であると見なされます。 データ ドリブン テストと共に使用すると、タイムアウトの動作は、利用するテスト アダプターに応じて異なります。 xUnit および NUnit の場合、タイムアウトはテスト ケースの後に毎回更新されます。 MSTest の場合、すべてのテスト ケースにこのタイムアウトが使用されます。 このオプションは、netcoreapp 2.1 以降がインストールされている Windows、netcoreapp 3.1 以降がインストールされている Linux、net5.0 以降がインストールされている macOS でサポートされています。 `--blame` と `--blame-hang` を意味します。
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -124,7 +130,7 @@ dotnet test -h|--help
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  テスト バイナリに `dotnet` または .NET Framework テスト ホストを強制的に使用します。 このオプションでは、使用するホストの種類のみが決定されます。 実際に使用されるフレームワークのバージョンは、テスト プロジェクトの "*runtimeconfig. json*" によって決まります。 指定しない場合、[TargetFramework アセンブリ属性](/dotnet/api/system.runtime.versioning.targetframeworkattribute) を使用してホストの種類が決定されます。 その属性が " *.dll*" から削除されると、.NET Framework ホストが使用されます。
+  テスト バイナリに `dotnet` または .NET Framework テスト ホストを強制的に使用します。 このオプションでは、使用するホストの種類のみが決定されます。 実際に使用されるフレームワークのバージョンは、テスト プロジェクトの " *runtimeconfig. json* " によって決まります。 指定しない場合、[TargetFramework アセンブリ属性](/dotnet/api/system.runtime.versioning.targetframeworkattribute) を使用してホストの種類が決定されます。 その属性が " *.dll* " から削除されると、.NET Framework ホストが使用されます。
 
 - **`--filter <EXPRESSION>`**
 
@@ -264,7 +270,7 @@ dotnet test -h|--help
 
 | 演算子            | 関数 |
 | ------------------- | -------- |
-| <code>&#124;</code> | OR       |
+| <code>&#124;</code> | OR       |
 | `&`                 | AND      |
 
 条件演算子を使用する場合は、式をかっこで囲みます (例: `(Name~TestMethod1) | (Name~TestMethod2)`)。

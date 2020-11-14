@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: 2afab44eec0c7bcc9809b458be0348093cb6dd07
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1fb2efc9b12680e95767746c7e4e1ddacbdd2594
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91196820"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281507"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (C# コンパイラ オプション)
 
@@ -41,7 +41,7 @@ ms.locfileid: "91196820"
   
 - コンパイラ、ランタイム、およびオペレーティング システムのバージョン情報。  
   
-- 16 進数として保存された参照アセンブリとモジュール (.NET Framework (SDK を含む) に付属のアセンブリを除く)。  
+- 16 進数として保存された、参照されているアセンブリとモジュール。 .NET と .NET SDK に付属するアセンブリは除きます。  
   
 - コンパイラの出力 (指定されている場合)。  
   

@@ -1,19 +1,21 @@
 ---
 title: .NET マイクロサービス。 コンテナー化された .NET アプリケーションのアーキテクチャ
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービスはモジュール式で独自に展開可能なサービスです。 Docker コンテナー (Linux と Windows 向け) は、サービスとその依存関係を 1 つの単位にバンドル化する (その後、分離された環境で実行される) ことで、展開とテストを簡略化します。
-ms.date: 09/02/2020
-ms.openlocfilehash: aea5012fee102f388827d146043e69592e14f22b
-ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
+ms.date: 11/10/2020
+ms.openlocfilehash: 2055dacd46f90ba3714edb1437bcacad4c175e65
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89379136"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507268"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ
 
 ![本の表紙](./media/cover-small.png)
 
-**エディション v 3.1.2** - ASP.NET Core 3.1 に更新されました
+**エディション v3.1** - ASP.NET Core 3.1 に更新
+
+書籍の更新とコミュニティへの投稿については、「[changelog](https://aka.ms/MicroservicesEbookChangelog)」を参照してください。
 
 このガイドでは、マイクロサービス ベースのアプリケーションの開発とコンテナーを使用してこれらを管理する方法を紹介します。 .NET Core と Docker のコンテナーを使用したアーキテクチャの設計と実装アプローチについて説明します。
 
@@ -74,7 +76,7 @@ Docker は、コンテナー業界では事実上の標準になりつつあり�
 
 eShopOnContainers アプリケーションは、 Docker コンテナーを使用して展開するように設計された .NET Core とマイクロサービスのためのオープン ソースの参照アプリです。 アプリケーションは、さまざまな e ストア UI フロントエンド (Web MVC アプリ、Web SPA、およびネイティブ モバイル アプリ) を含む複数のサブシステムで構成されます。 また、バック エンドのマイクロサービスと必要なサーバー側のすべての操作のためのコンテナーも含まれています。
 
-このアプリケーションの目的は、アーキテクチャのパターンを紹介することです。 それは、現実の世界で使用されるアプリケーションを開始するための**実稼働可能なテンプレートではありません**。 実際は、このアプリケーションは永久にベータ版の状態であり、新しい可能性のある興味深いテクノロジをテストするためにも使用されます。
+このアプリケーションの目的は、アーキテクチャのパターンを紹介することです。 それは、現実の世界で使用されるアプリケーションを開始するための **実稼働可能なテンプレートではありません** 。 実際は、このアプリケーションは永久にベータ版の状態であり、新しい可能性のある興味深いテクノロジをテストするためにも使用されます。
 
 ## <a name="send-us-your-feedback"></a>フィードバックをお寄せください。
 
@@ -84,11 +86,11 @@ eShopOnContainers アプリケーションは、 Docker コンテナーを使用
 
 共同作成者:
 
-> **Cesar de la Torre**、Microsoft Corp.、.NET 製品チーム、シニア PM
+> **Cesar de la Torre** 、Microsoft Corp.、.NET 製品チーム、シニア PM
 >
-> **Bill Wagner**、Microsoft Corp.、C+E、シニア コンテンツ開発者
+> **Bill Wagner** 、Microsoft Corp.、C+E、シニア コンテンツ開発者
 >
-> **Mike Rousos**、Microsoft、DevDiv CAT チーム、主任ソフトウェア エンジニア
+> **Mike Rousos** 、Microsoft、DevDiv CAT チーム、主任ソフトウェア エンジニア
 
 編集者:
 
@@ -98,55 +100,55 @@ eShopOnContainers アプリケーションは、 Docker コンテナーを使用
 
 参加者とレビュー担当者:
 
-> **Jeffrey Richter**、Microsoft、Azure チーム、パートナー ソフトウェア エンジニア
+> **Jeffrey Richter** 、Microsoft、Azure チーム、パートナー ソフトウェア エンジニア
 >
-> **Jimmy Bogard**、Headspring のチーフ アーキテクト
+> **Jimmy Bogard** 、Headspring のチーフ アーキテクト
 >
-> **Udi Dahan**、Particular Software、創設者兼最高経営責任者
+> **Udi Dahan** 、Particular Software、創設者兼最高経営責任者
 >
-> **Jimmy Nilsson**、Factor10 の共同創始者兼最高経営責任者
+> **Jimmy Nilsson** 、Factor10 の共同創始者兼最高経営責任者
 >
-> **Glenn Condron**、ASP.NET チーム、シニア プログラム マネージャー
+> **Glenn Condron** 、ASP.NET チーム、シニア プログラム マネージャー
 >
-> **Mark Fussell**、Microsoft、Azure Service Fabric チーム、プリンシパル PM リーダー
+> **Mark Fussell** 、Microsoft、Azure Service Fabric チーム、プリンシパル PM リーダー
 >
-> **Diego Vega**、Microsoft、Entity Framework チーム、PM リーダー
+> **Diego Vega** 、Microsoft、Entity Framework チーム、PM リーダー
 >
-> **Barry Dorrans**、シニア セキュリティ プログラム マネージャー
+> **Barry Dorrans** 、シニア セキュリティ プログラム マネージャー
 >
-> **Rowan Miller**、Microsoft、シニア プログラム マネージャー
+> **Rowan Miller** 、Microsoft、シニア プログラム マネージャー
 >
-> **Ankit Asthana**、Microsoft、.NET チーム、主任 PM マネージャー
+> **Ankit Asthana** 、Microsoft、.NET チーム、主任 PM マネージャー
 >
-> **Scott Hunter**、Microsoft、.NET チーム、パートナー ディレクター PM
+> **Scott Hunter** 、Microsoft、.NET チーム、パートナー ディレクター PM
 >
-> **Nish Anil**、Microsoft、.NET チーム、シニア プログラム マネージャー
+> **Nish Anil** 、Microsoft、.NET チーム、シニア プログラム マネージャー
 >
-> **Dylan Reisenberger**、Polly のアーキテクト兼開発リーダー
+> **Dylan Reisenberger** 、Polly のアーキテクト兼開発リーダー
 >
 > **Steve "ardalis" Smith** - ソフトウェア アーキテクトおよびトレーナー - [Ardalis.com](https://ardalis.com)
 >
-> **Ian Cooper**、Brighter のコーディング アーキテクト
+> **Ian Cooper** 、Brighter のコーディング アーキテクト
 >
-> **Unai Zorrilla**、Plain Concepts のアーキテクト兼開発リーダー
+> **Unai Zorrilla** 、Plain Concepts のアーキテクト兼開発リーダー
 >
-> **Eduard Tomas**、Plain Concepts の開発リーダー
+> **Eduard Tomas** 、Plain Concepts の開発リーダー
 >
-> **Ramon Tomas**、Plain Concepts の開発者
+> **Ramon Tomas** 、Plain Concepts の開発者
 >
-> **David Sanz**、Plain Concepts の開発者
+> **David Sanz** 、Plain Concepts の開発者
 >
-> **Javier Valero**、Grupo Solutio の最高執行責任者
+> **Javier Valero** 、Grupo Solutio の最高執行責任者
 >
-> **Pierre Millet**、Microsoft、シニア コンサルタント
+> **Pierre Millet** 、Microsoft、シニア コンサルタント
 >
-> **Michael Friis**、Docker Inc、製品マネージャー
+> **Michael Friis** 、Docker Inc、製品マネージャー
 >
-> **Charles Lowell**、Microsoft、VS CAT チーム、ソフトウェア エンジニア
+> **Charles Lowell** 、Microsoft、VS CAT チーム、ソフトウェア エンジニア
 >
-> **Miguel Veloso**、Plain Concepts のソフトウェア開発エンジニア
+> **Miguel Veloso** 、Plain Concepts のソフトウェア開発エンジニア
 >
-> **Sumit Ghosh**、Neudesic、主席コンサルタント
+> **Sumit Ghosh** 、Neudesic、主席コンサルタント
 
 ## <a name="copyright"></a>Copyright
 

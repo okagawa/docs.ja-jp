@@ -2,12 +2,12 @@
 title: ローカライズされた IntelliSense ファイルをインストールする
 description: Visual Studio で .NET 5+ プロジェクト (.NET Core を含む) のローカライズされた IntelliSense ファイルを使用するように開発用マシンを設定する方法について説明します。
 ms.date: 11/06/2020
-ms.openlocfilehash: 121439199f0de6d29a18ea55031976680fc1f833
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 45eeae12ca79179cacb3d48fca28118de70e0a4f
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439821"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506767"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net"></a>.NET のローカライズされた IntelliSense ファイルをインストールする方法
 
@@ -43,7 +43,7 @@ ms.locfileid: "94439821"
       | Windows デスクトップ       | *Microsoft.WindowsDesktop.App.Ref* |
       | .NET Standard         | *NETStandard.Library.Ref*          |
 
-   1. ローカライズされた IntelliSense をインストールするバージョンに移動します。 たとえば、 *3.1.0* です。
+   1. ローカライズされた IntelliSense をインストールするバージョンに移動します。 たとえば、 *5.0.0* です。
    1. *ref* フォルダーを開きます。
    1. モニカー フォルダーを開きます。 たとえば、 *net5.0* です。
 

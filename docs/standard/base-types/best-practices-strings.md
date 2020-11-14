@@ -1,6 +1,6 @@
 ---
-title: .NET の文字列を使用するためのベスト プラクティス
-description: .NET アプリケーションで文字列を効果的に使用する方法について説明します。
+title: .NET での文字列の比較に関するベスト プラクティス
+description: .NET アプリケーションで文字列を効果的に比較する方法について説明します。
 ms.date: 05/01/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: ed85d04ffbee0493745c4a5ef63313571b44628b
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 167b9b865fb0f674559e2b87db3ed4d6d5048ffe
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889102"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400827"
 ---
-# <a name="best-practices-for-using-strings-in-net"></a>.NET の文字列を使用するためのベスト プラクティス
+# <a name="best-practices-for-comparing-strings-in-net"></a>.NET での文字列の比較に関するベスト プラクティス
 
 .NET には、ローカライズされたアプリケーションやグローバル化されたアプリケーションを開発するための広範なサポートが用意されており、文字列の並べ替えや表示などの一般的な操作を実行するときに、現在のカルチャの規則や特定のカルチャの規則を簡単に適用できるようになっています。 しかし、文字列の並べ替えや比較の操作は、必ずしもカルチャに依存するとは限りません。 たとえば、アプリケーションが内部で使用する文字列は、通常、すべてのカルチャで同じように処理される必要があります。 XML タグ、HTML タグ、ユーザー名、ファイル パス、システム オブジェクトの名前などのカルチャに依存しない文字列データがカルチャに依存するかのように解釈されると、アプリケーション コードで軽度のバグが発生したり、パフォーマンスが低下したり、場合によってはセキュリティの問題を引き起こしたりする可能性があります。
 
-このトピックでは、.NET の文字列の並べ替え、比較、および大文字と小文字の区別のメソッドについて検討し、適切な文字列処理メソッドを選択するための推奨事項と、文字列処理メソッドに関する追加情報を紹介します。 また、数値データ、日時データなど、書式付きデータを表示および格納のために処理する方法についても説明します。
+ここでは、.NET の文字列の並べ替え、比較、および大文字と小文字の区別のメソッドについて検討し、適切な文字列処理メソッドを選択するための推奨事項と、文字列処理メソッドに関する追加情報を紹介します。
 
 ## <a name="recommendations-for-string-usage"></a>文字列の使用に関する推奨事項
 
-.NET による開発で文字列を使用するときの簡単な推奨事項を次に示します。
+.NET による開発で文字列を比較するときは、以下の簡単な推奨事項に従ってください。
 
 - 文字列操作に対して文字列比較の規則を明示的に指定するオーバーロードを使用します。 そのためには、通常、<xref:System.StringComparison> 型のパラメーターを持つメソッド オーバーロードを呼び出します。
 - カルチャに依存しない文字列照合の安全な既定の方法として、<xref:System.StringComparison.Ordinal?displayProperty=nameWithType> または <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> を使用して比較を行います。
@@ -45,12 +45,11 @@ ms.locfileid: "92889102"
 - <xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドと <xref:System.String.CompareTo%2A?displayProperty=nameWithType> メソッドは、文字列を並べ替える場合に使用し、文字列の等価性を確認する場合には使用しません。
 - 数値、日付など、文字列以外のデータをユーザー インターフェイスに表示するには、カルチャに依存する書式設定を使用します。 文字列以外のデータを文字列形式で保持するには、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture)を使用する書式設定を使用します。
 
-文字列を使用する際に避ける必要があることを次に示します。
+文字列を比較するときに避ける必要があることを次に示します。
 
 - 文字列操作に対して文字列比較の規則を明示的または暗黙的に指定しないオーバーロードは使用しないでください。
 - ほとんどの場合、<xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> に基づく文字列操作は使用しないでください。 数少ない例外の 1 つは、言語的な意味を持つがカルチャには依存しないデータを永続化する場合です。
 - 2 つの文字列が等価かどうかを確認する場合に、<xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドまたは <xref:System.String.CompareTo%2A> メソッドのオーバーロードで戻り値が 0 かどうかをテストする方法は使用しないでください。
-- 数値データや日時データを文字列形式で保持する場合は、カルチャに依存する書式設定を使用しないでください。
 
 ## <a name="specifying-string-comparisons-explicitly"></a>文字列比較の明示的な指定
 
@@ -153,7 +152,7 @@ ms.locfileid: "92889102"
  [!code-vb[Conceptual.Strings.BestPractices#19](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/embeddednulls1.vb#19)]
 
 一方、次の例のように序数に基づく比較を使用すると、これらの文字列は等価とは見なされません。
-  
+
 [!code-csharp[Conceptual.Strings.BestPractices#20](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/embeddednulls2.cs#20)]
 [!code-vb[Conceptual.Strings.BestPractices#20](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/embeddednulls2.vb#20)]
 
@@ -272,8 +271,8 @@ LATIN SMALL LETTER A 文字 "a" (\u0061) は、COMBINING RING ABOVE 文字 "+ " 
 - 現在のカルチャを使用する、カルチャに依存した文字列比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.CurrentCulture%2A?displayProperty=nameWithType> プロパティによって返されます。
 - 現在のカルチャを使用する、大文字と小文字を区別しない比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.CurrentCultureIgnoreCase%2A?displayProperty=nameWithType> プロパティによって返されます。
 - インバリアント カルチャの単語ベースの比較規則を使用する、カルチャに依存しない比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.InvariantCulture%2A?displayProperty=nameWithType> プロパティによって返されます。
-- インバリアント カルチャの単語ベースの比較規則を使用する、大文字と小文字を区別しない、カルチャに依存しない比較。 この <xref:System.StringComparer> オブジェクトは、 <xref:System.StringComparer.InvariantCultureIgnoreCase%2A?displayProperty=nameWithType> プロパティによって返されます。
-- 序数に基づく比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.Ordinal%2A?displayProperty=nameWithType> プロパティによって返されます。
+- インバリアント カルチャの単語ベースの比較規則を使用する、大文字と小文字を区別しない、カルチャに依存しない比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.InvariantCultureIgnoreCase%2A?displayProperty=nameWithType> プロパティによって返されます。
+- 序数に基づく比較。 この <xref:System.StringComparer> オブジェクトは、 <xref:System.StringComparer.Ordinal%2A?displayProperty=nameWithType> プロパティによって返されます。
 - 大文字と小文字を区別しない、序数に基づく比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType> プロパティによって返されます。
 
 ### <a name="arraysort-and-arraybinarysearch"></a>Array.Sort と Array.BinarySearch
@@ -304,51 +303,6 @@ LATIN SMALL LETTER A 文字 "a" (\u0061) は、COMBINING RING ABOVE 文字 "+ " 
 [!code-csharp[Conceptual.Strings.BestPractices#10](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect2.cs#10)]
 [!code-vb[Conceptual.Strings.BestPractices#10](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect2.vb#10)]
 
-## <a name="displaying-and-persisting-formatted-data"></a>書式設定されたデータを表示および保持する
+## <a name="see-also"></a>関連項目
 
-数値、日時など、文字列以外のデータをユーザーに表示するには、ユーザーのカルチャ設定を使用して書式設定します。 既定では、以下のすべてで、書式設定操作での現在のスレッド カルチャが使用されます。
-
-- [C#](../../csharp/language-reference/tokens/interpolated.md) と [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) のコンパイラでサポートされている挿入文字列。
-- [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) または [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md) の連結演算子を使用または <xref:System.String.Concat%2A?displayProperty=nameWithType> メソッドを直接呼び出す文字列連結操作。
-- <xref:System.String.Format%2A?displayProperty=nameWithType> メソッド。
-- 数値型と日時型の `ToString` メソッド。
-
-指定されたカルチャまたは[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture)の規則を使用することで文字列を書式設定することを明示的に指定するには、次を行うことができます。
-
-- <xref:System.String.Format%2A?displayProperty=nameWithType> メソッドと `ToString` メソッドを使用している場合、`provider` パラメーター (<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> または <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType> など) を持つオーバー ロードを呼び出し、それに <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> プロパティ、目的のカルチャを表す <xref:System.Globalization.CultureInfo> インスタンス、または <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType> プロパティを渡します。
-
-- 文字列連結の場合、コンパイラに暗黙の変換の実行を許可しないでください。 代わりに、`provider` パラメーターを持つ `ToString` オーバーロードを呼び出すことで、明示的な変換を実行します。 たとえば、次のコードでは、<xref:System.Double> 値を文字列に変換するときに、コンパイラでは現在のカルチャが暗黙的に使用されます。
-
-  [!code-csharp[Implicit String Conversion](./snippets/best-practices-strings/csharp/tostring/Program.cs#1)]
-  [!code-vb[Implicit String Conversion](./snippets/best-practices-strings/vb/tostring/Program.vb#1)]
-
-  代わりに、次のコードのように、<xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType> メソッドを呼び出して、変換に使用する書式指定規則を持つカルチャを明示的に指定することができます。
-
-  [!code-csharp[Explicit String Conversion](./snippets/best-practices-strings/csharp/tostring/Program.cs#2)]
-  [!code-vb[Implicit String Conversion](./snippets/best-practices-strings/vb/tostring/Program.vb#2)]
-
-- 文字列補間の場合、挿入文字列を <xref:System.String> インスタンスに割り当てるのではなく、<xref:System.FormattableString> に割り当てます。 その後、その <xref:System.FormattableString.ToString?displayProperty=nameWithType> メソッドを呼び出して、現在のカルチャの規則を反映する結果の文字列を生成することも、<xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> メソッドを呼び出して、指定したカルチャの規則を反映する結果の文字列を生成することもできます。 また、書式設定可能な文字列を静的 <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> メソッドに渡して、インバリアント カルチャの規則を反映する結果の文字列を生成することもできます。 このアプローチの例を次に示します。 (この例の出力には en-US の現在のカルチャが反映されます)。
-
-  [!code-csharp[String interpolation](./snippets/best-practices-strings/csharp/formattable/Program.cs)]
-  [!code-vb[String interpolation](./snippets/best-practices-strings/vb/formattable/Program.vb)]
-
-文字列以外のデータは、バイナリ データまたは書式付きデータとして保持できます。 書式付きデータとして保存するには、`provider` パラメーターを含む書式指定メソッドのオーバーロードを呼び出し、そのパラメーターを <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> プロパティに渡す必要があります。 インバリアント カルチャは、カルチャとコンピューターに依存しない書式付きデータに一貫した書式を提供します。 これに対し、インバリアント カルチャ以外のカルチャを使用して書式設定するデータの保持には、さまざまな制限があります。
-
-- カルチャが異なるシステムでデータを取得したり、現在のシステムのユーザーが現在のカルチャを変更してデータを取得しようとしたりすると、そのデータは使用できない可能性があります。
-- 特定のコンピューターのカルチャのプロパティは、その標準の値とは異なる場合があります。 常に、ユーザーはカルチャに依存した表示設定をカスタマイズする可能性があります。 このため、ユーザーがカルチャの設定をカスタマイズすると、システムに保存されている書式付きデータを読み取ることができなくなる場合があります。 コンピューター間の書式付きデータの移植性がさらに制限される可能性があります。
-- 数値や日時の書式設定を制御する国際的、地域的、または国内の標準は時間と共に変化するため、これらの変化は Windows オペレーティング システムの更新プログラムに組み込まれています。 書式設定の規則が変わると、以前の規則に従って書式設定されたデータを読み取ることができなくなる場合があります。
-
-次に、カルチャに依存する書式設定を使用してデータを保持すると移植性が制限される例を示します。 この例では、日時の値の配列をファイルに保存します。 これらは、英語 (米国) のカルチャの規則を使用して書式設定されています。 現在のスレッド カルチャがフランス語 (スイス) に変更されると、アプリケーションは現在のカルチャの書式設定規則を使用して保存された値を読み取ることを試みます。 2 つのデータ項目の読み取りを試みると、<xref:System.FormatException> 例外がスローされます。日付の配列には、<xref:System.DateTime.MinValue> に等しい 2 つの間違った要素が含まれることになります。
-
-[!code-csharp[Conceptual.Strings.BestPractices#21](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/persistence.cs#21)]
-[!code-vb[Conceptual.Strings.BestPractices#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/persistence.vb#21)]
-
-しかし、<xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> プロパティを <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> に置き換えて <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 呼び出しと <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 呼び出しを行うと、保持されている日時データは正常に復元されます。次にその出力を示します。
-
-```console
-06.05.1758 21:26
-05.05.1818 07:19
-22.04.1870 23:54
-08.09.1890 06:47
-18.02.1905 15:12
-```
+- [.NET アプリでのグローバリゼーション](../globalization-localization/globalization.md)

@@ -1,22 +1,23 @@
 ---
 title: <schemaImporterExtensions> の <add> 要素
-description: <add> 要素は、XSD の型を .NET Framework の型にマッピングするために XmlSchemaImporter クラスで使用される型を追加します。
+description: <add> 要素により、XSD の型を .NET の型にマッピングするために XmlSchemaImporter クラスで使用される型が追加されます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-ms.openlocfilehash: 6fd8113ad39a22c927035fca574151ae8f002685
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 38d8ebd6e973632b23865ad60e007d9aa21e7da6
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84288330"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282001"
 ---
 # <a name="add-element-for-schemaimporterextensions"></a>\<schemaImporterExtensions> の \<add> 要素
-XSD 型を .NET Framework 型に対応付けるために、<xref:System.Xml.Serialization.XmlSchemaImporter> によって使用される型を追加します。 構成ファイルの詳細については、「[構成ファイル スキーマ](../../framework/configure-apps/file-schema/index.md)」を参照してください。  
+
+XSD 型を .NET 型に対応付けるために、<xref:System.Xml.Serialization.XmlSchemaImporter> によって使用される型が追加されます。 構成ファイルの詳細については、「[構成ファイル スキーマ](../../framework/configure-apps/file-schema/index.md)」を参照してください。  
   
- \<configuration>  
+\<configuration>  
 \<system.xml.serialization>  
 \<schemaImporterExtensions>  
 \<add>  

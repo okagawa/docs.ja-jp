@@ -4,16 +4,16 @@ description: .NET Framework プロジェクトのサービス参照の追加と�
 author: dasetser
 ms.date: 10/29/2019
 ms.custom: mvc
-ms.openlocfilehash: cdd6b457d289dd7b752c97c5645f0797f24b72aa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1f7b1831a956553dbef26f58f4f257c2f3914ede
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715683"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400605"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>WCF Web Service Reference Provider ツールを使用する
 
-長年にわたり、多くの Visual Studio 開発者は、.NET Framework プロジェクトが Web サービスにアクセスする必要があるときに、[**サービス参照の追加**](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)ツールが提供する生産性を利用してきました。  **WCF Web Service Reference** ツールは、.NET Core および ASP.NET Core プロジェクトのサービス参照の追加機能のようなエクスペリエンスを提供する、Visual Studio に接続されたサービス拡張機能です。 このツールは現在のソリューションの Web サービスから、ネットワーク上の場所で、あるいは WSDL ファイルからメタデータを取得し、Web サービスのアクセスに使用できる Windows Communication Foundation (WCF) クライアント プロキシ コードを含む、.NET Core 互換ソース ファイルを生成します。
+長年にわたり、多くの Visual Studio 開発者は、.NET Framework プロジェクトが Web サービスにアクセスする必要があるときに、 [**サービス参照の追加**](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)ツールが提供する生産性を利用してきました。  **WCF Web Service Reference** ツールは、.NET Core および ASP.NET Core プロジェクトのサービス参照の追加機能のようなエクスペリエンスを提供する、Visual Studio に接続されたサービス拡張機能です。 このツールは現在のソリューションの Web サービスから、ネットワーク上の場所で、あるいは WSDL ファイルからメタデータを取得し、Web サービスのアクセスに使用できる Windows Communication Foundation (WCF) クライアント プロキシ コードを含む、.NET Core 互換ソース ファイルを生成します。
 
 > [!IMPORTANT]
 > 信頼できるソースのサービスのみを参照してください。 信頼できないソースの参照を追加すると、セキュリティが損なわれる可能性があります。
@@ -31,7 +31,7 @@ ms.locfileid: "75715683"
 > - **Visual C#**  >  **.NET Standard**
 > - **Visual C#**  > **Web** > **ASP.NET Core Web Application**
 
-この記事では、**ASP.NET Core Web Application** プロジェクト テンプレートを例として、WCF サービス参照をプロジェクトに追加する手順について説明します。
+この記事では、 **ASP.NET Core Web Application** プロジェクト テンプレートを例として、WCF サービス参照をプロジェクトに追加する手順について説明します。
 
 1. ソリューション エクスプローラーで、プロジェクトの **[接続済みサービス]** ノードをダブルクリックします (.NET Core または .NET Standard プロジェクトの場合、ソリューション エクスプローラーでプロジェクトの **[依存関係]** ノードを右クリックすると、このオプションを使用できます)。
 
@@ -84,7 +84,7 @@ ms.locfileid: "75715683"
 
 ## <a name="feedback--questions"></a>フィードバックと質問
 
-ご不明な点またはフィードバックについては、[Developer Community](https://developercommunity.visualstudio.com/) で[問題の報告](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) ツールを使用して報告してください。
+製品に関するフィードバックがある場合は、[Developer Community](https://aka.ms/feedback/report?space=61) で[問題の報告](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) ツールを使用して報告してください。
 
 ## <a name="release-notes"></a>リリース ノート
 

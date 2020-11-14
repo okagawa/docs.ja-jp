@@ -1,6 +1,6 @@
 ---
 title: バージョン トレラントなシリアル化
-description: .NET Framework 2.0 では、シリアル化可能な型を簡単に変更できるようにする機能のセットであるバージョン トレラントなシリアル化が導入されました。
+description: シリアル化可能な型を簡単に変更できるようにする機能のセットであるバージョン トレラントなシリアル化について説明します。
 ms.date: 08/08/2017
 dev_langs:
 - csharp
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: afc822e1f8873bac069f6634fdf1d4665d392e69
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: e7c4d6ca4c72390c3e0803502aa9c1a675e02345
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762592"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282415"
 ---
 # <a name="version-tolerant-serialization"></a>バージョン トレラントなシリアル化
 
-.NET Framework のバージョン 1.0 および 1.1 では、アプリケーションのあるバージョンから次のバージョンに移行しても再利用できる、シリアル化可能な型の作成に問題がありました。 フィールドを追加して型を変更すると、次のような問題が発生していました。
+.NET Framework の最新バージョンでは、アプリケーションのあるバージョンから次のバージョンに移行しても再利用できる、シリアル化可能な型の作成に問題がありました。 フィールドを追加して型を変更すると、次のような問題が発生していました。
 
 - 以前のバージョンのアプリケーションは、古い型の新しいバージョンを逆シリアル化するように要求すると例外をスローする。
 - 新しいバージョンのアプリケーションは、データが欠落している以前のバージョンの型を逆シリアル化すると例外をスローする。
 
-バージョン トレラントなシリアル化 (VTS: Version Tolerant Serialization) は、.NET Framework 2.0 で導入された機能セットで、シリアル化可能な型を、長期にわたって簡単に変更できるようにします。 具体的には、VTS 機能が、ジェネリック型を含め、<xref:System.SerializableAttribute> 属性が適用されているクラスに対して有効です。 VTS を使用すると、他のバージョンの型との互換性を失うことなく、これらのクラスに新しいフィールドを追加できます。 動作するサンプル アプリケーションについては、「[Version Tolerant Serialization Technology Sample](basic-serialization-technology-sample.md)」(バージョン トレラントなシリアル化テクノロジのサンプル) を参照してください。
+バージョン トレラントなシリアル化 (VTS: Version Tolerant Serialization) は、シリアル化可能な型を、長期にわたって簡単に変更できるようにする機能のセットです。 具体的には、VTS 機能が、ジェネリック型を含め、<xref:System.SerializableAttribute> 属性が適用されているクラスに対して有効です。 VTS を使用すると、他のバージョンの型との互換性を失うことなく、これらのクラスに新しいフィールドを追加できます。 動作するサンプル アプリケーションについては、「[Version Tolerant Serialization Technology Sample](basic-serialization-technology-sample.md)」(バージョン トレラントなシリアル化テクノロジのサンプル) を参照してください。
 
 VTS 機能は、<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> を使用する場合に有効になります。 また、<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> を使用する場合は、外部データの複数バージョン対応機能を除くすべての機能が有効になります。 シリアル化でこれらのクラスを使用する方法の詳細については、「[バイナリ シリアル化](binary-serialization.md)」を参照してください。
 
@@ -188,9 +188,7 @@ End Class
 
 ## <a name="the-versionadded-property"></a>VersionAdded プロパティ
 
-**OptionalFieldAttribute** には **VersionAdded** プロパティがあります。 .NET Framework バージョン 2.0 では、このプロパティは使用されません。 ただし、このプロパティを正しく設定して、型が今後のシリアル化エンジンと互換性を保つようにすることが重要です。
-
-このプロパティは、指定されたフィールドに追加された型のバージョンを示します。 次の例に示すように、このプロパティの値は 2 を開始値として、型が変更されるたびに常に 1 ずつインクリメントする必要があります。
+**OptionalFieldAttribute** には **VersionAdded** プロパティがあります。 このプロパティは、指定されたフィールドに追加された型のバージョンを示します。 次の例に示すように、このプロパティの値は 2 を開始値として、型が変更されるたびに常に 1 ずつインクリメントする必要があります。
 
 ```csharp
 // Version 1.0
@@ -272,8 +270,8 @@ End Class
 - シリアル化したフィールドを削除しない。
 - 以前のバージョンでフィールドに <xref:System.NonSerializedAttribute> 属性が適用されていない場合、新しいバージョンでもこの属性を適用しない。
 - シリアル化したフィールドの名前または型を変更しない。
-- 新しいシリアル化フィールドを追加する場合は、**OptionalFieldAttribute** 属性を適用する。
-- 以前のバージョンでシリアル化できなかったフィールドから **NonSerializedAttribute** 属性を削除する場合は、**OptionalFieldAttribute** 属性を適用する。
+- 新しいシリアル化フィールドを追加する場合は、 **OptionalFieldAttribute** 属性を適用する。
+- 以前のバージョンでシリアル化できなかったフィールドから **NonSerializedAttribute** 属性を削除する場合は、 **OptionalFieldAttribute** 属性を適用する。
 - すべてのオプション フィールドに対して、既定値として 0 または **null** が許容される場合以外は、シリアル化コールバックを使用して意味のある既定値を設定する。
 
 型が今後のシリアル化エンジンと互換性を保つようにするには、次のガイドラインに従ってください。

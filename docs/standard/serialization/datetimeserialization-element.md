@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <dateTimeSerialization> element
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
-ms.openlocfilehash: a2684ab72c1fb109d711e333e01836d3399caf86
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 90ae911c8942fef7a9e8238921990b0a52a47ca0
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289643"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281761"
 ---
 # <a name="datetimeserialization-element"></a>\<dateTimeSerialization> 要素
 <xref:System.DateTime> オブジェクトのシリアル化モードを決定します。  
@@ -47,9 +47,10 @@ ms.locfileid: "84289643"
 |system.xml.serialization|XML シリアル化を制御する最上位の要素です。|  
   
 ## <a name="remarks"></a>Remarks  
- .NET Framework の 1.0、1.1、2.0、およびそれ以降のバージョンで、このプロパティが **Local** に設定されている場合、<xref:System.DateTime> オブジェクトは常に現地時刻として書式設定されます。 つまり、ローカル タイム ゾーンの情報が、シリアル化されたデータに必ず組み込まれます。 .NET Framework の以前のバージョンとの互換性を保証するには、このプロパティを **Local** に設定します。  
+
+このプロパティが **Local** に設定されている場合、<xref:System.DateTime> オブジェクトは常に現地時刻として書式設定されます。 つまり、ローカル タイム ゾーンの情報が、シリアル化されたデータに必ず組み込まれます。
   
- このプロパティが **Roundtrip** に設定されているバージョン 2.0 以降の .NET Framework では、<xref:System.DateTime> オブジェクトが調べられ、タイム ゾーンがローカル、UTC、または未指定のいずれであるかが特定されます。 その後、この特定された情報を保持する形で、<xref:System.DateTime> オブジェクトがシリアル化されます。 これは既定の動作であり、.NET Framework の以前のバージョンと通信を行わない、すべての新しいアプリケーションで推奨されます。  
+このプロパティが **Roundtrip** に設定されている場合は、<xref:System.DateTime> オブジェクトが調べられ、タイム ゾーンがローカル、UTC、または未指定のいずれであるかが特定されます。 その後、この特定された情報を保持する形で、<xref:System.DateTime> オブジェクトがシリアル化されます。 これは既定の動作であり、.NET Framework の以前のバージョンと通信を行わない、すべての新しいアプリケーションで推奨されます。  
   
 ## <a name="see-also"></a>関連項目
 

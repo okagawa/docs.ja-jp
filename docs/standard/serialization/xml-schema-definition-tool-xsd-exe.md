@@ -3,12 +3,12 @@ title: XML Schema Definition Tool (Xsd.exe)
 description: XML シリアライザー ジェネレーター ツールは、指定されたアセンブリ内の型の XML シリアル化アセンブリを生成します。これにより、XmlSerializer の起動パフォーマンスが向上します。
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 0275ecfebd427feb104013024654d4a0bc98748a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c8ae3e05f2d775cbc4c44ce27e7474d1fcfc06a3
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84288980"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281750"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 
@@ -32,7 +32,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 ```
   
 > [!TIP]
-> .NET Framework ツールが適切に機能するには、 `Path`、`Include`、および `Lib` の各環境変数を正しく設定する必要があります。 これらの環境変数を設定するには、\<SDK>\v2.0\Bin ディレクトリにある SDKVars.bat を実行します。 SDKVars.bat は、コマンド シェルごとに実行する必要があります。
+> .NET Framework ツールが適切に機能するには、 `Path`、`Include`、および `Lib` の各環境変数を正しく設定する必要があります。 これらの環境変数を設定するには、\<SDK>\\\<version>\Bin ディレクトリにある SDKVars.bat を実行します。 SDKVars.bat は、コマンド シェルごとに実行する必要があります。
 
 ## <a name="argument"></a>引数
 
@@ -105,7 +105,7 @@ Xsd.exe が実行する操作を次の表に示します。
 </xsd>
 ```
 
-この XML が GenerateSchemas.xml というファイルに含まれる場合、コマンド プロンプトで、`/parameters` スイッチを使用して次のように入力し、**Enter** キーを押します。
+この XML が GenerateSchemas.xml というファイルに含まれる場合、コマンド プロンプトで、`/parameters` スイッチを使用して次のように入力し、 **Enter** キーを押します。
 
 ```console
  xsd /p:GenerateSchemas.xml
