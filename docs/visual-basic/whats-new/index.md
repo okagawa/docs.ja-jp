@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: e9ab745a60cd9eb646bee57a9a6838c30add77c5
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: ada336ee5fce317315bb5f3974e0366f7bca3985
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495861"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557104"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic の新機能
 
@@ -23,6 +23,8 @@ ms.locfileid: "89495861"
 
 Visual Basic 16.0 / Visual Studio 2019 バージョン 16.0\
 新機能については、「[Visual Basic 16.0](#visual-basic-160)」を参照してください。
+
+最新の .NET SDK は [.NET のダウンロード ページ](https://dotnet.microsoft.com/download)でダウンロードできます。
 
 ## <a name="previous-versions"></a>以前のバージョン
 
