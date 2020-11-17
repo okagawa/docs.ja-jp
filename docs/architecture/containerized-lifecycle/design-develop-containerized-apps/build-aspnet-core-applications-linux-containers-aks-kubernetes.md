@@ -2,12 +2,12 @@
 title: Linux コンテナーとして AKS/Kubernetes クラスターにデプロイされる ASP.NET Core アプリケーションをビルドする
 description: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
 ms.date: 08/06/2020
-ms.openlocfilehash: 8b3141d79eeb252ec3721d57293bed0e335b41d3
-ms.sourcegitcommit: a6bd4cad438fe479cbd112eae10f2cd449f06e40
+ms.openlocfilehash: 831d2372131e20788d0f48190eb8c600aa02485c
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91844564"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440830"
 ---
 # <a name="build-aspnet-core-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Linux コンテナーとして AKS/Kubernetes オーケストレーターにデプロイされる ASP.NET Core アプリケーションをビルドする
 
@@ -200,7 +200,7 @@ az acr create --name exploredocker --resource-group explore-docker-aks-rg --sku 
 ```
 
 > [!NOTE]
-> コンテナー レジストリ名 (`exploredocker` など) は、Azure 内で一意にし、5 から 50 文字の英数字を含める必要があります。 詳細については、「[コンテナー レジストリの作成](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli#create-a-container-registry)」を参照してください。
+> コンテナー レジストリ名 (`exploredocker` など) は、Azure 内で一意にし、5 から 50 文字の英数字を含める必要があります。 詳細については、「[コンテナー レジストリの作成](/azure/container-registry/container-registry-get-started-azure-cli#create-a-container-registry)」を参照してください。
 
 ### <a name="create-the-image-in-release-mode"></a>リリース モードでイメージを作成する
 

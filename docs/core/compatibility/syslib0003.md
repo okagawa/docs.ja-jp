@@ -3,12 +3,12 @@ title: SYSLIB0003 警告
 description: コンパイル時の警告 SYSLIB0003 が生成される旧型式について説明します。
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: ca774f3e4b5132cf40c632f7c49d3f183f5d578f
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: a9f925904641a1aa4fd229c81ff680850e4f84bd
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333134"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439964"
 ---
 # <a name="syslib0003-code-access-security-is-not-supported"></a>SYSLIB0003: コード アクセス セキュリティはサポートされていません
 
@@ -209,6 +209,8 @@ ms.locfileid: "92333134"
   ```
 
 - <xref:System.Security.Permissions.PrincipalPermission> を要求している場合は、ガイダンス「[SYSLIB0002: PrincipalPermissionAttribute は旧型式](syslib0002.md#workarounds)」を確認してください。 このガイダンスは、<xref:System.Security.Permissions.PrincipalPermission> と <xref:System.Security.Permissions.PrincipalPermissionAttribute> の両方に適用されます。
+
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
 ## <a name="see-also"></a>関連項目
 

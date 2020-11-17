@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: d07d757f9e47a84c75f46b190bdb613b8d2db7c1
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 8fb729a0b8220d15af641f916383bbd6146e2e33
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224126"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441077"
 ---
 # <a name="write-and-call-udfs-in-net-for-apache-spark-interactive-environments"></a>.NET for Apache Spark 対話型環境で UDF を記述して呼び出す
 
@@ -49,7 +49,7 @@ ms.locfileid: "92224126"
 
 強調表示されている上のエラーは、UDF アセンブリを DataFrame で呼び出す前に最初にコンパイルしてワーカーに配布する必要があるために発生しました。
 
-.NET for Apache Spark 対話型エクスペリエンス ([Azure Synapse Notebooks](https://docs.microsoft.com/azure/synapse-analytics/spark/apache-spark-development-using-notebooks) など) で UDF を実装するときは、いくつかの重要な点に注意する必要があります。
+.NET for Apache Spark 対話型エクスペリエンス ([Azure Synapse Notebooks](/azure/synapse-analytics/spark/apache-spark-development-using-notebooks) など) で UDF を実装するときは、いくつかの重要な点に注意する必要があります。
 
 ## <a name="faqs"></a>FAQ
 
@@ -61,7 +61,7 @@ ms.locfileid: "92224126"
 
     `udf2_fails` の場合と同様に、型 `Submission#7` がシリアル化可能としてマークされていないことを示すエラー メッセージが表示されます。これは、実行時に生成されるために `Serializable` としてマークされていない、セルに定義されているすべてのオブジェクトが、NET Interactive によって `Submission#` クラスでラップされるためです。
 
-    したがって、 **カスタム オブジェクトを参照する UDF は、そのオブジェクトと同じセルに定義されている必要があります** 。
+    したがって、**カスタム オブジェクトを参照する UDF は、そのオブジェクトと同じセルに定義されている必要があります**。
 
 2. **.NET Interactive でブロードキャスト変数が機能しないのはなぜですか。**
     前に説明した理由により、ブロードキャスト変数は .NET Interactive では機能しません。 [ブロードキャスト変数に関するこのガイド](broadcast-guide.md)を参照して、ブロードキャスト変数の詳細とその使用方法について理解を深めることをお勧めします。 ブロードキャスト変数が対話型のシナリオでは機能しないのは、セルに定義されている各オブジェクトにセル送信クラスを追加する .NET Interactive の設計によるものです。これは、シリアル化可能としてマークされていないため、前に示したものと同じ例外で失敗します。

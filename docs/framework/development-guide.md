@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: 73b930efa893fd2b481c4c130754154a0d10d5b4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ef3fe36ce0c53821fb79fd7689ec6f7176af3e2f
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547885"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440856"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework の開発ガイド
 
@@ -52,7 +52,7 @@ ms.locfileid: "90547885"
  [デバッグ、トレース、およびプロファイリング](./debug-trace-profile/index.md)  
  .NET Framework アプリとアプリ環境のテスト、最適化、およびプロファイリングを行う方法について説明します。 開発者向けの情報だけでなく、管理者向けの情報も記載されています。  
   
- [複数のプラットフォームの開発](../standard/cross-platform/index.md)  
+ [複数のプラットフォームの開発](./cross-platform/index.md)  
  .NET Framework を使用して複数のプラットフォームおよび複数のデバイス (電話、デスクトップ、Web など) で共有できるアセンブリを作成する方法に関する情報を示します。  
   
  [配置](./deployment/index.md)  
@@ -62,10 +62,12 @@ ms.locfileid: "90547885"
  キャッシュ、遅延初期化、信頼性、および ETW イベントについて説明します。  
 
 ## <a name="reference"></a>関連項目  
+
  [.NET Framework クラス ライブラリ](../../api/index.md?view=netframework-4.7)  
  .NET Framework の名前空間に含まれる各クラスの構文、コード例、および使用情報を示します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [はじめに](./get-started/index.md)  
  .NET Framework の包括的な概要と、追加リソースへのリンクを説明します。  
   

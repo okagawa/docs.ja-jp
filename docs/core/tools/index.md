@@ -1,23 +1,23 @@
 ---
-title: .NET Core CLI
+title: .NET CLI
 titleSuffix: ''
-description: .NET Core CLI とその機能に関する概要です。
+description: .NET CLI とその機能に関する概要です。
 ms.topic: overview
 ms.date: 02/13/2020
-ms.openlocfilehash: 18dde384058206f437b53572b2f8331d65324482
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 6a12e2d16afe36092c10e14a7465fa3bdbb23f32
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062692"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633857"
 ---
-# <a name="net-core-cli-overview"></a>.NET Core CLI の概要
+# <a name="net-cli-overview"></a>.NET CLI の概要
 
 **この記事の対象:** ✔️ .NET Core 2.1 SDK 以降のバージョン
 
-.NET Core コマンド ライン インターフェイス (CLI) は、.NET Core アプリケーションを開発、ビルド、実行、発行するためのクロスプラットフォーム ツールチェーンです。
+.NET コマンド ライン インターフェイス (CLI) は、.NET アプリケーションを開発、ビルド、実行、発行するためのクロスプラットフォーム ツールチェーンです。
 
-.NET Core CLI は、[.NET Core SDK](../sdk.md) に含まれています。 .NET Core SDK をインストールする方法については、[.NET Core のインストール](../install/windows.md)に関する記事をご覧ください。
+.NET CLI は、[.NET SDK](../sdk.md) に含まれています。 .NET SDK をインストールする方法については、[.NET のインストール](../install/windows.md)に関する記事をご覧ください。
 
 ## <a name="cli-commands"></a>CLI コマンド
 
@@ -64,7 +64,7 @@ ms.locfileid: "88062692"
 - [`tool run`](global-tools.md#invoke-a-local-tool) .NET Core SDK 3.0 以降で利用できます。
 - [`tool uninstall`](dotnet-tool-uninstall.md)
 
-ツールは、NuGet パッケージからインストールされ、コマンド プロンプトから呼び出されるコンソール アプリケーションです。 ツールは自分で作成することも、サードパーティによって作成されたツールをインストールすることもできます。 ツールは、グローバル ツール、ツールパス ツール、およびローカル ツールとも呼ばれます。 詳細については、[.NET Core ツールの概要](global-tools.md)に関するページを参照してください。
+ツールは、NuGet パッケージからインストールされ、コマンド プロンプトから呼び出されるコンソール アプリケーションです。 ツールは自分で作成することも、サードパーティによって作成されたツールをインストールすることもできます。 ツールは、グローバル ツール、ツールパス ツール、およびローカル ツールとも呼ばれます。 詳細については、[.NET ツールの概要](global-tools.md)に関するページを参照してください。
 
 ## <a name="command-structure"></a>コマンド構造
 
@@ -80,7 +80,7 @@ dotnet /build_output/my_app.dll
 
 ドライバーは [dotnet](dotnet.md) という名前で、2 つの役割 ([フレームワークに依存するアプリ](../deploying/index.md)の実行と、コマンドの実行) があります。
 
-フレームワークに依存するアプリを実行するには、`dotnet /path/to/my_app.dll` など、ドライバーの後にアプリを指定します。 アプリの DLL が存在するフォルダーからコマンドを実行する場合は、`dotnet my_app.dll` を実行するだけです。 .NET Core ランタイムの特定のバージョンを使用する場合は、`--fx-version <VERSION>` オプションを使用してください (「[dotnet コマンド](dotnet.md)」リファレンスを参照)。
+フレームワークに依存するアプリを実行するには、`dotnet /path/to/my_app.dll` など、ドライバーの後にアプリを指定します。 アプリの DLL が存在するフォルダーからコマンドを実行する場合は、`dotnet my_app.dll` を実行するだけです。 .NET ランタイムの特定のバージョンを使用する場合は、`--fx-version <VERSION>` オプションを使用してください (「[dotnet コマンド](dotnet.md)」リファレンスを参照)。
 
 ドライバーにコマンドを指定すると、`dotnet.exe` は CLI コマンドの実行プロセスを開始します。 次に例を示します。
 
@@ -105,4 +105,4 @@ dotnet build
 ## <a name="see-also"></a>関連項目
 
 - [dotnet/sdk GitHub リポジトリ](https://github.com/dotnet/sdk/)
-- [.NET Core のインストール ガイド](../install/windows.md)
+- [.NET インストール ガイド](../install/windows.md)

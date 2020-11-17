@@ -1,17 +1,18 @@
 ---
 ms.custom: updateeachrelease
-ms.openlocfilehash: d30d6ee2dae332895697b2fd1b931b7ec47d14bc
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 20d4434bc25fbd55cf2bbb309558395dd980d398
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656210"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634502"
 ---
 | [値]                     | 説明                                                                                                 |
 |---------------------------|---------------------------------------------------------------------------------------------------------|
 | `preview`                 | コンパイラは、最新のプレビュー バージョンの有効な言語構文をすべて受け入れます。                         |
 | `latest`                  | コンパイラは、最新リリース バージョンのコンパイラ (マイナー バージョンを含む) の構文を受け入れます。 |
 | `latestMajor` (`default`) | コンパイラは、最新リリースのメジャー バージョンのコンパイラの構文を受け入れます。                     |
+| `9.0`                     | コンパイラは、C# 9.0 以下に含まれている構文のみを受け入れます。                                   |
 | `8.0`                     | コンパイラは、C# 8.0 以下に含まれている構文のみを受け入れます。                                   |
 | `7.3`                     | コンパイラは、C# 7.3 以下に含まれている構文のみを受け入れます。                                   |
 | `7.2`                     | コンパイラは、C# 7.2 以下に含まれている構文のみを受け入れます。                                   |

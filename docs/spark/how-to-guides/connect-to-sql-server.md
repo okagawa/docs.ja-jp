@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: b20710000d8717b5df238aa9a782371fbe586037
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 1fecd796aeefd6c5681c4c2ea623e89f3a5a3c1d
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224034"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439535"
 ---
 # <a name="connect-net-for-apache-spark-to-sql-server"></a>.NET for Apache Spark を SQL Server に接続する
 
@@ -37,17 +37,17 @@ ms.locfileid: "92224034"
 
 ## <a name="connect-to-sql-server-from-your-application"></a>アプリケーションから SQL Server に接続する
 
-1. ご使用のアプリケーションを介してデータベース接続を提供するには、Microsoft JDBC Driver for SQL Server を使用します ([この公式 Web サイト](https://docs.microsoft.com/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15)からダウンロードしてください)。
+1. ご使用のアプリケーションを介してデータベース接続を提供するには、Microsoft JDBC Driver for SQL Server を使用します ([この公式 Web サイト](/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15)からダウンロードしてください)。
 2. ご使用のアプリケーションから SQL Server インスタンスとデータベースに接続するには、次の構成を設定します。
-    1. **connection_url** : これは、SQL Server インスタンスまたはデータベースへの接続に使用される URL です。形式は次のとおりです。
+    1. **connection_url**: これは、SQL Server インスタンスまたはデータベースへの接続に使用される URL です。形式は次のとおりです。
 
         ```
         jdbc:sqlserver://<SQL_server_IP_address>:1433;instanceName=<instance_name>;databaseName=<database_name>;
         ```
 
-    2. **dbtable** : アクセスされているテーブルの名前。
-    3. **user** : SQL Server の構成の手順 1 で設定したログイン ユーザー。
-    4. **password** : SQL Server の構成の手順 1 で設定したパスワード。
+    2. **dbtable**: アクセスされているテーブルの名前。
+    3. **user**: SQL Server の構成の手順 1 で設定したログイン ユーザー。
+    4. **password**: SQL Server の構成の手順 1 で設定したパスワード。
 3. 次に示すように、上記の構成をご使用のアプリケーション コードで使用して、テーブルからデータを読み取ります。
 
     ```csharp

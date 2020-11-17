@@ -6,17 +6,18 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool
 - Winmdexp.exe
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
-ms.openlocfilehash: dc36533a4f0c48e8e8a5930540746a46ba596751
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 42a57334f9f3e50a4d3c3ec48d57d26357d57510
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543239"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439496"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows ランタイム メタデータのエクスポート ツール)
+
 Windows ランタイム メタデータ エクスポート ツール (Winmdexp.exe) は、.NET Framework モジュールを、Windows メタデータを含むファイルに変換します。 .NET Framework アセンブリと Windows ランタイム メタデータ ファイルでは同じ物理形式が使用されますが、メタデータ テーブルの内容に違いがあります。つまり、NET Framework アセンブリは自動的に Windows ランタイム コンポーネントとして使用できるわけではありません。 .NET Framework モジュールを Windows ランタイム コンポーネントに変換するプロセスは、"*エクスポート*" と呼ばれます。 .NET Framework 4.5 と .NET Framework 4.5.1 では、結果として生成される Windows メタデータ (.winmd) ファイルにメタデータと実装の両方が含まれます。  
   
- Visual Studio 2013 または Visual Studio 2012 で、C# および Visual Basic の **Windows ストア**にある **Windows ランタイム コンポーネント** テンプレートを使用する場合、コンパイラのターゲットは .winmdobj ファイルであり、後続のビルド ステップで Winmdexp.exe が呼び出され、.winmdobj ファイルが .winmd ファイルにエクスポートされます。 Windows ランタイム コンポーネントをビルドする場合は、この方法をお勧めします。 Visual Studio による制御より細かくビルド プロセスを制御する場合は、Winmdexp.exe ファイルを直接使用します。  
+ Visual Studio 2013 または Visual Studio 2012 で、C# および Visual Basic の **Windows ストア** にある **Windows ランタイム コンポーネント** テンプレートを使用する場合、コンパイラのターゲットは .winmdobj ファイルであり、後続のビルド ステップで Winmdexp.exe が呼び出され、.winmdobj ファイルが .winmd ファイルにエクスポートされます。 Windows ランタイム コンポーネントをビルドする場合は、この方法をお勧めします。 Visual Studio による制御より細かくビルド プロセスを制御する場合は、Winmdexp.exe ファイルを直接使用します。  
   
  このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。  
   
@@ -45,13 +46,14 @@ winmdexp [options] winmdmodule
 |**@** `responsefile`|オプション (および、必要に応じて `winmdmodule`) を含む応答 (.rsp) ファイルを指定します。 `responsefile` の各行に 1 つの引数またはオプションが含まれている必要があります。|  
   
 ## <a name="remarks"></a>Remarks  
+
  Winmdexp.exe は、任意の .NET Framework アセンブリを .winmd ファイルに変換するようには設計されていません。 `/target:winmdobj` オプションでコンパイルされるモジュールが必要で、追加の制限が適用されます。 この中で最も重要な制限は、アセンブリの API サーフェスで公開されるすべての型は必ず Windows ランタイム型であるということです。 詳細については、「[C# および Visual Basic での Windows ランタイム コンポーネントの作成](/previous-versions/br230301(v=vs.110))」という記事の「Windows ランタイム コンポーネントの宣言型」セクションを参照してください。
   
- C# または Visual Basic で Windows 8.x Store アプリまたは Windows ランタイム コンポーネントを作成する場合は、Windows ランタイムでのプログラミングをより自然にするためのサポートが .NET Framework で提供されています。 これは、記事「[Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)」で解説されています。 プロセスでは、一般的に使用される Windows ランタイム型が .NET Framework 型にマップされます。 Winmdexp.exe では、このプロセスが反転され、対応する Windows ランタイム型を使用する API サーフェスが生成されます。 たとえば、<xref:System.Collections.Generic.IList%601> インターフェイスから構築された型は、Windows ランタイムの <xref:Windows.Foundation.Collections.IVector%601> インターフェイスから構築された型にマップされます。  
+ C# または Visual Basic で Windows 8.x Store アプリまたは Windows ランタイム コンポーネントを作成する場合は、Windows ランタイムでのプログラミングをより自然にするためのサポートが .NET Framework で提供されています。 これは、記事「[Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../cross-platform/support-for-windows-store-apps-and-windows-runtime.md)」で解説されています。 プロセスでは、一般的に使用される Windows ランタイム型が .NET Framework 型にマップされます。 Winmdexp.exe では、このプロセスが反転され、対応する Windows ランタイム型を使用する API サーフェスが生成されます。 たとえば、<xref:System.Collections.Generic.IList%601> インターフェイスから構築された型は、Windows ランタイムの <xref:Windows.Foundation.Collections.IVector%601> インターフェイスから構築された型にマップされます。  
   
 ## <a name="see-also"></a>関連項目
 
-- [Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 - [C# および Visual Basic での Windows ランタイム コンポーネントの作成](/previous-versions/br230301(v=vs.110))
 - [Winmdexp.exe のエラー メッセージ](winmdexp-exe-error-messages.md)
 - [ビルド ツール、配置ツール、および構成ツール (.NET Framework)](/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))

@@ -2,12 +2,12 @@
 title: Windows フォームに関する破壊的変更
 description: .NET Core および .NET 5 の Windows フォームにおける破壊的変更の一覧を示します。
 ms.date: 09/08/2020
-ms.openlocfilehash: 01810a690227bbcab2103f00767315dbc5d5fae3
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: c79fd28b5c3b81ae7ddf1ef3f470601108b87705
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400648"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440791"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows フォームでの破壊的変更
 
@@ -136,4 +136,4 @@ _**
 
 ## <a name="see-also"></a>関連項目
 
-- [Windows フォーム アプリを .NET Core に移植する](../porting/winforms.md)
+- [Windows フォーム アプリを .NET Core に移植する](/dotnet/desktop/winforms/migration/?view=netdesktop-5.0&preserve-view=true)

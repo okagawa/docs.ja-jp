@@ -2,12 +2,12 @@
 title: 型のマーシャリング - .NET
 description: .NET が型をネイティブ表現にマーシャリングする方法について説明します。
 ms.date: 01/18/2019
-ms.openlocfilehash: bedaf49a5f7c5274f5e1bc7774490fec73651259
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 7fc3dfe950ecd3ed0ff5e4eb0e101c1596a831e1
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188394"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440999"
 ---
 # <a name="type-marshaling"></a>型のマーシャリング
 
@@ -65,7 +65,7 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 | `System.ArgIterator` | `va_list` | 使用できません |
 | `System.Collections.IEnumerator` | `IEnumVARIANT*` | 使用できません |
 | `System.Collections.IEnumerable` | `IDispatch*` | 使用できません |
-| `System.DateTimeOffset` | 1601 年 1 月 1 日午前 0 時以降のティック数を表す `int64_t` || 1601 年 1 月 1 日午前 0 時以降のティック数を表す `int64_t` |
+| `System.DateTimeOffset` | 1601 年 1 月 1 日午前 0 時以降のティック数を表す `int64_t` | 1601 年 1 月 1 日午前 0 時以降のティック数を表す `int64_t` |
 
 一部の型は、フィールドとしてではなくパラメーターとしてのみマーシャリングできます。 このような型の一覧を次の表に示します。
 

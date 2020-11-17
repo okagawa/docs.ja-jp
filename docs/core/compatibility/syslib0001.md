@@ -3,12 +3,12 @@ title: SYSLIB0001 警告
 description: コンパイル時の警告 SYSLIB0001 が生成される旧型式について説明します。
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 58c16879b7d91598ea0848bb0ba95f8fa0200cfe
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: d38d915e902d3c37cc461452f805e8349f11deeb
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333137"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439990"
 ---
 # <a name="syslib0001-the-utf-7-encoding-is-insecure"></a>SYSLIB0001: UTF-7 エンコードは安全ではない
 
@@ -46,6 +46,8 @@ UTF-7 エンコードがアプリケーション間で広く使用されるこ�
       }
   }
   ```
+
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
 ## <a name="see-also"></a>関連項目
 

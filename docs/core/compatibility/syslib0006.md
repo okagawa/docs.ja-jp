@@ -3,12 +3,12 @@ title: SYSLIB0006 警告
 description: コンパイル時の警告 SYSLIB0006 が生成される旧型式について説明します。
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 45d2d8ec6ad99996f8b8f46d0c2e0ac2e02cf450
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: 222b669a8a0260713e85721e6031144bb7bda5cc
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333146"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440661"
 ---
 # <a name="syslib0006-threadabort-is-not-supported"></a>SYSLIB0006: Thread.Abort はサポート対象外
 
@@ -17,7 +17,7 @@ ms.locfileid: "92333146"
 - <xref:System.Threading.Thread.Abort?displayProperty=nameWithType>
 - <xref:System.Threading.Thread.Abort(System.Object)?displayProperty=nameWithType>
 
-## <a name="workaround"></a>回避策
+## <a name="workarounds"></a>回避策
 
 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> を呼び出す代わりに、<xref:System.Threading.CancellationToken> を使用して作業単位の処理を中止します。 次の例は、<xref:System.Threading.CancellationToken>の使用方法を示しています。
 
@@ -35,6 +35,8 @@ void ProcessPendingWorkItemsNew(CancellationToken cancellationToken)
     }
 }
 ```
+
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
 ## <a name="see-also"></a>関連項目
 

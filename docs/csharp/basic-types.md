@@ -4,12 +4,12 @@ description: すべての C# プログラムの中核となる型 (数値、文�
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 18a73e62bf45cdc4a4eaa0985c3fe036ac3b55a8
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 1ddc6b51e48758d203fa570a664fe06d0a5b52c5
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465261"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439717"
 ---
 # <a name="types-variables-and-values"></a>型、変数、および値
 
@@ -23,8 +23,10 @@ C# は、厳密に型指定された言語です。 すべての変数および�
   
 - 含まれるメンバー (メソッド、フィールド、イベントなど)。  
   
-- 継承元となった基本型。  
-  
+- 継承元となった基本型。
+
+- 実装されるインターフェイス。
+
 - 実行時に変数に割り当てられるメモリの場所。  
   
 - 許可される演算の種類。  
@@ -62,7 +64,7 @@ C# には、整数、浮動小数点値、ブール式、テキスト文字、10
   
 ## <a name="generic-types"></a>ジェネリック型
 
-クライアント コードが型のインスタンスを作成したときに提供される実際の型 (*具象型*) のプレースホルダーとして使用される 1 つ以上の*型パラメーター*で、型を宣言することもできます。 このような型は、*ジェネリック型*と呼ばれます。 たとえば、<xref:System.Collections.Generic.List%601> には、慣例により *T* という名前が与えられる 1 つの型パラメーターがあります。この型のインスタンスを作成するときには、たとえば文字列の場合なら、リストに含まれるオブジェクトの型を次のように指定します。  
+クライアント コードが型のインスタンスを作成したときに提供される実際の型 (*具象型*) のプレースホルダーとして使用される 1 つ以上の *型パラメーター* で、型を宣言することもできます。 このような型は、*ジェネリック型* と呼ばれます。 たとえば、<xref:System.Collections.Generic.List%601> には、慣例により *T* という名前が与えられる 1 つの型パラメーターがあります。この型のインスタンスを作成するときには、たとえば文字列の場合なら、リストに含まれるオブジェクトの型を次のように指定します。  
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)]
   
@@ -72,9 +74,9 @@ C# には、整数、浮動小数点値、ブール式、テキスト文字、10
 
 前に説明したように、[var](language-reference/keywords/var.md) キーワードを使用すると、ローカル変数 (クラスのメンバーではない) の型を暗黙的に指定できます。 変数の型はコンパイル時に決定されますが、その型はコンパイラによって指定されます。 詳細については、「[暗黙的に型指定されたローカル変数](programming-guide/classes-and-structs/implicitly-typed-local-variables.md)」を参照してください。  
   
-場合によっては、メソッドの境界を越えて格納したり受け渡したりする予定のない単純な一連の関連値に名前付きの型を作成するのは便利ではないこともあります。 このような場合は、*匿名型*を作成できます。 詳細については、「[匿名型](programming-guide/classes-and-structs/anonymous-types.md)」を参照してください。
+場合によっては、メソッドの境界を越えて格納したり受け渡したりする予定のない単純な一連の関連値に名前付きの型を作成するのは便利ではないこともあります。 このような場合は、*匿名型* を作成できます。 詳細については、「[匿名型](programming-guide/classes-and-structs/anonymous-types.md)」を参照してください。
 
-１ つのメソッドから複数の値を返したいというのはよくあることです。 そのような場合は、１ つのメソッド呼び出しで複数の値を返す*タプル型*を作成できます。 詳細については、[タプル型](language-reference/builtin-types/value-tuples.md)に関するページを参照してください。
+１ つのメソッドから複数の値を返したいというのはよくあることです。 そのような場合は、１ つのメソッド呼び出しで複数の値を返す *タプル型* を作成できます。 詳細については、[タプル型](language-reference/builtin-types/value-tuples.md)に関するページを参照してください。
 
 ## <a name="the-common-type-system"></a>共通型システム
 

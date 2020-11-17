@@ -10,12 +10,12 @@ helpviewer_keywords:
 - text files produced by MSIL Disassembler
 - disassembling file for MSIL Assembler input
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
-ms.openlocfilehash: 6f2611488e7f653783cab833ad47131978bf74aa
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: e94e80d0342f68098a08e184b6bf3f48c14e817b
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166833"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440882"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL 逆アセンブラー)
 
@@ -52,8 +52,8 @@ ildasm [options] [PEfilename] [options]
 |**/linenum**|元のソース行への参照を組み込みます。|
 |**/nobar**|逆アセンブルのプログレス インジケーター ポップアップ ウィンドウの表示を中止します。|
 |**/noca**|カスタム属性の出力を抑止します。|
-|**/project**|ネイティブ Windows ランタイムに表示される方法ではなく、マネージド コードに表示される方法でメタデータを示します。 `PEfilename` が Windows メタデータ ( *.winmd*) ファイルではない場合、このオプションは無効になります。 「[Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)」を参照してください。|
-|**/pubonly**|パブリックな型とメンバーだけを逆アセンブルします。 **/visibility:PUB**と等価です。|
+|**/project**|ネイティブ Windows ランタイムに表示される方法ではなく、マネージド コードに表示される方法でメタデータを示します。 `PEfilename` が Windows メタデータ ( *.winmd*) ファイルではない場合、このオプションは無効になります。 「[Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../cross-platform/support-for-windows-store-apps-and-windows-runtime.md)」を参照してください。|
+|**/pubonly**|パブリックな型とメンバーだけを逆アセンブルします。 **/visibility:PUB** と等価です。|
 |**/quoteallnames**|すべての名前を単一引用符で囲みます。|
 |**/raweh**|例外処理句を生の形式で表示します。|
 |**/source**|元のソース行をコメントとして表示します。|

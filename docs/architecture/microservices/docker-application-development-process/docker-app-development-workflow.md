@@ -2,12 +2,12 @@
 title: Docker アプリの開発ワークフロー
 description: Docker ベースのアプリケーションを開発するためのワークフローの詳細を理解します。 まず、段階的に見ていき、Dockerfile の最適化について詳しく確認し、最終的には Visual Studio を使用する際に利用できる簡略化されたワークフローを理解します。
 ms.date: 01/30/2020
-ms.openlocfilehash: 04b59a6c30b4fb8f34fe1d0e5cd5328ac77ecb4e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1ae4e3cda71676caeab849a92207477652050e25
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172555"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594594"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker アプリの開発ワークフロー
 
@@ -23,7 +23,7 @@ ms.locfileid: "91172555"
 
 ## <a name="workflow-for-developing-docker-container-based-applications"></a>Docker のコンテナー ベースのアプリケーションを開発するためのワークフロー
 
-このセクションでは、Docker のコンテナー ベースのアプリケーションの*内側のループ*の開発ワークフローについて説明します。 内側のループのワークフローは、運用への展開まで含めることができる DevOps のより広範なワークフローを考慮していないということではなく、開発者のコンピューター上で実行される開発作業のみに重点が置かれています。 環境を設定する初期手順は、一度のみ実行されるものなので含まれていません。
+このセクションでは、Docker のコンテナー ベースのアプリケーションの *内側のループ* の開発ワークフローについて説明します。 内側のループのワークフローは、運用への展開まで含めることができる DevOps のより広範なワークフローを考慮していないということではなく、開発者のコンピューター上で実行される開発作業のみに重点が置かれています。 環境を設定する初期手順は、一度のみ実行されるものなので含まれていません。
 
 アプリケーションは、自分のサービスと追加のライブラリ (依存関係) で構成されます。 Docker アプリケーションを構築するときの基本手順を次の図 5-1 に示します。
 
@@ -53,11 +53,11 @@ Docker アプリケーションの開発方法は、Docker を使用しないア
 
 [Get started with Docker CE for Windows](https://docs.docker.com/docker-for-windows/) (Windows 用の Docker CE の概要)
 
-さらに、図 5-2 に示すように、 **.NET Core クロスプラットフォーム開発**ワークロードがインストールされた Visual Studio 2019 バージョン 16.4 以降が必要です。
+さらに、図 5-2 に示すように、 **.NET Core クロスプラットフォーム開発** ワークロードがインストールされた Visual Studio 2019 バージョン 16.4 以降が必要です。
 
 ![.NET Core クロスプラットフォーム開発の選択のスクリーンショット。](./media/docker-app-development-workflow/dotnet-core-cross-platform-development.png)
 
-**図 5-2** Visual Studio 2019 のセットアップ時の **.NET Core クロスプラットフォーム開発**ワークロードの選択
+**図 5-2** Visual Studio 2019 のセットアップ時の **.NET Core クロスプラットフォーム開発** ワークロードの選択
 
 アプリケーションのコーディングは、アプリケーションで Docker を有効にし、Docker で展開してテストする前から、単純な .NET で開始することができます (コンテナーを使用する計画がある場合、通常は .NET Core で)。 ただし、実際の環境となることに加え、問題が早く検出されるため、できるだけ早く Docker で作業を開始することをお勧めします。 Docker は、Visual Studio では、ほとんど透過的で、使用しやすくなっているため、このようにすることが推奨されます。この最良の例は、Visual Studio からのマルチコンテナー アプリケーションのデバッグです。
 
@@ -83,7 +83,7 @@ Visual Studio と Docker 用のツールでは、このタスクはマウスを�
 
 **図 5-3** Visual Studio 2019 で新しい ASP.NET Core プロジェクトを作成するときの Docker サポートの有効化
 
-また、図 5-4 に示すように、**ソリューション エクスプローラー**でプロジェクトを右クリックし、 **[追加]**  >  **[Docker サポート...]** を選択することで、既存の ASP.NET Core Web アプリ プロジェクトに対して Docker サポートを有効にすることもできます。
+また、図 5-4 に示すように、**ソリューション エクスプローラー** でプロジェクトを右クリックし、 **[追加]**  >  **[Docker サポート...]** を選択することで、既存の ASP.NET Core Web アプリ プロジェクトに対して Docker サポートを有効にすることもできます。
 
 ![[追加] メニューの [Docker サポート] オプションを示すスクリーンショット。](./media/docker-app-development-workflow/add-docker-support-option.png)
 
@@ -206,7 +206,7 @@ Dockerfile はバッチ スクリプトに似ています。 コマンド ライ
 
 行ごとの詳細は次のとおりです。
 
-- **行番号 1:** "小さな" ランタイムのみの基本イメージを使用するステージを開始します。参照用にこれを**基本**と呼びます。
+- **行番号 1:** "小さな" ランタイムのみの基本イメージを使用するステージを開始します。参照用にこれを **基本** と呼びます。
 
 - **行番号 2:** イメージに **/app** ディレクトリを作成します。
 
@@ -220,7 +220,7 @@ Dockerfile はバッチ スクリプトに似ています。 コマンド ライ
 
 - **行番号 17:** **Catalog.API** プロジェクトと参照プロジェクト用のパッケージを復元します。
 
-- **行番号 18:** イメージの **/src** に ( **.dockerignore** ファイルに含まれているファイルとディレクトリを除く) **ソリューション用のすべてのディレクトリ ツリー**をコピーします。
+- **行番号 18:** イメージの **/src** に ( **.dockerignore** ファイルに含まれているファイルとディレクトリを除く) **ソリューション用のすべてのディレクトリ ツリー** をコピーします。
 
 - **行番号 19:** 現在のフォルダーを **Catalog.API** プロジェクトに変更します。
 
@@ -290,7 +290,7 @@ RUN dotnet restore
 11
 12  FROM base AS final
 13  WORKDIR /app
-14  COPY --from=publish /app
+14  COPY --from=publish /app .
 15  ENTRYPOINT ["dotnet", "Catalog.API.dll"]
 ```
 
