@@ -2,12 +2,12 @@
 title: F# コードのフォーマットに関するガイドライン
 description: 'F # コードを書式設定するためのガイドラインについて説明します。'
 ms.date: 08/31/2020
-ms.openlocfilehash: 401c0688cd7d0a945dc469f1ab5841b21e1d4ab4
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: af98be75f21cbc594ff9cf779561d49e4965845a
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359286"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688255"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# コードのフォーマットに関するガイドライン
 
@@ -29,7 +29,7 @@ F # では、既定で有意な空白文字が使用されます。 次のガイ
 
 **インデントごとに4つのスペースをお勧めします。**
 
-ただし、プログラムのインデントは主観的な意味を持ちます。 バリエーションは問題ありませんが、最初に従う必要がある規則は、 *インデントの一貫性*です。 一般的に受け入れられているインデントのスタイルを選択し、コードベース全体で使用します。
+ただし、プログラムのインデントは主観的な意味を持ちます。 バリエーションは問題ありませんが、最初に従う必要がある規則は、 *インデントの一貫性* です。 一般的に受け入れられているインデントのスタイルを選択し、コードベース全体で使用します。
 
 ## <a name="formatting-white-space"></a>空白文字の書式設定
 
@@ -642,21 +642,17 @@ let daysOfWeek' includeWeekend =
 
 ## <a name="formatting-if-expressions"></a>If 式の書式設定
 
-条件のインデントは、それらを作成する式のサイズによって異なります。 `cond` `e1` とが短い場合は、 `e2` 単に1行に記述するだけです。
+条件のインデントは、それらを作成する式のサイズと複雑さによって異なります。
+次の場合に1行に記述するだけです。
+
+- `cond`、 `e1` および `e2` は短いです。
+- `e1` と `e2` は式自体ではありません `if/then/else` 。
 
 ```fsharp
 if cond then e1 else e2
 ```
 
-、、のいずれかが長い場合は、 `cond` `e1` 複数行では `e2` ありません。
-
-```fsharp
-if cond
-then e1
-else e2
-```
-
-式のいずれかが複数行の場合は、次のようになります。
+式のいずれかが複数行または式の場合 `if/then/else` 。
 
 ```fsharp
 if cond then
@@ -665,13 +661,26 @@ else
     e2
 ```
 
-とを持つ複数の条件 `elif` `else` は、と同じスコープでインデントされ `if` ます。
+とを含む複数の条件 `elif` `else` は、 `if` 1 つの行式の規則に従った場合と同じスコープでインデントされ `if/then/else` ます。
 
 ```fsharp
 if cond1 then e1
 elif cond2 then e2
 elif cond3 then e3
 else e4
+```
+
+条件または式のいずれかが複数行の場合、 `if/then/else` 式全体が複数行になります。
+
+```fsharp
+if cond1 then
+    e1
+elif cond2 then
+    e2
+elif cond3 then
+    e3
+else
+    e4
 ```
 
 ### <a name="pattern-matching-constructs"></a>パターン一致のコンストラクト
@@ -879,6 +888,41 @@ let makeStreamReader x = new System.IO.StreamReader(path=x)
 
 // Not OK
 let makeStreamReader x = new System.IO.StreamReader(path = x)
+```
+
+### <a name="formatting-constructors-static-members-and-member-invocations"></a>コンストラクター、静的メンバー、およびメンバー呼び出しの書式設定
+
+式が短い場合は、引数を空白で区切り、1行に保持します。
+
+```fsharp
+let person = new Person(a1, a2)
+
+let myRegexMatch = Regex.Match(input, regex)
+
+let untypedRes = checker.ParseFile(file, source, opts)
+```
+
+式が長い場合は、角かっこにインデントするのではなく、改行を使用して1つのスコープをインデントします。
+
+```fsharp
+let person =
+    new Person(
+        argument1,
+        argument2
+    )
+
+let myRegexMatch =
+    Regex.Match(
+        "my longer input string with some interesting content in it",
+        "myRegexPattern"
+    )
+
+let untypedRes =
+    checker.ParseFile(
+        fileName,
+        sourceText,
+        parsingOptionsWithDefines
+    )
 ```
 
 ## <a name="formatting-attributes"></a>属性の書式設定

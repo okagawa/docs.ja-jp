@@ -1,13 +1,13 @@
 ---
 title: パターン マッチ
 description: 'F # でパターンを使用して、データを論理構造と比較したり、データを構成要素に分解したり、データから情報を抽出したりする方法について説明します。'
-ms.date: 08/15/2020
-ms.openlocfilehash: 6d284b941824bc15a8e872a4e28e22c0e159191d
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.date: 11/12/2020
+ms.openlocfilehash: e167712b082b7f587e41a78edcaf0a0db9c7294b
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811510"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687806"
 ---
 # <a name="pattern-matching"></a>パターン マッチ
 
@@ -25,7 +25,7 @@ match expression with
 ...
 ```
 
-各パターンは、なんらかの方法で入力を変換する際の規則として機能します。 `match` 式では、各パターンが順に調べられ、入力データにパターンとの互換性があるかどうかが確認されます。 一致が見つかった場合は、結果の式が実行されます。 一致が見つからなかった場合は、次のパターン規則がテストされます。 *条件*部分が[一致式](match-expressions.md)で説明されている場合は、省略可能です。
+各パターンは、なんらかの方法で入力を変換する際の規則として機能します。 `match` 式では、各パターンが順に調べられ、入力データにパターンとの互換性があるかどうかが確認されます。 一致が見つかった場合は、結果の式が実行されます。 一致が見つからなかった場合は、次のパターン規則がテストされます。 *条件* 部分が [一致式](match-expressions.md)で説明されている場合は、省略可能です。
 
 サポートされているパターンを次の表に示します。 実行時に、表に示されている順序で次の各パターンに対して入力がテストされます。パターンは、コードに示されているとおりに先頭から末尾へ、各行のパターンの左から右へ、再帰的に適用されます。
 
@@ -34,7 +34,7 @@ match expression with
 |定数パターン|数値、文字、リテラル文字列、列挙定数、または定義済みのリテラル識別子|`1.0`, `"test"`, `30`, `Color.Red`|
 |識別子パターン|判別共用体のケース値、例外ラベル、またはアクティブ パターンのケース|`Some(x)`<br /><br />`Failure(msg)`|
 |変数パターン|*identifier*|`a`|
-|`as` パターン|*識別子*としての*パターン*|`(a, b) as tuple1`|
+|`as` パターン|*識別子* としての *パターン*|`(a, b) as tuple1`|
 |OR パターン|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
 |AND パターン|*pattern1* &amp;*pattern2*|`(a, b) & (_, "test")`|
 |Cons パターン|*識別子* :: *リスト-識別子*|`h :: t`|
@@ -47,6 +47,7 @@ match expression with
 |型の注釈が指定されたパターン|*pattern* : *型*|`a : int`|
 |型テスト パターン|:? *型* [as *識別子* ]|`:? System.DateTime as dt`|
 |null パターン|null|`null`|
+|同じ形式のパターン|*すべてのもの*|`nameof str`|
 
 ## <a name="constant-patterns"></a>定数パターン
 
@@ -214,6 +215,22 @@ null パターンは null 値と一致します。null 値は、null 値を許�
 null パターンと変数パターンの使用例を次に示します。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
+
+## <a name="nameof-pattern"></a>同じ形式のパターン
+
+パターンは、 `nameof` その値がキーワードの後の式と等しい場合に、文字列と照合し `nameof` ます。 次に例を示します。
+
+```fsharp
+let f (str: string) =
+    match str with
+    | nameof str -> "It's 'str'!"
+    | _ -> "It is not 'str'!"
+
+f "str" // matches
+f "asdf" // does not match
+```
+
+名前を指定する方法については、「演算子」を参照してください [`nameof`](nameof.md) 。
 
 ## <a name="see-also"></a>関連項目
 
