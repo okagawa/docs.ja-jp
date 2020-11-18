@@ -2,7 +2,6 @@
 title: 'チュートリアル: 暗号化アプリケーションの作成'
 description: 暗号化アプリケーションの作成について説明します。 Windows フォームアプリケーションでコンテンツを暗号化および復号化する方法について説明します。
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,19 +10,19 @@ helpviewer_keywords:
 - cryptography [NET], cryptographic application example
 - cryptography [NET], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-ms.openlocfilehash: 16a887f23c584daa83106ae61c497bcae8dc4dd2
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 70218d60abb336cdb35fc2e89e62a50b6bd79c67
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557191"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830559"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>チュートリアル: 暗号化アプリケーションの作成
 
 > [!NOTE]
 > この記事は、Windows に適用されます。
 >
-> ASP.NET Core の詳細については、「[データ保護の ASP.NET Core](/aspnet/core/security/data-protection/introduction)」を参照してください。
+> ASP.NET Core の詳細については、「 [データ保護の ASP.NET Core](/aspnet/core/security/data-protection/introduction)」を参照してください。
 
 このチュートリアルでは、コンテンツの暗号化および復号化の方法を示します。 コード例は、Windows フォーム アプリケーション向けに設計されています。 このアプリケーションは、スマート カードを使用するなどの実際のシナリオは示していません。 代わりに、暗号化と復号化の基礎を示しています。  
   
@@ -227,7 +226,7 @@ ms.locfileid: "87557191"
   
 ## <a name="see-also"></a>関連項目
 
-- [暗号化モデル](cryptography-model.md)-基本クラスライブラリにおける暗号化の実装方法について説明します。
+- [暗号化モデル](cryptography-model.md) -基本クラスライブラリにおける暗号化の実装方法について説明します。
 - [Cryptographic Services](cryptographic-services.md)
 - [クロスプラットフォーム暗号化](cross-platform-cryptography.md)
 - [データ保護の ASP.NET Core](/aspnet/core/security/data-protection/introduction)

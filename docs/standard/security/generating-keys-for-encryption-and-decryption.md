@@ -2,7 +2,6 @@
 title: 暗号化と復号化のためのキーの生成
 description: .NET で暗号化と復号化を行うための対称キーと非対称キーを作成して管理する方法について説明します。
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - asymmetric keys [.NET]
 - cryptography [.NET], keys
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
-ms.openlocfilehash: 7ce19dc465fb1fac22545398e0724e6b76dd7098
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: aa95204a90f2aee684cdd20095d1816e890a0306
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556944"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831079"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>暗号化と復号化のためのキーの生成
 キーの作成と管理は、暗号プロセスの重要な部分です。 対称アルゴリズムでは、キーと初期化ベクター (IV) を作成する必要があります。 キーは、データの暗号化解除を許可しないユーザーに対しては秘密にする必要があります。 IV は秘密にする必要はありませんが、セッションごとに変更する必要があります。 非対称アルゴリズムでは、公開キーと秘密キーを作成する必要があります。 公開キーはだれに公開してもかまいせんが、秘密キーを知らせる相手は、公開キーで暗号化されたデータを復号化する人だけにします。 このセクションでは、対称アルゴリズムと非対称アルゴリズムの両方について、キーを作成して管理する方法を説明します。  
@@ -56,7 +55,7 @@ aes.GenerateIV();
 aes.GenerateKey();  
 ```  
   
- 上記のコードを実行すると、 **Aes**の新しいインスタンスが作成されるときにキーと IV が生成されます。 **GenerateKey** メソッドと **GenerateIV** メソッドを呼び出すと、別のキーと IV が作成されます。
+ 上記のコードを実行すると、 **Aes** の新しいインスタンスが作成されるときにキーと IV が生成されます。 **GenerateKey** メソッドと **GenerateIV** メソッドを呼び出すと、別のキーと IV が作成されます。
   
 ## <a name="asymmetric-keys"></a>非対称キー
 
@@ -72,11 +71,11 @@ aes.GenerateKey();
 * <xref:System.Security.Cryptography.AsymmetricAlgorithm.ExportPkcs8PrivateKey%2A?displayProperty=nameWithType>
 * <xref:System.Security.Cryptography.AsymmetricAlgorithm.ExportEncryptedPkcs8PrivateKey%2A?displayProperty=nameWithType>
 
-**RSA**インスタンスは、メソッドを使用して、 **RSAParameters**構造体の値に初期化でき <xref:System.Security.Cryptography.RSA.ImportParameters%2A> ます。 または、メソッドを使用して新しいインスタンスを作成し <xref:System.Security.Cryptography.RSA.Create(System.Security.Cryptography.RSAParameters)?displayProperty=nameWithType> ます。  
+**RSA** インスタンスは、メソッドを使用して、 **RSAParameters** 構造体の値に初期化でき <xref:System.Security.Cryptography.RSA.ImportParameters%2A> ます。 または、メソッドを使用して新しいインスタンスを作成し <xref:System.Security.Cryptography.RSA.Create(System.Security.Cryptography.RSAParameters)?displayProperty=nameWithType> ます。  
   
- 非対称秘密キーは、ローカル コンピューターにそのまま平文として保存しないでください。 秘密キーを格納する必要がある場合は、キー コンテナーを使用することをお勧めします。 秘密キーをキーコンテナーに格納する方法の詳細については、「[方法: キーコンテナーに非対称キーを格納](how-to-store-asymmetric-keys-in-a-key-container.md)する」を参照してください。  
+ 非対称秘密キーは、ローカル コンピューターにそのまま平文として保存しないでください。 秘密キーを格納する必要がある場合は、キー コンテナーを使用することをお勧めします。 秘密キーをキーコンテナーに格納する方法の詳細については、「 [方法: キーコンテナーに非対称キーを格納](how-to-store-asymmetric-keys-in-a-key-container.md)する」を参照してください。  
   
- 次のコード例では、 **RSA**クラスの新しいインスタンスを作成し、公開キーと秘密キーのペアを作成して、公開キー情報を**RSAParameters**構造体に保存します。  
+ 次のコード例では、 **RSA** クラスの新しいインスタンスを作成し、公開キーと秘密キーのペアを作成して、公開キー情報を **RSAParameters** 構造体に保存します。  
   
 ```vb  
 'Generate a public/private key pair.  

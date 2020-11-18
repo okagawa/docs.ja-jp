@@ -2,7 +2,6 @@
 title: 暗号化サービス
 description: .NET でサポートされる暗号化の方法と手法の概要です。
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - cryptography [.NET]
 - pattern of derived class inheritance
@@ -25,12 +24,12 @@ helpviewer_keywords:
 - cryptography [.NET], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: 463ccec5f60ff10331d501d39144a979d95eff95
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 5558c60768b992984c3800b482961128d3bf5d0b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281728"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829909"
 ---
 # <a name="cryptographic-services"></a>暗号化サービス
 
@@ -56,7 +55,7 @@ ms.locfileid: "93281728"
 
 これらの目標を達成するために、暗号プリミティブと呼ばれるアルゴリズムと手法の組み合わせを使用して暗号スキームを作成します。 暗号プリミティブとその用途の一覧を次の表に示します。
 
-|暗号プリミティブ|使用|
+|暗号プリミティブ|用途|
 |-----------------------------|---------|
 |共有キー暗号方式 (対称暗号化方式)|データに対して変換処理を実行し、データが第三者に読み取られるのを防ぎます。 このタイプの暗号方式では、単一の共有キーを使用してデータの暗号化と復号化が行われます。|
 |公開キー暗号方式 (非対称暗号化方式)|データに対して変換処理を実行し、データが第三者に読み取られるのを防ぎます。 このタイプの暗号方式では、公開キーと秘密キーのペアを使用してデータの暗号化と復号化が行われます。|
