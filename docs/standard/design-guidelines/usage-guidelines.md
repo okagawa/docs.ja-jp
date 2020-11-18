@@ -1,18 +1,17 @@
 ---
-title: 使用ガイドライン
+title: 使用上のガイドライン
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], usage guidelines
 ms.assetid: 42215ffa-a099-4a26-b14e-fb2bdb6f95b7
-ms.openlocfilehash: 03eaba3e52cb25619f65637efb4f414c22770440
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d6ea7c7b9ada95e3d0c425aaea18be6cdbb4ce35
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291345"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828505"
 ---
-# <a name="usage-guidelines"></a>使用ガイドライン
+# <a name="usage-guidelines"></a>使用上のガイドライン
 
 このセクションでは、一般公開されている Api で共通型を使用するためのガイドラインを示します。 組み込みのフレームワーク型 (シリアル化属性など) の直接使用と、一般的な演算子のオーバーロードを扱っています。
   
@@ -27,7 +26,7 @@ ms.locfileid: "84291345"
 [属性](attributes.md)  
 [コレクション](guidelines-for-collections.md)  
 [シリアル化](serialization.md)  
-[System.xml の使用法](system-xml-usage.md)  
+[System.Xml の使用状況](system-xml-usage.md)  
 [等値演算子](equality-operators.md)  
 
 *©2005、2009 Microsoft Corporation の部分。すべての権限が予約されています。*

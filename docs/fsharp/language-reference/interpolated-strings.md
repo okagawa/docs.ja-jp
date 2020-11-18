@@ -2,12 +2,12 @@
 title: 挿入文字列
 description: '挿入文字列について説明します。これは、F # の式を直接埋め込むことができる特殊な形式の文字列です。'
 ms.date: 11/12/2020
-ms.openlocfilehash: a49d4e743306fd9bdabb1e019ec4e6c77e0e1f5a
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 8c552b44cea7d6c51ec333b6bdd4d407c6f10da7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688628"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829688"
 ---
 # <a name="interpolated-strings"></a>挿入文字列
 
@@ -21,7 +21,7 @@ $"string-text %format-specifier{expr}"
 $"""string-text {"embedded string literal"}"""
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 補間文字列を使用すると、文字列リテラルの内部にコードを "穴" で記述できます。 基本的な例を次に示します。
 
@@ -44,7 +44,7 @@ let str = $"A pair of braces: {{}}"
 
 ## <a name="typed-interpolated-strings"></a>型指定された挿入文字列
 
-挿入文字列には、型の設定を強制する F # 書式指定子を含めることもできます。
+挿入文字列には、タイプセーフを適用する F # 書式指定子を含めることもできます。
 
 ```fsharp
 let name = "Phillip"
@@ -89,7 +89,7 @@ printfn $"The speed of light is {speedOfLight:N3} km/s."
 // "The speed of light is 299,792.458 km/s."
 ```
 
-また、補間文字列は、型の注釈を使用してとして指定することもでき <xref:System.FormattableString> ます。
+また、補間文字列は、型の注釈を使用してとしてチェックされる型にすることもでき <xref:System.FormattableString> ます。
 
 ```fsharp
 let frmtStr = $"The speed of light is {speedOfLight:N3} km/s." : FormattableString

@@ -1,7 +1,6 @@
 ---
 title: 構造体のデザイン
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], structures
 - deallocating structures
@@ -11,21 +10,21 @@ helpviewer_keywords:
 - type design guidelines, structures
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
-ms.openlocfilehash: c6ac53014e048da3a90dd7b8e961176f61e90355
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: da831d1477b451131bb27372d65ad7229fcf3f77
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290812"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828622"
 ---
 # <a name="struct-design"></a>構造体のデザイン
 汎用値型は、ほとんどの場合、構造体である C# キーワードと呼ばれます。 このセクションでは、一般的な構造体のデザインに関するガイドラインを示します。
 
- ❌構造体にパラメーターなしのコンストラクターを指定しないでください。
+ ❌ 構造体にパラメーターなしのコンストラクターを指定しないでください。
 
  このガイドラインに従うことで、配列の各項目に対してコンストラクターを実行しなくても、構造体の配列を作成できます。 C# では、構造体にパラメーターなしのコンストラクターを含めることはできないことに注意してください。
 
- ❌変更可能な値の型は定義しないでください。
+ ❌ 変更可能な値の型は定義しないでください。
 
  変更可能な値の型にはいくつかの問題があります。 たとえば、プロパティ getter が値型を返す場合、呼び出し元はコピーを受け取ります。 コピーは暗黙的に作成されるため、開発者は元の値ではなくコピーを変更することを認識していない可能性があります。 また、一部の言語 (特に動的言語) では、変更可能な値型を使用した場合に問題が発生します。これは、ローカル変数でも逆参照した場合にコピーが作成されるためです。
 
@@ -35,9 +34,9 @@ ms.locfileid: "84290812"
 
  ✔️ <xref:System.IEquatable%601> 値型に実装します。
 
- <xref:System.Object.Equals%2A?displayProperty=nameWithType>値型のメソッドではボックス化が行われますが、リフレクションを使用するため、既定の実装はあまり効率的ではありません。 <xref:System.IEquatable%601.Equals%2A>パフォーマンスを大幅に向上させることができ、ボックス化が行われないように実装できます。
+ <xref:System.Object.Equals%2A?displayProperty=nameWithType>値型のメソッドではボックス化が行われますが、リフレクションを使用するため、既定の実装はあまり効率的ではありません。 <xref:System.IEquatable%601.Equals%2A> パフォーマンスを大幅に向上させることができ、ボックス化が行われないように実装できます。
 
- ❌を明示的に拡張しないで <xref:System.ValueType> ください。 実際、ほとんどの言語ではこれを回避できます。
+ ❌ を明示的に拡張しないで <xref:System.ValueType> ください。 実際、ほとんどの言語ではこれを回避できます。
 
  一般に、構造体は非常に便利ですが、頻繁にボックス化されない小さな単一の変更できない値に対してのみ使用してください。
 

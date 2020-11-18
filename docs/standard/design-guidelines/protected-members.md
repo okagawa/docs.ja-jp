@@ -1,7 +1,6 @@
 ---
 title: プロテクト メンバー
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - members [.NET Framework], protected
 - protected members
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - unsealed classes
 - customizing class behavior
 ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
-ms.openlocfilehash: afcb92e48996d594fcedc5b579922b179f754b9d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3cc2ab3e605cfb5382f107dead0c95495858fc6b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286120"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828726"
 ---
 # <a name="protected-members"></a>プロテクト メンバー
 保護されたメンバー自体が拡張機能を提供することはありませんが、より強力なサブクラス化によって、拡張性を高めることができます。 これらを使用すると、メインのパブリックインターフェイスを不必要に複雑にすることなく、高度なカスタマイズオプションを公開できます。

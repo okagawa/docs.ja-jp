@@ -1,18 +1,17 @@
 ---
 title: 仮想メンバー
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - overridable members
 - virtual members
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-ms.openlocfilehash: 918208bb44f84988b7fe903c589e82c7bf1f59e3
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 22eb71ccfc1b9a3d359b0453e4ff47f3f41827f5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620769"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828401"
 ---
 # <a name="virtual-members"></a>仮想メンバー
 仮想メンバーをオーバーライドして、サブクラスの動作を変更することができます。 これらの関数は、提供される機能拡張に関してコールバックとよく似ていますが、実行のパフォーマンスとメモリの消費に関しては優れています。 また、仮想メンバーは、特別な種類の既存の型 (特殊化) を作成する必要があるシナリオでは、より自然に感じられます。
@@ -23,7 +22,7 @@ ms.locfileid: "85620769"
 
  仮想メンバーは、コールバック (またはコールバックを超える可能性があります) のように、設計、テスト、および保守にコストがかかります。これは、仮想メンバーへの呼び出しを予測不可能な方法でオーバーライドし、任意のコードを実行できるためです。 また、仮想メンバーのコントラクトを明確に定義するために、通常はより多くの労力が必要になります。そのため、これらを設計および文書化するコストが高くなります。
 
- ❌仮想メンバーの設計、テスト、および保守に関連するすべてのコストを把握している場合を除き、メンバーを仮想にしないでください。
+ ❌ 仮想メンバーの設計、テスト、および保守に関連するすべてのコストを把握している場合を除き、メンバーを仮想にしないでください。
 
  仮想メンバーは、互換性を損なうことなく変更することができます。 また、仮想メンバーへの呼び出しはインライン化されないため、ほとんどの場合、仮想メンバー以外のメンバーよりも低速になります。
 

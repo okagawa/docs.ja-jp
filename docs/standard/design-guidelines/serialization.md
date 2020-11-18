@@ -1,14 +1,13 @@
 ---
 title: シリアル化
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
-ms.openlocfilehash: d07549da371e403adca089c601ee5b028b268086
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 85481e9d759a71346d83c66f67d9623fc32e76ec
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291683"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828674"
 ---
 # <a name="serialization"></a>シリアル化
 シリアル化は、オブジェクトを、簡単に永続化または転送できる形式に変換するプロセスです。 たとえば、オブジェクトをシリアル化し、HTTP を使用してインターネット経由で転送し、ターゲットコンピューターで逆シリアル化することができます。
@@ -32,7 +31,7 @@ ms.locfileid: "84291683"
 
  型のインスタンスが .NET リモート処理の境界を越えて移動する必要がある場合は、ランタイムシリアル化のサポートを検討✔️。
 
- ❌一般的な永続化のために、ランタイムシリアル化または XML シリアル化をサポートしないようにします。 代わりに、データコントラクトのシリアル化を優先します。
+ ❌ 一般的な永続化のために、ランタイムシリアル化または XML シリアル化をサポートしないようにします。 代わりに、データコントラクトのシリアル化を優先します。
 
 ## <a name="supporting-data-contract-serialization"></a>データ コントラクトのシリアル化のサポート
  型にを適用することにより、型 <xref:System.Runtime.Serialization.DataContractAttribute> <xref:System.Runtime.Serialization.DataMemberAttribute> のメンバー (フィールドおよびプロパティ) にを適用することで、データコントラクトのシリアル化をサポートできます。
@@ -47,7 +46,7 @@ ms.locfileid: "84291683"
 
  オブジェクトの逆シリアル化時にはコンストラクターは呼び出されません。 (規則には例外があります。 でマークされたコレクションのコンストラクター <xref:System.Runtime.Serialization.CollectionDataContractAttribute> は、逆シリアル化中に呼び出されます。)したがって、通常の構築時に実行されるすべてのロジックは、シリアル化コールバックの1つとして実装する必要があります。
 
- `OnDeserializedAttribute`最もよく使用されるコールバック属性です。 その他の属性には、<xref:System.Runtime.Serialization.OnDeserializingAttribute>、<xref:System.Runtime.Serialization.OnSerializingAttribute>、および <xref:System.Runtime.Serialization.OnSerializedAttribute> があります。 これらを使用して、逆シリアル化前、シリアル化前、およびシリアル化後に実行されるコールバックをマークすることができます。
+ `OnDeserializedAttribute` 最もよく使用されるコールバック属性です。 その他の属性には、<xref:System.Runtime.Serialization.OnDeserializingAttribute>、<xref:System.Runtime.Serialization.OnSerializingAttribute>、および <xref:System.Runtime.Serialization.OnSerializedAttribute> があります。 これらを使用して、逆シリアル化前、シリアル化前、およびシリアル化後に実行されるコールバックをマークすることができます。
 
  <xref:System.Runtime.Serialization.KnownTypeAttribute>複雑なオブジェクトグラフを逆シリアル化するときに使用する具象型を示すには、を使用することを✔️してください。
 
@@ -66,7 +65,7 @@ ms.locfileid: "84291683"
 ## <a name="supporting-xml-serialization"></a>XML シリアル化のサポート
  データコントラクトのシリアル化は .NET Framework の主要な (既定の) シリアル化テクノロジですが、データコントラクトのシリアル化でサポートされていないシリアル化のシナリオがあります。 たとえば、シリアライザーによって作成または使用された XML の形状は完全に制御できません。 このような細かい制御が必要な場合は、XML シリアル化を使用する必要があり、このシリアル化テクノロジをサポートするために型をデザインする必要があります。
 
- ❌生成される XML の構造を厳密に制御する理由がない限り、XML シリアル化専用の型を設計しないでください。 このシリアル化テクノロジは、前のセクションで説明したデータ コントラクトのシリアル化よりも優先されます。
+ ❌ 生成される XML の構造を厳密に制御する理由がない限り、XML シリアル化専用の型を設計しないでください。 このシリアル化テクノロジは、前のセクションで説明したデータ コントラクトのシリアル化よりも優先されます。
 
  <xref:System.Xml.Serialization.IXmlSerializable>Xml シリアル化属性を適用した場合よりも、シリアル化された xml の構造をさらに細かく制御する場合は、インターフェイスを実装することを✔️してください。 2 つのインターフェイスのメソッド、<xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> と <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> を使用することで、シリアル化された XML ストリームを完全制御できます。 を適用して、型に対して生成される XML スキーマを制御することもでき `XmlSchemaProviderAttribute` ます。
 
