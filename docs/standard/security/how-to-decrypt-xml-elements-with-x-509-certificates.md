@@ -1,7 +1,6 @@
 ---
 title: '方法: X.509 証明書で XML 要素を復号化する'
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,18 +12,18 @@ helpviewer_keywords:
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: bd015722-d88d-408d-8ca8-e4e475c441ed
-ms.openlocfilehash: f60947a3b722f33c88b696d47c6a4000a1cb076b
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 02a4a4ada6dcc242a96d630699797f2ea76987e3
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555735"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820281"
 ---
 # <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>方法: X.509 証明書で XML 要素を復号化する
 
 <xref:System.Security.Cryptography.Xml> 名前空間のクラスを使用して、XML ドキュメント内の要素を暗号化および復号化することができます。  XML 暗号化は、データが簡単に読み取られる心配なく、暗号化された XML データを交換または保存する標準的な方法です。  XML 暗号化標準の詳細については、「」にある XML 暗号化の World Wide Web コンソーシアム (W3C) の仕様を参照してください <https://www.w3.org/TR/xmldsig-core/> 。  
   
- この例では、「[方法: X.509 証明書を使用して Xml 要素を暗号化](how-to-encrypt-xml-elements-with-x-509-certificates.md)する」で説明されているメソッドを使用して暗号化された xml 要素を復号化します。  <> 要素を検索し、要素を復号化して `EncryptedData` から、要素を元のプレーンテキスト XML 要素に置き換えます。  
+ この例では、「 [方法: X.509 証明書を使用して Xml 要素を暗号化](how-to-encrypt-xml-elements-with-x-509-certificates.md)する」で説明されているメソッドを使用して暗号化された xml 要素を復号化します。  <> 要素を検索し、要素を復号化して `EncryptedData` から、要素を元のプレーンテキスト XML 要素に置き換えます。  
   
 この手順のコード例では、現在のユーザー アカウントのローカルの証明書ストアから X.509 証明書を使用して XML 要素を復号化しています。  この例では、メソッドを使用し <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> て、x.509 証明書を自動的に取得し、 `EncryptedKey` <> 要素の <> 要素に格納されているセッションキーを復号化し `EncryptedData` ます。  次に、<xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> メソッドは、自動的にセッション キーを使用して XML 要素を復号化します。  
   
@@ -72,7 +71,7 @@ ms.locfileid: "87555735"
   
 - .NET Framework を対象とするプロジェクトでは、への参照を含め `System.Security.dll` ます。
 
-- .NET Core または .NET 5 を対象とするプロジェクトでは、NuGet パッケージ[System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)をインストールします。
+- .NET Core または .NET 5 を対象とするプロジェクトでは、NuGet パッケージ [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)をインストールします。
 
 - 名前空間 <xref:System.Xml>、<xref:System.Security.Cryptography>、および <xref:System.Security.Cryptography.Xml> を含めます。  
   

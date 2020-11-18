@@ -1,19 +1,18 @@
 ---
 title: 抽象化 (抽象型およびインターフェイス)
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - interfaces [.NET Framework], abstract
 - abstract interfaces [.NET Framework]
 - abstract types [.NET Framework]
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
-ms.openlocfilehash: fd5b8fe10d0dcca5da3a2093f7be37f6d88b382a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6acefa2d4a2aed8fca5d0b7db634d393baac6b58
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280615"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821633"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>抽象化 (抽象型およびインターフェイス)
 抽象はコントラクトを記述する型ですが、コントラクトの完全な実装は提供しません。 抽象化は通常、抽象クラスまたは抽象インターフェイスとして実装され、適切に定義された一連の参照ドキュメントに含まれており、コントラクトを実装する型の必要なセマンティクスについて説明します。 .NET Framework の最も重要な抽象化には、、、などがあり <xref:System.IO.Stream> <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Object> ます。
@@ -26,7 +25,7 @@ ms.locfileid: "84280615"
 
  ただし、抽象化によって、他の拡張メカニズムが一致しないことが多い非常に強力な拡張性が提供されます。 これらは、プラグイン、制御の反転 (IoC)、パイプラインなど、さまざまなアーキテクチャパターンの中核になっています。 また、フレームワークのテスト性をテストするうえで非常に重要です。 優れた抽象化によって、単体テストの目的で、高い依存関係をスタブ化できます。 要約すると、抽象化は、最新のオブジェクト指向フレームワークによって検出された結果を処理します。
 
- ❌抽象化を利用して、抽象化を使用するいくつかの具象実装と Api を開発することによって、抽象化を提供しないでください。
+ ❌ 抽象化を利用して、抽象化を使用するいくつかの具象実装と Api を開発することによって、抽象化を提供しないでください。
 
  抽象化を設計するときは、抽象クラスとインターフェイスの間で慎重に選択する✔️ます。
 

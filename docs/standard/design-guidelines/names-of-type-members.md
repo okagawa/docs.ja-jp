@@ -2,7 +2,6 @@
 title: 型のメンバーの名前
 description: メソッド、プロパティ、イベント、フィールドなど、.NET での型のメンバーの名前付けのガイドラインについて説明します。
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - events [.NET Framework], names
 - methods [.NET Framework], names
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: de613673989bd174ac80adda566d04600059642d
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 85f3137b4a8d75de92b12d6535415743395db890
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662499"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820914"
 ---
 # <a name="names-of-type-members"></a>型のメンバーの名前
 型は次のメンバーで構成されています: メソッド、プロパティ、イベント、コンストラクター、フィールド。 次のセクションは、型のメンバーに名前を付けるためのガイドラインを示しています。
@@ -41,7 +40,7 @@ public class String {
 
  名詞、名詞句、または形容詞を使用してプロパティに名前を指定する✔️ます。
 
- ❌次の例のように、"Get" メソッドの名前と一致するプロパティがありません。
+ ❌ 次の例のように、"Get" メソッドの名前と一致するプロパティがありません。
 
  `public string TextWriter { get {...} set {...} }` `public string GetTextWriter(int value) { ... }`
 
@@ -73,7 +72,7 @@ public class Control {
 
  たとえば、ウィンドウを閉じる前に発生するクローズ イベントは `Closing` と呼ばれ、ウィンドウを閉じた後に発生するクローズ イベントは `Closed` と呼ばれます。
 
- ❌"Before" または "After" プレフィックスまたは事後修正を使用して、イベントの前後を示すことはできません。 前述のように、現在形と過去形を使用します。
+ ❌ "Before" または "After" プレフィックスまたは事後修正を使用して、イベントの前後を示すことはできません。 前述のように、現在形と過去形を使用します。
 
  次の例に示すように、イベントハンドラー (イベントの種類として使用されるデリゲート) に "EventHandler" サフィックスを付ける✔️ます。
 
@@ -92,7 +91,7 @@ public class Control {
 
  ✔️は、名詞、名詞句、または形容詞を使用してフィールドに名前を指定します。
 
- ❌フィールド名にはプレフィックスを使用しないでください。
+ ❌ フィールド名にはプレフィックスを使用しないでください。
 
  たとえば、静的フィールドを示すために、"g_" や "s_" を使用しないでください。
 

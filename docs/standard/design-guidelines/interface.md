@@ -1,18 +1,17 @@
 ---
 title: インターフェイスのデザイン
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - interfaces [.NET Framework], design guidelines
 - type design guidelines, interfaces
 - class library design guidelines [.NET Framework], interfaces
 ms.assetid: a016bd18-6710-4358-9438-9f190a295392
-ms.openlocfilehash: f589d47d5b945179430275598996b2fb77e92848
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9f8ff38d5825091d4d5d3716ed6025a8d04c592d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289032"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821009"
 ---
 # <a name="interface-design"></a>インターフェイスのデザイン
 ほとんどの Api はクラスと構造体を使用してモデル化されていますが、インターフェイスがより適している場合や、唯一のオプションである場合もあります。
@@ -25,7 +24,7 @@ ms.locfileid: "84289032"
 
  他の型から既に継承されている型で機能をサポートする必要がある場合は、インターフェイスを定義することを✔️してください。
 
- ❌マーカーインターフェイス (メンバーのないインターフェイス) は使用しないでください。
+ ❌ マーカーインターフェイス (メンバーのないインターフェイス) は使用しないでください。
 
  クラスを特定の特性 (マーカー) としてマークする必要がある場合は、一般に、インターフェイスではなくカスタム属性を使用します。
 
@@ -37,7 +36,7 @@ ms.locfileid: "84289032"
 
  これにより、インターフェイスの設計を検証できます。 たとえば、は <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> インターフェイスを使用し <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> ます。
 
- ❌以前に出荷されたインターフェイスにメンバーを追加しないでください。
+ ❌ 以前に出荷されたインターフェイスにメンバーを追加しないでください。
 
  これにより、インターフェイスの実装が中断されます。 バージョン管理の問題を回避するために、新しいインターフェイスを作成する必要があります。
 

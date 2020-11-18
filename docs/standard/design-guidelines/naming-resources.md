@@ -2,7 +2,6 @@
 title: リソースに名前を付ける
 description: .NET でのリソースの名前付けガイドラインを確認します。これは、プロパティの名前付けのガイドラインに似ています。
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - names [.NET Framework], localized resources
 - localization, naming guidelines
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - global applications, naming guidelines
 - international applications, naming guidelines
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
-ms.openlocfilehash: 765337bcf9fad4f9a8c9272a15b5c77d02770471
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: c01e041edbf30813c477e579867abb9099ce0528
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768249"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820853"
 ---
 # <a name="naming-resources"></a>リソースに名前を付ける
 ローカライズ可能なリソースは、プロパティのように特定のオブジェクトを介して参照できるので、リソースの名前付けガイドラインはプロパティガイドラインに似ています。
@@ -24,7 +23,7 @@ ms.locfileid: "84768249"
 
  ✔️は、短い識別子ではなく説明を入力します。
 
- ❌メインの CLR 言語の言語固有のキーワードは使用しないでください。
+ ❌ メインの CLR 言語の言語固有のキーワードは使用しないでください。
 
  ✔️リソースには英数字とアンダースコアのみを使用します。
 

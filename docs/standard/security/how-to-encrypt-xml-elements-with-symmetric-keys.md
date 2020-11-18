@@ -1,7 +1,6 @@
 ---
 title: '方法: 共通キーで XML 要素を暗号化する'
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,18 +14,18 @@ helpviewer_keywords:
 - XML encryption
 - Advanced Encryption Standard algorithm
 ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
-ms.openlocfilehash: dd69ec6a5317f7f6f800cd225d920a1934c77a0c
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: cfda1835a1390b025f2ee0509a91c59104a77ae9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555814"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820229"
 ---
 # <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>方法: 共通キーで XML 要素を暗号化する
 
 <xref:System.Security.Cryptography.Xml> 名前空間のクラスを使用して、XML ドキュメント内の要素を暗号化することができます。  XML の暗号化を使用すると、データが簡単に読み取られる心配をせずに機密性の高い XML を格納またはトランスポートできます。  この手順では、Advanced Encryption Standard (AES) アルゴリズムを使用して XML 要素を暗号化します。  
   
- この手順で暗号化された XML 要素を復号化する方法については、「[方法: 対称キーを使用して Xml 要素を復号化](how-to-decrypt-xml-elements-with-symmetric-keys.md)する」を参照してください。  
+ この手順で暗号化された XML 要素を復号化する方法については、「 [方法: 対称キーを使用して Xml 要素を復号化](how-to-decrypt-xml-elements-with-symmetric-keys.md)する」を参照してください。  
   
  XML データの暗号化に AES のような対称アルゴリズムを使用するときは、XML データの暗号化と復号化に同じキーを使用する必要があります。  この手順の例では、暗号化された XML が同じキーを使用して復号化されること、および暗号化側と復号化側で使用するアルゴリズムとキーが一致していることを前提としています。  この例では、暗号化された XML 内での AES キーの格納や暗号化は行いません。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "87555814"
   
 - .NET Framework を対象とするプロジェクトでは、への参照を含め `System.Security.dll` ます。
 
-- .NET Core または .NET 5 を対象とするプロジェクトでは、NuGet パッケージ[System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)をインストールします。
+- .NET Core または .NET 5 を対象とするプロジェクトでは、NuGet パッケージ [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)をインストールします。
   
 - 名前空間 <xref:System.Xml>、<xref:System.Security.Cryptography>、および <xref:System.Security.Cryptography.Xml> を含めます。  
   
@@ -104,7 +103,7 @@ ms.locfileid: "87555814"
   
 ## <a name="see-also"></a>関連項目
 
-- [暗号化モデル](cryptography-model.md)-基本クラスライブラリにおける暗号化の実装方法について説明します。
+- [暗号化モデル](cryptography-model.md) -基本クラスライブラリにおける暗号化の実装方法について説明します。
 - [Cryptographic Services](cryptographic-services.md)
 - [クロスプラットフォーム暗号化](cross-platform-cryptography.md)
 - <xref:System.Security.Cryptography.Xml>

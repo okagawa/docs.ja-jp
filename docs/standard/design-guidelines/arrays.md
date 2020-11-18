@@ -1,23 +1,22 @@
 ---
 title: 配列
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], arrays
 - arrays [.NET Framework], usage guidelines
 - empty arrays
 ms.assetid: 66a1b3d8-6f3f-4715-b235-e1ff95e32d8e
-ms.openlocfilehash: 30277507050091de6b1e9293401d61ac5e351a1f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c3545c609b6544e6528bbae08889d0ef20473802
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280622"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821607"
 ---
 # <a name="arrays"></a>配列
-✔️は、パブリック Api で配列に対してコレクションを使用することをお勧めします。 コレクション[セクションで](guidelines-for-collections.md)は、コレクションと配列のどちらかを選択する方法について詳しく説明します。
+✔️は、パブリック Api で配列に対してコレクションを使用することをお勧めします。 コレクション [セクションで](guidelines-for-collections.md) は、コレクションと配列のどちらかを選択する方法について詳しく説明します。
 
- ❌読み取り専用の配列フィールドは使用しないでください。 フィールド自体は読み取り専用であり、変更することはできませんが、配列内の要素は変更できます。
+ ❌ 読み取り専用の配列フィールドは使用しないでください。 フィールド自体は読み取り専用であり、変更することはできませんが、配列内の要素は変更できます。
 
  ✔️多次元配列の代わりにジャグ配列を使用することを検討してください。
 

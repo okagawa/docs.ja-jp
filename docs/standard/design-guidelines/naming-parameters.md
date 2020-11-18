@@ -2,17 +2,16 @@
 title: パラメーターに名前を付ける
 description: パラメーターの名前付けのガイドラインについて説明します。 たとえば、説明的なパラメーター名 & camel 形式で使用し、型ではなく意味に基づいて名前を付ける & を検討します。
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - parameters, names
 - names [.NET Framework], parameters
 ms.assetid: ca3c956e-725a-441b-b4e3-eab5d472f41c
-ms.openlocfilehash: 54f37c4d6a0f9a6931fa69d612bf0e45bf1f2ce7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b62cfbd58f671745054c557041e5d60af345c8d3
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84583519"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820840"
 ---
 # <a name="naming-parameters"></a>パラメーターに名前を付ける
 読みやすくするために、パラメーター名のガイドラインに従うことが重要です。これは、ビジュアルデザインツールが Intellisense とクラス参照機能を提供する場合に、ドキュメントとデザイナーにパラメーターが表示されるためです。
@@ -30,7 +29,7 @@ ms.locfileid: "84583519"
 
  ✔️演算子を使用すると、有意な値が追加されます。
 
- ❌演算子のオーバーロードパラメーター名には、省略形または数値インデックスを使用しないでください。
+ ❌ 演算子のオーバーロードパラメーター名には、省略形または数値インデックスを使用しないでください。
 
  *©2005、2009 Microsoft Corporation の部分。すべての権限が予約されています。*
 

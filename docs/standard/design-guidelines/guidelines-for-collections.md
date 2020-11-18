@@ -1,25 +1,24 @@
 ---
 title: コレクションに関するガイドライン
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-ms.openlocfilehash: cc853be2310cf72c4eb559f625c6a37a44ed7db8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2306462d933e71d0d23021a0e036e8cc23100c68
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276050"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821087"
 ---
 # <a name="guidelines-for-collections"></a>コレクションに関するガイドライン
 一般的な特性を持つオブジェクトのグループを操作するために特に設計された型はすべて、コレクションと見なすことができます。 ほとんどの場合、このような型はまたはを実装するのに適してい <xref:System.Collections.IEnumerable> <xref:System.Collections.Generic.IEnumerable%601> ます。したがって、このセクションでは、これらのインターフェイスのいずれかまたは両方を実装する型のみをコレクションにすることを検討します。
 
- ❌パブリック Api では、弱く型指定されたコレクションを使用しないでください。
+ ❌ パブリック Api では、弱く型指定されたコレクションを使用しないでください。
 
  コレクションアイテムを表すすべての戻り値とパラメーターの型は、その基本型ではなく、完全な項目の種類である必要があります (これはコレクションのパブリックメンバーにのみ適用されます)。
 
  ❌<xref:System.Collections.ArrayList>パブリック api でまたはを使用しない <xref:System.Collections.Generic.List%601> でください。
 
- これらの型は、パブリック Api ではなく、内部実装で使用するように設計されたデータ構造です。 `List<T>`は、Api と柔軟性の cleanness を犠牲にしてパフォーマンスと性能を高めるために最適化されています。 たとえば、を返した場合、 `List<T>` クライアントコードがコレクションを変更したときに通知を受け取ることはできません。 また、は、 `List<T>` <xref:System.Collections.Generic.List%601.BinarySearch%2A> 多くのシナリオでは役に立たない、または適用できないなど、多くのメンバーを公開します。 次の2つのセクションでは、パブリック Api 専用に設計された型 (抽象化) について説明します。
+ これらの型は、パブリック Api ではなく、内部実装で使用するように設計されたデータ構造です。 `List<T>` は、Api と柔軟性の cleanness を犠牲にしてパフォーマンスと性能を高めるために最適化されています。 たとえば、を返した場合、 `List<T>` クライアントコードがコレクションを変更したときに通知を受け取ることはできません。 また、は、 `List<T>` <xref:System.Collections.Generic.List%601.BinarySearch%2A> 多くのシナリオでは役に立たない、または適用できないなど、多くのメンバーを公開します。 次の2つのセクションでは、パブリック Api 専用に設計された型 (抽象化) について説明します。
 
  ❌`Hashtable`パブリック api でまたはを使用しない `Dictionary<TKey,TValue>` でください。
 
@@ -29,17 +28,17 @@ ms.locfileid: "84276050"
 
  以外のメソッドから列挙子を返す型は `GetEnumerator` 、ステートメントでは使用できません `foreach` 。
 
- ❌との両方を `IEnumerator<T>` `IEnumerable<T>` 同じ型に実装しないでください。 これは、非ジェネリックインターフェイスとにも当てはまり `IEnumerator` `IEnumerable` ます。
+ ❌ との両方を `IEnumerator<T>` `IEnumerable<T>` 同じ型に実装しないでください。 これは、非ジェネリックインターフェイスとにも当てはまり `IEnumerator` `IEnumerable` ます。
 
 ## <a name="collection-parameters"></a>コレクションパラメーター
  ✔️は、パラメーター型として可能な限り、最も特殊化されていない型を使用します。 コレクションをパラメーターとして受け取るほとんどのメンバーは、インターフェイスを使用し `IEnumerable<T>` ます。
 
- ❌プロパティに <xref:System.Collections.Generic.ICollection%601> アクセスする場合は、パラメーターとしてまたはを使用しない <xref:System.Collections.ICollection> で `Count` ください。
+ ❌ プロパティに <xref:System.Collections.Generic.ICollection%601> アクセスする場合は、パラメーターとしてまたはを使用しない <xref:System.Collections.ICollection> で `Count` ください。
 
  代わりに、またはを使用して、 `IEnumerable<T>` `IEnumerable` オブジェクトがまたはを実装しているかどうかを動的に確認してください `ICollection<T>` `ICollection` 。
 
 ## <a name="collection-properties-and-return-values"></a>コレクションのプロパティと戻り値
- ❌設定可能なコレクションプロパティを指定しないでください。
+ ❌ 設定可能なコレクションプロパティを指定しないでください。
 
  コレクションの内容を置き換えるには、まずコレクションをクリアしてから、新しい内容を追加します。 コレクション全体を置き換えることが一般的なシナリオである場合は、コレクションに対してメソッドを指定することを検討してください `AddRange` 。
 
@@ -65,14 +64,14 @@ ms.locfileid: "84276050"
 
  キー付きコレクションは、通常、メモリフットプリントが大きいため、メモリのオーバーヘッドがキーの利点よりも大きなメリットを上回る場合は使用しないでください。
 
- ❌コレクションプロパティから、またはコレクションを返すメソッドからは、null 値を返さないでください。 代わりに空のコレクションまたは空の配列を返します。
+ ❌ コレクションプロパティから、またはコレクションを返すメソッドからは、null 値を返さないでください。 代わりに空のコレクションまたは空の配列を返します。
 
  一般的な規則として、null と空の (0 項目) のコレクションまたは配列は同じように扱う必要があります。
 
 ### <a name="snapshots-versus-live-collections"></a>スナップショットとライブコレクション
  ある時点の状態を表すコレクションは、スナップショットコレクションと呼ばれます。 たとえば、データベースクエリから返された行を含むコレクションはスナップショットです。 常に現在の状態を表すコレクションは、live collections と呼ばれます。 たとえば、項目のコレクション `ComboBox` はライブコレクションです。
 
- ❌プロパティからスナップショットコレクションを返さないようにします。 プロパティはライブコレクションを返します。
+ ❌ プロパティからスナップショットコレクションを返さないようにします。 プロパティはライブコレクションを返します。
 
  プロパティの getter は、非常に軽量な操作である必要があります。 スナップショットを返すには、O (n) 操作で内部コレクションのコピーを作成する必要があります。
 
@@ -91,7 +90,7 @@ ms.locfileid: "84276050"
 
  ✔️バイトのコレクションではなく、バイト配列を使用します。
 
- ❌プロパティ getter が呼び出されるたびに、プロパティが新しい配列 (内部配列のコピーなど) を返す必要がある場合は、プロパティに配列を使用しないでください。
+ ❌ プロパティ getter が呼び出されるたびに、プロパティが新しい配列 (内部配列のコピーなど) を返す必要がある場合は、プロパティに配列を使用しないでください。
 
 ## <a name="implementing-custom-collections"></a>カスタムコレクションの実装
  `Collection<T>` `ReadOnlyCollection<T>` `KeyedCollection<TKey,TItem>` 新しいコレクションをデザインするときに、、、またはから継承することを検討✔️。
@@ -102,12 +101,12 @@ ms.locfileid: "84276050"
 
  `IList` `ICollection` これらのインターフェイスを入力として使用する api にコレクションが渡されることが多い場合は、非ジェネリックコレクションインターフェイス (および) を実装する✔️を検討してください。
 
- ❌コレクションの概念とは関係のない複雑な Api を使用して、型にコレクションインターフェイスを実装しないようにします。
+ ❌ コレクションの概念とは関係のない複雑な Api を使用して、型にコレクションインターフェイスを実装しないようにします。
 
- ❌などの非ジェネリック基本コレクションから継承しません `CollectionBase` 。 代わりに `Collection<T>`、`ReadOnlyCollection<T>`、および `KeyedCollection<TKey,TItem>` 型を使用してください。
+ ❌ などの非ジェネリック基本コレクションから継承しません `CollectionBase` 。 代わりに `Collection<T>`、`ReadOnlyCollection<T>`、および `KeyedCollection<TKey,TItem>` 型を使用してください。
 
 ### <a name="naming-custom-collections"></a>カスタムコレクションの名前付け
- コレクション (を実装する型 `IEnumerable` ) は主に2つの理由で作成されます。 (1) 構造固有の操作を使用して新しいデータ構造を作成し、多くの場合、既存のデータ構造 (、、など) とは異なるパフォーマンス特性を作成し、 <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.LinkedList%601> <xref:System.Collections.Generic.Stack%601> (2) 特定の項目セットを保持するための特殊なコレクションを作成 <xref:System.Collections.Specialized.StringCollection> します データ構造は、アプリケーションとライブラリの内部実装で最もよく使用されます。 特に、特化されたコレクションは Api で公開されます (プロパティとパラメーターの型として)。
+ コレクション (を実装する型 `IEnumerable` ) は主に2つの理由で作成されます。 (1) 構造固有の操作を使用して新しいデータ構造を作成し、多くの場合、既存のデータ構造 (、、など) とは異なるパフォーマンス特性を作成し、  <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.LinkedList%601> <xref:System.Collections.Generic.Stack%601> (2) 特定の項目セットを保持するための特殊なコレクションを作成  <xref:System.Collections.Specialized.StringCollection> します データ構造は、アプリケーションとライブラリの内部実装で最もよく使用されます。 特に、特化されたコレクションは Api で公開されます (プロパティとパラメーターの型として)。
 
  ✔️は、またはを実装する抽象化の名前に "Dictionary" サフィックスを使用し `IDictionary` `IDictionary<TKey,TValue>` ます。
 
@@ -115,7 +114,7 @@ ms.locfileid: "84276050"
 
  ✔️カスタムデータ構造には、適切なデータ構造名を使用します。
 
- ❌コレクションの抽象化の名前に "LinkedList" や "Hashtable" などの特定の実装を意味するサフィックスは使用しないようにしてください。
+ ❌ コレクションの抽象化の名前に "LinkedList" や "Hashtable" などの特定の実装を意味するサフィックスは使用しないようにしてください。
 
  コレクション名の前に項目の種類の名前を付けることを✔️してください。 たとえば、(を実装する) 型の項目を格納するコレクションには `Address` `IEnumerable<Address>` という名前を付ける必要があり `AddressCollection` ます。 項目の種類がインターフェイスの場合は、項目の種類の "I" プレフィックスを省略できます。 したがって、項目のコレクションを <xref:System.IDisposable> 呼び出すことができ `DisposableCollection` ます。
 

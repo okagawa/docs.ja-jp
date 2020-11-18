@@ -1,17 +1,16 @@
 ---
 title: 抽象化の実装用の基本クラス
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - abstractions [.NET Framework]
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-ms.openlocfilehash: 6af63373b7cbb571265f14ac36028953525fcc7f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 314fcd0e1e91d1fc869453dd442ecaa72f91955d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280570"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821594"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>抽象化の実装用の基本クラス
 厳密に言えば、クラスは、別のクラスが派生しているときに基底クラスになります。 ただし、このセクションでは、基底クラスは、主に共通の抽象化を提供するか、継承を使用して他のクラスが既定の実装を再利用することを目的として設計されたクラスです。 基本クラスは、通常、階層のルートにある抽象化と下部に複数のカスタム実装の間で、継承階層の中間に配置されます。
@@ -26,7 +25,7 @@ ms.locfileid: "84280570"
 
  ✔️、主要なシナリオの種類とは別の名前空間に基本クラスを配置することを検討してください。 定義上、基本クラスは高度な拡張シナリオを対象としているため、ほとんどのユーザーにとっては興味がありません。
 
- ❌クラスがパブリック Api での使用を目的としている場合は、基底クラスに "Base" サフィックスを付けるのは避けてください。
+ ❌ クラスがパブリック Api での使用を目的としている場合は、基底クラスに "Base" サフィックスを付けるのは避けてください。
 
  *©2005、2009 Microsoft Corporation の部分。すべての権限が予約されています。*
 

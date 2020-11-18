@@ -2,7 +2,6 @@
 title: 一般的な名前付け規則
 description: 単語の選択に関連する一般的な名前付け規則、略語と頭字語の使用に関するガイドライン、および言語固有の名前を回避するためのガイダンスを使用します。
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - names [.NET Framework], conflicts
 - type names, conflicts
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-ms.openlocfilehash: b7f06a57c57800afcfa7febf9452094b4ad5ddc1
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: ff9efd40b630e8e25963b3d69b026feea2823ece
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769081"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821100"
 ---
 # <a name="general-naming-conventions"></a>一般的な名前付け規則
 
@@ -35,22 +34,22 @@ ms.locfileid: "84769081"
 
  プロパティ名 `CanScrollHorizontally` は、 `ScrollableX` (X 軸へのあいまいな参照) よりも優れています。
 
- ❌アンダースコア、ハイフン、またはその他の英数字以外の文字は使用しないでください。
+ ❌ アンダースコア、ハイフン、またはその他の英数字以外の文字は使用しないでください。
 
- ❌ハンガリー表記法は使用しないでください。
+ ❌ ハンガリー表記法は使用しないでください。
 
- ❌広く使用されているプログラミング言語のキーワードと競合する識別子を使用しないようにします。
+ ❌ 広く使用されているプログラミング言語のキーワードと競合する識別子を使用しないようにします。
 
  共通言語仕様 (CLS) の規則4に従って、すべての準拠言語は、その言語のキーワードを識別子として使用する名前付き項目へのアクセスを許可する機構を提供する必要があります。 たとえば、C# では、この場合、エスケープメカニズムとして @ sign が使用されます。 ただし、エスケープシーケンスではなく1つのメソッドを使用する方がはるかに困難であるため、一般的なキーワードを避けることをお勧めします。
 
 ## <a name="using-abbreviations-and-acronyms"></a>省略形と頭字語の使用
- ❌識別子名の一部として省略形または短縮形を使用しないでください。
+ ❌ 識別子名の一部として省略形または短縮形を使用しないでください。
 
  たとえば、で `GetWindow` はなくを使用 `GetWin` します。
 
- ❌広く受け入れられていない頭字語は使用せず、必要な場合にのみ使用してください。
+ ❌ 広く受け入れられていない頭字語は使用せず、必要な場合にのみ使用してください。
 
-## <a name="avoiding-language-specific-names"></a>言語固有の名前の回避
+## <a name="avoiding-language-specific-names"></a>Language-Specific 名の回避
  型名の言語固有のキーワードではなく、意味的に興味深い名前を使用する✔️ます。
 
  たとえば、 `GetLength` はよりもわかりやすい名前です `GetInt` 。
@@ -63,9 +62,9 @@ ms.locfileid: "84769081"
 |---------|------------------|-----------|---------|
 |**sbyte**|**SByte**|**char**|**SByte**|
 |**byte**|**Byte**|**unsigned char**|**Byte**|
-|**short**|**短い**|**short**|**Int16**|
+|**short**|**Short**|**short**|**Int16**|
 |**ushort**|**UInt16**|**unsigned short**|**UInt16**|
-|**int**|**整数**|**int**|**Int32**|
+|**int**|**Integer**|**int**|**Int32**|
 |**uint**|**UInt32**|**unsigned int**|**UInt32**|
 |**long**|**Long**|**__int64**|**Int64**|
 |**ulong**|**UInt64**|**unsigned __int64**|**UInt64**|
@@ -91,7 +90,7 @@ ms.locfileid: "84769081"
 
  ✔️は、既存の API の新しいバージョンを示すために数字のサフィックスを使用します。特に、API の既存の名前が意味のある唯一の名前 (業界標準の場合) であり、意味のあるサフィックス (または名前の変更) を追加することは適切ではありません。
 
- ❌同じ API の以前のバージョンと区別するために、識別子に "Ex" (または同様の) サフィックスを使用しないでください。
+ ❌ 同じ API の以前のバージョンと区別するために、識別子に "Ex" (または同様の) サフィックスを使用しないでください。
 
  ✔️は、32ビット整数ではなく64ビット整数 (long 整数) で動作する Api のバージョンを導入するときに、"64" サフィックスを使用します。 既存の32ビット API が存在する場合にのみ、このアプローチを行う必要があります。これは、64ビットバージョンのみの新しい Api では使用しないでください。
 

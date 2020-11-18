@@ -6,12 +6,12 @@ helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-ms.openlocfilehash: 50ba2f51ea2fb935c2a5db27ad6249e87cb86dc7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e24d3bc07c7292625813828d598ed43952155e4f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554659"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822361"
 ---
 # <a name="net-framework-performance"></a>.NET Framework のパフォーマンス
 優れたパフォーマンスのアプリを作成する場合は、アプリのその他の機能を設計する場合と同様に、パフォーマンスについて設計および計画する必要があります。 Microsoft が提供するツールを使用して、アプリのパフォーマンスを測定し、必要に応じて、メモリの使用、コードのスループット コード、および応答性を向上させることができます。 ここでは、Microsoft が提供するパフォーマンス分析ツールの一覧と、アプリ開発の特定の領域のパフォーマンスに関する他のトピックへのリンクを示します。  
@@ -34,7 +34,7 @@ ms.locfileid: "90554659"
 |Visual Studio パフォーマンス分析|Windows オペレーティング システムを実行しているコンピューターに配置されている .NET Framework アプリの CPU 使用量の分析に使用します。<br /><br /> このツールは、Visual Studio でプロジェクトを開いた後、**[デバッグ]** メニューから使用できます。 詳細については、「[Performance Explorer](/visualstudio/profiling/performance-explorer)」(パフォーマンス エクスプローラー) を参照してください。 **注:** Windows Phone を対象とする場合は、Windows Phone アプリケーション分析を使用します (次の行を参照してください)。|  
 |Windows Phone アプリケーション分析|Windows Phone アプリの CPU やメモリ、ネットワーク データ転送率、アプリの応答性、バッテリの使用量の分析に使用します。<br /><br /> このツールは、[Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773) のインストール後に、Visual Studio の Windows Phone プロジェクトの **[デバッグ]** メニューから使用できます。 詳細については、「 [Windows Phone 8 のアプリプロファイリング](/previous-versions/windows/apps/jj215908(v=vs.105))」を参照してください。|  
 |[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|CPU とメモリ関連のパフォーマンスの問題を識別するために使用します。 このツールは、Windows イベント トレーシング (ETW) と CLR プロファイル API を使用して、メモリと CPU の高度な調査およびガベージ コレクションや JIT コンパイルに関する情報を提供します。 PerfView を使用する方法の詳細については、アプリに含まれるチュートリアルやヘルプ ファイル、[Channel 9 のビデオ チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial)、および[ブログの投稿](/archive/blogs/vancem/)を参照してください。<br /><br /> メモリ固有の問題については、[PerfView を使用したメモリの調査に関するビデオ チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots)を参照してください。|  
-|[Windows Performance Analyzer](https://www.microsoft.com/download/details.aspx?id=30652)|複数のアプリが同じコンピューターで実行されているときに、アプリのメモリやストレージの使用量などの全体的なシステム パフォーマンスを特定するために使用します。 このツールは、windows 8 用の Windows アセスメント & amp; デプロイメントキット (ADK) の一部としてダウンロードセンターから入手できます。 詳細については、「[Windows Performance Analyzer (Windows パフォーマンス アナライザー)](/windows-hardware/test/wpt/windows-performance-analyzer)」を参照してください。|
+|[Windows Performance Analyzer](https://www.microsoft.com/p/windows-performance-analyzer/9n0w1b2bxgnz?activetab=pivot:overviewtab)|複数のアプリが同じコンピューターで実行されているときに、アプリのメモリやストレージの使用量などの全体的なシステム パフォーマンスを特定するために使用します。 このツールは、windows 8 用の Windows アセスメント & amp; デプロイメントキット (ADK) の一部としてダウンロードセンターから入手できます。 詳細については、「[Windows Performance Analyzer (Windows パフォーマンス アナライザー)](/windows-hardware/test/wpt/windows-performance-analyzer)」を参照してください。|
   
 ### <a name="event-tracing-for-windows-etw"></a>Windows イベント トレーシング (ETW)  
  ETW は、実行中のコードに関する診断情報を取得できるようにする手法であり、前に説明したパフォーマンス ツールの多くで必要なテクノロジです。 ETW は、特定のイベントが .NET Framework アプリおよび Windows によって発生したときにログを作成します。 ETW を使用すると、ログの記録を動的に有効または無効にすることができ、稼動環境でアプリを再起動せずに詳細なトレースを実行できます。 .NET Framework は ETW イベントをサポートしており、ETW はパフォーマンス データを生成する多くのプロファイル ツールやパフォーマンス ツールで使用されます。 これらのツールは、ETW イベントを有効または無効にするため、ETW イベントの知識が役立ちます。 アプリの特定のコンポーネントに関するパフォーマンス情報を収集するために、特定の ETW イベントを使用できます。 .NET Framework での ETW のサポートの詳細については、「[共通言語ランタイムの ETW イベント](etw-events-in-the-common-language-runtime.md)」と「[タスク並列ライブラリおよび PLINQ での ETW イベント](etw-events-in-task-parallel-library-and-plinq.md)」を参照してください。  

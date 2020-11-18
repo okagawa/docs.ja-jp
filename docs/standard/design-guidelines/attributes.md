@@ -1,20 +1,19 @@
 ---
 title: 属性
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-ms.openlocfilehash: 3c0e1b8c20042c085d4ace996a084cbd464d3b21
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: cc4752066124a0ea8081390bfb5f3791d21ec96d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617562"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821620"
 ---
 # <a name="attributes"></a>属性
-<xref:System.Attribute?displayProperty=nameWithType>は、カスタム属性を定義するために使用される基本クラスです。
+<xref:System.Attribute?displayProperty=nameWithType> は、カスタム属性を定義するために使用される基本クラスです。
 
  属性は、アセンブリ、型、メンバー、パラメーターなどのプログラミング要素に追加できる注釈です。 これらは、アセンブリのメタデータに格納され、リフレクション Api を使用して実行時にアクセスできます。 たとえば、フレームワークはを定義してい <xref:System.ObsoleteAttribute> ます。これを型またはメンバーに適用して、型またはメンバーが非推奨とされたことを示すことができます。
 
@@ -34,11 +33,11 @@ ms.locfileid: "85617562"
 
  必須の引数に対応するプロパティを初期化するには、コンストラクターパラメーターを指定✔️ます。 各パラメーターには、対応するプロパティと同じ名前 (大文字と小文字が異なる) を指定する必要があります。
 
- ❌省略可能な引数に対応するプロパティを初期化するコンストラクターパラメーターを指定しないでください。
+ ❌ 省略可能な引数に対応するプロパティを初期化するコンストラクターパラメーターを指定しないでください。
 
  つまり、コンストラクターとセッターの両方で設定できるプロパティはありません。 このガイドラインでは、省略可能な引数と必須の引数を明確に指定します。これにより、2つの方法で同じことを行うことが回避されます。
 
- ❌カスタム属性コンストラクターのオーバーロードは避けてください。
+ ❌ カスタム属性コンストラクターのオーバーロードは避けてください。
 
  コンストラクターが1つだけの場合は、どの引数が必須であり、省略可能であるかをユーザーに明確に伝えます。
 

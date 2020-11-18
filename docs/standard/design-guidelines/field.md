@@ -1,18 +1,17 @@
 ---
 title: フィールドのデザイン
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - fields, design guidelines
 - read-only fields
 - member design guidelines, fields
 ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
-ms.openlocfilehash: 3a5ae985ab161899fbb5e96f9b0ef0cfa90b957c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6e58274f32ea129d3271c11e321bdbd454d2406a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289747"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821113"
 ---
 # <a name="field-design"></a>フィールドのデザイン
 カプセル化の原則は、オブジェクト指向設計で最も重要な概念の1つです。 この原則は、オブジェクト内に格納されているデータが、そのオブジェクトに対してのみアクセスできる必要があることを示しています。
@@ -21,7 +20,7 @@ ms.locfileid: "84289747"
 
  この厳格な制限から、定数および静的な読み取り専用フィールドを除外します。このようなフィールドは、ほとんどの場合定義によって変更する必要がないためです。
 
- ❌パブリックまたは保護されているインスタンスフィールドは指定しないでください。
+ ❌ パブリックまたは保護されているインスタンスフィールドは指定しないでください。
 
  フィールドにアクセスするためのプロパティは、パブリックまたは保護するのではなく、指定する必要があります。
 
@@ -33,7 +32,7 @@ ms.locfileid: "84289747"
 
  型の定義済みのインスタンスがある場合は、型自体のパブリック読み取り専用の静的フィールドとして宣言します。
 
- ❌変更可能な型のインスタンスをフィールドに割り当てないでください `readonly` 。
+ ❌ 変更可能な型のインスタンスをフィールドに割り当てないでください `readonly` 。
 
  変更可能な型は、インスタンス化された後に変更できるインスタンスを持つ型です。 たとえば、配列、ほとんどのコレクション、およびストリームは変更可能な型ですが、、、 <xref:System.Int32?displayProperty=nameWithType> <xref:System.Uri?displayProperty=nameWithType> および <xref:System.String?displayProperty=nameWithType> はすべて変更できません。 参照型フィールドの読み取り専用修飾子は、フィールドに格納されているインスタンスを置換しないようにします。ただし、インスタンスを変更する呼び出し元のメンバーによって、フィールドのインスタンスデータが変更されるのを防ぐことはできません。
 

@@ -1,19 +1,18 @@
 ---
 title: 機能拡張のデザイン
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - extending class libraries
 - extensibility with class libraries in .NET Framework
 - class library design guidelines [.NET Framework], extensibility
 - class library extensibility [.NET Framework]
 ms.assetid: 1cdb8740-871a-456c-9bd9-db96ca8d79b3
-ms.openlocfilehash: 406c15b6ce42b637ed1bbb61761d05e040995579
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9e75ef433f3bd9af34e8dd40331a8267755e59fe
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280245"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821386"
 ---
 # <a name="designing-for-extensibility"></a>機能拡張のデザイン
 フレームワークを設計する際の重要な要素の1つは、フレームワークの拡張性が慎重に考慮されていることです。 これには、さまざまな拡張メカニズムに関連するコストと利点を理解する必要があります。 この章では、拡張メカニズム (サブクラス化、イベント、仮想メンバー、コールバックなど) を、フレームワークの要件を最もよく満たすことができるかどうかを判断するのに役立ちます。  

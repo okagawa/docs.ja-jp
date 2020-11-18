@@ -1,7 +1,6 @@
 ---
 title: '方法: X.509 証明書で XML 要素を暗号化する'
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
-ms.openlocfilehash: c978bea7336e64d6622aca4d21c7ef3317d73957
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 5007404c1e6e872c169ce7ce71425f14d20d3a25
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555722"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820190"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>方法: X.509 証明書で XML 要素を暗号化する
 
@@ -35,7 +34,7 @@ XML 要素の暗号化を解除するには、メソッドを呼び出します 
   
 ### <a name="to-encrypt-an-xml-element-with-an-x509-certificate"></a>X.509 証明書で XML 要素を暗号化するには  
 
-この例を実行するには、テスト証明書を作成して証明書ストアに保存する必要があります。 このタスクの手順は、Windows[証明書作成ツール (Makecert.exe)](/windows/desktop/SecCrypto/makecert)に対してのみ提供されています。
+この例を実行するには、テスト証明書を作成して証明書ストアに保存する必要があります。 このタスクの手順は、Windows [証明書作成ツール (Makecert.exe)](/windows/desktop/SecCrypto/makecert)に対してのみ提供されています。
 
 1. [Makecert.exe](/windows/desktop/SecCrypto/makecert)を使用してテストの x.509 証明書を生成し、ローカルユーザーストアに配置します。 交換キーを生成する必要があり、このキーをエクスポート可能にする必要があります。 次のコマンドを実行します。  
   
@@ -112,7 +111,7 @@ XML 要素の暗号化を解除するには、メソッドを呼び出します 
   
 - .NET Framework を対象とするプロジェクトでは、への参照を含め `System.Security.dll` ます。
 
-- .NET Core または .NET 5 を対象とするプロジェクトでは、NuGet パッケージ[System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)をインストールします。
+- .NET Core または .NET 5 を対象とするプロジェクトでは、NuGet パッケージ [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)をインストールします。
   
 - 名前空間 <xref:System.Xml>、<xref:System.Security.Cryptography>、および <xref:System.Security.Cryptography.Xml> を含めます。  
   
