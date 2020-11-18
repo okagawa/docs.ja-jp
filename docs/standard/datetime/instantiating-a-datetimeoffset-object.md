@@ -2,7 +2,6 @@
 title: DateTimeOffset オブジェクトのインスタンス化
 description: .NET で DateTimeOffset オブジェクトをインスタンス化 (インスタンスを作成) する方法について説明します。 日付 & 時刻リテラル、コンストラクター、暗黙の型変換、& について説明します。
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - DateTimeOffset structure, converting to DateTime
 - DateTimeOffset structure, instantiating
 ms.assetid: 9648375f-d368-4373-a976-3332ece00c0a
-ms.openlocfilehash: 4158a3d3bbd7ada87dd0c773cf9a0f5e001ad918
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: b0eae79e9c39694bdc87622a4c442083791c6109
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063626"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817810"
 ---
 # <a name="instantiating-a-datetimeoffset-object"></a>DateTimeOffset オブジェクトのインスタンス化
 

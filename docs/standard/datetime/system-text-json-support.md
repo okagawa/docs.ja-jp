@@ -1,7 +1,6 @@
 ---
 title: TimeOffset support in での DateTime と DateTimeOffset のサポート
 description: System.Text.Jsのライブラリでの DateTime 型と DateTimeOffset 型のサポートの概要について説明します。
-ms.technology: dotnet-standard
 author: layomia
 ms.author: laakinri
 ms.date: 07/22/2019
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 020e6903069da2c5d8761c86e890c4e9575a3fae
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 3f8161c40f21428a4a22bef09582754069f3a2b6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188758"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817537"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>TimeOffset support in での DateTime と DateTimeOffset のサポート
 
@@ -129,10 +128,10 @@ ms.locfileid: "93188758"
 |-----------------|-----------------------------|---------------------------------------------------------------------------------|
 | 年            | "yyyy"                      | 0001-9999                                                                       |
 | Month           | "MM"                        | 01-12                                                                           |
-| 日間             | "dd"                        | 01-28、01-29、01-30、01-31 (月/年)                                  |
+| 日             | "dd"                        | 01-28、01-29、01-30、01-31 (月/年)                                  |
 | 時間            | "HH"                        | 00-23                                                                           |
 | 分          | "mm"                        | 00-59                                                                           |
-| 秒          | "ss"                        | 00-59                                                                           |
+| Second          | "ss"                        | 00-59                                                                           |
 | 2番目の分数 | "FFFFFFF"                   | 最低1桁、最大16桁                                      |
 | 時間のオフセット     | "K"                         | "Z" または "(' + '/'-') HH ': ' mm '                                                |
 | 部分的な時間    | "HH ': ' mm ': ' ss [FFFFFFF]"     | UTC オフセット情報なしの時間                                             |

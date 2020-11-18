@@ -1,7 +1,6 @@
 ---
 title: '方法: 埋め込みリソースにタイム ゾーンを保存する'
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - time zone objects [.NET], serializing
 - time zone objects [.NET], saving
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
-ms.openlocfilehash: 3d355003b3e6309644fa1ccaf779b2e63b0523d2
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 23f86076b2858404f3dbc900d8c40a6509abe8db
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063405"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817602"
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>方法: 埋め込みリソースにタイム ゾーンを保存する
 
@@ -55,7 +54,7 @@ ms.locfileid: "93063405"
 
 9. 生成された .resx ファイルをアプリケーションの Visual Studio プロジェクトに追加します。
 
-10. Visual Studio の [ **プロパティ** ] ウィンドウを使用して、.resx ファイルの [ **ビルドアクション** ] プロパティが [ **埋め込みリソース** ] に設定されていることを確認します。
+10. Visual Studio の [ **プロパティ** ] ウィンドウを使用して、.resx ファイルの [ **ビルドアクション** ] プロパティが [ **埋め込みリソース**] に設定されていることを確認します。
 
 ## <a name="example"></a>例
 
@@ -68,7 +67,7 @@ ms.locfileid: "93063405"
 
 メソッドは、 <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> 完全なヘッダー情報を .NET XML リソースファイルに追加するため、既存のファイルにリソースを追加するために使用することはできません。 この例では、SerializedTimeZones ファイルを確認し、存在する場合は、2つのシリアル化されたタイムゾーン以外のすべてのリソースを汎用オブジェクトに格納することで、この処理を行い <xref:System.Collections.Generic.Dictionary%602> ます。 その後、既存のファイルが削除され、既存のリソースが新しい SerializedTimeZones ファイルに追加されます。 シリアル化されたタイムゾーンデータもこのファイルに追加されます。
 
-リソースのキー (または **名前** ) フィールドには、空白を埋め込むことはできません。 <xref:System.String.Replace%28System.String%2CSystem.String%29>メソッドは、リソースファイルに割り当てられる前に、タイムゾーン識別子内のすべての埋め込みスペースを削除するために呼び出されます。
+リソースのキー (または **名前**) フィールドには、空白を埋め込むことはできません。 <xref:System.String.Replace%28System.String%2CSystem.String%29>メソッドは、リソースファイルに割り当てられる前に、タイムゾーン識別子内のすべての埋め込みスペースを削除するために呼び出されます。
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 

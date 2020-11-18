@@ -1,7 +1,6 @@
 ---
 title: 日付、時刻、およびタイム ゾーン
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - time zone objects [.NET]
 - date and time data [.NET]
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - times [.NET], time zones
 - time [.NET], time zones
 ms.assetid: 295c16e0-641b-4771-94b3-39c1ffa98c13
-ms.openlocfilehash: 1200f7edc3ac40a67ecfa2f554c5c721877e755a
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: b9dbbfa30c3398a984432fb0ecb8d0052c425f51
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063678"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817901"
 ---
 # <a name="dates-times-and-time-zones"></a>日付、時刻、およびタイム ゾーン
 
@@ -72,6 +71,6 @@ ms.locfileid: "93063678"
 
 [方法: ユーザーがあいまいな時刻を解決できるようにする](let-users-resolve-ambiguous-times.md) ユーザーがあいまいな現地時刻と世界協定時刻の対応を決定できるようにする方法について説明します。
 
-## <a name="reference"></a>関連項目
+## <a name="reference"></a>リファレンス
 
 <xref:System.TimeZoneInfo?displayProperty=nameWithType>

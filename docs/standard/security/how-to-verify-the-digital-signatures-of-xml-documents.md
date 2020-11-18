@@ -1,7 +1,6 @@
 ---
 title: '方法: XML ドキュメントのデジタル署名を検証する'
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - XML digital signatures
 - digital signatures, verifying
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
-ms.openlocfilehash: b9b2dc6a558d1fd6acd2922a7c8ad82ce8776c26
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 9cbebd34866b66c00bf4aca708d75e315b067b0d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557048"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820073"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>方法: XML ドキュメントのデジタル署名を検証する
 
@@ -30,7 +29,7 @@ ms.locfileid: "87557048"
 
 この手順のコード例では、<> 要素に含まれている XML デジタル署名を検証する方法を示し `Signature` ます。  この例では、キー コンテナーから RSA 公開キーを取得してから、キーを使用して署名を確認します。  
   
-この手法を使用して検証できるデジタル署名を作成する方法については、「[方法: デジタル署名で XML ドキュメントに署名](how-to-sign-xml-documents-with-digital-signatures.md)する」を参照してください。  
+この手法を使用して検証できるデジタル署名を作成する方法については、「 [方法: デジタル署名で XML ドキュメントに署名](how-to-sign-xml-documents-with-digital-signatures.md)する」を参照してください。  
   
 ### <a name="to-verify-the-digital-signature-of-an-xml-document"></a>XML ドキュメントのデジタル署名を検証するには  
   
@@ -80,15 +79,15 @@ ms.locfileid: "87557048"
   
 - .NET Framework を対象とするプロジェクトでは、への参照を含め `System.Security.dll` ます。
 
-- .NET Core または .NET 5 を対象とするプロジェクトでは、NuGet パッケージ[System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)をインストールします。
+- .NET Core または .NET 5 を対象とするプロジェクトでは、NuGet パッケージ [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)をインストールします。
   
 - 名前空間 <xref:System.Xml>、<xref:System.Security.Cryptography>、および <xref:System.Security.Cryptography.Xml> を含めます。  
   
 ## <a name="net-security"></a>.NET セキュリティ
 
-非対称キー ペアの秘密キーをプレーンテキストで保存または転送しないでください。  対称暗号化キーと非対称暗号化キーの詳細については、「[暗号化と復号化のためのキーの生成](generating-keys-for-encryption-and-decryption.md)」を参照してください。  
+非対称キー ペアの秘密キーをプレーンテキストで保存または転送しないでください。  対称暗号化キーと非対称暗号化キーの詳細については、「 [暗号化と復号化のためのキーの生成](generating-keys-for-encryption-and-decryption.md)」を参照してください。  
   
-秘密キーをソース コードに直接埋め込まないでください。  埋め込みキーは、 [Ildasm.exe (IL 逆アセンブラー)](../../framework/tools/ildasm-exe-il-disassembler.md)を使用するか、メモ帳などのテキストエディターでアセンブリを開くことで、アセンブリから簡単に読み取ることができます。  
+秘密キーをソース コードに直接埋め込まないでください。  埋め込みキーは、 [Ildasm.exe (IL 逆アセンブラー)](../../framework/tools/ildasm-exe-il-disassembler.md) を使用するか、メモ帳などのテキストエディターでアセンブリを開くことで、アセンブリから簡単に読み取ることができます。  
   
 ## <a name="see-also"></a>関連項目
 

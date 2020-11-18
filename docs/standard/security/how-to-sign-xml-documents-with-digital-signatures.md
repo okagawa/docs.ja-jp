@@ -2,7 +2,6 @@
 title: '方法: デジタル署名で XML ドキュメントに署名する'
 description: デジタル署名を使用して XML ドキュメントに署名する方法について説明します。 .NET の System.Security.Cryptography.Xml 名前空間のクラスを使用します。
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - XML signing
 - signing XML
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
-ms.openlocfilehash: e1457fd659ab63489bd4cfafd7731a4b098a2791
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 3265417d806104f9c4de96cb98de2330d62d1e48
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557074"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820164"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>方法: デジタル署名で XML ドキュメントに署名する
 
@@ -31,7 +30,7 @@ ms.locfileid: "87557074"
 
 この手順のコード例では、XML ドキュメント全体にデジタル署名し、<> 要素のドキュメントに署名を添付する方法を示し `Signature` ます。  この例では、RSA 署名キーを作成し、キーをセキュリティで保護されたキー コンテナーに追加してから、キーを使用して XML ドキュメントにデジタル署名しています。  キーは、XML デジタル署名を確認するために取得したり、別の XML ドキュメントの署名に使用したりすることができます。  
   
-この手順を使用して作成された XML デジタル署名を確認する方法については、「[方法: Xml ドキュメントのデジタル署名を検証](how-to-verify-the-digital-signatures-of-xml-documents.md)する」を参照してください。  
+この手順を使用して作成された XML デジタル署名を確認する方法については、「 [方法: Xml ドキュメントのデジタル署名を検証](how-to-verify-the-digital-signatures-of-xml-documents.md)する」を参照してください。  
   
 ### <a name="to-digitally-sign-an-xml-document"></a>XML ドキュメントにデジタル署名するには  
   
@@ -114,15 +113,15 @@ ms.locfileid: "87557074"
   
 - .NET Framework を対象とするプロジェクトでは、への参照を含め `System.Security.dll` ます。
 
-- .NET Core または .NET 5 を対象とするプロジェクトでは、NuGet パッケージ[System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)をインストールします。
+- .NET Core または .NET 5 を対象とするプロジェクトでは、NuGet パッケージ [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)をインストールします。
   
 - 名前空間 <xref:System.Xml>、<xref:System.Security.Cryptography>、および <xref:System.Security.Cryptography.Xml> を含めます。  
   
 ## <a name="net-security"></a>.NET セキュリティ
 
-非対称キー ペアの秘密キーをプレーンテキストで保存または転送しないでください。  対称暗号化キーと非対称暗号化キーの詳細については、「[暗号化と復号化のためのキーの生成](generating-keys-for-encryption-and-decryption.md)」を参照してください。  
+非対称キー ペアの秘密キーをプレーンテキストで保存または転送しないでください。  対称暗号化キーと非対称暗号化キーの詳細については、「 [暗号化と復号化のためのキーの生成](generating-keys-for-encryption-and-decryption.md)」を参照してください。  
   
-秘密キーをソース コードに直接埋め込まないでください。  埋め込みキーは、 [Ildasm.exe (IL 逆アセンブラー)](../../framework/tools/ildasm-exe-il-disassembler.md)を使用するか、メモ帳などのテキストエディターでアセンブリを開くことで、アセンブリから簡単に読み取ることができます。  
+秘密キーをソース コードに直接埋め込まないでください。  埋め込みキーは、 [Ildasm.exe (IL 逆アセンブラー)](../../framework/tools/ildasm-exe-il-disassembler.md) を使用するか、メモ帳などのテキストエディターでアセンブリを開くことで、アセンブリから簡単に読み取ることができます。  
   
 ## <a name="see-also"></a>関連項目
 

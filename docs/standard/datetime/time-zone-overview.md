@@ -1,7 +1,6 @@
 ---
 title: タイム ゾーンの概要
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - time zones [.NET], about time zones
 - transition time [.NET]
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - adjustment rule [.NET]
 - time zones [.NET], terminology
 ms.assetid: c4b7ed01-5e38-4959-a3b6-ef9765d6ccf1
-ms.openlocfilehash: 0f0fdbe4b63ddc9d55f7397fa71198d72e60e669
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 1e876fd608b088b02385467367948440549e96e8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064107"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817511"
 ---
 # <a name="time-zone-overview"></a>タイム ゾーンの概要
 
@@ -40,7 +39,7 @@ ms.locfileid: "93064107"
 
 次の表は、タイム ゾーンを使用し、タイム ゾーン対応アプリケーションを開発するときに一般的に使用される用語の定義一覧です。
 
-| 用語            | 定義 |
+| 期間            | 定義 |
 | --------------- | ---------- |
 | 調整規則 | 標準時間から夏時間へ、および夏時間から標準時間への移行が行われるタイミングを定義した規則。 各調整規則には、規則が適用されるタイミングを定義する開始日と終了日があります (たとえば、調整規則は、1986年1月1日から2006年12月31日まで)、デルタ (調整規則の適用結果として標準時間が変化する時間)、および調整期間中に遷移が発生する特定の日時に関する情報を示しています。 移行は、固定規則または浮動規則に従う可能性があります。 |
 | あいまいな時刻  | 1 つのタイム ゾーンで 2 つの時刻にマップできる時刻です。 あいまいな時刻は、あるタイム ゾーンの夏時間から標準時間に移行する際など、時計の時刻を前に戻すときに発生します。 たとえば、移行が特定の日付の午前 2:00 に行われ、 時刻が午前 1:00 に変更される場合、午前 1:00 から 午前 1:59:99 までの時刻は 標準時間または夏時間のいずれにでも解釈できます。 |

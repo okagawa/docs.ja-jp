@@ -2,7 +2,6 @@
 title: '方法: キーコンテナーに非対称キーを格納する'
 description: .NET のキーコンテナーに非対称キーを格納する方法について説明します。 非対称キーを作成し、キーコンテナーに保存し、キーを取得して削除する方法について説明します。
 ms.date: 05/26/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -16,12 +15,12 @@ helpviewer_keywords:
 - encryption [.NET], asymmetric keys
 - decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-ms.openlocfilehash: c0e0904089c4b7054aa3ef7510c20e40c57dc733
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 946657f0c96aa80705575d8203ff158c63a72780
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554411"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820151"
 ---
 # <a name="store-asymmetric-keys-in-a-key-container"></a>キーコンテナーに非対称キーを格納する
 

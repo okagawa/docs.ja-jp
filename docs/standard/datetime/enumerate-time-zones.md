@@ -1,7 +1,6 @@
 ---
 title: '方法: コンピューター上に存在するタイム ゾーンを列挙する'
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - time zones [.NET], enumerating
 - enumerating time zones [.NET]
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
-ms.openlocfilehash: a51e9d0c51968d57e0d79dd80d8619ab11cdbf93
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 276c13bb95685e9588e25238f1a6e45cd57a6c91
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063769"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817966"
 ---
 # <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>方法: コンピューター上に存在するタイム ゾーンを列挙する
 

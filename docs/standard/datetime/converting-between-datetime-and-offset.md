@@ -2,7 +2,6 @@
 title: DateTime と DateTimeOffset 間の変換
 description: .NET の DateTimeOffset 値と DateTime 値の間で変換を行います。 DateTimeOffset 構造体は、DateTime 構造体よりも多くのタイムゾーン認識を提供します。
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-ms.openlocfilehash: cccfa37663e5a046b08f70a89ebb7f3566486139
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: af75a467c344e299037dc6c2077e4a6ef6df2df9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063847"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818083"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>DateTime と DateTimeOffset 間の変換
 
