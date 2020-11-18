@@ -2,7 +2,6 @@
 title: セキュリティと競合状態
 'description:': Describes pitfalls to avoid around security holes exploited by race conditions, including dispose methods, constructors, cached objects, and finalizers.
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - secure coding, race conditions
 - code security, race conditions
 ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
-ms.openlocfilehash: a667bf69ba72cbe203bd2603c4c6b7a1e58a6d43
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 870dc0ac956bad045cb87b9c0968b4a8e9733812
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555111"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824123"
 ---
 # <a name="security-and-race-conditions"></a>セキュリティと競合状態
 
@@ -25,7 +24,7 @@ ms.locfileid: "87555111"
   
 ## <a name="race-conditions-in-the-dispose-method"></a>Dispose メソッドの競合状態  
 
-クラスの**dispose**メソッド (詳細については、「[ガベージコレクション](../garbage-collection/index.md)」を参照) が同期されていない場合は、次の例に示すように、 **dispose**内のクリーンアップコードを複数回実行できる可能性があります。  
+クラスの **dispose** メソッド (詳細については、「 [ガベージコレクション](../garbage-collection/index.md)」を参照) が同期されていない場合は、次の例に示すように、 **dispose** 内のクリーンアップコードを複数回実行できる可能性があります。  
   
 ```vb  
 Sub Dispose()  
@@ -47,7 +46,7 @@ void Dispose()
 }  
 ```  
   
-この**Dispose**実装は同期されていないため、 `Cleanup` `_myObj` が**null**に設定される前に、最初の1つのスレッドと2番目のスレッドからを呼び出すことができます。 これがセキュリティ上の問題であるかどうかは、コードが実行されたときの動作によって異なり `Cleanup` ます。 非同期の**Dispose**実装の主な問題は、ファイルなどのリソースハンドルを使用することです。 不適切な破棄によって、誤ったハンドルが使用されることがあります。これは、多くの場合、セキュリティの脆弱性につながります。  
+この **Dispose** 実装は同期されていないため、 `Cleanup` `_myObj` が **null** に設定される前に、最初の1つのスレッドと2番目のスレッドからを呼び出すことができます。 これがセキュリティ上の問題であるかどうかは、コードが実行されたときの動作によって異なり `Cleanup` ます。 非同期の **Dispose** 実装の主な問題は、ファイルなどのリソースハンドルを使用することです。 不適切な破棄によって、誤ったハンドルが使用されることがあります。これは、多くの場合、セキュリティの脆弱性につながります。  
   
 ## <a name="race-conditions-in-constructors"></a>コンストラクターの競合状態
 
@@ -55,7 +54,7 @@ void Dispose()
   
 ## <a name="race-conditions-with-cached-objects"></a>キャッシュされたオブジェクトを使用した競合状態  
 
-次の例に示すように、セキュリティ情報をキャッシュしたり、コードアクセスセキュリティ[アサート](../../framework/misc/using-the-assert-method.md)操作を使用したりするコードは、クラスの他の部分が適切に同期されていない場合に、競合状態に対して脆弱になることがあります。  
+次の例に示すように、セキュリティ情報をキャッシュしたり、コードアクセスセキュリティ [アサート](../../framework/misc/using-the-assert-method.md) 操作を使用したりするコードは、クラスの他の部分が適切に同期されていない場合に、競合状態に対して脆弱になることがあります。  
   
 ```vb  
 Sub SomeSecureFunction()  

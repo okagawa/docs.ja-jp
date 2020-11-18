@@ -2,19 +2,18 @@
 title: セキュリティと実行時のコード生成
 description: より高い信頼で実行される信頼度の低いコードの代わりにコードを生成することは、特に呼び出し元がコード生成に影響を与える場合には、セキュリティ上の問題になります。
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - code security, on-the-fly code generation
 - on-the-fly code generation
 - security [.NET], on-the-fly code generation
 - secure coding, on-the-fly code generation
 ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
-ms.openlocfilehash: a3fc51c346feffa85537d95ccdbd23d943827edf
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: c94da31f464a5272dd3f3c9f767a40ba7ad88a47
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555696"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824149"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>セキュリティと実行時のコード生成
 
