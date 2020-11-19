@@ -1,18 +1,17 @@
 ---
 title: メモリとスパン
 ms.date: 10/03/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - Memory<T>
 - Span<T>
 - buffers"
 - pipeline processing
-ms.openlocfilehash: c60c08d27c0e41228a15e8acdf01a9af28a23762
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 4b0464cc81cf0908a907f8305ea4e35b716c18fb
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201964"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830663"
 ---
 # <a name="memory--and-span-related-types"></a>メモリおよびスパンに関連する型
 

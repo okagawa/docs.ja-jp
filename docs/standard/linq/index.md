@@ -4,16 +4,15 @@ description: 統合言語クエリ (LINQ) では、言語レベルのクエリ�
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 65370a2bd21e2474af4cb070bb8d82a167f10070
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ed78082c97511a8dbcc48d413a75a46c9da906a9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554997"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825833"
 ---
 # <a name="linq-overview"></a>LINQ の概要
 
@@ -143,15 +142,15 @@ API 構文は単に、クエリ構文を実行するより簡潔な方法であ�
 
 いいえ。 クエリ構文では **let** 句を使用できます。したがって、式の後ろの部分でこの句を使用すれば、式のスコープ内で変数を導入してバインドすることができます。 API 構文だけでも同じコードを再現できますが、コードが読み取りにくくなる可能性が高くなります。
 
-そこで、**クエリ構文を使用する必要があるかどうか**ですが、
+そこで、**クエリ構文を使用する必要があるかどうか** ですが、
 
-次のような場合には、使用する必要が**あります**。
+次のような場合には、使用する必要が **あります**。
 
 - 既存のコードベースで既にクエリ構文を使用している。
 - 複雑になるため、クエリ内で変数をスコープする必要がある。
 - クエリ構文が好ましく、コードベースから注意がそれることはない。
 
-次のような場合には、使用する必要は**ありません**。
+次のような場合には、使用する必要は **ありません**。
 
 - 既存のコードベースで既に API 構文を使用している。
 - クエリ内で変数をスコープする必要はない。
@@ -390,7 +389,7 @@ Public Shared GetAllFacebookUserLikesMessage(facebookUsers As IEnumerable(Of Fac
 
 ![PLINQ の図](media/index/plinq-diagram.png)
 
-LINQ で簡単に表すことができる (つまり、純粋関数で副作用のない) 並列化可能な CPU 制約のあるジョブは、PLINQ の候補として最適です。 副作用の_ある_ジョブの場合は、[タスク並列ライブラリ](../parallel-programming/task-parallel-library-tpl.md)の使用を検討してください。
+LINQ で簡単に表すことができる (つまり、純粋関数で副作用のない) 並列化可能な CPU 制約のあるジョブは、PLINQ の候補として最適です。 副作用の _ある_ ジョブの場合は、[タスク並列ライブラリ](../parallel-programming/task-parallel-library-tpl.md)の使用を検討してください。
 
 ## <a name="more-resources"></a>その他のリソース
 

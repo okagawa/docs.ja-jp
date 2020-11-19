@@ -2,16 +2,15 @@
 title: スレッド セーフなコレクション
 description: .NET の System.Collections.Concurrent 名前空間を使って、スレッドセーフなコレクションの使用を開始します。これにはスレッドセーフかつスケーラブルなコレクションのクラスが含まれています。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-ms.openlocfilehash: 27b0e887d7dcff6a6c792cf2dfab6a449f59646f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5f64d7b6a9b3564248a2b6113724e948066bf45c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547689"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827751"
 ---
 # <a name="thread-safe-collections"></a>スレッド セーフなコレクション
 .NET Framework 4 では、スレッド セーフかつスケーラブルなコレクション クラスをいくつか含む <xref:System.Collections.Concurrent?displayProperty=nameWithType> 名前空間が導入されています。 ユーザー コードで同期を追加することなく、複数のスレッドでこのようなコレクションの項目を安全かつ効率的に追加または削除できます。 新しいコードを記述する場合、コレクションに対して複数のスレッドが同時に書き込みを行うときは常に同時実行コレクション クラスを使用します。 共有コレクションの読み取りのみを行う場合は、<xref:System.Collections.Generic?displayProperty=nameWithType> 名前空間のクラスを使用できます。 .NET Framework 1.1 以前のランタイムを対象にする必要がない場合は、1.0 コレクション クラスを使用しないことをお勧めします。  
@@ -24,7 +23,7 @@ ms.locfileid: "90547689"
  .NET Framework 4 の同時実行コレクション クラスを使用することをお勧めします。このクラスは、.NET Framework 2.0 コレクション クラスのタイプ セーフを確保するだけでなく、.NET Framework 1.0 コレクションよりも効率的で完全なスレッド セーフも確保します。  
   
 ## <a name="fine-grained-locking-and-lock-free-mechanisms"></a>粒度の細かいロック機構とロック制御の不要な機構  
- 同時実行コレクション型には、.NET Framework 4 の新機能である <xref:System.Threading.SpinLock>、<xref:System.Threading.SpinWait>、<xref:System.Threading.SemaphoreSlim>、<xref:System.Threading.CountdownEvent> などの軽量な同期機構を使用するものもあります。 これらの同期型では、通常、スレッドを実際の待機状態にする前の短期間に*ビジー スピン*が使用されます。 待機時間が非常に短くなると予測される場合は、スピンを使用すると、負荷がかかるカーネル遷移を伴う待機を行うよりも負荷が格段に小さくなります。 スピンを使用するコレクション クラスでは、この効率性は、複数のスレッドで項目を高速で追加および削除できることを意味します。 スピンとブロッキングの詳細については、「[SpinLock](../../threading/spinlock.md)」および「[SpinWait](../../threading/spinwait.md)」を参照してください。  
+ 同時実行コレクション型には、.NET Framework 4 の新機能である <xref:System.Threading.SpinLock>、<xref:System.Threading.SpinWait>、<xref:System.Threading.SemaphoreSlim>、<xref:System.Threading.CountdownEvent> などの軽量な同期機構を使用するものもあります。 これらの同期型では、通常、スレッドを実際の待機状態にする前の短期間に *ビジー スピン* が使用されます。 待機時間が非常に短くなると予測される場合は、スピンを使用すると、負荷がかかるカーネル遷移を伴う待機を行うよりも負荷が格段に小さくなります。 スピンを使用するコレクション クラスでは、この効率性は、複数のスレッドで項目を高速で追加および削除できることを意味します。 スピンとブロッキングの詳細については、「[SpinLock](../../threading/spinlock.md)」および「[SpinWait](../../threading/spinwait.md)」を参照してください。  
   
  <xref:System.Collections.Concurrent.ConcurrentQueue%601> クラスと <xref:System.Collections.Concurrent.ConcurrentStack%601> クラスでは、ロックは使用されません。 代わりに、<xref:System.Threading.Interlocked> 操作によってスレッド セーフを確保します。  
   

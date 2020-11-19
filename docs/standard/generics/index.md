@@ -2,7 +2,6 @@
 title: .NET のジェネリック
 description: .NET のジェネリックについて説明します。 ジェネリックを定義して使用し、欠点と長所を理解し、クラス ライブラリと言語サポートなどを理解します。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -27,12 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 6455de8e6b874547be7838090fc0527a6ce72b71
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 40a789d9eaa835b1c464f25b5a33a7c1d766d2f8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063157"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827257"
 ---
 # <a name="generics-in-net"></a>.NET のジェネリック
 
@@ -56,9 +55,9 @@ ms.locfileid: "93063157"
   
 - *ジェネリック型定義* は、テンプレートとして機能するクラス、構造体、またはインターフェイスの宣言で、格納または使用できる型のプレースホルダーを含みます。 たとえば、 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> クラスには、キーと値の 2 つの型を含めることができます。 ジェネリック型定義は単なるテンプレートであるため、ジェネリック型定義のクラス、構造体、またはインターフェイスのインスタンスを作成することはできません。  
   
-- *ジェネリック型パラメーター* (または *型パラメーター* ) は、ジェネリック型定義またはジェネリック メソッド定義のプレースホルダーです。 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> ジェネリック型には、そのキーと値の型を表す 2 つの型パラメーター `TKey` と `TValue`があります。  
+- *ジェネリック型パラメーター*(または *型パラメーター*) は、ジェネリック型定義またはジェネリック メソッド定義のプレースホルダーです。 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> ジェネリック型には、そのキーと値の型を表す 2 つの型パラメーター `TKey` と `TValue`があります。  
   
-- *構築ジェネリック型* (または *構築型* ) は、ジェネリック型定義のジェネリック型パラメーターに型を指定することによって得られる結果です。  
+- *構築ジェネリック型*(または *構築型*) は、ジェネリック型定義のジェネリック型パラメーターに型を指定することによって得られる結果です。  
   
 - *ジェネリック型引数* は、ジェネリック型パラメーターを置き換える任意の型です。  
   

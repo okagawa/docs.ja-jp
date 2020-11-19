@@ -2,7 +2,6 @@
 title: イベントの処理と発生
 description: デリゲート モデルに基づく .NET イベントを処理および発生させる方法について説明します。 このモデルを使用すると、サブスクライバーがプロバイダーに登録したり、プロバイダーから通知を受け取ったりすることができます。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: a2bfbe9a411d3099d02df7a43a42baaad2bb32da
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: e0b8de574475490cd3b15383b6ebc2ace4b74663
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064094"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828271"
 ---
 # <a name="handle-and-raising-events"></a>イベントの処理と発生
 
@@ -28,7 +27,7 @@ ms.locfileid: "93064094"
   
 ## <a name="events"></a>イベント
 
-イベントは、アクションの発生を知らせるために、オブジェクトによって送信されるメッセージです。 アクションは、ユーザーがボタンのクリックなどの対話的操作を行った場合や、プロパティの値の変更など、なんらかのプログラム ロジックによって発生します。 イベントを発生させるオブジェクトを " *イベントの送信元* " と呼びます。 イベントの送信元は、発生させたイベントをどのオブジェクトまたはメソッドが受信する (処理する) かについての情報を持っていません。 このイベントはイベントの送信元のメンバーです。たとえば、<xref:System.Web.UI.WebControls.Button.Click> イベントは <xref:System.Web.UI.WebControls.Button> クラスのメンバーであり、<xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> イベントは <xref:System.ComponentModel.INotifyPropertyChanged> インターフェイスを実装するクラスのメンバーです。  
+イベントは、アクションの発生を知らせるために、オブジェクトによって送信されるメッセージです。 アクションは、ユーザーがボタンのクリックなどの対話的操作を行った場合や、プロパティの値の変更など、なんらかのプログラム ロジックによって発生します。 イベントを発生させるオブジェクトを "*イベントの送信元*" と呼びます。 イベントの送信元は、発生させたイベントをどのオブジェクトまたはメソッドが受信する (処理する) かについての情報を持っていません。 このイベントはイベントの送信元のメンバーです。たとえば、<xref:System.Web.UI.WebControls.Button.Click> イベントは <xref:System.Web.UI.WebControls.Button> クラスのメンバーであり、<xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> イベントは <xref:System.ComponentModel.INotifyPropertyChanged> インターフェイスを実装するクラスのメンバーです。  
   
 イベントを定義するには、イベント クラスのシグネチャで C# の [`event`](../../csharp/language-reference/keywords/event.md) または Visual Basic の [`Event`](../../visual-basic/language-reference/statements/event-statement.md) キーワードを使用し、イベント用のデリゲートの型を指定します。 デリゲートについては、次のセクションで説明します。  
   

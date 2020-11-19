@@ -4,12 +4,12 @@ description: この記事では、.NET でのテストにおけるテストの�
 author: IEvangelist
 ms.author: dapine
 ms.date: 10/19/2020
-ms.openlocfilehash: 36e88cc059447a98931593e0535c70cbc92a2cf4
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 137a8f4e3bc9e3be529d5034c233d283cf158b31
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223477"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824858"
 ---
 # <a name="testing-in-net"></a>.NET でのテスト
 
@@ -43,7 +43,7 @@ ms.locfileid: "92223477"
 
 ### <a name="xunit"></a>xUnit
 
-[xUnit](https://xunit.net) は、.NET 用の無料のオープン ソースのコミュニティ向け単体テスト ツールです。 xUnit.net は、NUnit v2 の最初の発明者によって記述された、.NET アプリを単体テストする最新のテクノロジです。 xUnit.net は、ReSharper、CodeRush、TestDriven.NET および [Xamarin](/apps/xamarin) と共に動作します。 これは、[.NET Foundation](https://dotnetfoundation.org) のプロジェクトであり、その行動規範の下で動作します。
+[xUnit](https://xunit.net) は、.NET 用の無料のオープン ソースのコミュニティ向け単体テスト ツールです。 xUnit.net は、NUnit v2 の最初の発明者によって記述された、.NET アプリを単体テストする最新のテクノロジです。 xUnit.net は、ReSharper、CodeRush、TestDriven.NET および [Xamarin](https://dotnet.microsoft.com/apps/xamarin) と共に動作します。 これは、[.NET Foundation](https://dotnetfoundation.org) のプロジェクトであり、その行動規範の下で動作します。
 
 詳細については、次のリソースを参照してください。
 
