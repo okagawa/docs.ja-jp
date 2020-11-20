@@ -2,12 +2,12 @@
 title: dotnet build コマンド
 description: dotnet build コマンドは、プロジェクトとそのすべての依存関係をビルドします。
 ms.date: 02/14/2020
-ms.openlocfilehash: 6f33b449301f40949ff5dfe4077564344a9de8ec
-ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
+ms.openlocfilehash: ea0291129aeaed3bebef5c454ff003131bd3562b
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87251167"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634482"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -39,7 +39,7 @@ dotnet build -h|--help
 - アプリケーションの共有ランタイムとそのバージョンを指定する、 *.runtimeconfig.json* ファイル。
 - (プロジェクト参照または NuGet パッケージの参照を介して) プロジェクトが依存する他のライブラリ。
 
-.NET Core 3.0 より前のバージョンを対象とする実行可能なプロジェクトでは、NuGet からのライブラリの依存関係は、通常出力フォルダーにコピーされません。  これらは、実行時に NuGet グローバル パッケージ フォルダーで解決されます。 この点を考慮すると、`dotnet build` の生成物は別のコンピューターに転送して実行することはできません。 展開できるアプリケーションのバージョンを作成するには、(たとえば、[dotnet publish](dotnet-publish.md) コマンドを使用して) アプリケーションを発行する必要があります。 詳しくは、「[.NET Core アプリケーション展開](../deploying/index.md)」をご覧ください。
+.NET Core 3.0 より前のバージョンを対象とする実行可能なプロジェクトでは、NuGet からのライブラリの依存関係は、通常出力フォルダーにコピーされません。  これらは、実行時に NuGet グローバル パッケージ フォルダーで解決されます。 この点を考慮すると、`dotnet build` の生成物は別のコンピューターに転送して実行することはできません。 展開できるアプリケーションのバージョンを作成するには、(たとえば、[dotnet publish](dotnet-publish.md) コマンドを使用して) アプリケーションを発行する必要があります。 詳細については、[.NET アプリケーションの展開](../deploying/index.md)に関する記事を参照してください。
 
 .NET Core 3.0 以降を対象とする実行可能なプロジェクトでは、ライブラリの依存関係は出力フォルダーにコピーされます。 つまり、(Web プロジェクトなどが持つ) 発行専用のロジックが他にない場合、ビルドの出力は展開できるはずです。
 
@@ -153,7 +153,7 @@ dotnet build -h|--help
   dotnet build --runtime ubuntu.18.04-x64
   ```
 
-- プロジェクトをビルドし、復元操作中に指定された NuGet パッケージ ソースを使用します (.NET Core 2.0 SDK 以降のバージョン)。
+- プロジェクトをビルドし、復元操作中に指定した NuGet パッケージ ソースを使用します。
 
   ```dotnetcli
   dotnet build --source c:\packages\mypackages

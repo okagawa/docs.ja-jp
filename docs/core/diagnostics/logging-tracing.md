@@ -2,12 +2,12 @@
 title: ログとトレース - .NET Core
 description: .NET Core のログとトレースの概要について説明します。
 ms.date: 10/12/2020
-ms.openlocfilehash: 33c78ecc839b552267ad43dd00b7d627e756a939
-ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
+ms.openlocfilehash: e3f809dab64d66d8b4ba16ca55fc426309614715
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91997694"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439925"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core のログとトレース
 
@@ -53,11 +53,12 @@ ms.locfileid: "91997694"
   - EventSource は、プライマリ ルートの .NET Core トレース API です。
   - すべての .NET Standard バージョンで使用できます。
   - シリアル化可能なオブジェクトのみをトレースできます。
-  - アタッチされている[イベント リスナー](xref:System.Diagnostics.Tracing.EventListener)に書き込みます。
-  - .NET Core には、次のリスナーが用意されています。
+  - EventSource を使用するように構成されている [EventListener](xref:System.Diagnostics.Tracing.EventListener) インスタンスを介してインプロセスで使用できます。
+  - 次を介してアウトプロセスで使用できます。
     - すべてのプラットフォームでの .NET Core の EventPipe
     - [Windows イベント トレーシング (ETW)](/windows/win32/etw/event-tracing-portal)
     - [Linux 用 LTTng トレース フレームワーク](https://lttng.org/)
+      - チュートリアル: [PerfCollect を使用して LTTng トレースを収集する](trace-perfcollect-lttng.md)。
 
 - <xref:System.Diagnostics.DiagnosticSource?displayProperty=nameWithType>
   - .NET Core に含まれており、.NET Framework の [NuGet パッケージ](https://www.nuget.org/packages/System.Diagnostics.DiagnosticSource)として提供されています。

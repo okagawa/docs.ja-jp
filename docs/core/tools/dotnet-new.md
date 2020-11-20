@@ -1,16 +1,16 @@
 ---
 title: dotnet new コマンド
-description: dotnet new コマンドは、指定されたテンプレートに基づいて新しい .NET Core プロジェクトを作成します。
+description: dotnet new コマンドを実行すると、指定したテンプレートに基づいて、新しい .NET プロジェクトが作成されます。
 no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/04/2020
-ms.openlocfilehash: 2ee06c37cd950f3b9771db2f30fe353435641d67
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 3ee644f05ea5929ffc7b11054ef1d974b811f418
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400592"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634456"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -35,7 +35,7 @@ dotnet new -h|--help
 
 ## <a name="description"></a>説明
 
-`dotnet new` コマンドは、テンプレートに基づいて、.NET Core プロジェクトまたはその他の成果物を作成します。
+`dotnet new` コマンドを実行すると、テンプレートに基づいて、.NET プロジェクトまたはその他の成果物が作成されます。
 
 このコマンドは、[テンプレート エンジン](https://github.com/dotnet/templating)を呼び出し、指定されたテンプレートとオプションに基づいて、ディスク上に成果物を作成します。
 
@@ -49,14 +49,14 @@ dotnet new -h|--help
 
   コマンドが呼び出されたときにインスタンス化するテンプレート。 各テンプレートには、渡すことができるオプションが存在する場合があります。 詳細については、[テンプレートのオプション](#template-options)を参照してください。
 
-  `dotnet new --list` または `dotnet new -l` を実行すると、インストールされているすべてのテンプレートの一覧を表示できます。 `TEMPLATE` の値が返されたテーブルの「 **テンプレート** 」列または「 **短い形式の名前** 」列のテキストと完全に一致しない場合、それら 2 つの列で部分文字列一致が実行されます。
+  `dotnet new --list` または `dotnet new -l` を実行すると、インストールされているすべてのテンプレートの一覧を表示できます。 `TEMPLATE` の値が返されたテーブルの「**テンプレート**」列または「**短い形式の名前**」列のテキストと完全に一致しない場合、それら 2 つの列で部分文字列一致が実行されます。
 
   .NET Core 3.0 SDK 以降では、次の条件で `dotnet new` コマンドを呼び出すと、CLI によって NuGet.org 内のテンプレートが検索されます。
 
   - `dotnet new` の呼び出し時に、CLI でテンプレートの一致を (部分的にも) 検出できない場合。
   - テンプレートの新しいバージョンが利用可能な場合。 この場合、プロジェクトまたは成果物が作成されますが、更新されたバージョンのテンプレートについて、CLI によって警告が表示されます。
 
-  次の表は、.NET Core SDK にプレインストールされているテンプレートの一覧です。 テンプレートの既定の言語は、角かっこで示されます。 短い名前のリンクをクリックすると、特定のテンプレート オプションが表示されます。
+  次の表は、.NET SDK にプレインストールされているテンプレートを示しています。 テンプレートの既定の言語は、角かっこで示されます。 短い名前のリンクをクリックすると、特定のテンプレート オプションが表示されます。
 
 | テンプレート                                    | 短い名前                      | 言語     | Tags                                  | 導入時期 |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
@@ -135,7 +135,7 @@ dotnet new -h|--help
 
 - **`--nuget-source <SOURCE>`**
 
-  インストール中に使用する NuGet ソースを 1 つ指定します。 .NET Core 2.1 SDK 以降で利用できます。
+  インストール中に使用する NuGet ソースを 1 つ指定します。
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -152,7 +152,7 @@ dotnet new -h|--help
   このオプションにパラメーターを指定しないと、コマンドによって、インストールされたテンプレートとそれらに関する詳細が表示されます。
 
   > [!NOTE]
-  > `PATH` を使用してテンプレートをアンインストールするには、完全修飾パスを使用する必要があります。 たとえば、 *C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* は有効ですが、 *./GarciaSoftware.ConsoleTemplate.CSharp* が含まれるフォルダーから、そのパスを指定することはできません。
+  > `PATH` を使用してテンプレートをアンインストールするには、完全修飾パスを使用する必要があります。 たとえば、*C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* は有効ですが、 *./GarciaSoftware.ConsoleTemplate.CSharp* が含まれるフォルダーから、そのパスを指定することはできません。
   > テンプレートのパスの最後にある終端ディレクトリのスラッシュは含めないでください。
 
 - **`--update-apply`**
@@ -177,6 +177,7 @@ dotnet new -h|--help
 
   | SDK バージョン | 既定値   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
 
@@ -196,7 +197,7 @@ dotnet new -h|--help
 
 - _ *`-f|--framework <FRAMEWORK>`**
 
-  ターゲットにする[フレームワーク](../../standard/frameworks.md)が指定されます。 値: .NET Core クラス ライブラリを作成するには `netcoreapp<version>`、.NET 標準クラス ライブラリを作成するには `netstandard<version>` です。 既定値は `netstandard2.0` です。
+  ターゲットにする[フレームワーク](../../standard/frameworks.md)が指定されます。 値: .NET クラス ライブラリを作成するには `net5.0` または `netcoreapp<version>`、.NET Standard クラス ライブラリを作成するには `netstandard<version>`。 .NET 5.0 SDK の既定値は `net5.0` です。
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -214,7 +215,7 @@ dotnet new -h|--help
 
 - _ *`-f|--framework <FRAMEWORK>`**
 
-  ターゲットにする[フレームワーク](../../standard/frameworks.md)が指定されます。 既定値は `netcoreapp3.1` です。 .NET Core 3.1 SDK 以降で利用できます。
+  ターゲットにする[フレームワーク](../../standard/frameworks.md)が指定されます。 既定値は `net5.0` です。 .NET Core 3.1 SDK 以降で利用できます。
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -268,6 +269,7 @@ dotnet new -h|--help
 
   | SDK バージョン | 既定値   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
 
@@ -291,6 +293,7 @@ dotnet new -h|--help
 
   | SDK バージョン | 既定値   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.2         | `netcoreapp2.2` |
@@ -515,6 +518,7 @@ dotnet new -h|--help
 
   | SDK バージョン | 既定値   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.1` |
@@ -602,6 +606,7 @@ dotnet new -h|--help
 
   | SDK バージョン | 既定値   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
 
@@ -654,6 +659,7 @@ dotnet new -h|--help
 
   | SDK バージョン | 既定値   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
@@ -674,6 +680,7 @@ dotnet new -h|--help
 
   | SDK バージョン | 既定値   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
@@ -759,6 +766,7 @@ dotnet new -h|--help
 
   | SDK バージョン | 既定値   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.1` |
@@ -773,7 +781,7 @@ dotnet new -h|--help
 
 - _ *`--sdk-version <VERSION_NUMBER>`**
 
-  *global.json* ファイル内で使用する .NET Core SDK のバージョンが指定されます。
+  *global.json* ファイル内で使用する .NET SDK のバージョンを指定します。
 
 ***
 

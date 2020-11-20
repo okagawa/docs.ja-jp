@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 2c1358b2b63a92cb50b853043adbfaae23ccd897
-ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
+ms.openlocfilehash: aba45a99562b67df17e1ff33ecc3c8bbad63ec30
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94329873"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440817"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET 内で JSON のシリアル化と逆シリアル化 (マーシャリングとマーシャリングの解除) を行う方法
 
@@ -582,7 +582,7 @@ Summary が `Hot` の場合、既定では、シリアル化された JSON に�
 > 既定のエンコーダーと比較して、`UnsafeRelaxedJsonEscaping` エンコーダーは、文字をエスケープせずにそのまま渡すことについて、より寛容です。
 >
 > * `<`、`>`、`&`、`'` など、HTML に影響する文字はエスケープされません。
-> * クライアントとサーバーが " *文字セット* " について合意していない場合の結果など、XSS または情報漏えい攻撃に対する追加の多層防御は提供されません。
+> * クライアントとサーバーが "*文字セット*" について合意していない場合の結果など、XSS または情報漏えい攻撃に対する追加の多層防御は提供されません。
 >
 > 安全でないエンコーダーは、クライアントによって結果のペイロードが UTF-8 でエンコードされた JSON として解釈されることがわかっている場合にのみ使用してください。 たとえば、サーバーが応答ヘッダー `Content-Type: application/json; charset=utf-8` を送信している場合は使用できます。 未加工の `UnsafeRelaxedJsonEscaping` 出力が HTML ページまたは `<script>` 要素に決して出力されないようにしてください。
 
@@ -644,8 +644,8 @@ Summary が `Hot` の場合、既定では、シリアル化された JSON に�
 
 `PreviousForecast` プロパティに `WeatherForecastDerived` のインスタンスが含まれる場合:
 
-* `WeatherForecastWithPrevious` のシリアル化からの JSON 出力には `WindSpeed` が **含まれていません** 。
-* `WeatherForecastWithPreviousAsObject` のシリアル化からの JSON 出力には `WindSpeed` が **含まれています** 。
+* `WeatherForecastWithPrevious` のシリアル化からの JSON 出力には `WindSpeed` が **含まれていません**。
+* `WeatherForecastWithPreviousAsObject` のシリアル化からの JSON 出力には `WindSpeed` が **含まれています**。
 
 ルート オブジェクトは派生型である可能性があるものではないため、`WeatherForecastWithPreviousAsObject` をシリアル化するために `Serialize<object>` または `GetType` を呼び出す必要はありません。 次のコード例では `Serialize<object>` または `GetType` は呼び出されません。
 
@@ -693,7 +693,7 @@ Summary が `Hot` の場合、既定では、シリアル化された JSON に�
 }
 ```
 
-ポリモーフィック **シリアル化** の詳細、および **逆シリアル化** の詳細については、「 [Newtonsoft.Json から System.Text.Json に移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)」を参照してください。
+ポリモーフィック **シリアル化** の詳細、および **逆シリアル化** の詳細については、「[Newtonsoft.Json から System.Text.Json に移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)」を参照してください。
 
 ## <a name="allow-comments-and-trailing-commas"></a>コメントと末尾のコンマを許可する
 
@@ -993,6 +993,8 @@ Web アプリ用に異なる既定値があるオプションは次のとおり�
 次の例は、ファイルを同期的に読み取り、値を検索する方法を示しています。
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/Utf8ReaderFromFile.cs)]
+
+([この例の非同期バージョン](https://github.com/dotnet/samples/blob/18e31a5f1abd4f347bf96bfdc3e40e2cfb36e319/core/json/Program.cs)は利用できます)
 
 上記のコードでは次の操作が行われます。
 

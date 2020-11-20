@@ -10,12 +10,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - culture, globalization
 - icu, icu on windows, ms-icu
-ms.openlocfilehash: e0ca78871d1ddf851148096c8c6cfd10076763ab
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: ca579e837b801de237859963ede0e5a9a4bfbcbf
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400880"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439470"
 ---
 # <a name="net-globalization-and-icu"></a>.NET グローバリゼーションと ICU
 
@@ -37,6 +37,29 @@ Windows 10 の 2019 年 5 月更新プログラム以降では、OS の一部と
 
 > [!NOTE]
 > ICU が使用されている場合でも、Windows オペレーティング システム API では、ユーザーが設定している場合は、`CurrentCulture`、`CurrentUICulture`、および `CurrentRegion` のメンバーが使用されます。
+
+### <a name="behavioral-differences"></a>動作の違い
+
+.NET 5 を対象にするようにアプリをアップグレードすると、グローバリゼーション機能を使用していることを認識していない場合でも、アプリでの変更に気付くことがあります。 ここでは、気付く可能性のある動作の変更を 1 つ示しますが、他にもあります。
+
+##### <a name="stringindexof"></a>String.IndexOf
+
+文字列内の改行文字のインデックスを調べるために <xref:System.String.IndexOf(System.String)?displayProperty=nameWithType> を呼び出す次のコードについて考えます。
+
+```csharp
+string s = "Hello\r\nworld!";
+int idx = s.IndexOf("\n");
+Console.WriteLine(idx);
+```
+
+- Windows 上の以前のバージョンの .NET では、スニペットにより `6` と出力されます。
+- Windows 10 May 2019 Update 以降のバージョン上の .NET 5.0 以降のバージョンでは、スニペットにより `-1` と出力されます。
+
+カルチャ依存検索ではなく序数検索を実行してこのコードを修正するには、<xref:System.String.IndexOf(System.String,System.StringComparison)> のオーバーロードを呼び出し、<xref:System.StringComparison.Ordinal?displayProperty=nameWithType> を引数として渡します。
+
+コード分析規則 [CA1307: 明確化のために StringComparison を指定する](../../../docs/fundamentals/code-analysis/quality-rules/ca1307.md)および [CA1309: 順序に基づく StringComparison を使用する](../../../docs/fundamentals/code-analysis/quality-rules/ca1309.md)を実行して、コード内でのこれらの呼び出しサイトを検索できます。
+
+詳細については、「[.NET 5 以降で文字列を比較するときの動作の変更](../base-types/string-comparison-net-5-plus.md)」を参照してください。
 
 ### <a name="use-nls-instead-of-icu"></a>ICU の代わりに NLS を使用する
 

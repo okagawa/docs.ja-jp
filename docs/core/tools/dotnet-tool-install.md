@@ -1,13 +1,13 @@
 ---
 title: dotnet tool install コマンド
-description: dotnet tool install コマンドでは、お使いのコンピューター上に指定された .NET Core ツールをインストールします。
+description: dotnet tool install コマンドを実行すると、指定した .NET ツールがお使いのコンピューターにインストールされます。
 ms.date: 02/14/2020
-ms.openlocfilehash: 067f90124833da537370a36934ff212aba7577f3
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 1dd870a8f91e557a2f59919682616aa8817fc070
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702813"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634325"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -15,7 +15,7 @@ ms.locfileid: "83702813"
 
 ## <a name="name"></a>名前
 
-`dotnet tool install` - お使いのコンピューター上に指定された [.NET Core ツール](global-tools.md)をインストールします。
+`dotnet tool install` - 指定した [.NET ツール](global-tools.md)をお使いのコンピューターにインストールします。
 
 ## <a name="synopsis"></a>構文
 
@@ -40,7 +40,7 @@ dotnet tool install -h|--help
 
 ## <a name="description"></a>説明
 
-`dotnet tool install` コマンドでは、お使いのコンピューター上に .NET Core ツールをインストールする方法を提供します。 コマンドを使用するには、次のいずれかのインストール オプションを指定します。
+`dotnet tool install` コマンドを実行すると、.NET ツールがお使いのコンピューターにインストールされます。 コマンドを使用するには、次のいずれかのインストール オプションを指定します。
 
 * 既定の場所にグローバル ツールをインストールするには、`--global` オプションを使用します。
 * カスタムの場所にグローバル ツールをインストールするには、`--tool-path` オプションを使用します。
@@ -67,7 +67,7 @@ dotnet new tool-manifest
 
 - **`PACKAGE_NAME`**
 
-  インストールする .NET Core ツールが格納されている NuGet パッケージの名前または ID。
+  インストールする .NET ツールが格納されている NuGet パッケージの名前または ID。
 
 ## <a name="options"></a>オプション
 
@@ -81,7 +81,7 @@ dotnet new tool-manifest
 
 - **`framework <FRAMEWORK>`**
 
-  ツールをインストールする[ターゲット フレームワーク](../../standard/frameworks.md)を指定します。 既定では、.NET Core SDK は最適なターゲット フレームワークの選択を試みます。
+  ツールをインストールする[ターゲット フレームワーク](../../standard/frameworks.md)を指定します。 既定では、.NET SDK によって、最適なターゲット フレームワークの選択が試行されます。
 
 - **`-g|--global`**
 
@@ -127,6 +127,6 @@ dotnet new tool-manifest
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Core ツール](global-tools.md)
-- [チュートリアル: .NET Core CLI を使って .NET Core グローバル ツールをインストールして使用する](global-tools-how-to-use.md)
-- [チュートリアル: .NET Core CLI を使って .NET Core ローカル ツールをインストールして使用する](local-tools-how-to-use.md)
+- [.NET ツール](global-tools.md)
+- [チュートリアル: .NET CLI を使って .NET グローバル ツールをインストールして使用する](global-tools-how-to-use.md)
+- [チュートリアル: .NET CLI を使って .NET ローカル ツールをインストールして使用する](local-tools-how-to-use.md)

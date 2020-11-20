@@ -2,12 +2,12 @@
 title: dotnet-trace ツール - .NET Core
 description: dotnet-trace コマンドライン ツールのインストールおよび使用。
 ms.date: 11/21/2019
-ms.openlocfilehash: 25178a0e59ce9edb69d15ee761c1b9e56aa5eb3a
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: d4175ccad785b21f860044a4fd5d691624ec495e
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517309"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507229"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace パフォーマンス分析ユーティリティ
 
@@ -66,6 +66,7 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
     [--format <Chromium|NetTrace|Speedscope>] [-h|--help]
     [-n, --name <name>]  [-o|--output <trace-file-path>] [-p|--process-id <pid>]
     [--profile <profile-name>] [--providers <list-of-comma-separated-providers>]
+    [-- <command>] (for target applications running .NET 5.0 or later)
 ```
 
 ### <a name="options"></a>オプション
@@ -111,6 +112,13 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
   - `Provider[,Provider]`
   - `Provider` は、`KnownProviderName[:Flags[:Level][:KeyValueArgs]]` という形式です。
   - `KeyValueArgs` は、`[key1=value1][;key2=value2]` という形式です。
+
+- **`-- <command>` (.NET 5.0 のみを実行しているターゲット アプリケーションの場合)**
+
+  ユーザーは、コレクション構成パラメーターの後にまず `--`、次にコマンドを追加すれば、5.0 以降のランタイムで .NET アプリケーションを起動することができます。 これは、起動時のパフォーマンスの問題やアセンブリ ローダーおよびバインダーのエラーなど、プロセスの早い段階で発生する問題を診断するのに役立つ場合があります。
+
+  > [!NOTE]
+  > このオプションを使用すると、ツールに返信する最初の .NET 5.0 プロセスが監視されます。つまり、ご利用のコマンドで複数の .NET アプリケーションが起動される場合、収集されるのは最初のアプリのみとなります。 このため、このオプションについては、自己完結型アプリケーションに対して使用するか、または `dotnet exec <app.dll>` オプションを使用することをお勧めします。
 
 ## <a name="dotnet-trace-convert"></a>dotnet-trace convert
 
@@ -185,6 +193,42 @@ dotnet-trace list-profiles [-h|--help]
   ```
 
 - `<Enter>` キーを押すと、コレクションが停止します。 `dotnet-trace` では、*trace.nettrace* ファイルにイベントをログ記録する作業が完了します。
+
+## <a name="launch-a-child-application-and-collect-a-trace-from-its-startup-using-dotnet-trace"></a>子アプリケーションを起動し、そのスタートアップからトレースを dotnet-trace を使用して収集します
+
+注:これは、.NET 5.0 以降を実行しているアプリに対してのみ機能します。
+
+場合によっては、プロセスのトレースをそのスタートアップから収集すると便利なことがあります。 .NET 5.0 以降を実行しているアプリでは、dotnet-trace を使用してこれを行うことができます。
+
+これを使用すると、コマンドライン引数として `arg1` と `arg2` を含む `hello.exe` が起動され、ランタイム スタートアップからトレースが収集されます。
+
+```console
+dotnet-trace collect -- hello.exe arg1 arg2
+```
+
+上のコマンドを実行すると、次のような出力が生成されます。
+
+```console
+No profile or providers specified, defaulting to trace profile 'cpu-sampling'
+
+Provider Name                           Keywords            Level               Enabled By
+Microsoft-DotNETCore-SampleProfiler     0x0000F00000000000  Informational(4)    --profile
+Microsoft-Windows-DotNETRuntime         0x00000014C14FCCBD  Informational(4)    --profile
+
+Process        : E:\temp\gcperfsim\bin\Debug\net5.0\gcperfsim.exe
+Output File    : E:\temp\gcperfsim\trace.nettrace
+
+
+[00:00:00:05]   Recording trace 122.244  (KB)
+Press <Enter> or <Ctrl+C> to exit...
+```
+
+トレースの収集を停止するには、`<Enter>` または `<Ctrl + C>` キーを押します。 この操作を行うと、`hello.exe` も終了します。
+
+> [!NOTE]
+> dotnet-trace を介して `hello.exe` を起動すると、その入力/出力がリダイレクトされ、その stdin/stdout とやりとりができなくなります。
+> CTRL + C または SIGTERM を介してツールを終了すると、ツールと子プロセスの両方が安全に終了します。
+> ツールの前に子プロセスが終了すると、ツールも終了し、トレースを安全に表示できるようになります。
 
 ## <a name="view-the-trace-captured-from-dotnet-trace"></a>dotnet-trace からキャプチャされたトレースを表示する
 

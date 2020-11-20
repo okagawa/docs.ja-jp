@@ -1,13 +1,13 @@
 ---
 title: dotnet pack コマンド
-description: dotnet pack コマンドでは、.NET Core プロジェクトの NuGet パッケージを作成します。
+description: dotnet pack コマンドを実行すると、.NET プロジェクトの NuGet パッケージが作成されます。
 ms.date: 04/28/2020
-ms.openlocfilehash: 409b946d93cf73fec38941740a446c3ee3402490
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4312ea64a75fa89eae58cdb41a6dc3463cdd215c
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537831"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634234"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -178,7 +178,7 @@ Web プロジェクトは既定でパッケージ化可能ではありません�
   dotnet pack --runtime win10-x64
   ```
 
-- *.nuspec ファイル*を使用してプロジェクトをパックします。
+- *.nuspec ファイル* を使用してプロジェクトをパックします。
 
   ```dotnetcli
   dotnet pack ~/projects/app1/project.csproj -p:NuspecFile=~/projects/app1/project.nuspec -p:NuspecBasePath=~/projects/app1/nuget
@@ -188,4 +188,4 @@ Web プロジェクトは既定でパッケージ化可能ではありません�
   
   - [.nuspec を使用したパック](/nuget/reference/msbuild-targets#packing-using-a-nuspec)
   - [カスタマイズされたパッケージを作成するための高度な拡張ポイント](/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
-  - [グローバル プロパティ](/visualstudio/msbuild/msbuild-properties?view=vs-2019#global-properties)
+  - [グローバル プロパティ](/visualstudio/msbuild/msbuild-properties#global-properties)

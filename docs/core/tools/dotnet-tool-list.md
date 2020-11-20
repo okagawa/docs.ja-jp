@@ -1,13 +1,13 @@
 ---
 title: dotnet tool list コマンド
-description: dotnet tool list コマンドでは、お使いのコンピューターにインストールされている .NET Core ツールの一覧を表示します。
+description: dotnet tool list コマンドを実行すると、お使いのコンピューターにインストールされている .NET ツールが一覧表示されます。
 ms.date: 02/14/2020
-ms.openlocfilehash: 4035c5be233232e53c6d7150485f737108c1e18d
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: d884f2c41834dd9704de3a8ca15417ba368fde4b
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925463"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634286"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -15,7 +15,7 @@ ms.locfileid: "86925463"
 
 ## <a name="name"></a>名前
 
-`dotnet tool list` - お使いのコンピューター上に現在インストールされている指定した種類のすべての [.NET Core ツール](global-tools.md)を一覧表示します。
+`dotnet tool list` - お使いのコンピューターに現在インストールされている指定した種類の [.NET ツール](global-tools.md)を一覧表示します。
 
 ## <a name="synopsis"></a>構文
 
@@ -33,7 +33,7 @@ dotnet tool list -h|--help
 
 ## <a name="description"></a>説明
 
-`dotnet tool list` コマンドでは、お使いのコンピューターにインストールされている .NET Core グローバル、ツールパス、またはローカルのすべてのツールを一覧表示できます。 コマンドでは、パッケージ名、インストールされているバージョン、およびツール コマンドを一覧表示します。  コマンドを使用するには、次のいずれかを指定します。
+`dotnet tool list` コマンドを実行すると、お使いのコンピューターにインストールされている .NET グローバル ツール、ツールパス、またはローカル ツールが一覧表示されます。 コマンドでは、パッケージ名、インストールされているバージョン、およびツール コマンドを一覧表示します。  コマンドを使用するには、次のいずれかを指定します。
 
 * 既定の場所にインストールされているグローバル ツールを一覧表示するには、`--global` オプションを使用します。
 * ユーザー指定の場所にインストールされているグローバル ツールを一覧表示するには、`--tool-path` オプションを使用します。
@@ -79,6 +79,6 @@ dotnet tool list -h|--help
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Core ツール](global-tools.md)
-- [チュートリアル: .NET Core CLI を使って .NET Core グローバル ツールをインストールして使用する](global-tools-how-to-use.md)
-- [チュートリアル: .NET Core CLI を使って .NET Core ローカル ツールをインストールして使用する](local-tools-how-to-use.md)
+- [.NET ツール](global-tools.md)
+- [チュートリアル: .NET CLI を使って .NET グローバル ツールをインストールして使用する](global-tools-how-to-use.md)
+- [チュートリアル: .NET CLI を使って .NET ローカル ツールをインストールして使用する](local-tools-how-to-use.md)

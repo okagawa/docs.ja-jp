@@ -1,40 +1,40 @@
 ---
-title: RHEL に .NET Core をインストールする - .NET Core
-description: RHEL に .NET Core SDK と .NET Core ランタイムをインストールするさまざまな方法を示します。
+title: RHEL に .NET をインストールする - .NET
+description: RHEL に .NET SDK と .NET ランタイムをインストールするさまざまな方法を示します。
 author: adegeo
 ms.author: adegeo
-ms.date: 06/04/2020
-ms.openlocfilehash: 9e4d0ab86355329b898a82f135b9eeb839eab1cb
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.date: 11/10/2020
+ms.openlocfilehash: cb03f84cf84557d467f0a067b8d5629a843ec7e3
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619450"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594585"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-rhel"></a>RHEL に .NET Core SDK または .NET Core ランタイムをインストールする
+# <a name="install-the-net-sdk-or-the-net-runtime-on-rhel"></a>RHEL に .NET SDK または .NET ランタイムをインストールする
 
-.NET Core は RHEL でサポートされています。 この記事では、RHEL に .NET Core をインストールする方法について説明します。
+.NET は RHEL でサポートされています。 この記事では、RHEL に .NET をインストールする方法について説明します。
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-your-red-hat-subscription"></a>ご利用の Red Hat サブスクリプションを登録する
 
-Red Hat から RHEL に .NET Core をインストールするには、まず、Red Hat Subscription Manager を使用して登録する必要があります。 ご利用のシステム上でこれがまだ行われていない場合、または不明な場合は、[.NET Core 向け Red Hat 製品ドキュメント](https://access.redhat.com/documentation/net_core/)を参照してください。
+Red Hat から RHEL に .NET をインストールするには、まず、Red Hat Subscription Manager を使用して登録する必要があります。 ご利用のシステムでまだこれを行っていない場合、または不明な場合は、[.NET 向けの Red Hat の製品ドキュメント](https://access.redhat.com/documentation/net/5.0/)を参照してください。
 
 ## <a name="supported-distributions"></a>サポートされているディストリビューション
 
-次の表は、RHEL 7 と RHEL 8 の両方で現在サポートされている .NET Core リリースの一覧です。 これらのバージョンは、[.NET Core のバージョンがサポート終了になる](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)か、RHEL のバージョンがサポート終了になるまでサポートされます。
+RHEL 7 と RHEL 8 の両方で現在サポートされている .NET のリリースの一覧は、次の表のとおりです。 これらのバージョンは、[.NET のバージョンがサポート終了になる](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)か、RHEL のバージョンがサポート終了になるまでサポートされます。
 
-- ✔️ は、RHEL または .NET Core のバージョンがまだサポートされていることを示します。
-- ❌ は、RHEL または .NET Core のバージョンがその RHEL のリリースではサポートされていないことを示しています。
-- RHEL のバージョンと .NET Core のバージョンの両方に ✔️ が付いている場合、その OS と .NET の組み合わせはサポートされています。
+- ✔️ は、RHEL または .NET のバージョンがまだサポートされていることを示します。
+- ❌ は、RHEL または .NET のバージョンがその RHEL のリリースではサポートされていないことを示しています。
+- RHEL のバージョンと .NET のバージョンの両方に ✔️ が付いている場合、その OS と .NET の組み合わせはサポートされています。
 
-| RHEL                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5 Preview (手動インストールのみ) |
+| RHEL                     | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |--------------------------|---------------|---------------|----------------|
-| ✔️ [8](#rhel-8-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 Preview |
-| ✔️ [7](#rhel-7-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 Preview |
+| ✔️ [8](#rhel-8-)        | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ✔️ [7](#rhel-7--net-50) | ✔️ 2.1        | ✔️ [3.1](#rhel-7--net-core-31)        | ✔️ [5.0](#rhel-7--net-50) |
 
-次のバージョンの .NET Core は、サポート対象外となりました。 これらのダウンロードは、まだ公開されています。
+次のバージョンの .NET は、サポート対象外となりました。 これらのダウンロードは、まだ公開されています。
 
 - 3.0
 - 2.2
@@ -42,15 +42,34 @@ Red Hat から RHEL に .NET Core をインストールするには、まず、R
 
 ## <a name="how-to-install-other-versions"></a>その他のバージョンをインストールする方法
 
-.NET Core の他のリリースをインストールするために必要な手順については、[.NET Core に関する Red Hat のドキュメント](https://access.redhat.com/documentation/net_core/)を参照してください。
+.NET の他のリリースをインストールするために必要な手順については、[.NET 向けの Red Hat のドキュメント](https://access.redhat.com/documentation/net/5.0/)を参照してください。
 
 ## <a name="rhel-8-"></a>RHEL 8 ✔️
 
-.NET Core は、RHEL 8 用の AppStream リポジトリに含まれています。
+> [!TIP]
+> .NET 5.0 は、AppStream のリポジトリにはまだありませんが、.NET Core 3.1 はあります。 .NET Core 3.1 をインストールするには、`aspnetcore-runtime-3.1` や `dotnet-sdk-3.1` などの適切なパッケージで `dnf install` コマンドを使用します。 以下の手順は .NET 5.0 の場合です。
 
-[!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
+[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
 
-## <a name="rhel-7-"></a>RHEL 7 ✔️
+```bash
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/rhel/8/prod.repo
+```
+
+[!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
+
+## <a name="rhel-7--net-50"></a>RHEL 7 ✔️ .NET 5.0
+
+[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
+
+```bash
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
+```
+
+[!INCLUDE [linux-dnf-install-50](includes/linux-install-50-yum.md)]
+
+## <a name="rhel-7--net-core-31"></a>RHEL 7 ✔️ .NET Core 3.1
 
 [!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
 
@@ -112,4 +131,4 @@ ASP.NET Core ランタイムの代替手段として、ASP.NET Core サポート
 
 ## <a name="next-steps"></a>次の手順
 
-- [チュートリアル: Visual Studio Code を使用して .NET Core SDK でコンソール アプリケーションを作成する](../tutorials/with-visual-studio-code.md)
+- [チュートリアル: Visual Studio Code を使用して .NET SDK でコンソール アプリケーションを作成する](../tutorials/with-visual-studio-code.md)

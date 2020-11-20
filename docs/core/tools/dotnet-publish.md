@@ -1,13 +1,13 @@
 ---
 title: dotnet publish コマンド
-description: dotnet publish コマンドを実行すると、.NET Core プロジェクトまたはソリューションをディレクトリに発行できます。
-ms.date: 02/24/2020
-ms.openlocfilehash: 2c33f99ce652dadc6e0c1a4c5e9e78fff9f54254
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+description: dotnet publish コマンドを実行すると、.NET プロジェクトまたはソリューションがディレクトリに発行されます。
+ms.date: 11/11/2020
+ms.openlocfilehash: 9b5d00816e2f4f9557280175e4b016fe79af0673
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654895"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634430"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -41,11 +41,11 @@ dotnet publish -h|--help
 - *.runtimeconfig.json* ファイル。アプリケーションが想定する共有ランタイムと、ランタイム用の他の構成オプション (ガベージ コレクションの種類など) を指定します。
 - アプリケーションの依存関係。NuGet キャッシュから出力フォルダーにコピーされます。
 
-`dotnet publish` コマンドの出力は、実行のためにホスト システム (サーバー、PC、Mac、ラップトップなど) にすぐに展開できます。 これは、アプリケーションの展開を準備するための正式にサポートされている唯一の方法です。 プロジェクトに指定されている展開の種類によっては、ホスティング システムに .NET Core 共有ランタイムがインストールされている場合とされていない場合があります。 詳細については、「[.NET Core CLI を使用して .NET Core アプリを発行する](../deploying/deploy-with-cli.md)」を参照してください。
+`dotnet publish` コマンドの出力は、実行のためにホスト システム (サーバー、PC、Mac、ラップトップなど) にすぐに展開できます。 これは、アプリケーションの展開を準備するための正式にサポートされている唯一の方法です。 プロジェクトで指定されている展開の種類によっては、ホスティング システムに .NET 共有ランタイムがインストールされている場合とされていない場合があります。 詳細については、[.NET CLI を使用した .NET アプリの発行](../deploying/deploy-with-cli.md)に関する記事を参照してください。
 
 ### <a name="implicit-restore"></a>暗黙的な復元
 
-[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE[dotnet restore note](../../../includes/dotnet-restore-note.md)]
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -125,7 +125,7 @@ dotnet publish -p:PublishProfile=FolderProfile
   
   指定しない場合、フレームワークに依存する実行可能ファイルおよびクロスプラットフォーム バイナリの既定値は *[project_file_folder]/bin/[configuration]/[framework]/publish/* に設定されます。 自己完結型の実行可能ファイルの場合、既定値は *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* に設定されます。
 
-  Web プロジェクトで、出力フォルダーがプロジェクト フォルダー内にある場合、`dotnet publish` コマンドを連続して実行すると、出力フォルダーが入れ子になって生成されます。 たとえば、プロジェクト フォルダーが *myproject* で、発行の出力フォルダーが *myproject/publish* であり、`dotnet publish` を 2 回実行した場合、2 回目の実行では *myproject/publish/publish* に *.config* および *.json* ファイルなどのコンテンツ ファイルが配置されます。 発行フォルダーが入れ子にならないようにするには、プロジェクト フォルダーの**直下以外**の発行フォルダーを指定するか、またはプロジェクトから発行フォルダーを除外します。 *publishoutput* という名前の発行フォルダーを除外するには、 *.csproj* ファイルの `PropertyGroup` 要素に次の要素を追加します。
+  Web プロジェクトで、出力フォルダーがプロジェクト フォルダー内にある場合、`dotnet publish` コマンドを連続して実行すると、出力フォルダーが入れ子になって生成されます。 たとえば、プロジェクト フォルダーが *myproject* で、発行の出力フォルダーが *myproject/publish* であり、`dotnet publish` を 2 回実行した場合、2 回目の実行では *myproject/publish/publish* に *.config* および *.json* ファイルなどのコンテンツ ファイルが配置されます。 発行フォルダーが入れ子にならないようにするには、プロジェクト フォルダーの **直下以外** の発行フォルダーを指定するか、またはプロジェクトから発行フォルダーを除外します。 *publishoutput* という名前の発行フォルダーを除外するには、 *.csproj* ファイルの `PropertyGroup` 要素に次の要素を追加します。
 
   ```xml
   <DefaultItemExcludes>$(DefaultItemExcludes);publishoutput**</DefaultItemExcludes>
@@ -165,7 +165,7 @@ dotnet publish -p:PublishProfile=FolderProfile
 
 - **`--self-contained [true|false]`**
 
-  アプリケーションと一緒に .NET Core ランタイムを発行します。これにより、ランタイムをターゲット コンピューターにインストールする必要がなくなります。 ランタイム識別子が指定され、プロジェクトが (ライブラリ プロジェクトではなく) 実行可能なプロジェクトである場合、既定値は `true` です。 詳細については、[.NET Core アプリケーションの発行](../deploying/index.md)に関する記事と「[.NET Core CLI を使用して .NET Core アプリを発行する](../deploying/deploy-with-cli.md)」を参照してください。
+  アプリケーションと併せて .NET ランタイムを発行します。これにより、ランタイムをターゲット コンピューターにインストールする必要がなくなります。 ランタイム識別子が指定され、プロジェクトが (ライブラリ プロジェクトではなく) 実行可能なプロジェクトである場合、既定値は `true` です。 詳細については、[.NET アプリケーションの発行](../deploying/index.md)、および [.NET CLI を使用した .NET アプリの発行](../deploying/deploy-with-cli.md)に関する各記事を参照してください。
 
   `true` または `false` を指定せずに、このオプションを使用した場合、既定値は `true` になります。 その場合は、その位置で `true` または `false` が想定されているため、`--self-contained` の直後にソリューションまたはプロジェクト引数を配置しないでください。
 
@@ -175,7 +175,7 @@ dotnet publish -p:PublishProfile=FolderProfile
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  指定されたランタイムのアプリケーションを発行します。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。 詳細については、[.NET Core アプリケーションの発行](../deploying/index.md)に関する記事と「[.NET Core CLI を使用して .NET Core アプリを発行する](../deploying/deploy-with-cli.md)」を参照してください。
+  指定されたランタイムのアプリケーションを発行します。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。 詳細については、[.NET アプリケーションの発行](../deploying/index.md)、および [.NET CLI を使用した .NET アプリの発行](../deploying/deploy-with-cli.md)に関する各記事を参照してください。
 
 - **`-v|--verbosity <LEVEL>`**
 
@@ -231,8 +231,8 @@ dotnet publish -p:PublishProfile=FolderProfile
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Core アプリケーションの発行の概要](../deploying/index.md)
-- [.NET Core CLI を使用して .NET Core アプリを発行する](../deploying/deploy-with-cli.md)
+- [.NET アプリケーションの発行の概要](../deploying/index.md)
+- [.NET CLI を使用した .NET アプリの発行](../deploying/deploy-with-cli.md)
 - [ターゲット フレームワーク](../../standard/frameworks.md)
 - [Runtime Identifier (RID) カタログ](../rid-catalog.md)
 - [macOS Catalina の公証に対応する](../install/macos-notarization-issues.md)

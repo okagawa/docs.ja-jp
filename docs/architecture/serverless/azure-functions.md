@@ -4,16 +4,16 @@ description: Azure Functions には、イベント ドリブンのインスタ�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/06/2020
-ms.openlocfilehash: 7625b2a0dafb90dc1bf2fb7fe680d53b20764c09
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 08e1aaecdee753dc25cca0d6356caaafae1ad510
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91171807"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557117"
 ---
 # <a name="azure-functions"></a>Azure Functions 
 
-Azure Functions によってサーバーレスのコンピューティング エクスペリエンスが提供されます。 *トリガー* (HTTP エンドポイントへのアクセスやタイマーなど) によって呼び出される関数によって、コードまたはビジネス ロジックのブロックが実行されます。 ストレージやキューなどのリソースに接続する特別な "*バインド*" も Functions でサポートされています。
+Azure Functions では、サーバーレスのコンピューティング エクスペリエンスが提供されます。 *トリガー* (HTTP エンドポイントへのアクセスやタイマーなど) によって呼び出される関数によって、コードまたはビジネス ロジックのブロックが実行されます。 ストレージやキューなどのリソースに接続する特別な "*バインド*" も Functions でサポートされています。
 
 ![Azure Functions のロゴ](./media/azure-functions-logo.png)
 
@@ -39,7 +39,7 @@ Azure Functions によってサーバーレスのコンピューティング エ
 
 ## <a name="app-service-plans"></a>App Service プラン
 
-Functions は "*App Service プラン*" によってサポートされています。 このプランでは、関数アプリによって使用されるリソースを定義します。 プランをリージョンに割り当て、使用される仮想マシンのサイズと数を決定し、価格レベルを選択することができます。 真のサーバーレス アプローチとして、関数アプリで**従量課金**プランを使用することができます。 従量課金プランでは、負荷に基づいてバックエンドが自動的にスケーリングされます。
+Functions は "*App Service プラン*" によってサポートされています。 このプランでは、関数アプリによって使用されるリソースを定義します。 プランをリージョンに割り当て、使用される仮想マシンのサイズと数を決定し、価格レベルを選択することができます。 真のサーバーレス アプローチとして、関数アプリで **従量課金** プランを使用することができます。 従量課金プランでは、負荷に基づいてバックエンドが自動的にスケーリングされます。
 
 関数アプリのもう 1 つのホスティング オプションは、[Premium プラン](/azure/azure-functions/functions-premium-plan)です。 このプランでは、コールド スタートの必要がない "常時接続" インスタンスが提供され、VNet 接続などの高度な機能がサポートされて、Premium ハードウェアで実行されます。
 

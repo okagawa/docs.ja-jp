@@ -1,20 +1,20 @@
 ---
-title: 'チュートリアル: .NET Core ツールを作成する'
-description: .NET Core ツールを作成する方法について説明します。 ツールは、.NET Core CLI を使用してインストールされるコンソール アプリケーションです。
+title: 'チュートリアル: .NET ツールを作成する'
+description: .NET ツールを作成する方法について説明します。 ツールは、.NET CLI を使用してインストールするコンソール アプリケーションです。
 ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: c1c17368d8efdece73f5312899553bacf884cfb3
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 93d0567f3d73707f828f84fad6128804debf6579
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062783"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633779"
 ---
-# <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>チュートリアル: .NET Core CLI を使用して .NET Core ツールを作成する
+# <a name="tutorial-create-a-net-tool-using-the-net-cli"></a>チュートリアル: .NET CLI を使用して .NET ツールを作成する
 
 **この記事の対象:** ✔️ .NET Core 2.1 SDK 以降のバージョン
 
-このチュートリアルでは、.NET Core ツールを作成およびパッケージ化する方法について説明します。 .NET Core CLI を使ってコンソール アプリケーションをツールとして作成し、他のユーザーがインストールおよび実行できるようにすることができます。 .NET Core ツールは、.NET Core CLI からインストールされる NuGet パッケージです。 ツールの詳細については、[.NET Core ツールの概要](global-tools.md)に関する記事を参照してください。
+このチュートリアルでは、.NET ツールを作成およびパッケージ化する方法について説明します。 .NET CLI では、他のユーザーがインストールおよび実行できる、コンソール アプリケーションをツールとして作成できます。 .NET ツールは、.NET CLI でインストールする NuGet パッケージです。 ツールの詳細については、[.NET ツールの概要](global-tools.md)に関する記事を参照してください。
 
 作成するツールは、メッセージを入力として受け取り、ロボットの画像を作成するテキスト行と共にメッセージを表示するコンソール アプリケーションです。
 
@@ -191,7 +191,7 @@ dotnet run -- Hello from the bot
 
 ## <a name="troubleshoot"></a>トラブルシューティング
 
-チュートリアルの実行中にエラー メッセージが表示された場合は、「[.NET Core ツールの使用に関する問題のトラブルシューティング](troubleshoot-usage-issues.md)」を参照してください。
+チュートリアルの実行中にエラー メッセージが表示された場合は、「[.NET ツールの使用に関する問題のトラブルシューティング](troubleshoot-usage-issues.md)」を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 

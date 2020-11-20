@@ -1,15 +1,15 @@
 ---
-title: 持続性のある Azure Functions - サーバーレス アプリ
-description: 持続性のある Azure Functions によって Azure Functions ランタイムを拡張し、コード内でステートフル ワークフローを有効にすることができます。
+title: 永続的な Azure Functions - サーバーレス アプリ
+description: Azure Functions ランタイムを永続的な Azure Functions で拡張すると、コード内でステートフル ワークフローを有効にできます。
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: 1498b5a19bc92b7db16f7422a35ac3afffb82b60
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c3ee628b5c2239cd13395fda7714b38b06efa058
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91171794"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557156"
 ---
 # <a name="durable-azure-functions"></a>永続的な Azure Functions
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5e77b7bd73c09e061a94a29703cf5286814d1ebb
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4ab2fc0645f76870dead99b5f45eef763643fb27
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602688"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506902"
 ---
 
 [.NET Core は、Snap Store から入手できます。](https://snapcraft.io/dotnet-sdk)
@@ -15,18 +15,18 @@ Snap では、サポートされているバージョンの .NET Core のみを�
 
 ### <a name="install-the-sdk"></a>SDK のインストール
 
-.NET Core SDK の Snap パッケージは、すべて同じ識別子 (`dotnet-sdk`) で公開されます。 特定のバージョンの SDK は、チャネルを指定することによってインストールできます。 SDK には、対応するランタイムが含まれています。 次の表に、チャネルの一覧を示します。
+.NET SDK の Snap パッケージは、すべて同じ識別子 (`dotnet-sdk`) で公開されます。 特定のバージョンの SDK は、チャネルを指定することによってインストールできます。 SDK には、対応するランタイムが含まれています。 次の表に、チャネルの一覧を示します。
 
-| .NET Core バージョン | Snap パッケージ             |
-|-------------------|--------------------------|
-| 3.1 (LTS)         | `3.1` または `latest/stable` |
-| 2.1 (LTS)         | `2.1`                    |
-| .NET 5.0 preview  | `5.0/beta`               |
+| .NET のバージョン | Snap パッケージ             |
+|--------------|--------------------------|
+| 5.0          | `5.0` または `latest/stable` |
+| 3.1 (LTS)    | `3.1` または `lts/stable`    |
+| 2.1 (LTS)    | `2.1`                    |
 
-`snap install` コマンドを使用して、.NET Core SDK の Snap パッケージをインストールします。 `--channel` パラメーターを使用して、インストールするバージョンを指定します。 このパラメーターを省略すると、`latest/stable` が使用されます。 この例では、`3.1` が指定されています。
+`snap install` コマンドを使用して、.NET SDK の Snap パッケージをインストールします。 `--channel` パラメーターを使用して、インストールするバージョンを指定します。 このパラメーターを省略すると、`latest/stable` が使用されます。 この例では、`5.0` が指定されています。
 
 ```bash
-sudo snap install dotnet-sdk --classic --channel=3.1
+sudo snap install dotnet-sdk --classic --channel=5.0
 ```
 
 次に、`snap alias` コマンドを使用して、システムの `dotnet` コマンドを登録します。
@@ -35,32 +35,33 @@ sudo snap install dotnet-sdk --classic --channel=3.1
 sudo snap alias dotnet-sdk.dotnet dotnet
 ```
 
-このコマンドの形式は次のとおりです: `sudo snap alias {package}.{command} {alias}`。 `{alias}` の名前は自由に選択できます。 たとえば、snap によってインストールされた特定のバージョンにちなんでコマンドの名前を指定できます: `sudo snap alias dotnet-sdk.dotnet dotnet31`。 コマンド `dotnet31` を使用すると、この特定のバージョンの .NET が呼び出されます。 ただし、これはチュートリアルや例のほとんどと互換性がありません。それらでは `dotnet` コマンドが使用可能であることが想定されているためです。
+このコマンドの形式は次のとおりです: `sudo snap alias {package}.{command} {alias}`。 `{alias}` の名前は自由に選択できます。 たとえば、snap によってインストールされた特定のバージョンにちなんでコマンドの名前を指定できます: `sudo snap alias dotnet-sdk.dotnet dotnet50`。 コマンド `dotnet50` を使用すると、この特定のバージョンの .NET が呼び出されます。 ただし、これはチュートリアルや例のほとんどと互換性がありません。それらでは `dotnet` コマンドが使用可能であることが想定されているためです。
 
 ### <a name="install-the-runtime"></a>ランタイムをインストールする
 
 .NET Core ランタイムの Snap パッケージは、それぞれ独自のパッケージ識別子で公開されます。 次の表に、パッケージ識別子の一覧を示します。
 
-| .NET Core バージョン | Snap パッケージ        |
+| .NET のバージョン      | Snap パッケージ        |
 |-------------------|---------------------|
+| 5.0               | `dotnet-runtime-50` |
 | 3.1 (LTS)         | `dotnet-runtime-31` |
 | 3.0               | `dotnet-runtime-30` |
 | 2.2               | `dotnet-runtime-22` |
 | 2.1 (LTS)         | `dotnet-runtime-21` |
 
-`snap install` コマンドを使用して、.NET Core ランタイムの Snap パッケージをインストールします。 この例では、.NET Core 3.1 がインストールされます。
+`snap install` コマンドを使用して、.NET ランタイムの Snap パッケージをインストールします。 この例では、.NET 5.0 がインストールされます。
 
 ```bash
-sudo snap install dotnet-runtime-31 --classic
+sudo snap install dotnet-runtime-50 --classic
 ```
 
 次に、`snap alias` コマンドを使用して、システムの `dotnet` コマンドを登録します。
 
 ```bash
-sudo snap alias dotnet-runtime-31.dotnet dotnet
+sudo snap alias dotnet-runtime-50.dotnet dotnet
 ```
 
-このコマンドの形式は次のとおりです: `sudo snap alias {package}.{command} {alias}`。 `{alias}` の名前は自由に選択できます。 たとえば、snap によってインストールされた特定のバージョンにちなんでコマンドの名前を指定できます: `sudo snap alias dotnet-runtime-31.dotnet dotnet31`。 コマンド `dotnet31` を使用すると、この特定のバージョンの .NET が呼び出されます。 ただし、これはチュートリアルや例のほとんどと互換性がありません。それらでは `dotnet` コマンドが使用可能であることが想定されているためです。
+このコマンドの形式は次のとおりです: `sudo snap alias {package}.{command} {alias}`。 `{alias}` の名前は自由に選択できます。 たとえば、snap によってインストールされた特定のバージョンにちなんでコマンドの名前を指定できます: `sudo snap alias dotnet-runtime-50.dotnet dotnet50`。 コマンド `dotnet50` を使用すると、この特定のバージョンの .NET が呼び出されます。 ただし、これはチュートリアルや例のほとんどと互換性がありません。それらでは `dotnet` コマンドが使用可能であることが想定されているためです。
 
 ### <a name="ssl-certificate-errors"></a>SSL 証明書のエラー
 

@@ -1,19 +1,19 @@
 ---
-title: openSUSE に .NET Core をインストールする - .NET Core
-description: openSUSE に .NET Core SDK と .NET Core ランタイムをインストールするさまざまな方法を示します。
+title: openSUSE に .NET をインストールする - .NET
+description: openSUSE に .NET SDK と .NET ランタイムをインストールするさまざまな方法を示します。
 author: adegeo
 ms.author: adegeo
-ms.date: 06/04/2020
-ms.openlocfilehash: ccdb23ca1838d2c15c9a95b45c8505efe7a6df0e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 11/10/2020
+ms.openlocfilehash: 17012f3689e5834fd1629946767e931cb22a2c1b
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539231"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506914"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-opensuse"></a>openSUSE に .NET Core SDK または .NET Core ランタイムをインストールする
+# <a name="install-the-net-sdk-or-the-net-runtime-on-opensuse"></a>openSUSE に .NET SDK または .NET ランタイムをインストールする
 
-.NET Core は openSUSE でサポートされています。 この記事では、openSUSE に .NET Core をインストールする方法について説明します。
+.NET は openSUSE でサポートされています。 この記事では、openSUSE に .NET をインストールする方法について説明します。
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
@@ -21,17 +21,17 @@ ms.locfileid: "90539231"
 
 ## <a name="supported-distributions"></a>サポートされているディストリビューション
 
-次の表は、openSUSE 15 で現在サポートされている .NET Core リリースの一覧です。 これらのバージョンは、[.NET Core のバージョンがサポート終了になる](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)か、openSUSE のバージョンがサポート終了になるまでサポートされます。
+次の表は、openSUSE 15 で現在サポートされている .NET リリースの一覧です。 これらのバージョンは、[.NET のバージョンがサポート終了になる](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)か、openSUSE のバージョンがサポート終了になるまでサポートされます。
 
-- ✔️ は、openSUSE または .NET Core のバージョンがまだサポートされていることを示します。
-- ❌ は、openSUSE または .NET Core のバージョンがその openSUSE のリリースではサポートされていないことを示しています。
-- openSUSE のバージョンと .NET Core のバージョンの両方に ✔️ が付いている場合、その OS と .NET の組み合わせはサポートされています。
+- ✔️ は、openSUSE または .NET のバージョンがまだサポートされていることを示します。
+- ❌ は、openSUSE または .NET のバージョンがその openSUSE のリリースではサポートされていないことを示しています。
+- openSUSE のバージョンと .NET のバージョンの両方に ✔️ が付いている場合、その OS と .NET の組み合わせはサポートされています。
 
-| openSUSE                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5 Preview (手動インストールのみ) |
+| openSUSE                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |----------------------------|---------------|---------------|----------------|
-| ✔️ [15](#opensuse-15-)     | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 Preview |
+| ✔️ [15](#opensuse-15-)     | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
 
-次のバージョンの .NET Core は、サポート対象外となりました。 これらのダウンロードは、まだ公開されています。
+次のバージョンの .NET は、サポート対象外となりました。 これらのダウンロードは、まだ公開されています。
 
 - 3.0
 - 2.2
@@ -53,11 +53,11 @@ sudo mv prod.repo /etc/zypp/repos.d/microsoft-prod.repo
 sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 ```
 
-[!INCLUDE [linux-zyp-install-31](includes/linux-install-31-zyp.md)]
+[!INCLUDE [linux-zyp-install-50](includes/linux-install-50-zyp.md)]
 
 ## <a name="troubleshoot-the-package-manager"></a>パッケージ マネージャーのトラブルシューティング
 
-このセクションでは、パッケージ マネージャーを使用して .NET Core をインストールするときに発生する可能性のある一般的なエラーについて説明します。
+このセクションでは、パッケージ マネージャーを使用して .NET をインストールするときに発生するおそれがある一般的なエラーについて説明します。
 
 ### <a name="unable-to-find-package"></a>パッケージが見つからない
 
@@ -73,7 +73,7 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 
 ## <a name="dependencies"></a>依存関係
 
-パッケージ マネージャーを使用してインストールする場合、次のライブラリが自動的にインストールされます。 ただし、手動で .NET Core をインストールする場合、または自己完結型アプリを公開する場合は、次のライブラリがインストールされていることを確認する必要があります。
+パッケージ マネージャーを使用してインストールする場合、次のライブラリが自動的にインストールされます。 ただし、手動で .NET をインストールする場合、または自己完結型アプリを公開する場合は、次のライブラリがインストールされていることを確認する必要があります。
 
 - krb5
 - libicu
@@ -83,7 +83,7 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 
 依存関係の詳細については、「[Self-contained Linux applications](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)」(自己完結型 Linux アプリケーション) をご覧ください。
 
-*System.Drawing.Common* アセンブリを使用する .NET Core アプリの場合は、次の依存関係も必要です。
+*System.Drawing.Common* アセンブリを使用する .NET アプリの場合は、次の依存関係も必要です。
 
 - [libgdiplus (バージョン 6.0.1 以降)](https://www.mono-project.com/docs/gui/libgdiplus/)
 
@@ -100,4 +100,4 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 
 ## <a name="next-steps"></a>次の手順
 
-- [チュートリアル: Visual Studio Code を使用して .NET Core SDK でコンソール アプリケーションを作成する](../tutorials/with-visual-studio-code.md)
+- [チュートリアル: Visual Studio Code を使用して .NET SDK でコンソール アプリケーションを作成する](../tutorials/with-visual-studio-code.md)

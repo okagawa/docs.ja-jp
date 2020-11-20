@@ -1,13 +1,13 @@
 ---
 title: dotnet tool update コマンド
-description: dotnet tool update コマンドでは、お使いのコンピューター上の指定された .NET Core ツールを更新します。
+description: dotnet tool update コマンドは、お使いのコンピューター上の指定された .NET ツールを更新します。
 ms.date: 07/08/2020
-ms.openlocfilehash: a212fbb40af68019c1bc9a63963d960292be6b08
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 18b153e53a6dbcb32e50ae4a7d06a1c2f53d1eb5
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308872"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634078"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
@@ -15,7 +15,7 @@ ms.locfileid: "86308872"
 
 ## <a name="name"></a>名前
 
-`dotnet tool update` - お使いのコンピューター上の指定された [.NET Core ツール](global-tools.md)を更新します。
+`dotnet tool update` - お使いのコンピューター上の指定された [.NET ツール](global-tools.md)を更新します。
 
 ## <a name="synopsis"></a>構文
 
@@ -44,7 +44,7 @@ dotnet tool update -h|--help
 
 ## <a name="description"></a>説明
 
-`dotnet tool update` コマンドでは、お使いのコンピューター上の .NET Core ツールをパッケージの最新の安定バージョンに更新するための方法を提供します。 このコマンドは、ツールをアンインストールして再インストールして、効果的に更新します。 コマンドを使用するには、次のいずれかのオプションを指定します。
+`dotnet tool update` コマンドを使用すると、お使いのコンピューター上の .NET ツールをパッケージの最新の安定バージョンに更新することができます。 このコマンドは、ツールをアンインストールして再インストールして、効果的に更新します。 コマンドを使用するには、次のいずれかのオプションを指定します。
 
 * 既定の場所にインストールされたグローバル ツールを更新するには、`--global` オプションを使用します
 * カスタムの場所にインストールされたグローバル ツールを更新するには、`--tool-path` オプションを使用します。
@@ -56,7 +56,7 @@ dotnet tool update -h|--help
 
 - **`PACKAGE_ID`**
 
-  更新する .NET Core グローバル ツールが格納されている NuGet パッケージの名前または ID。 パッケージを見つけるには、[dotnet tool list](dotnet-tool-list.md) コマンドを使用できます。
+  更新する .NET グローバル ツールが格納されている NuGet パッケージの名前または ID。 パッケージを見つけるには、[dotnet tool list](dotnet-tool-list.md) コマンドを使用できます。
 
 ## <a name="options"></a>オプション
 
@@ -144,7 +144,7 @@ dotnet tool update -h|--help
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Core ツール](global-tools.md)
+- [.NET ツール](global-tools.md)
 - [セマンティック バージョン管理](https://semver.org)
-- [チュートリアル: .NET Core CLI を使って .NET Core グローバル ツールをインストールして使用する](global-tools-how-to-use.md)
-- [チュートリアル: .NET Core CLI を使って .NET Core ローカル ツールをインストールして使用する](local-tools-how-to-use.md)
+- [チュートリアル: .NET CLI を使って .NET グローバル ツールをインストールして使用する](global-tools-how-to-use.md)
+- [チュートリアル: .NET CLI を使って .NET ローカル ツールをインストールして使用する](local-tools-how-to-use.md)

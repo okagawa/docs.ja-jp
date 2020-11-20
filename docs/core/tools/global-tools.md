@@ -1,21 +1,21 @@
 ---
-title: .NET Core ツール
-description: .NET Core ツールをインストール、使用、更新、および削除する方法。 グローバル ツール、tool-path ツール、およびローカル ツールについて説明します。
+title: .NET ツール
+description: .NET ツールをインストール、使用、更新、および削除する方法。 グローバル ツール、tool-path ツール、およびローカル ツールについて説明します。
 author: KathleenDollard
 ms.topic: how-to
 ms.date: 02/12/2020
-ms.openlocfilehash: 08277ed791036201d1dfa30c21799db1c21a924e
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 3669ed17d58542aab0435ccea22700c82ba8ea26
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598135"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556902"
 ---
-# <a name="how-to-manage-net-core-tools"></a>.NET Core ツールの管理方法
+# <a name="how-to-manage-net-tools"></a>.NET ツールの管理方法
 
 **この記事の対象:** ✔️ .NET Core 2.1 SDK 以降のバージョン
 
-.NET Core ツールは、コンソール アプリケーションを含む特殊な NuGet パッケージです。 ツールは、次の方法でコンピューターにインストールできます。
+.NET ツールは、コンソール アプリケーションを含む特殊な NuGet パッケージです。 ツールは、次の方法でコンピューターにインストールできます。
 
 * グローバル ツールとして。
 
@@ -29,24 +29,25 @@ ms.locfileid: "89598135"
 
   ツールのバイナリは、既定のディレクトリにインストールされます。 ツールは、インストール ディレクトリまたはそのいずれかのサブディレクトリから起動します。 ディレクトリごとに、同じツールの異なるバージョンを使用できます。
   
-  .NET CLI では、マニフェスト ファイルを使用して、ディレクトリにローカルとしてインストールされているツールを追跡します。 マニフェスト ファイルがソース コード リポジトリのルート ディレクトリに保存されると、共同作成者は、リポジトリを複製し、1 つの .NET Core CLI コマンドを呼び出して、マニフェスト ファイルに一覧表示されているすべてのツールがインストールすることができます。
+  .NET CLI では、マニフェスト ファイルを使用して、ディレクトリにローカルとしてインストールされているツールを追跡します。 マニフェスト ファイルがソース コード リポジトリのルート ディレクトリに保存され、そのリポジトリを共同作成者がクローンし、.NET の CLI コマンドを 1 つ呼び出すと、マニフェスト ファイルに記載されているツールをすべてインストールできます。
 
 > [!IMPORTANT]
-> .NET Core ツールは完全な信頼で実行されます。 作成者を信頼していない場合は、その .NET Core ツールをインストールしないでください。
+> .NET ツールは完全な信頼で実行されます。 作成者を信頼していない場合は、.NET ツールをインストールしないでください。
 
 ## <a name="find-a-tool"></a>ツールを検索する
 
-現在、.NET Core にはツールの検索機能がありません。 ツールを見つける方法をいくつか紹介します。
+ツールを見つける方法をいくつか紹介します。
 
+* NuGet.org に発行されているツールを検索するには、[dotnet tool search](dotnet-tool-search.md) コマンドを使用します。
 * ".NET ツール" パッケージの種類のフィルターを使用して [NuGet](https://www.nuget.org) の Web サイトを検索します。 詳細については、「[パッケージの検索と選択](/nuget/consume-packages/finding-and-choosing-packages)」を参照してください。
 * ツールの一覧については、[natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub リポジトリを参照してください。
 * [ToolGet](https://www.toolget.net/) を使用して .NET ツールを検索します。
 * ASP.NET Core チームが作成したツールのソース コードについては、[dotnet/aspnetcore GitHub リポジトリの Tools ディレクトリ](https://github.com/dotnet/aspnetcore/tree/master/src/Tools)を参照してください。
-* 診断ツールについては、[.NET Core dotnet 診断ツール](../diagnostics/index.md#net-core-diagnostic-global-tools)に関する記事を参照してください。
+* 診断ツールについては、[.NET 診断ツール](../diagnostics/index.md#net-core-diagnostic-global-tools)に関するページを参照してください。
 
 ## <a name="check-the-author-and-statistics"></a>作成者と統計情報の確認
 
-.NET Core ツールは完全な信頼で実行され、グローバル ツールが PATH 環境変数に追加されるため、非常に強力です。 信頼できないユーザーからツールをダウンロードしないでください。
+.NET ツールは完全な信頼で実行され、グローバル ツールは PATH 環境変数に追加されるため、非常に強力です。 信頼できないユーザーからツールをダウンロードしないでください。
 
 ツールが NuGet でホストされている場合は、ツールを検索することで作成者と統計情報を確認できます。
 
@@ -92,7 +93,7 @@ Linux または macOS の場合:
 dotnet tool install dotnetsay --tool-path ~/bin
 ```
 
-この場所は、.NET Core SDK によって PATH 環境変数に自動的に追加されません。 [tool-path ツールを呼び出す](#invoke-a-tool-path-tool)には、次のいずれかの方法を使用して、コマンドを使用できることを確認する必要があります。
+.NET SDK はこの場所を、PATH 環境変数に自動的には追加しません。 [tool-path ツールを呼び出す](#invoke-a-tool-path-tool)には、次のいずれかの方法を使用して、コマンドを使用できることを確認する必要があります。
 
 * インストール ディレクトリを PATH 環境変数に追加します。
 * ツールを起動するときは完全なパスを指定します。
@@ -108,7 +109,7 @@ dotnet tool install dotnetsay --tool-path ~/bin
 dotnet new tool-manifest
 ```
 
-このコマンドにより、 *.config* ディレクトリ以下に *dotnet-tools.json* というマニフェスト ファイルが作成されます。 ローカル ツールをマニフェスト ファイルに追加するには、次の例に示すように、[dotnet tool install](dotnet-tool-install.md) コマンドを使用し、`--global` および `--tool-path` オプションを**省略**します。
+このコマンドにより、 *.config* ディレクトリ以下に *dotnet-tools.json* というマニフェスト ファイルが作成されます。 ローカル ツールをマニフェスト ファイルに追加するには、次の例に示すように、[dotnet tool install](dotnet-tool-install.md) コマンドを使用し、`--global` および `--tool-path` オプションを **省略** します。
 
 ```dotnetcli
 dotnet tool install dotnetsay
@@ -273,10 +274,10 @@ dotnet tool --help
 dotnet <command> --help
 ```
 
-ツールのインストールまたは実行に失敗した場合は、「[.NET Core ツールの使用に関する問題のトラブルシューティング](troubleshoot-usage-issues.md)」を参照してください。
+ツールのインストールまたは実行に失敗した場合は、「[.NET ツールの使用に関する問題のトラブルシューティング](troubleshoot-usage-issues.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: .NET Core CLI を使用して .NET Core ツールを作成する](global-tools-how-to-create.md)
-- [チュートリアル: .NET Core CLI を使って .NET Core グローバル ツールをインストールして使用する](global-tools-how-to-use.md)
-- [チュートリアル: .NET Core CLI を使って .NET Core ローカル ツールをインストールして使用する](local-tools-how-to-use.md)
+- [チュートリアル: .NET CLI を使用して .NET ツールを作成する](global-tools-how-to-create.md)
+- [チュートリアル: .NET CLI を使って .NET グローバル ツールをインストールして使用する](global-tools-how-to-use.md)
+- [チュートリアル: .NET CLI を使って .NET ローカル ツールをインストールして使用する](local-tools-how-to-use.md)

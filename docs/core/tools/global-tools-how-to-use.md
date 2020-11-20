@@ -1,16 +1,16 @@
 ---
-title: 'チュートリアル: .NET Core グローバル ツールをインストールして使用する'
+title: 'チュートリアル: .NET グローバル ツールをインストールして使用する'
 description: .NET ツールをグローバル ツールとしてインストールして使用する方法について説明します。
 ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: 28e34a4e5a0344e314c5d23228c1af5839db991c
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 01b773516da92fb16fb0f67fc6617e0c70d17c9d
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062770"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633896"
 ---
-# <a name="tutorial-install-and-use-a-net-core-global-tool-using-the-net-core-cli"></a>チュートリアル: .NET Core CLI を使って .NET Core グローバル ツールをインストールして使用する
+# <a name="tutorial-install-and-use-a-net-global-tool-using-the-net-cli"></a>チュートリアル: .NET CLI を使って .NET グローバル ツールをインストールして使用する
 
 **この記事の対象:** ✔️ .NET Core 2.1 SDK 以降のバージョン
 
@@ -28,9 +28,9 @@ ms.locfileid: "88062770"
    dotnet tool install --global --add-source ./nupkg microsoft.botsay
    ```
 
-   `--global` パラメーターでは、PATH 環境変数に自動的に追加される既定の場所にツール バイナリをインストールするように、.NET Core CLI に指示します。
+   `--global` パラメーターは、PATH 環境変数に自動的に追加される既定の場所にツール バイナリをインストールするように、.NET CLI に指示します。
 
-   `--add-source` パラメーターでは、NuGet パッケージへの追加のソース フィードとして *./nupkg* ディレクトリを一時的に使用するように、.NET Core CLI に指示します。 Nuget.org サイト上ではなく、必ず *./nupkg* ディレクトリ内だけで見つかるように、パッケージには一意の名前を付けました。
+   `--add-source` パラメーターは、NuGet パッケージへの追加のソース フィードとして *./nupkg* ディレクトリを一時的に使用するように、.NET CLI に指示します。 Nuget.org サイト上ではなく、必ず *./nupkg* ディレクトリ内だけで見つかるように、パッケージには一意の名前を付けました。
 
    出力には、ツールの呼び出しに使用されたコマンドと、インストールされているバージョンが示されます。
 
@@ -70,7 +70,7 @@ ms.locfileid: "88062770"
    dotnet tool install --tool-path ~/bin --add-source ./nupkg microsoft.botsay
    ```
 
-   `--tool-path` パラメーターでは、指定された場所にツール バイナリをインストールするように、.NET Core CLI に指示します。 ディレクトリが存在しなければ、作成されます。 このディレクトリは、PATH 環境変数に自動的に追加されるわけではありません。
+   `--tool-path` パラメーターは、指定された場所にツール バイナリをインストールするように、.NET CLI に指示します。 ディレクトリが存在しなければ、作成されます。 このディレクトリは、PATH 環境変数に自動的に追加されるわけではありません。
 
    出力には、ツールの呼び出しに使用されたコマンドと、インストールされているバージョンが示されます。
 
@@ -109,7 +109,7 @@ ms.locfileid: "88062770"
 
 ## <a name="troubleshoot"></a>トラブルシューティング
 
-チュートリアルの実行中にエラー メッセージが表示された場合は、「[.NET Core ツールの使用に関する問題のトラブルシューティング](troubleshoot-usage-issues.md)」を参照してください。
+チュートリアルの実行中にエラー メッセージが表示された場合は、「[.NET ツールの使用に関する問題のトラブルシューティング](troubleshoot-usage-issues.md)」を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 

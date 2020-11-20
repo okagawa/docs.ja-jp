@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 65f417c06886c32da8057ae612043b95c31a31bd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7f8014750d0255bd93c8fff533d90c4322f8207a
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536419"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439678"
 ---
 # <a name="operator-overloading-c-reference"></a>演算子のオーバーロード (C# リファレンス)
 
@@ -44,7 +44,7 @@ ms.locfileid: "90536419"
 |[a&#91;i&#93;](member-access-operators.md#indexer-operator-), [`a?[i]`](member-access-operators.md#null-conditional-operators--and-)|要素へのアクセスはオーバーロード可能な演算子とは見なされていませんが、[インデクサー](../../programming-guide/indexers/index.md)を定義することができます。|
 |[(T)x](type-testing-and-cast.md#cast-expression)|キャスト演算子をオーバーロードすることはできませんが、キャスト式で実行できるカスタム型変換を定義することはできます。 詳細については、「[ユーザー定義の変換演算子](user-defined-conversion-operators.md)」 に関するページを参照してください。|
 |[+=](arithmetic-operators.md#compound-assignment)、[-=](arithmetic-operators.md#compound-assignment)、[\*=](arithmetic-operators.md#compound-assignment)、[/=](arithmetic-operators.md#compound-assignment)、[%=](arithmetic-operators.md#compound-assignment)、[&=](boolean-logical-operators.md#compound-assignment)、[&#124;=](boolean-logical-operators.md#compound-assignment)、[^=](boolean-logical-operators.md#compound-assignment)、[\<\<=](bitwise-and-shift-operators.md#compound-assignment), [>>=](bitwise-and-shift-operators.md#compound-assignment)|複合代入演算子を明示的にオーバーロードすることはできません。 ただし、二項演算子をオーバーロードするとき、対応する複合代入演算子がある場合は、それも暗黙的にオーバーロードされます。 たとえば、`+=` は、オーバーロード可能な `+` を使用して評価されます。|
-|[^x](member-access-operators.md#index-from-end-operator-)、[x = y](assignment-operator.md)、[x.y](member-access-operators.md#member-access-expression-)、[`x?.y`](member-access-operators.md#null-conditional-operators--and-)、[c ? t : f](conditional-operator.md)、[x ?? y](null-coalescing-operator.md)、[x ??= y](null-coalescing-operator.md)、[x..y](member-access-operators.md#range-operator-)、[x->y](pointer-related-operators.md#pointer-member-access-operator--)、[=>](lambda-operator.md)、[f(x)](member-access-operators.md#invocation-expression-)、[as](type-testing-and-cast.md#as-operator)、[await](await.md)、[checked](../keywords/checked.md)、[unchecked](../keywords/unchecked.md)、[default](default.md)、[delegate](delegate-operator.md)、[is](type-testing-and-cast.md#is-operator)、[nameof](nameof.md)、[new](new-operator.md)、[sizeof](sizeof.md)、[stackalloc](stackalloc.md)、[switch](switch-expression.md)、[typeof](type-testing-and-cast.md#typeof-operator)|これらの演算子はオーバーロードできません。|
+|[^x](member-access-operators.md#index-from-end-operator-)、[x = y](assignment-operator.md)、[x.y](member-access-operators.md#member-access-expression-)、[`x?.y`](member-access-operators.md#null-conditional-operators--and-)、[c ? t : f](conditional-operator.md)、[x ?? y](null-coalescing-operator.md)、[x ??= y](null-coalescing-operator.md)、[x..y](member-access-operators.md#range-operator-)、[x->y](pointer-related-operators.md#pointer-member-access-operator--)、[=>](lambda-operator.md)、[f(x)](member-access-operators.md#invocation-expression-)、[as](type-testing-and-cast.md#as-operator)、[await](await.md)、[checked](../keywords/checked.md)、[unchecked](../keywords/unchecked.md)、[default](default.md)、[delegate](delegate-operator.md)、[is](type-testing-and-cast.md#is-operator)、[nameof](nameof.md)、[new](new-operator.md)、[sizeof](sizeof.md)、[stackalloc](stackalloc.md)、[switch](switch-expression.md)、[typeof](type-testing-and-cast.md#typeof-operator)、[with](with-expression.md)|これらの演算子はオーバーロードできません。|
 
 > [!NOTE]
 > 比較演算子は、ペアでオーバーロードする必要があります。 つまり、ペアのどちらかの演算子をオーバーロードする場合、もう一方の演算子もオーバーロードする必要があります。 次のようなペアがこれに該当します。

@@ -1,15 +1,15 @@
 ---
 title: SDK スタイル プロジェクトでのターゲット フレームワーク - .NET
 description: .NET アプリとライブラリのターゲット フレームワークについて説明します。
-ms.date: 09/08/2020
+ms.date: 11/06/2020
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 85bc05f07cfcc5f59a8a27790ee3d78a497cecdc
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: a37634bc9f4cbee5f7901fcb085d3801a7452573
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223468"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441040"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK スタイルのプロジェクトでのターゲット フレームワーク
 
@@ -19,9 +19,9 @@ ms.locfileid: "92223468"
 
 また、アプリまたはライブラリは、.NET の特定の実装をターゲットにして、実装固有の API にアクセスすることもできます。 たとえば、Xamarin.iOS (`Xamarin.iOS10` など) をターゲットにするアプリからは Xamarin が提供する iOS 10 用の iOS API ラッパーにアクセスでき、ユニバーサル Windows プラットフォーム (UWP、`uap10.0`) をターゲットにするアプリからは Windows 10 を実行するデバイス用にコンパイルできる API にアクセスできます。
 
-一部のターゲット フレームワーク (.NET Framework など) では、API はフレームワークがシステムにインストールするアセンブリによって定義され、アプリケーション フレームワーク API (ASP.NET など) を含む場合があります。
+.NET Framework などの一部のターゲット フレームワークでは、API はフレームワークがシステムにインストールするアセンブリによって定義され、アプリケーション フレームワーク API (ASP.NET など) を含む場合があります。
 
-パッケージ ベースのターゲット フレームワーク (.NET Standard、.NET Core など) では、API はアプリまたはライブラリに含まれるパッケージによって定義されます。 " *メタパッケージ* " は、それ独自の内容はなく、依存するもの (他のパッケージ) のリストを保持している NuGet パッケージです。 NuGet パッケージ ベースのターゲット フレームワークでは、全体としてフレームワークを構成するすべてのパッケージを参照するメタパッケージが暗黙的に指定されます。
+パッケージ ベースのターゲット フレームワーク (.NET 5、.NET Core、.NET Standard など) では、API はアプリまたはライブラリに含まれるパッケージによって定義されます。 "*メタパッケージ*" は、それ独自の内容はなく、依存するもの (他のパッケージ) のリストを保持している NuGet パッケージです。 NuGet パッケージ ベースのターゲット フレームワークでは、全体としてフレームワークを構成するすべてのパッケージを参照するメタパッケージが暗黙的に指定されます。
 
 ## <a name="latest-versions"></a>最新バージョン
 
@@ -29,6 +29,7 @@ ms.locfileid: "92223468"
 
 | ターゲット フレーム      | 最新 <br/> 安定バージョン | ターゲット フレームワーク モニカー (TFM) | 実装済み <br/> .NET Standard バージョン |
 | :-: | :-: | :-: | :-: |
+| .NET 5                | 5.0                         | net5.0                         | 該当なし                                     |
 | .NET Standard         | 2.1                         | netstandard2.1                 | 該当なし                                     |
 | .NET Core             | 3.1                         | netcoreapp3.1                  | 2.1                                     |
 | .NET Framework        | 4.8                         | net48                          | 2.0                                     |
@@ -48,7 +49,7 @@ ms.locfileid: "92223468"
 | Windows Phone              | wp [wp7]<br>wp7<br>wp75<br>wp8<br>wp81<br>wpa81 |
 | ユニバーサル Windows プラットフォーム | uap [uap10.0]<br>uap10.0 [win10] [netcore50] |
 
-\* .NET 5.0 以降の TFM には OS 固有のバリエーションが含まれています。 詳細については、次のセクション「[.NET 5 OS 固有の TFM](#net-5-os-specific-tfms)」を参照してください。
+\* .NET 5.0 以降の TFM にはオペレーティング システム固有のバリエーションが含まれています。 詳細については、次のセクション「[.NET 5 OS 固有の TFM](#net-5-os-specific-tfms)」を参照してください。
 
 ### <a name="net-5-os-specific-tfms"></a>.NET 5 OS 固有の TFM
 
@@ -63,13 +64,54 @@ ms.locfileid: "92223468"
 | \<base-tfm>-watchos | net5.0-watchos |
 | \<base-tfm>-windows | net5.0-windows |
 
-たとえば `net5.0-ios12.0` のように、OS のバージョンを任意で指定することもできます。
+`net5.0` TFM にはクロスプラットフォームで動作するテクノロジだけが含まれています。 OS 固有の TFM を指定すると、オペレーティング システムに固有の API がアプリで使用できるようになります (Windows フォームや iOS バインディングなど)。 `net5.0` TFM で使用可能なすべての API も、OS 固有の TFM によって継承されます。
 
-.NET 5 TFM の詳細については、「[Target framework names in .NET 5](https://github.com/dotnet/designs/blob/master/accepted/2020/net5/net5.md)」(.NET 5 でのターゲット フレームワーク名) を参照してください。
+異なるプラットフォーム間でアプリを移植可能にするために、OS 固有の複数の TFM をターゲットにして、`#if` プリプロセッサ ディレクティブを使用して OS 固有の API 呼び出しに対してプラットフォーム ガードを追加することができます。
+
+次の表に、.NET 5 TFM と以前の .NET バージョンの TFM との互換性を示します。
+
+| TFM             | 互換性あり                                            | メモ |
+|-----------------|------------------------------------------------------------|-|
+| net5.0          | net1..4 (NU1701 警告あり)<br />netcoreapp1..3.1 (WinForms または WPF が参照されたときに警告)<br />netstandard1..2.1 | |
+| net5.0-android  | xamarin.android (および `net5.0` から継承された他のすべてのもの) | |
+| net5.0-ios      | xamarin.ios (および `net5.0` から継承された他のすべてのもの) | |
+| net5.0-macos    | xamarin.mac (および `net5.0` から継承された他のすべてのもの) | |
+| net5.0-tvos     | xamarin.tvos (および `net5.0` から継承された他のすべてのもの) | |
+| net5.0-watchos  | xamarin.watchos (および `net5.0` から継承された他のすべてのもの) | |
+| net5.0-windows  | netcoreapp1..3.1 (および `net5.0` から継承された他のすべてのもの) | WinForms、WPF、UWP API が含まれます。<br />詳細については、「[デスクトップ アプリで Windows ランタイム API を呼び出す](/windows/apps/desktop/modernize/desktop-to-uwp-enhance)」を参照してください。 |
+
+#### <a name="suggested-targets"></a>推奨されるターゲット
+
+次のガイドラインを使用して、アプリで使用する TFM を決定します。
+
+- 複数のプラットフォームに移植可能なアプリの場合、`net5.0` をターゲットにする必要があります。 これにはほとんどのライブラリと、ASP.NET Core と Entity Framework も含まれます。
+
+- プラットフォーム固有のライブラリの場合、プラットフォーム固有のフレーバーをターゲットにする必要があります。 たとえば、WinForms プロジェクトと WPF プロジェクトは `net5.0-windows` をターゲットにする必要があります。
+
+- クロスプラットフォーム アプリケーション モデル (Xamarin Forms、ASP.NET Core) とブリッジ パック (Xamarin Essentials) の場合、少なくとも `net5.0` をターゲットにする必要がありますが、さらに多くの API または機能を利用するために、プラットフォーム固有の追加のフレーバーを対象とすることもできます。
+
+#### <a name="os-version-in-tfms"></a>TFM 内の OS バージョン
+
+TFM の最後に OS バージョンをオプションで指定することもできます。たとえば、アプリで使用できる API を示す `net5.0-ios13.0` などです (.NET 5 SDK は、新しい OS バージョンがリリースされた時点でサポート対象として含めるように更新されます)。新しくリリースされた API にアクセスするには、TFM 内で OS のバージョンを増分します。 この場合でも、プロジェクト ファイルに `SupportedOSPlatformVersion` 要素を追加すると、アプリと以前のバージョンの OS との互換性を維持することができます (およびそれ以降のバージョンの API に対する呼び出しに対する保護を追加することができます)。 `SupportedOSPlatformVersion` 要素は、アプリを実行するために必要な最小 OS バージョンを示すためのものです。
+
+たとえば、次のプロジェクト ファイルの抜粋では、iOS 14 API をアプリで使用できるように指定されていますが、iOS 13 以降のマシンで実行可能です。
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0-ios14.0</TargetFramework>
+    <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion> (minimum os platform version)
+  </PropertyGroup>
+
+  ...
+
+</Project>
+```
 
 ## <a name="how-to-specify-a-target-framework"></a>ターゲット フレームワークを指定する方法
 
-ターゲット フレームワークはプロジェクト ファイルで指定します。 単一のターゲット フレームワークを指定するときは、 **TargetFramework** 要素を使います。 次のコンソール アプリのプロジェクト ファイルでは、.NET 5.0 をターゲットにする方法が示されています。
+ターゲット フレームワークはプロジェクト ファイルで指定します。 単一のターゲット フレームワークを指定するときは、[TargetFramework 要素](../core/project-sdk/msbuild-props.md#targetframework)を使用します。 次のコンソール アプリのプロジェクト ファイルでは、.NET 5.0 をターゲットにする方法が示されています。
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -84,7 +126,7 @@ ms.locfileid: "92223468"
 
 複数のターゲット フレームワークを指定するときは、各ターゲット フレームワークに対するアセンブリを条件付きで参照できます。 コードでは、プリプロセッサ シンボルと *if-then-else* ロジックを使うことで、これらのアセンブリに対して条件付きでコンパイルできます。
 
-次のライブラリ プロジェクトでは、.NET Standard (`netstandard1.4`) と .NET Framework (`net40` および `net45`) の API がターゲットにされています。 ターゲット フレームワークが複数あるときは、複数形の **TargetFrameworks** 要素を使います。 ライブラリが 2 つの .NET Framework TFM に対してコンパイルされる場合、`Condition` 属性には実装固有のパッケージが含まれます。
+次のライブラリ プロジェクトでは、.NET Standard (`netstandard1.4`) と .NET Framework (`net40` および `net45`) の API がターゲットにされています。 ターゲット フレームワークが複数あるときは、複数形の [TargetFrameworks 要素](../core/project-sdk/msbuild-props.md#targetframeworks)を使用します。 ライブラリが 2 つの .NET Framework TFM に対してコンパイルされる場合、`Condition` 属性には実装固有のパッケージが含まれます。
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -148,9 +190,11 @@ SDK スタイル プロジェクトを使用する場合、ビルド システ�
 
 ## <a name="see-also"></a>参照
 
+- [.NET 5 でのターゲット フレームワーク名](https://github.com/dotnet/designs/blob/master/accepted/2020/net5/net5.md)
 - [クロス プラットフォーム ツールによるライブラリの開発](../core/tutorials/libraries.md)
 - [.NET Standard](net-standard.md)
 - [.NET Core バージョン管理](../core/versions/index.md)
 - [dotnet/standard GitHub リポジトリ](https://github.com/dotnet/standard)
 - [NuGet Tools GitHub リポジトリ](https://github.com/joelverhagen/NuGetTools)
 - [.NET のフレームワーク プロファイル](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)
+- [プラットフォーム互換性アナライザー](analyzers/platform-compat-analyzer.md)

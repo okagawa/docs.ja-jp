@@ -1,16 +1,16 @@
 ---
-title: 'チュートリアル: .NET Core ローカル ツールをインストールして使用する'
+title: 'チュートリアル: .NET ローカル ツールをインストールして使用する'
 description: .NET ツールをローカル ツールとしてインストールして使用する方法について説明します。
 ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: 555497a71d54713e62e54f8f293afdf74ead1743
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 2cb25443706293b66325d43136afcd3fd886294d
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062677"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633882"
 ---
-# <a name="tutorial-install-and-use-a-net-core-local-tool-using-the-net-core-cli"></a>チュートリアル: .NET Core CLI を使って .NET Core ローカル ツールをインストールして使用する
+# <a name="tutorial-install-and-use-a-net-local-tool-using-the-net-cli"></a>チュートリアル: .NET CLI を使って .NET ローカル ツールをインストールして使用する
 
 **この記事の対象:** ✔️ .NET Core 3.0 SDK 以降のバージョン
 
@@ -201,7 +201,7 @@ dotnet tool uninstall dotnetsay
 
 ## <a name="troubleshoot"></a>トラブルシューティング
 
-チュートリアルの実行中にエラー メッセージが表示された場合は、「[.NET Core ツールの使用に関する問題のトラブルシューティング](troubleshoot-usage-issues.md)」を参照してください。
+チュートリアルの実行中にエラー メッセージが表示された場合は、「[.NET ツールの使用に関する問題のトラブルシューティング](troubleshoot-usage-issues.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -2,12 +2,12 @@
 title: dotnet run コマンド
 description: dotnet run コマンドは、ソース コードからアプリケーションを実行する便利なオプションを提供します。
 ms.date: 02/19/2020
-ms.openlocfilehash: 77282fd8615ef01b7867c1bf0f741c834b6ddb30
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: c80f290c75e3bac65ae73fe8edada53db4ce86f8
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102770"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634417"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -43,7 +43,7 @@ dotnet run -h|--help
 dotnet myapp.dll
 ```
 
-`dotnet` ドライバーの詳細については、[.NET Core コマンド ライン ツール (CLI)](index.md) に関する記事を参照してください。
+`dotnet` ドライバーの詳細については、[.NET コマンド ライン ツール (CLI)](index.md) に関する記事を参照してください。
 
 アプリケーションを実行するため、`dotnet run` コマンドは、NuGet キャッシュから共有ランタイムの外にあるアプリケーションの依存関係を解決します。 このコマンドではキャッシュされた依存関係を使用するため、`dotnet run` を使用してアプリケーションを実稼働環境で実行することは推奨されません。 代わりに、[`dotnet publish`](dotnet-publish.md) コマンドを使用して[展開を作成](../deploying/index.md)し、発行された出力を展開します。
 
@@ -129,7 +129,7 @@ dotnet myapp.dll
   dotnet run --configuration Release -- --help
   ```
 
-- 現在のディレクトリでプロジェクトの依存関係とツールを復元し、最小限の出力のみを表示して、プロジェクトを実行します (.NET Core SDK 2.0 以降のバージョン)。
+- 最小限の出力のみを表示して、現在のディレクトリでプロジェクトの依存関係とツールを復元し、プロジェクトを実行します。
 
   ```dotnetcli
   dotnet run --verbosity m

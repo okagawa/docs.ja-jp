@@ -2,12 +2,12 @@
 title: .NET 5 以降の古い機能
 description: SYSLIB コンパイラの警告を発生させる、.NET 5.0 以降のバージョンで古いものとしてマークされた API について説明します。
 ms.date: 10/20/2020
-ms.openlocfilehash: 13f5fb10cfe693ed621b3f45fc22e024875890c8
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: aa5716ba8fe46c7c4ae2faafe7cc963551eecef7
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333140"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440765"
 ---
 # <a name="obsolete-features-in-net-5"></a>.NET 5 の古い機能
 
@@ -17,7 +17,7 @@ ms.locfileid: "92333140"
 
 - <xref:System.ObsoleteAttribute.UrlFormat?displayProperty=nameWithType> プロパティは、旧型式の詳細について確認するために URL リンクを含めるようにコンパイラに指示します。
 
-古い API の使用によってビルドの警告またはエラーが発生した場合は、「[リファレンス](#reference)」セクションに記載されている診断 ID に関する具体的なガイダンスに従ってください。 これらの古い警告またはエラーは、古い型またはメンバーに対して [標準診断 ID (CS0618)](../../csharp/language-reference/compiler-messages/cs0618.md) を使用して非表示にすることは " *できません* "。代わりに、カスタム `SYSLIBxxxx` 診断 ID の値を使用してください。 詳細については、「[警告を表示しない](#suppress-warnings)」を参照してください。
+古い API の使用によってビルドの警告またはエラーが発生した場合は、「[リファレンス](#reference)」セクションに記載されている診断 ID に関する具体的なガイダンスに従ってください。 これらの古い警告またはエラーは、古い型またはメンバーに対して [標準診断 ID (CS0618)](../../csharp/language-reference/compiler-messages/cs0618.md) を使用して非表示にすることは "*できません*"。代わりに、カスタム `SYSLIBxxxx` 診断 ID の値を使用してください。 詳細については、「[警告を表示しない](#suppress-warnings)」を参照してください。
 
 ## <a name="reference"></a>リファレンス
 
@@ -61,9 +61,14 @@ ms.locfileid: "92333140"
    <TargetFramework>net5.0</TargetFramework>
    <!-- NoWarn below suppresses SYSLIB0001 project-wide -->
    <NoWarn>$(NoWarn);SYSLIB0001</NoWarn>
+   <!-- To suppress multiple warnings, you can use multiple NoWarn elements -->
+   <NoWarn>$(NoWarn);SYSLIB0002</NoWarn>
+   <NoWarn>$(NoWarn);SYSLIB0003</NoWarn>
+   <!-- Alternatively, you can suppress multiple warnings by using a semicolon-delimited list -->
+   <NoWarn>$(NoWarn);SYSLIB0001;SYSLIB0002;SYSLIB0003</NoWarn>
   </PropertyGroup>
 </Project>
 ```
 
 > [!NOTE]
-> この方法で警告を非表示にすると、特定の旧型式の警告のみが無効になります。 他の旧型式であるというも含め、他の警告は一切無効になりません。
+> このように警告を非表示にすると、指定した非推奨警告だけが無効になります。 診断 ID の異なる非推奨警告を含め、その他の警告は無効になりません。

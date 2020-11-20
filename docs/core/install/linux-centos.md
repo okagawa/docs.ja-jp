@@ -1,19 +1,19 @@
 ---
-title: CentOS に .NET Core をインストールする - .NET Core
-description: CentOS に .NET Core SDK と .NET Core ランタイムをインストールするさまざまな方法を示します。
+title: CentOS に .NET をインストールする - .NET
+description: CentOS に .NET SDK と .NET ランタイムをインストールするさまざまな方法を示します。
 author: adegeo
 ms.author: adegeo
-ms.date: 06/04/2020
-ms.openlocfilehash: 7937502067e1717fd7f5c973c64ad33ae2a443a0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 11/10/2020
+ms.openlocfilehash: b2ed62d024c6f0d78a4ec64693f1dafeabd8f47b
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538619"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594633"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-centos"></a>CentOS に .NET Core SDK または .NET Core ランタイムをインストールする
+# <a name="install-the-net-sdk-or-the-net-runtime-on-centos"></a>CentOS に .NET SDK または .NET ランタイムをインストールする
 
-.NET Core は CentOS でサポートされています。 この記事では、CentOS に .NET Core をインストールする方法について説明します。
+.NET は CentOS でサポートされています。 この記事では、CentOS に .NET をインストールする方法について説明します。
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
@@ -21,18 +21,18 @@ ms.locfileid: "90538619"
 
 ## <a name="supported-distributions"></a>サポートされているディストリビューション
 
-次の表は、CentOS 7 と CentOS 8 の両方で現在サポートされている .NET Core リリースの一覧です。 これらのバージョンは、[.NET Core のバージョンがサポート終了になる](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)か、CentOS のバージョンがサポート終了になるまでサポートされます。
+CentOS 7 と CentOS 8 の両方で現在サポートされている .NET のリリースの一覧は、次の表のとおりです。 これらのバージョンは、[.NET のバージョンがサポート終了になる](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)か、CentOS のバージョンがサポート終了になるまでサポートされます。
 
-- ✔️ は、CentOS または .NET Core のバージョンがまだサポートされていることを示します。
-- ❌ は、CentOS または .NET Core のバージョンがその CentOS のリリースではサポートされていないことを示しています。
-- CentOS のバージョンと .NET Core のバージョンの両方に ✔️ が付いている場合、その OS と .NET の組み合わせはサポートされています。
+- ✔️ は、CentOS または .NET のバージョンがまだサポートされていることを示します。
+- ❌ は、CentOS または .NET のバージョンがその CentOS のリリースではサポートされていないことを示しています。
+- CentOS のバージョンと .NET のバージョンの両方に ✔️ が付いている場合、その OS と .NET の組み合わせはサポートされています。
 
-| CentOS                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5 Preview (手動インストールのみ) |
+| CentOS                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |--------------------------|---------------|---------------|----------------|
-| ✔️ [8](#centos-8-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 Preview |
-| ✔️ [7](#centos-7-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 Preview |
+| ✔️ [8](#centos-8-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ✔️ [7](#centos-7-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
 
-次のバージョンの .NET Core は、サポート対象外となりました。 これらのダウンロードは、まだ公開されています。
+次のバージョンの .NET は、サポート対象外となりました。 これらのダウンロードは、まだ公開されています。
 
 - 3.0
 - 2.2
@@ -46,9 +46,16 @@ ms.locfileid: "90538619"
 
 ## <a name="centos-8-"></a>CentOS 8 ✔️
 
-.NET Core 3.1 は CentOS 8 の既定のパッケージ リポジトリで利用できます。
+> [!TIP]
+> .NET 5.0 は、既定のパッケージ リポジトリにはまだありませんが、.NET Core 3.1 はあります。 .NET Core 3.1 をインストールするには、`aspnetcore-runtime-3.1` や `dotnet-sdk-3.1` などの適切なパッケージで `dnf install` コマンドを使用します。 以下の手順は .NET 5.0 の場合です。
 
-[!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
+[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
+
+```bash
+sudo rpm -Uvh https://packages.microsoft.com/config/centos/8/packages-microsoft-prod.rpm
+```
+
+[!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
 
 ## <a name="centos-7-"></a>CentOS 7 ✔️
 
@@ -58,11 +65,11 @@ ms.locfileid: "90538619"
 sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
 ```
 
-[!INCLUDE [linux-yum-install-31](includes/linux-install-31-yum.md)]
+[!INCLUDE [linux-yum-install-50](includes/linux-install-50-yum.md)]
 
 ## <a name="troubleshoot-the-package-manager"></a>パッケージ マネージャーのトラブルシューティング
 
-このセクションでは、パッケージ マネージャーを使用して .NET Core をインストールするときに発生する可能性のある一般的なエラーについて説明します。
+このセクションでは、パッケージ マネージャーを使用して .NET をインストールするときに発生する可能性のある一般的なエラーについて説明します。
 
 ### <a name="unable-to-find-package"></a>パッケージが見つからない
 
@@ -90,4 +97,4 @@ sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-
 
 ## <a name="next-steps"></a>次の手順
 
-- [チュートリアル: Visual Studio Code を使用して .NET Core SDK でコンソール アプリケーションを作成する](../tutorials/with-visual-studio-code.md)
+- [チュートリアル: Visual Studio Code を使用して .NET SDK でコンソール アプリケーションを作成する](../tutorials/with-visual-studio-code.md)

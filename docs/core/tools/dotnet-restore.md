@@ -2,12 +2,12 @@
 title: dotnet restore コマンド
 description: dotnet restore コマンドを使用して、依存関係とプロジェクト固有のツールを復元する方法について説明します。
 ms.date: 02/27/2020
-ms.openlocfilehash: 7b456e28505a07c03936c9006c8631848fd4672c
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: dcb68d6c690f2e12b61cfdfa6dc288bd474721c1
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925477"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634404"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -46,7 +46,7 @@ dotnet restore -h|--help
 
 ### <a name="specify-feeds"></a>フィードを指定する
 
-依存関係を復元するには、NuGet で、パッケージを配置するフィードが必要になります。 フィードは、通常、"*nuget.config*" 構成ファイルを通じて提供されます。 既定の構成ファイルは、.NET Core SDK がインストールされている場合に提供されます。 追加のフィードを指定するには、次のいずれかの操作を行います。
+依存関係を復元するには、NuGet で、パッケージを配置するフィードが必要になります。 フィードは、通常、"*nuget.config*" 構成ファイルを通じて提供されます。 既定の構成ファイルは、.NET SDK がインストールされている場合に提供されます。 追加のフィードを指定するには、次のいずれかの操作を行います。
 
 - プロジェクト ディレクトリに独自の *nuget.config* ファイルを作成します。 詳しくは、「[一般的な NuGet 構成](/nuget/consume-packages/configuring-nuget-behavior)」と、この記事の「[nuget.config の相違点](#nugetconfig-differences)」をご覧ください。
 - [`dotnet nuget add source`](dotnet-nuget-add-source.md) などの `dotnet nuget` コマンドを使用します。
@@ -71,11 +71,11 @@ dotnet restore -h|--help
 
 - [bindingRedirects](/nuget/schema/nuget-config-file#bindingredirects-section)
 
-  バインド リダイレクトは、`<PackageReference>` 要素では機能しません。また、.NET Core では、NuGet パッケージの `<PackageReference>` 要素のみサポートされます。
+  バインド リダイレクトは、`<PackageReference>` 要素では機能しません。また、.NET は、NuGet パッケージの `<PackageReference>` 要素のみをサポートしています。
 
 - [solution](/nuget/schema/nuget-config-file#solution-section)
 
-  これは、Visual Studio 固有の設定であり、.NET Core には適用されません。 .NET Core では、`packages.config` ファイルは使用されず、代わりに NuGet パッケージの `<PackageReference>` 要素が使用されます。
+  これは、Visual Studio 固有の設定であり、.NET には適用されません。 .NET では、`packages.config` ファイルを使用しない代わりに NuGet パッケージの `<PackageReference>` 要素を使用します。
 
 - [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
 

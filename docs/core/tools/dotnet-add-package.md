@@ -1,13 +1,13 @@
 ---
 title: dotnet add package コマンド
 description: "'dotnet add package' コマンドは、NuGet パッケージ参照をプロジェクトに追加する便利なオプションを提供します。"
-ms.date: 02/14/2020
-ms.openlocfilehash: 1bdda241c1301b926ba2fd322f969407038b7b62
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 11/11/2020
+ms.openlocfilehash: 10373b3b69c669323674b192d54cd277a5828f24
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538069"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556876"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -23,7 +23,7 @@ ms.locfileid: "90538069"
 dotnet add [<PROJECT>] package <PACKAGE_NAME>
     [-f|--framework <FRAMEWORK>] [--interactive]
     [-n|--no-restore] [--package-directory <PACKAGE_DIRECTORY>]
-    [-s|--source <SOURCE>] [-v|--version <VERSION>]
+    [--prerelease] [-s|--source <SOURCE>] [-v|--version <VERSION>]
 
 dotnet add package -h|--help
 ```
@@ -88,6 +88,10 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 - **`--package-directory <PACKAGE_DIRECTORY>`**
 
   パッケージの復元先となるディレクトリ。 既定のパッケージ復元場所は、Windows の場合は `%userprofile%\.nuget\packages`、macOS と Linux の場合は `~/.nuget/packages` です。 詳細については、[NuGet でのグローバル パッケージ、キャッシュ、および一時フォルダーの管理](/nuget/consume-packages/managing-the-global-packages-and-cache-folders)に関する記事を参照してください。
+
+- **`--prerelease`**
+
+  プレリリース パッケージのインストールを許可します。
 
 - **`-s|--source <SOURCE>`**
 

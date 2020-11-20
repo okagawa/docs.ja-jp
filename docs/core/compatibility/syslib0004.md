@@ -3,12 +3,12 @@ title: SYSLIB0004 警告
 description: コンパイル時の警告 SYSLIB0004 が生成される旧型式について説明します。
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: ba7cd8a890a89000b241d286c9d8069ba1398849
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: f48fd8915a13f9f99b091eca895dcd74a8f18907
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333131"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440723"
 ---
 # <a name="syslib0004-the-constrained-execution-region-cer-feature-is-not-supported"></a>SYSLIB0004: 制約された実行領域 (CER) 機能はサポートされていません
 
@@ -25,6 +25,99 @@ ms.locfileid: "92333131"
 - <xref:System.Runtime.ConstrainedExecution.Consistency?displayProperty=nameWithType>
 - <xref:System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute?displayProperty=nameWithType>
 - <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute?displayProperty=nameWithType>
+
+## <a name="workarounds"></a>回避策
+
+- CER 属性をメソッドに適用している場合、その属性を削除します。 そのような属性は、.NET 5.0 以降のバージョンで効果がありません。
+
+  ```csharp
+  // REMOVE the attribute below.
+  [ReliabilityContract(Consistency.WillNotCorruptState, Cer.Success)]
+  public void DoSomething()
+  {
+  }
+
+  // REMOVE the attribute below.
+  [PrePrepareMethod]
+  public void DoSomething()
+  {
+  }
+  ```
+
+- `RuntimeHelpers.ProbeForSufficientStack` または `RuntimeHelpers.PrepareContractedDelegate` を呼び出している場合、呼び出しを削除します。 そのような呼び出しは、.NET 5.0 以降のバージョンで効果がありません。
+
+  ```csharp
+  public void DoSomething()
+  {
+      // REMOVE the call below.
+      RuntimeHelpers.ProbeForSufficientStack();
+
+      // (Remainder of your method logic here.)
+  }
+  ```
+
+- `RuntimeHelpers.PrepareConstrainedRegions` を呼び出している場合、呼び出しを削除します。 この呼び出しは、.NET 5.0 以降のバージョンで効果がありません。
+
+  ```csharp
+  public void DoSomething_Old()
+  {
+      // REMOVE the call below.
+      RuntimeHelpers.PrepareConstrainedRegions();
+      try
+      {
+          // try code
+      }
+      finally
+      {
+          // cleanup code
+      }
+  }
+
+  public void DoSomething_Corrected()
+  {
+      // There is no call to PrepareConstrainedRegions. It's a normal try / finally block.
+
+      try
+      {
+          // try code
+      }
+      finally
+      {
+          // cleanup code
+      }
+  }
+  ```
+
+- `RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup` を呼び出している場合、呼び出しを標準の _try / catch / finally_ ブロックに置き換えます。
+
+  ```csharp
+  // The sample below produces warning SYSLIB0004.
+  public void DoSomething_Old()
+  {
+      RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup(MyTryCode, MyCleanupCode, null);
+  }
+  public void MyTryCode(object state) { /* try code */ }
+  public void MyCleanupCode(object state, bool exceptionThrown) { /* cleanup code */ }
+
+  // The corrected sample below does not produce warning SYSLIB0004.
+  public void DoSomething_Corrected()
+  {
+      try
+      {
+          // try code
+      }
+      catch (Exception ex)
+      {
+          // exception handling code
+      }
+      finally
+      {
+          // cleanup code
+      }
+  }
+  ```
+
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
 ## <a name="see-also"></a>関連項目
 

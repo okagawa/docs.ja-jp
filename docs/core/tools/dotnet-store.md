@@ -2,12 +2,12 @@
 title: dotnet store コマンド
 description: "'dotnet store' コマンドは、指定したアセンブリをランタイム パッケージ ストアに格納します。"
 ms.date: 02/14/2020
-ms.openlocfilehash: 2f28a9bc287a87f600bda385c579e8070cbaa5ab
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 8efb11c6bf648bc7787d5627e02b180abb8a0afd
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463395"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634338"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -51,7 +51,7 @@ dotnet store -h|--help
 
 - **`--framework-version <FRAMEWORK_VERSION>`**
 
-  .NET Core SDK のバージョンを指定します。 このオプションでは、`-f|--framework` オプションで指定したフレームワーク以降の特定のフレームワーク バージョンを選択することができます。
+  .NET SDK のバージョンを指定します。 このオプションでは、`-f|--framework` オプションで指定したフレームワーク以降の特定のフレームワーク バージョンを選択することができます。
 
 - **`-h|--help`**
 
@@ -59,7 +59,7 @@ dotnet store -h|--help
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  ランタイム パッケージ ストアへのパスを指定します。 指定しない場合、ユーザー プロファイル .NET Core インストール ディレクトリのサブディレクトリ *store* が既定値となります。
+  ランタイム パッケージ ストアへのパスを指定します。 指定しない場合、ユーザー プロファイル .NET インストール ディレクトリのサブディレクトリ *store* が既定値となります。
 
 - **`--skip-optimization`**
 

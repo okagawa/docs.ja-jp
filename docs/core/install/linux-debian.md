@@ -1,19 +1,19 @@
 ---
-title: Debian に .NET Core をインストールする - .NET Core
-description: Debian に .NET Core SDK と .NET Core ランタイムをインストールするさまざまな方法を示します。
+title: Debian に .NET をインストールする - .NET
+description: Debian に .NET SDK と .NET ランタイムをインストールするさまざまな方法を示します。
 author: adegeo
 ms.author: adegeo
-ms.date: 06/04/2020
-ms.openlocfilehash: d0f7d4092ec420d031d0874a56b9e2148afdb865
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 11/10/2020
+ms.openlocfilehash: 6dad4e1779600b22b8301e03ffb8fb2c16786ead
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538541"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506999"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-debian"></a>Debian に .NET Core SDK または .NET Core ランタイムをインストールする
+# <a name="install-the-net-sdk-or-the-net-runtime-on-debian"></a>Debian に .NET SDK または .NET ランタイムをインストールする
 
-この記事では、Debian に .NET Core をインストールする方法について説明します。 Debian のバージョンがサポート対象外である場合、.NET Core もそのバージョンでサポート対象外となります。 ただし、サポートされていない場合でも、以下の手順はそれらのバージョンで実行される .NET Core の取得に役立つ場合があります。
+この記事では、Debian に .NET をインストールする方法について説明します。 Debian のバージョンがサポート対象外である場合、.NET もそのバージョンでサポート対象外となります。 ただし、サポート対象外の場合でも、これらの手順がそれらのバージョンで .NET を実行するのに役立つことがあります。
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
@@ -21,19 +21,19 @@ ms.locfileid: "90538541"
 
 ## <a name="supported-distributions"></a>サポートされているディストリビューション
 
-次の表は、現在サポートされている .NET Core リリースと、それらがサポートされている Debian のバージョンの一覧です。 これらのバージョンは、[.NET Core のバージョンがサポート終了になる](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)か、[Debian のバージョンがサポート終了になる](https://wiki.debian.org/DebianReleases)までサポートされます。
+次の表は、現在サポートされている .NET リリースと、それらがサポートされている Debian のバージョンの一覧です。 これらのバージョンは、[.NET のバージョンがサポート終了になる](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)か、[Debian のバージョンの有効期限が切れる](https://wiki.debian.org/DebianReleases)までサポートされます。
 
-- ✔️ は、Debian または .NET Core のバージョンがまだサポートされていることを示します。
-- ❌ は、Debian または .NET Core のバージョンがその Debian のリリースではサポートされていないことを示しています。
-- Debian のバージョンと .NET Core のバージョンの両方に ✔️ が付いている場合、その OS と .NET の組み合わせはサポートされています。
+- ✔️ は、Debian または .NET のバージョンがまだサポートされていることを示します。
+- ❌ は、Debian または .NET のバージョンがその Debian のリリースではサポートされていないことを示しています。
+- Debian のバージョンと .NET のバージョンの両方に ✔️ が付いている場合、その OS と .NET の組み合わせはサポートされています。
 
-| Debian                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5 Preview (手動インストールのみ) |
+| Debian                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |--------------------------|---------------|---------------|----------------|
-| ✔️ [10](#debian-10-)     | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 Preview |
-| ✔️ [9](#debian-9-)       | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 Preview |
-| ❌ [8](#debian-8-)       | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 Preview |
+| ✔️ [10](#debian-10-)     | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ✔️ [9](#debian-9-)       | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ❌ [8](#debian-8-)       | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 |
 
-次のバージョンの .NET Core は、サポート対象外となりました。 これらのダウンロードは、まだ公開されています。
+次のバージョンの .NET は、サポート対象外となりました。 これらのダウンロードは、まだ公開されています。
 
 - 3.0
 - 2.2
@@ -52,7 +52,7 @@ wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
-[!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="debian-9-"></a>Debian 9 ✔️
 
@@ -67,7 +67,7 @@ sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
 sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 ```
 
-[!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="debian-8-"></a>Debian 8 ❌
 
@@ -88,7 +88,7 @@ sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 
 ## <a name="apt-update-sdk-or-runtime"></a>APT での SDK またはランタイムの更新
 
-.NET Core で新しい修正プログラムのリリースを利用できる場合は、次のコマンドを使用して、APT で簡単にアップグレードすることができます。
+.NET で新しい修正プログラムのリリースを利用できる場合は、次のコマンドを使用して、APT で簡単にアップグレードすることができます。
 
 ```bash
 sudo apt-get update
@@ -97,7 +97,7 @@ sudo apt-get upgrade
 
 ## <a name="apt-troubleshooting"></a>APT のトラブルシューティング
 
-このセクションでは、APT を使用して .NET Core をインストールするときに発生する可能性のある一般的なエラーについて説明します。
+このセクションでは、APT を使用して .NET をインストールするときに発生するおそれがある一般的なエラーについて説明します。
 
 ### <a name="unable-to-find-package"></a>パッケージが見つからない
 
@@ -162,4 +162,4 @@ sudo apt-get update; \
 
 ## <a name="next-steps"></a>次の手順
 
-- [チュートリアル: Visual Studio Code を使用して .NET Core SDK でコンソール アプリケーションを作成する](../tutorials/with-visual-studio-code.md)
+- [チュートリアル: Visual Studio Code を使用して .NET SDK でコンソール アプリケーションを作成する](../tutorials/with-visual-studio-code.md)

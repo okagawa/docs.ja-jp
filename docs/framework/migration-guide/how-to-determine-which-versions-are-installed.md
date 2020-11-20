@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: faeb2c14b9c1d93b558c67a42c223702178407c0
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 79c60c8dbc29d8985f3cfb2ffc2436539155c555
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955591"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440146"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>方法: インストールされている .NET Framework バージョンを確認する
 
@@ -64,9 +64,7 @@ ms.locfileid: "91955591"
 
 ### <a name="minimum-version"></a>最小バージョン
 
-.NET Framework の "*最小*" バージョンが存在するかどうかを判断するには、前の表から、そのバージョンの最小の **Release** REG_DWORD の値を使用します。
-
-たとえば、アプリケーションが .NET Framework 4.8 以降のバージョンで実行されている場合、**Release** REG_DWORD の値が 528040 "*以上*" であることを確認します。
+.NET Framework の "*最小*" バージョンが存在するかどうかを判断するには、**Release** REG_DWORD 値が次の表にある、それに対応する値以上かどうかを確認します。 たとえば、アプリケーションが .NET Framework 4.8 以降のバージョンで実行されている場合、**Release** REG_DWORD の値が 528040 "*以上*" であることを確認します。
 
 | .NET Framework のバージョン | 最小値 |
 | ---------------------- | ------------- |
@@ -126,7 +124,7 @@ PowerShell コマンドを使用し、**HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\
 
 この例では、バージョンのチェックで推奨されている方法に従います。
 
-- **Release** エントリの値が、既知のリリース キー値*以上*かどうかを確認しています。
+- **Release** エントリの値が、既知のリリース キー値 *以上* かどうかを確認しています。
 - 最新バージョンから最も古いバージョンの順にチェックします。
 
 ## <a name="detect-net-framework-10-through-40"></a>.NET Framework 1.0 から 4.0 を検出する

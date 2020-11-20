@@ -1,18 +1,19 @@
 ---
-title: Alpine に .NET Core をインストールする - .NET Core
-description: Alpine に .NET Core SDK と .NET Core ランタイムをインストールするさまざまな方法を示します。
+title: Alpine に .NET をインストールする - .NET
+description: Alpine に .NET SDK と .NET ランタイムをインストールするさまざまな方法を示します。
 author: adegeo
 ms.author: adegeo
-ms.date: 06/04/2020
-ms.openlocfilehash: 0efe3bbacbe573b77eae8818ea29b5a3867e4570
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.date: 11/10/2020
+ms.openlocfilehash: 29901cc24ddd4bbe8200a36765ddd29f501394c0
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619521"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506813"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-alpine"></a>Alpine に .NET Core SDK または .NET Core ランタイムをインストールする
+# <a name="install-the-net-sdk-or-the-net-runtime-on-alpine"></a>Alpine に .NET SDK または .NET ランタイムをインストールする
 
-この記事では、Alpine に .NET Core をインストール方法について説明します。 Alpine のバージョンがサポート対象外である場合、.NET Core もそのバージョンでサポート対象外となります。 ただし、サポート対象外のバージョンで .NET Core を実行するのに、ここで説明する手順が役立つ場合があります。
+この記事では、Alpine に .NET をインストールする方法について説明します。 Alpine のバージョンがサポート対象外である場合、.NET もそのバージョンでサポート対象外となります。 ただし、サポート対象外の場合でも、これらの手順がそれらのバージョンで .NET を実行するのに役立つことがあります。
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
@@ -20,21 +21,21 @@ Alpine には、インストーラーはありません。 [インストール �
 
 ## <a name="supported-distributions"></a>サポートされているディストリビューション
 
-次の表に、現在サポートされている .NET Core リリースと、それらがサポートされている Alpine のバージョンの一覧を示します。 これらのバージョンは、[.NET Core のバージョンがサポート終了](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)するか、[Alpine のバージョンの有効期限が切れるまで](https://wiki.alpinelinux.org/wiki/Alpine_Linux:Releases)サポートされます。
+次の表に、現在サポートされている .NET リリースと、それらがサポートされている Alpine のバージョンの一覧を示します。 これらのバージョンは、[.NET のバージョンがサポート終了](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)するか、[Alpine のバージョンの有効期限が切れるまで](https://wiki.alpinelinux.org/wiki/Alpine_Linux:Releases)サポートされます。
 
-- ✔️ は、Alpine または .NET Core のバージョンがまだサポートされていることを示します。
-- ❌ は、Alpine または .NET Core のバージョンがその Alpine のリリースではサポートされないことを示します。
-- Alpine のバージョンと .NET Core のバージョンの両方に ✔️ がある場合、その OS と .NET の組み合わせはサポートされます。
+- ✔️ は、Alpine または .NET のバージョンがまだサポートされていることを示します。
+- ❌ は、Alpine または .NET のバージョンがその Alpine のリリースではサポートされないことを示します。
+- Alpine のバージョンと .NET のバージョンの両方に ✔️ が付いている場合、その OS と .NET の組み合わせはサポートされています。
 
-| Alpine                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5 Preview |
-|--------------------------|---------------|---------------|----------------|
-| ✔️ 3.12  | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 Preview |
-| ✔️ 3.11  | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 Preview |
-| ✔️ 3.10  | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 Preview |
-| ✔️ 3.9   | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 Preview |
-| ❌ 3.8   | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 Preview |
+| Alpine  | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
+|-------- |---------------|---------------|----------------|
+| ✔️ 3.12 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ✔️ 3.11 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ✔️ 3.10 | ✔️ 2.1        | ✔️ 3.1        | ❌ 5.0 |
+| ❌ 3.9  | ✔️ 2.1        | ✔️ 3.1        | ❌ 5.0 |
+| ❌ 3.8  | ✔️ 2.1        | ✔️ 3.1        | ❌ 5.0 |
 
-次のバージョンの .NET Core は、サポート対象外となりました。 これらのダウンロードは、まだ公開されています。
+次のバージョンの .NET は、サポート対象外となりました。 これらのダウンロードは、まだ公開されています。
 
 - 3.0
 - 2.2
@@ -42,7 +43,7 @@ Alpine には、インストーラーはありません。 [インストール �
 
 ## <a name="dependencies"></a>依存関係
 
-Alpine Linux 上の .NET Core には、次の依存関係がインストールされている必要があります。
+Alpine Linux 上の .NET には、次の依存関係がインストールされている必要があります。
 
 - icu-libs
 - krb5-libs
@@ -63,4 +64,4 @@ Alpine Linux 上の .NET Core には、次の依存関係がインストール�
 
 ## <a name="next-steps"></a>次の手順
 
-- [チュートリアル: Visual Studio Code を使用して .NET Core SDK でコンソール アプリケーションを作成する](../tutorials/with-visual-studio-code.md)
+- [チュートリアル: Visual Studio Code を使用して .NET SDK でコンソール アプリケーションを作成する](../tutorials/with-visual-studio-code.md)

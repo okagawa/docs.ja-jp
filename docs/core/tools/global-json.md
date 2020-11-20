@@ -1,27 +1,27 @@
 ---
 title: global.json の概要
-description: .NET Core CLI コマンドを実行するときに global.json ファイルを使用して .NET Core SDK のバージョンを設定する方法について説明します。
+description: .NET CLI コマンドを実行するときに global.json ファイルを使用して .NET SDK のバージョンを設定する方法について説明します。
 ms.topic: how-to
 ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 714e32ec841cee214f801de65bccf0041af66b0b
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 02a0ab478a23f7df55a8cc2e872e480b311304fe
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281546"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634000"
 ---
 # <a name="globaljson-overview"></a>global.json の概要
 
 **この記事の対象:** ✔️ .NET Core 2.0 SDK 以降のバージョン
 
-*global.json* ファイルを使うと、.NET Core CLI コマンドを実行するときに使う .NET Core SDK のバージョンを定義できます。 .NET Core SDK の選択は、プロジェクトのターゲットであるランタイムの指定とは関係ありません。 .NET Core SDK のバージョンは、使われている .NET Core CLI のバージョンを示します。
+*global.json* ファイルを使うと、.NET CLI コマンドを実行するときに使う .NET SDK のバージョンを定義できます。 .NET SDK の選択は、プロジェクトのターゲットであるランタイムの指定とは関係ありません。 .NET SDK のバージョンは、使われている .NET CLI のバージョンを示します。
 
-通常は、最新バージョンの SDK ツールを使うので、 *global.json* ファイルは必要ありません。 一部の高度なシナリオでは、SDK ツールのバージョンを管理する必要がある場合があります。この記事では、この方法について説明します。
+通常は、最新バージョンの SDK ツールを使うので、*global.json* ファイルは必要ありません。 一部の高度なシナリオでは、SDK ツールのバージョンを管理する必要がある場合があります。この記事では、この方法について説明します。
 
 代わりにランタイムを指定する方法について詳しくは、「[ターゲット フレームワーク](../../standard/frameworks.md)」をご覧ください。
 
-.NET Core SDK は、現在の作業ディレクトリ (プロジェクト ディレクトリと同じではない場合があります) 内、またはその親ディレクトリのいずれかで、 *global.json* ファイルを探します。
+.NET SDK は、現在の作業ディレクトリ (プロジェクト ディレクトリと同じではない場合があります) 内、またはその親ディレクトリのいずれかで、*global.json* ファイルを探します。
 
 ## <a name="globaljson-schema"></a>global.json のスキーマ
 
@@ -29,7 +29,7 @@ ms.locfileid: "93281546"
 
 型: `object`
 
-選択する .NET Core SDK についての情報を指定します。
+選択する .NET SDK についての情報を指定します。
 
 #### <a name="version"></a>version
 
@@ -37,7 +37,7 @@ ms.locfileid: "93281546"
 
 - .NET Core 1.0 SDK 以降で利用できます。
 
-使用する .NET Core SDK のバージョンです。
+使用する .NET SDK のバージョンです。
 
 このフィールドでは:
 
@@ -84,7 +84,7 @@ SDK バージョンを選択するときに、特定の SDK バージョンが�
 | `latestPatch` | 要求されたメジャー、マイナー、および機能帯が、指定された値以上のパッチ レベルと一致する、インストールされている最新のパッチ レベルを使用します。 <br> 見つからない場合は、失敗します。 |
 | `latestFeature` | 要求されたメジャーおよびマイナーと一致し、機能帯とパッチ レベルが指定された値以上である、インストールされているものの中で最も高い機能帯とパッチ レベルを使用します。 <br> 見つからない場合は、失敗します。 |
 | `latestMinor` | 要求されたメジャーと一致し、マイナー、機能帯、パッチ レベルが指定された値以上である、インストールされているものの中で最も高いマイナー、機能帯、パッチ レベルを使用します。 <br> 見つからない場合は、失敗します。 |
-| `latestMajor` | バージョンが指定された値以上である、インストールされているものの中で最も高い .NET Core SDK を使用します。 <br> 見つからない場合は、失敗します。 |
+| `latestMajor` | バージョンが指定された値以上である、インストールされているものの中で最も高い .NET SDK を使用します。 <br> 見つからない場合は、失敗します。 |
 | `disable`     | ロールフォワードしません。 完全一致が必要です。 |
 
 ### <a name="msbuild-sdks"></a>msbuild-sdks
@@ -149,11 +149,11 @@ SDK バージョンを選択するときに、特定の SDK バージョンが�
 }
 ```
 
-## <a name="globaljson-and-the-net-core-cli"></a>global.json と .NET Core CLI
+## <a name="globaljson-and-the-net-cli"></a>global.json と .NET CLI
 
-ご使用のマシンにインストールされている SDK のバージョンを把握しておくと、 *global.json* ファイルにそれを設定するときに役立ちます。 その方法の詳細については、[.NET Core が既にインストールされていることを確認する方法](../install/how-to-detect-installed-versions.md#check-sdk-versions)に関するセクションを参照してください。
+ご使用のマシンにインストールされている SDK のバージョンを把握しておくと、*global.json* ファイルにそれを設定するときに役立ちます。 その方法の詳細については、[.NET が既にインストールされていることを確認する方法](../install/how-to-detect-installed-versions.md#check-sdk-versions)に関するセクションを参照してください。
 
-.NET Core SDK の別のバージョンをコンピューターにインストールするには、[.NET Core のダウンロード](https://dotnet.microsoft.com/download/dotnet-core) ページにアクセスしてください。
+.NET SDK の別のバージョンをコンピューターにインストールするには、[.NET Core のダウンロード](https://dotnet.microsoft.com/download/dotnet-core) ページにアクセスしてください。
 
 次の例のような [dotnet new](dotnet-new.md) コマンドを実行することにより、新しい *global.json* ファイルを現在のディレクトリに作成できます。
 
@@ -164,7 +164,7 @@ dotnet new globaljson --sdk-version 3.0.100
 ## <a name="matching-rules"></a>照合ルール
 
 > [!NOTE]
-> 照合ルールは、すべてのインストール済み .NET Core のインストール済みランタイムで共通の `dotnet.exe` エントリ ポイントによって管理されます。 複数のランタイムがサイドバイサイドでインストールされている場合、または *global.json* ファイルを使用している場合は、インストールされている最も新しいバージョンの .NET Core ランタイムの照合ルールが使用されます。
+> 照合ルールは、すべてのインストール済み .NET のインストール済みランタイムで共通の `dotnet.exe` エントリ ポイントによって管理されます。 複数のランタイムがサイドバイサイドでインストールされている場合、または *global.json* ファイルを使用している場合は、インストールされている最も新しいバージョンの .NET ランタイムの照合ルールが使用されます。
 
 ## <a name="net-core-3x"></a>[.NET Core 3.x](#tab/netcore3x)
 
@@ -207,13 +207,13 @@ SDK バージョン 2.1.100 以降の番号の最後の部分 (`xyz`) の最初�
 
   > .NET Core SDK のプレビュー バージョンを使用しています。 現在のプロジェクトの global.json ファイルを使用して、SDK のバージョンを定義できます。 詳しくは <https://go.microsoft.com/fwlink/?linkid=869452> を参照してください。
 
-  .NET Core SDK のバージョンには高品質の履歴とコミットメントがあります。 ただし、プレリリース バージョンを使用しない場合は、「[allowPrerelease](#allowprerelease)」セクションで、.NET Core 3.0 SDK 以降のバージョンで使用できるさまざまな方法を確認してください。 .NET Core 3.0 以降のランタイムまたは SDK がインストールされていないマシンの場合は、 *global.json* ファイルを作成し、使用する正確なバージョンを指定する必要があります。
+  .NET Core SDK のバージョンには高品質の履歴とコミットメントがあります。 ただし、プレリリース バージョンを使用しない場合は、「[allowPrerelease](#allowprerelease)」セクションで、.NET Core 3.0 SDK 以降のバージョンで使用できるさまざまな方法を確認してください。 .NET Core 3.0 以降のランタイムまたは SDK がインストールされていないマシンの場合は、*global.json* ファイルを作成し、使用する正確なバージョンを指定する必要があります。
 
 * 次の警告は、プロジェクトのターゲットが EF Core 1.0 または 1.1 であり、.NET Core 2.1 SDK 以降のバージョンと互換性がないことを示します。
 
   > スタートアップ プロジェクト '{startupProject}' で、フレームワーク '.NETCoreApp' バージョン '{targetFrameworkVersion}' がターゲットになっています。このバージョンの Entity Framework Core .NET コマンド ライン ツールは、バージョン 2.0 以降のみをサポートします。 古いバージョンのツールの使用については、<https://go.microsoft.com/fwlink/?linkid=871254> をご覧ください。
 
-  .NET Core 2.1 SDK (バージョン 2.1.300) 以降で、`dotnet ef` コマンドは SDK に含まれています。 プロジェクトをコンパイルするには、.NET Core 2.0 SDK (バージョン 2.1.201) またはそれ以前のバージョンをご利用のコンピューター上にインストールし、 *global.json* ファイルを使用して必要な SDK バージョンを定義します。 `dotnet ef` コマンドの詳細については、「[EF Core .NET コマンドライン ツール](/ef/core/miscellaneous/cli/dotnet)」を参照してください。
+  .NET Core 2.1 SDK (バージョン 2.1.300) 以降で、`dotnet ef` コマンドは SDK に含まれています。 プロジェクトをコンパイルするには、.NET Core 2.0 SDK (バージョン 2.1.201) またはそれ以前のバージョンをご利用のコンピューター上にインストールし、*global.json* ファイルを使用して必要な SDK バージョンを定義します。 `dotnet ef` コマンドの詳細については、「[EF Core .NET コマンドライン ツール](/ef/core/miscellaneous/cli/dotnet)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

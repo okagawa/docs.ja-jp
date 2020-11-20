@@ -2,12 +2,12 @@
 title: dotnet tool run コマンド
 description: dotnet tool run コマンドでは、ローカル ツールを起動します。
 ms.date: 02/14/2020
-ms.openlocfilehash: f79c239363e8b3abbd55c54dd1912443e6777fb7
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 116ecb61748a0ca70ed385b279b11b939748f4a8
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463327"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634156"
 ---
 # <a name="dotnet-tool-run"></a>dotnet tool run
 
@@ -49,5 +49,5 @@ dotnet tool run -h|--help
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Core ツール](global-tools.md)
-- [チュートリアル: .NET Core CLI を使って .NET Core ローカル ツールをインストールして使用する](local-tools-how-to-use.md)
+- [.NET ツール](global-tools.md)
+- [チュートリアル: .NET CLI を使って .NET ローカル ツールをインストールして使用する](local-tools-how-to-use.md)

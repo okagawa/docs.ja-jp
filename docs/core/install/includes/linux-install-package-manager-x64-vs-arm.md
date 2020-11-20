@@ -1,10 +1,11 @@
 ---
-ms.openlocfilehash: dab532fbf87cc70a860a9e3e814c081a1e11a1f5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8e09fe46bf896b62f136bac92acde017f4788b3c
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538457"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594612"
 ---
 
-_パッケージ マネージャーによるインストールは、**x64** アーキテクチャでのみサポートされています_。 **ARM** などのその他のアーキテクチャでは、.NET Core SDK または NET Core ランタイムを手動でインストールする必要があります。 詳細については、[手動インストールに関するセクション](#manual-install)を参照してください。
+> [!IMPORTANT]
+> パッケージ マネージャーによるインストールは、**x64** アーキテクチャでのみサポートされています。 **ARM** などの他のアーキテクチャでは、手動で .NET をインストールする必要があります。 詳細については、[手動インストールに関するセクション](#manual-install)を参照してください。

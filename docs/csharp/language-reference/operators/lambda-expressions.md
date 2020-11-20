@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: a3a753ccea45193c57f31453d7318c14f4898864
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: 51bf44af5ec3478f2b2557b047df270c0c22990d
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247710"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556843"
 ---
 # <a name="lambda-expressions-c-reference"></a>ラムダ式 (C# リファレンス)
 
@@ -56,7 +56,7 @@ ms.locfileid: "91247710"
 (input-parameters) => expression
 ```
 
-式形式のラムダの本体を、メソッド呼び出しで構成できます。 ただし、SQL Server などの .NET 共通言語ランタイムのコンテキスト外部で評価される[式ツリー](../../programming-guide/concepts/expression-trees/index.md)を作成する場合は、ラムダ式内でメソッド呼び出しを使用しないでください。 .NET 共通言語ランタイムのコンテキストの外部では、これらのメソッドは通用しません。
+式形式のラムダの本体を、メソッド呼び出しで構成できます。 ただし、SQL Server などの .NET 共通言語ランタイム (CLR) のコンテキスト外部で評価される[式ツリー](../../programming-guide/concepts/expression-trees/index.md)を作成する場合は、ラムダ式内でメソッド呼び出しを使用しないでください。 .NET 共通言語ランタイム (CLR) のコンテキストの外部では、これらのメソッドは通用しません。
 
 ## <a name="statement-lambdas"></a>ステートメント形式のラムダ
 

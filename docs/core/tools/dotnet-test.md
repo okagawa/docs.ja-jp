@@ -2,12 +2,12 @@
 title: dotnet test コマンド
 description: dotnet test コマンドは、指定されたプロジェクトで単体テストを実行する場合に使用されます。
 ms.date: 04/29/2020
-ms.openlocfilehash: 6805564ccd8a8b4911c7c687d97a06df2910c015
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: a5666cfe4c09b2b88d77b256fac922154c7d6bd7
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281611"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634384"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -61,7 +61,7 @@ dotnet test -h|--help
   - テスト プロジェクトへのパス。
   - ソリューションへのパス。
   - プロジェクトまたはソリューションを含むディレクトリへのパス。
-  - テスト プロジェクト " *.dll* " ファイルへのパス。
+  - テスト プロジェクト " *.dll*" ファイルへのパス。
 
   指定されていない場合、プロジェクトまたはソリューションが現在のディレクトリで検索されます。
 
@@ -69,7 +69,7 @@ dotnet test -h|--help
 
 - **`-a|--test-adapter-path <ADAPTER_PATH>`**
 
-  追加のテスト アダプターを検索するディレクトリへのパス。 サフィックス `.TestAdapter.dll` を持つ " *.dll* " ファイルのみが検査されます。 指定しない場合、テスト " *.dll* " のディレクトリが検索されます。
+  追加のテスト アダプターを検索するディレクトリへのパス。 サフィックス `.TestAdapter.dll` を持つ " *.dll*" ファイルのみが検査されます。 指定しない場合、テスト " *.dll*" のディレクトリが検索されます。
 
 - **`--blame`**
 
@@ -130,7 +130,7 @@ dotnet test -h|--help
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  テスト バイナリに `dotnet` または .NET Framework テスト ホストを強制的に使用します。 このオプションでは、使用するホストの種類のみが決定されます。 実際に使用されるフレームワークのバージョンは、テスト プロジェクトの " *runtimeconfig. json* " によって決まります。 指定しない場合、[TargetFramework アセンブリ属性](/dotnet/api/system.runtime.versioning.targetframeworkattribute) を使用してホストの種類が決定されます。 その属性が " *.dll* " から削除されると、.NET Framework ホストが使用されます。
+  テスト バイナリに `dotnet` または .NET Framework テスト ホストを強制的に使用します。 このオプションでは、使用するホストの種類のみが決定されます。 実際に使用されるフレームワークのバージョンは、テスト プロジェクトの "*runtimeconfig. json*" によって決まります。 指定しない場合、[TargetFramework アセンブリ属性](/dotnet/api/system.runtime.versioning.targetframeworkattribute) を使用してホストの種類が決定されます。 その属性が " *.dll*" から削除されると、.NET Framework ホストが使用されます。
 
 - **`--filter <EXPRESSION>`**
 
@@ -280,5 +280,5 @@ dotnet test -h|--help
 ## <a name="see-also"></a>関連項目
 
 - [フレームワークとターゲット](../../standard/frameworks.md)
-- [.NET Core ランタイム識別子 (RID) のカタログ](../rid-catalog.md)
+- [.NET Runtime Identifier (RID) カタログ](../rid-catalog.md)
 - [コマンドラインを使用して runsettings 引数を渡す](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)

@@ -1,18 +1,18 @@
 ---
-title: .NET Core SDK 製品利用統計情報
-description: 利用情報を収集して分析する .NET Core SDK の製品利用統計情報機能や収集されるデータ、およびこの機能を無効にする方法について説明します。
+title: .NET SDK 製品利用統計情報
+description: 分析に使用する使用状況情報を収集する .NET SDK 製品利用統計情報機能、収集されるデータ、この機能を無効にする方法について説明します。
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: bad6de138b9c35bcd8c5556df82103f959508b52
-ms.sourcegitcommit: d04388f94dbcd756ffd608536c869aee3242cdb0
+ms.openlocfilehash: 4f137822c61e1a04eccd28ebd0cd56c04f4a85e2
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91206355"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633870"
 ---
-# <a name="net-core-sdk-telemetry"></a>.NET Core SDK 製品利用統計情報
+# <a name="net-sdk-telemetry"></a>.NET SDK 製品利用統計情報
 
-[.NET Core SDK](index.md) には、.NET Core CLI がクラッシュしたとき、利用データと例外情報を収集する製品利用統計情報機能が含まれています。 .NET Core CLI は .NET Core SDK を備える、.NET Core アプリのビルド、テスト、発行を可能にする動詞のセットです。 .NET Team が、ツールの改善に向けて、その使用方法を把握することが重要です。 エラーに関する情報は、チームが問題を解決し、バグを修正するのに役立ちます。
+[.NET SDK](index.md) には、.NET CLI がクラッシュしたときに使用状況データと例外情報を収集する製品利用統計情報機能が含まれています。 .NET CLI には .NET SDK が付属しており、.NET アプリをビルド、テスト、公開できるようにする動詞のセットです。 .NET Team が、ツールの改善に向けて、その使用方法を把握することが重要です。 エラーに関する情報は、チームが問題を解決し、バグを修正するのに役立ちます。
 
 収集されたデータは、[Creative Commons Attribution License](https://creativecommons.org/licenses/by/4.0/) の下で全体が公開されます。
 
@@ -22,7 +22,7 @@ ms.locfileid: "91206355"
 
 - `dotnet [path-to-app].dll`
 
-次のような [.NET Core CLI コマンド](index.md)を使用するとき、製品利用統計情報は "*収集されます*"。
+製品利用統計情報は、次のような [.NET CLI コマンド](index.md)のいずれかを使用するときに "*収集されます*"。
 
 - `dotnet build`
 - `dotnet pack`
@@ -30,23 +30,23 @@ ms.locfileid: "91206355"
 
 ## <a name="how-to-opt-out"></a>オプトアウトする方法
 
-.NET Core SDK の製品利用統計情報機能は既定では有効になっています。 製品利用統計情報機能をオプトアウトするには、`DOTNET_CLI_TELEMETRY_OPTOUT` 環境変数を `1` または `true` に設定します。
+.NET SDK 製品利用統計情報機能は、既定では有効になっています。 製品利用統計情報機能をオプトアウトするには、`DOTNET_CLI_TELEMETRY_OPTOUT` 環境変数を `1` または `true` に設定します。
 
-正常にインストールされると、製品利用統計情報のエントリ 1 件も .NET Core SDK インストーラーによって送信されます。 オプトアウトするには、.NET Core SDK をインストールする前に `DOTNET_CLI_TELEMETRY_OPTOUT` 環境変数を設定します。
+また、インストールが成功したときにも、.NET SDK インストーラーによって製品利用統計情報の 1 エントリが送信されます。 オプトアウトするには、.NET SDK をインストールする前に `DOTNET_CLI_TELEMETRY_OPTOUT` 環境変数を設定します。
 
 ## <a name="disclosure"></a>開示
 
-いずれかの [.NET Core CLI コマンド](index.md) (`dotnet build` など) を初めて実行するときは、.NET Core SDK では次のテキストと同様のものが表示されます。 テキストは、実行している SDK のバージョンによって多少異なります。 この "最初の実行" の際に、Microsoft がデータ回収に関して通知する方法が示されます。
+[.NET CLI コマンド](index.md) (`dotnet build` など) の 1 つを初めて実行すると、.NET SDK により、次のようなテキストが表示されます。 テキストは、実行している SDK のバージョンによって多少異なります。 この "最初の実行" の際に、Microsoft がデータ回収に関して通知する方法が示されます。
 
 ```console
 Telemetry
 ---------
-The .NET Core tools collect usage data in order to help us improve your experience. The data is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
+The .NET tools collect usage data in order to help us improve your experience. The data is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
 
-Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
+Read more about .NET CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
 
-このメッセージと .NET Core のウェルカム メッセージを無効にするには、`DOTNET_NOLOGO` 環境変数を `true` に設定します。 この変数は、テレメトリのオプトアウトには影響しないことに注意してください。
+このメッセージと .NET のウェルカム メッセージを無効にするには、`DOTNET_NOLOGO` 環境変数を `true` に設定します。 この変数は、テレメトリのオプトアウトには影響しないことに注意してください。
 
 ## <a name="data-points"></a>データ ポイント
 
@@ -63,7 +63,7 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 | すべて          | 地理的な場所を決定するために使用する 3 つのオクテットの IP アドレス。 |
 | すべて          | オペレーティング システムとバージョン。 |
 | すべて          | SDK が実行されているランタイム ID (RID)。 |
-| すべて          | .NET Core SDK バージョン。 |
+| すべて          | .NET SDK のバージョン。 |
 | すべて          | 製品利用統計情報プロファイル: 明示的なユーザー オプトインでのみ使用され、Microsoft では内部で使用される任意の値。 |
 | >=2.0        | コマンドの引数とオプション: (任意の文字列ではなく) いくつかの引数とオプションが収集されます。 [収集されるオプション](#collected-options)に関するページを参照してください。 2\.1.300 以降はハッシュされます。 |
 | >=2.0         | SDK がコンテナーで実行されているかどうか。 |
@@ -74,7 +74,7 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 | >=2.1.300     | カーネル バージョン。 |
 | >=2.1.300     | Libc リリース/バージョン。 |
 | >=3.0.100     | 出力がリダイレクトされるかどうか (True または False)。 |
-| >=3.0.100     | CLI/SDK クラッシュ時の例外の種類とそのスタック トレース (CLI/SDK コードのみ、送信されたスタック トレースに含まれます)。 詳細は、[.NET Core CLI/SDK クラッシュ例外製品利用統計情報の収集](#net-core-clisdk-crash-exception-telemetry-collected)に関するページを参照してください。 |
+| >=3.0.100     | CLI/SDK クラッシュ時の例外の種類とそのスタック トレース (CLI/SDK コードのみ、送信されたスタック トレースに含まれます)。 詳細については、「[収集される .NET CLI または SDK クラッシュ例外製品利用統計情報](#net-clisdk-crash-exception-telemetry-collected)」を参照してください。 |
 
 ### <a name="collected-options"></a>収集されるオプション
 
@@ -105,13 +105,13 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 
 `--verbosity` と `--sdk-package-version` を除き、他のすべての値は .Net Core 2.1.100 SDK 以降、ハッシュされます。
 
-## <a name="net-core-clisdk-crash-exception-telemetry-collected"></a>収集される .NET Core CLI/SDK クラッシュ例外製品利用統計情報
+## <a name="net-clisdk-crash-exception-telemetry-collected"></a>収集される .NET CLI または SDK クラッシュ例外製品利用統計情報
 
-.NET Core CLI/SDK がクラッシュした場合、例外の名前と CLI/SDK コードのスタック トレースが収集されます。 この情報は、問題を評価し、.NET Core SDK と CLI の品質を向上させる目的で収集されます。 この記事では、Microsoft が収集するデータについて説明します。 また、独自のバージョンの .NET Core SDK をビルドするユーザーが個人情報や機密情報の不注意による漏洩を回避する方法に関するヒントも提供します。
+.NET CLI または SDK がクラッシュすると、例外の名前と CLI または SDK コードのスタック トレースが収集されます。 この情報は、問題を評価し、.NET SDK と CLI の品質を向上させる目的で収集されます。 この記事では、Microsoft が収集するデータについて説明します。 また、独自のバージョンの .NET SDK をビルドするユーザーが不注意で個人情報や機密情報を開示してしまわないようにする方法についてのヒントも提供します。
 
 ### <a name="types-of-collected-data"></a>収集されるデータの種類
 
-.NET Core CLI では、お使いのアプリケーションの例外についてではなく、CLI/SDK の例外についてのみ、情報が収集されます。 収集されたデータには、例外の名前とスタック トレースが含まれます。 このスタック トレースは CLI/SDK コードです。
+.NET CLI により収集される情報は、CLI および SDK 例外に限定され、アプリケーションの例外は対象外です。 収集されたデータには、例外の名前とスタック トレースが含まれます。 このスタック トレースは CLI/SDK コードです。
 
 次の例では、収集されたデータの種類を確認できます。
 
@@ -132,11 +132,11 @@ at Microsoft.DotNet.Cli.Program.Main(String[] args)
 
 ### <a name="avoid-inadvertent-disclosure-of-information"></a>不注意による情報の開示を避ける
 
-.NET Core の共同作成者と、自分でビルドした .NET Core SDK のバージョンを実行しているユーザーは、SDK ソース コードのパスを考慮する必要があります。 カスタムのデバッグ ビルドであるか、カスタムのビルド シンボル ファイルで構成されている .NET Core SDK の使用時にクラッシュが発生した場合、ビルド コンピューターからの SDK ソース ファイル パスはスタック トレースの一部としては収集されず、ハッシュされません。
+.NET の共同作成者と、自分でビルドした .NET SDK のバージョンを実行しているユーザーは、SDK ソース コードのパスを考慮する必要があります。 カスタムのデバッグ ビルドであるか、カスタムのビルド シンボル ファイルで構成されている .NET SDK の使用時にクラッシュが発生した場合、ビルド マシンの SDK ソース ファイル パスがスタック トレースの一部として収集され、ハッシュ化されません。
 
-そのため、.NET Core SDK のカスタム ビルドは、パス名によって個人情報や機密情報が公開されるディレクトリには置かないでください。
+そのため、.NET SDK のカスタム ビルドは、個人情報や機密情報がパス名から明らかになるディレクトリには置かないでください。
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Core CLI 利用統計情報データ](https://dotnet.microsoft.com/platform/telemetry)
+- [.NET CLI 製品利用統計情報データ](https://dotnet.microsoft.com/platform/telemetry)
 - [製品利用統計情報の参照のソース (dotnet/sdk リポジトリ)](https://github.com/dotnet/sdk/tree/master/src/Cli/dotnet/Telemetry)

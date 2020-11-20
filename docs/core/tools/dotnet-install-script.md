@@ -1,19 +1,19 @@
 ---
 title: dotnet-install スクリプト
-description: .NET Core SDK と共有ランタイムをインストールするための dotnet-install スクリプトについて学習します。
+description: .NET SDK と共有ランタイムをインストールするための dotnet-install スクリプトについて説明します。
 ms.date: 09/22/2020
-ms.openlocfilehash: 35161edd2a4862e064373d75f1e19396983f3a64
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a1598a84aa31aeac970f0493d1481651164d733e
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078204"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634443"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install スクリプト リファレンス
 
 ## <a name="name"></a>名前
 
-`dotnet-install.ps1` | `dotnet-install.sh` - .NET Core SDK と共有ランタイムをインストールするために使うスクリプトです。
+`dotnet-install.ps1` | `dotnet-install.sh` - .NET SDK と共有ランタイムをインストールするために使用するスクリプトです。
 
 ## <a name="synopsis"></a>構文
 
@@ -48,7 +48,7 @@ bash スクリプトは PowerShell のスイッチも読み取るので、Linux/
 
 ## <a name="description"></a>説明
 
-`dotnet-install` スクリプトによって、.NET Core CLI や共有ランタイムを含む .NET Core SDK の非管理者インストールが実行されます。 次の 2 つのスクリプトがあります。
+`dotnet-install` スクリプトによって、.NET CLI や共有ランタイムを含む .NET SDK の非管理者インストールが実行されます。 次の 2 つのスクリプトがあります。
 
 * Windows 上で動作する PowerShell スクリプト。
 * Linux/macOS で動作する bash スクリプト。
@@ -86,13 +86,13 @@ bash スクリプトは PowerShell のスイッチも読み取るので、Linux/
 
 `-Version|--version` 引数を使用して、特定のバージョンをインストールすることができます。 バージョンには 3 つの部分からなるバージョン番号 (`2.1.0` など) を指定する必要があります。 バージョンが指定されていない場合、スクリプトでは `latest` バージョンがインストールされます。
 
-インストール スクリプトでは、Windows 上のレジストリは更新されません。 zip 形式のバイナリがダウンロードされて、フォルダーにコピーされるだけです。 レジストリ キーの値を更新する必要がある場合は、.NET Core インストーラーを使用します。
+インストール スクリプトでは、Windows 上のレジストリは更新されません。 zip 形式のバイナリがダウンロードされて、フォルダーにコピーされるだけです。 レジストリ キーの値を更新する必要がある場合は、.NET インストーラーを使用します。
 
 ## <a name="options"></a>オプション
 
 - **`-Architecture|--architecture <ARCHITECTURE>`**
 
-  インストールする .NET Core バイナリのアーキテクチャです。 指定できる値は、`<auto>`、`amd64`、`x64`、`x86`、`arm64`、および `arm` です。 既定値は `<auto>` です。これは実行中の OS アーキテクチャを示します。
+  インストールする .NET バイナリのアーキテクチャです。 指定できる値は、`<auto>`、`amd64`、`x64`、`x86`、`arm64`、および `arm` です。 既定値は `<auto>` です。これは実行中の OS アーキテクチャを示します。
 
 - **`-AzureFeed|--azure-feed`**
 
@@ -111,7 +111,7 @@ bash スクリプトは PowerShell のスイッチも読み取るので、Linux/
 
 - **`-DryRun|--dry-run`**
 
-  設定すると、スクリプトでインストールは実行されません。 代わりに、現在要求されているバージョンの .NET Core CLI を一貫してインストールするために使用するコマンド ラインが表示されます。 たとえば、バージョン `latest` を指定すると、そのバージョンのリンクが表示されるので、ビルド スクリプトで確定的にこのコマンドを使用できます。 また、自分でインストールまたはダウンロードしたい場合、バイナリの場所も表示されます。
+  設定すると、スクリプトでインストールは実行されません。 代わりに、現在要求されているバージョンの .NET CLI を一貫してインストールするために使用するコマンド ラインが表示されます。 たとえば、バージョン `latest` を指定すると、そのバージョンのリンクが表示されるので、ビルド スクリプトで確定的にこのコマンドを使用できます。 また、自分でインストールまたはダウンロードしたい場合、バイナリの場所も表示されます。
 
 - **`-FeedCredential|--feed-credential`**
 
@@ -135,7 +135,7 @@ bash スクリプトは PowerShell のスイッチも読み取るので、Linux/
 
 - **`-NoPath|--no-path`**
 
-  設定すると、インストール フォルダーは現在のセッションのパスにはエクスポートされません。 既定では、スクリプトによって PATH が変更されます。これにより、インストール後すぐに .NET Core CLI を使用できるようになります。
+  設定すると、インストール フォルダーは現在のセッションのパスにはエクスポートされません。 既定では、スクリプトによって PATH が変更されます。これにより、インストール後すぐに .NET CLI を使用できるようになります。
 
 - **`-ProxyAddress`**
 
@@ -240,7 +240,7 @@ bash スクリプトは PowerShell のスイッチも読み取るので、Linux/
   ./dotnet-install.ps1 -InstallDir '~/.dotnet' -Version '2.1.2' -ProxyAddress $env:HTTP_PROXY -ProxyUseDefaultCredentials;
   ```
 
-- スクリプトを入手し、.NET Core CLI の 1 行コードのサンプルをインストールします。
+- スクリプトを入手し、.NET CLI の 1 行コードのサンプルをインストールします。
 
   Windows の場合:
 
@@ -257,5 +257,5 @@ bash スクリプトは PowerShell のスイッチも読み取るので、Linux/
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Core のリリース](https://github.com/dotnet/core/releases)
-- [.NET Core ランタイムと SDK ダウンロード アーカイブ](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+- [.NET のリリース](https://github.com/dotnet/core/releases)
+- [.NET ランタイムと SDK ダウンロード アーカイブ](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

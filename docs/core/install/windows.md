@@ -1,34 +1,34 @@
 ---
-title: Windows に .NET Core をインストールする
-description: .NET Core をインストールできる Windows のバージョンについて説明します。
+title: Windows に .NET をインストールする
+description: .NET をインストールできる Windows のバージョンについて説明します。
 author: adegeo
 ms.author: adegeo
-ms.date: 06/22/2020
-ms.openlocfilehash: 12cffb78de803845a4b18adc70289993e67f64f1
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 11/10/2020
+ms.openlocfilehash: fe18cda64e0c9986884486298adf4a83b604f323
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538290"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594540"
 ---
-# <a name="install-net-core-on-windows"></a>Windows に .NET Core をインストールする
+# <a name="install-net-on-windows"></a>Windows に .NET をインストールする
 
 > [!div class="op_single_selector"]
 >
 > - [Windows へのインストール](windows.md)
 > - [macOS へのインストール](macos.md)
-> - [Linux へのインストール](linux.md)
+> - [Linux にインストールする](linux.md)
 
-この記事では、Windows に .NET Core をインストールする方法について説明します。 .NET Core は、ランタイムと SDK で構成されています。 ランタイムは .NET Core アプリを実行するために使用され、アプリに含まれている場合と含まれていない場合があります。 SDK は、.NET Core アプリとライブラリの作成に使用されます。 .NET Core ランタイムは、常に SDK と共にインストールされます。
+この記事では、Windows に .NET をインストールする方法について説明します。 .NET は、ランタイムと SDK で構成されています。 ランタイムは .NET アプリを実行するために使用され、アプリに含まれている場合と含まれていない場合があります。 SDK は、.NET アプリとライブラリの作成に使用されます。 .NET ランタイムは、常に SDK と共にインストールされます。
 
-.NET Core の最新バージョンは 3.1 です。
+.NET の最新バージョンは 5.0 です。
 
 > [!div class="button"]
-> [.NET Core のダウンロード](https://dotnet.microsoft.com/download/dotnet-core)
+> [.NET をダウンロードする](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="supported-releases"></a>サポートされているリリース
 
-次の表に、現在サポートされている .NET Core リリースと、それらがサポートされている Windows のバージョンの一覧を示します。 これらのバージョンは、[.NET Core のバージョンがサポート終了](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)するか、[Windows のバージョンの有効期限が切れるまで](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)サポートされます。
+以下の表は、現在サポートされている .NET リリースと、それらがサポートされている Windows のバージョンの一覧です。 これらのバージョンは、[.NET のバージョンがサポート終了](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)するか、[Windows のバージョンの有効期限が切れるまで](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)サポートされます。
 
 Windows 10 のバージョンのサービス終了日は、エディションごとに分かれています。 次の表では、**Home**、**Pro**、**Pro Education**、**Pro for Workstations** の各エディションだけが考慮されています。 具体的な詳細については、「[Windows ライフサイクルのファクト シート](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)」を確認してください。
 
@@ -36,22 +36,22 @@ Windows 10 のバージョンのサービス終了日は、エディションご
 - ❌ は、Windows または .NET Core のバージョンがその Windows のリリースではサポートされていないことを示しています。
 - Windows のバージョンと .NET Core のバージョンの両方に ✔️ が付いている場合、その OS と .NET の組み合わせはサポートされています。
 
-| オペレーティング システム                      | .NET Core 2.1 | .NET Core 3.1 | .NET 5 Preview |
+| オペレーティング システム                      | .NET Core 2.1 | .NET Core 3.1 | .NET 5 |
 |-----------------------------|---------------|---------------|----------------|
-| ✔️ Windows 10 バージョン 2004 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 Preview |
-| ✔️ Windows 10 バージョン 1909 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 Preview |
-| ✔️ Windows 10 バージョン 1903 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 Preview |
-| ✔️ Windows 10 バージョン 1809 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 Preview |
-| ❌ Windows 10 バージョン 1803 | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 Preview |
-| ❌ Windows 10 バージョン 1709 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 Preview |
-| ❌ Windows 10 バージョン 1703 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 Preview |
-| ❌ Windows 10 バージョン 1607 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 Preview |
-| ❌ Windows 10 バージョン 1511 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 Preview |
-| ❌ Windows 10 バージョン 1507 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 Preview |
+| ✔️ Windows 10 バージョン 2004 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ✔️ Windows 10 バージョン 1909 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ✔️ Windows 10 バージョン 1903 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ✔️ Windows 10 バージョン 1809 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ❌ Windows 10 バージョン 1803 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ❌ Windows 10 バージョン 1709 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ❌ Windows 10 バージョン 1703 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 |
+| ❌ Windows 10 バージョン 1607 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ❌ Windows 10 バージョン 1511 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 |
+| ❌ Windows 10 バージョン 1507 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 |
 
 ## <a name="unsupported-releases"></a>サポートされていないリリース
 
-次のバージョンの .NET Core は ❌ サポート対象外となりました。 これらのダウンロードは、まだ公開されています。
+次のバージョンの .NET は、❌ サポート対象外となりました。 これらのダウンロードは、まだ公開されています。
 
 - 3.0
 - 2.2
@@ -59,33 +59,47 @@ Windows 10 のバージョンのサービス終了日は、エディションご
 
 ## <a name="runtime-information"></a>ランタイムに関する情報
 
-ランタイムは、.NET Core で作成されたアプリを実行するために使用されます。 アプリの作成者は、アプリを公開するとき、アプリにランタイムを含めることができます。 ランタイムが含まれていない場合は、ユーザーがランタイムをインストールする必要があります。
+ランタイムは、.NET で作成されたアプリを実行するために使用されます。 アプリの作成者は、アプリを公開するとき、アプリにランタイムを含めることができます。 ランタイムが含まれていない場合は、ユーザーがランタイムをインストールする必要があります。
 
 Windows には、3 つの異なるランタイムをインストールできます。
 
 *ASP.NET Core ランタイム*\
-ASP.NET Core アプリを実行します。 .NET Core ランタイムが含まれます。
+ASP.NET Core アプリを実行します。 .NET ランタイムが含まれます。
 
 *Desktop ランタイム*\
-Windows 用の .NET Core WPF デスクトップ アプリおよび .NET Core Windows フォーム デスクトップ アプリを実行します。 .NET Core ランタイムが含まれます。
+Windows 用の .NET WPF と Windows フォームのデスクトップ アプリを実行します。 .NET ランタイムが含まれます。
 
-*.NET Core ランタイム*\
-このランタイムは最も単純なランタイムであり、他のランタイムは含まれていません。 .NET Core アプリとの互換性を最善にするには、"*ASP.NET Core ランタイム*" と "*Desktop ランタイム*" の両方をインストールすることを強くお勧めします。
+*.NET ランタイム*\
+このランタイムは最も単純なランタイムであり、他のランタイムは含まれていません。 .NET アプリとの互換性を最善にするには、"*ASP.NET Core ランタイム*" と "*Desktop ランタイム*" の両方をインストールすることを強くお勧めします。
 
 > [!div class="button"]
-> [.NET Core ランタイムをダウンロードする](https://dotnet.microsoft.com/download/dotnet-core)
+> [.NET ランタイムをダウンロードする](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="sdk-information"></a>SDK に関する情報
 
-SDK は、.NET Core アプリとライブラリを作成して公開するために使用されます。 SDK のインストールには、次の 3 つの[ランタイム](#runtime-information)が含まれます: ASP.NET Core、Desktop、.NET Core。
-
-> [!div class="button"]
-> [.NET Core SDK をダウンロードする](https://dotnet.microsoft.com/download/dotnet-core)
+SDK は、.NET アプリとライブラリを作成して公開するために使用されます。 SDK のインストールには、次の 3 つの[ランタイム](#runtime-information)が含まれます: ASP.NET Core、Desktop、.NET。
 
 ## <a name="dependencies"></a>依存関係
 
 <!-- markdownlint-disable MD025 -->
 <!-- markdownlint-disable MD024 -->
+
+# <a name="net-50"></a>[.NET 5.0](#tab/net50)
+
+.NET 5.0 では以下の Windows のバージョンがサポートされます。
+
+> [!NOTE]
+> `+` 記号は、最小バージョンを表します。
+
+| OS                  | バージョン       | アーキテクチャ   |
+|---------------------|---------------|-----------------|
+| Windows 10 クライアント   | バージョン 1607+ | x64、x86、ARM64 |
+| Windows クライアント      | 7 SP1+、8.1   | x64、x86        |
+| Windows Server      | 2012 R2+      | x64、x86        |
+| Windows サーバー コア | 2012 R2+      | x64、x86        |
+| Nano Server         | バージョン 1809+ | X64             |
+
+.NET 5.0 でサポートされているオペレーティング システム、ディストリビューション、ライフサイクル ポリシーの詳細については、「[.NET 5.0 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md)」 (.NET 5.0 でサポートされている OS バージョン) を参照してください。
 
 # <a name="net-core-31"></a>[.NET Core 3.1](#tab/netcore31)
 
@@ -190,10 +204,10 @@ SDK は、.NET Core アプリとライブラリを作成して公開するため
 
 [dotnet-install スクリプト](../tools/dotnet-install-script.md)は、ランタイムの CI 自動化および管理者以外によるインストールに使用されます。 スクリプトは、[dotnet-install スクリプト参照ページ](../tools/dotnet-install-script.md)からダウンロードできます。
 
-スクリプトでは、既定で最新の [長期サポート (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) バージョン (.NET Core 3.1) がインストールされます。 `Channel` スイッチを指定することで、特定のリリースを選択できます。 ランタイムをインストールするには、`Runtime` スイッチを含めます。 それ以外の場合は、スクリプトによって SDK がインストールされます。
+このスクリプトを使用すると、最新の[長期サポート (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) バージョン (.NET 3.1) が既定でインストールされます。 `Channel` スイッチを指定することで、特定のリリースを選択できます。 ランタイムをインストールするには、`Runtime` スイッチを含めます。 それ以外の場合は、スクリプトによって SDK がインストールされます。
 
 ```powershell
-dotnet-install.ps1 -Channel 3.1 -Runtime aspnetcore
+dotnet-install.ps1 -Channel 5.0 -Runtime aspnetcore
 ```
 
 `-Runtime` スイッチを省略して SDK をインストールします。 この例では、`-Channel` スイッチが `Current` に設定されているため、サポートされている最新バージョンがインストールされます。
@@ -204,10 +218,11 @@ dotnet-install.ps1 -Channel Current
 
 ## <a name="install-with-visual-studio"></a>Visual Studio を使用してインストールする
 
-次の表では、Visual Studio を使用して .NET Core アプリを開発している場合に、ターゲットの .NET Core SDK バージョンに基づいて最低限必要な Visual Studio のバージョンを説明します。
+次の表で、Visual Studio を使用して .NET アプリを開発している場合に、ターゲットの .NET SDK バージョンに基づいて最低限必要な Visual Studio のバージョンを説明しています。
 
-| .NET Core SDK のバージョン | Visual Studio のバージョン                      |
+| .NET SDK バージョン      | Visual Studio のバージョン                      |
 | --------------------- | ------------------------------------------ |
+| 5.0                   | Visual Studio 2019 バージョン 16.8 以降。 |
 | 3.1                   | Visual Studio 2019 バージョン 16.4 以降。 |
 | 3.0                   | Visual Studio 2019 バージョン 16.3 以降。 |
 | 2.2                   | Visual Studio 2017 バージョン 15.9 以降。 |
@@ -219,7 +234,7 @@ Visual Studio を既にインストールしてある場合は、次の手順で
 01. **[ヘルプ]**  >  **[Microsoft Visual Studio のバージョン情報]** を選択します。
 01. **[バージョン情報]** ダイアログで、バージョン番号を確認します。
 
-Visual Studio では、最新の .NET Core SDK とランタイムをインストールできます。
+Visual Studio には、最新の .NET SDK とランタイムをインストールできます。
 
 > [!div class="button"]
 > [Visual Studio をダウンロードします](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)。
@@ -247,18 +262,18 @@ Visual Studio Code には、Visual Studio のような自動化された .NET Co
 
 ## <a name="download-and-manually-install"></a>手動でダウンロードしてインストールする
 
-.NET Core 用 Windows インストーラーの代わりに、SDK またはランタイムをダウンロードして手動でインストールすることもできます。 手動インストールは、通常、継続的インテグレーション テストの一環として実行されます。 開発者またはユーザーの場合、通常は[インストーラー](https://dotnet.microsoft.com/download/dotnet-core)を使用することをお勧めします。
+.NET 用 Windows インストーラーの代わりに、SDK またはランタイムをダウンロードして手動でインストールすることもできます。 手動インストールは、通常、継続的インテグレーション テストの一環として実行されます。 開発者またはユーザーの場合、通常は[インストーラー](https://dotnet.microsoft.com/download/dotnet-core)を使用することをお勧めします。
 
-.NET Core SDK と .NET Core ランタイムはどちらも、ダウンロード後に手動でインストールできます。 .NET Core SDK をインストールする場合、対応するランタイムをインストールする必要はありません。 まず、次のいずれかのサイトから SDK またはランタイムのバイナリ リリースをダウンロードします。
+.NET SDK と .NET ランタイムはどちらも、ダウンロード後に手動でインストールできます。 .NET SDK をインストールする場合、対応するランタイムをインストールする必要はありません。 まず、次のいずれかのサイトから SDK またはランタイムのバイナリ リリースをダウンロードします。
 
-- ✔️ [.NET 5.0 preview のダウンロード](https://dotnet.microsoft.com/download/dotnet/5.0)
+- ✔️ [.NET 5.0 のダウンロード](https://dotnet.microsoft.com/download/dotnet/5.0)
 - ✔️ [.NET Core 3.1 のダウンロード](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 - ✔️ [.NET Core 2.1 のダウンロード](https://dotnet.microsoft.com/download/dotnet-core/2.1)
 - [すべての .NET Core のダウンロード](https://dotnet.microsoft.com/download/dotnet-core)
 
 .NET を抽出するためのディレクトリを作成します (`%USERPROFILE%\dotnet` など)。 次に、ダウンロードした zip ファイルをそのディレクトリに抽出します。
 
-既定では、.NET Core CLI コマンドおよびアプリでは、この方法でインストールされた .NET Core は使用されません。使用することを明示的に選択する必要があります。 これを行うには、アプリケーションの起動に使用する環境変数を変更します。
+既定では、この方法でインストールされた .NET は、.NET CLI コマンドおよびアプリから使用されないため、使用することを明示的に選択する必要があります。 これを行うには、アプリケーションの起動に使用する環境変数を変更します。
 
 ```console
 set DOTNET_ROOT=%USERPROFILE%\dotnet
@@ -268,21 +283,21 @@ set DOTNET_MULTILEVEL_LOOKUP=0
 
 この方法では、複数のバージョンを別々の場所にインストールして、その場所を参照する環境変数を使ってアプリケーションを実行することで、アプリケーションによって使用されるインストール場所を明示的に選択できます。
 
-`DOTNET_MULTILEVEL_LOOKUP` が `0` に設定されている場合、.NET Core ではグローバルにインストールされている .NET Core のバージョンは無視されます。 .NET Core で、アプリケーションを実行するための最適なフレームワークを選択するときに、既定のグローバル インストールの場所が考慮されるようにするには、その環境設定を削除します。 通常、既定値は `C:\Program Files\dotnet` です。これは、インストーラーによって .NET Core がインストールされる場所です。
+`DOTNET_MULTILEVEL_LOOKUP` が `0` に設定されている場合、.NET により、グローバルにインストールされている .NET のバージョンはすべて無視されます。 アプリケーションを実行するための最適なフレームワークを選択するときに、.NET によりグローバル インストールの既定の場所が考慮されるようにするには、その環境設定を削除します。 通常、既定値は `C:\Program Files\dotnet` です。インストーラーによってここに .NET がインストールされます。
 
 ## <a name="docker"></a>Docker
 
 コンテナーを使用すると、アプリケーションをホスト システムの他の部分から簡単に分離できます。 同じコンピューター上のコンテナーでは、カーネルだけが共有され、アプリケーションに提供されたリソースが使用されます。
 
-.NET Core は Docker コンテナー内で実行できます。 公式の .NET Core Docker イメージは Microsoft Container Registry (MCR) に公開され、[Microsoft .NET Core の Docker Hub リポジトリ](https://hub.docker.com/_/microsoft-dotnet-core/)で見つけられます。 各リポジトリには、.NET (SDK またはランタイム) と自分が使用できる OS のさまざまな組み合わせのイメージが含まれています。
+.NET は Docker コンテナー内で実行できます。 公式の .NET Docker イメージは Microsoft Container Registry (MCR) に公開され、[Microsoft .NET の Docker Hub リポジトリ](https://hub.docker.com/_/microsoft-dotnet)で見つけられます。 各リポジトリには、.NET (SDK またはランタイム) と自分が使用できる OS のさまざまな組み合わせのイメージが含まれています。
 
-Microsoft は、特定のシナリオに対応したイメージを用意しています。 たとえば、[ASP.NET Core リポジトリ](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/)には、運用環境での ASP.NET Core アプリの実行用にビルドされたイメージが用意されています。
+Microsoft は、特定のシナリオに対応したイメージを用意しています。 たとえば、[ASP.NET Core リポジトリ](https://hub.docker.com/_/microsoft-dotnet-aspnet)には、運用環境での ASP.NET Core アプリの実行用にビルドされたイメージが用意されています。
 
-Docker コンテナー内で .NET Core を使用する方法の詳細については、「[.NET および Docker の概要](../docker/introduction.md)」と[サンプル](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md)に関するページを参照してください。
+Docker コンテナー内で .NET を使用する方法の詳細については、「[.NET および Docker の概要](../docker/introduction.md)」と[サンプル](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md)ページを参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-- [.NET Core が既にインストールされているかどうかを確認する方法](how-to-detect-installed-versions.md?pivots=os-windows)。
+- [.NET が既にインストールされているかどうかを確認する方法](how-to-detect-installed-versions.md?pivots=os-windows)。
 - [チュートリアル: Hello World チュートリアル](../tutorials/with-visual-studio.md)。
 - [チュートリアル: Visual Studio Code を使用して新しいアプリを作成する](../tutorials/with-visual-studio-code.md)。
 - [チュートリアル: NET Core アプリをコンテナー化する](../docker/build-container.md)。
