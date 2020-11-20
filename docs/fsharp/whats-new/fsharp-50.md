@@ -2,20 +2,20 @@
 title: 'F # 5.0 の新機能-F # ガイド'
 description: 'F # 5.0 で利用可能な新機能の概要を説明します。'
 ms.date: 11/06/2020
-ms.openlocfilehash: 51d6dd2457ee9966a86d0d9ac686f2af15772999
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 0b25d48a97792e780515226170151f3bbf2f2301
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557143"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982467"
 ---
 # <a name="whats-new-in-f-50"></a>F# 5.0 の新機能
 
 F # 5.0 では、F # 言語と F# インタラクティブにいくつかの機能強化が加えられています。 **.Net 5** でリリースされます。
 
-最新の .NET SDK は、 [.net ダウンロードページ](https://dotnet.microsoft.com/download)からダウンロードできます。
+最新の .NET SDK は [.NET のダウンロード ページ](https://dotnet.microsoft.com/download)でダウンロードできます。
 
-## <a name="get-started"></a>作業開始
+## <a name="get-started"></a>はじめに
 
 F # 5.0 は、すべての .NET Core ディストリビューションと Visual Studio ツールで使用できます。 詳細については、「 [F # の使用を開始](../get-started/index.md) する」を参照してください。
 
@@ -56,7 +56,7 @@ let test p str =
 test pfloat "1.234"
 ```
 
-パッケージ参照の詳細については、 [F# インタラクティブ](../tutorials/fsharp-interactive/index.md) チュートリアルを参照してください。
+この機能は [、F # ツーリング RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md)を実装します。 パッケージ参照の詳細については、 [F# インタラクティブ](../tutorials/fsharp-interactive/index.md) チュートリアルを参照してください。
 
 ## <a name="string-interpolation"></a>文字列補間
 
@@ -102,6 +102,8 @@ let str =
 ```
 
 ただし、これはあまり実践されていません。
+
+この機能は [、F # RFC FS-1001](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1001-StringInterpolation.md)を実装します。
 
 ## <a name="support-for-nameof"></a>のためのサポート
 
@@ -176,6 +178,8 @@ let deserialize (e: RecordedEvent) : MyEvent =
 
 上記のコードでは、match 式の文字列リテラルではなく、' 文字列 ' を使用しています。
 
+この機能は [、F # RFC FS-1003](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1003-nameof-operator.md)を実装します。
+
 ## <a name="open-type-declarations"></a>オープン型の宣言
 
 F # 5 では、オープン型の宣言のサポートも追加されています。 オープン型の宣言は、C# で静的クラスを開くのと似ています。ただし、F # のセマンティクスに適合するように、構文や動作が少し異なります。
@@ -200,6 +204,8 @@ printfn "%A" A
 
 C# とは異なり、 `open type` 同じ名前を持つメンバーを公開する2つの型がある場合、最後の型のメンバーは、 `open` 他の名前をシャドウします。 これは、既に存在するシャドウ処理に関する F # のセマンティクスと一致します。
 
+この機能は [、F # RFC FS-1068](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1068-open-type-declaration.md)を実装します。
+
 ## <a name="consistent-slicing-behavior-for-built-in-data-types"></a>組み込みデータ型のスライス動作の一貫性
 
 組み込み `FSharp.Core` データ型 (配列、リスト、文字列、2d 配列、3d 配列、4d 配列) を、F # 5 より前の一貫性がないようにスライスする動作。 一部のエッジケースの動作で例外がスローされましたが、何も発生しませんでした。 F # 5 では、すべての組み込み型で、生成できないスライスの空のスライスが返されるようになりました。
@@ -221,6 +227,8 @@ let emptyArray = a.[-2..(-1)]
 // F# 5: returns empty string
 let emptyString = s.[-2..(-1)]
 ```
+
+この機能は [、F # RFC FS-1077](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1077-tolerant-slicing.md)を実装します。
 
 ## <a name="fixed-index-slices-for-3d-and-4d-arrays-in-fsharpcore"></a>Fsharp.core の3D および4D 配列の固定インデックススライス
 
@@ -260,6 +268,8 @@ for z in 0..dim-1 do
 m.[*, 0, 1]
 ```
 
+この機能は [、F # RFC FS-1077b](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1077-3d-4d-fixed-index-slicing.md)を実装します。
+
 ## <a name="f-quotations-improvements"></a>F # による引用符の機能強化
 
 F # の [コード引用符](../language-reference/code-quotations.md) で、型の制約情報を保持できるようになりました。 次の例を確認してください。
@@ -276,6 +286,8 @@ let inline negate x = -x
 ```
 
 関数によって生成される制約 `inline` は、コードに保持されます。 関数の順序によって表さ `negate` れるフォームを評価できるようになりました。
+
+この機能は [、F # RFC FS-1071](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1071-witness-passing-quotations.md)を実装します。
 
 ## <a name="applicative-computation-expressions"></a>アプリケーションの計算式
 
@@ -326,6 +338,8 @@ let printApplicatives () =
 
 現在ライブラリで CEs を公開しているライブラリの作成者は、注意する必要がある追加の考慮事項がいくつかあります。
 
+この機能は [、F # RFC FS-1063](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1063-support-letbang-andbang-for-applicative-functors.md)を実装します。
+
 ## <a name="interfaces-can-be-implemeneted-at-different-generic-instantiations"></a>インターフェイスは、異なる汎用インスタンス化で implemeneted ことができます。
 
 これで、異なる汎用インスタンス化で同じインターフェイスを実装できるようになりました。
@@ -347,6 +361,8 @@ let iaString = mc :> IA<string>
 iaInt.Get() // 1
 iaString.Get() // "hello"
 ```
+
+この機能は [、F # RFC FS-1031](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1031-Allow%20implementing%20the%20same%20interface%20at%20different%20generic%20instantiations%20in%20the%20same%20type.md)を実装します。
 
 ## <a name="default-interface-member-consumption"></a>既定のインターフェイスメンバーの消費
 
@@ -387,6 +403,8 @@ printfn "DIM from C# but via Object Expression: %d" md'.Z
 
 これにより、ユーザーが既定の実装を使用できることが期待される場合に、最新の c# で記述された C# コードと .NET コンポーネントを安全に利用できます。
 
+この機能は [、F # RFC FS-1074](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1074-default-interface-member-consumption.md)を実装します。
+
 ## <a name="simplified-interop-with-nullable-value-types"></a>単純化と null 許容の値型との相互運用
 
 [Null 許容型 (値) 型](https://docs.microsoft.com/dotnet/api/system.nullable-1) (以前は Null 許容型と呼ばれます) は F # でサポートされていますが、通常 `Nullable` は、値を渡すたびにまたはラッパーを構築する必要があるため、これらの型を操作するのはかなり困難でした `Nullable<SomeType>` 。 これで、 `Nullable<ThatValueType>` ターゲットの型がと一致する場合、コンパイラは値型をに暗黙的に変換します。 現在、次のコードを使用できます。
@@ -404,6 +422,8 @@ dateTimes.Append(DateTime.Parse("2019/01/01"))
 // The previous line is now equivalent to this line
 dateTimes.Append(Nullable<DateTime>(DateTime.Parse("2019/01/01")))
 ```
+
+この機能は [、F # RFC FS-1075](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1075-nullable-interop.md)を実装します。
 
 ## <a name="preview-reverse-indexes"></a>プレビュー: インデックスの反転
 
@@ -463,6 +483,8 @@ let run () =
 
 run() // Prints the same thing twice
 ```
+
+この機能は [、F # RFC FS-1076](https://github.com/fsharp/fslang-design/blob/master/preview/FS-1076-from-the-end-slicing.md)を実装します。
 
 ## <a name="preview-overloads-of-custom-keywords-in-computation-expressions"></a>プレビュー: コンピュテーション式におけるカスタムキーワードのオーバーロード
 
@@ -535,3 +557,5 @@ let password =
 ```
 
 この変更の前には、型をそのまま記述でき `InputBuilder` ますが、この例で使用する方法を使用することはできませんでした。 オーバーロード、省略可能なパラメーター、および現在の `System.ParamArray` 型は許可されているため、期待どおりに機能するだけです。
+
+この機能は [、F # RFC FS-1056](https://github.com/fsharp/fslang-design/blob/master/preview/FS-1056-allow-custom-operation-overloads.md)を実装します。

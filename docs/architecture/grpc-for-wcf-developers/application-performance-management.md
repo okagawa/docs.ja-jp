@@ -2,12 +2,12 @@
 title: アプリケーションパフォーマンス管理-WCF 開発者向け gRPC
 description: ASP.NET Core gRPC アプリケーションのログ記録、メトリック、トレース。
 ms.date: 09/02/2019
-ms.openlocfilehash: bccb5ba92e2dc8fa2def4dc192b0ca58b332861a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8a13d1c4df95768e55c90ac491150bfc78ec2bab
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91165911"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982343"
 ---
 # <a name="application-performance-management"></a>アプリケーション パフォーマンス管理
 
@@ -59,15 +59,15 @@ public class StockData : Stocks.StocksBase
 
 ほとんどのメトリックプラットフォームでは、次の種類がサポートされています。
 
-| メトリックの種類 | [説明] |
+| メトリックの種類 | 説明 |
 | ----------- | ----------- |
-| カウンター     | 要求やエラーなど、何かが発生する頻度を追跡します。 |
+| カウンタ     | 要求やエラーなど、何かが発生する頻度を追跡します。 |
 | ゲージ       | アクティブな接続など、時間の経過と共に変化する1つの値を記録します。 |
 | ヒストグラム   | 任意の制限で値の分布を測定します。 たとえば、ヒストグラムは、データセットのサイズを追跡し、含まれている <10 レコード11-100、含まれているレコードの数、101-1000 レコードの数、および >1000 レコードの数をカウントできます。 |
 | 測定       | さまざまな期間におけるイベントの発生率を測定します。 |
-| タイマー       | イベントの期間とその発生率を追跡し、ヒストグラムとして格納します。 |
+| Timer       | イベントの期間とその発生率を追跡し、ヒストグラムとして格納します。 |
 
-*アプリメトリック*を使用すると、依存関係の注入によって `IMetrics` インターフェイスを取得し、grpc サービスのこれらのメトリックを記録するために使用できます。 次の例では、時間の経過と共に行われた要求の数をカウントする方法を示し `Get` ます。
+*アプリメトリック* を使用すると、依存関係の注入によって `IMetrics` インターフェイスを取得し、grpc サービスのこれらのメトリックを記録するために使用できます。 次の例では、時間の経過と共に行われた要求の数をカウントする方法を示し `Get` ます。
 
 ```csharp
 public class StockData : Stocks.StocksBase
@@ -98,7 +98,7 @@ public class StockData : Stocks.StocksBase
 
 ### <a name="store-and-visualize-metrics-data"></a>メトリックデータの格納と視覚化
 
-メトリックデータを格納する最善の方法は、 *タイムシリーズデータベース*で、タイムスタンプでマークされた数値データ系列を記録するように設計された特殊なデータストアです。 これらのデータベースのうち最も一般的なものは、 [Prometheus](https://prometheus.io/) と [InfluxDB](https://www.influxdata.com/products/influxdb-overview/)です。 また Microsoft Azure は、 [Azure Monitor](/azure/azure-monitor/overview) サービスを介した専用のメトリックストレージも提供します。
+メトリックデータを格納する最善の方法は、 *タイムシリーズデータベース* で、タイムスタンプでマークされた数値データ系列を記録するように設計された特殊なデータストアです。 これらのデータベースのうち最も一般的なものは、 [Prometheus](https://prometheus.io/) と [InfluxDB](https://www.influxdata.com/products/influxdb-overview/)です。 また Microsoft Azure は、 [Azure Monitor](/azure/azure-monitor/overview) サービスを介した専用のメトリックストレージも提供します。
 
 メトリックデータを視覚化するための最新のソリューションは [Grafana](https://grafana.com)であり、幅広いストレージプロバイダーで動作します。 次の図は、StockData サンプルを実行している Linkerd service メッシュのメトリックを表示する Grafana ダッシュボードの例を示しています。
 
@@ -112,15 +112,15 @@ public class StockData : Stocks.StocksBase
 
 分散トレースは、監視の比較的最近の開発で、マイクロサービスと分散アーキテクチャの使用量が増加してきました。 クライアントのブラウザー、アプリケーション、またはデバイスからの単一の要求は、多くの手順とサブ要求に分割でき、ネットワーク全体で多くのサービスを使用します。 これにより、ログメッセージとメトリックを、トリガーされた特定の要求と関連付けるのが困難になります。 分散トレースは、要求に識別子を適用します。これにより、ログとメトリックを特定の操作に関連付けることができます。 これは、 [WCF のエンドツーエンドのトレース](../../framework/wcf/diagnostics/tracing/end-to-end-tracing.md)に似ていますが、複数のプラットフォームに適用されます。
 
-分散トレースは急速に成長しており、標準化が開始されています。 Cloud Native Computing Foundation は、 [オープントレース標準](https://opentracing.io)を作成しました。これは、 [Jaeger](https://www.jaegertracing.io/) や [エラスティック APM](https://www.elastic.co/products/apm)などのバックエンドを操作するために、ベンダー中立のライブラリを提供しようとしています。 同時に、Google は同じ問題のセットを解決するために [OpenCensus プロジェクト](https://opencensus.io/) を作成しました。 これら2つのプロジェクトは、新しいプロジェクトである [OpenTelemetry](https://opentelemetry.io)にマージされます。これは、将来の業界標準です。
+分散トレースは急速に成長しており、標準化が開始されています。 クラウドネイティブコンピューティングファンデーションは、 [Jaeger](https://www.jaegertracing.io/)や[エラスティック APM](https://www.elastic.co/products/apm)などのバックエンドを操作するために、ベンダー中立のライブラリを提供しようとして、[オープントレース標準](https://opentracing.io)を作成しました。 同時に、Google は同じ問題のセットを解決するために [OpenCensus プロジェクト](https://opencensus.io/) を作成しました。 これら2つのプロジェクトは、新しいプロジェクトである [OpenTelemetry](https://opentelemetry.io)にマージされます。これは、将来の業界標準です。
 
 ### <a name="how-distributed-tracing-works"></a>分散トレースのしくみ
 
-分散トレースは、 *範囲*の概念に基づいています。これは、1つの *トレース*の一部である名前付きの時間指定操作で、システムの複数のノードでの処理が必要になる場合があります。 新しい操作が開始されると、一意の識別子を使用してトレースが作成されます。 各サブ操作に対して、スパンは独自の識別子とトレース識別子を使用して作成されます。 要求がシステムを通過すると、さまざまなコンポーネントが*親*の識別子を含む*子*スパンを作成できます。 スパンには、トレース識別子とスパン識別子を含む *コンテキスト*と、キーと値のペア ( *荷物*と呼ばれます) の形式の有用なデータが含まれています。
+分散トレースは、 *範囲* の概念に基づいています。これは、1つの *トレース* の一部である名前付きの時間指定操作で、システムの複数のノードでの処理が必要になる場合があります。 新しい操作が開始されると、一意の識別子を使用してトレースが作成されます。 各サブ操作に対して、スパンは独自の識別子とトレース識別子を使用して作成されます。 要求がシステムを通過すると、さまざまなコンポーネントが *親* の識別子を含む *子* スパンを作成できます。 スパンには、トレース識別子とスパン識別子を含む *コンテキスト* と、キーと値のペア ( *荷物* と呼ばれます) の形式の有用なデータが含まれています。
 
 ### <a name="distributed-tracing-with-diagnosticsource"></a>分散トレース `DiagnosticSource`
 
-.NET Core には、分散トレースおよびスパン ( [DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide)) に適切にマップされる内部モジュールがあります。 また、プロセス内で診断を生成して使用する簡単な方法が用意されているので、モジュールには `DiagnosticSource` *アクティビティ*の概念があります。 アクティビティは、実質的には、分散トレースまたはトレース内のスパンの実装です。 モジュールの内部では、識別子の割り当てなど、親/子アクティビティが処理されます。 型の使用方法の詳細については `Activity` 、 [GitHub のアクティビティユーザーガイド](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide)を参照してください。
+.NET Core には、分散トレースおよびスパン ( [DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide)) に適切にマップされる内部モジュールがあります。 また、プロセス内で診断を生成して使用する簡単な方法が用意されているので、モジュールには `DiagnosticSource` *アクティビティ* の概念があります。 アクティビティは、実質的には、分散トレースまたはトレース内のスパンの実装です。 モジュールの内部では、識別子の割り当てなど、親/子アクティビティが処理されます。 型の使用方法の詳細については `Activity` 、 [GitHub のアクティビティユーザーガイド](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide)を参照してください。
 
 `DiagnosticSource`はコアフレームワークの一部であるため、いくつかのコアコンポーネントでサポートされています。 これには <xref:System.Net.Http.HttpClient> 、gRPC フレームワークでの明示的なサポートを含む、、Entity Framework Core、ASP.NET Core が含まれます。 ASP.NET Core が要求を受信すると、 [W3C トレースコンテキスト](https://www.w3.org/TR/trace-context) 標準に一致する HTTP ヘッダーのペアが確認されます。 ヘッダーが見つかった場合は、ヘッダーの id 値とコンテキストを使用してアクティビティが開始されます。 ヘッダーが見つからない場合は、標準形式に一致する生成された id 値を使用してアクティビティが開始されます。 このアクティビティの有効期間中に、フレームワークまたはアプリケーションコードによって生成される診断には、トレース id とスパン識別子をタグ付けできます。 サポートは、 `HttpClient` すべての要求の現在のアクティビティを確認し、トレースヘッダーを送信要求に自動的に追加することで、これをさらに拡張します。
 
