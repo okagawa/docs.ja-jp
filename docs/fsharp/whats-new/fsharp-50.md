@@ -2,12 +2,12 @@
 title: 'F # 5.0 の新機能-F # ガイド'
 description: 'F # 5.0 で利用可能な新機能の概要を説明します。'
 ms.date: 11/06/2020
-ms.openlocfilehash: 0b25d48a97792e780515226170151f3bbf2f2301
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: 29b5b110379dec476d7c0aa51540984acb25f26e
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982467"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95098698"
 ---
 # <a name="whats-new-in-f-50"></a>F# 5.0 の新機能
 
@@ -285,15 +285,15 @@ let inline negate x = -x
 <@ negate 1.0 @>  |> eval
 ```
 
-関数によって生成される制約 `inline` は、コードに保持されます。 関数の順序によって表さ `negate` れるフォームを評価できるようになりました。
+関数によって生成される制約は、コードの引用符で囲まれて `inline` 保持されます。 `negate`関数の引用符で囲まれた形式を評価できるようになりました。
 
 この機能は [、F # RFC FS-1071](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1071-witness-passing-quotations.md)を実装します。
 
 ## <a name="applicative-computation-expressions"></a>アプリケーションの計算式
 
-[コンピュテーション式 (CEs)](../language-reference/computation-expressions.md) は、"コンテキスト計算" をモデル化するために現在使用されています。または、関数型プログラミングのわかりやすい用語である monadic の計算に使用されています。
+[コンピュテーション式 (CEs)](../language-reference/computation-expressions.md) は、"コンテキスト計算" をモデル化するために現在使用されています。また、関数型プログラミングに適した用語である monadic の計算にも使用されています。
 
-F # 5 では、別の計算モデルを提供するアプリケーションアプリケーションが導入されています。 アプリケーションを使用すると、すべての計算が独立しており、結果が最終的に蓄積されるため、より効率的な計算を行うことができます。 計算が相互に独立している場合は、それらも簡単に並列化できます。これにより、CE の作成者はより効率的なライブラリを記述できるようになります。 ただし、この特典には制限がありますが、以前に計算された値に依存する計算は使用できません。
+F # 5 では、別の計算モデルを提供するアプリケーションアプリケーションが導入されています。 アプリケーションを使用すると、すべての計算が独立しており、結果が最終的に蓄積されるため、より効率的な計算を行うことができます。 計算が相互に独立している場合は、それらも簡単に並列化できます。これにより、CE の作成者はより効率的なライブラリを記述できるようになります。 ただし、この特典には制限がありますが、以前に計算された値に依存する計算は許可されません。
 
 次の例は、型の基本的なアプリケーションを示して `Result` います。
 
@@ -340,7 +340,7 @@ let printApplicatives () =
 
 この機能は [、F # RFC FS-1063](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1063-support-letbang-andbang-for-applicative-functors.md)を実装します。
 
-## <a name="interfaces-can-be-implemeneted-at-different-generic-instantiations"></a>インターフェイスは、異なる汎用インスタンス化で implemeneted ことができます。
+## <a name="interfaces-can-be-implemented-at-different-generic-instantiations"></a>インターフェイスは異なる汎用インスタンス化で実装できます。
 
 これで、異なる汎用インスタンス化で同じインターフェイスを実装できるようになりました。
 
@@ -490,7 +490,7 @@ run() // Prints the same thing twice
 
 コンピュテーション式は、ライブラリおよびフレームワークの作成者にとって強力な機能です。 よく知られているメンバーを定義し、作業中のドメインの DSL を形成することで、コンポーネントの表現力を大幅に向上させることができます。
 
-F # 5 では、コンピュテーション式でカスタム操作をオーバーロードするためのプレビューサポートを追加します。 これにより、次のコードを書き込まれるして使用できるようになります。
+F # 5 では、コンピュテーション式でカスタム操作をオーバーロードするためのプレビューサポートを追加します。 これにより、次のコードを記述して使用することができます。
 
 ```fsharp
 open System
