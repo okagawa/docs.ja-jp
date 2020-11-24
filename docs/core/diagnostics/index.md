@@ -3,12 +3,12 @@ title: 診断ツールの概要 - .NET Core
 description: .NET Core アプリケーションの診断に使用できるツールと手法の概要。
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: d78b73e53637927ecb877dd69054f75a1f5ac91f
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: 3274b72363a3df1dbe1bb29492eedcb134a4f9f2
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91438003"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982310"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core で使用できる診断ツール
 
@@ -62,6 +62,10 @@ ms.locfileid: "91438003"
 
 [dotnet-sos](dotnet-sos.md) を使用すると、Linux または MacOS (または、以前のデバッグ ツールを使用している場合は Windows) に [SOS デバッガー拡張](../../framework/tools/sos-dll-sos-debugging-extension.md)をインストールできます。
 
+### <a name="perfcollect"></a>PerfCollect
+
+[PerfCollect](trace-perfcollect-lttng.md) は、Linux ディストリビューションで実行されている .NET アプリのより詳細なパフォーマンス分析を行うために `perf` と `LTTng` でトレースを収集するために使用できる bash スクリプトです。
+
 ## <a name="net-core-diagnostics-tutorials"></a>.NET Core 診断チュートリアル
 
 ### <a name="debug-a-memory-leak"></a>メモリ リークをデバッグする
@@ -75,3 +79,7 @@ ms.locfileid: "91438003"
 ### <a name="debug-deadlock"></a>デッドロックをデバッグする
 
 [チュートリアル: デッドロックのデバッグ](debug-deadlock.md)に関するページに、[dotnet-dump](dotnet-dump.md) ツールを使用してスレッドとロックを調査する方法が示されています。
+
+### <a name="measure-performance-using-eventcounters"></a>EventCounters を使用してパフォーマンスを測定する
+
+[チュートリアル: .NET で EventCounters を使用してパフォーマンスを測定する](event-counter-perf.md)」は、<xref:System.Diagnostics.Tracing.EventCounter> API を使用して .NET アプリのパフォーマンスを測定する方法を示します。

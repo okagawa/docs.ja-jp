@@ -26,16 +26,16 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 40a789d9eaa835b1c464f25b5a33a7c1d766d2f8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: eae1b52f5462cdc395504da877e40e62e5417b76
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827257"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95098815"
 ---
 # <a name="generics-in-net"></a>.NET のジェネリック
 
-ジェネリックを使用すると、操作対象のデータ型に厳密に合わせてメソッド、クラス、構造体、またはインターフェイスを調整できます。 たとえば、任意の型のキーと値が許可される <xref:System.Collections.Hashtable> クラスを使用する代わりに、 <xref:System.Collections.Generic.Dictionary%602> ジェネリック クラスを使用して、キーに使用できる型と、値に使用できる型を指定できます。 ジェネリックの利点として、コードの再利用性やタイプ セーフの向上などを挙げることができます。  
+ジェネリックを使用すると、操作対象のデータ型に厳密に合わせてメソッド、クラス、構造体、またはインターフェイスを調整できます。 たとえば、任意の型のキーと値が許可される <xref:System.Collections.Hashtable> クラスを使用する代わりに、<xref:System.Collections.Generic.Dictionary%602> ジェネリック クラスを使用して、キーと値に使用できる型を指定できます。 ジェネリックの利点として、コードの再利用性やタイプ セーフの向上などを挙げることができます。  
 
 ## <a name="defining-and-using-generics"></a>ジェネリックの定義と使用
  ジェネリックは、格納または使用される 1 つ以上の型のプレースホルダー (型パラメーター) を持つクラス、構造体、インターフェイス、およびメソッドです。 ジェネリック コレクション クラスでは、格納するオブジェクトの型のプレースホルダーとして、型パラメーターを使用することがあります。型パラメーターは、そのフィールドの型やそのメソッドのパラメーター型として出現します。 ジェネリック メソッドでは、その戻り値の型として、またはいずれかの仮パラメーターの型として、型パラメーターを使用します。 単純なジェネリック クラスの定義を次のコードに示します。  
