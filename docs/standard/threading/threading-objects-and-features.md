@@ -1,17 +1,16 @@
 ---
 title: スレッド処理オブジェクトと機能
 ms.date: 10/01/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET], features
 - managed threading
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
-ms.openlocfilehash: 98fb9238b7cf9d11641628de1413e911985a87c3
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 8a66904a6db3fa45d8a42dec4e1e42883c1c3e98
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188147"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826171"
 ---
 # <a name="threading-objects-and-features"></a>スレッド処理オブジェクトと機能
 

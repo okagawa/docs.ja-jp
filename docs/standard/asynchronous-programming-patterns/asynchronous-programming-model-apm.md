@@ -2,7 +2,6 @@
 title: 非同期プログラミング モデル (APM)
 description: .NET の非同期プログラミング モデル (APM) について説明します。 非同期操作を開始および終了する方法について説明します。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - ending asynchronous operations
 - starting asynchronous operations
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - asynchronous programming, beginning operations
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
-ms.openlocfilehash: 5ab5d15d24aac80ef4a31c039f7af9dacce4a8d8
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 7b976cf48214fb623563b09aab8a991a5a05d3ca
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769185"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824442"
 ---
 # <a name="asynchronous-programming-model-apm"></a>非同期プログラミング モデル (APM)
 <xref:System.IAsyncResult> デザイン パターンを使用する非同期操作は `BeginOperationName` と `EndOperationName` という名前の、各 *OperationName* 非同期操作を開始および終了する 2 種類のメソッドとして実装されます。 たとえば、 <xref:System.IO.FileStream> クラスは、 <xref:System.IO.FileStream.BeginRead%2A> および <xref:System.IO.FileStream.EndRead%2A> メソッドを提供して、非同期的にファイルからバイトを読み取ります。 これらのメソッドは非同期バージョンの <xref:System.IO.FileStream.Read%2A> メソッドを実装します。  

@@ -2,7 +2,6 @@
 title: .NET で新しい文字列を作成する
 description: 割り当て、クラス コンストラクター、または System.String メソッドを使用して文字列を作成する方法について学習します。これにより、.NET で複数の文字列、文字列の配列、またはオブジェクトが結合されます。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - strings [.NET], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-ms.openlocfilehash: 7dedaf61f56f19343299c841bb4cee70fb9c767a
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: a00274b7b6b7e7a54d8546f2176109688a4c4678
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889440"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824884"
 ---
 # <a name="creating-new-strings-in-net"></a>.NET で新しい文字列を作成する
 
@@ -43,9 +42,9 @@ ms.locfileid: "92889440"
 |<xref:System.String.CopyTo%2A?displayProperty=nameWithType>|文字配列内の指定の位置に、文字列内の指定の文字をコピーします。|  
   
 ### <a name="format"></a>形式  
- **String.Format** メソッドを使用すると、書式設定された文字列を作成し、複数のオブジェクトを表す文字列を連結できます。 このメソッドは、渡されたすべてのオブジェクトを文字列に自動的に変換します。 たとえば、アプリケーションでユーザーに対して **Int32** 値と **DateTime** 値を表示する必要がある場合、 **Format** メソッドを使用して、これらの値を表す文字列を簡単に作成できます。 このメソッドで使用される書式設定規則については、[複合書式指定](composite-formatting.md)に関するセクションを参照してください。  
+ **String.Format** メソッドを使用すると、書式設定された文字列を作成し、複数のオブジェクトを表す文字列を連結できます。 このメソッドは、渡されたすべてのオブジェクトを文字列に自動的に変換します。 たとえば、アプリケーションでユーザーに対して **Int32** 値と **DateTime** 値を表示する必要がある場合、**Format** メソッドを使用して、これらの値を表す文字列を簡単に作成できます。 このメソッドで使用される書式設定規則については、[複合書式指定](composite-formatting.md)に関するセクションを参照してください。  
   
- 次の例では、 **Format** メソッドを使用して、整数型の変数を使用する文字列を作成します。  
+ 次の例では、**Format** メソッドを使用して、整数型の変数を使用する文字列を作成します。  
   
  [!code-csharp[Strings.Creating#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#1)]
  [!code-vb[Strings.Creating#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#1)]  
@@ -53,7 +52,7 @@ ms.locfileid: "92889440"
  この例では、<xref:System.DateTime.Now%2A?displayProperty=nameWithType> は、現在のスレッドに関連付けられているカルチャで指定された方法で現在の日時を表示します。  
   
 ### <a name="concat"></a>Concat  
- **String.Concat** メソッドを使用すると、2 つ以上の既存のオブジェクトから新しい文字列オブジェクトを簡単に作成できます。 言語に依存せずに文字列を連結する方法を提供します。 このメソッドは、 **System.Object** から派生したすべてのクラスを受け入れます。 次の例では、2 つの既存の文字列オブジェクトおよび区切り文字から文字列を作成します。  
+ **String.Concat** メソッドを使用すると、2 つ以上の既存のオブジェクトから新しい文字列オブジェクトを簡単に作成できます。 言語に依存せずに文字列を連結する方法を提供します。 このメソッドは、**System.Object** から派生したすべてのクラスを受け入れます。 次の例では、2 つの既存の文字列オブジェクトおよび区切り文字から文字列を作成します。  
   
  [!code-csharp[Strings.Creating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#2)]
  [!code-vb[Strings.Creating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#2)]  
@@ -75,7 +74,7 @@ ms.locfileid: "92889440"
 ### <a name="copyto"></a>CopyTo  
  **String.CopyTo** メソッドは、文字配列に文字列の部分をコピーします。 文字列の開始インデックスと、コピーする文字数の両方を指定できます。 このメソッドは、ソース インデックス、文字配列、コピー先のインデックス、およびコピーする文字数を受け取ります。 すべてのインデックスは 0 から始まります。  
   
- 次の例では、 **CopyTo** メソッドを使用して、文字列オブジェクトから文字配列の最初のインデックス位置に、単語 "Hello" の文字をコピーします。  
+ 次の例では、**CopyTo** メソッドを使用して、文字列オブジェクトから文字配列の最初のインデックス位置に、単語 "Hello" の文字をコピーします。  
   
  [!code-csharp[Strings.Creating#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#5)]
  [!code-vb[Strings.Creating#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#5)]  

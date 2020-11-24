@@ -1,16 +1,15 @@
 ---
 title: '方法: 境界ブロッキング機能をコレクションに追加する'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, custom blocking collections
 ms.assetid: 4c2492de-3876-4873-b5a1-000bb404d770
-ms.openlocfilehash: 57a01726e897f4ddbf8df5ede53609c198012d80
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 52ba264c5a0fc9cfffb00ee30b50f6b89dc1e660
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287875"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825040"
 ---
 # <a name="how-to-add-bounding-and-blocking-functionality-to-a-collection"></a>方法: 境界ブロッキング機能をコレクションに追加する
 この例では、<xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> インターフェイスをクラスに実装し、クラスのインスタンスを <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> の内部ストレージ メカニズムとして使用することによって、カスタム コレクション クラスに境界ブロッキング機能を追加する方法を示します。 境界ブロッキングの詳細については、「[BlockingCollection の概要](blockingcollection-overview.md)」を参照してください。  

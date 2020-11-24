@@ -2,7 +2,6 @@
 title: '方法: イベント プロパティを使用して複数のイベントを処理する'
 description: イベント プロパティを使用して多数のイベントを処理する方法について説明します。 デリゲート コレクション、イベント キー、イベント プロパティを定義します。 アクセス機構の追加と削除を実装します。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - event handling [.NET], with multiple events
 - events [.NET], multiple
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
-ms.openlocfilehash: fa0bdc26eba872a62cd5f7a773df0d7a53c83975
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: c62073e26ff0831bb582c9e64c16b7ec7c05b26e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064237"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828376"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>方法: イベント プロパティを使用して複数のイベントを処理する
 イベント プロパティを使用するには、イベントを発生させるクラスにイベント プロパティを定義し、そのイベントを処理するクラスにイベント プロパティのデリゲートを設定します。 1 つのクラスにイベント プロパティを複数実装するには、そのクラス内部に、各イベント用に定義されたデリゲートを格納および保持する必要があります。 通常は、イベント キーをインデックスとするデリゲート コレクションを実装することによってこれを実現します。  

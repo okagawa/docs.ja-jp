@@ -2,19 +2,18 @@
 title: ConcurrentDictionary の項目を追加および削除する
 description: .NET の ConcurrentDictionary<TKey,TValue> コレクション クラスの項目を追加、取得、更新、削除する方法の例をご覧ください。
 ms.date: 05/04/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
-ms.openlocfilehash: 0bfc17d93ea3088a7b2e4209e25003856770b9e7
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 17d820aba564d467152c52c7a0352bbc860f548b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325957"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823811"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>ConcurrentDictionary の項目を追加し、削除する方法
 

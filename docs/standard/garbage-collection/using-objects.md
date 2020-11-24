@@ -2,7 +2,6 @@
 title: IDisposable を実装するオブジェクトの使用
 description: .NET で IDisposable インターフェイスを実装するオブジェクトを使用する方法について学習します。 アンマネージ リソースを使用する型は、リソースを再利用できるように IDisposable を実装します。
 ms.date: 05/13/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - try/finally block
 - garbage collection, encapsulating resources
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
-ms.openlocfilehash: 7d5d4080f22aab6870a230d495b4a4b9ebcb3b96
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 50769bdf684f6eb3a51dc2bd00c6a774a02976b7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599855"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827452"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>IDisposable を実装するオブジェクトの使用
 

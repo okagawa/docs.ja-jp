@@ -2,16 +2,15 @@
 title: 共通 I/O タスク
 description: .NET で System.IO 名前空間のクラスとメソッドを使用して、共通ファイル タスクと共通ディレクトリ タスクを実行する方法について学習します。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
-ms.openlocfilehash: 4b97b4e464622e482a9ef45e143865ee82e6b5d4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: baabfc477ff8df30c9cac4db1b6d47e0e12f2f37
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598607"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823395"
 ---
 # <a name="common-io-tasks"></a>共通 I/O タスク
 <xref:System.IO> 名前空間には、読み取り、書き込みなどの各種アクションをファイル、ディレクトリ、およびストリーム上で実行できるようにするいくつかのクラスが用意されています。 詳細については、「[ファイルおよびストリーム入出力](index.md)」を参照してください。  

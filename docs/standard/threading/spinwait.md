@@ -1,23 +1,22 @@
 ---
 title: SpinWait
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - synchronization primitives, SpinWait
 ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
-ms.openlocfilehash: fb70697fd14f9f8734ca1a7896fc06c6bca5a71d
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 2031ebc30d0789181786053d401e69da782a619f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188927"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826210"
 ---
 # <a name="spinwait"></a>SpinWait
 
-<xref:System.Threading.SpinWait?displayProperty=nameWithType> は軽量な同期型であり、負荷が高いコンテキスト スイッチとカーネル イベントに必要なカーネル遷移を避けるために低レベルのシナリオで使用できます。 マルチコア コンピューターでは、リソースの保持期間が長くならないと予測される場合、待機中のスレッドを数十または数百サイクルの間ユーザー モードでスピンさせてから、リソースの取得を再試行した方が効率的です。 スピン後にリソースを使用できる場合は、数千サイクルを節約したことになります。 リソースをまだ使用できない場合でも、数サイクルを消費しただけであり、カーネル ベースの待機に移行できます。 スピン後に待機というこの組み合わせは、 *2 フェーズ待機操作* と呼ばれることがあります。  
+<xref:System.Threading.SpinWait?displayProperty=nameWithType> は軽量な同期型であり、負荷が高いコンテキスト スイッチとカーネル イベントに必要なカーネル遷移を避けるために低レベルのシナリオで使用できます。 マルチコア コンピューターでは、リソースの保持期間が長くならないと予測される場合、待機中のスレッドを数十または数百サイクルの間ユーザー モードでスピンさせてから、リソースの取得を再試行した方が効率的です。 スピン後にリソースを使用できる場合は、数千サイクルを節約したことになります。 リソースをまだ使用できない場合でも、数サイクルを消費しただけであり、カーネル ベースの待機に移行できます。 スピン後に待機というこの組み合わせは、*2 フェーズ待機操作* と呼ばれることがあります。  
   
  <xref:System.Threading.SpinWait> は、<xref:System.Threading.ManualResetEvent> などのカーネル イベントをラップする .NET 型と共に使用するように設計されています。 また、<xref:System.Threading.SpinWait> は、1 つのプログラムのみで基本的なスピン機能のために単独で使用することもできます。  
   

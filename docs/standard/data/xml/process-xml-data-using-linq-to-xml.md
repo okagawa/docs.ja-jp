@@ -1,14 +1,13 @@
 ---
 title: LINQ to XML を使用した XML データの処理
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 059d6b9d-63f7-4011-9ba8-8406f0bbae7d
-ms.openlocfilehash: 5afa9fc84b7f41023eceb5c0734b0667dc55514e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b3aa4e160ed04fd713f46349f11970fdd7ea8bb9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556500"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824715"
 ---
 # <a name="process-xml-data-using-linq-to-xml"></a>LINQ to XML を使用した XML データの処理
 LINQ to XML は、XML データの処理を目的とした Microsoft .NET Framework version 3.5 の新しいモデルです。 LINQ to XML を使用することで、XML ドキュメントのクエリ、変更、作成、保存、シリアル化など、XML データを扱う際に必要な処理をすべて実行できます。 特に、クエリと作成の機能が役立ちます。  

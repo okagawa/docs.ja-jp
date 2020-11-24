@@ -2,14 +2,15 @@
 title: SDK スタイル プロジェクトでのターゲット フレームワーク - .NET
 description: .NET アプリとライブラリのターゲット フレームワークについて説明します。
 ms.date: 11/06/2020
+ms.prod: dotnet
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: a37634bc9f4cbee5f7901fcb085d3801a7452573
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 1a0d6ef9d31b85fd6c083604dd11b9ca9ff09c79
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94441040"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827920"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK スタイルのプロジェクトでのターゲット フレームワーク
 

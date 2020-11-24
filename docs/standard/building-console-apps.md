@@ -1,18 +1,17 @@
 ---
 title: .NET でコンソール アプリケーションを作成する
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - .NET, creating console applications
 - application development [.NET], console
 - console applications
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
-ms.openlocfilehash: b9c38e1311379037695879565b33ade29c6bf632
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 8046b1b8cb50476860fee53654de93c924d23346
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687548"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823973"
 ---
 # <a name="console-apps-in-net"></a>.NET でのコンソール アプリ
 

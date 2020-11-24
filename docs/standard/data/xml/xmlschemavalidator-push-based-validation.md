@@ -1,17 +1,16 @@
 ---
 title: XmlSchemaValidator のプッシュ ベースの検証
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
-ms.openlocfilehash: d5b2fe4325000023acc98580a2a6d014f56fecbd
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 9daf6f416d22cd06932cdaba1276889e319d3d90
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419110"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824897"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator のプッシュ ベースの検証
 

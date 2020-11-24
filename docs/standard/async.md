@@ -4,14 +4,13 @@ description: ブロッキング I/O と複数コアでの同時操作の処理�
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.openlocfilehash: d649bc3a92d3bb834b3bc4f7d3c1bcb0f9417375
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 495f225a3732812666dfa2f5c8c07f6f5b849c95
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159729"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824806"
 ---
 # <a name="async-overview"></a>非同期の概要
 

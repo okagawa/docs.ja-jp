@@ -2,19 +2,18 @@
 title: '方法: 並列ループの例外を処理する'
 description: .NET で並列ループの例外を処理する方法について説明します。 System.AggregateException のループからすべての例外をラップする方法の例を参照します。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallel loops, how to handle exceptions
 ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
-ms.openlocfilehash: 61c22d6e82282f8aeb54818c813d4489e3bc9641
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: e8478f27b21b9b9dbf85d68f766c24aa5b9cf600
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768977"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825755"
 ---
 # <a name="how-to-handle-exceptions-in-parallel-loops"></a>方法: 並列ループの例外を処理する
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> のオーバーロード には、スローされる可能性のある例外を処理する特別な仕組みはありません。 この点では、標準の `for` ループおよび `foreach` ループ (Visual Basic では `For` と `For Each`) と似ており、現在実行中のイテレーションがすべて終了すると、処理されない例外によってループはただちに終了します。

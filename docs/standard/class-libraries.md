@@ -3,14 +3,13 @@ title: .NET クラス ライブラリ
 description: .NET クラス ライブラリを使用して、役に立つ機能をモジュールとしてコンポーネント化して、複数のアプリケーションで使用する方法について説明します。
 author: richlander
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: 35e408ed3552550f19879409128784b2513e56c8
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: bbf8d5fa44af931e39f2bf1344c13f9d9d9bfe05
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224263"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823954"
 ---
 # <a name="net-class-libraries"></a>.NET クラス ライブラリ
 
@@ -42,7 +41,7 @@ ms.locfileid: "92224263"
 
 .NET Standard ライブラリは、プラットフォームに固有のライブラリおよびポータブル ライブラリの概念に代わるものです。 これらは、基になるプラットフォームのすべての機能を公開するという意味でプラットフォーム固有です (統合プラットフォームまたはプラットフォームの交差はありません)。 これらは、すべてのサポートされるプラットフォーム上で機能するという意味でポータブルです。
 
-.NET Standard は、ライブラリ " _コントラクト_ " のセットを公開しています。 .NET 実装は、各コントラクトを完全にサポートするか、またはまったくサポートしない必要があります。 そのため、各実装は .NET Standard コントラクトのセットをサポートしています。 当然の結果として、各 .NET Standard クラス ライブラリは、コントラクトの依存関係をサポートするプラットフォームでサポートされています。
+.NET Standard は、ライブラリ "_コントラクト_" のセットを公開しています。 .NET 実装は、各コントラクトを完全にサポートするか、またはまったくサポートしない必要があります。 そのため、各実装は .NET Standard コントラクトのセットをサポートしています。 当然の結果として、各 .NET Standard クラス ライブラリは、コントラクトの依存関係をサポートするプラットフォームでサポートされています。
 
 .NET Standard は、.NET Framework のすべての機能を公開していません (それが目的でもありません)。ただし、ポータブル クラス ライブラリよりも多くの API を公開しています。 時間の経過と共にさらに API が追加されます。
 

@@ -2,7 +2,6 @@
 title: マネージド スレッド処理のベスト プラクティス
 description: .NET でのマネージド スレッド処理のベスト プラクティスについて説明します。 多数のスレッドの調整やブロッキング スレッドの処理など、困難な状況に対応します。
 ms.date: 10/15/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - threading [.NET], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: 88e1f34388cd58fef59bc4005bcaf630c59a661e
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: b2a3f2efc12392316f6d90242ef0a9224e7d13a4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189005"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826314"
 ---
 # <a name="managed-threading-best-practices"></a>マネージド スレッド処理のベスト プラクティス
 
@@ -62,7 +61,7 @@ else {
 ### <a name="race-conditions"></a>競合状態  
  競合状態は、2 つ以上のスレッドのうちのどれが特定のコード ブロックに最初に到達するかによって、プログラムの結果が変わってしまうバグのことです。 プログラムを何回か実行すると、異なる結果が得られ、実行の結果は予測できません。  
   
- 競合状態の簡単な例として、フィールドのインクリメントがあります。 クラスにプライベートの **static** フィールド (Visual Basic では **Shared** ) があり、このフィールドは、`objCt++;` (C# の場合) または `objCt += 1` (Visual Basic の場合) のようなコードを使用して、クラスのインスタンスが生成されるたびにインクリメントされるものとします。 この演算によって、`objCt` からレジスタへの値の読み込み、値のインクリメント、および `objCt` への値の格納が行われます。  
+ 競合状態の簡単な例として、フィールドのインクリメントがあります。 クラスにプライベートの **static** フィールド (Visual Basic では **Shared**) があり、このフィールドは、`objCt++;` (C# の場合) または `objCt += 1` (Visual Basic の場合) のようなコードを使用して、クラスのインスタンスが生成されるたびにインクリメントされるものとします。 この演算によって、`objCt` からレジスタへの値の読み込み、値のインクリメント、および `objCt` への値の格納が行われます。  
   
  マルチスレッドされたアプリケーションでは、値の読み込みとインクリメントを行ったスレッドが、この 3 つの処理を実行する別のスレッドに先を越される可能性があります。最初のスレッドは、実行を再開して値を格納するとき、待機中に値が変更されたかどうかを考慮せずに、`objCt` の値を上書きしてしまいます。  
   
@@ -96,7 +95,7 @@ else {
   
 - インスタンスをロックする場合 (たとえば、C# の `lock(this)`、Visual Basic の `SyncLock(Me)`) には注意してください。 アプリケーション内の、その型以外の他のコードがオブジェクトをロックすると、デッドロックが発生する場合があります。  
   
-- モニター状態に入った (ロックを取得した) スレッドは、モニター状態である間に例外が発生した場合でも、必ずモニター状態から出すようにします。 C# の [lock](../../csharp/language-reference/keywords/lock-statement.md) ステートメントと Visual Basic の [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) ステートメントは、 **finally** ブロックを使用して <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> が呼び出されるようにすることで、この動作を自動的に提供します。 **Exit** を確実に呼び出すことができない場合は、 **Mutex** を使用するようにデザインを変更することを検討してください。 ミューテックスは、現在それを保持しているスレッドが終了すると、自動的に解放されます。  
+- モニター状態に入った (ロックを取得した) スレッドは、モニター状態である間に例外が発生した場合でも、必ずモニター状態から出すようにします。 C# の [lock](../../csharp/language-reference/keywords/lock-statement.md) ステートメントと Visual Basic の [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) ステートメントは、**finally** ブロックを使用して <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> が呼び出されるようにすることで、この動作を自動的に提供します。 **Exit** を確実に呼び出すことができない場合は、**Mutex** を使用するようにデザインを変更することを検討してください。 ミューテックスは、現在それを保持しているスレッドが終了すると、自動的に解放されます。  
   
 - マルチ スレッドは異なるリソースを必要とするタスクに使用し、1 つのリソースに複数のスレッドを割り当てることがないように注意します。 たとえば、I/O を含む作業であれば、その作業専用のスレッドを用意すると有益です。I/O 操作の間、このスレッドはブロックを行いますが、他のスレッドは実行できるからです。 ユーザー入力も、専用のスレッドが役に立つリソースの 1 つです。 シングル プロセッサのコンピューターでは、計算中心のタスクがユーザー入力や I/O タスクと共存することはできますが、計算中心タスクどうしは競合してしまいます。  
   

@@ -2,7 +2,6 @@
 title: '方法: ユーザー定義の例外を作成する'
 description: .NET で例外基底クラスから派生した例外クラスの階層の代わりとして、ユーザー定義の例外を作成する方法について説明します。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - exceptions, examples
 - exceptions, user-defined
 ms.assetid: 25819a5a-f915-4fc8-b924-a76915674e04
-ms.openlocfilehash: 14eb6246ba4347f33766f7dff36463f2bf996330
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: b0a8549c9bacf322a0685c7b505185ab1d1101f6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662798"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828128"
 ---
 # <a name="how-to-create-user-defined-exceptions"></a>ユーザー定義の例外を作成する方法
 

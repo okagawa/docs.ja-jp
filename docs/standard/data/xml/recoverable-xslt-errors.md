@@ -1,14 +1,13 @@
 ---
 title: XSLT エラーの解決
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-ms.openlocfilehash: ada0b352cd867417ed3ecf86291df023ca7c579e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8a77600c8cc1baf61ed21cc7a480b75dd2fde2dc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289097"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827582"
 ---
 # <a name="recoverable-xslt-errors"></a>XSLT エラーの解決
 W3C 勧告『XSL Transformations (XSLT) Version 1.0』には、対処方法を実装者が決定できる事項があります。 このような事項は、随意動作と見なされています。 たとえば、XSLT 1.0 Recommendation は、セクション 7.3「Creating Processing Instructions」で、`xsl:processing-instruction` の内容をインスタンス化したときに、テキスト ノード以外のノードが作成されるのはエラーであるとしています。 いくつかの問題に関しては、プロセッサがエラー状態から回復するときにどのような対処をするべきかを、XSLT 1.0 Recommendation が規定しています。 セクション 7.3 に記述されている問題に関しては、W3C では、作成されたノードとその内容を無視することで、このエラーから回復できるとしています。  

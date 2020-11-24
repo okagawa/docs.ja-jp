@@ -1,16 +1,15 @@
 ---
 title: 発生したコレクション
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, forced
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
-ms.openlocfilehash: 36dff45587c6c28ba17fd7389dc3863893ff8f61
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 637ba9b3b73d685ee2263315a08f982d862efb35
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286042"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827725"
 ---
 # <a name="induced-collections"></a>発生したコレクション
 ほとんどの場合、コレクションの実行に最適なタイミングはガベージ コレクターが判断できるので、ガベージ コレクターに任せるのが良い方法です。 ただし、ごくまれに、強制的にコレクションを実行するとアプリケーションのパフォーマンスが向上する場合があります。 このような場合は、<xref:System.GC.Collect%2A?displayProperty=nameWithType> メソッドを使用してガベージ コレクションを強制的に実行できます。  

@@ -1,19 +1,18 @@
 ---
 title: '方法: PLINQ のマージ オプションを指定する'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, how to use merge options
 ms.assetid: 0f33b527-e91a-4550-a39a-e63e396fd831
-ms.openlocfilehash: 84667fa1fbe2966c580d9c6d32e52ed686af7bb3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 91c5ac91538942368b66399bf0bc0132a15bf667
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288122"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825599"
 ---
 # <a name="how-to-specify-merge-options-in-plinq"></a>方法: PLINQ のマージ オプションを指定する
 この例では、PLINQ クエリの後続のすべての演算子に適用されるマージ オプションを指定する方法を示します。 マージ オプションを明示的に設定する必要はありませんが、設定することでパフォーマンスが向上する可能性があります。 マージ オプションの詳細については、「[PLINQ のマージ オプション](merge-options-in-plinq.md)」を参照してください。  

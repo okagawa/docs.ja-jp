@@ -2,18 +2,17 @@
 title: XmlSchemaSet による XML スキーマ (XSD) 検証
 description: .NET で XmlSchemaSet クラスを使用して、XML スキーマ定義言語 (XSD) スキーマに対して XML ドキュメントを検証する方法について学習します。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: 359b10eb-ec05-4cc6-ac96-c2b060afc4de
-ms.openlocfilehash: 5963ba1b382740b1774c944b74c6a54b13db4f76
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9e1d4b7e8c805436c32d2ae7b340ee251741f4a1
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554516"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824572"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemaset"></a>XmlSchemaSet による XML スキーマ (XSD) 検証
 

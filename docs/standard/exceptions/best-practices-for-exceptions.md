@@ -2,7 +2,6 @@
 title: 例外の推奨事項 - .NET
 description: try/catch/finally の使用、例外のない一般的な条件の処理、事前定義済みの .NET の例外の種類の使用など、例外に対するベスト プラクティスについて説明します。
 ms.date: 12/05/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 90dda00acd32852b032fc383580c5f34022ec9b4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 815dcc81cf41465bffd1515d366a66ff558304fa
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447096"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828232"
 ---
 # <a name="best-practices-for-exceptions"></a>例外の推奨事項
 

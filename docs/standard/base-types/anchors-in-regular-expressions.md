@@ -2,7 +2,6 @@
 title: .NET 正規表現でのアンカー
 description: 正規表現パターンでアンカーを使用する方法について説明します。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -16,12 +15,12 @@ helpviewer_keywords:
 - .NET regular expressions, anchors
 - .NET regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-ms.openlocfilehash: a6330eebbc69b9a3877a99a4373810d5a124c570
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 5f40270baa70c2b72d768cf0f5c4f8305f8bae7a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889167"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825274"
 ---
 # <a name="anchors-in-regular-expressions"></a>正規表現のアンカー
 アンカー (アトミック ゼロ幅アサーション) は、文字列が一致する位置を指定します。 検索式でアンカーを使用した場合、正規表現エンジンは、後方の文字列を読み込んだり、文字に一致させたりすることはしません。指定された位置での一致のみが検索されます。 たとえば、 `^` は、行または文字列の先頭に一致する必要があることを指定します。 したがって、正規表現 `^http:` は、"http:" が行の先頭にある場合にのみ一致します。 次の表は、.NET の正規表現でサポートされているアンカーの一覧です。  

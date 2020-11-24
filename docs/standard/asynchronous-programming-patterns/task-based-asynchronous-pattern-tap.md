@@ -2,7 +2,6 @@
 title: タスク ベースの非同期パターン (TAP)
 description: タスク ベースの非同期パターン (TAP) について学習します。 TAP は、.NET での開発に推奨される非同期デザイン パターンです。
 ms.date: 02/26/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET support for
 - .NET, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-ms.openlocfilehash: 2987e7baa52f627d1da41af21d05bfa22a247fbb
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: f194a0bafa0ab7b9606d72f091dbb12e94f31099
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889245"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824019"
 ---
 # <a name="task-based-asynchronous-pattern"></a>タスク ベースの非同期パターン
 
@@ -31,7 +30,7 @@ TAP では、非同期操作の開始と終了を表すために単一のメソ�
   
  TAP メソッドのパラメーターには、対応する同期メソッドと同じパラメーターを、同じ順序で指定する必要があります。  ただし、`out` パラメーターと `ref` パラメーターはこの規則に該当せず、すべて回避する必要があります。 `out` パラメーターまたは `ref` パラメーターで返されるデータは、代わりに複数の値を格納するために、タプルまたはカスタム データ構造を使用して、`TResult` により返される <xref:System.Threading.Tasks.Task%601> の一部として返す必要があります。 また、TAP メソッドに対応する同期メソッドでは提供されていない場合でも、<xref:System.Threading.CancellationToken> パラメーターの追加を検討してください。
 
- タスクの作成、操作、または組み合わせのためだけに使用されるメソッド (メソッド名またはメソッドが属する型の名前でメソッドの非同期の意図が明確な場合) は、この名前付けパターンに従う必要はありません。このようなメソッドは、 *連結子* と呼ばれることもあります。 連結子の例には、<xref:System.Threading.Tasks.Task.WhenAll%2A> および <xref:System.Threading.Tasks.Task.WhenAny%2A> があります。詳細については、記事「[タスク ベースの非同期パターンの利用](consuming-the-task-based-asynchronous-pattern.md)」の「[タスク ベースの組み込み連結子の使用](consuming-the-task-based-asynchronous-pattern.md#combinators)」セクションを参照してください。  
+ タスクの作成、操作、または組み合わせのためだけに使用されるメソッド (メソッド名またはメソッドが属する型の名前でメソッドの非同期の意図が明確な場合) は、この名前付けパターンに従う必要はありません。このようなメソッドは、*連結子* と呼ばれることもあります。 連結子の例には、<xref:System.Threading.Tasks.Task.WhenAll%2A> および <xref:System.Threading.Tasks.Task.WhenAny%2A> があります。詳細については、記事「[タスク ベースの非同期パターンの利用](consuming-the-task-based-asynchronous-pattern.md)」の「[タスク ベースの組み込み連結子の使用](consuming-the-task-based-asynchronous-pattern.md#combinators)」セクションを参照してください。  
   
  非同期プログラミング モデル (APM) やイベント ベースの非同期パターン (EAP) など、従来の非同期プログラミング パターンで使用される構文とは異なる TAP 構文の例については、「[非同期プログラミングのパターン](index.md)」を参照してください。  
   
@@ -53,7 +52,7 @@ TAP では、非同期操作の開始と終了を表すために単一のメソ�
  TAP メソッドの呼び出し元は、結果的に生成されるタスクに同期的に応答することで、TAP メソッドの完了を待つことをブロックできます。あるいは、非同期操作の完了時に追加 (継続) コードを実行できます。 継続コードの作成者は、そのコードが実行される場所を制御できます。 継続コードは、<xref:System.Threading.Tasks.Task> クラス (<xref:System.Threading.Tasks.Task.ContinueWith%2A> など) のメソッドによって明示的に作成するか、継続の上位にビルドされる言語サポート (C# の `await`、Visual Basic の `Await`、F# の `AwaitValue` など) を使用して暗黙のうちに作成できます。  
   
 ## <a name="task-status"></a>タスクの状態  
- <xref:System.Threading.Tasks.Task> クラスは、非同期操作の有効期間を提供し、そのサイクルは、<xref:System.Threading.Tasks.TaskStatus> 列挙型によって表されます。 <xref:System.Threading.Tasks.Task> および <xref:System.Threading.Tasks.Task%601> から派生する型のコーナー ケースに加え、スケジューリングからの構造の分離をサポートするために、<xref:System.Threading.Tasks.Task> クラスは <xref:System.Threading.Tasks.Task.Start%2A> メソッドを公開します。 <xref:System.Threading.Tasks.Task> パブリック コンストラクターにより作成されるタスクは、ライフ サイクルがスケジュールされていない <xref:System.Threading.Tasks.TaskStatus.Created> 状態から始まり、これらのインスタンスで <xref:System.Threading.Tasks.Task.Start%2A> が呼び出されるときにのみスケジュールされることから、 *コールド タスク* と呼ばれます。
+ <xref:System.Threading.Tasks.Task> クラスは、非同期操作の有効期間を提供し、そのサイクルは、<xref:System.Threading.Tasks.TaskStatus> 列挙型によって表されます。 <xref:System.Threading.Tasks.Task> および <xref:System.Threading.Tasks.Task%601> から派生する型のコーナー ケースに加え、スケジューリングからの構造の分離をサポートするために、<xref:System.Threading.Tasks.Task> クラスは <xref:System.Threading.Tasks.Task.Start%2A> メソッドを公開します。 <xref:System.Threading.Tasks.Task> パブリック コンストラクターにより作成されるタスクは、ライフ サイクルがスケジュールされていない <xref:System.Threading.Tasks.TaskStatus.Created> 状態から始まり、これらのインスタンスで <xref:System.Threading.Tasks.Task.Start%2A> が呼び出されるときにのみスケジュールされることから、*コールド タスク* と呼ばれます。
 
  他のすべてのタスクは、ホットな状態からライフ サイクルが始まります。つまり、タスクが表す非同期操作が既に開始され、それらのタスクの状態は <xref:System.Threading.Tasks.TaskStatus.Created?displayProperty=nameWithType> 以外の列挙値であることを意味します。 TAP メソッドから返されるすべてのタスクをアクティブにする必要があります。 **TAP メソッドで、返すタスクをインスタンス化するためにタスクのコンストラクターを内部使用する場合、その TAP メソッドでは、タスクを返す前に <xref:System.Threading.Tasks.Task> オブジェクトで <xref:System.Threading.Tasks.Task.Start%2A> を呼び出す必要があります。** TAP メソッドのコンシューマーは、返されたタスクがアクティブであるものと推定しても問題はなく、TAP メソッドから返された <xref:System.Threading.Tasks.Task.Start%2A> 上で <xref:System.Threading.Tasks.Task> 呼び出しを試行しないようにする必要があります。 アクティブなタスク上で <xref:System.Threading.Tasks.Task.Start%2A> を呼び出すと、<xref:System.InvalidOperationException> 例外になります。  
   

@@ -1,14 +1,13 @@
 ---
 title: XML とリレーショナル データおよび ADO.NET との統合
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
-ms.openlocfilehash: f54c7a890ada01f2cffdd54c024cfbc98777200d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1f2ad78df3bb1a8c8b02a771c69152e785bec88f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289019"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824318"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>XML とリレーショナル データおよび ADO.NET との統合
 **XmlDocument** の派生クラスである **XmlDataDocument** クラスには XML データが格納されます。 **XmlDataDocument** の利点は、リレーショナル データと階層データとを仲介できることです。 **DataSet** に連結できるのは **XmlDocument** であり、どちらのクラスも、それぞれが格納しているデータが変更されたときに、変更内容の同期をとることができます。 **DataSet** に連結した **XmlDocument** では XML をリレーショナル データと統合できるため、データ表現は XML でもリレーショナル形式でもかまいません。 両方の処理ができ、一方のデータ表現だけに制限されることもありません。  

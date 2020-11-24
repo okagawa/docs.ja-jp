@@ -1,7 +1,6 @@
 ---
 title: COM 相互運用の例外の処理
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - unmanaged code, exceptions
 - exceptions, unmanaged code
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - exceptions, COM interop
 - COM interop, exceptions
 ms.assetid: e6104aa8-8e5f-4069-b864-def85579c96c
-ms.openlocfilehash: 9c8eb374058ddbd2ba3d866079f0f40b292b69ea
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 058fb6446f69c2e10cb136ce5b5ad73b14d82647
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286107"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828141"
 ---
 # <a name="handling-com-interop-exceptions"></a>COM 相互運用の例外の処理
 マネージド コードとアンマネージド コードは、例外を処理するために一緒に操作できます。 マネージド コードでメソッドが例外をスローすると、共通言語ランタイムは、HRESULT を COM オブジェクトに渡すことができます。 アンマネージド コードでメソッドが失敗して、失敗を示す HRESULT を返した場合、ランタイムはマネージド コードでキャッチできる例外をスローします。  

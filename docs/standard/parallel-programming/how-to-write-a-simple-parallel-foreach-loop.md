@@ -2,7 +2,6 @@
 title: Parallel.ForEach を使用して単純な並列プログラムを記述する
 description: この記事では、.NET でデータの並列処理を有効にする方法について説明します。 任意の IEnumerable または IEnumerable<T> データ ソースに対して、Parallel.ForEach ループを記述します。
 ms.date: 02/14/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: 59c8710a8e3fc878b2ceded8595f7f3319d4c953
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e4f67f6fbe5a79e925ecd6aaec3f833704cda38c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447200"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825417"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>方法: 単純な Parallel.ForEach ループを記述する
 

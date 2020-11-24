@@ -1,19 +1,18 @@
 ---
 title: キャンセル要求のコールバックを登録する
 ms.date: 08/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - cancellation, how to register callbacks
 ms.assetid: 8838dd75-18ed-4b8b-b322-cd4531faac64
-ms.openlocfilehash: faa8dada5779f6eaee7a60e6210ec604f5fb4680
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: f551055fc6e5e4565329201e9e0be6e4a83487a1
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608453"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826405"
 ---
 # <a name="register-callbacks-for-cancellation-requests"></a>キャンセル要求のコールバックを登録する
 

@@ -1,17 +1,16 @@
 ---
 title: インデックスによる順序付けられたノードの取得
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
-ms.openlocfilehash: 8ff02a81ab579cc0041074990a76166fcafe6eb5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 73c31c5249262fe9b6624201bc5b9bd6b1374d1e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288720"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823746"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>インデックスによる順序付けられたノードの取得
 W3C (World Wide Web Consortium) の XML ドキュメント オブジェクト モデル (DOM) では、**XmlNamedNodeMap** によって処理される順序付けられていないノード セットとは対照的に、順序付けられたノードのリストを処理する機能を持った NodeList も定義しています。 Microsoft .NET Framework の NodeList は **XmlNodeList** と呼ばれています。 **XmlNodeList** を返すメソッドとプロパティは次のとおりです。  

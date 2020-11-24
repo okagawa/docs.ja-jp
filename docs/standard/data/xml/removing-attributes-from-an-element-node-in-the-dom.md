@@ -1,14 +1,13 @@
 ---
 title: DOM の要素ノードからの属性の削除
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
-ms.openlocfilehash: 0ac8528d52ef09aab99c76aea9378c0188fa66d4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: bd0e07f9587567de9f3023cdeda9dafde8ce7b26
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292021"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823720"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>DOM の要素ノードからの属性の削除
 属性を削除するには、さまざまな方法があります。 その 1 つとして、属性コレクションから属性を削除する方法があります。 属性コレクションから属性を削除するには、次の手順を実行します。  

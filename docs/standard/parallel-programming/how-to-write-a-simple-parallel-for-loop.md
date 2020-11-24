@@ -2,7 +2,6 @@
 title: '方法: 単純な Parallel.For ループを記述する'
 description: ループをキャンセルしたり、ループのイテレーションを中断したり、スレッドローカルの状態を維持したりする必要のない、.NET の Parallel.For ループの記述を学びます。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - for loop, parallel construction in .NET
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
-ms.openlocfilehash: 8307f2205653fbd213d824acffc405ee97580166
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 506d6dd725f5d42c6c445a14c5f450c815bfdde1
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662694"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826634"
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>方法: 単純な Parallel.For ループを記述する
 

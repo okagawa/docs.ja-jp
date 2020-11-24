@@ -2,7 +2,6 @@
 title: .NET 正規表現での代替コンストラクト
 description: 正規表現での条件一致に代替構成体を使用する方法について説明します。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.openlocfilehash: 30af871502e0db48853705206db5e2b3da28bb76
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 4fb9960ad3c92494cd3aa47516f6ba82ab606ee5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889180"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825300"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>正規表現での代替コンストラクト
 
@@ -49,7 +48,7 @@ ms.locfileid: "92889180"
 |<code>(a&#124;e)</code>|"a" または "e" と一致します。|  
 |`y\b`|ワード境界にある "y" と一致します。|  
 
-また、`|` 文字を使って、複数の文字や部分式との択一照合を実行できます。これは、文字リテラルと正規表現言語要素を自由に組み合わせて使うことができます (文字クラスにこの機能はありません)。次の例では、`|` 文字を使って、米国の社会保障番号 (SSN) ( *ddd*-*dd*-*dddd* という形式の 9 桁の数字)、または米国の雇用者番号 (EIN) ( *dd*-*ddddddd* という形式の 9 桁の数字) のいずれかを抽出します。
+また、`|` 文字を使って、複数の文字や部分式との択一照合を実行できます。これは、文字リテラルと正規表現言語要素を自由に組み合わせて使うことができます (文字クラスにこの機能はありません)。次の例では、`|` 文字を使って、米国の社会保障番号 (SSN) (*ddd*-*dd*-*dddd* という形式の 9 桁の数字)、または米国の雇用者番号 (EIN) (*dd*-*ddddddd* という形式の 9 桁の数字) のいずれかを抽出します。
 
 [!code-csharp[RegularExpressions.Language.Alternation#2](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation2.cs#2)]
 [!code-vb[RegularExpressions.Language.Alternation#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation2.vb#2)]  
@@ -73,10 +72,10 @@ ms.locfileid: "92889180"
 
 `(?(?=` *expression* `)` *yes* `|` *no* `)`
 
-ここで、`(?=`*expression*`)` はゼロ幅アサーションの構成体として解釈されます (詳しくは、「 [正規表現でのグループ化構成体](grouping-constructs-in-regular-expressions.md)」をご覧ください)。正規表現エンジンによって *expression* はアンカー (ゼロ幅アサーション) として解釈されるので、 *expression* は、ゼロ幅アサーション (詳しくは「 [正規表現のアンカー](anchors-in-regular-expressions.md)」を参照) か、 *yes* にも含まれている部分式のいずれかである必要があります。 それ以外の場合、 *yes* パターンには一致しません。  
+ここで、`(?=`*expression*`)` はゼロ幅アサーションの構成体として解釈されます (詳しくは、「[正規表現でのグループ化構成体](grouping-constructs-in-regular-expressions.md)」をご覧ください)。正規表現エンジンによって *expression* はアンカー (ゼロ幅アサーション) として解釈されるので、*expression* は、ゼロ幅アサーション (詳しくは「[正規表現のアンカー](anchors-in-regular-expressions.md)」を参照) か、*yes* にも含まれている部分式のいずれかである必要があります。 それ以外の場合、 *yes* パターンには一致しません。  
   
 > [!NOTE]
-> *expression* が名前付きキャプチャ グループや番号付きキャプチャ グループである場合、代替構成体はキャプチャ テストとして解釈されます。詳細については、次のセクション「 [有効なキャプチャ グループに基づく条件一致](#Conditional_Group)」を参照してください。 つまり、正規表現エンジンは、キャプチャした部分文字列を照合しようとはせず、代わりにグループが存在するかどうかをテストします。  
+> *expression* が名前付きキャプチャ グループや番号付きキャプチャ グループである場合、代替構成体はキャプチャ テストとして解釈されます。詳細については、次のセクション「[有効なキャプチャ グループに基づく条件一致](#Conditional_Group)」を参照してください。 つまり、正規表現エンジンは、キャプチャした部分文字列を照合しようとはせず、代わりにグループが存在するかどうかをテストします。  
   
 次の例は、前の「[&#124; を使用したパターン マッチング](#Either_Or)」セクションで説明した例を少し変更したものです。 条件一致を使用して、ワード境界の後の最初の 3 文字が「2 桁の数字の後にハイフン」であるかどうかを判定します。 一致した場合は、米国の雇用者番号 (EIN) との照合を試みます。 一致しない場合は、米国の社会保険番号 (SSN) との照合を試みます。
 

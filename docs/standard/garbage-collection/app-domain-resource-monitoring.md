@@ -1,19 +1,18 @@
 ---
 title: アプリケーション ドメインのリソース監視
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - monitoring managed memory use by application domain
 - application domains, memory use
 - memory use, monitoring
 - application domains, resource monitoring
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
-ms.openlocfilehash: 12dfdd3ac6d75a3e2a33f93d8847c963ded912e8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c4644defa5a67d9d39c4faa89943a6aa5f763eae
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286094"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827829"
 ---
 # <a name="application-domain-resource-monitoring"></a>アプリケーション ドメインのリソース監視
 

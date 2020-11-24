@@ -1,19 +1,18 @@
 ---
 title: '方法: 単純な PLINQ クエリを作成して実行する'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, how to create
 ms.assetid: 983b4213-bddd-4a44-9262-cbe59186df4c
-ms.openlocfilehash: a5f6a26ada321bd351249c5179d050ee571b550c
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 67863346046b0c400529b87355c11f97d0c3f01f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679340"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827088"
 ---
 # <a name="how-to-create-and-execute-a-simple-plinq-query"></a>方法: 単純な PLINQ クエリを作成して実行する
 

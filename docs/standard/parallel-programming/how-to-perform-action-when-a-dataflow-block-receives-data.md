@@ -1,7 +1,6 @@
 ---
 title: '方法: データフロー ブロックでデータを受信したときにアクションを実行する'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, receiving data
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
-ms.openlocfilehash: 647e77f0c5e182cea90f6e90063826b705de354b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3a709e40908afcbd1a228aab00fe36be43097826
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288174"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825729"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>方法: データフロー ブロックでデータを受信したときにアクションを実行する
 "*実行データフロー ブロック*" の型は、データを受信したときに、ユーザーが指定したデリゲートを呼び出します。 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType>、および <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> クラスは、実行データフロー ブロックの種類です。 実行データフロー ブロックに処理関数を提供するときに、`delegate` キーワード (Visual Basic では `Sub`)、<xref:System.Action%601>、<xref:System.Func%602>、またはラムダ式を使用することができます。 このドキュメントでは、<xref:System.Func%602> とラムダ式を使用して、実行ブロックでアクションを実行する方法について説明します。  

@@ -1,17 +1,16 @@
 ---
 title: Exception クラスとプロパティ
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - exceptions, Exception class
 - Exception class
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
-ms.openlocfilehash: df05150a5bdd5d24766be252f5cec9a436720d8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 459dc15f136c98d4b889a420dbd863b16aca747c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708946"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828206"
 ---
 # <a name="exception-class-and-properties"></a>Exception クラスとプロパティ
 

@@ -1,7 +1,6 @@
 ---
 title: 配列とリストの操作に使用する汎用デリゲート
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - delegates [.NET], generic delegates
 - chaining delegates
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - lists [.NET], generic delegates
 - generics [.NET], delegates
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
-ms.openlocfilehash: 2ee80acb51ab3c394a3c0b12fface93a9d541f30
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: b3b18a2efc4dba432ee241d764c1a81101796baf
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063203"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827283"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>配列とリストの操作に使用する汎用デリゲート
 ここでは、配列またはコレクションの要素に対して実行される変換、検索述語、およびアクションの汎用デリゲートの概要について説明します。  

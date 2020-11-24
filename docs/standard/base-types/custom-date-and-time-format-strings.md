@@ -2,7 +2,6 @@
 title: カスタム日時形式文字列
 description: カスタム日時書式指定文字列を使用して、DateTime 値または DateTimeOffset 値をテキスト表現に変換したり、日付と時刻の文字列を解析したりする方法について説明します。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.topic: reference
 dev_langs:
 - csharp
@@ -16,12 +15,12 @@ helpviewer_keywords:
 - formatting [.NET], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: d58bcc4008c706395aaeee3b5dc9ea3fa96cce9b
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 804a72f865fc491d6fc991e78c53ceb62d20cd1c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888712"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824455"
 ---
 # <a name="custom-date-and-time-format-strings"></a>カスタム日時形式文字列
 
@@ -92,7 +91,7 @@ ms.locfileid: "92888712"
 | "zzz" | UTC を基準とする時間および分単位のオフセット。<br /><br /> 詳細情報:["zzz" カスタム書式指定子](#zzzSpecifier)。 | 2009-06-15T13:45:30-07:00 -> -07:00 |
 | ":" | 時刻の区切り記号。<br /><br /> 詳細情報:[":"カスタム書式指定子](#timeSeparator)。 | 2009-06-15T13:45:30 -> : (en-US)<br /><br /> 2009-06-15T13:45:30 -> . (it-IT)<br /><br /> 2009-06-15T13:45:30 -> : (ja-JP) |
 | "/" | 日付の区切り記号。<br /><br /> 詳細情報:["/" カスタム書式指定子](#dateSeparator)。 | 2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR) |
-| " *文字列* "<br /><br /> ' *文字列* ' | リテラル文字列の区切り記号。<br /><br /> 詳細情報:[文字リテラル](#Literals)。 | 2009-06-15T13:45:30 ("arr:" h:m t) -> arr:1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr:1:45 P |
+| "*文字列*"<br /><br /> '*文字列*' | リテラル文字列の区切り記号。<br /><br /> 詳細情報:[文字リテラル](#Literals)。 | 2009-06-15T13:45:30 ("arr:" h:m t) -> arr:1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr:1:45 P |
 | % | 後続の文字をカスタム書式指定子として定義します。<br /><br /> 詳細については、「[単一のカスタム書式指定子の使用](#UsingSingleSpecifiers)」を参照してください。 | 2009-06-15T13:45:30 (%h) -> 1 |
 | &#92; | エスケープ文字。<br /><br /> 詳細情報:「[文字リテラル](#Literals)」、「[エスケープ文字の使用](#escape)」。 | 2009-06-15T13:45:30 (h \h) -> 1 h |
 | その他の文字 | 文字が結果の文字列にそのままコピーされます。<br /><br /> 詳細情報:[文字リテラル](#Literals)。 | 2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A |

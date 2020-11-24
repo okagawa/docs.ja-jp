@@ -1,17 +1,16 @@
 ---
 title: スキーマをコンパイルするための XmlSchemaSet
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
-ms.openlocfilehash: 44850755c41b212e88e0b90dd3b016f96a0af96d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5916511187741c703cb39a5c168e542e124ab26b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290228"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825924"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>スキーマをコンパイルするための XmlSchemaSet
 XML スキーマ定義言語 (XSD) スキーマの格納と検証が可能なキャッシュである <xref:System.Xml.Schema.XmlSchemaSet> について説明します。  

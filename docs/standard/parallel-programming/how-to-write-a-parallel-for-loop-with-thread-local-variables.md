@@ -2,19 +2,18 @@
 title: '方法: スレッド ローカル変数を使用する Parallel.For ループを記述する'
 description: .NET でスレッド ローカル変数を使用する Parallel.For ループを記述する方法の例を確認します。これにより、ループ内の個々のタスクごとに状態が格納および取得されます。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-ms.openlocfilehash: 9cff507757aab2e5676df2fabb02a237a2172c17
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1e2dd0d554cdece23ac6d0e6b255ad70533236dc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599790"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826659"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>方法: スレッド ローカル変数を使用する Parallel.For ループを記述する
 次の例に、<xref:System.Threading.Tasks.Parallel.For%2A> ループによって生成される個別のタスクごとの状態を、スレッド ローカル変数を使用して格納および取得する方法を示します。 スレッド ローカル変数を使用することで、共有状態への多数のアクセスを同期するオーバーヘッドを回避できます。 反復処理ごとに共有リソースを作成する代わりに、タスクの反復処理のすべてが完了するまで、値を計算して格納します。 この場合、最終結果を共有リソースに 1 回書き込んだり、別のメソッドに渡したりすることができます。  
