@@ -3,12 +3,12 @@ title: Windows Workflow Foundation 4 のパフォーマンス
 description: この記事では、.NET Framework 4 の一部である Windows Workflow Foundation のメジャーリビジョンのパフォーマンス特性について説明します。
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 1ad12d9fd69205bde726fe650a2ec28ba6c750ef
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f0a68548a8b5e521fccdb544e318c3091315814f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558343"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682342"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 のパフォーマンス
 
@@ -20,7 +20,7 @@ ms.locfileid: "90558343"
 
  .NET Framework 4 で導入されたのバージョンは、 [!INCLUDE[wf1](../../../includes/wf1-md.md)] このトピックの残りの部分で WF4 と呼ばれます。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] は .NET Framework 3.0 で導入され、.NET Framework 3.5 SP1 によっていくつかのマイナーリビジョンがありました。 Workflow Foundation の .NET Framework 3.5 バージョンは、このトピックの残りの部分で WF3 と呼ばれます。 WF3 は .NET Framework 4 に WF4 とサイドバイサイドで同梱されています。 WF3 アーティファクトを WF4 に移行する方法の詳細については、「 [Windows Workflow Foundation 4 移行ガイド](migration-guidance.md)」を参照してください。
 
- Windows Communication Foundation (WCF) は、サービス指向アプリケーションを構築するための Microsoft の統一プログラミングモデルです。 WF3 と共に .NET 3.0 の一部として初めて導入されましたが、現在は .NET Framework の重要なコンポーネントの1つです。
+ Windows Communication Foundation (WCF) は、サービス指向アプリケーションを構築するための Microsoft の統一プログラミングモデルです。 最初に、WF3 と共に .NET Framework 3.0 の一部として導入されました。これは、.NET Framework の主要なコンポーネントの1つです。
 
  Windows Server AppFabric はインターネット インフォメーション サービス (IIS) 上で実行する Web アプリケーションおよび複合アプリケーションの構築、拡張、および管理を容易にする一連の統合テクノロジです。 監視およびサービスとワークフローの管理を行うためのツールを提供します。 詳細については、「 [Windows Server AppFabric 1.0](/previous-versions/appfabric/ff384253(v=azure.10))」を参照してください。
 
@@ -51,7 +51,7 @@ ms.locfileid: "90558343"
  通常、I/O や分散コンピューティング処理などの実行時間の長いブロッキング操作に非同期プログラミングを使用することにより、アプリケーションのパフォーマンスとスケーラビリティは向上します。 WF4 は基本アクティビティ型 <xref:System.Activities.AsyncCodeActivity>、<xref:System.Activities.AsyncCodeActivity%601> で非同期をサポートします。 ランタイムは非同期アクティビティをネイティブに認識するため、非同期操作が保留状態の場合にインスタンスを自動的に非永続化ゾーンに配置できます。 カスタム アクティビティをこれらの型から派生させることで、ワークフローのスケジューラ スレッドを保持したり、並行して実行される可能性があるすべてのアクティビティをブロックしたりすることなく、非同期操作を実行できます。
 
 ### <a name="messaging"></a>メッセージング
- 当初、WF3 のメッセージングのサポートは、外部イベントまたは Web サービスの呼び出しによるきわめて限定的なものでした。 .NET 3.5 では、ワークフローを WCF クライアントとして実装したり、およびを介して WCF サービスとして公開したりすることができ <xref:System.Workflow.Activities.SendActivity> <xref:System.Workflow.Activities.ReceiveActivity> ます。 WF4 では、ワークフローベースのメッセージングプログラミングの概念は、WCF メッセージングロジックを WF に緊密に統合することによってさらに強化されています。
+ 当初、WF3 のメッセージングのサポートは、外部イベントまたは Web サービスの呼び出しによるきわめて限定的なものでした。 .NET Framework 3.5 では、ワークフローを WCF クライアントとして実装したり、およびを介して WCF サービスとして公開したりすることができ <xref:System.Workflow.Activities.SendActivity> <xref:System.Workflow.Activities.ReceiveActivity> ます。 WF4 では、ワークフローベースのメッセージングプログラミングの概念は、WCF メッセージングロジックを WF に緊密に統合することによってさらに強化されています。
 
  .NET 4 の WCF に用意されている統合メッセージ処理パイプラインを使用すると、WF4 サービスは WF3 よりもはるかに優れたパフォーマンスとスケーラビリティを実現できます。 WF4 ではメッセージング プログラミングのサポートも強化され、複雑なメッセージ交換パターン (MEP) をモデル化できます。 開発者は、型指定されたサービス コントラクトを使用することで、プログラミングを簡素化できます。また、型指定されないサービス コントラクトを使用することで、シリアル化のコストをなくしてパフォーマンスを向上させることができます。 WF4 の <xref:System.ServiceModel.Activities.SendMessageChannelCache> クラスを使用したクライアント側チャネルのキャッシュのサポートにより、少ない手間で短時間にアプリケーションを作成できます。 詳細については、「 [Send アクティビティのキャッシュ共有レベルの変更](../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)」を参照してください。
 

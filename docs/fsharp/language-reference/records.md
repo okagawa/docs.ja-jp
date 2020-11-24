@@ -2,12 +2,12 @@
 title: レコード
 description: 'F # のレコードが名前付きの値の単純な集計を表す方法について説明します。メンバーを使用することもできます。'
 ms.date: 08/15/2020
-ms.openlocfilehash: a72c0f15b58407e7d759e2fb5a1b35a7fc0d29e3
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 03de96b9c53bc21e7a7723a15d2a8451d100ba76
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812355"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682030"
 ---
 # <a name="records"></a>レコード
 
@@ -26,7 +26,7 @@ type [accessibility-modifier] typename =
 
 ## <a name="remarks"></a>解説
 
-前の構文では、 *typename*はレコード型の名前、 *label1*と*label2]* は*ラベル*と*呼ばれる値*の名前、 *type1 と type1*はこれらの値の型です。 *メンバーリスト* は、型のメンバーの省略可能なリストです。  属性を使用して、参照型であるレコードでは `[<Struct>]` なく、構造体レコードを作成できます。
+前の構文では、 *typename* はレコード型の名前、 *label1* と *label2]* は *ラベル* と *呼ばれる値* の名前、 *type1 と type1* はこれらの値の型です。 *メンバーリスト* は、型のメンバーの省略可能なリストです。  属性を使用して、参照型であるレコードでは `[<Struct>]` なく、構造体レコードを作成できます。
 
 次は一部の例です。
 
@@ -34,7 +34,7 @@ type [accessibility-modifier] typename =
 
 各ラベルが個別の行にある場合、セミコロンは省略可能です。
 
-*レコード式*と呼ばれる式に値を設定できます。 コンパイラは、使用されているラベルから型を推測します (ラベルが他のレコードの種類とは十分に異なる場合)。 中かっこ ({}) は、レコード式を囲みます。 次のコードは、とというラベルを持つ3つの float 要素を持つレコードを初期化するレコード式を示して `x` `y` `z` います。
+*レコード式* と呼ばれる式に値を設定できます。 コンパイラは、使用されているラベルから型を推測します (ラベルが他のレコードの種類とは十分に異なる場合)。 中かっこ ({}) は、レコード式を囲みます。 次のコードは、とというラベルを持つ3つの float 要素を持つレコードを初期化するレコード式を示して `x` `y` `z` います。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1907.fs)]
 
@@ -50,7 +50,7 @@ type [accessibility-modifier] typename =
 
 ## <a name="creating-records-by-using-record-expressions"></a>レコード式を使用したレコードの作成
 
-レコードで定義されているラベルを使用して、レコードを初期化できます。 これを行う式は、 *レコード式*と呼ばれます。 中かっこを使用してレコード式を囲み、セミコロンを区切り記号として使用します。
+レコードで定義されているラベルを使用して、レコードを初期化できます。 これを行う式は、 *レコード式* と呼ばれます。 中かっこを使用してレコード式を囲み、セミコロンを区切り記号として使用します。
 
 次の例では、レコードを作成する方法を示します。
 
@@ -68,7 +68,7 @@ type [accessibility-modifier] typename =
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1906.fs)]
 
-この形式のレコード式は、レコードの *コピーと更新の式*と呼ばれます。
+この形式のレコード式は、レコードの *コピーと更新の式* と呼ばれます。
 
 既定では、レコードは変更できません。ただし、コピーと更新の式を使用して、変更されたレコードを簡単に作成できます。 また、変更可能なフィールドを明示的に指定することもできます。
 
@@ -157,7 +157,7 @@ type Person =
     member this.WeirdToString() =
         this.Name + this.Address + string this.Age
 
-let p = { Name = "a"; Age = 12; Address = "abc123 }
+let p = { Name = "a"; Age = 12; Address = "abc123" }
 let weirdString = p.WeirdToString()
 ```
 
@@ -182,7 +182,7 @@ The records are equal.
 ## <a name="see-also"></a>関連項目
 
 - [F# の型](fsharp-types.md)
-- [クラス](classes.md)
+- [Classes](classes.md)
 - [F# 言語リファレンス](index.md)
 - [参照-等値](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-referenceequalityattribute.html)
 - [パターン一致](pattern-matching.md)

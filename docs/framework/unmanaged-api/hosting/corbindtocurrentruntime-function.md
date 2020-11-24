@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6105c13e-d9cd-44d2-a95a-924e042830c7
 topic_type:
 - apiref
-ms.openlocfilehash: 9c5d83b5f2ffb06c9fb14f715a3ea7ff12319086
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4a8ab6e1aeedef5b821fc977387b8039f54edd64
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547832"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682498"
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime 関数
+
 XML ファイルに格納されているバージョン情報を使用して、共通言語ランタイム (CLR: Common Language Runtime) をプロセスに読み込みます。 XML ファイルの形式は、標準のアプリケーション構成ファイルの後にモデル化されています。 構成ファイルの詳細については、「[構成ファイル スキーマ](../../configure-apps/file-schema/index.md)」を参照してください。  
   
  この関数は .NET Framework 4 で非推奨とされました。 「 [プロセスへの共通言語ランタイムの読み込み](/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100))」を参照してください。  
@@ -39,6 +40,7 @@ HRESULT CorBindToCurrentRuntime (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pwszFileName`  
  から読み込む CLR のバージョンを指定するアプリケーション構成ファイルの名前。 ファイル名が完全修飾されていない場合は、呼び出しを行った実行可能ファイルと同じディレクトリに存在すると見なされます。  
   
@@ -55,7 +57,8 @@ HRESULT CorBindToCurrentRuntime (
  `ppv`  
  入出力返されたインターフェイスポインター。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
