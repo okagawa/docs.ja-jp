@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8a570813-21be-407e-92a6-7ae8de3bc728
 topic_type:
 - apiref
-ms.openlocfilehash: 0632a7f5feee87c386d9488a6c989413af68a47f
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f74e0f111ff7869d0bfed61d420f3788f65876dc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615892"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679157"
 ---
 # <a name="iclrassemblyreferencelistisassemblyreferenceinlist-method"></a>ICLRAssemblyReferenceList::IsAssemblyReferenceInList メソッド
+
 指定されたポインターがリスト内のアセンブリを参照しているかどうかを示す値を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,6 +35,7 @@ HRESULT IsAssemblyReferenceInList (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pName`  
  から検索対象のアセンブリへのインターフェイスポインター。 有効な値は `IAssemblyName` 、型または型です `IReferenceIdentity` 。  
   
@@ -46,11 +48,12 @@ HRESULT IsAssemblyReferenceInList (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で共通言語ランタイムは使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

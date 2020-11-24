@@ -2,15 +2,16 @@
 title: ISymUnmanagedWriter4::GetDebugInfoWithPadding メソッド
 ms.date: 03/30/2017
 ms.assetid: 881e20ca-8131-4bd0-ba41-c2d6391b0fe2
-ms.openlocfilehash: cfc6c22558cee780823c8cca0c36b883147e9496
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 4ac2cccfb17d82d8c62ad7db89161aa794825ae5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614644"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678278"
 ---
 # <a name="isymunmanagedwriter4getdebuginfowithpadding-method"></a>ISymUnmanagedWriter4::GetDebugInfoWithPadding メソッド
-関数は[GetDebugInfo メソッド](isymunmanagedwriter-getdebuginfo-method.md)と同じですが、文字列データを固定サイズにするために、終端の null 文字の後にパス文字列がゼロで埋め込まれる点が異なり `MAX_PATH` ます。 埋め込みは、パス文字列の長さがより小さい場合にのみ指定 `MAX_PATH` します。  
+
+関数は [GetDebugInfo メソッド](isymunmanagedwriter-getdebuginfo-method.md) と同じですが、文字列データを固定サイズにするために、終端の null 文字の後にパス文字列がゼロで埋め込まれる点が異なり `MAX_PATH` ます。 埋め込みは、パス文字列の長さがより小さい場合にのみ指定 `MAX_PATH` します。  
   
  これにより、PE ファイルを区別するツールを簡単に記述できるようになります。  
   
@@ -30,9 +31,11 @@ HRESULT GetDebugInfoWithPadding(    [in, out] IMAGE_DEBUG_DIRECTORY *pIDD,    [i
 |`data`||  
   
 ## <a name="return-value"></a>戻り値  
+
  `HRESULT` を返します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

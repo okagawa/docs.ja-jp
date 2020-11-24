@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: a7e6c54e-7be9-4e52-bbb4-95f52458e8e4
 topic_type:
 - apiref
-ms.openlocfilehash: 366b5124cc66a4e9a1c3bd4e77f604f15ba8d8a8
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: eb8692aebe7b702b5778b3f13e496d81dcd45784
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379681"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678543"
 ---
 # <a name="icordebugthread4getblockingobjects-method"></a>ICorDebugThread4::GetBlockingObjects メソッド
-スレッドブロック情報を提供する[CorDebugBlockingObject](cordebugblockingobject-structure.md)構造体の順序付けられた列挙体を提供します。  
+
+スレッドブロック情報を提供する [CorDebugBlockingObject](cordebugblockingobject-structure.md) 構造体の順序付けられた列挙体を提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,10 +34,12 @@ HRESULT GetBlockingObjects (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ppBlockingObjectEnum`  
- 入出力[CorDebugBlockingObject](cordebugblockingobject-structure.md)構造体の順序付けられた列挙体へのポインター。  
+ 入出力 [CorDebugBlockingObject](cordebugblockingobject-structure.md) 構造体の順序付けられた列挙体へのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  返された列挙体の最初の要素は、スレッドをブロックしている最初の構造体に対応します。 2番目の要素は、非同期プロシージャ呼び出し (APC) の実行中に検出されるブロッキング項目に対応します。  
   
  列挙は、現在の同期済みの状態の間のみ有効です。  
@@ -47,7 +50,8 @@ HRESULT GetBlockingObjects (
   
  スレッドがブロックされていて、エラーを特定できない場合、メソッドは失敗を示す HRESULT を返します。それ以外の場合は S_OK を返します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

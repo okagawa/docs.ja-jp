@@ -2,14 +2,15 @@
 title: AXL_AUTHENTICODE_SIGNER_INFO 構造体
 ms.date: 03/30/2017
 ms.assetid: 81c0f8b4-ce35-4716-8651-b642d40648a2
-ms.openlocfilehash: 00132bb378d69c0db9fe9d762407707346238917
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1bb6df4aa82f8dfc367083732af2065aba9d07b1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132509"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679989"
 ---
 # <a name="axl_authenticode_signer_info-structure"></a>AXL_AUTHENTICODE_SIGNER_INFO 構造体
+
 Authenticode の署名者情報を定義します。  
   
 ## <a name="syntax"></a>構文  
@@ -33,10 +34,10 @@ typedef struct _AXL_AUTHENTICODE_SIGNER_INFO {
 |`cbSize`|この構造のサイズ。|  
 |`dwError`|エラー コード。|  
 |`algHash`|ハッシュアルゴリズム。|  
-|`pwszHash`|ハッシュ。|  
-|`pwszDescription`|説明。|  
+|`pwszHash`|ハッシュです。|  
+|`pwszDescription`|説明です。|  
 |`pwszDescriptionUrl`|説明の URL。|  
-|`pChainContext`|署名者のチェーン コンテキスト。 [CERT_CONTEXT](/windows/win32/api/wincrypt/ns-wincrypt-cert_context)構造体を参照してください。|  
+|`pChainContext`|署名者のチェーン コンテキスト。 [CERT_CONTEXT](/windows/win32/api/wincrypt/ns-wincrypt-cert_context)構造を参照してください。|  
   
 ## <a name="see-also"></a>関連項目
 

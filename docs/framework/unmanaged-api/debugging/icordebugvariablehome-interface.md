@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: 76f2bf3b-759f-4eed-bce7-119415b25915
 topic_type:
 - apiref
-ms.openlocfilehash: caf6a24207be98be9afb10be2bd027b51405fa3b
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 089e68278113dfdf509ed848f424ad32baa145ed
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396545"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679547"
 ---
 # <a name="icordebugvariablehome-interface"></a>ICorDebugVariableHome インターフェイス
+
 関数のローカル変数または引数を表します。  
   
 ## <a name="methods"></a>メソッド  
@@ -39,7 +40,8 @@ ms.locfileid: "83396545"
 |[GetSlotIndex メソッド](icordebugvariablehome-getslotindex-method.md)|ローカル変数のマネージドスロットインデックスを取得します。|  
   
 ## <a name="example"></a>例  
- 次のコード片では、という名前の[ICorDebugCode4](icordebugcode4-interface.md)オブジェクトを使用し `pCode4` ます。  
+
+ 次のコード片では、という名前の [ICorDebugCode4](icordebugcode4-interface.md) オブジェクトを使用し `pCode4` ます。  
   
 ```cpp  
 ICorDebugCode4 *pCode4 = NULL;  
@@ -81,6 +83,7 @@ for (int i = 0; i < celtFetched; i++)
 ```  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

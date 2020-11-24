@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: fde7e21d-1169-4bed-a34d-792e69652bf9
 topic_type:
 - apiref
-ms.openlocfilehash: 3f6cea68a4379f8769ccbdbc6911cc5c425d3369
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: af4124aed823a0a2475a181efe3fa68e1fae0bfe
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614878"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678390"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfo-interface"></a>ISymUnmanagedReaderSymbolSearchInfo インターフェイス
-シンボル検索情報を取得するメソッドを提供します。 このインターフェイスを取得するには `QueryInterface` 、 [ISymUnmanagedReader](isymunmanagedreader-interface.md)インターフェイスを実装するオブジェクトに対してを呼び出します。  
+
+シンボル検索情報を取得するメソッドを提供します。 このインターフェイスを取得するには `QueryInterface` 、 [ISymUnmanagedReader](isymunmanagedreader-interface.md) インターフェイスを実装するオブジェクトに対してを呼び出します。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -32,6 +33,7 @@ ms.locfileid: "83614878"
 |[GetSymbolSearchInfoCount メソッド](isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md)|シンボル検索情報の数を取得します。|  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

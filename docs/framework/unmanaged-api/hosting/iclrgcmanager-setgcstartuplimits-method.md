@@ -15,18 +15,19 @@ helpviewer_keywords:
 ms.assetid: 1c8d9959-95b5-4131-be4a-556d97774014
 topic_type:
 - apiref
-ms.openlocfilehash: 0dce86a12ed3e93983ee62620fa0ddf7dfbc48f5
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 169d344975762b97f89e8dc32d72f2b9c95fea11
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616945"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678169"
 ---
 # <a name="iclrgcmanagersetgcstartuplimits-method"></a>ICLRGCManager::SetGCStartupLimits メソッド
+
 ガベージコレクションセグメントのサイズとガベージコレクションシステムのジェネレーション0の最大サイズを設定します。  
   
 > [!IMPORTANT]
-> .NET Framework 4.5 以降では、 `DWORD` [ICLRGCManager2:: SetGCStartupLimitsEx](iclrgcmanager2-setgcstartuplimitsex-method.md)メソッドを使用して、セグメントサイズと最大ジェネレーション0のサイズをより大きい値に設定できます。  
+> .NET Framework 4.5 以降では、 `DWORD` [ICLRGCManager2:: SetGCStartupLimitsEx](iclrgcmanager2-setgcstartuplimitsex-method.md) メソッドを使用して、セグメントサイズと最大ジェネレーション0のサイズをより大きい値に設定できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,6 +39,7 @@ HRESULT SetGCStartupLimits (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `SegmentSize`  
  からガベージコレクションセグメントの指定されたサイズ。  
   
@@ -52,22 +54,24 @@ HRESULT SetGCStartupLimits (
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`SetGCStartupLimits`正常に返されました。|  
+|S_OK|`SetGCStartupLimits` 正常に返されました。|  
 |HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
 |HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  を設定する値は、 `SetGCStartupLimits` 1 回だけ指定できます。 の後の呼び出し `SetGCStartupLimits` は無視されます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b4896b8f-8e97-469c-8089-e72a025661b5
 topic_type:
 - apiref
-ms.openlocfilehash: 0c7e96c50e59902cde4686f908047a86dd2b6a47
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e77520552eea9b58e4358cc5928e5ce666037009
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503745"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678156"
 ---
 # <a name="imetadataimportenumtyperefs-method"></a>IMetaDataImport::EnumTypeRefs メソッド
+
 現在のメタデータ スコープに定義されている TypeRef トークンを列挙します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,6 +38,7 @@ HRESULT EnumTypeRefs (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `phEnum`  
  [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
   
@@ -53,18 +55,20 @@ HRESULT EnumTypeRefs (
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeRefs`正常に返されました。|  
+|`S_OK`|`EnumTypeRefs` 正常に返されました。|  
 |`S_FALSE`|列挙するトークンがありません。 この場合、 `pcTypeRefs` は0になります。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  TypeRef トークンは、型への参照を表します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

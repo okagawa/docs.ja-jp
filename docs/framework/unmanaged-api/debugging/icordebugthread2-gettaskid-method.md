@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6ba3c6ee-4ba1-4c98-bf1e-8531acd3da09
 topic_type:
 - apiref
-ms.openlocfilehash: 841af546cc3586529fe290c69e686438f634b90d
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 9b17a179745af65bde05527bd0157f3ce06c12c6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83377783"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678663"
 ---
 # <a name="icordebugthread2gettaskid-method"></a>ICorDebugThread2::GetTaskID メソッド
+
 このスレッドで実行されているタスクの識別子を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,13 +35,16 @@ HRESULT GetTaskID (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pTaskId`  
  入出力この ICorDebugThread2 オブジェクトによって表されるスレッド上で実行されているタスクの識別子へのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  スレッドが接続に関連付けられている場合にのみ、スレッドでタスクを実行できます。 `GetTaskID``pTaskId`スレッドが接続に関連付けられていない場合は、で0を返します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

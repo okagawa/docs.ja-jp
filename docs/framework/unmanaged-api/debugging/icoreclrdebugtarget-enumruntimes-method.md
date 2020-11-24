@@ -17,14 +17,15 @@ helpviewer_keywords:
 ms.assetid: 316df866-442d-40cc-b049-45e8adcb65d1
 topic_type:
 - apiref
-ms.openlocfilehash: fc8269d4cc22ab53569edaa48c27b4a01970dcc7
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 093f49508e8e96a4003f1aab8eed59e2fd196ba9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397184"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679274"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes メソッド
+
 リモート コンピューターで実行されている指定のプロセスの共通言語ランタイム (CLR: Common Language Runtime) を列挙します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,18 +39,20 @@ HRESULT EnumRuntimes (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `dwInternalProcessID`  
- [in] ランタイムを列挙するプロセスの内部プロセス ID。 これは `m_dwInternalID` 、対応する[CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md)からのものになります。  
+ [in] ランタイムを列挙するプロセスの内部プロセス ID。 これは `m_dwInternalID` 、対応する [CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md)からのものになります。  
   
  `pcRuntimes`  
  [out] `ppRuntimes` に返されるランタイム数。 この値は 0 (ゼロ) になる可能性もあります。  
   
  `ppRuntimes`  
- 入出力リモートターゲットプロセスに読み込まれたランタイムを表す[CoreClrDebugRuntimeInfo](coreclrdebugruntimeinfo-structure.md)構造体の配列。  
+ 入出力リモートターゲットプロセスに読み込まれたランタイムを表す [CoreClrDebugRuntimeInfo](coreclrdebugruntimeinfo-structure.md) 構造体の配列。  
   
 ## <a name="return-value"></a>戻り値  
+
  S_OK  
- 成功しました。  
+ 正常終了しました。  
   
  S_FALSE  
  `dwInternalProcessID` が、コンピューターで実行されているどのプロセスにも一致しません。多くの場合、プロセスが既に終了していることが原因です。 `pcRuntimes` と `ppRuntimes` は null になります。  
@@ -60,15 +63,17 @@ HRESULT EnumRuntimes (
  E_FAIL (またはその他の E_ リターン コード)  
  その他のエラーが発生しました。  
   
-## <a name="remarks"></a>解説  
- このメソッドによって割り当てられたメモリを解放するには、 [ICoreClrDebugTarget:: FreeMemory](icoreclrdebugtarget-freememory-method.md)メソッドを呼び出します。  
+## <a name="remarks"></a>注釈  
+
+ このメソッドによって割り当てられたメモリを解放するには、 [ICoreClrDebugTarget:: FreeMemory](icoreclrdebugtarget-freememory-method.md) メソッドを呼び出します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Coreclrremoteデバッグインターフェイス .h  
   
- **Library:** mscordbi_macx86 .dll  
+ **ライブラリ:** mscordbi_macx86.dll  
   
  **.NET Framework のバージョン:** 3.5 SP1  
   

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0adbbd35-5e8d-4fec-8268-dc70a07c5975
 topic_type:
 - apiref
-ms.openlocfilehash: 02d1ea1ef12fa158ce7ec94aeca4356ac54d4e5f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0049db66d7a753488388c85e87e1f907db56c7cf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503485"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679092"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport インターフェイス
+
 ポータブル実行可能 (PE) ファイルまたはその他のソース (タイプ ライブラリ、スタンドアロンのランタイム メタデータ バイナリなど) から既存のメタデータをインポートおよび操作するメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
@@ -91,7 +92,8 @@ ms.locfileid: "84503485"
 |[ResetEnum メソッド](imetadataimport-resetenum-method.md)|指定した列挙子を指定した位置にリセットします。|  
 |[ResolveTypeRef メソッド](imetadataimport-resolvetyperef-method.md)|指定した TypeRef トークンによって参照される型の型情報を取得します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  `IMetaDataImport` インターフェイスは、型情報のインポート (開発ツールなど)、または配置されたコンポーネントの管理 (解決サービス、アクティブ化サービスなど) を行うツールとサービスで使用することを主な目的としてデザインされています。 `IMetaDataImport` のメソッドは、次のタスク カテゴリに分類されます。  
   
 - メタデータ スコープ内の項目のコレクションの列挙。  
@@ -103,11 +105,12 @@ ms.locfileid: "84503485"
 - Get メソッドは、メタデータ項目の単一値のプロパティを返すように特別にデザインされています。 プロパティが別の項目への参照である場合、その項目のトークンが返されます。 特定の値が要求されていないことを示すために、ポインター入力型を NULL に設定できます。 基本的にコレクション オブジェクトであるプロパティ (クラスが実装するインターフェイスのコレクションなど) を取得するには、列挙メソッドを使用します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

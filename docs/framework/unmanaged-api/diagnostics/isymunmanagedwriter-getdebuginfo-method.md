@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd31c210-6829-45eb-927e-cc53932638b7
 topic_type:
 - apiref
-ms.openlocfilehash: f8eb4cb6bad95295e10a72812fa8dbb0adfcc898
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: dcab63b603d4a9a8e1430228043d2a5e597bbf4f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614787"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678293"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo メソッド
+
 コンパイラがポータブル実行可能 (PE) ファイルヘッダーにデバッグディレクトリエントリを書き込むために必要な情報を返します。 シンボルライターは、およびを除くすべてのフィールドを入力し `TimeDateStamp` `PointerToRawData` ます。 (コンパイラは、これらの2つのフィールドを適切に設定する必要があります)。  
   
  コンパイラは、このメソッドを呼び出し、PE ファイルにデータ blob を出力します。次に、 `PointerToRawData` 生成されたデータを指すように IMAGE_DEBUG_DIRECTORY のフィールドを設定し、IMAGE_DEBUG_DIRECTORY を pe ファイルに書き込みます。 また、コンパイラは、 `TimeDateStamp` `TimeDateStamp` 生成される PE ファイルのと同じフィールドをに設定する必要があります。  
@@ -39,22 +40,25 @@ HRESULT GetDebugInfo(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pIDD`  
  [入力、出力]シンボルライターが入力する IMAGE_DEBUG_DIRECTORY へのポインター。  
   
  `cData`  
- から`DWORD`デバッグデータのサイズを格納している。  
+ から `DWORD` デバッグデータのサイズを格納している。  
   
  `pcData`  
- 入出力`DWORD`デバッグデータを格納するために必要なバッファーのサイズを受け取るへのポインター。  
+ 入出力 `DWORD` デバッグデータを格納するために必要なバッファーのサイズを受け取るへのポインター。  
   
  `data`  
  入出力シンボルストアのデバッグデータを保持するのに十分な大きさのバッファーへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

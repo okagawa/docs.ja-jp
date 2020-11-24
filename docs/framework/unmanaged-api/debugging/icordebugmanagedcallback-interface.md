@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b47f1d61-c7dc-4196-b926-0b08c94f7041
 topic_type:
 - apiref
-ms.openlocfilehash: cb2b69c5e6dfed4e0cb4e4e324c4ec6ad664f3e7
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 6eebabc3a08027eab4ac55c1e46dd75b1f75bd21
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212751"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679703"
 ---
 # <a name="icordebugmanagedcallback-interface"></a>ICorDebugManagedCallback インターフェイス
+
 デバッガーのコールバックを処理するメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
@@ -36,7 +37,7 @@ ms.locfileid: "83212751"
 |[CreateProcess メソッド](icordebugmanagedcallback-createprocess-method.md)|プロセスが初めてアタッチまたは開始されたときにデバッガーに通知します。|  
 |[CreateThread メソッド](icordebugmanagedcallback-createthread-method.md)|スレッドがマネージコードの実行を開始したことをデバッガーに通知します。|  
 |[DebuggerError メソッド](icordebugmanagedcallback-debuggererror-method.md)|CLR からのイベントを処理しようとしたときにエラーが発生したことをデバッガーに通知します。|  
-|[EditAndContinueRemap メソッド](icordebugmanagedcallback-editandcontinueremap-method.md)|非推奨になりました。 リマップイベントが IDE に送信されたことをデバッガーに通知します。|  
+|[EditAndContinueRemap メソッド](icordebugmanagedcallback-editandcontinueremap-method.md)|非推奨。 リマップイベントが IDE に送信されたことをデバッガーに通知します。|  
 |[EvalComplete メソッド](icordebugmanagedcallback-evalcomplete-method.md)|評価が完了したことをデバッガーに通知します。|  
 |[EvalException メソッド](icordebugmanagedcallback-evalexception-method.md)|ハンドルされない例外で評価が終了したことをデバッガーに通知します。|  
 |[Exception メソッド](icordebugmanagedcallback-exception-method.md)|マネージコードから例外がスローされたことをデバッガーに通知します。|  
@@ -55,17 +56,19 @@ ms.locfileid: "83212751"
 |[UnloadModule メソッド](icordebugmanagedcallback-unloadmodule-method.md)|CLR モジュール (DLL) がアンロードされたことをデバッガーに通知します。|  
 |[UpdateModuleSymbols メソッド](icordebugmanagedcallback-updatemodulesymbols-method.md)|CLR モジュールのシンボルが変更されたことをデバッガーに通知します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  すべてのコールバックがシリアル化され、同じスレッドで呼び出され、プロセスと同期された状態で呼び出されます。  
   
  各コールバックの実装では、実行を再開するために、「いいね! [:: Continue](icordebugcontroller-continue-method.md) 」を呼び出します。 `ICorDebugController::Continue`コールバックが戻る前にが呼び出されなかった場合、プロセスは停止したままになり、が呼び出されるまで、これ以上イベントコールバックは実行されません `ICorDebugController::Continue` 。  
   
- デバッガーが .NET Framework バージョン2.0 のアプリケーションをデバッグしている場合は、 [ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)を実装する必要があります。 またはのインスタンスは、 `ICorDebugManagedCallback` `ICorDebugManagedCallback2` コールバックオブジェクトとして[ICorDebug:: setmanagedhandler](icordebug-setmanagedhandler-method.md)に渡されます。  
+ デバッガーが .NET Framework バージョン2.0 のアプリケーションをデバッグしている場合は、 [ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md) を実装する必要があります。 またはのインスタンスは、 `ICorDebugManagedCallback` `ICorDebugManagedCallback2` コールバックオブジェクトとして [ICorDebug:: setmanagedhandler](icordebug-setmanagedhandler-method.md)に渡されます。  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

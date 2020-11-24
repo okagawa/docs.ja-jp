@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: eb9ea96c-5b58-4655-8104-094fc8b393b8
 topic_type:
 - apiref
-ms.openlocfilehash: 980f563d3b11fbfcce48b6d7c05275af520e14f1
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 4ef4ed19033b0857b9970ee8103bbd92f383898c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396503"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679534"
 ---
 # <a name="icordebugvariablehomeenumnext-method"></a>は、次のメソッドを実行します。
-関数内のローカル変数および引数に関する情報を格納している指定された数の表示変数[home](icordebugvariablehome-interface.md)インスタンスを取得します。  
+
+関数内のローカル変数および引数に関する情報を格納している指定された数の表示変数 [home](icordebugvariablehome-interface.md) インスタンスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,16 +37,18 @@ HRESULT Next(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `celt`  
  [in] 取得するオブジェクトの数。  
   
  `homes`  
- ポインターの配列。各ポインターは、関数のローカル変数または引数に関する情報を提供[する、の各オブジェクトを](icordebugvariablehome-interface.md)参照します。  
+ ポインターの配列。各ポインターは、関数のローカル変数または引数に関する情報を提供 [する、の各オブジェクトを](icordebugvariablehome-interface.md) 参照します。  
   
  `pceltFetched`  
  入出力実際にオブジェクトで返されたインスタンスの数。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドは、次の値を返します。  
   
 |HRESULT|説明|  
@@ -53,10 +56,12 @@ HRESULT Next(
 |`S_OK`|メソッドは正常に完了しました。|  
 |`S_FALSE`|に反映された実際のインスタンス数 `pceltFetched` が、要求されたインスタンスの数より少なくなっています。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  [次](icordebugvariablehomeenum-next-method.md)のメソッドは、 `celt` 列挙子の現在位置を起点として、最大オブジェクトを取得します。 メソッドから制御が戻るときに、 `pceltFetched` 取得したオブジェクトの実際の数を格納します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

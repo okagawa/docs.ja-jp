@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 954bd386-2076-4d00-9d46-38c728aa9cab
 topic_type:
 - apiref
-ms.openlocfilehash: d388f366671f50c3dcb3bd9d387300dd1bbb168f
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 9ac3b2ae349a696ba0cea1bad3e3484bb1c113fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615905"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679248"
 ---
 # <a name="iclrassemblyidentitymanagerisstronglynamed-method"></a>ICLRAssemblyIdentityManager::IsStronglyNamed メソッド
+
 指定したアセンブリに厳密な名前が付けられているかどうかを示す値を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,6 +36,7 @@ RESULT IsStronglyNamed (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pwzAssemblyIdentity`  
  から評価されるアセンブリの非透過正規アセンブリ id データ。  
   
@@ -53,11 +55,12 @@ RESULT IsStronglyNamed (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返す場合、そのプロセス内で CLR は使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
