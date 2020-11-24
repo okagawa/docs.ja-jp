@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d0f235b2-91fe-4f82-b7d5-e5c64186eea8
 topic_type:
 - apiref
-ms.openlocfilehash: a0f5316900dedc6c8983f9e670f60767ed783a40
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2d6ca18ce48f69d8c94b465efac2b9fe0e10f070
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493995"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685306"
 ---
 # <a name="stacksnapshotcallback-function"></a>StackSnapshotCallback 関数
+
 [ICorProfilerInfo2::D ostacksnapshot](icorprofilerinfo2-dostacksnapshot-method.md)メソッドによって開始されるスタックウォーク中に、各マネージフレームおよびスタック上のアンマネージフレームの各実行に関する情報をプロファイラーに提供します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,6 +39,7 @@ HRESULT __stdcall StackSnapshotCallback (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `funcId`  
  からこの値が0の場合、このコールバックはアンマネージフレームの実行用です。それ以外の場合は、マネージ関数の識別子であり、このコールバックはマネージフレーム用です。  
   
@@ -45,25 +47,27 @@ HRESULT __stdcall StackSnapshotCallback (
  からフレーム内のネイティブコード命令ポインターの値。  
   
  `frameInfo`  
- から`COR_PRF_FRAME_INFO`スタックフレームに関する情報を参照する値。 この値は、このコールバック中にのみ使用できます。  
+ から `COR_PRF_FRAME_INFO` スタックフレームに関する情報を参照する値。 この値は、このコールバック中にのみ使用できます。  
   
  `contextSize`  
- から`CONTEXT`パラメーターによって参照される構造体のサイズ `context` 。  
+ から `CONTEXT` パラメーターによって参照される構造体のサイズ `context` 。  
   
  `context`  
- から`CONTEXT`このフレームの CPU の状態を表す Win32 構造体へのポインター。  
+ から `CONTEXT` このフレームの CPU の状態を表す Win32 構造体へのポインター。  
   
  `context`パラメーターは、COR_PRF_SNAPSHOT_CONTEXT フラグが渡された場合にのみ有効です `ICorProfilerInfo2::DoStackSnapshot` 。  
   
  `clientData`  
  からから直接渡されるクライアントデータへのポインター `ICorProfilerInfo2::DoStackSnapshot` 。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  関数は、 `StackSnapshotCallback` プロファイラーライターによって実装されます。 で実行される作業の複雑さを制限する必要があり `StackSnapshotCallback` ます。 たとえば、を非同期方式で使用する場合、 `ICorProfilerInfo2::DoStackSnapshot` ターゲットスレッドはロックを保持している可能性があります。 内のコードで `StackSnapshotCallback` 同じロックが要求された場合、デッドロックが議論れる可能性があります。  
   
  メソッドは、 `ICorProfilerInfo2::DoStackSnapshot` マネージフレームごとに1回、 `StackSnapshotCallback` またはアンマネージフレームの実行ごとに1回関数を呼び出します。 `StackSnapshotCallback`アンマネージフレームの実行に対してが呼び出された場合、プロファイラーは、(パラメーターによって参照される) レジスタコンテキストを使用して、 `context` 独自のアンマネージスタックウォークを実行できます。 この場合、Win32 `CONTEXT` 構造体は、アンマネージフレームの実行中に最後にプッシュされたフレームの CPU 状態を表します。 Win32 `CONTEXT` 構造体にはすべてのレジスタの値が含まれていますが、スタックポインターレジスタ、フレームポインターレジスタ、命令ポインターレジスタ、および不揮発性 (つまり保持されている) 整数レジスタの値のみに依存する必要があります。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Corprof.idl  

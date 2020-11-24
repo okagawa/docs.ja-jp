@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7f74d9c5-1377-4958-b842-6306d611cbd5
 topic_type:
 - apiref
-ms.openlocfilehash: 7a4ffc0c417ae839e5c97ffe6884bc3230a603b7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 13a433157e0c92653edf234f1f1f885270196ffd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610107"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686411"
 ---
 # <a name="isymunmanagedwriterclosenamespace-method"></a>ISymUnmanagedWriter::CloseNamespace メソッド
+
 最近開いた名前空間を閉じます。  
   
 ## <a name="syntax"></a>構文  
@@ -32,9 +33,11 @@ HRESULT CloseNamespace();
 ```  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

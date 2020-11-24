@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 86d98f39-52e6-4c61-a625-9760f695ff12
 topic_type:
 - apiref
-ms.openlocfilehash: ce4a842bc71ff144e46efb0d6f7068dfca9d207d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: fd41463af0acac1bbe1a3d4515350905b6784f79
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500443"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685332"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a>ICorProfilerCallback::AssemblyLoadFinished メソッド
+
 アセンブリの読み込みが完了したことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -43,12 +44,14 @@ HRESULT AssemblyLoadFinished(
 
   \[in] アセンブリの読み込みが正常に完了したかどうかを示す HRESULT。
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  の値 `assemblyId` は、 `AssemblyLoadFinished` メソッドが呼び出されるまで、情報要求に対して有効ではありません。  
   
  アセンブリの読み込みの一部は、コールバック後も続行される場合があり `AssemblyLoadFinished` ます。 のエラー HRESULT は `hrStatus` エラーを示します。 ただし、の成功 HRESULT は、 `hrStatus` アセンブリの読み込みの最初の部分が成功したことを示します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

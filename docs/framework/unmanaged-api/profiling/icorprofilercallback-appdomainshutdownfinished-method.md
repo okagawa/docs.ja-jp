@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 52794819-0a59-4bb1-a265-0f158cd5cd65
 topic_type:
 - apiref
-ms.openlocfilehash: 722a1e0adea41a13ca25829c53372c29187b80bd
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ddb2d6eeb75a118a12f681b354f6feccd1231c64
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500469"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685386"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>ICorProfilerCallback::AppDomainShutdownFinished メソッド
+
 アプリケーションドメインがプロセスからアンロードされたことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -43,12 +44,14 @@ HRESULT AppDomainShutdownFinished(
 
   \[in] アプリケーションドメインが正常にアンロードされたかどうかを示す HRESULT。
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  `appDomainId` [ICorProfilerCallback:: AppDomainShutdownStarted](icorprofilercallback-appdomainshutdownstarted-method.md)メソッドがを返すと、の値は情報要求に対して有効ではありません。  
   
  アプリケーションドメインのアンロードの一部は、コールバック後に続行される場合があり `AppDomainCreationFinished` ます。 のエラー HRESULT は `hrStatus` エラーを示します。 ただし、の成功 HRESULT は、 `hrStatus` アプリケーションドメインのアンロードの最初の部分が成功したことを示します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

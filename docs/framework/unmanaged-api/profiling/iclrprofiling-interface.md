@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8b53ccc6-1b5e-4b30-a100-c9683d553f5a
 topic_type:
 - apiref
-ms.openlocfilehash: 56d5cfde2efb322521615977f72b0d308ad378f6
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 30c19af5f579ea5abb88d062a4f536fa2a876625
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500542"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685342"
 ---
 # <a name="iclrprofiling-interface"></a>ICLRProfiling インターフェイス
+
 [ICLRProfiling:: attachprofiler](iclrprofiling-attachprofiler-method.md)メソッドを提供します。これにより、実行中のプロセスにプロファイラーをアタッチできます。  
   
 ## <a name="methods"></a>メソッド  
@@ -33,6 +34,7 @@ ms.locfileid: "84500542"
 ## <a name="remarks"></a>解説  
   
 ## <a name="requirements"></a>必要条件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

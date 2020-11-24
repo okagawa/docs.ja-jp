@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-ms.openlocfilehash: 48ac09e1862ae58e79707235e891f72920de1251
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 94495ca0ea75bd41996d430159474c707a3e68b2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500560"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685423"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler メソッド
+
 指定されたプロファイラーを、指定されたプロセスにアタッチします。  
   
 ## <a name="syntax"></a>構文  
@@ -57,13 +58,14 @@ HRESULT AttachProfiler(
 
 - `pvClientData`
 
-  \[では、 [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md)メソッドによってプロファイラーに渡されるデータへのポインター。 トリガー プロセスでは、`AttachProfiler` が戻った後にこのメモリを再利用できます。 `pvClientData` が null の場合、`cbClientData` を 0 (ゼロ) にする必要があります。
+  \[では、 [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) メソッドによってプロファイラーに渡されるデータへのポインター。 トリガー プロセスでは、`AttachProfiler` が戻った後にこのメモリを再利用できます。 `pvClientData` が null の場合、`cbClientData` を 0 (ゼロ) にする必要があります。
 
 - `cbClientData`
 
   \[in] が指すデータのサイズ (バイト単位) `pvClientData` 。
 
 ## <a name="return-value"></a>戻り値  
+
  このメソッドは、次の特定の HRESULT を返します。  
   
 |HRESULT|説明|  
@@ -79,14 +81,16 @@ HRESULT AttachProfiler(
 |HRESULT_FROM_WIN32(ERROR_TIMEOUT)|プロファイラーの読み込みを開始せずにタイムアウトの時間切れになりました。 アタッチ操作は再試行できます。 ターゲット プロセスのファイナライザーがタイムアウト値よりも長く実行されると、タイムアウトが発生します。|  
 |E_INVALIDARG|1 つ以上のパラメーターの値が無効です。|  
 |E_FAIL|他の何らかの未指定のエラーが発生しました。|  
-|その他のエラー コード|プロファイラーの[ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md)メソッドが失敗を示す hresult を返した場合、は `AttachProfiler` その同じ hresult を返します。 この場合、E_NOTIMPL は CORPROF_E_PROFILER_NOT_ATTACHABLE に変換されます。|  
+|その他のエラー コード|プロファイラーの [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) メソッドが失敗を示す hresult を返した場合、は `AttachProfiler` その同じ hresult を返します。 この場合、E_NOTIMPL は CORPROF_E_PROFILER_NOT_ATTACHABLE に変換されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 ## <a name="memory-management"></a>メモリ管理  
+
  COM 規則に従うと、`pvClientData` パラメーターが示すデータのメモリの割り当てと割り当て解除の責任は `AttachProfiler` の呼び出し元 (たとえば、プロファイラーの開発者が作成したトリガー コード) にあります。 CLR は `AttachProfiler` の呼び出しを実行するときに、`pvClientData` が示すメモリをコピーし、それを対象プロセスに送信します。 対象プロセス内の CLR が `pvClientData` ブロックのコピーを受信すると、`InitializeForAttach` メソッドを通じてプロファイラーにそのブロックを渡してから、対象プロセスから `pvClientData` ブロックのコピーを解放します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

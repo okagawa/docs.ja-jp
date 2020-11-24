@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: db98608a-e85c-4f50-9d7b-5f57a426ddb6
 topic_type:
 - apiref
-ms.openlocfilehash: 2dbd4559bad54aee69f6980e8baf6441480f482c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 518ee65bc684f643bf4f608223c0fa40ea3f0dd9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84489719"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685540"
 ---
 # <a name="imetadatavalidate-interface"></a>IMetaDataValidate インターフェイス
+
 メタデータ署名を検証するメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
@@ -32,11 +33,12 @@ ms.locfileid: "84489719"
 |[ValidatorInit メソッド](imetadatavalidate-validatorinit-method.md)|現在のメタデータ スコープ内にあるモジュールの種類を指定するフラグを設定し、指定されたコールバック メソッドを検証エラー用に登録します。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

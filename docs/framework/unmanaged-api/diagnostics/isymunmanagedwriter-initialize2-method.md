@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93de56b6-4ae8-4cca-acdc-25a434623509
 topic_type:
 - apiref
-ms.openlocfilehash: 869d7d36ac24bfeee5b2361dd569945ad77eaf7f
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 93a96a5da3342f4beff611de1d448dc199dd39dd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610068"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687131"
 ---
 # <a name="isymunmanagedwriterinitialize2-method"></a>ISymUnmanagedWriter::Initialize2 メソッド
+
 このライターが関連付けられるメタデータエミッタインターフェイスを設定し、デバッグシンボルの書き込み先となる出力ファイル名を設定します。 この方法では、プログラムデータベース (PDB) ファイルの最終的な場所を設定することもできます。  
   
 ## <a name="syntax"></a>構文  
@@ -37,25 +38,28 @@ HRESULT Initialize2(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `emitter`  
  からメタデータエミッタインターフェイスへのポインター。  
   
  `tempfilename`  
- から`WCHAR`デバッグシンボルが書き込まれるファイル名を格納しているへのポインター。 ファイル名を使用しないライターに対してファイル名を指定した場合、このパラメーターは無視されます。  
+ から `WCHAR` デバッグシンボルが書き込まれるファイル名を格納しているへのポインター。 ファイル名を使用しないライターに対してファイル名を指定した場合、このパラメーターは無視されます。  
   
  `pIStream`  
  から指定されている場合、シンボルライターは、 <xref:System.Runtime.InteropServices.ComTypes.IStream> パラメーターで指定されたファイルではなく、指定されたにシンボルを出力し `filename` ます。 `pIStream` パラメーターは省略可能です。  
   
  `fFullBuild`  
- [入力] `true`完全な再構築の場合は、`false`インクリメンタルコンパイルの場合は。  
+ [入力] `true` 完全な再構築の場合は、 `false` インクリメンタルコンパイルの場合は。  
   
  `finalfilename`  
- から`WCHAR`PDB ファイルの最終的な場所へのパス文字列であるへのポインター。  
+ から `WCHAR` PDB ファイルの最終的な場所へのパス文字列であるへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

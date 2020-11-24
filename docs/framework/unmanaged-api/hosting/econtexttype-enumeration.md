@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 92b926a9-b87e-408a-9036-df7b752c9492
 topic_type:
 - apiref
-ms.openlocfilehash: b93b27957cc715a5b4718dd9ef61cd11f4a39914
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c6d1ace12bd07fa1f14c8570eca1f950a5c22be9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493418"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686333"
 ---
 # <a name="econtexttype-enumeration"></a>EContextType 列挙型
+
 現在実行中のスレッドのセキュリティコンテキストを記述します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,18 +38,20 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`eCurrentContext`|共通言語ランタイム (CLR) が[IHostSecurityManager:: GetSecurityContext](ihostsecuritymanager-getsecuritycontext-method.md)メソッドを呼び出す時点での現在のスレッドのコンテキスト、または[IHostSecurityManager:: SetSecurityContext](ihostsecuritymanager-setsecuritycontext-method.md)メソッドの呼び出しで CLR によって要求されたコンテキストを示します。|  
+|`eCurrentContext`|共通言語ランタイム (CLR) が [IHostSecurityManager:: GetSecurityContext](ihostsecuritymanager-getsecuritycontext-method.md) メソッドを呼び出す時点での現在のスレッドのコンテキスト、または [IHostSecurityManager:: SetSecurityContext](ihostsecuritymanager-setsecuritycontext-method.md) メソッドの呼び出しで CLR によって要求されたコンテキストを示します。|  
 |`eRestrictedContext`|ホストが低い特権 (ガベージコレクター、クラスまたはモジュールコンストラクターなど) を持つコンテキストを示します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  CLR は、 `EContextType` メソッドとメソッドの呼び出しで、値の1つをパラメーター値として提供し `IHostSecurityManager::GetSecurityContext` `IHostSecurityManager::SetSecurityContext` ます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll  
+ **ライブラリ:** MSCorEE.dll  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -14,18 +14,19 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-ms.openlocfilehash: fc0de164b9489c9661bc6cb0ffb681f75e88ea26
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 78de6f91cc5c9de41426ac2e3c200fe14b32ae96
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617010"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685748"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen クラス
+
 ネイティブのポータブル実行可能 (PE) ファイルを作成するための機能を提供します。 インターフェイスは、通常、コンパイルされた出力実行可能ファイルを生成するためにコンパイラによって使用されます。  
   
 > [!NOTE]
-> `ICeeFileGen`は .NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。  
+> `ICeeFileGen` は .NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。  
   
  このインターフェイスは非推奨とされており、今後のリリースでは削除される予定です。  
   
@@ -234,7 +235,8 @@ public:
 };  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** ICeeFileGen  

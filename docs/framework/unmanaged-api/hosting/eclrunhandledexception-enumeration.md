@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d231044e-2b53-4836-93f9-8117ff0e5c3a
 topic_type:
 - apiref
-ms.openlocfilehash: 63b07dda2293d3e05bd3c8fcdc45f20a498ea54c
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: bccd44e1bead4feadf67929dc104557715904577
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616308"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686444"
 ---
 # <a name="eclrunhandledexception-enumeration"></a>EClrUnhandledException 列挙型
+
 ユーザーコードで処理されない例外を管理するために使用できるオプションについて説明します。  
   
 ## <a name="syntax"></a>構文  
@@ -40,15 +41,17 @@ typedef enum {
 |`eRuntimeDeterminedPolicy`|既定の動作を実行することを指定します。 プロセスが破棄されます。|  
 |`eHostDeterminedPolicy`|共通言語ランタイム (CLR) が未処理の例外を無視し、ホストがそれ以上のアクションを決定できるように指定します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  CLR が以前のバージョンと同じように動作するように指定するには、メンバーを使用し `eHostDeterminedPolicy` ます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll  
+ **ライブラリ:** MSCorEE.dll  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
@@ -59,4 +62,4 @@ typedef enum {
 - [ICLRPolicyManager インターフェイス](iclrpolicymanager-interface.md)
 - [SetUnhandledExceptionPolicy メソッド](iclrpolicymanager-setunhandledexceptionpolicy-method.md)
 - [IHostPolicyManager インターフェイス](ihostpolicymanager-interface.md)
-- [ホスティングの列挙体](hosting-enumerations.md)
+- [ホスティングの列挙型](hosting-enumerations.md)

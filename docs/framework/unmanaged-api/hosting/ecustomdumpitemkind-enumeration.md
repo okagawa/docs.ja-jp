@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7105a6c8-6e4e-48de-ac3d-74ac75e5de2e
 topic_type:
 - apiref
-ms.openlocfilehash: 12a1142759532890f541a7c81006f8b3aed4d299
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6520815106ae1084d4281d5ebeb0680bb9bb91c5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616269"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686307"
 ---
 # <a name="ecustomdumpitemkind-enumeration"></a>ECustomDumpItemKind 列挙型
+
 [Customdumpitem](customdumpitem-structure.md)構造体の将来の拡張のために予約されています。  
   
 ## <a name="syntax"></a>構文  
@@ -36,18 +37,19 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`DUMP_ITEM_None`|将来利用するために予約されています。|  
+|`DUMP_ITEM_None`|将来使用するために予約されています。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll  
+ **ライブラリ:** MSCorEE.dll  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - [ICLRErrorReportingManager インターフェイス](iclrerrorreportingmanager-interface.md)
-- [ホスティングの列挙体](hosting-enumerations.md)
+- [ホスティングの列挙型](hosting-enumerations.md)

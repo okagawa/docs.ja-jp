@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5d0b44a2-5a14-44a2-9a0e-e8682fd4e106
 topic_type:
 - apiref
-ms.openlocfilehash: f44753b3e836b43bc09548a35eb68f0f22e3170f
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: e94bfe6151ed42886355423a838f21e13748ec61
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762137"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685774"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfilew-method"></a>ICLRStrongName::GetHashFromAssemblyFileW メソッド
+
 Unicode 文字列で指定されたファイルの内容に対してハッシュが作成されます。  
   
 ## <a name="syntax"></a>構文  
@@ -38,6 +39,7 @@ HRESULT GetHashFromAssemblyFileW (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `wszFilePath`  
  からハッシュされるファイルへのパス。 このパラメーターは Unicode 文字列である必要があります。  
   
@@ -54,14 +56,16 @@ HRESULT GetHashFromAssemblyFileW (
  入出力の返されたサイズ (バイト単位) `pbHash` 。  
   
 ## <a name="return-value"></a>戻り値  
- `S_OK`メソッドが正常に完了した場合は。それ以外の場合は、失敗を示す HRESULT 値 (「リストの[一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values)」を参照してください)。  
+
+ `S_OK` メソッドが正常に完了した場合は。それ以外の場合は、失敗を示す HRESULT 値 (「リストの [一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values) 」を参照してください)。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
