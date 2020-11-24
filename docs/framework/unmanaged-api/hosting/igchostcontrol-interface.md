@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2eb56ea9-8b7e-452b-a209-3d2be719fca6
 topic_type:
 - apiref
-ms.openlocfilehash: 3476e46391b633c3dab2ff79a88b4c863930e855
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: ca03883f2d33eda1c867933256141febaa4269ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805167"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687718"
 ---
 # <a name="igchostcontrol-interface"></a>IGCHostControl インターフェイス
+
 仮想メモリの制限を変更するように、ガベージコレクターがホストに要求できるようにするメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
@@ -31,11 +32,12 @@ ms.locfileid: "83805167"
 |[RequestVirtualMemLimit メソッド](igchostcontrol-requestvirtualmemlimit-method.md)|仮想メモリの制限を変更するようにホストに要求します。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

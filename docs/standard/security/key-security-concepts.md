@@ -10,12 +10,12 @@ helpviewer_keywords:
 - permissions [.NET]
 - security [.NET], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-ms.openlocfilehash: a9f0703217b55c90c4e98503402d3fbf60a45ea7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 73e4d0474810d097c5eee8b99ae30b6096ee1695
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831066"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687548"
 ---
 # <a name="key-security-concepts"></a>セキュリティの基本概念
 
@@ -49,6 +49,7 @@ ms.locfileid: "94831066"
 詳しくは、「[プリンシパル オブジェクトと ID オブジェクト](principal-and-identity-objects.md)」をご覧ください。  
   
 ## <a name="authentication"></a>認証  
+
 認証とは、ユーザーの資格情報を調べ、資格情報をなんらかの権限に対して検証することによって、プリンシパルの身元 を発見および確認するプロセスです。 認証時に得られる情報は、コードで直接使用できます。 また、.NET のロールベースセキュリティを使用して、現在のユーザーを認証したり、そのプリンシパルにコードへのアクセスを許可するかどうかを判断したりすることもできます。 特定のロールに関してプリンシパルを認証する方法の例については、<xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType> メソッドのオーバーロードを参照してください。 たとえば、<xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> オーバーロードを使用すると、現在のユーザーが Administrators グループのメンバーであるかどうかを判断できます。  
   
 現在、さまざまな認証メカニズムが使用されており、その多くは .NET のロールベースのセキュリティで使用できます。 最も一般に使用されている認証機構としては、基本認証、ダイジェスト認証、パスポート認証、オペレーティング システム認証 (NTLM 認証や Kerberos 認証など)、およびアプリケーション定義の認証機構などがあります。  

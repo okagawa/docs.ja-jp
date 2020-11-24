@@ -15,18 +15,19 @@ helpviewer_keywords:
 ms.assetid: cae53926-82ac-4d1d-b297-0bde0bd1bebb
 topic_type:
 - apiref
-ms.openlocfilehash: 3b0c11ac9d827bd252018172e2337df653054a7b
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 0eea9dba57886edfef13c31948a9cff94c6c1bfd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805198"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687874"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>IGCHost::SetGCStartupLimits メソッド
+
 ジェネレーション0のセグメントサイズと最大サイズを設定します。  
   
 > [!IMPORTANT]
-> .NET Framework 4.5 以降では、 `DWORD` [IGCHost2:: SetGCStartupLimitsEx](igchost2-setgcstartuplimitsex-method.md)メソッドを使用して、セグメントサイズと最大ジェネレーション0のサイズをより大きい値に設定できます。  
+> .NET Framework 4.5 以降では、 `DWORD` [IGCHost2:: SetGCStartupLimitsEx](igchost2-setgcstartuplimitsex-method.md) メソッドを使用して、セグメントサイズと最大ジェネレーション0のサイズをより大きい値に設定できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,21 +39,24 @@ HRESULT SetGCStartupLimits (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `SegmentSize`  
  からガベージコレクションシステムによって使用されるセグメントのサイズ。  
   
  `MaxGen0Size`  
  からジェネレーション0の最大サイズ。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  `SetGCStartupLimits`メソッドを呼び出すことができるのは1回だけです。 これらの値は後で変更することはできません。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** GCHost、GCHost  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -2,12 +2,12 @@
 title: WCF 開発者向け Docker-gRPC
 description: ASP.NET Core gRPC アプリケーション用の Docker イメージの作成
 ms.date: 09/02/2019
-ms.openlocfilehash: 379750edfa1a9fc282e43ffa83e5695425f31a26
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0a680d0918868829042e521506fa8c1a1628bf5c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152716"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688446"
 ---
 # <a name="create-docker-images"></a>Docker イメージを作成する
 
@@ -22,12 +22,12 @@ Microsoft では、.NET Core アプリケーションをビルドして実行す
 
 | Image | 説明 |
 | ----- | ----------- |
-| [mcr.microsoft.com/dotnet/core/sdk](https://hub.docker.com/_/microsoft-dotnet-core-sdk/) | を使用してアプリケーションをビルド `docker build` します。 運用環境では使用されません。 |
-| [mcr.microsoft.com/dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) | ランタイムと ASP.NET Core の依存関係を含みます。 運用環境向け。 |
+| [mcr.microsoft.com/dotnet/sdk](https://hub.docker.com/_/microsoft-dotnet-sdk/) | を使用してアプリケーションをビルド `docker build` します。 運用環境では使用されません。 |
+| [mcr.microsoft.com/dotnet/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/) | ランタイムと ASP.NET Core の依存関係を含みます。 運用環境向け。 |
 
 各イメージには、タグによって識別される、異なる Linux ディストリビューションに基づく4つのバリエーションがあります。
 
-| イメージタグ | Linux | メモ |
+| イメージタグ | Linux | Notes |
 | --------- | ----- | ----- |
 | 3.0-buster、3.0 | Debian 10 | OS バリアントが指定されていない場合の既定のイメージ。 |
 | 3.0-アルペン | Alpine 3.9 | Alpine base イメージは Debian または Ubuntu よりもはるかに小さいものです。 |
@@ -41,11 +41,11 @@ Alpine base イメージは約 100 MB であり、Debian および Ubuntu イメ
 
 ## <a name="create-a-docker-image"></a>Docker イメージを作成します。
 
-Docker イメージは、 *Dockerfile*によって定義されます。 これは、アプリケーションを構築するために必要なすべてのコマンドを含むテキストファイルで、アプリケーションをビルドまたは実行するために必要なすべての依存関係をインストールします。 次の例は、ASP.NET Core 3.0 アプリケーションの最も単純な Dockerfile を示しています。
+Docker イメージは、 *Dockerfile* によって定義されます。 これは、アプリケーションを構築するために必要なすべてのコマンドを含むテキストファイルで、アプリケーションをビルドまたは実行するために必要なすべての依存関係をインストールします。 次の例は、ASP.NET Core 3.0 アプリケーションの最も単純な Dockerfile を示しています。
 
 ```dockerfile
 # Application build steps
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0 as builder
+FROM mcr.microsoft.com/dotnet/sdk:3.0 as builder
 
 WORKDIR /src
 
@@ -56,7 +56,7 @@ RUN dotnet restore
 RUN dotnet publish -c Release -o /published src/StockData/StockData.csproj
 
 # Runtime image creation
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0
+FROM mcr.microsoft.com/dotnet/aspnet:3.0
 
 # Uncomment the line below if running with HTTPS
 # ENV ASPNETCORE_URLS=https://+:443
@@ -72,7 +72,7 @@ Dockerfile には、2つの部分があります。1つ目は基本イメージ�
 
 ### <a name="the-build-steps"></a>ビルドステップ
 
-| 手順 | [説明] |
+| 手順 | 説明 |
 | ---- | ----------- |
 | `FROM ...` | 基本イメージを宣言し、エイリアスを割り当て `builder` ます。 |
 | `WORKDIR /src` | ディレクトリを作成 `/src` し、現在の作業ディレクトリとして設定します。 |
@@ -82,7 +82,7 @@ Dockerfile には、2つの部分があります。1つ目は基本イメージ�
 
 ### <a name="the-runtime-image-steps"></a>ランタイムイメージの手順
 
-| 手順 | [説明] |
+| 手順 | 説明 |
 | ---- | ----------- |
 | `FROM ...` | 新しい基本イメージを宣言します。 |
 | `WORKDIR /app` | ディレクトリを作成 `/app` し、現在の作業ディレクトリとして設定します。 |
@@ -95,7 +95,7 @@ Docker 用の Microsoft 基本イメージは `ASPNETCORE_URLS` 、環境変数�
 
 ```dockerfile
 # Runtime image creation
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0
+FROM mcr.microsoft.com/dotnet/aspnet:3.0
 
 ENV ASPNETCORE_URLS=https://+:443
 ```

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1edd1670-976a-4fc8-bef7-7c41e60ad989
 topic_type:
 - apiref
-ms.openlocfilehash: e8065a5492884a4b7f5d662737e4beddc6fca5b3
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 0f9cb8db35a1669cead6f9f26c9a89e063628dd8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007599"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687672"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>CorNotificationForTokenMovement 列挙型
+
 トークンの再マップが発生したときにメタデータ API クライアントに送信される通知を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -87,10 +88,12 @@ typedef enum CorNotificationForTokenMovement {
 |`MDNotifyExportedType`|トークンが移動したときに通知 `mdExportedType` します。|  
 |`MDNotifyResource`|トークンが移動したときに通知 `mdManifestResource` します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
+
  メタデータのマージ中に、トークンが再マップ (移動) される場合があります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorHdr. h  

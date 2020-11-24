@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 02b51888-5d89-4e50-a915-45b7e329aad9
 topic_type:
 - apiref
-ms.openlocfilehash: 208ce1d7ef8a1eab4f18a6d488f0cc480b5713d8
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: fb10057a406bd2192e0da61f916f81697dfa4a7d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499338"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689317"
 ---
 # <a name="icorprofilercallback4survivingreferences2-method"></a>ICorProfilerCallback4::SurvivingReferences2 メソッド
-非圧縮ガベージ コレクションを実行した後の、ヒープ内のオブジェクトのレイアウトを報告します。 このメソッドは、プロファイラーが[ICorProfilerCallback4](icorprofilercallback4-interface.md)インターフェイスを実装した場合に呼び出されます。 このコールバックでは、 [ICorProfilerCallback2:: SurvivingReferences](icorprofilercallback2-survivingreferences-method.md)メソッドが置き換えられます。これは、長さが ULONG で表現できる値を超えるオブジェクトの範囲を超える可能性があるためです。  
+
+非圧縮ガベージ コレクションを実行した後の、ヒープ内のオブジェクトのレイアウトを報告します。 このメソッドは、プロファイラーが [ICorProfilerCallback4](icorprofilercallback4-interface.md) インターフェイスを実装した場合に呼び出されます。 このコールバックでは、 [ICorProfilerCallback2:: SurvivingReferences](icorprofilercallback2-survivingreferences-method.md) メソッドが置き換えられます。これは、長さが ULONG で表現できる値を超えるオブジェクトの範囲を超える可能性があるためです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,6 +38,7 @@ HRESULT SurvivingReferences2(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `cSurvivingObjectIDRanges`  
  [in] 非圧縮ガベージ コレクションを実行した後に存続する、隣接したオブジェクトのブロック数。 つまり、`cSurvivingObjectIDRanges` の値は、`objectIDRangeStart` 配列と `cObjectIDRangeLength` 配列のサイズを表します。これらの配列にはそれぞれ、オブジェクトの各ブロックの `ObjectID` と長さが格納されます。  
   
@@ -50,24 +52,26 @@ HRESULT SurvivingReferences2(
   
  サイズは、`objectIDRangeStart` 配列内の参照される各ブロックに対して指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  `objectIDRangeStart` 配列と `cObjectIDRangeLength` 配列の要素は、次のように解釈されて、ガベージ コレクションでオブジェクトが存続したかどうかを判断する必要があります。 `ObjectID` 値 (`ObjectID`) が次の範囲内にあるとします。  
   
  `ObjectIDRangeStart[i]` <= `ObjectID` < `ObjectIDRangeStart[i]` + `cObjectIDRangeLength[i]`  
   
  次の範囲内にある `i` のすべての値について、オブジェクトはガベージ コレクションの実行後に存続しています。  
   
- 0 <=`i` < `cSurvivingObjectIDRanges`  
+ 0 <= `i` < `cSurvivingObjectIDRanges`  
   
  非圧縮ガベージ コレクションは、"無効な" オブジェクトによって占有されているメモリをクリアしますが、解放された領域は圧縮しません。 そのため、メモリはヒープに返されますが、"有効な" オブジェクトは移動されません。  
   
- 共通言語ランタイム (CLR: Common Language Runtime) は、非圧縮ガベージ コレクションに対して `SurvivingReferences2` を呼び出します。 ガベージコレクションを圧縮する場合は、代わりに[MovedReferences2](icorprofilercallback4-movedreferences2-method.md)が呼び出されます。 単一のガベージ コレクションで 1 つのジェネレーションを圧縮できますが、その他のジェネレーションは非圧縮になります。 特定のジェネレーションのガベージコレクションの場合、プロファイラーは `SurvivingReferences2` コールバックまたは[MovedReferences2](icorprofilercallback4-movedreferences2-method.md)コールバックのいずれかを受け取りますが、両方を受け取ることはありません。  
+ 共通言語ランタイム (CLR: Common Language Runtime) は、非圧縮ガベージ コレクションに対して `SurvivingReferences2` を呼び出します。 ガベージコレクションを圧縮する場合は、代わりに [MovedReferences2](icorprofilercallback4-movedreferences2-method.md) が呼び出されます。 単一のガベージ コレクションで 1 つのジェネレーションを圧縮できますが、その他のジェネレーションは非圧縮になります。 特定のジェネレーションのガベージコレクションの場合、プロファイラーは `SurvivingReferences2` コールバックまたは [MovedReferences2](icorprofilercallback4-movedreferences2-method.md) コールバックのいずれかを受け取りますが、両方を受け取ることはありません。  
   
  特定のガベージ コレクションで複数の `SurvivingReferences2` コールバックを受け取ることがあります。この原因としては、内部バッファリングの制限、サーバーのガベージ コレクション中の複数のコールバックなどが考えられます。 あるガベージ コレクションで複数のコールバックが生じる場合、情報が累積されます。つまり、`SurvivingReferences2` コールバックで報告されるすべての参照は対象のガベージ コレクション後も存続します。  
   
- プロファイラーが[ICorProfilerCallback](icorprofilercallback-interface.md)インターフェイスと[ICorProfilerCallback4](icorprofilercallback4-interface.md)インターフェイスの両方を実装している場合、 `SurvivingReferences2` メソッドは[ICorProfilerCallback2:: SurvivingReferences](icorprofilercallback2-survivingreferences-method.md)メソッドの前に呼び出されますが、が正常に返された場合にのみ呼び出され `SurvivingReferences2` ます。 プロファイラーは HRESULT を返すことがあり、これは `SurvivingReferences2` メソッドの失敗を示し、2 番目のメソッドが呼び出されません。  
+ プロファイラーが [ICorProfilerCallback](icorprofilercallback-interface.md) インターフェイスと [ICorProfilerCallback4](icorprofilercallback4-interface.md) インターフェイスの両方を実装している場合、 `SurvivingReferences2` メソッドは [ICorProfilerCallback2:: SurvivingReferences](icorprofilercallback2-survivingreferences-method.md) メソッドの前に呼び出されますが、が正常に返された場合にのみ呼び出され `SurvivingReferences2` ます。 プロファイラーは HRESULT を返すことがあり、これは `SurvivingReferences2` メソッドの失敗を示し、2 番目のメソッドが呼び出されません。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

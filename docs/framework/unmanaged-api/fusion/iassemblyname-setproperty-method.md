@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 496c3add-f60b-4073-943f-d1bcf33330cb
 topic_type:
 - apiref
-ms.openlocfilehash: ffa1fa2f5e141728a56f1b598a1aae9602b2ac86
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 04b3e73e2166efb2ec0821d21da3da4c53b0ca4b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108215"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688654"
 ---
 # <a name="iassemblynamesetproperty-method"></a>IAssemblyName::SetProperty メソッド
+
 指定したプロパティ識別子によって参照されるプロパティの値を設定します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,21 +37,23 @@ HRESULT SetProperty (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `PropertyId`  
  から値が設定されるプロパティの一意の識別子。  
   
  `pvProperty`  
- から`PropertyId`によって参照されるプロパティを設定する値。  
+ からによって参照されるプロパティを設定する値 `PropertyId` 。  
   
  `cbProperty`  
- から`pvProperty`のサイズ (バイト単位)。  
+ からのサイズ (バイト単位) `pvProperty` 。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Fusion. h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

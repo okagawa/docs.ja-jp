@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78b0f14f-2fae-4e63-8412-4df119ee8468
 topic_type:
 - apiref
-ms.openlocfilehash: 612b63ba9aa3504cab5196932293946d486955ce
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c5be9231bcd5aaddfa0cf1b0051f8e1184faef04
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210203"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687633"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception メソッド
+
 例外ハンドラーの検索が開始されたことをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,6 +40,7 @@ HRESULT Exception (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pAppDomain`  
  から例外がスローされたスレッドを含むアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
@@ -55,9 +57,10 @@ HRESULT Exception (
  からこの例外コールバックの種類を指定する Cordebugexceptioncallback Type 列挙体の値。  
   
  `dwFlags`  
- から例外に関する追加情報を指定する[Cordebugexceptionflags](cordebugexceptionflags-enumeration.md)列挙値  
+ から例外に関する追加情報を指定する [Cordebugexceptionflags](cordebugexceptionflags-enumeration.md) 列挙値  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  `Exception`コールバックは、例外処理プロセスの検索フェーズ中にさまざまなポイントで呼び出されます。 つまり、例外のアンワインド中に複数回呼び出すことができます。  
   
  処理されている例外は、パラメーターによって参照されているスレッドオブジェクトから取得でき `pThread` ます。  
@@ -71,7 +74,8 @@ HRESULT Exception (
 |DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|Catch ハンドラーを格納しているフレーム。|Catch ハンドラーの先頭の MSIL (Microsoft 中間言語) オフセット。|  
 |DEBUG_EXCEPTION_UNHANDLED|NULL|未定義です。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

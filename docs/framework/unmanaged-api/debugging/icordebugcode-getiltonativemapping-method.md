@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a8ecd8c8-9627-4356-9c6f-bd05e24637c0
 topic_type:
 - apiref
-ms.openlocfilehash: 3de85626be6ae8e4769ac261f4de1479461417ec
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 0adb9e58ca2c6b5b430a0413fa11ba59d79a0539
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893540"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688108"
 ---
 # <a name="icordebugcodegetiltonativemapping-method"></a>ICorDebugCode::GetILToNativeMapping メソッド
+
 Microsoft 中間言語 (MSIL) オフセットからネイティブオフセットへのマッピングを表す "COR_DEBUG_IL_TO_NATIVE_MAP" インスタンスの配列を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,21 +38,24 @@ HRESULT GetILToNativeMapping (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `cMap`  
  [in] `map` 配列のサイズ。  
   
  `pcMap`  
- 入出力`map`配列で返された実際の要素数へのポインター。  
+ 入出力配列で返された実際の要素数へのポインター `map` 。  
   
  `map`  
- 入出力構造体の`COR_DEBUG_IL_TO_NATIVE_MAP`配列。それぞれが MSIL オフセットからネイティブオフセットへのマッピングを表します。  
+ 入出力構造体の配列。 `COR_DEBUG_IL_TO_NATIVE_MAP` それぞれが MSIL オフセットからネイティブオフセットへのマッピングを表します。  
   
  返される要素の配列への順序はありません。  
   
-## <a name="remarks"></a>解説  
- メソッド`GetILToNativeMapping`は、この "" コード "インスタンスが MSIL コードからコンパイルされた JUST-IN-TIME (JIT) コードを表している場合にのみ、意味のある結果を返します。  
+## <a name="remarks"></a>注釈  
+
+ メソッドは、 `GetILToNativeMapping` この "" コード "インスタンスが MSIL コードからコンパイルされた just-in-time (JIT) コードを表している場合にのみ、意味のある結果を返します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

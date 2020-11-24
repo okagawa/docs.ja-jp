@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d16703fd-518f-412e-92cb-74433d11032e
 topic_type:
 - apiref
-ms.openlocfilehash: c8c2757e99b80204ad52e69a596d62c55c369965
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 70d789f417700734b546cac6ff527ed5aa84fcf9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007417"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688628"
 ---
 # <a name="corfileflags-enumeration"></a>CorFileFlags 列挙型
+
 [IMetaDataAssemblyEmit::D efineFile](imetadataassemblyemit-definefile-method.md)への呼び出しで定義されているファイルの種類を記述する値を格納します。  
   
 ## <a name="syntax"></a>構文  
@@ -42,7 +43,8 @@ typedef enum CorFileFlags {
 |`ffContainsMetaData`|は、ファイルがリソースファイルではないことを示します。|  
 |`ffContainsNoMetaData`|ファイル (場合によってはリソースファイル) にメタデータが含まれていないことを示します。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorHdr. h  

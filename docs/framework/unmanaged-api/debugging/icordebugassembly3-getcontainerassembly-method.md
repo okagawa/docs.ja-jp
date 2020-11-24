@@ -2,14 +2,15 @@
 title: ICorDebugAssembly3::GetContainerAssembly メソッド
 ms.date: 03/30/2017
 ms.assetid: f5fddeb6-b82e-4ebb-b432-849ce8513c77
-ms.openlocfilehash: 068a08d70f2443edfe0970ec1ffb8cba9953c6b9
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 51e68e73983425cdd7d648b6856809fcba590f70
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894848"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688550"
 ---
 # <a name="icordebugassembly3getcontainerassembly-method"></a>ICorDebugAssembly3::GetContainerAssembly メソッド
+
 この `ICorDebugAssembly3` オブジェクトのコンテナー アセンブリを返します。  
   
 ## <a name="syntax"></a>構文  
@@ -21,19 +22,23 @@ HRESULT GetContainerAssembly(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ppAssembly`  
- コンテナーアセンブリを表す、オブジェクトのアドレスへのポインター。メソッドの呼び出しが失敗した場合は**null** 。  
+ コンテナーアセンブリを表す、オブジェクトのアドレスへのポインター。メソッドの呼び出しが失敗した場合は **null** 。  
   
 ## <a name="return-value"></a>戻り値  
- `S_OK`メソッドの呼び出しが成功した場合は。それ以外`S_FALSE`の場合`ppAssembly` 、、、およびは**null**になります。  
+
+ `S_OK` メソッドの呼び出しが成功した場合は。それ以外の場合、 `S_FALSE` 、、および `ppAssembly` は **null** になります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  このアセンブリが 1 つのコンテナー アセンブリ内の他のアセンブリとマージされている場合、このメソッドはコンテナー アセンブリを返します。 詳細と用語については、「 [ICorDebugProcess6:: EnableVirtualModuleSplitting](icordebugprocess6-enablevirtualmodulesplitting-method.md) 」を参照してください。  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

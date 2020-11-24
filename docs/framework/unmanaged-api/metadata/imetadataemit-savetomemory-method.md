@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d5237628-2675-45ed-a39e-65c0731b6a56
 topic_type:
 - apiref
-ms.openlocfilehash: ccf82531eb1f78bcfc6762d10d53ffee59f30ad8
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 1cd5e34d6afefab2fda7e20d4bf73b373ad42787
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84003953"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688589"
 ---
 # <a name="imetadataemitsavetomemory-method"></a>IMetaDataEmit::SaveToMemory メソッド
+
 現在のスコープ内のすべてのメタデータを、指定したメモリ領域に保存します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,18 +36,20 @@ HRESULT SaveToMemory (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pbData`  
  入出力メタデータの書き込みを開始するアドレス。  
   
  `cbData`  
  から割り当てられたメモリのサイズ (バイト単位)。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
