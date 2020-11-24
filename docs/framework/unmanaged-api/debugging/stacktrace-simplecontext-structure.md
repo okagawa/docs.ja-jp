@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d4cef11f-a8ca-49bc-a1b8-6631f9e28f3e
 topic_type:
 - apiref
-ms.openlocfilehash: 45ae947cda5b4ddadfb10f5b2bdc78a95f031703
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 30775b4a6f904d06b9c77e6b2b64aec693c446d7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420690"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671799"
 ---
 # <a name="stacktrace_simplecontext-structure"></a>StackTrace_SimpleContext 構造体
+
 完全な `CONTEXT` 構造の代わりに使用できる単純なコンテキストを提供します。  
   
 ## <a name="syntax"></a>構文  
@@ -44,10 +45,12 @@ struct StackTrace_SimpleContext
 |`FrameOffset`|フレームオフセット、または x86 プラットフォームでの EBP レジスタ。|  
 |`InstructionOffset`|命令ポインター、または x86 プラットフォームの enter 命令ポインター (EIP)。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  通常、スタックトレース関数はアドレス、フレームオフセット、およびスタックアドレスだけを返す必要があるため、必要に応じて、大きな構造体の代わりに構造体を使用することもでき `SimpleContext` `CONTEXT` ます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** SOS_Stacktrace  

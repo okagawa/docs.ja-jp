@@ -14,14 +14,15 @@ helpviewer_keywords:
 - FormatFromRawValue function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: e7f3e4eef4a7e378529c2097a8fe1a753a98c961
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e678aca5baf82c07ec9fc5c85cef22630af5ab0a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553715"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672332"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue 関数
+
 1 つの生のパフォーマンス データ値が指定した形式に変換されます。この形式変換が時間ベースである場合は、2 つの生のパフォーマンス データ値が変換されます。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -47,7 +48,7 @@ int FormatFromRawValue (
 `dwFormat`\
 から生のパフォーマンスデータを変換する形式。 次のいずれかの値を指定できます。
 
-|一定  |値  |説明 |
+|定数  |値  |説明 |
 |---------|---------|---------|
 | `PDH_FMT_DOUBLE` |0x00000200 | 計算された値を倍精度浮動小数点値として返します。 |
 | `PDH_FMT_LARGE` | 0x00000400 | 計算された値を64ビット整数として返します。 |
@@ -55,7 +56,7 @@ int FormatFromRawValue (
 
 前の値の1つは、次のいずれかのスケーリングフラグと共に使用できます。
 
-|一定  |値  |説明 |
+|定数  |値  |説明 |
 |---------|---------|---------|
 | `PDH_FMT_NOSCALE` | 0x00001000 | カウンターのスケールファクターは適用しないでください。 |
 | `PDH_FMT_1000` | 0x00002000 | 最終的な値を1000で乗算します。 |
@@ -76,17 +77,17 @@ int FormatFromRawValue (
 
 この関数によって返される値は次のとおりです。
 
-|一定  |値  |説明  |
+|定数  |値  |説明  |
 |---------|---------|---------|
 | `ERROR_SUCCESS` | 0 | 関数の呼び出しは成功しました。 |
 | `PDH_INVALID_ARGUMENT` | 0xC0000BBD | 必須の引数が指定されていないか、正しくありません。 |
 | `PDH_INVALID_HANDLE` | 0xC0000BBC | ハンドルは、有効な PDH オブジェクトではありません。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>注釈
 
 この関数は、 [FormatFromRawValue](/previous-versions/ms231047(v=vs.85)) 関数の呼び出しをラップします。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。
 

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cba9e4d6-9461-4420-9614-96ff7039ec9c
 topic_type:
 - apiref
-ms.openlocfilehash: 1aea017f17e29544e9288e1f57e6f84f9a2f6dae
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 048010f00f6581a29c6b1a3150bf5ae8822b5664
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501106"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672462"
 ---
 # <a name="imetadatatablesgetuserstringheapsize-method"></a>IMetaDataTables::GetUserStringHeapSize メソッド
+
 ユーザー文字列ヒープのサイズ (バイト単位) を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,15 +35,17 @@ HRESULT GetUserStringHeapSize (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pcbBlobs`  
  入出力ユーザー文字列ヒープのサイズ (バイト単位) へのポインター。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

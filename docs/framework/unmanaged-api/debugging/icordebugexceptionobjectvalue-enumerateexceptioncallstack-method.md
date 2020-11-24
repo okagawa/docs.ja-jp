@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00c64533-15dd-47f4-bb97-fe80a1ebadef
 topic_type:
 - apiref
-ms.openlocfilehash: e45b180ac6d943d89740ad7ae10500ea4ad1aa9c
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 101151469e2eece20afe289c9d95387ce6dc7c6a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975967"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672124"
 ---
 # <a name="icordebugexceptionobjectvalueenumerateexceptioncallstack-method"></a>ICorDebugExceptionObjectValue::EnumerateExceptionCallStack メソッド
+
 例外オブジェクトに埋め込まれている呼び出し履歴に対する列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,15 +35,18 @@ HRESULT EnumerateExceptionCallStack(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  ppCallStackEnum  
  入出力マネージ例外オブジェクトのスタックトレース列挙[ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md)子である、というコードのアドレスへのポインターを示します。  
   
-## <a name="remarks"></a>Remarks  
- 呼び出し履歴情報が使用できない場合、メソッドは`S_OK`を返します。また、は、値が0の有効な列挙[子です。](icordebugexceptionobjectcallstackenum-interface.md) メソッドがスタックトレース情報を取得できない場合、戻り値は`E_FAIL`であり、列挙子は返されません。  
+## <a name="remarks"></a>注釈  
+
+ 呼び出し履歴情報が使用できない場合、メソッドはを返し `S_OK` ます。また、は、値が0の有効な列挙子 [です](icordebugexceptionobjectcallstackenum-interface.md) 。 メソッドがスタックトレース情報を取得できない場合、戻り値はで `E_FAIL` あり、列挙子は返されません。  
   
- の[例外](icordebugexceptionobjectcallstackenum-interface.md)オブジェクトの`_stackTrace`フィールドからスタックトレースデータをデコードするには、のオブジェクトを使用します。  
+ の例外オブジェクトのフィールドからスタックトレースデータをデコードするには、のオブジェクトを [使用し](icordebugexceptionobjectcallstackenum-interface.md) `_stackTrace` ます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

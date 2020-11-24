@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4cdb1284-947a-4ed4-94c1-c5ff5cdfce56
 topic_type:
 - apiref
-ms.openlocfilehash: a8c9eab719f6a4f233490e544f67cf779ea10b20
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 9fc517b081a1df48d943d03a9c3ce223a428bde7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83763040"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671630"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegeneration-method"></a>ICLRStrongName::StrongNameSignatureGeneration メソッド
+
 指定したアセンブリに対して厳密な名前の署名が生成されます。  
   
 ## <a name="syntax"></a>構文  
@@ -39,6 +40,7 @@ HRESULT StrongNameSignatureGeneration (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `wszFilePath`  
  から厳密な名前の署名が生成されるアセンブリのマニフェストを含むファイルへのパス。  
   
@@ -60,25 +62,28 @@ HRESULT StrongNameSignatureGeneration (
  `ppbSignatureBlob`  
  入出力共通言語ランタイムが署名を返す場所へのポインター。 `ppbSignatureBlob`が null の場合、ランタイムはによって指定されたファイルに署名を格納し `wszFilePath` ます。  
   
- `ppbSignatureBlob`が null でない場合は、共通言語ランタイムによって、署名を返す領域が割り当てられます。 呼び出し元は、 [ICLRStrongName:: StrongNameFreeBuffer](iclrstrongname-strongnamefreebuffer-method.md)メソッドを使用して、この領域を解放する必要があります。  
+ `ppbSignatureBlob`が null でない場合は、共通言語ランタイムによって、署名を返す領域が割り当てられます。 呼び出し元は、 [ICLRStrongName:: StrongNameFreeBuffer](iclrstrongname-strongnamefreebuffer-method.md) メソッドを使用して、この領域を解放する必要があります。  
   
  `pcbSignatureBlob`  
  入出力返されたシグネチャのサイズ (バイト単位)。  
   
 ## <a name="return-value"></a>戻り値  
- `S_OK`メソッドが正常に完了した場合は。それ以外の場合は、失敗を示す HRESULT 値 (「リストの[一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values)」を参照してください)。  
+
+ `S_OK` メソッドが正常に完了した場合は。それ以外の場合は、失敗を示す HRESULT 値 (「リストの [一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values) 」を参照してください)。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  `wszFilePath`署名を作成せずに署名のサイズを計算するには、に null を指定します。  
   
  署名は、ファイルに直接格納するか、呼び出し元に返すことができます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

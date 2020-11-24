@@ -5,17 +5,19 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 5e903e04-17d0-4014-ac9a-a43330ec8b1c
-ms.openlocfilehash: 91f311818b615ea8f166bb3362ec52d39fcd0297
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 49f026b8e1a3dd78a62091e77a5aba0c9a2e09d6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790327"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671838"
 ---
 # <a name="silverlight-debugging"></a>Silverlight デバッグ
+
 このセクションのトピックでは、Windows オペレーティング システム上または Macintosh プラットフォーム上で動作している Silverlight ベースのアプリケーションのデバッグをサポートするために共通言語ランタイム (CLR: Common Language Runtime) で提供される環境とインターフェイスについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [EnumerateCLRs 関数](enumerateclrs-function.md)  
  プロセスで CLR を列挙するメカニズムを提供します。  
   
@@ -55,7 +57,7 @@ ms.locfileid: "76790327"
 ## <a name="see-also"></a>関連項目
 
 - [デバッグ コクラス](debugging-coclasses.md)
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)
 - [デバッグ グローバル静的関数](debugging-global-static-functions.md)
-- [列挙型のデバッグ](debugging-enumerations.md)
+- [列挙体のデバッグ](debugging-enumerations.md)
 - [デバッグ構造体](debugging-structures.md)

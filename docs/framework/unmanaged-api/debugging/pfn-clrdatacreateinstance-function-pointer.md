@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5c66ac57-d751-4de5-af9f-26ceb949af8b
 topic_type:
 - apiref
-ms.openlocfilehash: 34aae3cd913465bc3167d6c5eee9873d212fa4ac
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 68a5b8bb1568f10699653479357b02b2e847cc02
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420692"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671968"
 ---
 # <a name="pfn_clrdatacreateinstance-function-pointer"></a>PFN_CLRDataCreateInstance 関数ポインター
+
 指定されたターゲット項目のインターフェイスオブジェクトを作成する関数を指します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,19 +36,22 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `iid`  
  からインスタンス化するインターフェイスの識別子。  
   
  `target`  
- からインターフェイスオブジェクトの作成対象となる項目を表す、ユーザーによって実装された[ICLRDataTarget](iclrdatatarget-interface.md)オブジェクトへのポインター。  
+ からインターフェイスオブジェクトの作成対象となる項目を表す、ユーザーによって実装された [ICLRDataTarget](iclrdatatarget-interface.md) オブジェクトへのポインター。  
   
  `iface`  
  入出力返されたインターフェイスオブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  `ICLRDataTarget`オブジェクトは、デバッグアプリケーションのライターによって実装されます。 実装は、表示されるターゲット項目の種類によって異なります。 ターゲット項目には、プロセス、メモリダンプ、リモートコンピューターなどがあります。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** ClrData .idl  

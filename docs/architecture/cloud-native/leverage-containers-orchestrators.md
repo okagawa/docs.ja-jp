@@ -2,12 +2,12 @@
 title: コンテナーとコンテナー オーケストレーターの活用
 description: Azure での Docker コンテナーと Kubernetes Orchestrators 活用
 ms.date: 05/31/2020
-ms.openlocfilehash: 07e66ece1d1d1b3f252e56789461ae2922d9649a
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: 0ca69b71aa7d414a7bc55253b123020d49468dee
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877575"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672514"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>コンテナーとコンテナー オーケストレーターの活用
 
@@ -78,7 +78,7 @@ AKS は、クラスターベースのテクノロジです。 フェデレーシ
 
 ## <a name="what-are-the-scaling-benefits"></a>スケーリングにはどのような利点がありますか。
 
-コンテナー上に構築されたサービスは、Kubernetes などのオーケストレーションツールによって提供されるスケーリングの利点を活用できます。 設計コンテナーによって認識されるのは、それ自体だけです。 複数のコンテナーを連携させる必要がある場合は、より高いレベルでそれらを整理する必要があります。 多数のコンテナーとその共有依存関係 (ネットワーク構成など) を整理すると、その日を節約するためにオーケストレーションツールが提供されます。 Kubernetes は、コンテナーのグループに対して抽象化レイヤーを作成し、 *ポッド*に整理します。 ポッドは、 *ノード*と呼ばれるワーカーマシン上で実行されます。 この体系化された構造は *クラスター*と呼ばれます。 図3-3 は、Kubernetes クラスターのさまざまなコンポーネントを示しています。
+コンテナー上に構築されたサービスは、Kubernetes などのオーケストレーションツールによって提供されるスケーリングの利点を活用できます。 設計コンテナーによって認識されるのは、それ自体だけです。 複数のコンテナーを連携させる必要がある場合は、より高いレベルでそれらを整理する必要があります。 多数のコンテナーとその共有依存関係 (ネットワーク構成など) を整理すると、その日を節約するためにオーケストレーションツールが提供されます。 Kubernetes は、コンテナーのグループに対して抽象化レイヤーを作成し、 *ポッド* に整理します。 ポッドは、 *ノード* と呼ばれるワーカーマシン上で実行されます。 この体系化された構造は *クラスター* と呼ばれます。 図3-3 は、Kubernetes クラスターのさまざまなコンポーネントを示しています。
 
 ![クラスターコンポーネントを Kubernetes します。 ](./media/kubernetes-cluster-components.png)
 **図 3-3**. クラスターコンポーネントを Kubernetes します。
@@ -184,12 +184,12 @@ Visual Studio では、web ベースアプリケーションの Docker 開発を
 このオプションを選択すると、プロジェクトはというルートに作成され、 `Dockerfile` Docker コンテナーでアプリをビルドしてホストするために使用できます。 図 3-6 に Dockerfile の例を示します。
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
+FROM mcr.microsoft.com/dotnet/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
+FROM mcr.microsoft.com/dotnet/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["eShopWeb/eShopWeb.csproj", "eShopWeb/"]
 RUN dotnet restore "eShopWeb/eShopWeb.csproj"

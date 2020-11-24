@@ -6,17 +6,19 @@ helpviewer_keywords:
 - metadata enumerations [.NET Framework]
 - unmanaged enumerations [.NET Framework], metadata
 ms.assetid: 711ab251-cfdb-4280-aaa6-9bc1b341cdc3
-ms.openlocfilehash: 2409998c53aee8cb76e66cbc9a6cd92ad9fb6cd2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d0a146ff5b6887e6678ee69d7e39731bd109c6d5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84489622"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672904"
 ---
 # <a name="metadata-enumerations"></a>メタデータ列挙体
+
 このセクションでは、メタデータ API が使用するアンマネージ列挙について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [AssemblyFlags 列挙体](assemblyflags-enumeration.md)  
  アセンブリのランタイム機能を記述する値が格納されます。  
   
@@ -30,10 +32,10 @@ ms.locfileid: "84489622"
  `reloc` [ICeeGen:: AddSectionReloc](iceegen-addsectionreloc-method.md)メソッドの呼び出しで生成された命令の型に影響を与える値を提供します。  
   
  [COINITICOR 列挙型](coiniticor-enumeration.md)  
- 共通言語ランタイムを初期化するときに、 [Co初期化 Ecor](../hosting/coinitializecor-function.md)によって使用される定数を指定します。  
+ 共通言語ランタイムを初期化するときに、 [Co初期化 Ecor](../hosting/coinitializecor-function.md) によって使用される定数を指定します。  
   
  [COINITIEE 列挙型](coinitiee-enumeration.md)  
- 共通言語ランタイムを初期化するときに[Coinitializeee](../hosting/coinitializeee-function.md)によって使用される定数を指定します。  
+ 共通言語ランタイムを初期化するときに [Coinitializeee](../hosting/coinitializeee-function.md) によって使用される定数を指定します。  
   
  [CorArgType 列挙型](corargtype-enumeration.md)  
  ランタイム ハンドルのネイティブな型を記述する値が格納されます。  
@@ -150,12 +152,13 @@ ms.locfileid: "84489622"
  アンマネージ呼び出し規約を記述する値が格納されます。  
   
  [CorValidatorModuleType 列挙型](corvalidatormoduletype-enumeration.md)  
- モジュールの型 (PE ファイルと .obj ファイル) を指定するために[IMetaDataValidate](imetadatavalidate-interface.md)インターフェイスによって使用される値を提供します。  
+ モジュールの型 (PE ファイルと .obj ファイル) を指定するために [IMetaDataValidate](imetadatavalidate-interface.md) インターフェイスによって使用される値を提供します。  
   
  [COUNINITIEE 列挙型](couninitiee-enumeration.md)  
- 共通言語ランタイムを初期化するときに[CoUninitializeEE](../hosting/couninitializeee-function.md)によって使用される定数を指定します。  
+ 共通言語ランタイムを初期化するときに [CoUninitializeEE](../hosting/couninitializeee-function.md) によって使用される定数を指定します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [メタデータ インターフェイス](metadata-interfaces.md)  
   
  [メタデータ グローバル静的関数](metadata-global-static-functions.md)  

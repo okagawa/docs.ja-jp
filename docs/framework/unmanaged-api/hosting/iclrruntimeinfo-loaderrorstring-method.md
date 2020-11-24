@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 52c543ab-9ef5-4ee7-b836-c0ffc35cd45b
 topic_type:
 - apiref
-ms.openlocfilehash: da6efae38cd70a68feea56b12e86be23fde7f0cb
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 0e029aa848a6630ae00c834dd2b924dc4ebce537
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762189"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671773"
 ---
 # <a name="iclrruntimeinfoloaderrorstring-method"></a>ICLRRuntimeInfo::LoadErrorString メソッド
+
 HRESULT 値を、指定したカルチャの適切なエラーメッセージに変換します。  
   
  このメソッドは、次の関数を置き換えます。  
@@ -42,6 +43,7 @@ HRESULT LoadErrorString(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `iResourceID`  
  から変換する HRESULT。  
   
@@ -49,12 +51,13 @@ HRESULT LoadErrorString(
  入出力指定した HRESULT に関連付けられているメッセージ文字列。  
   
  `pcchBuffer`  
- [入力、出力]`pwzbuffer`バッファーオーバーランを回避するためののサイズ。 `pwzbuffer`が null の場合、は、 `pcchBuffer` の予期されるサイズを提供して、事前割り当て `pwzbuffer` を可能にします。  
+ [入力、出力] `pwzbuffer` バッファーオーバーランを回避するためののサイズ。 `pwzbuffer`が null の場合、は、 `pcchBuffer` の予期されるサイズを提供して、事前割り当て `pwzbuffer` を可能にします。  
   
  `iLocaleID`  
  からカルチャ識別子。 既定のカルチャを使用するには、-1 を指定する必要があります。  
   
 ## <a name="return-value"></a>戻り値  
+
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
   
 |HRESULT|説明|  
@@ -64,11 +67,12 @@ HRESULT LoadErrorString(
 |E_INVALIDARG|`pwzBuffer` が null です。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

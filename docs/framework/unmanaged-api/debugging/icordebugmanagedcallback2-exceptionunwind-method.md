@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: aaf5938d-179c-4eaa-8d35-8523a4fadded
 topic_type:
 - apiref
-ms.openlocfilehash: 8f66369d3ac5ddcfe38fe579cac728eb3a250165
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a15391b63012fec3d0e6a0aa67540c3d2541944c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205626"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671318"
 ---
 # <a name="icordebugmanagedcallback2exceptionunwind-method"></a>ICorDebugManagedCallback2::ExceptionUnwind メソッド
+
 例外アンワインド処理中の状態通知を提供します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,6 +38,7 @@ HRESULT ExceptionUnwind (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pAppDomain`  
  から例外がスローされたスレッドを含むアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
@@ -47,14 +49,16 @@ HRESULT ExceptionUnwind (
  からアンワインドフェーズ中にコールバックによって通知されるイベントを指定する CorDebugExceptionUnwindCallbackType 列挙体の値。  
   
  `dwFlags`  
- から例外に関する追加情報を指定する[Cordebugexceptionflags](cordebugexceptionflags-enumeration.md)列挙体の値。  
+ から例外に関する追加情報を指定する [Cordebugexceptionflags](cordebugexceptionflags-enumeration.md) 列挙体の値。  
   
-## <a name="remarks"></a>Remarks  
- `ExceptionUnwind`は、例外処理プロセスのアンワインドフェーズ中にさまざまなポイントで呼び出されます。 `ExceptionUnwind`1つの例外をアンワインドしている間に、複数回呼び出すことができます。  
+## <a name="remarks"></a>注釈  
+
+ `ExceptionUnwind` は、例外処理プロセスのアンワインドフェーズ中にさまざまなポイントで呼び出されます。 `ExceptionUnwind` 1つの例外をアンワインドしている間に、複数回呼び出すことができます。  
   
  が `dwEventType` DEBUG_EXCEPTION_INTERCEPTED の場合、命令ポインターは、例外の原因となった命令の前 (これは複数の命令になることがあります) に、スレッドのリーフフレームに配置されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

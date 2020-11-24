@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 895c35cf-b95d-4e3b-93b5-cfc1cf9044fc
 topic_type:
 - apiref
-ms.openlocfilehash: 41e7b8193ce3288d526db8d7d8c289b0a053ee4e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8ecaa003084064be1071a85aa726c38d773ec0b4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84489757"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672579"
 ---
 # <a name="imetadatatablesgetstring-method"></a>IMetaDataTables::GetString メソッド
+
 現在の参照スコープのテーブル列から、指定したインデックス位置にある文字列を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,6 +36,7 @@ HRESULT GetString (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ixString`  
  から次の値の検索を開始する位置のインデックス。  
   
@@ -42,11 +44,12 @@ HRESULT GetString (
  入出力返された文字列値へのポインターへのポインター。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

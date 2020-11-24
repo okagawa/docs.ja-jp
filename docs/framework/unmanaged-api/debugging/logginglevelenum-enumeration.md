@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 09daac08-005a-46b2-beab-408d0820c5e5
 topic_type:
 - apiref
-ms.openlocfilehash: 62ea982f30a6a73648d9bf36722c0b5a49a68896
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 389edbeb746fbeaf60d88bf9ee2a3a0731822e55
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420748"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672020"
 ---
 # <a name="logginglevelenum-enumeration"></a>LoggingLevelEnum 列挙型
+
 マネージド スレッドがイベントを記録する際にイベント ログに書き込まれる説明メッセージの重大度レベルを示します。  
   
 ## <a name="syntax"></a>構文  
@@ -62,10 +63,12 @@ typedef enum LoggingLevelEnum {
 |`LErrorLevel`|メッセージはエラーレベルです。|  
 |`LPanicLevel`|メッセージはパニックレベルです。|  
   
-## <a name="remarks"></a>解説  
- 共通言語ランタイム (CLR: common language runtime) は、コンポーネントのマネージ[コールバック:: LogMessage](icordebugmanagedcallback-logmessage-method.md)メソッドを呼び出して、マネージスレッドがイベントを記録したことをデバッガーに通知します。 CLR は、マネージスレッドによって `LoggingLevelEnum` イベントログに書き込まれたメッセージの重大度レベルを示すために、列挙体の値を渡します。  
+## <a name="remarks"></a>注釈  
+
+ 共通言語ランタイム (CLR: common language runtime) は、コンポーネントのマネージ [コールバック:: LogMessage](icordebugmanagedcallback-logmessage-method.md) メソッドを呼び出して、マネージスレッドがイベントを記録したことをデバッガーに通知します。 CLR は、マネージスレッドによって `LoggingLevelEnum` イベントログに書き込まれたメッセージの重大度レベルを示すために、列挙体の値を渡します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

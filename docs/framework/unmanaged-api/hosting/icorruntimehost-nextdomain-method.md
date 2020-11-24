@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: fe07a05b-f6d6-44b5-ab01-b9a6eb15c350
 topic_type:
 - apiref
-ms.openlocfilehash: 079164d15141983711e976e0209cc22c818d9cd9
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 598c46d50d7b4a67c1b2c0d844c9b12deb12a428
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83760421"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671370"
 ---
 # <a name="icorruntimehostnextdomain-method"></a>ICorRuntimeHost::NextDomain メソッド
+
 列挙体の次のドメインへのインターフェイスポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,8 +36,9 @@ HRESULT NextDomain (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `hEnum`  
- から[Enumdomains](icorruntimehost-enumdomains-method.md)の呼び出しによって取得された列挙子。  
+ から [Enumdomains](icorruntimehost-enumdomains-method.md)の呼び出しによって取得された列挙子。  
   
  `pAppDomain`  
  入出力列挙体の次のドメインを表す型へのインターフェイスポインター <xref:System._AppDomain?displayProperty=nameWithType> 。または、他のドメインが存在しない場合は null。  
@@ -51,11 +53,12 @@ HRESULT NextDomain (
 |HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージドコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** 1.0、1.1  
   

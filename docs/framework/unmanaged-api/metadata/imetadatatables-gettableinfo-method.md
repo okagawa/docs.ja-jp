@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50cbe557-2322-41aa-8e0d-f967602eaa0f
 topic_type:
 - apiref
-ms.openlocfilehash: 7e60dd9535809ca13f3bbe6ac76f5ea1209df734
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 65943ac169106a95feaff7d44017444e65764b60
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501175"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672527"
 ---
 # <a name="imetadatatablesgettableinfo-method"></a>IMetaDataTables::GetTableInfo メソッド
+
 指定されたテーブルの名前、行のサイズ、行数、列の数、およびキー列のインデックスを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,6 +40,7 @@ HRESULT GetTableInfo (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ixTbl`  
  から返されるプロパティを持つテーブルの識別子。  
   
@@ -58,11 +60,12 @@ HRESULT GetTableInfo (
  入出力テーブル名へのポインターへのポインター。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

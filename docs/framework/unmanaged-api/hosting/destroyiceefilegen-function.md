@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: dc1e2235-e721-4cb2-a0b8-6b0c030d7bab
 topic_type:
 - apiref
-ms.openlocfilehash: ff7e7b299d185b8db263d2076c1e075b87b487fc
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 495d84470c559df13ea64b63dd00582f4335d4e3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616399"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673194"
 ---
 # <a name="destroyiceefilegen-function"></a>DestroyICeeFileGen 関数
+
 [ICeeFileGen](iceefilegen-class.md)オブジェクトを破棄します。  
   
  この関数は .NET Framework 4 で非推奨とされました。  
@@ -37,21 +38,25 @@ HRESULT DestroyICeeFileGen (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ceeFileGen`  
- から`ICeeFileGen`破棄するオブジェクト。  
+ から `ICeeFileGen` 破棄するオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
+
  このメソッドは、標準の COM エラーコードを返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  `DestroyICeeFileGen``ICeeFileGen` [CreateICeeFileGen](createiceefilegen-function.md)関数によって作成されたオブジェクトを破棄します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** ICeeFileGen  
   
- **ライブラリ:** MSCorPE  
+ **ライブラリ:** MSCorPE.dll  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

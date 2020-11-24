@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: eb4e4ce0-06e7-4469-bbc4-edc2eb5da4b1
 topic_type:
 - apiref
-ms.openlocfilehash: cc8ab6f0c8115da4d74280023dc692b66846ed94
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a029784a28036e531670ad373893b4256c5864c4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497752"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671188"
 ---
 # <a name="icorprofilerinfo-interface"></a>ICorProfilerInfo インターフェイス
+
 コードプロファイラーが共通言語ランタイム (CLR) と通信してイベントの監視および要求情報を制御するために使用するメソッドを提供します。  
   
 > [!NOTE]
@@ -37,13 +38,13 @@ ms.locfileid: "84497752"
 |[GetAppDomainInfo メソッド](icorprofilerinfo-getappdomaininfo-method.md)|指定されたアプリケーションドメインに関する情報を取得します。|  
 |[GetAssemblyInfo メソッド](icorprofilerinfo-getassemblyinfo-method.md)|指定したアセンブリに関する情報を取得します。|  
 |[GetClassFromObject メソッド](icorprofilerinfo-getclassfromobject-method.md)|のを取得します。 `ClassID`<br /><br /> オブジェクトを指定 `ObjectID` します。|  
-|[GetClassFromToken メソッド](icorprofilerinfo-getclassfromtoken-method.md)|メタデータトークンを指定して、クラスの ID を取得します。 このメソッドは .NET Framework バージョン2.0 では廃止されています。 代わりに[ICorProfilerInfo2:: GetClassFromTokenAndTypeArgs](icorprofilerinfo2-getclassfromtokenandtypeargs-method.md)メソッドを使用してください。|  
+|[GetClassFromToken メソッド](icorprofilerinfo-getclassfromtoken-method.md)|メタデータトークンを指定して、クラスの ID を取得します。 このメソッドは .NET Framework バージョン2.0 では廃止されています。 代わりに [ICorProfilerInfo2:: GetClassFromTokenAndTypeArgs](icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) メソッドを使用してください。|  
 |[GetClassIDInfo メソッド](icorprofilerinfo-getclassidinfo-method.md)|指定したクラスの親モジュールとメタデータトークンを取得します。|  
-|[GetCodeInfo メソッド](icorprofilerinfo-getcodeinfo-method.md)|指定した関数 ID に関連付けられているネイティブ コードの範囲を取得します。 このメソッドは、互換性のために残されています。 代わりに[ICorProfilerInfo2:: GetCodeInfo2](icorprofilerinfo2-getcodeinfo2-method.md)メソッドを使用してください。|  
+|[GetCodeInfo メソッド](icorprofilerinfo-getcodeinfo-method.md)|指定した関数 ID に関連付けられているネイティブ コードの範囲を取得します。 このメソッドは、互換性のために残されています。 代わりに [ICorProfilerInfo2:: GetCodeInfo2](icorprofilerinfo2-getcodeinfo2-method.md) メソッドを使用してください。|  
 |[GetCurrentThreadID メソッド](icorprofilerinfo-getcurrentthreadid-method.md)|マネージスレッドの場合、現在のスレッドの ID を取得します。|  
 |[GetEventMask メソッド](icorprofilerinfo-geteventmask-method.md)|プロファイラーが CLR からイベント通知を受信する現在のイベントカテゴリを取得します。|  
 |[GetFunctionFromIP メソッド](icorprofilerinfo-getfunctionfromip-method.md)|マネージコード命令ポインターをにマップ `FunctionID` します。|  
-|[GetFunctionFromToken メソッド](icorprofilerinfo-getfunctionfromtoken-method.md)|関数の ID を取得します。 このメソッドは .NET Framework バージョン2.0 では廃止されています。 代わりに[ICorProfilerInfo2:: GetFunctionFromTokenAndTypeArgs](icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md)メソッドを使用してください。|  
+|[GetFunctionFromToken メソッド](icorprofilerinfo-getfunctionfromtoken-method.md)|関数の ID を取得します。 このメソッドは .NET Framework バージョン2.0 では廃止されています。 代わりに [ICorProfilerInfo2:: GetFunctionFromTokenAndTypeArgs](icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) メソッドを使用してください。|  
 |[GetFunctionInfo メソッド](icorprofilerinfo-getfunctioninfo-method.md)|指定された関数の親クラスとメタデータトークンを取得します。|  
 |[GetHandleFromThread メソッド](icorprofilerinfo-gethandlefromthread-method.md)|スレッドの ID を Win32 スレッドハンドルにマップします。|  
 |[GetILFunctionBody メソッド](icorprofilerinfo-getilfunctionbody-method.md)|Microsoft 中間言語 (MSIL) コード内のメソッドの本文へのポインターを、ヘッダーを開始位置として取得します。|  
@@ -65,14 +66,16 @@ ms.locfileid: "84497752"
 |[SetILFunctionBody メソッド](icorprofilerinfo-setilfunctionbody-method.md)|指定したモジュール内の指定した関数の本体を置き換えます。|  
 |[SetILInstrumentedCodeMap メソッド](icorprofilerinfo-setilinstrumentedcodemap-method.md)|指定された関数の元の MSIL のオフセットが、関数のプロファイラーによって変更された MSIL の新しいオフセットにどのようにマップされるかを指定します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  プロファイラーは、 `ICorProfilerInfo` CLR と通信してイベントの監視と要求情報を制御するために、インターフェイスのメソッドを呼び出します。  
   
  インターフェイスのメソッドは、 `ICorProfilerInfo` フリースレッドモデルを使用して CLR によって実装されます。 各メソッドが、成功または失敗を示す HRESULT を返します。 使用できるリターンコードの一覧については、「CorError. h」を参照してください。  
   
- CLR は、初期化中に各コードプロファイラーへのインターフェイスとして、プロファイラーの[ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md)の実装を介してを渡し `ICorProfilerInfo` ます。 次に、コードプロファイラーは、インターフェイスのメソッドを呼び出して、 `ICorProfilerInfo` CLR の制御下で実行されているマネージコードに関する情報を取得できます。  
+ CLR は、初期化中に各コードプロファイラーへのインターフェイスとして、プロファイラーの [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md)の実装を介してを渡し `ICorProfilerInfo` ます。 次に、コードプロファイラーは、インターフェイスのメソッドを呼び出して、 `ICorProfilerInfo` CLR の制御下で実行されているマネージコードに関する情報を取得できます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

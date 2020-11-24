@@ -6,17 +6,19 @@ helpviewer_keywords:
 - metadata interfaces [.NET Framework]
 - interfaces (.NET Framework metadata]
 ms.assetid: f5cdac93-a28c-48ef-8a19-5773376e9e7c
-ms.openlocfilehash: 4d947388afb8d7f8f935ae3b8e8aff81efaf2ee4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5d9b48df740668797a7c901219401e9ea304a8f8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84489596"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672882"
 ---
 # <a name="metadata-interfaces"></a>メタデータ インターフェイス
+
 このセクションでは、.NET Framework の型、メソッド、フィールドなどによって公開されるメタデータにアクセスできるようにするアンマネージ インターフェイスについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [ICeeGen インターフェイス](iceegen-interface.md)  
  動的なコード コンパイルのためのメソッドを提供します。  
   
@@ -72,6 +74,7 @@ ms.locfileid: "84489596"
  メタデータ署名の検証で使用するメソッドを提供します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [メタデータ グローバル静的関数](metadata-global-static-functions.md)  
   
  [メタデータ列挙体](metadata-enumerations.md)  

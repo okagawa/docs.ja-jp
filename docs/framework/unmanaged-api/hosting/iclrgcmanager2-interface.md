@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4b5ffd7b-9ad7-41cd-9bba-34030ae3da7e
 topic_type:
 - apiref
-ms.openlocfilehash: 0f3ecc0d497eaee937647df47ba0956335a2fe41
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: d2873b5e1f8229e8a16dfaacf1c9737ac47405bb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703951"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672800"
 ---
 # <a name="iclrgcmanager2-interface"></a>ICLRGCManager2 インターフェイス
+
 ホストが共通言語ランタイムのガベージコレクションシステムと対話できるようにするメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
@@ -30,17 +31,19 @@ ms.locfileid: "83703951"
 |------------|-----------------|  
 |[SetGCStartupLimitsEx メソッド](iclrgcmanager2-setgcstartuplimitsex-method.md)|ガベージコレクションセグメントのサイズとガベージコレクションシステムのジェネレーション0の最大サイズを設定します。 より大きいジェネレーション0およびセグメントサイズを有効に `DWORD` します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  このインターフェイスは、 [ICLRGCManager インターフェイス](iclrgcmanager-interface.md)から継承されます。  
   
- 共通言語ランタイム (CLR) は、マネージ型を使用してガベージコレクション機構を実装し <xref:System.GC> ます。 ガベージコレクションシステムの詳細については、「[ガベージコレクション](../../../standard/garbage-collection/index.md)」を参照してください。  
+ 共通言語ランタイム (CLR) は、マネージ型を使用してガベージコレクション機構を実装し <xref:System.GC> ます。 ガベージコレクションシステムの詳細については、「 [ガベージコレクション](../../../standard/garbage-collection/index.md)」を参照してください。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
