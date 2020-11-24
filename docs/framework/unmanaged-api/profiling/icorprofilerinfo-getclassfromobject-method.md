@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b97493fb-713e-49d5-a73e-5688b2ad0700
 topic_type:
 - apiref
-ms.openlocfilehash: 613267549329d2f48dcd18ae341e47538e414ac0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5a7edc6045969861679d1b80c0563e99f48932cf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84498532"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680249"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a>ICorProfilerInfo::GetClassFromObject メソッド
+
 を指定して、オブジェクトのを取得し `ClassID` `ObjectID` ます。  
   
 ## <a name="syntax"></a>構文  
@@ -34,16 +35,19 @@ HRESULT GetClassFromObject(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `objectId`  
  からを取得する対象のオブジェクトの ID `ClassID` 。  
   
  `pClassId`  
  入出力返されたへのポインター `ClassID` 。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  Null は、が `pClassId` `objectId` アンロード中の型を持つことを示します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: cccb650f-abe0-41e2-9fd1-b383788eb1f6
 topic_type:
 - apiref
-ms.openlocfilehash: cca73eec663b9afd12ecea5ab9d7073ea0168d33
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4b2fed963d2d0ebec54e5f7a4d95cba26c1bac1f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501559"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680953"
 ---
 # <a name="ihostassemblystore-interface"></a>IHostAssemblyStore インターフェイス
+
 共通言語ランタイム (CLR) とは独立して、ホストがアセンブリとモジュールを読み込むことができるようにするメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
@@ -31,8 +32,9 @@ ms.locfileid: "84501559"
 |[ProvideAssembly メソッド](ihostassemblystore-provideassembly-method.md)|[IHostAssemblyManager:: GetNonHostStoreAssemblies](ihostassemblymanager-getnonhoststoreassemblies-method.md)の呼び出しから返された[ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md)によって参照されていないアセンブリへの参照を取得します。|  
 |[ProvideModule メソッド](ihostassemblystore-providemodule-method.md)|アセンブリ内のモジュール、またはリンクされた (埋め込まれていない) リソースファイル内のモジュールを解決します。|  
   
-## <a name="remarks"></a>解説  
- `IHostAssemblyStore`ホストがアセンブリ id に基づいてアセンブリを効率的に読み込む方法を提供します。 ホストは、 `IStream` バイトを直接指し示すインスタンスを返すことによって、アセンブリを読み込みます。  
+## <a name="remarks"></a>注釈  
+
+ `IHostAssemblyStore` ホストがアセンブリ id に基づいてアセンブリを効率的に読み込む方法を提供します。 ホストは、 `IStream` バイトを直接指し示すインスタンスを返すことによって、アセンブリを読み込みます。  
   
  CLR は、 `IHostAssemblyStore` 初期化時にを呼び出すことによってホストが実装されているかどうかを判断し `IHostAssemblyManager::GetNonHostAssemblyStores` ます。 これにより、ホストは、たとえば、ユーザーアセンブリへのバインドを制御できますが、ランタイムに依存して .NET Framework アセンブリにバインドすることができます。  
   
@@ -40,14 +42,15 @@ ms.locfileid: "84501559"
 > の実装を提供 `IHostAssemblyStore` する場合、ホストはから返されたによって参照されていないすべてのアセンブリを解決するための目的を指定し `ICLRAssemblyReferenceList` `IHostAssemblyManager::GetNonHostStoreAssemblies` ます。  
   
 > [!NOTE]
-> .NET Framework バージョン2.0 では、[ネイティブイメージジェネレーター (ngen.exe)](../../tools/ngen-exe-native-image-generator.md)ユーティリティによって提供されるアセンブリのネイティブイメージをホストが読み込む方法は提供されていません。  
+> .NET Framework バージョン2.0 では、 [ネイティブイメージジェネレーター (Ngen.exe)](../../tools/ngen-exe-native-image-generator.md) ユーティリティによって提供されるように、アセンブリのネイティブイメージをホストが読み込むことはできません。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 996c71ae-0676-4616-a085-84ebf507649d
 topic_type:
 - apiref
-ms.openlocfilehash: 1214182c95f7d0304ec920a2ea7dae91b1f4a790
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4da09be6816174a1d4a131086d5e98b881c27b9c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503338"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680266"
 ---
 # <a name="icorprofilercallbackmovedreferences-method"></a>ICorProfilerCallback::MovedReferences メソッド
+
 圧縮ガベージ コレクションを実行した後の、ヒープ内のオブジェクトの新しいレイアウトを報告するために呼び出されます。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT MovedReferences(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `cMovedObjectIDRanges`  
  [in] 圧縮ガベージ コレクションを実行した後に移動される、隣接したオブジェクトのブロック数。 つまり、`cMovedObjectIDRanges` の値は `oldObjectIDRangeStart`、`newObjectIDRangeStart`、および `cObjectIDRangeLength` 配列の合計サイズです。  
   
@@ -52,10 +54,10 @@ HRESULT MovedReferences(
   
  サイズは、`oldObjectIDRangeStart` および `newObjectIDRangeStart` 配列内の参照される各ブロックに対して指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 > [!IMPORTANT]
-> このメソッドは、64 ビット プラットフォームで 4 GB より大きいオブジェクトのサイズを `MAX_ULONG` として報告します。 4 GB より大きいオブジェクトのサイズを取得するには、代わりに[ICorProfilerCallback4:: MovedReferences2](icorprofilercallback4-movedreferences2-method.md)メソッドを使用します。  
+> このメソッドは、64 ビット プラットフォームで 4 GB より大きいオブジェクトのサイズを `MAX_ULONG` として報告します。 4 GB より大きいオブジェクトのサイズを取得するには、代わりに [ICorProfilerCallback4:: MovedReferences2](icorprofilercallback4-movedreferences2-method.md) メソッドを使用します。  
   
  圧縮ガベージ コレクターは、無効なオブジェクトによって占有されているメモリを解放し、解放された領域を圧縮します。 その結果、ヒープ内で有効なオブジェクトが移動され、以前の通知で配布された `ObjectID` の値が変更されることがあります。  
   
@@ -69,15 +71,16 @@ HRESULT MovedReferences(
   
  `i` の値が次の範囲内にあるとします。  
   
- 0 <=`i` < `cMovedObjectIDRanges`  
+ 0 <= `i` < `cMovedObjectIDRanges`  
   
  この場合、新しい `ObjectID` は次のように計算できます。  
   
- `newObjectID` = `newObjectIDRangeStart[i]`+ ( `oldObjectID` – `oldObjectIDRangeStart[i]` )  
+ `newObjectID` = `newObjectIDRangeStart[i]` + ( `oldObjectID` – `oldObjectIDRangeStart[i]` )  
   
  ガーベッジ コレクションでオブジェクトが古い場所から新しい場所へ移動中の可能性があるため、コールバックの間は `MovedReferences` によって渡される `ObjectID` 値はすべて無効です。 このため、`MovedReferences` 呼び出しの間、プロファイラーはオブジェクトを検査するべきではありません。 [ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md)コールバックは、すべてのオブジェクトが新しい場所に移動され、検査を実行できることを示します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

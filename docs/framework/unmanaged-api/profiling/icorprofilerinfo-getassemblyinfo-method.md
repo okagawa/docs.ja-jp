@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7a3c97c3-1e31-47b1-bf23-386785c509c4
 topic_type:
 - apiref
-ms.openlocfilehash: 41083b2fcd61a9a726e835c3d5710308aa634600
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ff81da15b17ab0a7fbe62b08e358f65eed3edb71
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84498636"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680274"
 ---
 # <a name="icorprofilerinfogetassemblyinfo-method"></a>ICorProfilerInfo::GetAssemblyInfo メソッド
+
 アセンブリ ID を受け入れ、アセンブリの名前とアセンブリのマニフェスト モジュールの ID を返します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,6 +40,7 @@ HRESULT GetAssemblyInfo(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `assemblyId`  
  [in] アセンブリの識別子。  
   
@@ -57,12 +59,14 @@ HRESULT GetAssemblyInfo(
  `pModuleId`  
  [out] アセンブリのマニフェスト モジュールの ID へのポインター。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  このメソッドから制御が戻った後で、`szName` バッファーのサイズが十分で、アセンブリの完全名を格納できたかどうかを確認する必要があります。 これを行うには、`pcchName` が指している値を `cchName` パラメーターの値と比較します。 `pcchName` が指している値が `cchName` の値より大きい場合は、`szName` バッファーの割り当てを増やし、`cchName` を新しい大きいサイズに更新して、`GetAssemblyInfo` を再度呼び出します。  
   
  別の方法として、最初に `GetAssemblyInfo` を長さゼロの `szName` バッファーで呼び出して、適切なバッファーのサイズを取得します。 その後、バッファーのサイズを `pcchName` で返された値に基づいて調整し、`GetAssemblyInfo` を再度呼び出します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

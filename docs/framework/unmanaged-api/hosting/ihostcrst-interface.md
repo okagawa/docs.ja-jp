@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ac298ebd-0815-47e4-a823-30b31baab903
 topic_type:
 - apiref
-ms.openlocfilehash: e8cb1486ccea11ba6edcf7bbb781a9bf210b496d
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 350af708456914c73929d2b8887173cf784d4294
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804901"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680561"
 ---
 # <a name="ihostcrst-interface"></a>IHostCrst インターフェイス
+
 スレッド処理のためのクリティカルセクションのホストの表現として機能します。  
   
 ## <a name="methods"></a>メソッド  
@@ -33,15 +34,17 @@ ms.locfileid: "83804901"
 |[SetSpinCount メソッド](ihostcrst-setspincount-method.md)|クリティカルセクションのスピンカウントを設定します。|  
 |[TryEnter メソッド](ihostcrst-tryenter-method.md)|クリティカルセクションへの入力を試行し、成功または失敗を直ちに報告します。|  
   
-## <a name="remarks"></a>解説  
- `IHostCrst`またはなどの Win32 関数を使用するのではなく、共通言語ランタイム (CLR) が、クリティカルセクションのホストの表現と直接通信できるようにし `EnterCriticalSection` `LeaveCriticalSection` ます。  
+## <a name="remarks"></a>注釈  
+
+ `IHostCrst` またはなどの Win32 関数を使用するのではなく、共通言語ランタイム (CLR) が、クリティカルセクションのホストの表現と直接通信できるようにし `EnterCriticalSection` `LeaveCriticalSection` ます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

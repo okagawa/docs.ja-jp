@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1bf00b42-69da-4019-91b3-bf88026e83fb
 topic_type:
 - apiref
-ms.openlocfilehash: 85adf2dbdbb8c02192a9017bc4f664274a08ee24
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 698f6abc872a7e072ae47520386aa9c7ddfb44fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496582"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681471"
 ---
 # <a name="icorprofilerinfo3enummodules-method"></a>ICorProfilerInfo3::EnumModules メソッド
+
 アプリケーションに読み込まれるマネージド モジュールのコレクションを順番に反復処理するメソッドを提供する列挙子を返します。  
   
 ## <a name="syntax"></a>構文  
@@ -32,12 +33,14 @@ HRESULT EnumModules([out] ICorProfilerModuleEnum** ppEnum);
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ppEnum`  
- 入出力[ICorProfilerModuleEnum](icorprofilermoduleenum-interface.md)インターフェイスへのポインター。  
+ 入出力 [ICorProfilerModuleEnum](icorprofilermoduleenum-interface.md) インターフェイスへのポインター。  
   
 ## <a name="remarks"></a>解説  
   
 ## <a name="requirements"></a>必要条件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
