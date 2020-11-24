@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 86c397c3-81d8-463e-a248-3cbe06c44d9d
 topic_type:
 - apiref
-ms.openlocfilehash: 0d98df05291ed8405addcfd183d7e02332e4e025
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 0f2f5acfc6a23398b15af3a63345050eb0dfd5b4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209696"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687191"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>ICorDebugProcess5::EnumerateGCReferences メソッド
+
 プロセスでガベージコレクトされるすべてのオブジェクトの列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,16 +36,19 @@ HRESULT EnumerateGCReferences(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `enumerateWeakReferences`  
  から弱い参照も列挙するかどうかを示すブール値。 がの場合 `enumerateWeakReferences` `true` 、 `ppEnum` 列挙子には、厳密な参照と弱い参照の両方が含まれます。 がの場合 `enumerateWeakReferences` `false` 、列挙子には厳密な参照のみが含まれます。  
   
  `ppEnum`  
- 入出力ガベージコレクションの対象となるオブジェクトの列挙子[である、](icordebuggcreferenceenum-interface.md)ツールのアドレスへのポインターです。  
+ 入出力ガベージコレクションの対象となるオブジェクトの列挙子 [である、](icordebuggcreferenceenum-interface.md) ツールのアドレスへのポインターです。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  このメソッドは、プロセス内の任意のマネージオブジェクトの完全なルートチェーンを確認する方法を提供し、オブジェクトがまだアクティブである理由を判断するために使用できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
