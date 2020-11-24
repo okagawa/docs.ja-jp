@@ -2,18 +2,17 @@
 title: 文字列を部分文字列に分離する
 description: String.Split、正規表現、String.Substring など、文字列の一部を抽出するさまざまな手法について説明します。
 ms.date: 10/30/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - strings [.NET], breaking up
-ms.openlocfilehash: 88947c4576b0496e4b4e45042d665e3ca5857c53
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: b753476b7d8e5808fdcacc6f28bd1de5f8b232bb
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93403484"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829650"
 ---
 # <a name="extract-substrings-from-a-string"></a>文字列から部分文字列を抽出する
 
@@ -21,7 +20,7 @@ ms.locfileid: "93403484"
 
 - 目的の部分文字列が既知の区切り文字 (1 つまたは複数) で区切られている場合は、[Split メソッド](#stringsplit-method)を使用します。
 - 文字列が固定パターンに準拠している場合は、[正規表現](#regular-expressions)が便利です。
-- 文字列内の " *すべての* " 部分文字列を抽出したくないときは、[IndexOf メソッドと Substring メソッド](#stringindexof-and-stringsubstring-methods)を組み合わせて使用します。
+- 文字列内の "*すべての*" 部分文字列を抽出したくないときは、[IndexOf メソッドと Substring メソッド](#stringindexof-and-stringsubstring-methods)を組み合わせて使用します。
 
 ## <a name="stringsplit-method"></a>String.Split メソッド
 
@@ -44,7 +43,7 @@ ms.locfileid: "93403484"
 
 ## <a name="regular-expressions"></a>正規表現
 
-文字列が固定パターンに準拠している場合は、正規表現を使用してその要素を抽出して処理できます。 たとえば、文字列の形式が " *数字* *オペランド* *数字* " の場合、[正規表現](regular-expressions.md)を使用して、文字列の要素を抽出して処理できます。 次に例を示します。
+文字列が固定パターンに準拠している場合は、正規表現を使用してその要素を抽出して処理できます。 たとえば、文字列の形式が "*数字* *オペランド* *数字*" の場合、[正規表現](regular-expressions.md)を使用して、文字列の要素を抽出して処理できます。 次に例を示します。
 
 :::code language="csharp" source="snippets/parse-strings/csharp/regex.cs" id="1" interactive="try-dotnet":::
 :::code language="vb" source="snippets/parse-strings/vb/regex.vb" id="1":::
@@ -61,7 +60,7 @@ ms.locfileid: "93403484"
 
 また、正規表現を使用して、固定の文字セットではなく、パターンに基づいて文字列から部分文字列を抽出することもできます。 これは、次のいずれかの条件が発生するときの一般的なシナリオです。
 
-- 1 つ以上の区切り文字が、<xref:System.String> インスタンスの区切り記号として " *常に* " 使用されるとは限りません。
+- 1 つ以上の区切り文字が、<xref:System.String> インスタンスの区切り記号として "*常に*" 使用されるとは限りません。
 
 - 区切り文字のシーケンスと数が、可変または不明です。
 

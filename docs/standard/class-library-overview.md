@@ -2,7 +2,6 @@
 title: .NET クラス ライブラリの概要
 description: .NET クラス ライブラリについて説明します。 .NET API には、システム機能へのアクセスを提供する、クラス、インターフェイス、デリゲート、および値の型が含まれます。
 ms.date: 02/08/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - classes [.NET], library overview
 - .NET, library overview
@@ -36,12 +35,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: 95dcbea6e0b3f2cd91bd6955a11ede7c9731caca
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 44a46db4fa7ebf6dd5802cc07e7d18744c72ad68
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687518"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831261"
 ---
 # <a name="net-class-library-overview"></a>.NET クラス ライブラリの概要
 
@@ -69,7 +68,7 @@ ms.locfileid: "92687518"
   
  この名前付け方法によって、.NET を拡張するライブラリ開発者は、型の階層構造のグループを作成して一貫性のあるわかりやすい名前を付けることが容易になります。 また、型の完全名 (つまり名前空間と型名) によって型を明確に特定できるため、型名の競合を防ぐことができます。 ライブラリ開発者は、次の規則に従って名前空間の名前を付けてください。  
   
- *CompanyName*. *TechnologyName*  
+ *CompanyName*.*TechnologyName*  
   
  たとえば、名前空間 `Microsoft.Word` はこのガイドラインに従っています。  
   

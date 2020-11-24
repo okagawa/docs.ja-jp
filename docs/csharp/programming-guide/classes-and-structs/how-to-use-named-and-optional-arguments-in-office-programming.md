@@ -6,13 +6,15 @@ helpviewer_keywords:
 - named and optional arguments [C#], Office programming
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
+ms.topic: how-to
+ms.custom: contperfq2
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: 7e24331d37e8fdbe2bc66a2d9f73a5f6a7242af9
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 9960ba2c39d58734a04cb7ca892ed321fd09822b
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864346"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099049"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Office プログラミングで名前付き引数と省略可能な引数を使用する方法 (C# プログラミング ガイド)
 
@@ -40,11 +42,11 @@ C# 4 で導入された名前付き引数と省略可能な引数を使うと、
 
 7. **[OK]** をクリックします。
 
-     **ソリューション エクスプローラー**に新しいプロジェクトが表示されます。
+     **ソリューション エクスプローラー** に新しいプロジェクトが表示されます。
 
 ## <a name="to-add-a-reference"></a>参照を追加するには
 
-1. **ソリューション エクスプローラー**で、プロジェクトの名前を右クリックし、 **[参照の追加]** をクリックします。 **[参照の追加]** ダイアログ ボックスが表示されます。
+1. **ソリューション エクスプローラー** で、プロジェクトの名前を右クリックし、 **[参照の追加]** をクリックします。 **[参照の追加]** ダイアログ ボックスが表示されます。
 
 2. **[.NET]** ページの **[コンポーネント名]** の一覧で、**Microsoft.Office.Interop.Word** を選びます。
 
@@ -52,7 +54,7 @@ C# 4 で導入された名前付き引数と省略可能な引数を使うと、
 
 ## <a name="to-add-necessary-using-directives"></a>ディレクティブを使用して必要なものを追加するには
 
-1. **ソリューション エクスプローラー**で、*Program.cs* ファイルを右クリックし、 **[コードの表示]** をクリックします。
+1. **ソリューション エクスプローラー** で、*Program.cs* ファイルを右クリックし、 **[コードの表示]** をクリックします。
 
 2. 次の `using` ディレクティブをコード ファイルの先頭に追加します。
 

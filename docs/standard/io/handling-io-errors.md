@@ -2,7 +2,6 @@
 title: .NET での I/O エラーの処理
 description: .NET で I/O エラーを処理する方法について学習します。 エラー コードを例外にマップし、I/O 操作で例外を処理して、IOException を処理します。
 ms.date: 08/27/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bd7112b3052f246a01e4a36d6d425b37cb6174dd
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: fe6796be91d31e3f7bf69605f39a39f3db6b3e83
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188043"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830871"
 ---
 # <a name="handling-io-errors-in-net"></a>.NET での I/O エラーの処理
 

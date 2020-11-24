@@ -2,7 +2,6 @@
 title: 標準 TimeSpan 書式指定文字列
 description: 単一の書式指定子を使用して .NET の TimeSpan 値のテキスト表現を定義する、標準の TimeSpan 書式指定文字列について確認します。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -18,12 +17,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: 99529d480ca32cb8be1e2013ca4551534e10026b
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: ab64b2ef0a87cbad3b3c036d74f4690ff7fdb1f4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888946"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831313"
 ---
 # <a name="standard-timespan-format-strings"></a>標準 TimeSpan 書式指定文字列
 
@@ -50,7 +49,7 @@ ms.locfileid: "92888946"
 ## <a name="the-constant-c-format-specifier"></a>固定の ("c") 書式指定子  
  "c" 書式指定子は、次の書式で <xref:System.TimeSpan> 値の文字列形式を返します。  
   
- [-][ *d*.] *hh* : *mm* : *ss* [. *fffffff* ]  
+ [-][*d*.]*hh*:*mm*:*ss*[.*fffffff*]  
   
  角かっこ ([ および ]) 内の要素は省略可能です。 コロン (:) とピリオド (.) は、リテラル文字です。 残りの要素について次の表で説明します。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "92888946"
 ## <a name="the-general-short-g-format-specifier"></a>一般の短い ("g") 書式指定子  
  "g" <xref:System.TimeSpan> 書式指定子は、必要な要素のみを含めることによって、コンパクトな形式で <xref:System.TimeSpan> 値の文字列形式を返します。 次の書式を使用します。  
   
- [-][ *d* :] *h* : *mm* : *ss* [. *FFFFFFF* ]  
+ [-][*d*:]*h*:*mm*:*ss*[.*FFFFFFF*]  
   
  角かっこ ([ および ]) 内の要素は省略可能です。 コロン (:) は、リテラル文字です。 残りの要素について次の表で説明します。  
   
@@ -100,7 +99,7 @@ ms.locfileid: "92888946"
 ## <a name="the-general-long-g-format-specifier"></a>一般の長い ("G") 書式指定子  
  "G" <xref:System.TimeSpan> 書式指定子は、常に日数と秒の小数部の両方を含む長い形式で、<xref:System.TimeSpan> 値の文字列形式を返します。 "G" 標準書式指定子によって生成される文字列は、次の書式になります。  
   
- [-] *d* : *hh* : *mm* : *ss*. *fffffff*  
+ [-]*d*:*hh*:*mm*:*ss*.*fffffff*  
   
  角かっこ ([ および ]) 内の要素は省略可能です。 コロン (:) は、リテラル文字です。 残りの要素について次の表で説明します。  
   

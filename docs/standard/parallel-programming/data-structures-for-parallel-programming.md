@@ -1,16 +1,15 @@
 ---
 title: 並列プログラミング向けのデータ構造
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-ms.openlocfilehash: cea9264a30469881e3ec54fc378af3ddb70bff8e
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: c7f974c5626cf1efc6bf62c423043089d5c32e7c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925325"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829532"
 ---
 # <a name="data-structures-for-parallel-programming"></a>並列プログラミング向けのデータ構造
 
@@ -42,7 +41,7 @@ ms.locfileid: "92925325"
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|簡単なランデブー メカニズムを提供することにより、フォークと結合のシナリオを簡略化します。 詳しくは、「[CountdownEvent](../threading/countdownevent.md)」をご覧ください。|  
 |<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|<xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> と同様の同期プリミティブです。 <xref:System.Threading.ManualResetEventSlim> の方が軽量ですが、プロセス内通信にしか使えません。|  
 |<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|リソースまたはリソースのプールに同時にアクセスできるスレッドの数を制限する同期プリミティブです。 詳しくは、「[Semaphore と SemaphoreSlim](../threading/semaphore-and-semaphoreslim.md)」をご覧ください。|  
-|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|ロックを取得しようとしているスレッドがクォンタムを生成する前にしばらくループ (" *スピン* ") で待機するようになる、相互排他ロック プリミティブです。 ロックの待機が短いと予想されるシナリオでは、他のロック形式より <xref:System.Threading.SpinLock> の方がよいパフォーマンスを提供します。 詳しくは、「[SpinLock](../threading/spinlock.md)」をご覧ください。|  
+|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|ロックを取得しようとしているスレッドがクォンタムを生成する前にしばらくループ ("*スピン*") で待機するようになる、相互排他ロック プリミティブです。 ロックの待機が短いと予想されるシナリオでは、他のロック形式より <xref:System.Threading.SpinLock> の方がよいパフォーマンスを提供します。 詳しくは、「[SpinLock](../threading/spinlock.md)」をご覧ください。|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|指定された時間だけスピンし、スピン カウントを超過した場合は最終的にスレッドを待機状態にする、小型で軽量の型です。  詳しくは、「[SpinWait](../threading/spinwait.md)」をご覧ください。|  
   
  詳細については、次を参照してください。  

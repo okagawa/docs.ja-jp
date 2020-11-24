@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6a5e4a09cceb9fbc39764d76daa300aad148bf15
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 723691aac68ef8d36051073e8c954199396d4e0a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94482685"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94885050"
 ---
 | 名前 | Package | Docs | source |
 | ---- | ------- | ---- | ------ |
@@ -382,7 +382,7 @@ ms.locfileid: "94482685"
 | Event Hubs - イベントプロセッサ | NuGet [5.2.0](https://www.nuget.org/packages/Azure.Messaging.EventHubs.Processor/5.2.0)<br>NuGet [5.3.0-beta.3](https://www.nuget.org/packages/Azure.Messaging.EventHubs.Processor/5.3.0-beta.3) | [docs](/dotnet/api/overview/azure/Messaging.EventHubs.Processor-readme-pre/) | GitHub [5.2.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Messaging.EventHubs.Processor_5.2.0/sdk/eventhub/Azure.Messaging.EventHubs.Processor/)<br>GitHub [5.3.0-beta.3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Messaging.EventHubs.Processor_5.3.0-beta.3/sdk/eventhub/Azure.Messaging.EventHubs.Processor/) |
 | Event Hubs - イベントプロセッサ | NuGet [4.3.1](https://www.nuget.org/packages/Microsoft.Azure.EventHubs.Processor/4.3.1) |  | GitHub [4.3.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.EventHubs.Processor_4.3.1/sdk/eventhub/Microsoft.Azure.EventHubs.Processor/) |
 | Event Hubs - Service Fabric プロセッサ | NuGet [0.5.4](https://www.nuget.org/packages/Microsoft.Azure.EventHubs.ServiceFabricProcessor/0.5.4) |  | GitHub [0.5.4](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.EventHubs.ServiceFabricProcessor_0.5.4/sdk/eventhub/Microsoft.Azure.EventHubs.ServiceFabricProcessor/) |
-| 拡張機能 - Azure | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Extensions.Azure/1.0.0)<br>NuGet [1.1.0-beta.1](https://www.nuget.org/packages/Microsoft.Extensions.Azure/1.1.0-beta.1) |  | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Extensions.Azure_1.0.0/sdk/core/Microsoft.Extensions.Azure/)<br>GitHub [1.1.0-beta.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Extensions.Azure_1.1.0-beta.1/sdk/core/Microsoft.Extensions.Azure/) |
+| 拡張機能 - Azure | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Extensions.Azure/1.0.0)<br>NuGet [1.1.0-beta.1](https://www.nuget.org/packages/Microsoft.Extensions.Azure/1.1.0-beta.1) |  | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Extensions.Azure_1.0.0/sdk/core/Microsoft.Extensions.Azure/) |
 | 拡張機能 - Cosmos のキャッシュ | NuGet [1.0.0-preview5](https://www.nuget.org/packages/Microsoft.Extensions.Caching.Cosmos/1.0.0-preview5) |  | GitHub [1.0.0-preview5](https://github.com/Azure/Microsoft.Extensions.Caching.Cosmos/tree/v1.0.0-preview4) |
 | Form Recognizer | NuGet [3.0.0](https://www.nuget.org/packages/Azure.AI.FormRecognizer/3.0.0) | [docs](/dotnet/api/overview/azure/AI.FormRecognizer-readme/) | GitHub [3.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.AI.FormRecognizer_3.0.0/sdk/formrecognizer/Azure.AI.FormRecognizer/) |
 | Form Recognizer | NuGet [0.8.0-preview](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.FormRecognizer/0.8.0-preview) |  | GitHub [0.8.0-preview](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/cognitiveservices/FormRecognizer) |

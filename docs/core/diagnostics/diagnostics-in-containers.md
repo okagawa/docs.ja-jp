@@ -2,12 +2,12 @@
 title: コンテナーでの診断の収集
 description: この記事では、.NET Core 診断ツールを Docker コンテナーで使用する方法について説明します。
 ms.date: 09/01/2020
-ms.openlocfilehash: e57f3696433bbf6f35b2e3e5d1e72ae8b1e3eeb3
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: cf4bbdf75e943f093a2202f91303a2eea7125487
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91450835"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916210"
 ---
 # <a name="collect-diagnostics-in-containers"></a>コンテナーでの診断の収集
 
@@ -23,17 +23,17 @@ ms.locfileid: "91450835"
 
 ```dockerfile
 # In build stage
-# Install desired .NET CLI diagnostics tools
-RUN dotnet tool install --tool-path /tools dotnet-trace
-RUN dotnet tool install --tool-path /tools dotnet-counters
-RUN dotnet tool install --tool-path /tools dotnet-dump
+# Install desired .NET CLI diagnostics tools
+RUN dotnet tool install --tool-path /tools dotnet-trace
+RUN dotnet tool install --tool-path /tools dotnet-counters
+RUN dotnet tool install --tool-path /tools dotnet-dump
 
 ...
 
 # In final stage
-# Copy diagnostics tools
-WORKDIR /tools
-COPY --from=build /tools .
+# Copy diagnostics tools
+WORKDIR /tools
+COPY --from=build /tools .
 ```
 
 または、CLI ツールをインストールするために必要になった時点で、コンテナーに .NET Core SDK をインストールすることもできます。 .NET Core SDK をインストールすると、.NET Core ランタイムが再インストールされるという副作用があることに注意してください。 そのため、コンテナーに存在するランタイムと一致するバージョンの SDK を必ずインストールしてください。
@@ -49,7 +49,7 @@ COPY --from=build /tools .
 
 **このツールの適用対象: ✔️** .NET Core 2.1 以降のバージョン
 
-[`PerfCollect`](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/linux-performance-tracing.md) スクリプトは、パフォーマンス トレースの収集に役に立ち、.NET Core 3.0 より前のトレースを収集する場合に推奨されるツールです。 コンテナーで `PerfCollect` を使用する場合は、次の要件を考慮してください。
+[`PerfCollect`](./trace-perfcollect-lttng.md) スクリプトは、パフォーマンス トレースの収集に役に立ち、.NET Core 3.0 より前のトレースを収集する場合に推奨されるツールです。 コンテナーで `PerfCollect` を使用する場合は、次の要件を考慮してください。
 
 1. `PerfCollect` を使用するには、[`SYS_ADMIN` 機能](https://man7.org/linux/man-pages/man7/capabilities.7.html)が必要なので (`perf` ツールを実行するため)、コンテナーが[その機能がある状態で開始される](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities)ことを確認します。
 2. `PerfCollect` では、プロファイリング対象のアプリが開始するより前に、いくつかの環境変数が設定されている必要があります。 これらは、[Dockerfile](https://docs.docker.com/engine/reference/builder/#env) で、または[コンテナーを開始する](https://docs.docker.com/engine/reference/run/#env-environment-variables)ときに、設定できます。 これらの変数は通常の運用環境では設定されないので、プロファイリング対象のコンテナーを開始するときにだけ追加するのが一般的です。 PerfCollect で必要になる 2 つの変数は次のとおりです。

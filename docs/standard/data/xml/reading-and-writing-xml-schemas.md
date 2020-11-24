@@ -2,18 +2,17 @@
 title: XML スキーマの読み取りと書き込み
 description: スキーマ オブジェクト モデル (SOM) API を使用して、.NET のファイルまたは他のソースから XML スキーマ定義言語 (XSD) スキーマの読み取りと書き込みを行います。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: b5757c4a-ea59-467e-ac62-be2bfe24eb77
-ms.openlocfilehash: 874b0bdb0e13d545cfff4c813881f1398a8f9487
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: ae951efafd68d0ddf4f74876edd4c12564d68dde
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767664"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830884"
 ---
 # <a name="reading-and-writing-xml-schemas"></a>XML スキーマの読み取りと書き込み
 スキーマ オブジェクト モデル (SOM) API を使用すると、ファイルまたは他のソースから XML スキーマ定義言語 (XSD) スキーマを読み取ったり、書き込んだりできます。また、W3C (World Wide Web Consortium) 勧告『XML Schema』で定義された構造に割り当てられた <xref:System.Xml.Schema?displayProperty=nameWithType> 名前空間のクラスを使用してメモリ内に XML スキーマを作成することもできます。  

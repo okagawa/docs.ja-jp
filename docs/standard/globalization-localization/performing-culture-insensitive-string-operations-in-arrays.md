@@ -1,18 +1,17 @@
 ---
 title: カルチャの影響を受けない配列の操作の実行
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - culture-insensitive string operations, in arrays
 - arrays [.NET], culture-insensitive string operations
 - comparer parameter
 ms.assetid: f12922e1-6234-4165-8896-63f0653ab478
-ms.openlocfilehash: 2438040f927eae2d501b47f468097a8137329a56
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: ac8074c5d13209b6828b7afbc720921015e11bfd
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064133"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829804"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>カルチャの影響を受けない配列の操作の実行
 

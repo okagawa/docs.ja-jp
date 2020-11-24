@@ -3,13 +3,12 @@ title: 参照アセンブリ
 description: 参照アセンブリについて説明します。これはライブラリのパブリック API サーフェイスのみを含む .NET の特殊なアセンブリです。
 author: MSDN-WhiteKnight
 ms.date: 09/12/2019
-ms.technology: dotnet-standard
-ms.openlocfilehash: 43a9dab037f4d0f1926ff67f8f38eaa6734a6d67
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 2f7f026c7fca4b772be85671dcc3a2a6d50a385c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164516"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831053"
 ---
 # <a name="reference-assemblies"></a>参照アセンブリ
 

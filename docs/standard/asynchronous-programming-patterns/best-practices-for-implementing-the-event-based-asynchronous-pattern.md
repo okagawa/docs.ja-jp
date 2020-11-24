@@ -1,7 +1,6 @@
 ---
 title: イベントベースの非同期パターンを実装するための推奨される手順
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: 8f2b1b4d6793be3e4de6fbc9fc09e8a7e690762c
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 6c2df4c2877f9191bd2b8190869c359a74de8e8f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888920"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830494"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>イベントベースの非同期パターンを実装するための推奨される手順
 
@@ -39,7 +38,7 @@ ms.locfileid: "92888920"
   
 - メソッドと同じクラスで <em>MethodName</em>**Completed** イベントを定義します。  
   
-- <xref:System.ComponentModel.AsyncCompletedEventArgs> クラスから派生した <em>MethodName</em>**Completed** イベントの <xref:System.EventArgs> クラスと、これに付随するデリゲートを定義します。 既定のクラス名の形式は、 <em>MethodName</em>**CompletedEventArgs** です。  
+- <xref:System.ComponentModel.AsyncCompletedEventArgs> クラスから派生した <em>MethodName</em>**Completed** イベントの <xref:System.EventArgs> クラスと、これに付随するデリゲートを定義します。 既定のクラス名の形式は、<em>MethodName</em>**CompletedEventArgs** です。  
   
 - <xref:System.EventArgs> クラスは、<em>MethodName</em> メソッドの戻り値に固有のクラスにしてください。 <xref:System.EventArgs> クラスを使用する場合は、開発者に対して結果をキャストすることを義務付けないでください。  
   
@@ -67,7 +66,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - タスクの実行中にエラーが発生した場合は、結果にアクセスできないようにしてください。 <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> プロパティが `null` ではない場合は、<xref:System.EventArgs> 構造体のプロパティにアクセスすると例外が発生するようにしてください。 この検証を行うには、<xref:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary%2A> メソッドを使用します。  
   
-- タイムアウトをエラーとしてモデル化します。 タイムアウトが発生したら、 <em>MethodName</em>**Completed** イベントを発生させ、<xref:System.TimeoutException> を <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> プロパティに割り当てます。  
+- タイムアウトをエラーとしてモデル化します。 タイムアウトが発生したら、<em>MethodName</em>**Completed** イベントを発生させ、<xref:System.TimeoutException> を <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> プロパティに割り当てます。  
   
 - クラスで複数の同時呼び出しがサポートされている場合は、必ず <em>MethodName</em>**Completed** イベントに適切な `userSuppliedState` オブジェクトが含まれるようにします。  
   
@@ -103,7 +102,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - クラスが複数の同時呼び出しをサポートしている場合は、`IsBusy` プロパティを公開しないでください。 たとえば XML Web サービス プロキシは、非同期メソッドの複数同時呼び出しをサポートしているため、`IsBusy` プロパティを公開しません。  
   
-- `IsBusy` プロパティは、 <em>MethodName</em>**Async** メソッドが呼び出されてから、 <em>MethodName</em>**Completed** イベントが発生するまでの間は、`true` を返す必要があります。 それ以外の場合は、`false` を返す必要があります。 <xref:System.ComponentModel.BackgroundWorker> プロパティを公開するクラスの例として、<xref:System.Net.WebClient> および `IsBusy` コンポーネントがあります。  
+- `IsBusy` プロパティは、<em>MethodName</em>**Async** メソッドが呼び出されてから、<em>MethodName</em>**Completed** イベントが発生するまでの間は、`true` を返す必要があります。 それ以外の場合は、`false` を返す必要があります。 <xref:System.ComponentModel.BackgroundWorker> プロパティを公開するクラスの例として、<xref:System.Net.WebClient> および `IsBusy` コンポーネントがあります。  
   
 ### <a name="cancellation"></a>キャンセル  
   
@@ -115,7 +114,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - キャンセル メソッドの呼び出しは常に正常に戻り、例外を発生させないようにしてください。 一般に、特定の時点で操作が実際にキャンセル可能かどうかと、前に発行したキャンセルが正常に実行されたかどうかはクライアントに通知されません。 ただし、キャンセルが正常に完了すると常にアプリケーションに通知が送られます。これは、アプリケーションが完了ステータスに関与しているためです。  
   
-- 操作がキャンセルされた場合は、 <em>MethodName</em>**Completed** イベントを発生させます。  
+- 操作がキャンセルされた場合は、<em>MethodName</em>**Completed** イベントを発生させます。  
   
 ### <a name="errors-and-exceptions"></a>エラーおよび例外  
   

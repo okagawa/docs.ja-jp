@@ -1,14 +1,13 @@
 ---
 title: ドキュメント間での既存のノードのコピー
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-ms.openlocfilehash: 8ae7fd04e5c85e59ca9bd629c6957ad470d36b48
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f4d58fa5aafdd48feff1a768ab0463ac09315476
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289201"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829610"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>ドキュメント間での既存のノードのコピー
 **ImportNode** メソッドを使用すると、ある **XmlDocument** から別の XmlDocument へ、ノードまたはノードのサブツリー全体をコピーできます。 呼び出しから返されるノードは、ソース ドキュメントのノードのコピーであり、そこには属性値、ノード名、ノード型が含まれます。さらに、プレフィックス、ローカル名、名前空間 URI (Uniform Resource Identifier) など、名前空間に関連するすべての属性も含まれます。 ソース ドキュメントは変更されません。 インポートしたノードは、ノードを挿入するメソッドの 1 つを使用してツリーに追加する必要があります。  

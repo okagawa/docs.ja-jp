@@ -1,25 +1,24 @@
 ---
 title: 文字列から .NET データ型への変換
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: 28c84b04bde045643158d8d2b9fed44b74334e77
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 2eee3ff905473d8fd520929c0fe5abfb5d5c42da
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92688010"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830962"
 ---
 # <a name="convert-strings-to-net-data-types"></a>文字列を .NET データ型に変換する
 
 文字列を .NET データ型に変換する場合は、アプリケーションの要件に適合する **XmlConvert** メソッドを使用します。 **XmlConvert** クラスで利用可能なすべての変換メソッドの一覧については、「<xref:System.Xml.XmlConvert>」を参照してください。  
   
- **ToString** メソッドから返される文字列は、渡したデータを文字列に変換したものです。 さらに、変換に **XmlConvert** クラスを使用する .NET 型の中には、 **System.Convert** クラスのメソッドを使用しないものがいくつかあります。 **XmlConvert** クラスは XML Schema (XSD) のデータ型に準拠しており、 **XmlConvert** によって変換できるデータ型は決まっています。  
+ **ToString** メソッドから返される文字列は、渡したデータを文字列に変換したものです。 さらに、変換に **XmlConvert** クラスを使用する .NET 型の中には、**System.Convert** クラスのメソッドを使用しないものがいくつかあります。 **XmlConvert** クラスは XML Schema (XSD) のデータ型に準拠しており、**XmlConvert** によって変換できるデータ型は決まっています。  
   
- 次の表に、.NET データ型と、XML スキーマ (XSD) のデータ型マッピングを使用した場合に返される文字列を一覧表示します。 これらの .NET 型は、 **System.Convert** で処理することはできません。  
+ 次の表に、.NET データ型と、XML スキーマ (XSD) のデータ型マッピングを使用した場合に返される文字列を一覧表示します。 これらの .NET 型は、**System.Convert** で処理することはできません。  
   
 |.NET の種類|返される文字列|  
 |-------------------------|---------------------|  
@@ -34,7 +33,7 @@ ms.locfileid: "92688010"
 > [!NOTE]
 > 表中の .NET 型を **ToString** メソッドを使用して文字列に変換したときに返される文字列は基本型ではなく、XML スキーマ (XSD) 文字列型です。  
   
- **DateTime** 値型と **Timespan** 値型の違いは、 **DateTime** が瞬間を表すのに対して、 **TimeSpan** が時間間隔を表すことです。 **DateTime** および **Timespan** の形式は、XML スキーマ (XSD) のデータ型仕様で指定されています。 次に例を示します。  
+ **DateTime** 値型と **Timespan** 値型の違いは、**DateTime** が瞬間を表すのに対して、**TimeSpan** が時間間隔を表すことです。 **DateTime** および **Timespan** の形式は、XML スキーマ (XSD) のデータ型仕様で指定されています。 次に例を示します。  
   
 ```vb  
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
@@ -70,7 +69,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
  `<Number>200</Number>`  
   
- ただし、文字列を **Boolean** 、 **Single** 、または **Double** に変換する場合、返される .NET 型は、 **System.Convert** クラスを使用したときに返される型とは異なります。  
+ ただし、文字列を **Boolean**、**Single**、または **Double** に変換する場合、返される .NET 型は、**System.Convert** クラスを使用したときに返される型とは異なります。  
   
 ## <a name="string-to-boolean"></a>String から Boolean  
  **ToBoolean** メソッドを使用して文字列を **Boolean** に変換するときの入力文字列と生成される型の対応を次の表に示します。  
@@ -91,7 +90,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
 <Boolean>1</Boolean>
 ```  
   
- いずれも次のコードによって解釈することができ、 **bvalue** は **System.Boolean.True** になります。  
+ いずれも次のコードによって解釈することができ、**bvalue** は **System.Boolean.True** になります。  
   
 ```vb  
 Dim bvalue As Boolean = _  

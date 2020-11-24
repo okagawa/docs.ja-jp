@@ -2,19 +2,18 @@
 title: '方法: ディレクトリとファイルを列挙する'
 description: 列挙可能なコレクションを使用してディレクトリとファイルを列挙する方法について説明します。これにより、.NET の配列よりも優れたパフォーマンスが得られます。
 ms.date: 12/27/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - I/O [.NET], enumerating directories and files
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
-ms.openlocfilehash: 7a757fc97fd934f02592264c3a495c3efc435fd5
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: da55881b9ca517abd045d4ebd2a5307c67d06560
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93187893"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830897"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>方法: ディレクトリとファイルを列挙する
 列挙可能なコレクションでは、ディレクトリとファイルの大きなコレクションを操作する際に配列よりも優れたパフォーマンスが得られます。 ディレクトリとファイルを列挙するには、列挙可能なディレクトリ名またはファイル名のコレクション、またはその <xref:System.IO.DirectoryInfo>、<xref:System.IO.FileInfo>、または <xref:System.IO.FileSystemInfo> オブジェクトを返すメソッドを使用します。  

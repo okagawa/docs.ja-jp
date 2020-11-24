@@ -2,7 +2,6 @@
 title: 標準の日時書式指定文字列
 description: .NET で、標準の日時書式指定文字列を使用して、日付と時刻の値のテキスト表現を定義する方法について説明します。
 ms.date: 11/05/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET], time
 - date and time strings
 ms.custom: contperfq2
-ms.openlocfilehash: dc294322317560344a6e3cdba1dbe2cce4f6a3fd
-ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
+ms.openlocfilehash: b6917fa8a012a6fe52db1ea2b79397a0484d9d8f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94329756"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831326"
 ---
 # <a name="standard-date-and-time-format-strings"></a>標準の日時書式指定文字列
 

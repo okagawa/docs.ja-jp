@@ -7,13 +7,15 @@ helpviewer_keywords:
 - conversions [C#], hexidecimal strings
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
+ms.topic: how-to
+ms.custom: contperfq2
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: eb0e8a34309c492b94ab4ae440cb17f5b2881384
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: fc2ffd24a67f026bd0c78e7d604a0147cf57ba49
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178386"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099160"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>16 進文字列と数値型の間で変換する方法 (C# プログラミング ガイド)
 

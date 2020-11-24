@@ -2,7 +2,6 @@
 title: 正規表現のオブジェクト モデル
 description: .NET の正規表現のオブジェクト モデルについて確認します。 正規表現エンジンの操作、および一致、グループ化、キャプチャに関連するオブジェクトやコレクションの操作を行います。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -36,12 +35,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-ms.openlocfilehash: d6f85d74b40902037620d065f63f1d0ad6cfc205
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: ecaa0016c37abf33c793fb8a362a697672f3275a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888647"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831287"
 ---
 # <a name="the-regular-expression-object-model"></a>正規表現のオブジェクト モデル
 <a name="introduction"></a> ここでは、.NET の正規表現を扱うときに使用するオブジェクト モデルについて説明します。 このチュートリアルは、次のセクションで構成されています。  

@@ -2,17 +2,16 @@
 title: XPath ナビゲーションによるノードの選択
 description: .NET で XML ノードを選択する方法について説明します。 XML Path Language (XPath) ナビゲーションを使用して DOM 情報を照会できる、ドキュメント オブジェクト モデル (DOM) メソッドを使用します。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
-ms.openlocfilehash: aa8b6d93e25d974a0e1b53ae8be9868f6bf64be6
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: b8a67d1fd508d0674d9230d4b934071a15669599
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662512"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829246"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>XPath ナビゲーションによるノードの選択
 XML ドキュメント オブジェクト モデル (DOM) には、DOM 内の情報を照会するための XPath (XML Path Language) ナビゲーションに使用できるメソッドが含まれています。 XPath を使用すると、特定の単一ノードを見つけたり、条件に一致するすべてのノードを検索したりできます。  

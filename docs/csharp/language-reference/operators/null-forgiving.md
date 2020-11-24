@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 5418f96a3b4515224c49a1c1aa38784c348a86db
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: f2eb57bba462d471a041c17024fa7031c2c7f87d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89516152"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830585"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! (null 免除) 演算子 (C# リファレンス)
 
@@ -51,7 +51,7 @@ null 免除演算子を使用しない場合は、コンパイラによって `p
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、[null 許容参照型仕様の下書き](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)の「[null 免除演算子](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator)」セクションを参照してください。
+詳細については、[null 許容参照型仕様の下書き](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md)の「[null 免除演算子](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md#the-null-forgiving-operator)」セクションを参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -2,23 +2,22 @@
 title: 継続タスクを使用したタスクの連結
 description: .NET の継続タスクを使用してタスクを連鎖させる方法について説明します。 継続タスクは、別のタスクによって呼び出される非同期タスクです。
 ms.date: 07/20/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: d42d244e644bf3ee1f45b25a71d60bbb2ef8e590
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: c7afbc1bb22a1743aed8e4ebd0a06c4f3fb57e86
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063836"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830611"
 ---
 # <a name="chaining-tasks-using-continuation-tasks"></a>継続タスクを使用したタスクの連結
 
-非同期プログラミングでは、非同期操作の完了時に 2 番目の操作を呼び出すのが一般的です。 継続によって、相続する操作で最初の操作の結果を使用できるようになります。 これまで、継続はコールバック メソッドを使用して行っていました。 タスク並列ライブラリでは、 _継続タスク_に同じ機能が用意されています。 継続タスク (単に "継続" とも呼ばれます) とは、別のタスク (" _継続元_" と呼ばれます) が終了したときに、そのタスクによって呼び出される非同期タスクのことです。
+非同期プログラミングでは、非同期操作の完了時に 2 番目の操作を呼び出すのが一般的です。 継続によって、相続する操作で最初の操作の結果を使用できるようになります。 これまで、継続はコールバック メソッドを使用して行っていました。 タスク並列ライブラリでは、 _継続タスク_ に同じ機能が用意されています。 継続タスク (単に "継続" とも呼ばれます) とは、別のタスク (" _継続元_" と呼ばれます) が終了したときに、そのタスクによって呼び出される非同期タスクのことです。
 
 継続は比較的簡単に使用できますが、強力な機能と柔軟性を備えています。 たとえば、次のように操作できます。
 

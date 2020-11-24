@@ -2,19 +2,18 @@
 title: I/O パイプライン - .NET
 description: .NET で I/O パイプラインを効率的に使用し、コードの問題を回避する方法について学習します。
 ms.date: 08/27/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - Pipelines
 - Pipelines I/O
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: a24d7f5c22c936cd3fd3fdc51f0f3ace56386574
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: 508ae0e2b854f81ee639a63063a8f6d73ae84863
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271985"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830637"
 ---
 # <a name="systemiopipelines-in-net"></a>.NET の System.IO.Pipelines
 
@@ -172,7 +171,7 @@ I/O を行う場合は、I/O が実行される場所をきめ細かく制御す
 * 最初の引数では、消費されたメモリの量を判別します。
 * 2 番目の引数では、監視されたバッファーの量を判別します。
 
-データを消費済みとしてマークすることは、パイプでメモリを基になるバッファープ ールに返すことができることを意味します。 データを監視済みとしてマークすると、`PipeReader.ReadAsync` の次の呼び出しで行われる内容が制御されます。 すべてを監視済みとしてマークすることは、パイプにデータがさらに書き込まれるまで、`PipeReader.ReadAsync` の次の呼び出しでは何も返されないことを意味します。 それ以外の値を指定すると、`PipeReader.ReadAsync` の次の呼び出しで、監視されたデータ*と* 監視されていないデータがすぐに返されますが、既に消費されているデータは除きます。
+データを消費済みとしてマークすることは、パイプでメモリを基になるバッファープ ールに返すことができることを意味します。 データを監視済みとしてマークすると、`PipeReader.ReadAsync` の次の呼び出しで行われる内容が制御されます。 すべてを監視済みとしてマークすることは、パイプにデータがさらに書き込まれるまで、`PipeReader.ReadAsync` の次の呼び出しでは何も返されないことを意味します。 それ以外の値を指定すると、`PipeReader.ReadAsync` の次の呼び出しで、監視されたデータ *と* 監視されていないデータがすぐに返されますが、既に消費されているデータは除きます。
 
 ### <a name="read-streaming-data-scenarios"></a>ストリーミング データの読み取りシナリオ
 
@@ -333,7 +332,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 ### <a name="pipewriter-common-problems"></a>PipeWriter の一般的な問題
 
-* <xref:System.IO.Pipelines.PipeWriter.GetSpan%2A> および <xref:System.IO.Pipelines.PipeWriter.GetMemory%2A> では、少なくとも要求された量のメモリを持つバッファーを返します。 正確なバッファー サイズを想定**しないでください**。
+* <xref:System.IO.Pipelines.PipeWriter.GetSpan%2A> および <xref:System.IO.Pipelines.PipeWriter.GetMemory%2A> では、少なくとも要求された量のメモリを持つバッファーを返します。 正確なバッファー サイズを想定 **しないでください**。
 * 連続する呼び出しで同じバッファーまたは同じサイズのバッファーが返される保証はありません。
 * さらにデータの書き込みを続行するには、<xref:System.IO.Pipelines.PipeWriter.Advance%2A> を呼び出した後に新しいバッファーを要求する必要があります。 以前に取得したバッファーに書き込むことはできません。
 * `FlushAsync` の呼び出しが不完全な場合に `GetMemory` または `GetSpan` を呼び出すのは安全ではありません。

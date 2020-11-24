@@ -2,19 +2,18 @@
 title: タスク ベースの非同期プログラミング - .NET
 description: この記事では、.NET のタスク並列ライブラリ (TPL) を使用した、タスクベースの非同期プログラミングについて説明します。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: d735cb56c5914dd33ba694c95a8e92446ca47088
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: a1abe474628cd88e0c24f4152d83bd8ed7ad7950
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925247"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830026"
 ---
 # <a name="task-based-asynchronous-programming"></a>タスク ベースの非同期プログラミング
 
@@ -114,13 +113,13 @@ ms.locfileid: "92925247"
 :::code language="vbnet" source="snippets/vb/asyncculture1.vb" id="1":::
 
 > [!NOTE]
-> .NET Framework 4.6 より前の .NET Framework のバージョンでは、タスクのカルチャは、" *呼び出し元スレッド* " のカルチャではなく、" *実行されている* " スレッドのそれによって決定されていました。 これは非同期タスクの場合、タスクが使用するカルチャは、呼び出し元スレッドのカルチャと異なる可能性があることを意味します。
+> .NET Framework 4.6 より前の .NET Framework のバージョンでは、タスクのカルチャは、"*呼び出し元スレッド*" のカルチャではなく、"*実行されている*" スレッドのそれによって決定されていました。 これは非同期タスクの場合、タスクが使用するカルチャは、呼び出し元スレッドのカルチャと異なる可能性があることを意味します。
 
 非同期タスクとカルチャの詳細については、「<xref:System.Globalization.CultureInfo>」トピックの「カルチャおよび非同期タスク ベースの操作」を参照してください。
 
 ## <a name="creating-task-continuations"></a>タスクの継続の作成
 
-<xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> メソッドおよび <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> メソッドで、" *継続元タスク* " が終了したときに開始されるタスクを指定できます。 継続タスクのデリゲートは継続元タスクへの参照を渡し、継続元タスクのステータスを調査できるようにし、また <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> プロパティの値を取得して、継続元の出力を継続への入力として使用できるようにします。
+<xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> メソッドおよび <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> メソッドで、"*継続元タスク*" が終了したときに開始されるタスクを指定できます。 継続タスクのデリゲートは継続元タスクへの参照を渡し、継続元タスクのステータスを調査できるようにし、また <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> プロパティの値を取得して、継続元の出力を継続への入力として使用できるようにします。
 
 次の例では、`getData` タスクは <xref:System.Threading.Tasks.TaskFactory.StartNew%60%601%28System.Func%7B%60%600%7D%29?displayProperty=nameWithType> メソッドの呼び出しによって開始されます。 `processData` タスクは `getData` が終了したときに自動的に開始され、`displayData` は `processData` が終了したときに開始されます。 `getData` は、`processData` タスクの `getData` プロパティを使用して <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> タスクがアクセス可能な、整数の配列を生成します。 `processData` タスクはその配列を処理し、<xref:System.Threading.Tasks.Task%601.ContinueWith%60%601%28System.Func%7BSystem.Threading.Tasks.Task%7B%600%7D%2C%60%600%7D%29?displayProperty=nameWithType> メソッドに渡されるラムダ式の戻り値の型から推論される型を持つ結果を返します。 `displayData` タスクは、`processData` が終了したときに自動的に実行され、<xref:System.Tuple%603> ラムダ式が返した `processData` オブジェクトは、`displayData` タスクの `processData` プロパティを使用して、<xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> タスクからアクセス可能です。 `displayData` タスクは `processData` タスクから結果を受け取り、同様の方法を使用して (プログラムで使用できるようになったと) 推論される型を持つ結果を <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティで生成します。
 
@@ -138,7 +137,7 @@ ms.locfileid: "92925247"
 
 ## <a name="creating-detached-child-tasks"></a>デタッチされた子タスクの作成
 
-タスクで実行中のユーザー コードで新しいタスクを作成し、<xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> オプションを指定しない場合、新しいタスクはどのような方法でも親タスクとは同期されません。 非同期タスクのこの型は、 *デタッチされた入れ子のタスク* 、または *デタッチされた子タスク* と呼ばれます。 次の例は、デタッチされた子タスクを 1 つ作成するタスクを示しています。
+タスクで実行中のユーザー コードで新しいタスクを作成し、<xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> オプションを指定しない場合、新しいタスクはどのような方法でも親タスクとは同期されません。 非同期タスクのこの型は、*デタッチされた入れ子のタスク*、または *デタッチされた子タスク* と呼ばれます。 次の例は、デタッチされた子タスクを 1 つ作成するタスクを示しています。
 
 [!code-csharp[TPL_TaskIntro#07](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/taskintro.cs#07)]
 [!code-vb[TPL_TaskIntro#07](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/tpl_intro.vb#07)]
@@ -147,7 +146,7 @@ ms.locfileid: "92925247"
 
 ## <a name="creating-child-tasks"></a>子タスクの作成
 
-タスクで実行中のユーザー コードで <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> オプションを使用してタスクが作成されると、その新しいタスクは、親タスクに " *アタッチされた子タスク* " になります。 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> オプションを使用すると、構成されたタスクの並列化を表現できます。親タスクは、すべてのアタッチされた子タスクが終了するのを暗黙的に待機するためです。 次の例は、アタッチされた子タスクを 10 個作成する親タスクを示しています。 この例は <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> メソッドを呼び出して親タスクの完了を待機しているが、アタッチされた子タスクの完了を明示的には待機する必要がないことに注意してください。
+タスクで実行中のユーザー コードで <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> オプションを使用してタスクが作成されると、その新しいタスクは、親タスクに "*アタッチされた子タスク*" になります。 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> オプションを使用すると、構成されたタスクの並列化を表現できます。親タスクは、すべてのアタッチされた子タスクが終了するのを暗黙的に待機するためです。 次の例は、アタッチされた子タスクを 10 個作成する親タスクを示しています。 この例は <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> メソッドを呼び出して親タスクの完了を待機しているが、アタッチされた子タスクの完了を明示的には待機する必要がないことに注意してください。
 
 [!code-csharp[TPL_TaskIntro#8](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/child1.cs#8)]
 [!code-vb[TPL_TaskIntro#8](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/child1.vb#8)]

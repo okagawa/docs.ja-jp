@@ -1,14 +1,13 @@
 ---
 title: XML ドキュメントのノード、コンテンツ、値の変更
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
-ms.openlocfilehash: f544b7d8472285095af9a71b1c24f94f61f93bc6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 13fb18208831356e34301bc22715b68fda1f671f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288824"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830182"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>XML ドキュメントのノード、コンテンツ、値の変更
 ドキュメントのノードおよびコンテンツを変更するには、さまざまな方法があります。 次の操作を行うことができます。  

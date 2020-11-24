@@ -1,7 +1,6 @@
 ---
 title: 'チュートリアル: BatchBlock および BatchedJoinBlock を使用した効率の向上'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, improving efficiency
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
-ms.openlocfilehash: e572c5a14958ccc069ae7649af8c8ed4eb967dc1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d9c4b2d5cfab28f10be82724f46660e4b42ce410
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84284586"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829922"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>チュートリアル: BatchBlock および BatchedJoinBlock を使用した効率の向上
 
@@ -51,7 +50,7 @@ TPL データ フロー ライブラリが提供する <xref:System.Threading.Ta
 
 ## <a name="creating-the-console-application"></a>コンソール アプリケーションの作成
 
-1. Visual Studio で、Visual C# または Visual Basic の**コンソール アプリケーション** プロジェクトを作成します。 このドキュメントでは、プロジェクトの名前を `DataflowBatchDatabase` とします。
+1. Visual Studio で、Visual C# または Visual Basic の **コンソール アプリケーション** プロジェクトを作成します。 このドキュメントでは、プロジェクトの名前を `DataflowBatchDatabase` とします。
 
 2. プロジェクトで、System.Data.SqlServerCe.dll への参照と System.Threading.Tasks.Dataflow.dll への参照を追加します。
 
