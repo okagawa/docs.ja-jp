@@ -1,14 +1,13 @@
 ---
 title: XML スキーマ オブジェクト モデル (SOM)
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: a897a599-ffd1-43f9-8807-e58c8a7194cd
-ms.openlocfilehash: 1de9fdf9950ba3ae356779ca802afb71f24a345e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b64e5bb88d5754447d8f75577f3c51f2aa467bb5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290319"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818402"
 ---
 # <a name="xml-schema-object-model-som"></a>XML スキーマ オブジェクト モデル (SOM)
 XML スキーマは、XML ドキュメント準拠の構造を作成し検証する、強力な複合ツールです。 リレーショナル データベースのデータ モデリングと同様に、スキーマでは XML ドキュメントの構造を定義する方法を提供しています。これは、ドキュメントで使用する要素と、これらの要素に固有のスキーマを有効にするために準拠する構造や型を指定することによって実現します。  

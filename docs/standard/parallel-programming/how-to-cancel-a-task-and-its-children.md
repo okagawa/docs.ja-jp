@@ -2,19 +2,18 @@
 title: '方法: タスクとその子を取り消す'
 description: .NET でタスクとその子を取り消す方法の例を参照します。 この例では、取り消し可能なタスクの作成から、タスクが取り消されたことを知らせる通知までの手順を説明しています。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, how to cancel
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
-ms.openlocfilehash: 66daf00680b65aace1ce6367761e3ed81596d33b
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 578544a910127f41dfdfd577316b23d6d5a60bc4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662681"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817264"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>方法: タスクとその子を取り消す
 以下の例では、次のタスクを実行する方法を説明します。  

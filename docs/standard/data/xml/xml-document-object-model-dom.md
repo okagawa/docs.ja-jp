@@ -1,14 +1,13 @@
 ---
 title: XML ドキュメント オブジェクト モデル (DOM)
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
-ms.openlocfilehash: dbc53d713d77cfdc9d0dbb8a201f2b5627a76921
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5e7c4e62b7bb19b1ddab61f78b360fed0b6752ef
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283391"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821776"
 ---
 # <a name="xml-document-object-model-dom"></a>XML ドキュメント オブジェクト モデル (DOM)
 

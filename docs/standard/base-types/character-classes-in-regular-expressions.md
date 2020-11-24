@@ -2,7 +2,6 @@
 title: .NET 正規表現での文字クラス
 description: 文字クラスを使用して、.NET 正規表現での文字のセットを表す方法について説明します。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.openlocfilehash: 619a32d98d697b3b1d461921bfe581acb720be68
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 69cece42c5d7c92eb1af5e31f4fd83f5384b1d8e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888725"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823317"
 ---
 # <a name="character-classes-in-regular-expressions"></a>正規表現での文字クラス
 
@@ -58,13 +57,13 @@ ms.locfileid: "92888725"
 
 `[*character_group*]`
 
- ここで、 *character_group* は、入力文字列に含まれるなら一致と見なされる個別の文字の一覧です。 *character_group* は、リテラル文字、[エスケープ文字](character-escapes-in-regular-expressions.md)、または文字クラスを 1 つ以上組み合わせて構成されます。  
+ ここで、*character_group* は、入力文字列に含まれるなら一致と見なされる個別の文字の一覧です。 *character_group* は、リテラル文字、[エスケープ文字](character-escapes-in-regular-expressions.md)、または文字クラスを 1 つ以上組み合わせて構成されます。  
   
  文字の範囲を指定する構文は次のとおりです。  
   
 `[firstCharacter-lastCharacter]`  
   
- ここで、 *firstCharacter* は範囲の最初の文字で、 *lastCharacter* は範囲の最後の文字です。 文字範囲は連続する一連の文字で、範囲の最初の文字、ハイフン (-)、および範囲の最後の文字を指定することで定義されます。 2 つの文字の Unicode コード ポイントが隣接している場合、それらの文字は連続しています。 *firstCharacter* は、より低いコード ポイントを持つ文字にする必要があります。 *lastCharacter* はより高いコード ポイントを持つ文字にする必要があります。
+ ここで、*firstCharacter* は範囲の最初の文字で、*lastCharacter* は範囲の最後の文字です。 文字範囲は連続する一連の文字で、範囲の最初の文字、ハイフン (-)、および範囲の最後の文字を指定することで定義されます。 2 つの文字の Unicode コード ポイントが隣接している場合、それらの文字は連続しています。 *firstCharacter* は、より低いコード ポイントを持つ文字にする必要があります。*lastCharacter* はより高いコード ポイントを持つ文字にする必要があります。
 
 > [!NOTE]
 > 正の文字グループには文字セットと文字範囲の両方を含めることができるため、ハイフン文字 (`-`) は、グループの最初の文字または最後の文字でない限り、常に範囲の区切り文字として解釈されます。
@@ -114,13 +113,13 @@ ms.locfileid: "92888725"
 
 `[*^character_group*]`
 
- ここで、 *character_group* は、入力文字列に含まれない場合に一致と見なされる個別の文字の一覧です。 *character_group* は、リテラル文字、[エスケープ文字](character-escapes-in-regular-expressions.md)、または文字クラスを 1 つ以上組み合わせて構成されます。  
+ ここで、*character_group* は、入力文字列に含まれない場合に一致と見なされる個別の文字の一覧です。 *character_group* は、リテラル文字、[エスケープ文字](character-escapes-in-regular-expressions.md)、または文字クラスを 1 つ以上組み合わせて構成されます。  
   
  文字の範囲を指定する構文は次のとおりです。  
 
 `[^*firstCharacter*-*lastCharacter*]`
 
-ここで、 *firstCharacter* は範囲の最初の文字で、 *lastCharacter* は範囲の最後の文字です。 文字範囲は連続する一連の文字で、範囲の最初の文字、ハイフン (-)、および範囲の最後の文字を指定することで定義されます。 2 つの文字の Unicode コード ポイントが隣接している場合、それらの文字は連続しています。 *firstCharacter* は、より低いコード ポイントを持つ文字にする必要があります。 *lastCharacter* はより高いコード ポイントを持つ文字にする必要があります。
+ここで、*firstCharacter* は範囲の最初の文字で、*lastCharacter* は範囲の最後の文字です。 文字範囲は連続する一連の文字で、範囲の最初の文字、ハイフン (-)、および範囲の最後の文字を指定することで定義されます。 2 つの文字の Unicode コード ポイントが隣接している場合、それらの文字は連続しています。 *firstCharacter* は、より低いコード ポイントを持つ文字にする必要があります。*lastCharacter* はより高いコード ポイントを持つ文字にする必要があります。
 
 > [!NOTE]
 > 負の文字グループには文字セットと文字範囲の両方を含めることができるため、ハイフン文字 (`-`) は、グループの最初の文字または最後の文字でない限り、常に範囲の区切り文字として解釈されます。
@@ -184,7 +183,7 @@ ms.locfileid: "92888725"
   
  `\p{` *name* `}`  
   
- Unicode 一般カテゴリまたは名前付きブロックに属する任意の文字と一致します。ここで、 *name* はカテゴリの省略形または名前付きブロックの名前です。 カテゴリの省略形の一覧については、このトピックで後述する「[サポートされている Unicode 一般カテゴリ](#SupportedUnicodeGeneralCategories)」を参照してください。 名前付きブロックの一覧については、このトピックで後述する「[サポートされている名前付きブロック](#SupportedNamedBlocks)」を参照してください。  
+ Unicode 一般カテゴリまたは名前付きブロックに属する任意の文字と一致します。ここで、*name* はカテゴリの省略形または名前付きブロックの名前です。 カテゴリの省略形の一覧については、このトピックで後述する「[サポートされている Unicode 一般カテゴリ](#SupportedUnicodeGeneralCategories)」を参照してください。 名前付きブロックの一覧については、このトピックで後述する「[サポートされている名前付きブロック](#SupportedNamedBlocks)」を参照してください。  
   
  `\p{`*name*`}` 構成要素を使用して Unicode 一般カテゴリ (この場合は `Pd` (Punctuation, Dash: 句読点、ダッシュ) カテゴリ) と名前付きブロック (`IsGreek` 名前付きブロックおよび `IsBasicLatin` 名前付きブロック) の両方を照合する例を次に示します。  
   
@@ -213,7 +212,7 @@ ms.locfileid: "92888725"
   
  `\P{` *name* `}`  
   
- Unicode 一般カテゴリにも名前付きブロックにも属さない任意の文字と一致します。ここで、 *name* はカテゴリの省略形または名前付きブロックの名前です。 カテゴリの省略形の一覧については、このトピックで後述する「[サポートされている Unicode 一般カテゴリ](#SupportedUnicodeGeneralCategories)」を参照してください。 名前付きブロックの一覧については、このトピックで後述する「[サポートされている名前付きブロック](#SupportedNamedBlocks)」を参照してください。  
+ Unicode 一般カテゴリにも名前付きブロックにも属さない任意の文字と一致します。ここで、*name* はカテゴリの省略形または名前付きブロックの名前です。 カテゴリの省略形の一覧については、このトピックで後述する「[サポートされている Unicode 一般カテゴリ](#SupportedUnicodeGeneralCategories)」を参照してください。 名前付きブロックの一覧については、このトピックで後述する「[サポートされている名前付きブロック](#SupportedNamedBlocks)」を参照してください。  
   
  `\P{`*name*`}` 構成要素を使用して通貨記号 (この場合は `Sc` (Symbol, Currency: 記号、通貨) カテゴリ) を数値文字列から削除する例を次に示します。  
   
@@ -546,7 +545,7 @@ ms.locfileid: "92888725"
   
  `[` *base_group* `-[` *excluded_group* `]]`  
   
- 角かっこ (`[]`) とハイフン (`-`) は省略できません。 *base_group* は、 [文字グループの肯定](#PositiveGroup)または [文字グループの否定](#NegativeGroup)です。 *excluded_group* は、別の文字グループの肯定または文字グループの否定、あるいは別の文字クラス減算式です (つまり文字クラス減算式は入れ子にすることができます)。  
+ 角かっこ (`[]`) とハイフン (`-`) は省略できません。 *base_group* は、[文字グループの肯定](#PositiveGroup)または [文字グループの否定](#NegativeGroup)です。 *excluded_group* は、別の文字グループの肯定または文字グループの否定、あるいは別の文字クラス減算式です (つまり文字クラス減算式は入れ子にすることができます)。  
   
  たとえば、"a" ～ "z" の文字範囲で構成される基本グループがあるとします。 "m" を除外した基本グループで構成される文字のセットを定義するには、`[a-z-[m]]` を使用します。 "d"、"j" および "p" の文字を除外した基本グループで構成される文字のセットを定義するには、`[a-z-[djp]]` を使用します。 "m" ～ "p" の文字範囲を除外した基本グループで構成される文字のセットを定義するには、`[a-z-[m-p]]` を使用します。  
   

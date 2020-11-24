@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 16b4d34e4c581da2cd0ba798d87e53ccfc49f0e9
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 1c2c966a4ff50a9d2f6951e20d909c5c20c75bfb
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91954894"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688242"
 ---
 # <a name="tutorial-sentiment-analysis-with-net-for-apache-spark-and-mlnet"></a>チュートリアル: .NET for Apache Spark と ML.NET での感情分析
 
@@ -50,7 +50,7 @@ Yelp レビュー データセットには、さまざまなサービスに関�
 
 1. Visual Studio を開き、新しい C# コンソール アプリ (.NET Core) を作成します。 プロジェクトには「*MLSparkModel*」という名前を付けます。
 
-1. **ソリューション エクスプローラー**で、*MLSparkModel* プロジェクトを右クリックします。 次に、 **[追加] > [機械学習]** を選択します。
+1. **ソリューション エクスプローラー** で、*MLSparkModel* プロジェクトを右クリックします。 次に、 **[追加] > [機械学習]** を選択します。
 
 1. ML.NET モデル ビルダーで、 **[Sentiment Analysis]\(感情分析\)** シナリオ タイルを選択します。
 
@@ -198,7 +198,7 @@ dotnet publish
 次に、コンソール アプリの発行フォルダーに移動して、次の `spark-submit` コマンドを実行します。 忘れずに、実際の Microsoft Spark jar ファイルのパスで、コマンドを更新してください。
 
 ```dotnetcli
-%SPARK_HOME%\bin\spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local microsoft-spark-2.4.x-0.10.0.jar dotnet MLSparkModelML.ConsoleApp.dll
+%SPARK_HOME%\bin\spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local microsoft-spark-2-4_2.11-1.0.0.jar dotnet MLSparkModelML.ConsoleApp.dll
 ```
 
 ## <a name="get-the-code"></a>コードを取得する

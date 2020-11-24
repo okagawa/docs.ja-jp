@@ -1,22 +1,21 @@
 ---
 title: アタッチされた子タスクとデタッチされた子タスク
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, child tasks
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
-ms.openlocfilehash: c8a5d2c1ccb8bb2d272c2582cd416cdfd75506d8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e5d27aff02d0afd1c288e5d18e52be4745132a70
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285691"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817524"
 ---
 # <a name="attached-and-detached-child-tasks"></a>アタッチされた子タスクとデタッチされた子タスク
-*子タスク* (または*入れ子のタスク*) は、*親タスク* と呼ばれる、別のタスクのユーザー デリゲートで作成された、<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> のインスタンスです。 子タスクはデタッチまたはアタッチできます。 *デタッチされた子タスク* は、親とは独立して実行されるタスクです。 *アタッチされた子タスク* は、<xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> オプションで作成される入れ子のタスクです。その親は、明示的にも既定でも、子タスクがアタッチされることを禁止しません。 タスクでは、システム リソースが許す限り、任意の数のアタッチされた子タスクおよびデタッチされた子タスクを作成できます。  
+*子タスク* (または *入れ子のタスク*) は、*親タスク* と呼ばれる、別のタスクのユーザー デリゲートで作成された、<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> のインスタンスです。 子タスクはデタッチまたはアタッチできます。 *デタッチされた子タスク* は、親とは独立して実行されるタスクです。 *アタッチされた子タスク* は、<xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> オプションで作成される入れ子のタスクです。その親は、明示的にも既定でも、子タスクがアタッチされることを禁止しません。 タスクでは、システム リソースが許す限り、任意の数のアタッチされた子タスクおよびデタッチされた子タスクを作成できます。  
   
  以下の表に、2 種類の子タスクの基本的な相違点を示します。  
   

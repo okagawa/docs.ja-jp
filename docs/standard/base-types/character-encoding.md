@@ -2,7 +2,6 @@
 title: .NET で文字エンコーディング クラスを使用する方法
 description: .NET で文字エンコーディング クラスを使用する方法について説明します。
 ms.date: 12/22/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.openlocfilehash: c626e79e7bbcd71c90775df8ee8c4d6570c29125
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 520316c0733d5c56b5ab77fbec7d4dd838af6338
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290579"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823291"
 ---
 # <a name="how-to-use-character-encoding-classes-in-net"></a>.NET で文字エンコーディング クラスを使用する方法
 

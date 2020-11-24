@@ -1,17 +1,16 @@
 ---
 title: XPathNavigator を使用する属性と名前空間のナビゲーション
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
-ms.openlocfilehash: 90c8fe7450a6ca853aaea452e30a292dbdcd9d98
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cf29c15463030774b488beed776c9cfe623072d1
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291618"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819410"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>XPathNavigator を使用する属性と名前空間のナビゲーション
-<xref:System.Xml.XPath.XPathNavigator> クラスは、2 セットの移動メソッドを提供します。「[XPathNavigator を使用するノード セットのナビゲーション](node-set-navigation-using-xpathnavigator.md)」に記載されている最初のセットは <xref:System.Xml.XPath.XPathDocument> または <xref:System.Xml.XmlDocument> オブジェクト内の*ノード セット*の移動に使用されます。 ここに記載されている 2 つ目のセットは、<xref:System.Xml.XPath.XPathDocument> または <xref:System.Xml.XmlDocument> オブジェクト内の*属性ノードと名前空間ノード*の移動に使用されます。  
+<xref:System.Xml.XPath.XPathNavigator> クラスは、2 セットの移動メソッドを提供します。「[XPathNavigator を使用するノード セットのナビゲーション](node-set-navigation-using-xpathnavigator.md)」に記載されている最初のセットは <xref:System.Xml.XPath.XPathDocument> または <xref:System.Xml.XmlDocument> オブジェクト内の *ノード セット* の移動に使用されます。 ここに記載されている 2 つ目のセットは、<xref:System.Xml.XPath.XPathDocument> または <xref:System.Xml.XmlDocument> オブジェクト内の *属性ノードと名前空間ノード* の移動に使用されます。  
   
 ## <a name="attribute-node-navigation"></a>属性ノードの移動  
  属性は要素のプロパティであり、要素の子ではありません。 兄弟ノード、親ノード、および子ノードの移動には <xref:System.Xml.XPath.XPathNavigator> クラスのメソッドが使用されるため、この区別が重要になります。  

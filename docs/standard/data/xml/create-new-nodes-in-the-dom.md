@@ -1,14 +1,13 @@
 ---
 title: DOM への新しいノードの作成
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
-ms.openlocfilehash: d99a3c68c7554ab266d71a4cbf2e676bc6db8cbc
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 835d92b972341e67bc163563ec62c24db610a65a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289578"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822751"
 ---
 # <a name="create-new-nodes-in-the-dom"></a>DOM への新しいノードの作成
 <xref:System.Xml.XmlDocument> には、すべてのノード型に対応する Create メソッドがあります。 このメソッドに、名前が必要な場合は名前を渡し、コンテンツを持つノードではコンテンツやその他のパラメーターを指定すると、そのノードが作成されます。コンテンツを持つノードには、たとえばテキスト ノードがあります。 次のメソッドは、ノードを適切に作成するために、名前といくつかのパラメーターの指定が必要なメソッドです。  

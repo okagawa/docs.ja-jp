@@ -1,14 +1,13 @@
 ---
 title: 外部リソースの解決
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
-ms.openlocfilehash: 82e9231be8a3619f59313460f0d5e0b246eb9436
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 460fee3464c7de9a6ad0ca97bf5341fe5078fb47
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291488"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820372"
 ---
 # <a name="resolving-external-resources"></a>外部リソースの解決
 **XmlDocument** クラスでは、外部のドキュメント型定義 (DTD)、エンティティ、スキーマなど、XML データのインラインでないリソースを検索するときに **XmlDocument** の **XmlResolver** プロパティを使用します。 これらのリソースは、ネットワーク上やローカル ドライブ上にあり、URI (Uniform Resource Identifier) で識別できます。 そのため、**XmlDocument** は、ドキュメント内にある **EntityReference** ノードを解決し、外部の DTD またはスキーマに基づいてドキュメントを検証することができます。  

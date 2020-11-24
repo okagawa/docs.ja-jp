@@ -1,19 +1,18 @@
 ---
 title: PLINQ における順序維持
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-ms.openlocfilehash: 45752f3ffa64079079505934afd76e812daad7bd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 59d32f8801a1429718f39ab912f55cfcc5788a0e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290656"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820775"
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ における順序維持
 PLINQ では、正確性を維持しながらパフォーマンスを最大にすることが重要です。 クエリをできるだけ速く実行する一方で、正確な結果を生成する必要があります。 正確性のために、ソース シーケンスの順序の維持が必要な場合がありますが、順序付けには負荷がかかります。 したがって、既定では、PLINQ はソース シーケンスの順序を維持しません。 この点で、PLINQ は [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] と似ていますが、順序を維持する LINQ to Objects とは異なります。  

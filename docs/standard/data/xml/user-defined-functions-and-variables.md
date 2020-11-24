@@ -1,17 +1,16 @@
 ---
 title: ユーザー定義の関数と変数
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4772f20e-1e7f-496e-93c2-1484473be555
-ms.openlocfilehash: 7040c2ccf6e3bfc6efcbec3505c633c6c3c6508f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d4936ec32d54a465803d493048cba2b70ed50db6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710064"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818506"
 ---
 # <a name="user-defined-functions-and-variables"></a>ユーザー定義の関数と変数
 <xref:System.Xml.XPath.XPathNavigator> クラスは、<xref:System.Xml.XPath.XPathDocument> データの操作に使用されるメソッドのセットを提供します。 XPath クエリ式で使用する拡張関数および変数を実装することで、標準の XPath 関数を補完できます。 <xref:System.Xml.XPath.XPathExpression.SetContext%2A> メソッドは、<xref:System.Xml.Xsl.XsltContext> から派生した、ユーザー定義のコンテキストを受け取ることができます。 ユーザー定義の関数は、カスタム コンテキストで解決されます。  

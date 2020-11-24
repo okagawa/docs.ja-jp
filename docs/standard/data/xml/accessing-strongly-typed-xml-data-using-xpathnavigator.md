@@ -1,17 +1,16 @@
 ---
 title: 厳密に型指定された XML データへの XPathNavigator を使用したアクセス
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-ms.openlocfilehash: 61957ff88ef57703aff1861238ee10b23c2f16ff
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fcf46a0716d79fd27cb06924bf74c119b8435147
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291605"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822829"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>厳密に型指定された XML データへの XPathNavigator を使用したアクセス
 XPath 2.0 データ モデルの一例として、<xref:System.Xml.XPath.XPathNavigator> クラスは、共通言語ランタイム (CLR) 型に対応した厳密に型指定されたデータを含むことができます。 XPath 2.0 のデータ モデルに従い、要素と属性のみが厳密に型指定されたデータを含むことができます。 <xref:System.Xml.XPath.XPathNavigator> クラスは、データ型を変換する機構に加えて、厳密に型指定されたデータとして <xref:System.Xml.XPath.XPathDocument> または <xref:System.Xml.XmlDocument> オブジェクト内のデータにアクセスする機構を提供します。  

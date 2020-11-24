@@ -2,18 +2,17 @@
 title: マルチスレッド処理のためのデータの同期
 description: .NET でのマルチスレッド処理のためにデータを同期させる方法について説明します。 同期されたコード領域、手動同期、同期されたコンテキストなどの方法を選択します。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - synchronization, threads
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: 63ee85f3d8bab865ce34566ec381d23676b27991
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 188090a968b49bd77279d35dc41f00e808299938
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188589"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819644"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>マルチスレッド処理のためのデータの同期
 
@@ -62,7 +61,7 @@ ms.locfileid: "93188589"
 ### <a name="compiler-support"></a>コンパイラ サポート  
  Visual Basic と C# は、どちらも <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> と <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> を使用してオブジェクトをロックする言語キーワードをサポートします。 Visual Basic は [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) ステートメントをサポートしており、C# は [lock](../../csharp/language-reference/keywords/lock-statement.md) ステートメントをサポートしています。  
   
- 両方とも、コード ブロックで例外がスローされると、 **lock** または **SyncLock** によって取得されたロックは自動的に解放されます。 C# コンパイラおよび Visual Basic コンパイラは **try**/**finally** ブロックを生成します。tryブロックは先頭に **Monitor.Enter** を含み、 **finally** ブロックは **Monitor.Exit** を含みます。 **lock** ブロックまたは **SyncLock** ブロック内部で例外がスローされると、 **finally** ハンドラーが実行され、任意のクリーンアップ作業を行えるようになります。  
+ 両方とも、コード ブロックで例外がスローされると、**lock** または **SyncLock** によって取得されたロックは自動的に解放されます。 C# コンパイラおよび Visual Basic コンパイラは **try**/**finally** ブロックを生成します。tryブロックは先頭に **Monitor.Enter** を含み、**finally** ブロックは **Monitor.Exit** を含みます。 **lock** ブロックまたは **SyncLock** ブロック内部で例外がスローされると、**finally** ハンドラーが実行され、任意のクリーンアップ作業を行えるようになります。  
   
 ## <a name="synchronized-context"></a>同期されたコンテキスト  
 

@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 928cc8e3559e13af66268f3d1b3766cf2df9041f
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 945e494e8a027d438bf4659d989da6033a13f6f0
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223978"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687604"
 ---
 # <a name="connect-net-for-apache-spark-to-mongodb"></a>.NET for Apache Spark を MongoDB に接続する
 
@@ -43,17 +43,17 @@ ms.locfileid: "92223978"
 ## <a name="configure-your-net-for-apache-spark-application"></a>.NET for Apache Spark アプリケーションを構成する
 
 1. 次の変数を設定して、MongoDB インスタンスと通信し、コレクションから読み取るようにアプリケーションを構成します。
-    1. **authURI** :"アプリケーションが必要な MongoDB インスタンスに接続することを承認する接続文字列"。 この形式は次のとおりです。
+    1. **authURI**:"アプリケーションが必要な MongoDB インスタンスに接続することを承認する接続文字列"。 この形式は次のとおりです。
 
         ```
         "mongodb+srv://<username>:<password>@<cluster_address>/<database>.<collection>"
         ```
 
-    2. **username** :前のセクションの手順 1 で作成したアカウントのユーザー名
-    3. **password** :作成したユーザー アカウントのパスワード
-    4. **cluster_address** : MongoDB クラスターのホスト名またはアドレス
-    5. **database** :接続先の MongoDB データベース
-    6. **collection** :読み取る MongoDB コレクション。 (この例では、すべての Apache Spark インストールに用意されている標準の [`people.json`](https://github.com/apache/spark/blob/master/examples/src/main/resources/people.json) サンプル ファイルを使用します)。
+    2. **username**:前のセクションの手順 1 で作成したアカウントのユーザー名
+    3. **password**:作成したユーザー アカウントのパスワード
+    4. **cluster_address**: MongoDB クラスターのホスト名またはアドレス
+    5. **database**:接続先の MongoDB データベース
+    6. **collection**:読み取る MongoDB コレクション。 (この例では、すべての Apache Spark インストールに用意されている標準の [`people.json`](https://github.com/apache/spark/blob/master/examples/src/main/resources/people.json) サンプル ファイルを使用します)。
 
 2. 次の簡単なコード スニペットに示すように、`com.mongodb.spark.sql.DefaultSource` 形式は `spark.Read()` を使用します。
 
@@ -82,7 +82,7 @@ ms.locfileid: "92223978"
 .NET for Apache Spark アプリケーションを実行するには、sbt プロジェクトの `build.sbt` で `libraryDependency` を使用して、Spark プロジェクトのビルド定義の一環として `mongo-spark-connector` モジュールを定義します。 `spark-submit` (または `spark-shell`) などの Spark 環境では、次のように `--packages` コマンドライン オプションを使用します。
 
 ```bash
-spark-submit --master local --packages org.mongodb.spark:mongo-spark-connector_2.12:3.0.0 --class org.apache.spark.deploy.dotnet.DotnetRunner microsoft-spark-<version>.jar yourApp.exe
+spark-submit --master local --packages org.mongodb.spark:mongo-spark-connector_2.12:3.0.0 --class org.apache.spark.deploy.dotnet.DotnetRunner microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar yourApp.exe
 ```
 
 > [!NOTE]

@@ -2,7 +2,6 @@
 title: 標準の数値書式指定文字列
 description: この記事では、.NET で、標準の数値書式指定文字列を使用して、一般的な数値型をテキスト表現に書式設定する方法について説明します。
 ms.date: 06/10/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: e5e1aa16d8df3d0cfce6dac00c91ca8e99e16e3d
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: b8537e8dcfdd45ed8da18b8b82aae5e9fc0cd96e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888972"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818766"
 ---
 # <a name="standard-numeric-format-strings"></a>標準の数値書式指定文字列
 
@@ -33,11 +32,11 @@ ms.locfileid: "92888972"
 - `xx` は *精度指定子* です。これは省略可能な整数値です。 精度指定子は 0 ～ 99 の範囲で指定され、結果の桁数に影響します。 精度指定子は、文字列形式の数値の桁数を制御することに注意してください。 精度指定子では、数値を丸めません。 丸め操作を実行するには、<xref:System.Math.Ceiling%2A?displayProperty=nameWithType>、<xref:System.Math.Floor%2A?displayProperty=nameWithType>、または <xref:System.Math.Round%2A?displayProperty=nameWithType> の各メソッドを使用します。
 
   *精度指定子* によって結果文字列内の小数部の桁数を制御する場合、結果文字列では無限に正確な結果に最も近い表現可能な結果に丸められた数値が反映されます。 同じように近い表現可能な結果が 2 つある場合は、次のようになります。
-  - **.NET Framework および .NET Core 2.0 までの .NET Core の場合** 、ランタイムにより最下位の数字が大きい方の結果が選択されます (つまり、<xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType> が使用されます)。
-  - **.NET Core 2.1 以降の場合** 、ランタイムでは最下位の数字が同一である結果が選択されます (つまり、<xref:System.MidpointRounding.ToEven?displayProperty=nameWithType> が使用されます)。
+  - **.NET Framework および .NET Core 2.0 までの .NET Core の場合**、ランタイムにより最下位の数字が大きい方の結果が選択されます (つまり、<xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType> が使用されます)。
+  - **.NET Core 2.1 以降の場合**、ランタイムでは最下位の数字が同一である結果が選択されます (つまり、<xref:System.MidpointRounding.ToEven?displayProperty=nameWithType> が使用されます)。
 
   > [!NOTE]
-  > 精度指定子は、結果文字列の桁数を決定します。 結果文字列に先頭または末尾のスペースを埋め込むには、 [複合書式指定](composite-formatting.md)機能を使用して、書式指定項目に *alignment コンポーネント* を定義します。
+  > 精度指定子は、結果文字列の桁数を決定します。 結果文字列に先頭または末尾のスペースを埋め込むには、[複合書式指定](composite-formatting.md)機能を使用して、書式指定項目に *alignment コンポーネント* を定義します。
 
 標準の数値書式指定文字列は、以下をサポートしています。
 

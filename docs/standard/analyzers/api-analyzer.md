@@ -3,13 +3,12 @@ title: .NET API アナライザー
 description: 非推奨の API およびプラットフォームの互換性の問題を検出するのに .NET API アナライザーがどのように役立つかについて説明します。
 author: oliag
 ms.date: 02/20/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: a689ae347efbc8c2dd933b2f6920ac6cc06cda7d
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 47ef2368692aee56ebd3db7803cbde7368d38049
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756196"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819605"
 ---
 # <a name="net-api-analyzer"></a>.NET API アナライザー
 
@@ -40,7 +39,7 @@ API アナライザーは、DE (Deprecation Error の略) で始まる API 固�
 
 1. Visual Studio を開きます。
 2. アナライザーを実行するプロジェクトを開きます。
-3. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 (このオプションは、 **[プロジェクト]** メニューからも使用できます。)
+3. **ソリューション エクスプローラー** で、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 (このオプションは、 **[プロジェクト]** メニューからも使用できます。)
 4. [NuGet パッケージ マネージャー] タブ上で、次を実行します。
    1. [パッケージ ソース] として [nuget.org] を選択します。
    2. **[参照]** タブに移動します。
@@ -124,7 +123,7 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 ## <a name="configuration"></a>構成
 
-ユーザーは、診断の処理方法を決定します (警告、エラー、提案、オフ)。 たとえば、設計者は、互換性の問題をエラーとして扱い、一部の非推奨の API の呼び出しでは警告を生成し、それ以外については提案を生成するだけにする、といったことを決定できます。 これを、診断 ID 別およびプロジェクト別に構成できます。 そのためには、**ソリューション エクスプローラー**で、プロジェクトの **[依存関係]** ノードに移動します。 ノード **[依存関係]**  >  **[アナライザー]**  >  **[Microsoft.DotNet.Analyzers.Compatibility]** を展開します。 診断 ID を右クリックし、 **[ルール セットの重要度を設定]** を選んで、目的のオプションを選びます。
+ユーザーは、診断の処理方法を決定します (警告、エラー、提案、オフ)。 たとえば、設計者は、互換性の問題をエラーとして扱い、一部の非推奨の API の呼び出しでは警告を生成し、それ以外については提案を生成するだけにする、といったことを決定できます。 これを、診断 ID 別およびプロジェクト別に構成できます。 そのためには、**ソリューション エクスプローラー** で、プロジェクトの **[依存関係]** ノードに移動します。 ノード **[依存関係]**  >  **[アナライザー]**  >  **[Microsoft.DotNet.Analyzers.Compatibility]** を展開します。 診断 ID を右クリックし、 **[ルール セットの重要度を設定]** を選んで、目的のオプションを選びます。
 
 ![診断とルール セットの重要度のポップアップ ダイアログが表示されているソリューション エクスプローラーのスクリーンショット。](media/api-analyzer/disable-notifications.jpg)
 

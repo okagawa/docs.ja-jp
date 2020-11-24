@@ -4,12 +4,12 @@ description: spark-submit と Set Jar を使用して、.NET for Apache Spark �
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: fd04f78c47b34ca07042a4e60e2214f5f1ecac55
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 4d37383ccb3c9b311e0fbd0ada195ac20113e505
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91954998"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688203"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-databricks"></a>.NET for Apache Spark ジョブを Databricks に送信する
 
@@ -22,7 +22,7 @@ ms.locfileid: "91954998"
 1. Databricks ワークスペースに移動して新しいジョブを作成します。 ジョブのタイトルを選択し、 **[Configure spark-submit]\(spark-submit の構成\)** を選択します。 次のパラメーターをジョブ構成に貼り付け、 **[確認]** を選択します。
 
     ```
-    ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
+    ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
     ```
 
     > [!NOTE]
@@ -40,7 +40,7 @@ ms.locfileid: "91954998"
 
 1. Databricks クラスターに移動し、左側のメニューから **[ジョブ]** を選択し、 **[Set JAR]** を選択します。
 
-2. 適切な `microsoft-spark-<spark-version>-<spark-dotnet-version>.jar` をアップロードします。
+2. 適切な `microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar` をアップロードします。
 
 3. `<your-app-name>` の代わりに発行済みの実行可能ファイルの正しい名前が含まれるように、次のパラメーターを変更します。
 

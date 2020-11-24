@@ -1,17 +1,16 @@
 ---
 title: XML ドキュメントの作成
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877e9c62-b082-4bfb-bc5b-f47297eb30ef
-ms.openlocfilehash: 577d353a30c986d198140b4596ae1a7e199ddd6e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fb92a1fe984014aef9973b821227fbd1c1176a6c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291982"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819267"
 ---
 # <a name="xml-document-creation"></a>XML ドキュメントの作成
 XML ドキュメントは、2 とおりの方法で作成できます。 1 つは、パラメーターを使用せずに **XmlDocument** を作成する方法です。 もう 1 つは、**XmlDocument** の作成時に XmlNameTable をパラメーターとして渡す方法です。 パラメーターを使用せず、新しい空の **XmlDocument** を作成する方法を次の例に示します。  

@@ -1,23 +1,22 @@
 ---
 title: DOM の属性へのアクセス
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: ce2df341-a1a4-4e97-8e1b-cd45b8e3e71e
-ms.openlocfilehash: a77780621032e2ce59b9db04a179c7086588219b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b7a1e64c8661e97966b8d0bb84e2d330c1e06b86
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291644"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822868"
 ---
 # <a name="accessing-attributes-in-the-dom"></a>DOM の属性へのアクセス
 
 属性は要素のプロパティであり、要素の子ではありません。 この区別は、XML ドキュメント オブジェクト モデル (DOM) の兄弟ノード、親ノード、および子ノードの間の移動に使用するメソッドで重要な意味を持ちます。 たとえば、**PreviousSibling** メソッドと **NextSibling** メソッドは、要素から属性への移動や属性間の移動には使われません。 属性は要素のプロパティであり、要素によって所有されているため、**OwnerElement** プロパティを持ちますが、**parentNode** プロパティはありません。また、移動には専用のメソッドを使います。
 
-現在のノードが要素のとき、その要素に関連付けられている属性があるかどうかを調べるには、**HasAttribute** メソッドを使用します。 要素に属性がある場合は、各種のメソッドで属性にアクセスできます。 **XmlElement** の **GetAttribute** メソッドと**GetAttributeNode** メソッドを使用して要素から 1 つの属性を取得するか、すべての属性をコレクションとして取得することができます。 コレクションに対して反復処理を行う必要がある場合は、コレクションを取得すると便利です。 要素のすべての属性が必要な場合は、要素の **Attributes** プロパティを使用して、すべての属性をコレクションに取得できます。
+現在のノードが要素のとき、その要素に関連付けられている属性があるかどうかを調べるには、**HasAttribute** メソッドを使用します。 要素に属性がある場合は、各種のメソッドで属性にアクセスできます。 **XmlElement** の **GetAttribute** メソッドと **GetAttributeNode** メソッドを使用して要素から 1 つの属性を取得するか、すべての属性をコレクションとして取得することができます。 コレクションに対して反復処理を行う必要がある場合は、コレクションを取得すると便利です。 要素のすべての属性が必要な場合は、要素の **Attributes** プロパティを使用して、すべての属性をコレクションに取得できます。
 
 ## <a name="retrieving-all-attributes-into-a-collection"></a>コレクションへのすべての属性の取得
 

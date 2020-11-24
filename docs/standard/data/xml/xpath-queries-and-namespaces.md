@@ -2,17 +2,16 @@
 title: XPath クエリおよび名前空間
 description: XPath クエリおよび名前空間について説明します。 XPath クエリは XML ドキュメント中の名前空間を認識し、名前空間プレフィックスを使用して要素と属性名を修飾することができます。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
-ms.openlocfilehash: e8533d372a747432201dfbc4d879ecd3fbceaf8e
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: a97ff5afef23c361b1f675d2f07f43b3bc5df299
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769250"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818389"
 ---
 # <a name="xpath-queries-and-namespaces"></a>XPath クエリおよび名前空間
 XPath クエリは XML ドキュメント中の名前空間を認識し、名前空間プレフィックスを使用して要素と属性名を修飾することができます。 名前空間プレフィックスで要素や属性の名前を修飾すると、XPath クエリで返されるノードを特定の名前空間に属するノードだけに限定することができます。  

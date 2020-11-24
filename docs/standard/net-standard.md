@@ -2,15 +2,16 @@
 title: .NET Standard
 description: .NET Standard、そのバージョン、それをサポートする .NET 実装について学習します。
 ms.date: 10/05/2020
+ms.prod: dotnet
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: a4736e46eb7c25b64278bed8f2c2457002936b81
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: e0adb69d02fe427dd187c788cba34c0673e97ee6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224163"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822310"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -38,12 +39,12 @@ ms.locfileid: "92224163"
 - バージョンが高くなるほど、ユーザーのライブラリのコードで使用できる API は多くなります。
 - バージョンが低くなるほど、ユーザーのライブラリを使用できるアプリやライブラリが増えます。
 
-可能な限り " *最小* " のバージョンの .NET Standard をターゲットにすることをお勧めします。 そのため、対象にする最高バージョンの .NET Standard を見つけたら、次の手順を実行します。
+可能な限り "*最小*" のバージョンの .NET Standard をターゲットにすることをお勧めします。 そのため、対象にする最高バージョンの .NET Standard を見つけたら、次の手順を実行します。
 
 1. 1 つ低いバージョンの .NET Standard を対象にしてプロジェクトをビルドします。
 2. プロジェクトのビルドが成功したら、手順 1 を繰り返します。 失敗した場合は、対象を次に高いバージョンに変更します。これが対象のバージョンです。
 
-ただし、下位バージョンの .NET Standard を対象にしている場合、さまざまな依存関係のサポートが導入されます。 お使いのプロジェクトが .NET Standard 1.x を対象としている場合、.NET Standard 2.0 " *も* " 対象にすることをお勧めします。 これにより、.NET Standard 2.0 と互換性のある実装上で実行されるライブラリのユーザーに対しては、依存関係グラフが簡略化され、ダウンロードの必要なパッケージの数が減ります。
+ただし、下位バージョンの .NET Standard を対象にしている場合、さまざまな依存関係のサポートが導入されます。 お使いのプロジェクトが .NET Standard 1.x を対象としている場合、.NET Standard 2.0 "*も*" 対象にすることをお勧めします。 これにより、.NET Standard 2.0 と互換性のある実装上で実行されるライブラリのユーザーに対しては、依存関係グラフが簡略化され、ダウンロードの必要なパッケージの数が減ります。
 
 ### <a name="net-standard-versioning-rules"></a>.NET Standard のバージョン管理規則
 

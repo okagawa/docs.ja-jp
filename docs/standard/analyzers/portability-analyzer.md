@@ -2,14 +2,13 @@
 title: .NET Portability Analyzer - .NET
 description: .NET Portability Analyzer ツールを使って、さまざまな .NET の実装 (.NET Core、.NET Standard、UWP、Xamarin など) の間でのコードの移植性を評価する方法について説明します。
 ms.date: 09/13/2019
-ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: d61dd9ebe744686885dad41ef700caaea9853f85
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 03b5f88a17baf8713b06bdd0eac192d9e093b969
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414800"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819709"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -48,7 +47,7 @@ ApiPort.exe analyze -r DGML -f [directory or file]
 ![DGML 分析のスクリーンショット。](./media/portability-analyzer/dgml-example.png)
 
 ### <a name="analyze-portability"></a>移植性を分析する
-Visual Studio でプロジェクト全体を分析するには、**ソリューション エクスプローラー**でプロジェクトを右クリックし、 **[Analyze Assembly Portability]\(アセンブリの移植性を分析する\)** を選択します。 または、 **[分析]** メニューで **[Analyze Assembly Portability]** (アセンブリの移植性を分析) を選択します。 そこから、プロジェクトの実行可能ファイルまたは DLL を選択します。
+Visual Studio でプロジェクト全体を分析するには、**ソリューション エクスプローラー** でプロジェクトを右クリックし、 **[Analyze Assembly Portability]\(アセンブリの移植性を分析する\)** を選択します。 または、 **[分析]** メニューで **[Analyze Assembly Portability]** (アセンブリの移植性を分析) を選択します。 そこから、プロジェクトの実行可能ファイルまたは DLL を選択します。
 
 ![ソリューション エクスプローラーからの移植性アナライザーのスクリーンショット。](./media/portability-analyzer/portability-solution-explorer.png)
 
@@ -75,7 +74,7 @@ Visual Studio で分析を実行すると、.NET 移植性レポート ファイ
 
 ![移植性の詳細のスクリーンショット。](./media/portability-analyzer/api-catalog-portablility-details.png)
 
-レポートの **[説明]** セクションには、選択した**ターゲット プラットフォーム**のいずれからも欠落している API が一覧表示されます。
+レポートの **[説明]** セクションには、選択した **ターゲット プラットフォーム** のいずれからも欠落している API が一覧表示されます。
 
 - [Target type]\(ターゲットの型\): 型にターゲット プラットフォームに存在しない API があります
 - [Target member]\(ターゲットのメンバー\): メンバーがターゲット プラットフォームにありません

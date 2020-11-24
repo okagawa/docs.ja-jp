@@ -2,19 +2,18 @@
 title: マネージド スレッド処理の基本
 description: 例外、データの同期、フォアグラウンド スレッドとバックグラウンド スレッド、ローカル ストレージなど、マネージド スレッド処理に関する他の記事へのリンクを示します。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - multiple threads
 - threading [.NET], multiple threads
 - threading [.NET], about threading
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
-ms.openlocfilehash: ca3073cca9887265b4bacb4f8dfeb01203f82621
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 16785b1c21c5810e55429f6756dcf591c90d8499
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189135"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819670"
 ---
 # <a name="managed-threading-basics"></a>マネージド スレッド処理の基本
 

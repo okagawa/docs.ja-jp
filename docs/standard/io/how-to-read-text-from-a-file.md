@@ -2,7 +2,6 @@
 title: '方法: ファイルのテキストの読み取り'
 description: この記事では、.NET デスクトップ アプリの StreamReader クラスを使用して、テキスト ファイルから同期または非同期でテキストを読み取る方法の例を示します。
 ms.date: 01/03/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-ms.openlocfilehash: 0e90887c2cc4a54355c51facf91c9cc3da7e4320
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 7c772ec1de41d0ba2b4ef0d924a252326ee6909e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189330"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823369"
 ---
 # <a name="how-to-read-text-from-a-file"></a>方法: ファイルのテキストの読み取り
 
@@ -31,7 +30,7 @@ ms.locfileid: "93189330"
 次の例では、コンソール アプリ内での同期読み取り操作を示します。 この例では、ストリーム リーダーを使用してテキスト ファイルを開き、コンテンツが文字列にコピーされ、文字列がコンソールに出力されます。  
   
 > [!IMPORTANT]
-> サンプルでは、 *TestFile.txt* という名前のファイルがアプリと同じフォルダーに入っていると想定しています。  
+> サンプルでは、*TestFile.txt* という名前のファイルがアプリと同じフォルダーに入っていると想定しています。  
 
 :::code language="csharp" source="snippets/how-to-read-text-from-a-file/csharp/sync-console/Program.cs":::
 :::code language="vb" source="snippets/how-to-read-text-from-a-file/vb/sync-console/Program.vb":::
@@ -40,7 +39,7 @@ ms.locfileid: "93189330"
  次の例では、Windows Presentation Foundation (WPF) アプリ内での非同期読み取り操作を示します。  
   
 > [!IMPORTANT]
-> サンプルでは、 *TestFile.txt* という名前のファイルがアプリと同じフォルダーに入っていると想定しています。  
+> サンプルでは、*TestFile.txt* という名前のファイルがアプリと同じフォルダーに入っていると想定しています。  
 
 :::code language="csharp" source="snippets/how-to-read-text-from-a-file/csharp/async-wpf/MainWindow.xaml.cs":::
 :::code language="vb" source="snippets/how-to-read-text-from-a-file/vb/async-wpf/MainWindow.xaml.vb":::

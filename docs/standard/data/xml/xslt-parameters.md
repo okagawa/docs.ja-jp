@@ -1,17 +1,16 @@
 ---
 title: XSLT パラメーター
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-ms.openlocfilehash: 7651360b375071c48ba0d23b64881ac794e51e86
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c203e17e327cf64690c2748c7f3a4e74b5306501
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282533"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818298"
 ---
 # <a name="xslt-parameters"></a>XSLT パラメーター
 XSLT パラメーターを <xref:System.Xml.Xsl.XsltArgumentList> に追加するには、<xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> メソッドを使用します。 その時点で、修飾名と名前空間 URI がそのパラメーター オブジェクトに関連付けられます。  

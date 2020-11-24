@@ -1,17 +1,16 @@
 ---
 title: XPathNavigator による XML データの削除
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9f436bca-1b96-494b-a6d2-e102c7551752
-ms.openlocfilehash: fa331757fac3f30ee86a24bbd0ee12b5f1031a4b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0895154e6932f32ebd3f5d1cf0d59bd557eb1b06
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288668"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822543"
 ---
 # <a name="remove-xml-data-using-xpathnavigator"></a>XPathNavigator による XML データの削除
 <xref:System.Xml.XPath.XPathNavigator> クラスは、XML ドキュメントからノードを削除するためのメソッドのセットを提供します。 これらのメソッドを使用するには、<xref:System.Xml.XPath.XPathNavigator> オブジェクトが編集可能である必要があります。つまり、その <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> プロパティを `true` にする必要があります。  

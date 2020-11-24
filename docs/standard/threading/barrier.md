@@ -1,23 +1,22 @@
 ---
 title: バリア
 ms.date: 09/14/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - synchronization primitives, Barrier
 ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
-ms.openlocfilehash: 5aa34f7f39f4b9b626bea29372cf984f3cefb361
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4eab74ef07ac56a4d3ff65e67bb9fbd45dbfc9bc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138151"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819943"
 ---
 # <a name="barrier"></a>バリア
 
-<xref:System.Threading.Barrier?displayProperty=nameWithType> は、複数のスレッド (*参加要素*と呼ばれる) が段階的に 1 つのアルゴリズムで同時に動作できるようにするユーザー定義の同期プリミティブです。 各参加要素は、コードのバリア ポイントに到達するまで実行されます。 バリアは、作業の 1 つのフェーズの終了を表します。 参加要素は、バリアに到達すると、すべての参加要素が同じバリアに到達するまでブロックされます。 すべての参加要素がバリアに到達した後、必要に応じて、フェーズ後の処理を呼び出すことができます。 フェーズ後の処理を使用すると、他のすべてのスレッドがブロックされた状態のまま 1 つのスレッドでアクションを実行できます。 アクションが実行された後、参加要素のブロックはすべて解除されます。  
+<xref:System.Threading.Barrier?displayProperty=nameWithType> は、複数のスレッド (*参加要素* と呼ばれる) が段階的に 1 つのアルゴリズムで同時に動作できるようにするユーザー定義の同期プリミティブです。 各参加要素は、コードのバリア ポイントに到達するまで実行されます。 バリアは、作業の 1 つのフェーズの終了を表します。 参加要素は、バリアに到達すると、すべての参加要素が同じバリアに到達するまでブロックされます。 すべての参加要素がバリアに到達した後、必要に応じて、フェーズ後の処理を呼び出すことができます。 フェーズ後の処理を使用すると、他のすべてのスレッドがブロックされた状態のまま 1 つのスレッドでアクションを実行できます。 アクションが実行された後、参加要素のブロックはすべて解除されます。  
   
  基本的なバリア パターンを次のコード スニペットに示します。  
   

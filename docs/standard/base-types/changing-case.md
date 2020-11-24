@@ -2,7 +2,6 @@
 title: .NET の大文字と小文字の変更
 description: .NET で文字列の大文字と小文字を変更する方法について説明します。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-ms.openlocfilehash: 424219c8f660b7592996436160f2667f70be654f
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 77b879bcc36886a8f457610e6c406bcd121dcfe7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889531"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820554"
 ---
 # <a name="change-case-in-net"></a>.NET の大文字と小文字の変更
 
@@ -49,7 +48,7 @@ ms.locfileid: "92889531"
  [!code-csharp[Strings.ChangingCase#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#1)]
  [!code-vb[Strings.ChangingCase#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#1)]  
   
- 前の例は、既定でカルチャに依存しています。これには、現在のカルチャのケース表記規則が適用されます。 カルチャに依存しないケース変更を実行したり、特定のカルチャのケース表記規則を適用したりするには、<xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> メソッドのオーバーロードを使用して、 *culture* パラメーターに指定のカルチャを表す <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> または <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> オブジェクトの値を提供します。 <xref:System.String.ToUpper%2A> メソッドを使用してカルチャに依存しないケース変更を実行する方法を示す例については、「[カルチャを認識しない大文字と小文字の変更の実行](../globalization-localization/performing-culture-insensitive-case-changes.md)」を参照してください。  
+ 前の例は、既定でカルチャに依存しています。これには、現在のカルチャのケース表記規則が適用されます。 カルチャに依存しないケース変更を実行したり、特定のカルチャのケース表記規則を適用したりするには、<xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> メソッドのオーバーロードを使用して、*culture* パラメーターに指定のカルチャを表す <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> または <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> オブジェクトの値を提供します。 <xref:System.String.ToUpper%2A> メソッドを使用してカルチャに依存しないケース変更を実行する方法を示す例については、「[カルチャを認識しない大文字と小文字の変更の実行](../globalization-localization/performing-culture-insensitive-case-changes.md)」を参照してください。  
   
 ## <a name="tolower"></a>ToLower  
  <xref:System.String.ToLower%2A?displayProperty=nameWithType> メソッドは、前のメソッドと似ていますが、代わりに文字列内のすべての文字を小文字に変換します。 次の例では、文字列 "Hello World!" を 小文字に変換します。  
@@ -57,7 +56,7 @@ ms.locfileid: "92889531"
  [!code-csharp[Strings.ChangingCase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#2)]
  [!code-vb[Strings.ChangingCase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#2)]  
   
- 前の例は、既定でカルチャに依存しています。これには、現在のカルチャのケース表記規則が適用されます。 カルチャに依存しないケース変更を実行したり、特定のカルチャのケース表記規則を適用したりするには、<xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> メソッドのオーバーロードを使用して、 *culture* パラメーターに指定のカルチャを表す <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> または <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> オブジェクトの値を提供します。 <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> メソッドを使用してカルチャに依存しないケース変更を実行する方法を示す例については、「[カルチャを認識しない大文字と小文字の変更の実行](../globalization-localization/performing-culture-insensitive-case-changes.md)」を参照してください。  
+ 前の例は、既定でカルチャに依存しています。これには、現在のカルチャのケース表記規則が適用されます。 カルチャに依存しないケース変更を実行したり、特定のカルチャのケース表記規則を適用したりするには、<xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> メソッドのオーバーロードを使用して、*culture* パラメーターに指定のカルチャを表す <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> または <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> オブジェクトの値を提供します。 <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> メソッドを使用してカルチャに依存しないケース変更を実行する方法を示す例については、「[カルチャを認識しない大文字と小文字の変更の実行](../globalization-localization/performing-culture-insensitive-case-changes.md)」を参照してください。  
   
 ## <a name="totitlecase"></a>ToTitleCase  
  <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> は、各単語の最初の文字を大文字に変換し、残りの文字を小文字に変換します。 ただし、すべて大文字である単語は頭字語であると想定されて、変換されません。  

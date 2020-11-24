@@ -1,14 +1,13 @@
 ---
 title: XPathNavigator を使用した XML データの選択、評価、および照合
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 46e059f8-4dc8-4185-9236-784be95228ed
-ms.openlocfilehash: 1418e768db2f5f860ec40cf4e1351b4ec4a14a08
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 249b99a627f3bbcc1723f104a80cb61552404877
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282208"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822465"
 ---
 # <a name="selecting-evaluating-and-matching-xml-data-using-xpathnavigator"></a>XPathNavigator を使用した XML データの選択、評価、および照合
 <xref:System.Xml.XPath.XPathNavigator> クラスは、XPath クエリによる <xref:System.Xml.XPath.XPathDocument> または <xref:System.Xml.XmlDocument> オブジェクト内のノードの選択、XPath 式の結果の評価と検査、および <xref:System.Xml.XPath.XPathDocument> または <xref:System.Xml.XmlDocument> オブジェクト内のノードが指定された XPath 式に一致するかどうかの判定のためのメソッドを提供します。 以下のトピックでは、これらの概念および <xref:System.Xml.XPath.XPathDocument> または <xref:System.Xml.XmlDocument> オブジェクト内のノードの選択、評価、および照合に関連する他の概念について説明します。  

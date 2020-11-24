@@ -1,14 +1,13 @@
 ---
 title: リーダーからのデータの読み込み
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-ms.openlocfilehash: 1c048b08380bebce3a627670d88ff6ae48084535
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ea125e57dd6251a4fbd401bac8f37826083965b8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289162"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822673"
 ---
 # <a name="load-data-from-a-reader"></a>リーダーからのデータの読み込み
 <xref:System.Xml.XmlDocument.Load%2A> メソッドに <xref:System.Xml.XmlReader> パラメーターを渡して XML ドキュメントを読み込むと、他の形式からデータを読み込む場合と比較して、その動作に違いがあります。 リーダーが初期状態のとき、<xref:System.Xml.XmlDocument.Load%2A> メソッドは、リーダーからのコンテンツ全体を使用して、リーダー内のすべてのデータから XML ドキュメント オブジェクト モデル (DOM) を構築します。  

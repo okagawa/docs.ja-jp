@@ -1,19 +1,18 @@
 ---
 title: 'スレッド ローカル ストレージ : スレッド相対静的フィールドとデータ スロット'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET], local storage
 - threading [.NET], thread-relative static fields
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-ms.openlocfilehash: f80cc09d87116d3daff8047c1d1398c5e6104178
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: c9ea2939dcff321a1d4e24e7a97c056c016e5fdc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188160"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819631"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>スレッド ローカル ストレージ : スレッド相対静的フィールドとデータ スロット
 

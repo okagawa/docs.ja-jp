@@ -2,7 +2,6 @@
 title: '方法: 日付および時刻の値のミリ秒部分を表示する'
 description: この記事では、.NET で、書式設定された日付と時刻の文字列に、日付と時刻のミリ秒部分を含める方法について説明します。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - dates [.NET], milliseconds
 - milliseconds [.NET]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-ms.openlocfilehash: bff458e73d603781155b18160bc7d088d8bd78cb
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 333b41fe3d4fa68ce26ab5dbd7d5938dda220b9a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888470"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822114"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>方法: 日付および時刻の値のミリ秒部分を表示する
 <xref:System.DateTime.ToString?displayProperty=nameWithType> などの既定の日付および時刻書式指定メソッドは時刻値の時間、分、秒を含めますが、ミリ秒の部分は含めません。 ここでは、書式設定された日付および時刻文字列の中にミリ秒部分を含める方法について説明します。  

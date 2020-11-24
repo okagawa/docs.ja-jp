@@ -1,19 +1,18 @@
 ---
 title: '方法: BlockingCollection の項目を個別に追加および取得する'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - thread-safe collections, blocking dictionary
 ms.assetid: 38f2f3d8-15e5-4bf4-9c83-2b5b6f22bad1
-ms.openlocfilehash: f895be4c20a0cccad23e27db3d488355a614cbfc
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5501e108d1866fc1ae6fc66f9fe665b63373414b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287888"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818636"
 ---
 # <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>方法: BlockingCollection の項目を個別に追加および取得する
 この例では、ブロッキングと非ブロッキングの 2 つの方法で <xref:System.Collections.Concurrent.BlockingCollection%601> の項目を追加、削除する方法を示します。 <xref:System.Collections.Concurrent.BlockingCollection%601> の詳細については、「[BlockingCollection の概要](blockingcollection-overview.md)」を参照してください。  

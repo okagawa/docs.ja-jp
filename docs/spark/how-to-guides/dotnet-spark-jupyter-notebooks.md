@@ -7,12 +7,12 @@ author: luisquintanilla
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc, how-to
-ms.openlocfilehash: eb285465fcacc3e7d4ee60765c30497dcefbc737
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: efebaf0a66863eae0f71fbf1158b80260d7469cf
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94441064"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688177"
 ---
 # <a name="use-net-for-apache-spark-in-jupyter-notebooks"></a>.NET for Apache Spark を Jupyter Notebook で使用する
 
@@ -48,7 +48,7 @@ Jupyter Notebook を使用するには、2 つのことが必要です。
 
 ## <a name="start-net-for-apache-spark"></a>.NET for Apache Spark を開始する
 
-次のコマンドを実行して、デバッグ モードで .NET for Apache Spark を開始します。 この `spark-submit` コマンドはプロセスを開始し、[SparkSession](xref:Microsoft.Spark.Sql.SparkSession) からの接続を待機します。 使用している .NET for Apache Spark に対応するバージョンの `microsoft-spark-<version>.jar` へのパスを必ず指定してください。
+次のコマンドを実行して、デバッグ モードで .NET for Apache Spark を開始します。 この `spark-submit` コマンドはプロセスを開始し、[SparkSession](xref:Microsoft.Spark.Sql.SparkSession) からの接続を待機します。 使用している .NET for Apache Spark に対応するバージョンの `microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar` へのパスを必ず指定してください。
 
 **Ubuntu**
 

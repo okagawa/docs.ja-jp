@@ -1,17 +1,16 @@
 ---
 title: XslTransform クラスを使用した XSLT 変換
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
-ms.openlocfilehash: e03eb08c71ff2d031ac61a702683e3950d94f2be
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: ccdee1bbb94581d842cfc6fabe0f98dd6ec1d252
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160236"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818233"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>XslTransform クラスを使用した XSLT 変換
 

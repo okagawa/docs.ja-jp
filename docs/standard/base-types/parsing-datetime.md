@@ -2,7 +2,6 @@
 title: 文字列を DateTime に変換する
 description: 日付と時刻を表す文字列を解析して、その文字列から DateTime を作成する手法について説明します。
 ms.date: 02/15/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: f6ac4672a81db7047069f726f7eb1b920a82b3db
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 557955b5c47695dea686527fd99653ef2efe19bb
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889037"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821923"
 ---
 # <a name="parse-date-and-time-strings-in-net"></a>.NET で日付と時刻文字列を解析する
 

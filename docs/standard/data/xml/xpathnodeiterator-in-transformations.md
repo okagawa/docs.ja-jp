@@ -1,17 +1,16 @@
 ---
 title: 変換における XPathNodeIterator
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
-ms.openlocfilehash: 88b8f4acbb9fa92d71659ee006ee544275353954
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cd8320071f1de15d503c94c138c02cab5742685c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282754"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818434"
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>変換における XPathNodeIterator
 <xref:System.Xml.XPath.XPathNodeIterator> は、XPath (XML Path Language) クエリの結果として作成されたノード セット、または node-set メソッドを使用して結果ツリー フラグメントから変換されたノード セットの反復処理を行うためのメソッドを提供します。 <xref:System.Xml.XPath.XPathNodeIterator> を使用すれば、そのノード セット内のノードの反復処理を実行できます。 ノード セットが取得されると、<xref:System.Xml.XPath.XPathNodeIterator> クラスは、選択されたノード セットへの読み取り専用、前方参照専用のカーソルを提供します。 ノード セットはドキュメント順に作成されるため、このメソッドを呼び出すと、ドキュメント順で次のノードに移動します。 <xref:System.Xml.XPath.XPathNodeIterator> は、セット内のすべてのノードのノード ツリーを構築するわけではありません。 その代わりに、XPathNodeIterator は、データへの単一ノード ウィンドウを提供し、ツリー内での移動に合わせて、自身が指している基になるノードを公開します。 <xref:System.Xml.XPath.XPathNodeIterator> クラスで利用できるメソッドとプロパティを使用すると、現在のノードから情報を取得できます。 メソッドとプロパティの一覧については、「<xref:System.Windows.Forms.ToolBar>」を参照してください。  

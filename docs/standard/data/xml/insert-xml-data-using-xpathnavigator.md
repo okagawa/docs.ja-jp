@@ -1,18 +1,17 @@
 ---
 title: XPathNavigator による XML データの挿入
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
-ms.openlocfilehash: 1dbe1a709f7c1b527a1754ab943a0a10ff52c6e8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1a0fa96c0fc4db1ab005961728e81b6940cd00e6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289188"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822713"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>XPathNavigator による XML データの挿入
 <xref:System.Xml.XPath.XPathNavigator> クラスは、XML ドキュメント内に兄弟ノード、子ノード、および属性ノードを挿入するためのメソッドのセットを提供します。 これらのメソッドを使用するには、<xref:System.Xml.XPath.XPathNavigator> オブジェクトが編集可能である必要があります。つまり、その <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> プロパティを `true` にする必要があります。  

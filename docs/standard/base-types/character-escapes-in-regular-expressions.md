@@ -2,7 +2,6 @@
 title: .NET 正規表現での文字のエスケープ
 description: .NET 正規表現での特殊文字とエスケープ文字について説明します。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - .NET regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.openlocfilehash: 927fb32163a7b44561c19fdb35e38b488fc50fb7
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 5a9890f9ada6a4e749c8cf5ee96d9e8668525040
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889518"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823265"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>正規表現での文字のエスケープ
 正規表現の円記号 (\\) は、次のいずれかを示します。  
@@ -46,8 +45,8 @@ ms.locfileid: "92889518"
 |`\f`|フォーム フィードの `\u000C`。|  
 |`\n`|改行文字の `\u000A`。|  
 |`\e`|エスケープ文字の `\u001B`。|  
-|`\` *nnn*|ASCII 文字と一致します。 *nnn* は、8 進文字コードを表す 2 桁または 3 桁で構成されます。 たとえば、`\040` は、空白文字を表します。 この構成体は、1 桁のみの場合 (`\2` など)、またはキャプチャ グループの番号に対応する場合には前方参照として解釈されます。 (「[前方参照構成体](backreference-constructs-in-regular-expressions.md)」を参照してください。)|  
-|`\x` *nn*|ASCII 文字と一致します。 *nn* は 2 桁の 16 進文字コードです。|  
+|`\` *nnn*|ASCII 文字と一致します。*nnn* は、8 進文字コードを表す 2 桁または 3 桁で構成されます。 たとえば、`\040` は、空白文字を表します。 この構成体は、1 桁のみの場合 (`\2` など)、またはキャプチャ グループの番号に対応する場合には前方参照として解釈されます。 (「[前方参照構成体](backreference-constructs-in-regular-expressions.md)」を参照してください。)|  
+|`\x` *nn*|ASCII 文字と一致します。*nn* は 2 桁の 16 進文字コードです。|  
 |`\c` *X*|ASCII の制御文字と一致します。X は制御文字です。 たとえば、`\cC` は CTRL-C です。|  
 |`\u` *nnnn*|値が *nnnn* の 16 進数である UTF-16 コード単位と一致します。 **注:** .NET では、Unicode を指定するために使用する Perl5 の文字エスケープはサポートされません。 Perl 5 の文字エスケープは `\x{` *####* `…}` の形式です。ここで、 *####* `…` は一連の 16 進数です。 代わりに、`\u`*nnnn* を使用します。|  
 |`\`|エスケープ文字として認識されない文字が後ろに付いている場合は、その文字と一致します。 たとえば、`\*` はアスタリスク (*) と一致し、`\x2A` と同じです。|  

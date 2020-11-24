@@ -2,19 +2,18 @@
 title: マネージド スレッドのキャンセル
 description: マネージド スレッドのキャンセルについて理解します。 非同期操作または長時間にわたる同期操作に対する連携によるキャンセルでのキャンセル トークンについて説明します。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-ms.openlocfilehash: 09c39202f1564ac544fdf30a07952990b309b661
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 578db725458ad5c4a90256a06744a58a6d1918da
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188472"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819956"
 ---
 # <a name="cancellation-in-managed-threads"></a>マネージド スレッドのキャンセル
 
@@ -142,7 +141,7 @@ ms.locfileid: "93188472"
   
 - ライブラリ コードでキャンセル可能な操作を提供する場合は、ユーザー コードからキャンセルを要求できるように、外部のキャンセル トークンを受け入れるパブリック メソッドも提供します。  
   
-- ライブラリ コードからユーザー コードを呼び出す場合は、ライブラリ コードで OperationCanceledException(externalToken) を常にエラー例外として解釈するのではなく、 *連携によるキャンセル* としても解釈するようにします。  
+- ライブラリ コードからユーザー コードを呼び出す場合は、ライブラリ コードで OperationCanceledException(externalToken) を常にエラー例外として解釈するのではなく、*連携によるキャンセル* としても解釈するようにします。  
   
 - ユーザー デリゲートでは、ライブラリ コードからのキャンセル要求に定期的に応答するようにします。  
   

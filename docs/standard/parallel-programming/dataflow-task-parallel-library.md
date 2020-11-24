@@ -2,7 +2,6 @@
 title: データフロー (タスク並列ライブラリ)
 description: タスク並列ライブラリ (TPL) でデータフロー コンポーネントを使用して、コンカレンシー対応アプリケーションの堅牢性を向上させる方法について説明します。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,15 +9,15 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
-ms.openlocfilehash: 2c7bbc9bf935159ab66bd2a61a60b9484e67018a
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 8c6eeab852f30535d721aa44b3c60e4b6febe0fc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662551"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817641"
 ---
 # <a name="dataflow-task-parallel-library"></a>データフロー (タスク並列ライブラリ)
-タスク並列ライブラリ (TPL) で提供されるデータ フロー コンポーネントは、コンカレンシー対応アプリケーションの堅牢性の強化に役立てることができます。 これらのデータ フロー コンポーネントは *TPL データ フロー ライブラリ*と総称されます。 データ フロー モデルは、粒度の粗いデータ フローおよびパイプライン処理タスクのためのインプロセス メッセージ パッシングを提供し、アクター ベースのプログラミング モデルを推進します。 データ フロー コンポーネントは、TPL の種類とスケジュール インフラストラクチャの上でビルドされ、非同期プログラミングをサポートするために C#、Visual Basic、および F# 言語と統合されています。 相互に非同期通信を行う必要がある複数の操作を行う場合、またはデータが使用可能になったときにデータを処理する場合に、これらのデータ フロー コンポーネントは役立ちます。 たとえば、Web カメラからのイメージ データを処理するアプリケーションを考えてみます。 データ フロー モデルを使用すると、イメージ フレームが使用可能になったときに、それをアプリケーションで処理できます。 たとえば、アプリケーションが輝度修正や赤目補正などを実行してイメージ フレームを向上させる場合、データ フロー コンポーネントの*パイプライン*を作成できます。 パイプラインの各ステージは、イメージを変換するために、TPL が提供する機能のような、粒度の粗い並列機能を使用する場合があります。  
+タスク並列ライブラリ (TPL) で提供されるデータ フロー コンポーネントは、コンカレンシー対応アプリケーションの堅牢性の強化に役立てることができます。 これらのデータ フロー コンポーネントは *TPL データ フロー ライブラリ* と総称されます。 データ フロー モデルは、粒度の粗いデータ フローおよびパイプライン処理タスクのためのインプロセス メッセージ パッシングを提供し、アクター ベースのプログラミング モデルを推進します。 データ フロー コンポーネントは、TPL の種類とスケジュール インフラストラクチャの上でビルドされ、非同期プログラミングをサポートするために C#、Visual Basic、および F# 言語と統合されています。 相互に非同期通信を行う必要がある複数の操作を行う場合、またはデータが使用可能になったときにデータを処理する場合に、これらのデータ フロー コンポーネントは役立ちます。 たとえば、Web カメラからのイメージ データを処理するアプリケーションを考えてみます。 データ フロー モデルを使用すると、イメージ フレームが使用可能になったときに、それをアプリケーションで処理できます。 たとえば、アプリケーションが輝度修正や赤目補正などを実行してイメージ フレームを向上させる場合、データ フロー コンポーネントの *パイプライン* を作成できます。 パイプラインの各ステージは、イメージを変換するために、TPL が提供する機能のような、粒度の粗い並列機能を使用する場合があります。  
   
  ここでは、TPL データ フロー ライブラリの概要を示します。 プログラミング モデル、定義済みのデータ フロー ブロックの型、およびアプリケーションの特定の要件を満たすためのデータ フロー ブロックの構成方法を説明します。  
 
@@ -28,12 +27,12 @@ ms.locfileid: "84662551"
  TPL データ フロー ライブラリはメッセージ パッシングおよび、並列化され、CPU 負荷が高く、I/O 負荷が高く、スループットが高く、待機時間が短いアプリケーションのための基盤を提供します。 また、システム上でのデータのバッファリング方法や移動について、明示的に制御できます。 データ フロー プログラミング モデルの理解を深めるため、非同期的にディスクからイメージを読み込み、それらの合成イメージを作成するアプリケーションを考えてみます。 従来のプログラミング モデルでは、通常、タスクを協調させ、共有データにアクセスするには、コールバックおよびロックなどの同期オブジェクトを使用する必要があります。 データ フロー プログラミング モデルを使用すると、イメージがディスクから読み込まれたときにそれを処理する、データ フロー オブジェクトを作成できます。 データ フロー モデルでは、データが使用可能になったときの処理方法と、データ間の依存関係を宣言します。 ランタイムがデータ間の依存関係を管理するため、通常は共有データへのアクセスの同期要件を回避できます。 さらに、ランタイムのスケジュールは非同期のデータの到着に基づいて動作するため、基になるスレッドを効率的に管理することによって、データ フローの応答性とスループットが向上します。 Windows フォーム アプリケーションでイメージ処理を実装するためにデータフロー プログラミング モデルを使う例については、「[チュートリアル:Windows フォーム アプリケーションでのデータフローの使用](walkthrough-using-dataflow-in-a-windows-forms-application.md)」を参照してください。  
   
 ### <a name="sources-and-targets"></a>ソースとターゲット  
- TPL データ フロー ライブラリは、データのバッファリングと処理を行うデータ構造体である*データ フロー ブロック*で構成されます。 TPL は*ソース ブロック*、*ターゲット ブロック*、および*伝達子ブロック*の 3 種類のデータ フロー ブロックを定義します。 ソース ブロックはデータのソースとして機能し、それを読み取ることができます。 ターゲット ブロックはデータのレシーバーとして機能し、それに書き込むことができます。 伝達子ブロックは、ソース ブロックとターゲット ブロックのどちらとしても機能し、読み取りも書き込みもできます。 TPL は <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType> インターフェイスを定義してソースを表し、<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType> によってターゲットを表し、<xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602?displayProperty=nameWithType> によって伝達子を表します。 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> は、<xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> と <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> の両方から継承します。  
+ TPL データ フロー ライブラリは、データのバッファリングと処理を行うデータ構造体である *データ フロー ブロック* で構成されます。 TPL は *ソース ブロック*、*ターゲット ブロック*、および *伝達子ブロック* の 3 種類のデータ フロー ブロックを定義します。 ソース ブロックはデータのソースとして機能し、それを読み取ることができます。 ターゲット ブロックはデータのレシーバーとして機能し、それに書き込むことができます。 伝達子ブロックは、ソース ブロックとターゲット ブロックのどちらとしても機能し、読み取りも書き込みもできます。 TPL は <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType> インターフェイスを定義してソースを表し、<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType> によってターゲットを表し、<xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602?displayProperty=nameWithType> によって伝達子を表します。 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> は、<xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> と <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> の両方から継承します。  
   
  TPL データ フロー ライブラリは、<xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>、<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>、および <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> のインターフェイスを実装する、複数の定義済みのデータ フロー ブロックの型を提供します。 これらのデータ フロー ブロックの型については、このドキュメントの「[定義済みのデータ フロー ブロックの型](#predefined-dataflow-block-types)」のセクションで説明します。  
   
 ### <a name="connecting-blocks"></a>ブロックの接続  
- データ フロー ブロックを接続して、データ フロー ブロックのリニア シーケンスである*パイプライン*を作成するか、またはデータ フロー ブロックのグラフである*ネットワーク*を作成できます。 パイプラインは、ネットワークの 1 つの形態です。 パイプラインまたはネットワークでは、データが使用可能になると、ソースはターゲットに非同期的にデータを伝達します。 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A?displayProperty=nameWithType> メソッドは、ターゲット ブロックにソースのデータ フロー ブロックをリンクします。 ソースは、ターゲットにリンクしないか、または複数のターゲットにリンクできます。ターゲットはソースからリンクされないか、または複数のソースからリンクできます。 パイプラインまたはネットワークとの間でデータ フロー ブロックを同時に追加または削除できます。 定義済みのデータ フロー ブロックの型は、リンクとリンク解除のすべてのスレッド セーフな側面を処理します。  
+ データ フロー ブロックを接続して、データ フロー ブロックのリニア シーケンスである *パイプライン* を作成するか、またはデータ フロー ブロックのグラフである *ネットワーク* を作成できます。 パイプラインは、ネットワークの 1 つの形態です。 パイプラインまたはネットワークでは、データが使用可能になると、ソースはターゲットに非同期的にデータを伝達します。 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A?displayProperty=nameWithType> メソッドは、ターゲット ブロックにソースのデータ フロー ブロックをリンクします。 ソースは、ターゲットにリンクしないか、または複数のターゲットにリンクできます。ターゲットはソースからリンクされないか、または複数のソースからリンクできます。 パイプラインまたはネットワークとの間でデータ フロー ブロックを同時に追加または削除できます。 定義済みのデータ フロー ブロックの型は、リンクとリンク解除のすべてのスレッド セーフな側面を処理します。  
   
  データフロー ブロックを接続して基本的なパイプラインを作成する例については、「[チュートリアル:データフロー パイプラインの作成](walkthrough-creating-a-dataflow-pipeline.md)」を参照してください。 データフロー ブロックを接続して、より複雑なネットワークを作成する例については、「[チュートリアル:Windows フォーム アプリケーションでのデータフローの使用](walkthrough-using-dataflow-in-a-windows-forms-application.md)」を参照してください。 ソースがターゲットにメッセージを提供した後でソースからターゲットのリンクを解除する例については、「[方法:データ フロー ブロックのリンクを解除する](how-to-unlink-dataflow-blocks.md)」を参照してください。  
   
@@ -44,14 +43,14 @@ ms.locfileid: "84662551"
 > それぞれの定義済みのソースのデータ フロー ブロックの型は、メッセージを受信した順にそれが伝達されることを保証するため、ソース ブロックは各メッセージを読み取ってから、次のメッセージを処理する必要があります。 したがって、フィルター処理を使用して複数のターゲットをソースに接続する場合、各メッセージを少なくとも 1 つのターゲット ブロックが受信するようにします。 そうしない場合、アプリケーションでデッドロックが発生する可能性があります。  
   
 ### <a name="message-passing"></a>メッセージ パッシング  
- データ フロー プログラミング モデルは、プログラムの独立したコンポーネントがメッセージの送信によって相互に通信する、*メッセージ パッシング*の概念に関連しています。 アプリケーション コンポーネントの間でメッセージを伝達する方法の 1 つは、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> および <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A?displayProperty=nameWithType> メソッドを呼び出して、ターゲット データ フロー ブロック ポストにメッセージを送信し (<xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> は同期的に動作し、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> は非同期的に動作します)、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A>、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A>、および <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A> メソッドを呼び出して、ソース ブロックからメッセージを受け取ることです。 入力データをヘッド ノード (ターゲット ブロック) に送信し、出力データをパイプラインのターミナル ノードまたはネットワーク (1 つ以上のソース ブロック) のターミナル ノードから受信することにより、これらのメソッドとデータ フロー パイプラインまたはネットワークを結合することができます。 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Choose%2A> メソッドを使用して、データが使用可能な、指定されたソースの先頭から読み取り、そのデータにアクションを実行することもできます。  
+ データ フロー プログラミング モデルは、プログラムの独立したコンポーネントがメッセージの送信によって相互に通信する、*メッセージ パッシング* の概念に関連しています。 アプリケーション コンポーネントの間でメッセージを伝達する方法の 1 つは、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> および <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A?displayProperty=nameWithType> メソッドを呼び出して、ターゲット データ フロー ブロック ポストにメッセージを送信し (<xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> は同期的に動作し、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> は非同期的に動作します)、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A>、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A>、および <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A> メソッドを呼び出して、ソース ブロックからメッセージを受け取ることです。 入力データをヘッド ノード (ターゲット ブロック) に送信し、出力データをパイプラインのターミナル ノードまたはネットワーク (1 つ以上のソース ブロック) のターミナル ノードから受信することにより、これらのメソッドとデータ フロー パイプラインまたはネットワークを結合することができます。 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Choose%2A> メソッドを使用して、データが使用可能な、指定されたソースの先頭から読み取り、そのデータにアクションを実行することもできます。  
   
  ソース ブロックは、<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A?displayProperty=nameWithType> メソッドを呼び出して、ターゲット ブロックにデータを提供します。 ターゲット ブロックは、提供されたメッセージに、3 つの方法のうちの 1 つで応答します。メッセージを受け入れるか、メッセージを拒否するか、またはメッセージを延期できます。 ターゲットがメッセージを受け入れると、<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> メソッドは <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Accepted> を返します。 ターゲットがメッセージを拒否すると、<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> メソッドは <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Declined> を返します。 ターゲットがソースからメッセージを受け取らないことを要求すると、<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> は <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.DecliningPermanently> を返します。 その戻り値を受信した後は、定義済みのソース ブロックの型は、リンクされたターゲットにメッセージを提供せず、自動的にそのターゲットからリンク解除します。  
   
  後で使用するために、ターゲット ブロックがメッセージを延期すると、<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> メソッドは <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Postponed> を返します。 メッセージを延期したターゲット ブロックは、後から <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReserveMessage%2A?displayProperty=nameWithType> メソッドを呼び出して、提供されたメッセージの予約を試みることができます。 この時点で、メッセージはまだ使用できてターゲット ブロックから使用できるか、または他のターゲットに取得されています。 ターゲット ブロックがメッセージを後から必要とする場合、またはメッセージを必要としない場合には、それぞれ <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A?displayProperty=nameWithType> または <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReleaseReservation%2A> メソッドを呼び出します。 通常は、メッセージの予約は、最短一致のモードで動作するデータ フロー ブロックの型で使用されます。 最短一致のモードについては、このドキュメントの後で説明します。 延期されたメッセージを予約せずに、ターゲット ブロックは <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A?displayProperty=nameWithType> メソッドを使用して、直接延期されたメッセージを使用しようとすることもできます。  
   
 ### <a name="dataflow-block-completion"></a>データ フロー ブロックの完了  
- データ フロー ブロックは、*完了*の概念をサポートしています。 完了した状態にあるデータ フロー ブロックは、処理を実行しません。 各データ フロー ブロックには、ブロックの完了ステータスを表す "*完了タスク*" と呼ばれる <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> オブジェクトが関連付けられています。 <xref:System.Threading.Tasks.Task> オブジェクトの終了を待機できるため、完了タスクを使用して、データ フロー ネットワークの 1 つ以上のターミナル ノードが終了するまで待機できます。 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> インターフェイスは、データ フロー ブロックに完了の要求を通知する <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> メソッドを定義し、またデータ フロー ブロックの完了タスクを返す <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> プロパティを定義します。 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> と <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> はどちらも <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> インターフェイスを継承します。  
+ データ フロー ブロックは、*完了* の概念をサポートしています。 完了した状態にあるデータ フロー ブロックは、処理を実行しません。 各データ フロー ブロックには、ブロックの完了ステータスを表す "*完了タスク*" と呼ばれる <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> オブジェクトが関連付けられています。 <xref:System.Threading.Tasks.Task> オブジェクトの終了を待機できるため、完了タスクを使用して、データ フロー ネットワークの 1 つ以上のターミナル ノードが終了するまで待機できます。 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> インターフェイスは、データ フロー ブロックに完了の要求を通知する <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> メソッドを定義し、またデータ フロー ブロックの完了タスクを返す <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> プロパティを定義します。 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> と <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> はどちらも <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> インターフェイスを継承します。  
   
  データ フロー ブロックがエラーなしで完了したか、1 つのエラーが発生したか、複数のエラーが発生したか、取り消されたかを知る 2 つの方法があります。 最初の方法は、`try`-`catch` ブロック (Visual Basic では `Try`-`Catch`) の完了タスクで <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> メソッドを呼び出すことです。 次の例では、入力値が 0 未満の場合に <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> をスローする <xref:System.ArgumentOutOfRangeException> オブジェクトを作成します。 この例では、完了タスクで <xref:System.AggregateException> を呼び出すと、<xref:System.Threading.Tasks.Task.Wait%2A> がスローされます。 <xref:System.ArgumentOutOfRangeException> には <xref:System.AggregateException.InnerExceptions%2A> オブジェクトの <xref:System.AggregateException> プロパティを使用してアクセスします。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "84662551"
  また、継続タスクの本体で <xref:System.Threading.Tasks.Task.IsCanceled%2A> などのプロパティを使用して、データ フロー ブロックの完了ステータスに関する追加情報を決定することもできます。 継続タスク、および継続タスクと取り消し処理やエラー処理との関連の詳細については、「[継続タスクを使用したタスクの連結](chaining-tasks-by-using-continuation-tasks.md)」、「[タスクのキャンセル](task-cancellation.md)」、および[例外処理](exception-handling-task-parallel-library.md)に関するページを参照してください。  
 
 ## <a name="predefined-dataflow-block-types"></a>定義済みのデータ フロー ブロックの型  
- TPL データ フロー ライブラリは、いくつかの定義済みのデータ フロー ブロックの型を提供します。 これらの型は、*バッファリング ブロック*、*実行ブロック*、*グループ化ブロック*の 3 種類に分けられます。 次のセクションでは、これらの種類を構成するブロックの型について説明します。  
+ TPL データ フロー ライブラリは、いくつかの定義済みのデータ フロー ブロックの型を提供します。 これらの型は、*バッファリング ブロック*、*実行ブロック*、*グループ化ブロック* の 3 種類に分けられます。 次のセクションでは、これらの種類を構成するブロックの型について説明します。  
   
 ### <a name="buffering-blocks"></a>バッファリング ブロック  
  バッファリング ブロックはデータ コンシューマーが使用するデータを保持します。 TPL データ フロー ライブラリは <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601?displayProperty=nameWithType> と <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601?displayProperty=nameWithType> の 3 つのバッファリング ブロックの型を提供します。  
@@ -234,7 +233,7 @@ ms.locfileid: "84662551"
  Windows フォーム アプリケーションで取り消しを使う方法を示した例については、「[方法:データフロー ブロックをキャンセルする](how-to-cancel-a-dataflow-block.md)」をご覧ください。 TPL での取り消し処理の詳細については、「[タスクのキャンセル](task-cancellation.md)」を参照してください。  
   
 ### <a name="specifying-greedy-versus-non-greedy-behavior"></a>最長一致と最短一致の動作の指定  
- 複数のグループ化データ フロー ブロックの型は*最長一致*モードまたは*最短一致*モードのどちらかで動作します。 既定では、定義済みのデータ フロー ブロックの型は、最長一致モードで動作します。  
+ 複数のグループ化データ フロー ブロックの型は *最長一致* モードまたは *最短一致* モードのどちらかで動作します。 既定では、定義済みのデータ フロー ブロックの型は、最長一致モードで動作します。  
   
  <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> などの結合ブロックでは、最長一致モードは、対応する結合データが使用できない場合でも、ブロックが直ちにデータを受け入れることを意味します。 最短一致モードは、ターゲットのそれぞれで結合が完了できるように使用可能になるまで、ブロックがすべての受信メッセージを延期することを意味します。 延期されたメッセージのいずれかが使用できなくなった場合、結合ブロックは延期されたすべてのメッセージを解放し、プロセスを再起動します。 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> クラスにおいては、最長一致と最短一致の動作は似ていますが、最短一致の場合には、バッチを完了するために十分なメッセージを別のソースから使用できるようになるまで <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> オブジェクトがすべての受信メッセージを延期する点が異なります。  
   

@@ -1,18 +1,17 @@
 ---
 title: スキーマのコンパイル後の情報セット
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
-ms.openlocfilehash: 3bd0c6063fee1fa1a9f046a8be2ebfde07aea9ee
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2b91a74f7dbb31ee47535dbed7cf5fa5243e364c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291514"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820442"
 ---
 # <a name="post-schema-compilation-infoset"></a>スキーマのコンパイル後の情報セット
 W3C 勧告『[XML Schema](https://www.w3.org/XML/Schema)』では、スキーマ検証前とスキーマ コンパイル後に必ず公開する情報セットについて解説されています。 XML スキーマ オブジェクト モデル (SOM) は、<xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> の <xref:System.Xml.Schema.XmlSchemaSet> メソッドが呼び出される前と後について、この公開内容を調べます。  

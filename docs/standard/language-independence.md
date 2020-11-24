@@ -1,18 +1,17 @@
 ---
 title: 言語への非依存性、および言語非依存コンポーネント
 description: C#、C++/CLI、F#、IronPython、VB、Visual COBOL、PowerShell など、.NET でサポートされる多くの言語の中のいずれかで開発する方法を説明します。
-ms.date: 07/22/2016
 dev_langs:
 - csharp
 - vb
-ms.technology: dotnet-standard
+ms.date: 07/22/2016
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 524f8dc9838d7c438e8155da683c4fa5b01f36a3
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 259db1b9d33dd3b068f4d4fa18d2118db34bf0b0
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162987"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819085"
 ---
 # <a name="language-independence-and-language-independent-components"></a>言語への非依存性、および言語非依存コンポーネント
 
@@ -2042,9 +2041,9 @@ CLS 準拠型のプロパティは、次の規則に従う必要があります�
 
 イベントは、名前と型によって定義されます。 イベントの型は、イベントの表示に使用されるデリゲートです。 たとえば、`DbConnection.StateChange` イベントは `StateChangeEventHandler` 型です。 イベント自体のほか、イベント名に基づく名前の 3 つのメソッドがイベントの実装を提供し、アセンブリのメタデータで `SpecialName` としてマークされています。
 
-* イベント ハンドラーを追加するメソッド (`add`_*EventName*)。 たとえば、`DbConnection.StateChange` イベントのイベント サブスクリプション メソッドの名前は `add_StateChange` です。
+* イベント ハンドラーを追加するメソッド (`add`_ *EventName*)。 たとえば、`DbConnection.StateChange` イベントのイベント サブスクリプション メソッドの名前は `add_StateChange` です。
 
-* イベント ハンドラーを削除するメソッド (`remove`_*EventName*)。 たとえば、`DbConnection.StateChange` イベントの削除メソッドの名前は `remove_StateChange` です。
+* イベント ハンドラーを削除するメソッド (`remove`_ *EventName*)。 たとえば、`DbConnection.StateChange` イベントの削除メソッドの名前は `remove_StateChange` です。
 
 * イベントが発生したことを示すメソッド (`raise`\_*EventName*)。
 

@@ -2,7 +2,6 @@
 title: 正規表現でのコンストラクトのグループ化
 description: .NET でグループ化構造体を使用する方法について説明します。 グループ化構成体は、正規表現の部分式を表し、入力文字列の部分文字列をキャプチャします。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: de424b4a022a5e2d2f8a9c12b4147383082f019b
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 52f7efdf5591901602811cba8f2b6c1a4f42f96c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888509"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823005"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>正規表現でのコンストラクトのグループ化
 グループ化構成体は、正規表現の部分式を表し、入力文字列の部分文字列をキャプチャします。 グループ化構成体を使用して、以下を実行できます。  
@@ -62,11 +61,11 @@ ms.locfileid: "92888509"
   
  キャプチャされたグループにアクセスする方法は 4 つあります。  
   
-- 正規表現内で前方参照構成体を使用する。 `\`*number* という構文を使うと、一致した部分式が同じ正規表現内で参照されます。ここで、 *number* はキャプチャされた部分式の序数です。  
+- 正規表現内で前方参照構成体を使用する。 `\`*number* という構文を使うと、一致した部分式が同じ正規表現内で参照されます。ここで、*number* はキャプチャされた部分式の序数です。  
   
-- 正規表現内で名前付き前方参照構成体を使用する。 `\k<`*name*`>` という構文 ( *name* はキャプチャ グループの名前)、または `\k<`*number*`>` という構文 ( *number* はキャプチャ グループの序数) を使用すると、一致した部分式が同じ正規表現内で参照されます。 キャプチャ グループには、その序数と同じ既定の名前が付いています。 詳細については、このトピックで後述する「 [一致した名前付き部分式](#named_matched_subexpression) 」を参照してください。  
+- 正規表現内で名前付き前方参照構成体を使用する。 `\k<`*name*`>` という構文 (*name* はキャプチャ グループの名前)、または `\k<`*number*`>` という構文 (*number* はキャプチャ グループの序数) を使用すると、一致した部分式が同じ正規表現内で参照されます。 キャプチャ グループには、その序数と同じ既定の名前が付いています。 詳細については、このトピックで後述する「 [一致した名前付き部分式](#named_matched_subexpression) 」を参照してください。  
   
-- `$`*number* 置換シーケンスを、<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> メソッドの呼び出しで使用する。ここで、 *number* はキャプチャされた部分式の序数です。  
+- `$`*number* 置換シーケンスを、<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> メソッドの呼び出しで使用する。ここで、*number* はキャプチャされた部分式の序数です。  
   
 - プログラムで <xref:System.Text.RegularExpressions.GroupCollection> プロパティによって返される <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> オブジェクトを使用する。 コレクション内の位置 0 にあるメンバーは、正規表現に一致した文字列全体を表します。 後続の各メンバーは、一致した部分式を表します。 詳しくは、「 [Grouping Constructs and Regular Expression Objects](#Objects) 」セクションをご覧ください。  
   
@@ -105,13 +104,13 @@ ms.locfileid: "92888509"
   
  キャプチャされた名前付きグループには次の方法でアクセスできます。  
   
-- 正規表現内で名前付き前方参照構成体を使用する。 `\k<`*name*`>` という構文を使用すると、一致した部分式が同じ正規表現内で参照されます。ここで、 *name* はキャプチャされた部分式の名前です。  
+- 正規表現内で名前付き前方参照構成体を使用する。 `\k<`*name*`>` という構文を使用すると、一致した部分式が同じ正規表現内で参照されます。ここで、*name* はキャプチャされた部分式の名前です。  
   
-- 正規表現内で前方参照構成体を使用する。 `\`*number* という構文を使うと、一致した部分式が同じ正規表現内で参照されます。ここで、 *number* はキャプチャされた部分式の序数です。 一致した名前付き部分式には、一致した部分式の後、左から右に連続した番号が付けられます。  
+- 正規表現内で前方参照構成体を使用する。 `\`*number* という構文を使うと、一致した部分式が同じ正規表現内で参照されます。ここで、*number* はキャプチャされた部分式の序数です。 一致した名前付き部分式には、一致した部分式の後、左から右に連続した番号が付けられます。  
   
-- `${`*name*`}` 置換シーケンスを、<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> メソッドの呼び出しで使用する。ここで、 *name* はキャプチャされた部分式の名前です。  
+- `${`*name*`}` 置換シーケンスを、<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> メソッドの呼び出しで使用する。ここで、*name* はキャプチャされた部分式の名前です。  
   
-- `$`*number* 置換シーケンスを、<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> メソッドの呼び出しで使用する。ここで、 *number* はキャプチャされた部分式の序数です。  
+- `$`*number* 置換シーケンスを、<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> メソッドの呼び出しで使用する。ここで、*number* はキャプチャされた部分式の序数です。  
   
 - プログラムで <xref:System.Text.RegularExpressions.GroupCollection> プロパティによって返される <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> オブジェクトを使用する。 コレクション内の位置 0 にあるメンバーは、正規表現に一致した文字列全体を表します。 後続の各メンバーは、一致した部分式を表します。 キャプチャされた名前付きグループは、キャプチャされた番号付きグループの後にコレクションに格納されます。  
   
@@ -174,7 +173,7 @@ ms.locfileid: "92888509"
   
  ここで、 *name1* は現在のグループ (省略可能) で、 *name2* は既に定義されていたグループで、 *subexpression* は有効な正規表現パターンです。 グループ定義の均等化では、 *name2* の定義を削除し、 *name2* と *name1* の間隔を *name1* に格納します。 *name2* グループが定義されていない場合、一致はバックトラックされます。 *name2* の最後の定義を削除すると、 *name2* の以前の定義がわかるため、この構成体によって、かっこや左右の角かっこなど入れ子になった構成体を追跡するカウンターとして *name2* グループのキャプチャのスタックを使用できます。  
   
- グループ定義の均等化では、 *name2* をスタックとして使用します。 入れ子になった各構成体の開始文字が、グループとその <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> コレクションに配置されます。 終了文字が一致すると、対応する開始文字がグループから削除され、 <xref:System.Text.RegularExpressions.Group.Captures%2A> コレクションが 1 つ減らされます。 入れ子になったすべての構成体の開始文字と終了文字が一致したら、 *name2* は空になります。  
+ グループ定義の均等化では、 *name2* をスタックとして使用します。 入れ子になった各構成体の開始文字が、グループとその <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> コレクションに配置されます。 終了文字が一致すると、対応する開始文字がグループから削除され、 <xref:System.Text.RegularExpressions.Group.Captures%2A> コレクションが 1 つ減らされます。 入れ子になったすべての構成体の開始文字と終了文字が一致したら、*name2* は空になります。  
   
 > [!NOTE]
 > 入れ子になった構成体の適切な開始文字と終了文字を使用するように次の例の正規表現を変更すると、その正規表現を使用して、複数の入れ子になったメソッド呼び出しを含む数式やプログラム コード行などのほとんどの入れ子になった構成体を処理できるようになります。  

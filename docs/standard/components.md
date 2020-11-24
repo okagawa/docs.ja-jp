@@ -3,13 +3,12 @@ title: .NET アーキテクチャ コンポーネント
 description: .NET Standard、.NET 実装、.NET ランタイム、ツールなど、.NET アーキテクチャ コンポーネントについて説明します。
 author: cartermp
 ms.date: 10/05/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: 316063dbcfba5c92b4a9c6a17051e0a7fc178a3a
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 00d05ee328087042f7603779438436656c45be48
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224390"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819423"
 ---
 # <a name="net-architectural-components"></a>.NET アーキテクチャ コンポーネント
 
@@ -89,7 +88,7 @@ UWP は、モノのインターネット (IoT) 用に最新のタッチ対応の
 すべての .NET 実装と連携する多様なツールやインフラストラクチャ コンポーネントにアクセスできます。 これらのツールとコンポーネントは次のとおりです。
 
 - .NET 言語とコンパイラ
-- .NET プロジェクト システム ( *.csproj* 、 *.vbproj* 、および *.fsproj* ファイルに基づく)
+- .NET プロジェクト システム ( *.csproj*、 *.vbproj*、および *.fsproj* ファイルに基づく)
 - [MSBuild](/visualstudio/msbuild/msbuild) (プロジェクトのビルドに使用されるビルド エンジン)
 - [NuGet](/nuget/) (Microsoft の .NET 用パッケージ マネージャー)
 - オープン ソースのビルド オーケストレーション ツール ([CAKE](https://cakebuild.net/)、[FAKE](https://fake.build/) など)
@@ -106,15 +105,15 @@ C# 言語および共通言語基盤 (CLI) の仕様は、[エクマ インタ�
 
 [C#](http://www.ecma-international.org/publications/standards/Ecma-334.htm) および [CLI](http://www.ecma-international.org/publications/standards/Ecma-335.htm) ([TR-84](http://www.ecma-international.org/publications/techreports/E-TR-084.htm)) については、次の公式の Ecma ドキュメントを入手できます。
 
-- **The C# Language Standard (version 5.0)** (C# 言語標準 (バージョン 5.0)): [ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
-- **The Common Language Infrastructure** (共通言語基盤): [pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) 形式と [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) 形式で入手可能。
-- **Information Derived from the Partition IV XML File** (Partition IV XML ファイルから派生した情報): [pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) 形式と [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) 形式で入手可能。
+- **The C# Language Standard (version 5.0)** (C# 言語標準 (バージョン 5.0)):[ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
+- **The Common Language Infrastructure** (共通言語基盤):[pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) 形式と [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) 形式で入手可能。
+- **Information Derived from the Partition IV XML File** (Partition IV XML ファイルから派生した情報):[pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) 形式と [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) 形式で入手可能。
 
 公式の ISO/IEC ドキュメントは、ISO/IEC の「[Publicly Available Standards](https://standards.iso.org/ittf/PubliclyAvailableStandards/)」(公開されている標準) ページから入手できます。 そのページのリンクを次に示します。
 
-- **情報技術 - プログラミング言語 - C#** : [ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
-- **情報技術 - 共通言語基盤 (CLI) パーティション I から VI** : [ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
-- **情報技術 - 共通言語基盤 (CLI) - Partition IV XML ファイルから派生した情報に関するテクニカル レポート** : [ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
+- **情報技術 - プログラミング言語 - C#** :[ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
+- **情報技術 - 共通言語基盤 (CLI) パーティション I から VI**:[ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
+- **情報技術 - 共通言語基盤 (CLI) - Partition IV XML ファイルから派生した情報に関するテクニカル レポート**:[ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
 
 ## <a name="see-also"></a>関連項目
 
