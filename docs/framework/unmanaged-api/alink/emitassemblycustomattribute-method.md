@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b72f5409-79af-4fa7-90a7-7630eec170f1
 topic_type:
 - apiref
-ms.openlocfilehash: ec0a86e3396ad42152bc0a244f74ad13deba16e4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2070d1ec2aec80638c20c764eed5086c4a42e0fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446506"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676362"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute メソッド
+
 を呼び出して、アセンブリレベルのカスタム属性を設定します。  
   
 ## <a name="syntax"></a>構文  
@@ -40,11 +41,12 @@ HRESULT EmitAssemblyCustomAttribute(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `AssemblyID`  
  アセンブリの ID。  
   
  `FileToken`  
- 属性をなするファイル。 `AssemblyID` がバインドされていない .netmodule を示していない場合は NULL を指定できます。  
+ 属性をなするファイル。 がバインドされ `AssemblyID` ていない .netmodule を示していない場合は、NULL にすることができます。  
   
  `tkType`  
  カスタム属性の型。  
@@ -62,9 +64,11 @@ HRESULT EmitAssemblyCustomAttribute(
  複数の属性を出力する場合は TRUE。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK を返します。  
   
 ## <a name="requirements"></a>要件  
+
  Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目

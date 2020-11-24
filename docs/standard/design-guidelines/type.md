@@ -7,14 +7,15 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], type design guidelines
 - types [.NET Framework], design guidelines
 ms.assetid: 6b49314e-8bba-43ea-97ca-4e0255812f95
-ms.openlocfilehash: 56b4cb6e93cd44c42fbc2921c9ecfd947c304b3b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a20744f76433ff12456967e4d41d9a13b6f5d46c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828544"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677532"
 ---
 # <a name="type-design-guidelines"></a>型のデザインのガイドライン
+
 CLR の観点からは、参照型と値型のカテゴリは2つだけですが、フレームワークの設計について説明するために、型をより多くの論理グループに分割し、それぞれに固有のデザインルールを使用します。
 
  クラスは、参照型の一般的なケースです。 多くのフレームワークでは、多くの型が構成されています。 クラスは、サポートされているオブジェクト指向の機能の豊富なセットと、その一般的な適用性を持ちます。 基本クラスと抽象クラスは、機能拡張に関連する特殊な論理グループです。
@@ -32,6 +33,7 @@ CLR の観点からは、参照型と値型のカテゴリは2つだけですが
  ✔️、関連性のない機能をランダムにコレクションするだけでなく、適切に定義された一連の関連するメンバーであることを確認します。
 
 ## <a name="in-this-section"></a>このセクションの内容
+
  [クラスと構造体の間の](choosing-between-class-and-struct.md)[抽象クラスのデザイン](abstract-class.md)[静的クラスデザイン](static-class.md)[インターフェイス](interface.md)のデザイン [構造体](struct.md)を設計する [入れ子になった型](nested-types.md)のデザイン [Enum Design](enum.md) *© 2005, 2009 Microsoft Corporation.すべての権限が予約されています。*
 
  *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*

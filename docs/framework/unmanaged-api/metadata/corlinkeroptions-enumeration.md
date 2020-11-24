@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a656aad6-cc7e-4994-8251-004a6a45e18f
 topic_type:
 - apiref
-ms.openlocfilehash: fe5ffbab93df7168015e2a31d6e32ec45dce0960
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 188301d31b2fcfaf7b1c6139111e8f1296ccf7e5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007690"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677246"
 ---
 # <a name="corlinkeroptions-enumeration"></a>CorLinkerOptions 列挙型
+
 メタデータ リンカーのオプションを選択するためのフラグを指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -40,7 +41,8 @@ typedef enum CorLinkerOptions {
 |`MDAssembly`|プライベート型とグローバル関数は保持されません。|  
 |`MDNetModule`|プライベート型とグローバル関数が保持されます。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorHdr. h  

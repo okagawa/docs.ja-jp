@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1b0306b7-622b-4b57-8edc-3c713bb147ae
 topic_type:
 - apiref
-ms.openlocfilehash: ebdff88e9fdf499b809d56c4c29a906dbef9ec40
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: f8334cb44042e21c086bc05c723e99b0c079fa2c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008977"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677064"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a>CorManifestResourceFlags 列挙型
+
 アセンブリマニフェストでエンコードされたリソースを表示するかどうかを示します。  
   
 ## <a name="syntax"></a>構文  
@@ -44,7 +45,8 @@ typedef enum CorManifestResourceFlags {
 |`mrPublic`|リソースはパブリックです。|  
 |`mrPrivate`|リソースはプライベートです。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorHdr. h  

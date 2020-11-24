@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 189c36be-028c-4fba-a002-5edfb8fcd07f
 topic_type:
 - apiref
-ms.openlocfilehash: b89e968e9b12943c8192af3b280f8bd321a02110
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 497dda473e6510cfa31405b2066c63b1a70dd5e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378792"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677324"
 ---
 # <a name="icordebugstackwalknext-method"></a>ICorDebugStackWalk::Next メソッド
-このオブジェクトを次のフレームに[移動します](icordebugstackwalk-interface.md)。  
+
+このオブジェクトを次のフレームに [移動します](icordebugstackwalk-interface.md) 。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,6 +33,7 @@ HRESULT Next();
 ```  
   
 ## <a name="return-value"></a>戻り値  
+
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
   
 |HRESULT|説明|  
@@ -43,10 +45,12 @@ HRESULT Next();
   
 ## <a name="exceptions"></a>例外  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
+
  メソッドは、 `Next` `ICorDebugStackWalk` ランタイムが現在のフレームをアンワインドできる場合にのみ、オブジェクトを呼び出し元のフレームに進めます。 それ以外の場合、オブジェクトは、ランタイムがアンワインドできる次のフレームに進みます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

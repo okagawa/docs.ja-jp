@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 16dc49cb-2c60-4ac8-9c35-020e9afba3f8
 topic_type:
 - apiref
-ms.openlocfilehash: 637e1aed003e211654141ab397c9c0b4724753c2
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c4341a5ffe557694473ae505590b57d39a27a721
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615489"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675894"
 ---
 # <a name="isymunmanagedreadergetvariables-method"></a>ISymUnmanagedReader::GetVariables メソッド
+
 親と名前を指定して、ローカルでない変数を返します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,6 +38,7 @@ HRESULT GetVariables (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `parent`  
  から変数の親。  
   
@@ -50,9 +52,11 @@ HRESULT GetVariables (
  入出力変数を受け取る変数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

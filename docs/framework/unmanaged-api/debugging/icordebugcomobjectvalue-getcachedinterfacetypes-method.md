@@ -13,14 +13,15 @@ helpviewer_keywords:
 ms.assetid: d492284f-d3c5-4614-adb8-d718d5042500
 topic_type:
 - apiref
-ms.openlocfilehash: 6b02657012870de4d0f888f6c05b115b25073fa2
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: f5f0f11683043f1c287dd3ca3071830bcfb46502
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82892834"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677558"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacetypes-method"></a>ICorDebugComObjectValue::GetCachedInterfaceTypes メソッド
+
 現在のオブジェクトがキャストされた、またはとして使用されたインターフェイス型の列挙子を提供します。  
   
 ## <a name="syntax"></a>構文  
@@ -32,15 +33,17 @@ HRESULT GetCachedInterfaceTypes(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `bIInspectableOnly`  
- からメソッドが、ランタイム呼び出し可能ラッパー (RCW) によっ`IInspectable`てキャッシュされた Windows ランタイムインターフェイス (インターフェイス) またはすべての COM インターフェイスだけを返すかどうかを示す値。  
+ からメソッドが、 `IInspectable` ランタイム呼び出し可能ラッパー (RCW) によってキャッシュされた Windows ランタイムインターフェイス (インターフェイス) またはすべての COM インターフェイスだけを返すかどうかを示す値。  
   
  `ppInterfacesEnum`  
- 入出力に`bIInspectableOnly`従ってフィルター処理された、キャッシュされたインターフェイスの種類を表す、の型のオブジェクトへのアクセスを提供する、、の各型のオブジェクトへのアクセスを提供する、テキストを指すポインターです。  
+ 入出力に従ってフィルター処理された、キャッシュされたインターフェイスの種類を表す、の型のオブジェクトへのアクセスを提供する、、の各型のオブジェクトへのアクセスを提供する、テキストを指すポインター `bIInspectableOnly` です。  
   
 ## <a name="remarks"></a>解説  
   
 ## <a name="requirements"></a>必要条件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

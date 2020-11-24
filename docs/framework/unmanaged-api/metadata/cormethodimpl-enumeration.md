@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ffbb3caf-20da-4a4b-8983-77376e72b990
 topic_type:
 - apiref
-ms.openlocfilehash: b32e8f0b03ef6d550c384f3d932cc295a7270028
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 40e82997e58292a10f5e960cc9d9785d9ea8946a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007664"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676973"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl 列挙型
+
 メソッド実装の機能を記述する値が格納されます。  
   
 ## <a name="syntax"></a>構文  
@@ -73,7 +74,8 @@ typedef enum CorMethodImpl {
 |`miNoOptimization`|メソッドを最適化しないことを指定します。|  
 |`miMaxMethodImplVal`|の最大有効値 `CorMethodImpl` 。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorHdr. h  

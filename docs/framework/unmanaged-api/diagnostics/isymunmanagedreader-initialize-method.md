@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8f0dd2fe-7df7-464e-91f4-5518c586bb5f
 topic_type:
 - apiref
-ms.openlocfilehash: 07d2de5d12fd769cb5cce243d9e721bb6fc185a7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6193d91c8cbe0efa7cd68b97b9262acf72c9ea0b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615476"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675881"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize メソッド
+
 このリーダーが関連付けられるメタデータインポーターインターフェイスと、モジュールのファイル名を使用して、シンボルリーダーを初期化します。  
   
 > [!NOTE]
@@ -39,6 +40,7 @@ HRESULT Initialize (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `importer`  
  からこのリーダーが関連付けられるメタデータインポーターインターフェイス。  
   
@@ -52,12 +54,15 @@ HRESULT Initialize (
  からファイルストリーム。 filename パラメーターの代わりに使用されます。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  またはパラメーターのいずれか1つだけを指定する必要があります。両方を指定すること `filename` はでき `pIStream` ません。 `searchPath` パラメーターは省略可能です。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

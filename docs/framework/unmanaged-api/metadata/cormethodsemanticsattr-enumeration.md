@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ca2af325-eb9d-4a91-90e4-267e45b98611
 topic_type:
 - apiref
-ms.openlocfilehash: 1572c206f4a5a5fe0fd189ca84d0bcda2249c6d4
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 347b323951b0125ffa5f82626b2d9b235079492c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007651"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676947"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>CorMethodSemanticsAttr 列挙型
+
 メソッドとそれに関連付けられているプロパティまたはイベントとの関係を記述する値が格納されます。  
   
 ## <a name="syntax"></a>構文  
@@ -50,7 +51,8 @@ typedef enum CorMethodSemanticsAttr {
 |`msRemoveOn`|メソッドがイベントのハンドラーメソッドを削除することを指定します。|  
 |`msFire`|メソッドがイベントを発生させることを指定します。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorHdr. h  

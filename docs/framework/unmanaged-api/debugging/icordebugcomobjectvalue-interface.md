@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 505a7f6c-d92b-42b4-b539-433f5102ea9b
 topic_type:
 - apiref
-ms.openlocfilehash: 528db447df4d71d67441b05ad29e6a900c59afbb
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 40df1416e68c86efe6d404119cb37277fe21ac56
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82892823"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677545"
 ---
 # <a name="icordebugcomobjectvalue-interface"></a>ICorDebugComObjectValue のインターフェイス
+
 ランタイム呼び出し可能ラッパー (RCW) に関連付けられている情報を取得するメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
@@ -31,10 +32,12 @@ ms.locfileid: "82892823"
 |[GetCachedInterfacePointers メソッド](icordebugcomobjectvalue-getcachedinterfacepointers-method.md)|現在の RCW でキャッシュされている生のインターフェイスポインターを取得します。|  
 |[GetCachedInterfaceTypes メソッド](icordebugcomobjectvalue-getcachedinterfacetypes-method.md)|現在のオブジェクトで使用または使用されているインターフェイス型の列挙子を提供します。|  
   
-## <a name="remarks"></a>解説  
- "ICorDebugValue" インターフェイスのインスタンスが RCW を表すかどうかを確認するために`QueryInterface` 、デバッガーはを使用`IID_ICorDebugComObjectValue`して "icordebugvalue" でを呼び出します。  
+## <a name="remarks"></a>注釈  
+
+ "ICorDebugValue" インターフェイスのインスタンスが RCW を表すかどうかを確認するために、デバッガーは `QueryInterface` を使用して "icordebugvalue" でを呼び出し `IID_ICorDebugComObjectValue` ます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

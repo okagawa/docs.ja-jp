@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bac0b156-31a3-4e7f-be4d-ab21789c81f1
 topic_type:
 - apiref
-ms.openlocfilehash: 896e797acc76e8d8034bd964e488317a62eed97b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 1ae9fc1f1154866945d40cd63042fa8a43b88905
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378773"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677298"
 ---
 # <a name="icordebugstackwalksetcontext-method"></a>ICorDebugStackWalk::SetContext メソッド
+
 [オブジェクトの現在のコンテキスト](icordebugstackwalk-interface.md)をスレッドの有効なコンテキストに設定します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,16 +35,18 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `flag`  
- からコンテキストがスタックのアクティブなフレームからのものであるか、またはスタックのアンワインドによって取得されたコンテキストであるかを示す[Cordebugsetcontextflag](cordebugsetcontextflag-enumeration.md)フラグ。  
+ からコンテキストがスタックのアクティブなフレームからのものであるか、またはスタックのアンワインドによって取得されたコンテキストであるかを示す [Cordebugsetcontextflag](cordebugsetcontextflag-enumeration.md) フラグ。  
   
  `contextSize`  
  からバッファーに割り当てられたサイズ `CONTEXT` 。  
   
  `context`  
- から`CONTEXT`バッファー。  
+ から `CONTEXT` バッファー。  
   
 ## <a name="return-value"></a>戻り値  
+
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
   
 |HRESULT|説明|  
@@ -55,14 +58,16 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
   
 ## <a name="exceptions"></a>例外  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
+
  このメソッドは、スレッドの現在のコンテキストを変更しません。  
   
  現在のコンテキストを無効なコンテキストに設定すると、スタックウォーカーから予期しない結果が発生する可能性があります。  
   
  このコンテキストの完全なビットごとのコピーを取得するには、次のようにして、" [GetContext](icordebugstackwalk-getcontext-method.md) " メソッドを直ちに呼び出します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

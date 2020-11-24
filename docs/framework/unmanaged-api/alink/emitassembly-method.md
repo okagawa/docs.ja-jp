@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 605ff39e-e5cc-4bff-8196-e8d68a9715b9
 topic_type:
 - apiref
-ms.openlocfilehash: 6bbe5db75ded15f32a6ff3564e1116d40a745a65
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b85b2576660f77eb901c504d398e8bc7909882f7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446525"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676375"
 ---
 # <a name="emitassembly-method"></a>EmitAssembly メソッド
+
 アセンブリを作成します。 アセンブリファイルを除く他のすべてのファイルが閉じられた後に、このメソッドを呼び出します。 バインドされていないモジュールを生成する場合は、このメソッドを呼び出さないでください。  
   
 ## <a name="syntax"></a>構文  
@@ -34,13 +35,16 @@ HRESULT EmitAssembly(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `AssemblyID`  
  アセンブリの ID。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK を返します。  
   
 ## <a name="requirements"></a>要件  
+
  Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目

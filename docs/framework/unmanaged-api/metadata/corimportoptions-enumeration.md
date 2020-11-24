@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4e5d03cb-97c9-4ff4-8dbd-17d94ee374d3
 topic_type:
 - apiref
-ms.openlocfilehash: 3be8a004be752af8a8675a3499bdb6cbfd785840
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3d5989d43644088403a77f26c02af9ffaae0732b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009198"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677220"
 ---
 # <a name="corimportoptions-enumeration"></a>CorImportOptions 列挙型
+
 現在のスコープ外のアセンブリのインポート中の動作を制御するフラグ値が格納されます。  
   
 ## <a name="syntax"></a>構文  
@@ -56,7 +57,8 @@ typedef enum CorImportOptions {
 |`MDImportOptionAllCustomAttributes`|削除された属性も含め、すべてのカスタム属性を列挙する必要があることを示します。|  
 |`MDImportOptionAllExportedTypes`|削除された型も含めて、エクスポートされたすべての型を列挙する必要があることを示します。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorHdr. h  

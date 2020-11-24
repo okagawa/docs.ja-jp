@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4e0c3521-e54d-43c1-9857-cc76b49b8ffc
 topic_type:
 - apiref
-ms.openlocfilehash: 779a8f88b7521aa4b0a75594552981b41714ee3f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 6c3e721c24da217eaf2e8857377359e1c51b7b59
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007677"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677025"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr 列挙型
+
 メソッドの機能を記述する値を格納します。  
   
 ## <a name="syntax"></a>構文  
@@ -79,7 +80,7 @@ typedef enum CorMethodAttr {
 |`mdVirtual`|メソッドをオーバーライドできることを指定します。|  
 |`mdHideBySig`|メソッドが名前だけではなく、名前とシグネチャで非表示になるように指定します。|  
 |`mdVtableLayoutMask`|仮想テーブルのレイアウトを指定します。|  
-|`mdReuseSlot`|仮想テーブルでこのメソッドに使用されるスロットを再利用することを指定します。 既定値です。|  
+|`mdReuseSlot`|仮想テーブルでこのメソッドに使用されるスロットを再利用することを指定します。 これは既定値です。|  
 |`mdNewSlot`|メソッドが常に仮想テーブル内の新しいスロットを取得することを指定します。|  
 |`mdCheckAccessOnOverride`|メソッドを、表示されているのと同じ型でオーバーライドできることを指定します。|  
 |`mdAbstract`|メソッドが実装されていないことを指定します。|  
@@ -91,7 +92,8 @@ typedef enum CorMethodAttr {
 |`mdHasSecurity`|メソッドにセキュリティが関連付けられていることを指定します。|  
 |`mdRequireSecObject`|メソッドが、セキュリティコードを含む別のメソッドを呼び出すことを指定します。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorHdr. h  

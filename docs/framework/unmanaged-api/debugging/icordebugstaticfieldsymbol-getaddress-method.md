@@ -2,14 +2,15 @@
 title: ICorDebugStaticFieldSymbol::GetAddress メソッド
 ms.date: 03/30/2017
 ms.assetid: 5a6c9a5a-ec72-4c40-a9c3-cee7baa63687
-ms.openlocfilehash: 7b8072234df172eeafd77db90287ea3319c08ec7
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: e9404b429ad4507acb5132a86af5f287dbcf07b3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378768"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677285"
 ---
 # <a name="icordebugstaticfieldsymbolgetaddress-method"></a>ICorDebugStaticFieldSymbol::GetAddress メソッド
+
 静的フィールドのアドレスを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -21,15 +22,17 @@ HRESULT GetAddress(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  pRVA  
  [out] 静的フィールドの相対仮想アドレス (RVA) へのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

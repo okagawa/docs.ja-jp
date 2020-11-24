@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78232e6f-ae18-4cfa-a6cd-e79471cf9d76
 topic_type:
 - apiref
-ms.openlocfilehash: a21f3b36e418bbde5dcb90f25a39dae03fde77c9
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: a163667ea7eca1ed817d642efdb8fc4efa2a0651
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895207"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676063"
 ---
 # <a name="icordebugappdomaingetobject-method"></a>ICorDebugAppDomain::GetObject メソッド
+
 共通言語ランタイム (CLR) アプリケーションドメインへのインターフェイスポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,16 +35,20 @@ HRESULT GetObject (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ppObject`  
  入出力CLR アプリケーションドメインを表す ICorDebugValue インターフェイスオブジェクトのアドレスへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- このアプリケーションドメイン<xref:System.AppDomain?displayProperty=nameWithType>に対してマネージオブジェクトが構築されていない`S_FALSE`場合、 `NULL`メソッド`*ppObject`はを返し、をに配置します。  
+
+ <xref:System.AppDomain?displayProperty=nameWithType>このアプリケーションドメインに対してマネージオブジェクトが構築されていない場合、メソッドはを返し、を `S_FALSE` に配置し `NULL` `*ppObject` ます。  
   
-## <a name="remarks"></a>解説  
- プロセス内の各アプリケーションドメインは、それを<xref:System.AppDomain?displayProperty=nameWithType>表すランタイムにマネージオブジェクトを持つことができます。 この関数は、このマネージ<xref:System.AppDomain?displayProperty=nameWithType>オブジェクトに対応する ICorDebugValue インターフェイスオブジェクトを取得します。  
+## <a name="remarks"></a>注釈  
+
+ プロセス内の各アプリケーションドメインは、 <xref:System.AppDomain?displayProperty=nameWithType> それを表すランタイムにマネージオブジェクトを持つことができます。 この関数は、このマネージオブジェクトに対応する ICorDebugValue インターフェイスオブジェクトを取得し <xref:System.AppDomain?displayProperty=nameWithType> ます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

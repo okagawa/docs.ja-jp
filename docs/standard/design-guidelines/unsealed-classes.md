@@ -6,14 +6,15 @@ helpviewer_keywords:
 - unsealed classes
 - inheritance, classes
 ms.assetid: 9a3bd505-90f5-4053-9f0d-3cf5fa3d3ebf
-ms.openlocfilehash: b2e14b435aa567f231230da34307014210d46ccb
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9e380f533cfc290e952281c6a04f19978fa92aa3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828518"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677506"
 ---
 # <a name="unsealed-classes"></a>シールされていないクラス
+
 シールされたクラスはから継承できません。また、拡張を防ぎます。 これに対し、から継承できるクラスは、シールされていないクラスと呼ばれます。
 
  仮想メンバーまたはプロテクトメンバーを追加せずに封印されていないクラスを使用することを検討してください。これは、フレームワークに対して非常に優れた拡張性を提供する優れた方法です。✔️

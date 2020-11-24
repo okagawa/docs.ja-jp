@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 44757163-1228-4213-a4c4-d4de503cc75d
 topic_type:
 - apiref
-ms.openlocfilehash: 42cb4e76bb77aebcee3b28035635a877513cdc04
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 49b0298f4fa776c93f89ac380ce65568b493379b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008990"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677116"
 ---
 # <a name="corlocalrefpreservation-enumeration"></a>CorLocalRefPreservation 列挙型
+
 ローカル参照の処理のためのフラグ値が格納されます。  
   
 ## <a name="syntax"></a>構文  
@@ -43,7 +44,8 @@ typedef enum CorLocalRefPreservation
 |`MDPreserveLocalTypeRef`|ローカル型参照を保持します。|  
 |`MDPreserveLocalMemberRef`|ローカルメンバー参照を保持します。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorHdr. h  
