@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93424a87-ba13-4fa1-b4dc-69d44437b7ae
 topic_type:
 - apiref
-ms.openlocfilehash: 4c83ffaf920abe005ba987e0a744e13aa0d3c016
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 199c130d70cfbf0d383c2e0dc148ffe3dc1242d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615671"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673562"
 ---
 # <a name="iclrerrorreportingmanagerbegincustomdump-method"></a>ICLRErrorReportingManager::BeginCustomDump メソッド
+
 エラー報告のためのカスタムヒープダンプの構成を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,14 +38,15 @@ HRESULT BeginCustomDump (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `dwFlavor`  
- からカスタムヒープダンプを構築するときに使用するヒープダンプの種類を示す[ECustomDumpFlavor](ecustomdumpflavor-enumeration.md)値です。  
+ からカスタムヒープダンプを構築するときに使用するヒープダンプの種類を示す [ECustomDumpFlavor](ecustomdumpflavor-enumeration.md) 値です。  
   
  `dwNumItems`  
  から配列の長さ `items` 。 `dwFlavor`が DUMP_FLAVOR_Mini でない場合は、を `dwNumItems` 0 にする必要があります。  
   
  `items`  
- からミニダンプに追加する項目を指定する、 [Customdumpitem](customdumpitem-structure.md)インスタンスの配列。 `dwFlavor`が DUMP_FLAVOR_Mini でない場合は、を `items` null にする必要があります。  
+ からミニダンプに追加する項目を指定する、 [Customdumpitem](customdumpitem-structure.md) インスタンスの配列。 `dwFlavor`が DUMP_FLAVOR_Mini でない場合は、を `items` null にする必要があります。  
   
  `dwReserved`  
  から将来使用するために予約されています。  
@@ -60,18 +62,20 @@ HRESULT BeginCustomDump (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  メソッドは、 `BeginCustomDump` カスタムヒープダンプ構成を設定します。 [Endcustomdump](iclrerrorreportingmanager-endcustomdump-method.md)メソッドは、カスタムヒープダンプ構成をクリアし、関連付けられているすべての状態を解放します。 カスタムヒープダンプの完了後に呼び出す必要があります。  
   
 > [!IMPORTANT]
 > を呼び出さない `EndCustomDump` と、メモリがリークします。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

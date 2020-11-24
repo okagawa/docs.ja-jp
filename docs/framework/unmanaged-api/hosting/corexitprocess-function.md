@@ -18,17 +18,18 @@ helpviewer_keywords:
 ms.assetid: a5cab4c6-990e-47f3-8798-cf422b791015
 topic_type:
 - apiref
-ms.openlocfilehash: a60805e1fd78cb14835957a7afc14fe279cb20fb
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f6d8114732a3b7c15d0a0258a28a362d661b030a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616568"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673629"
 ---
 # <a name="corexitprocess-function"></a>CorExitProcess 関数
+
 現在のアンマネージ プロセスを終了します。  
   
- この関数は .NET Framework 4 で非推奨とされました。 代わりに[ICLRMetaHost:: ExitProcess](iclrmetahost-exitprocess-method.md)メソッドを使用してください。  
+ この関数は .NET Framework 4 で非推奨とされました。 代わりに [ICLRMetaHost:: ExitProcess](iclrmetahost-exitprocess-method.md) メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,20 +40,22 @@ void STDMETHODCALLTYPE CorExitProcess (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `exitCode`  
  プロセス終了コードを指定する整数です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > .NET Framework 4 以降では、 `CorExitProcess` レガシ api がバインドされているランタイムだけでなく、プロセスで開始されたすべてのランタイムを終了します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll  
+ **ライブラリ:** MSCorEE.dll  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

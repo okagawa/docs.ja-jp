@@ -2,23 +2,24 @@
 title: 共有のデータ型 (アンマネージ API リファレンス)
 ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
-ms.openlocfilehash: 86f3886b96d0156ec2f0431369c7a54954cd4cad
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5c00ff6d0947b5d847a9622dce02bd310491818c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132452"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673983"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>共有のデータ型 (アンマネージ API リファレンス)
+
 このトピックでは、C/C++ `typedef` ステートメントで定義される .NET Framework のアンマネージ API で使用する、簡単なデータ型について示します。 これらのデータ型は通常、C/C++ のプリミティブ データ型のエイリアスです。 一般的にこれらのデータ型の値は不透明です。これらのデータ型の値は他の関数またはメソッドに対して変更なしで渡せるように、特定の関数またはメソッドによって返されるためです。  
   
-|データの種類|定義|定義されている場所|説明|  
+|データ型|定義|定義されている場所|説明|  
 |---------------|----------------|----------------|-----------------|  
 |AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|アプリケーション ドメインの識別子。|  
 |AssemblyID|`typedef UINT_PTR AssemblyID;`|corprof.h|アセンブリの識別子。|  
 |ClassID|`typedef UINT_PTR ClassID;`|corprof.h|マネージド クラスの識別子。|  
 |CLRDATA_ADDRESS|`typedef ULONG64 CLRDATA_ADDRESS;`|clrdata. h|64ビットのメモリアドレス。|
-|CLRDATA_ENUM|`typedef ULONG64 CLRDATA_ADDRESS;`|使用できません。|64ビットのメモリアドレス。|
+|CLRDATA_ENUM|`typedef ULONG64 CLRDATA_ADDRESS;`|利用不可|64ビットのメモリアドレス。|
 |CONNID|`typedef DWORD CONNID;`|cordebug.h、mscoree.h|Microsoft SQL Server のインスタンスへ接続されるスレッドの接続識別子。|  
 |ContextID|`typedef UINT_PTR ContextID;`|corprof.h|特定のマネージド スレッドに関連付けられているコンテキストの識別子。|  
 |COR_PRF_ELT_INFO|`typedef UINT_PTR COR_PRF_ELT_INFO;`|corprof.h|特定のスタック フレームに関する情報を表す不透明なハンドル。|  

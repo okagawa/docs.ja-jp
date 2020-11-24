@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93829d15-d942-4e2d-b7a4-dfc9d7fb96be
 topic_type:
 - apiref
-ms.openlocfilehash: 6b9396d03892f29e3698af90856d0c0023dc628a
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 1a883878107569145b97d5793f0628efefb13545
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213466"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675244"
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a>ICorDebugProcess2::SetUnmanagedBreakpoint メソッド
+
 指定したネイティブイメージオフセットにアンマネージブレークポイントを設定します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,8 +39,9 @@ HRESULT SetUnmanagedBreakpoint (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `address`  
- から`CORDB_ADDRESS`ネイティブイメージオフセットを指定するオブジェクト。  
+ から `CORDB_ADDRESS` ネイティブイメージオフセットを指定するオブジェクト。  
   
  `bufsize`  
  から配列のサイズ (バイト単位) `buffer` 。  
@@ -50,10 +52,12 @@ HRESULT SetUnmanagedBreakpoint (
  `bufLen`  
  入出力配列で返されたバイト数へのポインター `buffer` 。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  ネイティブイメージオフセットが共通言語ランタイム (CLR) 内にある場合、ブレークポイントは無視されます。 これにより、ブレークポイントがデバッガーによって設定されたときに、CLR は帯域外のブレークポイントのディスパッチを回避できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

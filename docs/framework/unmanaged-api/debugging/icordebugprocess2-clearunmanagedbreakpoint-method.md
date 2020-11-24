@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 12ed0fff-7f0e-4d7a-bb70-b3376371f36c
 topic_type:
 - apiref
-ms.openlocfilehash: 2b228383c3b393fe43f60d39e59cca37af36233f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a713fd006f1e9ad8fe7109651c2cda5025da3566
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212491"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673944"
 ---
 # <a name="icordebugprocess2clearunmanagedbreakpoint-method"></a>ICorDebugProcess2::ClearUnmanagedBreakpoint メソッド
+
 指定したアドレスに、以前に設定したブレークポイントを削除します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,17 +35,20 @@ HRESULT ClearUnmanagedBreakpoint (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `address`  
- から`CORDB_ADDRESS`ブレークポイントが設定されたアドレスを示す値です。  
+ から `CORDB_ADDRESS` ブレークポイントが設定されたアドレスを示す値です。  
   
-## <a name="remarks"></a>Remarks  
- 指定されたブレークポイントは、以前の[ICorDebugProcess2:: SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md)の呼び出しによって以前に設定されていた可能性があります。  
+## <a name="remarks"></a>注釈  
+
+ 指定されたブレークポイントは、以前の [ICorDebugProcess2:: SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md)の呼び出しによって以前に設定されていた可能性があります。  
   
  メソッドは、 `ClearUnmanagedBreakpoint` デバッグ中のプロセスの実行中に呼び出すことができます。  
   
  `ClearUnmanagedBreakpoint`デバッガーがマネージ専用モードでアタッチされている場合、または指定されたアドレスにブレークポイントが存在しない場合、メソッドはエラーコードを返します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

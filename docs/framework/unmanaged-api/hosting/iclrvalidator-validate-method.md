@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b1b432a-d234-4002-839b-81366c3a8bdc
 topic_type:
 - apiref
-ms.openlocfilehash: 18492f3e95947a3a11da9d5d303651c04d764a8f
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 4ce50f7706583f291d2e6a141d40ab6dd3e4b3e2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762631"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674386"
 ---
 # <a name="iclrvalidatorvalidate-method"></a>ICLRValidator::Validate メソッド
+
 指定されたファイル内のポータブル実行可能 (PE) または Microsoft 中間言語 (MSIL) を検証します。  
   
 ## <a name="syntax"></a>構文  
@@ -41,14 +42,15 @@ HRESULT Validate (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `veh`  
- から`IVEHandler`検証エラーを処理するインスタンスへのポインター。  
+ から `IVEHandler` 検証エラーを処理するインスタンスへのポインター。  
   
  `ulAppDomainId`  
  から現在のの識別子 <xref:System.AppDomain> 。  
   
  `ulFlags`  
- から実行する必要のある検証の種類を示す、 [Validatorflags](validatorflags-enumeration.md)値の組み合わせ。  
+ から実行する必要のある検証の種類を示す、 [Validatorflags](validatorflags-enumeration.md) 値の組み合わせ。  
   
  `ulMaxError`  
  から検証を終了するまでに許容されるエラーの最大数。  
@@ -69,7 +71,7 @@ HRESULT Validate (
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`Validate`正常に返されました。|  
+|S_OK|`Validate` 正常に返されました。|  
 |HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
 |HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
@@ -77,11 +79,12 @@ HRESULT Validate (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** IValidator、IValidator  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

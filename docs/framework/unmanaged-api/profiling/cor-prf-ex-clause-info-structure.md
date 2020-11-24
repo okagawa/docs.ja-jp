@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7d0d6fb7-bc9d-40f0-8163-c0d162eaba7d
 topic_type:
 - apiref
-ms.openlocfilehash: 5c764031f709eefe61022d0662f37bc5d3f3e281
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e8dd9f21803021975f4651ba3e6e5f4d3da0ea82
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501002"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674997"
 ---
 # <a name="cor_prf_ex_clause_info-structure"></a>COR_PRF_EX_CLAUSE_INFO 構造体
+
 特定の例外句インスタンスおよび関連するフレームに関する情報を格納します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,12 +40,13 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`clauseType`|入力または左にあるコードの例外句の種類を指定する[COR_PRF_CLAUSE_TYPE](cor-prf-clause-type-enumeration.md)列挙体の値。|  
+|`clauseType`|入力または左にあるコードの例外句の種類を指定する [COR_PRF_CLAUSE_TYPE](cor-prf-clause-type-enumeration.md) 列挙体の値。|  
 |`programCounter`|句ハンドラーのネイティブエントリポイント (たとえば、X86 EIP レジスタの内容)。|  
 |`framePointer`|句ハンドラーの論理フレームへのポインター。たとえば、X86 EBP レジスタの内容。|  
 |`shadowStackPointer`|シャドウスタックへのポインター。 この値は、BSP レジスタの内容であり、IA64 にのみ適用されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  例外通知が受信されると、 [ICorProfilerInfo2:: GetNotifiedExceptionClauseInfo](icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md)を使用して、実行しようとし `catch` / `finally` ているまたは実行されたばかりの例外句 (フィルター) のネイティブアドレスとフレーム情報を取得できます。  
   
  Exception 句の実行には、共通言語ランタイム (CLR) からのこれらのコールバックが含まれます。  
@@ -62,6 +64,7 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
 - [ICorProfilerCallback:: ExceptionSearchFilterLeave](icorprofilercallback-exceptionsearchfilterleave-method.md)  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Corprof.idl  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bc7b51cf-39d3-48ec-a5cb-2f179fbefff8
 topic_type:
 - apiref
-ms.openlocfilehash: 3b2322f708afed08172f87e843c225aa9c60d9d3
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 1b3ebcabc66ee7ca29245bb02d958be311bc65fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616607"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673697"
 ---
 # <a name="_cordllmain-function"></a>\_CorDllMain 関数
 
@@ -36,6 +36,7 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `hInst`  
  から読み込まれたモジュールのインスタンスハンドル。  
   
@@ -46,9 +47,11 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
  から未使用.  
   
 ## <a name="return-value"></a>戻り値  
+
  このメソッドは `true` 、成功し `false` た場合はを返し、エラーが発生した場合はを返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  この関数は、DLL アセンブリのオペレーティングシステムローダーによって呼び出されます。 実行可能アセンブリの場合、ローダーは代わりに[ \_ CorExeMain](corexemain-function.md)関数を呼び出します。  
   
  オペレーティングシステムローダーは、DLL ファイルで指定されたエントリポイントに関係なく、このメソッドを呼び出します。  
@@ -63,7 +66,7 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

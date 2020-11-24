@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d5c07d86-045d-4391-893b-0bcd2959f90e
 topic_type:
 - apiref
-ms.openlocfilehash: 0a433ccb81ef62ac92a4553a838a2c98a04fc7c1
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 18416954517c3cac09d013b8075bd097305a1dca
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212816"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673970"
 ---
 # <a name="icordebugprocesswritememory-method"></a>ICorDebugProcess::WriteMemory メソッド
+
 このプロセスのメモリ領域にデータを書き込みます。  
   
 ## <a name="syntax"></a>構文  
@@ -36,8 +37,9 @@ HRESULT WriteMemory(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `address`  
- から`CORDB_ADDRESS`データが書き込まれるメモリ領域のベースアドレスを表す値。 データ転送が行われる前に、システムは、ベースアドレスを開始位置として、指定したサイズのメモリ領域が書き込み可能であることを確認します。 アクセスできない場合、メソッドは失敗します。  
+ から `CORDB_ADDRESS` データが書き込まれるメモリ領域のベースアドレスを表す値。 データ転送が行われる前に、システムは、ベースアドレスを開始位置として、指定したサイズのメモリ領域が書き込み可能であることを確認します。 アクセスできない場合、メソッドは失敗します。  
   
  `size`  
  からメモリ領域に書き込まれるバイト数。  
@@ -48,12 +50,14 @@ HRESULT WriteMemory(
  `written`  
  入出力このプロセスのメモリ領域に書き込まれたバイト数を受け取る変数へのポインター。 `written`が NULL の場合、このパラメーターは無視されます。  
   
-## <a name="remarks"></a>Remarks  
- データは、ブレークポイントの背後に自動的に書き込まれます。 .NET Framework バージョン2.0 では、ネイティブデバッガーは、このメソッドを使用して命令ストリームにブレークポイントを挿入することはできません。 代わりに[ICorDebugProcess2:: SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md)を使用してください。  
+## <a name="remarks"></a>注釈  
+
+ データは、ブレークポイントの背後に自動的に書き込まれます。 .NET Framework バージョン2.0 では、ネイティブデバッガーは、このメソッドを使用して命令ストリームにブレークポイントを挿入することはできません。 代わりに [ICorDebugProcess2:: SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md) を使用してください。  
   
  メソッドは、 `WriteMemory` マネージコードの外部でのみ使用する必要があります。 不適切に使用された場合、このメソッドはランタイムを破損する可能性があります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c3f34584-c6e2-41fd-bb44-e44da8546309
 topic_type:
 - apiref
-ms.openlocfilehash: 3529eceb179cc4b08d39f83d97d001a16e716918
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 78cc043953e6288df136b43590831569d112afef
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83763060"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674516"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>ICLRStrongName::StrongNameSignatureGenerationEx メソッド
+
 指定したフラグに従って、指定したアセンブリの厳密な名前の署名を生成します。  
   
 ## <a name="syntax"></a>構文  
@@ -40,6 +41,7 @@ HRESULT StrongNameSignatureGenerationEx (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `wszFilePath`  
  から厳密な名前の署名が生成されるアセンブリのマニフェストを含むファイルへのパス。  
   
@@ -59,7 +61,7 @@ HRESULT StrongNameSignatureGenerationEx (
  `ppbSignatureBlob`  
  入出力共通言語ランタイムが署名を返す場所へのポインター。 `ppbSignatureBlob`が null の場合、ランタイムはによって指定されたファイルに署名を格納し `wszFilePath` ます。  
   
- `ppbSignatureBlob`が null でない場合は、共通言語ランタイムによって、署名を返す領域が割り当てられます。 呼び出し元は、 [ICLRStrongName:: StrongNameFreeBuffer](iclrstrongname-strongnamefreebuffer-method.md)メソッドを使用してこの領域を解放する必要があります。  
+ `ppbSignatureBlob`が null でない場合は、共通言語ランタイムによって、署名を返す領域が割り当てられます。 呼び出し元は、 [ICLRStrongName:: StrongNameFreeBuffer](iclrstrongname-strongnamefreebuffer-method.md) メソッドを使用してこの領域を解放する必要があります。  
   
  `pcbSignatureBlob`  
  入出力返されたシグネチャのサイズ (バイト単位)。  
@@ -67,14 +69,16 @@ HRESULT StrongNameSignatureGenerationEx (
  `dwFlags`  
  から次の値の1つまたは複数です。  
   
-- `SN_SIGN_ALL_FILES`(0x00000001)-リンクされたモジュールのすべてのハッシュを再計算します。  
+- `SN_SIGN_ALL_FILES` (0x00000001)-リンクされたモジュールのすべてのハッシュを再計算します。  
   
-- `SN_TEST_SIGN`(0x00000002)-アセンブリに対してテストを行います。  
+- `SN_TEST_SIGN` (0x00000002)-アセンブリに対してテストを行います。  
   
 ## <a name="return-value"></a>戻り値  
- `S_OK`メソッドが正常に完了した場合は。それ以外の場合は、失敗を示す HRESULT 値 (「リストの[一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values)」を参照してください)。  
+
+ `S_OK` メソッドが正常に完了した場合は。それ以外の場合は、失敗を示す HRESULT 値 (「リストの [一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values) 」を参照してください)。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  `wszFilePath`署名を作成せずに署名のサイズを計算するには、に null を指定します。  
   
  署名は、ファイルに直接格納するか、呼び出し元に返すことができます。  
@@ -84,11 +88,12 @@ HRESULT StrongNameSignatureGenerationEx (
  が指定されている場合 `SN_TEST_SIGN` 、共通言語ランタイムヘッダーは、アセンブリが厳密な名前で署名されていることを示すために変更されません。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

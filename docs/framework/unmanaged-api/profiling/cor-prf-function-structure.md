@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8bb5acf5-cf4b-4ccb-93f1-46db1f3f8bf3
 topic_type:
 - apiref
-ms.openlocfilehash: 856e01c7934709a17556aa53851204bf6a917de8
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 1da8f414ccf0c1eed3ec7dde842dd381440a3fa9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500937"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674958"
 ---
 # <a name="cor_prf_function-structure"></a>COR_PRF_FUNCTION 構造体
+
 関数の一意の表記を、その関数の ID を再コンパイルされたバージョンの ID と組み合わせることによって、提供します。  
   
 ## <a name="syntax"></a>構文  
@@ -40,6 +41,7 @@ typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJit
 ## <a name="remarks"></a>解説  
   
 ## <a name="requirements"></a>必要条件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Corprof.idl  

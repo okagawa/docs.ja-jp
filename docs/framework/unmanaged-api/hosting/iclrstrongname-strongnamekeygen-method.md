@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ac5c1245-9acf-4271-9c08-3d9b7c670df3
 topic_type:
 - apiref
-ms.openlocfilehash: 69ba58cc8c5235a15749281b3107481be9528f84
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 42a9fc1a05e97bbd893f0a2e77087e6524ad844f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503979"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674542"
 ---
 # <a name="iclrstrongnamestrongnamekeygen-method"></a>ICLRStrongName::StrongNameKeyGen メソッド
+
 厳密な名前を使用するために新しい公開/秘密キーの組が作成されます。  
   
 ## <a name="syntax"></a>構文  
@@ -37,8 +38,9 @@ HRESULT StrongNameKeyGen (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `wszKeyContainer`  
- から要求されたキーコンテナー名。 `wszKeyContainer`は、空でない文字列であるか、または一時名を生成するために null である必要があります。  
+ から要求されたキーコンテナー名。 `wszKeyContainer` は、空でない文字列であるか、または一時名を生成するために null である必要があります。  
   
  `dwFlags`  
  からキーを登録したままにするかどうかを示す値です。 サポートされている値を次に示します。  
@@ -54,17 +56,20 @@ HRESULT StrongNameKeyGen (
  入出力のサイズ (バイト単位) `ppbKeyBlob` 。  
   
 ## <a name="return-value"></a>戻り値  
- `S_OK`メソッドが正常に完了した場合は。それ以外の場合は、失敗を示す HRESULT 値 (「リストの[一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values)」を参照してください)。  
+
+ `S_OK` メソッドが正常に完了した場合は。それ以外の場合は、失敗を示す HRESULT 値 (「リストの [一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values) 」を参照してください)。  
   
-## <a name="remarks"></a>解説  
- [ICLRStrongName:: StrongNameKeyGen](iclrstrongname-strongnamekeygen-method.md)メソッドは、1024ビットのキーを作成します。 キーを取得した後、 [ICLRStrongName:: StrongNameFreeBuffer](iclrstrongname-strongnamefreebuffer-method.md)メソッドを呼び出して、割り当てられたメモリを解放する必要があります。  
+## <a name="remarks"></a>注釈  
+
+ [ICLRStrongName:: StrongNameKeyGen](iclrstrongname-strongnamekeygen-method.md)メソッドは、1024ビットのキーを作成します。 キーを取得した後、 [ICLRStrongName:: StrongNameFreeBuffer](iclrstrongname-strongnamefreebuffer-method.md) メソッドを呼び出して、割り当てられたメモリを解放する必要があります。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

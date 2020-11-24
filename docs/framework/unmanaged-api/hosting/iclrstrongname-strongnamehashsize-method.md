@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a05ee56-08e4-4f3a-86a9-9b52083d5c0f
 topic_type:
 - apiref
-ms.openlocfilehash: 0f4fdcbdfb9db7664920a42b9406a58f9c2de0b8
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 6ee87fdbf75d4a07a7337a1c9fdc58a06191b992
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83763112"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674816"
 ---
 # <a name="iclrstrongnamestrongnamehashsize-method"></a>ICLRStrongName::StrongNameHashSize メソッド
+
 指定したハッシュ アルゴリズムを使用して、ハッシュに必須のバッファー サイズが取得されます。  
   
 ## <a name="syntax"></a>構文  
@@ -35,6 +36,7 @@ HRESULT StrongNameHashSize (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ulHashAlg`  
  からバッファーサイズを計算するために使用されるハッシュアルゴリズム。  
   
@@ -42,14 +44,16 @@ HRESULT StrongNameHashSize (
  入出力返されたバッファーサイズ (バイト単位)。  
   
 ## <a name="return-value"></a>戻り値  
- `S_OK`メソッドが正常に完了した場合は。それ以外の場合は、失敗を示す HRESULT 値 (「リストの[一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values)」を参照してください)。  
+
+ `S_OK` メソッドが正常に完了した場合は。それ以外の場合は、失敗を示す HRESULT 値 (「リストの [一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values) 」を参照してください)。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

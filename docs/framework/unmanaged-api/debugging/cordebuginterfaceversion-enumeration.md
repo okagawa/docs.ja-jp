@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7d1e6cd9-2a15-41c6-9b68-008705a4ed90
 topic_type:
 - apiref
-ms.openlocfilehash: ae65c60440a90959006cd8db94dda479e80613d4
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 939400fcc40edd62532d459d6ed626dbdc4f41fc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795808"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675309"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion 列挙型
+
 インターフェイス、つまり .NET Framework のバージョン、またはインターフェイスが導入された .NET Framework のバージョンを指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -131,9 +132,10 @@ typedef enum CorDebugInterfaceVersion {
 ```  
   
 ## <a name="members"></a>メンバー  
+
  以下の表に、各列挙値から対応するインターフェイスへのリンクを示します。 また、インターフェイスがサポートされた .NET Framework の最初のバージョンについても記載しています。  
   
-|メンバー|指定対象|.NET Framework のバージョン|  
+|メンバー|指定内容|.NET Framework のバージョン|  
 |------------|---------------|----------------------------|  
 |`CorDebugInvalidVersion`|.NET Framework のバージョンが無効。|-|  
 |`CorDebugVersion_1_0`|(すべてのサービス パックを含めて) .NET Framework のバージョンは 1.0。|1.0|  
@@ -219,10 +221,12 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugILFrame3`|[ICorDebugILFrame3](icordebugilframe3-interface.md)|4.5|  
 |`CorDebugLatestVersion`|(すべてのサービス パックを含めて) .NET Framework のバージョンは最新バージョン。|-|  
   
-## <a name="remarks"></a>Remarks  
- デバッガーでは、 `CorDebugInterfaceVersion` [CreateDebuggingInterfaceFromVersion](../hosting/createdebugginginterfacefromversion-function.md)関数の列挙体を使用して、デバッガーがサポートしている .NET Framework の最大バージョンを指定できます。  
+## <a name="remarks"></a>注釈  
+
+ デバッガーでは、CreateDebuggingInterfaceFromVersion 関数の列挙体を使用して、 `CorDebugInterfaceVersion` デバッガーがサポートしている[CreateDebuggingInterfaceFromVersion](../hosting/createdebugginginterfacefromversion-function.md) .NET Framework の最大バージョンを指定できます。  
   
 ## <a name="interface-names"></a>インターフェイス名  
+
  デバッグ API でインターフェイス名の最後に示される数字 (`ICorDebugThread3` の "3" など) は、.NET Framework のバージョンではなく、インターフェイスのバージョンを表します。 デバッグ API のすべてのインターフェイス名にはバージョン番号が含まれます (ただし .NET Framework バージョン 1 で導入されたインターフェイスは除きます)。 インターフェイスのバージョン番号と .NET Framework のバージョン番号が同じでもそれは偶然の一致です。  
   
 - .NET Framework バージョン 1.0 で導入されたインターフェイスは暗黙的にすべてバージョン 1 であるため、このインターフェイスには番号が含まれません。  
@@ -233,9 +237,10 @@ typedef enum CorDebugInterfaceVersion {
   
 - .NET Framework バージョン 3.0 および 3.5 は既存の .NET Framework 2.0 インターフェイスを使用しており、新しいインターフェイスは導入していません。  
   
-- .NET Framework 4 では、インターフェイスのバージョンが混在しています。 たとえば、`ICorDebugThread3` および `ICorDebugThread4` は、`ICorDebugThread` インターフェイスの 3 番目および 4 番目のバージョンとして示されます。 .NET Framework 4 では、 `ICorDebugStackWalk`インターフェイスの最初のバージョンと、 `ICorDebugNativeFrame`インターフェイスの2番目のバージョン`ICorDebugNativeFrame2`() も導入されています。  
+- .NET Framework 4 では、インターフェイスのバージョンが混在しています。 たとえば、`ICorDebugThread3` および `ICorDebugThread4` は、`ICorDebugThread` インターフェイスの 3 番目および 4 番目のバージョンとして示されます。 .NET Framework 4 では、インターフェイスの最初のバージョン `ICorDebugStackWalk` と、インターフェイスの2番目のバージョン () も導入されて `ICorDebugNativeFrame` `ICorDebugNativeFrame2` います。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

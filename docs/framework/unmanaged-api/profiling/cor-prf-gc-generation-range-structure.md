@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: e7e07273-8d10-4a68-807e-59634e3f8c5e
 topic_type:
 - apiref
-ms.openlocfilehash: 91fb902aab678e29c6e74380e3576fa5c4ae62d4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a0ee2c9ce38272caef4960bfe5949c11083c12dd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500897"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674932"
 ---
 # <a name="cor_prf_gc_generation_range-structure"></a>COR_PRF_GC_GENERATION_RANGE 構造体
+
 ガーベッジ コレクションを実行中のメモリ範囲 (ブロック) を説明します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,15 +40,17 @@ typedef struct COR_PRF_GC_GENERATION_RANGE {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`generation`|メモリブロックが属するジェネレーションを指定する[COR_PRF_GC_GENERATION](cor-prf-gc-generation-enumeration.md)列挙体の値。|  
+|`generation`|メモリブロックが属するジェネレーションを指定する [COR_PRF_GC_GENERATION](cor-prf-gc-generation-enumeration.md) 列挙体の値。|  
 |`rangeStart`|メモリブロックの開始位置を指定するオブジェクトの ID。|  
 |`rangeLength`|メモリブロックの使用されている部分のサイズ (つまり、ブロック内で使用されているメモリの量) を指定する整数へのポインター。|  
 |`rangeLengthReserved`|メモリブロックのサイズ (つまり、ブロックに予約されているメモリの量) を指定する整数へのポインター。|  
   
-## <a name="remarks"></a>解説  
- 値は、 `rangeLength` [ICorProfilerInfo2:: GetGenerationBounds](icorprofilerinfo2-getgenerationbounds-method.md)または[ICorProfilerInfo2:: getobjectgeneration](icorprofilerinfo2-getobjectgeneration-method.md)(両方とも構造体を使用する) `COR_PRF_GC_GENERATION_RANGE` が[ICorProfilerCallback2:: GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md)メソッドまたは[ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md)メソッドから呼び出された場合にのみ正確であることが保証されます。  
+## <a name="remarks"></a>注釈  
+
+ 値は、 `rangeLength` [ICorProfilerInfo2:: GetGenerationBounds](icorprofilerinfo2-getgenerationbounds-method.md) または [ICorProfilerInfo2:: getobjectgeneration](icorprofilerinfo2-getobjectgeneration-method.md)(両方とも構造体を使用する) `COR_PRF_GC_GENERATION_RANGE` が [ICorProfilerCallback2:: GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md) メソッドまたは [ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md) メソッドから呼び出された場合にのみ正確であることが保証されます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Corprof.idl  

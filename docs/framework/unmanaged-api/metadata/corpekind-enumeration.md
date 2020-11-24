@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 22dc6dea-b1b9-4982-a730-a022d586b117
 topic_type:
 - apiref
-ms.openlocfilehash: 8b6eab8156f72847eb6dd3369950f9b46a3fc877
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 001be0c5e8897bacf76d2a044fb9400768473052
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007560"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673528"
 ---
 # <a name="corpekind-enumeration"></a>CorPEKind 列挙型
+
 [IMetaDataImport2:: GetPEKind](imetadataimport2-getpekind-method.md)の呼び出しから返される、ポータブル実行可能 (PE) ファイルを記述する値を格納します。  
   
 ## <a name="syntax"></a>構文  
@@ -50,10 +51,12 @@ typedef enum CorPEKind {
 |`pe32Unmanaged`|この PE ファイルがネイティブコードであることを示します。|  
 |pe32BitPreferred|この PE ファイルがプラットフォームに依存せず、32ビット環境で読み込まれることを示すことを示します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
+
  これらの値は、ビットごとの組み合わせで使用できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorHdr. h  

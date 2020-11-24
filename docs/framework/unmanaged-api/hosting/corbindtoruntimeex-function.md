@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: aae9fb17-5d01-41da-9773-1b5b5b642d81
 topic_type:
 - apiref
-ms.openlocfilehash: e66b63ffa4ed25e861cff6bd9eb6065f57ff807f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 55fbf0c37861029940422a10bd62f5ecfebf2b9a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493501"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673743"
 ---
 # <a name="corbindtoruntimeex-function"></a>CorBindToRuntimeEx 関数
+
 アンマネージ ホストが共通言語ランタイム (CLR: Common Language Runtime) をプロセスに読み込むことを有効にします。 [Corbindtoruntime](corbindtoruntime-function.md)と `CorBindToRuntimeEx` 関数は同じ操作を実行しますが、関数を使用すると、 `CorBindToRuntimeEx` CLR の動作を指定するフラグを設定できます。  
   
  この関数は .NET Framework 4 で非推奨とされました。  
@@ -40,7 +41,7 @@ ms.locfileid: "84493501"
   
 - アセンブリをドメイン中立として読み込むかどうかを制御します。  
   
-- CLR のインスタンスを開始する前に構成するための追加オプションを設定するために使用できる、 [ICorRuntimeHost](icorruntimehost-interface.md)へのインターフェイスポインターを取得します。  
+- CLR のインスタンスを開始する前に構成するための追加オプションを設定するために使用できる、 [ICorRuntimeHost](icorruntimehost-interface.md) へのインターフェイスポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -56,22 +57,23 @@ HRESULT CorBindToRuntimeEx (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pwszVersion`  
  [入力] 読み込む CLR のバージョンを示す文字列。  
   
- .NET Framework のバージョン番号は、ピリオドで*区切られた*4 つの部分で構成されます。 `pwszVersion` として渡される文字列は、文字 "v" で始まり、バージョン番号の最初の 3 つの部分がその後に続く必要があります (たとえば "v1.0.1529")。  
+ .NET Framework のバージョン番号は、ピリオドで *区切られた* 4 つの部分で構成されます。 `pwszVersion` として渡される文字列は、文字 "v" で始まり、バージョン番号の最初の 3 つの部分がその後に続く必要があります (たとえば "v1.0.1529")。  
   
  いくつかのバージョンの CLR は、以前のバージョンの CLR との互換性を指定するポリシー ステートメントと共にインストールされています。 既定では、スタートアップ shim により、ポリシー ステートメントに対して `pwszVersion` が評価され、要求されたバージョンと互換性がある最新バージョンのランタイムが読み込まれます。 ホストは shim に対し、次に示すように `pwszVersion` パラメーターで値 `STARTUP_LOADER_SAFEMODE` を渡すことにより、ポリシー評価を省略し、`startupFlags` で指定されたバージョンとまったく同じバージョンを読み込ませることができます。  
   
  呼び出し元が `pwszVersion` に null を指定した場合、`CorBindToRuntimeEx` はバージョン番号が .NET Framework 4 ランタイム未満のインストール済みランタイム セットを識別し、そのランタイム セットから最新バージョンのランタイムを読み込みます。 .NET Framework 4 以降は読み込まれず、それ以前のバージョンがインストールされていない場合は失敗します。 null を渡すと、ホストはどのバージョンのランタイムを読み込むかを制御できなくなることに注意してください。 状況によってはこのような方法が適切なこともありますが、読み込むバージョンを特定させておくことを強くお勧めします。  
   
  `pwszBuildFlavor`  
- [入力] CLR のサーバー ビルドまたはワークステーション ビルドのどちらを読み込むかを指定する文字列。 有効な値は、`svr`、`wks` です。 ワークステーション ビルドはシングルプロセッサ コンピューターでクライアント アプリケーションを実行するために最適化され、サーバー ビルドはガベージ コレクションでマルチ プロセッサを利用するために最適化されています。  
+ [入力] CLR のサーバー ビルドまたはワークステーション ビルドのどちらを読み込むかを指定する文字列。 有効な値は `svr` と `wks` です。 ワークステーション ビルドはシングルプロセッサ コンピューターでクライアント アプリケーションを実行するために最適化され、サーバー ビルドはガベージ コレクションでマルチ プロセッサを利用するために最適化されています。  
   
  `pwszBuildFlavor`が null に設定されている場合、ワークステーションのビルドが読み込まれます。 をシングルプロセッサコンピューターで実行する場合、がに設定されていても、ワークステーションのビルドは常に読み込まれ `pwszBuildFlavor` `svr` ます。 ただし、 `pwszBuildFlavor` がに設定され、 `svr` 同時実行ガベージコレクションが指定されている場合 (パラメーターの説明を参照 `startupFlags` )、サーバービルドが読み込まれます。  
   
  `startupFlags`  
- から[STARTUP_FLAGS](startup-flags-enumeration.md)列挙型の値の組み合わせ。 これらのフラグは、同時実行ガベージ コレクション、ドメインに中立なコード、および `pwszVersion` パラメーターの動作を制御します。 どのフラグも設定されていない場合は、既定はシングル ドメインになります。 有効な値は、次のとおりです。  
+ から [STARTUP_FLAGS](startup-flags-enumeration.md) 列挙型の値の組み合わせ。 これらのフラグは、同時実行ガベージ コレクション、ドメインに中立なコード、および `pwszVersion` パラメーターの動作を制御します。 どのフラグも設定されていない場合は、既定はシングル ドメインになります。 有効な値は、次のとおりです。  
   
 - `STARTUP_CONCURRENT_GC`  
   
@@ -99,10 +101,10 @@ HRESULT CorBindToRuntimeEx (
   
 - `STARTUP_ALWAYSFLOW_IMPERSONATION`  
   
- これらのフラグの説明については、 [STARTUP_FLAGS](startup-flags-enumeration.md)列挙体を参照してください。  
+ これらのフラグの説明については、 [STARTUP_FLAGS](startup-flags-enumeration.md) 列挙体を参照してください。  
   
  `rclsid`  
- から`CLSID` [ICorRuntimeHost](icorruntimehost-interface.md)または[ICLRRuntimeHost](iclrruntimehost-interface.md)のいずれかのインターフェイスを実装するコクラスの。 サポートされている値は CLSID_CorRuntimeHost と CLSID_CLRRuntimeHost です。  
+ から `CLSID` [ICorRuntimeHost](icorruntimehost-interface.md) または [ICLRRuntimeHost](iclrruntimehost-interface.md) のいずれかのインターフェイスを実装するコクラスの。 サポートされている値は CLSID_CorRuntimeHost と CLSID_CLRRuntimeHost です。  
   
  `riid`  
  [入力] 要求された `IID` のインターフェイスの `rclsid`。 サポートされている値は IID_ICorRuntimeHost と IID_ICLRRuntimeHost です。  
@@ -110,10 +112,12 @@ HRESULT CorBindToRuntimeEx (
  `ppv`  
  [出力] 返された `riid` へのインターフェイス ポインター。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  `pwszVersion` で指定したランタイムのバージョンが存在しない場合は、`CorBindToRuntimeEx` は CLR_E_SHIM_RUNTIMELOAD の HRESULT 値を返します。  
   
 ## <a name="execution-context-and-flow-of-windows-identity"></a>Windows ID の実行コンテキストとフロー  
+
  CLR のバージョン 1 では、<xref:System.Security.Principal.WindowsIdentity> オブジェクトは、新しいスレッド、スレッド プール、タイマー コールバックなどの非同期ポイント間をフローしません。 CLR のバージョン 2.0 では、<xref:System.Threading.ExecutionContext> オブジェクトは現在実行しているスレッドに関する情報をラップして非同期ポイント間をフローしますが、アプリケーション ドメインの境界を越えることはありません。 同様に、<xref:System.Security.Principal.WindowsIdentity> オブジェクトもすべての非同期ポイント間をフローします。 したがって、現在スレッドに偽装がある場合は、その偽装もフローします。  
   
  2 つの方法のいずれかでフローを変更できます。  
@@ -129,11 +133,12 @@ HRESULT CorBindToRuntimeEx (
      バージョン 1 互換モードは、その処理全体および処理のすべてのアプリケーション ドメインに適用されます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll  
+ **ライブラリ:** MSCorEE.dll  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

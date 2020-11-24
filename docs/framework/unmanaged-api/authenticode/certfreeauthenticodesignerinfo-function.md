@@ -8,15 +8,16 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: 8029633c-b6e4-4665-a7c2-89607c3247ef
-ms.openlocfilehash: a233e0b8d17b9ee61b1991086f794c9fb20f89e1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dc6bb5a137a50ec07f89f292e5d9beac4349c3c7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099837"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674178"
 ---
 # <a name="certfreeauthenticodesignerinfo-function"></a>CertFreeAuthenticodeSignerInfo 関数
-[AXL_AUTHENTICODE_SIGNER_INFO](axl-authenticode-signer-info-structure.md)構造体に割り当てられたリソースを解放します。  
+
+[AXL_AUTHENTICODE_SIGNER_INFO](axl-authenticode-signer-info-structure.md)構造に割り当てられたリソースを解放します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -26,10 +27,12 @@ HRESULT CertFreeAuthenticodeSignerInfo (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pSignerInfo`  
- [in, out] リリースされる署名者情報。 [AXL_AUTHENTICODE_SIGNER_INFO](axl-authenticode-signer-info-structure.md)構造体を参照してください。  
+ [in, out] リリースされる署名者情報。 [AXL_AUTHENTICODE_SIGNER_INFO](axl-authenticode-signer-info-structure.md)構造を参照してください。  
   
 ## <a name="return-value"></a>戻り値  
+
  関数が成功した場合は `S_OK`。 それ以外の場合はエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目

@@ -8,12 +8,12 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
-ms.openlocfilehash: 1f53df33a65d3f75b7574eda3507e370c2e086ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5c1e2bfc7fd55e807af68744e28faa473daea772
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099817"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674217"
 ---
 # <a name="_axlrsakeyvaluetopublickeytoken-function"></a>\_AxlRSAKeyValueToPublicKeyToken 関数
 
@@ -30,16 +30,18 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pModulusBlob`  
- からBase64 でエンコードされた剰余 blob (\<剰余 > 要素)。  [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob)構造体を参照してください。  
+ からBase64 でエンコードされた剰余 blob ( \<Modulus> 要素から)。  [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob)構造を参照してください。  
   
  `pExponentBlob`  
- からBase64 でエンコードされた指数 (\<指数部の > 要素)。 [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob)構造体を参照してください。  
+ からBase64 でエンコードされた指数 (要素からの \<Exponent> ) blob。 [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob)構造を参照してください。  
   
  `ppwszPublicKeyToken`  
  [out] 16 進エンコードされた公開キー トークンを受け取るための WCHAR * へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
+
  関数が成功した場合は `S_OK`。 それ以外の場合はエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目
