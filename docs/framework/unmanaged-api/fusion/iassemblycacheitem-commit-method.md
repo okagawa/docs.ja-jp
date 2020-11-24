@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c2321f17-f46f-4815-ae41-b28678753613
 topic_type:
 - apiref
-ms.openlocfilehash: f840438e175790a2b4c97302963b910f98dffb7d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b7c10e82aca2b2ece7ea4d7209c1f3c9a456434
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176566"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95670408"
 ---
 # <a name="iassemblycacheitemcommit-method"></a>IAssemblyCacheItem::Commit メソッド
+
 キャッシュされたアセンブリ参照をメモリにコミットします。  
   
 ## <a name="syntax"></a>構文  
@@ -35,18 +36,20 @@ HRESULT Commit (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `dwFlags`  
- [in]Fusion.idl で定義されているフラグ。  
+ からFusion に定義されているフラグ。  
   
  `pulDisposition`  
- [アウト、オプション]操作の結果を示す値。  
+ [out、省略可能]操作の結果を示す値です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** フュージョン.h  
+ **ヘッダー:** Fusion. h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

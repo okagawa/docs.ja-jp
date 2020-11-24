@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b0192104-6073-4089-a4df-dc29ee033074
 topic_type:
 - apiref
-ms.openlocfilehash: 9386c77cc98df17d797d5886e1603ffc4824b6dc
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 22ab29f8a204a4b27dafdefcd3652cc3dcf9769c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205233"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671136"
 ---
 # <a name="icordebugprocess5enumerateheap-method"></a>ICorDebugProcess5::EnumerateHeap メソッド
+
 マネージヒープ上のオブジェクトの列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,15 +35,18 @@ HRESULT EnumerateHeap(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ppObject`  
- 入出力マネージヒープ上に存在するオブジェクト[の列挙子](icordebugheapenum-interface.md)である、コードオブジェクトのアドレスへのポインター。  
+ 入出力マネージヒープ上に存在するオブジェクト [の列挙子](icordebugheapenum-interface.md) である、コードオブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- メソッドを呼び出す前に `ICorDebugProcess5::EnumerateHeap` 、 [ICorDebugProcess5:: Getg](icordebugprocess5-getgcheapinformation-method.md)メソッドを呼び出し、 `areGCStructuresValid` 返された[COR_HEAPINFO](cor-heapinfo-structure.md)オブジェクトのフィールドの値を調べて、現在の状態のガベージコレクションヒープが列挙可能であることを確認する必要があります。 さらに、は `ICorDebugProcess5::EnumerateHeap` 、 `E_FAIL` プロセスの有効期間が早すぎると、マネージヒープのメモリが割り当てられる前に、を返します。  
+## <a name="remarks"></a>注釈  
+
+ メソッドを呼び出す前に `ICorDebugProcess5::EnumerateHeap` 、 [ICorDebugProcess5:: Getg](icordebugprocess5-getgcheapinformation-method.md) メソッドを呼び出し、 `areGCStructuresValid` 返された [COR_HEAPINFO](cor-heapinfo-structure.md) オブジェクトのフィールドの値を調べて、現在の状態のガベージコレクションヒープが列挙可能であることを確認する必要があります。 さらに、は `ICorDebugProcess5::EnumerateHeap` 、 `E_FAIL` プロセスの有効期間が早すぎると、マネージヒープのメモリが割り当てられる前に、を返します。  
   
- は[、ICorDebugEnum](icordebugheapenum-interface.md)インターフェイスから派生した標準列挙子であり、 [COR_HEAPOBJECT](cor-heapobject-structure.md)オブジェクトを列挙できます。 このメソッド[は、すべてのオブジェクト](icordebugheapenum-interface.md)に関する情報を提供する[COR_HEAPOBJECT](cor-heapobject-structure.md)インスタンスを使用して、このコレクションオブジェクトを設定します。 コレクションには、オブジェクトによってルートされていないが、まだガベージコレクターによって収集されていないオブジェクトに関する情報を提供する[COR_HEAPOBJECT](cor-heapobject-structure.md)インスタンスを含めることもできます。  
+ は [、ICorDebugEnum](icordebugheapenum-interface.md) インターフェイスから派生した標準列挙子であり、 [COR_HEAPOBJECT](cor-heapobject-structure.md) オブジェクトを列挙できます。 このメソッド [は、すべてのオブジェクト](icordebugheapenum-interface.md) に関する情報を提供する [COR_HEAPOBJECT](cor-heapobject-structure.md) インスタンスを使用して、このコレクションオブジェクトを設定します。 コレクションには、オブジェクトによってルートされていないが、まだガベージコレクターによって収集されていないオブジェクトに関する情報を提供する [COR_HEAPOBJECT](cor-heapobject-structure.md) インスタンスを含めることもできます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
