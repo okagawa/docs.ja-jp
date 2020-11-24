@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 83605f1e-e4f3-49e6-859b-f13cad68bb54
 topic_type:
 - apiref
-ms.openlocfilehash: bba0fc039c403d45e8a5b60f2b0231eb24226280
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 5298dd0f53693d96b748f6c839660838fdfad4ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614956"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689551"
 ---
 # <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodsFromDocumentPosition メソッド
+
 メソッドの配列を返します。各メソッドには、ドキュメント内の指定された位置にあるブレークポイントが含まれています。  
   
 ## <a name="syntax"></a>構文  
@@ -39,6 +40,7 @@ HRESULT GetMethodsFromDocumentPosition (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `document`  
  から指定されたドキュメント。  
   
@@ -55,12 +57,14 @@ HRESULT GetMethodsFromDocumentPosition (
  入出力配列で返された要素の数を受け取る変数へのポインター `pRetVal` 。  
   
  `pRetVal`  
- 入出力ポインターの配列。各ポインターは、ブレークポイントを含むメソッドを表す[ISymUnmanagedMethod](isymunmanagedmethod-interface.md)オブジェクトを指します。  
+ 入出力ポインターの配列。各ポインターは、ブレークポイントを含むメソッドを表す [ISymUnmanagedMethod](isymunmanagedmethod-interface.md) オブジェクトを指します。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

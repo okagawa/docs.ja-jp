@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd9e9204-a80d-44f3-8192-779224b35056
 topic_type:
 - apiref
-ms.openlocfilehash: 558b6e4c6ac369e33be3d45b7241e8b11db8bfae
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 94c84d876e19ec2ff7baba5a5a7420eec68d58c6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83760395"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690110"
 ---
 # <a name="icorruntimehostunloaddomain-method"></a>ICorRuntimeHost::UnloadDomain メソッド
+
 現在のプロセスから、指定されたアプリケーションドメインをアンロードします。  
   
 ## <a name="syntax"></a>構文  
@@ -34,8 +35,9 @@ HRESULT UnloadDomain (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pAppDomain`  
- から<xref:System._AppDomain?displayProperty=nameWithType>アンロードするドメインを表す型のポインター。  
+ から <xref:System._AppDomain?displayProperty=nameWithType> アンロードするドメインを表す型のポインター。  
   
 ## <a name="return-value"></a>戻り値  
   
@@ -47,11 +49,12 @@ HRESULT UnloadDomain (
 |HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージドコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework バージョン:** 1.0、1.1  
   

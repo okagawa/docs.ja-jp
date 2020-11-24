@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 347d7e5c-c90f-45ad-bd1e-2c7912b0b19c
 topic_type:
 - apiref
-ms.openlocfilehash: 79b1493d262288c1d85a56538810e35a73441595
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: eef2c733f96d74e3353a940cc90f1a631cf48a36
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491764"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690526"
 ---
 # <a name="imetadataimportenumpermissionsets-method"></a>IMetaDataImport::EnumPermissionSets メソッド
+
 指定したメタデータ スコープ内のオブジェクトのアクセス許可を列挙します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,6 +40,7 @@ HRESULT EnumPermissionSets
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `phEnum`  
  [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
   
@@ -46,7 +48,7 @@ HRESULT EnumPermissionSets
  から検索範囲を制限するメタデータトークン。または、可能な限り広い範囲を検索する場合は NULL。  
   
  `dwActions`  
- から<xref:System.Security.Permissions.SecurityAction>に含める値を表すフラグ `rPermission` 。すべてのアクションを返す場合は0。  
+ から <xref:System.Security.Permissions.SecurityAction> に含める値を表すフラグ `rPermission` 。すべてのアクションを返す場合は0。  
   
  `rPermission`  
  入出力アクセス許可トークンを格納するために使用される配列。  
@@ -61,15 +63,16 @@ HRESULT EnumPermissionSets
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumPermissionSets`正常に返されました。|  
+|`S_OK`|`EnumPermissionSets` 正常に返されました。|  
 |`S_FALSE`|列挙するトークンがありません。 この場合、 `pcTokens` は0になります。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

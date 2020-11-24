@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 9f8e8e0239f8f8cd149bc6e8b1d7921124731087
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 65013f43aa0075b6de6999741afb448c2a35afb2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245948"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689928"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)
 
@@ -46,11 +46,11 @@ ServiceModel メタデータユーティリティツールは、Windows SDK の�
 
 ### <a name="multi-targeting"></a>マルチターゲット
 
-このツールは複数バージョン対応機能をサポートしていません。 *svcutil.exe*から .net 4 成果物を生成する場合は、.NET 4 SDK の*svcutil.exe*を使用します。 .NET 3.5 成果物を生成するには、.NET 3.5 SDK から実行可能ファイルを実行します。
+このツールは複数バージョン対応機能をサポートしていません。 *svcutil.exe* から .NET Framework 4 成果物を生成する場合は、.NET FRAMEWORK 4 SDK の *svcutil.exe* を使用します。 .NET Framework 3.5 の成果物を生成するには、.NET Framework 3.5 SDK の実行可能ファイルを使用します。
 
 ### <a name="accessing-wsdl-documents"></a>WSDL ドキュメントへのアクセス
 
-Svcutil を使用して、セキュリティ トークン サービス (STS) への参照がある WSDL ドキュメントにアクセスする場合、Svcutil は WS-MetadataExchange を使用して STS を呼び出します。 ただし、サービスは、WS-MetadataExchange または HTTP GET を使用して WSDL ドキュメントを公開できます。 したがって、STS が HTTP GET を使用して WSDL ドキュメントを公開しただけの場合、WinFX で記述されたクライアントは失敗します。 .NET Framework 3.5 で記述されたクライアントの場合、Svcutil.exe は、Ws-metadataexchange と HTTP GET の両方を使用して STS WSDL を取得しようとします。
+Svcutil を使用して、セキュリティ トークン サービス (STS) への参照がある WSDL ドキュメントにアクセスする場合、Svcutil は WS-MetadataExchange を使用して STS を呼び出します。 ただし、サービスは、WS-MetadataExchange または HTTP GET を使用して WSDL ドキュメントを公開できます。 したがって、STS が HTTP GET を使用して WSDL ドキュメントを公開しただけの場合、WinFX で記述されたクライアントは失敗します。 .NET Framework 3.5 で記述されたクライアントの場合、Svcutil.exe は WS-MetadataExchange と HTTP GET の両方を使用して STS WSDL を取得しようとします。
 
 ## <a name="using-svcutilexe"></a>SvcUtil.exe の使用
 
@@ -70,9 +70,9 @@ Svcutil を使用して、セキュリティ トークン サービス (STS) へ
 
 Svcutil.exe は、メタデータ ドキュメントからサービス コントラクト、クライアント、およびデータ型のコードを生成できます。 これらのメタデータ ドキュメントは、永続ストレージにあるか、オンラインで取得できます。 オンライン取得は、WS-Metadata Exchange プロトコルまたは DISCO プロトコルに従います (詳細については、「メタデータのダウンロード」セクションを参照してください)。
 
-*SvcUtil.exe*ツールを使用すると、定義済みの WSDL ドキュメントに基づいてサービスとデータコントラクトを生成できます。 /serviceContract スイッチを使用し、WSDL ドキュメントをダウンロードできるか見つけることができる URL またはファイルの場所を指定します。 これにより、WSDL ドキュメントで定義されたサービスとデータコントラクトが生成され、それを使用して、準拠するサービスを実装できます。 詳細については、「[方法: メタデータを取得し、準拠しているサービスを実装](./feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)する」を参照してください。
+*SvcUtil.exe* ツールを使用すると、定義済みの WSDL ドキュメントに基づいてサービスとデータコントラクトを生成できます。 /serviceContract スイッチを使用し、WSDL ドキュメントをダウンロードできるか見つけることができる URL またはファイルの場所を指定します。 これにより、WSDL ドキュメントで定義されたサービスとデータコントラクトが生成され、それを使用して、準拠するサービスを実装できます。 詳細については、「 [方法: メタデータを取得し、準拠しているサービスを実装](./feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)する」を参照してください。
 
-BasicHttpContextBinding エンドポイントを使用しているサービスの場合、 *Svcutil.exe*は、 `allowCookies` 代わりに属性をに設定して BasicHttpBinding を生成し `true` ます。 クッキーはサーバー側でのコンテキスト用に使用されます。 サービスでクッキーを使用するときにクライアント側でコンテキストを管理する場合は、コンテキスト バインディングを使用するように構成を手動で変更できます。
+BasicHttpContextBinding エンドポイントを使用しているサービスの場合、 *Svcutil.exe* は、 `allowCookies` 代わりに属性をに設定して BasicHttpBinding を生成し `true` ます。 クッキーはサーバー側でのコンテキスト用に使用されます。 サービスでクッキーを使用するときにクライアント側でコンテキストを管理する場合は、コンテキスト バインディングを使用するように構成を手動で変更できます。
 
 > [!CAUTION]
 > Svcutil.exe は、WSDL またはサービスから受け取るポリシー ファイルに基づいてクライアントを生成します。 ユーザープリンシパル名 (UPN) は、ユーザー名 " \@ " と完全修飾ドメイン名 (FQDN) を連結して生成されます。 ただし、Active Directory に登録されているユーザーの場合、この形式は無効であり、ツールが生成する UPN を使用すると、Kerberos 認証でエラーが発生し、エラー メッセージ "ログインに失敗しました" が表示されます。 この問題を解決するには、このツールが生成するクライアント ファイルを手動で修正する必要があります。
@@ -82,7 +82,7 @@ BasicHttpContextBinding エンドポイントを使用しているサービス�
 |引数|説明|
 |--------------|-----------------|
 |`epr`|WS-Metadata Exchange をサポートするサービス エンドポイントの WS-Addressing EndpointReference を含む XML ファイルへのパスです。 詳細については、「メタデータのダウンロード」セクションを参照してください。|
-|`metadataDocumentPath`|コード (.wsdl、.xsd、wspolicy、または wsmex) にインポートするコントラクトを含むメタデータドキュメント (*wsdl*または*xsd*) へのパス。<br /><br /> Svcutil は、メタデータにリモート URL を指定するときのインポートとインクルードに従います。 ただし、ローカル ファイル システムでメタデータ ファイルを処理する場合は、この引数にすべてのファイルを指定する必要があります。 この方法では Svcutil を、ネットワークの依存関係を持つことができないビルド環境で使用できます。 この引数には、ワイルドカード (* .xsd, .wsdl) を使用でき \* ます。|
+|`metadataDocumentPath`|コード (.wsdl、.xsd、wspolicy、または wsmex) にインポートするコントラクトを含むメタデータドキュメント (*wsdl* または *xsd*) へのパス。<br /><br /> Svcutil は、メタデータにリモート URL を指定するときのインポートとインクルードに従います。 ただし、ローカル ファイル システムでメタデータ ファイルを処理する場合は、この引数にすべてのファイルを指定する必要があります。 この方法では Svcutil を、ネットワークの依存関係を持つことができないビルド環境で使用できます。 この引数には、ワイルドカード (* .xsd, .wsdl) を使用でき \* ます。|
 |`url`|メタデータを提供するサービス エンドポイントの URL またはオンラインになっているメタデータ ドキュメントの URL。 これらのドキュメントの取得方法の詳細については、「メタデータのダウンロード」セクションを参照してください。|
 
 |オプション|説明|
@@ -98,7 +98,7 @@ BasicHttpContextBinding エンドポイントを使用しているサービス�
 |/language\<language>|コード生成に使用するプログラミング言語を指定します。 Machine.config ファイルに登録された言語名か、を継承するクラスの完全修飾名を指定する必要があり <xref:System.CodeDom.Compiler.CodeDomProvider> ます。<br /><br /> 値 : c#、cs、csharp、vb、visualbasic、c++、cpp<br /><br /> 既定値: csharp<br /><br /> 短縮形 : `/l`|
 |/mergeConfig|既存のファイルを上書きする代わりに、生成される構成ファイルを既存のファイルにマージします。|
 |/messageContract|メッセージ コントラクト型を生成します。<br /><br /> 短縮形: `/mc`|
-|/namespace\<string,string>|WSDL または XML スキーマの targetNamespace から CLR 名前空間へのマッピングを指定します。 TargetNamespace に ' ' を使用すると、 \* その CLR 名前空間に明示的にマッピングすることなく、すべての targetNamespaces がマップされます。<br /><br /> メッセージ コントラクト名が操作名と競合しないようにするには、型参照を `::` で修飾するか、名前を一意にする必要があります。<br /><br /> 既定 : データ コントラクトのスキーマ ドキュメントのターゲット名前空間から派生します。 既定の名前空間は、生成される他のすべての型に使用されます。<br /><br /> 短い形式: `/n` **注:** XmlSerializer と共に使用する型を生成する場合、名前空間マッピングは1つだけサポートされます。 生成されるすべての型は、既定の名前空間または ' * ' によって指定された名前空間に含まれます。|
+|/namespace\<string,string>|WSDL または XML スキーマの targetNamespace から CLR 名前空間へのマッピングを指定します。 TargetNamespace に ' ' を使用すると、 \* その CLR 名前空間に明示的にマッピングすることなく、すべての targetNamespaces がマップされます。<br /><br /> メッセージ コントラクト名が操作名と競合しないようにするには、型参照を `::` で修飾するか、名前を一意にする必要があります。<br /><br /> 既定 : データ コントラクトのスキーマ ドキュメントのターゲット名前空間から派生します。 既定の名前空間は、生成される他のすべての型に使用されます。<br /><br /> 短い形式: `/n` **注:**  XmlSerializer と共に使用する型を生成する場合、名前空間マッピングは1つだけサポートされます。 生成されるすべての型は、既定の名前空間または ' * ' によって指定された名前空間に含まれます。|
 |/noConfig|構成ファイルを生成しません。|
 |/noStdLib|標準ライブラリを参照しません。<br /><br /> 既定 : Mscorlib.dll と System.servicemodel.dll を参照します。|
 |/out\<file>|生成されるコードのファイル名を指定します。<br /><br /> 既定 : WSDL 定義名、WSDL サービス名、またはスキーマの 1 つのターゲット名前空間から派生します。<br /><br /> 短縮形 : `/o`|
@@ -108,11 +108,11 @@ BasicHttpContextBinding エンドポイントを使用しているサービス�
 |/serializer:Auto|シリアライザーを自動的に選択します。 これは、データコントラクトシリアライザーを使用しようとし、失敗した場合は XmlSerializer を使用します。<br /><br /> 短縮形: `/ser`|
 |/serializer:DataContractSerializer|シリアル化と逆シリアル化にデータ コントラクト シリアライザーを使用するデータ型を生成します。<br /><br /> 短縮形: `/ser:DataContractSerializer`|
 |/serializer:XmlSerializer|シリアル化と逆シリアル化に <xref:System.Xml.Serialization.XmlSerializer> を使用するデータ型を生成します。<br /><br /> 短縮形: `/ser:XmlSerializer`|
-|/targetClientVersion|アプリケーションが対象としている .NET Framework のバージョンを指定します。 有効な値は、`Version30`、`Version35` です。 既定値は `Version30` です。<br /><br /> 短縮形: `/tcv`<br /><br /> `Version30`: `/tcv:Version30` WinFX を使用するクライアントのコードを生成する場合は、を使用します。<br /><br /> `Version35`: `/tcv:Version35` .NET Framework 3.5 を使用するクライアントのコードを生成する場合は、を使用します。 `/tcv:Version35` スイッチを指定して `/async` を使用している場合は、イベントベースおよびコールバック/デリゲートベースの非同期メソッドが生成されます。 また、LINQ 対応のデータセットおよび <xref:System.DateTimeOffset> のサポートが有効になっています。|
-|/wrapped|ラップされたパラメーターを含んでいるドキュメント リテラル スタイルのドキュメントに特別な大文字と小文字の規則が使用されるかどうかを制御します。 [サービスモデルメタデータユーティリティツール (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)ツールと共に**ラップ**されたスイッチを使用して、通常の大文字と小文字を指定します。|
+|/targetClientVersion|アプリケーションが対象としている .NET Framework のバージョンを指定します。 有効な値は `Version30` と `Version35` です。 既定値は `Version30` です。<br /><br /> 短縮形: `/tcv`<br /><br /> `Version30`: `/tcv:Version30` WinFX を使用するクライアントのコードを生成する場合は、を使用します。<br /><br /> `Version35`: `/tcv:Version35` .NET Framework 3.5 を使用するクライアントのコードを生成する場合は、を使用します。 `/tcv:Version35` スイッチを指定して `/async` を使用している場合は、イベントベースおよびコールバック/デリゲートベースの非同期メソッドが生成されます。 また、LINQ 対応のデータセットおよび <xref:System.DateTimeOffset> のサポートが有効になっています。|
+|/wrapped|ラップされたパラメーターを含んでいるドキュメント リテラル スタイルのドキュメントに特別な大文字と小文字の規則が使用されるかどうかを制御します。 [サービスモデルメタデータユーティリティツール (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)ツールと共に **ラップ** されたスイッチを使用して、通常の大文字と小文字を指定します。|
 
 > [!NOTE]
-> サービスバインドがシステム指定のバインディングの1つであり ([システム指定](system-provided-bindings.md)のバインディングを参照)、 <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> プロパティがまたはのいずれかに設定されている場合 `None` 、svcutil.exe は、 `Sign` [\<customBinding>](../configure-apps/file-schema/wcf/custombinding.md) 予期されるシステム指定の要素ではなく、要素を使用して構成ファイルを生成します。 たとえば、サービスが、`<wsHttpBinding>` が `ProtectionLevel` に設定された `Sign` 要素を使用する場合、生成される構成には、バインディング セクションに `<customBinding>` の代わりに `<wsHttpBinding>` があります。 保護レベルの詳細については、「[保護レベル](understanding-protection-level.md)について」を参照してください。
+> サービスバインドがシステム指定のバインディングの1つであり ( [システム指定](system-provided-bindings.md)のバインディングを参照)、 <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> プロパティがまたはのいずれかに設定されている場合 `None` 、svcutil.exe は、 `Sign` [\<customBinding>](../configure-apps/file-schema/wcf/custombinding.md) 予期されるシステム指定の要素ではなく、要素を使用して構成ファイルを生成します。 たとえば、サービスが、`<wsHttpBinding>` が `ProtectionLevel` に設定された `Sign` 要素を使用する場合、生成される構成には、バインディング セクションに `<customBinding>` の代わりに `<wsHttpBinding>` があります。 保護レベルの詳細については、「 [保護レベル](understanding-protection-level.md)について」を参照してください。
 
 ### <a name="metadata-export"></a>メタデータのエクスポート
 
@@ -177,7 +177,7 @@ Svcutil は、メタデータを取得するために次のメタデータ要求
 > [!NOTE]
 > 事前生成済みシリアル化コードはクライアント アプリケーションでのみ使用できます。サービスでは使用できません。
 
-Svcutil.exe は、必要な C# シリアル化コードをアプリケーションのコンパイル済みアセンブリから生成できるため、このようなアプリケーションの起動時のパフォーマンスが改善されます。 詳細については、「[方法: XmlSerializer を使用して WCF クライアントアプリケーションの起動時間を向上させる](./feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)」を参照してください。
+Svcutil.exe は、必要な C# シリアル化コードをアプリケーションのコンパイル済みアセンブリから生成できるため、このようなアプリケーションの起動時のパフォーマンスが改善されます。 詳細については、「 [方法: XmlSerializer を使用して WCF クライアントアプリケーションの起動時間を向上させる](./feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)」を参照してください。
 
 > [!NOTE]
 > Svcutil.exe は、入力アセンブリに存在するサービス コントラクトによって使用される型用のコードを生成します。
@@ -195,7 +195,7 @@ Svcutil.exe は、必要な C# シリアル化コードをアプリケーショ�
 |/out\<file>|生成されるコードのファイル名を指定します。 このオプションは、複数のアセンブリが入力としてツールに渡される場合は無視されます。<br /><br /> 既定 : アセンブリ名から派生します。<br /><br /> 短縮形: `/o`|
 |/UseSerializerForFaults|既定の <xref:System.Xml.Serialization.XmlSerializer> ではなく、<xref:System.Runtime.Serialization.DataContractSerializer> をエラーの読み書きに使用する必要があることを指定します。|
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 次のコマンドにより、実行中のサービスまたはオンラインのメタデータ ドキュメントからクライアント コードが生成されます。
 

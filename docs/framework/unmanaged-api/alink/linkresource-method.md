@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c404acb3-4c59-4100-9a4c-483cbdb1d736
 topic_type:
 - apiref
-ms.openlocfilehash: 9e91d990a8f23335248043c59eb210e8c4155e3a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4f2f13976dfd4e5601bf8b54bed7b851884fbb9d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445633"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690448"
 ---
 # <a name="linkresource-method"></a>LinkResource メソッド
+
 リソース内のリンク。  
   
 ## <a name="syntax"></a>構文  
@@ -37,28 +38,31 @@ HRESULT LinkResource(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `AssemblyID`  
  アセンブリの ID。  
   
  `pszFileName`  
- ファイルの名前。  
+ ファイルの名前です。  
   
  `pszNewLocation`  
- 省略可能な新しいファイル名。 NULL 以外の場合、`pszFileName` は pszNewLocation にコピーされます。  
+ 省略可能な新しいファイル名。 NULL 以外の場合は、 `pszFileName` pszNewLocation にコピーされます。  
   
  `pszResourceName`  
  リソースの名前。  
   
  `dwFlags`  
- `mrPublic` や `mrPrivate`などのアクセシビリティフラグ。 このパラメーターは、 [DefineManifestResource メソッド](../metadata/imetadataassemblyemit-definemanifestresource-method.md)に渡すことができます。  
+ やなどのアクセシビリティ `mrPublic` フラグ `mrPrivate` 。 このパラメーターは、 [DefineManifestResource メソッド](../metadata/imetadataassemblyemit-definemanifestresource-method.md)に渡すことができます。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK を返します。  
   
 ## <a name="requirements"></a>要件  
+
  Alink. h が必要です。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [IALink インターフェイス](ialink-interface.md)
 - [IALink2 インターフェイス](ialink2-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e0f865d-88b5-44bd-be35-492622e5e08e
 topic_type:
 - apiref
-ms.openlocfilehash: b8fabea78f85448e39fc6d31f0a7969458343877
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 40ab610110e96018b1c598d04b24a762ecb50717
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492012"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690516"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls メソッド
+
 指定した型のメソッドを表す MethodBody トークンと MethodDeclaration トークンを列挙します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,6 +40,7 @@ HRESULT EnumMethodImpls (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `phEnum`  
  [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
   
@@ -52,7 +54,7 @@ HRESULT EnumMethodImpls (
  入出力MethodDeclaration トークンを格納する配列。  
   
  `cMax`  
- から`rMethodBody`配列と配列の最大サイズ `rMethodDecl` 。  
+ から `rMethodBody` 配列と配列の最大サイズ `rMethodDecl` 。  
   
  `pcTokens`  
  からとで返されるメソッドの実際の数 `rMethodBody` `rMethodDecl` 。  
@@ -61,15 +63,16 @@ HRESULT EnumMethodImpls (
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls`正常に返されました。|  
+|`S_OK`|`EnumMethodImpls` 正常に返されました。|  
 |`S_FALSE`|列挙するメソッドトークンがありません。 この場合、 `pcTokens` は0になります。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
