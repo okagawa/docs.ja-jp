@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7dd14854-b756-4401-b167-88ca576dc8f0
 topic_type:
 - apiref
-ms.openlocfilehash: 17757df566ba8d141e7adec00dcc1f75959d0e00
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 096a460f9d6581ebdd00f8487af68f652524d52f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005628"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681666"
 ---
 # <a name="imetadataemitdefinecustomattribute-method"></a>IMetaDataEmit::DefineCustomAttribute メソッド
+
 指定したメタデータシグネチャを使用して、指定したオブジェクトにアタッチするカスタム属性の定義を作成し、そのカスタム属性定義へのトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,6 +39,7 @@ HRESULT DefineCustomAttribute (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `tkObj`  
  から所有者項目のトークン。  
   
@@ -51,14 +53,15 @@ HRESULT DefineCustomAttribute (
  からのバイト数 `pCustomAttribute` 。  
   
  `pcv`  
- 入出力`mdCustomAttribute`割り当てられたトークン。  
+ 入出力 `mdCustomAttribute` 割り当てられたトークン。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

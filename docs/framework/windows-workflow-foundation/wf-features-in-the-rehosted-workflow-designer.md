@@ -2,21 +2,21 @@
 title: 再ホストされたワークフロー デザイナーにおける Workflow Foundation 4.5 の新機能のサポート
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: b561e580f0d7f2d77847d91612e8b06bc57a2a45
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f37938b603d0eec53a37e4f146376e3202f13d7a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558434"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684136"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>再ホストされたワークフロー デザイナーにおける Workflow Foundation 4.5 の新機能のサポート
 .NET Framework 4.5 の Windows Workflow Foundation (WF) では、ワークフローデザイナーのエクスペリエンスに対するいくつかの機能強化など、多くの新機能が導入されました。 このトピックでは、このような新機能のうち、再ホストされたデザイナーでサポートされている機能と現時点ではサポートされていない機能について詳しく説明します。
 
 > [!NOTE]
-> .NET Framework 4.5 で導入された新しい Windows Workflow Foundation (WF) 機能の一覧については、「 [.net 4.5 における Windows Workflow Foundation の新](whats-new-in-wf-in-dotnet.md)機能」を参照してください。
+> .NET Framework 4.5 で導入された新しい Windows Workflow Foundation (WF) 機能の一覧については、「 [.NET Framework 4.5](whats-new-in-wf-in-dotnet.md)における Windows Workflow Foundation の新機能」を参照してください。
 
 ## <a name="activities"></a>アクティビティ
- 組み込みのアクティビティ ライブラリには、既存のアクティビティ用の新しいアクティビティと新しい機能が含まれています。 これらの新しいアクティビティはすべて、再ホストされたデザイナーでサポートされています。 これらの新しいアクティビティの詳細については、「 [.net 4.5 の Windows Workflow Foundation の新機能](whats-new-in-wf-in-dotnet.md)」の「[アクティビティ](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities)」セクションを参照してください。
+ 組み込みのアクティビティ ライブラリには、既存のアクティビティ用の新しいアクティビティと新しい機能が含まれています。 これらの新しいアクティビティはすべて、再ホストされたデザイナーでサポートされています。 これらの新しいアクティビティの詳細については、 [.NET Framework 4.5 の「Windows Workflow Foundation の新機能](whats-new-in-wf-in-dotnet.md)」の「[アクティビティ](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities)」セクションを参照してください。
 
 ## <a name="c-expressions"></a>C# の式
  .NET Framework 4.5 より前では、ワークフロー内のすべての式は Visual Basic でのみ記述できました。 .NET Framework 4.5 では、Visual Basic 式は Visual Basic を使用して作成されたプロジェクトにのみ使用されます。 Visual C# プロジェクトでは、式に C# が使用されるようになりました。 Visual Studio 2012 でワークフローを作成する場合、完全に機能する C# 式エディターには、文法の強調表示や intellisense などの機能が用意されています。 以前のバージョンで作成された、Visual Basic の式を使用する C# ワークフロー プロジェクトは引き続き動作します。
@@ -103,43 +103,43 @@ ms.locfileid: "90558434"
  .NET Framework 4 では、ワークフロープロジェクトのビルド中に、ワークフローの検証エラーがビルドエラーとしてカウントされませんでした。 つまり、ワークフローの検証エラーが発生した場合でも、ワークフロー プロジェクトのビルドは成功している可能性があります。 .NET Framework 4.5 では、ワークフローの検証エラーによってビルドが失敗します。
 
 > [!WARNING]
-> ビルド時の検証は、再ホストされたデザイナーではサポートされていません。  
-  
-### <a name="design-time-background-validation"></a>デザイン時バックグラウンド検証  
- .NET Framework 4 では、ワークフローがフォアグラウンドプロセスとして検証されました。これにより、複雑な、または時間のかかる検証プロセスで UI がブロックされる可能性があります。 現在、ワークフローの検証はバックグラウンド スレッドで実行されるため、UI がブロックされることはありません。  
-  
- デザイン時バックグラウンド検証は、再ホストされたデザイナーでサポートされています。  
-  
-### <a name="view-state-located-in-a-separate-location-in-xaml-files"></a>XAML ファイル内で別々の場所にあるビューステート  
- .NET Framework 4 では、ワークフローのビューステート情報は、さまざまな場所にある XAML ファイルに格納されます。 これは、XAML を直接読み取ったり、ビューステート情報を削除するコードを記述したりする開発者にとっては不便です。 .NET Framework 4.5 では、XAML ファイル内のビューステート情報が XAML ファイル内の個別の要素としてシリアル化されます。  開発者は、アクティビティのビューステート情報を簡単に見つけて編集したり、ビューステートを完全に削除したりできます。  
-  
- この機能は、再ホストされたワークフロー デザイナーでサポートされています。  
-  
-### <a name="opt-in-for-workflow-45-features-in-rehosted-designer"></a>再ホストされたデザイナーでの Workflow 4.5 機能のオプトイン  
- 旧バージョンとの互換性を維持するために、再ホストされたデザイナーでは、.NET Framework 4.5 に含まれるいくつかの新機能が既定で有効になっていません。 これは、再ホストされたデザイナーを使用する既存のアプリケーションが、最新バージョンに更新することで壊れないようにするためです。 再ホストされたデザイナーで新機能を有効にするには、<xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> を ".Net Framework 4.5" に設定するか、<xref:System.Activities.Presentation.DesignerConfigurationService> の各メンバーを設定して各機能を有効にします。  
-  
-## <a name="new-workflow-development-models"></a>新しいワークフロー開発モデル  
- このリリースには、フローチャートおよびシーケンシャル ワークフロー開発モデルに加えて、ステート マシンのワークフロー、およびコントラクト優先ワークフロー サービスが含まれています。  
-  
-### <a name="state-machine-workflows"></a>ステート マシンのワークフロー  
- ステートマシンのワークフローは、 [Microsoft .NET Framework 4 Platform Update 1](/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)の .NET Framework 4.0.1 の一部として導入されました。 この更新プログラムには、開発者がステート マシンのワークフローを作成できるようにする、いくつかの新しいクラスとアクティビティが含まれていました。 これらのクラスとアクティビティは .NET Framework 4.5 に対して更新されました。 更新プログラムには次のものが含まれています。  
-  
-1. 状態にブレークポイントを設定する機能。  
-  
-2. ワークフロー デザイナーで遷移をコピーして貼り付ける機能。  
-  
-3. トリガーを共有する遷移の作成に対するデザイナーのサポート。  
-  
-4. ステート マシンのワークフロー作成に使用するアクティビティ (<xref:System.Activities.Statements.StateMachine><xref:System.Activities.Statements.State>、<xref:System.Activities.Statements.Transition> など)。  
-  
- 次のスクリーンショットは、 [はじめにチュートリアル](getting-started-tutorial.md) の手順 [「ステートマシンワークフローを作成する方法](how-to-create-a-state-machine-workflow.md)」の完成したステートマシンワークフローを示しています。  
-  
- ![完成したステートマシンのワークフローを示す図。](./media/wf-features-in-the-rehosted-workflow-designer/complete-state-machine-workflow.jpg)  
-  
- ステートマシンワークフローの作成の詳細については、「 [ステートマシンワークフロー](state-machine-workflows.md)」を参照してください。 ステート マシンのワークフローは、再ホストされたデザイナーでサポートされています。  
-  
-### <a name="contract-first-workflow-development"></a>コントラクト優先ワークフローの開発  
- コントラクト優先ワークフロー開発ツールを使用すると、開発者は code first でコントラクトをデザインできます。 Visual Studio で数回クリックするだけで、各操作を表すアクティビティテンプレートがツールボックスに自動的に生成されます。 これらのアクティビティは、コントラクトで定義された操作を実装するワークフローを作成するために使用されます。 ワークフロー デザイナーは、ワークフロー サービスを検証し、これらの操作が実装され、ワークフローの署名がコントラクトの署名と一致することを確認します。 また、開発者は、ワークフロー サービスを、実装済みコントラクトのコレクションと関連付けることもできます。 コントラクト優先ワークフローサービスの開発の詳細については、「 [方法: 既存のサービスコントラクトを使用するワークフローサービスを作成](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)する」を参照してください。  
-  
+> ビルド時の検証は、再ホストされたデザイナーではサポートされていません。
+
+### <a name="design-time-background-validation"></a>デザイン時バックグラウンド検証
+ .NET Framework 4 では、ワークフローがフォアグラウンドプロセスとして検証されました。これにより、複雑な、または時間のかかる検証プロセスで UI がブロックされる可能性があります。 現在、ワークフローの検証はバックグラウンド スレッドで実行されるため、UI がブロックされることはありません。
+
+ デザイン時バックグラウンド検証は、再ホストされたデザイナーでサポートされています。
+
+### <a name="view-state-located-in-a-separate-location-in-xaml-files"></a>XAML ファイル内で別々の場所にあるビューステート
+ .NET Framework 4 では、ワークフローのビューステート情報は、さまざまな場所にある XAML ファイルに格納されます。 これは、XAML を直接読み取ったり、ビューステート情報を削除するコードを記述したりする開発者にとっては不便です。 .NET Framework 4.5 では、XAML ファイル内のビューステート情報が XAML ファイル内の個別の要素としてシリアル化されます。  開発者は、アクティビティのビューステート情報を簡単に見つけて編集したり、ビューステートを完全に削除したりできます。
+
+ この機能は、再ホストされたワークフロー デザイナーでサポートされています。
+
+### <a name="opt-in-for-workflow-45-features-in-rehosted-designer"></a>再ホストされたデザイナーでの Workflow 4.5 機能のオプトイン
+ 旧バージョンとの互換性を維持するために、再ホストされたデザイナーでは、.NET Framework 4.5 に含まれるいくつかの新機能が既定で有効になっていません。 これは、再ホストされたデザイナーを使用する既存のアプリケーションが、最新バージョンに更新することで壊れないようにするためです。 再ホストされたデザイナーで新機能を有効にするには、<xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> を ".Net Framework 4.5" に設定するか、<xref:System.Activities.Presentation.DesignerConfigurationService> の各メンバーを設定して各機能を有効にします。
+
+## <a name="new-workflow-development-models"></a>新しいワークフロー開発モデル
+ このリリースには、フローチャートおよびシーケンシャル ワークフロー開発モデルに加えて、ステート マシンのワークフロー、およびコントラクト優先ワークフロー サービスが含まれています。
+
+### <a name="state-machine-workflows"></a>ステート マシンのワークフロー
+ ステートマシンのワークフローは、 [Microsoft .NET Framework 4 Platform Update 1](/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)の .NET Framework 4.0.1 の一部として導入されました。 この更新プログラムには、開発者がステート マシンのワークフローを作成できるようにする、いくつかの新しいクラスとアクティビティが含まれていました。 これらのクラスとアクティビティは .NET Framework 4.5 に対して更新されました。 更新プログラムには次のものが含まれています。
+
+1. 状態にブレークポイントを設定する機能。
+
+2. ワークフロー デザイナーで遷移をコピーして貼り付ける機能。
+
+3. トリガーを共有する遷移の作成に対するデザイナーのサポート。
+
+4. ステート マシンのワークフロー作成に使用するアクティビティ (<xref:System.Activities.Statements.StateMachine><xref:System.Activities.Statements.State>、<xref:System.Activities.Statements.Transition> など)。
+
+ 次のスクリーンショットは、 [はじめにチュートリアル](getting-started-tutorial.md) の手順 [「ステートマシンワークフローを作成する方法](how-to-create-a-state-machine-workflow.md)」の完成したステートマシンワークフローを示しています。
+
+ ![完成したステートマシンのワークフローを示す図。](./media/wf-features-in-the-rehosted-workflow-designer/complete-state-machine-workflow.jpg)
+
+ ステートマシンワークフローの作成の詳細については、「 [ステートマシンワークフロー](state-machine-workflows.md)」を参照してください。 ステート マシンのワークフローは、再ホストされたデザイナーでサポートされています。
+
+### <a name="contract-first-workflow-development"></a>コントラクト優先ワークフローの開発
+ コントラクト優先ワークフロー開発ツールを使用すると、開発者は code first でコントラクトをデザインできます。 Visual Studio で数回クリックするだけで、各操作を表すアクティビティテンプレートがツールボックスに自動的に生成されます。 これらのアクティビティは、コントラクトで定義された操作を実装するワークフローを作成するために使用されます。 ワークフロー デザイナーは、ワークフロー サービスを検証し、これらの操作が実装され、ワークフローの署名がコントラクトの署名と一致することを確認します。 また、開発者は、ワークフロー サービスを、実装済みコントラクトのコレクションと関連付けることもできます。 コントラクト優先ワークフローサービスの開発の詳細については、「 [方法: 既存のサービスコントラクトを使用するワークフローサービスを作成](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)する」を参照してください。
+
 > [!WARNING]
 > コントラクト優先ワークフローの開発は、ワークフロー デザイナーではサポートされていません。

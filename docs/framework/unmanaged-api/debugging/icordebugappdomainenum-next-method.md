@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8d1def7-0ebc-4314-a3a2-fd36a75973e7
 topic_type:
 - apiref
-ms.openlocfilehash: 17bf4c92b1e1347a8fe790c8df5937de0f95df4d
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: b315f38dc306727e33b52b84d17951a91ccdc39f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895084"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684474"
 ---
 # <a name="icordebugappdomainenumnext-method"></a>ICorDebugAppDomainEnum::Next メソッド
+
 現在のカーソル位置から開始して、指定した数のアプリケーションドメインをコレクションから取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,6 +38,7 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `celt`  
  から取得するアプリケーションドメインの数。  
   
@@ -44,9 +46,10 @@ HRESULT Next (
  入出力ポインターの配列。各ポインターは、アプリケーションドメインを表す、の各オブジェクトを指します。  
   
  `pceltFetched`  
- 入出力実際に返されたアプリケーションドメインの数へのポインター。 が1の場合`celt` 、この値は null になります。  
+ 入出力実際に返されたアプリケーションドメインの数へのポインター。 が1の場合、この値は null `celt` になります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

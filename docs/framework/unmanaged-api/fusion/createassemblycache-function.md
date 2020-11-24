@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 348c7c8c-8578-46ae-97cf-480d6015c3c6
 topic_type:
 - apiref
-ms.openlocfilehash: 5ef100680328e9ad6261bb9188d7509efa9ab479
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3197c650b4f167e7a5043270797d2c4a62413d8e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108867"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683200"
 ---
 # <a name="createassemblycache-function"></a>CreateAssemblyCache 関数
-グローバルアセンブリキャッシュを表す新しい[Iassemblycache](iassemblycache-interface.md)インスタンスへのポインターを取得します。  
+
+グローバルアセンブリキャッシュを表す新しい [Iassemblycache](iassemblycache-interface.md) インスタンスへのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,20 +37,22 @@ HRESULT CreateAssemblyCache (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ppAsmCache`  
  入出力返された `IAssemblyCache` ポインター。  
   
  `dwReserved`  
- [入力] 将来の機能拡張に備えて予約されています。 `dwReserved` は 0 (ゼロ) にする必要があります。  
+ [入力] 将来の機能拡張に備えて予約されています。 `dwReserved` 0 (ゼロ) にする必要があります。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Fusion. h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

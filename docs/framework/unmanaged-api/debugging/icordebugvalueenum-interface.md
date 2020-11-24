@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 88989482-a09f-4bd0-9adb-16f47b0291fd
 topic_type:
 - apiref
-ms.openlocfilehash: 5f95202bd0c8c5045c10378068ae83cad3d93fdd
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: e3934cbce76df3997fa07d8fa3a99bd8ddab09a2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396463"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684344"
 ---
 # <a name="icordebugvalueenum-interface"></a>ICorDebugValueEnum インターフェイス
+
 "ICorDebugEnum" メソッドを実装し、"ICorDebugValue" 配列を列挙します。  
   
 ## <a name="methods"></a>メソッド  
@@ -30,12 +31,13 @@ ms.locfileid: "83396463"
 |------------|-----------------|  
 |[Next メソッド](icordebugvalueenum-next-method.md)|現在の位置から開始して、指定した数の `ICorDebugValue` インスタンスを列挙から取得します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

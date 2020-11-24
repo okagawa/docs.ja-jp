@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c02338fe-da6c-467f-9567-70ebb387e901
 topic_type:
 - apiref
-ms.openlocfilehash: 1183f9f6d1ac221b20767f0a1bab15b3e9665a61
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: cf0a87afd1c0057c054205432fea7aa5844afb53
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396608"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684413"
 ---
 # <a name="icordebugvaluebreakpoint-interface"></a>ICorDebugValueBreakpoint インターフェイス
+
 ICorDebugBreakpoint インターフェイスを拡張して、特定の値にアクセスできるようにします。  
   
 ## <a name="methods"></a>メソッド  
@@ -30,12 +31,13 @@ ICorDebugBreakpoint インターフェイスを拡張して、特定の値にア
 |------------|-----------------|  
 |[GetValue メソッド](icordebugvaluebreakpoint-getvalue-method.md)|ブレークポイントが設定されたオブジェクトの値を表す、ICorDebugValue オブジェクトへのインターフェイスポインターを取得します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

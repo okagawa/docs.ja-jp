@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 91bd49b6-4d12-494f-a8f1-2f251e8c65e3
 topic_type:
 - apiref
-ms.openlocfilehash: 4480fefa51eec2f2751bd71910db87b72a1c32cf
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6c146f3deed31601411bef39ab12b52dfec8cd39
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496727"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681582"
 ---
 # <a name="icorprofilerinfo2-interface"></a>ICorProfilerInfo2 インターフェイス
-コードプロファイラーが共通言語ランタイム (CLR) と通信してイベント監視と要求情報を制御するために使用するメソッドを提供します。 インターフェイスは、 `ICorProfilerInfo2` [ICorProfilerInfo](icorprofilerinfo-interface.md)インターフェイスの拡張機能です。 つまり、.NET Framework バージョン2.0 以降のバージョンでサポートされている新しいメソッドが用意されています。  
+
+コードプロファイラーが共通言語ランタイム (CLR) と通信してイベント監視と要求情報を制御するために使用するメソッドを提供します。 インターフェイスは、 `ICorProfilerInfo2` [ICorProfilerInfo](icorprofilerinfo-interface.md) インターフェイスの拡張機能です。 つまり、.NET Framework バージョン2.0 以降のバージョンでサポートされている新しいメソッドが用意されています。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -50,7 +51,8 @@ ms.locfileid: "84496727"
 |[GetThreadStaticAddress メソッド](icorprofilerinfo2-getthreadstaticaddress-method.md)|指定したスレッドのスコープ内にある、指定したスレッド静的フィールドのアドレスを取得します。|  
 |[SetEnterLeaveFunctionHooks2 メソッド](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)|マネージ関数の "enter"、"leave"、および "tailcall" フックで呼び出されるプロファイラー実装関数を指定します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  プロファイラーは、 `ICorProfilerInfo2` CLR と通信してイベントの監視と要求情報を制御するために、インターフェイスのメソッドを呼び出します。  
   
  インターフェイスのメソッドは、 `ICorProfilerInfo2` フリースレッドモデルを使用して CLR によって実装されます。 各メソッドが、成功または失敗を示す HRESULT を返します。 返される可能性があるリターン コードの一覧については、CorError.h ファイルを参照してください。  
@@ -58,6 +60,7 @@ ms.locfileid: "84496727"
  CLR は、 `ICorProfilerInfo2` [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md)のプロファイラーの実装を使用して、初期化中に各コードプロファイラーにインターフェイスを渡します。 次に、コードプロファイラーは、インターフェイスのメソッドを呼び出して、 `ICorProfilerInfo2` CLR の制御下で実行されているマネージコードに関する情報を取得できます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

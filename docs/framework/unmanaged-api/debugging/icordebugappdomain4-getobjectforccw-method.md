@@ -2,14 +2,15 @@
 title: ICorDebugAppDomain4::GetObjectForCCW メソッド
 ms.date: 03/30/2017
 ms.assetid: 2cacdb85-e7b8-42e7-b310-c3e8c22e5d33
-ms.openlocfilehash: a175a6b6c91c284348580e1d9dc9ef0c5f5fc5df
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: f3e64def16fb2817244ef7669ff4bb7fef0bd07c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895117"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684449"
 ---
 # <a name="icordebugappdomain4getobjectforccw-method"></a>ICorDebugAppDomain4::GetObjectForCCW メソッド
+
 COM 呼び出し可能ラッパー (CCW: COM Callable Wrapper) ポインターからマネージド オブジェクトを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -22,6 +23,7 @@ HRESULT GetObjectForCCW(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ccwPointer`  
  [in] COM 呼び出し可能ラッパー (CCW) ポインター。  
   
@@ -31,6 +33,7 @@ HRESULT GetObjectForCCW(
 ## <a name="remarks"></a>解説  
   
 ## <a name="requirements"></a>必要条件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

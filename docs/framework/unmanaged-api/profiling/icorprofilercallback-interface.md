@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4bae06f7-94d7-4ba8-b250-648b2da78674
 topic_type:
 - apiref
-ms.openlocfilehash: 6a53b9b1b061c2ca07a469abc78c07ed9e710069
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8451f100f9e1b8d68045050d1b584ae44c29195d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500092"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684071"
 ---
 # <a name="icorprofilercallback-interface"></a>ICorProfilerCallback インターフェイス
+
 プロファイラーがサブスクライブしたイベントが発生したときにコードプロファイラーに通知するために、共通言語ランタイム (CLR) によって使用されるメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
@@ -60,8 +61,8 @@ ms.locfileid: "84500092"
 |[ExceptionUnwindFunctionLeave メソッド](icorprofilercallback-exceptionunwindfunctionleave-method.md)|例外処理のアンワインドフェーズが関数のアンワインドを完了したことをプロファイラーに通知します。|  
 |[FunctionUnloadStarted メソッド](icorprofilercallback-functionunloadstarted-method.md)|ランタイムが関数のアンロードを開始したことをプロファイラーに通知します。|  
 |[Initialize メソッド](icorprofilercallback-initialize-method.md)|新しい CLR アプリケーションが開始されるたびにプロファイラーを初期化するために呼び出されます。|  
-|[JITCachedFunctionSearchFinished メソッド](icorprofilercallback-jitcachedfunctionsearchfinished-method.md)|以前に Ngen.exe を使用してコンパイルされた関数の検索が終了したことをプロファイラーに通知します。|  
-|[JITCachedFunctionSearchStarted メソッド](icorprofilercallback-jitcachedfunctionsearchstarted-method.md)|以前に Ngen.exe を使用してコンパイルされた関数に対して検索が開始されたことをプロファイラーに通知します。|  
+|[JITCachedFunctionSearchFinished メソッド](icorprofilercallback-jitcachedfunctionsearchfinished-method.md)|以前に NGen.exe を使用してコンパイルされた関数の検索が終了したことをプロファイラーに通知します。|  
+|[JITCachedFunctionSearchStarted メソッド](icorprofilercallback-jitcachedfunctionsearchstarted-method.md)|以前に NGen.exe を使用してコンパイルされた関数に対して検索が開始されたことをプロファイラーに通知します。|  
 |[JITCompilationFinished メソッド](icorprofilercallback-jitcompilationfinished-method.md)|JIT コンパイラが関数のコンパイルを完了したことをプロファイラーに通知します。|  
 |[JITCompilationStarted メソッド](icorprofilercallback-jitcompilationstarted-method.md)|Just-in-time (JIT) コンパイラが関数のコンパイルを開始したことをプロファイラーに通知します。|  
 |[JITFunctionPitched メソッド](icorprofilercallback-jitfunctionpitched-method.md)|JIT コンパイル済みの関数がメモリから削除されたことをプロファイラーに通知します。|  
@@ -98,17 +99,19 @@ ms.locfileid: "84500092"
 |[ThreadDestroyed メソッド](icorprofilercallback-threaddestroyed-method.md)|スレッドが破棄されたことをプロファイラーに通知します。|  
 |[UnmanagedToManagedTransition メソッド](icorprofilercallback-unmanagedtomanagedtransition-method.md)|アンマネージコードからマネージコードへの遷移が発生したことをプロファイラーに通知します。|  
   
-## <a name="remarks"></a>解説  
- CLR は、 `ICorProfilerCallback` (または[ICorProfilerCallback2](icorprofilercallback2-interface.md)) インターフェイスのメソッドを呼び出して、プロファイラーがサブスクライブしているイベントが発生したときにプロファイラーに通知します。 これは、CLR がコードプロファイラーと通信するときに使用する主要なコールバックインターフェイスです。  
+## <a name="remarks"></a>注釈  
+
+ CLR は、 `ICorProfilerCallback` (または [ICorProfilerCallback2](icorprofilercallback2-interface.md)) インターフェイスのメソッドを呼び出して、プロファイラーがサブスクライブしているイベントが発生したときにプロファイラーに通知します。 これは、CLR がコードプロファイラーと通信するときに使用する主要なコールバックインターフェイスです。  
   
  コードプロファイラーは、インターフェイスのメソッドを実装する必要があり `ICorProfilerCallback` ます。 .NET Framework バージョン2.0 以降では、プロファイラーはメソッドも実装する必要があり `ICorProfilerCallback2` ます。 各メソッドの実装では、成功した場合は S_OK の値を持つ HRESULT を返し、失敗した場合は E_FAIL を返す必要があります。 現在、CLR では、 [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md)を除く各コールバックによって返される HRESULT は無視されます。  
   
- Microsoft Windows レジストリでは、コードプロファイラーは、インターフェイスおよびインターフェイスを実装するコンポーネントオブジェクトモデル (COM) オブジェクトを登録する必要があり `ICorProfilerCallback` `ICorProfilerCallback2` ます。 コードプロファイラーは、 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md)を呼び出して、通知を受信するイベントをサブスクライブします。 これは通常、プロファイラーによる[ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md)の実装で行われます。 その後、プロファイラーは、実行中のランタイムプロセスでイベントが発生するか、発生したばかりの場合に、ランタイムから通知を受け取ることができます。  
+ Microsoft Windows レジストリでは、コードプロファイラーは、インターフェイスおよびインターフェイスを実装するコンポーネントオブジェクトモデル (COM) オブジェクトを登録する必要があり `ICorProfilerCallback` `ICorProfilerCallback2` ます。 コードプロファイラーは、 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md)を呼び出して、通知を受信するイベントをサブスクライブします。 これは通常、プロファイラーによる [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md)の実装で行われます。 その後、プロファイラーは、実行中のランタイムプロセスでイベントが発生するか、発生したばかりの場合に、ランタイムから通知を受け取ることができます。  
   
 > [!NOTE]
 > プロファイラーは、1つの COM オブジェクトを登録します。 プロファイラーが .NET Framework バージョン1.0 または1.1 を対象としている場合、その COM オブジェクトはのメソッドのみを実装する必要があり `ICorProfilerCallback` ます。 .NET Framework バージョン2.0 以降を対象としている場合、COM オブジェクトはのメソッドも実装する必要があり `ICorProfilerCallback2` ます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

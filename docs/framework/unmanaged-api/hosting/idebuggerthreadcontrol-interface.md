@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0a270c42-a7d1-45f1-a64d-fa3e84d14532
 topic_type:
 - apiref
-ms.openlocfilehash: 82c6113f4df3334500128df22f7e9ce8d4bf151f
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 2268fce5d3ca732d852edfdb6f0edf63117df363
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805287"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684214"
 ---
 # <a name="idebuggerthreadcontrol-interface"></a>IDebuggerThreadControl インターフェイス
+
 デバッグサービスによるスレッドのブロックおよびブロック解除についてホストに通知するためのメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
@@ -33,11 +34,12 @@ ms.locfileid: "83805287"
 |[StartBlockingForDebugger メソッド](idebuggerthreadcontrol-startblockingfordebugger-method.md)|デバッグサービスがすべてのスレッドのブロックを開始しようとしていることをホストに通知します。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

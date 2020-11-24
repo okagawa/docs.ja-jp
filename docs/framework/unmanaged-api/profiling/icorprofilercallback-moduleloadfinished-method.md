@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 050649e5-ffc0-4458-a0a4-d9ee128a219e
 topic_type:
 - apiref
-ms.openlocfilehash: 481fc2c40331e31f6a018d012fb2b2543d4fd9b5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5a29507ca56cac4ab800845e3a88706dc7a25379
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503368"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683993"
 ---
 # <a name="icorprofilercallbackmoduleloadfinished-method"></a>ICorProfilerCallback::ModuleLoadFinished メソッド
+
 モジュールが読み込みを終了したことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,18 +35,21 @@ HRESULT ModuleLoadFinished(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `moduleId`  
  から読み込みを終了したモジュールの ID。  
   
  `hrStatus`  
  からモジュールが正常に読み込まれたかどうかを示す HRESULT。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  の値 `moduleId` は、 `ModuleLoadFinished` メソッドが呼び出されるまで、情報要求に対して有効ではありません。  
   
  モジュールの読み込みの一部は、コールバック後に続行される場合があり `ModuleLoadFinished` ます。 のエラー HRESULT は `hrStatus` エラーを示します。 ただし、の成功 HRESULT は、 `hrStatus` モジュールの読み込みの最初の部分が成功したことを示します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

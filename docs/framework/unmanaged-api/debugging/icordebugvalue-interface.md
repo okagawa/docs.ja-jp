@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b2f7007f-c446-4b18-aed1-a25cff8aee31
 topic_type:
 - apiref
-ms.openlocfilehash: b8d2e49031e59db0527de3c848d7d390095797bf
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 7d3c35ed6cda637e3b885afe089ddfa590d51076
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396790"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683616"
 ---
 # <a name="icordebugvalue-interface"></a>ICorDebugValue インターフェイス
+
 デバッグ中のプロセスの値を表します。 値には、読み取りまたは書き込みの値を指定できます。  
   
 ## <a name="methods"></a>メソッド  
@@ -33,15 +34,17 @@ ms.locfileid: "83396790"
 |[GetSize メソッド](icordebugvalue-getsize-method.md)|このオブジェクトのサイズ (バイト単位) を取得し `ICorDebugValue` ます。|  
 |[GetType メソッド](icordebugvalue-gettype-method.md)|このオブジェクトのプリミティブ型を取得し `ICorDebugValue` ます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  一般に、値オブジェクトの所有権は、返されるときに渡されます。 オブジェクトの終了時に、オブジェクトからの参照を削除するのは、受信者の責任です。  
   
- 値が取得された場所によっては、プロセスが再開された後も値が有効なままにならないことがあります。 そのため、一般に、次のように、値は、は、「いいね[:: Continue](icordebugcontroller-continue-method.md)メソッドの呼び出し」で保持するべきではありません。  
+ 値が取得された場所によっては、プロセスが再開された後も値が有効なままにならないことがあります。 そのため、一般に、次のように、値は、は、「いいね [:: Continue](icordebugcontroller-continue-method.md) メソッドの呼び出し」で保持するべきではありません。  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

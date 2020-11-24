@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d4d98676-444b-46ca-bfe6-0d827385cd22
 topic_type:
 - apiref
-ms.openlocfilehash: a1da070f261f224d212d1fba81c287285a54d0d0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 06dff4847ec3d15f446f1c89219b10eddb8eec4f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501693"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683525"
 ---
 # <a name="isymunmanagedwritersetscoperange-method"></a>ISymUnmanagedWriter::SetScopeRange メソッド
+
 指定した構文のスコープのオフセット範囲を定義します。 スコープは新しい現在のスコープになり、スコープのスタックにプッシュされます。 スコープは階層を形成する必要があります。 兄弟を重ねることはできません。  
   
 ## <a name="syntax"></a>構文  
@@ -35,6 +36,7 @@ HRESULT OpenScope(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `scopeId`  
  からスコープのスコープ識別子。  
   
@@ -45,12 +47,15 @@ HRESULT OpenScope(
  からメソッドの先頭からの構文のスコープの最後の命令のオフセット (バイト単位)。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="remarks"></a>解説  
- [ISymUnmanagedWriter:: OpenScope](isymunmanagedwriter-openscope-method.md)は、 `ISymUnmanagedWriter::SetScopeRange` 後でスコープの開始オフセットと終了オフセットを定義するためにと共に使用できる非透過スコープ識別子を返します。 この場合、 `ISymUnmanagedWriter::OpenScope` と[ISymUnmanagedWriter:: cloに](isymunmanagedwriter-closescope-method.md)渡されるオフセットは無視されます。 スコープ識別子は、現在のメソッドでのみ有効です。  
+## <a name="remarks"></a>注釈  
+
+ [ISymUnmanagedWriter:: OpenScope](isymunmanagedwriter-openscope-method.md) は、 `ISymUnmanagedWriter::SetScopeRange` 後でスコープの開始オフセットと終了オフセットを定義するためにと共に使用できる非透過スコープ識別子を返します。 この場合、 `ISymUnmanagedWriter::OpenScope` と [ISymUnmanagedWriter:: cloに](isymunmanagedwriter-closescope-method.md) 渡されるオフセットは無視されます。 スコープ識別子は、現在のメソッドでのみ有効です。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd2bc956-7dbe-49fc-a646-daa0d267f2df
 topic_type:
 - apiref
-ms.openlocfilehash: 70ee853ff657a75dcc4df1454c4354f9d3f8202f
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d45ab56f081bf0a8802b17e338f7b404809f0f16
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614722"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683473"
 ---
 # <a name="isymunmanagedwriter2defineconstant2-method"></a>ISymUnmanagedWriter2::DefineConstant2 メソッド
+
 定数値の名前を定義します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,6 +36,7 @@ HRESULT DefineConstant2(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `name`  
  から定数名。  
   
@@ -45,9 +47,11 @@ HRESULT DefineConstant2(
  から定数のメタデータトークン。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

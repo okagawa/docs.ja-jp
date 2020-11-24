@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5bb12f9a-0612-434b-b4ed-2db636a20bec
 topic_type:
 - apiref
-ms.openlocfilehash: 899d6e74902e47f1f41b849bd5c25048baa175f7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 3afb89a42d7e26c5e89e6f9458ef3406cc0102ca
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617140"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684188"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>GetRequestedRuntimeVersionForCLSID 関数
+
 指定したを使用して、クラスの適切な共通言語ランタイム (CLR) バージョン情報を取得し `CLSID` ます。  
   
  この関数は .NET Framework 4 で非推奨とされました。  
@@ -39,8 +40,9 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `rclsid`  
- から `CLSID`コンポーネントの。  
+ から `CLSID` コンポーネントの。  
   
  `pVersion`  
  入出力 正常に完了したときのバージョン番号の文字列を格納するバッファー。  
@@ -52,7 +54,7 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
  入出力返されたバッファーの長さ (バイト単位)。  
   
  `dwResolutionFlags`  
- から CLSID_RESOLUTION_FLAGS 値の1つ。 次の値がサポートされています。  
+ から CLSID_RESOLUTION_FLAGS 値の1つ。 サポートされている値を次に示します。  
   
 - CLSID_RESOLUTION_DEFAULT: (0x0) 既定の相互運用動作を使用することを指定します。  
   
@@ -66,9 +68,10 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
 |E_INVALIDARG|パラメーターの1つに無効な型または形式が指定されています。|  
 |ERROR_INSUFFICIENT_BUFFER|`pVersion`バッファーのサイズが、バージョン文字列全体を保持するのに十分ではありません。|  
 |REGDB_E_CLASSNOTREG|指定されたに登録されているクラスがありません `CLSID` 。|  
-|E_POINTER|`dwLength`が null であるか、または `cchBuffer` バージョン文字列を保持するのに十分な大きさですが、が `pVersion` null です。|  
+|E_POINTER|`dwLength` が null であるか、または `cchBuffer` バージョン文字列を保持するのに十分な大きさですが、が `pVersion` null です。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  

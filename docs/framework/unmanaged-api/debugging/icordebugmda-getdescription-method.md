@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 01d1b481-ca67-4712-8744-d342ec0df639
 topic_type:
 - apiref
-ms.openlocfilehash: 522e992e6d7e9a64f7590bbec0e9106e0e1f8f47
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cb1e0f2bc597b48496dc362c9d7a364421c68a87
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212140"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681848"
 ---
 # <a name="icordebugmdagetdescription-method"></a>ICorDebugMDA::GetDescription メソッド
-によって表されるマネージデバッグアシスタント (MDA) の説明を含む文字列を[取得します](icordebugmda-interface.md)。  
+
+によって表されるマネージデバッグアシスタント (MDA) の説明を含む文字列を [取得します](icordebugmda-interface.md)。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,6 +38,7 @@ HRESULT GetDescription (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `cchName`  
  から説明を格納する文字列バッファーのサイズ。  
   
@@ -46,10 +48,12 @@ HRESULT GetDescription (
  `szName`  
  入出力MDA の説明を格納している文字列バッファー。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  文字列の長さは0にすることができます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
