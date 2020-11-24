@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: bb798c56-042e-475d-a245-b6fac36d0c07
 topic_type:
 - apiref
-ms.openlocfilehash: a48e20413f466e25a9145e9dbf1ba93d90155770
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 5b5a901bef779948467cfcc3d71a1fcd057c1aeb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397038"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95693711"
 ---
 # <a name="icorpublishappdomainenum-interface"></a>ICorPublishAppDomainEnum インターフェイス
+
 プロセス内に現在存在する[ICorPublishAppDomain](icorpublishappdomain-interface.md)オブジェクトのコレクションを走査するメソッドを提供する[ICorPublishEnum](icorpublishenum-interface.md)インターフェイスのサブクラス。  
   
 ## <a name="methods"></a>メソッド  
@@ -30,10 +31,12 @@ ms.locfileid: "83397038"
 |------------|-----------------|  
 |[Next メソッド](icorpublishappdomainenum-next-method.md)|現在の位置から開始して、指定した数の `ICorPublishAppDomain` インスタンスをコレクションから取得します。|  
   
-## <a name="remarks"></a>解説  
- インターフェイスは、 `ICorPublishAppDomainEnum` 抽象インターフェイス[ICorPublishEnum](icorpublishenum-interface.md)のメソッドを実装します。  
+## <a name="remarks"></a>注釈  
+
+ インターフェイスは、 `ICorPublishAppDomainEnum` 抽象インターフェイス [ICorPublishEnum](icorpublishenum-interface.md)のメソッドを実装します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorPub .idl、CorPub .h  
