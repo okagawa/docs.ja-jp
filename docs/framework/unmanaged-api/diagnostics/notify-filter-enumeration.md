@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 4789d08f-8683-45d3-ac30-73d48c61e470
 topic_type:
 - apiref
-ms.openlocfilehash: b20e18d5f4314a0ab1442ac7bd5c6514e4db85d5
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 365bc0dc73b04d3afd171c40f336432f77552b6d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609483"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690955"
 ---
 # <a name="notify_filter-enumeration"></a>NOTIFY_FILTER 列挙体
-デバッガー関数のコールバックを識別します。 詳細については、 [INotifySource2:: SetNotifyFilter](inotifysource2-setnotifyfilter-method.md)メソッドを参照してください。  
+
+デバッガー関数のコールバックを識別します。 詳細については、 [INotifySource2:: SetNotifyFilter](inotifysource2-setnotifyfilter-method.md) メソッドを参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,11 +48,12 @@ enum tagNOTIFY_FILTER
 |`NOTIFY_FILTER_ONSYNCCALLENTER`|[INotifySink2:: OnSyncCallEnter](inotifysink2-onsynccallenter-method.md)メソッドを呼び出す必要があることを示します。|  
 |`NOTIFY_FILTER_ONSYNCCALLEXIT`|[INotifySink2:: OnSyncCallExit](inotifysink2-onsynccallexit-method.md)メソッドを呼び出す必要があることを示します。|  
 |`NOTIFY_FILTER_ONSYNCCALLRETURN`|[INotifySink2:: OnSyncCallReturn](inotifysink2-onsynccallreturn-method.md)メソッドを呼び出す必要があることを示します。|  
-|`NOTIFY_FILTER_ALLSYNC`|すべての[INotifySink2](inotifysink2-interface.md)メソッドを呼び出す必要があることを示します。|  
+|`NOTIFY_FILTER_ALLSYNC`|すべての [INotifySink2](inotifysink2-interface.md) メソッドを呼び出す必要があることを示します。|  
 |`NOTIFY_FILTER_ALL`|既存の通知と今後の通知をすべてアクティブにします。|  
 |`NOTIFY_FILTER_NONE`|通知メソッドを呼び出さないことを示します。|  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** ProtocolNotify2  
   
 ## <a name="see-also"></a>関連項目

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 76a136b5-e444-417a-8ade-f1596d597dc7
 topic_type:
 - apiref
-ms.openlocfilehash: acbc37d0f49af21c60ff6989932c5d341673512b
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 492d4b727ce507340fec47d30a791aa49d0cecb6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421177"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95693347"
 ---
 # <a name="icorpublishenum-interface"></a>ICorPublishEnum インターフェイス
+
 プロセスおよびアプリケーションドメインに関する情報の公開に使用される列挙子の抽象基本インターフェイスとして機能します。  
   
 ## <a name="methods"></a>メソッド  
@@ -33,7 +34,8 @@ ms.locfileid: "83421177"
 |[Reset メソッド](icorpublishenum-reset-method.md)|のカーソルを列挙体の先頭に移動します。|  
 |[Skip メソッド](icorpublishenum-skip-method.md)|指定した数の項目だけ、列挙内でカーソルを前方に移動します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  次の列挙子は、から派生し `ICorPublishEnum` ます。  
   
 - [ICorPublishAppDomainEnum](icorpublishappdomainenum-interface.md)  
@@ -41,6 +43,7 @@ ms.locfileid: "83421177"
 - [ICorPublishProcessEnum](icorpublishprocessenum-interface.md)  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorPub .idl、CorPub .h  

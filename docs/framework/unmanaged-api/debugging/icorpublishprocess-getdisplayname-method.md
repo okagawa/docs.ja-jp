@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7c0af9e9-a73f-41aa-a685-b21c439e059d
 topic_type:
 - apiref
-ms.openlocfilehash: dc76274d3b0acbbe0b03eb141d2b3e6ff9063afb
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 5a037695892252042d7827165595f7bad0feba56
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421125"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95693165"
 ---
 # <a name="icorpublishprocessgetdisplayname-method"></a>ICorPublishProcess::GetDisplayName メソッド
-この[ICorPublishProcess](icorpublishprocess-interface.md)によって参照されるプロセスの実行可能ファイルの完全パスを取得します。  
+
+この [ICorPublishProcess](icorpublishprocess-interface.md)によって参照されるプロセスの実行可能ファイルの完全パスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,6 +38,7 @@ HRESULT GetDisplayName (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `cchName`  
  [in] `szName` 配列のサイズ。  
   
@@ -47,6 +49,7 @@ HRESULT GetDisplayName (
  入出力実行可能ファイルの完全パスを含む、名前を格納する配列。 名前が null で終了しています。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorPub .idl、CorPub .h  

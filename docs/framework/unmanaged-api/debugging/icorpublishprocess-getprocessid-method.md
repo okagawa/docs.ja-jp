@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f31185e0-f01d-463a-b392-42163e39bfe9
 topic_type:
 - apiref
-ms.openlocfilehash: 95a4ef3ab77b33c67c63be2c22647075f2f95ce8
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: b0defd0a9c4197cf91fde1625794ff0d77c83ea0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421112"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95693139"
 ---
 # <a name="icorpublishprocessgetprocessid-method"></a>ICorPublishProcess::GetProcessID メソッド
+
 このプロセスのオペレーティングシステム識別子を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,10 +35,12 @@ HRESULT GetProcessID (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pid`  
- 入出力この[ICorPublishProcess](icorpublishprocess-interface.md)オブジェクトによって表されるプロセスの識別子へのポインター。  
+ 入出力この [ICorPublishProcess](icorpublishprocess-interface.md) オブジェクトによって表されるプロセスの識別子へのポインター。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorPub .idl、CorPub .h  
