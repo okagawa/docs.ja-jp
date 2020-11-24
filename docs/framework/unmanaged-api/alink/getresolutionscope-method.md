@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5b48ca60-dacd-44b2-9979-4a5122f00812
 topic_type:
 - apiref
-ms.openlocfilehash: f2b78b35db6306c82e389955c4824875bcf25334
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6318890dd6f0259d8d6a7675380684a129c14c8b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447226"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684677"
 ---
 # <a name="getresolutionscope-method"></a>GetResolutionScope メソッド
+
 指定された型のスコープを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT GetResolutionScope(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `AssemblyID`  
  アセンブリの ID。  
   
@@ -49,12 +51,14 @@ HRESULT GetResolutionScope(
  アセンブリまたはモジュール参照を受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK を返します。  
   
 ## <a name="requirements"></a>要件  
+
  Alink. h が必要です。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [IALink インターフェイス](ialink-interface.md)
 - [IALink2 インターフェイス](ialink2-interface.md)

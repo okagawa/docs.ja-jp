@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: e1555328-2c71-4ece-b357-9eb6d3a8efc4
 topic_type:
 - apiref
-ms.openlocfilehash: 078168ae8860f18ff6f811dcc972e3eb3c857e1d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fd5ae6ef40cb171c33132df0f640acbef96d69b5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447197"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684676"
 ---
 # <a name="getscope-method"></a>GetScope メソッド
+
 インポートスコープを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT GetScope(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `AssemblyID`  
  インポート先のアセンブリの一意の ID。  
   
@@ -46,12 +48,14 @@ HRESULT GetScope(
  インポートする0から始まるスコープ。  
   
  `ppImportScope`  
- スコープの[IMetaDataImport インターフェイス](../metadata/imetadataimport-interface.md)インターフェイスを受け取ります。  
+ スコープの [IMetaDataImport インターフェイス](../metadata/imetadataimport-interface.md) インターフェイスを受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK を返します。  
   
 ## <a name="requirements"></a>要件  
+
  Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目

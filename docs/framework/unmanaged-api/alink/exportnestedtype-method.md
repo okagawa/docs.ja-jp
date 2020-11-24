@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: dec7df60-4d30-47c8-99db-72e0419e5f76
 topic_type:
 - apiref
-ms.openlocfilehash: 9ca2167e66ac3aa5bcc0e92ff357eed18d366c67
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 69c99e2facfcb9077c3fc4131186ba3882c7cef6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179415"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684838"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType メソッド
-入れ子にされた型をエクスポート可能として指定します。 [エクスポートタイプ メソッド](exporttype-method.md)は、入れ子になった型をエクスポートすることもできますが、このメソッドの方が高速です。  
+
+入れ子にされた型をエクスポート可能として指定します。 [Exporttype メソッド](exporttype-method.md)も入れ子になった型をエクスポートできますが、このメソッドの方が高速です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,32 +41,35 @@ HRESULT ExportNestedType(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `AssemblyID`  
- エクスポートするアセンブリの ID。  
+ エクスポート元のアセンブリの ID。  
   
  `FileToken`  
- エクスポート可能にする型を定義するファイル トークンまたはファイルのアセンブリ。  
+ エクスポート可能にする型を定義するファイルのトークンまたはアセンブリ。  
   
  `TypeToken`  
- エクスポート可能にする型のトークンを入力します。  
+ エクスポート可能にする型の型トークン。  
   
  `ParentType`  
- 親タイプのトークン。  
+ 親の種類のトークン。  
   
  `pszTypename`  
  エクスポートする完全修飾型名。  
   
  `dwFlags`  
- `ComType`や`tdNested`などの`tdPublic`フラグ。 この値は、[エクスポートされた型のメソッド](../metadata/imetadataassemblyemit-defineexportedtype-method.md)に渡すことができます。  
+ `ComType``tdPublic`やなどのフラグ `tdNested` 。 この値は、この [メソッド](../metadata/imetadataassemblyemit-defineexportedtype-method.md)に渡すことができます。  
   
  `pType`  
  エクスポートされた型のトークンを受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OKを返します。  
+
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>必要条件  
- alink.h が必要です。  
+## <a name="requirements"></a>要件  
+
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 
