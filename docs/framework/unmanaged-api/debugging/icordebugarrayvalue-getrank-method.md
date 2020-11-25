@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e83c82c-593d-4691-90b0-383d218b415e
 topic_type:
 - apiref
-ms.openlocfilehash: e6401731844f2ce7a1d9fec1c94019f763870fe7
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 9fddee70e34ba9bf7c1860c1a160db369e45fb5e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894994"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698163"
 ---
 # <a name="icordebugarrayvaluegetrank-method"></a>ICorDebugArrayValue::GetRank メソッド
+
 配列のディメンションの数を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,10 +35,12 @@ HRESULT GetRank (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pnRank`  
- 入出力この`ICorDebugArrayValue`オブジェクトの次元数へのポインター。  
+ 入出力このオブジェクトの次元数へのポインター `ICorDebugArrayValue` 。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

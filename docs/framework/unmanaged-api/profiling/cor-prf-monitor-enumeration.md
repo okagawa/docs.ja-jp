@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9294d702-b4e5-441c-a930-e63d27b86bfd
 topic_type:
 - apiref
-ms.openlocfilehash: 1ff167121a5bb752c70edd2c5901133503326bea
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e5e850e2464c310697c1cd1797d2207958591907
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500807"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696870"
 ---
 # <a name="cor_prf_monitor-enumeration"></a>COR_PRF_MONITOR 列挙型
+
 プロファイラーがサブスクライブしようとする動作、機能、またはイベントの指定で使用する値を含めます。  
   
 ## <a name="syntax"></a>構文  
@@ -98,6 +99,7 @@ typedef enum {
 ```  
   
 ## <a name="members"></a>メンバー  
+
  次のセクションでは、 `COR_PRF_MONITOR` 列挙型のメンバーをカテゴリ別に一覧表示します。 カテゴリは次のとおりです。  
   
 - [フラグが設定していません](#None)  
@@ -111,6 +113,7 @@ typedef enum {
 - [複合フラグ](#Composite)  
   
 <a name="None"></a>
+
 ### <a name="no-flags-set"></a>フラグの設定なし  
   
 |メンバー|説明|  
@@ -118,6 +121,7 @@ typedef enum {
 |`COR_PRF_MONITOR_NONE`|フラグが設定されていません。|  
   
 <a name="Callback"></a>
+
 ### <a name="callback-flags"></a>コールバック フラグ  
   
 |メンバー|説明|  
@@ -133,7 +137,7 @@ typedef enum {
 |`COR_PRF_MONITOR_ENTERLEAVE`|`FunctionEnter*`、 `FunctionLeave*` 、および `FunctionTailCall*` [プロファイリンググローバル静的関数](profiling-global-static-functions.md)を制御します。|  
 |`COR_PRF_MONITOR_EXCEPTIONS`|[Exceptionthrown](icorprofilercallback-exceptionthrown-method.md)されたコールバックと、ICorProfilerCallback インターフェイスの、、、およびの各コールバックを制御し `ExceptionSearch*` `ExceptionOSHandler*` `ExceptionUnwind*` `ExceptionCatcher*` ます。 [ICorProfilerCallback](icorprofilercallback-interface.md)|  
 |`COR_PRF_MONITOR_FUNCTION_UNLOADS`|[ICorProfilerCallback](icorprofilercallback-interface.md)インターフェイスの[FunctionUnloadStarted](icorprofilercallback-functionunloadstarted-method.md)コールバックを制御します。|  
-|`COR_PRF_MONITOR_GC`|インターフェイスの[GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md)、 [GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md)、 [movedreferences](icorprofilercallback-movedreferences-method.md)、 [MovedReferences2](icorprofilercallback4-movedreferences2-method.md)、 [SurvivingReferences](icorprofilercallback2-survivingreferences-method.md)、 [SurvivingReferences2](icorprofilercallback4-survivingreferences2-method.md)、 [ObjectReferences](icorprofilercallback-objectreferences-method.md)、 [objectsallocatedbyclass](icorprofilercallback-objectsallocatedbyclass-method.md)、 [rootreferences](icorprofilercallback-rootreferences-method.md)、 [RootReferences2](icorprofilercallback2-rootreferences2-method.md)、 [HandleCreated](icorprofilercallback2-handlecreated-method.md)、 [handledestroyed](icorprofilercallback2-handledestroyed-method.md)、および[finalizeableobjectqueued](icorprofilercallback2-finalizeableobjectqueued-method.md)の各コールバックを制御し `ICorProfilerCallback*` ます。 `COR_PRF_MONITOR_GC`が割り当てられると、同時実行ガベージコレクションが無効になります。|  
+|`COR_PRF_MONITOR_GC`|インターフェイスの [GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md)、   [GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md)、  [movedreferences](icorprofilercallback-movedreferences-method.md)、 [MovedReferences2](icorprofilercallback4-movedreferences2-method.md)、    [SurvivingReferences](icorprofilercallback2-survivingreferences-method.md)、  [SurvivingReferences2](icorprofilercallback4-survivingreferences2-method.md)、 [ObjectReferences](icorprofilercallback-objectreferences-method.md)、   [objectsallocatedbyclass](icorprofilercallback-objectsallocatedbyclass-method.md)、  [rootreferences](icorprofilercallback-rootreferences-method.md)、 [RootReferences2](icorprofilercallback2-rootreferences2-method.md)、 [HandleCreated](icorprofilercallback2-handlecreated-method.md)、  [handledestroyed](icorprofilercallback2-handledestroyed-method.md)、および [finalizeableobjectqueued](icorprofilercallback2-finalizeableobjectqueued-method.md) の各コールバックを制御し `ICorProfilerCallback*` ます。 `COR_PRF_MONITOR_GC`が割り当てられると、同時実行ガベージコレクションが無効になります。|  
 |`COR_PRF_MONITOR_JIT_COMPILATION`|ICorProfilerCallback インターフェイスの、、 `JITCompilation*` [JITFunctionPitched](icorprofilercallback-jitfunctionpitched-method.md)、 [JITInlining](icorprofilercallback-jitinlining-method.md)の各[ICorProfilerCallback](icorprofilercallback-interface.md)コールバックを制御します。|  
 |`COR_PRF_MONITOR_MODULE_LOADS`|`ModuleLoad*`ICorProfilerCallback インターフェイスの、、 `ModuleUnload*` および[ModuleAttachedToAssembly](icorprofilercallback-moduleattachedtoassembly-method.md)コールバック[ICorProfilerCallback](icorprofilercallback-interface.md)を制御します。|  
 |`COR_PRF_MONITOR_OBJECT_ALLOCATED`|[ICorProfilerCallback](icorprofilercallback-interface.md)インターフェイスの[ObjectAllocated](icorprofilercallback-objectallocated-method.md)コールバックを制御します。|  
@@ -144,6 +148,7 @@ typedef enum {
 |`COR_PRF_MONITOR_THREADS`|[ICorProfilerCallback](icorprofilercallback-interface.md)および[ICorProfilerCallback2](icorprofilercallback2-interface.md)インターフェイスの[threadcreated](icorprofilercallback-threadcreated-method.md)、 [threadcreated](icorprofilercallback-threadassignedtoosthread-method.md)、および[threadnamechanged](icorprofilercallback2-threadnamechanged-method.md)コールバックを制御します。 [ThreadDestroyed](icorprofilercallback-threaddestroyed-method.md)|  
   
 <a name="Feature"></a>
+
 ### <a name="feature-enabling-flags"></a>機能の有効化フラグ  
   
 |メンバー|説明|  
@@ -151,13 +156,14 @@ typedef enum {
 |`COR_PRF_ENABLE_FRAME_INFO`|`ClassID` [GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) `COR_PRF_FRAME_INFO` [FunctionEnter2](functionenter2-function.md)コールバックによって返される値を使用して GetFunctionInfo2 メソッドを呼び出すことによって、ジェネリック関数の正確なを取得できるようにします。|  
 |`COR_PRF_ENABLE_FUNCTION_ARGS`|[FunctionEnter2](functionenter2-function.md) callback または[FunctionEnter3WithInfo](functionenter3withinfo-function.md) callback と[GetFunctionEnter3Info](icorprofilerinfo3-getfunctionenter3info-method.md)メソッドを使用して、引数のトレースを有効にします。|  
 |`COR_PRF_ENABLE_FUNCTION_RETVAL`|[FunctionLeave2](functionleave2-function.md) callback または[FunctionLeave3WithInfo](functionleave3withinfo-function.md) callback および[GetFunctionLeave3Info](icorprofilerinfo3-getfunctionleave3info-method.md)メソッドを使用して、戻り値のトレースを有効にします。|  
-|`COR_PRF_ENABLE_INPROC_DEBUGGING`|非推奨になりました。<br /><br /> プロセス中のデバッグはサポートされていません。 このフラグは無効です。|  
-|`COR_PRF_ENABLE_JIT_MAPS`|非推奨になりました。<br /><br /> [GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md)を使用して、プロファイラーが IL からネイティブへのマップを取得できるようにします。 .NET Framework 2.0 以降、ランタイムは常に IL-to-native マップを追跡するため、このフラグは常に設定されていると見なされます。|  
-|`COR_PRF_ENABLE_OBJECT_ALLOCATED`|プロファイラーがオブジェクトの割り当て通知を必要とする可能性があることをランタイムに通知します。 このフラグは、初期化中に設定する必要があります。 これにより、プロファイラーは、後でフラグを使用して `COR_PRF_MONITOR_OBJECT_ALLOCATED` [ObjectAllocated](icorprofilercallback-objectallocated-method.md)コールバックを受け取ることができます。|  
+|`COR_PRF_ENABLE_INPROC_DEBUGGING`|非推奨。<br /><br /> プロセス中のデバッグはサポートされていません。 このフラグは無効です。|  
+|`COR_PRF_ENABLE_JIT_MAPS`|非推奨。<br /><br /> [GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md)を使用して、プロファイラーが IL からネイティブへのマップを取得できるようにします。 .NET Framework 2.0 以降、ランタイムは常に IL-to-native マップを追跡するため、このフラグは常に設定されていると見なされます。|  
+|`COR_PRF_ENABLE_OBJECT_ALLOCATED`|プロファイラーがオブジェクトの割り当て通知を必要とする可能性があることをランタイムに通知します。 このフラグは、初期化中に設定する必要があります。 これにより、プロファイラーは、後でフラグを使用して `COR_PRF_MONITOR_OBJECT_ALLOCATED` [ObjectAllocated](icorprofilercallback-objectallocated-method.md) コールバックを受け取ることができます。|  
 |`COR_PRF_ENABLE_REJIT`|[RequestReJIT](icorprofilerinfo4-requestrejit-method.md)メソッドと[RequestRevert](icorprofilerinfo4-requestrevert-method.md)メソッドの呼び出しを有効にします。 プロファイラーは起動時にこのフラグを設定する必要があります。  プロファイラーがこのフラグを設定する場合は、`COR_PRF_DISABLE_ALL_NGEN_IMAGES` も指定する必要があります。|  
 |`COR_PRF_ENABLE_STACK_SNAPSHOT`|[DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md)メソッドの呼び出しを有効にします。|  
   
 <a name="Config"></a>
+
 ### <a name="configuration-flags"></a>構成フラグ  
   
 |メンバー|説明|  
@@ -169,6 +175,7 @@ typedef enum {
 |`COR_PRF_USE_PROFILE_IMAGES`|ネイティブ イメージを検索して、プロファイラーが拡張したイメージを見つけます。 特定のアセンブリでプロファイラーが拡張したイメージが見つからなかった場合、共通言語ランタイムはそのアセンブリの JIT に戻ります。 このフラグと `COR_PRF_DISABLE_ALL_NGEN_IMAGES` フラグが両方指定されている場合は、`COR_PRF_DISABLE_ALL_NGEN_IMAGES` が使用されます。|  
   
 <a name="Composite"></a>
+
 ### <a name="composite-flags"></a>複合フラグ  
   
 |メンバー|説明|  
@@ -179,10 +186,12 @@ typedef enum {
 |`COR_PRF_MONITOR_IMMUTABLE`|初期化中にのみ設定可能な、`COR_PRF_MONITOR` のすべてのフラグを表します。 初期化の後にこれらのいずれかのフラグを変更しようとすると、処理が失敗したことを示す `HRESULT` 値が返されます。|  
 |`COR_PRF_REQUIRE_PROFILE_IMAGE`|プロファイルが強化されたイメージを必要とするすべての `COR_PRF_MONITOR` フラグを表しています。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  `COR_PRF_MONITOR` [ICorProfilerInfo:: geteventmask](icorprofilerinfo-geteventmask-method.md)メソッドと[ICorProfilerInfo:: seteventmask](icorprofilerinfo-seteventmask-method.md)メソッドで値を使用して、共通言語ランタイムがプロファイラーに対して行うイベント通知を定義します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

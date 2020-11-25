@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a9608861-ae64-4467-8a73-be05ad34beac
 topic_type:
 - apiref
-ms.openlocfilehash: a27e7ca156ca138078215a65486ac4b965c6a93d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d8f2788d63f27aac30cf239b410eecea31f09212
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496335"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697884"
 ---
 # <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a>ICorProfilerInfo3::GetThreadStaticAddress2 メソッド
+
 指定したスレッドおよびアプリケーション ドメインのスコープ内にある、指定したスレッド内静的フィールドのアドレスを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,6 +38,7 @@ HRESULT GetThreadStaticAddress2(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `classId`  
  から要求されたスレッド静的フィールドを含むクラスの ID。  
   
@@ -52,7 +54,8 @@ HRESULT GetThreadStaticAddress2(
  `ppAddress`  
  入出力指定したスレッド内の静的フィールドのアドレスへのポインター。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  `GetThreadStaticAddress2`メソッドは、次のいずれかを返す場合があります。  
   
 - 指定されたコンテキストで、指定された静的フィールドにアドレスが割り当てられていない場合は CORPROF_E_DATAINCOMPLETE HRESULT。  
@@ -64,6 +67,7 @@ HRESULT GetThreadStaticAddress2(
  [ICorProfilerInfo2:: GetThreadStaticAddress](icorprofilerinfo2-getthreadstaticaddress-method.md)メソッドはメソッドに似てい `GetThreadStaticAddress2` ますが、アプリケーションドメインの引数を受け取りません。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

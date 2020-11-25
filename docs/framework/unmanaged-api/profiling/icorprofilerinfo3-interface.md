@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 044a262f-0fa7-485d-b0c1-64cdc359c654
 topic_type:
 - apiref
-ms.openlocfilehash: 0a474719935ba763cbd15dc6e18fe5ba99c14ebc
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9944234da1677608aec10066b61bfc6a6cb72bcb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496309"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697858"
 ---
 # <a name="icorprofilerinfo3-interface"></a>ICorProfilerInfo3 インターフェイス
-コード プロファイラーが共通言語ランタイム (CLR: Common Language Runtime) とやり取りして、イベント監視を制御したり、情報を要求したりするために使用する各種メソッドを提供します。 インターフェイスは、 `ICorProfilerInfo3` [ICorProfilerInfo2](icorprofilerinfo2-interface.md)インターフェイスの拡張機能です。 .NET Framework 4 以降のバージョンでサポートされている新しいメソッドが用意されています。  
+
+コード プロファイラーが共通言語ランタイム (CLR: Common Language Runtime) とやり取りして、イベント監視を制御したり、情報を要求したりするために使用する各種メソッドを提供します。 インターフェイスは、 `ICorProfilerInfo3` [ICorProfilerInfo2](icorprofilerinfo2-interface.md) インターフェイスの拡張機能です。 .NET Framework 4 以降のバージョンでサポートされている新しいメソッドが用意されています。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -40,15 +41,17 @@ ms.locfileid: "84496309"
 |[GetThreadStaticAddress2 メソッド](icorprofilerinfo3-getthreadstaticaddress2-method.md)|指定したスレッドおよびアプリケーション ドメインのスコープ内にある、指定したスレッド内静的フィールドのアドレスを取得します。|  
 |[RequestProfilerDetach メソッド](icorprofilerinfo3-requestprofilerdetach-method.md)|プロファイラーをデタッチするようにランタイムに指示します。|  
 |[SetEnterLeaveFunctionHooks3 メソッド](icorprofilerinfo3-setenterleavefunctionhooks3-method.md)|[FunctionEnter3](functionenter3-function.md)、 [FunctionLeave3](functionleave3-function.md)、および[FunctionTailcall3](functiontailcall3-function.md)の各関数で呼び出されるプロファイラー実装関数を指定します。|  
-|[SetEnterLeaveFunctionHooks3WithInfo メソッド](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)|マネージ関数の[FunctionEnter3WithInfo](functionenter3withinfo-function.md)、 [FunctionLeave3WithInfo](functionleave3withinfo-function.md)、および[FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)フックで呼び出されるプロファイラー実装関数を指定します。|  
-|[SetFunctionIDMapper2 メソッド](icorprofilerinfo3-setfunctionidmapper2-method.md)|`FunctionID` 値を代替値に対応付けるために呼び出すプロファイラー実装関数を指定します。代替値は、プロファイラーの関数の開始フックと終了フックに渡されます。 このメソッドは、 [ICorProfilerInfo:: SetFunctionIDMapper](icorprofilerinfo-setfunctionidmapper-method.md)を、プロファイラーがランタイム間を明確に区別するために使用するパラメーターを使用して拡張します。|  
+|[SetEnterLeaveFunctionHooks3WithInfo メソッド](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)|マネージ関数の [FunctionEnter3WithInfo](functionenter3withinfo-function.md)、 [FunctionLeave3WithInfo](functionleave3withinfo-function.md)、および [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) フックで呼び出されるプロファイラー実装関数を指定します。|  
+|[SetFunctionIDMapper2 メソッド](icorprofilerinfo3-setfunctionidmapper2-method.md)|`FunctionID` 値を代替値に対応付けるために呼び出すプロファイラー実装関数を指定します。代替値は、プロファイラーの関数の開始フックと終了フックに渡されます。 このメソッドは、 [ICorProfilerInfo:: SetFunctionIDMapper](icorprofilerinfo-setfunctionidmapper-method.md) を、プロファイラーがランタイム間を明確に区別するために使用するパラメーターを使用して拡張します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  CLR は、`ICorProfilerInfo3` インターフェイスのメソッドを、フリー スレッド モデルを使用して実装します。 各メソッドが、成功または失敗を示す HRESULT を返します。 返される可能性があるリターン コードの一覧については、CorError.h ファイルを参照してください。  
   
- CLR は、 `ICorProfilerInfo3` [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md)メソッドまたは[ICorProfilerCallback3:: initializeforattach](icorprofilercallback3-initializeforattach-method.md)メソッドのプロファイラーの実装を使用して、初期化中に各コードプロファイラーにインターフェイスを渡します。 その後、コード プロファイラーは `ICorProfilerInfo3` メソッドを呼び出して、CLR の制御下で実行中のマネージド コードに関する情報を取得できます。  
+ CLR は、 `ICorProfilerInfo3` [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) メソッドまたは [ICorProfilerCallback3:: initializeforattach](icorprofilercallback3-initializeforattach-method.md) メソッドのプロファイラーの実装を使用して、初期化中に各コードプロファイラーにインターフェイスを渡します。 その後、コード プロファイラーは `ICorProfilerInfo3` メソッドを呼び出して、CLR の制御下で実行中のマネージド コードに関する情報を取得できます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

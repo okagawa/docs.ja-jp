@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4400fb8c-0407-4791-8557-f011fd2aee51
 topic_type:
 - apiref
-ms.openlocfilehash: b8e503af11fa1d02aac2ec83edde0ffbd562d8e5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: fdb2b1601e0164de19bcc1e8f60856346aeaacb1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496400"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698014"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation メソッド
+
 プロファイリングされている共通言語ランタイム (CLR) に関するバージョン情報を提供します。  
   
 ## <a name="syntax"></a>構文  
@@ -42,6 +43,7 @@ HRESULT GetRuntimeInformation(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pClrInstanceId`  
  入出力プロセス内で実行されている CLR インスタンスの代表 ID。 これは、 `ClrInstanceID` event tracing For Windows (ETW) のスタートアップイベントによって報告されると同じです。  
   
@@ -69,10 +71,12 @@ HRESULT GetRuntimeInformation(
  `szVersionString`  
  入出力CLR のバージョン文字列。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  任意のパラメーターに null を渡すことができます。 ただし、が null の場合を除き、を `pcchVersionString` null にすることはできません `szVersionString` 。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

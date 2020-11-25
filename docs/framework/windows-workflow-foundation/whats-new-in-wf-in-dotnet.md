@@ -1,23 +1,23 @@
 ---
-title: .NET 4.5 での Windows Workflow Foundation の新機能
+title: .NET Framework 4.5 での Windows Workflow Foundation の新機能
 description: .NET Framework 4.5 の Windows Workflow Foundation には、新しいアクティビティ、デザイナー機能、ワークフロー開発モデルなど、多くの新機能が導入されています。
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: b115a0a5bb5e425e808270d3daf8bb0aeb942b3c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0d7086fd5ff9bfa410568a74092be3e29f732e23
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556617"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697910"
 ---
-# <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5 での Windows Workflow Foundation の新機能
+# <a name="whats-new-in-windows-workflow-foundation-in-net-framework-45"></a>.NET Framework 4.5 での Windows Workflow Foundation の新機能
 
-.NET Framework 4.5 の Windows Workflow Foundation (WF) では、新しいアクティビティ、デザイナー機能、ワークフロー開発モデルなど、多くの新機能が導入されています。 .NET Framework 4.5 で導入された新しいワークフロー機能の多くは、再ホストされたワークフローデザイナーでサポートされています。 サポートされる新機能の詳細については、「再ホストされた [ワークフローデザイナーでの新しい Workflow Foundation 4.5 機能のサポート](wf-features-in-the-rehosted-workflow-designer.md)」を参照してください。 .NET 3.0 と .NET 3.5 ワークフローアプリケーションを移行して最新バージョンを使用する方法の詳細については、「 [移行のガイダンス](migration-guidance.md)」を参照してください。 このトピックでは、.NET Framework 4.5 で導入された新しいワークフロー機能の概要について説明します。
+.NET Framework 4.5 の Windows Workflow Foundation (WF) では、新しいアクティビティ、デザイナー機能、ワークフロー開発モデルなど、多くの新機能が導入されています。 .NET Framework 4.5 で導入された新しいワークフロー機能の多くは、再ホストされたワークフローデザイナーでサポートされています。 サポートされる新機能の詳細については、「再ホストされた [ワークフローデザイナーでの新しい Workflow Foundation 4.5 機能のサポート](wf-features-in-the-rehosted-workflow-designer.md)」を参照してください。 .NET Framework 3.0 および .NET Framework 3.5 ワークフローアプリケーションを移行して最新バージョンを使用する方法の詳細については、「 [移行のガイダンス](migration-guidance.md)」を参照してください。 この記事では、.NET Framework 4.5 で導入された新しいワークフロー機能の概要について説明します。
 
 > [!WARNING]
-> .NET Framework 4.5 で導入された新しい Windows Workflow Foundation 機能は、以前のバージョンのフレームワークを対象とするプロジェクトでは使用できません。 .NET Framework 4.5 を対象とするプロジェクトが以前のバージョンのフレームワークを再ターゲットにすると、いくつかの問題が発生する可能性があります。
+> .NET Framework 4.5 で導入された新しい Windows Workflow Foundation 機能は、以前のバージョンのフレームワークを対象とするプロジェクトでは使用できません。 .NET Framework 4.5 を対象とするプロジェクトが以前のバージョンのフレームワークに再ターゲットされた場合、いくつかの問題が発生する可能性があります。
 >
-> - C# の式は、デザイナーでは、 **XAML で設定されたメッセージ値**に置き換えられます。
+> - C# の式は、デザイナーでは、 **XAML で設定されたメッセージ値** に置き換えられます。
 > - 次のエラーを含む、多くのビルド エラーが発生します。
 >
 > **ファイル形式は、現在のターゲットフレームワークと互換性がありません。ファイル形式を変換するには、明示的にファイルを保存してください。このエラーメッセージは、ファイルを保存してデザイナーを再度開いた後に表示されます。**
@@ -91,7 +91,7 @@ ms.locfileid: "90556617"
 
 - [クイック検索]。 **Ctrl + F** または **[編集**]、[ **検索と置換**]、[ **クイック検索**] のいずれかを使用して開始されます。
 
-- **Ctrl + Shift + F キー**または [**編集**]、[**検索と置換**]、[**フォルダー**を使用して検索] のいずれかで開始されたフォルダーを検索します。
+- **Ctrl + Shift + F キー** または [**編集**]、[**検索と置換**]、[**フォルダー** を使用して検索] のいずれかで開始されたフォルダーを検索します。
 
 置換はサポートされていません。
 

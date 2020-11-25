@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 35449514-333f-4918-9c60-7aa198d655d2
 topic_type:
 - apiref
-ms.openlocfilehash: cc8b7a3174502471debf1d28725ed26c847eeb69
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b599a97f414491ff80000f99551a727b86ae13de
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500794"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696753"
 ---
 # <a name="cor_prf_runtime_type-enumeration"></a>COR_PRF_RUNTIME_TYPE 列挙体
+
 Silverlight で使用される共通言語ランタイム (CLR) のバージョンを示す値を格納します。  
   
 ## <a name="syntax"></a>構文  
@@ -44,6 +45,7 @@ typedef enum
 ## <a name="remarks"></a>解説  
   
 ## <a name="requirements"></a>必要条件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

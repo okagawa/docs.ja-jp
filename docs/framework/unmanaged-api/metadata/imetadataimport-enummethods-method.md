@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8cc3b0c3-d97d-4f71-9e7d-ef2a92b4959a
 topic_type:
 - apiref
-ms.openlocfilehash: 91ae326a89e463d26b39c1659d872130042557bf
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 00726b7e74bdedc658886cccbc4329eaf3ae76d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492018"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696805"
 ---
 # <a name="imetadataimportenummethods-method"></a>IMetaDataImport::EnumMethods メソッド
+
 指定した型のメソッドを表す MethodDef トークンを列挙します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,6 +39,7 @@ HRESULT EnumMethods (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `phEnum`  
  [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
   
@@ -57,15 +59,16 @@ HRESULT EnumMethods (
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethods`正常に返されました。|  
+|`S_OK`|`EnumMethods` 正常に返されました。|  
 |`S_FALSE`|列挙する MethodDef トークンがありません。 この場合、 `pcTokens` は0になります。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
