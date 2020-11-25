@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b5cff02-2005-44eb-a2bc-50214c4b0e1d
 topic_type:
 - apiref
-ms.openlocfilehash: ff06c285bf5306977b520ed9ff845e70fb25989a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a6c2209433a652523fd8e3a7cc2db1272600e1bd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499384"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730267"
 ---
 # <a name="icorprofilercallback4rejitcompilationfinished-method"></a>ICorProfilerCallback4::ReJITCompilationFinished メソッド
+
 Just-in-time (JIT) コンパイラが関数の再コンパイルを完了したことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,6 +36,7 @@ HRESULT ReJITCompilationFinished(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `functionId`  
  から再コンパイルされた関数の ID。  
   
@@ -45,11 +47,12 @@ HRESULT ReJITCompilationFinished(
  からJIT 再コンパイルが成功したかどうかを示す値。  
   
  `fIsSafeToBlock`  
- [入力] `true`ブロックが原因で、ランタイムが呼び出し元のスレッドがこのコールバックから戻るのを待機する場合があることを示します。`false`ブロックがランタイムの動作に影響を与えないことを示す場合。  
+ [入力] `true` ブロックが原因で、ランタイムが呼び出し元のスレッドがこのコールバックから戻るのを待機する場合があることを示します。 `false` ブロックがランタイムの動作に影響を与えないことを示す場合。  
   
  の値は、 `true` ランタイムには影響しませんが、プロファイルの結果に影響を与える可能性があります。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

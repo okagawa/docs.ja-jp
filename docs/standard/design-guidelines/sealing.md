@@ -7,14 +7,15 @@ helpviewer_keywords:
 - preventing customization
 - sealed classes
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
-ms.openlocfilehash: 29023ad431f9d05caf44e59f66eccee24bfa0433
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bf8aad5d79e659ad9a767c2b0992eb9ee05fd531
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828687"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730943"
 ---
 # <a name="sealing"></a>シール
+
 オブジェクト指向フレームワークの機能の1つは、開発者がフレームワークデザイナーによって予期されない方法で拡張およびカスタマイズできることです。 これは、拡張可能な設計の力と危険性の両方です。 フレームワークを設計するときは、必要に応じて拡張機能を慎重に設計し、危険な場合には拡張性を制限することが非常に重要です。
 
  拡張性を防ぐための強力なメカニズムが封印されています。 クラスまたは個々のメンバーを封印できます。 クラスをシールすると、ユーザーはクラスから継承できなくなります。 メンバーを封印すると、ユーザーは特定のメンバーをオーバーライドできなくなります。

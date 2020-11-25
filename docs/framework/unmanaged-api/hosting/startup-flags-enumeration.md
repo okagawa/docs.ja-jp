@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4f043594-0c45-4bc6-988e-a6793f0d8d06
 topic_type:
 - apiref
-ms.openlocfilehash: b4694efffa0a3dd6fed1f97fc2359c5eb335d440
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3c3f4d644bd7073655d2d77fe7f65a3a46cfea24
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006416"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729907"
 ---
 # <a name="startup_flags-enumeration"></a>STARTUP_FLAGS 列挙型
+
 共通言語ランタイム (CLR: Common Language Runtime) の起動動作を示す値を含みます。 既定では、ガベージ コレクションは非同時実行で、基底クラス ライブラリだけがドメイン中立領域に読み込まれます。  
   
 ## <a name="syntax"></a>構文  
@@ -55,7 +56,7 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`STARTUP_CONCURRENT_GC`|同時実行ガベージ コレクションを使用することを指定します。 呼び出し元がサーバー ビルドと同時実行ガベージ コレクションをシングル プロセッサ コンピューター上で要求した場合は、代わりにワークステーション ビルドと非同時実行ガベージ コレクションが実行されます。 **注:** 同時実行ガベージコレクションは、Intel Itanium アーキテクチャ (旧称 IA-64) を実装する64ビットシステムで WOW64 x86 エミュレーターを実行しているアプリケーションではサポートされていません。 64ビット Windows システムでの WOW64 の使用の詳細については、「 [32 ビットアプリケーションの実行](/windows/desktop/WinProg64/running-32-bit-applications)」を参照してください。|  
+|`STARTUP_CONCURRENT_GC`|同時実行ガベージ コレクションを使用することを指定します。 呼び出し元がサーバー ビルドと同時実行ガベージ コレクションをシングル プロセッサ コンピューター上で要求した場合は、代わりにワークステーション ビルドと非同時実行ガベージ コレクションが実行されます。 **注:**  同時実行ガベージコレクションは、Intel Itanium アーキテクチャ (旧称 IA-64) を実装する64ビットシステムで WOW64 x86 エミュレーターを実行しているアプリケーションではサポートされていません。 64ビット Windows システムでの WOW64 の使用の詳細については、「 [32 ビットアプリケーションの実行](/windows/desktop/WinProg64/running-32-bit-applications)」を参照してください。|  
 |`STARTUP_LOADER_OPTIMIZATION_MASK`|ローダーの最適化を行う必要があることを指定します。|  
 |`STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`|どのアセンブリもドメイン中立として読み込まないことを指定します。|  
 |`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`|すべてのアセンブリをドメイン中立として読み込むことを指定します。|  
@@ -72,12 +73,13 @@ typedef enum {
 |`STARTUP_ETW`|共通言語ランタイム イベントで Windows イベント トレーシング (ETW) が有効になっていることを指定します。 Windows Vista 以降、イベント トレーシングは常に有効になっているため、このフラグの効果はありません。 「 [.NET Framework のログ記録の制御](../../performance/controlling-logging.md)」を参照してください。|  
 |`STARTUP_ARM`|アプリケーション ドメインのリソース監視が有効になっていることを指定します。 <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>プロパティと[ \<appDomainResourceMonitoring> 要素](../../configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)を参照してください。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll  
+ **ライブラリ:** MSCorEE.dll  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

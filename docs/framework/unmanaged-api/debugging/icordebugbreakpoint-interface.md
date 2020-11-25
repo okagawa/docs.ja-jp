@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa5ad3d7-e1bb-42af-99bc-471224e3bcaa
 topic_type:
 - apiref
-ms.openlocfilehash: b92c3d3328c657762ed002155ef4947a9292b19e
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 0c84a91c7da553d0c84a4995b4744576d861dcb9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894726"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730202"
 ---
 # <a name="icordebugbreakpoint-interface"></a>ICorDebugBreakpoint インターフェイス
 
@@ -29,18 +29,20 @@ ms.locfileid: "82894726"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Activate メソッド](icordebugbreakpoint-activate-method.md)|この`ICorDebugBreakpoint`のアクティブな状態を設定します。|  
-|[IsActive メソッド](icordebugbreakpoint-isactive-method.md)|この`ICorDebugBreakpoint`がアクティブかどうかを示す値を取得します。|  
+|[Activate メソッド](icordebugbreakpoint-activate-method.md)|こののアクティブな状態を設定 `ICorDebugBreakpoint` します。|  
+|[IsActive メソッド](icordebugbreakpoint-isactive-method.md)|このがアクティブかどうかを示す値を取得し `ICorDebugBreakpoint` ます。|  
   
-## <a name="remarks"></a>解説  
- ブレークポイントは、条件式を直接サポートしません。 このような機能が必要な場合は、デバッガーでを上`ICorDebugBreakpoint`に実装する必要があります。  
+## <a name="remarks"></a>注釈  
+
+ ブレークポイントは、条件式を直接サポートしません。 このような機能が必要な場合は、デバッガーでを上に実装する必要があり `ICorDebugBreakpoint` ます。  
   
- は、関数内のブレーク`ICorDebugBreakpoint`ポイントをサポートするために、によって拡張されます。  
+ は、 `ICorDebugBreakpoint` 関数内のブレークポイントをサポートするために、によって拡張されます。  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

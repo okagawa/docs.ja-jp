@@ -5,14 +5,15 @@ helpviewer_keywords:
 - member design guidelines, properties
 - properties [.NET Framework], design guidelines
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
-ms.openlocfilehash: 1cf41a08c641e9251084e5dcac6c46bc54857717
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ed287b98c012622caa5f8f1cc90fced90dda3e62
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828739"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730969"
 ---
 # <a name="property-design"></a>プロパティのデザイン
+
 プロパティは技術的にはメソッドとよく似ていますが、使用シナリオの観点からは非常に異なります。 スマートフィールドとして表示されます。 これらのメソッドには、フィールドの呼び出し構文とメソッドの柔軟性があります。
 
  呼び出し元がプロパティの値を変更できない場合は、get 専用プロパティを作成✔️ます。
@@ -38,6 +39,7 @@ ms.locfileid: "94828739"
  プロパティの getter は単純な操作である必要があり、事前条件を指定することはできません。 Getter が例外をスローする場合は、メソッドとして再設計する必要があります。 この規則はインデクサーには適用されませんが、引数を検証した結果として例外が発生することに注意してください。
 
 ### <a name="indexed-property-design"></a>インデックス付きプロパティのデザイン
+
  インデックス付きプロパティは、パラメーターを持つことができる特殊なプロパティであり、配列のインデックス作成に似た特殊な構文を使用して呼び出すことができます。
 
  インデックス付きプロパティは、通常、インデクサーと呼ばれます。 インデクサーは、論理コレクション内の項目へのアクセスを提供する Api でのみ使用する必要があります。 たとえば、文字列は文字のコレクションであり、のインデクサーが <xref:System.String?displayProperty=nameWithType> その文字にアクセスするために追加されています。
@@ -69,6 +71,7 @@ ms.locfileid: "94828739"
  これは、C# コンパイラによって適用されます。
 
 ### <a name="property-change-notification-events"></a>プロパティ変更通知イベント
+
  場合によっては、プロパティ値の変更をユーザーに通知するイベントを提供すると便利です。 たとえば、は、 `System.Windows.Forms.Control` `TextChanged` プロパティの値が変更された後にイベントを発生 `Text` させます。
 
  高レベルの Api (通常はデザイナーコンポーネント) のプロパティ値が変更された場合に、変更通知イベントを発生させる✔️を検討してください。

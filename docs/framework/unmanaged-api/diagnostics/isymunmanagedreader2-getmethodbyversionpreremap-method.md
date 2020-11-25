@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d144ed4-bdb0-4cac-960c-cb90f4dca173
 topic_type:
 - apiref
-ms.openlocfilehash: b12ecfdaf7c90589ce2e96b39f7437444cb91b09
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 5484242562deaf463b7435ad4e54735a7abee45e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615424"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730488"
 ---
 # <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a>ISymUnmanagedReader2::GetMethodByVersionPreRemap メソッド
+
 メソッドトークンとエディットコンティニュバージョン番号を指定して、シンボルリーダーメソッドを取得します。 バージョン番号は1から始まり、エディットコンティニュ操作の結果としてメソッドが変更されるたびに増分されます。  
   
 ## <a name="syntax"></a>構文  
@@ -35,6 +36,7 @@ HRESULT GetMethodByVersionPreRemap(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `token`  
  からメソッドメタデータトークン。  
   
@@ -42,12 +44,14 @@ HRESULT GetMethodByVersionPreRemap(
  からメソッドのバージョン。  
   
  `pRetVal`  
- 入出力返された[ISymUnmanagedMethod](isymunmanagedmethod-interface.md)インターフェイスへのポインター。  
+ 入出力返された [ISymUnmanagedMethod](isymunmanagedmethod-interface.md) インターフェイスへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl。 CorSym .h  
   
 ## <a name="see-also"></a>関連項目

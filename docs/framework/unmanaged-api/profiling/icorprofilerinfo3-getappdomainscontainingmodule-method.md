@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 603b3881-ea94-4dca-95cd-91eebac873a0
 topic_type:
 - apiref
-ms.openlocfilehash: 8615deb2e42b039120d97b3eb5af23beb31b0808
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5cc3436716bcfc2ed0f9fd7ff7982bac7a48de9a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502848"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731203"
 ---
 # <a name="icorprofilerinfo3getappdomainscontainingmodule-method"></a>ICorProfilerInfo3::GetAppDomainsContainingModule メソッド
+
 指定したモジュールが読み込まれているアプリケーション ドメインの識別子を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,6 +38,7 @@ HRESULT GetAppDomainsContainingModule(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `moduleId`  
  [in] 読み込まれたモジュールの ID。  
   
@@ -49,10 +51,12 @@ HRESULT GetAppDomainsContainingModule(
  `appDomainIds`  
  [out] アプリケーション ドメイン ID 値の配列。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  このメソッドは、呼び出し元が割り当てたバッファーを使用します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

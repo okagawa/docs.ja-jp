@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b862ff3e-e480-4cdf-84e2-e1013334a467
 topic_type:
 - apiref
-ms.openlocfilehash: 1b40ed8e107d30c22b4ade25d29376b1b74583d1
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: fc74b84bccceb1772bf3642e51ec88c562ce5dce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842414"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730716"
 ---
 # <a name="imanagedobjectgetobjectidentity-method"></a>IManagedObject::GetObjectIdentity メソッド
+
 このマネージオブジェクトの id を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT GetObjectIdentity (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pBSTRGUID`  
  入出力オブジェクトが存在するプロセスの GUID へのポインター。  
   
@@ -45,15 +47,17 @@ HRESULT GetObjectIdentity (
  `pCCW`  
  入出力COM クラシック v テーブル内のオブジェクトのインデックスへのポインター。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
+
  マネージオブジェクトの id には、プロセス GUID、アプリケーションドメイン ID、および COM クラシック v テーブルのオブジェクトのインデックスが含まれます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

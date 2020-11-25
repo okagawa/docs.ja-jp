@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 9e359384-0d3d-451c-807e-5d7fcebf2be7
 topic_type:
 - apiref
-ms.openlocfilehash: c99607bfe5fda01eb1abfd7771cb3907ddabeec5
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: f8f67edde7f99878429ca0bbd89aaf52336aa79c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703779"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730449"
 ---
 # <a name="iclrmetahostenumerateinstalledruntimes-method"></a>ICLRMetaHost::EnumerateInstalledRuntimes メソッド
-コンピューターにインストールされている共通言語ランタイム (CLR) の各バージョンの有効な[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)インターフェイスを含む列挙を返します。  
+
+コンピューターにインストールされている共通言語ランタイム (CLR) の各バージョンの有効な [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) インターフェイスを含む列挙を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,10 +34,12 @@ HRESULT EnumerateInstalledRuntimes (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ppEnumerator`  
- 入出力コンピューターにインストールされている CLR の各バージョンに対応する[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)インターフェイスの列挙体。  
+ 入出力コンピューターにインストールされている CLR の各バージョンに対応する [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) インターフェイスの列挙体。  
   
 ## <a name="return-value"></a>戻り値  
+
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
   
 |HRESULT|説明|  
@@ -45,11 +48,12 @@ HRESULT EnumerateInstalledRuntimes (
 |E_POINTER|`ppEnumerator` が null です。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

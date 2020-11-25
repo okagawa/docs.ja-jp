@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 06e583d6-d88a-4ff5-bb95-5c48618a461c
 topic_type:
 - apiref
-ms.openlocfilehash: 64a30ca85a75ebd11918ff630daffbb85c97f6dc
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 064f9727b221dd64a58f8cd5e103271e37020786
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894724"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730176"
 ---
 # <a name="icordebugbreakpointisactive-method"></a>ICorDebugBreakpoint::IsActive メソッド
-この`ICorDebugBreakpoint`がアクティブかどうかを示す値を取得します。  
+
+このがアクティブかどうかを示す値を取得し `ICorDebugBreakpoint` ます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,10 +35,12 @@ HRESULT IsActive (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pbActive`  
- 入出力`true`このブレークポイントがアクティブである場合は。それ以外`false`の場合は。  
+ [出力] `true` このブレークポイントがアクティブである場合は。それ以外の場合は `false` 。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

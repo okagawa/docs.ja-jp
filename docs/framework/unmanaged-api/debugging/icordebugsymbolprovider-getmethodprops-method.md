@@ -2,14 +2,15 @@
 title: ICorDebugSymbolProvider::GetMethodProps メソッド
 ms.date: 03/30/2017
 ms.assetid: 8f836b80-b7a5-460b-bf76-5f0e45652aea
-ms.openlocfilehash: c9e73c4de7389405d9e4b643036709ff2dbb82e6
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 5412b2f06445627c1240d6c8f4efb3ce6bbbec54
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379573"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730826"
 ---
 # <a name="icordebugsymbolprovidergetmethodprops-method"></a>ICorDebugSymbolProvider::GetMethodProps メソッド
+
 メソッドの指定の相対仮想アドレス (RVA) で、そのメソッドのプロパティに関する情報 (メソッドのメタデータ トークンなど) と、そのジェネリック パラメーターに関する情報を返します。  
   
 ## <a name="syntax"></a>構文  
@@ -26,6 +27,7 @@ HRESULT GetMethodProps(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `codeRVA`  
  [in]情報を取得するメソッドでの相対仮想アドレス。  
   
@@ -44,13 +46,15 @@ HRESULT GetMethodProps(
  `signature`  
  [out] すべてのジェネリック パラメーターの typespec シグネチャを保持するバッファー。  
   
-## <a name="remarks"></a>Remarks  
- メソッドの配列の必要なサイズを取得するには `signature` 、 `cbSignature` 引数を0に設定し、 `signature` を**null**に設定します。 このメソッドから制御が戻ると、`pcbSignature` には `signature` 配列の必要なバイト数が格納されます。  
+## <a name="remarks"></a>注釈  
+
+ メソッドの配列の必要なサイズを取得するには `signature` 、 `cbSignature` 引数を0に設定し、 `signature` を **null** に設定します。 このメソッドから制御が戻ると、`pcbSignature` には `signature` 配列の必要なバイト数が格納されます。  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

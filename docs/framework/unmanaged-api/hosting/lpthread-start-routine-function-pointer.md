@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7b9b93b0-fe92-42ba-8693-701168a29dde
 topic_type:
 - apiref
-ms.openlocfilehash: 84cdb42b11ad70f54f21ae36ca2734dc794d06d7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c86b65e136869603f93253678108b2ffa9d388e1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008470"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730072"
 ---
 # <a name="lpthread_start_routine-function-pointer"></a>LPTHREAD_START_ROUTINE 関数ポインター
+
 スレッドの実行を開始したことをホストに通知する関数を指します。  
   
  この関数ポインターは .NET Framework 4 で非推奨とされました。  
@@ -35,18 +36,21 @@ typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `lpThreadParameter`  
  から実行を開始したコードへのポインター。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
+
  `LPTHREAD_START_ROUTINE`ポイントがコールバック関数であり、ホストアプリケーションのライターによって実装されている必要がある関数。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscorwks.dll  
+ **ライブラリ:** MSCorWks.dll  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

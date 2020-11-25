@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6c1aaaf-e2cd-407c-b73e-fbe6ffd83bb3
 topic_type:
 - apiref
-ms.openlocfilehash: 4fa227d18b8cb10936d93fda9bcaf413ce63ca3b
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 9b03dc5460875af3bb3e5e20799a4d26eb74da05
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84003946"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730371"
 ---
 # <a name="imetadataemitsethandler-method"></a>IMetaDataEmit::SetHandler メソッド
+
 指定したポインターによって参照されるメソッドを、 `IUnknown` トークンリマップの通知コールバックとして設定します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,20 +35,23 @@ HRESULT SetHandler (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pUnk`  
  から登録するハンドラー。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
+
  メタデータエンジンは、によって提供されるメソッドを使用して、最適化された `SetHandler` 方法でレコードを生成せず、保存されたレコードを最適化するコンパイラに通知を送信します。  
   
  コールバックメソッドがによって提供されていない場合 `SetHandler` 、 `IMapToken` 各スコープに対して merge on merge を使用して複数のインポートスコープがマージされている場合を除き、保存時に最適化は実行されません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

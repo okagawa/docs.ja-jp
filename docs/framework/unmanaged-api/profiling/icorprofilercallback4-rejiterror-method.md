@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7888aa9-dfaa-420f-9f99-e06ab35ca482
 topic_type:
 - apiref
-ms.openlocfilehash: 488069f3ea16352cb7bb5e81b9a726637a7a65f8
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 46312aaf530e69f0e6a90e35515f1373d01b4340
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499364"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730241"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError メソッド
+
 Just-in-time (JIT) コンパイラが再コンパイルプロセスでエラーを検出したことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT ReJITError(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `moduleID`  
  から再 `ModuleID` コンパイルの試行が失敗した。  
   
@@ -49,6 +51,7 @@ HRESULT ReJITError(
  からエラーの性質を示す HRESULT。 値の一覧については、「Status HRESULT」セクションを参照してください。  
   
 ## <a name="return-value"></a>戻り値  
+
  このコールバックからの戻り値は無視されます。  
   
 ## <a name="status-hresults"></a>状態 HRESULT  
@@ -63,6 +66,7 @@ HRESULT ReJITError(
 |その他|オペレーティング システムは、CLR 制御範囲外のエラーを返しました。 たとえば、メモリページのアクセス保護を変更するシステムコールが失敗した場合、オペレーティングシステムエラーが表示されます。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

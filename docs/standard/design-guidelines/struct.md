@@ -10,14 +10,15 @@ helpviewer_keywords:
 - type design guidelines, structures
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
-ms.openlocfilehash: da831d1477b451131bb27372d65ad7229fcf3f77
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7bb7e63004df2eb7541ba8d4f1118ea2272db126
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828622"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730904"
 ---
 # <a name="struct-design"></a>構造体のデザイン
+
 汎用値型は、ほとんどの場合、構造体である C# キーワードと呼ばれます。 このセクションでは、一般的な構造体のデザインに関するガイドラインを示します。
 
  ❌ 構造体にパラメーターなしのコンストラクターを指定しないでください。

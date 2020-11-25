@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 87277e1a-1595-4729-9e25-d1c3ac18ce5f
 topic_type:
 - apiref
-ms.openlocfilehash: fb198782bb91a8301507fd6cadcffb0378230f0e
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 4d66d09e02b907281f64400b0c605a7b5c44d476
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396579"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731047"
 ---
 # <a name="icordebugvariablehomegetliverange-method"></a>いい変数 Home:: GetLiveRange メソッド
+
 この変数がライブであるネイティブ範囲を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,6 +36,7 @@ HRESULT GetLiveRange(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pStartOffset`  
  入出力変数が最初にライブになる論理オフセット。  
   
@@ -42,6 +44,7 @@ HRESULT GetLiveRange(
  入出力変数が最後にライブになる位置の直後の論理オフセット。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

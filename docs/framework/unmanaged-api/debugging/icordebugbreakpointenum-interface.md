@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c6f4f6e-52cc-402e-881b-7b8526544c90
 topic_type:
 - apiref
-ms.openlocfilehash: e391a02571481d75ce88ae3f3b2b6421705d661c
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 97e06a2f20dcc2bb3815b98ba29ff230e37ff29d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894701"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730163"
 ---
 # <a name="icordebugbreakpointenum-interface"></a>ICorDebugBreakpointEnum インターフェイス
 
@@ -29,14 +29,15 @@ ICorDebugEnum メソッドを実装し、ICorDebugBreakpoint 配列を列挙し�
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Next メソッド](icordebugbreakpointenum-next-method.md)|現在の`ICorDebugBreakpoint`位置から開始して、指定した数のインスタンスを列挙から取得します。|  
+|[Next メソッド](icordebugbreakpointenum-next-method.md)|現在の位置から開始して、指定した数の `ICorDebugBreakpoint` インスタンスを列挙から取得します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

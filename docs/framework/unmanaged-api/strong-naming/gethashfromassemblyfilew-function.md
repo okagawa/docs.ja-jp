@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: d1b2b172-5353-42af-a877-cf653c68ece0
 topic_type:
 - apiref
-ms.openlocfilehash: cf7667f0f2a0f77cd793e00a5de8b030b0c53ec8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b895c77850c0457fd2a152c1128c016093599f76
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140701"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730982"
 ---
 # <a name="gethashfromassemblyfilew-function"></a>GetHashFromAssemblyFileW 関数
+
 指定したハッシュ アルゴリズムを使用して、指定したアセンブリ ファイルのハッシュ値が取得されます。 アセンブリファイルへのパスは、Unicode 文字列として指定する必要があります。  
   
- この関数は非推奨とされます。 代わりに[ICLRStrongName:: GetHashFromAssemblyFileW](../hosting/iclrstrongname-gethashfromassemblyfilew-method.md)メソッドを使用してください。  
+ この関数は非推奨とされます。 代わりに [ICLRStrongName:: GetHashFromAssemblyFileW](../hosting/iclrstrongname-gethashfromassemblyfilew-method.md) メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,6 +40,7 @@ HRESULT GetHashFromAssemblyFileW (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `wszFilePath`  
  からハッシュされるファイルへのパス。 このパラメーターは Unicode 文字列である必要があります。  
   
@@ -49,19 +51,20 @@ HRESULT GetHashFromAssemblyFileW (
  入出力返されたハッシュバッファー。  
   
  `cchHash`  
- から要求された `pbHash`の最大サイズ。  
+ から要求された最大サイズ `pbHash` 。  
   
  `pchHash`  
- 入出力`pbHash`の返されたサイズ (バイト単位)。  
+ 入出力の返されたサイズ (バイト単位) `pbHash` 。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** StrongName  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

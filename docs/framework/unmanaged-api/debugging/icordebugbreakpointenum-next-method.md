@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2e6bbaea-79ba-448c-a0e3-7c90fc7c2939
 topic_type:
 - apiref
-ms.openlocfilehash: af90886390b59932d3ae146a70fc2901ec1c378d
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 14c89e808ea8e41bbee46a59a60bc1876f3800d2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894662"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730189"
 ---
 # <a name="icordebugbreakpointenumnext-method"></a>ICorDebugBreakpointEnum::Next メソッド
+
 現在の位置から開始して、指定した数の ICorDebugBreakpoint インスタンスを列挙から取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,16 +38,18 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `celt`  
- から取得するインスタンス`ICorDebugBreakpoint`の数。  
+ から `ICorDebugBreakpoint` 取得するインスタンスの数。  
   
  `breakpoints`  
- 入出力ポインターの配列。各ポインターは、ブレークポイントを`ICorDebugBreakpoint`表すオブジェクトを指します。  
+ 入出力ポインターの配列。各ポインターは、 `ICorDebugBreakpoint` ブレークポイントを表すオブジェクトを指します。  
   
  `pceltFetched`  
- 入出力実際に返されたインスタンス`ICorDebugBreakpoint`の数へのポインター。 が1の場合`celt` 、この値は null になります。  
+ 入出力実際に返されたインスタンスの数へのポインター `ICorDebugBreakpoint` 。 が1の場合、この値は null `celt` になります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

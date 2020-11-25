@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bd6ccde5-d578-48d8-abed-b474fbd48d13
 topic_type:
 - apiref
-ms.openlocfilehash: 89be772ee3d8a6fc5acb74d5ebe6d3c691764f89
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: d9fe18225dc27e93d4e97940cba878e4d73b4ed2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441956"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730527"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethod メソッド
+
 このメソッドに行が含まれているドキュメントを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,19 +36,22 @@ HRESULT GetDocumentsForMethod(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `cDocs`  
  からが指すバッファーの長さ `pcDocs` 。  
   
  `pcDocs`  
- 入出力`ULONG32`ドキュメントを格納するために必要なバッファーのサイズ (文字数) を受け取るへのポインター。  
+ 入出力 `ULONG32` ドキュメントを格納するために必要なバッファーのサイズ (文字数) を受け取るへのポインター。  
   
  `documents`  
  からドキュメントを格納しているバッファー。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、エラーコード。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

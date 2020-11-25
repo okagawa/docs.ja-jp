@@ -9,14 +9,15 @@ helpviewer_keywords:
 - classes [.NET Framework], design guidelines
 - type design guidelines, classes
 ms.assetid: d67c14d8-c4dd-443f-affb-4ccae677c9b6
-ms.openlocfilehash: efa5ca6e7b5e7b7d03cbe1d55471a388f3faab37
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2ae541898435773ca51dbc425c09a533dbef4e9e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828661"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730917"
 ---
 # <a name="static-class-design"></a>静的クラスのデザイン
+
 静的クラスは、静的メンバーのみを含むクラスとして定義されます (もちろん、から継承されたインスタンスメンバーと、場合によって <xref:System.Object?displayProperty=nameWithType> はプライベートコンストラクターを除く)。 一部の言語では、静的クラスのサポートが組み込まれています。 C# 2.0 以降では、クラスが静的として宣言されている場合、そのクラスは sealed で abstract であり、インスタンスメンバーをオーバーライドまたは宣言することはできません。
 
  静的クラスは、純粋なオブジェクト指向設計と単純さの間で妥協をします。 一般的に、他の操作 (など <xref:System.IO.File?displayProperty=nameWithType> )、拡張メソッドの所有者、または完全なオブジェクト指向ラッパーが認められされている機能 (など) へのショートカットを提供するために使用され <xref:System.Environment?displayProperty=nameWithType> ます。

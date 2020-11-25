@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0e9bfe07-9f20-498c-b568-9017c8f6056c
 topic_type:
 - apiref
-ms.openlocfilehash: 527e48d02d5267d6ae41214686c2e8c997d85dca
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2cee763674da7472ca48355e7eaba3b7dfb7adbe
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499546"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730306"
 ---
 # <a name="icorprofilercallback4getrejitparameters-method"></a>ICorProfilerCallback4::GetReJITParameters メソッド
+
 再コンパイルされた新しいメソッド本体の代替コード生成フラグをコードプロファイラーで設定できるようにします。  
   
 ## <a name="syntax"></a>構文  
@@ -32,19 +33,22 @@ HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef met
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `moduleID`  
  からCLR が JIT 再コンパイルパラメーターを必要とするメソッドを含むモジュール。  
   
  `methodId`  
- から`MethodDef`CLR が JIT 再コンパイルパラメーターを必要とするメソッドの。  
+ から `MethodDef` CLR が JIT 再コンパイルパラメーターを必要とするメソッドの。  
   
  `pFunctionControl`  
- から再コンパイルされるメソッドの JIT 再コンパイル情報を提供するためにプロファイラーが使用できる[ICorProfilerFunctionControl](icorprofilerfunctioncontrol-interface.md)インターフェイスへのポインター。  
+ から再コンパイルされるメソッドの JIT 再コンパイル情報を提供するためにプロファイラーが使用できる [ICorProfilerFunctionControl](icorprofilerfunctioncontrol-interface.md) インターフェイスへのポインター。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  CLR は、 `GetReJITParameters` 指定されたメソッドを再コンパイルするためのパラメーターをプロファイラーが指定できるように、コールバックを発行します。 `GetReJITParameters`コールバックは、関数ごとに1回だけ発行されます。プロファイラーによって提供されるパラメーターは、その関数のすべてのインスタンスに適用されます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

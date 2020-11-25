@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8e7dbf14-98a2-4384-a950-58a7640e59df
 topic_type:
 - apiref
-ms.openlocfilehash: 3df6e4decf1c4641116dee5fab3ca83189b427c0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8b9b76fd58d8b3ec5c2d98156b7935051aff074b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496764"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731229"
 ---
 # <a name="icorprofilerinfo2getthreadstaticaddress-method"></a>ICorProfilerInfo2::GetThreadStaticAddress メソッド
+
 指定したスレッドのスコープ内にある、指定したスレッド静的フィールドのアドレスを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT GetThreadStaticAddress(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `classId`  
  から要求されたスレッド静的フィールドを含むクラスの ID。  
   
@@ -48,7 +50,8 @@ HRESULT GetThreadStaticAddress(
  `ppAddress`  
  入出力指定したスレッド内の静的フィールドのアドレスへのポインター。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  `GetThreadStaticAddress`メソッドは、次のいずれかを返す場合があります。  
   
 - 指定されたコンテキストで、指定された静的フィールドにアドレスが割り当てられていない場合は CORPROF_E_DATAINCOMPLETE HRESULT。  
@@ -58,6 +61,7 @@ HRESULT GetThreadStaticAddress(
  では、クラスのクラスコンストラクターが完了する前に、 `GetThreadStaticAddress` すべての静的フィールドに対して CORPROF_E_DATAINCOMPLETE が返されます。ただし、静的フィールドの一部は既に初期化されており、ガベージコレクションオブジェクトがルート化される場合があります。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

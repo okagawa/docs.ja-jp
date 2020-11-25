@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6dc37f9d-87ee-4cb3-9216-ced600184ce8
 topic_type:
 - apiref
-ms.openlocfilehash: d429995e41006798aee5f796150bedbd6ae87f6f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 8468b0e7faa520fe2d27e17674af5503871d3b62
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84003872"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730384"
 ---
 # <a name="imetadataemitsetfieldrva-method"></a>IMetaDataEmit::SetFieldRVA メソッド
+
 指定したトークンによって参照されるフィールドの相対仮想アドレスのグローバル変数値を設定します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,18 +36,20 @@ HRESULT SetFieldRVA (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `fd`  
  からターゲットフィールドのトークン。  
   
  `ulRVA`  
  からコードまたはデータ領域のアドレス。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: dab648ad-972b-479c-b129-b4c1dcbd932e
 topic_type:
 - apiref
-ms.openlocfilehash: f399d33dbe05cb5768aa45533ef30d28409e18e2
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: bbdc68721378e6bbb09f5e4eade08e2e6e03b097
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006468"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729914"
 ---
 # <a name="stackoverflowtype-enumeration"></a>StackOverflowType 列挙型
+
 スタックオーバーフローイベントの根底にある原因を示す値を格納します。  
   
 ## <a name="syntax"></a>構文  
@@ -42,15 +43,17 @@ typedef enum {
 |`SO_Managed`|スタックオーバーフローは、マネージコードによって発生しました。|  
 |`SO_Other`|スタックオーバーフローは、アンマネージコードによって発生しました。|  
   
-## <a name="remarks"></a>コメント  
- この情報は、 [Iactiononclrevent:: OnEvent](iactiononclrevent-onevent-method.md)メソッドの呼び出しによってホストに渡されます。  
+## <a name="remarks"></a>注釈  
+
+ この情報は、 [Iactiononclrevent:: OnEvent](iactiononclrevent-onevent-method.md) メソッドの呼び出しによってホストに渡されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll  
+ **ライブラリ:** MSCorEE.dll  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

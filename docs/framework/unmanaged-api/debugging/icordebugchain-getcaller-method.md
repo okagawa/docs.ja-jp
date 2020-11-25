@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0b8ab4b-d7d2-4fa0-945f-3d2b87e7e991
 topic_type:
 - apiref
-ms.openlocfilehash: a6d26924773e6ad505975402ec3ace150d02cc3a
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 0f616b3bae48a972c0fc8935c35add7d844a7364
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894615"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730111"
 ---
 # <a name="icordebugchaingetcaller-method"></a>ICorDebugChain::GetCaller メソッド
+
 このチェーンを呼び出したチェーンを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,15 +35,18 @@ HRESULT GetCaller (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ppChain`  
  入出力呼び出し元チェーンを表す、のオブジェクトのアドレスへのポインター。  
   
- (このチェーンまたはデバッガーが呼び出し履歴を初期化した場合のように) このチェーンが自発的`ppChain`に呼び出された場合、は null になります。  
+ (このチェーンまたはデバッガーが呼び出し履歴を初期化した場合のように) このチェーンが自発的に呼び出された場合、 `ppChain` は null になります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  呼び出しがスレッド間でマーシャリングされている場合は、呼び出し元のチェーンが別のスレッドに存在する可能性があります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c02476f9-23a2-4af7-9282-aa9c42c7429b
 topic_type:
 - apiref
-ms.openlocfilehash: 630fe4e79b369bfdefc19be72780f1893090895e
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: fe58a519d0feac0da49e7778247da1ef538f8b83
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008457"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730033"
 ---
 # <a name="malloc_type-enumeration"></a>MALLOC_TYPE 列挙体
+
 割り当てられているメモリの特性を指定する値を格納します。  
   
 ## <a name="syntax"></a>構文  
@@ -40,12 +41,13 @@ typedef enum {
 |`MALLOC_EXECUTABLE`|割り当てられたメモリには、実行可能ファイルを含めることができます。|  
 |`MALLOC_THREADSAFE`|割り当てられたメモリはスレッドセーフです。 つまり、メモリには、同期を行わずに複数のスレッドからアクセスできます。<br /><br /> このフラグが設定されていない場合は、オブジェクトに対する呼び出しをシリアル化する必要があります。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll  
+ **ライブラリ:** MSCorEE.dll  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

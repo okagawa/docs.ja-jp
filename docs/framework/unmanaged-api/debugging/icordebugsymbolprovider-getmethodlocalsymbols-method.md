@@ -2,14 +2,15 @@
 title: ICorDebugSymbolProvider::GetMethodLocalSymbols メソッド
 ms.date: 03/30/2017
 ms.assetid: 8b989e38-e779-49d1-9e90-f1f920484b08
-ms.openlocfilehash: 7e9aa01a3fa1c90b0ab4f85970c4eb294b9a4904
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: c5a21436c939ddfca0219618efe64d9e0e40aef4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379613"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730852"
 ---
 # <a name="icordebugsymbolprovidergetmethodlocalsymbols-method"></a>ICorDebugSymbolProvider::GetMethodLocalSymbols メソッド
+
 メソッドの指定の相対仮想アドレス (RVA) で、そのメソッドのローカル シンボルを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -24,6 +25,7 @@ HRESULT GetMethodLocalSymbols(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `nativeRVA`  
  [in] メソッドのネイティブ相対仮想アドレス。  
   
@@ -34,14 +36,15 @@ HRESULT GetMethodLocalSymbols(
  [out] メソッドによって取得されたシンボル数へのポインター。  
   
  `pcFetchedSymbols`  
- 入出力メソッドのローカルシンボルを格納している[ICorDebugVariableSymbol](icordebugvariablesymbol-interface.md)配列へのポインター。  
+ 入出力メソッドのローカルシンボルを格納している [ICorDebugVariableSymbol](icordebugvariablesymbol-interface.md) 配列へのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

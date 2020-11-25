@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8d9744a5-e08b-4ab2-9855-5c22711cc1e6
 topic_type:
 - apiref
-ms.openlocfilehash: 47a90ed63ae217cb150f392ad9196f8d0d5764e3
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 75b97f4333f3e81533b1f10b8c3c7ba6197ac94a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894641"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730085"
 ---
 # <a name="icordebugchaingetnext-method"></a>ICorDebugChain::GetNext メソッド
+
 スレッドの次のフレームのチェーンを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,10 +35,12 @@ HRESULT GetNext (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ppChain`  
- 入出力スレッドの次のフレームのチェーンを表す、テキストチェーンオブジェクトのアドレスへのポインター。 このチェーンが最後のチェーンの場合`ppChain` 、は null です。  
+ 入出力スレッドの次のフレームのチェーンを表す、テキストチェーンオブジェクトのアドレスへのポインター。 このチェーンが最後のチェーンの場合、 `ppChain` は null です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 426f4e4f-e60d-4ad1-b546-a10e3c55c283
 topic_type:
 - apiref
-ms.openlocfilehash: ab248c6a624fbed1a6783383566be093c449ff97
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 2f64f9f4bde3119f9f089becec5a36d69ed43596
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609886"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730062"
 ---
 # <a name="isymunmanagedwriteropennamespace-method"></a>ISymUnmanagedWriter::OpenNamespace メソッド
+
 新しい名前空間を開きます。 名前空間を占有するメソッドまたは変数を定義する前に、このメソッドを呼び出します。 名前空間は入れ子にすることができます。  
   
 ## <a name="syntax"></a>構文  
@@ -33,13 +34,16 @@ HRESULT OpenNamespace(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `name`  
  から新しい名前空間の名前へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: df7595d1-430f-44b4-8160-4c2ba9df70b1
 topic_type:
 - apiref
-ms.openlocfilehash: 0648ba9a35290543f485a67719c6adfeba9114b3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a280b071b3c9f390e59d60009b5b9ed1c136989b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108955"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731099"
 ---
 # <a name="cleardownloadcache-function"></a>ClearDownloadCache 関数
+
 ダウンロードされたアセンブリのグローバルアセンブリキャッシュを消去します。  
   
 ## <a name="syntax"></a>構文  
@@ -32,14 +33,15 @@ ms.locfileid: "73108955"
 HRESULT ClearDownloadCache ();  
 ```  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Fusion. h  
   
- **ライブラリ:** Fusion .dll と Mscorwks.dll。 Mscorwks.dll の代わりに Fusion を使用して、正しいバージョンの .NET Framework を対象としていることを確認してください。  
+ **Library:** Fusion.dll し、Mscorwks.dll します。 Mscorwks.dll ではなく Fusion.dll を使用して、正しいバージョンの .NET Framework を対象にするようにします。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

@@ -2,14 +2,15 @@
 title: ICorDebugSymbolProvider::GetMergedAssemblyRecords メソッド
 ms.date: 03/30/2017
 ms.assetid: cc4c510d-550d-4941-af34-81987caf3425
-ms.openlocfilehash: b7d26fa80a7a8ebe7b4606b914c8cd09c52df1e4
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 10bbcf2e6a536eeb4ab8141c10c177a53faa1c95
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379618"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730878"
 ---
 # <a name="icordebugsymbolprovidergetmergedassemblyrecords-method"></a>ICorDebugSymbolProvider::GetMergedAssemblyRecords メソッド
+
 すべてのマージされたアセンブリのシンボル レコードを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -23,6 +24,7 @@ HRESULT GetMergedAssemblyRecords(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `cRequestedRecords`  
  [in] 要求されるシンボル レコードの数。  
   
@@ -32,12 +34,13 @@ HRESULT GetMergedAssemblyRecords(
  `pRecords`  
  [ICorDebugMergedAssemblyRecord](icordebugmergedassemblyrecord-interface.md)オブジェクトの配列へのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 77d3f31e-9a53-4349-9c02-610a71736d42
 topic_type:
 - apiref
-ms.openlocfilehash: 8ad4943aa9bf1b66b34bcd83a5422a977b16518d
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: efa7b9d49ea9807af2164bb6ee54422dd72b14e2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804231"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730423"
 ---
 # <a name="ihostpolicymanageronfailure-method"></a>IHostPolicyManager::OnFailure メソッド
-リソース割り当てまたは再利用の失敗に応じて、 [ICLRPolicyManager:: SetActionOnFailure](iclrpolicymanager-setactiononfailure-method.md)メソッドの呼び出しによって指定されたアクションを共通言語ランタイム (CLR) が実行しようとしていることをホストに通知します。  
+
+リソース割り当てまたは再利用の失敗に応じて、 [ICLRPolicyManager:: SetActionOnFailure](iclrpolicymanager-setactiononfailure-method.md) メソッドの呼び出しによって指定されたアクションを共通言語ランタイム (CLR) が実行しようとしていることをホストに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,17 +36,18 @@ HRESULT OnFailure(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `failure`  
- から[Eclrfailure](eclrfailure-enumeration.md)値の1つ。 CLR が応答しているエラーの種類を示します。  
+ から [Eclrfailure](eclrfailure-enumeration.md) 値の1つ。 CLR が応答しているエラーの種類を示します。  
   
  `action`  
- から[Epolicyaction](epolicyaction-enumeration.md)値の1つ。 CLR がに応答して実行しているアクションを示し `failure` ます。  
+ から [Epolicyaction](epolicyaction-enumeration.md) 値の1つ。 CLR がに応答して実行しているアクションを示し `failure` ます。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`OnFailure`正常に返されました。|  
+|S_OK|`OnFailure` 正常に返されました。|  
 |HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージドコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
 |HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
@@ -53,11 +55,12 @@ HRESULT OnFailure(
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

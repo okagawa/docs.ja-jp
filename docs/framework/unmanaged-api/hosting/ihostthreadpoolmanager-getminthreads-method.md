@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc07232b-b2e4-4dab-87e2-3c955974ab48
 topic_type:
 - apiref
-ms.openlocfilehash: a05cfb43b5b4a328d22c4df04049a7fa156ca080
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 54dfa2741d3b4c1b2eada75ee8d214a2d0b250a0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841933"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730774"
 ---
 # <a name="ihostthreadpoolmanagergetminthreads-method"></a>IHostThreadPoolManager::GetMinThreads メソッド
+
 要求を処理するために、ホストがスレッドプールで保持するアイドル状態のスレッドの最小数を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,6 +35,7 @@ HRESULT GetMinThreads (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `MinThreads`  
  入出力ホストが現在保持しているアイドル状態のワーカースレッドの最小数へのポインター。  
   
@@ -41,7 +43,7 @@ HRESULT GetMinThreads (
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`GetMinThreads`正常に返されました。|  
+|S_OK|`GetMinThreads` 正常に返されました。|  
 |HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
 |HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
@@ -49,15 +51,17 @@ HRESULT GetMinThreads (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_NOTIMPL|ホストはの実装を提供していません `GetMinThreads` 。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
+
  ホストは、の実装を提供する必要はありません `GetMinThreads` 。 この場合、E_NOTIMPL の HRESULT 値が返されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
