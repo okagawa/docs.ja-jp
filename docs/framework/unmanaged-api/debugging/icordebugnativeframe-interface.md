@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 04819c58-7246-4b32-befb-680cf1dbc436
 topic_type:
 - apiref
-ms.openlocfilehash: dd87745a29514a2f9f05aa142baae4e05d4b4a7b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 043dc0fdd5218d7bc6b80428d1eb891b3f01ee8c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206597"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695544"
 ---
 # <a name="icordebugnativeframe-interface"></a>ICorDebugNativeFrame インターフェイス
 
@@ -36,15 +36,16 @@ ms.locfileid: "83206597"
 |[GetLocalMemoryValue メソッド](icordebugnativeframe-getlocalmemoryvalue-method.md)|`ICorDebugValue`指定したメモリアドレスに格納されているローカル変数の値を表すへのポインターを取得します。|  
 |[GetLocalRegisterMemoryValue メソッド](icordebugnativeframe-getlocalregistermemoryvalue-method.md)|指定した `ICorDebugValue` レジスタに上位ビットが格納され、下位ビットが指定したメモリアドレスに格納されているローカル変数の値を表すへのポインターを取得します。|  
 |[GetLocalRegisterValue メソッド](icordebugnativeframe-getlocalregistervalue-method.md)|`ICorDebugValue`引数の値または指定したネイティブレジスタに格納されているローカル変数を表すへのポインターを取得します。|  
-|[GetRegisterSet メソッド](icordebugnativeframe-getregisterset-method.md)|こののレジスタセットを表す、ツール[のセットへ](icordebugregisterset-interface.md)のポインターを取得し `ICorDebugNativeFrame` ます。|  
+|[GetRegisterSet メソッド](icordebugnativeframe-getregisterset-method.md)|こののレジスタセットを表す、ツール [のセットへ](icordebugregisterset-interface.md) のポインターを取得し `ICorDebugNativeFrame` ます。|  
 |[SetIP メソッド](icordebugnativeframe-setip-method.md)|命令ポインターをネイティブコード内の指定されたオフセット位置に設定します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

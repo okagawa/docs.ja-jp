@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 6ef8ac9b-9803-4b65-8b13-25f3e0b1bc6b
 topic_type:
 - apiref
-ms.openlocfilehash: e95f96847c6e069758362fb6febc28dc31911bc9
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: d6b05333b9e02c4202c0fd9bdee9b5c055aa4da3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396297"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95694361"
 ---
 # <a name="icorpublishappdomaingetname-method"></a>ICorPublishAppDomain::GetName メソッド
-この[ICorPublishAppDomain](icorpublishappdomain-interface.md)によって表されるアプリケーションドメインの名前を取得します。  
+
+この [ICorPublishAppDomain](icorpublishappdomain-interface.md)によって表されるアプリケーションドメインの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,6 +38,7 @@ HRESULT GetName (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `cchName`  
  [in] `szName` 配列のサイズ。  
   
@@ -46,12 +48,14 @@ HRESULT GetName (
  `szName`  
  入出力名前を格納する配列。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  `szName`が null 以外の場合、 `GetName` メソッドは最大 `cchName` 文字 (null ターミネータを含む) をにコピー `szName` します。 で null 以外の値が返された場合 `pcchName` 、名前の実際の文字数 (null ターミネータを含む) が配列に格納され `szName` ます。  
   
  メソッドは、 `GetName` コピーされた文字数に関係なく、S_OK HRESULT を返します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorPub .idl、CorPub .h  

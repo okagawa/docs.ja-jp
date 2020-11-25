@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e02ee1a-e495-4578-bfb5-b946274bede7
 topic_type:
 - apiref
-ms.openlocfilehash: b8d20de990ff4a27a82590342494a307c986457e
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 0d36390a905561b64b3ca6ca95722f82158450be
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207390"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695219"
 ---
 # <a name="icordebugprocessclearcurrentexception-method"></a>ICorDebugProcess::ClearCurrentException メソッド
+
 指定されたスレッドで現在のアンマネージ例外をクリアします。  
   
 ## <a name="syntax"></a>構文  
@@ -32,15 +33,18 @@ HRESULT ClearCurrentException([in] DWORD threadID);
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `threadID`  
  から現在のアンマネージ例外がクリアされるスレッドの ID。  
   
-## <a name="remarks"></a>Remarks  
- スレッドがアンマネージ例外を報告し[たときに](icordebugcontroller-continue-method.md)、デバッグ対象では無視する必要がある場合は、このメソッドを呼び出します。 これにより、所定のスレッドで未処理の帯域内 (IB) イベントと帯域外 (OOB) イベントの両方がクリアされます。 すべての OOB ブレークポイントと単一ステップの例外は、自動的にクリアされます。  
+## <a name="remarks"></a>注釈  
+
+ スレッドがアンマネージ例外を報告し [たときに](icordebugcontroller-continue-method.md) 、デバッグ対象では無視する必要がある場合は、このメソッドを呼び出します。 これにより、所定のスレッドで未処理の帯域内 (IB) イベントと帯域外 (OOB) イベントの両方がクリアされます。 すべての OOB ブレークポイントと単一ステップの例外は、自動的にクリアされます。  
   
- スレッドで現在のマネージ例外をインターセプトするには、 [ICorDebugThread2:: InterceptCurrentException](icordebugthread2-interceptcurrentexception-method.md)を使用します。  
+ スレッドで現在のマネージ例外をインターセプトするには、 [ICorDebugThread2:: InterceptCurrentException](icordebugthread2-interceptcurrentexception-method.md) を使用します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

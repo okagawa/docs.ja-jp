@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5e7885a6-d17a-4bfc-a4c6-23cbb7337ad5
 topic_type:
 - apiref
-ms.openlocfilehash: 89952a93d5652fcb0c3755e52fb18a1a9f2f9894
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 62e3286c5f0c70d283e78dbb1e502dccd73a5a3a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397059"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95694270"
 ---
 # <a name="icorpublishappdomain-interface"></a>ICorPublishAppDomain インターフェイス
+
 アプリケーション ドメインの情報を表し、提供します。  
   
 ## <a name="methods"></a>メソッド  
@@ -32,6 +33,7 @@ ms.locfileid: "83397059"
 |[GetName メソッド](icorpublishappdomain-getname-method.md)|このによって参照されるアプリケーションドメインの名前を取得し `ICorPublishAppDomain` ます。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorPub .idl、CorPub .h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e619eae4-3ac3-4c37-bba4-55e59989b9cb
 topic_type:
 - apiref
-ms.openlocfilehash: 0f6fe5d7eb5926d48809bb6490ba75df9d4a5033
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 8b9e483e24068656ddda0a3ecfee5934a2df962d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213154"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695895"
 ---
 # <a name="icordebugfunctionbreakpointgetoffset-method"></a>ICorDebugFunctionBreakpoint::GetOffset メソッド
+
 関数内のブレークポイントのオフセットを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,10 +35,12 @@ HRESULT GetOffset (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pnOffset`  
  入出力ブレークポイントのオフセットへのポインター。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5ccb74f3-f891-430c-b70a-e370624edde2
 topic_type:
 - apiref
-ms.openlocfilehash: 97d79f70097bef7768316907887cea2c38dd81e1
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a90bba4a4dc9ca92ccdc4af1636d194f92fd7373
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212829"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695726"
 ---
 # <a name="icordebugnativeframegetlocalregistervalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterValue メソッド
+
 このネイティブフレームの指定したレジスタに格納されている引数またはローカル変数の値を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,6 +38,7 @@ HRESULT GetLocalRegisterValue (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `reg`  
  から値を含むレジスタを指定する "CorDebugRegister" 列挙の値。  
   
@@ -44,15 +46,17 @@ HRESULT GetLocalRegisterValue (
  からパラメーターによって参照されるバイナリメタデータシグネチャのサイズを指定する整数 `pvSigBlob` 。  
   
  `pvSigBlob`  
- から`PCCOR_SIGNATURE`値の型のバイナリメタデータシグネチャを指す値。  
+ から `PCCOR_SIGNATURE` 値の型のバイナリメタデータシグネチャを指す値。  
   
  `ppValue`  
  入出力指定したレジスタに格納されている取得した値を表す "ICorDebugValue" オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  メソッドは、 `GetLocalRegisterValue` ネイティブフレームまたは just-in-time (JIT) でコンパイルされたフレームのどちらでも使用できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

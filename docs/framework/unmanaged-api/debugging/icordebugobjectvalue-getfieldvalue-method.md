@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c96770b0-3e09-47bb-bd29-20353b043459
 topic_type:
 - apiref
-ms.openlocfilehash: 660bc13e8109994f59444c0adebbc97f54de0b43
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 745be25183f6b94e7a807c4230961d72e2836fe5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207589"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695336"
 ---
 # <a name="icordebugobjectvaluegetfieldvalue-method"></a>ICorDebugObjectValue::GetFieldValue メソッド
+
 このオブジェクト値について、指定したクラスの指定したフィールドの値を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,21 +37,24 @@ HRESULT GetFieldValue (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pClass`  
  からフィールド値を取得する対象のクラスを表す "表示クラス" オブジェクトへのポインター。  
   
  `fieldDef`  
- から`mdFieldDef`フィールドを記述するメタデータを参照するトークン。  
+ から `mdFieldDef` フィールドを記述するメタデータを参照するトークン。  
   
  `ppValue`  
  入出力指定したフィールドの値を表す "ICorDebugValue" オブジェクトへのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  パラメーターで指定されたクラスは、 `pClass` オブジェクト値のクラスの階層内に存在する必要があり、フィールドはそのクラスのフィールドである必要があります。  
   
- `GetFieldValue`ジェネリックオブジェクトとジェネリッククラスでは、メソッドは引き続き成功します。 たとえば、MyDictionary \< v> \< がディクショナリ文字列 v> から継承し、オブジェクト値が mydictionary int32> 型である場合、 \< `ICorDebugClass` ディクショナリ K のオブジェクトを渡すと、 \< V> は dictionary 文字列, int32> のフィールドを正常に取得し \< ます。  
+ `GetFieldValue`ジェネリックオブジェクトとジェネリッククラスでは、メソッドは引き続き成功します。 たとえば、MyDictionary が \<V> ディクショナリから継承 \<string,V> し、オブジェクト値が mydictionary 型の場合、 \<int32> ディクショナリのオブジェクトを渡すと `ICorDebugClass` \<K,V> ディクショナリのフィールドが正常に取得され \<string,int32> ます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

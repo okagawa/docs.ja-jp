@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0847e64f-fdbe-4c96-8168-da20fdc84d80
 topic_type:
 - apiref
-ms.openlocfilehash: 7b98302985d9d54599ea8ea2e01dc2503c468d58
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 2b8e6048dd6b8df71ac3dddcc4397f6d512127c7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210229"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695882"
 ---
 # <a name="icordebugmodule2-interface"></a>ICorDebugModule2 インターフェイス
 
@@ -35,12 +35,13 @@ ms.locfileid: "83210229"
 |[SetJITCompilerFlags メソッド](icordebugmodule2-setjitcompilerflags-method.md)|このの JIT コンパイルを制御するフラグを設定 `ICorDebugModule2` します。|  
 |[SetJMCStatus メソッド](icordebugmodule2-setjmcstatus-method.md)|こののすべてのクラスのすべてのメソッドのマイコードのみ (JMC) の状態を、 `ICorDebugModule2` 指定した値に設定し `pTokens` ます。ただし、逆の値に設定されている配列内のすべてのメソッドを除きます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

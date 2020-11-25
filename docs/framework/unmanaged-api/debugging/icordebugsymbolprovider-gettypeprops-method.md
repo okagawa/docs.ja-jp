@@ -2,14 +2,15 @@
 title: ICorDebugSymbolProvider::GetTypeProps メソッド
 ms.date: 03/30/2017
 ms.assetid: 35ac4140-91ea-4c77-b1c4-1daf41986ca5
-ms.openlocfilehash: e116716284bb2081edb669e7fc9083cde10f6457
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 4738d35aabbc2197c796405e0657607f75ff685d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379359"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95694504"
 ---
 # <a name="icordebugsymbolprovidergettypeprops-method"></a>ICorDebugSymbolProvider::GetTypeProps メソッド
+
 Vtable の指定の相対仮想アドレス (RVA) における、ジェネリック パラメーターのシグネチャの数などの型のプロパティに関する情報を返します。  
   
 ## <a name="syntax"></a>構文  
@@ -24,6 +25,7 @@ HRESULT GetTypeProps(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `tableRva`  
  [in] vtable の相対仮想アドレス (RVA)。  
   
@@ -36,13 +38,15 @@ HRESULT GetTypeProps(
  `signature`  
  [out] すべてのジェネリック パラメーターの typespec シグネチャを保持するバッファー。  
   
-## <a name="remarks"></a>Remarks  
- 型の配列の必要なサイズを取得するには `signature` 、 `cbSignature` 引数を0に設定し、 `signature` を**null**に設定します。 このメソッドから制御が戻ると、`pcbSignature` には `signature` 配列の必要なバイト数が格納されます。  
+## <a name="remarks"></a>注釈  
+
+ 型の配列の必要なサイズを取得するには `signature` 、 `cbSignature` 引数を0に設定し、 `signature` を **null** に設定します。 このメソッドから制御が戻ると、`pcbSignature` には `signature` 配列の必要なバイト数が格納されます。  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

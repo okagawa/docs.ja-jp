@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b600b3a2-9908-42d8-8093-ab6f39e9a2c9
 topic_type:
 - apiref
-ms.openlocfilehash: 4c4bfe6a797fc1476ff53a8f2db4f80debc41f6b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 92a4ee2007760024b5802208d77ca3abc81e3cf3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212439"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695674"
 ---
 # <a name="icordebugnativeframegetlocalmemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalMemoryValue メソッド
+
 このネイティブフレームの指定したメモリ位置に格納されている引数またはローカル変数の値を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,6 +38,7 @@ HRESULT GetLocalMemoryValue (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `address`  
  から値を格納して `CORDB_ADDRESS` いるメモリ位置を指定する値。  
   
@@ -44,12 +46,13 @@ HRESULT GetLocalMemoryValue (
  からパラメーターによって参照されるバイナリメタデータシグネチャのサイズを指定する整数 `pvSigBlob` 。  
   
  `pvSigBlob`  
- から`PCCOR_SIGNATURE`値の型のバイナリメタデータシグネチャを指す値。  
+ から `PCCOR_SIGNATURE` 値の型のバイナリメタデータシグネチャを指す値。  
   
  `ppValue`  
  入出力指定されたメモリ位置に格納されている取得値を表す "ICorDebugValue" オブジェクトのアドレスへのポインター。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

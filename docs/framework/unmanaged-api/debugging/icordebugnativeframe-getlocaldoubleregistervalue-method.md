@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1f838215-ac8a-434f-8ce6-03021d3098d9
 topic_type:
 - apiref
-ms.openlocfilehash: 21c4d00e4156b9db27ae4188aace19764a2be53e
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 10f06fb04099ef947711bc7c5641e5a7f1fa36b7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213076"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695700"
 ---
 # <a name="icordebugnativeframegetlocaldoubleregistervalue-method"></a>ICorDebugNativeFrame::GetLocalDoubleRegisterValue メソッド
+
 このネイティブフレームの指定した2つのレジスタに格納されている引数またはローカル変数の値を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,25 +39,28 @@ HRESULT GetLocalDoubleRegisterValue (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `highWordReg`  
  から値の上位ワードを含むレジスタを指定する "CorDebugRegister" 列挙体の値。  
   
  `lowWordReg`  
- から`CorDebugRegister`値の下位ワードを含むレジスタを指定する列挙体の値。  
+ から `CorDebugRegister` 値の下位ワードを含むレジスタを指定する列挙体の値。  
   
  `cbSigBlob`  
  からパラメーターによって参照されるバイナリメタデータシグネチャのサイズを指定する整数 `pvSigBlob` 。  
   
  `pvSigBlob`  
- から`PCCOR_SIGNATURE`値の型のバイナリメタデータシグネチャを指す値。  
+ から `PCCOR_SIGNATURE` 値の型のバイナリメタデータシグネチャを指す値。  
   
  `ppValue`  
  入出力指定したレジスタに格納されている取得値を表す "ICorDebugValue" オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  メソッドは、 `GetLocalDoubleRegisterValue` ネイティブフレームまたは just-in-time (JIT) でコンパイルされたフレームのどちらでも使用できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
