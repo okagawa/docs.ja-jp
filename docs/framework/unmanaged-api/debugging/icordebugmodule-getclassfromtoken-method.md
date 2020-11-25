@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 622a4d3c-0425-4c54-a7e4-0735377cdad2
 topic_type:
 - apiref
-ms.openlocfilehash: f8a56dcf03748c6582bce07fc379113c5cdddd11
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 011d763ce244e18c7ba1203e18eb0700a8c8b13a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212606"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710234"
 ---
 # <a name="icordebugmodulegetclassfromtoken-method"></a>ICorDebugModule::GetClassFromToken メソッド
+
 メタデータトークンによって指定されたクラスを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,13 +36,15 @@ HRESULT GetClassFromToken(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `typedef`  
- から`mdTypeDef`クラスのメタデータを参照するメタデータトークン。  
+ から `mdTypeDef` クラスのメタデータを参照するメタデータトークン。  
   
  `ppClass`  
  入出力クラスを表す、のクラスオブジェクトのアドレスへのポインター。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

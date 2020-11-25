@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 26a82815-1982-4eb7-92d1-5c3d318d5be4
 topic_type:
 - apiref
-ms.openlocfilehash: 9270afa1d8c8ddd74cfe6dd05e39c1480f5767e6
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 4562318c87b79fba5f3d99860ee438c0144e9aae
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206944"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710247"
 ---
 # <a name="icordebugmodulegetbaseaddress-method"></a>ICorDebugModule::GetBaseAddress メソッド
+
 モジュールのベースアドレスを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,13 +35,16 @@ HRESULT GetBaseAddress(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pAddress`  
- 入出力`CORDB_ADDRESS`モジュールのベースアドレスを指定する。  
+ 入出力 `CORDB_ADDRESS` モジュールのベースアドレスを指定する。  
   
-## <a name="remarks"></a>Remarks  
- モジュールがネイティブイメージの場合 (つまり、モジュールがネイティブイメージジェネレーター Ngen.exe によって生成された場合)、そのベースアドレスはゼロになります。  
+## <a name="remarks"></a>注釈  
+
+ モジュールがネイティブイメージの場合 (つまり、モジュールがネイティブイメージジェネレーターによって生成された場合は、NGen.exe)、そのベースアドレスはゼロになります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
