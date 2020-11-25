@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f9b0ff22-54db-45eb-9cc3-508000a3141d
 topic_type:
 - apiref
-ms.openlocfilehash: d9269339e8e2ae8d00da701b015aa30cd51cbef3
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 63efb788d8bca84da94921371309704cc7b20ac4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213375"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710442"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData メソッド
+
 デバッガーが要求した操作を完了するために必要となるメタデータが含まれているモジュールの完全パスを返すように、デバッガーに求めます。  
   
 ## <a name="syntax"></a>構文  
@@ -40,8 +41,9 @@ HRESULT GetMetaData(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `wszImagePath`  
- [in] ファイルの完全パスを表す null で終わる文字列。 完全なパスが使用できない場合は、ファイルの名前と拡張子 (ファイル*名*)。*拡張機能*)。  
+ [in] ファイルの完全パスを表す null で終わる文字列。 完全なパスが使用できない場合は、ファイルの名前と拡張子 (ファイル *名*)。*拡張機能*)。  
   
  `dwImageTimeStamp`  
  [in] イメージの PE ファイル ヘッダーのタイムスタンプ。 このパラメーターは、シンボルサーバー ([Symsrv](/windows/desktop/debug/using-symsrv)) の検索に使用される可能性があります。  
@@ -63,6 +65,7 @@ HRESULT GetMetaData(
  `ofReadOnly` [Coropenflags](../metadata/coropenflags-enumeration.md)列挙のフラグは、このファイル内のメタデータへの読み取り専用アクセスを要求するために使用されます。  
   
 ## <a name="return-value"></a>戻り値  
+
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。 これ以外のエラー HRESULT はすべて、ファイルを取得できないことを示します。  
   
 |HRESULT|説明|  
@@ -70,10 +73,12 @@ HRESULT GetMetaData(
 |S_OK|メソッドは正常に完了しました。 `wszPathBuffer` にはファイルの完全パスが含まれます。また終端は null です。|  
 |E_NOT_SUFFICIENT_BUFFER|`wszPathBuffer` の現在のサイズが十分ではないため、完全パスを保持できません。 この場合、`pcchPathBuffer` に必要な `WCHAR` の数 (終端の null 文字も含む) が格納され、要求されたバッファー サイズで `GetMetaData` がもう一度呼び出されます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  `wszImagePath` にダンプのモジュールの完全パスが格納されている場合は、ダンプが収集されたコンピューターからのパスを示しています。 この場所にはファイルが存在しない、または同じ名前の正しくないファイルがパス上に格納されている可能性があります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 885bf5e8-00b7-4cd7-9d8d-e720d47918c4
 topic_type:
 - apiref
-ms.openlocfilehash: 6a6769265a2e140f1fa001bb8240bc5d4bd76018
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 516fcf8a97b92eac8dfff9eae34199caa97c2d2f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213674"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710936"
 ---
 # <a name="icordebugmdagetname-method"></a>ICorDebugMDA::GetName メソッド
-によって表されるマネージデバッグアシスタント (MDA) の名前を含む文字列を[取得します](icordebugmda-interface.md)。  
+
+によって表されるマネージデバッグアシスタント (MDA) の名前を含む文字列を [取得します](icordebugmda-interface.md)。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,6 +38,7 @@ HRESULT GetName (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `cchName`  
  [in] `szName` 配列のサイズ。  
   
@@ -46,10 +48,12 @@ HRESULT GetName (
  `szName`  
  入出力名前を格納する配列。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  MDA 名は一意の値です。 この `GetName` メソッドは、XML ストリームを取得し、そのスキーマに基づいてストリームから名前を抽出する場合に適しています。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8ecbb854-295c-4dd4-b9fc-01ebeac46e06
 topic_type:
 - apiref
-ms.openlocfilehash: d711f36b4e2071dac9458a023e1d3cf4743e77b3
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c4ff28ff1019b5314902a4e71f6d02b5a2fd8d70
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212634"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710845"
 ---
 # <a name="icordebugmda-interface"></a>ICorDebugMDA インターフェイス
+
 マネージド デバッグ アシスタント (MDA) メッセージを表します。  
   
 ## <a name="methods"></a>メソッド  
@@ -34,12 +35,13 @@ ms.locfileid: "83212634"
 |[GetOSThreadId メソッド](icordebugmda-getosthreadid-method.md)|この MDA が実行されているオペレーティングシステムのスレッド id を取得します。|  
 |[GetXML メソッド](icordebugmda-getxml-method.md)|この MDA に関連付けられている XML の完全ストリームを取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

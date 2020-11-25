@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7ca7c364-ade4-4219-b434-9f6ae2359be6
 topic_type:
 - apiref
-ms.openlocfilehash: c7ab77e9316023a97d2eafe8bcccc2b45e240cd0
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 80248bba6d11b8af07aa0517cb41c8a4f783b5e0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207817"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710897"
 ---
 # <a name="icordebugmdagetosthreadid-method"></a>ICorDebugMDA::GetOSThreadId メソッド
-によって表されるマネージデバッグアシスタント (MDA) が実行さ[れている](icordebugmda-interface.md)オペレーティングシステム (os) スレッド識別子を取得します。  
+
+によって表されるマネージデバッグアシスタント (MDA) が実行さ [れている](icordebugmda-interface.md) オペレーティングシステム (os) スレッド識別子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,13 +35,16 @@ HRESULT GetOSThreadId (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pOsTid`  
  入出力OS スレッド識別子へのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  システムスレッドを使用すると、ネイティブスレッドで、またはまだマネージコードを入力していないマネージスレッド上で MDA が発生する状況に対応できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

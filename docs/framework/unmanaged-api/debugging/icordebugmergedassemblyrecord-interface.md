@@ -2,14 +2,15 @@
 title: ICorDebugMergedAssemblyRecord インターフェイス
 ms.date: 03/30/2017
 ms.assetid: fe280b11-9479-4e34-a07c-0d1ea8088422
-ms.openlocfilehash: 721f6c1cf468b3b518d2ea213588ae2410249690
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a26702c6b21e4bfe352d861387a80b976a8dc556
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83208721"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710494"
 ---
 # <a name="icordebugmergedassemblyrecord-interface"></a>ICorDebugMergedAssemblyRecord インターフェイス
+
 マージされたアセンブリに関する情報を提供します。  
   
 ## <a name="methods"></a>メソッド  
@@ -23,12 +24,13 @@ ms.locfileid: "83208721"
 |[GetSimpleName メソッド](icordebugmergedassemblyrecord-getsimplename-method.md)|アセンブリの簡易名を取得します。|  
 |[GetVersion メソッド](icordebugmergedassemblyrecord-getversion-method.md)|アセンブリのバージョン情報を取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このインターフェイスは .NET ネイティブでのみ使用可能です。 .NET ネイティブの外部で ICorDebug シナリオについてこのインターフェイスを実装する場合は、共通言語ランタイムはこのインターフェイスを無視します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
