@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3eb41151-a228-43e3-ba8f-e6dd3ceb8542
 topic_type:
 - apiref
-ms.openlocfilehash: 332d60418c744a9391c7c0afc20248c2239b090c
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 4436e4528c1dc486eb5c443c5a9467ac69a26c7d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441621"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706932"
 ---
 # <a name="isymunmanagedconstantgetsignature-method"></a>ISymUnmanagedConstant::GetSignature メソッド
+
 定数の署名を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,19 +37,22 @@ HRESULT GetSignature(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `cSig`  
  からパラメーターが指すバッファーの長さ `pcSig` 。  
   
  `pcSig`  
- 入出力`ULONG32`署名を格納するために必要なバッファーのサイズ (文字数) を受け取るへのポインター。  
+ 入出力 `ULONG32` 署名を格納するために必要なバッファーのサイズ (文字数) を受け取るへのポインター。  
   
  `sig`  
  入出力署名を格納するバッファー。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

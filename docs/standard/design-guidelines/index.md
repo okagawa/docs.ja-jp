@@ -8,14 +8,15 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], about
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
-ms.openlocfilehash: 9dc764492e1ac565c51d49d07e6566295bb76bc1
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 03fa44c1fed219b50cf1a8d22b2c9f79947f4976
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821035"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706659"
 ---
 # <a name="framework-design-guidelines"></a>フレームワーク デザインのガイドライン
+
 このセクションでは、.NET Framework を拡張および操作するライブラリを設計するためのガイドラインを示します。 この目標は、開発に使用されるプログラミング言語に依存しない統合プログラミングモデルを提供することで、ライブラリデザイナーが API の一貫性と使いやすさを保証できるようにすることです。 .NET Framework を拡張するクラスおよびコンポーネントを開発する場合は、これらのデザインガイドラインに従うことをお勧めします。 一貫性のないライブラリ設計は、開発者の生産性に悪影響を及ぼし、導入を推奨しません。  
   
  ガイドラインは、「」、「」、および「」という用語で構成される単純な推奨事項としてまとめられてい `Do` `Consider` `Avoid` `Do not` ます。 これらのガイドラインは、クラスライブラリデザイナーがさまざまなソリューション間のトレードオフを理解できるようにすることを目的としています。 優れたライブラリ設計では、これらの設計ガイドラインに違反することが必要になる場合があります。 このようなケースはまれであり、明確で説得力のある理由を決定することが重要です。  
@@ -23,6 +24,7 @@ ms.locfileid: "94821035"
  これらのガイドラインは、抜粋です *Framework の設計ガイドラインから、再利用可能な .Net ライブラリである2番目のエディション*(Krzysztof Cwalina と Brad abrams) の規則、表現、パターンについて説明しています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [名前付けのガイドライン](naming-guidelines.md)  
  クラスライブラリのアセンブリ、名前空間、型、およびメンバーの名前付けに関するガイドラインを提供します。  
   

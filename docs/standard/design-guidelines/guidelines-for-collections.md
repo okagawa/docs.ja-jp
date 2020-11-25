@@ -2,14 +2,15 @@
 title: コレクションに関するガイドライン
 ms.date: 10/22/2008
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-ms.openlocfilehash: 2306462d933e71d0d23021a0e036e8cc23100c68
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a143e88be01bf2c8f45e25f26498d2d3ccbd98da
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821087"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706672"
 ---
 # <a name="guidelines-for-collections"></a>コレクションに関するガイドライン
+
 一般的な特性を持つオブジェクトのグループを操作するために特に設計された型はすべて、コレクションと見なすことができます。 ほとんどの場合、このような型はまたはを実装するのに適してい <xref:System.Collections.IEnumerable> <xref:System.Collections.Generic.IEnumerable%601> ます。したがって、このセクションでは、これらのインターフェイスのいずれかまたは両方を実装する型のみをコレクションにすることを検討します。
 
  ❌ パブリック Api では、弱く型指定されたコレクションを使用しないでください。
@@ -31,6 +32,7 @@ ms.locfileid: "94821087"
  ❌ との両方を `IEnumerator<T>` `IEnumerable<T>` 同じ型に実装しないでください。 これは、非ジェネリックインターフェイスとにも当てはまり `IEnumerator` `IEnumerable` ます。
 
 ## <a name="collection-parameters"></a>コレクションパラメーター
+
  ✔️は、パラメーター型として可能な限り、最も特殊化されていない型を使用します。 コレクションをパラメーターとして受け取るほとんどのメンバーは、インターフェイスを使用し `IEnumerable<T>` ます。
 
  ❌ プロパティに <xref:System.Collections.Generic.ICollection%601> アクセスする場合は、パラメーターとしてまたはを使用しない <xref:System.Collections.ICollection> で `Count` ください。
@@ -38,6 +40,7 @@ ms.locfileid: "94821087"
  代わりに、またはを使用して、 `IEnumerable<T>` `IEnumerable` オブジェクトがまたはを実装しているかどうかを動的に確認してください `ICollection<T>` `ICollection` 。
 
 ## <a name="collection-properties-and-return-values"></a>コレクションのプロパティと戻り値
+
  ❌ 設定可能なコレクションプロパティを指定しないでください。
 
  コレクションの内容を置き換えるには、まずコレクションをクリアしてから、新しい内容を追加します。 コレクション全体を置き換えることが一般的なシナリオである場合は、コレクションに対してメソッドを指定することを検討してください `AddRange` 。
@@ -69,6 +72,7 @@ ms.locfileid: "94821087"
  一般的な規則として、null と空の (0 項目) のコレクションまたは配列は同じように扱う必要があります。
 
 ### <a name="snapshots-versus-live-collections"></a>スナップショットとライブコレクション
+
  ある時点の状態を表すコレクションは、スナップショットコレクションと呼ばれます。 たとえば、データベースクエリから返された行を含むコレクションはスナップショットです。 常に現在の状態を表すコレクションは、live collections と呼ばれます。 たとえば、項目のコレクション `ComboBox` はライブコレクションです。
 
  ❌ プロパティからスナップショットコレクションを返さないようにします。 プロパティはライブコレクションを返します。
@@ -80,6 +84,7 @@ ms.locfileid: "94821087"
  一般に、共有リソース (ディレクトリ内のファイルなど) を表すすべてのコレクションは揮発性です。 このようなコレクションは、実装が単なる順方向専用列挙子の場合を除き、ライブコレクションとして実装するのは非常に困難または不可能です。
 
 ## <a name="choosing-between-arrays-and-collections"></a>配列とコレクションの選択
+
  ✔️は、配列に対してコレクションを優先します。
 
  コレクションを使用すると、コンテンツの制御が強化され、時間の経過と共に進化して、より使いやすくなります。 また、配列の複製にかかるコストが膨大であるため、読み取り専用のシナリオに配列を使用することはお勧めしません。 使いやすさの研究では、コレクションベースの Api を使用する開発者の方が快適であることがわかりました。
@@ -93,6 +98,7 @@ ms.locfileid: "94821087"
  ❌ プロパティ getter が呼び出されるたびに、プロパティが新しい配列 (内部配列のコピーなど) を返す必要がある場合は、プロパティに配列を使用しないでください。
 
 ## <a name="implementing-custom-collections"></a>カスタムコレクションの実装
+
  `Collection<T>` `ReadOnlyCollection<T>` `KeyedCollection<TKey,TItem>` 新しいコレクションをデザインするときに、、、またはから継承することを検討✔️。
 
  `IEnumerable<T>`新しいコレクションをデザインする場合は、✔️を実装します。 `ICollection<T>`またはを実装する `IList<T>` ことを検討してください。
@@ -106,6 +112,7 @@ ms.locfileid: "94821087"
  ❌ などの非ジェネリック基本コレクションから継承しません `CollectionBase` 。 代わりに `Collection<T>`、`ReadOnlyCollection<T>`、および `KeyedCollection<TKey,TItem>` 型を使用してください。
 
 ### <a name="naming-custom-collections"></a>カスタムコレクションの名前付け
+
  コレクション (を実装する型 `IEnumerable` ) は主に2つの理由で作成されます。 (1) 構造固有の操作を使用して新しいデータ構造を作成し、多くの場合、既存のデータ構造 (、、など) とは異なるパフォーマンス特性を作成し、  <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.LinkedList%601> <xref:System.Collections.Generic.Stack%601> (2) 特定の項目セットを保持するための特殊なコレクションを作成  <xref:System.Collections.Specialized.StringCollection> します データ構造は、アプリケーションとライブラリの内部実装で最もよく使用されます。 特に、特化されたコレクションは Api で公開されます (プロパティとパラメーターの型として)。
 
  ✔️は、またはを実装する抽象化の名前に "Dictionary" サフィックスを使用し `IDictionary` `IDictionary<TKey,TValue>` ます。

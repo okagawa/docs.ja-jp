@@ -14,18 +14,19 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-ms.openlocfilehash: ff9efd40b630e8e25963b3d69b026feea2823ece
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 60832e823ed2f51fdd13c467dbbef4378de27885
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821100"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706711"
 ---
 # <a name="general-naming-conventions"></a>一般的な名前付け規則
 
 ここでは、単語の選択に関連する一般的な名前付け規則、略語と頭字語の使用に関するガイドライン、および言語固有の名前の使用を回避するための推奨事項について説明します。
 
 ## <a name="word-choice"></a>単語の選択
+
  ✔️は、簡単に判読できる識別子名を選択します。
 
  たとえば、という名前のプロパティは、 `HorizontalAlignment` よりも英語で読みやすく `AlignmentHorizontal` なります。
@@ -43,6 +44,7 @@ ms.locfileid: "94821100"
  共通言語仕様 (CLS) の規則4に従って、すべての準拠言語は、その言語のキーワードを識別子として使用する名前付き項目へのアクセスを許可する機構を提供する必要があります。 たとえば、C# では、この場合、エスケープメカニズムとして @ sign が使用されます。 ただし、エスケープシーケンスではなく1つのメソッドを使用する方がはるかに困難であるため、一般的なキーワードを避けることをお勧めします。
 
 ## <a name="using-abbreviations-and-acronyms"></a>省略形と頭字語の使用
+
  ❌ 識別子名の一部として省略形または短縮形を使用しないでください。
 
  たとえば、で `GetWindow` はなくを使用 `GetWin` します。
@@ -50,6 +52,7 @@ ms.locfileid: "94821100"
  ❌ 広く受け入れられていない頭字語は使用せず、必要な場合にのみ使用してください。
 
 ## <a name="avoiding-language-specific-names"></a>Language-Specific 名の回避
+
  型名の言語固有のキーワードではなく、意味的に興味深い名前を使用する✔️ます。
 
  たとえば、 `GetLength` はよりもわかりやすい名前です `GetInt` 。
@@ -78,6 +81,7 @@ ms.locfileid: "94821100"
  一般的な名前 (やなど) は、型名を繰り返すのではなく、通常の名前を使用します。たとえば、識別子に意味が `value` `item` なく、パラメーターの型が重要でない場合には、型名を繰り返すのではなく、✔️ます。
 
 ## <a name="naming-new-versions-of-existing-apis"></a>既存の Api の新しいバージョンの命名
+
  既存の API の新しいバージョンを作成するときに、古い API に似た名前を使用✔️ます。
 
  これは、Api 間の関係を強調表示するのに役立ちます。

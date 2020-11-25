@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: f14f986e-f6ce-42bc-aa23-18150c46d28c
 topic_type:
 - apiref
-ms.openlocfilehash: 199a649b0481c2a740926636345eefbda6831ef2
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: da3ee54b1c3361149c11a9cfad8bdb07a5007ecf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007547"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706139"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap 列挙型
+
 PInvoke 呼び出しのオプションを指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -78,9 +79,9 @@ typedef enum  CorPinvokeMap {
 |`pmThrowOnUnmappableCharUseAssem`|予約済み。|  
 |`pmThrowOnUnmappableCharEnabled`|相互運用マーシャラーがマップされていない文字を検出したときに、例外をスローします。|  
 |`pmThrowOnUnmappableCharDisabled`|相互運用マーシャラーがマップ不可能な文字を検出した場合は、例外をスローしないでください。|  
-|`pmThrowOnUnmappableCharMask`|予約済み|  
+|`pmThrowOnUnmappableCharMask`|予約されています。|  
 |`pmSupportsLastError`|`SetLastError`属性付きメソッドから戻る前に、呼び出し先が Win32 関数を呼び出すことができるようにします。|  
-|`pmCallConvMask`|予約済み|  
+|`pmCallConvMask`|予約されています。|  
 |`pmCallConvWinapi`|既定のプラットフォーム呼び出し規約を使用します。 たとえば、Windows では、既定値はで `StdCall` あり、Windows CE .net ではです `Cdecl` 。|  
 |`pmCallConvCdecl`|呼び出し規約を使用し `Cdecl` ます。 この場合、呼び出し元はスタックを消去します。 これにより `varargs` 、(つまり、可変個のパラメーターを受け取る関数) を使用して関数を呼び出すことができます。|  
 |`pmCallConvStdcall`|呼び出し規約を使用し `StdCall` ます。 この場合、呼び出し先がスタックを消去します。 これは、プラットフォーム呼び出しでアンマネージ関数を呼び出すための既定の規約です。|  
@@ -88,7 +89,8 @@ typedef enum  CorPinvokeMap {
 |`pmCallConvFastcall`|予約済み。|  
 |`pmMaxValue`|予約済み。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorHdr. h  

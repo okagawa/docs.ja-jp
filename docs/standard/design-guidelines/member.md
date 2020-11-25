@@ -8,14 +8,15 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], members
 - member design guidelines [.NET Framework]
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
-ms.openlocfilehash: 512fc3b7fde93279995a67be2fc0b285ba235f16
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5070f45beccd89d6f051f1b1d8345390e915d471
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820944"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706594"
 ---
 # <a name="member-design-guidelines"></a>メンバーのデザインのガイドライン
+
 メソッド、プロパティ、イベント、コンストラクター、およびフィールドは、総称してメンバーと呼ばれます。 フレームワークのエンドユーザーに公開されるフレームワークの機能は、最終的にメンバーになります。  
   
  メンバーは、仮想または非仮想、具象または抽象、静的、またはインスタンスにすることができ、アクセシビリティの複数の異なるスコープを持つことができます。 これらはすべて、非常に優れた表現力を提供しますが、同時にフレームワークデザイナーの一部に注意する必要があります。  
@@ -23,6 +24,7 @@ ms.locfileid: "94820944"
  この章では、任意の型のメンバーを設計する際に従う必要がある基本的なガイドラインについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [メンバーのオーバーロード](member-overloading.md)  
  [プロパティのデザイン](property.md)  
  [コンストラクターのデザイン](constructor.md)  

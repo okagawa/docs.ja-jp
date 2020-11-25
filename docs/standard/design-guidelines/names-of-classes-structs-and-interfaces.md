@@ -13,14 +13,15 @@ helpviewer_keywords:
 - interfaces [.NET Framework], names
 - generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
-ms.openlocfilehash: b9de9329cc8e1bfc47a46523c7119bb3b2c244d8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 49bafda0d5c362fa02313c5304436069d054cfd9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290215"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706516"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>クラス、構造体、およびインターフェイスの名前
+
 次に示す名前付けのガイドラインは、一般的な型の名前付けに適用されます。
 
  ✔️は、文字の大文字と小文字の区別を使用して、名詞または名詞句でクラスと構造体に名前を付けます。
@@ -31,7 +32,7 @@ ms.locfileid: "84290215"
 
  名詞と名詞句を使用することはほとんどなく、型がインターフェイスではなく抽象クラスであることを示している可能性があります。
 
- ❌クラス名にプレフィックス (例: "C") を指定しないでください。
+ ❌ クラス名にプレフィックス (例: "C") を指定しないでください。
 
  ✔️派生クラスの名前を基底クラスの名前で終了することを検討してください。
 
@@ -44,7 +45,8 @@ ms.locfileid: "84290215"
  クラスがインターフェイスの標準実装であるクラスインターフェイスのペアを定義する場合は、名前がインターフェイス名の "I" プレフィックスによってのみ異なることを✔️してください。
 
 ## <a name="names-of-generic-type-parameters"></a>ジェネリック型パラメーターの名前
- ジェネリックが .NET Framework 2.0 に追加されました。 この機能では、*型パラメーター*と呼ばれる新しい種類の識別子が導入されました。
+
+ ジェネリックが .NET Framework 2.0 に追加されました。 この機能では、 *型パラメーター* と呼ばれる新しい種類の識別子が導入されました。
 
  1文字の名前が完全に記述されており、わかりやすい名前で値が追加されない場合を除き、ジェネリック型パラメーターにわかりやすい名前を付ける✔️ます。
 
@@ -69,14 +71,15 @@ public interface ISessionChannel<TSession> where TSession : ISession {
  たとえば、に制約されたパラメーターを `ISession` 呼び出すことができ `TSession` ます。
 
 ## <a name="names-of-common-types"></a>共通型の名前
+
  ✔️は、次の表に記載されているガイドラインに従って、特定の .NET Framework 型から派生した型に名前を付けることができます。
 
 |基本型|派生/実装型のガイドライン|
 |---------------|------------------------------------------|
 |`System.Attribute`|カスタム属性クラスの名前にサフィックス "Attribute" を追加✔️ます。|
-|`System.Delegate`|✔️は、イベントで使用されるデリゲートの名前に "EventHandler" というサフィックスを追加します。<br /><br /> イベントハンドラーとして使用されていないデリゲートの名前に "Callback" というサフィックスを追加✔️ます。<br /><br /> ❌デリゲートにサフィックス "Delegate" を追加しないでください。|
+|`System.Delegate`|✔️は、イベントで使用されるデリゲートの名前に "EventHandler" というサフィックスを追加します。<br /><br /> イベントハンドラーとして使用されていないデリゲートの名前に "Callback" というサフィックスを追加✔️ます。<br /><br /> ❌ デリゲートにサフィックス "Delegate" を追加しないでください。|
 |`System.EventArgs`|サフィックス "EventArgs" を追加✔️ます。|
-|`System.Enum`|❌このクラスから派生させることはできません。代わりに、お使いの言語でサポートされているキーワードを使用してください。たとえば、C# では、キーワードを使用し `enum` ます。<br /><br /> ❌サフィックス "Enum" または "Flag" は追加しないでください。|
+|`System.Enum`|❌ このクラスから派生させることはできません。代わりに、お使いの言語でサポートされているキーワードを使用してください。たとえば、C# では、キーワードを使用し `enum` ます。<br /><br /> ❌ サフィックス "Enum" または "Flag" は追加しないでください。|
 |`System.Exception`|サフィックス "Exception" を追加✔️ます。|
 |`IDictionary` <br /> `IDictionary<TKey,TValue>`|サフィックス "Dictionary" を追加✔️ます。 `IDictionary`は特定の種類のコレクションであることに注意してくださいが、このガイドラインは、次に示す一般的なコレクションのガイドラインよりも優先されます。|
 |`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|サフィックス "Collection" を追加✔️ます。|
@@ -84,17 +87,18 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 |`CodeAccessPermission IPermission`|✔️サフィックス "Permission" を追加します。|
 
 ## <a name="naming-enumerations"></a>列挙型に名前を付ける
+
  一般的に、列挙型の名前 (列挙型とも呼ばれます) は、標準的な型の名前付け規則に従う必要があります。 ただし、列挙型に特に適用される追加のガイドラインがあります。
 
  ✔️値がビットフィールドでない限り、列挙体には単数型名を使用します。
 
  ✔️は、値としてビットフィールドを持つ列挙体に対して複数形の型名を使用します (flags enum とも呼ばれます)。
 
- ❌列挙型の名前に "Enum" サフィックスを使用しないでください。
+ ❌ 列挙型の名前に "Enum" サフィックスを使用しないでください。
 
- ❌列挙型の名前に "Flag" または "Flags" サフィックスは使用しないでください。
+ ❌ 列挙型の名前に "Flag" または "Flags" サフィックスは使用しないでください。
 
- ❌列挙値の名前にプレフィックスを使用しないでください (たとえば、ADO 列挙型の場合は "ad"、リッチテキスト列挙型の場合は "rtf" など)。
+ ❌ 列挙値の名前にプレフィックスを使用しないでください (たとえば、ADO 列挙型の場合は "ad"、リッチテキスト列挙型の場合は "rtf" など)。
 
  *©2005、2009 Microsoft Corporation の部分。すべての権限が予約されています。*
 

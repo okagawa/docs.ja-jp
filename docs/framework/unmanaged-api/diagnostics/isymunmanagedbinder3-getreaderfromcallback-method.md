@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ef83bd2-3d8e-499e-8a12-d9d6fd6ced30
 topic_type:
 - apiref
-ms.openlocfilehash: 4a23e9aa259f430c0d0579657952fc6aba4c307c
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: d48c2bdd55e487038048f432c5586d49f393118c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441657"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706945"
 ---
 # <a name="isymunmanagedbinder3getreaderfromcallback-method"></a>ISymUnmanagedBinder3::GetReaderFromCallback メソッド
+
 `IID_IDiaReadExeAtRVACallback` `IID_IDiaReadExeAtOffsetCallback` メモリからデバッグディレクトリ情報を取得するために、ユーザーがまたはのいずれかを使用してを実装または提供できるようにします。  
   
 ## <a name="syntax"></a>構文  
@@ -38,6 +39,7 @@ HRESULT GetReaderFromCallback(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `importer`  
  からメタデータインポートインターフェイスへのポインター。  
   
@@ -48,18 +50,20 @@ HRESULT GetReaderFromCallback(
  から検索パスへのポインター。  
   
  `searchPolicy`  
- からシンボルリーダーの検索を実行するときに使用するポリシーを指定する[Corsymsearchpolicyattributes](corsymsearchpolicyattributes-enumeration.md)列挙体の値。  
+ からシンボルリーダーの検索を実行するときに使用するポリシーを指定する [Corsymsearchpolicyattributes](corsymsearchpolicyattributes-enumeration.md) 列挙体の値。  
   
  `callback`  
  からコールバック関数へのポインター。  
   
  `pRetVal`  
- 入出力返された[ISymUnmanagedReader](isymunmanagedreader-interface.md)インターフェイスに設定されたポインター。  
+ 入出力返された [ISymUnmanagedReader](isymunmanagedreader-interface.md) インターフェイスに設定されたポインター。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl  
   
 ## <a name="see-also"></a>関連項目

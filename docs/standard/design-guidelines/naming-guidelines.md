@@ -11,14 +11,15 @@ helpviewer_keywords:
 - names [.NET Framework]
 - format naming guidelines [.NET Framework]
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
-ms.openlocfilehash: e82b6941d3ea0243f4ae16bc9d42ea8d1f1fccfb
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: de68eeb287b13bc9f55230243f23cd03508f2561
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820879"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706425"
 ---
 # <a name="naming-guidelines"></a>名前付けのガイドライン
+
 フレームワークの開発における一貫した名前付け規則に従うことは、フレームワークのユーザビリティに大きな影響を与える可能性があります。 これにより、多数の開発者が広範に分離されたプロジェクトでフレームワークを使用できるようになります。 フォームの一貫性を超えて、フレームワーク要素の名前を簡単に理解し、各要素の機能を伝達する必要があります。  
   
  この章の目的は、一貫性のある名前付け規則を提供して、開発者にとってわかりやすい名前にすることです。  
@@ -26,6 +27,7 @@ ms.locfileid: "94820879"
  一般的なコード開発ガイドラインとしてこれらの名前付け規則を採用することにより、コード全体で一貫性のある名前付けを行うことができますが、公開されている Api (パブリックまたは保護された型とメンバー、および明示的に実装されたインターフェイス) に適用するだけで済みます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [大文字の表記規則](capitalization-conventions.md)  
  [一般的な名前付け規則](general-naming-conventions.md)  
  [アセンブリと Dll の名前](names-of-assemblies-and-dlls.md)  

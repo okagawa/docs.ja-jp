@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b791351-bcc5-4ddd-9cab-eff2f7dd5142
 topic_type:
 - apiref
-ms.openlocfilehash: 2d075820df534e08bdf4c2b75d36f6a60f979662
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 0f42020821ec71d1e59ae8097f22ee530e16a576
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894096"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706178"
 ---
 # <a name="icordebugchainenumnext-method"></a>ICorDebugChainEnum::Next メソッド
+
 現在の位置から開始して、指定された数の値を列挙から取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,16 +38,18 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `celt`  
- から取得するインスタンス`ICorDebugChain`の数。  
+ から `ICorDebugChain` 取得するインスタンスの数。  
   
  `chains`  
- 入出力ポインターの配列。各ポインターは、チェーンを表す`ICorDebugChain`オブジェクトを指します。  
+ 入出力ポインターの配列。各ポインターは、 `ICorDebugChain` チェーンを表すオブジェクトを指します。  
   
  `pceltFetched`  
- 入出力実際に返されたインスタンス`ICorDebugChain`の数へのポインター。 が1の場合`celt` 、この値は null になります。  
+ 入出力実際に返されたインスタンスの数へのポインター `ICorDebugChain` 。 が1の場合、この値は null `celt` になります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

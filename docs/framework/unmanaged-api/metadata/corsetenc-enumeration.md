@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: fe4150e8-071d-43fb-8e06-c3c616dbeed2
 topic_type:
 - apiref
-ms.openlocfilehash: 93a194ea72ab894544927cf96304397b7211b5ac
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: df945803f2d56d04ccc68f314eb55665579ed7fd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009159"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705983"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC 列挙型
+
 メタデータの生成中の動作を決定する値が格納されます。  
   
 ## <a name="syntax"></a>構文  
@@ -55,7 +56,8 @@ typedef enum CorSetENC {
 |`MDUpdateDelta`|は、変更されたメタデータのみを保存することを示します。|  
 |`MDUpdateMask`|`MDUpdateENC`、、およびが含まれ `MDUpdateFull` `MDUpdateIncremental` ます。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorHdr. h  

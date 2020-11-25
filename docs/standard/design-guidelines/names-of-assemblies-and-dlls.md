@@ -8,14 +8,15 @@ helpviewer_keywords:
 - assemblies [.NET Framework], names
 - DLLs, names
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
-ms.openlocfilehash: 2d1484889eb7db537de970c31109f26a6d61ad8d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 95a90ff66ffc9f2a5a3202d6877b1cc19149ff35
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830052"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706529"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>アセンブリと DLL の名前
+
 アセンブリは、マネージコードプログラムの配置と id の単位です。 アセンブリは1つ以上のファイルにまたがることができますが、通常、アセンブリは1対1のを DLL とマップします。 したがって、このセクションでは DLL の名前付け規則についてのみ説明し、次にアセンブリの名前付け規則にマップできます。
 
  アセンブリ Dll の名前を選択して、システムデータなどの大量の機能を提案する✔️ます。

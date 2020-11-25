@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: eb95ce39-5688-43c1-a34d-578794b32faa
 topic_type:
 - apiref
-ms.openlocfilehash: 22a7f87a5803dc185052a5ce7ed427eff9f8fb18
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 81d47a3e4d72f991dc15924e7ff1ecc8df2e7322
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009185"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706057"
 ---
 # <a name="corsavesize-enumeration"></a>CorSaveSize 列挙型
+
 保存操作のサイズの照会で要求される精度のレベルを示す値が格納されます。  
   
 ## <a name="syntax"></a>構文  
@@ -42,12 +43,13 @@ typedef enum CorSaveSize {
 |`cssQuick`|戻り値を推定することを指定します。|  
 |`cssDiscardTransientCAs`|破棄可能な型を削除する必要があることを指定します。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorHdr. h  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

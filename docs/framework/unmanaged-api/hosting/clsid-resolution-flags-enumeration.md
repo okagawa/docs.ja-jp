@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: cd8b9879-962a-4811-aa46-2e2b6bae0d84
 topic_type:
 - apiref
-ms.openlocfilehash: 5ac015f958d9504bbd14a66ead86548b8df32764
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 19731f34d259757e6de62dd4b4f0d4735d1c2e61
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616776"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706165"
 ---
 # <a name="clsid_resolution_flags-enumeration"></a>CLSID_RESOLUTION_FLAGS 列挙型
+
 共通言語ランタイム (CLR: common language runtime) でを解決する方法を示す値を格納し `CLSID` ます。  
   
 ## <a name="syntax"></a>構文  
@@ -41,6 +42,7 @@ typedef enum {
 |`CLSID_RESOLUTION_REGISTERED`|は、ランタイムがレジストリを検索して shim ポリシーを適用することを示します。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
@@ -49,4 +51,4 @@ typedef enum {
   
 ## <a name="see-also"></a>関連項目
 
-- [ホスティングの列挙体](hosting-enumerations.md)
+- [ホスティングの列挙型](hosting-enumerations.md)

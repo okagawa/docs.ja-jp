@@ -9,14 +9,15 @@ helpviewer_keywords:
 - members [.NET Framework], type
 - class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
-ms.openlocfilehash: 1ac2f9f5e10149027b79cd67e5077ec6bc17f9c9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bc0aee32b5cc1d40afdd9cce8260d5b5341a687d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820814"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706399"
 ---
 # <a name="nested-types"></a>入れ子にされた型
+
 入れ子になった型は、外側の型と呼ばれる別の型のスコープ内で定義された型です。 入れ子になった型は、それを囲む型のすべてのメンバーにアクセスできます。 たとえば、外側の型で定義されているプライベートフィールドと、それを囲む型のすべての先祖で定義されている保護されたフィールドにアクセスできます。
 
  一般に、入れ子になった型は控えめに使用する必要があります。 直接呼び出すべきではないいくつかの理由があります。 一部の開発者は、この概念について完全には理解していません。 たとえば、これらの開発者は、入れ子になった型の変数を宣言する構文で問題が発生する可能性があります。 入れ子になった型もその外側の型と密接に結び付いています。そのため、汎用型には適していません。

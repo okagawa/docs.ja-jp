@@ -6,14 +6,15 @@ helpviewer_keywords:
 - read-only fields
 - member design guidelines, fields
 ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
-ms.openlocfilehash: 6e58274f32ea129d3271c11e321bdbd454d2406a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4329ca9e74fa02411bd39755a432fc7d4858597d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821113"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706698"
 ---
 # <a name="field-design"></a>フィールドのデザイン
+
 カプセル化の原則は、オブジェクト指向設計で最も重要な概念の1つです。 この原則は、オブジェクト内に格納されているデータが、そのオブジェクトに対してのみアクセスできる必要があることを示しています。
 
  原則を解釈するには、型のメンバーに対して以外のコードを中断することなく、その型のフィールドに対する変更 (名前または型の変更) を行うことができるように、型を設計する必要があるという方法があります。 この解釈は、すべてのフィールドをプライベートにする必要があることを意味します。

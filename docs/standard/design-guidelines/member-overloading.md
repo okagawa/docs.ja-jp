@@ -8,14 +8,15 @@ helpviewer_keywords:
 - overloaded members
 - signatures, members
 ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
-ms.openlocfilehash: 16e84f06ec388fe7e3c221f35c3e970b9b483ba5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: fe8bf23a04e6684564d3d7e287c2a009e0817732
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820970"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706633"
 ---
 # <a name="member-overloading"></a>メンバーのオーバーロード
+
 メンバーのオーバーロードとは、同じ型に複数のメンバーを作成し、パラメーターの数または型だけではなく、同じ名前を持つことを意味します。 たとえば、次の例では、 `WriteLine` メソッドはオーバーロードされています。
 
 ```csharp

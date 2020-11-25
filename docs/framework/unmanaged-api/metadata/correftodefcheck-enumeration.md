@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: f9a80f1a-55af-4459-b095-8441aae16119
 topic_type:
 - apiref
-ms.openlocfilehash: ce6f5993b9c1aeb63e121b3567ee468cea1c9318
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: e7ce604acddb88d5a15844cbce2622b21e364cc1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007521"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706113"
 ---
 # <a name="correftodefcheck-enumeration"></a>CorRefToDefCheck 列挙型
+
 コードを最適化するために定義に変換される、参照先アイテムを制御するフラグを指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -46,7 +47,8 @@ typedef enum CorRefToDefCheck {
 |`MDTypeRefToDef`|型の参照のみを型定義に変換することを指定します。|  
 |`MDMemberRefToDef`|メンバー参照のみを定義に変換することを指定します。 つまり、メンバー参照は、メソッド定義またはフィールド定義に変換される必要があります。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorHdr. h  

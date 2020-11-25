@@ -9,14 +9,15 @@ helpviewer_keywords:
 - namespaces [.NET Framework], names
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
-ms.openlocfilehash: e435e0281165b4a9f12bbccbeb10401b57375dcb
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 561a6e4ed1abf82fc1412123a4558a63e7176b2f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290202"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706490"
 ---
 # <a name="names-of-namespaces"></a>名前空間の名前
+
 他の命名ガイドラインと同様に、名前空間に名前を付ける際の目的は、名前空間の内容がどのようなものである可能性があるかをすぐに把握するために、フレームワークを使用するプログラマにとって十分なわかりやすいものにすることです。 次のテンプレートは、名前空間の名前付けに関する一般的な規則を指定します。
 
  `<Company>.(<Product>|<Technology>)[.<Feature>][.<Subnamespace>]`
@@ -29,7 +30,7 @@ ms.locfileid: "84290202"
 
  名前空間名の2番目のレベルでは、バージョンに依存しない安定した製品名を使用✔️ます。
 
- ❌企業内のグループ名は有効期間が短くなる傾向があるため、名前空間階層内の名前の基準として組織階層を使用しないでください。 関連するテクノロジのグループを中心に、名前空間の階層を整理します。
+ ❌ 企業内のグループ名は有効期間が短くなる傾向があるため、名前空間階層内の名前の基準として組織階層を使用しないでください。 関連するテクノロジのグループを中心に、名前空間の階層を整理します。
 
  ✔️は、文字の大文字と小文字の区別を使用し、ピリオドを使用して名前空間コンポーネントを分離します (例: `Microsoft.Office.PowerPoint` )。 ブランドで nontraditional の大文字と小文字の区別が使用されている場合は、通常の名前空間の大文字と小文字が異なる場合でも、ブランドで定義されている大文字と小文字を
 
@@ -37,12 +38,13 @@ ms.locfileid: "84290202"
 
  たとえば、`System.Collection` の代わりに `System.Collections` を使用します。 ただし、ブランド名と頭字語は、このルールの例外です。 たとえば、`System.IOs` の代わりに `System.IO` を使用します。
 
- ❌名前空間とその名前空間の型に同じ名前を使用しないでください。
+ ❌ 名前空間とその名前空間の型に同じ名前を使用しないでください。
 
  たとえば、名前空間名としてを使用せずに、 `Debug` `Debug` 同じ名前空間内にという名前のクラスを指定することはできません。 いくつかのコンパイラでは、このような型を完全に修飾する必要があります。
 
 ### <a name="namespaces-and-type-name-conflicts"></a>名前空間と型名の競合
- ❌、、、などのジェネリック型の名前は導入しないでください `Element` `Node` `Log` `Message` 。
+
+ ❌ 、、、などのジェネリック型の名前は導入しないでください `Element` `Node` `Log` `Message` 。
 
  これを行うと、一般的なシナリオでの型名の競合が発生する可能性が非常に高くなります。 ジェネリック型名を修飾する必要があり `FormElement` ます (、、 `XmlNode` `EventLog` 、 `SoapMessage` )。
 
@@ -54,7 +56,7 @@ ms.locfileid: "84290202"
 
      `System.Windows*` `System.Web.UI*`
 
-     ❌単一のアプリケーションモデル内の名前空間の型に同じ名前を付けないでください。
+     ❌ 単一のアプリケーションモデル内の名前空間の型に同じ名前を付けないでください。
 
      たとえば、という名前の型を名前空間に追加しないでください。名前空間には、 `Page` <xref:System.Web.UI.Adapters?displayProperty=nameWithType> という名前の型が <xref:System.Web.UI?displayProperty=nameWithType> 既に含まれてい `Page` ます。
 
@@ -66,7 +68,7 @@ ms.locfileid: "84290202"
 
      コア名前空間には `System` 、アプリケーションモデルの名前空間とインフラストラクチャの名前空間を除く、すべての名前空間が含まれます。 コア名前空間には、他の、、、、およびが含ま `System` `System.IO` `System.Xml` `System.Net` れます。
 
-     ❌コア名前空間の型と競合する型名を指定しないでください。
+     ❌ コア名前空間の型と競合する型名を指定しないでください。
 
      たとえば、 `Stream` 型名としてを使用しないでください。 これは <xref:System.IO.Stream?displayProperty=nameWithType> 、よく使用される型と競合します。
 
@@ -74,9 +76,9 @@ ms.locfileid: "84290202"
 
      このカテゴリには、やなど、同じ最初の2つの名前空間ノードを持つすべての名前空間が含まれ `(<Company>.<Technology>*` `Microsoft.Build.Utilities` `Microsoft.Build.Tasks` ます。 1つのテクノロジに属する型が互いに競合しないことが重要です。
 
-     ❌1つのテクノロジ内の他の型と競合する型名を割り当てないでください。
+     ❌ 1つのテクノロジ内の他の型と競合する型名を割り当てないでください。
 
-     ❌テクノロジ名前空間の型とアプリケーションモデルの名前空間の間で型名の競合を発生させないでください (テクノロジがアプリケーションモデルで使用されることを想定していない場合)。
+     ❌ テクノロジ名前空間の型とアプリケーションモデルの名前空間の間で型名の競合を発生させないでください (テクノロジがアプリケーションモデルで使用されることを想定していない場合)。
 
  *©2005、2009 Microsoft Corporation の部分。すべての権限が予約されています。*
 

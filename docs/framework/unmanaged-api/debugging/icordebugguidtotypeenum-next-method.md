@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: c9937666-8e18-484d-9fe0-b9ac95199530
 topic_type:
 - apiref
-ms.openlocfilehash: 76cab0b8b5f16f24c62e31be2707c95c7e557034
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 68f548705213da7d715ae569116abae0cd24129d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777637"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705658"
 ---
 # <a name="icordebugguidtotypeenumnext-method"></a>ICorDebugGuidToTypeEnum::Next メソッド
-Guid を型情報にマップする、指定された数の[Cordebugguidtotypemapping](cordebugguidtotypemapping-structure.md)インスタンスを取得します。  
+
+Guid を型情報にマップする、指定された数の [Cordebugguidtotypemapping](cordebugguidtotypemapping-structure.md) インスタンスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,27 +37,29 @@ HRESULT Next(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `celt`  
  から取得する GUID から型へのマッピングオブジェクトの数。  
   
  `values`  
- 入出力ポインターの配列。それぞれのポインターが[Cordebugguidtotypemapping](cordebugguidtotypemapping-structure.md)オブジェクトを指します。これは、Windows ランタイム GUID を対応するテキストオブジェクトにマップします。  
+ 入出力ポインターの配列。それぞれのポインターが [Cordebugguidtotypemapping](cordebugguidtotypemapping-structure.md) オブジェクトを指します。これは、Windows ランタイム GUID を対応するテキストオブジェクトにマップします。  
   
  `pceltFetched`  
- 入出力実際に `values`で返された[Cordebugguidtotypemapping](cordebugguidtotypemapping-structure.md)オブジェクトの数へのポインター。  
+ 入出力実際にで返される [Cordebugguidtotypemapping](cordebugguidtotypemapping-structure.md) オブジェクトの数へのポインター `values` 。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
+
  **プラットフォーム:** Windows ランタイム  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - [ICorDebugGuidToTypeEnum インターフェイス](icordebugguidtotypeenum-interface.md)
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

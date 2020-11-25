@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b9240712-829c-4c8d-9a09-a6e7aa63f63a
 topic_type:
 - apiref
-ms.openlocfilehash: 3b00bf8295a635871bd7263928ff21c97053cc39
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 42cd3cc22fbbb8eb3d5ac44544fce36650b6461f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176956"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705931"
 ---
 # <a name="publickeyblob-structure"></a>PublicKeyBlob 構造体
+
 公開キーと秘密キーのペアの公開キーをバイナリ形式で表します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,22 +40,24 @@ typedef struct {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`SigAlgId`|公開キーの署名アルゴリズム (WinCrypt.h で定義されている種類`ALG_ID`) の識別子。|  
-|`HashAlgId`|公開キーのハッシュ アルゴリズム (WinCrypt.h で定義されている種類`ALG_ID`) の識別子。|  
+|`SigAlgId`|`ALG_ID`公開キーの署名アルゴリズム (WinCrypt .h で定義されている型の) の識別子。|  
+|`HashAlgId`|`ALG_ID`公開キーのハッシュアルゴリズム (WinCrypt .h で定義されている型の) の識別子。|  
 |`cbPublicKey`|キーの長さ (バイト単位)。|  
 |`PublicKey`|CryptoAPI によって返される形式のキー値を格納する可変長バイト配列。|  
   
-## <a name="remarks"></a>解説  
- 構造体`PublicKeyBlob`は、パブリック キーと秘密キーのペアの公開キーを表すために、厳密な名前の取得[、](strongnamegetpublickey-function.md)厳密な名前[の生成](strongnamesignaturegeneration-function.md)、およびその他の厳密な名前関数で使用されます。  
+## <a name="remarks"></a>注釈  
+
+ `PublicKeyBlob`構造体は、公開キーと秘密キーのペアの公開キーを表すために、 [StrongNameGetPublicKey](strongnamegetpublickey-function.md)、 [StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md)、およびその他の厳密な名前関数によって使用されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ストロングネーム.h  
+ **ヘッダー:** StrongName  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
