@@ -8,14 +8,15 @@ helpviewer_keywords:
 - exceptions, performance
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
-ms.openlocfilehash: 1d9e4ff3cfb02b1db358c19786322622621329fe
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: babe378e0d61357709006e08f71ff578492f116c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821204"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734752"
 ---
 # <a name="exceptions-and-performance"></a>例外とパフォーマンス
+
 例外に関する一般的な懸念事項の1つとして、定期的に失敗するコードに例外を使用すると、実装のパフォーマンスが許容されなくなることがあります。 これはもっともな心配です。 メンバーが例外をスローすると、パフォーマンスが低下することがあります。 ただし、エラーコードの使用を禁止する例外ガイドラインに厳密に準拠しながら、パフォーマンスを向上させることができます。 このセクションで説明する2つのパターンは、この方法を示しています。
 
  ❌ エラーコードは、例外がパフォーマンスに悪影響を与える可能性があるため、使用しないでください。
@@ -23,6 +24,7 @@ ms.locfileid: "94821204"
  パフォーマンスを向上させるには、次の2つのセクションで説明するように、Tester-Doer パターンまたは Try-Parse パターンを使用することができます。
 
 ## <a name="tester-doer-pattern"></a>Tester-Doer パターン
+
  メンバーを2つに分割すると、例外スローメンバーのパフォーマンスを向上させることができます。 では、インターフェイスのメソッドを見てみましょう <xref:System.Collections.Generic.ICollection%601.Add%2A> <xref:System.Collections.Generic.ICollection%601> 。
 
 ```csharp
@@ -46,6 +48,7 @@ if (!numbers.IsReadOnly)
  ✔️例外に関連するパフォーマンスの問題を回避するために、一般的なシナリオで例外をスローする可能性のあるメンバーの Tester-Doer パターンを検討してください。
 
 ## <a name="try-parse-pattern"></a>Try-Parse パターン
+
  パフォーマンスが非常に重要な Api では、前のセクションで説明した Tester-Doer パターンよりも高速なパターンを使用する必要があります。 このパターンでは、メンバー名を調整して、適切に定義されたテストケースをメンバーセマンティクスの一部にするためのを呼び出します。 たとえば、は、 <xref:System.DateTime> <xref:System.DateTime.Parse%2A> 文字列の解析が失敗した場合に例外をスローするメソッドを定義します。 また、解析を試行する対応するメソッドも定義 <xref:System.DateTime.TryParse%2A> しますが、解析が失敗した場合は false を返し、パラメーターを使用して解析の成功の結果を返し `out` ます。
 
 ```csharp

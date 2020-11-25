@@ -7,14 +7,15 @@ helpviewer_keywords:
 - member design guidelines, operators
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
-ms.openlocfilehash: 40e1c6a4a65bfc20c94223e4012e34928b25a2ab
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7757e6cfdb9ae31f6e94c26a2684f8176174499a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830039"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734817"
 ---
 # <a name="operator-overloads"></a>演算子のオーバーロード
+
 演算子のオーバーロードでは、フレームワーク型を組み込みの言語プリミティブとして表示できます。
 
  一部の状況では許可および便利ですが、演算子のオーバーロードは慎重に使用する必要があります。 多くの場合、演算子のオーバーロードは不正使用されています。たとえば、framework デザイナーが、単純なメソッドである必要がある操作に対して演算子の使用を開始した場合などです。 次のガイドラインは、演算子のオーバーロードを使用するタイミングと方法を決定するのに役立ちます。
@@ -85,9 +86,11 @@ ms.locfileid: "94830039"
 |`~`|`op_OnesComplement`|`OnesComplement`|
 
 ### <a name="overloading-operator-"></a>オーバーロード演算子 = =
+
  オーバーロード `operator ==` は非常に複雑です。 演算子のセマンティクスは、など、他のいくつかのメンバーと互換性がある必要があり <xref:System.Object.Equals%2A?displayProperty=nameWithType> ます。
 
 ### <a name="conversion-operators"></a>変換演算子
+
  変換演算子は、ある型から別の型への変換を可能にする単項演算子です。 演算子は、オペランドまたは戻り値の型のいずれかの静的メンバーとして定義する必要があります。 変換演算子には、暗黙的と明示的の2種類があります。
 
  ❌ エンドユーザーがこのような変換を明確に想定していない場合は、変換演算子を指定しないでください。

@@ -2,14 +2,15 @@
 title: 依存関係プロパティ
 ms.date: 10/22/2008
 ms.assetid: 212cfb1e-cec4-4047-94a6-47209b387f6f
-ms.openlocfilehash: c6cebd7c6c630af6a1a439b48faccad2aea74a91
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ab30da59670c146874defe86b1d048f97eebf449
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821373"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734765"
 ---
 # <a name="dependency-properties"></a>依存関係プロパティ
+
 依存関係プロパティ (DP) は、など、型の変数 (field) に格納するのではなく、プロパティストアにその値を格納する通常のプロパティです。
 
  アタッチされる依存関係プロパティは、静的な Get および Set メソッドとしてモデル化された依存関係プロパティの一種で、オブジェクトとそのコンテナーの間のリレーションシップ (コンテナー上のオブジェクトの位置など) を表す "プロパティ" を表し `Button` `Panel` ます。
@@ -17,6 +18,7 @@ ms.locfileid: "94821373"
  スタイル設定、トリガー、データバインディング、アニメーション、動的リソース、継承などの WPF 機能をサポートするためにプロパティが必要な場合は、依存関係プロパティを指定✔️ます。
 
 ## <a name="dependency-property-design"></a>依存関係プロパティのデザイン
+
  <xref:System.Windows.DependencyObject>依存関係プロパティを実装するときに、✔️、またはそのサブタイプの1つを継承します。 型は、プロパティストアの非常に効率的な実装を提供し、WPF のデータバインディングを自動的にサポートします。
 
  ✔️は、 <xref:System.Windows.DependencyProperty?displayProperty=nameWithType> 依存関係プロパティごとにのインスタンスを格納する通常の CLR プロパティとパブリックの静的読み取り専用フィールドを提供します。
@@ -36,6 +38,7 @@ ms.locfileid: "94821373"
  ❌ セキュリティで保護されたデータを格納するために依存関係プロパティを使用しないでください。 プライベート依存関係プロパティも、パブリックにアクセスできます。
 
 ## <a name="attached-dependency-property-design"></a>アタッチされた依存関係プロパティのデザイン
+
  前のセクションで説明した依存関係プロパティは、宣言する型の組み込みプロパティを表します。たとえば、プロパティは、を `Text` 宣言するのプロパティです `TextButton` 。 特別な種類の依存関係プロパティは、アタッチされる依存関係プロパティです。
 
  添付プロパティの従来の例として、 <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> プロパティがあります。 プロパティは、ボタンの (グリッドではなく) 列の位置を表しますが、グリッドにボタンが含まれている場合にのみ関連し、グリッドによってボタンに "アタッチ" されます。
@@ -75,6 +78,7 @@ public class Grid {
 ```
 
 ## <a name="dependency-property-validation"></a>依存関係プロパティの検証
+
  プロパティは、多くの場合、検証と呼ばれるものを実装します。 検証ロジックは、プロパティの値を変更しようとしたときに実行されます。
 
  残念ながら、依存関係プロパティのアクセサーに任意の検証コードを含めることはできません。 代わりに、プロパティの登録時に依存関係プロパティの検証ロジックを指定する必要があります。
@@ -82,9 +86,11 @@ public class Grid {
  ❌ プロパティのアクセサーに依存関係プロパティの検証ロジックを配置しないでください。 代わりに、検証コールバックをメソッドに渡し `DependencyProperty.Register` ます。
 
 ## <a name="dependency-property-change-notifications"></a>依存関係プロパティの変更通知
+
  ❌ 依存関係プロパティのアクセサーには、変更通知ロジックを実装しないでください。 依存関係プロパティには、に変更通知コールバックを提供することによって使用する必要がある、組み込みの変更通知機能があり <xref:System.Windows.PropertyMetadata> ます。
 
 ## <a name="dependency-property-value-coercion"></a>依存関係プロパティ値の強制変換
+
  プロパティの強制変換は、プロパティの set アクセス操作子に渡された値が setter によって変更されたときに、プロパティストアが実際に変更される前に行われます。
 
  ❌ 依存関係プロパティアクセサーに強制型変換ロジックを実装しないでください。
