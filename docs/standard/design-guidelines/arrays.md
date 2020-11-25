@@ -6,14 +6,15 @@ helpviewer_keywords:
 - arrays [.NET Framework], usage guidelines
 - empty arrays
 ms.assetid: 66a1b3d8-6f3f-4715-b235-e1ff95e32d8e
-ms.openlocfilehash: c3545c609b6544e6528bbae08889d0ef20473802
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 11c1d23af4cf599ba632144634947520a1647ae7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821607"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701394"
 ---
 # <a name="arrays"></a>配列
+
 ✔️は、パブリック Api で配列に対してコレクションを使用することをお勧めします。 コレクション [セクションで](guidelines-for-collections.md) は、コレクションと配列のどちらかを選択する方法について詳しく説明します。
 
  ❌ 読み取り専用の配列フィールドは使用しないでください。 フィールド自体は読み取り専用であり、変更することはできませんが、配列内の要素は変更できます。

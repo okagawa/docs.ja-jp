@@ -5,14 +5,15 @@ helpviewer_keywords:
 - abstractions [.NET Framework]
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-ms.openlocfilehash: 314fcd0e1e91d1fc869453dd442ecaa72f91955d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9e49b79609a2d16a79a80727295d53bb36ec5943
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821594"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701316"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>抽象化の実装用の基本クラス
+
 厳密に言えば、クラスは、別のクラスが派生しているときに基底クラスになります。 ただし、このセクションでは、基底クラスは、主に共通の抽象化を提供するか、継承を使用して他のクラスが既定の実装を再利用することを目的として設計されたクラスです。 基本クラスは、通常、階層のルートにある抽象化と下部に複数のカスタム実装の間で、継承階層の中間に配置されます。
 
  抽象化を実装するための実装ヘルパーとして機能します。 たとえば、順序付けられた項目のコレクションに対するフレームワークの抽象化の1つは、 <xref:System.Collections.Generic.IList%601> インターフェイスです。 を実装する <xref:System.Collections.Generic.IList%601> ことは簡単ではないため、フレームワークには、 <xref:System.Collections.ObjectModel.Collection%601> <xref:System.Collections.ObjectModel.KeyedCollection%602> カスタムコレクションを実装するためのヘルパーとして機能するやなどのいくつかの基本クラスが用意されています。

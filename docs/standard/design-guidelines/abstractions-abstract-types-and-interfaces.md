@@ -7,14 +7,15 @@ helpviewer_keywords:
 - abstract types [.NET Framework]
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
-ms.openlocfilehash: 6acefa2d4a2aed8fca5d0b7db634d393baac6b58
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f5169cf730dc987526765c9538978901d424814b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821633"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701407"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>抽象化 (抽象型およびインターフェイス)
+
 抽象はコントラクトを記述する型ですが、コントラクトの完全な実装は提供しません。 抽象化は通常、抽象クラスまたは抽象インターフェイスとして実装され、適切に定義された一連の参照ドキュメントに含まれており、コントラクトを実装する型の必要なセマンティクスについて説明します。 .NET Framework の最も重要な抽象化には、、、などがあり <xref:System.IO.Stream> <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Object> ます。
 
  抽象化のコントラクトをサポートする具象型を実装し、抽象化を使用するフレームワーク Api でこの具象型を使用することによって、フレームワークを拡張できます。

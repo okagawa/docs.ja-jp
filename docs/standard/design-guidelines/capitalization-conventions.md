@@ -9,17 +9,19 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-ms.openlocfilehash: 8df136fb57ad61ddfd87f4dec1f6490c63c3d977
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e416a8346952a41d9c89f526bfce990dfc277fc1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821529"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701264"
 ---
 # <a name="capitalization-conventions"></a>大文字の使用規則
+
 この章のガイドラインでは、一貫して適用されている場合に、型、メンバー、およびパラメーターの識別子を読みやすくするための簡単な方法を説明します。
 
 ## <a name="capitalization-rules-for-identifiers"></a>識別子の大文字小文字の規則
+
  識別子内の単語を区別するには、識別子内の各単語の最初の文字を大文字にします。 語句を区別するためにアンダースコアを使用したり、識別子内の任意の場所で単語を区別したりしないでください。 識別子の使用方法によっては、次の2つの適切な方法で識別子を大文字にすることができます。
 
 - パスワードの大文字と小文字の区別
@@ -52,14 +54,15 @@ ms.locfileid: "94821529"
 |名前空間|Pascal|`namespace System.Security { ... }`|
 |Type|Pascal|`public class StreamReader { ... }`|
 |インターフェイス|Pascal|`public interface IEnumerable { ... }`|
-|Method|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
+|メソッド|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
 |プロパティ|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
-|イベント|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
+|Event|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
 |フィールド|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|
 |列挙値|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|
 |パラメーター|Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
 
 ## <a name="capitalizing-compound-words-and-common-terms"></a>複合語と一般的な用語を大文字にする
+
  ほとんどの複合用語は、大文字と小文字を区別するために1つの単語として扱われます。
 
  ❌ いわゆる終了形式の複合単語内の各単語を大文字にしないでください。
@@ -95,6 +98,7 @@ ms.locfileid: "94821529"
 |`Writable`|`writable`|`Writeable`|
 
 ## <a name="case-sensitivity"></a>大文字と小文字の区別
+
  CLR で実行できる言語は、大文字と小文字の区別をサポートするためには必要ありません。 お使いの言語でサポートされている場合でも、フレームワークにアクセスする可能性のある他の言語はありません。 したがって、外部からアクセスできるすべての Api では、同じコンテキスト内の2つの名前を区別するために大文字と小文字だけを使用することはできません。
 
  ❌ すべてのプログラミング言語で大文字と小文字が区別されると想定しないでください。 しかし、そうではありません。 名前は大文字と小文字のみで異なることはできません。

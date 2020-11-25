@@ -12,14 +12,15 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-ms.openlocfilehash: b1f3d36f4a9b6e44451a8534ca79fb674071a955
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 05ba9abbc9495d927b7f58ebb06f152c0c15772f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821477"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701251"
 ---
 # <a name="choosing-between-class-and-struct"></a>クラスまたは構造体の選択
+
 すべてのフレームワークデザイナーの面で基本的な設計上の決定事項の1つは、型をクラスとしてデザインするか (参照型)、または構造体 (値型) として設計するかということです。 この選択を行うには、参照型と値型の動作の違いをよく理解していることが重要です。
 
  参照型と値型の間の最初の違いは、参照型がヒープに割り当てられ、ガベージコレクトされるのに対し、値型はスタックまたはインラインの型に割り当てられ、スタックのアンワインドまたはそれを含んでいる型の割り当てが解除されるときに割り当てが解除されるという点です。 したがって、値型の割り当てと割り当て解除は、参照型の割り当てと割り当て解除よりも一般的に低コストです。

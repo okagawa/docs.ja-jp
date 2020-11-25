@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6639418-e9f2-4a99-8ce2-ec9876e0bc79
 topic_type:
 - apiref
-ms.openlocfilehash: 084f3ae12d906f5e80fdb86e65b09d2371fd246b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 075d46b0bbc68add0203daf7430afb712c998fe0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614592"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700978"
 ---
 # <a name="isymunmanageddocumentgetlanguage-method"></a>ISymUnmanagedDocument::GetLanguage メソッド
+
 このドキュメントの言語識別子を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -33,10 +34,12 @@ HRESULT GetLanguage(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pRetVal`  
  入出力言語識別子を受け取る変数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK します。  
   
 ## <a name="see-also"></a>関連項目

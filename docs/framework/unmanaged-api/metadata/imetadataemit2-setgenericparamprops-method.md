@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cd93a48d-1fed-4706-bec6-a05dc3b64fbd
 topic_type:
 - apiref
-ms.openlocfilehash: 8feba8e67f3a90dd48fd957065a9c166c204b87c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8858e692d66f7b34a66334bd4e8b906dd12962ba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492735"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701992"
 ---
 # <a name="imetadataemit2setgenericparamprops-method"></a>IMetaDataEmit2::SetGenericParamProps メソッド
+
 指定したトークンによって参照されるジェネリックパラメーター定義のプロパティ値を設定します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,11 +39,12 @@ HRESULT SetGenericParamProps (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `gp`  
  から値を設定するジェネリックパラメーター定義のトークン。  
   
  `dwParamFlags`  
- からジェネリックパラメーターの型を記述する[Corgenericparamattr](corgenericparamattr-enumeration.md)列挙体の値。  
+ からジェネリックパラメーターの型を記述する [Corgenericparamattr](corgenericparamattr-enumeration.md) 列挙体の値。  
   
  `szName`  
  [in] オプション。 値を設定するパラメーターの名前。  
@@ -54,11 +56,12 @@ HRESULT SetGenericParamProps (
  [in] オプション。 型制約の0から終わる配列。 配列メンバーは `mdTypeDef` 、、 `mdTypeRef` 、またはメタデータトークンである必要があり `mdTypeSpec` ます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

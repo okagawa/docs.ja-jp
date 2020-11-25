@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a04d91dc-690f-4de8-8c97-55c69a8503b4
 topic_type:
 - apiref
-ms.openlocfilehash: 9c969f4f8f2327e6ddf45b8f0423ecaafc95d81b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0be94e55b2838e543686b84be736a228ce7dae57
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492496"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701823"
 ---
 # <a name="imetadatafilterunmarkall-method"></a>IMetaDataFilter::UnmarkAll メソッド
+
 現在のメタデータスコープ内のすべてのトークンから処理マークを削除します。  
   
 ## <a name="syntax"></a>構文  
@@ -32,14 +33,16 @@ HRESULT UnmarkAll ();
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- `UnmarkAll`パラメーターを受け取りません。  
+
+ `UnmarkAll` パラメーターを受け取りません。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
