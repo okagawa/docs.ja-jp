@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 57163b0d-c8a7-44af-9078-e7a895d29f9a
 topic_type:
 - apiref
-ms.openlocfilehash: b985ada09e0e1914c5e60da61a45398fc6098b33
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 0680c47e4390e876c5df99ee7eb200e7d187f0ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976280"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722194"
 ---
 # <a name="icordebugevalgetthread-method"></a>ICorDebugEval::GetThread メソッド
+
 この評価が実行されている、または実行されるスレッドを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,10 +35,12 @@ HRESULT GetThread (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ppThread`  
  入出力スレッドを表す、スレッドオブジェクトのアドレスへのポインター。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

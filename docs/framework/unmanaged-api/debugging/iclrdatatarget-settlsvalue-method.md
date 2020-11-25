@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a2d6a24-749a-47ad-9f01-4517203d3f35
 topic_type:
 - apiref
-ms.openlocfilehash: 6c98fc93fd659ccfc0ccd42eec7d95382cf342f8
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: d2eaab1f42eb04d8e9727220a08842ca75a2eadf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860519"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723689"
 ---
 # <a name="iclrdatatargetsettlsvalue-method"></a>ICLRDataTarget::SetTLSValue メソッド
+
 ターゲットプロセス内の指定したスレッドのスレッドローカルストレージ (TLS) の値を設定します。 このメソッドは、共通言語ランタイム (CLR) データアクセスサービスによって呼び出されます。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT SetTLSValue (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `threadID`  
  からターゲットプロセス内のスレッドのオペレーティングシステム識別子。  
   
@@ -43,12 +45,14 @@ HRESULT SetTLSValue (
  から位置のインデックス。 この値は、指定されたスレッドのローカルストア内の有効なインデックスである必要があります。  
   
  `value`  
- から指定`CLRDATA_ADDRESS`された TLS の場所に格納する値を指定する値。  
+ から `CLRDATA_ADDRESS` 指定された TLS の場所に格納する値を指定する値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  このメソッドは、デバッグ アプリケーションの作成者によって実装されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** ClrData .idl, ClrData .h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7cc22562-128c-440a-9147-55ff20f173d7
 topic_type:
 - apiref
-ms.openlocfilehash: b7b15261d825c1bd5f217c4cecd82ed36a716d0e
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 9d14ec33128596a148ca3509a49c8c97fafe82d6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008262"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723104"
 ---
 # <a name="iceegengetstring-method"></a>ICeeGen::GetString メソッド
+
 指定した相対仮想アドレスに格納されている文字列を取得します。  
   
  このメソッドは互換性のために残されています。使用しないでください。  
@@ -37,18 +38,20 @@ HRESULT GetString (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `RVA`  
  から返される文字列の相対仮想アドレス。  
   
  `lpString`  
  入出力返された文字列。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

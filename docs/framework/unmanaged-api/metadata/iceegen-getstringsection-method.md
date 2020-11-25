@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a2267d39-69d1-4de1-bf37-f752cafacc71
 topic_type:
 - apiref
-ms.openlocfilehash: dbbfa77ee76770bcf1d662bc5ae179909eaf3b25
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: bd284bced625de39791377a9248796ca3dd76f5c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008288"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722922"
 ---
 # <a name="iceegengetstringsection-method"></a>ICeeGen::GetStringSection メソッド
+
 指定したハンドルによって参照されるコードセクションの文字列表現を取得します。  
   
  このメソッドは互換性のために残されています。使用しないでください。  
@@ -36,15 +37,17 @@ HRESULT GetStringSection (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `section`  
  [入力、出力]コードセクションへのハンドル。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

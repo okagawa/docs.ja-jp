@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 23682ca0-1bcf-48e6-996e-69f7ba337682
 topic_type:
 - apiref
-ms.openlocfilehash: f8e92ec4f813e8810273a1514298d0739a3d2406
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2aff86fb63b87869ed13028bd7344afe11363f51
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179055"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723182"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs メソッド
-インターフェイス識別子に基づいて、アプリケーション ドメインにキャッシュされた Windows ランタイム型の列挙子を取得します。  
+
+インターフェイス識別子に基づいて、アプリケーションドメイン内のキャッシュされた Windows ランタイム型の列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,26 +37,29 @@ HRESULT GetCachedWinRTTypesForIIDs (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `cReqTypes`  
- [in]必要な型の数。  
+ から要求される型の数。  
   
  `iidsToResolve`  
- [in]取得する Windows ランタイム型のマネージ表現に対応するインターフェイス識別子を含む配列へのポインター。  
+ から取得する Windows ランタイム型のマネージ表現に対応するインターフェイス識別子を格納する配列へのポインター。  
   
  `ppTypesEnum`  
- [アウト]で取得した Windows ランタイム型のキャッシュされたマネージ表現の列挙を可能にする "ICorDebugTypeEnum" インターフェイス オブジェクトのアドレスへのポインター `iidsToResolve`。  
+ 入出力のインターフェイス識別子に基づいて、取得された Windows ランタイム型のキャッシュされたマネージ表現の列挙を可能にする "、"、"" "" ツール "インターフェイスオブジェクトのアドレスへのポインター `iidsToResolve` 。  
   
-## <a name="remarks"></a>解説  
- メソッドが特定のインターフェイス識別子の情報を取得できない場合、"ICorDebugTypeEnum" コレクション内の対応するエントリは、データ取得`ELEMENT_TYPE_END`の問題または`ELEMENT_TYPE_VOID`不明なインターフェイス識別子のエラーの種類を持ちます。  
+## <a name="remarks"></a>注釈  
+
+ メソッドが特定のインターフェイス識別子に関する情報の取得に失敗した場合、 `ELEMENT_TYPE_END` データの取得に関する問題が原因で、または不明なインターフェイス識別子について、"の型は、" "の種類" になり `ELEMENT_TYPE_VOID` ます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** ウィンドウズランタイム  
+## <a name="requirements"></a>要件  
+
+ **プラットフォーム:** Windows ランタイム  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

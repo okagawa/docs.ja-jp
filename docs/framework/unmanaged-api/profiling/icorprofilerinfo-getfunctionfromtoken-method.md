@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 0eed759f-cce8-405d-88dc-9ee293a38928
 topic_type:
 - apiref
-ms.openlocfilehash: 18c3b6e840ec1f6cb1481c8d752e6399dcdae077
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9c7f01d2e462ad1cb0532be6f369c3118a4deb6a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84498142"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722493"
 ---
 # <a name="icorprofilerinfogetfunctionfromtoken-method"></a>ICorProfilerInfo::GetFunctionFromToken メソッド
-関数の ID を取得します。 このメソッドは .NET Framework バージョン2.0 では廃止されています。 代わりに[ICorProfilerInfo2:: GetFunctionFromTokenAndTypeArgs](icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md)メソッドを使用してください。  
+
+関数の ID を取得します。 このメソッドは .NET Framework バージョン2.0 では廃止されています。 代わりに [ICorProfilerInfo2:: GetFunctionFromTokenAndTypeArgs](icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,9 +36,11 @@ HRESULT GetFunctionFromToken(
 ```  
   
 ## <a name="remarks"></a>解説  
+
  メソッドは、ジェネリック `GetFunctionFromToken` 型のジェネリック関数または関数に対しては機能しません。現在は互換性のために残されています。 `ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs`すべての関数に使用します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

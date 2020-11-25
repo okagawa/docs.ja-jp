@@ -14,27 +14,30 @@ helpviewer_keywords:
 ms.assetid: 429d8fce-b1b1-49d7-895c-28c1c1aa2dbd
 topic_type:
 - apiref
-ms.openlocfilehash: a3d4297e3b16dd1637e6293dbf7f04d4fbeda50f
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 6eea7f6c222b8e30376ec72ee0c193a68c23f0d0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860382"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723559"
 ---
 # <a name="iclrdebugging-interface"></a>ICLRDebugging インターフェイス
+
 デバッグ用にモジュールの読み込みとアンロードを処理するメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
   
-|Method|説明|  
+|メソッド|説明|  
 |------------|-----------------|  
 |[OpenVirtualProcess メソッド](iclrdebugging-openvirtualprocess-method.md)|プロセスに読み込まれた共通言語ランタイム (CLR) モジュールに対応する "のプロセス" インターフェイスを取得します。|  
 |[CanUnloadNow メソッド](iclrdebugging-canunloadnow-method.md)|[ICLRDebuggingLibraryProvider](iclrdebugginglibraryprovider-interface.md)インターフェイスによって提供されたライブラリがまだ使用中であるか、またはアンロードできるかどうかを判断します。|  
   
-## <a name="remarks"></a>解説  
- `ICLRDebugging`インターフェイスのインスタンスを取得するには、 [clrcreateinstance](../hosting/clrcreateinstance-function.md)関数を使用します。  
+## <a name="remarks"></a>注釈  
+
+ インターフェイスのインスタンスを取得する `ICLRDebugging` には、 [clrcreateinstance](../hosting/clrcreateinstance-function.md) 関数を使用します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

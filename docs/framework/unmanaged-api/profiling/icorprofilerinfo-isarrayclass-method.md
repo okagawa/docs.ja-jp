@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7f230961-23a6-4d56-ad2d-7a876d65705f
 topic_type:
 - apiref
-ms.openlocfilehash: 2a3f5bb0c54935e524cc955a5e11aac75b0c0923
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2608f91a7c5baa935e48fbe58ad4d14aaaad1f0d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497557"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722506"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass メソッド
+
 指定したクラスが配列クラスであるかどうかを判断します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT IsArrayClass(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `classId`  
  から調べるクラスの ID。  
   
@@ -48,10 +50,12 @@ HRESULT IsArrayClass(
  `pcRank`  
  入出力配列のランク (次元の数) を示す整数を指すポインターです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  指定したクラスが配列クラスの場合、 `IsArrayClass` メソッドは、null 以外の出力パラメーターの S_OK HRESULT と値を返します。 それ以外の場合は S_FALSE を返します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

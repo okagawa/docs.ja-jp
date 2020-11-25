@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: fee56a29-3154-4192-958d-71da2ced3740
 topic_type:
 - apiref
-ms.openlocfilehash: 6eb26de83a6cdce47477e6cb3dffd6a94d889975
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: d1d057d38e16503175138c6ec978eb6c1f12bc6d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397025"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722337"
 ---
 # <a name="icordebugvalue3getsize64-method"></a>ICorDebugValue3::GetSize64 メソッド
-この[ICorDebugValue3](icordebugvalue3-interface.md)オブジェクトのサイズ (バイト単位) を取得します。  
+
+この [ICorDebugValue3](icordebugvalue3-interface.md) オブジェクトのサイズ (バイト単位) を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,15 +35,18 @@ HRESULT GetSize64(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  pSize  
  入出力このオブジェクトのサイズ (バイト単位) へのポインター。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  この値の型が参照型の場合、このメソッドはオブジェクトのサイズではなく、ポインターのサイズを返します。  
   
- メソッドは、 `ICorDebugValue3::GetSize` その出力パラメーターの型の[ICorDebugValue:: GetSize](icordebugvalue-getsize-method.md)メソッドとは異なります。 [ICorDebugValue:: GetSize](icordebugvalue-getsize-method.md)では、出力パラメーターはです。では、は `ULONG32` `ICorDebugValue3::GetSize` `ULONG64` です。 これにより、 [ICorDebugValue3](icordebugvalue3-interface.md)インターフェイスは、2gb を超える配列のサイズを報告できます。  
+ メソッドは、 `ICorDebugValue3::GetSize` その出力パラメーターの型の [ICorDebugValue:: GetSize](icordebugvalue-getsize-method.md) メソッドとは異なります。 [ICorDebugValue:: GetSize](icordebugvalue-getsize-method.md)では、出力パラメーターはです。では、は `ULONG32` `ICorDebugValue3::GetSize` `ULONG64` です。 これにより、 [ICorDebugValue3](icordebugvalue3-interface.md) インターフェイスは、2gb を超える配列のサイズを報告できます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

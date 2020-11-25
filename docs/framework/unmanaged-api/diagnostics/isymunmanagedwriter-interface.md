@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 7d6733ec-f081-4166-bc17-de09e16dc304
 topic_type:
 - apiref
-ms.openlocfilehash: 8f0bbd26bde562df5482d167c9d2775e01426f55
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: fddfd2a163f6e6513b648ee0b724c0b5bd54c81a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610055"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722935"
 ---
 # <a name="isymunmanagedwriter-interface"></a>ISymUnmanagedWriter インターフェイス
-シンボルライターを表し、ドキュメント、シーケンスポイント、構文スコープ、および変数を定義するメソッドを提供します。  
+
+シンボル ライターを表し、ドキュメント、シーケンス ポイント、構文スコープ、変数を定義するメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -54,6 +55,7 @@ ms.locfileid: "83610055"
 |[UsingNamespace メソッド](isymunmanagedwriter-usingnamespace-method.md)|現在開いている構文のスコープ内で、指定された完全修飾名前空間名が使用されていることを指定します。|  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

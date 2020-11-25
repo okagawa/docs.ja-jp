@@ -6,17 +6,19 @@ helpviewer_keywords:
 - debugging global static functions [.NET Framework]
 - unmanaged global static functions [.NET Framework], debugging
 ms.assetid: efc64414-77c3-48d0-881a-8594ed416aad
-ms.openlocfilehash: c20d8719b63cb40074dc740506ae4a3c0fc3a251
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 04906322e311b580abddeca7744cf3e75d471e05
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793781"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722987"
 ---
 # <a name="debugging-global-static-functions"></a>デバッグ グローバル静的関数
+
 このセクションでは、デバッグ API が使用するアンマネージ グローバル静的関数について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [_EFN_GetManagedExcepStack 関数](efn-getmanagedexcepstack-function.md)  
  指定したマネージド例外オブジェクトのアドレスに応じて、中に含まれているスタック トレースの文字列バージョンを返します。  
   
@@ -35,11 +37,12 @@ ms.locfileid: "76793781"
  [PFN_CLRDataCreateInstance 関数ポインター](pfn-clrdatacreateinstance-function-pointer.md)  
  指定した対象プロセスの指定したインターフェイス オブジェクトを作成するために、CLR データ アクセス サービスによって呼び出される関数を指します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
+
  [デバッグ コクラス](debugging-coclasses.md)  
   
- [デバッグ インターフェイス](debugging-interfaces.md)  
+ [デバッグのインターフェイス](debugging-interfaces.md)  
   
- [列挙型のデバッグ](debugging-enumerations.md)  
+ [列挙体のデバッグ](debugging-enumerations.md)  
   
  [デバッグ構造体](debugging-structures.md)

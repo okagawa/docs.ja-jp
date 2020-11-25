@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fab8a58-3883-490f-8b27-64042c90f104
 topic_type:
 - apiref
-ms.openlocfilehash: 5730cdd910257d762230f5e54576d5e0a7ac1adb
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: b8b9f8e63a0b52dde0e814f53cfc75e6f6d48e78
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614826"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723026"
 ---
 # <a name="isymunmanagedwriterdefinelocalvariable-method"></a>ISymUnmanagedWriter::DefineLocalVariable メソッド
+
 現在の構文のスコープの変数を 1 つ定義します。 このメソッドは、スコープ全体で複数のホームを持つ同じ名前の変数に対して複数回呼び出すことができます。 ただし、この場合は、 `startOffset` パラメーターとパラメーターの値 `endOffset` が重複していてはなりません。  
   
 ## <a name="syntax"></a>構文  
@@ -42,14 +43,15 @@ HRESULT DefineLocalVariable(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `name`  
- から`WCHAR`ローカル変数名を定義するへのポインター。  
+ から `WCHAR` ローカル変数名を定義するへのポインター。  
   
  `attributes`  
  からローカル変数の属性。  
   
  `cSig`  
- から`ULONG32`バッファーのサイズ (バイト単位) を示す `signature` 。  
+ から `ULONG32` バッファーのサイズ (バイト単位) を示す `signature` 。  
   
  `signature`  
  からローカル変数シグネチャ。  
@@ -73,9 +75,11 @@ HRESULT DefineLocalVariable(
  から変数の終了オフセット。 このパラメーターは省略可能です。 0の場合、このパラメーターは無視され、スコープ全体にわたって変数が定義されます。 0以外の値の場合、変数は現在のスコープのオフセット内になります。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

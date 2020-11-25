@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 05c78aaf-5bbd-497e-9ae2-55f4fae0c5fb
 topic_type:
 - apiref
-ms.openlocfilehash: ed534890fc90d3b8543a1166c85903f10163f0a8
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 9ce3afded5f914ecf970d8db738becc7f5cfff84
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008327"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723143"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock メソッド
+
 コードベースのセクションブロックを取得します。  
   
  このメソッドは互換性のために残されています。使用しないでください。  
@@ -39,6 +40,7 @@ HRESULT GetSectionBlock (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `section`  
  からコードベースのブロックを取得する対象となるセクション。  
   
@@ -51,15 +53,17 @@ HRESULT GetSectionBlock (
  `ppBytes`  
  入出力取得されたブロックのアドレスを受け取る場所へのポインター。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
+
  `GetSectionBlock`他のメソッドによって処理されない特殊なセクション要件がある場合にのみ、を呼び出します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

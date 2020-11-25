@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7de6447a-a751-49d8-87e2-951cee77b536
 topic_type:
 - apiref
-ms.openlocfilehash: 1cd09fe785bb37c892417ddbf1efaaaa90e121bf
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3a8f369728b8464850259518981bf6690cb17a01
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009237"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722038"
 ---
 # <a name="imetadataemitgettokenfromtypespec-method"></a>IMetaDataEmit::GetTokenFromTypeSpec メソッド
+
 指定したメタデータシグネチャを持つ型のメタデータトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT GetTokenFromTypeSpec (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pvSig`  
  から定義されている署名。  
   
@@ -43,14 +45,15 @@ HRESULT GetTokenFromTypeSpec (
  からのバイト数 `pvSig` 。  
   
  `ptypespec`  
- 入出力`mdTypeSpec`割り当てられたトークン。  
+ 入出力 `mdTypeSpec` 割り当てられたトークン。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

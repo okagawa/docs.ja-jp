@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8cdac941-8b94-4497-b874-4e571785f3fe
 topic_type:
 - apiref
-ms.openlocfilehash: a2a3d58e0631fceab96c32f9d86fef25973fed84
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5fa6ffff3cdb64a7471568e1f6e76fea9194c5a0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500664"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722285"
 ---
 # <a name="functionleave2-function"></a>FunctionLeave2 関数
+
 関数が呼び出し元に戻り、スタックフレームおよび関数の戻り値に関する情報を提供することをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -43,21 +44,22 @@ void __stdcall FunctionLeave2 (
 
 - `clientData`
 
-  \[in] プロファイラーが以前に[Functionidmapper](functionidmapper-function.md)関数を使用して指定した、再マップされた関数識別子。
+  \[in] プロファイラーが以前に [Functionidmapper](functionidmapper-function.md) 関数を使用して指定した、再マップされた関数識別子。
 
 - `func`
 
   \[in] `COR_PRF_FRAME_INFO` スタックフレームに関する情報を示す値。
 
-  プロファイラーは、これを[ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md)メソッドの実行エンジンに渡すことができる不透明なハンドルとして処理する必要があります。  
+  プロファイラーは、これを [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) メソッドの実行エンジンに渡すことができる不透明なハンドルとして処理する必要があります。  
   
 - `retvalRange`
 
-  \[では、関数の戻り値のメモリ位置を指定する[COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md)構造体へのポインター。
+  \[では、関数の戻り値のメモリ位置を指定する [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) 構造体へのポインター。
 
-  戻り値の情報にアクセスするには、 `COR_PRF_ENABLE_FUNCTION_RETVAL` フラグを設定する必要があります。 プロファイラーは、 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md)メソッドを使用してイベントフラグを設定できます。
+  戻り値の情報にアクセスするには、 `COR_PRF_ENABLE_FUNCTION_RETVAL` フラグを設定する必要があります。 プロファイラーは、 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) メソッドを使用してイベントフラグを設定できます。
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  値が変更さ `func` `retvalRange` `FunctionLeave2` れるか、値が破棄される可能性があるため、関数から制御が戻った後に、パラメーターとパラメーターの値が無効になります。  
   
  `FunctionLeave2`関数はコールバックであるため、実装する必要があります。 実装では、 `__declspec` ( `naked` ) ストレージクラス属性を使用する必要があります。  
@@ -73,6 +75,7 @@ void __stdcall FunctionLeave2 (
  また、 `FunctionLeave2` 関数はマネージコードを呼び出さないようにするか、マネージメモリ割り当てを発生させることはできません。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Corprof.idl  

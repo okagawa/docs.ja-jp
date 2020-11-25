@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: e9226e6e-ca2c-428e-bb38-0c099210f507
 topic_type:
 - apiref
-ms.openlocfilehash: 38603fb53b9cd6548595437b05c1e99ef208d940
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 37b6bcb48681704e3db47f81a51a9d21f00dfb37
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895089"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723195"
 ---
 # <a name="icordebugappdomainenum-interface"></a>ICorDebugAppDomainEnum インターフェイス
 
-列挙体`Next`の次の位置から始まる指定さ`ICorDebugAppDomainEnum`れた数の値を返すメソッドを提供します。 このインターフェイスは、"ICorDebugEnum" のサブクラスです。  
+`Next`列挙体の次の位置から始まる指定された数の値を返すメソッドを提供し `ICorDebugAppDomainEnum` ます。 このインターフェイスは、"ICorDebugEnum" のサブクラスです。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -31,12 +31,13 @@ ms.locfileid: "82895089"
 |------------|-----------------|  
 |[Next メソッド](icordebugappdomainenum-next-method.md)|現在のカーソル位置から開始して、指定した数のアプリケーションドメインをコレクションから取得します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

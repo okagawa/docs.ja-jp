@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bd62f5d1-e874-41f1-81e5-a29a7572c15d
 topic_type:
 - apiref
-ms.openlocfilehash: 861af4ba9c6f4d4bdb16abb9d4e1fd79debac59b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 32277e8adcd4bb08c8d0480eb3b4e7e4b5949479
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205575"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723130"
 ---
 # <a name="icordebugprocess5gettypelayout-method"></a>ICorDebugProcess5::GetTypeLayout メソッド
+
 型識別子に基づいて、メモリ内のオブジェクトのレイアウトに関する情報を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -32,16 +33,19 @@ HRESULT GetTypeLayout(    [in] COR_TYPEID id,     [out] COR_TYPE_LAYOUT *pLayout
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `id`  
- からレイアウトが必要な型を指定する[COR_TYPEID](cor-typeid-structure.md)トークン。  
+ からレイアウトが必要な型を指定する [COR_TYPEID](cor-typeid-structure.md) トークン。  
   
  `pLayout`  
- 入出力メモリ内のオブジェクトのレイアウトに関する情報を格納している[COR_TYPE_LAYOUT](cor-type-layout-structure.md)構造体へのポインター。  
+ 入出力メモリ内のオブジェクトのレイアウトに関する情報を格納している [COR_TYPE_LAYOUT](cor-type-layout-structure.md) 構造体へのポインター。  
   
-## <a name="remarks"></a>Remarks  
- メソッドは、その `ICorDebugProcess5::GetTypeLayout` [COR_TYPEID](cor-typeid-structure.md)に基づいてオブジェクトに関する情報を提供します。これは、他の多くの[ICorDebugProcess5](icordebugprocess5-interface.md)メソッドによって返されます。 この情報は、メソッドによって設定される[COR_TYPE_LAYOUT](cor-type-layout-structure.md)構造体によって提供されます。  
+## <a name="remarks"></a>注釈  
+
+ メソッドは、その `ICorDebugProcess5::GetTypeLayout` [COR_TYPEID](cor-typeid-structure.md)に基づいてオブジェクトに関する情報を提供します。これは、他の多くの [ICorDebugProcess5](icordebugprocess5-interface.md) メソッドによって返されます。 この情報は、メソッドによって設定される [COR_TYPE_LAYOUT](cor-type-layout-structure.md) 構造体によって提供されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

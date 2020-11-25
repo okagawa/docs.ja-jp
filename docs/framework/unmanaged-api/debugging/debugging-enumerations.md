@@ -6,22 +6,24 @@ helpviewer_keywords:
 - unmanaged enumerations [.NET Framework], debugging
 - enumerations [.NET Framework debugging]
 ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
-ms.openlocfilehash: c37b6ff42b428184d301d63b6dbbd9d80a72bf3f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bdd4b60d068677ae2a0874b589294ba220f0d854
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179140"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723000"
 ---
 # <a name="debugging-enumerations"></a>列挙体のデバッグ
+
 このセクションでは、デバッグ API が使用するアンマネージ列挙体について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [CLR_DEBUGGING_PROCESS_FLAGS 列挙体](clr-debugging-process-flags-enumeration.md)  
- メソッドによって使用される値を提供[します](iclrdebugging-openvirtualprocess-method.md)。  
+ [ICLRDebugging:: OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md)メソッドによって使用される値を提供します。  
   
  [CLRDataEnumMemoryFlags 列挙型](clrdataenummemoryflags-enumeration.md)  
- メソッドに対する呼び出しに含めるメモリ領域[を示します](iclrdataenummemoryregions-enummemoryregions-method.md)。  
+ [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md)メソッドへの呼び出しに含まれるメモリ領域を示します。  
   
  [COR_PUB_ENUMPROCESS 列挙型](cor-pub-enumprocess-enumeration.md)  
  列挙するプロセスの型を識別します。  
@@ -39,16 +41,16 @@ ms.locfileid: "79179140"
  エクスポートされた関数がマネージド コードを呼び出す理由を示します。  
   
  CorDebugCreateProcessFlags  
- [メソッドの](icordebug-createprocess-method.md)呼び出しで使用できる追加のデバッグ オプションを提供します。  
+ [ICorDebug:: CreateProcess](icordebug-createprocess-method.md)メソッドの呼び出しで使用できる追加のデバッグオプションを提供します。  
   
  [CorDebugDebugEventKind 列挙体](cordebugdebugeventkind-enumeration.md)  
- [情報がデコード](icordebugprocess6-decodeevent-method.md)されるイベントの種類を示す、 DecodeEvent メソッドです。  
+ [DecodeEvent](icordebugprocess6-decodeevent-method.md)メソッドによって情報がデコードされるイベントの種類を示します。  
   
  [CorDebugDecodeEventFlagsWindows 列挙体](cordebugdecodeeventflagswindows-enumeration.md)  
  Windows プラットフォームのデバッグ イベントに関する追加情報を提供します。  
   
  CorDebugExceptionCallbackType  
- から行われるコールバックの[種類を示](icordebugmanagedcallback2-exception-method.md)します。  
+ [ICorDebugManagedCallback2:: Exception](icordebugmanagedcallback2-exception-method.md)イベントから作成されたコールバックの種類を示します。  
   
  [CorDebugExceptionFlags 列挙型](cordebugexceptionflags-enumeration.md)  
  例外に関する追加情報を提供します。  
@@ -81,7 +83,7 @@ ms.locfileid: "79179140"
  マネージド Just-In-Time (JIT) コンパイラの動作に影響を与える値が含まれます。  
   
  [CorDebugJITCompilerFlagsDeprecated 列挙型](cordebugjitcompilerflagsdeprecated-enumeration.md)  
- 互換性のために残されています。 代わりに`CORDEBUG_JIT_DEFAULT`、列挙体のメンバー[を](cordebugjitcompilerflags-enumeration.md)使用します。  
+ 互換性のために残されています。 代わりに、 `CORDEBUG_JIT_DEFAULT` [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) 列挙体のメンバーを使用してください。  
   
  CorDebugMappingResult  
  命令ポインター (IP) の値が得られた方法の詳細を提供します。  
@@ -93,7 +95,7 @@ ms.locfileid: "79179140"
  デバッガーがネイティブ イメージ キャッシュからネイティブ (NGen) イメージを読み込むかどうかを指定する値を提供します。  
   
  [CorDebugPlatform 列挙型](cordebugplatform-enumeration.md)  
- メソッドによって使用されるターゲット プラットフォームの値[を提供します](icordebugdatatarget-getplatform-method.md)。  
+ は [、のターゲットプラットフォームの値](icordebugdatatarget-getplatform-method.md) を提供しています。  
   
  [CorDebugRecordFormat 列挙体](cordebugrecordformat-enumeration.md)  
  ネイティブ例外デバッグ イベントに関する情報を格納するバイト配列内のデータの形式を示します。  
@@ -113,7 +115,7 @@ ms.locfileid: "79179140"
  CorDebugThreadState  
  デバッグのスレッドの状態を指定します。  
   
- \>マップされていない停止  
+ \>CorDebugUnmappedStop  
  ステッパによるコード実行の停止をトリガーする可能性のあるマップ解除したコードの型を指定します。  
   
  CorDebugUserState  
@@ -132,17 +134,18 @@ ms.locfileid: "79179140"
  デバッグとトレースの切り替えで実行された操作を示します。  
   
  [VariableLocationType 列挙型](variablelocationtype-enumeration.md)  
- 変数のネイティブな場所の型を示します。  
+ 変数のネイティブな場所の種類を示します。  
   
  [WriteableMetadataUpdateMode 列挙型](writeablemetadataupdatemode-enumeration.md)  
  メモリ内のメタデータ更新をデバッガーに対して可視にするかどうかを指定する値を提供します。
 
- [列挙型](clrdatasourcetype-enumeration.md)CLRDATA_IL_ADDRESS_MAP構造体で使用される値を提供します。
+ [ClrDataSourceType 列挙型](clrdatasourcetype-enumeration.md) CLRDATA_IL_ADDRESS_MAP 構造体によって使用される値を提供します。
 
 ## <a name="related-sections"></a>関連項目  
+
  [デバッグ コクラス](debugging-coclasses.md)  
   
- [デバッグ インターフェイス](debugging-interfaces.md)  
+ [デバッグのインターフェイス](debugging-interfaces.md)  
   
  [デバッグ グローバル静的関数](debugging-global-static-functions.md)  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdab0ade-7f56-4fa2-b3ef-f7a1d2852bba
 topic_type:
 - apiref
-ms.openlocfilehash: 3630e25b6c24edaa366f1b0fae088e760e851fa4
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 1713623fa575bea6df649106b37212f7aeaee6db
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895407"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723468"
 ---
 # <a name="icordebugdebugactiveprocess-method"></a>ICorDebug::DebugActiveProcess メソッド
+
 デバッガーを既存のプロセスにアタッチします。  
   
 ## <a name="syntax"></a>構文  
@@ -36,19 +37,22 @@ HRESULT DebugActiveProcess (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `id`  
  からデバッガーがアタッチされるプロセスの ID。  
   
  `win32Attach`  
- からデバッガーがプロセスの Win32 デバッガー `true`として動作し、アンマネージコールバックをディスパッチする必要がある場合にに設定されるブール値。それ以外`false`の場合は。  
+ から `true` デバッガーがプロセスの Win32 デバッガーとして動作し、アンマネージコールバックをディスパッチする場合はに設定されるブール値。それ以外の場合は `false` 。  
   
  `ppProcess`  
  入出力デバッガーがアタッチされているプロセスを表す "いいプロセス" オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  相互運用デバッグは、IA-64 ベースおよび AMD64 ベースのプラットフォームなど、Win9x および x86 以外のプラットフォームではサポートされていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

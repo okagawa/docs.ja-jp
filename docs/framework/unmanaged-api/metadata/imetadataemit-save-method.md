@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1de8400-adfe-4a71-b828-a1d0cc1ea505
 topic_type:
 - apiref
-ms.openlocfilehash: 23f6a301c4c11be92e05dbac0d4f69817d857a28
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: cef238239417a0a30cd94eaa8bd60968cfa78859
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84003955"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721999"
 ---
 # <a name="imetadataemitsave-method"></a>IMetaDataEmit::Save メソッド
+
 現在のスコープ内のすべてのメタデータを、指定したアドレスにあるファイルに保存します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,18 +36,20 @@ HRESULT Save (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `wzFile`  
  から保存先のファイルの名前。 この値が null の場合、メモリ内のコピーは、使用された最後の場所に保存されます。  
   
  `dwSaveFlags`  
  [in] 予約されています。 ゼロを指定してください。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

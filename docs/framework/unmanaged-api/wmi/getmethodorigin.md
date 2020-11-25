@@ -1,6 +1,6 @@
 ---
-title: 関数 (アンマネージ API リファレンス)
-description: 関数は、メソッドが宣言されているクラスを決定します。
+title: GetMethodOrigin 関数 (アンマネージ API リファレンス)
+description: GetMethodOrigin 関数は、メソッドが宣言されているクラスを特定します。
 ms.date: 11/06/2017
 api_name:
 - GetMethodOrigin
@@ -14,14 +14,15 @@ helpviewer_keywords:
 - GetMethodOrigin function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 5b4609b6649be875aea7dfcf52ba36b1e98ab7bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 434392ffb4d9124e319bcd9c42fdd340d3fec5b4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176800"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722779"
 ---
 # <a name="getmethodorigin-function"></a>GetMethodOrigin 関数
+
 メソッドを宣言しているクラスが特定されます。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -40,41 +41,42 @@ HRESULT GetMethodOrigin (
 ## <a name="parameters"></a>パラメーター
 
 `vFunc`  
-[in]このパラメーターは使用されません。
+からこのパラメーターは使用されていません。
 
 `ptr`  
-[in][インスタンス](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)へのポインター。
+から [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) インスタンスへのポインター。
 
 `wszMethodName`  
-[in]所有クラスが要求されているオブジェクトのメソッドの名前。
+から所有クラスが要求されているオブジェクトのメソッドの名前。
 
 `pstrClassName`  
-[アウト]メソッドを所有するクラスの名前を受け取ります。
+入出力メソッドを所有するクラスの名前を受け取ります。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値は *、WbemCli.h*ヘッダー ファイルで定義されているか、コード内で定数として定義できます。
+この関数によって返される次の値は、 *WbemCli* ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|常時  |Value  |説明  |
+|定数  |値  |説明  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 指定されたメソッドが見つかりませんでした。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 1 つ以上のパラメーターが無効です。 |
-|`WBEM_S_NO_ERROR` | 0 | 関数呼び出しが正常に行われました。  |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 1つ以上のパラメーターが無効です。 |
+|`WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-この関数は、メソッドの呼び出し[を](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod)ラップします。
+この関数は、 [IWbemClassObject:: GetMethodOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) メソッドの呼び出しをラップします。
 
-クラスは 1 つ以上の基本クラスからメソッドを継承できるため、開発者は、特定のメソッドが定義されているクラスを決定する必要があります。
+クラスは1つまたは複数の基底クラスからメソッドを継承できるため、多くの場合、開発者は特定のメソッドが定義されているクラスを特定する必要があります。
 
-この`pstrClassName`パラメーターはパラメーターであるため、関数が`BSTR`呼び出される前にパラメーターが有効`out`であることを指してはなりません。このポインターは、関数が戻った後に割り当て解除されません。
+パラメーターである `pstrClassName` ため、関数が呼び出される前に、パラメーターは有効なを指していない必要があり `BSTR` `out` ます。このポインターは、関数から制御が戻った後に割り当て解除されません。
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
 **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** WMINet_Utils.idl  
+ **ヘッダー:** WMINet_Utils .idl  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 

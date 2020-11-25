@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 10a40ba0-1b65-4721-bd11-cf12d57b280d
 topic_type:
 - apiref
-ms.openlocfilehash: 59afc8ae7d66e81e4dca3923f9c6f7ff3a3a6605
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 46c2b444984c5a0062f1cfbc0cd29dbe409b16fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895384"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723442"
 ---
 # <a name="icordebuggetprocess-method"></a>ICorDebug::GetProcess メソッド
+
 指定されたプロセスの "いいプロセス" インスタンスへのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,13 +36,15 @@ HRESULT GetProcess (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `dwProcessId`  
  からプロセスの ID。  
   
  `ppProcess`  
- 入出力指定されたプロセスの`ICorDebugProcess`インスタンスのアドレスへのポインター。  
+ 入出力 `ICorDebugProcess` 指定されたプロセスのインスタンスのアドレスへのポインター。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

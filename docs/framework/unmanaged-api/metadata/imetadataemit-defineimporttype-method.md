@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 37fd27af-8062-4904-ace4-51bb78ec600a
 topic_type:
 - apiref
-ms.openlocfilehash: edce5cb93b770fb5730e5a06633ffffacf332f7a
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 94ce4443be210fdfeb1bab197c3e603255e1cc4c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004694"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723247"
 ---
 # <a name="imetadataemitdefineimporttype-method"></a>IMetaDataEmit::DefineImportType メソッド
+
 現在のスコープの外部で定義されている指定した型への参照を作成し、その参照のトークンを定義します。  
   
 ## <a name="syntax"></a>構文  
@@ -40,8 +41,9 @@ HRESULT DefineImportType (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pAssemImport`  
- から対象の型のインポート元のアセンブリを表す[IMetaDataAssemblyImport](imetadataassemblyimport-interface.md)インターフェイス。  
+ から対象の型のインポート元のアセンブリを表す [IMetaDataAssemblyImport](imetadataassemblyimport-interface.md) インターフェイス。  
   
  `pbHashValue`  
  からによって指定されたアセンブリのハッシュを格納している配列 `pAssemImport` 。  
@@ -50,26 +52,28 @@ HRESULT DefineImportType (
  [in] `pbHashValue` 配列のバイト数。  
   
  `pImport`  
- から対象の型のインポート元のメタデータスコープを表す[IMetaDataImport](imetadataimport-interface.md)インターフェイス。  
+ から対象の型のインポート元のメタデータスコープを表す [IMetaDataImport](imetadataimport-interface.md) インターフェイス。  
   
  `tdImport`  
- から`mdTypeDef`対象の型を指定するトークンです。  
+ から `mdTypeDef` 対象の型を指定するトークンです。  
   
  `pAssemEmit`  
- からターゲット型がインポートされるアセンブリを表す[IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md)インターフェイス。  
+ からターゲット型がインポートされるアセンブリを表す [IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md) インターフェイス。  
   
  `ptr`  
- 入出力`mdTypeRef`型参照の現在のスコープで定義されているトークン。  
+ 入出力 `mdTypeRef` 型参照の現在のスコープで定義されているトークン。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
+
  [IMetaDataEmit::D efineImportMember](imetadataemit-defineimportmember-method.md)メソッドを呼び出す前に、メソッドを使用して、 `DefineImportType` メンバーの親クラスまたは親インターフェイスの型参照を現在のスコープ内に作成できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

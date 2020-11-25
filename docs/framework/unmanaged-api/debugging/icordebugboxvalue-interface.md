@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3d3ae7e2-97d4-46de-a2c3-cb78f3490f9d
 topic_type:
 - apiref
-ms.openlocfilehash: bece1be7474c57d38f083e322c2af1b0ba705ee9
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 6d58ae048382a78c422703d5c6caeb3bbc739849
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894762"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723169"
 ---
 # <a name="icordebugboxvalue-interface"></a>ICorDebugBoxValue インターフェイス
 
@@ -31,12 +31,13 @@ ms.locfileid: "82894762"
 |------------|-----------------|  
 |[GetObject メソッド](icordebugboxvalue-getobject-method.md)|ボックス化された "の" のインスタンスへのインターフェイスポインターを取得します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

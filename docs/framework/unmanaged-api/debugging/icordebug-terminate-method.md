@@ -15,18 +15,19 @@ helpviewer_keywords:
 ms.assetid: fffe5616-0896-4426-ab5e-21869b514883
 topic_type:
 - apiref
-ms.openlocfilehash: 44bb98f54debb129f951cc388fea81ca0f17b20c
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: cf9c9d11c4725908fcf7ff4a0c91882b70a80190
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895318"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723377"
 ---
 # <a name="icordebugterminate-method"></a>ICorDebug::Terminate メソッド
-オブジェクトを`ICorDebug`終了します。  
+
+オブジェクトを終了 `ICorDebug` します。  
   
 > [!NOTE]
-> `Terminate`デバッグされているすべてのプロセスに対して、 [ExitProcess Callback callback::](icordebugmanagedcallback-exitprocess-method.md) callback が受信されるまでは呼び出さないでください。  
+> `Terminate` デバッグされているすべてのプロセスに対して、 [ExitProcess Callback callback::](icordebugmanagedcallback-exitprocess-method.md) callback が受信されるまでは呼び出さないでください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,9 +36,11 @@ HRESULT Terminate ();
 ```  
   
 ## <a name="remarks"></a>解説  
- `Terminate`オブジェクトが不要になっ`ICorDebug`た場合は、を呼び出す必要があります。  
+
+ `Terminate` オブジェクトが不要になった場合は、を呼び出す必要があり `ICorDebug` ます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

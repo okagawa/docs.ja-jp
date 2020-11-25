@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e3226230-964b-47fb-9f53-d6fdbeda1e9e
 topic_type:
 - apiref
-ms.openlocfilehash: 20b73549d30fe210e4d44902d2f459ea9c682360
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 6d3985919ea7e766db7d07e4ed81484851156ca5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860486"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723668"
 ---
 # <a name="iclrdatatarget2allocvirtual-method"></a>ICLRDataTarget2::AllocVirtual メソッド
+
 このターゲットプロセスのアドレス空間にメモリを割り当てるために、共通言語ランタイム (CLR) データアクセスサービスによって呼び出されます。  
   
 ## <a name="syntax"></a>構文  
@@ -38,27 +39,30 @@ HRESULT AllocVirtual(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `addr`  
- から割り当て`CLRDATA_ADDRESS`られるメモリの、要求された開始アドレスを示す値です。  
+ から `CLRDATA_ADDRESS` 割り当てられるメモリの、要求された開始アドレスを示す値です。  
   
  `size`  
  から割り当てるメモリのサイズ (バイト単位)。  
   
  `typeFlags`  
- からメモリの割り当てを制御するフラグ。 Win32 `VirtualAlloc`関数を参照してください。  
+ からメモリの割り当てを制御するフラグ。 Win32 関数を参照してください `VirtualAlloc` 。  
   
  `protectFlags`  
- から割り当てられたメモリの保護属性。 Win32 `VirtualAlloc`関数を参照してください。  
+ から割り当てられたメモリの保護属性。 Win32 関数を参照してください `VirtualAlloc` 。  
   
  `virt`  
- 入出力割り当てられた`CLRDATA_ADDRESS`メモリの実際の開始アドレスを指定する値へのポインター。  
+ 入出力割り当てられた `CLRDATA_ADDRESS` メモリの実際の開始アドレスを指定する値へのポインター。  
   
-## <a name="remarks"></a>解説  
- この`AllocVirtual`メソッドは、Win32 `VirtualAlloc`関数の論理ラッパーとして機能します。  
+## <a name="remarks"></a>注釈  
+
+ この `AllocVirtual` メソッドは、Win32 関数の論理ラッパーとして機能し `VirtualAlloc` ます。  
   
  このメソッドは、デバッグ アプリケーションの作成者によって実装されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** ClrData .idl, ClrData .h  

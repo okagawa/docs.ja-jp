@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7596220c-f699-4b6c-8ae7-c83220610650
 topic_type:
 - apiref
-ms.openlocfilehash: e7fe5cbe27c0771a71e4c03d14ab68ada7d0741a
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: e64d644b511f7c3249c48b9642bfd3163142af3c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004193"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722012"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::Merge メソッド
+
 マージするスコープの一覧に、指定したインポートされたスコープを追加します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,24 +37,27 @@ HRESULT Merge (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pImport`  
- からマージするインポートされたスコープを識別する[IMetaDataImport](imetadataimport-interface.md)オブジェクトへのポインター。  
+ からマージするインポートされたスコープを識別する [IMetaDataImport](imetadataimport-interface.md) オブジェクトへのポインター。  
   
  `pIMap`  
- からトークンの再マップを指定する[IMapToken](imaptoken-interface.md)オブジェクトへのポインター。  
+ からトークンの再マップを指定する [IMapToken](imaptoken-interface.md) オブジェクトへのポインター。  
   
  `pHandler`  
- からエラーを指定する[IUnknown](/cpp/atl/iunknown)オブジェクトへのポインター。  
+ からエラーを指定する [IUnknown](/cpp/atl/iunknown) オブジェクトへのポインター。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
+
  [IMetaDataEmit:: MergeEnd](imetadataemit-mergeend-method.md)を呼び出して、メタデータの1つのスコープへのマージをトリガーします。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

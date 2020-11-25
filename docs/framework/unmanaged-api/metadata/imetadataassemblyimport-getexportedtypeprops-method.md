@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 25ca7623-5a55-4f09-b44a-36b03d142278
 topic_type:
 - apiref
-ms.openlocfilehash: 944941c2356cae93ecc85f1714b4b29aefcb50ad
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 32224431051b958a3f01ffeb15cdb6db1dae2657
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008405"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722103"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps メソッド
+
 指定したメタデータシグネチャを持つ、エクスポートされた型のプロパティのセットを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -40,6 +41,7 @@ HRESULT GetExportedTypeProps (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `mdct`  
  からエクスポートされた `mdExportedType` 型を表すメタデータトークン。  
   
@@ -50,23 +52,24 @@ HRESULT GetExportedTypeProps (
  からのサイズ (ワイド文字単位) `szName` 。  
   
  `pchName`  
- 入出力実際に返されるワイド文字の数`szName`  
+ 入出力実際に返されるワイド文字の数 `szName`  
   
  `ptkImplementation`  
- 入出力`mdFile` `mdAssemblyRef` エクスポートされた `mdExportedType` 型のプロパティへのアクセスを格納または許可する、、、またはメタデータトークン。  
+ 入出力 `mdFile` `mdAssemblyRef` エクスポートされた `mdExportedType` 型のプロパティへのアクセスを格納または許可する、、、またはメタデータトークン。  
   
  `ptkTypeDef`  
- 入出力`mdTypeDef`ファイル内の型を表すトークンへのポインター。  
+ 入出力 `mdTypeDef` ファイル内の型を表すトークンへのポインター。  
   
  `pdwExportedTypeFlags`  
- 入出力エクスポートされた型に適用されるメタデータを記述するフラグへのポインター。 Flags 値には、1つまたは複数の[Cortypeattr](cortypeattr-enumeration.md)値を指定できます。  
+ 入出力エクスポートされた型に適用されるメタデータを記述するフラグへのポインター。 Flags 値には、1つまたは複数の [Cortypeattr](cortypeattr-enumeration.md) 値を指定できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

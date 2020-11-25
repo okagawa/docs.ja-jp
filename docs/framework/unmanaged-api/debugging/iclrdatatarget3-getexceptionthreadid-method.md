@@ -12,14 +12,15 @@ api_type:
 ms.assetid: 307d6ac7-4a86-45f3-999d-6b47004a68f2
 topic_type:
 - apiref
-ms.openlocfilehash: 63c92e3f34527f895552f45d43f332f778470b13
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 0a8b7a90cd909379f870f6a501a940386d2e1451
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860425"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723598"
 ---
 # <a name="iclrdatatarget3getexceptionthreadid-method"></a>ICLRDataTarget3::GetExceptionThreadID メソッド
+
 例外をスローしたスレッドの ID を取得するために、共通言語ランタイム (CLR) データ アクセス サービスによって呼び出されます。  
   
 ## <a name="syntax"></a>構文  
@@ -31,10 +32,12 @@ HRESULT GetExceptionThreadID(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `threadID`  
  [out] 例外をスローしたスレッドの ID。  
   
 ## <a name="return-value"></a>戻り値  
+
  戻り値は、成功の場合は `S_OK` で、失敗の場合は `HRESULT` コードです。 次が `HRESULT` コードに含まれることはありますが、限定されているわけではありません。  
   
 |リターン コード|説明|  
@@ -42,10 +45,12 @@ HRESULT GetExceptionThreadID(
 |`S_OK`|メソッドが成功しました。|  
 |`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|例外の有効なスレッド ID を見つけることができませんでした。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  このメソッドは、デバッグ アプリケーションの作成者によって実装されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** ClrData .idl, ClrData .h  
