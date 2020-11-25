@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f94b9d53-d8f8-4424-a95e-53a1bfd26e4a
 topic_type:
 - apiref
-ms.openlocfilehash: 2e0f284625e99215900c6aaab94e4eae611787ed
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 3ada9e19bb1a92b3bd7e41340b99bf81b651dd37
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212101"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725015"
 ---
 # <a name="icordebugilframe2-interface"></a>ICorDebugILFrame2 インターフェイス
 
@@ -32,12 +32,13 @@ ms.locfileid: "83212101"
 |[EnumerateTypeParameters メソッド](icordebugilframe2-enumeratetypeparameters-method.md)|このフレームのパラメーターを格納している、テキスト型の型の列挙体オブジェクトを取得し <xref:System.Type> ます。|  
 |[RemapFunction メソッド](icordebugilframe2-remapfunction-method.md)|新しい MSIL オフセットを指定して、編集された関数を再マップします。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

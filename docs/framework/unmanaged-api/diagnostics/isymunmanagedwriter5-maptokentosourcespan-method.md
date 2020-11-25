@@ -2,14 +2,15 @@
 title: ISymUnmanagedWriter5::MapTokenToSourceSpan メソッド
 ms.date: 03/30/2017
 ms.assetid: d0fbbf61-71c6-4fb1-8c9f-d619ca5d7d68
-ms.openlocfilehash: 0f00dd34ffbdd58a46260132d8d7ace74ec2f294
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e4b09e6d89b3ba8ba3bf7e149d31a14a74b945b5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501678"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723936"
 ---
 # <a name="isymunmanagedwriter5maptokentosourcespan-method"></a>ISymUnmanagedWriter5::MapTokenToSourceSpan メソッド
+
 指定されたメタデータトークンを、指定されたソースファイル内の指定されたソース行スパンにマップします。  
   
  [Openmaptokenstosourcespans メソッド](isymunmanagedwriter5-openmaptokenstosourcespans-method.md)と[CloseMapTokensToSourceSpans メソッド](isymunmanagedwriter5-closemaptokenstosourcespans-method.md)の呼び出しの間で、を呼び出す必要があります。  
@@ -32,9 +33,11 @@ HRESULT MapTokenToSourceSpan(    [in] mdToken token,    [in] ISymUnmanagedDocume
 |`endColumn`||  
   
 ## <a name="return-value"></a>戻り値  
+
  `HRESULT` を返します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

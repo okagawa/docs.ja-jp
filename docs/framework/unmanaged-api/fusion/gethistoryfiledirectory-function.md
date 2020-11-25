@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 93232222-926e-42ac-b85d-8a6d33977672
 topic_type:
 - apiref
-ms.openlocfilehash: 1aabfad14ee2eb35916bbf115631602276cd1fc3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 484adf288356b9955fe0cac0bb30002ec1f012d3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73109890"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724439"
 ---
 # <a name="gethistoryfiledirectory-function"></a>GetHistoryFileDirectory 関数
+
 アプリケーション履歴ディレクトリのパスを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,6 +35,7 @@ HRESULT GetHistoryFileDirectory (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `wzDir`  
  入出力アプリケーション履歴ディレクトリへのパスを保持するバッファー。  
   
@@ -41,24 +43,27 @@ HRESULT GetHistoryFileDirectory (
  [入力、出力]バッファーの長さ。  
   
 ## <a name="return-value"></a>戻り値  
+
  このメソッドは、Winerror.h ファイルで定義されているように、次の値に加えて、標準の COM エラーコードを返します。  
   
 |リターン コード|説明|  
 |-----------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|E_INVALIDARG|`wzDir` または `pdwSize` が null であるか、バージョン文字列が正しくありません。|  
+|E_INVALIDARG|`wzDir` または `pdwSize` が null であるか、またはバージョン文字列が正しくありません。|  
   
-## <a name="remarks"></a>Remarks  
- 正常に完了すると、`pdwSize` の引数がパス文字列の長さに設定されます。  
+## <a name="remarks"></a>注釈  
+
+ 正常に完了すると、 `pdwSize` 引数はパス文字列の長さに設定されます。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Fusion. h  
   
- **ライブラリ:** Fusion .dll と Mscorwks.dll。 Mscorwks.dll の代わりに Fusion を使用して、正しいバージョンの .NET Framework を対象としていることを確認してください。  
+ **Library:** Fusion.dll し、Mscorwks.dll します。 Mscorwks.dll ではなく Fusion.dll を使用して、正しいバージョンの .NET Framework を対象にするようにします。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

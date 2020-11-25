@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d7fa796-0dc6-4ee8-9d56-40166246d91d
 topic_type:
 - apiref
-ms.openlocfilehash: 291b384d6f0c8c1404b380c653693ec65fcfc960
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 607847180cca039d4c71f26e446a17a14dc2fb9e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213414"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724339"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles メソッド
+
 プロセス内のオブジェクトハンドルの列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -33,24 +34,27 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `types`  
- からコレクションに含めるハンドルの種類を指定する[Corgcreの](corgcreferencetype-enumeration.md)値のビットごとの組み合わせ。  
+ からコレクションに含めるハンドルの種類を指定する [Corgcreの](corgcreferencetype-enumeration.md) 値のビットごとの組み合わせ。  
   
  `ppENum`  
- 入出力ガベージコレクションの対象となるオブジェクトの列挙子[である、](icordebuggcreferenceenum-interface.md)ツールのアドレスへのポインターです。  
+ 入出力ガベージコレクションの対象となるオブジェクトの列挙子 [である、](icordebuggcreferenceenum-interface.md) ツールのアドレスへのポインターです。  
   
-## <a name="remarks"></a>Remarks  
- `EnumerateHandles`は、ハンドルテーブルの検査をサポートするヘルパー関数です。 これは[ICorDebugProcess5:: EnumerateGCReferences](icordebugprocess5-enumerategcreferences-method.md)メソッドに似ていますが、すべてのオブジェクトがガベージコレクトされるよう[に、すべて](icordebuggcreferenceenum-interface.md)のオブジェクトを使用してすべてのオブジェクトを作成するのではなく、handle テーブルからハンドルを持つオブジェクトのみが含まれる点が異なります。  
+## <a name="remarks"></a>注釈  
+
+ `EnumerateHandles` は、ハンドルテーブルの検査をサポートするヘルパー関数です。 これは [ICorDebugProcess5:: EnumerateGCReferences](icordebugprocess5-enumerategcreferences-method.md) メソッドに似ていますが、すべてのオブジェクトがガベージコレクトされるよう [に、すべて](icordebuggcreferenceenum-interface.md) のオブジェクトを使用してすべてのオブジェクトを作成するのではなく、handle テーブルからハンドルを持つオブジェクトのみが含まれる点が異なります。  
   
- パラメーターは、 `types` コレクションに含めるハンドルの種類を指定します。 `types`は、 [Corgcreの型](corgcreferencetype-enumeration.md)の列挙体の次の3つのメンバーのいずれかになります。  
+ パラメーターは、 `types` コレクションに含めるハンドルの種類を指定します。 `types` は、 [Corgcreの型](corgcreferencetype-enumeration.md) の列挙体の次の3つのメンバーのいずれかになります。  
   
-- `CorHandleStrongOnly`(厳密な参照へのハンドルのみ)。  
+- `CorHandleStrongOnly` (厳密な参照へのハンドルのみ)。  
   
-- `CorHandleWeakOnly`(弱参照のみを処理します)。  
+- `CorHandleWeakOnly` (弱参照のみを処理します)。  
   
-- `CorHandleAll`(すべてのハンドル)。  
+- `CorHandleAll` (すべてのハンドル)。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

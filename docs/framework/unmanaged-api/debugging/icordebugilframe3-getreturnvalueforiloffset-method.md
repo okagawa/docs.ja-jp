@@ -13,14 +13,15 @@ api_type:
 ms.assetid: 06522727-5f64-4391-9331-11386883c352
 topic_type:
 - apiref
-ms.openlocfilehash: f6a54ab9efa7ca97bcdb64afcde8812f2b5e44e9
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 11207298b071527151535144330790df767c2101
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210073"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725002"
 ---
 # <a name="icordebugilframe3getreturnvalueforiloffset-method"></a>ICorDebugILFrame3::GetReturnValueForILOffset メソッド
+
 関数の戻り値をカプセル化する "ICorDebugValue" オブジェクトを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -33,14 +34,16 @@ HRESULT GetReturnValueForILOffset(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ILOffset`  
  オフセット IL。 「解説」を参照してください。  
   
  `ppReturnValue`  
  関数呼び出しの戻り値に関する情報を提供する "ICorDebugValue" インターフェイスオブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- このメソッドは、メソッドの戻り値を取得するために、 [ICorDebugCode3:: Getreturnvalu Veoffset](icordebugcode3-getreturnvalueliveoffset-method.md)メソッドと共に使用されます。 次の 2 つのコード例で示すように、これは戻り値が無視されるメソッドの場合に特に役立ちます。 1 番目の例では、<xref:System.Int32.TryParse%2A?displayProperty=nameWithType> メソッドを呼び出しますが、メソッドの戻り値を無視します。  
+## <a name="remarks"></a>注釈  
+
+ このメソッドは、メソッドの戻り値を取得するために、 [ICorDebugCode3:: Getreturnvalu Veoffset](icordebugcode3-getreturnvalueliveoffset-method.md) メソッドと共に使用されます。 次の 2 つのコード例で示すように、これは戻り値が無視されるメソッドの場合に特に役立ちます。 1 番目の例では、<xref:System.Int32.TryParse%2A?displayProperty=nameWithType> メソッドを呼び出しますが、メソッドの戻り値を無視します。  
   
  [!code-csharp[Unmanaged.Debugging.MRV#1](../../../../samples/snippets/csharp/VS_Snippets_CLR/unmanaged.debugging.mrv/cs/mrv1.cs#1)]
  [!code-vb[Unmanaged.Debugging.MRV#1](../../../../samples/snippets/visualbasic/VS_Snippets_CLR/unmanaged.debugging.mrv/vb/mrv1.vb#1)]  
@@ -55,13 +58,14 @@ HRESULT GetReturnValueForILOffset(
 > [!WARNING]
 > [ICorDebugCode3:: Getreturnvalu Veoffset メソッド](icordebugcode3-getreturnvalueliveoffset-method.md)とメソッドを使用すると、 `ICorDebugILFrame3::GetReturnValueForILOffset` 参照型の戻り値の情報のみを取得できます。 値型 (つまり、<xref:System.ValueType> から派生するすべての型) からの戻り値情報の取得はサポートされません。  
   
- パラメーターで指定された IL オフセットは `ILOffset` 関数呼び出しサイトに存在する必要があります。また、同じ il オフセットの[ICorDebugCode3:: Getreturnvalu veoffset](icordebugcode3-getreturnvalueliveoffset-method.md)メソッドによって返されるネイティブオフセットに設定されているブレークポイントで、デバッグ対象を停止する必要があります。 デバッグ対象が指定の IL オフセットに対して正確な場所で停止しない場合、API は失敗します。  
+ パラメーターで指定された IL オフセットは `ILOffset` 関数呼び出しサイトに存在する必要があります。また、同じ il オフセットの [ICorDebugCode3:: Getreturnvalu veoffset](icordebugcode3-getreturnvalueliveoffset-method.md) メソッドによって返されるネイティブオフセットに設定されているブレークポイントで、デバッグ対象を停止する必要があります。 デバッグ対象が指定の IL オフセットに対して正確な場所で停止しない場合、API は失敗します。  
   
  関数呼び出しで値が返されない場合、API は失敗します。  
   
  `ICorDebugILFrame3::GetReturnValueForILOffset` メソッドは、x86 ベースおよび AMD64 システムでのみ使用できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

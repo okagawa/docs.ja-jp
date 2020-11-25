@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e525aa16-c923-4b16-833b-36f1f0dd70fc
 topic_type:
 - apiref
-ms.openlocfilehash: 1cc05f4c10f4a5b042ff14c05f3c85a7b5935184
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8e03eefc3758347389be4af6d53921480ee40263
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497895"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724079"
 ---
 # <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a>ICorProfilerInfo::GetTokenAndMetadataFromFunction メソッド
+
 指定された関数のトークンに対して使用できるメタデータトークンとメタデータインターフェイスインスタンスを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT GetTokenAndMetaDataFromFunction(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `functionId`  
  からメタデータトークンとメタデータインターフェイスを取得する対象の関数の ID。  
   
@@ -49,6 +51,7 @@ HRESULT GetTokenAndMetaDataFromFunction(
  入出力指定された関数のメタデータトークンへのポインター。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

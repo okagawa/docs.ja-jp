@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2edd0a10-77fb-4173-91eb-f2970cc364d0
 topic_type:
 - apiref
-ms.openlocfilehash: e071f9cba7e991c59bf697647e0e4badea57573a
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: d9ccd5c6c91b1ab2166ff40a0fb2048e15927d3a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762046"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723949"
 ---
 # <a name="iclrvalidator-interface"></a>ICLRValidator インターフェイス
+
 ポータブル実行可能 (PE) イメージを検証し、検証エラーを報告するためのメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
@@ -32,11 +33,12 @@ ms.locfileid: "83762046"
 |[Validate メソッド](iclrvalidator-validate-method.md)|指定したファイル内のポータブル実行可能ファイルまたは MSIL (Microsoft 中間言語) を検証します。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** IValidator、IValidator  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

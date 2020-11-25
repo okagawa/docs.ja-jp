@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1ee7c434-9681-4fa8-badd-652cb1a9742b
 topic_type:
 - apiref
-ms.openlocfilehash: 8b7edf1cc642228c4a79c855b51727264f31741c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: da4b1d6f2a7079ef33859fce29c9555ac06fcfc2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107982"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725652"
 ---
 # <a name="identity_attribute-structure"></a>IDENTITY_ATTRIBUTE 構造体
+
 [IDefinitionIdentity](idefinitionidentity-interface.md)インスタンスに関するメタデータ属性情報を格納します。  
   
 ## <a name="syntax"></a>構文  
@@ -42,17 +43,19 @@ typedef struct _IDENTITY_ATTRIBUTE {
 |`pszName`|属性の名前を含む null で終わる文字列へのポインター。|  
 |`pszValue`|属性の値を格納している null で終わる文字列へのポインター。|  
   
-## <a name="remarks"></a>Remarks  
- `IDENTITY_ATTRIBUTE` 構造体には、null で終わる文字列への3つのポインターが含まれています。 これら3つの文字列は、1つの属性を表します。  
+## <a name="remarks"></a>注釈  
+
+ 構造体には、 `IDENTITY_ATTRIBUTE` null で終わる文字列への3つのポインターが含まれています。 これら3つの文字列は、1つの属性を表します。  
   
- `IDENTITY_ATTRIBUTE` 構造体のインスタンスは、 [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md)構造体のインスタンスに関連付けられています。 `IDENTITY_ATTRIBUTE` 構造体には実際の文字列が含まれ、対応する `IDENTITY_ATTRIBUTE_BLOB` 構造体には、`IDENTITY_ATTRIBUTE` 構造体に示されている3つの文字列へのオフセットが一覧表示されます。  
+ 構造体のインスタンス `IDENTITY_ATTRIBUTE` は、 [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) 構造体のインスタンスに関連付けられています。 `IDENTITY_ATTRIBUTE`構造体には実際の文字列が含まれ、対応する構造体には、 `IDENTITY_ATTRIBUTE_BLOB` 構造体に示されている3つの文字列へのオフセットが一覧表示され `IDENTITY_ATTRIBUTE` ます。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** 分離 .h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

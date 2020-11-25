@@ -11,17 +11,18 @@ api_type:
 ms.assetid: edc420b7-96d1-4dec-ace0-36d907f644bc
 topic_type:
 - apiref
-ms.openlocfilehash: 0156a7dfa2a67ce9e62b502df00fc6bc5fccf925
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2176b624a427994b9d2af4b5eba31a64c9288a0e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499182"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725470"
 ---
 # <a name="icorprofilercallback6-interface"></a>ICorProfilerCallback6 インターフェイス
+
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
   
- アセンブリが読み込まれていることをプロファイラーに通知するために共通言語ランタイムが使用するコールバックメソッドを提供する[ICorProfilerCallback5](icorprofilercallback5-interface.md)のサブクラス。  
+ アセンブリが読み込まれていることをプロファイラーに通知するために共通言語ランタイムが使用するコールバックメソッドを提供する [ICorProfilerCallback5](icorprofilercallback5-interface.md) のサブクラス。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -32,6 +33,7 @@ ms.locfileid: "84499182"
 ## <a name="remarks"></a>解説  
   
 ## <a name="requirements"></a>必要条件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

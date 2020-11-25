@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b3390319-6366-418c-ba80-b552ac4dfc1e
 topic_type:
 - apiref
-ms.openlocfilehash: 28b54026c8743f31a420e164944f60709e2e271b
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: ad220289b45078130a0a41e67373fd3384ae9682
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894366"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724417"
 ---
 # <a name="icordebugchaingetthread-method"></a>ICorDebugChain::GetThread メソッド
+
 この呼び出しチェーンが含まれている物理スレッドを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,10 +35,12 @@ HRESULT GetThread (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ppThread`  
  入出力この呼び出しチェーンが含まれている物理スレッドを表す、スレッドオブジェクトへのポインター。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

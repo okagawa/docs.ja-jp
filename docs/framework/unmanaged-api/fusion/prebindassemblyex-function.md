@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: bd285233-a4a2-4b52-bbca-0025a60e4864
 topic_type:
 - apiref
-ms.openlocfilehash: db3ba3380d1fc30a8f34683618b5cc326d7d1906
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a729249f7b0681941a0b1a478dbe2c0d9d6cd01c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123059"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723962"
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx 関数
+
 アセンブリのポリシー後の表示名を取得します。  
   
  この関数は、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。  
@@ -40,6 +41,7 @@ HRESULT PreBindAssemblyEx (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pAppCtx`  
  からアプリケーションコンテキストを識別します。  
   
@@ -56,19 +58,21 @@ HRESULT PreBindAssemblyEx (
  入出力ポリシー後の表示名を格納します。  
   
  `pvReserved`  
- [入力] 将来の機能拡張に備えて予約されています。 `pvReserved` は null 参照である必要があります。  
+ [入力] 将来の機能拡張に備えて予約されています。 `pvReserved` null 参照である必要があります。  
   
-## <a name="remarks"></a>Remarks  
- `ppNamePostPolicy` 出力パラメーターは、関数が HRESULT FUSION_E_REF_DEF_MISMATCH を返す場合にのみ設定されます。 それ以外の場合は null になります。  
+## <a name="remarks"></a>注釈  
+
+ `ppNamePostPolicy`出力パラメーターは、関数が HRESULT FUSION_E_REF_DEF_MISMATCH を返す場合にのみ設定されます。 それ以外の場合は null です。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Fusion. h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8635ee3a-c84b-4626-876c-416bee54f787
 topic_type:
 - apiref
-ms.openlocfilehash: 455fd06dbdbfd5d9753f3d7270647a742751d804
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 1c65efa006a8b2f4fb4db257b4ad2cde99c4e75e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420657"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725262"
 ---
 # <a name="variablelocationtype-enumeration"></a>VariableLocationType 列挙型
+
 変数のネイティブな場所の種類を示します。  
   
 ## <a name="syntax"></a>構文  
@@ -43,10 +44,12 @@ typedef enum VariableLocationType
 |`VLT_REGISTER_RELATIVE`|変数は、レジスタ相対メモリの場所にあります。|  
 |`VLT_INVALID`|変数はレジスタまたはレジスタの相対メモリ位置に格納されません。|  
   
-## <a name="remarks"></a>解説  
- 列挙体のメンバー `VariableLocationType` は、 [GetLocationType](icordebugvariablehome-getlocationtype-method.md)メソッドによって返されます。  
+## <a name="remarks"></a>注釈  
+
+ 列挙体のメンバー `VariableLocationType` は、 [GetLocationType](icordebugvariablehome-getlocationtype-method.md) メソッドによって返されます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

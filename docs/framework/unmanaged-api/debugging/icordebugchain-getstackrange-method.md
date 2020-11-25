@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 554284e7-3f6c-4d40-8da5-1c9317fbd484
 topic_type:
 - apiref
-ms.openlocfilehash: 40ecc183c32500ad9e88ceb1bfc0528d717430e8
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 841e3ca608d20a4b8618508e69195de0b1da1341
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894464"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724404"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>ICorDebugChain::GetStackRange メソッド
+
 このチェーンのスタックセグメントのアドレス範囲を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,16 +36,19 @@ HRESULT GetStackRange (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pStart`  
- 入出力スタックセグメントの開始`CORDB_ADDRESS`アドレスを示す値へのポインター。  
+ 入出力 `CORDB_ADDRESS` スタックセグメントの開始アドレスを示す値へのポインター。  
   
  `pEnd`  
- 入出力スタックセグメントの終了`CORDB_ADDRESS`アドレスを示す値へのポインター。  
+ 入出力 `CORDB_ADDRESS` スタックセグメントの終了アドレスを示す値へのポインター。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  数値の範囲は、スタックフレームの位置を比較する場合にのみ意味があります。 実際にスタックに格納されている内容について、想定を行うことはできません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

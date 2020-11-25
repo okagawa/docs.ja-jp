@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: e835062c-c7d6-4945-8a44-2de7ebf3928e
 topic_type:
 - apiref
-ms.openlocfilehash: 653c8d1d3edd38e646b4e90c0e48dbe15bed102a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3836bd349423670a19a19dda67eba75419507a29
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504265"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724289"
 ---
 # <a name="iclrdebugmanager-interface"></a>ICLRDebugManager インターフェイス
+
 ホストが一連のタスクを識別子とフレンドリ名に関連付けることができるようにするメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
@@ -36,8 +37,9 @@ ms.locfileid: "84504265"
 |[SetDacl メソッド](iclrdebugmanager-setdacl-method.md)|このメソッドは実装されていません。|  
 |[SetSymbolReadingPolicy メソッド](iclrdebugmanager-setsymbolreadingpolicy-method.md)|プログラムデータベース (PDB) ファイルを読み取るためのポリシーを設定します。 ポリシーは、行番号とファイルに関する情報が呼び出し履歴に含まれるかどうかを決定します。|  
   
-## <a name="remarks"></a>解説  
- デバッグシナリオでは、ホストは、独自のプログラミングロジックに従ってタスクをグループ化することが必要になる場合があります。 たとえば、グループ化により、開発者は、プロセスで実行されているすべてのタスクを表示するのではなく、開発者の Api に必要なタスクのみを参照できます。 `ICLRDebugManager`ホストがこの種のグループ化を実装できるようにします。  
+## <a name="remarks"></a>注釈  
+
+ デバッグシナリオでは、ホストは、独自のプログラミングロジックに従ってタスクをグループ化することが必要になる場合があります。 たとえば、グループ化により、開発者は、プロセスで実行されているすべてのタスクを表示するのではなく、開発者の Api に必要なタスクのみを参照できます。 `ICLRDebugManager` ホストがこの種のグループ化を実装できるようにします。  
   
 > [!IMPORTANT]
 > 、 `ICLRDebugManager` `BeginConnection` 、およびの3つのメソッドは相互に `SetConnectionTasks` `EndConnection` 依存しています。 これらは、想定どおりに動作するために、指定された順序で呼び出される必要があります。  
@@ -45,11 +47,12 @@ ms.locfileid: "84504265"
  グループ化、およびホストがグループに割り当てる識別子とフレンドリ名は、共通言語ランタイム (CLR) には意味がありません。 CLR は、情報をデバッガーに渡すだけです。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

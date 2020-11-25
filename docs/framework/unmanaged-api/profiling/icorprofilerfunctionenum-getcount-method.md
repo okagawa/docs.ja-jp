@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 62ec65e3-3e9d-400b-ae61-d24b8963995b
 topic_type:
 - apiref
-ms.openlocfilehash: 137b1da853535985b2fd383d52f0bcfc48f728ed
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3ccf75523eb9362b8ef5c38d224a419502cb8b92
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503095"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724147"
 ---
 # <a name="icorprofilerfunctionenumgetcount-method"></a>ICorProfilerFunctionEnum::GetCount メソッド
+
 アプリケーションによって読み込まれたか、またはプロファイラーによって強制的に読み込まれた関数の数を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -32,10 +33,12 @@ HRESULT GetCount([out] ULONG * pcelt);
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `celt`  
  入出力読み込まれた関数の数。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

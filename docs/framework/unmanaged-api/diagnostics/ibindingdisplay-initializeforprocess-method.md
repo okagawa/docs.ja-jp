@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 59417acb-4e59-46ad-acfe-d827e6ab6078
 topic_type:
 - apiref
-ms.openlocfilehash: 8645878132359b6218cd62b1ff707208de53704b
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: f9e65b49c9a3b506cba3493d81a40f2759dca781
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442151"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725149"
 ---
 # <a name="ibindingdisplayinitializeforprocess-method"></a>IBindingDisplay::InitializeForProcess メソッド
+
 [IBindingDisplay](ibindingdisplay-interface.md)オブジェクトを初期化します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,13 +35,16 @@ HRESULT InitializeForProcess (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pid`  
  からプロセス識別子。  
   
-## <a name="remarks"></a>解説  
- デバッガーは、 `InitializeForProcess` 作成時にメソッドを呼び出して、バインド表示を初期化します。 `InitializeForProcess`の他のメソッドが呼び出される前に、作成時にを呼び出す必要があり `IBindingDisplay` ます。  
+## <a name="remarks"></a>注釈  
+
+ デバッガーは、 `InitializeForProcess` 作成時にメソッドを呼び出して、バインド表示を初期化します。 `InitializeForProcess` の他のメソッドが呼び出される前に、作成時にを呼び出す必要があり `IBindingDisplay` ます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** BindingDisplay. h  

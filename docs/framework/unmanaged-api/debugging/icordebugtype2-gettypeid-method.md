@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 0b933686-226e-4373-92b7-fac579ee7b1a
 topic_type:
 - apiref
-ms.openlocfilehash: 1c11946bc5ea69a090091c014aba859935b48b36
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 2a4a0bfae6f9a1970f0d4aca8b37f8fc68194462
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396669"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725691"
 ---
 # <a name="icordebugtype2gettypeid-method"></a>ICorDebugType2:: GetTypeID メソッド
-この型の[COR_TYPEID](cor-typeid-structure.md)を取得します。  
+
+この型の [COR_TYPEID](cor-typeid-structure.md) を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,24 +35,28 @@ HRESULT GetTypeID(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `id`  
- 入出力このテキスト型の[COR_TYPEID](cor-typeid-structure.md)へのポインター。  
+ 入出力このテキスト型の [COR_TYPEID](cor-typeid-structure.md) へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
+
  戻り値は、成功の場合は `S_OK` で、失敗の場合は `HRESULT` コードです。 コードには `HRESULT` 次のものが含まれます。  
   
 |リターン コード|説明|  
 |-----------------|-----------------|  
-|`S_OK`|メソッドが成功しました。 メソッドが有効な[COR_TYPEID](cor-typeid-structure.md)を取得しました。|  
+|`S_OK`|メソッドが成功しました。 メソッドが有効な [COR_TYPEID](cor-typeid-structure.md)を取得しました。|  
 |`CORDBG_E_CLASS_NOT_LOADED`|型が読み込まれていません。|  
 |`CORDBG_E_UNSUPPORTED`|この型はサポートされていません。|  
   
-## <a name="remarks"></a>解説  
- このメソッドは、ランタイムに読み込まれている可能性がある型を表す、または[COR_TYPEID](cor-typeid-structure.md)ランタイムに読み込まれていない可能性のある型を表す、、ランタイムに読み込まれた型を識別する不透明なハンドルとして機能する、の型からのマッピングを提供します。  
+## <a name="remarks"></a>注釈  
+
+ このメソッドは、ランタイムに読み込まれている可能性がある型を表す、または [COR_TYPEID](cor-typeid-structure.md)ランタイムに読み込まれていない可能性のある型を表す、、ランタイムに読み込まれた型を識別する不透明なハンドルとして機能する、の型からのマッピングを提供します。  
   
  によって表される型がまだ読み込まれていない場合、このメソッドはを返し `CORDBG_E_CLASS_NOT_LOADED` ます。  型がサポートされていない場合は、を返し `CORDBG_E_UNSUPPORTED` ます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: e460264e2393858c028ba51aec4a4f2c01649994
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: a65fa9974165fa36e59a7fb83dca6dd902f7d8dc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860827"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724395"
 ---
 # <a name="dacpgetmoduleaddress-structure"></a>DacpGetModuleAddress 構造体
 
@@ -45,15 +45,16 @@ struct DacpGetModuleAddress
 
 ## <a name="methods"></a>メソッド
 
-| Method                                                                                               | 説明                                                                    |
+| メソッド                                                                                               | 説明                                                                    |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | [Request](dacpgetmoduleaddress-request-method.md) | 指定されたランタイム構造体を構造体に設定する要求を実行します。 |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-この構造体はランタイム内に存在し、ヘッダーまたはライブラリファイルを介して公開されることはありません。 これを使用するに`CLRDATA_ADDRESS`は、上で指定したように構造体を定義します。は、64ビットの符号なし整数です。
+この構造体はランタイム内に存在し、ヘッダーまたはライブラリファイルを介して公開されることはありません。 これを使用するには、上で指定したように構造体を定義し `CLRDATA_ADDRESS` ます。は、64ビットの符号なし整数です。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
+
 **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
 **ヘッダー:** 存在  
 **ライブラリ:** 存在  

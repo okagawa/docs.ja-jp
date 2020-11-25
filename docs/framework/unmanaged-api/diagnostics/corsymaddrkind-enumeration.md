@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3ef841c2-cade-42ee-ba34-2ef91d6d0879
 topic_type:
 - apiref
-ms.openlocfilehash: 5991b0abaedabe2337cd754c7bd19f96c5e9b685
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: f71d8956e8706cdc71b94b6e6e2e8210e5b9161e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420618"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725236"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind 列挙体
+
 メモリアドレスの種類を示します。  
   
 ## <a name="syntax"></a>構文  
@@ -58,6 +59,7 @@ typedef enum CorSymAddrKind
 |`ADDR_NATIVE_ISECTOFFSET`|は、最初のアドレスがセクションで、2番目のアドレスがオフセットであることを示します。|  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

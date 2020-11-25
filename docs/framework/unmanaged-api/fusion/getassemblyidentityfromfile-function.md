@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 2c32da53-76c7-4048-84d0-d05207333004
 topic_type:
 - apiref
-ms.openlocfilehash: 50ec5a23db4d2460480bcc3e463ecd88e7470bde
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9580dd3bc5a7279549e8deadac95d35a33da74f8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134532"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724482"
 ---
 # <a name="getassemblyidentityfromfile-function"></a>GetAssemblyIdentityFromFile 関数
-指定したファイルパスにあるアセンブリ内の指定した `IID` を持つ `IUnknown` オブジェクトへのポインターを取得します。  
+
+指定した `IUnknown` `IID` ファイルパスのアセンブリ内で、指定したを持つオブジェクトへのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,21 +38,23 @@ HRESULT GetAssemblyIdentityFromFile (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pwzFilePath`  
  から要求されたアセンブリへの有効なパス。  
   
  `riid`  
- から返されるインターフェイスの `IID`。  
+ から `IID` 返されるインターフェイスの。  
   
  `ppIdentity`  
  入出力返されたインターフェイスポインター。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Fusion. h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

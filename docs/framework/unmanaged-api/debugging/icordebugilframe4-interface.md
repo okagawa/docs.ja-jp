@@ -10,14 +10,15 @@ api_type:
 ms.assetid: 1e739183-3e05-49e5-846f-4075256e41de
 topic_type:
 - apiref
-ms.openlocfilehash: d0b1c31d45efea4892182c43c801112530361994
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 7d0f3661c7941c5f2f85fa5b0b67af213de75f05
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213703"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724950"
 ---
 # <a name="icordebugilframe4-interface"></a>ICorDebugILFrame4 インターフェイス
+
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
   
  ローカル変数にアクセスできるようにするメソッドおよび中間言語 (IL) コードのスタック フレームのコードを提供します。 パラメーターは、プロファイラーの ReJIT インストルメンテーションに追加される変数およびコードへデバッガーがアクセスできるかどうかを指定します。  
@@ -30,10 +31,12 @@ ms.locfileid: "83213703"
 |[GetCodeEx メソッド](icordebugilframe4-getcodeex-method.md)|このスタック フレームが実行するコードを返します。|  
 |[GetLocalVariableEx メソッド](icordebugilframe4-getlocalvariableex-method.md)|IL フレーム内のローカル変数の値を返します。|  
   
-## <a name="remarks"></a>Remarks  
- これらのメソッドは、 [EnumerateLocalVariables](icordebugilframe-enumeratelocalvariables-method.md)、 [GetCode](icordebugframe-getcode-method.md)、および[getlocalvariable](icordebugilframe-getlocalvariable-method.md)の各メソッドによって提供される機能に加えて機能を提供します。 各メソッドには、追加のローカル変数またはプロファイラーの ReJIT 要求によって定義されているコードが参照可能かどうかを指定する `flags` パラメーターが含まれます。  
+## <a name="remarks"></a>注釈  
+
+ これらのメソッドは、 [EnumerateLocalVariables](icordebugilframe-enumeratelocalvariables-method.md)、 [GetCode](icordebugframe-getcode-method.md)、および [getlocalvariable](icordebugilframe-getlocalvariable-method.md) の各メソッドによって提供される機能に加えて機能を提供します。 各メソッドには、追加のローカル変数またはプロファイラーの ReJIT 要求によって定義されているコードが参照可能かどうかを指定する `flags` パラメーターが含まれます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

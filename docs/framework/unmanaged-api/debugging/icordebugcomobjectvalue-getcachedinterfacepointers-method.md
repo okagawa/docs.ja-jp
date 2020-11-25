@@ -13,14 +13,15 @@ helpviewer_keywords:
 ms.assetid: 08dbd558-bd39-4263-94c2-71e70687aaf0
 topic_type:
 - apiref
-ms.openlocfilehash: fa22c17ed7d5bcd689f21d2d855d9be7a6a8e164
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: c3120a0dd859f581e6356fc260043cb83250ae9e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82892805"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724833"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a>ICorDebugComObjectValue::GetCachedInterfacePointers メソッド
+
 現在のランタイム呼び出し可能ラッパー (RCW) にキャッシュされている生のインターフェイスポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,21 +35,23 @@ HRESULT GetCachedInterfacePointers(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `bIInspectableOnly`  
- からメソッドが、ランタイム呼び出し可能ラッパー (RCW) によって`IInspectable`キャッシュされた Windows ランタイムインターフェイス (インターフェイス) またはすべての COM インターフェイスだけを返すかどうかを示す値。  
+ からメソッドが、 `IInspectable` ランタイム呼び出し可能ラッパー (RCW) によってキャッシュされた Windows ランタイムインターフェイス (インターフェイス) またはすべての COM インターフェイスだけを返すかどうかを示す値。  
   
  `celt`  
  からアドレスを取得するオブジェクトの数。  
   
  `pceltFetched`  
- 入出力で実際に`ptrs`返される値`CORDB_ADDRESS`の数へのポインター。  
+ 入出力 `CORDB_ADDRESS` で実際に返される値の数へのポインター `ptrs` 。  
   
  `ptrs`  
- キャッシュされたインターフェイスオブジェクトのアドレスを格納`CORDB_ADDRESS`している値の配列の開始アドレスへのポインター。  
+ キャッシュされた `CORDB_ADDRESS` インターフェイスオブジェクトのアドレスを格納している値の配列の開始アドレスへのポインター。  
   
 ## <a name="remarks"></a>解説  
   
 ## <a name="requirements"></a>必要条件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

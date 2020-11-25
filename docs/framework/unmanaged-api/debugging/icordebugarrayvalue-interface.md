@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc437751-7093-44e2-bfdc-191d9ce3c192
 topic_type:
 - apiref
-ms.openlocfilehash: bd1e86b83c43af20604416f158ab9e74f399821b
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 90688132b98f8316a4b08988c08b2f7cc7ce0fd8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894963"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725051"
 ---
 # <a name="icordebugarrayvalue-interface"></a>ICorDebugArrayValue インターフェイス
 
@@ -38,13 +38,15 @@ ms.locfileid: "82894963"
 |[GetRank メソッド](icordebugarrayvalue-getrank-method.md)|配列のディメンションの数を取得します。|  
 |[HasBaseIndicies メソッド](icordebugarrayvalue-hasbaseindicies-method.md)|配列にベースインデックスがあるかどうかを判断します。|  
   
-## <a name="remarks"></a>解説  
- `ICorDebugArrayValue`では、1次元配列と多次元配列の両方がサポートされています。  
+## <a name="remarks"></a>注釈  
+
+ `ICorDebugArrayValue` では、1次元配列と多次元配列の両方がサポートされています。  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

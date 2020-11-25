@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8dcd7537-d0c6-498c-8a56-2c060310ef65
 topic_type:
 - apiref
-ms.openlocfilehash: 0da67f0d4be779cc21481d03a21209620289888e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 98e81d2d02a9495b678d49fb916f99068dd604f8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500061"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725535"
 ---
 # <a name="icorprofilercallbackjitcompilationfinished-method"></a>ICorProfilerCallback::JITCompilationFinished メソッド
+
 Just-in-time (JIT) コンパイラが関数のコンパイルを完了したことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -51,6 +52,7 @@ HRESULT JITCompilationFinished(
   の値は `true` ランタイムに害を及ぼすことはありませんが、プロファイルの結果をスキューできます。
 
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

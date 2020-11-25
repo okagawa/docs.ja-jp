@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f93cc2ec-0a12-4499-9bf6-405dc58c9a81
 topic_type:
 - apiref
-ms.openlocfilehash: a338116f6eae670cad785807ed580039fbd7fb78
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a166648252215e49b206aae1c3ab1e08985fde2d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207405"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724638"
 ---
 # <a name="icordebugobjectvalue2-interface"></a>ICorDebugObjectValue2 インターフェイス
 
@@ -29,14 +29,15 @@ ms.locfileid: "83207405"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetVirtualMethodAndType メソッド](icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType`はまだ実装されていません。|  
+|[GetVirtualMethodAndType メソッド](icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType` はまだ実装されていません。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

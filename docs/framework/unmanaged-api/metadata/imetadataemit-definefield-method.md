@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-ms.openlocfilehash: ccc4843864f375c167acdb12575c282dbe3a49e1
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 2bc2b983171dc41d5ac37eda0359f1aaee4ebd6e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004817"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725756"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField メソッド
+
 指定したメタデータシグネチャを持つフィールドの定義を作成し、そのフィールド定義へのトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -42,8 +43,9 @@ HRESULT DefineField (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `td`  
- から`mdTypeDef`外側のクラスまたはインターフェイスのトークン。  
+ から `mdTypeDef` 外側のクラスまたはインターフェイスのトークン。  
   
  `szName`  
  からUnicode でのフィールド名。  
@@ -67,14 +69,15 @@ HRESULT DefineField (
  からの (Unicode) 文字のサイズ `pValue` 。  
   
  `pmd`  
- 入出力`mdFieldDef`割り当てられたトークン。  
+ 入出力 `mdFieldDef` 割り当てられたトークン。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

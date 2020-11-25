@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3367166f-31fe-43d0-8107-2e786f984e50
 topic_type:
 - apiref
-ms.openlocfilehash: e1b8cf3e8d78c8ef4715467760805cc50975d014
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: d3bbdea3b2f23ddd2207ff2a036f32978cd837e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442138"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725132"
 ---
 # <a name="ibindingdisplay-interface"></a>IBindingDisplay インターフェイス
+
 実行中のアプリケーションに関する現在のバインド情報を表示するメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
@@ -32,6 +33,7 @@ ms.locfileid: "83442138"
 |[InitializeForProcess メソッド](ibindingdisplay-initializeforprocess-method.md)|`IBindingDisplay` オブジェクトを初期化します。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** BindingDisplay. h  

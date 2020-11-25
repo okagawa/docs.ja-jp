@@ -2,14 +2,15 @@
 title: ICorDebugVariableSymbol::GetValue メソッド
 ms.date: 03/30/2017
 ms.assetid: 90abece1-392e-4ade-94a1-30c75b0f7074
-ms.openlocfilehash: f217f7226d53a27363f66eb90a340fd3604a0217
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 0a57b1a31e1ef4b0db317012b25bc65ecbbaf011
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396517"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725964"
 ---
 # <a name="icordebugvariablesymbolgetvalue-method"></a>ICorDebugVariableSymbol::GetValue メソッド
+
 変数の値をバイト配列として取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -26,6 +27,7 @@ HRESULT GetValue(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `offset`  
  [in] 値を読み取る変数内の開始オフセットです。 このパラメーターは、オブジェクトのメンバー フィールドを読み取る際に使用されます。  
   
@@ -44,12 +46,13 @@ HRESULT GetValue(
  `pValue`  
  [out] 変数の値が格納されているバイト配列。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

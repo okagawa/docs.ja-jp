@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 2221fd06-9e27-4113-972e-2530db8c3594
 topic_type:
 - apiref
-ms.openlocfilehash: 5d0b231b4014e60a9e8778c6b9d6ed7758b2d8c5
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 320b3ca55a60ec7751c88a246ab6ee90b6b6c4cc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83208474"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724352"
 ---
 # <a name="icordebugheapenumnext-method"></a>ICorDebugHeapEnum::Next メソッド
-マネージヒープ上のオブジェクトに関する情報を格納している、指定した数の[COR_HEAPOBJECT](cor-heapobject-structure.md)インスタンスを取得します。  
+
+マネージヒープ上のオブジェクトに関する情報を格納している、指定した数の [COR_HEAPOBJECT](cor-heapobject-structure.md) インスタンスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,19 +36,22 @@ HRESULT Next(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  celt  
  [in] 取得するオブジェクトの数。  
   
  オブジェクト  
- 入出力ポインターの配列。各ポインターは、マネージヒープ上のオブジェクトに関する情報を提供する[COR_HEAPOBJECT](cor-heapobject-structure.md)オブジェクトを指します。  
+ 入出力ポインターの配列。各ポインターは、マネージヒープ上のオブジェクトに関する情報を提供する [COR_HEAPOBJECT](cor-heapobject-structure.md) オブジェクトを指します。  
   
  pceltFetched  
- 入出力実際にで返される[COR_HEAPOBJECT](cor-heapobject-structure.md)オブジェクトの数へのポインター `objects` 。 `celt` が 1 の場合、この値は`null` になることがあります。  
+ 入出力実際にで返される [COR_HEAPOBJECT](cor-heapobject-structure.md) オブジェクトの数へのポインター `objects` 。 `celt` が 1 の場合、この値は`null` になることがあります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  `COR_HEAPOBJECT.type` フィールドは、入れ子になった参照カウントの COM インターフェイスの識別子です。 この参照は、`ICorDebugHeapEnum::Next` の呼び出し元によって解放される必要があります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

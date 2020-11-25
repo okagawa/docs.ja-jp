@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2657d45d-26d2-4d0a-8473-32b652e3321d
 topic_type:
 - apiref
-ms.openlocfilehash: 0417a4acc0f4f39d8254eb5d5df3b3e690921a8a
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 9120085f6a241bcda04946a843799987bf82bb84
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804824"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723884"
 ---
 # <a name="ihostgcmanagerthreadisblockingforsuspension-method"></a>IHostGCManager::ThreadIsBlockingForSuspension メソッド
+
 メソッド呼び出しが行われたスレッドがガベージコレクションに対してブロックされようとしていることをホストに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,25 +36,27 @@ HRESULT ThreadIsBlockingForSuspension ();
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`ThreadIsBlockingForSuspension`正常に返されました。|  
+|S_OK|`ThreadIsBlockingForSuspension` 正常に返されました。|  
 |HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
 |HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  CLR は、通常、 `ThreadIsBlockForSuspension` ガベージコレクションの準備としてメソッドを呼び出し、ホストがアンマネージタスクのスレッドを再スケジュールできるようにします。  
   
 > [!IMPORTANT]
-> ホストは、を呼び出した後にのみタスクを再スケジュールでき `ThreadIsBlockingForSuspension` ます。 ランタイムが[SuspensionStarting](ihostgcmanager-suspensionstarting-method.md)を呼び出した後、ホストはタスクを再スケジュールする必要がありません。  
+> ホストは、を呼び出した後にのみタスクを再スケジュールでき `ThreadIsBlockingForSuspension` ます。 ランタイムが [SuspensionStarting](ihostgcmanager-suspensionstarting-method.md)を呼び出した後、ホストはタスクを再スケジュールする必要がありません。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

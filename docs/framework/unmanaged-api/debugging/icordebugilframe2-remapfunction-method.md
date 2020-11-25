@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd639ba0-f77b-426d-9ff6-f92706840348
 topic_type:
 - apiref
-ms.openlocfilehash: 43f585417ed52b92c23087c0f02fd188ee09ea7e
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 5eb6299526d69624056961cfb7f0387ff8f873cf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210216"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725028"
 ---
 # <a name="icordebugilframe2remapfunction-method"></a>ICorDebugILFrame2::RemapFunction メソッド
+
 新しい Microsoft 中間言語 (MSIL) オフセットを指定して、編集された関数を再マップします。  
   
 ## <a name="syntax"></a>構文  
@@ -34,24 +35,27 @@ HRESULT RemapFunction (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `newILOffset`  
  から命令ポインターが配置されるスタックフレームの新しい MSIL オフセット。 この値は、シーケンスポイントである必要があります。  
   
  この値の有効性を保証するのは、呼び出し元の責任です。 たとえば、関数の境界の外側にある場合、MSIL オフセットは無効です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  フレームの関数が編集されると、デバッガーはメソッドを呼び出して、 `RemapFunction` 最後のバージョンのフレームの関数をスワップして実行できるようになります。 コードの実行は、指定された MSIL オフセットから開始されます。  
   
 > [!NOTE]
-> を呼び出すと (例: `RemapFunction` を[呼び出す](icordebugilframe-setip-method.md)と、スレッドのスタックトレースの生成に関連するすべてのデバッグインターフェイスが無効になります)。 これらのインターフェイス[には](icordebugchain-interface.md)、次のようなインターフェイスがあります。  
+> を呼び出すと (例: `RemapFunction` を [呼び出す](icordebugilframe-setip-method.md)と、スレッドのスタックトレースの生成に関連するすべてのデバッグインターフェイスが無効になります)。 これらのインターフェイス [には](icordebugchain-interface.md)、次のようなインターフェイスがあります。  
   
  メソッドは、 `RemapFunction` 現在のフレームのコンテキストでのみ呼び出すことができ、次のいずれかの場合にのみ呼び出すことができます。  
   
-- まだ継続していない[ICorDebugManagedCallback2:: FunctionRemapOpportunity](icordebugmanagedcallback2-functionremapopportunity-method.md)コールバックを受信した後。  
+- まだ継続していない [ICorDebugManagedCallback2:: FunctionRemapOpportunity](icordebugmanagedcallback2-functionremapopportunity-method.md) コールバックを受信した後。  
   
-- このフレームに対して、コードの実行が停止している間に、このフレームに対しては、[というエラーが発生し](icordebugmanagedcallback-editandcontinueremap-method.md)ます。  
+- このフレームに対して、コードの実行が停止している間に、このフレームに対しては、 [というエラーが発生し](icordebugmanagedcallback-editandcontinueremap-method.md) ます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ded7639-dacb-4db1-961c-d1ceaec01959
 topic_type:
 - apiref
-ms.openlocfilehash: d02b834b22ba7897e4939de88bc3c61c62ac2b0e
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 05df50d80c6b8962b3bdfe2708d5f9d30c58aaea
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762410"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723923"
 ---
 # <a name="icorconfigurationsetdebuggerthreadcontrol-method"></a>ICorConfiguration::SetDebuggerThreadControl メソッド
+
 共通言語ランタイム (CLR) スレッドがブロックされ、デバッグのためにブロック解除されると、デバッグサービスが呼び出すコールバックインターフェイスを設定します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,15 +35,17 @@ HRESULT SetDebuggerThreadControl (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pDebuggerThreadControl`  
- からデバッグサービスによるスレッドのブロックおよびブロック解除についてホストに通知する[Iデバッガ Threadcontrol](idebuggerthreadcontrol-interface.md)オブジェクトへのポインター。  
+ からデバッグサービスによるスレッドのブロックおよびブロック解除についてホストに通知する [Iデバッガ Threadcontrol](idebuggerthreadcontrol-interface.md) オブジェクトへのポインター。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

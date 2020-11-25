@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4c02ec37-cdf0-46b2-890e-235092741236
 topic_type:
 - apiref
-ms.openlocfilehash: a3018d8477d5abd7d03ad8675503624d2e44e8f4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ca3c7fe813f22d3beab3087414100b3d8e5814ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504135"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725600"
 ---
 # <a name="iclroneventmanagerunregisteractiononevent-method"></a>ICLROnEventManager::UnregisterActionOnEvent メソッド
+
 指定されたイベントに対して、以前に登録されたコールバックポインターの登録を解除します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,8 +36,9 @@ HRESULT UnregisterActionOnEvent (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `event`  
- から[Eclrevent](eclrevent-enumeration.md)値の1つ。によって記述されたコールバックポインターの登録を解除する対象のイベントを示し `pAction` ます。  
+ から [Eclrevent](eclrevent-enumeration.md) 値の1つ。によって記述されたコールバックポインターの登録を解除する対象のイベントを示し `pAction` ます。  
   
  `pAction`  
  から[Registeractiononevent](iclroneventmanager-registeractiononevent-method.md)メソッドにパラメーターとして渡された[Iactiononclrevent](iactiononclrevent-interface.md)オブジェクトへのポインター。  
@@ -45,7 +47,7 @@ HRESULT UnregisterActionOnEvent (
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`UnregisterActionOnEvent`正常に返されました。|  
+|S_OK|`UnregisterActionOnEvent` 正常に返されました。|  
 |HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
 |HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
@@ -53,11 +55,12 @@ HRESULT UnregisterActionOnEvent (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 66a59b18-ce9a-41f4-b23b-4dd6753d6d36
 topic_type:
 - apiref
-ms.openlocfilehash: a7b71170f58ddfe0295da28b8c9fc73286b074e6
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 6efd451c6895e8fef443e2e86afa6e98279c6493
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212270"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724001"
 ---
 # <a name="icordebugmanagedcallbackunloadclass-method"></a>ICorDebugManagedCallback::UnloadClass メソッド
+
 クラスがアンロードされていることをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,16 +36,19 @@ HRESULT UnloadClass (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pAppDomain`  
  からクラスを含むアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
  `c`  
  からクラスを表す、のオブジェクトへのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  この呼び出しの後にクラスを参照することはできません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

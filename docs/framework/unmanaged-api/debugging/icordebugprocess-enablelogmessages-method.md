@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 14a4e5a3-3eaf-4f53-9dd1-762726963a23
 topic_type:
 - apiref
-ms.openlocfilehash: 3b850a462ce354b81f4406fce7fd9d8d9b6013d8
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 86cb1a2eb18840419d2a4e8ee4f6475edafe8397
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207903"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724625"
 ---
 # <a name="icordebugprocessenablelogmessages-method"></a>ICorDebugProcess::EnableLogMessages メソッド
+
 デバッガーへのログメッセージの転送を有効または無効にします。  
   
 ## <a name="syntax"></a>構文  
@@ -32,13 +33,16 @@ HRESULT EnableLogMessages([in]BOOL fOnOff);
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `fOnOff`  
- [入力] `true`ログメッセージの転送を有効にします。`false`転送を無効にします。  
+ [入力] `true` ログメッセージの転送を有効にします。 `false` 転送を無効にします。  
   
-## <a name="remarks"></a>Remarks  
- このメソッドは、によって実行される場合にのみ有効です: [: CreateProcess managedcallback:: CreateProcess](icordebugmanagedcallback-createprocess-method.md)コールバックが発生します。  
+## <a name="remarks"></a>注釈  
+
+ このメソッドは、によって実行される場合にのみ有効です: [: CreateProcess managedcallback:: CreateProcess](icordebugmanagedcallback-createprocess-method.md) コールバックが発生します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

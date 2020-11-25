@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a7b50175-2bf1-40be-8f65-64aec7aa1247
 topic_type:
 - apiref
-ms.openlocfilehash: c9e403dc8cbb75a1e93c426a9e0b3a2083f1f10e
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 5b4052485a6d420eb83578d135ce51f8a918aab0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210463"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724521"
 ---
 # <a name="icordebugprocesssetthreadcontext-method"></a>ICorDebugProcess::SetThreadContext メソッド
+
 このプロセス内の指定されたスレッドのコンテキストを設定します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT SetThreadContext(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `threadID`  
  からコンテキストを設定するスレッドの ID。  
   
@@ -47,14 +49,16 @@ HRESULT SetThreadContext(
   
  コンテキストは、スレッドが実行されているプロセッサのアーキテクチャを指定します。  
   
-## <a name="remarks"></a>Remarks  
- デバッガーは、Win32 関数ではなく、このメソッドを呼び出す必要があります。これは、 `SetThreadContext` スレッドが実際には "ハイジャック" 状態にあり、そのコンテキストが一時的に変更されている可能性があるためです。 このメソッドは、スレッドがネイティブコード内にある場合にのみ使用してください。 マネージコード内のスレッドには、コード[を使用し](icordebugregisterset-interface.md)ます。 アウトオブバンド (OOB) デバッグイベント中は、スレッドのコンテキストを変更する必要はありません。  
+## <a name="remarks"></a>注釈  
+
+ デバッガーは、Win32 関数ではなく、このメソッドを呼び出す必要があります。これは、 `SetThreadContext` スレッドが実際には "ハイジャック" 状態にあり、そのコンテキストが一時的に変更されている可能性があるためです。 このメソッドは、スレッドがネイティブコード内にある場合にのみ使用してください。 マネージコード内のスレッドには、コード [を使用し](icordebugregisterset-interface.md) ます。 アウトオブバンド (OOB) デバッグイベント中は、スレッドのコンテキストを変更する必要はありません。  
   
  渡されるデータは、現在のプラットフォームのコンテキスト構造である必要があります。  
   
  不適切に使用された場合、このメソッドはランタイムを破損する可能性があります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

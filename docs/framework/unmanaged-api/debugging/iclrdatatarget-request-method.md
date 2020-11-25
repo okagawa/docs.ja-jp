@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4723bd1c-eddb-4ed2-897a-010024a47e01
 topic_type:
 - apiref
-ms.openlocfilehash: b913affb4728dc80ba67438384cbeac87265f76d
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 4d0cf22b4b0644d6b25d6b3ef884718cb9ca1e42
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860538"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723793"
 ---
 # <a name="iclrdatatargetrequest-method"></a>ICLRDataTarget::Request メソッド
+
 実装で定義されているように、操作を要求するために、共通言語ランタイム (CLR) データアクセスサービスによって呼び出されます。  
   
 ## <a name="syntax"></a>構文  
@@ -40,6 +41,7 @@ HRESULT Request (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `reqCode`  
  からユーザー定義。  
   
@@ -55,12 +57,14 @@ HRESULT Request (
  `outBuffer`  
  入出力応答を格納しているバッファー。  
   
-## <a name="remarks"></a>解説  
- メソッド`Request`は、指定されていないカスタム操作の追加を容易にします。 つまり、このメソッドは、インターフェイス定義のリビジョンを必要とせずに、拡張機能を提供します。  
+## <a name="remarks"></a>注釈  
+
+ メソッドは、指定されて `Request` いないカスタム操作の追加を容易にします。 つまり、このメソッドは、インターフェイス定義のリビジョンを必要とせずに、拡張機能を提供します。  
   
  このメソッドは、デバッグ アプリケーションの作成者によって実装されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** ClrData .idl, ClrData .h  

@@ -9,17 +9,19 @@ helpviewer_keywords:
 - debugging interfaces [.NET Framework]
 - interfaces [.NET Framework debugging]
 ms.assetid: f96987d5-e6a5-478b-ac5e-302e16545cce
-ms.openlocfilehash: 34eee8c05e1c356d4c431245c6837bd2b3a89b32
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e376544a9d428ce5110a7e38b92a8e830f574664
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504473"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725184"
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>シンボル ストア診断インターフェイス
+
 このトピックでは、コンパイラがデバッガーで使用するシンボル情報を生成できるようにするアンマネージインターフェイスについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [IBindingDisplay インターフェイス](ibindingdisplay-interface.md)  
  実行中のアプリケーションに関する現在のバインド情報を表示するメソッドを提供します。  
   
@@ -42,10 +44,10 @@ ms.locfileid: "84504473"
  このインターフェイスは、 [ISymUnmanagedAsyncMethodPropertiesWriter インターフェイス](isymunmanagedasyncmethodpropertieswriter-interface.md)への読み取り補数です。  
   
  [ISymUnmanagedAsyncMethodPropertiesWriter インターフェイス](isymunmanagedasyncmethodpropertieswriter-interface.md)  
- メソッドシンボルごとにオプションの非同期メソッド情報を定義できます。 は、開いているメソッド (つまり、 [Openmethod メソッド](isymunmanagedwriter-openmethod-method.md)と[closemethod メソッド](isymunmanagedwriter-closemethod-method.md)の呼び出しの間) でを使用する必要があります。  
+ メソッドシンボルごとにオプションの非同期メソッド情報を定義できます。 は、開いているメソッド (つまり、 [Openmethod メソッド](isymunmanagedwriter-openmethod-method.md)と [closemethod メソッド](isymunmanagedwriter-closemethod-method.md)の呼び出しの間) でを使用する必要があります。  
   
  [ISymUnmanagedBinder インターフェイス](isymunmanagedbinder-interface.md)  
- アンマネージコードのシンボルバインダーを表します。  
+ アンマネージド コードのシンボル バインダーを表します。  
   
  [ISymUnmanagedBinder2 インターフェイス](isymunmanagedbinder2-interface.md)  
  アンマネージコードのシンボルバインダーを表し、インターフェイスを拡張し `ISymUnmanagedBinder` ます。  
@@ -69,13 +71,13 @@ ms.locfileid: "84504473"
  エディットコンティニュ機能のメソッドを提供します。  
   
  [ISymUnmanagedMethod インターフェイス](isymunmanagedmethod-interface.md)  
- シンボルストア内のメソッドを表します。  
+ シンボル ストア内のメソッドを表します。  
   
  [ISymUnmanagedNamespace インターフェイス](isymunmanagednamespace-interface.md)  
  名前空間を表します。  
   
  [ISymUnmanagedReader インターフェイス](isymunmanagedreader-interface.md)  
- シンボルストア内のドキュメント、メソッド、および変数へのアクセスを提供するシンボルリーダーを表します。  
+ シンボル ストア内のドキュメント、メソッド、および変数へのアクセスを提供するシンボル リーダーを表します。  
   
  [ISymUnmanagedReader2 インターフェイス](isymunmanagedreader2-interface.md)  
  メソッドトークンと編集およびコピーバージョン番号を指定して、シンボルリーダーメソッドを取得します。  
@@ -96,16 +98,16 @@ ms.locfileid: "84504473"
  検索パスに関する情報を取得するメソッドを提供します。  
   
  [ISymUnmanagedVariable インターフェイス](isymunmanagedvariable-interface.md)  
- パラメーター、ローカル変数、フィールドなどの変数を表します。  
+ パラメーター、ローカル変数、またはフィールドなどの変数を表します。  
   
  [ISymUnmanagedWriter インターフェイス](isymunmanagedwriter-interface.md)  
- シンボルライターを表し、ドキュメント、シーケンスポイント、構文スコープ、および変数を定義するメソッドを提供します。  
+ シンボル ライターを表し、ドキュメント、シーケンス ポイント、構文スコープ、変数を定義するメソッドを提供します。  
   
  [ISymUnmanagedWriter2 インターフェイス](isymunmanagedwriter2-interface.md)  
- シンボルライターを表し、ドキュメント、シーケンスポイント、構文スコープ、および変数を定義するメソッドを提供します。 インターフェイスを拡張 `ISymUnmanagedWriter` します。  
+ シンボル ライターを表し、ドキュメント、シーケンス ポイント、構文スコープ、変数を定義するメソッドを提供します。 インターフェイスを拡張 `ISymUnmanagedWriter` します。  
   
  [ISymUnmanagedWriter3 インターフェイス](isymunmanagedwriter3-interface.md)  
- シンボルライターを表し、ドキュメント、シーケンスポイント、構文スコープ、および変数を定義するメソッドを提供します。 インターフェイスを拡張 `ISymUnmanagedWriter` します。  
+ シンボル ライターを表し、ドキュメント、シーケンス ポイント、構文スコープ、変数を定義するメソッドを提供します。 インターフェイスを拡張 `ISymUnmanagedWriter` します。  
   
  [ISymUnmanagedWriter4 インターフェイス](isymunmanagedwriter4-interface.md)  
  ISymUnmanagedWriter4 インターフェイス。  
@@ -114,6 +116,7 @@ ms.locfileid: "84504473"
  ISymUnmanagedWriter5 インターフェイス。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [シンボル ストア診断列挙型](diagnostics-symbol-store-enumerations.md)  
   
  [シンボル ストア診断構造体](diagnostics-symbol-store-structures.md)  

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: bfd46324-afec-4782-9c18-586d81fb4740
 topic_type:
 - apiref
-ms.openlocfilehash: 1c795ee536483a7def9c0339efae66a013898a77
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 3f41dd969e25f7a42308ff0b7b2d617344284b38
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420631"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725249"
 ---
 # <a name="call_id-structure"></a>CALL_ID 構造体
-呼び出されている関数についての情報をデバッガーに提供します。 詳細については、 [INotifySink2](inotifysink2-interface.md)インターフェイスを参照してください。  
+
+呼び出されている関数についての情報をデバッガーに提供します。 詳細については、 [INotifySink2](inotifysink2-interface.md) インターフェイスを参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,6 +51,7 @@ typedef struct tagCALL_ID
 |`szDestinationMachine`|呼び出しを実行するコンピューターを識別します。|  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** ProtocolNotify2  
   
 ## <a name="see-also"></a>関連項目

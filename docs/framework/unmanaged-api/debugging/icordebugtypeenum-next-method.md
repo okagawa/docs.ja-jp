@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0fdeba3-c195-4ece-8caf-79b1f40025d2
 topic_type:
 - apiref
-ms.openlocfilehash: 83adea3d659eea6d4af9ae364aad18df67e69c03
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 78ea76033b0b83c84446e16fb330bd3ba34c6e21
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396619"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725704"
 ---
 # <a name="icordebugtypeenumnext-method"></a>ICorDebugTypeEnum::Next メソッド
+
 によって指定された "の型" インスタンスの数を列挙から取得します。この数は `celt` 、現在の位置から開始します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,8 +38,9 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `celt`  
- から`ICorDebugType`取得するインスタンスの数。  
+ から `ICorDebugType` 取得するインスタンスの数。  
   
  `values`  
  入出力ポインターの配列。それぞれがオブジェクトを指し `ICorDebugType` ます。  
@@ -47,6 +49,7 @@ HRESULT Next (
  入出力実際に返されたインスタンスの数へのポインター `ICorDebugType` 。 が1の場合、この値は null `celt` になります。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
