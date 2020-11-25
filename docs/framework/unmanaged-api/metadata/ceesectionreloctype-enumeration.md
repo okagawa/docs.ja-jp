@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 124656f6-0dad-4ceb-9043-d3869ab65cde
 topic_type:
 - apiref
-ms.openlocfilehash: 78b30f624bd71234e8f1b56600b3a23d15fdf517
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: f7aa9699e9929608c90020c6b2d66c301fc11955
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006033"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732711"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType 列挙型
+
 `reloc` [ICeeGen:: AddSectionReloc](iceegen-addsectionreloc-method.md)の呼び出しで生成された命令の種類に影響する値を提供します。  
   
 ## <a name="syntax"></a>構文  
@@ -68,12 +69,13 @@ typedef enum  {
 |`srNoBaseReloc`|ベースを生成しないことを指定し `reloc` ます。|  
 |`srRelocPtr`|メモリの事前修正の内容が、セクションオフセットではなくポインターであることを示す値。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

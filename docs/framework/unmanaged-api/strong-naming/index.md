@@ -6,14 +6,15 @@ helpviewer_keywords:
 - native API reference [.NET Framework], strong naming
 - unmanaged API reference [.NET Framework], strong naming
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
-ms.openlocfilehash: 7d18513450111d58b5d26fd834addd465cfc4267
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e431f3a41fadb7247f20d7ab9bb9120e827b0cd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140637"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732295"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>厳密な名前付け (アンマネージ API リファレンス)
+
 厳密な名前付け API を使用すると、アセンブリに対する厳密な名前の署名をクライアントで管理できます。  
   
  厳密な名前を使用してアセンブリに署名すると、アセンブリ マニフェストを格納しているファイルに公開キー暗号化が追加されます。 厳密な名前による署名では、名前の一意性の検証を支援し、名前の悪用を防止し、参照が解決されたときに呼び出し元に一意の ID を提供できます。 しかし、厳密な名前に信頼性のレベルは関連付けられていません。  
@@ -104,7 +105,7 @@ ms.locfileid: "73140637"
  [PublicKeyBlob 構造体](publickeyblob-structure.md)  
  公開/秘密キーの組の公開キーがバイナリ形式で表されます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ICLRStrongName インターフェイス](../hosting/iclrstrongname-interface.md)
 - [アンマネージ API リファレンス](../index.md)

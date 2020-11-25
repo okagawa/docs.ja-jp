@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1fec4aef-0a06-4df0-bae7-d31a9ef9603d
 topic_type:
 - apiref
-ms.openlocfilehash: ee5dd611888ec52e360ef45fab4c01e9c5b2d6bb
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 74256f35804ff59f04952a1ac20ac7866e8f5683
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009451"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732815"
 ---
 # <a name="waitortimercallback-function-pointer"></a>WAITORTIMERCALLBACK 関数ポインター
+
 待機ハンドル () がシグナル状態になったか、タイムアウトしたことをホストに通知する関数を指し <xref:System.Threading.WaitHandle> ます。  
   
  この関数ポインターは .NET Framework 4 で非推奨とされました。  
@@ -36,21 +37,24 @@ typedef VOID (__stdcall *WAITORTIMERCALLBACK) (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `lpParameter`  
  からホストによって定義された情報を格納しているオブジェクトへのポインター。  
   
  `TimerOrWaitFired`  
- [入力] `true`待機ハンドルがタイムアウトした場合は `false` 。それがシグナル状態だった場合は。  
+ [入力] `true` 待機ハンドルがタイムアウトした場合は `false` 。それがシグナル状態だった場合は。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
+
  `WAITORTIMERCALLBACK`ポイントがコールバック関数であり、ホストアプリケーションのライターによって実装されている必要がある関数。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscorwks.dll  
+ **ライブラリ:** MSCorWks.dll  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -10,14 +10,15 @@ api_type:
 ms.assetid: aa6cf962-30ae-4cfd-8895-826deeb46a54
 topic_type:
 - apiref
-ms.openlocfilehash: a90ddd27834e7614c1827d606a9955b4d6c53127
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 60eab923aac5dea927105e8ca9fa77eb5708f5ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795977"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733361"
 ---
 # <a name="cordebugdecodeeventflagswindows-enumeration"></a>CorDebugDecodeEventFlagsWindows 列挙体
+
 Windows プラットフォームのデバッグ イベントに関する追加情報を提供します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,13 +35,15 @@ typedef enum CorDebugDecodeEventFlagsWindows {
 |------------|-----------------|  
 |`IS_FIRST_CHANCE`|デバッグ イベントが初回例外であることを示します。|  
   
-## <a name="remarks"></a>Remarks  
- [ICorDebugProcess6::D ecodeevent](icordebugprocess6-decodeevent-method.md)メソッドには、 `dwFlags`デバッグイベントに関する追加情報を提供し、ターゲットアーキテクチャに依存する値を持つパラメーターが含まれています。 `CorDebugDecodeEventFlagsWindows` 列挙体は、Windows プラットフォームでデバッグ イベントと共に使用できます。  
+## <a name="remarks"></a>注釈  
+
+ [ICorDebugProcess6::D ecodeevent](icordebugprocess6-decodeevent-method.md)メソッドには、 `dwFlags` デバッグイベントに関する追加情報を提供し、ターゲットアーキテクチャに依存する値を持つパラメーターが含まれています。 `CorDebugDecodeEventFlagsWindows` 列挙体は、Windows プラットフォームでデバッグ イベントと共に使用できます。  
   
 > [!NOTE]
 > この列挙型は .NET ネイティブのデバッグ シナリオのみで使用することを目的としています。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

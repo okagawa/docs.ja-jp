@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3cea59d-7622-4323-897a-0a464c40f77f
 topic_type:
 - apiref
-ms.openlocfilehash: 7a3ad94a4149d6ebb70e077926771e28d7f82779
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 94c2c159cf386e00dfc0d1df97536d7ade53407e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494840"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732945"
 ---
 # <a name="icorprofilermoduleenumnext-method"></a>ICorProfilerModuleEnum::Next メソッド
+
 モジュールのシーケンシャル コレクションから、列挙子の現在の位置以降にある指定した数の隣接するモジュールを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,6 +36,7 @@ HRESULT Next([in]  ULONG      celt,
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `celt`  
  [in] 取得するモジュールの数。  
   
@@ -45,6 +47,7 @@ HRESULT Next([in]  ULONG      celt,
  [out] `ids` 配列で実際に返されるモジュールの数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
+
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
   
 |HRESULT|説明|  
@@ -53,6 +56,7 @@ HRESULT Next([in]  ULONG      celt,
 |S_FALSE|`celt` よりも少ない数の要素が返されました。これは、列挙が完了したことを示します。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 82e9a7da-321b-48b8-b239-52eaffda6be8
 topic_type:
 - apiref
-ms.openlocfilehash: 85ac976daec8fd76ee21012a30611235609f4b34
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6c6fab627f21977e85f9885ca4b49a0276faa5ce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73109486"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732165"
 ---
 # <a name="asm_cache_flags-enumeration"></a>ASM_CACHE_FLAGS 列挙型
-グローバルアセンブリキャッシュ内の[Iassemblycacheitem](iassemblycacheitem-interface.md)によって表されるアセンブリのソースを示します。  
+
+グローバルアセンブリキャッシュ内の [Iassemblycacheitem](iassemblycacheitem-interface.md) によって表されるアセンブリのソースを示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,17 +47,18 @@ typedef enum {
 |`ASM_CACHE_ROOT`|[Getcachepath](getcachepath-function.md)関数が、共通言語ランタイム (CLR) バージョン2.0 のグローバルアセンブリキャッシュへのパスを返す必要があることを示します。 [Getcachepath](getcachepath-function.md)への呼び出しのコンテキストでのみ意味があります。|  
 |`ASM_CACHE_ROOT_EX`|[Getcachepath](getcachepath-function.md)関数が CLR version 4 のグローバルアセンブリキャッシュへのパスを返す必要があることを示します。 [Getcachepath](getcachepath-function.md)への呼び出しのコンテキストでのみ意味があります。|  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Fusion. h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - [GetCachePath 関数](getcachepath-function.md)
 - [IAssemblyCacheItem インターフェイス](iassemblycacheitem-interface.md)
-- [Fusion 列挙型](fusion-enumerations.md)
+- [fusion 列挙体](fusion-enumerations.md)

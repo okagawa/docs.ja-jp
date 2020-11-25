@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 40f9bd9e-16ec-447e-81b0-168c875e9866
 topic_type:
 - apiref
-ms.openlocfilehash: 1cb84b94b37a2e9e8dd4d20d09cbca82db290c0f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 561b4d68a574a2859286fb5f2e2d950518a9d29d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009454"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732781"
 ---
 # <a name="assemblyflags-enumeration"></a>AssemblyFlags 列挙体
+
 アセンブリのランタイム機能を記述する値を格納します。  
   
 ## <a name="syntax"></a>構文  
@@ -46,15 +47,17 @@ typedef enum {
 |`afNonSideBySideProcess`|同じプロセスで実行されている場合、アセンブリを他のバージョンと一緒に実行できないことを指定します。|  
 |`afNonSideBySideMachine`|アセンブリが同じコンピューター上で実行されている場合、その他のバージョンでは実行できないことを指定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
+
  0x0010 と0x0070 の間の値は、参照アセンブリのサイドバイサイドの互換性機能を記述するために使用されます。 これらの値のいずれも設定されていない場合、アセンブリはサイドバイサイドで互換性があると見なされます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

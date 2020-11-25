@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0eaa4aa9-9441-444a-920c-e4b2a2db899e
 topic_type:
 - apiref
-ms.openlocfilehash: a90deaf3e9ddf326c6fca558cbb4681fc40e022d
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 1e1a86cdf55812197aae653dca256fb910a7f168
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009055"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733894"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>IMetaDataAssemblyImport::GetAssemblyProps メソッド
+
 指定したメタデータシグネチャを持つアセンブリのプロパティのセットを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -42,6 +43,7 @@ HRESULT GetAssemblyProps (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `mda`  
  [入力]。 `mdAssembly`プロパティを取得する対象のアセンブリを表すメタデータトークン。  
   
@@ -67,14 +69,15 @@ HRESULT GetAssemblyProps (
  入出力アセンブリメタデータを格納している ASSEMBLYMETADATA 構造体へのポインター。  
   
  `pdwAssemblyFlags`  
- 入出力アセンブリに適用されるメタデータを記述するフラグ。 この値は、1つまたは複数の[Corassemblyflags](corassemblyflags-enumeration.md)値を組み合わせたものです。  
+ 入出力アセンブリに適用されるメタデータを記述するフラグ。 この値は、1つまたは複数の [Corassemblyflags](corassemblyflags-enumeration.md) 値を組み合わせたものです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

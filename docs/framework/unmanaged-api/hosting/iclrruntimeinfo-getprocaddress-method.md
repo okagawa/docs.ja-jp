@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: a7732bfc-689a-4926-88fd-4f81e6f9ed78
 topic_type:
 - apiref
-ms.openlocfilehash: 2690a5c2e7c499d68ef9e903c62bff8f85e72e8e
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 028cfd51a713d8598598566a5b1edcf3fc70ecfc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703870"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732061"
 ---
 # <a name="iclrruntimeinfogetprocaddress-method"></a>ICLRRuntimeInfo::GetProcAddress メソッド
+
 このインターフェイスに関連付けられている共通言語ランタイム (CLR) からエクスポートされた、指定された関数のアドレスを取得します。  
   
- このメソッドは、 [GetRealProcAddress](getrealprocaddress-function.md)関数よりも優先されます。  
+ このメソッドは、 [GetRealProcAddress](getrealprocaddress-function.md) 関数よりも優先されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,6 +37,7 @@ HRESULT GetProcAddress(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pszProcName`  
  からエクスポートされた関数の名前。  
   
@@ -43,6 +45,7 @@ HRESULT GetProcAddress(
  入出力エクスポートされた関数のアドレス。  
   
 ## <a name="return-value"></a>戻り値  
+
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
   
 |HRESULT|説明|  
@@ -51,15 +54,17 @@ HRESULT GetProcAddress(
 |E_POINTER|`pszProcName` または `ppProc` が null です。|  
 |CLR_E_SHIM_RUNTIMEEXPORT|指定された関数はエクスポートされた関数ではありません。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  このメソッドを使用すると、CLR が読み込まれますが、初期化されません。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

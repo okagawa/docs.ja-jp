@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 63021fc1-9c2d-4788-811f-fe8ca077206a
 topic_type:
 - apiref
-ms.openlocfilehash: f2996349fd2bf1765a3de5b67d3296a25b1eaa5e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 68d20c33c5ccd554554cae57ee55f6f51d5d980c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610367"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733309"
 ---
 # <a name="isymunmanagedvariablegetstartoffset-method"></a>ISymUnmanagedVariable::GetStartOffset メソッド
+
 親内のこの変数の開始オフセットを取得します。 スコープ内のローカル変数の場合、開始オフセットはスコープに対して定義されたオフセット内になります。  
   
 ## <a name="syntax"></a>構文  
@@ -33,13 +34,16 @@ HRESULT GetStartOffset(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pRetVal`  
  入出力開始オフセットを受け取るへのポインター `ULONG32` 。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

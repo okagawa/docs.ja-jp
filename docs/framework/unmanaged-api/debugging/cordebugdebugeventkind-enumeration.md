@@ -10,14 +10,15 @@ api_type:
 ms.assetid: 6075a6cd-97e6-4472-a090-0dd14860d1f3
 topic_type:
 - apiref
-ms.openlocfilehash: b7db7c9e17d87b91e09d5d010d40431cba5385df
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: e348e0070a5ce619f95dad9ebe4085d17f7ade6d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795990"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733374"
 ---
 # <a name="cordebugdebugeventkind-enumeration"></a>CorDebugDebugEventKind 列挙体
+
 [DecodeEvent](icordebugprocess6-decodeevent-method.md)メソッドによって情報がデコードされるイベントの種類を示します。  
   
 ## <a name="syntax"></a>構文  
@@ -44,13 +45,15 @@ typedef enum CorDebugDebugEventKind {
 |`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_CATCH_HANDLER_FOUND`|`catch` ハンドラーが存在する例外。|  
 |`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_UNHANDLED`|未処理の例外。|  
   
-## <a name="remarks"></a>Remarks  
- この`CorDebugDebugEventKind`列挙体のメンバーは、によっては、の[イベント:: geteventkind](icordebugdebugevent-geteventkind-method.md)メソッドを呼び出すことによって返されます。  
+## <a name="remarks"></a>注釈  
+
+ この列挙体のメンバーは、 `CorDebugDebugEventKind` によっては、の [イベント:: GetEventKind](icordebugdebugevent-geteventkind-method.md) メソッドを呼び出すことによって返されます。  
   
 > [!NOTE]
 > この列挙型は .NET ネイティブのデバッグ シナリオのみで使用することを目的としています。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

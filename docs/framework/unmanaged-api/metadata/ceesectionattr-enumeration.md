@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0db51881-b869-4677-a715-1726a9216489
 topic_type:
 - apiref
-ms.openlocfilehash: 6da8a111f716906e403d85bc0b1a29eba7238100
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 4b2fb80298f6eef331b5b7ae4a46222ce97ede6f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006065"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732737"
 ---
 # <a name="ceesectionattr-enumeration"></a>CeeSectionAttr 列挙型
+
 [ICeeGen](iceegen-interface.md)インターフェイスで使用するセクションの属性を指定する値を提供します。  
   
 ## <a name="syntax"></a>構文  
@@ -46,12 +47,13 @@ typedef enum  {
 |`sdReadWrite`|セクションには、読み取りまたは更新が可能な初期化済みのデータが含まれています。|  
 |`sdExecute`|セクションには、読み取りと実行が許可されている実行可能コードが含まれています。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

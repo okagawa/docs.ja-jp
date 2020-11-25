@@ -10,14 +10,15 @@ api_type:
 ms.assetid: 71aee5f3-5e10-44fa-be69-6d8a475f2c14
 topic_type:
 - apiref
-ms.openlocfilehash: a819ca33df962774e69dac0609df1fff2fbdecd3
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 6a868cff3a686c29bb596330aeda2955a7f8ff5c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213661"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732568"
 ---
 # <a name="icordebugprocess7-interface"></a>ICorDebugProcess7 インターフェイス
+
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
   
  ターゲット プロセスでメモリ内のメタデータ更新を処理するようにデバッガーを構成するメソッドを提供します。  
@@ -31,6 +32,7 @@ ms.locfileid: "83213661"
 ## <a name="remarks"></a>解説  
   
 ## <a name="requirements"></a>必要条件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

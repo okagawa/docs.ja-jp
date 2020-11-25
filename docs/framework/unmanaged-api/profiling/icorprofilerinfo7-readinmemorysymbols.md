@@ -10,14 +10,15 @@ api_location:
 api_type:
 - COM
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
-ms.openlocfilehash: 6732457220d795bbf8ae54277ef9f5c07cf96359
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6917900b7494550992dfa82f45ed0140f95e68cb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84495360"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733621"
 ---
 # <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7:: ReadInMemorySymbols
+
 [.NET Framework 4.6.1 以降のバージョンでのみでサポート]  
   
  メモリ内シンボルストリームからバイトを読み取ります。  
@@ -35,6 +36,7 @@ HRESULT ReadInMemorySymbols(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `moduleId`  
  からメモリ内ストリームを格納しているモジュールの識別子。  
   
@@ -51,17 +53,20 @@ HRESULT ReadInMemorySymbols(
  入出力メソッドから制御が戻るときに、実際に読み取られたバイト数を格納します。  
   
 ## <a name="return-value"></a>戻り値  
+
  `S_OK`0以外のバイト数が読み取られた場合は。  
   
  `CORPROF_E_MODULE_IS_DYNAMIC`モジュールがを使用して作成された場合は <xref:System.Reflection.Emit> 。  
   
-## <a name="remarks"></a>解説  
- メソッドは、 `ReadInMemorySymbols` `countSymbolBytes` インメモリストリーム内のオフセットを開始位置として、データの読み取りを試み `symbolsReadOffset` ます。 データはにコピーされ `pSymbolBytes` ます。これには、使用可能な領域があることが予想され `countSymbolBytes` ます。     `pCountSymbolsBytesRead`実際に読み取られたバイト数を格納し `countSymbolBytes` ます。ストリームの末尾に到達した場合よりも小さくなることがあります。  
+## <a name="remarks"></a>注釈  
+
+ メソッドは、 `ReadInMemorySymbols` `countSymbolBytes` インメモリストリーム内のオフセットを開始位置として、データの読み取りを試み      `symbolsReadOffset` ます。 データはにコピーされ `pSymbolBytes` ます。これには、使用可能な領域があることが予想され `countSymbolBytes` ます。     `pCountSymbolsBytesRead` 実際に読み取られたバイト数を格納し `countSymbolBytes` ます。ストリームの末尾に到達した場合よりも小さくなることがあります。  
   
 > [!NOTE]
 > 現在の実装では、リフレクションはサポートされていません。 モジュールがリフレクションを使用して作成された場合、メソッドは `CORPROF_E_MODULE_IS_DYNAMIC` を返します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

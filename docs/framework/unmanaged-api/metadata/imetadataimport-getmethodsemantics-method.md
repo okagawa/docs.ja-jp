@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e018eaa-d60e-4a0b-a2c5-8c36bd09d905
 topic_type:
 - apiref
-ms.openlocfilehash: 2cfb66203d8f2d69ea188f6913a5ef34dd74791e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: cc01a417c3246ad2554c506f21e37a3cbbdeb991
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503602"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733188"
 ---
 # <a name="imetadataimportgetmethodsemantics-method"></a>IMetaDataImport::GetMethodSemantics メソッド
+
 指定した MethodDef トークンによって参照されるメソッドと、指定した EventProp トークンによって参照されるペアのプロパティおよびイベントの間のリレーションシップを示すフラグを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT GetMethodSemantics (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `mb`  
  からセマンティックロール情報を取得するメソッドを表す MethodDef トークン。  
   
@@ -43,17 +45,19 @@ HRESULT GetMethodSemantics (
  からメソッドのロールを取得するための、ペアのプロパティとイベントを表すトークン。  
   
  `pdwSemanticsFlags`  
- 入出力関連付けられているセマンティクスフラグへのポインター。 この値は、 [CorMethodSemanticsAttr](cormethodsemanticsattr-enumeration.md)列挙体のビットマスクです。  
+ 入出力関連付けられているセマンティクスフラグへのポインター。 この値は、 [CorMethodSemanticsAttr](cormethodsemanticsattr-enumeration.md) 列挙体のビットマスクです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  [IMetaDataEmit::D efineProperty](imetadataemit-defineproperty-method.md)メソッドは、メソッドのセマンティクスフラグを設定します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

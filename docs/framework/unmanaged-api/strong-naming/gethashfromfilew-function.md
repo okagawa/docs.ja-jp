@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 97c2d7a6-5376-45a1-ba65-146a249147cc
 topic_type:
 - apiref
-ms.openlocfilehash: 9db583c7064cb910b29e84437f31143dac0d3ec9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8038d0abc93e058e6bde897bbf2261d8f1df885a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175084"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732324"
 ---
 # <a name="gethashfromfilew-function"></a>GetHashFromFileW 関数
+
 Unicode 文字列で指定されたファイルの内容に対してハッシュが作成されます。  
   
- この関数は廃止されました。 代わりに[、メソッド](../hosting/iclrstrongname-gethashfromfilew-method.md)を使用します。  
+ この関数は非推奨とされます。 代わりに [ICLRStrongName:: GetHashFromFileW](../hosting/iclrstrongname-gethashfromfilew-method.md) メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,32 +40,35 @@ HRESULT GetHashFromFileW (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `wszFilePath`  
- [in]ハッシュするファイルの Unicode 名。  
+ からハッシュするファイルの Unicode 名。  
   
  `piHashAlg`  
- [イン、アウト]ハッシュを生成するときに使用するアルゴリズム。 有効なアルゴリズムは、Win32 CryptoAPI によって定義されるアルゴリズムです。 0`piHashAlg`に設定すると、デフォルトのアルゴリズム CALG_SHA-1 が使用されます。  
+ [入力、出力]ハッシュを生成するときに使用するアルゴリズム。 有効なアルゴリズムは、Win32 CryptoAPI によって定義されているものです。 が0に設定されている場合は、 `piHashAlg` 既定のアルゴリズム CALG_SHA-1 が使用されます。  
   
  `pbHash`  
- [アウト]生成されたハッシュを含むバイト配列。  
+ 入出力生成されたハッシュを格納しているバイト配列。  
   
  `cchHash`  
- [in]が`pbHash`指すバッファの最大サイズ。  
+ からが指すバッファーの最大サイズ `pbHash` 。  
   
  `pchHash`  
- [アウト]のサイズ (バイト単位)`pbHash`です。  
+ 入出力のサイズ (バイト単位) `pbHash` 。  
   
-## <a name="remarks"></a>解説  
- この関数は、ファイル名指定が ANSI ではなくユニコードであることを除けば[、GetHashFromFile](gethashfromfile-function.md)と同じです。  
+## <a name="remarks"></a>注釈  
+
+ この関数は [GetHashFromFile](gethashfromfile-function.md)と同じですが、ファイル名の指定は ANSI ではなく Unicode である点が異なります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ストロングネーム.h  
+ **ヘッダー:** StrongName  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: aa527b31-89d4-41f2-ad6f-63b76950b7df
 topic_type:
 - apiref
-ms.openlocfilehash: 0fa72568df77c4916a3c6676e1dcca7c0c616c4a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 332488fee4c982fdbaecceeaa2a6a3876f1602a5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493319"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733699"
 ---
 # <a name="etasktype-enumeration"></a>ETaskType 列挙型
+
 [ICLRTask](iclrtask-interface.md)または[IHostTask](ihosttask-interface.md)インターフェイスによって表されるタスクの種類を示す値を格納します。  
   
 ## <a name="syntax"></a>構文  
@@ -59,11 +60,12 @@ typedef enum ETaskType {
 |`TT_USER`|インターフェイスは、ユーザータスクを表します。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll  
+ **ライブラリ:** MSCorEE.dll  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

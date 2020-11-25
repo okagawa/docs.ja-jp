@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 65a4ad49-fa49-4b36-8ed1-76dd6a185ab4
 topic_type:
 - apiref
-ms.openlocfilehash: 3ef6b89ed6578d77f30d5e53657b962b200b0ed6
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: d355e0e3b2461932384ca11d83d46fd1dc63b80e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009322"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732685"
 ---
 # <a name="imetadataemitdeleteclasslayout-method"></a>IMetaDataEmit::DeleteClassLayout メソッド
+
 指定したトークンによって表される型のクラスレイアウトメタデータシグネチャを破棄します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,15 +35,17 @@ HRESULT DeleteClassLayout (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `td`  
- から`mdTypeDef`クラスレイアウトが削除される型を表すメタデータトークン。  
+ から `mdTypeDef` クラスレイアウトが削除される型を表すメタデータトークン。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 781ed736-f30c-4816-920e-3552e36542c6
 topic_type:
 - apiref
-ms.openlocfilehash: 7dd82f2dfab885070df4789fe5efc16a49d50e06
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 92e2901b2c228e4b774fbb1dbcc66cd0b4f82087
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84495802"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733855"
 ---
 # <a name="icorprofilerinfo4requestrejit-method"></a>ICorProfilerInfo4::RequestReJIT メソッド
+
 指定された関数のすべてのインスタンスの JIT 再コンパイルを要求します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,6 +36,7 @@ HRESULT RequestReJIT (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `cFunctions`  
  [in] 再コンパイルする関数の数。  
   
@@ -45,23 +47,26 @@ HRESULT RequestReJIT (
  [in] 再コンパイルする関数を識別する (`module`、`methodDef`) ペアの `methodId` の部分を指定します。  
   
 ## <a name="return-value"></a>戻り値  
+
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|すべてのメソッドを JIT 再コンパイル対象としてマークする操作が試行されました。 プロファイラーは、 [ICorProfilerCallback4:: ReJITError](icorprofilercallback4-rejiterror-method.md)メソッドを実装して、JIT 再コンパイルのために正常にマークされたメソッドを特定する必要があります。|  
-|CORPROF_E_CALLBACK4_REQUIRED|プロファイラーは、この呼び出しがサポートされるように、 [ICorProfilerCallback4](icorprofilercallback4-interface.md)インターフェイスを実装する必要があります。|  
+|S_OK|すべてのメソッドを JIT 再コンパイル対象としてマークする操作が試行されました。 プロファイラーは、 [ICorProfilerCallback4:: ReJITError](icorprofilercallback4-rejiterror-method.md) メソッドを実装して、JIT 再コンパイルのために正常にマークされたメソッドを特定する必要があります。|  
+|CORPROF_E_CALLBACK4_REQUIRED|プロファイラーは、この呼び出しがサポートされるように、 [ICorProfilerCallback4](icorprofilercallback4-interface.md) インターフェイスを実装する必要があります。|  
 |CORPROF_E_REJIT_NOT_ENABLED|JIT 再コンパイルが有効になっていませんでした。 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md)メソッドを使用してフラグを設定することにより、初期化中に JIT 再コンパイルを有効にする必要があり `COR_PRF_ENABLE_REJIT` ます。|  
 |E_INVALIDARG|`cFunctions` が 0 であるか、`moduleIds` または `methodIds` が `NULL` です。|  
 |||  
 |E_OUTOFMEMORY|メモリが不足しているために、CLR は要求を完了できませんでした。|  
   
-## <a name="remarks"></a>解説  
- 指定された一連の関数をこのラインタイムで再コンパイルするため、`RequestReJIT` を呼び出します。 コードプロファイラーは、 [ICorProfilerFunctionControl](icorprofilerfunctioncontrol-interface.md)インターフェイスを使用して、関数の再コンパイル時に生成されるコードを調整できます。 これは、今後の関数呼び出しにのみ影響し、現在実行中の関数には影響しません。 指定されている関数のいずれかが以前に JIT 再コンパイルされている場合、再コンパイルを要求する操作は、関数を元に戻して再コンパイルする操作と同等です。 可逆性を維持するため、JIT コンパイラは関数の元のバージョンのコンパイル時に、インライン処理の決定のために呼び出し先の元のバージョンだけを考慮します。 JIT コンパイラは関数の再コンパイル時に、インライン処理のためにその呼び出し先の現行バージョン (再コンパイル バージョンまたは元のバージョン) を考慮します。  
+## <a name="remarks"></a>注釈  
+
+ 指定された一連の関数をこのラインタイムで再コンパイルするため、`RequestReJIT` を呼び出します。 コードプロファイラーは、 [ICorProfilerFunctionControl](icorprofilerfunctioncontrol-interface.md) インターフェイスを使用して、関数の再コンパイル時に生成されるコードを調整できます。 これは、今後の関数呼び出しにのみ影響し、現在実行中の関数には影響しません。 指定されている関数のいずれかが以前に JIT 再コンパイルされている場合、再コンパイルを要求する操作は、関数を元に戻して再コンパイルする操作と同等です。 可逆性を維持するため、JIT コンパイラは関数の元のバージョンのコンパイル時に、インライン処理の決定のために呼び出し先の元のバージョンだけを考慮します。 JIT コンパイラは関数の再コンパイル時に、インライン処理のためにその呼び出し先の現行バージョン (再コンパイル バージョンまたは元のバージョン) を考慮します。  
   
  プロファイラーは一般に、プロファイラーが 1 つ以上のメソッドをインストルメント化することを求めるユーザー入力に対応して `RequestReJIT` を呼び出します。 `RequestReJIT` は一般に、一部の処理を実行するためにランタイムを一時停止します。また、ガベージ コレクションをトリガーする可能性があります。 このためプロファイラーは、現在プロファイラー コールバックを実行している CLR 作成スレッドではなく、以前に作成したスレッドから `RequestReJIT` を呼び出す必要があります。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

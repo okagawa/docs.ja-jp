@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 704c69ba-77bc-40d7-8c0c-400061686321
 topic_type:
 - apiref
-ms.openlocfilehash: d05d4451e8fb75829b22e0a1b9c9afcb0607eb8b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 93e1f8eb17f06e42ddb243f88c593979fcb28030
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610172"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733283"
 ---
 # <a name="isymunmanagedvariable-interface"></a>ISymUnmanagedVariable インターフェイス
-パラメーター、ローカル変数、フィールドなどの変数を表します。  
+
+パラメーター、ローカル変数、またはフィールドなどの変数を表します。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -39,6 +40,7 @@ ms.locfileid: "83610172"
 |[GetStartOffSet メソッド](isymunmanagedvariable-getstartoffset-method.md)|親内のこの変数の開始オフセットを取得します。|  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

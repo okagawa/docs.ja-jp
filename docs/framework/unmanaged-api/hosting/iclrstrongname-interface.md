@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2fac66fd-6b3b-4dbd-8baf-86038bd85526
 topic_type:
 - apiref
-ms.openlocfilehash: 0b6efcbe4458977e8e938afabd7ae59171bc065a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 691cc3cf4ec8d036a4de04247f243d99daa887d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501652"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733634"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName インターフェイス
+
 厳密な名前でアセンブリに署名するための基本的なグローバル静的関数を提供します。 すべて `ICLRStrongName` のメソッドは、標準 COM hresult を返します。  
   
 ## <a name="methods"></a>メソッド  
@@ -54,15 +55,17 @@ ms.locfileid: "84501652"
 |[StrongNameTokenFromAssemblyEx メソッド](iclrstrongname-strongnametokenfromassemblyex-method.md)|指定したアセンブリ ファイルから厳密な名前のトークンが作成され、公開キーが返されます。|  
 |[StrongNameTokenFromPublicKey メソッド](iclrstrongname-strongnametokenfrompublickey-method.md)|公開キーを表すトークンが取得されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  `ICLRStrongName`パラメーターとしておよびを使用して[ICLRRuntimeInfo:: getinterface](iclrruntimeinfo-getinterface-method.md)メソッドを呼び出すことにより、のインスタンスを取得でき `CLSID_CLRStrongName` `IID_ICLRStrongName` ます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

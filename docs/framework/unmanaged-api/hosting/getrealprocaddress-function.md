@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: f1f2fab1-400b-488f-95f2-d49c4fca3556
 topic_type:
 - apiref
-ms.openlocfilehash: 6bbf8366054c58543444a4b710a687198f365e6e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d48106fca6008955409581ad9ac202aebe785cb4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617192"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733229"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress 関数
+
 インストールされている最新バージョンの共通言語ランタイム (CLR) からエクスポートされた、指定された関数のアドレスを取得します。  
   
  この関数は .NET Framework 4 で非推奨とされました。  
@@ -36,6 +37,7 @@ HRESULT GetRealProcAddress (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pwszProcName`  
  から関数の名前。  
   
@@ -43,6 +45,7 @@ HRESULT GetRealProcAddress (
  入出力関数のアドレスへのポインターを受け取る位置。  
   
 ## <a name="return-value"></a>戻り値  
+
  このメソッドは、Winerror.h で定義されているように、CorError. h で定義されている次の値に加えて、標準の Component Object Model (COM) エラーコードを返します。  
   
 |リターン コード|説明|  
@@ -52,11 +55,12 @@ HRESULT GetRealProcAddress (
 |CLR_E_SHIM_RUNTIMEEXPORT|関数はランタイムからエクスポートされません。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll  
+ **ライブラリ:** MSCorEE.dll  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

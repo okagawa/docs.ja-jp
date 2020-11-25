@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 9e00337f-b307-4602-9bc3-965a8dbf02cd
 topic_type:
 - apiref
-ms.openlocfilehash: dc241324f5844610d7b86b7cb9668f84d4525395
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 904dcb707e704cfec2dba4e6587f7e3acaf7b538
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140667"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732334"
 ---
 # <a name="gethashfromhandle-function"></a>GetHashFromHandle 関数
+
 指定したハッシュ アルゴリズムを使用して、指定したファイル ハンドルを含むファイルの内容に対してハッシュが作成されます。  
   
- この関数は非推奨とされます。 代わりに[ICLRStrongName:: GetHashFromHandle](../hosting/iclrstrongname-gethashfromhandle-method.md)メソッドを使用してください。  
+ この関数は非推奨とされます。 代わりに [ICLRStrongName:: GetHashFromHandle](../hosting/iclrstrongname-gethashfromhandle-method.md) メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,6 +40,7 @@ HRESULT GetHashFromHandle (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `hFile`  
  からハッシュされるファイルのハンドル。  
   
@@ -49,19 +51,20 @@ HRESULT GetHashFromHandle (
  入出力返されたハッシュバッファー。  
   
  `cchHash`  
- から要求された `pbHash`の最大サイズ。  
+ から要求された最大サイズ `pbHash` 。  
   
  `pchHash`  
- 入出力返された `pbHash`のサイズ (バイト単位)。  
+ 入出力返されたのサイズ (バイト単位) `pbHash` 。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** StrongName  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

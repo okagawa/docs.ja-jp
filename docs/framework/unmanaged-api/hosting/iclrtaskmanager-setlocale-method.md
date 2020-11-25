@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ed16bb7f-4206-43a8-b9e9-c5737b69e3af
 topic_type:
 - apiref
-ms.openlocfilehash: 8f316d91aab4c3862a0ad45b41539a4b80791ab9
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 5f799c140705a5279c996b6bec90ab1f29bd42ef
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762792"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732438"
 ---
 # <a name="iclrtaskmanagersetlocale-method"></a>ICLRTaskManager::SetLocale メソッド
+
 現在実行中のタスクのロケール識別子 (地理的なカルチャおよび言語にマップされる) の値がホストによって変更されたことを、共通言語ランタイム (CLR) に通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,6 +35,7 @@ HRESULT SetLocale (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `lcid`  
  から新しく割り当てられた地理的カルチャおよび言語にマップされるロケール識別子の値。  
   
@@ -48,15 +50,17 @@ HRESULT SetLocale (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>解説  
- `SetLocale`ホストに、ロケールの同期に必要なメカニズムを実行する機会を与えます。  
+## <a name="remarks"></a>注釈  
+
+ `SetLocale` ホストに、ロケールの同期に必要なメカニズムを実行する機会を与えます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

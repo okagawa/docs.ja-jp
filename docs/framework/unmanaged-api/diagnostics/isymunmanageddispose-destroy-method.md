@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a854ab9f-d2ba-470e-867f-808c1e7bd07a
 topic_type:
 - apiref
-ms.openlocfilehash: 5bd94cb851d4bb044d4ce03b97d6342a2c9652e4
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 6a31026f5b1669c0c29762048dc2c5c1c7bbb6a2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441319"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732828"
 ---
 # <a name="isymunmanageddisposedestroy-method"></a>ISymUnmanagedDispose::Destroy メソッド
+
 基になるオブジェクトがすべての内部参照を解放し、後続のメソッド呼び出しの失敗を返します。  
   
 ## <a name="syntax"></a>構文  
@@ -32,9 +33,11 @@ HRESULT Destroy();
 ```  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

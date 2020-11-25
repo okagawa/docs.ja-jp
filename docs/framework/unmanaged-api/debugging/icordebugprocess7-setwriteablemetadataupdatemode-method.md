@@ -12,14 +12,15 @@ api_type:
 ms.assetid: 8589bba7-7304-45ba-9e31-7bf43dfd5c19
 topic_type:
 - apiref
-ms.openlocfilehash: 6de75e1e27660ac91bd6320a501db47f3b055fb0
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 5671f8cb51210c27dffdedba28b4b145b3fedc55
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212257"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732555"
 ---
 # <a name="icordebugprocess7setwriteablemetadataupdatemode-method"></a>ICorDebugProcess7::SetWriteableMetadataUpdateMode メソッド
+
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
   
  デバッガーが、ターゲット プロセス内のメタデータに対するメモリ内更新をどのように処理するかを設定します。  
@@ -33,13 +34,16 @@ HRESULT SetWriteableMetadataUpdateMode(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `flags`  
- ターゲットプロセス内のメタデータに対するメモリ内更新をデバッガーに対して表示 () するか、非表示 () するかを指定する[WriteableMetadataUpdateMode](writeablemetadataupdatemode-enumeration.md)列挙値です `WriteableMetadataUpdateMode::AlwaysShowUpdates` `WriteableMetadataUpdateMode::LegacyCompatPolicy` 。  
+ ターゲットプロセス内のメタデータに対するメモリ内更新をデバッガーに対して表示 () するか、非表示 () するかを指定する [WriteableMetadataUpdateMode](writeablemetadataupdatemode-enumeration.md) 列挙値です `WriteableMetadataUpdateMode::AlwaysShowUpdates` `WriteableMetadataUpdateMode::LegacyCompatPolicy` 。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  ターゲット プロセスのメタデータに対する更新は、[編集]、[続行] で行うか、プロファイラー、または <xref:System.Reflection.Emit?displayProperty=nameWithType> で行うことができます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

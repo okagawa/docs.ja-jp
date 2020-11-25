@@ -2,12 +2,12 @@
 title: WCF の単純化機能
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: d582c075377cf53d75ddf1bb9f37764e24e486ec
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8a818ec0852cfae20ef23fede04b55b08a7449a5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545078"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732919"
 ---
 # <a name="wcf-simplification-features"></a>WCF の単純化機能
 
@@ -88,13 +88,13 @@ WCF には ASP.NET 互換性モードが用意されています。これによ�
 
 - 非同期ストリーミングに対する新しいサポートが WCF に追加されました。 非同期ストリーミングを有効にするには、エンドポイントの <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> 動作をサービス ホストに追加し、その <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> プロパティを `true` に設定します。 これにより、読み取りに時間のかかる複数のクライアントに対してサービスがストリーム メッセージを送信するときにスケーラビリティが得られます。 WCF では、クライアントごとに 1 つのスレッドがブロックされなくなり、別のクライアントにサービスを提供するためにスレッドを解放します。
 
-- サービスが IIS でホストされるときのメッセージのバッファー処理に関する制限がなくなりました。 以前のバージョンの WCF では、ストリーム メッセージ転送を使用する IIS でホストされるサービスに対するメッセージを受信すると、ASP.NET はメッセージ全体を WCF に送信する前にバッファー処理しました。 これにより、メモリの大量消費が発生しました。 このバッファー処理は .NET 4.5 で削除されました。現在は、IIS でホストされる WCF サービスが、メッセージ全体が受信される前に着信ストリームの処理を開始できるため、実際のストリーミングが可能になります。 これにより、WCF は、メッセージにすぐに応答できるようになり、パフォーマンスは向上します。 さらに、着信要求に対する ASP.NET のサイズ制限である `maxRequestLength` の値を指定する必要がなくなりました。 このプロパティを設定した場合、このプロパティは無視されます。 の詳細については、 `maxRequestLength` 「 [ \<httpRuntime> configuration 要素](/previous-versions/dotnet/netframework-1.1/e1f13641(v=vs.71))」を参照してください。 MaxAllowedContentLength を構成する必要があります。詳細については、「 [IIS 要求の制限](/previous-versions/iis/settings-schema/ms689462(v=vs.90))」を参照してください。
+- サービスが IIS でホストされるときのメッセージのバッファー処理に関する制限がなくなりました。 以前のバージョンの WCF では、ストリーム メッセージ転送を使用する IIS でホストされるサービスに対するメッセージを受信すると、ASP.NET はメッセージ全体を WCF に送信する前にバッファー処理しました。 これにより、メモリの大量消費が発生しました。 このバッファリングは .NET Framework 4.5 では削除されており、IIS でホストされる WCF サービスはメッセージ全体を受信する前に受信ストリームの処理を開始できるようになりました。これにより、真のストリーミングが有効になります。 これにより、WCF は、メッセージにすぐに応答できるようになり、パフォーマンスは向上します。 さらに、着信要求に対する ASP.NET のサイズ制限である `maxRequestLength` の値を指定する必要がなくなりました。 このプロパティを設定した場合、このプロパティは無視されます。 の詳細については、 `maxRequestLength` 「 [ \<httpRuntime> configuration 要素](/previous-versions/dotnet/netframework-1.1/e1f13641(v=vs.71))」を参照してください。 MaxAllowedContentLength を構成する必要があります。詳細については、「 [IIS 要求の制限](/previous-versions/iis/settings-schema/ms689462(v=vs.90))」を参照してください。
 
 ## <a name="new-transport-default-values"></a>トランスポートの新しい既定値
 
 次の表は、変更された設定と追加情報の場所を示しています。
 
-|プロパティ|オン|新しい既定値|詳細情報|
+|プロパティ|オン|新しい既定値|説明|
 |--------------|--------|-----------------|----------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|このプロパティは、TCP 接続が .NET フレーミングプロトコルを使用して自身を認証するために実行できる時間を決定します。 クライアントは、サーバーが認証を実行するための十分な情報を得る前に初期データを送信する必要があります。 このタイムアウトは意図的に ReceiveTimeout (10 分) よりも小さい値に設定されます。これにより、悪意のある認証されていないクライアントは、長時間にわたってサーバーへの接続を保持できません。 既定値は 30 秒です。 の詳細については、 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * プロセッサの数|このソケット レベルのプロパティは、キューに入れられる "受入保留中の" 要求の数を示します。 リッスン バックログ キューがいっぱいになると、新しいソケット要求は拒否されます。 の詳細については、 <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|

@@ -12,14 +12,15 @@ api_type:
 ms.assetid: 05dbbe2b-049c-4a60-be69-2ad7a949405e
 topic_type:
 - apiref
-ms.openlocfilehash: 8027cdcde8281c363207e309bf65fcd90c03b626
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 75e2bfc8dfae4d0cd453eba0697d6ee2f0da7133
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84495620"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733790"
 ---
 # <a name="icorprofilerinfo5seteventmask2-method"></a>ICorProfilerInfo5::SetEventMask2 メソッド
+
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
   
  プロファイラーが共通言語ランタイム (CLR) からイベント通知を受け取ることを希望するイベントの型を指定する値を設定します。 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md)メソッドよりも多くの機能が用意されています。  
@@ -32,18 +33,21 @@ HRESULT SetEventMask2(        [in] DWORD dwEventsLow,        [in] DWORD dwEvents
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `dwEventsLow`  
- [in] イベントのカテゴリを指定する 4 バイトの値。 各ビットは、異なる性能、動作、またはイベントの型を制御します。 ビットは、 [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md)列挙体に記述されています。  
+ [in] イベントのカテゴリを指定する 4 バイトの値。 各ビットは、異なる性能、動作、またはイベントの型を制御します。 ビットは、 [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md) 列挙体に記述されています。  
   
  `dwEventsHigh`  
- [in] イベントのカテゴリを指定する 4 バイトの値。  各ビットは、異なる性能、動作、またはイベントの型を制御します。 ビットは、 [COR_PRF_HIGH_MONITOR](cor-prf-high-monitor-enumeration.md)列挙体に記述されています。  
+ [in] イベントのカテゴリを指定する 4 バイトの値。  各ビットは、異なる性能、動作、またはイベントの型を制御します。 ビットは、 [COR_PRF_HIGH_MONITOR](cor-prf-high-monitor-enumeration.md) 列挙体に記述されています。  
   
-## <a name="remarks"></a>解説  
- `SetEventMask2` メソッドは、プロファイラーが登録するコールバックを設定するために使用します。 通常は、 [GetEventMask2](icorprofilerinfo5-geteventmask2-method.md)メソッドを呼び出して、どのビットが設定されているかを判断し、その値と値および設定する新しいビットの論理 OR を実行 `pdwEventsLow` `pdwEventsHigh` してから、メソッドを呼び出し `SetEventMask2` ます。  
+## <a name="remarks"></a>注釈  
+
+ `SetEventMask2` メソッドは、プロファイラーが登録するコールバックを設定するために使用します。 通常は、 [GetEventMask2](icorprofilerinfo5-geteventmask2-method.md) メソッドを呼び出して、どのビットが設定されているかを判断し、その値と値および設定する新しいビットの論理 OR を実行 `pdwEventsLow` `pdwEventsHigh` してから、メソッドを呼び出し `SetEventMask2` ます。  
   
- このメソッドは、 [Seteventmask](icorprofilerinfo-seteventmask-method.md)メソッドの代替手段として推奨されます。  
+ このメソッドは、 [Seteventmask](icorprofilerinfo-seteventmask-method.md) メソッドの代替手段として推奨されます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: dbade6c9-9d26-4a79-9fd2-46108edd12d7
 topic_type:
 - apiref
-ms.openlocfilehash: ebaab57b647250823443b48d9e45921036372d5e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1eefd1ee5597ded269c56c05eec118b11294dd8a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176605"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732139"
 ---
 # <a name="asm_display_flags-enumeration"></a>ASM_DISPLAY_FLAGS 列挙型
-[表示名が取得](iassemblyname-getdisplayname-method.md)されるアセンブリのバージョン、ビルド、カルチャ、シグネチャなどを示します。  
+
+[IAssemblyName:: GetDisplayName](iassemblyname-getdisplayname-method.md)メソッドによって表示名が取得されるアセンブリのバージョン、ビルド、カルチャ、署名などを示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,16 +51,18 @@ typedef enum {
 ```  
   
 ## <a name="remarks"></a>解説  
- `ASM_DISPLAYF_FULL`[は、IAssemblyName](iassemblyname-interface.md)オブジェクトのバージョンに対して行われた変更を反映します。 戻り値が変更不可であると仮定しないでください。  
+
+ `ASM_DISPLAYF_FULL`[IAssemblyName](iassemblyname-interface.md)オブジェクトのバージョンに対して行われたすべての変更を反映します。 戻り値が不変であると想定しないでください。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** フュージョン.h  
+ **ヘッダー:** Fusion. h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

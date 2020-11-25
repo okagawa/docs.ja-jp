@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5ec8cf76-3deb-4ce6-9a49-77a4c35d80b9
 topic_type:
 - apiref
-ms.openlocfilehash: 7c64823e1a5c519eb74b508af093afeb1132e608
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cbcee923ecbb1106bb129f05d2e602a0fd17258d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210086"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732488"
 ---
 # <a name="icordebugreferencevaluedereference-method"></a>ICorDebugReferenceValue::Dereference メソッド
+
 参照されているオブジェクトを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,13 +35,16 @@ HRESULT Dereference (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ppValue`  
  入出力この値のオブジェクトが指すオブジェクトを表す ICorDebugValue のアドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  `ICorDebugValue`オブジェクトは、その参照がまだ無効になっていない場合にのみ有効です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

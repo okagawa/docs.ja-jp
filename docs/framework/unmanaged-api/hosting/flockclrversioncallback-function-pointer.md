@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 98a4762d-9ad2-45bd-9d03-39064a028b44
 topic_type:
 - apiref
-ms.openlocfilehash: af42de820b2d835e8ea137a2643a51678e382ff0
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d18702a1bb15d2cc6c7b8577b91ed011e9bd0c05
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617283"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733673"
 ---
 # <a name="flockclrversioncallback-function-pointer"></a>FLockClrVersionCallback 関数ポインター
+
 は、初期化が開始されたか完了したことを示すために、共通言語ランタイム (CLR) が呼び出す関数を指します。  
   
  この関数ポインターは .NET Framework 4 で非推奨とされました。  
@@ -33,14 +34,16 @@ typedef HRESULT (__stdcall *FLockClrVersionCallback) ( );
 ```  
   
 ## <a name="remarks"></a>解説  
+
  この関数は、ホストによって実装されます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscorwks.dll  
+ **ライブラリ:** MSCorWks.dll  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

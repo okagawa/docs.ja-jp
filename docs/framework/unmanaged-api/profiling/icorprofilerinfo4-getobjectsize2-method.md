@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4a3e43ed-3ee3-4395-ab14-f78b903be13e
 topic_type:
 - apiref
-ms.openlocfilehash: b605419a291f7bee76ecad7e07be9a7a989f9fe9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 960f8f1fe2315e068d599aa5a31e03f521b235a8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496010"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733868"
 ---
 # <a name="icorprofilerinfo4getobjectsize2-method"></a>ICorProfilerInfo4::GetObjectSize2 メソッド
-指定したオブジェクトのサイズを返します。 で表現できる値よりも大きいオブジェクトのサイズをレポートすることによって、 [ICorProfilerInfo:: GetObjectSize](icorprofilerinfo-getobjectsize-method.md)メソッドを置き換え `ULONG` ます。  
+
+指定したオブジェクトのサイズを返します。 で表現できる値よりも大きいオブジェクトのサイズをレポートすることによって、 [ICorProfilerInfo:: GetObjectSize](icorprofilerinfo-getobjectsize-method.md) メソッドを置き換え `ULONG` ます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,16 +35,19 @@ HRESULT GetObjectSize2(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `objectId`  
  からオブジェクトの ID です。  
   
  `pcSize`  
  入出力オブジェクトのサイズへのポインター (バイト単位)。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  多くの場合、同じ種類の異なるオブジェクトのサイズは同じです。 ただし、配列や文字列など、一部の型では、オブジェクトごとにサイズが異なる場合があります。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

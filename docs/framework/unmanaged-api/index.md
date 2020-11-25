@@ -7,17 +7,19 @@ helpviewer_keywords:
 - native API reference [.NET Framework]
 - unmanaged API reference [.NET Framework]
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
-ms.openlocfilehash: 0153279608e2359747f1be6b9542d6906c1b3995
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 16b18f4fede11e776e5656843ed9a408dff370eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559305"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732750"
 ---
 # <a name="unmanaged-api-reference"></a>アンマネージ API リファレンス
+
 このセクションには、ランタイム ホスト、コンパイラ、逆アセンブラー、難読化ツール、デバッガー、プロファイラーなど、マネージ コード関連のアプリケーションが使用できるアンマネージ API に関する情報が含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [共有のデータ型](common-data-types-unmanaged-api-reference.md)  
  特にアンマネージ プロファイリング API とデバッギング API で使用される一般的なデータ型を示します。  
   
@@ -61,4 +63,5 @@ ms.locfileid: "90559305"
  タイプ ライブラリ エクスポーター (Tlbexp.exe) がアセンブリからタイプ ライブラリへの変換プロセス中に使用する、2 つのヘルパー関数とインターフェイスについて説明します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [開発ガイド](../development-guide.md)

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: d9568cf6-7f98-4cd6-ab36-0a2bd509afcc
 topic_type:
 - apiref
-ms.openlocfilehash: d11fefe220fdb00457cc48a6cd166673350be049
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: d5f61aa9b4a65a5f33e64aa4441370c3f7ca5b03
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006034"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732724"
 ---
 # <a name="ceesectionrelocextra-union"></a>CeeSectionRelocExtra 共用体
-セクションを再配置するために[ICeeGen](iceegen-interface.md)インターフェイスによって使用されるアドレスオフセットを表します。  
+
+セクションを再配置するために [ICeeGen](iceegen-interface.md) インターフェイスによって使用されるアドレスオフセットを表します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,12 +39,13 @@ typedef union  {
 |------------|-----------------|  
 |`highAdj`|セクションの上限アドレスの調整。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a6a46296-af14-4c53-9744-f7a1e3f3028a
 topic_type:
 - apiref
-ms.openlocfilehash: 9d3f00856fc0974a8bb93774e7341f716997487e
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c8d966fad422196c7342fb007354bb7e0a35ca90
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008717"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732412"
 ---
 # <a name="itypenamebuilderaddszarray-method"></a>ITypeNameBuilder::AddSzArray メソッド
+
 このメソッドは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。  
   
 ## <a name="syntax"></a>構文  
@@ -32,11 +33,12 @@ HRESULT AddSzArray ( );
 ```  
   
 ## <a name="requirements"></a>必要条件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

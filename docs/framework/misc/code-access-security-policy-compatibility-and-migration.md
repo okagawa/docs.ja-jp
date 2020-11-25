@@ -1,17 +1,17 @@
 ---
 title: コード アクセス セキュリティ ポリシーの互換性と移行
-description: 概要を確認し、「.NET 4 でのコードアクセスセキュリティポリシーの互換性と移行に関するリンク」を参照してください。
+description: 概要を確認し、.NET Framework 4 でのコードアクセスセキュリティポリシーの互換性と移行に関するリンクを参照してください。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - policy migration, compatibility
 - CLR policy migration
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
-ms.openlocfilehash: e5affd9d16635fa28342b5b7390a083185975f2b
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 389976556175c0b6b300e75d01327d91f94f0db9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281733"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733387"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>コード アクセス セキュリティ ポリシーの互換性と移行
 
@@ -27,7 +27,7 @@ ms.locfileid: "86281733"
 
 - [ \<NetFx40_LegacySecurityPolicy> Configuration 要素](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)を使用して、従来の CAS ポリシーの動作を選択します。
 
-このトピックは、次のセクションで構成されています。
+このトピックには、次のセクションが含まれます。
 
 - [明示的な使用](#explicit_use)
 
@@ -73,7 +73,7 @@ ms.locfileid: "86281733"
 
 アセンブリの読み込みオーバーロードの中にはエラーを生成するものがあります。CAS ポリシーを暗黙的に使用することが原因です。 これらのオーバーロードはCAS ポリシーを解決するために <xref:System.Security.Policy.Evidence> パラメーターを取り、アセンブリにアクセス許可セットを提供します。
 
-次に例をいくつか示します。 パラメーターとして <xref:System.Security.Policy.Evidence> を取るオーバーロードが廃止されました。
+例をいくつか紹介します。 パラメーターとして <xref:System.Security.Policy.Evidence> を取るオーバーロードが廃止されました。
 
 - <xref:System.Activator.CreateInstanceFrom%2A?displayProperty=nameWithType>
 
@@ -95,7 +95,7 @@ ms.locfileid: "86281733"
 
 <a name="errors_and_warnings"></a>
 
-## <a name="errors-and-warnings"></a>エラーと警告
+## <a name="errors-and-warnings"></a>エラーおよび警告
 
 廃止された種類とメンバーが使用されると、以下のエラー メッセージが生成されます。 <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> 型自体は廃止されていないことに注意してください。
 
@@ -125,7 +125,7 @@ CAS ポリシーは多くの場合、アセンブリ、アプリケーション 
 
 ### <a name="application-domain-sandboxing"></a>アプリケーション ドメインのサンドボックス化
 
-通常 <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> メソッドは、アプリケーション ドメイン内のアセンブリをサンド ボックス化するために使用します。 .NET Framework 4 は、この目的で使用する必要のないメンバーを公開 <xref:System.Security.Policy.PolicyLevel> します。 詳細については、「[方法: サンドボックスで部分信頼コードを実行する](how-to-run-partially-trusted-code-in-a-sandbox.md)」を参照してください。
+通常 <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> メソッドは、アプリケーション ドメイン内のアセンブリをサンド ボックス化するために使用します。 .NET Framework 4 は、この目的で使用する必要のないメンバーを公開 <xref:System.Security.Policy.PolicyLevel> します。 詳細については、「 [方法: サンドボックスで部分信頼コードを実行する](how-to-run-partially-trusted-code-in-a-sandbox.md)」を参照してください。
 
 ### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>部分的に信頼できるコードに対する安全なまたは適切なアクセス許可セットの決定
 

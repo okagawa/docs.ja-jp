@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 42790918-4142-4938-b8f4-a56979a55846
 topic_type:
 - apiref
-ms.openlocfilehash: 0357444aa8fa38bce5a7175cf6aacfe1a2b2b16e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: f01d65a339c77e6af3e768c620f17ef0190c1e58
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503641"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733222"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps メソッド
-指定された <xref:System.Type> メタデータトークンによって参照されるメンバーの、名前、バイナリ署名、相対仮想アドレスなど、指定されたメンバー定義のメタデータに格納されている情報を取得します。 これは単純なヘルパーメソッドです。 *mb*が MethodDef の場合は、 **getmethodprops**が呼び出されます。*mb*が FieldDef の場合は、 **getfieldprops**が呼び出されます。 詳細については、これらの他の方法を参照してください。
+
+指定された <xref:System.Type> メタデータトークンによって参照されるメンバーの、名前、バイナリ署名、相対仮想アドレスなど、指定されたメンバー定義のメタデータに格納されている情報を取得します。 これは単純なヘルパーメソッドです。 *mb* が MethodDef の場合は、 **getmethodprops** が呼び出されます。 *mb* が FieldDef の場合は、 **getfieldprops** が呼び出されます。 詳細については、これらの他の方法を参照してください。
   
 ## <a name="syntax"></a>構文  
   
@@ -46,6 +47,7 @@ HRESULT GetMemberProps (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `mb`  
  から関連付けられているメタデータを取得するメンバーを参照するトークン。  
   
@@ -86,11 +88,12 @@ HRESULT GetMemberProps (
  入出力の文字数のサイズ `ppValue` `ppValue` 。が文字列を保持しない場合は0。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

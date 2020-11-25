@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b3222c85-da88-4485-97d7-3a6ee3e8d358
 topic_type:
 - apiref
-ms.openlocfilehash: 2dd004a44b20d48dafc72711ac23abcb55739224
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 57b30824c7849127f48d4da61872945366e7141e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617201"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733244"
 ---
 # <a name="getfileversion-function"></a>GetFileVersion 関数
+
 指定したバッファーを使用して、指定したファイルの共通言語ランタイム (CLR) のバージョン情報を取得します。  
   
  この関数は .NET Framework 4 で非推奨とされました。  
@@ -38,6 +39,7 @@ HRESULT GetFileVersion (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `szFilename`  
  から検査するファイルのパス。  
   
@@ -51,6 +53,7 @@ HRESULT GetFileVersion (
  入出力返されたのサイズ (バイト単位) `szBuffer` 。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  

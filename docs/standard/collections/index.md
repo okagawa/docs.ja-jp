@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 3b92f3aa8c21cc3d171e14100db190d88f2c0284
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7400d460c4d1ebf5c02d8313f33a5a63de1734d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823850"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733517"
 ---
 # <a name="collections-and-data-structures"></a>コレクションとデータ構造体
 
@@ -26,6 +26,7 @@ ms.locfileid: "94823850"
 .NET Framework 4 より、<xref:System.Collections.Concurrent> 名前空間のコレクションによって、複数のスレッドからコレクション項目にアクセスするための効率的なスレッドセーフ操作が可能になります。 <xref:System.Collections.Immutable> 名前空間の変更できないコレクション クラス ([NuGet パッケージ](https://www.nuget.org/packages/System.Collections.Immutable)) は、操作が元のコレクションのコピーで実行され、元のコレクションは変更不可能なため、本質的にスレッドセーフです。
 
 <a name="BKMK_Commoncollectionfeatures"></a>
+
 ## <a name="common-collection-features"></a>一般的なコレクションの機能
 
 すべてのコレクションに、コレクション内の項目を追加、削除、または検索するためのメソッドが用意されています。 また、<xref:System.Collections.ICollection> インターフェイスまたは <xref:System.Collections.Generic.ICollection%601> インターフェイスを直接または間接的に実装するすべてのコレクションで、次の機能を共有しています。
@@ -57,6 +58,7 @@ ms.locfileid: "94823850"
     <xref:System.Collections> 名前空間の非ジェネリック コレクション型では、同期によるスレッド セーフが提供され、通常、<xref:System.Collections.ICollection.SyncRoot%2A> メンバーと <xref:System.Collections.ICollection.IsSynchronized%2A> メンバーを介して公開されます。 既定では、これらのコレクションはスレッド セーフではありません。 拡張性が高く効率的な、コレクションへのマルチスレッド アクセスが必要な場合は、<xref:System.Collections.Concurrent> 名前空間のいずれかのクラスを使用するか、変更できないコレクションを使用することを検討します。 詳しくは、「[スレッド セーフなコレクション](thread-safe/index.md)」を参照してください。
 
 <a name="BKMK_Choosingacollection"></a>
+
 ## <a name="choose-a-collection"></a>コレクションの選択
 
 通常は、ジェネリック コレクションを使用します。 次の表では、一般的なコレクションのシナリオとこれらのシナリオに使用できるコレクション クラスについて説明します。 ジェネリック コレクションに対する知識がない場合、このテーブルは、タスクに最適なジェネリック コレクションを選択するのに役立ちます。
@@ -94,6 +96,7 @@ ms.locfileid: "94823850"
 さらに、`SortedSet<T>` の複雑さは `ImmutableSortedSet<T>` と同じです。 これらは両方ともバイナリ ツリーを使用するからです。 もちろん、大きな違いは、`ImmutableSortedSet<T>` では、変更できないバイナリ ツリーが使用されることです。 `ImmutableSortedSet<T>` には、変更を許可する <xref:System.Collections.Immutable.ImmutableSortedSet%601.Builder?displayProperty=nameWithType> クラスも用意されているため、不変性とパフォーマンスの両方を備えることができます。
 
 <a name="BKMK_RelatedTopics"></a>
+
 ## <a name="related-topics"></a>関連トピック
 
 |Title|説明|
@@ -108,7 +111,9 @@ ms.locfileid: "94823850"
 |System.Collections.Immutable|変更できないコレクションを導入し、コレクション型へのリンクを提供します。|
 
 <a name="BKMK_Reference"></a>
+
 ## <a name="reference"></a>関連項目
+
 <xref:System.Array?displayProperty=nameWithType>
 <xref:System.Collections?displayProperty=nameWithType>
 <xref:System.Collections.Concurrent?displayProperty=nameWithType>

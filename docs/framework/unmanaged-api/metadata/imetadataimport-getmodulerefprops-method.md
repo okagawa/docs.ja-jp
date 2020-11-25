@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b558e766-4c11-4628-ae47-b4e0a1800168
 topic_type:
 - apiref
-ms.openlocfilehash: f1784c9f3085ce188f9e540887dd02064f8448f3
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 606a3f2cfba05b014960842c5db77149f449193d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503579"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733127"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a>IMetaDataImport::GetModuleRefProps メソッド
+
 指定したメタデータ トークンによって参照されるモジュールの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,6 +38,7 @@ HRESULT GetModuleRefProps (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `mur`  
  からメタデータ情報を取得するモジュールを参照する ModuleRef メタデータトークン。  
   
@@ -50,11 +52,12 @@ HRESULT GetModuleRefProps (
  入出力返されたのサイズを `szName` ワイド文字数で返します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

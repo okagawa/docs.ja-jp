@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 763f2375-efc6-4219-8806-a3b0567ef72b
 topic_type:
 - apiref
-ms.openlocfilehash: adde52dddb63b83dcd7ff10703a43928d9601c92
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e7292635ea0344f1c77c8d44908a9a811e464ff9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140625"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732308"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies 関数
+
 厳密な名前の署名に基づいて 2 つのアセンブリが異なるかどうかが判定されます。  
   
- この関数は非推奨とされます。 代わりに[ICLRStrongName:: StrongNameCompareAssemblies](../hosting/iclrstrongname-strongnamecompareassemblies-method.md)メソッドを使用してください。  
+ この関数は非推奨とされます。 代わりに [ICLRStrongName:: StrongNameCompareAssemblies](../hosting/iclrstrongname-strongnamecompareassemblies-method.md) メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,6 +38,7 @@ BOOLEAN StrongNameCompareAssemblies (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `wszAssembly1`  
  から最初のアセンブリへのパス。  
   
@@ -53,21 +55,24 @@ BOOLEAN StrongNameCompareAssemblies (
 - `SN_CMP_SIGONLY` (2)-アセンブリが署名とチェックサムのみで異なることを指定します。  
   
 ## <a name="return-value"></a>戻り値  
- 正常に完了した場合は `true`。それ以外の場合は、`false`ます。  
+
+ `true` 正常に完了した場合は。それ以外の場合は `false` 。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** StrongName  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  アセンブリの厳密な名前の署名は、アセンブリのテキスト名、バージョン、カルチャ、および公開キートークンで構成されます。  
   
- `StrongNameCompareAssemblies` 関数が正常に完了しない場合は、 [StrongNameErrorInfo](strongnameerrorinfo-function.md)関数を呼び出して、最後に生成されたエラーを取得します。  
+ 関数が `StrongNameCompareAssemblies` 正常に完了しない場合は、 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 関数を呼び出して、最後に生成されたエラーを取得します。  
   
 ## <a name="see-also"></a>関連項目
 
