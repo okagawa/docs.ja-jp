@@ -1,6 +1,6 @@
 ---
-title: 列挙関数 (アンマネージ API リファレンス)
-description: 列挙子を列挙の先頭にリセットします。
+title: BeginEnumeration 関数 (アンマネージ API リファレンス)
+description: BeginEnumeration 関数は、列挙子を列挙体の先頭にリセットします。
 ms.date: 11/06/2017
 api_name:
 - BeginEnumeration
@@ -14,15 +14,16 @@ helpviewer_keywords:
 - BeginEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: eac23916bd78ec3970a87566e2d2f4d79b379824
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6057526ddbe2efed65f8569e829c35524829e43e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176878"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708219"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 関数
-列挙子を列挙の先頭にリセットします。  
+
+列挙子を列挙体の先頭にリセットします。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -39,68 +40,69 @@ HRESULT BeginEnumeration (
 ## <a name="parameters"></a>パラメーター
 
 `vFunc`\
-[in]このパラメーターは使用されません。
+からこのパラメーターは使用されていません。
 
 `ptr`\
-[in][インスタンス](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)へのポインター。
+から [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) インスタンスへのポインター。
 
 `lEnumFlags`\
-[in]列挙体に含まれるプロパティを制御する[「解説」](#remarks)セクションで説明されているフラグまたは値のビットごとの組み合わせ。
+から列挙に含まれるプロパティを制御する、「 [解説](#remarks) 」で説明されているフラグまたは値のビットごとの組み合わせ。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値は *、WbemCli.h*ヘッダー ファイルで定義されているか、コード内で定数として定義できます。
+この関数によって返される次の値は、 *WbemCli* ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|常時  |Value  |説明  |
+|定数  |値  |説明  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | フラグの組み合`lEnumFlags`わせが無効か、無効な引数が指定されました。 |
-|`WBEM_E_UNEXPECTED` | 0x8004101d | への 2`BeginEnumeration`回目の呼び出しは、間[`EndEnumeration`](endenumeration.md)に呼び出されることなく行われました。 |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | メモリ不足で新しい列挙を開始できません。 |
-|`WBEM_S_NO_ERROR` | 0 | 関数呼び出しが正常に行われました。  |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | のフラグの組み合わせ `lEnumFlags` が無効であるか、無効な引数が指定されました。 |
+|`WBEM_E_UNEXPECTED` | 0x8004101d | への2回目の呼び出しは、の `BeginEnumeration` 間の呼び出しなしで行われました [`EndEnumeration`](endenumeration.md) 。 |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 新しい列挙を開始するために必要なメモリが不足しています。 |
+|`WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-この関数は、[メソッド](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)の呼び出しをラップします。
+この関数は、 [IWbemClassObject:: BeginEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) メソッドの呼び出しをラップします。
 
-`lEnumFlags`引数として渡すことができるフラグは *、WbemCli.h*ヘッダー ファイルで定義されているか、コード内で定数として定義できます。  各グループの 1 つのフラグを、他のグループの任意のフラグと組み合わせることができます。 ただし、同じグループのフラグは相互に排他的です。
+引数として渡すことができるフラグは、 `lEnumFlags` *WbemCli* ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。  各グループのフラグは、他のグループのフラグと組み合わせることができます。 ただし、同じグループのフラグは相互に排他的です。
 
 **グループ 1**
 
-|常時  |Value  |説明  |
+|定数  |値  |説明  |
 |---------|---------|---------|
 |`WBEM_FLAG_KEYS_ONLY` | 0x4 | キーのみを構成するプロパティを含めます。 |
-|`WBEM_FLAG_REFS_ONLY` | 0x8 | オブジェクト参照だけのプロパティを含めます。 |
+|`WBEM_FLAG_REFS_ONLY` | 0x8 | オブジェクト参照のみのプロパティを含めます。 |
 
 **グループ 2**
 
-常時  |Value  |説明  |
+定数  |値  |説明  |
 |---------|---------|---------|
-|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | 列挙をシステム プロパティのみに制限します。 |
-|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | ローカル プロパティと反映プロパティを含めますが、列挙体からシステム プロパティを除外します。 |
+|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | 列挙体をシステムプロパティのみに制限します。 |
+|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | ローカルプロパティと伝達されたプロパティを含めますが、列挙からシステムプロパティを除外します。 |
 
 クラスの場合:
 
-常時  |Value  |説明  |
+定数  |値  |説明  |
 |---------|---------|---------|
-|`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0x100 | 列挙型をクラス定義でオーバーライドされたプロパティに制限します。 |
-|`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0x100 | 列挙型を、現在のクラス定義でオーバーライドされたプロパティと、クラスで定義された新しいプロパティに制限します。 |
-| `WBEM_MASK_CLASS_CONDITION` | 0x300 | いずれかの`WBEM_FLAG_CLASS_OVERRIDES_ONLY`値が設定されているか、または`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES`設定されているかを確認する`lEnumFlags`値に適用するマスク (フラグではなく) です。 |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 列挙型を、クラス自体で定義または変更されたプロパティに制限します。 |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 列挙型を、基本クラスから継承されるプロパティに制限します。 |
+|`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0x100 | 列挙型をクラス定義でオーバーライドされたプロパティに限定します。 |
+|`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0x100 | 列挙体を、現在のクラス定義でオーバーライドされたプロパティと、クラスで定義されている新しいプロパティに限定します。 |
+| `WBEM_MASK_CLASS_CONDITION` | 0x300 | `lEnumFlags` `WBEM_FLAG_CLASS_OVERRIDES_ONLY` または `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` が設定されているかどうかを確認するために、値に対して適用するマスク (フラグではなく)。 |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 列挙体は、クラス自体で定義または変更されたプロパティに限定します。 |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 列挙型を基底クラスから継承されたプロパティに限定します。 |
 
 インスタンスの場合:
 
-常時  |Value  |説明  |
+定数  |値  |説明  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 列挙型を、クラス自体で定義または変更されたプロパティに制限します。 |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 列挙型を、基本クラスから継承されるプロパティに制限します。 |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 列挙体は、クラス自体で定義または変更されたプロパティに限定します。 |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 列挙型を基底クラスから継承されたプロパティに限定します。 |
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** WMINet_Utils.idl  
+ **ヘッダー:** WMINet_Utils .idl  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 

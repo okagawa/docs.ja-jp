@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7123a89b-eb9b-463a-a552-a081e33b0a3a
 topic_type:
 - apiref
-ms.openlocfilehash: 395d5f63eef12570c07f1f601de7f9e480d62905
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6497dd3e720874e47de9dfda74e483a642cbb181
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540506"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708232"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 関数
+
 タイプライブラリを読み込み、指定された [ITypeLibResolver インターフェイス](itypelibresolver-interface.md) を使用して、内部で参照されているタイプライブラリを解決します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,6 +36,7 @@ HRESULT LoadTypeLibWithResolver(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `szFile`  
  からタイプライブラリのファイルパス。  
   
@@ -54,11 +56,12 @@ HRESULT LoadTypeLibWithResolver(
  入出力読み込まれているタイプライブラリへの参照。  
   
 ## <a name="return-value"></a>戻り値  
+
  次の表に示す HRESULT 値の1つ。  
   
 |戻り値|説明|  
 |------------------|-------------|  
-|`S_OK`|成功しました。|  
+|`S_OK`|正常終了しました。|  
 |`E_OUTOFMEMORY`|メモリが不足しています。|  
 |`E_POINTER`|1つ以上のポインターが無効です。|  
 |`E_INVALIDARG`|1 つ以上の引数が無効です。|  
@@ -67,7 +70,8 @@ HRESULT LoadTypeLibWithResolver(
 |`TYPE_E_INVALIDSTATE`|タイプライブラリを開けませんでした。|  
 |`TYPE_E_CANTLOADLIBRARY`|タイプライブラリまたは DLL を読み込めませんでした。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  [Tlbexp.exe (タイプライブラリエクスポーター)](../../tools/tlbexp-exe-type-library-exporter.md)は、 `LoadTypeLibWithResolver` アセンブリからタイプライブラリへの変換プロセス中に関数を呼び出します。  
   
  この関数は、レジストリへの最小限のアクセスで、指定されたタイプライブラリを読み込みます。 次に、関数は、内部的に参照されるタイプライブラリのタイプライブラリを調べます。このタイプライブラリはそれぞれ、親タイプライブラリに読み込まれ、追加される必要があります。  
@@ -82,7 +86,8 @@ HRESULT LoadTypeLibWithResolver(
   
  を直接呼び出す場合は `LoadTypeLibWithResolver` 、独自の [ITypeLibResolver インターフェイス](itypelibresolver-interface.md) 実装を指定する必要があります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Tlf .h  

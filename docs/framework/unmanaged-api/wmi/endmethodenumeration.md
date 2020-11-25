@@ -1,6 +1,6 @@
 ---
-title: メソッド列挙関数 (アンマネージ API リファレンス)
-description: 関数は、メソッド列挙体のシーケンスを終了します。
+title: EndMethodEnumeration 関数 (アンマネージ API リファレンス)
+description: EndMethodEnumeration 関数は、メソッドの列挙体シーケンスを終了します。
 ms.date: 11/06/2017
 api_name:
 - EndMethodEnumeration
@@ -14,15 +14,16 @@ helpviewer_keywords:
 - EndMethodEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 63667d0668f905ded2aedd961be0d1831faf838c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 82f50530967699427d8a00b1c9f518b639273626
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175006"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708063"
 ---
 # <a name="endmethodenumeration-function"></a>EndMethodEnumeration 関数
-関数の呼び出しで開始される列挙シーケンス[を](beginmethodenumeration.md)終了します。  
+
+[BeginMethodEnumeration 関数](beginmethodenumeration.md)の呼び出しで開始された列挙シーケンスを終了します。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -38,32 +39,33 @@ HRESULT EndMethodEnumeration (
 ## <a name="parameters"></a>パラメーター
 
 `vFunc`  
-[in]このパラメーターは使用されません。
+からこのパラメーターは使用されていません。
 
 `ptr`  
-[in][インスタンス](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)へのポインター。
+から [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) インスタンスへのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値は *、WbemCli.h*ヘッダー ファイルで定義されているか、コード内で定数として定義できます。
+この関数によって返される次の値は、 *WbemCli* ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|常時  |Value  |説明  |
+|定数  |値  |説明  |
 |---------|---------|---------|
 |`WBEM_E_UNEXPECTED` | 0x8004101d | An internal error occurred. |
-|`WBEM_S_NO_ERROR` | 0 | 関数呼び出しが正常に行われました。  |
+|`WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-この関数は、メソッドの呼び出し[をラップします](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration)。
+この関数は、 [IWbemClassObject:: EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration) メソッドの呼び出しをラップします。
 
-呼び出し元は[、BeginMethodEnumeration 関数](beginmethodenumeration.md)を使用して列挙シーケンスを開始し、メソッドが`WBEM_S_NO_MORE_DATA`返されるまで[NextMethod 関数](nextmethod.md )を呼び出します。 呼び出し元はオプションで、`EndMethodEnumeration`を呼び出してシーケンスを終了します。 呼び出し元は、いつでも呼`EndMethodEnumeration`び出すことによって、列挙を早期に終了できます。
+呼び出し元は、 [BeginMethodEnumeration 関数](beginmethodenumeration.md)を使用して列挙シーケンスを開始し、メソッドがを返すまで [nextmethod 関数](nextmethod.md )を呼び出し `WBEM_S_NO_MORE_DATA` ます。 呼び出し元は、を呼び出すことによって、シーケンスを終了する必要が `EndMethodEnumeration` あります。 呼び出し元は、いつでもを呼び出すことによって、列挙を早期に終了する場合があり `EndMethodEnumeration` ます。
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** WMINet_Utils.idl  
+ **ヘッダー:** WMINet_Utils .idl  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 

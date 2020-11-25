@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00e2e194-12f5-436e-a997-2b9d3e844d4f
 topic_type:
 - apiref
-ms.openlocfilehash: 857410187edf1c712865626a3327dd4c92cc211f
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: ad9631039c8d032e7ffdba1e6098b66398f82277
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441930"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707387"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>ISymENCUnmanagedMethod::GetFileNameFromOffset メソッド
+
 オフセットに関連付けられた行のファイル名を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,22 +38,25 @@ HRESULT GetFileNameFromOffset(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `dwOffset`  
- から`ULONG32`オフセットを格納している。  
+ から `ULONG32` オフセットを格納している。  
   
  `cchName`  
- から`ULONG32`バッファーのサイズを示す `szName` 。  
+ から `ULONG32` バッファーのサイズを示す `szName` 。  
   
  `pcchName`  
- 入出力`ULONG32`ファイル名を格納するために必要なバッファーのサイズ (文字数) を受け取るへのポインター。  
+ 入出力 `ULONG32` ファイル名を格納するために必要なバッファーのサイズ (文字数) を受け取るへのポインター。  
   
  `szName`  
  入出力ファイル名を格納しているバッファー。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

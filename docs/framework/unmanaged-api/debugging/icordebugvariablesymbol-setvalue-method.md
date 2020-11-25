@@ -2,14 +2,15 @@
 title: ICorDebugVariableSymbol::SetValue メソッド
 ms.date: 03/30/2017
 ms.assetid: 4609418d-71fa-44bc-9618-4d529d25cabb
-ms.openlocfilehash: 38afd355938ec1beb1dbfd33de36116d25b07b4e
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 3ef9b9b9a095d6d6026ffc38873661355d660488
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397075"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707842"
 ---
 # <a name="icordebugvariablesymbolsetvalue-method"></a>ICorDebugVariableSymbol::SetValue メソッド
+
 バイト配列の値を変数に代入します。  
   
 ## <a name="syntax"></a>構文  
@@ -26,6 +27,7 @@ HRESULT SetValue(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `offset`  
  [in] 値を設定する変数内の開始オフセットです。 このパラメーターは、オブジェクトのメンバー フィールドに書き込む際に使用されます。  
   
@@ -44,12 +46,13 @@ HRESULT SetValue(
  `pValue`  
  [in] 設定する値が含まれるバッファー。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

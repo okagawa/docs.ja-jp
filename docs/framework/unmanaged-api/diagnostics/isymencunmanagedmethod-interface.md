@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: faebf594-67d5-4abf-b9c1-547fd3a1ff87
 topic_type:
 - apiref
-ms.openlocfilehash: 54c8c7f5c3ba6b4afd4ff352a8afb947a92e2d61
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: acb8d48ed6314756e2c1a10fff314a303799fb24
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441878"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707283"
 ---
 # <a name="isymencunmanagedmethod-interface"></a>ISymENCUnmanagedMethod インターフェイス
+
 エディットコンティニュ機能に関する情報を提供します。  
   
 ## <a name="methods"></a>メソッド  
@@ -35,6 +36,7 @@ ms.locfileid: "83441878"
 |[GetSourceExtentInDocument メソッド](isymencunmanagedmethod-getsourceextentindocument-method.md)|特定のドキュメント内のメソッドの最小の開始行と最大の終了行を取得します。|  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

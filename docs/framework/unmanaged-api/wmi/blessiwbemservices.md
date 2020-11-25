@@ -1,6 +1,6 @@
 ---
-title: 関数 (アンマネージ API リファレンス)
-description: 関数は、ユーザー資格情報が IWbemServices クラスへのアクセスを許可するかどうかを示します。
+title: BlessIWbemServices 関数 (アンマネージ API リファレンス)
+description: BlessIWbemServices 関数は、ユーザー資格情報が IWbemServices クラスへのアクセスを許可しているかどうかを示します。
 ms.date: 11/06/2017
 api_name:
 - BlessIWbemServices
@@ -14,15 +14,16 @@ helpviewer_keywords:
 - BlessIWbemServices function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 4b15af840cc00b3ec261604db4f3625c6b975d3e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43ef617ee754c9dcd661b31abba6b17434563c22
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176865"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708154"
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices 関数
-ユーザー資格情報で指定された[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)クラスへのアクセスを許可するかどうかを示します。
+
+ユーザー資格情報が、指定された [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) クラスへのアクセスを許可するかどうかを示します。
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -42,42 +43,42 @@ HRESULT BlessIWbemServices (
 ## <a name="parameters"></a>パラメーター
 
 `pIWbemServices`\
-[in]アクセス許可が必要な[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)オブジェクトへのポインター。
+から権限が必要な [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) オブジェクトへのポインター。
 
 `strUser`\
-[in]ユーザー名。
+からユーザー名。
 
 `strPassword`\
-[in]に関連付けられている`strUser`パスワード。
+からに関連付けられているパスワード `strUser` 。
 
 `strAuthority`\
-[in]ユーザーのドメイン名。 詳細については、[関数](connectserverwmi.md)を参照してください。
+からユーザーのドメイン名。 詳細については、「 [Connectserverwmi](connectserverwmi.md) 関数」を参照してください。
 
 `impLevel`\
-[in]偽装レベル。
+から偽装レベル。
 
 `authnLevel`\
-[in]権限レベル。
+から承認レベル。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値は *、WinError.h*ヘッダー ファイルで定義されているか、コード内で定数として定義できます。
+この関数によって返される次の値は、 *winerror.h* ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|常時  |Value  |説明  |
+|定数  |値  |説明  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | 1 つ以上の引数が無効です。 |
-| `E_POINTER` | 0x80004003 | `pIWbemServices` は `null` です。 |
+| `E_POINTER` | 0x80004003 | `pIWbemServices` が `null`です。 |
 | `E_FAIL` | 0x80000008 | 特定できないエラーが発生しました。 |
-| `E_OUTOFMEMORY` | 0x80000002 | メモリ不足のため、操作を実行できません。 |
-| `S_OK` | 0 | 関数呼び出しが正常に行われました。 |
+| `E_OUTOFMEMORY` | 0x80000002 | 操作を実行するのに十分なメモリがありません。 |
+| `S_OK` | 0 | 関数の呼び出しに成功しました。 |
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
 
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** WMINet_Utils.idl  
+ **ヘッダー:** WMINet_Utils .idl  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 

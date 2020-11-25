@@ -6,17 +6,19 @@ helpviewer_keywords:
 - native API reference [.NET Framework], metadata
 - metadata [.NET Framework], using the unmanaged API
 ms.assetid: 10cfea92-db5e-4bcb-b301-ef029bcf77a3
-ms.openlocfilehash: eca80acd46077ae39027896f16098122abe263c6
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
-ms.translationtype: MT
+ms.openlocfilehash: 54d8177b6c2a8492f1391645771b4620bab365e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84489744"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708492"
 ---
 # <a name="metadata-unmanaged-api-reference"></a>メタデータ (アンマネージ API リファレンス)
+
 メタデータ API を使用すると、コンパイラなどのクライアントは、共通言語ランタイム (CLR: Common Language Runtime) によって読み込まれる型を使用せずに、コンポーネントのメタデータを生成またはアクセスできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [メタデータ インターフェイス](metadata-interfaces.md)  
  .NET Framework の型、メソッド、フィールドなどによって公開されるメタデータにアクセスできるようにするアンマネージ インターフェイスについて説明します。  
   

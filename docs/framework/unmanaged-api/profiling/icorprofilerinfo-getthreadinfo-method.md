@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc994fef-65c9-432a-84cb-66c8141147e7
 topic_type:
 - apiref
-ms.openlocfilehash: 532288364b2db1e6be49b9e6f87019b1e41e6866
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 516a12b7a4457a0f67da24294ad96fb79d1aa5aa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497921"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707517"
 ---
 # <a name="icorprofilerinfogetthreadinfo-method"></a>ICorProfilerInfo::GetThreadInfo メソッド
+
 指定したスレッドの現在の Win32 スレッド id を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,6 +35,7 @@ HRESULT GetThreadInfo(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `threadId`  
  から現在の Win32 ID を取得するスレッドの ID。  
   
@@ -41,6 +43,7 @@ HRESULT GetThreadInfo(
  入出力指定したスレッドの現在の Win32 スレッド ID へのポインター。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

@@ -18,17 +18,18 @@ helpviewer_keywords:
 ms.assetid: 997e9e57-abb2-4217-bf20-1df621a75add
 topic_type:
 - apiref
-ms.openlocfilehash: 20be3114908ef78966eead05ae8ba6333a491404
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89556cf0e1ef65c35278a526e10fc791063ea2c6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175058"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708349"
 ---
 # <a name="strongnametokenfrompublickey-function"></a>StrongNameTokenFromPublicKey 関数
+
 公開キーを表すトークンが取得されます。 厳密な名前トークンは、公開キーの短縮形です。  
   
- この関数は廃止されました。 代わりに[、メソッド](../hosting/iclrstrongname-strongnametokenfrompublickey-method.md)を使用します。  
+ この関数は非推奨とされます。 代わりに [ICLRStrongName:: StrongNameTokenFromPublicKey](../hosting/iclrstrongname-strongnametokenfrompublickey-method.md) メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,34 +43,38 @@ BOOLEANStrongNameTokenFromPublicKey (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pbPublicKeyBlob`  
- [in]厳密な名前の署名を生成するために使用されるキー ペアのパブリック部分を含む[、型の PublicKeyBlob](publickeyblob-structure.md)の構造体。  
+ から厳密な名前の署名を生成するために使用されるキーペアの公開部分を格納する [Publickeyblob](publickeyblob-structure.md) 型の構造体。  
   
  `cbPublicKeyBlob`  
- [in]のサイズ (バイト単位)`pbPublicKeyBlob`です。  
+ からのサイズ (バイト単位) `pbPublicKeyBlob` 。  
   
  `ppbStrongNameToken`  
- [アウト]渡されたキーに対応する厳密な名前トークン`pbPublicKeyBlob`。 共通言語ランタイムは、トークンを返すメモリを割り当てます。 呼び出し元は[、厳密な名前フリーバッファー](strongnamefreebuffer-function.md)関数を使用して、このメモリを解放する必要があります。  
+ 入出力渡されたキーに対応する厳密な名前トークン `pbPublicKeyBlob` 。 共通言語ランタイムは、トークンを返すメモリを割り当てます。 呼び出し元は、 [StrongNameFreeBuffer](strongnamefreebuffer-function.md) 関数を使用して、このメモリを解放する必要があります。  
   
  `pcbStrongNameToken`  
- [アウト]返された厳密な名前トークンのサイズ (バイト単位)。  
+ 入出力返された厳密な名前トークンのサイズ (バイト単位)。  
   
 ## <a name="return-value"></a>戻り値  
- `true`正常に完了した場合。それ以外`false`の場合は、 .  
+
+ `true` 正常に完了した場合は。それ以外の場合は `false` 。  
   
-## <a name="remarks"></a>解説  
- 厳密な名前トークンは、メタデータにキー情報を格納するときに領域を節約するために使用される公開キーの短縮形です。 特に、厳密な名前トークンは、依存アセンブリを参照するためにアセンブリ参照で使用されます。  
+## <a name="remarks"></a>注釈  
+
+ 厳密な名前トークンは、キー情報をメタデータに格納するときに領域を節約するために使用される公開キーの短縮形です。 具体的には、アセンブリ参照では、依存アセンブリを参照するために厳密な名前トークンが使用されます。  
   
- 関数が`StrongNameTokenFromPublicKey`正常に完了しない場合は、[関数](strongnameerrorinfo-function.md)を呼び出して、最後に生成されたエラーを取得します。  
+ 関数が `StrongNameTokenFromPublicKey` 正常に完了しない場合は、 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 関数を呼び出して、最後に生成されたエラーを取得します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ストロングネーム.h  
+ **ヘッダー:** StrongName  
   
- **ライブラリ:** mscoree.dll にリソースとして含まれる  
+ **ライブラリ:** mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

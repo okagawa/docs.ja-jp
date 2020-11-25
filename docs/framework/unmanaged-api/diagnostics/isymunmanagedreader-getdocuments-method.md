@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e3b73a3f-d089-4101-a9a9-5e0765d05b61
 topic_type:
 - apiref
-ms.openlocfilehash: b8a3a74888a3caae03da6f88a003bd277939ae59
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 757b7fecbbb187da079c8a5c51462ec58431966f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615047"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707621"
 ---
 # <a name="isymunmanagedreadergetdocuments-method"></a>ISymUnmanagedReader::GetDocuments メソッド
+
 シンボルストアに定義されているすべてのドキュメントの配列を返します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT GetDocuments (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `cDocs`  
  [in] `pDocs` 配列のサイズ。  
   
@@ -46,9 +48,11 @@ HRESULT GetDocuments (
  入出力ドキュメント配列を受け取る変数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

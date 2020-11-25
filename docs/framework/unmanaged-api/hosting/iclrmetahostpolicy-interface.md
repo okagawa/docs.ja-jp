@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1bdeccb6-0698-4c97-ad69-eae2b69e59f1
 topic_type:
 - apiref
-ms.openlocfilehash: 79b62a5e2aad9cfcd14ba40c1abf0342bfe57a4b
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 515b73b019c683bd3e5aa3b895ee5623e75e4ad0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703531"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707608"
 ---
 # <a name="iclrmetahostpolicy-interface"></a>ICLRMetaHostPolicy インターフェイス
+
 [Getrequestedruntime](iclrmetahostpolicy-getrequestedruntime-method.md)メソッドを提供します。このメソッドは、ポリシー条件、マネージアセンブリ、バージョン、および構成ファイルに基づいて共通言語ランタイム (CLR) インターフェイスへのポインターを返します。  
   
 ## <a name="methods"></a>メソッド  
@@ -30,8 +31,9 @@ ms.locfileid: "83703531"
 |------------|-----------------|  
 |[GetRequestedRuntime メソッド](iclrmetahostpolicy-getrequestedruntime-method.md)|ポリシー条件、マネージアセンブリ、バージョン、および構成ファイルに基づいて、優先する CLR インターフェイスを提供します。|  
   
-## <a name="remarks"></a>解説  
- このインターフェイスへの参照を取得するには、次のコードに示すように[Clrcreateinstance](clrcreateinstance-function.md)関数を呼び出します。  
+## <a name="remarks"></a>注釈  
+
+ このインターフェイスへの参照を取得するには、次のコードに示すように [Clrcreateinstance](clrcreateinstance-function.md) 関数を呼び出します。  
   
 ```cpp  
 ICLRMetaHostPolicy *pMetaHostPolicy = NULL;  
@@ -42,14 +44,15 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHostPolicy,
 > [!NOTE]
 > このインターフェイスは、実際には CLR の読み込みもアクティブ化も行いませんが、インストールまたは読み込まれている使用可能なバージョンに基づいて、単純に優先 CLR バージョンを返します。  
   
- .NET Framework 4 ホスト API はポリシーを統合して、特定のニーズを持つホストが、意図しない罰則を伴わずに基本的な機能を使用できるようにします。 たとえば、多くの Mscoree.dll のエクスポートは特定の CLR にバインドされますが、メソッドでは論理的に要求されない場合もあります。 [METAHOST_POLICY_FLAGS](metahost-policy-flags-enumeration.md)列挙体は、ほとんどのホストに共通するバインドポリシーを提供します。  
+ .NET Framework 4 ホスト API はポリシーを統合して、特定のニーズを持つホストが、意図しない罰則を伴わずに基本的な機能を使用できるようにします。 たとえば、MSCorEE.dll エクスポートの多くは特定の CLR にバインドされますが、メソッドでは論理的に要求されない場合もあります。 [METAHOST_POLICY_FLAGS](metahost-policy-flags-enumeration.md)列挙体は、ほとんどのホストに共通するバインドポリシーを提供します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

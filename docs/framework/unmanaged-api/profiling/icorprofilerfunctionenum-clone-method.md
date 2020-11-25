@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 0c3d4835-e111-4e82-af6d-53f140b8f2c9
 topic_type:
 - apiref
-ms.openlocfilehash: d6f348eb781efdef89926ec1bc267281bf3a5004
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 092c3b328887b7d36ead77c64d31310b614b616a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503108"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707530"
 ---
 # <a name="icorprofilerfunctionenumclone-method"></a>ICorProfilerFunctionEnum::Clone メソッド
-この[ICorProfilerFunctionEnum](icorprofilerfunctionenum-interface.md)インターフェイスのコピーへのインターフェイスポインターを取得します。  
+
+この [ICorProfilerFunctionEnum](icorprofilerfunctionenum-interface.md) インターフェイスのコピーへのインターフェイスポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,10 +33,12 @@ HRESULT Clone([out] ICorProfilerFunctionEnum **ppEnum);
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ppEnum`  
- 入出力インターフェイスポインターへのポインター。これにより、この[ICorProfilerFunctionEnum](icorprofilerfunctionenum-interface.md)インターフェイスのコピーが参照されます。 列挙子のコピーは、この列挙子とは別に独自の列挙状態を保持します。 ただし、コピーの初期カーソル位置は、この列挙子の現在のカーソル位置と同じです。  
+ 入出力インターフェイスポインターへのポインター。これにより、この [ICorProfilerFunctionEnum](icorprofilerfunctionenum-interface.md) インターフェイスのコピーが参照されます。 列挙子のコピーは、この列挙子とは別に独自の列挙状態を保持します。 ただし、コピーの初期カーソル位置は、この列挙子の現在のカーソル位置と同じです。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

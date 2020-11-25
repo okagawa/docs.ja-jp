@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a2dd5098-3e58-4be5-b7a2-e4160b3b505a
 topic_type:
 - apiref
-ms.openlocfilehash: 20bfb3e48f411524bd4d9798f17dd935595a12bb
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 299787ea4eb8a5c25bdab64ad08445839c9f24d6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615021"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707543"
 ---
 # <a name="isymunmanagedreadergetglobalvariables-method"></a>ISymUnmanagedReader::GetGlobalVariables メソッド
+
 すべてのグローバル変数を返します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,19 +37,22 @@ HRESULT GetGlobalVariables(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `cVars`  
  からが指すバッファーの長さ `pcVars` 。  
   
  `pcVars`  
- 入出力`ULONG32`変数を格納するために必要なバッファーのサイズを受け取るへのポインター。  
+ 入出力 `ULONG32` 変数を格納するために必要なバッファーのサイズを受け取るへのポインター。  
   
  `pVars`  
  入出力変数を格納しているバッファー。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

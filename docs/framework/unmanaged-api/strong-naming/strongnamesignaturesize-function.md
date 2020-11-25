@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 4fde4cd0-f53e-4411-a2fe-fc5c54472f95
 topic_type:
 - apiref
-ms.openlocfilehash: a19d875b8fb81f2af3821e69452f0f0ed591cd22
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a2b3afe66f1eaa358c5f80de50f14ceb730048b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176891"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708479"
 ---
 # <a name="strongnamesignaturesize-function"></a>StrongNameSignatureSize 関数
-厳密な名前の署名のサイズが返されます。 `StrongNameSignatureSize`通常は、遅延署名されたアセンブリを作成するときに、ファイルに確保する領域を決定するためにコンパイラによって使用されます。  
+
+厳密な名前の署名のサイズが返されます。 `StrongNameSignatureSize` は、通常、コンパイラによって使用され、遅延署名されたアセンブリを作成するときにファイルで予約する領域の量を決定します。  
   
- この関数は廃止されました。 代わりに、メソッド[を](../hosting/iclrstrongname-strongnamesignaturesize-method.md)使用します。  
+ この関数は非推奨とされます。 代わりに [ICLRStrongName:: StrongNameSignatureSize](../hosting/iclrstrongname-strongnamesignaturesize-method.md) メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,29 +38,33 @@ BOOLEAN StrongNameSignatureSize (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pbPublicKeyBlob`  
- [in]厳密な名前の署名を生成するために使用されるキー ペアのパブリック部分を含む[、型の PublicKeyBlob](publickeyblob-structure.md)の構造体。  
+ から厳密な名前の署名を生成するために使用されるキーペアの公開部分を格納する [Publickeyblob](publickeyblob-structure.md) 型の構造体。  
   
  `cbPublicKeyBlob`  
- [in]のサイズ (バイト単位)`pbPublicKeyBlob`です。  
+ からのサイズ (バイト単位) `pbPublicKeyBlob` 。  
   
  `pcbSize`  
- [in]厳密な名前の署名を格納するために必要なバイト数。  
+ から厳密な名前の署名を格納するために必要なバイト数。  
   
 ## <a name="return-value"></a>戻り値  
- `true`正常に完了した場合。それ以外`false`の場合は、 .  
+
+ `true` 正常に完了した場合は。それ以外の場合は `false` 。  
   
-## <a name="remarks"></a>解説  
- 関数が`StrongNameSignatureSize`正常に完了しない場合は、[関数](strongnameerrorinfo-function.md)を呼び出して、最後に生成されたエラーを取得します。  
+## <a name="remarks"></a>注釈  
+
+ 関数が `StrongNameSignatureSize` 正常に完了しない場合は、 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 関数を呼び出して、最後に生成されたエラーを取得します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ストロングネーム.h  
+ **ヘッダー:** StrongName  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

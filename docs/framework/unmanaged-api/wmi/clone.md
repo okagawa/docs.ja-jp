@@ -1,6 +1,6 @@
 ---
-title: クローン関数 (アンマネージ API リファレンス)
-description: Clone 関数は、現在のオブジェクトの完全なクローンである新しいオブジェクトを返します。
+title: Clone 関数 (アンマネージ API リファレンス)
+description: Clone 関数は、現在のオブジェクトの完全な複製である新しいオブジェクトを返します。
 ms.date: 11/06/2017
 api_name:
 - Clone
@@ -14,14 +14,15 @@ helpviewer_keywords:
 - Clone function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: cb4951a1f289417482bfa1287028cc66349a5938
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aecbf750b42626629dcb5aef369978a2e2bd002a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176852"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708115"
 ---
 # <a name="clone-function"></a>Clone 関数
+
 現在のオブジェクトの完全な複製である新しいオブジェクトが返されます。
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -39,37 +40,38 @@ HRESULT Clone (
 ## <a name="parameters"></a>パラメーター
 
 `vFunc`  
-[in]このパラメーターは使用されません。
+からこのパラメーターは使用されていません。
 
 `ptr`  
-[in][インスタンス](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)へのポインター。
+から [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) インスタンスへのポインター。
 
 `ppCopy`  
-[アウト]の完全な孤独である新しいオブジェクト`ptr`。 この引数は、`null`現在のオブジェクトのコピーを受け取った場合は使用できません。
+入出力完全な唯一のオブジェクトである新しいオブジェクト `ptr` 。 `null`現在のオブジェクトのコピーを受け取った場合、この引数をにすることはできません。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値は *、WbemCli.h*ヘッダー ファイルで定義されているか、コード内で定数として定義できます。
+この関数によって返される次の値は、 *WbemCli* ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|常時  |Value  |説明  |
+|定数  |値  |説明  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 一般的なエラーが発生しました。 |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null`はパラメータとして指定されており、この使用法では有効ではありません。 |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | メモリ不足でオブジェクトのクローンを作成できません。 |
-| `WBEM_S_NO_ERROR` | 0 | 関数呼び出しが正常に行われました。  |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null` がパラメーターとして指定されましたが、この使用法では有効ではありません。 |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | オブジェクトを複製するのに十分なメモリがありません。 |
+| `WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-この関数は、メソッドの呼び出しをラップ[します](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone)。
+この関数は、 [IWbemClassObject:: Clone](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) メソッドの呼び出しをラップします。
 
-複製されたオブジェクトは、参照カウントが 1 の COM オブジェクトです。
+複製されたオブジェクトは、参照カウントが1の COM オブジェクトです。
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** WMINet_Utils.idl  
+ **ヘッダー:** WMINet_Utils .idl  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 
