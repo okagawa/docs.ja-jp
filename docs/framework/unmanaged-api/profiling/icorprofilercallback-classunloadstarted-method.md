@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bc93bead-f3a9-415c-b919-ddd3ca80facc
 topic_type:
 - apiref
-ms.openlocfilehash: 86402abca5386f34256f1f44f674f1e1898ad5fd
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 1c154eee85811796321aea2647db1c8996997576
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500352"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700237"
 ---
 # <a name="icorprofilercallbackclassunloadstarted-method"></a>ICorProfilerCallback::ClassUnloadStarted メソッド
+
 クラスがアンロードされていることをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,10 +39,12 @@ HRESULT ClassUnloadStarted(
 
   \[in] は、アンロードするクラスを識別します。
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  `classId`メソッドから制御が戻った後、の値は情報要求に対して無効です `ClassUnloadStarted` 。このクラスに関する情報を取得するのは、プロファイラーの最後の機会です。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

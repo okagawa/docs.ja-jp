@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6e47b7e5-0335-4dd3-8c42-d3c07d62b102
 topic_type:
 - apiref
-ms.openlocfilehash: 80054a8292c69b957664cb3573b0a8694c7f9fd2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: bb7dade1ccd46cb9e13d45468c2ca2a8b451b70b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500404"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700302"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>ICorProfilerCallback::AssemblyUnloadStarted メソッド
+
 アセンブリがアンロードされていることをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,10 +39,12 @@ HRESULT AssemblyUnloadStarted(
 
   \[in] は、アンロードされるアセンブリを識別します。
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  `assemblyId`メソッドから制御が戻った後、の値は情報要求に対して無効です `AssemblyUnloadStarted` 。これは、このアセンブリに関する情報を取得する最後の機会です。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9f728de8-45c2-45a5-ac4a-45660bd36ecf
 topic_type:
 - apiref
-ms.openlocfilehash: 9a9fdc80c8f63dd5b004953266a5d7399655bc71
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: fbdc9345c8364f33ac69da452dd91155fd5eede9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500365"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700276"
 ---
 # <a name="icorprofilercallbackclassloadstarted-method"></a>ICorProfilerCallback::ClassLoadStarted メソッド
+
 クラスが読み込まれていることをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,10 +39,12 @@ HRESULT ClassLoadStarted(
 
   \[in] は、読み込むクラスを識別します。
 
-## <a name="remarks"></a>解説  
- の値 `classId` は、 [ICorProfilerCallback:: ClassLoadFinished](icorprofilercallback-classloadfinished-method.md)メソッドが呼び出されるまで、情報要求に対して無効です。  
+## <a name="remarks"></a>注釈  
+
+ の値 `classId` は、 [ICorProfilerCallback:: ClassLoadFinished](icorprofilercallback-classloadfinished-method.md) メソッドが呼び出されるまで、情報要求に対して無効です。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

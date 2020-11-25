@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55674b68-678a-4747-ae06-4e91519c7305
 topic_type:
 - apiref
-ms.openlocfilehash: 14eb90c707618796d6d62ed2ec5710ceba31ba6c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 114d5d58d0d9098944299aefd0cb99a70c5da09d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500378"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700263"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a>ICorProfilerCallback::ClassUnloadFinished メソッド
+
 クラスのアンロードが終了したことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -43,10 +44,12 @@ HRESULT ClassUnloadFinished(
 
   \[in] クラスが正常にアンロードされたかどうかを示す HRESULT。
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  クラスのアンロードの一部は、コールバック後に続行される場合があり `ClassUnloadFinished` ます。 のエラー HRESULT は `hrStatus` エラーを示します。 ただし、の成功 HRESULT は、 `hrStatus` クラスのアンロードの最初の部分が成功したことを示します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

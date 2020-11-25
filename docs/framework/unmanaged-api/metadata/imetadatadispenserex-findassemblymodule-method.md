@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d1fb65e1-7e19-4513-85b1-44f87c294d3e
 topic_type:
 - apiref
-ms.openlocfilehash: 64f1e2a8f05616c7ca84bc130428629b1176e985
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 5bc622c013e62fa9c03476cc5927133682020426
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006182"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700614"
 ---
 # <a name="imetadatadispenserexfindassemblymodule-method"></a>IMetaDataDispenserEx::FindAssemblyModule メソッド
+
 このメソッドは実装されていません。 呼び出された場合は E_NOTIMPL を返します。  
   
 ## <a name="syntax"></a>構文  
@@ -41,6 +42,7 @@ HRESULT FindAssemblyModule(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `szAppBase`  
  から使用しません。  
   
@@ -65,12 +67,13 @@ HRESULT FindAssemblyModule(
  `pcName`  
  入出力で実際に返された文字数 `szName` 。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **プラットフォーム:** 「 [システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

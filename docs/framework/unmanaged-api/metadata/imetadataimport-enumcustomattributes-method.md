@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 798513a0-68b1-4d04-bc5b-782a4445ea68
 topic_type:
 - apiref
-ms.openlocfilehash: 9b0da8a06259fe99da52497da3011da94289d301
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3b12200dae23a7b6a2f6e1654e46fdf74dc90968
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492318"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700536"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes メソッド
+
 指定した型またはメンバーに関連付けられているカスタム属性定義トークンを列挙します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,6 +40,7 @@ HRESULT EnumCustomAttributes (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `phEnum`  
  [入力、出力]返された列挙子へのポインター。  
   
@@ -61,15 +63,16 @@ HRESULT EnumCustomAttributes (
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes`正常に返されました。|  
+|`S_OK`|`EnumCustomAttributes` 正常に返されました。|  
 |`S_FALSE`|列挙するカスタム属性はありません。 この場合、 `pcCustomAttributes` は0になります。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

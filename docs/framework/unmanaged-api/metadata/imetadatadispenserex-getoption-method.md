@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7f794e5-8e25-4d65-850a-7c34fbfce87d
 topic_type:
 - apiref
-ms.openlocfilehash: 832adacac4a6df9ccf21578538a1c557150f3ba1
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 0ceadf42ac49fd3fc89c78a6a26b2f529afeeaf0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008782"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700562"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>IMetaDataDispenserEx::GetOption メソッド
+
 現在のメタデータスコープの指定したオプションの値を取得します。 オプションは、現在のメタデータスコープへの呼び出しの処理方法を制御します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,14 +36,16 @@ HRESULT GetOption (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `optionId`  
  から取得するオプションを指定する GUID へのポインター。 サポートされている Guid の一覧については、「解説」を参照してください。  
   
  `pValue`  
  入出力返されたオプションの値。 この値の型は、指定されたオプションの型のバリアントになります。  
   
-## <a name="remarks"></a>コメント  
- 次の一覧は、このメソッドでサポートされている Guid を示しています。 説明については、 [IMetaDataDispenserEx:: SetOption](imetadatadispenserex-setoption-method.md)メソッドを参照してください。 `optionId`がこのリストに含まれていない場合、このメソッドは HRESULT を返し `E_INVALIDARG` ます。パラメーターが正しくないことを示します。  
+## <a name="remarks"></a>注釈  
+
+ 次の一覧は、このメソッドでサポートされている Guid を示しています。 説明については、 [IMetaDataDispenserEx:: SetOption](imetadatadispenserex-setoption-method.md) メソッドを参照してください。 `optionId`がこのリストに含まれていない場合、このメソッドは HRESULT を返し `E_INVALIDARG` ます。パラメーターが正しくないことを示します。  
   
 - MetaDataCheckDuplicatesFor  
   
@@ -58,12 +61,13 @@ HRESULT GetOption (
   
 - MetaDataLinkerOptions  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **プラットフォーム:** 「 [システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

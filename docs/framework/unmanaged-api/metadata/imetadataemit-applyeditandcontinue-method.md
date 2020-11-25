@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 35991289-f389-495d-8caa-a6384fb1d557
 topic_type:
 - apiref
-ms.openlocfilehash: 7ce9ac95c7183a7d47c367914d80f77c57dde0d7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 0cc84893c4937bf6b23eae0d63b92b3b871901dd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005766"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700575"
 ---
 # <a name="imetadataemitapplyeditandcontinue-method"></a>IMetaDataEmit::ApplyEditAndContinue メソッド
+
 指定したメタデータに加えられた変更を使用して、現在のアセンブリスコープを更新します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,17 +35,19 @@ HRESULT ApplyEditAndContinue (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pImport`  
  \[\]ポータブル実行可能 (PE) ファイルからのデルタメタデータを表す[IUnknown](/cpp/atl/iunknown)オブジェクトへのポインター。
   
  差分メタデータは、モジュールの実際のメタデータのコピーに加えられた変更を含むメタデータのブロックです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
