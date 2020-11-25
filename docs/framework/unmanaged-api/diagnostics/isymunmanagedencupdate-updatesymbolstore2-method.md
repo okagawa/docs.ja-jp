@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 35588317-6184-485c-ab41-4b15fc1765d9
 topic_type:
 - apiref
-ms.openlocfilehash: f363bed8e7002bf898755b434c919f8722dea3fb
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c68cf632b789a523b19cc78d8d919c2278b1befa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614501"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699574"
 ---
 # <a name="isymunmanagedencupdateupdatesymbolstore2-method"></a>ISymUnmanagedENCUpdate::UpdateSymbolStore2 メソッド
+
 行情報が要件を満たしている場合に、コンパイラがプログラムデータベース (PDB) ストリームから変更されていない関数を省略できるようにします。 正しい行情報は、古い PDB 行情報と、関数内のすべての行に対して1つのデルタで判別できます。  
   
 ## <a name="syntax"></a>構文  
@@ -35,19 +36,22 @@ HRESULT UpdateSymbolStore2(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pIStream`  
- から行情報を格納している[IStream](/windows/desktop/api/objidl/nn-objidl-istream)へのポインター。  
+ から行情報を格納している [IStream](/windows/desktop/api/objidl/nn-objidl-istream) へのポインター。  
   
  `pDeltaLines`  
- から変更された行を含む[Symlinedelta](symlinedelta-structure.md)構造体へのポインター。  
+ から変更された行を含む [Symlinedelta](symlinedelta-structure.md) 構造体へのポインター。  
   
  `cDeltaLines`  
- から`ULONG`変更された行の数を表す。  
+ から `ULONG` 変更された行の数を表す。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-ms.openlocfilehash: 7575be3f5074243b251c80b8dd5bdbb12e5d50fd
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: b208444de3b427329988f27b9d252b54143b7240
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976329"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698794"
 ---
 # <a name="icordebugenum-interface"></a>ICorDebugEnum インターフェイス
 
@@ -34,8 +34,9 @@ ms.locfileid: "82976329"
 |[Reset メソッド](icordebugenum-reset-method.md)|カーソルを列挙体の先頭に移動します。|  
 |[Skip メソッド](icordebugenum-skip-method.md)|指定した数の項目だけ、列挙内でカーソルを前方に移動します。|  
   
-## <a name="remarks"></a>Remarks  
- 次の列挙子は`ICorDebugEnum`、から派生します。  
+## <a name="remarks"></a>注釈  
+
+ 次の列挙子は、から派生し `ICorDebugEnum` ます。  
   
 - ICorDebugAppDomainEnum  
   
@@ -82,7 +83,8 @@ ms.locfileid: "82976329"
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

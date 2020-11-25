@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03a6facb-f12f-49be-9839-e73b9c791cd5
 topic_type:
 - apiref
-ms.openlocfilehash: d7417e8dc193172c77d23fe3fa72c8298d802b5c
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 4f488741f4233f06c128e0a262ce798ef27af3ff
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894039"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699639"
 ---
 # <a name="icordebugclass-interface"></a>ICorDebugClass インターフェイス
 
@@ -31,17 +31,19 @@ ms.locfileid: "82894039"
 |------------|-----------------|  
 |[GetModule メソッド](icordebugclass-getmodule-method.md)|このクラスを定義するモジュールを取得します。|  
 |[GetStaticFieldValue メソッド](icordebugclass-getstaticfieldvalue-method.md)|指定された静的フィールドの値を取得します。|  
-|[GetToken メソッド](icordebugclass-gettoken-method.md)|このクラス`TypeDef`のメタデータトークンを取得します。|  
+|[GetToken メソッド](icordebugclass-gettoken-method.md)|`TypeDef`このクラスのメタデータトークンを取得します。|  
   
-## <a name="remarks"></a>解説  
- インターフェイス`ICorDebugClass`は、インスタンスジェネリック型を表します。 は、インスタンス化されたジェネリック型を表します。 たとえば、 `Hashtable<K, V>`はで`ICorDebugClass` `Hashtable<Int32, String>`表されますが、はによっ`ICorDebugType`て表されます。  
+## <a name="remarks"></a>注釈  
+
+ インターフェイスは、 `ICorDebugClass` インスタンスジェネリック型を表します。 は、インスタンス化されたジェネリック型を表します。 たとえば、は `Hashtable<K, V>` で表されますが、は `ICorDebugClass` `Hashtable<Int32, String>` によって表さ `ICorDebugType` れます。  
   
- 非ジェネリック型は、と`ICorDebugClass` `ICorDebugType`の両方で表されます。 後者のインターフェイスは、型のインスタンス化を処理するために .NET Framework バージョン2.0 で導入されました。  
+ 非ジェネリック型は、との両方で表され `ICorDebugClass` `ICorDebugType` ます。 後者のインターフェイスは、型のインスタンス化を処理するために .NET Framework バージョン2.0 で導入されました。  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

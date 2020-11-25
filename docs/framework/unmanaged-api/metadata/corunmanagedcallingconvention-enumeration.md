@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 83058790-160b-4703-a5eb-74b66acbdfa9
 topic_type:
 - apiref
-ms.openlocfilehash: b4c521489f38360d45c2cf8ff3780e057299f0b4
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 9d35f6b1928d714216b669704ec28e53895f6549
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008951"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699067"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>CorUnmanagedCallingConvention 列挙型
+
 アンマネージコードの呼び出し規約を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -50,15 +51,17 @@ typedef enum CorUnmanagedCallingConvention {
 |`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|標準の呼び出し規約。|  
 |`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|"This" 呼び出し規約。|  
 |`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|"高速" 呼び出し規約。|  
-|`IMAGE_CEE_CS_CALLCONV_C`|使用されていません。|  
-|`IMAGE_CEE_CS_CALLCONV_STDCALL`|使用されていません。|  
-|`IMAGE_CEE_CS_CALLCONV_THISCALL`|使用されていません。|  
-|`IMAGE_CEE_CS_CALLCONV_FASTCALL`|使用されていません。|  
+|`IMAGE_CEE_CS_CALLCONV_C`|使用しません。|  
+|`IMAGE_CEE_CS_CALLCONV_STDCALL`|使用しません。|  
+|`IMAGE_CEE_CS_CALLCONV_THISCALL`|使用しません。|  
+|`IMAGE_CEE_CS_CALLCONV_FASTCALL`|使用しません。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
+
  CLR では、.NET Framework バージョン1.0 での "高速" 呼び出し規約はサポートされていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorHdr. h  

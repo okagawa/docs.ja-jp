@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f909ac48-3d8f-49fb-a369-e3d9959151cd
 topic_type:
 - apiref
-ms.openlocfilehash: 451cfecde7e14fad9d3fed3367112e1fb59796e5
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 38763e687c66dcb038a874c9c17cb0d67e547816
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615145"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699353"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints メソッド
+
 このメソッド内のすべてのシーケンスポイントを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -40,11 +41,12 @@ HRESULT GetSequencePoints(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `cPoints`  
  から、、、、、 `ULONG32` およびの各配列のサイズを受け取る `offsets` `documents` `lines` `columns` `endLines` `endColumns` 。  
   
  `pcPoints`  
- 入出力`ULONG32`シーケンスポイントを格納するために必要なバッファーの長さを受け取るへのポインター。  
+ 入出力 `ULONG32` シーケンスポイントを格納するために必要なバッファーの長さを受け取るへのポインター。  
   
  `offsets`  
  からシーケンスポイントのメソッドの先頭からの MSIL (Microsoft 中間言語) オフセットを格納する配列。  
@@ -65,9 +67,11 @@ HRESULT GetSequencePoints(
  からシーケンスポイントが終了するドキュメント内の列の配列。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 836133e8-6108-4b9b-b0a9-bce4e08dccda
 topic_type:
 - apiref
-ms.openlocfilehash: a44f81deb2d57b49f1fd0650fa52c06383210352
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 44472c7beff72d24853b7fb9865071a9b15ef0e0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614436"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699431"
 ---
 # <a name="isymunmanagedmethodgetsequencepointcount-method"></a>ISymUnmanagedMethod::GetSequencePointCount メソッド
+
 このメソッド内のシーケンスポイントの数を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -33,13 +34,16 @@ HRESULT GetSequencePointCount(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pRetVal`  
- 入出力`ULONG32`シーケンスポイントを格納するために必要なバッファーのサイズを受け取るへのポインター。  
+ 入出力 `ULONG32` シーケンスポイントを格納するために必要なバッファーのサイズを受け取るへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 747ee407-ee8c-484d-9583-25089236d2d1
 topic_type:
 - apiref
-ms.openlocfilehash: 841827017262b731fd5e6f6bd0b5862fecaf2744
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 7730c2dddaca98e4cb06cdb381e8a46ff23c97f9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841725"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699210"
 ---
 # <a name="ihosttaskmanagersetlocale-method"></a>IHostTaskManager::SetLocale メソッド
+
 共通言語ランタイム (CLR) によって、現在実行中のタスクのロケール (カルチャ) が変更されたことをホストに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,6 +35,7 @@ HRESULT SetLocale (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `lcid`  
  から新しく割り当てられた地理的カルチャおよび言語にマップされるロケール識別子の値。  
   
@@ -41,7 +43,7 @@ HRESULT SetLocale (
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`SetLocale`正常に返されました。|  
+|S_OK|`SetLocale` 正常に返されました。|  
 |HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージドコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
 |HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
@@ -49,15 +51,17 @@ HRESULT SetLocale (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_NOTIMPL|ホストでは、マネージユーザーコードでロケールを変更することはできません。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
+
  ランタイムは、 `SetLocale` プロパティの値 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> がマネージコードによって変更されたときにを呼び出します。 この方法を使用すると、ホストはロケールの同期に必要なメカニズムを実行できます。 ホストでロケールをマネージコードから変更できない場合、またはロケールを同期する機構を実装していない場合は、このメソッドから E_NOTIMPL が返されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

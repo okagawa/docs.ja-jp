@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e2a06ee4-b8ee-49c7-935a-c1031a29eef2
 topic_type:
 - apiref
-ms.openlocfilehash: 1855c73849c35bf709b0af261a88e6cd7a40abfb
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: b45b0a59a29a27e7b0a395f3928215959450f9a5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008301"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698469"
 ---
 # <a name="iceegengetsectiondatalen-method"></a>ICeeGen::GetSectionDataLen メソッド
+
 指定したセクションの長さを取得します。  
   
  このメソッドは互換性のために残されています。使用しないでください。  
@@ -37,21 +38,24 @@ HRESULT GetSectionDataLen (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `section`  
  から長さを取得するデータセクション。  
   
  `dataLen`  
  入出力指定したセクションの返された長さ。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
+
  `GetSectionDataLen`他のメソッドによって処理されない特殊なセクション要件がある場合にのみ、を呼び出します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

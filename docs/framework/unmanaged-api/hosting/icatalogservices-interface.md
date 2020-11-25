@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: f0d7e49b-2394-4ae0-8820-1b64cae0cfe8
 topic_type:
 - apiref
-ms.openlocfilehash: b3c5fc4731029561129609601b8e0635f6a9516c
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 5198efc14a57bf0a496a9c78569af45595d0b4a6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617036"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698430"
 ---
 # <a name="icatalogservices-interface"></a>ICatalogServices インターフェイス
+
 サービスのカタログ化を行うためのメソッドを提供します。  
   
  このインターフェイスは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。  

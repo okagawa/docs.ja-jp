@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 628f2a04-e529-407d-841e-3b3da219a9cb
 topic_type:
 - apiref
-ms.openlocfilehash: 9e6134d39096c4ab157aa545646d83339f92a0b8
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 5ec67758e3174493cbd5cec1de0dcce30013ac43
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441033"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698586"
 ---
 # <a name="isymunmanageddocumentfindclosestline-method"></a>ISymUnmanagedDocument::FindClosestLine メソッド
+
 このドキュメント内の行が指定されている場合は、シーケンスポイントで最も近い行を返します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,6 +35,7 @@ HRESULT FindClosestLine(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `line`  
  からこのドキュメント内の行。  
   
@@ -41,6 +43,7 @@ HRESULT FindClosestLine(
  入出力行を受け取る変数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、エラーコード。  
   
 ## <a name="see-also"></a>関連項目

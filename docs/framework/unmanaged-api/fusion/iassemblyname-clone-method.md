@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7b345e08-5e16-4e3d-a044-4e19d0892943
 topic_type:
 - apiref
-ms.openlocfilehash: 1236a574a85c01e3e1be5df9644bd04bbf0753ea
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ca528bdbd9662db373d1beeece803d6c43728f2d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134404"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698612"
 ---
 # <a name="iassemblynameclone-method"></a>IAssemblyName::Clone メソッド
-この[IAssemblyName](iassemblyname-interface.md)オブジェクトの簡易コピーを作成します。  
+
+この [IAssemblyName](iassemblyname-interface.md) オブジェクトの簡易コピーを作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,15 +35,17 @@ HRESULT Clone (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pName`  
- 入出力この `IAssemblyName` オブジェクトの返されたコピー。  
+ 入出力このオブジェクトの返されたコピー `IAssemblyName` 。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Fusion. h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

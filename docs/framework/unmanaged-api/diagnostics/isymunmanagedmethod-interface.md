@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: f204d74c-cc79-4092-83bb-60654be95649
 topic_type:
 - apiref
-ms.openlocfilehash: 7a98a0c40f68cef9bab1ea2de0850208aaef77a0
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: b72a77fecd15a43efbddd9dfd4618897c3372f88
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615125"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699275"
 ---
 # <a name="isymunmanagedmethod-interface"></a>ISymUnmanagedMethod インターフェイス
-シンボルストア内のメソッドを表します。 このインターフェイスは、型関連の属性ではなく、メソッドのシンボル関連の属性にのみアクセスできるようにします。  
+
+シンボル ストア内のメソッドを表します。 このインターフェイスは、型関連の属性ではなく、メソッドのシンボル関連の属性にのみアクセスできるようにします。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -40,6 +41,7 @@ ms.locfileid: "83615125"
 |[GetToken メソッド](isymunmanagedmethod-gettoken-method.md)|このメソッドのメタデータ トークンを返します。|  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

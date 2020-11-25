@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 1844da85-c031-40bf-bea4-1a3d12a36c8c
 topic_type:
 - apiref
-ms.openlocfilehash: 1726f8929404e0dde979972d7830a6951dd71891
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d504101747995557ba526c88de451ebab7b3c556
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617062"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698560"
 ---
 # <a name="iappdomainsetup-interface"></a>IAppDomainSetup インターフェイス
+
 <xref:System.AppDomain?displayProperty=nameWithType> [ICorRuntimeHost:: CreateDomainEx](icorruntimehost-createdomainex-method.md)メソッドを呼び出して作成する前に、ホストが型を構成できるようにするプロパティを提供します。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 |プロパティ|説明|  
 |--------------|-----------------|  
@@ -39,17 +40,19 @@ ms.locfileid: "83617062"
 |<xref:System.AppDomainSetup.ShadowCopyDirectories%2A>|シャドウコピーされるアセンブリを含むディレクトリの名前を取得または設定します。|  
 |<xref:System.AppDomainSetup.ShadowCopyFiles%2A>|シャドウコピーをオンまたはオフにするかどうかを示す文字列を取得または設定します。 有効な値は "true" または "false" です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  インターフェイスは、 `IAppDomainSetup` <xref:System.IAppDomainSetup> 型が実装するマネージインターフェイスに対応 <xref:System.AppDomainSetup> します。 <xref:System.IAppDomainSetup?displayProperty=nameWithType>プロパティの詳細については、「」を参照してください。  
   
- `IAppDomainSetup`作成前にインスタンスに追加できるアセンブリバインディング情報を表し <xref:System.AppDomain> ます。 たとえば、ホストは、プロパティを設定して、 <xref:System.AppDomainSetup.ApplicationBase%2A> マネージアセンブリの共通言語ランタイム (CLR) プローブがルートディレクトリを確立することができます。  
+ `IAppDomainSetup` 作成前にインスタンスに追加できるアセンブリバインディング情報を表し <xref:System.AppDomain> ます。 たとえば、ホストは、プロパティを設定して、 <xref:System.AppDomainSetup.ApplicationBase%2A> マネージアセンブリの共通言語ランタイム (CLR) プローブがルートディレクトリを確立することができます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

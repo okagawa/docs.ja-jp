@@ -6,14 +6,15 @@ helpviewer_keywords:
 - parameters, names
 - names [.NET Framework], parameters
 ms.assetid: ca3c956e-725a-441b-b4e3-eab5d472f41c
-ms.openlocfilehash: b62cfbd58f671745054c557041e5d60af345c8d3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9f03eda511c2ef0c9565d270c52fd72bf54692d8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820840"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698352"
 ---
 # <a name="naming-parameters"></a>パラメーターに名前を付ける
+
 読みやすくするために、パラメーター名のガイドラインに従うことが重要です。これは、ビジュアルデザインツールが Intellisense とクラス参照機能を提供する場合に、ドキュメントとデザイナーにパラメーターが表示されるためです。
 
  パラメーター名にキャメルを使用する✔️ます。
@@ -23,6 +24,7 @@ ms.locfileid: "94820840"
  パラメーターの型ではなく、パラメーターの意味に基づいて名前を使用することを✔️してください。
 
 ### <a name="naming-operator-overload-parameters"></a>演算子のオーバーロードパラメーターの名前付け
+
  `left` `right` パラメーターに意味がない場合は、二項演算子のオーバーロードパラメーター名に and を使用✔️ます。
 
  `value`パラメーターに意味がない場合は、単項演算子のオーバーロードパラメーター名には✔️を使用します。

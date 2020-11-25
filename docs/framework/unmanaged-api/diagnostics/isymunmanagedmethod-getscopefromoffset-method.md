@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d14cf210-81f8-46e1-8b19-6ddec0ba8b11
 topic_type:
 - apiref
-ms.openlocfilehash: 4eefd019280f501a6ce194e5ce84388e32cc66e1
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: cf2784ce0ac6e614e75a341660808b9fe03ada0e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615164"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699444"
 ---
 # <a name="isymunmanagedmethodgetscopefromoffset-method"></a>ISymUnmanagedMethod::GetScopeFromOffset メソッド
+
 指定されたオフセットを囲む、このメソッド内で最も外側にある構文のスコープを取得します。 これは、ローカル変数の検索を開始するために使用できます。  
   
 ## <a name="syntax"></a>構文  
@@ -34,16 +35,19 @@ HRESULT GetScopeFromOffset(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `offset`  
- から`ULONG`オフセットを格納している。  
+ から `ULONG` オフセットを格納している。  
   
  `pRetVal`  
- 入出力返された[ISymUnmanagedScope](isymunmanagedscope-interface.md)インターフェイスに設定されたポインター。  
+ 入出力返された [ISymUnmanagedScope](isymunmanagedscope-interface.md) インターフェイスに設定されたポインター。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
