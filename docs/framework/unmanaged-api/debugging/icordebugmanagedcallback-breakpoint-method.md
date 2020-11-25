@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 60b279b0-a726-46d2-8c53-76986a007ebb
 topic_type:
 - apiref
-ms.openlocfilehash: d8e62499a813419ecc30924624da553ca9f2c7b2
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: d7cf966f407572cc681f641b63791906a5c015f3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213401"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731866"
 ---
 # <a name="icordebugmanagedcallbackbreakpoint-method"></a>ICorDebugManagedCallback::Breakpoint メソッド
+
 ブレークポイントが検出されたときにデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT Breakpoint (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pAppDomain`  
  からブレークポイントを含むアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
@@ -45,7 +47,8 @@ HRESULT Breakpoint (
  `pBreakpoint`  
  からブレークポイントを表す ICorDebugBreakpoint オブジェクトへのポインター。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

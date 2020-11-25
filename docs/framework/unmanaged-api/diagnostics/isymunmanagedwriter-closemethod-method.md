@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8025e04-f0e5-40c8-849c-8cd51323420e
 topic_type:
 - apiref
-ms.openlocfilehash: fdf24bb8533da7914128f9477987c427442383bb
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: fcf250f10baf4c65cd1c8c918655e4b9f4f5cc4b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610120"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731736"
 ---
 # <a name="isymunmanagedwriterclosemethod-method"></a>ISymUnmanagedWriter::CloseMethod メソッド
+
 現在のメソッドを閉じます。 メソッドを閉じると、それ以上シンボルを定義することはできません。  
   
 ## <a name="syntax"></a>構文  
@@ -32,9 +33,11 @@ HRESULT CloseMethod();
 ```  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

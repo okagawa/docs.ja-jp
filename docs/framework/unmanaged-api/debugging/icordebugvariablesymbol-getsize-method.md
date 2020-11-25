@@ -2,14 +2,15 @@
 title: ICorDebugVariableSymbol::GetSize メソッド
 ms.date: 03/30/2017
 ms.assetid: add0cd9d-9a29-49b1-ae07-d9d3786b4ccd
-ms.openlocfilehash: d924de33c8ec49501be0ee7700b2eee8c79bb950
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 1079351e75ec9c48a9657f514ee56e2e6a4b0920
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397110"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731372"
 ---
 # <a name="icordebugvariablesymbolgetsize-method"></a>ICorDebugVariableSymbol::GetSize メソッド
+
 変数のサイズ (バイト単位) を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -21,15 +22,17 @@ HRESULT GetSize(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pcbValue`  
  変数のサイズが格納されている 32 ビットの符号なし整数へのポインター。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

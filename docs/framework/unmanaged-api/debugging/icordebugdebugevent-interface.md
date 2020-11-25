@@ -2,14 +2,15 @@
 title: ICorDebugDebugEvent インターフェイス
 ms.date: 03/30/2017
 ms.assetid: a226737a-cb99-4e97-bd94-9a37094ded41
-ms.openlocfilehash: a66012651d4b307d06a5a3bff675a248cc0ee376
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: d73857bd9d0d5dd9e5eff0c89dcc573ae0d93f0e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976357"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731879"
 ---
 # <a name="icordebugdebugevent-interface"></a>ICorDebugDebugEvent インターフェイス
+
 すべての `ICorDebug` デバッグ イベントを派生させる基本インターフェイスを定義します。  
   
 ## <a name="methods"></a>メソッド  
@@ -19,7 +20,8 @@ ms.locfileid: "82976357"
 |[GetEventKind メソッド](icordebugdebugevent-geteventkind-method.md)|この `ICorDebugDebugEvent` オブジェクトが表すイベントの種類を示します。|  
 |[GetThread メソッド](icordebugdebugevent-getthread-method.md)|イベントが発生したスレッドを取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  次のインターフェイスは、`ICorDebugDebugEvent` インターフェイスから派生したものです。  
   
 - [ICorDebugExceptionDebugEvent](icordebugexceptiondebugevent-interface.md)  
@@ -29,7 +31,8 @@ ms.locfileid: "82976357"
 > [!NOTE]
 > このインターフェイスは .NET ネイティブでのみ使用可能です。 インターフェイス ポインターを取得するために `QueryInterface` を呼び出そうとすると、.NET ネイティブ外の ICorDebug シナリオに対して `E_NOINTERFACE` が返されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

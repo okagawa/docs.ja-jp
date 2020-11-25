@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: b6ce7fe19a8d7cc00823502e322ee53a1bd0a931
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 76b52cedd1e2e64805e2ad47e582d07ca70415cc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245623"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731554"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5 の新機能
 
@@ -23,7 +23,7 @@ WCF 4.5 アプリケーションの開発および保守を容易にするため
 
 ### <a name="task-based-async-support"></a>タスク ベースの非同期のサポート
 
-既定では、サービス参照の追加によって、タスクを返す非同期サービス操作メソッドが生成されます。 この処理は、同期メソッドと非同期メソッドの両方に対して行われます。 これにより、新しいタスク ベースの非同期プログラミング モデルを使用して、サービス操作を非同期に呼び出すことができます。 生成されたプロキシ メソッドを呼び出すと、WCF によって非同期操作を表すタスク オブジェクトが構築され、そのタスクが返されます。 操作が完了すると、タスクが完了します。 非同期操作を実装する場合は、タスクベースの非同期操作として実装できます。 詳細については、「[同期および非同期操作](synchronous-and-asynchronous-operations.md)」を参照してください。
+既定では、サービス参照の追加によって、タスクを返す非同期サービス操作メソッドが生成されます。 この処理は、同期メソッドと非同期メソッドの両方に対して行われます。 これにより、新しいタスク ベースの非同期プログラミング モデルを使用して、サービス操作を非同期に呼び出すことができます。 生成されたプロキシ メソッドを呼び出すと、WCF によって非同期操作を表すタスク オブジェクトが構築され、そのタスクが返されます。 操作が完了すると、タスクが完了します。 非同期操作を実装する場合は、タスクベースの非同期操作として実装できます。 詳細については、「 [同期および非同期操作](synchronous-and-asynchronous-operations.md)」を参照してください。
 
 ### <a name="simplified-generated-configuration-files"></a>生成された構成ファイルの簡略化
 
@@ -37,7 +37,7 @@ WCF では、コントラクト優先の開発がサポートされるように�
 
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>ポータブル サブセット プロジェクトからのサービス参照の追加
 
-ポータブルサブセットプロジェクトを使用すると、.NET アセンブリプログラマは、1つのソースツリーとビルドシステムを維持しながら、複数の .NET プラットフォーム (デスクトップ、Silverlight、Windows Phone、Xbox) をサポートできます。 ポータブルサブセットプロジェクトは、任意の .NET プラットフォームで使用できるアセンブリである .NET ポータブルライブラリのみを参照します。 開発者から見れば、他の WCF クライアント アプリケーション内でサービス参照を追加するのと同じです。 詳細については、「[ポータブルサブセットプロジェクトでのサービス参照の追加](add-service-reference-in-a-portable-subset-project.md)」を参照してください。
+ポータブルサブセットプロジェクトを使用すると、.NET アセンブリプログラマは、1つのソースツリーとビルドシステムを維持しながら、複数の .NET プラットフォーム (デスクトップ、Silverlight、Windows Phone、Xbox) をサポートできます。 ポータブルサブセットプロジェクトは、任意の .NET プラットフォームで使用できるアセンブリである .NET ポータブルライブラリのみを参照します。 開発者から見れば、他の WCF クライアント アプリケーション内でサービス参照を追加するのと同じです。 詳細については、「 [ポータブルサブセットプロジェクトでのサービス参照の追加](add-service-reference-in-a-portable-subset-project.md)」を参照してください。
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET 互換性モードの既定値の変更
 
@@ -73,7 +73,7 @@ HTTPS 上のエンドポイントの公開を簡単にするため、HTTPS の�
 
 ## <a name="websocket-support"></a>WebSocket のサポート
 
-Websocket は、TCP と同様のパフォーマンス特性を持つポート 80 と 443 で真の双方向通信を実現するテクノロジです。 WebSocket トランスポート経由の通信をサポートするために 2 つの新しいバインドが追加されました。 <xref:System.ServiceModel.NetHttpBinding> と <xref:System.ServiceModel.NetHttpsBinding>。 詳細については[、「システム指定のバインディング](system-provided-bindings.md)」を参照してください。
+Websocket は、TCP と同様のパフォーマンス特性を持つポート 80 と 443 で真の双方向通信を実現するテクノロジです。 WebSocket トランスポート経由の通信をサポートするために 2 つの新しいバインドが追加されました。 <xref:System.ServiceModel.NetHttpBinding> および <xref:System.ServiceModel.NetHttpsBinding>。 詳細については [、「システム指定のバインディング](system-provided-bindings.md)」を参照してください。
 
 ## <a name="new-transport-default-values"></a>トランスポートの新しい既定値
 
@@ -93,7 +93,7 @@ Websocket は、TCP と同様のパフォーマンス特性を持つポート 80
 
 ## <a name="configuring-wcf-services-in-code"></a>コード内での WCF サービスの構成
 
-Windows Communication Foundation (WCF) を使用すると、開発者は構成ファイルまたはコードを使用してサービスを構成できます。 構成ファイルは、サービスを配置した後に構成する必要がある場合に便利です。 構成ファイルを使用する場合、IT 専門家は構成ファイルを更新するだけで、再コンパイルの必要はありません。 ただし、構成ファイルの管理は複雑で難しくなる場合があります。 構成ファイルのデバッグはサポートされていません。また、構成要素は名前で参照されるため、構成ファイルの作成時にエラーが発生しやすく、構成ファイルの作成が困難になります。 WCF では、コードでサービスを構成することもできます。 以前のバージョンの WCF (4.0 およびそれ以前) では、自己ホスト型のシナリオでは、コード内のサービスの構成は簡単でした <xref:System.ServiceModel.ServiceHost> 。クラスは、ServiceHost を呼び出す前にエンドポイントと動作を構成することを許可していました。 ただし、Web ホストのシナリオでは、<xref:System.ServiceModel.ServiceHost> クラスにアクセスできません。 Web ホスト サービスを構成するには、`System.ServiceModel.ServiceHostFactory` を作成して必要な構成を実行する <xref:System.ServiceModel.Activation.ServiceHostFactory> を作成する必要がありました。 .NET 4.5 以降、WCF では、自己ホスト型サービスと web ホステッドサービスの両方をコード内で簡単に構成できます。 詳細については、「[コードでの WCF サービスの構成](configuring-wcf-services-in-code.md)」を参照してください。
+Windows Communication Foundation (WCF) を使用すると、開発者は構成ファイルまたはコードを使用してサービスを構成できます。 構成ファイルは、サービスを配置した後に構成する必要がある場合に便利です。 構成ファイルを使用する場合、IT 専門家は構成ファイルを更新するだけで、再コンパイルの必要はありません。 ただし、構成ファイルの管理は複雑で難しくなる場合があります。 構成ファイルのデバッグはサポートされていません。また、構成要素は名前で参照されるため、構成ファイルの作成時にエラーが発生しやすく、構成ファイルの作成が困難になります。 WCF では、コードでサービスを構成することもできます。 以前のバージョンの WCF (4.0 およびそれ以前) では、自己ホスト型のシナリオでは、コード内のサービスの構成は簡単でした <xref:System.ServiceModel.ServiceHost> 。クラスは、ServiceHost を呼び出す前にエンドポイントと動作を構成することを許可していました。 ただし、Web ホストのシナリオでは、<xref:System.ServiceModel.ServiceHost> クラスにアクセスできません。 Web ホスト サービスを構成するには、`System.ServiceModel.ServiceHostFactory` を作成して必要な構成を実行する <xref:System.ServiceModel.Activation.ServiceHostFactory> を作成する必要がありました。 .NET Framework 4.5 以降では、WCF では、自己ホスト型サービスと web ホステッドサービスの両方をコード内で簡単に構成できます。 詳細については、「 [コードでの WCF サービスの構成](configuring-wcf-services-in-code.md)」を参照してください。
 
 ## <a name="channelfactory-caching"></a>ChannelFactory のキャッシュ
 
@@ -107,11 +107,11 @@ WCF クライアント アプリケーションでは、<xref:System.ServiceMode
 
 4. リソースの破棄
 
-このオーバーヘッドを最小限に抑えるために、WCF では、WCF クライアント プロキシの使用時にチャネル ファクトリをキャッシュできます。 詳細については、「[チャネルファクトリとキャッシュ](./feature-details/channel-factory-and-caching.md)」を参照してください。
+このオーバーヘッドを最小限に抑えるために、WCF では、WCF クライアント プロキシの使用時にチャネル ファクトリをキャッシュできます。 詳細については、「 [チャネルファクトリとキャッシュ](./feature-details/channel-factory-and-caching.md)」を参照してください。
 
 ## <a name="compression-and-the-binary-encoder"></a>圧縮およびバイナリ エンコーダー
 
-WCF 4.5 以降の WCF バイナリ エンコーダーでは、圧縮がサポートされます。 圧縮の種類は <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> プロパティで構成されます。 クライアントとサービスの両方で <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> のプロパティを構成する必要があります。 圧縮は、HTTP、HTTPS、および TCP の各プロトコルに対して有効です。 クライアントが圧縮を使用するよう指定しても、サービスで圧縮がサポートされていない場合は、プロトコルの不一致を示すプロトコルの例外がスローされます。 詳細については、「[メッセージエンコーダーの選択](./feature-details/choosing-a-message-encoder.md)」を参照してください。
+WCF 4.5 以降の WCF バイナリ エンコーダーでは、圧縮がサポートされます。 圧縮の種類は <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> プロパティで構成されます。 クライアントとサービスの両方で <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> のプロパティを構成する必要があります。 圧縮は、HTTP、HTTPS、および TCP の各プロトコルに対して有効です。 クライアントが圧縮を使用するよう指定しても、サービスで圧縮がサポートされていない場合は、プロトコルの不一致を示すプロトコルの例外がスローされます。 詳細については、「 [メッセージエンコーダーの選択](./feature-details/choosing-a-message-encoder.md)」を参照してください。
 
 ## <a name="udp"></a>UDP
 
@@ -123,11 +123,11 @@ HTTP トランスポートとトランスポート セキュリティを使用�
 
 ## <a name="idn-support"></a>IDN サポート
 
-国際化ドメイン名を持つ WCF サービスのためのサポートが追加されました。 詳細については[、「WCF と国際化ドメイン名](./feature-details/wcf-and-internationalized-domain-names.md)」を参照してください。
+国際化ドメイン名を持つ WCF サービスのためのサポートが追加されました。 詳細については [、「WCF と国際化ドメイン名](./feature-details/wcf-and-internationalized-domain-names.md)」を参照してください。
 
 ## <a name="httpclient"></a>HttpClient
 
-HTTP 要求の処理が容易になるように <xref:System.Net.Http.HttpClient> という新しいクラスが追加されました。 詳細については、「[アプリをソーシャルに](https://channel9.msdn.com/Events/BUILD/BUILD2011/PLAT-581T)する」および「http サービスと http[クライアントのサンプル](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)」を参照してください。
+HTTP 要求の処理が容易になるように <xref:System.Net.Http.HttpClient> という新しいクラスが追加されました。 詳細については、「 [アプリをソーシャルに](https://channel9.msdn.com/Events/BUILD/BUILD2011/PLAT-581T) する」および「http サービスと http [クライアントのサンプル](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)」を参照してください。
 
 ## <a name="configuration-intellisense"></a>構成の Intellisense
 
@@ -139,7 +139,7 @@ WCF の要素と属性には、XML エディターのツールヒントが追加
 
 ## <a name="paste-data-as-classes"></a>クラスとしてのデータの貼り付け
 
-WCF プロジェクトでは、XML で定義されたデータ型 (サービスで公開されるデータ型など) をコード ページに直接貼り付けることができます。 XML 型は CLR 型として貼り付けられます。 詳細については、「 [XML からのデータ型クラスの生成](generating-data-type-classes-from-xml.md)」を参照してください。
+WCF プロジェクトでは、XML で定義されたデータ型 (サービスで公開されるデータ型など) をコード ページに直接貼り付けることができます。 XML 型は CLR 型として貼り付けられます。 詳細については、「 [XML からのデータ型クラスの生成](generating-data-type-classes-from-xml.md) 」を参照してください。
 
 ## <a name="webservicehost-and-default-endpoints"></a>WebServiceHost と既定のエンドポイント
 

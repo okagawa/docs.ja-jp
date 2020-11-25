@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7e42a928-5068-4ba6-b8c3-806551a01fa8
 topic_type:
 - apiref
-ms.openlocfilehash: 57508a2df3a49c39d25347f2a3038442c37278da
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 707e182e62f4a7b7b813e6b288c6825b0d3d2eab
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616763"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731752"
 ---
 # <a name="coinitializeee-function"></a>CoInitializeEE 関数
-共通言語ランタイムの実行エンジンが確実にプロセスに読み込まれるようにします。 この関数は .NET Framework 4 では非推奨とされます。 代わりに[ICLRRuntimeHost:: Start](iclrruntimehost-start-method.md)メソッドを使用してください。  
+
+共通言語ランタイムの実行エンジンが確実にプロセスに読み込まれるようにします。 この関数は .NET Framework 4 では非推奨とされます。 代わりに [ICLRRuntimeHost:: Start](iclrruntimehost-start-method.md) メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,10 +35,12 @@ HRESULT CoInitializeEE (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `fFlags`  
- から[Coinitiee](../metadata/coinitiee-enumeration.md)列挙定数の1つ。  
+ から [Coinitiee](../metadata/coinitiee-enumeration.md) 列挙定数の1つ。  
   
 ## <a name="return-value"></a>戻り値  
+
  このメソッドは、Winerror.h で定義されている標準 COM エラーコードと、次の表の値を返します。  
   
 |リターン コード|説明|  
@@ -46,15 +49,17 @@ HRESULT CoInitializeEE (
 |S_FALSE|実行エンジンは既に読み込まれています。|  
 |E_FAIL|実行エンジンを読み込めませんでした。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  このメソッドは、まだ読み込まれていない場合、実行エンジンを読み込みます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

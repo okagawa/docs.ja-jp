@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0500854e-2121-43d9-a028-64312da35258
 topic_type:
 - apiref
-ms.openlocfilehash: 33a68d11a8d17e46533b4f83bbf87aafe171e612
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 0c38269ea4d730d8f3f9ba5d2c5d8f0edf6d7d45
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212400"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731840"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>ICorDebugManagedCallback::ControlCTrap メソッド
+
 デバッグ対象のプロセスで CTRL + C がトラップされることをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,6 +35,7 @@ HRESULT ControlCTrap (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pProcess`  
  からCTRL + C キーがトラップされるプロセスを表す、のオブジェクトへのポインター。  
   
@@ -44,10 +46,12 @@ HRESULT ControlCTrap (
 |S_OK|デバッガーは CTRL + C トラップを処理します。|  
 |S_FALSE|デバッガーは CTRL + C トラップを処理しません。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  プロセス内のすべてのアプリケーションドメインがこのコールバックに対して停止されています。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

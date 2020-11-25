@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9b9079fb-579e-4141-b3f0-791072dd40dc
 topic_type:
 - apiref
-ms.openlocfilehash: 1263467fc5db92d4dd21c4f09a98af309e2c4d55
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9d077d5c5a414568b5643cad0171e101d7bb06f9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504421"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731710"
 ---
 # <a name="coinitializecor-function"></a>CoInitializeCor 関数
+
 `CoInitializeCor` は互換性のために残されています。  
   
 ## <a name="syntax"></a>構文  
@@ -34,9 +35,11 @@ STDAPI CoInitializeCor (
 ```  
   
 ## <a name="remarks"></a>解説  
- 共通言語ランタイムを初期化するには、 [Corbindtoruntimeex](corbindtoruntimeex-function.md)または[Corbindtoの entruntime](corbindtocurrentruntime-function.md)を使用します。  
+
+ 共通言語ランタイムを初期化するには、 [Corbindtoruntimeex](corbindtoruntimeex-function.md) または [Corbindtoの entruntime](corbindtocurrentruntime-function.md)を使用します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** Cor  
   
 ## <a name="see-also"></a>関連項目
