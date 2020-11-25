@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c28d1983-83f7-46e2-990f-dbb9dc07c818
 topic_type:
 - apiref
-ms.openlocfilehash: 095872f8d4bd4f7d3351b8b3e3f8f8445b615cd8
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 75ad8670008242008aa344835143ff9b2add0a6c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501539"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719594"
 ---
 # <a name="ihostiocompletionmanager-interface"></a>IHostIoCompletionManager インターフェイス
+
 共通言語ランタイム (CLR) がホストによって提供される i/o 完了ポートと対話できるようにするメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
@@ -36,19 +37,21 @@ ms.locfileid: "84501539"
 |[GetMaxThreads メソッド](ihostiocompletionmanager-getmaxthreads-method.md)|ホストがサービス i/o 要求に割り当てることができるスレッドの最大数を取得します。|  
 |[GetMinThreads メソッド](ihostiocompletionmanager-getminthreads-method.md)|ホストが i/o 要求を処理するために提供するスレッドの最小数を取得します。|  
 |[InitializeHostOverlapped メソッド](ihostiocompletionmanager-initializehostoverlapped-method.md)|I/o 要求に関するカスタムデータを初期化する機会をホストに提供します。|  
-|[SetCLRIoCompletionManager メソッド](ihostiocompletionmanager-setclriocompletionmanager-method.md)|CLR によって実装されている[Iclrio提供マネージャー](iclriocompletionmanager-interface.md)インスタンスへのインターフェイスポインターをホストに提供します。|  
+|[SetCLRIoCompletionManager メソッド](ihostiocompletionmanager-setclriocompletionmanager-method.md)|CLR によって実装されている [Iclrio提供マネージャー](iclriocompletionmanager-interface.md) インスタンスへのインターフェイスポインターをホストに提供します。|  
 |[SetMaxThreads メソッド](ihostiocompletionmanager-setmaxthreads-method.md)|ホストが大量の i/o 要求を処理するスレッドの最大数を設定します。|  
 |[SetMinThreads メソッド](ihostiocompletionmanager-setminthreads-method.md)|ホストが i/o 完了に割り当てる必要があるスレッドの最小数を設定します。|  
   
-## <a name="remarks"></a>解説  
- `IHostIoCompletionManager`CLR によって実装されるインターフェイスに対応し `ICLRIoCompletionManager` ます。 CLR は、のメソッドを呼び出して、 `IHostIoCompletionManager` ホストが提供するポートにハンドルをバインドします。また、ホストはのメソッドを呼び出して、i/o `ICLRIoCompletionManager` 要求の完了を報告します。  
+## <a name="remarks"></a>注釈  
+
+ `IHostIoCompletionManager` CLR によって実装されるインターフェイスに対応し `ICLRIoCompletionManager` ます。 CLR は、のメソッドを呼び出して、 `IHostIoCompletionManager` ホストが提供するポートにハンドルをバインドします。また、ホストはのメソッドを呼び出して、i/o `ICLRIoCompletionManager` 要求の完了を報告します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

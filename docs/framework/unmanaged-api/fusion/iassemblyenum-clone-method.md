@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 0014bb66-590c-486c-9ade-f2133905cd99
 topic_type:
 - apiref
-ms.openlocfilehash: 34b5f3bd5908d3833a2223b078f8d796234641be
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e1eef43858e4f38888f9f31e3076b092fbdd5633
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134451"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719906"
 ---
 # <a name="iassemblyenumclone-method"></a>IAssemblyEnum::Clone メソッド
-この[Iassemblyenum](iassemblyenum-interface.md)オブジェクトの簡易コピーを作成します。  
+
+この [Iassemblyenum](iassemblyenum-interface.md) オブジェクトの簡易コピーを作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,15 +35,17 @@ HRESULT Clone (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ppEnum`  
  入出力コピーへのポインター。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Fusion. h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

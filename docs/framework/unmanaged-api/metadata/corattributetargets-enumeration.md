@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-ms.openlocfilehash: f1836f26af99f91ab1765107573f6b067edd5e95
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: fbe721bad56ec2be434039f00e741ad9a177815f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007924"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718970"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets 列挙型
+
 属性を適用できるアプリケーション要素を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -79,12 +80,14 @@ typedef enum CorAttributeTargets
 |`catAll`|任意のアプリケーション要素に属性を適用できます。|  
 |`catClassMembers`|属性は、クラスのメンバーに適用できます。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
+
  `CorAttributeTargets`列挙値をビットごとの or 演算と組み合わせて、適切な組み合わせを取得できます。  
   
  は、 `CorAttributeTargets` マネージ列挙に似て <xref:System.AttributeTargets?displayProperty=nameWithType> います。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorHdr. h  

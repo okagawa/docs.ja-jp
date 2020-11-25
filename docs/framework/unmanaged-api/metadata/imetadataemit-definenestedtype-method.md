@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1e994de6-4628-459c-b967-b34be1e9fe4f
 topic_type:
 - apiref
-ms.openlocfilehash: 2b24c2ca6907dfdb63ad934ec30557c246db174c
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 99dc141cca0f911c8dd65645f6c22d950cc678d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004356"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719542"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType メソッド
+
 型定義のメタデータシグネチャを作成し、 `mdTypeDef` その型のトークンを返します。また、定義された型がパラメーターによって参照される型のメンバーであることを指定し `tdEncloser` ます。  
   
 ## <a name="syntax"></a>構文  
@@ -39,11 +40,12 @@ HRESULT DefineNestedType (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `szTypeDef`  
  からUnicode での型の名前。  
   
  `dwTypeDefFlags`  
- [入力] `TypeDef`アトリビュート. これは、値のビットマスクです `CorTypeAttr` 。  
+ [入力] `TypeDef` アトリビュート. これは、値のビットマスクです `CorTypeAttr` 。  
   
  `tkExtends`  
  から基本クラスのトークン。 これは、 `mdTypeDef` またはトークンのいずれか `mdTypeRef` です。  
@@ -55,14 +57,15 @@ HRESULT DefineNestedType (
  から外側の型のトークン。 配列の最後の要素は、である必要があり `mdTokenNil` ます。  
   
  `ptd`  
- 入出力`mdTypeDef`割り当てられたトークン。  
+ 入出力 `mdTypeDef` 割り当てられたトークン。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

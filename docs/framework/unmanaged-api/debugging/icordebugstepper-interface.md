@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ed8364eb-f01b-46f6-b5e3-5dda9cae2dfe
 topic_type:
 - apiref
-ms.openlocfilehash: 622fdfa37c93e406950e73941775828ae4b112fa
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 8b5bbb65034e5b715532397c9ecc650da9aee912
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379421"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718294"
 ---
 # <a name="icordebugstepper-interface"></a>ICorDebugStepper インターフェイス
+
 デバッガーが実行するコード実行内のステップを表します。コマンドの発行から完了までの間は識別子として機能します。これを使用するとステップをキャンセルできます。  
   
 ## <a name="methods"></a>メソッド  
@@ -37,7 +38,8 @@ ms.locfileid: "83379421"
 |[StepOut メソッド](icordebugstepper-stepout-method.md)|これにより、この `ICorDebugStepper` が格納しているスレッドを1ステップずつ実行し、現在のフレームが呼び出し元のフレームに制御を返すときに完了します。|  
 |[StepRange メソッド](icordebugstepper-steprange-method.md)|これにより、このが `ICorDebugStepper` 格納しているスレッドを1ステップずつ実行し、指定した範囲の最後のコードに到達したときにを返します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  この `ICorDebugStepper` インターフェイスは、次の目的で機能します。  
   
 - 発行されたステップコマンドとそのコマンドの完了の間の識別子として機能します。  
@@ -53,7 +55,8 @@ ms.locfileid: "83379421"
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

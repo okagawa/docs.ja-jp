@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: dc2b3281-3820-487e-930d-350b66dc6417
 topic_type:
 - apiref
-ms.openlocfilehash: e22b390271a7813dd1d34aecf5f8a62d7eb81005
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 554f47cc4bd948e2b6106c1d71a2a4b7968d43f1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007439"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718866"
 ---
 # <a name="coreventattr-enumeration"></a>CorEventAttr 列挙型
+
 イベントのメタデータを記述する値が格納されます。  
   
 ## <a name="syntax"></a>構文  
@@ -45,7 +46,8 @@ typedef enum CorEventAttr {
 |`evReservedMask`|共通言語ランタイムによる内部使用のために予約されています。|  
 |`evRTSpecialName`|共通言語ランタイムがイベント名のエンコーディングを確認する必要があることを指定します。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorHdr. h  

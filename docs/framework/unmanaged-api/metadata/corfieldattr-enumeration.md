@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6ae2c4be-212c-4e74-9288-40a11dc26522
 topic_type:
 - apiref
-ms.openlocfilehash: dea69e18fc517eddddc5b99950a6f3b16ee3e426
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 4e40f684cc1578672cb8ff474972ce9cdc39efb2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007404"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718827"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr 列挙型
+
 フィールドについてのメタデータを記述する値が格納されます。  
   
 ## <a name="syntax"></a>構文  
@@ -80,7 +81,8 @@ typedef enum CorFieldAttr {
 |`fdHasDefault`|フィールドが既定値を持つことを指定します。|  
 |`fdHasFieldRVA`|フィールドが相対仮想アドレスを持つことを指定します。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorHdr. h  

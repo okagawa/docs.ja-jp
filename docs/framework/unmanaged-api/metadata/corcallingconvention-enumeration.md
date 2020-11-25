@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 69156fbf-7219-43bf-b4b8-b13f1a2fcb86
 topic_type:
 - apiref
-ms.openlocfilehash: 310319e8fefe80017c58706e2beaee5eb1e78422
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c9b20500a4a9e4649a938e00e3b059d1395da1d3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007908"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718931"
 ---
 # <a name="corcallingconvention-enumeration"></a>CorCallingConvention 列挙型
+
 マネージド コードで作成される呼び出し規則のタイプを記述する値が格納されます。  
   
 ## <a name="syntax"></a>構文  
@@ -66,7 +67,8 @@ typedef enum CorCallingConvention
 |`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|`this`パラメーターがシグネチャに明示的に記述されていることを示します。|  
 |`IMAGE_CEE_CS_CALLCONV_GENERIC`|型引数の数が明示的に指定されたジェネリックメソッドシグネチャを示します。 これは、通常のパラメーターカウントの前になります。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorHdr. h  

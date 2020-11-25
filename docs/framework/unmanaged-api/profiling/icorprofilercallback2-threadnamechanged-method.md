@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8bbd76d-a9ff-44f2-87a6-be052819da36
 topic_type:
 - apiref
-ms.openlocfilehash: 3eb108ed20d0fd1287cb82eb4d552206aeae15d4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8398febd17c7e77f2ad281ebeafc138fca4a47d5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499728"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718034"
 ---
 # <a name="icorprofilercallback2threadnamechanged-method"></a>ICorProfilerCallback2::ThreadNameChanged メソッド
+
 スレッドの名前が変更されたことをコードプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,6 +36,7 @@ HRESULT ThreadNameChanged(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `threadId`  
  からスレッドの ID。  
   
@@ -45,6 +47,7 @@ HRESULT ThreadNameChanged(
  からスレッドの新しい名前。 名前が null で終了していません。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

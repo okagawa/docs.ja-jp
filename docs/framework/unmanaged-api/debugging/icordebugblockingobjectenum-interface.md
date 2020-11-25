@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 208e5c2d-3f3f-404e-8b3c-7cccc14ddb16
 topic_type:
 - apiref
-ms.openlocfilehash: 8be4332da77c3fbf4229a3fbeb9ba835a7a13eee
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 221acf9bea714728a81b9f15c8165c1f9eba16a8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894790"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719204"
 ---
 # <a name="icordebugblockingobjectenum-interface"></a>ICorDebugBlockingObjectEnum インターフェイス
+
 [CorDebugBlockingObject](cordebugblockingobject-structure.md)構造体のリストの列挙子を提供します。 このインターフェイスは、ICorDebugEnum インターフェイスのサブクラスです。  
   
 ## <a name="methods"></a>メソッド  
@@ -30,13 +31,15 @@ ms.locfileid: "82894790"
 |------------|-----------------|  
 |[Next メソッド](icordebugblockingobjectenum-next-method.md)|[CorDebugBlockingObject](cordebugblockingobject-structure.md)構造体のリストを使用して列挙します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  各 `CorDebugBlockingObject` 構造体は、スレッドをブロックしているオブジェクトを表します。  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

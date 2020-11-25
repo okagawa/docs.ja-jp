@@ -6,19 +6,21 @@ helpviewer_keywords:
 - hosting interfaces [.NET Framework], version 2.0
 - .NET Framework 2.0, hosting interfaces
 ms.assetid: 703b8381-43db-4a4d-9faa-cca39302d922
-ms.openlocfilehash: e6913e18a4ff6e616f357a4ef43fb8b892264943
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 77f2ba64d9bdbe9793d56e88dae46fd506119ab8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616841"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719048"
 ---
 # <a name="clr-hosting-interfaces"></a>CLR ホスト インターフェイス
+
 ここでは、アンマネージホストが共通言語ランタイム (CLR) をアプリケーションに統合するために使用できるインターフェイスについて説明します。 この情報は .NET Framework バージョン2.0 以降のバージョンに関連します。 これらのインターフェイスを使用すると、ホストは、バージョン1.0 および1.1 で可能な限り多くのランタイムの側面を制御でき、CLR とホストの実行モデルとの間の統合が大幅に強化されます。  
   
  .NET Framework バージョン1.0 および1.1 では、ホストモデルによって、CLR をプロセスに読み込み、特定の設定を構成し、イベント通知を受信するために、管理されていないホストが有効になりました。 ただし、一般に、ホストと CLR は、そのプロセスで独立して実行されていました。 .NET Framework バージョン2.0 以降のバージョンでは、新しい階層の抽象化により、ホストは、Win32 アセンブリの型によって現在提供されている多くのリソースを提供し、ホストが構成できる一連の機能を拡張できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [IActionOnCLREvent インターフェイス](iactiononclrevent-interface.md)  
  登録されているイベントに対してコールバックを実行するメソッドを提供します。  
   
@@ -104,7 +106,7 @@ ms.locfileid: "83616841"
  ガベージコレクションシステムに関する情報を取得し、ガベージコレクションのいくつかの側面を制御するためのメソッドを提供します。  
   
  [IGCHost2 インターフェイス](igchost2-interface.md)  
- ホストがガベージコレクションセグメントのサイズとガベージコレクションシステムのジェネレーション0の最大サイズをより大きい値に設定できるようにする[SetGCStartupLimitsEx](igchost2-setgcstartuplimitsex-method.md)メソッドを提供し `DWORD` ます。  
+ ホストがガベージコレクションセグメントのサイズとガベージコレクションシステムのジェネレーション0の最大サイズをより大きい値に設定できるようにする [SetGCStartupLimitsEx](igchost2-setgcstartuplimitsex-method.md) メソッドを提供し `DWORD` ます。  
   
  [IGCHostControl インターフェイス](igchostcontrol-interface.md)  
  仮想メモリの制限を変更するように、ガベージコレクターがホストに要求できるようにするメソッドを提供します。  
@@ -185,6 +187,7 @@ ms.locfileid: "83616841"
  ポータブル実行可能 (PE) イメージを検証し、検証エラーを報告するためのメソッドを提供します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [非推奨の CLR のホスト インターフェイスおよびコクラス](deprecated-clr-hosting-interfaces-and-coclasses.md)  
  .NET Framework バージョン1.0 および1.1 で提供されるホストインターフェイスについて説明するトピックが含まれています。  
   

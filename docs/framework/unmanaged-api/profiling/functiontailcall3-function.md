@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1e48243f-5de6-4bd6-a1d0-e1d248bca4b8
 topic_type:
 - apiref
-ms.openlocfilehash: 55955cd47bd32fb4294b0b8e852dd692702bd74f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: dfe1a530ea009300e7cfbf002053d2e2b6034845
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500534"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719282"
 ---
 # <a name="functiontailcall3-function"></a>FunctionTailcall3 関数
+
 現在実行中の関数が別の関数の末尾呼び出しを実行しようとしていることをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,7 +37,8 @@ void __stdcall FunctionTailcall3 (FunctionOrRemappedID functionOrRemappedID);
 
   \[in] 末尾呼び出しを実行しようとしている現在実行中の関数の識別子。
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  `FunctionTailcall3`コールバック関数は、関数が呼び出されていることをプロファイラーに通知します。 [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3 メソッド](icorprofilerinfo3-setenterleavefunctionhooks3-method.md)を使用して、この関数の実装を登録します。  
   
  `FunctionTailcall3`関数はコールバックであるため、実装する必要があります。 実装では、ストレージクラス属性を使用する必要があり `__declspec(naked)` ます。  
@@ -52,6 +54,7 @@ void __stdcall FunctionTailcall3 (FunctionOrRemappedID functionOrRemappedID);
  関数は、 `FunctionTailcall3` マネージコードを呼び出さないようにするか、マネージメモリの割り当てを任意の方法で発生させることはできません。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Corprof.idl  

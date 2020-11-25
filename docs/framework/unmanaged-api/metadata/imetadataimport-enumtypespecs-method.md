@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 75331c7b-988b-436c-9eb9-a270d37b4f06
 topic_type:
 - apiref
-ms.openlocfilehash: 94b4c3935c949c0c4008e41244713b6bfa4dba84
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 38c9f8df12b0fc83a236d2cb7c32d1198be7096d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503719"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719815"
 ---
 # <a name="imetadataimportenumtypespecs-method"></a>IMetaDataImport::EnumTypeSpecs メソッド
+
 現在のメタデータ スコープに定義されている TypeSpec トークンを列挙します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,6 +38,7 @@ HRESULT EnumTypeSpecs (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `phEnum`  
  [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
   
@@ -53,18 +55,20 @@ HRESULT EnumTypeSpecs (
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeSpecs`正常に返されました。|  
+|`S_OK`|`EnumTypeSpecs` 正常に返されました。|  
 |`S_FALSE`|列挙するトークンがありません。 この場合、 `pcTypeSpecs` は0になります。|  
   
-## <a name="remarks"></a>解説  
- TypeSpec トークンは、 [IMetaDataEmit:: GetTokenFromTypeSpec](imetadataemit-gettokenfromtypespec-method.md)メソッドによって作成されます。  
+## <a name="remarks"></a>注釈  
+
+ TypeSpec トークンは、 [IMetaDataEmit:: GetTokenFromTypeSpec](imetadataemit-gettokenfromtypespec-method.md) メソッドによって作成されます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

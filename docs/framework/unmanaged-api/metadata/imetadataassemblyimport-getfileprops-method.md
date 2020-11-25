@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c5e6216f-ae3d-4697-9688-66b69c1251ec
 topic_type:
 - apiref
-ms.openlocfilehash: 78c192f10f629a0c1316ae7af7fc774819f4de8f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 0b9ff2716cc0bc32c81fe6fcdd4e6c367d4d835f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007482"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718177"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps メソッド
+
 指定したメタデータシグネチャを持つファイルのプロパティを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -40,8 +41,9 @@ HRESULT GetFileProps (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `mdf`  
- から`mdFile`プロパティを取得する対象のファイルを表すメタデータトークン。  
+ から `mdFile` プロパティを取得する対象のファイルを表すメタデータトークン。  
   
  `szName`  
  入出力ファイルの簡易名。  
@@ -59,14 +61,15 @@ HRESULT GetFileProps (
  入出力返されたハッシュ値のワイド文字の数。  
   
  `pdwFileFlags`  
- 入出力ファイルに適用されるメタデータを記述するフラグへのポインター。 Flags 値は、1つまたは複数の[Corfileflags](corfileflags-enumeration.md)値を組み合わせたものです。  
+ 入出力ファイルに適用されるメタデータを記述するフラグへのポインター。 Flags 値は、1つまたは複数の [Corfileflags](corfileflags-enumeration.md) 値を組み合わせたものです。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **プラットフォーム:** 「 [システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

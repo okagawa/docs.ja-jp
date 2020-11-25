@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d4755569-85b8-4ff4-bf50-0e608e76429f
 topic_type:
 - apiref
-ms.openlocfilehash: ce3ca4745727a1738fdc1a526480d70ffc55ccf8
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a17c46d5ef08963bb0d7fc280ba8b90531e41c5b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209904"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719633"
 ---
 # <a name="icordebuginternalframe2-interface"></a>ICorDebugInternalFrame2 インターフェイス
+
 内部フレームに関する情報を提供します。この情報には、スタック アドレス、および ICorDebugFrame オブジェクトを基準にした位置などが含まれます。  
   
 ## <a name="methods"></a>メソッド  
@@ -31,13 +32,15 @@ ms.locfileid: "83209904"
 |[GetFrameAddress メソッド](icordebuginternalframe2-getframeaddress-method.md)|内部フレームのスタックアドレスを返します。|  
 |[IsCloserToLeaf メソッド](icordebuginternalframe2-isclosertoleaf-method.md)|内部フレームが、指定されたのは、指定されたとしての `this` オブジェクトよりもリーフの近くにあるかどうかを確認します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  このインターフェイスは、によって、、の各フレームインターフェイスを拡張します。  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

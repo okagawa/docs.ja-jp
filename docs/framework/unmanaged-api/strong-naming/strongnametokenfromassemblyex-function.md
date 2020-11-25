@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 67a8a9f2-dee3-44b2-a1c0-f307a3bdf90f
 topic_type:
 - apiref
-ms.openlocfilehash: 8b7866b92be3195b0a767a823a0d7fb1c0aa4918
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 566bba09f6bfac2f7616dc5caf32ef431f2e1e67
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104248"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719802"
 ---
 # <a name="strongnametokenfromassemblyex-function"></a>StrongNameTokenFromAssemblyEx 関数
+
 指定したアセンブリファイルから厳密な名前トークンを作成し、トークンが表す公開キーを返します。  
   
- この関数は非推奨とされます。 代わりに[ICLRStrongName:: StrongNameTokenFromAssemblyEx](../hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)メソッドを使用してください。  
+ この関数は非推奨とされます。 代わりに [ICLRStrongName:: StrongNameTokenFromAssemblyEx](../hosting/iclrstrongname-strongnametokenfromassemblyex-method.md) メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,6 +40,7 @@ BOOLEAN StrongNameTokenFromAssemblyEx (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `wszFilePath`  
  からアセンブリのポータブル実行可能 (PE) ファイルへのパス。  
   
@@ -55,23 +57,26 @@ BOOLEAN StrongNameTokenFromAssemblyEx (
  入出力公開キーのサイズ (バイト単位)。  
   
 ## <a name="return-value"></a>戻り値  
- 正常に完了した場合は `true`。それ以外の場合は、`false`ます。  
+
+ `true` 正常に完了した場合は。それ以外の場合は `false` 。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  厳密な名前トークンは、公開キーの短縮形です。 トークンは、アセンブリの署名に使用される公開キーから作成された64ビットのハッシュです。 トークンはアセンブリの厳密な名前の一部であり、アセンブリメタデータから読み取ることができます。  
   
- キーを取得してトークンを作成したら、 [StrongNameFreeBuffer](strongnamefreebuffer-function.md)関数を呼び出して、割り当てられたメモリを解放する必要があります。  
+ キーを取得してトークンを作成したら、 [StrongNameFreeBuffer](strongnamefreebuffer-function.md) 関数を呼び出して、割り当てられたメモリを解放する必要があります。  
   
- `StrongNameTokenFromAssemblyEx` 関数が正常に完了しない場合は、 [StrongNameErrorInfo](strongnameerrorinfo-function.md)関数を呼び出して、最後に生成されたエラーを取得します。  
+ 関数が `StrongNameTokenFromAssemblyEx` 正常に完了しない場合は、 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 関数を呼び出して、最後に生成されたエラーを取得します。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** StrongName  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

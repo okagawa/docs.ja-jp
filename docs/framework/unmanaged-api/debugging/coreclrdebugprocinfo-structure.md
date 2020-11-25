@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: 4ddc37da-5c94-4beb-b61c-b54071c0e749
 topic_type:
 - apiref
-ms.openlocfilehash: 40dbfc60f8bde1198fd56a4a8aeed1dd6879d1ae
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 5996393fd1a0504f9c3d3f9f07aa0e3d886a0787
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795626"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719698"
 ---
 # <a name="coreclrdebugprocinfo-structure"></a>CoreClrDebugProcInfo 構造体
+
 リモート コンピューターで実行されているプロセスを表します。  
   
 ## <a name="syntax"></a>構文  
@@ -44,11 +45,12 @@ struct  CoreClrDebugProcInfo {
 |`m_dwInternalID`|対象のコンピューターで実行されているリモート デバッグ プロキシによって割り当てられたプロセス識別子。 この識別子は OS 識別子よりも少ない頻度で再利用されます。|  
 |`m_wszName`|プロセスのコマンド ライン。 このメンバーは切り詰められる場合があります。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Coreclrremoteデバッグインターフェイス .h  
   
- **Library:** mscordbi_macx86 .dll  
+ **ライブラリ:** mscordbi_macx86.dll  
   
  **.NET Framework のバージョン:** 3.5 SP1

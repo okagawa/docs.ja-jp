@@ -1,6 +1,6 @@
 ---
-title: メソッド列挙関数 (アンマネージ API リファレンス)
-description: 関数は、オブジェクトのメソッドの列挙体を開始します。
+title: BeginMethodEnumeration 関数 (アンマネージ API リファレンス)
+description: BeginMethodEnumeration 関数は、オブジェクトのメソッドの列挙を開始します。
 ms.date: 11/06/2017
 api_name:
 - BeginMethodEnumeration
@@ -14,15 +14,16 @@ helpviewer_keywords:
 - BeginMethodEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 876f5810fffab7fa98cd4d46715e13569ab95f6c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a72d61a572a0582ed8c03e56a8a9933c5f2775f0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175045"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719763"
 ---
 # <a name="beginmethodenumeration-function"></a>BeginMethodEnumeration 関数
-オブジェクトに対して使用できるメソッドの列挙を開始します。  
+
+オブジェクトで使用できるメソッドの列挙を開始します。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -39,40 +40,41 @@ HRESULT BeginMethodEnumeration (
 ## <a name="parameters"></a>パラメーター
 
 `vFunc`  
-[in]このパラメーターは使用されません。
+からこのパラメーターは使用されていません。
 
 `ptr`  
-[in][インスタンス](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)へのポインター。
+から [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) インスタンスへのポインター。
 
 `lEnumFlags`  
-[in]すべてのメソッドに対してゼロ (0) を指定するか、列挙のスコープを指定するフラグを指定します。 次のフラグは *、WbemCli.h*ヘッダー ファイルで定義されているか、コード内で定数として定義できます。
+からすべてのメソッドにゼロ (0)、または列挙体のスコープを指定するフラグ。 次のフラグは、 *WbemCli* ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-常時  |Value  |説明  |
+定数  |値  |説明  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 列挙型を、クラス自体で定義されているメソッドに制限します。 |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 列挙型を、基本クラスから継承されるプロパティに制限します。 |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 列挙体は、クラス自体で定義されているメソッドに限定します。 |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 列挙型を基底クラスから継承されたプロパティに限定します。 |
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値は *、WbemCli.h*ヘッダー ファイルで定義されているか、コード内で定数として定義できます。
+この関数によって返される次の値は、 *WbemCli* ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|常時  |Value  |説明  |
+|定数  |値  |説明  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags`はゼロ以外であり、指定されたフラグの 1 つではありません。 |
-|`WBEM_S_NO_ERROR` | 0 | 関数呼び出しが正常に行われました。  |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags` が0以外で、が指定されたフラグの1つではありません。 |
+|`WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-この関数は、メソッドの呼び出し[をラップします](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-beginmethodenumeration)。
+この関数は、 [IWbemClassObject:: BeginMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-beginmethodenumeration) メソッドの呼び出しをラップします。
 
-このメソッド呼び出しは、現在のオブジェクトがクラス定義の場合にのみサポートされます。 メソッド操作は、インスタンスを指す[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)ポインターからは使用できません。 メソッドが列挙される順序は、指定されたインスタンスの[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)に対して不変であることが保証されます。
+このメソッド呼び出しは、現在のオブジェクトがクラス定義の場合にのみサポートされます。 インスタンスを指す [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ポインターからは、メソッド操作を使用できません。 メソッドを列挙する順序は、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)の特定のインスタンスに対して不変であることが保証されます。
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** WMINet_Utils.idl  
+ **ヘッダー:** WMINet_Utils .idl  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 

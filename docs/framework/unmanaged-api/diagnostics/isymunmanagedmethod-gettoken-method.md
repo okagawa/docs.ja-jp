@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4effbe95-c36e-4a45-8b2a-ee21339415fb
 topic_type:
 - apiref
-ms.openlocfilehash: 0803f0b55f19b779f5b6608a9f8200d2b085b504
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 76134a2447cbc40b5c97304540d9907648bc89e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615158"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719919"
 ---
 # <a name="isymunmanagedmethodgettoken-method"></a>ISymUnmanagedMethod::GetToken メソッド
+
 このメソッドのメタデータ トークンを返します。  
   
 ## <a name="syntax"></a>構文  
@@ -33,13 +34,16 @@ HRESULT GetToken(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pToken`  
- 入出力`mdMethodDef`メタデータを格納するために必要なバッファーのサイズ (文字数) を受け取るへのポインター。  
+ 入出力 `mdMethodDef` メタデータを格納するために必要なバッファーのサイズ (文字数) を受け取るへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

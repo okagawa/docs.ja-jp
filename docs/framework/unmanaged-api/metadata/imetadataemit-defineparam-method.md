@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d86a3d14-4796-4909-9591-dfafe3de5ce4
 topic_type:
 - apiref
-ms.openlocfilehash: a58e03875ec021b41479085fa9e27a4321ae965e
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 5b3f89bb14be0d7128682f8702548545b1e50928
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004358"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719529"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam メソッド
+
 指定したトークンによって参照されるメソッドに対して、指定したシグネチャを持つパラメーター定義を作成し、そのパラメーター定義のトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -41,6 +42,7 @@ HRESULT DefineParam (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `md`  
  からパラメーターが定義されているメソッドのトークン。  
   
@@ -63,17 +65,19 @@ HRESULT DefineParam (
  からのサイズ (Unicode 文字) `pValue` 。  
   
  `ppd`  
- 入出力`mdParamDef`割り当てられたトークン。  
+ 入出力 `mdParamDef` 割り当てられたトークン。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
+
  パラメーターの場合、のシーケンス値は `ulParamSeq` 1 から始まります。 戻り値のシーケンス番号は0です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

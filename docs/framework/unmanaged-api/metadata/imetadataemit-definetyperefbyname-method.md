@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c30a4ce3-2d3e-411a-98df-e62ac4a5dd50
 topic_type:
 - apiref
-ms.openlocfilehash: ae30140e69926be32570960a32524a74b850bda4
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: b83c868f1a804d4e6f32adffc190ae086aa5e0a0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009354"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719334"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName メソッド
+
 現在のスコープ外にある、指定されたスコープで定義されている型のメタデータトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT DefineTypeRefByName (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `tkResolutionScope`  
  から解決スコープを指定するトークン。 有効なトークンの種類は次のとおりです。  
   
@@ -53,14 +55,15 @@ HRESULT DefineTypeRefByName (
  からUnicode での対象の型の名前。  
   
  `ptr`  
- 入出力`mdTypeRef`型に割り当てられているトークンへのポインター。  
+ 入出力 `mdTypeRef` 型に割り当てられているトークンへのポインター。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

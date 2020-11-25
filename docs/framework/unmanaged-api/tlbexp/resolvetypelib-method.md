@@ -13,14 +13,15 @@ helpviewer_keywords:
 ms.assetid: 95d2aa0d-8eeb-4a9f-a216-5249f7e2c167
 topic_type:
 - apiref
-ms.openlocfilehash: 65bbae614c8872ab5d78b3855b56ceaf2aad50da
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 84eea78b9c2e73e24238a5ecbc9442f3d63dbd4e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558187"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719789"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib メソッド
+
 完全修飾パスを返すことにより、タイプライブラリの簡易名を解決します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,6 +38,7 @@ HRESULT ResolveTypeLib(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `bstrSimpleName`  
  からタイプライブラリの簡易名を格納している [BSTR](/previous-versions/windows/desktop/automat/bstr) 。  
   
@@ -47,10 +49,10 @@ HRESULT ResolveTypeLib(
  からタイプライブラリのローカライズ ID。  
   
  `wMajorVersion`  
- からタイプライブラリのメジャーバージョン番号。 たとえば、バージョン *x.y*の場合、メジャーバージョン番号は *x*になります。  
+ からタイプライブラリのメジャーバージョン番号。 たとえば、バージョン *x.y* の場合、メジャーバージョン番号は *x* になります。  
   
  `wMinorVersion`  
- からタイプライブラリのマイナーバージョン番号。 たとえば、バージョン *x.y*の場合、マイナーバージョン番号は *y*になります。  
+ からタイプライブラリのマイナーバージョン番号。 たとえば、バージョン *x.y* の場合、マイナーバージョン番号は *y* になります。  
   
  `syskind`  
  からオペレーティング環境を識別する [SYSKIND](/windows/win32/api/oaidl/ne-oaidl-syskind) フラグ。 共通値は SYS_WIN32 と SYS_WIN64 です。  
@@ -58,12 +60,14 @@ HRESULT ResolveTypeLib(
  `pbstrResolvedTlbName`  
  入出力パラメーターで指定されたタイプライブラリの完全パスを格納する [BSTR](/previous-versions/windows/desktop/automat/bstr) へのポインター `bstrSimpleName` 。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  `ResolveTypeLib`メソッドは[Tlbexp.exe (タイプライブラリエクスポーター)](../../tools/tlbexp-exe-type-library-exporter.md)の処理中に[LoadTypeLibWithResolver 関数](loadtypelibwithresolver-function.md)によって呼び出されます。  
   
  このインターフェイスのカスタム実装では、パラメーターに指定されたタイプライブラリの完全パスを含む [BSTR](/previous-versions/windows/desktop/automat/bstr) を返す必要があり `bstrSimpleName` ます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Tlf .idl, Tl. h  

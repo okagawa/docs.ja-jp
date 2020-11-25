@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9dcc8b3d-33ee-4c7c-8d6f-322c57b94a0f
 topic_type:
 - apiref
-ms.openlocfilehash: 5ed5afbbf49b6680d00e78b6af3d45c6f0a7229d
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 24a7c5bca1287e55f3eb06d63e1fed8da37eb3b0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004492"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719568"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl メソッド
+
 インターフェイスから継承されたメソッドの実装の定義を作成し、そのメソッド実装定義にトークンを返します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,21 +37,23 @@ HRESULT DefineMethodImpl (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `td`  
- から`mdTypedef`実装するクラスのトークン。  
+ から `mdTypedef` 実装するクラスのトークン。  
   
  `tkBody`  
- から`mdMethodDef` `mdMemberRef` コード本体のまたはトークン。  
+ から `mdMethodDef` `mdMemberRef` コード本体のまたはトークン。  
   
  `tkDecl`  
- から`mdMethodDef` `mdMemberRef` 実装されているインターフェイスメソッドのまたはトークン。  
+ から `mdMethodDef` `mdMemberRef` 実装されているインターフェイスメソッドのまたはトークン。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

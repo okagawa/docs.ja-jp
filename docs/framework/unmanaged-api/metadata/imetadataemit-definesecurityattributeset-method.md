@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 27064ca2-4186-4433-90a7-3b297785e891
 topic_type:
 - apiref
-ms.openlocfilehash: c33ede841324820da16e33d35bbf5e8f8e75924f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 5caf07414c9e64169f272eb11169c4d4ee399c6b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009369"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719464"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>IMetaDataEmit::DefineSecurityAttributeSet メソッド
+
 指定したトークンによって参照されるオブジェクトにアタッチするセキュリティアクセス許可のセットを作成します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,11 +38,12 @@ HRESULT DefineSecurityAttributeSet (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `tkObj`  
  からセキュリティ情報がアタッチされるトークン。  
   
  `rSecAttrs`  
- から`COR_SECATTR`構造体の配列。  
+ から `COR_SECATTR` 構造体の配列。  
   
  `cSecAttrs`  
  から内の要素の数 `rSecAttrs` 。  
@@ -49,12 +51,13 @@ HRESULT DefineSecurityAttributeSet (
  `pulErrorAttr`  
  入出力メソッドが失敗した場合、は、 `rSecAttrs` 問題の原因となった要素ののインデックスを指定します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

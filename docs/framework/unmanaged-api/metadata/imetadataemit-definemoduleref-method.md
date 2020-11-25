@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f2833594-d90b-4a71-9a53-34b12470c64a
 topic_type:
 - apiref
-ms.openlocfilehash: efff491d92ac7910f43f76965ef98d1d0e4ba0aa
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 96d24705d80dabcda691edec497a4a30b6d37dc4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004440"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719555"
 ---
 # <a name="imetadataemitdefinemoduleref-method"></a>IMetaDataEmit::DefineModuleRef メソッド
+
 指定された名前を持つモジュールのメタデータシグネチャを作成します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,18 +36,20 @@ HRESULT DefineModuleRef (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `szName`  
  から他のメタデータファイルの名前 (通常は DLL)。 これはファイル名のみです。 完全なパス名は使用しないでください。  
   
  `pmur`  
  入出力割り当てられた `mdModuleRef` トークン。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
