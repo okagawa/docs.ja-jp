@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29e7a14b-d50e-4852-bfda-011b76c0c9ee
 topic_type:
 - apiref
-ms.openlocfilehash: b263fed7db5cb2ef687da45f8cbc99a02e1e3ea2
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: c2d29a0cc344539bf515793c071fe839aa441ebc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976136"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729721"
 ---
 # <a name="icordebugevalnewstring-method"></a>ICorDebugEval::NewString メソッド
+
 指定された内容を持つ新しい文字列インスタンスを割り当てます。  
   
 ## <a name="syntax"></a>構文  
@@ -34,13 +35,16 @@ HRESULT NewString (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `string`  
  から文字列のコンテンツへのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  文字列は常に、スレッドが現在実行されているアプリケーションドメインで作成されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

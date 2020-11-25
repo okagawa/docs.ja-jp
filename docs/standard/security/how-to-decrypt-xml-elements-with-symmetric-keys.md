@@ -11,12 +11,12 @@ helpviewer_keywords:
 - XML encryption
 - decryption
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
-ms.openlocfilehash: de53cc8ef728ddc40bc8e1138a1d649e5c3e600b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 67ace547fc539ab0a2d7affb339f908eb9670a29
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820307"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729357"
 ---
 # <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>方法: 共通キーで XML 要素を復号化する
 
@@ -53,6 +53,7 @@ ms.locfileid: "94820307"
      [!code-vb[HowToEncryptXMLElementSymmetric#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#13)]  
   
 ## <a name="example"></a>例  
+
  この例では、`"test.xml"` という名前のファイルがコンパイル済みのプログラムと同じディレクトリに存在することを前提としています。  また、`"test.xml"` には `"creditcard"` 要素が含まれることも前提としています。  次の XML を `test.xml` というファイルに配置し、この例で使用することができます。  
   
 ```xml  

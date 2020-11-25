@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: cc79a67d-5368-434d-a943-209db90491b9
 topic_type:
 - apiref
-ms.openlocfilehash: 496a6a7e01dec8aa90ba4e849c431ccd499ef53d
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: ef6cbe2cef3c52d9a4b47ff77e8aeb5159e89c76
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976201"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729760"
 ---
 # <a name="icordebugevalnewarray-method"></a>ICorDebugEval::NewArray メソッド
+
 指定した要素の型と次元の新しい配列を割り当てます。  
   
- このメソッドは .NET Framework バージョン2.0 では廃止されています。 代わりに[ICorDebugEval2:: NewParameterizedArray](icordebugeval2-newparameterizedarray-method.md)を使用してください。  
+ このメソッドは .NET Framework バージョン2.0 では廃止されています。 代わりに [ICorDebugEval2:: NewParameterizedArray](icordebugeval2-newparameterizedarray-method.md) を使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,6 +41,7 @@ HRESULT NewArray (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `elementType`  
  から配列の要素の型を指定する CorElementType 列挙体の値。  
   
@@ -55,10 +57,12 @@ HRESULT NewArray (
  `lowBounds`  
  [in] オプション。 配列の各次元の下限。 この値を省略すると、次元ごとに下限0が想定されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  配列は常に、スレッドが現在実行されているアプリケーションドメインで作成されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 863fc8ce-9b8a-477e-8dd8-75c8544bb43a
 topic_type:
 - apiref
-ms.openlocfilehash: 2436809f35d5c46416f48987cc92feb51d291a6a
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 22274759f931da614a234efe0a6f6eb3aade027c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804879"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729565"
 ---
 # <a name="ihostcrstsetspincount-method"></a>IHostCrst::SetSpinCount メソッド
-現在の[IHostCrst](ihostcrst-interface.md)インスタンスのスピンカウントを設定します。  
+
+現在の [IHostCrst](ihostcrst-interface.md) インスタンスのスピンカウントを設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,6 +35,7 @@ HRESULT SetSpinCount (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `dwSpinCount`  
  から現在のインスタンスの新しいスピンカウント `IHostCrst` 。  
   
@@ -41,24 +43,26 @@ HRESULT SetSpinCount (
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`SetSpinCount`正常に返されました。|  
+|S_OK|`SetSpinCount` 正常に返されました。|  
 |HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
 |HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>解説  
- マルチプロセッサシステムでは、現在のインスタンスによって表されるクリティカルセクション `IHostCrst` が使用できない場合、呼び出し元のスレッドは、 `dwSpinCount` クリティカルセクションに関連付けられているセマフォで[IHostSemaphore:: Wait](ihostsemaphore-wait-method.md)を呼び出す前に時間をスピンします。 スピン操作中にクリティカルセクションが解放されると、呼び出し元のスレッドは待機操作を回避します。  
+## <a name="remarks"></a>注釈  
+
+ マルチプロセッサシステムでは、現在のインスタンスによって表されるクリティカルセクション `IHostCrst` が使用できない場合、呼び出し元のスレッドは、 `dwSpinCount` クリティカルセクションに関連付けられているセマフォで [IHostSemaphore:: Wait](ihostsemaphore-wait-method.md) を呼び出す前に時間をスピンします。 スピン操作中にクリティカルセクションが解放されると、呼び出し元のスレッドは待機操作を回避します。  
   
  の使用方法 `dwSpinCount` は、Win32 関数で同じ名前のパラメーターを使用する場合と同じです `InitializeCriticalSectionAndSpinCount` 。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

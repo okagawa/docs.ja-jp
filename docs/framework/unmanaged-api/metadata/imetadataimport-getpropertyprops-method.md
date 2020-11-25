@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc0ff3e6-7e7d-4f6c-948d-52b28f5cb78c
 topic_type:
 - apiref
-ms.openlocfilehash: cac5aaa7ed13b6a48b36ad550da8b73d0deb2ee7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: aded23e190de18d76bb2b9e2ffbae51cf2325419
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491044"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729227"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps メソッド
+
 指定したトークンによって表されるプロパティのメタデータを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -49,6 +50,7 @@ HRESULT GetPropertyProps (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `prop`  
  からメタデータを返すプロパティを表すトークン。  
   
@@ -65,7 +67,7 @@ HRESULT GetPropertyProps (
  入出力で返されたワイド文字の数 `szProperty` 。  
   
  `pdwPropFlags`  
- 入出力プロパティに適用されている属性フラグへのポインター。 この値は、 [Corpropertyattr](corpropertyattr-enumeration.md)列挙子のビットマスクです。  
+ 入出力プロパティに適用されている属性フラグへのポインター。 この値は、 [Corpropertyattr](corpropertyattr-enumeration.md) 列挙子のビットマスクです。  
   
  `ppvSig`  
  入出力プロパティのメタデータシグネチャへのポインター。  
@@ -98,11 +100,12 @@ HRESULT GetPropertyProps (
  入出力で返される MethodDef トークンの数 `rmdOtherMethod` 。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

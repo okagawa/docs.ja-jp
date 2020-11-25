@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 440bad90-5a88-45e7-9157-4596801d8d19
 topic_type:
 - apiref
-ms.openlocfilehash: c24963a6e56adfb9f763c6521027744db82cc357
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2ffc575cfcef1089a70ef3b6d38787a5b4c50443
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179363"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729825"
 ---
 # <a name="clrdatacreateinstance-function"></a>CLRDataCreateInstance 関数
-指定したターゲット項目のインターフェイス オブジェクトを作成します。  
+
+指定したターゲット項目のインターフェイスオブジェクトを作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,26 +37,29 @@ HRESULT CLRDataCreateInstance (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `iid`  
- [in]インスタンス化されるインターフェイスの識別子。  
+ からインスタンス化するインターフェイスの識別子。  
   
  `target`  
- [in]インターフェイス オブジェクトを作成する対象の項目を表す、ユーザーが実装する[ICLRDataTarget](iclrdatatarget-interface.md)オブジェクトへのポインター。  
+ からインターフェイスオブジェクトの作成対象となる項目を表す、ユーザーによって実装された [ICLRDataTarget](iclrdatatarget-interface.md) オブジェクトへのポインター。  
   
  `iface`  
- [アウト]返されたインターフェイス オブジェクトのアドレスへのポインター。  
+ 入出力返されたインターフェイスオブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>解説  
- オブジェクト`ICLRDataTarget`は、デバッグ アプリケーションのライターによって実装されます。 実装は、表されるターゲット項目の型によって異なります。 ターゲット項目は、プロセス、メモリ ダンプ、リモート コンピューターなどです。  
+## <a name="remarks"></a>注釈  
+
+ `ICLRDataTarget`オブジェクトは、デバッグアプリケーションのライターによって実装されます。 実装は、表示されるターゲット項目の種類によって異なります。 ターゲット項目には、プロセス、メモリダンプ、リモートコンピューターなどがあります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** を使用します。  
+ **ヘッダー:** ClrData .idl  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

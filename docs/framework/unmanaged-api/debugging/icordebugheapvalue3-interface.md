@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9c421bb0-e647-4b2d-a986-f3d578cc7f20
 topic_type:
 - apiref
-ms.openlocfilehash: 5add6da1ace372ecf6e513902bbf98f5f79c6778
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a1f4964c89aa3b658c57946d4b5a0327797118f1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210398"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728707"
 ---
 # <a name="icordebugheapvalue3-interface"></a>ICorDebugHeapValue3 インターフェイス
+
 オブジェクトのモニター ロック プロパティを公開します。 このインターフェイスは、ICorDebugHeapValue2 の値とインターフェイスを拡張します。  
   
 ## <a name="methods"></a>メソッド  
@@ -31,12 +32,13 @@ ms.locfileid: "83210398"
 |[GetThreadOwningMonitorLock メソッド](icordebugheapvalue3-getthreadowningmonitorlock-method.md)|このオブジェクトのモニターロックを所有するマネージスレッドを返します。|  
 |[GetMonitorEventWaitList メソッド](icordebugheapvalue3-getmonitoreventwaitlist-method.md)|モニターロックに関連付けられているイベントでキューに登録されているスレッドの順序付きリストを提供します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

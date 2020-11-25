@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3d705463-e640-4249-8036-4e8206d03cfe
 topic_type:
 - apiref
-ms.openlocfilehash: f6ede42ac90f65f934e285f879bcef62d13b65cb
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 8c91296bd4185fd98962d49f611a3cdcb5f0ad28
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976097"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729659"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a>ICorDebugEval2::NewParameterizedObject メソッド
+
 新しいパラメーター化された型オブジェクトをインスタンス化し、オブジェクトのコンストラクターメソッドを呼び出します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,6 +39,7 @@ HRESULT NewParameterizedObject (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pConstructor`  
  からインスタンス化するオブジェクトのコンストラクターを表す、のオブジェクトへのポインター。  
   
@@ -53,10 +55,12 @@ HRESULT NewParameterizedObject (
  `ppArgs`  
  からポインターの配列。各ポインターは、コンストラクターに渡される引数値を表す ICorDebugValue オブジェクトを指します。  
   
-## <a name="remarks"></a>Remarks  
- オブジェクトのコンストラクターは、パラメーター <xref:System.Type>を受け取ることができます。  
+## <a name="remarks"></a>注釈  
+
+ オブジェクトのコンストラクターは、パラメーターを受け取ることができ <xref:System.Type> ます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

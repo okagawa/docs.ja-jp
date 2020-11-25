@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8fd7daf-8f8d-4ad7-92ae-019db244cec1
 topic_type:
 - apiref
-ms.openlocfilehash: 55cd444ffedc92ba74239421ae548ffd930e6ab7
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 50e777bde34eb0122ca537da4b73a5e507ce7a7b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703931"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728798"
 ---
 # <a name="iclrruntimehoststop-method"></a>ICLRRuntimeHost::Stop メソッド
+
 共通言語ランタイム (CLR) によるコードの実行を停止します。  
   
 > [!IMPORTANT]
@@ -38,7 +39,7 @@ HRESULT Stop();
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`Stop`正常に返されました。|  
+|S_OK|`Stop` 正常に返されました。|  
 |HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージドコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
 |HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
@@ -46,11 +47,12 @@ HRESULT Stop();
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返す場合、そのプロセス内で CLR は使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

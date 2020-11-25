@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea38ae20-7e0a-427a-be77-d78fae719d82
 topic_type:
 - apiref
-ms.openlocfilehash: fd7acaa8bcb4d53893855bcd25ff68cf26e30354
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 0b17bd729733665fbc4645aecd2e588b7eba14bb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976162"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729695"
 ---
 # <a name="icordebugeval2createvaluefortype-method"></a>ICorDebugEval2::CreateValueForType メソッド
+
 初期値が0または null の、指定した型の新しい ICorDebugValue へのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,18 +36,21 @@ HRESULT CreateValueForType (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pType`  
  から型を表す、の型のオブジェクトへのポインター。  
   
  `ppValue`  
- 入出力値を表す`ICorDebugValue`オブジェクトのアドレスへのポインター。  
+ 入出力値を表すオブジェクトのアドレスへのポインター `ICorDebugValue` 。  
   
-## <a name="remarks"></a>Remarks  
- `CreateValueForType`一般化[Okeval:: CreateValue](icordebugeval-createvalue-method.md) 。など`List<int>`の構築された型を含む任意のオブジェクトの種類を指定できます。 このメソッドの唯一の目的は、関数の評価に渡すことができる値を生成することです。  
+## <a name="remarks"></a>注釈  
+
+ `CreateValueForType` 一般化 [Okeval:: CreateValue](icordebugeval-createvalue-method.md) 。などの構築された型を含む任意のオブジェクトの種類を指定でき `List<int>` ます。 このメソッドの唯一の目的は、関数の評価に渡すことができる値を生成することです。  
   
  型はクラスまたは値型である必要があります。 このメソッドを使用して配列値や文字列値を作成することはできません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

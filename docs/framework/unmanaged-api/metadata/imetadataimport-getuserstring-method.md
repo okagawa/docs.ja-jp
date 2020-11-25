@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0fd3bb47-58b5-4083-b241-b9719df7a285
 topic_type:
 - apiref
-ms.openlocfilehash: 358ca84f32e1b233116605bf5486cc9a01b42e67
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: af3de5454ce3d4a763c216de6e8efdb39407457b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503506"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729136"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>IMetaDataImport::GetUserString メソッド
+
 指定したメタデータ トークンで表されるリテラル文字列を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,6 +38,7 @@ HRESULT GetUserString (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `stk`  
  から関連付けられている文字列を返す文字列トークン。  
   
@@ -50,11 +52,12 @@ HRESULT GetUserString (
  入出力返されたのワイド文字のサイズ `szString` 。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

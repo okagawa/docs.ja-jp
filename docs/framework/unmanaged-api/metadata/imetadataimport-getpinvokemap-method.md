@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8685c1e-b80c-4198-8eb3-748d6f48a99e
 topic_type:
 - apiref
-ms.openlocfilehash: 8409e56b5ec4dbe47035a0555b6b7ce175b517ee
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c34215f48190e60bd1a851f31b8b23f09491f4e1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84490979"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729240"
 ---
 # <a name="imetadataimportgetpinvokemap-method"></a>IMetaDataImport::GetPinvokeMap メソッド
+
 PInvoke 呼び出しの対象アセンブリを表す ModuleRef トークンを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,11 +40,12 @@ HRESULT GetPinvokeMap (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `tk`  
  からPInvoke マッピングメタデータを取得する FieldDef または MethodDef トークン。  
   
  `pdwMappingFlags`  
- 入出力マッピングに使用されるフラグへのポインター。 この値は、 [CorPinvokeMap](corpinvokemap-enumeration.md)列挙体のビットマスクです。  
+ 入出力マッピングに使用されるフラグへのポインター。 この値は、 [CorPinvokeMap](corpinvokemap-enumeration.md) 列挙体のビットマスクです。  
   
  `szImportName`  
  入出力アンマネージターゲット DLL の名前。  
@@ -58,11 +60,12 @@ HRESULT GetPinvokeMap (
  入出力アンマネージターゲットオブジェクトライブラリを表す ModuleRef トークンへのポインター。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

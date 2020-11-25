@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 66fcd2b8-ac66-414b-83a8-75a925e17772
 topic_type:
 - apiref
-ms.openlocfilehash: c901e21521e941c51939958175a5316808890e9f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: e695a93036e00e651ecababb0e1407661bcc48d8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83208617"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729084"
 ---
 # <a name="icordebughandlevalue-interface"></a>ICorDebugHandleValue インターフェイス
 
@@ -32,13 +32,15 @@ ms.locfileid: "83208617"
 |[Dispose メソッド](icordebughandlevalue-dispose-method.md)|`ICorDebugHandleValue`インターフェイスポインターを明示的に解放せずに、このオブジェクトによって参照されるハンドルを解放します。|  
 |[GetHandleType メソッド](icordebughandlevalue-gethandletype-method.md)|このによって参照されるハンドルの種類を記述する CorDebugHandleType 値を取得し `ICorDebugHandleValue` ます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  `ICorDebugReferenceValue`デバッグ対象のコードの実行が中断された場合、オブジェクトは無効になります。 は、 `ICorDebugHandleValue` 明示的に解放されるまで、中断および継続による参照を保持します。  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

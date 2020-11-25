@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3d5b642e-7ef2-428b-a5ae-509c35ed461a
 topic_type:
 - apiref
-ms.openlocfilehash: 18a5e337b6026a20a95b1c29f3d7bda5187efc66
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 3d3d4af8e9ee073c0aefec418a3b53c4589adf0d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795868"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729110"
 ---
 # <a name="cordebugintercept-enumeration"></a>CorDebugIntercept 列挙型
+
 インターセプト (ステップ イン) できるコードの型を示します。  
   
 ## <a name="syntax"></a>構文  
@@ -50,10 +51,12 @@ typedef enum CorDebugIntercept {
 |`INTERCEPT_INTERCEPTION`|使用されていません。|  
 |`INTERCEPT_ALL`|すべてのコードをインターセプトできます。|  
   
-## <a name="remarks"></a>Remarks  
- インターセプトできるコードの型を確立するには、 [ICorDebugStepper:: SetInterceptMask](icordebugstepper-setinterceptmask-method.md)メソッドを使用します。  
+## <a name="remarks"></a>注釈  
+
+ インターセプトできるコードの型を確立するには、 [ICorDebugStepper:: SetInterceptMask](icordebugstepper-setinterceptmask-method.md) メソッドを使用します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

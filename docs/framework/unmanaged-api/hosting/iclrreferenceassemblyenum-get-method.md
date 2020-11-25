@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f21c1612-9c5d-4abc-a337-577086d29c17
 topic_type:
 - apiref
-ms.openlocfilehash: 5afa7b37b804b6a11a894e0e6c7708c7787a20ae
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 3968adf418fcea847ee2be5a412385d041a53544
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703367"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728908"
 ---
 # <a name="iclrreferenceassemblyenumget-method"></a>ICLRReferenceAssemblyEnum::Get メソッド
+
 指定されたインデックス位置にあるアセンブリ id を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT Get (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `dwIndex`  
  から返されるアセンブリ id の0から始まるインデックス。  
   
@@ -49,7 +51,7 @@ HRESULT Get (
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`Get`正常に返されました。|  
+|S_OK|`Get` 正常に返されました。|  
 |ERROR_INSUFFICIENT_BUFFER|`pwzBuffer` が小さすぎます。|  
 |ERROR_NO_MORE_ITEMS|列挙には、これ以上項目が含まれていません。|  
 |HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
@@ -58,15 +60,17 @@ HRESULT Get (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返す場合、そのプロセス内で CLR は使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>解説  
- `Get`は通常、2回呼び出されます。 最初の呼び出しでは、に null 値を指定し、に `pwzBuffer` `pcchBufferSize` 適したサイズに設定し `pwzBuffer` ます。 2番目の呼び出しでは、適切にサイズ `pwzBuffer` を指定し、完了時に正規のアセンブリ id データを格納します。  
+## <a name="remarks"></a>注釈  
+
+ `Get` は通常、2回呼び出されます。 最初の呼び出しでは、に null 値を指定し、に `pwzBuffer` `pcchBufferSize` 適したサイズに設定し `pwzBuffer` ます。 2番目の呼び出しでは、適切にサイズ `pwzBuffer` を指定し、完了時に正規のアセンブリ id データを格納します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

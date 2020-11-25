@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: ce3025e8-defa-4c5e-8298-f49d71fa5736
 topic_type:
 - apiref
-ms.openlocfilehash: e9570d3c916123093f69e7f26d3778f1c7184b1f
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: a4d6dd0df9f38561ab5014d7ab65fde6793c9846
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976188"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729747"
 ---
 # <a name="icordebugevalnewobject-method"></a>ICorDebugEval::NewObject メソッド
+
 新しいオブジェクトインスタンスを割り当て、指定したコンストラクターメソッドを呼び出します。  
   
- このメソッドは .NET Framework バージョン2.0 では廃止されています。 代わりに[ICorDebugEval2:: NewParameterizedObject](icordebugeval2-newparameterizedobject-method.md)を使用してください。  
+ このメソッドは .NET Framework バージョン2.0 では廃止されています。 代わりに [ICorDebugEval2:: NewParameterizedObject](icordebugeval2-newparameterizedobject-method.md) を使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,6 +39,7 @@ HRESULT NewObject (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pConstructor`  
  から呼び出されるコンストラクター。  
   
@@ -47,7 +49,8 @@ HRESULT NewObject (
  `ppArgs`  
  からICorDebugValue オブジェクトの配列。各オブジェクトは、コンストラクターに渡される引数を表します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

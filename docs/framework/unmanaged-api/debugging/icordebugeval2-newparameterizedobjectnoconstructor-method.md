@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f15b5b78-94f4-4eb9-b3b3-a621272f357c
 topic_type:
 - apiref
-ms.openlocfilehash: 90fce1710f97341fb49be1d07f7af2edf8cb848c
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 796c6aa4c42a037fe612b4b1ee5267a678cf5224
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976084"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729643"
 ---
 # <a name="icordebugeval2newparameterizedobjectnoconstructor-method"></a>ICorDebugEval2::NewParameterizedObjectNoConstructor メソッド
+
 コンストラクターメソッドを呼び出さずに、指定したクラスの新しいパラメーター化された型オブジェクトをインスタンス化します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT NewParameterizedObjectNoConstructor (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pClass`  
  からインスタンス化するオブジェクトのクラスを表す、のオブジェクトへのポインター。  
   
@@ -45,10 +47,12 @@ HRESULT NewParameterizedObjectNoConstructor (
  `ppTypeArgs`  
  からポインターの配列。各ポインターは、インスタンス化されているオブジェクトの型引数を表す、テキスト型のオブジェクトを指します。  
   
-## <a name="remarks"></a>Remarks  
- 型`NewParameterizedObjectNoConstructor`引数の数が正しくないか、型引数の型が正しくない場合、メソッドは失敗します。  
+## <a name="remarks"></a>注釈  
+
+ `NewParameterizedObjectNoConstructor`型引数の数が正しくないか、型引数の型が正しくない場合、メソッドは失敗します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

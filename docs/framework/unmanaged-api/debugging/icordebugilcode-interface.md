@@ -10,14 +10,15 @@ api_type:
 ms.assetid: 51c4de0c-3813-4142-be25-a85bb84efb90
 topic_type:
 - apiref
-ms.openlocfilehash: 6d5d22ebb93a981efbc0c0183d45b684f93e8ed0
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 980e97dd8ec4792e35bb8c7fbbc2091e9ced719a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210372"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728655"
 ---
 # <a name="icordebugilcode-interface"></a>ICorDebugILCode インターフェイス
+
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
   
  中間言語 (IL) コードのセグメントを表します。  
@@ -28,7 +29,8 @@ ms.locfileid: "83210372"
 |------------|-----------------|  
 |[GetEHClauses メソッド](icordebugilcode-getehclauses-method.md)|この IL のために定義された例外処理 (EH) 句のリストへのポインターを返します。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

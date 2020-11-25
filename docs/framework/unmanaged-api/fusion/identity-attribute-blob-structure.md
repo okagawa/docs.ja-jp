@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: af14ae5f-d226-47dd-ba90-8fc6e6605d4d
 topic_type:
 - apiref
-ms.openlocfilehash: 8f838d5c812842e2a637065b25182b6a12609231
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9a59e70257064220e8138f9d267a815fcdbf3929
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176553"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729032"
 ---
 # <a name="identity_attribute_blob-structure"></a>IDENTITY_ATTRIBUTE_BLOB 構造体
-アセンブリ内の 1 つの属性に関する情報を格納`DWORD`し、3 つの s で構成されます。 各`DWORD`インターフェイスは`CurrentIntoBuffer`[、IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)インターフェイスのメソッドによって生成される文字バッファーへのオフセットです。  
+
+アセンブリ内の1つの属性に関する情報を格納し、3つので構成され `DWORD` ます。 各 `DWORD` は、 `CurrentIntoBuffer` [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) インターフェイスのメソッドによって生成される文字バッファーへのオフセットです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,20 +41,21 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`ofsNamespace`|文字バッファーへの最初のオフセット。 このオフセットの後には、属性の名前空間ではなく、一連の NULL 文字が続きます。 したがって、使用されません。|  
-|`ofsName`|文字バッファーへの 2 番目のオフセット。 この場所は、属性の名前の先頭を示します。|  
-|`ofsValue`|文字バッファーへの 3 番目のオフセット。 この位置は、属性の値の開始位置を示します。|  
+|`ofsNamespace`|文字バッファー内の最初のオフセット。 このオフセットの後には、属性の名前空間は含まれませんが、一連の null 文字が続きます。 したがって、これは使用されません。|  
+|`ofsName`|文字バッファー内の2番目のオフセット。 この場所は、属性の名前の先頭を示します。|  
+|`ofsValue`|文字バッファーへの3番目のオフセット。 この場所は、属性の値の開始を示します。|  
   
 ## <a name="sample"></a>サンプル  
- 次の例は、いくつかの`IDENTITY_ATTRIBUTE_BLOB`基本的な手順を示しています。  
+
+ 次の例は、最終的に構造が設定される基本的な手順を示してい `IDENTITY_ATTRIBUTE_BLOB` ます。  
   
-1. アセンブリの[IReferenceId](ireferenceidentity-interface.md)を取得します。  
+1. アセンブリの [IReferenceIdentity](ireferenceidentity-interface.md) を取得します。  
   
-2. メソッドを`IReferenceIdentity::EnumAttributes`呼び出し[、IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)を取得します。  
+2. `IReferenceIdentity::EnumAttributes`メソッドを呼び出し、 [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)を取得します。  
   
-3. 文字バッファーを作成し、構造体としてキャストします`IDENTITY_ATTRIBUTE_BLOB`。  
+3. 文字バッファーを作成し、それを構造体としてキャストし `IDENTITY_ATTRIBUTE_BLOB` ます。  
   
-4. インターフェイスの`CurrentIntoBuffer`メソッドを`IEnumIDENTITY_ATTRIBUTE`呼び出します。 このメソッドは、属性`Namespace` `Name`、、`Value`および を文字バッファーにコピーします。 これらの文字列への 3 つのオフセットは、`IDENTITY_ATTRIBUTE_BLOB`構造体で使用できるようになります。  
+4. `CurrentIntoBuffer`インターフェイスのメソッドを呼び出し `IEnumIDENTITY_ATTRIBUTE` ます。 このメソッドは、属性 `Namespace` 、 `Name` 、およびを `Value` 文字バッファーにコピーします。 これらの文字列への3つのオフセットは、構造体で使用できるようになり `IDENTITY_ATTRIBUTE_BLOB` ます。  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -220,25 +222,28 @@ Exit:
 ```  
   
 ### <a name="to-run-the-sample"></a>サンプルを実行するには  
- C:\\>列挙アセンブリ属性.exe C:\WINDOWS\NET\フレームワーク\v2.0.50727\システム.dll  
+
+ C: \\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
   
 ### <a name="sample-output"></a>サンプル出力  
- カルチャ = ニュートラル  
+
+ Culture = ニュートラル  
   
- 名前 = システム  
+ 名前 = System  
   
- プロセッサアーキテクチャ = MSIL  
+ processorArchitecture = MSIL  
   
- 公開キートークン = b77a5c561934e089  
+ PublicKeyToken = b77a5c561934e089  
   
- バージョン = 2.0.0.0  
+ Version = 2.0.0.0  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** アイソレーション.h  
+ **ヘッダー:** 分離 .h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

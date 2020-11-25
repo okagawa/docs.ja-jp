@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4d5e5f00-bcab-4f41-b191-176511a186a7
 topic_type:
 - apiref
-ms.openlocfilehash: c2abf2813c6e1a9db4264bded32d9cb9c58a2bcb
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a16621f4c9b06f049239dc4e2335d70a167dd756
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491057"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729266"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps メソッド
+
 指定した ParamDef トークンによって参照されるパラメーターのメタデータ値を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -43,6 +44,7 @@ HRESULT GetParamProps (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `tk`  
  からメタデータを返すパラメーターを表す ParamDef トークン。  
   
@@ -73,16 +75,17 @@ HRESULT GetParamProps (
  `pcchValue`  
  入出力のサイズ `ppValue` 。ワイド文字の場合は `ppValue` 。が文字列を保持しない場合は0。  
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 パラメーターの場合、のシーケンス値は `pulSequence` 1 から始まります。 戻り値のシーケンス番号は0です。
 
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

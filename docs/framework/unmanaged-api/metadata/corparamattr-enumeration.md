@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a7ff90ad-dad8-48e8-917d-4aa9a118cbc8
 topic_type:
 - apiref
-ms.openlocfilehash: e8afcb972cab9757458c7032c3678d45c6418fac
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 6f5d022a96fa021cb28dbbb67d0b53e08f77498c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007573"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729287"
 ---
 # <a name="corparamattr-enumeration"></a>CorParamAttr 列挙型
+
 メソッド パラメーターのメタデータを記述する値が格納されます。  
   
 ## <a name="syntax"></a>構文  
@@ -54,7 +55,8 @@ typedef enum CorParamAttr {
 |`pdHasFieldMarshal`|パラメーターにマーシャリング情報があることを指定します。|  
 |`pdUnused`|未使用。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorHdr. h  

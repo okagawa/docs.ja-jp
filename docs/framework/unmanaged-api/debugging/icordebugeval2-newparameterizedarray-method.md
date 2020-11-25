@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45efb8ba-c4de-4109-945f-e734d376b43c
 topic_type:
 - apiref
-ms.openlocfilehash: 9d589bfc3093d03d87acb47ade0fc6c972bcd335
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 14274932461fa7a5278c9a09b421f50be098cb91
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976110"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729666"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>ICorDebugEval2::NewParameterizedArray メソッド
+
 指定した要素の型と次元の新しい配列を割り当てます。  
   
 ## <a name="syntax"></a>構文  
@@ -37,6 +38,7 @@ HRESULT NewParameterizedArray(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pElementType`  
  から配列に格納されている要素の型を表す、の型のオブジェクトへのポインター。  
   
@@ -49,10 +51,12 @@ HRESULT NewParameterizedArray(
  `lowBounds`  
  [in] オプション。 配列の各次元の下限。 この値を省略すると、次元ごとに下限0が想定されます。  
   
-## <a name="remarks"></a>Remarks  
- 配列の要素は、ジェネリック型のインスタンスである場合があります。 配列は常に、スレッドが現在実行されているアプリケーションドメインで作成されます。 .NET Framework 2.0 では、の`rank`値は1である必要があります。  
+## <a name="remarks"></a>注釈  
+
+ 配列の要素は、ジェネリック型のインスタンスである場合があります。 配列は常に、スレッドが現在実行されているアプリケーションドメインで作成されます。 .NET Framework 2.0 では、の値は `rank` 1 である必要があります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

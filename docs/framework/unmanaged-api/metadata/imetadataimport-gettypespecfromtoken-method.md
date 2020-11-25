@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee518bda-3296-482e-a7b7-e9d51dd1a181
 topic_type:
 - apiref
-ms.openlocfilehash: 43e9671afa92d36966e51bbdc630db4a9d9083b7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 62495aa4280bb1799af09fea2e550ae6107e09e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503505"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729149"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>IMetaDataImport::GetTypeSpecFromToken メソッド
+
 指定したトークンが表すタイプ仕様のバイナリ メタデータ シグネチャを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT GetTypeSpecFromToken (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `typespec`  
  から要求されたメタデータ署名に関連付けられている TypeSpec トークン。  
   
@@ -46,14 +48,16 @@ HRESULT GetTypeSpecFromToken (
  入出力メタデータシグネチャのサイズ (バイト単位)。  
   
 ## <a name="return-value"></a>戻り値  
+
  成功または失敗を示す HRESULT。 失敗したマクロを使用してエラーをテストできます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

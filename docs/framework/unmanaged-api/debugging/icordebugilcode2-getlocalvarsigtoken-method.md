@@ -12,14 +12,15 @@ api_type:
 ms.assetid: 17665b77-1342-4115-94fd-9f45b0ecfb0f
 topic_type:
 - apiref
-ms.openlocfilehash: 3b9c2f0e20488826aca202b3ef454104964b8bb9
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 33533c9e3bfbe78abeddb5ed591f741219826127
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210346"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728634"
 ---
 # <a name="icordebugilcode2getlocalvarsigtoken-method"></a>ICorDebugILCode2::GetLocalVarSigToken メソッド
+
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
   
  このインスタンスで示される関数について、ローカル変数のシグネチャのメタデータ トークンを取得します。  
@@ -33,12 +34,14 @@ HRESULT GetLocalVarSigToken(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pmdSig`  
  [out] この機能のローカル変数シグネチャの `mdSignature` トークンへのポインター、またはシグネチャがない場合 (つまり、機能にローカル変数がない場合) は `mdSignatureNil`。  
   
 ## <a name="remarks"></a>解説  
   
 ## <a name="requirements"></a>必要条件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

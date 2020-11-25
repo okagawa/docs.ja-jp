@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fce34531-2687-406d-9131-d6ad94f2ce0e
 topic_type:
 - apiref
-ms.openlocfilehash: b597d95b5b25e5ebf04fac48e4f3fda312a9594c
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 090b587ef509795609250914ce8883ad96d28c18
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976123"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729682"
 ---
 # <a name="icordebugeval2-interface"></a>ICorDebugEval2 インターフェイス
 
@@ -35,14 +35,15 @@ ms.locfileid: "82976123"
 |[NewParameterizedObject メソッド](icordebugeval2-newparameterizedobject-method.md)|新しいパラメーター化された型オブジェクトをインスタンス化し、オブジェクトのコンストラクターメソッドを呼び出します。|  
 |[NewParameterizedObjectNoConstructor メソッド](icordebugeval2-newparameterizedobjectnoconstructor-method.md)|コンストラクターメソッドを呼び出さずに、指定したクラスの新しいパラメーター化された型オブジェクトをインスタンス化します。|  
 |[NewStringWithLength メソッド](icordebugeval2-newstringwithlength-method.md)|指定したコンテンツを使用して、指定した長さの新しい文字列を作成します。|  
-|[RudeAbort メソッド](icordebugeval2-rudeabort-method.md)|この`ICorDebugEval2`が現在実行している計算を中止します。|  
+|[RudeAbort メソッド](icordebugeval2-rudeabort-method.md)|このが現在実行している計算を中止し `ICorDebugEval2` ます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

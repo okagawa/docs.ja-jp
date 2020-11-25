@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 01837955-ce1e-4068-b338-fd473bd77d1d
 topic_type:
 - apiref
-ms.openlocfilehash: 273922e00c3e5319d5a03652cc77b69f4479ea67
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5d98481d7934b4c96178aaa32fb0f9378eb359fc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503524"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729171"
 ---
 # <a name="imetadataimportgettyperefprops-method"></a>IMetaDataImport::GetTypeRefProps メソッド
+
 <xref:System.Type>指定した TypeRef トークンによって参照されるに関連付けられているメタデータを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,6 +39,7 @@ HRESULT GetTypeRefProps (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `tr`  
  からメタデータを返す型を表す TypeRef トークン。  
   
@@ -54,11 +56,12 @@ HRESULT GetTypeRefProps (
  入出力のワイド文字で返されたサイズ `szName` 。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

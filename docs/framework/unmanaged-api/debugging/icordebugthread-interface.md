@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3930fd9b-2bc3-4b72-80a0-b6eeb94d60c6
 topic_type:
 - apiref
-ms.openlocfilehash: edcc0ebcadc1bd95574b0276bfd0e2d42e5474fd
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 5165ef081aad849c11747807d8cc76b2df0a6c74
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379819"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729318"
 ---
 # <a name="icordebugthread-interface"></a>ICorDebugThread インターフェイス
+
 プロセス内のスレッドを表します。 `ICorDebugThread` インスタンスの有効期間は、それが表しているスレッドの有効期間と同じです。  
   
 ## <a name="methods"></a>メソッド  
@@ -45,12 +46,13 @@ ms.locfileid: "83379819"
 |[GetUserState メソッド](icordebugthread-getuserstate-method.md)|このの現在の状態を示す CorDebugUserState 値のビットごとの組み合わせを取得し `ICorDebugThread` ます。|  
 |[SetDebugState メソッド](icordebugthread-setdebugstate-method.md)|こののデバッグ状態を記述する値のビットごとの組み合わせを設定 `CorDebugThreadState` `ICorDebugThread` します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

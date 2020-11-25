@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 02468edf-d32b-4cb3-aaa8-3dd2abfc8b25
 topic_type:
 - apiref
-ms.openlocfilehash: e901c65824ee8d6949c79c7778944148c0d9eb28
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 478772925dfb7ca7389b5267433f9b06ace3d5a3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976058"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729617"
 ---
 # <a name="icordebugeval2rudeabort-method"></a>ICorDebugEval2::RudeAbort メソッド
-この`ICorDebugEval2`が現在実行している計算を中止します。  
+
+このが現在実行している計算を中止し `ICorDebugEval2` ます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,10 +32,12 @@ ms.locfileid: "82976058"
 HRESULT RudeAbort ();  
 ```  
   
-## <a name="remarks"></a>Remarks  
- `RudeAbort`は、エバリュエーターによって保持されているロックを解放しないため、デバッグセッションは安全ではない状態のままになります。 このメソッドは細心の注意を払って呼び出してください。  
+## <a name="remarks"></a>解説  
+
+ `RudeAbort` は、エバリュエーターによって保持されているロックを解放しないため、デバッグセッションは安全ではない状態のままになります。 このメソッドは細心の注意を払って呼び出してください。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

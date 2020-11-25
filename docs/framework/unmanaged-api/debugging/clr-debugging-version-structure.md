@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4d821186-3ddf-405a-ac44-d79438a9f7f3
 topic_type:
 - apiref
-ms.openlocfilehash: 651b916a0e3ca178432094428611f9bcc8f0fd17
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8a2abe847728a2bb1f1345ef73e55b58e4704001
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132419"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729812"
 ---
 # <a name="clr_debugging_version-structure"></a>CLR_DEBUGGING_VERSION 構造体
+
 デバッグのために共通言語ランタイム (CLR) の製品バージョンを定義します。  
   
 ## <a name="syntax"></a>構文  
@@ -47,17 +48,19 @@ typedef struct _CLR_DEBUGGING_VERSION
 |`wBuild`|ビルド番号。|  
 |`wRevision`|リビジョン番号。|  
   
-## <a name="remarks"></a>Remarks  
- `CLR_DEBUGGING_VERSION` 構造体は COR_VERSION 構造体と同じですが、`CLR_DEBUGGING_VERSION` 構造体には、追加の構造バージョンフィールド (`wStructVersion`) が用意されています。 現在、このフィールドは0に設定する必要があります。  
+## <a name="remarks"></a>注釈  
+
+ 構造体 `CLR_DEBUGGING_VERSION` は COR_VERSION 構造体と同じですが、構造体には `CLR_DEBUGGING_VERSION` 追加の構造体のバージョンフィールド () が用意されて `wStructVersion` います。 現在、このフィールドは0に設定する必要があります。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug .idl  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
