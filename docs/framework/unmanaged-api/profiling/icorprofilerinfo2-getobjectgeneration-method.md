@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b0d25f76-0bd5-4aa6-96cf-bfec0e1de28b
 topic_type:
 - apiref
-ms.openlocfilehash: 1263202c1fe524c924a88b9356e5ab9116cea553
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4ba404692bef84c0522a799c61f07eac341eaab4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502861"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703851"
 ---
 # <a name="icorprofilerinfo2getobjectgeneration-method"></a>ICorProfilerInfo2::GetObjectGeneration メソッド
+
 指定されたオブジェクトを格納しているヒープのセグメントを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,16 +35,19 @@ HRESULT GetObjectGeneration(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `objectId`  
  からオブジェクトの ID です。  
   
  `range`  
- 入出力ガベージコレクション中のジェネレーション内のメモリの範囲 (つまり、ブロック) を記述する[COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md)構造体へのポインター。 この範囲には、指定されたオブジェクトが含まれます。  
+ 入出力ガベージコレクション中のジェネレーション内のメモリの範囲 (つまり、ブロック) を記述する [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md) 構造体へのポインター。 この範囲には、指定されたオブジェクトが含まれます。  
   
-## <a name="remarks"></a>解説  
- `GetObjectGeneration`ガベージコレクションが実行されていない場合は、任意のプロファイラーコールバックからメソッドを呼び出すことができます。 つまり、 [ICorProfilerCallback2:: GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md)と[ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md)の間で発生するものを除き、任意のコールバックから呼び出すことができます。  
+## <a name="remarks"></a>注釈  
+
+ `GetObjectGeneration`ガベージコレクションが実行されていない場合は、任意のプロファイラーコールバックからメソッドを呼び出すことができます。 つまり、 [ICorProfilerCallback2:: GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md) と [ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md)の間で発生するものを除き、任意のコールバックから呼び出すことができます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

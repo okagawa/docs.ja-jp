@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: be3f5985-b1e4-4036-8602-c16e8508d4af
 topic_type:
 - apiref
-ms.openlocfilehash: 1c9d9647084aa729817eeeb17ee3f5cd320c0d29
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e81816ce2194c2c1862cb997ad2c6e5baf301231
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491245"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704003"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps メソッド
+
 指定したメソッドを実装するのメタデータトークンへのポインター <xref:System.Type> と、そのメソッドを宣言するインターフェイスを取得します。
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT GetInterfaceImplProps (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `iiImpl`  
  からクラスとインターフェイストークンを返すメソッドを表すメタデータトークン。  
   
@@ -45,9 +47,9 @@ HRESULT GetInterfaceImplProps (
  `ptkIface`  
  入出力実装されたメソッドを定義するインターフェイスを表すメタデータトークン。  
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
- の値を取得する `iImpl` には、 [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md)メソッドを呼び出します。
+ の値を取得する `iImpl` には、 [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) メソッドを呼び出します。
 
  たとえば、クラスの `mdTypeDef` トークン値が0x02000007 で、型がトークンを持つ3つのインターフェイスを実装しているとします。
 
@@ -70,14 +72,15 @@ HRESULT GetInterfaceImplProps (
 - 下位3バイトは、行番号 (RID) を保持します。
 - 上位バイトは、のトークンの種類 (0x09) を保持し `mdtInterfaceImpl` ます。
 
-`GetInterfaceImplProps`引数で指定したトークンを持つ行に保持されている情報を返し `iImpl` ます。
+`GetInterfaceImplProps` 引数で指定したトークンを持つ行に保持されている情報を返し `iImpl` ます。
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

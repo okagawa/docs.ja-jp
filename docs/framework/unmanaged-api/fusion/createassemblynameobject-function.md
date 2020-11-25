@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 55c8b41e-fbe4-4ae0-aa29-68fbb2311691
 topic_type:
 - apiref
-ms.openlocfilehash: 00345f6c95c67f0494aa721c662f56a9e98cdd7f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 995f1064c2f40005c4a19ef034d7edfd668b5d51
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108710"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704163"
 ---
 # <a name="createassemblynameobject-function"></a>CreateAssemblyNameObject 関数
-指定された名前を持つアセンブリの一意の id を表す[IAssemblyName](iassemblyname-interface.md)インスタンスへのインターフェイスポインターを取得します。  
+
+指定された名前を持つアセンブリの一意の id を表す [IAssemblyName](iassemblyname-interface.md) インスタンスへのインターフェイスポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,26 +39,28 @@ HRESULT CreateAssemblyNameObject (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ppAssemblyNameObj`  
- 入出力返された `IAssemblyName`。  
+ 入出力返された `IAssemblyName` 。  
   
  `szAssemblyName`  
- から新しい `IAssemblyName` インスタンスを作成するアセンブリの名前。  
+ から新しいインスタンスを作成する対象のアセンブリの名前 `IAssemblyName` 。  
   
  `dwFlags`  
  からオブジェクトコンストラクターに渡すフラグ。  
   
  `pvReserved`  
- [入力] 将来の機能拡張に備えて予約されています。 `pvReserved` は null 参照である必要があります。  
+ [入力] 将来の機能拡張に備えて予約されています。 `pvReserved` null 参照である必要があります。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Fusion. h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

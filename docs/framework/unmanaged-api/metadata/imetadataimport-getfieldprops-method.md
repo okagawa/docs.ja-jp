@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-ms.openlocfilehash: 2bd05b49c3d51ac13865997910c99cc0cd5ca2d9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 458a90bc47711d9f831805faa8468a49f3e0d305
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491247"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704000"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps メソッド
+
 指定した FieldDef トークンによって参照されるフィールドに関連付けられているメタデータを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -44,6 +45,7 @@ HRESULT GetFieldProps (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `mb`  
  から関連付けられたメタデータを取得する対象のフィールドを表す FieldDef トークン。  
   
@@ -54,7 +56,7 @@ HRESULT GetFieldProps (
  入出力フィールドの名前。  
   
  `cchField`  
- から*Szfield*のバッファーのサイズ (ワイド文字単位)。  
+ から *Szfield* のバッファーのサイズ (ワイド文字単位)。  
   
  `pchField`  
  入出力返されたバッファーの実際のサイズ。  
@@ -78,11 +80,12 @@ HRESULT GetFieldProps (
  入出力の文字数のサイズ `ppValue` 。文字列が存在しない場合は0。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-ms.openlocfilehash: cb7e21e0c6aad5ebb328ae5d1a993716f96e8d47
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e1cd3ef78d303aaa325699e1bcdec95f077fef21
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500573"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703981"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 関数
+
 現在実行中の関数が別の関数の末尾呼び出しを実行しようとしていることをプロファイラーに通知し、スタックフレームに関する情報を提供します。  
   
 ## <a name="syntax"></a>構文  
@@ -42,16 +43,17 @@ void __stdcall FunctionTailcall2 (
 
 - `clientData`
 
-  \[では、現在実行中の関数の末尾呼び出しを実行しようとしているときに、プロファイラーが以前に[Functionidmapper](functionidmapper-function.md)を使用して指定したリマップ関数識別子。
+  \[では、現在実行中の関数の末尾呼び出しを実行しようとしているときに、プロファイラーが以前に [Functionidmapper](functionidmapper-function.md)を使用して指定したリマップ関数識別子。
   
 - `func`
 
   \[in] `COR_PRF_FRAME_INFO` スタックフレームに関する情報を示す値。
 
-  プロファイラーは、これを[ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md)メソッドの実行エンジンに渡すことができる不透明なハンドルとして処理する必要があります。
+  プロファイラーは、これを [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) メソッドの実行エンジンに渡すことができる不透明なハンドルとして処理する必要があります。
 
-## <a name="remarks"></a>解説  
- Tail 呼び出しの対象となる関数は、現在のスタックフレームを使用し、末尾呼び出しを行った関数の呼び出し元に直接戻ります。 つまり、 [FunctionLeave2](functionleave2-function.md)コールバックは、末尾呼び出しのターゲットである関数に対しては発行されません。  
+## <a name="remarks"></a>注釈  
+
+ Tail 呼び出しの対象となる関数は、現在のスタックフレームを使用し、末尾呼び出しを行った関数の呼び出し元に直接戻ります。 つまり、 [FunctionLeave2](functionleave2-function.md) コールバックは、末尾呼び出しのターゲットである関数に対しては発行されません。  
   
  `func` `FunctionTailcall2` 値が変更または破棄される可能性があるため、関数がを返すと、パラメーターの値が無効になります。  
   
@@ -68,6 +70,7 @@ void __stdcall FunctionTailcall2 (
  また、 `FunctionTailcall2` 関数はマネージコードを呼び出さないようにするか、マネージメモリ割り当てを発生させることはできません。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Corprof.idl  

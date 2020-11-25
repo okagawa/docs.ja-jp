@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 71f362a9-8fe2-47ce-9302-05a645cf3d7d
 topic_type:
 - apiref
-ms.openlocfilehash: 031bfc3d7fcd9f1f04e616e460cb3201813eae55
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: ca427439f03d92b20e7714b9724d90b240e9cecb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616555"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704072"
 ---
 # <a name="corlaunchapplication-function"></a>CorLaunchApplication 関数
+
 指定したネットワーク パスのアプリケーションを、指定したマニフェストとその他のアプリケーション データを使用して起動します。  
   
  この関数は .NET Framework 4 で非推奨とされました。  
@@ -42,8 +43,9 @@ HRESULT CorLaunchApplication (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `dwClickOnceHost`  
- からアプリケーションを起動しているホストの種類を指定する[HOST_TYPE](host-type-enumeration.md)列挙体の値。  
+ からアプリケーションを起動しているホストの種類を指定する [HOST_TYPE](host-type-enumeration.md) 列挙体の値。  
   
  `pwzAppFullName`  
  から起動されるアプリケーションの完全な名前。  
@@ -64,11 +66,12 @@ HRESULT CorLaunchApplication (
  入出力アプリケーションが読み込まれたプロセスに関する情報へのポインター。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll  
+ **ライブラリ:** MSCorEE.dll  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

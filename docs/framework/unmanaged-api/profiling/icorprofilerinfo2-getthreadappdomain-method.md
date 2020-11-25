@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a11b264-8540-4732-aa35-bc2d95b95b8e
 topic_type:
 - apiref
-ms.openlocfilehash: 70535f8bcee95c2596c43617eb5893e2d92a355b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 010b2dff27ac17906e16fe58729facc7a217b43f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496782"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703760"
 ---
 # <a name="icorprofilerinfo2getthreadappdomain-method"></a>ICorProfilerInfo2::GetThreadAppDomain メソッド
+
 指定したスレッドが現在コードを実行しているアプリケーションドメインの ID を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,6 +35,7 @@ HRESULT GetThreadAppDomain(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `threadId`  
  からスレッドを指定する ID。  
   
@@ -41,6 +43,7 @@ HRESULT GetThreadAppDomain(
  入出力アプリケーションドメインの ID へのポインター。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

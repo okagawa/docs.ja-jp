@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 9bb93fab-57e8-4f9a-9ef3-1794504fa896
 topic_type:
 - apiref
-ms.openlocfilehash: e4fa0a3745200d39a468292e9520b1aeb0e9f1b2
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: b5ca524d223fad7ded0d56def3293eb40be69fa0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860667"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703721"
 ---
 # <a name="iclrdataenummemoryregionscallbackenummemoryregion-method"></a>ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion メソッド
-指定されたメモリ領域を列挙しようとした結果をデバッガーに報告するために、 [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md)によって呼び出されます。  
+
+指定されたメモリ領域を列挙しようとした結果をデバッガーに報告するために、 [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md) によって呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,18 +36,21 @@ HRESULT EnumMemoryRegion (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `address`  
  から列挙されたメモリ領域の開始アドレス。  
   
  `size`  
  からメモリ領域のサイズ (バイト単位)。  
   
-## <a name="remarks"></a>解説  
- メソッド`ICLRDataEnumMemoryRegions::EnumMemoryRegions`は、メモリ領域を列挙するたびに、このコールバックメソッドを呼び出します。 このメソッドがエラーを示す HRESULT を返す場合でも、列挙は続行されます。  
+## <a name="remarks"></a>注釈  
+
+ メソッドは、 `ICLRDataEnumMemoryRegions::EnumMemoryRegions` メモリ領域を列挙するたびに、このコールバックメソッドを呼び出します。 このメソッドがエラーを示す HRESULT を返す場合でも、列挙は続行されます。  
   
  このコールバックによって報告されたリージョンが重複しているか、重複している可能性があります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** ClrData .idl, ClrData .h  

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: eedb9125-1ef1-4000-abfc-7de86e5a1f17
 topic_type:
 - apiref
-ms.openlocfilehash: 4f710ef9741869a2b4fd8473ed3ecf379cfcc56d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 131f5d951e524ef48f2cfe1e3e88ef80ac21c452
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445591"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703682"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2 メソッド
+
 新しいアセンブリのオプションとオプションの名前を設定します。 バインドされていないモジュールを生成する場合は、このメソッドを呼び出さないでください。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT SetAssemblyFile2(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pszFilename`  
  マニフェストファイルの名前。  
   
@@ -49,12 +51,14 @@ HRESULT SetAssemblyFile2(
  構築されるアセンブリの一意の ID を受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK を返します。  
   
 ## <a name="requirements"></a>要件  
+
  Alink. h が必要です。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [IALink2 インターフェイス](ialink2-interface.md)
 - [IALink インターフェイス](ialink-interface.md)

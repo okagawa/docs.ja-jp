@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc663e76-e23f-49a8-bdd5-52cdf1a3b2b3
 topic_type:
 - apiref
-ms.openlocfilehash: e1dd6addd9053ffb6cf2ce23408673d8fca17cb5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ff84bdfb8bbd5331fb94eed766f09137adf9e62c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496842"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703841"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a>ICorProfilerInfo2::GetStaticFieldInfo メソッド
+
 指定したフィールドに適用される静的の種類を示す値を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,6 +36,7 @@ HRESULT GetStaticFieldInfo (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `classId`  
  から静的フィールドが定義されているクラスの ID。  
   
@@ -42,14 +44,16 @@ HRESULT GetStaticFieldInfo (
  から静的フィールドのメタデータトークン。  
   
  `pFieldInfo`  
- 入出力指定されたフィールドが静的かどうかを示す[COR_PRF_STATIC_TYPE](cor-prf-static-type-enumeration.md)列挙体の値へのポインター。存在する場合は、フィールドに適用される静的の種類。  
+ 入出力指定されたフィールドが静的かどうかを示す [COR_PRF_STATIC_TYPE](cor-prf-static-type-enumeration.md) 列挙体の値へのポインター。存在する場合は、フィールドに適用される静的の種類。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  この情報は、静的フィールドのアドレスを取得するために呼び出す関数を決定するために使用できます。  
   
  プロファイラーコードでは、静的フィールドのメタデータを確認して、実際にアドレスがあることを確認する必要があります。 静的リテラル (つまり、定数) はメタデータにのみ存在し、アドレスを持ちません。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
