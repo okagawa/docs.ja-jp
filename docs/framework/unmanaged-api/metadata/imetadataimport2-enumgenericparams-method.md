@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b50488a5-3cf0-483c-82dc-2892a3ec61ac
 topic_type:
 - apiref
-ms.openlocfilehash: 093e3edf0a3c06222ebc56a4876fca08d1b7578f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6b1a8e66eea6caec9dfc8d99e343c987cefa1b0c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84490730"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702759"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams メソッド
+
 指定した TypeDef または MethodDef トークンに関連付けられているジェネリックパラメータートークンの配列の列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,6 +39,7 @@ HRESULT EnumGenericParams (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `phEnum`  
  [入力、出力]列挙子へのポインター。  
   
@@ -57,15 +59,16 @@ HRESULT EnumGenericParams (
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParams`正常に返されました。|  
-|`S_FALSE`|`phEnum`にメンバー要素がありません。 この場合、 `pcGenericParams` は 0 (ゼロ) に設定されます。|  
+|`S_OK`|`EnumGenericParams` 正常に返されました。|  
+|`S_FALSE`|`phEnum` にメンバー要素がありません。 この場合、 `pcGenericParams` は 0 (ゼロ) に設定されます。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

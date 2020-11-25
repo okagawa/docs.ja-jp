@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 166b0761-ed80-4ccd-9973-dc20e61bf8fa
 topic_type:
 - apiref
-ms.openlocfilehash: 4c867a9e263f022fc6f8d90a883562e2560ad1b2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a0777797870a707c0d0f00bc0b4c986448118231
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494658"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702395"
 ---
 # <a name="icorprofilerobjectenumgetcount-method"></a>ICorProfilerObjectEnum::GetCount メソッド
+
 コレクション内の固定されたオブジェクトの合計数を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,12 +35,14 @@ HRESULT GetCount (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pcelt`  
  入出力コレクション内の固定されたオブジェクトの数へのポインター。  
   
  このメソッドは、.NET Framework バージョン 3.5 Service Pack 1 (SP1) 以降のバージョンで常に0を返します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

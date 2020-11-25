@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9d8c3b5-3a2e-4225-95d4-dd052c4532c3
 topic_type:
 - apiref
-ms.openlocfilehash: 5c0fb023dd355f3a9c1ed846913f86b354592ed5
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 35b7bff5d4d778a429ddc1dcd0206e6e8970ee4f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860611"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703500"
 ---
 # <a name="iclrdatatargetgetthreadcontext-method"></a>ICLRDataTarget::GetThreadContext メソッド
+
 ターゲットプロセス内の指定されたスレッドの現在の実行コンテキストを取得します。 このメソッドは、共通言語ランタイムのデータアクセスサービスによって呼び出されます。  
   
 ## <a name="syntax"></a>構文  
@@ -38,6 +39,7 @@ HRESULT GetThreadContext (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `threadID`  
  からターゲットプロセス内のスレッドのオペレーティングシステム識別子。  
   
@@ -50,12 +52,14 @@ HRESULT GetThreadContext (
  `context`  
  入出力コンテキストを配置するバッファーへのポインター。  
   
- `context`バッファー内のデータは、Win32 `CONTEXT`構造体の形式である必要があります。 コンテキストはプロセッサ固有のレジスタデータを指定するため、Win32 `CONTEXT`構造体の定義はプロセッサのアーキテクチャによって異なります。 Win32 `CONTEXT`構造体の定義については、winnt.h ヘッダーファイルを参照してください。  
+ バッファー内のデータは、 `context` Win32 構造体の形式である必要があり `CONTEXT` ます。 コンテキストはプロセッサ固有のレジスタデータを指定するため、Win32 構造体の定義は `CONTEXT` プロセッサのアーキテクチャによって異なります。 Win32 構造体の定義については、Winnt.h ヘッダーファイルを参照してください `CONTEXT` 。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  このメソッドは、デバッグ アプリケーションの作成者によって実装されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** ClrData .idl, ClrData .h  

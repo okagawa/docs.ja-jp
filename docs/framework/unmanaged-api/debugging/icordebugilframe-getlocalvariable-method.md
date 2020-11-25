@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8706356-d50b-4f87-a40c-39c3b7f4fd38
 topic_type:
 - apiref
-ms.openlocfilehash: d6ce5a5cc64a5eb805faa5bb17a42a662940affe
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 54ecce830b928ded115233eb99932cc15a471033
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210255"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703136"
 ---
 # <a name="icordebugilframegetlocalvariable-method"></a>ICorDebugILFrame::GetLocalVariable メソッド
+
 この MSIL (Microsoft 中間言語) スタックフレーム内の指定されたローカル変数の値を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,16 +36,19 @@ HRESULT GetLocalVariable (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `dwIndex`  
  からこの MSIL スタックフレーム内のローカル変数のインデックス。  
   
  `ppValue`  
  [out] 取得した値を表す ICorDebugValue オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  メソッドは、 `GetLocalVariable` MSIL スタックフレーム内または just-in-time (JIT) コンパイルフレームで使用できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

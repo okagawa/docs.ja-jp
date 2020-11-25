@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e1f2c47-81df-4530-826d-96489cd68719
 topic_type:
 - apiref
-ms.openlocfilehash: 89b010706222ad44bccabd94191c42a888584944
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 8de0858abe7db9ae1225f449083e417e13507b3d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212660"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703042"
 ---
 # <a name="icordebugmanagedcallbackstepcomplete-method"></a>ICorDebugManagedCallback::StepComplete メソッド
+
 ステップが完了したことをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,6 +38,7 @@ HRESULT StepComplete (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pAppDomain`  
  からステップが完了したスレッドを含むアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
@@ -49,10 +51,12 @@ HRESULT StepComplete (
  `reason`  
  から個々のステップの結果を示す CorDebugStepReason 列挙値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  デバッグが終了しない限り、必要に応じてステップを続行するためにステッパを使用できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

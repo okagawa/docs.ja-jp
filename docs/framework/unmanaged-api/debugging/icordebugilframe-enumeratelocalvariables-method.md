@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1a67fa1b-2419-4cd0-aad4-6f46a0719b4b
 topic_type:
 - apiref
-ms.openlocfilehash: ad1a91e42f582ce96906da5cbf00ca89acb18499
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 968ceec53aade3d04c500c8247d397ffb71382c1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210294"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703201"
 ---
 # <a name="icordebugilframeenumeratelocalvariables-method"></a>ICorDebugILFrame::EnumerateLocalVariables メソッド
+
 このフレーム内のローカル変数の列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,13 +35,16 @@ HRESULT EnumerateLocalVariables(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ppValueEnum`  
  [出力] このフレームのローカル変数の列挙子である ICorDebugValueEnum オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- `EnumerateLocalVariables`このテキストボックスオブジェクトで表される呼び出しフレームで使用可能なローカル変数を一覧表示できる列挙子を取得します。 この一覧には、一部のローカル変数がアクティブでない可能性があるため、実行中の関数のすべてのローカル変数を含めることはできません。  
+## <a name="remarks"></a>注釈  
+
+ `EnumerateLocalVariables` このテキストボックスオブジェクトで表される呼び出しフレームで使用可能なローカル変数を一覧表示できる列挙子を取得します。 この一覧には、一部のローカル変数がアクティブでない可能性があるため、実行中の関数のすべてのローカル変数を含めることはできません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

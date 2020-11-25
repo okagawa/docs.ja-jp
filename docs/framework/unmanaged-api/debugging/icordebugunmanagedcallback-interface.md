@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: bc71cbca-7d73-40e5-84dd-2109fade3c2a
 topic_type:
 - apiref
-ms.openlocfilehash: dd5baa282d15d121b62b4dc4dd41bcf9ff393570
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 73722c9fbc1571496159c32b0106f25bc05dbe65
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395879"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703019"
 ---
 # <a name="icordebugunmanagedcallback-interface"></a>ICorDebugUnmanagedCallback インターフェイス
+
 共通言語ランタイム (CLR) に直接関連しないネイティブイベントの通知を提供します。  
   
 ## <a name="methods"></a>メソッド  
@@ -30,12 +31,13 @@ ms.locfileid: "83395879"
 |------------|-----------------|  
 |[DebugEvent メソッド](icordebugunmanagedcallback-debugevent-method.md)|ネイティブイベントが発生したことをデバッガーに通知します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

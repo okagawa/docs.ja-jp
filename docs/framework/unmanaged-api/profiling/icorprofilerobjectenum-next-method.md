@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b420433c-5ebe-4986-bba1-97902e6db819
 topic_type:
 - apiref
-ms.openlocfilehash: 850f05520e4146b5016bb574f02aa800dfcaaf32
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e0c10549ab9075c2e7604a9adb18cae8b9a3b32b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494580"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702369"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>ICorProfilerObjectEnum::Next メソッド
+
 シーケンス内の列挙子の現在位置を開始位置として、オブジェクトのシーケンシャルコレクションから、指定された数の連続するオブジェクトを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,6 +38,7 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `celt`  
  [in] 取得するオブジェクトの数。  
   
@@ -47,6 +49,7 @@ HRESULT Next (
  [out] `objects` 配列で実際に返されるモジュールの数へのポインター。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f8e498f8-f93a-4b82-bd22-55bdbf5e8d45
 topic_type:
 - apiref
-ms.openlocfilehash: 2248f99b76aaabff4bd3dc78b6e777a95692bb9c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 83c6af74ebc3eb668317bd64628af17513a2aed6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494524"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702356"
 ---
 # <a name="icorprofilerobjectenumskip-method"></a>ICorProfilerObjectEnum::Skip メソッド
+
 指定された数の要素がスキップされるように、この列挙子のカーソルを現在の位置から進めます。  
   
 ## <a name="syntax"></a>構文  
@@ -34,13 +35,16 @@ HRESULT Skip (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `celt`  
  からスキップする要素の数。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  この列挙子のカーソルの新しい位置は、(現在位置) + `celt` です。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

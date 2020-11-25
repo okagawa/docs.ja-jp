@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b3fc1e6c-bcb6-4915-baf8-7dc0a31b8724
 topic_type:
 - apiref
-ms.openlocfilehash: 8f6fbc570e7ea85aca5b365611d58a1700fb27cd
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 26b345567699c5780827ed835cff13069ea8f609
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84490719"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702746"
 ---
 # <a name="imetadataimport2enummethodspecs-method"></a>IMetaDataImport2::EnumMethodSpecs メソッド
+
 指定した MethodDef または MemberRef トークンに関連付けられている MethodSpec トークンの配列の列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,6 +39,7 @@ HRESULT EnumMethodSpecs (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `phEnum`  
  [入力、出力]の列挙子へのポインター `rMethodSpecs` 。  
   
@@ -57,15 +59,16 @@ HRESULT EnumMethodSpecs (
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSpecs`正常に返されました。|  
-|`S_FALSE`|`phEnum`にメンバー要素がありません。 この場合、 `pcMethodSpecs` は 0 (ゼロ) に設定されます。|  
+|`S_OK`|`EnumMethodSpecs` 正常に返されました。|  
+|`S_FALSE`|`phEnum` にメンバー要素がありません。 この場合、 `pcMethodSpecs` は 0 (ゼロ) に設定されます。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d91c3d89-8022-4a4c-a2a2-a8af2c387507
 topic_type:
 - apiref
-ms.openlocfilehash: 3626998c456e23fb922ae45a68bedb0e45a7ccba
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d335beecc12e0c1c895e42888ad7172f78062ff7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84490433"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702538"
 ---
 # <a name="imetadataimport2getpekind-method"></a>IMetaDataImport2::GetPEKind メソッド
+
 現在のメタデータスコープで定義されている、ポータブル実行可能 (PE) ファイル (通常は DLL または EXE ファイル) 内のコードの性質を示す値を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,13 +36,15 @@ HRESULT GetPEKind (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pdwPEKind`  
- 入出力PE ファイルを記述する[Corpekind](corpekind-enumeration.md)列挙型の値へのポインター。  
+ 入出力PE ファイルを記述する [Corpekind](corpekind-enumeration.md) 列挙型の値へのポインター。  
   
  `pdwMachine`  
  入出力コンピューターのアーキテクチャを識別する値へのポインター。 使用可能な値については、次のセクションを参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  パラメーターによって参照される値には、 `pdwMachine` 次のいずれかを指定できます。  
   
 |値|コンピューターのアーキテクチャ|  
@@ -51,11 +54,12 @@ HRESULT GetPEKind (
 |IMAGE_FILE_MACHINE_AMD64<br /><br /> 0x8664|X64|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

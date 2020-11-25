@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c5fee4a0-b132-4e5e-8730-e586ce314b9a
 topic_type:
 - apiref
-ms.openlocfilehash: 8a1cdff313dae73e3f5e8918ff2ef395c80b115d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8beaea0b7493b7cea76466bb15355cfc5c6d5c7d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84490628"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702707"
 ---
 # <a name="imetadataimport2getgenericparamconstraintprops-method"></a>IMetaDataImport2::GetGenericParamConstraintProps メソッド
+
 指定された制約トークンによって表されるジェネリックパラメーター制約に関連付けられているメタデータを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT GetGenericParamConstraintProps (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `gpc`  
  からメタデータを返す対象のジェネリックパラメーター制約へのトークン。  
   
@@ -46,11 +48,12 @@ HRESULT GetGenericParamConstraintProps (
  入出力の制約を表す TypeDef、TypeRef、または TypeSpec トークンへのポインター `ptGenericParam` 。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
