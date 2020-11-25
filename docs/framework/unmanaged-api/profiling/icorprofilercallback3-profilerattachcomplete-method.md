@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 257d6076-06e0-4d93-bb33-651fbb2b92d7
 topic_type:
 - apiref
-ms.openlocfilehash: bcc938ff9322fca4f45366fdc695e0c3901484b5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a16e77619ec85ebdf47a2b821309bbb3af63282b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499663"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705320"
 ---
 # <a name="icorprofilercallback3profilerattachcomplete-method"></a>ICorProfilerCallback3::ProfilerAttachComplete メソッド
-プロファイラーが[ICorProfilerInfo3:: EnumJITedFunctions](icorprofilerinfo3-enumjitedfunctions-method.md)および[ICorProfilerInfo3:: enummodules](icorprofilerinfo3-enummodules-method.md)のキャッチアップメソッドを呼び出せるようになったことを示すために、共通言語ランタイム (CLR) によって呼び出されます。  
+
+プロファイラーが [ICorProfilerInfo3:: EnumJITedFunctions](icorprofilerinfo3-enumjitedfunctions-method.md) および [ICorProfilerInfo3:: enummodules](icorprofilerinfo3-enummodules-method.md) のキャッチアップメソッドを呼び出せるようになったことを示すために、共通言語ランタイム (CLR) によって呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,6 +33,7 @@ HRESULT ProfilerAttachComplete ();
 ```  
   
 ## <a name="remarks"></a>解説  
+
  `ProfilerAttachComplete`コールバックは、 [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md)メソッドが呼び出された後に発行されます。 これは、次のことを示します。  
   
 - `InitializeForAttach` でプロファイラーによって要求されたコールバックがアクティブ化されました。  
@@ -41,6 +43,7 @@ HRESULT ProfilerAttachComplete ();
  CLR はこのコールバックからの戻り値を無視します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

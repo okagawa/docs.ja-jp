@@ -4,12 +4,12 @@ description: '制御フローの構造とバインディングを使用してシ
 ms.date: 08/15/2020
 f1_keywords:
 - let!_FS
-ms.openlocfilehash: 1649d8c57ea9e025d40ef6d39d92b96795964150
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: bc3842b6f1075d68d1997e78c8bd8485731fca52
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812160"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705307"
 ---
 # <a name="computation-expressions"></a>コンピュテーション式
 
@@ -24,7 +24,7 @@ F # のコンピュテーション式は、制御フローの構造とバイン�
 - Effectful の計算
 - 注釈の計算
 
-一般に、アプリケーションの特定の部分で実行する必要がある *状況依存* の計算があります。 コンテキストに依存するコードを記述することは困難な場合があります。これは、特定のコンテキストの外では、抽象化を行わずに "リーク" の計算を簡単に行うことができるためです。 多くの場合、これらの抽象化は自分で記述することが困難です。そのため、F # には **コンピュテーション式**と呼ばれる汎用的な方法があります。
+一般に、アプリケーションの特定の部分で実行する必要がある *状況依存* の計算があります。 コンテキストに依存するコードを記述することは困難な場合があります。これは、特定のコンテキストの外では、抽象化を行わずに "リーク" の計算を簡単に行うことができるためです。 多くの場合、これらの抽象化は自分で記述することが困難です。そのため、F # には **コンピュテーション式** と呼ばれる汎用的な方法があります。
 
 コンピュテーション式は、文脈に依存した計算をエンコードするための統一された構文と抽象化モデルを提供します。
 
@@ -181,7 +181,7 @@ printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
 キーワードは、 `return` コンピュテーション式に対応する型の値をラップします。 を使用した計算式 `yield` とは別に、計算式を "完了" するために使用されます。
 
 ```fsharp
-let req = // 'req' is of type is 'Async<data>'
+let req = // 'req' is of type 'Async<data>'
     async {
         let! data = fetch url
         return data
@@ -198,7 +198,7 @@ let result = Async.RunSynchronously req
 キーワードは、 `return!` コンピュテーション式の値を認識し、その結果を、コンピュテーション式に対応する型にラップします。
 
 ```fsharp
-let req = // 'req' is of type is 'Async<data>'
+let req = // 'req' is of type 'Async<data>'
     async {
         return! fetch url
     }
@@ -410,7 +410,7 @@ comp |> step |> step
 comp |> step |> step |> step |> step
 ```
 
-コンピュテーション式には基になる型があり、この式はを返します。 基になる型は、計算された結果または実行可能な遅延計算を表すことができます。また、一部の型のコレクションを反復処理する方法を提供する場合もあります。 前の例では、基になる型は **最終的**にでした。 シーケンス式の場合、基になる型は <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> です。 クエリ式の場合、基になる型は <xref:System.Linq.IQueryable?displayProperty=nameWithType> です。 非同期ワークフローの場合、基になる型は [`Async`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync-1.html) です。 オブジェクトは、 `Async` 結果を計算するために実行する作業を表します。 たとえば、 [`Async.RunSynchronously`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html#RunSynchronously) を呼び出して計算を実行し、その結果を返します。
+コンピュテーション式には基になる型があり、この式はを返します。 基になる型は、計算された結果または実行可能な遅延計算を表すことができます。また、一部の型のコレクションを反復処理する方法を提供する場合もあります。 前の例では、基になる型は **最終的** にでした。 シーケンス式の場合、基になる型は <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> です。 クエリ式の場合、基になる型は <xref:System.Linq.IQueryable?displayProperty=nameWithType> です。 非同期ワークフローの場合、基になる型は [`Async`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync-1.html) です。 オブジェクトは、 `Async` 結果を計算するために実行する作業を表します。 たとえば、 [`Async.RunSynchronously`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html#RunSynchronously) を呼び出して計算を実行し、その結果を返します。
 
 ## <a name="custom-operations"></a>カスタム操作
 

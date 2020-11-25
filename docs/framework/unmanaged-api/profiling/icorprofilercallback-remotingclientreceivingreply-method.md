@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 15cfc300-8231-4ecb-9a04-19851c3eb484
 topic_type:
 - apiref
-ms.openlocfilehash: 0a21924008bcbfa0894218f57aee559a564f8003
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 058c66af85da6c902e3d628e1b1479bb88c4fa85
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499975"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704852"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>ICorProfilerCallback::RemotingClientReceivingReply メソッド
+
 リモート処理呼び出しのサーバー側の部分が完了し、クライアントが応答を受信および処理するようになったことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,8 +35,9 @@ HRESULT RemotingClientReceivingReply(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pCookie`  
- から次の条件下で[ICorProfilerCallback:: RemotingServerSendingReply](icorprofilercallback-remotingserversendingreply-method.md)で指定された値に対応する値。  
+ から次の条件下で [ICorProfilerCallback:: RemotingServerSendingReply](icorprofilercallback-remotingserversendingreply-method.md) で指定された値に対応する値。  
   
 - リモート処理 GUID クッキーはアクティブです。  
   
@@ -46,9 +48,10 @@ HRESULT RemotingClientReceivingReply(
  これにより、リモート処理呼び出しを簡単に組み合わせることができます。  
   
  `fIsAsync`  
- から`true`呼び出しが非同期の場合は、それ以外の場合はとなる `false` 値。  
+ から `true` 呼び出しが非同期の場合は、それ以外の場合はとなる `false` 値。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

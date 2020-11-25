@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5396c4c3-4ec3-4e3a-a38d-d65b21f0a2fc
 topic_type:
 - apiref
-ms.openlocfilehash: d49992b1f4b25586f6171a51b351a25d453560f2
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 7eb7fb55a5077d2914eb85a67ca62163a1aa8cc0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212153"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704592"
 ---
 # <a name="icordebugmanagedcallback2functionremapcomplete-method"></a>ICorDebugManagedCallback2::FunctionRemapComplete メソッド
+
 コードの実行が編集された関数の新しいバージョンに切り替わったことをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT FunctionRemapComplete (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pAppDomain`  
  から編集された関数を含むアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
@@ -45,10 +47,12 @@ HRESULT FunctionRemapComplete (
  `pFunction`  
  からスレッドで現在実行されている関数のバージョンを表す、のオブジェクトへのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  このコールバックは、以前に存在していたすべての steppers を再作成する機会をデバッガーに与えます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

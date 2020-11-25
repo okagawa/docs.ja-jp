@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 93c9a369-225f-4eff-9b78-3fbee4902cf1
 topic_type:
 - apiref
-ms.openlocfilehash: 629e18b6cd2fd7910804ecc608a45d2406dddea1
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 70b28ab0ca73988093eadb9628142fecd9442948
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007495"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705476"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType 列挙型
+
 メタデータトークンの種類を示します。  
   
 ## <a name="syntax"></a>構文  
@@ -90,10 +91,12 @@ typedef enum CorTokenType {
 |`mdtName`|`mdName`トークン。|  
 |`mdtBaseType`|使用されていません。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
+
  各値は、対応するメタデータトークンの上位バイトの値に相当します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorHdr. h  

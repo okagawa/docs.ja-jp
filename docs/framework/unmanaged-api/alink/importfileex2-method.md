@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 02c789fd-16fc-48c6-9619-56e87e2a37ca
 topic_type:
 - apiref
-ms.openlocfilehash: 7e270dbfc63c03e77cb4b0694296e48c2035b8a6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 59149e79e926a0b9a3e549e013bf178e54ddf6fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445696"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705177"
 ---
 # <a name="importfileex2-method"></a>ImportFileEx2 メソッド
-アセンブリとバインドされていないモジュールをインポートします。 このメソッドは[Importfile メソッド](importfile-method.md)に似ていますが、インポートされるファイルがディスク上に存在しない場合でも機能します。  
+
+アセンブリとバインドされていないモジュールをインポートします。 このメソッドは [Importfile メソッド](importfile-method.md)に似ていますが、インポートされるファイルがディスク上に存在しない場合でも機能します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,6 +41,7 @@ HRESULT ImportFileEx2(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pszFilename`  
  インポートするファイルの名前。  
   
@@ -47,7 +49,7 @@ HRESULT ImportFileEx2(
  ターゲットファイルの名前 (省略可能)。  
   
  `pAssemblyScopeIn`  
- 省略可能なインポートスコープ[IMetaDataAssemblyImport インターフェイス](../metadata/imetadataassemblyimport-interface.md)インターフェイス。  
+ 省略可能なインポートスコープ [IMetaDataAssemblyImport インターフェイス](../metadata/imetadataassemblyimport-interface.md) インターフェイス。  
   
  `fSmartImport`  
  TRUE の場合、ImportTypes が使用されます。それ以外の場合は、インポートを手動で実行する必要があります。  
@@ -59,18 +61,20 @@ HRESULT ImportFileEx2(
  アセンブリまたはファイルの一意の ID を受け取ります。  
   
  `ppAssemblyScope`  
- アセンブリインポートスコープ[IMetaDataAssemblyImport インターフェイス](../metadata/imetadataassemblyimport-interface.md)インターフェイスを受け取ります。 ファイルがアセンブリでない場合は NULL を指定できます。  
+ アセンブリインポートスコープ [IMetaDataAssemblyImport インターフェイス](../metadata/imetadataassemblyimport-interface.md) インターフェイスを受け取ります。 ファイルがアセンブリでない場合は NULL を指定できます。  
   
  `pdwCountOfScopes`  
  インポートされたファイルまたはスコープの数を受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK を返します。  
   
 ## <a name="requirements"></a>要件  
+
  Alink. h が必要です。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [IALink2 インターフェイス](ialink2-interface.md)
 - [IALink インターフェイス](ialink-interface.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 383d20b0-efe9-4e71-8fb8-1186b2e7d0c0
 topic_type:
 - apiref
-ms.openlocfilehash: e6cf0aa6f731d0a417e1a2be0ca1d0f8c9299379
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 2c180a135608350b0feec3f419be98f4f428b186
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008275"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704514"
 ---
 # <a name="iceegen-interface"></a>ICeeGen インターフェイス
+
 動的なコード コンパイルのためのメソッドを提供します。  
   
  このインターフェイスは互換性のために残されています。使用しないでください。  
@@ -46,12 +47,13 @@ ms.locfileid: "84008275"
 |[GetStringSection メソッド](iceegen-getstringsection-method.md)|互換性のために残されています。 指定したハンドルによって参照されるコードセクションの文字列表現を取得します。|  
 |[TruncateSection メソッド](iceegen-truncatesection-method.md)|互換性のために残されています。 指定したコードセクションを指定した長さだけ切り捨てます。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: e2501fc8-b2bc-4dcc-9205-e3acd5a53ffe
 topic_type:
 - apiref
-ms.openlocfilehash: b5af877c26c20bf64a27618bf24a7bce5b410419
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 553a82475f241fac3a56c1fb009e3ed56b2c14f8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007781"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704254"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps メソッド
-以前の呼び出し[プロパティメソッド](imetadataemit-defineproperty-method.md)の呼び出しで定義されたプロパティのメタデータに格納されている機能を設定します。  
+
+以前の呼び出し [プロパティメソッド](imetadataemit-defineproperty-method.md)の呼び出しで定義されたプロパティのメタデータに格納されている機能を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,6 +42,7 @@ HRESULT SetPropertyProps (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pr`  
  から変更するプロパティのトークン  
   
@@ -65,12 +67,13 @@ HRESULT SetPropertyProps (
  `rmdOtherMethods[]`  
  からプロパティに関連付けられている他のメソッドの配列。 トークンを使用して、この配列を終了 `mdTokenNil` します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0dfd7cdc-c116-4e25-b56a-ac7b0378c942
 topic_type:
 - apiref
-ms.openlocfilehash: 0efda458d51677fcd16140cd0f0a835b76c20173
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: b120b854e1787824808dd64d95b0fa78ba6c9fa2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617179"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705489"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo 関数
+
 アプリケーションによって要求された共通言語ランタイム (CLR) に関するバージョンとディレクトリ情報を取得します。  
   
  この関数は .NET Framework 4 で非推奨とされました。  
@@ -46,6 +47,7 @@ HRESULT GetRequestedRuntimeInfo (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pExe`  
  からアプリケーションの名前。  
   
@@ -56,10 +58,10 @@ HRESULT GetRequestedRuntimeInfo (
  からに関連付けられている構成ファイルの名前 `pExe` 。  
   
  `startupFlags`  
- から1つ以上の[STARTUP_FLAGS](startup-flags-enumeration.md)列挙値。  
+ から1つ以上の [STARTUP_FLAGS](startup-flags-enumeration.md) 列挙値。  
   
  `runtimeInfoFlags`  
- から1つ以上の[RUNTIME_INFO_FLAGS](runtime-info-flags-enumeration.md)列挙値。  
+ から1つ以上の [RUNTIME_INFO_FLAGS](runtime-info-flags-enumeration.md) 列挙値。  
   
  `pDirectory`  
  入出力正常に完了したときのランタイムへのディレクトリパスを格納するバッファー。  
@@ -80,6 +82,7 @@ HRESULT GetRequestedRuntimeInfo (
  入出力バージョン文字列の長さへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
+
  このメソッドは、次の値に加えて、Winerror.h で定義されている標準のコンポーネントオブジェクトモデル (COM) エラーコードを返します。  
   
 |リターン コード|説明|  
@@ -87,7 +90,8 @@ HRESULT GetRequestedRuntimeInfo (
 |S_OK|メソッドは正常に完了しました。|  
 |ERROR_INSUFFICIENT_BUFFER|ディレクトリのバッファーが、ディレクトリパスを格納するのに十分な大きさではありません。<br /><br /> または<br /><br /> バージョンバッファーが、バージョン文字列を格納するのに十分な大きさではありません。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  メソッドは、 `GetRequestedRuntimeInfo` プロセスに読み込まれたバージョンに関するランタイム情報を返します。これは、必ずしもコンピューターにインストールされている最新バージョンではありません。  
   
  .NET Framework バージョン2.0 では、次の方法でメソッドを使用して、インストールされている最新のバージョンに関する情報を取得でき `GetRequestedRuntimeInfo` ます。  
@@ -113,11 +117,12 @@ HRESULT GetRequestedRuntimeInfo (
 - RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll  
+ **ライブラリ:** MSCorEE.dll  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

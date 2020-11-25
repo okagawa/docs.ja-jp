@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 30817373-0a21-49c1-a0c4-8e8daeecb8db
 topic_type:
 - apiref
-ms.openlocfilehash: 308c501e17446719067d2dc0580d698c1770bf53
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 95ad3cbea4269173f22e662d15772ff97f7ee900
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610666"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705450"
 ---
 # <a name="isymunmanagedsymbolsearchinfo-interface"></a>ISymUnmanagedSymbolSearchInfo インターフェイス
-検索パスに関する情報を取得するメソッドを提供します。 このインターフェイスを取得するには `QueryInterface` 、 [ISymUnmanagedReader](isymunmanagedreader-interface.md)インターフェイスを実装するオブジェクトに対してを呼び出します。  
+
+検索パスに関する情報を取得するメソッドを提供します。 このインターフェイスを取得するには `QueryInterface` 、 [ISymUnmanagedReader](isymunmanagedreader-interface.md) インターフェイスを実装するオブジェクトに対してを呼び出します。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -33,6 +34,7 @@ ms.locfileid: "83610666"
 |[GetSearchPathLength メソッド](isymunmanagedsymbolsearchinfo-getsearchpathlength-method.md)|検索パスの長さを取得します。|  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

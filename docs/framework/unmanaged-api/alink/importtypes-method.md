@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 351d4b4c-c939-486d-9471-51914a55f471
 topic_type:
 - apiref
-ms.openlocfilehash: 76d2b163f959111923bffb1348890f6fbb29828e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 762f78900add70238971978ceecda089d0c725ce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445680"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705112"
 ---
 # <a name="importtypes-method"></a>ImportTypes メソッド
+
 [Importfile メソッド](importfile-method.md)を使用してインポートされた各スコープからの型のインポートを開始します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,6 +39,7 @@ HRESULT ImportTypes(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `AssemblyID`  
  インポート先のアセンブリの ID。  
   
@@ -51,18 +53,20 @@ HRESULT ImportTypes(
  このスコープ内の型の列挙子ハンドルを受け取ります。  
   
  `ppImportScope`  
- 必要に応じて、 [IMetaDataImport インターフェイス](../metadata/imetadataimport-interface.md)インターフェイスを受け取ります。  
+ 必要に応じて、 [IMetaDataImport インターフェイス](../metadata/imetadataimport-interface.md) インターフェイスを受け取ります。  
   
  `pdwCountOfTypes`  
  必要に応じて、指定されたスコープ内の型の数を受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK を返します。  
   
 ## <a name="requirements"></a>要件  
+
  Alink. h が必要です。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [IALink インターフェイス](ialink-interface.md)
 - [IALink2 インターフェイス](ialink2-interface.md)

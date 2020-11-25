@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 9a6be861-c260-4a35-acea-3372ea515a0f
 topic_type:
 - apiref
-ms.openlocfilehash: 17f158167d4075783d1aa594fb61cc9e28d30dd7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d02bc53676dd5afb0222a1ea366a8f2bd1f94f62
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446984"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705229"
 ---
 # <a name="importfile2-method"></a>ImportFile2 メソッド
-アセンブリとバインドされていないモジュールをインポートします。 このメソッドは[Importfile メソッド](importfile-method.md)に似ていますが、インポートされるファイルがディスク上に存在しない場合でも機能します。  
+
+アセンブリとバインドされていないモジュールをインポートします。 このメソッドは [Importfile メソッド](importfile-method.md)に似ていますが、インポートされるファイルがディスク上に存在しない場合でも機能します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,6 +40,7 @@ HRESULT ImportFile2(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pszFilename`  
  インポートするファイルの名前。  
   
@@ -46,7 +48,7 @@ HRESULT ImportFile2(
  アセンブリにリンクされているファイルの名前を変更するために使用できる省略可能な出力ファイル名です。  
   
  `pAssemblyScopeIn`  
- 省略可能なスコープ[IMetaDataAssemblyImport インターフェイス](../metadata/imetadataassemblyimport-interface.md)インターフェイス。  
+ 省略可能なスコープ [IMetaDataAssemblyImport インターフェイス](../metadata/imetadataassemblyimport-interface.md) インターフェイス。  
   
  `fSmartImport`  
  TRUE の場合、ImportTypes が使用されます。それ以外の場合は、インポートを手動で実行する必要があります。  
@@ -61,9 +63,11 @@ HRESULT ImportFile2(
  インポートされたファイルまたはスコープの検出されたを受信します。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK を返します。  
   
 ## <a name="requirements"></a>要件  
+
  Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
