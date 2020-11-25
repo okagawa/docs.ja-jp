@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 94e02e31-67ea-4b00-8148-a46740a4571d
 topic_type:
 - apiref
-ms.openlocfilehash: 5e88652ff75223e30e6abc454f1e1af91494c7b2
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 9407dda7aab337f667cd5043b562d0eac94f0f04
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396703"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711924"
 ---
 # <a name="icordebugtype-interface"></a>ICorDebugType インターフェイス
+
 基本または複合 (つまり、ユーザー定義) のいずれかの型を表します。 型がジェネリックの場合、`ICorDebugType` はインスタンス化されたジェネリック型を表します。  
   
 ## <a name="methods"></a>メソッド  
@@ -36,8 +37,9 @@ ms.locfileid: "83396703"
 |[GetStaticFieldValue メソッド](icordebugtype-getstaticfieldvalue-method.md)|指定したスタックフレーム内の指定したフィールドトークンによって参照される静的フィールドの値を格納する、ICorDebugValue へのインターフェイスポインターを取得します。|  
 |[GetType メソッド](icordebugtype-gettype-method.md)|このによって参照される共通言語ランタイムのネイティブ型を記述する CorElementType 値を取得し <xref:System.Type> `ICorDebugType` ます。|  
   
-## <a name="remarks"></a>解説  
- 型がジェネリックの場合、は `ICorDebugClass` インスタンス型を表します。 インターフェイスは、 `ICorDebugType` インスタンス化されたジェネリック型を表します。 たとえば、ハッシュテーブル \< K、V> はで表さ `ICorDebugClass` れますが、hashtable \< Int32、String> はによって表さ `ICorDebugType` れます。  
+## <a name="remarks"></a>注釈  
+
+ 型がジェネリックの場合、は `ICorDebugClass` インスタンス型を表します。 インターフェイスは、 `ICorDebugType` インスタンス化されたジェネリック型を表します。 たとえば、Hashtable はに \<K, V> よって表さ `ICorDebugClass` れますが、hashtable は \<Int32, String> によって表さ `ICorDebugType` れます。  
   
  非ジェネリック型は、との両方で表され `ICorDebugClass` `ICorDebugType` ます。 後者のインターフェイスは、型のインスタンス化を処理するために .NET Framework バージョン2.0 で導入されました。  
   
@@ -45,6 +47,7 @@ ms.locfileid: "83396703"
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

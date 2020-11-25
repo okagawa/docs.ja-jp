@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3c24e552-fc69-4971-b65a-a3e4b5f7f1e8
 topic_type:
 - apiref
-ms.openlocfilehash: 8e067dc4943e6847177c13a683703e3a649a49e4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 817b3a18b047bfca1f3a7c7099920a12e6253f58
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503823"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712834"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>IMetaDataEmit2::DefineMethodSpec メソッド
+
 メソッドのジェネリックインスタンスを作成し、その定義へのトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,6 +38,7 @@ HRESULT DefineMethodSpec (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `tkParent`  
  からジェネリックインスタンスを作成するメソッドのトークン。 トークンは、型または型である必要があり `mdMethodDef` `mdMemberRef` ます。  
   
@@ -50,11 +52,12 @@ HRESULT DefineMethodSpec (
  入出力メソッドのメタデータシグネチャ定義へのトークン。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

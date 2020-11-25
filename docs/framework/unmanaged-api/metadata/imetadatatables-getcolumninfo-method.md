@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 68c160ea-ae7d-4750-985d-a038b2c8e7d9
 topic_type:
 - apiref
-ms.openlocfilehash: a044924810016eea60682b8765aeee448b552f0d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 227d9ab67ab3091508232be3018ca520a6b5dcc6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501197"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711053"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo メソッド
+
 指定されたテーブル内の指定された列に関するデータを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,6 +40,7 @@ HRESULT GetColumnInfo (
 ```  
   
 ## <a name="parameters"></a>パラメーター
+
 =======
 
  `ixTbl`  
@@ -59,7 +61,7 @@ HRESULT GetColumnInfo (
  `ppName`  
  入出力列名へのポインターへのポインター。  
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 返される列の型は、値の範囲内にあります。
 
@@ -67,30 +69,31 @@ HRESULT GetColumnInfo (
 |--------------------------|---------------|-----------------------------------|
 | `0`..`iRidMax`<br>(0.. 63)   | Rid           | **IsRidType**<br>**IsRidOrToken** |
 | `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | コード化されたトークン | **IsCodedTokenType** <br>**IsRidOrToken** |
-| `iSHORT`(96)            | Int16         | **IsFixedType**                   |
-| `iUSHORT`(97)           | UInt16        | **IsFixedType**                   |
-| `iLONG`(98)             | Int32         | **IsFixedType**                   |
-| `iULONG`(99)            | UInt32        | **IsFixedType**                   |
-| `iBYTE`(100)            | Byte          | **IsFixedType**                   |
-| `iSTRING`(101)          | String        | **IsHeapType**                    |
-| `iGUID`(102)            | Guid          | **IsHeapType**                    |
-| `iBLOB`(103)            | BLOB          | **IsHeapType**                    |
+| `iSHORT` (96)            | Int16         | **IsFixedType**                   |
+| `iUSHORT` (97)           | UInt16        | **IsFixedType**                   |
+| `iLONG` (98)             | Int32         | **IsFixedType**                   |
+| `iULONG` (99)            | UInt32        | **IsFixedType**                   |
+| `iBYTE` (100)            | Byte          | **IsFixedType**                   |
+| `iSTRING` (101)          | String        | **IsHeapType**                    |
+| `iGUID` (102)            | Guid          | **IsHeapType**                    |
+| `iBLOB` (103)            | BLOB          | **IsHeapType**                    |
 
-*ヒープ*に格納されている値 (つまり、 `IsHeapType == true` ) は次を使用して読み取ることができます。
+*ヒープ* に格納されている値 (つまり、 `IsHeapType == true` ) は次を使用して読み取ることができます。
 
 - `iSTRING`: **Imetadatatables**
 - `iGUID`: **Imetadatatables 実行できます。 GetGUID**
 - `iBLOB`: **Imetadatatables 実行できます。 GetBlob**
 
 > [!IMPORTANT]
-> 上の表で定義されている定数を使用するには、 `#define _DEFINE_META_DATA_META_CONSTANTS` *cor*ヘッダーファイルによって提供されるディレクティブをインクルードします。
+> 上の表で定義されている定数を使用するには、 `#define _DEFINE_META_DATA_META_CONSTANTS` *cor* ヘッダーファイルによって提供されるディレクティブをインクルードします。
 
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 41af93c7-e448-4251-8d4d-413d38c635f2
 topic_type:
 - apiref
-ms.openlocfilehash: 4b2689f04228c9ecbbbb18531a0aefd3c40e3072
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 37bf800f27754d1bf80aece962b7cbb85b1cbedc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83377976"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712184"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>ICorDebugRemote::CreateProcessEx メソッド
+
 デバッガーでリモートコンピューター上のプロセスを起動します。  
   
 ## <a name="syntax"></a>構文  
@@ -46,8 +47,9 @@ HRESULT CreateProcessEx (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pRemoteTarget`  
- からツールの[ターゲットインターフェイス](icordebugremotetarget-interface.md)を指すポインター。 プロセスを起動するリモートコンピューターを決定するために使用されます。  
+ からツールの [ターゲットインターフェイス](icordebugremotetarget-interface.md)を指すポインター。 プロセスを起動するリモートコンピューターを決定するために使用されます。  
   
  `lpApplicationName`  
  から起動されたプロセスによって実行されるモジュールを指定する、null で終わる文字列へのポインター。 モジュールは、呼び出し元プロセスのセキュリティコンテキストで実行されます。  
@@ -86,16 +88,19 @@ HRESULT CreateProcessEx (
  入出力プロセスを表す "いいプロセスインターフェイス" オブジェクトのアドレスへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
+
  S_OK  
  リモートコンピューターでプロセスが正常に起動され、デバッグのために "のプロセスインターフェイス" が返されました。  
   
  E_FAIL (またはその他の E_ リターン コード)  
  リモートコンピューターでプロセスを起動できず、デバッグのために "のプロセスインターフェイス" を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  混合モードのデバッグは、Silverlight ではサポートされていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug .idl  

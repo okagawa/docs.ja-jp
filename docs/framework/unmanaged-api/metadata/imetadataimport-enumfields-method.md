@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1d23247e-c58c-45db-afd8-83aa89cde18e
 topic_type:
 - apiref
-ms.openlocfilehash: 1ff2dd64dc4797bc485550c30f7204644a3adb47
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 74035e9551cb1d622b326e511c3884e1eadf057f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492279"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711592"
 ---
 # <a name="imetadataimportenumfields-method"></a>IMetaDataImport::EnumFields メソッド
+
 指定した TypeDef トークンによって参照される型の FieldDef トークンを列挙します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,6 +39,7 @@ HRESULT EnumFields (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `phEnum`  
  [入力、出力]列挙子へのポインター。  
   
@@ -57,15 +59,16 @@ HRESULT EnumFields (
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFields`正常に返されました。|  
+|`S_OK`|`EnumFields` 正常に返されました。|  
 |`S_FALSE`|列挙するフィールドがありません。 この場合、 `pcTokens` は0になります。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

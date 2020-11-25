@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 82f596a4-483d-4509-b0c5-a84c53c3da1b
 topic_type:
 - apiref
-ms.openlocfilehash: b7a38d28b55842e9358bd9c7019b84c529526613
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6c16b02a5ae323ba80d44937f322810022dfa9f5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617166"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711638"
 ---
 # <a name="getrequestedruntimeversion-function"></a>GetRequestedRuntimeVersion 関数
+
 指定したアプリケーションによって要求された共通言語ランタイム (CLR) のバージョン番号を取得します。 そのバージョンがインストールされていない場合は、要求されるバージョンより前にインストールされた最も新しいバージョンを取得します。  
   
  この関数は .NET Framework 4 で非推奨とされました。  
@@ -39,6 +40,7 @@ HRESULT GetRequestedRuntimeVersion (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pExe`  
  からアプリケーションの名前。  
   
@@ -52,6 +54,7 @@ HRESULT GetRequestedRuntimeVersion (
  入出力バージョン番号文字列の長さへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
+
  このメソッドは、次の値に加えて、Winerror.h で定義されている標準のコンポーネントオブジェクトモデル (COM) エラーコードを返します。  
   
 |リターン コード|説明|  
@@ -61,11 +64,12 @@ HRESULT GetRequestedRuntimeVersion (
 |E_POINTER|`pdwLength` が null です。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll  
+ **ライブラリ:** MSCorEE.dll  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

@@ -8,17 +8,18 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: c383a2e221e61770d3c28a65c561c48f6059b6d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 23b91a2a58c6e76b31b94e0fa3661dfbc8e18e33
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136561"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712769"
 ---
 # <a name="icorprofilercallback9-interface"></a>ICorProfilerCallback9 インターフェイス
+
 [.NET Framework 4.7.2 以降のバージョンでサポートされています]  
 
- 動的メソッドがガベージコレクションされ、その後アンロードされたことをプロファイラーに通知するために、共通言語ランタイムによって使用されるコールバックメソッドを提供する[ICorProfilerCallback8](icorprofilercallback8-interface.md)のサブクラスです。  
+ 動的メソッドがガベージコレクションされ、その後アンロードされたことをプロファイラーに通知するために、共通言語ランタイムによって使用されるコールバックメソッドを提供する [ICorProfilerCallback8](icorprofilercallback8-interface.md) のサブクラスです。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -26,12 +27,13 @@ ms.locfileid: "73136561"
 |------------|-----------------|  
 |[DynamicMethodUnloaded メソッド](ICorProfilerCallback9-dynamicmethodunloaded-method.md)|動的メソッドがガベージコレクションされ、その後アンロードされたことをプロファイラーに通知します。|  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
-**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+**.NET Framework のバージョン:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
 
 ## <a name="see-also"></a>関連項目
 

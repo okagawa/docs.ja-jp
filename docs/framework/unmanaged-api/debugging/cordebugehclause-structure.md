@@ -12,14 +12,15 @@ api_type:
 ms.assetid: 0e350a1b-6997-46d0-bfc5-962a5011ef43
 topic_type:
 - apiref
-ms.openlocfilehash: a889d6ba00c4a0eb96a9923a7dbe52f3b93aaba5
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 225523280a2e1e0d8f51321e9dd865d901e725ba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795962"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712704"
 ---
 # <a name="cordebugehclause-structure"></a>CorDebugEHClause 構造体
+
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
   
  中間言語 (IL) コードの特定の部分の例外処理 (EH) 句を表しています。  
@@ -50,8 +51,9 @@ typedef struct _CorDebugEHClause {
 |`ClassToken`|型に基づく例外ハンドラーのメタデータ トークン。|  
 |`FilterOffset`|フィルターに基づく例外ハンドラーのメソッド本体の先頭からのオフセット (バイト単位)。|  
   
-## <a name="remarks"></a>Remarks  
- 値の`CoreDebugEHClause`配列は、 [GetEHClauses](icordebugilcode-getehclauses-method.md)メソッドによって返されます。  
+## <a name="remarks"></a>注釈  
+
+ 値の配列 `CoreDebugEHClause` は、 [GetEHClauses](icordebugilcode-getehclauses-method.md) メソッドによって返されます。  
   
  EH 句の情報は CLI 仕様によって定義されます。 詳細については、「 [STANDARD ECMA-355: 共通言語基盤 (CLI)、第6版](https://www.ecma-international.org/publications/standards/Ecma-335.htm)」を参照してください。  
   
@@ -64,7 +66,8 @@ typedef struct _CorDebugEHClause {
 |`COR_ILEXCEPTION_CLAUSE_FINALLY`|0x00000002|`finally` 句。|  
 |`COR_ILEXCEPTION_CLAUSE_FAULT`|0x00000004|fault 句 (例外がスローされた場合にのみ `finally` 句が呼び出される)。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

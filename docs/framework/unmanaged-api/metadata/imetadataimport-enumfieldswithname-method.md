@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 42145e8d-000f-4d0b-ae43-c08201190fa2
 topic_type:
 - apiref
-ms.openlocfilehash: 68261b165847a5c3ee29adbc4908451fb00c5443
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0a254587282dea43a3507fbbeca35bd7aa9604f3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492266"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711573"
 ---
 # <a name="imetadataimportenumfieldswithname-method"></a>IMetaDataImport::EnumFieldsWithName メソッド
+
 指定した名前を持つ指定した型の FieldDef トークンを列挙します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,6 +40,7 @@ HRESULT EnumFieldsWithName (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `phEnum`  
  [入力、出力]列挙子へのポインター。  
   
@@ -57,22 +59,24 @@ HRESULT EnumFieldsWithName (
  `pcTokens`  
  入出力で返された FieldDef トークンの実際の数 `rFields` 。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  [IMetaDataImport:: EnumFields](imetadataimport-enumfields-method.md)とは異なり、は `EnumFieldsWithName` 指定された名前のないすべてのフィールドトークンを破棄します。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFieldsWithName`正常に返されました。|  
+|`S_OK`|`EnumFieldsWithName` 正常に返されました。|  
 |`S_FALSE`|列挙するフィールドがありません。 この場合、 `pcTokens` は0になります。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

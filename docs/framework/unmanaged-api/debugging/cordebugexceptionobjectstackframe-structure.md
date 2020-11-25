@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 542cdd81-5ae7-4361-b0ef-1ae4775df258
 topic_type:
 - apiref
-ms.openlocfilehash: 7eccaf984b187e463195bb3804f87bbb2c7ad47b
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 9b904596ed1cce4c4cf2676676508dfb3851e8ce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795925"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712678"
 ---
 # <a name="cordebugexceptionobjectstackframe-structure"></a>CorDebugExceptionObjectStackFrame 構造体
+
 例外オブジェクトのスタック フレームの情報を表しています。  
   
 ## <a name="syntax"></a>構文  
@@ -44,10 +45,12 @@ typedef struct CorDebugExceptionObjectStackFrame {
 |`methodDef`|現在のフレームのメソッドトークン。|  
 |`isLastForeignExceptionFrame`|フレームが外部例外の最後のフレームであるかどうかを示す値。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  呼び出し元は、使用されなくなったときに、モジュールオブジェクトへのポインターを解放する必要があります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

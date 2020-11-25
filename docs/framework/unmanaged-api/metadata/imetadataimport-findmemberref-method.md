@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ccda329-d752-4d89-abe8-511af3c3f4c9
 topic_type:
 - apiref
-ms.openlocfilehash: 068014732cee91147edaec29fa0f954a741d8b5c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0ba25c981cc389baf06ecca0db543d48ac60317b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491655"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711404"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>IMetaDataImport::FindMemberRef メソッド
+
 指定した <xref:System.Type> と指定した名前とメタデータシグネチャを持つメンバー参照の MemberRef トークンへのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,6 +39,7 @@ HRESULT FindMemberRef (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `td`  
  から検索対象のメンバー参照を囲むクラスまたはインターフェイスの TypeRef トークン。 この値がの場合 `mdTokenNil` 、グローバル変数またはグローバル関数参照に対して参照が行われます。  
   
@@ -53,19 +55,21 @@ HRESULT FindMemberRef (
  `pmr`  
  入出力一致する MemberRef トークンへのポインター。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  メンバーは、外側のクラスまたはインターフェイス ( `td` )、その名前 ( `szName` )、および必要に応じてシグネチャ () を使用して指定し `pvSigBlob` ます。  
   
  署名は特定のスコープにバインドされるため、に渡されるシグネチャは、 `FindMemberRef` 現在のスコープで生成される必要があります。 署名には、外側のクラスまたは値の型を識別するトークンを埋め込むことができます。 トークンは、ローカルの TypeDef テーブルのインデックスです。 現在のスコープのコンテキスト外でランタイムシグネチャを作成し、その署名をへの入力として使用することはできません `FindMemberRef` 。  
   
- `FindMemberRef`クラスまたはインターフェイスで直接定義されたメンバー参照だけを検索します。継承されたメンバー参照は見つかりません。  
+ `FindMemberRef` クラスまたはインターフェイスで直接定義されたメンバー参照だけを検索します。継承されたメンバー参照は見つかりません。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

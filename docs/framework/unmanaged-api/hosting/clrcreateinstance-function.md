@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5de13327-96c6-4697-a89e-b8bf40717855
 topic_type:
 - apiref
-ms.openlocfilehash: 4aeacc718632c133550ed8de6649716c5d8b7423
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3c7a14f828e55310435a99693c1195f2f0dd40c6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504445"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711677"
 ---
 # <a name="clrcreateinstance-function"></a>CLRCreateInstance 関数
-には、 [ICLRMetaHost](iclrmetahost-interface.md)、 [ICLRMetaHostPolicy](iclrmetahostpolicy-interface.md)、または[ICLRDebugging](../debugging/iclrdebugging-interface.md)の3つのインターフェイスのいずれかが用意されています。  
+
+には、 [ICLRMetaHost](iclrmetahost-interface.md)、 [ICLRMetaHostPolicy](iclrmetahostpolicy-interface.md)、または [ICLRDebugging](../debugging/iclrdebugging-interface.md)の3つのインターフェイスのいずれかが用意されています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,6 +37,7 @@ HRESULT CLRCreateInstance(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `clsid`  
  からCLSID_CLRMetaHost、CLSID_CLRMetaHostPolicy、または CLSID_CLRDebugging の3つのクラス識別子のいずれか。  
   
@@ -43,9 +45,10 @@ HRESULT CLRCreateInstance(
  から3つのインターフェイス識別子 (Iid が) のいずれか。 IID_ICLRMetaHost、IID_ICLRMetaHostPolicy、または IID_ICLRDebugging です。  
   
  `ppInterface`  
- 入出力[ICLRMetaHost](iclrmetahost-interface.md)、 [ICLRMetaHostPolicy](iclrmetahostpolicy-interface.md)、または[ICLRDebugging](../debugging/iclrdebugging-interface.md)の3つのインターフェイスのいずれか。  
+ 入出力 [ICLRMetaHost](iclrmetahost-interface.md)、 [ICLRMetaHostPolicy](iclrmetahostpolicy-interface.md)、または [ICLRDebugging](../debugging/iclrdebugging-interface.md)の3つのインターフェイスのいずれか。  
   
 ## <a name="return-value"></a>戻り値  
+
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
   
 |HRESULT|説明|  
@@ -53,7 +56,8 @@ HRESULT CLRCreateInstance(
 |S_OK|メソッドは正常に完了しました。|  
 |E_POINTER|`ppInterface` が null です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  次の表は、とでサポートされている組み合わせを示して `clsid` `riid` います。  
   
 |`clsid`|`riid`|  
@@ -81,11 +85,12 @@ hr = CLRCreateInstance (CLSID_CLRDebugging, IID_ICLRDebugging,
 ```  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

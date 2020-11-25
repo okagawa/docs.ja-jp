@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: d7fbccbf-3b6b-4db8-a96d-768e1cb6b1a6
 topic_type:
 - apiref
-ms.openlocfilehash: f989f1c1f29c63af54ff125f4ad1aaa2bcee6757
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: c04bb3a7584fcb783af929e87713dbec67ad705f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378202"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712324"
 ---
 # <a name="icordebugregisterset2-interface"></a>ICorDebugRegisterSet2 インターフェイス
-64を超えるレジスタを持つハードウェアプラットフォームに対し[て、の](icordebugregisterset-interface.md)機能を拡張します。  
+
+64を超えるレジスタを持つハードウェアプラットフォームに対し [て、の](icordebugregisterset-interface.md) 機能を拡張します。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -32,12 +33,13 @@ ms.locfileid: "83378202"
 |[GetRegistersAvailable メソッド](icordebugregisterset2-getregistersavailable-method.md)|使用できるレジスタのビットマップを提供するバイト配列を取得します。|  
 |[SetRegisters メソッド](icordebugregisterset2-setregisters-method.md)|.NET Framework バージョン2.0 では実装されていません。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

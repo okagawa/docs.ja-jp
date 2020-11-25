@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 84296b55-c2c5-424c-ac9c-8e28e2895945
 topic_type:
 - apiref
-ms.openlocfilehash: 2d296c1778e00c4c72e860e0705994518d1481e8
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: a0ec83a5590e184b9ff60449a8147d1a3c90a6a9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795884"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712457"
 ---
 # <a name="cordebughandletype-enumeration"></a>CorDebugHandleType 列挙型
+
 ハンドル型を示します。  
   
 ## <a name="syntax"></a>構文  
@@ -40,7 +41,8 @@ typedef enum CorDebugHandleType {
 |`HANDLE_STRONG`|ハンドルは strong であり、ガベージコレクションによってオブジェクトが解放されるのを防ぎます。|  
 |`HANDLE_WEAK_TRACK_RESURRECTION`|ハンドルは脆弱であり、ガベージコレクションによってオブジェクトが解放されるのを防ぐことはできません。<br /><br /> オブジェクトが収集されると、ハンドルは無効になります。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

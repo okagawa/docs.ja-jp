@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 880ca92a-42d4-42a5-9b9c-c2848eb39c6a
 topic_type:
 - apiref
-ms.openlocfilehash: 8dd070d2c895a94ac996be81e672bd67f59b83b7
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 6b3075613af0403527ecf67d574c0f5733a5cd8b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795899"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712613"
 ---
 # <a name="cordebuggctype-enumeration"></a>CorDebugGCType 列挙型
+
 ガベージ コレクターがワークステーションまたはサーバーのどちらで実行されているかを示します。  
   
 ## <a name="syntax"></a>構文  
@@ -45,6 +46,7 @@ typedef enum CorDebugGCType {
 ## <a name="remarks"></a>解説  
   
 ## <a name="requirements"></a>必要条件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
