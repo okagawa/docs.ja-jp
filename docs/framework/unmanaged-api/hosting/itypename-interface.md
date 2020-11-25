@@ -14,24 +14,26 @@ helpviewer_keywords:
 ms.assetid: 3be458bb-a519-4e22-b373-0b28f2c9cc3c
 topic_type:
 - apiref
-ms.openlocfilehash: e814e6e7a848d8bae371513d8f2293082b3db4a2
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: db699df08a538b16146e9254b7f7a9cb4785e686
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842089"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727771"
 ---
 # <a name="itypename-interface"></a>ITypeName インターフェイス
+
 型名の情報を取得するためのメソッドを提供します。  
   
  このインターフェイスは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

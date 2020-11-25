@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 30931874-4d0e-4df1-b3d1-e425b50655d1
 topic_type:
 - apiref
-ms.openlocfilehash: 4b270c36bdbea9c8d81915eba424cae1054ce7d7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: d5e9ba0023b6516eb6190f32bc65b2b8b6af79f9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008535"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727563"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim 関数
+
 再頒布可能パッケージ .NET Framework に含まれている、指定したバージョンの DLL を読み込みます。  
   
- この関数は .NET Framework 4 で非推奨とされました。 代わりに[ICLRRuntimeInfo:: LoadLibrary](iclrruntimeinfo-loadlibrary-method.md)メソッドを使用してください。  
+ この関数は .NET Framework 4 で非推奨とされました。 代わりに [ICLRRuntimeInfo:: LoadLibrary](iclrruntimeinfo-loadlibrary-method.md) メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,19 +40,21 @@ HRESULT LoadLibraryShim (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `szDllName`  
  から.NET Framework ライブラリから読み込む DLL の名前を表す、0で終わる文字列です。  
   
  `szVersion`  
- から読み込む DLL のバージョンを表す、0で終わる文字列。 `szVersion`が null の場合、読み込み用に選択されたバージョンは、指定された DLL のうち、バージョン4より小さい最新バージョンです。 つまり、が null の場合、バージョン4以上のすべてのバージョンは無視され `szVersion` ます。バージョン4より前のバージョンがインストールされていない場合は、DLL の読み込みに失敗します。 これは、.NET Framework 4 のインストールが、既存のアプリケーションまたはコンポーネントに影響しないようにするためです。 CLR チームブログの「[インプロセス SxS And Migration クイックスタート](https://devblogs.microsoft.com/dotnet/in-proc-sxs-and-migration-quick-start/)」のエントリを参照してください。  
+ から読み込む DLL のバージョンを表す、0で終わる文字列。 `szVersion`が null の場合、読み込み用に選択されたバージョンは、指定された DLL のうち、バージョン4より小さい最新バージョンです。 つまり、が null の場合、バージョン4以上のすべてのバージョンは無視され `szVersion` ます。バージョン4より前のバージョンがインストールされていない場合は、DLL の読み込みに失敗します。 これは、.NET Framework 4 のインストールが、既存のアプリケーションまたはコンポーネントに影響しないようにするためです。 CLR チームブログの「 [インプロセス SxS And Migration クイックスタート](https://devblogs.microsoft.com/dotnet/in-proc-sxs-and-migration-quick-start/) 」のエントリを参照してください。  
   
  `pvReserved`  
- 将来利用するために予約されています。  
+ 将来使用するために予約されています。  
   
  `phModDll`  
  入出力モジュールのハンドルへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
+
  このメソッドは、次の値に加えて、Winerror.h で定義されている標準のコンポーネントオブジェクトモデル (COM) エラーコードを返します。  
   
 |リターン コード|説明|  
@@ -59,13 +62,15 @@ HRESULT LoadLibraryShim (
 |S_OK|メソッドは正常に完了しました。|  
 |CLR_E_SHIM_RUNTIMELOAD|読み込みには `szDllName` 共通言語ランタイム (clr) を読み込む必要があり、必要なバージョンの clr を読み込むことはできません。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
+
  この関数は、.NET Framework 再頒布可能パッケージに含まれている Dll を読み込むために使用されます。 ユーザーが生成した Dll は読み込まれません。  
   
 > [!NOTE]
-> .NET Framework バージョン2.0 以降では、Fusion .dll を読み込むと CLR が読み込まれます。 これは、Fusion の関数が、ランタイムによって実装されているラッパーであるためです。  
+> .NET Framework バージョン2.0 以降では、Fusion.dll を読み込むと CLR が読み込まれます。 これは、Fusion.dll の関数が、ランタイムによって実装されているラッパーであるためです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  

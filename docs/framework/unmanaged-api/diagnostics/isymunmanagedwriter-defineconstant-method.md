@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e986986-2223-4d5f-b040-85d716146924
 topic_type:
 - apiref
-ms.openlocfilehash: 200e68abb3f176c267045bf2a5e7e35d18400519
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 7c4589c3371d2c66279684a365cde102bef58c6e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610094"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727589"
 ---
 # <a name="isymunmanagedwriterdefineconstant-method"></a>ISymUnmanagedWriter::DefineConstant メソッド
+
 定数値の名前を定義します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,8 +37,9 @@ HRESULT DefineConstant(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `name`  
- から`WCHAR`定数名を定義するへのポインター。  
+ から `WCHAR` 定数名を定義するへのポインター。  
   
  `value`  
  から定数の値。  
@@ -49,9 +51,11 @@ HRESULT DefineConstant(
  から定数の型シグネチャ。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

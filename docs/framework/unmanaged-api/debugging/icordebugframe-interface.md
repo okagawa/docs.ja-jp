@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c48f764-3c64-4602-b2f4-4ffc60eb2c65
 topic_type:
 - apiref
-ms.openlocfilehash: 9c2771d1338943406921447d96dd9a8748153a36
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: bdc17e2c6c63deae1420fe738eac51153f6b368e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209618"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726341"
 ---
 # <a name="icordebugframe-interface"></a>ICorDebugFrame インターフェイス
 
@@ -38,12 +38,13 @@ ms.locfileid: "83209618"
 |[GetFunctionToken メソッド](icordebugframe-getfunctiontoken-method.md)|このスタックフレームに関連付けられているコードを含む関数のメタデータトークンを取得します。|  
 |[GetStackRange メソッド](icordebugframe-getstackrange-method.md)|このによって表されるスタックフレームの絶対アドレス範囲を取得し `ICorDebugFrame` ます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

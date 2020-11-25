@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: fbc418e8-fa22-420d-84ec-e0e1800db041
 topic_type:
 - apiref
-ms.openlocfilehash: cbc056e9a3cc00178b32dee4011da4403dff508a
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 278120c6e1bc87a061a3f81f71bdb7b89cd421be
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212777"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726562"
 ---
 # <a name="icordebugheapvalue2createhandle-method"></a>ICorDebugHeapValue2::CreateHandle メソッド
+
 この ICorDebugHeapValue2 オブジェクトによって表されるヒープ値に対して指定された型のハンドルを作成します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,18 +36,21 @@ HRESULT CreateHandle (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `type`  
  から作成するハンドルの種類を指定する CorDebugHandleType 列挙体の値。  
   
  `ppHandle`  
  入出力このヒープ値の新しいハンドルを表す、値オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  ハンドルは、ヒープ値に関連付けられているアプリケーションドメインに作成され、アプリケーションドメインがアンロードされると無効になります。  
   
  同じヒープ値に対してこの関数を複数回呼び出すと、複数のハンドルが作成されます。 ハンドルはガベージコレクターのパフォーマンスに影響を与えるため、デバッガーは、一度にアクティブな比較的少数のハンドル (約 256) に制限する必要があります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

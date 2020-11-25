@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0ebd793-3764-4df0-8f12-0e95f60b9eae
 topic_type:
 - apiref
-ms.openlocfilehash: 1553e616f60b4f05c06b6457d47454dfb4bc2eb7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c702aa32e8c8d6d5c137f7968d1578715102180f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614774"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726862"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>ISymUnmanagedWriter::Initialize メソッド
+
 このライターが関連付けられるメタデータエミッタインターフェイスを設定し、デバッグシンボルの書き込み先となる出力ファイル名を設定します。  
   
  このメソッドを呼び出すことができるのは1回だけです。他のライターメソッドの前に呼び出す必要があります。 一部のライターでは、ファイル名が必要になる場合があります。 ただし、ファイル名を使用しないライターに悪影響を及ぼすことなく、常にファイル名をこのメソッドに渡すことができます。  
@@ -38,6 +39,7 @@ HRESULT Initialize(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `emitter`  
  からメタデータエミッタインターフェイスへのポインター。  
   
@@ -48,12 +50,14 @@ HRESULT Initialize(
  から指定した場合、シンボルライターは、パラメーターで指定されたファイルではなく、指定されたにシンボルを出力し <xref:System.Runtime.InteropServices.ComTypes.IStream> `filename` ます。 `pIStream` パラメーターは省略可能です。  
   
  `fFullBuild`  
- [入力] `true`完全な再構築の場合は、`false`インクリメンタルコンパイルの場合は。  
+ [入力] `true` 完全な再構築の場合は、 `false` インクリメンタルコンパイルの場合は。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

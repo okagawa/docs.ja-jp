@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1590febe-96c2-4046-97db-d81d81d67e01
 topic_type:
 - apiref
-ms.openlocfilehash: 624469ca1ae4c96b4143f8768b4c5ff9c2601a2f
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 2c13ead228296525b57245be8b3bdbcdf38ae173
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378882"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728005"
 ---
 # <a name="icordebugthreadgetobject-method"></a>ICorDebugThread::GetObject メソッド
+
 共通言語ランタイム (CLR) スレッドへのインターフェイスポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,10 +35,12 @@ HRESULT GetObject (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ppObject`  
  入出力CLR スレッドを表す ICorDebugValue インターフェイスオブジェクトのアドレスへのポインター。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9c149303-14b1-4138-83d7-e8c3e0fcd332
 topic_type:
 - apiref
-ms.openlocfilehash: 6a378e3579ab9ea8d9534a408d0e456373616cad
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 0f1e6bbdf16c953b0dd22d9dfa44bc3585f1269e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213141"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726250"
 ---
 # <a name="icordebugfunctionbreakpoint-interface"></a>ICorDebugFunctionBreakpoint インターフェイス
 
@@ -32,12 +32,13 @@ ICorDebugBreakpoint インターフェイスを拡張して、関数内のブレ
 |[GetFunction メソッド](icordebugfunctionbreakpoint-getfunction-method.md)|ブレークポイントが設定されている関数を参照する、のオブジェクトへのインターフェイスポインターを取得します。|  
 |[GetOffset メソッド](icordebugfunctionbreakpoint-getoffset-method.md)|関数内のブレークポイントのオフセットを取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

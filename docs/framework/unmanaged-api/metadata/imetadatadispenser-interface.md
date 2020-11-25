@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 989840b3-9822-4ce5-a6c5-b375d3340a7a
 topic_type:
 - apiref
-ms.openlocfilehash: 2bdfe65dbf923ec61d91a259b5257d892fef53da
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c798aeba46adf91a8c13f8143c00f02173a0bb52
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007339"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726107"
 ---
 # <a name="imetadatadispenser-interface"></a>IMetaDataDispenser インターフェイス
+
 新しいメタデータスコープを作成したり、既存のメタデータスコープを開いたりするためのメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
@@ -32,12 +33,13 @@ ms.locfileid: "84007339"
 |[OpenScope メソッド](imetadatadispenser-openscope-method.md)|ディスク上の既存のファイルを開き、そのメタデータをメモリにマップします。|  
 |[OpenScopeOnMemory メソッド](imetadatadispenser-openscopeonmemory-method.md)|既存のメタデータを含むメモリ領域を開きます。 つまり、このメソッドは、既存のデータがメタデータとして扱われる、指定されたメモリ領域を開きます。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **プラットフォーム:** 「 [システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

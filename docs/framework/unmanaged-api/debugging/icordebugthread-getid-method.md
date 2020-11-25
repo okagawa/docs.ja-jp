@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f1de4584-92df-42f3-9da4-fca03a1c6821
 topic_type:
 - apiref
-ms.openlocfilehash: d01936481ec139757566d5b96cb95ea887cb8c20
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 85cfd7ba648f21721f1a9689843eac232489cb42
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378063"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728018"
 ---
 # <a name="icordebugthreadgetid-method"></a>ICorDebugThread::GetID メソッド
+
 このコンポーネントのアクティブな部分の現在のオペレーティングシステム識別子を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,13 +35,16 @@ HRESULT GetID (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pdwThreadId`  
  入出力スレッドの識別子。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  オペレーティングシステムの識別子は、プロセスの実行中に変更される可能性があり、スレッドのさまざまな部分に対して異なる値を指定できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

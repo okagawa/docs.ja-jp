@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 37527a84-4b03-4f08-8135-94d898599089
 topic_type:
 - apiref
-ms.openlocfilehash: 5a26de2a8f5439b7c81560927c991d449e57b76c
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 0cb0b91f2dca8203c37599400b3b61f84eb7d282
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441592"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727316"
 ---
 # <a name="isymunmanagedbinder3-interface"></a>ISymUnmanagedBinder3 インターフェイス
+
 シンボルバインダーインターフェイスを拡張します。 このインターフェイスを取得するには `QueryInterface` 、インターフェイスを実装するオブジェクトに対してを呼び出し `ISymUnmanagedBinder` ます。  
   
 > [!IMPORTANT]
@@ -34,6 +35,7 @@ ms.locfileid: "83441592"
 |[GetReaderFromCallback メソッド](isymunmanagedbinder3-getreaderfromcallback-method.md)|`IID_IDiaReadExeAtRVACallback` `IID_IDiaReadExeAtOffsetCallback` メモリからデバッグディレクトリ情報を取得するために、またはのいずれかを使用して、ユーザーがを実装または提供できるようにします。|  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

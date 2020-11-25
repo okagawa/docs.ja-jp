@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 68e20e62-203d-46d8-bb91-8d3c61cfacc3
 topic_type:
 - apiref
-ms.openlocfilehash: e774905939640d2748344ad3f6e12a96f9868d9f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: d9150d15ac183b65b87448424f265693ed7b7ab7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213804"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726575"
 ---
 # <a name="icordebugheapvalueisvalid-method"></a>ICorDebugHeapValue::IsValid メソッド
+
 この値によって表されるオブジェクトが有効かどうかを示す値を取得します。  
   
  このメソッドは .NET Framework バージョン2.0 では非推奨とされました。  
@@ -36,15 +37,18 @@ HRESULT IsValid (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pbValid`  
  入出力ヒープ上のこの値が有効かどうかを示すブール値へのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  値は、ガベージコレクターによって回収されている場合は無効です。  
   
- このメソッドの使用は非推奨とされました。 .NET Framework 2.0 では、すべての値は、"の値は無効になります。 [" が呼び出されるまで、](icordebugcontroller-continue-method.md)すべての値が有効になります。  
+ このメソッドの使用は非推奨とされました。 .NET Framework 2.0 では、すべての値は、"の値は無効になります。 [" が呼び出されるまで、](icordebugcontroller-continue-method.md) すべての値が有効になります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

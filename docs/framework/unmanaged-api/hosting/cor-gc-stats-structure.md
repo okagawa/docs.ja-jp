@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8d4ff73e-739b-40f6-9349-359fbc99c2f9
 topic_type:
 - apiref
-ms.openlocfilehash: 7a6553de31d4f9627809af7691218c39dc734c6f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 53a70c53a06ac55a2dab7c646018d63189ee0b36
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501665"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726224"
 ---
 # <a name="cor_gc_stats-structure"></a>COR_GC_STATS 構造体
+
 共通言語ランタイム (CLR) のガベージコレクション機構に関する統計情報を提供します。  
   
 ## <a name="syntax"></a>構文  
@@ -58,10 +59,11 @@ typedef struct _COR_GC_STATS {
 |`KBytesPromotedFromGen0`|ジェネレーション0からジェネレーション1に昇格されたオブジェクトのサイズ (kb 単位)。|  
 |`KBytesPromotedFromGen1`|ジェネレーション1からジェネレーション2に昇格されたオブジェクトのサイズ (kb 単位)。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  [ICLRGCManager:: GetStats](iclrgcmanager-getstats-method.md)メソッドでは、 `Flags` 構造体のフィールドを `COR_GC_STATS` [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md)列挙体の1つ以上の値に設定して、どの統計を設定するかを指定する必要があります。  
   
- 次の表は、この構造体によって提供される統計を、2つの[COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md)列挙値、およびにマップし `COR_GC_COUNTS` `COR_GC_MEMORYUSAGE` ます。  
+ 次の表は、この構造体によって提供される統計を、2つの [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md) 列挙値、およびにマップし `COR_GC_COUNTS` `COR_GC_MEMORYUSAGE` ます。  
   
 |指定された COR_GC_COUNTS|指定された COR_GC_MEMORYUSAGE|  
 |----------------------------------|---------------------------------------|  
@@ -76,11 +78,12 @@ pCLRGCManager->GetStats(&GCStats);
 ```  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** GCHost  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

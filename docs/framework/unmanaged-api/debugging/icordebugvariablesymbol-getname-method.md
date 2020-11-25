@@ -2,14 +2,15 @@
 title: ICorDebugVariableSymbol::GetName メソッド
 ms.date: 03/30/2017
 ms.assetid: c922b7d4-44e5-45e4-aef3-cc9c35a0be80
-ms.openlocfilehash: ea414a39e140c74df736764dbbb1bb3934bda78f
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: aa3f335516f7fa22a77b786cd870f2a5064aeff5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397126"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727628"
 ---
 # <a name="icordebugvariablesymbolgetname-method"></a>ICorDebugVariableSymbol::GetName メソッド
+
 変数の名前を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -23,6 +24,7 @@ HRESULT GetName(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `cchName`  
  [in] `szName` バッファー内の文字数。  
   
@@ -32,12 +34,13 @@ HRESULT GetName(
  `szName`  
  変数名が格納されている文字配列へのポインター。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

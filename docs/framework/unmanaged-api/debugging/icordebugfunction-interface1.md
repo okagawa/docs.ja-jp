@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 783faea9-8083-41c1-b04a-51a81ac4c8f3
 topic_type:
 - apiref
-ms.openlocfilehash: 6b7b6969c1f207decbf47217e98b7fee3aa9ce54
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 668b27932ea7a2bdc244e1ac0bb8e6891cbd4d17
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213243"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726298"
 ---
 # <a name="icordebugfunction-interface"></a>ICorDebugFunction インターフェイス
 
@@ -38,7 +38,8 @@ ms.locfileid: "83213243"
 |[GetNativeCode メソッド](icordebugfunction-getnativecode-method.md)|この関数のネイティブコードを取得します。|  
 |[GetToken メソッド](icordebugfunction-gettoken-method.md)|この関数のメタデータトークンを取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  インターフェイスは、 `ICorDebugFunction` ジェネリック型パラメーターを持つ関数を表していません。 たとえば、インスタンスはを `ICorDebugFunction` 表しますが、では `Func<T>` ありません `Func<string>` 。 [ICorDebugILFrame2:: EnumerateTypeParameters](icordebugilframe2-enumeratetypeparameters-method.md)を呼び出して、ジェネリック型パラメーターを取得します。  
   
  メソッドのメタデータトークン、 `mdMethodDef` 、およびメソッドのオブジェクト間のリレーションシップ `ICorDebugFunction` は、関数でエディットコンティニュが許可されているかどうかによって異なります。  
@@ -50,12 +51,13 @@ ms.locfileid: "83213243"
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ:** CorGuids .lib  
+ **ライブラリ:**  CorGuids .lib  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

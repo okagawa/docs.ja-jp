@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: aa20ac3d-6f60-4aa2-91c5-f3a86f82eba8
 topic_type:
 - apiref
-ms.openlocfilehash: ca2d00611a7530dfb0d1c2a27123947bdf69820d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2ca6c89a671c4d7882e7cefdb820d07ac5636530
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179350"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727407"
 ---
 # <a name="cor_array_layout-structure"></a>COR_ARRAY_LAYOUT 構造体
+
 メモリ内の配列オブジェクトのレイアウトに関する情報が提供されます。  
   
 ## <a name="syntax"></a>構文  
@@ -43,28 +44,30 @@ typedef struct COR_ARRAY_LAYOUT {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`componentID`|配列に含まれるオブジェクトの型の識別子。|  
-|`componentType`|コンポーネントがガベージ コレクション参照、値クラス、またはプリミティブであるかどうかを示す CorElementType 列挙値。|  
-|`firstElementOffset`|配列の最初の要素へのオフセット。|  
+|`componentID`|配列に格納されているオブジェクトの型の識別子。|  
+|`componentType`|コンポーネントがガベージコレクション参照、値クラス、またはプリミティブであるかどうかを示す CorElementType 列挙値。|  
+|`firstElementOffset`|配列内の最初の要素へのオフセット。|  
 |`elementSize`|各要素のサイズ。|  
-|`countOffset`|配列内の要素数のオフセット。|  
+|`countOffset`|配列内の要素の数へのオフセット。|  
 |`rankSize`|ランクのサイズ (バイト単位)。|  
 |`numRanks`|配列内のランクの数。|  
-|`rankOffset`|ランクの開始位置のオフセット。|  
+|`rankOffset`|ランクの開始位置を示すオフセット。|  
   
-## <a name="remarks"></a>解説  
- この`rankSize`フィールドは、多次元配列のランクのサイズを指定します。 これは、単一次元配列でも正確です。  
+## <a name="remarks"></a>注釈  
+
+ この `rankSize` フィールドは、多次元配列内のランクのサイズを指定します。 これは、1次元配列に対しても正確です。  
   
- 1 次元`numRanks`配列の場合は 1、次元`N`の多次元配列の`N`場合は、値は 1 です。  
+ の値は、1 `numRanks` 次元配列の場合は1、 `N` 次元の多次元配列の場合は1になり `N` ます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

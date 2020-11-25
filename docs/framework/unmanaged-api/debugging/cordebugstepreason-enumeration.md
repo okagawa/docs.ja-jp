@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: fe248069-b33c-48e1-a777-06ac9b239c54
 topic_type:
 - apiref
-ms.openlocfilehash: 288d7bfdf18be5cef032227c537032966fa68df4
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 50903b3737c0fc63eda2b1190e4c3d961ce3ae7b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795704"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726042"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason 列挙型
+
 個々のステップの結果を示します。  
   
 ## <a name="syntax"></a>構文  
@@ -50,7 +51,8 @@ typedef enum CorDebugStepReason {
 |`STEP_INTERCEPT`|コントロールがインターセプターに渡されました。|  
 |`STEP_EXIT`|ステップが完了する前にスレッドが終了しました。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

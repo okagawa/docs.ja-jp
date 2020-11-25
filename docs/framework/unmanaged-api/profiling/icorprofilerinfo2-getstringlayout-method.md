@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 43189651-a535-4803-a1d1-f1c427ace2ca
 topic_type:
 - apiref
-ms.openlocfilehash: 257cf24fa476c75d6ec949e17a5b83fc015b8d43
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d141a78a953d4e0ab922535ad2363c79f2e18ecd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496790"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727043"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout メソッド
-文字列オブジェクトのレイアウトに関する情報を取得します。 このメソッドは .NET Framework 4 では非推奨とされており、 [ICorProfilerInfo3:: GetStringLayout2](icorprofilerinfo3-getstringlayout2-method.md)メソッドに置き換えられています。  
+
+文字列オブジェクトのレイアウトに関する情報を取得します。 このメソッドは .NET Framework 4 では非推奨とされており、 [ICorProfilerInfo3:: GetStringLayout2](icorprofilerinfo3-getstringlayout2-method.md) メソッドに置き換えられています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,6 +36,7 @@ HRESULT GetStringLayout(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pBufferLengthOffset`  
  入出力文字列の長さを格納する、ポインターを基準とした位置のオフセットへのポインター `ObjectID` 。 長さはとして格納され `DWORD` ます。  
   
@@ -42,12 +44,13 @@ HRESULT GetStringLayout(
 > このパラメーターは、バッファーの長さではなく、文字列自体の長さを返します。 バッファーの長さは使用できなくなりました。  
   
  `PStringLengthOffset`  
- 入出力`ObjectID`文字列自体の長さを格納する、ポインターを基準とした位置のオフセットへのポインター。 長さはとして格納され `DWORD` ます。  
+ 入出力 `ObjectID` 文字列自体の長さを格納する、ポインターを基準とした位置のオフセットへのポインター。 長さはとして格納され `DWORD` ます。  
   
  `pBufferOffset`  
- 入出力`ObjectID`ワイド文字の文字列を格納する、ポインターを基準としたバッファーのオフセットへのポインター。  
+ 入出力 `ObjectID` ワイド文字の文字列を格納する、ポインターを基準としたバッファーのオフセットへのポインター。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  メソッドは、ポインターを基準として、 `GetStringLayout` `ObjectID` 次のが格納されている位置のオフセットを取得します。  
   
 - 文字列のバッファーの長さ。  
@@ -59,6 +62,7 @@ HRESULT GetStringLayout(
  文字列は null で終わる可能性があります。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

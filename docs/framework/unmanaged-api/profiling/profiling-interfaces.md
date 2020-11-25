@@ -6,22 +6,24 @@ helpviewer_keywords:
 - profiling interfaces [.NET Framework]
 - interfaces [.NET Framework profiling]
 ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
-ms.openlocfilehash: f073794b4fdf89f289b70fed9967ee37b5f4e133
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: dd6999e9f9e16264bde3cf62ce3a888841347607
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494034"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727472"
 ---
 # <a name="profiling-interfaces"></a>プロファイリングのインターフェイス
+
 ここでは、共通言語ランタイム (CLR) で実行中のプログラムに対してプロファイルを可能にするアンマネージ インターフェイスについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [ICLRProfiling インターフェイス](iclrprofiling-interface.md)  
  [Attachprofiler](iclrprofiling-attachprofiler-method.md)メソッドを提供します。これにより、実行中のプロセスにプロファイラーをアタッチできます。  
   
  [ICorProfilerAssemblyReferenceProvider インターフェイス](icorprofilerassemblyreferenceprovider-interface.md)  
- プロファイラーが[ICorProfilerCallback:: ModuleLoadFinished](icorprofilercallback-moduleloadfinished-method.md)コールバックに追加するアセンブリ参照を CLR に通知できるようにします。  
+ プロファイラーが [ICorProfilerCallback:: ModuleLoadFinished](icorprofilercallback-moduleloadfinished-method.md) コールバックに追加するアセンブリ参照を CLR に通知できるようにします。  
   
  [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)  
  プロファイラーがサブスクライブしたイベントが発生したときにコード プロファイラーに通知するために、CLR が使用するメソッドを提供します。  
@@ -87,9 +89,10 @@ ms.locfileid: "84494034"
  CLR でスレッドのコレクションを順番に反復処理するためのメソッドを提供します。  
   
  [IMethodMalloc インターフェイス](imethodmalloc-interface.md)  
- 新しい Microsoft 中間言語 (MSIL) 関数の本体にメモリを割り当てるための[Alloc](imethodmalloc-alloc-method.md)メソッドを提供します。  
+ 新しい Microsoft 中間言語 (MSIL) 関数の本体にメモリを割り当てるための [Alloc](imethodmalloc-alloc-method.md) メソッドを提供します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [プロファイリングの概要](profiling-overview.md)  
   
  [グローバル静的関数のプロファイル](profiling-global-static-functions.md)  

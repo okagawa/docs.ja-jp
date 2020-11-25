@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 60600178-c2b5-4cab-b3a5-f0f61acebaf1
 topic_type:
 - apiref
-ms.openlocfilehash: 3685707f1983ffec413e9cea2df5034ac53f643a
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c862b6d3bfa415b622b68898db1ff30c6759e8f2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615593"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726939"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>ISymUnmanagedDocument::GetURL メソッド
+
 このドキュメントの URL (uniform resource locator) を返します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,6 +36,7 @@ HRESULT GetURL(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `cchUrl`  
  [入力] `szURL` バッファーのサイズ (文字単位)。  
   
@@ -45,6 +47,7 @@ HRESULT GetURL(
  入出力URL を格納しているバッファー。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、エラーコード。  
   
 ## <a name="see-also"></a>関連項目

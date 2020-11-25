@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9776112-6e6d-4708-892a-8873db02e16f
 topic_type:
 - apiref
-ms.openlocfilehash: b040d9454a5a3a0d550bb645953c783357419f73
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: d9698afa2723a5d772ecf5a055f09c5ee3bc13f2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379489"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727654"
 ---
 # <a name="icordebugsteppersteprange-method"></a>ICorDebugStepper::StepRange メソッド
+
 この ICorDebugStepper は、含まれているスレッドを1ステップずつ実行し、指定した範囲の最後のコードに到達したときにを返します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,8 +37,9 @@ HRESULT StepRange (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `bStepIn`  
- から`true`スレッド内で呼び出される関数にステップインするには、をに設定します。 関数を `false` ステップオーバーするには、をに設定します。  
+ から `true` スレッド内で呼び出される関数にステップインするには、をに設定します。 関数を `false` ステップオーバーするには、をに設定します。  
   
  `ranges`  
  からCOR_DEBUG_STEP_RANGE 構造体の配列。それぞれが範囲を指定します。  
@@ -45,14 +47,16 @@ HRESULT StepRange (
  `cRangeCount`  
  [in] `ranges` 配列のサイズ。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  `StepRange`メソッドは[ICorDebugStepper:: Step](icordebugstepper-step-method.md)メソッドと同様に機能しますが、指定された範囲外のコードに到達するまでは完了しない点が異なります。  
   
  これは、一度に1つの命令をステップ実行するよりも効率的です。 範囲は、ステッパのフレームの先頭からのオフセットペアのリストとして指定されます。  
   
  範囲は、メソッドの MSIL (Microsoft 中間言語) コードに対する相対値です。 [ICorDebugStepper:: SetRangeIL](icordebugstepper-setrangeil-method.md)をで呼び出し、 `false` メソッドのネイティブコードを基準として範囲を設定します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

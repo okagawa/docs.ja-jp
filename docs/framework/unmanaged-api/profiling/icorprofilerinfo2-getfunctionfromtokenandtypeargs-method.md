@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ce8f6aa6-4ebf-4a86-b429-4bbc8af41a8f
 topic_type:
 - apiref
-ms.openlocfilehash: 7f1276e1adeece086ca7b6791eb6e870faf4d010
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 17a6220598010c0bee9c3f0485860aa0b2dc5f3a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502874"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727108"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs メソッド
+
 `FunctionID`指定されたメタデータトークン、クラス、および `ClassID` 任意の型引数の値を使用して、関数のを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,11 +39,12 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `moduleID`  
  から関数が存在するモジュールの ID。  
   
  `funcDef`  
- から`mdMethodDef`関数を参照するメタデータトークン。  
+ から `mdMethodDef` 関数を参照するメタデータトークン。  
   
  `classId`  
  からクラスを含んでいる関数の ID。  
@@ -54,16 +56,18 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
  から値の配列 `ClassID` 。それぞれが関数の引数です。 が0に設定されている場合、の値は `typeArgs` NULL `cTypeArgs` になります。  
   
  `pFunctionID`  
- 入出力`FunctionID`指定した関数のへのポインター。  
+ 入出力 `FunctionID` 指定した関数のへのポインター。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  メタデータ `GetFunctionFromTokenAndTypeArgs` トークンではなくメタデータを使用してメソッドを呼び出すと、 `mdMethodRef` `mdMethodDef` 予期しない結果が発生する可能性があります。 呼び出し元は、 `mdMethodRef` を渡すときにをに解決する必要があり `mdMethodDef` ます。  
   
  関数がまだ読み込まれていない場合、を呼び出すと `GetFunctionFromTokenAndTypeArgs` 読み込みが発生します。これは、多くのコンテキストでは危険な操作です。 たとえば、モジュールまたは型の読み込み中にこのメソッドを呼び出すと、ランタイムが循環読み込みを試みたときに無限ループが発生する可能性があります。  
   
- 一般に、の使用 `GetFunctionFromTokenAndTypeArgs` は推奨されていません。 プロファイラーが特定の関数のイベントに関心を持っている場合は、 `ModuleID` その関数のとを格納し、 `mdMethodDef` [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md)を使用して、 `FunctionID` 目的の関数のが指定されているかどうかを確認します。  
+ 一般に、の使用 `GetFunctionFromTokenAndTypeArgs` は推奨されていません。 プロファイラーが特定の関数のイベントに関心を持っている場合は、 `ModuleID` その関数のとを格納し、 `mdMethodDef` [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) を使用して、 `FunctionID` 目的の関数のが指定されているかどうかを確認します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

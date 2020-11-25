@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 162e8179-0cd4-4110-8f06-5f387698bd62
 topic_type:
 - apiref
-ms.openlocfilehash: e22269b76c230f702f4712298fddcd0df1fde50d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb4a8f7ff3ee54474804e3e5620dcce7c9f79fb5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179327"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726614"
 ---
 # <a name="cor_gc_reference-structure"></a>COR_GC_REFERENCE 構造体
+
 ガベージ コレクトされるオブジェクトに関する情報が含まれます。  
   
 ## <a name="syntax"></a>構文  
@@ -39,36 +40,38 @@ typedef struct _COR_GC_REFERENCE {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`domain`|ハンドルまたはオブジェクトが属するアプリケーション ドメインへのポインター。 その値は. `null`|  
-|`location`|ガベージ コレクションされるオブジェクトに対応するインターフェイスまたは ICorDebugReferenceValue インターフェイス。|  
-|`type`|ルートの取得元を示す[CorGCReferenceType](corgcreferencetype-enumeration.md)列挙値。 詳細については、「解説」を参照してください。|  
-|`extraData`|ガベージ コレクションされるオブジェクトに関する追加データ。 この情報は、`type`フィールドで示されるオブジェクトのソースによって異なります。 詳細については、「解説」を参照してください。|  
+|`domain`|ハンドルまたはオブジェクトが属するアプリケーションドメインへのポインター。 この値は、の場合もあり `null` ます。|  
+|`location`|ガベージコレクションされるオブジェクトに対応する ICorDebugValue またはの値のインターフェイス。|  
+|`type`|ルートの取得元を示す [Corgcreの Encetype](corgcreferencetype-enumeration.md) 列挙値。 詳細については、「解説」を参照してください。|  
+|`extraData`|ガベージコレクションされるオブジェクトに関する追加データ。 この情報は、フィールドに示されているように、オブジェクトのソースによって異なり `type` ます。 詳細については、「解説」を参照してください。|  
   
-## <a name="remarks"></a>解説  
- フィールド`type`は、参照の取得元を示す[CorGCReferenceType](corgcreferencetype-enumeration.md)列挙値です。 特定`COR_GC_REFERENCE`の値は、次の種類の管理オブジェクトを反映できます。  
+## <a name="remarks"></a>注釈  
+
+ `type`フィールドは、参照の取得元を示す[Corgcreの型](corgcreferencetype-enumeration.md)の列挙値です。 特定の `COR_GC_REFERENCE` 値には、次のいずれかの種類のマネージオブジェクトを反映できます。  
   
-- すべてのマネージ スタック (`CorGCReferenceType.CorReferenceStack`) からのオブジェクト これには、マネージ コード内のライブ参照と、共通言語ランタイムによって作成されたオブジェクトが含まれます。  
+- すべてのマネージスタックのオブジェクト ( `CorGCReferenceType.CorReferenceStack` )。 これには、マネージコードのライブ参照や、共通言語ランタイムによって作成されたオブジェクトが含まれます。  
   
-- ハンドル テーブル (`CorGCReferenceType.CorHandle*`) のオブジェクト これには、モジュール内の`HNDTYPE_STRONG`厳密`HNDTYPE_REFCOUNT`な参照 ( および ) と静的変数が含まれます。  
+- ハンドルテーブルからのオブジェクト ( `CorGCReferenceType.CorHandle*` )。 これには、モジュール内の厳密な参照 ( `HNDTYPE_STRONG` および `HNDTYPE_REFCOUNT` ) と静的変数が含まれます。  
   
-- ファイナライザー キュー (`CorGCReferenceType.CorReferenceFinalizer`) からのオブジェクト ファイナライザーが実行されるまで、ファイナライザー キューのルート オブジェクト。  
+- ファイナライザーキュー () からのオブジェクト `CorGCReferenceType.CorReferenceFinalizer` 。 ファイナライザーが実行されるまで、ファイナライザーはオブジェクトをキューに置いています。  
   
- フィールド`extraData`には、参照のソース (またはタイプ) に応じて、追加のデータが含まれます。 次のいずれかの値になります。  
+ フィールドには、 `extraData` 参照のソース (または型) に応じて追加のデータが含まれます。 設定可能な値は、次のとおりです。  
   
-- `DependentSource`. の`type`場合、`CorGCREferenceType.CorHandleStrongDependent`このフィールドは、生きている場合は、ガベージ コレクションされるオブジェクトをルートとするオブジェクト`COR_GC_REFERENCE.Location`です。  
+- `DependentSource`. がの `type` 場合 `CorGCREferenceType.CorHandleStrongDependent` 、このフィールドはオブジェクトであり、alive の場合、ガベージコレクトされるオブジェクトがルートになり `COR_GC_REFERENCE.Location` ます。  
   
-- `RefCount`. の`type`場合、`CorGCREferenceType.CorHandleStrongRefCount`このフィールドはハンドルの参照カウントです。  
+- `RefCount`. がの `type` 場合 `CorGCREferenceType.CorHandleStrongRefCount` 、このフィールドはハンドルの参照カウントです。  
   
-- `Size`. の`type`場合、`CorGCREferenceType.CorHandleStrongSizedByref`このフィールドは、ガベージ コレクターがオブジェクト ルートを計算したオブジェクト ツリーの最後のサイズです。 この計算は必ずしも最新の計算ではありません。  
+- `Size`. がの `type` 場合 `CorGCREferenceType.CorHandleStrongSizedByref` 、このフィールドはガベージコレクターによってオブジェクトのルートが計算されたオブジェクトツリーの最後のサイズになります。 この計算は必ずしも最新の状態ではないことに注意してください。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

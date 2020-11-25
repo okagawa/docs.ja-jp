@@ -6,14 +6,15 @@ helpviewer_keywords:
 - type design guidelines, interfaces
 - class library design guidelines [.NET Framework], interfaces
 ms.assetid: a016bd18-6710-4358-9438-9f190a295392
-ms.openlocfilehash: 9f8ff38d5825091d4d5d3716ed6025a8d04c592d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6f8cbb757ffb42f63903b212fee33cdcbba7ecb2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821009"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727680"
 ---
 # <a name="interface-design"></a>インターフェイスのデザイン
+
 ほとんどの Api はクラスと構造体を使用してモデル化されていますが、インターフェイスがより適している場合や、唯一のオプションである場合もあります。
 
  CLR は複数の継承をサポートしていません (つまり、CLR クラスは複数の基底クラスから継承することはできません) が、基底クラスから継承するだけでなく、1つまたは複数のインターフェイスを実装することもできます。 したがって、多くの場合、インターフェイスは、多重継承の効果を実現するために使用されます。 たとえば、 <xref:System.IDisposable> は、参加する他の継承階層に依存しない disposability をサポートする型を許可するインターフェイスです。

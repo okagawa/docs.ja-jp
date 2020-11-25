@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 920b6483-7064-4d64-8613-fcc38ccf9b1e
 topic_type:
 - apiref
-ms.openlocfilehash: 1fe44f8f84c079e920c8c82fb9d52d1980d3b852
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: fe4f3a7355339c9b5adbe5de062f0a5688d81c23
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497206"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727186"
 ---
 # <a name="icorprofilerinfo2enummodulefrozenobjects-method"></a>ICorProfilerInfo2::EnumModuleFrozenObjects メソッド
+
 指定したモジュール内の固定されたオブジェクトを反復処理できる列挙子を取得します。このメソッドは互換性のために残されています。  
   
 ## <a name="syntax"></a>構文  
@@ -34,13 +35,15 @@ HRESULT EnumModuleFrozenObjects(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `moduleID`  
  から列挙される固定オブジェクトを含むモジュールの ID。  
   
  `ppEnum`  
- 入出力固定されたオブジェクトを列挙する[ICorProfilerObjectEnum](icorprofilerobjectenum-interface.md)インターフェイスのアドレスへのポインター。  
+ 入出力固定されたオブジェクトを列挙する [ICorProfilerObjectEnum](icorprofilerobjectenum-interface.md) インターフェイスのアドレスへのポインター。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

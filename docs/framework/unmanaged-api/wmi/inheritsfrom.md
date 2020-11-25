@@ -1,6 +1,6 @@
 ---
-title: 継承関数 (アンマネージ API リファレンス)
-description: InheritsFrom 関数は、クラスまたはインスタンスが特定の親クラスから派生するかどうかを決定します。
+title: InheritsFrom 関数 (アンマネージ API リファレンス)
+description: InheritsFrom 関数は、クラスまたはインスタンスが特定の親クラスから派生しているかどうかを判断します。
 ms.date: 11/06/2017
 api_name:
 - InheritsFrom
@@ -14,14 +14,15 @@ helpviewer_keywords:
 - InheritsFrom function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: c735c01c45beda8a1ba988a5c580e6b04ae46312
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3cfe3388dc808335e6d3daaf7ec949108e95f52e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174941"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726794"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom 関数
+
 指定した親クラスから現在のクラスまたはインスタンスが派生しているかどうかが判定されます。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -39,34 +40,35 @@ HRESULT InheritsFrom (
 ## <a name="parameters"></a>パラメーター
 
 `vFunc`  
-[in]このパラメーターは使用されません。
+からこのパラメーターは使用されていません。
 
 `ptr`  
-[in][インスタンス](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)へのポインター。
+から [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) インスタンスへのポインター。
 
 `wszAncestor`  
-[in]クラスの名前。 `wszAncestor`有効な`LPCWSTR`を指す必要があります。
+からクラスの名前。 `wszAncestor` は有効なを指している必要があり `LPCWSTR` ます。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値は *、WbemCli.h*ヘッダー ファイルで定義されているか、コード内で定数として定義できます。
+この関数によって返される次の値は、 *WbemCli* ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|常時  |Value  |説明  |
+|定数  |値  |説明  |
 |---------|---------|---------|
-| `WBEM_S_NO_ERROR` | 0 | 現在のオブジェクトは`wszAncestor`から継承されます。  |
-| `WBEM_S_FALSE` | 1 | 現在のオブジェクトは`wszAncestor`から継承しません。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor` は `null` です。 |
+| `WBEM_S_NO_ERROR` | 0 | 現在のオブジェクトはを継承 `wszAncestor` します。  |
+| `WBEM_S_FALSE` | 1 | 現在のオブジェクトはを継承しません `wszAncestor` 。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor` が `null`です。 |
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-この関数は、メソッドの呼び出し[を](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom)ラップします。
+この関数は、 [IWbemClassObject:: InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) メソッドの呼び出しをラップします。
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** WMINet_Utils.idl  
+ **ヘッダー:** WMINet_Utils .idl  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 

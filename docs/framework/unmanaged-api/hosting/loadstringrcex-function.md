@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: bc789636-ca14-4f07-8f77-9305874d7495
 topic_type:
 - apiref
-ms.openlocfilehash: a05cbe985c2cfebb67756fdfb54398b36e87f441
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 1aa5c9f5dd7dd63e69c2eed1f6dd8ad6f007f01f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008516"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727537"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx 関数
+
 HRESULT 値を、指定したカルチャの適切なエラー メッセージに変換します。  
   
  この関数は .NET Framework 4 で非推奨とされました。  
@@ -40,6 +41,7 @@ HRESULT LoadStringRCEx (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `lcid`  
  からカルチャ識別子。 既定のカルチャを使用するには、に-1 を渡し `lcid` ます。  
   
@@ -59,22 +61,25 @@ HRESULT LoadStringRCEx (
  入出力エラーメッセージの長さへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
+
  このメソッドは、次の値に加えて、Winerror.h で定義されている標準の COM エラーコードを返します。  
   
 |リターン コード|説明|  
 |-----------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|E_INVALIDARG|`szBuffer`が null であるか、または `iMax` がゼロ (0) です。|  
+|E_INVALIDARG|`szBuffer` が null であるか、または `iMax` がゼロ (0) です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
+
  メソッドが正常に完了しなかった場合、には `szBuffer` 空の文字列が含まれます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll  
+ **ライブラリ:** MSCorEE.dll  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

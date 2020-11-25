@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 287b11e9-7c52-4a13-ba97-751203fa97f4
 topic_type:
 - apiref
-ms.openlocfilehash: ff0ff35f42e20725cab49afd971523aabda866c3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 10cc9dedfa34cd5235df721d7010bbd928fbc3ba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547806"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727238"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot メソッド
+
 指定したスレッドのスタック上のマネージフレームをウォークし、コールバックを介してプロファイラーに情報を送信します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,6 +39,7 @@ HRESULT DoStackSnapshot(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `thread`  
  からターゲットスレッドの ID。  
   
@@ -64,7 +66,8 @@ HRESULT DoStackSnapshot(
  `contextSize`  
  から `CONTEXT` パラメーターによって参照される構造体のサイズ `context` 。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  に null を渡す `thread` と、現在のスレッドのスナップショットが生成されます。 スナップショットは、その時点でターゲットスレッドが中断されている場合にのみ、他のスレッドで取得できます。  
   
  プロファイラーがスタックをウォークする場合は、を呼び出し `DoStackSnapshot` ます。 その呼び出しから CLR が戻る前に、 `StackSnapshotCallback` スタック上のマネージフレーム (またはアンマネージフレームの実行) ごとに、を複数回呼び出します。 アンマネージフレームが検出されたら、それらを自分で調べる必要があります。  
@@ -76,11 +79,13 @@ HRESULT DoStackSnapshot(
  次のセクションで説明するように、スタックウォークは同期または非同期にすることができます。  
   
 ## <a name="synchronous-stack-walk"></a>同期スタックウォーク  
+
  同期スタックウォークでは、コールバックへの応答として現在のスレッドのスタックを調べる必要があります。 シード処理や中断を必要としません。  
   
  プロファイラーの [ICorProfilerCallback](icorprofilercallback-interface.md) (または [ICorProfilerCallback2](icorprofilercallback2-interface.md)) メソッドのいずれかを呼び出す CLR に応答してを呼び出す場合は、を呼び出して、 `DoStackSnapshot` 現在のスレッドのスタックをウォークします。 これは、 [ICorProfilerCallback:: ObjectAllocated](icorprofilercallback-objectallocated-method.md)などの通知でスタックがどのように見えるかを確認する場合に便利です。 メソッド内からを呼び出すだけで `DoStackSnapshot` `ICorProfilerCallback` 、パラメーターとパラメーターで null を渡すことができ `context` `thread` ます。  
   
 ## <a name="asynchronous-stack-walk"></a>非同期スタックウォーク  
+
  非同期スタックウォークでは、別のスレッドのスタックを調べたり、コールバックに応答せずに現在のスレッドの命令ポインターをハイジャックしたりして、現在のスレッドのスタックを調べます。 スタックの最上位が、プラットフォーム呼び出し (PInvoke) または COM 呼び出しの一部ではなく、CLR 自体のヘルパーコードであるアンマネージコードである場合、非同期ウォークにはシードが必要です。 たとえば、ジャストインタイム (JIT) コンパイルまたはガベージコレクションを実行するコードは、ヘルパーコードです。  
   
  最上位のマネージフレームが見つかるまで、ターゲットスレッドを直接中断し、自分でスタックを調査することで、シードを取得します。 ターゲットスレッドが中断された後、ターゲットスレッドの現在のレジスタコンテキストを取得します。 次に、 [ICorProfilerInfo:: GetFunctionFromIP](icorprofilerinfo-getfunctionfromip-method.md) を呼び出すことによって、登録コンテキストがアンマネージコードを指しているかどうかを確認します。0と等しいを返す場合 `FunctionID` 、フレームはアンマネージコードです。 次に、最初のマネージフレームに達するまでスタックをウォークし、そのフレームのレジスタコンテキストに基づいてシードコンテキストを計算します。  
@@ -97,7 +102,8 @@ HRESULT DoStackSnapshot(
   
  また、 `DoStackSnapshot` プロファイラーによって作成されたスレッドからを呼び出した場合に、別のターゲットスレッドのスタックを調べることができるように、デッドロックのリスクもあります。 最初に作成したスレッドが特定の `ICorProfilerInfo*` メソッド (を含む) を入力すると、clr はスレッド `DoStackSnapshot` ごとに clr 固有の初期化を実行します。 プロファイラーが、ウォークしようとしているスタックを持つターゲットスレッドを中断し、そのターゲットスレッドがこのスレッドごとの初期化を実行するために必要なロックを所有していた場合、デッドロックが発生します。 このデッドロックを回避するには、プロファイラーによっ `DoStackSnapshot` て作成されたスレッドからへの最初の呼び出しを行い、個別のターゲットスレッドをウォークしますが、先にターゲットスレッドを中断しないようにします。 この最初の呼び出しにより、スレッドごとの初期化がデッドロックなしで完了することが保証されます。 が `DoStackSnapshot` 成功し、少なくとも1つのフレームを報告した場合は、その時点以降に、プロファイラーによって作成されたスレッドは、任意のターゲットスレッドを中断し、を呼び出して `DoStackSnapshot` ターゲットスレッドのスタックをたどることができます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

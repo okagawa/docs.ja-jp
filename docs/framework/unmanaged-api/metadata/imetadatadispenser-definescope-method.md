@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: af28db02-29af-45ac-aec6-8d6c6123c2ff
 topic_type:
 - apiref
-ms.openlocfilehash: 12a32b5d2f0647ea2d9b696d08d6644e30be0c65
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 87a39350986cb7bb62f76b0d9a6a9aae8f82e2f9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501366"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726094"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>IMetaDataDispenser::DefineScope メソッド
+
 新しいメタデータを作成できる新しい領域をメモリ内に作成します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,6 +38,7 @@ HRESULT DefineScope (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `rclsid`  
  から作成されるメタデータ構造のバージョンの CLSID。 この値は、.NET Framework バージョン2.0 の CLSID_CorMetaDataRuntime である必要があります。  
   
@@ -51,17 +53,19 @@ HRESULT DefineScope (
  `ppIUnk`  
  入出力返されたインターフェイスへのポインター。  
   
-## <a name="remarks"></a>解説  
- `DefineScope`メモリ内メタデータテーブルのセットを作成し、メタデータの一意の GUID (モジュールバージョン識別子または MVID) を生成し、出力されるコンパイル単位のエントリをモジュールテーブルに作成します。  
+## <a name="remarks"></a>注釈  
+
+ `DefineScope` メモリ内メタデータテーブルのセットを作成し、メタデータの一意の GUID (モジュールバージョン識別子または MVID) を生成し、出力されるコンパイル単位のエントリをモジュールテーブルに作成します。  
   
- 必要に応じて、 [IMetaDataEmit:: SetModuleProps](imetadataemit-setmoduleprops-method.md)または[IMetaDataEmit::D efinecustomattribute](imetadataemit-definecustomattribute-method.md)メソッドを使用して、メタデータスコープ全体に属性をアタッチできます。  
+ 必要に応じて、 [IMetaDataEmit:: SetModuleProps](imetadataemit-setmoduleprops-method.md) または [IMetaDataEmit::D efinecustomattribute](imetadataemit-definecustomattribute-method.md) メソッドを使用して、メタデータスコープ全体に属性をアタッチできます。  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+
+ **プラットフォーム:** 「 [システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

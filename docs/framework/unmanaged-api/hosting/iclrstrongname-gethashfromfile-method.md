@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e50480a-8ada-4044-b2a5-97bb14ed3525
 topic_type:
 - apiref
-ms.openlocfilehash: e4a5f6440a016176cf06704b342c173b29748e78
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: ff346d8f7ba321904a8d91079298b58039e6eb54
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762111"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727609"
 ---
 # <a name="iclrstrongnamegethashfromfile-method"></a>ICLRStrongName::GetHashFromFile メソッド
+
 指定したファイルの内容に対してハッシュが生成されます。  
   
 ## <a name="syntax"></a>構文  
@@ -38,6 +39,7 @@ HRESULT GetHashFromFile (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `szFilePath`  
  からハッシュするファイルの名前。  
   
@@ -54,17 +56,20 @@ HRESULT GetHashFromFile (
  入出力返されたのサイズ (バイト単位) `pbHash` 。  
   
 ## <a name="return-value"></a>戻り値  
- `S_OK`メソッドが正常に完了した場合は。それ以外の場合は、失敗を示す HRESULT 値 (「リストの[一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values)」を参照してください)。  
+
+ `S_OK` メソッドが正常に完了した場合は。それ以外の場合は、失敗を示す HRESULT 値 (「リストの [一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values) 」を参照してください)。  
   
-## <a name="remarks"></a>解説  
- このメソッドは[ICLRStrongName:: GetHashFromFileW](iclrstrongname-gethashfromfilew-method.md)メソッドと同じですが、ファイル名の指定は Unicode ではなく ANSI です。  
+## <a name="remarks"></a>注釈  
+
+ このメソッドは [ICLRStrongName:: GetHashFromFileW](iclrstrongname-gethashfromfilew-method.md) メソッドと同じですが、ファイル名の指定は Unicode ではなく ANSI です。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

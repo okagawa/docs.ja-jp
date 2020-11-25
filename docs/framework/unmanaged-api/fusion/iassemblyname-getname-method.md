@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 1dee9781-1cf3-48a9-a376-d18ea1f73280
 topic_type:
 - apiref
-ms.openlocfilehash: 5f758d76d779cff7db119e69dc1cf3342071f1c1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 58b8b83ce1db9338612cbaa01a0db0862cf1054e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134348"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727901"
 ---
 # <a name="iassemblynamegetname-method"></a>IAssemblyName::GetName メソッド
-この[IAssemblyName](iassemblyname-interface.md)オブジェクトによって参照されるアセンブリの単純な、暗号化されていない名前を取得します。  
+
+この [IAssemblyName](iassemblyname-interface.md) オブジェクトによって参照されるアセンブリの単純な、暗号化されていない名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,18 +36,20 @@ HRESULT GetName (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `lpcwBuffer`  
- [入力、出力]ワイド文字の `pwzName` のサイズ (null 終端文字を含む)。  
+ [入力、出力] `pwzName` Null 終端文字を含むワイド文字ののサイズ。  
   
  `pwzName`  
  入出力参照されたアセンブリの名前を保持するバッファー。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Fusion. h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

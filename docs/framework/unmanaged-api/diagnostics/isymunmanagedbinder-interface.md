@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: b22fbe19-b30f-4696-8175-e6b91da9edab
 topic_type:
 - apiref
-ms.openlocfilehash: f4f925282d65cd9cbc8eb1c8825f358602de68ed
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 554e59484f00626726f7f024c69e93a5e6647130
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441696"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727381"
 ---
 # <a name="isymunmanagedbinder-interface"></a>ISymUnmanagedBinder インターフェイス
-アンマネージコードのシンボルバインダーを表します。  
+
+アンマネージド コードのシンボル バインダーを表します。  
   
 > [!IMPORTANT]
 > 信頼されていないソースからプログラムデータベース (PDB) ファイルを開くと、セキュリティ上の危険があります。  
@@ -31,10 +32,11 @@ ms.locfileid: "83441696"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetReaderForFile メソッド](isymunmanagedbinder-getreaderforfile-method.md)|メタデータインターフェイスとファイル名を指定すると、モジュールに関連付けられているデバッグシンボルを読み取る正しい[ISymUnmanagedReader](isymunmanagedreader-interface.md)構造体が返されます。|  
-|[GetReaderFromStream メソッド](isymunmanagedbinder-getreaderfromstream-method.md)|メタデータインターフェイスと、シンボルストアを含むストリームが指定された場合、は、指定されたシンボルストアからデバッグシンボルを読み取る正しい[ISymUnmanagedReader](isymunmanagedreader-interface.md)構造体を返します。|  
+|[GetReaderForFile メソッド](isymunmanagedbinder-getreaderforfile-method.md)|メタデータインターフェイスとファイル名を指定すると、モジュールに関連付けられているデバッグシンボルを読み取る正しい [ISymUnmanagedReader](isymunmanagedreader-interface.md) 構造体が返されます。|  
+|[GetReaderFromStream メソッド](isymunmanagedbinder-getreaderfromstream-method.md)|メタデータインターフェイスと、シンボルストアを含むストリームが指定された場合、は、指定されたシンボルストアからデバッグシンボルを読み取る正しい [ISymUnmanagedReader](isymunmanagedreader-interface.md) 構造体を返します。|  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

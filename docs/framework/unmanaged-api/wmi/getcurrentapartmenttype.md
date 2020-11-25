@@ -1,6 +1,6 @@
 ---
-title: 関数 (アンマネージ API リファレンス)
-description: 関数は、呼び出し元が実行されているアパートメントの型を取得します。
+title: GetCurrentApartmentType 関数 (アンマネージ API リファレンス)
+description: GetCurrentApartmentType 関数は、呼び出し元が実行されているアパートメントの種類を取得します。
 ms.date: 11/06/2017
 api_name:
 - GetCurrentApartmentType
@@ -14,14 +14,15 @@ helpviewer_keywords:
 - GetCurrentApartmentType function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 3fc88f7997ee5a6c25359243e1ee97a041050eb7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0832867d86b7dda80e037846d9aa66c1d37f87be
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176826"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726198"
 ---
 # <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType 関数
+
 呼び出し元が実行されているアパートメントの種類が取得されます。
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -39,31 +40,32 @@ HRESULT GetCurrentApartmentType (
 ## <a name="parameters"></a>パラメーター
 
 `vFunc`  
-[in]このパラメーターは使用されません。
+からこのパラメーターは使用されていません。
 
 `ptr`  
-[in][インスタンスへの](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo)ポインター。
+から [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) インスタンスへのポインター。
 
 `aptType`  
-[アウト]呼び出し元のアパートメントを示す[APTTYPE](/windows/win32/api/objidlbase/ne-objidlbase-apttype)列挙値へのポインター。
+入出力呼び出し元のアパートメントを示す [Apttype](/windows/win32/api/objidlbase/ne-objidlbase-apttype) 列挙値へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-|常時  |Value  |説明  |
+|定数  |値  |説明  |
 |---------|---------|---------|
 | `S_OK` | 0 | 関数は正常に完了しました。 |
-| `E_FAIL` | 0x80000008 | 呼び出し元がアパートメントで実行されていません。 |
+| `E_FAIL` | 0x80000008 | 呼び出し元がアパートメント内で実行されていません。 |
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-この関数は、メソッドの呼び出し[をラップします](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype)。
+この関数は、 [IComThreadingInfo:: GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) メソッドの呼び出しをラップします。
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** WMINet_Utils.idl  
+ **ヘッダー:** WMINet_Utils .idl  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 

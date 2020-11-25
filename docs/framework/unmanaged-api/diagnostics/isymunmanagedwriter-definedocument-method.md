@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c3bf15b0-3250-4bbe-b9b5-c5d695289b6f
 topic_type:
 - apiref
-ms.openlocfilehash: fdcfb0c4f9c21eb516f4196d0c8f682669468219
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6413935df86b85a959fa4f354c6233d18baf99d3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615229"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727576"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>ISymUnmanagedWriter::DefineDocument メソッド
+
 ソース ドキュメントを定義します。 Guid は、既知の言語、ベンダー、およびドキュメントの種類に対して提供されます。  
   
 ## <a name="syntax"></a>構文  
@@ -37,8 +38,9 @@ HRESULT DefineDocument(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `url`  
- から`WCHAR`ドキュメントを識別する URL (uniform resource locator) を定義するへのポインター。  
+ から `WCHAR` ドキュメントを識別する URL (uniform resource locator) を定義するへのポインター。  
   
  `language`  
  からドキュメントの言語を定義する GUID へのポインター。  
@@ -50,12 +52,14 @@ HRESULT DefineDocument(
  からドキュメントの種類を定義する GUID へのポインター。  
   
  `pRetVal`  
- 入出力返された[ISymUnmanagedWriter](isymunmanagedwriter-interface.md)インターフェイスへのポインター。  
+ 入出力返された [ISymUnmanagedWriter](isymunmanagedwriter-interface.md) インターフェイスへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

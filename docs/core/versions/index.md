@@ -2,12 +2,12 @@
 title: .NET Core ランタイムと SDK をバージョン管理する方法
 description: この記事では、.NET Core SDK と ランタイムをバージョン管理する方法について説明します (セマンティック バージョニングと似ています)。
 ms.date: 06/24/2020
-ms.openlocfilehash: 5e315f49227f3c2ea40652a30fabbf566bdfe495
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: baa3f94947699d21ce7426054359d91f7781b565
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619755"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726705"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core をバージョン管理する方法の概要
 
@@ -41,7 +41,7 @@ SDK バージョン番号の 3 番目の位置には、マイナー番号とパ�
 
 ## <a name="semantic-versioning"></a>セマンティック バージョン管理
 
-.NET Core *ランタイム*は、[セマンティック バージョニング (SemVer)](https://semver.org/) にほぼ準拠しています。`MAJOR.MINOR.PATCH` バージョン管理の使用が採用され、バージョン番号のさまざまな部分を使用して変更の程度と種類が記述されています。
+.NET Core *ランタイム* は、[セマンティック バージョニング (SemVer)](https://semver.org/) にほぼ準拠しています。`MAJOR.MINOR.PATCH` バージョン管理の使用が採用され、バージョン番号のさまざまな部分を使用して変更の程度と種類が記述されています。
 
 ```
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
@@ -98,7 +98,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 | .NET Core | .NET Standard |
 |-----------|---------------|
-| 1       | 最大 1.6     |
+| 1.0       | 最大 1.6     |
 | 2.0       | 最大 2.0     |
 | 2.1       | 最大 2.0     |
 | 2.2       | 最大 2.0     |
@@ -113,4 +113,4 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 - [.NET Core の配布パッケージ](../distribution-packaging.md)
 - [.NET Core サポート ライフサイクルのファクト シート](https://dotnet.microsoft.com/platform/support/policy)
 - [.NET core 2 + バージョン バインディング](https://github.com/dotnet/designs/issues/3)
-- [.NET Core の Docker イメージ](https://hub.docker.com/_/microsoft-dotnet-core/)
+- [.NET Core の Docker イメージ](https://hub.docker.com/_/microsoft-dotnet/)

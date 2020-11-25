@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 532da6ee-7f0a-401b-a61e-fc47ec235d2e
 topic_type:
 - apiref
-ms.openlocfilehash: 04ce9ebded4be7ac3b20a4ceb78dd02294bbff4a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e88fe1b3c93ca278d0e64a5eb3274c86bd8f0f6d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502898"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727134"
 ---
 # <a name="icorprofilerinfo2getcodeinfo2-method"></a>ICorProfilerInfo2::GetCodeInfo2 メソッド
+
 指定した `FunctionID` に関連付けられているネイティブ コードの範囲を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,6 +38,7 @@ HRESULT GetCodeInfo2(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `functionID`  
  [in] ネイティブ コードが関連付けられている関数の ID。  
   
@@ -44,12 +46,13 @@ HRESULT GetCodeInfo2(
  [in] `codeInfos` 配列のサイズ。  
   
  `pcCodeInfos`  
- 入出力使用可能な[COR_PRF_CODE_INFO](cor-prf-code-info-structure.md)構造体の合計数へのポインター。  
+ 入出力使用可能な [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) 構造体の合計数へのポインター。  
   
  `codeInfos`  
  [out] 呼び出し元が提供したバッファー。 メソッドから制御が戻った後で、それぞれがネイティブ コードのブロックを記述する `COR_PRF_CODE_INFO` の構造体の配列が含まれます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  エクステンとは Microsoft Intermediate Language (MSIL) オフセットの昇順に並べ替えられます。  
   
  `GetCodeInfo2` から制御が戻ったら、`codeInfos` バッファーのサイズが十分で、すべての `COR_PRF_CODE_INFO` 構造体を格納できたかどうかを確認する必要があります。 これを行うには、`cCodeInfos` の値を `cchName` パラメーターの値と比較します。 `COR_PRF_CODE_INFO` 構造体のサイズによって除算された `cCodeInfos` が `pcCodeInfos` より小さい場合は、`codeInfos` バッファーの割り当てを増やし、`cCodeInfos` を新しい大きいサイズに更新した後、`GetCodeInfo2` を再度呼び出します。  
@@ -57,6 +60,7 @@ HRESULT GetCodeInfo2(
  別の方法として、最初に `GetCodeInfo2` を長さゼロの `codeInfos` バッファーで呼び出して、適切なバッファーのサイズを取得します。 その後、`codeInfos` バッファーのサイズを、`pcCodeInfos` で返された値に `COR_PRF_CODE_INFO` 構造体のサイズを掛けた値に設定し、`GetCodeInfo2` を再度呼び出します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

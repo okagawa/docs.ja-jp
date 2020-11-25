@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ae0cfd73-8ead-4d36-9310-dccaac9db0bd
 topic_type:
 - apiref
-ms.openlocfilehash: d1ff3427feb5dc8395bbb2fda78e3e93e1a1a8f0
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: dd3936656ce1c9482b7f07a5780fcf651356b4be
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378857"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727966"
 ---
 # <a name="icordebugthreadgetuserstate-method"></a>ICorDebugThread::GetUserState メソッド
+
 このスレッドの現在のユーザー状態を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,13 +35,16 @@ HRESULT GetUserState (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pState`  
  入出力このスレッドの現在のユーザー状態を示す CorDebugUserState 列挙値のビットごとの組み合わせへのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  スレッドのユーザー状態は、デバッグ中のプログラムによって検査されるときのスレッドの状態です。 スレッドに複数の状態ビットが設定されている可能性があります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

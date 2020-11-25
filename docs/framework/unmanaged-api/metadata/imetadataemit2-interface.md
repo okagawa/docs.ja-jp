@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 866dc96b-bbfc-4c0f-80c2-38ce93072106
 topic_type:
 - apiref
-ms.openlocfilehash: 5a232f30da8812c6f3bd94647d74151312a8593b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b8ad159dace734c343297b256092162f17ab829b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493041"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726484"
 ---
 # <a name="imetadataemit2-interface"></a>IMetaDataEmit2 インターフェイス
+
 [IMetaDataEmit](imetadataemit-interface.md)インターフェイスを拡張して、主にジェネリック型を操作できるようにします。  
   
 ## <a name="methods"></a>メソッド  
@@ -38,11 +39,12 @@ ms.locfileid: "84493041"
 |[SetGenericParamProps メソッド](imetadataemit2-setgenericparamprops-method.md)|指定したトークンによって参照されるジェネリックパラメーター定義のプロパティ値を設定します。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

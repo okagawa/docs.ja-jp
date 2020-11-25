@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5f6c2bcd-8102-4e3b-abc5-86ab0bd62def
 topic_type:
 - apiref
-ms.openlocfilehash: d502b4098016fb14793bccd6feb641e92e3c2611
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 968874a46279b7eac651d45c3890429a326651b2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795639"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726952"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState 列挙型
+
 スレッドのユーザーの状態を示します。  
   
 ## <a name="syntax"></a>構文  
@@ -54,12 +55,14 @@ typedef enum CorDebugUserState {
 |`USER_UNSAFE_POINT`|スレッドが安全でないポイントにあります。 つまり、スレッドは、ガベージコレクションをブロックする可能性がある実行中のポイントにあります。<br /><br /> デバッグイベントは安全でないポイントからディスパッチできますが、アンセーフポイントでスレッドを中断すると、スレッドが再開されるまでデッドロックが発生する可能性が高くなります。 セーフポイントと unsafe ポイントは、just-in-time (JIT) とガベージコレクションの実装によって決定されます。|  
 |`USER_THREADPOOL`|スレッドはスレッドプールからのものです。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  スレッドのユーザー状態は、デバッガーがそのスレッドを調べたときのスレッドの状態です。 スレッドには、ユーザー状態を組み合わせて含めることができます。  
   
- スレッドのユーザー状態を取得するには、 [「いい thread:: GetUserState](icordebugthread-getuserstate-method.md)メソッド」を使用します。  
+ スレッドのユーザー状態を取得するには、 [「いい thread:: GetUserState](icordebugthread-getuserstate-method.md) メソッド」を使用します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

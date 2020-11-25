@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 003bb138-7960-4291-ac88-0d87e470ff70
 topic_type:
 - apiref
-ms.openlocfilehash: 19d0dcf8a5633371765861fcc29df4ef8c91ebc4
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 85df98e83396c9439c28dd41a3ffa02b820c9c3e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795717"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726055"
 ---
 # <a name="cordebugregister-enumeration"></a>CorDebugRegister 列挙型
+
 指定されたプロセッサ アーキテクチャに関連付けられたレジスタを指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -189,7 +190,8 @@ typedef enum CorDebugRegister {
 |`REGISTER_ARM_R12`|ARM プロセッサ上のレジスタ R12。|  
 |`REGISTER_ARM_LR`|ARM プロセッサ上のリンク レジスタ (R14)。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  IA-64 プロセッサには、128 個の汎用データ レジスタおよび 128 個の浮動小数点データ レジスタがありますが、提供されているのは `REGISTER_IA64_R0` および `REGISTER_IA64_F0` の値のみです。 その他の値は、次のように判断されます。  
   
 - IA-64 プロセッサ上の #1 データ レジスタから #127 データ レジスタに対応する、`REGISTER_IA64_R0` から `REGISTER_IA64_R1` までの値の `REGISTER_IA64_R127` にレジスタ番号を追加します。  
@@ -198,7 +200,8 @@ typedef enum CorDebugRegister {
   
  たとえば、IA-64 プロセッサ上で #83 データ レジスタを指定する必要がある場合、`REGISTER_IA64_R0` + 83 を使用します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

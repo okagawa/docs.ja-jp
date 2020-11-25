@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cade1feb-71d2-43ed-85ca-7b2e9da12994
 topic_type:
 - apiref
-ms.openlocfilehash: 8e251ade301ce3ed85f4483634eeae4ca135334a
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 9f555d3119ede5eabe61467aa81d35aa5c354751
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762722"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727849"
 ---
 # <a name="icorthreadpoolcorregisterwaitforsingleobject-method"></a>ICorThreadpool::CorRegisterWaitForSingleObject メソッド
+
 このメソッドは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。  
   
 ## <a name="syntax"></a>構文  
@@ -39,12 +40,13 @@ HRESULT CorRegisterWaitForSingleObject (
 );  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

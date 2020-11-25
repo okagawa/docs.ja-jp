@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bda75017-739f-4ce5-9000-f3b526e8473c
 topic_type:
 - apiref
-ms.openlocfilehash: 368b8f270797beb525e0745a29990667913f4071
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a1e321e141059ccf1da7292d28e7099418a5134e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497360"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727199"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo メソッド
+
 配列オブジェクトに関する詳細情報を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,6 +38,7 @@ HRESULT GetArrayObjectInfo(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `objectId`  
  から有効な配列オブジェクトの ID。  
   
@@ -52,10 +54,12 @@ HRESULT GetArrayObjectInfo(
  `ppData`  
  入出力配列の生バッファーのアドレスへのポインター。これは、C++ 規則に従ってレイアウトされます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  `pDimensionSizes`とは `pDimensionLowerBounds` 並列配列であるため、各配列内の同じインデックスにある要素は同じエンティティの特性です。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

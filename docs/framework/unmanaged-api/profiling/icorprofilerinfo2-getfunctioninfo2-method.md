@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0aa60f24-8bbd-4c83-83c5-86ad191b1d82
 topic_type:
 - apiref
-ms.openlocfilehash: f5438ddc655f0f6a7c11d978a47b1bf9e2a13059
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e44b8afe22fdb10077048dc7bc2ccb1f605edd75
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497008"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727095"
 ---
 # <a name="icorprofilerinfo2getfunctioninfo2-method"></a>ICorProfilerInfo2::GetFunctionInfo2 メソッド
+
 関数の親クラス、メタデータ トークン、および型引数が存在する場合はそれぞれの `ClassID` を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -40,6 +41,7 @@ HRESULT GetFunctionInfo2(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `funcId`  
  [in] 親クラスおよびその他の情報を取得する関数の ID。  
   
@@ -64,8 +66,9 @@ HRESULT GetFunctionInfo2(
  `typeArgs`  
  [out] `ClassID` 値の配列。各値は、関数の型引数の ID です。 このメソッドが戻るとき、使用できる `ClassID` 値の一部または全部が `typeArgs` に格納されます。  
   
-## <a name="remarks"></a>解説  
- プロファイラーコードは、 [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md)を呼び出して、指定されたモジュールの[メタデータ](../metadata/index.md)インターフェイスを取得できます。 `pToken` が参照している場所に返されるメタデータ トークンを使用すると、関数のメタデータにアクセスできます。  
+## <a name="remarks"></a>注釈  
+
+ プロファイラーコードは、 [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) を呼び出して、指定されたモジュールの [メタデータ](../metadata/index.md) インターフェイスを取得できます。 `pToken` が参照している場所に返されるメタデータ トークンを使用すると、関数のメタデータにアクセスできます。  
   
  次の表に示すように、`pClassId` パラメーターで返されるクラス ID、および `typeArgs` パラメーターで返される型引数は、`frameInfo` パラメーターで渡される値によって異なります。  
   
@@ -80,6 +83,7 @@ HRESULT GetFunctionInfo2(
  別の方法として、最初に `GetFunctionInfo2` を長さゼロの `pcTypeArgs` バッファーで呼び出して、適切なバッファーのサイズを取得します。 その後、バッファーのサイズを `pcTypeArgs` に返された値 (`ClassID` 値のサイズで除算された値) に設定し、`GetFunctionInfo2` を再度呼び出します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

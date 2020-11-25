@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3a36987-5666-4e2f-95b5-d0cb246502ec
 topic_type:
 - apiref
-ms.openlocfilehash: ac35b18ce8c45c95bb2fb8e820423470ca1b75bf
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a2bac05e7471a0df8d624bf5dfbe2aa58c25cf4c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497154"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727173"
 ---
 # <a name="icorprofilerinfo2getclasslayout-method"></a>ICorProfilerInfo2::GetClassLayout メソッド
+
 指定したクラスで定義されるフィールドのメモリ内レイアウトに関する情報を取得します。 つまり、このメソッドはクラスのフィールドのオフセットを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,11 +38,12 @@ HRESULT GetClassLayout(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `classID`  
  [in] レイアウトを取得するクラスの ID。  
   
  `rFieldOffset`  
- [入力、出力][COR_FIELD_OFFSET](../metadata/cor-field-offset-structure.md)構造体の配列。各構造体には、クラスのフィールドのトークンとオフセットが格納されます。  
+ [入力、出力] [COR_FIELD_OFFSET](../metadata/cor-field-offset-structure.md) 構造体の配列。各構造体には、クラスのフィールドのトークンとオフセットが格納されます。  
   
  `cFieldOffset`  
  [in] `rFieldOffset` 配列のサイズ。  
@@ -52,16 +54,18 @@ HRESULT GetClassLayout(
  `pulClassSize`  
  [out] クラスのサイズ (バイト単位) を含む位置へのポインター。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  `GetClassLayout` メソッドは、クラス自体によって定義されているフィールドのみを返します。 クラスの親クラスもフィールドを定義している場合、プロファイラーは親クラスで `GetClassLayout` を呼び出してそのフィールドを取得する必要があります。  
   
- `GetClassLayout` を文字列クラスと一緒に使用する場合、このメソッドは E_INVALIDARG というエラー コードで失敗します。 文字列のレイアウトに関する情報を取得するには、 [ICorProfilerInfo2:: GetStringLayout](icorprofilerinfo2-getstringlayout-method.md)を使用します。 `GetClassLayout` は、配列クラスを使用して呼び出される場合も失敗します。  
+ `GetClassLayout` を文字列クラスと一緒に使用する場合、このメソッドは E_INVALIDARG というエラー コードで失敗します。 文字列のレイアウトに関する情報を取得するには、 [ICorProfilerInfo2:: GetStringLayout](icorprofilerinfo2-getstringlayout-method.md) を使用します。 `GetClassLayout` は、配列クラスを使用して呼び出される場合も失敗します。  
   
  `GetClassLayout` から制御が戻ったら、`rFieldOffset` バッファーのサイズが十分で、すべての使用可能な `COR_FIELD_OFFSET` 構造体を格納できたかどうかを確認する必要があります。 これを行うには、`pcFieldOffset` が指している値と、`rFieldOffset` のサイズを `COR_FIELD_OFFSET` 構造体のサイズで割った値を比較します。 `rFieldOffset` の大きさが十分でない場合は、`rFieldOffset` バッファーの割り当てを増やし、`cFieldOffset` を新しい大きいサイズに更新して、`GetClassLayout` を再度呼び出します。  
   
  別の方法として、最初に `GetClassLayout` を長さゼロの `rFieldOffset` バッファーで呼び出して、適切なバッファーのサイズを取得します。 その後、バッファーのサイズを `pcFieldOffset` で返された値に設定し、`GetClassLayout` を再度呼び出します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

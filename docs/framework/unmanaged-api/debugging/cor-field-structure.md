@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c0822423-a9df-4961-950d-50dcc152f863
 topic_type:
 - apiref
-ms.openlocfilehash: 78e34d9d33d34047e3ebd2effb4894bc7b709585
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ae8e907d0e0d6ef5030b3e9aa1f1b3dcef50193e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132358"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726627"
 ---
 # <a name="cor_field-structure"></a>COR_FIELD 構造体
+
 オブジェクトのフィールドに関する情報が提供されます。  
   
 ## <a name="syntax"></a>構文  
@@ -39,21 +40,22 @@ typedef struct COR_FIELD{
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`token`|フィールド情報を取得するために使用できる `mdFieldDef` トークン。|  
+|`token`|`mdFieldDef`フィールド情報を取得するために使用できるトークン。|  
 |`offset`|オブジェクト内のフィールドデータへのオフセット (バイト単位)。|  
-|`id`|このフィールドの型を識別する[COR_TYPEID](cor-typeid-structure.md)値。|  
+|`id`|このフィールドの型を識別する [COR_TYPEID](cor-typeid-structure.md) 値。|  
 |`fieldType`|フィールドの型を示す CorElementType 列挙値。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

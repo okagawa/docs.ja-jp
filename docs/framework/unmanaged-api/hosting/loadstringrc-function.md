@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 752e49b4-987c-4c28-a118-1a0c1ed510c5
 topic_type:
 - apiref
-ms.openlocfilehash: 8bd0292ddf22453f8892ed8bddd10c2144877097
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 16f95f8fce20f2cf46d4cda214e4494bd288bf60
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008517"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727550"
 ---
 # <a name="loadstringrc-function"></a>LoadStringRC 関数
+
 現在のスレッドの既定のカルチャを使用して、HRESULT 値をエラー メッセージに変換します。  
   
  この関数は .NET Framework 4 で非推奨とされました。  
@@ -38,6 +39,7 @@ HRESULT LoadStringRC (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `iResourceID`  
  からHRESULT。  
   
@@ -51,22 +53,25 @@ HRESULT LoadStringRC (
  から無効.  
   
 ## <a name="return-value"></a>戻り値  
+
  このメソッドは、次の値に加えて、Winerror.h で定義されている標準のコンポーネントオブジェクトモデル (COM) エラーコードを返します。  
   
 |リターン コード|説明|  
 |-----------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|E_INVALIDARG|`szBuffer`が null または `iMax` がゼロ (0) です。|  
+|E_INVALIDARG|`szBuffer` が null または `iMax` がゼロ (0) です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
+
  メソッドが正常に完了しなかった場合、には `szBuffer` 空の文字列が含まれます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll と Mscorwks.dll。 Mscorwks.dll の代わりに Mscoree.dll を使用して、.NET Framework の正しいバージョンをターゲットにするようにしてください。  
+ **Library:** MSCorEE.dll し、Mscorwks.dll します。 Mscorwks.dll ではなく MSCorEE.dll を使用して、正しいバージョンの .NET Framework を対象にするようにします。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
