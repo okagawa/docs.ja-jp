@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 33a19f6e-1029-4d53-af64-19591c6e58ee
 topic_type:
 - apiref
-ms.openlocfilehash: 91f0a75f127afcff89c2b92bf3ed67466b205081
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 15485ac94ed9074baacc4fd2662a04bdcefcf1e7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213050"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709324"
 ---
 # <a name="icordebugnativeframegetlocalmemoryregistervalue-method"></a>ICorDebugNativeFrame::GetLocalMemoryRegisterValue メソッド
+
 引数またはローカル変数の値を取得します。この値は、このネイティブフレームについて、指定したレジスタとメモリ位置にそれぞれ、下位ワードと上位ワードが格納されます。  
   
 ## <a name="syntax"></a>構文  
@@ -38,8 +39,9 @@ HRESULT GetLocalMemoryRegisterValue (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `highWordAddress`  
- から`CORDB_ADDRESS`値の上位ワードを格納しているメモリ位置を指定する値。  
+ から `CORDB_ADDRESS` 値の上位ワードを格納しているメモリ位置を指定する値。  
   
  `lowWordRegister`  
  から値の下位ワードを含むレジスタを指定する "CorDebugRegister" 列挙体の値。  
@@ -48,12 +50,13 @@ HRESULT GetLocalMemoryRegisterValue (
  からパラメーターによって参照されるバイナリメタデータシグネチャのサイズを指定する整数 `pvSigBlob` 。  
   
  `pvSigBlob`  
- から`PCCOR_SIGNATURE`値の型のバイナリメタデータシグネチャを指す値。  
+ から `PCCOR_SIGNATURE` 値の型のバイナリメタデータシグネチャを指す値。  
   
  `ppValue`  
  入出力指定されたレジスタおよびメモリ位置に格納されている取得値を表す "ICorDebugValue" オブジェクトのアドレスへのポインター。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

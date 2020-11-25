@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9ff3fcd6-38fe-41f8-bfd3-f0ab6c7d77ca
 topic_type:
 - apiref
-ms.openlocfilehash: d7ad4a6b25fe6d53ab0b21066345451ae7c22c16
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a4bdac42c584d5d34b072354de65ed20c6a80609
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213323"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709493"
 ---
 # <a name="icordebugmoduleenumnext-method"></a>ICorDebugModuleEnum::Next メソッド
+
 によって指定された "のモジュール" インスタンスの数を列挙から取得します。この数は `celt` 、現在の位置から開始します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,8 +38,9 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `celt`  
- から`ICorDebugModule`取得するインスタンスの数。  
+ から `ICorDebugModule` 取得するインスタンスの数。  
   
  `modules`  
  入出力ポインターの配列。それぞれがオブジェクトを指し `ICorDebugModule` ます。  
@@ -46,7 +48,8 @@ HRESULT Next (
  `pceltFetched`  
  入出力実際に返されたインスタンスの数へのポインター `ICorDebugModule` 。 が1の場合、この値は null `celt` になります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

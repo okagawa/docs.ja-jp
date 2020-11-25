@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8844d0dd-730e-4592-8a7b-c1462d312c70
 topic_type:
 - apiref
-ms.openlocfilehash: 1b9700455da82fc7f4a39d4c208ac0b18ef79722
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 18cd9dd14e615a7e76bfff30c9ae584305bd1907
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009120"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708940"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>IMetaDataAssemblyImport::EnumAssemblyRefs メソッド
+
 `mdAssemblyRef`アセンブリマニフェストで定義されているインスタンスを列挙します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,11 +38,12 @@ HRESULT EnumAssemblyRefs (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `phEnum`  
  [入力、出力]列挙子へのポインター。 メソッドを初めて呼び出すときは、null 値を指定する必要があり `EnumAssemblyRefs` ます。  
   
  `rAssemblyRefs`  
- 入出力`mdAssemblyRef`メタデータトークンの列挙体。  
+ 入出力 `mdAssemblyRef` メタデータトークンの列挙体。  
   
  `cMax`  
  から配列に格納できるトークンの最大数 `rAssemblyRefs` 。  
@@ -53,15 +55,16 @@ HRESULT EnumAssemblyRefs (
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumAssemblyRefs`正常に返されました。|  
+|`S_OK`|`EnumAssemblyRefs` 正常に返されました。|  
 |`S_FALSE`|列挙するトークンがありません。 この場合、 `pcTokens` は0に設定されます。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

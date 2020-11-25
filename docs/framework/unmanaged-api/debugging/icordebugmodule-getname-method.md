@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: db499637-7ba9-421e-b8b1-35856995e80b
 topic_type:
 - apiref
-ms.openlocfilehash: 55342c803756aa10c2e7c835d9e1d58b439bb36c
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c2aecadf8688e763a69bd40ca877e44bc0ce5c29
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212543"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710039"
 ---
 # <a name="icordebugmodulegetname-method"></a>ICorDebugModule::GetName メソッド
+
 モジュールのファイル名を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT GetName(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `cchname`  
  [in] `szName` 配列のサイズ。  
   
@@ -45,10 +47,12 @@ HRESULT GetName(
  `szName`  
  入出力返された名前を格納する配列。  
   
-## <a name="remarks"></a>Remarks  
- `GetName`モジュールのファイル名がディスク上の名前と一致する場合、メソッドは S_OK HRESULT を返します。 `GetName`動的またはメモリ内モジュールの場合など、名前が使用されている場合は S_FALSE HRESULT を返します。  
+## <a name="remarks"></a>注釈  
+
+ `GetName`モジュールのファイル名がディスク上の名前と一致する場合、メソッドは S_OK HRESULT を返します。 `GetName` 動的またはメモリ内モジュールの場合など、名前が使用されている場合は S_FALSE HRESULT を返します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 31272cce-506a-4f18-bcbf-01ee45e36356
 topic_type:
 - apiref
-ms.openlocfilehash: 2105033e684ec172e24adfb14bcab7668b388af3
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 073e73f082416308b893974471e39cbf5243d01c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501122"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708856"
 ---
 # <a name="imetadatatables-interface"></a>IMetaDataTables インターフェイス
+
 テーブル内のメタデータ情報の格納と取得のためのメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
@@ -49,11 +50,12 @@ ms.locfileid: "84501122"
 |[GetUserStringHeapSize メソッド](imetadatatables-getuserstringheapsize-method.md)|ユーザー文字列ヒープのサイズ (バイト単位) を取得します。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

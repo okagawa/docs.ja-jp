@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 0b69f945-263a-4e11-8512-89d27f6ea296
 topic_type:
 - apiref
-ms.openlocfilehash: 69fd3e2df4a4eafe91cc025f28e1387cc443ea04
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 543a1a3c79b6cf3eb799da5844f35286dfa91940
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212309"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709558"
 ---
 # <a name="icordebugmodule3-interface"></a>ICorDebugModule3 インターフェイス
+
 動的モジュールのシンボル リーダーを作成します。  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 interface ICorDebugModule3 : IUnknown  
@@ -41,15 +42,17 @@ interface ICorDebugModule3 : IUnknown
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[ICorDebugModule3::CreateReaderForInMemorySymbols メソッド](icordebugmodule3-createreaderforinmemorysymbols-method.md)|動的モジュールのシンボルリーダー (通常は[ISymUnmanagedReader インターフェイス](../diagnostics/isymunmanagedreader-interface.md)) を作成します。|  
+|[ICorDebugModule3::CreateReaderForInMemorySymbols メソッド](icordebugmodule3-createreaderforinmemorysymbols-method.md)|動的モジュールのシンボルリーダー (通常は [ISymUnmanagedReader インターフェイス](../diagnostics/isymunmanagedreader-interface.md)) を作成します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  このインターフェイスは、"ICorDebugModule2" インターフェイスと "" インターフェイスを論理的に拡張します。  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6bafd75a-e2d0-4aea-aed1-074374d5dff6
 topic_type:
 - apiref
-ms.openlocfilehash: 687f33c364f9730a554a41ade1ca2b78e33ffdc5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e2f54e11906cd4ba1440e220530f2ca5b9de769f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84489720"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708557"
 ---
 # <a name="imetadatavalidatevalidatorinit-method"></a>IMetaDataValidate::ValidatorInit メソッド
+
 現在のメタデータ スコープ内にあるモジュールの種類を指定するフラグを設定し、指定されたコールバック メソッドを検証エラー用に登録します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,18 +36,20 @@ HRESULT ValidatorInit (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `dwModule`  
- から現在のメタデータスコープ内のモジュールの型を指定する[Corvalidatormoduletype](corvalidatormoduletype-enumeration.md)列挙体の値。  
+ から現在のメタデータスコープ内のモジュールの型を指定する [Corvalidatormoduletype](corvalidatormoduletype-enumeration.md) 列挙体の値。  
   
  `pUnk`  
- から検証エラーの関数コールバックとして機能する[IUnknown](/cpp/atl/iunknown)インスタンスへのポインター。  
+ から検証エラーの関数コールバックとして機能する [IUnknown](/cpp/atl/iunknown) インスタンスへのポインター。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

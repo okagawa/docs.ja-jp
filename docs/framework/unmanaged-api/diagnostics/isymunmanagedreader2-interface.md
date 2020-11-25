@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: a01a881b-82a3-4b3e-a3a9-9dc305c2e5f7
 topic_type:
 - apiref
-ms.openlocfilehash: d4c5ff46d37b1292059b18920abd8042c18bbf31
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 3f34be833d3ccb5c636d2c5f18ccb6e216ef2c49
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615398"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709077"
 ---
 # <a name="isymunmanagedreader2-interface"></a>ISymUnmanagedReader2 インターフェイス
-シンボルストア内のドキュメント、メソッド、および変数へのアクセスを提供するシンボルリーダーを表します。 このインターフェイスは、 [ISymUnmanagedReader](isymunmanagedreader-interface.md)インターフェイスを拡張します。  
+
+シンボル ストア内のドキュメント、メソッド、および変数へのアクセスを提供するシンボル リーダーを表します。 このインターフェイスは、 [ISymUnmanagedReader](isymunmanagedreader-interface.md) インターフェイスを拡張します。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -33,6 +34,7 @@ ms.locfileid: "83615398"
 |[GetSymAttributePreRemap メソッド](isymunmanagedreader2-getsymattributepreremap-method.md)|名前に基づいてカスタム属性を取得します。|  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

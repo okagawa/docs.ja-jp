@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8c6d2089-4dbb-4715-b9e9-2a4491c8c9ce
 topic_type:
 - apiref
-ms.openlocfilehash: d5109043a8601d7997f52e88ea472644f1b9ca03
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cfa6df7a812559f05a4c57381a5007c9c90238e1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83208786"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709649"
 ---
 # <a name="icordebugmodule2setjmcstatus-method"></a>ICorDebugModule2::SetJMCStatus メソッド
+
 この ICorDebugModule2 内のすべてのクラスのすべてのメソッドのマイコードのみ (JMC) の状態を、指定した値に設定し `pTokens` ます。ただし、逆の値に設定されている配列内のすべてのメソッドを除きます。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT SetJMCStatus (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `bIsJustMycode`  
  からコードを `true` デバッグする場合はに設定し、それ以外の場合はに設定 `false` します。  
   
@@ -45,14 +47,16 @@ HRESULT SetJMCStatus (
  `pTokens`  
  から値の配列 `mdToken` 。各値は、JMC の状態が! に設定されるメソッドを参照し `bIsJustMycode` ます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  配列に指定されている各メソッドの JMC の状態 `pTokens` は、値の逆に設定され `bIsJustMycode` ます。 このモジュール内の他のすべてのメソッドの状態は、値に設定され `bIsJustMycode` ます。  
   
  メソッドは、 `SetJMCStatus` このモジュール内の以前のすべての JMC 設定を消去します。  
   
  `SetJMCStatus`すべての関数が正常に設定されている場合、メソッドは S_OK HRESULT を返します。 マークされている一部の関数がデバッグ可能でない場合は、CORDBG_E_FUNCTION_NOT_DEBUGGABLE HRESULT が返され `true` ます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

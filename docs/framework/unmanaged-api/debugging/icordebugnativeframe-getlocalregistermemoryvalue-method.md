@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d350f69d-9aff-4f5a-8301-daea22dee2da
 topic_type:
 - apiref
-ms.openlocfilehash: f16150ad7d9ecec4b4aceee5c9266e9a7859f1cb
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 4b77ad2f31f10bd14ce7d8242a584da737428344
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213297"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709306"
 ---
 # <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterMemoryValue メソッド
+
 このネイティブフレームのメモリ位置と指定したレジスタに、下位ワードと上位ワードが格納される引数またはローカル変数の値を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,22 +39,24 @@ HRESULT GetLocalRegisterMemoryValue (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `highWordReg`  
  から値の上位ワードを含むレジスタを指定する "CorDebugRegister" 列挙体の値。  
   
  `lowWordAddress`  
- から`CORDB_ADDRESS`値の下位ワードを格納しているメモリ位置を指定する値。  
+ から `CORDB_ADDRESS` 値の下位ワードを格納しているメモリ位置を指定する値。  
   
  `cbSigBlob`  
  からパラメーターによって参照されるバイナリメタデータシグネチャのサイズを指定する整数 `pvSigBlob` 。  
   
  `pvSigBlob`  
- から`PCCOR_SIGNATURE`値の型のバイナリメタデータシグネチャを指す値。  
+ から `PCCOR_SIGNATURE` 値の型のバイナリメタデータシグネチャを指す値。  
   
  `ppValue`  
  入出力指定されたレジスタおよびメモリ位置に格納されている取得値を表す "ICorDebugValue" オブジェクトのアドレスへのポインター。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

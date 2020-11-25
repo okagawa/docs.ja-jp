@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 32e4d6fa-e5a3-413e-9166-d5e2871d3114
 topic_type:
 - apiref
-ms.openlocfilehash: 105e56f2508eabbb6876a09d35e6abfbfc08950b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 86e17b48bc491c45f8b46be23ab626dc1f2a6962
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212244"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709844"
 ---
 # <a name="icordebugmodule-interface"></a>ICorDebugModule インターフェイス
 
@@ -35,7 +35,7 @@ ms.locfileid: "83212244"
 |[GetAssembly メソッド](icordebugmodule-getassembly-method.md)|このモジュールの格納アセンブリを取得します。|  
 |[GetBaseAddress メソッド](icordebugmodule-getbaseaddress-method.md)|モジュールのベースアドレスを取得します。|  
 |[GetClassFromToken メソッド](icordebugmodule-getclassfromtoken-method.md)|メタデータから、このクラスを取得します。|  
-|[GetEditAndContinueSnapshot メソッド](icordebugmodule-geteditandcontinuesnapshot-method.md)|非推奨になりました。|  
+|[GetEditAndContinueSnapshot メソッド](icordebugmodule-geteditandcontinuesnapshot-method.md)|非推奨。|  
 |[GetFunctionFromRVA メソッド](icordebugmodule-getfunctionfromrva-method.md)|実装されていません。|  
 |[GetFunctionFromToken メソッド](icordebugmodule-getfunctionfromtoken-method.md)|メタデータトークンによって指定された関数を取得します。|  
 |[GetGlobalVariableValue メソッド](icordebugmodule-getglobalvariablevalue-method.md)|指定したグローバル変数の値オブジェクトを取得します。|  
@@ -47,12 +47,13 @@ ms.locfileid: "83212244"
 |[IsDynamic メソッド](icordebugmodule-isdynamic-method.md)|モジュールが動的かどうかを示します。|  
 |[IsInMemory メソッド](icordebugmodule-isinmemory-method.md)|このモジュールがメモリ内にのみ存在するかどうかを示します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

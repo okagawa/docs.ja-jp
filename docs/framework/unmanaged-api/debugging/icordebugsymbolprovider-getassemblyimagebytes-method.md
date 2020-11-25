@@ -2,14 +2,15 @@
 title: ICorDebugSymbolProvider::GetAssemblyImageBytes メソッド
 ms.date: 03/30/2017
 ms.assetid: 3db215aa-e180-4f70-8d23-6d5a0ffbc8e5
-ms.openlocfilehash: a555acb9e23098b0a0f70924032771b1ae18e88e
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: b52614065d599edf8e556524c33e8bc50b4924ef
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83376113"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709181"
 ---
 # <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>ICorDebugSymbolProvider::GetAssemblyImageBytes メソッド
+
 マージされたアセンブリ内の指定の相対仮想アドレス (RVA: relative virtual address) で、マージされたアセンブリのデータを読み取ります。  
   
 ## <a name="syntax"></a>構文  
@@ -23,6 +24,7 @@ HRESULT GetAssemblyImageBytes(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `rva`  
  [in] マージされたアセンブリ内の相対仮想アドレス (RVA)。  
   
@@ -30,14 +32,15 @@ HRESULT GetAssemblyImageBytes(
  マージされたアセンブリから読み取るバイト数。  
   
  `ppMemoryBuffer`  
- マージされたアセンブリメタデータを持つメモリバッファーに関する情報を格納している、[のオブジェクトの](icordebugmemorybuffer-interface.md)アドレスへのポインター。  
+ マージされたアセンブリメタデータを持つメモリバッファーに関する情報を格納している、 [のオブジェクトの](icordebugmemorybuffer-interface.md) アドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

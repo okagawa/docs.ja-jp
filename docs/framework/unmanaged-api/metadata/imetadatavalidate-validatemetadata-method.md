@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e5ceed11-0f54-4097-8302-883284dddbc1
 topic_type:
 - apiref
-ms.openlocfilehash: 7f606a12022368183316f985a44693667e38a029
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4fd0cf5cdd8d56564c40321336373ac1fd277783
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84489721"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708661"
 ---
 # <a name="imetadatavalidatevalidatemetadata-method"></a>IMetaDataValidate::ValidateMetaData メソッド
+
 現在のメタデータ スコープ内にあるオブジェクトのメタデータ署名を検証します。  
   
 ## <a name="syntax"></a>構文  
@@ -31,12 +32,13 @@ ms.locfileid: "84489721"
 HRESULT ValidateMetaData ();  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

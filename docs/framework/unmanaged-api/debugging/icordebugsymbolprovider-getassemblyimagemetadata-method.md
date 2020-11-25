@@ -2,14 +2,15 @@
 title: ICorDebugSymbolProvider::GetAssemblyImageMetadata メソッド
 ms.date: 03/30/2017
 ms.assetid: c3c9de67-b865-4ecf-b887-1f1d0719a0c0
-ms.openlocfilehash: d118f0c984663e0844783ff52859698dd5335058
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 9644d1323660730d210bd0305c2785fce4174455
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83376147"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709142"
 ---
 # <a name="icordebugsymbolprovidergetassemblyimagemetadata-method"></a>ICorDebugSymbolProvider::GetAssemblyImageMetadata メソッド
+
 マージされたアセンブリのメタデータを返します。  
   
 ## <a name="syntax"></a>構文  
@@ -21,15 +22,17 @@ HRESULT GetAssemblyImageMetadata(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ppMemoryBuffer`  
- 入出力マージされたアセンブリのメタデータのサイズとアドレスに関する情報を格納して[いる、のオブジェクトの](icordebugmemorybuffer-interface.md)アドレスへのポインター。  
+ 入出力マージされたアセンブリのメタデータのサイズとアドレスに関する情報を格納して [いる、のオブジェクトの](icordebugmemorybuffer-interface.md) アドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
