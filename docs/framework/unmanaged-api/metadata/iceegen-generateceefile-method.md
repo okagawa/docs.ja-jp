@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: cca4a9a1-731b-4411-9e04-00cffe7a56d8
 topic_type:
 - apiref
-ms.openlocfilehash: 39d8713b2b78047e615b6c2fdd6e95e9aacbd2ae
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: f84abd9b44310d85bc59e3d09e7fd0398f13fcd0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008847"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715408"
 ---
 # <a name="iceegengenerateceefile-method"></a>ICeeGen::GenerateCeeFile メソッド
-この[ICeeGen](iceegen-interface.md)インターフェイスに現在読み込まれているコードベースを含むコードベースファイルを生成します。  
+
+この [ICeeGen](iceegen-interface.md) インターフェイスに現在読み込まれているコードベースを含むコードベースファイルを生成します。  
   
  このメソッドは互換性のために残されています。使用しないでください。  
   
@@ -34,14 +35,16 @@ HRESULT GenerateCeeFile ();
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- `GenerateCeeFile`パラメーターを受け取りません。  
+
+ `GenerateCeeFile` パラメーターを受け取りません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

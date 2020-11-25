@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ad2710a7-edb8-4493-8619-3fce235e3334
 topic_type:
 - apiref
-ms.openlocfilehash: e7c58e6cdbe0d3c8513721a40eaa3fdfcec6ce2e
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: b9c907868df31da8d995c6a6b86db258d395335d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008860"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715447"
 ---
 # <a name="iceegenemitstring-method"></a>ICeeGen::EmitString メソッド
+
 指定した文字列をコードベースに出力します。  
   
  このメソッドは互換性のために残されています。使用しないでください。  
@@ -37,18 +38,20 @@ HRESULT EmitString (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `lpString`  
  から出力する文字列。  
   
  `RVA`  
  入出力出力された文字列の相対仮想アドレス。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

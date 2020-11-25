@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b6b95c04-0f2c-4fcc-a8bc-3b1dcbdba731
 topic_type:
 - apiref
-ms.openlocfilehash: 206dcd3a0a82da9b6211c8c2045e4e9d3d991973
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 41a3b9c77fc766b2fa39b406dedbb3203cc97ad9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008873"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715473"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer メソッド
+
 指定されたコードセクションのバッファーを決定します。  
   
  このメソッドは互換性のために残されています。使用しないでください。  
@@ -38,6 +39,7 @@ HRESULT ComputePointer (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `section`  
  からバッファーを返す対象のコードセクション。  
   
@@ -47,12 +49,13 @@ HRESULT ComputePointer (
  `lpBuffer`  
  入出力返されたバッファーへのポインター。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

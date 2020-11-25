@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdc5a3a7-71ff-4025-99a1-59e4ee0bfe1b
 topic_type:
 - apiref
-ms.openlocfilehash: 45e27ac3c2d4912d2ed3e5d43ea3020b9db5dbdc
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 66ae74deba9ceab9d1ea6b2c0b96a87bf44f32ab
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504031"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714927"
 ---
 # <a name="iclrruntimeinfoisloaded-method"></a>ICLRRuntimeInfo::IsLoaded メソッド
+
 [ICLRRuntimeInfo](iclrruntimeinfo-interface.md)インターフェイスに関連付けられている共通言語ランタイム (CLR) をプロセスに読み込むかどうかを示します。 ランタイムは、起動しなくても読み込むことができます。  
   
 ## <a name="syntax"></a>構文  
@@ -34,13 +35,15 @@ HRESULT IsLoaded(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `hndProcess`  
  からプロセスを処理するハンドル。  
   
  `pbLoaded`  
- [出力] `true`CLR がプロセスに読み込まれている場合は、それ以外の場合は `false` 。  
+ [出力] `true` CLR がプロセスに読み込まれている場合は、それ以外の場合は `false` 。  
   
 ## <a name="return-value"></a>戻り値  
+
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
   
 |HRESULT|説明|  
@@ -48,25 +51,27 @@ HRESULT IsLoaded(
 |S_OK|メソッドは正常に完了しました。|  
 |E_POINTER|`pbLoaded` が null です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  このメソッドは、次の関数およびインターフェイスと下位互換性があります。  
   
-- [ICorRuntimeHost](icorruntimehost-interface.md)インターフェイス (.NET Framework version 1 ホスティング API)。  
+- [ICorRuntimeHost](icorruntimehost-interface.md) インターフェイス (.NET Framework version 1 ホスティング API)。  
   
-- [ICLRRuntimeHost](iclrruntimehost-interface.md)インターフェイス (.NET Framework 2.0 ホスティング API)。  
+- [ICLRRuntimeHost](iclrruntimehost-interface.md) インターフェイス (.NET Framework 2.0 ホスティング API)。  
   
-- 非推奨 `CorBindTo*` の関数 (「.NET Framework 2.0 ホスティング API での[非推奨の CLR ホスト関数](deprecated-clr-hosting-functions.md)」を参照してください)。  
+- 非推奨 `CorBindTo*` の関数 (「.NET Framework 2.0 ホスティング API での [非推奨の CLR ホスト関数](deprecated-clr-hosting-functions.md) 」を参照してください)。  
   
- ホストは、 `CorBindTo*` [Corbindtoruntime](corbindtoruntime-function.md)関数など、非推奨の関数の1つを呼び出して、特定のバージョンの CLR をインスタンス化することができます。 ホストは[ICLRMetaHost:: GetRuntime](iclrmetahost-getruntime-method.md)メソッドを呼び出し、同じバージョン番号を指定して[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)インターフェイスを取得することができます。  
+ ホストは、 `CorBindTo*` [Corbindtoruntime](corbindtoruntime-function.md) 関数など、非推奨の関数の1つを呼び出して、特定のバージョンの CLR をインスタンス化することができます。 ホストは [ICLRMetaHost:: GetRuntime](iclrmetahost-getruntime-method.md) メソッドを呼び出し、同じバージョン番号を指定して [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) インターフェイスを取得することができます。  
   
  その後、返された ICLRRuntimeInfo インターフェイスでホストがメソッドを呼び出すと、はを返します。 `IsLoaded` [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) `pbLoaded` `true` それ以外の場合はを返し `false` ます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

@@ -2,14 +2,15 @@
 title: ICorDebugDataTarget2::GetImageFromPointer メソッド
 ms.date: 03/30/2017
 ms.assetid: 939cabe1-b647-4090-b662-eeec23c6c58d
-ms.openlocfilehash: f316ddb04cdaad2f528e8fac0a970ca6263ebd8f
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 41385fe915733f052af67c82d984c8b9d853c579
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976474"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713822"
 ---
 # <a name="icordebugdatatarget2getimagefrompointer-method"></a>ICorDebugDataTarget2::GetImageFromPointer メソッド
+
 モジュールのアドレスから、そのモジュールのベース アドレスとサイズを返します。  
   
 ## <a name="syntax"></a>構文  
@@ -23,21 +24,23 @@ HRESULT GetImageFromPointer(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `addr`  
- モジュール内のアドレスを表す[CORDB_ADDRESS](../common-data-types-unmanaged-api-reference.md)値。  
+ モジュール内のアドレスを表す [CORDB_ADDRESS](../common-data-types-unmanaged-api-reference.md) 値。  
   
  `pImageBase`  
- 入出力モジュールのベースアドレスを表す[CORDB_ADDRESS](../common-data-types-unmanaged-api-reference.md)値。  
+ 入出力モジュールのベースアドレスを表す [CORDB_ADDRESS](../common-data-types-unmanaged-api-reference.md) 値。  
   
  `pSize`  
  モジュールのサイズへのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

@@ -2,28 +2,30 @@
 title: ICorDebugDataTarget3 インターフェイス
 ms.date: 03/30/2017
 ms.assetid: f477af85-994f-4df0-ae78-404ed252bf49
-ms.openlocfilehash: 57ef9b567d57c77c523ca6daefcf80b1d7de66d1
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: e219c703ce2d8bb42f824a8892991f6803e6ef9d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976409"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713731"
 ---
 # <a name="icordebugdatatarget3-interface"></a>ICorDebugDataTarget3 インターフェイス
-提供され[たモジュール](icordebugdatatarget-interface.md)に関する情報を提供するために、によって、参照インターフェイスを論理的に拡張します。  
+
+提供され [たモジュール](icordebugdatatarget-interface.md) に関する情報を提供するために、によって、参照インターフェイスを論理的に拡張します。  
   
-## <a name="method"></a>メソッド  
+## <a name="method"></a>Method  
   
-|メソッド|説明|  
+|Method|説明|  
 |------------|-----------------|  
 |[GetLoadedModules メソッド](icordebugdatatarget3-getloadedmodules-method.md)|これまでに読み込まれたモジュールの一覧を取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このインターフェイスは .NET ネイティブでのみ使用可能です。 .NET ネイティブの外部で ICorDebug シナリオについてこのインターフェイスを実装する場合は、共通言語ランタイムはこのインターフェイスを無視します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

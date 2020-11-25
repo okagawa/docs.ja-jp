@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7c5b39a-d4ac-41f1-9d1e-44163f563a49
 topic_type:
 - apiref
-ms.openlocfilehash: 99eef11c294dbb17b30b2ef28e65999d4d60f817
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: e9c2dab9f30be6e5eea8f6570b297f8df11b6fe6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008324"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715330"
 ---
 # <a name="iceegengetmethodbuffer-method"></a>ICeeGen::GetMethodBuffer メソッド
+
 指定した相対仮想アドレスで、メソッドの適切なサイズのバッファーを取得します。  
   
  このメソッドは互換性のために残されています。使用しないでください。  
@@ -37,18 +38,20 @@ HRESULT GetMethodBuffer (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `RVA`  
  からバッファーを返すメソッドの相対仮想アドレス。  
   
  `lpBuffer`  
  入出力返されたバッファーへのポインター。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

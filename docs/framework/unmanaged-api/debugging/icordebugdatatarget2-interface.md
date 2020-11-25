@@ -2,15 +2,16 @@
 title: ICorDebugDataTarget2 インターフェイス
 ms.date: 03/30/2017
 ms.assetid: 13f11388-2f91-48d8-98d6-6a4a63cb5746
-ms.openlocfilehash: 1c598d23cac77e50cf302e6936b88b5eb6e558c2
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: aa1db39b564b987fb8d0f79d529f5af59b7e4c02
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976435"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713752"
 ---
 # <a name="icordebugdatatarget2-interface"></a>ICorDebugDataTarget2 インターフェイス
-によって、"の" を論理的に[拡張します](icordebugdatatarget-interface.md)。  
+
+によって、"の" を論理的に [拡張します](icordebugdatatarget-interface.md)。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -22,12 +23,13 @@ ms.locfileid: "82976435"
 |[GetImageLocation メソッド](icordebugdatatarget2-getimagelocation-method.md)|モジュールのベース アドレスからモジュールのパスを返します。|  
 |[GetSymbolProviderForImage メソッド](icordebugdatatarget2-getsymbolproviderforimage-method.md)|モジュールのベース アドレスからそのモジュールのシンボル プロバイダーを返します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このインターフェイスは .NET ネイティブでのみ使用可能です。 .NET ネイティブの外部で ICorDebug シナリオについてこのインターフェイスを実装する場合は、共通言語ランタイムはこのインターフェイスを無視します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

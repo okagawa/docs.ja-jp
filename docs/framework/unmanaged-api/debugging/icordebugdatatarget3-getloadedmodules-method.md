@@ -2,14 +2,15 @@
 title: ICorDebugDataTarget3::GetLoadedModules メソッド
 ms.date: 03/30/2017
 ms.assetid: 9a48c05b-1949-416e-933c-52549b6fcf5e
-ms.openlocfilehash: c3565f4f9284bc121b0e2d3b0885cbea927acfdd
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: efbada02b7a24e0a7ed613b86b8a4a1a0b5b051a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976422"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713751"
 ---
 # <a name="icordebugdatatarget3getloadedmodules-method"></a>ICorDebugDataTarget3::GetLoadedModules メソッド
+
 これまでに読み込まれたモジュールの一覧を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -23,6 +24,7 @@ HRESULT GetLoadedModules(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `cRequestedModules`  
  [in] 情報を要求する対象のモジュールの数。  
   
@@ -30,14 +32,15 @@ HRESULT GetLoadedModules(
  [out] 情報が返された対象モジュールの数へのポインター。  
   
  `pLoadedModules`  
- 入出力読み込まれたモジュールに関する情報を提供する[ICorDebugLoadedModule](icordebugloadedmodule-interface.md)オブジェクトの配列へのポインター。  
+ 入出力読み込まれたモジュールに関する情報を提供する [ICorDebugLoadedModule](icordebugloadedmodule-interface.md) オブジェクトの配列へのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

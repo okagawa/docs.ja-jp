@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 205ca53b-e78e-49b2-9a46-2a7823e96b8c
 topic_type:
 - apiref
-ms.openlocfilehash: a1cd169fc4be5b1dd3ab1a83f4ad143ba2e2442b
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 2236e815211168d8e7105375b75f30128f7f209a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007365"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714972"
 ---
 # <a name="iclrruntimeinfoisloadable-method"></a>ICLRRuntimeInfo::IsLoadable メソッド
+
 このインターフェイスに関連付けられているランタイムを現在のプロセスに読み込むことができるかどうかを示します。プロセスに既に読み込まれている可能性のある他のランタイムを考慮してください。  
   
 ## <a name="syntax"></a>構文  
@@ -33,10 +34,12 @@ HRESULT IsLoadable(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pbLoadable`  
- [出力] `true`このランタイムを現在のプロセスに読み込むことができる場合は。それ以外の場合は `false` 。  
+ [出力] `true` このランタイムを現在のプロセスに読み込むことができる場合は。それ以外の場合は `false` 。  
   
 ## <a name="return-value"></a>戻り値  
+
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
   
 |HRESULT|説明|  
@@ -44,17 +47,19 @@ HRESULT IsLoadable(
 |S_OK|メソッドは正常に完了しました。|  
 |E_POINTER|`pbLoadable` が null です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
+
  別のランタイムが既にプロセスに読み込まれていて、このインターフェイスに関連付けられているランタイムをインプロセス side-by-side 実行用に読み込むことができる場合、はを `pbLoadable` 返し `true` ます。 2つのランタイムをインプロセスで並列実行できない場合、はを `pbLoadable` 返し `false` ます。 たとえば、共通言語ランタイム (CLR) バージョン4は、CLR バージョン2.0 または CLR バージョン1.1 と同じプロセスでサイドバイサイドで実行できます。 ただし、CLR バージョン1.1 と CLR バージョン2.0 をインプロセスで並列実行することはできません。  
   
  プロセスにランタイムが読み込まれていない場合、このメソッドは常にを返し `true` ます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

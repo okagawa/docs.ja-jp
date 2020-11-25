@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ce2770ae-23d0-45d9-8bcf-46504ac5020e
 topic_type:
 - apiref
-ms.openlocfilehash: 7b1fc70380fff3c551c56043f49c2deda507e366
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: e8ead998907d55b0bfbf82e5f6f4e7c504f657ec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703841"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714160"
 ---
 # <a name="iclrhostprotectionmanager-interface"></a>ICLRHostProtectionManager インターフェイス
+
 ホストが、部分的に信頼されたコードで実行される特定のマネージクラス、メソッド、プロパティ、およびフィールドをブロックできるようにします。  
   
 ## <a name="methods"></a>メソッド  
@@ -32,11 +33,12 @@ ms.locfileid: "83703841"
 |[SetProtectedCategories メソッド](iclrhostprotectionmanager-setprotectedcategories-method.md)|部分的に信頼されたコードでの実行をブロックする必要がある、マネージ型とメンバーのカテゴリを指定します。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
