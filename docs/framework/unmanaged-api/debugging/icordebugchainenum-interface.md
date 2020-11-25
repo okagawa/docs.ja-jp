@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6639335c-48e1-4e74-a4f3-70a6a0f54af1
 topic_type:
 - apiref
-ms.openlocfilehash: 4556ebbd05e0660da14fb59d806c8feb0b45b9bb
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: dd2507bb66e036dfbb1f4e8cc262f01d926adca1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894230"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728226"
 ---
 # <a name="icordebugchainenum-interface"></a>ICorDebugChainEnum インターフェイス
 
@@ -29,14 +29,15 @@ ICorDebugEnum メソッドを実装し、を列挙します。
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Next メソッド](icordebugchainenum-next-method.md)|現在の`ICorDebugChain`位置から開始して、指定した数のインスタンスを列挙から取得します。|  
+|[Next メソッド](icordebugchainenum-next-method.md)|現在の位置から開始して、指定した数の `ICorDebugChain` インスタンスを列挙から取得します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

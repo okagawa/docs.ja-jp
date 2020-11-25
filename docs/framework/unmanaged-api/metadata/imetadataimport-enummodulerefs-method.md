@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 53441f3a-68d2-477c-906e-37c55dfcfb4d
 topic_type:
 - apiref
-ms.openlocfilehash: fe7350e6d8e400ae37b5b8b7854a56f3c5c53ea7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 788fd1815415bf8bcfa20d431a5451679d2025bd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491754"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728278"
 ---
 # <a name="imetadataimportenummodulerefs-method"></a>IMetaDataImport::EnumModuleRefs メソッド
+
 インポートされたモジュールを表す ModuleRef トークンを列挙します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,6 +38,7 @@ HRESULT EnumModuleRefs (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `phEnum`  
  [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
   
@@ -53,15 +55,16 @@ HRESULT EnumModuleRefs (
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumModuleRefs`正常に返されました。|  
+|`S_OK`|`EnumModuleRefs` 正常に返されました。|  
 |`S_FALSE`|列挙するトークンがありません。 この場合、 `pcModuleRefs` は0になります。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

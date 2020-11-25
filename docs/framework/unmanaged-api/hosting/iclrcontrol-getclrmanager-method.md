@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8a11bfa4-cbb0-4082-82b5-f9fba66c93f5
 topic_type:
 - apiref
-ms.openlocfilehash: 04cb45cd021532b6cb3d74a195cbd62e1ab8d31d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d18b3a5c06ac0d3a86f7823f3b140c76c6c9a746
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615853"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728356"
 ---
 # <a name="iclrcontrolgetclrmanager-method"></a>ICLRControl::GetCLRManager メソッド
+
 ホストが共通言語ランタイム (CLR) を構成するために使用できる任意のマネージャー型のインスタンスへのインターフェイスポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,8 +36,9 @@ HRESULT GetCLRManager (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `riid`  
- から`IID`返されるマネージャーの型の。 次の `IID` 値がサポートされています。  
+ から `IID` 返されるマネージャーの型の。 次の `IID` 値がサポートされています。  
   
 - IID_ICLRDebugManager: が ICLRDebugManager 型であることを指定し `ppObject` ます。 [ICLRDebugManager](iclrdebugmanager-interface.md)  
   
@@ -68,11 +70,12 @@ HRESULT GetCLRManager (
 |E_NOINTERFACE|インターフェイス型はサポートされていません。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

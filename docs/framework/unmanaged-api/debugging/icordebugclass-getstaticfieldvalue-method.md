@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 56e718b4-fabd-418b-a5b3-3cc33c745683
 topic_type:
 - apiref
-ms.openlocfilehash: d4a254853256e1a1440f5588418b94e39eabcc9a
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: dd1608badf553650b05b7de98d9bbcd76b2f3edf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894105"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728434"
 ---
 # <a name="icordebugclassgetstaticfieldvalue-method"></a>ICorDebugClass::GetStaticFieldValue メソッド
+
 指定された静的フィールドの値を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,8 +37,9 @@ HRESULT GetStaticFieldValue (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `fieldDef`  
- から取得する`Def`フィールドを参照するフィールドトークン。  
+ から `Def` 取得するフィールドを参照するフィールドトークン。  
   
  `pFrame`  
  からスレッド、コンテキスト、またはアプリケーションドメインの静的を区別するために使用されるフレームを表す、テキストフレームオブジェクトへのポインター。  
@@ -47,10 +49,12 @@ HRESULT GetStaticFieldValue (
  `ppValue`  
  入出力静的フィールドの値を表す ICorDebugValue オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>解説  
- パラメーター化された型の場合、静的フィールドの値は、特定のインスタンス化に対する相対値になります。 したがって、クラスコンストラクターが型<xref:System.Type>のパラメーターを受け取る場合は、ではなく、の[ICorDebugType::GetStaticFieldValue](icordebugtype-getstaticfieldvalue-method.md) `ICorDebugClass::GetStaticFieldValue`型を呼び出す必要があります。  
+## <a name="remarks"></a>注釈  
+
+ パラメーター化された型の場合、静的フィールドの値は、特定のインスタンス化に対する相対値になります。 したがって、クラスコンストラクターが型のパラメーターを受け取る場合は、では <xref:System.Type> なく、の [型](icordebugtype-getstaticfieldvalue-method.md) を呼び出す必要があり `ICorDebugClass::GetStaticFieldValue` ます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

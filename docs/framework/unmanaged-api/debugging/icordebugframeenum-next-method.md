@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0bc96acb-6179-4328-a447-cda562ce9e98
 topic_type:
 - apiref
-ms.openlocfilehash: 4652e4b34d614ad3b7b852925fcc63309bdd1498
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 76b96dfd9d22c7e770671dcc01cb421430df729f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209462"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728187"
 ---
 # <a name="icordebugframeenumnext-method"></a>ICorDebugFrameEnum::Next メソッド
+
 現在の位置から開始して、指定された数の表示フレームインスタンスを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,8 +38,9 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `celt`  
- から`ICorDebugFrame`取得するインスタンスの数。  
+ から `ICorDebugFrame` 取得するインスタンスの数。  
   
  `frames`  
  入出力ポインターの配列。それぞれがオブジェクトを指し `ICorDebugFrame` ます。  
@@ -46,7 +48,8 @@ HRESULT Next (
  `pceltFetched`  
  入出力実際に返されたインスタンスの数へのポインター `ICorDebugFrame` 。 が1の場合、この値は null `celt` になります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

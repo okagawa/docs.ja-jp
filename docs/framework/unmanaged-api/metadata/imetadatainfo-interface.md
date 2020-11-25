@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 137cb264-64de-46ac-bc6e-2a7db97e8abe
 topic_type:
 - apiref
-ms.openlocfilehash: c63302b53d035edb13ccacf8ceef817bd3107fd7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 97b2d260dd99f2877157dd0801ac3fd20d0ffb23
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503407"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728239"
 ---
 # <a name="imetadatainfo-interface"></a>IMetaDataInfo インターフェイス
+
 ディスク上のファイルからメモリへのメタデータのマッピングに関する情報を取得するメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
@@ -31,11 +32,12 @@ ms.locfileid: "84503407"
 |[GetFileMapping メソッド](imetadatainfo-getfilemapping-method.md)|マップされたファイルのメモリ領域とマッピングの種類を取得します。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

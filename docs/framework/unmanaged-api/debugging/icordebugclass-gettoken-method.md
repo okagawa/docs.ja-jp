@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: ee5c848a-eac4-4462-b07a-07ccd76a75df
 topic_type:
 - apiref
-ms.openlocfilehash: 3433f5f69927afb501c2596571f138e3a69fabb6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 59f450117d1a52ce7b900d9d67330fc98281afa0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894124"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728421"
 ---
 # <a name="icordebugclassgettoken-method"></a>ICorDebugClass::GetToken メソッド
-このクラス`TypeDef`の定義を参照するメタデータトークンを取得します。  
+
+`TypeDef`このクラスの定義を参照するメタデータトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,10 +35,12 @@ HRESULT GetToken (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pTypeDef`  
- 入出力このクラスの定義`mdTypeDef`を参照するトークンへのポインター。  
+ 入出力 `mdTypeDef` このクラスの定義を参照するトークンへのポインター。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

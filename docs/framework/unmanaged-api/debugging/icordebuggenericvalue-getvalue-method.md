@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e95d7cb-144d-4ccf-8a69-d605f4744be2
 topic_type:
 - apiref
-ms.openlocfilehash: 646b2661148e38f3c918fc18fce5c9cd0b1134a1
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: dd1c1ba4a976a10d0c38c5295fff838faf072f51
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213024"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728109"
 ---
 # <a name="icordebuggenericvaluegetvalue-method"></a>ICorDebugGenericValue::GetValue メソッド
+
 このジェネリックの値を、指定したバッファーにコピーします。  
   
 ## <a name="syntax"></a>構文  
@@ -34,10 +35,12 @@ HRESULT GetValue (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pTo`  
  入出力このは、この値オブジェクトによって表される値へのポインターです。 値には、単純型または参照型 (つまり、ポインター) を指定できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

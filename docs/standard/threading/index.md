@@ -6,12 +6,12 @@ helpviewer_keywords:
 - threading [.NET], about threading
 - managed threading
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
-ms.openlocfilehash: 568b93fbfb6f757719d44a07b99ac18375ed539a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 28ba05c345d22b14512d280f3855934d727b3142
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826340"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728447"
 ---
 # <a name="managed-threading"></a>マネージド スレッド処理
 
@@ -21,6 +21,7 @@ ms.locfileid: "94826340"
 > .NET Framework 4 以降では、<xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> クラス、[Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md)、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 名前空間の同時実行コレクション クラス、スレッドではなくタスクの概念に基づくプログラミング モデルによって、マルチスレッド プログラミングが大幅に簡略化されています。 詳細については、[並列プログラミング](../parallel-programming/index.md)に関するページをご覧ください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [マネージド スレッド処理の基本](managed-threading-basics.md)  
  マネージド スレッド処理の概要と、マルチ スレッドをどのようなときに使用するかについて説明します。  
   
@@ -34,6 +35,7 @@ ms.locfileid: "94826340"
  スレッドの動作や、別のスレッドによってアクセスされるオブジェクトのデータを同期するために使用するマネージド クラスについて説明し、スレッド プールのスレッドの概要を示します。  
   
 ## <a name="reference"></a>関連項目  
+
  <xref:System.Threading>  
  マネージド スレッドを使用したり同期したりするためのクラスを含みます。  
   
@@ -44,6 +46,7 @@ ms.locfileid: "94826340"
  同時処理タスクを作成およびスケジュールするためのクラスを含みます。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [アプリケーション ドメイン](../../framework/app-domains/application-domains.md)  
  アプリケーション ドメインと、その共通言語インフラストラクチャでの使用に関する概要を示します。  
   

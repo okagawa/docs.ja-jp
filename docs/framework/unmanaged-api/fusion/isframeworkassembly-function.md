@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b0c6f19b-d4fd-4971-88f0-12ffb5793da3
 topic_type:
 - apiref
-ms.openlocfilehash: e30b6f2d2254d2d107c4c82a2c5664850ce6ec23
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 828c7660d6c006e700302d119ce4caf7d76e5d84
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123068"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728564"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly 関数
+
 指定したアセンブリが管理されているかどうかを示す値を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ HRESULT IsFrameworkAssembly (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pwzAssemblyReference`  
  から確認するアセンブリの名前。  
   
@@ -48,15 +50,17 @@ HRESULT IsFrameworkAssembly (
  `pccSize`  
  [入力] `pwzFrameworkAssemblyIdentity` のサイズ。  
   
-## <a name="remarks"></a>Remarks  
- `pwzAssemblyReference` パラメーターは、アセンブリの名前を含む文字列へのポインターです。  
+## <a name="remarks"></a>注釈  
+
+ パラメーターは、 `pwzAssemblyReference` アセンブリの名前を含む文字列へのポインターです。  
   
- このアセンブリが .NET Framework の一部である場合、`pbIsFrameworkAssembly` パラメーターには `true`のブール値が格納されます。  
+ このアセンブリが .NET Framework の一部である場合、 `pbIsFrameworkAssembly` パラメーターにはのブール値が格納され `true` ます。  
   
- 名前付きアセンブリが .NET Framework の一部でない場合、または `pwzAssemblyReference` パラメーターがアセンブリの名前を指定しない場合、`pbIsFrameworkAssembly` には `false`のブール値が格納されます。  
+ 名前付きアセンブリが .NET Framework に含まれていない場合、またはパラメーターがアセンブリの名前を指定しない場合 `pwzAssemblyReference` 、に `pbIsFrameworkAssembly` はブール値のが格納され `false` ます。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
