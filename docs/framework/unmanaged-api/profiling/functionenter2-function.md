@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: ce7a21f9-0ca3-4b92-bc4b-bb803cae3f51
 topic_type:
 - apiref
-ms.openlocfilehash: 8c88e97f8187ac347f4ff39890c8d87ee80c8f9e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e8466970a1c137276e842b37f0305fdfd9169be6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500716"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717260"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 関数
-コントロールが関数に渡されていることをプロファイラーに通知し、スタックフレームと関数の引数に関する情報を提供します。 この関数は、 [Functionenter](functionenter-function.md)関数よりも優先されます。  
+
+コントロールが関数に渡されていることをプロファイラーに通知し、スタックフレームと関数の引数に関する情報を提供します。 この関数は、 [Functionenter](functionenter-function.md) 関数よりも優先されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,21 +44,22 @@ void __stdcall FunctionEnter2 (
 
 - `clientData`
 
-  \[では、マップされた関数の識別子。これは、プロファイラーが以前に[Functionidmapper](functionidmapper-function.md)関数を使用して指定したものです。
+  \[では、マップされた関数の識別子。これは、プロファイラーが以前に [Functionidmapper](functionidmapper-function.md) 関数を使用して指定したものです。
   
 - `func`
 
   \[in] `COR_PRF_FRAME_INFO` スタックフレームに関する情報を示す値。
   
-  プロファイラーは、これを[ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md)メソッドの実行エンジンに渡すことができる不透明なハンドルとして処理する必要があります。  
+  プロファイラーは、これを [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) メソッドの実行エンジンに渡すことができる不透明なハンドルとして処理する必要があります。  
   
 - `argumentInfo`
 
-  \[では、関数の引数のメモリ内の場所を指定する[COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md)構造体へのポインター。
+  \[では、関数の引数のメモリ内の場所を指定する [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) 構造体へのポインター。
 
-  引数情報にアクセスするには、 `COR_PRF_ENABLE_FUNCTION_ARGS` フラグを設定する必要があります。 プロファイラーは、 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md)メソッドを使用してイベントフラグを設定できます。
+  引数情報にアクセスするには、 `COR_PRF_ENABLE_FUNCTION_ARGS` フラグを設定する必要があります。 プロファイラーは、 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) メソッドを使用してイベントフラグを設定できます。
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  値が変更さ `func` `argumentInfo` `FunctionEnter2` れるか、値が破棄される可能性があるため、関数から制御が戻った後に、パラメーターとパラメーターの値が無効になります。  
   
  `FunctionEnter2`関数はコールバックであるため、実装する必要があります。 実装では、 `__declspec` ( `naked` ) ストレージクラス属性を使用する必要があります。  
@@ -73,6 +75,7 @@ void __stdcall FunctionEnter2 (
  また、 `FunctionEnter2` 関数はマネージコードを呼び出さないようにするか、マネージメモリ割り当てを発生させることはできません。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Corprof.idl  

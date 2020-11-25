@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 30a39d79-1f10-4328-9c5d-094ed824e2ba
 topic_type:
 - apiref
-ms.openlocfilehash: 1953a3e0492e4cfcdaea761b68ea22cf5a4a8ed7
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cef69ac7e3572b67dd676ce8408e4210d93accf0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205518"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717579"
 ---
 # <a name="icordebugprocess5-interface"></a>ICorDebugProcess5 インターフェイス
+
 は、アプリケーションインターフェイスを拡張して、マネージヒープへのアクセスをサポートし、マネージオブジェクトのガベージコレクションに関する情報を提供し、デバッガーがアプリケーションのローカルネイティブイメージキャッシュからイメージを読み込むかどうかを判断します。  
   
 ## <a name="methods"></a>メソッド  
@@ -34,20 +35,22 @@ ms.locfileid: "83205518"
 |[EnumerateHeap メソッド](icordebugprocess5-enumerateheap-method.md)|マネージヒープ上のオブジェクトの列挙子を取得します。|  
 |[EnumerateHeapRegions メソッド](icordebugprocess5-enumerateheapregions-method.md)|マネージヒープの領域の列挙子を取得します。|  
 |[GetArrayLayout メソッド](icordebugprocess5-getarraylayout-method.md)|メモリ内の配列のレイアウトに関する情報を取得します。|  
-|[GetGCHeapInformation メソッド](icordebugprocess5-getgcheapinformation-method.md)|マネージヒープでガベージコレクトされるオブジェクトに関する情報を格納している[COR_HEAPINFO](cor-heapinfo-structure.md)構造体へのポインターを取得します。|  
+|[GetGCHeapInformation メソッド](icordebugprocess5-getgcheapinformation-method.md)|マネージヒープでガベージコレクトされるオブジェクトに関する情報を格納している [COR_HEAPINFO](cor-heapinfo-structure.md) 構造体へのポインターを取得します。|  
 |[GetObject メソッド](icordebugprocess5-getobject-method.md)|マネージヒープ上のオブジェクトへのポインターを取得します。|  
 |[GetTypeFields メソッド](icordebugprocess5-gettypefields-method.md)|型の識別子に基づいて、型のフィールド情報を格納している配列へのポインターを取得します。|  
 |[GetTypeForTypeID メソッド](icordebugprocess5-gettypefortypeid-method.md)|型識別子に基づいてオブジェクトに関する情報を提供する型オブジェクトを取得します。|  
 |[GetTypeID メソッド](icordebugprocess5-gettypeid-method.md)|指定したアドレスにあるオブジェクトの型識別子を取得します。|  
 |[GetTypeLayout メソッド](icordebugprocess5-gettypelayout-method.md)|型識別子に基づいて、メモリ内のオブジェクトのレイアウトに関する情報を取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  このインターフェイスは、ICorDebugProcess2、ICorDebugProcess3、および[ICorDebugProcess3](icordebugprocess3-interface.md)の各インターフェイスを論理的に拡張します。  
   
 > [!NOTE]
 > このインターフェイスは、別のコンピューターまたは別のプロセスからのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

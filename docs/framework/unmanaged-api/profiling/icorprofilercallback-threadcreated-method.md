@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cca0f799-09b8-4689-a33c-6d6537943a9b
 topic_type:
 - apiref
-ms.openlocfilehash: 25a4b101388bfc0151ba7c9c52da6561d48f806b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 72b074d1794a6039060cbd84aabb0bc0155c154e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503160"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717271"
 ---
 # <a name="icorprofilercallbackthreadcreated-method"></a>ICorProfilerCallback::ThreadCreated メソッド
+
 スレッドが作成されたことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -33,13 +34,16 @@ HRESULT ThreadCreated(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `threadId`  
  から作成されたスレッドの ID。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  この `threadId` 値はすぐに有効です。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

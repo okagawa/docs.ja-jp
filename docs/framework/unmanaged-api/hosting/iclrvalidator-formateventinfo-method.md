@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 808e1f1d-52f4-47c4-83cc-dcf47d075219
 topic_type:
 - apiref
-ms.openlocfilehash: 164a8c15a501af44aabb95852400621f05bbe873
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: a3f52deab4d0c8ca56fae2e65912217e51abe58a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762800"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715876"
 ---
 # <a name="iclrvalidatorformateventinfo-method"></a>ICLRValidator::FormatEventInfo メソッド
+
 指定された検証エラーに関する詳細メッセージを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,11 +39,12 @@ HRESULT FormatEventInfo (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `hVECode`  
  から検証エラーハンドラーに渡された HRESULT 値。  
   
  `Context`  
- から`VEContext`検証エラーに関するコンテキスト情報を格納しているインスタンス。  
+ から `VEContext` 検証エラーに関するコンテキスト情報を格納しているインスタンス。  
   
  `msg`  
  [入力、出力]わかりやすいエラーメッセージ。  
@@ -57,7 +59,7 @@ HRESULT FormatEventInfo (
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`FormatEventInfo`正常に返されました。|  
+|S_OK|`FormatEventInfo` 正常に返されました。|  
 |HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
 |HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
@@ -65,11 +67,12 @@ HRESULT FormatEventInfo (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** IValidator、IValidator  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

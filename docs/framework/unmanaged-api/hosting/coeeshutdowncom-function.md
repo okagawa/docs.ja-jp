@@ -18,14 +18,15 @@ helpviewer_keywords:
 ms.assetid: b634cae2-632f-4737-9be4-92d0652844d7
 topic_type:
 - apiref
-ms.openlocfilehash: 3eb8bffee9d30a89c39a900e600ebf171456b9f3
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 774704698f92d546d6bafa61c65d18d083c65f89
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616789"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716760"
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM 関数
+
 共通言語ランタイム (CLR) に対して、ランタイム呼び出し可能ラッパー (RCW) 内に保持されているすべてのインターフェイスポインターを強制的に解放します。 これにより、すべての RCW キャッシュが解放されます。 このグローバル関数は .NET Framework 4 では非推奨とされます。 代わりに、特定のランタイムのエントリポイントを使用します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,19 +36,21 @@ void CoEEShutDownCOM ();
 ```  
   
 ## <a name="remarks"></a>解説  
+
  この関数は、最初にすべての `CoEEShutDownCOM` コンテキストのすべての rcw とすべてのキャッシュを解放してから、セットアップに存在するすべての破棄通知を削除します。 DLL のアンロードは行われません。  
   
 > [!CAUTION]
 > この関数は、プロセスに読み込まれるすべてのランタイムに影響します。  
   
- .NET Framework 4 から、影響を与える特定のランタイムに対して、この関数のエントリポイントを呼び出します。 エントリポイントを取得するには、 [ICLRRuntimeInfo:: GetProcAddress](iclrruntimeinfo-getprocaddress-method.md)メソッドを呼び出し、"Coees Tdowncom" を指定します。  
+ .NET Framework 4 から、影響を与える特定のランタイムに対して、この関数のエントリポイントを呼び出します。 エントリポイントを取得するには、 [ICLRRuntimeInfo:: GetProcAddress](iclrruntimeinfo-getprocaddress-method.md) メソッドを呼び出し、"Coees Tdowncom" を指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

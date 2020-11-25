@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2b1f1418-4be8-4cdb-b418-b3abccc527a7
 topic_type:
 - apiref
-ms.openlocfilehash: cd164008098c053e7d6506a6eef7d3bc8e4274b6
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c7dcc740dcf9b228713693a57dc8ef96d215ebad
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503704"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716565"
 ---
 # <a name="imetadataimportenumuserstrings-method"></a>IMetaDataImport::EnumUserStrings メソッド
+
 現在のメタデータ スコープ内にあるハードコーディングされた文字列を表す String トークンを列挙します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,6 +38,7 @@ HRESULT EnumUserStrings (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `phEnum`  
  [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
   
@@ -53,18 +55,20 @@ HRESULT EnumUserStrings (
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUserStrings`正常に返されました。|  
+|`S_OK`|`EnumUserStrings` 正常に返されました。|  
 |`S_FALSE`|列挙するトークンがありません。 この場合、 `pcStrings` は0になります。|  
   
-## <a name="remarks"></a>解説  
- 文字列トークンは、 [IMetaDataEmit::D efineUserString](imetadataemit-defineuserstring-method.md)メソッドによって作成されます。 このメソッドは、コンパイラではなく、メタデータブラウザーによって使用されるように設計されています。  
+## <a name="remarks"></a>注釈  
+
+ 文字列トークンは、 [IMetaDataEmit::D efineUserString](imetadataemit-defineuserstring-method.md) メソッドによって作成されます。 このメソッドは、コンパイラではなく、メタデータブラウザーによって使用されるように設計されています。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

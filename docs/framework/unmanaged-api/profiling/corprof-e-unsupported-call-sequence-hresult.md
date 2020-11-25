@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT [.NET Framework profiling]
 ms.assetid: f2fc441f-d62e-4f72-a011-354ea13c8c59
-ms.openlocfilehash: d6cba2ec3e82c07ce60f0f2b2199cc97e31a000b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1a75b51b57bdf2923ca6386f42c19c0b2f44fd39
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555550"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717475"
 ---
 # <a name="corprof_e_unsupported_call_sequence-hresult"></a>CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
 
@@ -72,6 +72,7 @@ CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT は .NET Framework バージョン2.
  詳細については、CLR プロファイル API のブログで [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE した理由](/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) を参照してください。  
   
 ## <a name="triggering-garbage-collections"></a>ガベージコレクションのトリガー  
+
  このシナリオでは、ガベージコレクションを禁止するコールバックメソッド (たとえば、メソッドの1つ) 内で実行されているプロファイラーが関係 `ICorProfilerCallback` します。 プロファイラーが、ガベージコレクションをトリガーする可能性のある情報メソッド (たとえば、インターフェイスのメソッド) を呼び出そうとすると、 `ICorProfilerInfo` 情報メソッドが CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT で失敗します。  
   
  次の表は、ガベージコレクションを禁止するコールバックメソッドと、ガベージコレクションをトリガーする可能性のある情報メソッドを示しています。 プロファイラーが、一覧表示されているいずれかのコールバックメソッド内で実行され、一覧表示されている情報メソッドの1つを呼び出すと、その情報メソッドが CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT で失敗します。  

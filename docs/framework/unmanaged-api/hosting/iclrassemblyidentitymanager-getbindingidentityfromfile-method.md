@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7797562d-7b4c-4bd9-8b93-f35e0e2869e4
 topic_type:
 - apiref
-ms.openlocfilehash: 5b537d59014afa783d3f8c5046cc02dad7ea7740
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 443acfa77dc8103008263f19bed116d02e7ea676
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615996"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716741"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromfile-method"></a>ICLRAssemblyIdentityManager::GetBindingIdentityFromFile メソッド
+
 指定したファイルパスにあるアセンブリのアセンブリ id バインドデータを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,11 +38,12 @@ HRESULT GetBindingIdentityFromFile(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pwzFilePath`  
  から評価されるファイルへのパス。  
   
  `dwFlags`  
- からアセンブリの id 型を示す[Eclrassemblyidentity flags](eclrassemblyidentityflags-enumeration.md)列挙体の値。 将来の拡張のために提供されます。 CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT は、共通言語ランタイム (CLR) バージョン2.0 でサポートされている唯一の値です。  
+ からアセンブリの id 型を示す [Eclrassemblyidentity flags](eclrassemblyidentityflags-enumeration.md) 列挙体の値。 将来の拡張のために提供されます。 CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT は、共通言語ランタイム (CLR) バージョン2.0 でサポートされている唯一の値です。  
   
  `pwzBuffer`  
  入出力非透過アセンブリ id データを格納しているバッファー。  
@@ -62,15 +64,17 @@ HRESULT GetBindingIdentityFromFile(
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返す場合、そのプロセス内で CLR は使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>解説  
- `GetBindingIdentityFromFile`は通常、2回呼び出されます。 最初の呼び出しでは、に null 値が指定され、 `pwzBuffer` メソッドはの適切なサイズを返し `pcchBufferSize` ます。 2番目の呼び出しでは、適切に割り当てられたバッファーが提供され、メソッドは完了時に実際のバッファーデータと共にを返します。  
+## <a name="remarks"></a>注釈  
+
+ `GetBindingIdentityFromFile` は通常、2回呼び出されます。 最初の呼び出しでは、に null 値が指定され、 `pwzBuffer` メソッドはの適切なサイズを返し `pcchBufferSize` ます。 2番目の呼び出しでは、適切に割り当てられたバッファーが提供され、メソッドは完了時に実際のバッファーデータと共にを返します。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

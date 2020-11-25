@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 84f83921-64cb-49e3-ac8b-22a0b77b18a8
 topic_type:
 - apiref
-ms.openlocfilehash: ed45e06297b77ea60304cdcfe1b08e97f9e4c085
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 352e1acd1fdd8297754e18b2e8c6448ea723a557
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446590"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717032"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions 列挙体
+
 アセンブリオプションを列挙します。  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum _AssemblyOptions {  
@@ -78,10 +79,11 @@ typedef enum _AssemblyOptions {
 |optlastassemoopt|要素数のカウンター。|  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** alink  
   
- **ライブラリ**: alink  
+ **ライブラリ**: alink.dll  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [Al.exe (アセンブリ リンカー)](../../tools/al-exe-assembly-linker.md)

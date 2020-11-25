@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: a5906b2a-ad4a-4cc6-a421-2d7d8adf7468
 topic_type:
 - apiref
-ms.openlocfilehash: 6168c5b27868a261871b292e17ca02b04ae89917
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5290db008bfe5727ed5899c2ed6f7e41ae9a353a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500781"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716357"
 ---
 # <a name="cor_prf_snapshot_info-enumeration"></a>COR_PRF_SNAPSHOT_INFO 列挙型
-プロファイラーの[Stacksnapshotcallback](stacksnapshotcallback-function.md)関数を呼び出すたびに、スタックスナップショットで返すデータ量を指定します。  
+
+プロファイラーの [Stacksnapshotcallback](stacksnapshotcallback-function.md) 関数を呼び出すたびに、スタックスナップショットで返すデータ量を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,10 +43,12 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
 |`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|パラメーターを含むすべてのパラメーターに対して値を渡す必要があることを示し `StackSnapshotCallback` `context` ます。|  
 |`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|よりシンプルで代替のスタックウォークアルゴリズムが使用されることを示します。|  
   
-## <a name="remarks"></a>解説  
- 列挙体によって指定された値 `COR_PRF_SNAPSHOT_INFO` は、パラメーターとして[DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md)メソッドに渡されます。  
+## <a name="remarks"></a>注釈  
+
+ 列挙体によって指定された値 `COR_PRF_SNAPSHOT_INFO` は、パラメーターとして [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) メソッドに渡されます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

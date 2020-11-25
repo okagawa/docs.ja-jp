@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d56ef25-30f1-4499-8a1f-76e7654ec614
 topic_type:
 - apiref
-ms.openlocfilehash: bd48b9167a803da6e27c8d8ebc3a2b13508ff5c9
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 3eac575e18c7371754401da6498d85ba7ed6c8cf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83760338"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717618"
 ---
 # <a name="icorthreadpoolcorcreatetimer-method"></a>ICorThreadpool::CorCreateTimer メソッド
+
 このメソッドは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。  
   
 ## <a name="syntax"></a>構文  
@@ -38,12 +39,13 @@ HRESULT CorCreateTimer (
 );  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

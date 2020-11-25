@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: aaf96116-372b-4538-afb1-9e0fcdac1f98
 topic_type:
 - apiref
-ms.openlocfilehash: 3b8c9421dea4040a9f183b886f1ad8575cace780
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: fa8d15bc8e504a57d5cc87c170a3a5b022798add
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762431"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715785"
 ---
 # <a name="icorconfiguration-interface"></a>ICorConfiguration インターフェイス
+
 共通言語ランタイム (CLR: common language runtime) を構成するためのメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
@@ -34,11 +35,12 @@ ms.locfileid: "83762431"
 |[SetGCThreadControl メソッド](icorconfiguration-setgcthreadcontrol-method.md)|ガベージコレクションに対してブロックされる非ランタイムタスクのスレッドをスケジュールするためのコールバックインターフェイスを設定します。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

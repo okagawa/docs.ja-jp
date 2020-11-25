@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 843c904a-8176-4d8f-bd47-b4d4c29f4c5c
 topic_type:
 - apiref
-ms.openlocfilehash: 674089f8a1076342a2479c64e253b7dda53ade87
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: bc389b7247a6b1d6ce16cb3cf350f1672213b2e2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615203"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716422"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>ISymUnmanagedWriter::DefineGlobalVariable メソッド
+
 グローバル変数を 1 つ定義します。  
   
 ## <a name="syntax"></a>構文  
@@ -40,14 +41,15 @@ HRESULT DefineGlobalVariable(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `name`  
- から`WCHAR`グローバル変数名を定義するへのポインター。  
+ から `WCHAR` グローバル変数名を定義するへのポインター。  
   
  `attributes`  
  からグローバル変数属性。  
   
  `cSig`  
- から`ULONG32`バッファーのサイズ (文字数) を示す `signature` 。  
+ から `ULONG32` バッファーのサイズ (文字数) を示す `signature` 。  
   
  `signature`  
  からグローバル変数シグネチャ。  
@@ -65,9 +67,11 @@ HRESULT DefineGlobalVariable(
  からパラメーター指定の3番目のアドレス。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

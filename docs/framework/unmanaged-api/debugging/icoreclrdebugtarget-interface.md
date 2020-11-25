@@ -16,17 +16,18 @@ helpviewer_keywords:
 ms.assetid: 7cfaee76-e284-4a66-a431-8e33f0f60038
 topic_type:
 - apiref
-ms.openlocfilehash: c44a12ef377d29e0b33b8be86aa1d8f0aa9d26bd
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 791bd2754a96b97a38e2509c0c61a644324857cb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397151"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716955"
 ---
 # <a name="icoreclrdebugtarget-interface"></a>ICoreClrDebugTarget インターフェイス
+
 参照カウントを制御し、プロセスを列挙し、リモートの Macintosh Silverlight ターゲットにアタッチされているデバッガーに関連付けられているメモリを解放するメソッドを提供します。  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 class ICoreClrDebugTarget {  
@@ -55,15 +56,17 @@ class ICoreClrDebugTarget {
 |[ICoreClrDebugTarget::EnumRuntimes メソッド](icoreclrdebugtarget-enumruntimes-method.md)|リモートコンピューター上の指定されたプロセスの共通言語ランタイム (CLRs) を列挙します。|  
 |[ICoreClrDebugTarget::FreeMemory メソッド](icoreclrdebugtarget-freememory-method.md)|このクラスの列挙メソッドによって割り当てられたメモリを解放します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  現在、この機能は、リモートの Macintosh コンピューターで実行されている Silverlight ベースのアプリケーションターゲットをデバッグする場合にのみサポートされます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Coreclrremoteデバッグインターフェイス .h  
   
- **Library:** mscordbi_macx86 .dll  
+ **ライブラリ:** mscordbi_macx86.dll  
   
  **.NET Framework のバージョン:** 3.5 SP1  
   
