@@ -9,14 +9,15 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-ms.openlocfilehash: eee4b1a9e72c167b9b1e48a73dbb3f0528744bdc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d04ffd2cab21177f1342a13259a81df22b65723a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821334"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734414"
 ---
 # <a name="event-design"></a>イベントのデザイン
+
 イベントは、最も一般的に使用されるコールバックの形式です (フレームワークがユーザーコードを呼び出すことを許可するコンストラクト)。 その他のコールバックメカニズムには、デリゲート、仮想メンバー、およびインターフェイスベースのプラグインを受け取るメンバーが含まれます。ユーザビリティ研究からのデータは、開発者の大半が、他のコールバックメカニズムを使用しているよりも、イベントをより快適に使用できることを示しています。 イベントは、Visual Studio と多くの言語に適切に統合されています。
 
  イベントのグループは2つあることに注意してください。システムの状態が変更される前に発生するイベント (前のイベントと呼ばれます) と、状態の変更後に発生するイベント (ポストイベント) です。 前のイベントの例として `Form.Closing` 、フォームが閉じられる前にが発生します。 ポストイベントの例としては `Form.Closed` 、フォームが閉じられた後に発生するがあります。
@@ -52,6 +53,7 @@ ms.locfileid: "94821334"
  <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>またはそのサブクラスをイベント引数として使用し、エンドユーザーがイベントをキャンセルできるようにします。
 
 ### <a name="custom-event-handler-design"></a>カスタムイベントハンドラーのデザイン
+
  を使用できないケースがあります `EventHandler<T>` 。たとえば、フレームワークが以前のバージョンの CLR を使用する必要があり、そのためにジェネリックがサポートされていない場合などです。 このような場合は、カスタムイベントハンドラーデリゲートの設計と開発が必要になることがあります。
 
  ✔️は、イベントハンドラーに戻り値の型 void を使用します。

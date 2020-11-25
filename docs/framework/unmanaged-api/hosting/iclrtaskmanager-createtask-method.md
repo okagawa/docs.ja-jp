@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: eea570d9-2e53-4320-9ea0-eb777bf9dcf3
 topic_type:
 - apiref
-ms.openlocfilehash: 9829f57da911b43626516284e4858adc4139a3ca
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: c8d18b78cf0185271eae763892610d13f76e42ab
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762878"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733998"
 ---
 # <a name="iclrtaskmanagercreatetask-method"></a>ICLRTaskManager::CreateTask メソッド
+
 共通言語ランタイム (CLR) によって新しいタスクが作成されることを明示的に要求します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,8 +35,9 @@ HRESULT CreateTask (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pTask`  
- 入出力新しく作成された[ICLRTask](iclrtask-interface.md)のアドレスへのポインター、またはタスクを作成できなかった場合は null。  
+ 入出力新しく作成された [ICLRTask](iclrtask-interface.md)のアドレスへのポインター、またはタスクを作成できなかった場合は null。  
   
 ## <a name="return-value"></a>戻り値  
   
@@ -49,20 +51,22 @@ HRESULT CreateTask (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_OUTOFMEMORY|要求されたリソースを割り当てるのに十分なメモリがありません。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  CLR は、初期化時、ユーザーコードが名前空間の型を使用してスレッドを作成するとき、 <xref:System.Threading> またはスレッドプールのサイズが増加したときに、新しいタスクを自動的に作成します。 また、アンマネージコードがマネージ関数を呼び出す場合にも、タスクが作成されます。  
   
- `CreateTask`CLR によって新しいタスクが作成されることをホストが明示的に要求できるようにします。 たとえば、ホストはこのメソッドを呼び出して、データ構造を事前に初期化できます。  
+ `CreateTask` CLR によって新しいタスクが作成されることをホストが明示的に要求できるようにします。 たとえば、ホストはこのメソッドを呼び出して、データ構造を事前に初期化できます。  
   
 > [!IMPORTANT]
-> 新しいタスクは中断状態で返され、ホストが明示的に[IHostTask:: Start](ihosttask-start-method.md)を呼び出すまで中断されたままになります。  
+> 新しいタスクは中断状態で返され、ホストが明示的に [IHostTask:: Start](ihosttask-start-method.md)を呼び出すまで中断されたままになります。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

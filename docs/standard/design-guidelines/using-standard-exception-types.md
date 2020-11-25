@@ -8,17 +8,19 @@ helpviewer_keywords:
 - exceptions, catching
 - exceptions, throwing
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
-ms.openlocfilehash: d8e75f7104b755476f255563c9c1f7ece14f67db
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ef420d47e6204aef5e3d9bc12ace31fbf5521ee7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828466"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734362"
 ---
 # <a name="using-standard-exception-types"></a>標準例外型の使用
+
 このセクションでは、フレームワークによって提供される標準の例外とその使用法の詳細について説明します。 リストは、完全な手段ではありません。 他のフレームワークの例外の種類の使用方法については、.NET Framework リファレンスドキュメントを参照してください。
 
 ## <a name="exception-and-systemexception"></a>Exception および SystemException
+
  ❌<xref:System.Exception?displayProperty=nameWithType>またはをスローしないで <xref:System.SystemException?displayProperty=nameWithType> ください。
 
  ❌ を再 `System.Exception` `System.SystemException` スローする場合を除き、フレームワークコードでまたはをキャッチしないでください。
@@ -26,12 +28,15 @@ ms.locfileid: "94828466"
  ❌`System.Exception` `System.SystemException` 最上位レベルの例外ハンドラーを除き、またはをキャッチしないでください。
 
 ## <a name="applicationexception"></a>ApplicationException
+
  ❌ をスローしたり、から派生させたりしないで <xref:System.ApplicationException> ください。
 
 ## <a name="invalidoperationexception"></a>InvalidOperationException
+
  <xref:System.InvalidOperationException>オブジェクトが不適切な状態にある場合は、✔️スローされます。
 
 ## <a name="argumentexception-argumentnullexception-and-argumentoutofrangeexception"></a>ArgumentException、System.argumentnullexception、ArgumentOutOfRangeException
+
  <xref:System.ArgumentException>無効な引数がメンバーに渡された場合、✔️、またはそのサブタイプの1つをスローします。 最も派生した例外の種類を優先します (該当する場合)。
 
  ✔️は、 `ParamName` のサブクラスの1つをスローするときに、プロパティを設定し `ArgumentException` ます。
@@ -41,11 +46,13 @@ ms.locfileid: "94828466"
  ✔️は `value` 、プロパティ setter の暗黙的な値パラメーターの名前にを使用します。
 
 ## <a name="nullreferenceexception-indexoutofrangeexception-and-accessviolationexception"></a>NullReferenceException、IndexOutOfRangeException、および Access Ationexception
+
  ❌ パブリックに呼び出し可能な Api が、、、またはを明示的または暗黙的にスローすることを許可しないでください <xref:System.NullReferenceException> <xref:System.AccessViolationException> <xref:System.IndexOutOfRangeException> 。 これらの例外は、実行エンジンによって予約およびスローされ、ほとんどの場合、バグを示します。
 
  これらの例外をスローしないように引数をチェックします。 これらの例外をスローすると、時間の経過と共に変化する可能性のあるメソッドの実装の詳細が表示されます。
 
 ## <a name="stackoverflowexception"></a>StackOverflowException
+
  ❌ 明示的にスローしないで <xref:System.StackOverflowException> ください。 例外は、CLR によってのみ明示的にスローされる必要があります。
 
  ❌ キャッチしないで `StackOverflowException` ください。
@@ -53,9 +60,11 @@ ms.locfileid: "94828466"
  任意のスタックオーバーフローの有無に一貫性を持たせるマネージコードを記述することはほとんど不可能です。 CLR のアンマネージ部分は、プローブを使用してスタックオーバーフローを適切に定義された場所に移動することによって一貫性を保ちます。これは、任意のスタックオーバーフローからのバックアップではありません。
 
 ## <a name="outofmemoryexception"></a>OutOfMemoryException
+
  ❌ 明示的にスローしないで <xref:System.OutOfMemoryException> ください。 この例外は、CLR インフラストラクチャによってのみスローされます。
 
 ## <a name="comexception-sehexception-and-executionengineexception"></a>ComException、SEHException、および System.executionengineexception
+
  ❌ 、、およびを明示的にスローしないでください <xref:System.Runtime.InteropServices.COMException>  <xref:System.ExecutionEngineException> <xref:System.Runtime.InteropServices.SEHException> 。 これらの例外は、CLR インフラストラクチャによってのみスローされます。
 
  *©2005、2009 Microsoft Corporation の部分。すべての権限が予約されています。*

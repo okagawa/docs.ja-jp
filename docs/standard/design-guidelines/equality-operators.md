@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Equals method
 - == operator (equality) [.NET Framework]
 ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
-ms.openlocfilehash: 85a9e81d28995229e6b47d7fe4d0b541265999f8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2331a852adb4dd254af85060a5077f454bcfe0eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821347"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734427"
 ---
 # <a name="equality-operators"></a>等値演算子
+
 このセクションでは、等値演算子のオーバーロードについて説明し、 `operator==` 等値演算子としてとを参照し `operator!=` ます。
 
  ❌ 等値演算子の1つをオーバーロードしないでください。
@@ -29,11 +30,13 @@ ms.locfileid: "94821347"
  たとえば、引数のいずれかがスローではなく null の場合は、false を返し `NullReferenceException` ます。
 
 ## <a name="equality-operators-on-value-types"></a>値型の等値演算子
+
  等しい場合は、値型に対して等値演算子をオーバーロード✔️ます。
 
  ほとんどのプログラミング言語では、値型にの既定の実装はありません `operator==` 。
 
 ## <a name="equality-operators-on-reference-types"></a>参照型の等値演算子
+
  ❌ 変更可能な参照型に対する等値演算子のオーバーロードは避けてください。
 
  多くの言語には、参照型の等価演算子が組み込まれています。 これらの組み込み演算子は、通常、参照の等価性を実装します。多くの開発者は、既定の動作が値の等価性に変更されると驚かれます。

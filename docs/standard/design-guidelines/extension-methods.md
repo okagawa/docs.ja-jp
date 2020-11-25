@@ -2,14 +2,15 @@
 title: 拡張メソッド
 ms.date: 10/22/2008
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
-ms.openlocfilehash: d48651e9621beecd3c9a0665ca4be26894b50c45
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 02a421c9a4b73c779474a392e77104d4ccfbb109
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821139"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734713"
 ---
 # <a name="extension-methods"></a>拡張メソッド
+
 拡張メソッドは、インスタンスメソッド呼び出し構文を使用して静的メソッドを呼び出せるようにする言語機能です。 これらのメソッドは、メソッドが操作するインスタンスを表す1つ以上のパラメーターを受け取る必要があります。
 
  このような拡張メソッドを定義するクラスは "スポンサー" クラスと呼ばれ、static として宣言する必要があります。 拡張メソッドを使用するには、スポンサークラスを定義する名前空間をインポートする必要があります。

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - explicitly throwing exceptions
 - throwing exceptions, design guidelines
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
-ms.openlocfilehash: 6f22878a9ddfb394f6705a335930ef2cc270895f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d41467b971e43ca9b22c59e3b64bdd45d16c740b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821269"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734401"
 ---
 # <a name="exception-throwing"></a>例外のスロー
+
 このセクションで説明する例外をスローするガイドラインでは、実行エラーの意味を適切に定義する必要があります。 実行エラーは、メンバーが実行するように設計された処理を実行できない場合 (メンバー名が示すもの) に発生します。 たとえば、 `OpenFile` メソッドが開いているファイルハンドルを呼び出し元に返すことができない場合、実行エラーと見なされます。
 
  ほとんどの開発者は、0または null 参照による除算などの使用エラーに対して、例外を使用することに慣れています。 フレームワークでは、実行エラーを含むすべてのエラー条件に対して例外が使用されます。

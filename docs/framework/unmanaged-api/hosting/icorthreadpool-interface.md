@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 18485a27-cae3-4c6a-baa8-f7df601122d5
 topic_type:
 - apiref
-ms.openlocfilehash: c50c109dc786a0749cca1543d10b7d172e03f0b1
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 2be1c5273a5450ce0f793ffa1fc10746e2f1161f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805353"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733946"
 ---
 # <a name="icorthreadpool-interface"></a>ICorThreadpool インターフェイス
+
 スレッドプールにアクセスするためのメソッドを提供します。  
   
 > [!NOTE]
@@ -44,11 +45,12 @@ ms.locfileid: "83805353"
 |[CorGetAvailableThreads メソッド](icorthreadpool-corgetavailablethreads-method.md)|内部使用専用に予約されています。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

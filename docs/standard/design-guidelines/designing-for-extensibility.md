@@ -7,19 +7,21 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], extensibility
 - class library extensibility [.NET Framework]
 ms.assetid: 1cdb8740-871a-456c-9bd9-db96ca8d79b3
-ms.openlocfilehash: 9e75ef433f3bd9af34e8dd40331a8267755e59fe
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7b7b1bcfc907612be12e7f8ca7114183f7e830ef
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821386"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734453"
 ---
 # <a name="designing-for-extensibility"></a>機能拡張のデザイン
+
 フレームワークを設計する際の重要な要素の1つは、フレームワークの拡張性が慎重に考慮されていることです。 これには、さまざまな拡張メカニズムに関連するコストと利点を理解する必要があります。 この章では、拡張メカニズム (サブクラス化、イベント、仮想メンバー、コールバックなど) を、フレームワークの要件を最もよく満たすことができるかどうかを判断するのに役立ちます。  
   
  フレームワークで拡張性を実現するには、さまざまな方法があります。 これは、あまり強力ではなく、コストが非常に高く、非常にコストが高くなります。 特定の拡張要件については、要件を満たす最もコストの低い拡張性メカニズムを選択する必要があります。 通常は、後で拡張機能を追加できることに注意してくださいが、重大な変更を導入しなくても、この機能を使用することはできません。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [シールされていないクラス](unsealed-classes.md)  
  [プロテクトメンバー](protected-members.md)  
  [イベントとコールバック](events-and-callbacks.md)  

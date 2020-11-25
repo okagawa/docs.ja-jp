@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: afd88ee9-2589-4461-a75a-9b6fe55a2525
 topic_type:
 - apiref
-ms.openlocfilehash: 523d9665ffd2637a0e856d74d4d3b3838cb5e83c
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 078e5cb03848564b42e30a079101d5a61e0074bd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212127"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734024"
 ---
 # <a name="icordebugprocess3setenablecustomnotification-method"></a>ICorDebugProcess3::SetEnableCustomNotification メソッド
+
 指定された型のカスタムデバッガー通知を有効または無効にします。  
   
 ## <a name="syntax"></a>構文  
@@ -33,18 +34,21 @@ HRESULT SetEnableCustomNotification(ICorDebugClass * pClass,
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pClass`  
  からカスタムデバッガー通知を指定する型。  
   
  `fEnable`  
- [入力] `true`カスタムデバッガー通知を有効にするには`false`通知を無効にするには 既定値は `false` です。  
+ [入力] `true` カスタムデバッガー通知を有効にするには `false` 通知を無効にするには 既定値は `false` です。  
   
 ## <a name="remarks"></a>Remarks  
- `fEnable`がに設定されている場合 `true` 、メソッドの呼び出しに <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> よって[ICorDebugManagedCallback3:: customnotification](icordebugmanagedcallback3-customnotification-method.md)コールバックがトリガーされます。 既定では、通知は無効になっています。そのため、デバッガーは、認識している通知の種類を指定し、処理を希望する必要があります。 このクラス[のクラスはアプリケーション](icordebug-interface.md)ドメインによってスコープが設定されているため、 `SetEnableCustomNotification` プロセス全体で通知を受け取る場合は、プロセス内のすべてのアプリケーションドメインに対してを呼び出す必要があります。  
+
+ `fEnable`がに設定されている場合 `true` 、メソッドの呼び出しに <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> よって[ICorDebugManagedCallback3:: customnotification](icordebugmanagedcallback3-customnotification-method.md)コールバックがトリガーされます。 既定では、通知は無効になっています。そのため、デバッガーは、認識している通知の種類を指定し、処理を希望する必要があります。 このクラス [のクラスはアプリケーション](icordebug-interface.md) ドメインによってスコープが設定されているため、 `SetEnableCustomNotification` プロセス全体で通知を受け取る場合は、プロセス内のすべてのアプリケーションドメインに対してを呼び出す必要があります。  
   
  .NET Framework 4 以降、サポートされている通知は、スレッド間の依存関係通知だけです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
