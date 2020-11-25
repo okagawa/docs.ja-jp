@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 14218249-bdec-48ae-b5fc-9f57f7ca8501
 topic_type:
 - apiref
-ms.openlocfilehash: 69e5e05012d2b44a76a986591ec990f66bf8ae20
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 26293e38a275ca691c7d48dceb12c1e7dd316536
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007326"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713419"
 ---
 # <a name="imetadatadispenseropenscopeonmemory-method"></a>IMetaDataDispenser::OpenScopeOnMemory メソッド
+
 既存のメタデータを含むメモリ領域を開きます。 つまり、このメソッドは、既存のデータがメタデータとして扱われる、指定されたメモリ領域を開きます。  
   
 ## <a name="syntax"></a>構文  
@@ -38,6 +39,7 @@ HRESULT OpenScopeOnMemory (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pData`  
  からメモリ領域の開始アドレスを指定するポインター。  
   
@@ -45,7 +47,7 @@ HRESULT OpenScopeOnMemory (
  からメモリ領域のサイズ (バイト単位)。  
   
  `dwOpenFlags`  
- から開くためのモード (読み取り、書き込みなど) を指定する[Coropenflags](coropenflags-enumeration.md)列挙体の値。  
+ から開くためのモード (読み取り、書き込みなど) を指定する [Coropenflags](coropenflags-enumeration.md) 列挙体の値。  
   
  `riid`  
  から返される、必要なメタデータインターフェイスの IID。呼び出し元は、インターフェイスを使用して、メタデータのインポート (読み取り) または出力 (書き込み) を行います。  
@@ -55,19 +57,21 @@ HRESULT OpenScopeOnMemory (
  `ppIUnk`  
  入出力返されたインターフェイスへのポインター。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
+
  メタデータのメモリ内コピーは、"import" インターフェイスのいずれかのメソッドを使用してクエリを実行するか、"emit" インターフェイスのいずれかのメソッドを使用してに追加できます。  
   
  `OpenScopeOnMemory`メソッドは[IMetaDataDispenser:: openscope](imetadatadispenser-openscope-method.md)メソッドに似ていますが、対象のメタデータがディスク上のファイルではなくメモリに既に存在している点が異なります。  
   
  メモリのターゲット領域に共通言語ランタイム (CLR) メタデータが含まれていない場合、 `OpenScopeOnMemory` メソッドは失敗します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **プラットフォーム:** 「 [システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
