@@ -2,17 +2,19 @@
 title: Authenticode (アンマネージ API リファレンス)
 ms.date: 03/30/2017
 ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
-ms.openlocfilehash: 1b8b2222950c75f7f9d2ec2704f722087645cd7e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9b3e1585278bda82dedf7542e866a551867b9c9f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73132465"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674048"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode (アンマネージ API リファレンス)
+
 Authenticode XrML ライセンスの作成および検証モジュールをサポートします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [_AxlGetIssuerPublicKeyHash 関数](axlgetissuerpublickeyhash-function.md)  
  指定された証明書の署名に使用する秘密キーに関連付けられている公開キーの SHA-1 ハッシュを取得します。  
   
@@ -40,6 +42,6 @@ Authenticode XrML ライセンスの作成および検証モジュールをサ�
  [AXL_AUTHENTICODE_TIMESTAMPER_INFO 構造体](axl-authenticode-timestamper-info-structure.md)  
  Authenticode のタイム スタンパー情報を定義します。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [アンマネージ API リファレンス](../index.md)

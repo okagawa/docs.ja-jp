@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e17a6fc-f335-4aae-9bb0-c3e1271a9426
 topic_type:
 - apiref
-ms.openlocfilehash: a23083777d0cd5965511f3689578a60220008420
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 673c32c86c808c36db6454b8a9f0d8e68f9b1258
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762231"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720634"
 ---
 # <a name="icorruntimehostgetdefaultdomain-method"></a>ICorRuntimeHost::GetDefaultDomain メソッド
+
 <xref:System._AppDomain?displayProperty=nameWithType>現在のプロセスの既定のドメインを表す型のインターフェイスポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,8 +35,9 @@ HRESULT GetDefaultDomain (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pAppDomain`  
- 入出力<xref:System._AppDomain?displayProperty=nameWithType> <xref:System.AppDomain> プロセスの既定のアプリケーションドメインを表すインスタンスへの型のインターフェイスポインター。  
+ 入出力 <xref:System._AppDomain?displayProperty=nameWithType> <xref:System.AppDomain> プロセスの既定のアプリケーションドメインを表すインスタンスへの型のインターフェイスポインター。  
   
  このポインターは型指定されている `IUnknown` ため、呼び出し元は、通常、 `QueryInterface` 型のインターフェイスポインターを取得するためにを呼び出す必要があり <xref:System._AppDomain?displayProperty=nameWithType> ます。  
   
@@ -49,11 +51,12 @@ HRESULT GetDefaultDomain (
 |HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージドコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** 1.0、1.1  
   

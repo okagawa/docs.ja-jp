@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bca7a5b4-c207-4894-918c-0733926296dd
 topic_type:
 - apiref
-ms.openlocfilehash: d42c86a458661d3559f99235a6d5b208c82d1963
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: df0e66c8563404d7de4f1e11f41483f2f61f519c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502809"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721557"
 ---
 # <a name="icorprofilerinfo4enumthreads-method"></a>ICorProfilerInfo4::EnumThreads メソッド
+
 プロファイリングされたプロセス内のすべてのマネージスレッドのコレクションを順番に反復処理するメソッドを提供する列挙子を返します。  
   
 ## <a name="syntax"></a>構文  
@@ -33,12 +34,14 @@ HRESULT EnumThreads([out]
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ppEnum`  
- 入出力[ICorProfilerThreadEnum](icorprofilerthreadenum-interface.md)インターフェイスへのポインター。  
+ 入出力 [ICorProfilerThreadEnum](icorprofilerthreadenum-interface.md) インターフェイスへのポインター。  
   
 ## <a name="remarks"></a>解説  
   
 ## <a name="requirements"></a>必要条件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b5f9b41e-7301-429c-911f-21d5422292b3
 topic_type:
 - apiref
-ms.openlocfilehash: f577e9252d97ec188ff1076fd8340336b16c8257
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8ca4bb1fe35451f95f752a4e71f5f0b541b55e58
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504330"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721778"
 ---
 # <a name="iactiononclrevent-interface"></a>IActionOnCLREvent インターフェイス
+
 [Iactiononclrevent:: OnEvent](iactiononclrevent-onevent-method.md)メソッドを提供します。このメソッドは、 [ICLROnEventManager:: registeractiononevent](iclroneventmanager-registeractiononevent-method.md)メソッドの呼び出しを使用して登録されたイベントに対してコールバックを実行します。  
   
 ## <a name="methods"></a>メソッド  
@@ -31,11 +32,12 @@ ms.locfileid: "84504330"
 |[OnEvent メソッド](iactiononclrevent-onevent-method.md)|登録されているイベントに対してコールバックを実行します。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

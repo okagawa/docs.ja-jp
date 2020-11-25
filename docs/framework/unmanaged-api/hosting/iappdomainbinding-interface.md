@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 368881ab-c4ea-4731-bf22-c596aac7c66c
 topic_type:
 - apiref
-ms.openlocfilehash: c6f368f4288f8203067c1f9ff350ce0f3389f514
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 652739ad51e0a177f7b0fc6c0c9a11508c820bb3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617095"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721726"
 ---
 # <a name="iappdomainbinding-interface"></a>IAppDomainBinding インターフェイス
+
 アプリケーションドメインが作成されたことをホストアプリケーションに通知するために、共通言語ランタイム (CLR) によって呼び出されるメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
@@ -31,11 +32,12 @@ ms.locfileid: "83617095"
 |[OnAppDomain メソッド](iappdomainbinding-onappdomain-method.md)|アプリケーションドメインが作成されたことをホストに通知するために、共通言語ランタイム (CLR) によって呼び出されます。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

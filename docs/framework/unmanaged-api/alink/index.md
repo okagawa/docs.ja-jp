@@ -1,22 +1,24 @@
 ---
-title: ALink API (アンマネージド API リファレンス)
+title: ALink API (アンマネージ API リファレンス)
 ms.date: 03/30/2017
 f1_keywords:
 - ALink
 helpviewer_keywords:
 - ALink API
 ms.assetid: f4a84be2-309c-439c-b686-6facb85f4654
-ms.openlocfilehash: f44482d0be70a8c5651bf440a264468a4446f009
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d018ae41bd9bf0360bd3a0e492a88e911699ef27
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74445657"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705021"
 ---
-# <a name="alink-api-unmanaged-api-reference"></a>ALink API (アンマネージド API リファレンス)
+# <a name="alink-api-unmanaged-api-reference"></a>ALink API (アンマネージ API リファレンス)
+
 .NET Framework アセンブリと非バインド モジュールの作成をサポートします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [AssemblyAttributesGoHere](assemblyattributesgohere.md)  
   
  [AssemblyAttributesGoHereM](assemblyattributesgoherem.md)  
@@ -25,7 +27,7 @@ ms.locfileid: "74445657"
   
  [AssemblyAttributesGoHereSM](assemblyattributesgoheresm.md)  
   
- [AssemblyOptions 列挙型](assemblyoptions-enumeration.md)  
+ [AssemblyOptions 列挙体](assemblyoptions-enumeration.md)  
   
  [CreateALink 関数](createalink-function.md)  
   
@@ -37,6 +39,6 @@ ms.locfileid: "74445657"
   
  [IALink3 インターフェイス](ialink3-interface.md)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [アンマネージ API リファレンス](../index.md)

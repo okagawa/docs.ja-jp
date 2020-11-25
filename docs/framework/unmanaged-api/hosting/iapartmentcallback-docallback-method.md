@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8edad30c-30ff-4bee-813c-75525a82fc93
 topic_type:
 - apiref
-ms.openlocfilehash: 1a56c3ebe4b1c528f9c6555bdfbf1270a438410d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e3031bf123ff9107b4cebc0723f1be0d423bdaec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617114"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721752"
 ---
 # <a name="iapartmentcallbackdocallback-method"></a>IApartmentCallback::DoCallback メソッド
+
 アパートメント内で指定された関数を実行します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,6 +36,7 @@ HRESULT _stdcall DoCallback(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pFunc`  
  からアパートメント内で実行される関数へのポインター。  
   
@@ -42,11 +44,12 @@ HRESULT _stdcall DoCallback(
  から関数の引数へのポインター。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

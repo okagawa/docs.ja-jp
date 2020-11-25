@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 2cffcc52-19e0-4ced-a440-fc7375078ac9
 topic_type:
 - apiref
-ms.openlocfilehash: 20919bd9889408821cf57817082e3c7d5cebc240
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 37156b03b184d06e0c7b03d7d7a9a018793bbb98
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503920"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721635"
 ---
 # <a name="ihosttaskjoin-method"></a>IHostTask::Join メソッド
-現在の[IHostTask](ihosttask-interface.md)インスタンスによって表されるタスクが完了するまで、または指定された時間が経過するか、または[IHostTask:: Alert](ihosttask-alert-method.md)が呼び出されるまで、呼び出し元のタスクをブロックします。  
+
+現在の [IHostTask](ihosttask-interface.md) インスタンスによって表されるタスクが完了するまで、または指定された時間が経過するか、または [IHostTask:: Alert](ihosttask-alert-method.md) が呼び出されるまで、呼び出し元のタスクをブロックします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,17 +36,18 @@ HRESULT Join (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `milliseconds`  
  からタスクの終了を待機する時間間隔 (ミリ秒単位)。 タスクが終了する前にこの間隔が経過すると、呼び出し元のタスクがブロック解除されます。  
   
  `option`  
- から[WAIT_OPTION](wait-option-enumeration.md)値の1つ。 値 WAIT_ALERTABLE `Alert` は、が経過する前にが呼び出された場合に、タスクをウェイクアップするようにホストに指示 `milliseconds` します。  
+ から [WAIT_OPTION](wait-option-enumeration.md) 値の1つ。 値 WAIT_ALERTABLE `Alert` は、が経過する前にが呼び出された場合に、タスクをウェイクアップするようにホストに指示 `milliseconds` します。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`Join`正常に返されました。|  
+|S_OK|`Join` 正常に返されました。|  
 |HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
 |HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
@@ -53,11 +55,12 @@ HRESULT Join (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

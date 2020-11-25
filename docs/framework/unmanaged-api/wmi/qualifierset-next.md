@@ -1,6 +1,6 @@
 ---
-title: QualifierSet_Next関数 (アンマネージ API リファレンス)
-description: QualifierSet_Next関数は、列挙体の次の修飾子を取得します。
+title: QualifierSet_Next 関数 (アンマネージ API リファレンス)
+description: QualifierSet_Next 関数は、列挙体の次の修飾子を取得します。
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Next
@@ -14,14 +14,15 @@ helpviewer_keywords:
 - QualifierSet_Next function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: d3702426bc409d601ccfc6b7a8e93e8d9729c64e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 54d79a3dc081e9cdcb42153b6f7aa457557e3399
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174876"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721128"
 ---
 # <a name="qualifierset_next-function"></a>QualifierSet_Next 関数
+
 [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) 関数の呼び出しによって開始された列挙型内の次の修飾子が返されます。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -41,44 +42,45 @@ HRESULT QualifierSet_Next (
 
 ## <a name="parameters"></a>パラメーター
 
-`vFunc`[in]このパラメーターは使用されません。
+`vFunc` からこのパラメーターは使用されていません。
 
-`ptr`[in][インスタンス](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)へのポインター。
+`ptr` から [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) インスタンスへのポインター。
 
-`lFlags`[in]予約。 このパラメーターは 0 でなければなりません。
+`lFlags` から確保. このパラメーターには0を指定する必要があります。
 
-`pstrName`[アウト]修飾子の名前。 の`null`場合、このパラメータは無視されます。それ以外`pstrName`の場合は、有効`BSTR`なメモリ リークが発生することを指す必要があります。 null でない場合、関数は戻るときに`BSTR``WBEM_S_NO_ERROR`常に新しいを割り当てます。
+`pstrName` 入出力修飾子の名前。 `null`の場合、このパラメーターは無視されます。それ以外の場合、は有効なを `pstrName` 指していない `BSTR` か、メモリリークが発生します。 Null でない場合、関数は、を返したときに、常に新しいを割り当て `BSTR` `WBEM_S_NO_ERROR` ます。
 
-`pVal`[アウト]成功した場合は、修飾子の値。 関数が失敗した場合、`VARIANT`指すが`pVal`変更されません。 このパラメーターが`null`の場合、パラメーターは無視されます。
+`pVal` 入出力成功した場合は、修飾子の値。 関数が失敗した場合、が `VARIANT` 指すを変更すること `pVal` はできません。 このパラメーターがの場合 `null` 、パラメーターは無視されます。
 
-`plFlavor`[アウト]修飾子のフレーバーを受け取る LONG へのポインター。 フレーバー情報が必要ない場合、このパラメーターは`null`.
+`plFlavor` 入出力修飾子のフレーバーを受け取る LONG へのポインター。 フレーバー情報が必要でない場合、このパラメーターはにすることができ `null` ます。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値は *、WbemCli.h*ヘッダー ファイルで定義されているか、コード内で定数として定義できます。
+この関数によって返される次の値は、 *WbemCli* ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|常時  |Value  |説明  |
+|定数  |値  |説明  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが無効です。 |
-|`WBEM_E_UNEXPECTED` | 0x8004101d | 呼び出し元は[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)を呼び出しませんでした。 |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | メモリ不足で新しい列挙を開始できません。 |
-| `WBEM_S_NO_MORE_DATA` | 0x40005 | 列挙体に修飾子が残っていません。 |
-|`WBEM_S_NO_ERROR` | 0 | 関数呼び出しが正常に行われました。  |
+|`WBEM_E_UNEXPECTED` | 0x8004101d | 呼び出し元が [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)を呼び出しませんでした。 |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 新しい列挙を開始するために必要なメモリが不足しています。 |
+| `WBEM_S_NO_MORE_DATA` | 0x40005 | 列挙体にはそれ以上修飾子が残されていません。 |
+|`WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-この関数は[、IWbemQualifierSet::Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next)メソッドへの呼び出しをラップします。
+この関数は、 [IWbemQualifierSet:: Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next) メソッドの呼び出しをラップします。
 
-関数が`QualifierSet_Next`戻`WBEM_S_NO_MORE_DATA`るまで、関数を繰り返し呼び出してすべての修飾子を列挙します。 列挙を早期に終了するには[、QualifierSet_EndEnumeration](qualifierset-endenumeration.md)関数を呼び出します。
+関数が `QualifierSet_Next` 返されるまで、すべての修飾子を列挙するには、関数を繰り返し呼び出し `WBEM_S_NO_MORE_DATA` ます。 列挙型を早期に終了するには、 [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) 関数を呼び出します。
 
-列挙時に返される修飾子の順序は未定義です。
+列挙型の間に返される修飾子の順序は定義されていません。
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** WMINet_Utils.idl  
+ **ヘッダー:** WMINet_Utils .idl  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 

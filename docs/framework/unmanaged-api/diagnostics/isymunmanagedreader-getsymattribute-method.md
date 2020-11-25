@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c675ce7e-76e7-45ff-8273-3b6489a2767c
 topic_type:
 - apiref
-ms.openlocfilehash: b7e2814e56765037b69c6ef7ca0ba610dd7d3c95
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: aa3b742babe4a94a43e4e6168dea67c0a0245eb0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614930"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720582"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute メソッド
+
 名前に基づいてカスタム属性を取得します。 メタデータのカスタム属性とは異なり、これらのカスタム属性はシンボルストアに保持されます。  
   
 ## <a name="syntax"></a>構文  
@@ -38,6 +39,7 @@ HRESULT GetSymAttribute (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `parent`  
  から属性を要求する対象のオブジェクトのメタデータトークン。  
   
@@ -54,9 +56,11 @@ HRESULT GetSymAttribute (
  入出力属性データを受け取る変数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

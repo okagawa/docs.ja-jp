@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0d65060-6f90-42a2-95cf-6ffb04352996
 topic_type:
 - apiref
-ms.openlocfilehash: 652ebf1be6a58e08da27aaed5b2e84a8f2aee98a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3021124184ab0491337a07144e6f77b5bfea3681
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503771"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721973"
 ---
 # <a name="imetadataimportenumsignatures-method"></a>IMetaDataImport::EnumSignatures メソッド
+
 現在のスコープ内のスタンドアロン シグネチャを表す Signature トークンを列挙します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,6 +38,7 @@ HRESULT EnumSignatures (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `phEnum`  
  [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
   
@@ -53,18 +55,20 @@ HRESULT EnumSignatures (
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumSignatures`正常に返されました。|  
+|`S_OK`|`EnumSignatures` 正常に返されました。|  
 |`S_FALSE`|列挙するトークンがありません。 この場合、 `pcSignatures` は0になります。|  
   
-## <a name="remarks"></a>解説  
- 署名トークンは、 [IMetaDataEmit:: GetTokenFromSig](imetadataemit-gettokenfromsig-method.md)メソッドによって作成されます。  
+## <a name="remarks"></a>注釈  
+
+ 署名トークンは、 [IMetaDataEmit:: GetTokenFromSig](imetadataemit-gettokenfromsig-method.md) メソッドによって作成されます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -6,17 +6,19 @@ helpviewer_keywords:
 - hosting global static functions [.NET Framework]
 - unmanaged global static functions [.NET Framework], hosting
 ms.assetid: 4e4ad69d-9343-4f6a-aed8-fe0335a3b979
-ms.openlocfilehash: 1d4b9920e4dda45b82879ada8738a1061612d416
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: cc9af7397bc165e0ca68f58134fd5df3c02b1f4b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616126"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721817"
 ---
 # <a name="hosting-global-static-functions"></a>ホスト グローバル静的関数
+
 ここでは、.NET Framework ホスト API で使用されるアンマネージ ホスト関数について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [.NET Framework 4 ホスト グローバル静的関数](net-framework-4-hosting-global-static-functions.md)  
  .NET Framework 4 で導入された関数について説明します。  
   
@@ -24,8 +26,9 @@ ms.locfileid: "83616126"
  .NET Framework 1.1 および2.0 で導入された関数について説明します。 .NET Framework 4 では非推奨とされます。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [ホスト コクラス](hosting-coclasses.md)  
   
- [ホスティングの列挙体](hosting-enumerations.md)  
+ [ホスティングの列挙型](hosting-enumerations.md)  
   
  [ホスト構造体](hosting-structures.md)

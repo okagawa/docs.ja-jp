@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: acb8b029-4a96-4ed7-ae3c-310204e5ceea
 topic_type:
 - apiref
-ms.openlocfilehash: 4218faf1c324175424ab20305224f7f2fa51bb7a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 12b7b53c408388c21d7508f6591ead5ccf55936b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494216"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721180"
 ---
 # <a name="icorprofilerthreadenumskip-method"></a>ICorProfilerThreadEnum::Skip メソッド
+
 指定した数の要素をスキップするため、この列挙子のカーソルを現在の位置から進めます。  
   
 ## <a name="syntax"></a>構文  
@@ -33,21 +34,25 @@ HRESULT Skip (    [in] ULONG celt
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `celt`  
  からスキップする要素の数。  
   
 ## <a name="return-value"></a>戻り値  
+
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`celt`要素はスキップされました。|  
+|S_OK|`celt` 要素はスキップされました。|  
 |S_FALSE|より小さい `celt` 要素がスキップされました。これは、要素がこれ以上存在しないことを示します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  この列挙子のカーソルの新しい位置は、(現在位置) + `celt` です。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

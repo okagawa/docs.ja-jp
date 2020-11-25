@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 91b633d7-9e75-43c3-a8d2-2144984e5f9e
 topic_type:
 - apiref
-ms.openlocfilehash: 7c6adcbcfe64f63048078b4ccba6727a58531033
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3736e7279056e015b157758b1233cf6dc5aa6d8d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008106"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720205"
 ---
 # <a name="imetadataassemblyemitsetassemblyprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyProps メソッド
+
 指定された `Assembly` メタデータ構造体を変更します。  
   
 ## <a name="syntax"></a>構文  
@@ -40,6 +41,7 @@ HRESULT SetAssemblyProps (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pma`  
  から変更するメタデータ構造を指定するメタデータトークン `Assembly` 。  
   
@@ -59,17 +61,19 @@ HRESULT SetAssemblyProps (
  からアセンブリのバージョン、プラットフォーム、およびロケール情報を格納している ASSEMBLYMETADATA へのポインター。  
   
  `dwAssemblyFlags`  
- からアセンブリのさまざまな属性を指定する[Assemblyflags](assemblyflags-enumeration.md)値のビットごとの組み合わせ。  
+ からアセンブリのさまざまな属性を指定する [Assemblyflags](assemblyflags-enumeration.md) 値のビットごとの組み合わせ。  
   
-## <a name="remarks"></a>コメント  
- メタデータ構造を作成するには `Assembly` 、 [IMetaDataAssemblyEmit::D efineAssembly](imetadataassemblyemit-defineassembly-method.md)メソッドを使用します。  
+## <a name="remarks"></a>注釈  
+
+ メタデータ構造を作成するには `Assembly` 、 [IMetaDataAssemblyEmit::D efineAssembly](imetadataassemblyemit-defineassembly-method.md) メソッドを使用します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **プラットフォーム:** 「 [システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

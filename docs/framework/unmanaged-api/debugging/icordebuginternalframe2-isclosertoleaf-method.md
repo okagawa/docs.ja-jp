@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1d3d1eb-8370-4f25-8297-3bd262b4740a
 topic_type:
 - apiref
-ms.openlocfilehash: 4a01ccd4e5cb9aadc6a693b2c6ceaff31c114bbc
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 83d3eda0f3c4619ec7a5df91d13ab9f3a58e5f01
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209891"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721349"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>ICorDebugInternalFrame2::IsCloserToLeaf メソッド
+
 内部フレームが、指定されたのは、指定されたとしての `this` オブジェクトよりもリーフの近くにあるかどうかを確認します。  
   
 ## <a name="syntax"></a>構文  
@@ -33,6 +34,7 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pFrameToCompare`  
  から比較オブジェクトへのポインター `ICorDebugFrame` 。  
   
@@ -40,6 +42,7 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
  [出力] `true``this`内部フレームがで指定されたフレームよりもリーフの近くにある場合は `pFrameToCompare` 。それ以外の場合は `false` 。  
   
 ## <a name="return-value"></a>戻り値  
+
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
   
 |HRESULT|説明|  
@@ -48,10 +51,12 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
 |E_FAIL|比較を実行できませんでした。|  
 |E_INVALIDARG|`pFrameToCompare` または `pIsCloser` が null です。|  
   
-## <a name="remarks"></a>Remarks  
- `IsCloserToLeaf`を使用すると、スタック上の他のフレームと内部フレームをインターリーブするポリシーを実装できます。  
+## <a name="remarks"></a>注釈  
+
+ `IsCloserToLeaf` を使用すると、スタック上の他のフレームと内部フレームをインターリーブするポリシーを実装できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

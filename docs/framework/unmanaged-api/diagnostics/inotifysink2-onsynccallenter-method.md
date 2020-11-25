@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e33265be-c25d-4145-ad02-c3e89d6f26c1
 topic_type:
 - apiref
-ms.openlocfilehash: 85f00698f42f120b209cca14f293a58ae4c65f6f
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 57d12a463bc0904e1a5c873d24f843e004b95101
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442034"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720010"
 ---
 # <a name="inotifysink2onsynccallenter-method"></a>INotifySink2::OnSyncCallEnter メソッド
+
 呼び出しを入力したときに呼び出されます。  
   
 ## <a name="syntax"></a>構文  
@@ -37,6 +38,7 @@ HRESULT OnSyncCallEnter
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `in_CallID`  
  から入力されている呼び出しの ID。 「 [CALL_ID 構造](call-id-structure.md)」を参照してください。  
   
@@ -47,9 +49,11 @@ HRESULT OnSyncCallEnter
  から呼び出しバッファーのサイズ (バイト単位)。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** ProtocolNotify2  
   
 ## <a name="see-also"></a>関連項目

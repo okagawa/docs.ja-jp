@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3feb4796-2fab-45ce-beca-6f5bc530b971
 topic_type:
 - apiref
-ms.openlocfilehash: 44f9284f0a89f0941940cf379c48b2b138149122
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c90cd0d21eca6875d3dae32e4ca80cf42e6140b2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614943"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720595"
 ---
 # <a name="isymunmanagedreadergetnamespaces-method"></a>ISymUnmanagedReader::GetNamespaces メソッド
+
 このシンボルストア内のグローバルスコープで定義されている名前空間を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,6 +38,7 @@ HRESULT GetNamespaces (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `cNameSpaces`  
  から名前空間配列のサイズ。  
   
@@ -47,9 +49,11 @@ HRESULT GetNamespaces (
  入出力名前空間リストを受け取る変数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目

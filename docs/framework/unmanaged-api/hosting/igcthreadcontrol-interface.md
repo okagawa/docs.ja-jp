@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3ff04d75-85ac-4df9-886d-dbaa037c0552
 topic_type:
 - apiref
-ms.openlocfilehash: 78e667acf1573769a1a67b4c964d7801f11838fe
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 02facbb0ff1c0f8978d4f4f720ab370f70f07fe2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805127"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721687"
 ---
 # <a name="igcthreadcontrol-interface"></a>IGCThreadControl インターフェイス
+
 ガベージコレクションに対してブロックされるスレッドのスケジュール設定に参加するためのメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
@@ -33,11 +34,12 @@ ms.locfileid: "83805127"
 |[ThreadIsBlockingForSuspension メソッド](igcthreadcontrol-threadisblockingforsuspension-method.md)|呼び出しを行っているスレッドがブロックしようとしていることをホストに通知します。ガベージコレクションやその他の中断が考えられます。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 24a8fcce-317e-48ff-aefc-d86123ada935
 topic_type:
 - apiref
-ms.openlocfilehash: 78b87b5c566b0d760a205757430123665fb2fcd3
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 1d8aa2cca9dbbeaa9e03813b177ca59125770803
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213713"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721284"
 ---
 # <a name="icordebugmanagedcallbackeditandcontinueremap-method"></a>ICorDebugManagedCallback::EditAndContinueRemap メソッド
+
 このメソッドの使用は非推奨とされました。 これは、マップイベントが統合開発環境 (IDE) に送信されたことをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,10 +37,12 @@ HRESULT EditAndContinueRemap (
 );  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
+
  更新された `EditAndContinueRemap` 関数の古いバージョンでコードを実行しようとすると、メソッドが呼び出されます。 共通言語ランタイムは、メソッドを呼び出して、 `EditAndContinueRemap` リマップイベントを IDE に送信します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

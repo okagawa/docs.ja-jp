@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 091a18bd-e901-46f6-b999-74d71c8a7c41
 topic_type:
 - apiref
-ms.openlocfilehash: c68f43ce2f79ee6e4ec44ce4b2f0dbfb1c1185fa
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: af040c4a6c9b85930d2d9261f8587ba69eb204e5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433876"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721479"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash メソッド
+
 指定されたアセンブリのハッシュ blob を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,6 +36,7 @@ HRESULT GetAssemblyRefHash(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `FileToken`  
  ハッシュが参照するアセンブリの ID。  
   
@@ -45,9 +47,11 @@ HRESULT GetAssemblyRefHash(
  ハッシュ blob のサイズをバイト単位で受信します。  
   
 ## <a name="return-value"></a>戻り値  
+
  メソッドが成功した場合は S_OK を返します。  
   
 ## <a name="requirements"></a>要件  
+
  Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目

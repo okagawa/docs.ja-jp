@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a3a9446-7a4e-4836-9b27-5c536c15993d
 topic_type:
 - apiref
-ms.openlocfilehash: f72a66354bfc907dab7ebc24de515bdfb20ddfb2
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 9840217abdf8b3e1d0917b7447572b6860c181c8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703601"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720309"
 ---
 # <a name="iclrhostbindingpolicymanagerevaluatepolicy-method"></a>ICLRHostBindingPolicyManager::EvaluatePolicy メソッド
+
 ホストの代わりにバインドポリシーを評価します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,6 +40,7 @@ HRESULT EvaluatePolicy (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `pwzReferenceIdentity`  
  からポリシー評価の前のアセンブリへの参照。  
   
@@ -55,7 +57,7 @@ HRESULT EvaluatePolicy (
  [入力、出力]新しいポリシーデータを評価した後のアセンブリ id 参照バッファーのサイズへのポインター。  
   
  `pdwPoliciesApplied`  
- 入出力適用されているポリシーを示す[Ebindpolicylevels](ebindpolicylevels-enumeration.md)値の論理和の組み合わせへのポインター。  
+ 入出力適用されているポリシーを示す [Ebindpolicylevels](ebindpolicylevels-enumeration.md) 値の論理和の組み合わせへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
   
@@ -70,15 +72,17 @@ HRESULT EvaluatePolicy (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  メソッドを使用すると、ホスト `EvaluatePolicy` は、ホスト固有のアセンブリのバージョン管理要件を維持するために、バインディングポリシーに影響を与えることができます。 ポリシーエンジン自体は CLR 内に残ります。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

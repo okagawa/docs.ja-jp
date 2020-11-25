@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 11e18095-e444-47bc-aff6-b887ac5dc01e
 topic_type:
 - apiref
-ms.openlocfilehash: 9d30c8fe71a0dfff7de9bb2f43b325cbb8016a23
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0127b6894f1095521f1b24fc8c0424dc7db824b3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123039"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721050"
 ---
 # <a name="guid_managedname-attribute"></a>GUID_ManagedName 属性
+
 コンポーネントオブジェクトモデル (COM) ライブラリのマネージ名前空間名を指定するカスタムインターフェイス属性を定義します。  
   
 ## <a name="syntax"></a>構文  
@@ -33,10 +34,12 @@ ms.locfileid: "73123039"
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `value`  
  ライブラリのマネージ名前空間の名前。  
   
 ## <a name="definition"></a>定義  
+
  `GUID_ManagedName` は、Cor で次のように定義されています。  
   
 ```cpp
@@ -44,15 +47,17 @@ ms.locfileid: "73123039"
 EXTERN_GUID(GUID_ManagedName, 0xf21f359, 0xab84, 0x41e8, 0x9a, 0x78, 0x36, 0xd1, 0x10, 0xe6, 0xd2, 0xf9);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  カスタムインターフェイス属性は、タイプライブラリ内のオブジェクトのメタデータを定義します。  
   
- 属性からマネージ名を取得するには、<xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> または <xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType> を使用します。  
+ <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> <xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType> 属性からマネージ名を取得するには、またはを使用します。  
   
- 詳細については、ビジュアルC++リファレンスドキュメントの「[インターフェイス属性](/cpp/windows/attributes/interface-attributes)」を参照してください。  
+ 詳細については、Visual C++ リファレンスドキュメントの「 [インターフェイス属性](/cpp/windows/attributes/interface-attributes) 」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例は、`GUID_ManagedName` 属性を使用したライブラリ定義を示しています。  
+
+ 次の例は、属性を使用したライブラリ定義を示して `GUID_ManagedName` います。  
   
 ```idl
 [  
@@ -65,5 +70,6 @@ library Microsoft_VisualStudio_CommandBars
 }  
 ```  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
+
  **ヘッダー:** Cor

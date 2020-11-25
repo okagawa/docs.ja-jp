@@ -6,17 +6,19 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], hosting
 - structures [.NET Framework hosting]
 ms.assetid: 492e010f-7493-4134-9505-f7008ccdaae6
-ms.openlocfilehash: fb117352299a93aface6e58837307284ec4b8340
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 9d0349e4801c550731b6d126197003917c4a46e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616087"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721791"
 ---
 # <a name="hosting-structures"></a>ホスト構造体
+
 このセクションでは、ホスティング API が使用するアンマネージ構造体について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [AssemblyBindInfo 構造体](assemblybindinfo-structure.md)  
  参照アセンブリに関する詳細情報を提供します。  
   
@@ -42,10 +44,11 @@ ms.locfileid: "83616087"
  発生したオーバーフローの種類とオーバーフローによってスローされた例外に関する情報を格納します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [ホスト コクラス](hosting-coclasses.md)  
   
  [ホスト インターフェイス](hosting-interfaces.md)  
   
  [非推奨の CLR ホスト関数](deprecated-clr-hosting-functions.md)  
   
- [ホスティングの列挙体](hosting-enumerations.md)
+ [ホスティングの列挙型](hosting-enumerations.md)

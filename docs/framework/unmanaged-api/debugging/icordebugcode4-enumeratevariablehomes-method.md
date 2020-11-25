@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 802c01ff-8b80-4733-b6dd-03ab6ff7fa11
 topic_type:
 - apiref
-ms.openlocfilehash: 5f731b1459542c3f5378790b21f2ea576e89ad97
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 6d58efa5629bb02158a275dec61c0313bca821a1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893338"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720758"
 ---
 # <a name="icordebugcode4enumeratevariablehomes-method"></a>ICorDebugCode4:: EnumerateVariableHomes メソッド
+
 関数のローカル変数および引数に対する列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,13 +35,16 @@ HRESULT EnumerateVariableHomes(
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `ppEnum`  
- 関数内のローカル変数および引数の列挙子である、の[型](icordebugvariablehomeenum-interface.md)のオブジェクトのアドレスへのポインター。  
+ 関数内のローカル変数および引数の列挙子である、の [型](icordebugvariablehomeenum-interface.md) のオブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>解説  
- "ICorDebugEnum" インターフェイスから派生した標準列挙子で[ある、表示変数](icordebugvariablehomeenum-interface.md)[ホーム](icordebugvariablehome-interface.md)オブジェクトを列挙できます。 コレクションには、同じスロットまたは引数インデックスに対して、関数内の異なるポイントに異なる[ホーム](icordebugvariablehome-interface.md)オブジェクトが含まれている場合があります。  
+## <a name="remarks"></a>注釈  
+
+ "ICorDebugEnum" インターフェイスから派生した標準列挙子で[ある、表示変数](icordebugvariablehomeenum-interface.md)[ホーム](icordebugvariablehome-interface.md)オブジェクトを列挙できます。 コレクションには、同じスロットまたは引数インデックスに対して、関数内の異なるポイントに異なる [ホーム](icordebugvariablehome-interface.md) オブジェクトが含まれている場合があります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

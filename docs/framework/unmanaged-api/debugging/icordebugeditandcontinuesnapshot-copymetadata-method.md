@@ -15,16 +15,17 @@ helpviewer_keywords:
 ms.assetid: bf116077-1f44-4f76-962c-76d0c202017d
 topic_type:
 - apiref
-ms.openlocfilehash: 83b2a9c4bade66bdf9c7723036bbb48deb7d6b39
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0d600e54793017505388efd1be897aa2ace4fd57
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783191"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721453"
 ---
 # <a name="icordebugeditandcontinuesnapshotcopymetadata-method"></a>ICorDebugEditAndContinueSnapshot::CopyMetaData メソッド
-`CopyMetaData` は互換性のために残されています。 このメソッドを呼び出さないでください。  
+
+`CopyMetaData` は互換性のために残されています。 このメソッドは呼び出さないでください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

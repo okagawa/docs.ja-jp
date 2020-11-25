@@ -6,17 +6,19 @@ helpviewer_keywords:
 - enumerations [.NET Framework hosting]
 - hosting enumerations [.NET Framework]
 ms.assetid: e09131eb-1f7d-4f52-ae42-7393e9b62ef6
-ms.openlocfilehash: 8edace3191ee4477b19f199d5db6c891c993dcd5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 907b1343ddbfa28b97ac2210e28b99cd38aa6fd4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504304"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721830"
 ---
 # <a name="hosting-enumerations"></a>ホスティングの列挙体
+
 このセクションでは、ホスティング API が使用するアンマネージ列挙について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [CLSID_RESOLUTION_FLAGS 列挙型](clsid-resolution-flags-enumeration.md)  
  共通言語ランタイム (CLR: common language runtime) でを解決する方法を示す値を格納し `CLSID` ます。  
   
@@ -108,6 +110,7 @@ ms.locfileid: "84504304"
  CLR ブロックによって要求された操作が発生した場合にホストが実行するアクションを示します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [ホスト コクラス](hosting-coclasses.md)  
   
  [ホスト インターフェイス](hosting-interfaces.md)  

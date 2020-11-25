@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 2863b33b-a541-462c-bbe8-702a2832898e
 topic_type:
 - apiref
-ms.openlocfilehash: d3f7c24b4bd373924c44dbc0490c890e7f1322bd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f56a9049cd4b503124abe9dd4866dc91779e268e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131730"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721063"
 ---
 # <a name="iinstallreferenceenum-interface"></a>IInstallReferenceEnum インターフェイス
+
 グローバルアセンブリキャッシュにインストールされている参照アセンブリの列挙子を表します。  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 interface IInstallReferenceEnum : IUnknown {  
@@ -40,14 +41,15 @@ interface IInstallReferenceEnum : IUnknown {
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetNextInstallReferenceItem メソッド](iinstallreferenceenum-getnextinstallreferenceitem-method.md)|この `IInstallReferenceEnum`に含まれる次の `IInstallReferenceItem` へのポインターを取得します。|  
+|[GetNextInstallReferenceItem メソッド](iinstallreferenceenum-getnextinstallreferenceitem-method.md)|このに格納されている次のへのポインターを取得し `IInstallReferenceItem` `IInstallReferenceEnum` ます。|  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Fusion. h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

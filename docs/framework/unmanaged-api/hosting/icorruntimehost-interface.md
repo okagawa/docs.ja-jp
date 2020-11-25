@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4369533d-7834-4497-bc37-bfea0ad737b1
 topic_type:
 - apiref
-ms.openlocfilehash: 420f22a242a20f8bdf5d5b84f47a297a2f503db0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9fcb5e189af9f72de7635aad550a5e8ab5522dbd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546022"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720621"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost インターフェイス
+
 ホストが共通言語ランタイム (CLR) を明示的に開始および停止し、アプリケーションドメインの作成と構成、既定のドメインへのアクセス、およびプロセスで実行されているすべてのドメインの列挙を行うことができるようにするメソッドを提供します。  
   
  .NET Framework バージョン2.0 では、このインターフェイスは [ICLRRuntimeHost](iclrruntimehost-interface.md)によって置き換えられます。  
@@ -50,7 +51,8 @@ ms.locfileid: "90546022"
 |[SwitchOutLogicalThreadState メソッド](icorruntimehost-switchoutlogicalthreadstate-method.md)|使用しないでください。|  
 |[UnloadDomain メソッド](icorruntimehost-unloaddomain-method.md)|現在のプロセスから、指定されたアプリケーションドメインをアンロードします。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  

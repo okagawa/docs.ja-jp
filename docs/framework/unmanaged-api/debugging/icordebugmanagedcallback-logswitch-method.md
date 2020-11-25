@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0ac59d27-783f-4a87-b7a8-baa3ccc54582
 topic_type:
 - apiref
-ms.openlocfilehash: f095bc0272e0e6f16467b9758d5e392d371139dd
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: db6ccd63bbeadd7dcff1c7f8491b59017d431d12
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212686"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720699"
 ---
 # <a name="icordebugmanagedcallbacklogswitch-method"></a>ICorDebugManagedCallback::LogSwitch メソッド
+
 共通言語ランタイム (CLR) マネージスレッドが、 <xref:System.Diagnostics.Switch> デバッグ/トレーススイッチを作成、変更、または削除するために、クラスのメソッドを呼び出したことをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,6 +39,7 @@ HRESULT LogSwitch (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `PAppDomain`  
  からデバッグ/トレーススイッチを作成、変更、または削除したマネージスレッドを含むアプリケーションドメインを表す、コードのオブジェクトへのポインター。  
   
@@ -48,7 +50,7 @@ HRESULT LogSwitch (
  からイベントログに書き込まれた説明メッセージの重大度レベルを示す値。  
   
  `ulReason`  
- からデバッグ/トレーススイッチで実行された操作を示す[Logswitchcallreason](logswitchcallreason-enumeration.md)列挙体の値。  
+ からデバッグ/トレーススイッチで実行された操作を示す [Logswitchcallreason](logswitchcallreason-enumeration.md) 列挙体の値。  
   
  `pLogSwitchName`  
  からデバッグ/トレーススイッチの名前へのポインター。  
@@ -56,7 +58,8 @@ HRESULT LogSwitch (
  `pParentName`  
  からデバッグ/トレーススイッチの親の名前へのポインター。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

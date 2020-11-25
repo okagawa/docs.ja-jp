@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c1018789-4206-455d-aacc-2d876fc0d0bb
 topic_type:
 - apiref
-ms.openlocfilehash: c7afe074afb9b38d6fefa1192799120dbb50b403
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 255fe51f86157842a5807145bf7c58ae1ff5ba8a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442060"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720023"
 ---
 # <a name="inotifysink2-interface"></a>INotifySink2 インターフェイス
+
 シンク通知のメソッドを宣言します。  
   
 ## <a name="methods"></a>メソッド  
@@ -34,6 +35,7 @@ ms.locfileid: "83442060"
 |[OnSyncCallReturn メソッド](inotifysink2-onsynccallreturn-method.md)|呼び出しから制御が戻ったときに呼び出されます。|  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** ProtocolNotify2  
   
 ## <a name="see-also"></a>関連項目

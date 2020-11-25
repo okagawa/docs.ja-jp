@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9868cfb3-dd51-4812-bca9-171d7829afe9
 topic_type:
 - apiref
-ms.openlocfilehash: 08daa26f60ca5935fed73494660426d58f398154
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 5a8cece5ad72588b564890c8f21dabb6792a5641
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442086"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720062"
 ---
 # <a name="inotifyconnection2-interface"></a>INotifyConnection2 インターフェイス
+
 接続通知ソースを登録および登録解除するためのメソッドを宣言します。  
   
 ## <a name="methods"></a>メソッド  
@@ -32,6 +33,7 @@ ms.locfileid: "83442086"
 |[UnregisterNotifySource メソッド](inotifyconnection2-unregisternotifysource-method.md)|指定された通知ソースオブジェクトを接続から削除します。|  
   
 ## <a name="requirements"></a>要件  
+
  **ヘッダー:** ProtocolNotify2  
   
 ## <a name="see-also"></a>関連項目
