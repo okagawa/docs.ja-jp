@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: c5444816-7378-4521-afd3-bf5e4b5303d5
 topic_type:
 - apiref
-ms.openlocfilehash: fdb03b9244d3cb351735f5f2214248a08a399188
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 5435f78b28975a5426fcb2fce94904efc1051c5b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795743"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696402"
 ---
 # <a name="cordebugplatform-enumeration"></a>CorDebugPlatform 列挙型
-は[、のターゲットプラットフォームの値](icordebugdatatarget-getplatform-method.md)を提供しています。  
+
+は [、のターゲットプラットフォームの値](icordebugdatatarget-getplatform-method.md) を提供しています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,7 +52,8 @@ typedef enum CorDebugPlatform
 |CORDB_PLATFORM_WINDOWS_ARM|ターゲットプラットフォームは、Windows ARM ハードウェアで実行されている Macintosh オペレーティングシステムです。|  
 |CORDB_PLATFORM_MAC_AMD64|ターゲットプラットフォームは、AMD64 ハードウェアで実行されている Macintosh オペレーティングシステムです。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: af15e2ca-6be1-472b-bd36-03644a1e3ddd
 topic_type:
 - apiref
-ms.openlocfilehash: 7b8a726cffcc00d7371675192a209b2d8e9db94d
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 8797f77388bf4992dfb69191ce8a844a9b7fdb8a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795782"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696441"
 ---
 # <a name="cordebugjitcompilerflagsdeprecated-enumeration"></a>CorDebugJITCompilerFlagsDeprecated 列挙型
-この列挙型は互換性のために残されています。 代わりに、 `CORDEBUG_JIT_DEFAULT` [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md)列挙体のメンバーを使用してください。  
+
+この列挙型は互換性のために残されています。 代わりに、 `CORDEBUG_JIT_DEFAULT` [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) 列挙体のメンバーを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,9 +37,10 @@ typedef enum CorDebugJITCompilerFlagsDeprecated {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`CORDEBUG_JIT_TRACK_DEBUG_INFO`|代わりに `CORDEBUG_JIT_DEFAULT` を使用してください|  
+|`CORDEBUG_JIT_TRACK_DEBUG_INFO`|代わりに、`CORDEBUG_JIT_DEFAULT` を使用してください。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

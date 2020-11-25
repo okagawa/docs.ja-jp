@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d657a28-6984-4c5e-8a54-89d20080baff
 topic_type:
 - apiref
-ms.openlocfilehash: d9e2236b944137de82bb056820f81014febfcc5f
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 821eae8ea5b4147408e9fe60d1e5b70c7936959e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894894"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696246"
 ---
 # <a name="icordebugassembly-interface"></a>ICorDebugAssembly インターフェイス
 
@@ -30,17 +30,18 @@ ms.locfileid: "82894894"
 |メソッド|説明|  
 |------------|-----------------|  
 |[EnumerateModules メソッド](icordebugassembly-enumeratemodules-method.md)|アセンブリに格納されているモジュールの列挙子を取得します。|  
-|[GetAppDomain メソッド](icordebugassembly-getappdomain-method.md)|この`ICorDebugAssembly`インスタンスを含むアプリケーションドメインへのインターフェイスポインターを取得します。|  
+|[GetAppDomain メソッド](icordebugassembly-getappdomain-method.md)|このインスタンスを含むアプリケーションドメインへのインターフェイスポインターを取得し `ICorDebugAssembly` ます。|  
 |[GetCodeBase メソッド](icordebugassembly-getcodebase-method.md)|.NET Framework の現在のバージョンでは実装されていません。|  
 |[GetName メソッド](icordebugassembly-getname-method.md)|アセンブリの名前を取得します。|  
 |[GetProcess メソッド](icordebugassembly-getprocess-method.md)|アセンブリが実行されている、のプロセスインスタンスを取得します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

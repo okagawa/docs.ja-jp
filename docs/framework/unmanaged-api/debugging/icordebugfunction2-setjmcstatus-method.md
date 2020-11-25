@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 22c27b01-2869-4214-b840-5921f7c874fc
 topic_type:
 - apiref
-ms.openlocfilehash: 7da12554ba1db9a467aa03c01bfb3b584125b129
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 55f219b5b834f365b87440e69bfa7d2c4e519235
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213193"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696094"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>ICorDebugFunction2::SetJMCStatus メソッド
+
 この ICorDebugFunction2 によって表される関数をステップ実行マイコードのみにマークします。  
   
 ## <a name="syntax"></a>構文  
@@ -34,6 +35,7 @@ HRESULT SetJMCStatus (
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `bIsJustMyCode`  
  から関数を `true` ユーザーコードとしてマークする場合はに設定します。それ以外の場合はに設定 `false` します。  
   
@@ -44,10 +46,12 @@ HRESULT SetJMCStatus (
 |`S_OK`|関数は正常にマークされました。|  
 |`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|デバッグできないため、関数をユーザーコードとしてマークできませんでした。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  マイコードのみステッパは、非ユーザーコードをスキップします。 ユーザーコードは、デバッグ可能なコードのサブセットである必要があります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: edb4e4d2-3166-44d4-8b17-bf302f7ea093
 topic_type:
 - apiref
-ms.openlocfilehash: 036d3f12b38c19259fefaba674d0f9025a58d688
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: b64de0fa2ecbddd2decf69a4099d9897ec42a563
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795756"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696428"
 ---
 # <a name="cordebugngenpolicy-enumeration"></a>CorDebugNGenPolicy 列挙型
+
 デバッガーがネイティブ イメージ キャッシュからネイティブ (NGen) イメージを読み込むかどうかを指定する値を提供します。  
   
 ## <a name="syntax"></a>構文  
@@ -40,10 +41,12 @@ enum CorDebugNGENPolicy {
 |-----------------|-----------------|  
 |`DISABLE_LOCAL_NIC`|Windows 8.x ストアアプリでは、ローカルのネイティブイメージキャッシュからのイメージの使用は無効になっています。 デスクトップアプリでは、この設定による影響はありません。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
+
  `CorDebugNGENPolicy`列挙体は、 [ICorDebugProcess5:: EnableNGENPolicy](icordebugprocess5-enablengenpolicy-method.md)メソッドによって使用されます。 ローカルのネイティブイメージキャッシュからのイメージの使用を無効にすると、最適化されたネイティブイメージの代わりにデバッグ可能な JIT コンパイルイメージをデバッガーが読み込むことができるため、一貫したデバッグエクスペリエンスを実現できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

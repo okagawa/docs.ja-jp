@@ -10,14 +10,15 @@ api_type:
 ms.assetid: d680c1c0-16ab-4ccc-9444-39cf8e0e05ee
 topic_type:
 - apiref
-ms.openlocfilehash: cfbd856c73ab10642a7cf7c16cfb2d70e7fe9756
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: b3a22d7b32eb258263d373ae91b3fb7fbc9aae99
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795730"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696389"
 ---
 # <a name="cordebugrecordformat-enumeration"></a>CorDebugRecordFormat 列挙体
+
 ネイティブ例外デバッグ イベントに関する情報を格納するバイト配列内のデータの形式を示します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,13 +37,15 @@ typedef enum CorDebugRecordFormat {
 |`FORMAT_WINDOWS_EXCEPTIONRECORD32`|データは、32 ビット Windows 例外レコードです。|  
 |`FORMAT_WINDOWS_EXCEPTIONRECORD64`|データは、64 ビット Windows 例外レコードです。|  
   
-## <a name="remarks"></a>Remarks  
- 列挙体のメンバーは、 `pRecord`引数のバイト配列の形式を示すために、 [DecodeEvent](icordebugprocess6-decodeevent-method.md)メソッドに渡されます。 `CorDebugRecordFormat`  
+## <a name="remarks"></a>注釈  
+
+ 列挙体のメンバーは、 `CorDebugRecordFormat` 引数のバイト配列の形式を示すために、 [DecodeEvent](icordebugprocess6-decodeevent-method.md) メソッドに渡され `pRecord` ます。  
   
 > [!NOTE]
 > この列挙型は .NET ネイティブのデバッグ シナリオのみで使用することを目的としています。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

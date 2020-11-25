@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c0774f70-5bed-45e8-9922-fdad778c4c33
 topic_type:
 - apiref
-ms.openlocfilehash: 8be8ce36b557831bc0997dd1c69abb924390d051
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 0c8398b9e423414f32a391edcd5ea1c709af37f5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795821"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696558"
 ---
 # <a name="cordebugjitcompilerflags-enumeration"></a>CorDebugJITCompilerFlags 列挙型
+
 マネージド Just-In-Time (JIT) コンパイラの動作に影響を与える値が含まれます。  
   
 ## <a name="syntax"></a>構文  
@@ -44,7 +45,8 @@ typedef enum CorDebugJITCompilerFlags {
 |`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|コンパイラがコンパイルデータを追跡する必要があるが、最適化を無効にすることを指定します。|  
 |`CORDEBUG_JIT_ENABLE_ENC`|コンパイラがコンパイルデータを追跡し、最適化を無効にして、エディットコンティニュテクノロジを有効にする必要があることを指定します。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

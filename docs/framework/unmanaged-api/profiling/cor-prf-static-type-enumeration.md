@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 441d7809-5b65-41a5-ba64-2910a8008315
 topic_type:
 - apiref
-ms.openlocfilehash: 80d72aefc736054afcee152c55e941c0f8f3c6a8
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2fbcbb6f6115ec48085b533dbf5611054a8235c5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500768"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696740"
 ---
 # <a name="cor_prf_static_type-enumeration"></a>COR_PRF_STATIC_TYPE 列挙型
+
 フィールドが静的であるかどうかを示し、静的な場合は、フィールドに適用される静的なクオリティを示します。 これらの値は、ビットごとの OR 演算を使用して組み合わせて、フィールドに複数の異なる静的品質があることを示すことができます。  
   
 ## <a name="syntax"></a>構文  
@@ -47,6 +48,7 @@ typedef enum {
 |`COR_PRF_FIELD_RVA_STATIC`|フィールドは、相対仮想アドレス (RVA)-static です。|  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

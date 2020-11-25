@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: da941118-01b7-4197-ae5b-9f2f8adcd623
 topic_type:
 - apiref
-ms.openlocfilehash: e890c62a54654e86bb4a825613807efe142c8d5a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 747313f217092652d5a9404fbf81383fa0828ee9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500742"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696662"
 ---
 # <a name="cor_prf_transition_reason-enumeration"></a>COR_PRF_TRANSITION_REASON 列挙型
+
 マネージド コードからアンマネージド コードへ、またはその逆の遷移の理由を示します。  
   
 ## <a name="syntax"></a>構文  
@@ -40,10 +41,12 @@ typedef enum {
 |`COR_PRF_TRANSITION_CALL`|遷移は、関数の呼び出しによるものです。|  
 |`COR_PRF_TRANSITION_RETURN`|遷移は、関数からの戻り値によるものです。|  
   
-## <a name="remarks"></a>解説  
- 遷移が発生すると、プロファイラーは[ICorProfilerCallback:: ManagedToUnmanagedTransition](icorprofilercallback-managedtounmanagedtransition-method.md)または[ICorProfilerCallback:: UnmanagedToManagedTransition](icorprofilercallback-unmanagedtomanagedtransition-method.md)コールバックを受け取ります。どちらのコールバックでも、 `COR_PRF_TRANSITION_REASON` 遷移の理由を示す列挙体の値が提供されます。  
+## <a name="remarks"></a>注釈  
+
+ 遷移が発生すると、プロファイラーは [ICorProfilerCallback:: ManagedToUnmanagedTransition](icorprofilercallback-managedtounmanagedtransition-method.md) または [ICorProfilerCallback:: UnmanagedToManagedTransition](icorprofilercallback-unmanagedtomanagedtransition-method.md) コールバックを受け取ります。どちらのコールバックでも、 `COR_PRF_TRANSITION_REASON` 遷移の理由を示す列挙体の値が提供されます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

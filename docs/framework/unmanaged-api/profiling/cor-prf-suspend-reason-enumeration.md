@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 75594833-bed3-47b2-a426-b75c5fe6fbcf
 topic_type:
 - apiref
-ms.openlocfilehash: fdbcbb2da8f449b9275d820763c2a94cca86cd1e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: f7d76c72ed5db95425f5b1fa2db5e4346983daa4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500755"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696675"
 ---
 # <a name="cor_prf_suspend_reason-enumeration"></a>COR_PRF_SUSPEND_REASON 列挙型
+
 ランタイムが中断された理由を示します。  
   
 ## <a name="syntax"></a>構文  
@@ -43,18 +44,20 @@ typedef enum {
 |メンバー|説明|  
 |------------|-----------------|  
 |`COR_PRF_FIELD_SUSPEND_OTHER`|ランタイムは、不特定の理由で中断されています。|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC`|ランタイムは、ガベージコレクション要求を処理するために中断されています。<br /><br /> ガベージコレクションに関連するコールバックは、 [ICorProfilerCallback:: RuntimeSuspendFinished](icorprofilercallback-runtimesuspendfinished-method.md)と[ICorProfilerCallback:: RuntimeResumeStarted](icorprofilercallback-runtimeresumestarted-method.md)コールバックの間で発生します。|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC`|ランタイムは、ガベージコレクション要求を処理するために中断されています。<br /><br /> ガベージコレクションに関連するコールバックは、 [ICorProfilerCallback:: RuntimeSuspendFinished](icorprofilercallback-runtimesuspendfinished-method.md) と [ICorProfilerCallback:: RuntimeResumeStarted](icorprofilercallback-runtimeresumestarted-method.md) コールバックの間で発生します。|  
 |`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|をシャットダウンできるように、ランタイムは中断されてい `AppDomain` ます。<br /><br /> ランタイムが中断されている間、ランタイムは、シャットダウンされている内のスレッドを特定 `AppDomain` し、再開時に中止するように設定します。 `AppDomain`この中断期間中は、固有のコールバックはありません。|  
-|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|コードピッチが発生するようにランタイムが中断されています。<br /><br /> Code ピッチ ensues は、just-in-time (JIT) コンパイラがアクティブであり、コードピッチが有効になっている場合にのみ使用します。 コードピッチコールバックは、 `ICorProfilerCallback::RuntimeSuspendFinished` コールバックとコールバックの間で発生し `ICorProfilerCallback::RuntimeResumeStarted` ます。 **注:** CLR JIT は .NET Framework バージョン2.0 の関数のピッチを調整しないため、この値は2.0 では使用されません。|  
+|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|コードピッチが発生するようにランタイムが中断されています。<br /><br /> Code ピッチ ensues は、just-in-time (JIT) コンパイラがアクティブであり、コードピッチが有効になっている場合にのみ使用します。 コードピッチコールバックは、 `ICorProfilerCallback::RuntimeSuspendFinished` コールバックとコールバックの間で発生し `ICorProfilerCallback::RuntimeResumeStarted` ます。 **注:**  CLR JIT は .NET Framework バージョン2.0 の関数のピッチを調整しないため、この値は2.0 では使用されません。|  
 |`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|ランタイムは、シャットダウンできるように中断されています。 操作を完了するには、すべてのスレッドを中断する必要があります。|  
 |`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|ランタイムは、インプロセスデバッグのために中断されています。|  
 |`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|ランタイムは、ガベージコレクションの準備のために中断されています。|  
 |`COR_PRF_SUSPEND_FOR_REJIT`|ランタイムは JIT 再コンパイルのために中断されています。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
+
  アンマネージコード内のすべてのランタイムスレッドは、ランタイムを再入力しようとするまで実行を継続することができます。ランタイムは、ランタイムが再開されるまで中断されます。 これは、ランタイムに入る新しいスレッドにも当てはまります。 ランタイム内のすべてのスレッドは、中断可能なコードに含まれている場合はすぐに中断されます。または、中断可能なコードに到着したときに中断するように求められます。  
   
 ## <a name="requirements"></a>要件  
+
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
