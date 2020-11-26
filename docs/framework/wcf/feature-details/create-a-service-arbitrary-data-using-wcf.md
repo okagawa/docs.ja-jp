@@ -2,14 +2,15 @@
 title: '方法: WCF REST プログラミング モデルを使用して任意のデータを受け入れるサービスを作成する'
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: d908651f7815c102b45ea106f5bec4c07d869950
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9c9899705861cc1cf2cda2559c30a0a60d8cc635
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601336"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237834"
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>方法: WCF REST プログラミング モデルを使用して任意のデータを受け入れるサービスを作成する
+
 開発者は、データがサービス操作から返される流れを完全に制御する必要が生じることがあります。 これは、サービス操作が、byWCF でサポートされていない形式でデータを返す必要がある場合に当てはまります。 このトピックでは、WCF REST プログラミングモデルを使用して、任意のデータを受信するサービスを作成する方法について説明します。  
   
 ### <a name="to-implement-the-service-contract"></a>サービス コントラクトを実装するには  
@@ -124,6 +125,7 @@ ms.locfileid: "84601336"
     ```  
   
 ## <a name="example"></a>例  
+
  この例で使用されているコードの完全な一覧を次に示します。  
   
 ```csharp  

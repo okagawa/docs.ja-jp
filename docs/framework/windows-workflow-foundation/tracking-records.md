@@ -2,20 +2,22 @@
 title: 追跡レコード
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: 498d62fb1d3cc1386ea3bf57de431c57b18b7dda
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0344c802ef779d1f13f58c35c2f0e4fa67a37578
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551302"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238107"
 ---
 # <a name="tracking-records"></a>追跡レコード
+
 ワークフロー ランタイムは、ワークフロー インスタンスの実行状況を追跡する追跡レコードを出力するためにインストルメント化されています。  
   
 ## <a name="tracking-records"></a>追跡レコード  
+
  次の表で、ワークフロー ランタイムが出力する追跡レコードの詳細を説明します。  
   
-|追跡レコード|説明|  
+|追跡レコード|Description|  
 |---------------------|-----------------|  
 |ワークフロー ライフ サイクル レコード|ワークフロー インスタンスのライフ サイクルの多様なステージ中に出力されます。 たとえば、ワークフローの開始時または完了時にレコードは出力されます。|  
 |アクティビティ ライフ サイクル レコード|アクティビティの実行状況を詳しく記録します。 これらのレコードは、アクティビティをスケジュールしたとき、アクティビティが完了したとき、エラーが発生したときなど、ワークフロー アクティビティの状態を示します。|  

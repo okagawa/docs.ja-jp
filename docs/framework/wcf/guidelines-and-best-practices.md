@@ -8,18 +8,20 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 37e014aad44cf15e04ed3aa03a8367f5a44ceb96
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: eeca4ee47db2aef139567e37cba60cab863e6d53
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319813"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238133"
 ---
 # <a name="guidelines-and-best-practices"></a>ガイドラインと最適な使用方法
+
 このセクションには、Windows Communication Foundation (WCF) アプリケーションを作成するためのガイドラインを提供するトピックが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ベスト プラクティス: データ コントラクトのバージョン管理](best-practices-data-contract-versioning.md)  
+
+ [ベスト プラクティス:データ コントラクトのバージョン管理](best-practices-data-contract-versioning.md)  
  将来のバージョンが作成されても影響を受けることのないデータ コントラクトを作成する方法と、そのタイミングについて説明します。  
   
  [サービスのバージョン管理](service-versioning.md)  
@@ -34,13 +36,15 @@ ms.locfileid: "72319813"
  [ClickOnce を使用して WCF アプリケーションを展開する](deploying-wcf-applications-with-clickonce.md)  
  ClickOnce 機能を使用する際の考慮事項について説明します。  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>関連項目  
+
  <xref:System.ServiceModel>  
   
  <xref:System.Runtime.Serialization>  
   
 ## <a name="related-sections"></a>関連項目  
- [概念](conceptual-overview.md)  
+
+ [概念の概要](conceptual-overview.md)  
   
  [基本的な WCF プログラミング](basic-wcf-programming.md)  
   
@@ -48,5 +52,5 @@ ms.locfileid: "72319813"
 
 - [Windows Communication Foundation とは](whats-wcf.md)
 - [Windows Communication Foundation (WCF) のサンプル](./samples/index.md)
-- [概念](conceptual-overview.md)
+- [概念の概要](conceptual-overview.md)
 - [クライアントを構築する](building-clients.md)

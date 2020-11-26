@@ -2,17 +2,18 @@
 title: WSDL とポリシー
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 201920a8ebf639c74acfb20b2e990c8bbc0c5b55
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 123a878e90ee9099b009985a5e79155e8b1cd097
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600102"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238341"
 ---
 # <a name="wsdl-and-policy"></a>WSDL とポリシー
-このトピックでは、Windows Communication Foundation (WCF) WSDL 1.1、WS-POLICY および WS-POLICY 添付の実装の詳細、および WCF によって導入された追加の WS-POLICY アサーションと WSDL 1.1 拡張について説明します。  
+
+このトピックでは、Windows Communication Foundation (WCF) WSDL 1.1、WS-Policy および WS-PolicyAttachment 実装の詳細、および WCF によって導入された追加の WS-Policy アサーションと WSDL 1.1 拡張について説明します。  
   
- WCF は、このドキュメントで説明されている制約と説明に従って、W3C に送信される WS-POLICY および WS-POLICY 添付仕様を実装します。  
+ WCF は、このドキュメントで説明されている制約と説明に従って、W3C に送信される WS-Policy および WS-PolicyAttachment 仕様を実装します。  
   
  このドキュメントでは、次の表に示すプレフィックスと名前空間を使用します。  
   
@@ -28,6 +29,7 @@ ms.locfileid: "84600102"
 |cdp|`http://schemas.microsoft.com/net/2006/06/duplex`|  
   
 ## <a name="wcf-wsdl11-extensions"></a>WCF WSDL1.1 の拡張  
+
  WCF では、次の WSDL 1.1 拡張機能を使用して、コントラクトセッションの要件を記述します。  
   
  wsdl:portType/wsdl:operation/@msc:isInitiating  
@@ -40,6 +42,7 @@ ms.locfileid: "84600102"
  xs:boolean は、このコントラクトでセッションを確立する必要があるかどうかを示します。  
   
 ### <a name="soap-1x-http-binding-transport-uris"></a>SOAP 1.x HTTP バインディング トランスポートの URI  
+
  WCF では、次の Uri を使用して、WSDL 1.1、SOAP 1.1、および SOAP 1.2 バインド拡張要素に使用されるトランスポートを示します。  
   
 |トランスポート|URI|  
@@ -50,9 +53,10 @@ ms.locfileid: "84600102"
 |名前付きパイプ|`http://schemas.microsoft.com/soap/named-pipe`|  
   
 ## <a name="policy-assertions-implemented-by-wcf"></a>WCF で実装されるポリシー アサーション  
+
  Web サービス仕様 (WS-*) で導入されたポリシーアサーションに加えて、このドキュメントの他のセクションで説明したように、WCF では次のポリシーアサーションが実装されています。  
   
-|ポリシー アサーション|ポリシー サブジェクト|説明|  
+|ポリシー アサーション|ポリシー サブジェクト|Description|  
 |----------------------|--------------------|-----------------|  
 |http:HttpBasicAuthentication|エンドポイント|エンドポイントは、HTTP 基本認証を使用します。|  
 |http:HttpDigestAuthentication|エンドポイント|エンドポイントは、HTTP ダイジェスト認証を使用します。|  

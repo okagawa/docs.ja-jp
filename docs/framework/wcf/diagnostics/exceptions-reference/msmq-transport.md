@@ -2,14 +2,15 @@
 title: MSMQ トランスポート
 ms.date: 03/30/2017
 ms.assetid: 3f29a2fe-24df-4614-b64c-b0c084fb7003
-ms.openlocfilehash: a2e5384808b82f48bd1d4856bf893130da8c5f1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 407512cbb129dd2e5497de92c32b0641dd21080b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61959420"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238029"
 ---
 # <a name="msmq-transport"></a>MSMQ トランスポート
+
 ここでは、MSMQ トランスポートによって生成されるすべての例外を示します。  
   
 ## <a name="exception-list"></a>例外の一覧  
