@@ -6,14 +6,15 @@ helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-ms.openlocfilehash: d3059cec5007c24d41a4a779939d4990f19305ca
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 8b00c20e82ee1b1efa6a8a123e66a4cfc239143b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475204"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236170"
 ---
 # <a name="thread-pool-etw-events"></a>スレッド プール ETW イベント
+
 これらのイベントは、ワーカー スレッドと I/O スレッドに関する情報を収集します。  
   
  スレッド プール イベントには 2 つのグループがあります。  
@@ -23,9 +24,11 @@ ms.locfileid: "86475204"
 - [I/O スレッド プール イベント](#io-thread-events)は、スレッド プールで作成、無効化、無効化解除、または終了した I/O スレッドに関する情報を提供します。  
 
 ## <a name="worker-thread-pool-events"></a>ワーカー スレッド プール イベント
+
  これらのイベントは、ランタイムのワーカー スレッドのプールに関連付けられており、スレッド イベントに関する通知 (スレッドが作成されたり停止されたりした場合など) を提供します。 ワーカー スレッド プールは、スレッドの数が計測されたスループットに基づいて計算されるアダプティブ アルゴリズムを使用して、コンカレンシー制御を実行します。 ワーカー スレッド プール イベントを使用すると、アプリケーションで使用されるスレッド プールの様子や特定のワークロードがコンカレンシー制御に与える影響などを理解することができます。  
   
 ### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart および ThreadPoolWorkerThreadStop  
+
  次の表に、これらのイベントのキーワードとレベルを示します。 (詳細については、「 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)」を参照してください)。  
   
 |イベントを発生させるキーワード|Level|  
@@ -50,9 +53,11 @@ ms.locfileid: "86475204"
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
 ### <a name="threadpoolworkerthreadadjustment"></a>ThreadPoolWorkerThreadAdjustment  
+
  これらのスレッド プール イベントは、スレッドの挿入 (コンカレンシー制御) アルゴリズムの動作を理解したりデバッグしたりするための情報を提供します。 この情報は、ワーカー スレッド プールによって内部で使用されます。  
   
 #### <a name="threadpoolworkerthreadadjustmentsample"></a>ThreadPoolWorkerThreadAdjustmentSample  
+
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|Level|  
@@ -73,6 +78,7 @@ ms.locfileid: "86475204"
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
 #### <a name="threadpoolworkerthreadadjustmentadjustment"></a>ThreadPoolWorkerThreadAdjustmentAdjustment  
+
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|Level|  
@@ -95,6 +101,7 @@ ms.locfileid: "86475204"
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
 #### <a name="threadpoolworkerthreadadjustmentstats"></a>ThreadPoolWorkerThreadAdjustmentStats  
+
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|Level|  
@@ -124,9 +131,11 @@ ms.locfileid: "86475204"
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
 
 ## <a name="io-thread-events"></a>I/O スレッド イベント  
+
  これらのスレッド プール イベントは、I/O スレッド プール (完了ポート) にあるスレッドで発生します。これは非同期です。  
   
 ### <a name="iothreadcreate_v1"></a>IOThreadCreate_V1  
+
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|Level|  
@@ -148,6 +157,7 @@ ms.locfileid: "86475204"
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
 ### <a name="iothreadretire_v1"></a>IOThreadRetire_V1  
+
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|Level|  
@@ -169,6 +179,7 @@ ms.locfileid: "86475204"
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
 ### <a name="iothreadunretire_v1"></a>IOThreadUnretire_V1  
+
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|Level|  
@@ -190,6 +201,7 @@ ms.locfileid: "86475204"
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
 ### <a name="iothreadterminate"></a>IOThreadTerminate  
+
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|Level|  

@@ -3,17 +3,18 @@ title: '方法: 構成でクライアント バインディングを指定する
 description: 構成ファイルで WCF クライアントのバインドを宣言によって指定する方法について説明します。 この例では、クライアントがサービスにアクセスします。
 ms.date: 03/30/2017
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
-ms.openlocfilehash: 28778b6ae853199c5d7943f329bb087760f4bb11
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: e8a552211b28c1323b2afd595c5b060db6b2824a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244492"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236508"
 ---
 # <a name="how-to-specify-a-client-binding-in-configuration"></a>方法: 構成でクライアント バインディングを指定する
+
 この例では、電卓サービスを使用するためのクライアント コンソール アプリケーションを作成し、そのクライアントのバインディングを構成で宣言によって指定します。 クライアントは `CalculatorService` にアクセスします。これにより、`ICalculator` インターフェイスが実装され、サービスとクライアントの両方で <xref:System.ServiceModel.BasicHttpBinding> クラスが使用されます。  
   
- ここで説明する手順は、電卓サービスが実行されていることを前提とします。 サービスを構築する方法の詳細については、「[方法: 構成でサービスバインディングを指定](how-to-specify-a-service-binding-in-configuration.md)する」を参照してください。 また、Windows Communication Foundation (WCF) によって提供される[ServiceModel Metadata Utility Tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)を使用して、クライアントコンポーネントを自動的に生成します。 このツールにより、サービスにアクセスするためのクライアント コードと構成が生成されます。  
+ ここで説明する手順は、電卓サービスが実行されていることを前提とします。 サービスを構築する方法の詳細については、「 [方法: 構成でサービスバインディングを指定](how-to-specify-a-service-binding-in-configuration.md)する」を参照してください。 また、Windows Communication Foundation (WCF) によって提供される [ServiceModel Metadata Utility Tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) を使用して、クライアントコンポーネントを自動的に生成します。 このツールにより、サービスにアクセスするためのクライアント コードと構成が生成されます。  
   
  クライアントは 2 つの部分で構成されます。 Svcutil.exe によって、`ClientCalculator` インターフェイスを実装する `ICalculator` が生成されます。 次に、`ClientCalculator` のインスタンスを作成することで、クライアント アプリケーションを作成します。  
   
@@ -21,7 +22,7 @@ ms.locfileid: "85244492"
   
  [構成エディターツール (SvcConfigEditor.exe)](configuration-editor-tool-svcconfigeditor-exe.md)を使用して、次のすべての構成手順を実行できます。  
   
- この例のソースコピーについては、 [Basicbinding](./samples/basicbinding.md)サンプルを参照してください。  
+ この例のソースコピーについては、 [Basicbinding](./samples/basicbinding.md) サンプルを参照してください。  
   
 ### <a name="specifying-a-client-binding-in-configuration"></a>構成を使用したクライアント バインディングの指定  
   

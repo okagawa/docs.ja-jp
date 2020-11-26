@@ -2,23 +2,25 @@
 title: アクティビティ リスト
 ms.date: 03/30/2017
 ms.assetid: 5540e185-ce8e-4db3-83b0-2b9f5bf71829
-ms.openlocfilehash: 8d43cc878d54efbd4908f92c3405bef2c7956f94
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d28ae2e4750c718c35105d090aff8d085025b9d6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602168"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236092"
 ---
 # <a name="activity-list"></a>アクティビティ リスト
+
 このトピックでは、Windows Communication Foundation (WCF) によって定義されたすべてのアクティビティを示します。  
   
 > [!NOTE]
-> また、ユーザー トレースをグループ化するために、アクティビティをプログラムによって定義することもできます。 詳細については、「[ユーザーコードトレースの出力](emitting-user-code-traces.md)」を参照してください。  
+> また、ユーザー トレースをグループ化するために、アクティビティをプログラムによって定義することもできます。 詳細については、「 [User-Code トレースの出力](emitting-user-code-traces.md)」を参照してください。  
   
 ## <a name="servicemodel-activities"></a>ServiceModel アクティビティ  
+
  主要な使用シナリオに対応するすべてのアクティビティを次の表に示します。  
   
-|Label|Activity Name (アクティビティ名)|Activity Type (アクティビティの種類)|説明|  
+|Label|Activity Name (アクティビティ名)|Activity Type (アクティビティの種類)|Description|  
 |-----------|-------------------|-------------------|-----------------|  
 |A、M|アンビエント アクティビティ|N/A (ServiceModel によって制御されません)|ServiceModel コード (クライアント側またはサーバー側) を呼び出す前に、ID が TLS に設定されるアクティビティ。<br /><br /> 例: WCF クライアントまたは serviceHost で open が呼び出されるアクティビティ。 open が呼び出されます。|  
 |B|構成体<br /><br /> 構築する。 ContractType: '[種類]'。|構成体||  
@@ -34,24 +36,26 @@ ms.locfileid: "84602168"
 |T|'[IContract.Operation]' を実行する。|ExecuteUserCode|サービス側でディスパッチ後にユーザー コードを実行します。 このアクティビティは、ユーザー指定のコードと ServiceHost コードを区別するための境界を提供します。|  
   
 ## <a name="security-activities"></a>セキュリティ アクティビティ  
+
  セキュリティに関連するすべてのアクティビティを次の表に示します。  
   
-|Activity Name (アクティビティ名)|Activity Type (アクティビティの種類)|説明|  
+|Activity Name (アクティビティ名)|Activity Type (アクティビティの種類)|Description|  
 |-------------------|-------------------|-----------------|  
 |セキュリティで保護されたセッションをセットアップする|SetupSecurity|クライアント側だけに存在します。 認証およびセキュリティ コンテキストの設定のためのすべての "RST*/SCT 交換" を格納します。 の場合 `propagateActivity` = `true` 、このアクティビティは、サービスの対応するプロセスアクションの RST/SCT アクティビティにマージされ \* ます。|  
 |セキュリティで保護されたセッションを閉じる|SetupSecurity|クライアント側に存在します。 セキュリティで保護されたセッションを閉じるための "メッセージ交換のキャンセル" を格納します。 `propagateActivity` = `true` の場合、このアクティビティはサービスからのプロセスアクション "Cancel" にマージされます。|  
   
  COM+ に関連するすべてのアクティビティを次の表に示します。  
   
-|Activity Name (アクティビティ名)|Activity Type (アクティビティの種類)|説明|  
+|Activity Name (アクティビティ名)|Activity Type (アクティビティの種類)|Description|  
 |-------------------|-------------------|-----------------|  
 |COM+ インスタンスを作成する|TransferToCOMPlus|WCF コードからの COM + 呼び出しごとに1つのアクティビティインスタンス|  
-|COM + の実行\<operation>|TransferToCOMPlus|WCF コードからの COM + 呼び出しごとに1つのアクティビティインスタンス|  
+|COM + の実行 \<operation>|TransferToCOMPlus|WCF コードからの COM + 呼び出しごとに1つのアクティビティインスタンス|  
   
 ## <a name="wmi-activities"></a>WMI アクティビティ  
+
  WMI に関連するすべてのアクティビティを次の表に示します。  
   
-|Activity Name (アクティビティ名)|Activity Type (アクティビティの種類)|説明|  
+|Activity Name (アクティビティ名)|Activity Type (アクティビティの種類)|Description|  
 |-------------------|-------------------|-----------------|  
 |WMI Get|WMIGetObject|ユーザーは、WMI からデータを取得しています。|  
 |WMI Put|WmiPutInstance|ユーザーは、WMI でデータを更新しています。|

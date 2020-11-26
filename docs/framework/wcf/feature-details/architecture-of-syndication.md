@@ -2,14 +2,15 @@
 title: 配信のアーキテクチャ
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-ms.openlocfilehash: 718778993a953ae819a2bee5a4a050a81d3a4b84
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bc8c9cfbdc4f5d8ee01dfcf5098cfbc74afc2467
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587522"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96234805"
 ---
 # <a name="architecture-of-syndication"></a>配信のアーキテクチャ
+
 配信 API は、形式に依存せず、さまざま形式で概要コンテンツをネットワークに書き込むことができるプログラミング モデルを提供することを目的としています。 抽象データ モデルは、次のクラスで構成されています。  
   
 - <xref:System.ServiceModel.Syndication.SyndicationCategory>  
@@ -36,11 +37,12 @@ ms.locfileid: "84587522"
 > Atom 1.0 仕様では、date コンストラクトで小数秒を指定できます。 WCF 実装をシリアル化および逆シリアル化する場合、秒の小数部は無視されます。  
   
 ## <a name="object-model"></a>オブジェクト モデル  
+
  配信のオブジェクト モデルは、次の各表に示すクラスのグループから構成されています。  
   
  形式設定クラス  
   
-|クラス|説明|  
+|インスタンス|説明|  
 |-----------|-----------------|  
 |<xref:System.ServiceModel.Syndication.Atom10FeedFormatter>|<xref:System.ServiceModel.Syndication.SyndicationFeed> インスタンスを Atom 1.0 形式にシリアル化するクラス。|  
 |<xref:System.ServiceModel.Syndication.Atom10FeedFormatter%601>|<xref:System.ServiceModel.Syndication.SyndicationFeed> 派生クラスを Atom 1.0 形式にシリアル化するクラス。|  
@@ -53,7 +55,7 @@ ms.locfileid: "84587522"
   
  オブジェクト モデル クラス  
   
-|クラス|説明|  
+|インスタンス|説明|  
 |-----------|-----------------|  
 |<xref:System.ServiceModel.Syndication.SyndicationCategory>|配信フィードのカテゴリを表すクラス。|  
 |<xref:System.ServiceModel.Syndication.SyndicationContent>|配信コンテンツを表す基本クラス。|  
@@ -75,7 +77,7 @@ ms.locfileid: "84587522"
   
 ## <a name="extensibility"></a>機能拡張  
   
-- 配信プロトコルの主な機能は拡張性です。 Atom 1.0 と RSS 2.0 では、仕様で定義されていない属性および要素を配信フィードに追加できます。 WCF 配信プログラミングモデルには、カスタム属性と拡張機能を操作する2つの方法が用意されています。新しいクラスの派生と弱い型指定のアクセスです。 詳細については、「[配信の拡張機能](syndication-extensibility.md)」を参照してください。  
+- 配信プロトコルの主な機能は拡張性です。 Atom 1.0 と RSS 2.0 では、仕様で定義されていない属性および要素を配信フィードに追加できます。 WCF 配信プログラミングモデルには、カスタム属性と拡張機能を操作する2つの方法が用意されています。新しいクラスの派生と弱い型指定のアクセスです。 詳細については、「 [配信の拡張機能](syndication-extensibility.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

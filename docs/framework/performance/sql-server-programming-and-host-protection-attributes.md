@@ -13,17 +13,19 @@ helpviewer_keywords:
 - host protection attributes
 - HostProtectionAttribute class, reliability
 ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
-ms.openlocfilehash: 33db32897d2f49d2c10f94dc73aeae728c17db73
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 3ded0a9ac95d56e000ef7870ec19721764c96a66
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474203"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236235"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>SQL Server プログラミングとホスト保護属性
+
 SQL Server ホストにマネージド コードを読み込み、実行する機能を利用するには、コード アクセス セキュリティとホスト リソース保護の両方においてホストの要件を満たす必要があります。  コード アクセス セキュリティの要件は、SAFE、EXTERNAL-ACCESS、UNSAFE という 3 つの SQL Server アクセス許可セットのいずれかにより指定されます。 SAFE アクセス許可セット内か EXTERNAL-ACCESS アクセス許可セット内でコードを実行する場合、<xref:System.Security.Permissions.HostProtectionAttribute> 属性が適用されている特定の型またはメンバーを避ける必要があります。 <xref:System.Security.Permissions.HostProtectionAttribute> はセキュリティ アクセス許可ではなく、むしろ信頼性保証であり、ホストが許可しない可能性がある特定のコード コンストラクト (型またはメソッド) を識別します。  <xref:System.Security.Permissions.HostProtectionAttribute> を使用すると、ホストの安定性確保に役立つプログラミング モデルを適用できます。  
   
 ## <a name="host-protection-attributes"></a>ホスト保護属性  
+
  ホスト保護属性は、ホスト プログラミング モデルに合わない型またはメンバーを特定し、以下の信頼性レベルの脅威の増加を表します。  
   
 - 他の場合には特に害のない脅威  
@@ -35,6 +37,7 @@ SQL Server ホストにマネージド コードを読み込み、実行する�
  SQL Server は、<xref:System.Security.Permissions.HostProtectionResource> 値として <xref:System.Security.Permissions.HostProtectionResource.SharedState>、<xref:System.Security.Permissions.HostProtectionResource.Synchronization>、<xref:System.Security.Permissions.HostProtectionResource.MayLeakOnAbort>、<xref:System.Security.Permissions.HostProtectionResource.ExternalProcessMgmt> を指定する <xref:System.Security.Permissions.HostProtectionAttribute> を持つ型またはメンバーの使用を禁止します。 これにより、共有状態を有効にし、同期を実行し、終了時にリソースを漏洩する可能性があり、SQL Server プロセスの整合性に影響を与えるメンバーの呼び出しをアセンブリに禁止します。  
   
 ### <a name="disallowed-types-and-members"></a>禁止されている型とメンバー  
+
  次の表は、<xref:System.Security.Permissions.HostProtectionResource> 値が SQL Server により禁止される型とメンバーをまとめたものです。  
   
 |名前空間|型またはメンバー|  
@@ -52,9 +55,10 @@ SQL Server ホストにマネージド コードを読み込み、実行する�
 |`System.Windows.Forms`|<xref:System.Windows.Forms.AutoCompleteStringCollection.SyncRoot%2A?displayProperty=nameWithType> プロパティ|  
   
 ## <a name="sql-server-permission-sets"></a>SQL Server アクセス許可セット  
+
  SQL Server では、データベースに展開されたコードの信頼性要件をユーザーは指定できます。 アセンブリがデータベースにアップロードされるとき、アセンブリの作者はそのアセンブリの 3 つのアクセス許可セット (SAFE、EXTERNAL-ACCESS、UNSAFE) のいずれかを指定できます。  
   
-|権限セット|SAFE|EXTERNAL-ACCESS|UNSAFE|  
+|アクセス許可セット|SAFE|EXTERNAL-ACCESS|UNSAFE|  
 |--------------------|----------|----------------------|------------|  
 |コード アクセス セキュリティ|実行のみ|実行および外部リソースへのアクセス|無制限|  
 |プログラミング モデルの制限事項|はい|はい|制限事項なし|  
@@ -70,6 +74,7 @@ SQL Server ホストにマネージド コードを読み込み、実行する�
  SQL Server はホスト レベルのコード アクセス セキュリティ ポリシー層を利用し、SQL Server カタログに保存されているアクセス許可セットに基づき、3 つのアクセス許可セットのいずれかを与えるホスト ポリシーを設定します。 データベース内部で実行するマネージド コードには、これらのコード アクセス権限セットのうちのいずれかが必ず許可されます。  
   
 ## <a name="programming-model-restrictions"></a>プログラミング モデルの制限  
+
  SQL Server のマネージド コードのプログラミング モデルは、複数の呼び出しで状態を維持すること、または、複数のユーザー セッションで状態を共有することを要求しない関数、プロシージャ、型を必要とします。 さらに、既に説明したように、共有状態が存在すると、アプリケーションのスケーラビリティや信頼性に影響を与える重大な例外が発生する可能性があります。  
   
  以上を考慮した上で、SQL Server は静的変数と静的データ メンバーの使用を禁止します。 SAFE アセンブリと EXTERNAL-ACCESS アセンブリに関しては、SQL Server は CREATE ASSEMBLY 時にアセンブリのメタデータを調べ、静的データ メンバーや静的変数の使用が見つかった場合、SAFE アセンブリまたは EXTERNAL-ACCESS アセンブリの作成に失敗します。  

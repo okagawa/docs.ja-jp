@@ -2,14 +2,15 @@
 title: MSMQ
 ms.date: 03/30/2017
 ms.assetid: d9fca29f-fa44-4ec4-bb48-b10800694500
-ms.openlocfilehash: 5e157da25829a0741de988d1d6dde0318a93b109
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ef31a188e1564da47ea1e7323cdd4cd5ef5be60
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663727"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236677"
 ---
 # <a name="msmq"></a>MSMQ
+
 MSMQ アプリケーションでは、キューに置かれたチャネルから MSMQに、および MSMQ からキューに置かれたチャネルに追加アクティビティは転送されません。  
   
  さらに、MSMQ メッセージ ID と SOAP メッセージ ID (および、存在する場合はアクティビティ ID) は、キューに置かれたチャネルのトレースの一部として送信操作を追跡されます。  

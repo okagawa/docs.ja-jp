@@ -2,32 +2,35 @@
 title: 2576 - TryCatchExceptionFromTry
 ms.date: 03/30/2017
 ms.assetid: 47e48973-b17c-4a16-8338-c84b54aa0a6e
-ms.openlocfilehash: cdc48a1a08e997f7bc6a0ad6b93aa13640af9ed3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 722d5206322c2a9abacbca554d489ba2f6efe357
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755650"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96235832"
 ---
 # <a name="2576---trycatchexceptionfromtry"></a>2576 - TryCatchExceptionFromTry
+
 ## <a name="properties"></a>プロパティ  
   
 |||  
 |-|-|  
 |ID|2576|  
-|キーワード|WFActivities|  
-|レベル|情報|  
+|Keywords|WFActivities|  
+|Level|情報|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>Description  
+
  TryCatch アクティビティが例外をキャッチしたことを示します。  
   
-## <a name="message"></a>メッセージ  
+## <a name="message"></a>Message  
+
  TryCatch アクティビティ '%1' は、型 '%2' の例外をキャッチしました。  
   
-## <a name="details"></a>説明  
+## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|説明|  
+|データ項目名|データ項目の型|Description|  
 |--------------------|--------------------|-----------------|  
 |DisplayName|xs:string|アクティビティの表示名。|  
 |例外|xs:string|例外の型名。|  
