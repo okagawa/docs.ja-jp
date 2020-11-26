@@ -8,15 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: a473a2bb3582274baddf7595ac396a0f833f8daf
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4ffbf6a05abd3ed9ebcea4b2e85f0dc305a4f2db
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535899"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244770"
 ---
 # <a name="programming-wcf-security"></a>WCF セキュリティのプログラミング
-このトピックでは、セキュリティで保護された Windows Communication Foundation (WCF) アプリケーションの作成に使用される基本的なプログラミングタスクについて説明します。 このトピックでは、 *転送セキュリティ*と総称される認証、機密性、および整合性についてのみ説明します。 このトピックでは、承認 (リソースまたはサービスへのアクセスの制御) については説明しません。承認の詳細については、「 [承認](authorization-in-wcf.md)」を参照してください。  
+
+このトピックでは、セキュリティで保護された Windows Communication Foundation (WCF) アプリケーションの作成に使用される基本的なプログラミングタスクについて説明します。 このトピックでは、 *転送セキュリティ* と総称される認証、機密性、および整合性についてのみ説明します。 このトピックでは、承認 (リソースまたはサービスへのアクセスの制御) については説明しません。承認の詳細については、「 [承認](authorization-in-wcf.md)」を参照してください。  
   
 > [!NOTE]
 > 特に WCF に関するセキュリティの概念の概要については、MSDN の「 [Web サービス拡張機能 (WSE) 3.0 のシナリオ、パターン、実装ガイダンス](/previous-versions/msp-n-p/ff648183(v=pandp.10))」で、一連のパターンとプラクティスに関するチュートリアルを参照してください。  
@@ -24,6 +25,7 @@ ms.locfileid: "90535899"
  WCF セキュリティのプログラミングは、セキュリティモード、クライアント資格情報の種類、および資格情報の値を設定する3つの手順に基づいています。 これらの手順は、コードまたは構成を使用して実行できます。  
   
 ## <a name="setting-the-security-mode"></a>セキュリティ モードの設定  
+
  ここでは、WCF のセキュリティモードを使用したプログラミングの一般的な手順について説明します。  
   
 1. アプリケーション要件を満たす適切な定義済みバインディングを選択します。 バインディングの選択肢の一覧については、「 [システム指定のバインディング](../system-provided-bindings.md)」を参照してください。 既定では、ほとんどのバインディングでセキュリティが有効になっています。 1つの例外は <xref:System.ServiceModel.BasicHttpBinding> クラスです (構成を使用し [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) ます)。  
@@ -55,6 +57,7 @@ ms.locfileid: "90535899"
      セキュリティで保護されたセッションは、クライアントとサーバーが対称キーを使用してチャネルを作成するときに発生します (メッセージ交換中、やりとりが終了するまで、クライアントとサーバーの両方が同じキーを使用します)。  
   
 ## <a name="setting-the-client-credential-type"></a>クライアント資格情報の種類の設定  
+
  適切なクライアント資格情報の種類を選択します。 詳細については、「 [資格情報の種類の選択](selecting-a-credential-type.md)」を参照してください。 使用できるクライアント資格情報の種類は、次のとおりです。  
   
 - `Windows`  
@@ -92,12 +95,14 @@ ms.locfileid: "90535899"
  [!code-vb[c_WsHttpService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#1)]  
   
 ## <a name="setting-service-credential-values"></a>サービス資格情報の値の設定  
+
  クライアント資格情報の種類を選択したら、サービスとクライアントが使用する実際の資格情報を設定する必要があります。 サービスでは、資格情報は <xref:System.ServiceModel.Description.ServiceCredentials> クラスを使用して設定します。また、資格情報は <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> クラスの <xref:System.ServiceModel.ServiceHostBase> プロパティによって返されます。 使用しているバインディングによって、サービス資格情報の種類、選択されるセキュリティ モード、およびクライアント資格情報の種類が暗黙的に決まります。 サービス資格情報の証明書を設定するコードを次に示します。  
   
  [!code-csharp[c_tcpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpservice/cs/source.cs#3)]
  [!code-vb[c_tcpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpservice/vb/source.vb#3)]  
   
 ## <a name="setting-client-credential-values"></a>クライアント資格情報の値の設定  
+
  クライアントでは、クライアント資格情報の値は <xref:System.ServiceModel.Description.ClientCredentials> クラスを使用して設定します。また、クライアント資格情報の値は <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> クラスの <xref:System.ServiceModel.ClientBase%601> プロパティから返されます。 TCP プロトコルを使用するクライアントで、資格情報として証明書を設定するコードを次に示します。  
   
  [!code-csharp[c_TcpClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpclient/cs/source.cs#1)]

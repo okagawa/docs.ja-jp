@@ -9,17 +9,19 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), failed QueryInterface
 - managed debugging assistants (MDAs), failed QueryInterface
 ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
-ms.openlocfilehash: 2d7f14c67d47e58bcb88eab4621df63d7c598a7a
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+ms.openlocfilehash: bbd8d5644f8620444d80845b9920b925b6891176
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415941"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244328"
 ---
 # <a name="failedqi-mda"></a>failedQI MDA
+
 `failedQI` マネージド デバッグ アシスタント (MDA: Managed Debugging Asssitant) は、ランタイムがランタイム呼び出し可能ラッパー (RCW: Runtime Callable Wrapper) の代わりに COM インターフェイス ポインター上の `QueryInterface` を呼び出し、その `QueryInterface` 呼び出しに失敗するとアクティブ化されます。  
   
 ## <a name="symptoms"></a>現象  
+
  RCW でのキャストに失敗します。または、RCW からの COM 呼び出しが予期せず失敗します。  
   
 ## <a name="cause"></a>原因  
@@ -30,13 +32,16 @@ ms.locfileid: "85415941"
   
 - OLE 所有のプロキシがエラー HRESULT を返しました。  
   
-## <a name="resolution"></a>解決策  
+## <a name="resolution"></a>解像度  
+
  COM 規則についての MSDN ドキュメントを参照してください。  
   
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
+
  `QueryInterface` 呼び出しに失敗すると、コンテキストが切り替えられ、エラー時に正しくないコンテキストであったことを確認するために、`QueryInterface` 呼び出しが再試行されます。  
   
 ## <a name="output"></a>出力  
+
  インターフェイスのマネージド名、インターフェイスの GUID、およびエラー HRESULT です。  
   
 ## <a name="configuration"></a>構成  

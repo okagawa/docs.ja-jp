@@ -2,14 +2,15 @@
 title: トレース
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
-ms.openlocfilehash: 569a97dc21a434cd711ad4c735f828df588f3af7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 10b9be028710cdda378aeef0ca235a00aa451e08
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84578982"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243912"
 ---
 # <a name="tracing"></a>トレース
+
 Windows Communication Foundation (WCF) では、アプリケーションのインストルメンテーションと診断データを使用して、障害の監視と分析を行うことができます。 アプリケーションの動作やエラー原因を調べるために、デバッガーの代わりにトレースを使用できます。 コンポーネント間でエラーと処理を関連付けて、エンドツーエンドの調査を行うこともできます。  
   
  WCF は、診断トレース用に次のデータを出力します。  
@@ -19,6 +20,7 @@ Windows Communication Foundation (WCF) では、アプリケーションのイ�
 - トレース機能が正しく動作しないときの Windows エラー イベント。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [トレースの構成](configuring-tracing.md)  
   
  ここでは、特定のニーズに合うよう、さまざまなレベルでトレースを構成する方法を説明します。  

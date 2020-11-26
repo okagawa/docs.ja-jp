@@ -2,19 +2,21 @@
 title: エンドツーエンドのトレース
 ms.date: 03/30/2017
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
-ms.openlocfilehash: fc8fc448bdcf94ab25349f6b34961a34e5ed2a5a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a8c06b9e4f70321e6ef3756863390dc62c659557
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598581"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243951"
 ---
 # <a name="end-to-end-tracing"></a>エンドツーエンドのトレース
+
 エンドツーエンド (e2e) のトレースにより、開発者は、Windows Communication Foundation (WCF) インフラストラクチャでコードの実行に従い、コードパスが失敗した原因を調査したり、容量計画とパフォーマンス分析の詳細なトレースを提供したりすることができます。 Windows Communication Foundation (WCF) には、エラーの原因を診断するのに役立つ3つの相関関係メカニズム (アクティビティ、転送、および伝達) が用意されています。  
   
- エンドツーエンドのトレースシナリオの一覧と、それぞれのアクティビティとトレースの設計については、「[エンドツーエンドのトレースのシナリオ](end-to-end-tracing-scenarios.md)」を参照してください。  
+ エンドツーエンドのトレースシナリオの一覧と、それぞれのアクティビティとトレースの設計については、「 [エンドツーエンドのトレースのシナリオ](end-to-end-tracing-scenarios.md) 」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [アクティビティ](activity.md): WINDOWS COMMUNICATION FOUNDATION (WCF) トレースモデルのアクティビティトレースについて説明します。  
   
  [転送](transfer.md): WINDOWS COMMUNICATION FOUNDATION (WCF) トレースモデルでの転送について説明し、transfer を使用してエンドポイント内のアクティビティを関連付けます。  

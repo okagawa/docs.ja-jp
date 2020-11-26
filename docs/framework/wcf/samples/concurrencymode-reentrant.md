@@ -2,14 +2,15 @@
 title: ConcurrencyMode 再入
 ms.date: 03/30/2017
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
-ms.openlocfilehash: 67e719afd40b52f37c777cf9791291a16878592f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f5b36e57a45850fec7ac27fb333af3860f1e73d3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600089"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243258"
 ---
 # <a name="concurrencymode-reentrant"></a>ConcurrencyMode 再入
+
 このサンプルでは、サービス実装で ConcurrencyMode.Reentrant を使用する必要性と影響を示します。 ConcurrencyMode.Reentrant は、サービス (またはコールバック) が指定された時間で処理するメッセージが 1 つだけであることを示します (`ConcurencyMode.Single` に似ています)。 スレッドセーフを確保するために、Windows Communication Foundation (WCF) は、メッセージの処理をロックして、 `InstanceContext` 他のメッセージを処理できないようにします。 再入モードの場合、サービスが呼び出しの送信を行う直前に `InstanceContext` のロックが解除されます。これによりその後の呼び出しが可能になり (サンプルに示すように再入可能になり)、次回サービスに呼び出しが届いたときにロックされます。 この動作を示すために、サンプルでは、クライアントとサービスが双方向コントラクトを使用してメッセージを相互に送信する方法を示します。  
   
  定義されているコントラクトは双方向コントラクトで、サービスによって実装される `Ping` メソッドと、クライアントによって実装されるコールバック メソッド `Pong` を含みます。 クライアントは、サーバーの `Ping` メソッドを呼び出します。このメソッドには、呼び出しを初期化するチック カウントが含まれています。 サービスはチック カウントが 0 でないことを確認し、チック カウントをデクリメントしながらコールバックの `Pong` メソッドを呼び出します。 これは、サンプルの次のコードによって行います。  
@@ -53,7 +54,8 @@ public void Pong(int ticks)
 3. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](running-the-samples.md)」の手順に従います。  
   
 ## <a name="demonstrates"></a>対象  
- サンプルを実行するには、クライアント プロジェクトとサーバー プロジェクトをビルドします。 次に、2つのコマンドウィンドウを開き、ディレクトリを変更して、ディレクトリを変更し \<sample> \<sample> ます。 次に、「」と入力してサービスを開始します。次に、 `service.exe` 入力引数として渡されたタイマー刻みの初期値を使用して client.exe を呼び出します。 サンプルでは、チックとして 10 が出力されます。  
+
+ サンプルを実行するには、クライアント プロジェクトとサーバー プロジェクトをビルドします。 次に、2つのコマンドウィンドウを開き、ディレクトリを変更して、ディレクトリを変更し \<sample> \<sample> ます。 次に、「」と入力してサービスを開始し `service.exe` ます。次に、入力引数として渡されたタイマー刻みの初期値を使用して Client.exe を呼び出します。 サンプルでは、チックとして 10 が出力されます。  
   
 ```console  
 Prompt>Service.exe  
@@ -78,6 +80,6 @@ Pong: Ticks = 1
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Reentrant`  

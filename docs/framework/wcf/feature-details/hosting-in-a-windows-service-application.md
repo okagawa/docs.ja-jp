@@ -2,14 +2,15 @@
 title: Windows サービス アプリケーションのホスト
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: cb952cfcd670a790033fbec70de00a4db2541237
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9f5c78adad34b5fed53a50e85f0361eef469de99
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555849"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243073"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Windows サービス アプリケーションのホスト
+
 Windows サービス (従来 Windows NT サービスと呼ばれていたもの) が提供するプロセス モデルが特に適しているのは、長い期間にわたって動作し続ける必要があり、どのような形式でもユーザー インターフェイスを表示することのないアプリケーションです。 Windows サービス アプリケーションのプロセスの有効期間を管理するのは、サービス コントロール マネージャー (SCM) です。SCM を使用して、Windows サービス アプリケーションを起動、停止、および一時停止できます。 コンピューターの起動時に自動的に開始するように Windows サービスプロセスを構成し、"always on" アプリケーション用の適切なホスティング環境にすることができます。 Windows サービスアプリケーションの詳細については、「 [Windows サービスアプリケーション](https://go.microsoft.com/fwlink/?LinkId=89450)」を参照してください。  
   
  長時間実行される Windows Communication Foundation (WCF) サービスをホストするアプリケーションは、Windows サービスと多くの特性を共有します。 特に、WCF サービスは、ユーザーと直接やり取りしないため、ユーザーインターフェイスの形式を実装しない、実行時間の長いサーバー実行可能ファイルです。 そのため、Windows サービスアプリケーション内で WCF サービスをホストすることは、堅牢で長時間実行される WCF アプリケーションを構築するための1つのオプションです。  

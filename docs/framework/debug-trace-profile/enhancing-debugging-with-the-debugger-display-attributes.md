@@ -14,12 +14,12 @@ helpviewer_keywords:
 - display attributes for debugger
 - DebuggerBrowsableAttribute attribute
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
-ms.openlocfilehash: f266bf7278f472c51dd355df5ba04a123cbd7df0
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+ms.openlocfilehash: 2e556358490409a0fa7b345c4454eb43cf607e32
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415967"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244367"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>デバッガー表示属性によるデバッグ機能の拡張
 
@@ -42,6 +42,7 @@ class MyHashtable
 たとえば、C# オブジェクトにオーバーライドされた `ToString()` がある場合、デバッガーはそのオーバーライドを呼び出し、標準の `{<typeName>}.` ではなく、その結果を表示します。したがって、オーバーライドされた `ToString()` がある場合、<xref:System.Diagnostics.DebuggerDisplayAttribute> を使用する必要はありません。 両方を使用すると、<xref:System.Diagnostics.DebuggerDisplayAttribute> 属性が `ToString()` オーバーライドよりも優先されます。
 
 ## <a name="using-the-debuggerbrowsableattribute"></a>DebuggerBrowsableAttribute の使用
+
  <xref:System.Diagnostics.DebuggerBrowsableAttribute> をフィールドまたはプロパティに適用して、デバッガー ウィンドウにフィールドまたはプロパティを表示する方法を指定します。 この属性のコンストラクターは、次の状態のいずれかを指定する <xref:System.Diagnostics.DebuggerBrowsableState> 列挙値を 1 つ取得します。
 
 - <xref:System.Diagnostics.DebuggerBrowsableState.Never> は、データ ウィンドウにメンバーが表示されないことを示します。  たとえば、この値をフィールドで <xref:System.Diagnostics.DebuggerBrowsableAttribute> に使用すると、そのフィールドが階層から削除され、型のインスタンスのプラス記号 (+) をクリックして囲む型を展開したときに、そのフィールドが表示されなくなります。
@@ -61,6 +62,7 @@ public static string y = "Test String";
 ```
 
 ## <a name="using-the-debuggertypeproxy"></a>DebuggerTypeProxy の使用
+
  <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 属性は、型のデバッグ ビューを大幅かつ根本的に変更する必要があるものの、型そのものは変えない場合に使用します。 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 属性は、開発者が型の表示を調整できるように、型の表示プロキシを指定するために使用します。  <xref:System.Diagnostics.DebuggerDisplayAttribute> と同様に、この属性は、アセンブリ レベルで使用できます。この場合、<xref:System.Diagnostics.DebuggerTypeProxyAttribute.Target%2A> プロパティは、プロキシが使用される型を指定します。 推奨される使用法は、この属性が、属性が適用される型の中で発生するプライベートの入れ子にされた型を指定することです。  型ビューアーをサポートする式エバリュエーターが、型が表示されるときに、この属性をチェックします。 属性が見つかると、式エバリュエーターは、属性が適用される型の代わりに表示プロキシ型を使用します。
 
  <xref:System.Diagnostics.DebuggerTypeProxyAttribute> が存在する場合は、デバッガーの変数ウィンドウには、プロキシ型のパブリック メンバーのみが表示されます。 プライベート メンバーは表示されません。 データ ウィンドウの動作は、属性拡張ビューでは変更されません。

@@ -11,13 +11,15 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-ms.openlocfilehash: 8758b793866ec0317f91d636476d33bd001ddd78
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 895e39593b5e84d708392d3d994267b25bc4eeea
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051221"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244172"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>方法: トレースとデバッグを指定して条件付きコンパイルを実行する
+
 開発時にアプリケーションをデバッグするときは、トレース出力とデバッグ出力の両方が Visual Studio の [出力] ウィンドウに表示されます。 ただし、配置されるアプリケーションにトレース機能を組み込むには、**TRACE** コンパイラ ディレクティブを有効にして、インストルメント化されたアプリケーションをコンパイルする必要があります。 これにより、コンパイルされたアプリケーションのリリース バージョンに、トレース コードが組み込まれます。 **TRACE** ディレクティブを有効にしないと、コンパイル時にすべてのトレース コードが無視され、配置する実行可能コードに含まれなくなります。  
   
  トレース用のメソッドとデバッグ用のメソッドにはどちらも、関連付けられた条件属性があります。 たとえば、トレースの条件属性が **true** の場合は、すべてのトレース ステートメントがアセンブリ (コンパイル済みの .exe ファイルや .dll ファイル) 内に組み込まれます。また、**Trace** 条件属性が **false** の場合、トレース ステートメントは組み込まれません。  
@@ -34,7 +36,7 @@ ms.locfileid: "86051221"
   
 ### <a name="to-change-compile-settings-from-the-property-pages-dialog-box"></a>プロパティ ページのダイアログ ボックスでコンパイル設定を変更するには  
   
-1. **ソリューション エクスプローラー**で、プロジェクト ノードを右クリックします。  
+1. **ソリューション エクスプローラー** で、プロジェクト ノードを右クリックします。  
   
 2. ショートカット メニューの **[プロパティ]** を選択します。  
   
@@ -99,6 +101,6 @@ ms.locfileid: "86051221"
 - [方法: トレース スイッチを作成、初期化、および構成する](how-to-create-initialize-and-configure-trace-switches.md)
 - [トレース スイッチ](trace-switches.md)
 - [トレース リスナー](trace-listeners.md)
-- [方法: アプリケーション コードにトレース ステートメントを追加する](how-to-add-trace-statements-to-application-code.md)
+- [方法 : アプリケーション コードにトレース ステートメントを追加する](how-to-add-trace-statements-to-application-code.md)
 - [Visual Studio のコマンドラインのための環境変数を設定する方法](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [方法: コマンド ライン コンパイラを起動する](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
