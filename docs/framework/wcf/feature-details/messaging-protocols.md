@@ -2,12 +2,12 @@
 title: メッセージング プロトコル
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: 69a92bfb406e2e1af3bdcbb0316711dbf531204b
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 871297abb0ccc46e079ab85b098705602d14a161
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812056"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248319"
 ---
 # <a name="messaging-protocols"></a>メッセージング プロトコル
 
@@ -63,11 +63,13 @@ Windows Communication Foundation (WCF) チャネルスタックは、エンコ�
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 と SOAP 1.2
 
 ### <a name="envelope-and-processing-model"></a>エンベロープと処理モデル
+
 WCF は、Basic Profile 1.1 (BP11) および Basic Profile 1.0 (SSBP10) に従って、SOAP 1.1 エンベロープ処理を実装します。 SOAP 1.2 エンベロープの処理は、SOAP12-Part1 に従って実装されます。
 
 このセクションでは、BP11 と SOAP12 に関して、WCF によって実行される特定の実装の選択肢について説明します。
 
 #### <a name="mandatory-header-processing"></a>必須のヘッダー処理
+
 WCF は、SOAP 1.1 および SOAP 1.2 仕様で説明されているようにマークされたヘッダーを処理するための規則に従い `mustUnderstand` ます。次のような違いがあります。
 
 WCF チャネルスタックに入るメッセージは、関連付けられたバインド要素によって構成された個々のチャネル (テキストメッセージエンコーディング、セキュリティ、信頼できるメッセージング、トランザクションなど) によって処理されます。 各チャネルは、関連付けられた名前空間からヘッダーを認識し、認識済みとしてマークします。 メッセージがディスパッチャーに入ると、操作フォーマッタは対応するメッセージ コントラクトと操作コントラクトで想定されたヘッダーを読み取り、認識済みとしてマークします。 次に、ディスパッチャーは、`mustUnderstand` としてマークされているにもかかわらず、認識されていないヘッダーが残っていないかどうかを検証し、例外をスローします。 受信者を対象とする `mustUnderstand` ヘッダーが含まれたメッセージが、受信者のアプリケーション コードで処理されることはありません。
@@ -81,6 +83,7 @@ WCF チャネルスタックに入るメッセージは、関連付けられた�
 - B1112: WCF は、soap `mustUnderstand` 1.1 と soap 1.2 の両方のバージョンの soap エンベロープに対して、値0および1を出力します。 WCF は、ヘッダーのの値空間全体 `xs:boolean` `mustUnderstand` (0、1、 `false` 、 `true` ) を受け入れます。
 
 #### <a name="soap-faults"></a>SOAP エラー
+
 WCF 固有の SOAP エラーの実装の一覧を次に示します。
 
 - B2121: WCF は、、、およびの各 SOAP 1.1 エラーコードを返します `s11:mustUnderstand` `s11:Client` `s11:Server` 。
@@ -90,6 +93,7 @@ WCF 固有の SOAP エラーの実装の一覧を次に示します。
 ### <a name="http-binding"></a>HTTP バインディング
 
 #### <a name="soap-11-http-binding"></a>SOAP 1.1 HTTP バインディング
+
 WCF では、次の説明に従って、Basic Profile 1.1 specification セクション3.4 に従った SOAP 1.1 HTTP バインディングが実装されています。
 
 - B2211: WCF サービスは、HTTP POST 要求のリダイレクトを実装していません。
@@ -97,6 +101,7 @@ WCF では、次の説明に従って、Basic Profile 1.1 specification セク�
 - B2212: WCF クライアントは、3.4.8 に従って HTTP クッキーをサポートします。
 
 #### <a name="soap-12-http-binding"></a>SOAP 1.2 HTTP バインディング
+
 WCF では、SOAP 1.2-part 2 (SOAP12Part2) 仕様で説明されている SOAP 1.2 HTTP バインディングを実装しています。これについては、次の説明を参照してください。
 
 SOAP 1.2 では、`application/soap+xml` メディア タイプの省略可能なアクション パラメーターが導入されました。 このパラメーターは、WS-Addressing を使用していない場合に、SOAP メッセージの本文を解析する必要なく、メッセージ ディスパッチを最適化する際に役立ちます。
@@ -108,6 +113,7 @@ SOAP 1.2 では、`application/soap+xml` メディア タイプの省略可能�
 WS-Addressing が無効になっているときに、受信要求にアクション パラメーターが含まれていない場合、メッセージの `Action` は指定されていないものと見なされます。
 
 ## <a name="ws-addressing"></a>WS-Addressing
+
 WCF は、次の3つのバージョンの WS-ADDRESSING を実装します。
 
 - WS-Addressing 2004/08
@@ -117,19 +123,22 @@ WCF は、次の3つのバージョンの WS-ADDRESSING を実装します。
 - WS-Addressing 1.0 - メタデータ
 
 ### <a name="endpoint-references"></a>エンドポイント参照
-WCF が実装する WS-ADDRESSING のすべてのバージョンは、エンドポイント参照を使用してエンドポイントを記述します。
+
+WCF が実装する WS-Addressing のすべてのバージョンでエンドポイント参照を使用してエンドポイントを記述します。
 
 #### <a name="endpoint-references-and-ws-addressing-versions"></a>エンドポイント参照と WS-Addressing のバージョン
-WCF は、WS-ADDRESSING、特に `EndpointReference` 要素とクラス (ws-reliablemessaging、ws-secureconversation、ws-trust など) を使用する多数のインフラストラクチャプロトコルを実装して `W3C.WsAddressing.EndpointReferenceType` いますが、 WCF では、他のインフラストラクチャプロトコルでの WS-ADDRESSING のいずれかのバージョンの使用がサポートされています。 WCF エンドポイントは、エンドポイントごとに1つのバージョンの WS-ADDRESSING をサポートします。
 
-R3111 の場合、 `EndpointReference` WCF エンドポイントと交換されるメッセージで使用される要素または型の名前空間は、このエンドポイントで実装されている ws-addressing のバージョンと一致する必要があります。
+WCF は、WS-Addressing を使用する多数のインフラストラクチャプロトコルと、特に `EndpointReference` 要素と `W3C.WsAddressing.EndpointReferenceType` クラス (Ws-reliablemessaging、WS-SECURECONVERSATION、ws-trust など) を実装します。 WCF では、他のインフラストラクチャプロトコルでのいずれかのバージョンの WS-Addressing の使用がサポートされています。 WCF エンドポイントは、エンドポイントごとに1つのバージョンの WS-Addressing をサポートします。
 
-たとえば、WCF エンドポイントで ws-reliablemessaging が実装されている場合、 `AcksTo` 内部のエンドポイントによって返されるヘッダーは、 `CreateSequenceResponse` `EncodingBinding` このエンドポイントに対して要素が指定する ws-addressing のバージョンを使用します。
+R3111 の場合、 `EndpointReference` WCF エンドポイントと交換されるメッセージで使用される要素または型の名前空間は、このエンドポイントによって実装される WS-Addressing のバージョンと一致する必要があります。
+
+たとえば、WCF エンドポイントで ws-reliablemessaging が実装されている場合、 `AcksTo` 内部のエンドポイントによって返されるヘッダーは、 `CreateSequenceResponse` `EncodingBinding` このエンドポイントに対して要素が指定した WS-Addressing バージョンを使用します。
 
 #### <a name="endpoint-references-and-metadata"></a>エンドポイント参照とメタデータ
+
 多くのシナリオでは、指定されたエンドポイントのメタデータまたはメタデータへの参照を伝達する必要があります。
 
-B3121: WCF は、Ws-metadataexchange (MEX) 仕様セクション6で説明されているメカニズムを使用して、エンドポイント参照のメタデータを値または参照渡しで含めます。
+B3121: WCF は、WS-MetadataExchange (MEX) 仕様のセクション6で説明されているメカニズムを使用して、エンドポイント参照のメタデータを値または参照渡しで含めます。
 
 でトークン発行者によって発行されたセキュリティアサーションマークアップ言語 (SAML) トークンを使用して、WCF サービスが認証を必要とするシナリオについて考えてみ `http://sts.fabrikam123.com` ます。 WCF エンドポイントは、 `sp:IssuedToken` `sp:Issuer` トークン発行者を指す入れ子になったアサーションと共にアサーションを使用して、この認証要件を記述します。 `sp:Issuer` アサーションにアクセスするクライアント アプリケーションは、トークン発行者のエンドポイントとの通信方法を知る必要があります。 クライアントは、トークン発行者に関するメタデータを知る必要があります。 MEX で定義されているエンドポイント参照メタデータ拡張を使用して、WCF はトークン発行者のメタデータへの参照を提供します。
 
@@ -157,9 +166,10 @@ B3121: WCF は、Ws-metadataexchange (MEX) 仕様セクション6で説明され
 ### <a name="message-addressing-headers"></a>メッセージのアドレス指定ヘッダー
 
 #### <a name="message-headers"></a>メッセージ ヘッダー
-Ws-addressing の両方のバージョンで、WCF では、仕様で規定されている、、、、およびの各メッセージヘッダーを使用し `wsa:To` `wsa:ReplyTo` `wsa:Action` `wsa:MessageID` `wsa:RelatesTo` ます。
 
-B3211: すべての WS-ADDRESSING バージョンでは、WCF はを優先しますが、そのままでは、WS-ADDRESSING メッセージヘッダーとが生成されません `wsa:FaultTo` `wsa:From` 。
+どちらの WS-Addressing バージョンでも、WCF では、仕様、、、、およびの指定に従って、次のメッセージヘッダーが使用され `wsa:To` `wsa:ReplyTo` `wsa:Action` `wsa:MessageID` `wsa:RelatesTo` ます。
+
+B3211: すべての WS-Addressing バージョンでは、WCF では、メッセージヘッダーと WS-Addressing の既定のメッセージヘッダーとが受け入れられません `wsa:FaultTo` `wsa:From` 。
 
 WCF アプリケーションと対話するアプリケーションは、これらのメッセージヘッダーを追加することができ、WCF はそれに応じてそれらを処理します。
 
@@ -167,15 +177,17 @@ WCF アプリケーションと対話するアプリケーションは、これ�
 
 WCF は、それぞれの仕様に従って、エンドポイント参照パラメーターと参照プロパティの処理を実装します。
 
-B3221: WS-ADDRESSING 2004/08 を使用するように構成されている場合、WCF エンドポイントでは、参照プロパティと参照パラメーターの処理が区別されません。
+B3221: WS-Addressing 2004/08 を使用するように構成されている場合、WCF エンドポイントでは、参照プロパティと参照パラメーターの処理が区別されません。
 
 ### <a name="message-exchange-patterns"></a>メッセージ交換パターン
-Web サービス操作の呼び出しに関連する一連のメッセージは、 *メッセージ交換パターン*と呼ばれます。 WCF は、一方向、要求/応答、および双方向のメッセージ交換パターンをサポートしています。 このセクションでは、使用するメッセージ交換パターンによって異なるメッセージ処理に関する WS-Addressing の要件について説明します。
+
+Web サービス操作の呼び出しに関連する一連のメッセージは、 *メッセージ交換パターン* と呼ばれます。 WCF は、一方向、要求/応答、および双方向のメッセージ交換パターンをサポートしています。 このセクションでは、使用するメッセージ交換パターンによって異なるメッセージ処理に関する WS-Addressing の要件について説明します。
 
 このセクション全体を通して、リクエスターが最初のメッセージを送信し、レスポンダーが最初のメッセージを受信します。
 
 #### <a name="one-way-message"></a>一方向のメッセージ
-WCF エンドポイントが一方向パターンに従うために指定されたを持つメッセージをサポートするように構成されている場合 `Action` 、wcf エンドポイントは次の動作と要件に従います。 特に指定がない限り、WCF でサポートされている WS-ADDRESSING の両方のバージョンに対して動作とルールが適用されます。
+
+WCF エンドポイントが一方向パターンに従うために指定されたを持つメッセージをサポートするように構成されている場合 `Action` 、wcf エンドポイントは次の動作と要件に従います。 特に指定がない限り、WCF でサポートされている WS-Addressing の両方のバージョンに対して動作とルールが適用されます。
 
 - R3311 : リクエスターは、`wsa:To`、`wsa:Action`、およびエンドポイント参照によって指定されたすべての参照パラメーターのヘッダーを含める必要があります。 WS-Addressing 2004/08 を使用し、エンドポイント参照によって参照プロパティが指定されている場合、対応するヘッダーもメッセージに追加する必要があります。
 
@@ -188,25 +200,27 @@ WCF エンドポイントが一方向パターンに従うために指定され�
 - B3314: WCF レスポンダーは、一方向のメッセージへの応答としてエラーメッセージを送信しません。
 
 #### <a name="request-reply"></a>要求/応答
-要求/応答パターンに従うために、が指定されたメッセージに対して WCF エンドポイントが構成されている場合 `Action` 、wcf エンドポイントは以下の動作と要件に従います。 特に指定がない限り、WCF でサポートされている WS-ADDRESSING の両方のバージョンに対して、動作とルールが適用されます。
+
+要求/応答パターンに従うために、が指定されたメッセージに対して WCF エンドポイントが構成されている場合 `Action` 、wcf エンドポイントは以下の動作と要件に従います。 特に指定しない限り、WCF でサポートされている WS-Addressing の両方のバージョンに対して動作とルールが適用されます。
 
 - R3321: 要求元は、 `wsa:To` `wsa:Action` `wsa:MessageID` エンドポイント参照によって指定されたすべての参照パラメーターまたは参照プロパティ (またはその両方) の要求、、、およびの各ヘッダーにを含める必要があります。
 
 - R3322 : WS-Addressing 2004/08 を使用する場合、`ReplyTo` も要求に含める必要があります。
 
-- R3323: WS-ADDRESSING 1.0 が使用されていて、要求に含まれて `ReplyTo` いない場合、[address] プロパティがに指定された既定のエンドポイント参照 `http://www.w3.org/2005/08/addressing/anonymous` が使用されます。
+- R3323: WS-Addressing 1.0 が使用されていて、要求に含まれて `ReplyTo` いない場合、[address] プロパティがに設定された既定のエンドポイント参照 `http://www.w3.org/2005/08/addressing/anonymous` が使用されます。
 
 - R3324: 要求元は `wsa:To` 、 `wsa:Action` 応答メッセージに、、およびの各 `wsa:RelatesTo` ヘッダーと、 `ReplyTo` 要求内のエンドポイント参照によって指定されたすべての参照パラメーターまたは参照プロパティ (またはその両方) のヘッダーを含める必要があります。
 
 ### <a name="web-services-addressing-faults"></a>Web Services Addressing エラー
-R3411: WCF は、WS-ADDRESSING 2004/08 で定義されている次の障害を生成します。
+
+R3411: WCF は WS-Addressing 2004/08 で定義されている次の障害を生成します。
 
 | コード | 原因 |
 |----------|-----------|
 | `wsa:DestinationUnreachable` | このチャネル用に確立された応答アドレスとは異なる `ReplyTo` を使用してメッセージが到着しました。To ヘッダーに指定されたアドレスをリッスンしているエンドポイントはありません。 |
 | `wsa:ActionNotSupported` | `Action` ヘッダーに指定されたアクションは、エンドポイントに関連付けられたインフラストラクチャ チャネルまたはディスパッチャーによって認識されません。 |
 
-R3412: WCF は、WS-ADDRESSING 1.0 で定義されている次の障害を生成します。
+R3412: WCF は WS-Addressing 1.0 で定義されている次の障害を生成します。
 
 | コード | 原因 |
 |----------|-----------|
@@ -221,7 +235,8 @@ R3412: WCF は、WS-ADDRESSING 1.0 で定義されている次の障害を生成
 ### <a name="wsdl-11-binding-and-ws-policy-assertions"></a>WSDL 1.1 バインディングと WS-Policy アサーション
 
 #### <a name="indicating-use-of-ws-addressing"></a>WS-Addressing の使用の提示
-WCF では、ポリシーアサーションを使用して、特定の WS-ADDRESSING バージョンのエンドポイントサポートを示します。
+
+WCF では、ポリシーアサーションを使用して、特定の WS-Addressing バージョンのエンドポイントサポートを示します。
 
 次のポリシー アサーションには、エンドポイント ポリシー サブジェクト [WS-PA] が含まれており、そのエンドポイントで送受信されるメッセージでは WS-Addressing 2004/08 を使用する必要があることを示しています。
 
@@ -300,6 +315,7 @@ WSDL 1.1 SOAP 1.x HTTP バインディングを使用するエンドポイント
 WS-Addressing の WSDL 仕様では、`<wsaw:Anonymous/>` ヘッダーの要件を示す 3 つのテキスト値 (required、optional、および prohibited) を持つ `wsa:ReplyTo` 要素を導入することにより、同様のプロトコル バインディングを記述することを試みています (セクション 3.2)。 残念ながら、このような要素の定義では、要素をアサーションとして使用する代替手段の共通部分をサポートするために、ドメイン固有の拡張を必要とするため、特に WS-Policy のコンテキストではアサーションとして使用することはできません。 また、このような要素の定義は、ネットワーク上のエンドポイントの動作に相反する `ReplyTo` ヘッダーの値を示すため、HTTP トランスポートに固有のものになります。
 
 #### <a name="action-definition"></a>アクション定義
+
 WS-Addressing 2004/08 では、`wsa:Action` 要素の `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` 属性が定義されています。 WS-Addressing 1.0 WSDL バインディング (WS-ADDR10-WSDL) では、同様の属性として `wsaw10:Action` が定義されています。
 
 この 2 つの属性の唯一の違いは、既定の Action パターンのセマンティクスです。これは、WS-ADDR のセクション 3.3.2 および WS-ADDR10-WSDL のセクション 4.4.4 にそれぞれ記載されています。
@@ -308,10 +324,11 @@ WS-Addressing 2004/08 では、`wsa:Action` 要素の `wsdl:portType/wsdl:operat
 
 この論争を解決するために、WCF では属性の1つのバージョンがサポートされてい `Action` ます。
 
-B3521: WCF は、 `wsaw10:Action` `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` ws-addr10-wsdl で定義されている要素の属性を使用して、 `Action` エンドポイントで使用される ws-addressing のバージョンに関係なく、対応するメッセージの URI を特定します。
+B3521: WCF は、 `wsaw10:Action` `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` ws-addr10-wsdl で定義されている要素の属性を使用して、 `Action` エンドポイントで使用される WS-Addressing のバージョンに関係なく、対応するメッセージの URI を特定します。
 
 #### <a name="use-endpoint-reference-inside-wsdl-port"></a>WSDL ポート内でのエンドポイント参照の使用
-WS-ADDR10-WSDL のセクション 4.1 では、`wsdl:port` 要素を拡張して、WS-Addressing の観点でエンドポイントを記述する `<wsa10:EndpointReference…/>` 子要素を含めています。 WCF は、WS-ADDRESSING 2004/08 でこのユーティリティを拡張し、 `<wsa:EndpointReference…/>` をの子要素として表示できるように `wsdl:port` します。
+
+WS-ADDR10-WSDL のセクション 4.1 では、`wsdl:port` 要素を拡張して、WS-Addressing の観点でエンドポイントを記述する `<wsa10:EndpointReference…/>` 子要素を含めています。 WCF は WS-Addressing 2004/08 でこのユーティリティを拡張し、 `<wsa:EndpointReference…/>` をの子要素として表示できるように `wsdl:port` します。
 
 - R3531 : エンドポイントが `<wsaw10:UsingAddressing/>` ポリシー アサーションに関連付けられたポリシー代替手段を持つ場合、対応する `wsdl:port` 要素に `<wsa10:EndpointReference …/>` 子要素を含めることができます。
 
@@ -322,13 +339,15 @@ WS-ADDR10-WSDL のセクション 4.1 では、`wsdl:port` 要素を拡張して
 - R3534: に `wsdl:port` 子要素が含まれている場合 `<wsa:EndpointReference …/>` 、 `wsa:EndpointReference/wsa:Address` 子要素の値は、 `@address` 兄弟要素の属性の値と一致する必要があり `wsdl:port` / `wsdl:location` ます。
 
 ### <a name="composition-with-ws-security"></a>WS-Security によるコンポジション
+
 WS-ADDR および WS-ADDR10 のセキュリティに関する考慮事項のセクションに従って、メッセージ本文と共にすべてのアドレス指定メッセージ ヘッダーに署名し、これらをバインドすることをお勧めします。
 
 メッセージの整合性を保護するために WS-Security を使用する場合は、メッセージの本文と共に、WS-Addressing メッセージ ヘッダーと、参照パラメーターまたは参照プロパティ (または両方) によって生成されたヘッダーに署名する必要があります。
 
-### <a name="examples"></a>例
+### <a name="examples"></a>使用例
 
 #### <a name="one-way-message"></a>一方向のメッセージ
+
 このシナリオでは、送信者は一方向のメッセージを受信者に送信します。 SOAP 1.2、HTTP 1.1、および W3C WS-Addressing 1.0 を使用します。
 
 要求メッセージの構造 : メッセージ ヘッダーには、`wsa10:To` 要素と `wsa10:Action` 要素が含まれます。 メッセージ本文には、アプリケーション名前空間の特定の `<app:Ping>` 要素が含まれます。
@@ -376,6 +395,7 @@ Content-Length: 0
 ```
 
 ## <a name="soap-message-transmission-optimization-mechanism"></a>SOAP Message Transmission Optimization Mechanism
+
 ここでは、HTTP SOAP MTOM の WCF 実装の詳細について説明します。 MTOM テクノロジは、従来の text/XML エンコーディングまたは WCF バイナリエンコードと同じクラスの SOAP メッセージエンコーディング機構です。 MTOM には、次のような機能があります。
 
 - XOP によって記述された XML エンコーディングおよびパッケージング機構。XOP は、Base64 で個別のバイナリ部分にエンコードされたバイナリ データを含む XML 情報項目を最適化します。
@@ -393,6 +413,7 @@ MTOM 形式では、MTOM 自体、XOP、および MIME に適用されるさま�
 ### <a name="mtom-message-encoding"></a>MTOM メッセージ エンコーディング
 
 #### <a name="generating-mtom-messages"></a>MTOM メッセージの生成
+
 XOP のセクション 3.1 には、Base64 値を抽象的に定義された XOP パッケージに格納する要素情報項目を使用して、XML をエンコーディングするプロセスが記載されています。
 
 次の一連の手順は、MTOM 固有のエンコーディング プロセスを示しています。
@@ -429,6 +450,7 @@ XOP のセクション 3.1 には、Base64 値を抽象的に定義された XOP
 7. MIME パッケージを書き込みます。
 
 #### <a name="processing-mtom-messages"></a>MTOM メッセージの処理
+
 MTOM メッセージの処理は、前述の「MTOM メッセージの生成」で説明したプロセスと正反対のプロセスになります。
 
 1. ルート MIME パートに Content-Type `application/xop+xml` が含まれていることを確認します。
@@ -444,6 +466,7 @@ MTOM メッセージの処理は、前述の「MTOM メッセージの生成」�
     3. 各項目の `xop:Include` プロパティに出現する `children` 要素情報項目を、手順 3b. で特定した MIME パートのエンティティ本体の正規 Base64 エンコーディング (XSD-2 セクション 3.2.16 の base64Binary を参照) を表す文字情報項目に置き換えます (`xop:Include` 要素情報項目をパッケージ パーツから再構築したデータに効率的に置き換えます)。
 
 #### <a name="http-content-type-header"></a>HTTP Content-Type ヘッダー
+
 次に示すのは、SOAP 1.x の MTOM でエンコードされたメッセージの HTTP Content-type ヘッダーの形式に関する WCF の説明です。 MTOM 仕様に記載されている要件から派生したものであり、MTOM と RFC 2387 から派生します。
 
 - R4131 : HTTP Content-Type ヘッダーには、multipart/related (大文字と小文字は区別されません) とそのパラメーターの値が必要です。 パラメーター名では、大文字と小文字は区別されません。 パラメーターの順序は重要ではありません。
@@ -490,6 +513,7 @@ RFC 2387 では二重引用符を使用するための要件が明示されて�
     ```
 
 #### <a name="infoset-mime-part"></a>Infoset MIME パート
+
 SOAP 1.x エンベロープは、XOP MIME パッケージのルート部分としてカプセル化され、多くの場合、`infoset` パートと呼ばれます。
 
 - R4141 : SOAP 1.x エンベロープは、XOP MIME パッケージのルート部分としてカプセル化する必要があります。これは `infoset` パートと呼ばれ、HTTP Content-Type から参照されます。
@@ -554,6 +578,7 @@ MIME (RFC 2045) では、MIME パートのコンテンツのエンコーディ�
 - R41410 : `type` パラメーターと `charset` パラメーターは、SOAP 1.x Infoset パートの Content-Type ヘッダーに含まれている必要があります。
 
 #### <a name="wcf-endpoint-support-for-mtom"></a>WCF エンドポイントによる MTOM のサポート
+
 MTOM の目的は、SOAP メッセージをエンコードして、Base64 でエンコードされたデータを最適化することです。 制約は次のとおりです。
 
 - R4151 : Base64 でエンコードされたデータを含むすべての要素情報項目を最適化できます。
@@ -563,6 +588,7 @@ MTOM の目的は、SOAP メッセージをエンコードして、Base64 でエ
 MTOM を使用するように構成された WCF エンドポイントは、常に MTOM でエンコードされたメッセージを送信します。 必要な条件を満たすパートがない場合でも、メッセージは MTOM でエンコードされます (SOAP エンベロープを含む単一の MIME パートを持つ MIME パッケージとしてシリアル化されます)。
 
 ### <a name="ws-policy-assertion-for-mtom"></a>MTOM の WS-Policy アサーション
+
 WCF では、次のポリシーアサーションを使用して、エンドポイントによる MTOM の使用状況を示します。
 
 ```xml
@@ -574,9 +600,10 @@ WCF では、次のポリシーアサーションを使用して、エンドポ�
 - B4212: MTOM の最適化を使用するように構成されている場合、WCF エンドポイントは、対応するに関連付けられているポリシーに MTOM ポリシーアサーションを追加し `wsdl:binding` ます。
 
 ### <a name="composition-with-ws-security"></a>WS-Security によるコンポジション
+
 MTOM は `text/xml` 、および WCF バイナリ XML に似たエンコーディング機構です。 MTOM は、WS-Security とその他の WS-* プロトコルによる自然なコンポジションを提供します。WS-Security を使用してセキュリティ保護されたメッセージは、MTOM を使用して最適化できます。
 
-### <a name="examples"></a>例
+### <a name="examples"></a>使用例
 
 #### <a name="wcf-soap-11-message-encoded-using-mtom"></a>MTOM を使用してエンコードされた WCF SOAP 1.1 メッセージ
 
@@ -612,6 +639,7 @@ Content-Type: application/octet-stream
 ```
 
 #### <a name="wcf-secure-soap-12-message-encoded-using-mtom"></a>MTOM を使用してエンコードされた WCF Secure SOAP 1.2 メッセージ
+
 この例では、WS-Security を使用して保護されたメッセージを MTOM と SOAP 1.2 を使用してエンコードします。 エンコーディングの対象として特定されたバイナリ部分は、`BinarySecurityToken`、暗号化された署名に対応する `CipherValue` の `EncryptedData`、および暗号化された本文の内容です。 のは、その `CipherValue` `EncryptedKey` 長さが1024バイト未満であるため、WCF による最適化のためにのが識別されなかったことに注意してください。
 
 ```http

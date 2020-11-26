@@ -2,17 +2,19 @@
 title: 中間層クライアント アプリケーション
 ms.date: 03/30/2017
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-ms.openlocfilehash: c50223a55765f211dae710f96bffa7716ce36b32
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5019215567f4c9127f2e53fd4cdf0d4a67b84d17
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598815"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248254"
 ---
 # <a name="middle-tier-client-applications"></a>中間層クライアント アプリケーション
+
 このトピックでは、Windows Communication Foundation (WCF) を使用する中間層クライアントアプリケーションに固有のさまざまな問題について説明します。  
   
 ## <a name="increasing-middle-tier-client-performance"></a>中間層クライアントのパフォーマンス向上  
+
  ASP.NET を使用する Web サービスなど、以前の通信テクノロジと比較すると、wcf の豊富な機能セットにより、WCF クライアントインスタンスの作成がより複雑になる可能性があります。 たとえば、<xref:System.ServiceModel.ChannelFactory%601> オブジェクトを開いている場合、サービスとの間にセキュリティで保護されたセッションを確立できますが、そのぶんクライアント インスタンスの起動時間が長くなります。 通常、これらの追加機能機能は、クライアントアプリケーションには影響しません。これは、WCF クライアントが複数の呼び出しを行い、その後でを閉じるためです。  
   
  ただし、中間層クライアントアプリケーションでは、多くの WCF クライアントオブジェクトを迅速に作成できるため、初期化要件が増加します。 サービスを呼び出すときに中間層アプリケーションのパフォーマンスを向上させる方法は主に 2 つあります。  
@@ -33,7 +35,7 @@ ms.locfileid: "84598815"
   
  複数の要求に対してクライアントを再利用するためのベストプラクティスを示す例については、「 [ASP.NET クライアントでのデータバインディング](../samples/data-binding-in-an-aspnet-client.md)」を参照してください。  
   
- さらに、<xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化できるデータ型を使用するクライアントの起動時のパフォーマンスを向上したり、実行時にこのようなデータ型のシリアル化コードを生成およびコンパイルしたりできます (この場合、起動時のパフォーマンスが低下することがあります)。 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を使用すると、アプリケーションのコンパイル済みアセンブリから必要なシリアル化コードを生成することで、これらのアプリケーションの起動時のパフォーマンスを向上させることができます。 詳細については、「[方法: XmlSerializer を使用して WCF クライアントアプリケーションの起動時間を向上させる](startup-time-of-wcf-client-applications-using-the-xmlserializer.md)」を参照してください。  
+ さらに、<xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化できるデータ型を使用するクライアントの起動時のパフォーマンスを向上したり、実行時にこのようなデータ型のシリアル化コードを生成およびコンパイルしたりできます (この場合、起動時のパフォーマンスが低下することがあります)。 [ServiceModel メタデータユーティリティツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を使用すると、アプリケーションのコンパイル済みアセンブリから必要なシリアル化コードを生成することで、これらのアプリケーションの起動時のパフォーマンスを向上させることができます。 詳細については、「 [方法: XmlSerializer を使用して WCF クライアントアプリケーションの起動時間を向上させる](startup-time-of-wcf-client-applications-using-the-xmlserializer.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

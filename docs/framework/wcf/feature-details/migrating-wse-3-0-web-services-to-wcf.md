@@ -2,29 +2,32 @@
 title: WSE 3.0 Web サービスの WCF への移行
 ms.date: 03/30/2017
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
-ms.openlocfilehash: c7feac0a44883e8019acfeaa288752fb051c667f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 84d227a46c4d17291ccf35a759018ffbe6f48b82
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554092"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248163"
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>WSE 3.0 Web サービスの WCF への移行
+
 WSE 3.0 Web サービスを Windows Communication Foundation (WCF) に移行する利点には、パフォーマンスの向上と、追加のトランスポート、追加のセキュリティシナリオ、および WS-* 仕様のサポートが含まれます。 WSE 3.0 から WCF に移行された Web サービスは、最大200% から400% のパフォーマンス向上を実現できます。 WCF でサポートされているトランスポートの詳細については、「 [トランスポートの選択](choosing-a-transport.md)」を参照してください。 WCF でサポートされるシナリオの一覧については、「 [一般的なセキュリティシナリオ](common-security-scenarios.md)」を参照してください。 WCF でサポートされている仕様の一覧については、「 [Web サービスプロトコルの相互運用性ガイド](web-services-protocols-interoperability-guide.md)」を参照してください。  
   
  次のセクションでは、WSE 3.0 Web サービスの特定の機能を WCF に移行する方法について説明します。  
   
 ## <a name="general"></a>全般  
+
  WSE 3.0 と WCF アプリケーションには、ワイヤレベルの相互運用性と、一般的な一連の用語が含まれています。 WSE 3.0 および WCF アプリケーションは、両方がサポートする WS-* 仕様のセットに基づいて、ネットワークレベルの相互運用が可能です。 WSE 3.0 または WCF アプリケーションの開発時には、WSE のターンキーセキュリティアサーションの名前や認証モードなど、一般的な一連の用語があります。  
   
  WCF と ASP.NET または WSE 3.0 のプログラミングモデルには多くの類似した側面がありますが、これらは異なります。 WCF プログラミングモデルの詳細については、「 [基本的なプログラミングライフサイクル](../basic-programming-lifecycle.md)」を参照してください。  
   
 > [!NOTE]
-> WSE Web サービスを WCF に移行するには、 [ServiceModel メタデータユーティリティツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) ツールを使用してクライアントを生成できます。 ただし、このクライアントには、WCF サービスの開始点として使用できるインターフェイスとクラスも含まれます。 生成されるインターフェイスの <xref:System.ServiceModel.OperationContractAttribute> 属性は、<xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> プロパティが `*` に設定されたコントラクトのメンバーに適用されます。 WSE クライアントがこの設定で Web サービスを呼び出すと、次の例外がスローされます。 **Services3: WSE910: 応答メッセージの処理中にエラーが発生したため、内部例外でエラーを見つけることができ**ます。 このエラーを軽減するには、<xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> 属性の <xref:System.ServiceModel.OperationContractAttribute> プロパティを `null` 以外の値 (`http://Microsoft.WCF.Documentation/ResponseToOCAMethod` など) に設定します。  
+> WSE Web サービスを WCF に移行するには、 [ServiceModel メタデータユーティリティツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) ツールを使用してクライアントを生成できます。 ただし、このクライアントには、WCF サービスの開始点として使用できるインターフェイスとクラスも含まれます。 生成されるインターフェイスの <xref:System.ServiceModel.OperationContractAttribute> 属性は、<xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> プロパティが `*` に設定されたコントラクトのメンバーに適用されます。 WSE クライアントがこの設定で Web サービスを呼び出すと、次の例外がスローされます。 **Services3: WSE910: 応答メッセージの処理中にエラーが発生したため、内部例外でエラーを見つけることができ** ます。 このエラーを軽減するには、<xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> 属性の <xref:System.ServiceModel.OperationContractAttribute> プロパティを `null` 以外の値 (`http://Microsoft.WCF.Documentation/ResponseToOCAMethod` など) に設定します。  
   
 ## <a name="security"></a>セキュリティ  
   
 ### <a name="wse-30-web-services-that-are-secured-using-a-policy-file"></a>ポリシー ファイルを使用してセキュリティ保護される WSE 3.0 Web サービス  
+
  WCF サービスでは、構成ファイルを使用してサービスをセキュリティで保護できます。このメカニズムは、WSE 3.0 ポリシーファイルに似ています。 WSE 3.0 でポリシー ファイルを使用して Web サービスをセキュリティ保護するときは、設定不要のセキュリティ アサーションまたはカスタム ポリシー アサーションを使用します。 ターンキーセキュリティアサーションは、WCF セキュリティバインド要素の認証モードに厳密にマップされます。 WCF 認証モードと WSE 3.0 のターンキーセキュリティアサーションだけでなく、同じまたは同様の名前が付けられているため、同じ資格情報の種類を使用してメッセージをセキュリティで保護します。 たとえば、 `usernameForCertificate` WSE 3.0 のターンキーセキュリティアサーションは、 `UsernameForCertificate` WCF の認証モードにマップされます。 次のコード例は、WSE 3.0 のターンキーセキュリティアサーションを使用する最小ポリシーが、 `usernameForCertificate` `UsernameForCertificate` WCF のカスタムバインドで認証モードにマップされる方法を示しています。  
   
  **WSE 3.0**  
@@ -66,9 +69,11 @@ WSE 3.0 Web サービスを Windows Communication Foundation (WCF) に移行す�
  WCF でカスタムバインドを作成する方法の詳細については、「 [カスタムバインド](../extending/custom-bindings.md)」を参照してください。  
   
 ### <a name="wse-30-web-services-that-are-secured-using-application-code"></a>アプリケーション コードを使用してセキュリティ保護される WSE 3.0 Web サービス  
+
  WSE 3.0 または WCF が使用されているかどうかにかかわらず、セキュリティ要件は、構成ではなくアプリケーションコードで指定できます。 WSE 3.0 でこれを行うには、`Policy` クラスの派生クラスを作成してから、`Add` メソッドを呼び出して要件を追加します。 コードでセキュリティ要件を指定する方法の詳細については、「 [方法: ポリシーファイルを使用せずに Web サービスをセキュリティで保護](/previous-versions/dotnet/netframework-2.0/aa528763(v=msdn.10))する」を参照してください。 WCF で、コードでセキュリティ要件を指定するには、クラスのインスタンスを作成 <xref:System.ServiceModel.Channels.BindingElementCollection> し、のインスタンスをに追加し <xref:System.ServiceModel.Channels.SecurityBindingElement> <xref:System.ServiceModel.Channels.BindingElementCollection> ます。 セキュリティ アサーション要件は、<xref:System.ServiceModel.Channels.SecurityBindingElement> クラスの静的認証モード ヘルパー メソッドを使用して設定します。 WCF を使用してコードのセキュリティ要件を指定する方法の詳細については、「方法: 指定した認証モードのための [カスタムバインディングを作成](how-to-create-a-custom-binding-using-the-securitybindingelement.md) する」および「 [方法: 指定した認証モードの保護を作成する](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)」を参照してください。  
   
 ### <a name="wse-30-custom-policy-assertion"></a>WSE 3.0 カスタム ポリシー アサーション  
+
  WSE 3.0 には、2 種類のカスタム ポリシー アサーションがあります。一方は SOAP メッセージをセキュリティで保護し、もう一方は SOAP メッセージをセキュリティで保護しません。 セキュリティで保護された SOAP メッセージが WSE 3.0 クラスから派生したポリシーアサーション `SecurityPolicyAssertion` と、WCF の概念に相当するものは、 <xref:System.ServiceModel.Channels.SecurityBindingElement> クラスです。  
   
  重要な点は、WSE 3.0 のターンキーセキュリティアサーションは、WCF 認証モードのサブセットであることです。 WSE 3.0 でカスタムポリシーアサーションを作成した場合、同等の WCF 認証モードが存在する可能性があります。 たとえば、WSE 3.0 は、設定不要の `UsernameOverTransport` セキュリティ アサーションと等価な CertificateOverTransport セキュリティ アサーションを提供しませんが、クライアントを認証するために X.509 証明書を使用します。 このシナリオで独自のカスタムポリシーアサーションを定義した場合は、WCF によって移行が簡単になります。 WCF では、このシナリオの認証モードを定義するため、静的認証モードヘルパーメソッドを利用して WCF を構成でき <xref:System.ServiceModel.Channels.SecurityBindingElement> ます。  
@@ -78,15 +83,18 @@ WSE 3.0 Web サービスを Windows Communication Foundation (WCF) に移行す�
  SOAP メッセージをセキュリティで保護しないカスタムポリシーアサーションを変換する方法については、「 [フィルター処理](filtering.md) 」および「 [カスタムメッセージインターセプター](../samples/custom-message-interceptor.md)のサンプル」を参照してください。  
   
 ### <a name="wse-30-custom-security-token"></a>WSE 3.0 カスタム セキュリティ トークン  
+
  カスタムトークンを作成するための WCF プログラミングモデルは、WSE 3.0 とは異なります。 WSE でカスタムトークンを作成する方法の詳細については、「 [カスタムセキュリティトークンの作成](/previous-versions/dotnet/netframework-2.0/aa529304(v=msdn.10))」を参照してください。 WCF でカスタムトークンを作成する方法の詳細については、「 [方法: カスタムトークンを作成](../extending/how-to-create-a-custom-token.md)する」を参照してください。  
   
 ### <a name="wse-30-custom-token-manager"></a>WSE 3.0 カスタム トークン マネージャー  
+
  カスタムトークンマネージャーを作成するためのプログラミングモデルは、WCF では WSE 3.0 とは異なります。 カスタムトークンマネージャーと、カスタムセキュリティトークンに必要なその他のコンポーネントを作成する方法の詳細については、「 [方法: カスタムトークンを作成](../extending/how-to-create-a-custom-token.md)する」を参照してください。  
   
 > [!NOTE]
 > カスタムセキュリティトークンマネージャーを作成した場合 `UsernameToken` 、WCF では、カスタムセキュリティトークンマネージャーを作成するよりも簡単な方法で認証ロジックを指定できます。 詳細については、「 [方法: カスタムユーザー名とパスワード検証を使用](how-to-use-a-custom-user-name-and-password-validator.md)する」を参照してください。  
   
 ### <a name="wse-30-web-services-that-use-mtom-encoded-soap-messages"></a>MTOM エンコードされた SOAP メッセージを使用する WSE 3.0 Web サービス  
+
  WSE 3 アプリケーションと同様に、WCF アプリケーションでは構成で MTOM メッセージエンコーディングを指定できます。 この設定を移行するには、 [\<mtomMessageEncoding>](../../configure-apps/file-schema/wcf/mtommessageencoding.md) サービスのバインドにを追加します。 次のコード例は、WCF と同等のサービスに対して WSE 3.0 で MTOM エンコードを指定する方法を示しています。  
   
  **WSE 3.0**  
@@ -116,11 +124,13 @@ WSE 3.0 Web サービスを Windows Communication Foundation (WCF) に移行す�
 ## <a name="transports"></a>トランスポート  
   
 ### <a name="tcp"></a>TCP  
+
  既定では、TCP トランスポートを使用して SOAP メッセージを送信する WSE 3.0 クライアントおよび Web サービスは、WCF クライアントおよび Web サービスと相互運用できません。 このような非互換性は、TCP プロトコルで使用されるフレームの違いとパフォーマンス上の理由に起因します。 ただし、WCF サンプルでは、WSE 3.0 と相互運用するカスタム TCP セッションを実装する方法について詳しく説明します。 このサンプルの詳細については、「 [Transport: WSE 3.0 TCP 相互運用性](../samples/transport-wse-3-0-tcp-interoperability.md)」を参照してください。  
   
  WCF アプリケーションで TCP トランスポートを使用するように指定するには、を使用し [\<netTcpBinding>](../../configure-apps/file-schema/wcf/nettcpbinding.md) ます。  
   
 ### <a name="custom-transport"></a>カスタム トランスポート  
+
  WCF での WSE 3.0 カスタムトランスポートに相当するものは、チャネル拡張です。 チャネル拡張の作成の詳細については、「 [チャネルレイヤーの拡張](../extending/extending-the-channel-layer.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目

@@ -8,30 +8,35 @@ helpviewer_keywords:
 - JitCompilationStart MDA
 - managed debugging assistants (MDAs), JIT compilation
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
-ms.openlocfilehash: 13e20c1a940b7bfa777245ba35f3cc1b003d15b2
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 228226d90e70d296681e48ffe85dada8eb18209a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325538"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247370"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
 
 `jitCompilationStart` マネージド デバッグ アシスタント (MDA: Managed Debugging Assistant) が起動すると、Just-In-Time (JIT) コンパイラが関数のコンパイルを開始した時刻が報告されます。  
   
 ## <a name="symptoms"></a>現象  
+
  mscorjit.dll がプロセスに読み込まれるため、既にネイティブイメージ形式のプログラムでワーキングセットサイズが増加します。  
   
 ## <a name="cause"></a>原因  
+
 プログラムが依存しているアセンブリがネイティブ形式で生成されていないか、アセンブリが正しく登録されていません。  
 
-## <a name="resolution"></a>解決策  
+## <a name="resolution"></a>解像度  
+
  この MDA を有効にすると、どの関数が JIT コンパイルされているかを識別できます。 関数を含むアセンブリが、ネイティブ形式に生成され、適切に登録されていることを確認します。
   
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
+
  この MDA は、メソッドが JIT コンパイルされる前にメッセージをログに記録します。そのため、この MDA を有効にすると、パフォーマンスに大きな影響が出ます。 メソッドがインラインである場合、この MDA は別のメッセージを生成しません。  
   
 ## <a name="output"></a>出力  
+
  次のコード サンプルでは、サンプル出力を確認できます。 この場合、出力には、アセンブリテストで、クラス "ns2.CO" のメソッド "m" が JIT でコンパイルされたことが示されています。  
   
 ```output
@@ -39,6 +44,7 @@ method name="Test!ns2.C0::m"
 ```  
   
 ## <a name="configuration"></a>構成  
+
  次の構成ファイルでは、最初に JIT コンパイルされたときに報告されるメソッドを絞り込むためのさまざまなフィルターを確認できます。 Name 属性の値をに設定することによって、すべてのメソッドを報告するように指定でき \* ます。  
   
 ```xml  
@@ -60,6 +66,7 @@ method name="Test!ns2.C0::m"
 ```  
   
 ## <a name="example"></a>例  
+
  次のコード サンプルは、先の構成ファイルとの併用を意図しています。  
   
 ```csharp

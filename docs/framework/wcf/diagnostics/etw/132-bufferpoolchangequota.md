@@ -2,14 +2,15 @@
 title: 132 - BufferPoolChangeQuota
 ms.date: 03/30/2017
 ms.assetid: fe18d326-4220-46fc-9109-cec3d1530281
-ms.openlocfilehash: ca2c0d86daa0bf898d83546483a63fe87ddc498d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ecb351deaeee02b587da3b4f510266d697eb50e9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784970"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247149"
 ---
 # <a name="132---bufferpoolchangequota"></a>132 - BufferPoolChangeQuota
+
 BufferPoolChangeQuota  
   
 ## <a name="properties"></a>プロパティ  
@@ -17,14 +18,16 @@ BufferPoolChangeQuota
 |||  
 |-|-|  
 |ID|132|  
-|キーワード|インフラストラクチャ|  
-|レベル|詳細|  
+|Keywords|インフラストラクチャ|  
+|Level|"詳細"|  
 |チャネル|デバッグ|  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>Description  
+
  このイベントは、バッファー プールに対するクォータが変更された後に生成されます。  
   
-## <a name="message"></a>メッセージ  
+## <a name="message"></a>Message  
+
  BufferPool のサイズ: %1、クォータの変更: %2。  
   
-## <a name="details"></a>説明
+## <a name="details"></a>詳細

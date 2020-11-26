@@ -6,17 +6,19 @@ helpviewer_keywords:
 - authentication [WCF]
 - security [WCF], authentication
 ms.assetid: 9254d873-843d-4c6e-bea4-8184ac3e44f4
-ms.openlocfilehash: 414353b360992abea69d47de9efb22c3c77f4bf6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e2334a8c024238f38e1c927a278a4e25e7dabd9d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558278"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247539"
 ---
 # <a name="authentication-in-wcf"></a>WCF での認証
+
 次のトピックでは、Windows 認証、x.509 証明書、ユーザー名とパスワードなどの認証を提供する Windows Communication Foundation (WCF) のさまざまなメカニズムについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [方法: ASP.NET メンバーシップ プロバイダーを使用する](how-to-use-the-aspnet-membership-provider.md)  
  ASP.NET の機能には、メンバーシップとロール プロバイダー、認証のためのユーザー名とパスワードの組み合わせを格納するデータベース、および承認のためのユーザー ロールがあります。 このトピックでは、WCF サービスが同じデータベースを使用してユーザーを認証および承認する方法について説明します。  
   
@@ -33,9 +35,11 @@ ms.locfileid: "90558278"
  Windows 認証の使用時に発生する一般的な問題について重点的に説明します。  
   
 ## <a name="reference"></a>関連項目  
+
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>関連項目  
+
  [一般的なセキュリティ シナリオ](common-security-scenarios.md)  
   
 ## <a name="see-also"></a>関連項目
