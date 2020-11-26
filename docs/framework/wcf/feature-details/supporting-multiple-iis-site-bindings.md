@@ -3,20 +3,22 @@ title: 複数の IIS サイト バインディングのサポート
 description: IIS で WCF サービスをホストするときに同じサイトで同じプロトコルを使用している複数のベースアドレスを指定する方法について説明します。
 ms.date: 03/30/2017
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
-ms.openlocfilehash: 6af4d885c7fc3d4dcc12ffb4bf6670f1a9b3d78c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7b9118a7a507939aab6276716722be8d6d02628c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546199"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246291"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>複数の IIS サイト バインディングのサポート
+
 インターネットインフォメーションサービス (IIS) 7.0 で Windows Communication Foundation (WCF) サービスをホストする場合、同じサイトで同じプロトコルを使用する複数のベースアドレスを指定することができます。 これにより、同じサービスで多数の異なる URI に応答できます。 これは、とでリッスンするサービスをホストする場合に便利です `http://www.contoso.com` `http://contoso.com` 。 また、内部ユーザー用に 1 つのベース アドレスを持ち、外部ユーザー用に別のベース アドレスを持つサービスを作成するのにも役立ちます。 たとえば、`http://internal.contoso.com` と `http://www.contoso.com` などです。  
   
 > [!NOTE]
 > この機能は、HTTP プロトコルを使用してのみ、使用可能です。  
   
 ## <a name="multiple-base-addresses"></a>複数のベース アドレス  
+
  この機能は、IIS でホストされている WCF サービスでのみ使用できます。 この機能は、既定では有効にされません。 これを有効にするには、 `multipleSiteBindingsEnabled` `serviceHostingEnvironment` 次の `true` 例に示すように、属性を Web.config ファイルの <> 要素に追加し、に設定する必要があります。  
   
 ```xml  

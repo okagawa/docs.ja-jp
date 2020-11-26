@@ -2,17 +2,19 @@
 title: 必須の引数とオーバーロード グループ
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: 4eb62306f52b8ff890d5a5333c3789bd84ad7f60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 452285b1f5b73ecf75fc50f59365aa2633f26e42
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79142941"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245875"
 ---
 # <a name="required-arguments-and-overload-groups"></a>必須の引数とオーバーロード グループ
+
 アクティビティは、アクティビティの実行を有効にするためには特定の引数をバインドする必要があるように構成できます。 `RequiredArgument` 属性は、アクティビティの特定の引数が必須であることを示す場合に使用します。また、`OverloadGroup` 属性は、必須の引数のカテゴリをグループ化する場合に使用します。 これらの属性を使用することで、アクティビティ作成者は、単純なアクティビティ検証の構成も複雑な構成も適用できます。  
   
 ## <a name="using-required-arguments"></a>必須の引数の使用  
+
  アクティビティで `RequiredArgument` 属性を使用するためには、<xref:System.Activities.RequiredArgumentAttribute> を使用して目的の引数を指定します。 次の例では、2 つの必須引数がある `Add` アクティビティが定義されています。  
   
 ```csharp  
@@ -63,11 +65,11 @@ public sealed class Add : CodeActivity<int>
   
  **必須のアクティビティ引数 'Operand1' の値が指定されませんでした。**  
 > [!NOTE]
-> 検証エラーと警告のチェックと処理の詳細については、「[アクティビティ検証の呼び出し](invoking-activity-validation.md)」を参照してください。  
+> 検証エラーと警告の確認と処理の詳細については、「 [アクティビティ検証の呼び出し](invoking-activity-validation.md)」を参照してください。  
   
 ## <a name="using-overload-groups"></a>オーバーロード グループの使用
 
-オーバーロード グループには、あるアクティビティ内で有効である引数の組み合わせを示すメソッドが用意されています。 引数は <xref:System.Activities.OverloadGroupAttribute> を使用してグループ化されます。 各グループには、 で指定された名前が<xref:System.Activities.OverloadGroupAttribute>付けられます。 このアクティビティは、オーバーロード グループ内の引数のセットが 1 つだけバインドされている場合に有効です。 次の例では、`CreateLocation` クラスを定義します。  
+オーバーロード グループには、あるアクティビティ内で有効である引数の組み合わせを示すメソッドが用意されています。 引数は <xref:System.Activities.OverloadGroupAttribute> を使用してグループ化されます。 各グループには、によって指定された名前が付けられ <xref:System.Activities.OverloadGroupAttribute> ます。 オーバーロードグループ内の引数のセットが1つだけバインドされている場合、アクティビティは有効です。 次の例では、`CreateLocation` クラスを定義します。  
   
 ```csharp  
 class CreateLocation: Activity  
@@ -106,7 +108,7 @@ class CreateLocation: Activity
   
  このアクティビティの目的は、米国内の場所を指定することです。 これを行うために、アクティビティのユーザーは、3 つある引数グループの 1 つを使用して場所を指定できます。 有効な組み合わせで引数を指定するために、3 種類のオーバーロード グループを定義しています。 `G1` 含む、 `Latitude` と `Longitude` 引数。 `G2` には `Street`、`City`、および `State` が含まれます。 `G3` には `Street` および `Zip` が含まれます。 `Name` も必要な引数ですが、オーバーロード グループの一部ではありません。 このアクティビティが有効であるためには、`Name` が、1 つのオーバーロード グループのみに含まれるすべての引数とバインドされている必要があります。  
   
- 次の例では、[データベース アクセス アクティビティ](./samples/database-access-activities.md)のサンプルから取得したオーバーロード グループと`ConnectionString``ConfigFileSectionName`の 2 つのオーバーロード グループがあります。 このアクティビティが有効であるためには、引数 `ProviderName` および `ConnectionString` がバインドされているか、または引数 `ConfigName` がバインドされている必要があります。両方がバインドされている場合は無効です。  
+ 次の例では、 [データベースアクセスアクティビティ](./samples/database-access-activities.md) のサンプルから、とという2つのオーバーロードグループがあり `ConnectionString` `ConfigFileSectionName` ます。 このアクティビティが有効であるためには、引数 `ProviderName` および `ConnectionString` がバインドされているか、または引数 `ConfigName` がバインドされている必要があります。両方がバインドされている場合は無効です。  
   
 ```csharp  
 public class DbUpdate: AsyncCodeActivity  

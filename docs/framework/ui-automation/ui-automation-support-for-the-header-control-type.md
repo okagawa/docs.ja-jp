@@ -7,14 +7,15 @@ helpviewer_keywords:
 - Header control type
 - control types, Header
 ms.assetid: d2e48891-2dbe-409e-8655-2f753908e29b
-ms.openlocfilehash: 4e4744ee6f8c9dbccb36c7ffac6b75561402b3a0
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 290bdcfec92c9192a42b7119a2351a107b5acea2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167896"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245719"
 ---
 # <a name="ui-automation-support-for-the-header-control-type"></a>UI オートメーションによる Header コントロール型のサポート
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
@@ -25,7 +26,9 @@ ms.locfileid: "87167896"
  以下の各セクションで、Header コントロール型に必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、プロパティ、コントロール パターン、およびイベントを定義します。 要件は、、Win32、Windows フォームのいずれの場合で [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] も、すべてのヘッダーコントロールに適用され [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ます。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
+
 ## <a name="required-ui-automation-tree-structure"></a>必須の UI オートメーション ツリー構造  
+
  次の表に、ヘッダー コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 ツリーの詳細については [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 、「 [UI オートメーションツリーの概要](ui-automation-tree-overview.md)」を参照してください。  
   
 |コントロール ビュー|コンテンツ ビュー|  
@@ -37,8 +40,10 @@ ms.locfileid: "87167896"
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコンテンツ ビューには、ヘッダー コントロールの子は存在しません。  
   
 <a name="Required_UI_Automation_Properties"></a>
+
 ## <a name="required-ui-automation-properties"></a>必須の UI オートメーション プロパティ  
- 次の表に、ヘッダー コントロールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 プロパティの詳細について [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、「[クライアントの UI オートメーションのプロパティ](ui-automation-properties-for-clients.md)」を参照してください。  
+
+ 次の表に、ヘッダー コントロールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 プロパティの詳細について [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、「 [クライアントの UI オートメーションのプロパティ](ui-automation-properties-for-clients.md)」を参照してください。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|値|メモ|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -51,11 +56,13 @@ ms.locfileid: "87167896"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ヘッダー|この値は、すべての [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] フレームワークで同じです。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"header"|この値は、すべての [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] フレームワークで同じです。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|水平|このプロパティの値は、ヘッダー コントロールの位置 (行ヘッダーまたは列ヘッダーが存在する位置) を公開します。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|誤り|ヘッダー コントロールは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコンテンツ ビューに含まれません。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|正しい|ヘッダー コントロールは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューに常に含まれます。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|False|ヘッダー コントロールは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコンテンツ ビューに含まれません。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|ヘッダー コントロールは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューに常に含まれます。|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>
+
 ## <a name="required-ui-automation-control-patterns"></a>必須の UI オートメーション コントロール パターン  
+
  次の表に、すべてのヘッダー コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コントロール パターンを示します。 コントロール パターンの詳細については、「 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)」を参照してください。  
   
 |コントロール パターン|サポート|Notes|  
@@ -63,7 +70,9 @@ ms.locfileid: "87167896"
 |<xref:System.Windows.Automation.Provider.ITransformProvider>|依存|ヘッダー コントロールのサイズを変更できる場合は、このコントロール パターンを実装します。|  
   
 <a name="Required_UI_Automation_Events"></a>
+
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  
+
  次の表に、すべてのヘッダー コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを示します。 イベントの詳細については、「 [UI Automation Events Overview](ui-automation-events-overview.md)」を参照してください。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベント|サポート|Notes|  

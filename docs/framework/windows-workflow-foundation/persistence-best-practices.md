@@ -2,17 +2,19 @@
 title: 永続化のベスト プラクティス
 ms.date: 03/30/2017
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
-ms.openlocfilehash: b0276bdfd6dcf2e12357224d9a92484a5da9eac3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 950a5d5c742b7882db93d71f3e7f205009f2a863
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558252"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246148"
 ---
 # <a name="persistence-best-practices"></a>永続化のベスト プラクティス
+
 このドキュメントでは、ワークフローの永続化に関するワークフローのデザインと構成のベスト プラクティスについて説明します。  
   
 ## <a name="design-and-implementation-of-durable-workflows"></a>永続的ワークフローのデザインと実装  
+
  一般的に、ワークフローは短く分割された期間に作業を行い、その合間にイベント待機中のアイドル時間がインタリーブされています。 このイベントには、メッセージや期限付きタイマーなどがあります。 ワークフロー インスタンスがアイドルになったときにこのインスタンスをアンロードするには、サービス ホストがワークフロー インスタンスを永続化する必要があります。 これは、ワークフロー インスタンスが非永続化ゾーン (たとえばトランザクションの完了を待機していたり、非同期コールバックを待機している場合) にない場合にのみ可能です。 アイドル状態のワークフロー インスタンスのアンロードを可能にするために、ワークフローの作成者は短時間のアクションに対してのみトランザクション スコープと非同期アクティビティを使用するようにしてください。 特に、これらの非永続化ゾーン内での遅延アクティビティはできるだけ短くしてください。  
   
  ワークフローは、ワークフローが使用するすべてのデータ型がシリアル化可能である場合にのみ永続化できます。 また、永続化されたワークフローで使用されるカスタム型は、<xref:System.Runtime.Serialization.NetDataContractSerializer> を使用してシリアル化可能である必要があります。そうしないと、<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> を使用してワークフローを永続化することはできません。  
@@ -24,6 +26,7 @@ ms.locfileid: "90558252"
  Windows Server App Fabric を使用すると、永続化の構成と使用を大幅に簡潔化できます。 詳細については、「 [Windows Server App Fabric の永続](/previous-versions/appfabric/ee677272(v=azure.10))化」を参照してください。  
   
 ## <a name="configuration-of-scalability-parameters"></a>スケーラビリティ パラメーターの構成  
+
  スケーラビリティとパフォーマンスの要件により、次のパラメーターの設定が決定されます。  
   
 - <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>  
@@ -35,6 +38,7 @@ ms.locfileid: "90558252"
  これらのパラメーターは、現在のシナリオに応じて次のように設定してください。  
   
 ### <a name="scenario-a-small-number-of-workflow-instances-that-require-optimal-response-time"></a>シナリオ: 最適な応答時間が要求される少数のワークフロー インスタンスが存在する場合  
+
  このシナリオでは、ワークフロー インスタンスがアイドル状態になったときに、これらのインスタンスすべてを読み込んだ状態のまま保持する必要があります。 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> を大きな値に設定します。 この設定を使用すると、ワークフロー インスタンスがコンピューター間で移動するのを回避できます。 この設定は、次の 1 つ以上の条件が真である場合にのみ使用してください。  
   
 - ワークフロー インスタンスが有効期間中に 1 つのメッセージを受信する。  
@@ -46,14 +50,17 @@ ms.locfileid: "90558252"
  <xref:System.Activities.Statements.Persist> アクティビティを使用するか、<xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> を 0 に設定し、サービス ホストまたはコンピューターに障害が発生した場合にワークフロー インスタンスを回復できるようにします。  
   
 ### <a name="scenario-workflow-instances-are-idle-for-long-periods-of-time"></a>シナリオ: ワークフロー インタンスが長期間アイドル状態になる場合  
+
  このシナリオでは、<xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> を 0 に設定してリソースをできるだけ早く解放します。  
   
 ### <a name="scenario-workflow-instances-receive-multiple-messages-in-a-short-period-of-time"></a>シナリオ: ワークフロー インスタンスが短期間に複数のメッセージを受信する場合  
+
  このシナリオでは、同じコンピューターでこれらのメッセージを受信する場合、<xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> を 60 秒に設定します。 これにより、ワークフロー インスタンスのアンロードと読み込みが頻繁に繰り返される状態を回避できます。 また、インスタンスがメモリ内に長く留まることを避けることもできます。  
   
  これらのメッセージを異なるコンピューターで受信する場合は、<xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> を 0 に設定し、<xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A> を BasicRetry または AggressiveRetry に設定します。 これにより、別のコンピューターがワークフロー インスタンスを読み込むことができるようになります。  
   
 ### <a name="scenario-workflow-uses-delay-activities-with-short-durations"></a>シナリオ: ワークフローが短期間の遅延アクティビティを使用する場合  
+
  このシナリオでは、読み込む必要のあるインスタンスに対して <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> が定期的に永続性データベースをポーリングします。その理由は、<xref:System.Activities.Statements.Delay> アクティビティが期限切れになるためです。 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> が次のポーリング間隔で期限切れになるタイマーを見つけた場合は、SQL Workflow Instance Store によってポーリング間隔が短縮されます。 次のポーリングは、タイマーが期限切れになった直後に発生します。 このようにして、SQL Workflow Instance Store はポーリング間隔よりも長く実行されるタイマーの精度を保持します。タイマーは <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.RunnableInstancesDetectionPeriod%2A> によって設定されます。 より短い遅延で迅速な処理を実行するために、ワークフロー インスタンスは少なくとも 1 つのポーリング間隔中、メモリに留まる必要があります。  
   
  <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> を 0 に設定し、有効期限を永続性データベースに書き込みます。  
@@ -63,6 +70,7 @@ ms.locfileid: "90558252"
  <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.RunnableInstancesDetectionPeriod%2A> の値を小さくすることはお勧めできません。それによって永続性データベースへの読み込みが増加するためです。 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> を使用する各サービス ホストは、検出期間ごとにデータベースを 1 回ポーリングします。 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.RunnableInstancesDetectionPeriod%2A> に設定した間隔が小さすぎると、サービス ホストの数が大きい場合にシステムのパフォーマンスが低下することがあります。  
   
 ## <a name="configuring-the-sql-workflow-instance-store"></a>SQL Workflow Instance Store の構成  
+
  SQL Workflow Instance Store には、次の構成パラメーターがあります。  
   
  <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceEncodingOption%2A>  

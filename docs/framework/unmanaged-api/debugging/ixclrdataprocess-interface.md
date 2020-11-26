@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 6a6def8fc10f04b89aa8d8c735025b01f9b6ddfb
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 376ec2b840bc17c79ed1f27c17a8ddd22c37a0f4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420761"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245355"
 ---
 # <a name="ixclrdataprocess-interface"></a>IXCLRDataProcess インターフェイス
 
@@ -32,6 +32,7 @@ ms.locfileid: "83420761"
 
 | メソッド                                                                                                                                               | 説明                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| [GetRuntimeNameByAddress](ixclrdataprocess-getruntimenamebyaddress-method.md)                     | 指定されたアドレスの名前を取得します。                                                               |
 | [GetAppDomainByUniqueId](ixclrdataprocess-getappdomainbyuniqueid-method.md)                       | `AppDomain`プロセス内のを一意の id で取得します。                                              |
 | [StartEnumModules](ixclrdataprocess-startenummodules-method.md)                                   | プロセスのモジュールを列挙するハンドルを提供します。                                        |
 | [EnumModule](ixclrdataprocess-enummodule-method.md)                                               | このプロセスのモジュールを列挙します。                                                         |

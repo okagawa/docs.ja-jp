@@ -2,15 +2,16 @@
 title: エラー コントラクト
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-ms.openlocfilehash: 5081284075ffa31c947a0e63f915a721ea5983c0
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 898692119e3e71b1c5aeedcd65674a49842ef110
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600504"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245212"
 ---
 # <a name="fault-contract"></a>エラー コントラクト
-エラー コントラクトのサンプルでは、エラー情報をサービスからクライアントに通信する方法を示します。 このサンプルは[はじめに](getting-started-sample.md)に基づいており、内部例外をエラーに変換するためにサービスに追加のコードが追加されています。 クライアントは 0 による除算を試行し、サービスを強制的にエラー状態にします。  
+
+エラー コントラクトのサンプルでは、エラー情報をサービスからクライアントに通信する方法を示します。 このサンプルは [はじめに](getting-started-sample.md)に基づいており、内部例外をエラーに変換するためにサービスに追加のコードが追加されています。 クライアントは 0 による除算を試行し、サービスを強制的にエラー状態にします。  
   
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -132,6 +133,6 @@ catch (FaultException<MathFault> e)
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Faults`  

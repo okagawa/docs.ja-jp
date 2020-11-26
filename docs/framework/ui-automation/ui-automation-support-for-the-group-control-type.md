@@ -7,14 +7,15 @@ helpviewer_keywords:
 - Group control type
 - control types, Group
 ms.assetid: 18e01bab-01f8-4567-b867-88dce9c4a435
-ms.openlocfilehash: 8d635e33cf192a388dea65cf614b250e93f6703f
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: c2d61df4d8939a9bf84a641d8f2bcf2440d9a3f5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167916"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245683"
 ---
 # <a name="ui-automation-support-for-the-group-control-type"></a>UI オートメーションによる Group コントロール型のサポート
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
@@ -25,18 +26,22 @@ ms.locfileid: "87167916"
  以下の各セクションで、Group コントロール型に必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、プロパティ、コントロール パターン、およびイベントを定義します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]要件は [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 、、Win32、Windows フォームのいずれの場合でも、すべてのグループコントロールに適用されます。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
+
 ## <a name="required-ui-automation-tree-structure"></a>必須の UI オートメーション ツリー構造  
+
  次の表に、グループ コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 ツリーの詳細につい [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ては、「 [UI オートメーションツリーの概要](ui-automation-tree-overview.md)」を参照してください。  
   
 |コントロール ビュー|コンテンツ ビュー|  
 |------------------|------------------|  
 |グループ<br /><br /> -0 または多数のコントロール|グループ<br /><br /> -0 または多数のコントロール|  
   
- 通常、グループコントロールは、 [ListItem コントロール型の Ui オートメーション](ui-automation-support-for-the-listitem-control-type.md)サポート、 [Treeitem コントロール型の ui](ui-automation-support-for-the-treeitem-control-type.md)オートメーションサポート、またはサブツリー内で検出された[DataItem コントロール型のコントロール型に対する ui オートメーション](ui-automation-support-for-the-dataitem-control-type.md)サポートを備えています。 'Group' は汎用的なコンテナーであるため、任意の型のコントロールを、ツリーのグループ コントロールの下に配置できます。  
+ 通常、グループコントロールは、 [ListItem コントロール型の Ui オートメーション](ui-automation-support-for-the-listitem-control-type.md)サポート、 [Treeitem コントロール型の ui](ui-automation-support-for-the-treeitem-control-type.md)オートメーションサポート、またはサブツリー内で検出された [DataItem コントロール型のコントロール型に対する ui オートメーション](ui-automation-support-for-the-dataitem-control-type.md) サポートを備えています。 'Group' は汎用的なコンテナーであるため、任意の型のコントロールを、ツリーのグループ コントロールの下に配置できます。  
   
 <a name="Required_UI_Automation_Properties"></a>
+
 ## <a name="required-ui-automation-properties"></a>必須の UI オートメーション プロパティ  
- 次の表に、グループ コントロールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 プロパティの詳細について [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、「[クライアントの UI オートメーションのプロパティ](ui-automation-properties-for-clients.md)」を参照してください。  
+
+ 次の表に、グループ コントロールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 プロパティの詳細について [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、「 [クライアントの UI オートメーションのプロパティ](ui-automation-properties-for-clients.md)」を参照してください。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|値|メモ|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -48,11 +53,13 @@ ms.locfileid: "87167916"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|「ノート」を参照してください。|通常、グループ コントロールは、自動的にラベル付けされます。 ここでは、 `null` が返されます。 グループに静的なテキスト ラベルが存在する場合は、そのラベルを LabeledBy プロパティの値として返す必要があります。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|グループ|この値は、すべての UI フレームワークで同じです。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"group"|Group コントロール型に対応する、ローカライズされた文字列。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|正しい|グループ コントロールは、常に [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコンテンツ ビューに含まれます。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|正しい|カレンダー グループは、常に [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューに含まれます。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|グループ コントロールは、常に [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコンテンツ ビューに含まれます。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|カレンダー グループは、常に [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューに含まれます。|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>
+
 ## <a name="required-ui-automation-control-patterns"></a>必須の UI オートメーション コントロール パターン  
+
  次の表に、Group コントロール型でサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コントロール パターンを示します。 コントロール パターンについて詳しくは、「 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)」をご覧ください。  
   
 |コントロール パターン|サポート|Notes|  
@@ -60,7 +67,9 @@ ms.locfileid: "87167916"
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|依存|情報の表示/非表示を切り替えるために使用するグループ コントロールは、Expand Collapse パターンをサポートする必要があります。|  
   
 <a name="Required_UI_Automation_Events"></a>
+
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  
+
  次の表に、すべてのグループ コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを示します。 イベントの詳細については、「 [UI Automation Events Overview](ui-automation-events-overview.md)」を参照してください。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベント|サポート|Notes|  

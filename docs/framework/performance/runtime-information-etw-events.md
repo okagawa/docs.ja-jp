@@ -6,14 +6,15 @@ helpviewer_keywords:
 - runtime information events [.NET Framework]
 - ETW, runtime information events
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
-ms.openlocfilehash: 385519229bdb76841cdf592d95e96d2288ec5e1a
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 354740b36ccab742022058288da84b22d460edc5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474229"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245615"
 ---
 # <a name="runtime-information-etw-events"></a>ランタイム情報 ETW イベント
+
 これらの ETW イベントは、SKU、バージョン番号、ランタイムのアクティブ化の方法、起動時に使用されたコマンド ライン パラメーター、GUID (該当する場合) などのランタイムに関する情報をログに記録します。 1 つのプロセスで複数のランタイムが実行されている場合は、これらのイベントの情報 (ClrInstanceID) によって、ランタイムのあいまいさを解消できます。  
   
  次の表に、2 つのランタイム情報イベントを示します。 これらのイベントは、任意のキーワードまたはマスクで発生させることができます  (詳細については、「 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)」を参照してください)。  

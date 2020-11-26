@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
-ms.openlocfilehash: 58e86e5566775048e081bfb4ac217a7747b98a35
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c253358b68cf18a23bab4d12d4ad760874103bff
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579411"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246408"
 ---
 # <a name="how-to-export-metadata-from-service-endpoints"></a>方法: メタデータをサービス エンドポイントからエクスポートする
+
 このトピックでは、メタデータをサービス エンドポイントからエクスポートする方法について説明します。  
   
 ### <a name="to-export-metadata-from-service-endpoints"></a>メタデータをサービス エンドポイントからエクスポートするには  
@@ -47,12 +48,14 @@ ms.locfileid: "84579411"
 7. これで、メタデータを使用できます。たとえば、<xref:System.ServiceModel.Description.MetadataSet.WriteTo%28System.Xml.XmlWriter%29> メソッドを呼び出してメタデータをファイルに書き込むことができます。  
   
 ## <a name="example"></a>例  
+
  この例の完全なコードの一覧を以下に示します。  
   
  [!code-csharp[S_UEWsdlExporter#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#0)]
  [!code-vb[S_UEWsdlExporter#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#0)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
+
  Program.cs をコンパイルするときは、System.ServiceModel.dll への参照を追加してください。  
   
 ## <a name="see-also"></a>関連項目

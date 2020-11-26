@@ -2,15 +2,16 @@
 title: トランザクション プロトコル バージョン 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: 9e21da0dfdda514e60b6f53090f5225b57aa1b75
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 7b1cfc21a1361cee3027fd5a61ec61a4a0a998b7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720375"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246239"
 ---
 # <a name="transaction-protocols-version-10"></a>トランザクション プロトコル バージョン 1.0
-Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION および WS-ATOMICTRANSACTION プロトコルのバージョン1.0 を実装します。 バージョン1.1 の詳細については、「 [トランザクションプロトコル](transaction-protocols.md)」を参照してください。  
+
+Windows Communication Foundation (WCF) version 1 は、WS-Atomic トランザクションと WS-Coordination プロトコルのバージョン1.0 を実装します。 バージョン1.1 の詳細については、「 [トランザクションプロトコル](transaction-protocols.md)」を参照してください。  
   
 |仕様/ドキュメント|Link|  
 |-----------------------------|----------|  
@@ -68,14 +69,17 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
 |xsd|`http://www.w3.org/2001/XMLSchema`|  
   
 ## <a name="transaction-manager-bindings"></a>トランザクション マネージャー バインディング  
+
  R1001 : トランザクション マネージャーは、SOAP 1.1、WS-Addressing 2004/08 for WS-AtomicTransaction、および WS-Coordination メッセージ交換を使用する必要があります。  
   
  アプリケーション メッセージは、後で説明するように、これらのバインディングに制限されません。  
   
 ### <a name="transaction-manager-https-binding"></a>トランザクション マネージャー HTTPS バインディング  
+
  トランザクション マネージャー HTTPS バインディングは、セキュリティを実現してトランザクション ツリー内の送信者と受信者の各ペア間で信頼を確立するトランスポート セキュリティにのみ依存します。  
   
 #### <a name="https-transport-configuration"></a>HTTPS トランスポート構成  
+
  トランザクション マネージャー ID を確立するために X.509 証明書が使用されます。 クライアントおよびサーバーの承認が必要です。クライアントおよびサーバーの承認は、以下のような実装詳細の状態にしておきます。  
   
 - R1111 : ネットワーク経由で示された X.509 証明書は、発信元コンピューターの完全修飾ドメイン名 (FQDN) と一致するサブジェクト名を持っている必要があります。  
@@ -83,20 +87,25 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
 - B1112 : X.509 のサブジェクト名のチェックが成功するには、システム内の送信者と受信者の各ペア間で、DNS が機能している必要があります。  
   
 #### <a name="activation-and-registration-binding-configuration"></a>アクティベーションと登録のバインド構成  
+
  WCF では、HTTPS 経由の相関関係を持つ要求/応答双方向バインドが必要です。 (関連付けと要求/応答メッセージ交換パターンの詳細については、WS-AtomicTransaction 仕様のセクション 8 を参照してください)。  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC プロトコルのバインディング構成  
+
  WCF では、HTTPS 経由の一方向 (データグラム) メッセージがサポートされています。 メッセージ間の関連付けは、実装詳細の状態にしておきます。  
   
- B2131: 実装では、 `wsa:ReferenceParameters` 「ws-addressing」で説明されているようにをサポートして、WCF の2pc メッセージの相関関係を実現する必要があります。  
+ B2131: 実装では `wsa:ReferenceParameters` 、WCF の2pc メッセージの相関関係を実現するために WS-Addressing に記載されているようにをサポートする必要があります。  
   
 ### <a name="transaction-manager-mixed-security-binding"></a>トランザクション マネージャーによる混合セキュリティ バインディング  
- これは、id の確立のために、WS-FEDERATION の発行済みトークンモデルと組み合わせたトランスポートセキュリティを使用する代替 (混合モード) バインドです。  2 つのバインディングを区別する要素は、アクティベーションと登録のみです。  
+
+ これは、id の確立のために、トランスポートセキュリティと WS-Coordination 発行済みトークンモデルを組み合わせて使用する代替 (混合モード) バインドです。  2 つのバインディングを区別する要素は、アクティベーションと登録のみです。  
   
 #### <a name="https-transport-configuration"></a>HTTPS トランスポート構成  
+
  トランザクション マネージャー ID を確立するために X.509 証明書が使用されます。 クライアントおよびサーバーの承認が必要です。クライアントおよびサーバーの承認は、以下のような実装詳細の状態にしておきます。  
   
 #### <a name="activation-message-binding-configuration"></a>アクティベーション メッセージのバインド構成  
+
  アクティベーション メッセージは通常、アプリケーションとローカルのトランザクション マネージャー間で発生するため、相互運用には参加しません。  
   
  B1221: WCF では、アクティベーションメッセージに双方向 HTTPS バインド (「 [メッセージングプロトコル](messaging-protocols.md)」で説明) を使用します。 要求および応答メッセージは、WS-Addressing 2004/08 を使用して関連付けられます。  
@@ -110,6 +119,7 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
  `t:IssuedTokens`送信メッセージに添付するための新しいヘッダーを生成する必要があり `wscoor:CreateCoordinationContextResponse` ます。  
   
 #### <a name="registration-message-binding-configuration"></a>登録メッセージのバインディング構成  
+
  B1231: WCF では、双方向の HTTPS バインド (「 [メッセージングプロトコル](messaging-protocols.md)」で説明) を使用します。 要求および応答メッセージは、WS-Addressing 2004/08 を使用して関連付けられます。  
   
  WS-AtomicTransaction 仕様のセクション 8 では、関連付けとメッセージ交換のパターンについて詳細に説明されています。  
@@ -119,11 +129,13 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
  `wsse:Timestamp`要素は、発行されたを使用して署名する必要があり `SecurityContextToken STx` ます。 この署名は特定のトランザクションに関連付けられたトークンを所有していることの証明であり、トランザクションに登録されている参加要素の認証で使用されます。 RegistrationResponse メッセージは、HTTPS を使用して返信されます。  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC プロトコルのバインディング構成  
+
  WCF では、HTTPS 経由の一方向 (データグラム) メッセージがサポートされています。 メッセージ間の関連付けは、実装詳細の状態にしておきます。  
   
- B2131: 実装では、 `wsa:ReferenceParameters` 「ws-addressing」で説明されているようにをサポートして、WCF の2pc メッセージの相関関係を実現する必要があります。  
+ B2131: 実装では `wsa:ReferenceParameters` 、WCF の2pc メッセージの相関関係を実現するために WS-Addressing に記載されているようにをサポートする必要があります。  
   
 ## <a name="application-message-exchange"></a>アプリケーション メッセージ交換  
+
  アプリケーションでは、バインディングが次のセキュリティ要件を満たしている限り、アプリケーション間メッセージに任意のバインディングを使用できます。  
   
 - R2001 : アプリケーション間メッセージでは、メッセージのヘッダーの `t:IssuedTokens` に加えて `CoordinationContext` ヘッダーをフローする必要があります。  
@@ -137,6 +149,7 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
 ## <a name="message-examples"></a>メッセージの例  
   
 ### <a name="createcoordinationcontext-requestresponse-messages"></a>CreateCoordinationContext 要求/応答メッセージ  
+
  次のメッセージは、要求/応答のパターンに従います。  
   
 #### <a name="createcoordinationcontext"></a>CreateCoordinationContext  
@@ -248,6 +261,7 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
 ```  
   
 ### <a name="registration-messages"></a>登録メッセージ  
+
  次のメッセージは、登録メッセージです。  
   
 #### <a name="register"></a>登録  
@@ -348,6 +362,7 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
 ```  
   
 ### <a name="two-phase-commit-protocol-messages"></a>2 フェーズ コミット プロトコル メッセージ  
+
  次のメッセージは、2 フェーズ コミット (2PC) プロトコルに関連しています。  
   
 #### <a name="commit"></a>Commit  
@@ -374,6 +389,7 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
 ```  
   
 ### <a name="application-messages"></a>アプリケーション メッセージ  
+
  次のメッセージは、アプリケーション メッセージです。  
   
 #### <a name="application-message-request"></a>アプリケーション メッセージ (要求)  
