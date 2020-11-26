@@ -2,14 +2,15 @@
 title: メッセージ キューを介したメッセージ セキュリティ
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-ms.openlocfilehash: 1733cea17c82f85751b810f4a6033caefd828e29
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1b262a5f4343e07aecf5eebda32cc995f86ec77b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558642"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248930"
 ---
 # <a name="message-security-over-message-queuing"></a>メッセージ キューを介したメッセージ セキュリティ
+
 このサンプルでは、クライアントの認証で X.509v3 証明書による WS-Security を使用するアプリケーションを実装する方法を示します。このアプリケーションでは、サーバーの X.509v3 証明書を MSMQ 経由で使用するサーバー認証が必要です。 MSMQ ストア内のメッセージの暗号化を保持したり、アプリケーションで独自のメッセージ認証を実行できるようにするには、メッセージ セキュリティの使用が望ましい場合があります。
 
  このサンプルは、トランザクション処理された [MSMQ バインディング](transacted-msmq-binding.md) のサンプルに基づいています。 メッセージは暗号化されて署名されます。
@@ -82,17 +83,20 @@ ms.locfileid: "90558642"
     > [!NOTE]
     > このサンプルを複数のコンピューターで実行している場合、このスクリプトはサービス証明書をクライアントから削除しません。 コンピューター間で証明書を使用する Windows Communication Foundation (WCF) サンプルを実行した場合は、CurrentUser-TrustedPeople ストアにインストールされているサービス証明書を必ずオフにしてください。 削除するには、コマンド `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` を実行します。たとえば、`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` となります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
+
  このサンプルでは、MSMQ がインストールされて実行中であることが必要です。
 
 ## <a name="demonstrates"></a>対象
+
  クライアントは、サービスの公開キーを使用してメッセージを暗号化し、独自の証明書を使用してメッセージ署名を行います。 キューからのメッセージを読み込むサービスは、信頼されたユーザーのストア内の証明書を使用して、クライアント証明書を認証します。 次にメッセージを復号化し、サービス操作にディスパッチします。
 
  Windows Communication Foundation (WCF) メッセージは MSMQ メッセージの本文のペイロードとして転送されるため、本文は MSMQ ストアで暗号化されたままになります。 これによりメッセージは、望ましくない公開から保護されます。 MSMQ 自体では、送信されるメッセージが暗号化されているかどうかは認識されません。
 
  このサンプルは、MSMQ でメッセージ レベルの相互認証を使用する方法を示します。 証明書は、帯域外で交換されます。 サービスとクライアントは同時に実行される必要がないため、キューに置かれたアプリケーションでは常にその状態です。
 
-## <a name="description"></a>説明
+## <a name="description"></a>Description
+
  サンプルクライアントとサービスコードは、 [トランザクション MSMQ バインディング](transacted-msmq-binding.md) サンプルと同じであり、1つの違いがあります。 操作コントラクトには、メッセージの署名および暗号化が必要であることを示す注釈が保護レベルで付けられます。
 
 ```csharp
@@ -285,7 +289,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
         Order status: Pending
 ```
 
-## <a name="comments"></a>コメント
+## <a name="comments"></a>説明
 
 - クライアント証明書の作成。
 

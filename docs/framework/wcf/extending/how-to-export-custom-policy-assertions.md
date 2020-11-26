@@ -5,21 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-ms.openlocfilehash: 992133ff9922e36b00683f4f48db88e1c2b91c1d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8bdc9948d6846631fde1d428c113682f40d15ec3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795668"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249216"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>方法: カスタム ポリシー アサーションをエクスポートする
+
 ポリシー アサーションはサービス エンドポイントの機能と要件を説明します。 サービス アプリケーションは、サービス メタデータに含まれるカスタム ポリシー アサーションを使用して、エンドポイントのバインディングまたはコントラクトのカスタマイズ情報をクライアント アプリケーションに伝達します。 Windows Communication Foundation (WCF) を使用すると、通信する機能や要件に応じて、エンドポイント、操作、またはメッセージのサブジェクトで WSDL バインディングに結び付けられているポリシー式のアサーションをエクスポートできます。  
   
  カスタム ポリシー アサーションは、<xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> インターフェイスを <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> に実装して、サービス エンドポイントのバインディングにバインド要素を直接挿入するか、またはアプリケーション構成ファイルにバインド要素を登録することによってエクスポートされます。 ポリシーのエクスポートの実装では、<xref:System.Xml.XmlElement?displayProperty=nameWithType> メソッドに渡された <xref:System.ServiceModel.Description.PolicyAssertionCollection?displayProperty=nameWithType> の適切な <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType> に、<xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A> インスタンスとしてカスタム ポリシー アサーションを追加する必要があります。  
   
  また、<xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> クラスの <xref:System.ServiceModel.Description.WsdlExporter> プロパティをチェックし、入れ子になったポリシー表現およびポリシー フレームワーク属性を、指定されたポリシー バージョンに基づいた正しい名前空間にエクスポートする必要もあります。  
   
- カスタムポリシーアサーションをインポートするに<xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType>は[、「」および「」を参照してください。カスタムポリシーアサーション](how-to-import-custom-policy-assertions.md)をインポートします。  
+ カスタムポリシーアサーションをインポートするには、「」 <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> および「 [方法: カスタムポリシーアサーションをインポート](how-to-import-custom-policy-assertions.md)する」を参照してください。  
   
 ### <a name="to-export-custom-policy-assertions"></a>カスタム ポリシー アサーションをエクスポートするには  
   
@@ -34,7 +35,7 @@ ms.locfileid: "70795668"
   
 1. カスタム ポリシー アサーション バインド要素の <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType> を実装します。  
   
-2. Bindingelementextensions > 要素を使用して[ \<](../../configure-apps/file-schema/wcf/bindingelementextensions.md) 、構成ファイルにバインド要素拡張を追加します。  
+2. 要素を使用して、構成ファイルにバインド要素拡張を追加し [\<bindingElementExtensions>](../../configure-apps/file-schema/wcf/bindingelementextensions.md) ます。  
   
 3. <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> を使用してカスタム バインドを作成します。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "70795668"
   
 2. 手順 1. のカスタム バインドを 新しいエンドポイントに追加し、<xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> メソッドを呼び出してその新しいサービス エンドポイントを <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> に追加します。  
   
-3. <xref:System.ServiceModel.ServiceHost>を開きます。 カスタム バインディングの作成と、プログラムによるバインド要素の挿入を次のコード例に示します。  
+3. <xref:System.ServiceModel.ServiceHost> を開きます。 カスタム バインディングの作成と、プログラムによるバインド要素の挿入を次のコード例に示します。  
   
      [!code-csharp[s_imperative#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_imperative/cs/service.cs#1)]
      [!code-vb[s_imperative#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/service.vb#1)]  
@@ -53,4 +54,4 @@ ms.locfileid: "70795668"
 
 - <xref:System.ServiceModel.Description.IPolicyImportExtension>
 - <xref:System.ServiceModel.Description.IPolicyExportExtension>
-- [方法: カスタムポリシーアサーションをインポートする](how-to-import-custom-policy-assertions.md)
+- [方法: カスタム ポリシー アサーションをインポートする](how-to-import-custom-policy-assertions.md)

@@ -5,14 +5,15 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 57a1537e1bde1efcd3586d032efee063561efcca
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1b9b7e57760c2aba0a8e9eadd53ca8e72529b787
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586495"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248969"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM+ アプリケーションとの統合の概要
+
 Windows Communication Foundation (WCF) は、分散アプリケーションを作成するための豊富な環境を提供します。 COM + でホストされているコンポーネントベースのアプリケーションロジックを既に使用している場合は、WCF を使用して、既存のロジックを書き直すのではなく、拡張できます。 既存の COM+ サービスまたはエンタープライズ サービスの業務ロジックを、Web サービスを介して公開する場合に役立ちます。  
   
  COM+ コンポーネントのインターフェイスを Web サービスとして公開する場合、その仕様やコントラクトは、アプリケーションの初期化の際に実行される自動マッピングによって決まります。 このマッピングの概念モデルを次に示します。  
@@ -40,11 +41,12 @@ Windows Communication Foundation (WCF) は、分散アプリケーションを�
   
 2. 適切なホスティング モードを選択します。  
   
-3. COM+ サービス モデル構成ツール (ComSvcConfig.exe) を使用して、当該インターフェイスを公開するための Web サービスを追加します。 Comsvcconfig.exe の使用方法の詳細については、「[方法: COM + サービスモデル構成ツールを使用](how-to-use-the-com-service-model-configuration-tool.md)する」を参照してください。  
+3. COM+ サービス モデル構成ツール (ComSvcConfig.exe) を使用して、当該インターフェイスを公開するための Web サービスを追加します。 ComSvcConfig.exe の使用方法の詳細については、「 [方法: COM + サービスモデル構成ツールを使用](how-to-use-the-com-service-model-configuration-tool.md)する」を参照してください。  
   
-4. アプリケーション構成ファイルで、追加のサービス設定を構成します。 コンポーネントの構成方法の詳細については、「[方法: COM + サービス設定を構成](how-to-configure-com-service-settings.md)する」を参照してください。  
+4. アプリケーション構成ファイルで、追加のサービス設定を構成します。 コンポーネントの構成方法の詳細については、「 [方法: COM + サービス設定を構成](how-to-configure-com-service-settings.md)する」を参照してください。  
   
 ## <a name="supported-interfaces"></a>公開可能なインターフェイス  
+
  Web サービスとして公開できるインターフェイスの種類に関して、いくつか制約があります。 次のようなインターフェイスは公開できません。  
   
 - オブジェクト参照をパラメーターとして渡すインターフェイス。ただし、「オブジェクト参照を渡せる場合」で説明されているようにいくつか例外があります。  
@@ -62,9 +64,10 @@ Windows Communication Foundation (WCF) は、分散アプリケーションを�
 - エンタープライズ サービス コンポーネントからのインターフェイスで、グローバル アセンブリ キャッシュに追加されていないもの。  
   
 ### <a name="limited-object-reference-support"></a>オブジェクト参照を渡せる場合  
+
  展開済みの COM+ コンポーネントの多くが、ADO Recordset オブジェクトを返す場合などに、パラメーターとしてオブジェクト参照を渡すようになっているため、COM+ 統合においても、一定の条件を満たす場合には、オブジェクト参照をパラメーターとして渡せるようになっています。 オブジェクト参照を渡せるのは、`IPersistStream` COM インターフェイスを実装しているオブジェクトに限ります。 たとえば ADO Recordset オブジェクトがそうで、アプリケーション固有の COM オブジェクトについてはオブジェクト参照を実装できます。  
   
- このサポートを有効にするために、Comsvcconfig.exe ツールには、通常のメソッドシグネチャパラメーターを無効にする**allowreferences**スイッチが用意されています。これにより、オブジェクト参照パラメーターが使用されていないことを確認するためにツールが実行されることが確認されます。 さらに、パラメーターとして渡すオブジェクトの種類の名前を指定し、 `persistableTypes` <> 要素の子である <> 構成要素内で識別する必要があり `comContract` ます。  
+ このサポートを有効にするために、ComSvcConfig.exe ツールには、通常のメソッドシグネチャパラメーターを無効にする **allowreferences** スイッチが用意されています。また、このツールを実行して、オブジェクト参照パラメーターが使用されていないことを確認します。 さらに、パラメーターとして渡すオブジェクトの種類の名前を指定し、 `persistableTypes` <> 要素の子である <> 構成要素内で識別する必要があり `comContract` ます。  
   
  この機能を使用する場合、COM+ 統合サービスは、`IPersistStream` インターフェイスを使用してオブジェクト インスタンスのシリアル化および逆シリアル化を行います。 オブジェクト インスタンスが `IPersistStream` インターフェイスを実装していない場合、例外がスローされます。  
   
@@ -74,6 +77,7 @@ Windows Communication Foundation (WCF) は、分散アプリケーションを�
 > シリアル化の方法には、カスタムおよびプラットフォーム固有の性質があるため、WCF クライアントと WCF サービスの間での使用に適しています。  
   
 ## <a name="selecting-the-hosting-mode"></a>ホスティング モードの選択  
+
  COM+ が Web サービスを公開する際のホスティング モードには、次のようなものがあります。  
   
 - COM+ ホスト  
@@ -88,7 +92,8 @@ Windows Communication Foundation (WCF) は、分散アプリケーションを�
   
      Web サービスと COM+ アプリケーション ロジックの両方を Web サーバーのワーカー プロセス内で提供します。 Web サービス要求を転送することなく、自動的に Web ホスト モードにすることができます。 ただし、サーバー アプリケーションに DCOM でアクセスできない、という短所があります。  
   
-### <a name="security-considerations"></a>セキュリティに関する考慮事項  
+### <a name="security-considerations"></a>セキュリティの考慮事項  
+
  他の WCF サービスと同様に、公開されたサービスのセキュリティ設定は、WCF チャネルの構成設定を通じて管理されます。 従来の DCOM セキュリティ設定には、コンピューター全体のアクセス権限設定などがありましたが、これは必須ではありません。 COM+ アプリケーション ロールを強制する場合、コンポーネントの "コンポーネント レベルのアクセス確認" 承認を有効にする必要があります。  
   
  セキュリティ保護されていないバインディングは改ざんや情報漏洩を招くので、 セキュリティ保護されたバインディングを使用することをお勧めします。  

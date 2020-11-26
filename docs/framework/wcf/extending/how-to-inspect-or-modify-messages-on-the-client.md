@@ -3,25 +3,27 @@ title: '方法: クライアントのメッセージを検査または変更す�
 description: 適切なインターフェイスを実装することによって、WCF クライアントまたはサービス全体で受信または送信メッセージを検査または変更する方法について説明します。
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-ms.openlocfilehash: 6f6a3d20d7f3a9fb79de5cd3e29096e270d0f188
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 1f8b75001754739b48d10ee577ae26a175e72860
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247508"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249047"
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>方法: クライアントのメッセージを検査または変更する
-を実装 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> してクライアントランタイムに挿入することによって、WCF クライアント全体の受信メッセージまたは送信メッセージを検査または変更できます。 詳細については、「[クライアントの拡張](extending-clients.md)」を参照してください。 サービスの同等の機能は、<xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> です。 完全なコード例については、[メッセージインスペクター](../samples/message-inspectors.md)のサンプルを参照してください。  
+
+を実装 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> してクライアントランタイムに挿入することによって、WCF クライアント全体の受信メッセージまたは送信メッセージを検査または変更できます。 詳細については、「 [クライアントの拡張](extending-clients.md)」を参照してください。 サービスの同等の機能は、<xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> です。 完全なコード例については、 [メッセージインスペクター](../samples/message-inspectors.md) のサンプルを参照してください。  
   
 ### <a name="to-inspect-or-modify-messages"></a>メッセージを検査または変更するには  
   
 1. <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> インターフェイスを実装します。  
   
-2. クライアント メッセージ インスペクターを挿入するスコープに応じて、<xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> または <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> を実装します。 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>エンドポイントレベルで動作を変更できます。 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>では、コントラクトレベルでの動作を変更できます。  
+2. クライアント メッセージ インスペクターを挿入するスコープに応じて、<xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> または <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> を実装します。 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> エンドポイントレベルで動作を変更できます。 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> では、コントラクトレベルでの動作を変更できます。  
   
-3. <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> で <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> メソッドまたは <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> メソッドを呼び出す前に、動作を追加します。 詳細については、「動作を使用した[ランタイムの構成と拡張](configuring-and-extending-the-runtime-with-behaviors.md)」を参照してください。  
+3. <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> で <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> メソッドまたは <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> メソッドを呼び出す前に、動作を追加します。 詳細については、「動作を使用した [ランタイムの構成と拡張](configuring-and-extending-the-runtime-with-behaviors.md)」を参照してください。  
   
 ## <a name="example"></a>例  
+
  下のコード例では、次の項目を順番に示しています。  
   
 - クライアント インスペクター実装  

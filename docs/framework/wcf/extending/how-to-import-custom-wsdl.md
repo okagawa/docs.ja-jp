@@ -1,15 +1,16 @@
 ---
-title: '方法 : カスタム WSDL をインポートする'
+title: '方法: カスタム WSDL をインポートする'
 ms.date: 03/30/2017
 ms.assetid: ddc3718d-ce60-44f6-92af-a5c67477dd99
-ms.openlocfilehash: 614842f2d77d967e0a6d4841e5e5e4fcc8805580
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5aa554394743314a91afd6a5cdf86f9974e81f8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185548"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249086"
 ---
-# <a name="how-to-import-custom-wsdl"></a>方法 : カスタム WSDL をインポートする
+# <a name="how-to-import-custom-wsdl"></a>方法: カスタム WSDL をインポートする
+
 このトピックでは、カスタム WSDL をインポートする方法について説明します。 カスタム WSDL を処理するには、<xref:System.ServiceModel.Description.IWsdlImportExtension> インターフェイスを実装する必要があります。  
   
 ### <a name="to-import-custom-wsdl"></a>カスタム WSDL をインポートするには  
@@ -80,6 +81,6 @@ ms.locfileid: "79185548"
   
 ## <a name="see-also"></a>関連項目
 
-- [メタデータ](../feature-details/metadata.md)
+- [Metadata](../feature-details/metadata.md)
 - [メタデータのエクスポートとインポート](../feature-details/exporting-and-importing-metadata.md)
 - [カスタム WSDL パブリケーション](../samples/custom-wsdl-publication.md)
