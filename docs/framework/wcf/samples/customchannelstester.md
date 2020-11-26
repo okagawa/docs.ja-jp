@@ -2,21 +2,22 @@
 title: CustomChannelTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-ms.openlocfilehash: 9123167e0f97592592765f7b4a4aa768064fc173
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e095221e1f17cdf4a63c2fe86d5ba050e354e471
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596605"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240694"
 ---
 # <a name="customchannelstester"></a>CustomChannelTester
+
 `CustomChannelsTester` は、カスタム チャネルの実装を、定義済みのサービス コントラクト セットに対してテストする際に使用できるツールです。 サービス コントラクト セットを選択し、XML ファイルを使用してこのツールに渡すことができます。 これを受け取ったツールは、メッセージ交換中にカスタム チャネル実装をテストするサービスとクライアントを生成します。  
   
 ### <a name="to-build-the-tool"></a>ツールをビルドするには  
   
 1. ソリューションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](building-the-samples.md)」の手順に従います。  
   
-2. ソリューションをビルドすると、CustomChannelsTester.exe、TestSpec.xml、および SampleRun.cmd の 3 つのファイルが生成されます。 Samplerun.cmd ファイルには、このツールを使用して[Transport: UDP](transport-udp.md)サンプルをテストする方法を示すサンプルコマンドラインがあります。  
+2. ソリューションをビルドすると、CustomChannelsTester.exe、TestSpec.xml、および SampleRun.cmd の 3 つのファイルが生成されます。 Samplerun.cmd ファイルには、このツールを使用して [Transport: UDP](transport-udp.md) サンプルをテストする方法を示すサンプルコマンドラインがあります。  
   
 ### <a name="to-run-the-tool"></a>ツールを実行するには  
   
@@ -28,7 +29,7 @@ ms.locfileid: "84596605"
   
      `/binding` オプションを使用する必要があります。  
   
-     `/dll`"binding" が Windows Communication Foundation (WCF) によって提供されるシステム指定のバインディングでない場合は、が必要です。  
+     `/dll` "binding" が Windows Communication Foundation (WCF) によって提供されるシステム指定のバインディングでない場合は、が必要です。  
   
      `/testspec` はオプションです。  
   

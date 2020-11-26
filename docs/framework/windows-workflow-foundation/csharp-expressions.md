@@ -2,46 +2,47 @@
 title: C# の式
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
-ms.openlocfilehash: d1728758a4f1af76c2d08695a83c0f9acc3dde3e
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: b0e5d7f2fbb1f7b84c6d8f0110bd111165f0ea52
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140098"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239622"
 ---
 # <a name="c-expressions"></a>C# の式
-.NET Framework 4.5 以降ではC# WINDOWS WORKFLOW FOUNDATION (WF) で式がサポートされています。 .NET Framework C# 4.5 C#を対象とする Visual Studio 2012 で作成された新しいワークフロープロジェクトと、Visual Basic ワークフロープロジェクトは Visual Basic 式を使用します。 Visual Basic 式を使用する既存の .NET Framework 4 ワークフロープロジェクトは、プロジェクトの言語に関係なく [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] に移行でき、サポートされています。 ここでは、[!INCLUDE[wf1](../../../includes/wf1-md.md)] での C# 式の概要について説明します。
+
+.NET Framework 4.5 以降では、Windows Workflow Foundation (WF) で C# 式がサポートされています。 Visual Studio 2012 で作成され、.NET Framework 4.5 を対象とする新しい C# ワークフロープロジェクトは C# 式を使用し、Visual Basic ワークフロープロジェクトは Visual Basic 式を使用します。 Visual Basic 式を使用する既存の .NET Framework 4 ワークフロープロジェクトは [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 、プロジェクトの言語に関係なく、に移行できます。また、サポートされています。 ここでは、[!INCLUDE[wf1](../../../includes/wf1-md.md)] での C# 式の概要について説明します。
 
 ## <a name="using-c-expressions-in-workflows"></a>ワークフローでの C# 式の使用
 
-- [ワークフローデザイナー C#での式の使用](csharp-expressions.md#WFDesigner)
+- [ワークフロー デザイナーでの C# 式の使用](csharp-expressions.md#WFDesigner)
 
-  - [旧バージョンとの互換性](csharp-expressions.md#BackwardCompat)
+  - [下位互換性](csharp-expressions.md#BackwardCompat)
 
-- [コードC#ワークフローでの式の使用](csharp-expressions.md#CodeWorkflows)
+- [コード ワークフローでの C# 式の使用](csharp-expressions.md#CodeWorkflows)
 
-- [XAML C#ワークフローでの式の使用](csharp-expressions.md#XamlWorkflows)
+- [XAML ワークフローでの C# 式の使用](csharp-expressions.md#XamlWorkflows)
 
   - [コンパイルされた Xaml](csharp-expressions.md#CompiledXaml)
 
   - [ルース Xaml](csharp-expressions.md#LooseXaml)
 
-- [.XAMLX C# workflow services での式の使用](csharp-expressions.md#WFServices)
+- [XAMLX ワークフロー サービスでの C# 式の使用](csharp-expressions.md#WFServices)
 
-### <a name="WFDesigner"></a>ワークフローデザイナー C#での式の使用
+### <a name="using-c-expressions-in-the-workflow-designer"></a><a name="WFDesigner"></a> ワークフローデザイナーでの C# 式の使用
 
-.NET Framework 4.5 以降ではC# WINDOWS WORKFLOW FOUNDATION (WF) で式がサポートされています。 C#.NET Framework 4.5 を対象とする Visual Studio 2012 で作成さC#れたワークフロープロジェクトは式を使用しますが、Visual Basic ワークフロープロジェクトは Visual Basic 式を使用します。 目的C#の式を指定するには、[  **C#式を入力**してください] というラベルの付いたボックスに入力します。 このラベルは、プロパティ ウィンドウ (デザイナーでアクティビティを選択した場合) またはワークフロー デザイナーのアクティビティに表示されます。 次の例では、2 つの `WriteLine` アクティビティが `Sequence` の中で `NoPersistScope` 内に含まれています。
+.NET Framework 4.5 以降では、Windows Workflow Foundation (WF) で C# 式がサポートされています。 Visual Studio 2012 で作成され .NET Framework 4.5 を対象とする c# ワークフロープロジェクトでは C# 式を使用しますが、Visual Basic ワークフロープロジェクトでは Visual Basic 式を使用します。 目的の C# 式を指定するには、[ **c# の式を入力** してください] というラベルの付いたボックスに入力します。 このラベルは、プロパティ ウィンドウ (デザイナーでアクティビティを選択した場合) またはワークフロー デザイナーのアクティビティに表示されます。 次の例では、2 つの `WriteLine` アクティビティが `Sequence` の中で `NoPersistScope` 内に含まれています。
 
 ![自動的に作成された sequence アクティビティを示すスクリーンショット。](./media/csharp-expressions/auto-surround-sequence-activity.png)
 
 > [!NOTE]
-> C#式は Visual Studio でのみサポートされており、再ホストされたワークフローデザイナーではサポートされていません。 再ホストされたデザイナーでサポートされている新しい WF45 機能の詳細については、「 [rehosted ワークフローデザイナーでの新しい Workflow Foundation 4.5 機能のサポート](wf-features-in-the-rehosted-workflow-designer.md)」を参照してください。
+> C# の式は、Visual Studio でのみサポートされており、再ホストされたワークフローデザイナーではサポートされていません。 再ホストされたデザイナーでサポートされている新しい WF45 機能の詳細については、「 [rehosted ワークフローデザイナーでの新しい Workflow Foundation 4.5 機能のサポート](wf-features-in-the-rehosted-workflow-designer.md)」を参照してください。
 
-#### <a name="BackwardCompat"></a>旧バージョンとの互換性
+#### <a name="backwards-compatibility"></a><a name="BackwardCompat"></a> 旧バージョンとの互換性
 
-[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] に移行されたC#既存の .NET Framework 4 つのワークフロープロジェクトの Visual Basic 式がサポートされています。 Visual Basic 式がワークフローデザイナーで表示されると、Visual Basic 式が有効なC#構文でない限り、既存の Visual Basic 式のテキストが**XAML で設定された値**に置き換えられます。 Visual Basic 式が有効な C# 構文である場合は、式が表示されます。 Visual Basic 式を C# に更新するには、ワークフロー デザイナーでその式を編集して、対応する C# 式を指定します。 Visual Basic 式を C# に更新する必要はありませんが、ワークフロー デザイナーで式を更新すると、式は C# に変換され、Visual Basic に戻すことができなくなる場合があります。
+に移行された既存の .NET Framework 4 つの C# ワークフロープロジェクトの Visual Basic 式 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] がサポートされています。 Visual Basic 式がワークフローデザイナーで表示されると、Visual Basic 式が有効な C# 構文でない限り、既存の Visual Basic 式のテキストが **XAML で設定された値** に置き換えられます。 Visual Basic 式が有効な C# 構文である場合は、式が表示されます。 Visual Basic 式を C# に更新するには、ワークフロー デザイナーでその式を編集して、対応する C# 式を指定します。 Visual Basic 式を C# に更新する必要はありませんが、ワークフロー デザイナーで式を更新すると、式は C# に変換され、Visual Basic に戻すことができなくなる場合があります。
 
-### <a name="CodeWorkflows"></a>コードC#ワークフローでの式の使用
+### <a name="using-c-expressions-in-code-workflows"></a><a name="CodeWorkflows"></a> コードワークフローでの C# 式の使用
 
 C# 式は、[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] コードベースのワークフローでサポートされていますが、ワークフローを呼び出す前に、<xref:System.Activities.XamlIntegration.TextExpressionCompiler.Compile%2A?displayProperty=nameWithType> を使用して C# 式をコンパイルする必要があります。 ワークフローの作成者は、`CSharpValue` を使用して式の右辺値を表し、`CSharpReference` を使用して式の左辺値を表すことができます。 次の例では、`Assign` アクティビティに含まれる `WriteLine` アクティビティと `Sequence` アクティビティを使用してワークフローを作成します。 `CSharpReference` は `Assign` の `To` 引数として指定され、式の左辺値を表します。 `CSharpValue` は `Assign` の `Value` 引数、および `WriteLine` の `Text` 引数として指定され、2 つの式の右辺値を表します。
 
@@ -124,7 +125,7 @@ static void CompileExpressions(Activity activity)
 ```
 
 > [!NOTE]
-> C#式がコンパイルされていない場合は、次のようなメッセージを使用してワークフローが呼び出されると、<xref:System.NotSupportedException> がスローされます。 `Expression Activity type 'CSharpValue`1 ' を実行するには、コンパイルが必要です。  ワークフローがコンパイルされていることを確認してください。 '
+> C# の式がコンパイルされていない場合は、 <xref:System.NotSupportedException> 次のようなメッセージを使用してワークフローが呼び出されると、がスローされます。 `Expression Activity type 'CSharpValue` 1 ' を実行するには、コンパイルが必要です。  ワークフローがコンパイルされていることを確認してください。 '
 
 カスタムのコードベースのワークフローで `DynamicActivity` を使用する場合は、次のコード例に示すように、`CompileExpressions` メソッドに変更を加える必要があります。
 
@@ -187,9 +188,9 @@ static void CompileExpressions(DynamicActivity dynamicActivity)
 
 - `CompiledExpressionInvoker.SetCompiledExpressionRootForImplementation` の代わりに `CompiledExpressionInvoker.SetCompiledExpressionRoot` が呼び出されます。
 
-コードで式を使用する方法の詳細については、「[命令型コードを使用したワークフロー、アクティビティ、および式の作成](authoring-workflows-activities-and-expressions-using-imperative-code.md)」を参照してください。
+コードで式を使用する方法の詳細については、「 [命令型コードを使用したワークフロー、アクティビティ、および式の作成](authoring-workflows-activities-and-expressions-using-imperative-code.md)」を参照してください。
 
-### <a name="XamlWorkflows"></a>XAML C#ワークフローでの式の使用
+### <a name="using-c-expressions-in-xaml-workflows"></a><a name="XamlWorkflows"></a> XAML ワークフローでの C# 式の使用
 
 C# 式は XAML ワークフローでサポートされています。 コンパイルされた XAML ワークフローは型にコンパイルされ、Loose XAML ワークフローはランタイムによって読み込まれ、ワークフローの実行時にアクティビティ ツリーにコンパイルされます。
 
@@ -197,13 +198,13 @@ C# 式は XAML ワークフローでサポートされています。 コンパ�
 
 - [ルース Xaml](csharp-expressions.md#LooseXaml)
 
-#### <a name="CompiledXaml"></a>コンパイルされた Xaml
+#### <a name="compiled-xaml"></a><a name="CompiledXaml"></a> コンパイルされた Xaml
 
-C# 式は、コンパイルされた XAML ワークフローでサポートされており、[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] を対象とする C# ワークフロー プロジェクトの一部として型にコンパイルされます。 コンパイルされた XAML は、Visual Studio でのワークフロー作成のC#既定の種類であり、visual studio で作成C#され、[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] を対象とするワークフロープロジェクトは、式を使用します。
+C# 式は、コンパイルされた XAML ワークフローでサポートされており、[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] を対象とする C# ワークフロー プロジェクトの一部として型にコンパイルされます。 コンパイルされた XAML は、Visual Studio でのワークフロー作成の既定の種類であり、Visual Studio で作成され、ターゲットとする C# ワークフロープロジェクトは [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] C# 式を使用します。
 
-#### <a name="LooseXaml"></a>ルース Xaml
+#### <a name="loose-xaml"></a><a name="LooseXaml"></a> ルース Xaml
 
-C# 式は Loose XAML ワークフローでがサポートされています。 Loose XAML ワークフローを読み込んで呼び出すワークフロー ホスト プログラムは、[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] を対象としている必要があります。また、<xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> は `true` (既定値は `false`) に設定する必要がります。 <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> を `true` に設定するには、<xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings> プロパティが <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> に設定されている `true` インスタンスを作成し、そのインスタンスを <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A?displayProperty=nameWithType> へパラメーターとして渡します。 `CompileExpressions` が `true`に設定されていない場合は、<xref:System.NotSupportedException> がスローされ、次のようなメッセージが表示されます。 `Expression Activity type 'CSharpValue`1 ' を実行するには、コンパイルが必要です。  ワークフローがコンパイルされていることを確認してください。 '
+C# 式は Loose XAML ワークフローでがサポートされています。 Loose XAML ワークフローを読み込んで呼び出すワークフロー ホスト プログラムは、[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] を対象としている必要があります。また、<xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> は `true` (既定値は `false`) に設定する必要がります。 <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> を `true` に設定するには、<xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings> プロパティが <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> に設定されている `true` インスタンスを作成し、そのインスタンスを <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A?displayProperty=nameWithType> へパラメーターとして渡します。 `CompileExpressions`がに設定されていない場合、が `true` <xref:System.NotSupportedException> スローされ、次のようなメッセージが表示されます。 `Expression Activity type 'CSharpValue` 1 ' を実行するには、コンパイルが必要です。  ワークフローがコンパイルされていることを確認してください。 '
 
 ```csharp
 ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
@@ -216,9 +217,9 @@ DynamicActivity<int> wf = ActivityXamlServices.Load(new StringReader(serializedA
 
 XAML ワークフローの操作の詳細については、「 [xaml との間でのワークフローとアクティビティのシリアル](serializing-workflows-and-activities-to-and-from-xaml.md)化」を参照してください。
 
-### <a name="WFServices"></a>.XAMLX C# workflow services での式の使用
+### <a name="using-c-expressions-in-xamlx-workflow-services"></a><a name="WFServices"></a> .XAMLX workflow services での C# 式の使用
 
-C# 式は XAMLX ワークフロー サービスでがサポートされています。 ワークフロー サービスが IIS または WAS でホストされている場合、追加の手順は必要ありません。ただし、XAML ワークフロー サービスが自己ホスト型サービスの場合は、C# 式をコンパイルする必要があります。 自己ホスト型C#の .xamlx workflow サービスで式をコンパイルするには、最初に .xamlx ファイルを `WorkflowService`に読み込んでから、`WorkflowService` の `Body` を、前の「[コードワークフローでの式C#の使用](csharp-expressions.md#CodeWorkflows)」セクションで説明した `CompileExpressions` メソッドに渡します。 次の例では、XAMLX ワークフロー サービスが読み込まれ、C# 式がコンパイルされた後、ワークフロー サービスが開かれて要求を待機します。
+C# 式は XAMLX ワークフロー サービスでがサポートされています。 ワークフロー サービスが IIS または WAS でホストされている場合、追加の手順は必要ありません。ただし、XAML ワークフロー サービスが自己ホスト型サービスの場合は、C# 式をコンパイルする必要があります。 自己ホスト型の .XAMLX workflow サービスで C# の式をコンパイルするには、最初に .XAMLX ファイルをに読み込み、 `WorkflowService` 次に `Body` 、 `WorkflowService` `CompileExpressions` 「 [コードワークフローでの c# 式の使用](csharp-expressions.md#CodeWorkflows) 」セクションで説明したメソッドにのを渡します。 次の例では、XAMLX ワークフロー サービスが読み込まれ、C# 式がコンパイルされた後、ワークフロー サービスが開かれて要求を待機します。
 
 ```csharp
 // Load the XAMLX workflow service.
@@ -243,7 +244,7 @@ Console.WriteLine("Press enter to quit");
 Console.ReadLine();
 ```
 
-C# 式がコンパイルされないと、`Open` の処理は成功しますが、ワークフローは呼び出し時に失敗します。 次の `CompileExpressions` メソッドは、前の「[コードワークフローで式をC#使用する](csharp-expressions.md#CodeWorkflows)」セクションのメソッドと同じです。
+C# 式がコンパイルされないと、`Open` の処理は成功しますが、ワークフローは呼び出し時に失敗します。 次の `CompileExpressions` メソッドは、前の「 [コードワークフローでの C# 式の使用](csharp-expressions.md#CodeWorkflows) 」セクションのメソッドと同じです。
 
 ```csharp
 static void CompileExpressions(Activity activity)

@@ -2,14 +2,15 @@
 title: ASP.NET を使用せずに WCF AJAX サービスを作成する方法
 ms.date: 03/30/2017
 ms.assetid: ba4a7d1b-e277-4978-9f62-37684e6dc934
-ms.openlocfilehash: b5f0f730f90227dcccc7e5ebf533d80a28f6e6eb
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 37a442f85ddf5c0a1687c05e26f140d052eaa94f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599296"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239095"
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>ASP.NET を使用せずに WCF AJAX サービスを作成する方法
+
 Windows Communication Foundation (WCF) AJAX サービスには、ASP.NET AJAX を必要とせずに、任意の JavaScript 対応の Web ページからアクセスできます。 このトピックでは、このような WCF サービスを作成する方法について説明します。  
   
  ASP.NET AJAX で WCF を使用する方法については、「 [ASP.NET ajax 用の Wcf サービスの作成](creating-wcf-services-for-aspnet-ajax.md)」を参照してください。  
@@ -23,6 +24,7 @@ Windows Communication Foundation (WCF) AJAX サービスには、ASP.NET AJAX �
 - WCF AJAX サービスへのアクセス  
   
 ## <a name="creating-an-ajax-endpoint"></a>AJAX エンドポイントの作成  
+
  WCF サービスで AJAX のサポートを有効にする最も基本的な方法は、 <xref:System.ServiceModel.Activation.WebServiceHostFactory> 次の例のように、サービスに関連付けられている .svc ファイルでを使用することです。  
   
 ```text
@@ -62,6 +64,7 @@ Windows Communication Foundation (WCF) AJAX サービスには、ASP.NET AJAX �
  実際の例については、「 [JSON と XML を使用した AJAX サービス](../samples/ajax-service-with-json-and-xml-sample.md)」を参照してください。  
   
 ## <a name="creating-an-ajax-compatible-service-contract"></a>AJAX 互換サービス コントラクトの作成  
+
  既定では、AJAX エンドポイントを介して公開されるサービス コントラクトは、XML 形式でデータを返します。 また、次の例に示すように、既定では、エンドポイント アドレスの後に操作名を追加した URL に対する HTTP POST 要求によって、サービス操作にアクセスできます。  
   
 ```csharp
@@ -71,7 +74,7 @@ string[] GetCities(string firstLetters);
   
  この操作には、への HTTP POST を使用してアクセスし、XML メッセージを返すことができ `http://serviceaddress/endpointaddress/GetCities` ます。  
   
- Web プログラミング モデルを活用することで、これらの基本的な部分をカスタマイズできます。 たとえば、<xref:System.ServiceModel.Web.WebGetAttribute> 属性または <xref:System.ServiceModel.Web.WebInvokeAttribute> 属性を使用して、操作が応答する HTTP 動詞を制御したり、これらの属性の `UriTemplate` プロパティを使用して、カスタム URI を指定したりできます。 詳細については、「 [WCF WEB HTTP プログラミングモデル](wcf-web-http-programming-model.md)」を参照してください。  
+ Web プログラミング モデルを活用することで、これらの基本的な部分をカスタマイズできます。 たとえば、<xref:System.ServiceModel.Web.WebGetAttribute> 属性または <xref:System.ServiceModel.Web.WebInvokeAttribute> 属性を使用して、操作が応答する HTTP 動詞を制御したり、これらの属性の `UriTemplate` プロパティを使用して、カスタム URI を指定したりできます。 詳細については、「 [WCF WEB HTTP プログラミングモデル](wcf-web-http-programming-model.md) 」を参照してください。  
   
  AJAX サービスでは、JSON データ形式がよく使用されます。 XML ではなく JSON を返す操作を作成するには、<xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> (または <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A>) プロパティを <xref:System.ServiceModel.Web.WebMessageFormat.Json> に設定します。 [スタンドアロンの Json シリアル化](stand-alone-json-serialization.md)のトピックでは、組み込みの .net 型とデータコントラクト型が json にどのように対応しているかを示します。  
   
@@ -102,6 +105,7 @@ string[] GetCities(string firstLetters, int maxNumber);
 ```  
   
 ## <a name="accessing-ajax-services"></a>AJAX サービスへのアクセス  
+
  WCF AJAX エンドポイントは、常に JSON 要求と XML 要求の両方を受け入れます。  
   
  Content-type が "application/json" の HTTP POST 要求は JSON として扱われます。また、XML を示す content-type (たとえば、"text/XML") は XML として扱われます。  

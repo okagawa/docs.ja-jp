@@ -7,14 +7,15 @@ helpviewer_keywords:
 - control patterns, Scroll
 - Scroll control pattern
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
-ms.openlocfilehash: 830d65286f27302dcad109384b8df187ed4af1a5
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 4069772530d8b4db817aa1b7a9be86a3ee83881e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166997"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239264"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>UI オートメーション Scroll コントロール パターンの実装
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
@@ -28,7 +29,9 @@ ms.locfileid: "87166997"
  このコントロールを実装するコントロールの例については、「 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)」を参照してください。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>実装のガイドラインと規則  
+
  スクロール コントロール パターンを実装する場合は、次のガイドラインと規則に留意してください。  
   
 - このコントロールの子は <xref:System.Windows.Automation.Provider.IScrollItemProvider>を実装する必要があります。  
@@ -44,7 +47,9 @@ ms.locfileid: "87166997"
 - <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> はロケール固有です。 HorizontalScrollPercent = 100.0 の設定では、左から右に読む英語などの言語の場合、右端に相当する位置にコントロールのスクロール位置を設定する必要があります。 また、右から左に読むアラビア語などの言語の場合は、HorizontalScrollPercent = 100.0 の設定でスクロール位置を左端の位置に設定する必要があります。  
   
 <a name="Required_Members_for_IScrollProvider"></a>
+
 ## <a name="required-members-for-iscrollprovider"></a>IScrollProvider の必須メンバー  
+
  <xref:System.Windows.Automation.Provider.IScrollProvider>の実装には、次のプロパティとメソッドが必要です。  
   
 |必須メンバー|メンバーの型|メモ|  
@@ -55,13 +60,15 @@ ms.locfileid: "87166997"
 |<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalViewSize%2A>|プロパティ|なし|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontallyScrollable%2A>|プロパティ|なし|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider.VerticallyScrollable%2A>|プロパティ|なし|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A>|メソッド|なし|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>|メソッド|なし|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A>|Method|なし|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>|Method|なし|  
   
  このコントロール パターンには、関連するイベントがありません。  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>例外  
+
  プロバイダーは、次の例外をスローする必要があります。  
   
 |例外の種類|条件|  

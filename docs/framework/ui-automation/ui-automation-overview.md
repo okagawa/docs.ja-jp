@@ -7,18 +7,19 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 84b176e53f16ba0676e933efe9ed679bf425abc0
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 50c811a4b9b3b191abc35c5b3eb1220fec4ba3bd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163265"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240494"
 ---
 # <a name="ui-automation-overview"></a>UI オートメーションの概要
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]は、をサポートするすべてのオペレーティングシステムで使用できる Microsoft Windows 用の新しいアクセシビリティフレームワークです [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 。  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] は、をサポートするすべてのオペレーティングシステムで使用できる Microsoft Windows 用の新しいアクセシビリティフレームワークです [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 。  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、デスクトップ上のほとんどの [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 要素へのプログラムによるアクセスを提供し、スクリーン リーダーなどの補助技術製品が [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] に関する情報をエンド ユーザーに提供したり、標準入力方式以外の方法で [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] を操作したりできるようにします。 また、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、自動テスト スクリプトが [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]と対話できるようにします。  
   
@@ -27,12 +28,14 @@ ms.locfileid: "87163265"
   
  UI オートメーション クライアント アプリケーションを作成すると、そのアプリケーションは、複数のフレームワーク上で動作することが保証されます。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コアは、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]のさまざまな部分の基になるフレームワークのあらゆる差異をマスクします。 たとえば、 `Content` ボタンのプロパティ、 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] `Caption` Win32 ボタンのプロパティ、および `ALT` HTML イメージのプロパティはすべて、ビュー内の1つのプロパティにマップされ <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ます。  
   
-UI オートメーションは、.NET Framework を実行している、サポートされている Windows オペレーティングシステムのすべての機能を提供します (「.NET Core 3.0 以降での .NET Core の[システム要件](../get-started/system-requirements.md)またはバージョンの .NET Framework」を参照してください)。  
+UI オートメーションは、.NET Framework を実行している、サポートされている Windows オペレーティングシステムのすべての機能を提供します (「.NET Core 3.0 以降での .NET Core の [システム要件](../get-started/system-requirements.md) またはバージョンの .NET Framework」を参照してください)。  
   
  UI オートメーションプロバイダーは、組み込みのブリッジングサービスを介して Microsoft Active Accessibility クライアントアプリケーションをサポートします。  
   
 <a name="Providers_and_Clients"></a>
+
 ## <a name="providers-and-clients"></a>プロバイダーおよびクライアント  
+
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] には、次の表に示す 4 つの主要なコンポーネントがあります。  
   
 |コンポーネント|説明|  
@@ -46,7 +49,7 @@ UI オートメーションは、.NET Framework を実行している、サポ�
   
 |セクション|主題|対象ユーザー|  
 |-------------|--------------------|--------------|  
-|[UI オートメーションの基礎](index.md)(このセクション)|概念についての広範な概要。|すべて。|  
+|[UI オートメーションの基礎](index.md) (このセクション)|概念についての広範な概要。|すべて。|  
 |[マネージド コードの UI オートメーション プロバイダー](ui-automation-providers-for-managed-code.md)|プロバイダー API を使用する際に役立つ概要と「方法」トピック。|コントロールの開発者。|  
 |[マネージド コードの UI オートメーション クライアント](ui-automation-clients-for-managed-code.md)|クライアント API を使用する際に役立つ概要と「方法」トピック。|クライアント アプリケーションの開発者。|  
 |[UI オートメーション コントロール パターン](ui-automation-control-patterns.md)|コントロール パターンをプロバイダーで実装する方法と、クライアントで使用可能な機能に関する情報。|すべて。|  
@@ -63,7 +66,9 @@ UI オートメーションは、.NET Framework を実行している、サポ�
 |<xref:System.Windows.Automation.Peers>|PresentationFramework|[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]で使用する UI オートメーション プロバイダーの開発者。|  
   
 <a name="UI_Automation_Model"></a>
+
 ## <a name="ui-automation-model"></a>UI オートメーション モデル  
+
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] のすべての部分を、クライアント アプリケーションに対して、 <xref:System.Windows.Automation.AutomationElement>として公開します。 各要素は、デスクトップをルート要素とするツリー構造に格納されます。 クライアントでは、ツリーの未加工ビューを、コントロール ビューまたはコンテンツ ビューとしてフィルター処理できます。 アプリケーションでは、カスタム ビューを作成することもできます。  
   
  <xref:System.Windows.Automation.AutomationElement> オブジェクトは、それらが表す [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 要素の一般的なプロパティを公開します。 これらのプロパティの 1 つにコントロール型があります。これは、その基本的な外観と機能を認識可能な単一のエンティティとして定義するもので、ボタンやチェック ボックスなどがその例です。  

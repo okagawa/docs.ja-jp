@@ -7,14 +7,15 @@ helpviewer_keywords:
 - Range Value control pattern
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
-ms.openlocfilehash: ccb6aeb5f8451975d7e2e9649bbb82c0c3ae23d5
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 9b5bfd571b078b7aeab149f5371004ac832fadcc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164081"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239563"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>UI オートメーション RangeValue コントロール パターンの実装
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
@@ -23,7 +24,9 @@ ms.locfileid: "87164081"
  <xref:System.Windows.Automation.RangeValuePattern> コントロール パターンは、一定の範囲内の値に設定できるコントロールをサポートするために使用します。 このコントロール パターンを実装するコントロールの例については、「 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)」をご覧ください。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>実装のガイドラインと規則  
+
  Range Value コントロール パターンを実装する場合は、次のガイドラインと規則に留意してください。  
   
 - コントロールでは、ロケールまたはユーザー設定に基づいてサポートされているプロパティを再調整できます。 たとえば、温度計コントロールを、華氏または摂氏で温度を表示するように設定できます。  
@@ -34,6 +37,7 @@ ms.locfileid: "87164081"
 値が整数型で、最小値と最大値のプロパティ値がそれぞれ 0 と 100 に正規化された進行状況バーの例  
   
 <a name="Required_Members_for_the_IRangeValueProvider"></a>
+
 ## <a name="required-members-for-irangevalueprovider"></a>IRangeValueProvider の必須メンバー  
   
 |必須メンバー|メンバーの型|メモ|  
@@ -49,7 +53,9 @@ ms.locfileid: "87164081"
  このコントロール パターンには、関連するイベントがありません。  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>例外  
+
  プロバイダーは、次の例外をスローする必要があります。  
   
 |例外の種類|条件|  

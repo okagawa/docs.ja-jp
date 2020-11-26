@@ -6,19 +6,21 @@ helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-ms.openlocfilehash: 8220e8e773409be76bc7522d57551f1bddb90e5d
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 7de4ad48ae275b4119f05a5269e9819c201027fd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474359"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240590"
 ---
 # <a name="loader-etw-events"></a>ローダー ETW イベント
+
 これらのイベントは、アプリケーションのドメイン、アセンブリ、およびモジュールのロードとアンロードに関連する情報を収集します。  
   
  すべてのローダー イベントは、 `LoaderKeyword` (0x8) キーワードで発生します。 `DCStart` および `DCEnd` のイベントは、`StartRundown`/`EndRundown` が有効になっている `LoaderRundownKeyword` (0x8) で発生します。 (詳細については、「 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)」を参照してください)。  
 
 ## <a name="application-domain-events"></a>アプリケーション ドメイン イベント
+
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|Event|Level|  
@@ -29,7 +31,7 @@ ms.locfileid: "86474359"
   
  次の表に、イベント情報を示します。  
   
-|Event|イベント ID|説明|  
+|Event|イベント ID|Description|  
 |-----------|--------------|-----------------|  
 |`AppDomainLoad_V1` (すべてのアプリケーション ドメインについて記録)|156|プロセスの有効期間中に、アプリケーション ドメインが作成されるたびに発生します。|  
 |`AppDomainUnLoad_V1`|157|プロセスの有効期間中に、アプリケーション ドメインが破壊されるたびに発生します。|  
@@ -47,6 +49,7 @@ ms.locfileid: "86474359"
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
 
 ## <a name="clr-loader-assembly-events"></a>CLR ローダー アセンブリ イベント  
+
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|Event|Level|  
@@ -57,7 +60,7 @@ ms.locfileid: "86474359"
   
  次の表に、イベント情報を示します。  
   
-|Event|イベント ID|説明|  
+|Event|イベント ID|Description|  
 |-----------|--------------|-----------------|  
 |`AssemblyLoad_V1`|154|アセンブリが読み込まれたときに発生します。|  
 |`AssemblyUnload_V1`|155|アセンブリがアンロードされたときに発生します。|  
@@ -76,6 +79,7 @@ ms.locfileid: "86474359"
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|
 
 ## <a name="module-events"></a>モジュール イベント
+
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|Event|Level|  
@@ -87,7 +91,7 @@ ms.locfileid: "86474359"
   
  次の表に、イベント情報を示します。  
   
-|Event|イベント ID|説明|  
+|Event|イベント ID|Description|  
 |-----------|--------------|-----------------|  
 |`ModuleLoad_V2`|152|プロセスの有効期間中にモジュールが読み込まれるときに発生します。|  
 |`ModuleUnload_V2`|153|プロセスの有効期間中にモジュールがアンロードされるときに発生します。|  
@@ -121,6 +125,7 @@ ms.locfileid: "86474359"
 - "NativePdb"で始まるフィールド名は、 `NGEN createPDB`を呼び出すことによって生成された NGen PDB を参照します。 この PDB は、ネイティブ PDB 形式を使用して、ファイル、行番号、およびシンボルの名前など、元のマネージド ソース コードからの要素が NGen モジュールにコンパイルされているネイティブ要素にどのようにマップされるかについて説明します。  
 
 ## <a name="clr-domain-module-events"></a>CLR ドメイン モジュール イベント
+
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|Event|Level|  
@@ -131,7 +136,7 @@ ms.locfileid: "86474359"
   
  次の表に、イベント情報を示します。  
   
-|Event|イベント ID|説明|  
+|Event|イベント ID|Description|  
 |-----------|--------------|-----------------|  
 |`DomainModuleLoad_V1`|151|モジュールがアプリケーション ドメインに読み込まれるときに発生します。|  
 |`DomainModuleDCStart_V1`|151|開始ランダウン中にアプリケーション ドメインに読み込まれたモジュールを列挙し、すべてのアプリケーション ドメインについてログに記録されます。|  
@@ -151,6 +156,7 @@ ms.locfileid: "86474359"
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
 
 ## <a name="module-range-events"></a>モジュールの範囲イベント
+
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|Event|Level|  
@@ -161,7 +167,7 @@ ms.locfileid: "86474359"
   
  次の表に、イベント情報を示します。  
   
-|Event|イベント ID|説明|  
+|Event|イベント ID|Description|  
 |-----------|--------------|-----------------|  
 |`ModuleRange`|158|ロードされたネイティブ イメージ ジェネレーター (NGen) のイメージが IBC によって最適化されていて、NGen イメージのホット セクションに関する情報が含まれる場合は、このイベントが存在します。|  
 |`ModuleRangeDCStart`|160|ランダウンの開始時に発生する `ModuleRange` イベント。|  
@@ -180,6 +186,7 @@ ms.locfileid: "86474359"
 |RangeBegin2|win:UnicodeString||  
   
 ### <a name="remarks"></a>解説  
+
  .NET Framework のプロセスで読み込まれた NGen イメージが IBC に最適化されている場合、NGen イメージにホットの範囲を含む `ModuleRange` イベントが `moduleID` と `ClrInstanceID`と共にログに記録されます。  NGen イメージが IBC に最適化されていない場合は、このイベントは記録されません。 モジュール名を確認するには、このイベントをモジュールの読み込みの ETW イベントで照合する必要があります。  
   
  このイベントのペイロードのサイズは変数です。 `Count` フィールドは、イベントに含まれている範囲オフセットの数を示します。  このイベントは、実際の範囲を判断するために Windows `IStart` イベントと照合する必要があります。 Windows Image Load イベントは、イメージが読み込まれ、読み込まれたイメージの仮想アドレスが含まれている場合は必ず記録されます。  

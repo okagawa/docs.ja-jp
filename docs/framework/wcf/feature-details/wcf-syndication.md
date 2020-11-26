@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
-ms.openlocfilehash: 677e8a4b00b36c2f11b27eb65d57be8abf75d6d2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 825990c6c1690281af65d53c76dcca0f3e2ffb67
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600647"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239043"
 ---
 # <a name="wcf-syndication"></a>WCF 配信
+
 Windows Communication Foundation (WCF) は、Atom、RSS、またはその他のカスタム形式で配信フィードを簡単に操作できるようにします。これにより、これらのフィードを読み取り、作成したり、サービスエンドポイントで公開したりすることができます。 このセクションのトピックでは、配信用のこのプログラミング モデルについて詳細に説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [WCF 配信の概要](wcf-syndication-overview.md)  
  WCF によって提供される配信サポートの概要について説明します。  
   

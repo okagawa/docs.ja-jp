@@ -7,14 +7,15 @@ helpviewer_keywords:
 - UI Automation, Scroll Item control pattern
 - Scroll Item control pattern
 ms.assetid: 903bab5c-80c1-44d7-bdc2-0a418893b987
-ms.openlocfilehash: a548eb25280d9a8feddc4633a1ba3e7dc022af36
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 3274f75af0ca055547a75fd8db6384ddb0f59483
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163579"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239238"
 ---
 # <a name="implementing-the-ui-automation-scrollitem-control-pattern"></a>UI オートメーション ScrollItem コントロール パターンの実装
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
@@ -23,13 +24,17 @@ ms.locfileid: "87163579"
  <xref:System.Windows.Automation.ScrollItemPattern> コントロール パターンは、<xref:System.Windows.Automation.Provider.IScrollProvider> を実装するコンテナーの個々の子コントロールをサポートするために使用されます。 このコントロール パターンは、子コントロールとそのコンテナーの間の通信チャネルとして機能することで、ビューポート内に現在表示されているコンテンツ (または領域) がコンテナーによって確実に変更され、子コントロールが表示されるようにします。 このコントロール パターンを実装するコントロールの例については、「 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)」をご覧ください。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>実装のガイドラインと規則  
+
  スクロール項目コントロール パターンを実装する場合は、次のガイドラインと規則にご留意ください。  
   
 - ウィンドウ コントロールまたはキャンバス コントロール内の項目で、IScrollItemProvider インターフェイスを実装する必要はありません。 代わりに、<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> の正しい位置を公開する必要があります。 これにより、UI オートメーション クライアント アプリケーションは、<xref:System.Windows.Automation.ScrollPattern> コントロール パターン メソッドをコンテナーで使用して、子項目を表示できます。  
   
 <a name="Required_Members_for_IScrollItemProvider"></a>
+
 ## <a name="required-members-for-iscrollitemprovider"></a>IScrollItemProvider の必須メンバー  
+
  IScrollProvider インターフェイスを実装するには、次のメソッドが必要です。  
   
 |必須メンバー|メンバーの型|メモ|  
@@ -39,7 +44,9 @@ ms.locfileid: "87163579"
  このコントロール パターンに関連付けられるプロパティやイベントはありません。  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>例外  
+
  プロバイダーは、次の例外をスローする必要があります。  
   
 |例外の種類|条件|  

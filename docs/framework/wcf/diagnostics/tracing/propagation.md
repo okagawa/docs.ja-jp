@@ -2,17 +2,19 @@
 title: 伝達
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: 732ae5cb1ce311b78728f8d5de0fd9102bf32499
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: be010178d8f0face8f6c7e986107e4ea90d91953
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84578956"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240135"
 ---
 # <a name="propagation"></a>伝達
+
 このトピックでは、Windows Communication Foundation (WCF) トレースモデルでのアクティビティの伝達について説明します。  
   
 ## <a name="using-propagation-to-correlate-activities-across-endpoints"></a>伝達を使用したエンドポイント間でのアクティビティの関連付け  
+
  伝達を使用することで、複数のアプリケーション エンドポイントについて、同じ処理単位 (要求など) のエラー トレースを直接関連付けることができます。 さまざまなエンドポイントで発生した同じ処理単位のエラーは、アプリケーション ドメインが異なる場合でも同じアクティビティとしてグループ化されます。 これは、メッセージ ヘッダーで特定のアクティビティ ID を伝達することによって実現されます。 したがって、サーバーの内部エラーによってクライアントがタイムアウトした場合、これらのエラーは直接関係しているので、どちらも同じアクティビティに表示されます。  
   
  これを行うには、前述の例に示すように `ActivityTracing` 設定を使用します。 さらに、すべてのエンドポイントで `propagateActivity` トレース ソースの `System.ServiceModel` 属性を設定します。  
@@ -24,6 +26,7 @@ ms.locfileid: "84578956"
  アクティビティの伝達は構成可能な機能であり、WCF によって送信メッセージにヘッダーが追加されます。これには、TLS のアクティビティ ID が含まれます。 サーバー側の以降のトレースでこの ID を含めることにより、クライアントとサーバーのアクティビティを相互に関連付けることができます。  
   
 ## <a name="propagation-definition"></a>伝達の定義  
+
  次のすべての条件に該当する場合に、アクティビティ M の gAId がアクティビティ N に伝達されます。  
   
 - M に起因して N が作成された。  
@@ -71,9 +74,11 @@ ms.locfileid: "84578956"
 ```  
   
 ## <a name="propagation-and-activity-boundaries"></a>伝達とアクティビティ境界  
+
  エンドポイント間でアクティビティ ID が伝達されると、メッセージの受信側は、その (伝達された) アクティビティ ID を使用して Start トレースと Stop トレースを出力します。 したがって、各トレース ソースごとに、該当の gAId を持つ Start/Stop トレースが存在することになります。 複数のエンドポイントが同じプロセス内に存在し、同じトレース ソース名を使用している場合、同じ lAId (同じ gAId、同じトレース ソース、同じプロセス) を持つ複数の Start と Stop が作成されます。  
   
-## <a name="synchronization"></a>同期  
+## <a name="synchronization"></a>Synchronization  
+
  異なるコンピューター上で実行されるエンドポイント間でイベントを同期するには、メッセージ内で伝達される ActivityId ヘッダーに CorrelationId を追加します。 ツールはこの ID を使用することにより、クロックにずれのあるコンピューター間でもイベントを同期できます。 具体的に言うと、サービス トレース ビューアー ツールは、エンドポイント間のメッセージ フローを示す際に、この ID を使用します。  
   
 ## <a name="see-also"></a>関連項目

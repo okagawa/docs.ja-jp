@@ -2,32 +2,35 @@
 title: 1007 - WorkflowApplicationPersisted
 ms.date: 03/30/2017
 ms.assetid: f4ea4452-28e3-4e66-93c6-eb12ee29bcb1
-ms.openlocfilehash: 0b3c290ad06eda6921626c0d7a1c8ec854c30e7a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa4c7b2c98924eb43f78ab23a145b93906e302fc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925269"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239810"
 ---
 # <a name="1007---workflowapplicationpersisted"></a>1007 - WorkflowApplicationPersisted
+
 ## <a name="properties"></a>プロパティ  
   
 |||  
 |-|-|  
 |ID|1007|  
-|キーワード|WFRuntime|  
-|レベル|情報|  
+|Keywords|WFRuntime|  
+|Level|情報|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>Description  
+
  ワークフロー アプリケーションが永続化されていることを示します。  
   
-## <a name="message"></a>メッセージ  
+## <a name="message"></a>Message  
+
  WorkflowApplication ID: %1 が永続化されました。  
   
-## <a name="details"></a>説明  
+## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|説明|  
+|データ項目名|データ項目の型|Description|  
 |--------------------|--------------------|-----------------|  
 |WorkflowApplicationId|`xs:string`|ワークフロー アプリケーション ID|  
 |AppDomain|`xs:string`|AppDomain.CurrentDomain.FriendlyName で返される文字列。|

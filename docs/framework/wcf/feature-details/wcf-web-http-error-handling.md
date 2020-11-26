@@ -2,17 +2,19 @@
 title: WCF Web HTTP エラー処理
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-ms.openlocfilehash: b1d41bebafa2795d390b120ad84475417389479b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cfbf98c69370764a9526c32459d43521177476e3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598646"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239030"
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF Web HTTP エラー処理
+
 Windows Communication Foundation (WCF) Web HTTP エラー処理を使用すると、HTTP 状態コードを指定し、操作と同じ形式 (XML、JSON など) を使用してエラーの詳細を返す WCF Web HTTP サービスからエラーを返すことができます。  
   
 ## <a name="wcf-web-http-error-handling"></a>WCF Web HTTP エラー処理  
+
  <xref:System.ServiceModel.Web.WebFaultException> クラスは、HTTP 状態コードを指定できるようにするコンストラクターを定義します。 この状態コードは、クライアントに返されます。 <xref:System.ServiceModel.Web.WebFaultException> クラスのジェネリック バージョンである <xref:System.ServiceModel.Web.WebFaultException%601> を使用すると、発生したエラーに関する情報を格納しているユーザー定義型を返すことができます。 このカスタム オブジェクトは、操作で定義された形式を使用してシリアル化され、クライアントに返されます。 次の例は、HTTP 状態コードを返す方法を示しています。  
   
 ```csharp

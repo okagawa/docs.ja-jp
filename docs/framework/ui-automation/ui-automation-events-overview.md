@@ -10,14 +10,15 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: 4f51a31a433986822a9dba22bf8f17ade00bbb76
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 8a97c4bfbe361eafc11cd920b032424f67c3a5fb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168088"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240447"
 ---
 # <a name="ui-automation-events-overview"></a>UI オートメーション イベントの概要
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
@@ -26,7 +27,9 @@ ms.locfileid: "87168088"
  これらのイベントにサブスクライブしているクライアントがあるか、それともイベントをリッスンするクライアントがなく、サブスクライブしているクライアントがまったくないかに応じて、プロバイダー アプリケーションが選択的にイベントを発生させることで効率が向上します。  
   
 <a name="Types_of_Events"></a>
+
 ## <a name="types-of-events"></a>イベントの種類  
+
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントは次のカテゴリに分けられます。  
   
 |Event|説明|  
@@ -49,7 +52,9 @@ ms.locfileid: "87168088"
 - `TextChangedEvent`  
   
 <a name="UI_Automation_Event_Identifiers"></a>
+
 ## <a name="ui-automation-event-identifiers"></a>UI オートメーション イベント識別子  
+
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] イベントは、 <xref:System.Windows.Automation.AutomationEvent> オブジェクトによって識別されます。 <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> プロパティには、イベントの種類を一意に識別する値が含まれます。  
   
  <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> に指定できる値と、イベント引数に使用する種類を次の表に示します。 クライアントとプロバイダーが使用する識別子は、異なるクラスで同じ名前のフィールドです。  
@@ -64,10 +69,12 @@ ms.locfileid: "87168088"
 |<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.WindowClosedEventArgs>|  
   
 <a name="UI_Automation_Event_Arguments"></a>
+
 ## <a name="ui-automation-event-arguments"></a>UI オートメーション イベント引数  
+
  次のクラスは、イベント引数をカプセル化します。  
   
-|クラス|説明|  
+|インスタンス|説明|  
 |-----------|-----------------|  
 |<xref:System.Windows.Automation.AsyncContentLoadedEventArgs>|読み込みが完了した割合など、コンテンツの非同期読み込みに関する情報を含んでいます。|  
 |<xref:System.Windows.Automation.AutomationEventArgs>|追加データを必要としない単純なイベントに関する情報を含んでいます。|  
