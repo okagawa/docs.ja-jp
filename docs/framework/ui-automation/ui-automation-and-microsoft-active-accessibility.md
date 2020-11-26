@@ -8,31 +8,38 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 0685a3f89a6578433641aaf78717f4ff377ff2f9
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 79545c292cf0f04620a78105833a2f2c76dc5f78
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164063"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242007"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI オートメーションと Microsoft Active Accessibility
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
- Microsoft Active Accessibility は、アプリケーションをアクセス可能にするための以前のソリューションでした。 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]は、Microsoft Windows の新しいユーザー補助モデルであり、支援技術製品および自動テストツールのニーズに対応することを目的としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]は、Active Accessibility に対する多くの機能強化を提供します。  
+ Microsoft Active Accessibility は、アプリケーションをアクセス可能にするための以前のソリューションでした。 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] は、Microsoft Windows の新しいユーザー補助モデルであり、支援技術製品および自動テストツールのニーズに対応することを目的としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、Active Accessibility に対する多くの機能強化を提供します。  
   
  このトピックでは、の主な機能 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] と、これらの機能が Active Accessibility とどのように異なるかについて説明します。  
   
 <a name="Programming_Languages_compare"></a>
+
 ## <a name="programming-languages"></a>プログラミング言語  
-Active Accessibility は、デュアルインターフェイスをサポートするコンポーネントオブジェクトモデル (COM) に基づいているため、C/c + +、Microsoft Visual Basic 6.0、およびスクリプト言語でプログラミングできます。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)](標準コントロールのクライアント側プロバイダーライブラリを含む) はマネージコードで記述されており、UI オートメーションクライアントアプリケーションは、C# または Visual Basic .NET を使用して最も簡単にプログラミングできます。 インターフェイスを実装する UI オートメーション プロバイダーは、マネージド コードまたは C/C++ で記述できます。  
+
+Active Accessibility は、デュアルインターフェイスをサポートするコンポーネントオブジェクトモデル (COM) に基づいているため、C/c + +、Microsoft Visual Basic 6.0、およびスクリプト言語でプログラミングできます。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (標準コントロールのクライアント側プロバイダーライブラリを含む) はマネージコードで記述されており、UI オートメーションクライアントアプリケーションは、C# または Visual Basic .NET を使用して最も簡単にプログラミングできます。 インターフェイスを実装する UI オートメーション プロバイダーは、マネージド コードまたは C/C++ で記述できます。  
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>
+
 ## <a name="support-in-windows-presentation-foundation"></a>Windows Presentation Foundation におけるサポート  
+
  Windows Presentation Foundation (WPF) は、ユーザーインターフェイスを作成するための新しいモデルです。 WPF 要素には Active Accessibility のネイティブサポートが含まれていません。ただし、サポートさ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] れています。これには Active Accessibility クライアントのブリッジングサポートが含まれます。 用に特別に記述されたクライアントのみ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] が、テキストの豊富なサポートなど、WPF のユーザー補助機能を最大限に活用できます。  
   
 <a name="Servers_and_Clients_compare"></a>
+
 ## <a name="servers-and-clients"></a>サーバーとクライアント  
+
  Active Accessibility では、サーバーとクライアントは、主にサーバーのの実装を介して直接通信し `IAccessible` ます。  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]では、サーバー (プロバイダー) とクライアントの間にコア サービスが存在します。 このコア サービスは、プロバイダーによって実装されたインターフェイスを呼び出して、追加のサービス (要素の一意のランタイム識別子の生成など) を提供します。 クライアント アプリケーションはライブラリ関数を使用して [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] サービスを呼び出します。  
@@ -40,13 +47,17 @@ Active Accessibility は、デュアルインターフェイスをサポート�
  UI オートメーションプロバイダーは Active Accessibility クライアントに情報を提供でき、Active Accessibility サーバーは UI オートメーションクライアントアプリケーションに情報を提供できます。 ただし、Active Accessibility はほど多くの情報を公開しないため、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 2 つのモデルは完全には互換性がありません。  
   
 <a name="UI_Elements_compare"></a>
+
 ## <a name="ui-elements"></a>UI 要素  
+
  Active Accessibility [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] は、要素を `IAccessible` インターフェイスまたは子識別子として提示します。 2 つの `IAccessible` ポインターを比較してそれらが同じ要素を参照しているかどうかを判断するのは困難です。  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]では、すべての要素が <xref:System.Windows.Automation.AutomationElement> オブジェクトとして表現されます。 比較は等値演算子または <xref:System.Windows.Automation.AutomationElement.Equals%2A> メソッドを使用して行われますが、どちらの方法でも、要素の一意のランタイム識別子が比較されます。  
   
 <a name="Tree_Views_and_Navigation_compare"></a>
+
 ## <a name="tree-views-and-navigation"></a>ツリー ビューとナビゲーション  
+
  画面上の [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 要素は、ツリー構造で表すことができます。デスクトップがルートで、その直接の子としてアプリケーション ウィンドウがあり、アプリケーション内の要素がその子孫となります。  
   
  Active Accessibility では、エンドユーザーに関係のないオートメーション要素の多くがツリーで公開されます。 クライアント アプリケーションは、すべての要素の中から意味のあるものを特定する必要があります。  
@@ -60,7 +71,9 @@ Active Accessibility は、デュアルインターフェイスをサポート�
  でのナビゲーション [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、Active Accessibility よりも一貫性があります。 ドロップダウンリストやポップアップウィンドウなどの一部の要素が Active Accessibility ツリーに2回表示され、それらの要素からのナビゲーションが予期しない結果になる場合があります。 実際には、rebar コントロールに Active Accessibility を正しく実装することはできません。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] では親の再指定や位置の変更が可能なため、ウィンドウの所有関係による階層にかかわらず、要素をツリー内の任意の場所に配置できます。  
   
 <a name="Roles_and_Control_Types"></a>
+
 ## <a name="roles-and-control-types"></a>役割とコントロール型  
+
  Active Accessibility は、 `accRole` プロパティ ( `IAccessible::get_actRole` ) を使用して、ROLE_SYSTEM_SLIDER や ROLE_SYSTEM_MENUITEM など、内の要素のロールの説明を取得し [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ます。 要素の役割は、要素の機能を表す主要な鍵になります。 コントロールとの対話は、 `IAccessible::accSelect` や `IAccessible::accDoDefaultAction`などの固定のメソッドを使用して実現されます。 クライアント アプリケーションと [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] の間の対話は、 `IAccessible`を通して実行できる範囲に限定されます。  
   
  これに対して、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] では、要素のコントロール型 ( <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> プロパティで記述) と、その要素に期待される機能とが大きく分離されています。 機能は、特殊なインターフェイスの実装を通じてプロバイダーによってサポートされる、コントロール パターンによって決定されます。 複数のコントロール パターンを組み合わせると、特定の [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 要素がサポートする機能をすべて記述することができます。 プロバイダーによっては、ある 1 つの特定のコントロール パターンをサポートしなければならないものがあります。たとえば、チェック ボックスのプロバイダーは Toggle コントロール パターンをサポートする必要があります。 また、コントロール パターンのセットを 1 つ以上サポートしなければならないものもあります。たとえば、ボタンは、Toggle と Invoke のいずれかをサポートする必要があります。 さらに、コントロール パターンをまったくサポートしないものもあります。たとえば、移動もサイズ変更もドッキングもできないペインには、コントロール パターンはありません。  
@@ -71,8 +84,8 @@ Active Accessibility は、デュアルインターフェイスをサポート�
   
 |Active Accessibility ロール|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のコントロール型|  
 |----------------------------------------------------------------------|----------------------------------------------------------------------------------------|  
-|ROLE_SYSTEM_PUSHBUTTON|Button|  
-|ROLE_SYSTEM_CLIENT|予定表|  
+|ROLE_SYSTEM_PUSHBUTTON|ボタン|  
+|ROLE_SYSTEM_CLIENT|Calendar|  
 |ROLE_SYSTEM_CHECKBUTTON|チェック ボックス|  
 |ROLE_SYSTEM_COMBOBOX|コンボ ボックス|  
 |ROLE_SYSTEM_CLIENT|カスタム|  
@@ -90,7 +103,7 @@ Active Accessibility は、デュアルインターフェイスをサポート�
 |ROLE_SYSTEM_MENUPOPUP|メニュー|  
 |ROLE_SYSTEM_MENUBAR|メニュー バー|  
 |ROLE_SYSTEM_MENUITEM|メニュー項目|  
-|ROLE_SYSTEM_PANE|ウィンドウ|  
+|ROLE_SYSTEM_PANE|ペイン|  
 |ROLE_SYSTEM_PROGRESSBAR|進行状況バー|  
 |ROLE_SYSTEM_RADIOBUTTON|ラジオ ボタン|  
 |ROLE_SYSTEM_SCROLLBAR|スクロール バー|  
@@ -106,7 +119,7 @@ Active Accessibility は、デュアルインターフェイスをサポート�
 |ROLE_SYSTEM_INDICATOR|つまみ|  
 |ROLE_SYSTEM_TITLEBAR|タイトル バー|  
 |ROLE_SYSTEM_TOOLBAR|ツール バー|  
-|ROLE_SYSTEM_TOOLTIP|ヒント|  
+|ROLE_SYSTEM_TOOLTIP|ToolTip|  
 |ROLE_SYSTEM_OUTLINE|ツリー|  
 |ROLE_SYSTEM_OUTLINEITEM|ツリー項目|  
 |ROLE_SYSTEM_WINDOW|ウィンドウ|  
@@ -114,10 +127,12 @@ Active Accessibility は、デュアルインターフェイスをサポート�
  さまざまなコントロール型の詳細については、「 [UI Automation Control Types](ui-automation-control-types.md)」を参照してください。  
   
 <a name="States_and_Properties"></a>
+
 ## <a name="states-and-properties"></a>状態とプロパティ  
+
  Active Accessibility では、要素は一般的なプロパティのセットをサポートし、一部のプロパティ (など `accState` ) は、要素のロールに応じてまったく異なる項目を記述する必要があります。 サーバーは、プロパティを返す `IAccessible` のメソッドをすべて (要素に無関係なものも含む) 実装する必要があります。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ではさらに多くのプロパティが定義されており、その中には Active Accessibility の状態に対応するものがあります。 すべての要素に共通するものもあれば、コントロール型とコントロール パターンに固有のものもあります。 プロパティは一意の識別子によって識別され、ほとんどのプロパティは単一のメソッド ( <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> または <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>) を使用して取得できます。 多くのプロパティは、 <xref:System.Windows.Automation.AutomationElement.Current%2A> プロパティ アクセサーおよび <xref:System.Windows.Automation.AutomationElement.Cached%2A> プロパティ アクセサーからも容易に取得できます。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ではさらに多くのプロパティが定義されており、その中には Active Accessibility の状態に対応するものがあります。 すべての要素に共通するものもあれば、コントロール型とコントロール パターンに固有のものもあります。 プロパティは一意の識別子によって識別され、ほとんどのプロパティは単一のメソッド ( <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> または <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>) を使用して取得できます。 多くのプロパティは、 <xref:System.Windows.Automation.AutomationElement.Current%2A> プロパティ アクセサーおよび <xref:System.Windows.Automation.AutomationElement.Cached%2A> プロパティ アクセサーからも容易に取得できます。  
   
  UI オートメーション プロバイダーは、無関係なプロパティを実装する必要はなく、サポートしていないプロパティに対しては単に `null` 値を返すことができます。 また、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のコア サービスは、一部のプロパティを既定のウィンドウ プロバイダーから取得できます。これらのプロパティは、プロバイダーによって明示的に実装されたプロパティと 1 つにまとめられます。  
   
@@ -125,7 +140,7 @@ Active Accessibility は、デュアルインターフェイスをサポート�
   
  次の表に、2 つのモデルのプロパティ間の対応を示します。  
   
-|Active Accessibility プロパティアクセサー|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のプロパティ ID|Remarks|  
+|Active Accessibility プロパティアクセサー|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のプロパティ ID|解説|  
 |-----------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|-------------|  
 |`get_accKeyboardShortcut`|<xref:System.Windows.Automation.AutomationElement.AccessKeyProperty> または <xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty>|両方とも存在する場合は`AccessKeyProperty` が優先されます。|  
 |`get_accName`|<xref:System.Windows.Automation.AutomationElement.NameProperty>||  
@@ -161,7 +176,7 @@ Active Accessibility は、デュアルインターフェイスをサポート�
   
  次の状態は、ほとんどの Active Accessibility コントロールサーバーで実装されていないか、に相当するものがありませんでした [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 。  
   
-|Active Accessibility の状態|Remarks|  
+|Active Accessibility の状態|解説|  
 |-----------------------------------------------------------------------|-------------|  
 |STATE_SYSTEM_BUSY|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |STATE_SYSTEM_DEFAULT|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
@@ -180,7 +195,9 @@ Active Accessibility は、デュアルインターフェイスをサポート�
  プロパティ識別子の完全な一覧につい [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ては、「 [UI オートメーションプロパティの概要](ui-automation-properties-overview.md)」を参照してください。  
   
 <a name="uiautomation_events_compare"></a>
+
 ## <a name="events"></a>events  
+
  のイベントメカニズムは、Active Accessibility とは [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 異なり、Windows イベントルーティング (ウィンドウハンドルと密接に関連しています) に依存せず、クライアントアプリケーションでフックを設定する必要はありません。 イベントのサブスクリプションは、特定のイベントに対してだけでなく、ツリーの特定の部分を対象とするように細かく調整できます。 プロバイダーも、リッスンされているイベントを追跡して、イベントの生成を細かく調整できます。  
   
  イベントを生成した要素をクライアントで取得することも簡単です。このような要素は、イベント コールバックに直接渡されるからです。 クライアントがイベントをサブスクライブしているときにキャッシュ要求がアクティブであった場合は、自動的に要素のプロパティがプリフェッチされます。  
@@ -245,7 +262,9 @@ Active Accessibility は、デュアルインターフェイスをサポート�
 |同等の機能がありません|<xref:System.Windows.Automation.AutomationElement.ToolTipOpenedEvent>|  
   
 <a name="Security_compare"></a>
-## <a name="security"></a>Security  
+
+## <a name="security"></a>セキュリティ  
+
  `IAccessible` をカスタマイズするシナリオでは、基本 `IAccessible` をラップしてからこれに対する呼び出しを行うという要件が生じることがあります。 このことは、セキュリティに影響を及ぼします。部分信頼コンポーネントにコード パスを中継させてはならないからです。  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] モデルでは、プロバイダーが他のプロバイダー コードを呼び出す必要がありません。 必要な集約はすべて [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コア サービスが行います。  

@@ -8,20 +8,22 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: e1ed1197-3e9e-4e78-8845-92e82787faed
-ms.openlocfilehash: b7c3e425312652fb37ed8e2203d0a0155fea25b9
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 95ac13409156b553962aee5ea4f5ca717375c133
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163918"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241981"
 ---
 # <a name="ui-automation-clients-for-managed-code"></a>マネージド コードの UI オートメーション クライアント
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
  このセクションには、UI オートメーション クライアントの概要と、クライアントの開発に役立つハウツーに関するトピックが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [UI オートメーションおよび画面の拡大縮小](ui-automation-and-screen-scaling.md)  
  [UI オートメーションによる標準コントロールのサポート](ui-automation-support-for-standard-controls.md)  
  [クライアントの UI オートメーション イベント](ui-automation-events-for-clients.md)  
@@ -34,4 +36,5 @@ ms.locfileid: "87163918"
  [方法トピック](ui-automation-clients-for-managed-code-how-to-topics.md)  
   
 ## <a name="reference"></a>関連項目  
+
  <xref:System.Windows.Automation>

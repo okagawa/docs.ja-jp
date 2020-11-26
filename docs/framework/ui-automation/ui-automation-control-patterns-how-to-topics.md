@@ -8,20 +8,22 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 72c80262-8ca9-4624-9bd6-96984c5b7c5c
-ms.openlocfilehash: ff8602382c8064cc5b7f6df44bda3413a7e67de1
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 929f44ca2d4daa75d733059b4072690a6b8f8d91
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163858"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241955"
 ---
 # <a name="ui-automation-control-patterns-how-to-topics"></a>UI オートメーション コントロール パターンに関する「方法」トピック
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
  ここでは、コントロール パターンの実装について詳しく説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [UI オートメーションを使用したテーブルの内容の公開](expose-the-content-of-a-table-using-ui-automation.md)  
  [サポートされている UI オートメーション コントロール パターンの取得](get-supported-ui-automation-control-patterns.md)  
  [UI オートメーションを使用した、チェック ボックスのトグル状態の取得](get-the-toggle-state-of-a-check-box-using-ui-automation.md)  

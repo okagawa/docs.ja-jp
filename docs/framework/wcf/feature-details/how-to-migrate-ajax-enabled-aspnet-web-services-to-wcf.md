@@ -2,14 +2,15 @@
 title: '方法: AJAX 対応 ASP.NET Web サービスを WCF に移行する'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: 6f356f47922945218e02271371d9ddea36ecc5a2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 89c9601ba6afcef9733d7653564a98664a1ed70f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597008"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241903"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>方法: AJAX 対応 ASP.NET Web サービスを WCF に移行する
+
 このトピックでは、基本的な ASP.NET AJAX サービスを同等の AJAX 対応 Windows Communication Foundation (WCF) サービスに移行する手順について説明します。 ここでは、ASP.NET AJAX サービスの機能的に同等の WCF バージョンを作成する方法を示します。 2つのサービスを並行して使用することも、WCF サービスを使用して ASP.NET AJAX サービスを置き換えることもできます。
 
  既存の ASP.NET AJAX サービスを WCF AJAX サービスに移行すると、次のような利点があります。
@@ -22,25 +23,25 @@ ms.locfileid: "84597008"
 
  手順に続く例で、ここで説明する手順によって作成されるコードを示します。
 
- AJAX 対応エンドポイントを使用して WCF サービスを公開する方法の詳細については、「[方法: 構成を使用して ASP.NET AJAX エンドポイントを追加](how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)する」を参照してください。
+ AJAX 対応エンドポイントを使用して WCF サービスを公開する方法の詳細については、「 [方法: 構成を使用して ASP.NET AJAX エンドポイントを追加](how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) する」を参照してください。
 
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>ASP.NET Web サービス アプリケーションを作成してテストする
 
 1. Visual Studio 2012 を開きます。
 
-2. [**ファイル**] メニューの [**新規作成**]、[**プロジェクト**]、[ **web**] の順に選択し、[ **ASP.NET web Service Application**] を選択します。
+2. [ **ファイル** ] メニューの [ **新規作成**]、[ **プロジェクト**]、[ **web**] の順に選択し、[ **ASP.NET web Service Application**] を選択します。
 
 3. プロジェクトに名前を指定し、 `ASPHello` [ **OK]** をクリックします。
 
 4. Service1.asmx.cs ファイルで、`System.Web.Script.Services.ScriptService]` が含まれた行のコメントを解除し、このサービスに対して AJAX を有効にします。
 
-5. [**ビルド**] メニューの [**ソリューションのビルド**] をクリックします。
+5. [ **ビルド** ] メニューの [ **ソリューションのビルド**] をクリックします。
 
-6. **[デバッグ]** メニューの **[デバッグなしで開始]** をクリックします。
+6. **[デバッグ]** メニューから **[デバッグなしで開始]** を選択します。
 
 7. 生成された Web ページで、`HelloWorld` 操作を選択します。
 
-8. [テスト] ページの [**起動**] ボタンをクリックし `HelloWorld` ます。 次の XML 応答を受信します。
+8. [テスト] ページの [ **起動** ] ボタンをクリックし `HelloWorld` ます。 次の XML 応答を受信します。
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -53,9 +54,9 @@ ms.locfileid: "84597008"
 
 ### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a>同等の WCF AJAX サービス アプリケーションを作成するには
 
-1. **Asphello**プロジェクトを右クリックし、[**追加**]、[**新しい項目**]、[ **AJAX 対応 WCF サービス**] の順に選択します。
+1. **Asphello** プロジェクトを右クリックし、[**追加**]、[**新しい項目**]、[ **AJAX 対応 WCF サービス**] の順に選択します。
 
-2. サービスに名前を指定し、 `WCFHello` [**追加**] をクリックします。
+2. サービスに名前を指定し、 `WCFHello` [ **追加**] をクリックします。
 
 3. WCFHello.svc.cs ファイルを開きます。
 
@@ -98,9 +99,9 @@ ms.locfileid: "84597008"
     }
     ```
 
-8. [**ビルド**] メニューの [**ソリューションのビルド**] をクリックします。
+8. [ **ビルド** ] メニューの [ **ソリューションのビルド**] をクリックします。
 
-9. Wcfhello.svc ファイルを開き、[**デバッグ**] メニューの [**デバッグなしで開始**] を選択します。
+9. Wcfhello.svc ファイルを開き、[ **デバッグ** ] メニューの [ **デバッグなしで開始**] を選択します。
 
 10. サービスは `WCFHello.svc/HelloWorld` 、HTTP POST 要求に応答するでエンドポイントを公開するようになりました。 HTTP POST 要求をブラウザーからテストすることはできませんが、エンドポイントは次の XML を返します。
 
@@ -111,6 +112,7 @@ ms.locfileid: "84597008"
 11. `WCFHello.svc/HelloWorld`と `Service1.aspx/HelloWorld` エンドポイントが機能的に同等になりました。
 
 ## <a name="example"></a>例
+
  このトピックで説明した手順によって作成されるコードを次の例に示します。
 
 ```csharp
@@ -195,7 +197,7 @@ d.Add("two", 2);
 
 - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> では [{"Key":"one","Value":1},{"Key":"two","Value":2}] と表され、
 
-- ASP.NET AJAX による {"one": 1, "two": 2}<xref:System.Web.Script.Serialization.JavaScriptSerializer>
+- ASP.NET AJAX による {"one": 1, "two": 2} <xref:System.Web.Script.Serialization.JavaScriptSerializer>
 
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> は、キーの種類が文字列ではないディクショナリを処理でき、<xref:System.Web.Script.Serialization.JavaScriptSerializer> はできません。この点で前者はより強力と言えます。 しかし、後者の方が JSON で使いやすいと言えます。
 
@@ -204,7 +206,7 @@ d.Add("two", 2);
 |相違点のカテゴリ|DataContractJsonSerializer|ASP.NET AJAX JavaScriptSerializer|
 |-----------------------------|--------------------------------|---------------------------------------|
 |空きバッファー (新しい byte[0]) の <xref:System.Object> (または <xref:System.Uri>、あるいは他の一部のクラス) への逆シリアル化|SerializationException|null|
-|<xref:System.DBNull.Value> のシリアル化|{}(または {"__type": "#System"})|[Null]|
+|<xref:System.DBNull.Value> のシリアル化|{} (または {"__type": "#System"})|[Null]|
 |[Serializable] 型のプライベート メンバーのシリアル化|できるか|シリアル化できません|
 |<xref:System.Runtime.Serialization.ISerializable> 型のパブリック プロパティのシリアル化|シリアル化できません|できるか|
 |JSON の「拡張機能」|オブジェクト メンバー名で引用符を必要とする ({"a":"hello"}) JSON 仕様に準拠しています。|引用符のないオブジェクト メンバー名 ({a:"hello"}) をサポートします。|

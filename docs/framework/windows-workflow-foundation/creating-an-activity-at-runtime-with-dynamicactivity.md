@@ -3,17 +3,19 @@ title: 実行時における DynamicActivity を使用したアクティビテ�
 description: DynamicActivity は、パブリックコンストラクターを持つ具象クラスであり、シールされています。 アクティビティ DOM を使用して、実行時にアクティビティ機能をアセンブルするには、クラスを使用します。
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 17ee14be7df4801018c7afd2e91f1fb07c34e8e1
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: b65d7e385690b77d44c73e7a8a4ed38b04f30ea6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421541"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242098"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>実行時における DynamicActivity を使用したアクティビティの作成
+
 <xref:System.Activities.DynamicActivity> は、パブリック コンストラクターを持つ、具体的なシール クラスです。 <xref:System.Activities.DynamicActivity> は、実行時にアクティビティ DOM を使用してアクティビティの機能を構築するために使用できます。  
   
 ## <a name="dynamicactivity-features"></a>DynamicActivity の機能  
+
  <xref:System.Activities.DynamicActivity> は、実行プロパティ、引数、変数にアクセスできますが、子アクティビティのスケジュール設定や追跡などのランタイム サービスにはアクセスできません。  
   
  最上位のプロパティは、ワークフローの <xref:System.Activities.Argument> オブジェクトを使用して設定できます。 命令型コードでは、これらの引数は新しい型で CLR プロパティを使用して作成されます。 XAML では `x:Class` タグおよび `x:Member` タグを使用して、これらの引数が宣言されます。  
@@ -24,9 +26,9 @@ ms.locfileid: "83421541"
   
 1. OpenVisual Studio 2010。  
   
-2. [**ファイル**]、[**新規作成**]、[**プロジェクト**] を選択します。 [**プロジェクトの種類**] ウィンドウの [ **Visual C#** ] で [**ワークフロー 4.0** ] を選択し、[ **v2010** ] ノードを選択します。 [**テンプレート**] ウィンドウで [**シーケンシャルワークフローコンソールアプリケーション**] を選択します。 新しいプロジェクトに DynamicActivitySample という名前を付けます。  
+2. [ **ファイル**]、[ **新規作成**]、[ **プロジェクト**] を選択します。 [**プロジェクトの種類**] ウィンドウの [ **Visual C#** ] で [**ワークフロー 4.0** ] を選択し、[ **v2010** ] ノードを選択します。 [**テンプレート**] ウィンドウで [**シーケンシャルワークフローコンソールアプリケーション**] を選択します。 新しいプロジェクトに DynamicActivitySample という名前を付けます。  
   
-3. HelloActivity プロジェクトで Workflow1.xaml を右クリックし、[**削除**] を選択します。  
+3. HelloActivity プロジェクトで Workflow1.xaml を右クリックし、[ **削除**] を選択します。  
   
 4. Program.cs を開きます。 次のディレクティブをファイルの先頭に追加します。  
   
@@ -73,11 +75,11 @@ ms.locfileid: "83421541"
   
 1. Visual Studio 2010 を開きます。  
   
-2. [**ファイル**]、[**新規作成**]、[**プロジェクト**] を選択します。 [**プロジェクトの種類**] ウィンドウの [ **Visual C#** ] で [**ワークフロー 4.0** ] を選択し、[ **v2010** ] ノードを選択します。 [**テンプレート**] ウィンドウで [**ワークフローコンソールアプリケーション**] を選択します。 新しいプロジェクトに DynamicActivitySample という名前を付けます。  
+2. [ **ファイル**]、[ **新規作成**]、[ **プロジェクト**] を選択します。 [**プロジェクトの種類**] ウィンドウの [ **Visual C#** ] で [**ワークフロー 4.0** ] を選択し、[ **v2010** ] ノードを選択します。 [**テンプレート**] ウィンドウで [**ワークフローコンソールアプリケーション**] を選択します。 新しいプロジェクトに DynamicActivitySample という名前を付けます。  
   
-3. HelloActivity プロジェクトの Workflow1.xaml を開きます。 デザイナーの下部にある [**引数**] オプションをクリックします。 `String` 型の `TextToWrite` という新しい `In` 引数を作成します。  
+3. HelloActivity プロジェクトの Workflow1.xaml を開きます。 デザイナーの下部にある [ **引数** ] オプションをクリックします。 `String` 型の `TextToWrite` という新しい `In` 引数を作成します。  
   
-4. ツールボックスの [**プリミティブ**] セクションから、 **WriteLine**アクティビティをデザイナー画面にドラッグします。 `TextToWrite`アクティビティの**Text**プロパティに値を割り当てます。  
+4. ツールボックスの [**プリミティブ**] セクションから、 **WriteLine** アクティビティをデザイナー画面にドラッグします。 `TextToWrite`アクティビティの **Text** プロパティに値を割り当てます。  
   
 5. Program.cs を開きます。 次のディレクティブをファイルの先頭に追加します。  
   
@@ -95,7 +97,7 @@ ms.locfileid: "83421541"
   
 7. アプリケーションを実行します。 "Hello World!" というテキストが表示されたコンソールウィンドウ  が表示されます。  
   
-8. **ソリューションエクスプローラー**で workflow1.xaml ファイルを右クリックし、[**コードの表示**] を選択します。 アクティビティ クラスが `x:Class` を使用して作成され、プロパティが `x:Property` を使用して作成されています。  
+8. **ソリューションエクスプローラー** で workflow1.xaml ファイルを右クリックし、[**コードの表示**] を選択します。 アクティビティ クラスが `x:Class` を使用して作成され、プロパティが `x:Property` を使用して作成されています。  
   
 ## <a name="see-also"></a>関連項目
 

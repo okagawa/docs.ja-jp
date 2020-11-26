@@ -2,17 +2,19 @@
 title: 変数と引数の追跡
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: af5c21b75f3238546acac0755ec4e6149ee50d95
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 85cecbfaf1db224152d4582325326f1f80e08266
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552493"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242904"
 ---
 # <a name="variable-and-argument-tracking"></a>変数と引数の追跡
+
 ワークフローの実行を追跡するときは、データを抽出すると便利です。 これにより、実行後に追跡レコードにアクセスするときにコンテキストが追加されます。 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] では、追跡を使用して、ワークフローのアクティビティのスコープ内の参照可能な変数や引数を抽出できます。 プロファイルを追跡すると、データを簡単に抽出できるようになります。  
   
 ## <a name="variables-and-arguments"></a>変数と引数  
+
  変数および引数が抽出されるのは、アクティビティが ActivityStateRecord を生成したときです。  変数は、アクティビティのスコープ内にある場合にのみ抽出の対象となります。 アクティビティ内に抽出する変数は、次のように指定します。  
   
 - 変数名によって変数が指定されている場合、追跡されている現在のアクティビティと親アクティビティ内の変数が追跡で検索されます。 変数は、現在のアクティビティのスコープと親スコープ内で検索されます。  
@@ -38,6 +40,7 @@ ms.locfileid: "90552493"
 ```  
   
 ## <a name="protecting-information-stored-within-variables-and-arguments"></a>変数および引数に格納される情報の保護  
+
  追跡される変数や引数は、既定では WF ランタイムによって参照可能になります。 ワークフローの開発者は、次のような手順を行うことで、追跡対象の変数や引数へのアクセスを防止できます。  
   
 1. 変数の値を暗号化します。  

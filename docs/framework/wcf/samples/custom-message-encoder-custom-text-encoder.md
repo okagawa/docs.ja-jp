@@ -3,12 +3,12 @@ title: カスタム メッセージ エンコーダー:カスタム テキスト
 description: このサンプルは、WCF を使用してカスタムテキストメッセージエンコーダーを実装する場合に使用します。 このエンコーダーは、相互運用性のためにプラットフォームでサポートされているすべての文字エンコーディングをサポートします。
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: 88ddc79e6cc1df654aea851cedb0e60c6fbcd017
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 89f0bf09ba6408e24f642a67f2e7ac8243608dcb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246273"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240967"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>カスタム メッセージ エンコーダー:カスタム テキスト エンコーダー
 
@@ -19,7 +19,7 @@ ms.locfileid: "85246273"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Text`
 
@@ -215,9 +215,10 @@ CustomBinding binding = new CustomBinding(bindingElements);
 
 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> から派生するすべての型は、サービスに対して生成される WSDL ドキュメント内の SOAP バインドのバージョンを更新します。 これを行うには、`ExportEndpoint` インターフェイス上に <xref:System.ServiceModel.Description.IWsdlExportExtension> メソッドを実装し、生成された WSDL を変更します。 このサンプルでは、`CustomTextMessageBindingElement` は `TextMessageEncodingBindingElement` からの WSDL エクスポート ロジックを使用します。
 
-このサンプルの場合、クライアント構成は手動構成です。 Svcutil.exe を使用してクライアント構成を生成することはできません。`CustomTextMessageBindingElement` では、動作を記述するポリシー アサーションがエクスポートされないからです。 通常は、カスタム バインド要素上に <xref:System.ServiceModel.Description.IPolicyExportExtension> インターフェイスを実装して、バインド要素によって実装される動作または機能を記述するカスタム ポリシー アサーションをエクスポートする必要があります。 カスタムバインド要素のポリシーアサーションをエクスポートする方法の例については、[トランスポート: UDP](transport-udp.md)サンプルを参照してください。
+このサンプルの場合、クライアント構成は手動構成です。 Svcutil.exe を使用してクライアント構成を生成することはできません。`CustomTextMessageBindingElement` では、動作を記述するポリシー アサーションがエクスポートされないからです。 通常は、カスタム バインド要素上に <xref:System.ServiceModel.Description.IPolicyExportExtension> インターフェイスを実装して、バインド要素によって実装される動作または機能を記述するカスタム ポリシー アサーションをエクスポートする必要があります。 カスタムバインド要素のポリシーアサーションをエクスポートする方法の例については、 [トランスポート: UDP](transport-udp.md) サンプルを参照してください。
 
 ## <a name="message-encoding-binding-configuration-handler"></a>メッセージ エンコーディング バインド構成ハンドラー
+
 前のセクションでは、カスタム テキスト メッセージ エンコーダーをプログラムによって使用する方法を示しました。 `CustomTextMessageEncodingBindingSection` は構成ハンドラーを実装します。この構成ハンドラーにより、カスタム テキスト メッセージ エンコーダーを構成ファイル内で使用することを指定できます。 `CustomTextMessageEncodingBindingSection` クラスは <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> クラスから派生します。 `BindingElementType` プロパティでは、このセクション用に作成するバインディング要素の型が構成システムに通知されます。
 
 `CustomTextMessageBindingElement` によって定義されたすべての設定は、`CustomTextMessageEncodingBindingSection` のプロパティとして公開されます。 <xref:System.Configuration.ConfigurationPropertyAttribute> は、構成要素の属性をプロパティにマップしたり、属性がない場合は既定値を設定する際に役立ちます。 構成から値が読み込まれて型のプロパティに適用されると、<xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A> メソッドが呼び出されます。このメソッドは、プロパティをバインド要素の具体的なインスタンスに変換します。
