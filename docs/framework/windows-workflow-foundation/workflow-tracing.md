@@ -2,17 +2,19 @@
 title: ワークフロー トレース
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-ms.openlocfilehash: fc27be295cbf0a83b65ff03e36f2aeffeda12db9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b5a8f650edfdade4a18999c5e7af38ca72112122
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557503"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273881"
 ---
 # <a name="workflow-tracing"></a>ワークフロー トレース
+
 ワークフロー トレースでは、.NET Framework のトレース リスナーを使用して診断情報を取得できます。 トレースは、アプリケーションで問題が検出された場合に有効にし、その問題が解決されたら、再度無効にすることが可能です。 ワークフローのデバッグ トレースを有効にする方法は 2 つあります。 また、イベント トレース ビューアーを使用してトレースを構成したり、<xref:System.Diagnostics> を使用してトレース イベントをファイルに送信したりすることができます。  
   
 ## <a name="enabling-debug-tracing-in-etw"></a>ETW でのデバッグ トレースの有効化  
+
  ETW を使用してトレースを有効化するには、次の手順に従ってイベント ビューアーでデバッグ チャネルを有効化します。  
   
 1. イベント ビューアーで分析ログおよびデバッグ ログのノードに移動します。  
@@ -41,6 +43,7 @@ ms.locfileid: "90557503"
 > .NET Framework 4 クライアントプロファイルを使用している場合は、まず、.NET Framework 4 ディレクトリから次のコマンドを実行して、ETW マニフェストを登録する必要があります。 `ServiceModelReg.exe –i –c:etw`  
   
 ## <a name="enabling-debug-tracing-using-systemdiagnostics"></a>System.Diagnostics によるデバッグ トレースの有効化  
+
  これらのリスナーは、ワークフロー アプリケーションの App.config ファイルまたはワークフロー サービスの Web.config ファイルで構成します。 この例では、は、 <xref:System.Diagnostics.TextWriterTraceListener> トレース情報を現在のディレクトリの MyTraceLog.txt ファイルに保存するように構成されています。  
   
 ```xml  

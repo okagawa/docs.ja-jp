@@ -6,19 +6,21 @@ helpviewer_keywords:
 - administration [WCF], analytic tracing
 - analytic tracing [WCF]
 ms.assetid: 1d518e47-a38d-41e8-93d7-8c3b361f6a56
-ms.openlocfilehash: dd745730ca186b9489c547f790c546e95bf96372
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4bb31eeac7c5d3c8c30f66090b07de9f8af4d5a4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798091"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274622"
 ---
 # <a name="analytic-tracing-with-etw"></a>ETW を使用した分析トレース
-Windows Communication Foundation (WCF) 分析トレースには、WCF サービスの実行中に診断情報をキャプチャする方法が用意されています。 Wcf 分析トレースイベントは、運用環境での WCF サービスのトラブルシューティングを可能にするために、WCF スタックの主要なポイントで生成されます。 Wcf サービスの分析トレースは、wcf サービスをホスト[!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)]する製品サーバーのパフォーマンスにほとんど影響を与えません。これらのイベントは、Windows イベントトレーシング (ETW) セッションに非常に効率的に出力されるためです。  
+
+Windows Communication Foundation (WCF) 分析トレースには、WCF サービスの実行中に診断情報をキャプチャする方法が用意されています。 Wcf 分析トレースイベントは、運用環境での WCF サービスのトラブルシューティングを可能にするために、WCF スタックの主要なポイントで生成されます。 WCF サービスの分析トレースは、wcf サービスをホストする製品サーバーのパフォーマンスにほとんど影響を与え [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] ません。これらのイベントは、Windows イベントトレーシング (ETW) セッションに非常に効率的に出力されるためです。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [分析トレースの概要](analytic-tracing-overview.md)  
- での WCF 分析トレースの動作[!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)]について説明します。  
+ での WCF 分析トレースの動作について説明 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] します。  
   
  [分析トレースの動的な有効化](dynamically-enabling-analytic-tracing.md)  
  ETW を使用してトレースを動的に有効化または無効化する方法について説明します。  

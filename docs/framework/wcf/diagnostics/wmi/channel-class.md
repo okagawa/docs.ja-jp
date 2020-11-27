@@ -2,14 +2,15 @@
 title: チャネル クラス
 ms.date: 03/30/2017
 ms.assetid: d9fae2ca-209c-4341-a0f5-6b79d1a67776
-ms.openlocfilehash: f60a3946617b0994db1ba9e9ddf43be863be81f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a920636e7df9609b12834366b1488c80122f9fca
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61964084"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274232"
 ---
 # <a name="channel-class"></a>チャネル クラス
+
 チャネル  
   
 ## <a name="syntax"></a>構文  
@@ -26,47 +27,54 @@ class Channel
 ```  
   
 ## <a name="methods"></a>メソッド  
+
  チャネル クラスは、メソッドを一切定義しません。  
   
 ## <a name="properties"></a>プロパティ  
+
  チャネル クラスには、次のプロパティがあります。  
   
 ### <a name="localaddress"></a>LocalAddress  
- データ型: string  
+
+ データ型: 文字列  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  チャネルのローカル エンドポイント。  
   
 ### <a name="ref"></a>ref  
- データの種類:エンドポイント  
+
+ データ型 : Endpoint  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  チャネルが接続するエンドポイントへの参照。  
   
 ### <a name="remoteaddress"></a>RemoteAddress  
- データ型: string  
+
+ データ型: 文字列  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  チャネルに関連するリモート アドレス。  
   
 ### <a name="sessionid"></a>SessionId  
- データ型: string  
+
+ データ型: 文字列  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  現在のセッション ID (存在する場合)。  
   
-### <a name="type"></a>型  
- データ型: string  
+### <a name="type"></a>Type  
+
+ データ型: 文字列  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  チャネルの型。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  

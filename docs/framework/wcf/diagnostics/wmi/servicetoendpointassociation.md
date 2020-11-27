@@ -2,14 +2,15 @@
 title: ServiceToEndpointAssociation
 ms.date: 03/30/2017
 ms.assetid: 03c3cd15-e1b2-4dc2-bdc2-59fdccdae110
-ms.openlocfilehash: 3d23a3ee10c47e04ea7bdba202ea5063c0d84fac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e20556541b1aa48e7dfc6a8cde97e1bc477457e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048232"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273946"
 ---
 # <a name="servicetoendpointassociation"></a>ServiceToEndpointAssociation
+
 エンドポイントにサービスを割り当てます。  
   
 ## <a name="syntax"></a>構文  
@@ -23,28 +24,32 @@ class ServiceToEndpointAssociation
 ```  
   
 ## <a name="methods"></a>メソッド  
+
  ServiceToEndpointAssociation クラスは、メソッドを一切定義しません。  
   
 ## <a name="properties"></a>プロパティ  
+
  ServiceToEndpointAssociation クラスには、次のプロパティがあります。  
   
 ### <a name="ref"></a>ref  
- データの種類:サービス  
+
+ データ型 : Service  
   
- アクセスの種類:読み取り専用です。  
-修飾子:キー  
+ アクセスの種類: 読み取り専用  
+修飾子: キー  
   
  エンドポイントに関連付けられるサービス。  
   
 ### <a name="ref"></a>ref  
- データの種類:エンドポイント  
+
+ データ型 : Endpoint  
   
- アクセスの種類:読み取り専用です。  
-修飾子:キー  
+ アクセスの種類: 読み取り専用  
+修飾子: キー  
   
  サービスに関連付けられるエンドポイント。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
