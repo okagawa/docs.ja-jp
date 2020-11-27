@@ -2,18 +2,20 @@
 title: トランザクション アプリケーションの診断
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: fb3a83083e876cf697621ba70dcf7dd67636f83a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 696ebe7249a8388eaaf38a678581e28d472e821a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599218"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96290245"
 ---
 # <a name="diagnosing-transactional-applications"></a>トランザクション アプリケーションの診断
+
 このトピックでは、Windows Communication Foundation (WCF) の管理と診断の機能を使用して、トランザクションアプリケーションのトラブルシューティングを行う方法について説明します。  
   
 ## <a name="performance-counters"></a>パフォーマンス カウンター  
- WCF には、トランザクションアプリケーションのパフォーマンスを測定するための、標準のパフォーマンスカウンターのセットが用意されています。 詳細については、「[パフォーマンスカウンター](../diagnostics/performance-counters/index.md)」を参照してください。  
+
+ WCF には、トランザクションアプリケーションのパフォーマンスを測定するための、標準のパフォーマンスカウンターのセットが用意されています。 これらのパフォーマンス カウンターの詳細については、「 [パフォーマンス カウンター](../diagnostics/performance-counters/index.md)」を参照してください。  
   
  パフォーマンス カウンターには次の表に示すように、サービス、エンドポイント、操作の 3 つのレベルがあります。  
   
@@ -44,8 +46,9 @@ ms.locfileid: "84599218"
 |トランザクション フロー|このエンドポイントでの操作に対して実行されたトランザクションの数。 このカウンターは、エンドポイントに送信されたメッセージにトランザクションがある場合は常にインクリメントされます。|  
 |1 秒あたりのトランザクション フロー|毎秒ごとにこのエンドポイントでの操作に対して実行されたトランザクションの数。 このカウンターは、エンドポイントに送信されたメッセージにトランザクションがある場合は常にインクリメントされます。|  
   
-## <a name="windows-management-instrumentation"></a>Windows Management Instrumentation  
- WCF は、実行時に WCF Windows Management Instrumentation (WMI) プロバイダーを介してサービスの検査データを公開します。 WMI データへのアクセスの詳細については、「[診断のための Windows Management Instrumentation の使用](../diagnostics/wmi/index.md)」を参照してください。  
+## <a name="windows-management-instrumentation"></a>Windows Management Instrumentation (Windows Management Instrumentation)  
+
+ WCF は、実行時に WCF Windows Management Instrumentation (WMI) プロバイダーを介してサービスの検査データを公開します。 WMI データへのアクセスの詳細については、「 [診断のための Windows Management Instrumentation の使用](../diagnostics/wmi/index.md)」を参照してください。  
   
  WMI プロパティには、サービスに適用されるトランザクション設定を示す読み取り専用のプロパティが多数あります。 次の表にこれらの設定をすべて示します。  
   
@@ -53,8 +56,8 @@ ms.locfileid: "84599218"
   
 |名前|Type|Description|  
 |----------|----------|-----------------|  
-|ReleaseServiceInstanceOnTransactionComplete|Boolean|現在のトランザクションの完了時に、サービス オブジェクトをリサイクルするかどうかを指定します。|  
-|TransactionAutoCompleteOnSessionClose|Boolean|現在のセッションの終了時に、保留中のトランザクションを完了するかどうかを指定します。|  
+|ReleaseServiceInstanceOnTransactionComplete|ブール型|現在のトランザクションの完了時に、サービス オブジェクトをリサイクルするかどうかを指定します。|  
+|TransactionAutoCompleteOnSessionClose|ブール型|現在のセッションの終了時に、保留中のトランザクションを完了するかどうかを指定します。|  
 |TransactionIsolationLevel|<xref:System.Transactions.IsolationLevel> 列挙体の有効な値を含む文字列。|このサービスがサポートするトランザクションの分離レベルを指定します。|  
 |TransactionTimeout|<xref:System.DateTime>|トランザクションを完了しなければならない期間を指定します。|  
   
@@ -69,22 +72,23 @@ ms.locfileid: "84599218"
 |名前|Type|Description|  
 |----------|----------|-----------------|  
 |TransactionProtocol|<xref:System.ServiceModel.TransactionProtocol> 型の有効な値を含む文字列。|トランザクションをフローさせるために使用するトランザクション プロトコルを指定します。|  
-|TransactionFlow|Boolean|受信トランザクション フローを有効にするかどうかを指定します。|  
+|TransactionFlow|ブール型|受信トランザクション フローを有効にするかどうかを指定します。|  
   
  操作の `OperationBehaviorAttribute` には、次のプロパティがあります。  
   
 |名前|Type|Description|  
 |----------|----------|-----------------|  
-|TransactionAutoComplete|Boolean|未処理の例外が発生しなかった場合に、現在のトランザクションを自動的にコミットするかどうかを指定します。|  
-|TransactionScopeRequired|Boolean|操作がトランザクションを必要とするかどうかを指定します。|  
+|TransactionAutoComplete|ブール型|未処理の例外が発生しなかった場合に、現在のトランザクションを自動的にコミットするかどうかを指定します。|  
+|TransactionScopeRequired|ブール型|操作がトランザクションを必要とするかどうかを指定します。|  
   
  操作の `TransactionFlowAttribute` には、次のプロパティがあります。  
   
-|名前|Type|説明|  
+|名前|Type|Description|  
 |----------|----------|-----------------|  
 |TransactionFlowOption|<xref:System.ServiceModel.TransactionFlowOption> 列挙体の有効な値を含む文字列。|トランザクション フローが要求される範囲を指定します。|  
   
 ## <a name="tracing"></a>トレース  
+
  トレースを使用すると、トランザクション アプリケーションにおけるエラーを監視および分析できます。 トレースは次の方法を使用して有効にできます。  
   
 - 標準 WCF トレース  
@@ -93,7 +97,7 @@ ms.locfileid: "84599218"
   
 - WS-AtomicTransaction トレース  
   
-     Ws-atomictransaction のトレースは、ws-atomictransaction[構成ユーティリティ (wsatConfig .exe)](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md)を使用して有効にすることができます。 このトレースでは、トランザクションの状態とシステム内の参加要素を把握できます。 内部のサービス モデル トレースも有効にするには、`HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` レジストリ キーを <xref:System.Diagnostics.SourceLevels> 列挙体の有効な値に設定します。 メッセージログは、他の WCF アプリケーションと同じ方法で有効にすることができます。  
+     WS-AtomicTransaction のトレースは、ws-atomictransaction [構成ユーティリティ (wsatConfig.exe)](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md)を使用して有効にすることができます。 このトレースでは、トランザクションの状態とシステム内の参加要素を把握できます。 内部のサービス モデル トレースも有効にするには、`HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` レジストリ キーを <xref:System.Diagnostics.SourceLevels> 列挙体の有効な値に設定します。 メッセージログは、他の WCF アプリケーションと同じ方法で有効にすることができます。  
   
 - `System.Transactions` トレース  
   

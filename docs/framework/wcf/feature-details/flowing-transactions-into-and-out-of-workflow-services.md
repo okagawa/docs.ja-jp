@@ -2,14 +2,15 @@
 title: ワークフロー サービスへのトランザクションのフロー
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: 17c05139b5977c47e20e888e436a311ba145018a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8764f3c88fc978bc71ff993252b04fe58da4bbc9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597463"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96290349"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>ワークフロー サービスへのトランザクションのフロー
+
 ワークフロー サービスとワークフロー クライアントはトランザクションに参加できます。  サービス操作をアンビエント トランザクションの一部にするには、<xref:System.ServiceModel.Activities.Receive> アクティビティを <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティの中に配置します。 <xref:System.ServiceModel.Activities.Send> 内の <xref:System.ServiceModel.Activities.SendReply> または <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティによる呼び出しが行われると、アンビエント トランザクション内でも呼び出しが行われます。 ワークフロー クライアント アプリケーションでは、<xref:System.Activities.Statements.TransactionScope> アクティビティを使用してアンビエント トランザクションを作成し、そのアンビエント トランザクションを使用してサービス操作を呼び出すことができます。 ここでは、トランザクションに参加するワークフロー サービスとワークフロー クライアントを作成する手順について説明します。  
   
 > [!WARNING]
@@ -72,7 +73,7 @@ ms.locfileid: "84597463"
     }  
     ```  
   
-     これは、アンビエント トランザクションに関する情報を表示するネイティブ アクティビティで、ここで使用するサービス ワークフローとクライアント ワークフローの両方で使用されます。 ソリューションをビルドして、このアクティビティを**ツールボックス**の [**共通**] セクションで使用できるようにします。  
+     これは、アンビエント トランザクションに関する情報を表示するネイティブ アクティビティで、ここで使用するサービス ワークフローとクライアント ワークフローの両方で使用されます。 ソリューションをビルドして、このアクティビティを **ツールボックス** の [**共通**] セクションで使用できるようにします。  
   
 ### <a name="implement-the-workflow-service"></a>ワークフロー サービスの実装  
   
@@ -84,20 +85,20 @@ ms.locfileid: "84597463"
   
 3. <xref:System.Activities.Statements.WriteLine> アクティビティを `Sequential Service` アクティビティにドラッグ アンド ドロップします。 次の例に示すように、Text プロパティを `"Workflow Service starting ..."` に設定します。  
   
-     ![シーケンシャルサービスアクティビティへの WriteLine アクティビティの追加 (./media/flowing-transactions-into-and-out-of-workflow-services/add-writeline-sequential-service.jpg)  
+     ![連続したサービスアクティビティへの WriteLine アクティビティの追加 (.../ワークフローサービス/サービス/add-writeline-sequential-service.jpg としての追加)  
   
-4. <xref:System.ServiceModel.Activities.TransactedReceiveScope> を <xref:System.Activities.Statements.WriteLine> アクティビティの後にドラッグ アンド ドロップします。 アクティビティは、 <xref:System.ServiceModel.Activities.TransactedReceiveScope> **ツールボックス**の [**メッセージング**] セクションにあります。 <xref:System.ServiceModel.Activities.TransactedReceiveScope>アクティビティは、**要求**と**本文**の2つのセクションで構成されます。 **要求**セクションには、アクティビティが含まれてい <xref:System.ServiceModel.Activities.Receive> ます。 **Body**セクションには、メッセージを受信した後にトランザクション内で実行されるアクティビティが含まれています。  
+4. <xref:System.ServiceModel.Activities.TransactedReceiveScope> を <xref:System.Activities.Statements.WriteLine> アクティビティの後にドラッグ アンド ドロップします。 アクティビティは、 <xref:System.ServiceModel.Activities.TransactedReceiveScope> **ツールボックス** の [**メッセージング**] セクションにあります。 <xref:System.ServiceModel.Activities.TransactedReceiveScope>アクティビティは、**要求** と **本文** の2つのセクションで構成されます。 **要求** セクションには、アクティビティが含まれてい <xref:System.ServiceModel.Activities.Receive> ます。 **Body** セクションには、メッセージを受信した後にトランザクション内で実行されるアクティビティが含まれています。  
   
      ![TransactedReceiveScope アクティビティの追加](./media/flowing-transactions-into-and-out-of-workflow-services/transactedreceivescope-activity.jpg)  
   
-5. アクティビティを選択し <xref:System.ServiceModel.Activities.TransactedReceiveScope> 、[**変数**] ボタンをクリックします。 次の変数を追加します。  
+5. アクティビティを選択し <xref:System.ServiceModel.Activities.TransactedReceiveScope> 、[ **変数** ] ボタンをクリックします。 次の変数を追加します。  
   
      ![TransactedReceiveScope への変数の追加](./media/flowing-transactions-into-and-out-of-workflow-services/add-transactedreceivescope-variables.jpg)  
   
     > [!NOTE]
     > 既定で含まれているデータ変数は削除してかまいません。 既存のハンドル変数を使用することもできます。  
   
-6. アクティビティを <xref:System.ServiceModel.Activities.Receive> アクティビティの**Request**セクション内にドラッグアンドドロップし <xref:System.ServiceModel.Activities.TransactedReceiveScope> ます。 次のプロパティを設定します。  
+6. アクティビティを <xref:System.ServiceModel.Activities.Receive> アクティビティの **Request** セクション内にドラッグアンドドロップし <xref:System.ServiceModel.Activities.TransactedReceiveScope> ます。 次のプロパティを設定します。  
   
     |プロパティ|値|  
     |--------------|-----------|  
@@ -109,7 +110,7 @@ ms.locfileid: "84597463"
   
      ![Receive アクティビティの追加](./media/flowing-transactions-into-and-out-of-workflow-services/add-receive-activity.jpg)  
   
-7. アクティビティの [**定義...** ] リンクをクリックし、 <xref:System.ServiceModel.Activities.Receive> 次の設定を行います。  
+7. アクティビティの [ **定義...** ] リンクをクリックし、 <xref:System.ServiceModel.Activities.Receive> 次の設定を行います。  
   
      ![Receive アクティビティのメッセージ設定を設定する](./media/flowing-transactions-into-and-out-of-workflow-services/receive-message-settings.jpg)  
   
@@ -141,7 +142,7 @@ ms.locfileid: "84597463"
   
      ![Assign および WriteLine の追加後](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-sbr-writeline.jpg)  
   
-12. アクティビティを右クリック <xref:System.ServiceModel.Activities.Receive> し、[ **SendReply の作成**] を選択して、最後のアクティビティの後に貼り付け <xref:System.Activities.Statements.WriteLine> ます。 アクティビティの [**定義...** ] リンクをクリックし、 `SendReplyToReceive` 次の設定を行います。  
+12. アクティビティを右クリック <xref:System.ServiceModel.Activities.Receive> し、[ **SendReply の作成** ] を選択して、最後のアクティビティの後に貼り付け <xref:System.Activities.Statements.WriteLine> ます。 アクティビティの [ **定義...** ] リンクをクリックし、 `SendReplyToReceive` 次の設定を行います。  
   
      ![応答メッセージの設定](./media/flowing-transactions-into-and-out-of-workflow-services/reply-message-settings.jpg)  
   
@@ -189,7 +190,7 @@ ms.locfileid: "84597463"
   
      ![Send アクティビティのプロパティの設定](./media/flowing-transactions-into-and-out-of-workflow-services/client-send-activity-settings.jpg)  
   
-9. [**定義...** ] リンクをクリックし、次の設定を行います。  
+9. [ **定義...** ] リンクをクリックし、次の設定を行います。  
   
      ![Send アクティビティのメッセージの設定](./media/flowing-transactions-into-and-out-of-workflow-services/send-message-settings.jpg)  
   

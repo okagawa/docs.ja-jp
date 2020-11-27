@@ -3,14 +3,15 @@ title: サービス メタデータからの WCF クライアントの生成
 description: WSDL またはサービスからのポリシーファイルを基にして、サービスメタデータドキュメントから WFC クライアントを生成するために使用 Svcutil.exe のさまざまなスイッチについて説明します。
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: f755a092fb3596349a6878c61fe414f4e0a9f9d1
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: e4363ac94a79dedf6d8a80adcaf738df179252b8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247274"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96290076"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>サービス メタデータからの WCF クライアントの生成
+
 ここでは、Svcutil.exe の各種のスイッチを使用して、メタデータ ドキュメントからクライアントを生成する方法を説明します。  
   
  メタデータ ドキュメントは、永続ストレージに保存したり、オンラインで取得したりできます。 オンライン取得では、WS-MetadataExchange プロトコルまたは DISCO (Microsoft Discovery) プロトコルに従います。 Svcutil.exe は、メタデータを取得するために次のメタデータ要求を同時に発行します。  
@@ -21,7 +22,7 @@ ms.locfileid: "85247274"
   
 - ASP.NET Web サービスからのを使用して、指定され <xref:System.Web.Services.Discovery.DiscoveryClientProtocol> たアドレスに DISCO 要求を行います。  
   
- Svcutil.exe は、Web サービス記述言語 (WSDL: Web Services Description Language) ファイル、またはサービスから受け取ったポリシー ファイルに基づいてクライアントを生成します。 ユーザープリンシパル名 (UPN) は、ユーザー名と "" を連結し、 \@ 完全修飾ドメイン名 (FQDN) を追加することによって生成されます。 ただし、Active Directory に登録したユーザーについては、この形式は無効であり、ツールが生成する UPN によって Kerberos 認証でエラーが発生し、次のエラーメッセージが表示されます。**ログオン試行が失敗しました。** この問題を解決するには、このツールが生成するクライアント ファイルを手動で修正する必要があります。  
+ Svcutil.exe は、Web サービス記述言語 (WSDL: Web Services Description Language) ファイル、またはサービスから受け取ったポリシー ファイルに基づいてクライアントを生成します。 ユーザープリンシパル名 (UPN) は、ユーザー名と "" を連結し、 \@ 完全修飾ドメイン名 (FQDN) を追加することによって生成されます。 ただし、Active Directory に登録したユーザーについては、この形式は無効であり、ツールが生成する UPN によって Kerberos 認証でエラーが発生し、次のエラーメッセージが表示されます。 **ログオン試行が失敗しました。** この問題を解決するには、このツールが生成するクライアント ファイルを手動で修正する必要があります。  
   
 ```console
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  

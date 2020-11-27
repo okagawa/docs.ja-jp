@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: be5c73e2ac9fcc45d136280c869148326cd91315
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db50d385bd396ba4de74e08fc1c6d93a67f320b7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857760"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96290219"
 ---
 # <a name="service-channel-level-programming"></a>サービス チャネル レベルのプログラミング
-このトピックを使用せずに Windows Communication Foundation (WCF) サービスのアプリケーションを記述する方法を説明します、<xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>とその関連付けられたオブジェクト モデルです。  
+
+このトピックでは、 <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> とそれに関連付けられたオブジェクトモデルを使用せずに、Windows Communication Foundation (WCF) サービスアプリケーションを記述する方法について説明します。  
   
-## <a name="receiving-messages"></a>メッセージの受信  
+## <a name="receiving-messages"></a>受信、メッセージ  
+
  メッセージの受信と処理の準備を整えるには、次の手順に従う必要があります。  
   
 1. バインディングを作成します。  
@@ -29,11 +31,13 @@ ms.locfileid: "61857760"
 5. すべてのチャネル オブジェクトを閉じます。  
   
 #### <a name="creating-a-binding"></a>バインディングの作成  
- メッセージのリッスンと受信の最初の手順として、バインディングを作成します。 WCF のうち 1 つのインスタンス化で直接使用できるいくつかの組み込みまたはシステム提供のバインディングに同梱されています。 また、CustomBinding クラスをインスタンス化することにより、独自のバインディングを作成することもできます。手順 1. のコードは、この処理を実行します。  
+
+ メッセージのリッスンと受信の最初の手順として、バインディングを作成します。 WCF には、いくつかの組み込みまたはシステム指定のバインディングが付属しています。これらのバインディングは、そのうちの1つをインスタンス化することによって直接使用できます。 また、CustomBinding クラスをインスタンス化することにより、独自のバインディングを作成することもできます。手順 1. のコードは、この処理を実行します。  
   
  後のコード例は、<xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> のインスタンスを作成し、その Elements コレクションに <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> を追加します。Elements コレクションは、チャネル スタックを作成するために使用されるバインド要素のコレクションです。 この例では、Elements コレクションには <xref:System.ServiceModel.Channels.HttpTransportBindingElement> しか含まれないため、チャネル スタックは HTTP トランスポート チャネルだけを持ちます。  
   
 #### <a name="building-a-channellistener"></a>ChannelListener のビルド  
+
  バインディングを作成したら、<xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType> を呼び出してチャネル リスナーをビルドします。型パラメーターは、作成するチャネル形状です。 この例では、要求/応答メッセージ交換パターンで受信メッセージをリッスンする必要があるため、<xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> を使用します。  
   
  <xref:System.ServiceModel.Channels.IReplyChannel> は、要求メッセージを受信し、応答メッセージを返信するために使用されます。 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> を呼び出すと、要求メッセージの受信と応答メッセージの返信に使用できる <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType> が返されます。  
@@ -43,16 +47,19 @@ ms.locfileid: "61857760"
  また、リスナーを作成する際には、空の <xref:System.ServiceModel.Channels.BindingParameterCollection?displayProperty=nameWithType> を渡します。 バインディング パラメーターは、リスナーのビルド方法を制御するパラメーターを渡すしくみです。 この例では、このようなパラメーターは使用しないため、空のコレクションを渡します。  
   
 #### <a name="listening-for-incoming-messages"></a>受信メッセージのリッスン  
+
  次に、ビルドしたリスナーで <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> を呼び出し、チャネルの受け入れを開始します。 <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=nameWithType> の動作は、トランスポートが接続指向であるか、コネクションレスであるかによって異なります。 接続指向トランスポートの場合、<xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A> は新しい接続要求が届くまでブロックし、接続要求が届いた時点で、その新しい接続を表す新しいチャネルを返します。 HTTP などのコネクションレス トランスポートの場合、<xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A> は、トランスポート リスナーが作成する唯一のチャネルを直ちに返します。  
   
  この例では、リスナーは、<xref:System.ServiceModel.Channels.IReplyChannel> を実装するチャネルを返します。 このチャネルでメッセージを受信するには、まず、チャネルで <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> を呼び出して通信できる状態にします。 次に、メッセージが到着するまでブロックする <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> を呼び出します。  
   
 #### <a name="reading-the-request-and-sending-a-reply"></a>要求の読み取りと応答の送信  
+
  <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> が <xref:System.ServiceModel.Channels.RequestContext> を返すときに、その <xref:System.ServiceModel.Channels.RequestContext.RequestMessage%2A> プロパティを使用して受信メッセージを取得します。 メッセージのアクションと本文のコンテンツ (文字列であることを前提とします) を書き込みます。  
   
  応答を送信するには、新しい応答メッセージを作成します。この場合は、要求で受信した文字列データを渡します。 次に、<xref:System.ServiceModel.Channels.RequestContext.Reply%2A> を呼び出して、その応答メッセージを送信します。  
   
 #### <a name="closing-objects"></a>オブジェクトの終了  
+
  リソースのリークを避けるには、通信に使用したオブジェクトが不要になったら閉じることが重要です。 この例では、要求メッセージ、要求コンテキスト、チャネル、およびリスナーを閉じます。  
   
  次のコード例は、チャネル リスナーがメッセージを 1 つだけ受け取る基本的なサービスです。 実際のサービスでは、サービスが終了するまでチャネルの受け入れとメッセージの受信を続けます。  
