@@ -2,14 +2,15 @@
 title: .NET ネイティブ リフレクション API リファレンス
 ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
-ms.openlocfilehash: 01678ea6230a53416f213730ae6bb66e6bc057f8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4cded310397ffa4dea057899b6f008146d35a03b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128216"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250880"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET ネイティブ リフレクション API リファレンス
+
 .NET ネイティブには、MissingInteropDataException、 [MissingMetadataException](missingmetadataexception-class-net-native.md)、 [system.runtime.compilerservices](missinginteropdataexception-class-net-native.md)の3つの新しい例外の種類が含まれています。この[例外](missingruntimeartifactexception-class-net-native.md)については、次のとおりです。 3 つの例外型すべてについて、次の点に注意してください。  
   
  これらの型は、内部でのみ使用してください。  
@@ -26,9 +27,10 @@ ms.locfileid: "73128216"
 > このリファレンスでは、.NET ネイティブに固有の3つの例外の種類について説明します。 .NET Framework コアリフレクション API のリファレンスドキュメントについては、 <xref:System.Reflection> 、、およびの各 <xref:System.Reflection.Context> 名前空間を参照してください <xref:System.Reflection.Emit> 。 .NET Framework の主要な相互運用 API に関するリファレンス ドキュメントについては、「 <xref:System.Runtime.InteropServices>」を参照してください。  
   
 ## <a name="systemreflection-namespace"></a>System.Reflection 名前空間  
+
  <xref:System.Reflection> 名前空間には、.NET Framework でリフレクションに使用される主要な型が含まれています。 .NET ネイティブには、次の2つの新しい例外の種類も含まれています。  
   
-|クラス|説明|  
+|インスタンス|説明|  
 |-----------|-----------------|  
 |[MissingMetadataException](missingmetadataexception-class-net-native.md)|この例外は、存在しないメタデータを取得するためにリフレクションが使用された場合にスローされます。|  
 |[MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md)|この例外は、型または型のメンバーのメタデータは使用可能だが、その実装が削除されている場合にスローされます。|  
@@ -36,9 +38,10 @@ ms.locfileid: "73128216"
  この名前空間の他の型に関するドキュメントについては、.NET Framework ドキュメント セットで <xref:System.Reflection> リファレンス ページを参照してください。  
   
 ## <a name="systemruntimecompilerservices-namespace"></a>System.Runtime.CompilerServices 名前空間  
+
  <xref:System.Runtime.CompilerServices> 名前空間には、言語コンパイラによって自動的にデザインされた型が含まれています。 .NET ネイティブには、新しい例外の種類も含まれています。  
   
-|クラス|説明|  
+|インスタンス|説明|  
 |-----------|-----------------|  
 |[MissingInteropDataException](missinginteropdataexception-class-net-native.md)|この例外は、手動マーシャリング メソッドが呼び出されたが、型のメタデータがスタティック分析でも、ランタイム ディレクティブ ファイルにも見つからない場合にスローされます。|  
   

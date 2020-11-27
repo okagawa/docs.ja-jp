@@ -5,19 +5,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
-ms.openlocfilehash: 0622ff9b990dd9d8fe14c4a4c1d48cc8530d5a61
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 1ecefdfe88426afa8e2d3d8eea758e7decf19ed8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609474"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249827"
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>方法: 証明書のサムプリントを取得する
+
 認証に x.509 証明書を使用する Windows Communication Foundation (WCF) アプリケーションを作成する場合、多くの場合、証明書で検出されたクレームを指定する必要があります。 たとえば、 <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> メソッドで <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 列挙体を使用する場合は、拇印クレームを指定する必要があります。 クレーム値を検索するには 2 つの手順を実行する必要があります。 まず、証明書用の Microsoft 管理コンソール (MMC) スナップインを開きます (「 [方法: MMC スナップインを使用して証明書を表示する](how-to-view-certificates-with-the-mmc-snap-in.md)」を参照してください)。次に、ここで説明するように、適切な証明書を検索し、その拇印 (またはその他の要求値) をコピーします。  
   
  サービス認証で証明書を使用する場合は、 **[Issued To]** 列 (コンソールの 1 番目の列) の値に注意することが重要です。 トランスポート セキュリティとして SSL (Secure Sockets Layer) を使用する場合、実行される最初のチェックの 1 つで、サービスのベース アドレス URI (Uniform Resource Identifier) が **[Issued To]** の値と比較されます。 値は一致する必要があります。一致しない場合は、認証が停止します。  
   
- PowerShell の新しい-SelfSignedCertificate コマンドレットを使用して、開発中にのみ使用する一時的な証明書を作成することもできます。 ただし、既定では、このような証明書は証明機関によって発行されず、運用目的では使用できません。 詳細については、「 [方法: 開発時に使用する一時的な証明書を作成する](how-to-create-temporary-certificates-for-use-during-development.md)」を参照してください。  
+ PowerShell New-SelfSignedCertificate コマンドレットを使用して、開発時にのみ使用する一時的な証明書を作成することもできます。 ただし、既定では、このような証明書は証明機関によって発行されず、運用目的では使用できません。 詳細については、「 [方法: 開発時に使用する一時的な証明書を作成する](how-to-create-temporary-certificates-for-use-during-development.md)」を参照してください。  
   
 ### <a name="to-retrieve-a-certificates-thumbprint"></a>証明書の拇印を取得するには  
   

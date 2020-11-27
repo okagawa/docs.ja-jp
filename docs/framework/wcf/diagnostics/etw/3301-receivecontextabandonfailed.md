@@ -2,27 +2,30 @@
 title: 3301 - ReceiveContextAbandonFailed
 ms.date: 03/30/2017
 ms.assetid: 4495e0c4-3518-4a40-a203-760782e2b1f0
-ms.openlocfilehash: ad7db37b1dbead79131f0a4bef3be532f0c573ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4d5db676140eb07553a619f43a7ab81e54bf8dc4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61595909"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250191"
 ---
 # <a name="3301---receivecontextabandonfailed"></a>3301 - ReceiveContextAbandonFailed
+
 ## <a name="properties"></a>プロパティ  
   
 |||  
 |-|-|  
 |ID|3301|  
-|キーワード|チャネル|  
-|レベル|警告|  
+|Keywords|チャネル|  
+|Level|警告|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>Description  
+
  このイベントは、受信コンテキストを破棄できないときに生成されます。  
   
-## <a name="message"></a>メッセージ  
+## <a name="message"></a>Message  
+
  %1 を破棄できませんでした。  
   
-## <a name="details"></a>説明
+## <a name="details"></a>詳細

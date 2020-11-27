@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
-ms.openlocfilehash: faf14245cd9dd7aa4bf8e89d5a05901279956509
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bbbb484e5cb8060568b321a2a41474d60c9f87f6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128279"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250919"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>MissingInteropDataException クラス (.NET ネイティブ)
+
 **Windows アプリ用 .NET (Windows 10 用)、.NET ネイティブのみ**  
   
  この例外は、手動マーシャリング メソッドが呼び出されたが、型のメタデータがスタティック分析でも、ランタイム ディレクティブ ファイルにも見つからない場合にスローされます。  
@@ -23,6 +24,7 @@ ms.locfileid: "73128279"
 > クラスは、 `MissingInteropDataException` .NET ネイティブツールチェーンによる内部使用のみを目的としています。 サード パーティのコードで使用することを目的としていません。また、アプリケーション コードで、例外を処理する必要はありません。 代わりに、[ランタイム ディレクティブ ファイル](runtime-directives-rd-xml-configuration-file-reference.md)にエントリを追加することにより、例外を除去します。 詳細については、「解説」を参照してください。  
   
 ## <a name="syntax"></a>構文  
+
  [!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)]
  [!code-vb[ProjectN#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/projectn/vb/missinginteropdataexception_syntax1.vb#21)]  
   
@@ -34,7 +36,7 @@ ms.locfileid: "73128279"
 |-----------------|-----------------|  
 |`public MissingInteropDataException(String resourceId, Type pertinentType)`|エラーとデータが欠落している型について説明するシステム提供のメッセージの ID を使用して、`MissingInteropDataException` クラスの新しいインスタンスを初期化します。 このコンストラクターは、.NET ネイティブツールチェーンのみによって内部で使用されます。|  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 |プロパティ|Description|  
 |--------------|-----------------|  
@@ -50,7 +52,7 @@ ms.locfileid: "73128279"
   
 ## <a name="methods"></a>メソッド  
   
-|メソッド|Description|  
+|メソッド|説明|  
 |------------|-----------------|  
 |`public bool Equals(Object obj)`|指定されたオブジェクトが現在のオブジェクトと等しいかどうかを判断します。  (<xref:System.Object> から継承。)|  
 |`protected void Finalize()`|オブジェクトが、ガベージ コレクションによって収集される前に、リソースの解放とその他のクリーンアップ操作の実行を試みることができるようにします。 (<xref:System.Object> から継承。)|  
@@ -63,14 +65,15 @@ ms.locfileid: "73128279"
   
 ## <a name="events"></a>events  
   
-|Event|Description|  
+|Event|説明|  
 |-----------|-----------------|  
 |`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|例外がシリアル化され、例外に関するシリアル化されたデータを含む例外状態オブジェクトが作成されたときに発生します。 (<xref:System.Exception?displayProperty=nameWithType> から継承。)|  
   
 ## <a name="usage-details"></a>Usage Details  
+
  `MissingInteropDataException` 例外は、型情報が使用できないために COM または Windows ランタイム コンポーネントへのメソッド呼び出しが正常に行えない場合にスローされます。  
   
- 実行時にアプリで使用できるメタデータは、ランタイムディレクティブ (XML 構成) ファイル (.xml) によって定義さ \* れます。 アプリからこの例外がスローされないようにするには、このファイルを変更して、実行時に存在する必要があるメタデータを定義する必要があります。 このエラーに対する最も一般的な対処法は、ランタイム ディレクティブ ファイルの適切なプログラム要素に `MarshalObject`、`MarshalDelegate`、または `MarshalStructure` 属性を追加することです。 このファイルの形式の詳細については、「[Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md)」(ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス) を参照してください。  
+ 実行時にアプリで使用できるメタデータは、ランタイムディレクティブ (XML 構成) ファイルの.rd.xml によって定義され \* ます。 アプリからこの例外がスローされないようにするには、このファイルを変更して、実行時に存在する必要があるメタデータを定義する必要があります。 このエラーに対する最も一般的な対処法は、ランタイム ディレクティブ ファイルの適切なプログラム要素に `MarshalObject`、`MarshalDelegate`、または `MarshalStructure` 属性を追加することです。 このファイルの形式の詳細については、「[Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md)」(ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス) を参照してください。  
   
 > [!IMPORTANT]
 > この例外はアプリケーションで必要なメタデータを実行時に使用できないことを示しているため、この例外に `try`/`catch` ブロックで対処しないでください。 代わりに、例外の原因を診断し、その原因を解消するために、ランタイム ディレクティブ ファイルに適切なエントリを追加します。  

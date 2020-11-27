@@ -1,15 +1,16 @@
 ---
-title: <Property>要素 (.NET ネイティブ)
+title: <Property> 要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
-ms.openlocfilehash: b9bc89804a872dddf1a56c2a3dadc9c3df4f5fd1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a0bdf95a1d1cadf7423f8c6595add13eda4d0d9a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128208"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250854"
 ---
-# <a name="property-element-net-native"></a>\<Property>要素 (.NET ネイティブ)
+# <a name="property-element-net-native"></a>\<Property> 要素 (.NET ネイティブ)
+
 プロパティにランタイム リフレクション ポリシーを適用します。  
   
 ## <a name="syntax"></a>構文  
@@ -22,11 +23,12 @@ ms.locfileid: "73128208"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|属性の型|Description|  
+|属性|属性の型|[説明]|  
 |---------------|--------------------|-----------------|  
 |`Name`|全般|必須の属性です。 プロパティ名を指定します。|  
 |`Browse`|リフレクション|省略可能な属性です。 プロパティに関する情報の照会やプロパティの列挙を制御しますが、実行時の動的アクセスは有効にしません。|  
@@ -35,17 +37,18 @@ ms.locfileid: "73128208"
   
 ## <a name="name-attribute"></a>Name 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |*method_name*|プロパティ名。 プロパティの型は、親要素または要素によって定義され [\<Type>](type-element-net-native.md) [\<TypeInstantiation>](typeinstantiation-element-net-native.md) ます。|  
   
 ## <a name="all-other-attributes"></a>その他すべての属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |*policy_setting*|プロパティのこのポリシーの種類に適用する設定です。 指定できる値は、`Auto`、`Excluded`、`Included`、および `Required` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](runtime-directive-policy-settings.md)」を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
@@ -56,9 +59,11 @@ ms.locfileid: "73128208"
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|構築されたジェネリック型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
   
 ## <a name="remarks"></a>解説  
+
  プロパティのポリシーが明示的に定義されていない場合は、親要素の実行時ポリシーを継承します。  
   
 ## <a name="example"></a>例  
+
  次の例では、リフレクションを使用して、`Book` オブジェクトをインスタンス化し、そのプロパティ値を表示します。 プロジェクトの既定の default.rd.xml ファイルは、次のように示されます。  
   
 ```xml  
@@ -81,7 +86,7 @@ ms.locfileid: "73128208"
   
 - `Dynamic` `Book` 要素内の型のポリシーを定義し [\<Type>](type-element-net-native.md) ます。  
   
-- [\<Property>](property-element-net-native.md)次の既定の .xml ファイルのように、呼び出す getter を持つ各プロパティに対して、入れ子になった要素を追加します。  
+- [\<Property>](property-element-net-native.md)次の default.rd.xml ファイルのように、呼び出す getter を持つ各プロパティに対して、入れ子になった要素を追加します。  
   
     ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

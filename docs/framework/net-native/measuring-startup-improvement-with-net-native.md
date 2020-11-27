@@ -2,14 +2,15 @@
 title: .NET ネイティブによる起動時間の改善の測定
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-ms.openlocfilehash: 5d20fa77ee299065ced406bf8cd531b8c54b6c33
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6d89edaff184692eabb11e928f5211f664ff5afa
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540889"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250971"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>.NET ネイティブによる起動時間の改善の測定
+
 .NET ネイティブすると、アプリの起動時間が大幅に短縮されます。 この改善は、ポータブルの低電力デバイスや複雑なアプリで特に顕著です。 このトピックでは、この起動時間の改善を測定するために必要となる基本的なインストルメンテーションの概要を示します。  
   
  パフォーマンスの調査を容易にするために、.NET Framework と Windows では、イベントが発生したときにアプリからツールに通知できるようにする Windows イベント トレーシング (ETW) という名前のイベント フレームワークを使用しています。 PerfView というツールを使用して、ETW イベントを簡単に表示および分析できます。 このトピックでは、次の方法を説明します。  
@@ -21,6 +22,7 @@ ms.locfileid: "90540889"
 - PerfView を使用したこれらのイベントの表示。  
   
 ## <a name="using-eventsource-to-emit-events"></a>EventSource を使用したイベントの生成  
+
  <xref:System.Diagnostics.Tracing.EventSource> は、カスタム イベント プロバイダーの作成元となる基底クラスを提供します。 一般的に、<xref:System.Diagnostics.Tracing.EventSource> のサブクラスを作成して、独自のイベント メソッドで `Write*` メソッドをラップします。 通常、シングルトン パターンが各 <xref:System.Diagnostics.Tracing.EventSource> に使用されます。  
   
  たとえば、次の例のクラスを使用して、2 つのパフォーマンス特性を測定できます。  
@@ -52,6 +54,7 @@ ms.locfileid: "90540889"
  アプリがインストルメント化されたら、イベントを収集できるようになります。  
   
 ## <a name="gathering-events-with-perfview"></a>PerfView でのイベントの収集  
+
  PerfView は ETW イベントを使用して、アプリでさまざまなパフォーマンスを調査できるようにします。 また、さまざまな種類のイベントのログ記録をオンまたはオフにするために使用できる構成 GUI も含まれています。 PerfView は無料ツールであり、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=28567)からダウンロードできます。 詳細については、[PerfView のチュートリアル ビデオ](https://channel9.msdn.com/Series/PerfView-Tutorial)をご覧ください。  
   
 > [!NOTE]
@@ -85,6 +88,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
  生成されたイベントを PerfView can が収集できるようにアプリを実行した場合は、**[コレクションの停止]** を選択します。 通常は、アプリを停止する前にコレクションを停止して、不要なイベントを取得しないようにする必要があります。 ただし、シャットダウンまたは中断のパフォーマンスを測定する場合は、コレクションを続行します。  
   
 ## <a name="displaying-the-events"></a>イベントの表示  
+
  既に収集されたイベントを表示するには、PerfView を使用して作成した .etl ファイルまたは .etl.zip ファイルを開き、**[イベント]** を選択します。 ETW によって、他のプロセスのイベントを含む、多数のイベントに関する情報が収集されています。 調査の対象を絞り込むために、イベント ビューで次のテキスト ボックスに入力します。  
   
 - **[Process Filter]\(プロセス フィルター\)** ボックスで、アプリの名前を指定します (".exe" は含めません)。  

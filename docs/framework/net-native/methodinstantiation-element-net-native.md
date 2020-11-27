@@ -1,15 +1,16 @@
 ---
-title: <MethodInstantiation>要素 (.NET ネイティブ)
+title: <MethodInstantiation> 要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
-ms.openlocfilehash: f19bd3c20088431bcbbafac298398b82a664bee9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e247db05f8442d4fcfddbf03b5eb8955b8ff425a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128320"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250958"
 ---
-# <a name="methodinstantiation-element-net-native"></a>\<MethodInstantiation>要素 (.NET ネイティブ)
+# <a name="methodinstantiation-element-net-native"></a>\<MethodInstantiation> 要素 (.NET ネイティブ)
+
 構築されたジェネリック メソッドにランタイム リフレクション ポリシーを適用します。  
   
 ## <a name="syntax"></a>構文  
@@ -23,11 +24,12 @@ ms.locfileid: "73128320"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|属性の型|Description|  
+|属性|属性の型|[説明]|  
 |---------------|--------------------|-----------------|  
 |`Name`|全般|必須の属性です。 メソッド名を指定します。|  
 |`Signature`|全般|省略可能な属性です。 メソッドの名前付きパラメーターを指定します。 複数の名前付きパラメーターはコンマで区切られます。 `Signature` 属性は、オーバー ロードされたメソッドを区別するために使用します。|  
@@ -37,29 +39,30 @@ ms.locfileid: "73128320"
   
 ## <a name="name-attribute"></a>Name 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |*method_name*|メソッド名。 メソッドの型は、親要素または要素によって定義され [\<Type>](type-element-net-native.md) [\<TypeInstantiation>](typeinstantiation-element-net-native.md) ます。|  
   
 ## <a name="signature-attribute"></a>シグネチャ属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |*method_signature*|メソッドの名前付きパラメーターを指定します。 複数のパラメーターが存在する場合はコンマで区切られます。|  
   
 ## <a name="arguments-attribute"></a>引数属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |*method_arguments*|ジェネリック型引数を指定します。 複数の引数が存在する場合は、コンマで区切られます。 各引数は、完全修飾型名で構成されている必要があります。|  
   
 ## <a name="all-other-attributes"></a>その他すべての属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |*policy_setting*|メソッドのこのポリシーの種類に適用する設定です。 指定できる値は、`Auto`、`Excluded`、`Included`、および `Required` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](runtime-directive-policy-settings.md)」を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
@@ -70,6 +73,7 @@ ms.locfileid: "73128320"
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|構築されたジェネリック型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
   
 ## <a name="remarks"></a>解説  
+
  `<MethodInstantiation>` 要素は、対応するオープン ジェネリック メソッドのランタイム リフレクション ポリシーをオーバーライドします。  
   
 ## <a name="see-also"></a>関連項目
@@ -77,4 +81,4 @@ ms.locfileid: "73128320"
 - [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)
 - [ランタイム ディレクティブ要素](runtime-directive-elements.md)
 - [ランタイム ディレクティブ ポリシーの設定](runtime-directive-policy-settings.md)
-- [\<Method>Element](method-element-net-native.md)
+- [\<Method> 要素](method-element-net-native.md)
