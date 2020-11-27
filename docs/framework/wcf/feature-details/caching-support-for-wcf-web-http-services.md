@@ -2,12 +2,12 @@
 title: WCF WEB HTTP サービスのキャッシュ サポート
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 0445f0214f90873dad4241789db270c9b6f4a2f6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6ce3ceccde01879876960e0288cb600a3a20c204
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559416"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279338"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>WCF WEB HTTP サービスのキャッシュ サポート
 
@@ -166,5 +166,6 @@ public Customer GetCustomer(string id)
 }
 ```  
   
-## <a name="security-considerations"></a>セキュリティに関する考慮事項  
+## <a name="security-considerations"></a>セキュリティの考慮事項  
+
  承認が必要な要求の応答はキャッシュしないでください。応答がキャッシュから提供された場合は、承認が実行されません。  このような応答をキャッシュすると、重大なセキュリティの脆弱性が生じます。  通常、承認が必要な要求ではユーザー固有のデータが提供されるため、サーバー側でキャッシュしても利点はありません。  このような場合は、クライアント側でキャッシュするか、単にキャッシュをまったく行わない方が適切です。

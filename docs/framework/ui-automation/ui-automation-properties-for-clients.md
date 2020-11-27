@@ -9,14 +9,15 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-ms.openlocfilehash: fe78d7da154d79a5f66ee6c190b199065675841f
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: f86351f430e2d133a31cf6af81b41789ba444078
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163130"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279130"
 ---
 # <a name="ui-automation-properties-for-clients"></a>クライアントの UI オートメーション プロパティ
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
@@ -31,11 +32,13 @@ ms.locfileid: "87163130"
  パフォーマンスを向上させるために、 <xref:System.Windows.Automation.AutomationElement> オブジェクトを取得したときに、コントロールおよびコントロール パターンのプロパティ値をキャッシュできます。 詳細については、「 [UI オートメーションクライアントでのキャッシュ](caching-in-ui-automation-clients.md)」を参照してください。  
   
 ## <a name="property-ids"></a>プロパティ ID  
+
  プロパティ識別子 (IDs) は、オブジェクトにカプセル化される一意の定数値です <xref:System.Windows.Automation.AutomationProperty> 。 UI オートメーションクライアントアプリケーション <xref:System.Windows.Automation.AutomationElement> は、クラスまたは適切なコントロールパターンクラス (など) からこれらの id を取得し <xref:System.Windows.Automation.ScrollPattern> ます。 UI オートメーション プロバイダーは、 <xref:System.Windows.Automation.AutomationElementIdentifiers> またはコントロール パターン識別子クラスの 1 つ ( <xref:System.Windows.Automation.ScrollPatternIdentifiers>など) からこれらを取得します。  
   
  <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> の数値 <xref:System.Windows.Automation.AutomationProperty> は、 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> メソッドで照会するプロパティを識別するために、プロバイダーによって使用されます。 通常、クライアント アプリケーションで <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>を調べる必要はありません。 <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> は、デバッグと診断の目的のみに使用されます。  
   
 ## <a name="property-conditions"></a>プロパティ条件  
+
  プロパティ Id は、オブジェクトの検索に使用するオブジェクトの構築に使用され <xref:System.Windows.Automation.PropertyCondition> <xref:System.Windows.Automation.AutomationElement> ます。 たとえば、特定の名前を持つ <xref:System.Windows.Automation.AutomationElement> を検出したい場合や、すべての有効なコントロールを検出したい場合があります。 各 <xref:System.Windows.Automation.PropertyCondition> では、 <xref:System.Windows.Automation.AutomationProperty> 識別子と、そのプロパティが一致する必要がある値を指定します。  
   
  詳細については、次のリファレンス トピックを参照してください。  
@@ -47,6 +50,7 @@ ms.locfileid: "87163130"
 - <xref:System.Windows.Automation.TreeWalker.Condition%2A>  
   
 ## <a name="retrieving-properties"></a>プロパティの取得  
+
  <xref:System.Windows.Automation.AutomationElement> のいくつかのプロパティと、コントロール パターン クラスのすべてのプロパティは、 `Current` またはコントロール パターン オブジェクトの、 `Cached` プロパティまたは <xref:System.Windows.Automation.AutomationElement> プロパティの入れ子になったプロパティとして公開されます。  
   
  また、 <xref:System.Windows.Automation.AutomationElement> または <xref:System.Windows.Automation.AutomationElement.Cached%2A> の構造体にはないプロパティを含む、任意の <xref:System.Windows.Automation.AutomationElement.Current%2A> またはコントロール パターン プロパティは、次のいずれかのメソッドを使用して取得できます。  
@@ -72,6 +76,7 @@ ms.locfileid: "87163130"
  `Get` メソッドは <xref:System.Object>を返します。 アプリケーションは、この値を使用する前に、返されたオブジェクトを適切な型にキャストする必要があります。  
   
 ## <a name="default-property-values"></a>既定のプロパティ値  
+
  UI オートメーション プロバイダーがプロパティを実装していない場合、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] システムは既定値を提供できます。 たとえば、コントロールのプロバイダーが <xref:System.Windows.Automation.AutomationElement.HelpTextProperty>によって識別されたプロパティをサポートしていない場合、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は空の文字列を返します。 同様に、プロバイダーが <xref:System.Windows.Automation.AutomationElement.IsDockPatternAvailableProperty>によって識別されたプロパティをサポートしていない場合、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は `false`を返します。  
   
  この動作は、 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> と <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> のメソッド オーバーロードを使用して変更できます。 2 番目のパラメーターとして `true` を指定した場合、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は既定値を返さず、代わりに特殊な値 <xref:System.Windows.Automation.AutomationElement.NotSupported>を返します。  
@@ -84,14 +89,16 @@ ms.locfileid: "87163130"
  要素によってサポートされているプロパティを調べるためには、 <xref:System.Windows.Automation.AutomationElement.GetSupportedProperties%2A>を使用します。 これにより、 <xref:System.Windows.Automation.AutomationProperty> 識別子の配列が返されます。  
   
 ## <a name="property-changed-events"></a>プロパティ変更イベント  
+
  <xref:System.Windows.Automation.AutomationElement> またはコントロール パターンのプロパティ値が変化すると、イベントが発生します。 アプリケーションは、 <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>を呼び出し、目的のプロパティを指定するために最後のパラメーターとして <xref:System.Windows.Automation.AutomationProperty> 識別子の配列を提供して、このようなイベントをサブスクライブできます。  
   
  <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>では、イベント引数の <xref:System.Windows.Automation.AutomationPropertyChangedEventArgs.Property%2A> メンバーを調べることによって、変更されたプロパティを識別できます。 また、引数には、変更された [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティの古い値と新しい値も含まれています。 これらの値は <xref:System.Object> 型であり、使用する前に正しい型にキャストする必要があります。  
   
 ## <a name="additional-automationelement-properties"></a>その他の AutomationElement プロパティ  
+
  <xref:System.Windows.Automation.AutomationElement.Current%2A> プロパティおよび <xref:System.Windows.Automation.AutomationElement.Cached%2A> プロパティの構造体に加えて、 <xref:System.Windows.Automation.AutomationElement> には、単純なプロパティ アクセサーを介して取得される次のプロパティがあります。  
   
-|プロパティ|説明|  
+|プロパティ|Description|  
 |--------------|-----------------|  
 |<xref:System.Windows.Automation.AutomationElement.CachedChildren%2A>|キャッシュ内にある子 <xref:System.Windows.Automation.AutomationElement> オブジェクトのコレクション。|  
 |<xref:System.Windows.Automation.AutomationElement.CachedParent%2A>|キャッシュ内にある <xref:System.Windows.Automation.AutomationElement> 親オブジェクト。|  
