@@ -2,17 +2,19 @@
 title: WCF Web HTTP 書式設定
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: 011ff4f2e667268fac1aa2d82c0a2c4ffefc8dde
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e9346cd1bb3798ad0beac5e9e28a8536007d897b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585559"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266910"
 ---
 # <a name="wcf-web-http-formatting"></a>WCF Web HTTP 書式設定
+
 WCF Web HTTP プログラミング モデルでは、サービス操作で返す応答の最適な形式を動的に判断できます。 適切な形式を判断するための方法として、自動と明示的の 2 つがサポートされます。  
   
 ## <a name="automatic-formatting"></a>自動書式  
+
  有効にした場合は、応答を返す最適な形式が自動選択によって選択されます。 最適な形式の判断は、次の項目をこの順序で確認することで行われます。  
   
 1. 要求メッセージの Accept ヘッダーのメディアの種類。  
@@ -91,6 +93,7 @@ try
 ```  
   
 ## <a name="explicit-formatting"></a>明示的な書式設定  
+
  名前が示すように、形式の明示的な選択では、操作コード内に使用する最適な形式を開発者が判断します。 最適な形式が XML または JSON の場合は、開発者が <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> を <xref:System.ServiceModel.Web.WebMessageFormat.Xml> または <xref:System.ServiceModel.Web.WebMessageFormat.Json> のいずれかに設定します。 <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> プロパティが明示的に設定されていない場合は、その操作の既定の形式が使用されます。  
   
  次の例では、使用する形式に対する形式クエリ文字列パラメーターを確認します。 指定されている場合、その操作の形式は <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> を使用して設定されます。  

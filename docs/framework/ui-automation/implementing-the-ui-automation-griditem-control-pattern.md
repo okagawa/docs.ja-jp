@@ -7,14 +7,15 @@ helpviewer_keywords:
 - UI Automation GridItem control pattern
 - GridItem control pattern
 ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
-ms.openlocfilehash: e0a0c616f3f0cf9bc091e4fbb496d71ab8550bd3
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 30932e630c663aabb7d26302174785d44dc1c385
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165822"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267885"
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>UI オートメーション GridItem コントロール パターンの実装
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
@@ -23,7 +24,9 @@ ms.locfileid: "87165822"
  <xref:System.Windows.Automation.GridItemPattern> コントロール パターンは、<xref:System.Windows.Automation.Provider.IGridProvider> を実装するコンテナーの個々の子コントロールをサポートするために使用されます。 このコントロール パターンを実装するコントロールの例については、「 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)」をご覧ください。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>実装のガイドラインと規則  
+
  <xref:System.Windows.Automation.Provider.IGridProvider> を実装する場合は、次のガイドラインと規則に留意してください。  
   
 - グリッドの座標は 0 から始まり、左上のセルの座標が (0, 0) です。  
@@ -35,7 +38,9 @@ ms.locfileid: "87165822"
 - <xref:System.Windows.Automation.Provider.IGridItemProvider> を実装するコントロールは、一般にキーボードを使用して横断できます (つまり、UI オートメーション クライアントが隣接するコントロールに移動できます)。  
   
 <a name="Required_Members_for_IGridItemProvider"></a>
+
 ## <a name="required-members-for-igriditemprovider"></a>IGridItemProvider の必須メンバー  
+
  <xref:System.Windows.Automation.Provider.IGridItemProvider>の実装には、次のプロパティとメソッドが必要です。  
   
 |必須メンバー|メンバーの型|メモ|  
@@ -49,7 +54,9 @@ ms.locfileid: "87165822"
  このコントロール パターンに関連するメソッドまたはイベントはありません。  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>例外  
+
  このコントロール パターンに関連付けられた例外はありません。  
   
 ## <a name="see-also"></a>関連項目

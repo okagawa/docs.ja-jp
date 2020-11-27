@@ -11,20 +11,23 @@ helpviewer_keywords:
 - data buffering problems
 - streamWriterBufferedDataLost MDA
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
-ms.openlocfilehash: 0c10ea6bb9dc0aaafa2ac1798696579af7592895
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 23a8146bfa5acc08000e689917abb844c5540fec
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803483"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267079"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost MDA
+
 `streamWriterBufferedDataLost` マネージド デバッグ アシスタント (MDA) は <xref:System.IO.StreamWriter> が書き込まれたときに起動しますが、その後、<xref:System.IO.StreamWriter> のインスタンスが破棄される前に <xref:System.IO.StreamWriter.Flush%2A> または <xref:System.IO.StreamWriter.Close%2A> メソッドが呼び出されません。 この MDA が有効になると、バッファーに入れられたデータが <xref:System.IO.StreamWriter> 内に残っているか、ランタイムにより判断されます。 バッファーに入れられたデータが残っている場合、MDA が起動します。 <xref:System.GC.Collect%2A> メソッドと <xref:System.GC.WaitForPendingFinalizers%2A> メソッドを呼び出すことで、ファイナライザーを強制的に実行できます。 それ以外の場合、ファイナライザーは任意のタイミングで実行されます。プロセス終了時に実行されることは、ほぼありません。 この MDA が有効になっている状態でファイナライザーを明示的に実行すると、この種類の問題をより確実に再現できます。  
   
 ## <a name="symptoms"></a>現象  
+
  <xref:System.IO.StreamWriter> では、最後の 1 – 4 KB のデータがファイルに書き込まれません。  
   
 ## <a name="cause"></a>原因  
+
  <xref:System.IO.StreamWriter> はデータを内部でバッファーに入れます。このとき、<xref:System.IO.StreamWriter.Close%2A> または <xref:System.IO.StreamWriter.Flush%2A> メソッドを呼び出し、バッファーに入れたデータを基礎となるデータ ストアに書き込む必要があります。 <xref:System.IO.StreamWriter.Close%2A> または <xref:System.IO.StreamWriter.Flush%2A> が正しく呼び出されない場合、<xref:System.IO.StreamWriter> インスタンスのバッファーに入れられたデータは予想どおりに書き込まれないことがあります。  
   
  次は、この MDA がキャッチする、書き込みが十分ではないコードの例です。  
@@ -46,7 +49,8 @@ GC.Collect();
 GC.WaitForPendingFinalizers();  
 ```  
   
-## <a name="resolution"></a>解決策  
+## <a name="resolution"></a>解像度  
+
  アプリケーションを閉じる前に、あるいは、<xref:System.IO.StreamWriter> のインスタンスが含まれるコード ブロックを終了する前に、<xref:System.IO.StreamWriter> で <xref:System.IO.StreamWriter.Close%2A> または <xref:System.IO.StreamWriter.Flush%2A> を呼び出します。 これを最も効率的に行う方法は、C# `using` ブロック (Visual Basic の場合、`Using`) でインスタンスを作成することです。ライターの <xref:System.IO.StreamWriter.Dispose%2A> メソッドが呼び出され、インスタンスが正しく終了します。  
   
 ```csharp
@@ -88,9 +92,11 @@ static WriteToFile()
 ```  
   
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
+
  この MDA は、ランタイムに影響しません。  
   
 ## <a name="output"></a>出力  
+
  この違反が発生したことを示すメッセージ  
   
 ## <a name="configuration"></a>構成  

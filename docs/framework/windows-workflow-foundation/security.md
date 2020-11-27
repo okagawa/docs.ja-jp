@@ -2,17 +2,18 @@
 title: セキュリティ
 ms.date: 03/30/2017
 ms.assetid: 737ec121-bfc5-4b75-a504-2d53c2c8af39
-ms.openlocfilehash: 09614a4528e83898c894506a99c5992c506b7961
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e4419a7a73015541e0a75b4f8c615485c5fdac1b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559240"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267274"
 ---
 # <a name="security"></a>セキュリティ
+
 SQL Workflow Instance Store は、次のデータベース セキュリティ ロールを使用して、永続性データベースのインスタンス状態情報へのアクセスをセキュリティ保護します。  
   
-- **System.activities.durableinstancing.instances を処理**します。 このロールには、パブリック ビューへの読み取りおよび書き込みのアクセス権と、インスタンスの作成、読み込み、保存に関連するストアド プロシージャへの実行権限があります。  
+- **System.activities.durableinstancing.instances を処理** します。 このロールには、パブリック ビューへの読み取りおよび書き込みのアクセス権と、インスタンスの作成、読み込み、保存に関連するストアド プロシージャへの実行権限があります。  
   
 - **System.activities.durableinstancing.instances. InstanceStoreObservers**。 このロールには、パブリック ビューへの読み取り専用アクセス権があります。  
   

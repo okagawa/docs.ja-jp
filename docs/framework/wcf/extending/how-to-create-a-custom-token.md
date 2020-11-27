@@ -11,27 +11,29 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: a95d663c2669186fcb3eb1fb2f0c426ade945f1c
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: e0d80fe2433d894ef1f9e110e9090701dc305d8e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247534"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266754"
 ---
 # <a name="how-to-create-a-custom-token"></a>方法: カスタム トークンを作成する
-ここでは、<xref:System.IdentityModel.Tokens.SecurityToken> を使用してカスタムのセキュリティ トークンを作成する方法と、作成したトークンを、カスタム セキュリティ トークン プロバイダーおよび認証システムと統合する方法について説明します。 完全なコード例については、[カスタムトークン](../samples/custom-token.md)のサンプルを参照してください。  
+
+ここでは、<xref:System.IdentityModel.Tokens.SecurityToken> を使用してカスタムのセキュリティ トークンを作成する方法と、作成したトークンを、カスタム セキュリティ トークン プロバイダーおよび認証システムと統合する方法について説明します。 完全なコード例については、 [カスタムトークン](../samples/custom-token.md) のサンプルを参照してください。  
   
- *セキュリティトークン*は、基本的には、SOAP メッセージ内の送信者に関するクレームを表すために WINDOWS COMMUNICATION FOUNDATION (WCF) セキュリティフレームワークによって使用される XML 要素です。 WCF セキュリティは、システム指定の認証モード用のさまざまなトークンを提供します。 たとえば、<xref:System.IdentityModel.Tokens.X509SecurityToken> クラスによって表される X.509 証明書セキュリティ トークンや、<xref:System.IdentityModel.Tokens.UserNameSecurityToken> クラスによって表されるユーザー名セキュリティ トークンなどがあります。  
+ *セキュリティトークン* は、基本的には、SOAP メッセージ内の送信者に関するクレームを表すために WINDOWS COMMUNICATION FOUNDATION (WCF) セキュリティフレームワークによって使用される XML 要素です。 WCF セキュリティは、システム指定の認証モード用のさまざまなトークンを提供します。 たとえば、<xref:System.IdentityModel.Tokens.X509SecurityToken> クラスによって表される X.509 証明書セキュリティ トークンや、<xref:System.IdentityModel.Tokens.UserNameSecurityToken> クラスによって表されるユーザー名セキュリティ トークンなどがあります。  
   
  認証モードや資格情報は、指定した種類のトークンではサポートされないことがあります。 そのような場合は、SOAP メッセージ内部のカスタム資格情報の XML 表現を提供するカスタム セキュリティ トークンを作成する必要があります。  
   
  次の手順では、カスタムセキュリティトークンを作成する方法と、それを WCF セキュリティインフラストラクチャと統合する方法について説明します。 ここでは、クライアントのクレジット カードに関する情報をサーバーに渡す際に使用するクレジット カード トークンを作成します。  
   
- カスタム資格情報とセキュリティトークンマネージャーの詳細については、「[チュートリアル: カスタムクライアントおよびサービスの資格情報の作成](walkthrough-creating-custom-client-and-service-credentials.md)」を参照してください。  
+ カスタム資格情報とセキュリティトークンマネージャーの詳細については、「 [チュートリアル: カスタムクライアントおよびサービスの資格情報の作成](walkthrough-creating-custom-client-and-service-credentials.md)」を参照してください。  
   
  セキュリティ トークンを表すさまざまなクラスについては、「<xref:System.IdentityModel.Tokens> 名前空間」を参照してください。  
   
-## <a name="procedures"></a>プロシージャ  
+## <a name="procedures"></a>手順  
+
  クライアント アプリケーションには、セキュリティ インフラストラクチャにクレジット カード情報を指定する方法を設ける必要があります。 この情報は、カスタムのクライアント資格情報クラスによりアプリケーションに提供されます。 最初に、カスタム クライアント資格情報のクレジット カード情報を表すクラスを作成します。  
   
 #### <a name="to-create-a-class-that-represents-credit-card-information-inside-client-credentials"></a>クライアント資格情報内のクレジット カード情報を表すクラスを作成するには  
@@ -103,14 +105,14 @@ ms.locfileid: "85247534"
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-provider"></a>カスタム セキュリティ トークンをセキュリティ トークン プロバイダーと統合するには  
   
-1. セキュリティ トークン プロバイダーは、必要に応じて、トークンのインスタンスを作成、変更、および返却します。 カスタム セキュリティ トークンのカスタム プロバイダーを作成するには、<xref:System.IdentityModel.Selectors.SecurityTokenProvider> クラスを継承するクラスを作成します。 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> メソッドをオーバーライドして、`CreditCardToken` のインスタンスを返す例を次に示します。 カスタムセキュリティトークンプロバイダーの詳細については、「[方法: カスタムセキュリティトークンプロバイダーを作成](how-to-create-a-custom-security-token-provider.md)する」を参照してください。  
+1. セキュリティ トークン プロバイダーは、必要に応じて、トークンのインスタンスを作成、変更、および返却します。 カスタム セキュリティ トークンのカスタム プロバイダーを作成するには、<xref:System.IdentityModel.Selectors.SecurityTokenProvider> クラスを継承するクラスを作成します。 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> メソッドをオーバーライドして、`CreditCardToken` のインスタンスを返す例を次に示します。 カスタムセキュリティトークンプロバイダーの詳細については、「 [方法: カスタムセキュリティトークンプロバイダーを作成](how-to-create-a-custom-security-token-provider.md)する」を参照してください。  
   
      [!code-csharp[c_CustomToken#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#6)]
      [!code-vb[c_CustomToken#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#6)]  
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-authenticator"></a>カスタム セキュリティ トークンをセキュリティ トークン認証システムと統合するには  
   
-1. セキュリティ トークン認証システムは、セキュリティ トークンがメッセージから抽出されたときにトークンの内容を検証します。 カスタム セキュリティ トークンのカスタム認証システムを作成するには、<xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> クラスを継承するクラスを作成します。 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> メソッドをオーバーライドする例を次に示します。 カスタムセキュリティトークン認証システムの詳細については、「[方法: カスタムセキュリティトークン認証システムを作成](how-to-create-a-custom-security-token-authenticator.md)する」を参照してください。  
+1. セキュリティ トークン認証システムは、セキュリティ トークンがメッセージから抽出されたときにトークンの内容を検証します。 カスタム セキュリティ トークンのカスタム認証システムを作成するには、<xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> クラスを継承するクラスを作成します。 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> メソッドをオーバーライドする例を次に示します。 カスタムセキュリティトークン認証システムの詳細については、「 [方法: カスタムセキュリティトークン認証システムを作成](how-to-create-a-custom-security-token-authenticator.md)する」を参照してください。  
   
      [!code-csharp[c_CustomToken#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#7)]
      [!code-vb[c_CustomToken#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#7)]  
@@ -120,7 +122,7 @@ ms.locfileid: "85247534"
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-manager"></a>カスタム セキュリティ トークンをセキュリティ トークン マネージャーと統合するには  
   
-1. セキュリティ トークン マネージャーは、トークン プロバイダー、セキュリティ認証システム、およびトークン シリアライザーの適切なインスタンスを作成します。 カスタム トークン マネージャーを作成するには、<xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> クラスを継承するクラスを作成します。 このクラスの主要なメソッドは <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> を使用して、適切なプロバイダーとクライアント資格情報またはサービス資格情報を作成します。 カスタムセキュリティトークンマネージャーの詳細については、「[チュートリアル: カスタムクライアントおよびサービスの資格情報の作成](walkthrough-creating-custom-client-and-service-credentials.md)」を参照してください。  
+1. セキュリティ トークン マネージャーは、トークン プロバイダー、セキュリティ認証システム、およびトークン シリアライザーの適切なインスタンスを作成します。 カスタム トークン マネージャーを作成するには、<xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> クラスを継承するクラスを作成します。 このクラスの主要なメソッドは <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> を使用して、適切なプロバイダーとクライアント資格情報またはサービス資格情報を作成します。 カスタムセキュリティトークンマネージャーの詳細については、「 [チュートリアル: カスタムクライアントおよびサービスの資格情報の作成](walkthrough-creating-custom-client-and-service-credentials.md)」を参照してください。  
   
      [!code-csharp[c_CustomToken#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#8)]
      [!code-vb[c_CustomToken#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#8)]  
@@ -130,7 +132,7 @@ ms.locfileid: "85247534"
   
 #### <a name="to-integrate-the-custom-security-token-with-custom-client-and-service-credentials"></a>カスタム セキュリティ トークンをカスタムのクライアント資格情報およびサービス資格情報と統合するには  
   
-1. アプリケーションに API を提供し、事前に作成したカスタム セキュリティ トークン インフラストラクチャで、カスタム セキュリティ トークンの内容を提供および認証する際に使用するカスタム トークン情報を指定できるようにするには、カスタムのクライアント資格情報とサービス資格情報を追加する必要があります。 この方法を次の例に示します。 カスタムクライアントおよびサービスの資格情報の詳細については、「[チュートリアル: カスタムクライアントおよびサービスの資格情報の作成](walkthrough-creating-custom-client-and-service-credentials.md)」を参照してください。  
+1. アプリケーションに API を提供し、事前に作成したカスタム セキュリティ トークン インフラストラクチャで、カスタム セキュリティ トークンの内容を提供および認証する際に使用するカスタム トークン情報を指定できるようにするには、カスタムのクライアント資格情報とサービス資格情報を追加する必要があります。 この方法を次の例に示します。 カスタムクライアントおよびサービスの資格情報の詳細については、「 [チュートリアル: カスタムクライアントおよびサービスの資格情報の作成](walkthrough-creating-custom-client-and-service-credentials.md)」を参照してください。  
   
      [!code-csharp[c_CustomToken#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#10)]
      [!code-vb[c_CustomToken#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#10)]  
@@ -147,7 +149,7 @@ ms.locfileid: "85247534"
      [!code-csharp[c_CustomToken#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#13)]
      [!code-vb[c_CustomToken#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#13)]  
   
- このトピックでは、カスタム トークンを実装および使用するために必要なさまざまなコードを示します。 これらのコードのすべての部分がどのように組み合わされているかの完全な例については、「[カスタムトークン](../samples/custom-token.md)」を参照してください。  
+ このトピックでは、カスタム トークンを実装および使用するために必要なさまざまなコードを示します。 これらのコードのすべての部分がどのように組み合わされているかの完全な例については、「 [カスタムトークン](../samples/custom-token.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

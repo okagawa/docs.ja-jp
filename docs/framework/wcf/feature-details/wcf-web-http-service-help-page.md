@@ -2,14 +2,15 @@
 title: WCF Web HTTP サービスのヘルプ ページ
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: ef42457dea8bfe12a3e5054c5eacdf5a2964fdc7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fe6b22c6ebd637d3aa2bcd3744cb6b73e71c9482
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600167"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266936"
 ---
 # <a name="wcf-web-http-service-help-page"></a>WCF Web HTTP サービスのヘルプ ページ
+
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] には、WCF WEB HTTP サービスの自動的なヘルプ ページが用意されています。 このヘルプ ページには、各操作の説明、要求と応答の形式、およびスキーマが一覧表示されます。 この機能は、既定では無効になっています。 ユーザーが WCF WEB HTTP サービスを参照し、URL の末尾に "/Help" を追加すると、 `http://localhost:8000/Customers/Help` 次のようなヘルプページが表示されます。  
   
  ![WCF REST ヘルプページが開いているブラウザー。](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
@@ -19,6 +20,7 @@ ms.locfileid: "84600167"
  ![GetCustomers メソッドを開くための WCF REST ヘルプページの詳細が含まれているブラウザー。](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
   
 ## <a name="using-the-wcf-web-http-help-page"></a>WCF Web HTTP ヘルプ ページの使用  
+
  <xref:System.ComponentModel.DescriptionAttribute> を使用して指定した場合は、WCF WEB HTTP ヘルプ ページに各操作の短い説明が表示されます。 この属性は、適用される操作の短い説明を含む文字列を取得します。 たとえば、次のコードでは、<xref:System.ComponentModel.DescriptionAttribute> を使用して短い説明を提供する方法を示しています。  
   
 ```csharp
@@ -59,6 +61,7 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
  ヘルプ ページは XHTML ベースで、ページの各部分を識別するマークアップがあります。 これにより、クライアントは、<xref:System.Xml.Linq.XElement> またはその他の XLinq API を使用して、ページにプログラムでアクセスできます。  
   
 ## <a name="schemas-used-in-the-wcf-web-http-service-help-page"></a>WCF Web HTTP サービスのヘルプ ページで使用されるスキーマ  
+
  WCF Web HTTP サービスのヘルプ ページでは、次のスキーマが使用されます。  
   
 ```xml  
@@ -240,4 +243,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- データコントラクトのシリアル化スキーマの詳細については、「[データコントラクトスキーマの参照](data-contract-schema-reference.md)」を参照してください。
+ データコントラクトのシリアル化スキーマの詳細については、「 [データコントラクトスキーマの参照](data-contract-schema-reference.md)」を参照してください。

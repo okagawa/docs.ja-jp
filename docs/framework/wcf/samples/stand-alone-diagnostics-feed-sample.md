@@ -2,14 +2,15 @@
 title: スタンドアロン診断フィードのサンプル
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 0402805b7eb5b0b224db32eb07780743e5f32fb3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b4c3613656e0aec42c0d3f5cd7cde0af6540a69a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600920"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268249"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>スタンドアロン診断フィードのサンプル
+
 このサンプルでは、Windows Communication Foundation (WCF) を使用して配信するために RSS/Atom フィードを作成する方法を示します。 これは基本的な "Hello World" プログラムであり、オブジェクトモデルの基本と、Windows Communication Foundation (WCF) サービスでの設定方法を示しています。  
   
  WCF は、特別なデータ型を返すサービス操作として配信フィードをモデル化し <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> ます。 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> のインスタンスは、フィードを RSS 2.0 形式および Atom 1.0 形式の両方にシリアル化できます。 使用するコントラクトを次のサンプル コードに示します。  
@@ -51,7 +52,7 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
   
  このサービスは標準の HTTP GET を使用して要求を受け取るので、サービスへのアクセスには、RSS または ATOM に対応している任意のクライアントを使用できます。 たとえば、 `http://localhost:8000/diagnostics/feed/?format=atom` RSS 対応のブラウザーでまたはに移動して、このサービスの出力を表示でき `http://localhost:8000/diagnostics/feed/?format=rss` ます。
   
- また、 [WCF 配信オブジェクトモデルが Atom および RSS にマップ](../feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)され、命令型コードを使用してシンジケートデータを読み取り、処理する方法を使用することもできます。  
+ また、 [WCF 配信オブジェクトモデルが Atom および RSS にマップ](../feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) され、命令型コードを使用してシンジケートデータを読み取り、処理する方法を使用することもできます。  
   
 ```csharp
 XmlReader reader = XmlReader.Create( "http://localhost:8000/diagnostics/feed/?format=rss",
@@ -89,7 +90,7 @@ foreach (SyndicationItem i in feed.Items)
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`
 

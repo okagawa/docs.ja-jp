@@ -2,38 +2,40 @@
 title: SendMail カスタム アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 4dca15bfd3798b9282960663bea827f9323a1266
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f518beebe336080853e4dec3bca6f8539bbec304
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547728"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267591"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail カスタム アクティビティ
+
 このサンプルでは、<xref:System.Activities.AsyncCodeActivity> から派生するカスタム アクティビティを作成して、SMTP を使用して電子メールを送信し、ワークフロー アプリケーション内で使用する方法を示します。 カスタムアクティビティでは、の機能を使用して、 <xref:System.Net.Mail.SmtpClient> 電子メールを非同期的に送信し、認証を使用してメールを送信します。 また、テスト モード、トークン置換、ファイル テンプレート、テスト ドロップ パスなどのエンドユーザーの機能も提供しています。  
   
  次の表で、`SendMail` アクティビティの引数の詳細を説明します。  
   
-|名前|種類|説明|  
+|名前|Type|説明|  
 |-|-|-|  
-|Host|String|SMTP サーバー ホストのアドレス。|  
-|ポート|String|ホストの SMTP サービスのポート。|  
+|Host|文字列型|SMTP サーバー ホストのアドレス。|  
+|Port|文字列型|ホストの SMTP サービスのポート。|  
 |EnableSsl|[bool]|<xref:System.Net.Mail.SmtpClient> が、接続を暗号化するために SSL (Secure Sockets Layer) を使用するかどうかを指定します。|  
 |UserName|文字列型|差出人の <xref:System.Net.Mail.SmtpClient.Credentials%2A> プロパティを認証する資格情報を設定するユーザー名。|  
-|Password|String|差出人の <xref:System.Net.Mail.SmtpClient.Credentials%2A> プロパティを認証する資格情報を設定するパスワード。|  
+|パスワード|文字列型|差出人の <xref:System.Net.Mail.SmtpClient.Credentials%2A> プロパティを認証する資格情報を設定するパスワード。|  
 |サブジェクト|<xref:System.Activities.InArgument%601>\<string>|メッセージの件名。|  
-|Body|<xref:System.Activities.InArgument%601>\<string>|メッセージの本文。|  
+|本文|<xref:System.Activities.InArgument%601>\<string>|メッセージの本文。|  
 |[Attachments]|<xref:System.Activities.InArgument%601>\<string>|この電子メールメッセージに添付されたデータを格納するために使用される添付ファイルのコレクションです。|  
 |ソース|<xref:System.Net.Mail.MailAddress>|この電子メールメッセージの差出人アドレス。|  
 |終了|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|この電子メールメッセージの受信者を含むアドレスコレクション。|  
 |CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|この電子メールメッセージのカーボンコピー (CC) 受信者を格納するアドレスのコレクション。|  
 |BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|この電子メールメッセージの BCC (ブラインドカーボンコピー) 受信者を含むアドレスコレクション。|  
 |トークン|<xref:System.Activities.InArgument%601><IDictionary\<string, string>>|本文で置換するトークン。 この機能を使用すると、本文にいくつかの値を指定した後、このプロパティを使用して提供されるトークンで置換できます。|  
-|BodyTemplateFilePath|String|本文のテンプレートのパス。 `SendMail` アクティビティは、このファイルの内容をその body プロパティにコピーします。<br /><br /> テンプレートは、tokens プロパティの内容によって置き換えられるトークンを含めることができます。|  
+|BodyTemplateFilePath|文字列型|本文のテンプレートのパス。 `SendMail` アクティビティは、このファイルの内容をその body プロパティにコピーします。<br /><br /> テンプレートは、tokens プロパティの内容によって置き換えられるトークンを含めることができます。|  
 |TestMailTo|<xref:System.Net.Mail.MailAddress>|このプロパティを設定すると、すべての電子メールが、その中に指定されたアドレスに送信されます。<br /><br /> このプロパティは、ワークフローをテストするときに使用するためのものです。 たとえば、すべての電子メールが実際の受信者に送信されることなく送信されるようにする場合です。|  
-|TestDropPath|String|このプロパティが設定されている場合、すべての電子メールも指定したファイルに保存されます。<br /><br /> このプロパティは、ワークフローをテストまたはデバッグするときに使用することを目的としており、送信メールの形式と内容が適切であることを確認します。|  
+|TestDropPath|文字列型|このプロパティが設定されている場合、すべての電子メールも指定したファイルに保存されます。<br /><br /> このプロパティは、ワークフローをテストまたはデバッグするときに使用することを目的としており、送信メールの形式と内容が適切であることを確認します。|  
   
 ## <a name="solution-contents"></a>ソリューションのコンテンツ  
+
  ソリューションには、次の 2 つのプロジェクトが含まれています。  
   
 |プロジェクト|説明|重要なファイル|  
@@ -42,9 +44,11 @@ ms.locfileid: "90547728"
 |SendMailTestClient|SendMail アクティビティをテストするクライアント。  このプロジェクトでは、SendMail アクティビティを宣言的に起動する方法とプログラムで起動する方法を示します。|1. Sequence1: SendMail アクティビティを呼び出すワークフロー。<br />2. Program.cs: Sequence1 を呼び出し、SendMail を使用するプログラムによってワークフローを作成します。|  
   
 ## <a name="further-configuration-of-the-sendmail-activity"></a>SendMail アクティビティの追加構成  
+
  サンプルには表示されませんが、SendMail アクティビティの追加構成を実行できます。 次の 3 つのセクションは、その方法を示しています。  
   
 ### <a name="sending-an-email-using-tokens-specified-in-the-body"></a>本文で指定されたトークンを使用した電子メールの送信  
+
  次のコード スニペットでは、本文のトークンを使用して電子メールを送信する方法を示します。 トークンが body プロパティに指定されていることに注目してください。 それらのトークンの値は、tokens プロパティに指定されています。  
   
 ```csharp  
@@ -67,6 +71,7 @@ new SendMail
 ```  
   
 ### <a name="sending-an-email-using-a-template"></a>テンプレートを使用した電子メールの送信  
+
  次のスニペットでは、本文のテンプレート トークンを使用して電子メールを送信する方法を示します。 `BodyTemplateFilePath` プロパティを設定するときに、Body プロパティの値を指定する必要がないことに注目してください (テンプレート ファイルのコンテンツは本文にコピーされます)。  
   
 ```csharp  
@@ -84,6 +89,7 @@ new SendMail
 ```  
   
 ### <a name="sending-mails-in-testing-mode"></a>テスト モードでの電子メールの送信  
+
  このコードスニペットは、2つのテストプロパティを設定する方法を示しています。をに設定すると `TestMailTo` 、すべてのメッセージがに送信されます `john.doe@contoso.con` (To、Cc、Bcc の値には関係ありません)。 TestDropPath を設定すると、送信するすべての電子メールは、指定したパスにも記録されます。 これらのプロパティは、個別に設定できます (関連していません)。  
   
 ```csharp  
@@ -103,6 +109,7 @@ new SendMail
 ```  
   
 ## <a name="set-up-instructions"></a>セットアップ手順  
+
  このサンプルでは SMTP サーバーにアクセスする必要があります。  
   
  SMTP サーバーの設定の詳細については、次のリンクを参照してください。  

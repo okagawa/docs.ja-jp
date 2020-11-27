@@ -9,17 +9,19 @@ helpviewer_keywords:
 - COM [WCF]
 - WCF, COM integration
 ms.assetid: c98bda3e-6779-419e-8e6d-9aa94053026d
-ms.openlocfilehash: dc3bbe0ee72ca5583b1e52a61c914ad866a22a05
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bc58e22b64284d66367302d55b5c9554c9ec0d72
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596811"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268236"
 ---
 # <a name="integrating-with-com-applications"></a>COM アプリケーションとの統合
+
 WCF サービスモニカーを使用すると、Windows Communication Foundation (WCF) サービスを既存のコードに直接統合できます。 サービス モニカーは Office VBA、Visual Basic 6.0、または Visual C++ 6.0 などの幅広い COM ベースの開発環境で使用可能です。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [COM アプリケーションとの統合の概要](integrating-with-com-applications-overview.md)  
  統合プロセスの主要部分の概要を説明します。  
   
@@ -39,6 +41,7 @@ WCF サービスモニカーを使用すると、Windows Communication Foundatio
  WCF サービスモニカーは、 `IChannelCredentials` チャネル資格情報を指定するためのさまざまな代替メソッドを許可するインターフェイスをサポートします。  
   
 ## <a name="reference"></a>関連項目  
+
  <xref:System.ServiceModel>  
   
 ## <a name="see-also"></a>関連項目
