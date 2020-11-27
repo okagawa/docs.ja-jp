@@ -1,15 +1,16 @@
 ---
-title: 動的な更新を行う方法
+title: '方法: 動的な更新'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: aaeb4d9d42c289cf34a6aee9212fc2d74b8f8c01
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a12d480163bb579f34d006ae1837ed4392bf47ee
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184962"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265545"
 ---
-# <a name="how-to-dynamic-update"></a>動的な更新を行う方法
+# <a name="how-to-dynamic-update"></a>方法: 動的な更新
+
 ここでは、ルーティング構成の作成および動的な更新に必要な基本的手順について説明します。 この例では、ルーティングの初期構成を構成ファイルから取得し、すべてのメッセージを regularCalc 電卓サービスにルーティングします。ただし、これは、roundingCalc のサービスの提供先となるエンドポイントを変更するために、後でプログラムによって更新されます。  
   
 > [!NOTE]
@@ -64,7 +65,7 @@ ms.locfileid: "79184962"
     </filterTables>  
     ```  
   
-3. フィルター テーブルに含まれているフィルターと照合して受信メッセージを評価するには、ルーティング動作を使用して、フィルター テーブルをサービス エンドポイントと関連付ける必要があります。 "filterTable1" をサービス エンドポイントに関連付ける例を次に示します。  
+3. フィルター テーブルに含まれているフィルターと照合して受信メッセージを評価するには、ルーティング動作を使用して、フィルター テーブルをサービス エンドポイントと関連付ける必要があります。 次の例は、"filterTable1" をサービスエンドポイントに関連付ける方法を示しています。  
   
     ```xml  
     <behaviors>  
@@ -78,6 +79,7 @@ ms.locfileid: "79184962"
     ```  
   
 ## <a name="implement-dynamic-configuration"></a>動的構成の実装  
+
  ルーティング サービスの動的構成は、コードでのみ実行できます。これを実行するには、新しい <xref:System.ServiceModel.Routing.RoutingConfiguration> を作成し、<xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> を使用して現在の構成を置き換えます。  この例では、ルーティング サービスがコンソール アプリケーション内に自己ホストされます。 アプリケーションが起動したら、ルーティングの構成を変更できます。メッセージのルーティング先のエンドポイントを構成するには、コンソール ウィンドウで「regular」または「rounding」と入力します。「regular」と入力した場合は regularCalc が、「rounding」と入力した場合は roundingCalc になります。  
   
 1. ルーティング サービスをサポートするには、次の using ステートメントを追加する必要があります。  
@@ -164,7 +166,7 @@ ms.locfileid: "79184962"
   
 ## <a name="example"></a>例  
 
-この例で使用するコンソール アプリケーションの完全な一覧を次に示します。
+この例で使用されているコンソールアプリケーションの完全な一覧を次に示します。
   
 ```csharp
 //-----------------------------------------------------------------  
@@ -243,7 +245,7 @@ namespace Microsoft.Samples.AdvancedFilters
   
 ## <a name="example"></a>例  
 
-この例で使用されている構成ファイルの完全な一覧を次に示します。
+この例で使用される構成ファイルの完全な一覧を次に示します。
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  

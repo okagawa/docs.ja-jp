@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: 7da7ba1b680bae2b29eeff8fe669e097ea8eda32
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3f69286a2b4d4ec55f18931f9156c20a38da9c34
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595376"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265428"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>方法: WCF エンドポイントを使用してキューに置かれたメッセージを交換する
+
 キューを使用すると、通信時にサービスを利用できない場合でも、クライアントと Windows Communication Foundation (WCF) サービスの間で信頼できるメッセージングを行うことができます。 次の手順では、WCF サービスを実装するときに、標準のキューに登録されたバインディングを使用して、クライアントとサービス間の永続的な通信を確保する方法を示します。  
   
  このセクションでは、 <xref:System.ServiceModel.NetMsmqBinding> wcf クライアントと wcf サービスの間のキュー通信にを使用する方法について説明します。  
@@ -64,6 +65,7 @@ ms.locfileid: "84595376"
      [!code-vb[S_Msmq_Transacted#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#8)]  
   
 ## <a name="example"></a>例  
+
  次の例は、この例に含まれるサービス コード、ホスト アプリケーション、App.config ファイル、およびクライアント コードを示します。  
   
  [!code-csharp[S_Msmq_Transacted#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#9)]

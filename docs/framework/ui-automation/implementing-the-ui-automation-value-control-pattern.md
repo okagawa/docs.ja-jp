@@ -7,14 +7,15 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: a15c0b50996e2c0dfdc937bc9565d5f9ba20c992
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: b4fea39088064751ff559bd236554255d43ba2a2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168201"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265662"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>UI オートメーション Value コントロール パターンの実装
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
@@ -23,7 +24,9 @@ ms.locfileid: "87168201"
  <xref:System.Windows.Automation.ValuePattern> コントロール パターンは、範囲にまたがることのない組み込み値を持つコントロールや、文字列として表すことができるコントロールをサポートするために使用されます。 この文字列は、コントロールとその設定によっては、編集できます。 このパターンを実装するコントロールの例については、「 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)」を参照してください。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>実装のガイドラインと規則  
+
  Value コントロール パターンを実装する場合は、次のガイドラインと規則に留意してください。  
   
 - <xref:System.Windows.Automation.ControlType.ListItem> や <xref:System.Windows.Automation.ControlType.TreeItem> などのコントロールは、コントロールの現在の編集モードに関係なく、いずれかの項目の値が編集可能である場合は、 <xref:System.Windows.Automation.ValuePattern> をサポートする必要があります。 子項目が編集可能である場合は、親コントロールも <xref:System.Windows.Automation.ValuePattern> をサポートする必要があります。  
@@ -37,7 +40,7 @@ ms.locfileid: "87168201"
   
 - <xref:System.Windows.Automation.Provider.IValueProvider> は、書式設定情報や部分文字列の値の取得をサポートしていません。 このようなシナリオでは <xref:System.Windows.Automation.Provider.ITextProvider> を実装します。  
   
-- <xref:System.Windows.Automation.Provider.IValueProvider>色の値 ("黄" など) と同等の内部 RGB 構造との間の文字列マッピングをサポートする、Microsoft Word の**カラーピッカー**選択コントロール (下図参照) などのコントロールによって実装する必要があります。  
+- <xref:System.Windows.Automation.Provider.IValueProvider> 色の値 ("黄" など) と同等の内部 RGB 構造との間の文字列マッピングをサポートする、Microsoft Word の **カラーピッカー** 選択コントロール (下図参照) などのコントロールによって実装する必要があります。  
   
  ![黄色が強調表示されたカラー ピッカー。](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 色見本の文字列マッピング例  
@@ -45,17 +48,21 @@ ms.locfileid: "87168201"
 - <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> を呼び出せるようにするには、コントロールの `true` を <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> に設定し、 `false` を <xref:System.Windows.Automation.Provider.IValueProvider.SetValue%2A>に設定する必要があります。  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>
+
 ## <a name="required-members-for-ivalueprovider"></a>IValueProvider の必須メンバー  
+
  <xref:System.Windows.Automation.Provider.IValueProvider>の実装には、次のプロパティとメソッドが必要です。  
   
 |必須メンバー|メンバーの型|メモ|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|プロパティ|なし|  
 |<xref:System.Windows.Automation.ValuePattern.ValueProperty>|プロパティ|なし|  
-|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|メソッド|なし|  
+|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|Method|なし|  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>例外  
+
  プロバイダーは、次の例外をスローする必要があります。  
   
 |例外の種類|条件|  
