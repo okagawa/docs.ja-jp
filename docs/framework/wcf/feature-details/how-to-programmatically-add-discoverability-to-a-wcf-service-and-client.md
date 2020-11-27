@@ -2,19 +2,20 @@
 title: '方法: プログラムを使用して探索可能性に WCF サービスとクライアントを追加する'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: c1b92568d90734a33a7b36af987fdb7cbbbe5149
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1226f02dd96b8ab1502869cb319c6efe1ad09d4f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557828"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295562"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>方法: プログラムを使用して探索可能性に WCF サービスとクライアントを追加する
+
 このトピックでは、Windows Communication Foundation (WCF) サービスを探索可能にする方法について説明します。 これは、 [自己ホスト](../samples/self-host.md) のサンプルに基づいています。  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>既存の自己ホスト サービス サンプルを探索用に構成するには  
   
-1. Visual Studio 2012 でセルフホストソリューションを開きます。 このサンプルは、TechnologySamples\Basic\Service\Hosting\SelfHost ディレクトリにあります。  
+1. Visual Studio 2012 で Self-Host ソリューションを開きます。 このサンプルは、TechnologySamples\Basic\Service\Hosting\SelfHost ディレクトリにあります。  
   
 2. `System.ServiceModel.Discovery.dll` への参照をサービス プロジェクトに追加します。 "システム" というエラーメッセージが表示される場合があります。 ServiceModel.Discovery.dll またはその依存関係の1つには、プロジェクトで指定されているものより新しいバージョンの .NET Framework が必要です。 "このメッセージが表示された場合は、ソリューションエクスプローラーでプロジェクトを右クリックし、[ **プロパティ**] を選択します。 プロジェクトの **プロパティ** ウィンドウで、 **ターゲットフレームワーク** がになっていることを確認し [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] ます。  
   
@@ -60,7 +61,7 @@ ms.locfileid: "90557828"
   
 2. `System.ServiceModel.dll` および `System.ServiceModel.Discovery.dll` への参照を追加します。  
   
-3. GeneratedClient.cs ファイルおよび App.config ファイルを、既存のクライアント プロジェクトから新しい DiscoveryClientApp プロジェクトに追加します。 これを行うには、 **ソリューションエクスプローラー**内のファイルを右クリックし、[ **コピー**] を選択します。次に、 **DiscoveryClientApp** プロジェクトを選択して右クリックし、[ **貼り付け**] を選択します。  
+3. GeneratedClient.cs ファイルおよび App.config ファイルを、既存のクライアント プロジェクトから新しい DiscoveryClientApp プロジェクトに追加します。 これを行うには、 **ソリューションエクスプローラー** 内のファイルを右クリックし、[ **コピー**] を選択します。次に、 **DiscoveryClientApp** プロジェクトを選択して右クリックし、[ **貼り付け**] を選択します。  
   
 4. Program.cs を開きます。  
   
@@ -220,7 +221,8 @@ ms.locfileid: "90557828"
     ```  
   
 ## <a name="example"></a>例  
- このサンプルで使用されているコード全体の一覧を次に示します。 このコードは [自己ホスト](../samples/self-host.md) のサンプルに基づいているため、変更されたファイルのみが一覧表示されます。 自己ホストのサンプルの詳細については、「 [セットアップ手順](../samples/set-up-instructions.md)」を参照してください。  
+
+ このサンプルで使用されているコード全体の一覧を次に示します。 このコードは [自己ホスト](../samples/self-host.md) のサンプルに基づいているため、変更されたファイルのみが一覧表示されます。 Self-Host サンプルの詳細については、「 [セットアップ手順](../samples/set-up-instructions.md)」を参照してください。  
   
 ```csharp  
 // Service.cs  

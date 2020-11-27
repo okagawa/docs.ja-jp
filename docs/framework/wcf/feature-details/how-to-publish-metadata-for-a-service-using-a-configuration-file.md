@@ -3,20 +3,21 @@ title: '方法: 構成ファイルを使用してサービスのメタデータ�
 description: 構成ファイルを使用して、WCF サービスのメタデータを公開する方法について説明します。 公開により、クライアントは GET または HTTP/GET 要求を使用してそのメタデータを取得できます。
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: d5d425be7f02a204476c4f6e81441aca9ea39fcc
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: eb7aeb4275e367bfc4463a7289d4bc3ff77ff9f4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246819"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295549"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>方法: 構成ファイルを使用してサービスのメタデータを公開する
+
 これは、Windows Communication Foundation (WCF) サービスのメタデータの公開を示す2つの操作方法に関するトピックの1つです。 構成ファイルとコードを使用して、サービスがメタデータを公開する手段を指定する方法は 2 つあります。 このトピックでは、構成ファイルを使用してサービスのメタデータを公開する方法について説明します。  
   
 > [!CAUTION]
-> このトピックでは、セキュリティで保護されていない方法でメタデータを公開する方法について説明します。 クライアントは、サービスからメタデータを取得できます。 セキュリティで保護された方法でメタデータを公開するようサービスに要求する場合は、「[カスタムセキュアメタデータエンドポイント](../samples/custom-secure-metadata-endpoint.md)」を参照してください。  
+> このトピックでは、セキュリティで保護されていない方法でメタデータを公開する方法について説明します。 クライアントは、サービスからメタデータを取得できます。 セキュリティで保護された方法でメタデータを公開するようサービスに要求する場合は、「 [カスタムセキュアメタデータエンドポイント](../samples/custom-secure-metadata-endpoint.md)」を参照してください。  
   
- コードでのメタデータの公開の詳細については、「[方法: コードを使用してサービスのメタデータを公開](how-to-publish-metadata-for-a-service-using-code.md)する」を参照してください。 メタデータを公開すると、クライアントが `?wsdl` クエリ文字列を使用した WS-Transfer GET 要求または HTTP/GET 要求によりメタデータを取得できるようになります。 コードが動作することを確認するには、基本的な WCF サービスを作成します。 簡略化のため、次のコードに基本的な自己ホスト型サービスが用意されています。  
+ コードでのメタデータの公開の詳細については、「 [方法: コードを使用してサービスのメタデータを公開](how-to-publish-metadata-for-a-service-using-code.md)する」を参照してください。 メタデータを公開すると、クライアントが `?wsdl` クエリ文字列を使用した WS-Transfer GET 要求または HTTP/GET 要求によりメタデータを取得できるようになります。 コードが動作することを確認するには、基本的な WCF サービスを作成します。 簡略化のため、次のコードに基本的な自己ホスト型サービスが用意されています。  
   
 ```csharp  
 using System;  
@@ -183,6 +184,7 @@ namespace Metadata.Samples
      サービスの <xref:System.ServiceModel.Description.ServiceMetadataBehavior> では `httpGetEnabled` が `true` に設定されているため、サービスではメタデータの公開が有効になっています。また、エンドポイントが明示的に追加されていないため、ランタイムは既定のエンドポイントを追加します。 既定のエンドポイントについては、「[Simplified Configuration](../simplified-configuration.md)」 (簡易構成) と「[Simplified Configuration for WCF Services](../samples/simplified-configuration-for-wcf-services.md)」 (WCF サービスの簡易構成) を参照してください。  
   
 ## <a name="example"></a>例  
+
  次のコード例は、基本的な WCF サービスと、サービスのメタデータを公開する構成ファイルの実装を示しています。  
   
 ```csharp  

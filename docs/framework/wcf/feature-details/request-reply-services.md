@@ -7,14 +7,15 @@ helpviewer_keywords:
 - WCF [WCF], request-reply services
 - request-reply contracts [WCF]
 ms.assetid: 2fa710f1-47f4-4598-b063-3ab3bd22ebba
-ms.openlocfilehash: df42f3fa8f5a15572987b0d4859856c7f838e632
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 10b82e859369dae4f57e0e13782e2375a304ab02
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586235"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295523"
 ---
 # <a name="request-reply-services"></a>要求/応答サービス
+
 要求/応答サービスは、Windows Communication Foundation (WCF) の操作コントラクトの既定の種類です。 クライアントはサービス操作を呼び出し、サービスからの応答を待機します。 サービス操作の呼び出しは、同期的または非同期的に実行できます。同期呼び出しでは、応答を受信するか、呼び出しがタイムアウトするまで、クライアントがブロックされます。非同期呼び出しでは、クライアントはサービス操作の呼び出し後、動作を続行し、別のスレッドのサービスからの応答を受信できます。  
   
  要求/応答サービス コントラクトを作成するには、サービス コントラクトを定義し、次のサンプル コードに示すように <xref:System.ServiceModel.OperationContractAttribute> クラスを各操作に適用します。  
