@@ -7,17 +7,19 @@ helpviewer_keywords:
 - WCF, features
 - Windows Communication Foundation, features
 ms.assetid: 9b4368ca-0bd3-40dc-a539-bcd5779cee5f
-ms.openlocfilehash: 308a32c73d33a4da2fd841ca7c330a42deb7d324
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 30b8acb3b89b8c28be0b8d0b4ce5a1d1d734b055
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246637"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280430"
 ---
 # <a name="wcf-feature-details"></a>WCF 機能の詳細
-Windows Communication Foundation (WCF) を使用すると、アプリケーションのメッセージング機能を広範囲に制御できます。 このセクションの各トピックでは、使用できる機能について詳しく説明します。 基本的なプログラミングの詳細については、「[基本的な WCF プログラミング](../basic-wcf-programming.md)」を参照してください。  
+
+Windows Communication Foundation (WCF) を使用すると、アプリケーションのメッセージング機能を広範囲に制御できます。 このセクションの各トピックでは、使用できる機能について詳しく説明します。 基本的なプログラミングの詳細については、「 [基本的な WCF プログラミング](../basic-wcf-programming.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [ワークフロー サービス](workflow-services.md)  
  ワークフロー サービスを作成および構成する方法について説明します。  
   
@@ -39,7 +41,7 @@ Windows Communication Foundation (WCF) を使用すると、アプリケーシ�
  [トランザクション](transactions-in-wcf.md)  
  必要に応じてロールバックできるトランザクション操作を作成する方法について説明します。  
   
- [セキュリティ](security.md)  
+ [Security](security.md)  
  機密性と整合性を持つアプリケーションの作成に WCF セキュリティがどのように役立つかについて説明します。 監査機能として、認証と承認を使用することもできます。  
   
  [ピアツーピア ネットワーク](peer-to-peer-networking.md)  
@@ -73,6 +75,7 @@ Windows Communication Foundation (WCF) を使用すると、アプリケーシ�
  ルーティング サービスについて説明します。  
   
 ## <a name="reference"></a>関連項目  
+
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -82,4 +85,5 @@ Windows Communication Foundation (WCF) を使用すると、アプリケーシ�
  <xref:System.ServiceModel.Routing>  
   
 ## <a name="related-sections"></a>関連項目  
+
  [基本的な WCF プログラミング](../basic-wcf-programming.md)

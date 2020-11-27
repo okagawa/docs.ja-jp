@@ -2,14 +2,15 @@
 title: '方法: ASP.NET の承認マネージャー ロール プロバイダーとサービスを使用する'
 ms.date: 03/30/2017
 ms.assetid: f21deb81-91ef-49ef-94d6-494785143271
-ms.openlocfilehash: 4a92c9db000b703f4fdab7c34e5359de74b0228d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bbdafdd96a32b41d7c6892944ed872e3f8702f0e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545605"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280599"
 ---
 # <a name="how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service"></a>方法: ASP.NET の承認マネージャー ロール プロバイダーとサービスを使用する
+
 ASP.NET が Web サービスをホストする場合、承認マネージャーをアプリケーションに統合して、サービスに承認を提供できます。 承認マネージャーを使用して、アプリケーション開発者は個々の操作を定義できます。また、個々の操作をグループ化してタスクを形成できます。 次に管理者は、ロールを承認して特定のタスクまたは個々の操作を実行できます。 承認マネージャーでは、ロール、タスク、操作、ユーザーを管理する管理ツールとして Microsoft 管理コンソール (MMC) スナップインが提供されます。 管理者は、承認マネージャーのポリシー ストアを XML ファイル、Active Directory、または Active Directory アプリケーション モード (ADAM) ストアに構成します。  
   
  承認マネージャーは、Web サービスをホストする ASP.NET アプリケーションの承認マネージャー ASP.NET ロールプロバイダーを構成することによって、アプリケーションに統合されます。 他の ASP.NET ロールプロバイダーと同様に、Authorization Manager ASP.NET ロールプロバイダーは <> 要素を使用して構成され `providers` ます。  

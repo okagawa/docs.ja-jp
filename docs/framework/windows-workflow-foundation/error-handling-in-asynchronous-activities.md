@@ -2,17 +2,19 @@
 title: 非同期アクティビティ内のエラー処理
 ms.date: 03/30/2017
 ms.assetid: e8f8ce2b-50c9-4e44-b187-030e0cf30a5d
-ms.openlocfilehash: c63ce231687b03bdba57edd38c32270eabeff834
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2c214ce1d0f435cda79deb6976ca9196a5d7aee1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182947"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280261"
 ---
 # <a name="error-handling-in-asynchronous-activities"></a>非同期アクティビティ内のエラー処理
+
 <xref:System.Activities.AsyncCodeActivity> でのエラー処理には、アクティビティのコールバック システムを使用したエラーの送信が含まれています。 このトピックでは、SendMail アクティビティのサンプルを使用してホストへ非同期操作でスローされるエラーを取得する方法について説明します。  
   
 ## <a name="returning-an-error-thrown-in-an-asynchronous-activity-back-to-the-host"></a>非同期アクティビティでスローされたエラーをホストへ返す  
+
  SendMail アクティビティ サンプルでの、ホストに返される非同期操作でのエラーのルーティングの手順は次のとおりです。  
   
 - Exception プロパティを `SendMailAsyncResult` クラスに追加します。  

@@ -2,14 +2,15 @@
 title: '方法: フィルターの使用'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 434171138e75a0f4c336cd80cc2beb574b10001e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 149c0809820d6a4a9c8dabfb545258b9a3ffb40b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598893"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280846"
 ---
 # <a name="how-to-use-filters"></a>方法: フィルターの使用
+
 ここでは、複数のフィルターを使用したルーティング構成を作成するために必要な基本手順について説明します。 この例では、メッセージが、電卓サービスの 2 つの実装である regularCalc および roundingCalc にルーティングされます。 これらの実装は両方とも同じ操作をサポートしますが、片方のサービスでは、値を返す前にすべての計算を最も近い整数値に丸めます。 クライアント アプリケーションが、丸め処理を行うバージョンのサービスを使用するかどうかを表示可能である必要がありますが、優先するサービスが示されていない場合は、メッセージが 2 つのサービス間で負荷分散されます。 次の操作が両方のサービスによって公開されます。  
   
 - 追加  
@@ -110,7 +111,7 @@ ms.locfileid: "84598893"
     </routing>  
     ```  
   
-     この**Messagefilter**は、メッセージ内で "丸め処理" の値を含む RoundingCalculator ヘッダーを検索します。 このヘッダーは、メッセージを roundingCalc サービスにルーティングする必要があることを示すために、クライアント側で設定されたものです。  
+     この **Messagefilter** は、メッセージ内で "丸め処理" の値を含む RoundingCalculator ヘッダーを検索します。 このヘッダーは、メッセージを roundingCalc サービスにルーティングする必要があることを示すために、クライアント側で設定されたものです。  
   
     > [!NOTE]
     > S12 名前空間プレフィックスは、既定で名前空間テーブルに定義され、名前空間を表し `http://www.w3.org/2003/05/soap-envelope` ます。
@@ -132,7 +133,7 @@ ms.locfileid: "84598893"
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     で始まるアドレスでメッセージが受信された場合、 `http://localhost/routingservice/router/rounding/` このフィルターは**true**と評価されます。 この構成で使用されるベースアドレスがで、 `http://localhost/routingservice/router` roundingEndpoint に指定されたアドレスが "丸め/計算" であるため、このエンドポイントとの通信に使用される完全なアドレスは `http://localhost/routingservice/router/rounding/calculator` 、このフィルターに一致します。  
+     で始まるアドレスでメッセージが受信された場合、 `http://localhost/routingservice/router/rounding/` このフィルターは **true** と評価されます。 この構成で使用されるベースアドレスがで、 `http://localhost/routingservice/router` roundingEndpoint に指定されたアドレスが "丸め/計算" であるため、このエンドポイントとの通信に使用される完全なアドレスは `http://localhost/routingservice/router/rounding/calculator` 、このフィルターに一致します。  
   
     > [!NOTE]
     > PrefixEndpointAddress フィルターは、一致するメッセージの確認を行う際にホスト名を評価しません。これは、1 つのホストへの参照を表す際に使用できるホスト名にはさまざまな種類があり、そのすべてが、クライアント アプリケーションからホストを参照するための正しい方法であるためです。 たとえば、次の例はすべて、同じホストを参照します。  
@@ -226,6 +227,7 @@ ms.locfileid: "84598893"
     ```  
   
 ## <a name="example"></a>例  
+
  構成ファイル全体の一覧を次に示します。  
   
 ```xml  

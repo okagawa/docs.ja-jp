@@ -10,14 +10,15 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 5cc1118640bcf1262d88cb8cdb39939ae315cae3
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 06a6167f0ad352955eb6b764ef8bfdb1394f4ed9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246871"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279741"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>方法: X.509 証明書を WCF からアクセス可能にする
+
 Windows Communication Foundation (WCF) から x.509 証明書にアクセスできるようにするには、アプリケーションコードで証明書ストアの名前と場所を指定する必要があります。 特定の状況では、X.509 証明書に関連付けられた秘密キーを格納しているファイルにプロセス ID がアクセスできる必要があります。 証明書ストアの x.509 証明書に関連付けられている秘密キーを取得するには、WCF にアクセス許可が必要です。 既定では、所有者と System アカウントだけが証明書の秘密キーにアクセスできます。  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>X.509 証明書を WCF からアクセス可能にするには  
@@ -30,10 +31,10 @@ Windows Communication Foundation (WCF) から x.509 証明書にアクセスで�
   
         |X.509 証明書の使用法|秘密キー|  
         |---------------------------|-----------------|  
-        |送信 SOAP メッセージにデジタル署名する。|Yes|  
-        |受信 SOAP メッセージの署名を検証する。|No|  
-        |送信 SOAP メッセージを暗号化する。|No|  
-        |受信 SOAP メッセージを復号化する。|Yes|  
+        |送信 SOAP メッセージにデジタル署名する。|はい|  
+        |受信 SOAP メッセージの署名を検証する。|いいえ|  
+        |送信 SOAP メッセージを暗号化する。|いいえ|  
+        |受信 SOAP メッセージを復号化する。|はい|  
   
     2. 証明書が格納されている証明書ストアの場所と名前を決定します。  
   
@@ -44,9 +45,9 @@ Windows Communication Foundation (WCF) から x.509 証明書にアクセスで�
   
     3. [FindPrivateKey](../samples/findprivatekey.md)ツールを使用して、証明書の秘密キーがコンピューター上にある場所を確認します。  
   
-         [FindPrivateKey](../samples/findprivatekey.md)ツールには、証明書ストアの名前、証明書ストアの場所、および証明書を一意に識別するものが必要です。 このツールは、証明書のサブジェクト名または拇印を一意の識別子として受け入れます。 証明書の拇印を確認する方法の詳細については、「[方法: 証明書のサムプリントを取得](how-to-retrieve-the-thumbprint-of-a-certificate.md)する」を参照してください。  
+         [FindPrivateKey](../samples/findprivatekey.md)ツールには、証明書ストアの名前、証明書ストアの場所、および証明書を一意に識別するものが必要です。 このツールは、証明書のサブジェクト名または拇印を一意の識別子として受け入れます。 証明書の拇印を確認する方法の詳細については、「 [方法: 証明書のサムプリントを取得](how-to-retrieve-the-thumbprint-of-a-certificate.md)する」を参照してください。  
   
-         次のコード例では、 [FindPrivateKey](../samples/findprivatekey.md)ツールを使用して、の拇印がのストアにある証明書の秘密キーの場所を確認し `My` `CurrentUser` `46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d` ます。  
+         次のコード例では、 [FindPrivateKey](../samples/findprivatekey.md) ツールを使用して、の拇印がのストアにある証明書の秘密キーの場所を確認し `My` `CurrentUser` `46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d` ます。  
   
         ```console
         findprivatekey.exe My CurrentUser -t "46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d" -a  
@@ -56,7 +57,7 @@ Windows Communication Foundation (WCF) から x.509 証明書にアクセスで�
   
          次の表は、特定のシナリオで WCF が実行されているアカウントの詳細を示しています。  
   
-        |シナリオ|プロセス ID|  
+        |通信の種類|プロセス ID|  
         |--------------|----------------------|  
         |クライアント (コンソールまたは WinForms アプリケーション)|現在ログインしているユーザー|  
         |自己ホスト型のサービス|現在ログインしているユーザー|  

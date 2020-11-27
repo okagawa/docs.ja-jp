@@ -2,14 +2,15 @@
 title: '方法: Svcutil.exe を使用してコンパイル済みのサービス コードからメタデータをエクスポートする'
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 9acefdec63a6f518ead6cdbcb19ebc8c75609dd6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f60d0c9ad3f6fc4e9596d466b5eabdaab0f4822f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595363"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280612"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>方法: Svcutil.exe を使用してコンパイル済みのサービス コードからメタデータをエクスポートする
+
 Svcutil.exe は、次のように、コンパイル済みアセンブリのサービス、コントラクト、およびデータ型のメタデータをエクスポートできます。  
   
 - Svcutil.exe を使用して、アセンブリのセットに対するすべてのコンパイル済みサービス コントラクトのメタデータをエクスポートするには、入力パラメーターとして各アセンブリを指定します。 これが既定の動作です。  
@@ -76,6 +77,7 @@ Svcutil.exe は、次のように、コンパイル済みアセンブリのサ�
     ```  
   
 ## <a name="example"></a>例  
+
  単純なサービス実装および構成のメタデータを生成する方法を次の例に示します。  
   
  サービス コントラクトのメタデータをエクスポートするには、次のように指定します。  
