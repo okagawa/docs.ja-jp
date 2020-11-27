@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 9c3d83f0055a1700c675017216a7419fdba674fd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ec29ac03e8930bd30ccd7e90dce3993ca9e7443a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547461"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255417"
 ---
 # <a name="tracing-and-message-logging"></a>トレースとメッセージ ログ
+
 このサンプルでは、トレースとメッセージ ログを有効にする方法を示します。 結果のトレースとメッセージログは、 [サービストレースビューアーツール (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)を使用して表示されます。 このサンプルは、 [はじめに](getting-started-sample.md)に基づいています。  
   
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
   
 ## <a name="tracing"></a>トレース  
+
  Windows Communication Foundation (WCF) は、名前空間で定義されているトレース機構を使用し <xref:System.Diagnostics> ます。 このトレース モデルのトレース データは、アプリケーションが実装するトレース ソースによって作成されます。 各ソースは、名前によって識別されます。 トレース コンシューマでは、情報を取得するトレース ソースのトレース リスナが作成されます。 トレース データを受け取るには、トレース ソースのリスナを作成する必要があります。 WCF では、サービスモデルのトレースソースを設定することによって、サービスまたはクライアントの構成ファイルに次のコードを追加することで、これを行うことができ `switchValue` ます。  
   
 ```xml  
@@ -47,6 +49,7 @@ ms.locfileid: "90547461"
  トレースソースの詳細については、「トレースの [構成](../diagnostics/tracing/configuring-tracing.md) 」トピックの「トレースソース」セクションを参照してください。  
   
 ## <a name="activity-tracing-and-propagation"></a>アクティビティのトレースと伝達  
+
  `ActivityTracing` `propagateActivity` クライアントとサービスの両方のトレースソースに対してを有効にし、をに設定すると、 `true` `system.ServiceModel` 処理の論理単位 (アクティビティ) 内のトレース、エンドポイント内のアクティビティ間 (アクティビティの転送を通じて)、および複数のエンドポイントにまたがるアクティビティ (アクティビティ ID の伝達を通じて) の相関関係が提供されます。  
   
  3 つの機構 (アクティビティ、転送、および伝達) により、サービス トレース ビューア ツールを使用してエラーの根本原因をより迅速に見つけることができます。 詳細については、「 [サービストレースビューアーを使用した相関トレースの表示」および「トラブルシューティング](../diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)」を参照してください。  
@@ -62,6 +65,7 @@ ms.locfileid: "90547461"
  ユーザー定義のアクティビティトレースの詳細については、「 [トレースの拡張](extending-tracing.md) 」サンプルを参照してください。  
   
 ## <a name="message-logging"></a>メッセージ ログ  
+
  メッセージログは、任意の WCF アプリケーションのクライアントとサービスの両方で有効にすることができます。 メッセージ ログを有効にするには、クライアントとサービスのどちらかに次のコードを追加する必要があります。  
   
 ```xml  

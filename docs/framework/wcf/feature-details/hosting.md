@@ -2,19 +2,21 @@
 title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
-ms.openlocfilehash: 0a502093ff40f1a702f5d4d9046d4627eae39e01
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a83cc0d12b1099bc77d62f108741de1dbf387686
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555784"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255989"
 ---
 # <a name="hosting"></a>Hosting
-このセクションのトピックでは、サービス ホスティングについて説明します。 サービスは、インターネットインフォメーションサービス (IIS)、windows プロセスアクティブ化サービス (WAS)、Windows Server AppFabric、Windows サービス、またはマネージアプリケーションによってホストできます。このオプションは、多くの場合、 *自己ホスト*と呼ばれます。  
+
+このセクションのトピックでは、サービス ホスティングについて説明します。 サービスは、インターネットインフォメーションサービス (IIS)、windows プロセスアクティブ化サービス (WAS)、Windows Server AppFabric、Windows サービス、またはマネージアプリケーションによってホストできます。このオプションは、多くの場合、 *自己ホスト* と呼ばれます。  
   
  信頼されていないホストからサービスや拡張機能を実行すると、セキュリティが損なわれるので注意してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [インターネット インフォメーション サービスでのホスティング](hosting-in-internet-information-services.md)  
  Windows Communication Foundation (WCF) サービスがインターネットインフォメーションサービスまたは [Windows Server AppFabric](/previous-versions/appfabric/ff384253(v=azure.10))でどのようにホストされるかについて説明します。  
   

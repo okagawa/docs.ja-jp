@@ -2,17 +2,19 @@
 title: リソース消費の制御とパフォーマンスの向上
 ms.date: 03/30/2017
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-ms.openlocfilehash: 7210f71287a2ec763b67dfa033cd9f4dadf6bd34
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f06dd0b7e66ae783b2f268551f15c5e6e8369b7f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543070"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255066"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>リソース消費の制御とパフォーマンスの向上
+
 このトピックでは、Windows Communication Foundation (WCF) アーキテクチャのさまざまな領域におけるさまざまなプロパティについて説明します。このアーキテクチャでは、リソースの消費量を制御し、パフォーマンスメトリックに影響を与えます。
 
 ## <a name="properties-that-constrain-resource-consumption-in-wcf"></a>WCF でのリソース消費を制約するプロパティ
+
  Windows Communication Foundation (WCF) では、セキュリティとパフォーマンスの両方の目的で、特定の種類のプロセスに制約が適用されます。 これらの制約には、クォータとスロットルという 2 つの主要な形式があります。 *クォータ* とは、システム内のある時点で、トリガーが即座に例外になることを示す制限です。 *スロットル* とは、すぐに例外がスローされないようにする制限です。 スロットル制限に達すると、例外がスローされる代わりに、そのスロットル値によって設定された制限の範囲内で処理が続行されます。 この制限された処理によって他の場所で例外が発生する可能性がありますが、これはアプリケーションに依存します。
 
  クォータとスロットルの違いに加え、シリアル化レベル、トランスポート レベル、およびアプリケーション レベルにも制約を加えるプロパティがあります。 たとえば、システム提供のすべてのトランスポート バインディング要素によって実装されるクォータである <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType> は、既定で 65,536 バイトに設定されます。これは、悪意のあるクライアントがサービスに対して、大量のメモリを消費させるサービス拒否攻撃を実行することを防ぐための措置です  (通常は、この値を下げることによってパフォーマンスを向上できます)。
@@ -27,6 +29,7 @@ ms.locfileid: "90543070"
  シリアル化プロセスを制限するプロパティは、「 [データのセキュリティに関する考慮事項](./feature-details/security-considerations-for-data.md)」に記載されています。 トランスポートに関連するリソースの消費を制限するプロパティについては、「 [トランスポートクォータ](./feature-details/transport-quotas.md)」を参照してください。 アプリケーション層でリソースの消費を制限するプロパティは、<xref:System.ServiceModel.Dispatcher.ServiceThrottle> クラスのメンバーです。
 
 ## <a name="detecting-application-and-performance-issues-related-to-quota-settings"></a>クォータ設定に関連するアプリケーションとパフォーマンスの問題の検出
+
  上記の値の既定値は、一般的なセキュリティの問題に対する基本的な保護を提供しながら、さまざまなアプリケーションで基本的なアプリケーション機能を使用できるように選択されたものです。 ただし、アプリケーション デザインによっては、1 つ以上のスロットル設定を超えてしまったためにアプリケーションがセキュリティで保護されなかったり、設計どおりに動作しなかったりする場合があります。 その場合は、超過したスロットル値とそのレベルを特定し、アプリケーションのスループットを向上するための適切な手順を決定する必要があります。
 
  通常、アプリケーションを作成してデバッグする際には、構成ファイルまたはプログラムで <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> プロパティを `true` に設定します。 これにより、WCF は、サービス例外スタックトレースを表示するためにクライアントアプリケーションに返すように指示します。 この機能により、ほとんどのアプリケーション レベルの例外が報告され、問題が発生している場合に、どのクォータ設定が関係しているかを表示できます。
@@ -36,6 +39,7 @@ ms.locfileid: "90543070"
  開発環境の機能に関係なく、WCF トレースとメッセージログの機能を使用して、すべての例外をデバッグし、アプリケーションのパフォーマンスを調整することができます。 詳細については、「 [トレースを使用したアプリケーションのトラブルシューティング](./diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)」を参照してください。
 
 ## <a name="performance-issues-and-xmlserializer"></a>パフォーマンスの問題と XmlSerializer
+
  <xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化できるデータ型を使用するサービスおよびクライアント アプリケーションは、実行時にこのようなデータ型のシリアル化コードを生成およびコンパイルします。このため、起動時のパフォーマンスが低下することがあります。
 
 > [!NOTE]

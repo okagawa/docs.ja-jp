@@ -2,14 +2,15 @@
 title: 認証の拡張保護の概要
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-ms.openlocfilehash: fdc42228077bbc703e2e7557c8d7fdb3ff57a150
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0537e6147a7b43dabcb4c3612fc58da11dfd4d6d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559266"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255547"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>認証の拡張保護の概要
+
 認証時の拡張保護によって、攻撃者がクライアントの資格情報をインターセプトして特定のサーバーに転送する man-in-the-middle (MITM) 攻撃を防ぐことができます。  
   
  クライアント、サーバー、および攻撃者の 3 つの参加要素が存在するシナリオについて考えてみます。 サーバーには `https://server` という URL があり、一方で攻撃者には `https://attacker` という URL があります。 攻撃者は、自身がサーバーであるかのようにしてクライアントが攻撃者にアクセスするように騙します。 次に、攻撃者はサーバーに要求を送信します。 攻撃者がセキュリティで保護されたリソースへのアクセスを試みると、サーバーは攻撃者に対して WWW 認証ヘッダーで応答します。 攻撃者は認証情報を持っていないため、WWW 認証ヘッダーをクライアントに送信します。 クライアントは攻撃者に WWW 認証ヘッダーを送信し、攻撃者はそのヘッダーをサーバーに送信してクライアントの資格情報を利用してセキュリティで保護されたリソースにアクセスします。  

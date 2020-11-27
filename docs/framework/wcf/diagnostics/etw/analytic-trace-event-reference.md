@@ -4,19 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF]. reference
 ms.assetid: e44540cf-44a1-4efc-b965-7fbfd2131d73
-ms.openlocfilehash: 4aa8e7a7d22edde02272dc4c3850b5695347b2bb
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 28ae252d562b57df0553f0fd4370845e836ef537
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609513"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254845"
 ---
 # <a name="analytic-trace-event-reference"></a>分析トレース イベント リファレンス
+
 次の表は、WCF 分析トレースに関連付けられているイベントレベル、識別子、およびメッセージを定義しています。  
   
 ## <a name="event-reference"></a>イベント リファレンス  
   
-|イベント ID|イベント レベル|イベント メッセージ|キーワード|  
+|イベント ID|イベント レベル|イベント メッセージ|Keywords|  
 |--------------|-----------------|-------------------|--------------|  
 |[131 - BufferPoolAllocation](131-bufferpoolallocation.md)|"詳細"|プールが %1 バイトを割り当てています。|インフラストラクチャ|  
 |[132 - BufferPoolChangeQuota](132-bufferpoolchangequota.md)|"詳細"|BufferPool のサイズ: %1、クォータの変更: %2。|インフラストラクチャ|  
@@ -40,14 +41,14 @@ ms.locfileid: "91609513"
 |[216 - MessageSentByTransport](216-messagesentbytransport.md)|情報|トランスポートが '%1' にメッセージを送信しました。|Troubleshooting、ServiceModel|  
 |[217 - ClientOperationPrepared](217-clientoperationprepared.md)|情報|クライアントは '%2' コントラクトと関連付けられている Action '%1' を実行しています。 メッセージは '%3' に送信されます。|Troubleshooting、ServiceModel|  
 |[218 - ClientOperationCompleted](218-clientoperationcompleted.md)|情報|クライアントは '%1' コントラクトと関連付けられている Action '%1' の実行を完了しました。 メッセージは '%3' に送信されました。|Troubleshooting、ServiceModel|  
-|[219 - ServiceException](219-serviceexception.md)|Error|メッセージの処理中に種類 '%2' のハンドルされない例外がスローされました。  完全な例外 ToString: %1。|HealthMonitoring、EndToEndMonitoring、Troubleshooting、ServiceModel|  
+|[219 - ServiceException](219-serviceexception.md)|エラー|メッセージの処理中に種類 '%2' のハンドルされない例外がスローされました。  完全な例外 ToString: %1。|HealthMonitoring、EndToEndMonitoring、Troubleshooting、ServiceModel|  
 |[220 - MessageSentToTransport](220-messagesenttotransport.md)|情報|ディスパッチャーがトランスポートにメッセージを送信しました。 関連付け ID == '%1'。|EndToEndMonitoring、Troubleshooting、ServiceModel|  
 |[221 - MessageReceivedFromTransport](221-messagereceivedfromtransport.md)|情報|ディスパッチャーがトランスポートからメッセージを受信しました。 関連付け ID == '%1'。|EndToEndMonitoring、Troubleshooting、ServiceModel|  
 |[222 - OperationFailed](222-operationfailed.md)|警告|OperationInvoker によって呼び出されたメソッド '%1' で、ハンドルされない例外がスローされました。 メソッド呼び出し時間は '%2' ミリ秒でした。|HealthMonitoring、EndToEndMonitoring、Troubleshooting、ServiceModel|  
 |[223 - OperationFaulted](223-operationfaulted.md)|警告|OperationInvoker によって呼び出されたメソッド '%1' で FaultException がスローされました。 メソッド呼び出し時間は '%2' ミリ秒でした。|HealthMonitoring、EndToEndMonitoring、Troubleshooting、ServiceModel|  
 |[224 - MessageThrottleAtSeventyPercent](224-messagethrottleatseventypercent.md)|警告|スロットル '%1' の '%2' の制限は 70% です。|HealthMonitoring、EndToEndMonitoring、Troubleshooting、ServiceModel|  
 |[226 - IdleServicesClosed](226-idleservicesclosed.md)|LogAlways|アクティブ化された合計 %2 個のサービスのうち、アイドル状態の %1 個のサービスが閉じられました。|HealthMonitoring WebHost|  
-|[301 - UserDefinedErrorOccurred](301-userdefinederroroccurred.md)|Error|名前: '%1'、参照: '%2'、ペイロード: %3|UserEvents、HealthMonitoring、EndToEndMonitoring、Troubleshooting、ServiceModel|  
+|[301 - UserDefinedErrorOccurred](301-userdefinederroroccurred.md)|エラー|名前: '%1'、参照: '%2'、ペイロード: %3|UserEvents、HealthMonitoring、EndToEndMonitoring、Troubleshooting、ServiceModel|  
 |[302 - UserDefinedWarningOccurred](302-userdefinedwarningoccurred.md)|警告|名前: '%1'、参照: '%2'、ペイロード: %3|UserEvents、HealthMonitoring、EndToEndMonitoring、Troubleshooting、ServiceModel|  
 |[303 - UserDefinedInformationEventOccured](303-userdefinedinformationeventoccured.md)|情報|名前: '%1'、参照: '%2'、ペイロード: %3|UserEvents、HealthMonitoring、EndToEndMonitoring、Troubleshooting、ServiceModel|  
 |[401- StopSignPostEvent](401-stopsignpostevent.md)|情報|アクティビティの境界|トラブルシューティング|  
@@ -89,20 +90,20 @@ ms.locfileid: "91609513"
 |[715 - ClientChannelOpenStart](715-clientchannelopenstart.md)|情報|ServiceChannel Open を開始します。|ServiceModel|  
 |[716 - ClientChannelOpenStop](716-clientchannelopenstop.md)|情報|ServiceChannel Open を停止します。|ServiceModel|  
 |[717 - HttpSendStreamedMessageStart](717-httpsendstreamedmessagestart.md)|情報|ストリーム メッセージの HTTP 送信を開始しました。|HTTP|  
-|[1400 - ChannelInitializationTimeout](1400-channelinitializationtimeout.md)|Error|1%|ServiceModel|  
-|[1401 - CloseTimeout](1401-closetimeout.md)|Error|1%|ServiceModel|  
-|[1402 - IdleTimeout](1402-idletimeout.md)|Error|%1 接続プール キー: %2|ServiceModel|  
+|[1400 - ChannelInitializationTimeout](1400-channelinitializationtimeout.md)|エラー|1%|ServiceModel|  
+|[1401 - CloseTimeout](1401-closetimeout.md)|エラー|1%|ServiceModel|  
+|[1402 - IdleTimeout](1402-idletimeout.md)|エラー|%1 接続プール キー: %2|ServiceModel|  
 |[1403 - LeaseTimeout](1403-leasetimeout.md)|情報|%1 接続プール キー: %2|ServiceModel|  
-|[1405 - OpenTimeout](1405-opentimeout.md)|Error|%1|ServiceModel|  
-|[1406 - ReceiveTimeout](1406-receivetimeout.md)|Error|%1|ServiceModel|  
-|[1407 - SendTimeout](1407-sendtimeout.md)|Error|%1|ServiceModel|  
+|[1405 - OpenTimeout](1405-opentimeout.md)|エラー|%1|ServiceModel|  
+|[1406 - ReceiveTimeout](1406-receivetimeout.md)|エラー|%1|ServiceModel|  
+|[1407 - SendTimeout](1407-sendtimeout.md)|エラー|%1|ServiceModel|  
 |[1409 - InactivityTimeout](1409-inactivitytimeout.md)|情報|%1|ServiceModel|  
-|[1416 - MaxReceivedMessageSizeExceeded](1416-maxreceivedmessagesizeexceeded.md)|Error|%1|Quota|  
-|[1417 - MaxSentMessageSizeExceeded](1417-maxsentmessagesizeexceeded.md)|Error|%1|Quota|  
+|[1416 - MaxReceivedMessageSizeExceeded](1416-maxreceivedmessagesizeexceeded.md)|エラー|%1|Quota|  
+|[1417 - MaxSentMessageSizeExceeded](1417-maxsentmessagesizeexceeded.md)|エラー|%1|Quota|  
 |[1418 - MaxOutboundConnectionsPerEndpointExceeded](1418-maxoutboundconnectionsperendpointexceeded.md)|情報|%1|Quota|  
 |[1419 - MaxPendingConnectionsExceeded](1419-maxpendingconnectionsexceeded.md)|情報|%1|Quota|  
-|[1420 - ReaderQuotaExceeded](1420-readerquotaexceeded.md)|Error|%1|Quota|  
-|[1422 - NegotiateTokenAuthenticatorStateCacheExceeded](1422-negotiatetokenauthenticatorstatecacheexceeded.md)|Error|%1|Quota|  
+|[1420 - ReaderQuotaExceeded](1420-readerquotaexceeded.md)|エラー|%1|Quota|  
+|[1422 - NegotiateTokenAuthenticatorStateCacheExceeded](1422-negotiatetokenauthenticatorstatecacheexceeded.md)|エラー|%1|Quota|  
 |[1423 - NegotiateTokenAuthenticatorStateCacheRatio](1423-negotiatetokenauthenticatorstatecacheratio.md)|"詳細"|トークン認証システムのネゴシエートの状態のキャッシュ比率: %1/%2|Quota|  
 |[1424 - SecuritySessionRatio](1424-securitysessionratio.md)|"詳細"|セキュリティ セッションの比率: %1/%2|Quota|  
 |[1430 - PendingConnectionsRatio](1430-pendingconnectionsratio.md)|"詳細"|保留中の接続の比率: %1/%2|Quota|  
@@ -114,10 +115,10 @@ ms.locfileid: "91609513"
 |[1439 - PendingAcceptsAtZero](1439-pendingacceptsatzero.md)|情報|保留中の受け入れはありません|Quota|  
 |[1441 - MaxSessionSizeReached](1441-maxsessionsizereached.md)|警告|1%|Quota|  
 |[1442 - ReceiveRetryCountReached](1442-receiveretrycountreached.md)|警告|ID '%1' の MSMQ メッセージが受信再試行回数に達しました|Quota|  
-|[1443 - MaxRetryCyclesExceededMsmq](1443-maxretrycyclesexceededmsmq.md)|Error|ID '%1' の MSMQ メッセージが最大再試行サイクルを超えました|Quota|  
+|[1443 - MaxRetryCyclesExceededMsmq](1443-maxretrycyclesexceededmsmq.md)|エラー|ID '%1' の MSMQ メッセージが最大再試行サイクルを超えました|Quota|  
 |[1445 - ReadPoolMiss](1445-readpoolmiss.md)|"詳細"|新しい '%1' を作成しました|Quota|  
 |[1446 - WritePoolMiss](1446-writepoolmiss.md)|"詳細"|新しい '%1' を作成しました|Quota|  
-|[1451 - MaxRetryCyclesExceeded](1451-maxretrycyclesexceeded.md)|Error|1%|Quota|  
+|[1451 - MaxRetryCyclesExceeded](1451-maxretrycyclesexceeded.md)|エラー|1%|Quota|  
 |[3300 - ReceiveContextCompleteFailed](3300-receivecontextcompletefailed.md)|警告|%1 を完了できませんでした。|チャネル|  
 |[3301 - ReceiveContextAbandonFailed](3301-receivecontextabandonfailed.md)|警告|%1 を破棄できませんでした。|チャネル|  
 |[3303 - ReceiveContextAbandonWithException](3303-receivecontextabandonwithexception.md)|警告|受信コンテキストでエラーが発生しました。|ServiceModel|  
@@ -127,11 +128,11 @@ ms.locfileid: "91609513"
 |[3307 - ClientBaseChannelFactoryCacheHit](3307-clientbasechannelfactorycachehit.md)|情報|キャッシュで見つかった一致するチャネル ファクトリが使用されました。|ServiceModel|  
 |[3308 - ClientBaseUsingLocalChannelFactory](3308-clientbaseusinglocalchannelfactory.md)|情報|キャッシュのチャネル ファクトリは使用されません (つまり、インスタンスのキャッシュは無効になっています)。|ServiceModel|  
 |[3309 - QueryCompositionExecuted](3309-querycompositionexecuted.md)|情報|'%1' を使用したクエリの構成が要求 URI: '%2' で実行されました。|ServiceModel|  
-|[3310 - DispatchFailed](3310-dispatchfailed.md)|Error|'%1' 操作のディスパッチでエラーが発生しました。|ServiceModel|  
+|[3310 - DispatchFailed](3310-dispatchfailed.md)|エラー|'%1' 操作のディスパッチでエラーが発生しました。|ServiceModel|  
 |[3311 - DispatchSuccessful](3311-dispatchsuccessful.md)|情報|'%1' 操作が正常にディスパッチされました。|ServiceModel|  
 |[3312 - MessageReadByEncoder](3312-messagereadbyencoder.md)|情報|サイズ '%1' バイトのメッセージがエンコーダーによって読み取られました。|チャネル|  
 |[3312 - MessageReadByEncoder](3312-messagereadbyencoder.md)|情報|サイズ '%1' バイトのメッセージがエンコーダーによって書き込まれました。|チャネル|  
-|[3314 - SessionIdleTimeout](3314-sessionidletimeout.md)|Error|URI: '%1' へのアイドル チャネルのセッションを中止しています。|ServiceModel|  
+|[3314 - SessionIdleTimeout](3314-sessionidletimeout.md)|エラー|URI: '%1' へのアイドル チャネルのセッションを中止しています。|ServiceModel|  
 |[3319 - SocketAcceptEnqueued](3319-socketacceptenqueued.md)|"詳細"|接続の受け入れを開始しました。|TCP|  
 |[3320 - SocketAccepted](3320-socketaccepted.md)|"詳細"|ListenerId:%1 が SocketId:%2 を受け入れました。|TCP|  
 |[3321 - ConnectionPoolMiss](3321-connectionpoolmiss.md)|"詳細"|%1 のプールに使用可能な接続がありません。%2 個の接続がビジー状態です。|チャネル|  
@@ -158,18 +159,18 @@ ms.locfileid: "91609513"
 |[3342 - EstablishConnectionStart](3342-establishconnectionstart.md)|"詳細"|%1 の接続の確立を開始しました。|チャネル|  
 |[3343 - EstablishConnectionStop](3343-establishconnectionstop.md)|"詳細"|接続が確立されました。|チャネル|  
 |[3345 - SessionPreambleUnderstood](3345-sessionpreambleunderstood.md)|"詳細"|'%1' のセッション プリアンブルが認識されました。|チャネル|  
-|[3346 - ConnectionReaderSendFault](3346-connectionreadersendfault.md)|Error|接続リーダーがエラー '%1' を送信しています。|チャネル|  
+|[3346 - ConnectionReaderSendFault](3346-connectionreadersendfault.md)|エラー|接続リーダーがエラー '%1' を送信しています。|チャネル|  
 |[3347 - SocketAcceptClosed](3347-socketacceptclosed.md)|"詳細"|ソケットの受け入れを終了しました。|TCP|  
 |[3348 - ServiceHostFaulted](3348-servicehostfaulted.md)|Critical|サービス ホストが途中終了しました。|TCP|  
 |[3349 - ListenerOpenStart](3349-listeneropenstart.md)|"詳細"|'%1' のリスナーを開いています。|チャネル|  
 |[3350 - ListenerOpenStop](3350-listeneropenstop.md)|"詳細"|リスナーのオープンが完了しました。|チャネル|  
 |[3351 - ServerMaxPooledConnectionsQuotaReached](3351-servermaxpooledconnectionsquotareached.md)|"詳細"|サーバーのプールされた接続の最大クォータに達しました。|Quota|  
-|[3352 - TcpConnectionTimedOut](3352-tcpconnectiontimedout.md)|Error|リモート アドレス %2 への SocketId:%1 がタイムアウトしました。|TCP|  
+|[3352 - TcpConnectionTimedOut](3352-tcpconnectiontimedout.md)|エラー|リモート アドレス %2 への SocketId:%1 がタイムアウトしました。|TCP|  
 |[3353 - TcpConnectionResetError](3353-tcpconnectionreseterror.md)|警告|リモート アドレス %2 への SocketId:%1 で接続リセット エラーが発生しました。|TCP|  
 |[3354 - ServiceSecurityNegotiationCompleted](3354-servicesecuritynegotiationcompleted.md)|"詳細"|サービス セキュリティ ネゴシエーションが完了しました。|セキュリティ|  
-|[3355 - SecurityNegotiationProcessingFailure](3355-securitynegotiationprocessingfailure.md)|Error|セキュリティ ネゴシエーション処理が失敗しました。|セキュリティ|  
+|[3355 - SecurityNegotiationProcessingFailure](3355-securitynegotiationprocessingfailure.md)|エラー|セキュリティ ネゴシエーション処理が失敗しました。|セキュリティ|  
 |[3356 - SecurityIdentityVerificationSuccess](3356-securityidentityverificationsuccess.md)|"詳細"|セキュリティ検証が成功しました。|セキュリティ|  
-|[3357 - SecurityIdentityVerificationFailure](3357-securityidentityverificationfailure.md)|Error|セキュリティ検証に失敗しました。|セキュリティ|  
+|[3357 - SecurityIdentityVerificationFailure](3357-securityidentityverificationfailure.md)|エラー|セキュリティ検証に失敗しました。|セキュリティ|  
 |[3358 - PortSharingDuplicatedSocket](3358-portsharingduplicatedsocket.md)|"詳細"|%1 のソケットが複製されました。|ActivationServices|  
 |[3359 - SecurityImpersonationSuccess](3359-securityimpersonationsuccess.md)|"詳細"|セキュリティの偽装に成功しました。|セキュリティ|  
 |[3360 - SecurityImpersonationFailure](3360-securityimpersonationfailure.md)|警告|セキュリティの偽装に失敗しました。|セキュリティ|  
@@ -178,8 +179,8 @@ ms.locfileid: "91609513"
 |[3363 - HttpAuthFailed](3363-httpauthfailed.md)|警告|HTTP 認証に失敗しました。|HTTP|  
 |[3364 - SharedListenerProxyRegisterStart](3364-sharedlistenerproxyregisterstart.md)|"詳細"|URI '%1' の SharedListenerProxy の登録を開始しました。|ActivationServices|  
 |[3365 - SharedListenerProxyRegisterStop](3365-sharedlistenerproxyregisterstop.md)|"詳細"|SharedListenerProxy の登録を停止します。|ActivationServices|  
-|[3366 - SharedListenerProxyRegisterFailed](3366-sharedlistenerproxyregisterfailed.md)|Error|SharedListenerProxy の登録は状態 '%1' で失敗しました。|ActivationServices|  
-|[3367 - ConnectionPoolPreambleFailed](3367-connectionpoolpreamblefailed.md)|Error|ConnectionPoolPreambleFailed。|チャネル|  
+|[3366 - SharedListenerProxyRegisterFailed](3366-sharedlistenerproxyregisterfailed.md)|エラー|SharedListenerProxy の登録は状態 '%1' で失敗しました。|ActivationServices|  
+|[3367 - ConnectionPoolPreambleFailed](3367-connectionpoolpreamblefailed.md)|エラー|ConnectionPoolPreambleFailed。|チャネル|  
 |[3368 - SslOnInitiateUpgrade](3368-ssloninitiateupgrade.md)|"詳細"|SslOnAcceptUpgradeStart|セキュリティ|  
 |[3369 - SslOnAcceptUpgrade](3369-sslonacceptupgrade.md)|"詳細"|SslOnAcceptUpgradeStop|セキュリティ|  
 |[3370 - BinaryMessageEncodingStart](3370-binarymessageencodingstart.md)|"詳細"|BinaryMessageEncoder がメッセージのエンコードを開始しました。|チャネル|  
@@ -221,7 +222,7 @@ ms.locfileid: "91609513"
 |[3408 - HttpPipelineBeginProcessInboundRequestStart](3408-httppipelinebeginprocessinboundrequeststart.md)|"詳細"|http メッセージ ハンドラーは、受信要求の非同期処理を開始しました。|HTTP|  
 |[3409 - HttpPipelineProcessInboundRequestStop](3409-httppipelineprocessinboundrequeststop.md)|"詳細"|http メッセージ ハンドラーは、受信要求の処理を完了しました。|HTTP|  
 |[3410 - HttpPipelineFaulted](3410-httppipelinefaulted.md)|警告|http メッセージ ハンドラーに障害があります。|HTTP|  
-|[3411 - HttpPipelineTimeoutException](3411-httppipelinetimeoutexception.md)|Error|WebSocket の接続がタイムアウトしました。|HTTP|  
+|[3411 - HttpPipelineTimeoutException](3411-httppipelinetimeoutexception.md)|エラー|WebSocket の接続がタイムアウトしました。|HTTP|  
 |[3412 - HttpPipelineProcessResponseStart](3412-httppipelineprocessresponsestart.md)|"詳細"|http メッセージ ハンドラーは、応答の処理を開始しました。|HTTP|  
 |[3413 - HttpPipelineBeginProcessResponseStart](3413-httppipelinebeginprocessresponsestart.md)|"詳細"|http メッセージ ハンドラーは、応答の非同期処理を開始しました。|HTTP|  
 |[3414 - HttpPipelineProcessResponseStop](3414-httppipelineprocessresponsestop.md)|"詳細"|http メッセージ ハンドラーは、応答の処理を完了しました。|HTTP|  
@@ -229,9 +230,9 @@ ms.locfileid: "91609513"
 |[3416 - WebSocketConnectionRequestSendStop](3416-websocketconnectionrequestsendstop.md)|"詳細"|WebSocketId:%1 の接続要求を送信しました。|HTTP|  
 |[3417 - WebSocketConnectionAcceptStart](3417-websocketconnectionacceptstart.md)|"詳細"|WebSocket 接続の受け入れを開始します。|HTTP|  
 |[3418 - WebSocketConnectionAccepted](3418-websocketconnectionaccepted.md)|"詳細"|WebSocketId:%1 の接続を受け入れました。|HTTP|  
-|[3419 - WebSocketConnectionDeclined](3419-websocketconnectiondeclined.md)|Error|WebSocket 接続が状態コード '%1' で拒否されました|HTTP|  
-|[3420 - WebSocketConnectionFailed](3420-websocketconnectionfailed.md)|Error|WebSocket 接続要求が失敗しました: '%1'|HTTP|  
-|[3421 - WebSocketConnectionAborted](3421-websocketconnectionaborted.md)|Error|WebSocketId:%1 の接続が中止されました。|HTTP|  
+|[3419 - WebSocketConnectionDeclined](3419-websocketconnectiondeclined.md)|エラー|WebSocket 接続が状態コード '%1' で拒否されました|HTTP|  
+|[3420 - WebSocketConnectionFailed](3420-websocketconnectionfailed.md)|エラー|WebSocket 接続要求が失敗しました: '%1'|HTTP|  
+|[3421 - WebSocketConnectionAborted](3421-websocketconnectionaborted.md)|エラー|WebSocketId:%1 の接続が中止されました。|HTTP|  
 |[3422 - WebSocketAsyncWriteStart](3422-websocketasyncwritestart.md)|"詳細"|WebSocketId:%1 が '%3' に '%2' バイトを書き込んでいます。|HTTP|  
 |[3423 - WebSocketAsyncWriteStop](3423-websocketasyncwritestop.md)|"詳細"|WebSocketId:%1 が非同期書き込みを停止します。|HTTP|  
 |[3424 - WebSocketAsyncReadStart](3424-websocketasyncreadstart.md)|"詳細"|WebSocketId:%1 が読み取りを開始します。|HTTP|  
@@ -252,7 +253,7 @@ ms.locfileid: "91609513"
 |[3800 - RoutingServiceClosingClient](3800-routingserviceclosingclient.md)|情報|ルーティング サービスがクライアント '%1' を終了しています。|RoutingServices|  
 |[3800 - RoutingServiceClosingClient](3800-routingserviceclosingclient.md)|警告|ルーティング サービスのクライアント '%1' が途中終了しました。|RoutingServices|  
 |[3802 - RoutingServiceCompletingOneWay](3802-routingservicecompletingoneway.md)|情報|ルーティング サービスの一方向メッセージを完了しています。|RoutingServices|  
-|[3803 - RoutingServiceProcessingFailure](3803-routingserviceprocessingfailure.md)|Error|アドレス '%1' のエンドポイントでメッセージを処理しているときにルーティング サービスでエラーが発生しました。|RoutingServices|  
+|[3803 - RoutingServiceProcessingFailure](3803-routingserviceprocessingfailure.md)|エラー|アドレス '%1' のエンドポイントでメッセージを処理しているときにルーティング サービスでエラーが発生しました。|RoutingServices|  
 |[3804 - RoutingServiceCreatingClientForEndpoint](3804-routingservicecreatingclientforendpoint.md)|情報|ルーティング サービスが、エンドポイント: '%1' のクライアントを作成しています。|RoutingServices|  
 |[3805 - RoutingServiceDisplayConfig](3805-routingservicedisplayconfig.md)|"詳細"|ルーティング サービスは、RouteOnHeadersOnly: %1、SoapProcessingEnabled: %2、EnsureOrderedDispatch: %3 に構成されています。|RoutingServices|  
 |[3807 - RoutingServiceCompletingTwoWay](3807-routingservicecompletingtwoway.md)|情報|ルーティング サービスの要求応答メッセージを完了しています。|RoutingServices|  
@@ -261,7 +262,7 @@ ms.locfileid: "91609513"
 |[3815 - RoutingServiceProcessingMessage](3815-routingserviceprocessingmessage.md)|情報|ルーティング サービスが、トランザクション: %4 で受信された ID: '%1'、アクション: '%2'、着信 URL: '%3' のメッセージを処理しています。|RoutingServices|  
 |[3816 - RoutingServiceTransmittingMessage](3816-routingservicetransmittingmessage.md)|情報|ルーティング サービスが、ID: '%1' [operation %2] のメッセージを '%3' に転送しています。|RoutingServices|  
 |[3817 - RoutingServiceCommittingTransaction](3817-routingservicecommittingtransaction.md)|情報|ルーティング サービスが、ID: '%1' のトランザクションをコミットしています。|RoutingServices|  
-|[3818 - RoutingServiceDuplexCallbackException](3818-routingserviceduplexcallbackexception.md)|Error|ルーティング サービスのコンポーネント %1 で二重コールバックの例外が発生しました。|RoutingServices|  
+|[3818 - RoutingServiceDuplexCallbackException](3818-routingserviceduplexcallbackexception.md)|エラー|ルーティング サービスのコンポーネント %1 で二重コールバックの例外が発生しました。|RoutingServices|  
 |[3819 - RoutingServiceMovedToBackup](3819-routingservicemovedtobackup.md)|情報|ID: '%1' [operation %2] のルーティング サービス メッセージがバックアップ エンドポイント '%3' に移動されました。|RoutingServices|  
 |[3820 - RoutingServiceCreatingTransaction](3820-routingservicecreatingtransaction.md)|情報|ルーティング サービスが、メッセージを処理するために ID '%1' の新しいトランザクションを作成しました。|RoutingServices|  
 |[3821 - RoutingServiceCloseFailed](3821-routingserviceclosefailed.md)|警告|発信クライアント '%1' を終了しているときにルーティング サービスでエラーが発生しました。|RoutingServices|  
@@ -278,54 +279,54 @@ ms.locfileid: "91609513"
 |[3832 - RoutingServiceTransmitSucceeded](3832-routingservicetransmitsucceeded.md)|情報|ルーティング サービスが、ID: '%1 [operation %2] のメッセージを '%3' に正常に送信しました。|RoutingServices|  
 |[4001 - TransportListenerSessionsReceived](4001-transportlistenersessionsreceived.md)|"詳細"|'%1' でトランスポート リスナー セッションを受信しました|ActivationServices|  
 |[4002 - FailFastException](4002-failfastexception.md)|Critical|FailFastException。|ActivationServices|  
-|[4003 - ServiceStartPipeError](4003-servicestartpipeerror.md)|Error|サービス開始パイプ エラー。|ActivationServices|  
+|[4003 - ServiceStartPipeError](4003-servicestartpipeerror.md)|エラー|サービス開始パイプ エラー。|ActivationServices|  
 |[4008 - DispatchSessionStart](4008-dispatchsessionstart.md)|"詳細"|セッション ディスパッチを開始しました。|ActivationServices|  
 |[4008 - DispatchSessionStart](4008-dispatchsessionstart.md)|警告|'%1' のセッション ディスパッチに失敗しました。保留セッション キューがいっぱいです。保留中の項目が '%2' 個あります。|ActivationServices|  
 |[4011 - MessageQueueRegisterStart](4011-messagequeueregisterstart.md)|"詳細"|メッセージ キューの登録を開始します。|ActivationServices|  
-|[4012 - MessageQueueRegisterAbort](4012-messagequeueregisterabort.md)|Error|URI:'%2' のメッセージ キューの登録が状態:'%1' で中止されました。|ActivationServices|  
+|[4012 - MessageQueueRegisterAbort](4012-messagequeueregisterabort.md)|エラー|URI:'%2' のメッセージ キューの登録が状態:'%1' で中止されました。|ActivationServices|  
 |[4013 - MessageQueueUnregisterSucceeded](4013-messagequeueunregistersucceeded.md)|"詳細"|URI:'%1' のメッセージ キューの登録解除に成功しました。|ActivationServices|  
-|[4014 - MessageQueueRegisterFailed](4014-messagequeueregisterfailed.md)|Error|URI:'%1' のメッセージ キューの登録が状態:'%2' で失敗しました。|ActivationServices|  
+|[4014 - MessageQueueRegisterFailed](4014-messagequeueregisterfailed.md)|エラー|URI:'%1' のメッセージ キューの登録が状態:'%2' で失敗しました。|ActivationServices|  
 |[4015 - MessageQueueRegisterCompleted](4015-messagequeueregistercompleted.md)|情報|URI '%1' のメッセージ キューの登録が完了しました。|ActivationServices|  
-|[4016 - MessageQueueDuplicatedSocketError](4016-messagequeueduplicatedsocketerror.md)|Error|メッセージ キューがソケットの複製に失敗しました。|ActivationServices|  
+|[4016 - MessageQueueDuplicatedSocketError](4016-messagequeueduplicatedsocketerror.md)|エラー|メッセージ キューがソケットの複製に失敗しました。|ActivationServices|  
 |[4019 - MessageQueueDuplicatedSocketComplete](4019-messagequeueduplicatedsocketcomplete.md)|"詳細"|MessageQueueDuplicatedSocketComplete|ActivationServices|  
 |[4020 - TcpTransportListenerListeningStart](4020-tcptransportlistenerlisteningstart.md)|"詳細"|TCP トランスポート リスナーが URI: '%1' でリッスンを開始しています。|ActivationServices|  
 |[4021 - TcpTransportListenerListeningStop](4021-tcptransportlistenerlisteningstop.md)|"詳細"|TCP トランスポート リスナーがリッスンしています。|ActivationServices|  
-|[4022 - WebhostUnregisterProtocolFailed](4022-webhostunregisterprotocolfailed.md)|Error|エラー コード:%1|ActivationServices|  
+|[4022 - WebhostUnregisterProtocolFailed](4022-webhostunregisterprotocolfailed.md)|エラー|エラー コード:%1|ActivationServices|  
 |[4023 - WasCloseAllListenerChannelInstancesCompleted](4023-wasclosealllistenerchannelinstancescompleted.md)|情報|WAS がすべてのリスナー チャネル インスタンスのクローズを完了しました。|ActivationServices|  
-|[4024 - WasCloseAllListenerChannelInstancesFailed](4024-wasclosealllistenerchannelinstancesfailed.md)|Error|エラー コード:%1|ActivationServices|  
-|[4025 - OpenListenerChannelInstanceFailed](4025-openlistenerchannelinstancefailed.md)|Error|エラー コード:%1|ActivationServices|  
+|[4024 - WasCloseAllListenerChannelInstancesFailed](4024-wasclosealllistenerchannelinstancesfailed.md)|エラー|エラー コード:%1|ActivationServices|  
+|[4025 - OpenListenerChannelInstanceFailed](4025-openlistenerchannelinstancefailed.md)|エラー|エラー コード:%1|ActivationServices|  
 |[4026 - WasConnected](4026-wasconnected.md)|"詳細"|WAS が接続されました。|ActivationServices|  
 |[4027 - WasDisconnected](4027-wasdisconnected.md)|"詳細"|WAS の接続が解除されました。|ActivationServices|  
 |[4028 - PipeTransportListenerListeningStart](4028-pipetransportlistenerlisteningstart.md)|"詳細"|パイプ トランスポート リスナーが URI:%1 でリッスンを開始します。|ActivationServices|  
 |[4029 - PipeTransportListenerListeningStop](4029-pipetransportlistenerlisteningstop.md)|"詳細"|パイプ トランスポート リスナーがリッスンを停止します。|ActivationServices|  
 |[4030 - DispatchSessionSuccess](4030-dispatchsessionsuccess.md)|情報|セッション ディスパッチに成功しました。|ActivationServices|  
-|[4031 - DispatchSessionFailed](4031-dispatchsessionfailed.md)|Error|セッション ディスパッチに失敗しました。|ActivationServices|  
+|[4031 - DispatchSessionFailed](4031-dispatchsessionfailed.md)|エラー|セッション ディスパッチに失敗しました。|ActivationServices|  
 |[4032 - WasConnectionTimedout](4032-wasconnectiontimedout.md)|Critical|WAS の接続がタイムアウトしました。|ActivationServices|  
 |[4033 - RoutingTableLookupStart](4033-routingtablelookupstart.md)|"詳細"|ルーティング テーブルの参照を開始しました。|ActivationServices|  
 |[4034 - RoutingTableLookupStop](4034-routingtablelookupstop.md)|"詳細"|ルーティング テーブルの参照が完了しました。|ActivationServices|  
 |[4035 - PendingSessionQueueRatio](4035-pendingsessionqueueratio.md)|"詳細"|保留セッション キューの比率: %1/%2|Quota|  
 |[4600 - MessageLogEventSizeExceeded](4600-messagelogeventsizeexceeded.md)|警告|メッセージが ETW イベントのサイズを上回っているため、メッセージをログに記録できませんでした|WCFMessageLogging|  
-|[4801 - DiscoveryClientInClientChannelFailedToClose](4801-discoveryclientinclientchannelfailedtoclose.md)|警告|DiscoveryClientChannel 内で作成された DiscoveryClient を閉じることができず、異常終了しました。|検出|  
-|[4802 - DiscoveryClientProtocolExceptionSuppressed](4802-discoveryclientprotocolexceptionsuppressed.md)|情報|DiscoveryClient を閉じているときに ProtocolException が抑制されました。 その理由として、DiscoveryService がまだ DiscoveryClient に応答を送信しようとしていることが考えられます。|検出|  
-|[4803 - DiscoveryClientReceivedMulticastSuppression](4803-discoveryclientreceivedmulticastsuppression.md)|情報|DiscoveryClient は DiscoveryProxy からマルチキャスト抑制メッセージを受け取りました。|検出|  
-|[4804 - DiscoveryMessageReceivedAfterOperationCompleted](4804-discoverymessagereceivedafteroperationcompleted.md)|情報|messageId='%2' の %1 メッセージは、対応する %3 操作が完了したため、DiscoveryClient によってドロップされました。|検出|  
-|[4805 - DiscoveryMessageWithInvalidContent](4805-discoverymessagewithinvalidcontent.md)|警告|messageId='%2' の %1 メッセージは、無効なコンテンツがあったため、ドロップされました。|検出|  
-|[4806 - DiscoveryMessageWithInvalidRelatesToOrOperationCompleted](4806-discoverymessagewithinvalidrelatestooroperationcompleted.md)|警告|messageId='%2' および relatesTo='%3' の %1 メッセージは、対応する %4 操作が完了したか、relatesTo 値が無効であるため、DiscoveryClient によってドロップされました。|検出|  
-|[4807 - DiscoveryMessageWithInvalidReplyTo](4807-discoverymessagewithinvalidreplyto.md)|警告|messageId='%1' の探索要求メッセージは、無効な ReplyTo アドレスがあったため、ドロップされました。|検出|  
-|[4808 - DiscoveryMessageWithNoContent](4808-discoverymessagewithnocontent.md)|警告|%1 メッセージは、コンテンツがなかったため、ドロップされました。|検出|  
-|[4809 - DiscoveryMessageWithNullMessageId](4809-discoverymessagewithnullmessageid.md)|警告|%1 メッセージは、メッセージ ヘッダーに必要な MessageId プロパティが含まれていなかったため、ドロップされました。|検出|  
-|[4810 - DiscoveryMessageWithNullMessageSequence](4810-discoverymessagewithnullmessagesequence.md)|警告|messageId='%2' の %1 メッセージは、DiscoveryMessageSequence プロパティがなかったため、DiscoveryClient によってドロップされました。|検出|  
-|[4811 - DiscoveryMessageWithNullRelatesTo](4811-discoverymessagewithnullrelatesto.md)|警告|messageId='%2' の %1 メッセージは、メッセージ ヘッダーに必要な RelatesTo プロパティが含まれていなかったため、DiscoveryClient によってドロップされました。|検出|  
-|[4812 - DiscoveryMessageWithNullReplyTo](4812-discoverymessagewithnullreplyto.md)|警告|messageId='%1' の探索要求メッセージは、ReplyTo アドレスがなかったため、ドロップされました。|検出|  
-|[4813 - DuplicateDiscoveryMessage](4813-duplicatediscoverymessage.md)|警告|messageId='%2' の %1 メッセージは、重複していたため、ドロップされました。|検出|  
-|[4814 - EndpointDiscoverabilityDisabled](4814-endpointdiscoverabilitydisabled.md)|情報|EndpointAddress='%1' および ListenUri='%2' のエンドポイントの探索が無効になりました。|検出|  
-|[4814 - EndpointDiscoverabilityDisabled](4814-endpointdiscoverabilitydisabled.md)|情報|EndpointAddress='%1' および ListenUri='%2' のエンドポイントの探索が有効になりました。|検出|  
-|[4816 - FindInitiatedInDiscoveryClientChannel](4816-findinitiatedindiscoveryclientchannel.md)|"詳細"|エンドポイントを探索するために、Find 操作が DiscoveryClientChannel で開始されました。|検出|  
-|[4817 - InnerChannelCreationFailed](4817-innerchannelcreationfailed.md)|警告|DiscoveryClientChannel は、EndpointAddress='%1' および Via='%2' の探索されたエンドポイントを使用して、チャネルを作成できませんでした。 DiscoveryClientChannel は、次に使用可能な探索されたエンドポイントを使用します。|検出|  
-|[4818 - InnerChannelOpenFailed](4818-innerchannelopenfailed.md)|警告|DiscoveryClientChannel は、EndpointAddress='%1' および Via='%2' の探索されたエンドポイントを使用して、チャネルを開くことができませんでした。 DiscoveryClientChannel は、次に使用可能な探索されたエンドポイントを使用します。|検出|  
-|[4819 - InnerChannelOpenSucceeded](4819-innerchannelopensucceeded.md)|情報|DiscoveryClientChannel は正常にエンドポイントを探索し、それを使用してチャネルを開きました。 クライアントは EndpointAddress='%1' および Via='%2' を使用して、サービスに接続されています。|検出|  
-|[4820 - SynchronizationContextReset](4820-synchronizationcontextreset.md)|情報|SynchronizationContext は DiscoveryClientChannel によって、元の値 %1 にリセットされました。|検出|  
-|[4821 - SynchronizationContextSetToNull](4821-synchronizationcontextsettonull.md)|情報|SynchronizationContext は、Find 操作を開始する前に、DiscoveryClientChannel によって NULL に設定されました。|検出|  
+|[4801 - DiscoveryClientInClientChannelFailedToClose](4801-discoveryclientinclientchannelfailedtoclose.md)|警告|DiscoveryClientChannel 内で作成された DiscoveryClient を閉じることができず、異常終了しました。|探索|  
+|[4802 - DiscoveryClientProtocolExceptionSuppressed](4802-discoveryclientprotocolexceptionsuppressed.md)|情報|DiscoveryClient を閉じているときに ProtocolException が抑制されました。 その理由として、DiscoveryService がまだ DiscoveryClient に応答を送信しようとしていることが考えられます。|探索|  
+|[4803 - DiscoveryClientReceivedMulticastSuppression](4803-discoveryclientreceivedmulticastsuppression.md)|情報|DiscoveryClient は DiscoveryProxy からマルチキャスト抑制メッセージを受け取りました。|探索|  
+|[4804 - DiscoveryMessageReceivedAfterOperationCompleted](4804-discoverymessagereceivedafteroperationcompleted.md)|情報|messageId='%2' の %1 メッセージは、対応する %3 操作が完了したため、DiscoveryClient によってドロップされました。|探索|  
+|[4805 - DiscoveryMessageWithInvalidContent](4805-discoverymessagewithinvalidcontent.md)|警告|messageId='%2' の %1 メッセージは、無効なコンテンツがあったため、ドロップされました。|探索|  
+|[4806 - DiscoveryMessageWithInvalidRelatesToOrOperationCompleted](4806-discoverymessagewithinvalidrelatestooroperationcompleted.md)|警告|messageId='%2' および relatesTo='%3' の %1 メッセージは、対応する %4 操作が完了したか、relatesTo 値が無効であるため、DiscoveryClient によってドロップされました。|探索|  
+|[4807 - DiscoveryMessageWithInvalidReplyTo](4807-discoverymessagewithinvalidreplyto.md)|警告|messageId='%1' の探索要求メッセージは、無効な ReplyTo アドレスがあったため、ドロップされました。|探索|  
+|[4808 - DiscoveryMessageWithNoContent](4808-discoverymessagewithnocontent.md)|警告|%1 メッセージは、コンテンツがなかったため、ドロップされました。|探索|  
+|[4809 - DiscoveryMessageWithNullMessageId](4809-discoverymessagewithnullmessageid.md)|警告|%1 メッセージは、メッセージ ヘッダーに必要な MessageId プロパティが含まれていなかったため、ドロップされました。|探索|  
+|[4810 - DiscoveryMessageWithNullMessageSequence](4810-discoverymessagewithnullmessagesequence.md)|警告|messageId='%2' の %1 メッセージは、DiscoveryMessageSequence プロパティがなかったため、DiscoveryClient によってドロップされました。|探索|  
+|[4811 - DiscoveryMessageWithNullRelatesTo](4811-discoverymessagewithnullrelatesto.md)|警告|messageId='%2' の %1 メッセージは、メッセージ ヘッダーに必要な RelatesTo プロパティが含まれていなかったため、DiscoveryClient によってドロップされました。|探索|  
+|[4812 - DiscoveryMessageWithNullReplyTo](4812-discoverymessagewithnullreplyto.md)|警告|messageId='%1' の探索要求メッセージは、ReplyTo アドレスがなかったため、ドロップされました。|探索|  
+|[4813 - DuplicateDiscoveryMessage](4813-duplicatediscoverymessage.md)|警告|messageId='%2' の %1 メッセージは、重複していたため、ドロップされました。|探索|  
+|[4814 - EndpointDiscoverabilityDisabled](4814-endpointdiscoverabilitydisabled.md)|情報|EndpointAddress='%1' および ListenUri='%2' のエンドポイントの探索が無効になりました。|探索|  
+|[4814 - EndpointDiscoverabilityDisabled](4814-endpointdiscoverabilitydisabled.md)|情報|EndpointAddress='%1' および ListenUri='%2' のエンドポイントの探索が有効になりました。|探索|  
+|[4816 - FindInitiatedInDiscoveryClientChannel](4816-findinitiatedindiscoveryclientchannel.md)|"詳細"|エンドポイントを探索するために、Find 操作が DiscoveryClientChannel で開始されました。|探索|  
+|[4817 - InnerChannelCreationFailed](4817-innerchannelcreationfailed.md)|警告|DiscoveryClientChannel は、EndpointAddress='%1' および Via='%2' の探索されたエンドポイントを使用して、チャネルを作成できませんでした。 DiscoveryClientChannel は、次に使用可能な探索されたエンドポイントを使用します。|探索|  
+|[4818 - InnerChannelOpenFailed](4818-innerchannelopenfailed.md)|警告|DiscoveryClientChannel は、EndpointAddress='%1' および Via='%2' の探索されたエンドポイントを使用して、チャネルを開くことができませんでした。 DiscoveryClientChannel は、次に使用可能な探索されたエンドポイントを使用します。|探索|  
+|[4819 - InnerChannelOpenSucceeded](4819-innerchannelopensucceeded.md)|情報|DiscoveryClientChannel は正常にエンドポイントを探索し、それを使用してチャネルを開きました。 クライアントは EndpointAddress='%1' および Via='%2' を使用して、サービスに接続されています。|探索|  
+|[4820 - SynchronizationContextReset](4820-synchronizationcontextreset.md)|情報|SynchronizationContext は DiscoveryClientChannel によって、元の値 %1 にリセットされました。|探索|  
+|[4821 - SynchronizationContextSetToNull](4821-synchronizationcontextsettonull.md)|情報|SynchronizationContext は、Find 操作を開始する前に、DiscoveryClientChannel によって NULL に設定されました。|探索|  
 |[5001 - DCSerializeWithSurrogateStart](5001-dcserializewithsurrogatestart.md)|"詳細"|DataContract のサロゲートによる %1 のシリアル化を開始します。|シリアル化|  
 |[5002 - DCSerializeWithSurrogateStop](5002-dcserializewithsurrogatestop.md)|"詳細"|DataContract のサロゲートによるシリアル化を停止します。|シリアル化|  
 |[5003 - DCDeserializeWithSurrogateStart](5003-dcdeserializewithsurrogatestart.md)|"詳細"|DataContract のサロゲートによる %1 のシリアル化解除を開始します。|シリアル化|  
@@ -347,9 +348,9 @@ ms.locfileid: "91609513"
 |[5204 - JsonMessageEncodingStart](5204-jsonmessageencodingstart.md)|"詳細"|JsonMessageEncoder がメッセージのエンコードを開始しました。|チャネル|  
 |[5402 - TokenValidationStarted](5402-tokenvalidationstarted.md)|"詳細"|SecurityToken (型 '%1'、ID '%2') の検証を開始しました。|セキュリティ|  
 |[5403 - TokenValidationSuccess](5403-tokenvalidationsuccess.md)|"詳細"|SecurityToken (型 '%1'、ID '%2') の検証に成功しました。|セキュリティ|  
-|[5404 - TokenValidationFailure](5404-tokenvalidationfailure.md)|Error|SecurityToken (型 '%1'、ID '%2') の検証に失敗しました。 %3|セキュリティ|  
+|[5404 - TokenValidationFailure](5404-tokenvalidationfailure.md)|エラー|SecurityToken (型 '%1'、ID '%2') の検証に失敗しました。 %3|セキュリティ|  
 |[5405 - GetIssuerNameSuccess](5405-getissuernamesuccess.md)|"詳細"|トークン ID: %2 からの発行者名: %1 の取得に成功しました。|セキュリティ|  
-|[5406 - GetIssuerNameFailure](5406-getissuernamefailure.md)|Error|トークン ID: %1 からの発行者名の取得に失敗しました。|セキュリティ|  
+|[5406 - GetIssuerNameFailure](5406-getissuernamefailure.md)|エラー|トークン ID: %1 からの発行者名の取得に失敗しました。|セキュリティ|  
 |[5600 - FederationMessageProcessingStarted](5600-federationmessageprocessingstarted.md)|"詳細"|フェデレーション メッセージの処理を開始しました。|セキュリティ|  
 |[5601 - FederationMessageProcessingSuccess](5601-federationmessageprocessingsuccess.md)|"詳細"|フェデレーション メッセージの処理に成功しました。|セキュリティ|  
 |[5602 - FederationMessageCreationStarted](5602-federationmessagecreationstarted.md)|"詳細"|フォーム ポストからのフェデレーション メッセージの作成を開始しました。|セキュリティ|  
@@ -360,11 +361,11 @@ ms.locfileid: "91609513"
 |[5607 - PrincipalSettingFromSessionTokenSuccess](5607-principalsettingfromsessiontokensuccess.md)|"詳細"|セッション トークンからのプリンシパルの設定に成功しました。|セキュリティ|  
 |[57393 - AppDomainUnload](57393-appdomainunload.md)|情報|AppDomain をアンロードしています。 AppDomain.FriendlyName %1、ProcessName %2、ProcessId %3。|インフラストラクチャ|  
 |[57394 - HandledException](57394-handledexception.md)|情報|例外を処理しています。|インフラストラクチャ|  
-|[57395 - ShipAssertExceptionMessage](57395-shipassertexceptionmessage.md)|Error|予期しないエラーが発生しました。 アプリケーションではこのエラーを処理することはできません。 診断上の目的から、次の英語のメッセージがエラーに関連付けられています: %1。|インフラストラクチャ|  
+|[57395 - ShipAssertExceptionMessage](57395-shipassertexceptionmessage.md)|エラー|予期しないエラーが発生しました。 アプリケーションではこのエラーを処理することはできません。 診断上の目的から、次の英語のメッセージがエラーに関連付けられています: %1。|インフラストラクチャ|  
 |[57396 - ThrowingException](57396-throwingexception.md)|警告|例外をスローしています。 発生元 %1。|インフラストラクチャ|  
 |[57397 - UnhandledException](57397-unhandledexception.md)|Critical|ハンドルされていない例外です。|インフラストラクチャ|  
 |[57399 - TraceCodeEventLogCritical](57399-tracecodeeventlogcritical.md)|Critical|イベント ログに書き込みました。|インフラストラクチャ|  
-|[57400 - TraceCodeEventLogError](57400-tracecodeeventlogerror.md)|Error|イベント ログに書き込みました。|インフラストラクチャ|  
+|[57400 - TraceCodeEventLogError](57400-tracecodeeventlogerror.md)|エラー|イベント ログに書き込みました。|インフラストラクチャ|  
 |[57401 - TraceCodeEventLogInfo](57401-tracecodeeventloginfo.md)|情報|イベント ログに書き込みました。|インフラストラクチャ|  
 |[57402 - TraceCodeEventLogVerbose](57402-tracecodeeventlogverbose.md)|"詳細"|イベント ログに書き込みました。|インフラストラクチャ|  
 |[57403 - TraceCodeEventLogWarning](57403-tracecodeeventlogwarning.md)|警告|イベント ログに書き込みました。|インフラストラクチャ|  
