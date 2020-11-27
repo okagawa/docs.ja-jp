@@ -8,14 +8,15 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: 0a06fb72b280fc61faeb12f6f2c3a05d957ec7b9
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 9d348b130ef26dfd27b27ecd93755919615afb68
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163565"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96252466"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern および埋め込みオブジェクトの概要
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
@@ -24,7 +25,9 @@ ms.locfileid: "87163565"
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]埋め込みオブジェクトは、テキスト以外の境界を持つ任意の要素です。たとえば、イメージ、ハイパーリンク、テーブル、ドキュメントの種類 (Microsoft Excel スプレッドシートや Microsoft Windows Media ファイルなど) です。 これは、あるアプリケーションで要素が作成され、別のアプリケーション内に埋め込まれる (リンクされる) 標準的な定義とは異なります。 オブジェクトを元のアプリケーション内で編集できるかどうかは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の状況とは無関係です。  
   
 <a name="Embedded_Objects_and_the_UI_Automation_Tree"></a>
+
 ## <a name="embedded-objects-and-the-ui-automation-tree"></a>埋め込みオブジェクトと UI オートメーション ツリー  
+
  埋め込みオブジェクトは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビュー内では個々の要素として扱われます。 これらはテキスト コンテナーの子として公開され、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の他のコントロールと同じモデルを介してアクセスできます。  
   
  ![テキスト コンテナー内にイメージを含む埋め込みテーブル](./media/uia-textpattern-embedded-objects-overview-example1.png "UIA_TextPattern_Embedded_Objects_Overview_Example1")  
@@ -34,7 +37,9 @@ ms.locfileid: "87163565"
 前のテキスト コンテナーの一部のコンテンツ ビューの例  
   
 <a name="Expose_Embedded_Objects_Using_TextPattern_and"></a>
+
 ## <a name="expose-embedded-objects-using-textpattern-and-textpatternrange"></a>TextPattern と TextPatternRange を使用した埋め込みオブジェクトの公開  
+
  <xref:System.Windows.Automation.TextPattern> コントロール パターン クラスと <xref:System.Windows.Automation.Text.TextPatternRange> クラスを組み合わせて使用すると、埋め込みオブジェクトのナビゲーションと照会を容易にするメソッドとプロパティが公開されます。  
   
  テキスト コンテナーのテキスト コンテンツ (内部テキスト) と埋め込みオブジェクト (ハイパーリンクやテーブルのセルなど) は、連続する単一のテキスト ストリームとして、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューの両方で公開されます。そのため、オブジェクトの境界は無視されます。 UI オートメーション クライアントがなんらかの方法で列挙、解釈、分析を目的としてテキストを取得している場合、テキスト コンテンツを含むテーブルやその他の埋め込みオブジェクトなど、特殊なケースについて、テキスト範囲を確認する必要があります。 これを行うには、 <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> を呼び出して各埋め込みオブジェクトの <xref:System.Windows.Automation.AutomationElement> を取得した後、 <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> を呼び出して各要素のテキスト範囲を取得します。 この操作は、すべてのテキスト コンテンツが取得されるまで再帰的に行われます。  
@@ -56,7 +61,9 @@ ms.locfileid: "87163565"
 テキスト範囲を Move() と ExpandToEnclosingUnit() に対して調整する方法の例  
   
 <a name="Common_Scenarios"></a>
+
 ## <a name="common-scenarios"></a>一般的なシナリオ  
+
  以下のセクションでは、埋め込みオブジェクトが関連する最も一般的なシナリオの例を紹介します。  
   
  この例で使用される凡例は次のとおりです。  
@@ -99,10 +106,12 @@ ms.locfileid: "87163565"
 |<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> (パラメーターは (TextUnit.Word, 1))|ハイパーリンクのテキストは個々の単語で構成されているため、テキスト範囲は "http" に移動します。 この場合、ハイパーリンクは 1 つのオブジェクトとして扱われません。<br /><br /> URL {[http]} はテキストに埋め込まれています。|  
   
 <a name="Image"></a>
+
 ### <a name="image"></a>Image  
+
  **例 1: 埋め込みイメージを含むテキスト範囲**  
   
- {画像の![埋め込み画像の例](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")は、テキストに埋め込まれています}。  
+ {画像の ![埋め込み画像の例](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") は、テキストに埋め込まれています}。  
   
 |呼び出されるメソッド|結果|  
 |-------------------|------------|  
@@ -113,7 +122,7 @@ ms.locfileid: "87163565"
   
  **例 2: テキストコンテナーのコンテンツに部分的にまたがるテキスト範囲。テキストコンテナーには、テキスト範囲に含まれない埋め込み画像が含まれています。**  
   
- {イメージ}![埋め込み画像の例](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")は、テキストに埋め込まれています。  
+ {イメージ} ![埋め込み画像の例](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") は、テキストに埋め込まれています。  
   
 |呼び出されるメソッド|結果|  
 |-------------------|------------|  
@@ -122,6 +131,7 @@ ms.locfileid: "87163565"
 |<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> (パラメーターは (TextUnit.Word, 1))|テキスト範囲は "is " に移動します。 テキスト ベースの埋め込みオブジェクトのみがテキスト ストリームの一部と見なされるため、この例のイメージは Move やその戻り値 (この場合は 1) に影響を与えません。|  
   
 <a name="Table"></a>
+
 ### <a name="table"></a>テーブル  
   
 ### <a name="table-used-for-examples"></a>例で使用するテーブル  
@@ -137,7 +147,7 @@ ms.locfileid: "87163565"
 |呼び出されるメソッド|結果|  
 |-------------------|------------|  
 |<xref:System.Windows.Automation.GridPattern.GetItem%2A> (パラメーターは (0, 0))|セルのコンテンツを表す <xref:System.Windows.Automation.AutomationElement> を返します。この場合、要素はテキスト コントロールです。|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> ( <xref:System.Windows.Automation.AutomationElement> は、前の `GetItem` メソッドから返されるオブジェクト)|画像の![埋め込み画像の例](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")にまたがる範囲を返します。|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> ( <xref:System.Windows.Automation.AutomationElement> は、前の `GetItem` メソッドから返されるオブジェクト)|画像の ![埋め込み画像の例](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")にまたがる範囲を返します。|  
 |前の<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> メソッドから返されるオブジェクトの `RangeFromChild`|セルを表す <xref:System.Windows.Automation.AutomationElement> を返します。この場合、要素は TableItemPattern をサポートするテキスト コントロールです。|  
 |前の<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> メソッドから返されるオブジェクトの `GetEnclosingElement`|テーブルを表す <xref:System.Windows.Automation.AutomationElement> を返します。|  
 |前の<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> メソッドから返されるオブジェクトの `GetEnclosingElement`|テキスト プロバイダー自体を表す <xref:System.Windows.Automation.AutomationElement> を返します。|  
