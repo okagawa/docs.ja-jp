@@ -2,14 +2,15 @@
 title: ストリーミング フィードのサンプル
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: 551a97f3cc54915a831fc28eca6ae0ff23101e0b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 735a72cba3c953ea4774d89751dad3216aa44400
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589787"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257185"
 ---
 # <a name="streaming-feeds-sample"></a>ストリーミング フィードのサンプル
+
 このサンプルでは、多数の項目が含まれた配信フィードを管理する方法を示します。 サーバー側のサンプルは、フィード内での個々の <xref:System.ServiceModel.Syndication.SyndicationItem> オブジェクトの作成を、項目がネットワーク ストリームに書き込まれる直前まで遅らせる方法を示しています。  
   
  クライアント側のサンプルは、カスタム配信フィード フォーマッタを使用して個々の項目をネットワーク ストリームから読み取り、読み取られたフィードがメモリに完全にバッファーされないようにする方法を示しています。  
@@ -19,6 +20,7 @@ ms.locfileid: "84589787"
  このデモでは、(キーワードコンストラクトを使用して) Visual C# 反復子を使用し `yield return` ます。 反復子の詳細については、MSDN の「反復子の使用」を参照してください。  
   
 ## <a name="service"></a>サービス  
+
  次のコードに示すように、サービスは、1 つの操作で構成される基本的な <xref:System.ServiceModel.Web.WebGetAttribute> コントラクトを実装します。  
   
 ```csharp  
@@ -68,6 +70,7 @@ public Atom10FeedFormatter StreamedFeed()
  その結果、項目のストリームはメモリに完全にはバッファされません。 この動作を確認するには、メソッド内のステートメントにブレークポイントを設定 `yield return` `ItemGenerator.GenerateItems()` し、サービスがメソッドの結果を返した後に、このブレークポイントが検出されたことを確認し `StreamedFeed()` ます。  
   
 ## <a name="client"></a>クライアント  
+
  このサンプルのクライアントでは、フィードの項目をメモリにバッファする代わりに、個々の項目の実体化を遅延させるカスタム <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 実装を使用します。 カスタム `StreamedAtom10FeedFormatter` インスタンスの使用方法は次のとおりです。  
   
 ```csharp  
@@ -114,7 +117,7 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   

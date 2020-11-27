@@ -10,26 +10,31 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: 1eb18c7a-f5e0-443f-80fb-67bfbb047da2
-ms.openlocfilehash: fab0686b1c7d2fbb1485f6e4b82d008495a553cd
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: c3e8060702239c6f87659f48658160e46491542f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803561"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257094"
 ---
 # <a name="virtualcercall-mda"></a>virtualCERCall MDA
+
 `virtualCERCall` マネージド デバッグ アシスタント (MDA) は、制約された実行領域 (CER) 呼び出し先の呼び出しサイトが、仮想ターゲット (つまり、インターフェイスを使用した最終ではない仮想メソッドまたは呼び出しの仮想呼び出し) を参照していることを示す警告としてアクティブ化されます。 共通言語ランタイム (CLR) は、中間言語およびメタデータの分析だけでは、これらの呼び出しの呼び出し先メソッドを予測できません。 その結果、CER グラフの一部としてコール ツリーを準備できません。また、そのサブツリー内のスレッドの中止を自動的にブロックできません。 呼び出し対象の計算に必要な追加情報が実行時に判明すると、<xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> メソッドの明示的な呼び出しを使用して CER の拡張が必要な可能性がある場合に、この MDA は警告します。  
   
 ## <a name="symptoms"></a>現象  
+
  スレッドが中止されたとき、またはアプリケーション ドメインがアンロードされたときに CER が実行されません。  
   
 ## <a name="cause"></a>原因  
+
  CER に、自動的に準備できない仮想メソッドの呼び出しが含まれています。  
   
-## <a name="resolution"></a>解決策  
+## <a name="resolution"></a>解像度  
+
  仮想メソッドの <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> を呼び出します。  
   
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
+
  この MDA は CLR に影響しません。  
   
 ## <a name="output"></a>出力  

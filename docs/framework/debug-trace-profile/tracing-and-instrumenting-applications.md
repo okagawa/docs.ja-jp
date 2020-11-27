@@ -14,23 +14,24 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-ms.openlocfilehash: d5484129ac17ee20aafe305bea5599f85903dfa2
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 63fdf49ba688c0b3c4ee6653e1c2960c49f526ce
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803548"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257120"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>アプリケーションのトレースとインストルメント
+
 トレースは、アプリケーションの稼働中にアプリケーションの実行を監視する手段です。 .NET Framework アプリケーションの開発時に、トレースとデバッグのインストルメンテーションをアプリケーションに追加できます。このインストルメンテーションは、アプリケーションの開発中でも開発したアプリケーションの配置後でも使用できます。 <xref:System.Diagnostics.Trace?displayProperty=nameWithType>、<xref:System.Diagnostics.Debug?displayProperty=nameWithType>、および <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> の各クラスを使用すると、エラーおよびアプリケーションの実行についての情報を後で分析するために、ログ、テキスト ファイル、またはその他のデバイスに記録できます。  
   
- ここでの*インストルメンテーション*という用語は、製品のパフォーマンスのレベルを監視または測定し、エラーを診断する具体的な機能を意味しています。 プログラミングでは、組み込むアプリケーションの機能を指します。  
+ ここでの *インストルメンテーション* という用語は、製品のパフォーマンスのレベルを監視または測定し、エラーを診断する具体的な機能を意味しています。 プログラミングでは、組み込むアプリケーションの機能を指します。  
   
 - **コードのトレース** - 実行時に、アプリケーションの実行状態について示すメッセージを受け取ります。  
   
 - **デバッグ** - 開発中のアプリケーションのプログラミング エラーを追跡して修正します。 詳細については、「[デバッグ](/visualstudio/debugger/debugger-feature-tour)」を参照してください。  
   
-- **パフォーマンス カウンター** - アプリケーションのパフォーマンスを追跡するためのコンポーネントです。 詳細については、「[パフォーマンスカウンター](performance-counters.md)」を参照してください。  
+- **パフォーマンス カウンター** - アプリケーションのパフォーマンスを追跡するためのコンポーネントです。 これらのパフォーマンス カウンターの詳細については、「 [パフォーマンス カウンター](performance-counters.md)」を参照してください。  
   
 - **イベント ログ** - アプリケーションの実行中に発生した重要なイベントを受け取って追跡するためのコンポーネントです。 詳細については、<xref:System.Diagnostics.EventLog> クラスを参照してください。  
   
@@ -43,6 +44,7 @@ ms.locfileid: "85803548"
  <xref:System.Diagnostics.Trace> クラスおよび <xref:System.Diagnostics.Debug> クラスは、アプリケーションの開発中または配置後に、アプリケーションのパフォーマンスをモニターおよび検査する手段を提供します。 たとえば、(新しいデータベース接続の作成など) が配置されたアプリケーションの操作の特定の種類を追跡するために <xref:System.Diagnostics.Trace> クラスを使用すると、アプリケーションの効率を監視できるようになります。  
   
 ## <a name="code-tracing-and-debugging"></a>コードのトレースとデバッグ  
+
  開発時に、Visual Studio 統合開発環境 (IDE) の出力ウィンドウにメッセージを表示するために <xref:System.Diagnostics.Debug> クラスの出力メソッドを使用できます。 次に例を示します。  
   
 ```vb  
@@ -64,6 +66,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  トレースを使用するアプリケーションの開発時には、通常、アプリケーション コードにトレース メッセージとデバッグ メッセージの両方を組み込みます。 アプリケーションを配置する準備が整ったら、**Debug** 条件属性をオンにせずに、リリース ビルドをコンパイルできます。 ただし、**Trace** 条件属性をオンにして、コンパイラがトレース コードを実行可能ファイルに組み込むようにすることもできます。 詳細については、「[方法 : トレースとデバッグを指定して条件付きコンパイルを実行する](how-to-compile-conditionally-with-trace-and-debug.md)」を参照してください。  
   
 ### <a name="phases-of-code-tracing"></a>コードのトレースの段階  
+
  コードのトレースには、次の 3 つの段階があります。  
   
 1. **インストルメンテーション** - トレース コードをアプリケーションに追加します。  
@@ -80,7 +83,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 1. アプリケーションを配置した後で受け取るトレース出力の種類を検討します。  
   
-2. スイッチのセットを作成します。 詳細については、「 [トレース スイッチの構成方法](how-to-create-initialize-and-configure-trace-switches.md)」を参照してください。  
+2. スイッチのセットを作成します。 詳細については、「[トレース スイッチを構成する方法](how-to-create-initialize-and-configure-trace-switches.md)に関するページを参照してください。  
   
 3. アプリケーションのコードにトレース ステートメントを追加します。  
   
@@ -90,7 +93,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 6. 次のいずれかのプロシージャを使用して、アプリケーションを実行可能なコードにコンパイルします。  
   
-    - **ソリューション エクスプローラー**の **[プロパティ ページ]** ダイアログ ボックスの **[デバッグ]** ページで **[ビルド]** メニューを使用します。 Visual Studio でコンパイルをする場合は、この方法を使用してください。  
+    - **ソリューション エクスプローラー** の **[プロパティ ページ]** ダイアログ ボックスの **[デバッグ]** ページで **[ビルド]** メニューを使用します。 Visual Studio でコンパイルをする場合は、この方法を使用してください。  
   
          \- または  
   
@@ -103,23 +106,26 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 8. トレース メッセージを分析して、アプリケーションの問題を識別および理解します。  
   
 ## <a name="trace-instrumentation-and-distributed-applications"></a>トレースの実装および分散アプリケーション  
+
  分散アプリケーションを作成するときに、アプリケーションが使用される環境でテストをすることが難しい場合があります。 オペレーティング システムや Web ブラウザーのすべての組み合わせ (ローカライズ言語オプションのすべてのケースも含む) をテストしたり、アプリケーションに同時にアクセスする最大ユーザー数をシミュレートしたりできる開発チームはほとんどありません。 このため、大量の情報、異なる設定、エンド ユーザー固有の動作などの要因に対して分散アプリケーションがどのように応答するかをテストすることはできません。 また、分散アプリケーションを構成する要素の大半には、直接対話したりこれらの構成要素の利用状況を表示したりするためのユーザー インターフェイスは備わっていません。  
   
- ただし、アプリケーションの*実装* (つまりコード内にトレース ステートメントを計画的に配置すること) によって、分散アプリケーションが特定のイベント、特に不当な動作をシステム管理者に説明できるようにすることにより補うことができます。 これにより、予測不可能な動作 (極度に遅い応答時間など) が実行時に発生した場合でも、原因を判断できます。  
+ ただし、アプリケーションの *実装* (つまりコード内にトレース ステートメントを計画的に配置すること) によって、分散アプリケーションが特定のイベント、特に不当な動作をシステム管理者に説明できるようにすることにより補うことができます。 これにより、予測不可能な動作 (極度に遅い応答時間など) が実行時に発生した場合でも、原因を判断できます。  
   
  トレース ステートメントを使用すると、オリジナル ソース コードを検査、変更、および再コンパイルしたり、デバッグ環境で実行時エラーを生成したりするなど、困難なタスクを避けることができます。  アプリケーションの実装は、エラーの表示だけでなく、パフォーマンスを監視するためにもすることができます。  
   
 ## <a name="strategic-placement-of-trace-statements"></a>トレース ステートメントの計画的な配置  
+
  実行時に使用するトレース ステートメントを配置するときには、十分に注意する必要があります。 考えられるすべてのトレース シナリオが適切に処理されるように、配置されるアプリケーションで必要とされるトレース情報を考慮する必要があります。 しかし、トレースを使用するアプリケーションは多岐にわたっており、トレースの計画的な配置にあたっての一般的なガイドラインはありません。 トレース ステートメントを配置する詳細については、「[方法 : アプリケーション コードにトレース ステートメントを追加する](how-to-add-trace-statements-to-application-code.md)」を参照してください。  
   
 ## <a name="output-from-tracing"></a>トレースの出力  
- トレースの出力は*リスナー*と呼ばれるオブジェクトによって収集されます。 リスナーは、トレースの出力を受け取り、出力デバイス (通常は、ウィンドウ、ログ、またはテキスト ファイル) に書き込むためのオブジェクトです。 トレース リスナーが作成されると、多くの場合、<xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> のコレクションに追加され、リスナーがすべてのトレース出力を受け取ることを許可します。  
+
+ トレースの出力は *リスナー* と呼ばれるオブジェクトによって収集されます。 リスナーは、トレースの出力を受け取り、出力デバイス (通常は、ウィンドウ、ログ、またはテキスト ファイル) に書き込むためのオブジェクトです。 トレース リスナーが作成されると、多くの場合、<xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> のコレクションに追加され、リスナーがすべてのトレース出力を受け取ることを許可します。  
   
- トレース情報は、既定の <xref:System.Diagnostics.Trace> の出力対象、<xref:System.Diagnostics.DefaultTraceListener> に少なくとも常に書き込まれます。 なんらかの理由 <xref:System.Diagnostics.Trace.Listeners%2A> のコレクションに他のリスナーを追加せずに <xref:System.Diagnostics.DefaultTraceListener> を削除する場合、トレース メッセージは表示されません。 詳細については、「[トレースリスナー](trace-listeners.md)」を参照してください。  
+ トレース情報は、既定の <xref:System.Diagnostics.Trace> の出力対象、<xref:System.Diagnostics.DefaultTraceListener> に少なくとも常に書き込まれます。 なんらかの理由 <xref:System.Diagnostics.Trace.Listeners%2A> のコレクションに他のリスナーを追加せずに <xref:System.Diagnostics.DefaultTraceListener> を削除する場合、トレース メッセージは表示されません。 詳細については、「 [トレースリスナー](trace-listeners.md)」を参照してください。  
   
  トレース情報を書き込む <xref:System.Diagnostics.Trace> の <xref:System.Diagnostics.Debug> の 6 種類のメンバーとメソッドを次の表に示します。  
   
-|メソッド|出力|  
+|Method|出力|  
 |------------|------------|  
 |`Assert`|指定されたテキスト。何も指定されない場合は、呼び出し履歴。 ステートメントの引数として指定された条件が false の場合にのみ、出力が書き込まれ `Assert` ます。 **false**|  
 |`Fail`|指定されたテキスト。何も指定されない場合は、呼び出し履歴。|  
@@ -132,9 +138,10 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  独自のリスナーを実装することにより、結果をカスタマイズできます。 たとえば、メッセージ ボックスにメッセージを表示するカスタム トレース リスナーや、データベースに接続してメッセージをテーブルに追加するトレース リスナーなどを実装できます。 すべてのカスタム リスナーは、前に示した 6 つのメソッドをサポートする必要があります。 開発者が定義するリスナーの作成については、「.NET Framework リファレンス」の「<xref:System.Diagnostics.TraceListener>」を参照してください。  
   
- `Write`メソッドと `WriteLine` メソッドは、常に指定されたテキストを書き込みます。 `Assert`、 `WriteIf` 、およびは、 `WriteLineIf` 指定されたテキストを書き込むかどうかを制御するブール型の引数を必要とします。式が**true** (およびの場合 `WriteIf` `WriteLineIf` ) または**false** (の場合) の場合にのみ、指定したテキストを書き込み `Assert` ます。 メソッドは、 `Fail` 常に指定されたテキストを書き込みます。 詳細については、「[方法 : アプリケーション コードにトレース ステートメントを追加する](how-to-add-trace-statements-to-application-code.md)」および「.NET Framework リファレンス」を参照してください。  
+ `Write`メソッドと `WriteLine` メソッドは、常に指定されたテキストを書き込みます。 `Assert`、 `WriteIf` 、およびは、 `WriteLineIf` 指定されたテキストを書き込むかどうかを制御するブール型の引数を必要とします。式が **true** (およびの場合 `WriteIf` `WriteLineIf` ) または **false** (の場合) の場合にのみ、指定したテキストを書き込み `Assert` ます。 メソッドは、 `Fail` 常に指定されたテキストを書き込みます。 詳細については、「[方法 : アプリケーション コードにトレース ステートメントを追加する](how-to-add-trace-statements-to-application-code.md)」および「.NET Framework リファレンス」を参照してください。  
   
 ## <a name="security-concerns"></a>セキュリティに関する注意事項  
+
  ASP.NET アプリケーションを配置する前にトレースとデバッグを無効にしないと、アプリケーションに関する情報が公開され、悪意を持ったプログラムによって利用される可能性があります。 詳細については、「[方法 : トレースとデバッグを指定して条件付きコンパイルを実行する](how-to-compile-conditionally-with-trace-and-debug.md)」、「[Compiling and Building](/visualstudio/ide/compiling-and-building-in-visual-studio)」(コンパイルとビルド)、および「[方法 : トレース スイッチを作成、初期化、および構成する](how-to-create-initialize-and-configure-trace-switches.md)」を参照してください。 デバッグは、IIS (Internet Information Services) で設定することもできます。  
   
 ## <a name="see-also"></a>関連項目
@@ -143,8 +150,8 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 - <xref:System.Diagnostics.TraceSource>
 - [コード コントラクト](code-contracts.md)
 - [C#、F#、および Visual Basic のプロジェクト](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
-- [方法: アプリケーション コードにトレース ステートメントを追加する](how-to-add-trace-statements-to-application-code.md)
-- [方法: トレースとデバッグを指定して条件付きコンパイルを実行する](how-to-compile-conditionally-with-trace-and-debug.md)
+- [方法 : アプリケーション コードにトレース ステートメントを追加する](how-to-add-trace-statements-to-application-code.md)
+- [方法 : トレースとデバッグを指定して条件付きコンパイルを実行する](how-to-compile-conditionally-with-trace-and-debug.md)
 - [方法: トレース スイッチを作成、初期化、および構成する](how-to-create-initialize-and-configure-trace-switches.md)
 - [方法: トレース ソースを作成し初期化する](how-to-create-and-initialize-trace-sources.md)
 - [方法: TraceSource とフィルターをトレース リスナーと共に使用する](how-to-use-tracesource-and-filters-with-trace-listeners.md)

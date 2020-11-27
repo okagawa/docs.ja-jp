@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 1edbfe2d0d25ea9f2145f879673fc9f0a6ee7f96
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f9cd297b479a07f2330eabbaaf81605a3874ec25
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547194"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257222"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>セキュリティで保護されていないイントラネットのクライアントとサービス
+
 次の図は、セキュリティで保護されたプライベートネットワークに関する情報を WCF アプリケーションに提供するために開発された simple Windows Communication Foundation (WCF) サービスを示しています。 データが重要度の低い、ネットワークが本質的にセキュリティで保護されている、または WCF インフラストラクチャの下にあるレイヤーによってセキュリティが提供されるため、セキュリティは必要ありません。  
   
  ![イントラネットのセキュリティで保護されていないクライアントとサービスのシナリオ。](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
@@ -25,9 +26,10 @@ ms.locfileid: "90547194"
 |相互運用性|WCF のみ|  
 |認証|なし|  
 |整合性|なし|  
-|機密性|なし|  
+|機密情報|なし|  
   
 ## <a name="service"></a>サービス  
+
  次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
 - 構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
@@ -35,12 +37,14 @@ ms.locfileid: "90547194"
 - 提供された構成を使用してサービスを作成しますが、エンドポイントを定義しません。  
   
 ### <a name="code"></a>コード  
+
  次のコードは、セキュリティで保護されないエンドポイントを作成する方法を示しています。  
   
  [!code-csharp[C_UnsecuredService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredservice/cs/source.cs#2)]
  [!code-vb[C_UnsecuredService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredservice/vb/source.vb#2)]  
   
 ### <a name="configuration"></a>構成  
+
  次のコードは、次に示す構成を使用して同一のエンドポイントをセットアップします。  
   
 ```xml  
@@ -71,6 +75,7 @@ ms.locfileid: "90547194"
 ```  
   
 ## <a name="client"></a>クライアント  
+
  次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
 - コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。  
@@ -81,12 +86,14 @@ ms.locfileid: "90547194"
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>コード  
+
  次のコードは、TCP プロトコルを使用してセキュリティで保護されていないエンドポイントにアクセスする基本的な WCF クライアントを示しています。  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  
   
 ### <a name="configuration"></a>構成  
+
  次の構成コードは、クライアントに適用されます。  
   
 ```xml  
