@@ -2,18 +2,19 @@
 title: ポータブル サブセット プロジェクトでサービス参照を追加する
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: e9a0d3fbc75a8c64af892f74acedfc41dc115da3
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: f81a596c5573405bec9389347c45ff6cb6b30fc9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687709"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294860"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>ポータブル サブセット プロジェクトでサービス参照を追加する
 
 ポータブルサブセットプロジェクトを使用すると、.NET アセンブリプログラマは、1つのソースツリーとビルドシステムを維持しながら、複数の .NET 実装 (デスクトップ、Silverlight、Windows Phone、Xbox) を引き続きサポートできます。 ポータブルサブセットプロジェクトは、任意の .NET 実装で使用できる .NET アセンブリであるポータブルライブラリのみを参照します。
   
 ## <a name="add-service-reference-details"></a>サービス参照の追加の詳細  
+
  ポータブル サブセット プロジェクトでサービス参照を追加する場合は、次の制限が適用されます。  
   
 1. <xref:System.Xml.Serialization.XmlSerializer> では、文字エンコーディングのみを使用できます。 SOAP エンコーディングを使用すると、インポート中にエラーが発生します。  

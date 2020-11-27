@@ -5,21 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: 10d6db63368ee55040f85f922b9483982e8ff264
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bf498ee373f2d637a7a93fbc36225a38ff7744c0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596969"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293898"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>方法: X.509 証明書を使用してサービスをセキュリティで保護する
+
 X.509 証明書を使用してサービスをセキュリティで保護することは、Windows Communication Foundation (WCF) のほとんどのバインディングで使用される基本的な手法です。 ここでは、X.509 証明書を使用して自己ホスト サービスを構成する手順を示します。  
   
- サーバーの認証に使用できる有効な証明書があることが前提条件になります。 この証明書は、信頼された証明機関によってサーバーに対して発行される必要があります。 証明書が無効な場合、サービスの使用を試みるすべてのクライアントがサービスを信頼しなくなるため、接続が作成されません。 証明書の使用方法の詳細については、「[証明書の](working-with-certificates.md)使用」を参照してください。  
+ サーバーの認証に使用できる有効な証明書があることが前提条件になります。 この証明書は、信頼された証明機関によってサーバーに対して発行される必要があります。 証明書が無効な場合、サービスの使用を試みるすべてのクライアントがサービスを信頼しなくなるため、接続が作成されません。 証明書の使用方法の詳細については、「 [証明書の](working-with-certificates.md)使用」を参照してください。  
   
 ### <a name="to-configure-a-service-with-a-certificate-using-code"></a>コードにより証明書を使用してサービスを構成するには  
   
-1. サービス コントラクトを作成し、サービスを実装します。 詳細については、「[サービスの設計と実装](../designing-and-implementing-services.md)」を参照してください。  
+1. サービス コントラクトを作成し、サービスを実装します。 詳細については、「 [サービスの設計と実装](../designing-and-implementing-services.md)」を参照してください。  
   
 2. 次のコードに示すように、<xref:System.ServiceModel.WSHttpBinding> クラスのインスタンスを作成し、そのセキュリティ モードを <xref:System.ServiceModel.SecurityMode.Message> に設定します。  
   
@@ -62,12 +63,14 @@ X.509 証明書を使用してサービスをセキュリティで保護する�
      [!code-vb[C_SecureWithCertificate#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#8)]  
   
 ## <a name="example"></a>例  
+
  次の例では、<xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> メソッドを使用して、X.509 証明書でサービスを構成します。  
   
  [!code-csharp[C_SecureWithCertificate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#9)]
  [!code-vb[C_SecureWithCertificate#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#9)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
+
  コードのコンパイルには次の名前空間が必要です。  
   
 - <xref:System>  

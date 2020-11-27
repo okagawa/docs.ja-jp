@@ -2,14 +2,15 @@
 title: TcpConnectionPoolSettings
 ms.date: 03/30/2017
 ms.assetid: 19acfba3-c057-4dbc-bac7-8674d7844d83
-ms.openlocfilehash: 6fa68eed241edaea40b66c31240a4201e05779f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de00cac851e4c6d0fd6df16f3a01b65bb5f43415
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956573"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294678"
 ---
 # <a name="tcpconnectionpoolsettings"></a>TcpConnectionPoolSettings
+
 TcpConnectionPoolSettings  
   
 ## <a name="syntax"></a>構文  
@@ -25,40 +26,46 @@ class TcpConnectionPoolSettings
 ```  
   
 ## <a name="methods"></a>メソッド  
+
  TcpConnectionPoolSettings クラスは、メソッドを一切定義しません。  
   
 ## <a name="properties"></a>プロパティ  
+
  TcpConnectionPoolSettings クラスには、次のプロパティがあります。  
   
 ### <a name="groupname"></a>GroupName  
- データ型: string  
+
+ データ型: 文字列  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  バインド要素により使用される接続プールのグループ名。  
   
 ### <a name="idletimeout"></a>IdleTimeout  
+
  データ型 : datetime  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  接続が切断されるまでの最大アイドル時間。  
   
 ### <a name="leasetimeout"></a>LeaseTimeout  
+
  データ型 : datetime  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  リース操作を完了する必要がある、タイムアウトまでの最大時間。  
   
 ### <a name="maxoutboundconnectionsperendpoint"></a>MaxOutboundConnectionsPerEndpoint  
+
  データ型 : sint32  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  各エンドポイントの発信接続の最大数。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  

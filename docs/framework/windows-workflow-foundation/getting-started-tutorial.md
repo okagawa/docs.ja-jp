@@ -6,17 +6,19 @@ helpviewer_keywords:
 - WF [WF], getting started
 - Windows Workflow Foundation [WF], getting started
 ms.assetid: c2d3585f-6b1a-4d4f-9865-bd7cd31c5d42
-ms.openlocfilehash: 148ba77231067bf5f8ff1d8b444b83d951ce8761
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: e9856320faa82becf12dda04d02f6f1c08081feb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419851"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293599"
 ---
 # <a name="getting-started-tutorial"></a>チュートリアル入門
+
 このセクションには、Windows Workflow Foundation (WF) アプリケーションのプログラミングについて紹介する一連のチュートリアルトピックが含まれています。 これらのトピックの手順に従って、数値推測ゲーム アプリケーションを構築します。 チュートリアルの最初のトピックでは、ワークフローに必要なカスタム アクティビティを作成する手順について説明します。 2 番目のトピックでは、カスタム アクティビティをビルトイン ワークフロー アクティビティと共にフローチャート ワークフローにアセンブルします。 3 番目のトピックでは、ホスト アプリケーションを構成してワークフローを実行します。最後のトピックでは永続化の概要について説明します。 このプロセスの各手順はその前の手順に基づいているため、順番に完了することをお勧めします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [方法: アクティビティを作成する](how-to-create-an-activity.md)  
  <xref:System.Activities.NativeActivity%601> から派生するカスタム アクティビティを作成する方法、およびアクティビティ デザイナーを使用してカスタム アクティビティをビルトイン アクティビティと共に複合アクティビティへと構成する方法について説明します。  
   

@@ -2,15 +2,16 @@
 title: '方法: 探索プロキシを使用してサービスを検索するクライアント アプリケーションを実装する'
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: a1e770531a196d73dfc7d93bf70ed432df343c88
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7316b080809f0298ae5f19eaf4160d9bca2b3ad0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587015"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295120"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>方法: 探索プロキシを使用してサービスを検索するクライアント アプリケーションを実装する
-これは、探索プロキシの実装方法に関する 3 つのトピックのうちの、3 番目のトピックです。 前のトピック「[方法: 探索プロキシに登録する探索可能なサービスを実装](discoverable-service-that-registers-with-the-discovery-proxy.md)する」では、探索プロキシに登録する WCF サービスを実装しています。 このトピックでは、探索プロキシを使用して WCF サービスを検索する WCF クライアントを作成します。  
+
+これは、探索プロキシの実装方法に関する 3 つのトピックのうちの、3 番目のトピックです。 前のトピック「 [方法: 探索プロキシに登録する探索可能なサービスを実装](discoverable-service-that-registers-with-the-discovery-proxy.md)する」では、探索プロキシに登録する WCF サービスを実装しています。 このトピックでは、探索プロキシを使用して WCF サービスを検索する WCF クライアントを作成します。  
   
 ### <a name="implement-the-client"></a>クライアントの実装  
   
@@ -104,6 +105,7 @@ ms.locfileid: "84587015"
  これで、クライアント アプリケーションの実装が完了しました。 [「方法: 探索プロキシをテスト](how-to-test-the-discovery-proxy.md)する」に進みます。  
   
 ## <a name="example"></a>例  
+
  このトピックのコード全体の一覧を以下に示します。  
   
 ```csharp  

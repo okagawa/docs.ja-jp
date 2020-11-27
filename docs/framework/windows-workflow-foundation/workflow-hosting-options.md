@@ -2,14 +2,15 @@
 title: ワークフロー ホスティングのオプション
 ms.date: 03/30/2017
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-ms.openlocfilehash: 4eaed147f312f3963aa1ca1d4f5dbe010c4189ad
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8ddb83f068eab8480bacc8b80bc5d44b7755fa59
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037819"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293781"
 ---
 # <a name="workflow-hosting-options"></a>ワークフロー ホスティングのオプション
+
 ほとんどの Windows Workflow Foundation (WF) のサンプルでは、コンソールアプリケーションでホストされているワークフローを使用しますが、これは実際のワークフローにとって現実的なシナリオではありません。 実際のビジネスアプリケーションのワークフローは、開発者が作成した Windows サービスまたは IIS 7.0 や AppFabric などのサーバーアプリケーションのいずれかの永続的なプロセスでホストされます。 これらの方法の違いを次に示します。
 
 ## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>Windows AppFabric を使用した IIS でのワークフローのホスト
@@ -21,7 +22,7 @@ IIS と AppFabric は、ワークフローに推奨されるホストです。 A
 実行中のアプリケーションのメンテナンスを容易にする AppFabric で使用できる管理ツールと監視ツールがあるため、IIS 7.0 だけを使用することはお勧めしません。 AppFabric への移行に関するインフラストラクチャの問題がある場合、ワークフローは IIS 7.0 のみでホストする必要があります。
 
 > [!WARNING]
-> IIS 7.0 は、さまざまな理由でアプリケーションプールを定期的にリサイクルします。 アプリケーション プールがリサイクルされると、IIS は古いプールへのメッセージの受け取りを中止し、新しいアプリケーション プールをインスタンス化して新しい要求を受け取ります。 応答を送信した後もワークフローが動作を続ける場合、IIS 7.0 は、実行されている作業を認識しないため、ホストしているアプリケーションプールをリサイクルする可能性があります。 これが発生すると、ワークフローが中止され、追跡サービスによって、"理由" フィールドが空の[1004-WorkflowInstanceAborted](1004-workflowinstanceaborted.md)メッセージが記録されます。
+> IIS 7.0 は、さまざまな理由でアプリケーションプールを定期的にリサイクルします。 アプリケーション プールがリサイクルされると、IIS は古いプールへのメッセージの受け取りを中止し、新しいアプリケーション プールをインスタンス化して新しい要求を受け取ります。 応答を送信した後もワークフローが動作を続ける場合、IIS 7.0 は、実行されている作業を認識しないため、ホストしているアプリケーションプールをリサイクルする可能性があります。 これが発生すると、ワークフローが中止され、追跡サービスによって、"理由" フィールドが空の [1004-WorkflowInstanceAborted](1004-workflowinstanceaborted.md) メッセージが記録されます。
 >
 > 永続化を使用する場合、ホストは、最後の永続性ポイントから、中止されたインスタンスを明示的に再開する必要があります。
 >

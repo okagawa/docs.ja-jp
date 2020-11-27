@@ -2,14 +2,15 @@
 title: ワークフロー実行プロパティ
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 0f958e7e112bfddc2740c2605d446493f2d49010
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: be9ae5924786ea1e23cc649034d927789c64e405
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182664"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293794"
 ---
 # <a name="workflow-execution-properties"></a>ワークフロー実行プロパティ
+
 CLR は、スレッド ローカル ストレージ (TLS) を介して各スレッドの実行コンテキストを維持します。 この実行コンテキストは、スレッド ID、アンビエント トランザクション、現在のアクセス許可セットなど、既知のスレッド プロパティに加えて、名前付きスロットのようなユーザー定義のスレッド プロパティを制御します。  
   
  CLR を直接対象にするプログラムとは異なり、ワークフロー プログラムは、スレッド非依存環境で実行されるアクティビティのツリーへ階層的にスコープ設定されます。 つまり、特定の作業項目のスコープに含まれるコンテキストを判断するために、標準の TLS 機構を直接使用することはできません。 たとえば、2 つの並行する実行の分岐で異なるトランザクションを使用していても、スケジューラは同じ CLR スレッド上でそれらの実行をインターリーブすることがあります。  
@@ -17,6 +18,7 @@ CLR は、スレッド ローカル ストレージ (TLS) を介して各スレ�
  ワークフローの実行プロパティには、アクティビティの環境にコンテキスト特有のプロパティを追加する機構が用意されています。 そのため、サブツリーのスコープに含まれるプロパティをアクティビティで宣言することができ、CLR オブジェクトと適切に相互作用するように TLS の設定および設定解除を行うフックの実現もできます。  
   
 ## <a name="creating-and-using-workflow-execution-properties"></a>ワークフロー実行プロパティの作成と使用  
+
  ワークフロー実行プロパティは、通常、<xref:System.Activities.IExecutionProperty> インターフェイスを実装します。ただし、メッセージングに重点を置いたプロパティが代わりに <xref:System.ServiceModel.Activities.ISendMessageCallback> と <xref:System.ServiceModel.Activities.IReceiveMessageCallback> を実装することもあります。 ワークフロー実行プロパティを作成するには、<xref:System.Activities.IExecutionProperty> インターフェイスを実装するクラスを作成し、メンバーの <xref:System.Activities.IExecutionProperty.SetupWorkflowThread%2A> および <xref:System.Activities.IExecutionProperty.CleanupWorkflowThread%2A> を実装します。 これらのメンバーには、プロパティを含むアクティビティ (すべての子アクティビティを含む) の作業の各パルス中に、スレッド ローカル ストレージを適切に設定および設定解除できる実行プロパティがあります。 この例では、`ConsoleColorProperty` を設定する `Console.ForegroundColor` を作成します。  
   
 ```csharp  

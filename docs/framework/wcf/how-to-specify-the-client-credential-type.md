@@ -1,5 +1,5 @@
 ---
-title: '方法 : クライアントの資格情報の種類を指定する'
+title: '方法: クライアントの資格情報の種類を指定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,16 @@ helpviewer_keywords:
 - security credentials, adding to SOAP messages
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
-ms.openlocfilehash: df18f89ee18bfa33ecc0aced617d168c805e3515
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: b45d7b58d8a1fe79f9d7a8cff6e328b46633985c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138577"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293677"
 ---
-# <a name="how-to-specify-the-client-credential-type"></a>方法 : クライアントの資格情報の種類を指定する
-セキュリティ モード (トランスポートまたはメッセージ) を設定してから、クライアント資格情報の種類を指定することができます。 このプロパティでは、クライアントが認証時にサービスに提供する必要のある資格情報の種類を指定します。 セキュリティモード (クライアント資格情報の種類を設定する前に必要な手順) の設定の詳細については、「[方法: セキュリティモードを設定する](how-to-set-the-security-mode.md)」を参照してください。  
+# <a name="how-to-specify-the-client-credential-type"></a>方法: クライアントの資格情報の種類を指定する
+
+セキュリティ モード (トランスポートまたはメッセージ) を設定してから、クライアント資格情報の種類を指定することができます。 このプロパティでは、クライアントが認証時にサービスに提供する必要のある資格情報の種類を指定します。 セキュリティモード (クライアント資格情報の種類を設定する前に必要な手順) の設定の詳細については、「 [方法: セキュリティモードを設定する](how-to-set-the-security-mode.md)」を参照してください。  
   
 ### <a name="to-set-the-client-credential-type-in-code"></a>コードでクライアント資格情報の種類を設定するには  
   
@@ -31,17 +32,17 @@ ms.locfileid: "74138577"
   
 ### <a name="to-set-the-client-credential-type-in-configuration"></a>構成でクライアント資格情報の種類を設定するには  
   
-1. [\<system.servicemodel >](../configure-apps/file-schema/wcf/system-servicemodel.md)要素を構成ファイルに追加します。  
+1. [\<system.serviceModel>](../configure-apps/file-schema/wcf/system-servicemodel.md)構成ファイルに要素を追加します。  
   
-2. 子要素として、 [\<バインド >](../configure-apps/file-schema/wcf/bindings.md)要素を追加します。  
+2. 子要素として、要素を追加し [\<bindings>](../configure-apps/file-schema/wcf/bindings.md) ます。  
   
-3. 適切なバインドを追加します。 この例では、 [\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md)要素を使用します。  
+3. 適切なバインドを追加します。 この例では、要素を使用 [\<wsHttpBinding>](../configure-apps/file-schema/wcf/wshttpbinding.md) します。  
   
-4. [\<バインド >](../configure-apps/file-schema/wcf/bindings.md)要素を追加し、`name` 属性を適切な値に設定します。 この例では、"SecureBinding" という名前を使用します。  
+4. 要素を追加 [\<binding>](../configure-apps/file-schema/wcf/bindings.md) し、 `name` 属性を適切な値に設定します。 この例では、"SecureBinding" という名前を使用します。  
   
 5. `<security>` バインドを追加します。 `mode` 属性を適切な値に設定します。 この例では、`"Message"` に設定します。  
   
-6. セキュリティ モードによって、`<message>` 要素と `<transport>` 要素のどちらかを追加します。 `clientCredentialType` 属性を適切な値に設定します。 この例では `"Windows"` を使用します。  
+6. セキュリティ モードによって、`<message>` 要素と `<transport>` 要素のどちらかを追加します。 `clientCredentialType` 属性を適切な値に設定します。 この例では、`"Windows"` を使用します。  
   
     ```xml  
     <system.serviceModel>  

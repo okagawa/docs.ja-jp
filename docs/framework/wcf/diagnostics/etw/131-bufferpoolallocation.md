@@ -2,14 +2,15 @@
 title: 131 - BufferPoolAllocation
 ms.date: 03/30/2017
 ms.assetid: 1ddaf86a-a453-4862-9269-8fa38a47c8b9
-ms.openlocfilehash: 7538c6a2f982bcfd78f752abc050542814c12eae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b96b50e98c7ee212b9321564ceadae2504ca2ff3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784958"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294795"
 ---
 # <a name="131---bufferpoolallocation"></a>131 - BufferPoolAllocation
+
 BufferPoolAllocation  
   
 ## <a name="properties"></a>プロパティ  
@@ -17,14 +18,16 @@ BufferPoolAllocation
 |||  
 |-|-|  
 |ID|131|  
-|キーワード|インフラストラクチャ|  
-|レベル|詳細|  
-|チャネル|デバッグ|  
+|Keywords|インフラストラクチャ|  
+|Level|"詳細"|  
+|チャネル|DEBUG|  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>Description  
+
  このイベントは、BufferPool がバッファーにメモリを割り当てるときに生成されます  
   
-## <a name="message"></a>メッセージ  
+## <a name="message"></a>Message  
+
  プールが %1 バイトを割り当てています。  
   
-## <a name="details"></a>説明
+## <a name="details"></a>詳細

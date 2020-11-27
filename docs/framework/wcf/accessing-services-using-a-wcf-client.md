@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: 25446a89a0b5657d32d77e2d0d57f58f36bed71b
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: b6f5cd7217b447256f19891c2624fba857735107
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245545"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294873"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>WCF クライアントを使用したサービスへのアクセス
 
@@ -27,9 +27,10 @@ ms.locfileid: "85245545"
 
 3. WCF クライアント プロキシをインスタンス化します。
 
-WCF クライアントプロキシは、サービスモデルメタデータユーティリティツール (SvcUtil.exe) を使用して手動で生成できます。詳細については、「 [ServiceModel Metadata Utility tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)」を参照してください。 WCF クライアントプロキシは、**サービス参照の追加**機能を使用して Visual Studio 内で生成することもできます。 いずれかの方法で WCF クライアント プロキシを生成するには、サービスが実行中であることが必要です。 サービスが自己ホスト型の場合は、ホストを実行する必要があります。 サービスが IIS/WAS でホストされている場合、特に必要な操作はありません。
+WCF クライアントプロキシは、サービスモデルメタデータユーティリティツール (SvcUtil.exe) を使用して手動で生成できます。詳細については、「 [ServiceModel Metadata Utility tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)」を参照してください。 WCF クライアントプロキシは、 **サービス参照の追加**  機能を使用して Visual Studio 内で生成することもできます。 いずれかの方法で WCF クライアント プロキシを生成するには、サービスが実行中であることが必要です。 サービスが自己ホスト型の場合は、ホストを実行する必要があります。 サービスが IIS/WAS でホストされている場合、特に必要な操作はありません。
 
 ## <a name="servicemodel-metadata-utility-tool"></a>ServiceModel メタデータ ユーティリティ ツール
+
  [ServiceModel メタデータユーティリティツール (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)は、メタデータからコードを生成するためのコマンドラインツールです。 基本的な Svcutil.exe コマンドの使用例を次に示します。
 
 ```console
@@ -50,16 +51,17 @@ Svcutil.exe <list of WSDL and XSD files on file system>
 Svcutil.exe <file1 [,file2]>
 ```
 
- ファイル名を 1 つだけ指定した場合、それは出力ファイルの名前になります。 ファイル名を 2 つ指定した場合は、1 番目のファイルが入力構成ファイルになり、そのファイルの内容と生成された構成がマージされ、2 番目のファイルに書き出されます。 構成の詳細については、「[サービスのバインドの構成](configuring-bindings-for-wcf-services.md)」を参照してください。
+ ファイル名を 1 つだけ指定した場合、それは出力ファイルの名前になります。 ファイル名を 2 つ指定した場合は、1 番目のファイルが入力構成ファイルになり、そのファイルの内容と生成された構成がマージされ、2 番目のファイルに書き出されます。 構成の詳細については、「 [サービスのバインドの構成](configuring-bindings-for-wcf-services.md)」を参照してください。
 
 > [!IMPORTANT]
 > セキュリティで保護されていないメタデータ要求には、セキュリティで保護されていないネットワーク要求と同様の一定の危険が伴います。通信先のエンドポイントが、本当に相手から通知されたとおりのエンドポイントかどうかわからない場合、取得した情報は悪質なサービスからのメタデータである可能性があります。
 
 ## <a name="add-service-reference-in-visual-studio"></a>Visual Studio の "サービス参照の追加"
 
- サービスが実行されている状態で、WCF クライアントプロキシを含むプロジェクトを右**Add**クリックし、[  >  **サービス参照**の追加] を選択します。 [**サービス参照の追加] ダイアログボックス**で、呼び出すサービスの URL を入力**し、[実行] ボタンを**クリックします。 このダイアログ ボックスには、指定したアドレスで利用可能なサービスの一覧が表示されます。 サービスをダブルクリックして、使用可能なコントラクトと操作を確認し、生成されたコードの名前空間を指定して、[ **OK** ] ボタンをクリックします。
+ サービスが実行されている状態で、WCF クライアントプロキシを含むプロジェクトを右 **Add** クリックし、[  >  **サービス参照** の追加] を選択します。 [ **サービス参照の追加] ダイアログボックス** で、呼び出すサービスの URL を入力 **し、[実行] ボタンを** クリックします。 このダイアログ ボックスには、指定したアドレスで利用可能なサービスの一覧が表示されます。 サービスをダブルクリックして、使用可能なコントラクトと操作を確認し、生成されたコードの名前空間を指定して、[ **OK** ] ボタンをクリックします。
 
 ## <a name="example"></a>例
+
  サービス用に作成されたコントラクトのコード例を次に示します。
 
 ```csharp
@@ -83,7 +85,7 @@ Public Interface ICalculator
 End Interface
 ```
 
- ServiceModel メタデータユーティリティツールと Visual Studio の**サービス参照の追加**によって、次の WCF クライアントクラスが生成されます。 このクラスは <xref:System.ServiceModel.ClientBase%601> ジェネリック クラスから継承されたもので、`ICalculator` インターフェイスを実装します。 このツールは、`ICalculator` インターフェイス (この例には表示されていません) も生成します。
+ ServiceModel メタデータユーティリティツールと Visual Studio の **サービス参照の追加** によって、次の WCF クライアントクラスが生成されます。 このクラスは <xref:System.ServiceModel.ClientBase%601> ジェネリック クラスから継承されたもので、`ICalculator` インターフェイスを実装します。 このツールは、`ICalculator` インターフェイス (この例には表示されていません) も生成します。
 
 ```csharp
 public partial class CalculatorClient : System.ServiceModel.ClientBase<ICalculator>, ICalculator
@@ -151,6 +153,7 @@ End Class
 ```
 
 ## <a name="using-the-wcf-client"></a>WCF クライアントの使用
+
  WCF クライアントを使用するには、次のコードに示すように、WCF クライアントのインスタンスを作成し、そのメソッドを呼び出します。
 
 ```csharp
@@ -185,7 +188,7 @@ WCF クライアントによってスローされる多くの例外は、サー�
 
 - <xref:System.ServiceModel.CommunicationObjectAbortedException>: ソケット接続が中止されました。 これは、メッセージ処理時のエラー、リモート ホストでの受信タイムアウトの超過、または基になるネットワーク リソースの問題が原因で発生する可能性があります。
 
-このような種類の例外が発生した場合、問題を解決するには、サービス側でトレースをオンにし、そこで発生した例外を特定することをお勧めします。 トレースの詳細に[ついては、「トレース](./diagnostics/tracing/index.md)と[トレースを使用したアプリケーションのトラブルシューティング](./diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)」を参照してください。
+このような種類の例外が発生した場合、問題を解決するには、サービス側でトレースをオンにし、そこで発生した例外を特定することをお勧めします。 トレースの詳細に [ついては、「トレース](./diagnostics/tracing/index.md) と [トレースを使用したアプリケーションのトラブルシューティング](./diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

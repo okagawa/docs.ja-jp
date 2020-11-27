@@ -2,31 +2,34 @@
 title: 1450 - WfMessageSent
 ms.date: 03/30/2017
 ms.assetid: 1acc8b92-a76d-479b-a6fe-328affff5f3d
-ms.openlocfilehash: 5d5ba6e1ec1b39b8d864e5f24b086120892c1ee8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e0af754ead3102627e8621ff714104b2ddcc21e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61924261"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294613"
 ---
 # <a name="1450---wfmessagesent"></a>1450 - WfMessageSent
+
 ## <a name="properties"></a>プロパティ  
   
 |||  
 |-|-|  
 |ID|1450|  
-|キーワード|WFServices|  
-|レベル|情報|  
+|Keywords|WFServices|  
+|Level|情報|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>Description  
+
  メッセージがワークフローで送信されたことを示します。  
   
-## <a name="message"></a>メッセージ  
+## <a name="message"></a>Message  
+
  ワークフローから送信されたメッセージ  
   
-## <a name="details"></a>説明  
+## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|説明|  
+|データ項目名|データ項目の型|Description|  
 |--------------------|--------------------|-----------------|  
 |AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName で返される文字列。|

@@ -2,14 +2,15 @@
 title: ユーザー名パスワード検証
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: 4ad365061e6a0f3178650699febd6c18cdd14205
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bf20c9baaec44ebdfed351b35c54ab14448c7644
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553120"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294925"
 ---
 # <a name="user-name-password-validator"></a>ユーザー名パスワード検証
+
 このサンプルでは、カスタム UserNamePassword 検証を実装する方法を示します。 これは、アプリケーションの要件に適した組み込みの UserNamePassword 検証モードがない場合に便利です。たとえば、ユーザー名とパスワードの組み合わせがデータベースなどの外部ストアに保存されている場合などです。 このサンプルでは、2 つの特定のユーザー名とパスワードの組み合わせをチェックする、カスタム検証を備えたサービスを示します。 クライアントはそのようなユーザー名とパスワードの組み合わせを使用して、サービスに対する認証を行います。
 
 > [!IMPORTANT]
@@ -32,7 +33,7 @@ ms.locfileid: "90553120"
 
 - サーバーがそのサーバーの X.509 証明書を使用して認証される。
 
- サービスは、サービスと通信するための単一のエンドポイントを公開します。このエンドポイントは、構成ファイル App.config を使用して定義されます。エンドポイントは、アドレス、バインディング、およびコントラクトで構成されます。 バインディングは、 `wsHttpBinding` 既定で ws-security とユーザー名認証を使用する標準で構成されます。 サービス動作では、クライアントのユーザー名とパスワードの組み合わせを検証するための `Custom` モード、および検証クラスの型を指定します。 さらに、`serviceCertificate` 要素を使用しているサーバー証明書も指定します。 サーバー証明書には、のと同じ値が含まれている必要があり `SubjectName` `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) ます。
+ サービスは、サービスと通信するための単一のエンドポイントを公開します。このエンドポイントは、構成ファイル App.config を使用して定義されます。エンドポイントは、アドレス、バインディング、およびコントラクトで構成されます。 バインディングは、 `wsHttpBinding` 既定で WS-Security とユーザー名認証を使用する標準で構成されます。 サービス動作では、クライアントのユーザー名とパスワードの組み合わせを検証するための `Custom` モード、および検証クラスの型を指定します。 さらに、`serviceCertificate` 要素を使用しているサーバー証明書も指定します。 サーバー証明書には、のと同じ値が含まれている必要があり `SubjectName` `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) ます。
 
 ```xml
 <system.serviceModel>
@@ -251,6 +252,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
  このサンプルを実行すると、操作要求および応答がクライアントのコンソール ウィンドウに表示されます。 クライアントはすべてのメソッドを問題なく呼び出すことができるようになります。 クライアントをシャットダウンするには、クライアント ウィンドウで Enter キーを押します。
 
 ## <a name="setup-batch-file"></a>セットアップ バッチ ファイル
+
  このサンプルに用意されている Setup.bat バッチ ファイルを使用すると、適切な証明書を使用してサーバーを構成し、サーバー証明書ベースのセキュリティを必要とする自己ホスト型アプリケーションを実行できるようになります。 このバッチ ファイルは、別のコンピューターを使用する場合または自己ホスト型の場合に応じて変更する必要があります。
 
  次に、バッチ ファイルのセクションのうち、該当する構成で実行するために変更が必要となる部分を示します。

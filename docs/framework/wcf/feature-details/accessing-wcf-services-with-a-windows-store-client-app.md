@@ -2,18 +2,19 @@
 title: Windows ストア クライアント アプリを使用した WCF サービスへのアクセス
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: d575907feea3d831b7e6f69410c8d4647e6ac95d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ab57adbe0effa2b74541053aa0fcc5b572a6b7fd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557958"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293937"
 ---
 # <a name="access-wcf-services-with-a-windows-store-client-app"></a>Windows ストアクライアントアプリを使用して WCF サービスにアクセスする
 
 Windows 8 では、Windows ストア アプリケーションと呼ばれる新しい種類のアプリケーションが導入されています。 これらのアプリケーションはタッチ スクリーンのインターフェイスを念頭にデザインされています。 .NET Framework 4.5 により、Windows ストア アプリケーションから WCF サービスを呼び出すことができます。  
   
 ## <a name="wcf-support-in-windows-store-applications"></a>Windows ストア アプリケーションでの WCF のサポート  
+
  WCF 機能の一部は、Windows ストア アプリケーション内から利用できます。詳細については、以降のセクションを参照してください。  
   
 > [!IMPORTANT]
@@ -23,6 +24,7 @@ Windows 8 では、Windows ストア アプリケーションと呼ばれる新�
 > Windows ランタイムコンポーネントに web サービス参照を追加するためのサービス参照の追加の使用はサポートされていません。  
   
 ### <a name="supported-bindings"></a>サポートされているバインド  
+
  Windows ストア アプリケーションでは、以下の WCF バインドがサポートされています。  
   
 1. <xref:System.ServiceModel.BasicHttpBinding>  
@@ -56,6 +58,7 @@ Windows 8 では、Windows ストア アプリケーションと呼ばれる新�
  テキスト エンコードとバイナリ エンコードの両方がサポートされています。 すべての WCF 転送モードがサポートされています。 詳細については、「 [Streaming Message Transfer](streaming-message-transfer.md)」を参照してください。  
   
 ### <a name="add-service-reference"></a>サービス参照の追加  
+
  WCF サービスを Windows ストア アプリケーションから呼び出すには、Visual Studio 2012 の "サービス参照の追加" 機能を使用します。 Windows ストア アプリケーションでは、"サービス参照の追加" 機能にいくつかの変更が行われていることがわかります。 まず、構成ファイルが生成されません。 Windows ストア アプリケーションでは構成ファイルが使用されないため、コードで構成する必要があります。 この構成コードは、"サービス参照の追加" によって生成される References.cs ファイルにあります。 このファイルを表示するには、ソリューションエクスプローラーで [すべてのファイルを表示] を選択してください。 このファイルは、[サービス参照] の下のプロジェクト内の Reference.svcmap ノードにあります。 Windows ストア アプリケーション内で WCF サービスに対して生成されるすべての操作は非同期で、タスク ベースの非同期パターンが使用されます。 詳細については、「 [非同期タスク-タスクを使用した非同期プログラミングの簡素化](/archive/msdn-magazine/2010/september/async-tasks-simplify-asynchronous-programming-with-tasks)」を参照してください。  
   
  構成がコードで生成されるようになったため、サービス参照を更新するたびに、Reference.cs ファイルで行ったすべての変更が上書きされます。 この状況に対処するために、構成コードは部分メソッド内に生成され、これをクライアント プロキシ クラスで実装できます。 部分メソッドは次のように宣言されています。  
@@ -96,6 +99,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 ```  
   
 ### <a name="serialization"></a>シリアル化  
+
  Windows ストア アプリケーションでは、次のシリアライザーがサポートされています。  
   
 1. DataContractSerializer  
@@ -143,6 +147,7 @@ Windows ストアアプリケーションでは、次のクライアント資格
 > Windows ストアアプリケーションでコンピューター間の呼び出しを行うには、"ホーム/社内ネットワーク" と呼ばれる別の機能を有効にする必要があります。 この設定は、[機能] タブの下にある appmanifest.xaml ファイルにもあります。[ホーム/社内ネットワーク] チェックボックスをオンにします。 これにより、アプリケーションは、自宅や職場など、ユーザーの信頼できる場所のネットワークへの受信および送信アクセスを提供します。 着信方向の重要なポートは常にブロックされます。 また、インターネット上のサービスにアクセスするには、インターネット (クライアント) の機能も有効にする必要があります。  
   
 ### <a name="misc"></a>その他  
+
  Windows ストア アプリケーションでは、次のクラスの使用がサポートされています。  
   
 1. <xref:System.ServiceModel.ChannelFactory>  
@@ -152,12 +157,14 @@ Windows ストアアプリケーションでは、次のクライアント資格
 3. <xref:System.ServiceModel.CallbackBehaviorAttribute>  
   
 ### <a name="defining-service-contracts"></a>サービス コントラクトの定義  
+
  非同期サービス操作の定義には、タスク ベースの非同期パターンのみを使用することをお勧めします。 これにより、サービス操作の呼び出し中も、Windows ストア アプリケーションの応答が維持されます。  
   
 > [!WARNING]
 > 同期操作を定義した場合でも例外はスローされませんが、非同期操作のみを定義することを強くお勧めします。  
   
 ### <a name="calling-wcf-services-from-windows-store-applications"></a>Windows ストア アプリケーションからの WCF サービスの呼び出し  
+
  既に説明したように、すべての構成は、生成されたプロキシ クラスの GetBindingForEndpoint メソッドのコード内で行う必要があります。 次のコードに示すように、サービス操作の呼び出しは、タスク ベースの非同期メソッドの呼び出しと同じように実行されます。  
   
 ```csharp  

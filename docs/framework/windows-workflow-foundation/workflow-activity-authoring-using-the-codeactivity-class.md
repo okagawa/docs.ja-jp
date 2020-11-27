@@ -2,17 +2,19 @@
 title: CodeActivity クラスを使用したワークフロー アクティビティの作成
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
-ms.openlocfilehash: e82122301ef412f9f145ef8b6e2c9e7b9033ced1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 714e0971a006db20d002b0f3a486533b1357fba7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656024"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293820"
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>CodeActivity クラスを使用したワークフロー アクティビティの作成
+
 <xref:System.Activities.CodeActivity> を継承して作成されたアクティビティは、<xref:System.Activities.CodeActivity.Execute%2A> メソッドをオーバーライドすることで強制的な基本動作を実装できます。
 
 ## <a name="using-codeactivitycontext"></a>CodeActivityContext の使用
+
  ワークフロー ランタイムの機能は、<xref:System.Activities.CodeActivity.Execute%2A> 型の `context` パラメーターを使用して、<xref:System.Activities.CodeActivityContext> メソッド内からアクセスできます。 <xref:System.Activities.CodeActivityContext> を介して、以下のような機能を使用できます。
 
 - 変数と引数の値を取得および設定。
@@ -25,11 +27,11 @@ ms.locfileid: "64656024"
 
 1. Visual Studio 2010 を開きます。
 
-2. 選択**ファイル**、**新しい**、し**プロジェクト**します。 選択**Workflow 4.0**  **Visual c#** で、**プロジェクトの種類**ウィンドウ、および選択、 **v2010**ノード。 選択**アクティビティ ライブラリ**で、**テンプレート**ウィンドウ。 新しいプロジェクトに HelloActivity という名前を付けます。
+2. [ **ファイル**]、[ **新規作成**]、[ **プロジェクト**] の順に選択します。 [**プロジェクトの種類**] ウィンドウの [ **Visual C#** ] で [**ワークフロー 4.0** ] を選択し、[ **v2010** ] ノードを選択します。 [**テンプレート**] ウィンドウで [**アクティビティライブラリ**] を選択します。 新しいプロジェクトに HelloActivity という名前を付けます。
 
-3. HelloActivity プロジェクトの Activity1.xaml を右クリックして**削除**します。
+3. HelloActivity プロジェクトで Activity1 を右クリックし、[ **削除**] を選択します。
 
-4. HelloActivity プロジェクトを右クリックして**追加**、し**クラス**します。 新しいクラスに HelloActivity.cs という名前を付けます。
+4. HelloActivity プロジェクトを右クリックし、[ **追加** ]、[ **クラス**] の順に選択します。 新しいクラスに HelloActivity.cs という名前を付けます。
 
 5. HelloActivity.cs ファイルで、次の `using` ディレクティブを追加します。
 

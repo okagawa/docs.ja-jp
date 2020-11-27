@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 86ce392bb76b22e2b6a65fa1d005ed8e9589af15
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 41a7a3e651d234de4079455a667df670d6c7435d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246385"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294652"
 ---
 # <a name="hosting-services"></a>ホスティング サービス
 
@@ -22,14 +22,15 @@ WCF は、サービス指向アプリケーションを構築するための統�
 
 ## <a name="hosting-options"></a>ホスティング オプション
 
-### <a name="self-host-in-a-managed-application"></a>マネージアプリケーションでの自己ホスト
- WCF サービスは、任意のマネージアプリケーションでホストできます。 これは、展開に必要なインフラストラクチャが最小限になるため、最も柔軟なオプションです。 マネージド アプリケーション コード内にサービスのコードを埋め込み、続いて <xref:System.ServiceModel.ServiceHost> のインスタンスを作成して開き、サービスを有効にします。 詳細については、「[方法: マネージアプリケーションで WCF サービスをホスト](how-to-host-a-wcf-service-in-a-managed-application.md)する」を参照してください。
+### <a name="self-host-in-a-managed-application"></a>マネージアプリケーションでの Self-Host
+
+ WCF サービスは、任意のマネージアプリケーションでホストできます。 これは、展開に必要なインフラストラクチャが最小限になるため、最も柔軟なオプションです。 マネージド アプリケーション コード内にサービスのコードを埋め込み、続いて <xref:System.ServiceModel.ServiceHost> のインスタンスを作成して開き、サービスを有効にします。 詳細については、「 [方法: マネージアプリケーションで WCF サービスをホスト](how-to-host-a-wcf-service-in-a-managed-application.md)する」を参照してください。
 
  このオプションを使用すると、コンソールアプリケーション内で実行される WCF サービスと、Windows Presentation Foundation (WPF) または Windows フォーム (WinForms) に基づくリッチクライアントアプリケーションなど、2つの一般的なシナリオが有効になります。 通常、コンソールアプリケーション内で WCF サービスをホストすることは、アプリケーションの開発段階で役立ちます。 コンソール アプリケーションにより、アプリケーション内部で起こっている状況を見極めるための情報のデバッグやトレースが容易になり、新しい場所にアプリケーションをコピーして移動することも簡単に行うことができます。 また、このホストオプションを使用すると、WPF や WinForms アプリケーションなどのリッチクライアントアプリケーションで外部との通信を容易に行うことができます。 たとえば、ユーザーインターフェイスに WPF を使用し、他のクライアントがそれに接続して情報を共有できるようにする WCF サービスもホストするピアツーピアコラボレーションクライアントなどです。
 
 ### <a name="managed-windows-services"></a>マネージド Windows サービス
 
-このホストオプションは、WCF サービスをホストするアプリケーションドメイン (AppDomain) をマネージ Windows サービス (旧称 NT サービス) として登録することで構成されます。これにより、サービスのプロセス有効期間は Windows サービス用のサービスコントロールマネージャー (SCM) によって制御されます。 自己ホスト オプションと同様、この種類のホスト環境では、ホスト コードをアプリケーションの一部として記述する必要があります。 このサービスは、Windows サービスと wcf サービスの両方として実装されます。これにより、WCF サービスコントラクトインターフェイスから、またはクラスから継承されるようになり <xref:System.ServiceProcess.ServiceBase> ます。 次に <xref:System.ServiceModel.ServiceHost> を作成し、オーバーライドされた <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> メソッドで開き、オーバーライドされた <xref:System.ServiceProcess.ServiceBase.OnStop> メソッドで閉じます。 また、 <xref:System.Configuration.Install.Installer> から継承されるインストーラー クラスも実装し、プログラムが Installutil.exe ツールによって Windows サービスとしてインストールされるようにする必要があります。 詳細については、「[方法: マネージ Windows サービスで WCF サービスをホスト](./feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)する」を参照してください。 マネージ Windows サービスのホストオプションによって有効になるシナリオは、メッセージがアクティブ化されていない、セキュリティで保護された環境で IIS の外部でホストされている、長時間実行される WCF サービスの場合です。 サービスの有効期限は代わりにオペレーティング システムによって制御されます。 このホスト オプションは Windows のすべてのバージョンで使用できます。
+このホストオプションは、WCF サービスをホストするアプリケーションドメイン (AppDomain) をマネージ Windows サービス (旧称 NT サービス) として登録することで構成されます。これにより、サービスのプロセス有効期間は Windows サービス用のサービスコントロールマネージャー (SCM) によって制御されます。 自己ホスト オプションと同様、この種類のホスト環境では、ホスト コードをアプリケーションの一部として記述する必要があります。 このサービスは、Windows サービスと wcf サービスの両方として実装されます。これにより、WCF サービスコントラクトインターフェイスから、またはクラスから継承されるようになり <xref:System.ServiceProcess.ServiceBase> ます。 次に <xref:System.ServiceModel.ServiceHost> を作成し、オーバーライドされた <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> メソッドで開き、オーバーライドされた <xref:System.ServiceProcess.ServiceBase.OnStop> メソッドで閉じます。 また、 <xref:System.Configuration.Install.Installer> から継承されるインストーラー クラスも実装し、プログラムが Installutil.exe ツールによって Windows サービスとしてインストールされるようにする必要があります。 詳細については、「 [方法: マネージ Windows サービスで WCF サービスをホスト](./feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)する」を参照してください。 マネージ Windows サービスのホストオプションによって有効になるシナリオは、メッセージがアクティブ化されていない、セキュリティで保護された環境で IIS の外部でホストされている、長時間実行される WCF サービスの場合です。 サービスの有効期限は代わりにオペレーティング システムによって制御されます。 このホスト オプションは Windows のすべてのバージョンで使用できます。
 
 ### <a name="internet-information-services-iis"></a>インターネット インフォメーション サービス (IIS)
 
@@ -44,6 +45,7 @@ Windows プロセスアクティブ化サービス (WAS) は、windows Vista で
  このホスト オプションでは、WAS が正しく構成されている必要がありますが、アプリケーションの一部としてホスト コードを書く必要はありません。 WAS ホストを構成する方法の詳細については、「 [how to: Host a WCF Service IN was](./feature-details/how-to-host-a-wcf-service-in-was.md)」を参照してください。
 
 ## <a name="choose-a-hosting-environment"></a>ホスティング環境を選択する
+
  次の表に、各ホスト オプションに関連する主な利点とシナリオの要点をまとめます。
 
 |ホスト環境|一般的なシナリオ|主な利点と制限|
@@ -58,11 +60,11 @@ Windows プロセスアクティブ化サービス (WAS) は、windows Vista で
 
 |ホスト環境|プラットフォームの可用性|サポートされるトランスポート|プロセスと AppDomain のリサイクル|
 |-------------------------|---------------------------|--------------------------|-------------------------------------|
-|マネージド アプリケーション ("自己ホスト")|Windows XP、Windows Server 2003、Windows Vista、<br /><br /> Windows Server 2008|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|No|
-|Windows サービス (従来 NT サービスと呼ばれていたもの)|Windows XP、Windows Server 2003、Windows Vista、<br /><br /> Windows Server 2008|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|No|
-|IIS 5.1|Windows XP|HTTP|Yes|
-|IIS 6.0|Windows Server 2003|HTTP|Yes|
-|Windows プロセス アクティブ化サービス (WAS)|Windows Vista、Windows Server 2008|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|Yes|
+|マネージド アプリケーション ("自己ホスト")|Windows XP、Windows Server 2003、Windows Vista、<br /><br /> Windows Server 2008|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|いいえ|
+|Windows サービス (従来 NT サービスと呼ばれていたもの)|Windows XP、Windows Server 2003、Windows Vista、<br /><br /> Windows Server 2008|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|いいえ|
+|IIS 5.1|Windows XP|HTTP|はい|
+|IIS 6.0|Windows Server 2003|HTTP|はい|
+|Windows プロセス アクティブ化サービス (WAS)|Windows Vista、Windows Server 2008|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|はい|
 
  信頼されていないホストからサービスや拡張機能を実行すると、セキュリティが損なわれるので注意してください。 また、偽装でを開く場合 <xref:System.ServiceModel.ServiceHost> 、アプリケーションはユーザーのをキャッシュするなどして、ユーザーがログオフしていないことを確認する必要があり <xref:System.Security.Principal.WindowsIdentity> ます。
 

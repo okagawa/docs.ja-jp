@@ -2,14 +2,15 @@
 title: カスタム暗号アルゴリズムの指定
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: 3b4690071ac148966601a1c0f50edfd5a9fd52fc
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: bdb7d45752be94c4c81e27161f57f765d64bd94a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163234"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294002"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>カスタム暗号アルゴリズムの指定
+
 WCF では、データの暗号化やデジタル署名の計算を行う際に使用するカスタム暗号アルゴリズムを指定できます。 そのためには、次の手順に従います。  
   
 1. <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> の派生クラスを作成します。  
@@ -19,6 +20,7 @@ WCF では、データの暗号化やデジタル署名の計算を行う際に�
 3. <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> の派生クラスを使用してバインディングを構成します。  
   
 ## <a name="derive-a-class-from-securityalgorithmsuite"></a>SecurityAlgorithmSuite の派生クラスの作成  
+
  <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> は、セキュリティ関連のさまざまな操作を実行する際に使用するアルゴリズムを指定できるようにする抽象基本クラスです。 たとえば、デジタル署名のハッシュ計算やメッセージの暗号化などの操作です。 次のコードは、<xref:System.ServiceModel.Security.SecurityAlgorithmSuite> から派生クラスを作成する方法を示しています。  
   
 ```csharp  
@@ -87,6 +89,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 ```  
   
 ## <a name="register-the-custom-algorithm"></a>カスタム アルゴリズムの登録  
+
  登録は、構成ファイルまたは命令型コードで行うことができます。 カスタム アルゴリズムを登録するには、暗号サービス プロバイダーを実装するクラスとエイリアスの間のマッピングを作成します。 その後、WCF サービスのバインディングでアルゴリズムを指定する際に使用する URI にエイリアスをマップします。 次の構成スニペットは、config でカスタム アルゴリズムを登録する方法を示しています。  
   
 ```xml  
@@ -116,6 +119,7 @@ CryptoConfig.AddAlgorithm(typeof(SHA256CryptoServiceProvider), "http://contoso.c
 ```  
   
 ## <a name="configure-the-binding"></a>バインディングの構成  
+
  バインディングを構成するには、次のコード スニペットに示すように、<xref:System.ServiceModel.Security.SecurityAlgorithmSuite> のカスタム派生クラスをバインディング設定で指定します。  
   
 ```csharp  

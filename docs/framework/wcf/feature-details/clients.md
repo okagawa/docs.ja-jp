@@ -2,17 +2,19 @@
 title: クライアント
 ms.date: 03/30/2017
 ms.assetid: cce50025-0318-4a5e-9ce8-c67feab83b06
-ms.openlocfilehash: c5c44016a0367ea80485f220418e5bd8365b9694
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 55cb3cac30ccaabec39823e9ba0629a6088b1508
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599322"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295094"
 ---
 # <a name="clients"></a>クライアント
+
 このセクションのトピックでは、クライアントアーキテクチャ、Windows Communication Foundation (WCF) サービスにアクセスする方法、wcf クライアントを構成する方法、および WCF クライアントのセキュリティに関する考慮事項について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [WCF クライアント アーキテクチャ](client-architecture.md)  
  WCF クライアントアーキテクチャについて説明します。  
   

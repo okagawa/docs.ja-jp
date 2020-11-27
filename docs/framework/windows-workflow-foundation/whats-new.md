@@ -6,24 +6,27 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], what's new
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
-ms.openlocfilehash: 0fbb2f11d94ca1a24dfeb1399fdece6a9512ae02
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d6a3cda7b9334ca4710ada5aa0848eb5be815b0a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704176"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293833"
 ---
 # <a name="whats-new-in-windows-workflow-foundation"></a>Windows Workflow Foundation の新機能
 
 .NET Framework 4 の Windows Workflow Foundation (WF) は、以前のバージョンのいくつかの開発パラダイムを変更します。 ワークフローでは、新しい機能のホストの作成、実行、保守、実装が簡単になっています。 .NET Framework 3.0 および .NET Framework 3.5 ワークフローアプリケーションを移行して最新バージョンを使用する方法の詳細については、「 [移行のガイダンス](migration-guidance.md)」を参照してください。
 
 ## <a name="workflow-activity-model"></a>ワークフロー アクティビティ モデル
+
  アクティビティは、現在はワークフロー作成の基本単位であり、<xref:System.Workflow.Activities.SequentialWorkflowActivity> クラスや <xref:System.Workflow.Activities.StateMachineWorkflowActivity> クラスは使用されなくなっています。 <xref:System.Activities.Activity> クラスは、ワークフロー動作の基本抽象クラスです。 このため、アクティビティの作成者は、基本的なカスタム アクティビティ機能用に <xref:System.Activities.CodeActivity> を実装するか、一定範囲のランタイムを使用するカスタム アクティビティ機能用に <xref:System.Activities.NativeActivity> を実装することができます。 <xref:System.Activities.Activity> は、 <xref:System.Activities.NativeActivity> <xref:System.Activities.CodeActivity> <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.DynamicActivity> カスタム開発されているか、 [組み込みのアクティビティライブラリ](net-framework-4-5-built-in-activity-library.md)に含まれているかにかかわらず、他の、、、またはオブジェクトの観点から、アクティビティ作成者が新しい動作を宣言によって表現するために使用されるクラスです。
 
 ## <a name="rich-composite-activity-options"></a>豊富な複合アクティビティ オプション
+
  <xref:System.Activities.Statements.Flowchart> は新しい強力な制御フロー アクティビティです。作成者は、これを使用して任意のループや条件分岐をモデル化できます。 <xref:System.Activities.Statements.Flowchart> により、以前は <xref:System.Workflow.Activities.StateMachineWorkflowActivity> でのみ実装が可能であったイベント ドリブン プログラミング モデルを使用できます。 手続き型のワークフローでは、<xref:System.Activities.Statements.TryCatch> や <xref:System.Activities.Statements.Switch%601> などの従来のフロー制御構造をモデル化する新しいフロー制御アクティビティを利用できます。
 
 ## <a name="expanded-built-in-activity-library"></a>拡張ビルトイン アクティビティ ライブラリ
+
  アクティビティ ライブラリには、次のような新しい機能があります。
 
 - <xref:System.Activities.Statements.DoWhile>、<xref:System.Activities.Statements.Pick>、<xref:System.Activities.Statements.TryCatch>、<xref:System.Activities.Statements.ForEach%601>、<xref:System.Activities.Statements.Switch%601>、<xref:System.Activities.Statements.ParallelForEach%601> などの新しいフロー制御アクティビティ
@@ -35,9 +38,11 @@ ms.locfileid: "95704176"
 - <xref:System.ServiceModel.Activities.SendContent> や <xref:System.ServiceModel.Activities.ReceiveReply> などの新しいメッセージング アクティビティ
 
 ## <a name="explicit-activity-data-model"></a>明示的なアクティビティ データ モデル
+
  .NET Framework 4 には、データを格納または移動するための新しいオプションが含まれています。 データは、<xref:System.Activities.Variable> を使用してアクティビティに格納できます。 データをアクティビティに移動したり、アクティビティから移動したりするときは、特殊な引数型を使用してデータの移動方向が判定されます。 これらの型は、<xref:System.Activities.InArgument>、<xref:System.Activities.InOutArgument>、<xref:System.Activities.OutArgument>です。 詳細については、「 [Windows Workflow Foundation データモデル](data-model.md)」を参照してください。
 
 ## <a name="enhanced-hosting-persistence-and-tracking-options"></a>ホスティング、永続化、追跡の強化されたオプション
+
  .NET Framework 4 には、次のような永続性の強化が含まれています。
 
 - <xref:System.ServiceModel.Activities.WorkflowServiceHost>、<xref:System.Activities.WorkflowApplication>、<xref:System.Activities.WorkflowInvoker> などの、ワークフローを実行するための多数のオプションがあります。
@@ -57,4 +62,5 @@ ms.locfileid: "95704176"
 - 保留中のワークフローの再開は、<xref:System.Activities.Bookmark> オブジェクトを使用して管理されるようになりました。
 
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>WF デザイナー エクスペリエンスの容易な拡張
+
  新しい WF デザイナーは Windows Presentation Foundation (WPF) に基づいて構築されており、Visual Studio の外部で WF デザイナーを再ホストするときに使用する簡単なモデルが用意されています。また、カスタムアクティビティデザイナーを作成するための簡単なメカニズムも用意されています。 詳細については、「 [ワークフローデザインエクスペリエンスのカスタマイズ](customizing-the-workflow-design-experience.md)」を参照してください。

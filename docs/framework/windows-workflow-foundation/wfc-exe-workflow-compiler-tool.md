@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Workflow, compilation
 - Workflow, XOML files
 - Workflow, wcf
-ms.openlocfilehash: cf89962014584adf098118044b063b38b29160b7
-ms.sourcegitcommit: a6bd4cad438fe479cbd112eae10f2cd449f06e40
+ms.openlocfilehash: 01cbfeb72e19f727a3a470059047a2192228c394
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91844738"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293859"
 ---
 # <a name="wfcexe-workflow-command-line-compiler-tool"></a>wfc.exe (ワークフローコマンドラインコンパイラツール)
+
 > [!NOTE]
 > ここでは、廃止された型と名前空間について説明します。
 
@@ -94,7 +95,8 @@ wfc.exe workflow コマンドラインコンパイラツールは、ファイル
     /nowarn                 Ignore compiler warnings. Short form is '/w'.
 ```
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
+
 > [!NOTE]
 > ここでは、廃止された型と名前空間について説明します。
 

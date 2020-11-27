@@ -2,17 +2,19 @@
 title: トークンのサポート
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: ff46a2f5289bc72244ea586f01ea05504d628f69
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d7e2a824060f4be05e0b0e9d1765fcf271eacbd3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555199"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293664"
 ---
 # <a name="supporting-tokens"></a>トークンのサポート
+
 このトークンのサポート サンプルでは、WS-Security を使用するメッセージに追加トークンを追加する方法を示します。 この例では、ユーザー名セキュリティ トークンに加え、X.509 バイナリ セキュリティ トークンを追加します。 トークンは、WS-Security メッセージ ヘッダーでクライアントからサービスに渡されます。そのメッセージの一部は X.509 証明書を所有していることを受信側に証明するため、X.509 セキュリティ トークンに関連付けられた秘密キーで署名されます。 これは、複数のクレームをメッセージに関連付けて送信側を認証または承認する必要がある場合に便利です。 サービスは、要求/応答通信パターンを定義するコントラクトを実装します。
 
 ## <a name="demonstrates"></a>対象
+
  このサンプルでは、次の方法を示します。
 
 - クライアントが追加セキュリティ トークンをサービスに渡す方法。
@@ -25,6 +27,7 @@ ms.locfileid: "90555199"
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。
 
 ## <a name="client-authenticates-with-username-token-and-supporting-x509-security-token"></a>クライアントによる、ユーザー名トークンと X.509 サポート セキュリティ トークンを使用した認証
+
  サービスは、通信に使用する単一エンドポイントを公開します。エンドポイントは、`BindingHelper` クラスと `EchoServiceHost` クラスを使用してプログラムによって作成されます。 エンドポイントは、アドレス、バインディング、およびコントラクトがそれぞれ 1 つずつで構成されます。 バインディングは、`SymmetricSecurityBindingElement` と `HttpTransportBindingElement` を使用して、カスタム バインディングとして構成されます。 このサンプルでは、`SymmetricSecurityBindingElement` を設定してサービス X.509 証明書を使用し、送信中の対称キーを保護して、WS-Security メッセージ ヘッダー内で `UserNameToken` とサポート `X509SecurityToken` を渡します。 対称キーは、メッセージ本文とユーザー名セキュリティ トークンの暗号化に使用されます。 サポート トークンは、追加バイナリ セキュリティ トークンとして WS-Security メッセージ ヘッダー内で渡されます。 サポート トークンの信頼性は、サポート X.509 セキュリティ トークンに関連付けられている秘密キーを使用してメッセージに署名することによって証明されます。
 
 ```csharp
@@ -282,6 +285,7 @@ public class EchoService : IEchoService
 ```
 
 ## <a name="displaying-callers-information"></a>呼び出し元の情報の表示
+
  呼び出し元の情報を表示するには、次のコードに示すように `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` を使用できます。 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` には、現在の呼び出し元に関連付けられている承認クレームが含まれています。 これらの要求は、メッセージで受信したすべてのトークンについて Windows Communication Foundation (WCF) によって自動的に提供されます。
 
 ```csharp
@@ -345,14 +349,17 @@ void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out strin
 ```
 
 ## <a name="running-the-sample"></a>サンプルの実行
+
  このサンプルを実行すると、最初にクライアントから、ユーザー名トークンのユーザー名とパスワードを入力するように求められます。 サービスの WCF では、ユーザー名トークンに指定された値がシステムによって提供される id にマップされるため、システムアカウントには必ず正しい値を指定してください。 その後、クライアントではサービスからの応答が表示されます。 クライアントをシャットダウンするには、クライアント ウィンドウで Enter キーを押します。
 
 ## <a name="setup-batch-file"></a>セットアップ バッチ ファイル
+
  このサンプルに用意されている Setup.bat バッチ ファイルを使用すると、適切な証明書を使用してサーバーを構成し、インターネット インフォメーション サービス (IIS) でホストされるアプリケーションを実行できるようになります。このアプリケーションは、サーバー証明書ベースのセキュリティを必要とします。 このバッチ ファイルは、別のコンピューターを使用する場合またはホストなしの場合に応じて変更する必要があります。
 
  次に、バッチ ファイルのセクションのうち、適切な構成で実行するために変更が必要となる部分を示します。
 
 ### <a name="creating-the-client-certificate"></a>クライアント証明書の作成
+
  Setup.bat バッチ ファイルの次の行は、使用するクライアント証明書を作成します。 `%CLIENT_NAME%` 変数は、クライアント証明書のサブジェクトを指定します。 このサンプルでは、サブジェクト名として "client.com" を使用します。
 
  証明書は、`CurrentUser` ストアの場所の My (Personal) ストアに保存されます。
@@ -365,6 +372,7 @@ makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -p
 ```
 
 ### <a name="installing-the-client-certificate-into-the-servers-trusted-store"></a>クライアント証明書のサーバーの信頼されたストアへのインストール
+
  Setup.bat バッチ ファイルの次の行は、クライアント証明書をサーバーの信頼されたユーザーのストアにコピーします。 この手順が必要なのは、Makecert.exe によって生成される証明書がサーバーのシステムにより暗黙には信頼されないからです。 マイクロソフト発行の証明書など、クライアントの信頼されたルート証明書に基づいた証明書が既にある場合は、クライアント証明書ストアにサーバー証明書を配置するこの手順は不要です。
 
 ```console
@@ -375,6 +383,7 @@ certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s Tru
 ```
 
 ### <a name="creating-the-server-certificate"></a>サーバー証明書の作成
+
  Setup.bat バッチ ファイルの次の行は、使用するサーバー証明書を作成します。 `%SERVER_NAME%` 変数はサーバー名です。 この変数を変更して、使用するサーバー名を指定します。 このバッチ ファイルでの既定は localhost です。
 
  証明書は、LocalMachine ストアの場所の My (Personal) ストアに保存されます。 証明書は、IIS でホストされるサービスの LocalMachine ストアに保存されます。 自己ホスト型サービスの場合、バッチ ファイルで文字列 LocalMachine を CurrentUser に置き換えて、サーバー証明書を CurrentUser ストアの場所に保存します。
@@ -390,6 +399,7 @@ makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -
 ```
 
 ### <a name="installing-server-certificate-into-clients-trusted-certificate-store"></a>サーバー証明書のクライアントの信頼された証明書ストアへのインストール
+
  Setup.bat バッチ ファイルの次の行は、サーバー証明書をクライアントの信頼されたユーザーのストアにコピーします。 この手順が必要なのは、Makecert.exe によって生成される証明書がクライアント システムにより暗黙には信頼されないからです。 マイクロソフト発行の証明書など、クライアントの信頼されたルート証明書に基づいた証明書が既にある場合は、クライアント証明書ストアにサーバー証明書を配置するこの手順は不要です。
 
 ```console
@@ -399,6 +409,7 @@ echo ************certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r C
 ```
 
 ### <a name="enabling-access-to-the-certificates-private-key"></a>証明書の秘密キーへのアクセスの有効化
+
  IIS でホストされるサービスから証明書の秘密キーへのアクセスを有効にするには、IIS でホストされる処理が実行されているユーザー アカウントに、秘密キーへの適切なアクセス許可を付与する必要があります。 これは、Setup.bat スクリプトの最後の手順によって実現されます。
 
 ```console

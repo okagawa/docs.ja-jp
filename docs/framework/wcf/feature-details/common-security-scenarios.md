@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-ms.openlocfilehash: cfd29f8cae8ac362a5fa1709864dce4ae11b5af6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 21c8279890d1d1cf746e98f875efb6b1ff869c73
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558889"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295081"
 ---
 # <a name="common-security-scenarios"></a>一般的なセキュリティ シナリオ
+
 ここでは、考えられるさまざまなクライアントおよびサービスのセキュリティ構成の一覧を示します。 構成はさまざまな要因により異なります。 たとえば、サービスやクライアントがイントラネット上にあるかどうか、また、セキュリティが Windows とトランスポート (HTTPS など) のどちらで提供されるかなどが考えられます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [セキュリティで保護されていないインターネット環境のクライアントとサービス](internet-unsecured-client-and-service.md)  
  セキュリティで保護されていないパブリックなクライアントとサービスの例です。  
   
@@ -58,9 +60,11 @@ ms.locfileid: "90558889"
  クライアントは、ネットワーク全体に分散している 1 つ以上の Web サービスにアクセスします。 Web サービスは、セキュリティで保護する必要がある追加のリソース (データベースや他の Web サービスなど) にアクセスします。  
   
 ## <a name="reference"></a>関連項目  
+
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>関連項目  
+
  [承認](authorization-in-wcf.md)  
   
  [セキュリティの概要](security-overview.md)  
