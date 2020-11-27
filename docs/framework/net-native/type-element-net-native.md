@@ -1,15 +1,15 @@
 ---
-title: <Type>要素 (.NET ネイティブ)
+title: <Type> 要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
-ms.openlocfilehash: 4e88b49b82513079ddcf6f0bafe02d44235a406a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e71df41c4a37206910d835ee85dc3d68b4cbad4a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73091853"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287710"
 ---
-# <a name="type-element-net-native"></a>\<Type>要素 (.NET ネイティブ)
+# <a name="type-element-net-native"></a>\<Type> 要素 (.NET ネイティブ)
 
 クラスや構造体などの特定の型に実行時ポリシーを適用します。
 
@@ -35,7 +35,7 @@ ms.locfileid: "73091853"
 
 ### <a name="attributes"></a>属性
 
-|属性|属性の型|Description|
+|属性|属性の型|[説明]|
 |---------------|--------------------|-----------------|
 |`Name`|全般|必須の属性です。 型名を指定します。|
 |`Activate`|リフレクション|省略可能な属性です。 コンストラクターへの実行時アクセスを制御して、インスタンスのアクティブ化を有効にします。|
@@ -51,13 +51,13 @@ ms.locfileid: "73091853"
 
 ## <a name="name-attribute"></a>Name 属性
 
-|値|[説明]|
+|値|説明|
 |-----------|-----------------|
-|*type_name*|型名です。 この `<Type>` 要素が要素または別の要素のいずれかの子である場合 [\<Namespace>](namespace-element-net-native.md) `<Type>` 、 *type_name*は名前空間なしで型の名前を含めることができます。 それ以外の場合は、*type_name* には完全修飾型名を含める必要があります。|
+|*type_name*|型名。 この `<Type>` 要素が要素または別の要素のいずれかの子である場合 [\<Namespace>](namespace-element-net-native.md) `<Type>` 、 *type_name* は名前空間なしで型の名前を含めることができます。 それ以外の場合は、*type_name* には完全修飾型名を含める必要があります。|
 
 ## <a name="all-other-attributes"></a>その他すべての属性
 
-|値|[説明]|
+|値|説明|
 |-----------|-----------------|
 |*policy_setting*|このポリシーの種類に適用する設定です。 指定できる値は、`All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](runtime-directive-policy-settings.md)」を参照してください。|
 
@@ -118,6 +118,7 @@ ms.locfileid: "73091853"
 ```
 
 ## <a name="example"></a>例
+
  次の例では、リフレクションを使用して、<xref:System.Reflection.PropertyInfo> プロパティを表す <xref:System.String.Chars%2A?displayProperty=nameWithType> オブジェクトを取得します。 続けて、<xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> メソッドを使用して文字列の 7 番目の文字の値を取得し、文字列のすべての文字を表示します。 この例の変数 `b` は、 <xref:Windows.UI.Xaml.Controls.TextBlock> コントロールです。
 
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]

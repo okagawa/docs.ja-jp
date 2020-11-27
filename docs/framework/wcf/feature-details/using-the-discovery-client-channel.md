@@ -2,17 +2,19 @@
 title: 探索クライアント チャネルの使用
 ms.date: 03/30/2017
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
-ms.openlocfilehash: a74d0ba77977e158a6c6e469a9b6a88c8d1aac82
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: baf822b5c5acd34913fdd58c346426ad91971cb0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575980"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289400"
 ---
 # <a name="using-the-discovery-client-channel"></a>探索クライアント チャネルの使用
+
 WCF クライアント アプリケーションを記述するときには、呼び出すサービスのエンドポイント アドレスを知っている必要があります。 多くの場合、サービスのエンドポイント アドレスがわからなかったり、サービスのアドレスが時間の経過と共に変化したりします。 探索クライアント チャネルでは、WCF クライアント アプリケーションを記述し、呼び出すサービスを示すと、クライアント チャネルが自動的にプローブ要求を送信します。 サービスが応答すると、探索クライアント チャネルは、プローブ応答からサービスのエンドポイント アドレスを受け取り、それを使用してサービスを呼び出します。  
   
 ## <a name="using-the-discovery-client-channel"></a>探索クライアント チャネルの使用  
+
  探索クライアント チャネルを使用するには、<xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> のインスタンスをクライアント チャネル スタックに追加します。 または、<xref:System.ServiceModel.Discovery.DynamicEndpoint> を使用すると、まだ追加されていない場合は、<xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> が自動的にバインディングに追加されます。  
   
 > [!CAUTION]
@@ -22,9 +24,9 @@ WCF クライアント アプリケーションを記述するときには、呼
   
 1. 呼び出すサービスを示すのに使用する <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>。  
   
-2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A>探索メッセージを送信する探索エンドポイントを指定します。  
+2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> 探索メッセージを送信する探索エンドポイントを指定します。  
   
- <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> プロパティでは、探しているサービス コントラクト、必要なスコープ URI、およびチャネルを開く最大試行回数を指定できます。 コントラクト型は、コンストラクターを呼び出すことによって指定され <xref:System.ServiceModel.Discovery.FindCriteria> ます。 スコープ URI は <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A> プロパティに追加できます。 <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> プロパティでは、クライアントが接続を試行する結果の最大数を指定できます。 プローブ応答を受信すると、クライアントは、プローブ応答で取得したエンドポイント アドレスを使用してチャネルを開きます。 例外が発生した場合、クライアントは次のプローブ応答に進み、必要に応じて、さらに応答の受信を待機します。 チャネルが正常に開かれるか、または結果の最大数に達するまで、この処理が続行されます。 これらの設定の詳細については、「<xref:System.ServiceModel.Discovery.FindCriteria>」を参照してください。  
+ <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> プロパティでは、探しているサービス コントラクト、必要なスコープ URI、およびチャネルを開く最大試行回数を指定できます。 コントラクト型は、コンストラクターを呼び出すことによって指定され  <xref:System.ServiceModel.Discovery.FindCriteria> ます。 スコープ URI は <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A> プロパティに追加できます。 <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> プロパティでは、クライアントが接続を試行する結果の最大数を指定できます。 プローブ応答を受信すると、クライアントは、プローブ応答で取得したエンドポイント アドレスを使用してチャネルを開きます。 例外が発生した場合、クライアントは次のプローブ応答に進み、必要に応じて、さらに応答の受信を待機します。 チャネルが正常に開かれるか、または結果の最大数に達するまで、この処理が続行されます。 これらの設定の詳細については、「<xref:System.ServiceModel.Discovery.FindCriteria>」を参照してください。  
   
  <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> プロパティでは、使用する探索エンドポイントを指定できます。 通常は <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> ですが、任意の有効なエンドポイントを指定できます。  
   
@@ -60,4 +62,5 @@ catch (EndpointNotFoundException ex)
 ```  
   
 ## <a name="security-and-the-discovery-client-channel"></a>セキュリティおよび探索クライアント チャネル  
- 探索クライアント チャネルの使用時には、2 つのエンドポイントが指定されます。 1 つは探索メッセージ用に使用されるエンドポイント (通常は <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>) で、もう 1 つはアプリケーション エンドポイントです。 セキュリティで保護されたサービスを実装するときには、両方のエンドポイントを保護するように注意する必要があります。 セキュリティの詳細については、「[サービスとクライアント](securing-services-and-clients.md)のセキュリティ保護」を参照してください。
+
+ 探索クライアント チャネルの使用時には、2 つのエンドポイントが指定されます。 1 つは探索メッセージ用に使用されるエンドポイント (通常は <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>) で、もう 1 つはアプリケーション エンドポイントです。 セキュリティで保護されたサービスを実装するときには、両方のエンドポイントを保護するように注意する必要があります。 セキュリティの詳細については、「 [サービスとクライアント](securing-services-and-clients.md)のセキュリティ保護」を参照してください。

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-ms.openlocfilehash: 415a42f7c4f4866bb72f19bdd6f02bfdb5158bf8
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: baa04a3c55728590b8aa502648a8ab42bf62f903
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855804"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288282"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>方法 : サンドボックスで部分信頼コードを実行する
 
@@ -178,6 +178,7 @@ AppDomain.CreateDomain( string friendlyName,
      完全信頼アサートは、<xref:System.Security.SecurityException> から拡張情報を取得するために使用します。 <xref:System.Security.PermissionSet.Assert%2A> を使用しない場合、<xref:System.Security.SecurityException> の <xref:System.Security.SecurityException.ToString%2A> メソッドは、スタック上に部分的に信頼されたコードがあることを検出します。また、返される情報を制限します。 部分信頼コードがその情報を読み取ることができる場合、これによってセキュリティ上の問題が発生する可能性もありますが、<xref:System.Security.Permissions.UIPermission> を付与しないことでそのリスクは軽減されます。 完全信頼アサートは慎重に使用する必要があります。部分信頼コードが完全信頼に昇格できないことが確実である場合にのみ使用します。 通則として、信頼できないコードは、完全信頼のアサートを呼び出した後に同じ関数で呼び出すのは避ける必要があります。 アサートの使用を完了したときは、常にアサートを元に戻すことをお勧めします。  
   
 ## <a name="example"></a>例  
+
  次の例では、前のセクションの手順を実装しています。 この例では、Visual Studio ソリューションの `Sandboxer` というプロジェクトにも `UntrustedCode` というプロジェクトが含まれます。これはクラス `UntrustedClass` を実装します。 このシナリオでは、指定した数字がフィボナッチ数かどうかを示すために、`true` または `false` を返すことが期待されているメソッドを含むライブラリ アセンブリをダウンロードしたことを想定しています。 代わりに、このメソッドはコンピューターからのファイルの読み込みを試みます。 次の例は信頼関係のないコードを示します。  
   
 ```csharp

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [.NET Framework], remoting
 - secure coding, remoting
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
-ms.openlocfilehash: 3a272b2a8f164aad07413a069e68a2146d0df6a7
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 883c20483c4d315a45e1f4dab959d42cbb6e3c4b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855713"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288204"
 ---
 # <a name="security-and-remoting-considerations"></a>セキュリティとリモート処理の考慮事項
 
@@ -23,16 +23,18 @@ ms.locfileid: "87855713"
   
  リモート処理可能な (<xref:System.MarshalByRefObject> クラスから派生した) クラスの場合、セキュリティに関する責任を負う必要があります。 呼び出し元のコードを暗黙的に信頼できる閉じた環境でのみコードを使用するか、あるいは、保護対象コードが悪意を持って使用される可能性のある外部エントリの影響を受けないようにリモート呼び出しを設計する必要があります。  
   
- 一般に、宣言型の[LinkDemand](link-demands.md)とセキュリティチェックで保護されているメソッド、プロパティ、またはイベントを公開しないようにする必要があり <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> ます。 リモート処理では、こうしたチェックは実施されません。 、Assert などの他のセキュリティチェックは、 <xref:System.Security.Permissions.SecurityAction.Demand> プロセス内のアプリケーションドメイン間で機能しますが、プロセス間またはコンピューター間のシナリオでは機能しません[Assert](using-the-assert-method.md)。  
+ 一般に、宣言型の [LinkDemand](link-demands.md) とセキュリティチェックで保護されているメソッド、プロパティ、またはイベントを公開しないようにする必要があり <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> ます。 リモート処理では、こうしたチェックは実施されません。 、Assert などの他のセキュリティチェックは、 <xref:System.Security.Permissions.SecurityAction.Demand> プロセス内のアプリケーションドメイン間で機能しますが、プロセス間またはコンピューター間のシナリオでは機能しません[Assert](using-the-assert-method.md)。  
   
 ## <a name="protected-objects"></a>保護されているオブジェクト  
+
  一部のオブジェクトはそれ自体でセキュリティ状態を保持します。 これらのオブジェクトを信頼されていないコードに渡してはなりません。こうしたコードに渡すと、独自の権限を超えるセキュリティ承認が取得されかねません。  
   
  <xref:System.IO.FileStream> オブジェクトの作成がその例です。 <xref:System.Security.Permissions.FileIOPermission> は作成時に要求され、成功すると、ファイル オブジェクトが返されます。 ただし、このオブジェクト参照がファイルのアクセス許可を持たないコードに渡されると、オブジェクトでこの特定のファイルに対する読み書きが行えるようになります。  
   
- このようなオブジェクトの最も単純な防御は、パブリック API 要素を介してオブジェクト参照を取得するためにシークするコードの同じ**FileIOPermission**を要求することです。  
+ このようなオブジェクトの最も単純な防御は、パブリック API 要素を介してオブジェクト参照を取得するためにシークするコードの同じ **FileIOPermission** を要求することです。  
   
 ## <a name="application-domain-crossing-issues"></a>アプリケーション ドメインを越える問題  
+
  管理対象ホスト環境にコードを隔離する場合、各種アセンブリのアクセス許可レベルを減らす明示的なポリシーを使用して、複数の子アプリケーション ドメインを生成するというのが一般的です。 ただし、既定のアプリケーション ドメインでそれらのアセンブリのポリシーは変更されません。 いずれかの子アプリケーション ドメインによって既定のアプリケーション ドメインがアセンブリを読み込むように強制されると、コードの隔離の効果が失われ、強制的に読み込まれたアセンブリにある型がより高いレベルの信頼でコードを実行できることになります。  
   
  アプリケーション ドメインは、強制的に他のアプリケーション ドメインがアセンブリを読み込み、そのアプリケーション ドメインでホストされているオブジェクトに対してプロキシを呼び出すことによって、そこに含まれているコードを実行させることができます。 アプリケーション ドメイン間のプロキシを取得するには、オブジェクトをホストしているアプリケーション ドメインが、メソッド呼び出しパラメーターまたは戻り値を使用してプロキシを配布する必要があります。 または、アプリケーション ドメインが作成されたばかりの場合、既定では作成者が <xref:System.AppDomain> オブジェクトに対するプロキシを有しています。 したがって、コードの隔離状態を損なわないためには、高いレベルの信頼を持つアプリケーション ドメインがドメイン内の参照を、低いレベルの信頼を持つアプリケーション ドメインに対して、参照によってマーシャリングされたオブジェクト (<xref:System.MarshalByRefObject> から派生したクラスのインスタンス) を配布しないようにする必要があります。  

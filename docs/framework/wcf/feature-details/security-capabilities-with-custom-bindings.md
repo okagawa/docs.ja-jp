@@ -2,17 +2,19 @@
 title: カスタム バインディングを使用したセキュリティ機能
 ms.date: 03/30/2017
 ms.assetid: a2425679-484a-4e6c-9c98-7da7304f1516
-ms.openlocfilehash: 48d17543f2b133c74bcfa82cfe1a2a0de28b1d01
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1b12907481ccb3f3c5f4b8aaba6ede8ebfa6228a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595194"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288308"
 ---
 # <a name="security-capabilities-with-custom-bindings"></a>カスタム バインディングを使用したセキュリティ機能
-一般的なセキュリティ タスクのほとんどは、システム指定のバインディングのいずれかを使用して実行できます。 ただし、より高度な制御が必要な場合は、以下のトピックで説明するように、<xref:System.ServiceModel.Channels.SecurityBindingElement> を使用してカスタム バインドを作成できます。 カスタムバインディングの詳細については、「[カスタムバインド](../extending/custom-bindings.md)」を参照してください。  
+
+一般的なセキュリティ タスクのほとんどは、システム指定のバインディングのいずれかを使用して実行できます。 ただし、より高度な制御が必要な場合は、以下のトピックで説明するように、<xref:System.ServiceModel.Channels.SecurityBindingElement> を使用してカスタム バインドを作成できます。 カスタムバインディングの詳細については、「 [カスタムバインド](../extending/custom-bindings.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [SecurityBindingElement 認証モード](securitybindingelement-authentication-modes.md)  
  カスタム バインドで使用できる認証モードについて説明します。  
   
@@ -41,11 +43,13 @@ ms.locfileid: "84595194"
  デジタル署名の暗号化を無効にするとどのようなパフォーマンス上の利点があるかを説明します。  
   
 ## <a name="reference"></a>関連項目  
+
  <xref:System.ServiceModel.Channels.SecurityBindingElement>  
   
  [\<security>](../../configure-apps/file-schema/wcf/security-of-custombinding.md)  
   
 ## <a name="related-sections"></a>関連項目  
+
  [保護レベルの理解](../understanding-protection-level.md)  
   
  [サービスおよびクライアントのセキュリティ保護](securing-services-and-clients.md)  

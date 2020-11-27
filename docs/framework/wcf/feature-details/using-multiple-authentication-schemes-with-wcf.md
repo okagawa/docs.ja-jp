@@ -2,18 +2,20 @@
 title: WCF での複数の認証方式の使用
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: 1874963573a6ec12939bd12b79574f1e2c889bfd
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3aae9bff4300af97f7b179d9d8115340a26e715a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600219"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289426"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>WCF での複数の認証方式の使用
+
 WCF では、単一のエンドポイントに複数の認証方式を指定できるようになりました。 さらに、Web ホスト サービスは、認証設定を IIS から直接継承できます。 自己ホスト型サービスは、使用可能な認証方式を指定できます。 IIS での認証設定の詳細については、「 [Iis 認証](https://go.microsoft.com/fwlink/?LinkId=232458)」を参照してください。  
   
 ## <a name="iis-hosted-services"></a>IIS でホストされるサービス  
- IIS でホストされるサービスでは、IIS で使用する認証方式を設定します。 次の XML スニペットに示すように、サービスの web.config ファイルのバインド構成で、clientCredential type を "InheritedFromHost" に指定します。  
+
+ IIS でホストされるサービスでは、IIS で使用する認証方式を設定します。 次に、サービスの web.config ファイルで、次の XML スニペットに示すように、バインド構成で clientCredential type を "InheritedFromHost" と指定します。  
   
 ```xml  
 <bindings>  
@@ -63,6 +65,7 @@ else
  この結果、IIS で選択した内容に応じて、ここに示されている認証方式のサブセットに限り、サービス エンドポイントへの適用が検討されます。 つまり、開発者は serviceAuthenticationManager の一覧から基本認証を省略することによって、リストから基本認証を除外することができます。IIS で有効になっている場合でも、サービス エンドポイントには適用されません。  
   
 ## <a name="self-hosted-services"></a>自己ホスト型サービス  
+
  自己ホスト型サービスは、設定を継承する IIS がないため、構成方法が少し異なります。 ここでは、 \<serviceAuthenticationManager> 要素または ServiceAuthenticationBehavior を使用して、継承される認証設定を指定します。 コード例を次に示します。  
   
 ```csharp  

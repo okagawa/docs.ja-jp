@@ -1,15 +1,16 @@
 ---
-title: <TypeParameter>要素 (.NET ネイティブ)
+title: <TypeParameter> 要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
-ms.openlocfilehash: c69b535f3a01c287d30189138130066fc10a77e2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: dc04115914b7571b677c6d069d2d4b820b895d59
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128920"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287671"
 ---
-# <a name="typeparameter-element-net-native"></a>\<TypeParameter>要素 (.NET ネイティブ)
+# <a name="typeparameter-element-net-native"></a>\<TypeParameter> 要素 (.NET ネイティブ)
+
 メソッドに渡される型引数により表される型にポリシーを適用します。  
   
 ## <a name="syntax"></a>構文  
@@ -29,11 +30,12 @@ ms.locfileid: "73128920"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|属性の型|Description|  
+|属性|属性の型|[説明]|  
 |---------------|--------------------|-----------------|  
 |`Name`|全般|必須の属性です。 <xref:System.Type> 型のパラメーターの名前。 たとえば、メソッド シグネチャ `Type.GetInterfaceMap(Type interfaceType)` の場合、`Name` 属性の値は "interfaceType" です。|  
 |`Activate`|リフレクション|省略可能な属性です。 コンストラクターへの実行時アクセスを制御して、インスタンスのアクティブ化を有効にします。|  
@@ -49,17 +51,18 @@ ms.locfileid: "73128920"
   
 ## <a name="name-attribute"></a>Name 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |*parameter_name*|<xref:System.Type> 型のパラメーターの名前。 たとえば、メソッド シグネチャ `Type.GetInterfaceMap(Type interfaceType)` の場合、`Name` 属性の値は "interfaceType" です。|  
   
 ## <a name="all-other-attributes"></a>その他すべての属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |*policy_setting*|このポリシーの種類に適用する設定です。 指定できる値は、`All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](runtime-directive-policy-settings.md)」を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
@@ -69,6 +72,7 @@ ms.locfileid: "73128920"
 |[\<Method>](method-element-net-native.md)|コンストラクターまたはメソッドにランタイム リフレクション ポリシーを適用します。|  
   
 ## <a name="remarks"></a>解説  
+
  要素は、 `<TypeParameter>` [\<Parameter>](parameter-element-net-native.md) 型のパラメーターにのみ適用できる点を除いて、要素に似てい <xref:System.Type> ます。 これは、実行時に `Name` 属性により指定される型引数で表されるすべての型にポリシーを適用します。  
   
  たとえば、NewtonSoft の JSON シリアライザーには静的 `JsonConvert.DeserializeObject(String value, Type type)` メソッドが含まれています。 次のリフレクション ディレクティブは、  
@@ -94,7 +98,7 @@ Object obj = JsonConvert.DeserializeObject(data, t);
   
 ## <a name="see-also"></a>関連項目
 
-- [\<Method>Element](method-element-net-native.md)
+- [\<Method> 要素](method-element-net-native.md)
 - [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)
 - [ランタイム ディレクティブ ポリシーの設定](runtime-directive-policy-settings.md)
 - [ランタイム ディレクティブ要素](runtime-directive-elements.md)

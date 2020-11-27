@@ -10,12 +10,12 @@ helpviewer_keywords:
 - security-transparent code
 - security [.NET Framework], security-transparent code
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
-ms.openlocfilehash: 55cf6b937d4bb12c44aae2022921c8adb8180df4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 97acccdc1dcab11e42d116f4743e1182029e2dd6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556422"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288191"
 ---
 # <a name="security-transparent-code-level-1"></a>透過的セキュリティ コード、レベル 1
 
@@ -35,7 +35,9 @@ ms.locfileid: "90556422"
 - [透過的セキュリティの例](#security_transparency_examples)  
   
 <a name="the_level_1_transparency_model"></a>
+
 ## <a name="the-level-1-transparency-model"></a>レベル 1 の透過性モデル  
+
  レベル 1 の透過性を使用するときは、セキュリティ透過的、セキュリティ セーフ クリティカル、およびセキュリティ クリティカルの各方式にコードを分離するセキュリティ モデルを使用します。  
   
  アセンブリ全体、アセンブリ内の一部のクラス、またはクラス内の一部のメソッドを、セキュリティ透過的なコードとしてマークできます。 セキュリティ透過的なコードは特権を昇格することはできません。 この制限により、次の 3 つの効果が生まれます。  
@@ -58,7 +60,9 @@ ms.locfileid: "90556422"
  以前のバージョンの .NET Framework との下位互換性を維持するため、透過性属性の注釈が付けられていないメンバーはすべてセキュリティ セーフ クリティカルと見なされます。 注釈が付けられていない型はすべて透過的と見なされます。 透過性を検証するためのスタティック分析規則はありません。 したがって、透過性エラーを実行時にデバッグすることが必要になる場合があります。  
   
 <a name="transparency_attributes"></a>
+
 ## <a name="transparency-attributes"></a>透過性属性  
+
  コードの透過性を指定するために使用する 3 つの属性の説明を、次の表に示します。  
   
 |属性|説明|  
@@ -70,6 +74,7 @@ ms.locfileid: "90556422"
  <xref:System.Security.SecuritySafeCriticalAttribute> 属性を使用すると、セキュリティ透過的なコードが、同じアセンブリ内のセキュリティ クリティカルなメンバーにアクセスできるようになります。 1 つのアセンブリに含まれるセキュリティ透過的なコードとセキュリティ クリティカルなコードは、2 つのアセンブリに分離されていると見なせます。 セキュリティ透過的なコードは、セキュリティ クリティカルなコードのプライベートまたは内部のメンバーを参照できません。 さらに、セキュリティ クリティカルなコードは、通常、そのコードのパブリック インターフェイスへのアクセスについて監査を受けます。 プライベートまたは内部の状態にアセンブリの外部からアクセスすることはできず、状態は分離されていると想定できます。 <xref:System.Security.SecuritySafeCriticalAttribute> 属性を使用すると、透過的セキュリティ コードとセキュリティ クリティカルなコードの間で状態の分離を維持しながら、必要なときには分離をオーバーライドできるようになります。 セキュリティ クリティカルなコードのプライベートまたは内部のメンバーが <xref:System.Security.SecuritySafeCriticalAttribute> でマークされていない場合、セキュリティ透過的なコードはそのコードにアクセスできません。 <xref:System.Security.SecuritySafeCriticalAttribute> を適用する場合は、事前に、パブリックに公開された場合と同じようにしてメンバーを監査してください。  
   
 ### <a name="assembly-wide-annotation"></a>アセンブリ全体の注釈  
+
  アセンブリ レベルでセキュリティ属性を使用することの効果について次の表で説明します。  
   
 |Assembly 属性|アセンブリの状態|  
@@ -81,7 +86,9 @@ ms.locfileid: "90556422"
 |`SecurityCritical`|すべてのコードは既定で透過的になります。 ただし、個々の型やメンバーに他の属性を設定することもできます。|  
   
 <a name="security_transparency_examples"></a>
+
 ## <a name="security-transparency-examples"></a>透過的セキュリティの例  
+
  .NET Framework 2.0 の透過性規則 (レベル 1 の透過性) を使用するには、次のアセンブリ注釈を使用します。  
   
 ```csharp

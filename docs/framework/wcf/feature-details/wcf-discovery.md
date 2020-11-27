@@ -6,19 +6,21 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], discovery
 - discovery [WCF]
 ms.assetid: 462c4913-f388-45a9-9042-28ae96a4e735
-ms.openlocfilehash: 63c6589cb2ecff9f0a5e7c8bb61b454f6516c98c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 176e9760d98f9640bd9d1c7b059287dc29c0d666
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600180"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289361"
 ---
 # <a name="wcf-discovery"></a>WCF Discovery
-Windows Communication Foundation (WCF) は、WS-MANAGEMENT プロトコルを使用して、相互運用可能な方法で実行時にサービスを探索可能にするためのサポートを提供します。 WCF サービスは、マルチキャストメッセージまたは探索プロキシサーバーを使用して、ネットワークへの可用性をアナウンスできます。 クライアント アプリケーションは、ネットワークまたは探索プロキシ サーバーを検索して、一連の基準を満たすサービスを見つけることができます。 このセクションのトピックでは、この機能の概要を示し、そのプログラミング モデルについて説明します。  
+
+Windows Communication Foundation (WCF) は、WS-Discovery プロトコルを使用して、相互運用可能な方法で実行時にサービスを探索可能にするためのサポートを提供します。 WCF サービスは、マルチキャストメッセージまたは探索プロキシサーバーを使用して、ネットワークへの可用性をアナウンスできます。 クライアント アプリケーションは、ネットワークまたは探索プロキシ サーバーを検索して、一連の基準を満たすサービスを見つけることができます。 このセクションのトピックでは、この機能の概要を示し、そのプログラミング モデルについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [WCF Discovery の概要](wcf-discovery-overview.md)  
- WCF によって提供される WS-MANAGEMENT のサポートの概要について説明します。  
+ WCF によって提供される WS-Discovery のサポートの概要について説明します。  
   
  [WCF Discovery オブジェクト モデル](wcf-discovery-object-model.md)  
  オブジェクト モデルのクラスと WS-Discovery サポートの拡張性について説明します。  

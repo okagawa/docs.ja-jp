@@ -2,14 +2,15 @@
 title: 例:動的プログラミングのトラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
-ms.openlocfilehash: ff179854066d024a89cb5a84a19d0b9bb054d6e5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0cff232668b9eb65b09a22b14e4ae58673ccd6d0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128437"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288074"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>例:動的プログラミングのトラブルシューティング
+
 > [!NOTE]
 > このトピックでは、プレリリース ソフトウェアである .NET Native Developer Preview について述べています。 プレビュー版は、[Microsoft Connect Web サイト](https://go.microsoft.com/fwlink/?LinkId=394611)からダウンロードできます (登録が必要です)。  
   
@@ -33,7 +34,8 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
   
  「[Getting Started](getting-started-with-net-native.md)」(はじめに) の「メタデータの欠落を手動で解決する」セクションで説明されている 3 つの手順からなるアプローチを使用して、この例外をトラブルシューティングしてみましょう。  
   
-## <a name="what-was-the-app-doing"></a>アプリが行っていた動作は何か  
+## <a name="what-was-the-app-doing"></a>アプリは何をしていたのか?  
+
  最初に注目するのは、スタックの最下位にある `async` キーワード メカニズムです。  スタックでは元の呼び出しのコンテキストが失われており、別のスレッドで `async` コードを実行しているため、アプリが `async` メソッドで実際に何を行っていたかを決定するのは困難です。 ただし、アプリが最初のページをロードしようとしていたことは推測できます。  `NavigationArgs.Setup` の実装で、次のコードによってアクセス違反が発生しました。  
   
 `AppViewModel.Current.LayoutVM.PageMap`  
@@ -51,9 +53,11 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
  動的プログラミングでは、.NET ネイティブでリフレクション Api を使用する場合は、 <xref:System.Type.GetType%2A?displayProperty=nameWithType> エラー発生時に例外をスローするオーバーロードを使用することをお勧めします。  
   
 ## <a name="is-this-an-isolated-case"></a>特殊なケースかどうか  
+
  `App.Core.ViewModels` を使用する際に、その他の問題が発生することもあります。  メタデータの欠落例外すべてを特定して修正する意味があるかどうか、または大きい型のクラスにディレクティブを追加して時間を節約するかを決定する必要があります。  この場合は、出力バイナリのサイズ増大が問題になるのでなければ、`dynamic` の `App.Core.ViewModels` メタデータを追加するのが最適な方法でしょう。  
   
 ## <a name="could-the-code-be-rewritten"></a>コードを書き換えることができるか  
+
  アプリで `typeof(LayoutApplicationVM)` ではなく `Type.GetType("LayoutApplicationVM")` を使用している場合、ツール チェーンに `browse` メタデータが保存されている可能性があります。  ただし、それでも `invoke` メタデータは作成されておらず、そのため型をインスタンス化するときに [MissingMetadataException](missingmetadataexception-class-net-native.md) 例外が発生する可能性があります。 この例外を回避するには、名前空間または `dynamic` ポリシーを指定する型のランタイム ディレクティブを追加する必要があります。 ランタイム ディレクティブの詳細については、「[ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目

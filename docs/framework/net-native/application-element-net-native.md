@@ -1,19 +1,20 @@
 ---
-title: <Application>要素 (.NET ネイティブ)
+title: <Application> 要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
-ms.openlocfilehash: e26826b3d8674b536ab0897182da58bc02cfd00b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a7f2eca5a5bb5cfb7b9827f2463454a17fc128cb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128521"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288139"
 ---
-# <a name="application-element-net-native"></a>\<Application>要素 (.NET ネイティブ)
+# <a name="application-element-net-native"></a>\<Application> 要素 (.NET ネイティブ)
+
 実行時にリフレクションに使用可能なメタデータを持つアプリケーション全体の型と型のメンバーのコンテナーとして機能し、アプリ内のすべてのプログラム要素にランタイム リフレクション ポリシーを適用します。  
   
  \<Directives> 要素  
-\<Application>要素 (rd .xml)  
+\<Application> 要素 (rd.xml)  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,6 +32,7 @@ ms.locfileid: "73128521"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。 「子要素」の表では、ポリシーは実行時に特定のプログラム要素で使用可能になるメタデータの種類を示します。  
   
 ### <a name="attributes"></a>属性  
@@ -50,7 +52,7 @@ ms.locfileid: "73128521"
   
 ## <a name="all-attributes"></a>すべての属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |*policy_setting*|アプリで型に適用する、このポリシーの設定です。 指定できる値は、`All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](runtime-directive-policy-settings.md)」を参照してください。|  
   
@@ -75,6 +77,7 @@ ms.locfileid: "73128521"
 |[\<Directives>](directives-element-net-native.md)|ランタイム ディレクティブ ファイルのルート要素です。|  
   
 ## <a name="remarks"></a>解説  
+
  要素には、 [\<Directives>](directives-element-net-native.md) 0 個または1個の要素を含めることができ `<Application>` ます。 1 つのリフレクション ディレクティブ ファイルに複数の `<Application>` 要素を含めることはサポートされていません。  
   
  `<Application>` 要素は、次の 2 とおりの方法で使用できます。  
@@ -85,7 +88,7 @@ ms.locfileid: "73128521"
   
 ## <a name="see-also"></a>関連項目
 
-- [\<Library>Element](library-element-net-native.md)
-- [\<Directives>Element](directives-element-net-native.md)
+- [\<Library> 要素](library-element-net-native.md)
+- [\<Directives> 要素](directives-element-net-native.md)
 - [ランタイム ディレクティブ要素](runtime-directive-elements.md)
 - [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)

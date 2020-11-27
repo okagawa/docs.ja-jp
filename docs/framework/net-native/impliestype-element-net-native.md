@@ -1,15 +1,16 @@
 ---
-title: <ImpliesType>要素 (.NET ネイティブ)
+title: <ImpliesType> 要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
-ms.openlocfilehash: 57f4208233cd5e8544b4f1c254e3b0e0eaacd508
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 04c3a9498a5c9c24d67dedd02fb4c9d68d9efbdd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79181014"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287957"
 ---
-# <a name="impliestype-element-net-native"></a>\<ImpliesType>要素 (.NET ネイティブ)
+# <a name="impliestype-element-net-native"></a>\<ImpliesType> 要素 (.NET ネイティブ)
+
 型にポリシーを適用します (含んでいる型またはメソッドにそのポリシーが適用されている場合)。  
   
 ## <a name="syntax"></a>構文  
@@ -29,11 +30,12 @@ ms.locfileid: "79181014"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|属性の型|Description|  
+|属性|属性の型|[説明]|  
 |---------------|--------------------|-----------------|  
 |`Name`|全般|必須の属性です。 型名を指定します。|  
 |`Activate`|リフレクション|省略可能な属性です。 コンストラクターへの実行時アクセスを制御して、インスタンスのアクティブ化を有効にします。|  
@@ -49,17 +51,18 @@ ms.locfileid: "79181014"
   
 ## <a name="name-attribute"></a>Name 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|*type_name*|型名です。 この `<ImpliesType>` 要素により表される型がそれを含んでいる `<Type>` 要素と同じ名前空間にある場合、*type_name* には名前空間なしで型の名前を含めることができます。 それ以外の場合は、*type_name* には完全修飾型名を含める必要があります。|  
+|*type_name*|型名。 この `<ImpliesType>` 要素により表される型がそれを含んでいる `<Type>` 要素と同じ名前空間にある場合、*type_name* には名前空間なしで型の名前を含めることができます。 それ以外の場合は、*type_name* には完全修飾型名を含める必要があります。|  
   
 ## <a name="all-other-attributes"></a>その他すべての属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |*policy_setting*|このポリシーの種類に適用する設定です。 指定できる値は、`All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](runtime-directive-policy-settings.md)」を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
@@ -71,6 +74,7 @@ ms.locfileid: "79181014"
 |[\<Method>](method-element-net-native.md)|メソッドにリフレクション ポリシーを適用します。|  
   
 ## <a name="remarks"></a>解説  
+
  `<ImpliesType>` 要素は主にライブラリによる使用を想定しています。 これは、次のシナリオに対応します。  
   
 - ルーチンを 1 つの型にリフレクションする必要がある場合、2 番目の型にもリフレクションする必要がある。  
@@ -89,7 +93,7 @@ ms.locfileid: "79181014"
   
  このディレクティブは、`Explicit` のインスタンス化に `Dynamic` ポリシー設定が定義されていない場合は効果がありません。 たとえば、`Explicit<Int32>` の場合、`Implicit<Int32>` はそのパブリック メンバーをルートとしてインスタンス化され、そのメタデータが動的プログラミングで使用できるようになります。  
   
- 1 つ以上のシリアライザーに適用される、実際の例を次に示します。 ディレクティブは、 `IList<` *something* `>` アプリケーションごとの注釈を必要とせずに、対応する何らかの型に対してリフレクション `List<` *something*を行う必要があるという要件を記述し `>` ます。  
+ 1 つ以上のシリアライザーに適用される、実際の例を次に示します。 ディレクティブは、 `IList<` *something* `>` アプリケーションごとの注釈を必要とせずに、対応する何らかの型に対してリフレクション `List<` *something* を行う必要があるという要件を記述し `>` ます。  
   
 ```xml  
 <Type Name="System.Collections.Generic.IList{T}">  

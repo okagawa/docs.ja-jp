@@ -11,17 +11,19 @@ helpviewer_keywords:
 - serialization [WCF], setting default values
 - OnSerializedAttribute [WCF]
 ms.assetid: aa4a3a6f-05ec-4efd-bdbf-2181e13e6468
-ms.openlocfilehash: 0736f94b1fe1a91b20ee76da673e0bc139aa802a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ad162f24042f30eabee7a1fad2025072b26d9af5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959551"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289374"
 ---
 # <a name="version-tolerant-serialization-callbacks"></a>バージョン トレラントなシリアル化コールバック
+
 データ コントラクトのプログラミング モデルでは、<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> クラスと <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> クラスがサポートする、複数のバージョンに対応するシリアル化コールバック メソッドが完全にサポートされます。  
   
 ## <a name="version-tolerant-attributes"></a>複数のバージョンに対応する属性  
+
  4 つのコールバック属性があります。 各属性は、さまざまなタイミングでシリアル化エンジンまたは逆シリアル化エンジンが呼び出すメソッドに適用できます。 次の表では、各属性を使用するタイミングについて説明します。  
   
 |属性|対応するメソッドが呼び出されるタイミング|  
@@ -38,6 +40,7 @@ ms.locfileid: "69959551"
  上記の各コールバック属性でマークできるのは、型ごとに 1 つのメソッドだけです。  
   
 ### <a name="example"></a>例  
+
  [!code-csharp[C_DataContract#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#9)]
  [!code-vb[C_DataContract#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#9)]  
   
@@ -48,4 +51,4 @@ ms.locfileid: "69959551"
 - <xref:System.Runtime.Serialization.OnDeserializingAttribute>
 - <xref:System.Runtime.Serialization.OnDeserializedAttribute>
 - <xref:System.Runtime.Serialization.StreamingContext>
-- [バージョン トレラントなシリアル化](../../../standard/serialization/version-tolerant-serialization.md)
+- [バージョントレラントなシリアル化](../../../standard/serialization/version-tolerant-serialization.md)

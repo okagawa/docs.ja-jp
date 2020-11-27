@@ -7,24 +7,27 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
-ms.openlocfilehash: 34bde56b78ec0148cf6b924f8edd29343b97faa4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e8a6cf0cae7519c3ffdbad188c6f67d11a4a6fc1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597385"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289803"
 ---
 # <a name="forward-compatible-data-contracts"></a>上位互換性のあるデータ コントラクト
-Windows Communication Foundation (WCF) データコントラクトシステムの機能として、コントラクトは、非分離方式で時間の経過と共に進化することがあります。 つまり、古いバージョンのデータ コントラクトを使用するクライアントが同じデータ コントラクトの新しいバージョンのサービスと通信したり、新しいバージョンのデータ コントラクトを使用するクライアントが同じデータ コントラクトの古いバージョンと通信したりできます。 詳細については、「[ベストプラクティス: データコントラクトのバージョン管理](../best-practices-data-contract-versioning.md)」を参照してください。  
+
+Windows Communication Foundation (WCF) データコントラクトシステムの機能として、コントラクトは、非分離方式で時間の経過と共に進化することがあります。 つまり、古いバージョンのデータ コントラクトを使用するクライアントが同じデータ コントラクトの新しいバージョンのサービスと通信したり、新しいバージョンのデータ コントラクトを使用するクライアントが同じデータ コントラクトの古いバージョンと通信したりできます。 詳細については、「 [ベストプラクティス: データコントラクトのバージョン管理](../best-practices-data-contract-versioning.md)」を参照してください。  
   
- バージョン管理機能の大半は、既存のデータ コントラクトの新しいバージョンが作成されたときに、必要に応じて適用できます。 ただし、1つのバージョン管理機能である*ラウンドトリップ*は、適切に機能するために、最初のバージョンの型に組み込む必要があります。  
+ バージョン管理機能の大半は、既存のデータ コントラクトの新しいバージョンが作成されたときに、必要に応じて適用できます。 ただし、1つのバージョン管理機能である *ラウンドトリップ* は、適切に機能するために、最初のバージョンの型に組み込む必要があります。  
   
 ## <a name="round-tripping"></a>ラウンド トリップ  
+
  ラウンド トリップは、データ コントラクトの新しいバージョンから古いバージョンにデータが渡され、新しいバージョンに戻されるときに発生します。 ラウンド トリップでは、データの損失がないことが保証されます。 ラウンド トリップを有効にすると、データ コントラクト バージョン管理モデルによってサポートされる将来の変更に関して、型の上位互換性が保たれます。  
   
  特定の型のラウンド トリップを有効にするには、この型に <xref:System.Runtime.Serialization.IExtensibleDataObject> インターフェイスを実装する必要があります。 このインターフェイスには、(<xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> 型を返す) <xref:System.Runtime.Serialization.ExtensionDataObject> プロパティが含まれます。 このプロパティにより、現在のバージョンでは未知の、今後使用されるデータ コントラクトの任意のデータが格納されます。  
   
 ### <a name="example"></a>例  
+
  次のデータ コントラクトは、将来の変更に対して上位互換性がありません。  
   
  [!code-csharp[C_DataContract#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#7)]

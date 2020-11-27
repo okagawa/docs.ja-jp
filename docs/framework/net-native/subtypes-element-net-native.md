@@ -1,15 +1,16 @@
 ---
-title: <Subtypes>要素 (.NET ネイティブ)
+title: <Subtypes> 要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
-ms.openlocfilehash: bb719449f3769c5dbbde6d05efdb865c18bb4ab2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7484152c351f59ee84b601584bd84347186628a3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79180932"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287814"
 ---
-# <a name="subtypes-element-net-native"></a>\<Subtypes>要素 (.NET ネイティブ)
+# <a name="subtypes-element-net-native"></a>\<Subtypes> 要素 (.NET ネイティブ)
+
 それを含む型から継承されたすべてのクラスに実行時ポリシーを適用します。  
   
 ## <a name="syntax"></a>構文  
@@ -28,6 +29,7 @@ ms.locfileid: "79180932"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -47,11 +49,12 @@ ms.locfileid: "79180932"
   
 ## <a name="all-attributes"></a>すべての属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |*policy_setting*|このポリシーの種類に適用する設定です。 指定できる値は、`All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](runtime-directive-policy-settings.md)」を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
@@ -61,11 +64,13 @@ ms.locfileid: "79180932"
 |[\<Type>](type-element-net-native.md)|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
   
 ## <a name="remarks"></a>解説  
+
  `<Subtypes>` 要素は、それを含む型のすべてのサブタイプにポリシーを適用します。 派生型および基底クラスに異なるポリシーを適用する場合に使用します。  
   
  リフレクション、シリアル化、および相互運用属性はいずれも省略可能ですが、そのうち少なくとも 1 つが存在する必要があります。  
   
 ## <a name="example"></a>例  
+
  次の例では、`BaseClass` という名前のクラスと `Derived1` という名前のサブクラスを定義します。  
   
  [!code-csharp[ProjectN_Reflection#4](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/subtypes.cs#4)]  
@@ -89,7 +94,7 @@ ms.locfileid: "79180932"
   
 ## <a name="see-also"></a>関連項目
 
-- [\<Type>Element](type-element-net-native.md)
+- [\<Type> 要素](type-element-net-native.md)
 - [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)
 - [ランタイム ディレクティブ要素](runtime-directive-elements.md)
 - [ランタイム ディレクティブ ポリシーの設定](runtime-directive-policy-settings.md)

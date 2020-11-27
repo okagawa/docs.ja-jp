@@ -2,12 +2,12 @@
 title: サポートされていないシナリオ
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: a3ee91e5232926b4ea7db80db35d9a309ca8105b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2d779b49a8201b3ad53507af7710f7aef5e9321c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557815"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289647"
 ---
 # <a name="unsupported-scenarios"></a>サポートされていないシナリオ
 
@@ -16,6 +16,7 @@ Windows Communication Foundation (WCF) では、さまざまな理由により�
 ## <a name="impersonation-scenarios"></a>権限借用のシナリオ
 
 ### <a name="impersonated-identity-might-not-flow-when-clients-make-asynchronous-calls"></a>クライアントが非同期呼び出しを行うときに、偽装された id が流れないことがある
+
  WCF クライアントが、偽装で Windows 認証を使用して WCF サービスへの非同期呼び出しを行うと、偽装 ID ではなくクライアント プロセスの ID で認証が行われる場合があります。
 
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP およびセキュリティで保護されたコンテキストトークン cookie 有効
