@@ -1,28 +1,42 @@
 ---
-title: dotnet-dump - .NET Core
-description: dotnet-dump コマンドライン ツールのインストールおよび使用。
-ms.date: 10/14/2019
-ms.openlocfilehash: e008dcfc734a8742c495ea32a7a149c9a55c54c6
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+title: dotnet-dump 診断ツール - .NET CLI
+description: dotnet-dump CLI ツールをインストールして使用し、ネイティブ デバッガーなしで Windows と Linux のダンプを収集して分析する方法について学習します。
+ms.date: 11/17/2020
+ms.openlocfilehash: ea9a70c4dc47b5006339e9a197712092eb66b241
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598105"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822205"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>ダンプの収集と分析のユーティリティ (dotnet-dump)
 
 **この記事の対象:** ✔️ .NET Core 3.0 SDK 以降のバージョン
 
 > [!NOTE]
-> macOS では、`dotnet-dump` はサポートされていません。
+> macOS の `dotnet-dump` は、.NET 5.0 以降のバージョンでのみサポートされています。
 
-## <a name="install-dotnet-dump"></a>dotnet-dump をインストールする
+## <a name="install"></a>インストール
 
-`dotnet-dump` [NuGet パッケージ](https://www.nuget.org/packages/dotnet-dump)の最新のリリース バージョンをインストールするには、次のように [dotnet tool install](../tools/dotnet-tool-install.md) コマンドを使用します。
+`dotnet-dump` をダウンロードしてインストールするには、次の 2 つの方法があります。
 
-```dotnetcli
-dotnet tool install -g dotnet-dump
-```
+- **dotnet グローバル ツール:**
+
+  `dotnet-dump` [NuGet パッケージ](https://www.nuget.org/packages/dotnet-dump)の最新のリリース バージョンをインストールするには、次のように [dotnet tool install](../tools/dotnet-tool-install.md) コマンドを使用します。
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-dump
+  ```
+
+- **直接ダウンロード:**
+
+  ご利用のプラットフォームに適したツールの実行可能ファイルをダウンロードします。
+
+  | OS  | プラットフォーム |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-dump/win-x86) \| [x64](https://aka.ms/dotnet-dump/win-x64) \| [arm](https://aka.ms/dotnet-dump/win-arm) \| [arm-x64](https://aka.ms/dotnet-dump/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-dump/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-dump/linux-x64) \| [arm](https://aka.ms/dotnet-dump/linux-arm) \| [arm64](https://aka.ms/dotnet-dump/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-dump/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-dump/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>構文
 
@@ -58,7 +72,7 @@ dotnet-dump [-h|--help] [--version] <command>
 ### <a name="synopsis"></a>構文
 
 ```console
-dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag]
+dotnet-dump collect [-h|--help] [-p|--process-id] [-n|--name] [--type] [-o|--output] [--diag]
 ```
 
 ### <a name="options"></a>オプション
@@ -69,7 +83,11 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
 - **`-p|--process-id <PID>`**
 
-  メモリ ダンプを収集するプロセスの ID 番号を指定します。
+  ダンプを収集するプロセスの ID 番号を指定します。
+
+- **`-n|--name <name>`**
+
+  ダンプを収集するプロセスの名前を指定します。
 
 - **`--type <Full|Heap|Mini>`**
 

@@ -2,12 +2,12 @@
 title: C# 9.0 の新機能 - C# ガイド
 description: C# 9.0 で使用できる新しい機能の概要を説明します。
 ms.date: 09/04/2020
-ms.openlocfilehash: 5b3695dee8fc26f69e713d1d6811acdf0cfa9764
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: dbc104cb0bbfc965b0cc055429713538f62ed0e8
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557221"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687361"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 の新機能
 
@@ -104,9 +104,13 @@ C# 9.0 には "*_レコード型_*" が導入されています。これは、�
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="Wither":::
 
-上の行では、`LastName` プロパティが `person` のコピーで、`FirstName` が `"Paul"` である、新しい `Person` レコードが作成されます。 `with` 式には、任意の数のプロパティを設定できます。
+前の行では、`LastName` プロパティが `person` のコピーで、`FirstName` が `"Paul"` である、新しい `Person` レコードが作成されます。 `with` 式には、任意の数のプロパティを設定できます。 `with` 式を使用して、正確なコピーを作成することもできます。 変更するプロパティの空のセットを指定します。
+
+:::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="WithCopy":::
 
 "clone" メソッド以外のすべての合成メンバーは、開発者が自分で記述できます。 レコード型に、いずれかの合成メソッドのシグネチャと一致するメソッドがある場合、コンパイラでそのメソッドは合成されません。 前の `Dog` レコードの例には、手作業でコーディングされた <xref:System.String.ToString> メソッドが例として含まれます。
+
+レコードの種類の詳細については、この[レコードの探索](../tutorials/exploration/records.md)チュートリアルを参照してください。
 
 ## <a name="init-only-setters"></a>init 専用セッター
 

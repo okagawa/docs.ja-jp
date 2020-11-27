@@ -1,24 +1,26 @@
 ---
-title: Visual Studio Code を使用して .NET Standard クラス ライブラリを作成する
-description: Visual Studio Code を使用して .NET Standard クラス ライブラリを作成する方法について説明します。
-ms.date: 06/08/2020
-ms.openlocfilehash: 966b9b0b48f67809e82d9133c523995cd97b6015
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+title: Visual Studio Code を使用して .NET クラス ライブラリを作成する
+description: Visual Studio Code を使用して .NET クラス ライブラリを作成する方法について学習します。
+ms.date: 11/18/2020
+ms.openlocfilehash: 4daa077fc54da3de2f808d831e06ee5f9bb3bde7
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495513"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916092"
 ---
-# <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>チュートリアル: Visual Studio Code を使用して .NET Standard ライブラリを作成する
+# <a name="tutorial-create-a-net-class-library-using-visual-studio-code"></a>チュートリアル: Visual Studio Code を使用して .NET クラス ライブラリを作成する
 
-このチュートリアルでは、1 つの文字列処理メソッドを含む簡単なユーティリティ ライブラリを作成します。 それを[拡張メソッド](../../csharp/programming-guide/classes-and-structs/extension-methods.md)として実装し、<xref:System.String> クラスのメンバーと同じように呼び出すことができるようにします。
+このチュートリアルでは、1 つの文字列処理メソッドを含む簡単なユーティリティ ライブラリを作成します。
 
-"*クラス ライブラリ*" は、アプリケーションから呼び出される型とメソッドを定義します。 .NET Standard 2.0 をターゲットとするクラス ライブラリでは、お使いのライブラリを、そのバージョンの .NET Standard をサポートする任意の .NET 実装によって呼び出すことができます。 クラス ライブラリが完成したら、サードパーティ製のコンポーネントとして配布するか、1 つ以上のアプリケーションを含むバンドルされたコンポーネントとして配布することができます。
+"*クラス ライブラリ*" は、アプリケーションから呼び出される型とメソッドを定義します。 ライブラリのターゲットが .NET Standard 2.0 である場合は、.NET Standard 2.0 をサポートする任意の .NET 実装 (.NET Framework を含む) で呼び出すことができます。 ライブラリのターゲットが .NET 5 である場合は、.NET 5 をターゲットとする任意のアプリケーションで呼び出すことができます。 このチュートリアルでは、.NET 5 をターゲットとする方法を示します。
+
+クラス ライブラリを作成する場合は、サードパーティのコンポーネントとして、あるいは 1 つまたは複数のアプリケーションにバンドルされたコンポーネントとして配布することができます。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
 1. [C# 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)がインストールされている [Visual Studio Code](https://code.visualstudio.com/)。 Visual Studio Code に拡張機能をインストールする方法については、[VS Code Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery) を参照してください。
-2. [.Net Core 3.1 SDK 以降](https://dotnet.microsoft.com/download)
+2. [.NET 5.0 SDK 以降](https://dotnet.microsoft.com/download)
 
 ## <a name="create-a-solution"></a>ソリューションを作成する
 
@@ -30,11 +32,11 @@ ms.locfileid: "89495513"
 
 1. **[フォルダーを開く]** ダイアログで、*ClassLibraryProjects* フォルダーを作成し、 **[フォルダーの選択]** (macOS では **[開く]** ) をクリックします。
 
-1. メイン メニューで **[表示]**  >  **[ターミナル]** の順に選択して、Visual Studio Code で**ターミナル**を開きます。
+1. メイン メニューで **[表示]**  >  **[ターミナル]** の順に選択して、Visual Studio Code で **ターミナル** を開きます。
 
-   コマンド プロンプトで *ClassLibraryProjects* フォルダーが表示され、**ターミナル**が開きます。
+   コマンド プロンプトで *ClassLibraryProjects* フォルダーが表示され、**ターミナル** が開きます。
 
-1. **ターミナル**で、次のコマンドを入力します。
+1. **ターミナル** で、次のコマンドを入力します。
 
    ```dotnetcli
    dotnet new sln
@@ -48,7 +50,7 @@ ms.locfileid: "89495513"
 
 ## <a name="create-a-class-library-project"></a>クラス ライブラリ プロジェクトを作成する
 
-"StringLibrary" という名前の新しい .NET Standard クラス ライブラリ プロジェクトをソリューションに追加します。
+"StringLibrary" という名前の新しい .NET クラス ライブラリ プロジェクトをソリューションに追加します。
 
 1. 次のコマンドをターミナルで実行して、ライブラリ プロジェクトを作成します。
 
@@ -81,15 +83,15 @@ ms.locfileid: "89495513"
    Project `StringLibrary\StringLibrary.csproj` added to the solution.
    ```
 
-1. ライブラリが正しいバージョンの .NET Standard をターゲットにしていることを確認します。 **エクスプローラー**で、*StringLibrary/StringLibrary .csproj* を開きます。
+1. 確実にライブラリのターゲットが .NET 5 になっていることを確かめます。 **エクスプローラー** で、*StringLibrary/StringLibrary .csproj* を開きます。
 
-   `TargetFramework` 要素に、プロジェクトが .NET Standard 2.0 をターゲットとしていることが示されます。
+   `TargetFramework` 要素に、プロジェクトのターゲットが .NET 5.0 であることが示されています。
 
    ```xml
    <Project Sdk="Microsoft.NET.Sdk">
 
      <PropertyGroup>
-       <TargetFramework>netstandard2.0</TargetFramework>
+       <TargetFramework>net5.0</TargetFramework>
      </PropertyGroup>
 
    </Project>
@@ -116,7 +118,7 @@ ms.locfileid: "89495513"
    Copyright (C) Microsoft Corporation. All rights reserved.
      Determining projects to restore...
      All projects are up-to-date for restore.
-     StringLibrary -> C:\Projects\ClassLibraryProjects\StringLibrary\bin\Debug\netstandard2.0\StringLibrary.dll
+     StringLibrary -> C:\Projects\ClassLibraryProjects\StringLibrary\bin\Debug\net5.0\StringLibrary.dll
    Build succeeded.
        0 Warning(s)
        0 Error(s)
@@ -208,12 +210,11 @@ ms.locfileid: "89495513"
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-* [.NET Core CLI を使用したライブラリの開発](libraries.md)
-* [.NET Standard のバージョンとそれらでサポートされているプラットフォーム](../../standard/net-standard.md)。
+* [.NET CLI を使用してライブラリを開発する](libraries.md)
 
 ## <a name="next-steps"></a>次の手順
 
 このチュートリアルでは、ソリューションを作成し、ライブラリ プロジェクトを追加し、ライブラリを使用するコンソール アプリ プロジェクトを追加しました。 次のチュートリアルでは、ソリューションに単体テスト プロジェクトを追加します。
 
 > [!div class="nextstepaction"]
-> [Visual Studio Code を使用して .NET Core で .NET Standard ライブラリをテストする](testing-library-with-visual-studio-code.md)
+> [Visual Studio Code を使用して .NET で .NET クラス ライブラリをテストする](testing-library-with-visual-studio-code.md)

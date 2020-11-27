@@ -1,25 +1,39 @@
 ---
-title: dotnet-sos - .NET Core
-description: dotnet-sos コマンドライン ツールをインストールして使用する方法について説明します。
-ms.date: 08/26/2020
-ms.openlocfilehash: ba83105718909038ca56129ed8a5063aeff12e89
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+title: dotnet-sos 診断ツール - .NET CLI
+description: dotnet-sos CLI ツールをインストールして使用し、Windows および Linux のネイティブ デバッガーで使われる SOS デバッガー拡張機能を管理する方法について学習します。
+ms.date: 11/17/2020
+ms.openlocfilehash: 59512c42a778f68bb3cd092dc854dcc727fd2881
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065085"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825443"
 ---
 # <a name="sos-installer-dotnet-sos"></a>SOS インストーラー (dotnet-sos)
 
 **この記事の対象:** ✔️ .NET Core 2.1 SDK 以降のバージョン
 
-## <a name="install-dotnet-sos"></a>dotnet-sos をインストールする
+## <a name="install"></a>インストール
 
-`dotnet-sos` [NuGet パッケージ](https://www.nuget.org/packages/dotnet-sos)の最新のリリース バージョンをインストールするには、次のように [dotnet tool install](../tools/dotnet-tool-install.md) コマンドを使用します。
+`dotnet-sos` をダウンロードしてインストールするには、次の 2 つの方法があります。
 
-```dotnetcli
-dotnet tool install -g dotnet-sos
-```
+- **dotnet グローバル ツール:**
+
+  `dotnet-sos` [NuGet パッケージ](https://www.nuget.org/packages/dotnet-sos)の最新のリリース バージョンをインストールするには、次のように [dotnet tool install](../tools/dotnet-tool-install.md) コマンドを使用します。
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-sos
+  ```
+
+- **直接ダウンロード:**
+
+  ご利用のプラットフォームに適したツールの実行可能ファイルをダウンロードします。
+
+  | OS  | プラットフォーム |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-sos/win-x86) \| [x64](https://aka.ms/dotnet-sos/win-x64) \| [arm](https://aka.ms/dotnet-sos/win-arm) \| [arm-x64](https://aka.ms/dotnet-sos/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-sos/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-sos/linux-x64) \| [arm](https://aka.ms/dotnet-sos/linux-arm) \| [arm64](https://aka.ms/dotnet-sos/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-sos/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-sos/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>構文
 

@@ -2,12 +2,12 @@
 title: Linux ダンプのデバッグ
 description: この記事では、Linux 環境からダンプを収集して分析する方法について学習します。
 ms.date: 08/27/2020
-ms.openlocfilehash: d62295e165f56e32ef73ab628ca9ebd77a4435d1
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 94f923f2ec7b5fa20c2ebc9b83540094348dff03
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598305"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099147"
 ---
 # <a name="debug-linux-dumps"></a>Linux ダンプのデバッグ
 
@@ -25,7 +25,7 @@ Linux でダンプを収集するための推奨される 2 つの方法とし�
 
 マネージドのみのダンプを作成する `dotnet-dump` の代替手段として、[`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) は、ネイティブとマネージドの両方の情報を含む Linux のコア ダンプを作成するための推奨ツールです。 gdb や gcore などの他のツールを使用して、コア ダンプを作成することもできますが、マネージド デバッグに必要な状態を見逃してしまう可能性があり、その結果、分析中に "不明な" 種類または関数名が検出されることになります。
 
-`createdump` ツールは .NET Core ランタイムと共にインストールされ、(通常は "/usr/share/dotnet/shared/Microsoft.NETCore.App/[バージョン]" の) libcoreclr.so の横にあります。 このツールにより、そのプライマリ引数としてダンプを収集するプロセス ID が受け取られ、収集するダンプの種類 (既定値はヒープ付きのミニダンプ) を指定する省略可能なパラメーターも受け取られます。 次のオプションがあります。
+`createdump` ツールは .NET Core ランタイムと共にインストールされ、libcoreclr.so の隣にあります(通常は、"/usr/share/dotnet/shared/Microsoft.NETCore.App/[バージョン]" 内)。 このツールにより、そのプライマリ引数としてダンプを収集するプロセス ID が受け取られ、収集するダンプの種類 (既定値はヒープ付きのミニダンプ) を指定する省略可能なパラメーターも受け取られます。 次のオプションがあります。
 
 - **`<input-filename>`**
 
@@ -57,7 +57,7 @@ Linux でダンプを収集するための推奨される 2 つの方法とし�
 
   診断メッセージを有効にします。
 
-コア ダンプを収集するには、`SYS_PTRACE` 機能を使用するか、sudo または su で `createdump` を実行する必要があることにご注意ください。
+コア ダンプを収集するには、`SYS_PTRACE` 機能を使用するか、sudo または su で `createdump` を実行する必要があります。
 
 ## <a name="analyze-dumps-on-linux"></a>Linux でダンプを分析する
 

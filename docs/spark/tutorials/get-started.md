@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: d4f44d095fffdfa05b82516cfe79700f9e239110
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 16ccc8f40f290c4bc10f03d1f4d1b296b17f6b11
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955409"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687826"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>チュートリアル: .NET for Apache Spark の概要
 
@@ -37,7 +37,7 @@ ms.locfileid: "91955409"
 
 .NET Core SDK をインストールしたら、新しいコマンド プロンプトまたはターミナルを開き、`dotnet` を実行します。
 
-コマンドが実行され、dotnet の使用方法に関する情報が出力された場合は、次の手順に進むことができます。 `'dotnet' is not recognized as an internal or external command` エラーが発生した場合は、コマンドを実行する前に**新しい**コマンド プロンプトまたはターミナルを開いたことを確認してください。
+コマンドが実行され、dotnet の使用方法に関する情報が出力された場合は、次の手順に進むことができます。 `'dotnet' is not recognized as an internal or external command` エラーが発生した場合は、コマンドを実行する前に **新しい** コマンド プロンプトまたはターミナルを開いたことを確認してください。
 
 ### <a name="2-install-java"></a>2.Java のインストール
 
@@ -53,47 +53,47 @@ Apache Spark は、圧縮された .tgz ファイルとしてダウンロード�
 
 ### <a name="4-install-apache-spark"></a>4.Apache Spark のインストール
 
-[Apache Spark をダウンロードしてインストールします](https://spark.apache.org/downloads.html)。 バージョン 2.3.*、2.4.0、2.4.1、2.4.3、または 2.4.4 から選択する必要があります (.NET for Apache Spark は、他のバージョンの Apache Spark と互換性がありません)。
+[Apache Spark をダウンロードしてインストールします](https://spark.apache.org/downloads.html)。 バージョン 2.3.*、2.4.0、2.4.1、2.4.3、2.4.4、2.4.5、2.4.6、2.4.7、3.0.0、または 3.0.1 から選択する必要があります (.NET for Apache Spark は、他のバージョンの Apache Spark と互換性がありません)。
 
-次の手順で使用するコマンドは、[Apache Spark 2.4.1 をダウンロードしてインストールしていること](https://archive.apache.org/dist/spark/spark-2.4.1/spark-2.4.1-bin-hadoop2.7.tgz)を前提としています。 別のバージョンを使用する場合は、**2.4.1** を適切なバージョン番号に置き換えます。 その後、 **.tar** ファイルと Apache Spark ファイルを抽出します。
+次の手順で使用するコマンドは、[Apache Spark 3.0.1 をダウンロードしてインストールしていること](https://spark.apache.org/downloads.html)を前提としています。 別のバージョンを使用する場合は、**3.0.1** を適切なバージョン番号に置き換えます。 その後、 **.tar** ファイルと Apache Spark ファイルを抽出します。
 
 入れ子になった **.tar** ファイルを抽出するには、次のようにします。
 
-* ダウンロードした **spark-2.4.1-bin-hadoop2.7.tgz** ファイルを見つけます。
+* ダウンロードした **spark-3.0.1-bin-hadoop2.7.tgz** ファイルを見つけます。
 * ファイルを右クリックし、 **[7-Zip] -> [ここに展開]** の順に選択します。
-* ダウンロードした **.tgz** ファイルの横に **spark-2.4.1-bin-hadoop2.7.tar** が作成されます。
+* ダウンロードした **.tgz** ファイルの横に **spark-3.0.1-bin-hadoop2.7.tar** が作成されます。
 
 Apache Spark ファイルを抽出するには、次のようにします。
 
-* **spark-2.4.1-bin-hadoop2.7.tar** を右クリックし、 **[7-Zip] -> [ここに展開]** の順に選択します
+* **spark-3.0.1-bin-hadoop2.7.tar** を右クリックし、 **[7-Zip] -> [ここに展開]** の順に選択します
 * **[展開先]** フィールドに「**C:\bin**」と入力します。
 * **[展開先]** フィールドの下のチェックボックスをオフにします。
 * **[OK]** を選択します。
-* Apache Spark ファイルが C:\bin\spark-2.4.1-bin-hadoop2.7\ に抽出されます。
+* Apache Spark ファイルが C:\bin\spark-3.0.1-bin-hadoop2.7\ に抽出されます。
 
-![Spark のインストール](https://dotnet.microsoft.com/static/images/spark-extract-with-7-zip.png?v=YvjUv54LIxI9FbALPC3h8zSQdyMtK2-NKbFOliG-f8M)
+![Spark のインストール](./media/spark-extract-with-7-zip.png)
 
 次のコマンドを実行して、Apache Spark を検索するために使用する環境変数を設定します。 Windows の場合は、管理者モードでコマンド プロンプトを実行してください。
 
 #### <a name="windows"></a>[Windows](#tab/windows)
 
 ```console
-setx /M HADOOP_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
-setx /M SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
+setx /M HADOOP_HOME C:\bin\spark-3.0.1-bin-hadoop2.7\
+setx /M SPARK_HOME C:\bin\spark-3.0.1-bin-hadoop2.7\
 setx /M PATH "%PATH%;%HADOOP_HOME%;%SPARK_HOME%\bin"
 ```
 
 #### <a name="maclinux"></a>[Mac/Linux](#tab/linux)
 
 ```bash
-export SPARK_HOME=~/bin/spark-2.4.1-bin-hadoop2.7/
+export SPARK_HOME=~/bin/spark-3.0.1-bin-hadoop2.7/
 export PATH="$SPARK_HOME/bin:$PATH"
 source ~/.bashrc
 ```
 
 ---
 
-すべてをインストールし、環境変数を設定したら、**新しい**コマンド プロンプトまたはターミナルを開き、次のコマンドを実行します。
+すべてをインストールし、環境変数を設定したら、**新しい** コマンド プロンプトまたはターミナルを開き、次のコマンドを実行します。
 
 ```text
 spark-submit --version
@@ -101,7 +101,7 @@ spark-submit --version
 
 コマンドが実行され、バージョン情報が出力された場合は、次の手順に進むことができます。
 
-`'spark-submit' is not recognized as an internal or external command` エラーが発生した場合は、**新しい**コマンド プロンプトを開いたことを確認してください。
+`'spark-submit' is not recognized as an internal or external command` エラーが発生した場合は、**新しい** コマンド プロンプトを開いたことを確認してください。
 
 ### <a name="5-install-net-for-apache-spark"></a>5..NET for Apache Spark のインストール
 
@@ -109,24 +109,22 @@ spark-submit --version
 
 Microsoft.Spark.Worker を抽出するには、次のようにします。
 
-* ダウンロードした **Microsoft.Spark.Worker.netcoreapp3.1.win-x64-0.8.0.zip** ファイルを見つけます。
+* ダウンロードした **Microsoft.Spark.Worker.netcoreapp3.1.win-x64-1.0.0.zip** ファイルを見つけます。
 * 右クリックし、 **[7-Zip] -> [ここに展開]** の順に選択します。
 * **[展開先]** フィールドに「**C:\bin**」と入力します。
 * **[展開先]** フィールドの下のチェックボックスをオフにします。
 * **[OK]** を選択します。
 
-![.NET Spark のインストール](https://dotnet.microsoft.com/static/images/dotnet-for-spark-extract-with-7-zip.png?v=jwCyum9mL0mGIi4V5zC7yuvLfcj1_nL-QFFD8TClhZk)
-
 ### <a name="6-install-winutils-windows-only"></a>6.WinUtils のインストール (Windows のみ)
 
-.NET for Apache Spark では、Apache Spark と共に WinUtils をインストールする必要があります。 [winutils.exe をダウンロード](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe)します。 次に、WinUtils を **C:\bin\spark-2.4.1-bin-hadoop2.7\bin** にコピーします。
+.NET for Apache Spark では、Apache Spark と共に WinUtils をインストールする必要があります。 [winutils.exe をダウンロード](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe)します。 次に、WinUtils を **C:C:\bin\spark-3.0.1-bin-hadoop2.7\bin** にコピーします。
 
 > [!NOTE]
 > Spark インストール フォルダー名の末尾に注釈が付けられている別のバージョンの Hadoop を使用している場合は、使用している Hadoop のバージョンと互換性のある[バージョンの WinUtils を選択](https://github.com/steveloughran/winutils)します。
 
 ### <a name="7-set-dotnet_worker_dir-and-check-dependencies"></a>7.DOTNET_WORKER_DIR の設定と依存関係の確認
 
-次のコマンドのいずれかを実行して `DOTNET_WORKER_DIR` 環境変数を設定します。これは .NET アプリで .NET for Apache Spark を検索するために使用されます。 `<PATH-DOTNET_WORKER_DIR>` は、`Microsoft.Spark.Worker` をダウンロードして抽出したディレクトリに置き換えるようにしてください。 Windows の場合は、管理者モードでコマンド プロンプトを実行してください。
+次のコマンドのいずれかを実行して `DOTNET_WORKER_DIR` 環境変数を設定します。これは .NET アプリで .NET for Apache Spark worker バイナリを検索するために使用されます。 `<PATH-DOTNET_WORKER_DIR>` は、`Microsoft.Spark.Worker` をダウンロードして抽出したディレクトリに置き換えるようにしてください。 Windows の場合は、管理者モードでコマンド プロンプトを実行してください。
 
 #### <a name="windows"></a>[Windows](#tab/windows)
 
@@ -242,7 +240,7 @@ dotnet build
 spark-submit ^
 --class org.apache.spark.deploy.dotnet.DotnetRunner ^
 --master local ^
-microsoft-spark-2.4.x-<version>.jar ^
+microsoft-spark-3-0_2.12-<version>.jar ^
 dotnet MySparkApp.dll <path-of-input.txt>
 ```
 
@@ -252,7 +250,7 @@ dotnet MySparkApp.dll <path-of-input.txt>
 spark-submit \
 --class org.apache.spark.deploy.dotnet.DotnetRunner \
 --master local \
-microsoft-spark-2.4.x-<version>.jar \
+microsoft-spark-3-0_2.12-<version>.jar \
 dotnet MySparkApp.dll <path-of-input.txt>
 ```
 

@@ -4,12 +4,12 @@ description: spark-submit と Apache Livy を使用して、.NET for Apache Spar
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: cb99cd8028d504924d2dd69910efed0065d0a2e2
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 74be4ecf33a9a881633da0630fa1c1a4bf0b19c6
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91954920"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688164"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-azure-hdinsight"></a>.NET for Apache Spark ジョブを Azure HDInsight に送信する
 
@@ -23,13 +23,13 @@ ms.locfileid: "91954920"
 
 2. ssh ログイン情報をコピーし、ログインをターミナルに貼り付けます。 クラスターの作成時に設定したパスワードを使用してクラスターにサインインします。 Ubuntu および Spark のウェルカム メッセージが表示されます。
 
-3. **spark-submit** コマンドを使用して、HDInsight クラスターでアプリケーションを実行します。 このスクリプト例の **mycontainer** と **mystorageaccount** を、実際の BLOB コンテナーの名前とストレージ アカウントに置き換えることを忘れないでください。 また、`microsoft-spark-2.3.x-0.6.0.jar` は、展開に使用している適切な jar ファイルに置き換えてください。 `2.3.x` は Apache Spark のバージョンを表し、`0.6.0` は [.NET for Apache Spark worker](https://github.com/dotnet/spark/releases) のバージョンを表します。
+3. **spark-submit** コマンドを使用して、HDInsight クラスターでアプリケーションを実行します。 このスクリプト例の **mycontainer** と **mystorageaccount** を、実際の BLOB コンテナーの名前とストレージ アカウントに置き換えることを忘れないでください。 また、microsoft-spark jar を、使用中の Spark および .NET for Apache Spark のバージョンに置き換えることを忘れないでください。
 
    ```bash
    $SPARK_HOME/bin/spark-submit \
    --master yarn \
    --class org.apache.spark.deploy.dotnet.DotnetRunner \
-   wasbs://mycontainer@mystorageaccount.blob.core.windows.net/microsoft-spark-2.3.x-0.6.0.jar \
+   wasbs://mycontainer@mystorageaccount.blob.core.windows.net/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar \
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/publish.zip mySparkApp
    ```
 
@@ -46,7 +46,7 @@ curl -k -v -X POST "https://<your spark cluster>.azurehdinsight.net/livy/batches
 -H "X-Requested-By: <hdinsight username>" \
 -d @- << EOF
 {
-    "file":"abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar",
+    "file":"abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar",
     "className":"org.apache.spark.deploy.dotnet.DotnetRunner",
     "files":["abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<udf assembly>", "abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<file>"],
     "args":["abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<your app>.zip","<your app>","<app arg 1>","<app arg 2>,"...","<app arg n>"]
@@ -54,7 +54,7 @@ curl -k -v -X POST "https://<your spark cluster>.azurehdinsight.net/livy/batches
 EOF
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 * [.NET for Apache Spark の概要](../tutorials/get-started.md)
 * [.NET for Apache Spark アプリケーションを Azure HDInsight にデプロイする](../tutorials/hdinsight-deployment.md)

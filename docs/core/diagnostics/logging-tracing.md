@@ -2,12 +2,12 @@
 title: ログとトレース - .NET Core
 description: .NET Core のログとトレースの概要について説明します。
 ms.date: 10/12/2020
-ms.openlocfilehash: e3f809dab64d66d8b4ba16ca55fc426309614715
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 86444f2451079e54050f6698f3e45ddff0700acf
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439925"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820580"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core のログとトレース
 
@@ -55,7 +55,7 @@ ms.locfileid: "94439925"
   - シリアル化可能なオブジェクトのみをトレースできます。
   - EventSource を使用するように構成されている [EventListener](xref:System.Diagnostics.Tracing.EventListener) インスタンスを介してインプロセスで使用できます。
   - 次を介してアウトプロセスで使用できます。
-    - すべてのプラットフォームでの .NET Core の EventPipe
+    - すべてのプラットフォームでの [.NET Core の EventPipe](./eventpipe.md)
     - [Windows イベント トレーシング (ETW)](/windows/win32/etw/event-tracing-portal)
     - [Linux 用 LTTng トレース フレームワーク](https://lttng.org/)
       - チュートリアル: [PerfCollect を使用して LTTng トレースを収集する](trace-perfcollect-lttng.md)。
@@ -93,6 +93,8 @@ ms.locfileid: "94439925"
 - 「[.NET のログ記録](../extensions/logging.md)」では、サポートしているログ記録技法の概要を示しています。
 
 - [C# の文字列補間](../../csharp/language-reference/tokens/interpolated.md)を使用すると、ログ記録コードを簡単に記述できます。
+
+- [ランタイム プロバイダー イベント一覧](../../fundamentals/diagnostics/runtime-events.md)
 
 - <xref:System.Exception.Message?displayProperty=nameWithType> プロパティは、例外をログに記録する場合に便利です。
 

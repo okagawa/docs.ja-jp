@@ -1,26 +1,26 @@
 ---
-title: Visual Studio Code を使用して .NET Core コンソール アプリケーションを作成する
-description: Visual Studio Code と .NET Core CLI を使用して .NET Core コンソール アプリケーションを作成する方法について説明します。
-ms.date: 05/22/2020
-ms.openlocfilehash: e936c23d8525e42a9d2781cc680067c9da2ce42f
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+title: Visual Studio Code を使用して .NET コンソール アプリケーションを作成する
+description: Visual Studio Code と .NET CLI を使用して .NET コンソール アプリケーションを作成する方法について学習します。
+ms.date: 11/17/2020
+ms.openlocfilehash: dbbdf88b0c84089249eb7e446c25eddc11543c1a
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811927"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94915870"
 ---
-# <a name="tutorial-create-a-net-core-console-application-using-visual-studio-code"></a>チュートリアル: Visual Studio Code を使用して .NET Core コンソール アプリケーションを作成する
+# <a name="tutorial-create-a-net-console-application-using-visual-studio-code"></a>チュートリアル: Visual Studio Code を使用して .NET コンソール アプリケーションを作成する
 
-このチュートリアルでは、Visual Studio Code と .NET Core CLI を使用して .NET Core コンソール アプリケーションを作成して実行する方法について説明します。 プロジェクトの作成、コンパイル、実行などのプロジェクト タスクは、.NET Core CLI を使用して実行されます。 必要に応じて、別のコード エディターを使用してこのチュートリアルに従い、ターミナルでコマンドを実行することができます。
+このチュートリアルでは、Visual Studio Code と .NET CLI を使用して NET コンソール アプリケーションを作成して実行する方法を示します。 プロジェクトの作成、コンパイル、実行などのプロジェクト タスクは、.NET CLI を使用して行われます。 必要に応じて、別のコード エディターを使用してこのチュートリアルに従い、ターミナルでコマンドを実行することができます。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
 1. [C# 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)がインストールされている [Visual Studio Code](https://code.visualstudio.com/)。 Visual Studio Code に拡張機能をインストールする方法については、[VS Code Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery) を参照してください。
-2. [.Net Core 3.1 SDK 以降](https://dotnet.microsoft.com/download)
+2. [.NET 5.0 SDK 以降](https://dotnet.microsoft.com/download)
 
 ## <a name="create-the-app"></a>アプリを作成する
 
-"HelloWorld" という名前の .NET Core コンソール アプリ プロジェクトを作成します。
+"HelloWorld" という名前の .NET コンソール アプリ プロジェクトを作成します。
 
 1. Visual Studio Code を開始します。
 
@@ -30,11 +30,11 @@ ms.locfileid: "88811927"
 
    フォルダー名は既定でプロジェクト名と名前空間名になります。 このチュートリアルでは後でコードを追加しますが、プロジェクト名前空間は `HelloWorld` にします。
 
-1. メイン メニューで **[表示]**  >  **[ターミナル]** の順に選択して、Visual Studio Code で**ターミナル**を開きます。
+1. メイン メニューで **[表示]**  >  **[ターミナル]** の順に選択して、Visual Studio Code で **ターミナル** を開きます。
 
-   **ターミナル**が開き、*HelloWorld* フォルダーにコマンド プロンプトが表示されます。
+   **ターミナル** が開き、*HelloWorld* フォルダーにコマンド プロンプトが表示されます。
 
-1. **ターミナル**で、次のコマンドを入力します。
+1. **ターミナル** で、次のコマンドを入力します。
 
    ```dotnetcli
    dotnet new console
@@ -63,7 +63,7 @@ namespace HelloWorld
 
 ## <a name="run-the-app"></a>アプリを実行する
 
-**ターミナル**で次のコマンドを実行します。
+**ターミナル** で次のコマンドを実行します。
 
 ```dotnetcli
 dotnet run
@@ -120,7 +120,7 @@ dotnet run
 
 ## <a name="next-steps"></a>次の手順
 
-このチュートリアルでは、.NET Core コンソール アプリケーションを作成しました。 次のチュートリアルでは、アプリをデバッグします。
+このチュートリアルでは、.NET コンソール アプリケーションを作成しました。 次のチュートリアルでは、アプリをデバッグします。
 
 > [!div class="nextstepaction"]
-> [Visual Studio Code を使用して .NET Core コンソール アプリケーションをデバッグする](debugging-with-visual-studio-code.md)
+> [Visual Studio Code を使用して .NET コンソール アプリケーションをデバッグする](debugging-with-visual-studio-code.md)

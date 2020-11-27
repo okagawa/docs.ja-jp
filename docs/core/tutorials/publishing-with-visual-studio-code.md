@@ -1,29 +1,29 @@
 ---
-title: Visual Studio Code を使用して .NET Core コンソール アプリケーションを発行する
-description: 発行では、.NET Core アプリケーションを実行するために必要なファイルのセットを作成します。
-ms.date: 07/04/2020
-ms.openlocfilehash: 79c69546b79de3d702fb4bb6550e615d8d59fa74
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+title: Visual Studio Code を使用して .NET コンソール アプリケーションを発行する
+description: Visual Studio Code と .NET CLI を使用して、.NET アプリケーションを実行するために必要なファイルのセットを作成する方法について学習します。
+ms.date: 11/17/2020
+ms.openlocfilehash: 9cfe490203d2d3254103ad2f0a4c4ff74972ec64
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495526"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94915890"
 ---
-# <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>チュートリアル: Visual Studio Code を使用して .NET Core コンソール アプリケーションを発行する
+# <a name="tutorial-publish-a-net-console-application-using-visual-studio-code"></a>チュートリアル: Visual Studio Code を使用して .NET コンソール アプリケーションを発行する
 
 このチュートリアルでは、他のユーザーが実行できるコンソール アプリを発行する方法について説明します。 発行では、アプリケーションを実行するために必要なファイルのセットを作成します。 ファイルを配置するには、それをターゲット マシンにコピーします。
 
-.NET Core CLI はアプリの発行に使用されるため、必要に応じて、Visual Studio Code 以外のコード エディターを使用してこのチュートリアルを実行することができます。
+.NET CLI はアプリの発行に使用されるため、必要に応じて Visual Studio Code 以外のコード エディターを使ってこのチュートリアルに従うことができます。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- このチュートリアルでは、「[Visual Studio Code を使用して .NET Core コンソール アプリケーションを作成する](with-visual-studio-code.md)」で作成したコンソール アプリを使用します。
+- このチュートリアルでは、「[Visual Studio Code を使用して .NET コンソール アプリケーションを作成する](with-visual-studio-code.md)」で作成するコンソール アプリを使用します。
 
 ## <a name="publish-the-app"></a>アプリの発行
 
 1. Visual Studio Code を開始します。
 
-1. 「[Visual Studio Code を使用して .NET Core コンソール アプリケーションを作成する](with-visual-studio-code.md)」で作成した *HelloWorld* プロジェクト フォルダーを開きます。
+1. 「[Visual Studio Code を使用して .NET コンソール アプリケーションを作成する](with-visual-studio-code.md)」で作成した *HelloWorld* プロジェクト フォルダーを開きます。
 
 1. メイン メニューから **[表示]**  >  **[ターミナル]** の順に選択します。
 
@@ -50,13 +50,13 @@ ms.locfileid: "89495526"
 
 ## <a name="inspect-the-files"></a>ファイルを検査する
 
-この発行プロセスでは、フレームワークに依存する配置が既定で作成されます。これは、.NET Core のランタイムがインストールされているコンピューターで、発行されたアプリケーションが実行される配置の種類です。 発行されたアプリを実行するには、実行可能ファイルを使用するか、コマンド プロンプトから `dotnet HelloWorld.dll` コマンドを実行します。
+この発行プロセスでは、フレームワークに依存する展開が既定で作成されます。これは、.NET ランタイムがインストールされているコンピューターで、発行されたアプリケーションが実行される展開の種類です。 発行されたアプリを実行するには、実行可能ファイルを使用するか、コマンド プロンプトから `dotnet HelloWorld.dll` コマンドを実行します。
 
 次の手順で、発行プロセスによって作成されるファイルを確認します。
 
 1. 左側のナビゲーション バーで **[エクスプローラー]** を選択します。
 
-1. *bin/Release/netcoreapp3.1/publish* を展開します。
+1. *bin/Release/net5.0/publish* を展開します。
 
    :::image type="content" source="media/publishing-with-visual-studio-code/published-files-output.png" alt-text="発行されたファイルを表示しているエクスプローラー":::
 
@@ -64,11 +64,11 @@ ms.locfileid: "89495526"
 
    * *HelloWorld.deps.json*
 
-      このファイルは、アプリケーションのランタイム依存関係ファイルです。 これは、アプリの実行に必要な .NET Core コンポーネントとライブラリ (アプリケーションが含まれる動的リンク ライブラリを含む) を定義します。 詳細については、「[ランタイム構成ファイル](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)」を参照してください。
+      このファイルは、アプリケーションのランタイム依存関係ファイルです。 アプリの実行に必要な .NET コンポーネントとライブラリ (アプリケーションが含まれる動的リンク ライブラリを含む) を定義します。 詳細については、「[ランタイム構成ファイル](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)」を参照してください。
 
    * *HelloWorld.dll*
 
-      これは、[フレームワークに依存する展開](../deploying/deploy-with-cli.md#framework-dependent-deployment)バージョンのアプリケーションです。 このダイナミック リンク ライブラリを実行するには、コマンド プロンプトで`dotnet HelloWorld.dll` を入力します。 アプリ実行のこの方法は、.NET Core ランタイムがインストールされている任意のプラットフォームで動作します。
+      これは、[フレームワークに依存する展開](../deploying/deploy-with-cli.md#framework-dependent-deployment)バージョンのアプリケーションです。 このダイナミック リンク ライブラリを実行するには、コマンド プロンプトで`dotnet HelloWorld.dll` を入力します。 このアプリの実行方法は、.NET ランタイムがインストールされている任意のプラットフォームで動作します。
 
    * *HelloWorld.exe* (Linux では *HelloWorld*、macOS では作成されません。)
 
@@ -80,11 +80,11 @@ ms.locfileid: "89495526"
 
    * *HelloWorld.runtimeconfig.json*
 
-      これは、アプリケーションのランタイム構成ファイルです。 ビルドされたアプリケーションが実行時に基盤とする .NET Core のバージョンを識別します。 構成オプションを追加することもできます。 詳細については、「[.NET Core ランタイム構成設定](../run-time-config/index.md#runtimeconfigjson)」を参照してください。
+      これは、アプリケーションのランタイム構成ファイルです。 ビルドされたアプリケーションの実行対象となる .NET のバージョンを識別します。 構成オプションを追加することもできます。 詳細については、[.NET ランタイム構成設定](../run-time-config/index.md#runtimeconfigjson)に関する記事を参照してください。
 
 ## <a name="run-the-published-app"></a>発行済みアプリを実行する
 
-1. **エクスプローラー**で、*publish* フォルダーを右クリック (macOS では <kbd>Ctrl</kbd> キーを押しながらクリック) して、 **[ターミナルで開く]** を選択します。
+1. **エクスプローラー** で、*publish* フォルダーを右クリック (macOS では <kbd>Ctrl</kbd> キーを押しながらクリック) して、 **[ターミナルで開く]** を選択します。
 
    :::image type="content" source="media/publishing-with-visual-studio-code/open-in-terminal.png" alt-text="[ターミナルで開く] を表示しているコンテキスト メニュー":::
 
@@ -104,11 +104,11 @@ ms.locfileid: "89495526"
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-- [.NET Core アプリケーションの展開](../deploying/index.md)
+- [.NET アプリケーションの配置](../deploying/index.md)
 
 ## <a name="next-steps"></a>次の手順
 
 このチュートリアルでは、コンソール アプリを発行しました。 次のチュートリアルでは、クラス ライブラリを作成します。
 
 > [!div class="nextstepaction"]
-> [Visual Studio Code を使用して .NET Core コンソール アプリケーションを作成する](library-with-visual-studio-code.md)
+> [Visual Studio Code を使用して .NET クラス ライブラリを作成する](library-with-visual-studio-code.md)

@@ -4,16 +4,16 @@ description: .NET for Apache Spark について説明します。これは、.NE
 author: mamccrea
 ms.topic: overview
 ms.date: 10/09/2020
-ms.openlocfilehash: 2c743cf7f88d857fb87aed123bd687c353fd8b84
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 533a4d3b497ad499edcf3accf250477c03f98714
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955357"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688034"
 ---
 # <a name="what-is-net-for-apache-spark"></a>.NET for Apache Spark とは
 
-[Apache Spark](what-is-spark.md) は、大規模なデータ セット (一般的にテラバイトまたはペタバイト規模のデータ) の分析に使用される汎用の分散処理エンジンです。 .NET for Apache Spark は、人気のあるオープンソースのビッグ データ分析フレームワークのための、オープンソースでクロスプラットフォームの無料の .NET サポートです。既に知っている言語を使用して、Apache Spark の機能をビッグ データ アプリケーションに追加できるようになりました。
+[Apache Spark](what-is-spark.md) は、大規模なデータ セット (一般的にテラバイトまたはペタバイト規模のデータ) の分析に使用される汎用の分散処理エンジンです。 .NET for Apache Spark は、人気のあるオープンソースのビッグ データ分析フレームワークのための、[オープンソース](https://github.com/dotnet/spark)でクロスプラットフォームの無料の .NET サポートです。既に知っている言語を使用して、Apache Spark の機能をビッグ データ アプリケーションに追加できるようになりました。
 
 ## <a name="why-choose-net-for-apache-spark"></a>.NET for Apache Spark を選択する理由
 

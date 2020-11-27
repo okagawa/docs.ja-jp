@@ -2,7 +2,6 @@
 title: Dispose メソッドの実装
 description: この記事では、.NET のコードで使用されるアンマネージド リソースを解放する Dispose メソッドを実装する方法について説明します。
 ms.date: 09/08/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 863f78daf13ae9d795c37c1c6f428d387b9a026b
-ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
+ms.openlocfilehash: ec731ff4c1020100c2b7ff5041d42291141a5209
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90022923"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982408"
 ---
 # <a name="implement-a-dispose-method"></a>Dispose メソッドの実装
 
@@ -79,7 +78,7 @@ ms.locfileid: "90022923"
 
   - **大量のメモリを消費するか、不足しているリソースを消費するマネージド オブジェクト。** `null` に大きなマネージド オブジェクト参照を割り当てて、到達不能の可能性が高くなるようにします。 これにより、非決定的に要求された場合よりも早く解放されます。また、これは通常、条件付きブロックの外で行われます。
 
-メソッドの呼び出し元がファイナライザーの場合、アンマネージ リソースを解放するコードだけを実行する必要があります。 実装側は、正しくないパスが、再利用された可能性があるマネージド オブジェクトと対話しないことを保証する必要があります。 これが重要なのは、ガベージ コレクターがマネージド オブジェクトを破棄する順序が非確定的であるためです。
+メソッドの呼び出し元がファイナライザーの場合、アンマネージ リソースを解放するコードだけを実行する必要があります。 実装側は、正しくないパスが再利用された可能性があるマネージド オブジェクトと対話しないことを確保する必要があります。 これが重要なのは、ガベージ コレクターがマネージド オブジェクトを破棄する順序が非確定的であるためです。
 
 ## <a name="cascade-dispose-calls"></a>カスケード破棄呼び出し
 

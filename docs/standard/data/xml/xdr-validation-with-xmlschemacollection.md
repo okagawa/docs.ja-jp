@@ -1,17 +1,16 @@
 ---
 title: XmlSchemaCollection を使用した XDR 検証
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
-ms.openlocfilehash: c1383dbb5419eadbfb7c07f288ee46b1ca11cf5c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9edde2fc0da97b570162775a33c95d472cda974b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709999"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819280"
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>XmlSchemaCollection を使用した XDR 検証
 
@@ -70,7 +69,7 @@ Namespace ValidationSample
         End Sub
 
         Public Shared Sub ValidationHandler(sender As Object, args As ValidationEventArgs)
-            Console.WriteLine("***Validation error")
+            Console.WriteLine("**_Validation error")
             Console.WriteLine($"Severity:{args.Severity}")
             Console.WriteLine($"Message:{args.Message}")
         End Sub
@@ -123,7 +122,7 @@ namespace ValidationSample
 
         public static void ValidationHandler(object sender, ValidationEventArgs args)
         {
-            Console.WriteLine("***Validation error");
+            Console.WriteLine("_*_Validation error");
             Console.WriteLine($"\tSeverity:{args.Severity}");
             Console.WriteLine($"\tMessage:{args.Message}");
         }
@@ -131,7 +130,7 @@ namespace ValidationSample
 }
 ```
 
-検証対象の入力ファイル *HeadCount.xml* の内容について、次に概略を示します。
+検証対象の入力ファイル _HeadCount.xml* の内容について、次に概略を示します。
 
 ```xml
 <!--Load HeadCount.xdr in SchemaCollection for Validation-->

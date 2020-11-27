@@ -4,12 +4,12 @@ description: .NET for Apache Spark ワーカーとユーザー定義関数のバ
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 001798bfda628ce979570bcd89e7c5553347b275
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 19ecd4736baaf789a409229d35a6946c6021db45
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91954959"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688190"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>.NET for Apache Spark ワーカーとユーザー定義関数のバイナリを展開する
 
@@ -26,7 +26,7 @@ ms.locfileid: "91954959"
 | 環境変数         | 説明
 | :--------------------------- | :----------
 | DOTNET_WORKER_DIR            | <code>Microsoft.Spark.Worker</code> バイナリが生成されるパス。</br>これは Spark ドライバーによって使用され、Spark Executor に渡されます。 この変数を設定しないと、Spark Executor は <code>PATH</code> 環境変数から指定したパスを検索します。</br>_例:"C:\bin\Microsoft.Spark.Worker"_
-| DOTNET_ASSEMBLY_SEARCH_PATHS | <code>Microsoft.Spark.Worker</code> がアセンブリを読み込むコンマ区切りのパス。</br>パスが "." で始まる場合、作業ディレクトリが先頭に追加されます。 **yarn モード**の場合、"." はコンテナーの作業ディレクトリを表します。</br>_例:"C:\Users\\&lt;ユーザー名&gt;\\&lt;mysparkapp&gt;\bin\Debug\\&lt;dotnet バージョン&gt;"_
+| DOTNET_ASSEMBLY_SEARCH_PATHS | <code>Microsoft.Spark.Worker</code> がアセンブリを読み込むコンマ区切りのパス。</br>パスが "." で始まる場合、作業ディレクトリが先頭に追加されます。 **yarn モード** の場合、"." はコンテナーの作業ディレクトリを表します。</br>_例:"C:\Users\\&lt;ユーザー名&gt;\\&lt;mysparkapp&gt;\bin\Debug\\&lt;dotnet バージョン&gt;"_
 | DOTNET_WORKER_DEBUG          | <a href="https://github.com/dotnet/spark/blob/master/docs/developer-guide.md#debugging-user-defined-function-udf">UDF をデバッグしたい</a>場合、<code>spark-submit</code> の実行前にこの環境変数を <code>1</code> に設定します。
 
 ### <a name="parameter-options"></a>パラメーター オプション
@@ -60,7 +60,7 @@ ms.locfileid: "91954959"
 ### <a name="after-submitting-my-spark-application-i-get-the-error-systemtypeloadexception-could-not-load-type-systemruntimeremotingcontextscontext"></a>自分の Spark アプリケーションの送信後、エラー `System.TypeLoadException: Could not load type 'System.Runtime.Remoting.Contexts.Context'` が表示されます。
 > **エラー:** [エラー] [TaskRunner] [0] ProcessStream() が次の例外で失敗しました:System.TypeLoadException:型 'System.Runtime.Remoting.Contexts.Context' をアセンブリ 'mscorlib から読み込むことができませんでした, Version=4.0.0.0, Culture=neutral, PublicKeyToken=...'.
 
-**回答:** お使いの `Microsoft.Spark.Worker` のバージョンを確認してください。 **.NET Framework 4.6.1** と **.NET Core 2.1.x** の 2 つのバージョンがあります。 `System.Runtime.Remoting.Contexts.Context` は .NET Framework のみ用であるため、この場合は、([ダウンロード](https://github.com/dotnet/spark/releases)可能な) `Microsoft.Spark.Worker.net461.win-x64-<version>` を使用する必要があります。
+**回答:** お使いの `Microsoft.Spark.Worker` のバージョンを確認してください。 **.NET Framework 4.6.1** と **.NET Core 3.1.x** の 2 つのバージョンがあります。 `System.Runtime.Remoting.Contexts.Context` は .NET Framework のみ用であるため、この場合は、([ダウンロード](https://github.com/dotnet/spark/releases)可能な) `Microsoft.Spark.Worker.net461.win-x64-<version>` を使用する必要があります。
 
 ### <a name="how-do-i-run-my-spark-application-with-udfs-on-yarn-which-environment-variables-and-parameters-should-i-use"></a>YARN 上の UDF で spark アプリケーションはどのように実行できますか。 どの環境変数とパラメーターを使用すればよいでしょう。
 
@@ -74,7 +74,7 @@ spark-submit \
 --conf spark.yarn.appMasterEnv.DOTNET_WORKER_DIR=./worker/Microsoft.Spark.Worker-<version> \
 --conf spark.yarn.appMasterEnv.DOTNET_ASSEMBLY_SEARCH_PATHS=./udfs \
 --archives hdfs://<path to your files>/Microsoft.Spark.Worker.net461.win-x64-<version>.zip#worker,hdfs://<path to your files>/mySparkApp.zip#udfs \
-hdfs://<path to jar file>/microsoft-spark-2.4.x-<version>.jar \
+hdfs://<path to jar file>/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar \
 hdfs://<path to your files>/mySparkApp.zip mySparkApp
 ```
 

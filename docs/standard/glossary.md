@@ -1,14 +1,13 @@
 ---
 title: .NET 用語集
 description: .NET のドキュメントで使われている用語からいくつか選択してその意味を説明します。
-ms.date: 10/13/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: 3de9e0aea253b42d65199dc3d66f026dd023f4c7
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.date: 11/16/2020
+ms.openlocfilehash: 143657b4ec360640c0a43099ca5c1c0d9c863453
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224405"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687780"
 ---
 # <a name="net-glossary"></a>.NET 用語集
 
@@ -52,15 +51,22 @@ ASP.NET のクロスプラットフォームで高パフォーマンスなオー
 
 アプリケーションまたは他のアセンブリから呼び出すことができる API のコレクションを含む *.dll*/ *.exe* ファイル。
 
-アセンブリは、インターフェイス、クラス、構造体、列挙型、デリゲートなどの種類を含むことができます。 プロジェクトの *bin* フォルダー内のアセンブリは、" *バイナリ* " と呼ばれることもあります。 「[ライブラリ](#library)」もご覧ください。
+アセンブリは、インターフェイス、クラス、構造体、列挙型、デリゲートなどの種類を含むことができます。 プロジェクトの *bin* フォルダー内のアセンブリは、"*バイナリ*" と呼ばれることもあります。 「[ライブラリ](#library)」もご覧ください。
 
 ## <a name="bcl"></a>BCL
 
-基本クラス ライブラリ。 " *フレームワーク ライブラリ* " とも呼ばれます。
+基本クラス ライブラリ。
 
 System.\* (および限られた範囲の Microsoft.\*) 名前空間を構成するライブラリのセット。 BCL は汎用の下位レベル フレームワークであり、ASP.NET Core などの上位レベル アプリケーション フレームワークはそれを基にして構築されています。
 
-[.NET 5 (および .NET Core) 以降のバージョン](#net-5-and-later-versions)用の BCL のソース コードは、[.NET ランタイム リポジトリ](https://github.com/dotnet/runtime)に含まれています。 この新しい .NET の実装用の BCL API の大部分は、.NET Framework でも使用できるため、このソース コードは、.NET Framework BCL ソース コードが分岐したものと考えることができます。
+[.NET 5 (および .NET Core) 以降のバージョン](#net-5-and-later-versions)用の BCL のソース コードは、[.NET ランタイム リポジトリ](https://github.com/dotnet/runtime)に含まれています。 BCL API の大部分は、.NET Framework でも使用できるため、このソース コードは、.NET Framework BCL ソース コードが分岐したものと考えることができます。
+
+次の用語は、多くの場合、BCL が参照するのと同じ API のコレクションを意味します。
+
+- [Core .NET ライブラリ](../core/compatibility/3.1-5.0.md#core-net-libraries)
+- [フレームワーク ライブラリ](#framework-libraries)
+- [ランタイム ライブラリ](#runtime)
+- [共有フレームワーク](#shared-framework)
 
 ## <a name="clr"></a>CLR
 
@@ -106,12 +112,18 @@ Linux、Windows、iOS など、複数の異なるオペレーティング シス
 
 以下の用語の "フレームワーク" という単語には、別の意味があります。
 
+- [フレームワーク ライブラリ](#framework-libraries)
 - [.NET Framework](#net-framework)
+- [共有フレームワーク](#shared-framework)
 - [ターゲット フレームワーク](#target-framework)
 - [TFM (ターゲット フレームワーク モニカー)](#tfm)
 - [フレームワークに依存するアプリ](../core/deploying/index.md#publish-framework-dependent)
 
-従来の .NET ドキュメントでは、"フレームワーク" は [.NET の実装](#implementation-of-net)を指している場合があります。 たとえば、ある記事では .NET 5 をフレームワークと呼んでいる場合があります。
+"フレームワーク" は、[.NET の実装](#implementation-of-net)を意味する場合があります。 たとえば、ある記事では .NET 5 をフレームワークと呼んでいる場合があります。
+
+## <a name="framework-libraries"></a>フレームワーク ライブラリ
+
+意味はコンテキストによって異なります。 [.NET 5 (および .NET Core) 以降のバージョンのフレームワーク ライブラリ](#net-5-and-later-versions)を意味する場合があります。この場合、[BCL](#bcl) が意味するのと同じライブラリを意味します。 また、BCL 上に構築され、Web アプリ用に追加の API を提供する ASP.NET Core フレームワーク ライブラリを意味する場合もあります。
 
 ## <a name="gc"></a>[GC]
 
@@ -213,7 +225,7 @@ UWP は、.NET Native によってサポートされる最初のアプリケー�
 
 [.NET 5 (および .NET Core) 以降のバージョン](#net-5-and-later-versions)用の .NET アプリケーションとライブラリを開発者が作成できるようにする、一連のライブラリとツール。 .NET Core SDK とも呼ばれます。
 
-アプリ構築用の [.NET CLI](#net-cli)、アプリの構築および実行用の .NET ライブラリとランタイム、CLI コマンドとアプリケーションを実行する dotnet 実行可能ファイル ( *dotnet.exe* ) が含まれます。
+アプリ構築用の [.NET CLI](#net-cli)、アプリの構築および実行用の .NET ライブラリとランタイム、CLI コマンドとアプリケーションを実行する dotnet 実行可能ファイル (*dotnet.exe*) が含まれます。
 
 [.NET SDK の概要](../core/sdk.md)に関するページを参照してください。
 
@@ -258,21 +270,34 @@ NuGet パッケージ &mdash; または単にパッケージ &mdash; は、同�
 - .NET Native (UWP の場合)
 - Mono ランタイム
 
-以下のコンテキストでの "ランタイム" という単語には、別の意味があります。
+一部のコンテキストでの "ランタイム" という単語には、別の意味があります。
 
-* [.NET ダウンロード ページ](https://dotnet.microsoft.com/download)。
+* [.NET 5.0 のダウンロード ページ](https://dotnet.microsoft.com/download/dotnet/5.0)の " *.NET ランタイム*"
 
-  ここでの "ランタイム" は、[CLR](#clr) と [BCL](#bcl) (フレームワーク ライブラリ) を合わせた意味となります。これは、コンピューター上で[フレームワークに依存する](../core/deploying/index.md#publish-framework-dependent)アプリを実行できるように、そのコンピューターにダウンロードしてインストールすることができます。
+  " *.NET ランタイム*" またはその他のランタイム ("*ASP.NET Core ランタイム*" など) をダウンロードできます。 この用法での "*ランタイム*" は、マシン上で[フレームワークに依存する](../core/deploying/index.md#publish-framework-dependent)アプリを実行するためにマシンにインストールする必要があるコンポーネントのセットです。 .NET ランタイムには、[CLR](#clr) と .NET [共有フレームワーク](#shared-framework)が含まれています。これにより、[BCL](#bcl) が提供されます。
 
-* [.NET 5 (および .NET Core) 以降のバージョン](#net-5-and-later-versions)の[ランタイム識別子 (RID)](../core/rid-catalog.md)。
+* " *.NET ランタイム ライブラリ*"
 
-  ここでの "ランタイム" は、.NET アプリが実行されている OS プラットフォームと CPU アーキテクチャを意味します (例: `linux-x64`)。
+  [BCL](#bcl) が意味するのと同じライブラリを意味します。 ただし、ASP.NET Core ランタイムなどの他のランタイムには、BCL 上に構築されたその他のライブラリと共に、異なる[共有フレームワーク](#shared-framework)があります。
 
-従来の .NET ドキュメントでは、次の例に示すように、[.NET の実装](#implementation-of-net)の意味で "ランタイム" を使用することがあります。
+* [ランタイム識別子 (RID)](../core/rid-catalog.md)
 
-- "さまざまな .NET ランタイムで、.NET Standard の特定のバージョンが実装されます。"
-- "複数のランタイムでの実行を意図したライブラリは、このフレームワークを対象とする必要があります。" (.NET Standard を指している場合)
-- "さまざまな .NET ランタイムで、.NET Standard の特定のバージョンが実装されます。 … .NET ランタイムの各バージョンは、サポートしている .NET Standard の最高のバージョンをアドバタイズします …"
+  ここでの "*ランタイム*" は、.NET アプリが実行されている OS プラットフォームと CPU アーキテクチャを意味します (例: `linux-x64`)。
+
+* 次の例に示すように、"ランタイム" は [.NET の実装](#implementation-of-net)の意味で使用されることがあります。
+
+  - "さまざまな .NET ランタイムで、.NET Standard の特定のバージョンが実装されます。 … .NET ランタイムの各バージョンは、サポートしている .NET Standard の最高のバージョンをアドバタイズします …"
+  - "複数のランタイムでの実行を意図したライブラリは、このフレームワークを対象とする必要があります。" (.NET Standard を指している場合)
+
+## <a name="shared-framework"></a>共有フレームワーク
+
+意味はコンテキストによって異なります。 " *.NET 共有フレームワーク*" は、[.NET ランタイム](#runtime)に含まれるライブラリを意味します。 この場合、[.NET 5 (および .NET Core) 以降のバージョン](#net-5-and-later-versions)の "*共有フレームワーク*" は、[BCL](#bcl) が意味するのと同じライブラリを意味します。
+
+共有フレームワークは他にもあります。 "*ASP.NET Core 共有フレームワーク*" は、[ASP.NET Core ランタイム](#runtime)に含まれるライブラリを意味します。これには、BCL に加えて、Web アプリで使用される追加の API が含まれています。
+
+[フレームワークに依存するアプリ](../core/deploying/index.md#publish-framework-dependent)の場合、共有フレームワークは、アプリを実行するマシンのフォルダーにインストールされたアセンブリに含まれているライブラリで構成されます。 [自己完結型アプリ](../core/deploying/index.md#publish-self-contained)の場合、共有フレームワーク アセンブリはアプリに含まれています。
+
+詳細については、「[Deep-dive into .NET Core primitives, part 2: the shared framework](https://natemcmaster.com/blog/2018/08/29/netcore-primitives-2/)」(.NET Core プリミティブの詳細、パート 2: 共有フレームワーク) を参照してください。
 
 ## <a name="stack"></a>スタック
 
@@ -308,7 +333,7 @@ NuGet パッケージ &mdash; または単にパッケージ &mdash; は、同�
 
 誰かがビルドしているアプリの種類。 [アプリ モデル](#app-model)よりも一般的です。 たとえば、これを含むすべての .NET ドキュメント ページの上部には、 **[ワークロード]** のドロップダウン リストがあります。これにより、 **[Web]** 、 **[モバイル]** 、 **[クラウド]** 、 **[デスクトップ]** 、 **[機械学習 \& データ]** 用のドキュメントに切り替えることができます。
 
-コンテキストによっては、" *ワークロード* " は、特定の種類のアプリをサポートするために、インストールできる Visual Studio 機能のコレクションを指します。 例については、「[ワークロードを選択する](../core/install/windows.md#select-a-workload)」を参照してください。
+コンテキストによっては、"*ワークロード*" は、特定の種類のアプリをサポートするために、インストールできる Visual Studio 機能のコレクションを指します。 例については、「[ワークロードを選択する](../core/install/windows.md#select-a-workload)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

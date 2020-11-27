@@ -4,12 +4,12 @@ description: .NET SDK によって認識される MSBuild のプロパティと�
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 463e2a163e6a20f5631b0ab82462614834156ae3
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: ecd1cf405f661d0025553974f92fa1401b13220d
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063229"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687472"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK プロジェクトの MSBuild リファレンス
 
@@ -111,7 +111,7 @@ ms.locfileid: "93063229"
 
 ### <a name="trimmerrootassembly"></a>TrimmerRootAssembly
 
-`TrimmerRootAssembly` 項目ではアセンブリを " [*トリミング*](../deploying/trim-self-contained.md)" から除外できます。 トリミングとは、パッケージ化されたアプリケーションからランタイムの未使用部分を削除するプロセスです。 必要な参照がトリミングによって間違って削除されることもあります。
+`TrimmerRootAssembly` 項目ではアセンブリを "[*トリミング*](../deploying/trim-self-contained.md)" から除外できます。 トリミングとは、パッケージ化されたアプリケーションからランタイムの未使用部分を削除するプロセスです。 必要な参照がトリミングによって間違って削除されることもあります。
 
 次の XML では、トリミングから `System.Security` アセンブリが除外されます。
 
@@ -123,7 +123,7 @@ ms.locfileid: "93063229"
 
 ### <a name="useapphost"></a>UseAppHost
 
-`UseAppHost` プロパティは、.NET SDK の 2.1.400 バージョンで導入されました。 デプロイ用にネイティブ実行可能ファイルを作成するかどうかを制御できます。 自己完結型の配置にはネイティブの実行可能ファイルが必要です。
+`UseAppHost` プロパティにより、デプロイ用にネイティブ実行可能ファイルを作成するかどうかが制御されます。 自己完結型の配置にはネイティブの実行可能ファイルが必要です。
 
 .NET Core 3.0 以降のバージョンでは、既定でフレームワークに依存する実行可能ファイルが作成されます。 実行可能ファイルの生成を無効にするには、`UseAppHost` プロパティを `false` に設定します。
 
@@ -142,7 +142,7 @@ ms.locfileid: "93063229"
 
 ### <a name="embeddedresourceusedependentuponconvention"></a>EmbeddedResourceUseDependentUponConvention
 
-`EmbeddedResourceUseDependentUponConvention` プロパティは、リソース マニフェスト ファイル名が、リソース ファイルと併置されているソース ファイルの型情報から生成されるかどうかを定義します。 たとえば、 *Form1.vb* が *Form1.cs* と同じフォルダーにあり、`EmbeddedResourceUseDependentUponConvention` が `true` に設定されている場合、生成された *.resources* ファイルは *Form1.cs* で定義されている最初の型から名前を受け取ります。 たとえば、`MyNamespace.Form1` が *Form1.cs* で定義されている最初の型である場合、生成されたファイル名は *MyNamespace.Form1.resources* になります。
+`EmbeddedResourceUseDependentUponConvention` プロパティは、リソース マニフェスト ファイル名が、リソース ファイルと併置されているソース ファイルの型情報から生成されるかどうかを定義します。 たとえば、*Form1.vb* が *Form1.cs* と同じフォルダーにあり、`EmbeddedResourceUseDependentUponConvention` が `true` に設定されている場合、生成された *.resources* ファイルは *Form1.cs* で定義されている最初の型から名前を受け取ります。 たとえば、`MyNamespace.Form1` が *Form1.cs* で定義されている最初の型である場合、生成されたファイル名は *MyNamespace.Form1.resources* になります。
 
 > [!NOTE]
 > `LogicalName`、`ManifestResourceName`、または `DependentUpon` メタデータが `EmbeddedResource` 項目に対して指定されている場合、そのリソース ファイルに対して生成されたマニフェスト ファイル名は、代わりにそのメタデータがベースになります。
@@ -354,7 +354,7 @@ ms.locfileid: "93063229"
 - [PackageReference](#packagereference)
 - [ProjectReference](#projectreference)
 - [参照](#reference)
-- [Restore プロパティ](#restore-properties)
+- [復元関連のプロパティ](#restore-related-properties)
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
 
@@ -412,13 +412,44 @@ ms.locfileid: "93063229"
 </ItemGroup>
 ```
 
-### <a name="restore-properties"></a>restore のプロパティ
+### <a name="restore-related-properties"></a>復元関連のプロパティ
 
 参照されたパッケージを復元すると、その直接的な依存関係と間接的な依存関係がすべてインストールされます。 `RestorePackagesPath` や `RestoreIgnoreFailedSources` など、プロパティを指定することでパッケージ復元をカスタマイズできます。 以上のプロパティとその他のプロパティの詳細については、「[restore ターゲット](/nuget/reference/msbuild-targets#restore-target)」を参照してください。
 
 ```xml
 <PropertyGroup>
   <RestoreIgnoreFailedSource>true</RestoreIgnoreFailedSource>
+</PropertyGroup>
+```
+
+## <a name="hosting-properties-and-items"></a>ホストのプロパティと項目
+
+- [EnableComHosting](#enablecomhosting)
+- [EnableDynamicLoading](#enabledynamicloading)
+
+### <a name="enablecomhosting"></a>EnableComHosting
+
+`EnableComHosting` プロパティは、アセンブリで COM サーバーが提供されることを示します。 `EnableComHosting` を `true` に設定することは、[EnableDynamicLoading](#enabledynamicloading) が `true` であることも意味します。
+
+```xml
+<PropertyGroup>
+  <EnableComHosting>True</EnableComHosting>
+</PropertyGroup>
+```
+
+詳細については、[COM への .NET コンポーネントの公開](../native-interop/expose-components-to-com.md)に関するページを参照してください。
+
+### <a name="enabledynamicloading"></a>EnableDynamicLoading
+
+`EnableDynamicLoading` プロパティは、アセンブリが動的に読み込まれたコンポーネントであることを示します。 コンポーネントには、[COM ライブラリ](/windows/win32/com/the-component-object-model)、または[ネイティブ ホストから使用](../tutorials/netcore-hosting.md)できる非 COM ライブラリを指定できます。 このプロパティを `true` に設定すると、次のような効果があります。
+
+- " *.runtimeconfig.json*" ファイルが生成される。
+- [ロール フォワード](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward)が `LatestMinor` に設定される。
+- NuGet 参照がローカルにコピーされる。
+
+```xml
+<PropertyGroup>
+  <EnableDynamicLoading>true</EnableDynamicLoading>
 </PropertyGroup>
 ```
 

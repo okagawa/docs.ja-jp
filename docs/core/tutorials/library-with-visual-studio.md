@@ -1,29 +1,29 @@
 ---
-title: Visual Studio を使用して .NET Standard クラス ライブラリを作成する
-description: Visual Studio を使用して .NET Standard クラス ライブラリを作成する方法について説明します。
+title: Visual Studio を使用して .NET クラス ライブラリを作成する
+description: Visual Studio を使用して .NET クラス ライブラリを作成する方法について学習します。
 ms.date: 08/07/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet,contperfq1
-ms.openlocfilehash: 45a44dcd73e1abcc8dfd75cd54da5a2310f027c4
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 3af08b5a92c61f29a3700a3417043170f41407bc
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89118261"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916151"
 ---
-# <a name="tutorial-create-a-net-standard-library-using-visual-studio"></a>チュートリアル: Visual Studio を使用して .NET Standard ライブラリを作成する
+# <a name="tutorial-create-a-net-class-library-using-visual-studio"></a>チュートリアル: Visual Studio を使用して .NET クラス ライブラリを作成する
 
 このチュートリアルでは、1 つの文字列処理メソッドを含むシンプルなクラス ライブラリを作成します。
 
-"*クラス ライブラリ*" は、アプリケーションから呼び出される型とメソッドを定義します。 .NET Standard 2.0 をターゲットとするクラス ライブラリでは、お使いのライブラリを、そのバージョンの .NET Standard をサポートする任意の .NET 実装によって呼び出すことができます。
+"*クラス ライブラリ*" は、アプリケーションから呼び出される型とメソッドを定義します。 ライブラリのターゲットが .NET Standard 2.0 である場合は、.NET Standard 2.0 をサポートする任意の .NET 実装 (.NET Framework を含む) で呼び出すことができます。 ライブラリのターゲットが .NET 5 である場合は、.NET 5 をターゲットとする任意のアプリケーションで呼び出すことができます。 このチュートリアルでは、.NET 5 をターゲットとする方法を示します。
 
-自分のクラス ライブラリが完成したら、NuGet パッケージとして配布するか、それを使用するアプリケーションにコンポーネントとしてバンドルして配布することができます。
+クラス ライブラリを作成するときに、NuGet パッケージとして、またはそれを使用するアプリケーションにバンドルされているコンポーネントとして配布できます。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>[前提条件]
 
-- **.NET Core クロスプラットフォーム開発**ワークロードがインストールされている [Visual Studio 2019 バージョン 16.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 このワークロードを選択すると、.NET Core 3.1 SDK が自動的にインストールされます。
+- **.NET Core クロスプラットフォーム開発** ワークロードがインストールされている [Visual Studio 2019 バージョン 16.8 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 このワークロードを選択すると、.NET 5.0 SDK が自動的にインストールされます。 このチュートリアルでは、 **[[新しいプロジェクト] にすべての .NET Core テンプレートを表示する]** が有効になっていることを前提とします。これについては、「[チュートリアル: Visual Studio を使用して .NET コンソール アプリケーションを作成する](with-visual-studio.md)」を参照してください。
 
 ## <a name="create-a-solution"></a>ソリューションを作成する
 
@@ -37,27 +37,27 @@ ms.locfileid: "89118261"
 
 3. **[新しいプロジェクトの作成]** ページで、検索ボックスに「**ソリューション**」と入力します。 **[空のソリューション]** テンプレートを選択して、 **[次へ]** を選択します。
 
-   ![Visual Studio での空のソリューション テンプレート](media/library-with-visual-studio/blank-solution.png)
+   :::image type="content" source="media/library-with-visual-studio/blank-solution.png" alt-text="Visual Studio での空のソリューション テンプレート":::
 
 4. **[新しいプロジェクトの構成]** ページで、 **[プロジェクト名]** ボックスに「**ClassLibraryProjects**」と入力します。 次に、 **[作成]** を選択します。
 
 ## <a name="create-a-class-library-project"></a>クラス ライブラリ プロジェクトを作成する
 
-1. "StringLibrary" という名前の新しい .NET Standard クラス ライブラリ プロジェクトをソリューションに追加します。
+1. "StringLibrary" という名前の新しい .NET クラス ライブラリ プロジェクトをソリューションに追加します。
 
-   1. **ソリューション エクスプローラー**でソリューションを右クリックし、 **[追加]**  >  **[新しいプロジェクト]** の順に選択します。
+   1. **ソリューション エクスプローラー** でソリューションを右クリックし、 **[追加]**  >  **[新しいプロジェクト]** の順に選択します。
 
-   1. **[新しいプロジェクトの追加]** ページで、検索ボックスに「**ライブラリ**」と入力します。 言語の一覧から **[C#]** または **[Visual Basic]** を選択し、次に、プラットフォームの一覧から **[すべてのプラットフォーム]** を選択します。 **[クラス ライブラリ (.NET Standard)]** テンプレートを選択し、 **[次へ]** を選択します。
+   1. **[新しいプロジェクトの追加]** ページで、検索ボックスに「**ライブラリ**」と入力します。 言語の一覧から **[C#]** または **[Visual Basic]** を選択し、次に、プラットフォームの一覧から **[すべてのプラットフォーム]** を選択します。 **[クラス ライブラリ]** テンプレートを選んでから、 **[次へ]** を選択します。
 
-   1. **[新しいプロジェクトの構成]** ページで、 **[プロジェクト名]** ボックスに「**StringLibrary**」と入力します。 次に、 **[作成]** を選択します。
+   1. **[新しいプロジェクトの構成]** ページで、 **[プロジェクト名]** ボックスに「**StringLibrary**」と入力してから、 **[次へ]** を選択します。
 
-1. ライブラリが正しいバージョンの .NET Standard をターゲットにしていることを確認します。 **ソリューション エクスプローラー** でライブラリ プロジェクトを右クリックし、 **[プロパティ]** を選択します。 **[ターゲット フレームワーク]** テキスト ボックスに、.NET Standard 2.0 がプロジェクトのターゲットになっていることが示されています。
+   1. **[追加情報]** ページで、 **[.NET 5.0 (Current)]** を選んでから、 **[作成]** を選択します。
 
-   ![クラス ライブラリのプロジェクト プロパティ](./media/library-with-visual-studio/library-project-properties.png)
+1. 確実にライブラリのターゲットが正しいバージョンの .NET になっていることを確かめます。 **ソリューション エクスプローラー** でライブラリ プロジェクトを右クリックし、 **[プロパティ]** を選択します。 **[ターゲット フレームワーク]** テキスト ボックスに、.NET 5.0 がプロジェクトのターゲットになっていることが示されています。
 
 1. Visual Basic を使用している場合は、 **[ルート名前空間]** テキスト ボックス内のテキストをクリアします。
 
-   ![クラス ライブラリのプロジェクト プロパティ](./media/library-with-visual-studio/vb/library-project-properties.png)
+   :::image type="content" source="./media/library-with-visual-studio/vb/library-project-properties.png" alt-text="クラス ライブラリのプロジェクト プロパティ":::
 
    プロジェクトごとに、そのプロジェクト名に対応する名前空間が Visual Basic によって自動的に作成されます。 このチュートリアルでは、コード ファイルで [`namespace`](../../visual-basic/language-reference/statements/namespace-statement.md) キーワードを使用して、最上位の名前空間を定義します。
 
@@ -76,15 +76,17 @@ ms.locfileid: "89118261"
 
 このクラス ライブラリを使用するコンソール アプリケーションを追加します。 アプリによって、ユーザーに文字列の入力が求められ、文字列が大文字で始まるかどうかが報告されます。
 
-1. "ShowCase" という名前の新しい .NET Core コンソール アプリケーションをソリューションに追加します。
+1. "ShowCase" という名前の新しい .NET コンソール アプリケーションをソリューションに追加します。
 
-   1. **ソリューション エクスプローラー**で、ソリューションを右クリックし、 **[追加]**  >  **[新しいプロジェクト]** の順に選択します。
+   1. **ソリューション エクスプローラー** で、ソリューションを右クリックし、 **[追加]**  >  **[新しいプロジェクト]** の順に選択します。
 
    1. **[新しいプロジェクトの追加]** ページで、検索ボックスに「**コンソール**」と入力します。 言語の一覧から **[C#]** または **[Visual Basic]** を選択し、次に、プラットフォームの一覧から **[すべてのプラットフォーム]** を選択します。
 
-   1. **[コンソール アプリ (.NET Core)]** テンプレートを選択し、 **[次へ]** を選択します。
+   1. **[コンソール アプリケーション]** テンプレートを選んでから、 **[次へ]** を選択します。
 
-   1. **[新しいプロジェクトの構成]** ページで、 **[プロジェクト名]** ボックスに「**ShowCase**」と入力します。 次に、 **[作成]** を選択します。
+   1. **[新しいプロジェクトの構成]** ページで、 **[プロジェクト名]** ボックスに「**ShowCase**」と入力します。 **[次へ]** を選びます。
+
+   1. **[追加情報]** ページで、 **[ターゲット フレームワーク]** ボックスの **[.NET 5.0 (Current)]** を選択します。 次に、 **[作成]** を選択します。
 
 1. *Program.cs* または *Program.vb* ファイルのコード ウィンドウで、すべてのコードを次のコードに置き換えます。
 
@@ -99,23 +101,23 @@ ms.locfileid: "89118261"
 
 最初は、新しいコンソール アプリ プロジェクトにクラス ライブラリへのアクセス権はありません。 クラス ライブラリでメソッドを呼び出せるようにするには、クラス ライブラリ プロジェクトへのプロジェクト参照を作成します。
 
-1. **ソリューション エクスプローラー**で、`ShowCase` プロジェクトの **[依存関係]** ノードを右クリックして、 **[プロジェクト参照の追加]** を選びます。
+1. **ソリューション エクスプローラー** で、`ShowCase` プロジェクトの **[依存関係]** ノードを右クリックして、 **[プロジェクト参照の追加]** を選びます。
 
-   ![Visual Studio の [参照の追加] コンテキスト メニュー](media/library-with-visual-studio/add-reference-context-menu.png)
+   :::image type="content" source="media/library-with-visual-studio/add-reference-context-menu.png" alt-text="Visual Studio の [参照の追加] コンテキスト メニュー":::
 
 1. **[参照マネージャー]** ダイアログ ボックスで、 **[StringLibrary]** プロジェクトを選び、 **[OK]** を選びます。
 
-   ![StringLibrary が選択された [参照マネージャー] ダイアログ](media/library-with-visual-studio/manage-project-references.png)
+   :::image type="content" source="media/library-with-visual-studio/manage-project-references.png" alt-text="StringLibrary が選択された [参照マネージャー] ダイアログ":::
 
 ## <a name="run-the-app"></a>アプリを実行する
 
-1. **ソリューション エクスプローラー**で、**ShowCase** プロジェクトを右クリックして、コンテキスト メニューで **[スタートアップ プロジェクトに設定]** を選びます。
+1. **ソリューション エクスプローラー** で、**ShowCase** プロジェクトを右クリックして、コンテキスト メニューで **[スタートアップ プロジェクトに設定]** を選びます。
 
-   ![スタートアップ プロジェクトを設定する Visual Studio プロジェクトのコンテキスト メニュー](media/library-with-visual-studio/set-startup-project-context-menu.png)
+   :::image type="content" source="media/library-with-visual-studio/set-startup-project-context-menu.png" alt-text="スタートアップ プロジェクトを設定する Visual Studio プロジェクトのコンテキスト メニュー":::
 
 1. <kbd>Ctrl</kbd>+<kbd>F5</kbd> キーを押して、デバッグなしでプログラムをコンパイルして実行します。
 
-   ![[デバッグ] ボタンを示している Visual Studio プロジェクトのツールバー](media/library-with-visual-studio/visual-studio-project-toolbar.png)
+   :::image type="content" source="media/library-with-visual-studio/visual-studio-project-toolbar.png" alt-text="[デバッグ] ボタンを示している Visual Studio プロジェクトのツールバー":::
 
 1. 文字列を入力して <kbd>Enter</kbd> キーを押してプログラムを実行し、<kbd>Enter</kbd> キーを押して終了します。
 
@@ -123,15 +125,14 @@ ms.locfileid: "89118261"
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-* [.NET Core CLI を使用したライブラリの開発](libraries.md)
-* [.NET Standard のバージョンとそれらでサポートされているプラットフォーム](../../standard/net-standard.md)。
+* [.NET CLI を使用してライブラリを開発する](libraries.md)
 
 ## <a name="next-steps"></a>次の手順
 
 このチュートリアルでは、クラス ライブラリを作成しました。 次のチュートリアルでは、そのクラス ライブラリを単体テストする方法について説明します。
 
 > [!div class="nextstepaction"]
-> [Visual Studio を使用して .NET Standard ライブラリを単体テストする](testing-library-with-visual-studio.md)
+> [Visual Studio を使用して .NET クラス ライブラリを単体テストする](testing-library-with-visual-studio.md)
 
 または、自動化された単体テストをスキップし、NuGet パッケージを作成してそのライブラリを共有する方法を学習することもできます。
 
@@ -141,4 +142,4 @@ ms.locfileid: "89118261"
 または、コンソール アプリを公開する方法を学習することもできます。 このチュートリアルで作成したソリューションからそのコンソール アプリを発行すると、それに付属するクラス ライブラリは *.dll* ファイルとなります。
 
 > [!div class="nextstepaction"]
-> [Visual Studio を使用して .NET Core コンソール アプリケーションを発行する](publishing-with-visual-studio.md)
+> [Visual Studio を使用して .NET コンソール アプリケーションを発行する](publishing-with-visual-studio.md)

@@ -1,25 +1,39 @@
 ---
-title: dotnet-trace ツール - .NET Core
-description: dotnet-trace コマンドライン ツールのインストールおよび使用。
-ms.date: 11/21/2019
-ms.openlocfilehash: d4175ccad785b21f860044a4fd5d691624ec495e
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+title: dotnet-trace 診断ツール - .NET CLI
+description: dotnet-trace CLI ツールをインストールして使用し、.NET EventPipe を使って、ネイティブ プロファイラーなしで実行中のプロセスの .NET トレースを収集する方法について学習します。
+ms.date: 11/17/2020
+ms.openlocfilehash: d0798e4f703c18c48db47193ac24ec0d13b66ae5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507229"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829311"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace パフォーマンス分析ユーティリティ
 
 **この記事の対象:** ✔️ .NET Core 3.0 SDK 以降のバージョン
 
-## <a name="install-dotnet-trace"></a>dotnet-trace をインストールする
+## <a name="install"></a>インストール
 
-[dotnet tool install](../tools/dotnet-tool-install.md) コマンドで `dotnet-trace` [NuGet パッケージ](https://www.nuget.org/packages/dotnet-trace)をインストールします。
+`dotnet-trace` をダウンロードしてインストールするには、次の 2 つの方法があります。
 
-```dotnetcli
-dotnet tool install --global dotnet-trace
-```
+- **dotnet グローバル ツール:**
+
+  `dotnet-trace` [NuGet パッケージ](https://www.nuget.org/packages/dotnet-trace)の最新のリリース バージョンをインストールするには、次のように [dotnet tool install](../tools/dotnet-tool-install.md) コマンドを使用します。
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-trace
+  ```
+
+- **直接ダウンロード:**
+
+  ご利用のプラットフォームに適したツールの実行可能ファイルをダウンロードします。
+
+  | OS  | プラットフォーム |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-trace/win-x86) \| [x64](https://aka.ms/dotnet-trace/win-x64) \| [arm](https://aka.ms/dotnet-trace/win-arm) \| [arm-x64](https://aka.ms/dotnet-trace/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-trace/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-trace/linux-x64) \| [arm](https://aka.ms/dotnet-trace/linux-arm) \| [arm64](https://aka.ms/dotnet-trace/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-trace/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-trace/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>構文
 
@@ -33,7 +47,7 @@ dotnet-trace [-h, --help] [--version] <command>
 
 * クロスプラットフォーム .NET Core ツールです。
 * ネイティブ プロファイラーなしで実行中のプロセスの .NET Core トレースを回収できます。
-* .NET Core ランタイムのクロスプラットフォームの `EventPipe` テクノロジを中心に構築されています。
+* .NET Core ランタイムの [`EventPipe`](./eventpipe.md) に基づいています。
 * Windows、Linux または macOS でも同じエクスペリエンスを提供します。
 
 ## <a name="options"></a>オプション
@@ -196,11 +210,12 @@ dotnet-trace list-profiles [-h|--help]
 
 ## <a name="launch-a-child-application-and-collect-a-trace-from-its-startup-using-dotnet-trace"></a>子アプリケーションを起動し、そのスタートアップからトレースを dotnet-trace を使用して収集します
 
-注:これは、.NET 5.0 以降を実行しているアプリに対してのみ機能します。
+> [!IMPORTANT]
+> これは、.NET 5.0 以降を実行しているアプリに対してのみ機能します。
 
 場合によっては、プロセスのトレースをそのスタートアップから収集すると便利なことがあります。 .NET 5.0 以降を実行しているアプリでは、dotnet-trace を使用してこれを行うことができます。
 
-これを使用すると、コマンドライン引数として `arg1` と `arg2` を含む `hello.exe` が起動され、ランタイム スタートアップからトレースが収集されます。
+これを使用すると、コマンドライン引数として `arg1` と `arg2` を含む `hello.exe` が起動され、そのランタイム スタートアップからトレースが収集されます。
 
 ```console
 dotnet-trace collect -- hello.exe arg1 arg2

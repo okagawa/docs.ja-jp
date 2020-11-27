@@ -1,25 +1,25 @@
 ---
-title: Visual Studio を使用して .NET Core で .NET Standard クラス ライブラリをテストする
-description: .NET Core クラス ライブラリ用の単体テスト プロジェクトを作成します。 .NET Core クラス ライブラリが単体テストで正しく動作することを確認します。
-ms.date: 06/08/2020
+title: Visual Studio を使用して .NET クラス ライブラリをテストする
+description: Visual Studio を使用して、.NET クラス ライブラリの単体テスト プロジェクトを作成および実行する方法について学習します。
+ms.date: 11/18/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 04d0120622697d1e0c84fc169dfc50951cb8aa3c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3d56627b937fa0ad5f8002f396ce617e09ce9d2c
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177294"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916127"
 ---
-# <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>チュートリアル: Visual Studio を使用して .NET Core で .NET Standard クラス ライブラリをテストする
+# <a name="tutorial-test-a-net-class-library-with-net-using-visual-studio"></a>チュートリアル: Visual Studio を使用して .NET で .NET クラス ライブラリをテストする
 
 このチュートリアルでは、テスト プロジェクトをソリューションに追加して、単体テストを自動化する方法について説明します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- このチュートリアルでは、「[Visual Studio を使用して .NET Standard ライブラリを作成する](library-with-visual-studio.md)」で作成したソリューションを使用します。
+- このチュートリアルでは、「[Visual Studio を使用して .NET クラス ライブラリを作成する](library-with-visual-studio.md)」で作成するソリューションを使用します。
 
 ## <a name="create-a-unit-test-project"></a>単体テスト プロジェクトを作成する
 
@@ -27,17 +27,19 @@ ms.locfileid: "91177294"
 
 1. Visual Studio を起動します。
 
-1. 「[Visual Studio を使用して .NET Standard ライブラリを作成する](library-with-visual-studio.md)」で作成した `ClassLibraryProjects` ソリューションを開きます。
+1. 「[Visual Studio を使用して .NET クラス ライブラリを作成する](library-with-visual-studio.md)」で作成した `ClassLibraryProjects` ソリューションを開きます。
 
 1. 「StringLibraryTest」 という名前の新しい単体テスト プロジェクトをソリューションに追加します。
 
-   1. **ソリューション エクスプローラー**で、ソリューションを右クリックし、 **[追加]**  >  **[新しいプロジェクト]** の順に選択します。
+   1. **ソリューション エクスプローラー** で、ソリューションを右クリックし、 **[追加]**  >  **[新しいプロジェクト]** の順に選択します。
 
    1. **[新しいプロジェクトの追加]** ページで、検索ボックスに「**mstest**」と入力します。 言語の一覧から **[C#]** または **[Visual Basic]** を選択し、次に、プラットフォームの一覧から **[すべてのプラットフォーム]** を選択します。
 
-   1. **[MsTest テスト プロジェクト (.NET Core)]** テンプレートを選択し、 **[次へ]** を選択します。
+   1. **[単体テスト プロジェクト]** テンプレートを選んでから、 **[次へ]** を選択します。
 
-   1. **[新しいプロジェクトの構成]** ページで、 **[プロジェクト名]** ボックスに「**StringLibraryTest**」と入力します。 次に、 **[作成]** を選択します。
+   1. **[新しいプロジェクトの構成]** ページで、 **[プロジェクト名]** ボックスに「**StringLibraryTest**」と入力します。 **[次へ]** を選びます。
+
+   1. **[追加情報]** ページで、 **[ターゲット フレームワーク]** ボックスの **[.NET 5.0 (Current)]** を選択します。 次に、 **[作成]** を選択します。
 
 1. Visual Studio によってプロジェクトが作成され、クラス ファイルが次のコードでコード ウィンドウに開かれます。 使用する言語で表示されていない場合は、ページの上部にある言語セレクターを変更します。
 
@@ -83,7 +85,7 @@ ms.locfileid: "91177294"
 
 テスト プロジェクトが `StringLibrary` クラスと連動するように、**StringLibraryTest** プロジェクトに `StringLibrary` プロジェクトへの参照を追加します。
 
-1. **ソリューション エクスプローラー**で **[StringLibraryTest]** プロジェクトの **[依存関係]** ノードを右クリックし、コンテキスト メニューの **[プロジェクト参照の追加]** を選択します。
+1. **ソリューション エクスプローラー** で **[StringLibraryTest]** プロジェクトの **[依存関係]** ノードを右クリックし、コンテキスト メニューの **[プロジェクト参照の追加]** を選択します。
 
 1. **[参照マネージャー]** ダイアログで、 **[プロジェクト]** ノードを展開し、 **[StringLibrary]** の横のボックスをオンにします。 `StringLibrary` アセンブリに参照を追加すると、コンパイラが **StringLibraryTest** プロジェクトをコンパイル中に、**StringLibrary** メソッドを見つけることができるようになります。
 
@@ -122,21 +124,21 @@ Visual Studio で単体テストを実行すると、<xref:Microsoft.VisualStudi
 1. メニュー バーで、 **[ファイル]**  >  **[名前を付けて UnitTest1.cs を保存]** または **[ファイル]**  >  **[名前を付けて UnitTest1.vb を保存]** の順に選択します。 **[名前を付けてファイルを保存]** ダイアログで、 **[保存]** ボタンの横にある矢印を選択して、 **[エンコード付きで保存]** を選択します。
 
    > [!div class="mx-imgBorder"]
-   > ![Visual Studio の [名前を付けてファイルを保存] ダイアログ](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/save-file-as-dialog.png" alt-text="Visual Studio の [名前を付けてファイルを保存] ダイアログ":::
 
 1. **[保存の確認]** ダイアログで **[はい]** ボタンを選択してファイルを保存します。
 
 1. **[保存オプションの詳細設定]** ダイアログの **[エンコード]** ドロップダウン リストから **[Unicode (UTF-8 シグネチャ付き) - コードページ 65001]** を選択し、 **[OK]** の順に選択します。
 
    > [!div class="mx-imgBorder"]
-   > ![Visual Studio の [保存オプションの詳細設定] ダイアログ](./media/testing-library-with-visual-studio/advanced-save-options.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/advanced-save-options.png" alt-text="Visual Studio の [保存オプションの詳細設定] ダイアログ":::
 
    UTF8 でエンコードされたファイルにソース コードを保存できなかった場合、ASCII ファイルとして保存される場合があります。 その場合は、ランタイムで ASCII 範囲外の UTF8 文字が正確にデコードされず、テスト結果が正確でなくなります。
 
 1. メニュー バーで **[テスト]**  >  **[すべてのテストを実行する]** を選択します。 **テスト エクスプローラー** ウィンドウが開かない場合は、 **[テスト]**  >  **[テスト エクスプローラー]** を選択して開きます。 3 つのテストが **[成功したテスト]** セクションに表示され、 **[概要]** セクションにはテストの実行結果が表示されています。
 
    > [!div class="mx-imgBorder"]
-   > ![[テスト エクスプローラー] ウィンドウと成功したテスト](./media/testing-library-with-visual-studio/test-explorer-window.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/test-explorer-window.png" alt-text="[テスト エクスプローラー] ウィンドウと成功したテスト":::
 
 ## <a name="handle-test-failures"></a>テストの失敗の処理
 
@@ -158,14 +160,14 @@ Visual Studio で単体テストを実行すると、<xref:Microsoft.VisualStudi
 1. メニュー バーから **[テスト]**  >  **[すべてのテストを実行]** を選択してテストを実行します。 **[テスト エクスプローラー]** ウィンドウに、テストが 2 つ成功し、1 つ失敗したことが示されます。
 
    > [!div class="mx-imgBorder"]
-   > ![[テスト エクスプローラー] ウィンドウと失敗したテスト](./media/testing-library-with-visual-studio/failed-test-window.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/failed-test-window.png" alt-text="[テスト エクスプローラー] ウィンドウと失敗したテスト":::
 
 1. 失敗したテスト `TestDoesNotStartWith` を選択します。
 
    **[テスト エクスプローラー]** ウィンドウに、アサートによって生成されたメッセージ"Assert.IsFalse failed. Expected for 'Error': false; actual:True" が表示されます。 エラーのため、配列内の "Error" の後ろの文字列はテストされませんでした。
 
    > [!div class="mx-imgBorder"]
-   > ![IsFalse アサーションの失敗を示す [テスト エクスプローラー] ウィンドウ](./media/testing-library-with-visual-studio/failed-test-detail.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/failed-test-detail.png" alt-text="IsFalse アサーションの失敗を示す [テスト エクスプローラー] ウィンドウ":::
 
 1. 手順 1 で追加した文字列 "Error" を削除します。 テストを再実行すると、テストは成功します。
 
@@ -178,25 +180,25 @@ Visual Studio で単体テストを実行すると、<xref:Microsoft.VisualStudi
 1. Visual Studio のツールバーで、ビルド構成を **[デバッグ]** から **[リリース]** に変更します。
 
    > [!div class="mx-imgBorder"]
-   > ![リリース ビルドが強調表示された Visual Studio のツールバー](./media/testing-library-with-visual-studio/visual-studio-toolbar-release.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/visual-studio-toolbar-release.png" alt-text="リリース ビルドが強調表示された Visual Studio のツールバー":::
 
-1. **ソリューション エクスプローラー**で **[StringLibrary]** プロジェクトを右クリックし、コンテキスト メニューの **[ビルド]** を選択し、ライブラリを再コンパイルします。
+1. **ソリューション エクスプローラー** で **[StringLibrary]** プロジェクトを右クリックし、コンテキスト メニューの **[ビルド]** を選択し、ライブラリを再コンパイルします。
 
    > [!div class="mx-imgBorder"]
-   > ![StringLibrary のコンテキスト メニューとビルド コマンド](./media/testing-library-with-visual-studio/build-library-context-menu.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/build-library-context-menu.png" alt-text="StringLibrary のコンテキスト メニューとビルド コマンド":::
 
 1. **[テストの実行]**  >  **[すべてのテスト]** をメニュー バーから選択して単体テストを実行します。 テストが成功します。
 
 ## <a name="debug-tests"></a>テストのデバッグ
 
-IDE として Visual Studio を使用する場合は、「[チュートリアル:Visual Studio を使用して .NET Core コンソール アプリケーションをデバッグする](debugging-with-visual-studio.md)」に記載されているのと同じプロセスに従って、単体テスト プロジェクトを使用してコードをデバッグできます。 *ShowCase* アプリ プロジェクトを開始する代わりに、**StringLibraryTests** プロジェクトを右クリックし、コンテキスト メニューから **[テストのデバッグ]** を選択します。
+IDE として Visual Studio を使用する場合は、「[チュートリアル:Visual Studio を使用して .NET コンソール アプリケーションをデバッグする](debugging-with-visual-studio.md)」に示されているのと同じプロセスを使用し、単体テスト プロジェクトを使ってコードをデバッグできます。 *ShowCase* アプリ プロジェクトを開始する代わりに、**StringLibraryTests** プロジェクトを右クリックし、コンテキスト メニューから **[テストのデバッグ]** を選択します。
 
 Visual Studio により、デバッガーがアタッチされた状態でテスト プロジェクトが開始されます。 実行は、テスト プロジェクトまたは基になるライブラリ コードに追加したブレークポイントで停止します。
 
 ## <a name="additional-resources"></a>その他の技術情報
 
 * [Visual Studio - 単体テストの基本](/visualstudio/test/unit-test-basics)
-* [.NET Core と .NET Standard の単体テスト](../testing/index.md)
+* [.NET での単体テスト](../testing/index.md)
 
 ## <a name="next-steps"></a>次の手順
 
@@ -213,4 +215,4 @@ Visual Studio により、デバッガーがアタッチされた状態でテス
 ライブラリはパッケージとして配布する必要はありません。 それが使用されるコンソール アプリにバンドルすることができます。 コンソール アプリを発行する方法については、このシリーズの前のチュートリアルを参照してください。
 
 > [!div class="nextstepaction"]
-> [Visual Studio を使用して .NET Core コンソール アプリケーションを発行する](publishing-with-visual-studio.md)
+> [Visual Studio を使用して .NET コンソール アプリケーションを発行する](publishing-with-visual-studio.md)

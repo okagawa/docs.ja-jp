@@ -1,24 +1,24 @@
 ---
-title: dotnet-symbol - .NET Core
-description: dotnet-symbol コマンドライン ツールのインストールおよび使用。
-ms.date: 08/26/2020
-ms.openlocfilehash: 5a96306fc96525b00e57eda089a45b730a7e3e8c
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+title: dotnet-symbol 診断ツール - .NET CLI
+description: dotnet-symbol CLI ツールをインストールして使用し、.NET ダンプとミニダンプのデバッグに必要なファイルをダウンロードする方法について学習します。
+ms.date: 11/17/2020
+ms.openlocfilehash: 8ea694e5331f1e4e75b3b3ad644428568e515331
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679189"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825339"
 ---
 # <a name="symbol-downloader-dotnet-symbol"></a>シンボル ダウンローダー (dotnet-symbol)
 
 **この記事の対象:** ✔️ .NET Core 2.1 SDK 以降のバージョン
 
-## <a name="install-dotnet-symbol"></a>dotnet-symbol をインストールする
+## <a name="install"></a>インストール
 
-`dotnet-symbol` [NuGet パッケージ](https://www.nuget.org/packages/dotnet-symbol)の最新のリリース バージョンをインストールするには、次のように [dotnet tool install](../tools/dotnet-tool-install.md) コマンドを使用します。
+`dotnet-trace` [NuGet パッケージ](https://www.nuget.org/packages/dotnet-trace)の最新のリリース バージョンをインストールするには、次のように [dotnet tool install](../tools/dotnet-tool-install.md) コマンドを使用します。
 
 ```dotnetcli
-dotnet tool install -g dotnet-symbol
+dotnet tool install --global dotnet-symbol
 ```
 
 ## <a name="synopsis"></a>構文

@@ -1,18 +1,17 @@
 ---
 title: System.Buffers - .NET
 ms.date: 12/05/2019
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - buffers [.NET]
 - I/O [.NET], buffers
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: d113def0182dc6a5bcea6c18b2d0e4b475946e31
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: afcd6976e6220349fbec370c47b11596a35a81a2
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739625"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823525"
 ---
 # <a name="work-with-buffers-in-net"></a>.NET でのバッファーの使用
 
@@ -91,7 +90,7 @@ ms.locfileid: "81739625"
 SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => buffer.PositionOf(data);
 ```
 
-#### <a name="process-a-readonlysequencet"></a>ReadOnlySequence\<T\> の処理
+#### <a name="process-a-readonlysequencet"></a>ReadOnlySequence\<T\> を処理する
 
 `ReadOnlySequence<T>` の処理は困難な場合があります。シーケンス内の複数のセグメントにまたがってデータが分割されている可能性があるためです。 最適なパフォーマンスを得るには、コードを次の 2 つのパスに分割します。
 
@@ -144,7 +143,7 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 
 - `SequencePosition` は特定の `ReadOnlySequence<T>` の位置マーカーであり、絶対位置ではありません。 これは特定の `ReadOnlySequence<T>` を基準にするため、発生元の `ReadOnlySequence<T>` の外部で使用されても意味がありません。
 - `ReadOnlySequence<T>` を使用せずに `SequencePosition` に対する算術演算を行うことはできません。 つまり、`position++` などの基本的な処理は、`ReadOnlySequence<T>.GetPosition(position, 1)` のように記述されます。
-- `GetPosition(long)` では、負のインデックスがサポートされて**いません**。 つまり、すべてのセグメントをたどることなく最後から 2 番目の文字を取得することはできません。
+- `GetPosition(long)` では、負のインデックスがサポートされて **いません**。 つまり、すべてのセグメントをたどることなく最後から 2 番目の文字を取得することはできません。
 - 2 つの `SequencePosition` を比較できないため、次のことが困難になります。
   - ある位置が別の位置より大きいか小さいかを確認する。
   - いくつかの解析アルゴリズムを記述する。

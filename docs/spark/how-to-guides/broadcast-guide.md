@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 55a52754439020bd2a925aa3e987fb4ad99c9c3d
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: ca6dab01cbd639594da0b51f145272a9a150e93c
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223996"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687754"
 ---
 # <a name="use-broadcast-variables-in-net-for-apache-spark"></a>.NET for Apache Spark でブロードキャスト変数を使用する
 
@@ -96,6 +96,11 @@ Func<Column, Column> udf2 = Udf<string, string>(
 // Calling udf2 works fine as expected
 df.Select(udf2(df["_1"])).Show();
 ```
+
+## <a name="faqs"></a>FAQ
+
+**.NET Interactive でブロードキャスト変数が機能しないのはなぜですか。**  
+ブロードキャスト変数が対話型のシナリオでは機能しないのは、セルに定義されている各オブジェクトにセル送信クラスを追加する .NET Interactive の設計によるものです。これは、シリアル化可能としてマークされていないため、前に示したものと同じ例外で失敗します。 詳細については、[こちらの記事](dotnet-interactive-udf-issue.md)を確認してください。
 
 ## <a name="next-steps"></a>次の手順
 

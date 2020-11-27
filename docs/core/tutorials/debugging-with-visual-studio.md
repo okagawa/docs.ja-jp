@@ -1,25 +1,25 @@
 ---
-title: Visual Studio を使用して .NET Core コンソール アプリケーションをデバッグする
-description: Visual Studio を使用して .NET Core コンソール アプリをデバッグする方法について説明します。
+title: Visual Studio を使用して .NET コンソール アプリケーションをデバッグする
+description: Visual Studio を使用して .NET コンソール アプリをデバッグする方法について説明します。
 ms.date: 06/08/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 4e408d5bd0976d88f368615860ac373142d0fe1e
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: 8a914dc6cf069c011ea5b077ada514bf8cec331d
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957226"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916198"
 ---
-# <a name="tutorial-debug-a-net-core-console-application-using-visual-studio"></a>チュートリアル: Visual Studio を使用して .NET Core コンソール アプリケーションをデバッグする
+# <a name="tutorial-debug-a-net-console-application-using-visual-studio"></a>チュートリアル: Visual Studio を使用して .NET コンソール アプリケーションをデバッグする
 
 このチュートリアルでは、Visual Studio で使用できるデバッグ ツールについて説明します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- このチュートリアルでは、「[Visual Studio を使用して .NET Core コンソール アプリケーションを作成する](with-visual-studio.md)」で作成したコンソール アプリを使用します。
+- このチュートリアルでは、「[Visual Studio を使用して .NET コンソール アプリケーションを作成する](with-visual-studio.md)」で作成するコンソール アプリを使用します。
 
 ## <a name="use-debug-build-configuration"></a>デバッグ ビルド構成の使用
 
@@ -31,11 +31,11 @@ ms.locfileid: "88957226"
 
 1. Visual Studio を起動します。
 
-1. 「[Visual Studio を使用して .NET Core コンソール アプリケーションを作成する](with-visual-studio.md)」で作成したプロジェクトを開きます。
+1. 「[Visual Studio を使用して .NET コンソール アプリケーションを作成する](with-visual-studio.md)」で作成したプロジェクトを開きます。
 
    現時点のビルド構成はツールバーに表示されています。 次のツール バーの画像では、アプリのデバッグ バージョンをコンパイルするように Visual Studio が構成されています。
 
-   ![デバッグが強調表示された Visual Studio のツールバー](./media/debugging-with-visual-studio/visual-studio-toolbar-debug.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/visual-studio-toolbar-debug.png" alt-text="デバッグが強調表示された Visual Studio のツールバー":::
 
 ## <a name="set-a-breakpoint"></a>ブレークポイントの設定
 
@@ -45,7 +45,7 @@ ms.locfileid: "88957226"
 
    次の図のとおり、Visual Studio では、ブレークポイントが設定された行を強調表示し、左端の余白に赤い点を表示することで、その行を示しています。
 
-   ![ブレークポイントが設定された Visual Studio のプログラム ウィンドウ](./media/debugging-with-visual-studio/set-breakpoint-in-editor.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/set-breakpoint-in-editor.png" alt-text="ブレークポイントが設定された Visual Studio のプログラム ウィンドウ":::
 
 1. <kbd>F5</kbd> キーを押して、プログラムをデバッグ モードで実行します。 デバッグを開始するもう 1 つの方法は、メニューから **[デバッグ]**  >  **[デバッグの開始]** を選択することです。
 
@@ -53,7 +53,7 @@ ms.locfileid: "88957226"
 
 1. プログラムがブレークポイントに到達すると、プログラム実行は停止します。`Console.WriteLine` メソッドが実行される前にも停止します。 **[ローカル]** ウィンドウには、現在実行しているメソッドで定義されている変数の値が表示されます。
 
-   ![Visual Studio でのブレークポイントのスクリーンショット](./media/debugging-with-visual-studio/breakpoint-hit.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/breakpoint-hit.png" alt-text="Visual Studio でのブレークポイントのスクリーンショット":::
 
 ## <a name="use-the-immediate-window"></a>[イミディエイト] ウィンドウを使用する
 
@@ -67,13 +67,13 @@ ms.locfileid: "88957226"
 
    **[イミディエイト]** ウィンドウに、文字列変数の値と、<xref:System.DateTime> 値のプロパティが表示されます。 さらに、変数の値は **[ローカル]** ウィンドウで更新されます。
 
-   ![Visual Studio 2019 の [ローカル] と [イミディエイト] ウィンドウ](./media/debugging-with-visual-studio/locals-immediate-window.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/locals-immediate-window.png" alt-text="Visual Studio 2019 の [ローカル] と [イミディエイト] ウィンドウ":::
 
 1. <kbd>F5</kbd> キーを押して、プログラムの実行を続行します。 続行するもう 1 つの方法は、メニューから **[デバッグ]**  >  **[続行]** を選択することです。
 
    コンソール ウィンドウに表示される値は、 **[イミディエイト]** ウィンドウで行った変更に対応しています。
 
-   ![入力した値が表示されているコンソール ウィンドウ](./media/debugging-with-visual-studio/console-window.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/console-window.png" alt-text="入力した値が表示されているコンソール ウィンドウ":::
 
 1. 任意のキーを押してアプリケーションを終了し、デバッグを停止します。
 
@@ -83,7 +83,7 @@ ms.locfileid: "88957226"
 
 1. ブレークポイントを表す赤丸を右クリックします。 コンテキスト メニューで **[条件]** を選んで、 **[ブレークポイント設定]** ダイアログを開きます。 **[条件]** のチェック ボックスをオンにします (まだオンになっていない場合)。
 
-   ![[ブレークポイント設定] パネルが表示されているエディター - C#](./media/debugging-with-visual-studio/breakpoint-settings.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/breakpoint-settings.png" alt-text="[ブレークポイント設定] パネルが表示されているエディター - C#":::
 
 1. **[条件式]** には、`x` が 5 かどうかをテストするコード例を示す次のコードをフィールドに入力します。 使用する言語が表示されていない場合は、ページの上部にある言語セレクターを変更します。
 
@@ -121,7 +121,7 @@ ms.locfileid: "88957226"
 
    疑問符は、イミディエイト ウィンドウに、[式を評価](/visualstudio/ide/reference/immediate-window#enter-commands)するように指示します。
 
-   ![ステートメントが実行された後で値 true を返す [イミディエイト ウィンドウ] - C#](./media/debugging-with-visual-studio/immediate-window-output.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/immediate-window-output.png" alt-text="ステートメントが実行された後で値 true を返す [イミディエイト ウィンドウ] - C#":::
 
 1. <kbd>F5</kbd> キーを押して、プログラムの実行を続行します。
 
@@ -139,11 +139,11 @@ Visual Studio では、1 行ずつプログラムをステップ実行して、�
 
    C#
 
-   ![Visual Studio のステップ イン メソッド - C#](./media/debugging-with-visual-studio/step-into-method.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/step-into-method.png" alt-text="Visual Studio のステップ イン メソッド - C#":::
 
    Visual Basic
 
-   ![Visual Studio のステップ イン メソッド - Visual Basic](./media/debugging-with-visual-studio/vb-step-into-method.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/vb-step-into-method.png" alt-text="Visual Studio のステップ イン メソッド - Visual Basic":::
 
    この時点で、 **[ローカル]** ウィンドウに `args` 配列が空であることが示され、`name` と `date` には既定値が設定されています。 さらに、空のコンソール ウィンドウが開かれています。
 
@@ -151,11 +151,11 @@ Visual Studio では、1 行ずつプログラムをステップ実行して、�
 
    C#
 
-   ![Visual Studio のステップ イン メソッド ソース - C#](./media/debugging-with-visual-studio/step-into-source-method.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/step-into-source-method.png" alt-text="Visual Studio のステップ イン メソッド ソース - C#":::
 
    Visual Basic
 
-   ![Visual Studio のステップ イン メソッド ソース - Visual Basic](./media/debugging-with-visual-studio/vb-step-into-source-method.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/vb-step-into-source-method.png" alt-text="Visual Studio のステップ イン メソッド ソース - Visual Basic":::
 
 1. <kbd>F11</kbd> キーを押します。 `name` の変数代入を含むステートメントが強調表示されます。 **[ローカル]** ウィンドウに `name` が `null` であると表示され、コンソール ウィンドウに "What is your name?" という文字列が表示されます。
 
@@ -179,7 +179,7 @@ Visual Studio では、1 行ずつプログラムをステップ実行して、�
 
 コンソール アプリケーションのリリース バージョンをビルドしてテストするには、ツール バーのビルド構成を **[デバッグ]** から **[リリース]** に変更します。
 
-![デバッグが強調表示された Visual Studio の既定のツールバー](./media/debugging-with-visual-studio/visual-studio-toolbar-release.png)
+:::image type="content" source="./media/debugging-with-visual-studio/visual-studio-toolbar-release.png" alt-text="リリースが強調表示された Visual Studio の既定のツール バー":::
 
 <kbd>F5</kbd> キーを押すか、 **[ビルド]** メニューの **[ソリューションのビルド]** を選ぶと、アプリケーションのリリース バージョンが Visual Studio でコンパイルされます。 それをデバッグ バージョンと同様にテストできます。
 
@@ -188,4 +188,4 @@ Visual Studio では、1 行ずつプログラムをステップ実行して、�
 このチュートリアルでは、Visual Studio のデバッグ ツールを使用しました。 次のチュートリアルでは、アプリの展開可能なバージョンを発行します。
 
 > [!div class="nextstepaction"]
-> [Visual Studio を使用して .NET Core コンソール アプリケーションを発行する](publishing-with-visual-studio.md)
+> [Visual Studio を使用して .NET コンソール アプリケーションを発行する](publishing-with-visual-studio.md)

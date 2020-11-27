@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 3508f08857f88fd34478f968a71bae0121d54d1c
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d30ebfa2dc47265185a96514efbddc3e4937438c
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89134511"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982395"
 ---
 # <a name="is-c-reference"></a>is (C# リファレンス)
 
@@ -23,10 +23,8 @@ ms.locfileid: "89134511"
 
 C# 7.0 以降では、`is` および [switch](switch.md) ステートメントでパターン マッチングがサポートされています。 `is` キーワードでは、以下のパターンがサポートされています。
 
-- [型パターン](#type-pattern)では、式を指定された型に変換できるかどうかがテストされ、変換できる場合はその型の変数にキャストされます。
-
+- [型パターン](#type-pattern): 式を指定された型に変換できるかどうかがテストされ、できる場合は変数がその型の変数にキャストされます。
 - [定数パターン](#constant-pattern): 式の評価が指定された定数値になるかどうかをテストします。
-
 - [var パターン](#var-pattern): 照合が常に成功し、式の値が新しいローカル変数にバインドされます。
 
 ### <a name="type-pattern"></a>型パターン
@@ -39,14 +37,11 @@ C# 7.0 以降では、`is` および [switch](switch.md) ステートメント�
 
 ここで *expr* は何らかの型のインスタンスに評価される式、*type* は *expr* の結果が変換される型の名前、*varname* は `is` のテスト結果が `true` である場合に *expr* の結果が変換されるオブジェクトをそれぞれ表しています。
 
-*expr* が `null` ではなく、以下のいずれかの条件が true である場合に `is` 式は `true` となります。
+*expr* が `null` ではなく、以下のいずれかの条件が true である場合に、`is` 式は `true` となります。
 
 - *expr* が *type* と同じ型のインスタンスである。
-
 - *expr* が *type* から派生した型のインスタンスである。 つまり、*expr* の結果を *type* のインスタンスにアップキャストできる。
-
 - *expr* のコンパイル時の型が *type* の基底クラスであり、*expr* の実行時の型が *type* または *type* から派生した型である。 変数の "*コンパイル時の型*" とは、その変数の宣言で定義されている型です。 変数の "*実行時の型*" とは、その変数に代入されているインスタンスの型です。
-
 - *expr* が、*type* インターフェイスを実装する型のインスタンスである。
 
 C#7.1 以降、*expr* はジェネリック型パラメーターとその制約によって定義されるコンパイル時型を持つことができます。
@@ -104,6 +99,8 @@ C#7.1 以降、*expr* はジェネリック型パラメーターとその制約�
 `null` チェックの比較を示す例を次に示します。
 
 [!code-csharp[is#11](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern11.cs#11)]
+
+式 `x is null` は、参照型と Null 許容値型に対して異なる方法で計算されます。 Null 許容値型の場合は、<xref:System.Nullable%601.HasValue?displayProperty=nameWithType> が使用されます。 参照型の場合は、`(object)x == null` が使用されます。
 
 ### <a name="var-pattern"></a>var パターン
 

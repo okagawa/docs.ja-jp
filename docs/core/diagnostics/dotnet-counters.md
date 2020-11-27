@@ -1,25 +1,39 @@
 ---
-title: dotnet-counters - .NET Core
-description: dotnet-counter コマンドライン ツールをインストールして使用する方法について説明します。
-ms.date: 02/26/2020
-ms.openlocfilehash: 7ff29ad91ad271afd35e3d38a4d748bc79ad6c03
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+title: dotnet-counters 診断ツール - .NET CLI
+description: dotnet-counter CLI ツールをインストールし、アドホックな正常性監視と最初のレベルのパフォーマンス調査に使用する方法について学習します。
+ms.date: 11/17/2020
+ms.openlocfilehash: 7dd4c06f3abe423552ba1d3eb82f6d0c35a84d0b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507255"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822218"
 ---
-# <a name="dotnet-counters"></a>dotnet-カウンター
+# <a name="investigate-performance-counters-dotnet-counters"></a>パフォーマンス カウンターを調べる (dotnet-counters)
 
 **この記事の対象:** ✔️ .NET Core 3.0 SDK 以降のバージョン
 
-## <a name="install-dotnet-counters"></a>dotnet-counters のインストール
+## <a name="install"></a>インストール
 
-`dotnet-counters` [NuGet パッケージ](https://www.nuget.org/packages/dotnet-counters)の最新のリリース バージョンをインストールするには、次のように [dotnet tool install](../tools/dotnet-tool-install.md) コマンドを使用します。
+`dotnet-counters` をダウンロードしてインストールするには、次の 2 つの方法があります。
 
-```dotnetcli
-dotnet tool install --global dotnet-counters
-```
+- **dotnet グローバル ツール:**
+
+  `dotnet-counters` [NuGet パッケージ](https://www.nuget.org/packages/dotnet-counters)の最新のリリース バージョンをインストールするには、次のように [dotnet tool install](../tools/dotnet-tool-install.md) コマンドを使用します。
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-counters
+  ```
+
+- **直接ダウンロード:**
+
+  ご利用のプラットフォームに適したツールの実行可能ファイルをダウンロードします。
+
+  | OS  | プラットフォーム |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-counters/win-x86) \| [x64](https://aka.ms/dotnet-counters/win-x64) \| [arm](https://aka.ms/dotnet-counters/win-arm) \| [arm-x64](https://aka.ms/dotnet-counters/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-counters/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-counters/linux-x64) \| [arm](https://aka.ms/dotnet-counters/linux-arm) \| [arm64](https://aka.ms/dotnet-counters/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-counters/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-counters/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>構文
 
@@ -57,14 +71,18 @@ dotnet-counters [-h|--help] [--version] <command>
 ### <a name="synopsis"></a>構文
 
 ```console
-dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [--counters <COUNTERS>] [--format] [-o|--output] [-- <command>]
+dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--refresh-interval] [--counters <COUNTERS>] [--format] [-o|--output] [-- <command>]
 ```
 
 ### <a name="options"></a>オプション
 
 - **`-p|--process-id <PID>`**
 
-  監視するプロセスの ID。
+  カウンター データを収集するプロセスの ID。
+
+- **`-n|--name <name>`**
+
+  カウンター データを収集するプロセスの名前。
 
 - **`--refresh-interval <SECONDS>`**
 
@@ -86,8 +104,8 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [--cou
 
   ユーザーは、コレクション構成パラメーターの後に `--` を付加し、5.0 以降のランタイムで .NET アプリケーションを起動するコマンドを続けて指定できます。 `dotnet-counters` を使用して、指定したコマンドでプロセスを起動し、要求したメトリックを収集します。 これは、アプリケーションの起動パスのメトリックを収集するのに役立つことが多く、メイン エントリポイントの前または直後に発生する問題を診断または監視するために使用できます。
 
-> [!NOTE]
-> このオプションを使用して、ツールに応答する最初の .NET 5.0 プロセスを監視します。つまり、コマンドから複数の .NET アプリケーションを起動する場合、最初のアプリのみ収集されます。 このため、このオプションを自己完結型アプリケーションで使用するか、`dotnet exec <app.dll>` オプションを使用することをお勧めします。
+  > [!NOTE]
+  > このオプションを使用して、ツールに応答する最初の .NET 5.0 プロセスを監視します。つまり、コマンドから複数の .NET アプリケーションを起動する場合、最初のアプリのみ収集されます。 このため、このオプションを自己完結型アプリケーションで使用するか、`dotnet exec <app.dll>` オプションを使用することをお勧めします。
 
 ### <a name="examples"></a>使用例
 
@@ -162,7 +180,7 @@ Microsoft.AspNetCore.Hosting
 ### <a name="synopsis"></a>構文
 
 ```console
-dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [--counters] [-- <command>]
+dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--refresh-interval] [--counters] [-- <command>]
 ```
 
 ### <a name="options"></a>オプション
@@ -170,6 +188,10 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [--cou
 - **`-p|--process-id <PID>`**
 
   監視するプロセスの ID。
+
+- **`-n|--name <name>`**
+
+  監視するプロセスの名前。
 
 - **`--refresh-interval <SECONDS>`**
 
@@ -245,7 +267,8 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [--cou
 
 - `my-aspnet-server.exe` を起動し、起動時から読み込まれるアセンブリの数を監視します (.NET 5.0 以降のみ)。
 
-  注:これは、.NET 5.0 以降を実行しているアプリに対してのみ機能します。
+  > [!IMPORTANT]
+  > これは、.NET 5.0 以降を実行しているアプリに対してのみ機能します。
 
   ```console
   > dotnet-counters monitor --counters System.Runtime[assembly-count] -- my-aspnet-server.exe
@@ -259,7 +282,8 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [--cou
   
 - コマンドライン引数に `arg1` と `arg2` を指定して `my-aspnet-server.exe` を起動し、その動作セットと起動時の GC ヒープ サイズを監視します (.NET 5.0 以降のみ)。
 
-  注:これは、.NET 5.0 以降を実行しているアプリに対してのみ機能します。
+  > [!IMPORTANT]
+  > これは、.NET 5.0 以降を実行しているアプリに対してのみ機能します。
 
   ```console
   > dotnet-counters monitor --counters System.Runtime[working-set,gc-heap-size] -- my-aspnet-server.exe arg1 arg2

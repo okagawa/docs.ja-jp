@@ -1,48 +1,58 @@
 ---
-title: Visual Studio を使用して .NET Core コンソール アプリケーションを作成する
-description: Visual Studio を使用して、C# または Visual Basic で.NET Core コンソール アプリケーションを作成する方法について説明します。
+title: Visual Studio を使用して .NET コンソール アプリケーションを作成する
+description: Visual Studio を使用して、C# または Visual Basic で .NET コンソール アプリケーションを作成する方法について学習します。
 ms.date: 06/08/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: d543a05eb00a59c5c08ada28fc8392875385aa8a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e395122e59f17ed66bbd9d83b01610993f663ce1
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537536"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94915921"
 ---
-# <a name="tutorial-create-a-net-core-console-application-using-visual-studio"></a>チュートリアル: Visual Studio を使用して .NET Core コンソール アプリケーションを作成する
+# <a name="tutorial-create-a-net-console-application-using-visual-studio"></a>チュートリアル: Visual Studio を使用して .NET コンソール アプリケーションを作成する
 
-このチュートリアルでは、Visual Studio 2019 で .NET Core コンソール アプリケーションを作成して実行する方法について説明します。
+このチュートリアルでは、Visual Studio 2019 で .NET コンソール アプリケーションを作成して実行する方法を示します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- **.NET Core クロスプラットフォーム開発**ワークロードがインストールされている [Visual Studio 2019 バージョン 16.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 このワークロードを選択すると、.NET Core 3.1 SDK が自動的にインストールされます。
+- **.NET Core クロスプラットフォーム開発** ワークロードがインストールされている [Visual Studio 2019 バージョン 16.8 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 このワークロードを選択すると、.NET 5.0 SDK が自動的にインストールされます。
 
-  詳細については、[Visual Studio を使用した .NET Core SDK のインストール](../install/windows.md#install-with-visual-studio)に関する記事をご覧ください。
+  詳細については、[Visual Studio を使用した .NET SDK のインストール](../install/windows.md#install-with-visual-studio)に関する記述を参照してください。
 
 ## <a name="create-the-app"></a>アプリを作成する
 
-"HelloWorld" という名前の .NET Core コンソール アプリ プロジェクトを作成します。
+"HelloWorld" という名前の .NET コンソール アプリ プロジェクトを作成します。
 
 1. Visual Studio 2019 を起動します。
 
+1. **[ツール]**  >  **[オプション]**  >  **[環境]**  >  **[プレビュー機能]** の順に選択してから、 **[[新しいプロジェクト] にすべての .NET Core テンプレートを表示する (再起動が必要)]** を選びます。
+
+   :::image type="content" source="media/with-visual-studio/dotnet-options.png" alt-text="すべての .NET テンプレート オプションを表示する":::
+
+1. Visual Studio を閉じて、開き直します。
+
 1. スタート ページで、 **[新しいプロジェクトの作成]** を選択します。
 
-   ![Visual Studio のスタート ページで [新しいプロジェクトの作成] ボタンが選択されている](./media/with-visual-studio/start-window.png)
+   :::image type="content" source="./media/with-visual-studio/start-window.png" alt-text="Visual Studio のスタート ページで [新しいプロジェクトの作成] ボタンが選択されている":::
 
-1. **[新しいプロジェクトの作成]** ページで、検索ボックスに「**コンソール**」と入力します。 次に、言語の一覧から **[C#]** または **[Visual Basic]** を選択してから、プラットフォームの一覧から **[すべてのプラットフォーム]** を選択します。 **[コンソール アプリ (.NET Core)]** テンプレートを選択し、 **[次へ]** を選択します。
+1. **[新しいプロジェクトの作成]** ページで、検索ボックスに「**コンソール**」と入力します。 次に、言語の一覧から **[C#]** または **[Visual Basic]** を選択してから、プラットフォームの一覧から **[すべてのプラットフォーム]** を選択します。 **[コンソール アプリケーション]** テンプレートを選んでから、 **[次へ]** を選択します。
 
-   ![フィルターが選択された状態の [新しいプロジェクトの作成] ウィンドウ](./media/with-visual-studio/create-new-project.png)
+   :::image type="content" source="./media/with-visual-studio/create-new-project.png" alt-text="フィルターが選択された状態の [新しいプロジェクトの作成] ウィンドウ":::
 
    > [!TIP]
-   > .NET Core テンプレートが表示されない場合は、必要なワークロードが不足している可能性があります。 **[お探しの情報が見つかりませんでしたか?]** メッセージで、 **[さらにツールと機能をインストールする]** リンクを選択します。 Visual Studio インストーラーが開きます。 **.NET Core クロスプラットフォーム開発**ワークロードがインストールされていることを確認してください。
+   > .NET テンプレートが表示されない場合は、必要なワークロードが欠落しているおそれがあります。 **[お探しの情報が見つかりませんでしたか?]** メッセージで、 **[さらにツールと機能をインストールする]** リンクを選択します。 Visual Studio インストーラーが開きます。 **.NET Core クロスプラットフォーム開発** ワークロードがインストールされていることを確認してください。
 
 1. **[新しいプロジェクトの構成]** ダイアログで、 **[プロジェクト名]** ボックスに「**HelloWorld**」と入力します。 次に、 **[作成]** を選択します。
 
-   ![プロジェクト名、場所、およびソリューション名のフィールドを使用して新しいプロジェクト ウィンドウを構成します](./media/with-visual-studio/configure-new-project.png)
+   :::image type="content" source="./media/with-visual-studio/configure-new-project.png" alt-text="プロジェクト名、場所、およびソリューション名のフィールドを使用して新しいプロジェクト ウィンドウを構成します":::
+
+1. **[追加情報]** ダイアログで、 **[.NET 5.0 (Current)]** を選んでから、 **[作成]** を選択します。
+
+   :::image type="content" source="media/with-visual-studio/additional-info.png" alt-text="[追加情報] ダイアログ":::
 
 このテンプレートでは、シンプルな "Hello World" アプリケーションを作成します。 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> メソッドを呼び出し、"Hello World!" を コンソール ウィンドウに表示します。
 
@@ -81,9 +91,9 @@ End Module
 
 1. <kbd>Ctrl</kbd> + <kbd>F5</kbd> キーを押して、デバッグなしでプログラムを実行します。
 
-   コンソール ウィンドウが開き、"Hello World!" というテキストが 画面に出力され、Visual Studio のデバッグ情報が表示されます。
+   コンソール ウィンドウが開き、"Hello World!" というテキストが 画面に出力されます。
 
-   ![Hello World Press any key to continue と表示されているコンソール ウィンドウ](./media/with-visual-studio/hello-world-console.png)
+   :::image type="content" source="./media/with-visual-studio/hello-world-console.png" alt-text="Hello World Press any key to continue と表示されているコンソール ウィンドウ":::
 
 1. 任意のキーを押して、コンソール ウィンドウを閉じます。
 
@@ -106,13 +116,17 @@ End Module
 
 1. プロンプトに対し、名前を入力し、<kbd>Enter</kbd> キーを押します。
 
-   ![プログラムの出力が変更されたコンソール ウィンドウ](./media/with-visual-studio/hello-world-update.png)
+   :::image type="content" source="./media/with-visual-studio/hello-world-update.png" alt-text="プログラムの出力が変更されたコンソール ウィンドウ":::
 
 1. 任意のキーを押して、コンソール ウィンドウを閉じます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="additional-resources"></a>その他のリソース
 
-このチュートリアルでは、.NET Core コンソール アプリケーションを作成しました。 次のチュートリアルでは、アプリをデバッグします。
+- [現在のリリースと長期的なサポート リリース](../releases-and-support.md#net-core-and-net-5-version-lifecycles)
+
+## <a name="next-steps"></a>次のステップ
+
+このチュートリアルでは、.NET コンソール アプリケーションを作成しました。 次のチュートリアルでは、アプリをデバッグします。
 
 > [!div class="nextstepaction"]
-> [Visual Studio を使用して .NET Core コンソール アプリケーションをデバッグする](debugging-with-visual-studio.md)
+> [Visual Studio を使用して .NET コンソール アプリケーションをデバッグする](debugging-with-visual-studio.md)

@@ -1,21 +1,21 @@
 ---
-title: Visual Studio Code を使用して .NET Core コンソール アプリケーションをデバッグする
-description: Visual Studio Code を使用して .NET Core コンソール アプリをデバッグする方法について説明します。
+title: Visual Studio Code を使用して .NET コンソール アプリケーションをデバッグする
+description: Visual Studio Code を使用して .NET コンソール アプリをデバッグする方法について説明します。
 ms.date: 05/26/2020
-ms.openlocfilehash: 8e84747256551b633a5bf74b72723ba8d2840d52
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 85095a9e70ee3ff846716ef91239b240d8c42410
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89118300"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916230"
 ---
-# <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>チュートリアル: Visual Studio Code を使用して .NET Core コンソール アプリケーションをデバッグする
+# <a name="tutorial-debug-a-net-console-application-using-visual-studio-code"></a>チュートリアル: Visual Studio Code を使用して .NET コンソール アプリケーションをデバッグする
 
-このチュートリアルでは、.NET Core アプリを操作するために Visual Studio Code で使用できるデバッグ ツールについて説明します。
+このチュートリアルでは、.NET アプリを操作するために Visual Studio Code で使用できるデバッグ ツールについて説明します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- このチュートリアルでは、「[Visual Studio Code を使用して .NET Core コンソール アプリケーションを作成する](with-visual-studio-code.md)」で作成したコンソール アプリを使用します。
+- このチュートリアルでは、「[Visual Studio Code を使用して .NET コンソール アプリケーションを作成する](with-visual-studio-code.md)」で作成するコンソール アプリを使用します。
 
 ## <a name="use-debug-build-configuration"></a>デバッグ ビルド構成の使用
 
@@ -27,7 +27,7 @@ ms.locfileid: "89118300"
 
 1. Visual Studio Code を開始します。
 
-1. [Visual Studio Code を使用した .NET Core コンソール アプリケーションの作成](with-visual-studio-code.md)に関するページで作成したプロジェクトのフォルダーを開きます。
+1. 「[Visual Studio Code を使用して .NET コンソール アプリケーションを作成する](with-visual-studio-code.md)」で作成したプロジェクトのフォルダーを開きます。
 
 ## <a name="set-a-breakpoint"></a>ブレークポイントの設定
 
@@ -209,7 +209,7 @@ Visual Studio Code では、1 行ずつプログラムをステップ実行し�
 
 アプリケーションのデバッグ バージョンのテストが終了したら、リリース バージョンもコンパイルしてテストする必要があります。 リリース バージョンには、アプリケーションの動作に影響を与える可能性があるコンパイラの最適化が組み込まれています。 たとえば、パフォーマンスを向上させるように設計されたコンパイラの最適化では、マルチスレッド アプリケーションで競合状態が生じる場合があります。
 
-コンソール アプリケーションのリリース バージョンをビルドしてテストするには、**ターミナル**を開き、次のコマンドを実行します。
+コンソール アプリケーションのリリース バージョンをビルドしてテストするには、**ターミナル** を開き、次のコマンドを実行します。
 
 ```dotnetcli
 dotnet run --configuration Release
@@ -224,4 +224,4 @@ dotnet run --configuration Release
 このチュートリアルでは、Visual Studio Code のデバッグ ツールを使用しました。 次のチュートリアルでは、アプリの展開可能なバージョンを発行します。
 
 > [!div class="nextstepaction"]
-> [Visual Studio Code を使用して .NET Core コンソール アプリケーションを発行する](publishing-with-visual-studio-code.md)
+> [Visual Studio Code を使用して .NET コンソール アプリケーションを発行する](publishing-with-visual-studio-code.md)

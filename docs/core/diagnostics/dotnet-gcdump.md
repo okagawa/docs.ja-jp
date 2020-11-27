@@ -1,25 +1,39 @@
 ---
-title: dotnet-gcdump - .NET Core
-description: dotnet-gcdump コマンドライン ツールのインストールおよび使用。
-ms.date: 07/26/2020
-ms.openlocfilehash: a7b19f4d7487677b975621e7267a17894dae2e3a
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+title: dotnet-gcdump 診断ツール - .NET CLI
+description: dotnet-gcdump CLI ツールをインストールして使用し、.NET EventPipe を使ってライブ .NET プロセスの GC (ガベージ コレクター) ダンプを収集する方法について学習します。
+ms.date: 11/17/2020
+ms.openlocfilehash: 59de1845ada9e5bdd0b24bf4312517283324ce94
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656652"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826041"
 ---
 # <a name="heap-analysis-tool-dotnet-gcdump"></a>ヒープ分析ツール (dotnet-gcdump)
 
 **この記事の対象:** ✔️ .NET Core 3.1 SDK 以降のバージョン
 
-## <a name="install-dotnet-gcdump"></a>dotnet-gcdump のインストール
+## <a name="install"></a>インストール
 
-`dotnet-gcdump` [NuGet パッケージ](https://www.nuget.org/packages/dotnet-gcdump)の最新のリリース バージョンをインストールするには、次のように [dotnet tool install](../tools/dotnet-tool-install.md) コマンドを使用します。
+`dotnet-gcdump` をダウンロードしてインストールするには、次の 2 つの方法があります。
 
-```dotnetcli
-dotnet tool install -g dotnet-gcdump
-```
+- **dotnet グローバル ツール:**
+
+  `dotnet-gcdump` [NuGet パッケージ](https://www.nuget.org/packages/dotnet-gcdump)の最新のリリース バージョンをインストールするには、次のように [dotnet tool install](../tools/dotnet-tool-install.md) コマンドを使用します。
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-gcdump
+  ```
+
+- **直接ダウンロード:**
+
+  ご利用のプラットフォームに適したツールの実行可能ファイルをダウンロードします。
+
+  | OS  | プラットフォーム |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-gcdump/win-x86) \| [x64](https://aka.ms/dotnet-gcdump/win-x64) \| [arm](https://aka.ms/dotnet-gcdump/win-arm) \| [arm-x64](https://aka.ms/dotnet-gcdump/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-gcdump/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-gcdump/linux-x64) \| [arm](https://aka.ms/dotnet-gcdump/linux-arm) \| [arm64](https://aka.ms/dotnet-gcdump/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-gcdump/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-gcdump/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>構文
 
@@ -29,7 +43,7 @@ dotnet-gcdump [-h|--help] [--version] <command>
 
 ## <a name="description"></a>説明
 
-`dotnet-gcdump` グローバル ツールは、ライブ .NET プロセスの GC (ガベージ コレクター) ダンプを収集する手段です。 これには Windows の ETW に代わるクロス プラットフォームである EventPipe テクノロジが使用されています。 GC ダンプを作成するには、ターゲット プロセスで GC をトリガーし、特殊なイベントを有効にし、イベント ストリームからオブジェクト ルートのグラフを再生成します。 このプロセスにより、プロセスの実行中のオーバーヘッドを最小限に抑えながら GC ダンプを収集できます。 このようなダンプは、いくつかのシナリオで役立ちます。
+`dotnet-gcdump` グローバル ツールで [EventPipe](./eventpipe.md) を使用して、ライブ .NET プロセスの GC (ガベージ コレクター) ダンプを収集します。 GC ダンプを作成するには、ターゲット プロセスで GC をトリガーし、特殊なイベントを有効にし、イベント ストリームからオブジェクト ルートのグラフを再生成します。 このプロセスにより、プロセスの実行中のオーバーヘッドを最小限に抑えながら GC ダンプを収集できます。 このようなダンプは、いくつかのシナリオで役立ちます。
 
 - 複数の時点でヒープ上にあるオブジェクト数を比較する。
 - オブジェクトのルートを分析する ("この種類に対する参照がまだ残っているものはあるか" などの質問に回答する場合)。
@@ -55,7 +69,7 @@ Windows では、分析のために [PerfView](https://github.com/microsoft/perf
 
 現在実行中のプロセスから GC ダンプを収集します。
 
-### <a name="synopsis"></a>構文
+### <a name="synopsis"></a>概要
 
 ```console
 dotnet-gcdump collect [-h|--help] [-p|--process-id <pid>] [-o|--output <gcdump-file-path>] [-v|--verbose] [-t|--timeout <timeout>] [-n|--name <name>]

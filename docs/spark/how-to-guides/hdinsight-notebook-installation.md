@@ -4,12 +4,12 @@ description: Azure HDInsight の Jupyter Notebook に .NET for Apache Spark を�
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: b5689c9ccdd13209fec33674ad8fc80dcc369660
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: e2319fec833147ce50c7b94dd8ccc84f552f20d2
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955050"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688281"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>Azure HDInsight Spark クラスター上の Jupyter Notebook に .NET for Apache Spark をインストールする
 
@@ -32,7 +32,7 @@ Jupyter Notebook のエクスペリエンスを通じて .NET for Apache Spark �
 
 ## <a name="install-net-for-apache-spark"></a>.NET for Apache Spark のインストール
 
-Azure portal で、前の手順で作成した **HDInsight Spark クラスター**を選択します。
+Azure portal で、前の手順で作成した **HDInsight Spark クラスター** を選択します。
 
 ### <a name="stop-the-livy-server"></a>Livy サーバーを停止する
 
@@ -44,7 +44,7 @@ Azure portal で、前の手順で作成した **HDInsight Spark クラスター
 
    ![Livy サーバーを停止する](./media/hdinsight-notebook-installation/select-livyserver.png)
 
-3. **hn0 で始まるホスト**を選択します。
+3. **hn0 で始まるホスト** を選択します。
 
    ![Livy サーバーを停止する](./media/hdinsight-notebook-installation/select-host.png)
 
@@ -53,7 +53,7 @@ Azure portal で、前の手順で作成した **HDInsight Spark クラスター
    Spark2 の Livy サーバーを停止します。
    ![Livy サーバーを停止する](./media/hdinsight-notebook-installation/stop-server.png)
 
-5. **hn1 で始まるホスト**に対して前の手順を繰り返します。
+5. **hn1 で始まるホスト** に対して前の手順を繰り返します。
 
 ### <a name="submit-an-hdinsight-script-action"></a>HDInsight スクリプト アクションを送信する
 
@@ -73,7 +73,7 @@ Azure portal で、前の手順で作成した **HDInsight Spark クラスター
    | 名前 | " *.NET for Apache Spark 対話型 Notebook エクスペリエンスをインストールする*" |
    | Bash スクリプト URI | `install-interactive-notebook.sh` のアップロード先の URI。 |
    | ノードの種類| ヘッド、ワーカー |
-   | パラメーター | .NET for Apache Spark のバージョン。 [.NET for Apache Spark のリリース](https://github.com/dotnet/spark/releases)を確認できます。 たとえば、Sparkdotnet バージョン 0.6.0 をインストールする場合は、`0.6.0` とします。
+   | パラメーター | .NET for Apache Spark のバージョン。 [.NET for Apache Spark のリリース](https://github.com/dotnet/spark/releases)を確認できます。 たとえば、Sparkdotnet バージョン 1.0.0 をインストールする場合は、`1.0.0` とします。
 
    スクリプト アクションの状態の横に緑色のチェックマークが表示されたら、次の手順に進みます。
 
@@ -101,7 +101,7 @@ Azure portal で、前の手順で作成した **HDInsight Spark クラスター
 
    * **プロパティ 2** 前のスクリプト アクションに含めた .NET for Apache Spark のバージョンを使用してください。
        * キー: &ensp;&ensp;`spark.dotnet.packages`
-       * 値: `["nuget: Microsoft.Spark, 0.6.0", "nuget: Microsoft.Spark.Extensions.Delta, 0.6.0"]`
+       * 値: `["nuget: Microsoft.Spark, 1.0.0", "nuget: Microsoft.Spark.Extensions.Delta, 1.0.0"]`
 
    * **プロパティ 3**
        * キー: &ensp;&ensp;`spark.dotnet.interpreter`

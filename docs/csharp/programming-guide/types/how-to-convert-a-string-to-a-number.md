@@ -1,31 +1,33 @@
 ---
 title: 文字列を数値に変換する方法 - C# プログラミング ガイド
 description: C# で Parse、TryParse、または Convert クラスのメソッドを呼び出すことによって、文字列を数値に変換する方法について説明します。
-ms.date: 02/11/2019
+ms.date: 11/20/2020
 helpviewer_keywords:
 - conversions [C#]
 - conversions [C#], string to int
 - converting strings to int [C#]
 - strings [C#], converting to int
+ms.topic: how-to
+ms.custom: contperfq2
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: acaa013c89aff8dcb672a12df0c01911d8e52a1c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0a9585d05a817d09308e06558352f78a5347a8f1
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556194"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099173"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>文字列を数値に変換する方法 (C# プログラミング ガイド)
 
 さまざまな数値型 (`int`、`long`、`double` など) にある `Parse` または `TryParse` メソッドを呼び出すか <xref:System.Convert?displayProperty=nameWithType> クラスにあるメソッドを使用して、[文字列](../../language-reference/builtin-types/reference-types.md)を数値に変換できます。  
   
- 文字列では、`TryParse` メソッド (たとえば [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)) または `Parse` メソッド (たとえば [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)) を呼び出すのがいくらか効率的で簡単です。  <xref:System.IConvertible> を実装している一般的なオブジェクトでは、<xref:System.Convert> メソッドを使用するのがより便利です。  
+ `TryParse` メソッド (たとえば [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)) または `Parse` メソッド (たとえば [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)) を呼び出す方がいくらか効率的で簡単です。  <xref:System.IConvertible> を実装している一般的なオブジェクトでは、<xref:System.Convert> メソッドを使用するのがより便利です。  
   
- 文字列に含まれていると思われる数値型 (<xref:System.Int32?displayProperty=nameWithType> 型など) の `Parse` または `TryParse` メソッドを使用できます。  <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> メソッドは、<xref:System.Int32.Parse%2A> を内部的に使用します。  `Parse` メソッドは、変換された数値を返します。`TryParse` メソッドは、変換に成功したかどうかを示す <xref:System.Boolean> 値を返し、変換された数値を [`out` パラメーター](../../language-reference/keywords/out.md)内で返します。 文字列の形式が無効である場合、`Parse` では例外がスローされるのに対し、`TryParse` では `false` が返されます。 `Parse` メソッドを呼び出すときに、常に例外処理を使用して、解析操作が失敗した場合に <xref:System.FormatException> をキャッチする必要があります。  
+ 文字列に含まれていると思われる数値型 (<xref:System.Int32?displayProperty=nameWithType> 型など) の `Parse` または `TryParse` メソッドを使用します。  <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> メソッドは、<xref:System.Int32.Parse%2A> を内部的に使用します。  `Parse` メソッドは、変換された数値を返します。`TryParse` メソッドは、変換に成功したかどうかを示す <xref:System.Boolean> 値を返し、変換された数値を [`out` パラメーター](../../language-reference/keywords/out.md)内で返します。 文字列の形式が無効である場合、`Parse` では例外がスローされますが、`TryParse` では `false` が返されます。 `Parse` メソッドを呼び出すときに、常に例外処理を使用して、解析操作が失敗した場合に <xref:System.FormatException> をキャッチする必要があります。  
   
 ## <a name="calling-the-parse-and-tryparse-methods"></a>Parse メソッドと TryParse メソッドの呼び出し
 
-文字列の先頭と末尾の空白文字は、`Parse` および `TryParse` メソッドによって無視されますが、その他のすべての文字は、適切な数値型 (`int`、`long`、`ulong`、`float`、`decimal` など) を形成する文字である必要があります。  数値を形成する文字列内に空白文字があると、エラーになります。  たとえば、"10"、"10.3"、または "  10  " を解析するために `decimal.TryParse` を使用することはできますが、"10X"、"1 0" (埋め込みスペースに注意)、"10 .3" (埋め込みスペースに注意)、"10e1" (この場合は `float.TryParse` を使用) などからこのメソッドを使用して 10 を解析することはできません。 さらに、値が `null` または <xref:System.String.Empty?displayProperty=nameWithType> の文字列は正常に解析できません。 <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType> メソッドを呼び出すことで、解析を試みる前に null または空の文字列を確認できます。
+文字列の先頭と末尾の空白文字は、`Parse` および `TryParse` メソッドによって無視されますが、その他のすべての文字は、適切な数値型 (`int`、`long`、`ulong`、`float`、`decimal` など) を形成する文字である必要があります。  数値を形成する文字列内に空白文字があると、エラーになります。  たとえば、"10"、"10.3"、または "  10  " を解析するために `decimal.TryParse` を使用することはできますが、"10X"、"1 0" (埋め込みスペースに注意)、"10 .3" (埋め込みスペースに注意)、"10e1" (この場合は `float.TryParse` を使用) などからこのメソッドを使用して 10 を解析することはできません。 値が `null` または <xref:System.String.Empty?displayProperty=nameWithType> の文字列は正常に解析できません。 <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType> メソッドを呼び出すことで、解析を試みる前に null または空の文字列を確認できます。
 
 次の例は、`Parse` および `TryParse` の呼び出しの成功例と失敗例の両方を示しています。  
   

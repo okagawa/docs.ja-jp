@@ -2,7 +2,6 @@
 title: 文字列が有効な電子メール形式であるかどうかを検証する方法
 description: 正規表現を使用して、.NET で文字列が有効な電子メール形式であるかどうかを確認する方法の例について確認します。
 ms.date: 06/30/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -19,12 +18,12 @@ helpviewer_keywords:
 - email [.NET], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-ms.openlocfilehash: 07b8e31e4a0203b87492eb01ab686a1c56f5565d
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 88ff326e16ede6a422e9403b71905845014c4c25
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889076"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982493"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>文字列が有効な電子メール形式であるかどうかを検証する方法
 
@@ -38,7 +37,7 @@ ms.locfileid: "92889076"
 
 ❌ 電子メールを検証する唯一の方法として、正規表現を使用しないでください。
 
-電子メールの構造が正しいことを検証するために " _完全な_ " 正規表現を作成しようとすると、正規表現が非常に複雑になり、デバッグや改善が非常に困難になります。 正規表現では、電子メールが正しく構成されていても、それが存在することを検証できません。 電子メールを検証する最善の方法は、そのアドレスにテスト メールを送信することです。
+電子メールの構造が正しいことを検証するために "_完全な_" 正規表現を作成しようとすると、正規表現が非常に複雑になり、デバッグや改善が非常に困難になります。 正規表現では、電子メールが正しく構成されていても、それが存在することを検証できません。 電子メールを検証する最善の方法は、そのアドレスにテスト メールを送信することです。
 
 [!INCLUDE [regex](../../../includes/regex.md)]
 

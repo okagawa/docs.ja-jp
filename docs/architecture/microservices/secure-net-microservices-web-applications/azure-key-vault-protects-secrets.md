@@ -3,18 +3,18 @@ title: 実稼働時に機密情報を保護するために Azure Key Vault を�
 description: .NET マイクロサービスと Web アプリケーションのセキュリティ - Azure Key Vault は、管理者が完全に制御するアプリケーションのシークレットを処理できる優れた方法です。 管理者は開発値の割り当てや取り消しを行うこともできます。開発者に処理してもらう必要はありません。
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: d2683b215633df719dc1ecf4d1710665865c9df2
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: d2d3690c0c8787ace6bcdfacbdb612f9ef957b98
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679111"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916243"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>実稼働時にシークレットを保護するために Azure Key Vault を使用する
 
 環境変数として保存されているシークレットまたは Secret Manager ツールによって保存されたシークレットは、マシンのローカルに暗号化されていない状態で保存されています。 シークレットを保存する上でより安全な選択肢として [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) があります。Azure Key Vault には、キーとシークレットを保存するためのセキュリティで保護された中央の場所が用意されています。
 
-**Microsoft.Extensions.Configuration.AzureKeyVault** パッケージを使用すると、ASP.NET Core アプリケーションから Azure Key Vault の構成情報を読み取ることができます。 Azure Key Vault のシークレットを初めて使用する場合は、次の手順を実行します。
+**Azure.Extensions.AspNetCore.Configuration.Secrets** パッケージを使用すると、ASP.NET Core アプリケーションから Azure Key Vault の構成情報を読み取ることができます。 Azure Key Vault のシークレットを初めて使用する場合は、次の手順を実行します。
 
 1. アプリケーションを Azure AD アプリケーションとして登録します (キー コンテナーへのアクセスは Azure AD で管理されます)。この操作は、Azure 管理ポータルで実行できます。\
 
@@ -27,9 +27,9 @@ ms.locfileid: "90679111"
    Set-AzKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
    ```
 
-3. <xref:Microsoft.Extensions.Configuration.IConfigurationRoot> インスタンスを作成するときに <xref:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions.AddAzureKeyVault%2A?displayProperty=nameWithType> 拡張メソッドを呼び出して、アプリケーションの構成ソースとしてキー コンテナーを含めます。 `AddAzureKeyVault` を呼び出すには、前の手順で登録し、キー コンテナーへのアクセス権が付与されたアプリケーション ID が必要です。
+3. <xref:Microsoft.Extensions.Configuration.IConfigurationRoot> インスタンスを作成するときに AzureKeyVaultConfigurationExtensions.AddAzureKeyVault 拡張メソッドを呼び出して、アプリケーションの構成ソースとしてキー コンテナーを含めます。
 
-   [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) パッケージへの参照を含めるだけで、クライアント シークレットの代わりに証明書を受け取る `AddAzureKeyVault` のオーバーロードを使用することもできます。
+`AddAzureKeyVault` を呼び出すには、前の手順で登録し、キー コンテナーへのアクセス権が付与されたアプリケーション ID が必要です。 または、最初に Azure CLI コマンド `az login` を実行してから、クライアントの代わりに DefaultAzureCredential を受け取る `AddAzureKeyVault` のオーバーロードを使用することもできます。
 
 > [!IMPORTANT]
 > Azure Key Vault を最後の構成プロバイダーとして登録して、以前のプロバイダーの構成値をオーバーライドできるようにすることをお勧めします。
@@ -37,7 +37,7 @@ ms.locfileid: "90679111"
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **Azure Key Vault を使用したアプリケーション シークレットの保護** \
-  [https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault](/azure/guidance/guidance-multitenant-identity-keyvault)
+  [https://docs.microsoft.com/azure/architecture/multitenant-identity](/azure/architecture/multitenant-identity-keyvault)
 
 - **開発中のアプリ シークレットの安全な保存** \
   [https://docs.microsoft.com/aspnet/core/security/app-secrets](/aspnet/core/security/app-secrets)

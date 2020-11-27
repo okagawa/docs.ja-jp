@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 2ed2a88b91f06bb02c72d3e310ae09d58637205f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2dda65f605ea9de616f01d6e52eb4e0e5def4db7
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197470"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982519"
 ---
 # <a name="handling-null-values"></a>null 値の処理
 
@@ -94,7 +94,7 @@ WHERE TerritoryID IN (1, 2, 3)
   
  さらに、`DataRow.["columnName"]` null 値割り当てのインスタンスには次の規則が適用されます。  
   
-1. 既定の *default* 値は `DbNull.Value` です。ただし、それが厳密に型指定された適切な NULL 値となる、厳密に型指定された NULL 列は例外です。  
+1. "*既定*" の値は `DbNull.Value` です。ただし、それが厳密に型指定された適切な null 値となる、厳密に型指定された null 列は例外です。  
   
 2. XML ファイルへのシリアル化中に null 値が ("xsi:nil" として) 書き出されることはありません。  
   
