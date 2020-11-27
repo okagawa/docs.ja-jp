@@ -2,21 +2,23 @@
 title: FailedToLoadPerformanceCounter
 ms.date: 03/30/2017
 ms.assetid: bb333946-738e-4937-808e-5b6c0ac44e1b
-ms.openlocfilehash: a4d6b6297074d0efa0983acefc33316a6336ece4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 774bd4d885568d4d13c774c054099cc298d56f90
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797925"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284590"
 ---
 # <a name="failedtoloadperformancecounter"></a>FailedToLoadPerformanceCounter
-Id:118  
+
+ID : 118  
   
- 順Error  
+ 重大度 : エラー  
   
- [カテゴリ]:ServiceModel  
+ カテゴリ : ServiceModel  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>Description  
+
  このイベントは、パフォーマンス カウンターが読み込まれなかったことを示します。 イベントには、カテゴリ名、カウンター名、インスタンス名、例外、プロセス名、およびプロセス ID が表示されます。  
   
 ## <a name="see-also"></a>関連項目
