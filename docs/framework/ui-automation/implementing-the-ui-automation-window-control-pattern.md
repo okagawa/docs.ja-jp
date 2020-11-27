@@ -7,14 +7,15 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: e1d7429f86896947a10b73965caa7d771f54490b
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: b43884393974e6f2863da6a4a5ca8f305e5a160c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168192"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286098"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>UI オートメーション Window コントロール パターンの実装
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
@@ -23,7 +24,9 @@ ms.locfileid: "87168192"
  <xref:System.Windows.Automation.WindowPattern>コントロールパターンは、従来のグラフィカルユーザーインターフェイス (GUI) 内で、ウィンドウベースの基本的な機能を提供するコントロールをサポートするために使用されます。 このコントロールパターンを実装する必要があるコントロールの例としては、トップレベルアプリケーションウィンドウ、マルチドキュメントインターフェイス (MDI) 子ウィンドウ、サイズ変更可能な分割ペインコントロール、モーダルダイアログボックス、バルーンヘルプウィンドウなどがあります。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>実装のガイドラインと規則  
+
  Window コントロール パターンを実装する場合は、次のガイドラインと規則に注意してください。  
   
 - UI オートメーションを使用してウィンドウのサイズと位置の両方を変更する機能をサポートするには、コントロールが <xref:System.Windows.Automation.Provider.ITransformProvider> に加えて <xref:System.Windows.Automation.Provider.IWindowProvider>を実装する必要があります。  
@@ -37,7 +40,9 @@ ms.locfileid: "87168192"
 - 全画面表示モードは、アプリケーション固有の機能であり、通常のウィンドウの動作ではないため、IWindowProvider によってサポートされません。  
   
 <a name="Required_Members_for_IWindowProvider"></a>
+
 ## <a name="required-members-for-iwindowprovider"></a>IWindowProvider の必須メンバー  
+
  IWindowProvider インターフェイスには、次のプロパティ、メソッド、イベントが必要です。  
   
 |必須メンバー|メンバーの型|メモ|  
@@ -48,15 +53,17 @@ ms.locfileid: "87168192"
 |<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|プロパティ|なし|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|プロパティ|なし|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|プロパティ|なし|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|メソッド|なし|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|メソッド|なし|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|メソッド|なし|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Method|なし|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Method|なし|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Method|なし|  
 |<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Event|なし|  
 |<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Event|なし|  
 |<xref:System.Windows.Automation.WindowInteractionState>|Event|<xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>例外  
+
  プロバイダーは、次の例外をスローする必要があります。  
   
 |例外の種類|条件|  

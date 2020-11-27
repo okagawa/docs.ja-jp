@@ -2,13 +2,15 @@
 title: '方法: WebSockets 上で通信する WCF サービスを作成する'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 80c62ddc6630d26c6c178d1eeff8c6df05bf1d00
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 64f856bcce1234c8e833cc9be723b4af91c4569c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051936"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286163"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>方法: WebSockets 上で通信する WCF サービスを作成する
+
 WCF サービスと WCF クライアントは、<xref:System.ServiceModel.NetHttpBinding> バインディングを使用することにより、WebSocket 経由で通信できます。  WebSocket が使用されるのは、サービス コントラクトによってコールバック コントラクトが定義されていると <xref:System.ServiceModel.NetHttpBinding> によって判断された場合です。 ここでは、<xref:System.ServiceModel.NetHttpBinding> を使用して WebSocket 経由で通信する WCF サービスと WCF クライアントの実装方法について説明します。  
   
 ### <a name="define-the-service"></a>サービスの定義  
@@ -160,6 +162,7 @@ WCF サービスと WCF クライアントは、<xref:System.ServiceModel.NetHtt
          クライアント構成では特別な操作を実行する必要はありません。`NetHttpBinding` を使用して、クライアント側のエンドポイントを指定するだけです。  
   
 ## <a name="example"></a>例  
+
  このトピックで使用されているコード全体を次に示します。  
   
 ```csharp  

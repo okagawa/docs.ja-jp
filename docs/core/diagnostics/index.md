@@ -3,12 +3,12 @@ title: 診断ツールの概要 - .NET Core
 description: .NET Core アプリケーションの診断に使用できるツールと手法の概要。
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: 3274b72363a3df1dbe1bb29492eedcb134a4f9f2
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: c43e661ad8c9f665151e0240bf6b54e61b9acfef
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982310"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031918"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core で使用できる診断ツール
 
@@ -27,6 +27,10 @@ ms.locfileid: "94982310"
 ## <a name="unit-testing"></a>単体テスト
 
 [単体テスト](../testing/index.md)は、高品質のソフトウェアを継続的に統合して展開するための重要なコンポーネントです。 単体テストは、何かを中断するときに早期警告を提供するように設計されています。
+
+## <a name="dumps"></a>ダンプ
+
+[ダンプ](./dumps.md)は、作成時のプロセスのスナップショットを含むファイルです。 これらは、デバッグのためにアプリケーションの状態を調べるのに役立ちます。
 
 ## <a name="collect-diagnostics-in-containers"></a>コンテナーでの診断の収集
 

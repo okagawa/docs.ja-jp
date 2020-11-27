@@ -2,14 +2,15 @@
 title: '方法: トランザクション サービスを作成する'
 ms.date: 03/30/2017
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-ms.openlocfilehash: be364e7638394a30c199b05dd15ef4c44e18e688
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c3d094dbd5822f6025e1cc6c90aab04b61459314
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964018"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286293"
 ---
 # <a name="how-to-create-a-transactional-service"></a>方法: トランザクション サービスを作成する
+
 このサンプルでは、トランザクション サービスを作成する際のさまざまな側面と、サービス操作を調整するためにクライアントが起動するトランザクションの使用について説明します。  
   
 ### <a name="creating-a-transactional-service"></a>トランザクション サービスの作成  
@@ -65,7 +66,7 @@ ms.locfileid: "69964018"
     }  
     ```  
   
-3. 構成ファイルでバインディングを構成して、トランザクション コンテキストのフローを指定し、そのとき使用されるプロトコルを指定します。 詳細については、「 [ServiceModel トランザクションの構成](servicemodel-transaction-configuration.md)」を参照してください。 具体的には、エンドポイント要素の `binding` 属性でバインド型を指定します。 `bindingConfiguration` `transactionalOleTransactionsTcpBinding` [エンドポイント>要素には、次のサンプル構成に示すように、という名前のバインディング構成を参照\<](../../configure-apps/file-schema/wcf/endpoint-element.md)する属性が含まれています。  
+3. 構成ファイルでバインディングを構成して、トランザクション コンテキストのフローを指定し、そのとき使用されるプロトコルを指定します。 詳細については、「 [ServiceModel トランザクションの構成](servicemodel-transaction-configuration.md)」を参照してください。 具体的には、エンドポイント要素の `binding` 属性でバインド型を指定します。 要素には [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-element.md) `bindingConfiguration` `transactionalOleTransactionsTcpBinding` 、次のサンプル構成に示すように、という名前のバインディング構成を参照する属性が含まれています。  
   
     ```xml  
     <service name="CalculatorService">  
@@ -182,7 +183,7 @@ ms.locfileid: "69964018"
   
 ### <a name="controlling-the-lifetime-of-a-transactional-service-instance"></a>トランザクション サービス インスタンスの有効期間の制御  
   
-1. WCF では<xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> 、プロパティを使用して、トランザクションの完了時に基になるサービスインスタンスを解放するかどうかを指定します。 これは既定で`true`に設定されていないため、WCF は、効率的で予測可能な "ジャストインタイム" アクティベーション動作を実行します。 後続するトランザクションでサービスを呼び出すと、前回のトランザクションの状態が残らない新規のサービス インスタンスが必ず呼び出されます。 これは通常は便利ですが、トランザクションの完了後もサービス インスタンス内に状態を保持する必要がある場合もあります。 この例としては、必要な状態やリソースへのハンドルの取得または再構成に負荷がかかる場合があります。 これを実行するには、<xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> プロパティを `false` に設定します。 このように設定することで、インスタンスとこれに関連する任意の状態が、後続する呼び出しからも利用できるようになります。 この設定を使用する場合は、状態とトランザクションを消去して完了するタイミングと方法を入念に考慮する必要があります。 `runningTotal` 変数を使用してインスタンスを保持することで、これを行う方法を次のサンプルに示します。  
+1. WCF では、プロパティを使用して、 <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> トランザクションの完了時に基になるサービスインスタンスを解放するかどうかを指定します。 これは既定 `true` でに設定されていないため、WCF は、効率的で予測可能な "ジャストインタイム" アクティベーション動作を実行します。 後続するトランザクションでサービスを呼び出すと、前回のトランザクションの状態が残らない新規のサービス インスタンスが必ず呼び出されます。 これは通常は便利ですが、トランザクションの完了後もサービス インスタンス内に状態を保持する必要がある場合もあります。 この例としては、必要な状態やリソースへのハンドルの取得または再構成に負荷がかかる場合があります。 これを実行するには、<xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> プロパティを `false` に設定します。 このように設定することで、インスタンスとこれに関連する任意の状態が、後続する呼び出しからも利用できるようになります。 この設定を使用する場合は、状態とトランザクションを消去して完了するタイミングと方法を入念に考慮する必要があります。 `runningTotal` 変数を使用してインスタンスを保持することで、これを行う方法を次のサンプルに示します。  
   
     ```csharp
     [ServiceBehavior(TransactionIsolationLevel = [ServiceBehavior(  

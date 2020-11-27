@@ -4,12 +4,12 @@ description: .NET Core 機能をサポートおよび拡張する、インスト
 author: mlacouture
 ms.date: 02/13/2020
 ms.custom: mvc
-ms.openlocfilehash: f7bfa660f7521adf4950d5bbdd59628bb88cca4d
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: f563dff312442cbf068d52d08992621e3d6f1460
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557933"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699002"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core の追加ツールの概要
 
@@ -46,3 +46,7 @@ WCF の [dotnet-svcutil ツール](dotnet-svcutil-guide.md)は、ネットワー
 ## <a name="xml-serializer-generator"></a>XML シリアライザー ジェネレーター
 
 .NET Framework の [Xml シリアライザー ジェネレーター (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) と同様に、[Microsoft.XmlSerializer.Generator NuGet パッケージ](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator)は .NET Core および .NET Standard ライブラリのソリューションです。 アセンブリに含まれる型の XML シリアル化アセンブリを作成することで、<xref:System.Xml.Serialization.XmlSerializer> を使用してその型のオブジェクトをシリアル化または逆シリアル化するときの XML シリアル化の起動パフォーマンスを改善します。
+
+## <a name="generating-self-signed-certificates"></a>自己署名証明書の生成
+
+[dotnet dev-cert](self-signed-certificates-guide.md) を使用して、開発およびテストのシナリオ用の自己署名証明書を作成することができます。

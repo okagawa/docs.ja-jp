@@ -13,17 +13,19 @@ helpviewer_keywords:
 - time formatting
 - UTC formatting
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
-ms.openlocfilehash: d092b93af55d2cdf14e9284d8cffcdc8440cbf81
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+ms.openlocfilehash: ed2cf0b960c0a8f51dc327a5c58770fcf5e2fa17
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415993"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286059"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>dateTimeInvalidLocalFormat MDA
+
 `dateTimeInvalidLocalFormat` MDA は、世界協定時刻 (UTC) として格納されている <xref:System.DateTime> インスタンスが、ローカル <xref:System.DateTime> インスタンス専用の形式で書式指定されたときにアクティブになります。 この MDA は、未指定または既定の <xref:System.DateTime> インスタンスに対してはアクティブになりません。  
   
 ## <a name="symptom"></a>症状  
+
  アプリケーションで、次のようなローカル形式を使用して UTC <xref:System.DateTime> インスタンスを手動でシリアル化しています。  
   
 ```csharp
@@ -32,9 +34,11 @@ Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffzzz"));
 ```  
   
 ### <a name="cause"></a>原因  
+
  <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> メソッドの 'z' 形式には、ローカル タイム ゾーン オフセット (たとえば、シドニー時間の場合は "+10:00") が含まれます。 そのため、<xref:System.DateTime> の値がローカルの場合にのみ、有意な結果が生成されます。 値が UTC 時刻の場合、<xref:System.DateTime.ToString%2A?displayProperty=nameWithType> には、ローカル タイム ゾーン オフセットが含まれますが、タイム ゾーン指定子の表示や調整は行われません。  
   
-### <a name="resolution"></a>解決策  
+### <a name="resolution"></a>解像度  
+
  UTC <xref:System.DateTime> インスタンスが UTC であることを示すように書式設定する必要があります。 UTC 時刻の形式としては、次のように 'Z' を使用して UTC 時刻を示すようにすることをお勧めします。  
   
 ```csharp
@@ -50,9 +54,11 @@ Serialize(myDateTime.ToString("o"));
 ```  
   
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
+
  この MDA はランタイムに影響しません。  
   
 ## <a name="output"></a>出力  
+
  この MDA がアクティブになっても特別な出力は生成されませんが、呼び出し履歴を使用すると、この MDA をアクティブにした <xref:System.DateTime.ToString%2A> 呼び出しの位置を確認できます。  
   
 ## <a name="configuration"></a>構成  
@@ -66,6 +72,7 @@ Serialize(myDateTime.ToString("o"));
 ```  
   
 ## <a name="example"></a>例  
+
  次のように、<xref:System.Xml.XmlConvert> または <xref:System.Data.DataSet> クラスを使用して UTC <xref:System.DateTime> 値を間接的にシリアル化するアプリケーションについて考えてみます。  
   
 ```csharp

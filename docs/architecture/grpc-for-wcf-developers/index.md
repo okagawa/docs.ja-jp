@@ -2,12 +2,12 @@
 title: WCF 開発者向け ASP.NET Core gRPC - WCF 開発者向け gRPC
 description: WCF 開発者向け ASP.NET Core 3.0 で gRPC サービスを構築する方法の概要
 ms.date: 09/02/2019
-ms.openlocfilehash: 6e18ecfdb8fcbe20f71fd0a7c77076166451427a
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: c9cc5ef9c06d5262fb85850f8a3b178d46e5c6fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144358"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689278"
 ---
 # <a name="aspnet-core-grpc-for-wcf-developers"></a>WCF 開発者向け ASP.NET Core gRPC
 
@@ -49,7 +49,7 @@ Docker のクジラのロゴは Docker, Inc. の登録商標です。許可を�
 
 ## <a name="introduction"></a>はじめに
 
-gRPC とは、ネットワーク接続されたサービスと分散型アプリケーションを構築するための最新のフレームワークです。 SOAP のクロスプラットフォーム相互運用性と組み合わせた、Windows Communication Foundation (WCF) NetTCP バインドのパフォーマンスを想像してください。 gRPC は、アプリケーションとサービス間のハイ パフォーマンスで低帯域幅の通信を実現できるように、HTTP/2 および Protobuf メッセージエンコード プロトコルに基づいて構築されています。 .NET、Java、Python、Node.js、Go、C++ など、最も一般的なプログラミング言語およびプラットフォームにわたって、サーバー コードおよびクライアント コードの生成がサポートされています。 ASP.NET Core 3.0 での gRPC 用の最上級のサポートと共に、.NET 4.x 用の既存の gRPC ツールとライブラリを利用できることから、.NET Core を組織で採用することを検討している開発チームにとって、gRPC は WCF に替わる優れた方法です。
+gRPC とは、ネットワーク接続されたサービスと分散型アプリケーションを構築するための最新のフレームワークです。 SOAP のクロスプラットフォーム相互運用性と組み合わせた、Windows Communication Foundation (WCF) NetTCP バインドのパフォーマンスを想像してください。 gRPC は、アプリケーションとサービス間のハイ パフォーマンスで低帯域幅の通信を実現できるように、HTTP/2 および Protobuf メッセージエンコード プロトコルに基づいて構築されています。 .NET、Java、Python、Node.js、Go、C++ など、最も一般的なプログラミング言語およびプラットフォームにわたって、サーバー コードおよびクライアント コードの生成がサポートされています。 ASP.NET Core 3.0 での gRPC 用の最上級のサポートと共に、.NET Framework 4.x 用の既存の gRPC ツールとライブラリを利用できることから、.NET Core を組織で採用することを検討している開発チームにとって、これは WCF に替わる優れた方法です。
 
 ## <a name="who-should-use-this-guide"></a>対象読者
 

@@ -2,24 +2,20 @@
 title: Azure クラウドおよび Windows コンテナーを使用して既存の .NET アプリケーションを最新化する (第 2 版)
 description: この電子書籍では、既存のアプリケーションを Azure クラウドおよびコンテナーへとリフト アンド シフトして最新化する方法について説明します。
 ms.date: 04/28/2018
-ms.openlocfilehash: 74359b526bead85788a6ddc8039ef05b4c475d5e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f4ae4e2d24d343b55811955fb43e929c0db6f01b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172264"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705333"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure クラウドおよび Windows コンテナーを使用して既存の .NET アプリケーションを最新化する (第 2 版)
 
 ![「.NET アプリケーションの最新化」ガイドの表紙画像。](./media/index/web-application-guide-cover-image.png)
 
-発行者  
-マイクロソフト プレスと Microsoft DevDiv  
-Divisions of Microsoft Corporation  
-One Microsoft Way  
-Redmond, Washington 98052-6399  
+発行者: Microsoft Press and Microsoft DevDiv Divisions of Microsoft Corporation One Microsoft Way Redmond, Washington 98052-6399
 
-Copyright © 2020 by Microsoft Corporation  
+Copyright © 2020 by Microsoft Corporation
 
 All rights reserved. 本書のいかなる部分も、書面による発行者の許可なしに、いかなる形式または方法によっても、複製することを禁じます。
 
@@ -37,12 +33,7 @@ All rights reserved. 本書のいかなる部分も、書面による発行者�
 > **Cesar de la Torre**、Microsoft Corp.、.NET 製品チーム、シニア PM
 
 参加者とレビュー担当者:
-> **Scott Hunter**、Microsoft、.NET チーム、パートナー ディレクター PM  
-> **Paul Yuknewicz**、Microsoft、Visual Studio Tools チーム、主任 PM マネージャー  
-> **Lisa Guthrie**、Microsoft、Visual Studio Tools チーム、シニア PM  
-> **Ankit Asthana**、Microsoft、.NET チーム、主任 PM マネージャー  
-> **Unai Zorrilla**、開発者リーダー、Plain Concepts  
-> **Javier Valero**、Grupo Solutio の最高執行責任者  
+> **Scott Hunter**(Microsoft、.NET チーム、パートナー ディレクター)、**Paul Yuknewicz** (Microsoft、Visual Studio Tools チーム、主席 PM マネージャー)、**Lisa Guthrie** (Microsoft、Visual Studio Tools チーム、上級 PM)、**Ankit Asthana** (Microsoft、.NET チーム、主席 PM マネージャー)、**Unai Zorrilla** (Plain Concepts、開発リーダー)、**Javier Valero** (Grupo Solutio、チーフ オペレーション担当者)
 
 ## <a name="introduction"></a>はじめに
 
@@ -66,11 +57,11 @@ Web アプリケーションまたはサービスを最新化し、クラウド�
 
 アプリケーションをクラウドに移行するための 1 つの万能型の戦略はありません。 右側の移行の戦略は、組織のニーズと優先度、および移行するアプリケーションの種類によって異なります。 すべてのアプリケーションがサービスとしてのプラットフォーム ([PaaS](https://azure.microsoft.com/overview/what-is-paas/)) モデルへの移行や[クラウド ネイティブ](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) アプリケーション モデルの開発の投資を保証するわけではありません。 多くの場合は、ビジネス ニーズに基づいて、資産をクラウドに移行する際に段階的なまたは増分アプローチで投資を実行できます。
 
-最適な長期的機敏性と組織のための価値を持つ最新のアプリケーションの場合、*クラウドネイティブ*のアプリケーション アーキテクチャに投資するとメリットが得られることがあります。 ただし、既存のアプリケーションまたは従来の資産にとって重要なのは、クラウドに移行するときにかかる時間とコストを最小限に抑えながら (再設計やコード変更なしで)、大きなメリットを実現することです。
+最適な長期的機敏性と組織のための価値を持つ最新のアプリケーションの場合、*クラウドネイティブ* のアプリケーション アーキテクチャに投資するとメリットが得られることがあります。 ただし、既存のアプリケーションまたは従来の資産にとって重要なのは、クラウドに移行するときにかかる時間とコストを最小限に抑えながら (再設計やコード変更なしで)、大きなメリットを実現することです。
 
 図 1-1 は、既存の .NET アプリケーションを段階的なフェーズでクラウドに移動する場合に実行できる可能性のあるパスを示しています。
 
- ![既存の .NET アプリケーションとサービスの最新化パス](./media/image1-1.png)
+ ![既存の .NET アプリケーションとサービスの最新化パス](./media/image1-1.png)
 
 **(図 1-1)** 。 既存の .NET アプリケーションとサービスの最新化パス
 
@@ -78,10 +69,10 @@ Web アプリケーションまたはサービスを最新化し、クラウド�
 
 各アプリケーションの成熟度レベルの定義と簡単な説明を次に示します。
 
-**レベル 1:クラウド インフラストラクチャ対応**アプリケーション:この移行アプローチでは、単に現在のオンプレミス アプリケーションをサービスとしてのインフラストラクチャ ([IaaS](https://azure.microsoft.com/overview/what-is-iaas/)) プラットフォームに移行または再ホストします。 アプリの構成は前とほとんど変わりませんが、クラウド内の VM に展開します。
+**レベル 1:クラウド インフラストラクチャ対応** アプリケーション:この移行アプローチでは、単に現在のオンプレミス アプリケーションをサービスとしてのインフラストラクチャ ([IaaS](https://azure.microsoft.com/overview/what-is-iaas/)) プラットフォームに移行または再ホストします。 アプリの構成は前とほとんど変わりませんが、クラウド内の VM に展開します。
 このシンプルな種類の移行は、通常、業界では "リフト アンド シフト" と呼ばれます。
 
-**レベル 2:クラウド向けに最適化された**アプリケーション:このレベルでは、重要なコードを再設計または変更することなく、コンテナーや追加のクラウドマネージド サービスなどの最新のテクノロジを使用し、クラウドでアプリを実行することによって、さらにメリットを得ることができます。 エンタープライズ開発操作 (DevOps) プロセスが調整され、すばやく出荷するためのアプリケーションの機敏性が向上します。 これを実現するには、Docker エンジンに基づく Windows コンテナーなどのテクノロジを使用します。 コンテナーは、複数の段階的で展開するときに、アプリケーションの依存関係によって引き起こされる摩擦を取り除きます。 この成熟度モデルでは、IaaS または PaaS にコンテナーをデプロイし、さらにデータベース、サービスとしてのキャッシュ、監視、継続的インテグレーション/継続的デプロイ (CI/CD) パイプラインに関連する追加のクラウド管理サービスを使用することができます。
+**レベル 2:クラウド向けに最適化された** アプリケーション:このレベルでは、重要なコードを再設計または変更することなく、コンテナーや追加のクラウドマネージド サービスなどの最新のテクノロジを使用し、クラウドでアプリを実行することによって、さらにメリットを得ることができます。 エンタープライズ開発操作 (DevOps) プロセスが調整され、すばやく出荷するためのアプリケーションの機敏性が向上します。 これを実現するには、Docker エンジンに基づく Windows コンテナーなどのテクノロジを使用します。 コンテナーは、複数の段階的で展開するときに、アプリケーションの依存関係によって引き起こされる摩擦を取り除きます。 この成熟度モデルでは、IaaS または PaaS にコンテナーをデプロイし、さらにデータベース、サービスとしてのキャッシュ、監視、継続的インテグレーション/継続的デプロイ (CI/CD) パイプラインに関連する追加のクラウド管理サービスを使用することができます。
 
 3 番目の成熟度レベルは、クラウドの最終的な目標ですが、多くのアプリでは省略可能であり、このガイドの主な焦点ではありません。
 
@@ -103,7 +94,7 @@ Web アプリケーションまたはサービスを最新化し、クラウド�
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>成熟度レベル別の主要なテクノロジおよびアーキテクチャ
 
-.NET Framework アプリケーションは、2001 年後半にリリースされた .NET Framework バージョン 1.0 から始まりました。 その後企業は新しいバージョン (2.0、3.5、.NET 4.x など) に移行しました。 それらのアプリケーションのほとんどは、Windows サーバーとインターネット インフォメーション サーバー (IIS) 上で実行され、SQL Server、Oracle、MySQL などのリレーショナル データベース、またはその他の任意の RDBMS を使用しました。
+.NET Framework アプリケーションは、2001 年後半にリリースされた .NET Framework バージョン 1.0 から始まりました。 その後企業は新しいバージョン (2.0、3.5、.NET Framework 4.x など) に移行しました。 それらのアプリケーションのほとんどは、Windows サーバーとインターネット インフォメーション サーバー (IIS) 上で実行され、SQL Server、Oracle、MySQL などのリレーショナル データベース、またはその他の任意の RDBMS を使用しました。
 
 ほとんどの既存の .NET アプリケーションは現在、.NET Framework 4.x または .NET Framework 3.5 を基にし、ASP.NET MVC、ASP.NET Web Forms、ASP.NET Web API、Windows Communication Foundation (WCF)、ASP.NET SignalR、ASP.NET Web ページなどの Web フレームワークを使用しています。 これらの確立された .NET Framework テクノロジは Windows に依存しています。 レガシ アプリケーションを移行するだけで、アプリケーションのインフラストラクチャの変更を最小限にする場合は、その依存関係を考慮することが重要です。
 

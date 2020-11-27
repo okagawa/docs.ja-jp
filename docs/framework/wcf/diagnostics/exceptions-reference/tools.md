@@ -1,25 +1,26 @@
 ---
-title: Tools
+title: ツール
 ms.date: 03/30/2017
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
-ms.openlocfilehash: 623ba8a3ae3b58381edc80a19bf2d1a4561f3976
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 2f7ef8b7f871dada676eb05713d6f624427d5395
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774237"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96285695"
 ---
-# <a name="tools"></a>Tools
+# <a name="tools"></a>ツール
+
 このトピックでは、Windows Communication Foundation (WCF) ツールによって生成されるすべての例外を示します。
 
 ## <a name="exception-list"></a>例外の一覧
 
 |リソース コード|リソースの文字列|
 |-------------------|---------------------|
-|ParametersTarget|\<enum >|
-|ParametersToolConfig|\<configFile >|
+|ParametersTarget|\<enum>|
+|ParametersToolConfig|\<configFile>|
 |ErrInvalidPath|指定されたパスが無効です。 指定された引数を確認してください。|
-|ParametersReference|\<file パス >|
+|ParametersReference|\<file path>|
 |WrnCannotLoadConfigFileForValidation|指定された場所から読み込んだ構成ファイルの処理中にエラーが発生しました。 この構成ファイルで定義されているサービスを検証できません。|
 |MoreHelp|詳細なヘルプを表示するには、指定された引数と共に "svcutil" を入力してください。|
 |HelpMergeConfig|既存ファイルを上書きする代わりに、生成された構成が既存ファイルにマージされます。|
@@ -45,13 +46,13 @@ ms.locfileid: "72774237"
 |WrnNoServiceContractTypes|指定されたアセンブリの XmlSerializer 型を生成できません。 サービス コントラクト型が見つかりませんでした。|
 |WrnCouldNotLoadTypesFromReferenceAssemblyAt|指定された対象から読み込んだアセンブリで、型の読み込み中にエラーが発生しました。 アセンブリ内の一部の型は読み込めないため、ツールで使用できません。|
 |ErrDirectoryPointsToAFile|指定された無効な値が指定されたオプションに渡されました。 指定された値はファイルへのパスです。|
-|Error|エラー :|
+|エラー|エラー:|
 |ErrDuplicateReferenceValues|指定されたオプションを使用して、指定されたアセンブリが 2 回読み込まれました。 アセンブリは、1 回しか参照できません。|
 |WrnNoXmlSerializerOperationBehavior|指定されたアセンブリの XmlSerializer を生成できません。 このアセンブリには、XmlSerializerOperationBehavior を使用する操作を含むサービス コントラクトがありません。|
 |ErrCannotCreateDirectory|指定されたディレクトリを作成できません。|
 |ErrCouldNotLoadTypesFromAssemblyAt|指定されたアセンブリ内の型を読み込めません。|
 |ErrUnknownSwitch|指定されたスイッチは認識できないオプションです。|
-|Logo|このツールのロゴは、バージョンが付加された "Microsoft ® Service Model Metadata Tool" です。|
+|ロゴ|このツールのロゴは、バージョンが付加された "Microsoft ® Service Model Metadata Tool" です。|
 |NoCodeWasGenerated|コードが生成されませんでした。<br /><br /> クライアントを生成しようとした場合は、この原因として、有効なコントラクトやサービスがメタデータ ドキュメントに含まれていないか、<br /><br /> 検索されたすべてのコントラクト/サービスが参照アセンブリに存在する可能性があります。 すべてのメタデータ ドキュメントをツールに渡したことを確認してください。|
 |WrnUnableToLoadContractForSGen|コントラクトの型の読み込み中にエラーが発生しました。 このコントラクト用の XmlSerializer 型を生成できません。 型と詳細が指定されています。|
 |WrnOptionConflictsWithInput|複数入力アセンブリでは、指定されたオプションを使用できません。 指定されたオプションは無視されます。|
@@ -68,14 +69,14 @@ ms.locfileid: "72774237"
 |HelpCodeGenerationCategory|-= コードの生成 =-|
 |RetreivingMetadataWithMexAndDisco|WS-Metadata Exchange または DISCO を使用して、指定された対象からメタデータをダウンロードしようとしています。|
 |ErrGeneralSchemaValidation|エクスポート時に生成された XML スキーマの検証中にエラーが発生しました。|
-|ParametersDirectory|\<directory >|
+|ParametersDirectory|\<directory>|
 |ErrCannotLoadSpecifiedType|指定されたオプションに渡された指定された値のための型を読み込めません。 この型が属するアセンブリが、指定されたオプションを使用して指定されていることを確認してください。|
 |ErrOptionModeConflict|指定されたオプションは、別の出力の種類を意味するため、指定されたオプションと共に使用することはできません。|
 |ErrIsNotAnAssembly|指定された対象をアセンブリとして読み込めません。 このファイルが .NET アセンブリであることを確認してください。|
 |ErrInputConflictsWithMode|指定された対象から読み取った入力が、他のオプションと矛盾しています。|
 |ErrDuplicateValuePassedToTypeArg|指定された値が指定されたオプションに繰り返し、渡されました。 各型は 1 回しか指定できません。|
 |ErrInputEPRFileParseError|指定された対象からエンドポイント参照を読み取ることができません。 XML の形式が正しく、有効であることを確認してください。|
-|ErrCouldNotCreateCodeProvider|/@No__t_0 引数に渡された指定された値に対してコードプロバイダーを作成することはできません。 コード プロバイダーが適切にインストールおよび構成されていることを確認してください。|
+|ErrCouldNotCreateCodeProvider|/引数に渡された指定された値に対してコードプロバイダーを作成することはできません {1} 。 コード プロバイダーが適切にインストールおよび構成されていることを確認してください。|
 |ErrPathTooLongDirOnly|結果の指定されたパスが長すぎます。 指定された引数を確認してください。|
 |HelpDataContractSerializer|シリアル化と逆シリアル化に DataContract シリアライザーを使用するデータ型を生成します。|
 |ErrUnableToExportEndpoint|指定された名前空間の指定されたエンドポイント名を、アセンブリに対して読み込んだ構成ファイル内の指定されたサービス型にエクスポートしているときにエラーが発生しました。|
@@ -87,11 +88,11 @@ ms.locfileid: "72774237"
 |ErrDirectoryNotFound|指定されたディレクトリが見つかりません。 このディレクトリが存在することと、このディレクトリを読み取るための適切な権限を持っていることを確認してください。|
 |ErrUnableToLoadFile|指定されたファイルを読み取ることができません。|
 |ErrNoFilesFound|指定された入力パスは、既存のファイルを参照していないように思われます。|
-|ParametersConfig|\<configFile >|
+|ParametersConfig|\<configFile>|
 |ErrDirectoryInsteadOfFile|指定された入力パスは、ディレクトリのように思われます。 URL またはファイル パスを入力する必要があります。|
 |HelpConfig|指定した名前を持つ構成ファイルを生成するようにツールに指示します。 既定 : output.config。|
 |ErrSingleUseSwitch|指定されたオプションを繰り返し指定することはできません。|
-|警告|警告 :|
+|警告|警告:|
 |WrnAmbiguousServiceConfig|指定された構成名を持つ複数のサービス構成が見つかりました。次のアセンブリが指定されています。|
 |ErrInvalidInputPath|指定された入力パスは、既存のファイルを参照していないように思われます。また、有効な URI ではないように思われます。|
 |ErrUnableToLoadInputs|読み込まれたメタデータの読み取り中にエラーが発生しました。|
@@ -112,9 +113,9 @@ ms.locfileid: "72774237"
 |ErrInvalidTarget|指定されたターゲットは、指定されたオプションを使用して指定した場合は無効です。 サポートされているターゲットが指定されています。|
 |ErrPathTooLong|結果のパスが長すぎます。 指定された引数をレビューしてください。|
 |HelpCommonOptionsCategory|-= 共通のオプション =-|
-|ParametersServiceName|\<serviceConfigName >|
+|ParametersServiceName|\<serviceConfigName>|
 |ErrNoValidInputFilesSpecified|有効な入力ファイルが指定されていません。 メタデータ ドキュメントまたはアセンブリ ファイルを指定してください。|
-|ParametersLanguage|\<language >|
+|ParametersLanguage|\<language>|
 |ErrUnableToLoadMetadataDocument|読み込んだドキュメントの 1 つからメタデータを読み取っているときにエラーが発生しました。 ドキュメント識別子が指定されています。|
 |ErrConflictingInputs|指定された入力引数は、ツール操作の別のモードを意味するため、指定された対象と競合しています。|
 |WrnUnableToLoadContractForValidation|コントラクトの型の読み込み中にエラーが発生しました。 型と詳細が指定されています。|
@@ -125,7 +126,7 @@ ms.locfileid: "72774237"
 |GeneratingFiles|ファイルを生成しています...|
 |ErrCannotSpecifyMultipleMappingsForNamespace|無効な値が、指定されたオプションに渡されました。 指定されたターゲット名前空間は、指定された複数の CLR 名前空間にマップできません。|
 |ErrCouldNotLoadReferenceAssemblyAt|指定された参照アセンブリを読み込めません。|
-|ParametersOut|\<file >|
+|ParametersOut|\<file>|
 |NoCodeWasGeneratedSuggestDCOnly|スキーマからコントラクトを生成するには、指定されたオプションを使用してください。|
 |ErrUnableToLoadInputConfig|指定された構成ファイルを読み込むことができません。|
 |ErrUnexpectedDelimiter|オプションの先頭には、無効な引数区切り記号 (':' または '=') を使用できません。|
@@ -142,7 +143,7 @@ ms.locfileid: "72774237"
 |ErrCodegenError|指定された言語でコードを生成しているときにエラーが発生しました。<br /><br /> この言語は、生成されているすべてのコード要素をサポートしているわけではありません。 別の言語を使用してください。|
 |ErrInputWsdlParseError|指定された対象の読み取り中に WSDL 解析エラーが発生しました。 XML の形式が正しく、有効であることを確認してください。|
 |ErrCouldNotCreateInstance|指定された引数に渡された指定された型のインスタンスを作成できません。|
-|ParametersNamespace|\<string、文字列 >|
+|ParametersNamespace|\<string,string>|
 |HelpNostdlib|標準ライブラリを参照しません (既定では、mscorlib.dll と system.servicemodel.dll が参照されます)。|
 |WrnCannotLoadConfigFileForExport|指定された対象から読み込んだ構成ファイルの処理中にエラーが発生しました。 この構成ファイルで定義されているサービスを読み込むことができません。|
 |WrnUnableToLoadContractForExport|コントラクトの型の読み込み中にエラーが発生しました。 この指定された型はエクスポートできません。|

@@ -2,32 +2,35 @@
 title: '方法: サポート資格情報を作成する'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: b181ac72c9f197e9e404f7aa0f04e254abac10da
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1e11da11de68b1d3e24115387ec61ad22ec031b1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557399"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286306"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>方法: サポート資格情報を作成する
-カスタムのセキュリティ スキームでは、複数の資格情報が必要になることがあります。 たとえば、サービスが、ユーザー名とパスワードだけでなく、クライアントが 18 歳以上であることを証明する資格情報もクライアントに要求することがあります。 2番目の資格情報は、 *サポート資格情報*です。 このトピックでは、Windows Communication Foundation (WCF) クライアントでこのような資格情報を実装する方法について説明します。  
+
+カスタムのセキュリティ スキームでは、複数の資格情報が必要になることがあります。 たとえば、サービスが、ユーザー名とパスワードだけでなく、クライアントが 18 歳以上であることを証明する資格情報もクライアントに要求することがあります。 2番目の資格情報は、 *サポート資格情報* です。 このトピックでは、Windows Communication Foundation (WCF) クライアントでこのような資格情報を実装する方法について説明します。  
   
 > [!NOTE]
 > サポート資格情報の仕様は、WS-SecurityPolicy 仕様の一部です。 詳細については、「 [Web Services Security の仕様](/previous-versions/dotnet/articles/ms951273(v=msdn.10))」を参照してください。  
   
 ## <a name="supporting-tokens"></a>トークンのサポート  
+
  簡単に言えば、メッセージセキュリティを使用する場合は、メッセージをセキュリティで保護するために、 *プライマリ資格情報* (たとえば、x.509 証明書または Kerberos チケット) が常に使用されます。  
   
- 仕様で定義されているように、セキュリティバインディングでは、 *トークン* を使用してメッセージ交換をセキュリティで保護します。 *トークン*は、セキュリティ資格情報の表現です。  
+ 仕様で定義されているように、セキュリティバインディングでは、 *トークン* を使用してメッセージ交換をセキュリティで保護します。 *トークン* は、セキュリティ資格情報の表現です。  
   
- セキュリティ バインディングは、セキュリティ バインディング ポリシーで特定されたプライマリ トークンを使用して、署名を作成します。 この署名は、 *メッセージ署名*と呼ばれます。  
+ セキュリティ バインディングは、セキュリティ バインディング ポリシーで特定されたプライマリ トークンを使用して、署名を作成します。 この署名は、 *メッセージ署名* と呼ばれます。  
   
  メッセージ署名に関連付けられたトークンによって提供されるクレームを増やすために、追加のトークンを指定できます。  
   
 ## <a name="endorsing-signing-and-encrypting"></a>保証、署名、および暗号化  
+
  サポート資格情報は、メッセージ内で送信される *サポートトークン* になります。 WS-SecurityPolicy 仕様では、次の表に示すように、サポート トークンをメッセージに追加する方法が 4 つ定義されています。  
   
-|目的|説明|  
+|目的|Description|  
 |-------------|-----------------|  
 |符号付き|サポート トークンはセキュリティ ヘッダーに追加され、メッセージ署名によって署名されます。|  
 |保証|保証 *トークン* は、メッセージ署名に署名します。|  
@@ -35,6 +38,7 @@ ms.locfileid: "90557399"
 |署名および暗号化|暗号化された署名付きサポート トークンは、`wsse:SecurityHeader` に表示されたときに暗号化されている署名付きサポート トークンです。|  
   
 ## <a name="programming-supporting-credentials"></a>サポート資格情報のプログラミング  
+
  サポートトークンを使用するサービスを作成するには、を作成する必要があり [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md) ます。 (詳細については、「 [方法: カスタムバインディングを使用してカスタムバインディングを作成](how-to-create-a-custom-binding-using-the-securitybindingelement.md)する」を参照してください)。  
   
  カスタム バインドを作成する最初の手順は、次の 3 種類のいずれかのセキュリティ バインド要素を作成することです。  
@@ -56,9 +60,10 @@ ms.locfileid: "90557399"
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalOperationSupportingTokenParameters%2A>  
   
 #### <a name="scopes"></a>スコープ  
+
  サポート資格情報には、次の 2 つのスコープがあります。  
   
-- エンド*ポイントサポートトークン*は、エンドポイントのすべての操作をサポートします。 つまり、サポート トークンによって表される資格情報は、エンドポイントの任意の操作が呼び出されたときにいつでも使用できます。  
+- エンド *ポイントサポートトークン* は、エンドポイントのすべての操作をサポートします。 つまり、サポート トークンによって表される資格情報は、エンドポイントの任意の操作が呼び出されたときにいつでも使用できます。  
   
 - *操作* をサポートするトークンは、特定のエンドポイント操作だけをサポートします。  
   
@@ -75,9 +80,11 @@ ms.locfileid: "90557399"
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
+
  <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> のインスタンスを作成し、<xref:System.ServiceModel.Security.Tokens.KerberosSecurityTokenParameters> クラスのインスタンスを、Endorsing プロパティによって返されるコレクションに追加する例を次に示します。  
   
 ### <a name="code"></a>コード  
+
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
 ## <a name="see-also"></a>関連項目

@@ -2,14 +2,15 @@
 title: サービス フレームワーク
 ms.date: 03/30/2017
 ms.assetid: 75f60b87-f80e-4377-ba7c-8e6becaa2b28
-ms.openlocfilehash: 859e718a56ab63c8e012e1851c0730f53cb707be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1fb39f2106e027cc5d4125cfb0bc89f3e5983cec
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780758"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96285721"
 ---
 # <a name="service-framework"></a>サービス フレームワーク
+
 ここでは、サービス フレームワーク データによって生成されるすべての例外を示します。  
   
 ## <a name="exception-list"></a>例外の一覧  
@@ -25,7 +26,7 @@ ms.locfileid: "61780758"
 |BaseAddressCannotHaveUserInfo|ベース アドレスに URI ユーザー情報セクションを含めることはできません。|  
 |BaseAddressDuplicateScheme|このコレクションには、指定されたスキームを使用するアドレスが既に含まれています。 このコレクションでは、スキームごとに 1 つのアドレスしか許可されていません。|  
 |BaseAddressMustBeAbsolute|ベース アドレスとして使用できる絶対 URI は 1 つのみです。|  
-|BindingDoesnTSupportAnyChannelTypes1|指定されたバインディングは、どのチャネルの種類の作成もサポートしていません。 カスタム バインド内のバインド要素が適切にスタックされていないか、スタックの順序が間違っています。 スタックの一番下にはトランスポートが必要です。 バインド要素の推奨順序は次のとおりです。TransactionFlow、ReliableSession、Security、CompositeDuplex、OneWay、StreamSecurity、MessageEncoding、次のように転送します。|  
+|BindingDoesnTSupportAnyChannelTypes1|指定されたバインディングは、どのチャネルの種類の作成もサポートしていません。 カスタム バインド内のバインド要素が適切にスタックされていないか、スタックの順序が間違っています。 スタックの一番下にはトランスポートが必要です。 推奨されるバインド要素の順序は、TransactionFlow、ReliableSession、Security、CompositeDuplex、OneWay、StreamSecurity、MessageEncoding、Transport です。|  
 |BindingDoesnTSupportDuplexButContractRequires1|コントラクトには Duplex が必要です。 指定されたバインディングはこれをサポートしていないか、サポートするように正しく構成されていません。|  
 |BindingDoesnTSupportOneWayButContractRequires1|コントラクトには OneWay が必要です。 指定されたバインディングはこれをサポートしていないか、サポートするように正しく構成されていません。|  
 |BindingDoesnTSupportRequestReplyButContract1|コントラクトには Request/Reply が必要です。 指定されたバインディングはこれをサポートしていないか、サポートするように正しく構成されていません。|  
@@ -33,11 +34,11 @@ ms.locfileid: "61780758"
 |BindingDoesnTSupportTwoWayButContractRequires1|コントラクトは、TwoWay (要求-応答、または双方向) を必要とします。 指定されたバインディングはこれをサポートしていないか、サポートするように正しく構成されていません。|  
 |BindingRequirementsAttributeDisallowsQueuedDelivery1|DeliveryRequirementsAttribute は QueuedDelivery を許可していません。 指定されたコントラクトを持つエンドポイントのバインディングはこれをサポートしています。|  
 |BindingRequirementsAttributeRequiresQueuedDelivery1|DeliveryRequirementsAttribute には QueuedDelivery が必要です。 指定されたコントラクトを持つエンドポイントのバインディングはこれをサポートしていないか、サポートするように正しく構成されていません。|  
-|channelDoesNotHaveADuplexSession0|現在のチャネルは、出力セッションの終了をサポートしていません。 このチャネルは、ISessionChannel を実装していません\<IDuplexSession >。|  
+|channelDoesNotHaveADuplexSession0|現在のチャネルは、出力セッションの終了をサポートしていません。 このチャネルは ISessionChannel を実装していません \<IDuplexSession> 。|  
 |ClientRuntimeRequiresFormatter0|SerializeRequest と DeserializeReply の両方が false ではないため、指定された ClientOperation にはフォーマッタが必要です。|  
 |CommunicationObjectAborted1|指定された通信オブジェクトは停止しているため、通信に使用できません。|  
-|CommunicationObjectAbortedStack2|指定された通信オブジェクトは、停止しているため、通信に使用できません。 {1}|  
-|CommunicationObjectBaseClassMethodNotCalled|指定された通信オブジェクトが仮想関数をオーバーライド{1}しますが、基底クラスで定義されているバージョンを呼び出しません。|  
+|CommunicationObjectAbortedStack2|指定された通信オブジェクトは停止しているため、通信に使用できません: {1}|  
+|CommunicationObjectBaseClassMethodNotCalled|指定された通信オブジェクトは仮想関数をオーバーライドしました {1} が、基底クラスで定義されたバージョンを呼び出しません。|  
 |ContractIsNotSelfConsistentItHasOneOrMore2|指定されたコントラクトには、IsTerminating 操作または IsInitiating 以外の操作が 1 つ以上あります。 SessionMode.Required に設定された SessionMode プロパティがありません。 IsInitiating 属性と IsTerminating 属性は、セッションのコンテキストでのみ使用できます。|  
 |CouldnTCreateChannelForChannelType2|指定されたチャネルの種類が要求されましたが、指定されたバインディングはこれをサポートしていないか、サポートするように正しく構成されていません。|  
 |DispatchRuntimeRequiresFormatter0|DeserializeRequest と SerializeReply の両方が false ではないため、指定された DispatchOperation にはフォーマッタが必要です。|  
@@ -48,7 +49,7 @@ ms.locfileid: "61780758"
 |MultipleMebesInParameters|BindingContext の BindingParameter に複数の MessageEncodingBindingElement が見つかりました。 CustomBinding に複数の MessageEncodingBindingElement を含めることはできません。 これらの要素の 1 つ以外はすべて削除します。|  
 |MultipleStreamUpgradeProvidersInParameters|BindingContext の BindingParameter に複数の IStreamUpgradeProviderElement が見つかりました。 CustomBinding に複数の IStreamUpgradeProviderElement を含めることはできません。 これらの要素の 1 つ以外はすべて削除します。|  
 |NoChannelBuilderAvailable|バインディングに TransportBindingElement が含まれていないため、このバインディングを使用してチャネル ファクトリやチャネル リスナーを作成することはできません。 いずれのバインディングにも TransportBindingElement から派生するバインド要素を少なくとも 1 つ含んでいる必要があります。|  
-|NotAllBindingElementsBuilt|このバインディング内の一部のバインド要素は、チャネル ファクトリ/チャネル リスナーの構築時に使用されませんでした。 バインド要素の順序が正しくありません。 バインド要素の推奨順序は次のとおりです。TransactionFlow、ReliableSession、Security、CompositeDuplex、OneWay、StreamSecurity、MessageEncoding、次のように転送します。  TransportBindingElement は最後である必要があります。 指定されたバインド要素は構築されませんでした。|  
+|NotAllBindingElementsBuilt|このバインディング内の一部のバインド要素は、チャネル ファクトリ/チャネル リスナーの構築時に使用されませんでした。 バインド要素の順序が正しくありません。 推奨されるバインド要素の順序は、TransactionFlow、ReliableSession、Security、CompositeDuplex、OneWay、StreamSecurity、MessageEncoding、Transport です。  TransportBindingElement は最後である必要があります。 指定されたバインド要素は構築されませんでした。|  
 |RuntimeRequiresInvoker0|ディスパッチ操作は呼び出しの起動者が必要です。|  
 |ServiceHasZeroAppEndpoints|指定されたサービスには、アプリケーション (インフラストラクチャ以外) エンドポイントがありません。 これは、アプリケーション用の構成ファイルが見つからなかったこと、サービス名と一致するサービス要素が構成ファイル内から見つからなかったこと、またはサービス要素内でエンドポイントが定義されていないことが原因である可能性があります。|  
 |SFxActionMismatch|動作が一致しないため、入力されたメッセージを作成できません。 指定されたアクションを予期していましたが、別のアクションが発生しました|  
@@ -100,14 +101,14 @@ ms.locfileid: "61780758"
 |SFXEndpointBehaviorUsedOnWrongSide|指定された IEndpointBehavior をサーバーで使用することはできません。 この動作はクライアントにのみ適用できます。|  
 |SFxEndpointNoMatchingScheme|指定されたバインディングを使用するエンドポイントの、指定されたスキームに適合するベース アドレスが見つかりません。 登録されているベース アドレス スキームが指定されています。|  
 |SFxErrorCreatingMtomReader|MTOM メッセージ用のリーダーを作成しているときにエラーが発生しました。|  
-|SFxErrorDeserializingFault|サーバーから無効な SOAP フォールトが返されました。 詳細については、InnerException を参照してください。|  
+|SFxErrorDeserializingFault|サーバーから無効な SOAP フォールトが返されました。 See InnerException for more details. (詳細については、InnerException を参照してください。)|  
 |SFxErrorDeserializingHeader|指定されたメッセージに含まれるヘッダーの 1 つの逆シリアル化中にエラーが発生しました。 詳細については、InnerException を参照してください。|  
-|SFxErrorReflectingOnMethod3|指定された型で、指定されたメソッドの指定された属性の読み込み中にエラーが発生しました。  詳細については、InnerException を参照してください。|  
-|SFxErrorReflectingOnParameter4|指定された型の指定されたメソッドの指定されたパラメーターの指定された属性を読み込み中にエラーが発生しました。 詳細については、InnerException を参照してください。|  
-|SFxErrorReflectingOnType2|指定された型の指定された属性を読み込み中にエラーが発生しました。  詳細については、InnerException を参照してください。|  
-|SFxErrorSerializingBody|指定されたメッセージの本文のシリアル化中にエラーが発生しました。 詳細については、InnerException を参照してください。|  
-|SFxErrorSerializingHeader|指定されたメッセージに含まれるヘッダーの 1 つのシリアル化中にエラーが発生しました。 詳細については、InnerException を参照してください。|  
-|SFxExpectedIMethodCallMessage|内部エラーです。 メッセージは有効な IMethodCallMessage である必要があります。|  
+|SFxErrorReflectingOnMethod3|指定された型で、指定されたメソッドの指定された属性の読み込み中にエラーが発生しました。  See InnerException for more details. (詳細については、InnerException を参照してください。)|  
+|SFxErrorReflectingOnParameter4|指定された型の指定されたメソッドの指定されたパラメーターの指定された属性を読み込み中にエラーが発生しました。 See InnerException for more details. (詳細については、InnerException を参照してください。)|  
+|SFxErrorReflectingOnType2|指定された型の指定された属性を読み込み中にエラーが発生しました。  See InnerException for more details. (詳細については、InnerException を参照してください。)|  
+|SFxErrorSerializingBody|指定されたメッセージの本文のシリアル化中にエラーが発生しました。 See InnerException for more details. (詳細については、InnerException を参照してください。)|  
+|SFxErrorSerializingHeader|指定されたメッセージに含まれるヘッダーの 1 つのシリアル化中にエラーが発生しました。 See InnerException for more details. (詳細については、InnerException を参照してください。)|  
+|SFxExpectedIMethodCallMessage|内部エラー。 メッセージは有効な IMethodCallMessage である必要があります。|  
 |SFxExportMustHaveType|指定された操作の指定された部分には有効な CLR 型が含まれていないため、エクスポートできません。|  
 |SFxHeaderNotUnderstood|メッセージは処理されませんでした。 指定された名前空間の指定されたヘッダーをこのメッセージの受信側で認識できませんでした。 このエラーは一般に、受信側で処理できない通信プロトコルがこのメッセージの送信側で有効になっていることを示します。 クライアントのバインディングの構成がサービスのバインディングと一致していることを確認してください。|  
 |SFxHeadersAreNotSupportedInEncoded|指定されたメッセージに、リモート プロシージャ コールでエンコードされたスタイルで使用するヘッダーを含めることはできません。|  
@@ -117,12 +118,12 @@ ms.locfileid: "61780758"
 |SFxInvalidMessageBody|OperationFormatter で、無効なメッセージ本文が検出されました。 指定された名前と名前空間を持つ 'Element' ノード型が予期されていましたが、 指定された名前と名前空間を持つ指定されたノード型が見つかりました。|  
 |SFxInvalidMessageBodyEmptyMessage|OperationFormatter は、メッセージが空のため、メッセージから情報を逆シリアル化できません。|  
 |SFxInvalidMessageBodyErrorDeserializingParameter|指定されたパラメーターを逆シリアル化しようとしているときにエラーが発生しました。 詳細については InnerException を参照してください。|  
-|SFxInvalidMessageBodyErrorSerializingParameter|指定されたパラメーターをシリアル化しようとしているときにエラーが発生しました。 InnerException メッセージが指定されています。  詳細については、InnerException を参照してください。|  
+|SFxInvalidMessageBodyErrorSerializingParameter|指定されたパラメーターをシリアル化しようとしているときにエラーが発生しました。 InnerException メッセージが指定されています。  See InnerException for more details. (詳細については、InnerException を参照してください。)|  
 |SFxInvalidMessageBodyUnexpectedNode|パラメーターを逆シリアル化中に、指定された名前空間から指定された予期しないノードが検出されました。|  
 |SFxInvalidMessageContractSignature|指定された操作に、MessageContractAttribute が設定されたパラメーターまたは戻り値の型が含まれています。 メッセージ コントラクトを使用して要求メッセージを表現するには、この操作には MessageContractAttribute を持つ単一のパラメーターが含まれている必要があります。 メッセージ コントラクトを使用して応答メッセージを表現するには、この操作の戻り値は MessageContractAttribute を持つ型である必要があります。 この操作には 'out' パラメーターや 'ref' パラメーターを含めることはできません。|  
 |SFxInvalidReplyAction|操作の送信応答メッセージには指定された Action が含まれていますが、この操作のコントラクトは別の ReplyAction を指定しています。 メッセージで指定された Action がコントラクト内の ReplyAction と一致しているか、この操作のコントラクトが ReplyAction='*' を指定している必要があります。|  
 |SFxInvalidRequestAction|操作の送信要求メッセージには指定された Action が含まれていますが、この操作のコントラクトは別の RequestAction を指定しています。 メッセージで指定された Action がコントラクト内の RequestAction と一致しているか、操作コントラクトが RequestAction='*' を指定している必要があります。|  
-|SFxInvalidStaticOverloadCalledForDuplexChannelFactory1|指定されたコントラクトはコールバック コントラクトを定義しているため、このコントラクトでは静的な CreateChannel メソッドを使用できません。 DuplexChannelFactory に静的な CreateChannel オーバー ロードのいずれかを使用して、\<TChannel >。|  
+|SFxInvalidStaticOverloadCalledForDuplexChannelFactory1|指定されたコントラクトはコールバック コントラクトを定義しているため、このコントラクトでは静的な CreateChannel メソッドを使用できません。 DuplexChannelFactory の静的な CreateChannel オーバーロードのいずれかを使用し \<TChannel> ます。|  
 |SFxInvalidStreamInRequest|指定された操作における要求をストリームにするには、この操作は Stream 型の単一のパラメーターを持つ必要があります。|  
 |SFxInvalidStreamInResponse|指定された操作における応答をストリームにするには、この操作が Stream 型の単一の out パラメーターまたは戻り値を持つ必要があります。|  
 |SFxInvalidStreamInTypedMessage|メッセージ コントラクト プログラミング モデルでストリームを使用するには、指定された型が Stream 型の単一の MessageBody メンバーを持つ必要があります。|  
@@ -145,7 +146,7 @@ ms.locfileid: "61780758"
 |SFxSchemaDoesNotContainType|指定されたターゲット名前空間を持つスキーマに、指定された名前を持つ型が含まれていません。|  
 |SfxServiceContractAttributeNotFound|指定されたコントラクト型には ServiceContractAttribute 属性が設定されていません。 有効なコントラクトを定義するには、指定された型に ServiceContractAttribute が設定されている必要があります。 コントラクト インターフェイスまたはサービス クラスを型として指定できます。|  
 |SFxServiceContractGeneratorConfigRequired|GenerateServiceEndpoint メソッドを使用して構成情報を生成するためには、有効な構成オブジェクトを使用して ServiceContractGenerator インスタンスが初期化されている必要があります。|  
-|SFxServiceHostBaseCannotAddEndpointAfterOpen|ServiceHost が次のいずれかの状態になった後に、エンドポイントを追加することはできません。<br /><br /> 開かれました。<br />障害<br />終わる<br />クローズ|  
+|SFxServiceHostBaseCannotAddEndpointAfterOpen|ServiceHost が次のいずれかの状態になった後に、エンドポイントを追加することはできません。<br /><br /> -開かれました<br />-Faulted<br />-終了<br />-Closed|  
 |SFxServiceHostBaseCannotAddEndpointWithoutDescription|Description プロパティが初期化される前に、エンドポイントを追加することはできません。|  
 |SFxServiceMetadataBehaviorNoHttpBaseAddress|ServiceMetadataBehavior の HttpGetEnabled プロパティが True に設定され、HttpGetUrl プロパティが相対アドレスですが、HTTP ベース アドレスがありません。 HTTP ベース アドレスを指定するか、HttpGetUrl を絶対アドレスに設定してください。|  
 |SFxServiceMetadataBehaviorNoHttpsBaseAddress|ServiceMetadataBehavior の HttpsGetEnabled プロパティが True に設定され、HttpsGetUrl プロパティが相対アドレスですが、HTTPS ベース アドレスがありません。 HTTPS ベース アドレスを指定するか、HttpsGetUrl を絶対アドレスに設定してください。|  
