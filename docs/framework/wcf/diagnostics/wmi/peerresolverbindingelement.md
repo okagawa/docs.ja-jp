@@ -2,14 +2,15 @@
 title: PeerResolverBindingElement
 ms.date: 03/30/2017
 ms.assetid: 36882183-13a3-443f-8aae-62a7825d5633
-ms.openlocfilehash: fd70f584d269f5ada31b00ebaac9977987d42510
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3ffd03f9149d13567d84e00a5fa035d462f2ba8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963034"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96269068"
 ---
 # <a name="peerresolverbindingelement"></a>PeerResolverBindingElement
+
 PeerResolverBindingElement  
   
 ## <a name="syntax"></a>構文  
@@ -22,19 +23,22 @@ class PeerResolverBindingElement : BindingElement
 ```  
   
 ## <a name="methods"></a>メソッド  
+
  PeerResolverBindingElement クラスは、メソッドを一切定義しません。  
   
 ## <a name="properties"></a>プロパティ  
+
  PeerResolverBindingElement クラスには、次のプロパティがあります。  
   
 ### <a name="referralpolicy"></a>ReferralPolicy  
- データ型: string  
+
+ データ型: 文字列  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  ピア間で参照を共有する方法を指定します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  

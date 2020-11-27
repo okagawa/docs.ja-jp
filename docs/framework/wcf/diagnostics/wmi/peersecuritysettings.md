@@ -2,14 +2,15 @@
 title: PeerSecuritySettings
 ms.date: 03/30/2017
 ms.assetid: 24ae0d35-f3a3-419b-afd6-686e22aae27b
-ms.openlocfilehash: 1c33e1ce710fea3b1698a6dab47a199e40388f5a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2de417e4a4f5c6197551c1408da6907e2fa7c635
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963008"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96269003"
 ---
 # <a name="peersecuritysettings"></a>PeerSecuritySettings
+
 PeerSecuritySettings  
   
 ## <a name="syntax"></a>構文  
@@ -23,26 +24,30 @@ class PeerSecuritySettings
 ```  
   
 ## <a name="methods"></a>メソッド  
+
  PeerSecuritySettings クラスは、メソッドを一切定義しません。  
   
 ## <a name="properties"></a>プロパティ  
+
  PeerSecuritySettings クラスには、次のプロパティがあります。  
   
 ### <a name="mode"></a>モード  
- データ型: string  
+
+ データ型: 文字列  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  このバインディングで構成されたエンドポイントによって、メッセージ レベルおよびトランスポート レベルのセキュリティが使用されているかどうかを示します。  
   
-### <a name="transport"></a>Transport  
- データの種類:PeerTransportSecuritySettings  
+### <a name="transport"></a>トランスポート  
+
+ データ型 : PeerTransportSecuritySettings  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  トランスポートのセキュリティ設定です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  

@@ -2,14 +2,15 @@
 title: PeerTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 40bf6be2-8087-4cb3-a66c-408d53eb9269
-ms.openlocfilehash: ba9031dad96f12c7c48b03f1da4af1b3adc6dd4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae6a3448896cb206bce8867daf7104c3e484ecc8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962958"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96269016"
 ---
 # <a name="peertransportbindingelement"></a>PeerTransportBindingElement
+
 PeerTransportBindingElement  
   
 ## <a name="syntax"></a>構文  
@@ -24,33 +25,38 @@ class PeerTransportBindingElement : TransportBindingElement
 ```  
   
 ## <a name="methods"></a>メソッド  
+
  PeerTransportBindingElement クラスは、メソッドを一切定義しません。  
   
 ## <a name="properties"></a>プロパティ  
+
  PeerTransportBindingElement クラスには、次のプロパティがあります。  
   
 ### <a name="listenipaddress"></a>ListenIPAddress  
- データ型: string  
+
+ データ型: 文字列  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  ピア ノードがメッセージをリッスンする IP アドレスです。  
   
-### <a name="port"></a>ポート  
+### <a name="port"></a>Port  
+
  データ型 : sint32  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  このバインディングがピア チャネル メッセージを処理するネットワーク インターフェイス ポートです。  
   
 ### <a name="security"></a>セキュリティ  
- データの種類:PeerSecuritySettings  
+
+ データ型 : PeerSecuritySettings  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  ピア トランスポートのセキュリティ設定です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  

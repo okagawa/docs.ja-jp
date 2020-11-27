@@ -3,17 +3,19 @@ title: Windows Workflow の概要
 description: この記事では、実際のプロセスを記述するモデルである Workflow Foundation ワークフローについて説明します。
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: c54e405c5fff013f994f98cbf84fcce4d17d9d4e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f966aa2b62a743358d4c1ad18f237f988924014d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558101"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268678"
 ---
 # <a name="windows-workflow-overview"></a>Windows Workflow の概要
+
 ワークフローは、実際のプロセスを記述するモデルとして格納される *アクティビティ* と呼ばれる一連のエレメンタルです。 ワークフローでは、短期間だけ行われる業務や長期間にわたって行われる業務の各部分の実行順序と、それらの間の依存関係を表すことができます。 このような業務はモデルの最初から最後まで通して行われます。アクティビティには、人間によって実行されるものと、システム機能によって実行されるものがあります。  
   
 ## <a name="workflow-run-time-engine"></a>ワークフロー ランタイム エンジン  
+
  実行されるそれぞれのワークフロー インスタンスは、ホスト プロセスが次のいずれかを通して対話するプロセス内ランタイム エンジンによって作成および保持されます。  
   
 - <xref:System.Activities.WorkflowInvoker>。メソッドのようにワークフローを呼び出します。  
@@ -30,6 +32,7 @@ ms.locfileid: "90558101"
 ホスト プロセス内のワークフローのコンポーネント  
   
 ## <a name="interaction-between-workflow-components"></a>ワークフロー コンポーネント間の対話  
+
  次の図は、ワークフロー コンポーネントが互いにどのように対話するかを示しています。  
   
  ![ワークフローコンポーネントがどのように対話するかを示す図。](./media/overview/workflow-component-interatction.gif)  

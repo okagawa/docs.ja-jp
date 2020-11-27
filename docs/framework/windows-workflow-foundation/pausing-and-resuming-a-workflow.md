@@ -2,17 +2,19 @@
 title: ワークフローの一時停止と再開
 ms.date: 03/30/2017
 ms.assetid: 11f38339-79c7-4295-b610-24a7223bbf6d
-ms.openlocfilehash: dc6bdfe7cc10837fb8721ab12490d244d5ec1ca0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e8d1806c6d2c8e72b4e3a8b18bff669fcd0e0538
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79142967"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268540"
 ---
 # <a name="pausing-and-resuming-a-workflow"></a>ワークフローの一時停止と再開
+
 ワークフローはブックマークや <xref:System.Activities.Statements.Delay> などのブロッキング アクティビティへの応答として一時停止および再開をしますが、永続化を使用して、明示的に一時停止、アンロード、再開することもできます。  
   
 ## <a name="pausing-a-workflow"></a>ワークフローの一時停止  
+
  ワークフローを一時停止するには、<xref:System.Activities.WorkflowApplication.Unload%2A> を使用します。  このメソッドはワークフローの永続化とアンロードを要求し、ワークフローが 30 秒以内にアンロードしないと <xref:System.TimeoutException> をスローします。  
   
 ```csharp  
@@ -28,6 +30,7 @@ catch (TimeoutException e)
 ```  
   
 ## <a name="resuming-a-workflow"></a>ワークフローの再開  
+
  以前に一時停止およびアンロードされているワークフローを再開するには、<xref:System.Activities.WorkflowApplication.Load%2A> を使用します。 このメソッドは、ワークフローを永続化ストアからメモリに読み込みます。  
   
 ```csharp  
@@ -37,6 +40,7 @@ application.Load(id);
 ```  
   
 ## <a name="example"></a>例  
+
  次のコード例は、永続化を使用してワークフローを一時停止および再開する方法を示しています。  
   
 ```csharp  

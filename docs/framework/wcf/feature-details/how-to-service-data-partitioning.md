@@ -2,14 +2,15 @@
 title: '方法: サービス データのパーティション分割'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 3b2f86ee6a4dea25fb5c972d4cecb1b9ed411b29
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7bb5eb6bda8bb2be3dfaaa88eb4b5ad787f47aa7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601193"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268925"
 ---
 # <a name="how-to-service-data-partitioning"></a>方法: サービス データのパーティション分割
+
 このトピックでは、メッセージを同じ送信先サービスの複数のインスタンスにパーティション分割するのに必要な、基本的な手順について説明します。 サービス データのパーティション分割は、一般的に、優れた品質のサービスを提供するためにサービスを拡張する必要がある場合や、さまざまな顧客からの要求を特定の方法で処理する必要がある場合に使用されます。 たとえば、高い値または "Gold" の顧客からのメッセージは、標準の顧客からのメッセージよりも高い優先順位で処理する必要がある場合があります。  
   
  この例では、メッセージが regularCalc サービスの 2 つのインスタンスの 1 つにルーティングされます。 サービスの両方のインスタンスは同じですが、calculator1 エンドポイントで表されるサービスは、重要な顧客から受け取ったメッセージを処理し、calculator 2 エンドポイントは、その他の顧客からのメッセージを処理します。  
@@ -99,6 +100,7 @@ ms.locfileid: "84601193"
     ```  
   
 ## <a name="example"></a>例  
+
  構成ファイル全体の一覧を次に示します。  
   
 ```xml  
