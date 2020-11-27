@@ -3,17 +3,19 @@ title: Application
 description: この記事では、Windows Workflow Foundation でのワークフローアプリケーションの詳細な手順を示したサンプルについて説明します。
 ms.date: 03/30/2017
 ms.assetid: 22d27e12-ab04-432b-9695-9f74e098cff3
-ms.openlocfilehash: 90c43c44781c3dca9fb91f68b44ccd40e9777242
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: b9e3cc0744ef7a2f48356c4b109ff8c448d4d354
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421398"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293491"
 ---
 # <a name="application"></a>Application
+
 このセクションには、Windows Workflow Foundation (WF) のワークフローアプリケーションに関連するサンプルが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [ドキュメント承認プロセス](document-approval-process.md)  
  基幹業務アプリケーションでのワークフローの使用方法を示します。  
   

@@ -2,25 +2,27 @@
 title: 探索のセキュリティのサンプル
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: c6ec9b7e13234b7dae03541eb09ccba98f4cc93a
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 0957e8ddaee99e60b205c92319dc2c61e2ab007a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144904"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292637"
 ---
 # <a name="discovery-security-sample"></a>探索のセキュリティのサンプル
 
-Discovery 仕様では、探索プロセスに参加するエンドポイントをセキュリティで保護する必要はありません。 探索メッセージをセキュリティで強化することで、さまざまな種類の攻撃 (メッセージの改ざん、サービス拒否、リプレイ、なりすまし) が軽減されます。 このサンプルでは、コンパクトな署名形式 (WS-Discovery 仕様のセクション 8.2 を参照) を使用してメッセージ署名の計算と検証を行うカスタム チャネルの実装方法を示します。 このサンプルでは、 [2005 検出仕様](http://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf)と[1.1 バージョン](http://docs.oasis-open.org/ws-dd/discovery/1.1/cs-01/wsdd-discovery-1.1-spec-cs-01.pdf)の両方がサポートされています。  
+Discovery 仕様では、探索プロセスに参加するエンドポイントをセキュリティで保護する必要はありません。 探索メッセージをセキュリティで強化することで、さまざまな種類の攻撃 (メッセージの改ざん、サービス拒否、リプレイ、なりすまし) が軽減されます。 このサンプルでは、コンパクトな署名形式 (WS-Discovery 仕様のセクション 8.2 を参照) を使用してメッセージ署名の計算と検証を行うカスタム チャネルの実装方法を示します。 このサンプルでは、 [2005 検出仕様](http://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf) と [1.1 バージョン](http://docs.oasis-open.org/ws-dd/discovery/1.1/cs-01/wsdd-discovery-1.1-spec-cs-01.pdf)の両方がサポートされています。  
   
  カスタム チャネルは、探索エンドポイントおよびアナウンス エンドポイントの既存のチャネル スタックの上に適用されます。 これにより、署名ヘッダーがすべての送信メッセージに適用されます。 署名は受信メッセージで検証され、署名が一致しない場合やメッセージに署名がない場合、そのメッセージは破棄されます。 このサンプルでは、メッセージの署名と検証を行うために証明書を使用します。  
   
 ## <a name="discussion"></a>ディスカッション  
+
  WCF は拡張可能であり、ユーザーは必要に応じてチャネルをカスタマイズできます。 このサンプルでは、セキュリティで保護されたチャネルを作成する、探索のセキュリティ保護されたバインド要素を実装します。 セキュリティで保護されたチャネルは、メッセージ署名を適用および検証します。このチャネルは現在のスタックの上に適用されます。  
   
  セキュリティ保護されたバインディング要素は、セキュリティで保護されたチャネル ファクトリとチャネル リスナーを作成します。  
   
 ## <a name="secure-channel-factory"></a>セキュリティで保護されたチャネル ファクトリ  
+
  セキュリティで保護されたチャネル ファクトリは、メッセージ ヘッダーにコンパクトな署名を追加する出力チャネルまたは双方向チャネルを作成します。 メッセージをできるだけ小さくするために、コンパクトな署名形式が使用されます。 コンパクトな署名の構造の例を次に示します。  
   
 ```xml  
@@ -43,9 +45,11 @@ Discovery 仕様では、探索プロセスに参加するエンドポイント�
  メッセージは、クライアントが指定した証明書を使用して署名されます。 バインド要素を作成するときに、ストアの場所、名前、および証明書のサブジェクト名を指定する必要があります。 コンパクトな署名の `KeyId` は、署名トークンのキー識別子を表します。これは、署名トークンのサブジェクト キー識別子 (SKI) か、署名トークンの公開キーの SHA-1 ハッシュ (SKI が存在しない場合) です。  
   
 ## <a name="secure-channel-listener"></a>セキュリティで保護されたチャネル リスナー  
+
  セキュリティで保護されたチャネル リスナーは、受信メッセージのコンパクトな署名を検証する入力チャネルまたは双方向チャネルを作成します。 署名を検証するために、メッセージに結び付けられているコンパクトな署名で指定された `KeyId` を使用して、指定されたストアから証明書が選択されます。 メッセージに署名がない場合や署名のチェックに失敗した場合、そのメッセージは破棄されます。 このサンプルでは、セキュリティで保護されたバインディングを使用するために、探索のセキュリティ保護されたバインド要素が追加されたカスタムの <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> と <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> を作成するファクトリを定義します。 これらのセキュリティで保護されたエンドポイントは、探索アナウンス リスナーや探索サービスで使用できます。  
   
 ## <a name="sample-details"></a>サンプルの詳細  
+
  このサンプルには、1 つのライブラリと 4 つのコンソール アプリケーションが含まれています。
   
 - **Discoverysecuritychannels**: セキュリティで保護されたバインディングを公開するライブラリ。 このライブラリは、送信/受信メッセージのコンパクトな署名の計算と検証を行います。  
@@ -54,16 +58,16 @@ Discovery 仕様では、探索プロセスに参加するエンドポイント�
   
 - **クライアント**: このクラスは、ICalculatorService の検出と、サービスのメソッドの呼び出しを試みます。 ここでも、メッセージの署名と検証を行うために、セキュリティが追加された <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> が作成されて使用されます。  
   
-- アナウンス**Ementlistener**: オンラインおよびオフラインのアナウンスをリッスンし、セキュリティで保護されたアナウンスエンドポイントを使用する自己ホスト型サービスです。  
+- アナウンス **Ementlistener**: オンラインおよびオフラインのアナウンスをリッスンし、セキュリティで保護されたアナウンスエンドポイントを使用する自己ホスト型サービスです。  
   
 > [!NOTE]
 > Setup.bat を複数回実行すると、証明書が重複し、証明書マネージャーから、追加する証明書を選択するように求められます。 その場合は、既に重複が作成されているため、Setup.bat を中止して Cleanup.bat を呼び出します。 Cleanup.bat でも、削除する証明書を選択するように求められます。 一覧から証明書を選択し、残っている証明書がなくなるまで Cleanup.bat を実行します。  
   
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには  
   
-1. Visual Studio の開発者コマンドプロンプトから、セットアップの .bat スクリプトを実行します。 このサンプルでは、証明書を使用してメッセージの署名と検証を行います。 スクリプトによって、証明書が Makecert.exe を使用して作成され、Certmgr.exe を使用してインストールされます。 このスクリプトは、管理者権限で実行する必要があります。  
+1. Visual Studio の開発者コマンドプロンプトから Setup.bat スクリプトを実行します。 このサンプルでは、証明書を使用してメッセージの署名と検証を行います。 スクリプトによって、証明書が Makecert.exe を使用して作成され、Certmgr.exe を使用してインストールされます。 このスクリプトは、管理者権限で実行する必要があります。  
   
-2. サンプルをビルドして実行するには、Visual Studio でセキュリティ .sln ファイルを開き、[**すべてリビルド**] を選択します。 複数のプロジェクトを開始するようにソリューションのプロパティを更新する: DiscoverySecureChannels を除くすべてのプロジェクトに対して [**開始**] を選択します。 通常どおりソリューションを実行します。  
+2. サンプルをビルドして実行するには、Visual Studio でセキュリティ .sln ファイルを開き、[ **すべてリビルド**] を選択します。 複数のプロジェクトを開始するようにソリューションのプロパティを更新する: DiscoverySecureChannels を除くすべてのプロジェクトに対して [ **開始** ] を選択します。 通常どおりソリューションを実行します。  
   
 3. サンプルの作業が終了したら、このサンプルで作成した証明書を削除する Cleanup.bat スクリプトを実行します。  
   
@@ -72,6 +76,6 @@ Discovery 仕様では、探索プロセスに参加するエンドポイント�
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  

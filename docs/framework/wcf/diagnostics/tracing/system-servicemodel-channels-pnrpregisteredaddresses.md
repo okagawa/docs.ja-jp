@@ -2,17 +2,19 @@
 title: System.ServiceModel.Channels.PnrpRegisteredAddresses
 ms.date: 03/30/2017
 ms.assetid: b770e042-0555-4668-9b41-e20da092c16a
-ms.openlocfilehash: a6c6588d2f882ad15cde85800490924d2f51d96e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 254c9247f4fecffffd698e5870ea056934b7ed63
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599543"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292194"
 ---
 # <a name="systemservicemodelchannelspnrpregisteredaddresses"></a>System.ServiceModel.Channels.PnrpRegisteredAddresses
+
 PNRP リゾルバーがローカル ノードのアドレスを登録しました。  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>Description  
+
  このトレースは、PNRP サービスがローカルノードのアドレスを正常に登録した後に発生します。  
   
 ## <a name="see-also"></a>関連項目

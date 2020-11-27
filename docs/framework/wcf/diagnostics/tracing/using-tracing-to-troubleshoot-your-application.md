@@ -2,17 +2,19 @@
 title: トレースを使用したアプリケーションのトラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 7676b9bb-cbd1-41fd-9a93-cc615af6e2d0
-ms.openlocfilehash: 78280a399c3490afb0dd2293c60b58d9d00fc228
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3b684bf2dc6b075906921f56c6aa07ee55ca7fd5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587639"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96291246"
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>トレースを使用したアプリケーションのトラブルシューティング
+
 このセクションには、トレースを使用してアプリケーションをトラブルシューティングする方法について説明したさまざまなトピックが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [トレースとメッセージ ログの推奨設定](recommended-settings-for-tracing-and-message-logging.md)  
  運用環境とデバッグ環境の推奨設定について説明します。  
   

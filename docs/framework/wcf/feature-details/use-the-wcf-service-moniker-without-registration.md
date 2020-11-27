@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
-ms.openlocfilehash: f69314948a0e0a69e49ec148f94572f17d0b8e3c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 41761313fae68a1a348a73f104e21dc19e07eb65
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595051"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293508"
 ---
 # <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>方法: 未登録で Windows Communication Foundation のサービス モニカーを使用する
+
 Windows Communication Foundation (WCF) サービスに接続して通信するには、WCF クライアントアプリケーションに、サービスアドレス、バインディング構成、およびサービスコントラクトの詳細が含まれている必要があります。  
   
  通常、WCF サービスモニカーは、必要な属性の種類を事前に登録して、必要なコントラクトを取得しますが、これが不可能な場合もあります。 登録の代わりに、モニカーは、`wsdl` パラメーターまたは Metadata Exchange を使用し、`mexAddress` パラメーターを使用することによって、WSDL (Web Services Definition Language) ドキュメントの形でコントラクトの定義を取得できます。  
@@ -22,6 +23,7 @@ Windows Communication Foundation (WCF) サービスに接続して通信する�
 > 要求と応答の改ざんまたはなりすましを防止するために、相互認証を使用する必要があります。 具体的には、応答している Metadata Exchange エンドポイントが目的の信頼されたパーティであることがクライアントに対して保証されることが重要です。  
   
 ## <a name="example"></a>例  
+
  MEX コントラクトと共にサービス モニカーを使用する例を次に示します。 次のコントラクトが設定されたサービスは、wsHttpBinding で公開されます。  
   
 ```csharp

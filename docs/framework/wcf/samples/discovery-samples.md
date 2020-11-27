@@ -2,17 +2,19 @@
 title: 探索 (サンプル)
 ms.date: 03/30/2017
 ms.assetid: 522a00b4-a789-4e8c-b8d7-a4c3d863a182
-ms.openlocfilehash: bb5471db6f4feb61798926ae1466a3bebac7e959
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d5801452943a75e87d829e5d5004e3c259ce3afa
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600582"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292611"
 ---
 # <a name="discovery-samples"></a>探索 (サンプル)
+
 このセクションには、探索機能関連のサンプルが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [お知らせ](announcements-sample.md)  
  探索機能を使用したアナウンスを使用する方法を示します。  
   

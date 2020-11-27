@@ -2,14 +2,15 @@
 title: アクティビティ デリゲートの使用
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: cbcc8f8e498be4f79f8fed5af7cd3557d7c55981
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 66a03187336475ed377fda032506cfa66d3daf58
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837572"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293300"
 ---
 # <a name="using-activity-delegates"></a>アクティビティ デリゲートの使用
+
 アクティビティ デリゲートを使用すると、アクティビティの作成者は、特定の署名を持つコールバックを公開できます。アクティビティのユーザーは、この署名用のアクティビティベースのハンドラーを提供できます。 2 種類のアクティビティ デリゲートを使用できます。<xref:System.Activities.ActivityAction%601> は、戻り値を持たないアクティビティ デリゲートを定義する場合に使用され、<xref:System.Activities.ActivityFunc%601> は戻り値を持つアクティビティ デリゲートを定義する場合に使用されます。
 
 アクティビティ デリゲートは、子アクティビティが特定の署名を持つように制限する必要がある場合に便利です。 たとえば、<xref:System.Activities.Statements.While> アクティビティは制約のないあらゆる型のアクティビティを含めることができますが、<xref:System.Activities.Statements.ForEach%601> アクティビティの本体は <xref:System.Activities.ActivityAction%601> であるため、最終的には <xref:System.Activities.Statements.ForEach%601> によって実行されるその子アクティビティは、<xref:System.Activities.InArgument%601> が列挙するコレクションのメンバーと同じ型である <xref:System.Activities.Statements.ForEach%601> を持つ必要があります。
@@ -30,9 +31,9 @@ HelloWorld.
 
 [!code-csharp[CFX_ActivityExample#7](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]
 
-オブジェクト初期化子の詳細については、「[方法: コンストラクターを呼び出さずC#にオブジェクトを初期化する (プログラミングガイド)](../../csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md) 」および「[方法: オブジェクト初期化子を使用してオブジェクトを宣言する (Visual Basic)](../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)」を参照してください。
+オブジェクト初期化子の詳細については、「 [方法: コンストラクターを呼び出さずにオブジェクトを初期化する (C# プログラミングガイド)](../../csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md) 」および「 [方法: オブジェクト初期化子を使用してオブジェクトを宣言する (Visual Basic)](../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)」を参照してください。
 
-次の例では、ワークフローで <xref:System.Activities.Statements.TryCatch> アクティビティを使用します。 ワークフローによって <xref:System.ApplicationException> がスローされ、<xref:System.Activities.Statements.Catch%601> アクティビティによってこの例外が処理されます。 <xref:System.Activities.Statements.Catch%601> アクティビティのアクティビティアクションのハンドラーは <xref:System.Activities.Statements.WriteLine> アクティビティであり、例外の詳細は `ex` <xref:System.Activities.DelegateInArgument%601>を使用してそれにフローされます。
+次の例では、ワークフローで <xref:System.Activities.Statements.TryCatch> アクティビティを使用します。 ワークフローによって <xref:System.ApplicationException> がスローされ、<xref:System.Activities.Statements.Catch%601> アクティビティによってこの例外が処理されます。 アクティビティ <xref:System.Activities.Statements.Catch%601> のアクティビティアクションのハンドラーは <xref:System.Activities.Statements.WriteLine> アクティビティであり、例外の詳細はを使用してそれにフローされ `ex` <xref:System.Activities.DelegateInArgument%601> ます。
 
 [!code-csharp[CFX_WorkflowApplicationExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]
 

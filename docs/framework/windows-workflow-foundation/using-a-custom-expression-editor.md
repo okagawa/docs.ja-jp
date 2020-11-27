@@ -2,19 +2,20 @@
 title: カスタム式エディターの使用
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: a1cd92766c8897868920c1465ddb3eeabae1aa97
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e33e804d73239794a7f9cf9f3c28c3808f8b963e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182715"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293313"
 ---
 # <a name="using-a-custom-expression-editor"></a>カスタム式エディターの使用
+
 カスタム式エディターを実装して、式の編集を多機能化したり単純化したりすることができます。 たとえば、次のような場合にカスタム式エディターを使用できます。  
   
-- 再ホストされたワークフロー デザイナーで IntelliSense などの高度な編集機能をサポートする場合。 この機能は、既定の Visual Studio 式エディターは、再ホストされたアプリケーションでは使用できないために提供する必要があります。  
+- 再ホストされたワークフロー デザイナーで IntelliSense などの高度な編集機能をサポートする場合。 既定の Visual Studio 式エディターは再ホストされたアプリケーションでは使用できないため、この機能を提供する必要があります。  
   
-- ビジネス アナリストユーザーの式編集操作を簡略化し、たとえば Visual Basic を学習したり、Visual Basic の式を扱ったりする必要がないようにする。  
+- ビジネスアナリストのユーザーのための式の編集エクスペリエンスを単純化するために、たとえば Visual Basic 式の Visual Basic 学習や処理を行うために必要とされないようにします。  
   
  カスタム式エディターを実装するには、次の 3 つの基本的な手順を実行する必要があります。  
   
@@ -25,6 +26,7 @@ ms.locfileid: "79182715"
 3. 再ホストされたワークフロー アプリケーションで <xref:System.Activities.Presentation.View.IExpressionEditorService> を公開します。  
   
 ## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a>クラス ライブラリ内のカスタム式エディターを実装する  
+
  次のコードは、MyExpressionEditorService ライブラリ プロジェクトに含まれている `MyEditorService` インターフェイスを実装する (概念実証) <xref:System.Activities.Presentation.View.IExpressionEditorService> クラスのサンプル コードです。  
   
 ```csharp  
@@ -222,7 +224,8 @@ namespace MyExpressionEditorService
 ```  
   
 ### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a>WPF プロジェクトでカスタム式エディターを公開する  
- WPF アプリケーションでデザイナーを再ホストする方法と、サービスを作成して公開する方法を示すコード`MyEditorService`を次に示します。 このコードを使用する前に、avalon2 アプリケーションを含むプロジェクトから、MyExpressionEditorService ライブラリ プロジェクトへの参照を追加します。  
+
+ WPF アプリケーションでデザイナーを再ホストする方法と、サービスを作成して発行する方法を示すコードを次に示し `MyEditorService` ます。 このコードを使用する前に、avalon2 アプリケーションを含むプロジェクトから、MyExpressionEditorService ライブラリ プロジェクトへの参照を追加します。  
   
 ```csharp  
 using System.Windows;  
@@ -275,8 +278,9 @@ namespace WpfApplication1
 }  
 ```  
   
-### <a name="notes"></a>Notes  
- カスタム アクティビティ デザイナーで**ExpressionTextBox**コントロールを使用している場合は、インターフェイスの<xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A>メソッドと メソッドを使用して式<xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A>エディターを作成<xref:System.Activities.Presentation.View.IExpressionEditorService>および破棄する必要はありません。 <xref:System.Activities.Presentation.View.ExpressionTextBox> クラスによってこの処理が行われます。  
+### <a name="notes"></a>メモ  
+
+ カスタムアクティビティデザイナーで式の **textbox** コントロールを使用している場合は、 <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> インターフェイスのメソッドおよびメソッドを使用して、式エディターを作成および破棄する必要はありません <xref:System.Activities.Presentation.View.IExpressionEditorService> 。 <xref:System.Activities.Presentation.View.ExpressionTextBox> クラスによってこの処理が行われます。  
   
 ## <a name="see-also"></a>関連項目
 

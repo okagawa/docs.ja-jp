@@ -2,21 +2,23 @@
 title: WasConnectionTimedout
 ms.date: 03/30/2017
 ms.assetid: be762c57-5641-4761-bd74-ce42603d40bc
-ms.openlocfilehash: db3b689eabeeca31e9b7879739360edce8bbd310
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5d28001d2ec2fcd0f7981f12b4a3bf13af2f4bd1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796029"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293222"
 ---
 # <a name="wasconnectiontimedout"></a>WasConnectionTimedout
-Id:163  
+
+ID : 163  
   
- 順Error  
+ 重大度 : エラー  
   
- [カテゴリ]:Smsvchost.exe  
+ カテゴリ: SMSvcHost  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>Description  
+
  このイベントは、Windows プロセス アクティブ化サービス (WAS) で必要な接続がタイムアウトになったことを示し、プロセス名とプロセス ID を表示します。  
   
 ## <a name="see-also"></a>関連項目

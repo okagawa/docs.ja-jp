@@ -2,19 +2,21 @@
 title: カスタム アクティビティ デザイナー
 ms.date: 03/30/2017
 ms.assetid: dcf14dca-ce6d-4278-96ba-062f0a679075
-ms.openlocfilehash: 982aecea27de680468fe6f574f72c459ef76b142
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c6458d6c4c7e722f577b1bad30521d899ac1688
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913849"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293443"
 ---
 # <a name="custom-activity-designers"></a>カスタム アクティビティ デザイナー
+
 このセクションでは、ワークフロー デザイナーに表示するカスタム デザイナーを使用するアクティビティ サンプルを示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [カスタム複合デザイナー - Workflow Item Presenter](custom-composite-designers-workflow-item-presenter.md)  
- このサンプルは、このような「ドロップ ゾーンです。」を表示するアクティビティ デザイナーを構築する方法を示しています。  
+ このサンプルでは、このような "ドロップゾーン" を格納するアクティビティデザイナーを構築する方法を示します。  
   
  [カスタム複合デザイナー - Workflow Items Presenter](custom-composite-designers-workflow-items-presenter.md)  
  このサンプルでは、このような編集可能なコレクションを表示するアクティビティ デザイナーの構築方法を示します。  

@@ -2,21 +2,23 @@
 title: SecurityNegotiationFailure
 ms.date: 03/30/2017
 ms.assetid: 2060a678-f97b-4491-acd9-6c57c732afd7
-ms.openlocfilehash: c4d753c9fcaae2990d27445e5b71ad5f3894f27f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 33a3e09027667f8bd01ea2572b18f60c912b9e55
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796137"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293430"
 ---
 # <a name="securitynegotiationfailure"></a>SecurityNegotiationFailure
-Id:172  
+
+Id: 172  
   
- 順Error  
+ 重大度 : エラー  
   
- [カテゴリ]:SecurityAudit  
+ カテゴリ : SecurityAudit  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>Description  
+
  このイベントは、セキュリティ ネゴシエーションに失敗したことを示します。 イベントには、サービス、アクション、クライアント ID、アクティビティ ID、およびネゴシエーションが表示されます。  
   
 ## <a name="see-also"></a>関連項目
