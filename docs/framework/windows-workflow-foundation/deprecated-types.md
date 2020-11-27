@@ -2,17 +2,19 @@
 title: Windows Workflow Foundation で非推奨の型
 ms.date: 03/30/2017
 ms.assetid: 4aebe928-a964-4c1c-abf7-0dbbd3604b13
-ms.openlocfilehash: 011f13a56695efdd9e964ef1e6c1099b0acc2710
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 628963650d32237dedbb6ab2a0a2d9a79866af18
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713341"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272873"
 ---
 # <a name="deprecated-types-in-windows-workflow-foundation"></a>Windows Workflow Foundation で非推奨の型
+
 .NET 4 の段階で、ワークフロー チームは、<xref:System.Activities> 名前空間のまったく新しいワークフロー エンジンをリリースしました。 .NET Framework 4.5 Beta のリリースでは、"WF 3"、、および名前空間のほとんどの型を <xref:System.Workflow.Activities> <xref:System.Workflow.ComponentModel>  <xref:System.Workflow.Runtime> 廃止としてマークしています。
 
 ## <a name="obsolete-namespaces-and-tools"></a>旧式の名前空間とツール
+
  次のアセンブリには、今後非推奨とされるパブリック型が 1 つ以上含まれています：
 
 - System.Workflow.Activities.dll

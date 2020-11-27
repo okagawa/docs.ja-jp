@@ -4,29 +4,30 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: 9250ca09fb5e28655e39f8d91d991fdb3bffcdbd
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fa9d5c40c2ae813493b3643048fa7eaba00c431d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795750"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273231"
 ---
 # <a name="extending-dispatchers"></a>ディスパッチャーの拡張
+
 ディスパッチャーには、基になるチャネルから受信メッセージをプルし、そのメッセージをアプリケーション コードでのメソッド呼び出しに変換し、結果を呼び出し元に送信する役割があります。 ディスパッチャーの拡張を使用することで、この処理を変更できます。  メッセージやパラメーターの内容を検査または変更するメッセージ インスペクターまたはパラメーター インスペクターを実装できます。  また、メッセージが操作にルーティングされる方法を変更することも、他の機能を提供することもできます。
 
-このトピックでは、Windows Communication Foundation ( <xref:System.ServiceModel.Dispatcher.DispatchRuntime> WCF <xref:System.ServiceModel.Dispatcher.DispatchOperation> ) サービスアプリケーションでクラスとクラスを使用して、ディスパッチャーの既定の実行動作を変更する方法、またはメッセージ、パラメーター、または戻り値を取得または変更する方法について説明します。チャネルレイヤーから送信または取得する前または後の値。 同等のクライアントランタイムメッセージ処理の詳細については、「[クライアントの拡張](extending-clients.md)」を参照してください。 さまざまなランタイムカスタマイズオブジェクト<xref:System.ServiceModel.IExtensibleObject%601>間での共有状態へのアクセスで、型が果たす役割を理解するには、「[拡張可能オブジェクト](extensible-objects.md)」を参照してください。
+このトピックでは、 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> <xref:System.ServiceModel.Dispatcher.DispatchOperation> WINDOWS COMMUNICATION FOUNDATION (WCF) サービスアプリケーションでクラスとクラスを使用して、ディスパッチャーの既定の実行動作を変更する方法、またはチャネルレイヤーから送信または取得する前または後にメッセージ、パラメーター、または戻り値をインターセプトまたは変更する方法について説明します。 同等のクライアントランタイムメッセージ処理の詳細については、「 [クライアントの拡張](extending-clients.md)」を参照してください。 <xref:System.ServiceModel.IExtensibleObject%601>さまざまなランタイムカスタマイズオブジェクト間での共有状態へのアクセスで、型が果たす役割を理解するには、「[拡張可能オブジェクト](extensible-objects.md)」を参照してください。
 
 ## <a name="dispatchers"></a>ディスパッチャー
 
-サービス モデル レイヤーは、開発者のプログラミング モデルと基になるメッセージ交換 (一般的に、チャネル レイヤーと呼ばれます) の間の変換を実行します。 WCF では、チャネルとエンドポイント<xref:System.ServiceModel.Dispatcher.ChannelDispatcher>ディスパッチャー <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>(および) は、新しいチャネルの受け入れ、メッセージの受信、操作のディスパッチと呼び出し、および応答処理を行うサービスコンポーネントです。 ディスパッチャー オブジェクトは、受信者のオブジェクトですが、双方向サービスでのコールバック コントラクトの実装も、検査、変更、または拡張のためにディスパッチャー オブジェクトを公開します。
+サービス モデル レイヤーは、開発者のプログラミング モデルと基になるメッセージ交換 (一般的に、チャネル レイヤーと呼ばれます) の間の変換を実行します。 WCF では、チャネルとエンドポイントディスパッチャー ( <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> および <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> ) は、新しいチャネルの受け入れ、メッセージの受信、操作のディスパッチと呼び出し、および応答処理を行うサービスコンポーネントです。 ディスパッチャー オブジェクトは、受信者のオブジェクトですが、双方向サービスでのコールバック コントラクトの実装も、検査、変更、または拡張のためにディスパッチャー オブジェクトを公開します。
 
 チャネル ディスパッチャー (およびコンパニオン <xref:System.ServiceModel.Channels.IChannelListener>) は、基になるチャネルからメッセージをプルし、そのメッセージをそれぞれのエンドポイント ディスパッチャーに渡します。 各エンドポイント ディスパッチャーには、メッセージを適切な <xref:System.ServiceModel.Dispatcher.DispatchRuntime> にルーティングする <xref:System.ServiceModel.Dispatcher.DispatchOperation> があります。これには、操作を実装するメソッドを呼び出す役割があります。 さまざまなオプションの拡張クラスおよび必須の拡張クラスが呼び出されます。 ここでは、この要素を組み合わせる方法、基本機能を拡張するためにプロパティを変更し、ユーザーのコードをプラグインする方法について説明します。
 
-ディスパッチャーのプロパティと変更されたカスタマイズ オブジェクトは、サービス、エンドポイント、コントラクト、または操作の動作オブジェクトを使用して挿入します。 ここでは、動作を使用する方法については説明しません。 ディスパッチャーの変更を挿入するために使用される型の詳細については、「[動作の構成と拡張](configuring-and-extending-the-runtime-with-behaviors.md)」を参照してください。
+ディスパッチャーのプロパティと変更されたカスタマイズ オブジェクトは、サービス、エンドポイント、コントラクト、または操作の動作オブジェクトを使用して挿入します。 ここでは、動作を使用する方法については説明しません。 ディスパッチャーの変更を挿入するために使用される型の詳細については、「 [動作の構成と拡張](configuring-and-extending-the-runtime-with-behaviors.md)」を参照してください。
 
 次の図は、サービスを構成する項目の概念図を示しています。
 
-![ディスパッチランタイムアーキテクチャ](./media/wcfc-dispatchruntimearchc.gif "wcfc_DispatchRuntimeArchc")
+![ディスパッチ ランタイム アーキテクチャ](./media/wcfc-dispatchruntimearchc.gif "wcfc_DispatchRuntimeArchc")
 
 ### <a name="channel-dispatchers"></a>チャネル ディスパッチャー
 
@@ -44,30 +45,30 @@ ms.locfileid: "70795750"
 
 ディスパッチャーを拡張する理由としては、次のようなさまざまなものがあります。
 
-- カスタム メッセージの検証。 特定のスキーマに対してメッセージが有効になるようにすることができます。 これは、メッセージ インターセプター インターフェイスを実装することで対応できます。 例については、「[メッセージインスペクター](../samples/message-inspectors.md)」を参照してください。
+- カスタム メッセージの検証。 特定のスキーマに対してメッセージが有効になるようにすることができます。 これは、メッセージ インターセプター インターフェイスを実装することで対応できます。 例については、「 [メッセージインスペクター](../samples/message-inspectors.md)」を参照してください。
 
 - カスタム メッセージのログ記録。 エンドポイントを通過するアプリケーション メッセージの一部を検査して記録することができます。 これはメッセージ インターセプター インターフェイスで実行可能です。
 
 - カスタム メッセージの変換。 ランタイムのメッセージに特定の変換を適用できます (バージョン管理の場合など)。 これもまた、メッセージ インターセプター インターフェイスで実行可能です。
 
-- カスタム データ モデル。 ユーザーは、WCF で既定でサポートされているもの以外のデータシリアル化<xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>モデル<xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>を持つことができます (つまり、、、および未加工のメッセージ)。 これは、メッセージ フォーマッタ インターフェイスを実装することで対応できます。 例については、「[操作フォーマッタと操作セレクター](../samples/operation-formatter-and-operation-selector.md)」を参照してください。
+- カスタム データ モデル。 ユーザーは、WCF で既定でサポートされているもの以外のデータシリアル化モデルを持つことができます (つまり、、、 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> および未加工のメッセージ)。 これは、メッセージ フォーマッタ インターフェイスを実装することで対応できます。 例については、「 [操作フォーマッタと操作セレクター](../samples/operation-formatter-and-operation-selector.md)」を参照してください。
 
 - カスタム パラメーターの検証。 XML ではなく、型指定されたパラメーターが有効になるようにすることができます。 これは、パラメーター インスペクター インターフェイスを使用して実行できます。
 
-- カスタム操作ディスパッチ。 アクション以外の場所、たとえば、本文要素やカスタム メッセージ プロパティでディスパッチを実装できます。 これは、<xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> インターフェイスを使用して実行できます。 例については、「[操作フォーマッタと操作セレクター](../samples/operation-formatter-and-operation-selector.md)」を参照してください。
+- カスタム操作ディスパッチ。 アクション以外の場所、たとえば、本文要素やカスタム メッセージ プロパティでディスパッチを実装できます。 これは、<xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> インターフェイスを使用して実行できます。 例については、「 [操作フォーマッタと操作セレクター](../samples/operation-formatter-and-operation-selector.md)」を参照してください。
 
-- オブジェクト プール。 呼び出しごとに新しいインスタンスを割り当てるのではなく、インスタンスをプールできます。 これは、インスタンス プロバイダー インターフェイスを使用して実装できます。 例については、「[プーリング](../samples/pooling.md)」を参照してください。
+- オブジェクト プール。 呼び出しごとに新しいインスタンスを割り当てるのではなく、インスタンスをプールできます。 これは、インスタンス プロバイダー インターフェイスを使用して実装できます。 例については、「 [プーリング](../samples/pooling.md)」を参照してください。
 
 - インスタンス リース。 インスタンスの有効期間にリース パターンを実装できます。これは、.NET Framework リモートのパターンに似ています。 これは、インスタンス コンテキスト有効期間インターフェイスを使用して実行できます。
 
 - カスタム エラー処理。 ローカル エラーの処理方法とエラーをクライアントに戻す方法を制御できます。 これは、<xref:System.ServiceModel.Dispatcher.IErrorHandler> インターフェイスを使用して実装できます。
 
-- カスタム承認動作。 コントラクトまたは操作のランタイム要素を拡張し、メッセージに存在するトークンに基づくセキュリティ チェックを追加することによって、カスタムのアクセス制御を実装できます。 これは、メッセージ インターセプター インターフェイスまたはパラメーター インターセプター インターフェイスを使用して実行できます。 例については、「[セキュリティの機能拡張](../samples/security-extensibility.md)」を参照してください。
+- カスタム承認動作。 コントラクトまたは操作のランタイム要素を拡張し、メッセージに存在するトークンに基づくセキュリティ チェックを追加することによって、カスタムのアクセス制御を実装できます。 これは、メッセージ インターセプター インターフェイスまたはパラメーター インターセプター インターフェイスを使用して実行できます。 例については、「 [セキュリティの機能拡張](../samples/security-extensibility.md)」を参照してください。
 
   > [!CAUTION]
   > セキュリティプロパティを変更することで、WCF アプリケーションのセキュリティが侵害される可能性があるため、展開する前にセキュリティ関連の変更を慎重に行って、徹底的にテストすることを強くお勧めします。
 
-- カスタム WCF ランタイム バリデーター。 サービス、コントラクト、およびバインドを調べて、WCF アプリケーションに対してエンタープライズレベルのポリシーを適用するカスタム検証コントロールをインストールできます。 (例について[は、「方法:エンタープライズ](how-to-lock-down-endpoints-in-the-enterprise.md)内のエンドポイントをロックダウンします。)
+- カスタム WCF ランタイム バリデーター。 サービス、コントラクト、およびバインドを調べて、WCF アプリケーションに対してエンタープライズレベルのポリシーを適用するカスタム検証コントロールをインストールできます。 (例について [は、「方法: 企業内のエンドポイントをロックダウンする](how-to-lock-down-endpoints-in-the-enterprise.md)」を参照してください)。
 
 ### <a name="using-the-dispatchruntime-class"></a>DispatchRuntime クラスの使用
 
@@ -107,7 +108,7 @@ ms.locfileid: "70795750"
 
 ### <a name="using-the-dispatchoperation-class"></a>DispatchOperation クラスの使用
 
-<xref:System.ServiceModel.Dispatcher.DispatchOperation> クラスは、1 つのサービス操作のスコープ内だけに適用されるカスタムの拡張を実現するために、ランタイムに対して変更または挿入を行う場所です (コントラクト中のすべてのメッセージに対するサービスのランタイム動作を変更するには、<xref:System.ServiceModel.Dispatcher.DispatchRuntime> クラスを使用します)。
+<xref:System.ServiceModel.Dispatcher.DispatchOperation> クラスは、1 つのサービス操作のスコープ内だけに適用されるカスタムの拡張を実現するために、ランタイムに対して変更または挿入を行う場所です。 (コントラクト中のすべてのメッセージに対するサービスのランタイム動作を変更するには、<xref:System.ServiceModel.Dispatcher.DispatchRuntime> クラスを使用します)。
 
 カスタムのサービス動作オブジェクトを使用して、<xref:System.ServiceModel.Dispatcher.DispatchOperation> の変更をインストールします。
 
@@ -138,5 +139,5 @@ ms.locfileid: "70795750"
 - <xref:System.ServiceModel.Dispatcher.DispatchRuntime>
 - <xref:System.ServiceModel.Dispatcher.DispatchOperation>
 - [方法: サービスのメッセージを検査および変更する](how-to-inspect-and-modify-messages-on-the-service.md)
-- [方法: パラメーターの検査または変更](how-to-inspect-or-modify-parameters.md)
-- [方法: エンタープライズ内のエンドポイントをロックダウンする](how-to-lock-down-endpoints-in-the-enterprise.md)
+- [方法: パラメーターを検査または変更する](how-to-inspect-or-modify-parameters.md)
+- [方法: 企業内のエンドポイントをロックダウンする](how-to-lock-down-endpoints-in-the-enterprise.md)

@@ -2,14 +2,15 @@
 title: WCF 開発ツールの使用
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: adaad28fee5d27976df4bf20bb54f70aec5c2daf
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 48733d27a72e864760c371e8b90e0af7b74273a0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544623"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273647"
 ---
 # <a name="using-the-wcf-development-tools"></a>WCF 開発ツールの使用
+
 このセクションでは、WCFservice の開発に役立つ Visual Studio 開発ツールについて説明します。  
   
  Visual Studio テンプレートを基礎として使用して、独自のサービスをすばやく構築し、WCF サービスの自動ホストと WCF テストクライアントを使用してサービスをデバッグおよびテストできます。 これらのツールによって、高速でシームレスなデバッグとテストのサイクルが実現し、初期の段階でホスト モデルにコミットする必要がなくなります。  
@@ -18,6 +19,7 @@ ms.locfileid: "90544623"
  > Visual Studio 2017 以降では、WCF 開発ツールは既定でインストールされません。 これらの機能を使用するには、Visual Studio インストーラーで Windows Communication Foundation コンポーネントが選択されていることを確認する必要があります。
   
 ## <a name="the-wcf-developer-tools"></a>WCF の開発者用ツール  
+
  [WCF Visual Studio テンプレート](wcf-vs-templates.md)  
   
  Visual Studio の事前定義された Visual Studio プロジェクトと項目テンプレートを使用して、WCF サービスとその周辺アプリケーションをすばやく構築できます。  
@@ -35,6 +37,7 @@ ms.locfileid: "90544623"
  クリップボードに格納されている XML データは、コード ページに貼り付けることができます。 データで定義されているクラスは、コード型に変換されます。  
   
 ## <a name="using-the-tools-without-administrator-privilege"></a>管理特権を必要としないツールの使用  
+
  管理者特権を持たないユーザーが WCF サービスを開発できるようにするには、 http://+:8731/Design_Time_Addresses Visual Studio のインストール時に、名前空間 "" の ACL (Access Control リスト) が作成されます。 この ACL は (UI) に設定され、コンピューターにログオンしているすべての対話ユーザーが含まれます。 管理者は、この ACL にユーザーを追加または削除したり、追加のポートを開いたりできます。この ACL によって、既定の構成で、WCF テンプレートまたは WF テンプレートでデータを送受信できるようになります。 また、ユーザーは、管理者特権を付与せずに、WCF サービスの自動ホスト (wcfSvcHost.exe) を使用することもできます。  
   
  アクセス権を変更するには、管理者特権で Windows Vista の Netsh.exe ツールを使用します。 Netsh.exe の使用例を次に示します。  
@@ -43,7 +46,7 @@ ms.locfileid: "90544623"
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>  
 ```  
   
- Netsh.exe の詳細については、「 [Netsh.exe ツールとコマンドラインスイッチの使用方法](/previous-versions/tn-archive/bb490939(v=technet.10))」を参照してください。  
+ Netsh.exe の詳細については、「 [Netsh.exe ツールと Command-Line スイッチの使用方法](/previous-versions/tn-archive/bb490939(v=technet.10))」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

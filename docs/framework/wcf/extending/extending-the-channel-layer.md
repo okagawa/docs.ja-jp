@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending channels [WCF]
 ms.assetid: 4238db74-2fb6-4dc8-a326-f58527230810
-ms.openlocfilehash: 76ca76d7973403c657b8f68bfde9619df36f220e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8d051ff84ea0562b3d7c810b2c884f4d8b787952
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797140"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273023"
 ---
 # <a name="extending-the-channel-layer"></a>チャネル レイヤーの拡張
+
 チャネル レイヤーはクライアントとサービス間のメッセージの交換を担います。 チャネル拡張では、新しいプロトコル機能 (セキュリティなど)、またはトランスポート機能 (SOAP メッセージを送信する新しいネットワーク トランスポートの実装など) を実装できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [チャネル モデルの概要](channel-model-overview.md)  
  チャネルとその機能、サービス アプリケーションおよびクライアント アプリケーションとの連携について概要を示します。  
   

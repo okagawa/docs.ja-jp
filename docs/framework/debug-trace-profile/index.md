@@ -14,19 +14,21 @@ helpviewer_keywords:
 - troubleshooting applications [.NET Framework]
 - application development [.NET Framework], profiling
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
-ms.openlocfilehash: 745f16652c02e3409e7fa7a48beacbf7e777e924
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+ms.openlocfilehash: 33dd840f4c1421bbff54499af56ab3e147cc694b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415980"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272775"
 ---
 # <a name="debugging-tracing-and-profiling"></a>デバッグ、トレース、およびプロファイリング
+
 .NET Framework アプリケーションをデバッグするには、アプリケーションにデバッガーをアタッチできるようにコンパイラとランタイム環境を構成する必要があり、可能であれば、アプリケーションとそれに対応する Microsoft Intermediate Language (MSIL) について記号マップと行マップの両方を生成する必要があります。 マネージド アプリケーションのデバッグが完了した後は、パフォーマンスを向上するようにプロファイルできます。 プロファイルでは、最も頻繁に実行されるコードを生成するソース コード行と、そのコードの実行に要する時間を評価して記述します。  
   
  .NET Framework アプリケーションは、構成の詳細の多くを処理する Visual Studio を使用すると容易にデバッグできます。 Visual Studio がインストールされていない場合は、.NET Framework の <xref:System.Diagnostics> 名前空間に含まれるデバッグ用のクラスを使用して .NET Framework アプリケーションのパフォーマンスを確認して向上させることができます。 この名前空間には、実行フローをトレースするためのクラスとして <xref:System.Diagnostics.Trace>、<xref:System.Diagnostics.Debug>、および <xref:System.Diagnostics.TraceSource> が含まれ、コードをプロファイルするためのクラスとして <xref:System.Diagnostics.Process>、<xref:System.Diagnostics.EventLog>、および <xref:System.Diagnostics.PerformanceCounter> が含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [JIT アタッチ デバッグの有効化](enabling-jit-attach-debugging.md)  
  .NET Framework アプリケーションにデバッグ エンジンを JIT アタッチするようにレジストリを構成する方法を示します。  
   
@@ -46,6 +48,7 @@ ms.locfileid: "85415980"
  アプリケーションのパフォーマンスを追跡するために使用できるカウンターについて説明します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [Visual Studio で ASP.NET または ASP.NET Core アプリをデバッグする](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)  
  開発時と配置後に ASP.NET アプリケーションをデバッグするための要件と手順について説明します。  
   

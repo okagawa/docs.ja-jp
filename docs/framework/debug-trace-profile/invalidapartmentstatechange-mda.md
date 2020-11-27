@@ -12,13 +12,15 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
-ms.openlocfilehash: c6f7b6a5e450d4167946d22b2ada268ea2b0135f
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: db55e3ac2d6862d008013abef0f09f67213d9faa
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051828"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272749"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange MDA
+
 `invalidApartmentStateChange` マネージド デバッグ アシスタント (MDS) は、次の 2 つのどちらかの問題によってアクティブ化されます。  
   
 - COM によって既に初期化されているスレッドの COM アパートメント状態を異なるアパートメント状態に変更しようとした。  
@@ -37,15 +39,18 @@ ms.locfileid: "86051828"
   
 - 異なるコンカレンシー モデルを持つ `CoUninitialize` メソッド (または `CoInitializeEx` メソッド) がスレッドで呼び出されます。  
   
-## <a name="resolution"></a>解決方法  
+## <a name="resolution"></a>解像度  
+
  スレッドの実行開始前に、スレッドのアパートメント状態を設定するか、<xref:System.STAThreadAttribute> 属性または <xref:System.MTAThreadAttribute> 属性をアプリケーションのメイン メソッドに適用します。  
   
  2 番目の原因の場合、理想的には、`CoUninitialize` メソッドを呼び出すコードを変更し、スレッドの終了間近になり、RCW がなく、基になる COM コンポーネントがまだスレッドによって使用されている状態まで、呼び出しを遅延する必要があります。 ただし、`CoUninitialize` を呼び出すコードを変更できない場合は、この方法で初期化解除されるスレッドから RCW を使用しないようにする必要があります。  
   
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
+
  この MDA は CLR に影響しません。  
   
 ## <a name="output"></a>出力  
+
  現在のスレッドの COM アパートメント状態、およびコードが適用しようとした状態。  
   
 ## <a name="configuration"></a>構成  
@@ -59,6 +64,7 @@ ms.locfileid: "86051828"
 ```  
   
 ## <a name="example"></a>例  
+
  次のコードの例は、この MDA がアクティブ化されることのある状況を示しています。  
   
 ```csharp
