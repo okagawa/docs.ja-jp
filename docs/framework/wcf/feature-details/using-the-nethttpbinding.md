@@ -2,21 +2,22 @@
 title: NetHttpBinding の使用
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-ms.openlocfilehash: ac6fc658731d032051f2dfd4058397f9b9a55828
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 85a81c353e779800a9aa371658f2f799365b759d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585637"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96282029"
 ---
 # <a name="using-the-nethttpbinding"></a>NetHttpBinding の使用
+
 <xref:System.ServiceModel.NetHttpBinding> は、HTTP や WebSocket のサービスを使用するために設計されたバインドで、既定ではバイナリ エンコードを使用します。 <xref:System.ServiceModel.NetHttpBinding> は、要求-応答コントラクトと二重のコントラクトのどちらで使用されているかを検出し、一致するように動作を変更します。要求-応答コントラクトには HTTP、二重のコントラクトには Websocket を使用します。 この動作は、<xref:System.ServiceModel.Channels.WebSocketTransportUsage> 設定を使用してオーバーライドできます。  
   
-1. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Always>-これにより、要求/応答コントラクトでも Websocket が強制的に使用されます。  
+1. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Always> -これにより、要求/応答コントラクトでも Websocket が強制的に使用されます。  
   
-2. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Never>-Websocket が使用されないようにします。 この設定で二重のコントラクトを使用しようとすると、例外が発生します。  
+2. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Never> -Websocket が使用されないようにします。 この設定で二重のコントラクトを使用しようとすると、例外が発生します。  
   
-3. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.WhenDuplex>-これは既定値で、前述のように動作します。  
+3. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.WhenDuplex> -これは既定値で、前述のように動作します。  
   
  <xref:System.ServiceModel.NetHttpBinding> は、HTTP モードと WebSocket モードの両方で信頼できるセッションをサポートします。 WebSocket モードでは、セッションがトランスポートによって提供されます。  
   
@@ -24,6 +25,7 @@ ms.locfileid: "84585637"
 > <xref:System.ServiceModel.NetHttpBinding> を使用していて、バインドの TransferMode が TransferMode.Streamed に設定されている場合、大きいストリームによってデッドロックが発生する可能性があり、呼び出しがタイムアウトします。 この問題を回避するには、小さいメッセージを送信するか、TransferMode.Buffered を使用してください。  
   
 ## <a name="configuring-a-service-to-use-nethttpbinding"></a>NetHttpBinding を使用するサービスの構成  
+
  <xref:System.ServiceModel.NetHttpBinding> は、他のバインドと同様に構成できます。 次の構成スニペットは、<xref:System.ServiceModel.NetHttpBinding> を使用して WCF サービスを構成する方法を示しています。  
   
 ```xml  

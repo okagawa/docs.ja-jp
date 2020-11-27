@@ -6,17 +6,18 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: b5272d8b4dbac60e14fe87accbb08a2073ed65ab
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bc4ff2d4b53b679266978ae5ffdea97e4606a351
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594635"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281899"
 ---
 # <a name="impersonating-the-client"></a>クライアントの偽装
+
 偽装のサンプルでは、サービスで呼び出し元のアプリケーションを偽装し、サービスが呼び出し元の代わりにシステム リソースにアクセスできるようにする方法を示します。  
   
- このサンプルは、[自己ホスト](self-host.md)のサンプルに基づいています。 サービスとクライアントの構成ファイルは、[自己ホスト](self-host.md)のサンプルと同じです。  
+ このサンプルは、 [自己ホスト](self-host.md) のサンプルに基づいています。 サービスとクライアントの構成ファイルは、 [自己ホスト](self-host.md) のサンプルと同じです。  
   
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -102,10 +103,10 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  このサンプルを実行すると、操作要求と応答がサービスとクライアントの両方のコンソール ウィンドウに表示されます。 どちらかのコンソールで Enter キーを押すと、サービスとクライアントがどちらもシャットダウンされます。  
   
 > [!NOTE]
-> サービスは、管理者アカウントで実行するか、または実行するアカウントに HTTP レイヤーを使用して URI を登録する権限が付与されている必要があり `http://localhost:8000/ServiceModelSamples` ます。 このような権限は、 [httpcfg.exe ツール](/windows/win32/http/httpcfg-exe)を使用して[名前空間の予約](/windows/win32/http/namespace-reservations-registrations-and-routing)を設定することによって付与できます。  
+> サービスは、管理者アカウントで実行するか、または実行するアカウントに HTTP レイヤーを使用して URI を登録する権限が付与されている必要があり `http://localhost:8000/ServiceModelSamples` ます。 このような権限は、 [Httpcfg.exe ツール](/windows/win32/http/httpcfg-exe)を使用して[名前空間の予約](/windows/win32/http/namespace-reservations-registrations-and-routing)を設定することによって付与できます。  
   
 > [!NOTE]
-> Windows Server 2003 を実行しているコンピューターでは、ホストの .exe アプリケーションに偽装特権がある場合にのみ、偽装がサポートされます。 (既定では、管理者のみがこのアクセス許可を持っています)。この特権をサービスが実行されているアカウントに追加するには、[**管理ツール**]、[**ローカルセキュリティポリシー**]、[**ローカルポリシー**]、[**ユーザー権利の割り当て**] の順に選択し、[**認証後にクライアントを偽装**] をクリックし、[**プロパティ**] をダブルクリックしてユーザーまたはグループを追加します。  
+> Windows Server 2003 を実行しているコンピューターでは、Host.exe アプリケーションに偽装特権がある場合にのみ、偽装がサポートされます。 (既定では、管理者のみがこのアクセス許可を持っています)。この特権をサービスが実行されているアカウントに追加するには、[ **管理ツール**]、[ **ローカルセキュリティポリシー**]、[ **ローカルポリシー**]、[ **ユーザー権利の割り当て**] の順に選択し、[ **認証後にクライアントを偽装** ] をクリックし、[ **プロパティ** ] をダブルクリックしてユーザーまたはグループを追加します。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   

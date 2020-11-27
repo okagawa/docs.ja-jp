@@ -8,22 +8,24 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 0a75298b50df74ddf15904af43a0eb62c5ba8496
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 39838ac219f095b727ad953158d54da2682a09fa
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244713"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96282016"
 ---
 # <a name="using-message-contracts"></a>メッセージ コントラクトの使用
-通常、Windows Communication Foundation (WCF) アプリケーションを構築する場合、開発者はデータ構造とシリアル化の問題に細心の注意を払って、データが格納されるメッセージの構造を考慮する必要はありません。 このようなアプリケーションでは、パラメーターまたは戻り値用にデータ コントラクトを作成するのは簡単です  (詳細については、「[サービスコントラクトでのデータ転送の指定](specifying-data-transfer-in-service-contracts.md)」を参照してください)。  
+
+通常、Windows Communication Foundation (WCF) アプリケーションを構築する場合、開発者はデータ構造とシリアル化の問題に細心の注意を払って、データが格納されるメッセージの構造を考慮する必要はありません。 このようなアプリケーションでは、パラメーターまたは戻り値用にデータ コントラクトを作成するのは簡単です  (詳細については、「 [サービスコントラクトでのデータ転送の指定](specifying-data-transfer-in-service-contracts.md)」を参照してください)。  
   
- ただし、SOAP メッセージの構造を完全に制御することがメッセージの内容の制御と同様に重要となる場合があります。 これが特に当てはまるのは、相互運用性が重要である場合、具体的にはメッセージまたはメッセージ部分のレベルでセキュリティの問題を制御する場合です。 このような場合は、必要な正確な SOAP メッセージの構造を指定できるようにする*メッセージコントラクト*を作成できます。  
+ ただし、SOAP メッセージの構造を完全に制御することがメッセージの内容の制御と同様に重要となる場合があります。 これが特に当てはまるのは、相互運用性が重要である場合、具体的にはメッセージまたはメッセージ部分のレベルでセキュリティの問題を制御する場合です。 このような場合は、必要な正確な SOAP メッセージの構造を指定できるようにする *メッセージコントラクト* を作成できます。  
   
  ここでは、メッセージ コントラクトの各種属性を使用して、ユーザー操作に専用のメッセージ コントラクトを作成する方法について説明します。  
   
 ## <a name="using-message-contracts-in-operations"></a>処理におけるメッセージ コントラクトの使用  
- WCF は、*リモートプロシージャコール (RPC) スタイル*または*メッセージングスタイル*でモデル化された操作をサポートします。 RPC スタイルの操作では、シリアル化可能な任意の型を使用できます。複数のパラメーター、`ref` パラメーターと `out` パラメーターなど、ローカル呼び出しで使用できる機能を利用できます。 このスタイルでは、選択したシリアル化の形式によって基になるメッセージのデータ構造が制御され、WCF ランタイムによって、操作をサポートするメッセージが作成されます。 これにより、SOAP や SOAP メッセージに不慣れな開発者でも、サービス アプリケーションを迅速かつ容易に作成し、使用できます。  
+
+ WCF は、 *リモートプロシージャコール (RPC) スタイル* または *メッセージングスタイル* でモデル化された操作をサポートします。 RPC スタイルの操作では、シリアル化可能な任意の型を使用できます。複数のパラメーター、`ref` パラメーターと `out` パラメーターなど、ローカル呼び出しで使用できる機能を利用できます。 このスタイルでは、選択したシリアル化の形式によって基になるメッセージのデータ構造が制御され、WCF ランタイムによって、操作をサポートするメッセージが作成されます。 これにより、SOAP や SOAP メッセージに不慣れな開発者でも、サービス アプリケーションを迅速かつ容易に作成し、使用できます。  
   
  RPC スタイルでモデル化されたサービス操作のコード例を次に示します。  
   
@@ -32,7 +34,7 @@ ms.locfileid: "85244713"
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- 通常は、データ コントラクトだけでメッセージのスキーマを定義することができます。 たとえば、前の例では、`BankingTransaction` と `BankingTransactionResponse` にデータ コントラクトがあれば、ほとんどのアプリケーションで基になる SOAP メッセージの内容を定義できます。 データコントラクトの詳細については、「[データコントラクトの使用](using-data-contracts.md)」を参照してください。  
+ 通常は、データ コントラクトだけでメッセージのスキーマを定義することができます。 たとえば、前の例では、`BankingTransaction` と `BankingTransactionResponse` にデータ コントラクトがあれば、ほとんどのアプリケーションで基になる SOAP メッセージの内容を定義できます。 データコントラクトの詳細については、「 [データコントラクトの使用](using-data-contracts.md)」を参照してください。  
   
  ただし、場合によっては、SOAP メッセージの構造がネットワーク経由でどのように転送されるかを厳密に制御する必要があります。 最も一般的なシナリオは、カスタム SOAP ヘッダーの挿入です。 もう 1 つの一般的なシナリオは、メッセージのヘッダーと本文のセキュリティ プロパティを定義すること、つまり、これらの要素にデジタル署名し、要素を暗号化するかどうかを決定することです。 最後に、一部のサードパーティの SOAP スタックでは、メッセージが特定の形式である必要があります。 この制御は、メッセージング スタイルの操作によって行うことができます。  
   
@@ -65,6 +67,7 @@ void Reconcile(BankingTransaction bt1, BankingTransaction bt2);
  1 つの型にメッセージ コントラクトとデータ コントラクトの両方が含まれる場合は、処理でその型が使用されたときにはメッセージ コントラクトだけが考慮されます。  
   
 ## <a name="defining-message-contracts"></a>メッセージ コントラクトの定義  
+
  型のメッセージ コントラクトを定義する (つまり、型と SOAP エンベロープ間のマッピングを定義する) には、<xref:System.ServiceModel.MessageContractAttribute> を型に適用します。 次に、SOAP ヘッダーにする型のメンバーに <xref:System.ServiceModel.MessageHeaderAttribute> を適用し、メッセージの SOAP 本文の一部にするメンバーに <xref:System.ServiceModel.MessageBodyMemberAttribute> を適用します。  
   
  メッセージ コントラクトの使用例を次のコードに示します。  
@@ -109,6 +112,7 @@ public class BankingTransaction
 > <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性は、メッセージ コントラクトでは無視されます。 <xref:System.Runtime.Serialization.KnownTypeAttribute> が必要な場合は、対象のメッセージ コントラクトを使用している処理でそれを設定します。  
   
 ## <a name="controlling-header-and-body-part-names-and-namespaces"></a>ヘッダー名、本文名、および名前空間の制御  
+
  メッセージ コントラクトの SOAP 表現では、各ヘッダーと本文の各部分が名前と名前空間を持つ XML 要素にマップされます。  
   
  既定では、名前空間はメッセージが参加しているサービス コントラクトの名前空間と同じであり、その名前は <xref:System.ServiceModel.MessageHeaderAttribute> 属性または <xref:System.ServiceModel.MessageBodyMemberAttribute> 属性が割り当てられたメンバー名によって決定されます。  
@@ -144,6 +148,7 @@ public class BankingTransaction
 ```  
   
 ## <a name="controlling-whether-the-soap-body-parts-are-wrapped"></a>SOAP 本文の各部分のラップの制御  
+
  SOAP 本文は、既定で、ラップされた要素内にシリアル化されます。 たとえば、`HelloGreetingMessage` メッセージのメッセージ コントラクトに含まれる <xref:System.ServiceModel.MessageContractAttribute> 型の名前から生成される `HelloGreetingMessage` ラッパー要素を次のコードに示します。  
   
 [!code-csharp[MessageHeaderAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/messageheaderattribute/cs/services.cs#3)]
@@ -155,13 +160,15 @@ public class BankingTransaction
 > ラップされていないメッセージにメッセージ本文の複数の部分を含めることは、WS-I Basic Profile 1.1 規格に反するため、新しいメッセージ コントラクトを設計する場合はお勧めできません。 ただし、特定の相互運用シナリオでは、複数のラップされていないメッセージ本文が必要な場合もあります。 1 つのメッセージ本文で複数のデータを転送する場合は、既定の (ラップされた) モードを使用することをお勧めします。 ラップされていないメッセージで複数のメッセージ ヘッダーを使用しても、何の問題もありません。  
   
 ## <a name="using-custom-types-inside-message-contracts"></a>メッセージ コントラクト内部でのカスタム型の使用  
- メッセージが使用されるサービス コントラクト用に選択されたシリアル化エンジンを使用して、個々のメッセージ ヘッダーとメッセージ本文がシリアル化されます (XML に変換されます)。 既定のシリアル化エンジンである `XmlFormatter` は、データ コントラクトを持つ任意の型を (<xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> を持つことによって) 明示的に処理することも、(プリミティブ型にしたり、<xref:System.SerializableAttribute?displayProperty=nameWithType> を持ったりすることなどによって) 暗黙的に処理することもできます。 詳細については、「[データコントラクトの使用](using-data-contracts.md)」を参照してください。  
+
+ メッセージが使用されるサービス コントラクト用に選択されたシリアル化エンジンを使用して、個々のメッセージ ヘッダーとメッセージ本文がシリアル化されます (XML に変換されます)。 既定のシリアル化エンジンである `XmlFormatter` は、データ コントラクトを持つ任意の型を (<xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> を持つことによって) 明示的に処理することも、(プリミティブ型にしたり、<xref:System.SerializableAttribute?displayProperty=nameWithType> を持ったりすることなどによって) 暗黙的に処理することもできます。 詳細については、「 [データコントラクトの使用](using-data-contracts.md)」を参照してください。  
   
  前の例では、`Operation` 型と `BankingTransactionData` 型は、データ コントラクトを持つ必要があります。また、`transactionDate` がプリミティブである (したがって、暗黙のデータ コントラクトを持つ) ため、<xref:System.DateTime> はシリアル化可能です。  
   
  ただし、別のシリアル化エンジンである `XmlSerializer` に切り替えることができます。 このような切り替えを行う場合は、メッセージ ヘッダーと本文の各部分に使用されているすべての型が `XmlSerializer` を使用してシリアル化可能であることを確認する必要があります。  
   
 ## <a name="using-arrays-inside-message-contracts"></a>メッセージ コントラクト内部での配列の使用  
+
  メッセージ コントラクトでは、反復要素の配列を 2 とおりの方法で使用できます。  
   
  最初の方法は、配列上で <xref:System.ServiceModel.MessageHeaderAttribute> または <xref:System.ServiceModel.MessageBodyMemberAttribute> を直接使用する方法です。 この場合は、配列全体が複数の子要素を含む 1 つの要素 (つまり、1 つのヘッダーまたは 1 つの本文) としてシリアル化されます。 次の例のクラスについて考えてみます。  
@@ -207,11 +214,13 @@ public class BankingDepositLog
  <xref:System.ServiceModel.MessageHeaderArrayAttribute> を適用できるのは配列だけであり、コレクションには適用できません。  
   
 ## <a name="using-byte-arrays-in-message-contracts"></a>メッセージ コントラクトでのバイト配列の使用  
+
  バイト配列を非配列属性 (<xref:System.ServiceModel.MessageBodyMemberAttribute> と <xref:System.ServiceModel.MessageHeaderAttribute>) で使用した場合は、配列としてではなく、生成された XML 内で Base64 でエンコードされたデータとして表現される特殊なプリミティブ型として扱われます。  
   
  <xref:System.ServiceModel.MessageHeaderArrayAttribute> 配列属性でバイト配列を使用した場合、結果は使用しているシリアライザーによって異なります。 既定のシリアライザーでは、配列が個々のバイト エントリとして表されます。 ただし、(サービス コントラクトの `XmlSerializer` を使用して) <xref:System.ServiceModel.XmlSerializerFormatAttribute> を選択した場合は、配列属性と非配列属性のどちらを使用しているかに関係なく、バイト配列は Base64 データとして扱われます。  
   
 ## <a name="signing-and-encrypting-parts-of-the-message"></a>メッセージの一部の署名と暗号化  
+
  メッセージ コントラクトでは、メッセージのヘッダーまたは本文にデジタル署名し、暗号化するかどうかを示すことができます。  
   
  この操作は、<xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType> 属性と <xref:System.ServiceModel.MessageHeaderAttribute> 属性の <xref:System.ServiceModel.MessageBodyMemberAttribute> プロパティを設定することによって実行されます。 このプロパティは、<xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> 型の列挙体であり、<xref:System.Net.Security.ProtectionLevel.None> (暗号化と署名を行わない)、<xref:System.Net.Security.ProtectionLevel.Sign> (デジタル署名だけを行う)、または <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> (暗号化とデジタル署名の両方を行う) に設定できます。 既定値は、<xref:System.Net.Security.ProtectionLevel.EncryptAndSign> です。  
@@ -240,9 +249,11 @@ public class PatientRecord
  この例では、`recordID` ヘッダーは保護されず、`patientName` は署名`signed`され、`SSN` は暗号化および署名されます。 本文の comments と diagnosis の各部分では低い保護レベルを指定していても、本文の少なくとも 1 つの部分 (`medicalHistory`) に <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> が適用されているため、メッセージ本文全体が暗号化され、署名されます。  
   
 ## <a name="soap-action"></a>SOAP アクション  
+
  SOAP 標準と関連する Web サービス標準では、送信されるすべての SOAP メッセージに設定可能な `Action` という名前のプロパティが定義されます。 このプロパティの値は、操作の <xref:System.ServiceModel.OperationContractAttribute.Action%2A?displayProperty=nameWithType> プロパティと <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A?displayProperty=nameWithType> プロパティによって制御されます。  
   
 ## <a name="soap-header-attributes"></a>SOAP ヘッダーの属性  
+
  SOAP 標準では、ヘッダーに設定可能な次の属性が定義されます。  
   
 - `Actor/Role` (SOAP 1.1 では `Actor`、SOAP 1.2 では `Role`)  
@@ -304,7 +315,8 @@ bt.documentApprover.MustUnderstand = false; // override the static default of 't
  メッセージを受信して返信するときに、これらの SOAP 属性設定は <xref:System.ServiceModel.MessageHeader%601> 型のヘッダーとして往復するだけです。  
   
 ## <a name="order-of-soap-body-parts"></a>SOAP 本文の順序  
- 状況によっては、本文の各部分の順序を制御する必要があります。 本文要素の既定の順序はアルファベット順ですが、<xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> プロパティで制御できます。 このプロパティのセマンティクスは、継承シナリオにおける動作を除き、<xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> プロパティのセマンティクスと同じです (メッセージ コントラクトでは、派生型の本文メンバーの前に基本型の本文メンバーが並べ替えられることはありません)。 詳細については、「[データメンバーの順序](data-member-order.md)」を参照してください。  
+
+ 状況によっては、本文の各部分の順序を制御する必要があります。 本文要素の既定の順序はアルファベット順ですが、<xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> プロパティで制御できます。 このプロパティのセマンティクスは、継承シナリオにおける動作を除き、<xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> プロパティのセマンティクスと同じです (メッセージ コントラクトでは、派生型の本文メンバーの前に基本型の本文メンバーが並べ替えられることはありません)。 詳細については、「 [データメンバーの順序](data-member-order.md)」を参照してください。  
   
  次の例では、通常はアルファベット順で最初である `amount` が先頭にきますが、 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A> プロパティによって 3 番目の位置に挿入されます。  
   
@@ -320,6 +332,7 @@ public class BankingTransaction
 ```  
   
 ## <a name="message-contract-versioning"></a>メッセージ コントラクトのバージョン管理  
+
  場合によっては、メッセージ コントラクトを変更する必要があります。 たとえば、新しいバージョンのアプリケーションによってメッセージに余分なヘッダーが追加された場合です。 この場合、新しいバージョンから古いバージョンに送信するときは、システムは余分なヘッダーを処理し、逆方向に送信するときは不足しているヘッダーを処理する必要があります。  
   
  ヘッダーのバージョン管理には、次のルールが適用されます。  
@@ -331,6 +344,7 @@ public class BankingTransaction
  メッセージ本文にも同様のバージョン管理ルールがあります。メッセージ本文の不足している部分と追加された部分はいずれも無視されます。  
   
 ## <a name="inheritance-considerations"></a>継承に関する留意点  
+
  メッセージ コントラクト型は、基本型がメッセージ コントラクトを持っている限り、他の型から継承することができます。  
   
  他のメッセージ コントラクト型から継承したメッセージ コントラクト型を使用して、メッセージを作成したり、メッセージにアクセスしたりする場合、次のルールが適用されます。  
@@ -360,6 +374,7 @@ public class PatientRecord : PersonRecord
  `PatientRecord` クラスは、`ID` という名前の 1 つのヘッダーを持つメッセージを記述します。 このヘッダーは、base-most メンバーが選択されたことによって、`personID` メンバーには対応しますが、`patientID` メンバーには対応しません。 そのため、この場合は `patientID` フィールドは使用されません。 メッセージ本文には、アルファベット順で、`diagnosis` 要素の次に `patientName` 要素が含まれます。 この例は、基本メッセージ コントラクトと派生メッセージ コントラクトの両方にメッセージ本文が含まれ、あまりお勧めできないパターンを示していることに注意してください。  
   
 ## <a name="wsdl-considerations"></a>WSDL に関する留意点  
+
  メッセージ コントラクトを使用するサービスから Web サービス記述言語 (WSDL: Web Services Description Language) コントラクトを生成するときには、メッセージ コントラクトのすべての機能が結果の WSDL に反映されるわけではないことに留意してください。 次の点を考慮してください。  
   
 - WSDL では、ヘッダー配列の概念を表現することができません。 <xref:System.ServiceModel.MessageHeaderArrayAttribute> を使用してヘッダー配列を含むメッセージを作成した場合、結果の WSDL は配列ではなく 1 つのヘッダーだけに反映されます。  
@@ -371,6 +386,7 @@ public class PatientRecord : PersonRecord
 - 複数の処理で同じメッセージ コントラクトを使用すると、WSDL ドキュメント内に複数のメッセージ型が生成されます。 以降も使用できるように、"2"、"3" などの番号を付加することで名前を一意にします。 WSDL をインポートし直すと、名前以外は同一の複数のメッセージ コントラクト型が作成されます。  
   
 ## <a name="soap-encoding-considerations"></a>SOAP エンコードに関する留意点  
+
  WCF では XML の従来の SOAP エンコードスタイルを使用できますが、その使用は推奨されません。 (サービス コントラクトに適用されている `Use` で、`Encoded` プロパティを <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> に設定して) このスタイルを使用する場合、次の追加の考慮事項が適用されます。  
   
 - メッセージ ヘッダーはサポートされません。つまり、<xref:System.ServiceModel.MessageHeaderAttribute> 属性と <xref:System.ServiceModel.MessageHeaderArrayAttribute> 配列属性は、SOAP エンコーディングと互換性がありません。  
@@ -411,6 +427,7 @@ public class PatientRecord : PersonRecord
  SOAP エンコーディングを使用してメッセージをシリアル化した後、`changedFrom` と `changedTo` には `p` のコピーは保存されませんが、代わりに、`changedBy` 要素内部のコピーがポイントされます。  
   
 ## <a name="performance-considerations"></a>パフォーマンスに関する考慮事項  
+
  すべてのメッセージ ヘッダーとメッセージ本文が個別にシリアル化されます。 したがって、ヘッダーおよび本文ごとに同じ名前空間が繰り返し宣言される可能性があります。 特に、回線上のメッセージ サイズに関して、パフォーマンスを向上させるには、複数のヘッダーと本文を単一のヘッダーまたは本文に統合します。 たとえば、次のコードの代わりに  
   
 ```csharp  
@@ -444,6 +461,7 @@ public class OperationDetails
 ```  
   
 ### <a name="event-based-asynchronous-and-message-contracts"></a>イベント ベースの非同期とメッセージ コントラクト  
+
  イベント ベースの非同期モデルのデザイン ガイドラインには、複数の値を返す場合に、1 つの値を `Result` プロパティとして返し、残りの値を <xref:System.EventArgs> オブジェクトのプロパティとして返すことが記載されています。 この 1 つの結果として、クライアントがイベント ベースの非同期コマンド オプションを使用してメタデータをインポートし、操作から複数の値が返される場合、既定の <xref:System.EventArgs> オブジェクトは 1 つの値を `Result` プロパティとして返し、残りの値は <xref:System.EventArgs> オブジェクトのプロパティになります。  
   
  メッセージ オブジェクトを `Result` プロパティとして受け取り、返された値をそのオブジェクトのプロパティとして取得する場合は、`/messageContract` コマンド オプションを使用します。 これにより、`Result` オブジェクトの <xref:System.EventArgs> プロパティとして応答メッセージを返すシグネチャが生成されます。 すべての内部戻り値は、応答メッセージ オブジェクトのプロパティになります。  
