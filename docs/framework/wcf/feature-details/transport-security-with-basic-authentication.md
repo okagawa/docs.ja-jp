@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: 2add8c21ca8ade4b530e0e6b1b3c5bba66e100ab
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e821f8ed3996e9119c6f2c06ec6533c575bf75dd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556786"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251842"
 ---
 # <a name="transport-security-with-basic-authentication"></a>基本認証でのトランスポート セキュリティ
+
 次の図は、Windows Communication Foundation (WCF) サービスとクライアントを示しています。 サーバーには、SSL (Secure Sockets Layer) に使用できる有効な X509 証明書が必要であり、クライアントはサーバーの証明書を信頼する必要があります。 さらに、Web サービスには使用可能な SSL が既に実装されています。 インターネットインフォメーションサービス (IIS) で基本認証を有効にする方法の詳細については、「」を参照してください <https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/basicauthentication> 。  
   
  ![基本認証を使用したトランスポートセキュリティを示すスクリーンショット。](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
@@ -24,11 +25,12 @@ ms.locfileid: "90556786"
 |相互運用性|既存の Web サービス クライアントとサービスを使用する|  
 |認証 (サーバー)<br /><br /> 認証 (クライアント)|○ (HTTPS を使用)<br /><br /> ○ (ユーザー名とパスワードを使用)|  
 |整合性|はい|  
-|機密性|はい|  
+|機密情報|はい|  
 |トランスポート|HTTPS|  
 |バインド|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>サービス  
+
  次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
 - 構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
@@ -36,12 +38,14 @@ ms.locfileid: "90556786"
 - 提供された構成を使用してサービスを作成しますが、エンドポイントを定義しません。  
   
 ### <a name="code"></a>コード  
+
  次のコードでは、転送セキュリティ用の Windows ドメイン ユーザー名とパスワードを使用するサービス エンドポイントを作成する方法を示します。 サービスには、クライアントに対する認証を行うための X 509 証明書が必要になります。 詳細については、「 [証明書の](working-with-certificates.md) 使用」および「 [方法: SSL 証明書を使用してポートを構成する](how-to-configure-a-port-with-an-ssl-certificate.md)」を参照してください。  
   
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
   
 ## <a name="configuration"></a>構成  
+
  次の例では、トランスポート レベルのセキュリティの基本認証を使用するサービスを構成します。  
   
 ```xml  
@@ -73,6 +77,7 @@ ms.locfileid: "90556786"
 ## <a name="client"></a>クライアント  
   
 ### <a name="code"></a>コード  
+
  次のコードは、ユーザー名とパスワードが含まれるクライアント コードを示しています。 ユーザーは、有効な Windows ユーザー名とパスワードを指定する必要があります。 ユーザー名とパスワードを返すコードは、ここに示されていません。 ダイアログボックスまたは他のインターフェースを使用して、ユーザーにこれらの情報を照会してください。  
   
 > [!NOTE]
@@ -82,6 +87,7 @@ ms.locfileid: "90556786"
  [!code-vb[C_SecurityScenarios#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#2)]  
   
 ### <a name="configuration"></a>構成  
+
  次のコードは、クライアントの構成を示しています。  
   
 > [!NOTE]

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - security [.NET Framework], method access
 - method access security
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
-ms.openlocfilehash: f9b9bc00058aefc8f58facff43509e717967c2a7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 52ae1eb4b6210403ce9c5aa96479809f885b0eba
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555719"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251218"
 ---
 # <a name="securing-method-access"></a>メソッド アクセスの保護
 
@@ -34,13 +34,13 @@ ms.locfileid: "90555719"
   
 - 選択したアクセス許可を持つ呼び出し元だけにメソッド アクセスを制限します。  
   
- 同様に、宣言セキュリティを使用すると、クラスの継承を制御できます。 **InheritanceDemand**を使用して、次の操作を行うことができます。  
+ 同様に、宣言セキュリティを使用すると、クラスの継承を制御できます。 **InheritanceDemand** を使用して、次の操作を行うことができます。  
   
 - 派生したクラスに、特定の ID またはアクセス許可を要求します。  
   
 - 特定のメソッドをオーバーライドする派生クラスに、特定の ID またはアクセス許可を要求します。  
   
- 呼び出し元に特定の厳密な名前による署名を要求することによってアクセスを制限し、パブリック クラスの保護に役立つ方法の例を次に示します。 この例では、 <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> 厳密な名前の **要求** でを使用します。 厳密な名前でアセンブリに署名する方法についてのタスクベースの情報については、「厳密な名前 [付きアセンブリの作成と使用](../../standard/assembly/create-use-strong-named.md)」を参照してください。  
+ 呼び出し元に特定の厳密な名前による署名を要求することによってアクセスを制限し、パブリック クラスの保護に役立つ方法の例を次に示します。 この例では、 <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> 厳密な名前の **要求** でを使用します。 厳密な名前でアセンブリに署名する方法についてのタスクベースの情報については、「 [Strong-Named アセンブリの作成と使用](../../standard/assembly/create-use-strong-named.md)」を参照してください。  
   
 ```vb  
 <StrongNameIdentityPermissionAttribute(SecurityAction.Demand, PublicKey := "…hex…", Name := "App1", Version := "0.0.0.0")>  _  
@@ -57,6 +57,7 @@ public class Class1
 ```  
   
 ## <a name="excluding-classes-and-members-from-use-by-untrusted-code"></a>クラスとメンバーを信頼関係のないコードが使用できないようにする  
+
  このセクションで示す宣言を使用すると、特定のクラスとメソッド、およびプロパティとイベントが部分的な信頼のコードによって使用されるのを防ぐことができます。 これらの宣言をクラスに適用することで、すべてのメソッド、プロパティ、およびイベントに保護を適用できます。 ただし、フィールドアクセスは、宣言セキュリティの影響を受けません。 また、リンク確認要求は直前の呼び出し元に対して保護できるようにするだけで、攻撃を受ける可能性が残っています。  
   
 > [!NOTE]
@@ -236,7 +237,7 @@ class Implemented : ICanCastToMe
 > [!NOTE]
 > このセクションでは、メソッドを `virtual` および `internal` ( `Overloads` `Overridable` `Friend` Visual Basic) の両方として宣言するときのセキュリティの問題について警告します。 この警告は .NET Framework バージョン1.0 および1.1 にのみ適用されます。これは、それ以降のバージョンには適用されません。  
   
- .NET Framework バージョン1.0 および1.1 では、他のアセンブリでコードを使用できないことを確認するときに、型システムのアクセシビリティの微妙な違いに注意する必要があります。 **Virtual**および**internal**として宣言されているメソッド (Visual Basic 内のオーバーロードのオーバーライド可能な**Friend** ) は、親クラスの vtable エントリをオーバーライドできます。また、内部のため、同じアセンブリ内からのみ使用できます。 ただし、オーバーライドのアクセシビリティは **virtual** キーワードによって決定され、そのコードがクラス自体にアクセスできる限り、別のアセンブリからオーバーライドできます。 オーバーライドの可能性が問題を示している場合は、宣言セキュリティを使用して修正します。または、厳密には必要でない場合は、 **仮想** キーワードを削除します。  
+ .NET Framework バージョン1.0 および1.1 では、他のアセンブリでコードを使用できないことを確認するときに、型システムのアクセシビリティの微妙な違いに注意する必要があります。 **Virtual** および **internal** として宣言されているメソッド (Visual Basic 内のオーバーロードのオーバーライド可能な **Friend** ) は、親クラスの vtable エントリをオーバーライドできます。また、内部のため、同じアセンブリ内からのみ使用できます。 ただし、オーバーライドのアクセシビリティは **virtual** キーワードによって決定され、そのコードがクラス自体にアクセスできる限り、別のアセンブリからオーバーライドできます。 オーバーライドの可能性が問題を示している場合は、宣言セキュリティを使用して修正します。または、厳密には必要でない場合は、 **仮想** キーワードを削除します。  
   
  言語コンパイラによってコンパイルエラーによってこれらのオーバーライドが回避される場合でも、他のコンパイラで記述されたコードがオーバーライドされる可能性があります。  
   

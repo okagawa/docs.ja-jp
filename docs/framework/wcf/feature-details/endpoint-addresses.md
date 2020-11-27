@@ -6,40 +6,47 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: 71358ed1c16c3c9b490a41f74dd6319af8eb2e7b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 45f179e7f36bb9f1c4d3b12166bc2e9e8b24e9d8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593530"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251426"
 ---
 # <a name="endpoint-addresses"></a>エンドポイント アドレス
+
 すべてのエンドポイントにはこれと関連するアドレスがあり、エンドポイントの検索と識別に使用されます。 このアドレスは主にエンドポイントの位置を指定する URI (Uniform Resource Identifier) で構成されます。 エンドポイントアドレスは、Windows Communication Foundation (WCF) プログラミングモデルでクラスによって表されます。これには、 <xref:System.ServiceModel.EndpointAddress> <xref:System.ServiceModel.EndpointAddress.Identity%2A> メッセージを交換する他のエンドポイントによるエンドポイントの認証を可能にするオプションのプロパティと、 <xref:System.ServiceModel.EndpointAddress.Headers%2A> サービスに接続するために必要な他の SOAP ヘッダーを定義するオプションのプロパティのセットが含まれます。 オプションのヘッダーは、サービス エンドポイントの識別または対話のために、より詳細なアドレス指定情報を提供します。 エンドポイントのアドレスは、ネットワーク上では WS-Addressing エンドポイント参照 (EPR) として表されます。  
   
 ## <a name="uri-structure-of-an-address"></a>アドレスの URI 構造  
+
  ほとんどのトランスポートの URI アドレスは、4 つの部分から構成されます。 たとえば、URI の4つの部分は次のようにまとめ `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` られています。  
   
-- 体系`http:`
+- スキーム: `http:`
   
-- 装置`www.fabrikam.com`  
+- 装置 `www.fabrikam.com`  
   
 - (省略可能) ポート : 322  
   
 - パス : /mathservice.svc/secureEndpoint  
   
 ## <a name="defining-an-address-for-a-service"></a>サービスのアドレスの定義  
+
  サービスのエンドポイント アドレスは、コードを使用して命令的に、または構成を通じて宣言的に指定できます。 設置済みサービスのバインドおよびアドレスは一般的に、サービスの開発中に使用されるものとは異なるので、コード内でエンドポイントを定義することは通常、実用的ではありません。 一般に、サービス エンドポイントの定義にはコードではなく、構成を使用する方がより実用的です。 バインディング情報とアドレス情報をコードに含めないことで、変更時にアプリケーションの再コンパイルや再展開を行う必要がなくなります。  
   
 ### <a name="defining-an-address-in-configuration"></a>構成によるアドレス定義  
- 構成ファイルでエンドポイントを定義するには、要素を使用し [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-element.md) ます。 詳細と例については、「[エンドポイントアドレスの指定](../specifying-an-endpoint-address.md)」を参照してください。  
+
+ 構成ファイルでエンドポイントを定義するには、要素を使用し [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-element.md) ます。 詳細と例については、「 [エンドポイントアドレスの指定](../specifying-an-endpoint-address.md)」を参照してください。  
   
 ### <a name="defining-an-address-in-code"></a>コードによるアドレス定義  
- エンドポイント アドレスは、コードで <xref:System.ServiceModel.EndpointAddress> クラスを使用して作成できます。 詳細と例については、「[エンドポイントアドレスの指定](../specifying-an-endpoint-address.md)」を参照してください。  
+
+ エンドポイント アドレスは、コードで <xref:System.ServiceModel.EndpointAddress> クラスを使用して作成できます。 詳細と例については、「 [エンドポイントアドレスの指定](../specifying-an-endpoint-address.md)」を参照してください。  
   
 ### <a name="endpoints-in-wsdl"></a>WSDL のエンドポイント  
- エンドポイント アドレスは、対応するエンドポイントの `wsdl:port` 要素内の WS-Addressing EPR 要素として WSDL で表すこともできます。 EPR には、エンドポイントのアドレスのほかに、アドレスのすべてのプロパティが含まれます。 詳細と例については、「[エンドポイントアドレスの指定](../specifying-an-endpoint-address.md)」を参照してください。  
+
+ エンドポイント アドレスは、対応するエンドポイントの `wsdl:port` 要素内の WS-Addressing EPR 要素として WSDL で表すこともできます。 EPR には、エンドポイントのアドレスのほかに、アドレスのすべてのプロパティが含まれます。 詳細と例については、「 [エンドポイントアドレスの指定](../specifying-an-endpoint-address.md)」を参照してください。  
   
 ## <a name="multiple-iis-binding-support-in-net-framework-35"></a>.NET Framework 3.5 での複数の IIS バインディングのサポート  
+
  インターネット サービス プロバイダーは、多くの場合、サイトの密度を高めて総所有コストを抑えるため、同じサーバーまたはサイト上で複数のアプリケーションをホストしています。 通常、これらのアプリケーションは、異なるベース アドレスにバインドされています。 インターネット インフォメーション サービス (IIS) Web サイトは、複数のアプリケーションを格納できます。 サイト内のアプリケーションに、1 つ以上の IIS バインディングからアクセスできます。  
   
  IIS バインディングは、バインディング プロトコルとバインディング情報という 2 つの情報を提供します。 バインディング プロトコルは通信を行うスキームを定義するもので、バインディング情報はサイトにアクセスするために使用する情報です。  
@@ -82,6 +89,7 @@ ms.locfileid: "84593530"
  IIS が提供するベース アドレスには、`baseAddressPrefixFilters` 一覧に存在しない他のスキームにバインドされたアドレスが指定される場合があります。 これらのアドレスはフィルターで除外されません。  
   
 ## <a name="multiple-iis-binding-support-in-net-framework-4-and-later"></a>.NET Framework 4 以降での複数の IIS バインディングのサポート  
+
  .NET 4 以降、<xref:System.ServiceModel.ServiceHostingEnvironment> の <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> 設定を true に設定するだけで、1 つのベース アドレスを選択しなくても、IIS で複数のバインディングのサポートが有効になります。 このサポートは、HTTP プロトコル スキームに限定されます。  
   
  MultipleSiteBindingsEnabled を on に使用する構成コードの例を次に示し [\<serviceHostingEnvironment>](../../configure-apps/file-schema/wcf/servicehostingenvironment.md) ます。  
@@ -95,9 +103,10 @@ ms.locfileid: "84593530"
   
  複数のサイト バインディングがこの設定を使用して有効になっている場合、HTTP プロトコルと非 HTTP プロトコルの両方について、baseAddressPrefixFilters 設定は無視されます。  
   
- 詳細と例については、「[複数の IIS サイトバインドのサポート](supporting-multiple-iis-site-bindings.md)」および「」を参照してください <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> 。  
+ 詳細と例については、「 [複数の IIS サイトバインドのサポート](supporting-multiple-iis-site-bindings.md) 」および「」を参照してください <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> 。  
   
 ## <a name="extending-addressing-in-wcf-services"></a>WCF サービスによるアドレスの拡張  
+
  WCF サービスの既定のアドレス指定モデルでは、次の目的でエンドポイントアドレス URI が使用されます。  
   
 - サービスがリッスンするアドレス、つまりエンドポイントがメッセージをリッスンする位置の指定  
@@ -113,6 +122,7 @@ ms.locfileid: "84593530"
  `via` が指定するトランスポート アドレスはメッセージが最初に送信される場所で、この後にメッセージは、`to` パラメーターによって指定された、サービスが存在する別のリモート アドレスに送信されます。 インターネットの場合、`via` URI は、サービスの最終的な <xref:System.ServiceModel.EndpointAddress.Uri%2A> アドレスの `to` プロパティと同じになります。 この 2 つのアドレスを区別するのは、手動ルーティングを行う必要がある場合のみです。  
   
 ### <a name="addressing-headers"></a>ヘッダーのアドレス指定  
+
  エンドポイントは、基本となる URI だけでなく、1 つ以上の SOAP ヘッダーによってアドレス指定することもできます。 これが役に立つのは、エンドポイントのクライアントに中継局を指す SOAP ヘッダーを含める必要がある、SOAP 中継局のシナリオの場合です。  
   
  カスタムのアドレス ヘッダーは、コードまたは構成のいずれかを使用して次のように定義できます。  
@@ -124,6 +134,7 @@ ms.locfileid: "84593530"
  配置後もヘッダーを変更できるため、コードよりも構成を使用する方法を一般的にお勧めします。  
   
 ### <a name="custom-listening-addresses"></a>カスタム リッスン アドレス  
+
  リッスンするアドレスには、エンドポイントの URI とは異なる値を設定できます。 これは、SOAP アドレスがパブリックな SOAP 中継局として公開される一方、エンドポイントが実際にリッスンするアドレスはプライベートなネットワーク アドレスであるような中継局シナリオの場合に便利です。  
   
  カスタム リッスン アドレスは、コードまたは構成のいずれかを使用して指定できます。  
@@ -133,6 +144,7 @@ ms.locfileid: "84593530"
 - [構成] で、サービス要素の属性を使用して、カスタムリッスンアドレスを指定し `ListenUri` [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-element.md) ます。  
   
 ### <a name="custom-soap-address-filter"></a>カスタム SOAP アドレス フィルター  
+
  エンドポイントの SOAP アドレス フィルター (<xref:System.ServiceModel.EndpointAddress.Uri%2A>) を定義するには、<xref:System.ServiceModel.EndpointAddress.Headers%2A> に任意の <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> プロパティを組み合わせて使用します。 既定では、このフィルターは受信メッセージの `To` メッセージ ヘッダーが、エンドポイントの URI に一致し、必要なすべてのエンドポイント ヘッダーがメッセージ内に存在していることを検証します。  
   
  シナリオによっては、適切な `To` ヘッダーを持つメッセージだけではなく、基になるトランスポートに到着したすべてのメッセージをエンドポイントで受信します。 これを行うには、ユーザーは <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> クラスを使用します。  

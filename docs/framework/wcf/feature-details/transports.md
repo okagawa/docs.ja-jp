@@ -6,19 +6,21 @@ helpviewer_keywords:
 - WCF, transports
 - Windows Communication Foundation, transports
 ms.assetid: 005c894b-af70-48aa-a1c1-c99338083c27
-ms.openlocfilehash: 077d63d8038b245a68083611897c1e6c68971071
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8623b788b848867f25836a657b07349dd50c2780
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598672"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251686"
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Windows Communication Foundation のトランスポート
+
 トランスポート層は、チャネル スタックの最も低いレベルにあります。 Windows Communication Foundation (WCF) で使用される主なトランスポートは、HTTP、HTTPS、TCP、および名前付きパイプです。 このセクションのトピックでは、このようなトランスポートの選択、トランスポートの構成、およびチューニング プロパティの設定について説明します。  
   
- WCF には、追加のトランスポートが含まれています。 メッセージキュー (MSMQ) トランスポートの詳細については、「[キューと信頼できるセッション](queues-and-reliable-sessions.md)」を参照してください。 ピアツーピアトランスポートの詳細については、「[ピアツーピアネットワーク](peer-to-peer-networking.md)」を参照してください。  
+ WCF には、追加のトランスポートが含まれています。 メッセージキュー (MSMQ) トランスポートの詳細については、「 [キューと信頼できるセッション](queues-and-reliable-sessions.md)」を参照してください。 ピアツーピアトランスポートの詳細については、「 [ピアツーピアネットワーク](peer-to-peer-networking.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [トランスポートの選択](choosing-a-transport.md)  
  3 つの主なトランスポートについて説明し、そのうちの 1 つを選択する際の考慮事項を示します。  
   
@@ -44,6 +46,7 @@ ms.locfileid: "84598672"
  WCF の Net.tcp ポート共有コンポーネントの使用方法について説明します。  
   
 ## <a name="reference"></a>関連項目  
+
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
   
  <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
@@ -53,6 +56,7 @@ ms.locfileid: "84598672"
  <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
   
 ## <a name="related-sections"></a>関連項目  
+
  [バインド](bindings.md)  
   
  [バインディングの拡張](../extending/extending-bindings.md)

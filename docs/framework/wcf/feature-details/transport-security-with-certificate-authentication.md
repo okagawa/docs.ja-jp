@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 dev_langs:
 - csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: 38f7d310be41455dd12460fdfa93d7e624d10c2a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d3f2a10bb6b355e82f94b8cc793c93ce4634c7d2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545221"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251829"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>トランスポート セキュリティと証明書認証
 
@@ -33,6 +33,7 @@ ms.locfileid: "90545221"
 |バインド|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="configure-the-service"></a>サービスの構成  
+
  このシナリオのサービスは IIS でホストされるので、web.config ファイルを使用して構成します。 次の web.config は、トランスポート セキュリティと X.509 クライアント資格情報を使用するように <xref:System.ServiceModel.WSHttpBinding> を構成する方法を示しています。  
   
 ```xml  
@@ -64,6 +65,7 @@ ms.locfileid: "90545221"
 ```  
   
 ## <a name="configure-the-client"></a>クライアントの構成  
+
  クライアントはコードまたは app.config ファイルで構成できます。 次の例は、クライアントをコードで構成する方法を示しています。  
   
 ```csharp

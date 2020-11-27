@@ -3,17 +3,19 @@ title: トランスポート セキュリティ
 description: これらの参照を使用して、WFC のトランスポートセキュリティメカニズム、実装方法、およびそれらのオプションについて理解します。
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
-ms.openlocfilehash: d39aa49906b79b9e12eecf04629080863719f986
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: cecb1ec263d993e9d669d73245fad1a49fe041fd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244752"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251712"
 ---
 # <a name="transport-security"></a>トランスポート セキュリティ
+
 Windows Communication Foundation (WCF) のトランスポートセキュリティは、選択したバインディングによって異なります。 バインディングが実装するトランスポートによって実際のセキュリティ機構が決まります。 このセクションの各トピックでは、実装される機構とそのオプションについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [トランスポート セキュリティの概要](transport-security-overview.md)  
  WCF でのトランスポートセキュリティの基本について説明します。  
   
@@ -30,6 +32,7 @@ Windows Communication Foundation (WCF) のトランスポートセキュリテ�
  SSL (トランスポート) セキュリティを実現するために、X.509 証明書を使用してコンピューターのポートを構成する際の基本事項について説明します。  
   
 ## <a name="reference"></a>関連項目  
+
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -37,6 +40,7 @@ Windows Communication Foundation (WCF) のトランスポートセキュリテ�
  <xref:System.ServiceModel.Security>  
   
 ## <a name="related-sections"></a>関連項目  
+
  [サービスおよびクライアントのセキュリティ保護](securing-services-and-clients.md)  
   
 ## <a name="see-also"></a>関連項目
