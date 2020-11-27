@@ -10,23 +10,27 @@ helpviewer_keywords:
 - PInvokeLog MDA
 - managed debugging assistants (MDAs), platform invoke
 ms.assetid: b830444a-5003-49fe-b89b-b8bee22f7b1a
-ms.openlocfilehash: 05af4e17a91f7c0d8f3576a86d3d784ef6666aed
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: b8cb4805663a2b28a133f98503730199af695c4f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803691"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96271461"
 ---
 # <a name="pinvokelog-mda"></a>pInvokeLog MDA
+
 `pInvokeLog` マネージド デバッグ アシスタント (MDA) は、実行中に使用される一意のプラットフォーム呼び出しシグネチャごとにアクティブになります。  
   
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
+
  この MDA は CLR に影響しません。  
   
 ## <a name="output"></a>出力  
+
  実行中に使用されるプラットフォーム呼び出しシグネチャを示すメッセージ。  
   
 ## <a name="configuration"></a>構成  
+
  各 match 要素で、プラットフォーム呼び出しが行われる .dll ファイルがフィルター処理されます。  
   
 ```xml  

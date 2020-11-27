@@ -7,18 +7,19 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: c5ee2fae9167dd508332d8e97a589a8ddb0394ac
-ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
+ms.openlocfilehash: c9e073ef088595d3ee5cd9e1af70140f12022179
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91712625"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96271474"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework のパフォーマンスカウンター
 
 このトピックでは、 [Windows パフォーマンスモニター](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249(v=ws.11))で検出できるパフォーマンスカウンターの一覧を示します。  
 
 ## <a name="exception-performance-counters"></a>例外パフォーマンス カウンター  
+
  パフォーマンス コンソール .NET CLR 例外カテゴリには、アプリケーションによってスローされた例外に関する情報を示すカウンターが含まれます。 これらのパフォーマンス カウンターについて、次の表で説明します。  
   
 |パフォーマンス カウンター|説明|  
@@ -30,6 +31,7 @@ ms.locfileid: "91712625"
 |**Throw to Catch Depth / Sec**|1 秒間に走査されたスタック フレーム (例外をスローしたフレームから例外を処理したフレームまで) の数を表示します。 このカウンターは、例外ハンドラーに入ったときに 0 にリセットされます。したがって、入れ子になった例外ではハンドラーからハンドラーへのスタックの深さを示します。<br /><br /> このカウンターは、全時間を通しての平均値ではなく、最後の 2 回の収集で計測された値の差を収集間隔で割った値が表示されます。|  
 
 ## <a name="interop-performance-counters"></a>相互運用パフォーマンス カウンター  
+
  パフォーマンス コンソール .NET CLR Interop カテゴリには、アプリケーションと COM コンポーネント、COM+ サービス、および外部タイプ ライブラリとの相互作用に関する情報を提供するカウンターが含まれます。 これらのパフォーマンス カウンターについて、次の表で説明します。  
   
 |パフォーマンス カウンター|説明|  
@@ -41,6 +43,7 @@ ms.locfileid: "91712625"
 |**# of TLB imports / sec**|将来使用するために予約されています。|  
 
 ## <a name="jit-performance-counters"></a>JIT パフォーマンス カウンター  
+
  パフォーマンス コンソール .NET CLR JIT カテゴリには、JIT コンパイラでコンパイルされたコードに関する情報を提供するカウンターが含まれます。 これらのパフォーマンス カウンターについて、次の表で説明します。  
   
 |パフォーマンス カウンター|説明|  
@@ -53,6 +56,7 @@ ms.locfileid: "91712625"
 |**Total # of IL Bytes Jitted**|アプリケーションの開始後に JIT コンパイラでコンパイルされた MSIL のバイト総数を表示します。 このカウンターは、**# of IL Bytes Jitted** カウンターと同じです。|  
 
 ## <a name="loading-performance-counters"></a>読み込みパフォーマンス カウンター  
+
  パフォーマンス コンソール .NET CLR Loading カテゴリには、読み込まれたアセンブリ、クラス、およびアプリケーション ドメインに関する情報を提供するカウンターが含まれます。 これらのパフォーマンス カウンターについて、次の表で説明します。  
   
 |パフォーマンス カウンター|説明|  
@@ -75,6 +79,7 @@ ms.locfileid: "91712625"
 |**Total Classes Loaded**|アプリケーションの開始後にすべてのアセンブリに読み込まれたクラスの累計数を表示します。|  
 
 ## <a name="lock-and-thread-performance-counters"></a>ロックおよびスレッド パフォーマンス カウンター  
+
  パフォーマンス コンソール .NET CLR LocksAndThreads カテゴリには、アプリケーションが使用するマネージド ロックおよびマネージド スレッドに関する情報を提供するカウンターが含まれます。 これらのパフォーマンス カウンターについて、次の表で説明します。  
   
 |パフォーマンス カウンター|説明|  
@@ -91,6 +96,7 @@ ms.locfileid: "91712625"
 |**Total # of Contentions**|ランタイムのスレッドがマネージド ロックを取得しようとして失敗した回数の合計を表示します。|  
 
 ## <a name="memory-performance-counters"></a>メモリ パフォーマンス カウンター  
+
  パフォーマンス コンソール .NET CLR Memory カテゴリには、ガベージ コレクターに関する情報を提供するカウンターが含まれます。 これらのパフォーマンス カウンターについて、次の表で説明します。  
   
 |パフォーマンス カウンター|説明|  
@@ -173,7 +179,7 @@ ms.locfileid: "91712625"
   
 - **HttpWebRequests の平均キュー時間**  
   
- **Httpwebrequests Average lifetime**カウンターでは、ほとんどのオブジェクトの有効期間は、 <xref:System.Net.HttpWebRequest> アプリケーションによって応答ストリームが閉じられるまで、オブジェクトが作成された時間で開始されます。 ただし、例外的なシナリオが 2 つあります。  
+ **Httpwebrequests Average lifetime** カウンターでは、ほとんどのオブジェクトの有効期間は、 <xref:System.Net.HttpWebRequest> アプリケーションによって応答ストリームが閉じられるまで、オブジェクトが作成された時間で開始されます。 ただし、例外的なシナリオが 2 つあります。  
   
 - アプリケーションが  <xref:System.Net.HttpWebRequest.GetResponse%2A> メソッドまたは <xref:System.Net.HttpWebRequest.BeginGetResponse%2A>  メソッドの呼び出しをしない場合、<xref:System.Net.HttpWebRequest> オブジェクトの有効期間は無視されます。  
   
@@ -218,6 +224,7 @@ for (int i = 0; i < Array.Length; i++)
  アプリケーションでパフォーマンス カウンターにアクセスして管理する方法の詳細については、「[パフォーマンス カウンター](performance-counters.md)」を参照してください。  
 
 ## <a name="security-performance-counters"></a>セキュリティ パフォーマンス カウンター  
+
  パフォーマンス コンソール .NET CLR Security カテゴリには、共通言語ランタイムがアプリケーションに対して実行するセキュリティ チェックに関する情報を提供するカウンターが含まれます。 これらのパフォーマンス カウンターについて、次の表で説明します。  
   
 |パフォーマンス カウンター|説明|  

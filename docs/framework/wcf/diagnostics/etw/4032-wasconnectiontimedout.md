@@ -2,27 +2,30 @@
 title: 4032 - WasConnectionTimedout
 ms.date: 03/30/2017
 ms.assetid: 91acad10-f3cc-4075-804f-22c49131b7bf
-ms.openlocfilehash: 02f4236235cf0e59bd63152197f98a3bd6e7130d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00e719cde335913b2b7a80aa48404b5f83991a1d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757483"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270303"
 ---
 # <a name="4032---wasconnectiontimedout"></a>4032 - WasConnectionTimedout
+
 ## <a name="properties"></a>プロパティ  
   
 |||  
 |-|-|  
 |ID|4032|  
-|キーワード|ActivationServices|  
-|レベル|重大|  
+|Keywords|ActivationServices|  
+|Level|Critical|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>Description  
+
  このイベントは、WAS の接続がタイムアウトしたときに生成されます。  
   
-## <a name="message"></a>メッセージ  
+## <a name="message"></a>Message  
+
  WAS の接続がタイムアウトしました。  
   
-## <a name="details"></a>説明
+## <a name="details"></a>詳細

@@ -2,32 +2,35 @@
 title: 2577 - TryCatchExceptionDuringCancelation
 ms.date: 03/30/2017
 ms.assetid: 35ee9f55-227f-4566-bcb4-4c7c75dea85b
-ms.openlocfilehash: c272dd91249dfc90e6f4c38a7339919a5a6446e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 33c68984e88eaa5e3028899a7c3066c94a65e8eb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755624"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96271240"
 ---
 # <a name="2577---trycatchexceptionduringcancelation"></a>2577 - TryCatchExceptionDuringCancelation
+
 ## <a name="properties"></a>プロパティ  
   
 |||  
 |-|-|  
 |ID|2577|  
-|キーワード|WFActivities|  
-|レベル|警告|  
+|Keywords|WFActivities|  
+|Level|警告|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>Description  
+
  TryCatch アクティビティの子アクティビティが取り消し中に例外をスローしたことを示します。  
   
-## <a name="message"></a>メッセージ  
+## <a name="message"></a>Message  
+
  TryCatch アクティビティ '%1' の子アクティビティは取り消し中に例外をスローしました。  
   
-## <a name="details"></a>説明  
+## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|説明|  
+|データ項目名|データ項目の型|Description|  
 |--------------------|--------------------|-----------------|  
 |DisplayName|xs:string|アクティビティの表示名。|  
 |AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName で返される文字列。|
