@@ -6,14 +6,15 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: d0df24de4f8a877405dfecb6b0d245ff1caf0418
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: e7d32be1532be7d673d8df4fe3f76c3d83fea913
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163887"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96278064"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI オートメーション コントロール パターンの概要
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
@@ -25,7 +26,9 @@ ms.locfileid: "87163887"
 > 集約コントロール (親によって公開される機能のために [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] を提供する子コントロールで構築されるもの) は、各子コントロールに通常関連付けられるすべてのコントロール パターンを実装する必要があります。 一方、これらの同じコントロール パターンを子コントロールで実装する必要はありません。  
   
 <a name="uiautomation_control_pattern_includes"></a>
+
 ## <a name="ui-automation-control-pattern-components"></a>UI オートメーションのコントロール パターン コンポーネント  
+
  コントロール パターンは、コントロールで使用可能な機能の個々の部分を定義するために必要なメソッド、プロパティ、イベント、およびリレーションシップをサポートします。  
   
 - UI オートメーション要素とその親、子、兄弟との間の関係によって、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー内の要素の構造を記述します。  
@@ -37,7 +40,9 @@ ms.locfileid: "87163887"
  コントロールパターンは、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] コンポーネントオブジェクトモデル (COM) オブジェクトに関連するインターフェイスとしてに関連します。 COM では、サポートしているインターフェイスをオブジェクトに問い合わせて、それらのインターフェイスを使って機能にアクセスできます。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]では、UI オートメーション クライアントは、サポートされるコントロール パターンをコントロールに対して確認し、サポートされているコントロール パターンによって公開されているプロパティ、メソッド、イベント、構造体を使用してコントロールとやり取りすることができます。 たとえば、複数行のエディット ボックスでは、UI オートメーション プロバイダーは <xref:System.Windows.Automation.Provider.IScrollProvider>を実装します。 クライアントは、 <xref:System.Windows.Automation.AutomationElement> が <xref:System.Windows.Automation.ScrollPattern> コントロール パターンをサポートしていることを認識すると、そのコントロール パターンによって公開されているプロパティ、メソッド、イベントを使用して、コントロールを操作したり、コントロールに関する情報にアクセスしたりできます。  
   
 <a name="uiautomation_control_pattern_client_provider"></a>
+
 ## <a name="ui-automation-providers-and-clients"></a>UI オートメーションのプロバイダーおよびクライアント  
+
  UI オートメーション プロバイダーは、コントロール パターンを実装して、コントロールによってサポートされる特定の機能の適切な動作を公開します。  
   
  UI オートメーション クライアントは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コントロール パターン クラスのメソッドとプロパティにアクセスし、それらを使用して [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]に関する情報を取得したり、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]を操作したりします。 これらのコントロール パターン クラスは、 <xref:System.Windows.Automation> 名前空間 (たとえば、 <xref:System.Windows.Automation.InvokePattern> や <xref:System.Windows.Automation.SelectionPattern>) にあります。  
@@ -45,14 +50,18 @@ ms.locfileid: "87163887"
  クライアントは、 <xref:System.Windows.Automation.AutomationElement> メソッド ( <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> やなど <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> ) または共通言語ランタイム (CLR) アクセサーを使用して、パターンのプロパティにアクセスし [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ます。 各コントロールパターンクラスには、そのコントロールパターンを識別するフィールドメンバー (やなど) があります。また、また <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType> <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType> はにパラメーターとして渡して <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> 、そのパターンを取得することもでき <xref:System.Windows.Automation.AutomationElement> ます。  
   
 <a name="uiautomation_control_patterns_dynamic"></a>
+
 ## <a name="dynamic-control-patterns"></a>動的コントロール パターン  
+
  一部のコントロールでは、コントロール パターンの同じセットを必ずしもサポートしません。 コントロール パターンは、UI オートメーション クライアントから使用できる場合に、サポートされていると見なされます。 たとえば、複数行のエディット ボックスでは、表示可能領域に表示できる行以上のテキストが含まれている場合にのみ、垂直スクロールが有効にされます。 テキストが削除されスクロールする必要がなくなると、スクロールは無効になります。 この例では、ScrollPattern コントロール パターンは、コントロールの現在の状態 (エディット ボックスのテキストの量) に応じて動的にサポートされます。  
   
 <a name="Control_Pattern_Classes_and_Interfaces"></a>
+
 ## <a name="control-pattern-classes-and-interfaces"></a>コントロール パターン クラスとインターフェイス  
+
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コントロール パターンについて次の表で説明します。 またこの表には、コントロール パターンにアクセスするために UI オートメーション クライアントで使用するクラスと、それらを実装するために UI オートメーション プロバイダーで使用するインターフェイスも示します。  
   
-|コントロール パターン クラス|プロバイダーのインターフェイス|説明|  
+|コントロール パターン クラス|プロバイダーのインターフェイス|Description|  
 |---------------------------|------------------------|-----------------|  
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|ドッキング コンテナーにドッキングすることができるコントロールに使用されます。 たとえば、ツールバーやツール パレットです。|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|展開したり折りたたんだりできるコントロールに使用されます。 たとえば、 **[ファイル]** メニューなどアプリケーションのメニュー項目。|  

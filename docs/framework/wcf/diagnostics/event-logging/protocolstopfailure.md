@@ -2,21 +2,23 @@
 title: ProtocolStopFailure
 ms.date: 03/30/2017
 ms.assetid: 8b246f8f-eb0f-430b-a82b-3d55aad287a1
-ms.openlocfilehash: 9df41480d110ff4ba8066a85a9d1d5debe045900
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3bcdb2b8f048a768cc82f90de4bbd14b1f0b6a8c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796145"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96278311"
 ---
 # <a name="protocolstopfailure"></a>ProtocolStopFailure
-Id:147  
+
+Id: 147  
   
- 順Error  
+ 重大度 : エラー  
   
- [カテゴリ]:TransactionBridge  
+ カテゴリ : TransactionBridge  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>Description  
+
  このイベントは、WS-AtomicTransaction プロトコル サービスを停止できなかったことを示します。 イベントには、プロトコル ID、プロトコル名、例外、プロセス名、およびプロセス ID が表示されます。  
   
 ## <a name="see-also"></a>関連項目
