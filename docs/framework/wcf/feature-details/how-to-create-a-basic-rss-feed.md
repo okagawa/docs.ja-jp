@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-ms.openlocfilehash: 872fe325a6705e79d026cd7f6e1f7cfef5145307
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d322dd40fd024685d6f3236caed41ae5eec1f375
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599023"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256808"
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a>方法: 基本的な RSS フィードを作成する
+
 Windows Communication Foundation (WCF) を使用すると、配信フィードを公開するサービスを作成できます。 ここでは、RSS 配信フィードを公開する配信サービスを作成する方法について説明します。  
   
 ### <a name="to-create-a-basic-syndication-service"></a>基本的な配信サービスを作成するには  
@@ -23,7 +24,7 @@ Windows Communication Foundation (WCF) を使用すると、配信フィード�
      [!code-vb[htRssBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    > <xref:System.ServiceModel.Web.WebGetAttribute> 属性を適用するすべてのサービス操作は、HTTP GET 要求にマッピングされます。 他の HTTP メソッドに操作をマッピングするには、代わりに <xref:System.ServiceModel.Web.WebInvokeAttribute> を使用します。 詳細については、「[方法: 基本的な WCF WEB HTTP サービスを作成](how-to-create-a-basic-wcf-web-http-service.md)する」を参照してください。  
+    > <xref:System.ServiceModel.Web.WebGetAttribute> 属性を適用するすべてのサービス操作は、HTTP GET 要求にマッピングされます。 他の HTTP メソッドに操作をマッピングするには、代わりに <xref:System.ServiceModel.Web.WebInvokeAttribute> を使用します。 詳細については、「 [方法: 基本的な WCF WEB HTTP サービスを作成](how-to-create-a-basic-wcf-web-http-service.md)する」を参照してください。  
   
 2. サービス コントラクトを実装します。  
   
@@ -86,12 +87,14 @@ Windows Communication Foundation (WCF) を使用すると、配信フィード�
      [!code-vb[htRssBasic#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/snippets.vb#11)]  
   
 ## <a name="example"></a>例  
+
  この例の完全なコードの一覧を以下に示します。  
   
  [!code-csharp[htRssBasic#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/program.cs#12)]
  [!code-vb[htRssBasic#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#12)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
+
  上記のコードのコンパイル時には、System.ServiceModel.dll と System.ServiceModel.Web.dll が参照されます。  
   
 ## <a name="see-also"></a>関連項目

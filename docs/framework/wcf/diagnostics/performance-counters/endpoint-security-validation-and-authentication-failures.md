@@ -1,18 +1,20 @@
 ---
-title: エンドポイント:セキュリティ検証と認証エラー
+title: 'エンドポイント : セキュリティ検証エラーと認証エラー'
 ms.date: 03/30/2017
 ms.assetid: 5bad60aa-6084-4c7b-aefd-9b581f04382e
-ms.openlocfilehash: 9e0192ea600bb52abd555f2f83cfe8e96d3fe203
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a9a4758b26c744c55af200aee22a7e90c5a5cf57
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619339"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256470"
 ---
-# <a name="endpoint-security-validation-and-authentication-failures"></a>エンドポイント:セキュリティ検証と認証エラー
-カウンター名:セキュリティ検証と認証エラー  
+# <a name="endpoint-security-validation-and-authentication-failures"></a>エンドポイント : セキュリティ検証エラーと認証エラー
+
+カウンター名 : セキュリティ検証と認証エラー  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>Description  
+
  このカウンターは、"承認されていないセキュリティ呼び出し" カウンターでカウントの対象とならないセキュリティ上の問題が原因でメッセージが拒否されるたびにインクリメントされます。 この問題には、次のようなものがあります。  
   
 - メッセージからクライアント トークンを読み取ることができない。  

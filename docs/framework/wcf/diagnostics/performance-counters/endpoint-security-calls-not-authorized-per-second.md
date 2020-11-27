@@ -2,17 +2,19 @@
 title: 'エンドポイント : 1 秒あたりの承認されていないセキュリティ呼び出し'
 ms.date: 03/30/2017
 ms.assetid: c8a1547b-986b-45c1-b302-dea0cd4b516d
-ms.openlocfilehash: 4925a0a53b03b061561aab396377012acd130797
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5b289d7e026b481576bd7de186364773a57c17bc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90549697"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256522"
 ---
 # <a name="endpoint-security-calls-not-authorized-per-second"></a>エンドポイント : 1 秒あたりの承認されていないセキュリティ呼び出し
+
 カウンター名 : 1 秒あたりの承認されていないセキュリティ呼び出し。  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>Description  
+
  有効なユーザーから適切な保護を適用して送信されたが、特定のタスクの実行がユーザーに許可されていない、受信メッセージの 1 秒あたりの数です。  
   
  このカウンターは <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccess%2A> メソッドで `false` が返された場合にインクリメントされます。  
