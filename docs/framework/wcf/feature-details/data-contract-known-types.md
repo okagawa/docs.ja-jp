@@ -10,19 +10,20 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: 52b0caaaac976893dcf5ef5c228ccc4f53bdbe9e
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 124083d86c220451c55a9290c2edf996b50d8d28
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247482"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286683"
 ---
 # <a name="data-contract-known-types"></a>既知のデータ コントラクト型
+
 <xref:System.Runtime.Serialization.KnownTypeAttribute> クラスを使用すると、逆シリアル化において考慮する必要のある型を事前に指定できます。 実施例については、「 [Known Types](../samples/known-types.md) 」の例を参照してください。  
   
  通常は、クライアントとサービス間でパラメーターを渡したり、値を返したりするときに、転送するデータのデータ コントラクトのすべてが両方のエンドポイントで共有されます。 ただし、次の場合はこれが該当しません。  
   
-- 送信データ コントラクトが、予想データ コントラクトから派生する場合。 詳細については、「[データコントラクトの等価性](data-contract-equivalence.md)の継承について」を参照してください。 この場合、送信されるデータには、受信エンドポイントで予想しているデータ コントラクトが含まれません。  
+- 送信データ コントラクトが、予想データ コントラクトから派生する場合。 詳細については、「 [データコントラクトの等価性](data-contract-equivalence.md)の継承について」を参照してください。 この場合、送信されるデータには、受信エンドポイントで予想しているデータ コントラクトが含まれません。  
   
 - クラス、構造体、または列挙とは対照的に、送信される情報の宣言型がインターフェイスである場合。 したがって、インターフェイスを実装するどの型が実際に送信されるかを事前に知ることができないため、受信エンドポイントでは送信されるデータのデータ コントラクトを事前に確認することができません。  
   
@@ -31,20 +32,24 @@ ms.locfileid: "85247482"
 - .NET Framework 型を含む一部の型には、前の3つのカテゴリのいずれかに属するメンバーがあります。 たとえば、 <xref:System.Collections.Hashtable> は <xref:System.Object> を使用して、ハッシュ テーブルに実際のオブジェクトを保存します。 これらの型をシリアル化する場合、受信側ではこれらのメンバーのデータ コントラクトを事前に確認することができません。  
   
 ## <a name="the-knowntypeattribute-class"></a>KnownTypeAttribute クラス  
+
  受信エンドポイントにデータが到着すると、WCF ランタイムは、共通言語ランタイム (CLR) 型のインスタンスにデータを逆シリアル化しようとします。 逆シリアル化するためにインスタンス化される型は、まず受信メッセージを調べてメッセージの内容が従うデータ コントラクトを特定することで選択されます。 次に逆シリアル化エンジンは、メッセージの内容と互換性のあるデータ コントラクトを実装する CLR 型を探します。 逆シリアル化エンジンによってこの処理中に逆シリアル化の候補の型として許可される一連の型は、逆シリアル化の "既知の型" のセットと呼ばれます。  
   
  逆シリアル化エンジンに型の情報を知らせる方法として、 <xref:System.Runtime.Serialization.KnownTypeAttribute>を使用する方法があります。 この属性は、データ コントラクト型全体に適用できるだけで、個々のデータ メンバーには適用できません。 この属性は、クラスまたは構造体にすることが可能な *外部型* に適用されます。 最も簡単な使用方法は、属性を適用するときに "既知の型" として型を指定することです。 これによって、外部型のオブジェクトまたはメンバーを通して参照される任意のオブジェクトが逆シリアル化されるときに、必ず、その既知の型が既知の型のセットに追加されます。 複数の <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性を同じ型に適用することができます。  
   
 ## <a name="known-types-and-primitives"></a>既知の型とプリミティブ  
+
  プリミティブとして扱われる特定の型 ( <xref:System.DateTime> 、 <xref:System.Xml.XmlElement>など) と同様に、プリミティブ型は、常に "既知" であり、このメカニズムを通して追加する必要がありません。 ただし、プリミティブ型の配列は明示的に追加する必要があります。 ほとんどのコレクションは、配列と同等に扱われます。 (非ジェネリック コレクションは、 <xref:System.Object>の配列と同等に扱われます)。 プリミティブ、プリミティブ配列、およびプリミティブ コレクションの使用例については、例 4 を参照してください。  
   
 > [!NOTE]
 > 他のプリミティブ型とは異なり、 <xref:System.DateTimeOffset> 構造は、既定では既知の型ではないため、既知の型のリストに手動で追加する必要があります。  
   
 ## <a name="examples"></a>使用例  
+
  <xref:System.Runtime.Serialization.KnownTypeAttribute> クラスの使用例を次に示します。  
   
 #### <a name="example-1"></a>例 1  
+
  継承関係にある 3 つのクラスがあります。  
   
  [!code-csharp[C_KnownTypeAttribute#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#1)]
@@ -63,18 +68,21 @@ ms.locfileid: "85247482"
  外部型の `CompanyLogo2` が逆シリアル化されるときは、必ず、逆シリアル化エンジンが `CircleType` と `TriangleType` を認識するため、"Circle" データ コントラクトおよび "Triangle" データ コントラクトと一致する型を検出できます。  
   
 #### <a name="example-2"></a>例 2  
+
  次の例では、 `CustomerTypeA` と `CustomerTypeB` の両方が `Customer` データ コントラクトを持っている場合でも、逆シリアル化エンジンは `CustomerTypeB` だけを認識するため、 `PurchaseOrder` が逆シリアル化されるときは必ず `CustomerTypeB` のインスタンスが作成されます。  
   
  [!code-csharp[C_KnownTypeAttribute#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#4)]
  [!code-vb[C_KnownTypeAttribute#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#4)]  
   
 #### <a name="example-3"></a>例 3  
+
  次の例では、 <xref:System.Collections.Hashtable> が <xref:System.Object>として内部的にその内容を保存します。 ハッシュ テーブルを正常に逆シリアル化するには、逆シリアル化エンジンがそのテーブルに現れる可能性のある型のセットを認識している必要があります。 この場合は、 `Book` オブジェクトと `Magazine` オブジェクトだけが `Catalog`に保存されているため、この 2 つが <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性を使用して追加されることが事前にわかっています。  
   
  [!code-csharp[C_KnownTypeAttribute#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#5)]
  [!code-vb[C_KnownTypeAttribute#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#5)]  
   
 #### <a name="example-4"></a>例 4  
+
  次の例では、データ コントラクトには数値と、その数値に基づいて実行する演算が含まれています。 `Numbers` データ メンバーは、整数、整数の配列、または整数を含む <xref:System.Collections.Generic.List%601> にすることができます。  
   
 > [!CAUTION]
@@ -89,6 +97,7 @@ ms.locfileid: "85247482"
  [!code-vb[C_KnownTypeAttribute#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#7)]  
   
 ## <a name="known-types-inheritance-and-interfaces"></a>既知の型、継承、およびインターフェイス  
+
  `KnownTypeAttribute` 属性を使用して既知の型を特定の型に関連付けると、その既知の型がその特定の型から派生したすべての型に関連付けられます。 たとえば、次のコードを参照してください。  
   
  [!code-csharp[C_KnownTypeAttribute#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#8)]
@@ -99,6 +108,7 @@ ms.locfileid: "85247482"
  既知の型は、クラスと構造体にのみ関連付けることができます。インターフェイスに関連付けることはできません。  
   
 ## <a name="known-types-using-open-generic-methods"></a>オープン ジェネリック メソッドを使用する既知の型  
+
  既知の型としてジェネリック型の追加が必要な場合があります。 ただし、オープン ジェネリック型をパラメーターとして `KnownTypeAttribute` 属性に渡すことはできません。  
   
  この問題は、型の一覧を返すメソッドを作成して既知の型のコレクションに追加するという代替機構を使用することで解決できます。 次に、いくつかの制限事項があるため、このメソッドの名前を `KnownTypeAttribute` 属性への文字列引数として指定します。  
@@ -132,6 +142,7 @@ ms.locfileid: "85247482"
  [!code-vb[C_KnownTypeAttribute#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#10)]  
   
 ## <a name="additional-ways-to-add-known-types"></a>既知の型を追加するその他の方法  
+
  また、既知の型は、構成ファイルを使用して追加することもできます。 これは、Windows Communication Foundation (WCF) でサードパーティ製のタイプライブラリを使用する場合など、既知の型を適切に逆シリアル化する必要がある型を制御しない場合に便利です。  
   
  構成ファイルで既知の型を指定する方法を次に示します。  

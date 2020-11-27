@@ -8,18 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-ms.openlocfilehash: 85c533d683558520d46f259db0bdb34dcb1214c9
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 3bb0aca2a1207a98b45fe8b6d43930e9b2acc5ec
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247404"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286704"
 ---
 # <a name="data-contract-names"></a>データ コントラクト名
 
 クライアントとサービスが同じ型を共有しないことがあります。 このような場合でも、双方のデータ コントラクトが等価であれば、相互にデータを受け渡すことができます。 データ[コントラクトの等価性](data-contract-equivalence.md)は、データコントラクトとデータメンバーの名前に基づいています。したがって、型とメンバーをこれらの名前にマップするための機構が用意されています。 このトピックでは、データコントラクトの名前付けの規則と、名前を作成するときの Windows Communication Foundation (WCF) インフラストラクチャの既定の動作について説明します。
 
 ## <a name="basic-rules"></a>基本的な規則
+
 データ コントラクトの名前付けに関する基本的な規則は次のとおりです。
 
 - データ コントラクトの完全修飾名は、名前空間と名前から構成されます。
@@ -29,9 +30,10 @@ ms.locfileid: "85247404"
 - データコントラクトを処理する場合、WCF インフラストラクチャでは、データコントラクトとデータメンバーの名前空間と名前の両方で大文字と小文字が区別されます。
 
 ## <a name="data-contract-namespaces"></a>データ コントラクト名前空間
+
 データ コントラクトの名前空間は、URI (Uniform Resource Identifier) の形式を使用します。 URI は、絶対 URI でも相対 URI のどちらでもかまいません。 既定では、特定の型のデータ コントラクトには、その型の共通言語ランタイム (CLR: Common Language Runtime) 名前空間に基づく名前空間が割り当てられます。
 
-既定では、指定された CLR 名前空間 ( *clr. namespace*の形式) は、名前空間にマップされ `http://schemas.datacontract.org/2004/07/Clr.Namespace` ます。 この既定をオーバーライドするには、<xref:System.Runtime.Serialization.ContractNamespaceAttribute> 属性をモジュールまたはアセンブリ全体に適用します。 また、型ごとにデータ コントラクト名前空間を制御するには、<xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> の <xref:System.Runtime.Serialization.DataContractAttribute> プロパティを設定します。
+既定では、指定された CLR 名前空間 ( *clr. namespace* の形式) は、名前空間にマップされ `http://schemas.datacontract.org/2004/07/Clr.Namespace` ます。 この既定をオーバーライドするには、<xref:System.Runtime.Serialization.ContractNamespaceAttribute> 属性をモジュールまたはアセンブリ全体に適用します。 また、型ごとにデータ コントラクト名前空間を制御するには、<xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> の <xref:System.Runtime.Serialization.DataContractAttribute> プロパティを設定します。
 
 > [!NOTE]
 > `http://schemas.microsoft.com/2003/10/Serialization`名前空間は予約されており、データコントラクトの名前空間として使用することはできません。
@@ -40,21 +42,25 @@ ms.locfileid: "85247404"
 > `delegate` 宣言を含むデータ コントラクト型では、既定の名前空間をオーバーライドすることはできません。
 
 ## <a name="data-contract-names"></a>データ コントラクト名
+
 ある型のデータ コントラクトの既定の名前は、その型の名前になります。 この既定をオーバーライドするには、<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> の <xref:System.Runtime.Serialization.DataContractAttribute> プロパティを別の名前に設定します。 ジェネリック型に関する特別な規則については、このトピックで後述される「ジェネリック型のデータ コントラクト名」で説明します。
 
 ## <a name="data-member-names"></a>データ メンバー名
+
 フィールドまたはプロパティのデータ メンバーの既定の名前は、そのフィールドまたはプロパティの名前になります。 この既定をオーバーライドするには、<xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A> の <xref:System.Runtime.Serialization.DataMemberAttribute> プロパティを別の値に設定します。
 
 ### <a name="examples"></a>使用例
+
 次の例では、データ コントラクトおよびデータ メンバーの既定の名前付け動作をオーバーライドする方法を示します。
 
 [!code-csharp[C_DataContractNames#1](~/samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#1)]
 [!code-vb[C_DataContractNames#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#1)]
 
 ## <a name="data-contract-names-for-generic-types"></a>ジェネリック型のデータ コントラクト名
+
 ジェネリック型のデータ コントラクト名を決定する場合は、特別な規則があります。 これらの規則は、同じジェネリック型の 2 つのクローズ ジェネリックの間でデータ コントラクト名の競合を回避するのに役立ちます。
 
-既定では、ジェネリック型のデータコントラクト名は型の名前になり、その後に文字列 "Of" が続き、その後にジェネリックパラメーターのデータコントラクト名が続き、その後にジェネリックパラメーターのデータコントラクト名前空間を使用して計算された*ハッシュ*が続きます。 ハッシュとは、1 つのデータを一意に識別するための "フィンガープリント" として機能する、数学関数の結果です。 ジェネリック パラメーターがすべてプリミティブ型の場合は、ハッシュは省略されます。
+既定では、ジェネリック型のデータコントラクト名は型の名前になり、その後に文字列 "Of" が続き、その後にジェネリックパラメーターのデータコントラクト名が続き、その後にジェネリックパラメーターのデータコントラクト名前空間を使用して計算された *ハッシュ* が続きます。 ハッシュとは、1 つのデータを一意に識別するための "フィンガープリント" として機能する、数学関数の結果です。 ジェネリック パラメーターがすべてプリミティブ型の場合は、ハッシュは省略されます。
 
 たとえば、次の例の型を見てください。
 

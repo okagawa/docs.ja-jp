@@ -8,17 +8,18 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: 47e59452edfff74daf17d94a058ce8b12af7867c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a03d388f2773e312a149b5caf1747627d1c17864
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593543"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286627"
 ---
 # <a name="how-to-create-a-federated-client"></a>方法: フェデレーション クライアントを作成する
-Windows Communication Foundation (WCF) では、*フェデレーションサービス*用のクライアントの作成は、次の3つの主要な手順で構成されます。  
+
+Windows Communication Foundation (WCF) では、 *フェデレーションサービス* 用のクライアントの作成は、次の3つの主要な手順で構成されます。  
   
-1. [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)または同様のカスタムバインドを構成します。 適切なバインディングを作成する方法の詳細については、「 [How to: Create a WSFederationHttpBinding](how-to-create-a-wsfederationhttpbinding.md)」を参照してください。 または、フェデレーションサービスのメタデータエンドポイントに対して[ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を実行して、フェデレーションサービスと1つまたは複数のセキュリティトークンサービスと通信するための構成ファイルを生成します。  
+1. [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)または同様のカスタムバインドを構成します。 適切なバインディングを作成する方法の詳細については、「 [How to: Create a WSFederationHttpBinding](how-to-create-a-wsfederationhttpbinding.md)」を参照してください。 または、フェデレーションサービスのメタデータエンドポイントに対して [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) を実行して、フェデレーションサービスと1つまたは複数のセキュリティトークンサービスと通信するための構成ファイルを生成します。  
   
 2. クライアントがセキュリティ トークン サービスと対話する際のさまざまな側面を制御する <xref:System.ServiceModel.Security.IssuedTokenClientCredential> のプロパティを設定します。  
   
@@ -31,7 +32,7 @@ Windows Communication Foundation (WCF) では、*フェデレーションサー�
   
 ### <a name="to-generate-and-examine-the-configuration-for-a-federated-service"></a>フェデレーション サービスの構成を生成し、確認するには  
   
-1. サービスのメタデータ URL のアドレスをコマンドラインパラメーターとして指定して、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を実行します。  
+1. サービスのメタデータ URL のアドレスをコマンドラインパラメーターとして使用して、 [ServiceModel メタデータユーティリティツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) を実行します。  
   
 2. 生成された構成ファイルを適切なエディターで開きます。  
   
@@ -65,7 +66,7 @@ Windows Communication Foundation (WCF) では、*フェデレーションサー�
   
      トークンの有効期間と `IssuedTokenRenewalThresholdPercentage` 値によって決まる更新間隔は、キャッシュ時間が更新しきい時間よりも短い場合には、`MaxIssuedTokenCachingTime` 値によってオーバーライドされます。 たとえば、`IssuedTokenRenewalThresholdPercentage` とトークンの有効期間を掛けた積が 8 時間であり、`MaxIssuedTokenCachingTime` 値が 10 分の場合、クライアントは、トークンの更新のために 10 分ごとにセキュリティ トークン サービスに連絡します。  
   
-5. <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy> 以外のキー エントロピ モードが、メッセージ セキュリティやメッセージ資格情報付きトランスポート セキュリティを使用しないバインディング (たとえば、 バインディングに <xref:System.ServiceModel.Channels.SecurityBindingElement> が存在しない場合) で必要な場合は、<xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> プロパティに適切な値を設定します。 *エントロピ*モードは、プロパティを使用して対称キーを制御できるかどうかを決定し <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> ます。 この既定値は <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy> であり、この場合、クライアントとトークン発行者の両方から、実際のキーを生成する際に組み合わせるデータが提供されます。 これ以外の値は <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ClientEntropy> と <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ServerEntropy> であり、それぞれクライアントまたはサーバーによってキー全体が指定されます。 サーバーのデータのみを使用してキーを指定するよう、このプロパティを設定する例を次に示します。  
+5. <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy> 以外のキー エントロピ モードが、メッセージ セキュリティやメッセージ資格情報付きトランスポート セキュリティを使用しないバインディング (たとえば、 バインディングに <xref:System.ServiceModel.Channels.SecurityBindingElement> が存在しない場合) で必要な場合は、<xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> プロパティに適切な値を設定します。 *エントロピ* モードは、プロパティを使用して対称キーを制御できるかどうかを決定し <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> ます。 この既定値は <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy> であり、この場合、クライアントとトークン発行者の両方から、実際のキーを生成する際に組み合わせるデータが提供されます。 これ以外の値は <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ClientEntropy> と <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ServerEntropy> であり、それぞれクライアントまたはサーバーによってキー全体が指定されます。 サーバーのデータのみを使用してキーを指定するよう、このプロパティを設定する例を次に示します。  
   
      [!code-csharp[c_CreateSTS#17](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#17)]
      [!code-vb[c_CreateSTS#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#17)]  
@@ -141,24 +142,28 @@ Windows Communication Foundation (WCF) では、*フェデレーションサー�
     ```  
   
 ## <a name="example"></a>例  
+
  <xref:System.ServiceModel.Security.IssuedTokenClientCredential> クラスのインスタンスをコードで構成する例を、次のコード サンプルに示します。  
   
  [!code-csharp[c_FederatedClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federatedclient/cs/source.cs#2)]
  [!code-vb[c_FederatedClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federatedclient/vb/source.vb#2)]  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
+
  情報の漏えいを防ぐために、Svcutil.exe ツールを使用してフェデレーション エンドポイントからのメタデータを処理するクライアントでは、生成されたセキュリティ トークン サービス アドレスが予期されたものであることを確認する必要があります。 これが特に重要なのは、セキュリティ トークン サービスが複数のエンドポイントを公開する場合です。この場合、Svcutil.exe ツールは、複数のエンドポイントうちの最初のエンドポイントを使用する構成ファイルを生成しますが、このエンドポイントは、クライアントが使用する必要のあるエンドポイントと異なる場合があるためです。  
   
 ## <a name="localissuer-required"></a>LocalIssuer が必要な場合  
+
  チェーン内の 2 番目から最後までのセキュリティ トークン サービスによって発行者アドレスまたは発行者メタデータ アドレスが指定されている場合、Svcutil.exe の既定の出力では、ローカル発行者が使用されません。クライアントで常にローカル発行者を使用する場合は、この点に注意が必要です。  
   
- クラスの、、およびプロパティの設定の詳細については <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A> <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A> <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> <xref:System.ServiceModel.Security.IssuedTokenClientCredential> 、「[方法: ローカル発行者を構成](how-to-configure-a-local-issuer.md)する」を参照してください。  
+ クラスの、、およびプロパティの設定の詳細については <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A> <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A> <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> <xref:System.ServiceModel.Security.IssuedTokenClientCredential> 、「 [方法: ローカル発行者を構成](how-to-configure-a-local-issuer.md)する」を参照してください。  
   
 ## <a name="scoped-certificates"></a>範囲指定された証明書  
+
  証明書ネゴシエーションを使用しないという一般的な理由により、任意のセキュリティ トークン サービスとの通信用のサービス証明書を指定する必要がある場合は、<xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> クラスの <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> プロパティを使用して指定できます。 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetDefaultCertificate%2A> メソッドは、パラメーターとして <xref:System.Uri> と <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> を受け取ります。 指定した証明書は、指定した URI のエンドポイントと通信するときに使用されます。 または、<xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> メソッドを使用して、<xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> プロパティによって返されるコレクションに証明書を追加することもできます。  
   
 > [!NOTE]
-> 特定の URI に範囲指定された証明書というクライアントの概念は、該当する URI でエンドポイントを公開するサービスへの送信呼び出しを行うアプリケーションにだけ適用されます。 発行されたトークンの署名に使用される証明書には適用されません。たとえば、クラスのによって返されるコレクション内のサーバーで構成されている証明書 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> です。 詳細については、「[方法: フェデレーションサービスで資格情報を構成する](how-to-configure-credentials-on-a-federation-service.md)」を参照してください。  
+> 特定の URI に範囲指定された証明書というクライアントの概念は、該当する URI でエンドポイントを公開するサービスへの送信呼び出しを行うアプリケーションにだけ適用されます。 発行されたトークンの署名に使用される証明書には適用されません。たとえば、クラスのによって返されるコレクション内のサーバーで構成されている証明書 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> です。 詳細については、「 [方法: フェデレーションサービスで資格情報を構成する](how-to-configure-credentials-on-a-federation-service.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

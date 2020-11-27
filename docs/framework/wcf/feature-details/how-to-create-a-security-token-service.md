@@ -8,20 +8,23 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-ms.openlocfilehash: 1cfcca524e5dd2b0c1560eb7600795766e2db1d6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cfe1da7c66f5c64ac3f5346bc23e9b618db38d20
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598958"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286462"
 ---
 # <a name="how-to-create-a-security-token-service"></a>方法: セキュリティ トークン サービスを作成する
+
 セキュリティ トークン サービスは、WS-Trust 仕様に定義されているプロトコルを実装します。 このプロトコルでは、セキュリティ トークンの発行、更新、キャンセル、および検証を行うためのメッセージ形式とメッセージ交換パターンが定義されています。 セキュリティ トークン サービスでは、これらの機能が 1 つ以上提供されます。 ここでは、最も一般的なシナリオであるトークンの発行の実装について説明します。  
   
 ## <a name="issuing-tokens"></a>トークンの発行  
- WS-Trust は、トークンを発行するための `RequestSecurityToken` XML スキーマ定義言語 (XSD: XML Schema Definition Language) スキーマ要素および `RequestSecurityTokenResponse` XSD スキーマ要素に基づいたメッセージ形式を定義しています。 また、関連するアクション URI (Uniform Resource Identifier) も定義しています。 メッセージに関連付けられているアクション URI `RequestSecurityToken` は `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue` です。 メッセージに関連付けられているアクション URI `RequestSecurityTokenResponse` は `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue` です。  
+
+ WS-Trust は、トークンを発行するための `RequestSecurityToken` XML スキーマ定義言語 (XSD: XML Schema Definition Language) スキーマ要素および `RequestSecurityTokenResponse` XSD スキーマ要素に基づいたメッセージ形式を定義しています。 また、関連するアクション URI (Uniform Resource Identifier) も定義しています。 メッセージに関連付けられているアクション URI `RequestSecurityToken` は `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue` です。 メッセージに関連付けられているアクション URI `RequestSecurityTokenResponse` は   `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue` です。  
   
 ### <a name="request-message-structure"></a>要求メッセージの構造  
+
  発行要求メッセージの構造は、通常、次の項目で構成されます。  
   
 - 値がである要求の種類の URI `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue` 。
@@ -41,6 +44,7 @@ ms.locfileid: "84598958"
  セキュリティ トークン サービスは、発行応答メッセージを作成する際に、発行要求メッセージの情報を使用します。  
   
 ## <a name="response-message-structure"></a>応答メッセージの構造  
+
  発行応答メッセージの構造は、通常、次の項目で構成されます。  
   
 - 発行済みセキュリティ トークン (例 : SAML 1.1 アサーション)。  
@@ -58,6 +62,7 @@ ms.locfileid: "84598958"
 - 発行済みトークンの有効期間情報。  
   
 ## <a name="processing-request-messages"></a>要求メッセージの処理  
+
  セキュリティ トークン サービスは、要求メッセージのさまざまな部分を検査し、要求を満たすトークンを発行できることを確認することによって発行要求を処理します。 セキュリティ トークン サービスは、発行するトークンを作成する前に次のことを確認する必要があります。  
   
 - 要求が、実際に発行されるトークンに対する要求であること。  
@@ -101,6 +106,7 @@ ms.locfileid: "84598958"
  詳細については、「 [Federation Sample](../samples/federation-sample.md)」を参照してください。  
   
 ## <a name="creating-response-messages"></a>応答メッセージの作成  
+
  セキュリティ トークン サービスによって発行要求が処理され、発行されるトークンと証明キーが作成されたら、少なくとも、要求されたトークン、証明トークン、および発行されたトークンの参照を含む応答メッセージを作成する必要があります。 発行済みトークンは、通常、<xref:System.IdentityModel.Tokens.SamlSecurityToken> から作成された <xref:System.IdentityModel.Tokens.SamlAssertion> です。次の例を参照してください。  
   
  [!code-csharp[c_CreateSTS#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#5)]
@@ -121,6 +127,7 @@ ms.locfileid: "84598958"
  最後に、これらの値を、クライアントに返される応答メッセージにシリアル化します。  
   
 ## <a name="example"></a>例  
+
  Security Token Service の完全なコードについては、「 [Federation Sample](../samples/federation-sample.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
