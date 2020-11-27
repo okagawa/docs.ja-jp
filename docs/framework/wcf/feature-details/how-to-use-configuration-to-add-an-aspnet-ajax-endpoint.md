@@ -2,18 +2,20 @@
 title: '方法: 構成を使用して ASP.NET AJAX エンドポイントを追加する'
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-ms.openlocfilehash: 97f8174161068f2c72b6bd2bc4e8a3044f5bccdd
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: b229173381eed3e821a9ad9e1a6639912521731c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051663"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268431"
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>方法: 構成を使用して ASP.NET AJAX エンドポイントを追加する
+
 Windows Communication Foundation (WCF) を使用すると、クライアント Web サイトの JavaScript から呼び出すことができる ASP.NET AJAX 対応エンドポイントを使用できるようにするサービスを作成できます。 このようなエンドポイントを作成するには、他のすべての Windows Communication Foundation (WCF) エンドポイントと同様に構成ファイルを使用するか、構成要素を必要としないメソッドを使用します。 ここでは、構成を使用する方法について説明します。  
   
  サービスエンドポイントが ASP.NET になるようにするための手順の一部は、を使用してエンドポイントの動作を追加するようにエンドポイントを構成することによって構成され <xref:System.ServiceModel.WebHttpBinding> [\<enableWebScript>](../../configure-apps/file-schema/wcf/enablewebscript.md) ます。 エンドポイントを構成した後、サービスを実装およびホストする手順は、WCF サービスで使用されているものと似ています。 実際の例については、「 [HTTP POST を使用した AJAX サービス](../samples/ajax-service-using-http-post.md)」を参照してください。  
   
- 構成を使用せずに ASP.NET AJAX エンドポイントを構成する方法の詳細については、「[方法: 構成を使用せずに ASP.NET Ajax エンドポイントを追加](how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)する」を参照してください。  
+ 構成を使用せずに ASP.NET AJAX エンドポイントを構成する方法の詳細については、「 [方法: 構成を使用せずに ASP.NET Ajax エンドポイントを追加](how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)する」を参照してください。  
   
 ## <a name="to-create-a-basic-wcf-service"></a>基本的な WCF サービスを作成するには  
   

@@ -8,15 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: f632a4389eafc155cedcae94707c9418b6696f2c
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: dbf04572e19d0dfc2508b3f8c3295ffae78ca0f4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246650"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268314"
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>方法: トランスポート セキュリティとメッセージ資格情報を使用する
-トランスポートとメッセージの両方の資格情報を使用してサービスをセキュリティ保護するには、Windows Communication Foundation (WCF) のトランスポートとメッセージの両方のセキュリティモードを使用します。 つまり、トランスポート層セキュリティでは整合性と機密性が提供され、メッセージ層セキュリティでは、厳密なトランスポート セキュリティ機構では実現できないさまざまな資格情報が提供されます。 ここでは、<xref:System.ServiceModel.WSHttpBinding> バインディングと <xref:System.ServiceModel.NetTcpBinding> バインディングを使用して、メッセージ資格情報付きトランスポートを実装するための基本手順を示します。 セキュリティモードの設定の詳細については、「[方法: セキュリティモードを設定する](../how-to-set-the-security-mode.md)」を参照してください。  
+
+トランスポートとメッセージの両方の資格情報を使用してサービスをセキュリティ保護するには、Windows Communication Foundation (WCF) のトランスポートとメッセージの両方のセキュリティモードを使用します。 つまり、トランスポート層セキュリティでは整合性と機密性が提供され、メッセージ層セキュリティでは、厳密なトランスポート セキュリティ機構では実現できないさまざまな資格情報が提供されます。 ここでは、<xref:System.ServiceModel.WSHttpBinding> バインディングと <xref:System.ServiceModel.NetTcpBinding> バインディングを使用して、メッセージ資格情報付きトランスポートを実装するための基本手順を示します。 セキュリティモードの設定の詳細については、「 [方法: セキュリティモードを設定する](../how-to-set-the-security-mode.md)」を参照してください。  
   
  セキュリティ モードを `TransportWithMessageCredential` に設定した場合、トランスポート レベルのセキュリティを提供する実際の機構はトランスポートによって決まります。 この機構は、HTTP の場合は SSL (Secure Sockets Layer) over HTTP (HTTPS)、TCP の場合は SSL over TCP または Windows です。  
   
@@ -26,11 +27,11 @@ ms.locfileid: "85246650"
   
 ### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a>WSHttpBinding と証明書を使用してトランスポート セキュリティを提供するには (コードを使用する場合)  
   
-1. HttpCfg.exe ツールを使用して、コンピューターの任意のポートに SSL 証明書をバインドします。 詳細については、「[方法: SSL 証明書を使用してポートを構成する](how-to-configure-a-port-with-an-ssl-certificate.md)」を参照してください。  
+1. HttpCfg.exe ツールを使用して、コンピューターの任意のポートに SSL 証明書をバインドします。 詳細については、「 [方法: SSL 証明書を使用してポートを構成する](how-to-configure-a-port-with-an-ssl-certificate.md)」を参照してください。  
   
 2. <xref:System.ServiceModel.WSHttpBinding> クラスのインスタンスを作成し、<xref:System.ServiceModel.WSHttpSecurity.Mode%2A> プロパティを <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential> に設定します。  
   
-3. <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> プロパティに適切な値を設定します。 (詳細については、「[資格情報の種類の選択](selecting-a-credential-type.md)」を参照してください)。次のコードでは、値を使用し <xref:System.ServiceModel.MessageCredentialType.Certificate> ます。  
+3. <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> プロパティに適切な値を設定します。 (詳細については、「 [資格情報の種類の選択](selecting-a-credential-type.md)」を参照してください)。次のコードでは、値を使用し <xref:System.ServiceModel.MessageCredentialType.Certificate> ます。  
   
 4. 適切なベース アドレスを持つ <xref:System.Uri> クラスのインスタンスを作成します。 このアドレスでは、"HTTPS" スキームを使用し、コンピューターの実際の名前と SSL 証明書のバインド先のポート番号を含める必要があります。 (または、構成で基本アドレスを設定できます。)  
   
@@ -85,7 +86,7 @@ ms.locfileid: "85246650"
   
 #### <a name="to-use-the-wshttpbinding"></a>WSHttpBinding を使用するには  
   
-1. ポートにバインドされた SSL 証明書を使用してコンピューターを構成します  (詳細については、「[方法: SSL 証明書を使用してポートを構成する](how-to-configure-a-port-with-an-ssl-certificate.md)」を参照してください)。 この構成で <> 要素の値を設定する必要はありません `transport` 。  
+1. ポートにバインドされた SSL 証明書を使用してコンピューターを構成します  (詳細については、「 [方法: SSL 証明書を使用してポートを構成する](how-to-configure-a-port-with-an-ssl-certificate.md)」を参照してください)。 この構成で <> 要素の値を設定する必要はありません `transport` 。  
   
 2. メッセージ レベルのセキュリティのクライアント資格情報の種類を指定します。 次の例では、 `clientCredentialType` <`message`> 要素の属性をに設定 `UserName` します。  
   
