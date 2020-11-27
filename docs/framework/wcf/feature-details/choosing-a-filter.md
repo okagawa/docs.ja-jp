@@ -2,14 +2,15 @@
 title: フィルターの選択
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: 2f96e7001a41682ef595d003e87daa06d0244f3b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f783b6416f2330d272c4c756a3ca0cd332f3c6e7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559390"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276101"
 ---
 # <a name="choosing-a-filter"></a>フィルターの選択
+
 ルーティング サービスを構成する際には、適切なメッセージ フィルターを選択し、受信するメッセージと正確に一致できるように、それらのフィルターを構成することが重要です。 選択したフィルターの適合基準が幅広すぎる場合や、適切に構成されていない場合は、メッセージが正しくルーティングされません。 フィルターの適合基準が厳格すぎると、一部のメッセージの有効なルーティング先が見つからないことがあります。
 
 ## <a name="filter-types"></a>フィルターの種類
@@ -84,7 +85,7 @@ StrictAndMessageFilter and1=new StrictAndMessageFilter(address1, action1);
 
 複数のフィルターのロジックを組み合わせて一致を判断する必要がある場合は、このフィルターを使用します。 たとえば、アクションとメッセージの特定の組み合わせだけを特定のアドレスに受け取る必要がある複数の送信先がある場合は、AND フィルターを使用して、必要な Action フィルターと Address フィルターを組み合わせることができます。
 
-### <a name="custom"></a>Custom
+### <a name="custom"></a>カスタム
 
 カスタムフィルターの種類を選択する場合は、このフィルターに使用する **Messagefilter** 実装を含むアセンブリの型を含む customtype 値を指定する必要があります。 また、filterData には、Custom フィルターがメッセージの評価に必要とするすべての値が格納されている必要があります。 次の例では、`FilterElement` MessageFilter 実装を使用する `CustomAssembly.MyCustomMsgFilter` を定義します。
 

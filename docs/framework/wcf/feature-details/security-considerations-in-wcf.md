@@ -6,18 +6,20 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
-ms.openlocfilehash: ed0f018e0151e68afeb9a4747bf8a260faa184b1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 796098258601ec5fa208fd8a8060b28c3eeeb4d6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601037"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276023"
 ---
 # <a name="security-considerations-in-wcf"></a>WCF でのセキュリティの考慮事項
+
 このセクションのトピックでは、Windows Communication Foundation (WCF) アプリケーションを設計する際に考慮する必要があるさまざまなセキュリティ関連の項目を示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [情報の公開](information-disclosure.md)  
+
+ [情報漏えい](information-disclosure.md)  
  情報が開示または攻撃されるさまざまな方法、およびそれを軽減する方法について説明します。  
   
  [特権の昇格](elevation-of-privilege.md)  
@@ -39,6 +41,7 @@ ms.locfileid: "84601037"
  セキュリティの特定の側面がサポートされないため、避けたり配慮したりする必要のあるさまざまなシナリオを示します。  
   
 ## <a name="reference"></a>関連項目  
+
  <xref:System.IdentityModel.Tokens>  
   
  <xref:System.IdentityModel.Claims>  
@@ -48,6 +51,7 @@ ms.locfileid: "84601037"
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>関連項目  
+
  [セキュリティ ガイドラインとベスト プラクティス](security-guidance-and-best-practices.md)  
   
 ## <a name="see-also"></a>関連項目

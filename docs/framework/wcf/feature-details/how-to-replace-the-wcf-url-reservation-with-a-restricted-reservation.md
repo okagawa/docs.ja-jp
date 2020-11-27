@@ -2,12 +2,12 @@
 title: '方法: WCF URL 予約を制限付きの予約に置き換える'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: a7025636bb1ca2ef250d7d25634bda961f2db09d
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 52dc74ea1f8e86d6a92a2894b888b8d150ebf47c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811614"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276062"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>方法: WCF URL 予約を制限付きの予約に置き換える
 
@@ -36,6 +36,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
 3. 予約が正常に削除されると、次のメッセージが表示されます。 **URL 予約を正常に削除しました**  
   
 ## <a name="creating-a-new-security-group-and-new-restricted-url-reservation"></a>新しいセキュリティ グループおよび新しい制限付き URL 予約の作成  
+
  WCF URL 予約を制限付き予約に置き換えるには、最初に新しいセキュリティグループを作成する必要があります。 この操作は、コマンド プロンプトを使用する方法か、コンピューターの管理コンソールを使用する方法で行うことができます。 行う必要があるのはいずれか一方のみです。  
   
 ### <a name="to-create-a-new-security-group-from-a-command-prompt"></a>コマンド プロンプトで新しいセキュリティ グループを作成するには  

@@ -2,14 +2,15 @@
 title: ASP.NET Web サービスとの相互運用
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: f38209ffe2161e58528a108b29e730665a65da37
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cca4e1b3da26d8026d41d0a7107432cdd2960545
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598867"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276634"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>ASP.NET Web サービスとの相互運用
+
 ASP.NET ウェブサービスと Windows Communication Foundation (WCF) Web サービスの間の相互運用性を実現するには、両方のテクノロジを使用して実装されたサービスが WS-I Basic Profile 1.1 仕様に準拠していることを確認します。 WS-I Basic Profile 1.1 に準拠している ASP.NET Web サービスは、WCF システム指定のバインディングを使用して、WCF クライアントと相互運用 <xref:System.ServiceModel.BasicHttpBinding> できます。  
   
  <xref:System.Web.Services.WebService> <xref:System.Web.Services.WebMethodAttribute> 次のサンプルコードに示すように、属性と属性をクラスではなくインターフェイスに追加し、インターフェイスを実装するクラスを記述するには、ASP.NET 2.0 オプションを使用します。  
@@ -47,6 +48,7 @@ public class Service : IEcho
  インターネット インフォメーション サービス (IIS) に用意されている認証オプションは使用しないでください。 WCF クライアントはこれらをサポートしていません。 サービスをセキュリティで保護する必要がある場合は、WCF に用意されているオプションを使用します。これらのオプションは堅牢で、標準プロトコルに基づいているためです。  
   
 ## <a name="performance-impact-caused-by-loading-the-servicemodel-httpmodule"></a>ServiceModel HttpModule の読み込みがパフォーマンスに及ぼす影響  
+
  .NET Framework Version 3.0 では、WCF `HttpModule` が、すべての ASP.NET アプリケーションが WCF 対応になるように、ルートの Web.config ファイルにインストールされます。 これによりパフォーマンスに影響が出る場合があるため、次の例に示すように、Web.config ファイルの `ServiceModel` を削除することもできます。  
   
 ```xml  

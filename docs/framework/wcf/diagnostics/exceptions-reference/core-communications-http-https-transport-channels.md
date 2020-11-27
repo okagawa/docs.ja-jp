@@ -1,16 +1,17 @@
 ---
-title: 'コア通信: HTTP、HTTPS トランスポート チャネル'
+title: 'コア通信: HTTP HTTPS トランスポートチャネル'
 ms.date: 03/30/2017
 ms.assetid: 6c0a23c9-a663-461c-bdab-58b4d3e23642
-ms.openlocfilehash: 4c4a2537ae615943ffac299a8c8cd00c67094360
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d33d153c6c527398b035ad9d027593a0fefd0e8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998752"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96277414"
 ---
 # <a name="core-communications-httphttps-transport-channels"></a>コア通信: HTTP/HTTPS トランスポート チャネル
-このトピックでは、Windows Communication Foundation (WCF) の HTTP または HTTPS トランスポート チャネルによって生成されるすべての例外を使用します。  
+
+このトピックでは、Windows Communication Foundation (WCF) トランスポートの HTTP/HTTPS チャネルによって生成されるすべての例外を示します。  
   
 ## <a name="exception-list"></a>例外の一覧  
   
@@ -21,7 +22,7 @@ ms.locfileid: "61998752"
 |Hosting_SslSettingsMisconfigured|指定されたサービスの SSL (Secure Sockets Layer) 設定が、インターネット インフォメーション サービスの SSL 設定と一致しません。|  
 |HttpAuthSchemeAndClientCert|HTTPS リスナー ファクトリが、クライアント証明書と指定された認証方式を要求するように構成されています。 ただし、クライアント認証の方式は、一度に 1 種類しか要求できません。|  
 |HttpReceiveFailure|指定された対象への HTTP 応答の受信中にエラーが発生しました。 サービス エンドポイント バインディングが HTTP プロトコルを使用していない可能性があります。 サービスがシャットダウンしたため、HTTP 要求コンテキストがサーバーによって中止された可能性もあります。 詳細については、サーバー ログを参照してください。|  
-|HttpRegistrationAccessDenied|HTTP は指定された URL を登録できません。 プロセスには、この名前空間へのアクセス権はありません (を参照してください[Namespace の予約、登録、およびルーティング](/windows/desktop/http/namespace-reservations-registrations-and-routing)詳細については)。|  
+|HttpRegistrationAccessDenied|HTTP は指定された URL を登録できません。 プロセスにこの名前空間へのアクセス権がありません (詳細については、「 [名前空間の予約、登録、およびルーティング](/windows/desktop/http/namespace-reservations-registrations-and-routing) 」を参照してください)。|  
 |HttpRegistrationAlreadyExists|HTTP は指定された URL を登録できません。 別のアプリケーションが既にこの URL を HTTP.SYS に登録しています。|  
 |HttpRegistrationPortInUse|HTTP が指定された URL を登録できませんでした。指定された TCP ポートは別のアプリケーションが使用しています。|  
 |HttpSendFailure|指定された対象への HTTP 要求の発行中にエラーが発生しました。 この原因がセキュリティ バインディングの不一致ではないことを確認してください。 また、サービスが SSL (Secure Sockets Layer) 用に構成されていないことも確認してください。|  

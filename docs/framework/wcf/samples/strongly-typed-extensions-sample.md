@@ -2,12 +2,12 @@
 title: 厳密に型指定された拡張機能のサンプル
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: e8c3bf202a1fb76d383f0a3fe15084d19a1d51fb
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e5b74188d4c9c333858c60ff95a2a90b0e2e9418
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600881"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275932"
 ---
 # <a name="strongly-typed-extensions-sample"></a>厳密に型指定された拡張機能のサンプル
 
@@ -18,6 +18,7 @@ ms.locfileid: "84600881"
  例として、このサンプルでは Atom Threading Extensions の RFC 案で定義された拡張要素を実装する方法を示しています。 このサンプルは、使い方を示すために用意されたものであり、仕様案を完全に実装するためのものではありません。  
   
 ## <a name="sample-xml"></a>サンプル XML  
+
  次の XML の例は、`<in-reply-to>` 拡張要素が追加された Atom 1.0 エントリを示しています。  
   
 ```xml  
@@ -44,6 +45,7 @@ ms.locfileid: "84600881"
  `<in-reply-to>`要素は、3つの必須の属性 (、および) を指定しますが、 `ref` 追加の `type` `href` 拡張属性と拡張要素も存在できるようにします。  
   
 ## <a name="modeling-the-in-reply-to-element"></a>In-Reply-To 要素のモデル化  
+
  このサンプルでは、`<in-reply-to>` 要素は <xref:System.Xml.Serialization.IXmlSerializable> を実装する CLR としてモデル化されており、<xref:System.Runtime.Serialization.DataContractSerializer> と共に使用できます。 また、次のサンプルコードに示すように、要素のデータにアクセスするためのメソッドとプロパティも実装しています。  
   
 ```csharp  
@@ -186,6 +188,7 @@ public void WriteXml(System.Xml.XmlWriter writer)
 ```  
   
 ## <a name="threadedfeed-and-threadeditem"></a>ThreadedFeed および ThreadedItem  
+
  このサンプルでは、`SyndicationItems` 拡張が存在する `InReplyTo` が `ThreadedItem` クラスによりモデル化されます。 同様に、`ThreadedFeed` クラスは、項目が `SyndicationFeed` のすべてのインスタンスである `ThreadedItem` です。  
   
  `ThreadedFeed` クラスは、`SyndicationFeed` から継承され、`OnCreateItem` をオーバーライドして `ThreadedItem` を返します。 また、次のコードに示すように、`Items` コレクションにアクセスするメソッドを `ThreadedItems` として実装します。  
@@ -284,6 +287,6 @@ public class ThreadedItem : SyndicationItem
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StronglyTypedExtensions`  

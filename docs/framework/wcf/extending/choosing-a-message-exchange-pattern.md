@@ -2,22 +2,24 @@
 title: メッセージ交換パターンの選択
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 7dcbea30b53142ed68db9ac138f8c7a665ca1729
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 22c720beaa8dc70d2916a5b1d38819ad3d333a0f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797297"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275659"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>メッセージ交換パターンの選択
-カスタムトランスポートを記述する最初の手順は、開発中のチャネルに必要な*メッセージ交換パターン*(meps) を決定することです。 ここでは、使用できるオプションとさまざまな要件について説明します。 これは、「チャネルの[開発](developing-channels.md)」で説明されているチャネル開発タスクリストの最初のタスクです。  
+
+カスタムトランスポートを記述する最初の手順は、開発中のチャネルに必要な *メッセージ交換パターン* (meps) を決定することです。 ここでは、使用できるオプションとさまざまな要件について説明します。 これは、「チャネルの [開発](developing-channels.md)」で説明されているチャネル開発タスクリストの最初のタスクです。  
   
 ## <a name="six-message-exchange-patterns"></a>6 つのメッセージ交換パターン  
+
  次の 3 つの MEP から選択できます。  
   
 - データグラム (<xref:System.ServiceModel.Channels.IInputChannel> と <xref:System.ServiceModel.Channels.IOutputChannel>)  
   
-     データグラム MEP を使用する場合、クライアントは火災を使用してメッセージを送信し、exchange を*破棄*します。 このような交換では、配信の成否について帯域外での確認が必要になります。 メッセージが移動中に失われて、サービスに到達しない可能性があります。 クライアントで送信操作が正常に完了したとしても、リモート エンドポイントでメッセージが受信されたとは限りません。 データグラムはメッセージングの基礎となるビルド ブロックであり、その上に信頼できるプロトコルや安全なプロトコルなどの独自のプロトコルを構築できます。 クライアント データグラム チャネルには、<xref:System.ServiceModel.Channels.IOutputChannel> インターフェイスが実装され、サービス データグラム チャネルには <xref:System.ServiceModel.Channels.IInputChannel> インターフェイスが実装されます。  
+     データグラム MEP を使用する場合、クライアントは火災を使用してメッセージを送信し、exchange を *破棄* します。 このような交換では、配信の成否について帯域外での確認が必要になります。 メッセージが移動中に失われて、サービスに到達しない可能性があります。 クライアントで送信操作が正常に完了したとしても、リモート エンドポイントでメッセージが受信されたとは限りません。 データグラムはメッセージングの基礎となるビルド ブロックであり、その上に信頼できるプロトコルや安全なプロトコルなどの独自のプロトコルを構築できます。 クライアント データグラム チャネルには、<xref:System.ServiceModel.Channels.IOutputChannel> インターフェイスが実装され、サービス データグラム チャネルには <xref:System.ServiceModel.Channels.IInputChannel> インターフェイスが実装されます。  
   
 - 要求 - 応答 (<xref:System.ServiceModel.Channels.IRequestChannel> と <xref:System.ServiceModel.Channels.IReplyChannel>)  
   
@@ -30,11 +32,11 @@ ms.locfileid: "70797297"
  ![メッセージ交換パターンの選択](./media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
 3 つの基本的なメッセージ交換パターンです。 上から順に、データグラム、要求 - 応答、二重。  
   
- これらの各 MEPs は、*セッション*をサポートすることもできます。 セッション (および <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> 型の <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType> の実装) は、チャネルで送受信されるすべてのメッセージを相互に関連付けます。 要求 - 応答パターンはスタンドアロンの 2 メッセージ セッションで、要求と応答が相互に関連付けられています。 一方、セッションをサポートする要求 - 応答パターンは、そのチャネルのすべての要求 - 応答ペアが互いに関連付けられることを意味しています。 したがって、次のように合計 6 つの MEP から選択できます。  
+ これらの各 MEPs は、 *セッション* をサポートすることもできます。 セッション (および <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> 型の <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType> の実装) は、チャネルで送受信されるすべてのメッセージを相互に関連付けます。 要求 - 応答パターンはスタンドアロンの 2 メッセージ セッションで、要求と応答が相互に関連付けられています。 一方、セッションをサポートする要求 - 応答パターンは、そのチャネルのすべての要求 - 応答ペアが互いに関連付けられることを意味しています。 したがって、次のように合計 6 つの MEP から選択できます。  
   
 - データグラム  
   
-- 要求 - 応答  
+- 要求 – 応答  
   
 - 二重  
   
@@ -48,6 +50,7 @@ ms.locfileid: "70797297"
 > UDP トランスポートでは、サポートされている MEP はデータグラムだけです。これは、UDP がファイア アンド フォーゲット (撃ち放し) のプロトコルだからです。  
   
 ## <a name="sessions-and-sessionful-channels"></a>セッションとセッションの多いチャネル  
+
  ネットワーク プロトコルには、接続指向プロトコル (TCP など) とコネクションレス プロトコル (UDP など) があります。 WCF では、セッションという用語を使用して、接続に似た論理抽象化を意味します。 セッションの多い WCF プロトコルは、接続指向ネットワーク プロトコルに似ており、セッションの少ない WCF プロトコルは、コネクションレス ネットワーク プロトコルに似ています。  
   
  チャネル オブジェクト モデルでは、各論理セッションは、セッションの多いチャネルの 1 つのインスタンスとしてマニフェストされます。 したがって、クライアントによって作成され、サービスで受け入れられるすべての新しいセッションは、それぞれの側のセッションの多い新しいチャネルに対応します。 セッションの少ないチャネルの構造 (上) と、セッションの多いチャネルの構造 (下) を次の図に示します。  
@@ -61,6 +64,7 @@ ms.locfileid: "70797297"
  セッションを使用しない場合、チャネルとセッション間に相関関係はありません。 したがって、チャネル リスナーが作成するチャネルは 1 つしかなく、このチャネルを介して、受信したすべてのメッセージをアプリケーションに配信します。 メッセージの順序を維持するためのセッションが存在しないため、メッセージの順序もありません。 前の図の上部は、セッションの少ないメッセージ交換を示しています。  
   
 ## <a name="starting-and-terminating-sessions"></a>セッションの開始と終了  
+
  セッションの多い新しいチャネルを作成することにより、クライアントでセッションが開始されます。 新しいセッションで送信されたメッセージをサービスが受信すると、サービスでセッションが開始されます。 同様に、セッションの多いチャネルを閉じるか中止すると、セッションが終了します。  
   
  セッションの多い双方向通信パターンで、メッセージの送信と受信の両方に使用する <xref:System.ServiceModel.Channels.IDuplexSessionChannel> はこの例外です。 一方の側がメッセージの送信を停止しても、メッセージの受信は続行する必要がある可能性があります。そのため、<xref:System.ServiceModel.Channels.IDuplexSessionChannel> を使用する場合には、これ以上メッセージを送信しないことを示すために出力セッションを閉じ、メッセージの受信は続行できるように、入力セッションは開いたまましておくことができる機構があります。  
@@ -70,6 +74,7 @@ ms.locfileid: "70797297"
  ただし、<xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> の <xref:System.ServiceModel.Channels.IDuplexSessionChannel> が null を返して、セッションが既に閉じていることを示していない場合は、セッションの多い入力チャネルを閉じないようにする必要があります。 <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> の <xref:System.ServiceModel.Channels.IDuplexSessionChannel> が null を返していない場合に、セッションの多い入力チャネルを閉じると、例外がスローされることがあります。これは、チャネルを閉じている間に、予期しないメッセージを受信することがあるためです。 送信側がセッションを終了する前に、受信側でセッションを終了する必要がある場合は、入力チャネルで <xref:System.ServiceModel.ICommunicationObject.Abort%2A> を呼び出します。この呼び出しにより、セッションはその場で終了します。  
   
 ## <a name="writing-sessionful-channels"></a>セッションの多いチャネルの作成  
+
  セッションの多いチャネルを作成した場合、セッションを提供するためにチャネルで実行しなければならないことがいくつかあります。 送信側では、チャネルで以下を行う必要があります。  
   
 - 新しいチャネルごとに、新しいセッションを作成し、新しいセッション ID (一意の文字列) に関連付けます。 または、スタック内で、作成したチャネルの下にあるセッションの多いチャネルから新しいセッションを取得します。  

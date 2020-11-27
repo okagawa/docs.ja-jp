@@ -10,20 +10,22 @@ helpviewer_keywords:
 - UI Automation, exposing content of tables
 - exposing content of tables using UI Automation
 ms.assetid: ac3c5eaa-49c7-4653-b83e-532e2a2604a2
-ms.openlocfilehash: e32ee52ca17120dbfef6f948711c468dd1d8a021
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e089f1371dba476b1f75f9fffe7d224c840f8d80
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540811"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276517"
 ---
 # <a name="expose-the-content-of-a-table-using-ui-automation"></a>UI オートメーションを使用したテーブルの内容の公開
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
  このトピックでは、を使用して、 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 表形式コントロール内の各セルのコンテンツおよび組み込みプロパティを公開する方法について説明します。  
   
 ## <a name="example"></a>例  
+
  次のコード例では、テーブルセルの内容を表すを取得する方法を示し <xref:System.Windows.Automation.AutomationElement> ます。行インデックス、列インデックス、行と列の範囲、行と列のヘッダー情報などのセルプロパティも取得されます。 この例では、フォーカス変更イベントハンドラーを使用して、を実装する表形式コントロールのキーボードトラバーサルをシミュレートし [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ます。 各テーブル項目の情報は、フォーカス変更イベントで公開されます。  
   
 > [!NOTE]

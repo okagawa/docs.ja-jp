@@ -2,18 +2,19 @@
 title: NativeActivity の基本クラス
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-ms.openlocfilehash: 604535e39937a75c6d268cf1abbc90dbcd506a16
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: d875f62dacadb2baf6b5d7e93ddb2933aed9cdb0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989557"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274960"
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity の基本クラス
 
 <xref:System.Activities.NativeActivity> はプロテクト コンストラクターを持つ抽象クラスです。 <xref:System.Activities.CodeActivity> と同様に、<xref:System.Activities.NativeActivity> は、<xref:System.Activities.NativeActivity.Execute%2A> メソッドを実装して、強制的な動作を記述するときに使用します。 <xref:System.Activities.CodeActivity> とは異なり、<xref:System.Activities.NativeActivity> からは、<xref:System.Activities.NativeActivityContext> メソッドに渡される <xref:System.Activities.NativeActivity.Execute%2A> オブジェクトを介して、ワークフロー ランタイムの公開されているすべての機能にアクセスできます。
 
 ## <a name="using-nativeactivitycontext"></a>NativeActivityContext の使用
+
  ワークフロー ランタイムの機能は、<xref:System.Activities.NativeActivity.Execute%2A> 型の `context` パラメーターを使用して、<xref:System.Activities.NativeActivityContext> メソッド内からアクセスできます。 <xref:System.Activities.NativeActivityContext> を介して、以下のような機能を使用できます。
 
 - 引数と変数を取得および設定する。
@@ -36,11 +37,11 @@ ms.locfileid: "70989557"
 
 1. OpenVisual Studio 2010。
 
-2. **[ファイル]** 、 **[新規作成]** 、 **[プロジェクト]** の順に選択します。 **[プロジェクトの種類]** ウィンドウの **[ビジュアルC# ]** で **[ワークフロー 4.0]** を選択し、 **[v2010]** ノードを選択します。 **[テンプレート]** ウィンドウで **[アクティビティライブラリ]** を選択します。 新しいプロジェクトに HelloActivity という名前を付けます。
+2. [ **ファイル**]、[ **新規作成**]、[ **プロジェクト**] の順に選択します。 [**プロジェクトの種類**] ウィンドウの [ **Visual C#** ] で [**ワークフロー 4.0** ] を選択し、[ **v2010** ] ノードを選択します。 [**テンプレート**] ウィンドウで [**アクティビティライブラリ**] を選択します。 新しいプロジェクトに HelloActivity という名前を付けます。
 
-3. HelloActivity プロジェクトで Activity1 を右クリックし、 **[削除]** を選択します。
+3. HelloActivity プロジェクトで Activity1 を右クリックし、[ **削除**] を選択します。
 
-4. HelloActivity プロジェクトを右クリックし、 **[追加]** 、 **[クラス]** の順に選択します。 新しいクラスに HelloActivity.cs という名前を付けます。
+4. HelloActivity プロジェクトを右クリックし、[ **追加**]、[ **クラス**] の順に選択します。 新しいクラスに HelloActivity.cs という名前を付けます。
 
 5. HelloActivity.cs ファイルで、次の `using` ディレクティブを追加します。
 

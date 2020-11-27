@@ -6,14 +6,15 @@ helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-ms.openlocfilehash: 7673ce4ac88cc36a7c35e2e946a31d23b2ce6eca
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: aaab4639a7573dd090af2e6d9bb06f896c4728f6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164188"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276556"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI オートメーション クライアントのコントロール パターン マッピング
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
@@ -31,14 +32,15 @@ ms.locfileid: "87164188"
 > 一部のコントロールは、その機能に応じて複数のコントロール パターンを条件付きでサポートします。 たとえば、メニュー項目コントロールは、メニュー コントロール内での機能に応じて、 <xref:System.Windows.Automation.InvokePattern>、 <xref:System.Windows.Automation.ExpandCollapsePattern>、 <xref:System.Windows.Automation.TogglePattern>、または <xref:System.Windows.Automation.SelectionItemPattern> コントロール パターンを条件付きでサポートします。  
   
 <a name="control_mapping_clients"></a>
+
 ## <a name="ui-automation-control-patterns-for-clients"></a>クライアントの UI オートメーション コントロール パターン  
   
-|コントロール型|サポート|条件付きサポート|サポートされていません|  
+|コントロール型|サポートされています|条件付きサポート|サポートされていません|  
 |------------------|---------------|-------------------------|-------------------|  
-|Button|なし|呼び出し、トグル、展開/折りたたみ|なし|  
-|予定表|グリッド、テーブル|選択、スクロール|値|  
+|ボタン|なし|呼び出し、トグル、展開/折りたたみ|なし|  
+|Calendar|グリッド、テーブル|選択、スクロール|値|  
 |チェック ボックス|トグル|なし|なし|  
-|コンボ ボックス|展開/折りたたみ|選択、値|スクロール|  
+|コンボ ボックス|展開/折りたたみ|選択、値|Scroll|  
 |データ グリッド|グリッド|スクロール、選択、テーブル|なし|  
 |データ項目|選択項目|展開/折りたたみ、グリッド項目、スクロール項目、テーブル、トグル、値|なし|  
 |ドキュメント|テキスト|スクロール、値|なし|  
@@ -53,16 +55,16 @@ ms.locfileid: "87164188"
 |メニュー|なし|なし|なし|  
 |メニュー バー|なし|展開/折りたたみ、ドック、変換|なし|  
 |メニュー項目|なし|展開/折りたたみ、呼び出し、選択項目、トグル|なし|  
-|ウィンドウ|なし|ドック、 スクロール、変換|ウィンドウ|  
+|ペイン|なし|ドック、 スクロール、変換|ウィンドウ|  
 |進行状況バー|なし|範囲の値、値|なし|  
 |オプション ボタン|選択項目|なし|トグル|  
-|スクロール バー|なし|範囲値|スクロール|  
+|スクロール バー|なし|範囲値|Scroll|  
 |区切り記号|なし|なし|なし|  
 |スライダー|なし|範囲の値、選択、値|なし|  
 |Spinner|なし|範囲の値、選択、値|なし|  
 |分割ボタン|呼び出し、展開/折りたたみ|なし|なし|  
 |ステータス バー|なし|グリッド|なし|  
-|タブ|選択ツール|スクロール|なし|  
+|タブ|選択|Scroll|なし|  
 |タブ項目|選択項目|なし|Invoke|  
 |テーブル|グリッド、グリッド項目、テーブル、テーブル項目|なし|なし|  
 |テキスト|なし|グリッド項目、テーブル項目、テキスト|値|  

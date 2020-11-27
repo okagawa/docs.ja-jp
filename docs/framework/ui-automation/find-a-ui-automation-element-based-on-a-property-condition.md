@@ -9,20 +9,22 @@ helpviewer_keywords:
 - elements, finding by property conditions
 - UI Automation, finding elements by property conditions
 ms.assetid: 3acaee5a-6ce8-4c3e-81c8-67e59eb74477
-ms.openlocfilehash: 112f38d6bef726f92dbf13da70b88732929175dd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 603ecf5375af919a558168e14792035a16fb20f2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557685"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276491"
 ---
 # <a name="find-a-ui-automation-element-based-on-a-property-condition"></a>プロパティ条件に基づく UI オートメーション要素の検索
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
  このトピックに [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、特定のプロパティまたはプロパティに基づいてツリー内の要素を検索する方法を示すコード例が含まれています。  
   
 ## <a name="example"></a>例  
+
  次の例では、ツリー内の関心のある要素 (または要素) を識別する一連のプロパティ条件を指定してい <xref:System.Windows.Automation.AutomationElement> ます。 次に、一致するすべての要素の検索が、 <xref:System.Windows.Automation.AutomationElement.FindAll%2A> <xref:System.Windows.Automation.AndCondition> 一致する要素の数を制限する一連のブール演算を組み込むメソッドを使用して実行されます。  
   
 > [!NOTE]

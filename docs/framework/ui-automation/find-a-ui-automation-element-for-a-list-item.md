@@ -10,20 +10,22 @@ helpviewer_keywords:
 - elements, finding for list items
 - UI Automation, finding elements for List items
 ms.assetid: c326ad2b-2144-4f64-ae4c-d850c74f95c5
-ms.openlocfilehash: ec6464bc0ec504fd34ed113c9bed1a54a7d4eaec
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 95f6b558cc53b00701232f247f8de7f8c603e3ac
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168408"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276478"
 ---
 # <a name="find-a-ui-automation-element-for-a-list-item"></a>リスト項目の UI オートメーション要素の検索
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
  このトピックで <xref:System.Windows.Automation.AutomationElement> は、項目のインデックスがわかっている場合に、リスト内の項目のを取得する方法について説明します。  
   
 ## <a name="example"></a>例  
+
  次の例では、指定した項目をリストから取得する2つの方法を示します。1つはを使用し、もう1つ <xref:System.Windows.Automation.TreeWalker> はを使用し <xref:System.Windows.Automation.AutomationElement.FindAll%2A> ます。  
   
  最初の手法は Win32 コントロールではより高速になる傾向がありますが、2番目の方法は Windows Presentation Foundation (WPF) コントロールではより高速です。  
