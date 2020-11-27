@@ -2,14 +2,15 @@
 title: ASP.NET Web サービスを WCF に移行する
 ms.date: 03/30/2017
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
-ms.openlocfilehash: fa707a4246d5bc9940417072c098b2973140f878
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1471e9913f787a76b474e9d862a22b24d464be92
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598802"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281652"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>ASP.NET Web サービスを WCF に移行する
+
 ASP.NET には Web サービスを構築するための .NET Framework クラス ライブラリとツールが用意されています。また、インターネット インフォメーション サービス (IIS) 内でサービスをホストする機能も用意されています。 Windows Communication Foundation (WCF) には、ソフトウェアエンティティが任意のプロトコル (Web サービスで使用されるプロトコルを含む) を使用して通信できるようにするための、.NET Framework クラスライブラリ、ツール、およびホスト機能が用意されています。  ASP.NET Web サービスを WCF に移行することで、アプリケーションは WCF に固有の新機能と機能強化を利用できます。  
   
  WCF には、ASP.NET ウェブサービスに関連する重要な利点がいくつかあります。 ASP.NET Web services ツールは Web サービスの構築専用ですが、WCF には、ソフトウェアエンティティを相互に通信する必要がある場合に使用できるツールが用意されています。 これにより、さまざまなソフトウェア通信シナリオを実現するために開発者が知っておく必要があるテクノロジの数が少なくて済むため、ソフトウェア開発プロジェクトが完了するまでの時間だけでなく、ソフトウェア開発リソースのコストが削減されます。  

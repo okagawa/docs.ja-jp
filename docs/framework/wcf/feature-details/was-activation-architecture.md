@@ -2,17 +2,19 @@
 title: WAS アクティベーション アーキテクチャ
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 77cebede5827016c5c9660663c0491614ba0ef19
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 46f9f9b0e951d363200cf41b5119b13ca921a3b5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545983"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281639"
 ---
 # <a name="was-activation-architecture"></a>WAS アクティベーション アーキテクチャ
+
 ここでは、Windows プロセス アクティブ化サービス (WAS とも呼ばれます) の各コンポーネントについて説明します。  
   
 ## <a name="activation-components"></a>アクティベーション コンポーネント  
+
  WAS は、複数のアーキテクチャ コンポーネントで構成されます。  
   
 - リスナー アダプター :  特定のネットワーク プロトコルでメッセージを受信し、WAS と通信して、受信メッセージを適切なワーカー プロセスにルーティングする Windows サービス。  
@@ -30,6 +32,7 @@ ms.locfileid: "90545983"
  ![WAS アーキテクチャを示すスクリーンショット。](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
 ### <a name="listener-adapters"></a>リスナー アダプター  
+
  リスナー アダプターは個別の Windows サービスであり、リッスンするネットワーク プロトコルを使用して、メッセージ受信に使用されるネットワーク通信ロジックを実装します。 次の表は、Windows Communication Foundation (WCF) プロトコルのリスナーアダプターの一覧です。  
   
 |リスナー アダプターのサービス名|Protocol|メモ|  
@@ -59,6 +62,7 @@ ms.locfileid: "90545983"
 ```  
   
 ### <a name="protocol-handlers"></a>プロトコル ハンドラー  
+
  特定のプロトコルのプロセス プロトコル ハンドラーと AppDomain プロトコル ハンドラーは、コンピューター レベルの Web.config ファイルに登録されます。  
   
 ```xml  
