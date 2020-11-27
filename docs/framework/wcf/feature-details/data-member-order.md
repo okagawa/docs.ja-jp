@@ -8,17 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-ms.openlocfilehash: 5c192d3bda65a7364345df4310dccd96cbe04056
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 1cb63569c1789b1577588caf63fb0a0259e530ff
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247365"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262165"
 ---
 # <a name="data-member-order"></a>データ メンバーの順序
+
 一部のアプリケーションでは、各種のデータ メンバーから送信される、または受信されると予想できるデータの順序 (たとえばシリアル化された XML でデータが表れる順序) がわかると便利です。 この順序を変更する必要が生じることもあります。 ここでは、このような順序を決定する規則について説明します。  
   
 ## <a name="basic-rules"></a>基本的な規則  
+
  データの順序を決定する基本的な規則には、次のようなものがあります。  
   
 - データ コントラクト型が継承階層の一部である場合、その基本型のデータ メンバーが常に最初の順番になります。  
@@ -30,6 +32,7 @@ ms.locfileid: "85247365"
  アルファベット順は、<xref:System.String.CompareOrdinal%2A> メソッドを呼び出すことによって確立されます。  
   
 ## <a name="examples"></a>使用例  
+
  次のコードについて考えてみましょう。  
   
  [!code-csharp[C_DataContractNames#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#4)]

@@ -2,14 +2,15 @@
 title: ServiceMetadataBehavior
 ms.date: 03/30/2017
 ms.assetid: 0f194476-72f1-467e-bdce-674306316e64
-ms.openlocfilehash: 1d99af064205447c2f11f6f19258551c1e88d386
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 921a880dad0d77558a70dff8a09f75c25a3cbb8a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956950"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262282"
 ---
 # <a name="servicemetadatabehavior"></a>ServiceMetadataBehavior
+
 ServiceMetadataBehavior  
   
 ## <a name="syntax"></a>構文  
@@ -26,47 +27,54 @@ class ServiceMetadataBehavior : Behavior
 ```  
   
 ## <a name="methods"></a>メソッド  
+
  ServiceMetadataBehavior クラスは、メソッドを一切定義しません。  
   
 ## <a name="properties"></a>プロパティ  
+
  ServiceMetadataBehavior クラスには、次のプロパティがあります。  
   
 ### <a name="externalmetadatalocation"></a>ExternalMetadataLocation  
- データ型: string  
+
+ データ型: 文字列  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  サービスがメタデータ要求をリダイレクトする場所を設定します。  
   
 ### <a name="httpgetenabled"></a>HttpGetEnabled  
+
  データ型 : boolean  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  `HttpGetUrl` 属性によって制御されるアドレスで、サービスが WSDL を公開するかどうかを制御します。  
   
 ### <a name="httpgeturl"></a>HttpGetUrl  
- データ型: string  
+
+ データ型: 文字列  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  HTTP を使用した取得のために、サービス WSDL が公開される場所を設定します。  
   
 ### <a name="httpsgetenabled"></a>HttpsGetEnabled  
+
  データ型 : boolean  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  `HttpsGetUrl` 属性によって制御されるアドレスで、サービスが HTTPS を介して WSDL を公開するかどうかを制御します。  
   
 ### <a name="httpsgeturl"></a>HttpsGetUrl  
- データ型: string  
+
+ データ型: 文字列  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  HTTPS を使用した取得のために、サービス WSDL が公開される場所を設定します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  

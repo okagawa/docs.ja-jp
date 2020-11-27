@@ -8,20 +8,22 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 1f8b5ab3-c193-4d0f-9e67-a0076225a1a5
-ms.openlocfilehash: eb2bf13a22af1555e68b415eec52bd259baa2df3
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 850affa26a821ddd8da62c8fe910768ff061c1c1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163835"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261203"
 ---
 # <a name="ui-automation-control-patterns"></a>UI オートメーション コントロール パターン
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
  ここでは、コントロールパターンの使用方法について詳しく説明 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [UI オートメーション Dock コントロール パターンの実装](implementing-the-ui-automation-dock-control-pattern.md)  
  [UI オートメーション ExpandCollapse コントロール パターンの実装](implementing-the-ui-automation-expandcollapse-control-pattern.md)  
  [UI オートメーション Grid コントロール パターンの実装](implementing-the-ui-automation-grid-control-pattern.md)  

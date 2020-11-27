@@ -2,14 +2,15 @@
 title: XmlDictionaryReaderQuotas
 ms.date: 03/30/2017
 ms.assetid: 9b4ca8b4-0a89-4758-97ab-528a8ce18f07
-ms.openlocfilehash: f1c12a0a60397a84d4e9ff0241c4182b4511af5c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5bb7813a680c89eb90f4ccf4ed6f09a831c8095
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858430"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262204"
 ---
 # <a name="xmldictionaryreaderquotas"></a>XmlDictionaryReaderQuotas
+
 XmlDictionaryReaderQuotas  
   
 ## <a name="syntax"></a>構文  
@@ -26,47 +27,54 @@ class XmlDictionaryReaderQuotas
 ```  
   
 ## <a name="methods"></a>メソッド  
+
  XmlDictionaryReaderQuotas クラスで定義されるメソッドはありません。  
   
 ## <a name="properties"></a>プロパティ  
+
  XmlDictionaryReaderQuotas クラスには、次のプロパティがあります。  
   
 ### <a name="maxarraylength"></a>MaxArrayLength  
+
  データ型 : sint32  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  許される最大配列長。  
   
 ### <a name="maxbytesperread"></a>MaxBytesPerRead  
+
  データ型 : sint32  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  1 回の読み取りで返すことができる最大バイト数。  
   
 ### <a name="maxdepth"></a>MaxDepth  
+
  データ型 : sint32  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  1 回の読み取りでの最大ネスト ノード深度。  
   
 ### <a name="maxnametablecharcount"></a>MaxNameTableCharCount  
+
  データ型 : sint32  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  テーブル名の最大文字数。  
   
 ### <a name="maxstringcontentlength"></a>MaxStringContentLength  
+
  データ型 : sint32  
   
- アクセスの種類:読み取り専用  
+ アクセスの種類: 読み取り専用  
   
  XML 要素のコンテンツで許可される最大文字数。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  

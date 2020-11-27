@@ -7,14 +7,15 @@ helpviewer_keywords:
 - UI Automation, Combo Box control type
 - ComboBox controls
 ms.assetid: bb321126-4770-41da-983a-67b7b89d45dd
-ms.openlocfilehash: c708de791056969e281ad1bc223e2a2233fa170b
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 11cc12dc78c74a294472ec7831548c50960147d0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166092"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96260995"
 ---
 # <a name="ui-automation-support-for-the-combobox-control-type"></a>UI オートメーションによる ComboBox コントロール型のサポート
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
@@ -25,7 +26,9 @@ ms.locfileid: "87166092"
  以降のセクションで、ComboBox コントロール型に必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、プロパティ、コントロール パターン、およびイベントを定義します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]要件は [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 、、Win32、Windows フォームのいずれの場合でも、すべてのコンボボックスコントロールに適用されます。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
+
 ## <a name="required-ui-automation-tree-structure"></a>必須の UI オートメーション ツリー構造  
+
  次の表に、コンボ ボックス コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 ツリーの詳細については [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 、「 [UI オートメーションツリーの概要](ui-automation-tree-overview.md)」を参照してください。  
   
 |コントロール ビュー|コンテンツ ビュー|  
@@ -35,8 +38,10 @@ ms.locfileid: "87166092"
  コンボ ボックスのコントロール ビュー内の編集コントロールは、[実行] ダイアログ ボックスの場合と同じく、コンボ ボックスが編集可能で任意の入力値を受け取る場合にのみ必要です。  
   
 <a name="Required_UI_Automation_Properties"></a>
+
 ## <a name="required-ui-automation-properties"></a>必須の UI オートメーション プロパティ  
- 次の表に、コンボ ボックス コントロールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 プロパティの詳細について [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、「[クライアントの UI オートメーションのプロパティ](ui-automation-properties-for-clients.md)」を参照してください。  
+
+ 次の表に、コンボ ボックス コントロールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 プロパティの詳細について [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、「 [クライアントの UI オートメーションのプロパティ](ui-automation-properties-for-clients.md)」を参照してください。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|値|メモ|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -45,26 +50,30 @@ ms.locfileid: "87166092"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|「ノート」を参照してください。|四角形領域が存在する場合にサポートされます。 四角形領域内にクリック不可能な点が存在し、特別なヒット テストを実行する場合は、オーバーライドしてクリック可能な点を提供します。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ComboBox|この値は、すべての [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] フレームワークで同じです。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|「ノート」を参照してください。|コンボ ボックス コントロールのヘルプ テキストで、コンボ ボックスからオプションを選択するようにユーザーに求める理由を説明する必要があります。 テキストは、ツールヒントに表示する情報に似ています。 たとえば、「項目を選択してモニターのディスプレイ解像度を設定してください」などです。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|正しい|コンボ ボックス コントロールは、常に [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコンテンツ ビューに組み込まれます。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|正しい|コンボ ボックス コントロールは、常に [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューに組み込まれます。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|正しい|コンボ ボックス コントロールは、選択コンテナーの項目のセットを公開します。 コンボ ボックス コントロールは、キーボード フォーカスを受け取ることができますが、UI オートメーション クライアントがコンボ ボックスにフォーカスを設定すると、コンボ ボックス サブツリーの項目がフォーカスを受け取る場合があります。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|コンボ ボックス コントロールは、常に [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコンテンツ ビューに組み込まれます。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|コンボ ボックス コントロールは、常に [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューに組み込まれます。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|True|コンボ ボックス コントロールは、選択コンテナーの項目のセットを公開します。 コンボ ボックス コントロールは、キーボード フォーカスを受け取ることができますが、UI オートメーション クライアントがコンボ ボックスにフォーカスを設定すると、コンボ ボックス サブツリーの項目がフォーカスを受け取る場合があります。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|「ノート」を参照してください。|コンボ ボックス コントロールには、通常、このプロパティが参照する静的なテキスト ラベルがあります。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|「コンボ ボックス」|ComboBox コントロール型に対応する、ローカライズされた文字列。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|「ノート」を参照してください。|コンボ ボックス コントロールの名前は、通常、静的なテキスト コントロールから取得されます。|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>
+
 ## <a name="required-ui-automation-control-patterns"></a>必須の UI オートメーション コントロール パターン  
+
  次の表に、すべてのコンボ ボックス コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コントロール パターンを示します。 コントロール パターンの詳細については、「 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)」を参照してください。  
   
-|コントロール パターン|サポート|Notes|  
+|コントロール パターン|サポート|メモ|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|はい|コンボ ボックス コントロールがコンボ ボックスであるためには、必ず、ドロップダウン ボタンがなければなりません。|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider>|はい|コンボ ボックスで現在選択されている項目を表示します。 このサポートは、コンボ ボックスの下にあるリスト ボックスに委任されます。|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|依存|コンボ ボックスが任意のテキスト値を受け取ることができる場合、Value パターンをサポートする必要があります。 このパターンでは、コンボ ボックスの文字列の内容をプログラムで設定することができます。 Value パターンがサポートされていない場合、ユーザーはコンボ ボックスのサブツリー内のリスト項目から項目を選択する必要があります。|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider>|行わない|スクロール パターンがコンボ ボックスで直接サポートされることはありません。 コンボ ボックスに含まれるリスト ボックスをスクロールできる場合は、このパターンがサポートされます。 リスト ボックスが画面に表示されている場合にのみサポートできます。|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider>|なし|スクロール パターンがコンボ ボックスで直接サポートされることはありません。 コンボ ボックスに含まれるリスト ボックスをスクロールできる場合は、このパターンがサポートされます。 リスト ボックスが画面に表示されている場合にのみサポートできます。|  
   
 <a name="Required_Events"></a>
+
 ## <a name="required-events"></a>必須イベント  
+
  次の表に、すべてのコンボ ボックス コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを示します。 イベントの詳細については、「 [UI Automation Events Overview](ui-automation-events-overview.md)」を参照してください。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベント|サポート|Notes|  

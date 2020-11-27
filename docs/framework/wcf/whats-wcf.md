@@ -7,14 +7,15 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 898211ec4504225413769f2f0dbf2f2c70110c14
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b63ce62cd39ef7961db1c0ac86c8cbd6ca871dbd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556064"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261892"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation とは
+
 Windows Communication Foundation (WCF) は、サービス指向アプリケーションを構築するためのフレームワークです。 WCF を使用すると、サービスエンドポイント間で非同期メッセージとしてデータを送信できます。 サービス エンドポイントには、IIS でホストされている、継続的に使用可能なサービスの一部を使用したり、アプリケーションでホストされているサービスを使用できます。 エンドポイントには、サービス エンドポイントからデータを要求するサービスのクライアントを使用できます。 メッセージは XML として送信された 1 文字または 1 語の簡単なものでも、バイナリ データのストリームのような複雑なものでも構いません。 サンプル シナリオをいくつか挙げます。
 
 - ビジネス トランザクションを処理するセキュリティ保護サービス。
@@ -57,7 +58,7 @@ WCF には、次の機能セットが含まれています。 詳細について
 
 - **Security**
 
-     メッセージを暗号化してプライバシーを保護し、メッセージを受信する前にユーザーが自身を認証することを必須化することができます。 SSL や WS-SecureConversation などよく知られた標準を使用してセキュリティを実装できます。 詳細については、[セキュリティ](./feature-details/security.md)に関するページをご覧ください。
+     メッセージを暗号化してプライバシーを保護し、メッセージを受信する前にユーザーが自身を認証することを必須化することができます。 SSL や WS-SecureConversation などよく知られた標準を使用してセキュリティを実装できます。 詳細については、 [セキュリティ](./feature-details/security.md)に関するページを参照してください。
 
 - **複数のトランスポートとエンコーディング**
 
@@ -65,7 +66,7 @@ WCF には、次の機能セットが含まれています。 詳細について
 
 - **キューに置かれた信頼性のあるメッセージ**
 
-     WCF は、WS-TRUST メッセージングと MSMQ を使用して実装された信頼できるセッションを使用して、信頼性の高いメッセージ交換をサポートします。 WCF での信頼性の高い、キューに置かれたメッセージングサポートの詳細については [、「キューと信頼できるセッション](./feature-details/queues-and-reliable-sessions.md)」を参照してください。
+     WCF は、WS-Reliable メッセージングおよび MSMQ を使用して実装された信頼できるセッションを使用して、信頼性の高いメッセージ交換をサポートします。 WCF での信頼性の高い、キューに置かれたメッセージングサポートの詳細については [、「キューと信頼できるセッション](./feature-details/queues-and-reliable-sessions.md)」を参照してください。
 
 - **非揮発性メッセージ**
 
@@ -101,7 +102,7 @@ Windows Server AppFabric アプリケーションサーバーのホスト機能�
 - [Windows Communication Foundation の基本概念](fundamental-concepts.md)
 - [Windows Communication Foundation のアーキテクチャ](architecture.md)
 - [ガイドラインと最適な使用方法](guidelines-and-best-practices.md)
-- [はじめにチュートリアル](getting-started-tutorial.md)
+- [チュートリアル入門](getting-started-tutorial.md)
 - [ドキュメントのガイド](guide-to-the-documentation.md)
 - [基本的な WCF プログラミング](basic-wcf-programming.md)
 - [Windows Communication Foundation サンプル](/previous-versions/dotnet/netframework-3.5/ms751514(v=vs.90))

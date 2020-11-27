@@ -2,15 +2,16 @@
 title: オブジェクト参照
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-ms.openlocfilehash: ba4ee3fd0cc16130f66570891ecc295b2d2c50aa
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 55cadc908a3479ee3d104354bcbfd3ea49b15d07
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599985"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262373"
 ---
 # <a name="object-references"></a>オブジェクト参照
-このサンプルでは、サーバーとクライアント間でオブジェクトを参照渡しする方法を示します。 このサンプルでは、シミュレートされた*ソーシャルネットワーク*を使用します。 ソーシャル ネットワークは、友人のリストを含んでいる `Person` クラスで構成され、このリストの各友人は、それぞれ独自の友人のリストを持つ `Person` クラスのインスタンスです。 これにより、オブジェクトのグラフが作成されます。 このようなソーシャル ネットワークに対する操作は、サービスによって公開されます。  
+
+このサンプルでは、サーバーとクライアント間でオブジェクトを参照渡しする方法を示します。 このサンプルでは、シミュレートされた *ソーシャルネットワーク* を使用します。 ソーシャル ネットワークは、友人のリストを含んでいる `Person` クラスで構成され、このリストの各友人は、それぞれ独自の友人のリストを持つ `Person` クラスのインスタンスです。 これにより、オブジェクトのグラフが作成されます。 このようなソーシャル ネットワークに対する操作は、サービスによって公開されます。  
   
  この例では、サービスはインターネット インフォメーション サービス (IIS) によってホストされています。クライアントはコンソール アプリケーション (.exe) です。  
   
@@ -18,6 +19,7 @@ ms.locfileid: "84599985"
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
   
 ## <a name="service"></a>サービス  
+
  `Person` クラスに <xref:System.Runtime.Serialization.DataContractAttribute> 属性が適用され、参照型であることを宣言するため <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> フィールドが `true` に設定されます。 すべてのプロパティに <xref:System.Runtime.Serialization.DataMemberAttribute> 属性が適用されます。  
   
 ```csharp
@@ -92,7 +94,8 @@ public List<Person> GetCommonFriends(List<Person> people)
 ```  
   
 ## <a name="client"></a>クライアント  
- クライアントプロキシは、Visual Studio の**サービス参照の追加**機能を使用して作成されます。  
+
+ クライアントプロキシは、Visual Studio の **サービス参照の追加** 機能を使用して作成されます。  
   
  5 つの `Person` オブジェクトで構成されるソーシャル ネットワークが作成されます。 クライアントは、サービスの 3 つのメソッドをそれぞれ呼び出します。  
   
@@ -109,7 +112,7 @@ public List<Person> GetCommonFriends(List<Person> people)
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\ObjectReferences`  
   

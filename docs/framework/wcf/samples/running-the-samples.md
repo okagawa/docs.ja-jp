@@ -2,14 +2,15 @@
 title: Windows Communication Foundation サンプルの実行
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: 57f760fa8bf4a3abf83492ac455dfaed2b327e7e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3a12128541739ba5c380be2efc291b9b419cab12
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545104"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262672"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Windows Communication Foundation サンプルの実行
+
 Windows Communication Foundation (WCF) サンプルは、単一コンピューター構成または複数コンピューター構成で実行できます。 サンプルは、単一コンピューターでそのまま実行できます。 複数コンピューター構成で実行するには、サンプルの構成ファイルの設定を変更する必要があります。 単一コンピューターおよび複数コンピューターの構成でサンプルを実行する手順を、次に示します。 インターネット インフォメーション サービス (IIS) でホストされるサービスと自己ホスト型のサービスのサンプルとでは、手順が異なります。 ほとんどのサンプルは IIS でホストされます。サンプルのホスト方法を判断するには、サンプルの Readme 情報を参照してください。  
   
  Windows Vista では、IIS でホストされていないサンプルでは、リスナーを Http.sys に登録するには、管理者特権が必要です。 Httpcfg.exe を使用して、サービスのリッスン アドレスをサービスが実行されているアカウントに登録するか、管理者権限で実行されているコマンド プロンプトでサービスを起動します。  

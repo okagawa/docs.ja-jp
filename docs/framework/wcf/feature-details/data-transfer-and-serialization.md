@@ -5,17 +5,19 @@ helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-ms.openlocfilehash: b07937b0a94c24a934b17d6cf21b726ee0d4362e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 490c89f5cfbecd4b2cc0c0e639aa97849132a809
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593490"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261983"
 ---
 # <a name="data-transfer-and-serialization"></a>データ転送とシリアル化
+
 接続されたシステムでは、サービスとクライアントのタスクの実行は、データの交換に依存します。 また、サービスまたはクライアントの開発者は、Windows Communication Foundation (WCF) がデータとデータのシリアル化を処理する方法についても理解しておく必要があります。これにより、効率的で保守が容易なアプリケーションを作成できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [サービス コントラクトでのデータ転送の指定](specifying-data-transfer-in-service-contracts.md)  
  サービスでのデータ転送の基本的な概念について説明します。  
   
@@ -47,6 +49,7 @@ ms.locfileid: "84593490"
  WCF でのデータ転送の全体的な設計のビューについて説明します。  
   
 ## <a name="reference"></a>関連項目  
+
  <xref:System.ServiceModel>  
   
  <xref:System.Runtime.Serialization.DataContractSerializer>  
@@ -58,6 +61,7 @@ ms.locfileid: "84593490"
  <xref:System.Xml.Serialization>  
   
 ## <a name="related-sections"></a>関連項目  
+
  [エンコーダーとシリアライザーの拡張](../extending/extending-encoders-and-serializers.md)  
   
 ## <a name="see-also"></a>関連項目

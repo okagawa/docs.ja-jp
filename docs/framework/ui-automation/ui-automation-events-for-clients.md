@@ -6,14 +6,15 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 84568cf228a30535ec603cdad5bddbfd5697be0a
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: fd27443fba3722c6cd2d00d6c2ca9cfc9c151b6e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84903741"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261112"
 ---
 # <a name="ui-automation-events-for-clients"></a>クライアントの UI オートメーション イベント
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
@@ -29,10 +30,12 @@ ms.locfileid: "84903741"
  イベントの詳細なビューについ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ては、「 [UI Automation イベントの概要](ui-automation-events-overview.md)」を参照してください。  
   
 <a name="Subscribing_to_Events"></a>
+
 ## <a name="subscribing-to-events"></a>イベントのサブスクライブ  
+
  クライアント アプリケーションは特定の種類のイベントをサブスクライブするために、次のいずれかのメソッドを使用してイベント ハンドラーを登録します。  
   
-|メソッド|イベントの種類|イベント引数の種類|デリゲート型|  
+|Method|イベントの種類|イベント引数の種類|デリゲート型|  
 |------------|----------------|--------------------------|-------------------|  
 |<xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>|フォーカスの変更|<xref:System.Windows.Automation.AutomationFocusChangedEventArgs>|<xref:System.Windows.Automation.AutomationFocusChangedEventHandler>|  
 |<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>|プロパティの変更|<xref:System.Windows.Automation.AutomationPropertyChangedEventArgs>|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|  
@@ -49,7 +52,7 @@ ms.locfileid: "84903741"
   
  シャットダウン時、またはアプリケーションで [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントに意味がなくなった場合、UI オートメーション クライアントが次のいずれかのメソッドを呼び出す必要があります。  
   
-|メソッド|説明|  
+|Method|説明|  
 |------------|-----------------|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationEventHandler%2A>|<xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A> を使用して登録されたイベント ハンドラーの登録を解除します。|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationFocusChangedEventHandler%2A>|<xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A> を使用して登録されたイベント ハンドラーの登録を解除します。|  
@@ -58,7 +61,7 @@ ms.locfileid: "84903741"
   
  コード例については、「 [UI オートメーションイベントのサブスクライブ](subscribe-to-ui-automation-events.md)」を参照してください。  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [UI オートメーション イベントのサブスクライブ](subscribe-to-ui-automation-events.md)
 - [UI オートメーション イベントの概要](ui-automation-events-overview.md)

@@ -2,20 +2,22 @@
 title: セキュリティ検証
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: ec7b7f96c1f6489f677970164f74c176b301f55b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1260aaa756e7be33ce2aa1bcce5fc79be553c990
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557386"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262620"
 ---
 # <a name="security-validation"></a>セキュリティ検証
+
 このサンプルでは、サービスが特定の条件を満たしていることを確認するカスタム動作を使用して、コンピューター上のサービスを検証する方法を示します。 このサンプルでは、サービス上の各エンドポイントをスキャンし、セキュリティ保護されたバインディング要素が含まれているかどうかを確認するカスタム動作を使用して、サービスを検証します。 このサンプルは、 [はじめに](getting-started-sample.md)に基づいています。  
   
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
   
 ## <a name="endpoint-validation-custom-behavior"></a>エンドポイント検証のカスタム動作  
+
  `Validate` インターフェイスに含まれる <xref:System.ServiceModel.Description.IServiceBehavior> メソッドにユーザー コードを追加することによって、サービスまたはエンドポイントにカスタム動作を与え、ユーザー定義のアクションを実行することができます。 次のコードを使用すると、サービスに含まれる各エンドポイントをループし、バインディング コレクションからセキュリティ保護されたバインディングが検索されます。  
   
 ```csharp
@@ -88,7 +90,7 @@ public void Validate(ServiceDescription serviceDescription,
   
 3. [イベントビューアー] ウィンドウで、[ **アプリケーション**] をクリックします。  
   
-4. **アプリケーション**ウィンドウで、"WebHost" カテゴリの下に最近追加された "system.servicemodel 4.0.0.0" イベントをダブルクリックして、セキュリティで保護されていないエンドポイントのメッセージを表示します。  
+4. **アプリケーション** ウィンドウで、"WebHost" カテゴリの下に最近追加された "system.servicemodel 4.0.0.0" イベントをダブルクリックして、セキュリティで保護されていないエンドポイントのメッセージを表示します。  
   
 ## <a name="set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行する  
   

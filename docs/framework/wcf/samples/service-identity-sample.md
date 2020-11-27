@@ -2,14 +2,15 @@
 title: サービス ID サンプル
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: e3365b8e17d847e6e1dc42062dc7fd5c1e4de80d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: cc8edcd7bfee73b99225c19f20df8df1e062b7bf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558135"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262542"
 ---
 # <a name="service-identity-sample"></a>サービス ID サンプル
+
 このサービス ID サンプルでは、サービスの ID を設定する方法を示します。 クライアントは、デザイン時にサービスのメタデータを使用して ID を取得し、実行時にそのサービス ID を認証することができます。 サービス ID の概念は、クライアントがサービス操作を呼び出す前にそのサービスを認証できるようにし、それによって認証されていない呼び出しからクライアントを保護することにあります。 セキュリティ保護されている接続では、サービスがクライアントの資格情報を認証した後にクライアントのアクセスを許可できますが、このサンプルではこのことを主眼とはしていません。 「サーバー認証を表示する [クライアント](client.md) 」のサンプルを参照してください。
 
 > [!NOTE]

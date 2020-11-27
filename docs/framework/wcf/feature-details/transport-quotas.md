@@ -4,28 +4,31 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: fca5fbeffb560f848edda6421301785f02547d2c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bcc63e6645580c1021667b278b80c09baf5700c1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585702"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261463"
 ---
 # <a name="transport-quotas"></a>トランスポート クォータ
+
 トランスポート クォータは、接続がリソースを過剰に消費している時期を特定するポリシー機構です。 クォータとは、クォータ値を超えた場合に、それ以上のリソースの使用を禁止する確実な制限です。 トランスポート クォータは、悪質な、または意図的でないサービス拒否攻撃を防ぎます。  
   
  Windows Communication Foundation (WCF) トランスポートには、リソースの保守的な割り当てに基づく既定のクォータ値があります。 これらの既定値は開発環境、および小規模のインストール シナリオに適しています。 インストールでリソースが不足している場合、または追加リソースが使用可能であるにもかかわらず接続が制限されている場合、サービス管理者は、トランスポート クォータをレビューし、個別のクォータ値を調整する必要があります。  
   
 ## <a name="types-of-transport-quotas"></a>トランスポート クォータの種類  
+
  WCF トランスポートには、次の3種類のクォータがあります。  
   
-- *タイムアウト*を使用すると、長期間にわたってリソースの追加に依存するサービス拒否攻撃を軽減できます。  
+- *タイムアウト* を使用すると、長期間にわたってリソースの追加に依存するサービス拒否攻撃を軽減できます。  
   
-- *メモリ割り当ての制限*により、単一の接続がシステムメモリを消費したり、サービスを他の接続から拒否したりするのを防ぐことができます。  
+- *メモリ割り当ての制限* により、単一の接続がシステムメモリを消費したり、サービスを他の接続から拒否したりするのを防ぐことができます。  
   
-- *コレクションサイズの制限*は、間接的にメモリを割り当てたり、限られた単位で使用されたりするリソースの消費量を制限します。  
+- *コレクションサイズの制限* は、間接的にメモリを割り当てたり、限られた単位で使用されたりするリソースの消費量を制限します。  
   
 ## <a name="transport-quota-descriptions"></a>トランスポート クォータの説明  
+
  このセクションでは、標準の WCF トランスポート (HTTP (S)、TCP/IP、および名前付きパイプ) で使用可能なトランスポートクォータについて説明します。 カスタム トランスポートでは、このリストに含まれない独自の構成可能なクォータを公開できます。 カスタム トランスポートのクォータについては、ドキュメントを参照してください。  
   
  各クォータ設定では、種類、最小値、および既定値を設定します。 クォータの最大値は、クォータの種類によって制限されます。 コンピューターの制限により、クォータを最大値に設定できない場合もあります。  
@@ -52,59 +55,63 @@ ms.locfileid: "84585702"
  トランスポート クォータ `MaxPendingConnections` および `MaxOutboundConnectionsPerEndpoint` は、バインディングまたは構成を使用して設定される場合には、`MaxConnections` トランスポート クォータと呼ばれる単一のクォータに結合されます。 これらのクォータ値を個別に設定できるのは、バインド要素に限られます。 `MaxConnections` トランスポート クォータでは、最小値と既定値が同じになります。  
   
 ## <a name="setting-transport-quotas"></a>トランスポート クォータの設定  
- トランスポート クォータは、トランスポート バインド要素、トランスポート バンディング、アプリケーション構成、またはホスト ポリシーを介して設定されます。 このドキュメントでは、ホスト ポリシーを介したトランスポートの設定については説明しません。 ホスト ポリシー クォータの設定については、基になるトランスポートのドキュメントを参照してください。 Http[と HTTPS の構成](configuring-http-and-https.md)に関するトピックでは、http.sys ドライバーのクォータ設定について説明します。 HTTP、TCP/IP、および名前付きパイプの接続で Windows の制限を構成する詳細については、マイクロソフト サポート技術情報を検索してください。  
+
+ トランスポート クォータは、トランスポート バインド要素、トランスポート バンディング、アプリケーション構成、またはホスト ポリシーを介して設定されます。 このドキュメントでは、ホスト ポリシーを介したトランスポートの設定については説明しません。 ホスト ポリシー クォータの設定については、基になるトランスポートのドキュメントを参照してください。 [HTTP と HTTPS の構成](configuring-http-and-https.md)に関するトピックでは、Http.sys ドライバーのクォータ設定について説明します。 HTTP、TCP/IP、および名前付きパイプの接続で Windows の制限を構成する詳細については、マイクロソフト サポート技術情報を検索してください。  
   
  他の種類のクォータは、トランスポートへ間接的に適用されます。 トランスポートがメッセージをバイトに変換するために使用するメッセージ エンコーダーには、独自のクォータ設定があります。 ただし、これらのクォータは使用されているトランスポートの種類に依存しません。  
   
 ### <a name="controlling-transport-quotas-from-the-binding-element"></a>バインド要素によるトランスポート クォータの制御  
+
  バインド要素を介してトランスポート クォータを設定した場合、トランスポートの動作を最も柔軟に制御できます。 閉じる、開く、受信、送信の各操作の既定のタイムアウトは、チャネルを構築したときにバインディングから設定されます。  
   
 |名前|HTTP|TCP/IP|名前付きパイプ|  
 |----------|----------|-------------|----------------|  
-|`ChannelInitializationTimeout`||X|x|  
+|`ChannelInitializationTimeout`||X|X|  
 |`CloseTimeout`||||  
-|`ConnectionBufferSize`||x|x|  
-|`IdleTimeout`||x|x|  
-|`LeaseTimeout`||x||  
-|`ListenBacklog`||x||  
-|`MaxBufferPoolSize`|x|x|x|  
-|`MaxBufferSize`|x|x|x|  
-|`MaxOutboundConnectionsPerEndpoint`||x|x|  
-|`MaxOutputDelay`||x|x|  
-|`MaxPendingAccepts`||x|x|  
-|`MaxPendingConnections`||x|x|  
-|`MaxReceivedMessageSize`|x|x|x|  
+|`ConnectionBufferSize`||X|X|  
+|`IdleTimeout`||X|X|  
+|`LeaseTimeout`||X||  
+|`ListenBacklog`||X||  
+|`MaxBufferPoolSize`|X|X|X|  
+|`MaxBufferSize`|X|X|X|  
+|`MaxOutboundConnectionsPerEndpoint`||X|X|  
+|`MaxOutputDelay`||X|X|  
+|`MaxPendingAccepts`||X|X|  
+|`MaxPendingConnections`||X|X|  
+|`MaxReceivedMessageSize`|X|X|X|  
 |`OpenTimeout`||||  
 |`ReceiveTimeout`||||  
 |`SendTimeout`||||  
   
 ### <a name="controlling-transport-quotas-from-the-binding"></a>バインディングによるトランスポート クォータの制御  
+
  バインディングによるトランスポート クォータの設定では、選択対象のクォータがセットにまとめられます。ただし、最も一般的に使用するクォータ値にはアクセスできます。  
   
 |名前|HTTP|TCP/IP|名前付きパイプ|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||||  
-|`CloseTimeout`|X|x|x|  
+|`CloseTimeout`|X|X|X|  
 |`ConnectionBufferSize`||||  
 |`IdleTimeout`||||  
 |`LeaseTimeout`||||  
-|`ListenBacklog`||x||  
-|`MaxBufferPoolSize`|x|x|x|  
-|`MaxBufferSize`|1|X|x|  
+|`ListenBacklog`||X||  
+|`MaxBufferPoolSize`|X|X|X|  
+|`MaxBufferSize`|1|X|X|  
 |`MaxOutboundConnectionsPerEndpoint`||2|2|  
 |`MaxOutputDelay`||||  
 |`MaxPendingAccepts`||||  
 |`MaxPendingConnections`||2|2|  
-|`MaxReceivedMessageSize`|X|x|x|  
-|`OpenTimeout`|x|x|x|  
-|`ReceiveTimeout`|x|x|x|  
-|`SendTimeout`|x|x|x|  
+|`MaxReceivedMessageSize`|X|X|X|  
+|`OpenTimeout`|X|X|X|  
+|`ReceiveTimeout`|X|X|X|  
+|`SendTimeout`|X|X|X|  
   
 1. `MaxBufferSize` トランスポート クォータは、`BasicHttp` バインディングでのみ使用可能です。 `WSHttp` バインディングは、ストリーミング トランスポート モードがサポートされないシナリオに対応します。  
   
 2. トランスポート クォータ `MaxPendingConnections` および `MaxOutboundConnectionsPerEndpoint` は、`MaxConnections` トランスポート クォータと呼ばれる単一のクォータに結合されます。  
   
 ### <a name="controlling-transport-quotas-from-configuration"></a>構成によるトランスポート クォータの制御  
+
  アプリケーション構成からバインディング上のプロパティに直接アクセスして、同じトランスポート クォータを設定できます。 構成ファイルでは、トランスポート クォータの名前は必ず小文字で始めます。 たとえば、バインディングの `CloseTimeout` プロパティは構成では `closeTimeout` 設定に対応し、バインディングの `MaxConnections` プロパティは構成では `maxConnections` 設定に対応します。  
   
 ## <a name="see-also"></a>関連項目

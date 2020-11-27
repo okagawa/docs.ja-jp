@@ -2,14 +2,15 @@
 title: ワークフロー サービス登録ツール (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: 5e7d39062a8ad016eebf949daa625a5ba7848328
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 763b617a99c98383b5b873e4fb8646884f9b5253
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921226"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261879"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>ワークフロー サービス登録ツール (WFServicesReg.exe)
+
 ワークフロー サービス登録ツール (WFServicesReg.exe) は、Windows Workflow Foundation (WF) サービスの構成要素の追加、削除、または修復に使用できるスタンドアロン ツールです。  
   
 ## <a name="syntax"></a>構文  
@@ -18,7 +19,8 @@ ms.locfileid: "76921226"
 WFServicesReg.exe [-c | -r | -v | -m | -i]  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
+
  このツールは、.NET Framework 3.5 のインストール場所 (具体的には%windir%\Microsoft.NET\Framework\v3.5)、または64ビットコンピューターの%windir%\Microsoft.NET\Framework64\v3.5 にあります。  
   
  次の表は、ワークフロー サービス登録ツール (WFServicesReg.exe) で使用できるオプションです。  
@@ -32,6 +34,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 |`/i`|アプリケーションの実行時にウィンドウを最小化します。|  
   
 ## <a name="registration"></a>登録  
+
  このツールは Web.config ファイルを調べ、次の項目を登録します。  
   
 - .NET Framework 3.5 参照アセンブリ。  
@@ -67,9 +70,10 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 > [!NOTE]
 > ServiceModelreg.exe とは異なり、WFServicesReg.exe では、特定の Web サイトのスクリプトマップまたはハンドラーの追加、削除、修復を行うことはできません。 この問題の回避策については、「スクリプトマップの修復」セクションを参照してください。  
   
-## <a name="usage-scenarios"></a>使用例  
+## <a name="usage-scenarios"></a>使用シナリオ  
   
 ### <a name="installing-iis-after-net-framework-35-is-installed"></a>.NET Framework 3.5 インストール後の IIS のインストール  
+
  Windows Server 2003 コンピューターでは、IIS をインストールする前に .NET Framework 3.5 がインストールされています。 IIS メタベースが使用できないため、.NET Framework 3.5 のインストールは、xoml および. rules スクリプトマップをインストールせずに成功します。  
   
  IIS をインストールした後、`/c` スイッチを指定して WFServicesReg.exe ツールを使用することで、特定のスクリプトマップをインストールできます。  
@@ -77,12 +81,15 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ### <a name="repairing-the-scriptmaps"></a>スクリプトマップの修復  
   
 #### <a name="scriptmap-deleted-under-web-sites-node"></a>[Web サイト] ノードでスクリプトマップが削除される  
+
  Windows Server 2003 コンピューターでは、xoml または. 規則が Web サイトノードから誤って削除されます。 これは、`/c` スイッチを指定して WFServicesReg.exe ツールを実行することにより、修復できます。  
   
 #### <a name="scriptmap-deleted-under-a-particular-web-site"></a>特定の Web サイトでスクリプトマップが削除される  
+
  Windows Server 2003 コンピューターでは、xoml または。規則は、Web サイトノードからではなく、特定の Web サイト (既定の Web サイトなど) から誤って削除されます。  
   
- 特定の Web サイトの削除されたハンドラーを修復するには、"" サイト間の登録 "を実行して、すべての Web サイトからハンドラーを削除します。次に、" サイト \ サービスの .Reg "を実行して、すべての Web サイトに適切なハンドラーを作成します。  
+ 特定の Web サイトの削除されたハンドラーを修復するには、"WFServicesReg.exe/r" を実行してすべての Web サイトからハンドラーを削除し、"WFServicesReg.exe/c" を実行して、すべての Web サイトに適切なハンドラーを作成する必要があります。  
   
 ### <a name="configuring-handlers-after-switching-iis-mode"></a>IIS モードの切り替え後のハンドラーの構成  
- IIS が共有構成モードであり、.NET Framework 3.5 がインストールされている場合、IIS メタベースは共有の場所に構成されます。 IIS を非共有構成モードに切り替えると、ローカル メタベースには必要なハンドラーが格納されません。 ローカルメタベースを適切に構成するには、共有メタベースをローカルにインポートするか、"実行可能ファイルの .Reg/c" を実行します。これにより、ローカルメタベースが構成されます。
+
+ IIS が共有構成モードであり、.NET Framework 3.5 がインストールされている場合、IIS メタベースは共有の場所に構成されます。 IIS を非共有構成モードに切り替えると、ローカル メタベースには必要なハンドラーが格納されません。 ローカルメタベースを適切に構成するには、共有メタベースをローカルにインポートするか、"WFServicesReg.exe/c" を実行します。これにより、ローカルメタベースが構成されます。

@@ -2,14 +2,15 @@
 title: トークン プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: 442371d211fe55cab33a87a5cf1b660679d7f94a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e761f32ab26cf620b6ef1dddff2bcba53289af84
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548554"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262334"
 ---
 # <a name="token-provider"></a>トークン プロバイダー
+
 このサンプルでは、カスタム トークン プロバイダーを実装する方法を示します。 Windows Communication Foundation (WCF) のトークンプロバイダーは、セキュリティインフラストラクチャに資格情報を提供するために使用されます。 一般的に、トークン プロバイダーは、ターゲットをチェックし、適切な証明書を発行して、セキュリティ インフラストラクチャがメッセージのセキュリティを保護できるようにします。 WCF には、既定の資格情報マネージャートークンプロバイダーが付属しています。 また、WCF には、CardSpace トークンプロバイダーも付属しています。 カスタム トークン プロバイダーは、次の場合に便利です。
 
 - トークン プロバイダーが連携動作できない資格情報ストアがある場合。
@@ -215,6 +216,7 @@ static void DisplayIdentityInformation()
  このサンプルを実行すると、操作要求および応答がクライアントのコンソール ウィンドウに表示されます。 クライアントをシャットダウンするには、クライアント ウィンドウで Enter キーを押します。
 
 ## <a name="setup-batch-file"></a>セットアップ バッチ ファイル
+
  このサンプルに用意されている Setup.bat バッチ ファイルを使用すると、適切な証明書を使用してサーバーを構成し、サーバー証明書ベースのセキュリティを必要とする自己ホスト型アプリケーションを実行できるようになります。 このバッチ ファイルは、複数のコンピューターを使用する場合またはホストなしの場合に応じて変更する必要があります。
 
  次に、バッチ ファイルのセクションのうち、該当する構成で実行するために変更が必要となる部分を示します。

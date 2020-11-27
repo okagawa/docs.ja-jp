@@ -11,21 +11,24 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 99239d7bac2e556d4da0d74f36c68916da7c688a
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: cf8069f26b85318994aeeb47d42ad28a3a33834a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164014"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262529"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI オートメーションおよび画面の拡大縮小
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
 Windows Vista 以降では、ユーザーはドット/インチ (dpi) の設定を変更して、画面上のほとんどのユーザーインターフェイス (UI) 要素のサイズを大きくすることができます。 この機能は Windows では長時間使用できましたが、以前のバージョンでは、アプリケーションによってスケーリングを実装する必要がありました。 Windows Vista 以降では、デスクトップウィンドウマネージャーによって、独自のスケーリングを処理しないすべてのアプリケーションに対して既定のスケーリングが実行されます。 UI オートメーション クライアント アプリケーションでは、この機能を考慮に入れる必要があります。  
   
 <a name="Scaling_in_Windows_Vista"></a>
+
 ## <a name="scaling-in-windows-vista"></a>Windows Vista での拡大縮小  
+
  既定の dpi 設定は96です。これは、96ピクセルが1概念的なインチの幅または高さを占めていることを意味します。 「インチ」の正確な寸法は、モニターのサイズと物理的な解像度によって異なります。 たとえば、幅 12 インチで水平方向の解像度 1280 ピクセルのモニターでは、96 ピクセルの水平線は 1 インチの約 9/10 の長さになります。  
   
  Dpi 設定の変更は、画面の解像度の変更と同じではありません。 Dpi スケーリングでは、画面上の物理ピクセルの数は変わりません。 拡大縮小が適用されるのは、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 要素のサイズと位置です。 拡大縮小しないよう明示的に指定されていないデスクトップとアプリケーションに対し、デスクトップ ウィンドウ マネージャー (DWM) はこの拡大縮小を自動的に実行できます。  
@@ -42,7 +45,9 @@ Windows Vista 以降では、ユーザーはドット/インチ (dpi) の設定�
  論理座標は、dpi 設定に関係なく、オペレーティングシステムとアプリケーションの動作が一貫しているため、重要です。 たとえば、 <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType> は通常、論理座標を返します。 ダイアログボックス内の要素の上にカーソルを移動すると、dpi 設定に関係なく同じ座標が返されます。 (100, 100) にコントロールを描画すると、それらの論理座標に描画され、すべての dpi 設定で同じ相対位置が使用されます。  
   
 <a name="Scaling_in_UI_Automation_Clients"></a>
+
 ## <a name="scaling-in-ui-automation-clients"></a>UI オートメーション クライアントにおける拡大縮小  
+
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]API は論理座標を使用しません。 次のメソッドとプロパティが返す、あるいはパラメーターとして受け取るのは、物理座標です。  
   
 - <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A>  

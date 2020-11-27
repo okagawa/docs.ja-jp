@@ -2,15 +2,16 @@
 title: MSMQ 4.0 での有害メッセージ処理
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 54e69d60aabb3793ef4a8d800dd0e6238c28f231
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2ad7ad5b7e1865d5c9843720861b7a8e440f47f0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602441"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261359"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0 での有害メッセージ処理
-このサンプルでは、サービスで有害メッセージの処理を実行する方法を示します。 このサンプルは、トランザクション処理された[MSMQ バインディング](transacted-msmq-binding.md)のサンプルに基づいています。 このサンプルでは、`netMsmqBinding` を使用しています。 サービスは自己ホスト型コンソール アプリケーションであるので、キューに置かれたメッセージをサービスが受信するようすを観察できます。
+
+このサンプルでは、サービスで有害メッセージの処理を実行する方法を示します。 このサンプルは、トランザクション処理された [MSMQ バインディング](transacted-msmq-binding.md) のサンプルに基づいています。 このサンプルでは、`netMsmqBinding` を使用しています。 サービスは自己ホスト型コンソール アプリケーションであるので、キューに置かれたメッセージをサービスが受信するようすを観察できます。
 
  キュー通信では、クライアントはサービスとの通信にキューを使用します。 厳密には、クライアントはメッセージをキューに送信します。 サービスは、メッセージをキューから受信します。 したがって、キューを使用する通信では、サービスとクライアントが同時に実行されていなくてもかまいません。
 
@@ -21,6 +22,7 @@ ms.locfileid: "84602441"
  このサンプルでは、windows Server 2003 および Windows XP プラットフォームに用意されている制限付きの有害機能、および Windows Vista で提供される完全な有害機能について説明します。 どちらのサンプルでも、有害メッセージをキューから別のキューに移動することを目的としています。 そのキューは、有害メッセージサービスによって提供されます。
 
 ## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 の有害メッセージ処理サンプル
+
  Windows Vista では、有害メッセージの格納に使用できる有害なサブキュー機能が MSMQ に用意されています。 このサンプルでは、Windows Vista を使用して有害なメッセージを処理するためのベストプラクティスを示します。
 
  Windows Vista での有害メッセージの検出は洗練されています。 検出に役立つ 3 つのプロパティがあります。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> は、指定したメッセージをキューから再度読み取り、処理するためにアプリケーションにディスパッチする回数です。 メッセージをアプリケーションにディスパッチできないか、またはアプリケーションがサービス操作内のトランザクションをロールバックしたため、メッセージはキューに戻ったときにキューから再度読み取られます。 <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> は、メッセージが再試行キューに移動する回数です。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> に達すると、メッセージは再試行キューに移動されます。 メッセージが再試行キューからメイン キューに移動されると、<xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> プロパティは時間遅延となります。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> が 0 にリセットされます。 メッセージは再試行されます。 メッセージを読み取るすべての試行に失敗すると、メッセージが有害としてマークされます。
@@ -35,7 +37,7 @@ ms.locfileid: "84602441"
 
 - Reject: メッセージを送信者の配信不能キューに戻すことにより、メッセージを拒否します。 この値は、Windows Vista でのみ使用できます。
 
- このサンプルは有害なメッセージに対する `Move` 処置の使用法を示します。 `Move`メッセージを有害サブキューに移動させます。
+ このサンプルは有害なメッセージに対する `Move` 処置の使用法を示します。 `Move` メッセージを有害サブキューに移動させます。
 
  サービス コントラクトは `IOrderProcessor` です。これは、キューでの使用に適した一方向サービスを定義します。
 
@@ -155,6 +157,7 @@ public class OrderProcessorService : IOrderProcessor
 ```
 
 ## <a name="processing-messages-from-the-poison-message-queue"></a>有害メッセージ キューのメッセージの処理
+
  有害メッセージ サービスは、最終的な有害メッセージ キューからメッセージを読み取って、それを処理します。
 
  有害メッセージ キューのメッセージは、メッセージを処理するサービスに対応付けられたメッセージで、有害メッセージ サービスのエンドポイントとは異なる場合があります。 したがって、有害メッセージサービスがキューからメッセージを読み取る場合、WCF チャネル層はエンドポイントで不一致を検出し、メッセージをディスパッチしません。 この場合、メッセージは注文処理サービス宛てになりますが、有害メッセージ サービスが受信します。 別のエンドポイント宛のメッセージも含めてメッセージの受信を続けるには、`ServiceBehavior` を追加して、メッセージの任意の宛先サービス エンドポイントを一致条件としてアドレスをフィルタする必要があります。 これは、有害メッセージ キューから読み込んだメッセージを正常に処理するために必要です。
@@ -279,11 +282,11 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
     1. Visual Studio 2012 でサーバーマネージャーを開きます。
 
-    2. [**機能**] タブを展開します。
+    2. [ **機能** ] タブを展開します。
 
-    3. [**プライベートメッセージキュー**] を右クリックし、[**新規**]、[**プライベートキュー**] の順に選択します。
+    3. [ **プライベートメッセージキュー**] を右クリックし、[ **新規**]、[ **プライベートキュー**] の順に選択します。
 
-    4. [**トランザクション**] ボックスをオンにします。
+    4. [ **トランザクション** ] ボックスをオンにします。
 
     5. `ServiceModelSamplesTransacted`新しいキューの名前として「」と入力します。
 
@@ -321,6 +324,6 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Poison\MSMQ4`

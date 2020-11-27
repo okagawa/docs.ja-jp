@@ -2,17 +2,19 @@
 title: WCF ライブラリ プロジェクトの配置
 ms.date: 03/30/2017
 ms.assetid: 9f9222fe-d358-443c-9a49-12c5498e35e7
-ms.openlocfilehash: 0f4c880bbd5c1bb819a04f42e91f531250c4f32e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e3a90f03639a888b4528a1962a24b7adc5d43c58
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554320"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96260891"
 ---
 # <a name="deploying-a-wcf-library-project"></a>WCF ライブラリ プロジェクトの配置
+
 このトピックでは、Windows Communication Foundation (WCF) サービスライブラリプロジェクトを配置する方法について説明します。  
   
 ## <a name="deploying-a-wcf-service-library"></a>WCF サービス ライブラリの配置  
+
  WCF サービスライブラリは、ダイナミックリンクライブラリ (DLL) です。 それ自体を単独で実行することはできません。 ホスティング環境に配置する必要があります。 このプロセスの詳細については、「 [WCF サービスのホストと](/previous-versions/dotnet/articles/bb332338(v=msdn.10))使用」を参照してください。  
   
  WCF サービスライブラリは、他の WCF サービスと同様にデプロイできます。 ただし、.NET Framework は Dll の構成をサポートしていないことに注意してください。 <xref:System.Configuration> では、アプリケーション ドメイン 1 つにつき、1 つの構成ファイルがサポートされています。 WCF サービスライブラリプロジェクトでは、開発時にライブラリの App.config ファイルを提供することによって、この制限を軽減します。 ただし、配置後、この App.config ファイルは認識されません。  

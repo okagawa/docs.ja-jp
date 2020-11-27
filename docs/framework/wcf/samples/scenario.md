@@ -2,17 +2,19 @@
 title: Scenario2
 ms.date: 03/30/2017
 ms.assetid: 816557e0-f676-4731-95c5-b02cbef3d8d7
-ms.openlocfilehash: e983df89f35037732059ce284b67862da3171fd1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 31d12152530b57f84c55df79c40fdead1ce53924
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602402"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262646"
 ---
-# <a name="scenario"></a>シナリオ
+# <a name="scenario"></a>通信の種類
+
 このセクションには、Windows Communication Foundation (WCF) シナリオを示すサンプルが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [データ バインドのシナリオ](data-binding-scenarios.md)  
  WCF データバインディングのシナリオを示します。  
   
@@ -29,4 +31,4 @@ ms.locfileid: "84602402"
  WCF セキュリティインフラストラクチャを使用して、呼び出し元の id 情報をあるサービスから別のサービスにフローする方法を示します。  
   
  [デザイン パターン:リストに基づく公開/定期受信](design-patterns-list-based-publish-subscribe.md)  
- Windows Communication Foundation (WCF) プログラムとして実装されているリストベースのパブリッシュ/サブスクライブパターンを示します。
+ Windows Communication Foundation (WCF) プログラムとして実装されているリストベースの Publish-Subscribe パターンを示します。
