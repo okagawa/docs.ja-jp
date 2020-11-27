@@ -2,27 +2,30 @@
 title: 3309 - QueryCompositionExecuted
 ms.date: 03/30/2017
 ms.assetid: a7ae2267-b478-4115-8317-a89ce4ced65d
-ms.openlocfilehash: 292864b47a36084cfb215535d59bd5f38ef5180c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e11e03fdbe29efb6b55974b1d4f0a9428a2f9346
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61595856"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279585"
 ---
 # <a name="3309---querycompositionexecuted"></a>3309 - QueryCompositionExecuted
+
 ## <a name="properties"></a>プロパティ  
   
 |||  
 |-|-|  
 |ID|3309|  
-|キーワード|ServiceModel|  
-|レベル|情報|  
+|Keywords|ServiceModel|  
+|Level|情報|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>Description  
+
  このイベントは、クエリの構成が実行されるときに生成されます。  
   
-## <a name="message"></a>メッセージ  
+## <a name="message"></a>Message  
+
  '%1' を使用したクエリの構成が要求 URI: '%2' で実行されました。  
   
-## <a name="details"></a>説明
+## <a name="details"></a>詳細
