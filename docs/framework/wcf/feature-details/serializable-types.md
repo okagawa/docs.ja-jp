@@ -2,19 +2,21 @@
 title: シリアル化可能な型
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: e65fcb93c5c36bb289b825cef58b3adc6f5155f5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4ba5fb80b3a7f4149eb49aa838826f2792147dd1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586105"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253961"
 ---
 # <a name="serializable-types"></a>シリアル化可能な型
+
 既定では、<xref:System.Runtime.Serialization.DataContractSerializer> は公開されている型をすべてシリアル化します。 その型の読み書き可能なパブリック プロパティおよびパブリック フィールドは、すべてシリアル化されます。  
   
  既定の動作を変更するには、<xref:System.Runtime.Serialization.DataContractAttribute> 属性と <xref:System.Runtime.Serialization.DataMemberAttribute> 属性を型とメンバーに適用します。この機能は、使用するコントロールに型がない場合や属性を追加するように変更できない場合に役立ちます。 <xref:System.Runtime.Serialization.DataContractSerializer> は "マークされていない" 型を認識します。  
   
 ## <a name="serialization-defaults"></a>シリアル化の既定  
+
  <xref:System.Runtime.Serialization.DataContractAttribute> 属性と <xref:System.Runtime.Serialization.DataMemberAttribute> 属性を適用して、型とメンバーのシリアル化を明示的に制御またはカスタマイズできます。 さらに、これらの属性をプライベート フィールドに適用することもできます。 ただし、これらの属性でマークされていない型もシリアル化および逆シリアル化されます。 次のルールと例外が適用されます。  
   
 - <xref:System.Runtime.Serialization.DataContractSerializer> は、新しく作成した型の既定のプロパティを使用して、属性のない型からデータ コントラクトを推論します。  
@@ -36,6 +38,7 @@ ms.locfileid: "84586105"
 - パブリック メンバー、プロパティ、またはフィールドのシリアル化のプロセスを "取り消す" には、<xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> 属性をそのメンバーに適用します。  
   
 ## <a name="inheritance"></a>継承  
+
  マークされていない型 (<xref:System.Runtime.Serialization.DataContractAttribute> 属性のない型) は、この属性を持つ型から継承できます。ただし、その反対はできません。つまり、マークされていない型から属性を持つ型を継承することはできません。 このルールは、以前のバージョンの .NET Framework で記述されたコードとの下位互換性を確保するために主に適用されます。  
   
 ## <a name="see-also"></a>関連項目

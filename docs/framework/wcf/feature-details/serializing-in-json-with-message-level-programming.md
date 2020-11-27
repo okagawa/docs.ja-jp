@@ -2,23 +2,26 @@
 title: メッセージ レベルのプログラミングによる JSON 形式でのシリアル化
 ms.date: 03/30/2017
 ms.assetid: 5f940ba2-57ee-4c49-a779-957c5e7e71fa
-ms.openlocfilehash: 129b39051e5955181c33e6486ec3193383177e60
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8343f7a8aa3c01557aae7df420351fa318cbb4b5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546264"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253935"
 ---
 # <a name="serializing-in-json-with-message-level-programming"></a>メッセージ レベルのプログラミングによる JSON 形式でのシリアル化
+
 WCF は、JSON 形式でのデータのシリアル化をサポートします。 このトピックでは、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> を使用して型をシリアル化することを WCF に命令する方法について説明します。  
   
 ## <a name="typed-message-programming"></a>型指定されたメッセージのプログラミング  
+
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> は、<xref:System.ServiceModel.Web.WebGetAttribute> または <xref:System.ServiceModel.Web.WebInvokeAttribute> がサービス操作に適用されるときに使用されます。 どちらの属性でも、`RequestFormat` と `ResponseFormat` を指定できます。 要求と応答に JSON を使用する場合。 両方をに設定 `WebMessageFormat.Json` します。  JSON を使用するには、を使用する必要があります。これにより、が <xref:System.ServiceModel.WebHttpBinding> 自動的に構成され <xref:System.ServiceModel.Description.WebHttpBehavior> ます。 WCF シリアル化の詳細については、「 [シリアル化と逆シリアル](serialization-and-deserialization.md)化」を参照してください。 JSON と WCF の詳細については、「 [サービスステーション-wcf を使用した RESTful サービスの概要](/archive/msdn-magazine/2009/january/service-station-an-introduction-to-restful-services-with-wcf)」を参照してください。  
   
 > [!IMPORTANT]
 > JSON を使用するには、SOAP 通信をサポートしていない <xref:System.ServiceModel.WebHttpBinding> と <xref:System.ServiceModel.Description.WebHttpBehavior> を使用する必要があります。 と通信するサービスは、 <xref:System.ServiceModel.WebHttpBinding> サービスメタデータの公開をサポートしていないため、クライアント側プロキシを生成するために Visual Studio のサービス参照の追加機能または svcutil.exe コマンドラインツールを使用することはできません。 を使用するサービスをプログラムで呼び出す方法の詳細につい <xref:System.ServiceModel.WebHttpBinding> ては、「 [WCF で REST サービスを使用する方法](/archive/blogs/pedram/how-to-consume-rest-services-with-wcf)」を参照してください。  
   
 ## <a name="untyped-message-programming"></a>型指定されていないメッセージのプログラミング  
+
  型指定されていないメッセージ オブジェクトを直接操作する場合は、型指定されていないメッセージのプロパティを明示的に設定して JSON としてシリアル化する必要があります。 これを行う方法を次のコード スニペットに示します。  
   
 ```csharp

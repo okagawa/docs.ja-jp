@@ -3,19 +3,21 @@ title: セッション、インスタンス化、およびコンカレンシー
 description: セッション、インスタンス化、および同時実行の方法、それらの使用方法、および WFC での相互作用について説明します。
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: 41eef5a962c702eebd6b9a34607b542ec6bbd97b
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 7335d1c4d4ddf5247fc42c70cdc5e8ae33be7292
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246546"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254208"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>セッション、インスタンス化、およびコンカレンシー
-*"セッション"* とは、2 つのエンドポイント間で送信されるすべてのメッセージを相互に関連付けたものです。 *"インスタンス化"* とは、ユーザー定義のサービス オブジェクトとこれらのオブジェクトに関連する <xref:System.ServiceModel.InstanceContext> オブジェクトの有効期間を制御することです。 また、*コンカレンシー*は、<xref:System.ServiceModel.InstanceContext> で同時に実行されるスレッドの数の制御を表す用語です。  
+
+*"セッション"* とは、2 つのエンドポイント間で送信されるすべてのメッセージを相互に関連付けたものです。 *"インスタンス化"* とは、ユーザー定義のサービス オブジェクトとこれらのオブジェクトに関連する <xref:System.ServiceModel.InstanceContext> オブジェクトの有効期間を制御することです。 また、*コンカレンシー* は、<xref:System.ServiceModel.InstanceContext> で同時に実行されるスレッドの数の制御を表す用語です。  
   
  ここでは、これらの設定とその使用方法、各設定間のさまざまな相互作用について説明します。  
   
 ## <a name="sessions"></a>セッション  
+
  サービス コントラクトによって <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> プロパティが <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType>に設定されている場合、すべての呼び出し (つまり、呼び出しをサポートする、基になるメッセージ交換) を同じメッセージ交換の一部にする必要があります。 セッションが許可されるが必須ではないコントラクトの場合、クライアントは、接続した後にセッションを確立できます。また、セッションを確立しないままにしておくこともできます。 セッションが終了したのに、同じセッション ベースのチャネルでメッセージが送信されると、例外がスローされます。  
   
  WCF セッションには、次の主要な概念機能があります。  
@@ -38,7 +40,8 @@ ms.locfileid: "85246546"
   
  クライアント アプリケーションとサービス アプリケーションでは、異なる方法でセッションと対話します。 クライアント アプリケーションはセッションを開始し、セッション内で送信されてきたメッセージの受信と処理を行います。 サービス アプリケーションでは、動作を追加するための機能拡張ポイントとしてセッションを使用できます。 これは <xref:System.ServiceModel.InstanceContext> を直接操作する、またはカスタムのインスタンス コンテキスト プロバイダーを実装することで可能になります。  
   
-## <a name="instancing"></a>インスタンス化  
+## <a name="instancing"></a>"インスタンス化"  
+
  インスタンス化動作 ( <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> プロパティを使用して設定します) は、受信メッセージに応答して <xref:System.ServiceModel.InstanceContext> を作成する方法を制御します。 既定では、各 <xref:System.ServiceModel.InstanceContext> は 1 つのユーザー定義サービス オブジェクトに関連付けられています。したがって、(既定では) <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> プロパティを設定することによってもユーザー定義サービス オブジェクトのインスタンス化を制御できます。 インスタンス化モードは <xref:System.ServiceModel.InstanceContextMode> 列挙体によって定義されます。  
   
  次のインスタンス化モードを使用できます。  
@@ -62,6 +65,7 @@ public class CalculatorService : ICalculatorInstance
  また、 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> プロパティは <xref:System.ServiceModel.InstanceContext> の解放頻度を制御しますが、 <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> プロパティと <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A?displayProperty=nameWithType> プロパティはサービス オブジェクトの解放時期を制御します。  
   
 ### <a name="well-known-singleton-services"></a>既知のシングルトン サービス  
+
  単一インスタンス サービス オブジェクトの 1 つのバリエーションとして、サービス オブジェクトをユーザーが自分で作成し、このオブジェクトを使用してサービス ホストを作成すると有用な場合があります。 そのためには、 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> プロパティを <xref:System.ServiceModel.InstanceContextMode.Single> に設定するか、サービス ホストが開かれたときに例外をスローする必要があります。  
   
  このようなサービスを作成するには、 <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29> コンストラクターを使用します。 この方法は、シングルトン サービスが使用する特定のオブジェクト インスタンスを提供する場合に、カスタムの <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> を実装する代わりに使用できます。 このオーバーロードは、サービス実装型を構築するのが困難な場合 (たとえば、パラメーターなしのパブリックコンストラクターが実装されていない場合) に使用できます。  
@@ -69,9 +73,11 @@ public class CalculatorService : ICalculatorInstance
  このコンストラクターにオブジェクトが提供されている場合は、Windows Communication Foundation (WCF) のインスタンス化動作に関連する一部の機能が異なる動作をすることに注意してください。 たとえば、シングルトン オブジェクト インスタンスを指定しているときは、 <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> を呼び出しても効果はありません。 他のインスタンス解放機構も、同様に無視されます。 <xref:System.ServiceModel.ServiceHost> は常に、すべての操作について <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> プロパティが <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> に設定されているかのように動作します。  
   
 ### <a name="sharing-instancecontext-objects"></a>InstanceContext オブジェクトの共有  
+
  ユーザーが自ら関連付けを行うことにより、どの <xref:System.ServiceModel.InstanceContext> オブジェクトに、どのセッションフル チャネルまたは呼び出しを関連付けるかを制御することもできます。  
   
 ## <a name="concurrency"></a>コンカレンシー  
+
  コンカレンシーは、<xref:System.ServiceModel.InstanceContext> 内で同時にアクティブになるスレッドの数を制御します。 同時実行を制御するには、 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> と <xref:System.ServiceModel.ConcurrencyMode> 列挙値を使用します。  
   
  選択可能なコンカレンシー モードは次の 3 つです。  
@@ -83,7 +89,7 @@ public class CalculatorService : ICalculatorInstance
 - <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: 各サービス インスタンスは、一度に 1 つのメッセージを処理しますが、再入操作の呼び出しを受け入れます。 サービスは、WCF クライアントオブジェクトを介して呼び出しを行う場合にのみ、これらの呼び出しを受け入れます。  
   
 > [!NOTE]
-> 複数のスレッドを安全に使用するコードを理解し、適切に記述することが困難な場合もあります。 <xref:System.ServiceModel.ConcurrencyMode.Multiple> 値や <xref:System.ServiceModel.ConcurrencyMode.Reentrant> 値を使用する前に、これらのモード用にサービスが適切に設計されていることを確認してください。 詳細については、「<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>」を参照してください。  
+> 複数のスレッドを安全に使用するコードを理解し、適切に記述することが困難な場合もあります。 <xref:System.ServiceModel.ConcurrencyMode.Multiple> 値や <xref:System.ServiceModel.ConcurrencyMode.Reentrant> 値を使用する前に、これらのモード用にサービスが適切に設計されていることを確認してください。 詳細については、 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> を参照してください。  
   
  コンカレンシーの使用は、インスタンス化モードに関連します。 インスタンス化では、 <xref:System.ServiceModel.InstanceContextMode.PerCall> 各メッセージが新しいによって処理されるため、同時実行は関係ありません <xref:System.ServiceModel.InstanceContext> 。したがって、では、複数のスレッドがアクティブになることはありません <xref:System.ServiceModel.InstanceContext> 。  
   
@@ -98,6 +104,7 @@ public class CalculatorService : ICalculatorConcurrency
 ```  
   
 ## <a name="sessions-interact-with-instancecontext-settings"></a>InstanceContext 設定と対話するセッション  
+
  セッションと <xref:System.ServiceModel.InstanceContext> は、コントラクト内の <xref:System.ServiceModel.SessionMode> 列挙値と、チャネルと特定のサービス オブジェクト間の関連付けを制御するサービス実装の <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> プロパティ値の組み合わせに応じて、相互に作用します。  
   
  サービスの <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> プロパティと <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> プロパティの値の組み合わせが指定されているという条件で、セッションをサポートしている受信チャネルまたはサポートしていない受信チャネルの結果を次の表に示します。  
@@ -114,5 +121,5 @@ public class CalculatorService : ICalculatorConcurrency
 - [方法: セッションを必要とするサービスを作成する](how-to-create-a-service-that-requires-sessions.md)
 - [方法: サービスのインスタンス化を制御する](how-to-control-service-instancing.md)
 - [コンカレンシー](../samples/concurrency.md)
-- [インスタンス化](../samples/instancing.md)
+- ["インスタンス化"](../samples/instancing.md)
 - [セッション](../samples/session.md)

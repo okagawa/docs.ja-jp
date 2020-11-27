@@ -2,15 +2,16 @@
 title: '方法: 探索プロキシで登録される探索可能なサービスの実装する'
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: bf878dff59a9a258567ff99098b0b3f8761194e2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1e6b57193d25da7e5c9a865525dd5e9ea21110b0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599231"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254260"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>方法: 探索プロキシで登録される探索可能なサービスの実装する
-これは、探索プロキシの実装方法に関する 4 つのトピックのうちの 2 番目のトピックです。 前のトピック「[方法: 探索プロキシを実装](how-to-implement-a-discovery-proxy.md)する」では、探索プロキシを実装しています。 このトピックでは、アナウンスメッセージ (および) を探索プロキシに送信する WCF サービスを作成し `Hello` `Bye` ます。これにより、探索プロキシに登録および登録解除が行われます。
+
+これは、探索プロキシの実装方法に関する 4 つのトピックのうちの 2 番目のトピックです。 前のトピック「 [方法: 探索プロキシを実装](how-to-implement-a-discovery-proxy.md)する」では、探索プロキシを実装しています。 このトピックでは、アナウンスメッセージ (および) を探索プロキシに送信する WCF サービスを作成し `Hello` `Bye` ます。これにより、探索プロキシに登録および登録解除が行われます。
 
 ### <a name="to-define-the-service-contract"></a>サービス コントラクトを定義するには
 
@@ -159,6 +160,7 @@ ms.locfileid: "84599231"
 これで、探索サービスの実装が完了しました。 [「方法: 探索プロキシを使用してサービスを検索するクライアントアプリケーションを実装](client-app-discovery-proxy-to-find-a-service.md)する」に進みます。
 
 ## <a name="example"></a>例
+
  このトピックで使用するコード全体の一覧を次に示します。
 
 ```csharp

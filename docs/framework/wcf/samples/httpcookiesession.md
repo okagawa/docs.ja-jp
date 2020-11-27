@@ -2,14 +2,15 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: 8dba147ace7ada221b5d274cd233e4b9618835d9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: df29ae84537cdb7cea40abcdb848ffbb8bbd6b9f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585131"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253818"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
+
 このサンプルでは、カスタム プロトコル チャネルを作成し、セッション管理用の HTTP クッキーを使用する方法を示します。 このチャネルは、Windows Communication Foundation (WCF) サービスと ASMX クライアント間、または WCF クライアントと ASMX サービス間の通信を可能にします。  
   
  セッションベースの ASMX Web サービスでクライアントが Web メソッドを呼び出すと、ASP.NET エンジンは次の処理を実行します。  
@@ -29,14 +30,16 @@ ms.locfileid: "84585131"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
   
 ## <a name="httpcookiesession-channel-message-exchange-pattern"></a>HttpCookieSession チャネルのメッセージ交換パターン  
+
  このサンプルでは、ASMX などのシナリオのセッションを有効にします。 チャネル スタックの一番下には、<xref:System.ServiceModel.Channels.IRequestChannel> と <xref:System.ServiceModel.Channels.IReplyChannel> をサポートする HTTP トランスポートがあります。 これはチャネルのジョブで、より高いレベルのチャネル スタックにセッションを提供します。 このサンプルでは、セッションをサポートする 2 つのチャネル (<xref:System.ServiceModel.Channels.IRequestSessionChannel> および <xref:System.ServiceModel.Channels.IReplySessionChannel>) を実装します。  
   
 ## <a name="service-channel"></a>サービス チャネル  
+
  このサンプルでは、`HttpCookieReplySessionChannelListener` クラスでサービス チャネルを提供します。 このクラスは <xref:System.ServiceModel.Channels.IChannelListener> インターフェイスを実装し、チャネル スタックの低いレベルにある <xref:System.ServiceModel.Channels.IReplyChannel> チャネルを <xref:System.ServiceModel.Channels.IReplySessionChannel> に変換します。 このプロセスは、次の部分に分かれています。  
   
 - チャネル リスナが開かれると、チャネル リスナは内部リスナの内部チャネルを受け入れます。 内部リスナはデータグラム リスナであり、受け入れられたチャネルの有効期間は内部リスナの有効期間から切り離されるため、次のように、内部リスナを閉じて内部チャネルの保持のみを行うことができます。  
@@ -77,9 +80,11 @@ InputQueue<RequestContext> requestQueue;
  `channelMapping` を使用して `ReplySessionChannels` を追跡します。受け入れられたすべてのチャネルが閉じられた後で、基になる `innerChannel` を閉じます。 この方法により、`HttpCookieReplySessionChannel` は `HttpCookieReplySessionChannelListener` の有効期間を過ぎても存在できます。 また、リスナのガベージ コレクトは気にする必要はありません。受け入れられたチャネルは、`OnClosed` コールバックを介してそのチャネルのリスナへの参照を保持するためです。  
   
 ## <a name="client-channel"></a>クライアント チャネル  
+
  対応するクライアント チャネルは、`HttpCookieSessionChannelFactory` クラスにあります。 チャネルの作成中、チャネル ファクトリは内部要求チャネルを `HttpCookieRequestSessionChannel` でラップします。 `HttpCookieRequestSessionChannel` クラスは、基になる要求チャネルへの呼び出しを転送します。 クライアントがプロキシを閉じると、`HttpCookieRequestSessionChannel` はチャネルが閉じられようとしていることを示すメッセージをサービスに送信します。 そのため、サービス チャネル スタックは、使用中のセッション チャネルを正常にシャットダウンできます。  
   
 ## <a name="binding-and-binding-element"></a>バインディングとバインディング要素  
+
  サービスとクライアントのチャネルを作成したら、次の手順として、それらを WCF ランタイムに統合します。 チャネルは、バインディングとバインド要素を介して WCF に公開されます。 バインディングは、1 つまたは複数のバインディング要素で構成されています。 WCF には、システム定義のバインディングがいくつか用意されています。たとえば、BasicHttpBinding や WSHttpBinding などです。 `HttpCookieSessionBindingElement` クラスには、バインディング要素の実装が含まれています。 この実装によってチャネル リスナとチャネル ファクトリの作成メソッドがオーバーライドされ、必要なチャネル リスナまたはチャネル ファクトリがインスタンス化されます。  
   
  このサンプルでは、サービスの説明のポリシー アサーションを使用します。 これにより、サンプルのチャネルの要件を、そのサービスを利用できる他のクライアントに公開できます。 たとえば、このバインド要素はポリシー アサーションを公開し、セッションがサポートされていることを潜在的なクライアントに通知します。 このサンプルでは、バインディング要素の構成で `ExchangeTerminateMessage` プロパティが有効になっています。そのため、サービスで余分なメッセージ交換アクションがサポートされ、セッションでのメッセージ交換が終了されることを示すために必要なアサーションが追加されます。 その後、クライアントはこのアクションを使用できます。 `HttpCookieSessionBindingElement` から作成されたポリシー アサーションを、次の WSDL コードに示します。  
@@ -98,9 +103,11 @@ InputQueue<RequestContext> requestQueue;
  `HttpCookieSessionBinding` クラスは、システム指定のバインディング要素を使用する定義済みバインディングです。  
   
 ## <a name="adding-the-channel-to-the-configuration-system"></a>構成システムへのチャネルの追加  
+
  このサンプルでは、構成を使用してサンプル チャネルを公開する 2 つのクラスを提供します。 1 つ目のクラスは、<xref:System.ServiceModel.Configuration.BindingElementExtensionElement> の `HttpCookieSessionBindingElement` です。 実装の大部分は `HttpCookieSessionBindingConfigurationElement` で代行されます。これは <xref:System.ServiceModel.Configuration.StandardBindingElement> の派生です。 `HttpCookieSessionBindingConfigurationElement` には、`HttpCookieSessionBindingElement` のプロパティに対応するプロパティがあります。  
   
 ### <a name="binding-element-extension-section"></a>要素拡張セクションのバインディング  
+
  セクション `HttpCookieSessionBindingElementSection` は <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> で、`HttpCookieSessionBindingElement` を構成システムに公開します。 構成セクション名をいくつかオーバーライドして、バインド要素の種類とバインド要素の作成方法が定義されます。 その後、次のようにして拡張セクションを構成ファイルに登録できます。  
   
 ```xml  
@@ -130,6 +137,7 @@ InputQueue<RequestContext> requestQueue;
 ```  
   
 ## <a name="test-code"></a>テスト コード  
+
  このサンプルのトランスポートを使用するテスト コードは、クライアント ディレクトリとサービス ディレクトリで使用できます。 2つのテストで構成されます。1つのテストでは、クライアントでがに設定されたバインディングを使用 `allowCookies` `true` します。 2 つ目のテストは、バインディングで明示的なシャットダウン (メッセージ交換の終了) を有効にします。  
   
  このサンプルを実行すると、次の出力が表示されます。  

@@ -2,14 +2,15 @@
 title: ルーティング サービスを使用した Hello World
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 63cfb32a5f5d0cae7635d39d5df594a5bb07e411
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3d91634d72481427f04e958f6dc2734829b6158b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554789"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253857"
 ---
 # <a name="hello-world-with-the-routing-service"></a>ルーティング サービスを使用した Hello World
+
 このサンプルでは、Windows Communication Foundation (WCF) ルーティングサービスを示します。 ルーティングサービスは、コンテンツベースのルーターをアプリケーションに簡単に含めることができる WCF コンポーネントです。 このサンプルでは、ルーティングサービスを使用して通信するように、標準の WCF Calculator サンプルを適応させます。 このサンプルの電卓クライアントは、ルーターによって公開されるエンドポイントにメッセージを送信するように構成されています。 ルーティング サービスは、送信されてきたすべてのメッセージを受け入れ、電卓サービスに対応するエンドポイントに転送するように構成されています。 したがって、クライアントから送信されたメッセージはルーターで受信され、実際の電卓サービスに再ルーティングされます。 電卓サービスからのメッセージはルーターに送り返され、ルーターから電卓クライアントに渡されます。
 
 ### <a name="to-use-this-sample"></a>このサンプルを使用するには
@@ -40,12 +41,15 @@ ms.locfileid: "90554789"
     ```
 
 ## <a name="configurable-via-code-or-appconfig"></a>コードまたは App.Config で構成可能
+
  サンプルは、提供された時点では、App.config ファイルを使用してルーターの動作を定義するように構成されています。 App.config ファイルの名前を別の名前に変更して認識されないようにし、ConfigureRouterViaCode() に対するメソッド呼び出しのコメントを解除することもできます。 どちらの方法でも、ルーターの動作は同じになります。
 
-### <a name="scenario"></a>シナリオ
+### <a name="scenario"></a>通信の種類
+
  このサンプルでは、基本的なメッセージ ポンプとして機能するルーターを示します。 ルーティング サービスは、構成済みの一連の送信先エンドポイントに直接メッセージを渡すように構成された透過的なプロキシ ノードとして機能します。
 
 ### <a name="real-world-scenario"></a>実際のシナリオ
+
  Contoso では、サービスの名前指定、アドレス指定、構成、およびセキュリティに関する柔軟性を高めるために、 基本的なメッセージ ポンプをサービスの前に配置して、それをエンドポイントとして公開しています。 これにより、実際のサービスの前にセキュリティが追加され、スケールアウトされたソリューションやサービスのバージョン管理を後で簡単に実装できるようになります。
 
 > [!IMPORTANT]

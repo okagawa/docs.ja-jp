@@ -2,14 +2,15 @@
 title: DataContract サロゲート
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 9677e3cf024e6c1e5b2f3360423ab55536748495
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 23a83b0a99a17af011bea1193c2ea013a2c3c5a9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600037"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253688"
 ---
 # <a name="datacontract-surrogate"></a>DataContract サロゲート
+
 このサンプルでは、シリアル化、逆シリアル化、スキーマのエクスポート、スキーマのインポートなどのプロセスを、データ コントラクト サロゲート クラスを使用してカスタマイズする方法を示します。 このサンプルでは、クライアントとサーバーのシナリオでサロゲートを使用する方法を示します。このシナリオでは、データがシリアル化され、Windows Communication Foundation (WCF) クライアントとサービスの間で転送されます。  
   
 > [!NOTE]
@@ -250,7 +251,7 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
  サンプルを実行すると、クライアントは AddEmployee の呼び出しに続いて、最初の呼び出しが正常に行われたかどうかをチェックする GetEmployee を呼び出します。 GetEmployee の操作要求の結果は、クライアント コンソール ウィンドウに表示されます。 GetEmployee 操作では、従業員の検索と "found" の印刷を成功させる必要があります。  
   
 > [!NOTE]
-> このサンプルでは、シリアル化、逆シリアル化、およびメタデータの生成で、サロゲートをプラグインとして使用する方法を示します。 メタデータからコードを生成するためにサロゲートをプラグインとして使用する方法を示すものではありません。 サロゲートを使用してクライアントコード生成にプラグインする方法のサンプルについては、「[カスタム WSDL 発行](custom-wsdl-publication.md)のサンプル」を参照してください。  
+> このサンプルでは、シリアル化、逆シリアル化、およびメタデータの生成で、サロゲートをプラグインとして使用する方法を示します。 メタデータからコードを生成するためにサロゲートをプラグインとして使用する方法を示すものではありません。 サロゲートを使用してクライアントコード生成にプラグインする方法のサンプルについては、「 [カスタム WSDL 発行](custom-wsdl-publication.md) のサンプル」を参照してください。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
@@ -265,6 +266,6 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  

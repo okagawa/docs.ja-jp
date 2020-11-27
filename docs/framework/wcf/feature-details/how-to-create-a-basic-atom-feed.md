@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
-ms.openlocfilehash: 0317e7b42f589b31f5c77b89d26cb46815f13054
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 76362684d289ca6aaac852158a05087a0a28f837
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599049"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254052"
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>方法: 基本的な ATOM フィードを作成する
+
 Windows Communication Foundation (WCF) を使用すると、配信フィードを公開するサービスを作成できます。 ここでは、ATOM 配信フィードを公開する配信サービスを作成する方法について説明します。  
   
 ### <a name="to-create-a-basic-syndication-service"></a>基本的な配信サービスを作成するには  
@@ -23,7 +24,7 @@ Windows Communication Foundation (WCF) を使用すると、配信フィード�
      [!code-vb[htAtomBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    > <xref:System.ServiceModel.Web.WebGetAttribute> を適用するすべてのサービス操作は、HTTP GET 要求にマッピングされます。 他の HTTP メソッドに操作をマッピングするには、代わりに <xref:System.ServiceModel.Web.WebInvokeAttribute> を使用します。 詳細については、「[方法: 基本的な WCF WEB HTTP サービスを作成](how-to-create-a-basic-wcf-web-http-service.md)する」を参照してください。  
+    > <xref:System.ServiceModel.Web.WebGetAttribute> を適用するすべてのサービス操作は、HTTP GET 要求にマッピングされます。 他の HTTP メソッドに操作をマッピングするには、代わりに <xref:System.ServiceModel.Web.WebInvokeAttribute> を使用します。 詳細については、「 [方法: 基本的な WCF WEB HTTP サービスを作成](how-to-create-a-basic-wcf-web-http-service.md)する」を参照してください。  
   
 2. サービス コントラクトを実装します。  
   
@@ -64,7 +65,7 @@ Windows Communication Foundation (WCF) を使用すると、配信フィード�
   
 ### <a name="to-call-getblog-with-an-http-get"></a>HTTP GET で GetBlog() を呼び出すには  
   
-1. Internet Explorer を開き、次の URL を入力して、enter キーを押します。`http://localhost:8000/BlogService/GetBlog`  
+1. Internet Explorer を開き、次の URL を入力して、enter キーを押します。 `http://localhost:8000/BlogService/GetBlog`  
   
      URL には、サービスのベースアドレス ( `http://localhost:8000/BlogService` )、エンドポイントの相対アドレス、および呼び出すサービス操作が含まれます。  
   
@@ -88,12 +89,14 @@ Windows Communication Foundation (WCF) を使用すると、配信フィード�
      [!code-vb[htAtomBasic#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/snippets.vb#11)]  
   
 ## <a name="example"></a>例  
+
  この例の完全なコードの一覧を以下に示します。  
   
  [!code-csharp[htAtomBasic#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatombasic/cs/program.cs#12)]
  [!code-vb[htAtomBasic#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#12)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
+
  上記のコードのコンパイル時には、System.ServiceModel.dll と System.ServiceModel.Web.dll が参照されます。  
   
 ## <a name="see-also"></a>関連項目

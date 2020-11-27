@@ -2,14 +2,15 @@
 title: '方法: WCF Web HTTP プログラミング モデルを使用して任意のデータを返すサービスを作成する'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 9753fbc9b333cb7e89ddc8dff030cb1f62ede23b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4ed3e5269be5b636b348ff0efe44c49dae5335e2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600362"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253896"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>方法: WCF Web HTTP プログラミング モデルを使用して任意のデータを返すサービスを作成する
+
 開発者は、データがサービス操作から返される流れを完全に制御する必要が生じることがあります。 これは、サービス操作が WCF でサポートされていない形式でデータを返す必要がある場合に当てはまります。 このトピックでは、WCF WEB HTTP プログラミングモデルを使用してこのようなサービスを作成する方法について説明します。 ストリームを返す操作を 1 つ持つサービスを例に取ります。  
   
 ### <a name="to-implement-the-service-contract"></a>サービス コントラクトを実装するには  
@@ -108,6 +109,7 @@ ms.locfileid: "84600362"
 2. Internet Explorer を開き「`http://localhost:8000/Service/GetImage?width=50&height=40`」と入力します。黄色い長方形とその中心を通る青い斜線が表示されます。  
   
 ## <a name="example"></a>例  
+
  この例で使用されているコードの全容を次に示します。  
   
 ```csharp  

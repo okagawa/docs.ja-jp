@@ -6,19 +6,21 @@ helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-ms.openlocfilehash: 9498358dd480487afcd3b746d14266e486c62d71
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b92f1ad8bb00e9df8daf55da4d7a808420d909cf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546316"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254000"
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation セキュリティ
+
 このセクションのトピックでは、Windows Communication Foundation (WCF) のセキュリティ機能と、それらを使用してメッセージをセキュリティで保護する方法について説明します。  
   
  Windows Server AppFabric とセキュリティの詳細については、「 [Windows Server appfabric のセキュリティモデル](/previous-versions/appfabric/ee677202(v=azure.10))」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [セキュリティの概要](security-overview.md)  
  WCF のセキュリティ機能について説明します。  
   
@@ -56,16 +58,18 @@ ms.locfileid: "90546316"
  セキュリティで保護された WCF アプリケーションを作成するためのガイドライン。  
   
 ## <a name="reference"></a>関連項目  
+
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Security>  
   
 ## <a name="related-sections"></a>関連項目  
+
  [WCF 機能の詳細](index.md)  
   
  [基本的な WCF プログラミング](../basic-wcf-programming.md)  
   
- [はじめにチュートリアル](../getting-started-tutorial.md)  
+ [チュートリアル入門](../getting-started-tutorial.md)  
   
  [概念の概要](../conceptual-overview.md)  
   
