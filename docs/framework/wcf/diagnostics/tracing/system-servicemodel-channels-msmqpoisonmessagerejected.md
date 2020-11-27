@@ -2,17 +2,18 @@
 title: System.ServiceModel.Channels.MsmqPoisonMessageRejected
 ms.date: 03/30/2017
 ms.assetid: 0e64b9bd-1f12-43df-a189-d7be3c2bace1
-ms.openlocfilehash: c5401bae1d8e7f61939d8de321353f59f412f966
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 69da35f65e04a3cba15885c4fe6e57d63762cb1c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535334"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96260345"
 ---
 # <a name="systemservicemodelchannelsmsmqpoisonmessagerejected"></a>System.ServiceModel.Channels.MsmqPoisonMessageRejected
+
 有害メッセージは拒否されました。  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>Description  
 
  このトレースは、有害メッセージが検出され、続いて拒否されたことを示します。 これは、NetMsmqBinding または MsmqIntegrationBinding の `ReceiveErrorHandling` プロパティが `Reject` に設定されると発生します。 拒否されたメッセージは、送信側の [配信不能キュー](../../feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)に配信されます。  
   

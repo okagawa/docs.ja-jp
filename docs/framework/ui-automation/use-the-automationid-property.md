@@ -10,14 +10,15 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 9e6dd3935a1b4d15690e1dfecd73e9b07330ec6c
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 91254903b3481861f21d5e2f4e51f1e50726c46b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924527"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258596"
 ---
 # <a name="use-the-automationid-property"></a>AutomationID プロパティの使用
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
@@ -29,10 +30,11 @@ ms.locfileid: "86924527"
 > <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> では、ツリー全体で一意の ID は保証されません。これが役に立つには、通常、コンテナーとスコープ情報が必要です。 たとえば、アプリケーションには複数のトップレベルのメニュー項目を持つメニュー コントロールが含まれ、さらに、それらのメニュー項目に複数の子メニュー項目が含まれている場合があります。 これらの 2 次メニュー項目は、"Item1"、"Item 2" などの汎用スキームで識別され、トップレベルのメニュー項目間で子の識別子が重複することがあります。  
   
 ## <a name="scenarios"></a>シナリオ  
+
  要素を検索するときに、正確で一貫性のある結果を実現するために <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> の使用を必要とする 3 つの主な UI オートメーション クライアント アプリケーションのシナリオが識別されています。  
   
 > [!NOTE]
-> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>は、最上位のアプリケーションウィンドウを除くコントロールビュー内のすべての UI オートメーション要素、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ID または x:Uid を持たないコントロールから派生した ui オートメーション要素、およびコントロール ID を持たない Win32 コントロールから派生した ui オートメーション要素によってサポートされます。  
+> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> は、最上位のアプリケーションウィンドウを除くコントロールビュー内のすべての UI オートメーション要素、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ID または x:Uid を持たないコントロールから派生した ui オートメーション要素、およびコントロール ID を持たない Win32 コントロールから派生した ui オートメーション要素によってサポートされます。  
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>一意で探索可能な AutomationID を使用して UI オートメーション ツリーで特定の要素を検索する  
   

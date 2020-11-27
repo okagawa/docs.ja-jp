@@ -7,17 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
-ms.openlocfilehash: 6d172f9b659804179d23fb382376f83f4898edc5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9acc007ea7837f7b8e6c958fa81547fe4fa5b2c0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601310"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257614"
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>方法: 承認中にメタデータ要求を許可する
+
 カスタム承認中に、メタデータの処理要求を許可することがあります。 ここでは、このような要求を検証する手順を示します。  
   
- Windows Communication Foundation (WCF) 承認の詳細については、「[承認](authorization-in-wcf.md)」を参照してください。  
+ Windows Communication Foundation (WCF) 承認の詳細については、「 [承認](authorization-in-wcf.md)」を参照してください。  
   
 ### <a name="to-allow-metadata-requests-during-authorization"></a>承認中にメタデータ要求を許可するには  
   
@@ -27,9 +28,10 @@ ms.locfileid: "84601310"
   
 3. オーバーライドで、コントラクト名、名前空間、およびアクションを確認します。次の例を参照してください。 条件が有効な場合は、`true.` を返します。  
   
-4. クラスを使用するための拡張ポイントを使用します。 詳細については、「[方法: サービスのカスタム承認マネージャーを作成](../extending/how-to-create-a-custom-authorization-manager-for-a-service.md)する」を参照してください。  
+4. クラスを使用するための拡張ポイントを使用します。 詳細については、「 [方法: サービスのカスタム承認マネージャーを作成](../extending/how-to-create-a-custom-authorization-manager-for-a-service.md)する」を参照してください。  
   
 ## <a name="example"></a>例  
+
  <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> メソッドのオーバーライドを次の例に示します。  
   
  [!code-csharp[C_HowtoCheckForMexRequestsInAuthorization#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtocheckformexrequestsinauthorization/cs/source.cs#1)]

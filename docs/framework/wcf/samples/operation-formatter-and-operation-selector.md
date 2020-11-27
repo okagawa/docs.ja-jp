@@ -2,17 +2,18 @@
 title: 操作フォーマッタと操作セレクター
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: 344d3122d03e89a7f20e391db49005d0e085dfa6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a49b466a940b63b70509ba76e62a9b9c5a36ad61
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575155"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96260033"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>操作フォーマッタと操作セレクター
+
 このサンプルでは、Windows Communication Foundation (WCF) 拡張ポイントを使用して、WCF で想定されるものとは異なる形式のメッセージデータを許可する方法を示します。 既定では、WCF フォーマッタは、メソッドパラメーターが要素の下に含まれることを想定して `soap:body` います。 このサンプルでは、代わりに HTTP GET クエリ文字列のパラメータ データを解析するカスタム操作フォーマッタを実装し、そのデータを使用してメソッドを呼び出す方法を示します。  
   
- このサンプルは、サービスコントラクトを実装する[はじめに](getting-started-sample.md)に基づいてい `ICalculator` ます。 加算、減算、乗算、および除算のメッセージを変更して、クライアントからサーバーへの要求を行うための HTTP GET と、サーバーからクライアントへの要求を行うための POX メッセージ付きの HTTP POST を使用する方法を示します。  
+ このサンプルは、サービスコントラクトを実装する [はじめに](getting-started-sample.md)に基づいてい `ICalculator` ます。 加算、減算、乗算、および除算のメッセージを変更して、クライアントからサーバーへの要求を行うための HTTP GET と、サーバーからクライアントへの要求を行うための POX メッセージ付きの HTTP POST を使用する方法を示します。  
   
  これを行うために、サンプルには次の機能が用意されています。  
   
@@ -30,7 +31,8 @@ ms.locfileid: "84575155"
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
   
 ## <a name="key-concepts"></a>主要概念  
- `QueryStringFormatter`-操作フォーマッタは WCF のコンポーネントであり、メッセージをパラメーターオブジェクトの配列に変換し、パラメーターオブジェクトの配列をメッセージに変換します。 この操作は、クライアント上では <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> インターフェイスを使用して、サーバー上では <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> インターフェイスを使用して行われます。 これらのインターフェイスを使用すると、ユーザーは `Serialize` メソッドと `Deserialize` メソッドから要求メッセージと応答メッセージを取得できます。  
+
+ `QueryStringFormatter` -操作フォーマッタは WCF のコンポーネントであり、メッセージをパラメーターオブジェクトの配列に変換し、パラメーターオブジェクトの配列をメッセージに変換します。 この操作は、クライアント上では <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> インターフェイスを使用して、サーバー上では <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> インターフェイスを使用して行われます。 これらのインターフェイスを使用すると、ユーザーは `Serialize` メソッドと `Deserialize` メソッドから要求メッセージと応答メッセージを取得できます。  
   
  このサンプルでは、`QueryStringFormatter` にこれら両方のインターフェイスが実装され、クライアントとサーバーで実装されます。  
   
@@ -47,6 +49,7 @@ ms.locfileid: "84575155"
 - このサンプルでは、HTTP GET は要求のみに使用されます。 応答を送信するには、フォーマッタを XML メッセージの生成時に使用できたはずの最初のフォーマッタに代行させます。 このサンプルの目的の 1 つは、このような代行フォーマッタの実装方法を示すことです。  
   
 ### <a name="uripathsuffixoperationselector-class"></a>UriPathSuffixOperationSelector クラス  
+
  <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> インターフェイスを使用すると、特定のメッセージをディスパッチする必要がある操作で、ユーザー独自のロジックを実装できます。  
   
  このサンプルでは、操作名がメッセージのアクション ヘッダーではなく、HTTP GET URI に含まれているため、適切な操作を選択するには、`UriPathSuffixOperationSelector` がサーバーに実装されている必要があります。 サンプルは、大文字小文字が区別されない操作名のみを許可するようにセットアップされています。  
@@ -54,6 +57,7 @@ ms.locfileid: "84575155"
  `SelectOperation` メソッドは、受信メッセージを取得し、メッセージ プロパティ内の `Via` URI を検索します。 次に、この URI から操作名のサフィックスを抽出し、内部テーブルを検索してメッセージをディスパッチする必要がある操作名を取得して、その操作名を返します。  
   
 ### <a name="enablehttpgetrequestsbehavior-class"></a>EnableHttpGetRequestsBehavior クラス  
+
  `UriPathSuffixOperationSelector` コンポーネントは、プログラムまたはエンドポイント動作を使用してセットアップできます。 サンプルでは、サービスのアプリケーション構成ファイルで指定された `EnableHttpGetRequestsBehavior` の動作を実装します。  
   
  サーバー側 :  
@@ -63,6 +67,7 @@ ms.locfileid: "84575155"
  既定では、WCF は完全一致アドレスフィルターを使用します。 受信メッセージ上の URI には、操作名のサフィックスと、その後にパラメータ データを格納するクエリ文字列が含まれています。したがって、アドレス フィルタは、エンドポイントの動作によっても、プレフィックスが一致するフィルタに変更されます。 <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>この目的で WCF を使用します。  
   
 ### <a name="installing-operation-formatters"></a>操作フォーマッタのインストール  
+
  フォーマッタを指定する操作の動作は一意です。 このような動作は、常に既定で操作ごとに実装され、必要な操作フォーマッタを作成します。 ただし、これらの動作は他の操作動作と同様に見えるため、他の属性では識別できません。 置換動作をインストールするには、既定で WCF 型ローダーによってインストールされている特定のフォーマッタの動作を検索し、それを置き換えるか、既定の動作の後に実行する互換性のある動作を追加する必要があります。  
   
  これらの操作フォーマッタの動作は、<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> を呼び出す前にプログラムでセットアップするか、または既定のフォーマッタ動作後に実行される操作動作を指定することによってセットアップすることができます。 ただし、エンドポイント動作を介したセットアップ (および構成を介したセットアップ) は容易ではありません。この動作モデルでは、動作によって別の動作を置き換えることはできず、他の方法で説明ツリーを変更することもできないためです。  
@@ -98,7 +103,8 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
   
 - この手順は、<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> を呼び出す前に行う必要があります。 このサンプルでは、<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> を呼び出す前にこのフォーマッタを手動で変更する方法を示します。 同じ結果を得るための別の方法としては、オープン操作の前に <xref:System.ServiceModel.ServiceHost> を呼び出す `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior` からクラスを派生します (ホスティングのドキュメントおよびサンプル例を参照してください)。  
   
-### <a name="user-experience"></a>ユーザー側の表示と操作  
+### <a name="user-experience"></a>ユーザー エクスペリエンス  
+
  サーバー側 :  
   
 - サーバーの `ICalculator` 実装は、変更する必要はありません。  
@@ -166,7 +172,7 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Formatters\QueryStringFormatter`  
   

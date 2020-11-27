@@ -2,15 +2,16 @@
 title: 単一 ListenUri に対する複数のエンドポイント
 ms.date: 03/30/2017
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-ms.openlocfilehash: 91220c6631db2f283b6571fbc32af2211feeaa35
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 09696ec8170915f29dae7510f8953565bcc67436
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602493"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96260189"
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>単一 ListenUri に対する複数のエンドポイント
-このサンプルでは、単一 `ListenUri` で複数のエンドポイントをホストするサービスを示します。 このサンプルは、電卓サービスを実装する[はじめに](getting-started-sample.md)に基づいています。  
+
+このサンプルでは、単一 `ListenUri` で複数のエンドポイントをホストするサービスを示します。 このサンプルは、電卓サービスを実装する [はじめに](getting-started-sample.md) に基づいています。  
   
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -20,6 +21,7 @@ ms.locfileid: "84602493"
  `EndpointAddress` とは、サービスの論理アドレスです。 これは、SOAP メッセージの宛先となるアドレスです。 `ListenUri` とはサービスの物理アドレスです。 これには、サービス エンドポイントが現在のコンピュータで実際にメッセージをリッスンする、ポートとアドレスの情報が含まれます。 ほとんどの場合、これらのアドレスが異なっている必要はありません。`ListenUri` が明示的に指定されていない場合は、エンドポイントの `EndpointAddress` の URI が既定値になります。 ただし、複数の異なるサービス宛てのメッセージを受け入れることができるルーターを構成する場合など、2 つのアドレスを区別すると便利な場合もあります。  
   
 ## <a name="service"></a>サービス  
+
  このサンプルのサービスには、`ICalculator` と `IEcho` という 2 つのコントラクトがあります。 また、一般的な `IMetadataExchange` エンドポイントに加え、次のコードに示すように 3 つのアプリケーション エンドポイントがあります。  
   
 ```xml  
@@ -44,6 +46,7 @@ ms.locfileid: "84602493"
  このように、アドレス フィルタとコントラクト フィルタを組み合わせることによって、このサービスの `ListenUri` に到着する各メッセージを、正しいエンドポイントにルーティングすることができます。 3 つ目のエンドポイントは、他の 2 つのエンドポイントと区別されます。このエンドポイントは、他のエンドポイントとは異なるアドレスに送信されるメッセージを受け入れるからです。 1 つ目のエンドポイントと 2 つ目のエンドポイントは、コントラクト (受信メッセージのアクション) に基づいて相互に区別されます。  
   
 ## <a name="client"></a>クライアント  
+
  サーバー上のエンドポイントに 2 つの異なるアドレスがあるのと同様に、クライアント エンドポイントにも 2 つのアドレスがあります。 サーバーとクライアントのどちらでも、論理アドレスは `EndpointAddress` と呼ばれます。 ただし、サーバーの物理アドレスは `ListenUri` と呼ばれるのに対し、クライアントの物理アドレスは `Via` と呼ばれます。  
   
  これら 2 つのアドレスがサーバー上にある場合、既定では同じアドレスを示します。 クライアントで、エンドポイントのアドレスとは異なる `Via` を指定するには、次のように `ClientViaBehavior` を使用します。  
@@ -75,6 +78,6 @@ calcClient.ChannelFactory.Endpoint.Behaviors.Add(
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpointsSingleUri`  

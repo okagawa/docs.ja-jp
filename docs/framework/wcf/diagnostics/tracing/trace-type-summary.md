@@ -2,30 +2,31 @@
 title: トレースの種類の概要
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-ms.openlocfilehash: 8ed6dceb19caa52f928f285064c60337e3f15a87
-ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
+ms.openlocfilehash: e8d222d6f093f5db3bd620194bfde7edd4b998a8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78674836"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259246"
 ---
 # <a name="trace-type-summary"></a>トレースの種類の概要
-[ソースレベルは](xref:System.Diagnostics.SourceLevels)、さまざまなトレースレベルを定義します:クリティカル、エラー、警告、情報、および詳細、およびトレース境界とアクティビティ転送`ActivityTracing`イベントの出力を切り替えるフラグの説明を提供します。  
+
+[ソースレベル](xref:System.Diagnostics.SourceLevels) では、さまざまなトレースレベル (重大、エラー、警告、情報、および詳細) を定義すると共に、 `ActivityTracing` トレース境界とアクティビティ転送イベントの出力を切り替えるフラグの説明を提供します。  
   
- から出力できるトレース<xref:System.Diagnostics.TraceEventType>の種類を確認することもできます<xref:System.Diagnostics>。  
+ また <xref:System.Diagnostics.TraceEventType> 、から出力できるトレースの種類を確認することもでき <xref:System.Diagnostics> ます。  
   
  最も重要な種類を次の表に示します。  
   
 |トレースの種類|説明|  
 |----------------|-----------------|  
-|Critical|致命的なエラーまたはアプリケーションのクラッシュ。|  
+|重大|致命的なエラーまたはアプリケーションのクラッシュ。|  
 |エラー|回復可能なエラー。|  
 |警告|情報メッセージです。|  
-|Information|重大ではない問題。|  
+|情報|重大ではない問題。|  
 |"詳細"|トレースのデバッグ。|  
-|[開始]|処理の論理単位の開始。|  
+|開始|処理の論理単位の開始。|  
 |[中断]|処理の論理単位の中断。|  
-|Resume|処理の論理単位の再開。|  
+|再開|処理の論理単位の再開。|  
 |Stop|処理の論理単位の停止。|  
 |転送|相関 ID の変更。|  
   

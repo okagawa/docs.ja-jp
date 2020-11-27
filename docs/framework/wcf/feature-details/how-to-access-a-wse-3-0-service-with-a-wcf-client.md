@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-ms.openlocfilehash: 847146c2025612689f0d69cc0c23d2be14018c0f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c955244c2e6821abda3a1fc5e25f00a73389ff1d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556838"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257770"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>方法 : WCF クライアントで WSE 3.0 サービスにアクセスする
-Windows Communication Foundation (WCF) クライアントは、WCF クライアントが WS-ADDRESSING 仕様の8月2004バージョンを使用するように構成されている場合、Microsoft .NET サービスの Web サービス拡張 (WSE) 3.0 とのワイヤレベルの互換性があります。 ただし、WSE 3.0 サービスでは、metadata exchange (MEX) プロトコルがサポートされていないため、 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) を使用して wcf クライアントクラスを作成すると、生成された wcf クライアントにセキュリティ設定が適用されません。 そのため、WCF クライアントが生成された後に、WSE 3.0 サービスが必要とするセキュリティ設定を指定する必要があります。  
+
+Windows Communication Foundation (WCF) クライアントは、WS-Addressing 仕様の8月2004バージョンを使用するように WCF クライアントが構成されている場合、Microsoft .NET サービスの Web サービス拡張 (WSE) 3.0 とのワイヤレベルの互換性があります。 ただし、WSE 3.0 サービスでは、metadata exchange (MEX) プロトコルがサポートされていないため、 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) を使用して wcf クライアントクラスを作成すると、生成された wcf クライアントにセキュリティ設定が適用されません。 そのため、WCF クライアントが生成された後に、WSE 3.0 サービスが必要とするセキュリティ設定を指定する必要があります。  
   
  これらのセキュリティ設定を適用するには、カスタムバインディングを使用して WSE 3.0 サービスの要件と、WSE 3.0 サービスと WCF クライアントの間の相互運用可能な要件を考慮する必要があります。 これらの相互運用性要件には、前述の 2004 年 8 月版 WS-Addressing 仕様の使用と、WSE 3.0 の既定のメッセージ保護が <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt> であることが含まれます。 WCF の既定のメッセージ保護は <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature> です。 このトピックでは、WSE 3.0 サービスと相互運用する WCF バインドを作成する方法について詳しく説明します。 また、WCF には、このバインディングが組み込まれたサンプルも用意されています。 このサンプルの詳細については、「 [ASMX Web サービスとの相互運用](../samples/interoperating-with-asmx-web-services.md)」を参照してください。  
   
@@ -58,6 +59,7 @@ Windows Communication Foundation (WCF) クライアントは、WCF クライア�
      [!code-vb[c_WCFClientToWSEService#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#4)]  
   
 ## <a name="example"></a>例  
+
  WSE 3.0 の設定不要のセキュリティ アサーションのプロパティに対応するプロパティを公開するカスタムのバインディングを定義するコード例を次に示します。 次に、という名前のカスタムバインディングを使用して、 `WseHttpBinding` WSSecurityAnonymous WSE 3.0 クイックスタートサンプルと通信する WCF クライアントのバインディングプロパティを指定します。  
 
 ## <a name="see-also"></a>関連項目

@@ -2,21 +2,22 @@
 title: '方法: 構成を使用せずに ASP.NET AJAX エンドポイントを追加する'
 ms.date: 03/30/2017
 ms.assetid: b05c1742-8d0a-4673-9d71-725b18a3008e
-ms.openlocfilehash: 9aab53d6457aa7848fd4acea6317a30da352cc98
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e33f1fed7dd7bf45966815949ac544250f4d1de8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579632"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257627"
 ---
 # <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>方法: 構成を使用せずに ASP.NET AJAX エンドポイントを追加する
+
 Windows Communication Foundation (WCF) を使用すると、クライアント Web サイトの JavaScript から呼び出すことができる ASP.NET AJAX 対応エンドポイントを公開するサービスを作成できます。 このようなエンドポイントを作成するには、他のすべての WCF エンドポイントと同様に、構成ファイルを使用するか、または構成要素を必要としないメソッドを使用することができます。 ここでは、2 番目の方法について説明します。  
   
  構成を使用せずに ASP.NET AJAX エンドポイントを持つサービスを作成するには、サービスがインターネット インフォメーション サービス (IIS) でホストされている必要があります。 この方法を使用して ASP.NET AJAX エンドポイントをアクティブ化するには、 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> .svc ファイルで[ \@ ServiceHost](../../configure-apps/file-schema/wcf-directive/servicehost.md)ディレクティブのファクトリパラメーターとしてを指定します。 このカスタム ファクトリは自動的に ASP.NET AJAX エンドポイントを構成するコンポーネントであるため、クライアント Web サイトの JavaScript から呼び出すことができます。  
   
- 実際の例については、「[構成なしの AJAX サービス](../samples/ajax-service-without-configuration.md)」を参照してください。  
+ 実際の例については、「 [構成なしの AJAX サービス](../samples/ajax-service-without-configuration.md)」を参照してください。  
   
- 構成要素を使用して ASP.NET AJAX エンドポイントを構成する方法の概要については、「[方法: 構成を使用して ASP.NET Ajax エンドポイントを追加](how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)する」を参照してください。  
+ 構成要素を使用して ASP.NET AJAX エンドポイントを構成する方法の概要については、「 [方法: 構成を使用して ASP.NET Ajax エンドポイントを追加](how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)する」を参照してください。  
   
 ### <a name="to-create-a-basic-wcf-service"></a>基本的な WCF サービスを作成するには  
   
@@ -74,7 +75,7 @@ Windows Communication Foundation (WCF) を使用すると、クライアント W
   
 ### <a name="to-call-the-service"></a>サービスを呼び出すには  
   
-1. エンドポイントは、.svc ファイルを基準とした空のアドレスで構成されます。これにより、サービスが使用できるようになり、サービスに要求を送信することによって呼び出すことができます。 \<operation> たとえば、service .svc/Add を操作に送信します。 `Add` これは、ASP.NET AJAX Script Manager コントロールのスクリプト コレクションにサービス URL を入力することで使用できます。 例については、「[構成なしの AJAX サービス](../samples/ajax-service-without-configuration.md)」を参照してください。  
+1. エンドポイントは、.svc ファイルを基準とした空のアドレスで構成されます。これにより、サービスが使用できるようになり、サービスに要求を送信することによって呼び出すことができます。 \<operation> たとえば、service .svc/Add を操作に送信します。 `Add` これは、ASP.NET AJAX Script Manager コントロールのスクリプト コレクションにサービス URL を入力することで使用できます。 例については、「 [構成なしの AJAX サービス](../samples/ajax-service-without-configuration.md)」を参照してください。  
   
 ## <a name="example"></a>例  
   
@@ -94,7 +95,7 @@ Windows Communication Foundation (WCF) を使用すると、クライアント W
   
  詳細については、「 [WCF サービスと ASP.NET](wcf-services-and-aspnet.md) 」を参照してください。  
   
- <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> クラスは、<xref:System.ServiceModel.Activation.ServiceHostFactory> の派生クラスです。 サービスホストファクトリメカニズムの詳細については、「 [ServiceHostFactory を使用したホストの拡張](../extending/extending-hosting-using-servicehostfactory.md)」を参照してください。  
+ <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> クラスは、<xref:System.ServiceModel.Activation.ServiceHostFactory> の派生クラスです。 サービスホストファクトリメカニズムの詳細については、「 [ServiceHostFactory を使用したホストの拡張](../extending/extending-hosting-using-servicehostfactory.md) 」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

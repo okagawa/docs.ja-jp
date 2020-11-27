@@ -2,17 +2,19 @@
 title: System.ServiceModel.Channels.HttpsClientCertificateNotPresent
 ms.date: 03/30/2017
 ms.assetid: b13ef1b6-e340-401d-93ca-2710c3842205
-ms.openlocfilehash: 3e3bedca7a46f147ee3d9e143cea7e57095c99d1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9ec25138130311f8cdd9af8fb32a3e80fb33ed68
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602045"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258089"
 ---
 # <a name="systemservicemodelchannelshttpsclientcertificatenotpresent"></a>System.ServiceModel.Channels.HttpsClientCertificateNotPresent
+
 クライアント証明書が必要です。 要求内で証明書が見つかりませんでした。  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>Description  
+
  このトレースは、HTTPS リスナーがクライアント証明書に関連付けられていない HTTPS 要求を受信したことを示します。 リスナーはすべての HTTPS 要求においてクライアント証明書を必要とするように構成されているため、リスナーによるクライアントの信頼性の検証は失敗します。  
   
 ## <a name="see-also"></a>関連項目

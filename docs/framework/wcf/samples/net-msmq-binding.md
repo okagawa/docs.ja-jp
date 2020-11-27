@@ -2,17 +2,19 @@
 title: ネット MSMQ バインディング
 ms.date: 03/30/2017
 ms.assetid: fe4bb696-f57c-4cb3-9b7e-9d95fe6b8323
-ms.openlocfilehash: 622341ef00f5d8950fa0c013e427f20e02187893
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 22b82e9335f3bf5861000a62374ab9e8dccce8cf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602428"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259981"
 ---
 # <a name="net-msmq-binding"></a>ネット MSMQ バインディング
+
 このセクションには、エンドポイント要素の MSMQ バインディング属性の使用方法を示すサンプルが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [トランザクション MSMQ バインディング](transacted-msmq-binding.md)  
  メッセージ キュー (MSMQ) を使用して、トランザクション キューによる通信を実行する方法を示します。  
   

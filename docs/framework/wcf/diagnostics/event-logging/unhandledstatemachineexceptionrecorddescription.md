@@ -2,21 +2,23 @@
 title: UnhandledStateMachineExceptionRecordDescription
 ms.date: 03/30/2017
 ms.assetid: f4a0e8af-7d6c-4091-8d6c-b99e8ff3a07b
-ms.openlocfilehash: a11916675120df2ffe27036e8c882dc016b08174
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8ea1c7f75c38d7a9b0e9f91998a9f2183229c296
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797491"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259331"
 ---
 # <a name="unhandledstatemachineexceptionrecorddescription"></a>UnhandledStateMachineExceptionRecordDescription
-Id:136  
+
+ID : 136  
   
- 順Error  
+ 重大度 : エラー  
   
- [カテゴリ]:TransactionBridge  
+ カテゴリ : TransactionBridge  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>Description  
+
  このイベントは、ステート マシンがイベントを処理中に、処理不能の例外がスローされたことを示します。 イベントには、トランザクション ID、ステート マシン名、現在の状態、履歴、参加リスト ID、例外、プロセス名、およびプロセス ID が表示されます。  
   
 ## <a name="see-also"></a>関連項目

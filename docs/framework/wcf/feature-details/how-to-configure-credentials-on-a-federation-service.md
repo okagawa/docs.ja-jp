@@ -8,14 +8,15 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 05f35bbb7dbb34cd4067c407578038cbb4eff70f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 692ccc0c39ca7ed40601551ea6bbcdd840fa03af
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599146"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257588"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>方法: フェデレーション サービスで資格情報を設定する
+
 Windows Communication Foundation (WCF) では、フェデレーションサービスの作成は次の主要な手順で構成されています。  
   
 1. <xref:System.ServiceModel.WSFederationHttpBinding> または同様のカスタム バインドの構成。 適切なバインディングを作成する方法の詳細については、「 [How to: Create a WSFederationHttpBinding](how-to-create-a-wsfederationhttpbinding.md)」を参照してください。  
@@ -56,6 +57,7 @@ Windows Communication Foundation (WCF) では、フェデレーションサー�
 5. 必要に応じて、 `samlSerializer` <の> 要素の属性を `issuedTokenAuthentication` カスタムクラスの型名に設定し <xref:System.IdentityModel.Tokens.SamlSerializer> ます。  
   
 ## <a name="example"></a>例  
+
  次の例では、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential> のプロパティをコードで設定しています。  
   
  [!code-csharp[C_FederatedService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federatedservice/cs/source.cs#2)]
@@ -67,9 +69,9 @@ Windows Communication Foundation (WCF) では、フェデレーションサー�
   
 - 発行済みトークンの署名に X.509 発行者シリアル番号、X.509 サブジェクト キー識別子、または X.509 拇印セキュリティ識別子が使用されている場合、発行済みトークンは <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> クラスの <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> プロパティによって返されたコレクションにある証明書で署名されている必要があります。  
   
-- 発行済みトークンが X.509 証明書を使用して署名されている場合、証明書が <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> として証明書利用者に送信されたか、<xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> プロパティから取得されたかに関係なく、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> プロパティの値で指定されるセマンティックスごとに証明書を検証する必要があります。 X.509 証明書の検証の詳細については、「[証明書の使用](working-with-certificates.md)」を参照してください。  
+- 発行済みトークンが X.509 証明書を使用して署名されている場合、証明書が <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> として証明書利用者に送信されたか、<xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> プロパティから取得されたかに関係なく、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> プロパティの値で指定されるセマンティックスごとに証明書を検証する必要があります。 X.509 証明書の検証の詳細については、「 [証明書の使用](working-with-certificates.md)」を参照してください。  
   
- たとえば、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> を <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust> に設定すると、その署名の証明書が `TrustedPeople` 証明書ストアに格納されている任意の発行済みトークンが認証されます。 この場合、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> プロパティを <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> または <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine> に設定します。 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> を含めて、他のモードを選択できます。 `Custom` を選択した場合、<xref:System.IdentityModel.Selectors.X509CertificateValidator> クラスのインスタンスを <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> プロパティに割り当てる必要があります。 カスタム検証では、任意の基準を使用して証明書を検証できます。 詳細については、「[方法: カスタム証明書検証を使用するサービスを作成](../extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)する」を参照してください。  
+ たとえば、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> を <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust> に設定すると、その署名の証明書が `TrustedPeople` 証明書ストアに格納されている任意の発行済みトークンが認証されます。 この場合、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> プロパティを <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> または <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine> に設定します。 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> を含めて、他のモードを選択できます。 `Custom` を選択した場合、<xref:System.IdentityModel.Selectors.X509CertificateValidator> クラスのインスタンスを <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> プロパティに割り当てる必要があります。 カスタム検証では、任意の基準を使用して証明書を検証できます。 詳細については、「 [方法: カスタム証明書検証を使用するサービスを作成](../extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)する」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

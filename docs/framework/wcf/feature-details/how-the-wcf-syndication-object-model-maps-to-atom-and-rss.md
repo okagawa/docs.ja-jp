@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
-ms.openlocfilehash: 67fbbb035a3a6683cefbf24e299f32579b674bbd
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6fa390c8ae05035e589392c909ef340fb9c7948a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597255"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257816"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>WCF 配信オブジェクト モデルを Atom や RSS に割り当てる方法
+
 Windows Communication Foundation (WCF) 配信サービスを開発する場合は、次のクラスを使用してフィードと項目を作成します。  
   
 - <xref:System.ServiceModel.Syndication.SyndicationFeed>  
@@ -48,6 +49,7 @@ Windows Communication Foundation (WCF) 配信サービスを開発する場合�
  [!code-vb[SyndicationMapping#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#11)]  
   
 ## <a name="syndicationfeed"></a>SyndicationFeed  
+
  <xref:System.ServiceModel.Syndication.SyndicationFeed> クラスを Atom 1.0 および RSS 2.0 にシリアル化するコード例を次に示します。  
   
  [!code-csharp[SyndicationMapping#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#0)]
@@ -145,6 +147,7 @@ Windows Communication Foundation (WCF) 配信サービスを開発する場合�
 ```  
   
 ## <a name="syndicationitem"></a>SyndicationItem  
+
  <xref:System.ServiceModel.Syndication.SyndicationItem> クラスを Atom 1.0 および RSS 2.0 にシリアル化するコード例を次に示します。  
   
  [!code-csharp[SyndicationMapping#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#1)]
@@ -231,6 +234,7 @@ Windows Communication Foundation (WCF) 配信サービスを開発する場合�
 ```  
   
 ## <a name="syndicationperson"></a>SyndicationPerson  
+
  <xref:System.ServiceModel.Syndication.SyndicationPerson> クラスを Atom 1.0 および RSS 2.0 にシリアル化するコード例を次に示します。  
   
  [!code-csharp[SyndicationMapping#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#2)]
@@ -288,6 +292,7 @@ Windows Communication Foundation (WCF) 配信サービスを開発する場合�
 ```  
   
 ## <a name="syndicationlink"></a>SyndicationLink  
+
  <xref:System.ServiceModel.Syndication.SyndicationLink> クラスを Atom 1.0 および RSS 2.0 にシリアル化するコード例を次に示します。  
   
  [!code-csharp[SyndicationMapping#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#3)]
@@ -302,6 +307,7 @@ Windows Communication Foundation (WCF) 配信サービスを開発する場合�
  `<a10:link rel="alternate" type="text/html" title="My Link Title" length="2048" href="http://contoso/MyLink" />`  
   
 ## <a name="syndicationcategory"></a>SyndicationCategory  
+
  <xref:System.ServiceModel.Syndication.SyndicationCategory> クラスを Atom 1.0 および RSS 2.0 にシリアル化するコード例を次に示します。  
   
  [!code-csharp[SyndicationMapping#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#4)]
@@ -316,6 +322,7 @@ Windows Communication Foundation (WCF) 配信サービスを開発する場合�
  `<category domain="categoryScheme">categoryName</category>`  
   
 ## <a name="textsyndicationcontent"></a>TextSyndicationContent  
+
  <xref:System.ServiceModel.Syndication.TextSyndicationContent> が HTML コンテンツと共に作成される場合に <xref:System.ServiceModel.Syndication.TextSyndicationContent> クラスを Atom 1.0 および RSS 2.0 にシリアル化するコード例を次に示します。  
   
  [!code-csharp[SyndicationMapping#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#5)]
@@ -360,6 +367,7 @@ Windows Communication Foundation (WCF) 配信サービスを開発する場合�
  `<description><html> some xhtml </html></description>`  
   
 ## <a name="urlsyndicationcontent"></a>UrlSyndicationContent  
+
  <xref:System.ServiceModel.Syndication.UrlSyndicationContent> クラスを Atom 1.0 および RSS 2.0 にシリアル化するコード例を次に示します。  
   
  [!code-csharp[SyndicationMapping#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#8)]
@@ -376,6 +384,7 @@ Windows Communication Foundation (WCF) 配信サービスを開発する場合�
  `<content type="audio" src="http://Contoso/someurl/" xmlns="http://www.w3.org/2005/Atom" />`  
   
 ## <a name="xmlsyndicationcontent"></a>XmlSyndicationContent  
+
  <xref:System.ServiceModel.Syndication.XmlSyndicationContent> クラスを Atom 1.0 および RSS 2.0 にシリアル化するコード例を次に示します。  
   
  [!code-csharp[SyndicationMapping#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#9)]

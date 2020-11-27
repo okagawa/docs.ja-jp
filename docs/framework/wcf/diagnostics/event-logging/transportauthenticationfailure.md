@@ -2,21 +2,23 @@
 title: TransportAuthenticationFailure
 ms.date: 03/30/2017
 ms.assetid: adbdbda0-de52-448c-a938-cc9f5db2980e
-ms.openlocfilehash: 97483e26132d2620ff99dbab6a3396f324bd3f48
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7022728292d242a88269f9cdf1c19f1cf2f19025
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797482"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259396"
 ---
 # <a name="transportauthenticationfailure"></a>TransportAuthenticationFailure
-Id:174  
+
+Id: 174  
   
- 順Error  
+ 重大度 : エラー  
   
- [カテゴリ]:SecurityAudit  
+ カテゴリ : SecurityAudit  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>Description  
+
  このイベントはトランスポート認証が失敗したことを示し、クライアント ID、およびアクティビティ ID を表示します。  
   
 ## <a name="see-also"></a>関連項目

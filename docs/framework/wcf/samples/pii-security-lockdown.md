@@ -2,14 +2,15 @@
 title: PII セキュリティ ロックダウン
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 62e1495927cad669771c560603919e8f6b94d863
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0b4ec820cd57e3dfaff035dc8e5ce1ef4b463df5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559365"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96260000"
 ---
 # <a name="pii-security-lockdown"></a>PII セキュリティ ロックダウン
+
 このサンプルでは、Windows Communication Foundation (WCF) サービスのセキュリティ関連のいくつかの機能を制御する方法を示します。  
   
 - サービスの構成ファイル内の機密情報を暗号化します。  
@@ -27,7 +28,8 @@ ms.locfileid: "90559365"
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
-## <a name="discussion"></a>考察 (Discussion)  
+## <a name="discussion"></a>ディスカッション  
+
  これらの各機能を単独または組み合わせて使用することにより、サービスのさまざまなセキュリティを制御できます。 これは、WCF サービスをセキュリティで保護するための明確なガイドではありません。  
   
  .NET Framework の構成ファイルには、データベースに接続するための接続文字列などの機密情報を格納できます。 共有の Web ホストのシナリオでは、この情報をサービスの構成ファイル内で暗号化して、構成ファイル内に含まれるデータを偶発的に表示されないようにすることが望ましい場合があります。 .NET Framework 2.0 以降のバージョンでは、Windows データ保護アプリケーション プログラミング インターフェイス (DPAPI) または RSA 暗号化プロバイダを使用して、構成ファイルの一部を暗号化できます。 DPAPI または RSA を使用して aspnet_regiis.exe を実行すると、構成ファイルの選択部分を暗号化できます。  
@@ -37,6 +39,7 @@ ms.locfileid: "90559365"
  このサンプルでは、トレースおよびメッセージ ログによる、ユーザー名やパスワードなどの個人を特定できる既知の情報 (PII) のログ記録を制御する方法を示します。 既定では、既知の PII のログ記録は無効です。ただし特定の状況では、PII のログ記録はアプリケーションをデバック処理する際に重要になる場合があります。 このサンプルは、 [はじめに](getting-started-sample.md)に基づいています。 さらに、このサンプルではトレースとメッセージ ログを使用します。 詳細については、 [トレースとメッセージログ](tracing-and-message-logging.md) のサンプルを参照してください。  
   
 ## <a name="encrypting-configuration-file-elements"></a>構成ファイルの要素の暗号化  
+
  共有 Web ホストの環境をセキュリティ保護するには、機密情報が含まれる可能性のあるデータベース接続文字列など、特定の構成要素を暗号化することが望ましい場合があります。 構成要素は、.NET Framework フォルダーにある aspnet_regiis.exe ツールを使用して暗号化できます。たとえば、%WINDIR%\Microsoft.NET\Framework\v4.0.20728. のようになります。  
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>サンプルの Web.config で appSettings セクションの値を暗号化するには  
@@ -50,6 +53,7 @@ ms.locfileid: "90559365"
  構成ファイルの暗号化に関するセクションの詳細については、「ASP.NET 構成での操作方法 ([secure ASP.NET アプリケーションの構築: 認証、承認、およびセキュリティ](/previous-versions/msp-n-p/ff649248(v=pandp.10))で保護された通信)」と「ASP.NET 構成での操作方法 (Rsa[を使用して ASP.NET 2.0 の構成セクションを暗号化する方法](/previous-versions/msp-n-p/ff650304(v=pandp.10)))」を参照してください。  
   
 ## <a name="locking-configuration-file-elements"></a>構成ファイルの要素のロック  
+
  Web ホストのシナリオでは、サービスのサブディレクトリにサービスを設定できます。 こうした状況で、サブディレクトリ内のサービスの構成値を計算するには、Machine.config 内の値を調べ、続いて親ディレクトリの任意の Web.config ファイルとマージしてディレクトリ ツリーの下層に移動します。そして最後に、サービスが含まれるディレクトリ内の Web.config ファイルをマージします。 ほとんどの構成要素での既定の動作は、サブディレクトリ内の構成ファイルが、親ディレクトリに設定されている値をオーバーライドできるようにすることです。 特定の状況では、サブディレクトリ内の構成ファイルが、親ディレクトリの構成に設定されている値をオーバーライドしないようにするのが望ましい場合があります。  
   
  .NET Framework では、構成ファイルの要素をロックして、ロックされた構成要素をオーバーライドする構成が実行時例外をスローするように設定できます。  
@@ -74,6 +78,7 @@ ms.locfileid: "90559365"
  構成要素はより詳細な単位でロックできます。 要素の一覧は、サブ要素のコレクション内にある一連の要素をロックするための `lockElements` に対する値として指定できます。 属性の一覧は、要素内にある一連の属性をロックするための `lockAttributes` に対する値として指定できます。 要素または属性のコレクション全体をロックすることもできます。ただし、ノードで `lockAllElementsExcept` 属性または `lockAllAttributesExcept` 属性が指定されている一覧は除きます。  
   
 ## <a name="pii-logging-configuration"></a>PII ログの構成  
+
  PII のログ記録は 2 つのスイッチで制御されます。1 つは Machine.config にあるコンピューター全体の設定で、コンピューターの管理者がこれを使用することにより、PII のログ記録を許可または拒否できます。もう 1 つはアプリケーション設定で、アプリケーションの管理者がこれを使用することにより、Web.config または App.config ファイル内の各ソースで PII のログ記録の有効/無効を切り替えることができます。  
   
  コンピューター全体の設定は、 `enableLoggingKnownPii` `true` `false` Machine.config の要素で、をまたはに設定することによって制御され `machineSettings` ます。たとえば、次の例では、アプリケーションで PII のログ記録を有効にすることができます。  

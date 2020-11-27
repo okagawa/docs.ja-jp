@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
-ms.openlocfilehash: 1ebc4e145528c3025b0299ea7e421c248c28cdc0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b5284db1329c572bdecf3ef607e697c63835d508
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556370"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257523"
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>方法: WCF クライアントと WSE3.0 サービスを相互運用するために構成する
-Windows Communication Foundation (WCF) クライアントは、WS-ADDRESSING 仕様の8月2004バージョンを使用するように WCF クライアントが構成されている場合に、Web サービス拡張 Microsoft .NET 3.0 (WSE) サービスとのワイヤレベルの互換性があります。  
+
+Windows Communication Foundation (WCF) クライアントは、WS-Addressing 仕様の8月2004バージョンを使用するように WCF クライアントが構成されている場合に、Web サービス拡張 Microsoft .NET 3.0 (WSE) サービスとのワイヤレベルの互換性があります。  
   
 ### <a name="to-configure-a-wcf-client-to-interoperate-with-a-wse-30-web-service"></a>WSE 3.0 Web サービスと相互運用するように WCF クライアントを構成するには  
   
@@ -56,6 +57,7 @@ Windows Communication Foundation (WCF) クライアントは、WS-ADDRESSING 仕
      [!code-vb[c_WCFClientToWSEService#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#4)]  
   
 ## <a name="example"></a>例  
+
  WSE 3.0 の設定不要のセキュリティ アサーションのプロパティに対応するプロパティを公開するカスタムのバインディングを定義するコード例を次に示します。 次に、という名前のカスタムバインディングを使用して、 `WseHttpBinding` WCF クライアントのバインディングプロパティを指定します。  
 
 [!code-csharp[c_WCFClientToWSEService#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/client.cs#0)]

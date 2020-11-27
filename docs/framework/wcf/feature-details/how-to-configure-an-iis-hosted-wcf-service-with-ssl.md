@@ -3,14 +3,15 @@ title: '方法: IIS でホストされる WCF サービスに SSL を構成す�
 description: Iis でホストされる WCF サービスで HTTP トランスポートセキュリティを使用するように設定する方法について説明します。これには、IIS に登録されている証明書が必要です。
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: 8dc4692863d93e407a122c0ba93ae38323b8b213
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 960005761d3bed917142141976e9f9094094b34c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245259"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257653"
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>方法: IIS でホストされる WCF サービスに SSL を構成する
+
 ここでは、HTTP トランスポート セキュリティを使用するように IIS でホストされる WCF サービスをセットアップする方法について説明します。 HTTP トランスポート セキュリティを使用するには、SSL 証明書が IIS に登録されている必要があります。 SSL 証明書がない場合は、IIS を使用してテスト証明書を生成できます。 次に、Web サイトに SSL バインディングを追加し、Web サイトの認証プロパティを構成する必要があります。 最後に、HTTPS を使用するように WCF サービスを構成する必要があります。  
   
 ### <a name="creating-a-self-signed-certificate"></a>自己署名証明書の作成  
@@ -19,7 +20,7 @@ ms.locfileid: "85245259"
   
      ![IIS マネージャー ホーム画面](media/mg-inetmgrhome.jpg "mg_INetMgrHome")  
   
-2. [サーバー証明書] ウィンドウで、[**自己署名証明書の作成...** ] をクリックします。 リンクをクリックします。  
+2. [サーバー証明書] ウィンドウで、[ **Create Self-Signed Certificate...** ] をクリックします。 リンクをクリックします。  
   
      ![IIS での自己&#45;署名入り証明書の作成](media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")  
   
@@ -27,7 +28,7 @@ ms.locfileid: "85245259"
   
      ![自己&#45;署名入り証明書の作成ダイアログ](media/mg-mycert.jpg "mg_MyCert")  
   
-     新しく作成された自己署名証明書の詳細が [**サーバー証明書**] ウィンドウに表示されるようになりました。  
+     新しく作成された自己署名証明書の詳細が [ **サーバー証明書** ] ウィンドウに表示されるようになりました。  
   
      ![[サーバー証明書] ウィンドウ](media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")  
   
@@ -35,17 +36,17 @@ ms.locfileid: "85245259"
   
 ### <a name="add-ssl-binding"></a>SSL バインドの追加  
   
-1. 引き続きインターネットインフォメーションサービスマネージャーで、[**サイト**] フォルダーを展開し、画面の左側にあるツリービューの [**既定の Web サイト**] フォルダーを展開します。  
+1. 引き続きインターネットインフォメーションサービスマネージャーで、[ **サイト** ] フォルダーを展開し、画面の左側にあるツリービューの [ **既定の Web サイト** ] フォルダーを展開します。  
   
-2. [**バインド...** ] をクリックします。 ウィンドウの右上隅にある [**アクション**] セクションのリンク。  
+2. [**バインド...** ] をクリックします。 ウィンドウの右上隅にある [ **アクション** ] セクションのリンク。  
   
      ![SSL バインディングの追加](media/mg-addsslbinding.jpg "mg_AddSSLBinding")  
   
-3. [サイトバインド] ウィンドウで、[**追加**] ボタンをクリックします。  
+3. [サイトバインド] ウィンドウで、[ **追加** ] ボタンをクリックします。  
   
      ![[サイト バインド] ダイアログ](media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")  
   
-4. [**サイトバインドの追加**] ダイアログで、[種類] に [https] を、先ほど作成した自己署名証明書のフレンドリ名を選択します。  
+4. [ **サイトバインドの追加** ] ダイアログで、[種類] に [https] を、先ほど作成した自己署名証明書のフレンドリ名を選択します。  
   
      ![サイト バインディングの例](media/mg-mycertbinding.jpg "mg_MyCertBinding")  
   
@@ -53,7 +54,7 @@ ms.locfileid: "85245259"
   
 1. インターネット インフォメーション サービス マネージャーで、WCF のセキュリティで保護されたサービスが含まれている仮想ディレクトリを選択します。  
   
-2. ウィンドウの中央のウィンドウで、[IIS] セクションの [ **SSL 設定**] を選択します。  
+2. ウィンドウの中央のウィンドウで、[IIS] セクションの [ **SSL 設定** ] を選択します。  
   
      ![仮想ディレクトリの SSL 設定](media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")  
   
@@ -95,6 +96,7 @@ ms.locfileid: "85245259"
     ```  
   
 ## <a name="example"></a>例  
+
  次は、HTTP トランスポート セキュリティを使用した WCF サービスの web.config ファイルの詳細な例です。  
   
 ```xml  
