@@ -2,14 +2,15 @@
 title: WebContentTypeMapper のサンプル
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: a51d03fab5c6499a0e9685e01a9bbace1c11f28a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 550e763d30a7fa503f6500dcaa8f9b77ea499bca
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594557"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283264"
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper のサンプル
+
 このサンプルでは、新しいコンテンツタイプを Windows Communication Foundation (WCF) メッセージ本文形式にマップする方法を示します。  
   
  <xref:System.ServiceModel.Description.WebHttpEndpoint>要素は Web メッセージエンコーダーにプラグインします。これにより、WCF は、JSON、XML、または生のバイナリメッセージを同じエンドポイントで受信できます。 このエンコーダは、要求の HTTP コンテンツ タイプを調べて、メッセージ本文の書式を決定します。 このサンプルでは、コンテンツ タイプと本文書式との間の割り当てを制御するための <xref:System.ServiceModel.Channels.WebContentTypeMapper> クラスを示します。  
@@ -58,13 +59,13 @@ public class JsonContentTypeMapper : WebContentTypeMapper
   
 2. 「 [Windows Communication Foundation サンプルのビルド](building-the-samples.md)」の説明に従って、ソリューション WebContentTypeMapperSample をビルドします。  
   
-3. に移動 `http://localhost/ServiceModelSamples/JCTMClientPage.htm` します (プロジェクトディレクトリ内からブラウザーで JCTMClientPage .htm を開かないでください)。  
+3. に移動 `http://localhost/ServiceModelSamples/JCTMClientPage.htm` します (プロジェクトディレクトリ内からブラウザーで JCTMClientPage.htm を開かないでください)。  
   
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Ajax\WebContentTypeMapper`  

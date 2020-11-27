@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: bdebe0db25d796c2debfb905864fd8bf780c8e66
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 164a939fa7ee0112e1ceae24755854b09dc72603
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558655"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283992"
 ---
 # <a name="message-security-certificate"></a>メッセージ セキュリティ証明書
+
 このサンプルでは、クライアントの認証で X.509 v3 証明書による WS-Security を使用するアプリケーションを実装する方法を示します。このアプリケーションでは、サーバーの X.509 v3 証明書を使用するサーバー認証が必要です。 このサンプルでは、クライアント/サーバー間のすべてのアプリケーション メッセージが署名されて暗号化される、既定の設定を使用します。 このサンプルは、 [WSHttpBinding](wshttpbinding.md) に基づいており、クライアントコンソールプログラムと、インターネットインフォメーションサービス (IIS) によってホストされるサービスライブラリで構成されています。 サービスは、要求/応答通信パターンを定義するコントラクトを実装します。  
   
 > [!NOTE]
@@ -240,7 +241,7 @@ Press <ENTER> to terminate client.
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
-     %SERVER_NAME% 変数はサーバー名を指定します。 証明書は LocalMachine ストアに保存されます。 Setup.bat バッチファイルがサービスの引数 (、 **setup.bat サービス**など) を使用して実行されている場合、% SERVER_NAME% にはコンピューターの完全修飾ドメイン名が含まれます。 それ以外の場合、既定値は localhost です。  
+     %SERVER_NAME% 変数はサーバー名を指定します。 証明書は LocalMachine ストアに保存されます。 Setup.bat バッチファイルがサービスの引数 (、 **setup.bat サービス** など) を使用して実行されている場合、% SERVER_NAME% にはコンピューターの完全修飾ドメイン名が含まれます。 それ以外の場合、既定値は localhost です。  
   
 - クライアントの信頼された証明書ストアへのサーバー証明書のインストール。  
   
@@ -309,13 +310,13 @@ Press <ENTER> to terminate client.
   
 4. クライアント プログラム ファイルを、クライアント コンピューターに作成したクライアント ディレクトリにコピーします。 Setup.bat、Cleanup.bat、ImportServiceCert.bat の各ファイルもクライアントにコピーします。  
   
-5. サーバーで、管理者特権を使用して Visual Studio の開発者コマンドプロンプトで **setup.bat サービス** を実行します。 **サービス**引数を指定して**setup.bat**を実行すると、コンピューターの完全修飾ドメイン名を使用してサービス証明書が作成され、service .cer という名前のファイルにエクスポートされます。  
+5. サーバーで、管理者特権を使用して Visual Studio の開発者コマンドプロンプトで **setup.bat サービス** を実行します。 **サービス** 引数を指定して **setup.bat** を実行すると、コンピューターの完全修飾ドメイン名を使用してサービス証明書が作成され、service .cer という名前のファイルにエクスポートされます。  
   
 6. Web.config を編集して、新しい証明書名 ( `findValue` の属性) を反映し [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) ます。これは、コンピューターの完全修飾ドメイン名と同じです。  
   
 7. Service.cer ファイルを、サービス ディレクトリからクライアント コンピューターのクライアント ディレクトリにコピーします。  
   
-8. クライアントで、管理者特権を使用して Visual Studio の開発者コマンドプロンプトで **setup.bat クライアント** を実行します。 **Client**引数を指定して**setup.bat**を実行すると、client.com という名前のクライアント証明書が作成され、クライアント証明書がクライアント .cer という名前のファイルにエクスポートされます。  
+8. クライアントで、管理者特権を使用して Visual Studio の開発者コマンドプロンプトで **setup.bat クライアント** を実行します。 **Client** 引数を指定して **setup.bat** を実行すると、client.com という名前のクライアント証明書が作成され、クライアント証明書がクライアント .cer という名前のファイルにエクスポートされます。  
   
 9. クライアント コンピューターの Client.exe.config ファイルで、エンドポイントのアドレス値をサービスの新しいアドレスに合わせます。 そのためには、localhost をサーバーの完全修飾ドメイン名に置き換えます。  
   

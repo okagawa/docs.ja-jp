@@ -2,17 +2,19 @@
 title: WorkflowServiceHost の構成
 ms.date: 03/30/2017
 ms.assetid: d8e961cb-0ef5-4f8c-8a25-e76ae6334fed
-ms.openlocfilehash: f8364e7e6bed357f65c66f5b6b13bbb19d55237f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3f452bf0a6edce42b8a42dee75faaa6c1ef39ad6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597489"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284005"
 ---
 # <a name="configuring-workflowservicehost"></a>WorkflowServiceHost の構成
+
 このセクションには、構成でクラスのさまざまな機能を構成する方法について簡単に説明する一連の簡単なトピックが含まれてい <xref:System.ServiceModel.Activities.WorkflowServiceHost> ます。 これらのトピックでは、ワークフローサービス固有の構成について説明します。他のすべての構成は、通常の WCF サービスと同じ方法で実行されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [方法: WorkflowServiceHost を使用して永続性を構成する](how-to-configure-persistence-with-workflowservicehost.md)  
  <xref:System.ServiceModel.Activities.WorkflowServiceHost> を使用して、ワークフロー サービスに永続性を構成する方法を説明します。  
   

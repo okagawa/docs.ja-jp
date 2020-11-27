@@ -2,15 +2,16 @@
 title: エラー処理およびレポートに対する制御の拡張
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: c7ca8d85220d65905bc4d9d220de366c331504a4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2e9298c6a282b9df8499458ad166e320d41e63a9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600543"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283329"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>エラー処理およびレポートに対する制御の拡張
-このサンプルでは、インターフェイスを使用して、Windows Communication Foundation (WCF) サービスのエラー処理およびエラー報告に対する制御を拡張する方法を示し <xref:System.ServiceModel.Dispatcher.IErrorHandler> ます。 このサンプルは、エラーを処理するためにサービスに追加のコードが追加された[はじめに](getting-started-sample.md)に基づいています。 クライアントは、強制的にエラーが発生する状態にされます。 サービスはエラーを途中受信して、ファイルに記録します。  
+
+このサンプルでは、インターフェイスを使用して、Windows Communication Foundation (WCF) サービスのエラー処理およびエラー報告に対する制御を拡張する方法を示し <xref:System.ServiceModel.Dispatcher.IErrorHandler> ます。 このサンプルは、エラーを処理するためにサービスに追加のコードが追加された [はじめに](getting-started-sample.md) に基づいています。 クライアントは、強制的にエラーが発生する状態にされます。 サービスはエラーを途中受信して、ファイルに記録します。  
   
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -154,6 +155,6 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  

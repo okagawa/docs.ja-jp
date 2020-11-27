@@ -7,14 +7,15 @@ helpviewer_keywords:
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
-ms.openlocfilehash: 4184b2b34c4503eaf4e9513a85e6c018f6de7366
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8acc792b5217519e2a73c0cdf30c20161373c678
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553819"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283914"
 ---
 # <a name="clr-etw-events"></a>CLR ETW イベント
+
 このセクションのトピックでは、Windows イベント トレーシング (ETW) イベントについて説明します。 各イベントは、キーワードとレベルに関連付けられています。詳細については、「[CLR ETW のキーワードとレベル](clr-etw-keywords-and-levels.md)」トピックを参照してください。 CLR には、イベントのプロバイダーが 2 つあります。  
   
 - ランタイム プロバイダー。有効になっているキーワードに応じてイベントを発生させます (キーワードとはイベントのカテゴリです)。 CLR ランタイム プロバイダーの GUID は e13c0d23-ccbc-4e12-931b-d9cc2eee27e4 です。  
@@ -24,6 +25,7 @@ ms.locfileid: "90553819"
  プロバイダーの詳細については、「[CLR ETW Providers](clr-etw-providers.md)」(CLR ETW プロバイダー) を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [ランタイム情報イベント](runtime-information-etw-events.md)  
  SKU、バージョン番号、アクティブ化の方法、起動時に使用されたコマンド ライン パラメーター、GUID (該当する場合) などのランタイムに関する情報をキャプチャします。  
   

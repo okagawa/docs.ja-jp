@@ -6,14 +6,15 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: d6018c8339cb04471bf9ce0f2ee86e091e1d1e95
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ab608ba954eafd9035335f00c8755629c5703c22
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597528"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284161"
 ---
 # <a name="configuring-system-provided-bindings"></a>システムが提供するバインディングの構成
+
 バインディングにより、エンドポイントとの通信で使用する通信メカニズムが指定され、エンドポイントへの接続方法が示されます。 バインディングは、Windows Communication Foundation (WCF) チャネルがどのように階層化され、必要な通信機能を提供するかを定義する要素で構成されます。 バインディングには次の 3 種類の要素が含まれます。  
   
 - プロトコル チャネル バインド要素 : エンドポイントに送信されるメッセージで使用するセキュリティ、信頼性、コンテキスト フローの設定、またはユーザー定義のプロトコルを指定します。  
@@ -31,9 +32,10 @@ ms.locfileid: "84597528"
 > 他の方法によってネットワーク交換がセキュリティ保護されない限り、セキュリティをサポートしないバインディングやセキュリティが無効になっているバインディングでは、双方向コントラクトを使用しないでください。  
   
 ## <a name="system-provided-bindings"></a>システム標準のバインディング  
+
  次のバインディングは、WCF に付属しています。  
   
-|バインド|Configuration 要素|説明|  
+|バインド|Configuration 要素|Description|  
 |-------------|---------------------------|-----------------|  
 |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md)|ASP.NET Web サービス (ASMX) ベースのサービスなど、WS-Basic Profile に適合する Web サービスとの通信に適したバインディング。 このバインディングはトランスポートとして HTTP を、既定のメッセージ エンコーディングとして text/XML を使用します。|  
 |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md)|二重のサービス コントラクト以外に適した、セキュリティで保護された相互操作可能なバインディング。|  
@@ -49,9 +51,10 @@ ms.locfileid: "84597528"
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../configure-apps/file-schema/wcf/msmqintegrationbinding.md)|WCF アプリケーションと既存のメッセージキュー (MSMQ) アプリケーション間のコンピューター間通信に適したバインディング。|  
   
 ## <a name="binding-features"></a>バインディング機能  
+
  システム指定の各バインディングで提供される主要機能の一部を次の表に示します。 各バインディングを 1 列目に示します。機能に関する情報については表で説明します。 次の表に、使用されるバインディングの省略形のキーを示します。 バインディングを選択するには、必要な行の機能がすべて含まれる列を調べます。  
   
-|バインド|相互運用性|セキュリティ モード (既定)|セッション<br /><br /> (既定)|トランザクション|二重|  
+|バインド|相互運用性|セキュリティ モード (既定)|Session<br /><br /> (既定値)。|トランザクション|二重|  
 |-------------|----------------------|----------------------------------|-----------------------------|------------------|------------|  
 |<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(なし)、トランスポート、メッセージ、混在|なし、(なし)|(なし)|該当なし|  
 |<xref:System.ServiceModel.WSHttpBinding>|WS|なし、トランスポート、(メッセージ)、混在|(なし)、トランスポート、信頼できるセッション|(なし)、あり|該当なし|  
@@ -68,11 +71,11 @@ ms.locfileid: "84597528"
   
  次の表では、前の表内の機能について説明します。  
   
-|機能|説明|  
+|機能|Description|  
 |-------------|-----------------|  
 |相互運用性の種類|バインディングによる相互操作を可能にするプロトコルまたはテクノロジに名前を付けます。|  
-|Security|チャネルをセキュリティで保護する方法を指定します。<br /><br /> -None: SOAP メッセージはセキュリティで保護されておらず、クライアントは認証されていません。<br />-Transport: セキュリティ要件はトランスポート層で満たされます。<br />-Message: セキュリティ要件はメッセージ層で満たされています。<br />-Mixed: このセキュリティモードはと呼ばれ `TransportWithMessageCredentials` ます。 メッセージ レベルで資格情報を処理し、整合性と機密性の要件がトランスポート層で満たされます。<br />-Both: メッセージレベルとトランスポートレベルの両方のセキュリティが使用されます。 この機能は、<xref:System.ServiceModel.NetMsmqBinding> に特有の機能です。|  
-|セッション|このバインディングでセッション コントラクトをサポートするかどうかを指定します。|  
+|セキュリティ|チャネルをセキュリティで保護する方法を指定します。<br /><br /> -None: SOAP メッセージはセキュリティで保護されておらず、クライアントは認証されていません。<br />-Transport: セキュリティ要件はトランスポート層で満たされます。<br />-Message: セキュリティ要件はメッセージ層で満たされています。<br />-Mixed: このセキュリティモードはと呼ばれ `TransportWithMessageCredentials` ます。 メッセージ レベルで資格情報を処理し、整合性と機密性の要件がトランスポート層で満たされます。<br />-Both: メッセージレベルとトランスポートレベルの両方のセキュリティが使用されます。 この機能は、<xref:System.ServiceModel.NetMsmqBinding> に特有の機能です。|  
+|Session|このバインディングでセッション コントラクトをサポートするかどうかを指定します。|  
 |トランザクション|トランザクションが有効かどうかを指定します。|  
 |二重|二重のコントラクトがサポートされているかどうかを指定します。 この機能はバインディングでセッションをサポートする必要があることに注意してください。|  
 |ストリーミング|メッセージ ストリーミングをサポートするかどうかを指定します。|  

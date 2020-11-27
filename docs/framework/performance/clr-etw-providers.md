@@ -6,14 +6,15 @@ helpviewer_keywords:
 - ETW, CLR providers
 - CLR ETW providers
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
-ms.openlocfilehash: 9f86e8334482880c4f7cb23ec93a3c826c083389
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: f537a2e0557f1b0434d1f303d74f9cd48f157edc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309652"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283875"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW プロバイダー
+
 共通言語ランタイム (CLR: Common Language Runtime) には、ランタイム プロバイダーとランダウン プロバイダーという 2 つのプロバイダーがあります。  
   
  ランタイム プロバイダーは、有効になっているキーワードに応じてイベントを発生させます (キーワードとはイベントのカテゴリです)。 たとえば、ローダー イベントを収集するには `LoaderKeyword` キーワードを有効にします。  
@@ -21,6 +22,7 @@ ms.locfileid: "86309652"
  Windows イベントトレーシング (ETW) イベントは、.etl 拡張子を持つファイルに記録されます。このファイルは、必要に応じてコンマ区切り値 (.csv) ファイルで後から処理できます。 .etl ファイルを .csv ファイルに変換する方法の詳細については、「[.NET Framework のログ記録の制御](controlling-logging.md)」を参照してください。  
   
 ## <a name="the-runtime-provider"></a>ランタイム プロバイダー  
+
  ランタイム プロバイダーは、メインの CLR ETW プロバイダーです。  
   
  CLR ランタイム プロバイダーの GUID は e13c0d23-ccbc-4e12-931b-d9cc2eee27e4 です。  
@@ -30,6 +32,7 @@ ms.locfileid: "86309652"
  `LoaderKeyword` などのキーワードを使用する以外にも、発生頻度が高いイベントを記録するためのキーワードを有効にしなければならない場合があります。 `StartEnumerationKeyword` キーワードと `EndEnumerationKeyword` キーワードはこれらのイベントを有効にします。概要については、「[CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)」(CLR ETW のキーワードおよびレベル) を参照してください。  
   
 ## <a name="the-rundown-provider"></a>ランダウン プロバイダー  
+
  ランダウン プロバイダーは、一部の特殊な用途で有効にする必要があります。 ただし、大半のユーザーにとっては、ランタイム プロバイダーで十分です。  
   
  CLR ランダウン プロバイダーの GUID は A669021C-C450-4609-A035-5AF59AF4DF18 です。  
@@ -43,9 +46,11 @@ ms.locfileid: "86309652"
  ランダウン プロバイダーでは、イベント キーワード フィルターのほかに、`StartRundownKeyword` と `EndRundownKeyword` というキーワードによるターゲット フィルターもサポートされています。  
   
 ### <a name="start-rundown"></a>開始ランダウン  
+
  開始ランダウンは、`StartRundownKeyword` キーワードを使用してランダウン プロバイダーのイベントの記録を有効にした場合にトリガーされます。 開始ランダウンがトリガーされると、`DCStart` イベントが発生して、システムの状態がキャプチャされます。 列挙の開始前には `DCStartInit` イベントが発生します。 列挙の終了時には `DCStartComplete` イベントが発生して、データの収集が正常に終了したことがコントローラーに通知されます。  
   
 ### <a name="end-rundown"></a>終了ランダウン  
+
  終了ランダウンは、`EndRundownKeyword` キーワードを使用してランダウン プロバイダーのイベントの記録を有効にした場合にトリガーされます。 終了ランダウンでは、実行中のプロセスのプロファイリングが停止され、 `DCEnd` イベントにより、プロファイリングが停止されたときのシステムの状態がキャプチャされます。  
   
  列挙の開始前には `DCEndInit` イベントが発生します。 列挙の終了時には `DCEndComplete` イベントが発生して、データの収集が正常に終了したことがコンシューマーに通知されます。 開始ランダウンと終了ランダウンは、主にマネージド シンボルの解決のために使用されます。 開始ランダウンは、プロファイリング セッションが開始される前に既に Just-In-Time コンパイル (JIT コンパイル) されていたメソッドのアドレス範囲の情報を提供します。 終了ランダウンは、プロファイリングを停止するときに JIT コンパイルされていたすべてのメソッドのアドレス範囲の情報を提供します。  
@@ -55,6 +60,7 @@ ms.locfileid: "86309652"
  マネージド シンボルを解決するためのメソッドのアドレス範囲の情報は、開始ランダウンと終了ランダウンのどちらでも取得できますが、`EndRundownKeyword` キーワード (`DCEnd` イベント) ではなく `StartRundownKeyword` キーワード (`DCStart` イベント) を使用することをお勧めします。 `StartRundownKeyword` を使用すると、プロファイリング セッションの間にランダウンが発生するため、プロファイリング対象のシナリオに影響を与える可能性があります。  
   
 ## <a name="etw-data-collection-using-runtime-and-rundown-providers"></a>ランタイム プロバイダーとランダウン プロバイダーによる ETW データの収集  
+
  次の例は、マネージド プロセスのシンボルを、プロセスの開始または終了がプロファイリング期間の範囲内かどうかに関係なく最小限の影響で解決できるようにするための CLR ランダウン プロバイダーの使用方法を示しています。  
   
 1. CLR ランタイム プロバイダーを使用して ETW のログの記録を有効にします。  

@@ -2,19 +2,21 @@
 title: メッセージ ログ記録のセキュリティの考慮事項
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: df8a1b4382ce4bce60e3214def10c816ced0f13c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8594329fb27aa1d77a2baffee2a7e37ea0d009c4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550548"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283771"
 ---
 # <a name="security-concerns-for-message-logging"></a>メッセージ ログ記録のセキュリティの考慮事項
+
 ここでは、メッセージ ログに表示される機密データだけでなく、メッセージ ログによって生成されるイベントを保護する方法についても説明します。  
   
 ## <a name="security-concerns"></a>セキュリティに関する注意事項  
   
 ### <a name="logging-sensitive-information"></a>機密情報のログ記録  
+
  Windows Communication Foundation (WCF) では、アプリケーション固有のヘッダーと本文のデータは一切変更されません。 また、WCF は、アプリケーション固有のヘッダーまたは本文データにある個人情報を追跡しません。  
   
  メッセージのログ記録が有効になっていると、アプリケーション固有ヘッダー内にある個人情報 (クエリ文字列など)、および本文情報 (クレジット カード番号) がログ内で確認できるようになります。 アプリケーションを配置するユーザーは、構成ファイルとログ ファイルに対するアクセス制御を実施する必要があります。 この種の情報を表示しないようにするには、ログ記録を無効にするか、ログを共有する場合にこの種のデータにフィルターをかけて除外します。  
@@ -94,9 +96,11 @@ ms.locfileid: "90550548"
 > PII は無効なメッセージでは非表示になりません。 このようなメッセージは、変更されずにそのままログに記録されます。 上に示した属性は、このことに影響を与えません。  
   
 ### <a name="custom-trace-listener"></a>カスタム トレース リスナー  
+
  カスタム トレース リスナーをメッセージ ログのトレース ソースに追加する権限は、管理者だけに付与する必要があります。 これは、機密情報の漏洩につながるメッセージをリモートで送信するように、悪意のあるカスタム リスナーを構成することが可能なためです。 また、ネットワークを介してリモート データベースなどにメッセージを送信するようにカスタム リスナーを構成している場合は、リモート コンピューター上のメッセージ ログに対する適切なアクセス制御を実施する必要があります。  
   
 ## <a name="events-triggered-by-message-logging"></a>メッセージ ログ記録でトリガーされるイベント  
+
  メッセージ ログ記録で発生するすべてのイベントを以下に示します。  
   
 - Message logging on : このイベントは、メッセージ ログ記録が構成内で、または WMI を介して有効になっている場合に発生します。 イベントの内容は "メッセージのログ記録が有効になりました。 機密情報は、通信回線上で暗号化されていた場合でも平文で記録される可能性があります (メッセージ本文など)" となります。  
@@ -105,7 +109,7 @@ ms.locfileid: "90550548"
   
 - Log Known PII On : このイベントは、既知の PII のログ記録が有効になっている場合に発生します。 このエラーは、 `enableLoggingKnownPii` `machineSettings` Machine.config ファイルの要素の属性がに設定され、 `true` `logKnownPii` `source` App.config または Web.config ファイルの要素の属性がに設定さ `true` れている場合に発生します。  
   
-- Log Known PII Not Allowed : このイベントは既知の PII のログ記録が許可されていない場合に発生します。 このエラーは、 `logKnownPii` `source` App.config または Web.config ファイルの要素の属性がに設定されて `true` いても、 `enableLoggingKnownPii` `machineSettings` Machine.config ファイルの要素の属性がに設定さ `false` れている場合に発生します。 例外はスローされません。  
+- Log Known PII Not Allowed : このイベントは既知の PII のログ記録が許可されていない場合に発生します。 このエラーは、 `logKnownPii` `source` App.config または Web.config ファイルの要素の属性がに設定されて `true` いても、 `enableLoggingKnownPii` `machineSettings` Machine.config ファイルの要素の属性がに設定さ `false` れている場合に発生します。 例外をスローすることはありません。  
   
  これらのイベントは、Windows に付属するイベント ビューアー ツールを使用して表示できます。 詳細については、「 [イベントログ](./event-logging/index.md)」を参照してください。  
   

@@ -2,14 +2,15 @@
 title: Windows Communication Foundation で使用するための Windows プロセス アクティブ化サービスを設定する
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-ms.openlocfilehash: 7dccfea990afff1d2aacd5e9714472e733684c33
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2f84afba72e5260a44726dcc812401da5475679f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556604"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284096"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Windows Communication Foundation で使用するための Windows プロセス アクティブ化サービスを設定する
+
 このトピックでは、windows Vista で Windows プロセスアクティブ化サービス (WAS) をセットアップして、HTTP ネットワークプロトコルでは通信しない Windows Communication Foundation (WCF) サービスをホストする手順について説明します。 以降の各セクションで、この構成に関する手順について概説します。  
   
 - 必要な WCF アクティブ化コンポーネントをインストール (または、のインストールを確認) します。  
@@ -21,6 +22,7 @@ ms.locfileid: "90556604"
 - 非 HTTP エンドポイントを公開する WCF サービスを構築します。  
   
 ## <a name="configuring-a-site-with-non-http-bindings"></a>非 HTTP バインドを使用したサイトの構成  
+
  WAS で非 HTTP バインドを使用するには、サイト バインドを WAS 構成に追加する必要があります。 WAS の構成ストアは、%windir%\system32\inetsrv\config ディレクトリにある applicationHost.config ファイルです。 この構成ストアは、WAS と IIS 7.0 の両方で共有されます。  
   
  applicationHost.config は、任意の標準テキスト エディター (メモ帳など) で開くことが可能な XML テキスト ファイルです。 ただし、IIS 7.0 のコマンドライン構成ツール (appcmd.exe) を使用して、HTTP 以外のサイトバインドを追加することをお勧めします。  
@@ -46,6 +48,7 @@ appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInf
 ```  
   
 ## <a name="enabling-an-application-to-use-non-http-protocols"></a>非 HTTP プロトコルを使用するためのアプリケーションの設定  
+
  個々のネットワークプロトコルをアプリケーションレベルで有効または無効にすることができます。 次のコマンドは、`Default Web Site` で動作するアプリケーションに対して、HTTP プロトコルと net.tcp プロトコルの両方を有効にする方法を示しています。  
   
 ```console  
@@ -92,6 +95,7 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
  このエラーが表示された場合は、非 HTTP アクティブ化の WAS が適切にインストールおよび構成されていることを確認してください。 詳細については、「 [方法: WCF アクティブ化コンポーネントをインストールおよび構成](how-to-install-and-configure-wcf-activation-components.md)する」を参照してください。  
   
 ## <a name="building-a-wcf-service-that-uses-was-for-non-http-activation"></a>非 HTTP のアクティブ化で WAS を使用する WCF サービスの構築  
+
  WAS をインストールして構成する手順 (「 [方法: WCF アクティブ化コンポーネントをインストールおよび構成](how-to-install-and-configure-wcf-activation-components.md)する」を参照してください) を実行すると、アクティブ化のために was を使用するようにサービスを構成することは、IIS でホストされるサービスの構成に似ています。  
   
  WAS によってアクティブ化される WCF サービスを構築する方法の詳細については、「 [How to: Host a WCF service IN was](how-to-host-a-wcf-service-in-was.md)」を参照してください。  

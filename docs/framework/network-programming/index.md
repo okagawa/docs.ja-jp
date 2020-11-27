@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 117fce887a04def7f9b3f7654a8e9e675ea462d2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 50f23e1a343f969ad2cbb3422038921c710b2b1b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502406"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241682"
 ---
 # <a name="network-programming-in-the-net-framework"></a>.NET Framework のネットワーク プログラミング
+
 Microsoft .NET Framework は、アプリケーションにすばやく簡単に統合できる、複数層の拡張可能なインターネット サービスのマネージド実装を提供します。 ネットワーク アプリケーションは、プラグ可能なプロトコルを基に自動的に新しいインターネット プロトコルを使用するように作成することも、ソケット レベルでネットワークを使用できるように Windows ソケット インターフェイスのマネージド実装を使用することもできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
@@ -87,6 +88,7 @@ Microsoft .NET Framework は、アプリケーションにすばやく簡単に�
  <xref:System.Net>、 <xref:System.Net.Cache>、 <xref:System.Net.Configuration>、 <xref:System.Net.Mail>、 <xref:System.Net.Mime>、 <xref:System.Net.NetworkInformation>、 <xref:System.Net.PeerToPeer>、 <xref:System.Net.Security>、 <xref:System.Net.Sockets> 名前空間のクラスを使用する、ダウンロード可能なネットワーク プログラミング サンプルへのリンク。  
   
 ## <a name="reference"></a>関連項目  
+
  <xref:System.Net?displayProperty=nameWithType>  
  最近のネットワークで使用されている多くのプロトコル用の単純なプログラミング インターフェイスを提供します。 この名前空間の <xref:System.Net.WebRequest?displayProperty=nameWithType> および <xref:System.Net.WebResponse?displayProperty=nameWithType> クラスは、プラグ可能なプロトコルの基礎です。  
   

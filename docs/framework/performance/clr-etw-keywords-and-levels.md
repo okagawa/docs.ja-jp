@@ -8,17 +8,19 @@ helpviewer_keywords:
 - ETW, CLR keywords
 - ETW, CLR levels
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
-ms.openlocfilehash: dfbe047640a3a640cf37adeea6fa3656cfd9ec6d
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 31426ae0589954d4388ba6d40f156c3eea9a8989
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309678"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283888"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW キーワードおよびレベル
+
 Windows (ETW) イベントのイベント トレースは、カテゴリとレベルによってフィルター処理できます。 イベントの [CLR ETW キーワード](#clr-etw-keywords) は、イベントをカテゴリ別にフィルタ処理できます。これらはランタイム プロバイダーとランダウン プロバイダー用に組み合わせて使用します。 [イベント レベル](#etw-event-levels) は、フラグによって識別されます。  
   
 ## <a name="clr-etw-keywords"></a>CLR ETW キーワード  
+
  キーワードは、組み合わせて値を生成できるフラグです。 実際には、コマンド ライン ユーティリティを呼び出す際に、キーワード名ではなくキーワードの 16 進数の値を使用します。  
   
  これらのキーワードの説明を次の表に示します。  
@@ -32,7 +34,9 @@ Windows (ETW) イベントのイベント トレースは、カテゴリとレ�
 - [ランダウン プロバイダーのシンボル解決のキーワードの組み合わせ](#rundown_combo)  
   
 <a name="runtime"></a>
+
 ### <a name="clr-etw-runtime-keywords"></a>CLR ETW ランタイム キーワード  
+
  CLR ETW のランタイム キーワード、その値、およびその用途を次の表に示します。  
   
 |ランタイム キーワード名|値|目的|  
@@ -55,7 +59,9 @@ Windows (ETW) イベントのイベント トレースは、カテゴリとレ�
 |`StackKeyword`|0x40000000|CLR [スタック トレース イベント](stack-etw-event.md)のコレクションを有効にします。|  
   
 <a name="rundown"></a>
+
 ### <a name="clr-etw-rundown-keywords"></a>CLR ETW ランダウン キーワード  
+
  CLR ETW ランダウン キーワード、その値、およびその用途を次の表に示します。  
   
 |ランダウン キーワード名|値|目的|  
@@ -71,6 +77,7 @@ Windows (ETW) イベントのイベント トレースは、カテゴリとレ�
 |`PerfTrackKeyWord`|0x2000000|`ModuleDCStart`、 `ModuleDCEnd`、 `ModuleRangeDCStart`、および `ModuleRangeDCEnd` の各イベントのコレクションを有効にします。|
   
 <a name="runtime_combo"></a>
+
 ### <a name="keyword-combinations-for-symbol-resolution-for-the-runtime-provider"></a>ランタイム プロバイダーのシンボル解決のキーワードの組み合わせ  
   
 |キーワードとフラグ|アプリケーション ドメイン、アセンブリ、モジュールのロード/アンロード イベント|メソッドのロード/アンロード イベント (動的イベントを除く)|動的メソッドのロード/破棄イベント|  
@@ -83,6 +90,7 @@ Windows (ETW) イベントのイベント トレースは、カテゴリとレ�
 |`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|[なし] :|イベントをアンロードします。|適用不可。|  
   
 <a name="rundown_combo"></a>
+
 ### <a name="keyword-combinations-for-symbol-resolution-for-the-rundown-provider"></a>ランダウン プロバイダーのシンボル解決のキーワードの組み合わせ  
   
 |キーワードとフラグ|アプリケーション ドメイン、アセンブリ、モジュールの DCStart/DCEnd イベント|メソッドの DCStart/DCEnd イベント (イベントの動的メソッドを含む)|  
@@ -95,6 +103,7 @@ Windows (ETW) イベントのイベント トレースは、カテゴリとレ�
 |`NGenKeyword` +<br /><br /> `EndRundownKeyword`|[なし] :|`DCEnd` イベント。|  
 
 ## <a name="etw-event-levels"></a>ETW イベントのレベル  
+
  ETW イベントはレベルでフィルター処理することもできます。 レベルが 0x5 に設定されている場合 0x5 以下を含むすべてのレベルのイベント (キーワードによって有効になったカテゴリに属するイベント) が発生します。 レベルが 0x2 に設定されている場合、レベル 0x2 以下に属するイベントのみが発生します。  
   
  各レベルには次のような意味があります。  
