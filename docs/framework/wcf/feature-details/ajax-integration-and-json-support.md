@@ -4,19 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - AJAX integration and JSON support [WCF]
 ms.assetid: 3851a8fc-d861-4ac1-873c-96af0343d3a7
-ms.openlocfilehash: f1748372af520955c139dffb2e6e80ae066c9397
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c895a6dedc22a42adb7104927d39090ab6587f37
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536066"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266026"
 ---
 # <a name="ajax-integration-and-json-support"></a>AJAX の統合と JSON のサポート
+
 ASP.NET (WCF) による非同期 JavaScript と XML (AJAX) および JavaScript Object Notation (JSON) データ形式のサポートにより Windows Communication Foundation、WCF サービスは AJAX クライアントに操作を公開できます。 AJAX クライアントは、JavaScript コードを実行し、HTTP 要求を使用してこれらの WCF サービスにアクセスする Web ページです。 このセクションのトピックでは、このサポートと実装方法について説明します。  
   
  ASP.NET AJAX と ASP.NET 2.0 との統合の詳細については、「 [ASP.NET ajax の概要](/previous-versions/aspnet/bb398874(v=vs.100))」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [ASP.NET AJAX 用の WCF サービスの作成](creating-wcf-services-for-aspnet-ajax.md)  
  構成によって適切な AJAX エンドポイントを追加するか、またはカスタマイズされたサービスホストファクトリを使用して AJAX エンドポイントを自動的に構成するサービスホストを生成することによって、WCF サービスを AJAX クライアントに公開する方法について説明します。  
   

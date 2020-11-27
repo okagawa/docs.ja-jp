@@ -2,12 +2,12 @@
 title: エンタープライズ サービスのトランザクション コンポーネントの統合
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-ms.openlocfilehash: 3fd8876de53be30f18e4fa9d7f4a1cc07ab5e220
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d235806ba94d68cadca91a17361bfd5bab1e1332
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554105"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265870"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>エンタープライズ サービスのトランザクション コンポーネントの統合
 
@@ -16,6 +16,7 @@ Windows Communication Foundation (WCF) は、エンタープライズサービ�
  フローされる受信トランザクションと COM+ コンテキスト トランザクションの間に必要なレベルの相互運用性を提供するには、サービス実装で <xref:System.Transactions.TransactionScope> インスタンスを作成し、<xref:System.Transactions.EnterpriseServicesInteropOption> 列挙型の適切な値を使用する必要があります。  
   
 ## <a name="integrating-enterprise-services-with-a-service-operation"></a>エンタープライズ サービスとサービス操作の統合  
+
  Allowed トランザクション フローで、<xref:System.Transactions.TransactionScope> オプションを指定して <xref:System.Transactions.EnterpriseServicesInteropOption.Full> を作成する操作を次のコードに示します。 このシナリオでは次の条件が適用されます。  
   
 - クライアントがトランザクションをフローする場合、エンタープライズ サービス コンポーネント呼び出しを含む操作は、トランザクションのスコープ内で実行されます。 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> を使用すると、トランザクションが <xref:System.EnterpriseServices> コンテキストと同期することが保証されます。つまり、<xref:System.Transactions> のアンビエント トランザクションと <xref:System.EnterpriseServices> とが同じになります。  
@@ -63,6 +64,7 @@ public class CustomerService : ICustomerServiceContract
  操作の現在のトランザクションと、エンタープライズ サービスのトランザクション コンポーネント呼び出しとの間の同期が不要な場合は、<xref:System.Transactions.TransactionScope> インスタンスのインスタンス化時に <xref:System.Transactions.EnterpriseServicesInteropOption.None> オプションを使用する必要があります。  
   
 ## <a name="integrating-enterprise-services-with-a-client"></a>エンタープライズ サービスとクライアントの統合  
+
  <xref:System.Transactions.TransactionScope> を設定した <xref:System.Transactions.EnterpriseServicesInteropOption.Full> インスタンスを使用するクライアント コードを次のコードに示します。 このシナリオでは、トランザクション フローをサポートするサービス操作の呼び出しが、エンタープライズ サービス コンポーネントへの呼び出しと同じトランザクションのスコープ内で発生します。  
   
 ```csharp

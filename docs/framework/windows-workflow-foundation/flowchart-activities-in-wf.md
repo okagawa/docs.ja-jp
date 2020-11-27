@@ -2,14 +2,15 @@
 title: WF のフローチャート アクティビティ
 ms.date: 03/30/2017
 ms.assetid: e80d9734-b43a-4d21-a250-74400330a4c0
-ms.openlocfilehash: e311c97a35acd8bc973b2833f1de1bc017682d64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c739032d2e05dfe92b75b7c495b18374d15ee97f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945679"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266455"
 ---
 # <a name="flowchart-activities-in-wf"></a>WF のフローチャート アクティビティ
+
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] には、フローチャート内の実行と分岐を制御する、システムによって提供されるアクティビティがいくつか用意されています。  
   
 |||  

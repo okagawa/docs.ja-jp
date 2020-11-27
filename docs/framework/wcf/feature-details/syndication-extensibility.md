@@ -2,14 +2,15 @@
 title: 配信の拡張
 ms.date: 03/30/2017
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
-ms.openlocfilehash: 5e8f47b45897f46e15847c793c986e953523e66b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 39187f228e47ed4e82c8e737563b860ce5734416
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600725"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266533"
 ---
 # <a name="syndication-extensibility"></a>配信の拡張
+
 配信 API は、形式に依存せず、さまざま形式で概要コンテンツをネットワークに書き込むことができるプログラミング モデルを提供することを目的としています。 抽象データ モデルは、次のクラスで構成されています。  
   
 - <xref:System.ServiceModel.Syndication.SyndicationCategory>  
@@ -27,9 +28,11 @@ ms.locfileid: "84600725"
  配信プロトコルの主な機能は拡張性です。 Atom 1.0 と RSS 2.0 のどちらも、仕様で定義されていない属性と要素を配信フィードに追加できます。 Windows Communication Foundation (WCF) 配信プログラミングモデルには、カスタム属性と拡張機能の操作、緩やかに型指定されたアクセス、および新しいクラスの派生を行うための次の方法が用意されています。  
   
 ## <a name="loosely-typed-access"></a>弱い型指定のアクセス  
+
  新しいクラスの派生によって拡張機能を追加するには、追加のコードを記述する必要があります。 別の方法として、弱い型指定で拡張機能にアクセスする方法もあります。 配信抽象データ モデルに定義される型にはすべて、`AttributeExtensions` および `ElementExtensions` という名前のプロパティが含まれます。ただし、<xref:System.ServiceModel.Syndication.SyndicationContent> には `AttributeExtensions` プロパティがありますが、`ElementExtensions` プロパティはありません。 この 2 つのプロパティはそれぞれ、`TryParseAttribute` メソッドと `TryParseElement` メソッドで処理されない拡張機能のコレクションです。 この処理されない拡張機能にアクセスするには、<xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection.ReadElementExtensions%2A?displayProperty=nameWithType>、`ElementExtensions`、<xref:System.ServiceModel.Syndication.SyndicationFeed>、<xref:System.ServiceModel.Syndication.SyndicationItem>、および <xref:System.ServiceModel.Syndication.SyndicationLink> の <xref:System.ServiceModel.Syndication.SyndicationPerson> プロパティで <xref:System.ServiceModel.Syndication.SyndicationCategory> を呼び出します。 このメソッドのセットは、指定した名前と名前空間を持つ拡張機能をすべて検索し、個別に `TExtension` のインスタンスに逆シリアル化して `TExtension` オブジェクトのコレクションとして返します。  
   
 ## <a name="deriving-a-new-class"></a>新しいクラスの派生  
+
  任意の既存抽象データ モデル クラスから、新しいクラスを派生できます。 これは、対象フィードのほとんどに特定の拡張機能が含まれるアプリケーションを実装する際に行います。 このトピックでは、プログラムで処理するフィードのほとんどに、`MyExtension` 拡張機能が含まれています。 プログラミング性を向上するには、次の手順を実行します。  
   
 - 拡張機能データを保持するクラスを作成します。 この場合、MyExtension というクラスを作成します。  
