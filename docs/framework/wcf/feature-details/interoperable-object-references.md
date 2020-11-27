@@ -2,17 +2,19 @@
 title: 相互運用可能なオブジェクト参照
 ms.date: 04/15/2019
 ms.assetid: cb8da4c8-08ca-4220-a16b-e04c8f527f1b
-ms.openlocfilehash: 0927f217a1666f8f27ca9c3e68f80a96b9c0f2b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf395c187c46e88406bfb81798c7e359b48255e3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184702"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263231"
 ---
 # <a name="interoperable-object-references"></a>相互運用可能なオブジェクト参照
-既定では、<xref:System.Runtime.Serialization.DataContractSerializer>オブジェクトを値でシリアル化します。 このプロパティを<xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>使用すると、オブジェクトをシリアル化するときにオブジェクト参照を保持するようにデータ コントラクト シリアライザーに指示できます。  
+
+既定では、は <xref:System.Runtime.Serialization.DataContractSerializer> 値によってオブジェクトをシリアル化します。 プロパティを使用すると、オブジェクトをシリアル化する <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> ときにオブジェクト参照を保持するようにデータコントラクトシリアライザーに指示できます。  
   
 ## <a name="generated-xml"></a>生成される XML  
+
  例として、次のオブジェクトを考えます。  
   
 ```csharp  
@@ -49,10 +51,11 @@ public class SomeClass
 </X>  
 ```  
   
- ただし、<xref:System.Runtime.Serialization.XsdDataContractExporter>プロパティ`id`が`ref``true`に設定されている場合でも、スキーマの属性と`preserveObjectReferences`属性は記述しません。  
+ ただし、では、 <xref:System.Runtime.Serialization.XsdDataContractExporter> `id` `ref` `preserveObjectReferences` プロパティがに設定されている場合でも、スキーマの属性と属性が記述されていません `true` 。  
   
 ## <a name="using-isreference"></a>IsReference の使用  
- スキーマに従って有効なオブジェクト参照情報を生成するには、<xref:System.Runtime.Serialization.DataContractAttribute>属性を型に適用し、<xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>フラグを に`true`設定します。 次の例では、前`X`の例のクラスを追加`IsReference`して変更します。  
+
+ 記述されたスキーマに従って有効なオブジェクト参照情報を生成するには、 <xref:System.Runtime.Serialization.DataContractAttribute> 属性を型に適用し、 <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> フラグをに設定し `true` ます。 次の例では、 `X` 前の例でを追加してクラスを変更し `IsReference` ます。  
   
 ```csharp
 [DataContract(IsReference=true)]
@@ -81,7 +84,7 @@ public class SomeClass
 </X>
 ```  
   
- `IsReference` を使用すると、メッセージのラウンド トリップに対応できます。 この機能を使用しない場合、型がスキーマから生成される場合、その型の XML 出力は、当初想定されていたスキーマと必ずしも互換性があるとは限りません。 つまり、`id` 属性と `ref` 属性がシリアル化されたとしても、元のスキーマによってこれらの属性 (またはすべての属性) が拒否される可能性があります。 データ`IsReference`メンバーに適用すると、ラウンド トリップ時にメンバーが*参照可能*であると認識され続けます。  
+ `IsReference` を使用すると、メッセージのラウンド トリップに対応できます。 このメソッドを使用しない場合、スキーマから型が生成されるときに、その型の XML 出力は、最初に想定したスキーマと必ずしも互換性がありません。 つまり、`id` 属性と `ref` 属性がシリアル化されたとしても、元のスキーマによってこれらの属性 (またはすべての属性) が拒否される可能性があります。 `IsReference`データメンバーに適用されると、ラウンドトリップ時にメンバーは引き続き *参照可能* として認識されます。  
   
 ## <a name="see-also"></a>関連項目
 

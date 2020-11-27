@@ -2,14 +2,15 @@
 title: カスタム WSDL パブリケーション
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: b18ac2f72d58c768b3784e1c414a71cdaec50c01
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 83377e1c72ef5774c909729abd1312cce5364ab0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596696"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262867"
 ---
 # <a name="custom-wsdl-publication"></a>カスタム WSDL パブリケーション
+
 このサンプルでは次の操作を行います。  
   
 - カスタム <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> 属性に <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> を実装し、属性プロパティを WSDL 注釈としてエクスポートします。  
@@ -24,6 +25,7 @@ ms.locfileid: "84596696"
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
   
 ## <a name="service"></a>サービス  
+
  このサンプルのサービスは、2 つのカスタム属性でマークされています。 1 つ目の属性は `WsdlDocumentationAttribute` で、この属性を使用するとコントラクタ内で文字列を使用でき、用途を説明する文字列をコントラクト インターフェイスまたは操作に提供するために適用できます。 2 つ目は `WsdlParamOrReturnDocumentationAttribute` で、この属性は、操作内で値またはその値を表すパラメータを返すために適用できます。 これらの属性を使用して表されたサービス コントラクト `ICalculator` を、次の例に示します。  
   
 ```csharp  
@@ -170,9 +172,11 @@ for (int i = 0; i < args.Length; i++)
 ```  
   
 ## <a name="svcutil-client"></a>Svcutil クライアント  
+
  このサンプルでは、Svcutil.exe を使用しません。 コントラクトは generatedClient.cs ファイルで提供されます。したがって、サンプルでカスタム WSDL のインポートとコードの生成を確認した後で、サービスを呼び出すことができます。 次のカスタム WSDL インポータをこのサンプルで使用するには、Svcutil.exe を実行して `/svcutilConfig` オプションを指定します。このオプションは、このサンプルで使用されているクライアント構成ファイルへのパスを示します。また、Svcutil.exe は `WsdlDocumentation.dll` ライブラリを参照します。 ただし、`WsdlDocumentationImporter` を読み込むには、Svuctil.exe が `WsdlDocumentation.dll` ライブラリの場所を特定し、これを読み込むことができる必要があります。つまり、このライブラリがグローバル アセンブリ キャッシュに登録されているか、パスに含まれているか、または Svcutil.exe と同じディレクトリにあることが必要です。 このサンプルのような基本的なサンプルにおいてこれを行う最も簡単な方法は、Svcutil.exe とクライアント構成ファイルを `WsdlDocumentation.dll` と同じディレクトリにコピーして、そのディレクトリで実行することです。  
   
 ## <a name="the-custom-wsdl-importer"></a>カスタム WSDL インポータ  
+
  カスタム <xref:System.ServiceModel.Description.IWsdlImportExtension> オブジェクトの `WsdlDocumentationImporter` は、<xref:System.ServiceModel.Description.IContractBehavior> と <xref:System.ServiceModel.Description.IOperationBehavior> も実装しています。これらはインポートされた ServiceEndpoints、<xref:System.ServiceModel.Description.IServiceContractGenerationExtension>、および <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> に追加され、コントラクトまたは操作コードが作成されるときにコード生成を変更するために呼び出されます。  
   
  サンプルでは、最初に <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> メソッドで、WSDL 注釈がコントラクト レベルまたは操作レベルのどちらにあるかを判断し、適切なスコープで WDSL 注釈自体を動作として追加します。その際、インポートされた注釈テキストをコンストラクタに渡します。  
@@ -219,6 +223,7 @@ public void GenerateOperation(OperationContractGenerationContext context)
 ```  
   
 ## <a name="the-client-application"></a>クライアント アプリケーション  
+
  クライアント アプリケーションは、アプリケーション構成ファイルにカスタム WSDL インポータを指定することにより、このインポータを読み込みます。  
   
 ```xml  
@@ -303,6 +308,6 @@ public interface ICalculator
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  

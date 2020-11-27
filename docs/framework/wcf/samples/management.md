@@ -2,17 +2,19 @@
 title: 管理
 ms.date: 03/30/2017
 ms.assetid: 52f4825b-91a2-4f23-94f4-cfd76a7980cf
-ms.openlocfilehash: 53c53252e5798ffb01d42b143971a66d1c067851
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0f3d5404787d46f5b00ec54fc155997e40ac7fac
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591788"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264739"
 ---
 # <a name="management"></a>管理
+
 このセクションには、Windows Communication Foundation (WCF) 管理を示すサンプルが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [WCF サービスと Event Tracing for Windows](wcf-services-and-event-tracing-for-windows.md)  
  WCF の分析トレースを使用して Windows イベントトレーシング (ETW) でイベントを出力する方法を示します。  
   

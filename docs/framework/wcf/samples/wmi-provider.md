@@ -2,14 +2,15 @@
 title: WMI プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 3fc982bcec563d5e4b90ba3b25989859d7d86281
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9d654527c6897e071f914d4015ba9a225974b0f1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552884"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263773"
 ---
 # <a name="wmi-provider"></a>WMI プロバイダー
+
 このサンプルでは、WCF に組み込まれている Windows Management Instrumentation (WMI) プロバイダーを使用して、実行時に Windows Communication Foundation (WCF) サービスからデータを収集する方法を示します。 また、このサンプルでは、ユーザー定義の WMI オブジェクトをサービスに追加する方法も示します。 このサンプルでは、 [はじめに](getting-started-sample.md) の WMI プロバイダーをアクティブ化し、実行時にサービスからデータを収集する方法を示し `ICalculator` ます。  
   
  WMI は、Web ベースのエンタープライズ管理 (WBEM) 標準をマイクロソフトが実装したものです。 WMI SDK の詳細については、「 [Windows Management Instrumentation](/windows/desktop/WmiSdk/wmi-start-page)」を参照してください。 WBEM は、アプリケーションが Management Instrumentation を外部管理ツールに開示する業界標準の方法です。  
@@ -29,6 +30,7 @@ ms.locfileid: "90552884"
  この構成エントリには、WMI インターフェイスが開示されます。 管理アプリケーションはこのインターフェイスを通して接続し、アプリケーションの Management Instrumentation にアクセスできるようになります。  
   
 ## <a name="custom-wmi-object"></a>カスタム WMI オブジェクト  
+
  WMI オブジェクトをサービスに追加すると、組み込みの WMI プロバイダーの情報と共にユーザー定義の情報を開示できます。 これは、Installutil.exe アプリケーションを使用してサービスのスキーマを WMI に公開することによって実現されます。 これを行うための手順および詳細情報は、このトピックの最後のセットアップ手順で示します。  
   
 ## <a name="accessing-wmi-information"></a>WMI 情報へのアクセス  

@@ -2,25 +2,28 @@
 title: ローカル チャネル
 ms.date: 03/30/2017
 ms.assetid: fa1917a4-f701-4e82-a439-14a16282c7cc
-ms.openlocfilehash: 87e140395ac2fb5702d8655cf970da8a60c991ec
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4c1fcdb3e7a4100677882e64f89776fc6eda23e9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79144508"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264888"
 ---
 # <a name="local-channel"></a>ローカル チャネル
-ローカル チャネルは、同じアプリケーション ドメイン内の通信に使用される Windows 通信基盤 (WCF) トランスポート チャネルです。 これは、クライアントとサービスが同じアプリケーション ドメイン内で実行されており、通常の WCF チャネル スタックのオーバーヘッド (メッセージのシリアル化と逆シリアル化) を回避する必要がある場合に役に立ちます。  
+
+ローカルチャネルは、同じアプリケーションドメイン内の通信に使用される Windows Communication Foundation (WCF) トランスポートチャネルです。 これは、クライアントとサービスが同じアプリケーション ドメイン内で実行されており、通常の WCF チャネル スタックのオーバーヘッド (メッセージのシリアル化と逆シリアル化) を回避する必要がある場合に役に立ちます。  
   
 ## <a name="demonstrates"></a>対象  
+
  ローカル チャネル  
   
 ## <a name="discussion"></a>ディスカッション  
+
  このサンプルは、2 つのプロジェクト ファイルで構成されます。  
   
-- **LocalChannel**: 現在のアプリケーション ドメイン内のローカル チャネルのプログラムによる表現。 このプロジェクトでは、送信側コンポーネントがメッセージをメモリ内キューに入れて、受信側コンポーネントがメッセージをキューから削除して受信します。  
+- **Localchannel**: 現在のアプリケーションドメイン内のローカルチャネルのプログラムによる表現。 このプロジェクトでは、送信側コンポーネントがメッセージをメモリ内キューに入れて、受信側コンポーネントがメッセージをキューから削除して受信します。  
   
-- **ClientAndService**: このプロジェクトは、コンソール アプリケーションでサービスをホストし、同じアプリケーション ドメイン内からクライアントを実行してサービスを呼び出します。  
+- **Clientandservice**: このプロジェクトは、コンソールアプリケーションでサービスをホストし、クライアントを実行して、同じアプリケーションドメイン内からサービスを呼び出します。  
   
  ローカル チャネルのデザインでは、速度を上げるためにチャネル スタックとシリアル化プロセスの両方がスキップされます。 ローカル トランスポート チャネルは、キューを使用してサービス呼び出しをクライアントからサービスに転送し、値をクライアントに返すことによって実装されます。 このサンプルでは、パラメーターと戻り値をシリアル化するのではなく、オブジェクトをコピーします。  
   
@@ -35,6 +38,6 @@ ms.locfileid: "79144508"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\LocalChannel`

@@ -2,17 +2,19 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 12f28f44b408dde1ea04d6b84e663206cb4437df
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2faeeaab98a4adeec38ed9c03dc9e01ec2a3aaea
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555407"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264947"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
+
 このサンプルでは、<xref:System.Runtime.Serialization.DataContractResolver> クラスを使用して、シリアル化プロセスおよび逆シリアル化プロセスをカスタマイズする方法を示します。 このサンプルで示すのは、シリアル化および逆シリアル化時に既知の型を動的に追加する方法です。  
   
 ## <a name="sample-details"></a>サンプルの詳細  
+
  このサンプルは、4 つのプロジェクトで構成されます。 そのうちの 1 つは、IIS でホストされ、次のサービス コントラクトを定義するサービスに対応します。  
   
 ```csharp
@@ -350,7 +352,7 @@ Lists combined:
   
 2. [ **共通プロパティ**] で、[ **スタートアッププロジェクト**] を選択し、[ **マルチスタートアッププロジェクト**] をクリックします。  
   
-3. **サービス**プロジェクトと**クライアント**プロジェクトに**開始**アクションを追加します。  
+3. **サービス** プロジェクトと **クライアント** プロジェクトに **開始** アクションを追加します。  
   
 4. [ **OK**] をクリックし、 **F5** キーを押してサンプルを実行します。  
   

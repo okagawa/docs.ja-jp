@@ -2,14 +2,15 @@
 title: 弱く型指定された拡張のサンプル
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-ms.openlocfilehash: 0a08ca19e5e6bff7223d45726617d2c2163ca3df
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 94e01970502223febd3ff03e30be7b17d9019d93
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591866"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264891"
 ---
 # <a name="loosely-typed-extensions-sample"></a>弱く型指定された拡張のサンプル
+
 配信オブジェクト モデルでは、拡張データをさまざまな方法で処理できます。拡張データとは、配信フィードの XML 表現に含まれているが、<xref:System.ServiceModel.Syndication.SyndicationFeed> や <xref:System.ServiceModel.Syndication.SyndicationItem> などのクラスによって明示的に公開されない情報のことです。 このサンプルでは、拡張データを処理する基本的な方法を示します。  
   
  このサンプルでは、例を示す目的で <xref:System.ServiceModel.Syndication.SyndicationFeed> クラスを使用します。 ただし、このサンプルで示すパターンは、拡張データをサポートするすべての配信クラスで使用できます。  
@@ -25,6 +26,7 @@ ms.locfileid: "84591866"
  <xref:System.ServiceModel.Syndication.SyndicationLink>  
   
 ## <a name="sample-xml"></a>サンプル XML  
+
  このサンプルで使用される XML ドキュメントは次のとおりです。  
   
 ```xml  
@@ -65,6 +67,7 @@ w.w3.org/2001/XMLSchema" xmlns="">
 - `<xElementExtension>` 要素。  
   
 ## <a name="writing-extension-data"></a>拡張データの書き込み  
+
  属性の拡張は、次のサンプル コードに示すように、エントリを <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> コレクションに追加することによって作成されます。  
   
 ```csharp  
@@ -102,6 +105,7 @@ feed.ElementExtensions.Add(new XElement("xElementExtension",
 ```  
   
 ## <a name="reading-extension-data"></a>拡張データの読み取り  
+
  属性の拡張の値は、次のサンプル コードに示すように、<xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> を使用して <xref:System.Xml.XmlQualifiedName> コレクションの属性を検索することによって取得できます。  
   
 ```csharp  
@@ -151,7 +155,7 @@ foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\LooselyTypedExtensions`  
   

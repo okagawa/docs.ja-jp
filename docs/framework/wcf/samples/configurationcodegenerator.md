@@ -2,14 +2,15 @@
 title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
-ms.openlocfilehash: d64be95f71f840e08ede63e1c1f14ee08e52ce97
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b8496992c7b0694a07ac047ba8537c67fc363c02
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84592477"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264232"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
+
 ConfigurationCodeGenerator は、カスタム チャネルの実装を構成システムに公開する際に使用できるツールです。 カスタム チャネルのユーザーは、このツールを使用することによって、`NetTcpBinding` などのシステム指定のバインディングやカスタム バインドを `TcpTransportBindingElement` で構成するのと同じように、.config ファイルを使用してカスタム チャネルを構成できます。  
   
  新しい `BindingElement` または `Binding` を使用してカスタム チャネルを記述し、プログラミング モデルに公開する場合は、.config ファイルを使用して、`BindingElement` または `Binding` を構成可能にするためのクラスのセットを作成する必要があります。 ConfigurationCodeGenerator ツールを使用すると、こうしたクラスを生成してユーザーの操作性を向上させることができます。  
@@ -18,7 +19,7 @@ ConfigurationCodeGenerator は、カスタム チャネルの実装を構成シ�
   
 1. ソリューションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](building-the-samples.md)」の手順に従います。  
   
-2. ソリューションをビルドすると、ConfigurationCodeGenerator.exe ファイルが生成されます。 Samplerun.cmd ファイルには、このツールを使用して[Transport: UDP](transport-udp.md)サンプルのクラスを生成する方法を示すサンプルコマンドラインがあります。  
+2. ソリューションをビルドすると、ConfigurationCodeGenerator.exe ファイルが生成されます。 Samplerun.cmd ファイルには、このツールを使用して [Transport: UDP](transport-udp.md) サンプルのクラスを生成する方法を示すサンプルコマンドラインがあります。  
   
 ### <a name="to-run-the-tool"></a>ツールを実行するには  
   

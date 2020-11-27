@@ -2,14 +2,15 @@
 title: トークン認証システム
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: a493ea48d9d339c0bc1a4b191b084374ad5f2dc4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ab3f8486229416465d7eca0b9413475d81318d32
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548593"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264635"
 ---
 # <a name="token-authenticator"></a>トークン認証システム
+
 このサンプルでは、カスタム トークンの認証システムを実装する方法を示します。 Windows Communication Foundation (WCF) のトークン認証システムは、メッセージで使用されるトークンを検証し、それが自己整合していることを確認し、トークンに関連付けられている id を認証するために使用されます。
 
  カスタム トークン認証システムは次のようなさまざまな場合に役立ちます。
@@ -119,6 +120,7 @@ static void Main()
 ```
 
 ## <a name="custom-token-authenticator"></a>カスタム トークン認証システム
+
  カスタム トークン認証システムを作成するには、次の手順に従います。
 
 1. カスタム トークン認証システムを作成します。
@@ -293,6 +295,7 @@ static void DisplayIdentityInformation()
  このサンプルを実行すると、操作要求および応答がクライアントのコンソール ウィンドウに表示されます。 クライアントをシャットダウンするには、クライアント ウィンドウで Enter キーを押します。
 
 ## <a name="setup-batch-file"></a>セットアップ バッチ ファイル
+
  このサンプルに用意されている Setup.bat バッチ ファイルを使用すると、適切な証明書を使用してサーバーを構成し、サーバー証明書ベースのセキュリティを必要とする自己ホスト型アプリケーションを実行できるようになります。 このバッチ ファイルは、複数のコンピューターを使用する場合またはホストなしの場合に応じて変更する必要があります。
 
  次に、バッチ ファイルのセクションのうち、適切な構成で実行するために変更が必要となる部分を示します。

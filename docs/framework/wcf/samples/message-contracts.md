@@ -2,21 +2,23 @@
 title: メッセージ コントラクト
 ms.date: 03/30/2017
 ms.assetid: e3df7c11-c653-4796-be47-26b09c35b691
-ms.openlocfilehash: 5467ee9ff807bca79330054c30ad424ea479a6a3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e00720674a384e2b0ac1cdb5aeab84f9b2c91209
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591684"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264700"
 ---
 # <a name="message-contracts"></a>メッセージ コントラクト
+
 このセクションには、Windows Communication Foundation (WCF) のメッセージコントラクトを示すサンプルが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [既定のメッセージ コントラクト](default-message-contract.md)  
  ユーザー定義のカスタム メッセージをサービス操作に渡したり、サービス操作から渡されたりするサービスを示します。  
   
- 型指定のない要求-応答  
+ 型指定されていない Request-Reply  
  Message クラスを使用する操作コントラクトを定義する方法を示します。  
   
  [ラップされていないメッセージ](unwrapped-messages.md)  

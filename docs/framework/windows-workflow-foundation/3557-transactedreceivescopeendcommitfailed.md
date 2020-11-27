@@ -2,32 +2,35 @@
 title: 3557 - TransactedReceiveScopeEndCommitFailed
 ms.date: 03/30/2017
 ms.assetid: 079f0188-8146-49ee-b6ae-a08f4e4d2b9b
-ms.openlocfilehash: 444fa2e51322edd793f709fd3f92c5f9fe826522
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a4979047481687ef0d5c9d5891dec8f2826beed
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774453"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263660"
 ---
 # <a name="3557---transactedreceivescopeendcommitfailed"></a>3557 - TransactedReceiveScopeEndCommitFailed
+
 ## <a name="properties"></a>プロパティ  
   
 |||  
 |-|-|  
 |ID|3557|  
-|キーワード|WFServices|  
-|レベル|情報|  
+|Keywords|WFServices|  
+|Level|情報|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>Description  
+
  CommittableTransaction の EndCommit への呼び出しが TransactionException をスローしたことを示します。  
   
-## <a name="message"></a>メッセージ  
+## <a name="message"></a>Message  
+
  id = '%1' の CommittableTransaction に対する EndCommit への呼び出しにより、次のメッセージと共に TransactionException がスローされました: '%2'。  
   
-## <a name="details"></a>説明  
+## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|説明|  
+|データ項目名|データ項目の型|Description|  
 |--------------------|--------------------|-----------------|  
 |TransactionId|xs:string|CommittableTransaction の ID。|  
 |例外|xs:string|例外の詳細|  

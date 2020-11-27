@@ -2,14 +2,15 @@
 title: 構成サンプル
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 6d84085d06da117ebf13fa4bb714513aacc3abd6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 927aab30ab122d281b4f3577ec05a2035c08f2fc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594726"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264336"
 ---
 # <a name="configuration-sample"></a>構成サンプル
+
 このサンプルでは、構成ファイルを使用してサービスを探索可能にする方法を示します。  
   
 > [!NOTE]
@@ -20,11 +21,12 @@ ms.locfileid: "84594726"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
 ## <a name="service-configuration"></a>サービス構成  
+
  このサンプルの構成ファイルでは、次の 2 つの機能を示します。  
   
 - 標準の <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> を介してサービスを探索できるようにします。  
@@ -85,7 +87,7 @@ ms.locfileid: "84594726"
         </endpointBehaviors>  
 ```  
   
- スコープの詳細については、「[検出検索と FindCriteria](../feature-details/discovery-find-and-findcriteria.md)」を参照してください。  
+ スコープの詳細については、「 [検出検索と FindCriteria](../feature-details/discovery-find-and-findcriteria.md)」を参照してください。  
   
  探索エンドポイントに固有の詳細を制御することもできます。 この制御には <xref:System.ServiceModel.Configuration.StandardEndpointsSection> を使用します。 このサンプルでは、次のコード例に示すように、使用するプロトコルのバージョンを変更し、`maxResponseDelay` 属性を追加します。  
   
@@ -155,6 +157,7 @@ ms.locfileid: "84594726"
 ```  
   
 ## <a name="client-configuration"></a>クライアント構成  
+
  クライアントのアプリケーション構成ファイルでは、`standardEndpoint` 型の `dynamicEndpoint` を使用して次の構成スニペットに示すように探索を利用します。  
   
 ```xml  

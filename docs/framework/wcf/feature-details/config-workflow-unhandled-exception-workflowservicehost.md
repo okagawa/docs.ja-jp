@@ -2,14 +2,15 @@
 title: '方法: WorkflowServiceHost を使用してワークフロー サービスの未処理の例外動作を構成する'
 ms.date: 03/30/2017
 ms.assetid: 51b25c86-292c-43e4-8d13-273d2badc8ad
-ms.openlocfilehash: 3881d1af21dcc0c211c6738162360e522648d949
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 93eb2f4493b70f54336a5d47957c6913239088e5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593595"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264856"
 ---
 # <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a>方法: WorkflowServiceHost を使用してワークフロー サービスの未処理の例外動作を構成する
+
 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> は、<xref:System.ServiceModel.Activities.WorkflowServiceHost> でホストされるワークフロー内で未処理の例外が発生した場合のアクションを指定できるようにする動作です。 このトピックでは、この動作を構成ファイルで構成する方法を示します。  
   
 ### <a name="to-configure-workflowunhandledexceptionbehavior"></a>WorkflowUnhandledExceptionBehavior を構成するには  
@@ -27,7 +28,7 @@ ms.locfileid: "84593595"
     ```  
   
     > [!NOTE]
-    > 前の構成サンプルでは、簡略化された構成を使用しています。 詳細については、「簡略化された[構成](../simplified-configuration.md)」を参照してください。  
+    > 前の構成サンプルでは、簡略化された構成を使用しています。 詳細については、「簡略化された [構成](../simplified-configuration.md)」を参照してください。  
   
      この動作は、次の例に示すように、コードで構成できます。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "84593595"
      **解約**  
      メモリ内のインスタンスを完了状態にし、そのインスタンスをインスタンス ストアから削除します。  
   
-     の詳細について <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> は、「[ワークフローサービスホストの機能拡張](workflow-service-host-extensibility.md)」を参照してください。  
+     の詳細について <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> は、「 [ワークフローサービスホストの機能拡張](workflow-service-host-extensibility.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

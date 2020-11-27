@@ -2,14 +2,15 @@
 title: メンバーシップとロール プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: e532f35a2c4cd9f53006c088956eadff616d2005
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: fa2a813c2dc1a891119e922c86f045e7f2df7125
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543590"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264713"
 ---
 # <a name="membership-and-role-provider"></a>メンバーシップとロール プロバイダー
+
 メンバーシップとロールプロバイダーのサンプルでは、サービスが ASP.NET のメンバーシップとロールプロバイダーを使用して、クライアントを認証および承認する方法を示します。  
   
  この例では、クライアントはコンソール アプリケーション (.exe) であり、サービスはインターネット インフォメーション サービス (IIS) によってホストされます。  
@@ -170,6 +171,7 @@ ms.locfileid: "90543590"
 > このサンプルを複数のコンピューターで実行している場合、このスクリプトはサービス証明書をクライアントから削除しません。 コンピューター間で証明書を使用する Windows Communication Foundation (WCF) サンプルを実行した場合は、CurrentUser-TrustedPeople ストアにインストールされているサービス証明書を必ずオフにしてください。 削除するには、コマンド `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` を実行します。たとえば、`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` となります。  
   
 ## <a name="the-setup-batch-file"></a>セットアップ バッチ ファイル  
+
  このサンプルに用意されている Setup.bat バッチ ファイルを使用すると、適切な証明書を使用してサーバーを構成し、サーバー証明書ベースのセキュリティを必要とする自己ホスト型アプリケーションを実行できるようになります。 このバッチ ファイルは、複数のコンピューターを使用する場合またはホストなしの場合に応じて変更する必要があります。  
   
  次に、バッチ ファイルのセクションのうち、該当する構成で実行するために変更が必要となる部分を示します。  

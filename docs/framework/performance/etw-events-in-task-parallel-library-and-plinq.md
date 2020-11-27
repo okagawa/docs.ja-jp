@@ -5,16 +5,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tasks, ETW events
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
-ms.openlocfilehash: a1a068b7ba94d5e5be4fd90d6adb48b0d25a8b9e
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 4cb4967ea704064ae08d09311ff33720e3871e19
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309639"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263647"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>タスク並列ライブラリおよび PLINQ での ETW イベント
 
-タスク並列ライブラリおよび PLINQ は、どちらも Windows イベント トレーシング (ETW) イベントを生成します。ETW イベントは、Windows パフォーマンス アナライザーなどのツールを使用して、アプリケーションのプロファイルやトラブルシューティングに使用できます。 ただし、ほとんどのシナリオでは、並列アプリケーションコードをプロファイリングする最良の方法は、Visual Studio で[同時実行ビジュアライザー](/visualstudio/profiling/concurrency-visualizer)を使用することです。
+タスク並列ライブラリおよび PLINQ は、どちらも Windows イベント トレーシング (ETW) イベントを生成します。ETW イベントは、Windows パフォーマンス アナライザーなどのツールを使用して、アプリケーションのプロファイルやトラブルシューティングに使用できます。 ただし、ほとんどのシナリオでは、並列アプリケーションコードをプロファイリングする最良の方法は、Visual Studio で [同時実行ビジュアライザー](/visualstudio/profiling/concurrency-visualizer) を使用することです。
 
 ## <a name="task-parallel-library-etw-events"></a>タスク並列ライブラリの ETW イベント
 
@@ -40,6 +40,7 @@ EVENT_DESCRIPTOR.Id = 1
 |ExclusiveTo|<xref:System.Int64?displayProperty=nameWithType>|ループ カウンターの終了値|
 
 ### <a name="parallel-loop-end"></a>並列ループの終了
+
  EVENT_DESCRIPTOR.Task = 2
 
  EVENT_DESCRIPTOR.Id = 2
@@ -54,6 +55,7 @@ EVENT_DESCRIPTOR.Id = 1
 |totalIterations|<xref:System.Int64?displayProperty=nameWithType>|イテレーションの合計数|
 
 ### <a name="parallel-invoke-begin"></a>並列呼び出しの開始
+
  EVENT_DESCRIPTOR.Task = 3
 
  EVENT_DESCRIPTOR.Id = 3
@@ -70,6 +72,7 @@ EVENT_DESCRIPTOR.Id = 1
 |ActionCount|<xref:System.Int32?displayProperty=nameWithType>|並列呼び出しで実行されるアクションの数。|
 
 ### <a name="parallel-invoke-end"></a>並列呼び出しの終了
+
  EVENT_DESCRIPTOR.Task = 4
 
  EVENT_DESCRIPTOR.Id = 4
@@ -83,11 +86,13 @@ EVENT_DESCRIPTOR.Id = 1
 |ForkJoinContextID|<xref:System.Int32?displayProperty=nameWithType>|入れ子と fork/join セマンティクスでのイベントのペアを示すために使用される一意の識別子。|
 
 ## <a name="plinq-etw-events"></a>PLINQ ETW イベント
+
  PLINQ の EVENT_HEADER.ProviderId GUID は次のとおりです。
 
 `0x159eeeec, 0x4a14, 0x4418, 0xa8, 0xfe, 0xfa, 0xab, 0xcd, 0x98, 0x78, 0x87`
 
 ### <a name="parallel-query-begin"></a>並列クエリの開始
+
  EVENT_DESCRIPTOR.Task = 1
 
  EVENT_DESCRIPTOR.Id = 1
@@ -101,6 +106,7 @@ EVENT_DESCRIPTOR.Id = 1
 |QueryID|<xref:System.Int32?displayProperty=nameWithType>|一意のクエリの識別子。|
 
 ### <a name="parallel-query-end"></a>並列クエリの終了
+
  EVENT_DESCRIPTOR.Task = 2
 
  EVENT_DESCRIPTOR.Id = 2

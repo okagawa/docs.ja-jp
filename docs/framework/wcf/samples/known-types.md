@@ -2,14 +2,15 @@
 title: 既知の型
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: dae271384905df890b2f42196d6e0aadad66be6f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e3f1365d69e218042e3a7c8f1c7f023d9ed7bafb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591840"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263816"
 ---
 # <a name="known-types"></a>既知の型
+
 このサンプルでは、データ コントラクト内の派生型に関する情報を指定する方法を示します。 データ コントラクトを使用すると、サービスと構造化データをやり取りできます。 オブジェクト指向プログラミングでは、別の型から継承される型を元の型の代わりに使用できます。 サービス指向プログラミングでは、型ではなくスキーマが伝達されるので、型と型との関係は保持されません。 <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性を使用すると、派生型に関する情報をデータ コントラクトに含めることができます。 この機構を使用しない場合は、基本型が予期される箇所では派生型を送受信できません。  
   
 > [!NOTE]
@@ -114,7 +115,7 @@ public class DataContractCalculatorService : IDataContractCalculator
 }  
 ```  
   
- クライアントでは、サービスコントラクトとデータコントラクトの両方が、サービスメタデータから[ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)によって生成されるソースファイル generatedClient.cs に定義されています。 <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性はサービスのデータ コントラクト内で指定されるので、クライアントはサービスを使用する際に `ComplexNumber` クラスと `ComplexNumberWithMagnitude` クラスの両方を受け取ることができます。 クライアントは、`ComplexNumberWithMagnitude` を取得したかどうかを検出し、適切な出力を生成します。  
+ クライアントでは、サービスコントラクトとデータコントラクトの両方が、サービスメタデータから [ServiceModel メタデータユーティリティツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) によって生成されるソースファイル generatedClient.cs に定義されています。 <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性はサービスのデータ コントラクト内で指定されるので、クライアントはサービスを使用する際に `ComplexNumber` クラスと `ComplexNumberWithMagnitude` クラスの両方を受け取ることができます。 クライアントは、`ComplexNumberWithMagnitude` を取得したかどうかを検出し、適切な出力を生成します。  
   
 ```csharp
 // Create a client  
@@ -167,6 +168,6 @@ No magnitude was sent from the service
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownTypes`  

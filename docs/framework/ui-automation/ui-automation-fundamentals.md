@@ -7,20 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - UI automation fundamentals
 ms.assetid: d270ab45-542b-45c0-a240-e80aa4a61b95
-ms.openlocfilehash: d62bf321e81fccc10c23b6563a58c1ea6af995f0
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 17d5c55f5f98764cca5988a677e34a5ceb4bbf82
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168423"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262854"
 ---
 # <a name="ui-automation-fundamentals"></a>UI オートメーションの基礎
+
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
  このセクションでは、API の概要について説明 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [UI オートメーションの概要](ui-automation-overview.md)  
  [UI オートメーションと Microsoft Active Accessibility](ui-automation-and-microsoft-active-accessibility.md)  
  [UI オートメーション ツリーの概要](ui-automation-tree-overview.md)  
@@ -30,7 +32,8 @@ ms.locfileid: "87168423"
  [UI オートメーションのセキュリティの概要](ui-automation-security-overview.md)  
  [UI オートメーションによる自動テスト](using-ui-automation-for-automated-testing.md)  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
+
  <xref:System.Windows.Automation>  
   
  <xref:System.Windows.Automation.Provider>  
