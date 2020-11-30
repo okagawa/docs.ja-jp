@@ -5,12 +5,12 @@ helpviewer_keywords:
 - user-filtered exceptions
 - exceptions, user-filtered
 ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
-ms.openlocfilehash: d98412ed651886afc54e15b346a63dc0c549abd0
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4b85c2be0ed61af38eac1b65fb70f0ef1ea4405e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827985"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95669043"
 ---
 # <a name="using-user-filtered-exception-handlers"></a>ユーザー フィルター例外ハンドラーの使用
 
@@ -31,6 +31,7 @@ End Try
  ユーザー フィルター句の式が制限されることはありません。 ユーザー フィルター式の実行中に例外が発生した場合、その例外は破棄され、フィルター式は false と評価されたものと見なされます。 その場合、共通言語ランタイムは、現在の例外に対応するハンドラーの検索を継続します。  
   
 ## <a name="combining-the-specific-exception-and-the-user-filtered-clauses"></a>特定の例外とユーザー フィルター句の組み合わせ  
+
  catch ステートメントには、特定の例外とユーザー フィルター句の両方を記述できます。 ランタイムは、最初に特定の例外をテストします。 特定の例外がテストを通過すると、ランタイムはユーザー フィルターを実行します。 汎用フィルターには、クラス フィルターで宣言されている変数への参照を含めることができます。 なお、2 つのフィルター句の順序をが逆にすることはできません。  
   
  次に示すのは、`ClassLoadException` という例外が指定された **Catch** ステートメントと、**When** キーワードを使用したユーザー フィルター句がある Visual Basic コードの例です。  

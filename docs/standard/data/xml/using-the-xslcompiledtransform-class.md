@@ -2,20 +2,22 @@
 title: XslCompiledTransform クラスの使用
 ms.date: 03/30/2017
 ms.assetid: f9b074f6-d6f4-49dd-a093-df510bf0cf7b
-ms.openlocfilehash: f2eae6f10cc2adf4628a0c2626617ef9a027c598
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: cdcbb803fee8eba2b05c7ca12208dbf9c5ad0f7f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821763"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675608"
 ---
 # <a name="using-the-xslcompiledtransform-class"></a>XslCompiledTransform クラスの使用
+
 <xref:System.Xml.Xsl.XslCompiledTransform> クラスは Microsoft .NET Framework XSLT プロセッサです。 このクラスは、スタイル シートをコンパイルし、XSLT 変換を実行するために使用されます。  
   
 > [!NOTE]
 > 全体的なパフォーマンスは <xref:System.Xml.Xsl.XslCompiledTransform> クラスの方が <xref:System.Xml.Xsl.XslTransform> クラスより優れていますが、<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> クラスの <xref:System.Xml.Xsl.XslCompiledTransform> メソッドが変換で初めて呼び出されたときは、<xref:System.Xml.Xsl.XslTransform.Load%2A> クラスの <xref:System.Xml.Xsl.XslTransform> メソッドよりパフォーマンスが劣る場合があります。 これは、XSLT ファイルを読み込む前にコンパイルする必要があるためです。 詳細については、ブログ記事「[XslCompiledTransform Slower than XslTransform?](/archive/blogs/antosha/xslcompiledtransform-slower-than-xsltransform)」(XslCompiledTransform は XslTransform よりも遅いか?) を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [XslCompiledTransform クラスへの入力](inputs-to-the-xslcompiledtransform-class.md)  
  使用可能な XSLT 入力オプションについて説明します。  
   
@@ -34,6 +36,7 @@ ms.locfileid: "94821763"
 |[方法: ノード フラグメントを変換する](how-to-transform-a-node-fragment.md)|ノード フラグメントの変換方法を説明します。|  
   
 ## <a name="related-sections"></a>関連項目  
+
  [XslTransform クラスからの移行](migrating-from-the-xsltransform-class.md)  
  <xref:System.Xml.Xsl.XslTransform> クラスからコードを移行する方法について説明します。  
   

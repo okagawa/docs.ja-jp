@@ -10,10 +10,10 @@ helpviewer_keywords:
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
 ms.openlocfilehash: 474b22f5a9d8f12c8a4365159817f878761b563c
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89140790"
 ---
 # <a name="from-clause-c-reference"></a>from 句 (C# リファレンス)
@@ -22,7 +22,7 @@ ms.locfileid: "89140790"
 
 - クエリまたはサブクエリを実行するデータ ソース。
 
-- ソース シーケンスの各要素を表す、ローカルの*範囲変数*。
+- ソース シーケンスの各要素を表す、ローカルの *範囲変数*。
 
 範囲変数とデータ ソースの両方は厳密に型指定されます。 `from` 句で参照されるデータ ソースには、<xref:System.Collections.IEnumerable> 型、<xref:System.Collections.Generic.IEnumerable%601> 型、あるいは <xref:System.Linq.IQueryable%601> のような派生型が含まれている必要があります。
 

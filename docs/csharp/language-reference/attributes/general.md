@@ -3,10 +3,10 @@ title: C# の予約済み属性:Conditional、Obsolete、AttributeUsage
 ms.date: 04/09/2020
 description: これらの属性はコンパイラによって解釈され、コンパイラによって生成されたコードに影響を与えます
 ms.openlocfilehash: c6d697dd08233ffc88900949998047137ee170a9
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "82021769"
 ---
 # <a name="reserved-attributes-conditionalattribute-obsoleteattribute-attributeusageattribute"></a>予約済みの属性:ConditionalAttribute、ObsoleteAttribute、AttributeUsageAttribute

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
 ms.openlocfilehash: 6fb33ad2eb3f6a5e8f6506527f3807f31bf33fdc
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92471652"
 ---
 # <a name="value-types-c-reference"></a>値型 (C# リファレンス)
 
-C# 型の 2 つの主なカテゴリは、 *値型* と [参照型](../keywords/reference-types.md)です。 値型の変数には、その型のインスタンスが含まれます。 これは、その型のインスタンスへの参照を含む参照型の変数とは異なります。 既定では、[代入](../operators/assignment-operator.md)時、引数がメソッドに渡され、メソッドの結果が返され、変数値がコピーされます。 値型の変数の場合、対応する型のインスタンスがコピーされます。 次の例は、その動作を示します。
+C# 型の 2 つの主なカテゴリは、*値型* と [参照型](../keywords/reference-types.md)です。 値型の変数には、その型のインスタンスが含まれます。 これは、その型のインスタンスへの参照を含む参照型の変数とは異なります。 既定では、[代入](../operators/assignment-operator.md)時、引数がメソッドに渡され、メソッドの結果が返され、変数値がコピーされます。 値型の変数の場合、対応する型のインスタンスがコピーされます。 次の例は、その動作を示します。
 
 [!code-csharp[copy of values](snippets/shared/ValueTypes.cs#ValueTypeCopied)]
 
@@ -42,7 +42,7 @@ C# 型の 2 つの主なカテゴリは、 *値型* と [参照型](../keywords/
 
 ## <a name="built-in-value-types"></a>組み込みの値型
 
-C# には、 *単純型* とも呼ばれる次の組み込み値型が用意されています。
+C# には、*単純型* とも呼ばれる次の組み込み値型が用意されています。
 
 - [整数数値型](integral-numeric-types.md)
 - [浮動小数点数値型](floating-point-numeric-types.md)

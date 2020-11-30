@@ -11,17 +11,19 @@ helpviewer_keywords:
 - enumerations [.NET], parsing strings
 - base types, parsing strings
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
-ms.openlocfilehash: 6054456b50c48ecee61e95851aee095a4227b176
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1339301786ed0f7ddd41565ca3fc64c2a859b3f4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821930"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683759"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>.NET での数値文字列の解析
+
 すべての数値型には、2 つの静的解析メソッド (`Parse` と `TryParse`) があり、数字の文字列形式を数値型に変換するために使用できます。 これらのメソッドでは、[標準の数値書式指定文字列](standard-numeric-format-strings.md)と[カスタム数値書式指定文字列](custom-numeric-format-strings.md)で記述されている書式指定文字列を使用して、生成された文字列を解析できます。 既定では、`Parse` と `TryParse` メソッドは、10 進数の整数を含む文字列を整数値のみに正常に変換することができます。 これらのメソッドは、整数部と小数部、グループ区切り、および小数点記号を含む文字列を浮動小数点値に正常に変換できます。 `TryParse` メソッドが `false` を返すのに対して、`Parse` メソッドは操作が失敗した場合に例外をスローします。  
   
 ## <a name="parsing-and-format-providers"></a>解析と書式プロバイダー  
+
  通常、数値の文字列形式はカルチャによって異なります。 通貨記号、グループ (または千単位) 区切り、および小数点記号などの数値文字列の要素は、カルチャによって大きく異なります。 暗黙的または明示的のいずれかの解析メソッドでは、これらのカルチャ固有のバリエーションを認識する書式プロバイダーを使用します。 書式プロバイダーが `Parse` または `TryParse` メソッドの呼び出しで指定されない場合、現在のスレッド カルチャ (<xref:System.Globalization.NumberFormatInfo.CurrentInfo%2A?displayProperty=nameWithType> プロパティで返された <xref:System.Globalization.NumberFormatInfo> オブジェクト) と関連付けられた書式プロバイダーが使用されます。  
   
  書式プロバイダーは、<xref:System.IFormatProvider> 実装によって示されます。 このインターフェイスには、1 つのメンバー (<xref:System.IFormatProvider.GetFormat%2A> メソッド) があり、その 1 つのパラメーターは、書式設定される型を示す <xref:System.Type> オブジェクトです。 このメソッドは、書式情報を示すオブジェクトを返します。 .NET では、数値文字列を解析するために、次の 2 つの <xref:System.IFormatProvider> の実装をサポートします。  
@@ -36,6 +38,7 @@ ms.locfileid: "94821930"
  [!code-vb[Parsing.Numbers#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/formatproviders1.vb#1)]  
   
 ## <a name="parsing-and-numberstyles-values"></a>解析と NumberStyles 値  
+
  解析操作が処理できるスタイル要素 (空白文字、グループ区切り、小数点の記号など) は、<xref:System.Globalization.NumberStyles> 列挙値によって定義されます。 既定では、整数値を表す文字列は、<xref:System.Globalization.NumberStyles.Integer?displayProperty=nameWithType> 値を使用して解析されます。これは、数値、先頭と末尾の空白、および先頭の符号のみを許可します。 浮動小数点値を表す文字列は、<xref:System.Globalization.NumberStyles.Float?displayProperty=nameWithType> 値と <xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType> 値の組み合わせを使用して解析されます。この複合スタイルは、先頭と末尾の空白、先頭の符号、小数点記号、グループ区切り、および指数と共に 10 進数を許可します。 <xref:System.Globalization.NumberStyles> 型のパラメーターを含む、`Parse` または `TryParse` メソッドのオーバーロードを呼び出し、1 つ以上の <xref:System.Globalization.NumberStyles> フラグを設定すると、解析操作が成功するように、文字列で示すことができるスタイル要素を制御することができます。  
   
  たとえば、グループ区切りを含む文字列は、<xref:System.Int32.Parse%28System.String%29?displayProperty=nameWithType> メソッドを使用して、<xref:System.Int32> 値に変換することはできません。 ただし、次の例に示すように、<xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType> フラグを使用した場合、この変換は成功します。  
@@ -74,6 +77,7 @@ ms.locfileid: "94821930"
 |<xref:System.Globalization.NumberStyles.HexNumber?displayProperty=nameWithType>|<xref:System.Globalization.NumberStyles.AllowLeadingWhite?displayProperty=nameWithType>、<xref:System.Globalization.NumberStyles.AllowTrailingWhite?displayProperty=nameWithType>、<xref:System.Globalization.NumberStyles.AllowHexSpecifier?displayProperty=nameWithType> スタイルが含まれます。|  
   
 ## <a name="parsing-and-unicode-digits"></a>解析と Unicode 数字  
+
  Unicode 標準では、さまざまな書記体系で数字のコード ポイントを定義します。 たとえば、U+0030 ～ U+0039 のコード ポイントは、0 ～ 9 の基本ラテンの数字を示し、U+09E6 ～ U+09EF のコード ポイントは、0 ～ 9 の数字のベンガル語の数字を示し、U+FF10 ～ U+FF19 のコード ポイントは、0 ～ 9 の全角の数字を示します。 ただし、解析メソッドで認識される数字は、U+0030 ～ U+0039 のコード ポイントの基本ラテンの数字 0 ～ 9 のみです。 数値解析メソッドがその他の数字を含む文字列を渡す場合、メソッドは <xref:System.FormatException> をスローします。  
   
  次の例では、<xref:System.Int32.Parse%2A?displayProperty=nameWithType> メソッドを使用して、異なる書記体系の数字で構成される文字列を解析します。 例の出力に示されているように、基本ラテンの数字を解析する試行は成功しますが、全角、アラビア インド、ベンガル語の数字を解析する試行は失敗します。  

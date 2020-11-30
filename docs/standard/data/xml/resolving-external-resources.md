@@ -2,17 +2,19 @@
 title: 外部リソースの解決
 ms.date: 03/30/2017
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
-ms.openlocfilehash: 460fee3464c7de9a6ad0ca97bf5341fe5078fb47
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: dffaef1b27d5814591c935c0ca795ba4ea3eba84
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820372"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686606"
 ---
 # <a name="resolving-external-resources"></a>外部リソースの解決
+
 **XmlDocument** クラスでは、外部のドキュメント型定義 (DTD)、エンティティ、スキーマなど、XML データのインラインでないリソースを検索するときに **XmlDocument** の **XmlResolver** プロパティを使用します。 これらのリソースは、ネットワーク上やローカル ドライブ上にあり、URI (Uniform Resource Identifier) で識別できます。 そのため、**XmlDocument** は、ドキュメント内にある **EntityReference** ノードを解決し、外部の DTD またはスキーマに基づいてドキュメントを検証することができます。  
   
 ## <a name="fully-trusted-xmldocument"></a>完全に信頼されている XmlDocument  
+
  **XmlResolver** プロパティは、**XmlDocument.Load** メソッドの機能に影響を与えることがあります。 **XmlDocument** オブジェクトが完全に信頼されている場合の **XmlDocument.XmlResolver** プロパティの動作を次の表に示します。 Load への入力が **TextReader**、**String**、**Stream**、または **URI** である場合の **XmlDocument.Load** メソッドが対象です。 **XmlDocument** が **XmlReader** から読み込まれた場合の **Load** メソッドは対象外です。  
   
 |XmlResolver プロパティ|関数|メモ|  
@@ -28,6 +30,7 @@ ms.locfileid: "94820372"
 |**XmlDocument** で使用される **XmlResolver** クラスが、**XmlReader** で使用されるクラスと同じである。|**XmlDocument** は、**XmlReader** に割り当てられた **XmlResolver** を使用します。<br /><br /> **XmlReader**  から **XmlResolver** を取得しているため、**XmlDocument** の信頼レベルにかかわらず、**XmlDocument.Resolver** プロパティは設定できません。 **XmlDocument** の **XmlResolver** プロパティを設定することによって **XmlReaders** の **XmlResolver** の設定をオーバーライドすることはできません。|**XmlReader** は、**XmlTextReader**、**XmlValidatingReader**、または独自に作成したリーダーにすることができます。 使用するリーダーでエンティティ解決がサポートされている場合は、外部エンティティが解決されます。 渡されたリーダーでエンティティ参照がサポートされていない場合は、エンティティ参照は解決されません。|  
   
 ## <a name="semi-trusted-xmldocument"></a>信頼性の高くない XmlDocument  
+
  オブジェクトの信頼性が高くない場合の **XmlDocument.XmlResolver** プロパティの動作を次の表に示します。 Load への入力が **TextReader**、**String**、**Stream**、または **URI** である場合の **XmlDocument.Load** メソッドが対象です。 **XmlDocument** が **XmlReader** から読み込まれた場合の **Load** メソッドは対象外です。  
   
 |XmlResolver プロパティ|関数|メモ|  

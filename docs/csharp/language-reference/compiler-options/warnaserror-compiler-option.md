@@ -10,10 +10,10 @@ helpviewer_keywords:
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
 ms.openlocfilehash: 9c3b307668968865b401aedc04c79f95d4f32513
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91171339"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror (C# コンパイラ オプション)
@@ -42,7 +42,7 @@ ms.locfileid: "91171339"
   
 2. **[ビルド]** プロパティ ページをクリックします。  
   
-3. **警告をエラーとして扱う**プロパティを変更します。  
+3. **警告をエラーとして扱う** プロパティを変更します。  
   
  このコンパイラ オプションをプログラムによって設定するには、「<xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors>」を参照してください。  
   

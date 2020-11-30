@@ -2,14 +2,15 @@
 title: メモリ内の XML データの処理
 ms.date: 03/30/2017
 ms.assetid: 1bbb4d05-ead7-4bda-8ece-f86d35c57ad4
-ms.openlocfilehash: 1b74e029bcda4476d166b83ddecb06e5d607fc3d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 878e008f5c7c3a018389e8666263269162989812
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824693"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686918"
 ---
 # <a name="processing-xml-data-in-memory"></a>メモリ内の XML データの処理
+
 Microsoft .NET Framework には、XML データを処理するための 3 つのモデルである <xref:System.Xml.XmlDocument> クラス、<xref:System.Xml.XPath.XPathDocument> クラス、および [LINQ to XML (C#)](../../linq/linq-xml-overview.md) と [LINQ to XML (Visual Basic)](../../linq/linq-xml-overview.md) が含まれています。  
   
  <xref:System.Xml.XmlDocument> クラスは、W3C ドキュメント オブジェクト モデル (DOM) 勧告の DOM Level 1 Core および DOM Level 2 Core を実装しています。 DOM は XML ドキュメントのメモリ内 (キャッシュ) ツリー表現です。 <xref:System.Xml.XmlDocument> およびその関連クラスを使用すると、XML ドキュメントの作成、データの読み込みとアクセス、データの変更、および変更の保存が可能です。  
@@ -19,6 +20,7 @@ Microsoft .NET Framework には、XML データを処理するための 3 つの
  [LINQ to XML](../../linq/linq-xml-overview.md) は、XML データの処理を目的として .NET Framework バージョン 3.5 で導入されたモデルです。 [統合言語クエリ (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md) を活用するメモリ内モデルです。 LINQ では C# および Visual Basic の言語構文を拡張することで、新しいクエリ機能を実現しています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [DOM モデルを使用した XML データの処理](process-xml-data-using-the-dom-model.md)  
  <xref:System.Xml.XmlDocument> とその関連クラスを使用した XML データの処理について説明します。  
   
@@ -29,4 +31,5 @@ Microsoft .NET Framework には、XML データを処理するための 3 つの
  LINQ to XML の概要を簡単に説明し、LINQ to XML に関する参照先のリンクを示します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [XML ドキュメントと XML データ](index.md)

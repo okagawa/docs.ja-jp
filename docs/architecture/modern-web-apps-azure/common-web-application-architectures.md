@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: dd9cdf3cdda0605d9454fe096be01655e67a0d0a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 86d2e931e6462fb9f6ff5e3cd31b8d3fd188dd5a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169298"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682043"
 ---
 # <a name="common-web-application-architectures"></a>一般的な Web アプリケーション アーキテクチャ
 
@@ -36,7 +36,7 @@ ms.locfileid: "91169298"
 
 単一プロジェクトのモノリシック ソリューションは簡単なのですが、いくつかの欠点があります。 プロジェクトの規模と複雑さが増大するに従い、ファイルとフォルダーの数も増加し続けます。 アルファベット順にグループ化されていない複数のフォルダーには、ユーザー インターフェイス (UI) の懸念事項 (モデル、ビュー、コントローラー) が存在します。 この問題は、Filters や ModelBinders などの UI レベル構造が独自のフォルダーに追加される場合にのみ深刻になります。 ビジネス ロジックは Models フォルダーと Services フォルダーに分散され、どのフォルダーのどのクラスが他のどれに依存すべきかは明示されません。 プロジェクト レベルでのこの編成不足は、[スパゲティ コード](https://deviq.com/spaghetti-code/)の原因となることがよくあります。
 
-これらの問題に対処するために、アプリケーションは多くの場合、マルチ プロジェクト ソリューションに展開されます。ここで、各プロジェクトは、アプリケーションの特定の_レイヤー_ に配置されているとみなされます。
+これらの問題に対処するために、アプリケーションは多くの場合、マルチ プロジェクト ソリューションに展開されます。ここで、各プロジェクトは、アプリケーションの特定の _レイヤー_ に配置されているとみなされます。
 
 ## <a name="what-are-layers"></a>レイヤーとは?
 
@@ -241,7 +241,7 @@ Docker コンテナーは、単純な Web アプリケーションのモノリ�
 
 `eShopOnWeb` プロジェクトは、.NET Core で実行されます。 そのため、Windows ベースまたは Linux ベースのコンテナーで実行できます。 Docker の展開の場合、SQL Server に同じホストの種類を使用する必要があります。 Linux ベースのコンテナーは、小さなフット プリントが可能なので優先されます。
 
-Visual Studio 2017 以降を使用すれば、Docker サポートを既存のアプリケーションに追加することができます。その場合、**ソリューション エクスプローラー**でプロジェクトを右クリックし、 **[追加]**  >  **[Docker サポート]** の順に選択します。 これで、必要なファイルが追加され、そのファイルを使用するようにプロジェクトが変更されます。 現在の `eShopOnWeb` サンプルには既にこれらのファイルが用意されています。
+Visual Studio 2017 以降を使用すれば、Docker サポートを既存のアプリケーションに追加することができます。その場合、**ソリューション エクスプローラー** でプロジェクトを右クリックし、 **[追加]**  >  **[Docker サポート]** の順に選択します。 これで、必要なファイルが追加され、そのファイルを使用するようにプロジェクトが変更されます。 現在の `eShopOnWeb` サンプルには既にこれらのファイルが用意されています。
 
 ソリューション レベルの `docker-compose.yml` ファイルには、どのようなイメージをビルドしてどのようなコンテナーを起動するかに関する情報が含まれています。 このファイルでは、`docker-compose` コマンドを使用し、複数のアプリケーションを同時に起動できます。 この場合、Web プロジェクトのみが起動されます。 別のデータベース コンテナーなど、依存関係を構成する場合にも使用できます。
 
@@ -268,7 +268,7 @@ networks:
 `docker-compose.yml` ファイルは `Web` プロジェクトで `Dockerfile` を参照します。 `Dockerfile` は、使用される基本コンテナーと、その基本コンテナーでのアプリケーションの構成方法を指定する場合に使います。 `Web` の `Dockerfile` は次のとおりです。
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /app
 
 COPY *.sln .
@@ -278,7 +278,7 @@ RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS runtime
+FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS runtime
 WORKDIR /app
 COPY --from=build /app/src/Web/out ./
 

@@ -2,19 +2,21 @@
 title: 単純型を推論するときの規則
 ms.date: 03/30/2017
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-ms.openlocfilehash: 817a35c607f810da0a3e2dc681d27ea997c5fcc7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b8fa3037d9ad5af057f477733ffdea74681f5549
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823551"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686541"
 ---
 # <a name="rules-for-inferring-simple-types"></a>単純型を推論するときの規則
+
 <xref:System.Xml.Schema.XmlSchemaInference> クラスが属性と要素のデータ型を推論する方法を説明します。  
   
  <xref:System.Xml.Schema.XmlSchemaInference> クラスは、属性と要素のデータ型を単純型として推論します。 このセクションでは、推論される可能性がある型、複数の異なる値を 1 つの型に調整する方法、スキーマ定義 `xsi` 属性の取り扱いについて説明します。  
   
 ## <a name="inferred-types"></a>推論型  
+
  <xref:System.Xml.Schema.XmlSchemaInference> クラスは、要素値と属性値を単純型として推論し、生成されるスキーマに型属性をインクルードします。 推論型はすべて単純型です。 生成されるスキーマの一部として基本型またはファセットがインクルードされることはありません。  
   
  XML ドキュメントで値が検出されるたびに、その値が個別に調べられます。 値が調べられるときに、その値の型が推論されます。 属性または要素の型が既に推論されており、その属性または要素に対して新たに検出された値が現在推論されている型と一致しない場合、<xref:System.Xml.Schema.XmlSchemaInference> クラスは、一定の規則に基づいてその型を昇格させます。 型を昇格させるときの規則については、このトピックの「型の昇格」のセクションで説明します。  
@@ -44,6 +46,7 @@ ms.locfileid: "94823551"
 |string|1 つ以上の Unicode 文字|  
   
 ## <a name="type-promotion"></a>型の上位変換  
+
  <xref:System.Xml.Schema.XmlSchemaInference> クラスは属性値と要素値を 1 つずつ調べます。 値が検出されると、最も制限の厳しい、符号なし型が推論されます。 属性または要素の型が推論されている状態で、現在推論されている型と一致しない新しい値が検出されると、推論型が現在の推論型と新しい値の両方に当てはまる新しい型に昇格します。 <xref:System.Xml.Schema.XmlSchemaInference> クラスは、推論型を昇格させるときに前の値を考慮します。  
   
  たとえば、2 つの XML ドキュメントから取得された次の XML フラグメントを見てみましょう。  

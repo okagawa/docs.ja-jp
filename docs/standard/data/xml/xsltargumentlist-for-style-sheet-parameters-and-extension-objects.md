@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-ms.openlocfilehash: 6f0be433abcebed7f9da70225563a04170426314
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: fe227a2d3efc5c36b818b7f4431896e6f62b1f26
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818207"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685046"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>スタイル シート パラメーターと拡張オブジェクト用の XsltArgumentList
+
 <xref:System.Xml.Xsl.XsltArgumentList> クラスには、XSLT (Extensible Stylesheet Language for Transformations) パラメーターと XSLT 拡張オブジェクトが含まれています。 これらのパラメーターと拡張オブジェクトは、<xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡すことで、スタイル シートから呼び出せるようになります。  
   
 > [!NOTE]
@@ -31,6 +32,7 @@ ms.locfileid: "94818207"
 - <xref:System.Xml.XPath.XPathNodeIterator> を使用して結果ツリー フラグメントをスタイル シートに渡す操作がサポートされます。  
   
 ## <a name="xslt-style-sheet-parameters"></a>XSLT スタイル シートのパラメーター  
+
  XSLT パラメーターを <xref:System.Xml.Xsl.XsltArgumentList> に追加するには、<xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> メソッドを使用します。 パラメーターが追加された時点で、修飾名と名前空間 URI (Uniform Resource Identifier) がそのパラメーター オブジェクトに関連付けられます。  
   
  パラメーター オブジェクトは、W3C (World Wide Web Consortium) 型に対応している必要があります。 対応する W3C 型、それと同等の .NET Framework のクラス (型)、および W3C 型が XPath (XML Path Language) 型または XSLT 型のどちらであるかを次の表に示します。  
@@ -54,6 +56,7 @@ ms.locfileid: "94818207"
 3. <xref:System.Xml.Xsl.XsltArgumentList> を <xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡します。  
   
 ### <a name="example"></a>例  
+
  算出された割引日を保持するパラメーターを <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> メソッドを使用して作成する例を次に示します。 割引日は、発注日から 20 日後として算出されます。  
   
 ```vb  
@@ -137,6 +140,7 @@ public class Sample
 ```  
   
 ### <a name="input"></a>入力  
+
  order.xml  
   
 ```xml  
@@ -178,6 +182,7 @@ public class Sample
 ```  
   
 ## <a name="xslt-extension-objects"></a>XSLT 拡張オブジェクト  
+
  XSLT 拡張オブジェクトを <xref:System.Xml.Xsl.XsltArgumentList> に追加するには、<xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> メソッドを使用します。 その時点で、修飾名と名前空間 URI がその拡張オブジェクトに関連付けられます。  
   
  オブジェクトを追加する場合、<xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> の呼び出し元は、セキュリティ ポリシーで完全に信頼されている必要があります。 呼び出し元の信頼性が低いと、処理は失敗します。  
@@ -195,6 +200,7 @@ public class Sample
 3. <xref:System.Xml.Xsl.XsltArgumentList> を <xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡します。  
   
 ### <a name="example"></a>例  
+
  半径が指定された円の円周を算出する例を次に示します。  
   
 ```vb  
@@ -305,6 +311,7 @@ public class Sample
 ```  
   
 ### <a name="input"></a>入力  
+
  number.xml  
   
 ```xml  
@@ -341,6 +348,7 @@ public class Sample
 ```  
   
 ### <a name="output"></a>Output  
+
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  

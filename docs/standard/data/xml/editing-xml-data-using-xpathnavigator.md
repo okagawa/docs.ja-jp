@@ -2,17 +2,19 @@
 title: XPathNavigator による XML データの編集
 ms.date: 03/30/2017
 ms.assetid: b1f91616-3115-4264-9821-c66589d11d11
-ms.openlocfilehash: 812e8dbd0fce70459e9dd38c8b3889e1c1a88074
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c35c63342548a4eaaf8afe68f542c08998de332b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826008"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687386"
 ---
 # <a name="editing-xml-data-using-xpathnavigator"></a>XPathNavigator による XML データの編集
+
 <xref:System.Xml.XPath.XPathNavigator> クラスは、<xref:System.Xml.XmlDocument> オブジェクトに含まれる XML ドキュメントでノードと値の挿入、変更、および削除を行うメソッドを提供します。 ノードと値の挿入、変更、および削除を行うこれらのメソッドを使用するには、<xref:System.Xml.XPath.XPathNavigator> オブジェクトが編集可能である必要があります。つまり、その <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> プロパティを true にする必要があります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [XPathNavigator による XML データの挿入](insert-xml-data-using-xpathnavigator.md)  
  <xref:System.Xml.XmlDocument> クラスを使用して <xref:System.Xml.XPath.XPathNavigator> オブジェクトに兄弟、子、および属性のノードと値を挿入する方法について説明します。  
   

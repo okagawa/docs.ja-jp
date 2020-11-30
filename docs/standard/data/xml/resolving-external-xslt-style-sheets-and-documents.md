@@ -2,14 +2,15 @@
 title: 外部の XSLT スタイル シートとドキュメントの解決
 ms.date: 03/30/2017
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
-ms.openlocfilehash: 370d1df296666e5b5c162db34bd7fb35ae8a2e0e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f1fbf950f7d67d46937652987516e5faf9857b85
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823590"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686567"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>外部の XSLT スタイル シートとドキュメントの解決
+
 変換中には、外部リソースの解決が必要になるときがあります。  
   
 > [!NOTE]
@@ -24,6 +25,7 @@ ms.locfileid: "94823590"
 - <xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドの実行時におけるすべての `document()` 関数の解決。  
   
 ## <a name="using-the-xmlresolver-class"></a>XmlResolver クラスの使い方  
+
  ネットワーク リソースにアクセスするのに認証が必要な場合は、<xref:System.Xml.Xsl.XslTransform.Load%2A> パラメーターを持っている <xref:System.Xml.XmlResolver> メソッドを使用して、必要な資格情報プロパティが設定された <xref:System.Xml.XmlResolver> オブジェクトを渡します。  
   
  独自の <xref:System.Xml.XmlResolver> を使用する場合や、異なる資格情報を指定する必要がある場合は、次の表に示すように、解決する必要のある外部リソースの処理に応じて、適切な作業を実行する必要があります。  

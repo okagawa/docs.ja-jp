@@ -16,14 +16,15 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 88bdb1cb88a5d6ca5c948d5f3110ddb13bdda6ae
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: eb7680607c1def7cdc0dd5670b594e2ee1a6bfff
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830390"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678117"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>イベントベースの非同期パターンの概要
+
 多数のタスクを同時に実行しながら、ユーザーの操作にも応答するアプリケーションには、通常、複数のスレッドを使用するデザインが必要です。 <xref:System.Threading> 名前空間は、高性能なマルチスレッド アプリケーションを作成するのに必要なすべてのツールを提供します。ただし、これらのツールを効果的に使用するには、マルチスレッド ソフトウェア エンジニアリングの豊富な経験が必要です。 比較的単純なマルチスレッド アプリケーションの場合は、<xref:System.ComponentModel.BackgroundWorker> コンポーネントが簡単なソリューションを提供します。 より高度な非同期アプリケーションの場合は、イベント ベースの非同期パターンに準拠したクラスの実装を検討してください。  
   
  イベント ベースの非同期パターンを使用すると、マルチスレッド デザイン固有の多くの複雑な問題を気にせずに、マルチスレッド アプリケーションの利点を活用できます。 このパターンをサポートするクラスを使用すると、次のことが可能になります。  
@@ -48,11 +49,13 @@ ms.locfileid: "94830390"
 > <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 要求が作成されると同時に、ダウンロードが終了する可能性もあります。このような場合、<xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> にはキャンセルの要求が反映されません。 これは *競合状態* と呼ばれる、マルチスレッド プログラミングの一般的な問題です。 マルチスレッド プログラミングの問題の詳細については、「[マネージド スレッド処理のベスト プラクティス](../threading/managed-threading-best-practices.md)」 (管理されたスレッドのベスト プラクティス) を参照してください。  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>イベント ベースの非同期パターンの特性  
+
  イベント ベースの非同期パターンには、特定のクラスでサポートされている操作の複雑さに応じて、複数の形式があります。 最もシンプルなクラスには、単一の _MethodName_**Async** メソッドと、このメソッドに対応する _MethodName_**Completed** イベントが含まれる場合があります。 より複雑なクラスには、複数の _MethodName_**Async** メソッドと、それぞれに対応する _MethodName_**Completed** イベント、およびこれらのメソッドの同期バージョンが含まれる場合があります。 クラスでは、各非同期メソッドの、キャンセル、進行状況のレポート、およびインクリメンタル結果をオプションでサポートできます。  
   
  また、非同期メソッドでは複数の保留中の呼び出し (複数の同時呼び出し) をサポートして、他の保留中の操作が完了するまで、コードを何度も呼び出せるようにできます。 このような状況を適切に処理するには、アプリケーションで各操作の完了を追跡する必要があります。  
   
 ### <a name="examples-of-the-event-based-asynchronous-pattern"></a>イベント ベースの非同期パターンの例  
+
  <xref:System.Media.SoundPlayer> および <xref:System.Windows.Forms.PictureBox> コンポーネントは、イベント ベースの非同期パターンのシンプルな実装です。 <xref:System.Net.WebClient> および <xref:System.ComponentModel.BackgroundWorker> コンポーネントは、イベント ベースの非同期パターンのより複雑な実装です。  
   
  パターンに準拠したクラス宣言の例を次に示します。  
@@ -107,17 +110,20 @@ public class AsyncExample
  架空の `AsyncExample` クラスには 2 つのメソッドがあり、いずれも同期および非同期の呼び出しをサポートしています。 同期のオーバーロードは、呼び出し元スレッドで操作を呼び出しおよび実行する任意のメソッドと同様に動作します。操作に時間がかかる場合は、呼び出しから戻るまでにかなりの遅延が発生する場合があります。 非同期のオーバーロードは、別のスレッドで操作を開始して即座に戻ります。これにより、操作を "バックグラウンド" で実行しながら、呼び出し元スレッドを続行できます。  
   
 ### <a name="asynchronous-method-overloads"></a>非同期メソッドのオーバーロード  
+
  非同期操作には、基本的に単一呼び出しと複数呼び出しの 2 つのオーバーロードがあります。 これら 2 つの形式はそのメソッド シグネチャで区別できます。複数呼び出しの形式には、`userState` という名前の追加のパラメーターがあります。 この形式を使用すると、保留中の非同期操作が完了するのを待たずに、コードで `Method1Async(string param, object userState)` を複数回呼び出すことができます。 一方、直前の呼び出しが完了する前に `Method1Async(string param)` を呼び出そうとすると、メソッドにより <xref:System.InvalidOperationException> が発生します。  
   
  複数呼び出しのオーバーロードの `userState` パラメーターにより、非同期操作を区別できます。 `Method1Async(string param, object userState)` の各呼び出しに一意な値 (GUID やハッシュ コードなど) を指定すると、各操作が完了したときに、イベント ハンドラーは、どの操作のインスタンスが完了イベントを発生させたのかを確認できます。  
   
 ### <a name="tracking-pending-operations"></a>保留中の操作の追跡  
+
  複数呼び出しのオーバーロードを使用する場合は、保留中のタスクの `userState` オブジェクト (タスク ID) を追跡する必要があります。 `Method1Async(string param, object userState)` の呼び出しごとに、通常は新しい一意な `userState` オブジェクトを生成し、それをコレクションに追加します。 この `userState` オブジェクトに対応するタスクが完了イベントを発生させると、完了メソッドの実装は <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A?displayProperty=nameWithType> を調べて、それをコレクションから削除します。 このように使用すると、`userState` パラメーターはタスク ID の役割を果たします。  
   
 > [!NOTE]
 > 複数呼び出しのオーバーロードの呼び出しでは、`userState` に一意な値を指定するように注意が必要です。 タスク ID が一意でないと、非同期クラスが <xref:System.ArgumentException> をスローします。  
   
 ### <a name="canceling-pending-operations"></a>保留中の操作のキャンセル  
+
  非同期操作を完了前にいつでもキャンセルできることは重要です。 イベント ベースの非同期パターンを実装するクラスには、`CancelAsync` メソッド (非同期メソッドが 1 つだけの場合) または _MethodName_**AsyncCancel** メソッド (複数の非同期メソッドがある場合) が含まれます。  
   
  複数呼び出しを可能にするメソッドは `userState` パラメーターを受け取ります。これは、各タスクの有効期間を追跡するのに使用できます。 `CancelAsync` は `userState` パラメーターを受け取ります。このパラメーターにより、特定の保留中のタスクを取り消すことができます。  
@@ -125,6 +131,7 @@ public class AsyncExample
  保留中の操作を一度に 1 つだけサポートする `Method1Async(string param)` のようなメソッドは、キャンセルできません。  
   
 ### <a name="receiving-progress-updates-and-incremental-results"></a>進行状況の更新およびインクリメンタル結果の受信  
+
  イベント ベースの非同期パターンに準拠するクラスは、進行状況およびインクリメンタル結果を追跡するイベントをオプションで提供します。 通常、これは `ProgressChanged` または _MethodName_**ProgressChanged** という名前で、その対応するイベント ハンドラーは <xref:System.ComponentModel.ProgressChangedEventArgs> パラメーターを受け取ります。  
   
  `ProgressChanged` イベントのイベント ハンドラーは、<xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A?displayProperty=nameWithType> プロパティを調べて、非同期タスクの何パーセントが完了したのかを確認できます。 このプロパティは 0 ～ 100 の範囲です。これを使用すると、<xref:System.Windows.Forms.ProgressBar.Value%2A>ar の <xref:System.Windows.Forms.ProgressBar> プロパティを更新できます。 複数の非同期操作が保留中の場合は、<xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A?displayProperty=nameWithType> プロパティを使用して、どの操作が進行状況をレポートしているのかを判別できます。  

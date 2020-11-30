@@ -18,21 +18,23 @@ helpviewer_keywords:
 - literal XML serialization
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
-ms.openlocfilehash: 5c986162de19c2cb27edf19ff8e9e80798f36117
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 64b5911ca110ae4ef08f9003898bb817d8b8dd79
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282364"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676544"
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>XML Web サービスを使用した XML シリアル化
 
 XML シリアル化は、XML Web サービス アーキテクチャで使用される基礎的なトランスポート機構であり、<xref:System.Xml.Serialization.XmlSerializer> クラスによって実行されます。 XML Web サービスによって生成される XML を制御するには、「[XML シリアル化を制御する属性](attributes-that-control-xml-serialization.md)」および「[エンコード済み SOAP シリアル化を制御する属性](attributes-that-control-encoded-soap-serialization.md)」の一覧に示されている属性を、XML Web サービスの作成に使用するファイル (.asmx) のクラス、戻り値、パラメーター、およびフィールドに適用します。 XML Web サービスの作成の詳細については、「[ASP.NET を使用した XML Web サービス](/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100))」を参照してください。  
   
 ## <a name="literal-and-encoded-styles"></a>リテラル スタイルとエンコード済みスタイル  
+
  XML Web サービスによって生成される XML は、「[SOAP メッセージの書式のカスタマイズ](/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))」で説明されているリテラルまたはエンコード済みの 2 種類のうち、いずれかの形式を指定できます。 このため、XML シリアル化を制御する属性セットは 2 つになります。 「[XML シリアル化を制御する属性](attributes-that-control-xml-serialization.md)」の一覧に示される属性は、リテラル スタイルの XML を制御するように設計されています。 一方、「[エンコード済み SOAP シリアル化を制御する属性](attributes-that-control-encoded-soap-serialization.md)」の一覧に示される属性は、エンコード済みスタイルを制御します。 これらの属性を選択的に適用することで、2 つのスタイルのいずれかまたは両方を返すようにアプリケーションを調整できます。 さらに、これらの属性は、必要に応じて戻り値やパラメーターにも適用できます。  
   
 ### <a name="example-of-using-both-styles"></a>両方のスタイルの使用例  
+
  XML Web サービスを作成する場合、両方の属性セットをメソッドで使用できます。 次のコード例では、`MyService` という名前のクラスに、`MyLiteralMethod` と `MyEncodedMethod` という 2 つの XML Web サービス メソッドが含まれています。 いずれのメソッドも、`Order` クラスのインスタンスを返すという同じ機能を実行します。 `Order` クラスでは、<xref:System.Xml.Serialization.XmlTypeAttribute> 属性と <xref:System.Xml.Serialization.SoapTypeAttribute> 属性の両方が `OrderID` フィールドに適用され、両方の属性の `ElementName` プロパティには異なる値が設定されます。  
   
  この例を実行するには、拡張子 .asmx のファイルにコードを貼り付け、そのファイルをインターネット インフォメーション サービス (IIS) によって管理される仮想ディレクトリに配置して、 Internet Explorer などの HTML ブラウザーから、コンピューター名、仮想ディレクトリ名、およびファイル名を入力します。  
@@ -124,6 +126,7 @@ public class MyService {
 ```  
   
 ### <a name="applying-attributes-to-return-values"></a>戻り値への属性の適用  
+
  属性を戻り値に適用して、名前空間や要素名などを制御することもできます。 次のコード例では、`XmlElementAttribute` 属性を `MyLiteralMethod` メソッドの戻り値に適用しています。 このように属性を適用すると、名前空間や要素名を制御できます。  
   
 ```vb  
@@ -163,6 +166,7 @@ public Order MyLiteralMethod(){
 ```  
   
 ### <a name="attributes-applied-to-parameters"></a>パラメーターに適用される属性  
+
  属性をパラメーターに適用して、名前空間や要素名などを指定することもできます。 次のコード例では、`MyLiteralMethodResponse` メソッドにパラメーターを追加し、そのパラメーターに `XmlAttributeAttribute` 属性を適用しています。 パラメーターに対して、要素名と名前空間の両方が設定されます。  
   
 ```vb  
@@ -204,6 +208,7 @@ Namespace="http://www.microsoft.com")] string ID){
 ```  
   
 ### <a name="applying-attributes-to-classes"></a>クラスへの属性の適用  
+
  クラスと相関関係を持つ要素の名前空間を制御する必要がある場合は、必要に応じて `XmlTypeAttribute`、`XmlRootAttribute`、および `SoapTypeAttribute` を適用します。 次のコード例では、3 つの属性すべてを `Order` クラスに適用しています。  
   
 ```vb  

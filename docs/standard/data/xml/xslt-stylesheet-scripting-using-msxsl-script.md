@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: 61538656580878da775d4a42dac40165c7941eee
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 206a659656f1019af1540b9b2476ae7fe9ba93eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818272"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685111"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>\<msxsl:script> を使用した XSLT スタイルシートのスクリプト
+
 <xref:System.Xml.Xsl.XslTransform> クラスは、`script` 要素を使用した埋め込みスクリプトをサポートしています。  
   
 > [!NOTE]
@@ -98,6 +99,7 @@ ms.locfileid: "94818272"
  この例では、アンパサンドがエスケープされないため、結果として例外がスローされます。 このドキュメントは XML として読み込まれ、`msxsl:script` 要素タグ間にあるテキストに対して特別な処理は適用されません。  
   
 ## <a name="example"></a>例  
+
  埋め込みスクリプトを使用して、半径が指定された円の円周を算出する例を次に示します。  
   
 ```vb  
@@ -165,6 +167,7 @@ public class Sample
 ```  
   
 ## <a name="input"></a>入力  
+
  number.xml  
   
 ```xml  

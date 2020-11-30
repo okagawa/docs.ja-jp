@@ -2,14 +2,15 @@
 title: DOM モデルを使用した XML データの処理
 ms.date: 03/30/2017
 ms.assetid: 56b6e9c7-ed82-4a65-a647-7be32c83bcc8
-ms.openlocfilehash: 2608008f33eb8bc0dd0a9b5fe96e619df6138b51
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b0e24527e0edafee16511ea03a229e049b31126c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830910"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686970"
 ---
 # <a name="process-xml-data-using-the-dom-model"></a>DOM モデルを使用した XML データの処理
+
 XML ドキュメント オブジェクト モデル (DOM) は、XML データをメモリ内で処理するために使用され、XML データを標準の一連のオブジェクトとして取り扱います。 `System.Xml` 名前空間は、XML ドキュメント、フラグメント、ノード、またはノードセットのプログラム表現を提供します。 これは、W3C (World Wide Web Consortium) の DOM Level 1 Core および DOM Level 2 Core 勧告に基づいています。  
   
  <xref:System.Xml.XmlDocument> クラスは、XML ドキュメントを表します。 これには、他のすべての XML オブジェクトの取り出しと作成のためのメンバーが含まれます。 <xref:System.Xml.XmlDocument> およびその関連クラスを使用して、XML ドキュメントの作成、データの読み込みとアクセス、データの変更、および変更の保存が可能です。  
@@ -55,5 +56,6 @@ XML ドキュメント オブジェクト モデル (DOM) は、XML データを
 - [DOM の拡張](extending-the-dom.md)  
   
 ## <a name="related-sections"></a>関連項目  
+
  [XPath データ モデルを使用した XML データの処理](process-xml-data-using-the-xpath-data-model.md)  
  <xref:System.Xml.XPath.XPathNavigator> クラスによる XML の処理について説明します。

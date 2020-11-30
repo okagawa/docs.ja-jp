@@ -10,10 +10,10 @@ helpviewer_keywords:
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
 ms.openlocfilehash: d67c99cc841c08a63cc83843a07a46e80199b9d1
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89136903"
 ---
 # <a name="select-clause-c-reference"></a>select 句 (C# リファレンス)
@@ -24,7 +24,7 @@ ms.locfileid: "89136903"
 
 [!code-csharp[cscsrefQueryKeywords#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Select.cs#8)]  
 
-`select` 句によって生成されるシーケンスの型は、クエリ変数 `queryHighScores` の型を決定します。 最も簡単なケースでは、`select` 句は、範囲変数だけを指定します。 これにより、返されるシーケンスにデータ ソースと同じ型の要素が含まれます。 詳細については、「[LINQ クエリ操作での型の関係](../../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)」を参照してください。 ただし、`select` 句は、ソース データを新しい型に変換する (または*投影*する) ための強力なメカニズムも提供します。 詳細については、「[LINQ によるデータ変換 (C#)](../../programming-guide/concepts/linq/data-transformations-with-linq.md)」を参照してください。
+`select` 句によって生成されるシーケンスの型は、クエリ変数 `queryHighScores` の型を決定します。 最も簡単なケースでは、`select` 句は、範囲変数だけを指定します。 これにより、返されるシーケンスにデータ ソースと同じ型の要素が含まれます。 詳細については、「[LINQ クエリ操作での型の関係](../../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)」を参照してください。 ただし、`select` 句は、ソース データを新しい型に変換する (または *投影* する) ための強力なメカニズムも提供します。 詳細については、「[LINQ によるデータ変換 (C#)](../../programming-guide/concepts/linq/data-transformations-with-linq.md)」を参照してください。
 
 ## <a name="example"></a>例
 

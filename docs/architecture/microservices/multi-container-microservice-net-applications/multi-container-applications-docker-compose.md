@@ -2,12 +2,12 @@
 title: docker-compose.yml で複数のコンテナー アプリケーションを定義する
 description: docker-compose.yml を使用して複数コンテナーのアプリケーション用にマイクロサービスの構成を指定する方法。
 ms.date: 01/30/2020
-ms.openlocfilehash: 47f2bf9bcdbf021ec4232ff9e25f6b2b228aaeaa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c375d328ab9064315682fab91cb5e49e9a384b56
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539308"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682667"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml で複数のコンテナー アプリケーションを定義する
 
@@ -388,7 +388,7 @@ services:
 
 この例では、開発オーバーライド構成でいくつかのポートをホストに公開し、リダイレクト URL で環境変数を定義し、開発環境への接続文字列を指定します。 これらの設定はすべて、開発環境のためだけのものです。
 
-`docker-compose up` を実行 (または Visual Studio から起動) すると、コマンドは両方のオーバーライドを、2 つのファイルがマージされているかのように、自動的に読み取ります。
+`docker-compose up` を実行 (または Visual Studio から起動) すると、コマンドは両方のオーバーライドを、2 つのファイルがマージされているかのように、自動的に読み取ります。
 
 運用環境用に、異なる構成値、ポート、または接続文字列を持つ別の Compose ファイルが必要だとします。 異なる設定と環境変数を使用して、`docker-compose.prod.yml` という名前の別の override ファイルを作成できます。 そのファイルは、別の Git リポジトリに格納したり、別のチームによって管理および保護することができます。
 
@@ -437,7 +437,7 @@ Docker-compose は、.env ファイル内の各行が \<variable\>=\<value\> の
 インターネット上のソースで Docker や .NET Core を検索すると、ソースをコンテナーにコピーして Docker イメージを簡単にビルドする方法を示す Dockerfile が見つかります。 これらの例では、単純な構成を使用することで、ご利用のアプリケーションにパッケージ化された環境で Docker イメージを持つことができます。 次の例は、このような単純な Dockerfile を示しています。
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1
+FROM mcr.microsoft.com/dotnet/sdk:3.1
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
 EXPOSE 80
@@ -458,7 +458,7 @@ ENTRYPOINT ["dotnet", "run"]
 
 3. **実稼働**: コンテナーを迅速に展開し、開始することに重点が置かれます。そのため、これらのイメージは、バイナリと、アプリケーションを稼働させるために必要なコンテンツに限定されます。
 
-.NET チームは、次の 4 つの基本的なバリエーションを [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) (Docker Hub) に用意しています。
+.NET チームは、次の 4 つの基本的なバリエーションを [dotnet/core](https://hub.docker.com/_/microsoft-dotnet/) (Docker Hub) に用意しています。
 
 1. **sdk**: 開発シナリオおよびビルド シナリオ向け
 1. **aspnet**: ASP.NET 運用シナリオ向け

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4772f20e-1e7f-496e-93c2-1484473be555
-ms.openlocfilehash: d4936ec32d54a465803d493048cba2b70ed50db6
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c1f519dd539a266d61945ad221bccceaa1361779
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818506"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675621"
 ---
 # <a name="user-defined-functions-and-variables"></a>ユーザー定義の関数と変数
+
 <xref:System.Xml.XPath.XPathNavigator> クラスは、<xref:System.Xml.XPath.XPathDocument> データの操作に使用されるメソッドのセットを提供します。 XPath クエリ式で使用する拡張関数および変数を実装することで、標準の XPath 関数を補完できます。 <xref:System.Xml.XPath.XPathExpression.SetContext%2A> メソッドは、<xref:System.Xml.Xsl.XsltContext> から派生した、ユーザー定義のコンテキストを受け取ることができます。 ユーザー定義の関数は、カスタム コンテキストで解決されます。  
   
  拡張関数および変数は、XML インジェクション攻撃を防止するのに役立ちます。 このようなシナリオでは、処理命令と連結された生の入力としてではなく、ユーザー入力がカスタム変数に割り当てられ、拡張関数で処理されます。 拡張関数および変数にユーザー入力が含まれて、設計者が意図したように、XML データに対してだけ機能します。  

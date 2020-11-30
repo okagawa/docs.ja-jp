@@ -8,10 +8,10 @@ helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
 ms.openlocfilehash: 24f95e828522f467c519c0c8a7ba9410aa97af4e
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89134589"
 ---
 # <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface"::: (C# リファレンス)
@@ -33,7 +33,7 @@ ms.locfileid: "89134589"
 - [インデクサー](../../programming-guide/indexers/using-indexers.md)
 - [イベント](event.md)
 
-これらのメンバー宣言には通常、本文が含まれません。 C# 8.0 以降では、インターフェイス メンバーで本文を宣言できます。 これは*既定の実装*と呼ばれています。 本文のあるメンバーでは、実装がオーバーライドされないクラスおよび構造体に "既定の" 実装を与えることがインターフェイスに許可されます。 また、C# 8.0 以降、インターフェイスには次を含めることができます。
+これらのメンバー宣言には通常、本文が含まれません。 C# 8.0 以降では、インターフェイス メンバーで本文を宣言できます。 これは *既定の実装* と呼ばれています。 本文のあるメンバーでは、実装がオーバーライドされないクラスおよび構造体に "既定の" 実装を与えることがインターフェイスに許可されます。 また、C# 8.0 以降、インターフェイスには次を含めることができます。
 
 - [定数](const.md)
 - [オペレーター](../operators/operator-overloading.md)

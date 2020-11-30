@@ -13,12 +13,12 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-ms.openlocfilehash: 77b879bcc36886a8f457610e6c406bcd121dcfe7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 157ad1e2cc626c508afbcd1b7822e7c64fdf30c2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820554"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686034"
 ---
 # <a name="change-case-in-net"></a>.NET の大文字と小文字の変更
 
@@ -34,6 +34,7 @@ ms.locfileid: "94820554"
 > <xref:System.String.ToUpper%2A?displayProperty=nameWithType> と <xref:System.String.ToLower%2A?displayProperty=nameWithType> の方式を使用して、文字列を比較したり等しいかどうかをテストしたりする目的で、それらの文字列を変換するべきではないことに注意してください。 詳細については、「[大小混合文字の文字列を比較する](#Comparing)」セクションを参照してください。  
   
 <a name="Comparing"></a>
+
 ## <a name="compare-strings-of-mixed-case"></a>大文字と小文字が混在する文字列を比較する  
 
  大小混合文字の文字列を比較してそれらの順序を判別するには、`comparisonType` パラメーターのある <xref:System.String.CompareTo%2A?displayProperty=nameWithType> メソッドのいずれかのオーバーロードを呼び出して、`comparisonType` 引数に <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>、<xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType>、または <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> の値を指定します。 現在のカルチャ以外の特定のカルチャを使用して比較する場合、`culture` と `options` の両方のパラメーターのある <xref:System.String.CompareTo%2A?displayProperty=nameWithType> メソッドのオーバーロードを呼び出して、`options` 引数に <xref:System.Globalization.CompareOptions.IgnoreCase?displayProperty=nameWithType> の値を指定します。  
@@ -43,6 +44,7 @@ ms.locfileid: "94820554"
  詳細については、「[文字列を使用するためのベスト プラクティス](best-practices-strings.md)」を参照してください。  
   
 ## <a name="toupper"></a>ToUpper  
+
  <xref:System.String.ToUpper%2A?displayProperty=nameWithType> メソッドは文字列内のすべての文字を大文字に変換します。 次の例では、文字列 "Hello World!" を 大小混合文字から大文字に変換します。  
   
  [!code-csharp[Strings.ChangingCase#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#1)]
@@ -51,6 +53,7 @@ ms.locfileid: "94820554"
  前の例は、既定でカルチャに依存しています。これには、現在のカルチャのケース表記規則が適用されます。 カルチャに依存しないケース変更を実行したり、特定のカルチャのケース表記規則を適用したりするには、<xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> メソッドのオーバーロードを使用して、*culture* パラメーターに指定のカルチャを表す <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> または <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> オブジェクトの値を提供します。 <xref:System.String.ToUpper%2A> メソッドを使用してカルチャに依存しないケース変更を実行する方法を示す例については、「[カルチャを認識しない大文字と小文字の変更の実行](../globalization-localization/performing-culture-insensitive-case-changes.md)」を参照してください。  
   
 ## <a name="tolower"></a>ToLower  
+
  <xref:System.String.ToLower%2A?displayProperty=nameWithType> メソッドは、前のメソッドと似ていますが、代わりに文字列内のすべての文字を小文字に変換します。 次の例では、文字列 "Hello World!" を 小文字に変換します。  
   
  [!code-csharp[Strings.ChangingCase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#2)]
@@ -59,6 +62,7 @@ ms.locfileid: "94820554"
  前の例は、既定でカルチャに依存しています。これには、現在のカルチャのケース表記規則が適用されます。 カルチャに依存しないケース変更を実行したり、特定のカルチャのケース表記規則を適用したりするには、<xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> メソッドのオーバーロードを使用して、*culture* パラメーターに指定のカルチャを表す <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> または <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> オブジェクトの値を提供します。 <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> メソッドを使用してカルチャに依存しないケース変更を実行する方法を示す例については、「[カルチャを認識しない大文字と小文字の変更の実行](../globalization-localization/performing-culture-insensitive-case-changes.md)」を参照してください。  
   
 ## <a name="totitlecase"></a>ToTitleCase  
+
  <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> は、各単語の最初の文字を大文字に変換し、残りの文字を小文字に変換します。 ただし、すべて大文字である単語は頭字語であると想定されて、変換されません。  
   
  <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> メソッドはカルチャに依存しています。つまり、特定のカルチャのケース表記規則を使用します。 メソッドを呼び出すためには、最初に特定のカルチャのケース表記規則を表す <xref:System.Globalization.TextInfo> オブジェクトを、特定のカルチャの <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType> プロパティから取得します。  

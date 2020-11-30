@@ -15,10 +15,10 @@ helpviewer_keywords:
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
 ms.openlocfilehash: cd7346ae4094a84a398306394f771e040dd7b72f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91193791"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (C# コンパイラ オプション)
@@ -40,7 +40,7 @@ ms.locfileid: "91193791"
  `alias`  
  アセンブリ内のすべての名前空間を格納するルート名前空間を表す有効な C# 識別子。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 
  複数のファイルからインポートするには、ファイルごとに **-reference** オプションを指定します。  
   

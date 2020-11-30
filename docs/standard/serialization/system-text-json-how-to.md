@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: aba45a99562b67df17e1ff33ecc3c8bbad63ec30
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 1e8c46e11d3a82ca0bce29f9cb7bbc749c219198
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440817"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676726"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET 内で JSON のシリアル化と逆シリアル化 (マーシャリングとマーシャリングの解除) を行う方法
 
@@ -116,6 +116,7 @@ UTF-8 にシリアル化するには、<xref:System.Text.Json.JsonSerializer.Ser
 UTF-8 へのシリアル化は、文字列ベースのメソッドを使用するよりも約 5-10% 高速です。 違いは、バイト (UTF-8) を文字列 (UTF-16) に変換する必要がないことから生じます。
 
 ## <a name="serialization-behavior"></a>シリアル化の動作
+
 ::: zone pivot="dotnet-5-0"
 
 * 既定では、すべてのパブリック プロパティがシリアル化されます。 [無視するプロパティを指定する](#ignore-properties)ことができます。

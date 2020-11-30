@@ -9,18 +9,19 @@ helpviewer_keywords:
 - Parse method
 - parsing strings
 ms.assetid: 5e758b41-db93-456b-8999-99b7304b090d
-ms.openlocfilehash: 8fbfe8596e49ed101ea7d6bb65298e432a6fac13
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a5c38c29a45a9ce6f8aed7205c5bd44bebb023c2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821906"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683720"
 ---
 # <a name="parse-strings-in-net"></a>.NET で文字列を解析する
 
 "*解析*" 操作により、.NET の基本データ型を表す文字列が、その基本データ型に変換されます。 たとえば、文字列を浮動小数点数や日付と時刻の値に変換するには、解析操作を使用します。 解析操作を実行するには、`Parse` メソッドがよく使用されます。 解析は書式設定の逆の操作 (基本データ型のその文字列形式への変換を含む) であるため、多くの同じ規則が適用されます。 カルチャに依存する書式情報を指定するために、書式設定で <xref:System.IFormatProvider> インターフェイスを実装するオブジェクトを使用するのと同じように、解析でも <xref:System.IFormatProvider> インターフェイスを実装するオブジェクトを使用し、文字列形式を解釈する方法を決定します。 詳細については、[型の書式設定](formatting-types.md)に関するページをご覧ください。
 
 ## <a name="in-this-section"></a>このセクションの内容
+
  [数値文字列の解析](parsing-numeric.md)\
  文字列を .NET 数値型に変換する方法について説明します。
 
@@ -31,6 +32,7 @@ ms.locfileid: "94821906"
  文字列を **Char** 型、**Boolean** 型、**Enum** 型に変換する方法について説明します。
 
 ## <a name="related-sections"></a>関連項目
+
  [型の書式設定](formatting-types.md)\
  書式指定子や書式プロバイダーなどの基本書式の概念について説明します。
 

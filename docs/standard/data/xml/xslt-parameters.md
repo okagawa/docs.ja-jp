@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-ms.openlocfilehash: c203e17e327cf64690c2748c7f3a4e74b5306501
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 64a62840594773270a658738120812c59b4896cb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818298"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685215"
 ---
 # <a name="xslt-parameters"></a>XSLT パラメーター
+
 XSLT パラメーターを <xref:System.Xml.Xsl.XsltArgumentList> に追加するには、<xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> メソッドを使用します。 その時点で、修飾名と名前空間 URI がそのパラメーター オブジェクトに関連付けられます。  
   
 ### <a name="to-use-an-xslt-parameter"></a>XSLT パラメーターを使用するために必要な処理  
@@ -24,6 +25,7 @@ XSLT パラメーターを <xref:System.Xml.Xsl.XsltArgumentList> に追加す�
 3. <xref:System.Xml.Xsl.XsltArgumentList> オブジェクトを <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> メソッドに渡します。  
   
 ## <a name="parameter-types"></a>パラメーターの型  
+
  このパラメーター オブジェクトは、W3C 型に対応している必要があります。 対応する W3C 型、これと同等の Microsoft .NET のクラス (型)、および W3C 型が XPath 型か XSLT 型であるかを次の表に示します。  
   
 |W3C 型|対応する .NET クラス (型)|XPath 型または XSLT 型|  
@@ -42,6 +44,7 @@ XSLT パラメーターを <xref:System.Xml.Xsl.XsltArgumentList> に追加す�
  その他の型はエラーになります。  
   
 ## <a name="example"></a>例  
+
  算出された割引日を保持するパラメーターを <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> メソッドを使用して作成する例を次に示します。 割引日は、発注日から 20 日後として算出されます。  
   
  [!code-csharp[XSLT_Param#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Param/CS/xsltparam.cs#1)]
@@ -50,9 +53,11 @@ XSLT パラメーターを <xref:System.Xml.Xsl.XsltArgumentList> に追加す�
 ### <a name="input"></a>入力  
   
 ##### <a name="orderxml"></a>order.xml  
+
  [!code-xml[XSLT_Param#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/order.xml#2)]  
   
 ##### <a name="discountxsl"></a>discount.xsl  
+
  [!code-xml[XSLT_Param#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/discount.xsl#3)]  
   
 ### <a name="output"></a>Output  

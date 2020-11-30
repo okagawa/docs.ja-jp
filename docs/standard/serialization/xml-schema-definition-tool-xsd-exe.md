@@ -3,12 +3,12 @@ title: XML Schema Definition Tool (Xsd.exe)
 description: XML シリアライザー ジェネレーター ツールは、指定されたアセンブリ内の型の XML シリアル化アセンブリを生成します。これにより、XmlSerializer の起動パフォーマンスが向上します。
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: c8ae3e05f2d775cbc4c44ce27e7474d1fcfc06a3
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: a66ebfee3a461bb800e61e4f1d789f497da2f9d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281750"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676609"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 
@@ -50,6 +50,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 |**/p\[arameters\]:** _file.xml_|指定された .xml ファイルから各種のオペレーション モードのためのオプションを読み込みます。 短縮形は `/p:` です。 詳細については、「[解説](#remarks)」を参照してください。|
 
 ## <a name="xsd-file-options"></a>XSD ファイルのオプション
+
  .xsd ファイルについては、次のオプションのうち 1 つだけを指定する必要があります。
 
 |オプション|説明|
@@ -105,7 +106,7 @@ Xsd.exe が実行する操作を次の表に示します。
 </xsd>
 ```
 
-この XML が GenerateSchemas.xml というファイルに含まれる場合、コマンド プロンプトで、`/parameters` スイッチを使用して次のように入力し、 **Enter** キーを押します。
+この XML が GenerateSchemas.xml というファイルに含まれる場合、コマンド プロンプトで、`/parameters` スイッチを使用して次のように入力し、**Enter** キーを押します。
 
 ```console
  xsd /p:GenerateSchemas.xml
@@ -205,6 +206,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 |help|このツールのコマンド構文とオプションを表示します。 `true` または `false` に設定します。|
 
 ## <a name="examples"></a>使用例
+
  `myFile.xdr` から XML スキーマを生成し、現在のディレクトリに保存するコマンドを次に示します。
 
 ```console

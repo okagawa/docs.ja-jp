@@ -2,17 +2,19 @@
 title: XSLT エラーの解決
 ms.date: 03/30/2017
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-ms.openlocfilehash: 8a77600c8cc1baf61ed21cc7a480b75dd2fde2dc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2123ead435fe389693f3b141a26873700ba5647f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827582"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686775"
 ---
 # <a name="recoverable-xslt-errors"></a>XSLT エラーの解決
+
 W3C 勧告『XSL Transformations (XSLT) Version 1.0』には、対処方法を実装者が決定できる事項があります。 このような事項は、随意動作と見なされています。 たとえば、XSLT 1.0 Recommendation は、セクション 7.3「Creating Processing Instructions」で、`xsl:processing-instruction` の内容をインスタンス化したときに、テキスト ノード以外のノードが作成されるのはエラーであるとしています。 いくつかの問題に関しては、プロセッサがエラー状態から回復するときにどのような対処をするべきかを、XSLT 1.0 Recommendation が規定しています。 セクション 7.3 に記述されている問題に関しては、W3C では、作成されたノードとその内容を無視することで、このエラーから回復できるとしています。  
   
 ## <a name="discretionary-behaviors"></a>随意動作  
+
  XSLT 1.0 Recommendation で許可されている随意動作と <xref:System.Xml.Xsl.XslCompiledTransform> クラスによるこれらの動作の処理方法を次の表に示します。  
   
 - 復元は、<xref:System.Xml.Xsl.XslCompiledTransform> クラスがこのエラーから回復することを示しています。 <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType> イベントを使用すると、XSLT プロセッサのすべてのイベントを通知できます。  

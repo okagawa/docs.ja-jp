@@ -14,12 +14,12 @@ helpviewer_keywords:
 - serialization, examples
 - binary serialization, examples
 ms.assetid: 22f1b818-7e0d-428a-8680-f17d6ebdd185
-ms.openlocfilehash: 860fdcae0d1937f53ee964d9d4631ec812b3d379
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: ee8bab4fe7659b1fe5b7edeabc81187d0a13e5bc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379137"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679001"
 ---
 # <a name="how-to-chunk-serialized-data"></a>方法 : シリアル化されたデータをチャンクする
 
@@ -46,6 +46,7 @@ Web サービス メッセージ内で大きなデータ セットを送信す�
 2. チャンクされたデータ ストリームを読み込み、バイトをディスクに書き込むための <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> メソッドを実装します。 この実装により、進行状況イベントも発生します。これは、プログレス バーなどのグラフィック コントロールに使用できます。  
   
 ## <a name="example"></a>例  
+
 次のコード例では、クライアント上で ASP.NET バッファリングを無効にする Web メソッドを示します。 また、<xref:System.Xml.Serialization.IXmlSerializable> メソッドにおいてデータをチャンクする <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> インターフェイスをクライアント側で実装する方法も示します。  
   
 [!code-csharp[HowToChunkSerializedData#1](../../../samples/snippets/csharp/VS_Snippets_Remoting/HowToChunkSerializedData/CS/SerializationChunk.cs#1)]

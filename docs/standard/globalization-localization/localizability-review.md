@@ -15,12 +15,12 @@ helpviewer_keywords:
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-ms.openlocfilehash: 30cde57a5c837d9dc324e9cd263d2a1011641af4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ecfba7b6b5908a16bb23860704a35035f58e3ed4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829844"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686021"
 ---
 # <a name="localizability-review"></a>ローカライズ化の確認
 
@@ -35,11 +35,13 @@ ms.locfileid: "94829844"
 - [各種言語データでアプリケーションはテストされているか](#test)
 
 <a name="global"></a>
+
 ## <a name="implement-globalization-recommendations"></a>グローバリゼーションの推奨事項を実装する
 
 ローカライズを考慮してアプリケーションの設計と開発を行い、[グローバリゼーション](globalization.md)に関する記事で説明されている推奨事項に従っている場合、ローカライズ化の確認は品質保証の点でほぼ合格です。 それ以外の場合は、この段階で[グローバリゼーション](globalization.md)の推奨事項を確認して実装し、ローカライズを妨げるソース コードのエラーを修正する必要があります。
 
 <a name="culture"></a>
+
 ## <a name="handle-culture-sensitive-features"></a>カルチャに依存した機能を処理する
 
 .NET では、カルチャによって大きく異なるさまざまな領域のプログラムによるサポートは提供されていません。 ほとんどの場合、次のような機能領域を処理するカスタム コードを作成する必要があります。
@@ -58,6 +60,7 @@ ms.locfileid: "94829844"
    [!code-vb[Conceptual.Localizability#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.localizability/vb/ismetric1.vb#1)]
 
 <a name="test"></a>
+
 ## <a name="test-your-application"></a>アプリケーションのテスト
 
 アプリケーションをローカライズする前に、各言語版のオペレーティング システム上で各種言語データを使用してアプリケーションをテストする必要があります。 この時点では、ほとんどのユーザー インターフェイスはローカライズされていませんが、次のような問題を検出できます。

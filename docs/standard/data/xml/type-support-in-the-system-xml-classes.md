@@ -2,14 +2,15 @@
 title: System.Xml クラスでの型のサポート
 ms.date: 03/30/2017
 ms.assetid: 63570538-06e3-4401-ad4d-ac50be90c7bf
-ms.openlocfilehash: 8e4ef15980f488c473129f4f7c02be1778bcafea
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6fe55c64bc9bd17d5416eebf77060f2be27b81bb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824624"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675660"
 ---
 # <a name="type-support-in-the-systemxml-classes"></a>System.Xml クラスでの型のサポート
+
 .NET Framework Version 2.0 では、コアの XML クラスが強化され、型サポート機能が追加されています。 <xref:System.Xml.XmlReader>、<xref:System.Xml.XmlWriter>、および <xref:System.Xml.XPath.XPathNavigator> クラスには、XML スキーマ型と共通言語ランタイム (CLR) 型の間の変換機能を含む型サポート機能が含まれています。  
   
  .NET Framework Version 2.0 では、<xref:System.Xml.XmlReader>、<xref:System.Xml.XmlWriter>、および <xref:System.Xml.XPath.XPathNavigator> クラスが強化され、型サポート機能が追加されています。  
@@ -26,6 +27,7 @@ ms.locfileid: "94824624"
 > .NET Framework Version 1.0 では、XML スキーマ型と CLR 型の間の変換に <xref:System.Xml.XmlConvert> クラスが必要でした。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [XML データ型から CLR 型へのマッピング](mapping-xml-data-types-to-clr-types.md)  
  XML データ型から CLR 型への既定のマッピングについて説明します。  
   
@@ -36,4 +38,5 @@ ms.locfileid: "94824624"
  XML スキーマ型と CLR 型の間の変換に <xref:System.Xml.XmlConvert> クラスを使用する方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [厳密に型指定された XML データへの XPathNavigator を使用したアクセス](accessing-strongly-typed-xml-data-using-xpathnavigator.md)

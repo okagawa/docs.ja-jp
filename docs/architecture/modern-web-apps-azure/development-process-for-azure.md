@@ -5,10 +5,10 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
 ms.openlocfilehash: 8907c63f8dcd57ec22c3c196cbb1db52d91a3b5f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "91169038"
 ---
 # <a name="development-process-for-azure"></a>Azure の開発プロセス
@@ -62,7 +62,7 @@ CI ビルド プロセスでは、新しいコードがプロジェクトのソ�
 
 自分のチームのメンバーが新しいコードをコミットするたびにシステムによってビルドがキューに入れられるように、必ず、継続的インテグレーションを有効にしてください。 ビルドをテストし、成果物の 1 つとして Web デプロイ パッケージが生成されることを確認します。
 
-ビルドに成功すると、CD プロセスでは CI ビルドの結果が Azure Web アプリにデプロイされます。 これを構成するには、*リリース*を作成して構成します。これは、Azure App Service にデプロイされます。
+ビルドに成功すると、CD プロセスでは CI ビルドの結果が Azure Web アプリにデプロイされます。 これを構成するには、*リリース* を作成して構成します。これは、Azure App Service にデプロイされます。
 
 [Azure Web アプリをデプロイする](/azure/devops/pipelines/targets/webapp)
 

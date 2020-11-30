@@ -13,10 +13,10 @@ helpviewer_keywords:
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
 ms.openlocfilehash: 6f90ce6c1590784cefbd5f15ca8a36941aad77ed
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91193778"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (C# コンパイラ オプション)
@@ -56,7 +56,7 @@ ms.locfileid: "91193778"
   
 1. プロジェクトにリソース ファイルを追加します。  
   
-2. **ソリューション エクスプローラー**で、埋め込むファイルを選択します。  
+2. **ソリューション エクスプローラー** で、埋め込むファイルを選択します。  
   
 3. 選択したファイルの **[プロパティ]** ウィンドウで、**[ビルド アクション]** を選択します。  
   

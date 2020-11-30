@@ -1,7 +1,7 @@
 ---
 title: メンバー アクセス演算子と式 - C# リファレンス
 description: 型のメンバーにアクセスするために使用できる C# 演算子について説明します。
-ms.date: 04/17/2020
+ms.date: 11/13/2020
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 688a1fcff84a6e8f2fa31533a2bc459bf8c8717a
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 28d3d9c3261f1a852d16f2637309b21412611c10
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916790"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95691241"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>メンバー アクセス演算子と式 (C# リファレンス)
 
@@ -137,9 +137,6 @@ A?.B?[C];
 前の例では、`??` 演算子を使用しなければ、`numbers` が `null` の場合、`numbers?.Length < 2` は `false` と評価されます。
 
 Null 条件メンバー アクセス演算子 `?.` は Elvis 演算子とも呼ばれます。
-
-> [!NOTE]
-> C# 8 では、[null を許容する演算子](null-forgiving.md)は、前の null 条件演算のリストを終了します。 たとえば、式 `x?.y!.z` は `(x?.y)!.z` として解析されます。 この解釈のため、`x` が `null` の場合でも `z` が評価されるため、<xref:System.NullReferenceException> が発生する可能性があります。
 
 ### <a name="thread-safe-delegate-invocation"></a>スレッドセーフなデリゲートの呼び出し
 

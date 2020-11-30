@@ -2,12 +2,12 @@
 title: Docker アプリの内部ループ開発ワークフロー
 description: Docker アプリケーションの "内部ループ" 開発ワークフローについて説明します。
 ms.date: 08/06/2020
-ms.openlocfilehash: 071e16afede91f4cfd6cbe8662fa68814ffdcdd7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d66274a64591f79f242c1e8a63951b51d94a9ecd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539763"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676531"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker アプリの内部ループ開発ワークフロー
 
@@ -107,7 +107,7 @@ Docker 拡張機能をインストールするには、Ctrl + Shift + P キー�
 
 **図 4-24** **Add Docker files to Workspace** コマンドで追加された Docker ファイル
 
-DockerFile を追加するとき、(`FROM mcr.microsoft.com/dotnet/core/aspnet` を使用するなどして) 使用する基本の Docker イメージを指定します。 通常、[Docker Hub レジストリ](https://hub.docker.com/)にある公式リポジトリから得られる基本イメージ ([.NET Core 用のイメージ](https://hub.docker.com/_/microsoft-dotnet-core/)や [Node.js 用のイメージ](https://hub.docker.com/_/node/)など) を基礎にしてカスタム イメージをビルドします。
+DockerFile を追加するとき、(`FROM mcr.microsoft.com/dotnet/aspnet` を使用するなどして) 使用する基本の Docker イメージを指定します。 通常、[Docker Hub レジストリ](https://hub.docker.com/)にある公式リポジトリから得られる基本イメージ ([.NET Core 用のイメージ](https://hub.docker.com/_/microsoft-dotnet/)や [Node.js 用のイメージ](https://hub.docker.com/_/node/)など) を基礎にしてカスタム イメージをビルドします。
 
 > [!TIP]
 > アプリケーション内のすべてのプロジェクトに対してこの手順を繰り返す必要があります。 ただし、拡張機能によって、2 回目以降は生成された docker-compose ファイルを上書きするように求められます。 それを上書きしないように応答する必要があります。そうすると拡張機能によって個別の docker-compose ファイルが作成され、docker-compose を実行する前に手動でマージできます。
@@ -119,12 +119,12 @@ DockerFile を追加するとき、(`FROM mcr.microsoft.com/dotnet/core/aspnet` 
 次は .NET Core コンテナー向けサンプル DockerFile です。
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
 COPY ["src/WebApi/WebApi.csproj", "src/WebApi/"]
 RUN dotnet restore "src/WebApi/WebApi.csproj"
@@ -141,7 +141,7 @@ COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "WebApi.dll"]
 ```
 
-この場合、イメージは、`FROM mcr.microsoft.com/dotnet/core/aspnet:3.1` の行から、公式の ASP.NET Core Docker イメージ (Linux および Windows 用マルチアーキテクチャ) のバージョン 3.1 に基づいています。 (このトピックの詳細については、[ASP.NET Core Docker イメージ](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/)に関するページと [.NET Core Docker イメージ](https://hub.docker.com/_/microsoft-dotnet-core/)に関するページを参照してください)。
+この場合、イメージは、`FROM mcr.microsoft.com/dotnet/aspnet:3.1` の行から、公式の ASP.NET Core Docker イメージ (Linux および Windows 用マルチアーキテクチャ) のバージョン 3.1 に基づいています。 (このトピックの詳細については、[ASP.NET Core Docker イメージ](https://hub.docker.com/_/microsoft-dotnet-aspnet/)に関するページと [.NET Core Docker イメージ](https://hub.docker.com/_/microsoft-dotnet/)に関するページを参照してください)。
 
 DockerFile では、実行時に使用する TCP ポートをリッスンするように Docker に指示することもできます (ポート 80 や 443 など)。
 
@@ -154,9 +154,9 @@ DockerFile では、実行時に使用する TCP ポートをリッスンする�
 
 **マルチアーキテクチャ イメージ リポジトリを使用する**
 
-リポジトリの単一のイメージ名には、Linux イメージや Windows イメージなどのプラットフォーム バリアントを含めることができます。 この機能では、Microsoft (基本イメージの作成者) などのベンダーが、複数のプラットフォーム (つまり、Linux および Windows) に対応できるリポジトリを 1 つ作成できます。 たとえば、Docker Hub レジストリにある [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) リポジトリでは、同じイメージ名を使用して Linux および Windows Nano Server をサポートしています。
+リポジトリの単一のイメージ名には、Linux イメージや Windows イメージなどのプラットフォーム バリアントを含めることができます。 この機能では、Microsoft (基本イメージの作成者) などのベンダーが、複数のプラットフォーム (つまり、Linux および Windows) に対応できるリポジトリを 1 つ作成できます。 たとえば、Docker Hub レジストリにある [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/) リポジトリでは、同じイメージ名を使用して Linux および Windows Nano Server をサポートしています。
 
-Windows ホストから [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) イメージをプルした場合、Windows バリアントがプルされ、同じイメージ名が Linux ホストからプルされた場合、Linux バリアントがプルされます。
+Windows ホストから [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/) イメージをプルした場合、Windows バリアントがプルされ、同じイメージ名が Linux ホストからプルされた場合、Linux バリアントがプルされます。
 
 **_基本イメージを一から作成する_**
 
@@ -242,7 +242,7 @@ services:
 
 ### <a name="step-5-build-and-run-your-docker-app"></a>手順 5: Docker アプリをビルドし、実行する
 
-アプリにコンテナーが 1 つしかない場合、必要な作業は Docker ホスト (VM または物理サーバー) にそれを展開して実行することだけになります。 ただし、アプリが複数のサービスで構成されている場合、_それを作成する_必要もあります。 別のオプションを見てみましょう。
+アプリにコンテナーが 1 つしかない場合、必要な作業は Docker ホスト (VM または物理サーバー) にそれを展開して実行することだけになります。 ただし、アプリが複数のサービスで構成されている場合、_それを作成する_ 必要もあります。 別のオプションを見てみましょう。
 
 **_オプション A:1 つのコンテナーまたはサービスを実行する_**
 

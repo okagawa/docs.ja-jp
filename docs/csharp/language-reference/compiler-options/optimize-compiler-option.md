@@ -14,10 +14,10 @@ helpviewer_keywords:
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
 ms.openlocfilehash: 1862794e4d823e38ce19780300a0b04f4e57dc44
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91193986"
 ---
 # <a name="-optimize-c-compiler-options"></a>-optimize (C# コンパイラ オプション)
@@ -48,7 +48,7 @@ ms.locfileid: "91193986"
   
 2. **[ビルド]** プロパティ ページをクリックします。  
   
-3. **コードの最適化**プロパティを変更します。  
+3. **コードの最適化** プロパティを変更します。  
   
  このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>」を参照してください。  
   

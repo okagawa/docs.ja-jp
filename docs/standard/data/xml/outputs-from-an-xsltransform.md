@@ -2,14 +2,15 @@
 title: XslTransform からの出力
 ms.date: 03/30/2017
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
-ms.openlocfilehash: 765f6f9a91cc44a55ab0d66ed71f19f60ef81a56
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ebe276a9627a36f1248f0043af6c82e76fe7fd78
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830065"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95691371"
 ---
 # <a name="outputs-from-an-xsltransform"></a>XslTransform からの出力
+
 スタイル シートは、`<xsl:output>` ステートメントと `method` 属性を使って出力形式を決定できます。次の表では、<xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドを使用して出力を書き出し、出力形式を <xref:System.IO.Stream> または <xref:System.IO.TextWriter> として宣言した場合に出力形式がどうなるかを説明します。  
   
 > [!NOTE]
@@ -52,6 +53,7 @@ ms.locfileid: "94830065"
 - media-type : メディア タイプです。  
   
 ## <a name="escaping-special-characters"></a>特殊文字のエスケープ  
+
  `<xsl:text disable-output-escaping>` 記号の代わりに `<&lt>` を使用するなど、特殊文字を XML 形式にエスケープする必要があるかどうかを示すには、`"<"` タグを使用します。 `disable-output-escaping` オブジェクトまたは <xref:System.Xml.XmlReader> オブジェクトへの変換では <xref:System.Xml.XmlWriter> 属性が無視されるため、特殊文字はこのタグの影響を受けません。  
   
 ## <a name="see-also"></a>関連項目

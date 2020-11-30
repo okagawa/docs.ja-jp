@@ -2,14 +2,15 @@
 title: 保持されずに展開されるエンティティ参照
 ms.date: 03/30/2017
 ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
-ms.openlocfilehash: a446ef35cc9e22660e66d71a9c9332f80117d1ae
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5a3c93807866c5925696f2d913dfc443d8ff12a4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827673"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687451"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>保持されずに展開されるエンティティ参照
+
 エンティティ参照が展開され、それが表すテキストに置き換えられる場合には、**XmlEntityReference** ノードは作成されません。 この場合はエンティティ宣言が解析され、宣言のコンテンツから作成されたノードが **XmlEntityReference** の代わりにコピーされます。 したがって、`&publisher;` の例では、`&publisher;` は保存されず、代わりに **XmlText** ノードが作成されます。  
   
  ![展開されたツリー構造](media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")  

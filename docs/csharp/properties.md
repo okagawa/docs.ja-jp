@@ -4,10 +4,10 @@ description: C# のプロパティについて説明します。C# のプロパ�
 ms.technology: csharp-fundamentals
 ms.date: 04/25/2018
 ms.openlocfilehash: 28050a77e1f7b0ac148bba6112aa79ef4d46b710
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89358909"
 ---
 # <a name="properties"></a>プロパティ
@@ -39,7 +39,7 @@ C# のプロパティは、非常に優れた機能です。 開発者は C# で
 
 [!code-csharp[Person class with properties and backing field](../../samples/snippets/csharp/properties/Person.cs#4)]
 
-プロパティの実装が 1 つの式の場合は、*式形式のメンバー*を get アクセス操作子または set アクセス操作子に使用できます。
+プロパティの実装が 1 つの式の場合は、*式形式のメンバー* を get アクセス操作子または set アクセス操作子に使用できます。
 
 [!code-csharp[Person class with properties and expression bodied getters and setters](../../samples/snippets/csharp/properties/Person.cs#5)]
 
@@ -107,15 +107,15 @@ public class Measurements
 
 上の例では、"[文字列補間](./language-reference/tokens/interpolated.md)" 機能を使用して、フルネームを表す書式設定された文字列を作成しています。
 
-*式形式のメンバー*を使用することもできます。式形式のメンバーを使用すると、計算された `FullName` プロパティを簡潔な方法で作成できます。
+*式形式のメンバー* を使用することもできます。式形式のメンバーを使用すると、計算された `FullName` プロパティを簡潔な方法で作成できます。
 
 [!code-csharp[A computed property using an expression bodied member](../../samples/snippets/csharp/properties/Person.cs#11)]
 
-*式形式のメンバー*では、式が 1 つだけ含まれたメソッドを定義する*ラムダ式*構文を使用します。 ここでは、その式が Person オブジェクトのフルネームを返しています。
+*式形式のメンバー* では、式が 1 つだけ含まれたメソッドを定義する *ラムダ式* 構文を使用します。 ここでは、その式が Person オブジェクトのフルネームを返しています。
 
 ### <a name="cached-evaluated-properties"></a>キャッシュ済みの評価されたプロパティ
 
-計算されたプロパティの概念をストレージと組み合わせて、*キャッシュ済みの評価されたプロパティ*を作成できます。  たとえば、`FullName` プロパティを更新して、プロパティが最初にアクセスされたときに文字列が書式設定されるようにすることができます。
+計算されたプロパティの概念をストレージと組み合わせて、*キャッシュ済みの評価されたプロパティ* を作成できます。  たとえば、`FullName` プロパティを更新して、プロパティが最初にアクセスされたときに文字列が書式設定されるようにすることができます。
 
 [!code-csharp[Caching the value of a computed property](../../samples/snippets/csharp/properties/Person.cs#12)]
 

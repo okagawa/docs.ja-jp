@@ -3,12 +3,12 @@ title: SYSLIB0011 警告
 description: コンパイル時の警告 SYSLIB0011 が生成される旧型式について説明します。
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 1b4f4c24c64148319f659b78573a4d80fd5b98a7
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 99cdd9f5335f71eb9325039891db17972fb48532
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440016"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685007"
 ---
 # <a name="syslib0011-binaryformatter-serialization-is-obsolete"></a>SYSLIB0011:BinaryFormatter は旧型式
 
@@ -32,4 +32,4 @@ ms.locfileid: "94440016"
 ## <a name="see-also"></a>関連項目
 
 - [BinaryFormatter の旧型式と無効化に関するエラーの解決](https://aka.ms/binaryformatter)
-- [BinaryFormatter シリアル化メソッドが古い形式になり、ASP.NET アプリでは使用不可に](corefx.md#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)
+- [BinaryFormatter シリアル化メソッドが古い形式になり、ASP.NET アプリでは使用不可に](core-libraries/5.0/binaryformatter-serialization-obsolete.md)

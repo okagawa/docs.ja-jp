@@ -10,10 +10,10 @@ helpviewer_keywords:
 - -codepage compiler option [C#]
 ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
 ms.openlocfilehash: eda4ce5604beb25ae2d72ac94fbbe7dde9695820
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91196807"
 ---
 # <a name="-codepage-c-compiler-options"></a>-codepage (C# コンパイラ オプション)
@@ -31,7 +31,7 @@ ms.locfileid: "91196807"
  `id`  
  コンパイル時にすべてのソース コード ファイルで使うコード ページの ID です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 
  コンパイラでは、まずすべてのソース ファイルを UTF-8 として解釈しようと試みられます。 ソース コード ファイルが UTF-8 以外のエンコーディングで、7 ビット ASCII 文字以外の文字が使われている場合は、**-codepage** オプションを使用して、使用する必要があるコード ページを指定できます。 **-codepage** は、コンパイル時にすべてのソース コード ファイルに適用されます。  
 

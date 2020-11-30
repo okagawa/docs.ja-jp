@@ -7,10 +7,10 @@ dev_langs:
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
 ms.openlocfilehash: 1264d678b4823149498150f13d8783a82890f6a0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91177714"
 ---
 # <a name="dataadapter-parameters"></a>DataAdapter パラメーター
@@ -167,7 +167,7 @@ adapter.Fill(customers, "Customers");
 ```  
   
 > [!NOTE]
-> パラメーターにパラメーター名が指定されない場合、"Parameter1" から始まり数字が増分される既定名 Parameter*N* ** が割り当てられます。 パラメーター名を指定するときには、Parameter*N* という名前付け規則を使用しないことをお勧めします。これは、指定した名前が `ParameterCollection` 内の既存の既定パラメーター名と競合しないようにするためです。 指定した名前が既に存在する場合は、例外がスローされます。  
+> パラメーターにパラメーター名が指定されない場合、"Parameter1" から始まり数字が増分される既定名 Parameter *N*  が割り当てられます。 パラメーター名を指定するときには、Parameter *N* という名前付け規則を使用しないことをお勧めします。これは、指定した名前が `ParameterCollection` 内の既存の既定パラメーター名と競合しないようにするためです。 指定した名前が既に存在する場合は、例外がスローされます。  
   
 ## <a name="see-also"></a>関連項目
 

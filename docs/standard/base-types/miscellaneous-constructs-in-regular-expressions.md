@@ -9,17 +9,19 @@ helpviewer_keywords:
 - .NET regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-ms.openlocfilehash: c9abccd6c93bad89cc737822fce3990c77b1b96e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ef8f126559b51aa9b918f04e27f5599fba519b43
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821945"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683798"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>正規表現でのその他の構成体
+
 .NET の正規表現には、次の 3 つのその他の言語コンストラクトが含まれます。 1 つは、正規表現パターンの途中で特定の一致オプションを有効または無効にすることができます。 残りの 2 つは、正規表現にコメントを含めることができます。  
   
 ## <a name="inline-options"></a>インライン オプション  
+
  この構文を使用して、正規表現の一部の特定のパターン一致オプションを設定または無効にできます。  
   
 `(?imnsx-imnsx)`  
@@ -56,6 +58,7 @@ ms.locfileid: "94821945"
 |`\b`|ワード境界に一致します。|  
   
 ## <a name="inline-comment"></a>インライン コメント  
+
  `(?#` *comment*`)` コンストラクトを使用して、正規表現にインライン コメントを含めることができます。 <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> メソッドによって返される文字列にコメントが含まれますが、正規表現エンジンは、パターン マッチングでコメントのどの部分も使用しません。 コメントは、最初の閉じかっこで終了します。  
   
  次の例では、前のセクションの例の最初の正規表現パターンを繰り返しています。 比較で大文字小文字を区別するかどうかを示す 2 つのインライン コメントを正規表現に追加しています。 正規表現パターン `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b` は、次のように定義されます。  
@@ -75,6 +78,7 @@ ms.locfileid: "94821945"
  [!code-vb[RegularExpressions.Language.Miscellaneous#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous2.vb#2)]  
   
 ## <a name="end-of-line-comment"></a>行末のコメント  
+
  シャープ記号 (`#`) は、正規表現パターンの末尾のエスケープ解除された # 文字から始まり、行の末尾まで続く x モード コメントをマークします。 このコンストラクトを使用するには、<xref:System.Text.RegularExpressions.Regex> オブジェクトをインスタンス化したり、静的 <xref:System.Text.RegularExpressions.Regex> メソッドを呼び出したりする際に、`x` オプションを有効にする (インライン オプションによって) か、または `option` パラメーターに <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> 値を指定する必要があります。  
   
  次の例は、行末のコメント コンストラクトを示しています。 これは、1 つ以上の書式指定項目を含む複合書式文字列かどうかを判断します。 次の表に、正規表現パターン内のコンストラクトを説明しています。  

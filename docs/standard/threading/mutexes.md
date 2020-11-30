@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Mutex class, about Mutex class
 - threading [.NET], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
-ms.openlocfilehash: 811ee0d2d1068fc1fe8e44aa17f01e2dc243fb98
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: aa5a13b5b1cfcd7305df39c1ff5005deb45eb4ed
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826236"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672176"
 ---
 # <a name="mutexes"></a>ミューテックス
 
@@ -21,6 +21,7 @@ ms.locfileid: "94826236"
  コード例については、<xref:System.Threading.Mutex.%23ctor%2A> コンストラクターのリファレンス ドキュメントを参照してください。  
   
 ## <a name="using-mutexes"></a>ミューテックスの使用  
+
  スレッドはミューテックスの <xref:System.Threading.WaitHandle.WaitOne%2A> メソッドを呼び出して、所有権を要求します。 この呼び出しは、ミューテックスを使用できるようになるまで、あるいはオプションのタイムアウト期間を超過するまでブロックします。 所有しているスレッドがない場合、ミューテックスはシグナル状態になります。  
   
  スレッドは <xref:System.Threading.Mutex.ReleaseMutex%2A> メソッドを呼び出して、ミューテックスを解放します。 ミューテックスにはスレッド アフィニティがあります。つまり、ミューテックスはそれを所有するスレッドによってのみ解放することができます。 スレッドが所有していないミューテックスを解放すると、スレッドで <xref:System.ApplicationException> がスローされます。  
@@ -30,11 +31,13 @@ ms.locfileid: "94826236"
  スレッドが <xref:System.Threading.Mutex> を所有している場合、そのスレッドは待機要求呼び出しを繰り返し行うときに、実行をブロックせずに同じ <xref:System.Threading.Mutex> を指定できます。ただし、呼び出しと同じ回数だけ <xref:System.Threading.Mutex> を解放して、その所有権を解放する必要があります。  
   
 ## <a name="abandoned-mutexes"></a>破棄済みミューテックス  
+
  <xref:System.Threading.Mutex> を解放せずにスレッドが終了すると、ミューテックスは破棄されたと見なされます。 ミューテックスが保護しているリソースが矛盾した状態で残る可能性があるため、多くの場合、これは重大なプログラミング エラーを示します。 ミューテックスを取得する次のスレッドで <xref:System.Threading.AbandonedMutexException> がスローされます。
   
  システム全体でミューテックスが有効な場合にミューテックスが破棄されたときは、アプリケーションが強制終了されたことを示している可能性があります (たとえば、Windows タスク マネージャを使用した終了)。  
   
 ## <a name="local-and-system-mutexes"></a>ローカル ミューテックスとシステム ミューテックス  
+
  ミュー テックスには、ローカル ミューテックスと名前付きシステム ミューテックスという 2 つの種類があります。 名前を受け入れるコンストラクターを使用して <xref:System.Threading.Mutex> オブジェクトを作成すると、そのオブジェクトがその名前のオペレーティング システム オブジェクトに関連付けられます。 名前付きシステム ミューテックスは、オペレーティング システム全体から参照でき、プロセスの動作を同期するために使用できます。 同じ名前付きシステム ミューテックスを表す複数の <xref:System.Threading.Mutex> オブジェクトを作成できます。また、<xref:System.Threading.Mutex.OpenExisting%2A> メソッドを使用して、既存の名前付きシステム ミューテックスを開くことができます。  
   
  ローカル ミューテックスは、現在のプロセス内にのみ存在します。 ローカル <xref:System.Threading.Mutex> オブジェクトを参照するプロセス内のすべてのスレッドから使用できます。 <xref:System.Threading.Mutex> オブジェクトはそれぞれ別のローカル ミューテックスです。  

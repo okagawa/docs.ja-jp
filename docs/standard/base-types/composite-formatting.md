@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: 588efff637359586630554decf57072597365d32
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a0252d013ee6cf7cba7f953fc8a1e2c66c510ca7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823096"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683954"
 ---
 # <a name="composite-formatting"></a>複合書式指定
 
@@ -43,6 +43,7 @@ ms.locfileid: "94823096"
 - <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> メソッド。情報提供メソッドをトレース リスナーに書き込みます。  
   
 ## <a name="composite-format-string"></a>複合書式指定文字列  
+
  複合書式指定文字列とオブジェクト リストは、複合書式指定機能をサポートするメソッドの引数として使用されます。 複合書式指定文字列は、1 つ以上の書式指定項目が混合された 0 個以上の固定テキストで構成されます。 固定テキストはユーザーが任意に選択した文字列で、各書式指定項目はリスト内のオブジェクトまたはボックス化された構造体に対応します。 複合書式指定機能は、各書式指定項目がリスト内の対応するオブジェクトの文字列表現で置換された新しい文字列を返します。  
   
  次の <xref:System.String.Format%2A> コードがあるとします。  
@@ -53,6 +54,7 @@ ms.locfileid: "94823096"
  固定テキストは、"`Name =` " および "`, hours =` " です。 書式指定項目の 1 つは、インデックスが 0 である "`{0}`" であり、オブジェクト `name` に対応します。もう 1 つはインデックスが 1 である "`{1:hh}`" であり、オブジェクト `DateTime.Now` に対応します。  
   
 ## <a name="format-item-syntax"></a>書式指定項目の構文  
+
  各書式指定項目は、次の形式を使用し、次のコンポーネントで構成されます。  
   
  `{` *index*[`,`*alignment*][`:`*formatString*]`}`  
@@ -60,6 +62,7 @@ ms.locfileid: "94823096"
  対になった中かっこ ("{" と "}") が必要です。  
   
 ### <a name="index-component"></a>Index コンポーネント  
+
  必須の *index* コンポーネントは、パラメーター指定子とも呼ばれ、オブジェクトのリスト内で対応する項目を識別するための 0 から始まる数値です。 つまり、パラメーター指定子が 0 である書式指定項目はリスト内の最初のオブジェクトを書式設定し、パラメーター指定子が 1 である書式指定項目はリスト内の 2 番目のオブジェクトを書式設定します。 次の例には、10 未満の素数を表す 4 つのパラメーター指定子 (0 ～ 3 の番号が付けられている) が含まれています。  
   
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
@@ -73,6 +76,7 @@ ms.locfileid: "94823096"
  各書式指定項目は、リスト内のどのオブジェクトでも参照できます。 たとえば、3 つのオブジェクトがある場合は、"{1} {0} {2}" などの複合書式文字列を指定して、2 番目、1 番目、3 番目のオブジェクトの書式を指定できます。 書式指定項目で参照されないオブジェクトは無視されます。 パラメーター指定子がオブジェクトのリストの範囲外の項目を指定する場合は、実行時に <xref:System.FormatException> がスローされます。  
   
 ### <a name="alignment-component"></a>Alignment コンポーネント  
+
  省略可能な *alignment* コンポーネントは、書式設定フィールドの幅を指定する符号付き整数です。 *alignment* の値が書式設定する文字列の長さよりも小さい場合、*alignment* は無視され、書式設定する文字列の長さがフィールドの幅として使用されます。 フィールド内の書式設定されたデータは、*alignment* が正の場合は右揃え、*alignment* が負の場合は左揃えされます。 埋め込みが必要な場合は、空白が使用されます。 *alignment* を指定する場合は、コンマが必要です。  
   
  次の例では、2 つの配列を定義します。1 つの配列には従業員の名前が含まれていて、もう 1 つの配列には従業員が 2 週間にわたって作業した時間数が含まれています。 複合書式指定文字列では、名前が 20 文字のフィールドに左揃えに指定され、時間数が 5 文字のフィールドに右揃えに指定されます。 "N1" 標準書式指定文字列も、時間を 1 桁の小数部で書式設定するために使用されることに注意してください。  
@@ -81,6 +85,7 @@ ms.locfileid: "94823096"
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>Format String コンポーネント  
+
  オプションの *formatString* コンポーネントは、書式設定されるオブジェクトの種類に適した書式指定文字列です。 対応するオブジェクトが数値の場合は標準またはカスタムの数値書式指定文字列を指定し、対応するオブジェクトが <xref:System.DateTime> オブジェクトの場合は標準またはカスタムの日時書式指定文字列を指定し、対応するオブジェクトが列挙値の場合は[列挙型書式指定文字列](enumeration-format-strings.md)を指定します。 *formatString* が指定されない場合は、数値、日付と時刻、または列挙型の汎用 ("G") 書式指定子が使用されます。 *formatString* を指定する場合はコロンが必要です。  
   
  次の表に、事前定義された一連の書式指定文字列がサポートされる .NET クラス ライブラリの型または型のカテゴリの一覧、およびサポートされる書式指定文字列について記述されているトピックへのリンクを示します。 文字列の書式設定とは拡張可能な機構で、既存のすべての型に対する新しい書式指定文字列を定義できるだけでなく、アプリケーション定義の型でサポートされる一連の書式指定文字列も定義できます。 詳しくは、<xref:System.IFormattable> および <xref:System.ICustomFormatter> のインターフェイスに関するトピックを参照してください。  
@@ -94,6 +99,7 @@ ms.locfileid: "94823096"
 |<xref:System.TimeSpan>|[標準の時間間隔書式指定文字列](standard-timespan-format-strings.md)<br /><br /> [カスタム時間間隔書式指定文字列](custom-timespan-format-strings.md)|  
   
 ### <a name="escaping-braces"></a>エスケープ中かっこ ({})  
+
  左中かっこ ({) および右中かっこ (}) は、書式指定項目の開始および終了として解釈されます。 したがって、左中かっこおよび右中かっこを文字として表示するためには、エスケープ シーケンスを使用する必要があります。 左中かっこを 1 つ ("{") 表示するには、左中かっこ 2 つ ("{{") を固定テキストに指定します。また、右中かっこを 1 つ ("}") 表示するには、右中かっこ 2 つ ("}}") を指定します。 書式指定項目に使用されている中かっこは、指定されている順序に従って解釈されます。 入れ子になった中かっこを解釈する機能はサポートされていません。  
   
  エスケープされた中かっこの解釈によっては、予測しない結果になる場合があります。 たとえば、書式項目 "{{{0:D}}}" があるとします。これは、始まりの中かっこ、10 進数で表記された数値、閉じ中かっこを表示することを意図しています。 しかし、この書式指定項目は、実際には、次のように解釈されます。  
@@ -114,6 +120,7 @@ ms.locfileid: "94823096"
  [!code-vb[Formatting.Composite#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Escaping1.vb#2)]  
   
 ### <a name="processing-order"></a>処理の順序  
+
  複合書式指定メソッドの呼び出しに、値が <xref:System.IFormatProvider> でない `null` 引数が含まれている場合、ランタイムはその <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> メソッドを呼び出して、<xref:System.ICustomFormatter> 実装を要求します。 このメソッドが <xref:System.ICustomFormatter> 実装を返すことができる場合、実装は複合書式指定メソッドの呼び出しの期間中キャッシュされます。
   
  書式指定項目に対応するパラメーター リストのそれぞれの値は、次のように文字列に変換されます。  
@@ -135,6 +142,7 @@ ms.locfileid: "94823096"
  前の手順が実行された後、アラインメントが適用されます。  
   
 ## <a name="code-examples"></a>コード例  
+
  複合書式指定を使用して文字列を作成する方法と、オブジェクトの `ToString` メソッドを使用して文字列を作成する方法を示すコード例を次に示します。 この 2 つの書式設定方法では、等価の文字列が作成されます。  
   
  [!code-csharp[Formatting.Composite#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#3)]

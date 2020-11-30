@@ -5,10 +5,10 @@ ms.date: 09/11/2020
 ms.technology: csharp-fundamentals
 ms.custom: mvc
 ms.openlocfilehash: cf6c83484332ed517b2326b3fd9d7458f191227e
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "90738867"
 ---
 # <a name="indices-and-ranges"></a>インデックスと範囲
@@ -54,7 +54,7 @@ string[] words = new string[]
 
 [!code-csharp[LastIndex](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastIndex)]
 
-範囲は、範囲の*先頭*と*末尾*を指定します。 範囲は排他的です。つまり、"*末尾*" は範囲に含まれません。 範囲 `[0..^0]` は、`[0..sequence.Length]` が範囲全体を表すのと同じように、範囲全体を表します。
+範囲は、範囲の *先頭* と *末尾* を指定します。 範囲は排他的です。つまり、"*末尾*" は範囲に含まれません。 範囲 `[0..^0]` は、`[0..sequence.Length]` が範囲全体を表すのと同じように、範囲全体を表します。
 
 次のコードでは、単語 "quick"、"brown"、"fox" から成る部分範囲が作成されます。 それには、`words[1]` から `words[3]` までが含まれます。 要素 `words[4]` が範囲内にありません。 同じメソッドに次のコードを追加します。 それをコピーして、対話型ウィンドウの下部に貼り付けます。
 
@@ -89,7 +89,7 @@ string[] words = new string[]
 >
 > これでは時間計算量以外に、パフォーマンスに影響する割り当てとコピーも追加で発生します。 パフォーマンスが重視されるコードでは、シーケンス型として範囲演算子が割り当てられない `Span<T>` または `Memory<T>` を使用することを検討してください。
 
-アクセス可能なゲッターと戻り値の型 `int` を持つ `Length` または `Count` という名前のプロパティがある場合、型は**可算**です。 インデックスまたは範囲を明示的にサポートしていない可算型は、それらを暗黙的にサポートしている可能性があります。 詳細については、[機能の提案に関する注記](~/_csharplang/proposals/csharp-8.0/ranges.md)の「[暗黙的なインデックスのサポート](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support)」と「[暗黙的な範囲のサポート](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support)」のセクションを参照してください。 暗黙的な範囲のサポートを使用している範囲によって返されるのは、ソース シーケンスと同じシーケンス型です。
+アクセス可能なゲッターと戻り値の型 `int` を持つ `Length` または `Count` という名前のプロパティがある場合、型は **可算** です。 インデックスまたは範囲を明示的にサポートしていない可算型は、それらを暗黙的にサポートしている可能性があります。 詳細については、[機能の提案に関する注記](~/_csharplang/proposals/csharp-8.0/ranges.md)の「[暗黙的なインデックスのサポート](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support)」と「[暗黙的な範囲のサポート](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support)」のセクションを参照してください。 暗黙的な範囲のサポートを使用している範囲によって返されるのは、ソース シーケンスと同じシーケンス型です。
 
 たとえば、次の .NET 型ではインデックスと範囲の両方がサポートされています: <xref:System.String>、<xref:System.Span%601>、および <xref:System.ReadOnlySpan%601>。 <xref:System.Collections.Generic.List%601> はインデックスをサポートしていますが、範囲はサポートしていません。
 

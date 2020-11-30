@@ -8,10 +8,10 @@ helpviewer_keywords:
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
 ms.openlocfilehash: 484505406701b52a2b80b95b718a23a2156aa22c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "90556090"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>WCF Data Services の開発と配置
@@ -121,7 +121,7 @@ WCF Data Services では、データ サービスをホストするプロセス�
 
 データ サービスを配置する際は、次の点を考慮してください。
 
-- Entity Framework プロバイダーを使用して SQL Server データベースにアクセスするデータ サービスを配置する場合、データ サービスの配置でのデータ構造、データ、またはその両方の反映も必要になることがあります。 Visual Studio では対象データベースでこの操作を行うスクリプト (.sql ファイル) を自動的に作成することができ、これらのスクリプトを ASP.NET アプリケーションの Web 配置パッケージに含めることができます。 詳細については、[Web アプリケーション プロジェクトと共にデータベースを配置する](/previous-versions/dd465343(v=vs.100))」を参照してください。 ASP.NET Web サイトの場合は、Visual Studio の**データベースの発行ウィザード**を使用してこの操作を実行できます。 詳細については、「[SQL Database の発行](/previous-versions/aspnet/bb907585(v=vs.100))」をご覧ください。
+- Entity Framework プロバイダーを使用して SQL Server データベースにアクセスするデータ サービスを配置する場合、データ サービスの配置でのデータ構造、データ、またはその両方の反映も必要になることがあります。 Visual Studio では対象データベースでこの操作を行うスクリプト (.sql ファイル) を自動的に作成することができ、これらのスクリプトを ASP.NET アプリケーションの Web 配置パッケージに含めることができます。 詳細については、[Web アプリケーション プロジェクトと共にデータベースを配置する](/previous-versions/dd465343(v=vs.100))」を参照してください。 ASP.NET Web サイトの場合は、Visual Studio の **データベースの発行ウィザード** を使用してこの操作を実行できます。 詳細については、「[SQL Database の発行](/previous-versions/aspnet/bb907585(v=vs.100))」をご覧ください。
 
 - WCF Data Services には基本的な WCF の実装が含まれているので、Windows Server AppFabric を使用して、Windows Server 上で実行されている IIS に配置されたデータ サービスを監視できます。 Server AppFabric を使用したデータ サービスの監視の詳細については、「[Windows Server AppFabric による WCF Data Services の追跡](/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric)」の記事を参照してください。
 

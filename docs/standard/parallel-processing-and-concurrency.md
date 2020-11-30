@@ -7,17 +7,19 @@ helpviewer_keywords:
 - concurrency [.NET]
 - asynchronous programming [.NET]
 ms.assetid: e573faa8-0212-44b1-a850-ce85dc54f47f
-ms.openlocfilehash: 7ac888ed877adf3652f5de243a046f3c5117dc61
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 3cdb5c2ecd23635d8faf0eb4bc93d201869039b0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817498"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682680"
 ---
 # <a name="parallel-processing-concurrency-and-async-programming-in-net"></a>.NET での並列処理、コンカレンシー、および非同期プログラミング
+
 .NET で提供されている複数の方法を使用すると、ユーザーに対するアプリケーションの応答性を高くする非同期コードや、複数の実行スレッドを使用してユーザーのコンピューターのパフォーマンスを最大化する並列コードを、記述することができます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [非同期の概要](async.md)  
  .NET によって提供される非同期プログラミングのメカニズムについて説明します。  
   

@@ -3,12 +3,12 @@ title: SYSLIB0007 警告
 description: コンパイル時の警告 SYSLIB0007 が生成される旧型式について説明します。
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 4c0feac1d673e3462a4f2db470825b15cf1b1706
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: db7150fa3e3c566adf110034734e068fac079c6d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439943"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685020"
 ---
 # <a name="syslib0007-default-implementations-of-cryptography-algorithms-not-supported"></a>SYSLIB0007: 暗号化アルゴリズムの既定の実装はサポートされていません
 
@@ -38,4 +38,4 @@ ms.locfileid: "94439943"
 
 ## <a name="see-also"></a>関連項目
 
-- [暗号での破壊的変更](cryptography.md#instantiating-default-implementations-of-cryptographic-abstractions-is-not-supported)
+- [暗号抽象化の既定の実装のインスタンス化はサポートされていない](cryptography/5.0/instantiating-default-implementations-of-cryptographic-abstractions-not-supported.md)

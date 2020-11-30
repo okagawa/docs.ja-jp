@@ -10,10 +10,10 @@ helpviewer_keywords:
 - -keycontainer compiler option [C#]
 ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
 ms.openlocfilehash: 93ee5cd755a4fd6918d2a5825b63151a201a8f6a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91152469"
 ---
 # <a name="-keycontainer-c-compiler-options"></a>-keycontainer (C# コンパイラ オプション)
@@ -31,7 +31,7 @@ ms.locfileid: "91152469"
  `string`  
  厳密な名前のキー コンテナーの名前です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 
  **-keycontainer** オプションを使うと、コンパイラは共有可能なコンポーネントを作成します。 コンパイラは、指定されたコンテナーからアセンブリ マニフェストに公開キーを挿入し、最終的なアセンブリに秘密キーで署名します。 キー ファイルを生成するには、コマンド ラインで「`sn -k file`」と入力します。 `sn -i` は、キー ペアをコンテナーにインストールします。 コンパイラが CoreCLR 上で実行するときは、このオプションはサポートされません。 CoreCLR 上でビルドするときにアセンブリに署名するには、[-keyfile](keyfile-compiler-option.md) オプションを使います。
   

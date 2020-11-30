@@ -10,10 +10,10 @@ helpviewer_keywords:
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
 ms.openlocfilehash: 3fdb030dfc141b011f5faa827a4e4bb45ae38d19
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89466015"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (C# コンパイラ オプション)
