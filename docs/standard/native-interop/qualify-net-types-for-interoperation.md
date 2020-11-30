@@ -10,14 +10,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET components
 - COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
-ms.openlocfilehash: 3fa9f0d5d8dd4d532fc510a1d946eddf32016748
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 3f5fe0f168e0e520ce1985faf5a8228c1bfbdf20
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93187763"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734310"
 ---
 # <a name="qualifying-net-types-for-com-interoperation"></a>COM 相互運用のための .NET 型の要件
+
 COM アプリケーションにアセンブリ内の型を公開する場合は、設計時に COM 相互運用の要件を検討する必要があります。 以下のガイドラインに従うと、マネージド型 (クラス、インターフェイス、構造体、列挙型) は COM の型とシームレスに統合します。  
   
 - クラスは、インターフェイスを明示的に実装する必要があります。  

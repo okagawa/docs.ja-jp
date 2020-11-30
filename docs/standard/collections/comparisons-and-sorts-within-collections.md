@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-ms.openlocfilehash: 343f633b3807391b8deea28f56a5166ac3d8c8c5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e4d40568710498df811954c86bb36382d93057a3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823863"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733543"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>コレクション内での比較と並べ替え
 
@@ -26,6 +26,7 @@ ms.locfileid: "94823863"
 通常、コレクションは等値比較子か順序比較子、またはその両方を使用します。 比較には 2 つのコンストラクターが使用されます。
 
 <a name="BKMK_Checkingforequality"></a>
+
 ## <a name="check-for-equality"></a>等しいかどうかの確認
 
 `Contains`、 <xref:System.Collections.IList.IndexOf%2A>、 <xref:System.Collections.Generic.List%601.LastIndexOf%2A>、 `Remove` などのメソッドは、コレクション要素に対して等値比較子を使用します。 コレクションがジェネリックの場合、次のガイドラインに従ってアイテムの等価性が比較されます。
@@ -37,6 +38,7 @@ ms.locfileid: "94823863"
 また、ディクショナリ コレクションのコンストラクターの一部のオーバーロードでは、<xref:System.Collections.Generic.IEqualityComparer%601> の実装が受け付けられて、キーが等しいかどうかを比較するために使用されます。 例については、 <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A> コンストラクターに関する説明を参照してください。
 
 <a name="BKMK_Determiningsortorder"></a>
+
 ## <a name="determine-sort-order"></a>並べ替え順序の決定
 
 `BinarySearch` 、 `Sort` などのメソッドは、コレクション要素に対して順序比較子を使用します。 コレクションの要素間または要素と指定された値との間で比較を実行できます。 オブジェクトの比較には、 `default comparer` と `explicit comparer`の概念が適用されます。
@@ -54,6 +56,7 @@ ms.locfileid: "94823863"
 システムの現在のカルチャ設定は、コレクション内の比較と並べ替えに影響を与える可能性があります。 既定では、 **Collections** クラスの比較と並べ替えはカルチャに依存します。 カルチャ設定を無視して一貫した比較と並べ替えの結果を得るには、 <xref:System.Globalization.CultureInfo.InvariantCulture%2A> を受け取るメンバー オーバーロードと共に <xref:System.Globalization.CultureInfo>を使用します。 詳細については、[カルチャの影響を受けないコレクションの操作の実行](../globalization-localization/performing-culture-insensitive-string-operations-in-collections.md)および[カルチャの影響を受けない配列の操作の実行](../globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md)を参照してください。
 
 <a name="BKMK_Equalityandsortexample"></a>
+
 ## <a name="equality-and-sort-example"></a>等価性と並べ替えの例
 
 次のコードは、単純なビジネス オブジェクトでの <xref:System.IEquatable%601> と <xref:System.IComparable%601> の実装を示しています。 また、オブジェクトがリストに格納され、並べ替えられている場合、 <xref:System.Collections.Generic.List%601.Sort> メソッドを呼び出すと、結果的に `Part` 型の既定の比較子と、匿名メソッドを使用して実装された <xref:System.Collections.Generic.List%601.Sort%28System.Comparison%7B%600%7D%29> メソッドを使用することになります。

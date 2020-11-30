@@ -9,14 +9,15 @@ helpviewer_keywords:
 - providers [.NET], in observer design pattern
 - observables [.NET], in observer design pattern
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
-ms.openlocfilehash: c58d4b79c9f722889352587c2cb1313fc1595319
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b63666a581959f7a6c6a30ca8763f9c22067f32a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828349"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734336"
 ---
 # <a name="how-to-implement-a-provider"></a>方法: プロバイダーを実装する
+
 オブザーバー デザイン パターンでは、データを監視して通知を送信するプロバイダーと、プロバイダーから通知 (コールバック) を受信する 1 つまたは複数のオブザーバーを分ける必要があります。 このトピックでは、プロバイダーを作成する方法について説明します。 関連トピックの「[方法: オブザーバーを実装する](how-to-implement-an-observer.md)」でオブザーバーの作成方法について説明します。  
   
 ### <a name="to-create-a-provider"></a>プロバイダーを作成するには  
@@ -52,6 +53,7 @@ ms.locfileid: "94828349"
      [!code-vb[Conceptual.ObserverDesign.HowTo#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#6)]  
   
 ## <a name="example"></a>例  
+
  次の例では、温度を監視するアプリケーションの <xref:System.IObservable%601> 実装を定義するソース コードをまるごと確認できます。 オブザーバーに送信されるデータである `Temperature` 構造と <xref:System.IObservable%601> 実装である `TemperatureMonitor` クラスが含まれています。  
   
  [!code-csharp[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#7)]

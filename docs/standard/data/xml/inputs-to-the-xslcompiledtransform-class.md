@@ -5,20 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
-ms.openlocfilehash: 06427097e1e242171abe84ea557cdbb108d98a9d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: af529f1c6ccfe3abe761c7707772d6f9697c179d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830221"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733426"
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>XslCompiledTransform クラスへの入力
+
 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> メソッドには、<xref:System.Xml.XPath.IXPathNavigable> インターフェイスを実装するオブジェクト、ソース ドキュメントを読み取る <xref:System.Xml.XmlReader> オブジェクト、文字列 URI という 3 種類のソース ドキュメントを入力できます。  
   
 > [!NOTE]
 > <xref:System.Xml.Xsl.XslCompiledTransform> クラスは既定で空白を維持します。 このことは、[W3C XSLT 1.0 勧告のセクション 3.4](https://www.w3.org/TR/xslt.html#strip) に準拠しています。  
   
 ## <a name="ixpathnavigable-interface"></a>IXPathNavigable インターフェイス  
+
  <xref:System.Xml.XPath.IXPathNavigable> インターフェイスは、<xref:System.Xml.XmlNode> および <xref:System.Xml.XPath.XPathDocument> クラスに実装されています。 これらのクラスは XML データのメモリ内のキャッシュを表します。  
   
 - <xref:System.Xml.XmlNode> クラスは W3C ドキュメント オブジェクト モデル (DOM) を基礎とし、編集機能も含んでいます。  
@@ -34,6 +36,7 @@ ms.locfileid: "94830221"
  [!code-vb[XslCompiledTransform.Transform2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#1)]  
   
 ## <a name="xmlreader-object"></a>XmlReader オブジェクト  
+
  <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> メソッドは、<xref:System.Xml.XmlReader> の現在のノードから、そのすべての子を通して読み込みます。 これにより、ドキュメントの一部をコンテキスト ドキュメントとして使用することができます。 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> メソッドから帰った後、<xref:System.Xml.XmlReader> は、コンテキスト ドキュメントの終了後の次のノード上に位置します。 ドキュメントの末尾に到達すると、<xref:System.Xml.XmlReader> はファイルの末尾 (EOF) に位置します。  
   
  次の例では、<xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> メソッドにより、transform.xsl スタイル シートを使用して books.xml ファイルを books.html ファイルに変換しています。 books.xml ファイルおよび transform.xsl ファイルについては、「[方法: アセンブリを使用して XSLT 変換を実行する](how-to-perform-an-xslt-transformation-by-using-an-assembly.md)」のトピックを参照してください。  
@@ -42,6 +45,7 @@ ms.locfileid: "94830221"
  [!code-vb[XslCompiledTransform.Transform2#2](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#2)]  
   
 ## <a name="string-uri"></a>文字列 URI  
+
  XSLT の入力としてソース ドキュメントの URI を指定することもできます。 URI の解決には <xref:System.Xml.XmlResolver> が使用されます。 <xref:System.Xml.XmlResolver> を <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> メソッドに渡して、使用するリゾルバーを指定することができます。 <xref:System.Xml.XmlResolver> が指定されていない場合、<xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> メソッドは既定の <xref:System.Xml.XmlUrlResolver> を資格情報なしで使用します。  
   
  次の例では、<xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> メソッドにより、transform.xsl スタイル シートを使用して books.xml ファイルを books.html ファイルに変換しています。 books.xml ファイルおよび transform.xsl ファイルについては、「[方法: アセンブリを使用して XSLT 変換を実行する](how-to-perform-an-xslt-transformation-by-using-an-assembly.md)」のトピックを参照してください。  

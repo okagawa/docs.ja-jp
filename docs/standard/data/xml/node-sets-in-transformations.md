@@ -2,14 +2,15 @@
 title: 変換におけるノード セット
 ms.date: 03/30/2017
 ms.assetid: ad034f0e-ff8b-4a71-9a4c-528c754263c4
-ms.openlocfilehash: 72b3af5b471d73cc159dd700ddd29c4ffb5ea639
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2ace103d9721b2adecb08a25ab89cf9b0f05bb93
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830117"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734115"
 ---
 # <a name="node-sets-in-transformations"></a>変換におけるノード セット
+
 ノード セットは、XPath (XML Path Language) 式が返す 4 つの基本データ型のうちの 1 つです。 ノード セットは、ドキュメントの順番で作成された、重複がなくソートされていないノードのコレクションであり、スタイル シートの変数に割り当てることができます。  
   
 > [!NOTE]

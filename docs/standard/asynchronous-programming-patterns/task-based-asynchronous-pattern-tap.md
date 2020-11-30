@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET support for
 - .NET, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-ms.openlocfilehash: f194a0bafa0ab7b9606d72f091dbb12e94f31099
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: eae224312d147f3ec68b75824d90e5df40d886e7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824019"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733738"
 ---
 # <a name="task-based-asynchronous-pattern"></a>タスク ベースの非同期パターン
 
@@ -35,6 +35,7 @@ TAP では、非同期操作の開始と終了を表すために単一のメソ�
  非同期プログラミング モデル (APM) やイベント ベースの非同期パターン (EAP) など、従来の非同期プログラミング パターンで使用される構文とは異なる TAP 構文の例については、「[非同期プログラミングのパターン](index.md)」を参照してください。  
   
 ## <a name="initiating-an-asynchronous-operation"></a>非同期操作の開始  
+
  TAP に基づく非同期メソッドは、引数の検証や非同期操作の開始などの少量の作業を同期をとって実行してから結果のタスクを返すことができます。 このような同期作業は必要最低限にし、非同期メソッドからすぐに制御を戻すようにします。 制御をすぐに戻す理由は次のとおりです。  
   
 - 非同期メソッドはユーザー インターフェイス (UI) スレッドから呼び出される可能性があるため、同期作業の実行に時間がかかると、アプリケーションの応答性が低下します。  
@@ -44,19 +45,23 @@ TAP では、非同期操作の開始と終了を表すために単一のメソ�
  場合によっては、操作の完了に必要な作業の量は、操作を非同期に起動するのに必要な作業量よりも少なくなります。 このようなシナリオの例にはストリームからの読み取りがあり、既にメモリ バッファーにあるデータを読み取ることで読み取り操作が完了する場合です。 このような場合は、操作を同期をとって実行し、既に完了しているタスクを返すことができます。  
   
 ## <a name="exceptions"></a>例外  
+
  非同期メソッドは、使用エラーに応答して非同期メソッド呼び出しからスローされる例外のみを発生する必要があります。 運用コードでは使用エラーを発生させないようにする必要があります。 たとえば、null 参照 (Visual Basic では `Nothing`) がメソッドの引数の 1 つとして渡されたときにエラー状態 (通常、<xref:System.ArgumentNullException> 例外によって表される) が発生する場合、呼び出し元のコードを変更し、確実に null 参照が渡されないようにすることができます。 他のエラーの場合はすべて、非同期メソッドの実行中に発生する例外を、返されるタスクに割り当てます。これは、タスクが返される前に非同期メソッドが同期をとって行われる場合でも同じです。 通常、タスクに含まれる例外は最大でも 1 つです。 ただし、タスクが複数の操作 (<xref:System.Threading.Tasks.Task.WhenAll%2A> など) を表す場合は、複数の例外を単一タスクに関連付けることができます。  
   
 ## <a name="target-environment"></a>ターゲット環境  
+
  TAP メソッドを実装するときに、非同期実行をどこで行うかを決定できます。 スレッド プールでワークロードを実行したり、(操作の実行のほとんどでスレッドにバインドされないように) 非同期 I/O を使用して実装したり、特定のスレッド (UI スレッドなど) で実行したり、任意の数の可能なコンテキストを使用したりすることができます。 TAP メソッドは何も実行せず、システムの他の場所で発生した何らかの条件を表す <xref:System.Threading.Tasks.Task> を返すのみの場合もあります (待ち行列データ構造に届いたデータを表すタスクなど)。
 
  TAP メソッドの呼び出し元は、結果的に生成されるタスクに同期的に応答することで、TAP メソッドの完了を待つことをブロックできます。あるいは、非同期操作の完了時に追加 (継続) コードを実行できます。 継続コードの作成者は、そのコードが実行される場所を制御できます。 継続コードは、<xref:System.Threading.Tasks.Task> クラス (<xref:System.Threading.Tasks.Task.ContinueWith%2A> など) のメソッドによって明示的に作成するか、継続の上位にビルドされる言語サポート (C# の `await`、Visual Basic の `Await`、F# の `AwaitValue` など) を使用して暗黙のうちに作成できます。  
   
 ## <a name="task-status"></a>タスクの状態  
+
  <xref:System.Threading.Tasks.Task> クラスは、非同期操作の有効期間を提供し、そのサイクルは、<xref:System.Threading.Tasks.TaskStatus> 列挙型によって表されます。 <xref:System.Threading.Tasks.Task> および <xref:System.Threading.Tasks.Task%601> から派生する型のコーナー ケースに加え、スケジューリングからの構造の分離をサポートするために、<xref:System.Threading.Tasks.Task> クラスは <xref:System.Threading.Tasks.Task.Start%2A> メソッドを公開します。 <xref:System.Threading.Tasks.Task> パブリック コンストラクターにより作成されるタスクは、ライフ サイクルがスケジュールされていない <xref:System.Threading.Tasks.TaskStatus.Created> 状態から始まり、これらのインスタンスで <xref:System.Threading.Tasks.Task.Start%2A> が呼び出されるときにのみスケジュールされることから、*コールド タスク* と呼ばれます。
 
  他のすべてのタスクは、ホットな状態からライフ サイクルが始まります。つまり、タスクが表す非同期操作が既に開始され、それらのタスクの状態は <xref:System.Threading.Tasks.TaskStatus.Created?displayProperty=nameWithType> 以外の列挙値であることを意味します。 TAP メソッドから返されるすべてのタスクをアクティブにする必要があります。 **TAP メソッドで、返すタスクをインスタンス化するためにタスクのコンストラクターを内部使用する場合、その TAP メソッドでは、タスクを返す前に <xref:System.Threading.Tasks.Task> オブジェクトで <xref:System.Threading.Tasks.Task.Start%2A> を呼び出す必要があります。** TAP メソッドのコンシューマーは、返されたタスクがアクティブであるものと推定しても問題はなく、TAP メソッドから返された <xref:System.Threading.Tasks.Task.Start%2A> 上で <xref:System.Threading.Tasks.Task> 呼び出しを試行しないようにする必要があります。 アクティブなタスク上で <xref:System.Threading.Tasks.Task.Start%2A> を呼び出すと、<xref:System.InvalidOperationException> 例外になります。  
   
 ## <a name="cancellation-optional"></a>取り消し (省略可能)  
+
  TAP では、取り消しは非同期メソッドの実装側とコンシューマーのどちらでも省略可能です。 操作の取り消しを許可する場合、キャンセル トークン (<xref:System.Threading.CancellationToken> インスタンス) を受け取る非同期メソッドのオーバーロードを公開します。 規則により、パラメーターには `cancellationToken` という名前が付けられます。  
   
  [!code-csharp[Conceptual.TAP#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap/cs/examples1.cs#1)]
@@ -69,6 +74,7 @@ TAP では、非同期操作の開始と終了を表すために単一のメソ�
  何よりもまず、取り消す機能を公開することが望まれる非同期メソッドの場合、キャンセル トークンを受け入れないオーバーロードを用意する必要はありません。 取り消せないメソッドの場合、キャンセル トークンを受け取るオーバーロードを用意しません。これにより、ターゲット メソッドが実際に取り消し可能かどうかを呼び出し元に示すことができます。  取り消しを望まないコンシューマー コードは、<xref:System.Threading.CancellationToken> を受け取るメソッドを呼び出し、引数値として <xref:System.Threading.CancellationToken.None%2A> を指定することができます。 <xref:System.Threading.CancellationToken.None%2A> は、既定の <xref:System.Threading.CancellationToken> と機能的には同じです。  
   
 ## <a name="progress-reporting-optional"></a>進行状況のレポート (省略可能)  
+
  一部の非同期操作では、進行状況の通知を行うことで利点が得られます。進行状況の通知は、通常、非同期操作の進行状況に関する情報でユーザー インターフェイスを更新するために使用されます。
 
  TAP では、進行状況が、通常 <xref:System.IProgress%601> という名前のパラメーターとして非同期メソッドに渡される `progress` インターフェイスによって処理されます。  非同期メソッドの呼び出し時に進行状況インターフェイスを指定することで、不適切な使用方法により発生する競合状態 (操作の開始後に不適切に登録されたイベント ハンドラーで更新を検出できない場合) を排除できます。  さらに重要なのは、コンシューマー コードの判断に応じて、進行状況インターフェイスがさまざまな実装方法の進行状況をサポートできるようにすることです。  たとえば、コンシューマー コードが最新の進行状況の更新のみに留意する場合、すべての更新をバッファーに格納することを望む場合、各更新の操作を呼び出すことを望む場合、呼び出しを特定のスレッドにマーシャリングするかどうかの制御を望む場合が考えられます。 これらのオプションはすべて、特定のコンシューマーのニーズに合わせてカスタマイズされた、インターフェイスの異なる実装を使用して実現できます。  取り消しと同様、TAP の実装では、API が進行状況通知をサポートする場合にのみ、<xref:System.IProgress%601> パラメーターを指定する必要があります。
@@ -93,6 +99,7 @@ TAP では、非同期操作の開始と終了を表すために単一のメソ�
  TAP の実装で、`progress` パラメーターを受け入れるオーバーロードが提供される場合、`null` の引数を許可する必要があります。この場合、進行状況は報告されません。 TAP の実装では、進行状況を <xref:System.Progress%601> オブジェクトに同期的に報告する必要があります。これにより、非同期メソッドで迅速に進行状況を提供できます。 また、進行状況のコンシューマーが、情報の処理に最適な方法と場所を決定できるようにします。 たとえば、進行状況のインスタンスはコールバックをマーシャリングし、キャプチャされた同期コンテキストでイベントを発生するように選択することができます。  
   
 ## <a name="iprogresst-implementations"></a>IProgress\<T> の実装  
+
 .NET には、<xref:System.Progress%601> を実装する <xref:System.IProgress%601> クラスがあります。 <xref:System.Progress%601> クラスは次のように宣言されます。  
   
 ```csharp  
@@ -108,6 +115,7 @@ public class Progress<T> : IProgress<T>
  <xref:System.Progress%601> のインスタンスは、非同期操作が進行状況の更新を報告するたびに発生する <xref:System.Progress%601.ProgressChanged> イベントを公開します。 <xref:System.Progress%601.ProgressChanged> イベントは、<xref:System.Threading.SynchronizationContext> インスタンスがインスタンス化されたときにキャプチャされた <xref:System.Progress%601> オブジェクトで発生します。 同期コンテキストを利用できない場合は、スレッド プールをターゲットとして、既定のコンテキストが使用されます。 ハンドラーは、このイベントに登録することができます。 1 つのハンドラーは、利便性のために <xref:System.Progress%601> コンストラクターにも提供でき、<xref:System.Progress%601.ProgressChanged> イベントのイベント ハンドラーと同様に作動します。 進行状況の更新は、イベント ハンドラーの実行中、非同期操作を遅延しないように、非同期に発生します。 別のセマンティクスを適用するため、別の <xref:System.IProgress%601> の実装を選択できます。  
   
 ## <a name="choosing-the-overloads-to-provide"></a>提供するオーバーロードの選択  
+
  ともに省略可能な <xref:System.Threading.Tasks.TaskFactory.CancellationToken%2A> パラメーターと <xref:System.IProgress%601> パラメーターの両方を TAP の実装に使用すると、4 つまでオーバーロードを要求することができます。  
   
 ```csharp  

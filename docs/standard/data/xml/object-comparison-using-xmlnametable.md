@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d94e041-d340-4ddf-9a2c-d7319e3f4f86
-ms.openlocfilehash: 1e47bee50f7fa51df82bb37ed3049765f8f360d2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5e0f5de6fd956bcaaf30b592e04c432a5f824c52
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830078"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734102"
 ---
 # <a name="object-comparison-using-xmlnametable"></a>XmlNameTable によるオブジェクトの比較
+
 **XmlDocuments** の作成時には、そのドキュメント用の名前テーブルが作成されます。 XML がドキュメントに読み込まれるか、新しい要素または属性が作成されると、その属性名と要素名が **XmlNameTable** に格納されます。 別のドキュメントからの既存の **NameTable** を使用して **XmlDocument** を作成することもできます。 **XmlNameTable** パラメーターをとるコンストラクターを使用して **XmlDocuments** を作成すると、ドキュメントは、その **XmlNameTable** に既に保存されているノード名、名前空間、プレフィックスにアクセスするようになります。 どのような方法で名前テーブルと名前が読み込まれたとしても、いったんテーブルに名前が格納されると、文字列比較によってではなく、オブジェクト比較を利用して高速に名前を比較できます。 <xref:System.Xml.NameTable.Add%2A> を使用して、名前テーブルに文字列を追加することもできます。 名前テーブルを作成し、そのテーブルに **MyString** という文字列を追加するコード サンプルを次に示します。 その後、そのテーブルを使用して **XmlDocument** を作成し、**Myfile.xml** の要素名と属性名を既存の名前テーブルに追加します。  
   
 ```vb  

@@ -7,17 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to iterate directories
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
-ms.openlocfilehash: e29769a0dc40e88a53b0a3f063f79c8c89edbce6
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 75097485c78e9ded67f41d9632f5399c081b3a16
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825703"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734466"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>方法: Parallel クラスを使用してファイル ディレクトリを反復処理する
+
 多くの場合、ファイル反復処理は簡単に並列化できる操作です。 「[方法: PLINQ を使用してファイル ディレクトリを反復処理する](how-to-iterate-file-directories-with-plinq.md)」のトピックは、多くのシナリオでこのタスクを実行するための簡単な方法を示しています。 ただし、ファイル システムへのアクセス時に発生する可能性のある多くの種類の例外をコードで処理する必要がある場合は、複雑さが生じることがあります。 次の例は、この問題への対処方法の 1 つを示しています。 この例では、スタック ベースの反復処理を使用して、指定されたディレクトリにあるすべてのファイルとフォルダーを走査し、コードで各種例外をキャッチして処理できるようにしています。 例外を処理する方法は開発者に委ねられています。  
   
 ## <a name="example"></a>例  
+
  次の例では、ディレクトリの反復処理は順次実行されますが、ファイルの処理は並列で実行されます。 これは、ディレクトリのファイル占有率が大きい場合に最適な方法と考えられます。 また、ディレクトリの反復処理を並列化し、各ファイルに順次アクセスすることもできます。 多数のプロセッサを搭載したコンピューターを明確に対象としている場合を除き、両方のループを並列化するのは効率的とは言えません。 ただし、どの場合もアプリケーションを徹底的にテストして、最適な方法を決定する必要があります。  
   
  [!code-csharp[TPL_Parallel#08](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/parallel_file.cs#08)]

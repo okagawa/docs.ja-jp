@@ -6,14 +6,15 @@ ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: b6176afed44e32911a37a0d753cea2bae7d8554e
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 4c441501ae0f939f69ac863a990d6e392bd35fc4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378542"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734271"
 ---
 # <a name="how-to-create-signed-friend-assemblies"></a>方法: 署名されたフレンド アセンブリを作成する
+
 この例では、厳密な名前を持つアセンブリと共にフレンド アセンブリを使用する方法を示します。 両方のアセンブリに厳密な名前が付けられている必要があります。 この例のアセンブリは両方とも同じキーを使用していますが、2 つのアセンブリそれぞれが別々のキーを使用することもできます。  
   
 ## <a name="create-a-signed-assembly-and-a-friend-assembly"></a>署名付きアセンブリとフレンド アセンブリを作成する  
@@ -125,6 +126,7 @@ ms.locfileid: "83378542"
    そのプログラムでは、**Class1.Test** という文字列が出力されます。  
   
 ## <a name="net-security"></a>.NET セキュリティ  
+
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性と <xref:System.Security.Permissions.StrongNameIdentityPermission> クラスには類似点があります。 主な違いは、<xref:System.Security.Permissions.StrongNameIdentityPermission> ではセキュリティ アクセス許可を要求することで特定のコード セクションを実行できますが、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性では `internal` (C#) または `Friend` (Visual Basic) 型とメンバーの参照可能範囲が制御されることです。  
   
 ## <a name="see-also"></a>関連項目

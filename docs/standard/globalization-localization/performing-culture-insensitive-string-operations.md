@@ -10,12 +10,12 @@ helpviewer_keywords:
 - culture, custom case mappings
 - culture-insensitive string operations, method overloads
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
-ms.openlocfilehash: 868f36a1025f0b121a8765edf50bb42679736240
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a418432dfaba9ab070ddb6dc862dcbd798c16343
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829766"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732217"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>カルチャを認識しない文字列操作の実行
 
@@ -24,6 +24,7 @@ ms.locfileid: "94829766"
  このセクションの次の記事では、既定ではカルチャを認識する .NET のメソッドを使用し、カルチャを認識しない文字列操作を実行する方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [カルチャを認識しない文字列比較の実行](performing-culture-insensitive-string-comparisons.md)  
  <xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドと <xref:System.String.CompareTo%2A?displayProperty=nameWithType> メソッドを使用してカルチャを認識しない文字列比較を実行する方法について説明します。  
   
@@ -37,6 +38,7 @@ ms.locfileid: "94829766"
  <xref:System.Array.Sort%2A?displayProperty=nameWithType> メソッドと <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> メソッドを使用してカルチャを認識しない配列の操作を実行する方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [カルチャを認識しない文字列操作](culture-insensitive-string-operations.md)  
  文字列操作を実行する際にカルチャに注意する理由について説明し、カルチャを認識する操作を実行するときとカルチャを認識しない操作を実行するときのガイドラインを示します。
 

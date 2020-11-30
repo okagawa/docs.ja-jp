@@ -14,14 +14,15 @@ helpviewer_keywords:
 - .NET regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.openlocfilehash: 5a9890f9ada6a4e749c8cf5ee96d9e8668525040
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 820e6cd7fa4a60fa6adfcaf0f0ff4d25fdda0f21
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823265"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734388"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>正規表現での文字のエスケープ
+
 正規表現の円記号 (\\) は、次のいずれかを示します。  
   
 - 後に続く文字が、次のセクションの表に示す特殊文字であること。 たとえば、`\b` は、正規表現の一致がワード境界から開始する必要があることを示すアンカーであり、`\t` はタブを表します。`\x020` は空白を表します。  
@@ -32,6 +33,7 @@ ms.locfileid: "94823265"
 > 文字エスケープは、正規表現では認識されますが、置換パターンでは認識されません。  
   
 ## <a name="character-escapes-in-net"></a>.NET での文字のエスケープ  
+
  次の表は、.NET の正規表現でサポートされている文字エスケープの一覧です。  
   
 |文字または文字シーケンス|説明|  
@@ -52,6 +54,7 @@ ms.locfileid: "94823265"
 |`\`|エスケープ文字として認識されない文字が後ろに付いている場合は、その文字と一致します。 たとえば、`\*` はアスタリスク (*) と一致し、`\x2A` と同じです。|  
   
 ## <a name="an-example"></a>例  
+
  正規表現の文字エスケープの使用例を次に示します。 2009 年の世界最大規模の都市の名前と人口を含む文字列を解析します。 各都市名は、タブ (`\t`) または縦棒 (&#124; または `\u007c`) で区切られます。 個々の都市とその人口は、復帰とライン フィードで互いに区切られています。  
   
  [!code-csharp[RegularExpressions.Language.Escapes#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.escapes/cs/escape1.cs#1)]

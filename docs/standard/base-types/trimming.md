@@ -15,14 +15,15 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-ms.openlocfilehash: 8bc2980aa887dc652485e135058b9f6f718e7b45
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9b0fd87bfec747f8dd09d3972167374a1a2daffa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831274"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734189"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>.NET の文字列からの文字のトリムと削除
+
 文章を個々の単語に分割すると、単語の先頭または末尾に空白が残る場合があります。 そのような場合は、**System.String** クラスのトリム メソッドのいずれかを使用して、文字列内の指定した位置から任意の数の空白またはその他の文字を削除できます。 使用できるトリム メソッドとその説明を次の表に示します。  
   
 |メソッド名|使用|  

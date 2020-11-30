@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-ms.openlocfilehash: e6690a600b7b00272471362bc087633d52a98f25
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e6212abbc0d9f64765b03c3dd2e9132e9ca96ab7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824845"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730618"
 ---
 # <a name="merge-options-in-plinq"></a>PLINQ のマージ オプション
+
 クエリが並列として実行される場合、PLINQ はソース シーケンスをパーティション分割し、複数のスレッドが同時に異なる部分 (通常は別個のスレッド) で動作できるようにします。 結果を 1 つのスレッドで、たとえば、`foreach` (Visual Basic では `For Each`) ループで使用する場合、すべてのスレッドからの結果を 1 つのシーケンスに再マージする必要があります。 PLINQ で実行されるマージの種類は、クエリに存在する演算子によって異なります。 たとえば、結果に新しい順序を適用する演算子は、すべてのスレッドのすべての要素をバッファリングする必要があります。 消費スレッド (アプリケーション ユーザーのものでもある) 観点から、完全にバッファリングされたクエリは、最初の結果が生成される前に非常に長い期間実行される可能性があります。 既定では、その他の演算子は部分的にバッファリングされ、結果はバッチ単位で生成されます。 既定では、1 つの演算子 <xref:System.Linq.ParallelEnumerable.ForAll%2A> がバッファリングされることはありません。 すべてのスレッドのすべての要素はすぐに生成されます。  
   
  以下の例に示すように、<xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> メソッドを使用することで、PLINQ に、実行するマージの種類を示すヒントを提供できます。  
@@ -27,6 +28,7 @@ ms.locfileid: "94824845"
  特定のクエリで要求されたオプションをサポートできない場合は、オプションが無視されるだけです。 ほとんどの場合、PLINQ クエリのマージ オプションを指定する必要はありません。 ただし、場合によっては、テストや測定を行うことで、クエリが既定以外のモードで最適に実行されることがわかることもあります。 このオプションは、より応答性の高いユーザー インターフェイスを提供するために、チャンク マージ演算子で結果を強制的にストリーミングする場合に一般的に使用されます。  
   
 ## <a name="parallelmergeoptions"></a>ParallelMergeOptions  
+
  <xref:System.Linq.ParallelMergeOptions> 列挙には、サポートされるクエリ形状について、結果が 1 つのスレッドで使用されるときにクエリの最終出力がどのように生成されるかを指定する以下のオプションが含まれます。  
   
 - `Not Buffered`  
@@ -42,6 +44,7 @@ ms.locfileid: "94824845"
      <xref:System.Linq.ParallelMergeOptions.FullyBuffered> オプションを指定すると、要素が生成される前にクエリ全体の出力がバッファリングされます。 このオプションを使用すると、最初の要素が消費スレッドで使用可能になるまで時間がかかる場合がありますが、それでも他のオプションを使用する場合よりも速く完全な結果が生成される可能性があります。  
   
 ## <a name="query-operators-that-support-merge-options"></a>マージ オプションをサポートするクエリ演算子  
+
  次の表に、指定された制約に従って、すべてのマージ オプション モードをサポートする演算子をリストします。  
   
 |演算子|制約|  

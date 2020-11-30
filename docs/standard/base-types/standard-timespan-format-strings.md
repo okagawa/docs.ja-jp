@@ -17,12 +17,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: ab64b2ef0a87cbad3b3c036d74f4690ff7fdb1f4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 251f90e85d037d8cf4f3fd58bc27659c98d04b5e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831313"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734245"
 ---
 # <a name="standard-timespan-format-strings"></a>標準 TimeSpan 書式指定文字列
 
@@ -47,6 +47,7 @@ ms.locfileid: "94831313"
 |"G"|一般の長い書式|この指定子は、常に日数と 7 桁の小数部を出力します。 カルチャに依存し、`[-]d':'hh':'mm':'ss.fffffff` の書式になります。<br /><br /> 詳細情報:[一般の長い ("G") 書式指定子](#the-general-long-g-format-specifier)。|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)|  
 
 ## <a name="the-constant-c-format-specifier"></a>固定の ("c") 書式指定子  
+
  "c" 書式指定子は、次の書式で <xref:System.TimeSpan> 値の文字列形式を返します。  
   
  [-][*d*.]*hh*:*mm*:*ss*[.*fffffff*]  
@@ -73,6 +74,7 @@ ms.locfileid: "94831313"
  [!code-vb[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardc1.vb#1)]  
 
 ## <a name="the-general-short-g-format-specifier"></a>一般の短い ("g") 書式指定子  
+
  "g" <xref:System.TimeSpan> 書式指定子は、必要な要素のみを含めることによって、コンパクトな形式で <xref:System.TimeSpan> 値の文字列形式を返します。 次の書式を使用します。  
   
  [-][*d*:]*h*:*mm*:*ss*[.*FFFFFFF*]  
@@ -97,6 +99,7 @@ ms.locfileid: "94831313"
  [!code-vb[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardshort1.vb#4)]  
 
 ## <a name="the-general-long-g-format-specifier"></a>一般の長い ("G") 書式指定子  
+
  "G" <xref:System.TimeSpan> 書式指定子は、常に日数と秒の小数部の両方を含む長い形式で、<xref:System.TimeSpan> 値の文字列形式を返します。 "G" 標準書式指定子によって生成される文字列は、次の書式になります。  
   
  [-]*d*:*hh*:*mm*:*ss*.*fffffff*  

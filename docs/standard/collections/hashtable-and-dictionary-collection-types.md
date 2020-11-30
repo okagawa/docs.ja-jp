@@ -9,14 +9,15 @@ ms.date: 03/30/2017
 - hash function
 - collections [.NET], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
-ms.openlocfilehash: bb6d0802526db9b6b5673fe7d13b1f12af7acfcf
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 56e8ceff05f8f9777af370301a96cd17d0286f44
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831222"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733530"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Hashtable コレクション型と Dictionary コレクション型
+
 <xref:System.Collections.Hashtable?displayProperty=nameWithType> クラス、および <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> と <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> ジェネリック クラスは、<xref:System.Collections.IDictionary?displayProperty=nameWithType> インターフェイスを実装します。 <xref:System.Collections.Generic.Dictionary%602> ジェネリック クラスも <xref:System.Collections.Generic.IDictionary%602> ジェネリック インターフェイスを実装します。 そのため、これらのコレクション内の各要素は、キーと値のペアになります。  
   
  <xref:System.Collections.Hashtable> オブジェクトは、コレクションの要素を含むバケットので構成されます。 バケットは<xref:System.Collections.Hashtable> に含まれる要素の仮想サブグループで、これを使用することにより、ほとんどのコレクションで検索と取得がより簡単で高速になります。 各バケットは、ハッシュ関数を使用して生成され、要素のキーに基づいている、ハッシュ コードに関連付けられています。  

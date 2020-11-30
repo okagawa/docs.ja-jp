@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-ms.openlocfilehash: 0ecdea3fa56ee2d8902b24006351c6d43e370c97
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: cdbecc0c7483ec189c7c19f19d75ababeb20989f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830572"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730553"
 ---
 # <a name="plinq-data-sample"></a>PLINQ データのサンプル
+
 このサンプルには、.csv 形式のデータ例と、データを顧客、製品、注文、その他の詳細のメモリ内コレクションに変換するメソッドが含まれています。 PLINQ でさらに試す場合は、他の特定のトピックのコード例をこのトピックのコードに貼り付けて、`Main` メソッドから呼び出すことができます。 また、独自の PLINQ クエリでこのデータを使用することもできます。  
   
  データは、Northwind データベースのサブセットを表します。 50 の顧客レコードが含まれていますが、すべてのフィールドが含まれているわけではありません。 すべての顧客の注文および対応する Order_Detail データからの行のサブセットが含まれます。 製品はすべて含まれます。  

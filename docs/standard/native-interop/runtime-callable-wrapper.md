@@ -9,14 +9,15 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-ms.openlocfilehash: 9c218fe7a08bd7181d66aa849bcca4cac00dc6fa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 985f6e5057a06ac9dcadc0e2c1e4d7743d96f035
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535860"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730228"
 ---
 # <a name="runtime-callable-wrapper"></a>ランタイム呼び出し可能ラッパー
+
 共通言語ランタイムは、ランタイム呼び出し可能ラッパー (RCW) と呼ばれるプロキシを介して COM オブジェクトを公開します。 .NET クライアントでは RCW が普通のオブジェクトとして示されますが、その主な機能は、.NET クライアントと COM オブジェクトの間で呼び出しをマーシャリングすることです。  
   
  ランタイムは、COM オブジェクトごとに 1 つの RCW を、そのオブジェクトに存在する参照の数に関係なく作成します。 ランタイムは、各オブジェクトで、プロセスごとに 1 つの RCW を保持します。  1 つのアプリケーション ドメインまたはアパートメントで RCW を作成し、別のアプリケーション ドメインまたはアパートメントへの参照を渡すと、最初のオブジェクトへのプロキシが使用されます。  次の図が示すように、任意の数のマネージド クライアントが、INew および INewer のインターフェイスを公開する COM オブジェクトへの参照を保持できます。  
@@ -32,6 +33,7 @@ ms.locfileid: "90535860"
  標準ラッパーは、組み込みのマーシャリング規則を適用します。 たとえば、.NET クライアントが文字列型を引数の一部としてアンマネージ オブジェクトに渡すとき、ラッパーは文字列を BSTR 型に変換します。 COM オブジェクトが、マネージド呼び出し元に BSTR を返す場合、呼び出し元は文字列を受信します。 クライアントとサーバーはどちらも、それぞれが使い慣れているデータを送受信します。 その他の型は、変換する必要がありません。 たとえば、標準的なラッパーはマネージド コードとアンマネージド コードの間で、型を変換しないで 4 バイトの整数を常に受け渡しします。  
   
 ## <a name="marshaling-selected-interfaces"></a>選択したインターフェイスのマーシャリング  
+
  [ランタイム呼び出し可能ラッパー](runtime-callable-wrapper.md) (RCW) の主な目標は、マネージドとアンマネージドのプログラミング モデルの違いを見えなくすることです。 次の図に示すように、RCW は選択された COM インターフェイスを .NET クライアントに公開することなく使用して、シームレスな移行を実現します。
 
  次の図は、COM インターフェイスとランタイム呼び出し可能ラッパーを示しています。

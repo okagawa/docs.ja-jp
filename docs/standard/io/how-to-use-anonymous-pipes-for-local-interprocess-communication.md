@@ -13,12 +13,12 @@ helpviewer_keywords:
 - one-way communication [.NET]
 - local computer communication [.NET], pipes
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
-ms.openlocfilehash: ba2604680b8f69a9ad5909db51d04ddef81c8c13
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 389451d1c6c313ac4a10652c7aa614a5e4e7bf1c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829753"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734557"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>方法: ローカルのプロセス間通信で匿名パイプを使用する
 
@@ -27,6 +27,7 @@ ms.locfileid: "94829753"
  匿名パイプを実装するには、<xref:System.IO.Pipes.AnonymousPipeServerStream> クラスと <xref:System.IO.Pipes.AnonymousPipeClientStream> クラスを使用します。  
   
 ## <a name="example"></a>例  
+
  次に、匿名パイプを使用して、親プロセスから子プロセスに文字列を送信する方法の例を示します。 この例では、<xref:System.IO.Pipes.AnonymousPipeServerStream> の <xref:System.IO.Pipes.PipeDirection> 値を使用して、親プロセス内に <xref:System.IO.Pipes.PipeDirection.Out> オブジェクトを作成しています。 次に、親プロセスは、クライアント ハンドルを使用して子プロセスを作成し、<xref:System.IO.Pipes.AnonymousPipeClientStream> オブジェクトを作成します。 子プロセスには、<xref:System.IO.Pipes.PipeDirection> の <xref:System.IO.Pipes.PipeDirection.In> 値が指定されています。  
   
  次に、親プロセスはユーザー指定の文字列を子プロセスに送信します。 この文字列は、子プロセスのコンソールに表示されます。  
@@ -40,6 +41,7 @@ ms.locfileid: "94829753"
 [!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
   
 ## <a name="example"></a>例  
+
  クライアント プロセスの例を次に示します。 サーバー プロセスはクライアント プロセスを開始し、開始したプロセスをクライアント ハンドルに渡します。 クライアント コードから生成される実行可能ファイルの名前は `pipeClient.exe` とします。サーバー プロセスを実行する前に、このファイルをサーバーの実行可能ファイルと同じディレクトリにコピーします。  
   
  [!code-cpp[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/cpp/program.cpp#01)]

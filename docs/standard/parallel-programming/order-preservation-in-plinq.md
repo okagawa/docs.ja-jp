@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-ms.openlocfilehash: 59d32f8801a1429718f39ab912f55cfcc5788a0e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 997bb80b6e30d4769613c4a1df647e6cd475a8ed
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820775"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730605"
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ における順序維持
+
 PLINQ では、正確性を維持しながらパフォーマンスを最大にすることが重要です。 クエリをできるだけ速く実行する一方で、正確な結果を生成する必要があります。 正確性のために、ソース シーケンスの順序の維持が必要な場合がありますが、順序付けには負荷がかかります。 したがって、既定では、PLINQ はソース シーケンスの順序を維持しません。 この点で、PLINQ は [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] と似ていますが、順序を維持する LINQ to Objects とは異なります。  
   
  既定の動作をオーバーライドするには、ソース シーケンス上で <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 演算子を使用して、順序の維持を有効にします。 その後、<xref:System.Linq.ParallelEnumerable.AsUnordered%2A> メソッドを使用して、クエリでの順序の維持を無効にできます。 どちらの方法でも、クエリを並列実行するか順次実行するかを決定するヒューリスティックに基づいてクエリが処理されます。 詳細については、「[Understanding Speedup in PLINQ (PLINQ での高速化について)](understanding-speedup-in-plinq.md)」を参照してください。  
@@ -39,6 +40,7 @@ PLINQ では、正確性を維持しながらパフォーマンスを最大に�
  PLINQ は、残りのクエリに対し、順序を強制する演算子によって生成されるシーケンスの順序を維持することに注意してください。 つまり、<xref:System.Linq.ParallelEnumerable.OrderBy%2A> や <xref:System.Linq.ParallelEnumerable.ThenBy%2A> の演算子に続いて <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> が呼び出されるのと同じように処理されます。  
   
 ## <a name="query-operators-and-ordering"></a>クエリ演算子と順序付け  
+
  次のクエリ演算子は、クエリ内のすべての後続演算子で順序を維持するか、または <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> が呼び出されるまで順序を維持します。  
   
 - <xref:System.Linq.ParallelEnumerable.OrderBy%2A>  

@@ -2,17 +2,19 @@
 title: XslCompiledTransform クラスの出力オプション
 ms.date: 03/30/2017
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
-ms.openlocfilehash: 777324e81ac809866dab68259dceca89c6091a3c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5835cfee69730d5dd2322422aeed6e0d72995eec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830091"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731138"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>XslCompiledTransform クラスの出力オプション
+
 このトピックでは、XSLT で使用できる出力オプションについて説明します。 出力オプションは、スタイル シート内で、または <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> メソッドで指定できます。  
   
 ## <a name="xsloutput-element"></a>xsl:output 要素  
+
  `xsl:output` 要素は出力のオプションを指定します。 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> メソッドで指定する出力の種類により、`xsl:output` オプションの動作が決定されます。  
   
  次の表では、出力の種類がストリームか `xsl:output` の場合に <xref:System.IO.TextWriter> 要素で使用できる各属性の動作について説明します。  
@@ -31,23 +33,29 @@ ms.locfileid: "94830091"
 |media-type|サポートされています。|  
   
 #### <a name="sending-output-to-an-xmlwriter"></a>XmlWriter への出力の送出  
+
  スタイル シートで `xsl:output` 要素が使用され、出力の種類が <xref:System.Xml.XmlWriter> オブジェクトの場合は、<xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType> オブジェクトを作成する際に <xref:System.Xml.XmlWriter> プロパティを使用します。 <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType> プロパティは、コンパイル済みスタイル シートの <xref:System.Xml.XmlWriterSettings> 要素から派生した情報を含む `xsl:output` オブジェクトを返します。 この <xref:System.Xml.XmlWriterSettings> オブジェクトを <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> メソッドに渡して、正しい設定の <xref:System.Xml.XmlWriter> オブジェクトを作成することができます。  
   
 ## <a name="output-types"></a>出力の種類  
+
  次の一覧では、<xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> コマンドで使用できる出力の種類について説明します。  
   
 #### <a name="xmlwriter"></a>XmlWriter  
+
  <xref:System.Xml.XmlWriter> クラスは XML ストリームまたはファイルを書き出します。 <xref:System.Xml.XmlWriter> クラスを使用して、出力オプションも含め、<xref:System.Xml.XmlWriterSettings> オブジェクトでサポートする機能を指定できます。 <xref:System.Xml.XmlWriter> クラスは <xref:System.Xml> フレームワークの重要な一部分です。 出力結果を別の XML プロセスにパイプラインして送るには、この出力を使用します。  
   
 #### <a name="string"></a>String  
+
  出力ファイルの URI を指定するには、この出力を使用します。  
   
 #### <a name="stream"></a>ストリーム  
+
  ストリームとは、ファイル、入出力デバイス、プロセス間通信のパイプ、または TCP/IP ソケットなどのバイト シーケンスを抽象化したものです。 <xref:System.IO.Stream> クラスとその派生クラスは、これら各種の入出力にジェネリックな視点を提供し、プログラマがオペレーティング システムや下位のデバイスに固有の詳細を考慮する必要をなくします。  
   
  <xref:System.IO.FileStream>、<xref:System.IO.MemoryStream>、または出力ストリーム (`Response.OutputStream`) にデータを送るには、この出力の種類を使用します。  
   
 #### <a name="textwriter"></a>TextWriter  
+
  <xref:System.IO.TextWriter> は、文字シーケンスを書き出します。 これは <xref:System.IO.StringWriter> クラスおよび <xref:System.IO.StreamWriter> クラスに実装され、それぞれ文字を文字列に、またはストリームに書き出します。 文字列に出力する場合は、この出力の種類を使用します。  
   
 ## <a name="notes"></a>メモ  

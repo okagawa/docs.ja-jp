@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
-ms.openlocfilehash: 08eeb8440f89e488685e474bed607002f8ab6386
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bd6bb440a00b3e485f4e6794e538f761267236b3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824585"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733010"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>XmlSchemaCollection を使用した XML スキーマ (XSD) 検証
+
 <xref:System.Xml.Schema.XmlSchemaCollection> を使用して、XML スキーマ定義言語 (XSD) スキーマを基準として XML ドキュメントを検証できます。 <xref:System.Xml.Schema.XmlSchemaCollection> は、検証を行うたびにスキーマをメモリに読み込まなくてもいいように、スキーマをコレクションに格納することによってパフォーマンスの向上を図ります。 スキーマがスキーマ コレクション内にある場合、コレクション内のスキーマの位置を特定するには `schemaLocation` 属性を使用します。  
   
 > [!IMPORTANT]

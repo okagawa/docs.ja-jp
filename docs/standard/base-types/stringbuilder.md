@@ -16,17 +16,19 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-ms.openlocfilehash: c9337df864a01ec0fbdf7068051efea60b6c59aa
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 54878f737faaedf4c9a176719f4ff83813a80201
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831300"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734219"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>.NET の StringBuilder クラスを使用する
+
 <xref:System.String> オブジェクトは、変更できません。 <xref:System.String?displayProperty=nameWithType> クラスのメソッドのいずれかを使用するたびに、新しい文字列オブジェクトをメモリ内に作成します。その際、その新しいオブジェクトに対して領域を新たに割り当てる必要があります。 文字列に対して何度も変更を実行する必要がある場合、新しい <xref:System.String> オブジェクトの作成に関連したオーバーヘッドが高コストになる可能性があります。 新しいオブジェクトを作成せずに文字列を変更したい場合は、<xref:System.Text.StringBuilder?displayProperty=nameWithType> クラスを使用することができます。 たとえば、ループで多数の文字列を連結する場合に、<xref:System.Text.StringBuilder> クラスを使用してパフォーマンスを向上させることができます。  
   
 ## <a name="importing-the-systemtext-namespace"></a>System.Text 名前空間のインポート  
+
  <xref:System.Text.StringBuilder> クラスは、<xref:System.Text> 名前空間にあります。  完全修飾型名をコードに指定しなくてもすむように、<xref:System.Text> 名前空間をインポートすることができます。  
   
  [!code-cpp[Conceptual.StringBuilder#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#11)]
@@ -34,6 +36,7 @@ ms.locfileid: "94831300"
  [!code-vb[Conceptual.StringBuilder#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#11)]  
   
 ## <a name="instantiating-a-stringbuilder-object"></a>StringBuilder オブジェクトのインスタンス化  
+
  以下の例に示すように、オーバーロードされたコンストラクター メソッドの 1 つで変数を初期化することにより、<xref:System.Text.StringBuilder> クラスの新しいインスタンスを作成することができます。  
   
  [!code-cpp[Conceptual.StringBuilder#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#1)]
@@ -41,6 +44,7 @@ ms.locfileid: "94831300"
  [!code-vb[Conceptual.StringBuilder#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#1)]  
   
 ## <a name="setting-the-capacity-and-length"></a>容量と長さの設定  
+
  <xref:System.Text.StringBuilder> は、カプセル化する文字列内の文字数を拡張できるようにする動的オブジェクトですが、保持可能な最大文字数の値を指定することができます。 この値を、オブジェクトの容量と呼びます。これを現行の <xref:System.Text.StringBuilder> が保持する文字列の長さと混同すべきではありません。 たとえば、"Hello" という長さ 5 の文字列を持つ <xref:System.Text.StringBuilder> クラスの新しいインスタンスを作成するときに、オブジェクトの最大容量として 25 を指定することができます。 <xref:System.Text.StringBuilder> を変更する際、容量に達するまでは、自動再割り当ては発生しません。 容量に達すると、新しい領域が自動的に割り当てられ、容量が 2 倍になります。 オーバーロードされたコンストラクターのいずれかを使用して、<xref:System.Text.StringBuilder> クラスの容量を指定することができます。 次の例は、`myStringBuilder` オブジェクトを最大 25 の領域に拡張できることを示しています。  
   
  [!code-cpp[Conceptual.StringBuilder#2](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#2)]
@@ -58,6 +62,7 @@ ms.locfileid: "94831300"
  <xref:System.Text.StringBuilder.Length%2A> プロパティを表示または設定することもできます。 **Length** プロパティを、**Capacity** プロパティより大きな値に設定する場合、**Capacity** プロパティは **Length** プロパティと同じ値に自動的に変更されます。 **Length** プロパティを、現行の **StringBuilder** 内の文字列の長さより小さい値に設定すると、文字列は短縮されます。  
   
 ## <a name="modifying-the-stringbuilder-string"></a>StringBuilder 文字列の変更  
+
  **StringBuilder** の内容の変更に使用できるメソッドを次の表に一覧表示します。  
   
 |メソッド名|使用|  
@@ -69,6 +74,7 @@ ms.locfileid: "94831300"
 |<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|現行の **StringBuilder** に出現する指定された文字または文字列をすべて、指定された別の文字または文字列に置換します。|  
   
 ### <a name="append"></a>追加  
+
  **Append** メソッドを使用して、現行 **StringBuilder** によって表される文字列の末尾にオブジェクトのテキストまたは文字列形式を追加することができます。 次の例では、**StringBuilder** を "Hello World" に初期設定し、テキストをオブジェクトの末尾に追加しています。 領域は、必要に応じて自動的に割り当てられます。  
   
  [!code-cpp[Conceptual.StringBuilder#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#4)]
@@ -76,6 +82,7 @@ ms.locfileid: "94831300"
  [!code-vb[Conceptual.StringBuilder#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#4)]  
   
 ### <a name="appendformat"></a>AppendFormat  
+
  <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> メソッドは、<xref:System.Text.StringBuilder> オブジェクトの末尾にテキストを追加します。 これは、書式設定される 1 つ以上のオブジェクトの <xref:System.IFormattable> 実装を呼び出すことにより、複合書式機能をサポートしています (詳細については、「[複合書式指定](composite-formatting.md)」を参照してください)。 そのため、数値、日時、および列挙の値に対して標準書式文字列を受け取り、数値と日時の値、およびカスタム型に定義されている書式文字列に対してカスタム書式文字列を受け取ります。 (書式設定については、「[型の書式設定](formatting-types.md)」を参照してください。)このメソッドを使用して、変数の書式をカスタマイズし、その値を <xref:System.Text.StringBuilder> に追加することができます。 次の例では、<xref:System.Text.StringBuilder.AppendFormat%2A> メソッドを使用して、<xref:System.Text.StringBuilder> オブジェクトの末尾に、通貨値として書式設定されている整数値を挿入しています。  
   
  [!code-cpp[Conceptual.StringBuilder#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#5)]
@@ -83,6 +90,7 @@ ms.locfileid: "94831300"
  [!code-vb[Conceptual.StringBuilder#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#5)]  
   
 ### <a name="insert"></a>挿入  
+
  <xref:System.Text.StringBuilder.Insert%2A> メソッドは、現行の <xref:System.Text.StringBuilder> オブジェクトの指定された位置に、文字列またはオブジェクトを追加します。 次の例では、このメソッドを使用して、<xref:System.Text.StringBuilder> オブジェクトの 6 番目の位置に単語を挿入しています。  
   
  [!code-cpp[Conceptual.StringBuilder#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#6)]
@@ -90,6 +98,7 @@ ms.locfileid: "94831300"
  [!code-vb[Conceptual.StringBuilder#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#6)]  
   
 ### <a name="remove"></a>削除  
+
  **Remove** メソッドを使用して、現行の <xref:System.Text.StringBuilder> オブジェクトから指定された文字数を削除します (0 から始まる指定されたインデックスで開始します)。 次の例では、**Remove** メソッドを使用して、<xref:System.Text.StringBuilder> オブジェクトを短縮しています。  
   
  [!code-cpp[Conceptual.StringBuilder#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#7)]
@@ -97,6 +106,7 @@ ms.locfileid: "94831300"
  [!code-vb[Conceptual.StringBuilder#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#7)]  
   
 ### <a name="replace"></a>Replace  
+
  **Replace** メソッドを使用して、<xref:System.Text.StringBuilder> オブジェクト内の文字を、指定された別の文字で置き換えることができます。 次の例では、**Replace** メソッドを使用して、感嘆符 (!) のすべてのインスタンスを求めて <xref:System.Text.StringBuilder> オブジェクトを検索し、疑問符 (?) で置き換えています。  
   
  [!code-cpp[Conceptual.StringBuilder#8](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#8)]
@@ -104,6 +114,7 @@ ms.locfileid: "94831300"
  [!code-vb[Conceptual.StringBuilder#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#8)]  
   
 ## <a name="converting-a-stringbuilder-object-to-a-string"></a>文字列への StringBuilder オブジェクトの変換  
+
  <xref:System.Text.StringBuilder> オブジェクトで表される文字列を <xref:System.String> パラメーターを持つメソッドに渡すかそれをユーザー インターフェイスに表示するには、事前に <xref:System.Text.StringBuilder> オブジェクトを <xref:System.String> オブジェクトに変換する必要があります。 この変換は、<xref:System.Text.StringBuilder.ToString%2A?displayProperty=nameWithType> メソッドを呼び出すことによって行います。 次の例では、いくつかの <xref:System.Text.StringBuilder> メソッドを呼び出し、その後、<xref:System.Text.StringBuilder.ToString?displayProperty=nameWithType> メソッドを呼び出して文字列を表示しています。  
   
  [!code-csharp[Conceptual.StringBuilder#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/tostringexample1.cs#10)]

@@ -2,19 +2,21 @@
 title: XML スキーマの推論
 ms.date: 03/30/2017
 ms.assetid: b18e7ffd-3c04-482d-9934-ba2f6a59b2c9
-ms.openlocfilehash: d9bf14087a32ad04d9e3510c8543a3270f135653
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9d3c3bd15637dbd875db5736aa01f3f4dd00f605
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830923"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733452"
 ---
 # <a name="inferring-an-xml-schema"></a>XML スキーマの推論
+
 スキーマ オブジェクト モデル (SOM) <xref:System.Xml.Schema.XmlSchemaInference> クラスを使用して、XML ドキュメントの構造から XML スキーマ定義言語 (XSD) スキーマを推論する方法を説明します。  
   
  <xref:System.Xml.Schema.XmlSchemaInference> 名前空間内のスキーマ オブジェクト モデル (SOM) <xref:System.Xml.Schema?displayProperty=nameWithType> クラスを使用すれば、XML ドキュメントの構造から XML スキーマ定義言語 (XSD) スキーマを推論できます。 <xref:System.Xml.Schema.XmlSchemaInference> クラスは XML ドキュメントの検証に使える XML スキーマを出力します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [XML ドキュメントからのスキーマの推論](inferring-schemas-from-xml-documents.md)  
  <xref:System.Xml.Schema.XmlSchemaInference> クラスを使用して XML ドキュメントの構造からスキーマを推論する方法を説明します。  
   

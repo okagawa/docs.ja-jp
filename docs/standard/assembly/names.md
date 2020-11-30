@@ -6,12 +6,12 @@ helpviewer_keywords:
 - names [.NET], assemblies
 - assemblies [.NET], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
-ms.openlocfilehash: 136c3b7a06ce72be02e00bcc4d2354160178468c
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 9aa94b4ee54c0a663c9f38392d37369af9f27e48
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687575"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731450"
 ---
 # <a name="assembly-names"></a>アセンブリ名
 
@@ -48,9 +48,10 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 > アセンブリをバインドするときに、ランタイムは大文字と小文字を区別せずにアセンブリ名を扱いますが、アセンブリ名に使用されている大文字と小文字を保持します。 Windows SDK のいくつかのツールでは、アセンブリ名の大文字小文字を区別して処理します。 最適な結果を得るには、大文字と小文字を区別するものとして、アセンブリ名を管理します。
 
 ## <a name="name-application-components"></a>アプリケーション コンポーネントの名前を指定する
+
  アセンブリの ID を特定するときに、ランタイムではファイル名が考慮されません。 アセンブリ名、バージョン、カルチャ、厳密な名前で構成されるアセンブリ ID は、ランタイムに対して明確である必要があります。
 
- たとえば、 *myAssembly.dll* という名前のアセンブリを参照する *myAssembly.exe* という名前のアセンブリがある場合は、 *myAssembly.exe* を実行すると、バインドが正しく行われます。 ただし、別のアプリケーションによってメソッド <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> を使用して *myAssembly.exe* が実行された場合、ランタイムでは、 *myAssembly.exe* で `myAssembly` へのバインドが要求されるときには、`myAssembly` は既に読み込まれているものと判断されます。 この場合、 *myAssembly.dll* が読み込まれることはありません。 *myAssembly.exe* には要求された型が含まれていないため、<xref:System.TypeLoadException> が発生します。
+ たとえば、*myAssembly.dll* という名前のアセンブリを参照する *myAssembly.exe* という名前のアセンブリがある場合は、*myAssembly.exe* を実行すると、バインドが正しく行われます。 ただし、別のアプリケーションによってメソッド <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> を使用して *myAssembly.exe* が実行された場合、ランタイムでは、*myAssembly.exe* で `myAssembly` へのバインドが要求されるときには、`myAssembly` は既に読み込まれているものと判断されます。 この場合、*myAssembly.dll* が読み込まれることはありません。 *myAssembly.exe* には要求された型が含まれていないため、<xref:System.TypeLoadException> が発生します。
 
  この問題を避けるには、アプリケーションを構成するアセンブリが、確実に同じアセンブリ名を持たないように、または異なるディレクトリに同じ名前を持つアセンブリを配置しないようにします。
 

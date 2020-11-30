@@ -12,14 +12,15 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-ms.openlocfilehash: 2ab86a6cbf0b92ecdaf0a97041d493f9494e3225
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1b992837bcb32537f24643ef4781b6d170a058d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831248"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733556"
 ---
 # <a name="commonly-used-collection-types"></a>一般的に使用されるコレクション型
+
 コレクション型は、ハッシュ テーブル、キュー、スタック、バッグ、ディクショナリ、リストなど、一般的な種類のデータ コレクションです。  
   
  コレクションは、<xref:System.Collections.ICollection> インターフェイス、<xref:System.Collections.IList> インターフェイス、<xref:System.Collections.IDictionary> インターフェイス、または対応するジェネリックに基づきます。 <xref:System.Collections.IList> インターフェイスと <xref:System.Collections.IDictionary> インターフェイスはどちらも <xref:System.Collections.ICollection> インターフェイスから派生したインターフェイスです。したがって、すべてのコレクションが直接または間接的に <xref:System.Collections.ICollection> インターフェイスに基づきます。 <xref:System.Collections.IList> インターフェイスに基づくコレクション (<xref:System.Array>、<xref:System.Collections.ArrayList>、または <xref:System.Collections.Generic.List%601> など) または <xref:System.Collections.ICollection> インターフェイスに直接基づくコレクション (<xref:System.Collections.Queue>、<xref:System.Collections.Concurrent.ConcurrentQueue%601>、<xref:System.Collections.Stack>、<xref:System.Collections.Concurrent.ConcurrentStack%601>、または <xref:System.Collections.Generic.LinkedList%601> など) では、すべての要素に値のみが含まれます。 <xref:System.Collections.IDictionary> インターフェイスに基づくコレクション (<xref:System.Collections.Hashtable> クラスと <xref:System.Collections.SortedList> クラス、<xref:System.Collections.Generic.Dictionary%602> ジェネリック クラスと <xref:System.Collections.Generic.SortedList%602> ジェネリック クラスなど)、または <xref:System.Collections.Concurrent.ConcurrentDictionary%602> クラスでは、すべての要素にキーと値の両方が含まれます。  <xref:System.Collections.ObjectModel.KeyedCollection%602> クラスは、キーが値に埋め込まれている値リストであるために独特で、そのために、リストのようにもディクショナリのようにも動作します。  
@@ -40,6 +41,7 @@ ms.locfileid: "94831248"
 |[ジェネリック](../generics/index.md)|.NET に用意されている、ジェネリック コレクション、汎用デリゲート、ジェネリック インターフェイスなどのジェネリック機能について説明します。 C#、Visual Basic、および Visual C++ の機能についてのドキュメント、およびリフレクションなどのサポート テクノロジへのリンクを示します。|  
   
 ## <a name="reference"></a>関連項目  
+
  <xref:System.Collections?displayProperty=nameWithType>  
   
  <xref:System.Collections.Generic?displayProperty=nameWithType>  
