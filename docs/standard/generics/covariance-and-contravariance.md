@@ -11,12 +11,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-ms.openlocfilehash: 1ad8f72f80e88971e2bbf672bd92d9c607134783
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9d5d5b27fb77500aa5f6deff3fcb1c739ba8b094
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827413"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722662"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>ジェネリックの共変性と反変性
 
@@ -71,6 +71,7 @@ ms.locfileid: "94827413"
 - C# 9 以降では、共変の戻り値の型がサポートされています。 オーバーライドするメソッドで、オーバーライドされるメソッドより強い派生型の戻り値を宣言でき、オーバーライドする読み取り専用プロパティでより強い派生型を宣言できます。
 
 <a name="InterfaceCovariantTypeParameters"></a>
+
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>共変の型パラメーターを持つジェネリック インターフェイス
 
 共変の型パラメーターを持つジェネリック インターフェイスがいくつかあります (<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.Generic.IEnumerator%601>、<xref:System.Linq.IQueryable%601>、<xref:System.Linq.IGrouping%602> など)。 これらのインターフェイスのすべての型パラメーターは共変のみであるため、型パラメーターはメンバーの戻り値の型だけに使用されます。  

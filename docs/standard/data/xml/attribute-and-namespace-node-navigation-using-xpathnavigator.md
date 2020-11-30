@@ -2,17 +2,19 @@
 title: XPathNavigator を使用する属性と名前空間のナビゲーション
 ms.date: 03/30/2017
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
-ms.openlocfilehash: cf29c15463030774b488beed776c9cfe623072d1
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d561afdc477119a6d9d04eacfcd6a6bdb9d0e2d6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819410"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725392"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>XPathNavigator を使用する属性と名前空間のナビゲーション
+
 <xref:System.Xml.XPath.XPathNavigator> クラスは、2 セットの移動メソッドを提供します。「[XPathNavigator を使用するノード セットのナビゲーション](node-set-navigation-using-xpathnavigator.md)」に記載されている最初のセットは <xref:System.Xml.XPath.XPathDocument> または <xref:System.Xml.XmlDocument> オブジェクト内の *ノード セット* の移動に使用されます。 ここに記載されている 2 つ目のセットは、<xref:System.Xml.XPath.XPathDocument> または <xref:System.Xml.XmlDocument> オブジェクト内の *属性ノードと名前空間ノード* の移動に使用されます。  
   
 ## <a name="attribute-node-navigation"></a>属性ノードの移動  
+
  属性は要素のプロパティであり、要素の子ではありません。 兄弟ノード、親ノード、および子ノードの移動には <xref:System.Xml.XPath.XPathNavigator> クラスのメソッドが使用されるため、この区別が重要になります。  
   
  たとえば、<xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> と <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> メソッドは、要素から属性への移動や属性間の移動には使われません。 代わりに、属性には異なる移動メソッドがあります。  
@@ -31,6 +33,7 @@ ms.locfileid: "94819410"
 > <xref:System.Xml.XPath.XPathNavigator> オブジェクトが属性ノードまたは名前空間ノードの位置にある場合、<xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A>、および <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> メソッドは常に `false` を返し、<xref:System.Xml.XPath.XPathNavigator> の位置には影響を与えません。 この例外は、<xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A>、および <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A> メソッドです。  
   
 ## <a name="namespace-node-navigation"></a>名前空間ノードの移動  
+
  各要素は関連する名前空間ノードの集合を持ちます。名前空間ノードは、要素のスコープ内にある名前空間 URI に関連付けられた異なる名前空間プレフィックス (`http://www.w3.org/XML/1998/namespace` に関連付けられた XML プレフィックスを含みます。XML プレフィックスはすべての XML ドキュメントで暗黙に宣言されます) それぞれについて 1 つ、さらに要素のスコープ内に既定の名前空間がある場合は、それに 1 つあります。 要素はこれら名前空間ノードの親です。ただし、名前空間ノードはその親要素の子ではありません。  
   
  属性の場合と同様に、<xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> および <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> メソッドは、要素から名前空間ノードへの移動や名前空間ノード間の移動には使われません。 代わりに、名前空間ノードには異なる移動メソッドがあります。  
@@ -49,6 +52,7 @@ ms.locfileid: "94819410"
 > <xref:System.Xml.XPath.XPathNavigator> オブジェクトが属性ノードまたは名前空間ノードの位置にある場合、<xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A>、および <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> メソッドは常に `false` を返し、<xref:System.Xml.XPath.XPathNavigator> の位置には影響を与えません。 この例外は、<xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A>、および <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A> メソッドです。  
   
 ### <a name="the-xpathnamespacescope-enumeration"></a>XPathNamespaceScope 列挙体  
+
  名前空間ノードの移動時には、<xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> および <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> メソッドを <xref:System.Xml.XPath.XPathNamespaceScope> パラメーターを使用して呼び出すことができます。 これらのメソッドは、パラメーターなしで呼び出された場合と異なる動作をします。 <xref:System.Xml.XPath.XPathNamespaceScope> 列挙体には、<xref:System.Xml.XPath.XPathNamespaceScope.All>、<xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>、または <xref:System.Xml.XPath.XPathNamespaceScope.Local> の値があります。  
   
  次の例は、XML ドキュメント内のさまざまなスコープで <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> および <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> メソッドによって返される値を表示します。  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [.NET], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: b2a3f2efc12392316f6d90242ef0a9224e7d13a4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 88cbf266d15a10ff7c56e07a30161e0a800989d5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826314"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708050"
 ---
 # <a name="managed-threading-best-practices"></a>マネージド スレッド処理のベスト プラクティス
 
@@ -25,9 +25,11 @@ ms.locfileid: "94826314"
 > .NET Framework 4 以降では、マルチスレッド プログラミングの複雑さとリスクを軽減する API が Task Parallel Library および PLINQ に用意されています。 詳細については、[.NET の並列プログラミング](../parallel-programming/index.md)に関するページをご覧ください。  
   
 ## <a name="deadlocks-and-race-conditions"></a>デッドロックと競合状態  
+
  マルチスレッドはスループットと応答速度の問題を解決しますが、その一方で、デッドロックと競合状態という新たな問題を発生させます。  
   
 ### <a name="deadlocks"></a>デッドロック  
+
  デッドロックは、2 つのスレッドのうちの一方が、もう一方によって既にロックされているリソースをロックしようとすると発生します。 こうなると、どちらのスレッドも続行できなくなります。  
   
  マネージド スレッド処理クラスの多くのメソッドには、ロックアウトを検出するためのタイムアウト機能が用意されています。 たとえば、`lockObject` というオブジェクトへのロックの取得を試みるコードを次に示します。 ロックが 300 ミリ秒の間に得られない場合は、<xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> は `false` を返します。  
@@ -59,6 +61,7 @@ else {
 ```  
   
 ### <a name="race-conditions"></a>競合状態  
+
  競合状態は、2 つ以上のスレッドのうちのどれが特定のコード ブロックに最初に到達するかによって、プログラムの結果が変わってしまうバグのことです。 プログラムを何回か実行すると、異なる結果が得られ、実行の結果は予測できません。  
   
  競合状態の簡単な例として、フィールドのインクリメントがあります。 クラスにプライベートの **static** フィールド (Visual Basic では **Shared**) があり、このフィールドは、`objCt++;` (C# の場合) または `objCt += 1` (Visual Basic の場合) のようなコードを使用して、クラスのインスタンスが生成されるたびにインクリメントされるものとします。 この演算によって、`objCt` からレジスタへの値の読み込み、値のインクリメント、および `objCt` への値の格納が行われます。  
@@ -70,6 +73,7 @@ else {
  競合状態は、複数のスレッドの動作を同期するときにも発生します。 コードを記述するときには、そのコードの行 (または行を構成する各マシン命令) を実行するスレッドが別のスレッドに追い越された場合に何が起きるのかを考慮しておく必要があります。  
   
 ## <a name="static-members-and-static-constructors"></a>静的メンバーと静的コンストラクター  
+
  クラスは、そのクラス コンストラクター (C# では `static` コンストラクター、Visual Basic では `Shared Sub New`) の実行が完了するまで初期化されません。 初期化されていない型のコードの実行を防止するため、共通言語ランタイムは、クラス コンストラクターの実行が完了するまで、他のスレッドからのそのクラスの `static` メンバー (Visual Basic では `Shared` メンバー) 呼び出しをすべてブロックします。  
   
  たとえば、クラス コンストラクターが新しいスレッドを起動し、そのスレッドのプロシージャがクラスの `static` メンバーを呼び出した場合、その新しいスレッドは、クラス コンストラクターが完了するまでブロックされます。  
@@ -83,6 +87,7 @@ else {
 実行時に利用できるプロセッサの数を判断するには <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> プロパティを使用します。
   
 ## <a name="general-recommendations"></a>一般的な推奨事項  
+
  マルチスレッドを使用するときは、以下のガイドラインを考慮してください。  
   
 - 他のスレッドを終了させるために <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> を使用することは避けてください。 他のスレッド **Abort** を呼び出すことは、そのスレッドの処理がどこまで到達しているかを把握せずに例外をスローするのと同じことになります。  
@@ -163,6 +168,7 @@ else {
     > <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29> メソッド オーバーロードから参照型に対してタイプ セーフの代替が提供されます。
   
 ## <a name="recommendations-for-class-libraries"></a>クラス ライブラリに関する推奨事項  
+
  マルチスレッド用のクラス ライブラリをデザインするときには、次のガイドラインを検討します。  
   
 - 可能な限り、同期の必要を避けるようにします。 これは、頻繁に使用するコードの場合に特に言えます。 たとえば、競合状態をなくすのではなく、競合状態に対応できるようにアルゴリズムを調整できる場合があります。 不要な同期があると、パフォーマンスが低下し、デッドロックや競合状態が発生する可能性が生じます。  

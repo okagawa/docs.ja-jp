@@ -11,28 +11,32 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET support for
 - .NET, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-ms.openlocfilehash: 8bac9d265211d2f266db634d4bcebb87c2debd9a
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 7613d93e1ca2ac9594759434966745a238ba166e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888777"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726731"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>タスク ベースの非同期パターンの実装
+
 タスク ベースの非同期パターン (TAP) は、3 つの方法 (Visual Studio の C# および Visual Basic コンパイラを使用する方法、手動で行う方法、またはコンパイラと手動による方法を組み合わせた方法) で実装できます。 以下のセクションでは、それぞれの方法について詳しく説明します。 TAP パターンを使用し、計算主体の非同期操作と I/O バインドの非同期操作の両方を実装できます。 [[ワークロード]](#workloads) セクションでは、操作の各種類を確認します。
 
 ## <a name="generating-tap-methods"></a>TAP メソッドを生成する
 
 ### <a name="using-the-compilers"></a>コンパイラを使用する
+
 .NET Framework 4.5 以降、`async` キーワード (Visual Basic では `Async`) を使用して属性設定されているメソッドは、非同期メソッドと見なされ、TAP を使用して非同期にメソッドを実装するために必要となる変換が C# コンパイラおよび Visual Basic コンパイラによって行われます。 非同期メソッドは、<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> オブジェクトまたは <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> オブジェクトを返す必要があります。 後者の場合、関数の本体は `TResult` を返す必要があり、コンパイラによって、結果として得られるタスク オブジェクトでこの結果が利用可能になっていることが確認されます。 同様に、メソッド本体で処理されない例外は、出力タスクにマーシャリングされ、結果として得られるタスクが <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> 状態で終了する原因となります。 この規則に対する例外は、<xref:System.OperationCanceledException> (または派生型) がハンドルされない場合で、結果として得られるタスクは <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 状態で終了します。
 
 ### <a name="generating-tap-methods-manually"></a>手動で TAP メソッドを生成する
+
 TAP パターンは、実装の制御を強化するために手動で実装することができます。 コンパイラは、<xref:System.Threading.Tasks?displayProperty=nameWithType> 名前空間から公開されるパブリック アクセス機能および <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 名前空間でサポートされている型に依存します。 TAP を実装するには、<xref:System.Threading.Tasks.TaskCompletionSource%601> オブジェクトを作成して非同期操作を実行し、それが完了したら、<xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>、<xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A>、または <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> メソッド、またはそのいずれかのメソッドの `Try` バージョンを呼び出します。 TAP メソッドを手動で実装する場合には、表現されている非同期操作の完了時に、結果として得られるタスクを完了する必要があります。 次に例を示します。
 
 [!code-csharp[Conceptual.TAP_Patterns#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#1)]
 [!code-vb[Conceptual.TAP_Patterns#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#1)]
 
 ### <a name="hybrid-approach"></a>ハイブリッド手法
+
  TAP パターンは手動で実装しても、コア ロジックはコンパイラの実装に委譲すると便利な場合があります。 たとえば、例外を <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> オブジェクトを使用して公開するのではなく、メソッドの直接の呼び出し元にエスケープするように、コンパイラが生成した非同期メソッドの外部で引数を検証する場合は、ハイブリッド手法を使用します。
 
  [!code-csharp[Conceptual.TAP_Patterns#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#2)]
@@ -41,9 +45,11 @@ TAP パターンは、実装の制御を強化するために手動で実装す�
  また、このような委譲が便利なもう 1 つのケースとして、高速パスの最適化を実装し、キャッシュされたタスクを返す場合を挙げられます。
 
 ## <a name="workloads"></a>作業負荷
+
 計算主体および I/O バインドの非同期操作は、いずれも、TAP のメソッドとして実装することができます。 ただし、TAP メソッドがライブラリから公開される場合には、TAP メソッドは、I/O バインド操作 (計算が含まれていても、純粋な計算ではない) を含む作業負荷にのみ指定する必要があります。 メソッドが純粋に計算主体の場合、同期実装としてのみ公開してください。 そのメソッドを使用するコードによって、別のスレッドに作業をオフロードするため、または並列化を実現するためにその同期メソッドの呼び出しをタスク内にラップするかどうかが選択されます。 メソッドが I/O バインドの場合、非同期実装としてのみ公開してください。
 
 ### <a name="compute-bound-tasks"></a>計算主体のタスク
+
 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> クラスは、計算を集中的に行う操作の表現に適しています。 既定では、このクラスは、<xref:System.Threading.ThreadPool> クラス内の特別なサポートを利用します。また、いつ、どこで、どのように非同期計算を実行するかを細かく制御することもできます。
 
 計算主体のタスクは、次の方法で生成できます。
@@ -74,6 +80,7 @@ TAP パターンは、実装の制御を強化するために手動で実装す�
 別の例外がそのタスク本体でハンドルされないと、タスクは <xref:System.Threading.Tasks.TaskStatus.Faulted> 状態で終了し、タスクでの待機または結果へのアクセスが試みられると例外をスローします。
 
 ### <a name="io-bound-tasks"></a>I/O バインドのタスク
+
 スレッドの実行全体に対してスレッドによって直接サポートされないタスクを作成するには、<xref:System.Threading.Tasks.TaskCompletionSource%601> 型を使用します。 この型は、関連する <xref:System.Threading.Tasks.TaskCompletionSource%601.Task%2A> インスタンスを返す <xref:System.Threading.Tasks.Task%601> プロパティを公開します。 このタスクの有効期間は、<xref:System.Threading.Tasks.TaskCompletionSource%601>、<xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>、<xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A>、<xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> バリアントなどの `TrySet` メソッドによって制御されます。
 
 指定時間が経過すると完了するタスクを作成する場合を考えてみます。 たとえば、ユーザー インターフェイスでアクティビティを遅延させる場合などです。 <xref:System.Threading.Timer?displayProperty=nameWithType> クラスには、一定時間経過後にデリゲートを非同期に呼び出す機能、また、<xref:System.Threading.Tasks.TaskCompletionSource%601> を使用して、タイマーの前に <xref:System.Threading.Tasks.Task%601> を配置する機能が用意されています。次に例を示します。
@@ -92,6 +99,7 @@ TAP パターンは、実装の制御を強化するために手動で実装す�
 [!code-vb[Conceptual.TAP_Patterns#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#6)]
 
 ### <a name="mixed-compute-bound-and-io-bound-tasks"></a>計算主体のタスクと I/O バインドのタスクの混在
+
 非同期メソッドは、計算主体の操作や I/O バインド操作に限らず、この 2 つを混在させた操作を表現できます。 実際、複数の非同期操作は、しばしばより規模の大きな混合操作に合成されます。 たとえば、前の例の `RenderAsync` メソッドでは、いくつかの入力 `imageData` に基づいて、計算を集中的に行う操作を実行してイメージをレンダリングしました。 この `imageData` は、非同期にアクセスする Web サービスから次のように取得される場合があります。
 
 [!code-csharp[Conceptual.TAP_Patterns#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#7)]

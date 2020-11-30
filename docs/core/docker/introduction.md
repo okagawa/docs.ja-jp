@@ -3,12 +3,12 @@ title: Docker の概要
 description: この記事では、.NET Core アプリケーションのコンテキストでの Docker の基本と概要について説明します。
 ms.date: 03/20/2019
 ms.custom: mvc
-ms.openlocfilehash: 16ad49c39d588aac8f8a7a918eb4d799f37823ac
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 6303c16e914c86f3a431a9e5367e6feb8ff88c9e
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654823"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "95724743"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET および Docker の概要
 
@@ -34,9 +34,9 @@ Docker をインストールする方法について詳しくは、次のダウ�
 
 コンテナー レジストリはイメージ リポジトリのコレクションです。 レジストリのイメージに基づいて自分のイメージを作成できます。 レジストリ内のイメージから直接コンテナーを作成できます。 [Docker コンテナー、イメージ、およびレジストリの相互の関係](../../architecture/microservices/container-docker-introduction/docker-containers-images-registries.md)は、[コンテナー化されたアプリケーションやマイクロサービスの設計および構築](../../architecture/microservices/architect-microservice-container-applications/index.md)を行う際に重要となる概念です。 この手法を用いると開発および配置にかかる時間を大幅に短縮できます。
 
-Docker には、自分が使用できる [Docker Hub](https://hub.docker.com/) でホストされているパブリック レジストリが含まれます。 [.NET Core 関連イメージ](https://hub.docker.com/_/microsoft-dotnet-core/)は Docker Hub に一覧表示されます。
+Docker には、自分が使用できる [Docker Hub](https://hub.docker.com/) でホストされているパブリック レジストリが含まれます。 [.NET Core 関連イメージ](https://hub.docker.com/_/microsoft-dotnet/)は Docker Hub に一覧表示されます。
 
-[Microsoft Container Registry (MCR)](/azure/container-registry) は、Microsoft が提供するコンテナー イメージの公式ソースです。 MCR は Azure CDN に基づいて構築され、グローバルにレプリケートされたイメージを備えています。 ただし、MCR には一般公開された Web サイトがありません。Microsoft が提供するコンテナー イメージについて学習する主な方法は、[Microsoft Docker Hub のページ](https://hub.docker.com/_/microsoft-dotnet-core/)を使うことです。
+[Microsoft Container Registry (MCR)](/azure/container-registry) は、Microsoft が提供するコンテナー イメージの公式ソースです。 MCR は Azure CDN に基づいて構築され、グローバルにレプリケートされたイメージを備えています。 ただし、MCR には一般公開された Web サイトがありません。Microsoft が提供するコンテナー イメージについて学習する主な方法は、[Microsoft Docker Hub のページ](https://hub.docker.com/_/microsoft-dotnet/)を使うことです。
 
 ### <a name="dockerfile"></a>Dockerfile
 
@@ -44,9 +44,9 @@ Docker には、自分が使用できる [Docker Hub](https://hub.docker.com/) �
 
 ## <a name="net-core-images"></a>.NET Core イメージ
 
-公式の .NET Core Docker イメージは Microsoft Container Registry (MCR) に公開され、[Microsoft .NET Core の Docker Hub リポジトリ](https://hub.docker.com/_/microsoft-dotnet-core/)で見つけられます。 各リポジトリには、.NET (SDK またはランタイム) と自分が使用できる OS のさまざまな組み合わせのイメージが含まれています。
+公式の .NET Core Docker イメージは Microsoft Container Registry (MCR) に公開され、[Microsoft .NET Core の Docker Hub リポジトリ](https://hub.docker.com/_/microsoft-dotnet/)で見つけられます。 各リポジトリには、.NET (SDK またはランタイム) と自分が使用できる OS のさまざまな組み合わせのイメージが含まれています。
 
-Microsoft は、特定のシナリオに対応したイメージを用意しています。 たとえば、[ASP.NET Core リポジトリ](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/)には、運用環境での ASP.NET Core アプリの実行用にビルドされたイメージが用意されています。
+Microsoft は、特定のシナリオに対応したイメージを用意しています。 たとえば、[ASP.NET Core リポジトリ](https://hub.docker.com/_/microsoft-dotnet-aspnet/)には、運用環境での ASP.NET Core アプリの実行用にビルドされたイメージが用意されています。
 
 ## <a name="azure-services"></a>Azure サービス
 

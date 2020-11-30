@@ -11,14 +11,15 @@ helpviewer_keywords:
 - multiple attribute instances
 - attributes [.NET], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-ms.openlocfilehash: 8f58648f5cc73b911f0393f2a631b8976ac097b4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6ba01fcd23e626354e5f9a2baa914815b61c8332
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829025"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701563"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>属性に格納されている情報の取得
+
 カスタム属性の取得は簡単なプロセスです。 まず、取得する属性のインスタンスを宣言します。 次に、<xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> メソッドを使用して、取得する属性の値に新しい属性を初期化します。 新しい属性が初期化されたら、そのプロパティを使用して値を取得できるようになります。  
   
 > [!IMPORTANT]
@@ -33,7 +34,9 @@ ms.locfileid: "94829025"
 - [異なるスコープに適用された属性の複数のインスタンスを取得する](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
   
 <a name="cpconretrievingsingleinstanceofattribute"></a>
+
 ## <a name="retrieving-a-single-instance-of-an-attribute"></a>属性の単一のインスタンスを取得する  
+
  次の例では、(前のセクションで説明した) `DeveloperAttribute` がクラス レベルで `MainApp` クラスに適用されます。 `GetAttribute` メソッドは **GetCustomAttribute** を使用して、クラス レベルで `DeveloperAttribute` に格納されている値を取得してからコンソールに表示します。  
   
  [!code-cpp[Conceptual.Attributes.Usage#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source3.cpp#18)]
@@ -57,7 +60,9 @@ The attribute was not found.
  この例では、属性の定義が現在の名前空間にあると仮定しています。 属性の定義が現在の名前空間にない場合は、その定義が存在する名前空間を忘れずにインポートしてください。  
   
 <a name="cpconretrievingmultipleinstancesofattributeappliedtosamescope"></a>
+
 ## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-the-same-scope"></a>同じスコープに適用された属性の複数のインスタンスを取得する  
+
  前の例では、検査するクラスと検索する特定の属性が <xref:System.Attribute.GetCustomAttribute%2A> に渡されます。 このコードは、クラス レベルで属性のインスタンスが 1 つのみ適用される場合に動作します。 ただし、属性のインスタンスが同じクラス レベルに複数適用されている場合、**GetCustomAttribute** メソッドはすべての情報を取得しません。 同じ属性のインスタンスが同じスコープに複数適用されている場合、<xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> を使用して、属性のすべてのインスタンスを配列に配置することができます。 たとえば、同じクラスのクラス レベルで 2 インスタンスの `DeveloperAttribute` が適用された場合、両方の属性にある情報を表示するように `GetAttribute` メソッドを変更できます。 ただし、同じレベルで複数の属性を適用するには、<xref:System.AttributeUsageAttribute> で **AllowMultiple** プロパティを **true** に設定して属性を定義する必要があります。  
   
  次のコード例は、**GetCustomAttributes** メソッドを使用して、指定されたクラスで `DeveloperAttribute` のすべてのインスタンスを参照する配列を作成する方法を示しています。 すべての属性の値がコンソールに表示されます。  
@@ -69,7 +74,9 @@ The attribute was not found.
  このコードでは、属性が見つからない場合、ユーザーに警告されます。 それ以外の場合は、`DeveloperAttribute` の両方のインスタンスに含まれる情報が表示されます。  
   
 <a name="cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes"></a>
+
 ## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-different-scopes"></a>異なるスコープに適用された属性の複数のインスタンスを取得する  
+
  <xref:System.Attribute.GetCustomAttributes%2A> メソッドと <xref:System.Attribute.GetCustomAttribute%2A> メソッドは、クラス全体を検索し、そのクラスに含まれる属性のすべてのインスタンスを返す処理を行いません。 代わりに、指定されたメソッドまたはメンバーを一度に 1 つのみ検索します。 各メンバーに同じ属性が適用されているクラスがあり、それらのメンバーに適用されているすべての属性の値を取得する場合は、すべてのメソッドまたはメンバーを個別に **GetCustomAttributes** および **GetCustomAttribute** に渡す必要があります。  
   
  次のコード例では、クラスをパラメーターとして受け取り、クラス レベルとそのクラスの個々のメソッドごとに `DeveloperAttribute` (以前に定義) を検索します。  

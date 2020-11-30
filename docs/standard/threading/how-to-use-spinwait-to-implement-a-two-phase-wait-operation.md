@@ -7,17 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - SpinWait, how to synchronize two-phase wait
 ms.assetid: b2ac4e4a-051a-4f65-b4b9-f8e103aff195
-ms.openlocfilehash: 0a8ece86d71823eb78a9ebbec661722f0e249790
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e5d58067f70706294308952b9f7cfbf69fa89a58
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819722"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728486"
 ---
 # <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>方法: SpinWait を使用して 2 フェーズ待機操作を実装する
+
 次の例では、<xref:System.Threading.SpinWait?displayProperty=nameWithType> オブジェクトを使用して、2 フェーズ待機操作を実装する方法を示します。 最初のフェーズでは、同期オブジェクトである `Latch` は、ロックが使用可能になったかどうかを確認しながら、数回のサイクルの間スピンします。 2 番目のフェーズでは、ロックが使用可能になった場合に、`Wait` メソッドは待機を実行するために <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> を使用せずに制御を返します (それ以外の場合、`Wait` は待機を実行します)。  
   
 ## <a name="example"></a>例  
+
  この例では、ラッチ同期プリミティブの非常に基本的な実装を示します。 待機時間が非常に短くなると予測される場合は、このデータ構造を使用することができます。 この例は、デモンストレーション目的のみで提供されます。 プログラムでラッチ型機能が必要な場合は、<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> の使用を検討してください。  
   
  [!code-csharp[CDS_SpinWait#03](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinwait/cs/spinwait03.cs#03)]

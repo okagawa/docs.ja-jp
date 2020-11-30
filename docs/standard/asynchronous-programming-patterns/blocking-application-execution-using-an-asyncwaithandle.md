@@ -12,14 +12,15 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - blocking application execution
 ms.assetid: 3e32daf2-8161-4e8f-addd-9fd9ff101b03
-ms.openlocfilehash: 15750575aaa4f937104bd36db5f9dedd4cd12f0a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1e7fc71ef5a4a44b2bb4c039305e06c157c65f75
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830468"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716162"
 ---
 # <a name="blocking-application-execution-using-an-asyncwaithandle"></a>AsyncWaitHandle の使用によるアプリケーション実行のブロック
+
 非同期操作の結果の待機中に、他の作業を継続できないアプリケーションは、操作が完了するまでブロックする必要があります。 次のオプションのいずれかを使用して、非同期操作が完了するまでの待機中に、アプリケーションのメイン スレッドをブロックします。  
   
 - 非同期操作の **Begin**_OperationName_ メソッドによって返される <xref:System.IAsyncResult> の <xref:System.IAsyncResult.AsyncWaitHandle%2A> プロパティを使用します。 このトピックでは、この方法のデモが実行されます。  
@@ -29,6 +30,7 @@ ms.locfileid: "94830468"
  非同期操作が完了するまでブロックする 1 つ以上の <xref:System.Threading.WaitHandle> オブジェクトを使用するアプリケーションは、通常は **Begin**_OperationName_ メソッドを呼び出し、操作の結果なしで実行できるすべての作業を実行し、非同期操作が完了するまでブロックします。 アプリケーションは、<xref:System.IAsyncResult.AsyncWaitHandle%2A> を使用して <xref:System.Threading.WaitHandle.WaitOne%2A> メソッドのいずれかを呼び出し、単一の操作上でブロックできます。 非同期操作のセットが完了するまで待機しながらブロックするには、関連する <xref:System.IAsyncResult.AsyncWaitHandle%2A> オブジェクトを配列に格納し、<xref:System.Threading.WaitHandle.WaitAll%2A> メソッドのいずれかを呼び出します。 非同期操作のいずれかのセットが完了するまで待機しながらブロックするには、関連する <xref:System.IAsyncResult.AsyncWaitHandle%2A> オブジェクトを配列に格納し、<xref:System.Threading.WaitHandle.WaitAny%2A> メソッドのいずれかを呼び出します。  
   
 ## <a name="example"></a>例  
+
  次のコード例は、ユーザー指定のコンピューターのドメイン ネーム システム情報を取得するために、DNS クラスの非同期メソッドを使用してデモを実行します。 例では、非同期操作に関連付けられた <xref:System.Threading.WaitHandle> を使用して、ブロックのデモを実行します。 この方法を使用する場合は必要ないため、`null` (Visual Basic の場合は `Nothing`) は、<xref:System.Net.Dns.BeginGetHostByName%2A>`requestCallback` と `stateObject` パラメーターに渡されることに注意してください。  
   
  [!code-csharp[AsyncDesignPattern#2](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/Async_EndBlockWait.cs#2)]

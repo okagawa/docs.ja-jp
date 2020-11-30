@@ -9,17 +9,19 @@ helpviewer_keywords:
 - lists [.NET], generic delegates
 - generics [.NET], delegates
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
-ms.openlocfilehash: b3b18a2efc4dba432ee241d764c1a81101796baf
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5356671b4f1c48c125e49c35a2f8ddc5ea1ca26b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827283"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728512"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>配列とリストの操作に使用する汎用デリゲート
+
 ここでは、配列またはコレクションの要素に対して実行される変換、検索述語、およびアクションの汎用デリゲートの概要について説明します。  
   
 ## <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>配列とリストの操作に使用する汎用デリゲート  
+
  <xref:System.Action%601> 汎用デリゲートは、指定した型の要素に対して何らかのアクションを実行するメソッドを表します。 要素に対して必要なアクションを実行するメソッドを作成し、そのメソッドを表す <xref:System.Action%601> デリゲートのインスタンスを作成した後、配列とデリゲートを静的ジェネリック メソッド <xref:System.Array.ForEach%2A?displayProperty=nameWithType> に渡すことができます。 このメソッドは、配列の各要素に対して呼び出されます。  
   
  <xref:System.Collections.Generic.List%601> ジェネリック クラスにも、<xref:System.Action%601> デリゲートを使用する <xref:System.Collections.Generic.List%601.ForEach%2A> メソッドが用意されています。 このメソッドはジェネリックではありません。  
@@ -36,6 +38,7 @@ ms.locfileid: "94827283"
  <xref:System.Converter%602> 汎用デリゲートを使用すると、2 つの型の間での変換を定義し、一方の型の配列をもう一方の型の配列に変換したり、一方の型のリストをもう一方の型のリストに変換したりできます。 既存のリストの要素を新しい型に変換するメソッドを作成し、そのメソッドを表すデリゲート インスタンスを作成したら、<xref:System.Array.ConvertAll%2A?displayProperty=nameWithType> 静的ジェネリック メソッドを使用して、元の配列から新しい型の配列を生成します。また、元のリストから新しい型のリストを生成する場合は、<xref:System.Collections.Generic.List%601.ConvertAll%60%601%28System.Converter%7B%600%2C%60%600%7D%29?displayProperty=nameWithType> ジェネリック インスタンス メソッドを使用します。  
   
 ### <a name="chaining-delegates"></a>デリゲートのチェーン  
+
  これらのデリゲートを使用するメソッドの多くは、別のメソッドに渡すことのできる配列またはリストを返します。 たとえば、配列の特定の要素を選択して新しい型に変換し、新しい配列に保存すると、<xref:System.Array.FindAll%2A> ジェネリック メソッドによって返される配列を <xref:System.Array.ConvertAll%2A> ジェネリック メソッドに渡すことができます。 新しい要素の型にネイティブな並べ替え順序がない場合は、<xref:System.Array.ConvertAll%2A> ジェネリック メソッドによって返された配列を <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29> ジェネリック メソッドに渡すことができます。  
   
 ## <a name="see-also"></a>参照

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - task scheduler, linking from TPL
 ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
-ms.openlocfilehash: 716892940bf8387cbe3d39fd36258c5ede02ee8b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b8c27c1ca61356b36183bb74b8360e41f5324d25
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826906"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722441"
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>方法: データフロー ブロックのタスク スケジューラを指定する
+
 このドキュメントでは、アプリケーションでデータ フローを使用する場合に特定のタスク スケジューラを関連付ける方法を示します。 この例では、Windows フォーム アプリケーションの <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> クラスを使用して、リーダー タスクがアクティブである場合と、ライター タスクがアクティブである場合を示します。 また、<xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> メソッドを使用してデータ フロー ブロックを有効にし、ユーザー インターフェイス スレッドで実行できるようにします。
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -30,6 +31,7 @@ ms.locfileid: "94826906"
 3. フォームに <xref:System.Windows.Forms.Timer> コントロールを追加します。 <xref:System.Windows.Forms.Timer.Interval%2A> プロパティを `2500` に設定します。  
   
 ## <a name="adding-dataflow-functionality"></a>データ フロー機能の追加  
+
  このセクションでは、アプリケーションに参加するデータ フロー ブロックを作成する方法と、各データ フロー ブロックをタスク スケジューラとを関連付ける方法について説明します。  
   
 ### <a name="to-add-dataflow-functionality-to-the-application"></a>アプリケーションにデータ フロー機能を追加するには  
@@ -73,6 +75,7 @@ ms.locfileid: "94826906"
  この例では、<xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> クラスを使用していくつかのデータ フロー ブロックが同時に実行できるようにし、別の 1 つのデータ フロー ブロックが、同じ <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> オブジェクトで実行するその他すべてのデータ フロー ブロックに対して排他的に実行するようにします。 この手法は、複数のデータ フロー ブロックが 1 つのリソースを共有し、一部のデータ フロー ブロックがそのリソースへの排他アクセスを必要とする場合に、手動でそのリソースへのアクセスを同期する必要がなくなるため、便利です。 手動で同期する必要がなくなることで、コードの効率性が向上する可能性があります。  
   
 ## <a name="example"></a>例  
+
  次の例は、Form1.cs (Visual Basic の Form1.vb) のコード全体を示しています。  
   
  [!code-csharp[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#100)]

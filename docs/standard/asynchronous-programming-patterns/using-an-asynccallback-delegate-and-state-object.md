@@ -10,17 +10,19 @@ helpviewer_keywords:
 - asynchronous programming, state objects
 - IAsyncResult interface, samples
 ms.assetid: e3e5475d-c5e9-43f0-928e-d18df8ca1f1d
-ms.openlocfilehash: 0a33c852d822e7d25d14ab17324459ec005853f9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 3a929ad6e6445338325b1111ea57556272d6f7ae
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829142"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699743"
 ---
 # <a name="using-an-asynccallback-delegate-and-state-object"></a>AsyncCallback デリゲートおよび状態オブジェクトの使用
+
 <xref:System.AsyncCallback> デリゲートを使用し、別個のスレッドで非同期操作の結果を処理するとき、状態オブジェクトを使用してコールバック間で情報を渡し、最終的な結果を取得できます。 このトピックでは、「[AsyncCallback デリゲートの使用による非同期操作の終了](using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)」の例をさらに展開することでそれを実践します。  
   
 ## <a name="example"></a>例  
+
  次のコード例は、ユーザー指定のコンピューターのドメイン ネーム システム (DNS) 情報を取得するために、<xref:System.Net.Dns> クラスの非同期メソッドを使用してデモを実行します。 この例では、`HostRequest` クラスを定義して使用し、状態情報を格納します。 `HostRequest` オブジェクトは、ユーザーがコンピューター名を入力するたびに作成されます。 このオブジェクトは <xref:System.Net.Dns.BeginGetHostByName%2A> メソッドに渡されます。 `ProcessDnsInformation` メソッドは、要求が完了するたびに呼び出されます。 `HostRequest` オブジェクトは <xref:System.IAsyncResult.AsyncState%2A> プロパティを利用して取得されます。 `ProcessDnsInformation` メソッドは `HostRequest` オブジェクトを使用し、要求により返された <xref:System.Net.IPHostEntry> か、スローされた <xref:System.Net.Sockets.SocketException> を格納します。 要求がすべて完了すると、アプリケーションは `HostRequest` オブジェクトを反復処理し、DNS 情報か <xref:System.Net.Sockets.SocketException> エラー メッセージを表示します。  
   
  [!code-csharp[AsyncDesignPattern#5](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/AsyncDelegateWithStateObject.cs#5)]

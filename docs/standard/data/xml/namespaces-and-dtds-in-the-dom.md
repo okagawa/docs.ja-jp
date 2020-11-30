@@ -2,14 +2,15 @@
 title: DOM における名前空間と DTD
 ms.date: 03/30/2017
 ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
-ms.openlocfilehash: bd2a15b96cb456f475eb7dec439a0f328ae72a55
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 42bd30e7eea2ec0a3e1aa6846196c3280697efdf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830143"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714550"
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>DOM における名前空間と DTD
+
 ドキュメント型定義 (DTD) によって名前空間のサポートは複雑になります。 たとえば、次の XML では、既定の属性の名前にコロンが含まれています。  
   
 ```xml  

@@ -6,20 +6,23 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
-ms.openlocfilehash: bb011a8b81d9808c7517ebc2517529af7c4b975a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 177c52ea7217821735250b297974ac0ebaa1eb2e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819372"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725379"
 ---
 # <a name="building-xml-schemas"></a>XML スキーマの作成
+
 <xref:System.Xml.Schema?displayProperty=nameWithType> 名前空間のクラスは、W3C (World Wide Web Consortium) 勧告『XML Schema』で定義された構造に割り当てられ、メモリ内に XML スキーマを作成する場合に使用できます。  
   
 ## <a name="building-an-xml-schema"></a>XML スキーマの作成  
+
  以下のコード サンプルでは、SOM API を使用してカスタム XML スキーマをメモリ内に作成します。  
   
 ### <a name="creating-element-and-attributes"></a>要素と属性の作成  
+
  このコード サンプルでは、カスタム スキーマを最初から作成するため、子要素、属性、およびそれらに対応する型を作成した後で最上位要素を作成します。  
   
  以下のコード サンプルでは、SOM の `FirstName` クラスおよび `LastName` クラスを使用して、カスタム スキーマの `CustomerId` 属性に加え、<xref:System.Xml.Schema.XmlSchemaElement> 要素および <xref:System.Xml.Schema.XmlSchemaAttribute> 要素を作成します。 XML スキーマの <xref:System.Xml.Schema.XmlSchemaElement.Name%2A> 要素および <xref:System.Xml.Schema.XmlSchemaElement> 要素の name 属性に対応する <xref:System.Xml.Schema.XmlSchemaAttribute> クラスおよび `<xs:element />` クラスの `<xs:attribute />` プロパティを除いて、このスキーマで使用できる他のすべての属性 (`defaultValue`、`fixedValue`、`form` など) には、<xref:System.Xml.Schema.XmlSchemaElement> クラスおよび <xref:System.Xml.Schema.XmlSchemaAttribute> クラスに対応するプロパティが存在します。  
@@ -29,6 +32,7 @@ ms.locfileid: "94819372"
  [!code-vb[XmlSchemaCreateExample#2](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaCreateExample/VB/XmlSchemaCreateExample.vb#2)]  
   
 ### <a name="creating-schema-types"></a>スキーマの型の作成  
+
  要素および属性のコンテンツは、その型によって定義されます。 組み込みのスキーマの型を持つ要素と属性を作成するには、<xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> クラスを使用する組み込みの修飾名を使用して、<xref:System.Xml.Schema.XmlSchemaElement> クラスまたは <xref:System.Xml.Schema.XmlSchemaAttribute> クラスの <xref:System.Xml.XmlQualifiedName> プロパティを設定します。 要素と属性のユーザー定義型を作成するには、<xref:System.Xml.Schema.XmlSchemaSimpleType> または <xref:System.Xml.Schema.XmlSchemaComplexType> クラスを使用して単純型または複合型を新しく作成します。  
   
 > [!NOTE]
@@ -46,6 +50,7 @@ ms.locfileid: "94819372"
  [!code-vb[XmlSchemaCreateExample#3](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaCreateExample/VB/XmlSchemaCreateExample.vb#3)]  
   
 ### <a name="creating-and-compiling-schemas"></a>スキーマの作成とコンパイル  
+
  この時点で、子要素と属性 (それらに対応する型) および最上位の `Customer` 要素が SOM API を使用してメモリ内に作成されています。 以下のコード サンプルでは、<xref:System.Xml.Schema.XmlSchema> クラスを使用してスキーマ要素が作成され、<xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> プロパティを使用して最上位の要素と型が追加されます。また、<xref:System.Xml.Schema.XmlSchemaSet> クラスを使用して完全なスキーマがコンパイルされて、コンソールに出力されます。  
   
  [!code-cpp[XmlSchemaCreateExample#4](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaCreateExample/CPP/XmlSchemaCreateExample.cpp#4)]

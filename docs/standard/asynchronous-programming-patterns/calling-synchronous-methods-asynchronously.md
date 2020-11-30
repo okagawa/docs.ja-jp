@@ -20,12 +20,12 @@ helpviewer_keywords:
 - waiting for asynchronous calls
 - status information [.NET], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-ms.openlocfilehash: 668ac7552289a9d1015b62ed9e68f53415dd6211
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 8d12ab2904b336f38e56387c8aaf2a851a46007e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830442"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722727"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>同期メソッドの非同期呼び出し
 
@@ -55,6 +55,7 @@ ms.locfileid: "94830442"
 > どの手法を使用する場合でも、常に `EndInvoke` を呼び出して、非同期呼び出しを完了します。
 
 ## <a name="defining-the-test-method-and-asynchronous-delegate"></a>テスト メソッドと非同期デリゲートの定義
+
  次のコード例は、長時間実行される `TestMethod`メソッドの非同期呼び出しを行うさまざまな方法を示します。 `TestMethod` メソッドはコンソール メッセージを表示して処理が開始されたことを示し、しばらくスリープした後、終了します。 `TestMethod` には `out` パラメーターがあり、 `BeginInvoke` および `EndInvoke`のシグネチャへのそのようなパラメーターの追加方法を示します。 `ref` パラメーターは同様に処理できます。
 
  次のコード例は、 `TestMethod` と、 `AsyncMethodCaller` の非同期呼び出しに使用できる `TestMethod` という名前のデリゲートの定義を示します。 コード例をコンパイルするには、 `TestMethod` および `AsyncMethodCaller` デリゲートの定義を含める必要があります。
@@ -64,6 +65,7 @@ ms.locfileid: "94830442"
  [!code-vb[AsyncDelegateExamples#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/TestMethod.vb#1)]
 
 ## <a name="waiting-for-an-asynchronous-call-with-endinvoke"></a>EndInvoke による非同期呼び出しの待機
+
  メソッドを非同期実行する最も簡単な方法は、デリゲートの `BeginInvoke` メソッドを呼び出してメソッドの実行を開始し、メイン スレッドで何かの処理を実行した後、デリゲートの `EndInvoke` メソッドを呼び出す方法です。 `EndInvoke` は非同期呼び出しが完了するまで戻らないので、呼び出し元スレッドがブロックされる場合があります。 この手法はファイルやネットワーク操作を使用するときに適しています。
 
 > [!IMPORTANT]
@@ -74,6 +76,7 @@ ms.locfileid: "94830442"
  [!code-vb[AsyncDelegateExamples#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/EndInvoke.vb#2)]
 
 ## <a name="waiting-for-an-asynchronous-call-with-waithandle"></a>WaitHandle による非同期呼び出しの待機
+
  <xref:System.Threading.WaitHandle> を取得するには、 <xref:System.IAsyncResult.AsyncWaitHandle%2A> によって返される <xref:System.IAsyncResult> の `BeginInvoke`プロパティを使用します。 <xref:System.Threading.WaitHandle> は非同期呼び出しが完了すると通知され、 <xref:System.Threading.WaitHandle.WaitOne%2A> メソッドを呼び出すことによってこれを待機できます。
 
  <xref:System.Threading.WaitHandle>を使用する場合は、非同期呼び出しの完了前または完了後、 `EndInvoke` を呼び出して結果を取得する前に、追加の処理を実行できます。
@@ -86,6 +89,7 @@ ms.locfileid: "94830442"
  [!code-vb[AsyncDelegateExamples#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/WaitHandle.vb#3)]
 
 ## <a name="polling-for-asynchronous-call-completion"></a>非同期呼び出し完了のポーリング
+
  <xref:System.IAsyncResult.IsCompleted%2A> によって返された <xref:System.IAsyncResult> の `BeginInvoke` プロパティを使用して、非同期呼び出しが完了したことを検出できます。 この方法は、ユーザー インターフェイスにサービスを提供するスレッドから非同期呼び出しを行う場合に使用します。 完了をポーリングすると、呼び出し元スレッドは、 <xref:System.Threading.ThreadPool> スレッドで非同期呼び出しを実行しながら、実行を継続できます。
 
  [!code-cpp[AsyncDelegateExamples#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/polling.cpp#4)]
@@ -93,6 +97,7 @@ ms.locfileid: "94830442"
  [!code-vb[AsyncDelegateExamples#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/polling.vb#4)]
 
 ## <a name="executing-a-callback-method-when-an-asynchronous-call-completes"></a>非同期呼び出し完了時のコールバック メソッドの実行
+
  非同期呼び出しを開始したスレッドが結果を処理するスレッドである必要がない場合は、呼び出しが完了したときにコールバック メソッドを実行できます。 コールバック メソッドは <xref:System.Threading.ThreadPool> スレッドで実行されます。
 
  コールバック メソッドを使用するには、コールバック メソッドを表す `BeginInvoke` デリゲートを <xref:System.AsyncCallback> に渡す必要があります。 コールバック メソッドで使用される情報を含むオブジェクトを渡すこともできます。 コールバック メソッドでは、唯一のパラメーターである <xref:System.IAsyncResult>を <xref:System.Runtime.Remoting.Messaging.AsyncResult> オブジェクトにキャストします。 こうすると、 <xref:System.Runtime.Remoting.Messaging.AsyncResult.AsyncDelegate%2A?displayProperty=nameWithType> プロパティを使用して、呼び出しを開始するために使用したデリゲートを取得し、 `EndInvoke`を呼び出すことができるようになります。

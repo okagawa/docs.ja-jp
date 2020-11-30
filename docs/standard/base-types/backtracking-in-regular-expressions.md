@@ -16,20 +16,22 @@ helpviewer_keywords:
 - strings [.NET], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.openlocfilehash: a15ef27f71eac9ed12889054283f8ac41d85922f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5c6d9d2e048c2dd89cf18ff7148050ddb6813f40
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825248"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699704"
 ---
 # <a name="backtracking-in-regular-expressions"></a>正規表現におけるバックトラッキング
+
 バックトラッキングは、正規表現パターンに省略可能な[量指定子](quantifiers-in-regular-expressions.md)または[代替構成体](alternation-constructs-in-regular-expressions.md)が含まれている場合に発生します。この場合、正規表現エンジンは、一致の検索を継続するために、以前に保存した状態に戻ります。 バックトラッキングは、正規表現を強力にするための中心的な機能で、これにより、非常に複雑なパターンを照合できる強力かつ柔軟な正規表現を作成できるようになります。 その一方で、バックトラッキングにはマイナス面もあり、 多くの場合、正規表現エンジンのパフォーマンスを左右する最大の要因になります。 さいわい、正規表現エンジンの動作とバックトラッキングの使用方法は開発者が制御できます。 ここでは、バックトラッキングの動作のしくみと、バックトラッキングを制御する方法について説明します。  
   
 > [!NOTE]
 > 一般に、.NET 正規表現エンジンのような非決定性有限オートマトン (NFA: Nondeterministic Finite Automaton) エンジンでは、効率的かつ高速な正規表現を作成する責任は開発者にあります。  
 
 ## <a name="linear-comparison-without-backtracking"></a>バックトラッキングを使用しない直線的な比較  
+
  正規表現パターンに省略可能な量指定子や代替構成体が含まれていない場合、正規表現エンジンは線形時間で実行されます。 つまり、パターンの最初の言語要素を入力文字列のテキストと照合し、パターンの次の言語要素を入力文字列の次の文字または文字グループと照合するという操作が、 照合が最終的に成功または失敗するまで繰り返されます。 いずれの場合も、正規表現エンジンは入力文字列内を 1 文字ずつ進みます。  
   
  具体的な例を次に示します。 正規表現 `e{2}\w\b` は、文字 "e" が 2 回出現した後に任意の単語文字とワード境界が続くパターンを検索します。  
@@ -64,6 +66,7 @@ ms.locfileid: "94825248"
  正規表現パターンに省略可能な量指定子や代替構成体が含まれていない場合、正規表現パターンと入力文字列の照合に必要な比較の最大数は、入力文字列の文字数にほぼ等しくなります。 この場合、正規表現エンジンは、この 13 文字の文字列の一致候補を特定するために 19 回の比較を使用します。  つまり、正規表現エンジンは、省略可能な量指定子や代替構成体が含まれていない場合にはほぼ線形時間で実行されます。
 
 ## <a name="backtracking-with-optional-quantifiers-or-alternation-constructs"></a>省略可能な量指定子または代替構成体によるバックトラッキング  
+
  正規表現に省略可能な量指定子または代替構成体が含まれている場合、入力文字列の評価は直線的ではなくなります。 NFA エンジンによるパターン一致の動作は、照合する入力文字列内の文字ではなく、正規表現内の言語要素によって決まります。 したがって、正規表現エンジンは、省略可能な部分式や代替の部分式を完全に照合しようとします。 部分式内の次の言語要素に進んで照合が失敗した場合は、正規表現全体を入力文字列と照合するために、それまでに見つかった部分的な一致を放棄して、以前に保存した状態に戻ることもあります。 このように、一致を見つけるために以前に保存した状態に戻るプロセスを、バックトラッキングと呼びます。  
   
  例として、 `.*(es)`という正規表現パターンについて見てみましょう。この正規表現パターンは、文字 "es" と、それに先行するすべての文字に一致します。 次の例に示すように、入力文字列が "Essential services are provided by regular expressions." の場合、このパターンは、"expressions" の "es" までの文字列全体に一致します。  
@@ -86,6 +89,7 @@ ms.locfileid: "94825248"
  バックトラッキングを使用した場合、この正規表現パターンを 55 文字の入力文字列と照合するのに 67 回の比較操作が必要になります。 一般に、正規表現パターンに 1 つの代替構成体または省略可能な量指定子が含まれている場合、パターンの照合に必要な比較操作の回数は入力文字列の文字数の 2 倍以上になります。
 
 ## <a name="backtracking-with-nested-optional-quantifiers"></a>入れ子になった省略可能な量指定子によるバックトラッキング  
+
  パターンに多数の代替構成体、入れ子になった代替構成体、または (最もよくあるケースとして) 入れ子になった省略可能な量指定子が含まれていると、正規表現パターンの照合に必要な比較操作の回数は指数関数的に増加する可能性があります。 例として、1 つ以上の文字 "a" から成る文字列全体に一致するように作られた `^(a+)+$` という正規表現パターンについて見てみましょう。 次の例では、同じ長さの 2 つの入力文字列が渡されていますが、パターンに一致するのは 1 つ目の文字列だけです。 <xref:System.Diagnostics.Stopwatch?displayProperty=nameWithType> クラスは、照合操作にかかる時間を調べるために使用されています。  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking3.cs#3)]
@@ -102,9 +106,11 @@ ms.locfileid: "94825248"
  このようにして、正規表現エンジンがすべての可能な一致の組み合わせを試行し終わるまで入力文字列と正規表現の比較が続けられます。一致しないという結論に到達するのはその後です。 この比較は、入れ子になった量指定子があるため、O(2 <sup>n</sup>) (指数演算、*n* は入力文字列の文字数) です。 そのため、最悪のケースでは、30 文字の入力文字列で約 1,073,741,824 回、40 文字の入力文字列では約 1,099,511,627,776 回の比較が必要になります。 使用する文字列の長さがこのレベル以上になると、正規表現パターンに一致しない入力を処理するときに、正規表現メソッドの完了までに膨大な時間がかかる可能性があります。
 
 ## <a name="controlling-backtracking"></a>バックトラッキングの制御  
+
  バックトラッキングを使用すると、強力かつ柔軟な正規表現を作成できますが、 前のセクションで見たように、受け入れられないほどのパフォーマンスの低下が伴うことがあります。 過度なバックトラッキングを回避するには、 <xref:System.Text.RegularExpressions.Regex> オブジェクトをインスタンス化したり静的な正規表現の一致メソッドを呼び出したりするときに、タイムアウト間隔を定義する必要があります。 これについては、次のセクションで説明します。 また、.NET では、バックトラッキングを制限または抑制する 3 つの正規表現言語要素がサポートされています。これらを使用すると、パフォーマンスをほとんど低下させずに複雑な正規表現を使用できます。それらの言語要素とは、[アトミック グループ](#atomic-groups)、[後読みアサーション](#lookbehind-assertions)、および[先読みアサーション](#lookahead-assertions)です。 各言語要素の詳細については、[コンストラクトのグループ化](grouping-constructs-in-regular-expressions.md)に関するページを参照してください。  
 
 ### <a name="defining-a-time-out-interval"></a>タイムアウト間隔の定義  
+
  .NET Framework 4.5 以降では、試行が中止されて <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 例外がスローされるまでの、正規表現エンジンが単一の一致を検索する最長間隔を表すタイムアウト値を設定できます。 タイムアウト間隔を指定するには、インスタンス正規表現の <xref:System.TimeSpan> コンストラクターに <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29> 値を指定します。 また、各静的パターン一致メソッドには、 <xref:System.TimeSpan> パラメーターを持つオーバーロードがあり、これを使用してタイムアウト値を指定できます。 既定のタイムアウト間隔は <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> に設定されており、正規表現エンジンはタイムアウトしません。  
   
 > [!IMPORTANT]
@@ -118,6 +124,7 @@ ms.locfileid: "94825248"
  [!code-vb[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/vb/ctor1.vb#1)]  
 
 ### <a name="atomic-groups"></a>アトミック グループ
+
  `(?>` *subexpression*`)` 言語要素を使用すると、部分式でのバックトラッキングが抑制されます。 一致すると、後続のバックトラッキングに対して一致したものが破棄されなくなります。 たとえば、パターン `(?>\w*\d*)1` で `1` が一致しない場合、`1` で一致することがわかっていても `\d*` の一致は破棄されません。 アトミック グループは、照合の失敗に関連するパフォーマンスの問題の防止に役立ちます。
   
  次の例は、入れ子になった量指定子を使用している場合にバックトラッキングを抑制すると、いかにパフォーマンスが向上するかを示しています。 この例では、入力文字列が 2 つの正規表現に一致しないことが正規表現エンジンによって確認されるまでの時間を測定しています。 1 つ目の正規表現は、1 つ以上の 16 進数、コロン、1 つ以上の 16 進数、2 つのコロンというパターンを 1 つ以上含む文字列を、バックトラッキングを使用して照合します。 2 つ目の正規表現は、バックトラッキングを無効にする以外は 1 つ目と同じです。 出力を見るとわかるように、バックトラッキングを無効にするとパフォーマンスが大幅に向上します。  
@@ -126,6 +133,7 @@ ms.locfileid: "94825248"
  [!code-vb[Conceptual.RegularExpressions.Backtracking#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking4.vb#4)]  
 
 ### <a name="lookbehind-assertions"></a>後読みアサーション  
+
  .NET には、入力文字列の前の文字と一致する 2 つの言語要素 `(?<=`*subexpression*`)` と `(?<!`*subexpression*`)` が含まれています。 これらの言語要素は、どちらもゼロ幅アサーションです。つまり、現在の文字の直前にある文字が *subexpression* に一致するかどうかを、前進もバックトラッキングもせずに確認します。  
   
  `(?<=` *subexpression* `)` は肯定後読みアサーションで、現在の位置の前にある文字が *subexpression* に一致する必要があります。 `(?<!`*subexpression*`)` は否定後読みアサーションで、現在の位置の前にある文字が *subexpression* に一致しない必要があります。 否定と肯定のどちらの後読みアサーションも、 *subexpression* が前の部分式のサブセットである場合に特に役立ちます。  
@@ -157,6 +165,7 @@ ms.locfileid: "94825248"
 |`@`|アット マーク ("\@") に一致します。|  
 
 ### <a name="lookahead-assertions"></a>先読みアサーション  
+
  .NET には、入力文字列の次の文字と一致する 2 つの言語要素 `(?=`*subexpression*`)` と `(?!`*subexpression*`)` が含まれています。 これらの言語要素は、どちらもゼロ幅アサーションです。つまり、現在の文字の直後にある文字が *subexpression* に一致するかどうかを、前進もバックトラッキングもせずに確認します。  
   
  `(?=` *subexpression* `)` は肯定先読みアサーションで、現在の位置の後にある文字が *subexpression* に一致する必要があります。 `(?!`*subexpression*`)` は否定先読みアサーションで、現在の位置の後にある文字が *subexpression* に一致しない必要があります。 肯定と否定のどちらの先読みアサーションも、 *subexpression* が次の部分式のサブセットである場合に特に役立ちます。  

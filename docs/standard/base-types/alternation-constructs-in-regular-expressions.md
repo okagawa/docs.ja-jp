@@ -14,12 +14,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.openlocfilehash: 4fb9960ad3c92494cd3aa47516f6ba82ab606ee5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0a1b46443d5cd9f8a19f4cfb9f9b07a5e33e719e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825300"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714693"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>正規表現での代替コンストラクト
 
@@ -30,6 +30,7 @@ ms.locfileid: "94825300"
 - [有効なキャプチャ グループに基づく条件一致](#Conditional_Group)
 
 <a name="Either_Or"></a>
+
 ## <a name="pattern-matching-with-124"></a>&#124; を使用したパターン マッチング
 
 縦棒 (`|`) 文字を使って、`|` 文字で各パターンを区切った一連のパターンのいずれかと照合できます。
@@ -62,6 +63,7 @@ ms.locfileid: "94825300"
 |`\b`|ワード境界で照合を終了します。|  
   
 <a name="Conditional_Expr"></a>
+
 ## <a name="conditional-matching-with-an-expression"></a>式を使用した条件一致
 
 この言語要素では、最初のパターンに一致するかどうかに応じて、2 つのパターンのいずれかの照合を実行します。 構文は次のとおりです。  
@@ -93,6 +95,7 @@ ms.locfileid: "94825300"
 |`\b`|ワード境界に一致します。|  
 
 <a name="Conditional_Group"></a>
+
 ## <a name="conditional-matching-based-on-a-valid-captured-group"></a>有効なキャプチャ グループに基づく条件一致
 
 この言語要素では、指定されたキャプチャ グループに一致するかどうかに応じて、2 つのパターンのいずれかを照合します。 構文は次のとおりです。

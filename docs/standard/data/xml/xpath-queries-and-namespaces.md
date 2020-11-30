@@ -6,19 +6,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
-ms.openlocfilehash: a97ff5afef23c361b1f675d2f07f43b3bc5df299
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 74dbe6b84c8d9400790f763f811da5542c732892
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818389"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720881"
 ---
 # <a name="xpath-queries-and-namespaces"></a>XPath クエリおよび名前空間
+
 XPath クエリは XML ドキュメント中の名前空間を認識し、名前空間プレフィックスを使用して要素と属性名を修飾することができます。 名前空間プレフィックスで要素や属性の名前を修飾すると、XPath クエリで返されるノードを特定の名前空間に属するノードだけに限定することができます。  
   
  たとえば、プレフィックス `books` が名前空間 `http://www.contoso.com/books` に割り当てられると、XPath クエリ `/books:books/books:book` は名前空間 `book` 内の `http://www.contoso.com/books` 要素だけを選択します。  
   
 ## <a name="the-xmlnamespacemanager"></a>XmlNamespaceManager  
+
  XPath クエリで名前空間を使用するために、<xref:System.Xml.IXmlNamespaceResolver> クラスに似た <xref:System.Xml.XmlNamespaceManager> インターフェイスから派生したオブジェクトが、名前空間 URI と XPath クエリに含まれるプレフィックスを使用して作成されます。  
   
  <xref:System.Xml.XmlNamespaceManager> オブジェクトは次の方法でクエリで使用することができます。  
@@ -36,6 +38,7 @@ XPath クエリは XML ドキュメント中の名前空間を認識し、名前
 - <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
 ### <a name="the-default-namespace"></a>既定の名前空間  
+
  次の XML ドキュメントでは、`http://www.contoso.com/books` 名前空間を宣言するために、空のプレフィックスの既定の名前空間が使用されています。  
   
 ```xml  

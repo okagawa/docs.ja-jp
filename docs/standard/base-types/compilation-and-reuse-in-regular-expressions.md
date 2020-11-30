@@ -11,17 +11,19 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, compilation
 - regular expressions, engines
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
-ms.openlocfilehash: f0da4a226feb6bafc7e17c7333cbc507701311af
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b0d3ac619e8d9548fffcb41b23d2ebd6663915e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823109"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723208"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>正規表現におけるコンパイルと再利用
+
 正規表現エンジンが式をどのようにコンパイルするか、および正規表現がどのようにキャッシュされるかを理解することで、正規表現を幅広く使用するアプリケーションのパフォーマンスを最適化できます。 このトピックでは、コンパイルとキャッシュの両方について説明します。  
   
 ## <a name="compiled-regular-expressions"></a>コンパイルされた正規表現  
+
  既定では、正規表現エンジンは、内部命令のシーケンス (Microsoft 中間言語 (MSIL) とは異なる高度なコード) に正規表現をコンパイルします。 エンジンは、正規表現を実行するときに内部コードを解釈します。  
   
  <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> オプションを使用して <xref:System.Text.RegularExpressions.Regex> オブジェクトを構築した場合、このオブジェクトは、高度な正規表現の内部命令ではなく明示的な MSIL コードに正規表現をコンパイルします。 これにより、.NET の Just-In-Time (JIT) コンパイラは、式をネイティブのマシン コードに変換してパフォーマンスを高めることができます。  <xref:System.Text.RegularExpressions.Regex> オブジェクトの作成にかかるコストは高くなる場合がありますが、それとの照合の実行にかかるコストは大幅に小さくなる可能性があります。
@@ -29,6 +31,7 @@ ms.locfileid: "94823109"
  事前にコンパイルされた正規表現を使用するという方法もあります。 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A> メソッドを利用し、すべての式をコンパイルして再利用可能な DLL を作成できます。 これにより、コンパイルされた高速な正規表現を利用しながら、実行時にコンパイルする必要性を回避できます。  
   
 ## <a name="the-regular-expressions-cache"></a>正規表現のキャッシュ  
+
  パフォーマンスを高めるために、正規表現エンジンは、コンパイルされた正規表現のアプリケーション全体のキャッシュを保持します。 キャッシュは、静的メソッド呼び出しでのみ使用される正規表現パターンを格納します (インスタンス メソッドに渡される正規表現パターンはキャッシュされません)。これにより、式を使用するたびに高度なバイト コードに再解析する必要がなくなります。  
   
  キャッシュされる正規表現の最大数は、`static` (Visual Basic では `Shared`) <xref:System.Text.RegularExpressions.Regex.CacheSize%2A?displayProperty=nameWithType> プロパティの値によって決定されます。 既定では、正規表現エンジンは最大 15 個のコンパイルされた正規表現をキャッシュします。 コンパイルされた正規表現の数がキャッシュ サイズを超えた場合は、最近の使用頻度が最も低い正規表現が破棄され、新しい正規表現がキャッシュされます。  

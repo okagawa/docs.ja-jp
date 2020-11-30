@@ -8,14 +8,15 @@ helpviewer_keywords:
 - PLINQ queries, how to cancel
 - cancellation, PLINQ
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
-ms.openlocfilehash: ea30cafc998b8691321bf5e2b9b4bcc897878200
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f8ca723ca3b9b9428c95651ebe2fa7d92e48ebbb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817277"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713289"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>方法: PLINQ クエリを取り消す
+
 次の例は、PLINQ クエリを取り消す 2 つの方法を示しています。 最初の例は、主にデータ トラバーサルで構成されるクエリを取り消す方法を示しています。 2 つ目の例は、負荷の大きいユーザー関数を含むクエリを取り消す方法を示しています。
 
 > [!NOTE]

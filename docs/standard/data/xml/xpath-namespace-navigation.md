@@ -2,19 +2,21 @@
 title: XPath 名前空間のナビゲーション
 ms.date: 03/30/2017
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
-ms.openlocfilehash: 4d2ef71a41d19fd5bb573afab66dc8a15e19c393
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d5350f0c8f73c5efb0f7d9e4c492a841b4978c36
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831209"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720894"
 ---
 # <a name="xpath-namespace-navigation"></a>XPath 名前空間のナビゲーション
+
 XML ドキュメントで XPath クエリを使用するには、XML 名前空間およびそれらの名前空間に含まれる要素を、正しくアドレス指定する必要があります。 名前空間は、名前が複数のコンテキストで使用される場合に生じる可能性がある、あいまいさを防ぎます。たとえば、`ID` という名前は、XML ドキュメントの複数の異なる要素に関連付けられた複数の ID を参照する場合があります。 名前空間の構文では、XML ドキュメントの各要素を識別する、URI、名前、およびプレフィックスを指定します。  
   
  このトピックの例では、<xref:System.Xml.XPath.XPathNavigator> で XML ドキュメントをナビゲーションする際のプレフィックスの使用方法を示します。 名前空間と構文の詳細については、「[XML ファイル: XML 名前空間入門](/previous-versions/dotnet/articles/bb986013(v=msdn.10))」を参照してください。  
   
 ## <a name="namespace-declarations"></a>名前空間の宣言  
+
  名前空間の宣言によって、<xref:System.Xml.XPath.XPathNavigator> のインスタンスを使用する際に、XML ドキュメントの各要素の識別とアドレス指定が可能になります。 名前空間のプレフィックスでは、アドレス名前空間用の短い構文が指定されます。  
   
  プレフィックスは、`<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` という形式で定義されます。この構文では、プレフィックス "`e`" が、名前空間の正式な URI の省略形になります。 `Body` という構文を使用して、`Envelope` 要素を `e:Body` 名前空間のメンバーとして識別できます。  
@@ -35,6 +37,7 @@ XML ドキュメントで XPath クエリを使用するには、XML 名前空�
 ```  
   
 ## <a name="navigation-by-namespace-prefix"></a>名前空間プレフィックスによるナビゲーション  
+
  このセクションで示すコードでは、<xref:System.Xml.XPath.XPathNavigator> オブジェクトと <xref:System.Xml.XmlNamespaceManager> オブジェクトを使用して、前のセクションで示した XML ドキュメントの `Search` 要素を選択します。 `xpath` クエリには、パス内の各要素の名前空間プレフィックスが含まれています。 各要素が含まれている名前空間の正確な ID を指定することによって、`Search` メソッドで <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> 要素に正しく移動できます。  
   
 ```csharp  

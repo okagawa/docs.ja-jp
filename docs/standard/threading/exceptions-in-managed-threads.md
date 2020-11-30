@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-ms.openlocfilehash: e5acda4137d020d35d3144e9cc61e174024e165a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 740cd1b78b96c2fcaecf39a725973d738037f403
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826470"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723754"
 ---
 # <a name="exceptions-in-managed-threads"></a>マネージド スレッドの例外
 
@@ -35,6 +35,7 @@ ms.locfileid: "94826470"
 > マネージド コードが例外ハンドラーをインストールする機会を得る前に、ランタイムはハンドルされない例外をスローできます。 マネージド コードにこのような例外をハンドルする機会がない場合でも、例外を続行させることができます。  
   
 ## <a name="exposing-threading-problems-during-development"></a>開発時におけるスレッド処理の問題の露呈  
+
  アプリケーションを終了せずに、スレッドが暗黙に失敗したまま放置されていると、プログラミングの深刻な問題が検出されない状態になる可能性があります。 長期間実行されるサービスや他のアプリケーションでは、これは特に問題となります。 スレッドが失敗すると、プログラムの状態が徐々に破損します。 アプリケーションのパフォーマンスが低下、またはアプリケーションが応答しなくなる場合があります。  
   
  スレッド内でハンドルされない例外を続行させておき、結果としてオペレーティング システムにそのプログラムを終了させることで、開発およびテスト中にこのような問題が明らかになります。 プログラムの終了に関するエラー報告はデバッグをサポートします。  

@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-ms.openlocfilehash: fcf46a0716d79fd27cb06924bf74c119b8435147
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7051aeb8cdc25518f99fe093045e7e769ae7f6f5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822829"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725418"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>厳密に型指定された XML データへの XPathNavigator を使用したアクセス
+
 XPath 2.0 データ モデルの一例として、<xref:System.Xml.XPath.XPathNavigator> クラスは、共通言語ランタイム (CLR) 型に対応した厳密に型指定されたデータを含むことができます。 XPath 2.0 のデータ モデルに従い、要素と属性のみが厳密に型指定されたデータを含むことができます。 <xref:System.Xml.XPath.XPathNavigator> クラスは、データ型を変換する機構に加えて、厳密に型指定されたデータとして <xref:System.Xml.XPath.XPathDocument> または <xref:System.Xml.XmlDocument> オブジェクト内のデータにアクセスする機構を提供します。  
   
 ## <a name="type-information-exposed-by-xpathnavigator"></a>XPathNavigator が公開する型情報  
+
  DTD、XML スキーマ定義言語 (XSD) のスキーマ、または他の機構を使用して処理しない限り、XML 1.0 データに型はありません。 XML 要素や属性と関連付けられる型情報のカテゴリは多数あります。  
   
 - 単純な CLR 型: XML スキーマ言語で共通言語ランタイム (CLR) 型を直接サポートするものはありません。 要素や属性の単純コンテンツを最適な CLR 型として見ることができると便利なので、コンテンツをさらに適切な型に細分化する追加のスキーマ情報がない場合、すべての単純コンテンツは <xref:System.String> として型指定できます。 <xref:System.Xml.XPath.XPathNavigator.ValueType%2A> プロパティを使用することにより、要素と属性の単純コンテンツに最も一致する CLR 型を見つけることができます。 スキーマの組み込み型から CLR 型への対応の詳細については、「[System.Xml クラスでの型のサポート](type-support-in-the-system-xml-classes.md)」を参照してください。  
@@ -29,6 +31,7 @@ XPath 2.0 データ モデルの一例として、<xref:System.Xml.XPath.XPathNa
 - スキーマ言語固有の型のリフレクション: また、XML ドキュメントに適用されたスキーマ固有の型の詳細をさらに取得する必要が生じる場合があります。 たとえば、何か特別な計算をするために、XML ファイルの読み込み中に XML ドキュメント中の有効な各ノードについて `maxOccurs` 属性を抽出する必要がある場合があります。 この情報はスキーマ検証を通じてのみ設定されるので、<xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> クラスの <xref:System.Xml.XPath.XPathNavigator> プロパティを通じてアクセスされます。 詳細については、下の「スキーマ検証後の情報セット (PSVI)」のセクションを参照してください。  
   
 ## <a name="xpathnavigator-typed-accessors"></a>XPathNavigator の型指定されたアクセサー  
+
  次の表に、ノードの型情報へのアクセスに使用できる <xref:System.Xml.XPath.XPathNavigator> クラスの各種プロパティとメソッドを示します。  
   
 |プロパティ|説明|  
@@ -47,6 +50,7 @@ XPath 2.0 データ モデルの一例として、<xref:System.Xml.XPath.XPathNa
  スキーマの組み込み型から CLR 型への対応の詳細については、「[System.Xml クラスでの型のサポート](type-support-in-the-system-xml-classes.md)」を参照してください。  
   
 ## <a name="the-post-schema-validation-infoset-psvi"></a>スキーマ検証後の情報セット (PSVI)  
+
  XML スキーマ プロセッサは、XML 情報セットを入力として受け入れ、それをスキーマ検証後の情報セット (PSVI) に変換します。 PSVI は、元の入力 XML 情報セットに新しい情報項目を追加し、新しいプロパティを追加したものです。 <xref:System.Xml.XPath.XPathNavigator> によって公開される PSVI 中の XML 情報セットに追加される情報には 3 つの広範なクラスがあります。  
   
 1. 検証結果: 要素または属性が問題なく検証されたかどうかの情報。 これは、<xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> クラスの <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> プロパティの <xref:System.Xml.XPath.XPathNavigator> プロパティによって公開されます。  
@@ -137,6 +141,7 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
 ```  
   
 ## <a name="obtain-typed-values-using-valueas-properties"></a>ValueAs プロパティによる型指定された値の取得  
+
  ノードの型指定された値は、<xref:System.Xml.XPath.XPathNavigator.TypedValue%2A> の <xref:System.Xml.XPath.XPathNavigator> プロパティにアクセスして取得することができます。 場合により、ノードの型指定された値を別の型に変換する必要がある場合があります。 一般的な例として、XML ノードから数値を取得する場合があります。 たとえば、次のような未検証で型指定されていない XML ドキュメントがあるとします。  
   
 ```xml  

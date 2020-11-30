@@ -7,17 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - Barrier, how to use
 ms.assetid: e1a253ff-e0fb-4df8-95ff-d01a90d4cb19
-ms.openlocfilehash: 97a95250ff73b43d4404fb891078aed1b04f105e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: dc0955ba6194dd936da19c634ada797d6cbd3720
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819735"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716474"
 ---
 # <a name="how-to-synchronize-concurrent-operations-with-a-barrier"></a>方法: バリアを使用して同時実行操作を同期する
+
 次の例は、<xref:System.Threading.Barrier> を使用して同時実行タスクを同期する方法を示しています。  
   
 ## <a name="example"></a>例  
+
  次のプログラムの目的は、単語を再シャッフルするためにランダム化アルゴリズムを使用して、同じフェーズで 2 つのスレッドのそれぞれのソリューションの半分を検索するのに必要な反復 (またはフェーズ) の数をカウントすることです。 各スレッドで単語をシャッフルした後、バリアのフェーズ後操作で 2 つの結果が比較され、完全な文が正しい語順でレンダリングされているかどうかが確認されます。  
   
  [!code-csharp[CDS_Barrier#01](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_barrier/cs/barrier.cs#01)]

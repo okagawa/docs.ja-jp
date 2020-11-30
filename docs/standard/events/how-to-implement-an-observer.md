@@ -9,14 +9,15 @@ helpviewer_keywords:
 - observers [.NET], observer design pattern
 - observer design pattern [.NET], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
-ms.openlocfilehash: bfd595cec8e499b760f75f614bd0a61b031eb207
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 73f6d2c25c727717394c79268b71b44ea9ff7800
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828336"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697481"
 ---
 # <a name="how-to-implement-an-observer"></a>方法: オブザーバーを実装する
+
 オブザーバー デザイン パターンでは、通知を登録するオブザーバーと、データを監視して 1 人以上のオブザーバーに通知を送信するプロバイダーを分ける必要があります。 このトピックでは、オブザーバーを作成する方法について説明します。 プロバイダーの作成方法については、関連トピックの「[方法:プロバイダーを実装する](how-to-implement-a-provider.md)」を参照してください。  
   
 ### <a name="to-create-an-observer"></a>オブザーバーを作成するには  
@@ -42,6 +43,7 @@ ms.locfileid: "94828336"
      [!code-vb[Conceptual.ObserverDesign.HowTo#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#11)]  
   
 ## <a name="example"></a>例  
+
  次の例には、`TemperatureReporter` クラスの完全なソース コードが含まれています。これは、温度監視アプリケーション向けに <xref:System.IObserver%601> の実装を提供するクラスです。  
   
  [!code-csharp[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#12)]

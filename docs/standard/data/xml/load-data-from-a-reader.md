@@ -2,14 +2,15 @@
 title: リーダーからのデータの読み込み
 ms.date: 03/30/2017
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-ms.openlocfilehash: ea125e57dd6251a4fbd401bac8f37826083965b8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 345b6e35c84fe531e131d27bd09fbd8a87b4521a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822673"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720140"
 ---
 # <a name="load-data-from-a-reader"></a>リーダーからのデータの読み込み
+
 <xref:System.Xml.XmlDocument.Load%2A> メソッドに <xref:System.Xml.XmlReader> パラメーターを渡して XML ドキュメントを読み込むと、他の形式からデータを読み込む場合と比較して、その動作に違いがあります。 リーダーが初期状態のとき、<xref:System.Xml.XmlDocument.Load%2A> メソッドは、リーダーからのコンテンツ全体を使用して、リーダー内のすべてのデータから XML ドキュメント オブジェクト モデル (DOM) を構築します。  
   
  既にリーダーがドキュメント内のあるノード上に位置している場合、リーダーが <xref:System.Xml.XmlDocument.Load%2A> メソッドに渡されると、<xref:System.Xml.XmlDocument.Load%2A> は現在のノードと、現在の深さを閉じる終了タグまで、その兄弟すべてをメモリに読み込もうとします。 <xref:System.Xml.XmlDocument.Load%2A> はリーダーからの XML が整形式かどうかを検証するので、<xref:System.Xml.XmlDocument.Load%2A> が成功するかどうかは、読み込みを試みた時点でリーダーが位置していたノードに依存します。 XML が整形式でない場合、<xref:System.Xml.XmlDocument.Load%2A> は例外をスローします。 たとえば、次のノード セットは、ルート レベルの要素が 2 つ含まれ、XML が整形式ではないため、<xref:System.Xml.XmlDocument.Load%2A> は例外をスローします。  

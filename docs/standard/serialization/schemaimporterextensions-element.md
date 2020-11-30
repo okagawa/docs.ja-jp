@@ -7,12 +7,12 @@ helpviewer_keywords:
 - schemaImporterExtensions element
 - <schemaImporterExtensions> element
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
-ms.openlocfilehash: 35626618a8dd7c63a7008d10bc3568484836a488
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 6b644ed1112b748be4dd301d6fa6f2a6416dc67e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282276"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722142"
 ---
 # <a name="schemaimporterextensions-element"></a>\<schemaImporterExtensions> 要素
 
@@ -39,6 +39,7 @@ XSD の型を .NET の型にマッピングするために <xref:System.Xml.Seri
 |[\<system.xml.serialization> 要素](system-xml-serialization-element.md)|XML シリアル化を制御する最上位の要素です。|  
   
 ## <a name="example"></a>例  
+
  次のコード例では、XSD の型を .NET の型にマッピングするときに <xref:System.Xml.Serialization.XmlSchemaImporter> によって使用される型を追加する方法を示します。  
   
 ```xml  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET support for
 - .NET, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
-ms.openlocfilehash: b0dd786e1922d75edcb0326cc9e98037c6e4945c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2ae1c514185152dd709fe06018df513fb54b874b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830325"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726718"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>他の非同期パターンと型との相互運用
 
@@ -28,6 +28,7 @@ ms.locfileid: "94830325"
 ## <a name="tasks-and-the-asynchronous-programming-model-apm"></a>タスクおよび非同期プログラミング モデル (APM)
 
 ### <a name="from-apm-to-tap"></a>APM から TAP へ  
+
  [非同期プログラミング モデル (APM)](asynchronous-programming-model-apm.md) パターンは構造化されているため、APM 実装を TAP 実装として公開するラッパーをとても簡単にビルドできます。 .NET Framework 4 以降のバージョンには、この変換を行う <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> メソッドのオーバーロードという形のヘルパー ルーチンが用意されています。  
   
  <xref:System.IO.Stream> クラスと、そのクラスの <xref:System.IO.Stream.BeginRead%2A> および <xref:System.IO.Stream.EndRead%2A> メソッドについて考えてみましょう。これらのメソッドは、同期 <xref:System.IO.Stream.Read%2A> メソッドに対応する APM 側のメソッドです。  
@@ -50,6 +51,7 @@ ms.locfileid: "94830325"
  [!code-vb[Conceptual.AsyncInterop#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wrap2.vb#5)]  
   
 ### <a name="from-tap-to-apm"></a>TAP から APM へ  
+
  既存のインフラストラクチャで APM パターンを使用することを想定している場合は、TAP の実装を用意し、APM の実装を想定している場所でその TAP の実装を使用します。  タスクは合成することができ、 <xref:System.Threading.Tasks.Task> クラスが <xref:System.IAsyncResult>を実装するため、これは単純なヘルパー関数を使用して実現することができます。 次のコードでは、 <xref:System.Threading.Tasks.Task%601> クラスの拡張を使用しますが、ほぼ同じ関数を非ジェネリック タスクに使用できます。  
   
  [!code-csharp[Conceptual.AsyncInterop#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/APM1.cs#6)]
@@ -73,6 +75,7 @@ ms.locfileid: "94830325"
  [!code-vb[Conceptual.AsyncInterop#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/APM2.vb#10)]  
   
 ## <a name="tasks-and-the-event-based-asynchronous-pattern-eap"></a>タスクとイベント ベースの非同期パターン (EAP)  
+
  [イベント ベースの非同期パターン (EAP)](event-based-asynchronous-pattern-eap.md) 実装をラップする手順は、APM パターンをラップするより複雑です。EAP パターンのほうが APM パターンよりもバリエーションが多く、構造化の程度が低いためです。  例を示すために、次のコードでは `DownloadStringAsync` メソッドをラップしています。  `DownloadStringAsync` は、URI を受け付け、進行状況として複数の統計情報をレポートするためにダウンロード中に `DownloadProgressChanged` イベントを発生させ、完了時に `DownloadStringCompleted` イベントを発生させます。  最終結果は、指定された URI にあるページのコンテンツを含む文字列です。  
   
  [!code-csharp[Conceptual.AsyncInterop#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/EAP1.cs#11)]
@@ -81,6 +84,7 @@ ms.locfileid: "94830325"
 ## <a name="tasks-and-wait-handles"></a>タスクおよび待機ハンドル  
   
 ### <a name="from-wait-handles-to-tap"></a>待機ハンドルから TAP へ  
+
  待機ハンドルは非同期パターンを実装しませんが、上級開発者は、待機ハンドルが設定されるときに非同期の通知を行うため、 <xref:System.Threading.WaitHandle> クラスおよび <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> メソッドを使用できます。  <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> メソッドをラップすると、待機ハンドルのすべての同期待機をタスク ベースの待機にできます。  
   
  [!code-csharp[Conceptual.AsyncInterop#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wait1.cs#12)]
@@ -94,6 +98,7 @@ ms.locfileid: "94830325"
  また、待機ハンドルに依存せず、代わりにタスクで完全に動作する非同期セマフォもビルドできます。 これを行うには、 [T:System.Threading.Tasks.Task](consuming-the-task-based-asynchronous-pattern.md) の上位にデータ構造をビルドするという「 <xref:System.Threading.Tasks.Task>が追加されました。  
   
 ### <a name="from-tap-to-wait-handles"></a>TAP から待機ハンドルへ  
+
  前述のとおり、 <xref:System.Threading.Tasks.Task> クラスは、 <xref:System.IAsyncResult>を実装し、その実装は <xref:System.Threading.Tasks.Task.System%23IAsyncResult%23AsyncWaitHandle%2A> プロパティを公開します。このプロパティは、 <xref:System.Threading.Tasks.Task> が完了したときに設定される待機ハンドルを返します。  <xref:System.Threading.WaitHandle> の <xref:System.Threading.Tasks.Task> は次のように取得できます。  
   
  [!code-csharp[Conceptual.AsyncInterop#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wait1.cs#14)]

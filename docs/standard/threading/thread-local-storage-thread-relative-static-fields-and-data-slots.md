@@ -7,12 +7,12 @@ helpviewer_keywords:
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-ms.openlocfilehash: c9ea2939dcff321a1d4e24e7a97c056c016e5fdc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b45c83887d278589cc1704ec1398ec99e27550ad
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819631"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727524"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>スレッド ローカル ストレージ : スレッド相対静的フィールドとデータ スロット
 
@@ -27,6 +27,7 @@ ms.locfileid: "94819631"
 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> クラスを使用して、最初に利用されるときに遅れて初期化されるスレッドローカル オブジェクトを作成できます。 詳細については、「[限定的な初期化](../../framework/performance/lazy-initialization.md)」を参照してください。  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>マネージド TLS でのデータの一意性  
+
  スレッド相対静的フィールドとデータ スロットのどちらを使用しても、マネージド TLS でのデータはスレッドとアプリケーション ドメインの組み合わせに対して一意になります。  
   
 - アプリケーション ドメインでは、両方のスレッドが同じフィールドまたはスロットを使用していたとしても、一方のスレッドが、もう一方のスレッドからのデータを変更することはできません。  
@@ -38,6 +39,7 @@ ms.locfileid: "94819631"
  同様に、スレッドが、異なる 2 つのアプリケーション ドメインで同じ名前付きデータ スロットを取得した場合、最初のアプリケーション ドメインのデータと 2 番目のアプリケーション ドメインのデータは、それぞれ独立したものとなります。  
   
 ## <a name="thread-relative-static-fields"></a>スレッド相対静的フィールド  
+
  スレッドとアプリケーション ドメインの組み合わせに対し、データの一部が常に一意であることがわかっている場合は、静的フィールドに <xref:System.ThreadStaticAttribute> 属性を適用します。 このフィールドの使用法は、他の静的フィールドと同様です。 フィールドのデータは、使用する各スレッドに対して一意です。  
   
  スレッド相対静的フィールドは、データ スロットと比較してパフォーマンスが優れており、コンパイル時の型チェックも可能です。  

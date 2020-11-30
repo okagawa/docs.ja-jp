@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to cancel
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
-ms.openlocfilehash: 578544a910127f41dfdfd577316b23d6d5a60bc4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 82a71faf3a2390f5bb36dd896cf865f773f54bd9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817264"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713224"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>方法: タスクとその子を取り消す
+
 以下の例では、次のタスクを実行する方法を説明します。  
   
 1. 取り消すことができるタスクを作成し、開始します。  
@@ -29,6 +30,7 @@ ms.locfileid: "94817264"
  呼び出し元のスレッドは、タスクを強制終了せず、キャンセルが要求されたことを通知するだけです。 タスクが既に実行中である場合、ユーザー デリゲートが要求を確認して適切に応答します。 タスクを実行する前にキャンセルが要求された場合、ユーザー デリゲートは実行されず、タスク オブジェクトは Canceled 状態に遷移します。  
   
 ## <a name="example"></a>例  
+
  次の例は、キャンセル要求に応答して <xref:System.Threading.Tasks.Task> およびその子を終了する方法を示しています。 また、ユーザー デリゲートが <xref:System.Threading.Tasks.TaskCanceledException> をスローして終了した場合、タスクの終了を待つために、呼び出し元スレッドが必要に応じて <xref:System.Threading.Tasks.Task.Wait%2A> メソッドまたは <xref:System.Threading.Tasks.Task.WaitAll%2A> メソッドを使用できることも示しています。 この例では `try/catch` ブロックを使用して、呼び出し元スレッドで例外を処理する必要があります。  
   
  [!code-csharp[TPL_Cancellation#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_cancellation/cs/cancel1.cs#04)]

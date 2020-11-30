@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-ms.openlocfilehash: 310d5eb01fff02d82ec3762d55ff14e5a6bcd621
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 99f06db3c6f1e634e9c4a677c01d1b0849afe43f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831014"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701511"
 ---
 # <a name="compiled-xpath-expressions"></a>コンパイルされた XPath 式
+
 <xref:System.Xml.XPath.XPathExpression> オブジェクトは、<xref:System.Xml.XPath.XPathExpression.Compile%2A> クラスの静的 <xref:System.Xml.XPath.XPathExpression> メソッドまたは <xref:System.Xml.XPath.XPathNavigator.Compile%2A> クラスの <xref:System.Xml.XPath.XPathNavigator> メソッドから返されるコンパイル済み XPath クエリを表します。  
   
 ## <a name="the-xpathexpression-class"></a>XPathExpression クラス  
+
  <xref:System.Xml.XPath.XPathExpression> オブジェクトにより表されるコンパイル済み XPath クエリは、同じ XPath クエリが複数回使用されるときに有用です。  
   
  たとえば、<xref:System.Xml.XPath.XPathNavigator.Select%2A> メソッドを複数回呼び出すとき、毎回 XPath クエリを表す文字列を使用する代わりに、再使用とパフォーマンスの向上のために、<xref:System.Xml.XPath.XPathExpression.Compile%2A> クラスの <xref:System.Xml.XPath.XPathExpression> メソッド、または <xref:System.Xml.XPath.XPathNavigator.Compile%2A> クラスの <xref:System.Xml.XPath.XPathNavigator> メソッドを使用して、XPath クエリを <xref:System.Xml.XPath.XPathExpression> オブジェクトにコンパイルしてキャッシュします。  
@@ -45,6 +47,7 @@ ms.locfileid: "94831014"
 > <xref:System.Xml.XPath.XPathNavigator.Matches%2A> メソッドは、XPath 式をパラメーターとして受け取ります。 <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> メソッドは W3C XPath の戻り型の 1 つではなく、1 つの <xref:System.Xml.XPath.XPathNavigator> オブジェクトを返します。  
   
 ### <a name="the-returntype-property"></a>戻り型のプロパティ  
+
  XPath クエリが <xref:System.Xml.XPath.XPathExpression> オブジェクトにコンパイルされた後、<xref:System.Xml.XPath.XPathExpression.ReturnType%2A> オブジェクトの <xref:System.Xml.XPath.XPathExpression> プロパティを使用して、XPath クエリで何が返されるかを知ることができます。  
   
  <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> プロパティは、W3C XPath 戻り値を表す、次の <xref:System.Xml.XPath.XPathResultType> 列挙値の 1 つを返します。  
@@ -110,6 +113,7 @@ Console.WriteLine(nodes.Current.Value);
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
 ### <a name="higher-performance-xpath-expressions"></a>XPath 式のパフォーマンスの向上  
+
  パフォーマンスを向上させるには、クエリで可能な限り特定した XPath 式を使用します。 たとえば、`book` が `bookstore` ノードの子ノードであり `bookstore` ノードが XML ドキュメントで最上位のノードの場合は、XPath 式 `/bookstore/book` を使用すると `//book` を使用した場合より高速です。 `//book` XPath 式は、XML ツリーのすべてのノードをスキャンしてノードとの一致を調べます。  
   
  さらに、選択基準が単純な場合は <xref:System.Xml.XPath.XPathNavigator> クラスが提供するノード セット ナビゲーション メソッドは、<xref:System.Xml.XPath.XPathNavigator> クラスが提供する選択メソッドに比べてパフォーマンスが高いことがあります。 たとえば、現在のノードの最初の子を選択する場合、<xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A> メソッドを使用した方が `child::*[1]` XPath 式と <xref:System.Xml.XPath.XPathNavigator.Select%2A> メソッドを使用するよりも高速です。  

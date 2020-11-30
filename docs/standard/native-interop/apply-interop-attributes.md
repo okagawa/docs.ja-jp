@@ -14,19 +14,21 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-ms.openlocfilehash: 7b9e557e36d2ff6aa978eb28d3c82764ffb1980a
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 38632c5a1f462c3a7b537978fde81424916746da
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188680"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706295"
 ---
 # <a name="applying-interop-attributes"></a>相互運用固有の属性の適用
+
 <xref:System.Runtime.InteropServices> 名前空間では、デザイン時にユーザーが適用する属性、変換処理中に COM 相互運用ツールおよび API によって適用される属性、ユーザーまたは COM 相互運用機能によって適用される属性という 3 つのカテゴリの相互運用固有の属性が提供されます。  
   
  マネージド コードに属性を適用する作業に慣れていない場合は、「[属性を使用したメタデータの拡張](../attributes/index.md)」を参照してください。 他のカスタム属性の場合と同様に、相互運用固有の属性は、型、メソッド、プロパティ、パラメーター、フィールド、およびその他のメンバーに対して適用できます。  
   
 ## <a name="design-time-attributes"></a>デザイン時属性  
+
  COM 相互運用ツールおよび API によって実行された変換処理の結果を調整するには、デザイン時属性を使用します。 マネージド ソース コードに適用できる属性の説明を次の表に示します。 COM 相互運用ツールで、この表に示す属性を適用できる場合もあります。  
   
 |属性|説明|  
@@ -41,8 +43,8 @@ ms.locfileid: "93188680"
 |<xref:System.Runtime.InteropServices.ComVisibleAttribute>|属性値が **false** の場合、型は COM から参照できなくなります。 この属性は、COM の参照可能範囲を制御するために、個別の型またはアセンブリ全体に適用できます。 既定では、すべてのパブリックなマネージド型は参照可能なので、この属性でこれらの型を参照可能にする必要はありません。|  
 |<xref:System.Runtime.InteropServices.DispIdAttribute>|メソッドまたはフィールドの COM ディスパッチ識別子 (DISPID) を指定します。 この属性には、対象のメソッド、フィールド、またはプロパティの DISPID が含まれています。<br /><br /> COM 相互運用ツールでは、この属性を適用できます。|
 |<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute>|.NET に実装されている COM クラスの既定のインターフェイスを示します。<br /><br /> COM 相互運用ツールでは、この属性を適用できます。|
-|<xref:System.Runtime.InteropServices.FieldOffsetAttribute>|**StructLayoutAttribute** と共に使用される場合は、クラス内の各フィールドの物理的位置を示します。 **LayoutKind** は Explicit に設定されます。|  
-|<xref:System.Runtime.InteropServices.GuidAttribute>|クラス、インターフェイス、またはタイプ ライブラリ全体のグローバル一意識別子 (GUID) を指定します。 属性に渡される文字列は、 **System.Guid** 型の受け入れ可能なコンストラクター引数の形式である必要があります。<br /><br /> COM 相互運用ツールでは、この属性を適用できます。|  
+|<xref:System.Runtime.InteropServices.FieldOffsetAttribute>|**StructLayoutAttribute** と共に使用される場合は、クラス内の各フィールドの物理的位置を示します。**LayoutKind** は Explicit に設定されます。|  
+|<xref:System.Runtime.InteropServices.GuidAttribute>|クラス、インターフェイス、またはタイプ ライブラリ全体のグローバル一意識別子 (GUID) を指定します。 属性に渡される文字列は、**System.Guid** 型の受け入れ可能なコンストラクター引数の形式である必要があります。<br /><br /> COM 相互運用ツールでは、この属性を適用できます。|  
 |<xref:System.Runtime.InteropServices.IDispatchImplAttribute>|COM にデュアル インターフェイスやディスパッチ インターフェイスを公開するときに、共通言語ランタイムで使用する **IDispatch** インターフェイスの実装の種類を示します。|  
 |<xref:System.Runtime.InteropServices.InAttribute>|呼び出し元にデータをマーシャリングすることを示します。 属性パラメーターに使用できます。|  
 |<xref:System.Runtime.InteropServices.InterfaceTypeAttribute>|マネージド インターフェイスを COM クライアントに公開する方法を制御します (デュアル、IUnknown から派生、または IDispatch のみ)。<br /><br /> COM 相互運用ツールでは、この属性を適用できます。|  
@@ -55,6 +57,7 @@ ms.locfileid: "93188680"
 |<xref:System.Runtime.InteropServices.StructLayoutAttribute>|クラスのフィールドの物理レイアウトを制御します。<br /><br /> COM 相互運用ツールでは、この属性を適用できます。|  
   
 ## <a name="conversion-tool-attributes"></a>変換ツール属性  
+
  変換処理中に COM 相互運用ツールが適用する属性の説明を次の表に示します。 これらの属性は、デザイン時には適用しません。  
   
 |属性|説明|  

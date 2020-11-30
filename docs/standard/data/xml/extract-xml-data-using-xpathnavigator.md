@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
-ms.openlocfilehash: 5cf132c302650a0069c6cc497248d1d0b50c779d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0d327738f818c40d8baa9e0fb8bd0092b94c6e07
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828908"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721505"
 ---
 # <a name="extract-xml-data-using-xpathnavigator"></a>XpathNavigator を使用した XML データの抽出
+
 Microsoft .NET Framework において XML ドキュメントを表現する方法はいくつかあります。 これには、<xref:System.String> を使用する方法、または <xref:System.Xml.XmlReader>、<xref:System.Xml.XmlWriter>、<xref:System.Xml.XmlDocument>、<xref:System.Xml.XPath.XPathDocument> クラスを使用する方法があります。 XML ドキュメントの異なる表現の間での移行を容易にするため、<xref:System.Xml.XPath.XPathNavigator> クラスは、<xref:System.String>, <xref:System.Xml.XmlReader> オブジェクトまたは <xref:System.Xml.XmlWriter> オブジェクトとして XML を抽出するためのメソッドおよびプロパティを多数提供しています。  
   
 ## <a name="convert-an-xpathnavigator-to-a-string"></a>XPathNavigator から文字列への変換  
+
  <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> クラスの <xref:System.Xml.XPath.XPathNavigator> プロパティは、XML ドキュメント全体のマークアップ、または 1 つのノードとその子ノードのマークアップだけを取得するために使用されます。  
   
 > [!NOTE]
@@ -48,6 +50,7 @@ string root = navigator.OuterXml;
 ```  
   
 ## <a name="convert-an-xpathnavigator-to-an-xmlreader"></a>XPathNavigator から XmlReader への変換  
+
  <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> メソッドは、XML ドキュメントのコンテンツ全体、または 1 つのノードとその子ノードを <xref:System.Xml.XmlReader> オブジェクトにストリーム出力するために使用されます。  
   
  <xref:System.Xml.XmlReader> オブジェクトが現在のノードとその子で作成されている場合、<xref:System.Xml.XmlReader> オブジェクトの <xref:System.Xml.XmlReader.ReadState%2A> プロパティは <xref:System.Xml.ReadState.Initial> に設定されます。 <xref:System.Xml.XmlReader> オブジェクトの <xref:System.Xml.XmlReader.Read%2A> メソッドが初めて呼び出されたときに、<xref:System.Xml.XmlReader> が <xref:System.Xml.XPath.XPathNavigator> の現在のノードに移動されます。 新しい <xref:System.Xml.XmlReader> オブジェクトは、XML ツリーの末尾に到達するまで読み取りを継続します。 この時点で、<xref:System.Xml.XmlReader.Read%2A> メソッドは `false` を返し、<xref:System.Xml.XmlReader> オブジェクトの <xref:System.Xml.XmlReader.ReadState%2A> プロパティは <xref:System.Xml.ReadState.EndOfFile> に設定されます。  
@@ -115,6 +118,7 @@ book.Close();
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
 ## <a name="converting-an-xpathnavigator-to-an-xmlwriter"></a>XPathNavigator から XmlWriter への変換  
+
  <xref:System.Xml.XPath.XPathNavigator.WriteSubtree%2A> メソッドは、XML ドキュメントのコンテンツ全体、または 1 つのノードとその子ノードを <xref:System.Xml.XmlWriter> オブジェクトにストリーム出力するために使用されます。  
   
  <xref:System.Xml.XPath.XPathNavigator> オブジェクトの位置は、<xref:System.Xml.XmlWriter> オブジェクトの作成によって変更されことはありません。  

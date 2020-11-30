@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97115892-410a-4657-ab47-1e14dfba73f8
-ms.openlocfilehash: 0afee2d706b95117971c02b57a5570427e0fbd3d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1c7aa1a9d5c02aaac5a78603bd2397f012d4640d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827556"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721934"
 ---
 # <a name="xmldocument-input-to-xsltransform"></a>XslTransform への XmlDocument の入力
+
 <xref:System.Xml.XmlDocument> クラスは、XML ドキュメントの編集機能を持っています。 XML を <xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに送信する前に編集または変更する必要がある場合は、XML を <xref:System.Xml.XmlDocument> に読み込み、編集し、<xref:System.Xml.Xsl.XslTransform> に送信します。  
   
 > [!NOTE]
@@ -23,6 +24,7 @@ ms.locfileid: "94827556"
  <xref:System.Xml.XmlDocument> は編集機能を持っているのに対して、<xref:System.Xml.XmlDocument> は内部ストレージを利用して XPath (XML Path Language) クエリに最適化されているため、<xref:System.Xml.XPath.XPathDocument> クラスを変換への入力として使用する方法は、<xref:System.Xml.XPath.XPathDocument> を XSLT (Extensible Stylesheet Language for Transformations) 変換に使用する方法より動作が遅くなります。  
   
 ## <a name="example"></a>例  
+
  <xref:System.Xml.XmlDocument> を <xref:System.Xml.Xsl.XslTransform> に渡し、出力を <xref:System.Xml.XmlReader> に送信するコード サンプルを次に示します。  
   
 ```vb  

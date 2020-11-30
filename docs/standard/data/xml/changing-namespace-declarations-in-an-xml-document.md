@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2758f40-e497-4964-8d8d-1bb68af14dcd
-ms.openlocfilehash: f4f081e1db2ccacf4714ad3009eefdfc290b2ed4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 95f9c6301f656ad4da5edcfb66521589b9195114
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821828"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725366"
 ---
 # <a name="changing-namespace-declarations-in-an-xml-document"></a>XML ドキュメントの名前空間宣言の変更
+
 **XmlDocument** は、名前空間宣言と **xmlns** 属性をドキュメント オブジェクト モデルの一部として公開します。 名前空間宣言と xmlns 属性は **XmlDocument** に格納されるため、ドキュメントの保存時にはこれらの属性の場所を保持できます。 これらの属性を変更しても、ツリーに既に存在する別のノードの **Name**、**NamespaceURI**、**Prefix** プロパティは影響を受けません。 たとえば、次のドキュメントを読み込むと、`test` 要素の **NamespaceURI** は `123.` になります。  
   
 ```xml  

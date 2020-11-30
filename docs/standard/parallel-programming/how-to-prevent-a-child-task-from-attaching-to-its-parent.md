@@ -7,17 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - tasks, preventing attachments
 ms.assetid: c0fb85d4-9e80-4905-9f65-29acc54201c4
-ms.openlocfilehash: afc8c99fe478337c8dc353d46a4e2ff5be531ae8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5874f07d48f99573af78c07a6ab6a0f386e6bc9a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826893"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705905"
 ---
 # <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>方法: 子タスクがその親にアタッチしないようにする
+
 このドキュメントでは、子タスクが親タスクにアタッチしないようにする方法を紹介します。 サード パーティによって書き込まれ、タスクも使用するコンポーネントを呼び出す場合は、子タスクがその親にアタッチしないようにすると便利です。 たとえば、<xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> オプションを使用して <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> オブジェクトを作成するサード パーティ コンポーネントが長時間実行されているか、ハンドルされない例外をスローする場合、コードで問題が発生する可能性があります。  
   
 ## <a name="example"></a>例  
+
  次の例では、子タスクが親にアタッチしないようにする効果と、既定のオプションを使用する効果を比較します。 この例では、<xref:System.Threading.Tasks.Task> オブジェクトも使用する、サード パーティ ライブラリを呼び出す、<xref:System.Threading.Tasks.Task> オブジェクトを作成します。 サード パーティ ライブラリでは <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> オプションを使用して、<xref:System.Threading.Tasks.Task> オブジェクトを作成します。 アプリケーションでは <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> オプションを使用して、親タスクを作成します。 このオプションは、子タスクの <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 指定を削除するようにランタイムに指示します。  
   
  [!code-csharp[TPL_DenyChildAttach#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_denychildattach/cs/denychildattach.cs#1)]

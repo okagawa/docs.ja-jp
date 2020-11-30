@@ -2,14 +2,15 @@
 title: XSLT コンパイラ (xsltc.exe)
 ms.date: 03/30/2017
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
-ms.openlocfilehash: cfeebc3ac0c0259c975439dc93c3c5f003b60c40
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 89e2291cb4eafe9ca9e5001061b960f348fe4719
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818324"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720829"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT コンパイラ (xsltc.exe)
+
 XSLT コンパイラ (xsltc.exe) は、XSLT スタイル シートをコンパイルしてアセンブリを生成します。 コンパイルしたスタイル シートを <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> メソッドに直接渡すことができます。 xsltc.exe を使用して署名があるアセンブリを生成することはできません。  
   
  xsltc.exe ツールは Visual Studio に付属しています。 詳細については、[Visual Studio のダウンロード](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)を参照してください。  
@@ -41,6 +42,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |`?`|このツールのコマンド構文とオプションを表示します。|  
   
 ## <a name="remarks"></a>Remarks  
+
  XSLT ソリューションは、複数のスタイル シート モジュールで構成できます。 xsltc.exe ツールを使用して、スタイル シートからアセンブリを生成できます。 このアセンブリを <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> メソッドに直接渡すことができます。 XSLT の配置シナリオによっては、これによってパフォーマンス コストを削減できます。  
   
 > [!NOTE]
@@ -49,6 +51,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
  xsltc.exe ツールでは、クラス名 (`/class:`*name*) やアセンブリ名 (`/out:`*assemblyName*) が検証されません。 名前が無効である場合、共通言語ランタイムによってエラーがスローされます。  
   
 ## <a name="examples"></a>使用例  
+
  次のコマンドを実行すると、スタイル シートがコンパイルされ、booksort.dll という名前のアセンブリが作成されます。  
   
 ```console  

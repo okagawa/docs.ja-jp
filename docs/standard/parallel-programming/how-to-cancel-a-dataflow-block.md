@@ -9,14 +9,15 @@ helpviewer_keywords:
 - dataflow blocks, canceling in TPL
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
-ms.openlocfilehash: 3dbe0675b73f902a7da0fb4f7881c1ee15022b36
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c0f184720849a0c21fdeda1de4543a2443d60674
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825859"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713354"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>方法: データフロー ブロックをキャンセルする
+
 このドキュメントでは、アプリケーションでキャンセルを有効にする方法を示します。 この例では、Windows フォームを使用して、データフロー パイプラインで作業項目がアクティブである場所と、キャンセルの影響を示します。  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -34,6 +35,7 @@ ms.locfileid: "94825859"
 5. 4 つの <xref:System.Windows.Forms.ToolStripProgressBar> コントロールを <xref:System.Windows.Forms.ToolStrip> コントロールに追加します。  
   
 ## <a name="creating-the-dataflow-pipeline"></a>データフロー パイプラインの作成  
+
  このセクションでは、作業項目を処理して進行状況バーを更新するデータフロー パイプラインを作成する方法を示します。  
   
 ### <a name="to-create-the-dataflow-pipeline"></a>データフロー パイプラインを作成するには  
@@ -65,6 +67,7 @@ ms.locfileid: "94825859"
  この例では、パイプラインのメンバーを構築するときに <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> プロパティを設定します。 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> プロパティはデータフロー ブロックの実行を完全にキャンセルするので、ユーザーが操作をキャンセルした後にパイプラインにさらに作業項目を追加する場合は、すべてのパイプラインを作り直す必要があります。 操作をキャンセルした後も他の作業を実行できるようにデータフロー ブロックをキャンセルする方法もあります。例については、「[チュートリアル: Windows フォーム アプリケーションでのデータフローの使用](walkthrough-using-dataflow-in-a-windows-forms-application.md)」を参照してください。  
   
 ## <a name="connecting-the-dataflow-pipeline-to-the-user-interface"></a>ユーザー インターフェイスへのデータフロー パイプラインの接続  
+
  このセクションでは、ユーザー インターフェイスにデータフロー パイプラインを接続する方法を説明します。 パイプラインの作成とパイプラインへの作業項目の追加は、どちらも **[作業項目の追加]** ボタンのインベント ハンドラーによって制御されます。 キャンセルは **[キャンセル]** ボタンによって開始されます。 ユーザーがこのいずれかのボタンをクリックすると、適切な操作が非同期的に開始されます。  
   
 ### <a name="to-connect-the-dataflow-pipeline-to-the-user-interface"></a>ユーザー インターフェイスにデータフロー パイプラインを接続するには  
@@ -84,6 +87,7 @@ ms.locfileid: "94825859"
      [!code-vb[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#6)]  
   
 ## <a name="example"></a>例  
+
  次の例は、Form1.cs (Visual Basic の Form1.vb) のコード全体を示しています。  
   
  [!code-csharp[TPLDataflow_CancellationWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#100)]

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-ms.openlocfilehash: b28a2d4991e2e4b14027460c0f3c97145862da2a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 935f0b2263fbf909decee354b0109d16d82a06e0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818376"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720855"
 ---
 # <a name="xpathnavigator-in-transformations"></a>変換における XPathNavigator
+
 <xref:System.Xml.XPath.XPathNavigator> クラスは、データへの読み取り専用のランダム アクセスを提供し、XSLT (Extensible Stylesheet Language for Transformations) への入力として使用することを目的に設計されています。 このクラスは、<xref:System.Xml.XPath.XPathDocument>、<xref:System.Xml.XmlDataDocument>、および <xref:System.Xml.XmlDocument> に実装されます。 <xref:System.Xml.XPath.XPathNavigator> は、『XML Path Language (XPath)』勧告のセクション 5 で規定されている W3C (World Wide Web Consortium) データ モデルに準拠しています。  
   
  <xref:System.Xml.XPath.XPathNavigator> は、任意のストアに対するカーソル モデルを定義し、任意のデータ ストアに対する高速で読み取り専用の XPath クエリを提供します。 <xref:System.Xml.XPath.XPathNavigator> クラスは、結果ツリー フラグメントの反復処理でも使用されます。  
@@ -107,6 +108,7 @@ public class sample
 ```  
   
 ## <a name="output"></a>Output  
+
  変換結果はファイル **out.xml** に出力されます。  
   
 ```xml  

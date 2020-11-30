@@ -13,12 +13,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 16f2f61a2a36e4189e98c85b3d3ce706a52e2938
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: edd101e57793668d71d44db08f191ae412c6d998
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687276"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720907"
 ---
 # <a name="resolve-assembly-loads"></a>アセンブリ読み込みを解決する
 
@@ -28,6 +28,7 @@ ms.locfileid: "92687276"
 > リフレクションのみのコンテキストでアセンブリの読み込みを解決する場合は、代わりに <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType> イベントを使います。  
   
 ## <a name="how-the-assemblyresolve-event-works"></a>AssemblyResolve イベントのしくみ  
+
  <xref:System.AppDomain.AssemblyResolve> イベント用のハンドラーを登録すると、ランタイムが名前によるアセンブリへのバインドに失敗すると、常にハンドラーが呼び出されます。 たとえば、ユーザー コードから次のメソッドを呼び出すと、<xref:System.AppDomain.AssemblyResolve> イベントが発生する可能性があります。  
   
 - 1 番目の引数が読み込むアセンブリの表示名を表す文字列 (つまり、<xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> プロパティによって返される文字列) である、<xref:System.AppDomain.Load%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> メソッドのオーバーロード。  
@@ -39,6 +40,7 @@ ms.locfileid: "92687276"
 - 別のアプリケーション ドメインでオブジェクトをインスタンス化する、<xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> メソッドまたは <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType> メソッドのオーバーロード。  
   
 ### <a name="what-the-event-handler-does"></a>イベント ハンドラーでの処理  
+
  <xref:System.AppDomain.AssemblyResolve> イベントのハンドラーは、読み込まれるアセンブリの表示名を、<xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> プロパティで受け取ります。 ハンドラーは、アセンブリ名を認識できない場合は `null` (C#)、`Nothing` (Visual Basic)、または `nullptr` (Visual C++) を返します。  
   
  ハンドラーは、アセンブリ名を認識すると、要求を満たすアセンブリを読み込んで返すことができます。 シナリオの例をいくつか示します。  
@@ -69,6 +71,7 @@ ms.locfileid: "92687276"
  同じアセンブリの複数のバージョンを、同じアプリケーション ドメインに読み込むことができます。 ただし、型の割り当ての問題が発生する可能性があるため、この方法は推奨されません。 「[アセンブリの読み込みのベスト プラクティス](../../framework/deployment/best-practices-for-assembly-loading.md)」をご覧ください。  
   
 ### <a name="what-the-event-handler-should-not-do"></a>イベント ハンドラーで行ってはいけないこと  
+
 <xref:System.AppDomain.AssemblyResolve> イベントの処理に関する基本原則は、認識できないアセンブリを返そうとしてはならない、ということです。 ハンドラーを記述するときは、イベントを発生させる可能性があるアセンブリを知っておく必要があります。 それ以外のアセンブリに対して、ハンドラーは null を返す必要があります。  
 
 > [!IMPORTANT]

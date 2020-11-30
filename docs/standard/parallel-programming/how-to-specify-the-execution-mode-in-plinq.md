@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to use execution mode
 ms.assetid: e52ff26c-c5d3-4fab-9fec-c937fb387963
-ms.openlocfilehash: d45aaa04e08c0ada77a01d4f67379c9b1b8773e2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 725f232337952449cd8569b12f65da75569996df
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825547"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722401"
 ---
 # <a name="how-to-specify-the-execution-mode-in-plinq"></a>方法: PLINQ の実行モードを指定する
 
@@ -22,12 +22,14 @@ ms.locfileid: "94825547"
 > この例は、使用方法を示すことを意図したものであるため、同等の順次的な LINQ to Objects クエリほど高速ではない可能性があります。 高速化の詳細については、「[PLINQ での高速化について](understanding-speedup-in-plinq.md)」を参照してください。  
   
 ## <a name="example"></a>例  
+
  [!code-csharp[PLINQ#22](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#22)]
  [!code-vb[PLINQ#22](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#22)]  
   
  PLINQ は、並列化を利用しやすくするために設計されています。 ただし、すべてのクエリが並列実行の利点を活用できるわけではありません。 たとえば、大きなことを実行しない単一のユーザー デリゲートがクエリに含まれる場合、順次実行の方が速度が速くなります。 順次実行の方が速度が速いのは、並列実行を有効にするために必要なオーバーヘッドが、得られる高速化の負荷より大きいためです。 このため、PLINQ はすべてのクエリを自動的に並列化するわけではありません。 最初に、クエリのシェイプとクエリを構成しているさまざまな演算子を調べます。 この分析に基づいて、既定の実行モードの PLINQ によって、クエリの一部またはすべてを順次実行するかどうかが決定されます。 ただし、PLINQ が分析から判断するよりも、ユーザーの方がクエリをより詳しく理解している場合があります。 たとえば、デリゲートの負荷が大きいため、クエリで並列化を使用する方がよいとわかっているとします。 このような場合は、<xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> メソッドを使用し、<xref:System.Linq.ParallelExecutionMode.ForceParallelism> 値を指定することで、クエリを常に並列実行するよう PLINQ に指示できます。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
+
  このコードをコピーして [PLINQ データのサンプル](plinq-data-sample.md) に貼り付けて、`Main` からメソッドを呼び出します。  
   
 ## <a name="see-also"></a>関連項目

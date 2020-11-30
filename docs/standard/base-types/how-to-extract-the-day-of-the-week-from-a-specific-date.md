@@ -22,12 +22,12 @@ helpviewer_keywords:
 - DateTimeOffset.ToString method
 - full weekday names
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
-ms.openlocfilehash: 329a099411651310cf77fa94e9a66b6ac113fdc2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9db11146ee9428ce22b08accacf7660137d539c7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822075"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726991"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>方法: 特定の日付から曜日を抽出する
 
@@ -79,6 +79,7 @@ ms.locfileid: "94822075"
          [!code-vb[Formatting.Howto.WeekdayName#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/fullname5.vb#5)]  
   
 ## <a name="example"></a>例  
+
  この例は、<xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> プロパティと<xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> プロパティ、および<xref:System.DateTime.ToString%2A?displayProperty=nameWithType> メソッドと <xref:System.DateTimeOffset.ToString%2A?displayProperty=nameWithType> メソッドを呼び出し、特定の日付の曜日を表す番号、曜日の省略名、および正式な名前を取得します。  
   
  [!code-csharp[Formatting.Howto.WeekdayName#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/example6.cs#6)]

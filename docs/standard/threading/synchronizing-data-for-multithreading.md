@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: 188090a968b49bd77279d35dc41f00e808299938
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e1b90bdc5657c1fd22c6e77e31890ff63c3cc3ea
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819644"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727459"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>マルチスレッド処理のためのデータの同期
 
@@ -38,12 +38,15 @@ ms.locfileid: "94819644"
 |手動での同期|手動|手動|手動|手動|手動|手動|  
   
 ## <a name="no-synchronization"></a>同期なし  
+
  これは、オブジェクトに対する既定の設定です。 すべてのスレッドが、すべてのメソッドまたはフィールドにいつでもアクセスできます。 ただし、これらのオブジェクトにアクセスできるスレッドは一度に 1 つだけです。  
   
 ## <a name="manual-synchronization"></a>手動での同期  
+
  .NET クラス ライブラリには、スレッドを同期するための多数のクラスがあります。 「[同期プリミティブの概要](overview-of-synchronization-primitives.md)」を参照してください。  
   
 ## <a name="synchronized-code-regions"></a>同期されたコード領域  
+
  <xref:System.Threading.Monitor> クラスまたはコンパイラ キーワードを使用して、コード ブロック、インスタンス メソッド、静的メソッドを同期できます。 同期された静的フィールドに対するサポートはありません。  
   
  Visual Basic と C# の両方が、コード ブロックに特定の言語キーワード (C# の `lock` ステートメント、Visual Basic の `SyncLock` ステートメント) のマークを付けることをサポートしています。 スレッドによってコードが実行されると、ロックの取得が試行されます。 別のスレッドによってロックが既に取得されている場合、ロックが使用可能になるまでスレッドはブロックされます。 同期されているコード ブロック部分の実行をスレッドが終了すると、終了方法に関係なく、ロックが解放されます。  
@@ -59,6 +62,7 @@ ms.locfileid: "94819644"
 > `static` メソッド (Visual Basic では`Shared`) を保護するために、型 (C# の場合は`typeof(MyType)`、Visual Basic の場合は`GetType(MyType)`、C++ の場合は`MyType::typeid`) をロックしないでください。 代わりにプライベート静的オブジェクトを使用します。 同様に、C# の `this` (Visual Basic の場合は `Me`) を使用してインスタンス メソッドをロックしないでください。 代わりにプライベート オブジェクトを使用します。 クラスやインスタンスは、独自のコード以外のコードでもロックできますが、デッドロックやパフォーマンスの問題が発生する可能性があります。  
   
 ### <a name="compiler-support"></a>コンパイラ サポート  
+
  Visual Basic と C# は、どちらも <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> と <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> を使用してオブジェクトをロックする言語キーワードをサポートします。 Visual Basic は [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) ステートメントをサポートしており、C# は [lock](../../csharp/language-reference/keywords/lock-statement.md) ステートメントをサポートしています。  
   
  両方とも、コード ブロックで例外がスローされると、**lock** または **SyncLock** によって取得されたロックは自動的に解放されます。 C# コンパイラおよび Visual Basic コンパイラは **try**/**finally** ブロックを生成します。tryブロックは先頭に **Monitor.Enter** を含み、**finally** ブロックは **Monitor.Exit** を含みます。 **lock** ブロックまたは **SyncLock** ブロック内部で例外がスローされると、**finally** ハンドラーが実行され、任意のクリーンアップ作業を行えるようになります。  

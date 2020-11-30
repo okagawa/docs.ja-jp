@@ -9,12 +9,12 @@ helpviewer_keywords:
 - destroying threads
 - threading [.NET], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-ms.openlocfilehash: be31b0232889227fa5d4990c9481305eea343f11
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bdba09f5709cf99bc0d076e3875a914cc7c5a11e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826483"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723767"
 ---
 # <a name="destroying-threads"></a>スレッドの破棄
 
@@ -30,6 +30,7 @@ ms.locfileid: "94826483"
  <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> メソッドへの呼び出しを待機しているスレッドは、<xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> を呼び出す他のスレッドで中断することができます。  
   
 ## <a name="handling-threadabortexception"></a>ThreadAbortException の処理  
+
  独自のコードからの <xref:System.Threading.Thread.Abort%2A> の呼び出しの結果、またはスレッドが実行中のアプリケーション ドメインのアンロード (<xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> が <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> を使用してスレッドを終了する) の結果として、スレッドが中止されることが予想される場合、スレッドは <xref:System.Threading.ThreadAbortException> を処理し、以下のコードに示すように、`finally` 句で最終処理を実行する必要があります。  
   
 ```vb  

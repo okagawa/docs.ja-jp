@@ -4,12 +4,12 @@ description: 自己完結型アプリのトリミングを制御する方法に�
 author: sbomer
 ms.author: svbomer
 ms.date: 08/25/2020
-ms.openlocfilehash: 89bd195a97c2f1bbbba9199fea51c917c4e4836b
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: e36aca3aadb6968f73a439ca985dc410d1bc88d8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89515833"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704657"
 ---
 # <a name="trimming-options"></a>トリミングのオプション
 
@@ -140,11 +140,11 @@ ms.locfileid: "89515833"
 
 - `<EnableUnsafeBinaryFormatterSerialization>false</EnableUnsafeBinaryFormatterSerialization>`
 
-    BinaryFormatter のシリアル化サポートを削除します。 詳細については、[古い形式の BinaryFormatter シリアル化メソッド](../compatibility/corefx.md#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)に関する記事を参照してください。
+    BinaryFormatter のシリアル化サポートを削除します。 詳細については、[古い形式の BinaryFormatter シリアル化メソッド](../compatibility/core-libraries/5.0/binaryformatter-serialization-obsolete.md)に関する記事を参照してください。
 
 - `<EnableUnsafeUTF7Encoding>false</EnableUnsafeUTF7Encoding>`
 
-    安全でない UTF-7 エンコード コードを削除します。 詳細については、「[UTF-7 コード パスが古い形式に](../compatibility/corefx.md#utf-7-code-paths-are-obsolete)」を参照してください。
+    安全でない UTF-7 エンコード コードを削除します。 詳細については、「[UTF-7 コード パスが古い形式に](../compatibility/core-libraries/5.0/utf-7-code-paths-obsolete.md)」を参照してください。
 
 - `<EventSourceSupport>false</EventSourceSupport>`
 

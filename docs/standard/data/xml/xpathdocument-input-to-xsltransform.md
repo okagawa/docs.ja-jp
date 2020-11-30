@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7d1bbe8b-ed43-4e62-a5ba-d602d244f4ae
-ms.openlocfilehash: d9291ff4010e04bf94a216f099ea80f8a3e2de12
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 29bb345c2654baec8fbd2adce3788a4b4f2d582d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821724"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720868"
 ---
 # <a name="xpathdocument-input-to-xsltransform"></a>XslTransform への XPathDocument の入力
+
 <xref:System.Xml.XPath.XPathDocument> は、<xref:System.Xml.Xsl.XslTransform> でドキュメントを処理するための読み取り専用キャッシュです。 <xref:System.Xml.XPath.XPathNavigator> は、構造的には XML ドキュメント オブジェクト モデル (DOM) に似ていますが、 で XPath 最適化関数を使用することで、XSLT (Extensible Stylesheet Language for Transformations) による処理と XPath (XML Path Language) データ モデルに高度に最適化されています。  
   
 > [!NOTE]

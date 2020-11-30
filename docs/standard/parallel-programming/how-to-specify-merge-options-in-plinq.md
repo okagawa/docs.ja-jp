@@ -7,20 +7,22 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to use merge options
 ms.assetid: 0f33b527-e91a-4550-a39a-e63e396fd831
-ms.openlocfilehash: 91c5ac91538942368b66399bf0bc0132a15bf667
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7c7979dc828f89435422b464b22710b3a052911b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825599"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722428"
 ---
 # <a name="how-to-specify-merge-options-in-plinq"></a>方法: PLINQ のマージ オプションを指定する
+
 この例では、PLINQ クエリの後続のすべての演算子に適用されるマージ オプションを指定する方法を示します。 マージ オプションを明示的に設定する必要はありませんが、設定することでパフォーマンスが向上する可能性があります。 マージ オプションの詳細については、「[PLINQ のマージ オプション](merge-options-in-plinq.md)」を参照してください。  
   
 > [!WARNING]
 > この例は、使用方法を示すことを意図したものであるため、同等の順次的な LINQ to Objects クエリほど高速ではない可能性があります。 高速化の詳細については、「[PLINQ での高速化について](understanding-speedup-in-plinq.md)」を参照してください。  
   
 ## <a name="example"></a>例  
+
  次の例では、順序付けされていないソースがあり、すべての要素に負荷が大きい関数を適用する基本的なシナリオでのマージ オプションの動作を示します。  
   
  [!code-csharp[PLINQ#23](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#23)]

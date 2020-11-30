@@ -2,14 +2,15 @@
 title: ドキュメント間での既存のノードのコピー
 ms.date: 03/30/2017
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-ms.openlocfilehash: f4d58fa5aafdd48feff1a768ab0463ac09315476
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2e66d6eb83692e8e6541ce869062e2ce67c3c1df
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829610"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722207"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>ドキュメント間での既存のノードのコピー
+
 **ImportNode** メソッドを使用すると、ある **XmlDocument** から別の XmlDocument へ、ノードまたはノードのサブツリー全体をコピーできます。 呼び出しから返されるノードは、ソース ドキュメントのノードのコピーであり、そこには属性値、ノード名、ノード型が含まれます。さらに、プレフィックス、ローカル名、名前空間 URI (Uniform Resource Identifier) など、名前空間に関連するすべての属性も含まれます。 ソース ドキュメントは変更されません。 インポートしたノードは、ノードを挿入するメソッドの 1 つを使用してツリーに追加する必要があります。  
   
  新しいドキュメントにノードを追加すると、その新しいドキュメントがそのノードを所有します。 これは、ノードが別のドキュメント フラグメントに作成される場合でも、各ノードの作成時には所有元のドキュメントが設定されるためです。 これは XML ドキュメント オブジェクト モデル (DOM) の要件であり、**XmlDocument** クラスの設計仕様です。 たとえば、**CreateElement** は、新しいノードを作成する唯一の手段です。  

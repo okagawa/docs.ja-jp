@@ -8,14 +8,15 @@ helpviewer_keywords:
 - weak references, long
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
-ms.openlocfilehash: 40d17009c98a73b7cb51779663360726c5fc7403
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1eb5e57f5cc1065f1b8510e4fb0a980a85abca29
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827361"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714212"
 ---
 # <a name="weak-references"></a>弱い参照
+
 ガベージ コレクターでは、アプリケーションのコードがオブジェクトにアクセスできる間、そのアプリケーションで使用中のオブジェクトを収集することはできません。 アプリケーションには、オブジェクトへの強い参照があると考えられます。  
   
  弱い参照は、アプリケーションからオブジェクトへのアクセスを許容したまま、そのオブジェクトをガベージ コレクターが収集できるようにします。 弱い参照は、強い参照が存在しない場合に、オブジェクトが収集されるまでの不確定の期間中のみ有効です。 弱い参照を使用すると、該当オブジェクトが収集されるのを回避するため、アプリケーションで強い参照を取得できます。 ただし、強い参照が再確立される前に、ガベージ コレクターが最初にオブジェクトにアクセスするリスクが常にあります。  
@@ -29,6 +30,7 @@ ms.locfileid: "94827361"
  オブジェクトで弱い参照を確立するには、追跡されるオブジェクトのインスタンスを使用して、<xref:System.WeakReference> を作成します。 次に、そのオブジェクトの <xref:System.WeakReference.Target%2A> プロパティを設定して、オブジェクトへの元の参照を `null` に設定します。 コード例については、クラス ライブラリの「<xref:System.WeakReference>」を参照してください。  
   
 ## <a name="short-and-long-weak-references"></a>短期間と長期間の弱い参照  
+
  短期間の弱い参照または長期間の弱い参照を作成できます。  
   
 - Short  
@@ -44,6 +46,7 @@ ms.locfileid: "94827361"
  強い参照を確立して、もう一度オブジェクトを使用するには、オブジェクトの型に <xref:System.WeakReference> の <xref:System.WeakReference.Target%2A> プロパティをキャストします。 <xref:System.WeakReference.Target%2A> プロパティが `null` を返す場合、オブジェクトが収集されます。それ以外の場合、アプリケーションがその強い参照を再取得するため、オブジェクトを使用し続けることができます。  
   
 ## <a name="guidelines-for-using-weak-references"></a>弱い参照を使用するためのガイドライン  
+
  終了処理後のオブジェクトの状態が予測できないため、長期間の弱い参照は必要な場合にのみ使用します。  
   
  ポインター自体が同程度の大きさか、より大きい場合があるため、小さなオブジェクトへの弱い参照を使用しないでください。  

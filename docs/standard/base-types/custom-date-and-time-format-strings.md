@@ -15,12 +15,12 @@ helpviewer_keywords:
 - formatting [.NET], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: 804a72f865fc491d6fc991e78c53ceb62d20cd1c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 70e68de3ce736bc4935dea80e37cc805068b0bc5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824455"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722467"
 ---
 # <a name="custom-date-and-time-format-strings"></a>カスタム日時形式文字列
 
@@ -630,6 +630,7 @@ AM と PM を区別する必要のある言語の場合、必ず "tt" 指定子�
 ## <a name="date-and-time-separator-specifiers"></a>日付と時刻の区切り記号指定子
 
 ### <a name="the--custom-format-specifier"></a><a name="timeSeparator"></a> ":" カスタム書式指定子
+
 ":" カスタム書式指定子は、時、分、および秒を区別するための時刻の区切り記号を表します。 ローカライズされた適切な時刻の区切り記号は、現在のカルチャまたは特定のカルチャの <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> プロパティから取得されます。
 
 > [!NOTE]

@@ -3,12 +3,12 @@ title: グローバリゼーションの構成設定
 description: .NET Core アプリのグローバリゼーションの側面 (たとえば、日本語の日付の解析方法など) を構成するランタイム設定について説明します。
 ms.date: 05/18/2020
 ms.topic: reference
-ms.openlocfilehash: 56228e9a6cb6dbab6a22bdc00d11212e1019776b
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: fc98e965093c28b75b9b66e4f1c9f147abd4680e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761968"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721916"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>グローバリゼーションのランタイム構成オプション
 
@@ -87,7 +87,7 @@ ms.locfileid: "83761968"
 
 - .NET で Windows アプリ用に各国語サポート (NLS) または International Components for Unicode (ICU) のグローバリゼーション API が使用されるかどうかを決定します。 .NET 5.0 以降のバージョンの場合、Windows 10 May 2019 Update 以降のバージョンでは ICU グローバリゼーション API が既定で使用されます。
 - この設定を省略した場合、.NET では ICU グローバリゼーション API が既定で使用されます。 これは、値を `false` に設定した場合と同じです。
-- 詳細については、「[グローバリゼーション API では Windows 上の ICU ライブラリが使用される](../compatibility/3.1-5.0.md#globalization-apis-use-icu-libraries-on-windows)」を参照してください。
+- 詳細については、「[グローバリゼーション API では Windows 上の ICU ライブラリが使用される](../compatibility/globalization/5.0/icu-globalization-api.md)」を参照してください。
 
 | | 設定の名前 | 値 | 導入時期 |
 | - | - | - | - |

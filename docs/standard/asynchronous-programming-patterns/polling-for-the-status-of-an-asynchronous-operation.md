@@ -9,14 +9,15 @@ helpviewer_keywords:
 - polling asynchronous operation status
 - status information [.NET], asynchronous operations
 ms.assetid: b541af31-dacb-4e20-8847-1b1ff7c35363
-ms.openlocfilehash: c4e8e7c66551e0a240eaa873513c3975703af946
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 8676568a1493c5c404e6b3019f37dd672c2ed8d3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830312"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726692"
 ---
 # <a name="polling-for-the-status-of-an-asynchronous-operation"></a>非同期操作のステータスのポーリング
+
 非同期操作の結果の待機中に、他の作業を実行できるアプリケーションは、操作が完了するまで待機をブロックする必要はありません。 次のオプションのいずれかを使用して、非同期操作が完了するまでの待機中に、手順の実行を継続します。  
   
 - 非同期操作の **Begin**_OperationName_ メソッドによって返される <xref:System.IAsyncResult> の <xref:System.IAsyncResult.IsCompleted%2A> プロパティを使用して、その操作が完了したかどうかを判断します。 この方法はポーリングと呼ばれ、このトピックでデモが実行されます。  
@@ -24,6 +25,7 @@ ms.locfileid: "94830312"
 - <xref:System.AsyncCallback> デリゲートを使用し、個別のスレッドで非同期操作の結果を処理します。 この方法のデモを実行する例については、「[AsyncCallback デリゲートの使用による非同期操作の終了](using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)」を参照してください。  
   
 ## <a name="example"></a>例  
+
  次のコード例は、ユーザー指定のコンピューターのドメイン ネーム システム情報を取得するために、<xref:System.Net.Dns> クラスの非同期メソッドを使用してデモを実行します。 この例では、非同期操作が開始され、操作が完了するまでコンソールにピリオド (".") が出力されます。 この方法を使用する場合はこれらの引数は必要ないため、**null** (Visual Basic の場合は **Nothing**) は、<xref:System.Net.Dns.BeginGetHostByName%2A><xref:System.AsyncCallback> と <xref:System.Object> パラメーターに渡されることに注意してください。  
   
  [!code-csharp[AsyncDesignPattern#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/Async_Poll.cs#3)]

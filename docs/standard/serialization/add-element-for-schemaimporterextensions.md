@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-ms.openlocfilehash: 38d8ebd6e973632b23865ad60e007d9aa21e7da6
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: b8a0775e9d33d59606b1150aa9a1b3b1026d4b0b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282001"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726445"
 ---
 # <a name="add-element-for-schemaimporterextensions"></a>\<schemaImporterExtensions> の \<add> 要素
 
@@ -29,6 +29,7 @@ XSD 型を .NET 型に対応付けるために、<xref:System.Xml.Serialization.
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -39,6 +40,7 @@ XSD 型を .NET 型に対応付けるために、<xref:System.Xml.Serialization.
 |**type**|必須です。 追加するスキーマ拡張クラスを指定します。 **type** 属性の値は 1 行で指定し、完全修飾型名を含める必要があります。 アセンブリをグローバル アセンブリ キャッシュ (GAC: Global Assembly Cache) に配置する場合は、バージョン、カルチャ、およびアセンブリの署名に使用した公開キーのトークンも含める必要があります。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
@@ -48,6 +50,7 @@ XSD 型を .NET 型に対応付けるために、<xref:System.Xml.Serialization.
 |\<schemaImporterExtensions>|<xref:System.Xml.Serialization.XmlSchemaImporter> によって使用される型が含まれます。|  
   
 ## <a name="example"></a>例  
+
  型を対応付けるときに XmlSchemaImporter が使用できる拡張の型を追加するコード例を次に示します。  
   
 ```xml  

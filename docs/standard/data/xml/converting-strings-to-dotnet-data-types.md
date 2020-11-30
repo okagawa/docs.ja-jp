@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: 2eee3ff905473d8fd520929c0fe5abfb5d5c42da
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0cee7481f9c002f860bff7f12b8be0bb763dadb1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830962"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701472"
 ---
 # <a name="convert-strings-to-net-data-types"></a>文字列を .NET データ型に変換する
 
@@ -72,6 +72,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
  ただし、文字列を **Boolean**、**Single**、または **Double** に変換する場合、返される .NET 型は、**System.Convert** クラスを使用したときに返される型とは異なります。  
   
 ## <a name="string-to-boolean"></a>String から Boolean  
+
  **ToBoolean** メソッドを使用して文字列を **Boolean** に変換するときの入力文字列と生成される型の対応を次の表に示します。  
   
 |有効な文字列入力パラメーター|.NET 出力の種類|  
@@ -104,6 +105,7 @@ Console.WriteLine(bvalue);
 ```  
   
 ## <a name="string-to-single"></a>String から Single  
+
  **ToSingle** メソッドを使用して文字列を **Single** に変換するときの入力文字列と生成される型の対応を次の表に示します。  
   
 |有効な文字列入力パラメーター|.NET 出力の種類|  
@@ -112,6 +114,7 @@ Console.WriteLine(bvalue);
 |"-INF"|Single.NegativeInfinity|  
   
 ## <a name="string-to-double"></a>String から Double  
+
  **ToDouble** メソッドを使用して文字列を **Single** に変換するときの入力文字列と生成される型の対応を次の表に示します。  
   
 |有効な文字列入力パラメーター|.NET 出力の種類|  

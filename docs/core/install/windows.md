@@ -4,12 +4,12 @@ description: .NET をインストールできる Windows のバージョンに�
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: fe18cda64e0c9986884486298adf4a83b604f323
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: 4d3abde965d9a2ab0f86477feeb7c10f274a4b9a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594540"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715122"
 ---
 # <a name="install-net-on-windows"></a>Windows に .NET をインストールする
 
@@ -204,7 +204,7 @@ SDK は、.NET アプリとライブラリを作成して公開するために�
 
 [dotnet-install スクリプト](../tools/dotnet-install-script.md)は、ランタイムの CI 自動化および管理者以外によるインストールに使用されます。 スクリプトは、[dotnet-install スクリプト参照ページ](../tools/dotnet-install-script.md)からダウンロードできます。
 
-このスクリプトを使用すると、最新の[長期サポート (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) バージョン (.NET 3.1) が既定でインストールされます。 `Channel` スイッチを指定することで、特定のリリースを選択できます。 ランタイムをインストールするには、`Runtime` スイッチを含めます。 それ以外の場合は、スクリプトによって SDK がインストールされます。
+スクリプトでは、既定で最新の [長期サポート (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) バージョン (.NET Core 3.1) がインストールされます。 `Channel` スイッチを指定することで、特定のリリースを選択できます。 ランタイムをインストールするには、`Runtime` スイッチを含めます。 それ以外の場合は、スクリプトによって SDK がインストールされます。
 
 ```powershell
 dotnet-install.ps1 -Channel 5.0 -Runtime aspnetcore

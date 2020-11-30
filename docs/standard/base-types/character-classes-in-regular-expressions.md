@@ -11,12 +11,12 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.openlocfilehash: 69cece42c5d7c92eb1af5e31f4fd83f5384b1d8e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 35ffe3f338897bc7b24a6c274b5458dd2e19918c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823317"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728772"
 ---
 # <a name="character-classes-in-regular-expressions"></a>正規表現での文字クラス
 
@@ -50,7 +50,9 @@ ms.locfileid: "94823317"
 > カテゴリ別の文字に一致する文字クラス (単語文字に一致する [\w](#WordCharacter)、Unicode カテゴリに一致する [\p{}](#CategoryOrBlock) など) は、<xref:System.Globalization.CharUnicodeInfo> クラスを使用して文字カテゴリに関する情報を提供します。 .NET Framework 4.6.2 以降のバージョンでは、文字カテゴリは、[Unicode 標準バージョン 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/) に基づいています。
   
 <a name="PositiveGroup"></a>
+
 ## <a name="positive-character-group--"></a>文字グループの肯定: [ ]  
+
  文字グループの肯定では、いずれかが入力文字列に含まれると一致と見なされる文字の一覧を指定します。 この文字の一覧は、個別に指定されることも範囲として指定されることも、その両方であることもあります。  
   
  個別の文字の一覧を指定する構文は次のとおりです。  
@@ -106,7 +108,9 @@ ms.locfileid: "94823317"
 |`\b`|ワード境界に一致します。|  
   
 <a name="NegativeGroup"></a>
+
 ## <a name="negative-character-group-"></a>文字グループの否定: [^]  
+
  文字グループの否定では、入力文字列に含まれなければ一致と見なされる文字の一覧を指定します。 この文字の一覧は、個別に指定されることも範囲として指定されることも、その両方であることもあります。  
   
 個別の文字の一覧を指定する構文は次のとおりです。  
@@ -154,7 +158,9 @@ ms.locfileid: "94823317"
 |`\b`|ワード境界で終了します。|  
   
 <a name="AnyCharacter"></a>
+
 ## <a name="any-character-"></a>任意の文字: .  
+
  ピリオド文字 (.) は、`\n` (改行文字、\u000A) を除く任意の文字と一致しますが、次の 2 つの制限があります。  
   
 - 正規表現パターンが <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> オプションで修飾されている場合、または `.` 文字クラスを含むパターンの一部が `s` オプションで修飾されている場合は、`.` は任意の文字と一致します。 詳細については、「 [正規表現のオプション](regular-expression-options.md)」を参照してください。  
@@ -176,7 +182,9 @@ ms.locfileid: "94823317"
 > `.` 言語要素は任意の文字と一致するので、正規表現パターンが任意の文字と複数回一致する場合に最短一致の量指定子と共によく使用されます。 詳細については、「 [量指定子](quantifiers-in-regular-expressions.md)」を参照してください。  
   
 <a name="CategoryOrBlock"></a>
+
 ## <a name="unicode-category-or-unicode-block-p"></a>Unicode カテゴリまたは Unicode ブロック: \p{}  
+
  Unicode 規格では、各文字に一般カテゴリが割り当てられています。 たとえば、特定の文字は、英大文字 (`Lu` カテゴリで表されます)、10 進数 (`Nd` カテゴリ)、数学記号 (`Sm` カテゴリ)、または段落区切り記号 (`Zl` カテゴリ) に分類できます。 また、Unicode 規格の特定の文字セットは、特定の範囲またはブロックの連続したコード ポイントに対応します。 たとえば、基本的なラテン語文字セットは \u0000 ～ \u007F で、アラビア語文字セットは \u0600 ～ \u06FF です。  
   
  正規表現の構成要素  
@@ -205,7 +213,9 @@ ms.locfileid: "94823317"
 |`(\p{IsBasicLatin}+(\s)?)+`|1 つ以上の基本的なラテン文字の後に 0 個または 1 個の空白文字が 1 回以上続くパターンに一致します。|  
   
 <a name="NegativeCategoryOrBlock"></a>
+
 ## <a name="negative-unicode-category-or-unicode-block-p"></a>Unicode カテゴリまたは Unicode ブロックの否定: \P{}  
+
  Unicode 規格では、各文字に一般カテゴリが割り当てられています。 たとえば、特定の文字は、英大文字 (`Lu` カテゴリで表されます)、10 進数 (`Nd` カテゴリ)、数学記号 (`Sm` カテゴリ)、または段落区切り記号 (`Zl` カテゴリ) に分類できます。 また、Unicode 規格の特定の文字セットは、特定の範囲またはブロックの連続したコード ポイントに対応します。 たとえば、基本的なラテン語文字セットは \u0000 ～ \u007F で、アラビア語文字セットは \u0600 ～ \u06FF です。  
   
  正規表現の構成要素  
@@ -222,7 +232,9 @@ ms.locfileid: "94823317"
  正規表現パターン `(\P{Sc})+` は、通貨記号以外の 1 つ以上の文字と一致し、実質的に結果文字列から通貨記号を削除します。  
   
 <a name="WordCharacter"></a>
+
 ## <a name="word-character-w"></a>単語に使用される文字: \w  
+
  `\w` は、単語に使用される任意の文字と一致します。 単語に使用される文字は、次の表に示す Unicode カテゴリのメンバーです。  
   
 |カテゴリ|説明|  
@@ -252,7 +264,9 @@ ms.locfileid: "94823317"
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/wordchar1.vb#8)]  
   
 <a name="NonWordCharacter"></a>
+
 ## <a name="non-word-character-w"></a>単語に使用されない文字: \W  
+
  `\W` は、単語に使用される文字以外の任意の文字と一致します。 \W 言語要素は、次の文字クラスと同じ結果をもたらします。  
   
 `[^\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]`  
@@ -289,7 +303,9 @@ ms.locfileid: "94823317"
  2 番目のキャプチャ グループの <xref:System.Text.RegularExpressions.Group> オブジェクトには、キャプチャされた単語に使用されない文字が 1 つだけ含まれるので、この例では、<xref:System.Text.RegularExpressions.CaptureCollection> プロパティによって返される <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> オブジェクトから、キャプチャされたすべての単語に使用されない文字を取得します。  
   
 <a name="WhitespaceCharacter"></a>
+
 ## <a name="whitespace-character-s"></a>空白文字: \s  
+
  `\s` は任意の空白文字と一致します。 次の表に示すエスケープ シーケンスおよび Unicode カテゴリと同じ結果をもたらします。  
   
 |カテゴリ|説明|  
@@ -318,7 +334,9 @@ ms.locfileid: "94823317"
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/whitespace1.vb#10)]  
   
 <a name="NonWhitespaceCharacter"></a>
+
 ## <a name="non-whitespace-character-s"></a>空白以外の文字: \S  
+
  `\S` は、空白文字以外の任意の文字と一致します。 `[^\f\n\r\t\v\x85\p{Z}]` 正規表現パターン、または空白文字と一致する `\s` に相当する正規表現パターンの逆と同じ結果をもたらします。 詳細については、「[空白文字: \s](#WhitespaceCharacter)」を参照してください。  
   
  ECMAScript 準拠の動作が指定された場合、`\S` は `[^ \f\n\r\t\v]` と同じになります。 ECMAScript 正規表現の詳細については、「[正規表現のオプション](regular-expression-options.md)」の「ECMAScript 一致の動作」のセクションを参照してください。  
@@ -335,7 +353,9 @@ ms.locfileid: "94823317"
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nonwhitespace1.vb#11)]  
   
 <a name="DigitCharacter"></a>
+
 ## <a name="decimal-digit-character-d"></a>10 進数字: \d  
+
  `\d` は、10 進数字と一致します。 標準の 10 進数 0 ～ 9 およびその他の各種文字セットの 10 進数を含む `\p{Nd}` 正規表現パターンと同じ結果をもたらします。  
   
  ECMAScript 準拠の動作が指定された場合、`\d` は `[0-9]` と同じになります。 ECMAScript 正規表現の詳細については、「[正規表現のオプション](regular-expression-options.md)」の「ECMAScript 一致の動作」のセクションを参照してください。  
@@ -357,7 +377,9 @@ ms.locfileid: "94823317"
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/digit1.vb#12)]  
   
 <a name="NonDigitCharacter"></a>
+
 ## <a name="non-digit-character-d"></a>数字以外の文字: \D  
+
  `\D` は、数字以外の文字と一致します。 `\P{Nd}` 正規表現パターンと同じ結果をもたらします。  
   
  ECMAScript 準拠の動作が指定された場合、`\D` は `[^0-9]` と同じになります。 ECMAScript 正規表現の詳細については、「[正規表現のオプション](regular-expression-options.md)」の「ECMAScript 一致の動作」のセクションを参照してください。  
@@ -376,7 +398,9 @@ ms.locfileid: "94823317"
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nondigit1.vb#13)]  
   
 <a name="SupportedUnicodeGeneralCategories"></a>
+
 ## <a name="supported-unicode-general-categories"></a>サポートされている Unicode 一般カテゴリ  
+
  Unicode は、次の表に示されている一般カテゴリを定義しています。 詳細については、「[Unicode Character Database (Unicode 文字データベース)](https://www.unicode.org/reports/tr44/)」内の「UCD File Format (UCD ファイル形式)」および「General Category Values (一般カテゴリの値)」を参照してください。  
   
 |カテゴリ|説明|  
@@ -425,6 +449,7 @@ ms.locfileid: "94823317"
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/getunicodecategory1.vb#14)]  
   
 <a name="SupportedNamedBlocks"></a>
+
 ## <a name="supported-named-blocks"></a>サポートされている名前付きブロック
 
 .NET には、次の表に示す名前付きブロックが用意されています。 サポートされている一連の名前付きブロックは、Unicode 4.0 および Perl 5.6 に基づいています。 名前付きブロックを使用する正規表現については、「[Unicode カテゴリまたは Unicode ブロック: \\p{}](#unicode-category-or-unicode-block-p)」を参照してください。  
@@ -538,7 +563,9 @@ ms.locfileid: "94823317"
 |FFF0 ～ FFFF|`IsSpecials`|  
   
 <a name="CharacterClassSubtraction"></a>
+
 ## <a name="character-class-subtraction-base_group---excluded_group"></a>文字クラスの減算: [base_group - [excluded_group]]  
+
  文字クラスは、文字のセットを定義します。 文字クラス減算によって、ある文字クラスから別の文字クラスの文字を除外した文字セットが生成されます。  
   
  文字クラス減算式の形式は次のとおりです。  

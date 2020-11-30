@@ -8,17 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-ms.openlocfilehash: 1e2dd0d554cdece23ac6d0e6b255ad70533236dc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f3adcfa98f4004f283b24bcd31dc243c18c2644c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826659"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729370"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>方法: スレッド ローカル変数を使用する Parallel.For ループを記述する
+
 次の例に、<xref:System.Threading.Tasks.Parallel.For%2A> ループによって生成される個別のタスクごとの状態を、スレッド ローカル変数を使用して格納および取得する方法を示します。 スレッド ローカル変数を使用することで、共有状態への多数のアクセスを同期するオーバーヘッドを回避できます。 反復処理ごとに共有リソースを作成する代わりに、タスクの反復処理のすべてが完了するまで、値を計算して格納します。 この場合、最終結果を共有リソースに 1 回書き込んだり、別のメソッドに渡したりすることができます。  
   
 ## <a name="example"></a>例  
+
  <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> メソッドを呼び出して、100 万個の要素からなる配列の値の合計を計算する例を次に示します。 各要素の値は、そのインデックスに相当します。  
   
  [!code-csharp[TPL_Parallel#05](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/forandforeach_simple.cs#05)]

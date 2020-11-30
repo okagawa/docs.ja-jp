@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-ms.openlocfilehash: ee36845f19ef4a7c3923b1032ab6eb45d2f60733
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c2ab384b6d84a14d5e8f4cfe66281a26b14421f4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830819"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726965"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>方法: .NET Framework ストリームと Windows ランタイム ストリームの間で変換を行う (Windows のみ)
 
@@ -19,6 +19,7 @@ UWP アプリ用 .NET Framework は、完全な .NET Framework のサブセッ�
 <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType> クラスには、これらの変換を容易にするメソッドが含まれています。 ただし、次のセクションで説明するように、.NET Framework と Windows ランタイムのストリームの間にある根本的な違いにより、これらのメソッドの使用結果に影響があります。
 
 ## <a name="convert-from-a-windows-runtime-to-a-net-framework-stream"></a>Windows ランタイムから .NET Framework ストリームに変換する
+
 Windows ランタイム ストリームから .NET Framework ストリームに変換するには、次の <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType> メソッドのいずれかを使用します。
 
 - <xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A?displayProperty=nameWithType> は、Windows ランタイムのランダム アクセス ストリームを UWP アプリ用 .NET のマネージド ストリームに変換します。
@@ -32,6 +33,7 @@ Windows ランタイムでは、読み取り専用、書き込み専用、また
 変換する Windows ランタイム ストリームの機能と一致する変換メソッドを使用することをお勧めします。 ただし、<xref:Windows.Storage.Streams.IRandomAccessStream> は読み取りも書き込みも可能なので (<xref:Windows.Storage.Streams.IOutputStream> と <xref:Windows.Storage.Streams.IInputStream> の両方を実装しているので)、変換メソッドでは元のストリームの機能が維持されます。 たとえば、<xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A?displayProperty=nameWithType> を使用して <xref:Windows.Storage.Streams.IRandomAccessStream> を変換しても、変換された .NET Framework ストリームが読み取り可能に制限されるわけではありません。 書き込みも可能です。
 
 ## <a name="example-convert-windows-runtime-random-access-to-net-framework-stream"></a>例:Windows ランタイム ランダム アクセスを、.NET Framework ストリームに変換する
+
 Windows ランタイム ランダム アクセス ストリームから .NET Framework ストリームに変換するには、<xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A?displayProperty=nameWithType> メソッドを使用します。
 
 次のコード例では、ファイルを選択するように求められ、そのファイルが Windows ランタイム API で開かれた後、.NET Framework ストリームに変換されます。 ストリームを読み取って、テキスト ブロックに出力します。 通常、結果を出力する前に .NET Framework API でストリームを処理します。
@@ -42,6 +44,7 @@ Windows ランタイム ランダム アクセス ストリームから .NET Fra
   [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage1.xaml.vb)]
 
 ## <a name="convert-from-a-net-framework-to-a-windows-runtime-stream"></a>.NET Framework から Windows ランタイム ストリームに変換する
+
 .NET Framework ストリームから Windows ランタイム ストリームに変換するには、次の <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType> メソッドのいずれかを使用します。
 
 - <xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A?displayProperty=nameWithType> は、UWP アプリ用 .NET のマネージド ストリームを Windows ランタイムの入力ストリームに変換します。

@@ -7,26 +7,29 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to control ordering
 ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
-ms.openlocfilehash: 88f19092b06e4dece202e880287bdb95e04d2f2d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 945a1e882c473ec9926e60a9e3e513d4949a6717
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817108"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700913"
 ---
 # <a name="how-to-control-ordering-in-a-plinq-query"></a>方法: PLINQ クエリの順序を制御する
+
 以下の例では、<xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 拡張メソッドを使用して PLINQ クエリの順序を制御する方法を示します。  
   
 > [!WARNING]
 > これらの例は使用法を示すことを主な目的としており、同等の LINQ to Objects 順次クエリよりも実行速度が速い場合もあれば遅い場合もあります。  
   
 ## <a name="example"></a>例  
+
  次の例では、ソース シーケンスの順序を維持します。 この操作が必要になるのは、たとえば、正確な結果を生成するためにクエリ演算子で順序ありのソース シーケンスが求められる場合です。  
   
  [!code-csharp[PLINQ#12](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#12)]
  [!code-vb[PLINQ#12](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#12)]  
   
 ## <a name="example"></a>例  
+
  次の例は、ソース シーケンスで順序付けが求められるクエリ演算子を示しています。 これらの演算子は、順序なしのシーケンスで動作しますが、予測できない結果を生成する場合があります。  
   
  [!code-csharp[PLINQ#14](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#14)]
@@ -35,6 +38,7 @@ ms.locfileid: "94817108"
  このメソッドを実行するには、[PLINQ データのサンプル](plinq-data-sample.md) プロジェクトの PLINQDataSample クラスに貼り付け、F5 キーを押します。  
   
 ## <a name="example"></a>例  
+
  次の例は、クエリの最初の部分で順序を維持した後に、join 句のパフォーマンスを向上させるために順序を削除し、最終的な結果に順序を再適用する方法を示しています。  
   
  [!code-csharp[PLINQ#15](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#15)]

@@ -4,12 +4,12 @@ description: .NET をインストールできる macOS のバージョンにつ�
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 983c5d2c04b87759b898f449bc092161b03c8ace
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: f926479227f11def5c8bb8c6bf29ad30a04e6ed2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594457"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715135"
 ---
 # <a name="install-net-on-macos"></a>macOS に .NET をインストールする
 
@@ -181,7 +181,7 @@ Visual Studio Code には、Visual Studio のような自動化された .NET �
 
 [dotnet-install スクリプト](../tools/dotnet-install-script.md)は、ランタイムの自動化および管理者以外によるインストールに使用されます。 スクリプトは、[dotnet-install スクリプト参照ページ](../tools/dotnet-install-script.md)からダウンロードできます。
 
-このスクリプトを使用すると、最新の[長期サポート (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) バージョン (.NET 3.1) が既定でインストールされます。 `current` スイッチを指定することで、特定のリリースを選択できます。 ランタイムをインストールするには、`runtime` スイッチを含めます。 それ以外の場合は、スクリプトによって [SDK](./windows.md) がインストールされます。
+スクリプトでは、既定で最新の [長期サポート (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) バージョン (.NET Core 3.1) がインストールされます。 `current` スイッチを指定することで、特定のリリースを選択できます。 ランタイムをインストールするには、`runtime` スイッチを含めます。 それ以外の場合は、スクリプトによって [SDK](./windows.md) がインストールされます。
 
 ```bash
 ./dotnet-install.sh --channel 5.0 --runtime aspnetcore

@@ -8,20 +8,22 @@ helpviewer_keywords:
 - cancellation tokens, joining
 - LinkedTokenSource, how to
 ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
-ms.openlocfilehash: 37f42ad4de2d468cd14a916ab4e35e6577f8e375
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e5ec32d486dd5eafc8c456c5a4b0b3297f043499
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819774"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728525"
 ---
 # <a name="how-to-listen-for-multiple-cancellation-requests"></a>方法: 複数のキャンセル要求を待機する
+
 この例では、2 つのキャンセル トークンを同時にリッスンして、いずれかのトークンからキャンセルが要求された場合に操作を取り消す方法を示します。  
   
 > [!NOTE]
 > [マイ コードのみ] が有効になっている場合、Visual Studio では、例外をスローする行で処理が中断され、"ユーザー コードで処理されない例外" に関するエラー メッセージが表示されることがあります。 このエラーは問題にはなりません。 F5 キーを押して、処理が中断された箇所から続行し、以下の例に示す例外処理動作を確認できます。 Visual Studio による処理が最初のエラーで中断しないようにするには、 **[ツール] メニューの [オプション]、[デバッグ] 、[全般]** の順にクリックし、[マイ コードのみ] チェック ボックスをオフにします。  
   
 ## <a name="example"></a>例  
+
  次の例では、<xref:System.Threading.CancellationTokenSource.CreateLinkedTokenSource%2A> メソッドを使用して 2 つのトークンを 1 つのトークンに結合します。 これで、1 つのキャンセル トークンのみを引数として受け取るメソッドにトークンを渡すことができます。 この例では、クラスの外部から渡されたトークンと、クラス内部で生成されたトークンの両方をメソッドで観察する必要がある一般的なシナリオを示します。  
   
  [!code-csharp[Cancellation#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex13.cs#13)]

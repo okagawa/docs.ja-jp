@@ -2,12 +2,12 @@
 title: Ocelot を使った API ゲートウェイの実装
 description: Ocelot を使用して API ゲートウェイを実装する方法と、コンテナー ベースの環境で Ocelot を使用する方法について説明します。
 ms.date: 03/02/2020
-ms.openlocfilehash: 5cee56e6b68bc08f9e1de41605951989a55dc0df
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 6d9229228e228b664a602ce9a682d435505a8107
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679228"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718099"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Ocelot を使った API ゲートウェイの実装
 
@@ -88,7 +88,7 @@ HTTP 要求は、マイクロサービス データベースと追加の必須�
 マイクロサービス URL については、コンテナーがローカル開発用 PC (ローカル Docker ホスト) に配置されると、各マイクロサービスのコンテナーには、次の dockerfile にあるように、その dockerfile で指定された内部ポート (通常はポート 80) が常に与えられます。
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
 ```
@@ -543,7 +543,7 @@ API ゲートウェイはサービスのみに接するフロント エンドま
 
 **図 6-41**。 Kubernetes に配置するときの eShopOnContainers のイングレス層
 
-Kubernetes イングレスは、Web アプリケーションなど、通常は API ゲートウェイの範囲外となるアプリに宛てられるすべてのトラフィックのリバース プロキシとして機能します。 Kubernetes に eShopOnContainers を配置すると、少数のサービスまたはエンドポイントだけが_イングレス_経由で公開されます。基本的に、URL の接尾辞は次のとおりです。
+Kubernetes イングレスは、Web アプリケーションなど、通常は API ゲートウェイの範囲外となるアプリに宛てられるすべてのトラフィックのリバース プロキシとして機能します。 Kubernetes に eShopOnContainers を配置すると、少数のサービスまたはエンドポイントだけが _イングレス_ 経由で公開されます。基本的に、URL の接尾辞は次のとおりです。
 
 - `/`: クライアント SPA Web アプリケーション用
 - `/webmvc`: クライアント MVC Web アプリケーション用
@@ -553,7 +553,7 @@ Kubernetes イングレスは、Web アプリケーションなど、通常は A
 - `/mobileshoppingapigw`: モバイル BFF とショッピング ビジネス プロセス用
 - `/mobilemarketingapigw`: モバイル BFF とマーケティング ビジネス プロセス用
 
-Kubernetes に配置するときに、各 Ocelot API ゲートウェイは、API ゲートウェイを実行している_ポッド_ごとに異なる "configuration.json" ファイルを使用します。 これらの "configuration.json" ファイルは、"ocelot" という名前の Kubernetes _構成マップ_に基づいて作成されたボリュームを (もともとは deploy.ps1 スクリプトを使用して) マウントすることによって提供されます。 各コンテナーにより、関連する構成ファイルが `/app/configuration` という名前のコンテナーのフォルダーにマウントされます。
+Kubernetes に配置するときに、各 Ocelot API ゲートウェイは、API ゲートウェイを実行している _ポッド_ ごとに異なる "configuration.json" ファイルを使用します。 これらの "configuration.json" ファイルは、"ocelot" という名前の Kubernetes _構成マップ_ に基づいて作成されたボリュームを (もともとは deploy.ps1 スクリプトを使用して) マウントすることによって提供されます。 各コンテナーにより、関連する構成ファイルが `/app/configuration` という名前のコンテナーのフォルダーにマウントされます。
 
 eShopOnContainers のソース コード ファイルでは、元の "configuration.json" ファイルは `k8s/ocelot/` フォルダー内にあります。 BFF/API ゲートウェイごとに 1 つのファイルがあります。
 

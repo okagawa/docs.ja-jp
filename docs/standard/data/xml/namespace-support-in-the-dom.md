@@ -2,14 +2,15 @@
 title: DOM における名前空間のサポート
 ms.date: 03/30/2017
 ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
-ms.openlocfilehash: b71817bf8a1b2eb585ccb3b21fb361c651c2bfe9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b3214d77b069b672e8772ec78db51c9d8ee1bf50
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830156"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714407"
 ---
 # <a name="namespace-support-in-the-dom"></a>DOM における名前空間のサポート
+
 XML ドキュメント オブジェクト モデル (DOM) は名前空間に完全に対応しています。 名前空間に対応している XML ドキュメントだけがサポートされます。 W3C (World Wide Web Consortium) の仕様によれば、DOM Level 1 を実装する DOM アプリケーションは名前空間に対応していなくてもかまいませんが、DOM Level 2 の機能は名前空間に対応しています。 ただし、メソッドが DOM 勧告の Level 1 または Level 2 のどちらに準拠しているかに関係なく、XML DOM のすべての機能は名前空間に対応しています。  
   
  たとえば、名前空間に対応していない環境では、DOM Level 1 勧告の規定に従って `setAttribute("A:b", "123")` を呼び出しても、プレフィックス `A` とローカル名 `b` を持つ属性は設定されません。 この結果は、`A:b` という値の属性になります。  

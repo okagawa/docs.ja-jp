@@ -9,19 +9,21 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, unlinking dataflow blocks
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
-ms.openlocfilehash: a3565bb8f0d00773fc59853d68ca7c54de03ba2b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e981d1b9b3adc638a84de1c119ad849ec533d16e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826804"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722412"
 ---
 # <a name="how-to-unlink-dataflow-blocks"></a>方法: データフロー ブロックのリンクを解除する
+
 このドキュメントでは、ソースからターゲット データフロー ブロックのリンクを解除する方法について説明します。
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
 ## <a name="example"></a>例  
+
  次の例では、3 つの <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> オブジェクトを作成し、それぞれのオブジェクトが値を計算する `TrySolution` メソッドを呼び出します。 この例は、完了させるために、`TrySolution` に対する最初の呼び出しからの結果のみが必要です。  
   
  [!code-csharp[TPLDataflow_ReceiveAny#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_receiveany/cs/dataflowreceiveany.cs#1)]

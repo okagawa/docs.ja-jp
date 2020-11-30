@@ -3,18 +3,21 @@ title: XML ドキュメントでの名前空間の管理
 description: XML ドキュメントで名前空間を管理する方法について説明します。 XML 名前空間は、XML ドキュメントの要素名と属性名をカスタムの定義済み URI に関連付けます。
 ms.date: 03/30/2017
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: ab9dceed66e65ea74d0996071ab3a17057e43fc3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 120493de430c2372f3f71d1d1498ba880feda3d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822621"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720153"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>XML ドキュメントでの名前空間の管理
+
 XML 名前空間は、XML ドキュメントの要素名と属性名をカスタムの定義済み URI に関連付けます。 この関係を作成するには、名前空間 URI のプレフィックスを定義し、そのプレフィックスを使用して XML データ内の要素名と属性名を修飾します。 名前空間は要素名や属性名の競合を防ぎ、同じ名前の要素や属性を個別に処理および評価できるようにします。  
   
 <a name="declare"></a>
+
 ## <a name="declaring-namespaces"></a>名前空間の宣言  
+
  要素で名前空間を宣言するには、`xmlns:` 属性を使用します。  
   
  `xmlns:<name>=<"uri">`  
@@ -32,7 +35,9 @@ XML 名前空間は、XML ドキュメントの要素名と属性名をカスタ
  ある要素が特定の名前空間の一部であることを指定するには、名前空間プレフィックスをその要素に追加します。 たとえば、`Author` 要素が `mybook` 名前空間に属する場合は、`<mybook:Author>` として宣言されます。  
   
 <a name="scope"></a>
+
 ## <a name="declaration-scope"></a>宣言のスコープ  
+
  名前空間の有効な範囲は、宣言された位置から、宣言された要素の最後までです。 この例では、`BOOK` 要素で定義されている名前空間は、`BOOK` 要素など、`Publisher` 要素の外側にある要素には適用されません。  
   
 ```xml  
@@ -59,6 +64,7 @@ XML 名前空間は、XML ドキュメントの要素名と属性名をカスタ
 ```  
   
 ## <a name="managing-namespaces"></a>名前空間の管理  
+
  <xref:System.Xml.XmlNamespaceManager> クラスには、名前空間 URI とそのプレフィックスのコレクションが格納されます。このクラスを使用すると、コレクションで名前空間を検索、追加、および削除できます。 このクラスは、特定のコンテキストで、XML の処理のパフォーマンスを向上させるために必要です。 たとえば、XPath をサポートするには、<xref:System.Xml.Xsl.XsltContext> クラスで <xref:System.Xml.XmlNamespaceManager> を使用します。  
   
  名前空間マネージャーでは名前空間の検証は一切実行されません。このマネージャーでは、プレフィックスと名前空間が既に確認され、[W3C 名前空間](https://www.w3.org/TR/REC-xml-names/)仕様に準拠していることが前提となっています。  

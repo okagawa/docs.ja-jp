@@ -4,18 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-ms.openlocfilehash: c7f974c5626cf1efc6bf62c423043089d5c32e7c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4e0214afe4dba7f838f420907374f1472d6d3911
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829532"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699015"
 ---
 # <a name="data-structures-for-parallel-programming"></a>並列プログラミング向けのデータ構造
 
 .NET には、同時実行コレクション クラスのセット、軽量な同期プリミティブ、遅延初期化用の型など、並列プログラミングに役立つ型がいくつかあります。 これらの型は、タスク並列ライブラリや PLINQ などの任意のマルチスレッド アプリケーション コードで使うことができます。  
   
 ## <a name="concurrent-collection-classes"></a>同時実行コレクション クラス  
+
  <xref:System.Collections.Concurrent?displayProperty=nameWithType> 名前空間のコレクション クラスは、できる限りロックを回避するスレッドセーフな追加と削除の操作を提供し、ロックが必要なときは粒度の細かいロックを使います。 同時実行コレクション クラスでは、項目にアクセスするときにロックを取得するユーザー コードが不要です。 複数のスレッドがコレクションの項目を追加および削除するシナリオでは、同時実行コレクション クラスを使うと、<xref:System.Collections.ArrayList?displayProperty=nameWithType> や <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> (ユーザー実装のロックを使用) などの型に対するパフォーマンスが大幅に向上します。  
   
  次の表は、同時実行コレクション クラスの一覧です。  
@@ -31,6 +32,7 @@ ms.locfileid: "94829532"
  詳しくは、「[スレッド セーフなコレクション](../collections/thread-safe/index.md)」を参照してください。  
   
 ## <a name="synchronization-primitives"></a>同期プリミティブ  
+
  <xref:System.Threading?displayProperty=nameWithType> 名前空間の同期プリミティブを使うと、従来のマルチスレッド コードに見られるような高コストのロック メカニズムを回避することで、細かいコンカレンシーを設定でき、高速のパフォーマンスが提供されます。
   
  次の表は、同期型の一覧です。  
@@ -51,6 +53,7 @@ ms.locfileid: "94829532"
 - [方法:バリアを使用して同時実行操作を同期する](../threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)。  
   
 ## <a name="lazy-initialization-classes"></a>遅延初期化クラス  
+
  遅延初期化では、オブジェクトのメモリは必要になるまで割り当てられません。 遅延初期化を使うと、オブジェクトの割り当てがプログラムの有効期間全体に均等に分散されるので、パフォーマンスが向上します。 <xref:System.Lazy%601> 型をラッピングすることにより、任意のカスタム型で遅延初期化を有効にできます。  
   
  次の表は、遅延初期化型の一覧です。  
@@ -64,6 +67,7 @@ ms.locfileid: "94829532"
  詳細については、「[限定的な初期化](../../framework/performance/lazy-initialization.md)」を参照してください。  
   
 ## <a name="aggregate-exceptions"></a>例外集約  
+
  <xref:System.AggregateException?displayProperty=nameWithType> 型を使うと、別のスレッドで同時にスローされた複数の例外をキャプチャし、1 つの例外として結合スレッドに戻すことができます。 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 型、<xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 型、PLINQ は、この目的に <xref:System.AggregateException> を広範に使います。 詳細については、「[例外処理](exception-handling-task-parallel-library.md)」および「[方法: PLINQ クエリの例外を処理する](how-to-handle-exceptions-in-a-plinq-query.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目

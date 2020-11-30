@@ -11,12 +11,12 @@ helpviewer_keywords:
 - delegates [.NET], asynchronous
 - synchronous calling in asynchronous manner
 ms.assetid: 38a345ca-6963-4436-9608-5c9defef9c64
-ms.openlocfilehash: da468d3b16ee504317c7de2e216a9be2073d1cf3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 01cdf5acf8f64472c218f35a0b8095aebf8f4571
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830507"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716266"
 ---
 # <a name="asynchronous-programming-using-delegates"></a>デリゲートを使用した非同期プログラミング
 
@@ -26,10 +26,12 @@ ms.locfileid: "94830507"
 > コンパイラは、ユーザーが指定したデリゲート シグネチャを使用して、`Invoke`、`BeginInvoke`、`EndInvoke` の各メソッドを持つデリゲート クラスを出力します。 `BeginInvoke` メソッドと `EndInvoke` メソッドは、ネイティブとして修飾されます。 これら 2 つのメソッドはネイティブとしてマークされるため、クラスの読み込み時には、CLR によって自動的にメソッドが実装されます。 ローダーは、これらのメソッドがオーバーライドされないことを保証します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [同期メソッドの非同期呼び出し](calling-synchronous-methods-asynchronously.md)  
  デリゲートを使用した通常のメソッドの非同期呼び出しについて説明すると共に、簡単なコード例を示して、非同期呼び出しが戻るのを待機する 4 つの方法を紹介します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [イベント ベースの非同期パターン (EAP)](event-based-asynchronous-pattern-eap.md)  
  .NET での非同期プログラミングについて説明しています。  
   

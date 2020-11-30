@@ -6,17 +6,19 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-ms.openlocfilehash: f382165ca8e2b972c47a080244a3d0054b5eb604
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b2feb14e304c8ba7ecc19b2e79b943204044da05
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822738"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722675"
 ---
 # <a name="including-or-importing-xml-schemas"></a>XML スキーマのインクルードまたはインポート
+
 XML スキーマには、`<xs:import />` 要素、`<xs:include />` 要素、および `<xs:redefine />` 要素を含めることができます。 これらのスキーマ要素は、インクルードまたはインポートするスキーマの構造を補足するために使用できる他の XML スキーマを参照します。 <xref:System.Xml.Schema.XmlSchemaImport> クラス、<xref:System.Xml.Schema.XmlSchemaInclude> クラス、および <xref:System.Xml.Schema.XmlSchemaRedefine> クラスは、スキーマ オブジェクト モデル (SOM) API でこれらの要素にマップされます。  
   
 ## <a name="including-or-importing-an-xml-schema"></a>XML スキーマのインクルードまたはインポート  
+
  次のコード サンプルは、アドレス スキーマを使用して「[XML スキーマの作成](building-xml-schemas.md)」で作成したカスタム スキーマを補足します。 アドレス スキーマを使用してカスタム スキーマを補足すると、カスタム スキーマでアドレス型が使用できるようになります。  
   
  アドレス スキーマを統合するには、`<xs:include />` 要素または `<xs:import />` 要素を使用して、アドレス スキーマのコンポーネントをそのまま使用するか、または `<xs:redefine />` 要素を使用して、カスタム スキーマのニーズに合わせてコンポーネントを変更します。 アドレス スキーマの `targetNamespace` はカスタム スキーマのものとは異なっているため、`<xs:import />` 要素 (インポートのセマンティクス) が使用されます。  

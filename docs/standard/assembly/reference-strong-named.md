@@ -12,14 +12,15 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 478f786995cfc4b57f0b18b2159775db104e9cfb
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 919e4f4cf467e8fc28c3d007963393dad134ab57
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687690"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724053"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>方法: 厳密な名前のアセンブリを参照する
+
 通常、厳密な名前付きアセンブリ内にある型またはリソースを参照するプロセスは透過的です。 コンパイル時 (事前バインディング) または実行時に参照を作成できます。  
   
 コンパイル時の参照は、コンパイルするアセンブリが明示的に別のアセンブリを参照していることをコンパイラに対して指定するときに発生します。 コンパイル時参照を使用する場合、コンパイラは対象の厳密な名前付きアセンブリの公開キーを自動的に取得し、その公開キーをコンパイルされるアセンブリのアセンブリ参照内に自動的に配置します。
@@ -33,7 +34,7 @@ ms.locfileid: "92687690"
 
 \<*compiler command*> **/reference:** \<*assembly name*>  
 
-このコマンドで、 *compiler command* は、使用している言語のコンパイラ コマンドです。 *assembly name* は、参照される厳密な名前付きアセンブリの名前です。 ライブラリ アセンブリを作成するための **/t:library** オプションなどの他のコンパイラ オプションも使用できます。  
+このコマンドで、*compiler command* は、使用している言語のコンパイラ コマンドです。*assembly name* は、参照される厳密な名前付きアセンブリの名前です。 ライブラリ アセンブリを作成するための **/t:library** オプションなどの他のコンパイラ オプションも使用できます。  
 
 *myAssembly.cs* というコード モジュールから厳密な名前付きアセンブリ *myLibAssembly.dll* を参照する *myAssembly.dll* というアセンブリを作成する例を次に示します。  
 

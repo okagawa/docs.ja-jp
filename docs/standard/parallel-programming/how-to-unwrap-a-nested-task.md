@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to unwrap nested tasks
 ms.assetid: a0769dd2-0f6d-48ca-8418-a9d39de7f450
-ms.openlocfilehash: cda42dbc88d73eadf04720c0faaf98151d371127
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 3eec3b7e8cc76ee171d88a7886b4983000848084
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825560"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722623"
 ---
 # <a name="how-to-unwrap-a-nested-task"></a>方法: 入れ子のタスクのラップを解除する
+
 以下の例に示すように、メソッドからタスクを返して、そのタスクで待機またはそのタスクから続行することができます。  
   
  [!code-csharp[TPL_Unwrap#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#01)]
@@ -35,6 +36,7 @@ ms.locfileid: "94825560"
  <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> メソッドを使用して、`Task<Task>` または `Task<Task<TResult>>` (Visual Basic では `Task(Of Task)` または `Task(Of Task(Of TResult))`) を `Task` または `Task<TResult>` (Visual Basic では `Task(Of TResult)`) に変換することができます。 新しいタスクは完全に内側の入れ子のタスクを表し、キャンセル状態とすべての例外を含みます。  
   
 ## <a name="example"></a>例  
+
  <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 拡張メソッドの使用方法を次の例に示します。  
   
  [!code-csharp[TPL_UnWrap#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#04)]

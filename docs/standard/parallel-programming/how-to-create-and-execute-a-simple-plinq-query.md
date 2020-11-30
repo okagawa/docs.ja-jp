@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to create
 ms.assetid: 983b4213-bddd-4a44-9262-cbe59186df4c
-ms.openlocfilehash: 67863346046b0c400529b87355c11f97d0c3f01f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 228a94323c42d7c7a5ecbd295a0db5d73f4f1f49
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827088"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703695"
 ---
 # <a name="how-to-create-and-execute-a-simple-plinq-query"></a>方法: 単純な PLINQ クエリを作成して実行する
 
@@ -22,6 +22,7 @@ ms.locfileid: "94827088"
 > ここでは、ラムダ式を使用して PLINQ でデリゲートを定義します。 C# または Visual Basic のラムダ式についての情報が必要な場合は、「[Lambda Expressions in PLINQ and TPL (PLINQ および TPL のラムダ式)](lambda-expressions-in-plinq-and-tpl.md)」を参照してください。  
   
 ## <a name="example"></a>例  
+
  [!code-csharp[PLINQ#11](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/create1.cs#11)]
  [!code-vb[PLINQ#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/create1.vb#11)]  
   

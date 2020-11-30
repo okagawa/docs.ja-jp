@@ -4,19 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - garbage collection, forced
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
-ms.openlocfilehash: 637ba9b3b73d685ee2263315a08f982d862efb35
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 25e94221355569931a31b566a53434cbed9ea93f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827725"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714238"
 ---
 # <a name="induced-collections"></a>発生したコレクション
+
 ほとんどの場合、コレクションの実行に最適なタイミングはガベージ コレクターが判断できるので、ガベージ コレクターに任せるのが良い方法です。 ただし、ごくまれに、強制的にコレクションを実行するとアプリケーションのパフォーマンスが向上する場合があります。 このような場合は、<xref:System.GC.Collect%2A?displayProperty=nameWithType> メソッドを使用してガベージ コレクションを強制的に実行できます。  
   
  アプリケーションのコードの特定の位置で、使用しているメモリ量が大きく減少する場合は、<xref:System.GC.Collect%2A?displayProperty=nameWithType> メソッドを使用します。 たとえば、複数のコントロールのある複雑なダイアログ ボックスを使用するアプリケーションでは、ダイアログ ボックスを閉じるときに <xref:System.GC.Collect%2A> を呼び出すと、ダイアログ ボックスの使用メモリが直ちに再利用されてパフォーマンスが向上する可能性があります。 適切でない回数でガベージ コレクターがオブジェクトの再利用を試みるとパフォーマンスが低下する場合があるので、アプリケーションではあまり頻繁にガベージ コレクションを強制しないでください。 次のセクションで説明するように、コレクションの効果がある場合にのみ、<xref:System.GCCollectionMode.Optimized?displayProperty=nameWithType> のメソッドに対して収集する <xref:System.GC.Collect%2A> の列挙値を指定できます。  
   
 ## <a name="gc-collection-mode"></a>GC コレクション モード  
+
  <xref:System.GC.Collect%2A?displayProperty=nameWithType> 値を含む <xref:System.GCCollectionMode> メソッド オーバーロードの 1 つを使用して、強制的コレクションの動作を次のように指定できます。  
   
 |`GCCollectionMode` の値|[説明]|  
@@ -26,6 +28,7 @@ ms.locfileid: "94827725"
 |<xref:System.GCCollectionMode.Optimized>|オブジェクトを再利用するのに現在が最適なときかどうかをガベージ コレクターが判断できるようにします。<br /><br /> ガベージ コレクターは、コレクションの実行を正当化できるほど効果がないと判断して、オブジェクトを再利用せずに戻る場合があります。|  
   
 ## <a name="background-or-blocking-collections"></a>バックグラウンドまたはブロッキング コレクション  
+
  <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29?displayProperty=nameWithType> メソッド オーバーロードを呼び出して、発生するコレクションがブロッキング コレクションであるかどうかを指定できます。 実行されるコレクションの型は、メソッドの `mode` と `blocking` のパラメーターの組み合わせによって異なります。 `mode` は <xref:System.GCCollectionMode> 列挙体のメンバーです。`blocking` は <xref:System.Boolean> 値です。 `mode` と `blocking` 引数の相互作用を次の表にまとめます。  
   
 |`mode`|`blocking` = `true`|`blocking` = `false`|  

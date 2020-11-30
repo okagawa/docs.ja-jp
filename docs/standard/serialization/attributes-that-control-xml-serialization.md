@@ -10,14 +10,15 @@ helpviewer_keywords:
 - serialization, attributes
 - XML Schema, serializing
 ms.assetid: 414b820f-a696-4206-b576-2711d85490c7
-ms.openlocfilehash: 032843728c74799d7ee78257b21243b31cb4f99c
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 55c36ea6313bfd3000b1d8502d4eda7c552e08cf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281991"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717930"
 ---
 # <a name="attributes-that-control-xml-serialization"></a>XML シリアル化を制御する属性
+
 次の表に示す属性をクラスおよびクラス メンバーに適用すると、<xref:System.Xml.Serialization.XmlSerializer> がそのクラスのインスタンスをシリアル化または逆シリアル化する方法を制御できます。 これらの属性で XML シリアル化を制御する方法については、「[属性を使用した XML シリアル化の制御](controlling-xml-serialization-using-attributes.md)」を参照してください。  
   
  また、これらの属性を使用して、XML Web サービスによって生成されるリテラル スタイルの SOAP メッセージを制御することもできます。 これらの属性を XML Web サービス メソッドに適用する方法の詳細については、「[XML Web サービスを使用した XML シリアル化](xml-serialization-with-xml-web-services.md)」を参照してください。  

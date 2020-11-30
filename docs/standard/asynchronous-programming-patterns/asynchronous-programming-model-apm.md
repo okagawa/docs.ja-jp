@@ -11,14 +11,15 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - asynchronous programming, beginning operations
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
-ms.openlocfilehash: 7b976cf48214fb623563b09aab8a991a5a05d3ca
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a6e2ed06e92adffa6c8a61b27bbff994370e8b34
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824442"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722740"
 ---
 # <a name="asynchronous-programming-model-apm"></a>非同期プログラミング モデル (APM)
+
 <xref:System.IAsyncResult> デザイン パターンを使用する非同期操作は `BeginOperationName` と `EndOperationName` という名前の、各 *OperationName* 非同期操作を開始および終了する 2 種類のメソッドとして実装されます。 たとえば、 <xref:System.IO.FileStream> クラスは、 <xref:System.IO.FileStream.BeginRead%2A> および <xref:System.IO.FileStream.EndRead%2A> メソッドを提供して、非同期的にファイルからバイトを読み取ります。 これらのメソッドは非同期バージョンの <xref:System.IO.FileStream.Read%2A> メソッドを実装します。  
   
 > [!NOTE]
@@ -27,6 +28,7 @@ ms.locfileid: "94824442"
  `BeginOperationName` を呼び出した後、アプリケーションは別のスレッドで非同期操作が行われている間も、スレッドの呼び出しに関する命令の実行を続行できます。 `BeginOperationName` の呼び出しごとに、アプリケーションでは `EndOperationName` も呼び出して、操作の結果を取得する必要があります。  
   
 ## <a name="beginning-an-asynchronous-operation"></a>非同期操作の開始  
+
  `BeginOperationName` メソッドは非同期操作 *OperationName* を開始し、<xref:System.IAsyncResult> インターフェイスを実装するオブジェクトを返します。 <xref:System.IAsyncResult> オブジェクトは非同期操作に関する情報を格納します。 非同期操作に関する情報を次の表に示します。  
   
 |メンバー|説明|  
@@ -41,6 +43,7 @@ ms.locfileid: "94824442"
  `BeginOperationName` は、瞬時にコントロールを呼び出し元スレッドに返します。 `BeginOperationName` メソッドが例外をスローする場合は、非同期操作が開始される前に例外がスローされます。 `BeginOperationName` メソッドが例外をスローする場合、コールバック メソッドは呼び出されません。  
   
 ## <a name="ending-an-asynchronous-operation"></a>非同期操作の終了  
+
  `EndOperationName` メソッドは非同期操作の *OperationName* を終了します。 `EndOperationName` メソッドの戻り値は、このメソッドの対応する同期操作によって返される型と同じ型であり、非同期操作に固有です。 たとえば、 <xref:System.IO.FileStream.EndRead%2A> メソッドは <xref:System.IO.FileStream> から読み取ったバイト数を返し、 <xref:System.Net.Dns.EndGetHostByName%2A> メソッドはホスト コンピューターに関する情報を含む <xref:System.Net.IPHostEntry> オブジェクトを返します。 `EndOperationName` メソッドは、メソッドの同期バージョンのシグネチャで宣言された out パラメーターや ref パラメーターをすべて受け取ります。 `EndOperationName` メソッドには、同期メソッドからのパラメーターに加えて <xref:System.IAsyncResult> パラメーターが含まれています。 呼び出し元は、対応する呼び出しから返されたインスタンスを `BeginOperationName` に渡す必要があります。  
   
  `EndOperationName` が呼び出されるときに <xref:System.IAsyncResult> オブジェクトによって表される非同期操作が完了していない場合、`EndOperationName` は非同期操作が完了するまで、呼び出し元スレッドをブロックします。 非同期操作によってスローされた例外は、`EndOperationName` メソッドからスローされます。 同じ <xref:System.IAsyncResult> を使用して `EndOperationName` メソッドを複数回呼び出す場合の効果は定義されません。 同様に、関連する Begin メソッドによって返されたのではない <xref:System.IAsyncResult> を使用した `EndOperationName` メソッドの呼び出しも定義されません。  

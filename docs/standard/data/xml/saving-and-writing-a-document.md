@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-ms.openlocfilehash: 0cb83935b4175060a04f4be48e6b4eee2f44ed7d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 14497bb5b027209c4707eab9bcf1b60f85740dfd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823499"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697559"
 ---
 # <a name="saving-and-writing-a-document"></a>ドキュメントの保存と書き込み
+
 <xref:System.Xml.XmlDocument> を読み込んで保存した場合、保存されたドキュメントは、元のドキュメントとは次のように異なる可能性があります。  
   
 - <xref:System.Xml.XmlDocument.PreserveWhitespace%2A> メソッドを呼び出す前に `true` プロパティが <xref:System.Xml.XmlDocument.Save%2A> に設定されている場合は、ドキュメント内の空白が出力でも保持されますが、`false` に設定されている場合は、<xref:System.Xml.XmlDocument> が出力を自動的にインデントします。  
@@ -30,6 +31,7 @@ ms.locfileid: "94823499"
 - <xref:System.Xml.XmlDocument> をファイルまたはストリームに書き出す場合、書き出される出力はドキュメントのコンテンツと同じになります。 つまり、<xref:System.Xml.XmlDeclaration> が書き出されるのは、ドキュメントに  が 1 つ含まれていて、ドキュメントの出力時に使われるエンコーディングが宣言ノードで指定されたエンコーディングと同じ場合だけです。  
   
 ## <a name="writing-an-xmldeclaration"></a>XmlDeclaration の書き込み  
+
  <xref:System.Xml.XmlDocument> および <xref:System.Xml.XmlDeclaration> の <xref:System.Xml.XmlNode.OuterXml%2A> メソッドに加えて、<xref:System.Xml.XmlNode.InnerXml%2A>、<xref:System.Xml.XmlNode.WriteTo%2A>、および <xref:System.Xml.XmlDocument> の <xref:System.Xml.XmlDocument.Save%2A> および <xref:System.Xml.XmlDocument.WriteContentTo%2A> メンバーは XML 宣言を作成します。  
   
  <xref:System.Xml.XmlDocument>、<xref:System.Xml.XmlNode.OuterXml%2A> の <xref:System.Xml.XmlDocument.InnerXml%2A> プロパティ、<xref:System.Xml.XmlDocument.Save%2A>、<xref:System.Xml.XmlDocument.WriteTo%2A> メソッド、および <xref:System.Xml.XmlDocument.WriteContentTo%2A> メソッドについて、XML 宣言に書き出されるエンコーディングは <xref:System.Xml.XmlDeclaration> ノードから取り出されます。 <xref:System.Xml.XmlDeclaration> ノードが存在しない場合、<xref:System.Xml.XmlDeclaration> は書き出されません。<xref:System.Xml.XmlDeclaration> ノードにエンコーディングが含まれていない場合、エンコーディングは XML 宣言に書き出されません。  
@@ -55,6 +57,7 @@ doc.Save(tw);
  <xref:System.Xml.XmlDeclaration>、<xref:System.Xml.XmlNode.OuterXml%2A>、および <xref:System.Xml.XmlDeclaration.WriteTo%2A> の <xref:System.Xml.XmlNode.InnerXml%2A> メンバーについて、<xref:System.Xml.XmlDeclaration.Encoding%2A> プロパティが設定されていないと、エンコーディングは書き出されません。それ以外の場合は、<xref:System.Xml.XmlDeclaration.Encoding%2A> プロパティ内に見られるエンコーディングと同じエンコーディングが XML 宣言に書き出されます。  
   
 ## <a name="writing-document-content-using-the-outerxml-property"></a>OuterXml プロパティを使用したドキュメント内容の書き込み  
+
  <xref:System.Xml.XmlNode.OuterXml%2A> プロパティは、W3C XML ドキュメント オブジェクト モデル (DOM) 標準に対するマイクロソフトの拡張機能です。 <xref:System.Xml.XmlNode.OuterXml%2A> プロパティは、XML ドキュメント全体のマークアップ、または 1 つのノードとその子ノードのマークアップだけを取得するために使用されます。 <xref:System.Xml.XmlNode.OuterXml%2A> は、指定されたノードとそのすべての子ノードを表すマークアップを返します。  
   
  ドキュメント全体を文字列として保存するコード サンプルを次に示します。  

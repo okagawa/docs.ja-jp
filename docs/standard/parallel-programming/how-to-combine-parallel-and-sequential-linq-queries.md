@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel queries, combine parallel and sequential
 ms.assetid: 1167cfe6-c8aa-4096-94ba-c66c3a4edf4c
-ms.openlocfilehash: e851c6d72a5fd932c065368b893b907d7820c918
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: dc7536aad46e2edcc5c20400ed872ee4e0ad836d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827101"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713158"
 ---
 # <a name="how-to-combine-parallel-and-sequential-linq-queries"></a>方法: 並列および順次の LINQ クエリを連結する
 
@@ -22,12 +22,14 @@ ms.locfileid: "94827101"
 > この例は、使用方法を示すことを意図したものであるため、同等の順次的な LINQ to Objects クエリほど高速ではない可能性があります。 高速化の詳細については、「[PLINQ での高速化について](understanding-speedup-in-plinq.md)」を参照してください。  
   
 ## <a name="example"></a>例  
+
  次の例は、クエリの前の句で確立された順序を保持する <xref:System.Linq.ParallelEnumerable.AsSequential%2A> が必要な 1 つのシナリオを示します。  
   
  [!code-csharp[PLINQ#24](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#24)]
  [!code-vb[PLINQ#24](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#24)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
+
  このコードをコンパイルして実行するには、これを [PLINQ データのサンプル](plinq-data-sample.md) プロジェクトに貼り付けて、`Main` からメソッドを呼び出す行を追加し、**F5** キーを押します。  
   
 ## <a name="see-also"></a>関連項目

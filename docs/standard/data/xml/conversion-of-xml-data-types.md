@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
-ms.openlocfilehash: d7ee7447ab7a8be1bad0d087dba5fc2afaa878e8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 108cfbf1ee8ff3d6fbe088d6dd14d0354750cb0c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830975"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701498"
 ---
 # <a name="conversion-of-xml-data-types"></a>XML データ型の変換
+
 **XmlConvert** クラスのメソッドのほとんどは、文字列と厳密に型指定された形式との間のデータ変換に使われます。 これらのメソッドはロケールに依存しません。 つまり、変換の実行時にはロケールの設定は考慮されません。  
   
 ## <a name="reading-string-as-types"></a>文字列を型として読み込む  
+
  文字列を読み込んで **DateTime** 型に変換するサンプルを次に示します。  
   
  入力として次の XML を使用します。  
@@ -41,6 +43,7 @@ Console.WriteLine(vDateTime);
 ```  
   
 ## <a name="writing-strings-as-types"></a>文字列を型として書き込む  
+
  **Int32** を読み込んで文字列に変換するサンプルを次に示します。  
   
  入力として次の XML を使用します。  
