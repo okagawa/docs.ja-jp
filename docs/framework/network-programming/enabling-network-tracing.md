@@ -12,14 +12,15 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: 4ad0b23fc93ddcdc11cebcc556d12148df5e8ae2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 246a975ead3cb9c1acb4fe0512dfa91d1b8a00c0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502601"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287424"
 ---
 # <a name="enabling-network-tracing"></a>ネットワークのトレースの有効化
+
 ネットワークのトレースでは、メソッド呼び出しについての情報、およびマネージド アプリケーションによって生成されるネットワーク トラフィックについての情報にアクセスできます。 アプリケーションでネットワーク トレースを有効にするには、次のタスクを実行する必要があります。  
   
 - トレースを有効にしてコードをコンパイルします。 「[方法:トレースとデバッグを指定して条件付きコンパイルを実行する](../debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)」で、トレースを有効にするために必要なコンパイラ スイッチの詳細を参照してください。  
