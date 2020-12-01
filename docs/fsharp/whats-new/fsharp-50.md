@@ -2,12 +2,12 @@
 title: 'F # 5.0 の新機能-F # ガイド'
 description: 'F # 5.0 で利用可能な新機能の概要を説明します。'
 ms.date: 11/06/2020
-ms.openlocfilehash: 29b5b110379dec476d7c0aa51540984acb25f26e
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: dd954fac31b008beab37cd6c1f06b1d41c5d5004
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098698"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438001"
 ---
 # <a name="whats-new-in-f-50"></a>F# 5.0 の新機能
 
@@ -15,7 +15,7 @@ F # 5.0 では、F # 言語と F# インタラクティブにいくつかの機�
 
 最新の .NET SDK は [.NET のダウンロード ページ](https://dotnet.microsoft.com/download)でダウンロードできます。
 
-## <a name="get-started"></a>はじめに
+## <a name="get-started"></a>作業開始
 
 F # 5.0 は、すべての .NET Core ディストリビューションと Visual Studio ツールで使用できます。 詳細については、「 [F # の使用を開始](../get-started/index.md) する」を参照してください。
 
@@ -56,7 +56,7 @@ let test p str =
 test pfloat "1.234"
 ```
 
-この機能は [、F # ツーリング RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md)を実装します。 パッケージ参照の詳細については、 [F# インタラクティブ](../tutorials/fsharp-interactive/index.md) チュートリアルを参照してください。
+この機能は [、F # ツーリング RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md)を実装します。 パッケージ参照の詳細については、 [F# インタラクティブ](../tools/fsharp-interactive/index.md) チュートリアルを参照してください。
 
 ## <a name="string-interpolation"></a>文字列補間
 
@@ -427,7 +427,7 @@ dateTimes.Append(Nullable<DateTime>(DateTime.Parse("2019/01/01")))
 
 ## <a name="preview-reverse-indexes"></a>プレビュー: インデックスの反転
 
-F # 5 では、逆引きインデックスを許可するためのプレビューも導入されています。 構文は `^idx` です。 リストの末尾から要素1の値を指定する方法を次に示します。
+F # 5 では、逆引きインデックスを許可するためのプレビューも導入されています。 構文は `^idx`です。 リストの末尾から要素1の値を指定する方法を次に示します。
 
 ```fsharp
 let xs = [1..10]

@@ -4,12 +4,12 @@ description: 'F # 言語のプリプロセッサディレクティブ、条件�
 ms.date: 12/10/2018
 f1_keywords:
 - '#endif_FS'
-ms.openlocfilehash: c3e1a07e0e09b5ae090c550368f8a9f8ee575bfb
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ff106339478c3413dc6458b12f12e1d3f9cd1fe5
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557321"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438176"
 ---
 # <a name="compiler-directives"></a>コンパイラ ディレクティブ
 
@@ -78,7 +78,7 @@ let str = "Debugging!"
 |---------|-----------|
 |`#light` ["on" &#124; "off"]|他のバージョンの ML との互換性を保つために、軽量構文を有効または無効にします。 既定では、軽量構文は有効です。 冗語構文は常に有効です。 したがって、軽量構文と冗語構文の両方を使用できます。 ディレクティブ `#light` は `#light "on"` と同等です。 `#light "off"` を指定した場合は、すべての言語構成要素に冗語構文を使用する必要があります。 F# のドキュメント内の構文は、軽量構文の使用を前提として記述されています。 詳細については、「 [Verbose 構文](verbose-syntax.md)」を参照してください。|
 
-インタープリター (fsi.exe) のディレクティブについては、「 [F # を使用した対話型プログラミング](../tutorials/fsharp-interactive/index.md)」を参照してください。
+インタープリター (fsi.exe) のディレクティブについては、「 [F # を使用した対話型プログラミング](../tools/fsharp-interactive/index.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
