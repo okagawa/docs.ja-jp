@@ -4,11 +4,11 @@ description: Visual Studio 2017 バージョン 15.7 以降で使用できる Do
 ms.date: 08/06/2020
 ms.custom: vs-dotnet
 ms.openlocfilehash: ae20ebf7c3c27d7f2ebe51c33719b82048f86241
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90678928"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032191"
 ---
 # <a name="use-docker-tools-in-visual-studio-on-windows"></a>Windows 上の Visual Studio で Docker ツールを使用する
 
@@ -25,7 +25,7 @@ Docker for Windows の最新バージョンでは、次の参考ドキュメン�
 
 プロジェクトに追加できる Docker サポートには 2 つのレベルがあります。 ASP.NET Core プロジェクトでは、Docker サポートを有効にしてプロジェクトに `Dockerfile` ファイルを追加するだけです。 次のレベルはコンテナー オーケストレーションのサポートです。(まだ存在しない場合は) `Dockerfile` をプロジェクトに追加し、ソリューション レベルで `docker-compose.yml` ファイルを追加します。 Docker Compose によるコンテナー オーケストレーションのサポートは、Visual Studio 2017 バージョン 15.0 から 15.7 で既定で追加されています。 コンテナー オーケストレーションのサポートは、Visual Studio 2017 バージョン 15.8 以降のオプトイン機能です。 Visual Studio 2019 以降では、**Kubernetes/Helm** デプロイもサポートされています。
 
-**[追加] > [Docker のサポート]** と **[追加] > [コンテナー オーケストレーター サポート]** コマンドは、**ソリューション エクスプローラー**の ASP.NET Core プロジェクトのプロジェクト ノードの右クリック メニュー (またはコンテキスト メニュー) にあります。図 4-31 を参照してください。
+**[追加] > [Docker のサポート]** と **[追加] > [コンテナー オーケストレーター サポート]** コマンドは、**ソリューション エクスプローラー** の ASP.NET Core プロジェクトのプロジェクト ノードの右クリック メニュー (またはコンテキスト メニュー) にあります。図 4-31 を参照してください。
 
 ![Visual Studio の Docker サポートの追加メニュー オプション](media/add-docker-support-menu.png)
 
@@ -45,9 +45,9 @@ Docker サポートを追加または有効にすると、Visual Studio によ�
 
 複数コンテナーのソリューションを構成する場合は、コンテナー オーケストレーションのサポートをプロジェクトに追加します。 これにより、コンテナーのグループ (ソリューション全体) が同じ _docker-compose.yml_ ファイル内で定義されている場合、それらを同時に実行およびデバッグすることができます。
 
-コンテナー オーケストレーションのサポートを追加するには、**ソリューション エクスプローラー**でソリューションまたはプロジェクトのノードを右クリックし、**[追加] > [Container Orchestration Support]\(コンテナー オーケストレーション サポート\)** の順に選択します。 次に、 **[Kubernetes/Helm]** または **[Docker Compose]** を選択して、コンテナーを管理します。
+コンテナー オーケストレーションのサポートを追加するには、**ソリューション エクスプローラー** でソリューションまたはプロジェクトのノードを右クリックし、**[追加] > [Container Orchestration Support]\(コンテナー オーケストレーション サポート\)** の順に選択します。 次に、 **[Kubernetes/Helm]** または **[Docker Compose]** を選択して、コンテナーを管理します。
 
-プロジェクトにコンテナー オーケストレーションのサポートを追加すると、図 4-33 に示すように、プロジェクトに Dockerfile が追加され、**ソリューション エクスプローラー**内のソリューションに **docker-compose** フォルダーが追加されるのを確認できます。
+プロジェクトにコンテナー オーケストレーションのサポートを追加すると、図 4-33 に示すように、プロジェクトに Dockerfile が追加され、**ソリューション エクスプローラー** 内のソリューションに **docker-compose** フォルダーが追加されるのを確認できます。
 
 ![Visual Studio のソリューション エクスプローラーの Docker ファイル](media/docker-support-solution-explorer.png)
 

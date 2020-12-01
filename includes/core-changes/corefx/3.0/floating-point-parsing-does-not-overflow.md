@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 935d9b2368ea4a0eeca7943dcbd584d24d2a6633
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721167"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032100"
 ---
 ### <a name="floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception"></a>浮動小数点の解析操作が失敗したり OverflowException がスローされたりすることがなくなった
 

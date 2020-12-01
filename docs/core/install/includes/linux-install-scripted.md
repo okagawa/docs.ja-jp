@@ -1,15 +1,15 @@
 ---
-ms.openlocfilehash: 07dd58c314c826c426193b829ea1f64669fb888b
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: 540eebd957ce8ce0928db2bd8317cb220cba30bb
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594573"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031770"
 ---
 
 [dotnet-install スクリプト](../../tools/dotnet-install-script.md)は、**SDK** および **ランタイム** のインストールの自動化および管理者以外によるインストールのために使用されます。 このスクリプトは <https://dot.net/v1/dotnet-install.sh> からダウンロードできます。
 
-このスクリプトでは、最新の SDK の[長期サポート (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) バージョン (.NET 3.1) が既定でインストールされます。 (LTS) バージョンではない場合がある現在のリリースをインストールするには、`-c Current` パラメーターを使用します。
+スクリプトでは、最新の SDK の[長期サポート (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) バージョン (.NET Core 3.1) が既定でインストールされます。 (LTS) バージョンではない場合がある現在のリリースをインストールするには、`-c Current` パラメーターを使用します。
 
 ```bash
 ./dotnet-install.sh -c Current

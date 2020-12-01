@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: ae5a5fbf97ed4a03de7d35b9d5d5ca8de3aebc39
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72394060"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032461"
 ---
 ### <a name="caching-responsecaching-pubternal-types-changed-to-internal"></a>キャッシュ:ResponseCaching の "pubternal" 型を internal に変更
 

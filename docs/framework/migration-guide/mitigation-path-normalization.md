@@ -3,17 +3,19 @@ title: '軽減策: パスの正規化'
 description: .NET Framework 4.6.2 を対象とするアプリ以降、.NET Framework のパス正規化がどのように変更されたかについて説明します。
 ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
-ms.openlocfilehash: 89dcc46d9f266ffd3635dc0cc02b634720356eda
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 6f7e07690ab06fc7ef03344556c045405a63c374
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475217"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253597"
 ---
 # <a name="mitigation-path-normalization"></a>軽減策:パスの正規化
+
 .NET Framework 4.6.2 以降を対象とするアプリから、.NET Framework のパスの正規化が変更されています。  
   
 ## <a name="what-is-path-normalization"></a>パスの正規化とは  
+
  パスの正規化では、パスまたはファイルを識別する文字列を変更し、対象のオペレーティング システムの有効なパスに準拠するようにします。 通常、正規化では次のことを行います。  
   
 - コンポーネントとディレクトリの区切り記号を正規化する。  
@@ -25,6 +27,7 @@ ms.locfileid: "86475217"
 - 指定した文字をトリミングする。  
   
 ## <a name="the-changes"></a>変更点  
+
  .NET Framework 4.6.2 以降を対象とするアプリから、次のようにパスの正規化が変更されています。  
   
 - ランタイムはオペレーティング システムの [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) 関数に従って、パスを正規化します。  
@@ -44,6 +47,7 @@ ms.locfileid: "86475217"
 .NET Framework 4.6.1 以前のバージョンを対象とするアプリが .NET Framework 4.6.2 以降で実行される場合、この変更の影響は受けません。  
   
 ## <a name="mitigation"></a>軽減策  
+
  .NET Framework 4.6.2 以降を対象とするアプリの場合、アプリケーション構成ファイルの [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) セクションに次の行を追加することでこの変更を無効にし、従来の正規化を使用できます。  
   
 ```xml  

@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-ms.openlocfilehash: c91712b9d25221f1ffd9e9e980c420be32e2379a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 70343851ba73af9041014e8654f5df82d8389c39
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831183"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734778"
 ---
 # <a name="garbage-collection-notifications"></a>ガベージ コレクションの通知
+
 共通言語ランタイムによるフル ガベージ コレクション (つまり、ジェネレーション 2 のコレクション) がパフォーマンスに悪影響を及ぼす場合があります。 これは、特に要求を大量に処理するサーバーで問題となることがあります。この例では、長時間のガベージ コレクションによって、要求のタイムアウトが発生します。重要な期間にフル ガベージ コレクションが発生しないようにするには、フル ガベージ コレクションが近づいていることの通知を受けたら、ワークロードを別のサーバー インスタンスにリダイレクトするアクションを取ります。 現在のサーバー インスタンスで要求を処理する必要がない場合、自分でコレクションを強制実行することもできます。  
   
  ランタイムがフル ガーベッジ コレクションが近づいていることを検出すると、<xref:System.GC.RegisterForFullGCNotification%2A> メソッドによって通知の発生が登録されます。 この通知には、フル ガベージ コレクションが近づいている場合と、フル ガベージ コレクションが完了した場合の 2 つがあります。  
@@ -32,6 +33,7 @@ ms.locfileid: "94831183"
  <xref:System.GC.WaitForFullGCApproach%2A> と <xref:System.GC.WaitForFullGCComplete%2A> メソッドは、連携して動作するように設計されています。 片方のみを使用する場合、結果が不正確になる場合があります。  
   
 ## <a name="full-garbage-collection"></a>フル ガベージ コレクション  
+
  ランタイムでは、次のいずれかのシナリオに当てはまる場合にフル ガベージ コレクションを実行します。  
   
 - 十分なメモリがジェネレーション 2 に昇格し、次のジェネレーション 2 のガベージ コレクションが発生する場合。  
@@ -49,6 +51,7 @@ ms.locfileid: "94831183"
  3 番目のシナリオによっても、通知がいつあるかが不確実になります。 保証されるわけではないものの、この間要求をリダイレクトしたり、都合の良いときに自分でガベージ コレクションを強制的に実行したりして、タイミングの悪いフル ガベージ コレクションの影響を緩和することは有効な方法です。  
   
 ## <a name="notification-threshold-parameters"></a>通知しきい値パラメーター  
+
  <xref:System.GC.RegisterForFullGCNotification%2A> メソッドには、ジェネレーション 2 のオブジェクトと大きなオブジェクトのヒープのしきい値を指定するパラメーターが 2 つあります。 これらの値を超えると、ガベージ コレクションの通知が発行されます。 次の表で、これらのパラメーターについて説明します。  
   
 |パラメーター|説明|  
@@ -63,6 +66,7 @@ ms.locfileid: "94831183"
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
+
  次の例では、サーバーのグループが受信した Web 要求を処理します。 要求を処理するワークロードのシミュレートのため、バイト配列が <xref:System.Collections.Generic.List%601> コレクションに追加されています。 各サーバーはガベージ コレクションの通知を登録し、`WaitForFullGCProc`ユーザー メソッドでスレッドを開始して、<xref:System.GC.WaitForFullGCApproach%2A> メソッドと <xref:System.GC.WaitForFullGCComplete%2A> メソッドで返される <xref:System.GCNotificationStatus> 列挙型を継続的に監視します。  
   
  通知が発生すると、<xref:System.GC.WaitForFullGCApproach%2A> および <xref:System.GC.WaitForFullGCComplete%2A> メソッドによって、それぞれのイベント処理ユーザー メソッドが呼び出されます。  

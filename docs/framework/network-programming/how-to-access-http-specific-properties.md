@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
-ms.openlocfilehash: 68ad6b2c55cd5cc467e53441caa778ea10b994fb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea709bba17d4e2f00b760c8713f9e8100496f0bf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180852"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250516"
 ---
 # <a name="how-to-access-http-specific-properties"></a>方法: HTTP 固有のプロパティにアクセスする
+
 このサンプルでは、HTTP の **Keep-alive** 動作を無効にして、Web サーバーからプロトコル バージョン番号を取得する方法を示します。  
   
 ## <a name="example"></a>例  
@@ -45,6 +46,7 @@ HttpWResp.Close();
 ```  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
+
  この例で必要な要素は次のとおりです。  
   
 - **System.Net** 名前空間の参照。  

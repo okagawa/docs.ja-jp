@@ -9,14 +9,15 @@ helpviewer_keywords:
 - first-chance exception notifications
 - exceptions, first chance notifications
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
-ms.openlocfilehash: e8b5ae5fb69c7befd329316aee11523f79d73fcd
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 0b3150a52a68e078d1052a9894bb652ad35027d0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104737"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242566"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>方法: 初回例外通知を受け取る
+
 <xref:System.AppDomain> クラスの <xref:System.AppDomain.FirstChanceException>イベントを使用すると、共通言語ランタイムが例外ハンドラーの検索を開始する前に、例外がスローされたことを知らせる通知を受け取ることができます。
 
  このイベントは、アプリケーション ドメイン レベルで発生します。 実行スレッドは複数のアプリケーション ドメインを通過する可能性があるため、あるアプリケーション ドメインでハンドルされない例外が別のアプリケーション ドメインでハンドルされることもあります。 通知は、イベントのハンドラーを追加した各アプリケーション ドメインで発生し、いずれかのアプリケーション ドメインで例外がハンドルされるまで続行されます。
@@ -26,6 +27,7 @@ ms.locfileid: "85104737"
  複数のアプリケーション ドメインにわたる複雑な例については、<xref:System.AppDomain.FirstChanceException> イベントの例を参照してください。
 
 ## <a name="receiving-first-chance-exception-notifications-in-the-default-application-domain"></a>既定のアプリケーション ドメインで初回例外通知を受け取る
+
  次のプロシージャでは、アプリケーションのエントリ ポイントである `Main()`メソッドが既定のアプリケーション ドメインで実行されます。
 
 #### <a name="to-demonstrate-first-chance-exception-notifications-in-the-default-application-domain"></a>既定のアプリケーション ドメインで初回例外通知の動作を確認するには
@@ -51,6 +53,7 @@ ms.locfileid: "85104737"
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#5)]
 
 ## <a name="receiving-first-chance-exception-notifications-in-another-application-domain"></a>別のアプリケーション ドメインで初回例外通知を受け取る
+
  プログラムに複数のアプリケーション ドメインが含まれている場合は、通知を受け取るアプリケーション ドメインを選択できます。
 
 #### <a name="to-receive-first-chance-exception-notifications-in-an-application-domain-that-you-create"></a>作成したアプリケーション ドメインで初回例外通知を受け取るには
@@ -85,6 +88,7 @@ ms.locfileid: "85104737"
      [!code-vb[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#5)]
 
 ## <a name="example"></a>例
+
  次の例では、`AD1` という名前のアプリケーション ドメインを作成し、このアプリケーション ドメインの <xref:System.AppDomain.FirstChanceException> イベントにイベント ハンドラーを追加します。 この例では、アプリケーション ドメインに `Worker` クラスのインスタンスを作成し、`Thrower` という名前のメソッドを呼び出します。このメソッドにより、<xref:System.ArgumentException>がスローされます。 メソッドは、引数の値に応じて、例外をキャッチするか、例外のハンドルに失敗します。
 
  `Thrower` メソッドが `AD1` で例外をスローするたびに、`AD1` で <xref:System.AppDomain.FirstChanceException> イベントが発生し、イベント ハンドラーによりメッセージが表示されます。 次に、ランタイムによって例外ハンドラーが検索されます。 最初のケースでは、例外ハンドラーは `AD1` で見つかります。 2 番目のケースでは、例外は `AD1` でハンドルされず、代わりに既定のアプリケーション ドメインでキャッチされます。

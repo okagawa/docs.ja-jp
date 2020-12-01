@@ -11,14 +11,15 @@ helpviewer_keywords:
 - type libraries
 - converting type definitions
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
-ms.openlocfilehash: 4c2cddd78e14d1ae0b04bab07b57fe0ce0f627ca
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6810fc4fbe39fa82a02faa967b1afd8ad9c7a3cc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543369"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244887"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (タイプ ライブラリ インポーター)
+
 タイプ ライブラリ インポーターは、COM タイプ ライブラリにある型定義を共通言語ランタイム アセンブリで等価な定義に変換します。 Tlbimp.exe の出力は、元のタイプ ライブラリで定義された型のランタイム メタデータを格納するバイナリ ファイル (アセンブリ) です。 このファイルは [ildasm.exe](ildasm-exe-il-disassembler.md) などのツールでチェックできます。  
   
  このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。  
@@ -73,6 +74,7 @@ tlbimp tlbFile [options]
 > Tlbimp.exe のコマンド ライン オプションでは、大文字と小文字が区別されません。また、これらのオプションは任意の順序で指定できます。 オプションを一意に識別するために十分である場合は、オプションの一部を指定するだけでもかまいません。 したがって、 **/n** と指定した場合は **/nologo**、 **/ou:** *outfile.dll* と指定した場合は **/out:** *outfile.dll* であると見なされます。  
   
 ## <a name="remarks"></a>Remarks  
+
  Tlbimp.exe は、タイプ ライブラリ全体の変換を一括して実行します。 このツールを使用しても、単一のタイプ ライブラリで定義されている型のサブセットに関する型情報は生成できません。  
   
  アセンブリへの[厳密な名前](../../standard/assembly/strong-named.md)の割り当てを許可しておくと、さまざまな場合に役立ちます。この割り当てが必須であることもあります。 このため、Tlbimp.exe には、厳密な名前を持つアセンブリを生成するために必要な情報を提供するオプションが用意されています。 **/keyfile:** オプションと **/keycontainer:** オプションは、両方ともアセンブリに厳密な名前で署名します。 したがって、これらのオプションを両方同時に指定しないでください。  
@@ -84,6 +86,7 @@ tlbimp tlbFile [options]
  複数のタイプ ライブラリを格納するモジュールから 1 つのタイプ ライブラリをインポートするときに、タイプ ライブラリ ファイルにリソース ID を追加することもできます。 Tlbimp.exe は、このファイルが現在のディレクトリにあるか、ユーザーが完全パスを指定した場合にだけこのファイルを認識できます。 このトピックの下記の例を参照してください。  
   
 ## <a name="examples"></a>使用例  
+
  `myTest.tlb` 内で見つかったタイプ ライブラリと同じ名前で、.dll 拡張子を持つアセンブリを生成するコマンドを次に示します。  
   
 ```console  

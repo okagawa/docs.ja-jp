@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: b0e1d6d720a1c9b827fb4585606e64b545d395d7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72394374"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032591"
 ---
 ### <a name="kestrel-request-trailer-headers-moved-to-new-collection"></a>Kestrel: 要求トレーラー ヘッダーを新しいコレクションに移動
 
@@ -28,7 +28,7 @@ HTTP/2 トレーラーは、クライアントから受信すると利用可能�
 
 #### <a name="new-behavior"></a>新しい動作
 
-要求トレーラー ヘッダーは、`HttpRequest.Headers` コレクションには**存在しません**。 トレーラー ヘッダーにアクセスするには、`HttpRequest` で次の拡張メソッドを使用します。
+要求トレーラー ヘッダーは、`HttpRequest.Headers` コレクションには **存在しません**。 トレーラー ヘッダーにアクセスするには、`HttpRequest` で次の拡張メソッドを使用します。
 
 - `GetDeclaredTrailers()` - 本文の後に予想されるトレーラーを示す、要求の "Trailer" ヘッダーを取得します。
 - `SupportsTrailers()` - 要求でトレーラー ヘッダーの受信がサポートされているかどうかを示します。

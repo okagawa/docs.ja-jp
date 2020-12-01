@@ -3,14 +3,15 @@ title: '方法: アセンブリを他のアプリケーションと共有する'
 description: .NET でアセンブリを他のアプリケーションと共有する方法を参照します。 アセンブリはプライベート (既定) または共有にすることができます。 アセンブリを共有するには、アセンブリを GAC に配置します。
 ms.date: 08/19/2019
 ms.assetid: c30e972b-1693-4e05-b115-c31831fdf9f2
-ms.openlocfilehash: 9cef25059968875f17ce5dc77b04c44a2f3945f6
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 1056f8b555713d5d67488537e6c06cc457c4d312
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104649"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242540"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications"></a>方法: アセンブリを他のアプリケーションと共有する
+
 アセンブリはプライベートまたは共有にすることができます。既定では、ほとんどの単純なプログラムは、他のアプリケーションによって使われることを意図されていないので、プライベート アセンブリで構成されます。  
 
 他のアプリケーションとアセンブリを共有するには、[グローバル アセンブリ キャッシュ (GAC)](gac.md) にアセンブリを置く必要があります。  

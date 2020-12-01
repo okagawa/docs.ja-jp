@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 9544b65f31772d0f4cee918528a73171fec4de99
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021809"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032055"
 ---
 ### <a name="change-in-default-value-of-useshellexecute"></a>UseShellExecute の既定値の変更
 

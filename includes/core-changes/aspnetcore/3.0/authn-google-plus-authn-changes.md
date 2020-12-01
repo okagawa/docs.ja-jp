@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: c634c43e72d345721f2d8f2e9f45760e927a86ab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72394072"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032453"
 ---
 ### <a name="authentication-google-deprecated-and-replaced"></a>認証:Google+ が非推奨になり、置き換えられました
 

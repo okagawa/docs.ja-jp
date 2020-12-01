@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 15ba678431b97e7c961c119d83546569bdf9bad2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74282529"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032528"
 ---
 ### <a name="http-some-cookie-samesite-defaults-changed-to-none"></a>HTTP:SameSite の cookie オプションの既定値が一部、None に変更されました
 

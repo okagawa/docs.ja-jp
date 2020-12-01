@@ -10,14 +10,15 @@ helpviewer_keywords:
 - profile [.NET Framework Client Profile]
 - .NET Framework Client Profile
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
-ms.openlocfilehash: e199dccd30b8648177b3da5cc173ea3a7f9a60d8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 92ade654b20c5971482464ce1cb9619c434679b6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555290"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236391"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
+
 .NET Client Profile は、.NET Framework のサブセットで、.NET Framework 4 以前のバージョンに含まれ、クライアント アプリケーション用に最適化されていました。 .NET Framework は、Windows、Windows Phone、および Microsoft Azure 用の開発プラットフォームであり、マネージド アプリの実行環境と .NET Framework クラス ライブラリを提供します。 .NET Framework 4 以前のバージョンでは、2 種類の配置オプション (完全な .NET Framework と Client Profile) が用意されていました。 完全な .NET Framework に比べて、Client Profile では、配置の迅速化とアプリ インストール パッケージの小型化が実現されました。  
   
  .NET Framework 4.5 以降では、Client Profile が中止され、完全な再頒布可能パッケージのみが使用できます。 より小さいダウンロード サイズや高速化された配置などの .NET Framework 4.5 の最適化により、別の配置パッケージが不要になりました。 単一の再頒布可能パッケージにより、インストール プロセスが効率化され、アプリケーションの配置オプションが簡略化されます。  

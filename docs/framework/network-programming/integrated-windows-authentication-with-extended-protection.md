@@ -2,14 +2,15 @@
 title: 統合 Windows 認証と拡張保護
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: d69471f4be0f102381dee4fc5037e8f8b0c625c3
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 74f421131da0e5b11fd676ff23229f5ff6ec7eca
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144852"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241624"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>統合 Windows 認証と拡張保護
+
 <xref:System.Net> 名前空間および関連名前空間の <xref:System.Net.HttpWebRequest>、<xref:System.Net.HttpListener>、<xref:System.Net.Mail.SmtpClient>、<xref:System.Net.Security.SslStream>、<xref:System.Net.Security.NegotiateStream>、および関連クラスによる統合 Windows 認証の処理方法に影響を与える、機能強化が行われました。 セキュリティ強化のため、拡張保護のサポートが追加されました。  
   
  これらの変更は、これらのクラスを使用して Web 要求を作成し、統合 Windows 認証が使用されている応答を受信するアプリケーションに影響を及ぼす場合があります。 この変更は、統合 Windows 認証を使用するように構成されている Web サーバーおよびクライアント アプリケーションにも影響を与える可能性があります。  
@@ -19,6 +20,7 @@ ms.locfileid: "84144852"
  拡張保護をサポートするための変更は、Windows 7 と Windows Server 2008 R2 でのアプリケーションでのみ使用できます。 拡張保護機能は、Windows の以前のバージョンではご利用いただけません。  
   
 ## <a name="overview"></a>概要  
+
  統合 Windows 認証の設計では、一部の資格情報のチャレンジ応答をユニバーサルにすることを許可しています。つまり、これらを再利用または転送することができます。 チャレンジ応答は、少なくともターゲット固有の情報と、可能であればいくつかのチャネル固有の情報で構築する必要があります。 これによりサービスは拡張保護を提供して、資格情報のチャレンジ応答にサービス プリンシパル名 (SPN) などのサービス固有の情報が確実に含まれるようにすることができます。 資格情報の交換でこの情報を使用すると、不適切に使用されている可能性がある資格情報のチャレンジ応答の悪用に対してサービスの保護を強化することができます。  
   
  拡張保護の設計は、認証リレー攻撃を軽減することを目的とした認証プロトコルの拡張機能です。 これはチャネルとサービス バインディング情報の概念を中心に展開しています。  
@@ -64,6 +66,7 @@ ms.locfileid: "84144852"
  拡張保護は、Windows 7 で現在サポートされています。 オペレーティング システムで拡張保護がサポートされているかをどうかをアプリケーションが判断できるように、メカニズムが提供されています。  
   
 ## <a name="changes-to-support-extended-protection"></a>拡張保護をサポートするための変更  
+
  使用される認証プロトコルに応じて、統合 Windows 認証で使用される認証プロセスには、多くの場合、ターゲット コンピューターによって発行され、クライアント コンピューターに送り返されるチャレンジが含まれています。 拡張保護によりこの認証プロセスに新しい機能が追加されます。  
   
  <xref:System.Security.Authentication.ExtendedProtection> 名前空間は、アプリケーションの拡張保護を使用した認証のサポートを提供します。 この名前空間内の <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> クラスは、チャネル バインディングを表します。 この名前空間内の <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> クラスは、受信クライアント接続を検証するためにサーバーで使用される拡張保護ポリシーを表します。 他のクラス メンバーは、拡張保護で使用されます。  
@@ -107,6 +110,7 @@ ms.locfileid: "84144852"
  <xref:System.Net.Security> 名前空間で SMTP クライアントに拡張保護の構成をサポートするため、<xref:System.Net.Configuration.SmtpNetworkElement> プロパティが追加されました。  
   
 ## <a name="extended-protection-for-client-applications"></a>クライアント アプリケーションの拡張保護  
+
  ほとんどのクライアント アプリケーションの拡張保護のサポートは自動的に行われます。 <xref:System.Net.HttpWebRequest> クラスと <xref:System.Net.Mail.SmtpClient> クラスは、基本の Windows のバージョンが拡張保護をサポートしている場合は常に、拡張保護をサポートします。 <xref:System.Net.HttpWebRequest> インスタンスは <xref:System.Uri> から構築された SPN を送信します。 既定では、<xref:System.Net.Mail.SmtpClient> インスタンスは SMTP メール サーバーのホスト名から構築された SPN を送信します。  
   
  カスタム認証の場合、クライアント アプリケーションは、<xref:System.Net.TransportContext.GetChannelBinding%2A> メソッドを使用して <xref:System.Net.TransportContext> および CBT の取得を許可する <xref:System.Net.HttpWebRequest> クラス内で <xref:System.Net.HttpWebRequest.EndGetRequestStream%28System.IAsyncResult%2CSystem.Net.TransportContext%40%29?displayProperty=nameWithType> メソッドまたは <xref:System.Net.HttpWebRequest.GetRequestStream%28System.Net.TransportContext%40%29?displayProperty=nameWithType> メソッドを使用できます。  
@@ -116,6 +120,7 @@ ms.locfileid: "84144852"
  <xref:System.Net.Mail.SmtpClient.TargetName%2A> プロパティは、SMTP 接続の統合 Windows 認証にカスタム SPN を使用するように設定するために使用できます。  
   
 ## <a name="extended-protection-for-server-applications"></a>サーバー アプリケーションの拡張保護  
+
  <xref:System.Net.HttpListener> は、HTTP 認証を実行するときに、サービス バインディングを検証するためのメカニズムを提供します。  
   
  最も安全なシナリオは、`HTTPS://` プレフィックスの拡張保護を有効にすることです。 この場合、<xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> または <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> に設定された <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> を使用して <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> を <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> に設定し、<xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> を <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected> に設定します。<xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> の値は、<xref:System.Net.HttpListener> を部分的にセキュリティを強化したモードにし、同時に <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> は完全にセキュリティを強化したモードに対応します。  

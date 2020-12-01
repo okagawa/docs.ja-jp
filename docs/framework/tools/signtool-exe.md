@@ -6,14 +6,15 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: ff330691483b56740ee72e280c1471af4282c638
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 46a7453ff7de0329d9cd7f671dcaa0a3e3e0e54c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282248"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238471"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (署名ツール)
+
 署名ツールはコマンド ライン ツールで、ファイルにデジタル署名を添付し、ファイルの署名を検証し、ファイルにタイム スタンプを付けます。  
   
  このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。
@@ -55,7 +56,9 @@ signtool [command] [options] [file_name | ...]
 |**/debug**|デバッグ情報を表示します。|  
   
 <a name="catdb"></a>
+
 ## <a name="catdb-command-options"></a>catdb コマンド オプション  
+
  次の表に、`catdb` コマンドと共に使用できるオプションを示します。  
   
 |Catdb オプション|説明|  
@@ -66,7 +69,9 @@ signtool [command] [options] [file_name | ...]
 |`/u`|追加されたカタログ ファイルに対して、一意な名前を自動的に生成するように指定します。 必要に応じて、既存のカタログ ファイルと名前が競合しないように、カタログ ファイルの名前が変更されます。 このオプションが指定されていない場合、署名ツールは追加されるカタログと同じ名前を持つ既存のカタログを上書きします。|  
   
 <a name="sign"></a>
+
 ## <a name="sign-command-options"></a>sign コマンド オプション  
+
  次の表に、`sign` コマンドと共に使用できるオプションを示します。  
   
 |Sign コマンド オプション|説明|  
@@ -103,7 +108,9 @@ signtool [command] [options] [file_name | ...]
  使用例については、「[Using SignTool to Sign a File](/windows/desktop/SecCrypto/using-signtool-to-sign-a-file)」(SignTool を使用してファイルに署名する) を参照してください。  
   
 <a name="TimeStamp"></a>
+
 ## <a name="timestamp-command-options"></a>TimeStamp コマンド オプション  
+
  次の表に、`TimeStamp` コマンドと共に使用できるオプションを示します。  
   
 |TimeStamp オプション|説明|  
@@ -117,6 +124,7 @@ signtool [command] [options] [file_name | ...]
  使用例については、「[Adding Time Stamps to Previously Signed Files](/windows/desktop/SecCrypto/adding-time-stamps-to-previously-signed-files)」(署名済みのファイルにタイム スタンプを追加する) を参照してください。  
   
 <a name="Verify"></a>
+
 ## <a name="verify-command-options"></a>Verify コマンド オプション  
   
 |Verify オプション|説明|  
@@ -132,7 +140,7 @@ signtool [command] [options] [file_name | ...]
 |`/hash` (`SHA1`&#124;`SHA256`)|カタログ内のファイルを検索する場合に使用するオプションのハッシュ アルゴリズムを指定します。|  
 |`/kp`|カーネル モード ドライバーの署名ポリシーを使用して検証を実行するように指定します。|  
 |`/ms`|複数の検証セマンティクスを使用します。 これは、Windows 8 以降での [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) 呼び出しの既定の動作です。|  
-|`/o` *Version*|オペレーティング システムのバージョンでファイルを確認します。 *バージョン* の書式は、 *PlatformID* : *VerMajor*. *VerMinor*. *BuildNumber* になります。 *PlatformID* は、<xref:System.PlatformID> 列挙メンバーの基になる値を表します。 **重要:** `/o` スイッチを使用することをお勧めします。 `/o` を指定しない場合、SignTool.exe から予期しない結果が返されることがあります。 たとえば、`/o` スイッチを含めない場合、古いオペレーティング システム上で正しく検証されるシステム カタログが新しいオペレーティング システムで正しく検証されないことがあります。|  
+|`/o` *Version*|オペレーティング システムのバージョンでファイルを確認します。 *バージョン* の書式は、*PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber* になります。 *PlatformID* は、<xref:System.PlatformID> 列挙メンバーの基になる値を表します。 **重要:** `/o` スイッチを使用することをお勧めします。 `/o` を指定しない場合、SignTool.exe から予期しない結果が返されることがあります。 たとえば、`/o` スイッチを含めない場合、古いオペレーティング システム上で正しく検証されるシステム カタログが新しいオペレーティング システムで正しく検証されないことがあります。|  
 |`/p7`|PKCS #7 ファイルを確認します。 PKCS #7 検証で既存のポリシーは使用されません。 署名がチェックされ、署名証明書のチェーンがビルドされます。|  
 |`/pa`|既定の Authenticode 検証ポリシーを使用するように指定します。 `/pa` オプションが指定されていない場合、署名ツールは Windows ドライバー検証ポリシーを使用します。 このオプションは、`catdb` オプションと一緒に使用することはできません。|  
 |`/pg` *PolicyGUID*|GUID により検証ポリシーを指定します。 *PolicyGUID* は検証ポリシーの ActionID に対応しています。 このオプションは、`catdb` オプションと一緒に使用することはできません。|  
@@ -143,6 +151,7 @@ signtool [command] [options] [file_name | ...]
  使用例については、「[Using SignTool to Verify a File Signature](/windows/desktop/SecCrypto/using-signtool-to-verify-a-file-signature)」(SignTool を使用してファイルの署名を検証する) を参照してください。  
   
 ## <a name="return-value"></a>戻り値  
+
  署名ツールは、終了時に次のいずれかの終了コードを返します。  
   
 |終了コード|説明|  
@@ -152,6 +161,7 @@ signtool [command] [options] [file_name | ...]
 |2|実行は完了しましたが、警告があります。|  
 
 ## <a name="examples"></a>使用例  
+
  カタログ ファイル MyCatalogFileName.cat をシステム コンポーネントおよびドライバー データベースに追加するコマンドを次に示します。 `/u` オプションは、必要に応じて一意の名前を生成し、`MyCatalogFileName.cat` という名前の既存のカタログ ファイルが置き換えられないようにします。  
   
 ```console  

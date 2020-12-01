@@ -3,17 +3,19 @@ title: WebRequest の問題と例外について
 description: WebRequest および派生クラスによって例外がスローされ、異常な状態が信号で伝えられます。 これらの考えられる解決策を利用し、.NET Framework のこれらの状態を解決します。
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-ms.openlocfilehash: aa9ab989bad7940e82cc4fd8fd22ca3915f7b800
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 27fde2a3cf3e6a3469a47bdd9efe70d31620777d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502081"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236326"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>WebRequest の問題と例外について
+
 <xref:System.Net.WebRequest> とその派生クラス (<xref:System.Net.HttpWebRequest>、<xref:System.Net.FtpWebRequest>、<xref:System.Net.FileWebRequest>) は例外をスローし、異常な状態を信号で伝えます。 このような問題の解決はすぐにわからないことがあります。  
   
 ## <a name="solutions"></a>解決策  
+
  <xref:System.Net.WebException> の <xref:System.Net.WebException.Status%2A> プロパティを調べ、問題を判断します。 次の表は、いくつかの状態値と可能な解決策をまとめたものです。  
   
 |Status|説明|ソリューション|  

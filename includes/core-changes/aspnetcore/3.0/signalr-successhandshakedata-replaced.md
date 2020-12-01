@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 05aec429e28ef74515ef6988d5b064e6d16b7c1b
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90680055"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032672"
 ---
 ### <a name="signalr-handshakeprotocolsuccesshandshakedata-replaced"></a>SignalR:HandshakeProtocol.SuccessHandshakeData が置き換えられました
 
@@ -24,11 +24,11 @@ ms.locfileid: "90680055"
 
 #### <a name="reason-for-change"></a>変更理由
 
-ハンドシェイク_応答_に、選択したプロトコルによって変化する非定数の追加フィールドが加えられました。
+ハンドシェイク _応答_ に、選択したプロトコルによって変化する非定数の追加フィールドが加えられました。
 
 #### <a name="recommended-action"></a>推奨アクション
 
-なし。 この型は、ユーザー コードから使用するように設計されていません。 これは `public` であり、SignalR サーバーとクライアントの間で共有できます。 また、.NET で記述されたユーザーの SignalR クライアントによって使用されることもあります。 SignalR の**ユーザー**は、この変更による影響を受けません。
+なし。 この型は、ユーザー コードから使用するように設計されていません。 これは `public` であり、SignalR サーバーとクライアントの間で共有できます。 また、.NET で記述されたユーザーの SignalR クライアントによって使用されることもあります。 SignalR の **ユーザー** は、この変更による影響を受けません。
 
 #### <a name="category"></a>カテゴリ
 

@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 58b1190e3e6a3168d35700eed655f6756e076a29
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75901942"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032608"
 ---
 ### <a name="mvc-async-suffix-trimmed-from-controller-action-names"></a>MVC:コントローラー アクション名から Async サフィックスを削除
 

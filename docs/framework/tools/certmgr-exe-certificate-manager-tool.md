@@ -14,14 +14,15 @@ helpviewer_keywords:
 - CTLs
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
-ms.openlocfilehash: 43ab281e6ec28ff23ea584b03fd4278c6682e33e
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 30a35ded6fc86af6dc6dd4bf19cdf60f66570e0c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167263"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247253"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (証明書マネージャー ツール)
+
 証明書マネージャー ツール (Certmgr.exe) は、証明書、証明書信頼リスト (CTL: Certificate Trust List)、および証明書失効リスト (CRL: Certificate Revocation List) を管理します。  
   
  証明書マネージャーは Visual Studio と共に自動的にインストールされます。 ツールを開始するには、[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)を使用します。  
@@ -72,6 +73,7 @@ ms.locfileid: "87167263"
 |**/?**|このツールのコマンド構文とオプションを表示します。|  
   
 ## <a name="remarks"></a>Remarks  
+
  Certmgr.exe は次の基本的な機能を実行します。  
   
 - 証明書、CTL、および CRL をコンソールに表示します。  
@@ -94,6 +96,7 @@ ms.locfileid: "87167263"
  証明書の詳細については、「[証明書の使用](../wcf/feature-details/working-with-certificates.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
+
  既定のシステム ストアである `my` を詳細出力モードで表示するコマンドを次に示します。  
   
 ```console  

@@ -5,14 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
-ms.openlocfilehash: ac62f58eea41419de2d5651269154d9abb757aba
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 1e77f7eb4dbb8a69848bc6b20e98e0df931f22c9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502497"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244029"
 ---
 # <a name="how-to-ping-a-host"></a>方法: ホストに対して ping を実行
+
 このサンプルでは、リモート ホストに対して ping を実行する方法を示します。  
   
 ## <a name="example"></a>例  
@@ -122,6 +123,7 @@ namespace Examples.System.Net.NetworkInformation.PingTest
 ```  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
+
  この例で必要な要素は次のとおりです。  
   
 - **System.Net** 名前空間への参照。

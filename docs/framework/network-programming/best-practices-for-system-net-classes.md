@@ -11,14 +11,15 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-ms.openlocfilehash: 583fa5e57c7c4d60252dddfd425596e7acad7c0d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 170e8cfe0a7d7c911122dafe18b8a5081ceb3d2d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502679"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250776"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>System.Net クラスのベスト プラクティス
+
 次の推奨事項は、<xref:System.Net> に含まれるクラスを最大限に活用するのに役立ちます。  
   
 - トランスポート層セキュリティ (TLS) のベスト プラクティスについては、「[.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス](tls.md)」をご覧ください。

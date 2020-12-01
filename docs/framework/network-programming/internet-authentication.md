@@ -16,14 +16,15 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: a1f0829aa0e9e4bcc68168b73443578c3a34310b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 085ca27dd0cfedc90211b21c10cc8bc5cf1ecd21
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502380"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241591"
 ---
 # <a name="internet-authentication"></a>インターネット認証
+
 <xref:System.Net> クラスは、さまざまなクライアント認証メカニズムをサポートしています。これには、基本、ダイジェスト、ネゴシエート、NTLM、および Kerberos の標準のインターネット認証方法の他に、ユーザーが作成できるカスタム メソッドも含まれます。  
   
  認証の資格情報は、<xref:System.Net.ICredentials> インターフェイスを実装する <xref:System.Net.NetworkCredential> クラスと <xref:System.Net.CredentialCache> クラスに格納されています。 資格情報についてこれらのいずれかのクラスが照会されると、そのクラスが **NetworkCredential** クラスのインスタンスを返します。 認証プロセスは <xref:System.Net.AuthenticationManager> クラスで管理され、実際の認証プロセスは <xref:System.Net.IAuthenticationModule> インターフェイスを実装する認証モジュール クラスによって実行されます。 カスタム認証モジュールは、**AuthenticationManager** に登録してから使用する必要があります。基本、ダイジェスト、ネゴシエート、NTLM、および Kerberos の各認証方法は、既定で登録されています。  

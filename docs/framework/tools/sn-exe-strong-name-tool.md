@@ -11,14 +11,15 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-ms.openlocfilehash: 8f10dab9b395640e46cb9bf3ca468b8f6bb2bc1b
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: bb9640bbb46683a3facf290c8157853007f4407d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517192"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238445"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (厳密名ツール)
+
 厳密名ツール (Sn.exe) は、[厳密な名前](../../standard/assembly/strong-named.md)を使用してアセンブリに署名する場合に役立ちます。 Sn.exe には、キーの管理、署名の生成、署名の検査に関する各オプションが用意されています。  
   
 > [!WARNING]
@@ -63,8 +64,8 @@ sn [-quiet][option [parameter(s)]]
 |`-Rh assembly`|アセンブリ内のすべてのファイルについてハッシュを再計算します。|  
 |`-t[p] infile`|*infile* に格納されている公開キーに関するトークンを表示します。 *infile* には、以前に **-p** を使用してキー ペア ファイルから生成された公開キーが含まれている必要があります。  **-t[p]** オプションを使用して、トークンをキー ペア ファイルから直接抽出しないでください。<br /><br /> トークンは、ハッシュ関数によって公開キーから算出されます。 領域を節約するために、共通言語ランタイムは厳密な名前を持つアセンブリへの依存度を記録するときに、別のアセンブリへ参照の一部として公開キー トークンをマニフェスト内に格納します。 **-tp** オプションを指定すると、トークンの他に公開キーも表示されます。 <xref:System.Reflection.AssemblySignatureKeyAttribute> 属性がアセンブリに適用されている場合、トークンは ID キー用であり、ハッシュ アルゴリズムの名前と ID キーが表示されます。<br /><br /> このオプションはアセンブリ署名を検証しないため、信頼の決定には使用しないでください。  このオプションは、生の公開キー トークン データのみを表示します。|  
 |`-T[p] assembly`|*assembly* に関する公開キー トークンを表示します。 *assembly* には、アセンブリ マニフェストを含むファイルの名前を指定する必要があります。<br /><br /> トークンは、ハッシュ関数によって公開キーから算出されます。 領域を節約するために、共通言語ランタイムは厳密な名前を持つアセンブリへの依存度を記録するときに、別のアセンブリへ参照の一部として公開キー トークンをマニフェスト内に格納します。 **-Tp** オプションを指定すると、トークンの他に公開キーも表示されます。 <xref:System.Reflection.AssemblySignatureKeyAttribute> 属性がアセンブリに適用されている場合、トークンは ID キー用であり、ハッシュ アルゴリズムの名前と ID キーが表示されます。<br /><br /> このオプションはアセンブリ署名を検証しないため、信頼の決定には使用しないでください。  このオプションは、生の公開キー トークン データのみを表示します。|  
-|`-TS assembly infile`|*入力ファイル*内のキー ペアを使い、完全または不完全に署名された*アセンブリ*をテスト署名します。|  
-|`-TSc assembly container`|キー コンテナー *コンテナー* 内のキー ペアを使い、完全または不完全に署名された*アセンブリ*をテスト署名します。|
+|`-TS assembly infile`|*入力ファイル* 内のキー ペアを使い、完全または不完全に署名された *アセンブリ* をテスト署名します。|  
+|`-TSc assembly container`|キー コンテナー *コンテナー* 内のキー ペアを使い、完全または不完全に署名された *アセンブリ* をテスト署名します。|
 |`-v assembly`|*assembly* 内の厳密な名前を検査します。ここで、*assembly* はアセンブリ マニフェストを含むファイルの名前です。|  
 |`-vf assembly`|*assembly* 内の厳密な名前を検査します。 **-v** オプションとは異なり、 **-vf** では **-Vr** オプションで無効化した場合であっても、検査を強制的に実行します。|  
 |`-Vk regfile.reg assembly [userlist] [infile]`|指定したアセンブリを登録して検証をスキップするために使用できる登録エントリ (.reg) ファイルを作成します。 **-Vr** オプションに適用されるアセンブリ名前付け規則が **-Vk** オプションにも適用されます。 *userlist* オプションと *infile* オプションについては、 **-Vr** オプションを参照してください。|  
@@ -79,6 +80,7 @@ sn [-quiet][option [parameter(s)]]
 > Sn.exe の全オプションでは大文字と小文字が区別されます。また、オプションが正しく認識されるためには、表記されたとおりに正確に入力する必要があります。  
   
 ## <a name="remarks"></a>Remarks  
+
  **-R** オプションと **-Rc** オプションは、署名を遅らせたアセンブリを処理する場合に便利です。 その場合、コンパイル時には公開キーだけが設定され、後で秘密キーが判明したときに署名が実行されます。  
   
 > [!NOTE]
@@ -87,6 +89,7 @@ sn [-quiet][option [parameter(s)]]
 厳密な名前ツールでは、公開キーと秘密キーの組が `AT_SIGNATURE` アルゴリズム識別子を使用して生成されると想定されます。 `AT_KEYEXCHANGE` アルゴリズムを使用して生成された公開キー/秘密キーのペアでは、エラーが生成されます。
 
 ## <a name="examples"></a>使用例  
+
  新しいランダム キー ペアを作成し、`keyPair.snk` に格納するコマンドを次に示します。  
   
 ```console  

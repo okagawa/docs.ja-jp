@@ -9,12 +9,12 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-ms.openlocfilehash: dc0da9842df7b0a827293c42d80ccdd418a043b2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4a179bff7ec7988c5b7410fa99eab346d4add1df
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819202"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734830"
 ---
 # <a name="memory-mapped-files"></a>メモリ マップト ファイル
 
@@ -31,6 +31,7 @@ ms.locfileid: "94819202"
      非永続化ファイルは、ディスク上のファイルに関連付けられていないメモリ マップト ファイルです。 最後のプロセスがファイルの操作を終了すると、データが失われ、ガベージ コレクションによってファイルが解放されます。 これらのファイルは、プロセス間通信 (IPC) 用の共有メモリの作成に適しています。  
   
 ## <a name="processes-views-and-managing-memory"></a>プロセス、ビュー、およびメモリ管理  
+
  メモリ マップト ファイルは、複数のプロセス間で共有できます。 ファイルを作成したプロセスによって割り当てられている共通名を使用して、複数のプロセスを同じメモリ マップト ファイルにマップできます。  
   
  メモリ マップト ファイルを操作するには、メモリ マップト ファイル全体またはその一部のビューを作成する必要があります。 また、メモリ マップト ファイルの同じ部分に対するマルチ ビューを作成し、それによって同時実行メモリを作成することもできます。 2 つのビューが同時実行されるには、それらのビューを同じメモリ マップト ファイルから作成する必要があります。  
@@ -48,6 +49,7 @@ ms.locfileid: "94819202"
  ![メモリ マップト ファイルへのビューへのビューを示すスクリーンショット。](./media/memory-mapped-files/memory-map-persist-file.png)  
   
 ## <a name="programming-with-memory-mapped-files"></a>メモリ マップト ファイルのプログラミング  
+
  メモリ マップト ファイル オブジェクトとそのメンバーを使用するための手引きを次の表に示します。  
   
 |タスク|使用するメソッドまたはプロパティ|  
@@ -61,6 +63,7 @@ ms.locfileid: "94819202"
 |ビューが作成されるまで、メモリ割り当てを延期する (非永続化ファイルのみ)。<br /><br /> (現在のシステム ページ サイズを確認するには、<xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType> プロパティを使用します)。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> 値を持つ <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType> メソッド<br /><br /> または<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> 列挙体をパラメーターとして持つ <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> メソッド。|  
   
 ### <a name="security"></a>セキュリティ  
+
  <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> 列挙体をパラメーターとして受け取る次のメソッドを使用して、メモリ マップト ファイルの作成時にアクセス権を適用できます。  
   
 - <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
@@ -78,6 +81,7 @@ ms.locfileid: "94819202"
 ## <a name="examples"></a>使用例  
   
 ### <a name="persisted-memory-mapped-files"></a>永続化メモリ マップト ファイル  
+
  <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A> メソッドは、ディスク上の既存のファイルからメモリ マップト ファイルを作成します。  
   
  次の例では、きわめて大きなファイルの一部のメモリ マップト ビューを作成し、その一部分を操作します。  
@@ -93,6 +97,7 @@ ms.locfileid: "94819202"
  [!code-vb[MemoryMappedFiles.MemoryMappedFile.OpenExisting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.openexisting/vb/program.vb#1)]  
   
 ### <a name="non-persisted-memory-mapped-files"></a>非永続化メモリ マップト ファイル  
+
  <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> メソッドおよび <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> メソッドは、ディスク上の既存のファイルに対応付けられないメモリ マップト ファイルを作成します。  
   
  次の例は、メモリ マップト ファイルにブール値を書き込む、3 つの独立したプロセス (コンソール アプリケーション) で構成されます。 次の順序で処理が実行されます。  

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-ms.openlocfilehash: d4fd6762195078963b43392178996a61f90feb94
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 97e5201aecc540594aa154bb5a2e93e85c925570
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167348"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247344"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows フォーム ActiveX コントロール インポーター)
+
 ActiveX コントロール インポーターは、ActiveX コントロール用の COM タイプ ライブラリに属する型定義を Windows フォーム コントロールに変換します。  
   
  Windows フォームがホストできるのは、<xref:System.Windows.Forms.Control> から派生するクラスである Windows フォームのコントロールだけです。 Aximp.exe は Windows フォーム上でホストできる ActiveX コントロール用のラッパー クラスを生成します。 このため、他の Windows フォーム コントロールに適用できるのと同じデザイン時サポートとプログラミング手順を使用できます。  
@@ -58,7 +59,7 @@ aximp [options]{file.dll | file.ocx}
   
  COM タイプ用の共通言語ランタイム プロキシ: *progid*.dll  
   
- ActiveX コントロール用の Windows フォーム プロキシ (Ax は ActiveX を表します): Ax*progid*.dll  
+ ActiveX コントロール用の Windows フォーム プロキシ (Ax は ActiveX を表します): Ax *progid*.dll  
   
 > [!NOTE]
 > ActiveX コントロールのメンバーの名前が .NET Framework で定義された名前と一致する場合、Aximp.exe は、AxHost 派生クラスを作成するときにメンバー名の前に "Ctl" を付けます。 たとえば、ActiveX コントロールに "Layout" というメンバーが含まれている場合、.NET Framework 内で Layout イベントが定義されているため、メンバー名は、AxHost 派生クラスでは "CtlLayout" に変更されます。  
@@ -72,6 +73,7 @@ aximp [options]{file.dll | file.ocx}
  shdocvw.dll で Aximp.exe を使用して、アプリケーション開発で使用する .NET アセンブリを作成する場合にも、問題が発生する可能性があります。 この場合、アプリケーションは、システム バージョンと生成されたバージョンの両方の shdocvw.dll を読み込み、システム バージョンを優先します。 このとき、WebBrowser ActiveX コントロール内部の Web ページを読み込もうとすると、[開いて保存] ダイアログ ボックスが表示される場合があります。 ユーザーが **[開く]** をクリックすると、Internet Explorer で Web ページが開きます。 これは、Internet Explorer version 6 以前を実行しているコンピューターでのみ発生します。 この問題の発生を防ぐには、「[方法: タイプ ライブラリへの参照を追加する](../interop/how-to-add-references-to-type-libraries.md)」に説明されているように、マネージド <xref:System.Windows.Forms.WebBrowser> コントロールまたは Visual Studio を使用してマネージド shdocvw.dll を生成します。  
   
 ## <a name="example"></a>例  
+
  Media Player コントロール `msdxm.ocx` の MediaPlayer.dll と AxMediaPlayer.dll を生成するコマンドを次に示します。  
   
 ```console

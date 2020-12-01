@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: b3cc04d5675ea63a0a6b967e293da8a1bd79830d
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595684"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032072"
 ---
 ### <a name="uribuilder-properties-no-longer-prepend-leading-characters"></a>UriBuilder では今後、先頭に文字が付加されない
 

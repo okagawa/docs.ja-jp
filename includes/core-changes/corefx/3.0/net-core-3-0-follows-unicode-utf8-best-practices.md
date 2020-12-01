@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 298cb441bf9fe7daddb30c85f9d7366dc972628c
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721399"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032144"
 ---
 ### <a name="replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines"></a>Unicode のガイドラインに従って不適切な形式の UTF-8 バイト シーケンスを置き換える
 
@@ -16,7 +16,7 @@ ms.locfileid: "83721399"
 
 .NET Core 3.0 からは、バイトの文字列へのコード変換は、Unicode のベスト プラクティスに基づいて <xref:System.Text.UTF8Encoding> クラスによって文字列が置換されます。 使用される置換メカニズムについては、[Unicode 標準のバージョン 12.0 のセクション 3.9 (PDF)](https://www.unicode.org/versions/Unicode12.0.0/ch03.pdf) の「_U+FFFD Substitution of Maximal Subparts_」 (最大サブパーツの U+FFFD 置換) という見出しを参照してください。
 
-この動作は、入力バイト シーケンスに不正な形式の UTF-8 データが含まれている場合_のみ_該当します。 また、<xref:System.Text.UTF8Encoding> インスタンスが `throwOnInvalidBytes: true` を使用して構築されている場合、`UTF8Encoding` インスタンスは U+FFFD 置換を実行せずに無効な入力のスローを続けます。 `UTF8Encoding` コンストラクターについて詳しくは、「<xref:System.Text.UTF8Encoding.%23ctor(System.Boolean,System.Boolean)>」をご覧ください。
+この動作は、入力バイト シーケンスに不正な形式の UTF-8 データが含まれている場合 _のみ_ 該当します。 また、<xref:System.Text.UTF8Encoding> インスタンスが `throwOnInvalidBytes: true` を使用して構築されている場合、`UTF8Encoding` インスタンスは U+FFFD 置換を実行せずに無効な入力のスローを続けます。 `UTF8Encoding` コンストラクターについて詳しくは、「<xref:System.Text.UTF8Encoding.%23ctor(System.Boolean,System.Boolean)>」をご覧ください。
 
 次の表では、不正な 3 バイトの入力でのこの変更の影響を示します。
 

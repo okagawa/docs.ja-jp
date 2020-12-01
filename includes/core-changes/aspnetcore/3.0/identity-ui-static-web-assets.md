@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: c5e4b5619394f99a419fe48aee190ad741ea8c0d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73041660"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032571"
 ---
 ### <a name="identity-ui-uses-static-web-assets-feature"></a>ID:UI で静的な Web 資産機能を使用
 

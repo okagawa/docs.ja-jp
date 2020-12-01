@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: cd66317bc93343e03a73dec74dff534776ca42e4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73198484"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032541"
 ---
 ### <a name="http-response-body-infrastructure-changes"></a>HTTP:応答本文のインフラストラクチャの変更
 

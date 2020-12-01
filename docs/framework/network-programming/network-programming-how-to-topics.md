@@ -8,14 +8,15 @@ helpviewer_keywords:
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-ms.openlocfilehash: f091f0f675fcf22cb7c6be83a5766fcc8d279be7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 96511c44507706b616c1542a534a52b02070efc9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502276"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250230"
 ---
 # <a name="network-programming-how-to-topics"></a>ネットワーク プログラミング方法のトピック
+
 概念を説明したドキュメントに用意されている、ネットワーク プログラミングに関する方法を説明したトピックへのリンクの一覧を次に示します。  
   
  **データの要求:**  

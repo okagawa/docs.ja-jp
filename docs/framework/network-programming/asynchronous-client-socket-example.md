@@ -10,14 +10,15 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-ms.openlocfilehash: c0bcf4becf8193f3bd6bc728dc6d7e96276dddf2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2ab53ef5973091d8828260aa82d287ce4a2455eb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502731"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250698"
 ---
 # <a name="asynchronous-client-socket-example"></a>非同期クライアント ソケットの例
+
 次のプログラム例では、サーバーに接続するクライアントを作成します。 このクライアントは非同期ソケットで構築されます。そのため、サーバーが応答を返す間にクライアント アプリケーションの実行が中断されることはありません。 このアプリケーションは文字列をサーバーに送信し、サーバーが返した文字列をコンソールに表示します。  
   
 ```vb  
