@@ -2,14 +2,15 @@
 title: PNRP クラウド
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: dd27e61fe1f648dcaf4ee4dd5f5119d33913c63a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 60b6fb44116fe2d8af50fb0b310615b3b962977b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047369"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263205"
 ---
 # <a name="pnrp-clouds"></a>PNRP クラウド
+
 PNRP "クラウド" は、ネットワーク経由で相互に通信できるノードのセットを表します。 "クラウド" という用語は、"ピア メッシュ" や "ピアツーピア グラフ" と同義です。  
   
  異なるクラウド間でノード間通信を行うことはできません。 <xref:System.Net.PeerToPeer.Cloud> インスタンスは、名前によって一意に識別されます。名前は大文字と小文字が区別されます。 1 つのピアまたはノードを、複数のクラウドに接続できます。  
@@ -25,6 +26,7 @@ PNRP "クラウド" は、ネットワーク経由で相互に通信できるノ
  3 番目のクラウドであるサイト固有クラウドは、IPv6 アドレス スコープとサイトローカル アドレスに対応します。 サイト固有クラウドは非推奨とされますが、PNRP ではまだサポートされています。  
   
 ## <a name="clouds"></a>クラウド  
+
  PNRP クラウドは、<xref:System.Net.PeerToPeer.Cloud> クラスのインスタンスで表されます。 ピアを使うクラウドのグループは、列挙可能な <xref:System.Net.PeerToPeer.CloudCollection> クラスのインスタンスによって表されます。 現在のピアに認識される PNRP クラウドのコレクションは、静的 <xref:System.Net.PeerToPeer.Cloud.GetAvailableClouds%2A> メソッドを呼び出すことによって取得できます。  
   
  個々のクラウドには、256 文字の Unicode 文字列として表される一意の名前があります。 これらの名前および上記のスコープは、クラウド クラスの一意のインスタンスを作成するために使われます。 これらのインスタンスは、永続的な使用のためにシリアル化および再構築できます。  

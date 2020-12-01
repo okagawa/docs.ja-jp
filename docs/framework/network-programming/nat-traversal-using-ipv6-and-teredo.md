@@ -2,14 +2,15 @@
 title: IPv6 および Teredo を使用した NAT トラバーサル
 ms.date: 03/30/2017
 ms.assetid: 568cd245-3300-49ef-a995-d81bf845d961
-ms.openlocfilehash: f617dc8912091576727b90da1e9efb9ebd5f9bda
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6448ddf117e1f454338869820751ae5d9e0070e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "61642179"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258622"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>IPv6 および Teredo を使用した NAT トラバーサル
+
 ネットワーク アドレス変換 (NAT) トラバーサルをサポートする機能強化が行われました。 これらの変更は、IPv6 および Teredo での使用を想定して設計されていますが、他の IP トンネリング テクノロジにも適用されます。 これらの拡張機能は、<xref:System.Net> および関連する名前空間のクラスに影響します。  
   
  これらの変更は、IP トンネリング テクノロジを使用するクライアント サーバー アプリケーションに影響を与える可能性があります。  
@@ -17,6 +18,7 @@ ms.locfileid: "61642179"
  NAT トラバーサルをサポートするための変更は、.NET Framework Version 4 を使用しているアプリケーションでのみ機能します。 これらの機能は、.NET Framework の以前のバージョンではご利用いただけません。  
   
 ## <a name="overview"></a>概要  
+
  Internet Protocol version 4 (IPv4) では、IPv4 アドレスが 32 ビット長として定義されました。 その結果、IPv4 は約 40 億個の一意の IP アドレスをサポートしています (2 ^32)。 1990 年代にインターネット上のコンピューターやネットワーク デバイスの数が拡大したため、IPv4 アドレス空間の逼迫が明らかになりました。  
   
  IPv4 の枯渇を遅らせるために採用された複数の手法の 1 つが、単一の一意なパブリック IP アドレスで多数のプライベート IP アドレス (プライベート イントラネット) を表すことができる NAT の展開でした。 NAT デバイスの背後にあるプライベート IP アドレスは、単一のパブリック IPv4 アドレスを共有しています。 専用ハードウェア デバイス (安価なワイヤレス アクセス ポイントとルーターなど) や、NAT を提供するサービスを実行しているコンピューターを NAT デバイスとすることができます。 このパブリック IP アドレスを提供するデバイスまたはサービスは、パブリック インターネットとプライベート イントラネットの間で IP ネットワーク パケットを変換します。  
@@ -30,6 +32,7 @@ ms.locfileid: "61642179"
  Teredo は、IPv4 ネットワークで IPv6 接続を実現する IPv6 移行テクノロジの 1 つです。 Teredo は、インターネット技術標準化委員会 (IETF) が公開している RFC 4380 で規定されています。 Windows XP SP2 以降では、2001:0::/32 の範囲でパブリック IPv6 アドレスを提供する仮想 Teredo アダプターがサポートされています。 この IPv6 アドレスは、インターネットからの着信接続をリッスンするために使用でき、リッスンしているサービスに接続しようとする IPv6 対応クライアントに提供できます。 これにより、IPv6 Teredo アドレスを使用してそのコンピューターに接続できるようになるため、アプリケーションは NAT デバイスの背後にあるコンピューターのアドレスを指定する方法について考慮する必要がなくなります。  
   
 ## <a name="enhancements-to-support-nat-traversal-and-teredo"></a>NAT トラバーサルと Teredo をサポートするための機能強化  
+
  IPv6 および Teredo を使用した NAT トラバーサルをサポートするために、<xref:System.Net>、<xref:System.Net.NetworkInformation>、および <xref:System.Net.Sockets> 名前空間に強化機能が追加されました。  
   
  <xref:System.Net.NetworkInformation.IPGlobalProperties?displayProperty=nameWithType> クラスに、ホスト上のユニキャスト IP アドレスの一覧を取得するための複数のメソッドが追加されています。 <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A> メソッドは、ローカル コンピューター上の安定したユニキャスト IP アドレス テーブルを取得するための非同期要求を開始します。 <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A> メソッドは、ローカル コンピューター上の安定したユニキャスト IP アドレス テーブルを取得するための保留中の非同期要求を終了します。 <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses%2A> メソッドは、ローカル コンピューター上の安定したユニキャスト IP アドレス テーブルを取得するための同期要求であり、アドレス テーブルが安定化されるまで必要に応じて待機します。  

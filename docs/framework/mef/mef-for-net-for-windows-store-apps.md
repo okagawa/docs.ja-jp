@@ -3,14 +3,15 @@ title: Windows ストア アプリ用 .NET 用 MEF
 description: 拡張可能な Windows 8.x Store アプリを開発するための型が含まれる Managed Extensibility Framework (MEF) 名前空間を確認します。
 ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
-ms.openlocfilehash: 470ce5f4ac9945f96a430af9806de6f6df6eb1f8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1bd62ad0b405f84952aca9d527c5f8a8e9f744f4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558707"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276595"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>Windows ストア アプリ用 .NET 用 MEF
+
 <xref:System.Composition?displayProperty=nameWithType> とその子名前空間には、Managed Extensibility Framework (MEF) を使用して拡張可能な Windows 8.x Store アプリを開発するための型が含まれています。 これらの名前空間は、Windows 8 オペレーティング システム用の .NET for Windows 8.x Store アプリのサブセットの一部です。  
   
  これらの名前空間は、.NET Framework で配布されているコア クラス ライブラリの一部ではありません。 これらの名前空間をインストールするには、Visual Studio でプロジェクトを開き、 **[プロジェクト]** メニューの **[NuGet パッケージの管理]** をクリックし、Microsoft.Composition パッケージをオンライン検索します。  

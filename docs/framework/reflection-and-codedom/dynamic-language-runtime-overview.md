@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLR
 - IronRuby
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
-ms.openlocfilehash: 2272bc60af35e3cdec3e1a71bbc6516565b4ec6e
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: a36d6704b36b5006f19e21932797f21af849e55a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475152"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266832"
 ---
 # <a name="dynamic-language-runtime-overview"></a>動的言語ランタイムの概要
 
@@ -55,24 +55,31 @@ CLR と同様に、DLR は .NET Framework の一部であり、.NET Framework �
 - IronRuby。 [IronRuby](http://ironruby.net/) の Web サイトから、オープン ソース ソフトウェアとして入手できます。
 
 ## <a name="primary-dlr-advantages"></a>DLR の主な利点
+
  DLR には、次の利点があります。
 
 ### <a name="simplifies-porting-dynamic-languages-to-the-net-framework"></a>動的言語の .NET Framework への移植を簡略化
- DLR により、言語実装者は、構文アナライザー、パーサー、セマンティクス アナライザー、コード ジェネレーター、および従来は自身で作成する必要があったその他のツールを作成せずに済みます。 DLR を使用する言語では、言語レベルのコードをツリー状の構造で表す*式ツリー*、ランタイム ヘルパー ルーチン、およびオプションとして <xref:System.Dynamic.IDynamicMetaObjectProvider> インターフェイスを実装する動的オブジェクトを生成する必要があります。 DLR と .NET Framework により、コード分析タスクやコード生成タスクの多くの部分が自動化されます。 このため、言語実装者は固有の言語機能に集中できます。
+
+ DLR により、言語実装者は、構文アナライザー、パーサー、セマンティクス アナライザー、コード ジェネレーター、および従来は自身で作成する必要があったその他のツールを作成せずに済みます。 DLR を使用する言語では、言語レベルのコードをツリー状の構造で表す *式ツリー*、ランタイム ヘルパー ルーチン、およびオプションとして <xref:System.Dynamic.IDynamicMetaObjectProvider> インターフェイスを実装する動的オブジェクトを生成する必要があります。 DLR と .NET Framework により、コード分析タスクやコード生成タスクの多くの部分が自動化されます。 このため、言語実装者は固有の言語機能に集中できます。
 
 ### <a name="enables-dynamic-features-in-statically-typed-languages"></a>静的に型指定された言語での動的機能を使用が可能
+
  C# や Visual Basic などの既存の .NET Framework 言語では、動的オブジェクトを作成し、静的に型指定されたオブジェクトと一緒に使用できます。 たとえば、C# や Visual Basic で、HTML、ドキュメント オブジェクト モデル (DOM)、および .NET リフレクションの動的オブジェクトを使用できます。
 
 ### <a name="provides-future-benefits-of-the-dlr-and-net-framework"></a>DLR と .NET Framework の将来的な利点の活用
+
  DLR を使用して実装された言語は、DLR と .NET Framework で将来的に強化される機能を活用できます。 たとえば、ガベージ コレクターの強化やアセンブリの読み込み時間の高速化が盛り込まれた .NET Framework の新しいバージョンがリリースされた場合、DLR を使用して実装された言語は、その恩恵をすぐに受けます。 同様に、コンパイルの向上など、DLR の最適化が行われた場合は、DLR を使用して実装されたすべての言語でもパフォーマンスが向上します。
 
 ### <a name="enables-sharing-of-libraries-and-objects"></a>ライブラリとオブジェクトの共有が可能
+
  ある言語で実装されたオブジェクトとライブラリを、他の言語で使用できます。 また、DLR では、静的に型指定された言語と動的言語の間の相互運用も可能になります。 たとえば、動的言語で記述されたライブラリを使用する動的オブジェクトを C# で宣言できます。 同時に、.NET Framework のライブラリを動的言語で使用できます。
 
 ### <a name="provides-fast-dynamic-dispatch-and-invocation"></a>迅速な動的ディスパッチと呼び出しの実現
+
  DLR では、高度なポリモーフィック キャッシュをサポートすることで、迅速な動的操作を提供します。 DLR は、オブジェクトを使用する操作を必要なランタイムの実装にバインドする規則を作成し、それらの規則をキャッシュします。これにより、同じ型のオブジェクトで同じコードが連続的に実行されるときに、リソースを大量に消費するバインド計算の発生を防ぎます。
 
 ## <a name="dlr-architecture"></a>DLR のアーキテクチャ
+
  動的言語ランタイムのアーキテクチャを次の図に示します。
 
  ![動的言語ランタイム アーキテクチャの概要](./media/dlr-archoverview.png "DLR_ArchOverview") DLR アーキテクチャ
@@ -81,13 +88,14 @@ CLR と同様に、DLR は .NET Framework の一部であり、.NET Framework �
 
 - 式ツリー。 DLR では、式ツリーを使用して言語のセマンティクスを表します。 この目的から、DLR では LINQ の式ツリーが拡張され、制御フロー、代入、およびその他の言語モデリング ノードが追加されています。 詳細については、「[式ツリー (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)」または「[式ツリー (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)」を参照してください。
 
-- 呼び出しサイトのキャッシュ。 *動的呼び出しサイト*とは、動的オブジェクトに `a + b` や `a.b()` などの操作を実行するコード内の場所です。 DLR は、`a` と `b` の特性 (通常はこれらのオブジェクトの型) や操作に関する情報をキャッシュします。 同様の操作が以前に実行されていた場合、DLR は、必要なすべての情報をキャッシュから取得して、高速なディスパッチを実現します。
+- 呼び出しサイトのキャッシュ。 *動的呼び出しサイト* とは、動的オブジェクトに `a + b` や `a.b()` などの操作を実行するコード内の場所です。 DLR は、`a` と `b` の特性 (通常はこれらのオブジェクトの型) や操作に関する情報をキャッシュします。 同様の操作が以前に実行されていた場合、DLR は、必要なすべての情報をキャッシュから取得して、高速なディスパッチを実現します。
 
 - 動的オブジェクトの相互運用性。 DLR には、動的オブジェクトと操作を表し、言語実装者や動的ライブラリの作成者が使用できるクラスとインターフェイスのセットが用意されています。 このようなクラスやインターフェイスには、<xref:System.Dynamic.IDynamicMetaObjectProvider><xref:System.Dynamic.DynamicMetaObject><xref:System.Dynamic.DynamicObject> および <xref:System.Dynamic.ExpandoObject> があります。
 
 DLR では、呼び出しサイトのバインダーを使用して、.NET Framework だけでなく、Silverlight や COM などの他のインフラストラクチャやサービスとも通信します。 バインダーは、言語のセマンティクスをカプセル化し、式ツリーを使用して呼び出しサイトの操作を実行する方法を指定します。 これにより、DLR を使用する動的言語および静的に型指定された言語で、ライブラリを共有し、DLR がサポートするすべてのテクノロジを利用できるようになります。
 
 ## <a name="dlr-documentation"></a>DLR に関するドキュメント
+
  言語に動的な動作を追加するためにオープン ソース バージョンの DLR を使用する方法、または .NET Framework で動的言語の使用を有効にする方法については、GitHub の [IronLanguages/dlr](https://github.com/IronLanguages/dlr/tree/master/Docs) のドキュメントを参照してください。
 
 ## <a name="see-also"></a>関連項目

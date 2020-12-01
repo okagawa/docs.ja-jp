@@ -7,12 +7,12 @@ helpviewer_keywords:
 - platform invoke, attribute fields
 - attribute fields in platform invoke, EntryPoint
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
-ms.openlocfilehash: 5628c54103410d127c2f9c4f56e1c6f897ada754
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: d5c6b651b3b5f19eea8e61bc17da92158be87957
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282022"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266364"
 ---
 # <a name="specifying-an-entry-point"></a>エントリ ポイントの指定
 
@@ -58,6 +58,7 @@ End Class
 ```
   
 ## <a name="renaming-a-function-in-c-and-c"></a>C# および C++ での関数名の変更  
+
  DLL 関数を名前または序数で指定するには、<xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> フィールドを使います。 メソッド定義内の関数の名前が DLL 内のエントリ ポイントと同じである場合は、その関数を **EntryPoint** フィールドで明示的に識別する必要はありません。 同じでない場合は、次のいずれかの属性書式を使って、名前または序数を指示します。  
   
 ```csharp

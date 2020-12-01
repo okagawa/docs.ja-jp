@@ -9,14 +9,15 @@ helpviewer_keywords:
 - services, creating
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
-ms.openlocfilehash: cd749d325bec6636243dec1905f79abb5e42f04e
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: ab153b89272323a1a7a71181559f4f4eee082640
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608401"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270512"
 ---
 # <a name="how-to-write-services-programmatically"></a>方法: プログラムでサービスを作成する
+
 Windows サービス プロジェクトのテンプレートを使用しない場合は、継承などの基本要素を設定して独自のサービスを作成できます。 プログラミングによってサービスを作成する場合は、テンプレートでは自動化される手順を手動で行う必要があります。  
   
 - サービス クラスが <xref:System.ServiceProcess.ServiceBase> クラスから継承されるように設定します。  
@@ -29,7 +30,7 @@ Windows サービス プロジェクトのテンプレートを使用しない�
   
 1. 空のプロジェクトを作成し、必要な名前空間への参照を作成するには、次の手順を実行します。  
   
-    1. **ソリューション エクスプローラー**で、 **[参照]** ノードを右クリックし、 **[参照の追加]** をクリックします。  
+    1. **ソリューション エクスプローラー** で、 **[参照]** ノードを右クリックし、 **[参照の追加]** をクリックします。  
   
     2. **[.NET Framework]** タブで **System.dll** までスクロールして選択し、 **[選択]** をクリックします。  
   

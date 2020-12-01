@@ -15,14 +15,15 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, service application code model
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
-ms.openlocfilehash: 386311228abb08600acc249e80702c724c137900
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: c2344dd0a7d35781aea52b24694f2cfee70a6d41
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609266"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270459"
 ---
 # <a name="service-application-programming-architecture"></a>サービス アプリケーションのプログラミング アーキテクチャ
+
 Windows サービス アプリケーションは、<xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> クラスから継承するクラスが基になっています。 このクラスのメソッドをオーバーライドして機能を定義し、サービスの動作を決定します。  
   
  サービスの作成に関連する主要なクラスは次のとおりです。  
@@ -34,6 +35,7 @@ Windows サービス アプリケーションは、<xref:System.ServiceProcess.S
  さらに、<xref:System.ServiceProcess.ServiceController> という名前のクラスを使って、サービス自体を操作できます。 このクラスは、サービスの作成には含まれませんが、サービスを開始および停止し、サービスにコマンドを渡し、サービスから一連の列挙値を戻すために使用できます。  
   
 ## <a name="defining-your-services-behavior"></a>サービスの動作の定義  
+
  サービス クラスにおいて、サービス コントロール マネージャー内でサービスの状態が変更されたときの動作を決定する基底クラスの関数をオーバーライドします。 <xref:System.ServiceProcess.ServiceBase> クラスで公開されている以下のメソッドをオーバーライドして、カスタム動作を追加できます。  
   
 |メソッド|オーバーライドの目的|  

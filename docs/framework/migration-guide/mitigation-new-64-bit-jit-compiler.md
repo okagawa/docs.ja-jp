@@ -7,17 +7,19 @@ helpviewer_keywords:
 - JIT compilation, 64-bit
 - RyuJIT compiler
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
-ms.openlocfilehash: f059cbdd3b2a66ac8a668b7b8a80d9ad1551fa64
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 228c286f6c5620dc838df5002edc60863a0fe4e2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475230"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256600"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>軽減策:新しい 64 ビット JIT コンパイラ
+
 .NET Framework 4.6 以降では、ランタイムに Just-In-Time コンパイル用の新しい 64 ビット JIT コンパイラが含まれています。 この変更は、32 ビット JIT コンパイラでのコンパイルには影響しません。  
   
 ## <a name="unexpected-behavior-or-exceptions"></a>予期しない動作または例外  
+
  場合によっては、新しい 64 ビット JIT コンパイラでのコンパイルの結果、古い 64 ビット JIT コンパイラでコンパイルされたコードの実行時に監視されない動作が発生したり、ランタイム例外が発生したりすることがあります。 既知の相違には次のようなものがあります。  
   
 > [!IMPORTANT]
@@ -38,7 +40,9 @@ ms.locfileid: "86475230"
 - 特定の条件下では、`if` ステートメントを使用して、`try` ブロックの開始前と `try` ブロックの終了時の条件をテストし、同じ条件を `catch` または `finally` ブロックで評価する場合、新しい 64 ビット JIT コンパイラが、コードの最適化の際に `catch` または `finally` ブロックから `if` 条件を削除します。 その結果、`catch` または `finally` ブロックの `if` ステートメント内のコードは無条件で実行されます。  
   
 <a name="General"></a>
+
 ## <a name="mitigation-of-known-issues"></a>既知の問題の軽減策  
+
  上記の問題が発生する場合は、次のいずれかの方法で解決できます。  
   
 - .NET Framework 4.6.2 にアップグレードします。 .NET Framework 4.6.2 に含まれている新しい 64 ビット コンパイラは、これらの既知の問題のそれぞれに対処します。  
@@ -48,7 +52,9 @@ ms.locfileid: "86475230"
 - 古い 64 ビット JIT コンパイラでコンパイルします。 この方法の詳細については、「[その他の問題の軽減策](#Other)」を参照してください。  
   
 <a name="Other"></a>
+
 ## <a name="mitigation-of-other-issues"></a>その他の問題の軽減策  
+
  古い 64 ビット コンパイラと新しい 64 ビット JIT コンパイラでコンパイルされたコードの動作、またはアプリのデバッグ バージョンとリリース バージョン (両方とも新しい 64 ビット JIT コンパイラでコンパイル) の動作に違いが見られる場合は、次のようにして、古い 64 ビット JIT コンパイラでアプリをコンパイルすることができます。  
   
 - アプリケーションごとに、アプリケーションの構成ファイルに [\<useLegacyJit>](../configure-apps/file-schema/runtime/uselegacyjit-element.md) 要素を追加できます。 次のように新しい 64 ビット JIT コンパイラでのコンパイルを無効にし、代わりに従来の 64 ビット JIT コンパイラを使用します。  

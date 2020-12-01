@@ -10,14 +10,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-ms.openlocfilehash: f2a508b87d2f4a9ad92bc0f27fc44d74d8e916d3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3e18bb5c4caa43a8e951eed3fc6992ec1b2d2afb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555277"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256655"
 ---
 # <a name="default-marshaling-behavior"></a>既定のマーシャリングの動作
+
 相互運用マーシャリングは、メソッドのパラメーターに関連付けられたデータが、マネージド メモリとアンマネージド メモリの間で渡されるときに、どのように動作するかを指示する規則に従って機能します。 これらの組み込みの規則は、データ型の変換などのマーシャリング動作、呼び出し先が渡されたデータを変更してその変更を呼び出し元にこ返すことが可能かどうか、およびどのような状況のときにマーシャラーがパフォーマンスの最適化を実現するかを制御します。  
   
  このセクションでは、相互運用マーシャリング サービスの既定の動作特性を示します。 ここでは、配列、ブール型、char 型、デリゲート、クラス、オブジェクト、文字列、および構造体のマーシャリングに関する詳細情報を示します。  
@@ -26,6 +27,7 @@ ms.locfileid: "90555277"
 > ジェネリック型のマーシャリングはサポートされていません。 詳しくは、「[ジェネリック型を使用する相互運用](/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))」を参照してください。  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>相互運用マーシャラーによるメモリ管理  
+
  相互運用マーシャラーは、アンマネージ コードによって割り当てられたメモリを常に解放しようとします。 この動作は、COM メモリの管理規則に準拠していますが、ネイティブ C++ を制御する規則とは異なります。  
   
  ネイティブ C++ の動作 (メモリを解放しない) を予期している場合、ポインターのメモリを自動的に解放するプラットフォーム呼び出しを使用すると、混乱が生じることがあります。 たとえば、C++ DLL からの次のアンマネージ メソッドを呼び出しても、メモリは自動的に解放されません。  
@@ -43,12 +45,15 @@ BSTR MethodOne (BSTR b) {
  ランタイムは、常に **CoTaskMemFree** メソッドを使用してメモリを解放します。 使用しているメモリが **CoTaskMemAlloc** メソッドで割り当てられていない場合、**IntPtr** を使用し、適切なメソッドを使用して手動でメモリを解放する必要があります。 同様に、カーネル メモリへのポインターを返す **GetCommandLine** 関数を Kernel32.dll から使用するときなど、メモリを解放してはいけない状況のときには、自動的なメモリの解放を防止できます。 手動でメモリを解放する方法について詳しくは、「[Buffers サンプル](/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))」を参照してください。  
   
 ## <a name="default-marshaling-for-classes"></a>クラスに対する既定のマーシャリング  
+
  クラスは、COM 相互運用でのみマーシャリングすることができ、常にインターフェイスとしてマーシャリングされます。 クラスをマーシャリングするために使用されるインターフェイスが、クラス インターフェイスと呼ばれる場合があります。 クラス インターフェイスを任意のインターフェイスでオーバーライドする方法について詳しくは、「[クラス インターフェイスの概要](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)」をご覧ください。  
   
 ### <a name="passing-classes-to-com"></a>クラスを COM に渡す  
+
  マネージド クラスが COM に渡されると、相互運用マーシャラーは自動的にクラスを COM プロキシでラップし、プロキシによって生成されたクラス インターフェイスを COM メソッド呼び出しに渡します。 その後、プロキシは、クラス インターフェイス上のすべての呼び出しを、マネージド オブジェクトにデリゲートして戻します。 プロキシはまた、クラスによって明示的に実装されていない他のインターフェイスも公開します。 プロキシは、クラスの代わりに、**IUnknown** や **IDispatch** などのインターフェイスを自動的に実装します。  
   
 ### <a name="passing-classes-to-net-code"></a>クラスを .NET Code に渡す  
+
  コクラスは、通常、COM のメソッド引数として使用されません。 代わりに、通常は既定のインターフェイスがコクラスの代わりに渡されます。  
   
  インターフェイスがマネージド コードに渡されると、相互運用マーシャラーは、インターフェイスを適切なラッパーでラップし、そのラッパーをマネージド メソッドに渡すことを担当します。 どのラッパーを使用するかは難しい判断となることがあります。 COM オブジェクトのすべてのインスタンスは、オブジェクトが実装するインターフェイスの数に関係なく、1 つの一意のラッパーを持ちます。 たとえば、5 つの異なるインターフェイスを実装する 1 つの COM オブジェクトには 1 つのラッパーだけがあります。 同一のラッパーが、5 つのすべてのインターフェイスを公開します。 COM オブジェクトの 2 つのインスタンスが作成される場合、ラッパーの 2 つのインスタンスが作成されます。  
@@ -70,6 +75,7 @@ BSTR MethodOne (BSTR b) {
 3. マーシャラーは、まだクラスを識別できない場合には、**System.__ComObject** と呼ばれるジェネリック ラッパー クラスを使用してインターフェイスをラップします。  
   
 ## <a name="default-marshaling-for-delegates"></a>デリゲートに対する既定のマーシャリング  
+
  マネージド デリゲートは、呼び出し元のメカニズムに基づいて、COM インターフェイスまたは関数ポインターとしてマーシャリングされます。  
   
 - プラットフォーム呼び出しの場合、デリゲートは、既定でアンマネージ関数ポインターとしてマーシャリングされます。  
@@ -161,6 +167,7 @@ internal class DelegateTest {
 ```  
   
 ## <a name="default-marshaling-for-value-types"></a>値型に対する既定のマーシャリング  
+
  整数や浮動小数点数など、ほとんどの値型は、[blittable](blittable-and-non-blittable-types.md) であり、マーシャリングを必要としません。 その他の [non-blittable](blittable-and-non-blittable-types.md) 型は、マネージド メモリとアンマネージド メモリに類似しない表現があり、マーシャリングが必要です。 さらに他の型は、相互運用性の境界を越えて、明示的な書式設定が必要です。  
   
  このセクションでは、次の書式設定された値に関する情報を提供します。  
@@ -186,6 +193,7 @@ internal class DelegateTest {
      メンバーが、各フィールドに指定された <xref:System.Runtime.InteropServices.FieldOffsetAttribute> に基づいてレイアウトされることを示します。  
   
 ### <a name="value-types-used-in-platform-invoke"></a>プラットフォーム呼び出しで使用される値型  
+
  次の例では、`Point` と `Rect` 型が、**StructLayoutAttribute** を使用してメンバーのレイアウト情報を提供します。  
   
 ```vb  
@@ -330,6 +338,7 @@ public class Point {
 ```  
   
 ### <a name="value-types-used-in-com-interop"></a>COM 相互運用で使用される値型  
+
  書式指定された型は、COM 相互運用のメソッドの呼び出しに渡すこともできます。 実際には、タイプ ライブラリにエクスポートされると、値型は構造体に自動的に変換されます。 次の例に示すように、`Point` 値型は `Point` という名前の型定義 (typedef) になります。 タイプ ライブラリ内の他の場所にある `Point` 値型へのすべての参照は、`Point` typedef に置き換えられます。  
   
  **タイプ ライブラリの表現**  
@@ -353,6 +362,7 @@ interface _Graphics {
 > <xref:System.Runtime.InteropServices.LayoutKind> 列挙値が **Explicit** に設定された構造体は、エクスポートされたタイプ ライブラリが明示的なレイアウトを表現できないので、COM 相互運用で使用することはできません。  
   
 ### <a name="system-value-types"></a>システムの値型  
+
  <xref:System> 名前空間には、ランタイムのプリミティブ型のボックス化された形式を表す、いくつかの値型があります。 たとえば、値型 <xref:System.Int32?displayProperty=nameWithType> 構造体は、**ELEMENT_TYPE_I4** のボックス化された形式を表します。 これらの型は、書式設定された他の型のように構造体としてマーシャリングするのではなく、それらがボックス化するプリミティブ型と同じ方法でマーシャリングします。 そのため、**System.Int32** は、**long** 型の 1 つのメンバーを含む構造体としてではなく、**ELEMENT_TYPE_I4** としてマーシャリングされます。 次の表には、プリミティブ型のボックス化された表現である、**System** 名前空間にある値型の一覧が含まれています。  
   
 |システムの値型|要素型|  

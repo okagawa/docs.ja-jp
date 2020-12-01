@@ -3,17 +3,19 @@ title: '軽減策: アプリ ドメイン全体でのオブジェクトの逆シ
 description: アプリ ドメイン全体で論理呼び出しコンテキストのオブジェクトを逆シリアル化しようとすると例外がスローされる問題を診断し、軽減する方法について説明します。
 ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
-ms.openlocfilehash: 20ea0f2f0b49000b7d1993adb583a803d9f5be6c
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 1b8060870962ddd26d90c4152a270a65936c2af3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475243"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256639"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>軽減策:アプリ ドメイン全体でのオブジェクトの逆シリアル化
+
 場合によっては、アプリが異なるアプリケーション ベースを持つ複数のアプリ ドメインを使用すると、アプリ ドメイン間で論理呼び出しコンテキストのオブジェクトを逆シリアル化しようとして、例外がスローされます。  
   
 ## <a name="diagnosing-the-issue"></a>問題の診断  
+
  問題は、次の条件の順序で発生します。  
   
 1. アプリケーションが異なるアプリケーション ベースを持つ複数のアプリ ドメインを使用します。  
@@ -37,6 +39,7 @@ ms.locfileid: "86475243"
 6. 論理呼び出しコンテキストに含まれる型が既定のアプリ ドメインで解決できないため、例外がスローされます。  
   
 ## <a name="mitigation"></a>軽減策  
+
  この問題を回避するには、次を実行します  
   
 1. 例外がスローされたときにコール スタックで `get_Evidence` の呼び出しを検索します。 この例外は、<xref:System.IO.FileNotFoundException> や <xref:System.Runtime.Serialization.SerializationException> などの例外の大きなサブセットであることもあります。  

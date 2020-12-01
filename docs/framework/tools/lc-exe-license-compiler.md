@@ -13,14 +13,15 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 45a80ba7c3e24c0f419758315b2d2daafd3890f4
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: d1644ff4d69c857e36e87f7e83f668908b7ba021
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164253"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275763"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (ライセンス コンパイラ)
+
 ライセンス コンパイラは、ライセンス情報を含むテキスト ファイルを読み込んで、バイナリ ファイルを生成します。このバイナリ ファイルは、リソースとして共通言語ランタイムの実行可能ファイルに埋め込むことができます。  
   
  .licx テキスト ファイルは、ライセンスされたコントロールがフォームに追加されると、Windows フォーム デザイナーによって自動的に生成または更新されます。 プロジェクト システムは、コンパイルの過程で、.licx テキスト ファイルを、.NET のコントロール ライセンス サポートを提供する .licenses バイナリのリソースに変換します。 バイナリのリソースは、その後、プロジェクト出力に埋め込まれます。  
@@ -78,6 +79,7 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
 ```  
   
 ## <a name="response-file-example"></a>応答ファイルの例  
+
  次のリストは、`response.rsp` 応答ファイルの例を示しています。 応答ファイルの詳細については、「[応答ファイル](/visualstudio/msbuild/msbuild-response-files)」をご覧ください。  
   
 ```text  

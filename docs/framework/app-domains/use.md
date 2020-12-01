@@ -7,12 +7,12 @@ helpviewer_keywords:
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-ms.openlocfilehash: df2a63716904ebfc6ee163121a1f07e53aa07514
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 36bfc60a55c8b0374a7e542b590aa7c030ceaed6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105189"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272268"
 ---
 # <a name="using-application-domains"></a>アプリケーション ドメインの使用
 
@@ -55,6 +55,7 @@ ms.locfileid: "85105189"
 アプリケーション ドメインを表現します。 アプリケーション ドメインの作成と制御に使用するメソッドについて説明します。  
   
 ## <a name="related-sections"></a>関連項目  
+
 [.NET のアセンブリ](../../standard/assembly/index.md)  
 アセンブリで実行される関数の概要について説明します。  
   

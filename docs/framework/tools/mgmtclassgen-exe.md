@@ -12,14 +12,15 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-ms.openlocfilehash: 89facd4369dad6168e46febd3e34d7f7c235faf0
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 1dea4b0b94053919169abb639ff48ecd3abbd66c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517296"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279156"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (厳密型クラス ジェネレーター)
+
 厳密型クラス ジェネレーター (Mgmtclassgen.exe) ツールを使用すると、指定した WMI (Windows Management Instrumentation) クラスに対して、事前バインディングされたマネージド クラスをすばやく生成できます。 生成されたクラスを使用すると、WMI クラスのインスタンスにアクセスするために書く必要のあるコードを簡略化できます。  
   
 ## <a name="syntax"></a>構文  
@@ -37,14 +38,15 @@ WMIClass [options]
 |------------|-----------------|  
 |**/l**  *language*|事前バインディングされたマネージド クラスの生成に使用する言語を指定します。 language 引数として **CS** (C#、既定値)、**VB** (Visual Basic)、**MC** (C++)、または **JS** (JScript) を指定できます。|  
 |**/m**  *machine*|WMI クラスが常駐する、接続先のコンピューターを指定します。 既定値はローカル コンピューターです。|  
-|**/n**  *path*|WMI クラスが含まれている WMI 名前空間へのパスを指定します。 このオプションを指定しない場合、このツールは既定の **Root\cimv2** 名前空間に *WMIClass*のコードを生成します。|  
-|**/o**  *classnamespace*|マネージド コード クラスを生成する先の .NET 名前空間を指定します。 このオプションを指定しない場合、このツールは WMI 名前空間およびスキーマ プリフィックスを使用して名前空間を指定します。 スキーマ プリフィックスはクラス名の一部で、アンダースコア (_) 文字の前に付きます。 たとえば、**Root\cimv2** 名前空間内の **Win32_OperatingSystem**クラスの場合、このツールは **ROOT.CIMV2.Win32** にクラスを生成します。|  
+|**/n**  *path*|WMI クラスが含まれている WMI 名前空間へのパスを指定します。 このオプションを指定しない場合、このツールは既定の **Root\cimv2** 名前空間に *WMIClass* のコードを生成します。|  
+|**/o**  *classnamespace*|マネージド コード クラスを生成する先の .NET 名前空間を指定します。 このオプションを指定しない場合、このツールは WMI 名前空間およびスキーマ プリフィックスを使用して名前空間を指定します。 スキーマ プリフィックスはクラス名の一部で、アンダースコア (_) 文字の前に付きます。 たとえば、**Root\cimv2** 名前空間内の **Win32_OperatingSystem** クラスの場合、このツールは **ROOT.CIMV2.Win32** にクラスを生成します。|  
 |**/p**  *filepath*|生成されたコードを保存するファイルへのパスを指定します。 このオプションを指定しない場合、このツールは現在のディレクトリにファイルを作成します。 *WMIClass* 引数を使用して生成したクラスと、そのクラスを保存したファイルには名前が付けられます。 クラスおよびファイルの名前は、*WMIClass* の名前と同じです。 *WMIClass* にアンダースコア (_) 文字が含まれている場合は、アンダースコア (_) 文字の後に続く、クラス名の一部が使用されます。 たとえば、*WMIClass* 名が **Win32_LogicalDisk** という形式の場合、生成されたクラスおよびファイルには "logicaldisk" という名前が付けられます。 ファイルが既に存在している場合は、既存のファイルが上書きされます。|  
 |**/pw**  *password*|**/m** オプションで指定したコンピューターにログオンするときに使用するパスワードを指定します。|  
 |**/u**  *user name*|**/m** オプションで指定したコンピューターにログオンするときに使用するユーザー名を指定します。|  
 |**/?**|このツールのコマンド構文とオプションを表示します。|  
   
 ## <a name="remarks"></a>Remarks  
+
  Mgmtclassgen.exe は、<xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType> メソッドを使用します。 したがって、任意のカスタム コード プロバイダーを使用して、C#、Visual Basic、および JScript 以外のマネージド言語でコードを生成できます。  
   
  生成されたクラスは、それらのクラスを生成する目的となったスキーマにバインドされます。 基になるスキーマが変更された場合に、その変更をこのスキーマに反映するには、クラスを生成し直す必要があります。  
@@ -93,6 +95,7 @@ WMIClass [options]
  WMI の詳細については、プラットフォーム SDK の「**Windows Management Instrumentation**」のトピックを参照してください。  
   
 ## <a name="examples"></a>使用例  
+
  **Root\cimv2** 名前空間内の **Win32_LogicalDisk** WMI クラスに対してマネージド クラスを C# コードで生成するコマンドを次に示します。 このツールは、**ROOT.CIMV2.Win32** 名前空間内の c:\disk.cs にあるソース ファイルにマネージド クラスを書き込みます。  
   
 ```console  

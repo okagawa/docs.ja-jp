@@ -5,14 +5,15 @@ ms.date: 09/07/2017
 helpviewer_keywords:
 - COM interop, data marshaling
 - marshaling data, COM interop
-ms.openlocfilehash: 94149e0c444cad7e32f959eaedd55bf14acb1ecb
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bcbd2c50fcbd9af3f2eead57ac2e26f8db0c6ad6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547845"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275945"
 ---
 # <a name="marshaling-data-with-com-interop"></a>COM 相互運用機能によるデータのマーシャリング
+
 COM 相互運用は、マネージド コードから COM オブジェクトを使用すること、およびマネージド オブジェクトを COM に公開することの、両方の操作をサポートします。 COM との間でデータをマーシャリングする操作のサポートは広範で、ほとんどの場合、正しいマーシャリング動作が提供されます。  
   
  Windows SDK には、以下の COM 相互運用ツールが含まれています。  
@@ -24,12 +25,14 @@ COM 相互運用は、マネージド コードから COM オブジェクトを�
  以下のセクションは、マーシャラーに追加の型情報を提供できる (またはその必要がある) ときに、相互運用ラッパーをカスタマイズするためのプロセスについて説明するトピックにリンクしています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
 [方法: ラッパーを手動で作成する](how-to-create-wrappers-manually.md) マネージド ソース コードにおいて COM ラッパーを手動で作成する方法について説明します。
 
  [方法: マネージド コード DCOM を WCF に移行する](how-to-migrate-managed-code-dcom-to-wcf.md)  
  最も安全なソリューションのために、マネージド DCOM コードを WCF に移行する方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [COM のデータ型](/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))  
  対応するマネージドとアンマネージドのデータ型を提供します。  
   

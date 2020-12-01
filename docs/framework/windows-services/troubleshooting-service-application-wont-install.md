@@ -10,14 +10,15 @@ helpviewer_keywords:
 - troubleshooting NT services
 - Windows Service applications, troubleshooting
 ms.assetid: 45c48e2e-b97d-44bc-8896-14f328e0ce33
-ms.openlocfilehash: d606adc7fddeb9f7e76a6974699c2455eda084b2
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 02ac95c22007caa6e30300fb8a98178f11cecd14
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608882"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270355"
 ---
 # <a name="troubleshooting-service-application-wont-install"></a>トラブルシューティング:サービス アプリケーションをインストールできない場合
+
 サービス アプリケーションが正しくインストールされない場合は、サービス クラスの <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> プロパティが、そのサービスのインストーラーで示されているのと同じ値に設定されていることを確認します。 サービスが正しくインストールされるためには、両方のインスタンスで同じ値になっている必要があります。  
   
 > [!NOTE]

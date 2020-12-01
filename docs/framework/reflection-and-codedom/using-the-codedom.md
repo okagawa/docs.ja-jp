@@ -21,14 +21,15 @@ helpviewer_keywords:
 - code generators
 - CodeDOM, graphs
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
-ms.openlocfilehash: 7a730a828488fd3ca04419588b3f32703dfda1c9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f2481aa0423615f5f5925bde7cae3ad170ca8533
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541735"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259181"
 ---
 # <a name="using-the-codedom"></a>CodeDOM の使用方法
+
 CodeDOM には一般的なさまざま種類のソース コード要素を表す型が用意されています。 オブジェクト グラフをアセンブルする CodeDOM 要素を使用すると、ソース コード モデルを構築するプログラムをデザインできます。 このオブジェクト グラフは、サポートされているプログラミング言語用の CodeDOM コード ジェネレーターを使用して、ソース コードとしてレンダリングできます。 また、CodeDOM を使用して、ソース コードをバイナリ アセンブリにコンパイルすることもできます。  
   
  CodeDOM の一般的な使用方法の例は次のとおりです。  
@@ -38,15 +39,19 @@ CodeDOM には一般的なさまざま種類のソース コード要素を表�
 - 動的コンパイル。1 つ以上の言語でのコードのコンパイルをサポートします。  
   
 ## <a name="building-a-codedom-graph"></a>CodeDOM グラフの構築  
+
  <xref:System.CodeDom> 名前空間には、言語の構文に依存しない、ソース コードの論理構造を表すクラスが用意されています。  
   
 ### <a name="the-structure-of-a-codedom-graph"></a>CodeDOM グラフの構造  
+
  CodeDOM グラフの構造はコンテナーのツリーに似ています。 コンパイル可能な CodeDOM グラフの最上位のコンテナー、つまりルートのコンテナーは <xref:System.CodeDom.CodeCompileUnit> です。 ソース コード モデルの各要素は、CodeDOM グラフ内の <xref:System.CodeDom.CodeObject> のプロパティを通じて CodeDOM グラフにリンクされている必要があります。  
   
 ### <a name="building-a-source-code-model-for-a-sample-hello-world-program"></a>サンプルの Hello World プログラム用ソース コード モデルの構築  
+
  単純な Hello World アプリケーションのコードを表す CodeDOM オブジェクト グラフを構築する手順の例を次に示します。 このコード サンプルのソース コード例全体については、「<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>」を参照してください。  
   
 #### <a name="creating-a-compile-unit"></a>コンパイル単位の作成  
+
  CodeDOM は、<xref:System.CodeDom.CodeCompileUnit> と呼ばれるオブジェクトを定義します。このオブジェクトでは、コンパイルするソース コードをモデル化した CodeDOM オブジェクト グラフを参照できます。 **CodeCompileUnit** には、属性、名前空間、およびアセンブリへの参照を格納するためのプロパティが用意されています。  
   
  <xref:System.CodeDom.Compiler.CodeDomProvider> クラスから派生する CodeDom プロバイダーには、**CodeCompileUnit** が参照するオブジェクト グラフを処理するメソッドが含まれています。  
@@ -62,6 +67,7 @@ CodeDOM には一般的なさまざま種類のソース コード要素を表�
  <xref:System.CodeDom.CodeSnippetCompileUnit> には、既に対象言語で記述されているソース コードのセクションを格納できますが、この単位は別の言語にはレンダリングできません。  
   
 #### <a name="defining-a-namespace"></a>名前空間の定義  
+
  名前空間を定義するには、<xref:System.CodeDom.CodeNamespace> を作成してから、適切なコンストラクターを使用するか **Name** プロパティを設定することにより、定義する名前空間の名前を割り当てます。  
   
  [!code-cpp[CodeDomExample#13](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#13)]
@@ -69,6 +75,7 @@ CodeDOM には一般的なさまざま種類のソース コード要素を表�
  [!code-vb[CodeDomExample#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#13)]  
   
 #### <a name="importing-a-namespace"></a>名前空間のインポート  
+
  名前空間のインポート ディレクティブを名前空間に追加するには、インポートする名前空間を示す <xref:System.CodeDom.CodeNamespaceImport> を **CodeNamespace.Imports** コレクションに追加します。  
   
  **System** 名前空間のインポートを、`samples` という名前の **CodeNamespace** の **Imports** コレクションに追加するコードを次に示します。  
@@ -78,6 +85,7 @@ CodeDOM には一般的なさまざま種類のソース コード要素を表�
  [!code-vb[CodeDomExample#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#14)]  
   
 #### <a name="linking-code-elements-into-the-object-graph"></a>コード要素のオブジェクト グラフへのリンク  
+
  CodeDOM グラフを形成するすべてのコード要素は、CodeDOM グラフのルート オブジェクトのプロパティから直接参照される要素間の一連の参照によって、ツリーのルート要素である <xref:System.CodeDom.CodeCompileUnit> にリンクする必要があります。 オブジェクトをコンテナー オブジェクトのプロパティに設定し、コンテナー オブジェクトからの参照を確立します。  
   
  `samples` **CodeNamespace** をルートの **CodeCompileUnit** の **Namespaces** コレクション プロパティに追加するステートメントを次に示します。  
@@ -87,6 +95,7 @@ CodeDOM には一般的なさまざま種類のソース コード要素を表�
  [!code-vb[CodeDomExample#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#15)]  
   
 #### <a name="defining-a-type"></a>型の定義  
+
  CodeDOM を使ってクラス、構造体、インターフェイス、または列挙体を宣言するには、新しい <xref:System.CodeDom.CodeTypeDeclaration> を作成し、名前を割り当てます。 このために、**Name** プロパティを設定するコンストラクターのオーバーロードを使用する例を次に示します。  
   
  [!code-cpp[CodeDomExample#16](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#16)]
@@ -102,9 +111,11 @@ CodeDOM には一般的なさまざま種類のソース コード要素を表�
  [!code-vb[CodeDomExample#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#17)]  
   
 #### <a name="adding-class-members-to-a-class"></a>クラスへのクラス メンバーの追加  
+
  <xref:System.CodeDom> 名前空間には、クラス メンバーを表すために使用できるさまざまな要素が用意されています。 各クラス メンバーは、<xref:System.CodeDom.CodeTypeDeclaration> の **Members** コレクションに追加できます。  
   
 #### <a name="defining-a-code-entry-point-method-for-an-executable"></a>実行可能プログラムのコード エントリ ポイント メソッドの定義  
+
  実行可能プログラムのコードを記述する場合は、プログラムの実行を開始するメソッドを表す <xref:System.CodeDom.CodeEntryPointMethod> を作成して、プログラムのエントリ ポイントを指定する必要があります。  
   
  "Hello World!" と出力するための **System.Console.WriteLine** を呼び出す <xref:System.CodeDom.CodeMethodInvokeExpression> を格納しているエントリ ポイント メソッドを定義する例を次に示します。  
@@ -122,6 +133,7 @@ CodeDOM には一般的なさまざま種類のソース コード要素を表�
  これで、<xref:System.CodeDom.CodeCompileUnit> という名前の `compileUnit` に、簡単な Hello World プログラムの CodeDOM グラフが追加されました。 CodeDOM グラフからのコードの生成およびコンパイルについては、「[CodeDOM グラフからのソース コードの生成およびプログラムのコンパイル](generating-and-compiling-source-code-from-a-codedom-graph.md)」を参照してください。  
   
 ### <a name="more-information-on-building-a-codedom-graph"></a>CodeDOM グラフの構築に関する詳細  
+
  CodeDOM では、共通言語ランタイムをサポートするプログラミング言語の一般的なさまざまな種類のコード要素をサポートします。 CodeDOM は、プログラミング言語のすべての機能を表す要素を提供するようにはデザインされていません。 CodeDOM 要素で簡単に表すことができないコードは、<xref:System.CodeDom.CodeSnippetExpression>、<xref:System.CodeDom.CodeSnippetStatement>、<xref:System.CodeDom.CodeSnippetTypeMember>、または <xref:System.CodeDom.CodeSnippetCompileUnit> にカプセル化できます。 ただし、CodeDOM ではコードを自動的に他の言語に変換することはできません。  
   
  CodeDOM のそれぞれの型については、<xref:System.CodeDom> 名前空間の説明を参照してください。  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-ms.openlocfilehash: 2e71dc177a0358370c7eecde03d9388cced60b75
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: d10af40420c1ab9ab177514c0babeaf5cea96922
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957438"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259077"
 ---
 # <a name="create-resource-files-for-net-apps"></a>.NET アプリ用のリソース ファイルを作成する
 
@@ -33,6 +33,7 @@ ms.locfileid: "88957438"
 - [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) を使用してリソース ファイルを作成し、そのファイルをプロジェクトに追加します。 Visual Studio には、リソースを追加、削除、および変更するためのリソース エディターがあります。 コンパイル時には、リソース ファイルが自動的にバイナリ .resources ファイルに変換されて、アプリケーション アセンブリまたはサテライト アセンブリに埋め込まれます。 詳細については、「[Visual Studio のリソース ファイル](creating-resource-files-for-desktop-apps.md#VSResFiles)」を参照してください。
 
 <a name="TextFiles"></a>
+
 ## <a name="resources-in-text-files"></a>テキスト ファイル内のリソース
 
 テキスト (.txt または .restext) ファイルを使用して格納できるのは、文字列リソースのみです。 文字列以外のリソースの場合は、.resx ファイルを使用するか、またはプログラムで作成します。 文字列リソースを格納するテキスト ファイルの形式は次のとおりです。
@@ -77,7 +78,7 @@ HelpMenuName=Help
 EmptyString=
 ```
 
- .NET Framework 4.5 以降および .NET Core のすべてのバージョンでは、`#ifdef`*symbol*... `#endif` および `#if !`*symbol*... `#endif` コンストラクトを使用した条件付きコンパイルが、テキスト ファイルでサポートされています。 次に、`/define` スイッチと[リソース ファイル ジェネレーター (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) を使用して、シンボルを定義できます。 各リソースには、独自の `#ifdef`*symbol*... `#endif` または `#if !`*symbol*... `#endif` コンストラクトが必要です。 `#ifdef` ステートメントを使用した場合、*シンボル*を定義した場合に関連付けられたリソースが .resources ファイルに追加されます。定義していない場合は追加されません。 `#if !` ステートメントを使用した場合、*シンボル*を定義していない場合に関連付けられたリソースが .resources ファイルに追加されます。定義した場合は追加されません。
+ .NET Framework 4.5 以降および .NET Core のすべてのバージョンでは、`#ifdef`*symbol*... `#endif` および `#if !`*symbol*... `#endif` コンストラクトを使用した条件付きコンパイルが、テキスト ファイルでサポートされています。 次に、`/define` スイッチと[リソース ファイル ジェネレーター (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) を使用して、シンボルを定義できます。 各リソースには、独自の `#ifdef`*symbol*... `#endif` または `#if !`*symbol*... `#endif` コンストラクトが必要です。 `#ifdef` ステートメントを使用した場合、*シンボル* を定義した場合に関連付けられたリソースが .resources ファイルに追加されます。定義していない場合は追加されません。 `#if !` ステートメントを使用した場合、*シンボル* を定義していない場合に関連付けられたリソースが .resources ファイルに追加されます。定義した場合は追加されません。
 
  テキスト ファイルでは、コメントはオプションです。コメントの行頭にはセミコロン (;) またはシャープ記号 (#) が付きます。 コメントの行はファイル内の任意の場所に配置できます。 [リソース ファイル ジェネレーター (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) を使用して作成されたコンパイル済みの .resources ファイルにはコメントが含まれません。
 
@@ -135,7 +136,9 @@ csc greeting.cs -resource:GreetingResources.resources
 ```
 
 <a name="ResxFiles"></a>
+
 ## <a name="resources-in-resx-files"></a>.resx ファイル内のリソース
+
  文字列リソースのみの格納が可能なテキスト ファイルとは異なり、XML リソース (.resx) ファイルは文字列、バイナリ データ (イメージ、アイコン、オーディオ クリップなど)、およびプログラム オブジェクトを格納できます。 .resx ファイルには、リソース エントリの形式を説明し、データの解析に使用する XML のバージョン管理情報を示す標準ヘッダーが含まれます。 XML ヘッダーの後に、リソース ファイル データが続きます。 各データ項目は、`data` タグに含まれる名前と値のペアで構成されます。 `name` 属性ではリソース名を定義し、入れ子になった `value` タグにはリソースの値を格納します。 文字列データの場合は、`value` タグに文字列が格納されます。
 
  たとえば、次の `data` タグでは、`prompt` という名前の文字列リソースを定義します。このリソースの値は "Enter your name:" です。
@@ -174,6 +177,7 @@ csc greeting.cs -resource:GreetingResources.resources
 > .resx ファイルは定義されている形式の整形式 XML で構成する必要があるため、特に文字列以外のリソースが .resx ファイルに格納されている場合に、.resx ファイルを手動で操作することはお勧めしません。 代わりに、[Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) では、.resx ファイルを作成および操作するための透過的なインターフェイスが提供されています。 詳細については、「[Visual Studio のリソース ファイル](creating-resource-files-for-desktop-apps.md#VSResFiles)」を参照してください。 .resx ファイルは、プログラムによって作成および操作することもできます。 詳細については、「[プログラムによる .resx ファイルの使用](working-with-resx-files-programmatically.md)」を参照してください。
 
 <a name="ResourcesFiles"></a>
+
 ## <a name="resources-in-resources-files"></a>.resources ファイル内のリソース
 
 <xref:System.Resources.ResourceWriter?displayProperty=nameWithType> クラスを使用すると、プログラムによってコードから直接、バイナリ リソース (.resources) ファイルを作成できます。 また、[リソース ファイル ジェネレーター (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) を使用して、テキスト ファイルまたは .resx ファイルから .resources ファイルを作成することもできます。 .resources ファイルには、文字列データに加えて、バイナリ データ (バイト配列) およびオブジェクト データを格納できます。 .resources ファイルをプログラムによって作成するには、次の手順が必要です。
@@ -195,6 +199,7 @@ csc greeting.cs -resource:GreetingResources.resources
  作成した .resources ファイルは、言語コンパイラの `/resource` スイッチを追加してランタイム実行可能ファイルまたはライブラリに埋め込むか、[アセンブリ リンカー (Al.exe)](../tools/al-exe-assembly-linker.md) を使用してサテライト アセンブリに埋め込むことができます。
 
 <a name="VSResFiles"></a>
+
 ## <a name="resource-files-in-visual-studio"></a>Visual Studio でのリソース ファイル
 
 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) プロジェクトにリソース ファイルを追加すると、プロジェクト ディレクトリに .resx ファイルが作成されます。 Visual Studio には、文字列、イメージ、およびバイナリ オブジェクトを追加するためのリソース エディターがあります。 このエディターは静的データのみを処理するように設計されているので、プログラム オブジェクトを格納するために使用することはできません。オブジェクト データは、.resx ファイルまたは .resources ファイルにプログラムによって書き込む必要があります。 詳しくは、「[プログラムによる .resx ファイルの使用](working-with-resx-files-programmatically.md)」および「[.resources ファイル内のリソース](creating-resource-files-for-desktop-apps.md#ResourcesFiles)」セクションをご覧ください。

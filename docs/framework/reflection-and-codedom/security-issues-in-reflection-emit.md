@@ -12,14 +12,15 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: 62bce7435887855f799d320736e6bce8f39e5999
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 859c564e107fd3a9b219d71dc6ac5ccdf6e9d690
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558798"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259279"
 ---
 # <a name="security-issues-in-reflection-emit"></a>リフレクション出力のセキュリティ関連事項
+
 .NET Framework には、Microsoft Intermediate Language (MSIL) を出力する方法が 3 種類ありますが、それぞれに固有のセキュリティ問題があります。  
   
 - [動的アセンブリ](#Dynamic_Assemblies)  
@@ -34,7 +35,9 @@ ms.locfileid: "90558798"
 > コードでのリフレクションとコードの出力に必要なアクセス許可は、.NET Framework のリリースによって異なります。 このトピックの「[バージョン情報](#Version_Information)」をご覧ください。  
   
 <a name="Dynamic_Assemblies"></a>
+
 ## <a name="dynamic-assemblies"></a>動的アセンブリ  
+
  動的アセンブリを作成するには、<xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> メソッドのオーバーロードを使用します。 コンピューター全体のセキュリティ ポリシーが削除されたため、このメソッドのほとんどのオーバーロードは .NET Framework 4 では推奨されていません。 (「[セキュリティの変更](/previous-versions/dotnet/framework/security/security-changes)」をご覧ください。)残りのオーバーロードは、信頼レベルに関係なく、任意のコードによって実行できます。 これらのオーバーロードは 2 つのグループに分けられます。1 つは、動的アセンブリの作成時に適用する属性の一覧を指定するグループで、もう 1 つは属性の一覧を指定しないグループです。 アセンブリの透過性モデルを指定しない場合は、アセンブリの作成時に <xref:System.Security.SecurityRulesAttribute> 属性を適用することによって、出力アセンブリから透過性モデルが継承されます。  
   
 > [!NOTE]
@@ -48,6 +51,7 @@ ms.locfileid: "90558798"
  一時動的アセンブリはメモリ内に作成され、ディスクに保存されることがないため、ファイルへのアクセス許可は不要です。 動的アセンブリをディスクに保存するには、<xref:System.Security.Permissions.FileIOPermission> に適切なフラグを指定する必要があります。  
   
 ### <a name="generating-dynamic-assemblies-from-partially-trusted-code"></a>部分信頼コードからの動的アセンブリの生成  
+
  インターネット アクセス許可が設定されたアセンブリで一時動的アセンブリを生成し、そのコードを実行するための条件を考えてみましょう。  
   
 - 動的アセンブリで使用されるのが、パブリック型と他のアセンブリのメンバーのみである。  
@@ -59,7 +63,9 @@ ms.locfileid: "90558798"
 - デバッグ シンボルが生成されていない。 (`Internet` および `LocalIntranet` のアクセス許可セットに必要なアクセス許可が指定されていない)  
   
 <a name="Anonymously_Hosted_Dynamic_Methods"></a>
+
 ## <a name="anonymously-hosted-dynamic-methods"></a>匿名でホストされる動的メソッド  
+
  関連付けられる型やモジュールを指定しない 2 つの <xref:System.Reflection.Emit.DynamicMethod> コンストラクター (<xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%29> および <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29>) を使用して、匿名でホストされる動的メソッドを作成します。 このコンストラクターにより、システムで指定された完全に信頼される透過的セキュリティ アセンブリに動的メソッドが置かれます。 このコンストラクターの使用や動的メソッドのコード出力のために、特別なアクセス許可は必要ありません。  
   
  ただし、匿名でホストされる動的メソッドが作成されるとき、コール スタックがキャプチャされます。 メソッドの作成時に、キャプチャされたコール スタックに対してセキュリティ要求がなされます。  
@@ -82,6 +88,7 @@ ms.locfileid: "90558798"
  詳細については、<xref:System.Reflection.Emit.DynamicMethod> クラスを参照してください。  
   
 ### <a name="generating-anonymously-hosted-dynamic-methods-from-partially-trusted-code"></a>部分的に信頼されるコードによる匿名でホストされる動的メソッドの生成  
+
  インターネット アクセス許可が設定されたアセンブリで、匿名でホストされる動的メソッドを生成し、それを実行するための条件を考えてみましょう。  
   
 - 動的メソッドで使用されるのが、パブリックな型とメンバーのみである。 許可セットに <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> が含まれる場合、許可セットが出力元アセンブリの許可セットと同じか、またはそのサブセットであるアセンブリの非パブリックの型とメンバーを使用できます。  
@@ -92,7 +99,9 @@ ms.locfileid: "90558798"
 > 動的メソッドではデバッグ シンボルがサポートされていません。  
   
 <a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>
+
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>既存のアセンブリに関連付けられている動的メソッド  
+
  動的メソッドに既存アセンブリの型またはモジュールを関連付けるには、関連付ける型またはモジュールを指定する <xref:System.Reflection.Emit.DynamicMethod> コンストラクターのどれかを使用します。 動的メソッドに既存の型またはモジュールを関連付けると、動的メソッドが非パブリックの型とメンバーにアクセスできるようになるため、これらのコンストラクターを呼び出すにはアクセス許可が必要です。  
   
 - 型に関連付けられる動的メソッドは、その型のすべてのメンバー (プライベート メンバーを含む) にアクセスでき、関連付けられた型が含まれるアセンブリ内部のすべての型およびメンバーにアクセスできます。  
@@ -137,7 +146,9 @@ ms.locfileid: "90558798"
 > 動的メソッドではデバッグ シンボルがサポートされていません。  
   
 <a name="Version_Information"></a>
+
 ## <a name="version-information"></a>バージョン情報  
+
  .NET Framework 4 以降では、コンピューター全体のセキュリティ ポリシーが削除され、セキュリティ透過性が既定の適用機構になりました。 「[セキュリティの変更](/previous-versions/dotnet/framework/security/security-changes)」をご覧ください。  
   
  .NET Framework 2.0 Service Pack 1 以降では、動的アセンブリと動的メソッドを出力するときに、<xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> フラグを指定する必要がなくなりました。 このフラグは、それ以前のすべてのバージョンの .NET Framework では必要となります。  
@@ -150,6 +161,7 @@ ms.locfileid: "90558798"
  最終的に、.NET Framework 2.0 SP1 では、匿名でホストされるメソッドが導入されました。  
   
 ### <a name="obtaining-information-on-types-and-members"></a>型およびメンバーの情報の取得  
+
  .NET Framework 2.0 以降から、非パブリックな型とメンバーに関する情報を取得する際にアクセス許可は不要になりました。 動的メソッドを出力するために必要な情報を取得するには、リフレクションを使用します。 たとえば、<xref:System.Reflection.MethodInfo> オブジェクトを使用してメソッド呼び出しを出力します。 以前のバージョンの .NET Framework では、<xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> フラグを指定する必要があります。 詳しくは、「[リフレクションに関するセキュリティ上の考慮事項](security-considerations-for-reflection.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目

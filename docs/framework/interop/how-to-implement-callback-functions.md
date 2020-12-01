@@ -9,13 +9,15 @@ dev_langs:
 helpviewer_keywords:
 - callback function, implementing
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
-ms.openlocfilehash: 31c657372e760c8d57f9714b20178967ad85fcd3
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 9fa1d3b3ece334e109584f38ba69b796dfe24491
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619118"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267053"
 ---
 # <a name="how-to-implement-callback-functions"></a>方法: コールバック関数を実装する
+
 次の手順と例は、マネージド アプリケーションがプラットフォーム呼び出しを使用して、ローカル コンピューター上の各ウィンドウのハンドル値を出力する方法を示しています。 具体的には、この手順と例では **EnumWindows** 関数を使用してウィンドウのリストをステップスルーし、(CallBack という名前の) マネージド コールバック関数を使用してウィンドウ ハンドルの値を出力します。  
   
 ### <a name="to-implement-a-callback-function"></a>コールバック関数を実装するには  

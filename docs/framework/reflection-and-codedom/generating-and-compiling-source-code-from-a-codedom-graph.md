@@ -27,17 +27,19 @@ helpviewer_keywords:
 - compiling source code, multiple languages
 - CodeDOM, graphs
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
-ms.openlocfilehash: 3aad7b2ff047a2d9ad12c23d16773e482a395c10
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: aec7d6b44e63558ae70bc0eb41f94e55c8a6c325
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551198"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266338"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>CodeDOM グラフからのソース コードの生成およびコンパイル
+
 <xref:System.CodeDom.Compiler> 名前空間は、CodeDOM オブジェクト グラフからソース コードを生成し、サポートされているコンパイラでコンパイルを管理するためのインターフェイスを提供します。 コード プロバイダーは、CodeDOM グラフに基づいて、特定のプログラミング言語でソース コードを生成できます。 <xref:System.CodeDom.Compiler.CodeDomProvider> から派生したクラスは、通常、プロバイダーが対応している言語のコードを生成し、コンパイルするためのメソッドを提供します。  
   
 ## <a name="using-a-codedom-code-provider-to-generate-source-code"></a>CodeDOM コード プロバイダーを使用してソース コードを生成する  
+
  特定の言語でソース コードを生成するには、生成するソース コードの構造を表す CodeDOM グラフが必要です。  
   
  <xref:Microsoft.CSharp.CSharpCodeProvider> のインスタンスを作成する方法の例を次に示します。  
@@ -53,6 +55,7 @@ ms.locfileid: "90551198"
  [!code-vb[CodeDomExample#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#22)]  
   
 ## <a name="using-a-codedom-code-provider-to-compile-assemblies"></a>CodeDOM コード プロバイダーを使用してアセンブリをコンパイルする  
+
  **コンパイルを呼び出す**  
   
  CodeDom プロバイダーを利用してアセンブリをコンパイルするには、コンパイラが理解できる言語でコンパイルするソース コードか、コンパイルするソース コードの生成元になる CodeDOM グラフを用意する必要があります。  
@@ -90,6 +93,7 @@ ms.locfileid: "90551198"
  [!code-vb[CodeDomExample#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#23)]  
   
 ## <a name="languages-with-initial-support"></a>初期サポートの言語  
+
  .NET Framework は、C#、Visual Basic、C++、JScript のコード コンパイラとコード ジェネレーターを提供します。 CodeDOM のサポートは、言語固有のコード ジェネレーターとコード コンパイラを実装することで、他の言語に拡張できます。  
   
 ## <a name="see-also"></a>関連項目

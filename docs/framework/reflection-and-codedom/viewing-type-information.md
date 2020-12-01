@@ -12,17 +12,18 @@ helpviewer_keywords:
 - viewing type information
 - reflection, viewing type information
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
-ms.openlocfilehash: cd74021e1f1a79626e171db13def98e546cd51df
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 3baacbeca7f5cc50fbb720849aec273f996f86e7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865204"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259142"
 ---
 # <a name="viewing-type-information"></a>型情報の表示
-<xref:System.Type?displayProperty=nameWithType> クラスは、リフレクションの中心です。 共通言語ランタイムは、リフレクションの要求時に読み込まれる型の**型**を作成します。 **型**オブジェクトのメソッド、フィールド、プロパティ、および入れ子になったクラスから、その型に関することがすべてわかります。  
+
+<xref:System.Type?displayProperty=nameWithType> クラスは、リフレクションの中心です。 共通言語ランタイムは、リフレクションの要求時に読み込まれる型の **型** を作成します。 **型** オブジェクトのメソッド、フィールド、プロパティ、および入れ子になったクラスから、その型に関することがすべてわかります。  
   
- <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> または <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> を使用して、読み込まれていないアセンブリから**型**オブジェクトを取得します。これは、目的の型の名前で渡されます。 既に読み込まれているアセンブリから**型**オブジェクトを取得するには、<xref:System.Type.GetType%2A?displayProperty=nameWithType> を使用します。 <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> および <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType> は、モジュール**型**オブジェクトを取得します。  
+ <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> または <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> を使用して、読み込まれていないアセンブリから **型** オブジェクトを取得します。これは、目的の型の名前で渡されます。 既に読み込まれているアセンブリから **型** オブジェクトを取得するには、<xref:System.Type.GetType%2A?displayProperty=nameWithType> を使用します。 <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> および <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType> は、モジュール **型** オブジェクトを取得します。  
   
 > [!NOTE]
 > ジェネリック型およびメソッドをチェックして操作したい場合は、「[リフレクションとジェネリック型](reflection-and-generic-types.md)」および「[方法:リフレクションを使用してジェネリック型をチェックおよびインスタンス化する](how-to-examine-and-instantiate-generic-types-with-reflection.md)」に記載された追加情報を参照してください。  
@@ -33,19 +34,20 @@ ms.locfileid: "86865204"
  [!code-csharp[Conceptual.Types.ViewInfo#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source5.cs#6)]
  [!code-vb[Conceptual.Types.ViewInfo#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source5.vb#6)]  
   
- 次の例は、読み込まれたアセンブリからの**型**オブジェクトの取得を示しています。  
+ 次の例は、読み込まれたアセンブリからの **型** オブジェクトの取得を示しています。  
   
  [!code-cpp[Conceptual.Types.ViewInfo#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source5.cpp#7)]
  [!code-csharp[Conceptual.Types.ViewInfo#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source5.cs#7)]
  [!code-vb[Conceptual.Types.ViewInfo#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source5.vb#7)]  
   
- **型**を取得すると、その型のメンバーに関する情報をさまざまな方法で確認できます。 たとえば、その型の各メンバーについて説明した <xref:System.Reflection.MemberInfo> オブジェクトの配列を取得する <xref:System.Type.GetMembers%2A?displayProperty=nameWithType> メソッドを呼び出すことで、すべての型のメンバーについて確認できます。  
+ **型** を取得すると、その型のメンバーに関する情報をさまざまな方法で確認できます。 たとえば、その型の各メンバーについて説明した <xref:System.Reflection.MemberInfo> オブジェクトの配列を取得する <xref:System.Type.GetMembers%2A?displayProperty=nameWithType> メソッドを呼び出すことで、すべての型のメンバーについて確認できます。  
   
  **Type** クラスのメソッドを使用して、名前で指定した 1 つまたは複数のコンストラクター、メソッド、イベント、フィールド、プロパティに関する情報を取得することもできます。 たとえば、<xref:System.Type.GetConstructor%2A?displayProperty=nameWithType> は現在のクラスの特定のコンストラクターをカプセル化します。  
   
- **型**がある場合、<xref:System.Type.Module%2A?displayProperty=nameWithType> プロパティを使用して、その型が含まれるモジュールをカプセル化するオブジェクトを取得できます。 モジュールが含まれるアセンブリをカプセル化するオブジェクトを見つけるには、<xref:System.Reflection.Module.Assembly%2A?displayProperty=nameWithType> プロパティを使用します。 <xref:System.Type.Assembly%2A?displayProperty=nameWithType> プロパティを使用することで、型を直接カプセル化するアセンブリを取得できます。  
+ **型** がある場合、<xref:System.Type.Module%2A?displayProperty=nameWithType> プロパティを使用して、その型が含まれるモジュールをカプセル化するオブジェクトを取得できます。 モジュールが含まれるアセンブリをカプセル化するオブジェクトを見つけるには、<xref:System.Reflection.Module.Assembly%2A?displayProperty=nameWithType> プロパティを使用します。 <xref:System.Type.Assembly%2A?displayProperty=nameWithType> プロパティを使用することで、型を直接カプセル化するアセンブリを取得できます。  
   
 ## <a name="systemtype-and-constructorinfo"></a>System.Type および ConstructorInfo  
+
  次の例は、クラス (この場合は <xref:System.String> クラス) のコンストラクターを一覧表示する方法を示しています。  
   
  [!code-cpp[Conceptual.Types.ViewInfo#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source1.cpp#1)]
@@ -53,6 +55,7 @@ ms.locfileid: "86865204"
  [!code-vb[Conceptual.Types.ViewInfo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source1.vb#1)]  
   
 ## <a name="memberinfo-methodinfo-fieldinfo-and-propertyinfo"></a>MemberInfo、MethodInfo、FieldInfo、および PropertyInfo  
+
  <xref:System.Reflection.MemberInfo>、<xref:System.Reflection.MethodInfo>、<xref:System.Reflection.FieldInfo>、または <xref:System.Reflection.PropertyInfo> オブジェクトを使用して型のメソッド、プロパティ、イベント、およびフィールドに関する情報を取得します。  
   
  次の例では、**MemberInfo** を使用して **System.IO.File** クラスのメンバー数を一覧表示し、<xref:System.Type.IsPublic%2A> プロパティを使用してクラスの可視性を決定しています。  

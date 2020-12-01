@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d8c90785-f16b-42a5-8439-ed2f731b2ba8
-ms.openlocfilehash: 15b1912a7bd951df7f3c14eb96251c2bdf237b4f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: fd163c115dcd19c05f93f4c202b043440834ba9d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502458"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266741"
 ---
 # <a name="how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest"></a>方法: WebRequest に一致するプロトコル固有の WebResponse を取得する
+
 この例では、WebRequest に一致するプロトコル固有の WebResponse を取得する方法を説明します。  
   
 ## <a name="example"></a>例  
@@ -29,6 +30,7 @@ Dim resp As WebResponse = req.GetResponse()
 ```  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
+
  この例で必要な要素は次のとおりです。  
   
 - **System.Net** 名前空間への参照。  

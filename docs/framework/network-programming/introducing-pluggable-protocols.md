@@ -23,17 +23,19 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: 0bc2d0d005e50b04aff360866a146f6fe6b0ea02
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5b61497963e785ffe8e4c04db5b54dfb2500eed8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502354"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279637"
 ---
 # <a name="introducing-pluggable-protocols"></a>プラグ可能なプロトコルの概要
+
 Microsoft .NET Framework は、アプリケーションにすばやく簡単に統合できる、複数層の拡張可能なインターネット サービスのマネージド実装を提供します。 <xref:System.Net> および <xref:System.Net.Sockets> の名前空間内のインターネット アクセス クラスは、Web ベース アプリケーションとインターネット ベース アプリケーションの両方を実装するために使用できます。  
   
 ## <a name="internet-applications"></a>インターネット アプリケーション  
+
  インターネット アプリケーションは、情報を要求するクライアント アプリケーションと、クライアントからの情報の要求に応答するサーバー アプリケーションの 2 種類に大別することができます。 従来のインターネット クライアント/サーバー アプリケーションは、ユーザーがブラウザーを使用して世界中の Web サーバーに格納されているドキュメントやその他のデータにアクセスする World Wide Web です。  
   
  アプリケーションはこれらの役割の 1 つに限定されません。たとえば、使い慣れた中間層アプリケーション サーバーは、別のサーバーからデータを要求することでクライアントからの要求に応答します。この場合、サーバーとクライアントの両方として機能します。  
@@ -41,11 +43,13 @@ Microsoft .NET Framework は、アプリケーションにすばやく簡単に�
  クライアント アプリケーションは、要求されたインターネット リソースと、要求と応答に使用するための通信プロトコルを識別することによって、要求を実行します。 必要に応じて、クライアントは要求を完了するために必要な、プロキシの場所や認証情報 (ユーザー名、パスワードなど) などの追加データも提供します。 要求が作成されると、要求をサーバーに送信できます。  
   
 ## <a name="identifying-resources"></a>リソースの識別  
+
  .NET Framework は、Uniform Resource Identifier (URI) を使用して、要求されたインターネット リソースと通信プロトコルを識別します。 URI は、少なくとも 3 つ、または 4 つのフラグメントで構成されています。要求と応答の通信プロトコルを識別するスキーム識別子、ドメイン ネーム システム (DNS) ホスト名またはインターネット上のサーバーを一意に識別する TCP アドレスのいずれかで構成されるサーバー識別子、要求された情報をサーバー上で検索するパス識別子、クライアントからの情報をサーバーに渡すクエリ文字列 (省略可能) です。 たとえば、URI `http://www.contoso.com/whatsnew.aspx?date=today` はスキーム識別子 `http`、サーバー識別子 `www.contoso.com`、パス `/whatsnew.aspx`、クエリ文字列 `?date=today` で構成されます。  
   
  サーバーは要求を受信し、応答を処理すると、クライアント アプリケーションに応答を返します。 応答には、コンテンツの種類 (たとえば、生のテキストや XML データ) などの補足情報が含まれています。  
   
 ## <a name="requests-and-responses-in-the-net-framework"></a>.NET Framework での要求と応答  
+
  .NET Framework では、特定のクラスを使用して、要求/応答モデルを通じてインターネット リソースにアクセスするために必要な 3 つの情報を提供します。求めているインターネット リソースの URI が含まれている <xref:System.Uri> クラス、リソースの要求が含まれている <xref:System.Net.WebRequest> クラス、および受信した応答のコンテナーを提供する <xref:System.Net.WebResponse> クラスです。  
   
  クライアント アプリケーションは、ネットワーク リソースの URI を <xref:System.Net.WebRequest.Create%2A> メソッドに渡すことによって、`WebRequest` インスタンスを作成します。 この静的メソッドは、HTTP などの特定のプロトコルの `WebRequest` を作成します。 返される `WebRequest` は、サーバーへの要求と、要求が行われたときに送信されるデータ ストリームへのアクセスの両方を制御するプロパティへのアクセスを提供します。 `WebRequest` の <xref:System.Net.WebRequest.GetResponse%2A> メソッドは、クライアント アプリケーションから URI で識別されたサーバーに要求を送信します。 応答遅延が発生する場合、**WebRequest** で <xref:System.Net.WebRequest.BeginGetResponse%2A> メソッドを使用して、要求を非同期的に実行し、<xref:System.Net.WebRequest.EndGetResponse%2A> メソッドを使用して後で応答を返すことができます。  
@@ -61,6 +65,7 @@ Microsoft .NET Framework は、アプリケーションにすばやく簡単に�
  インターネット要求のためにクライアントの承認が必要な場合は、**WebRequest** の <xref:System.Net.WebRequest.Credentials%2A> プロパティが必要な資格情報を提供します。 これらの資格情報は、基本的な HTTP 認証またはダイジェスト認証の名前/パスワードの単純な組み合わせにすることも、NTLM 認証または Kerberos 認証の名前/パスワード/ドメインのセットにすることもできます。 1 つの資格情報のセットは、<xref:System.Net.NetworkCredential> インスタンスに格納できます。複数のセットは、<xref:System.Net.CredentialCache> インスタンスに同時に格納できます。 **CredentialCache** は、要求の URI と、サーバーでサポートされている認証スキームを使用して、サーバーに送信する資格情報を決定します。  
   
 ## <a name="simple-requests-with-webclient"></a>WebClient による単純な要求  
+
  インターネット リソースに対して単純な要求を行う必要があるアプリケーションの場合、<xref:System.Net.WebClient> クラスがインターネット サーバーにデータをアップロードする、またはインターネット サーバーからデータをダウンロードするための共通のメソッドを提供します。 **WebClient** は **WebRequest** クラスに依存して、インターネット リソースへのアクセスを提供しています。そのため、**WebClient** クラスは登録されている任意のプラグ可能なプロトコルを使用できます。  
   
  要求/応答モデルを使用できないアプリケーションの場合、またはネットワーク上でリッスンするだけでなく、要求を送信する必要があるアプリケーションの場合、**System.Net.Sockets** 名前空間が <xref:System.Net.Sockets.TcpClient>、<xref:System.Net.Sockets.TcpListener>、および <xref:System.Net.Sockets.UdpClient> クラスを提供します。 これらのクラスは、さまざまなトランスポート プロトコルを使用して接続のための詳細を処理し、ネットワーク接続をストリームとしてアプリケーションに公開します。  

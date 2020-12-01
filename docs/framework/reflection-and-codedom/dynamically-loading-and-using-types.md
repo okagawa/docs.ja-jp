@@ -13,14 +13,15 @@ helpviewer_keywords:
 - implicit late binding
 - reflection, dynamically using types
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
-ms.openlocfilehash: 39a4a9a2ff77cb900db7f39a55dc17a5b8c62cf3
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: be9991a4df866f65aabe063be3cc2b374f4d124d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475087"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266793"
 ---
 # <a name="dynamically-loading-and-using-types"></a>型の動的な読み込みおよび使用
+
 リフレクションは、言語コンパイラで使用される、暗黙の遅延バインディングを実装するインフラストラクチャを提供します。 バインディングとは、一意に指定した型に対応する宣言 (つまり、実装) を検索するプロセスです。 このプロセスがコンパイル時ではなく、実行時に発生する場合、それは遅延バインディングと呼ばれます。 Visual Basic のコードでは、暗黙の遅延バインディングを使用できます。Visual Basic のコンパイラからは、オブジェクトの型の取得にリフレクションを使用するヘルパー メソッドが呼び出されます。 ヘルパー メソッドに渡される引数により、実行時に適切なメソッドが呼び出されます。 これらの引数は、メソッドを呼び出すインスタンス (オブジェクト)、呼び出されたメソッド名 (文字列)、呼び出されたメソッドに渡される引数 (オブジェクトの配列) です。  
   
  次の例では、Visual Basic コンパイラがリフレクションを暗黙的に使用して、コンパイル時には型が不明なオブジェクトのメソッドを呼び出します。 **HelloWorld** クラスには、**PrintHello** メソッドに渡される、"Hello World" とこれに連結されたいくつかのテキストを出力する **PrintHello** メソッドがあります。 この例で呼び出される **PrintHello** メソッドは、実際には <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType> です。Visual Basic コードでは、オブジェクトの型 (helloObj) が実行時ではなく (遅延バインディング) コンパイル時に認識された (事前バインディング) かのように **PrintHello** メソッドを呼び出します。  
@@ -40,6 +41,7 @@ End Module
 ```  
   
 ## <a name="custom-binding"></a>カスタム バインド  
+
  コンパイラが暗黙的に遅延バインディングに使用するだけではなく、コードでリフレクションを使用して、明示的に遅延バインディングを実現できます。  
   
  [共通言語ランタイム](../../standard/clr.md)では、複数のプログラミング言語をサポートしていますが、バインド規則は言語によって異なります。 事前バインディングの場合、コード ジェネレーターがバインディングを完全に制御できます。 ただし、リフレクションによる遅延バインディングでは、カスタム バインドでバインディングを制御する必要があります。 <xref:System.Reflection.Binder> クラスには、メンバーの選択と呼び出しのカスタム コントロールがあります。  
@@ -53,6 +55,7 @@ End Module
  [!code-vb[Conceptual.Types.Dynamic#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.dynamic/vb/source1.vb#1)]  
   
 ### <a name="invokemember-and-createinstance"></a>InvokeMember および CreateInstance  
+
  型のメンバーを呼び出すには、<xref:System.Type.InvokeMember%2A?displayProperty=nameWithType> を使用します。 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> や <xref:System.Reflection.Assembly.CreateInstance%2A?displayProperty=nameWithType> などのさまざまなクラスの **CreateInstance** メソッドは、指定した型の新しいインスタンスを作成する **InvokeMember** の特殊な形式のメソッドです。 **Binder** クラスは、これらのメソッドのオーバーロードの解決や引数の強制変換に使用されます。  
   
  引数の強制変換 (型変換) とメンバー選択の可能な 3 つの組み合わせの例を次に示します。 ケース 1 では、引数の強制変換、またはメンバーの選択は必要ありません。 ケース 2 では、メンバーの選択のみが必要です。 ケース 3 では、引数の強制変換のみが必要です。  
@@ -77,7 +80,7 @@ End Module
   
  コード例のケース 3 では、値が "5.5" の **String** 型の実引数が **Double** 型の仮引数のメソッドに渡されます。 呼び出しが成功するには、文字列値 "5.5" を倍精度浮動小数点値に変換する必要があります。 この変換は、**ChangeType** が実行します。  
   
- **ChangeType** は、次の表の無損失または[拡大強制型変換](../../standard/base-types/type-conversion.md)のみを行います。  
+ **ChangeType** は、次の表の無損失または [拡大強制型変換](../../standard/base-types/type-conversion.md)のみを行います。  
   
 |変換元の型|変換後の型|  
 |-----------------|-----------------|  

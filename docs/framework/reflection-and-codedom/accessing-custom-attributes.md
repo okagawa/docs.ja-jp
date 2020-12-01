@@ -11,20 +11,23 @@ helpviewer_keywords:
 - attributes [.NET Framework], accessing
 - reflection, custom attributes
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
-ms.openlocfilehash: 1197fc5149e144d293deda1173e82ca2dadeda7d
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: d441bad7d4af3a88c4ede507d1bce7bdd1ab3215
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475139"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266819"
 ---
 # <a name="accessing-custom-attributes"></a>カスタム属性へのアクセス
+
 属性がプログラム要素に関連付けられると、リフレクションを使用して、その存在と値をクエリすることができます。 .NET Framework バージョン 1.0 および 1.1 では、カスタム属性は実行コンテキストで検証されます。 .NET Framework バージョン 2.0 では、新しい読み込みコンテキスト (リフレクションのみのコンテキスト) が提供されます。これを使用して、実行のために読み込むことができないコードを検証できます。  
   
 ## <a name="the-reflection-only-context"></a>リフレクションのみのコンテキスト  
+
  リフレクションのみのコンテキストに読み込まれたコードは、実行することができません。 つまり、コンストラクターを実行する必要があるため、カスタム属性のインスタンスは作成できないということです。 リフレクションのみのコンテキストにカスタム属性を読み込み、検証するには、<xref:System.Reflection.CustomAttributeData> クラスを使用します。 静的な <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> メソッドの適切なオーバーロードを使用して、このクラスのインスタンスを取得できます。 「[方法:リフレクションのみのコンテキストにアセンブリを読み込む](how-to-load-assemblies-into-the-reflection-only-context.md)」を参照してください。  
   
 ## <a name="the-execution-context"></a>実行コンテキスト  
+
  実行コンテキストの属性をクエリする主なリフレクション メソッドは、<xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType> と <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> です。  
   
  カスタム属性のアクセシビリティは、添付されているアセンブリに関してチェックされます。 これは、カスタム属性が添付されているアセンブリの型のメソッドが、カスタム属性のコンストラクターを呼び出すことができるかどうかをチェックするのと同じです。  

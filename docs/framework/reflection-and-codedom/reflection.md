@@ -22,12 +22,12 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-ms.openlocfilehash: 46c67595126af2c62b28d29983775943586a0b90
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 371f56c3a57b8e320c9b329c539075a40cd7a19f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865282"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258414"
 ---
 # <a name="reflection-in-net"></a>.NET のリフレクション
 
@@ -62,6 +62,7 @@ ms.locfileid: "86865282"
 リフレクションには、他の用途もあります。 JScript のような言語のコンパイラは、リフレクションを使用してシンボル テーブルを構築します。 <xref:System.Runtime.Serialization> 名前空間のクラスは、リフレクションを使用して、データにアクセスし、永続化するフィールドを決定します。 <xref:System.Runtime.Remoting> 名前空間のクラスは、シリアル化を通じて間接的にリフレクションを使用します。  
   
 ## <a name="runtime-types-in-reflection"></a>リフレクションのランタイム型  
+
 リフレクションは <xref:System.Type> や <xref:System.Reflection.MethodInfo> などのクラスを提供して、型、メンバー、パラメーター、およびその他のコード エンティティを示します。 ただし、リフレクションを使用する場合は、これらのクラスを直接利用しません。これらの大部分は抽象 (Visual Basic では `MustInherit`) です。 代わりに、共通言語ランタイム (CLR) によって提供される型を利用します。  
   
 たとえば、C# `typeof` 演算子 (Visual Basic では `GetType`) を使用して <xref:System.Type> オブジェクトを取得する場合、オブジェクトは実際には `RuntimeType` です。 `RuntimeType` は <xref:System.Type> から派生し、すべての抽象メソッドの実装を提供します。  
