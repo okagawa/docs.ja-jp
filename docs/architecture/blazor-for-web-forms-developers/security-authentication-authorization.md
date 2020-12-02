@@ -5,13 +5,13 @@ author: ardalis
 ms.author: daroth
 no-loc:
 - Blazor
-ms.date: 09/11/2019
-ms.openlocfilehash: 690e559617e4961c3cf3262a6d2d48a6bfac67cd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/20/2020
+ms.openlocfilehash: 0344960237a5d9da61eb0d85987c44e136f1be48
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161296"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509846"
 ---
 # <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-no-locblazor"></a>セキュリティ:ASP.NET Web Forms および Blazor  での認証と承認
 
@@ -19,19 +19,19 @@ ASP.NET の Web フォームアプリケーションからに移行する Blazor
 
 ## <a name="aspnet-universal-providers"></a>ASP.NET ユニバーサルプロバイダー
 
-ASP.NET 2.0 以降、ASP.NET Web Forms platform は、メンバーシップなどのさまざまな機能のプロバイダーモデルをサポートしています。 ユニバーサルメンバーシッププロバイダーは、オプションのロールプロバイダーと共に、ASP.NET Web フォームアプリケーションと共に一般的にデプロイされます。 現在も引き続き正常に機能する認証と承認を管理するための、堅牢で安全な方法を提供します。 これらのユニバーサルプロバイダーの最新のオファリングは、NuGet パッケージである、 [Microsoft](https://www.nuget.org/packages/Microsoft.AspNet.Providers)で提供されています。
+ASP.NET 2.0 以降、ASP.NET Web Forms platform は、メンバーシップなどのさまざまな機能のプロバイダーモデルをサポートしています。 ユニバーサルメンバーシッププロバイダーは、オプションのロールプロバイダーと共に、一般的に ASP.NET Web フォームアプリケーションと共に展開されます。 現在も引き続き正常に機能する認証と承認を管理するための、堅牢で安全な方法を提供します。 これらのユニバーサルプロバイダーの最新のオファリングは、NuGet パッケージである、 [Microsoft](https://www.nuget.org/packages/Microsoft.AspNet.Providers)で提供されています。
 
 ユニバーサルプロバイダーは、、、、などのテーブルを含む SQL データベーススキーマを操作し `aspnet_Applications` `aspnet_Membership` `aspnet_Roles` `aspnet_Users` ます。 [aspnet_regsql.exe コマンド](/previous-versions/ms229862(v=vs.140))を実行して構成すると、基になるデータを操作するために必要なすべてのクエリとコマンドを提供するテーブルとストアドプロシージャがプロバイダーによってインストールされます。 データベーススキーマとこれらのストアドプロシージャは、新しい ASP.NET Identity および ASP.NET Core Id システムと互換性がないため、既存のデータを新しいシステムに移行する必要があります。 図1は、ユニバーサルプロバイダー用に構成されたテーブルスキーマの例を示しています。
 
 ![ユニバーサルプロバイダースキーマ](./media/security/membership-tables.png)
 
-ユニバーサルプロバイダーは、ユーザー、メンバーシップ、ロール、およびプロファイルを処理します。 ユーザーにはグローバル一意識別子が割り当てられ、非常に基本的な情報 (userId、userName) がテーブルに格納され `aspnet_Users` ます。 パスワード、パスワード形式、パスワード salt、ロックアウトカウンター、詳細などの認証情報は、テーブルに格納されます。 `aspnet_Membership` ロールは、名前と一意の識別子の単純なもので構成され、アソシエーションテーブルを介してユーザーに割り当てられ `aspnet_UsersInRoles` 、多対多のリレーションシップを提供します。
+ユニバーサルプロバイダーは、ユーザー、メンバーシップ、ロール、およびプロファイルを処理します。 ユーザーにはグローバル一意識別子が割り当てられ、ユーザー Id やユーザー名などの基本情報がテーブルに格納されます。 `aspnet_Users` パスワード、パスワード形式、パスワード salt、ロックアウトカウンター、詳細などの認証情報は、テーブルに格納されます。 `aspnet_Membership` ロールは、名前と一意の識別子の単純なもので構成され、アソシエーションテーブルを介してユーザーに割り当てられ `aspnet_UsersInRoles` 、多対多のリレーションシップを提供します。
 
 既存のシステムがメンバーシップに加えてロールを使用している場合は、ユーザーアカウント、関連付けられているパスワード、ロール、およびロールメンバーシップを ASP.NET Core Id に移行する必要があります。 また、通常は、if ステートメントを使用して、宣言型のフィルター、属性、またはタグヘルパーを利用することで、現在ロールチェックを実行しているコードを更新する必要があります。 移行に関する考慮事項の詳細については、この章の最後を参照してください。
 
 ### <a name="authorization-configuration-in-web-forms"></a>Web フォームでの承認構成
 
-ASP.NET Web フォームアプリケーションで特定のページへの承認されたアクセスを構成するには、通常、匿名ユーザーが特定のページまたはフォルダーにアクセスできないように指定します。 これは web.config ファイルで行います。
+ASP.NET Web フォームアプリケーションで特定のページへの承認されたアクセスを構成するには、通常、匿名ユーザーが特定のページまたはフォルダーにアクセスできないように指定します。 この構成は、web.config ファイルで行います。
 
 ```xml
 <?xml version="1.0"?>
@@ -74,13 +74,13 @@ ASP.NET Web フォームアプリケーションで特定のページへの承�
 </location>
 ```
 
-上記の構成を他の構成と組み合わせて使用すると、 `/admin` フォルダーとその中のすべてのリソースへのアクセスが "Administrators" ロールのメンバーに制限されます。 これは、フォルダールート内に別のファイルを配置することでも適用でき `web.config` `/admin` ます。
+上記の構成を他の構成と組み合わせて使用すると、 `/admin` フォルダーとその中のすべてのリソースへのアクセスが "Administrators" ロールのメンバーに制限されます。 この制限は、フォルダールート内に別のファイルを配置することでも適用でき `web.config` `/admin` ます。
 
 ### <a name="authorization-code-in-web-forms"></a>Web フォームでの認証コード
 
 を使用してアクセスを構成するだけでなく `web.config` 、Web フォームアプリケーションのアクセスと動作をプログラムで構成することもできます。 たとえば、特定の操作を実行する機能を制限したり、ユーザーのロールに基づいて特定のデータを表示したりすることができます。
 
-このコードは、分離コードロジックとページ自体の両方で使用できます。
+このコードは、コードビハインドロジックとページ自体の両方で使用できます。
 
 ```html
 <% if (HttpContext.Current.User.IsInRole("Administrators")) { %>
@@ -107,11 +107,11 @@ protected void Page_Load(object sender, EventArgs e)
 
 上のコードでは、ロールベースのアクセス制御 (RBAC) を使用して、ページの特定の要素 (など) が `SecretPanel` 現在のユーザーのロールに基づいて表示されるかどうかを判断します。
 
-通常、ASP.NET Web フォームアプリケーションは、ファイル内のセキュリティ `web.config` を構成した後、 `.aspx` ページとそれに関連する分離コードファイルに必要なチェックを追加し `.aspx.cs` ます。 ほとんどのアプリケーションは、多くの場合、追加の役割プロバイダーを使用して、ユニバーサルメンバーシッププロバイダーを利用します。
+通常、ASP.NET Web フォームアプリケーションは、ファイル内のセキュリティ `web.config` を構成し、 `.aspx` ページとその関連分離コードファイルに必要なチェックを追加し `.aspx.cs` ます。 ほとんどのアプリケーションは、多くの場合、追加の役割プロバイダーを使用して、ユニバーサルメンバーシッププロバイダーを利用します。
 
 ## <a name="aspnet-core-identity"></a>ASP.NET Core ID
 
-認証と承認を行っていても、ASP.NET Core Id では、ユニバーサルプロバイダーと比較して、異なる抽象化と仮定を使用します。 たとえば、新しい Id モデルはサードパーティの認証をサポートしているため、ユーザーはソーシャルメディアアカウントまたは他の信頼された認証プロバイダーを使用して認証を行うことができます。 ASP.NET Core Id は、ログイン、ログアウト、登録など、一般的に必要なページの UI をサポートします。 データアクセスには EF Core を利用し、EF Core の移行を使用して、そのデータモデルをサポートするために必要なスキーマを生成します。 [ASP.NET Core での id](/aspnet/core/security/authentication/identity)の概要では、ASP.NET Core id に含まれるものの概要と、その使用方法について説明します。 アプリケーションとそのデータベースに ASP.NET Core Id をまだ設定していない場合は、開始するのに役立ちます。
+認証と承認を行っていても、ASP.NET Core Id では、ユニバーサルプロバイダーと比較して、異なる抽象化と仮定を使用します。 たとえば、新しい Id モデルはサードパーティの認証をサポートしているため、ユーザーはソーシャルメディアアカウントまたは他の信頼された認証プロバイダーを使用して認証を行うことができます。 ASP.NET Core Id は、ログイン、ログアウト、登録など、一般的に必要なページの UI をサポートします。 データアクセスには EF Core を利用し、EF Core の移行を使用して、データモデルをサポートするために必要なスキーマを生成します。 [ASP.NET Core での id](/aspnet/core/security/authentication/identity)の概要では、ASP.NET Core id に含まれるものの概要と、その使用方法について説明します。 アプリケーションとそのデータベースに ASP.NET Core Id をまだ設定していない場合は、開始するのに役立ちます。
 
 ### <a name="roles-claims-and-policies"></a>役割、要求、およびポリシー
 
@@ -119,7 +119,7 @@ protected void Page_Load(object sender, EventArgs e)
 
 ロールに加えて、ASP.NET Core id では、信頼性情報とポリシーの概念がサポートされています。 ロールは、そのロールのユーザーがアクセスできる必要がある一連のリソースに特に対応する必要がありますが、要求は単にユーザーの id の一部になります。 クレームは、サブジェクトの内容を表す名前と値のペアであり、サブジェクトが実行できる内容ではありません。
 
-ユーザーの要求を直接検査し、ユーザーにリソースへのアクセス権を付与する必要があるかどうかに基づいて判断することができます。 ただし、多くの場合、このようなチェックは繰り返し、システム全体にわたって分散されます。 より優れたアプローチは、 *ポリシー*を定義することです。
+ユーザーの要求を直接検査し、ユーザーにリソースへのアクセス権を付与する必要があるかどうかを、これらの値に基づいて判断することができます。 ただし、多くの場合、このようなチェックは繰り返し、システム全体にわたって分散されます。 より優れたアプローチは、 *ポリシー* を定義することです。
 
 承認ポリシーは、1つまたは複数の要件で構成されます。 ポリシーは、のメソッドで承認サービス構成の一部として登録され `ConfigureServices` `Startup.cs` ます。 たとえば、次のコードスニペットでは、"Can" という名前のポリシーを構成しています。このポリシーでは、ユーザーが "カナダ" の値を持つ国の要求を持っている必要があります。
 
@@ -132,7 +132,7 @@ services.AddAuthorization(options =>
 
 [カスタムポリシーの作成方法の詳細については、ドキュメントを参照して](/aspnet/core/security/authorization/policies)ください。
 
-ポリシーまたはロールを使用しているかどうかにかかわらず、アプリケーションの特定のページで、 Blazor 属性を持つロールまたはポリシーが `[Authorize]` ディレクティブで適用されている必要があることを指定でき `@attribute` ます。
+ポリシーまたはロールを使用しているかどうかにかかわらず、アプリケーションの特定のページで、 Blazor 属性を持つロールまたはポリシーが `[Authorize]` ディレクティブで適用される必要があることを指定でき `@attribute` ます。
 
 ロールが必要:
 
@@ -146,7 +146,7 @@ services.AddAuthorization(options =>
 @attribute [Authorize(Policy ="CanadiansOnly")]
 ```
 
-コード内のユーザーの認証状態、ロール、または要求にアクセスする必要がある場合、これを実現するには主に2つの方法があります。 1つ目は、認証状態をカスケード型パラメーターとして受け取ることです。 2つ目は、挿入されたを使用して状態にアクセスすることです `AuthenticationStateProvider` 。 これらの各方法の詳細については、 [ Blazor セキュリティのドキュメント](/aspnet/core/blazor/security/)を参照してください。
+コード内のユーザーの認証状態、ロール、または要求へのアクセスが必要な場合、この機能を実現するには主に2つの方法があります。 1つ目は、認証状態をカスケード型パラメーターとして受け取ることです。 2つ目は、挿入されたを使用して状態にアクセスすることです `AuthenticationStateProvider` 。 これらの各方法の詳細については、 [ Blazor セキュリティのドキュメント](/aspnet/core/blazor/security/)を参照してください。
 
 次のコードは、をカスケード型 `AuthenticationState` パラメーターとして受け取る方法を示しています。
 
@@ -221,7 +221,7 @@ ASP.NET Web フォームとユニバーサルプロバイダーから ASP.NET Co
 
 1. ASP.NET Core Id データベーススキーマを転送先データベースに作成する
 2. ユニバーサルプロバイダースキーマから ASP.NET Core Id スキーマにデータを移行する
-3. 構成を web.config からミドルウェアおよびサービスに移行する (通常は) `Startup.cs`
+3. からミドルウェアおよびサービスに構成を移行します。通常は、 `web.config``Startup.cs`
 4. コントロールと条件を使用して個々のページを更新し、タグヘルパーと新しい id Api を使用します。
 
 以下のセクションでは、これらの各手順について詳しく説明します。
@@ -240,7 +240,7 @@ ASP.NET Core Id に使用される必要なテーブル構造を作成するに�
 
 ![移行ファイル](./media/security/migration-files.png)
 
-次のコマンドラインツールを使用して、web アプリケーションを実行せずに、自分で移行を実行できます。
+次のコマンドラインツールを使用すると、web アプリケーションを実行しなくても、自分で移行を実行できます。
 
 ```powershell
 dotnet ef database update
@@ -252,11 +252,11 @@ dotnet ef database update
 dotnet ef migrations script -o auth.sql
 ```
 
-これにより、出力ファイルに SQL スクリプトが生成され、 `auth.sql` 任意のデータベースに対して実行できるようになります。 コマンドの実行で問題が発生した場合は、 `dotnet ef` [EF Core ツールがシステムにインストールされ](/ef/core/miscellaneous/cli/dotnet)ていることを確認してください。
+上記のコマンドを実行すると、出力ファイルに SQL スクリプトが生成され `auth.sql` 、任意のデータベースに対して実行できます。 コマンドの実行で問題が発生した場合は、 `dotnet ef` [EF Core ツールがシステムにインストールされ](/ef/core/miscellaneous/cli/dotnet)ていることを確認してください。
 
 ソーステーブルに列が追加されている場合は、新しいスキーマでこれらの列の最適な場所を特定する必要があります。 一般に、テーブルで見つかった列は `aspnet_Membership` テーブルにマップする必要があり `AspNetUsers` ます。 の列 `aspnet_Roles` をにマップする必要があり `AspNetRoles` ます。 テーブルのその他の列 `aspnet_UsersInRoles` がテーブルに追加され `AspNetUserRoles` ます。
 
-また、将来の移行では、既定の id スキーマのカスタマイズを考慮する必要がないように、別のテーブルに追加の列を配置することも検討してください。
+また、別のテーブルに列を追加することも検討してください。 そのため、今後の移行では、既定の id スキーマのカスタマイズを考慮する必要がありません。
 
 ### <a name="migrating-data-from-universal-providers-to-aspnet-core-identity"></a>ユニバーサルプロバイダーから ASP.NET Core Id へのデータの移行
 
@@ -268,7 +268,7 @@ dotnet ef migrations script -o auth.sql
 
 ### <a name="migrating-security-settings-from-webconfig-to-startupcs"></a>web.config から Startup.cs へのセキュリティ設定の移行
 
-前述のように、ASP.NET のメンバーシップとロールプロバイダーは、アプリケーションの web.config ファイルで構成されます。 ASP.NET Core アプリは IIS に関連付けられていないため、構成に別のシステムを使用するため、これらの設定は別の場所で構成する必要があります。 ほとんどの場合、ASP.NET Core Id はファイルで構成され `Startup.cs` ます。 (Id テーブルスキーマを生成するために) 前に作成した web プロジェクトを開き、そのファイルを確認し `Startup.cs` ます。
+前述のように、ASP.NET のメンバーシップとロールプロバイダーは、アプリケーションのファイルで構成され `web.config` ます。 ASP.NET Core アプリは IIS に関連付けられていないため、構成に別のシステムを使用するため、これらの設定は別の場所で構成する必要があります。 ほとんどの場合、ASP.NET Core Id はファイルで構成され `Startup.cs` ます。 (Id テーブルスキーマを生成するために) 前に作成した web プロジェクトを開き、そのファイルを確認し `Startup.cs` ます。
 
 既定の ConfigureServices メソッドは、EF Core と Id のサポートを追加します。
 
@@ -327,19 +327,19 @@ ASP.NET Identity は、からの場所への匿名またはロールベースの
 
 ### <a name="updating-individual-pages-to-use-aspnet-core-identity-abstractions"></a>ASP.NET Core Id の抽象化を使用するように個々のページを更新する
 
-ASP.NET Web フォームアプリケーションで、匿名ユーザーに特定のページまたはフォルダーへのアクセスを拒否する設定を web.config した場合は、次の `[Authorize]` ようなページに属性を追加するだけで、それらを移行できます。
+ASP.NET Web フォームアプリケーションで、 `web.config` 匿名ユーザーに特定のページまたはフォルダーへのアクセスを拒否する設定があった場合、その `[Authorize]` ようなページに属性を追加することによって、これらの変更を移行します。
 
 ```razor
 @attribute [Authorize]
 ```
 
-特定のロールに属しているユーザー以外のアクセスを拒否した場合は、ロールを指定する属性を追加してこれを移行することもできます。
+特定のロールに属しているユーザー以外のアクセスを拒否した場合は、ロールを指定する属性を追加して、この動作を移行することもできます。
 
 ```razor
 @attribute [Authorize(Roles ="administrators")]
 ```
 
-属性は、 `[Authorize]` `@page` ルーター経由で到達したコンポーネントでのみ機能することに注意して Blazor ください。 属性は子コンポーネントでは使用できませんが、代わりにを使用する必要があり `AuthorizeView` ます。
+属性は、 `[Authorize]` `@page` ルーター経由で到達したコンポーネントに対してのみ機能し Blazor ます。 属性は子コンポーネントでは使用できませんが、代わりにを使用する必要があり `AuthorizeView` ます。
 
 特定のユーザーにコードを表示するかどうかを判断するためのロジックがページマークアップ内にある場合は、これをコンポーネントで置き換えることができ `AuthorizeView` ます。 [Authorizeview コンポーネント](/aspnet/core/blazor/security#authorizeview-component)は、ユーザーが表示を許可されているかどうかに応じて、UI を選択的に表示します。 また、 `context` ユーザー情報へのアクセスに使用できる変数も公開されています。
 
@@ -356,7 +356,7 @@ ASP.NET Web フォームアプリケーションで、匿名ユーザーに特�
 </AuthorizeView>
 ```
 
-`Task<AuthenticationState`属性を使用して構成されたからユーザーにアクセスすることにより、手続き型ロジック内の認証状態にアクセスでき `[CascadingParameter]` ます。 これにより、ユーザーにアクセスできるようになります。ユーザーは、認証されているかどうか、および特定のロールに属しているかどうかを判断できます。 ポリシー procedurally を評価する必要がある場合は、のインスタンスを挿入 `IAuthorizationService` し、そのインスタンスでメソッドを呼び出すことができ `AuthorizeAsync` ます。 次のサンプルコードは、ユーザー情報を取得し、承認されたユーザーがポリシーによって制限されたタスクを実行することを許可する方法を示して `content-editor` います。
+`Task<AuthenticationState`属性を使用して構成されたからユーザーにアクセスすることで、手続き型ロジック内の認証状態にアクセスでき `[CascadingParameter]` ます。 この構成を使用すると、ユーザーにアクセスできるようになります。認証されているかどうか、および特定のロールに属しているかどうかを確認できます。 ポリシー procedurally を評価する必要がある場合は、のインスタンスを挿入 `IAuthorizationService` し、そのインスタンスでメソッドを呼び出すことができ `AuthorizeAsync` ます。 次のサンプルコードは、ユーザー情報を取得し、承認されたユーザーがポリシーによって制限されたタスクを実行することを許可する方法を示して `content-editor` います。
 
 ```razor
 @using Microsoft.AspNetCore.Authorization
@@ -392,7 +392,7 @@ ASP.NET Web フォームアプリケーションで、匿名ユーザーに特�
 }
 ```
 
-は、 `AuthenticationState` このようなカスケード型パラメーターにバインドする前に、まずカスケード値として設定する必要があります。 通常、これはコンポーネントを使用し `CascadingAuthenticationState` ます。 通常は、次の `App.razor` 操作を行います。
+最初のは、 `AuthenticationState` このようなカスケード型のパラメーターにバインドする前に、カスケード値として設定する必要があります。 通常、これはコンポーネントを使用し `CascadingAuthenticationState` ます。 通常、この構成は次のように行われ `App.razor` ます。
 
 ```razor
 <CascadingAuthenticationState>
@@ -412,7 +412,7 @@ ASP.NET Web フォームアプリケーションで、匿名ユーザーに特�
 
 ## <a name="summary"></a>まとめ
 
-Blazor では、ASP.NET Core Id である ASP.NET Core と同じセキュリティモデルを使用します。 カスタマイズが元のデータスキーマに適用されていないと仮定すると、ユニバーサルプロバイダーから ASP.NET Core Id への移行は比較的簡単です。 データが移行されると、アプリでの認証と承認の使用に Blazor ついて詳しく説明されています。また、ほとんどのセキュリティ要件をプログラムでサポートすることもできます。
+Blazor では、ASP.NET Core Id である ASP.NET Core と同じセキュリティモデルを使用します。 カスタマイズが元のデータスキーマに適用されていないと仮定すると、ユニバーサルプロバイダーから ASP.NET Core Id への移行は比較的簡単です。 データが移行されたら、アプリでの認証と承認の使用に Blazor ついて詳しく説明されています。また、ほとんどのセキュリティ要件をプログラムによってサポートすることもできます。
 
 ## <a name="references"></a>References
 

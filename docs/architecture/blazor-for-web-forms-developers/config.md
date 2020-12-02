@@ -5,17 +5,17 @@ author: csharpfritz
 ms.author: jefritz
 no-loc:
 - Blazor
-ms.date: 04/01/2020
-ms.openlocfilehash: 6154b4f8c7a5bff42e603b12d5ef85468b80224e
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 11/20/2020
+ms.openlocfilehash: 360d9077bc981a2e9875bb1f86b49c0029424d6e
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267504"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509794"
 ---
 # <a name="app-configuration"></a>アプリの構成
 
-Web フォームでアプリ構成を読み込む主な方法は、 *web.config* ファイルのエントリを、 &mdash; サーバー上または *web.config*が参照する関連構成ファイルに入力することです。静的オブジェクトを使用して、アプリ `ConfigurationManager` の設定、データリポジトリの接続文字列、およびアプリに追加されたその他の拡張構成プロバイダーとやり取りすることができます。 一般的に、次のコードに示すように、アプリ構成との相互作用を確認します。
+Web フォームでアプリ構成を読み込む主な方法は、 *web.config* ファイルのエントリを、 &mdash; サーバー上または *web.config* が参照する関連構成ファイルに入力することです。静的オブジェクトを使用して、アプリ `ConfigurationManager` の設定、データリポジトリの接続文字列、およびアプリに追加されたその他の拡張構成プロバイダーとやり取りすることができます。 一般的に、次のコードに示すように、アプリ構成との相互作用を確認します。
 
 ```csharp
 var configurationValue = ConfigurationManager.AppSettings["ConfigurationSettingName"];
@@ -32,7 +32,7 @@ ASP.NET Core は、クラウド対応であり、オペレーターと開発者�
 
 アプリは、環境の名前に基づいて複数のソースから構成をトリガーし、構成を追加することができます。 既定では、構成は次のリソースから順に読み込まれます。
 
-1. ファイル*のappsettings.js* (存在する場合)
+1. ファイル *のappsettings.js* (存在する場合)
 1. *appsettings。{ENVIRONMENT_NAME}. json* ファイル (存在する場合)
 1. ディスク上のユーザーシークレットファイル (存在する場合)
 1. 環境変数
@@ -40,7 +40,7 @@ ASP.NET Core は、クラウド対応であり、オペレーターと開発者�
 
 ## <a name="appsettingsjson-format-and-access"></a>形式とアクセスに appsettings.js
 
-ファイル * のappsettings.js* は、次の JSON のように構造化された値を使用して階層化できます。
+ファイル *のappsettings.js* は、次の JSON のように構造化された値を使用して階層化できます。
 
 ```json
 {
@@ -57,14 +57,14 @@ ASP.NET Core は、クラウド対応であり、オペレーターと開発者�
 
 上記の JSON が表示された場合、構成システムは子の値を平坦化し、完全修飾された階層パスを参照します。 コロン ( `:` ) 文字は、階層内の各プロパティを区切ります。 たとえば、構成キーは、 `section1:key0` `section1` オブジェクトリテラルの値にアクセスし `key0` ます。
 
-## <a name="user-secrets"></a>ユーザーシークレット
+## <a name="user-secrets"></a>ユーザー シークレット
 
 ユーザーシークレットは次のとおりです。
 
 * アプリ開発フォルダーの外部にある、開発者のワークステーション上の JSON ファイルに格納されている構成値。
 * 環境内での実行時にのみ読み込ま `Development` れます。
 * 特定のアプリに関連付けられています。
-* .NET Core CLI のコマンドを使用して管理さ `user-secrets` れます。
+* .NET CLI のコマンドを使用 `user-secrets` して管理します。
 
 次のコマンドを実行して、シークレットストレージ用にアプリを構成し `user-secrets` ます。
 
@@ -134,7 +134,7 @@ dotnet run Parent:ApiKey=67890
 
 ## <a name="read-configuration-in-the-app"></a>アプリの構成の読み取り
 
-ASP.NET Core は、インターフェイスを使用してアプリの構成を提供 <xref:Microsoft.Extensions.Configuration.IConfiguration> します。 この構成インターフェイスは、 Blazor コンポーネント、 Blazor ページ、および構成へのアクセスを必要とするその他の ASP.NET Core マネージクラスによって要求される必要があります。 ASP.NET Core framework は、前に構成した解決済みの構成をこのインターフェイスに自動的に設定します。 Blazorページまたはコンポーネントの razor マークアップでは、次のように、 `IConfiguration` `@inject` *razor*ファイルの先頭にディレクティブを使用してオブジェクトを挿入できます。
+ASP.NET Core は、インターフェイスを使用してアプリの構成を提供 <xref:Microsoft.Extensions.Configuration.IConfiguration> します。 この構成インターフェイスは、 Blazor コンポーネント、 Blazor ページ、および構成へのアクセスを必要とするその他の ASP.NET Core マネージクラスによって要求される必要があります。 ASP.NET Core framework は、前に構成した解決済みの構成をこのインターフェイスに自動的に設定します。 Blazorページまたはコンポーネントの razor マークアップでは、次のように、 `IConfiguration` `@inject` *razor* ファイルの先頭にディレクティブを使用してオブジェクトを挿入できます。
 
 ```razor
 @inject IConfiguration Configuration

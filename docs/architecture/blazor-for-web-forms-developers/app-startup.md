@@ -3,13 +3,13 @@ title: アプリの起動
 description: アプリのスタートアップロジックを定義する方法について説明します。
 author: csharpfritz
 ms.author: jefritz
-ms.date: 02/25/2020
-ms.openlocfilehash: 883f9a3fbe2d52cb7d0fbc5dfc94ce829a5d2bf3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/20/2020
+ms.openlocfilehash: d812079f84f67409334d07c4c10c5577446503be
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158189"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509703"
 ---
 # <a name="app-startup"></a>アプリの起動
 
@@ -28,7 +28,7 @@ ASP.NET Core と Blazor を使用すると、これらのメソッドは単純�
 
 ## <a name="blazor-server-startup-structure"></a>Blazor サーバーのスタートアップ構造
 
-Blazor サーバーアプリケーションは ASP.NET Core 3.0 以降のアプリケーションの上に存在します。  ASP.NET Core web アプリケーションは、 `Startup.cs` アプリケーションのルートフォルダーにあるクラスのメソッドのペアによって構成されます。  スタートアップクラスの既定のコンテンツを以下に示します。
+Blazor サーバーアプリケーションは ASP.NET Core 3.0 以降のバージョンの上に存在します。  ASP.NET Core web アプリケーションは、 `Startup.cs` アプリケーションのルートフォルダーにあるクラスのメソッドのペアによって構成されます。  スタートアップクラスの既定のコンテンツを以下に示します。
 
 ```csharp
 public class Startup
@@ -79,7 +79,7 @@ public class Startup
 
 ASP.NET Core の他の部分と同様に、Startup クラスは依存関係の挿入の原則によって作成されます。  は、 `IConfiguration` 構成時に後でアクセスできるように、パブリックプロパティのコンストラクターと格納されに提供されます。
 
-`ConfigureServices`ASP.NET Core で導入されたメソッドを使用すると、フレームワークの組み込み依存関係挿入コンテナー用にさまざまな ASP.NET Core フレームワークサービスを構成できます。  さまざまな `services.Add*` 方法により、認証、razor ページ、MVC コントローラーのルーティング、SignalR、Blazor などの機能を他の多くのユーザー間で利用できるようにするサービスが追加されます。  このメソッドは web フォームでは必要ありませんでした。 ASPX、.ASCX、.ASHX、ASMX ファイルの解析と処理は、web.config 構成ファイルの ASP.NET を参照することによって定義されています。  ASP.NET Core での依存関係の挿入の詳細については、 [オンラインドキュメント](/aspnet/core/fundamentals/dependency-injection)を参照してください。
+`ConfigureServices`ASP.NET Core で導入されたメソッドを使用すると、フレームワークの組み込み依存関係挿入コンテナー用にさまざまな ASP.NET Core フレームワークサービスを構成できます。  さまざまな `services.Add*` 方法により、認証、razor ページ、MVC コントローラーのルーティング、SignalR、Blazor などの機能を他の多くのユーザー間で利用できるようにするサービスが追加されます。  このメソッドは web フォームでは必要ありませんでした。 ASPX、.ASCX、.ASHX、ASMX の各ファイルの解析と処理は、web.config 構成ファイルの ASP.NET を参照することによって定義されています。  ASP.NET Core での依存関係の挿入の詳細については、 [オンラインドキュメント](/aspnet/core/fundamentals/dependency-injection)を参照してください。
 
 `Configure`メソッドには、ASP.NET Core する HTTP パイプラインの概念が導入されています。  このメソッドでは、アプリケーションに送信されたすべての要求を処理する [ミドルウェア](middleware.md) を上から下に宣言します。 既定の構成では、これらの機能のほとんどが web フォーム構成ファイルに分散されており、参照しやすいように1か所にまとめられています。
 
@@ -89,7 +89,7 @@ ASP.NET Core の他の部分と同様に、Startup クラスは依存関係の�
 
 次の行は、web フォームから構成オプションの1つをレプリケートする最初の行 `UseRouting` です。  このメソッドは、パイプラインに ASP.NET Core ルーターを追加します。これは、ここで構成することも、ルーティングを検討できる個々のファイルで構成することもできます。  ルーティング構成の詳細については、 [「ルーティング」セクション](pages-routing-layouts.md)を参照してください。
 
-このメソッドの最後のステートメントは、ASP.NET Core がリッスンしているエンドポイントを定義します。  これらの場所は web サーバー上でアクセスでき、.NET によって処理され、返されるコンテンツを受信します。  最初のエントリは、 `MapBlazorHub` Blazor コンポーネントの状態とレンダリングが処理されるサーバーへのリアルタイムおよび永続的な接続を提供するために SignalR hub を構成します。  `MapFallbackToPage`メソッド呼び出しは、Blazor アプリケーションを開始するページの web アクセス可能な場所を示します。また、クライアント側からのディープリンク要求を処理するようにアプリケーションを構成します。  この機能は、ブラウザーを開いて、既定のプロジェクトテンプレートなど、アプリケーションの Blazor によって処理されたルートに直接移動した場合に機能します `/counter` 。 要求は、 *_Host* Blazor のページによって処理されます。このページでは、その後、ルーターが実行され、カウンターページがレンダリングされます。
+このメソッドの最後のステートメントは、ASP.NET Core がリッスンしているエンドポイントを定義します。  これらのルートは、web サーバー上でアクセスできる web アクセス可能な場所であり、.NET によって処理され、返されるコンテンツを受信します。  最初のエントリは、 `MapBlazorHub` Blazor コンポーネントの状態とレンダリングが処理されるサーバーへのリアルタイムおよび永続的な接続を提供するために SignalR hub を構成します。  `MapFallbackToPage`メソッド呼び出しは、Blazor アプリケーションを開始するページの web アクセス可能な場所を示します。また、クライアント側からのディープリンク要求を処理するようにアプリケーションを構成します。  この機能は、ブラウザーを開いて、既定のプロジェクトテンプレートなど、アプリケーションの Blazor によって処理されたルートに直接移動した場合に機能します `/counter` 。 要求は、 *_Host* Blazor のページによって処理されます。このページでは、その後、ルーターが実行され、カウンターページがレンダリングされます。
 
 ## <a name="upgrading-the-bundleconfig-process"></a>BundleConfig プロセスのアップグレード
 

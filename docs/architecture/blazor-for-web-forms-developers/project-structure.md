@@ -6,13 +6,13 @@ ms.author: daroth
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 09/11/2019
-ms.openlocfilehash: 225ebbdd5e23516ae7d5465371e95c73c440c82b
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 11/20/2020
+ms.openlocfilehash: d91430eb654ee16934408bf064803b34ca700640
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267777"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509807"
 ---
 # <a name="project-structure-for-no-locblazor-apps"></a>アプリのプロジェクト構造 Blazor
 
@@ -22,13 +22,13 @@ ms.locfileid: "88267777"
 
 ## <a name="project-file"></a>プロジェクト ファイル
 
-Blazor サーバーアプリは .NET Core プロジェクトです。 サーバーアプリのプロジェクトファイル Blazor は、次のように簡単に取得できます。
+Blazor サーバーアプリは .NET プロジェクトです。 サーバーアプリのプロジェクトファイル Blazor は、次のように簡単に取得できます。
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
 </Project>
@@ -37,32 +37,26 @@ Blazor サーバーアプリは .NET Core プロジェクトです。 サーバ�
 アプリのプロジェクトファイルは Blazor WebAssembly 少し複雑になります (正確なバージョン番号は異なる場合があります)。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <RazorLangVersion>3.0</RazorLangVersion>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Blazor" Version="3.1.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Blazor.Build" Version="3.1.0" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.AspNetCore.Blazor.HttpClient" Version="3.1.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Blazor.DevServer" Version="3.1.0" PrivateAssets="all" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Shared\BlazorWebAssemblyApp1.Shared.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.0" PrivateAssets="all" />
+    <PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
   </ItemGroup>
 
 </Project>
 ```
 
-BlazorWebAssemblyプロジェクトは、ベースの .net ランタイムでブラウザーで実行されるため、.Net Core ではなく .NET Standard を対象と WebAssembly します。 サーバーや開発者のコンピューターで使用できるように、web ブラウザーに .NET をインストールすることはできません。 その結果、プロジェクトは Blazor 個別のパッケージ参照を使用してフレームワークを参照します。
+BlazorWebAssembly `Microsoft.NET.Sdk.BlazorWebAssembly` `Microsoft.NET.Sdk.Web` ベースの .net ランタイムでブラウザーで実行されるため、sdk ではなくプロジェクトターゲット WebAssembly 。 サーバーや開発者のコンピューターで使用できるように、web ブラウザーに .NET をインストールすることはできません。 その結果、プロジェクトは Blazor 個別のパッケージ参照を使用してフレームワークを参照します。
 
-これに対し、既定の ASP.NET Web フォームプロジェクトでは、 *.csproj* ファイルに約300行の XML が含まれています。そのほとんどは、プロジェクト内のさまざまなコードおよびコンテンツファイルを明示的に一覧表示します。 .NET Core および .NET Standard ベースのプロジェクトの単純化の多くは、sdk を参照することによってインポートされる既定のターゲットとプロパティから取得されます。これは、 `Microsoft.NET.Sdk.Web` 多くの場合、単に単に WEB sdk と呼ばれています。 Web SDK には、プロジェクトにコードとコンテンツファイルを簡単に含めることができるワイルドカードやその他の便利なが含まれています。 ファイルを明示的に一覧表示する必要はありません。 .NET Core を対象とする場合、Web SDK は .NET Core と ASP.NET Core の両方の共有フレームワークへのフレームワーク参照も追加します。 フレームワークは、[ソリューションエクスプローラー] ウィンドウの [**依存関係**  >  **フレームワーク**] ノードに表示されます。 **Solution Explorer** 共有フレームワークは、.NET Core をインストールするときにコンピューターにインストールされたアセンブリのコレクションです。
+これに対し、既定の ASP.NET Web フォームプロジェクトでは、 *.csproj* ファイルに約300行の XML が含まれています。そのほとんどは、プロジェクト内のさまざまなコードおよびコンテンツファイルを明示的に一覧表示します。 とアプリのリリースでは、 `.NET 5` `Blazor Server` 統合された `Blazor WebAssembly` 1 つのランタイムを簡単に共有できます。
 
-これらはサポートされていますが、.NET Core プロジェクトでは、個々のアセンブリ参照はあまり一般的ではありません。 ほとんどのプロジェクトの依存関係は、NuGet パッケージ参照として処理されます。 .NET Core プロジェクトでは、最上位レベルのパッケージの依存関係を参照する必要があります。 推移的な依存関係は自動的に含まれます。 ASP.NET Web フォームプロジェクトでよく見られる *packages.config* ファイルを使用してパッケージを参照するのではなく、要素を使用してパッケージ参照をプロジェクトファイルに追加し `<PackageReference>` ます。
+これらはサポートされていますが、個々のアセンブリ参照は .NET プロジェクトではあまり一般的ではありません。 ほとんどのプロジェクトの依存関係は、NuGet パッケージ参照として処理されます。 .NET プロジェクトでは、最上位レベルのパッケージの依存関係を参照するだけです。 推移的な依存関係は自動的に含まれます。 ASP.NET Web フォームプロジェクトでよく見られる *packages.config* ファイルを使用してパッケージを参照するのではなく、要素を使用してパッケージ参照をプロジェクトファイルに追加し `<PackageReference>` ます。
 
 ```xml
 <ItemGroup>
@@ -72,7 +66,7 @@ BlazorWebAssemblyプロジェクトは、ベースの .net ランタイムでブ
 
 ## <a name="entry-point"></a>エントリ ポイント
 
-Blazorサーバーアプリのエントリポイントは、コンソールアプリで見られるように、 *Program.cs*ファイルで定義されます。 アプリを実行すると、web アプリ固有の既定値を使用して web ホストインスタンスが作成され、実行されます。 Web ホストは、 Blazor サーバーアプリのライフサイクルを管理し、ホストレベルのサービスを設定します。 このようなサービスの例としては、構成、ログ記録、依存関係の注入、HTTP サーバーなどがあります。 このコードはほとんどが定型であり、変更されることはほとんどありません。
+Blazorサーバーアプリのエントリポイントは、コンソールアプリで見られるように、 *Program.cs* ファイルで定義されます。 アプリを実行すると、web アプリ固有の既定値を使用して web ホストインスタンスが作成され、実行されます。 Web ホストは、 Blazor サーバーアプリのライフサイクルを管理し、ホストレベルのサービスを設定します。 このようなサービスの例としては、構成、ログ記録、依存関係の注入、HTTP サーバーなどがあります。 このコードはほとんどが定型であり、変更されることはほとんどありません。
 
 ```csharp
 public class Program
@@ -91,17 +85,17 @@ public class Program
 }
 ```
 
-BlazorWebAssemblyアプリでは、 *Program.cs*にエントリポイントを定義することもできます。 コードは少し異なります。 コードは、同じホストレベルのサービスをアプリに提供するようにアプリホストを設定するという点で似ています。 WebAssemblyただし、アプリホストは、ブラウザーで直接実行されるため、HTTP サーバーを設定しません。
+BlazorWebAssemblyアプリでは、 *Program.cs* にエントリポイントを定義することもできます。 コードは少し異なります。 コードは、同じホストレベルのサービスをアプリに提供するようにアプリホストを設定するという点で似ています。 WebAssemblyただし、アプリホストは、ブラウザーで直接実行されるため、HTTP サーバーを設定しません。
 
 Blazor アプリには、 `Startup` アプリのスタートアップロジックを定義するための、 *global.asax* ファイルではなくクラスがあります。 クラスは、 `Startup` アプリとアプリ固有のサービスを構成するために使用されます。 Blazorサーバーアプリで `Startup` は、クラスを使用して、クライアントブラウザーとサーバーの間で使用されるリアルタイム接続のエンドポイントを設定し Blazor ます。 アプリでは、クラスによって、 Blazor WebAssembly `Startup` アプリのルートコンポーネントと、それらをレンダリングする場所が定義されます。 このクラスについては `Startup` 、「 [アプリのスタートアップ](./app-startup.md) 」セクションで詳しく説明します。
 
 ## <a name="static-files"></a>静的ファイル
 
-ASP.NET Web フォームプロジェクトとは異なり、プロジェクト内のすべてのファイルを Blazor 静的ファイルとして要求することはできません。 *Wwwroot*フォルダー内のファイルのみが web アドレスを指定できます。 このフォルダーは、アプリの "web ルート" と呼ばれます。 アプリの web ルート以外のものは、web アドレスを指定でき *ません* 。 このセットアップでは、web 経由でプロジェクトファイルが誤って公開されないようにするための追加のセキュリティレベルが提供されます。
+ASP.NET Web フォームプロジェクトとは異なり、プロジェクト内のすべてのファイルを Blazor 静的ファイルとして要求することはできません。 *Wwwroot* フォルダー内のファイルのみが web アドレスを指定できます。 このフォルダーは、アプリの "web ルート" と呼ばれます。 アプリの web ルート以外のものは、web アドレスを指定でき *ません* 。 このセットアップでは、web 経由でプロジェクトファイルが誤って公開されないようにするための追加のセキュリティレベルが提供されます。
 
 ## <a name="configuration"></a>構成
 
-ASP.NET Web フォームアプリの構成は、通常、1つ以上の *web.config* ファイルを使用して処理されます。 Blazor 通常、アプリには *web.config* ファイルがありません。 ファイルがある場合は、IIS でホストされている場合にのみ、ファイルが IIS 固有の設定を構成するために使用されます。 代わりに、 Blazor サーバーアプリは ASP.NET Core 構成の抽象化を使用し Blazor WebAssembly ます (現在、アプリでは同じ構成の抽象化はサポートされていませんが、将来追加される機能である可能性があります)。 たとえば、既定のサーバーアプリでは、 Blazor 一部の設定が *appsettings.js*に格納されます。
+ASP.NET Web フォームアプリの構成は、通常、1つ以上の *web.config* ファイルを使用して処理されます。 Blazor 通常、アプリには *web.config* ファイルがありません。 ファイルがある場合は、IIS でホストされている場合にのみ、ファイルが IIS 固有の設定を構成するために使用されます。 代わりに、 Blazor サーバーアプリは ASP.NET Core 構成の抽象化を使用し Blazor WebAssembly ます (現在、アプリでは同じ構成の抽象化はサポートされていませんが、将来追加される機能である可能性があります)。 たとえば、既定のサーバーアプリでは、 Blazor 一部の設定が *appsettings.js* に格納されます。
 
 ```json
 {
@@ -124,7 +118,7 @@ ASP.NET Web フォームアプリの構成は、通常、1つ以上の *web.conf
 
 各 Razor コンポーネントファイルは、プロジェクトのビルド時に .NET クラスにコンパイルされます。 生成されたクラスは、コンポーネントの状態、レンダリングロジック、ライフサイクルメソッド、イベントハンドラー、およびその他のロジックをキャプチャします。 「[再利用可能な UI コンポーネントの構築 Blazor ](./components.md) 」セクションの「コンポーネントの作成」を参照してください。
 
-*_Imports razor*ファイルは razor コンポーネントファイルではありません。 代わりに、同じフォルダーおよびそのサブフォルダー内の他の *razor* ファイルにインポートする razor ディレクティブのセットを定義します。 たとえば、_Imports の *razor* ファイルは、 `using` 一般的に使用される名前空間のディレクティブを追加する従来の方法です。
+*_Imports razor* ファイルは razor コンポーネントファイルではありません。 代わりに、同じフォルダーおよびそのサブフォルダー内の他の *razor* ファイルにインポートする razor ディレクティブのセットを定義します。 たとえば、_Imports の *razor* ファイルは、 `using` 一般的に使用される名前空間のディレクティブを追加する従来の方法です。
 
 ```razor
 @using System.Net.Http
@@ -138,7 +132,7 @@ ASP.NET Web フォームアプリの構成は、通常、1つ以上の *web.conf
 @using BlazorApp1.Shared
 ```
 
-## <a name="pages"></a>Pages
+## <a name="pages"></a>ページ
 
 アプリ内のページはどこにあり Blazor ますか。 Blazor では、ASP.NET Web フォームアプリの *.aspx* ファイルのように、アドレス指定可能なページに対して個別のファイル拡張子は定義されません。 代わりに、ページはコンポーネントにルートを割り当てることによって定義されます。 ルートは通常、Razor ディレクティブを使用して割り当てられ `@page` ます。 たとえば、 `Counter` *Pages/Counter. razor* ファイルで作成されたコンポーネントは、次のルートを定義します。
 
@@ -163,7 +157,7 @@ ASP.NET Web フォームアプリでは、共通ページレイアウトはマ�
 - ページ上のルートコンポーネント (*app.xaml*) を表示する場所を指定します。
 - 対応する Blazor フレームワークスクリプトを追加します。
 
-Blazorサーバーアプリでは、ルートコンポーネントのホストページは *_Host*ファイルに定義されています。 このファイルは、コンポーネントではなく Razor ページを定義します。 Razor 構文 Razor Pages 使用して、サーバーアドレス指定可能なページを定義し *ます。* これは .aspx ページとよく似ています。 `Html.RenderComponentAsync<TComponent>(RenderMode)`メソッドは、ルートレベルのコンポーネントを表示する場所を定義するために使用されます。 オプションは、 `RenderMode` コンポーネントを表示する方法を示します。 次の表に、サポートされるオプションの概要を示し `RenderMode` ます。
+Blazorサーバーアプリでは、ルートコンポーネントのホストページは *_Host* ファイルに定義されています。 このファイルは、コンポーネントではなく Razor ページを定義します。 Razor 構文 Razor Pages 使用して、サーバーアドレス指定可能なページを定義し *ます。* これは .aspx ページとよく似ています。 `Html.RenderComponentAsync<TComponent>(RenderMode)`メソッドは、ルートレベルのコンポーネントを表示する場所を定義するために使用されます。 オプションは、 `RenderMode` コンポーネントを表示する方法を示します。 次の表に、サポートされるオプションの概要を示し `RenderMode` ます。
 
 |オプション                        |説明       |
 |------------------------------|------------------|
@@ -171,7 +165,7 @@ Blazorサーバーアプリでは、ルートコンポーネントのホスト�
 |`RenderMode.ServerPrerendered`|最初の prerendered してから対話形式で表示する|
 |`RenderMode.Static`           |静的コンテンツとしてレンダリング|
 
-*_Framework/blazor.server.js*へのスクリプト参照は、サーバーとのリアルタイム接続を確立し、すべてのユーザー操作と UI 更新を処理します。
+*_Framework/blazor.server.js* へのスクリプト参照は、サーバーとのリアルタイム接続を確立し、すべてのユーザー操作と UI 更新を処理します。
 
 ```razor
 @page "/"
@@ -198,39 +192,49 @@ Blazorサーバーアプリでは、ルートコンポーネントのホスト�
 </html>
 ```
 
-アプリで Blazor WebAssembly は、ホストページは *wwwroot/index.html*の下の単純な静的 HTML ファイルです。 要素は、 `<app>` ルートコンポーネントを表示する場所を示すために使用されます。
+アプリで Blazor WebAssembly は、ホストページは *wwwroot/index.html* の下の単純な静的 HTML ファイルです。 `<div>`という id を持つ要素 `app` は、ルートコンポーネントのレンダリング先を示すために使用されます。
 
 ```html
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>BlazorApp2</title>
     <base href="/" />
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/site.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="blazor-web.styles.css" rel="stylesheet" />
 </head>
-<body>
-    <app>Loading...</app>
 
+<body>
+    <div id="app">Loading...</div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
     <script src="_framework/blazor.webassembly.js"></script>
 </body>
+
 </html>
+
 ```
 
-レンダリングする特定のコンポーネントは、アプリのメソッドで構成され、 `Startup.Configure` 対応する CSS セレクターによってコンポーネントのレンダリング先が示されます。
+レンダリングするルートコンポーネントは、アプリのメソッドで構成され、 `Program.Main` 依存関係の挿入によってさまざまなサービスを登録する柔軟性があります。「」で[ Blazor WebAssembly ](https://docs.microsoft.com/aspnet/core/blazor/fundamentals/dependency-injection?view=aspnetcore-5.0#blazor-webassembly)は、アプリにサービスを追加する方法を参照できます。
 
 ```csharp
-public class Startup
+public class Program
 {
-    public void ConfigureServices(IServiceCollection services)
+    public static async Task Main(string[] args)
     {
-    }
+        var builder = WebAssemblyHostBuilder.CreateDefault(args);
+        builder.RootComponents.Add<App>("#app");
 
-    public void Configure(IComponentsApplicationBuilder app)
-    {
-        app.AddComponent<App>("app");
+        ....
+        ....
     }
 }
 ```
@@ -248,7 +252,7 @@ public class Startup
 - 開発サーバーを使用して、クライアントプロジェクトを直接実行します。
 - ASP.NET Core を使用してアプリをホストするときに、サーバープロジェクトを実行します。
 
-BlazorWebAssemblyアプリは、Visual Studio を使用したデバッグをサポートしていません。 アプリを実行するには、の代わりにを使用 `Ctrl+F5` `F5` します。 代わりに Blazor WebAssembly 、ブラウザーで直接アプリをデバッグすることができます。 詳細については、「[デバッグ ASP.NET Core Blazor ](/aspnet/core/blazor/debug) 」を参照してください。
+BlazorWebAssemblyアプリは、ブラウザーと Visual Studio の両方でデバッグできます。詳細については、[デバッグ ASP.NET Core Blazor WebAssembly ](/aspnet/core/blazor/debug)を参照してください。
 
 >[!div class="step-by-step"]
 >[前へ](hosting-models.md)
