@@ -3,12 +3,12 @@ title: 非同期プログラミング
 description: .NET Framework Data Provider for SQL Server の非同期プログラミングについて説明します。 .NET Framework 4.5 で導入された機能強化についても説明します。
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: b8f718e0def2ab0b6953ed121eb916f282562d32
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9065aea02dc3f021ed485a4eb6e56cfcece44fac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558473"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677948"
 ---
 # <a name="asynchronous-programming"></a>非同期プログラミング
 
@@ -39,9 +39,9 @@ ms.locfileid: "90558473"
 
 - [Async および Await を使用した非同期プログラミング (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [.NET 4.5 での SqlDataReader の新しい非同期メソッドの使用 (パート 1)](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5)
+- [.NET Framework 4.5 での SqlDataReader の新しい非同期メソッドの使用 (パート 1)](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5)
 
-- [.NET 4.5 での SqlDataReader の新しい非同期メソッドの使用 (パート 2)](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples)
+- [.NET Framework 4.5 での SqlDataReader の新しい非同期メソッドの使用 (パート 2)](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples)
 
 ユーザー インターフェイスが応答しない場合やサーバーのパフォーマンスが向上しない場合は、コードをさらに非同期にする必要がある可能性があります。 非同期コードの記述には、従来、非同期操作の完了後に発生するロジックを表すコールバック (または継続とも呼ばれます) のインストールが伴っていました。 これにより、同期コードと比較して、非同期コードの構造は複雑になります。
 
@@ -451,7 +451,7 @@ namespace SqlBulkCopyAsyncCodeSample {
          AsyncSqlBulkCopyMARS().Wait();
       }
 
-      // 3.1.1 Synchronous bulk copy in .NET 4.5
+      // 3.1.1 Synchronous bulk copy in .NET Framework 4.5
       private static void SynchronousSqlBulkCopy() {
          using (SqlConnection conn = new SqlConnection(connectionString)) {
             conn.Open();
@@ -473,7 +473,7 @@ namespace SqlBulkCopyAsyncCodeSample {
 
       }
 
-      // 3.1.2 Asynchronous bulk copy in .NET 4.5
+      // 3.1.2 Asynchronous bulk copy in .NET Framework 4.5
       private static async Task AsyncSqlBulkCopy() {
          using (SqlConnection conn = new SqlConnection(connectionString)) {
             await conn.OpenAsync();
@@ -564,7 +564,7 @@ namespace SqlBulkCopyAsyncCodeSample {
          }
       }
 
-      // 3.5 Copying data from SQL Server to SQL Azure in .NET 4.5
+      // 3.5 Copying data from SQL Server to SQL Azure in .NET Framework 4.5
       //private static async Task AsyncSqlBulkCopySqlServerToSqlAzure() {
       //   using (SqlConnection srcConn = new SqlConnection(connectionString))
       //   using (SqlConnection destConn = new SqlConnection(azureConnectionString)) {

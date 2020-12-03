@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - with expression [C#]
 - with operator [C#]
-ms.openlocfilehash: 8412dfe8663703d3b201fe98b5f4752da1b344cf
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: d7d3758c8c5da7859974b5b50b63d2a5ca16b24d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94556713"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702226"
 ---
 # <a name="with-expression-c-reference"></a>with 式 (C# リファレンス)
 
@@ -26,7 +26,7 @@ C# 9.0 以降で使用可能な `with` 式は、指定されたプロパティ�
 
 :::code language="csharp" source="snippets/with-expression/InheritanceExample.cs" :::
 
-参照型のメンバーの場合、レコードがコピーされるときに、インスタンスへの参照だけがコピーされます。 コピーと元のレコードの両方が、同じ参照型のインスタンスにアクセスできます。 次の例は、その動作を示します。
+参照型のメンバーの場合、レコードがコピーされるときにインスタンスへの参照のみがコピーされます。 コピーと元のレコードの両方が、同じ参照型のインスタンスにアクセスできます。 次の例は、その動作を示します。
 
 :::code language="csharp" source="snippets/with-expression/ExampleWithReferenceType.cs" :::
 

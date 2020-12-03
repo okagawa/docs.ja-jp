@@ -4,12 +4,12 @@ description: .NET SDK によって認識される MSBuild のプロパティと�
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: ecd1cf405f661d0025553974f92fa1401b13220d
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 14603ba98f00d46d0f167652500979f94de0ec9a
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687472"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031690"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK プロジェクトの MSBuild リファレンス
 
@@ -81,10 +81,24 @@ ms.locfileid: "94687472"
 
 ## <a name="publish-properties-and-items"></a>プロパティと項目の発行
 
+- [CopyLocalLockFileAssemblies](#copylocallockfileassemblies)
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
 - [TrimmerRootAssembly](#trimmerrootassembly)
 - [UseAppHost](#useapphost)
+
+### <a name="copylocallockfileassemblies"></a>CopyLocalLockFileAssemblies
+
+`CopyLocalLockFileAssemblies` プロパティは、他のライブラリに依存しているプラグイン プロジェクトにとって便利です。 このプロパティを `true` に設定すると、NuGet パッケージの依存関係が出力ディレクトリにコピーされます。 つまり、`dotnet build` の出力を使用し、任意のコンピューターでプラグインを実行できます。
+
+```xml
+<PropertyGroup>
+  <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+</PropertyGroup>
+```
+
+> [!TIP]
+> あるいは、`dotnet publish` を使用し、クラス ライブラリを発行できます。 詳細については、「[dotnet publish](../tools/dotnet-publish.md)」を参照してください。
 
 ### <a name="runtimeidentifier"></a>RuntimeIdentifier
 

@@ -3,12 +3,12 @@ title: DataSet と DataTable のセキュリティ ガイダンス
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: e9973df02ff478eedc932099fb8be0526a97b899
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 8798c4542acc578c8f7f00c9b26cd01a0db20c42
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679456"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726068"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>DataSet と DataTable のセキュリティ ガイダンス
 
@@ -18,7 +18,7 @@ ms.locfileid: "90679456"
 * .NET Core 以降
 * .NET 5.0 以降
 
-[DataSet](/dotnet/api/system.data.dataset) 型と [DataTable](/dotnet/api/system.data.datatable) 型は .NET のレガシ コンポーネントであり、マネージド オブジェクトとしてデータ セットを表すことができます。 これらのコンポーネントは、元の [ADO.NET インフラストラクチャ](./index.md)の一部として .NET 1.0 で導入されました。 それらの目標は、リレーショナル データ セットに対するマネージド ビューを提供し、基になるデータのソースが XML、SQL、または他のテクノロジであるかどうかを抽象化することでした。
+[DataSet](/dotnet/api/system.data.dataset) 型と [DataTable](/dotnet/api/system.data.datatable) 型は .NET のレガシ コンポーネントであり、マネージド オブジェクトとしてデータ セットを表すことができます。 これらのコンポーネントは、元の [ADO.NET インフラストラクチャ](./index.md)の一部として .NET Framework 1.0 で導入されました。 それらの目標は、リレーショナル データ セットに対するマネージド ビューを提供し、基になるデータのソースが XML、SQL、または他のテクノロジであるかどうかを抽象化することでした。
 
 最新のデータ ビュー パラダイムを含め、ADO.NET の詳細については、[ADO.NET のドキュメント](../index.md)を参照してください。
 
@@ -34,13 +34,9 @@ ms.locfileid: "90679456"
 
 受信 XML データに、このリストにない型のオブジェクトが含まれている場合:
 
-* 例外が、次のメッセージおよびスタック トレースでスローされます。  
-エラー メッセージ:  
-System.InvalidOperationException :Type '\<Type Name\>, Version=\<n.n.n.n\>, Culture=\<culture\>, PublicKeyToken=\<token value\>' is not allowed here. 詳細については、「[https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227)」を参照してください。  
-スタック トレース:  
-at System.Data.TypeLimiter.EnsureTypeIsAllowed(Type type, TypeLimiter capturedLimiter)  
-at System.Data.DataColumn.UpdateColumnType(Type type, StorageType typeCode)  
-at System.Data.DataColumn.set_DataType(Type value)  
+* 例外が、次のメッセージおよびスタック トレースでスローされます。
+エラー メッセージ:System.InvalidOperationException :Type '\<Type Name\>, Version=\<n.n.n.n\>, Culture=\<culture\>, PublicKeyToken=\<token value\>' is not allowed here. 詳細については、「[https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227)」を参照してください。
+スタック トレース: at System.Data.TypeLimiter.EnsureTypeIsAllowed(Type type, TypeLimiter capturedLimiter) at System.Data.DataColumn.UpdateColumnType(Type type, StorageType typeCode) at System.Data.DataColumn.set_DataType(Type value)
 
 * 逆シリアル化操作が失敗する。
 
@@ -152,7 +148,7 @@ AppDomain.CurrentDomain.SetData("System.Data.DataSetDefaultAllowedTypes", extraA
 
 ### <a name="run-an-app-in-audit-mode-net-framework"></a>監査モードでアプリを実行する (.NET Framework)
 
-.NET Framework では、`DataSet` と `DataTable` において監査モード機能が提供されます。 監査モードが有効になっていると、`DataSet` と `DataTable` では、受信したオブジェクトの型が、許可される型のリストと比較されます。 ただし、許可されていない型のオブジェクトが見つかった場合でも、例外はスローされ**ません**。 代わりに、`DataSet` と `DataTable` では、アタッチされている `TraceListener` のインスタンスに、疑わしい型が存在することが通知されます。これにより、`TraceListener` ではこの情報をログに記録できます。 例外はスローされず、逆シリアル化操作は続行されます。
+.NET Framework では、`DataSet` と `DataTable` において監査モード機能が提供されます。 監査モードが有効になっていると、`DataSet` と `DataTable` では、受信したオブジェクトの型が、許可される型のリストと比較されます。 ただし、許可されていない型のオブジェクトが見つかった場合でも、例外はスローされ **ません**。 代わりに、`DataSet` と `DataTable` では、アタッチされている `TraceListener` のインスタンスに、疑わしい型が存在することが通知されます。これにより、`TraceListener` ではこの情報をログに記録できます。 例外はスローされず、逆シリアル化操作は続行されます。
 
 > [!WARNING]
 > "監査モード" でのアプリの実行は、テストに使用する一時的な手段のみにする必要があります。 監査モードが有効になっていると、`DataSet` と `DataTable` では型の制限が適用されず、これによりアプリ内にセキュリティ ホールが生じる可能性があります。 詳細については、「[すべての型の制限を削除する](#ratr)」および「[信頼されていない入力に関する安全性](#swr)」のセクションを参照してください。
@@ -178,7 +174,7 @@ AppDomain.CurrentDomain.SetData("System.Data.DataSetDefaultAllowedTypes", extraA
 </configuration>
 ```
 
-監査モードを有効にした後は、_App.config_ を使用して、適切な `TraceListener` を `DataSet` の組み込みの `TraceSource.` に接続できます。組み込みのトレース ソースの名前は _System.Data.DataSet_ です。 次の例では、トレース イベントをコンソール_と_ディスク上のログ ファイルに書き込む方法を示します。
+監査モードを有効にした後は、_App.config_ を使用して、適切な `TraceListener` を `DataSet` の組み込みの `TraceSource.` に接続できます。組み込みのトレース ソースの名前は _System.Data.DataSet_ です。 次の例では、トレース イベントをコンソール _と_ ディスク上のログ ファイルに書き込む方法を示します。
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -218,7 +214,7 @@ AppDomain.CurrentDomain.SetData("System.Data.DataSetDefaultAllowedTypes", extraA
 * 使用できるオプションは、アプリの対象となるフレームワークによって異なります。
 
 > [!WARNING]
-> 型の制限をすべて削除すると、アプリ内にセキュリティ ホールが生じる可能性があります。 このメカニズムを使用するときは、アプリで信頼されていない入力を読み取るために `DataSet` または `DataTable` を使用して**いない**ことを確認してください。 詳細については、[CVE-2020-1147](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1147) および後のセクション「[信頼されていない入力に関する安全性](#swr)」を参照してください。
+> 型の制限をすべて削除すると、アプリ内にセキュリティ ホールが生じる可能性があります。 このメカニズムを使用するときは、アプリで信頼されていない入力を読み取るために `DataSet` または `DataTable` を使用して **いない** ことを確認してください。 詳細については、[CVE-2020-1147](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1147) および後のセクション「[信頼されていない入力に関する安全性](#swr)」を参照してください。
 
 #### <a name="through-appcontext-configuration-net-framework-46---48-net-core-21-and-later-net-50-and-later"></a>AppContext の構成を使用 (.NET Framework 4.6 - 4.8、.NET Core 2.1 以降、.NET 5.0 以降)
 
@@ -479,9 +475,9 @@ public class MyClass
 
 ## <a name="deserialize-a-dataset-or-datatable-via-binaryformatter"></a>BinaryFormatter を使用して DataSet または DataTable を逆シリアル化する
 
-開発者は、`BinaryFormatter`、`NetDataContractSerializer`、`SoapFormatter`、または関連する "***安全でない***" フォーマッタを使用して、信頼されていないペイロードから `DataSet` または `DataTable` のインスタンスを逆シリアル化しないでください。
+開発者は、`BinaryFormatter`、`NetDataContractSerializer`、`SoapFormatter`、または関連する "**安全でない**" フォーマッタを使用して、信頼されていないペイロードから `DataSet` または `DataTable` のインスタンスを逆シリアル化しないでください。
 
-* これは、完全なリモート コード実行攻撃の影響を受けやすくなります。
+これは、完全なリモート コード実行攻撃の影響を受けやすくなります。
 * このような攻撃を防ぐには、カスタム `SerializationBinder` を使用するだけでは不十分です。
 
 ## <a name="safe-replacements"></a>安全な置換

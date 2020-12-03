@@ -4,12 +4,12 @@ description: メソッド、メソッド パラメーター、メソッド戻り
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: d5ca96ab3a07b85fa525dd06c975f8e3221c82e8
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: ea07553d20ea6c18bac048a2e8d697f665bfb949
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223665"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031677"
 ---
 # <a name="methods-in-c"></a>(C#) のメソッド
 
@@ -81,7 +81,7 @@ ms.locfileid: "92223665"
 
 ## <a name="passing-parameters"></a>パラメーターを渡す
 
-C# の型は、 *値型* と *参照型* のどちらかに区別されます。 組み込みの値型の一覧については、[型](./tour-of-csharp/types.md)に関するページを参照してください。 既定では、値型と参照型の両方が値によりメソッドに渡されます。
+C# の型は、*値型* と *参照型* のどちらかに区別されます。 組み込みの値型の一覧については、[型](./tour-of-csharp/types.md)に関するページを参照してください。 既定では、値型と参照型の両方が値によりメソッドに渡されます。
 
 <a name="byval"></a>
 
@@ -158,7 +158,7 @@ C# の型は、 *値型* と *参照型* のどちらかに区別されます。
 
 [!code-csharp[csSnippets.Methods#22](../../samples/snippets/csharp/concepts/methods/optional1.cs#22)]
 
-省略可能なパラメーターの使用は、 *オーバーロードの解決* に影響を与えます。次のように、特定のオーバーロードをメソッド呼び出しで呼び出すかどうかを C# コンパイラが決定する方法に影響を与えます。
+省略可能なパラメーターの使用は、*オーバーロードの解決* に影響を与えます。次のように、特定のオーバーロードをメソッド呼び出しで呼び出すかどうかを C# コンパイラが決定する方法に影響を与えます。
 
 - メソッド、インデクサー、コンストラクターのパラメーターのそれぞれが任意であるか、名前か位置により、呼び出しステートメントの 1 つの引数に対応するとき、その引数がパラメーターの型に変換できる場合、メソッド、インデクサー、コンストラクターが実行の候補になります。
 - 複数の候補が見つかった場合、明示的に指定される引数には、優先変換に関するオーバーロード解決の規則が適用されます。 任意のパラメーターの省略された引数は無視されます。
@@ -184,7 +184,7 @@ C# の型は、 *値型* と *参照型* のどちらかに区別されます。
 
 この場合、ローカル変数 `result`を使用して値を格納する手順はオプションです。 このローカル変数によってコードの読みやすさが向上することがあります。また、引数の元の値をメソッドのスコープ全体で保持する場合に必要になることがあります。
 
-メソッドで複数の値を返すと便利な場合があります。 C# 7.0 以降では、 *タプル型* と *タプル リテラル* を使用してこれを簡単に実行できます。 タプル型は、タプルの要素のデータ型を決定します。 タプル リテラルは、返されたタプルの実際の値を提供します。 次の例では、`(string, string, string, int)` は、`GetPersonalInfo` メソッドにより返されるタプル型を定義します。 式 `(per.FirstName, per.MiddleName, per.LastName, per.Age)` はタプル リテラルです。このメソッドは、`PersonInfo` オブジェクトの名、ミドルネーム、姓、年齢を返します。
+メソッドで複数の値を返すと便利な場合があります。 C# 7.0 以降では、*タプル型* と *タプル リテラル* を使用してこれを簡単に実行できます。 タプル型は、タプルの要素のデータ型を決定します。 タプル リテラルは、返されたタプルの実際の値を提供します。 次の例では、`(string, string, string, int)` は、`GetPersonalInfo` メソッドにより返されるタプル型を定義します。 式 `(per.FirstName, per.MiddleName, per.LastName, per.Age)` はタプル リテラルです。このメソッドは、`PersonInfo` オブジェクトの名、ミドルネーム、姓、年齢を返します。
 
 ```csharp
 public (string, string, string, int) GetPersonalInfo(string id)

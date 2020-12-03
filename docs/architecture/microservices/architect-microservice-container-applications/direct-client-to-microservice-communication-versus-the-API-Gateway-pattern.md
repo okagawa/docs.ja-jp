@@ -2,12 +2,12 @@
 title: API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との比較
 description: API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との相違点およびそれぞれの用途について説明します。
 ms.date: 01/07/2019
-ms.openlocfilehash: 90761605dde197e44658e3ba0b0a3a2c06b5942c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 88cea3b7c2fdd09bec605431308df8783c343332
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152703"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240603"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との比較
 
@@ -41,7 +41,7 @@ ms.locfileid: "91152703"
 
 - *クライアント アプリは非インターネット対応プロトコルを使用するサービスとどのように通信できるのか*
 
-サーバー側で使用されるプロトコル (AMQP やバイナリ プロトコルなど) は、通常、クライアント アプリではサポートされません。 そのため、要求は HTTP/HTTPS などのプロトコル経由で実行し、その後、他のプロトコルに変換する必要があります。 このような状況では*中間者* 方法が役立つ場合があります。
+サーバー側で使用されるプロトコル (AMQP やバイナリ プロトコルなど) は、通常、クライアント アプリではサポートされません。 そのため、要求は HTTP/HTTPS などのプロトコル経由で実行し、その後、他のプロトコルに変換する必要があります。 このような状況では *中間者* 方法が役立つ場合があります。
 
 - *モバイル アプリ専用のファサードはどのように形成できるのか*
 
@@ -113,7 +113,7 @@ API ゲートウェイではさまざまな機能が提供されます。 提供
 - 負荷分散
 - ログ記録、トレース、相関関係
 - ヘッダー、クエリ文字列、クレーム変換
-- IP ホワイトリスト登録
+- IP 許可リスト
 
 詳細については、「[ゲートウェイ オフロード パターン](/azure/architecture/patterns/gateway-offloading)」を参照してください。
 

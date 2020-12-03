@@ -3,16 +3,16 @@ title: 破棄 - C# ガイド
 description: C# の破棄のサポートについて説明します。破棄は、未割り当てで破棄可能な変数です。また、破棄の使用例についても説明します。
 ms.technology: csharp-fundamentals
 ms.date: 09/22/2020
-ms.openlocfilehash: 4de48aebaeb896b198b2e9f2431c6a38ba11469e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: baa7c559095460cf747cb5c8f7ad581270893bd7
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869322"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "95698807"
 ---
 # <a name="discards---c-guide"></a>破棄 - C# ガイド
 
-C# 7.0 以降、C# は破棄をサポートしています。破棄は、アプリケーション コードで意図的に使用しない一時的なダミー変数です。 破棄は、未割り当ての変数と同等です。つまり、値がありません。 破棄変数は 1 つのみであり、破棄変数には記憶域も割り当てられないため、破棄を使用するとメモリの割り当てを減らすことができます。 また、コードの意図がわかりやすくなるため、読みやすさと保守性が向上します。
+C# 7.0 以降では、C# で破棄がサポートされます。これらは、アプリケーション コードで意図的に使用しないプレースホルダー変数です。 破棄は、未割り当ての変数と同等です。つまり、値がありません。 破棄変数は 1 つのみであり、破棄変数には記憶域も割り当てられないため、破棄を使用するとメモリの割り当てを減らすことができます。 また、コードの意図がわかりやすくなるため、読みやすさと保守性が向上します。
 
 変数を破棄と指定するには、変数名にアンダースコア (`_`) を指定します。 たとえば、次のメソッド呼び出しは 3 つのタプルを返します。この 1 つ目と 2 つ目の値が破棄されます。*area* は以前に宣言した変数であり、*GetCityInformation* から返された、対応する 3 つ目のコンポーネントに設定されます。
 
@@ -47,7 +47,7 @@ C# 9.0 以降では、破棄を使用して、ラムダ式の未使用の入力�
 
 ## <a name="pattern-matching-with-switch-and-is"></a>`switch` と `is` を使用したパターン マッチング
 
-*破棄パターン*は、[is](language-reference/keywords/is.md) キーワードと [switch](language-reference/keywords/switch.md) キーワードを使用したパターン マッチングで使用できます。 各式は常に破棄パターンと一致します。
+*破棄パターン* は、[is](language-reference/keywords/is.md) キーワードと [switch](language-reference/keywords/switch.md) キーワードを使用したパターン マッチングで使用できます。 各式は常に破棄パターンと一致します。
 
 [is](language-reference/keywords/is.md) ステートメントを使用して、オブジェクトが <xref:System.IFormatProvider> 実装を提供しているかどうかを判断し、オブジェクトが `null` かどうかをテストする `ProvidesFormatInfo` メソッドの定義例を次に示します。 また、破棄パターンを使用して、その他の任意の型の null 以外のオブジェクトを処理します。
 

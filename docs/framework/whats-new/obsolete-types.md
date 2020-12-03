@@ -1,18 +1,18 @@
 ---
 title: 旧版の .NET Framework の型
-description: アセンブリ別にまとめられた、旧版の .NET Framework 4.5 および .NET 4.6 の型の一覧を確認します。 推奨される代替型も一覧されています。
+description: アセンブリ別にまとめられた、旧版の .NET Framework 4.5 および .NET Framework 4.6 の型の一覧を確認します。 推奨される代替型も一覧されています。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework 4.5, obsolete types
 - types, obsolete in .NET Framework 4.5
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
-ms.openlocfilehash: 795735b66c7568dada0196a6426a0a9aaf52398a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ccf39283152ecdc6b7827f2185de215c17ecc845
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558538"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707916"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>旧版の .NET Framework の型
 
@@ -134,8 +134,8 @@ ms.locfileid: "90558538"
 |<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|代わりに <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType> を使用してください|
 |<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|代わりに、<xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType> を使用してください。|
 |<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|代わりに、<xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType> を使用してください。|
-|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope> は、.NET 2.0 の透過的な互換性のみを目的として使用されます。|
-|<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute> は、.NET 2.0 の透過的な互換性のみを目的として使用されます。 代わりに、<xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType> を使用してください。|
+|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope> は、.NET Framework 2.0 の透過的な互換性のみを目的として使用されます。|
+|<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute> は、.NET Framework 2.0 の透過的な互換性のみを目的として使用されます。 代わりに、<xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType> を使用してください。|
 |<xref:System.Security.Policy.FirstMatchCodeGroup?displayProperty=nameWithType>|この型は互換性のために残されていますが、.NET Framework の将来のリリースでは削除されます。|
 |<xref:System.Security.Policy.PermissionRequestEvidence?displayProperty=nameWithType>|アセンブリ レベルの宣言セキュリティは互換性のために残されていますが、既定では、CLR によって強制されることはなくなりました。|
 |<xref:System.Security.Policy.UnionCodeGroup?displayProperty=nameWithType>|この型は互換性のために残されていますが、.NET Framework の将来のリリースでは削除されます。|

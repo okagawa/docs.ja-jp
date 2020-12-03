@@ -5,23 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
-ms.openlocfilehash: 3cb65142243d1f910ffd0fb85750ba62786d79f0
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1a2d1f0972bc610cb4943dacc74c1bae8c54012b
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824701"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032217"
 ---
 # <a name="script-blocks-using-msxslscript"></a>msxsl:script を使用したスクリプト ブロック
+
+> [!NOTE]
+> スクリプト ブロックは、.NET Framework でのみサポートされています。 .NET Core または .NET 5.0 以降ではサポートされて "_いません_"。
+
 <xref:System.Xml.Xsl.XslCompiledTransform> クラスは、`msxsl:script` 要素を使用した埋め込みスクリプトをサポートしています。 スタイル シートが読み込まれると、定義されているすべての関数は Code Document Object Model (CodeDOM) によって Microsoft intermediate language (MSIL) にコンパイルされ、実行時に実行されます。 埋め込みのスクリプト ブロックから生成されたアセンブリは、スタイル シートに対して生成されるアセンブリとは区別されます。  
   
 ## <a name="enable-xslt-script"></a>XSLT スクリプトの有効化  
+
  埋め込みスクリプトのサポートは、<xref:System.Xml.Xsl.XslCompiledTransform> クラスではオプションの XSLT 設定です。 スクリプトのサポートは既定で無効になっています。 スクリプトのサポートを有効にするには、<xref:System.Xml.Xsl.XsltSettings> プロパティを <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A> に設定して `true` オブジェクトを作成し、そのオブジェクトを <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> メソッドに渡します。  
   
 > [!NOTE]
 > XSLT スクリプトは、スクリプトのサポートが必要であり、完全に信頼された環境で作業している場合のみ有効にします。  
   
 ## <a name="msxslscript-element-definition"></a>msxsl:script 要素の定義  
+
  `msxsl:script` 要素は XSLT 1.0 勧告に対するマイクロソフトの拡張機能であり、次のように定義されます。  
   
 ```xml  
@@ -46,6 +52,7 @@ ms.locfileid: "94824701"
 ```  
   
 ## <a name="script-functions"></a>スクリプト関数  
+
  関数は、`msxsl:script` 要素内で宣言できます。 関数が宣言されると、その関数はスクリプト ブロックに含まれます。 スタイル シートには、相互に独立して機能する複数のスクリプト ブロックを含めることができます。 このため、1 つのスクリプト ブロック内で実行しているときに、別のスクリプト ブロックで定義した関数を呼び出すことはできません。ただし、そのブロックが同じ名前空間とスクリプト言語を持つように宣言されている場合は例外です。 各スクリプト ブロックは独自の言語で記述でき、ブロックはその言語に対応するパーサーの文法規則に従って解析されるため、使われている言語の正しい構文を使用することを推奨します。 たとえば、Microsoft C# スクリプト内では C# のコメント構文を使用します。  
   
  関数に渡される引数と戻り値の型は任意です。 W3C XPath 型は共通言語ランタイム (CLR) 型のサブセットなので、XPath 型とは考えられない型については型変換が行われます。 W3C 型と等価な CLR 型を次の表に示します。  
@@ -63,9 +70,11 @@ ms.locfileid: "94824701"
  その他の型はエラーになります。  
   
 ### <a name="importing-namespaces-and-assemblies"></a>名前空間とアセンブリのインポート  
+
  <xref:System.Xml.Xsl.XslCompiledTransform> クラスには、既定で `msxsl:script` 要素がサポートする一連のアセンブリと名前空間が事前定義されています。 しかし、アセンブリと名前空間を `msxsl:script` ブロックにインポートすることにより、事前定義の一覧にない 1 つの名前空間に属するクラスとメンバーを使用することができます。  
   
 #### <a name="assemblies"></a>アセンブリ  
+
  次の 2 つのアセンブリは既定で参照されます。  
   
 - System.dll  
@@ -89,6 +98,7 @@ ms.locfileid: "94824701"
  `name` 属性にはアセンブリの名前が含まれ、`href` 属性にはアセンブリへのパスが含まれます。 アセンブリの名前は "System.Data, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" などの完全な名前でも、"System.Web" などの短い名前でもかまいません。  
   
 #### <a name="namespaces"></a>名前空間  
+
  次の名前空間は既定で含まれます。  
   
 - システム  
@@ -119,15 +129,18 @@ ms.locfileid: "94824701"
 ```  
   
 ## <a name="example"></a>例  
+
  埋め込みスクリプトを使用して、半径が指定された円の円周を算出する例を次に示します。  
   
  [!code-csharp[XSLT_Script#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Script/CS/xslt_script.cs#1)]
  [!code-vb[XSLT_Script#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XSLT_Script/VB/xslt_script.vb#1)]  
   
 #### <a name="numberxml"></a>number.xml  
+
  [!code-xml[XSLT_Script#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Script/XML/number.xml#2)]  
   
 #### <a name="calcxsl"></a>calc.xsl  
+
  [!code-xml[XSLT_Script#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Script/XML/calc.xsl#3)]  
   
 ### <a name="output"></a>出力  

@@ -2,12 +2,12 @@
 title: dotnet tool restore コマンド
 description: dotnet tool restore コマンドを実行すると、現在のディレクトリのスコープ内にある .NET ローカル ツールがお使いのコンピューターにインストールされます。
 ms.date: 02/14/2020
-ms.openlocfilehash: 1b7fd10102f2c957b3eb235f6897b60bc8ca9c07
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 3425bc6b78fd53f578c209013f83b006305dbb81
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634273"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242930"
 ---
 # <a name="dotnet-tool-restore"></a>dotnet tool restore
 
@@ -15,7 +15,7 @@ ms.locfileid: "94634273"
 
 ## <a name="name"></a>名前
 
-`dotnet tool restore` - お使いのコンピューターに、現在のディレクトリのスコープ内にある .NET ローカル ツールをインストールします。
+`dotnet tool restore` - 現在のディレクトリのスコープ内にある .NET ローカル ツールをインストールします。
 
 ## <a name="synopsis"></a>構文
 

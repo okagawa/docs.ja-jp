@@ -2,12 +2,12 @@
 title: Docker アプリの開発ワークフロー
 description: Docker ベースのアプリケーションを開発するためのワークフローの詳細を理解します。 まず、段階的に見ていき、Dockerfile の最適化について詳しく確認し、最終的には Visual Studio を使用する際に利用できる簡略化されたワークフローを理解します。
 ms.date: 01/30/2020
-ms.openlocfilehash: 1ae4e3cda71676caeab849a92207477652050e25
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: 4019eed6b814f4c7e8bc4f32758e8cfd7f4c7ec9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594594"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711183"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker アプリの開発ワークフロー
 
@@ -97,14 +97,14 @@ Visual Studio と Docker 用のツールでは、このタスクはマウスを�
 
 通常、[Docker Hub](https://hub.docker.com/) レジストリなどの公式のリポジトリから取得する基本イメージ上に、コンテナーのカスタム イメージをビルドします。 Visual Studio で Docker のサポートを有効にした場合、背後ではこれがまさに発生します。 Dockerfile では、既存の `dotnet/core/aspnet` イメージを使用します。
 
-選択した OS とフレームワークによって、使用できる Docker イメージとリポジトリについては、既に説明しています。 たとえば、ASP.NET Core (Linux または Windows) を使用したい場合は、`mcr.microsoft.com/dotnet/core/aspnet:3.1` のイメージを使用します。 この場合は、コンテナーに使用する基本の Docker イメージのみを指定する必要があります。 これは、`FROM mcr.microsoft.com/dotnet/core/aspnet:3.1` を Dockerfile に追加することで行います。 これは、Visual Studio が自動的に実行しますが、バージョンを更新する場合は、この値を更新する必要があります。
+選択した OS とフレームワークによって、使用できる Docker イメージとリポジトリについては、既に説明しています。 たとえば、ASP.NET Core (Linux または Windows) を使用したい場合は、`mcr.microsoft.com/dotnet/aspnet:3.1` のイメージを使用します。 この場合は、コンテナーに使用する基本の Docker イメージのみを指定する必要があります。 これは、`FROM mcr.microsoft.com/dotnet/aspnet:3.1` を Dockerfile に追加することで行います。 これは、Visual Studio が自動的に実行しますが、バージョンを更新する場合は、この値を更新する必要があります。
 
 バージョン番号を使用して Docker Hub の公式の .NET イメージ リポジトリを使うと、同じ言語機能が (開発、テスト、および実稼働環境などの) すべてのコンピューターで使用できるようになります。
 
 次の例では、ASP.NET Core コンテナー用のサンプルの Dockerfile を示しています。
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+FROM mcr.microsoft.com/dotnet/aspnet:3.1
 ARG source
 WORKDIR /app
 EXPOSE 80
@@ -112,7 +112,7 @@ COPY ${source:-obj/Docker/publish} .
 ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ```
 
-この場合、イメージは、公式の ASP.NET Core Docker イメージ (Linux および Windows 用マルチアーキテクチャ) のバージョン 3.1 に基づいています。 この設定は、`FROM mcr.microsoft.com/dotnet/core/aspnet:3.1` です。 (この基本イメージの詳細については、「[.NET Core Docker Image](https://hub.docker.com/_/microsoft-dotnet-core/)」 (.NET Core Docker イメージ) ページを参照してください)。Dockerfile では、実行時に使用する、リッスンする TCP ポートを、Docker に指示する必要があります (ここでは、EXPOSE 設定で構成したポート 80)。
+この場合、イメージは、公式の ASP.NET Core Docker イメージ (Linux および Windows 用マルチアーキテクチャ) のバージョン 3.1 に基づいています。 この設定は、`FROM mcr.microsoft.com/dotnet/aspnet:3.1` です。 (この基本イメージの詳細については、[ASP.NET Core Docker イメージ](https://hub.docker.com/_/microsoft-dotnet-aspnet/)に関するページを参照してください)。Dockerfile では、実行時に使用する、リッスンする TCP ポートを、Docker に指示する必要があります (ここでは、EXPOSE 設定で構成したポート 80)。
 
 使用している言語とフレームワークによっては、Dockerfile に別の構成設定を指定できます。 たとえば、`["dotnet", "MySingleContainerWebApp.dll"]` の ENTRYPOINT 行では、.NET Core アプリケーションを実行するように Docker に指示します。 SDK と .NET Core CLI (dotnet CLI) を使用して、.NET アプリケーションをビルドおよび実行している場合、この設定は異なります。 つまり、アプリケーションに選択した言語とプラットフォームにより、ENTRYPOINT 行とその他の設定は別になります。
 
@@ -132,19 +132,19 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 
 ### <a name="using-multi-arch-image-repositories"></a>マルチアーキテクチャ イメージ リポジトリの使用
 
-単一のリポジトリには、Linux イメージや Windows イメージなどのプラットフォーム バリアントを含めることができます。 この機能では、Microsoft (基本イメージの作成者) などのベンダーが、複数のプラットフォーム (つまり、Linux および Windows) に対応できるリポジトリを 1 つ作成できます。 たとえば、Docker Hub レジストリにある [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) リポジトリでは、同じリポジトリ名を使用して Linux および Windows Nano Server をサポートしています。
+単一のリポジトリには、Linux イメージや Windows イメージなどのプラットフォーム バリアントを含めることができます。 この機能では、Microsoft (基本イメージの作成者) などのベンダーが、複数のプラットフォーム (つまり、Linux および Windows) に対応できるリポジトリを 1 つ作成できます。 たとえば、Docker Hub レジストリにある [dotnet/core](https://hub.docker.com/_/microsoft-dotnet/) リポジトリでは、同じリポジトリ名を使用して Linux および Windows Nano Server をサポートしています。
 
 タグを指定する場合、次の場合のように、明示的にプラットフォームを指定できます。
 
-- `mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim` \
+- `mcr.microsoft.com/dotnet/aspnet:3.1-buster-slim` \
   ターゲット: Linux の .NET Core 3.1 ランタイムのみ
 
-- `mcr.microsoft.com/dotnet/core/aspnet:3.1-nanoserver-1909` \
+- `mcr.microsoft.com/dotnet/aspnet:3.1-nanoserver-1909` \
   ターゲット: Windows Nano Server の .NET Core 3.1 ランタイムのみ
 
 しかし、同じイメージ名を指定した場合、タグが同じでも、次の例に示すように、マルチアーキテクチャ イメージ (`aspnet` イメージなど) では、展開する Docker ホスト OS に応じて、Linux または Windows バージョンが使用されます。
 
-- `mcr.microsoft.com/dotnet/core/aspnet:3.1` \
+- `mcr.microsoft.com/dotnet/aspnet:3.1` \
   マルチアーキテクチャ: Docker ホスト OS に応じて、Linux または Windows Nano Server の .NET Core 3.1 ランタイムのみ
 
 この場合、Windows ホストからイメージをプルした場合、Windows バリアントがプルされ、同じイメージ名が Linux ホストからプルされた場合、Linux バリアントがプルされます。
@@ -174,11 +174,11 @@ Dockerfile はバッチ スクリプトに似ています。 コマンド ライ
 初期の Dockerfile は、次のようになります。
 
 ```dockerfile
- 1  FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
+ 1  FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
+ 5  FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
  6  WORKDIR /src
  7  COPY src/Services/Catalog/Catalog.API/Catalog.API.csproj …
  8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks …
@@ -277,11 +277,11 @@ RUN dotnet restore
 結果のファイルは次のようになります。
 
 ```dockerfile
- 1  FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
+ 1  FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS publish
+ 5  FROM mcr.microsoft.com/dotnet/sdk:3.1 AS publish
  6  WORKDIR /src
  7  COPY . .
  8  RUN dotnet restore /ignoreprojectextensions:.dcproj
@@ -566,7 +566,7 @@ RUN powershell -Command Add-WindowsFeature Web-Server
 CMD [ "ping", "localhost", "-t" ]
 ```
 
-この場合は、Windows Server Core 基本イメージ (FROM 設定) を使用して、PowerShell コマンド (RUN 設定) で IIS をインストールしています。 同様に、PowerShell コマンドを使用して、ASP.NET 4.x、.NET 4.6、またはその他の任意の Windows ソフトウェアなどの追加コンポーネントを設定することもできます。 たとえば、Dockerfile の次のコマンドでは、ASP.NET 4.5 が設定されます。
+この場合は、Windows Server Core 基本イメージ (FROM 設定) を使用して、PowerShell コマンド (RUN 設定) で IIS をインストールしています。 同様に、PowerShell コマンドを使用して、ASP.NET 4.x、.NET Framework 4.6、またはその他の任意の Windows ソフトウェアなどの追加コンポーネントを設定することもできます。 たとえば、Dockerfile の次のコマンドでは、ASP.NET 4.5 が設定されます。
 
 ```dockerfile
 RUN powershell add-windowsfeature web-asp-net45

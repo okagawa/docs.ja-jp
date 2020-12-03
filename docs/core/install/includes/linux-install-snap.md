@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4ab2fc0645f76870dead99b5f45eef763643fb27
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 83808f2f3a05333ed5d9e3809cbc2fd6e230d02c
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506902"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031772"
 ---
 
 [.NET Core は、Snap Store から入手できます。](https://snapcraft.io/dotnet-sdk)

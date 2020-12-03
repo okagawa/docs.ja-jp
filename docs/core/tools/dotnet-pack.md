@@ -2,12 +2,12 @@
 title: dotnet pack コマンド
 description: dotnet pack コマンドを実行すると、.NET プロジェクトの NuGet パッケージが作成されます。
 ms.date: 04/28/2020
-ms.openlocfilehash: 4312ea64a75fa89eae58cdb41a6dc3463cdd215c
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 3ca7947b4ed9902b163f09a7b57696f304610cce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634234"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674802"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -118,7 +118,7 @@ Web プロジェクトは既定でパッケージ化可能ではありません�
 
 - **`-s|--serviceable`**
 
-  パッケージに処理可能フラグを設定します。 詳しくは、「[.NET Blog: .NET 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries](https://aka.ms/nupkgservicing)」(.NET ブログ: .NET 4.5.1 は .NET NuGet ライブラリに対する Microsoft セキュリティ更新プログラムをサポートする) をご覧ください。
+  パッケージに処理可能フラグを設定します。 詳細については、[ .NET Framework 4.5.1 での .NET NuGet ライブラリに対する Microsoft セキュリティ更新プログラムのサポートに関する .NET ブログ](https://aka.ms/nupkgservicing)を参照してください。
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 
@@ -185,7 +185,7 @@ Web プロジェクトは既定でパッケージ化可能ではありません�
   ```
 
   `NuspecFile`、`NuspecBasePath`、`NuspecProperties` の詳細については、次のリソースを参照してください。
-  
+
   - [.nuspec を使用したパック](/nuget/reference/msbuild-targets#packing-using-a-nuspec)
   - [カスタマイズされたパッケージを作成するための高度な拡張ポイント](/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
   - [グローバル プロパティ](/visualstudio/msbuild/msbuild-properties#global-properties)

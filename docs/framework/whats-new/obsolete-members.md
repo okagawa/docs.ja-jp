@@ -1,18 +1,18 @@
 ---
 title: 互換性のために残されているメンバー - .NET Framework
-description: .NET 4.5 以降のバージョンで互換性のために残されている型メンバーの一覧を確認します。 型メンバーは、アセンブリごとにグループ化されています。 互換性のために残されている型のメンバーは、ここでは除外されています。
+description: .NET 4.5 Framework 以降のバージョンで互換性のために残されている型メンバーの一覧を確認します。 型メンバーは、アセンブリごとにグループ化されています。 互換性のために残されている型のメンバーは、ここでは除外されています。
 ms.date: 10/17/2017
 helpviewer_keywords:
 - .NET Framework, obsolete members
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: d5981a2ec1e8152e891a4480ea548200be45ecd1
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 35dc67e80a47ba3e61db3d27f44f6c6ee45464ba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558525"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726458"
 ---
 # <a name="obsolete-members-in-net-framework"></a>.NET Framework で互換性のために残されているメンバー
 
@@ -134,7 +134,7 @@ ms.locfileid: "90558525"
 > |<xref:System.Security.HostSecurityManagerOptions?displayProperty=nameWithType>|<xref:System.Security.HostSecurityManagerOptions.HostPolicyLevel>|AppDomain ポリシー レベルは互換性のために残されていますが、.NET Framework の将来のリリースでは削除されます。|
 > |<xref:System.Security.PermissionSet?displayProperty=nameWithType>|<xref:System.Security.PermissionSet.ConvertPermissionSet%2A>|このメソッドは互換性のために残されていますが、使用しないでください。|
 > |<xref:System.Security.PermissionSet?displayProperty=nameWithType>|<xref:System.Security.PermissionSet.Deny%2A>|<xref:System.Security.PermissionSet.Deny%2A> は互換性のために残されていますが、.NET Framework の将来のリリースでは削除されます。|
-> |<xref:System.Security.SecurityCriticalAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalAttribute.Scope%2A>|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType> は、.NET 2.0 の透過的な互換性のみを目的として使用されます。|
+> |<xref:System.Security.SecurityCriticalAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalAttribute.Scope%2A>|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType> は、.NET Framework 2.0 の透過的な互換性のみを目的として使用されます。|
 > |<xref:System.Security.SecurityManager?displayProperty=nameWithType>|<xref:System.Security.SecurityManager.CheckExecutionRights%2A>|実行するためのアクセス許可チェックをオフにすることはできなくなったので、<xref:System.Security.SecurityManager.CheckExecutionRights%2A> プロパティはその効力がなくなりました。|
 > |<xref:System.Security.SecurityManager?displayProperty=nameWithType>|<xref:System.Security.SecurityManager.IsGranted%2A>|<xref:System.Security.SecurityManager.IsGranted%2A> は互換性のために残されていますが、.NET Framework の将来のリリースでは削除されます。 代わりに、<xref:System.AppDomain.PermissionSet%2A?displayProperty=nameWithType> プロパティまたは <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=nameWithType> プロパティを使用してください。|
 > |<xref:System.Security.SecurityManager?displayProperty=nameWithType>|<xref:System.Security.SecurityManager.LoadPolicyLevelFromFile%2A>|このメソッドは互換性のために残されていますが、.NET Framework の将来のリリースでは削除されます。|

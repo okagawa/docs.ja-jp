@@ -1,6 +1,6 @@
 ---
 title: '方法: .NET Framework 4.5 インストーラーの進行状況を表示する'
-description: .NET 4.5 インストーラーの進行状況を表示する方法について説明します。 このバージョンの .NET 用アプリを開発する場合は、アプリのセットアップに .NET 4.5 セットアップを含める (チェーンする) ことができます。
+description: .NET Framework 4.5 インストーラーの進行状況を表示する方法について学習します。 このバージョンの .NET 用アプリを開発する場合は、アプリのセットアップに .NET Framework 4.5 セットアップを含める (チェーンする) ことができます。
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - progress information, .NET Framework installer
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
-ms.openlocfilehash: 501fcaa7636d586ddfff8606768d4639fdc010d7
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 7e21a376c5a7551ecadeaa70c0a70968dc5752fd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904261"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729123"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>方法: .NET Framework 4.5 インストーラーの進行状況を表示する
 

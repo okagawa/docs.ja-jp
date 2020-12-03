@@ -4,12 +4,12 @@ description: CentOS に .NET SDK と .NET ランタイムをインストール�
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: b2ed62d024c6f0d78a4ec64693f1dafeabd8f47b
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: b30aa206057107aa17fcd62e0f042f9fe3ad56dc
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594633"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031931"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-centos"></a>CentOS に .NET SDK または .NET ランタイムをインストールする
 
@@ -40,6 +40,10 @@ CentOS 7 と CentOS 8 の両方で現在サポートされている .NET のリ�
 
 [!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
 
+## <a name="remove-preview-versions"></a>プレビュー バージョンの削除
+
+[!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
+
 ## <a name="how-to-install-other-versions"></a>その他のバージョンをインストールする方法
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
@@ -69,7 +73,7 @@ sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-
 
 ## <a name="troubleshoot-the-package-manager"></a>パッケージ マネージャーのトラブルシューティング
 
-このセクションでは、パッケージ マネージャーを使用して .NET をインストールするときに発生する可能性のある一般的なエラーについて説明します。
+このセクションでは、パッケージ マネージャーを使用して .NET をインストールするときに発生するおそれがある一般的なエラーについて説明します。
 
 ### <a name="unable-to-find-package"></a>パッケージが見つからない
 

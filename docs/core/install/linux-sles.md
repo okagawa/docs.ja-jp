@@ -4,12 +4,12 @@ description: SLES に .NET SDK と .NET ランタイムをインストールす�
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 558574116aac2a3c755481069641e81a435a2a43
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: f351a9b11ab16910963a1db88d88b6949b56ae11
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506865"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031801"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-sles"></a>SLES に .NET SDK または .NET ランタイムをインストールする
 
@@ -35,6 +35,10 @@ ms.locfileid: "94506865"
 - 3.0
 - 2.2
 - 2.0
+
+## <a name="remove-preview-versions"></a>プレビュー バージョンの削除
+
+[!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
 ## <a name="how-to-install-other-versions"></a>その他のバージョンをインストールする方法
 

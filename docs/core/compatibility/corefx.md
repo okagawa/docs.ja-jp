@@ -1,15 +1,15 @@
 ---
-title: 基本クラス ライブラリの破壊的変更
-description: Core .NET ライブラリにおける破壊的変更の一覧を示します。
+title: .NET ライブラリの破壊的変更
+description: .NET Core バージョン 1.0-3.0 の Core .NET ライブラリにおける破壊的変更の一覧を示します。
 ms.date: 07/27/2020
-ms.openlocfilehash: 900fd4e0e071f19aa286dec84632006870822f26
-ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
+ms.openlocfilehash: 0f42429e44776fc70bb99ed3bdf346f0d5dbc9eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92434936"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96032044"
 ---
-# <a name="core-net-libraries-breaking-changes"></a>Core .NET ライブラリの破壊的変更
+# <a name="core-net-libraries-breaking-changes-in-net-core-10-30"></a>.NET Core 1.0-3.0 の Core .NET ライブラリの破壊的変更
 
 Core .NET ライブラリでは、.NET Core で使用されるプリミティブとその他の一般的な型が提供されます。
 
@@ -17,33 +17,6 @@ Core .NET ライブラリでは、.NET Core で使用されるプリミティブ
 
 | 互換性に影響する変更点 | 導入されたバージョン |
 | - | :-: |
-| [グローバル アセンブリ キャッシュ API は旧型式](#global-assembly-cache-apis-are-obsolete) | 5.0 |
-| [リモート API は旧型式](#remoting-apis-are-obsolete) | 5.0 |
-| [ほとんどのコード アクセス セキュリティ API は旧型式](#most-code-access-security-apis-are-obsolete) | 5.0 |
-| [既定以外の診断 ID を持つ API の旧型式化](#api-obsoletions-with-non-default-diagnostic-ids) | 5.0 |
-| [FrameworkDescription の値が .NET Core ではなく .NET になる](#frameworkdescriptions-value-is-net-instead-of-net-core) | 5.0 |
-| [単一ファイル発行形式のアセンブリ関連 API 動作の変更](#assembly-related-api-behavior-changes-for-single-file-publishing-format) | 5.0 |
-| [Activity.Tags 内のタグの順序が逆になっている](#order-of-tags-in-activitytags-is-reversed) | 5.0 |
-| [RC1 でパラメーター名が変更されている](#parameter-names-changed-in-rc1) | 5.0 |
-| [OSPlatform 属性の名前変更または削除](#osplatform-attributes-renamed-or-removed) | 5.0 |
-| [Thread.Abort は古い形式](#threadabort-is-obsolete) | 5.0 |
-| [ConsoleLoggerOptions の古いプロパティ](#obsolete-properties-on-consoleloggeroptions) | 5.0 |
-| [ハードウェアに組み込みの IsSupported チェックは、入れ子にされた型によって異なる場合があります](#hardware-intrinsic-issupported-checks-may-differ-for-nested-types) | 5.0 |
-| [参照アセンブリのパラメーター名の変更](#parameter-names-changed-in-reference-assemblies) | 5.0 |
-| [Unix 上で ASCII 以外の文字を含む URI パスが正しく解析される](#uri-paths-with-non-ascii-characters-parse-correctly-on-unix) | 5.0 |
-| [Unix での UNC パスの URI 認識](#uri-recognition-of-unc-paths-on-unix) | 5.0 |
-| [Environment.OSVersion で正しいオペレーティング システム バージョンが返される](#environmentosversion-returns-the-correct-operating-system-version) | 5.0 |
-| [LINQ OrderBy.First{OrDefault} の複雑さが増大](#complexity-of-linq-orderbyfirstordefault-increased) | 5.0 |
-| [IntPtr と UIntPtr の IFormattable 実装](#intptr-and-uintptr-implement-iformattable) | 5.0 |
-| [PrincipalPermissionAttribute は現在使用されていないエラーです](#principalpermissionattribute-is-obsolete-as-error) | 5.0 |
-| [BinaryFormatter シリアル化メソッドが古い形式になり、ASP.NET アプリでは使用不可に](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps) | 5.0 |
-| [UTF-7 コード パスが古い形式に](#utf-7-code-paths-are-obsolete) | 5.0 |
-| [Vector\<T> で、サポートされない型に対して常に NotSupportedException がスローされる](#vectort-always-throws-notsupportedexception-for-unsupported-types) | 5.0 |
-| [既定の ActivityIdFormat は W3C](#default-activityidformat-is-w3c) | 5.0 |
-| [Vector2.Lerp と Vector4.Lerp の動作の変更](#behavior-change-for-vector2lerp-and-vector4lerp) | 5.0 |
-| [SSE および SSE2 の CompareGreaterThan メソッドで NaN 入力が正しく処理されるようになった](#sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs) | 5.0 |
-| [インスタンスが既に存在する場合、CounterSet.CreateCounterSetInstance は InvalidOperationException をスローするようになった](#countersetcreatecountersetinstance-now-throws-invalidoperationexception-if-instance-already-exists) | 5.0 |
-| [Microsoft.DotNet.PlatformAbstractions パッケージの削除](#microsoftdotnetplatformabstractions-package-removed) | 5.0 |
 | [バージョンをレポートする API が、ファイル バージョンではなく製品をレポートするようになった](#apis-that-report-version-now-report-product-and-not-file-version) | 3.0 |
 | [カスタム EncoderFallbackBuffer インスタンスが再帰的にフォールバックしない](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively) | 3.0 |
 | [浮動小数点の書式設定と解析の動作の変更](#floating-point-formatting-and-parsing-behavior-changed) | 3.0 |
@@ -61,125 +34,15 @@ Core .NET ライブラリでは、.NET Core で使用されるプリミティブ
 | [UriBuilder のプロパティでは今後、先頭に文字が付加されない](#uribuilder-properties-no-longer-prepend-leading-characters) | 1.0 |
 | [開始されなかったプロセスについて Process.StartInfo が InvalidOperationException をスローする](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
-## <a name="net-50"></a>.NET 5.0
-
-[!INCLUDE [remoting-apis-obsolete](../../../includes/core-changes/corefx/5.0/remoting-apis-obsolete.md)]
-
-***
-
-[!INCLUDE [globalassemblycache-property-obsolete](../../../includes/core-changes/corefx/5.0/global-assembly-cache-apis-obsolete.md)]
-
-**_
-
-[!INCLUDE [code-access-security-apis-obsolete](../../../includes/core-changes/corefx/5.0/code-access-security-apis-obsolete.md)]
-
-_*_
-
-[!INCLUDE [obsolete-apis-with-custom-diagnostics](../../../includes/core-changes/corefx/5.0/obsolete-apis-with-custom-diagnostics.md)]
-
-_*_
-
-[!INCLUDE [frameworkdescription-returns-net-not-net-core](../../../includes/core-changes/corefx/5.0/frameworkdescription-returns-net-not-net-core.md)]
-
-_*_
-
-[!INCLUDE [assembly-api-behavior-changes-for-single-file-publish](../../../includes/core-changes/corefx/5.0/assembly-api-behavior-changes-for-single-file-publish.md)]
-
-_*_
-
-[!INCLUDE [reverse-order-of-tags-in-activity-property](../../../includes/core-changes/corefx/5.0/reverse-order-of-tags-in-activity-property.md)]
-
-_*_
-
-[!INCLUDE [reference-assembly-parameter-names-rc1](../../../includes/core-changes/corefx/5.0/reference-assembly-parameter-names-rc1.md)]
-
-_*_
-
-[!INCLUDE [os-platform-attributes-renamed](../../../includes/core-changes/corefx/5.0/os-platform-attributes-renamed.md)]
-
-_*_
-
-[!INCLUDE [thread-abort-obsolete](../../../includes/core-changes/corefx/5.0/thread-abort-obsolete.md)]
-
-_*_
-
-[!INCLUDE [obsolete-consoleloggeroptions-properties](../../../includes/core-changes/corefx/5.0/obsolete-consoleloggeroptions-properties.md)]
-
-_*_
-
-[!INCLUDE [hardware-instrinsics-issupported-checks](../../../includes/core-changes/corefx/5.0/hardware-instrinsics-issupported-checks.md)]
-
-_*_
-
-[!INCLUDE [reference-assembly-parameter-names](../../../includes/core-changes/corefx/5.0/reference-assembly-parameter-names.md)]
-
-_*_
-
-[!INCLUDE [non-ascii-chars-in-uri-parsed-correctly](../../../includes/core-changes/corefx/5.0/non-ascii-chars-in-uri-parsed-correctly.md)]
-
-_*_
-
-[!INCLUDE [unc-path-recognition-unix](../../../includes/core-changes/corefx/5.0/unc-path-recognition-unix.md)]
-
-_*_
-
-[!INCLUDE [environment-osversion-returns-correct-version](../../../includes/core-changes/corefx/5.0/environment-osversion-returns-correct-version.md)]
-
-_*_
-
-[!INCLUDE [orderby-firstordefault-complexity-increase](../../../includes/core-changes/corefx/5.0/orderby-firstordefault-complexity-increase.md)]
-
-_*_
-
-[!INCLUDE [intptr-uintptr-implement-iformattable](../../../includes/core-changes/corefx/5.0/intptr-uintptr-implement-iformattable.md)]
-
-_*_
-
-[!INCLUDE [principalpermissionattribute-obsolete](../../../includes/core-changes/corefx/5.0/principalpermissionattribute-obsolete.md)]
-
-_*_
-
-[!INCLUDE [binaryformatter-serialization-obsolete](../../../includes/core-changes/corefx/5.0/binaryformatter-serialization-obsolete.md)]
-
-_*_
-
-[!INCLUDE [utf-7-code-paths-obsolete](../../../includes/core-changes/corefx/5.0/utf-7-code-paths-obsolete.md)]
-
-_*_
-
-[!INCLUDE [vectort-throws-notsupportedexception](../../../includes/core-changes/corefx/5.0/vectort-throws-notsupportedexception.md)]
-
-_*_
-
-[!INCLUDE [default-activityidformat-changed](../../../includes/core-changes/corefx/5.0/default-activityidformat-changed.md)]
-
-_*_
-
-[!INCLUDE [vector-lerp-behavior-change](../../../includes/core-changes/corefx/5.0/vector-lerp-behavior-change.md)]
-
-_*_
-
-[!INCLUDE [sse-comparegreaterthan-intrinsics](../../../includes/core-changes/corefx/5.0/sse-comparegreaterthan-intrinsics.md)]
-
-_*_
-
-[!INCLUDE [createcountersetinstance-throws-invalidoperation](../../../includes/core-changes/corefx/5.0/createcountersetinstance-throws-invalidoperation.md)]
-
-_*_
-
-[!INCLUDE [platformabstractions-package-removed](../../../includes/core-changes/corefx/5.0/platformabstractions-package-removed.md)]
-
-_*_
-
 ## <a name="net-core-30"></a>.NET Core 3.0
 
 [!INCLUDE[APIs that report version now report product and not file version](~/includes/core-changes/corefx/3.0/version-information-changes.md)]
 
-_*_
+***
 
 [!INCLUDE[Custom EncoderFallbackBuffer instances cannot fall back recursively](~/includes/core-changes/corefx/3.0/custom-encoderfallbackbuffer-cannot-be-recursive.md)]
 
-_*_
+**_
 
 [!INCLUDE[Floating point formatting and parsing behavior changes](~/includes/core-changes/corefx/3.0/floating-point-changes.md)]
 

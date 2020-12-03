@@ -3,17 +3,17 @@ title: 型とそのメンバーの定義 ‐ C# のツアー
 description: プログラムの構成要素は型です。 C# でクラス、構造体、インターフェイスなどを作成する方法について説明します。
 ms.date: 08/06/2020
 ms.openlocfilehash: efd353fe8c1e6a57952bcb2586a05ad38ecd52b9
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88559116"
 ---
 # <a name="types-and-members"></a>型とメンバー
 
 ## <a name="classes-and-objects"></a>クラスとオブジェクト
 
-"*クラス*" は C# の最も基本的な型です。 クラスは、状態 (フィールド) とアクション (メソッドおよびその他の関数メンバー) を 1 つの単位としてまとめたデータ構造です。 クラスには、*オブジェクト*とも呼ばれる、クラスの*インスタンス*の定義があります。 クラスでは、"*継承*"と "*ポリモーフィズム*" をサポートします。これによって "*派生クラス*" が "*基底クラス*" を拡張して特殊化できます。
+"*クラス*" は C# の最も基本的な型です。 クラスは、状態 (フィールド) とアクション (メソッドおよびその他の関数メンバー) を 1 つの単位としてまとめたデータ構造です。 クラスには、*オブジェクト* とも呼ばれる、クラスの *インスタンス* の定義があります。 クラスでは、"*継承*"と "*ポリモーフィズム*" をサポートします。これによって "*派生クラス*" が "*基底クラス*" を拡張して特殊化できます。
 
 新しいクラスはクラス宣言を使用して作成されます。 クラス宣言は、ヘッダーで始まります。 ヘッダーでは次を指定します。
 
@@ -36,11 +36,11 @@ ms.locfileid: "88559116"
 
 ### <a name="type-parameters"></a>型パラメーター
 
-ジェネリック クラスは、[***型パラメーター***](../programming-guide/generics/index.md)を定義します。 型パラメーターは、山かっこで囲まれた型パラメーターの一連の名前です。 型パラメーターは、クラス名の後にあります。 これで、クラスのメンバーを定義するクラス宣言の本体で型パラメーターを使用できます。 次の例では、`Pair` の型パラメーターは `TFirst` と `TSecond` です。
+ジェネリック クラスでは "[***型パラメーター**](../programming-guide/generics/index.md)" を定義します。 型パラメーターは、山かっこで囲まれた型パラメーターの一連の名前です。 型パラメーターは、クラス名の後にあります。 これで、クラスのメンバーを定義するクラス宣言の本体で型パラメーターを使用できます。 次の例では、`Pair` の型パラメーターは `TFirst` と `TSecond` です。
 
 :::code language="csharp" source="./snippets/shared/Types.cs" ID="DefinePairClass":::
 
-型パラメーターを受け取るために宣言されるクラス型は、"*ジェネリック クラス型*" と呼ばれます。 構造体、インターフェイス、およびデリゲートの型もジェネリックです。
+型パラメーターを受け取るために宣言されるクラス型は、"ジェネリック クラス型" と呼ばれます。 構造体、インターフェイス、およびデリゲートの型もジェネリックです。
 ジェネリック クラスを使用する場合は、それぞれの型パラメーターの型引数を指定する必要があります。
 
 :::code language="csharp" source="./snippets/shared/Types.cs" ID="CreatePairObject":::
@@ -61,15 +61,15 @@ ms.locfileid: "88559116"
 
 ## <a name="structs"></a>構造体
 
-クラスは、継承とポリモーフィズムをサポートする型を定義します。 これにより、派生クラスの階層に基づいて高度なビヘイビアーを作成できます。 これに対し、[***構造体***](../language-reference/builtin-types/struct.md)型は、データ値を格納することを主な目的とするより単純な型です。 構造体では基本データ型を宣言できません。これらは、暗黙的に <xref:System.ValueType?displayProperty=nameWithType> から派生します。 `struct` 型から、他の `struct` 型を派生させることはできません。 これらは、暗黙的にシールされています。
+クラスは、継承とポリモーフィズムをサポートする型を定義します。 これにより、派生クラスの階層に基づいて高度なビヘイビアーを作成できます。 これに対し、"[***構造体**](../language-reference/builtin-types/struct.md)" 型は、データ値を格納することを主な目的とするより単純な型です。 構造体では基本データ型を宣言できません。これらは、暗黙的に <xref:System.ValueType?displayProperty=nameWithType> から派生します。 `struct` 型から、他の `struct` 型を派生させることはできません。 これらは、暗黙的にシールされています。
 
 :::code language="csharp" source="./snippets/shared/Types.cs" ID="PointStruct":::
 
 ## <a name="interfaces"></a>インターフェイス
 
-[***インターフェイス***](../programming-guide/interfaces/index.md)は、クラスと構造体によって実装できるコントラクトを定義します。 1 つのインターフェイスには、メソッド、プロパティ、イベント、およびインデクサーが含まれる場合があります。 インターフェイスは、定義するメンバーの実装を通常行いません。インターフェイスを実装するクラスまたは構造体が提供する必要があるメンバーを指定するだけです。
+"[_*_インターフェイス_*_](../programming-guide/interfaces/index.md)" では、クラスと構造体によって実装できるコントラクトを定義します。 1 つのインターフェイスには、メソッド、プロパティ、イベント、およびインデクサーが含まれる場合があります。 インターフェイスは、定義するメンバーの実装を通常行いません。インターフェイスを実装するクラスまたは構造体が提供する必要があるメンバーを指定するだけです。
 
-インターフェイスは***多重継承***を使用する場合があります。 次の例では、インターフェイス `IComboBox` は `ITextBox` と `IListBox` の両方から継承します。
+インターフェイスでは "_*_多重継承_*_" を使用できます。 次の例では、インターフェイス `IComboBox` は `ITextBox` と `IListBox` の両方から継承します。
 
 :::code language="csharp" source="./snippets/shared/Types.cs" ID="FirstInterfaces":::
 
@@ -83,7 +83,7 @@ ms.locfileid: "88559116"
 
 ## <a name="enums"></a>列挙型
 
-[***列挙***](../language-reference/builtin-types/enum.md)型では、一連の定数値を定義します。 次の `enum` では、さまざまな根菜の定数の定義を宣言しています。
+"[_*_列挙_*_](../language-reference/builtin-types/enum.md)" 型では、一連の定数値を定義します。 次の `enum` では、さまざまな根菜の定数の定義を宣言しています。
 
 :::code language="csharp" source="./snippets/shared/Types.cs" ID="EnumDeclaration":::
 
@@ -97,13 +97,13 @@ ms.locfileid: "88559116"
 
 ## <a name="nullable-types"></a>null 許容型
 
-すべての型の変数は ***null 非許容***、または ***null 許容***として宣言できます。 null 許容の変数には、値がないことを示す `null` 値をさらに含めることができます。 null 許容値型 (構造体または列挙型) は、<xref:System.Nullable%601?displayProperty=nameWithType> で表します。 null 非許容の参照型と null 許容の参照型はいずれも、基になる参照型によって表します。 この区別は、コンパイラと一部のライブラリに読み取られたメタデータによって表します。 null 許容の参照が、値を最初に `null` に対してチェックせずに逆参照されると、コンパイラによって警告が出されます。 null 非許容の参照が `null` である可能性のある値に割り当てられている場合にも、コンパイラによって警告が出されます。 次の例では、`null` に初期化される ***null 許容 int*** を宣言しています。 次いで、その値を `5` に設定しています。 同じ概念を、***null 値を許容する文字列***でも示しています。 詳細については、「[null 許容値型](../language-reference/builtin-types/nullable-value-types.md)」と「[null 許容参照型](../nullable-references.md)」を参照してください。
+すべての型の変数は、"_*_null 非許容_*_" または "_*_null 許容_*_" として宣言できます。 null 許容の変数には、値がないことを示す `null` 値をさらに含めることができます。 null 許容値型 (構造体または列挙型) は、<xref:System.Nullable%601?displayProperty=nameWithType> で表します。 null 非許容の参照型と null 許容の参照型はいずれも、基になる参照型によって表します。 この区別は、コンパイラと一部のライブラリに読み取られたメタデータによって表します。 null 許容の参照が、値を最初に `null` に対してチェックせずに逆参照されると、コンパイラによって警告が出されます。 null 非許容の参照が `null` である可能性のある値に割り当てられている場合にも、コンパイラによって警告が出されます。 次の例では、`null` に初期化される "_*_null 許容 int_*_" を宣言しています。 次いで、その値を `5` に設定しています。 同じ概念を、"_*_Null 許容文字列_*_" でも示しています。 詳細については、「[null 許容値型](../language-reference/builtin-types/nullable-value-types.md)」と「[null 許容参照型](../nullable-references.md)」を参照してください。
 
 :::code language="csharp" source="./snippets/shared/Types.cs" ID="DeclareNullable":::
 
 ## <a name="tuples"></a>タプル
 
-C# は、軽量のデータ構造に複数のデータ要素を簡潔な構文でグループ化できる、[***タプル***](../language-reference/builtin-types/value-tuples.md)をサポートしています。 タプルは、次の例のように、`(` と `)` の間にメンバーの型と名前を宣言することで、インスタンス化できます。
+C# では、軽量のデータ構造に複数のデータ要素を簡潔な構文でグループ化できる、"[*_タプル_**](../language-reference/builtin-types/value-tuples.md)" がサポートされます。 タプルは、次の例のように、`(` と `)` の間にメンバーの型と名前を宣言することで、インスタンス化できます。
 
 :::code language="csharp" source="./snippets/shared/Types.cs" ID="DeclareTuples":::
 
