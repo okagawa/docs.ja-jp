@@ -1,15 +1,15 @@
 ---
 title: F# インタラクティブ (dotnet) リファレンス
 description: F# インタラクティブ (dotnet fsi) を使用して、コンソールで F# コードを対話形式で実行したり、F# スクリプトを実行したりする方法について説明します。
-ms.date: 10/31/2020
+ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: b535cb03d76909043ca192ed5a9d2078f9343795
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 92177c41dc6b31d9186bae8176f85787e2fb89e0
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099484"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438045"
 ---
 # <a name="interactive-programming-with-f"></a>F\# による対話型プログラミング
 
@@ -117,6 +117,17 @@ let f (x: Tensor) = sin (sqrt x)
 
 printfn "%A" (f (dsharp.tensor 1.2))
 ```
+
+### <a name="specifying-a-package-source"></a>パッケージ ソースの指定
+
+`#i` コマンドを使用してパッケージ ソースを指定することもできます。 次の例では、リモートおよびローカルのソースを指定しています。
+
+```fsharp
+#i "nuget:https://my-remote-package-source/index.json
+#i @"path-to-my-local-source"
+```
+
+これにより、スクリプトに追加されたリモート、ローカル、またはその両方のソースも考慮に入れるよう内部の解決エンジンに指示されます。
 
 スクリプト内では、必要な数だけパッケージ参照を指定できます。
 
