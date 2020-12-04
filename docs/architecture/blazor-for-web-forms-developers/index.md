@@ -6,19 +6,23 @@ ms.author: daroth
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 09/11/2019
-ms.openlocfilehash: 3ac9a02a2f5c93cbfd9377a9f6fff4b6c5f45e93
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/01/2020
+ms.openlocfilehash: 47f684e1b48ca95b8d999e6f1429840eb5f541de
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158176"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509768"
 ---
 # <a name="no-locblazor-for-aspnet-web-forms-developers"></a>ASP.NET Web Forms 開発者向け Blazor
 
 ![サーバーレス アプリの e-book のカバーを示すスクリーン ショット。](./media/index/blazor-for-aspnet-web-forms-developers.png)
 
 > 次の場所でダウンロードできます: <https://aka.ms/blazor-ebook>
+
+**エディション v1.0**
+
+書籍の更新とコミュニティへの投稿については、「[changelog](https://aka.ms/blazor-ebook-changelog)」を参照してください。
 
 発行者
 
@@ -60,7 +64,7 @@ Mac および macOS は Apple Inc. の商標です。
 
 .NET では、あらゆる種類の Web アプリを構築するためのフレームワークとツールの包括的セットである ASP.NET を利用した Web アプリの開発を長期にわたりサポートしてきました。 ASP.NET には独自の系列の Web フレームワークとテクノロジがあり、その原点は代表的な Active Server Pages (ASP) までさかのぼります。 ASP.NET Web Forms、ASP.NET MVC、ASP.NET Web Pages、最近の ASP.NET Core などのフレームワークでは、*サーバーでレンダリングする* Web アプリを生産的かつ強力な方法で構築できます。サーバーでレンダリングする Web アプリでは、HTTP 要求に応答し、UI コンテンツがサーバー上で動的に生成されます。 各 ASP.NET framework は異なる対象ユーザーとアプリ構築方針に対応しています。 ASP.NET Web Forms は .NET Framework の初回リリースに付属しました。再利用可能な UI コントロールと単純なイベント処理など、デスクトップ開発者にとっておなじみのパターンを多く利用する Web 開発を可能にしました。 しかしながら、どの ASP.NET サービスでも、ユーザーのブラウザーで実行されるコードを実行する方法がありません。 それを行うには、JavaScript を記述し、jQuery、Knockout、Angular、React など、ここ数年、人気が上がったり下がったりしているさまざまな JavaScript フレームワーク/ツールのいずれかを使用する必要があります。
 
-[Blazor](https://blazor.net) は、.NET で Web アプリを構築したときにできることを変える、新しい Web フレームワークです。 Blazor は、JavaScript ではなく、C# を基盤とするクライアント側の Web UI フレームワークです。 Blazor を利用すると、クライアント側のロジックと UI コンポーネントを C# で記述し、通常の .NET アセンブリにコンパイルしたら、WebAssembly という名前の新しいオープン Web 標準を利用し、ブラウザーで直接実行できます。 あるいは、サーバー上で .NET UI コンポーネントを実行し、ブラウザーとのリアルタイム接続ですべての UI インタラクションを流動的に処理することが Blazor で可能です。 サーバー上で実行されている .NET とペアリングした場合、Blazor では .NET によるフルスタックの Web 開発が可能になります。 再利用可能なコンポーネント モデルやユーザー イベントを処理する簡単な方法など、Blazor には ASP.NET Web Forms との間にさまざまな共通点があり、さらに、高性能な最新式の Web 開発体験を与える目的で、Blazor は .NET Core を基礎に構築されています。
+[Blazor](https://blazor.net) は、.NET で Web アプリを構築したときにできることを変える、新しい Web フレームワークです。 Blazor は、JavaScript ではなく、C# を基盤とするクライアント側の Web UI フレームワークです。 Blazor を利用すると、クライアント側のロジックと UI コンポーネントを C# で記述し、通常の .NET アセンブリにコンパイルしたら、WebAssembly という名前の新しいオープン Web 標準を利用し、ブラウザーで直接実行できます。 あるいは、サーバー上で .NET UI コンポーネントを実行し、ブラウザーとのリアルタイム接続ですべての UI インタラクションを流動的に処理することが Blazor で可能です。 サーバー上で実行されている .NET とペアリングした場合、Blazor では .NET によるフルスタックの Web 開発が可能になります。 再利用可能なコンポーネント モデルやユーザー イベントを処理する簡単な方法など、Blazor には ASP.NET Web Forms との間にさまざまな共通点があります。また、最新かつ高パフォーマンスな Web 開発エクスペリエンスを提供するために .NET に基づいて構築されています。
 
 本書をお読みいただくと、ASP.NET Web Forms の開発者は慣れた便利な方法で Blazor を導入できます。 本書では Blazor の概念を ASP.NET Web Forms における類似の概念と一緒に紹介し、さらに、あまり知られていないかもしれない新しい概念について説明します。 コンポーネントの作成、ルーティング、レイアウト、構成、セキュリティなど、さまざまなトピックと懸念事項を取り上げます。 また、本書の内容は新しい開発を可能にすることを第一としていますが、既存のアプリを最新式にするときのために、既存の ASP.NET Web Forms を Blazor に移行するためのガイドラインと方策についても取り上げます。
 
