@@ -2,12 +2,12 @@
 title: F# のコーディング規則
 description: 'F # コードを記述するときの一般的なガイドラインと表現方法について説明します。'
 ms.date: 01/15/2020
-ms.openlocfilehash: 8c7fedf429ecba6e01b26f37972ffa4eeba6d8af
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 87955c379f0abba929b0ced75d62d2601f37dc5a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554027"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739903"
 ---
 # <a name="f-coding-conventions"></a>F# のコーディング規則
 
@@ -190,13 +190,13 @@ type MoneyWithdrawalResult =
 let handleWithdrawal amount =
     let w = withdrawMoney amount
     match w with
-    | Success am -> printfn "Successfully withdrew %f" am
-    | InsufficientFunds balance -> printfn "Failed: balance is %f" balance
-    | CardExpired expiredDate -> printfn "Failed: card expired on %O" expiredDate
+    | Success am -> printfn "Successfully withdrew %f{am}"
+    | InsufficientFunds balance -> printfn "Failed: balance is %f{balance}"
+    | CardExpired expiredDate -> printfn "Failed: card expired on %O{expiredDate}"
     | UndisclosedFailure -> printfn "Failed: unknown"
 ```
 
-一般に、ドメイン内で何らかのエラーが **発生** する可能性のあるさまざまな方法をモデル化できる場合、通常のプログラムフローに加えて、エラー処理コードは処理する必要のあるものとして扱われなくなりました。 これは単に通常のプログラムフローの一部であり、 **例外的**とは見なされません。 これには主に次の2つの利点があります。
+一般に、ドメイン内で何らかのエラーが **発生** する可能性のあるさまざまな方法をモデル化できる場合、通常のプログラムフローに加えて、エラー処理コードは処理する必要のあるものとして扱われなくなりました。 これは単に通常のプログラムフローの一部であり、 **例外的** とは見なされません。 これには主に次の2つの利点があります。
 
 1. 時間の経過と共にドメインが変化するため、保守が容易になります。
 2. エラーケースは、単体テストの方が簡単です。
@@ -301,7 +301,7 @@ let tryReadAllTextIfPresent (path : string) =
 
 この関数は、キャッチ全体として機能するのではなく、ファイルが見つからなかった場合に適切に処理し、その意味を戻り値に割り当てるようになりました。 この戻り値は、そのエラーケースにマップできますが、コンテキスト情報を破棄したり、コード内のその時点で関連しない可能性のあるケースを呼び出し元に処理したりすることはできません。
 
-などの型 `Result<'Success, 'Error>` は、入れ子になっていない基本操作に適しています。また、F # の省略可能な型は、*何か**何*かを返すことができる場合に最適です。 ただし、例外の代わりにはなりませんが、例外の置換を試行する場合には使用しないでください。 代わりに、対象の方法で例外およびエラー管理ポリシーの特定の側面に対処するために、慎重に適用する必要があります。
+などの型 `Result<'Success, 'Error>` は、入れ子になっていない基本操作に適しています。また、F # の省略可能な型は、*何か**何* かを返すことができる場合に最適です。 ただし、例外の代わりにはなりませんが、例外の置換を試行する場合には使用しないでください。 代わりに、対象の方法で例外およびエラー管理ポリシーの特定の側面に対処するために、慎重に適用する必要があります。
 
 ## <a name="partial-application-and-point-free-programming"></a>部分的なアプリケーションとポイントフリープログラミング
 
@@ -309,7 +309,7 @@ F # では、部分的なアプリケーションをサポートしているた�
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>パブリック Api で部分的なアプリケーションとカリー化を使用しない
 
-例外がほとんどない場合、パブリック Api で部分的なアプリケーションを使用すると、コンシューマーにとって混乱を招く可能性があります。 `let`F # コードでは通常、**値**は**関数値**ではなく値です。 値と関数の値を混在させると、十分な数のコードを exchange に保存することができます。これは特に、などの演算子と組み合わせて `>>` 関数を作成する場合に発生します。
+例外がほとんどない場合、パブリック Api で部分的なアプリケーションを使用すると、コンシューマーにとって混乱を招く可能性があります。 `let`F # コードでは通常、**値** は **関数値** ではなく値です。 値と関数の値を混在させると、十分な数のコードを exchange に保存することができます。これは特に、などの演算子と組み合わせて `>>` 関数を作成する場合に発生します。
 
 ### <a name="consider-the-tooling-implications-for-point-free-programming"></a>ポイントフリープログラミングのツールへの影響について検討する
 
@@ -317,7 +317,7 @@ F # では、部分的なアプリケーションをサポートしているた�
 
 ```fsharp
 let func name age =
-    printfn "My name is %s and I am %d years old!" name age
+    printfn "My name is {name} and I am %d{age} years old!"
 
 let funcWithApplication =
     printfn "My name is %s and I am %d years old!"
@@ -508,7 +508,7 @@ let rec processStructPoint (p: SPoint) offset times =
 
 #### <a name="consider-struct-discriminated-unions-when-the-data-type-is-small-with-high-allocation-rates"></a>データ型が高い割り当て率を持つ小さい場合は、構造体の判別共用体を考慮する
 
-構造体の組とレコードを使用したパフォーマンスに関する前の観察でも、 [F # 判別共用体](../language-reference/discriminated-unions.md)が保持されます。 次のコードがあるとします。
+構造体の組とレコードを使用したパフォーマンスに関する前の観察でも、 [F # 判別共用体](../language-reference/discriminated-unions.md)が保持されます。 次のコードについて考えてみます。
 
 ```fsharp
     type Name = Name of string
@@ -605,7 +605,7 @@ type Closure1Table() =
 
 #### <a name="prefer-let-mutable-to-reference-cells"></a>`let mutable`参照セルを優先
 
-参照セルは、値自体ではなく、値への参照を表す方法です。 パフォーマンスクリティカルなコードには使用できますが、推奨されません。 次に例を示します。
+参照セルは、値自体ではなく、値への参照を表す方法です。 パフォーマンスクリティカルなコードには使用できますが、推奨されません。 次の例を確認してください。
 
 ```fsharp
 let kernels =
@@ -657,10 +657,10 @@ F # では、オブジェクトとオブジェクト指向 (OO) の概念が完�
 * 自動プロパティ
 * `IDisposable`およびの実装`IEnumerable`
 * 型拡張
-* events
+* イベント
 * 構造体
 * 代理人
-* 列挙体
+* 列挙型
 
 **一般に、これらの機能を使用する必要がない場合は、次のようにしてください。**
 

@@ -2,12 +2,12 @@
 title: パターン マッチ
 description: 'F # でパターンを使用して、データを論理構造と比較したり、データを構成要素に分解したり、データから情報を抽出したりする方法について説明します。'
 ms.date: 11/12/2020
-ms.openlocfilehash: e167712b082b7f587e41a78edcaf0a0db9c7294b
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 932f50b7947f6df728149437dd3ceb19c42e5c6a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687806"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740277"
 ---
 # <a name="pattern-matching"></a>パターン マッチ
 
@@ -29,7 +29,7 @@ match expression with
 
 サポートされているパターンを次の表に示します。 実行時に、表に示されている順序で次の各パターンに対して入力がテストされます。パターンは、コードに示されているとおりに先頭から末尾へ、各行のパターンの左から右へ、再帰的に適用されます。
 
-|名前|説明|例|
+|Name|Description|例|
 |----|-----------|-------|
 |定数パターン|数値、文字、リテラル文字列、列挙定数、または定義済みのリテラル識別子|`1.0`, `"test"`, `30`, `Color.Red`|
 |識別子パターン|判別共用体のケース値、例外ラベル、またはアクティブ パターンのケース|`Some(x)`<br /><br />`Failure(msg)`|
@@ -88,8 +88,8 @@ type Shape =
 ```fsharp
 let matchShape shape =
     match shape with
-    | Rectangle(height = h) -> printfn "Rectangle with length %f" h
-    | Circle(r) -> printfn "Circle with radius %f" r
+    | Rectangle(height = h) -> printfn $"Rectangle with length %f{h}"
+    | Circle(r) -> printfn $"Circle with radius %f{r}"
 ```
 
 前の例では、名前付きフィールドの使用は省略可能であり、したがって、`Circle(r)` と `Circle(radius = r)` は同じ結果になります。
@@ -98,7 +98,7 @@ let matchShape shape =
 
 ```fsharp
 match shape with
-| Rectangle(height = h; width = w) -> printfn "Rectangle with height %f and width %f" h w
+| Rectangle(height = h; width = w) -> printfn $"Rectangle with height %f{h} and width %f{w}"
 | _ -> ()
 ```
 
@@ -232,7 +232,7 @@ f "asdf" // does not match
 
 名前を指定する方法については、「演算子」を参照してください [`nameof`](nameof.md) 。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 - [match 式](match-expressions.md)
 - [アクティブ パターン](active-patterns.md)

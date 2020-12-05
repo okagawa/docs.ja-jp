@@ -2,12 +2,12 @@
 title: Null 許容の演算子
 description: 'F # プログラミング言語で使用できる null 許容型の演算子について説明します。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 951692ba22781f7f9e759c55bc708fc24f7a5014
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 9ac6afc2c3f4277ee6e93b1ccb3d21f892926b4b
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559142"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740368"
 ---
 # <a name="nullable-operators"></a>Null 許容の演算子
 
@@ -48,10 +48,10 @@ let nullableInt = new System.Nullable<int>(10)
 let nullableFloat = Nullable.float nullableInt
 
 // Use the regular non-nullable float operator to convert to a non-nullable float.
-printfn "%f" (float nullableFloat)
+printfn $"%f{float nullableFloat}"
 ```
 
-出力は `10.000000`になります。
+出力は `10.000000` になります。
 
 クエリ式で使用するために、などの null 許容型のデータフィールドに対するクエリ演算子 `sumByNullable` も存在します。 Null 非許容型のクエリ演算子は、null 許容型との型との互換性がないため、null 許容型のデータ値を操作する場合は、適切なクエリ演算子の null 許容バージョンを使用する必要があります。 詳細については、「 [クエリ式](../query-expressions.md)」を参照してください。
 
@@ -73,17 +73,17 @@ query {
     for row in db.Table2 do
     where (row.TestData1.HasValue && row.TestData1.Value > 2)
     select row
-} |> Seq.iter (fun row -> printfn "%d %s" row.TestData1.Value row.Name)
+} |> Seq.iter (fun row -> printfn $"%d{row.TestData1.Value} %s{row.Name}")
 
 query {
     for row in db.Table2 do
     // Use a nullable operator ?>
     where (row.TestData1 ?> 2)
     select row
-} |> Seq.iter (fun row -> printfn "%d %s" (row.TestData1.GetValueOrDefault()) row.Name)
+} |> Seq.iter (fun row -> printfn "%d{row.TestData1.GetValueOrDefault()} %s{row.Name}")
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 - [型プロバイダー](../../tutorials/type-providers/index.md)
 - [クエリ式](../query-expressions.md)

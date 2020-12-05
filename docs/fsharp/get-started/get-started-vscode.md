@@ -2,12 +2,12 @@
 title: Visual Studio Code での F# の概要
 description: 'Visual Studio Code と Ionide plugin suite で F # を使用する方法について説明します。'
 ms.date: 12/23/2018
-ms.openlocfilehash: 3317d0037d3c14a6b55079385d7b27e499c0c392
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 11fb0d443fb7c2b3f270d45bfeaa91102ba28efd
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050547"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739803"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code での F# の概要
 
@@ -44,7 +44,7 @@ Visual Studio Code にプロジェクトが読み込まれると、ウィンド�
 
 ### <a name="write-your-first-script"></a>最初のスクリプトを作成する
 
-.NET Core スクリプトを使用するように Visual Studio Code を構成したら、Visual Studio Code の [エクスプローラー] ビューに移動し、新しいファイルを作成します。 名前を *MyFirstScript script.fsx*にします。
+.NET Core スクリプトを使用するように Visual Studio Code を構成したら、Visual Studio Code の [エクスプローラー] ビューに移動し、新しいファイルを作成します。 名前を *MyFirstScript script.fsx* にします。
 
 ここで、次のコードを追加します。
 
@@ -52,7 +52,7 @@ Visual Studio Code にプロジェクトが読み込まれると、ウィンド�
 
 この関数は、単語を [Pig Latin](https://en.wikipedia.org/wiki/Pig_Latin)の形式に変換します。 次の手順では、F# インタラクティブ (FSI.EXE) を使用して評価します。
 
-関数全体を強調表示します (11 行の長さである必要があります)。 強調表示されたら、 **Alt** キーを押しながら **Enter**キーを押します。 画面の下部にターミナルウィンドウがポップアップ表示され、次のように表示されます。
+関数全体を強調表示します (11 行の長さである必要があります)。 強調表示されたら、 **Alt** キーを押しながら **Enter** キーを押します。 画面の下部にターミナルウィンドウがポップアップ表示され、次のように表示されます。
 
 ![Ionide を使用した F# インタラクティブ出力の例](./media/getting-started-vscode/vscode-fsi.png)
 
@@ -144,7 +144,7 @@ REPL 駆動型開発の次の手順では、作業コードを F # 実装ファ�
 let main argv =
     for name in argv do
         let newName = PigLatin.toPigLatin name
-        printfn "%s in Pig Latin is: %s" name newName
+        printfn %"{name} in Pig Latin is: {newName}"
 
     0
 ```

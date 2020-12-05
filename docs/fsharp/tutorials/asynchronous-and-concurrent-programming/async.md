@@ -2,12 +2,12 @@
 title: 非同期プログラミング
 description: 'F # が、コア関数型プログラミングの概念から派生した言語レベルのプログラミングモデルに基づいて、非同期性のクリーンサポートを提供する方法について説明します。'
 ms.date: 08/15/2020
-ms.openlocfilehash: 2e5d4fb744b4443eb9caf90cc1bf01473b809127
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 04b397ddbfb468aa3bc4ee245175d3ec9bdedb50
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811770"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739328"
 ---
 # <a name="async-programming-in-f"></a>F での非同期プログラミング\#
 
@@ -57,7 +57,7 @@ let printTotalFileBytes path =
     async {
         let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
         let fileName = Path.GetFileName(path)
-        printfn "File %s has %d bytes" fileName bytes.Length
+        printfn $"File {fileName} has %d{bytes.Length} bytes"
     }
 
 [<EntryPoint>]
@@ -73,7 +73,7 @@ let main argv =
 
 もう1つの重要な行は、の呼び出し `Async.RunSynchronously` です。 これは、実際に F # の非同期計算を実行する場合に呼び出す必要がある非同期モジュール開始関数の1つです。
 
-これは、プログラミングの C#/Visual Basic スタイルとの基本的な違いです `async` 。 F # では、非同期計算は **コールドタスク**と考えることができます。 実際に実行するには、明示的に開始する必要があります。 これにはいくつかの利点があります。これにより、C# または Visual Basic よりもはるかに簡単に、非同期作業を組み合わせてシーケンス処理することができます。
+これは、プログラミングの C#/Visual Basic スタイルとの基本的な違いです `async` 。 F # では、非同期計算は **コールドタスク** と考えることができます。 実際に実行するには、明示的に開始する必要があります。 これにはいくつかの利点があります。これにより、C# または Visual Basic よりもはるかに簡単に、非同期作業を組み合わせてシーケンス処理することができます。
 
 ## <a name="combine-asynchronous-computations"></a>非同期計算の結合
 
@@ -87,7 +87,7 @@ let printTotalFileBytes path =
     async {
         let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
         let fileName = Path.GetFileName(path)
-        printfn "File %s has %d bytes" fileName bytes.Length
+        printfn $"File {fileName} has %d{bytes.Length} bytes"
     }
 
 [<EntryPoint>]
@@ -119,7 +119,7 @@ let printTotalFileBytes path =
     async {
         let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
         let fileName = Path.GetFileName(path)
-        printfn "File %s has %d bytes" fileName bytes.Length
+        printfn $"File {fileName} has %d{bytes.Length} bytes"
     }
 
 [<EntryPoint>]
@@ -382,7 +382,7 @@ module Async =
 
 F # では、現在のスレッドで (または現在のスレッドではなく) 非同期計算を開始する機能が提供されますが、非同期性は通常、特定のスレッド処理方法に関連付けられていません。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 - [F # の非同期プログラミングモデル](https://www.microsoft.com/research/publication/the-f-asynchronous-programming-model)
 - [Jet .com の F # 非同期ガイド](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)

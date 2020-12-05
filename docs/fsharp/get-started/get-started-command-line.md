@@ -2,12 +2,12 @@
 title: 'コマンドラインツールを使用した F # の概要'
 description: '任意のオペレーティングシステム (Windows、macOS、または Linux) で .NET Core CLI を使用して、F # でシンプルなマルチプロジェクトソリューションを構築する方法について説明します。'
 ms.date: 08/15/2020
-ms.openlocfilehash: e652b66337a3122de8e6bd4d62d86fb6082b759d
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: f890e31fe8c665874dc3034aebfae32e38b9031a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811991"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739916"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>.NET Core CLI で F # を使ってみる
 
@@ -36,7 +36,7 @@ FSNetCore
 
 ### <a name="write-a-class-library"></a>クラスライブラリを記述する
 
-ディレクトリを *Fsnetcore*に変更します。
+ディレクトリを *Fsnetcore* に変更します。
 
 コマンドを使用して `dotnet new` 、"ライブラリ" という名前の **src** フォルダーにクラスライブラリプロジェクトを作成します。
 
@@ -64,7 +64,7 @@ open Newtonsoft.Json
 
 let getJsonNetJson value =
     let json = JsonConvert.SerializeObject(value)
-    sprintf "I used to be %s but now I'm %s thanks to JSON.NET!" value json
+    $"I used to be {value} but now I'm {json} thanks to JSON.NET!"
 ```
 
 NuGet パッケージの Newtonsoft.Jsをライブラリプロジェクトに追加します。
@@ -115,7 +115,7 @@ let main argv =
 
     for arg in argv do
         let value = getJsonNetJson arg
-        printfn "%s" value
+        printfn $"{value}"
 
     0 // return an integer exit code
 ```
@@ -150,6 +150,6 @@ I used to be Hello but now I'm ""Hello"" thanks to JSON.NET!
 I used to be World but now I'm ""World"" thanks to JSON.NET!
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 次に、F # のさまざまな機能の詳細については、 [f # のツアー](../tour.md) をご覧ください。

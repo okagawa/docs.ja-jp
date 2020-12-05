@@ -2,12 +2,12 @@
 title: 'チュートリアル: 型プロバイダーを作成する'
 description: 'いくつかの単純型プロバイダーを調べて基本的な概念を説明することで、F # 3.0 で独自の F # 型プロバイダーを作成する方法について説明します。'
 ms.date: 11/04/2019
-ms.openlocfilehash: 71225614ed983a76d35c214faa87bbad0fbb7d24
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 65cb9616f66b5850135dbfcdd9b9a9dad30421de
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810873"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739699"
 ---
 # <a name="tutorial-create-a-type-provider"></a>チュートリアル: 型プロバイダーを作成する
 
@@ -175,7 +175,7 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 type SampleTypeProvider(config: TypeProviderConfig) as this =
 ```
 
-この型はパブリックである必要があります。また、別の F # プロジェクトが型を含むアセンブリを参照している場合にコンパイラが型プロバイダーを認識するように、 [typeprovider](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-compilerservices-typeproviderattribute.html) 属性でマークする必要があります。 *Config*パラメーターは省略可能であり、存在する場合は、F # コンパイラによって作成される型プロバイダーインスタンスのコンテキスト構成情報が含まれています。
+この型はパブリックである必要があります。また、別の F # プロジェクトが型を含むアセンブリを参照している場合にコンパイラが型プロバイダーを認識するように、 [typeprovider](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-compilerservices-typeproviderattribute.html) 属性でマークする必要があります。 *Config* パラメーターは省略可能であり、存在する場合は、F # コンパイラによって作成される型プロバイダーインスタンスのコンテキスト構成情報が含まれています。
 
 次に、 [ITypeProvider](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-compilerservices-itypeprovider.html) インターフェイスを実装します。 この場合、基本型として `TypeProviderForNamespaces` API の `ProvidedTypes` 型を使用します。 このヘルパー型は、集中的に指定された名前空間の有限のコレクションを指定できます。個々の名前空間には、集中的に指定された固定の型 (有限数) が直接含まれています。 このコンテキストでは、プロバイダー *集中的* は、必要または使用されていない場合でも型を生成します。
 
@@ -243,7 +243,7 @@ let t = ProvidedTypeDefinition(thisAssembly, namespaceName,
 次に、型に XML ドキュメントを追加します。 このドキュメントは遅延されます。つまり、ホスト コンパイラで必要な場合に、要求に応じて計算されます。
 
 ```fsharp
-t.AddXmlDocDelayed (fun () -> sprintf "This provided type %s" ("Type" + string n))
+t.AddXmlDocDelayed (fun () -> $"""This provided type {"Type" + string n}""")
 ```
 
 次に、指定された静的プロパティを型に追加します。
@@ -352,9 +352,9 @@ t.AddMembersDelayed(fun () ->
                   getterCode= (fun args -> <@@ valueOfTheProperty @@>))
 
               p.AddXmlDocDelayed(fun () ->
-                  sprintf "This is StaticProperty%d on NestedType" i)
+                  $"This is StaticProperty{i} on NestedType")
 
-              p
+              p
       ]
 
     staticPropsInNestedType)
@@ -364,7 +364,7 @@ t.AddMembersDelayed(fun () ->
 
 ### <a name="details-about-erased-provided-types"></a>指定された型が消去される場合の詳細
 
-このセクションの例では、 *指定された型の消去*のみを行います。これは、次のような場合に特に便利です。
+このセクションの例では、 *指定された型の消去* のみを行います。これは、次のような場合に特に便利です。
 
 - データとメソッドのみを含む情報空間のプロバイダーを作成する場合。
 
@@ -461,7 +461,7 @@ let result = reg.IsMatch("425-123-2345")
 let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 ```
 
-次の点に注意してください。
+以下の点に注意してください。
 
 - 標準 Regex 型は、パラメーター化された `RegexTyped` 型を表します。
 
@@ -527,7 +527,7 @@ type public CheckedRegexProvider() as this =
 do ()
 ```
 
-次の点に注意してください。
+以下の点に注意してください。
 
 - 型プロバイダーは、`pattern` (必須) と `options` (既定値が指定されるので省略可能) の 2 つの静的パラメーターを受け取ります。
 
@@ -581,7 +581,7 @@ for group in r.GetGroupNames() do
         propertyName = group,
         propertyType = typeof<Group>,
         getterCode = fun args -> <@@ ((%%args.[0]:obj) :?> Match).Groups.[group] @@>)
-        prop.AddXmlDoc(sprintf @"Gets the ""%s"" group from this match" group)
+        prop.AddXmlDoc($"""Gets the ""{group}"" group from this match""")
     matchTy.AddMember prop
 ```
 
@@ -764,7 +764,7 @@ do ()
 let info = new MiniCsv<"info.csv">()
 for row in info.Data do
 let time = row.Time
-printfn "%f" (float time)
+printfn $"{float time}"
 ```
 
 この場合、コンパイラはこれらの呼び出しを次の例のように変換します。
@@ -773,7 +773,7 @@ printfn "%f" (float time)
 let info = new CsvFile("info.csv")
 for row in info.Data do
 let (time:float) = row.[1]
-printfn "%f" (float time)
+printfn $"%f{float time}"
 ```
 
 最適な変換を行うには、型プロバイダーのアセンブリで実際の `CsvFile` 型を定義する型プロバイダーが必要です。 型プロバイダーは、多くの場合、重要なロジックをラップするためにいくつかのヘルパー型とメソッドを使用します。 メジャーは実行時に消去されるので、行の消去型として `float[]` を使用できます。 コンパイラでは、異なる列は異なるメジャー型を持つと見なして処理します。 たとえば、この例の最初の列は `float<meter>` 型、2 番目の列は `float<second>` 型を持ちます。 ただし、消去された表現は非常に単純です。
@@ -1136,7 +1136,7 @@ devenv /debugexe fsc.exe script.fsx
 
   stdout への出力のログを使用できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 - [型プロバイダー](index.md)
 - [型プロバイダー SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK)

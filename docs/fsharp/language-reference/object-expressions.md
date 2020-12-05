@@ -1,17 +1,17 @@
 ---
 title: オブジェクト式
-description: 名前付きの型コードを追加し、新たに作成するために必要なオーバーヘッドを回避するときに、F# オブジェクト式を使用する方法をについて説明します。
+description: '新しい名前付きの型を作成するために必要な追加のコードとオーバーヘッドを回避する必要がある場合に、F # オブジェクト式を使用する方法について説明します。'
 ms.date: 02/08/2019
-ms.openlocfilehash: 63f2c1d7128721b7b8c744e4cf02d73c2a8b4a07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a3e40b7833b551eefb95ec62b935acd1ba7b1f9
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666294"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740303"
 ---
 # <a name="object-expressions"></a>オブジェクト式
 
-*オブジェクト式*は動的に作成された、匿名のオブジェクトの種類の新しいインスタンスを作成する式が、既存の基本型、インターフェイス、またはインターフェイスのセットに基づいてです。
+*オブジェクト式* は、動的に作成された、既存の基本型、インターフェイス、またはインターフェイスのセットに基づく匿名オブジェクト型の新しいインスタンスを作成する式です。
 
 ## <a name="syntax"></a>構文
 
@@ -30,7 +30,7 @@ ms.locfileid: "61666294"
 
 ## <a name="remarks"></a>Remarks
 
-前の構文で、 *typename*既存のクラス型またはインターフェイス型を表します。 *型 params*省略可能なジェネリック型パラメーターについて説明します。 *引数*コンス トラクターのパラメーターを必要とするクラス型にのみ使用されます。 *メンバー定義*は基底クラスのメソッドのオーバーライドまたは基底クラスまたはインターフェイスのいずれかの抽象メソッドの実装。
+前の構文では、 *typename* は既存のクラス型またはインターフェイス型を表します。 *型-params* オプションのジェネリック型パラメーターを記述します。 *引数* は、コンストラクターパラメーターを必要とするクラス型に対してのみ使用されます。 *メンバー定義* は、基本クラスのメソッドのオーバーライド、または基本クラスまたはインターフェイスからの抽象メソッドの実装です。
 
 次の例は、さまざまな種類のオブジェクト式を示しています。
 
@@ -38,7 +38,7 @@ ms.locfileid: "61666294"
 // This object expression specifies a System.Object but overrides the
 // ToString method.
 let obj1 = { new System.Object() with member x.ToString() = "F#" }
-printfn "%A" obj1
+printfn $"{obj1}"
 
 // This object expression implements the IFormattable interface.
 let delimiter(delim1: string, delim2: string, value: string) =
@@ -73,9 +73,9 @@ let implementer() =
         member this.G() = () }
 ```
 
-## <a name="using-object-expressions"></a>オブジェクトの式の使用
+## <a name="using-object-expressions"></a>オブジェクト式の使用
 
-余分なコードと名前付きの型を新しく作成する必要なオーバーヘッドを回避する場合に、オブジェクトの式を使用します。 プログラムで作成された型の数を最小限に抑えるには、オブジェクト表現を使用する場合のコード行の数を削減し、型の不要な急増を回避できます。 特定の状況に対処するためだけに多くの種類を作成する代わりには、既存の種類をカスタマイズできます。 または、特定の状況に適切なインターフェイスの実装を提供するオブジェクト式を使用することができます。
+新しい名前付きの型を作成するために必要な追加のコードやオーバーヘッドを回避するには、オブジェクト式を使用します。 オブジェクト式を使用してプログラムで作成される型の数を最小限に抑える場合は、コードの行数を減らし、型の不必要な急増を防ぐことができます。 特定の状況に対処するためだけに多くの型を作成するのではなく、既存の型をカスタマイズするオブジェクト式を使用するか、特定のケースに対して適切なインターフェイスの実装を提供することができます。
 
 ## <a name="see-also"></a>関連項目
 

@@ -2,12 +2,12 @@
 title: 判別共用体
 description: 'F # 判別共用体の使用方法について説明します。'
 ms.date: 08/15/2020
-ms.openlocfilehash: 3f8ac656bd00b1022b2b13ee1be7ca5c98f68db5
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: f90ac2c2ea21182cf5fd3657d2ada00a763139fe
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812134"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740238"
 ---
 # <a name="discriminated-unions"></a>判別共用体
 
@@ -24,9 +24,9 @@ type [accessibility-modifier] type-name =
     [ member-list ]
 ```
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
-判別共用体は他の言語の共用体型と似ていますが、異なる点もあります。 C++ の共用体型や Visual Basic のバリアント型と同じように、値に格納されるデータは固定ではありません。複数の異なるオプションのいずれかを格納できます。 ただし、これらの他の言語の共用体とは異なり、使用可能な各オプションには *ケース識別子*が指定されています。 ケース識別子には、使用できる各種の値の型の名前を指定します。指定した型のオブジェクトは値の型として使用できます。値は省略可能です。 値を省略する場合は、ケースが列挙型のケースと等しくなります。 値がある場合は、各値に、指定した型の単一値、あるいは同じ型または異なる型の複数のフィールドを集約したタプルを使用できます。 個々のフィールドには名前を付けることができますが、同じケース内の他のフィールドに名前が付けられていても、名前は省略可能です。
+判別共用体は他の言語の共用体型と似ていますが、異なる点もあります。 C++ の共用体型や Visual Basic のバリアント型と同じように、値に格納されるデータは固定ではありません。複数の異なるオプションのいずれかを格納できます。 ただし、これらの他の言語の共用体とは異なり、使用可能な各オプションには *ケース識別子* が指定されています。 ケース識別子には、使用できる各種の値の型の名前を指定します。指定した型のオブジェクトは値の型として使用できます。値は省略可能です。 値を省略する場合は、ケースが列挙型のケースと等しくなります。 値がある場合は、各値に、指定した型の単一値、あるいは同じ型または異なる型の複数のフィールドを集約したタプルを使用できます。 個々のフィールドには名前を付けることができますが、同じケース内の他のフィールドに名前が付けられていても、名前は省略可能です。
 
 判別共用体のアクセシビリティは、既定でに設定さ `public` れています。
 
@@ -190,10 +190,10 @@ type Shape =
     interface IPrintable with
         member this.Print () =
             match this with
-            | Circle r -> printfn "Circle with radius %f" r
-            | EquilateralTriangle s -> printfn "Equilateral Triangle of side %f" s
-            | Square s -> printfn "Square with side %f" s
-            | Rectangle(l, w) -> printfn "Rectangle with length %f and width %f" l w
+            | Circle r -> printfn $"Circle with radius %f{r}"
+            | EquilateralTriangle s -> printfn $"Equilateral Triangle of side %f{s}"
+            | Square s -> printfn $"Square with side %f{s}"
+            | Rectangle(l, w) -> printfn $"Rectangle with length %f{l} and width %f{w}"
 ```
 
 ## <a name="common-attributes"></a>共通属性

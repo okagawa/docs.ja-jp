@@ -2,12 +2,12 @@
 title: 結果
 description: 'F # の "Result" 型を使用して、エラートレラントコードを記述する方法について説明します。'
 ms.date: 08/13/2020
-ms.openlocfilehash: d69e6ddc37bcf5cb5fc28644d59a11a822b83faa
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 53b1db0c9224ae032d58c06cd3c58e3dbed03f7b
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656919"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740225"
 ---
 # <a name="results"></a>結果
 
@@ -25,7 +25,7 @@ type Result<'T,'TError> =
     | Error of ErrorValue:'TError
 ```
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 の組み込み連結子については、モジュールを参照してください [`Result`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-resultmodule.html) `Result` 。 型のパラメーターに変換されます。
 
@@ -68,23 +68,23 @@ let test() =
     let req1 = { Name = "Phillip"; Email = "phillip@contoso.biz" }
     let res1 = validateRequest (Ok req1)
     match res1 with
-    | Ok req -> printfn "My request was valid! Name: %s Email %s" req.Name req.Email
-    | Error e -> printfn "Error: %s" e
+    | Ok req -> printfn $"My request was valid! Name: {req.Name} Email {req.Email}"  
+    | Error e -> printfn $"Error: {e}"
     // Prints: "My request was valid!  Name: Phillip Email: phillip@consoto.biz"
 
     let req2 = { Name = "Phillip"; Email = "phillip@bananas.com" }
     let res2 = validateRequest (Ok req2)
     match res2 with
-    | Ok req -> printfn "My request was valid! Name: %s Email %s" req.Name req.Email
-    | Error e -> printfn "Error: %s" e
+    | Ok req -> printfn $"My request was valid! Name: {req.Name} Email {req.Email}"  
+    | Error e -> printfn $"Error: {e}"
     // Prints: "Error: No email from bananas.com is allowed."
 
 test()
 ```
 
-ご覧のように、すべてを強制的にを返すようにすると、さまざまな検証関数を連結するのは非常に簡単です `Result` 。  これにより、このような機能を、必要に応じてコンポーザブルな小さな部分に分割できます。  これには、検証のラウンドの最後に[パターン一致](pattern-matching.md)の使用を*強制*するための追加の値も含まれます。これにより、より高度なプログラムの正確性が適用されます。
+ご覧のように、すべてを強制的にを返すようにすると、さまざまな検証関数を連結するのは非常に簡単です `Result` 。  これにより、このような機能を、必要に応じてコンポーザブルな小さな部分に分割できます。  これには、検証のラウンドの最後に [パターン一致](pattern-matching.md)の使用を *強制* するための追加の値も含まれます。これにより、より高度なプログラムの正確性が適用されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 - [判別共用体](discriminated-unions.md)
 - [パターン一致](pattern-matching.md)

@@ -2,12 +2,12 @@
 title: 配列
 description: 'F # プログラミング言語で配列を作成して使用する方法について説明します。'
 ms.date: 08/13/2020
-ms.openlocfilehash: 37f781ccd2c7bc2ca2c7b93bda53bbb3ea93b504
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 96b0d7eaf10d5afcd9a647681d5c2ef2d2fba335
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608500"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739752"
 ---
 # <a name="arrays"></a>配列
 
@@ -109,7 +109,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 
 [`Array.append`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#append) 2つの既存の配列を組み合わせることによって、新しい配列を作成します。
 
-次のコードは、 **Array. append**を示しています。
+次のコードは、 **Array. append** を示しています。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet13.fs)]
 
@@ -287,12 +287,12 @@ module test =
 
     let test1 = generateTestMatrix 2.3 1.1
     let submatrix = test1.[0..1, 0..1]
-    printfn "%A" submatrix
+    printfn $"{submatrix}"
 
     let firstRow = test1.[0,*]
     let secondRow = test1.[1,*]
     let firstCol = test1.[*,0]
-    printfn "%A" firstCol
+    printfn $"{firstCol}"
 ```
 
 ### <a name="boolean-functions-on-arrays"></a>ブール関数 (配列の)
@@ -405,7 +405,7 @@ Did not find an element that is both a perfect square and a perfect cube.
 
 ### <a name="sort-arrays"></a>配列の並べ替え
 
-[`Array.sort`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sort)ジェネリック比較関数を使用して配列を並べ替えるには、を使用します。 キー [`Array.sortBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortBy) と呼ばれる値を生成する関数を指定するために*key*使用します。この関数は、キーの汎用比較関数を使用して並べ替えます。 [`Array.sortWith`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortWith)カスタム比較関数を指定する場合は、を使用します。 `Array.sort`、`Array.sortBy`、および `Array.sortWith` は、いずれも、並べ替えた配列を新しい配列として返します。 、、およびのバリエーションにより、 [`Array.sortInPlace`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlace) [`Array.sortInPlaceBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlaceBy) 新しい配列が返される代わりに、 [`Array.sortInPlaceWith`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlaceWith) 既存の配列が変更されます。
+[`Array.sort`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sort)ジェネリック比較関数を使用して配列を並べ替えるには、を使用します。 キー [`Array.sortBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortBy) と呼ばれる値を生成する関数を指定するために *key* 使用します。この関数は、キーの汎用比較関数を使用して並べ替えます。 [`Array.sortWith`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortWith)カスタム比較関数を指定する場合は、を使用します。 `Array.sort`、`Array.sortBy`、および `Array.sortWith` は、いずれも、並べ替えた配列を新しい配列として返します。 、、およびのバリエーションにより、 [`Array.sortInPlace`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlace) [`Array.sortInPlaceBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlaceBy) 新しい配列が返される代わりに、 [`Array.sortInPlaceWith`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlaceWith) 既存の配列が変更されます。
 
 ### <a name="arrays-and-tuples"></a>配列と組
 

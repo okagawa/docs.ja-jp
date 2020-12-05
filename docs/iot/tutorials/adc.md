@@ -6,12 +6,12 @@ ms.author: casoper
 ms.date: 11/13/2020
 ms.topic: tutorial
 ms.prod: dotnet
-ms.openlocfilehash: eda6d8980d256c8063f2bfe1e051b0cb90b587ad
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 7cf25f181997ed66639842727be57e7824ef5466
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96594144"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739988"
 ---
 <!--markdownlint-disable DOCSMD011 -->
 # <a name="read-values-from-an-analog-to-digital-converter"></a>アナログ デジタル コンバーターから値を読み取る
@@ -76,7 +76,7 @@ Potentiometer の外側のピンに 3.3 V とグランドを提供します。 �
 
     :::code language="csharp" source="~/iot-samples/tutorials/AdcTutorial/Program.cs" :::
 
-    上記のコードにより、次のことが行われます。
+    上のコードでは以下の操作が行われます。
 
     - `hardwareSpiSettings` は、の新しいインスタンスに設定され `SpiConnectionSettings` ます。 コンストラクターは、 `busId` パラメーターを0に設定し、パラメーターを0に設定し `chipSelectLine` ます。
     - [Using 宣言](../../csharp/whats-new/csharp-8.md#using-declarations)は、を `SpiDevice` 呼び出してを渡すことによって、のインスタンスを作成し `SpiDevice.Create` `hardwareSpiSettings` ます。 これ `SpiDevice` は、SPI バスを表します。 この `using` 宣言により、オブジェクトが破棄され、ハードウェアリソースが正常に解放されます。
@@ -100,13 +100,13 @@ Potentiometer の外側のピンに 3.3 V とグランドを提供します。 �
 
 1. <kbd>Ctrl + C</kbd>キーを押してプログラムを終了します。
 
-お疲れさまでした。 SPI を使用して、アナログからデジタルへのコンバーターから値を読み取りました。
+おめでとうございます。 SPI を使用して、アナログからデジタルへのコンバーターから値を読み取りました。
 
 ## <a name="get-the-source-code"></a>ソース コードを入手する
 
-このチュートリアルのソースは、 [GitHub で入手でき](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/AdcTutorial)ます。 <span class="docon docon-navigate-external x-hidden-focus"></span>
+このチュートリアルのソースは、 [GitHub で入手でき](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/AdcTutorial) <span class="docon docon-navigate-external x-hidden-focus"></span> ます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [General Purpose 入力/出力を使用して LED を点滅させる方法について説明します](../tutorials/blink-led.md)
