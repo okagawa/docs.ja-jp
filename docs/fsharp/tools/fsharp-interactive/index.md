@@ -4,12 +4,12 @@ description: F# インタラクティブ (dotnet fsi) を使用して、コン�
 ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 92177c41dc6b31d9186bae8176f85787e2fb89e0
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 71ec5d1b050b02ecbdb98adce814fce011cdbca0
+ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438045"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96549398"
 ---
 # <a name="interactive-programming-with-f"></a>F\# による対話型プログラミング
 
@@ -90,6 +90,9 @@ F# スクリプトは [Visual Studio](../../get-started/get-started-visual-studi
 
 ## <a name="referencing-packages-in-f-interactive"></a>F# インタラクティブでのパッケージの参照
 
+> [!NOTE]
+> パッケージ管理システムは拡張可能です。その他の拡張機能については、[こちら](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager)をご覧ください。
+
 F# インタラクティブでは、`#r "nuget:"` 構文と省略可能なバージョンを使用した、NuGet パッケージの参照がサポートされています。
 
 ```fsharp
@@ -133,6 +136,8 @@ printfn "%A" (f (dsharp.tensor 1.2))
 
 > [!NOTE]
 > 現在、フレームワーク参照 (`Microsoft.NET.Sdk.Web` や `Microsoft.NET.Sdk.WindowsDesktop` など) を使用するスクリプトには制限があります。 Saturn、Giraffe、WinForms などのパッケージは使用できません。 これは、イシュー [#9417](https://github.com/dotnet/fsharp/issues/9417) で追跡されています。
+
+パッケージ管理の機能拡張とその他の拡張機能の詳細については、[こちら](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager)をご覧ください。
 
 ## <a name="referencing-assemblies-on-disk-with-f-interactive"></a>F# インタラクティブでディスク上のアセンブリを参照する
 
