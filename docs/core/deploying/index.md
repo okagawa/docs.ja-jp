@@ -2,12 +2,12 @@
 title: アプリケーションの発行
 description: .NET Core アプリケーションを発行する方法について説明します。 .NET Core では、プラットフォーム固有の、またはクロスプラットフォームのアプリを発行できます。 アプリは、自己完結型として、またはフレームワーク依存として発行できます。 各モードは、お客様のアプリをユーザーが実行する方法に影響を与えます。
 ms.date: 04/01/2020
-ms.openlocfilehash: 27206065c899e41a44685f72cfb35ae57986aa4c
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 03d53c8b5184d7276a69a1058d6b1b2f1e62dc81
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654673"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599578"
 ---
 # <a name="net-core-application-publishing-overview"></a>.NET Core アプリケーションの発行の概要
 
@@ -46,7 +46,7 @@ ms.locfileid: "91654673"
 
 ## <a name="produce-a-cross-platform-binary"></a>クロスプラットフォーム バイナリを生成する
 
-ご自分のアプリを *dll* ファイルの形式で[フレームワーク依存](#publish-framework-dependent)として発行すると、クロスプラットフォーム バイナリが作成されます。 *dll* ファイルには、プロジェクトに基づいて名前が付けられます。 たとえば、**word_reader** という名前のアプリがある場合、*word_reader.dll* という名前のファイルが作成されます。 この方法で発行されたアプリは、`dotnet <filename.dll>` コマンドを使用して実行され、任意のプラットフォームで実行できます。
+ご自分のアプリを *dll* ファイルの形式で [フレームワーク依存](#publish-framework-dependent)として発行すると、クロスプラットフォーム バイナリが作成されます。 *dll* ファイルには、プロジェクトに基づいて名前が付けられます。 たとえば、**word_reader** という名前のアプリがある場合、*word_reader.dll* という名前のファイルが作成されます。 この方法で発行されたアプリは、`dotnet <filename.dll>` コマンドを使用して実行され、任意のプラットフォームで実行できます。
 
 ターゲットとなる .NET Core ランタイムが既にインストールされていれば、クロスプラットフォーム バイナリを任意のオペレーティング システムで実行できます。 ターゲットとなる .NET Core ランタイムがインストールされていない場合、アプリがロール フォワードするように構成されていれば、より新しいランタイムを使用してアプリを実行することができます。 詳細については、「[フレームワーク依存のアプリをロールフォワードする](../versions/selection.md#framework-dependent-apps-roll-forward)」を参照してください。
 
@@ -60,14 +60,14 @@ ms.locfileid: "91654673"
 
 フレームワーク依存として発行されたアプリはクロスプラットフォームであり、.NET Core ランタイムは含まれていません。 アプリのユーザーは、.NET Core ランタイムをインストールする必要があります。
 
-アプリをフレームワーク依存として発行すると、[クロスプラットフォーム バイナリ](#produce-a-cross-platform-binary)が *dll* ファイルとして生成されるほか、現在ご利用のプラットフォームをターゲットとする[プラットフォーム固有の実行可能ファイル](#produce-an-executable)が生成されます。 *dll* はクロスプラットフォームですが、実行可能ファイルはそうではありません。 たとえば、**word_reader** という名前のアプリを発行し、Windows をターゲットとすると、*word_reader.exe* 実行可能ファイルが *word_reader.dll* と共に作成されます。 Linux または macOS をターゲットとすると、*word_reader* 実行可能ファイルが *word_reader.dll* と共に作成されます。 RID の詳細については、「[.NET Core の RID カタログ](../rid-catalog.md)」を参照してください。
+アプリをフレームワーク依存として発行すると、[クロスプラットフォーム バイナリ](#produce-a-cross-platform-binary)が *dll* ファイルとして生成されるほか、現在ご利用のプラットフォームをターゲットとする [プラットフォーム固有の実行可能ファイル](#produce-an-executable)が生成されます。 *dll* はクロスプラットフォームですが、実行可能ファイルはそうではありません。 たとえば、**word_reader** という名前のアプリを発行し、Windows をターゲットとすると、*word_reader.exe* 実行可能ファイルが *word_reader.dll* と共に作成されます。 Linux または macOS をターゲットとすると、*word_reader* 実行可能ファイルが *word_reader.dll* と共に作成されます。 RID の詳細については、「[.NET Core の RID カタログ](../rid-catalog.md)」を参照してください。
 
 > [!IMPORTANT]
 > .NET Core SDK 2.1 では、アプリをフレームワーク依存として発行しても、プラットフォーム固有の実行可能ファイルは生成されません。
 
 アプリのクロスプラットフォーム バイナリは、`dotnet <filename.dll>` コマンドを使用して実行でき、任意のプラットフォームで実行できます。 プラットフォーム固有の実装を含む NuGet パッケージがアプリで使用される場合、すべてのプラットフォームの依存関係が、アプリと共に publish フォルダーにコピーされます。
 
-特定のプラットフォーム用の実行可能ファイルを作成するには、`-r <RID> --self-contained false` パラメーターを [`dotnet publish`](../tools/dotnet-publish.md) コマンドに渡します。 `-r` パラメーターを省略すると、現在のプラットフォーム用の実行可能ファイルが作成されます。 ターゲットとするプラットフォーム用のプラットフォーム固有の依存関係が含まれている NuGet パッケージはいずれも、publish フォルダーにコピーされます。
+特定のプラットフォーム用の実行可能ファイルを作成するには、`-r <RID> --self-contained false` パラメーターを [`dotnet publish`](../tools/dotnet-publish.md) コマンドに渡します。 `-r` パラメーターを省略すると、現在のプラットフォーム用の実行可能ファイルが作成されます。 ターゲットとするプラットフォーム用のプラットフォーム固有の依存関係が含まれている NuGet パッケージはいずれも、publish フォルダーにコピーされます。 プラットフォーム固有の実行可能ファイルが不要な場合は、プロジェクト ファイルで `<UseAppHost>False</UseAppHost>` を指定できます。 詳細については、「[.NET SDK プロジェクトの MSBuild リファレンス](../project-sdk/msbuild-props.md#useapphost)」を参照してください。
 
 ### <a name="advantages"></a>長所
 

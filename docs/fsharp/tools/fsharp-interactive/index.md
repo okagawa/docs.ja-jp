@@ -4,12 +4,12 @@ description: F# インタラクティブ (dotnet fsi) を使用して、コン�
 ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 71ec5d1b050b02ecbdb98adce814fce011cdbca0
-ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
+ms.openlocfilehash: fe8ee2ebb97f4a47e80f39d5be8d95ba5b72ddc7
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96549398"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739314"
 ---
 # <a name="interactive-programming-with-f"></a>F\# による対話型プログラミング
 
@@ -118,7 +118,7 @@ let t2 = dsharp.tensor [ [ 0; 1 ]; [ 2; 2 ] ]
 // Define a scalar-to-scalar function
 let f (x: Tensor) = sin (sqrt x)
 
-printfn "%A" (f (dsharp.tensor 1.2))
+printfn $"{f (dsharp.tensor 1.2)}"
 ```
 
 ### <a name="specifying-a-package-source"></a>パッケージ ソースの指定
@@ -137,7 +137,7 @@ printfn "%A" (f (dsharp.tensor 1.2))
 > [!NOTE]
 > 現在、フレームワーク参照 (`Microsoft.NET.Sdk.Web` や `Microsoft.NET.Sdk.WindowsDesktop` など) を使用するスクリプトには制限があります。 Saturn、Giraffe、WinForms などのパッケージは使用できません。 これは、イシュー [#9417](https://github.com/dotnet/fsharp/issues/9417) で追跡されています。
 
-パッケージ管理の機能拡張とその他の拡張機能の詳細については、[こちら](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager)をご覧ください。
+詳細については、[パッケージ管理の機能拡張とその他の拡張機能](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager)に関するページを参照してください。
 
 ## <a name="referencing-assemblies-on-disk-with-f-interactive"></a>F# インタラクティブでディスク上のアセンブリを参照する
 
@@ -154,7 +154,7 @@ let myFunction x y = x + 2 * y
 ```fsharp
 #r "path/to/MyAssembly.dll"
 
-printfn "%A" (MyAssembly.myFunction 10 40)
+printfn $"{MyAssembly.myFunction 10 40}"
 ```
 
 出力は次のようになります。
@@ -182,7 +182,7 @@ let square x = x * x
 #load "Script1.fsx"
 open Script1
 
-printfn "%d" (square 12)
+printfn $"%d{square 12}"
 ```
 
 `open Script1` 宣言が必要であることに注意してください。 これは、F# スクリプト内のコンストラクトが、それを含むスクリプト ファイルの名前である最上位レベルのモジュールにコンパイルされるためです。
@@ -206,7 +206,7 @@ F# スクリプトでは、F# インタラクティブ セッションを表す�
 let args = fsi.CommandLineArgs
 
 for arg in args do
-    printfn "%s" arg
+    printfn $"{arg}"
 ```
 
 これを評価すると、すべての引数が出力されます。 最初の引数は、常に評価されるスクリプトの名前になります。

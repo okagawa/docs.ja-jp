@@ -4,12 +4,12 @@ description: .NET Core 機能をサポートおよび拡張する、インスト
 author: mlacouture
 ms.date: 02/13/2020
 ms.custom: mvc
-ms.openlocfilehash: f563dff312442cbf068d52d08992621e3d6f1460
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6aa8b62f02c4325664ffeccc0c0d4a0635a96f2d
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699002"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599220"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core の追加ツールの概要
 
@@ -28,6 +28,10 @@ ms.locfileid: "95699002"
 [dotnet-gcdump](../diagnostics/dotnet-gcdump.md) は、ライブ .NET プロセスの GC (ガベージコレクター) ダンプを収集する手段を提供します。
 
 [dotnet-trace](../diagnostics/dotnet-trace.md) では、自分のアプリからプロファイル データを収集できます。これは、アプリの実行速度が低下する原因を特定する必要があるシナリオで役立ちます。
+
+## <a name="net-install-tool-for-extension-authors"></a>拡張機能作成者用の .NET インストール ツール
+
+[拡張機能作成者用の .NET インストール ツール](https://github.com/dotnet/vscode-dotnet-runtime)は、特に VS Code 拡張機能の作成者に向けた .NET Core ランタイムを入手できる、Visual Studio Code の拡張機能です。 このツールは、.NET で記述された拡張機能での利用を目的としており、拡張機能の一部 (言語サーバーなど) を起動するために .NET を必要とします。 この拡張機能は、開発用の .NET をインストールするためにユーザーが直接使用することは意図されていません。
 
 ## <a name="wcf-web-service-reference-tool"></a>WCF Web Service Reference ツール
 
