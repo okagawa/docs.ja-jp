@@ -2,46 +2,43 @@
 title: .NET でのコード分析
 titleSuffix: ''
 description: .NET SDK のソースコード分析について説明します。
-ms.date: 08/22/2020
+ms.date: 12/04/2020
 ms.topic: overview
 ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 8efac4d5e3fddcb9fdc6e08bcc933f2776420ced
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 657975742c3efc2985264fe16cb316357b959e73
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739975"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851817"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET ソース コード分析の概要
 
-.NET のコンパイラ プラットフォーム (Roslyn) アナライザーでは、お使いの C# または Visual Basic コードについて、コード品質やコード スタイルに関する問題を検査できます。 .NET 5.0 以降、これらのアナライザーは .NET SDK に含まれるようになりました。 .NET 5 + SDK に移行しない場合、または NuGet パッケージベースのモデルを使用する場合は、nuget パッケージでアナライザーを使用することもでき `Microsoft.CodeAnalysis.NetAnalyzers` [NuGet package](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)ます。 オンデマンドバージョン更新には、パッケージベースのモデルを使用することをお勧めします。
+.NET のコンパイラ プラットフォーム (Roslyn) アナライザーでは、お使いの C# または Visual Basic コードについて、コード品質やコード スタイルに関する問題を検査できます。 .NET 5.0 以降、これらのアナライザーは .NET SDK に含まれており、個別にインストールする必要はありません。 プロジェクトが .NET 5 以降を対象としている場合は、既定でコード分析が有効になります。 プロジェクトが .NET Core、.NET Standard、.NET Framework などの別の .NET 実装をターゲットにしている場合は、 [Enablenetanalyzers](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) プロパティをに設定することによって、手動でコード分析を有効にする必要があり `true` ます。
+
+.NET 5 + SDK に移行しない場合、または NuGet パッケージベースのモデルを使用する場合は、 [Microsoft の CodeAnalysis. Netanalyzers nuget パッケージ](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)でアナライザーを使用することもできます。 オンデマンドバージョン更新には、パッケージベースのモデルを使用することをお勧めします。
 
 > [!NOTE]
-> .NET アナライザーは、ターゲットプラットフォームに依存しません。 つまり、プロジェクトは特定の .NET プラットフォームを対象にする必要がありません。 アナライザーは、、、など、以前のバージョンの .NET を対象とするプロジェクトに対して機能し `net5.0` `netcoreapp` `netstandard` `net472` ます。
-
-- [コード品質分析 ("CAxxxx" ルール)](#code-quality-analysis)
-- [コードスタイル分析 ("Ide Xxxx" 規則)](#code-style-analysis)
+> .NET アナライザーは、ターゲットフレームワークに依存しません。 つまり、プロジェクトは特定の .NET 実装をターゲットにする必要がありません。 アナライザーは、やなど、以前のバージョンの .NET を対象とするプロジェクトでも機能し `net5.0` `netcoreapp3.1` `net472` ます。
 
 ルール違反が analyzer によって検出されると、各ルールの [構成](configuration-options.md)方法に応じて、候補、警告、またはエラーとして報告されます。 コード分析違反は、コンパイラエラーと区別するために "CA" または "IDE" というプレフィックスで示されます。
 
-> [!TIP]
->
-> - [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/)、 [roslの ator](https://www.nuget.org/packages/Roslynator.Analyzers/)、 [Xunit](https://www.nuget.org/packages/xunit.analyzers/) [Analyzer、sonar Analyzer](https://www.nuget.org/packages/SonarAnalyzer.CSharp/)などのサードパーティ製アナライザーをインストールすることもできます。
-> - Visual Studio を使用している場合は、多くのアナライザールールに関連付けられている *コード修正プログラム* を適用して、問題を修正できます。 コード修正は、電球アイコンメニューに表示されます。
-
 ## <a name="code-quality-analysis"></a>コード品質の分析
 
-_コード品質分析 ("CA") 規則_ は、セキュリティ、パフォーマンス、設計などの問題について、C# または Visual Basic コードを検査します。 .NET 5.0 以降を対象とするプロジェクトでは、既定で分析が有効になっています。 以前のバージョンの .NET を対象とするプロジェクトでは、 [Enablenetanalyzers](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) プロパティをに設定することにより、コード分析を有効にすることができ `true` ます。 をに設定することにより、プロジェクトのコード分析を無効にすることもでき `EnableNETAnalyzers` `false` ます。
+*コード品質分析* ("caxxxx") ルールは、セキュリティ、パフォーマンス、設計などの問題について、C# または Visual Basic コードを検査します。 .NET 5.0 以降を対象とするプロジェクトでは、既定で分析が有効になっています。 以前のバージョンの .NET を対象とするプロジェクトでは、 [Enablenetanalyzers](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) プロパティをに設定することにより、コード分析を有効にすることができ `true` ます。 をに設定することにより、プロジェクトのコード分析を無効にすることもでき `EnableNETAnalyzers` `false` ます。
 
 > [!TIP]
-> Visual Studio では、プロジェクトプロパティウィンドウを使用してコード分析を有効または無効にすることができます。 プロジェクトプロパティウィンドウにアクセスするにはソリューションエクスプローラー内のプロジェクトを右クリックし、[ **プロパティ**] を選択します。 次に、[ **コード分析** ] タブを選択し、[ **.Net アナライザーを有効** にする] チェックボックスをオンまたはオフにします。
+> Visual Studio を使用している場合:
+>
+> - 多くのアナライザールールには、問題を修正するために適用できる *コード修正プログラム* が関連付けられています。 コード修正は、電球アイコンメニューに表示されます。
+> - コード分析を有効または無効にするには、ソリューションエクスプローラーでプロジェクトを右クリックし、[**プロパティ**  >  ] [**コード分析**] タブ > [ **.net アナライザーの有効化**] の順に選択します。
 
 ### <a name="enabled-rules"></a>有効なルール
 
-.NET 5.0 Preview 8 では、既定で次のルールが有効になっています。
+次の規則は、既定では .NET 5.0 で有効になっています。
 
 | 診断 ID | カテゴリ | 重大度 | 説明 |
 | - | - | - | - |
@@ -51,27 +48,25 @@ _コード品質分析 ("CA") 規則_ は、セキュリティ、パフォーマ
 | [CA2013](/visualstudio/code-quality/ca2013) | [信頼性] | 警告 | `ReferenceEquals`値型では使用しない |
 | [CA2014](/visualstudio/code-quality/ca2014) | [信頼性] | 警告 | In ループを使用しない `stackalloc` |
 | [CA2015](/visualstudio/code-quality/ca2015) | [信頼性] | 警告 | から派生した型にはファイナライザーを定義しないでください。 <xref:System.Buffers.MemoryManager%601> |
-| [CA2200](/visualstudio/code-quality/ca2200) | 使用 | 警告 | スタック詳細を保持するために再度スローします
-| [CA2247](/visualstudio/code-quality/ca2247) | 使用 | 警告 | Taskのソースコンストラクターに渡される引数は、ではなく列挙型にする必要があり <xref:System.Threading.Tasks.TaskCreationOptions> ます <xref:System.Threading.Tasks.TaskContinuationOptions> |
+| [CA2200](/visualstudio/code-quality/ca2200) | 使用法 | 警告 | スタック詳細を保持するために再度スローします
+| [CA2247](/visualstudio/code-quality/ca2247) | 使用法 | 警告 | Taskのソースコンストラクターに渡される引数は、ではなく列挙型にする必要があり <xref:System.Threading.Tasks.TaskCreationOptions> ます <xref:System.Threading.Tasks.TaskContinuationOptions> |
 
-これらのルールを無効にするか、エラーに昇格するように、これらのルールの重大度を変更することができます。
+これらのルールを無効にするか、エラーに昇格するように、これらのルールの重大度を変更することができます。 [さらに多くのルールを有効に](#enable-additional-rules)することもできます。
 
-使用可能なコード品質ルールの完全な一覧については、「 [コード品質ルール](quality-rules/index.md)」を参照してください。
+- 各 .NET SDK バージョンに含まれる規則の一覧については、「 [Analyzer のリリース](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)」を参照してください。
+- すべてのコード品質ルールの一覧については、「 [コード品質ルール](quality-rules/index.md)」を参照してください。
 
 ### <a name="enable-additional-rules"></a>追加のルールを有効にする
 
-.NET 5.0 RC2 以降、.NET SDK には、すべての ["CA" コード品質ルール](/visualstudio/code-quality/code-analysis-for-managed-code-warnings)が付属しています。 各 .NET SDK バージョンに含まれる規則の完全な一覧については、「 [analyzer のリリース](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)」を参照してください。
+*分析モード* とは、定義されていないコード分析構成を意味します。この構成では、すべての規則が有効になっていません。 既定の分析モードでは、いくつかのルールのみが [ビルド警告として有効になり](#enabled-rules)ます。 プロジェクトファイルの [AnalysisMode](../../core/project-sdk/msbuild-props.md#analysismode) プロパティを設定することにより、プロジェクトの分析モードを変更できます。 使用できる値は次のとおりです。
 
-#### <a name="default-analysis-mode"></a>既定の分析モード
+| 値 | 説明 |
+| - | - |
+| `AllDisabledByDefault` | これは最も控えめなモードです。 既定では、すべてのルールが無効になっています。 個々のルールを選択的に[オプトイン](configuration-options.md)して有効にすることができます。<br /><br />`<AnalysisMode>AllDisabledByDefault</AnalysisMode>` |
+| `AllEnabledByDefault` | これは最も積極的なモードです。 すべてのルールがビルド警告として有効になります。 個別 [の](configuration-options.md) ルールを選択して無効にすることができます。<br /><br />`<AnalysisMode>AllEnabledByDefault</AnalysisMode>` |
+| `Default` | 既定のモードでは、いくつかのルールが警告として有効になっています。その他のルールは、対応するコード修正によって Visual Studio IDE 候補としてのみ有効になり、残りは完全に無効になります。 個々 [の](configuration-options.md) ルールを選択して無効にすることができます。<br /><br />`<AnalysisMode>Default</AnalysisMode>` |
 
-既定の分析モードでは、一部のルールがビルド警告として [既定で有効になっ](#enabled-rules) ています。 他の規則の中には、既定では Visual Studio IDE の提案としてのみ有効になっているものがあります。 残りのルールは、既定では無効になっています。 ルール [の完全な一覧](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md) には、各ルールの既定の重要度と、既定の分析モードでルールが既定で有効になっているかどうかが含まれます。
-
-#### <a name="custom-analysis-mode"></a>カスタム分析モード
-
-個々のルールまたはルールのカテゴリを有効または無効にするように、 [コード分析ルールを構成](configuration-options.md) することができます。 さらに、 [AnalysisMode](../../core/project-sdk/msbuild-props.md#analysismode) プロパティを使用して、次のいずれかのカスタム分析モードに切り替えることができます。
-
-- _アグレッシブ_ モードまたは _オプトアウト_ モード: 既定では、すべてのルールがビルド警告として有効になります。 個々のルールを選択的に[オプトアウト](configuration-options.md)して無効にすることができます。
-- _控えめ_ または _オプトイン_ モード: 既定では、すべての規則が無効になっています。 個々のルールを選択的に[オプトイン](configuration-options.md)して有効にすることができます。
+使用可能な各ルールの既定の重要度と、ルールが既定の分析モードで有効になっているかどうかを確認するには、 [ルールの完全な一覧](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)を参照してください。
 
 ### <a name="treat-warnings-as-errors"></a>警告をエラーとして扱う
 
@@ -106,12 +101,14 @@ _コード品質分析 ("CA") 規則_ は、セキュリティ、パフォーマ
 
 ## <a name="code-style-analysis"></a>コードスタイルの分析
 
-[コードスタイル分析](/visualstudio/ide/editorconfig-code-style-settings-reference) ("ide xxxx" 規則) を使用すると、コードベースで一貫性のあるコードスタイルを定義および維持できます。 既定の設定は次のとおりです。
+*コードスタイル分析* ("ide xxxx") 規則を使用すると、コードベースで一貫性のあるコードスタイルを定義および維持できます。 既定の有効化設定は次のとおりです。
 
 - コマンドラインビルド: コマンドラインビルドのすべての .NET プロジェクトに対して、コードスタイル分析が既定で無効になっています。
 - Visual Studio: コードスタイル分析は、Visual Studio 内のすべての .NET プロジェクトに対して、 [コードリファクタリングクイックアクション](/visualstudio/ide/code-generation-in-visual-studio)として既定で有効になっています。
 
-.NET 5.0 RC2 を開始すると、コマンドラインと Visual Studio の両方でビルドに対してコードスタイル分析を有効にすることができます。 コードスタイル違反は、"IDE" プレフィックスが付いた警告またはエラーとして表示されます。 これにより、ビルド時に一貫したコードスタイルを適用できます。
+.NET 5.0 を開始すると、コマンドラインと Visual Studio の両方でビルドに対してコードスタイル分析を有効にすることができます。 コードスタイル違反は、"IDE" プレフィックスが付いた警告またはエラーとして表示されます。 これにより、ビルド時に一貫したコードスタイルを適用できます。
+
+コードスタイルの分析規則の完全な一覧については、「 [コードスタイル規則](style-rules/index.md)」を参照してください。
 
 > [!NOTE]
 > コードスタイル分析機能は試験段階であり、.NET 5 リリースと .NET 6 リリース間で変更される可能性があります。
@@ -152,7 +149,11 @@ Visual Studio には、コード分析規則からの警告を抑制するため
 
 規則の重大度の詳細については、「 [規則の重要度の構成](configuration-options.md#severity-level)」を参照してください。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="third-party-analyzers"></a>サード パーティのアナライザー
+
+公式の .NET アナライザーに加えて、 [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/)、 [Rosl/ator](https://www.nuget.org/packages/Roslynator.Analyzers/)、 [Xunit](https://www.nuget.org/packages/xunit.analyzers/) [Analyzer、sonar Analyzer](https://www.nuget.org/packages/SonarAnalyzer.CSharp/)などのサードパーティ製アナライザーをインストールすることもできます。
+
+## <a name="see-also"></a>関連項目
 
 - [コード品質分析ルールのリファレンス](quality-rules/index.md)
 - [コードスタイル分析規則のリファレンス](style-rules/index.md)

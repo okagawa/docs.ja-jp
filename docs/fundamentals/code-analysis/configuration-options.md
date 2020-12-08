@@ -5,18 +5,20 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: af2ebb74786f0ae884ffee4636765cae43fcb23f
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 4f7b392a2b066023fec75c5295bd94651654d645
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "96591671"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851791"
 ---
 # <a name="configuration-options-for-code-analysis"></a>コード分析の構成オプション
 
 コード分析規則には、さまざまな構成オプションがあります。 これらのオプションは、構文を使用して、 [アナライザー構成ファイル](configuration-files.md) のキーと値のペアとして指定され `<option key> = <option value>` ます。
 
-最も一般的に構成するオプションは、ルールの重要度です。 [コード品質ルール](quality-rules/index.md)や[コードスタイルルール](style-rules/index.md)など、すべてのアナライザールールの重大度レベルを構成することができます。
+最も一般的に構成するオプションは、 [ルールの重要度](#severity-level)です。 [コード品質ルール](quality-rules/index.md)や[コードスタイルルール](style-rules/index.md)など、すべてのアナライザールールの重大度レベルを構成することができます。 たとえば、警告としてルールを有効にするには、次のキーと値のペアをファイルに追加し EditorConfig ます。
+
+`dotnet_diagnostic.<rule ID>.severity = warning`
 
 ルールの動作をカスタマイズするための追加のオプションを構成することもできます。
 
