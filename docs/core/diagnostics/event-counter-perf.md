@@ -3,12 +3,12 @@ title: .NET Core で EventCounters を使用してパフォーマンスを測定
 description: このチュートリアルでは、EventCounters を使用してパフォーマンスを測定する方法について説明します。
 ms.date: 08/07/2020
 ms.topic: tutorial
-ms.openlocfilehash: db9a0889d46cc4db02baac60cbed6f6e0ba6856b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 75f6f1469c87eb1fe8a3064a815ec72943771f88
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538567"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437446"
 ---
 # <a name="tutorial-measure-performance-using-eventcounters-in-net-core"></a>チュートリアル: .NET Core で EventCounters を使用してパフォーマンスを測定する
 
@@ -97,7 +97,7 @@ dotnet-counters ps
 `dotnet-counters ps` コマンドの出力にあるプロセス識別子を使用し、次の `dotnet-counters monitor` コマンドを使ってイベント カウンターの監視を開始できます。
 
 ```console
-dotnet-counters monitor --process-id 2196 Sample.EventCounter.Minimal Microsoft.AspNetCore.Hosting[total-requests,requests-per-second] System.Runtime[cpu-usage]
+dotnet-counters monitor --process-id 2196 --counters Sample.EventCounter.Minimal,Microsoft.AspNetCore.Hosting[total-requests,requests-per-second],System.Runtime[cpu-usage]
 ```
 
 `dotnet-counters monitor` コマンドの実行中に、`https://localhost:5001/api/values` エンドポイントへの継続的な要求の発行を開始するために、ブラウザーで <kbd>F5</kbd> キーを押します。 数秒後に <kbd>q</kbd> キーを押して終了します。
@@ -118,7 +118,7 @@ Press p to pause, r to resume, q to quit.
 `dotnet-counters monitor` コマンドは、アクティブな監視に適しています。 ただし、これらの診断メトリックを収集して、後処理や分析を行うこともできます。 そのためには、`dotnet-counters collect` コマンドを使用します。 `collect` スイッチ コマンドは、`monitor` コマンドに似ていますが、いくつかの追加パラメーターを受け取ります。 目的の出力ファイル名と形式を指定できます。 *diagnostics.json* という名前の JSON ファイルの場合、次のコマンドを使用します。
 
 ```console
-dotnet-counters collect --process-id 2196 --format json -o diagnostics.json Sample.EventCounter.Minimal Microsoft.AspNetCore.Hosting[total-requests,requests-per-second] System.Runtime[cpu-usage]
+dotnet-counters collect --process-id 2196 --format json -o diagnostics.json --counters Sample.EventCounter.Minimal,Microsoft.AspNetCore.Hosting[total-requests,requests-per-second],System.Runtime[cpu-usage]
 ```
 
 コマンドの実行中に再度ブラウザーで <kbd>F5</kbd> キーを押して、`https://localhost:5001/api/values` エンドポイントへの継続的な要求の発行を開始します。 数秒後に <kbd>q</kbd> キーを押します。 *diagnostics.json* ファイルが書き込まれます。 ただし、書き込まれた JSON ファイルはインデントされません。ここでは読みやすくするためにインデントしています。

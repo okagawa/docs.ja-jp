@@ -2,12 +2,12 @@
 title: 単純なデータ ドリブン CRUD マイクロサービスの作成
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービス アプリケーションのコンテキストでの単純な CRUD (データ ドリブン) マイクロサービスの作成を理解する。
 ms.date: 08/14/2020
-ms.openlocfilehash: 056ba37965cf831e0fb176eb585042c440530c6b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 27c9b331573ff08ea16c756552818df285156282
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172366"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739870"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>単純なデータ ドリブン CRUD マイクロサービスの作成
 
@@ -187,7 +187,7 @@ ASP.NET Core では、既定の依存関係の挿入 (DI) を使用できます�
 
 前に説明した `CatalogController` クラスでは、`CatalogContext` (`DbContext` から継承) 型が、`CatalogController()` コンストラクター内の他の必須のオブジェクトと共に挿入されます。
 
-Web API プロジェクトを設定するための重要な構成は、サービスの IoC コンテナーへの DbContext クラスの登録です。 通常、この操作は、次の**簡略化された**例に示すように、`ConfigureServices()` メソッド内で `services.AddDbContext<CatalogContext>()` メソッドを呼び出して `Startup` クラス内で実行します。
+Web API プロジェクトを設定するための重要な構成は、サービスの IoC コンテナーへの DbContext クラスの登録です。 通常、この操作は、次の **簡略化された** 例に示すように、`ConfigureServices()` メソッド内で `services.AddDbContext<CatalogContext>()` メソッドを呼び出して `Startup` クラス内で実行します。
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -233,7 +233,7 @@ public void ConfigureServices(IServiceCollection services)
 
 ```json
 {
-    "ConnectionString": "Server=tcp:127.0.0.1,5433;Initial Catalog=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word",
+    "ConnectionString": "Server=tcp:127.0.0.1,5433;Initial Catalog=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=[PLACEHOLDER]",
     "ExternalCatalogBaseUrl": "http://localhost:5101",
     "Logging": {
         "IncludeScopes": false,
@@ -256,7 +256,7 @@ settings.json ファイルには、ConnectionString プロパティやその他�
 #
 catalog-api:
   environment:
-    - ConnectionString=Server=sqldata;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word
+    - ConnectionString=Server=sqldata;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=[PLACEHOLDER]
     # Additional environment variables for this service
   ports:
     - "5101:80"
@@ -268,13 +268,13 @@ catalog-api:
 
 ただし、運用環境では、接続文字列などのシークレットを格納する方法について、追加の方法を調べることが必要な場合があります。 アプリケーション シークレットを管理する優れた方法は [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) を使用することです。
 
-Azure Key Vault は、暗号化キーと、クラウド アプリケーションやサービスで使用されるシークレットを保管したり、保護したりするのに役立ちます。 API キー、接続文字列、パスワードなど、厳重に管理するあらゆるものがシークレットです。厳重な管理としては、使用を記録したり、有効期限を設定したり、アクセスを管理したり*します*。
+Azure Key Vault は、暗号化キーと、クラウド アプリケーションやサービスで使用されるシークレットを保管したり、保護したりするのに役立ちます。 API キー、接続文字列、パスワードなど、厳重に管理するあらゆるものがシークレットです。厳重な管理としては、使用を記録したり、有効期限を設定したり、アクセスを管理したり *します*。
 
 Azure Key Vault を利用することで、誰にも知らせる必要なく、アプリケーション シークレットの使用を非常に細かく制御できます。 シークレットは一定の周期で再利用し、開発や運用を妨げることなくセキュリティを強化できます。
 
 アプリケーションで Azure Key Vault を使用するには、組織の Active Directory に登録する必要があります。
 
-詳細については、*Azure Key Vault の概念に関するドキュメント*をご覧いただけます。
+詳細については、*Azure Key Vault の概念に関するドキュメント* をご覧いただけます。
 
 ### <a name="implementing-versioning-in-aspnet-web-apis"></a>ASP.NET Web API でのバージョン管理の実装
 
@@ -364,7 +364,7 @@ Swashbuckle で生成された Swagger UI API ドキュメントには、公開�
 
 現時点では、Swashbuckle は、ASP.NET Core アプリケーション用の [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore) のハイレベルのメタ パッケージ下の 5 つの内部 NuGet パッケージから構成されます。
 
-Web API プロジェクトでこれらの NuGet パッケージをインストールした後、次の**簡略化された**コードのように、Startup クラスで Swagger を構成する必要があります。
+Web API プロジェクトでこれらの NuGet パッケージをインストールした後、次の **簡略化された** コードのように、Startup クラスで Swagger を構成する必要があります。
 
 ```csharp
 public class Startup

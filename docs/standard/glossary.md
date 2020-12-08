@@ -2,12 +2,12 @@
 title: .NET 用語集
 description: .NET のドキュメントで使われている用語からいくつか選択してその意味を説明します。
 ms.date: 11/16/2020
-ms.openlocfilehash: 143657b4ec360640c0a43099ca5c1c0d9c863453
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 77ed506fb1c5bd4018b5fe0c14cc0bf37cb08113
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687780"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438194"
 ---
 # <a name="net-glossary"></a>.NET 用語集
 
@@ -63,7 +63,7 @@ System.\* (および限られた範囲の Microsoft.\*) 名前空間を構成す
 
 次の用語は、多くの場合、BCL が参照するのと同じ API のコレクションを意味します。
 
-- [Core .NET ライブラリ](../core/compatibility/3.1-5.0.md#core-net-libraries)
+- [Core .NET ライブラリ](../core/compatibility/corefx.md)
 - [フレームワーク ライブラリ](#framework-libraries)
 - [ランタイム ライブラリ](#runtime)
 - [共有フレームワーク](#shared-framework)
@@ -274,7 +274,7 @@ NuGet パッケージ &mdash; または単にパッケージ &mdash; は、同�
 
 * [.NET 5.0 のダウンロード ページ](https://dotnet.microsoft.com/download/dotnet/5.0)の " *.NET ランタイム*"
 
-  " *.NET ランタイム*" またはその他のランタイム ("*ASP.NET Core ランタイム*" など) をダウンロードできます。 この用法での "*ランタイム*" は、マシン上で[フレームワークに依存する](../core/deploying/index.md#publish-framework-dependent)アプリを実行するためにマシンにインストールする必要があるコンポーネントのセットです。 .NET ランタイムには、[CLR](#clr) と .NET [共有フレームワーク](#shared-framework)が含まれています。これにより、[BCL](#bcl) が提供されます。
+  " *.NET ランタイム*" またはその他のランタイム ("*ASP.NET Core ランタイム*" など) をダウンロードできます。 この用法での "*ランタイム*" は、マシン上で [フレームワークに依存する](../core/deploying/index.md#publish-framework-dependent)アプリを実行するためにマシンにインストールする必要があるコンポーネントのセットです。 .NET ランタイムには、[CLR](#clr) と .NET [共有フレームワーク](#shared-framework)が含まれています。これにより、[BCL](#bcl) が提供されます。
 
 * " *.NET ランタイム ライブラリ*"
 

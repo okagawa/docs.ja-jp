@@ -3,12 +3,12 @@ title: 高い CPU 使用率をデバッグする - .NET Core
 description: .NET Core での高い CPU 使用率のデバッグについて説明するチュートリアルです。
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 71e0b98f7ad38836c6a20c3e0e75a878fb6525c7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 91f31f77b54398d2f9816890338955bc9b0852e4
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538710"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437824"
 ---
 # <a name="debug-high-cpu-usage-in-net-core"></a>.NET Core で高い CPU 使用率をデバッグする
 
@@ -90,7 +90,7 @@ Web アプリを実行している状態で、スタートアップ直後に CPU
 次に、[dotnet-counters](dotnet-counters.md) コマンドを再実行します。 `cpu-usage` だけを監視するには、コマンドの一部として `System.Runtime[cpu-usage]` を指定します。
 
 ```dotnetcli
-dotnet-counters monitor System.Runtime[cpu-usage] -p 22884 --refresh-interval 1
+dotnet-counters monitor --counters System.Runtime[cpu-usage] -p 22884 --refresh-interval 1
 ```
 
 次に示すように、CPU 使用率が増加していることがわかります。

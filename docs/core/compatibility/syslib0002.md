@@ -3,12 +3,12 @@ title: SYSLIB0002 エラー
 description: コンパイル時のエラー SYSLIB0002 が生成される旧型式について説明します。
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 53eb51d5e525c463e5698710bdb6fa0c0907e43c
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 36ecde3c52845a6594c4d04e167df48142038654
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440778"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437504"
 ---
 # <a name="syslib0002-principalpermissionattribute-is-obsolete"></a>SYSLIB0002: PrincipalPermissionAttribute は旧型式
 
@@ -64,4 +64,4 @@ ms.locfileid: "94440778"
 
 ## <a name="see-also"></a>関連項目
 
-- [PrincipalPermissionAttribute は現在使用されていないエラーです](3.1-5.0.md#principalpermissionattribute-is-obsolete-as-error)
+- [PrincipalPermissionAttribute は現在使用されていないエラーです](core-libraries/5.0/principalpermissionattribute-obsolete.md)

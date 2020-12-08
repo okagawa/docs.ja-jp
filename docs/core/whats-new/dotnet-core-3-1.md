@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 42d4f7e8800bf2d13d584084f8a41bad2ada534f
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 9caecdcc3516db2bd71420184fbd21f7837552a7
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608124"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437922"
 ---
 # <a name="whats-new-in-net-core-31"></a>.NET Core 3.1 の新機能
 
@@ -99,5 +99,5 @@ Visual Studio 2019 バージョン 16.4 に C++/CLI のサポートを追加す�
 
 ## <a name="next-steps"></a>次の手順
 
-- [.NET Core 3.0 と 3.1 の間の破壊的変更を確認する](../compatibility/3.0-3.1.md)
+- [.NET Core 3.0 と 3.1 の間の破壊的変更を確認する](../compatibility/3.1.md)
 - [Windows フォーム アプリ用の .NET Core 3.1 における破壊的変更を確認します。](../compatibility/winforms.md#net-core-31)

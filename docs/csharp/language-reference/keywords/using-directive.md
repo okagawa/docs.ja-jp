@@ -2,15 +2,17 @@
 description: using ディレクティブ - C# リファレンス
 title: using ディレクティブ - C# リファレンス
 ms.date: 07/20/2015
+f1_keywords:
+- using_CSharpKeyword
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: f22a67348b19b8c97513ca685b2b10b34b1fd6fd
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 77d9c894dae9adc24343ce3a639a4afb904fb0a1
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "89141947"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599410"
 ---
 # <a name="using-directive-c-reference"></a>using ディレクティブ (C# リファレンス)
 

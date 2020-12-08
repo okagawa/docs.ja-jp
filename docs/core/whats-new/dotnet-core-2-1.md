@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: f125a6a8d9287cb515478a10c2679c07817ae9a6
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5c15b663cf69de334771e83c1a14db8d66d30458
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91087363"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437919"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 の新機能
 
@@ -89,7 +89,7 @@ dotnet tool install -g dotnetsay
 
 ## <a name="roll-forward"></a>ロールフォワード
 
-.NET Core 2.0 以降のすべての .NET Core アプリケーションは、システムにインストールされている最新の*マイナー バージョン*に自動的にロールフォワードされます。
+.NET Core 2.0 以降のすべての .NET Core アプリケーションは、システムにインストールされている最新の *マイナー バージョン* に自動的にロールフォワードされます。
 
 .NET Core 2.0 以降では、アプリケーションのビルドに使用した .NET Core のバージョンが実行時に存在しない場合、インストールされている .NET Core の最新の "*マイナー バージョン*" に対してアプリケーションが自動的に実行されます。 つまり、アプリケーションが .NET Core 2.0 を使用してビルドされ、ホスト システムにインストールされているのが .NET Core 2.0 ではなく .NET Core 2.1 である場合は、.NET Core 2.1 を使用してアプリケーションが実行されます。
 
@@ -138,7 +138,7 @@ dotnet tool install -g dotnetsay
 
 ## <a name="jit-compiler-improvements"></a>JIT コンパイラの機能強化
 
-.NET Core には*階層型コンパイル* (*適応型最適化*とも呼ばれる) という新しい JIT コンパイラ テクノロジが組み込まれており、パフォーマンスが大幅に向上します。 階層型コンパイルはオプトイン設定です。
+.NET Core には *階層型コンパイル* (*適応型最適化* とも呼ばれる) という新しい JIT コンパイラ テクノロジが組み込まれており、パフォーマンスが大幅に向上します。 階層型コンパイルはオプトイン設定です。
 
 JIT コンパイラで実行される重要なタスクの 1 つはコード実行の最適化です。 ただし、使用頻度の低いコード パスについては、最適化されていないコードの実行にランタイムが費やす時間よりも、コードの最適化にコンパイラが費やす時間の方が多くなる場合があります。 階層型コンパイルによって JIT コンパイルに次の 2 つのステージが導入されます。
 
@@ -248,7 +248,7 @@ Linux と macOS では、<xref:System.Net.Http.HttpClient> をプロセス単位
 
 ### <a name="breaking-changes"></a>互換性に影響する変更
 
-重大な変更の詳細については、「[バージョン 2.0 から 2.1 への移行の破壊的変更](../compatibility/2.0-2.1.md)」を参照してください。
+重大な変更の詳細については、「[バージョン 2.0 から 2.1 への移行の破壊的変更](../compatibility/2.1.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

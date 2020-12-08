@@ -2,12 +2,12 @@
 title: '破壊的変更:CA1831: 文字列に範囲ベースのインデクサーの代わりに AsSpan を使用します'
 description: コード分析ルール CA1831 の有効化によって発生する .NET 5.0 での破壊的変更について学習します。
 ms.date: 08/21/2020
-ms.openlocfilehash: 74f34af04a56b73478ffb3305d69ed49f3a30072
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 850916b804ae29dba8d2bd05c6e4fb06fe667296
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759321"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437889"
 ---
 # <a name="warning-ca1831-use-asspan-instead-of-range-based-indexers-for-string"></a>警告 CA1831:文字列に範囲ベースのインデクサーの代わりに AsSpan を使用します
 
@@ -41,7 +41,7 @@ ReadOnlySpan<char> slice = str.AsSpan()[1..3];
   ReadOnlySpan<char> slice = str.AsSpan()[1..3];
   ```
 
-- コードを変更しない場合は、その重要度を `suggestion` または `none` に設定して、ルールを無効にすることができます。 詳細については、「[コード分析ルールを構成する](../../../../fundamentals/productivity/configure-code-analysis-rules.md)」を参照してください。
+- コードを変更しない場合は、その重要度を `suggestion` または `none` に設定して、ルールを無効にすることができます。 詳細については、「[コード分析ルールを構成する](../../../../fundamentals/code-analysis/configuration-options.md)」を参照してください。
 
 - コード分析を完全に無効にするには、プロジェクト ファイルで `EnableNETAnalyzers` を `false` に設定します。 詳細については、「[EnableNETAnalyzers](../../../project-sdk/msbuild-props.md#enablenetanalyzers)」を参照してください。
 

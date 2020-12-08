@@ -2,12 +2,12 @@
 title: Web API を使用したマイクロサービス アプリケーション レイヤーの実装
 description: Web API アプリケーション レイヤーでの依存関係の挿入、メディエーター パターン、およびそれらの実装の詳細について理解します。
 ms.date: 08/17/2020
-ms.openlocfilehash: 56d4eecb2831a57460b01ff4da8150d6dcce5bc5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 45121026e06c55258a16f41aa801c06808a6919f
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173420"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437789"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API を使用してマイクロサービス アプリケーション レイヤーを実装する
 
@@ -23,7 +23,7 @@ Ordering.API マイクロサービスのソリューション エクスプロー
 
 **図 7-23**. Ordering.API ASP.NET Core Web API プロジェクト内のアプリケーション レイヤー
 
-ASP.NET Core には、コンストラクター挿入を既定でサポートするシンプルな[組み込み IoC コンテナー](/aspnet/core/fundamentals/dependency-injection) (IServiceProvider インターフェイスによって表されます) が含まれています。ASP.NET では、DI によって特定のサービスを利用可能にすることができます。 ASP.NET Core では、ユーザーが登録する型のうち、DI を通じて挿入されるものを*サービス*という用語で表します。 組み込みコンテナーのサービスは、アプリケーションの Startup クラス内にある ConfigureServices メソッドで構成します。 依存関係は、型に必要であり、IoC コンテナーに登録するサービス内に実装されます。
+ASP.NET Core には、コンストラクター挿入を既定でサポートするシンプルな[組み込み IoC コンテナー](/aspnet/core/fundamentals/dependency-injection) (IServiceProvider インターフェイスによって表されます) が含まれています。ASP.NET では、DI によって特定のサービスを利用可能にすることができます。 ASP.NET Core では、ユーザーが登録する型のうち、DI を通じて挿入されるものを *サービス* という用語で表します。 組み込みコンテナーのサービスは、アプリケーションの Startup クラス内にある ConfigureServices メソッドで構成します。 依存関係は、型に必要であり、IoC コンテナーに登録するサービス内に実装されます。
 
 ユーザーは通常、インフラストラクチャ オブジェクトを実装する依存関係を挿入します。 挿入する依存関係として典型的なのは、リポジトリです。 ただし、インフラストラクチャの依存関係が他にもある場合は、それらを挿入することもできます。 単純な実装の場合は、作業単位パターン オブジェクト (EF DbContext オブジェクト) を直接実装することもできます。なぜなら、DBContext はインフラストラクチャ永続オブジェクトの実装でもあるからです。
 
@@ -469,7 +469,7 @@ public class CreateOrderCommandHandler
 
 メディエーターは、このプロセスの「実行方法」をカプセル化するオブジェクトです。メディエーターでは、状態、コマンド ハンドラーの呼び出し方法、またはハンドラーに提供するペイロードに基づいて、プロセスの実行を調整できます。 メディエーター コンポーネントを使用すると、デコレーター (または [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0) 以降の[パイプライン ビヘイビアー](https://github.com/jbogard/MediatR/wiki/Behaviors)) を適用することで、横断的関心事を一元的かつ透過的に適用することができます。 詳細については、「[Decorator pattern (デコレーター パターン)](https://en.wikipedia.org/wiki/Decorator_pattern)」を参照してください。
 
-デコレーターとビヘイビアーは、[アスペクト指向プログラミング (AOP)](https://en.wikipedia.org/wiki/Aspect-oriented_programming) に似ていて、メディエーター コンポーネントによって管理される特定のプロセス パイプラインのみに適用されます。 横断的関心事を実装する AOP 内のアスペクトは、コンパイル時に挿入された*アスペクト ウィーバー*か、オブジェクト呼び出しインターセプションに基づいて適用されます。 これらの典型的な AOP アプローチはどちらも、"魔法のように" 動作すると言われます。なぜなら、AOP の動作のしくみを見ることは容易ではないからです。 深刻な問題やバグを扱う場合、AOP はデバッグが困難になることがあります。 一方、これらのデコレーター/ビヘイビアーは明示的であり、メディエーターのコンテキスト内でのみ適用されるため、デバッグの予測可能性がはるかに高く、デバッグが簡単になります。
+デコレーターとビヘイビアーは、[アスペクト指向プログラミング (AOP)](https://en.wikipedia.org/wiki/Aspect-oriented_programming) に似ていて、メディエーター コンポーネントによって管理される特定のプロセス パイプラインのみに適用されます。 横断的関心事を実装する AOP 内のアスペクトは、コンパイル時に挿入された *アスペクト ウィーバー* か、オブジェクト呼び出しインターセプションに基づいて適用されます。 これらの典型的な AOP アプローチはどちらも、"魔法のように" 動作すると言われます。なぜなら、AOP の動作のしくみを見ることは容易ではないからです。 深刻な問題やバグを扱う場合、AOP はデバッグが困難になることがあります。 一方、これらのデコレーター/ビヘイビアーは明示的であり、メディエーターのコンテキスト内でのみ適用されるため、デバッグの予測可能性がはるかに高く、デバッグが簡単になります。
 
 たとえば、eShopOnContainers の注文マイクロサービスには、2 つのサンプル ビヘイビアーが実装されています ([LogBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) クラスと [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs) クラス)。 ビヘイビアーの実装については、次のセクションで説明しています。具体的には、eShopOnContainers で [MediatR](https://www.nuget.org/packages/MediatR) の[ビヘイビアー](https://github.com/jbogard/MediatR/wiki/Behaviors)がどのように使用されるかを示しています。
 
@@ -663,7 +663,7 @@ public class IdentifiedCommandHandler<T, R> : IRequestHandler<IdentifiedCommand<
                     commandId,
                     command);
 
-                // Send the embeded business command to mediator so it runs its related CommandHandler
+                // Send the embedded business command to mediator so it runs its related CommandHandler
                 var result = await _mediator.Send(command, cancellationToken);
 
                 _logger.LogInformation(

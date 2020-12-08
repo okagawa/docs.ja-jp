@@ -2,12 +2,12 @@
 title: Visual Studio Code を使用して .NET クラス ライブラリを作成する
 description: Visual Studio Code を使用して .NET クラス ライブラリを作成する方法について学習します。
 ms.date: 11/18/2020
-ms.openlocfilehash: 4daa077fc54da3de2f808d831e06ee5f9bb3bde7
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 4473163b76060623b364d7dabf7366c3575e3dcd
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916092"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599500"
 ---
 # <a name="tutorial-create-a-net-class-library-using-visual-studio-code"></a>チュートリアル: Visual Studio Code を使用して .NET クラス ライブラリを作成する
 
@@ -211,6 +211,7 @@ ms.locfileid: "94916092"
 ## <a name="additional-resources"></a>その他の技術情報
 
 * [.NET CLI を使用してライブラリを開発する](libraries.md)
+* [.NET Standard のバージョンとそれらでサポートされているプラットフォーム](../../standard/net-standard.md)。
 
 ## <a name="next-steps"></a>次の手順
 

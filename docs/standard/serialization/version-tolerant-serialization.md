@@ -14,12 +14,12 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: e7c4d6ca4c72390c3e0803502aa9c1a675e02345
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 26612c5b0591efa61fcd476733aee2b219d67c62
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282415"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438161"
 ---
 # <a name="version-tolerant-serialization"></a>バージョン トレラントなシリアル化
 
@@ -28,7 +28,7 @@ ms.locfileid: "93282415"
 - 以前のバージョンのアプリケーションは、古い型の新しいバージョンを逆シリアル化するように要求すると例外をスローする。
 - 新しいバージョンのアプリケーションは、データが欠落している以前のバージョンの型を逆シリアル化すると例外をスローする。
 
-バージョン トレラントなシリアル化 (VTS: Version Tolerant Serialization) は、シリアル化可能な型を、長期にわたって簡単に変更できるようにする機能のセットです。 具体的には、VTS 機能が、ジェネリック型を含め、<xref:System.SerializableAttribute> 属性が適用されているクラスに対して有効です。 VTS を使用すると、他のバージョンの型との互換性を失うことなく、これらのクラスに新しいフィールドを追加できます。 動作するサンプル アプリケーションについては、「[Version Tolerant Serialization Technology Sample](basic-serialization-technology-sample.md)」(バージョン トレラントなシリアル化テクノロジのサンプル) を参照してください。
+バージョン トレラントなシリアル化 (VTS: Version Tolerant Serialization) は、シリアル化可能な型を、長期にわたって簡単に変更できるようにする機能のセットです。 具体的には、VTS 機能が、ジェネリック型を含め、<xref:System.SerializableAttribute> 属性が適用されているクラスに対して有効です。 VTS を使用すると、他のバージョンの型との互換性を失うことなく、これらのクラスに新しいフィールドを追加できます。
 
 VTS 機能は、<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> を使用する場合に有効になります。 また、<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> を使用する場合は、外部データの複数バージョン対応機能を除くすべての機能が有効になります。 シリアル化でこれらのクラスを使用する方法の詳細については、「[バイナリ シリアル化](binary-serialization.md)」を参照してください。
 
@@ -270,8 +270,8 @@ End Class
 - シリアル化したフィールドを削除しない。
 - 以前のバージョンでフィールドに <xref:System.NonSerializedAttribute> 属性が適用されていない場合、新しいバージョンでもこの属性を適用しない。
 - シリアル化したフィールドの名前または型を変更しない。
-- 新しいシリアル化フィールドを追加する場合は、 **OptionalFieldAttribute** 属性を適用する。
-- 以前のバージョンでシリアル化できなかったフィールドから **NonSerializedAttribute** 属性を削除する場合は、 **OptionalFieldAttribute** 属性を適用する。
+- 新しいシリアル化フィールドを追加する場合は、**OptionalFieldAttribute** 属性を適用する。
+- 以前のバージョンでシリアル化できなかったフィールドから **NonSerializedAttribute** 属性を削除する場合は、**OptionalFieldAttribute** 属性を適用する。
 - すべてのオプション フィールドに対して、既定値として 0 または **null** が許容される場合以外は、シリアル化コールバックを使用して意味のある既定値を設定する。
 
 型が今後のシリアル化エンジンと互換性を保つようにするには、次のガイドラインに従ってください。
