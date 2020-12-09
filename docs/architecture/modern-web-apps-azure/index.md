@@ -3,19 +3,21 @@ title: ASP.NET Core および Azure での最新の Web アプリケーション
 description: ASP.NET Core と Azure を使用したモノリシックな Web アプリケーションの構築に関するエンドツーエンドのガイダンスを提供するガイドです。
 author: ardalis
 ms.author: wiwagn
-ms.date: 5/25/2020
-ms.openlocfilehash: 7be03ea8edb763096b0684a62e71826f1cfcd42f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.date: 12/07/2020
+ms.openlocfilehash: 90d092b2269315e5b6734430e82cc7211324479b
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84284456"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851296"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core および Azure での最新の Web アプリケーションの設計
 
 ![最新の Web アプリケーションの設計ガイドのブック カバー画像。](./media/index/web-application-guide-cover-image.png)
 
-**エディション v3.1** - ASP.NET Core 3.1 に更新
+**エディション v5.0** - ASP.NET Core 5.0 に更新されました
+
+書籍の更新とコミュニティへの投稿については、「[changelog](https://aka.ms/aspnet-ebook-changelog)」を参照してください。
 
 発行者
 
@@ -59,7 +61,7 @@ Docker のクジラのロゴは Docker, Inc. の登録商標です。許可を�
 
 ## <a name="introduction"></a>はじめに
 
-.NET Core と ASP.NET Core は、従来の .NET 開発よりも優れたいくつかの利点を提供します。 次の一部またはすべてがアプリケーションの成功に重要な場合は、サーバー アプリケーションに .NET Core を使用してください。
+.NET 5 と ASP.NET Core は、従来の .NET 開発よりも優れたいくつかの利点を提供します。 次の一部またはすべてがアプリケーションの成功に重要な場合は、サーバー アプリケーションに .NET 5 を使用してください。
 
 - クロス プラットフォーム サポート。
 
@@ -71,7 +73,7 @@ Docker のクジラのロゴは Docker, Inc. の登録商標です。許可を�
 
 - 同じサーバー上のアプリケーション別の .NET バージョンのサイド バイ サイドのバージョン管理。
 
-従来の .NET アプリケーションはこれらの要件の多くをサポートできますが、ASP.NET Core と .NET Core は、上記のシナリオに対する改善されたサポートを提供するように最適化されています。
+従来の .NET アプリケーションはこれらの要件の多くをサポートできますが、ASP.NET Core と .NET 5 は、上記のシナリオに対する改善されたサポートを提供するように最適化されています。
 
 ますます多くの組織が、Microsoft Azure などのサービスを使用してクラウドで Web アプリケーションをホストすることを選択しています。 アプリケーションまたは組織にとって次のことが重要な場合は、クラウドでのアプリケーションのホストを検討してください。
 
@@ -89,7 +91,7 @@ Azure でホストされる ASP.NET Core での Web アプリケーションを�
 
 ## <a name="version"></a>バージョン
 
-このガイドは、 **.NET Core 3.1** バージョンと、.NET Core 3.1 のリリースと同時期に更新された関連するその他の多数の同じ “相次ぐ” テクノロジ (つまり、Azure やサードパーティ製のテクノロジ) を説明するように改訂されています。 本書がバージョン **3.1** に更新されているのはそれが理由です。
+このガイドは、 **.NET Core 5.0** バージョンと、.NET Core 5.0 のリリースと同時期に更新された関連するその他の多数の同じ “相次ぐ” テクノロジ (つまり、Azure やサードパーティ製のテクノロジ) を説明するように改訂されています。 本書がバージョン **5.0** に更新されているのはそれが理由です。
 
 ## <a name="purpose"></a>目的
 
@@ -118,7 +120,7 @@ Azure でホストされる ASP.NET Core での Web アプリケーションを�
 
 ## <a name="references"></a>関連項目
 
-- **サーバー アプリ用 .NET Core と .NET Framework の選択**  
+- **サーバー アプリ用 .NET 5 と .NET Framework の選択**  
   [https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server](../../standard/choosing-core-framework-server.md)
 
 >[!div class="step-by-step"]
