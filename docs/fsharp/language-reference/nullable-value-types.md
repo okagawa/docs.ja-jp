@@ -1,19 +1,19 @@
 ---
 title: null 許容値型
-description: 'F # で null にすることもできる値の型を表す方法として、null 許容値型を使用する方法について説明します。'
+description: 'F # で null にすることもできる値の型を表す方法である null 許容値型の使用方法について説明します。'
 ms.date: 11/19/2020
-ms.openlocfilehash: da0cd85bd651db81ba98c02a9db31d92dc52a8c6
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: e28cbfc57c5631573f46ac36462517cf011e96d2
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740430"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009639"
 ---
 # <a name="nullable-value-types"></a>null 許容値型
 
 _Null 許容値型_ は、 `Nullable<'T>` になる可能性がある任意の [構造体](structures.md)型を表し `null` ます。 これは、これらの種類の型 (整数など) を表すことができるようなライブラリやコンポーネントと対話する場合に便利です `null` 。 このコンストラクトをバッキングする基になる型は <xref:System.Nullable%601?displayProperty=nameWithType> です。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```fsharp
 Nullable<'T>
@@ -62,7 +62,7 @@ a <- Nullable()
 
 ## <a name="pass-and-assign-to-members"></a>メンバーへの引き渡しと割り当て
 
-メンバーを操作する場合と F # 値を使用する場合の主な違いは、メンバーを操作するときに null 許容値型を暗黙的に推論できることです。 Null 許容値型を入力として受け取る、次のような処理方法を考えてみましょう。
+メンバーを操作する場合と F # 値を使用する場合の主な違いは、メンバーを操作するときに null 許容値型を暗黙的に推論できることです。 Null 許容値型を入力として受け取る次のメソッドについて考えてみます。
 
 ```fsharp
 type C() =
@@ -74,7 +74,7 @@ c.M(12)
 c.NVT <- 12
 ```
 
-前の例では、メソッドにを渡すことができ `12` `M` ます。 自動プロパティに割り当てることもでき `12` `NVT` ます。 F # コンパイラは、入力を nullabel 値型として構築できる場合、対象の型が入力と一致するときに、このような呼び出しまたは代入を暗黙的に変換します。
+前の例では、メソッドにを渡すことができ `12` `M` ます。 自動プロパティに割り当てることもでき `12` `NVT` ます。 入力を null 許容値型として構築し、それがターゲット型と一致する場合、F # コンパイラはこのような呼び出しや割り当てを暗黙的に変換します。
 
 ## <a name="examine-a-nullable-value-type-instance"></a>Null 許容値型インスタンスを調べる
 

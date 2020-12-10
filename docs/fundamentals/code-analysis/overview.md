@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 657975742c3efc2985264fe16cb316357b959e73
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 2f59b97de6f92e5a9bf927e1318286e400017dad
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851817"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009847"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET ソース コード分析の概要
 
@@ -48,8 +48,8 @@ ms.locfileid: "96851817"
 | [CA2013](/visualstudio/code-quality/ca2013) | [信頼性] | 警告 | `ReferenceEquals`値型では使用しない |
 | [CA2014](/visualstudio/code-quality/ca2014) | [信頼性] | 警告 | In ループを使用しない `stackalloc` |
 | [CA2015](/visualstudio/code-quality/ca2015) | [信頼性] | 警告 | から派生した型にはファイナライザーを定義しないでください。 <xref:System.Buffers.MemoryManager%601> |
-| [CA2200](/visualstudio/code-quality/ca2200) | 使用法 | 警告 | スタック詳細を保持するために再度スローします
-| [CA2247](/visualstudio/code-quality/ca2247) | 使用法 | 警告 | Taskのソースコンストラクターに渡される引数は、ではなく列挙型にする必要があり <xref:System.Threading.Tasks.TaskCreationOptions> ます <xref:System.Threading.Tasks.TaskContinuationOptions> |
+| [CA2200](/visualstudio/code-quality/ca2200) | 使用方法 | 警告 | スタック詳細を保持するために再度スローします
+| [CA2247](/visualstudio/code-quality/ca2247) | 使用方法 | 警告 | Taskのソースコンストラクターに渡される引数は、ではなく列挙型にする必要があり <xref:System.Threading.Tasks.TaskCreationOptions> ます <xref:System.Threading.Tasks.TaskContinuationOptions> |
 
 これらのルールを無効にするか、エラーに昇格するように、これらのルールの重大度を変更することができます。 [さらに多くのルールを有効に](#enable-additional-rules)することもできます。
 
@@ -101,19 +101,18 @@ ms.locfileid: "96851817"
 
 ## <a name="code-style-analysis"></a>コードスタイルの分析
 
-*コードスタイル分析* ("ide xxxx") 規則を使用すると、コードベースで一貫性のあるコードスタイルを定義および維持できます。 既定の有効化設定は次のとおりです。
+*コードスタイルの分析* ("ide xxxx") 規則を使用すると、コードベースで一貫性のあるコードスタイルを定義および維持できます。 既定の有効化設定は次のとおりです。
 
-- コマンドラインビルド: コマンドラインビルドのすべての .NET プロジェクトに対して、コードスタイル分析が既定で無効になっています。
-- Visual Studio: コードスタイル分析は、Visual Studio 内のすべての .NET プロジェクトに対して、 [コードリファクタリングクイックアクション](/visualstudio/ide/code-generation-in-visual-studio)として既定で有効になっています。
+- コマンドラインビルド: コマンドラインビルドのすべての .NET プロジェクトに対して、コードスタイルの分析が既定で無効になっています。
+- Visual Studio: コードスタイルの分析は、Visual Studio 内のすべての .NET プロジェクトに対して、 [コードリファクタリングのクイックアクション](/visualstudio/ide/code-generation-in-visual-studio)として既定で有効になっています。
 
-.NET 5.0 を開始すると、コマンドラインと Visual Studio の両方でビルドに対してコードスタイル分析を有効にすることができます。 コードスタイル違反は、"IDE" プレフィックスが付いた警告またはエラーとして表示されます。 これにより、ビルド時に一貫したコードスタイルを適用できます。
+.NET 5.0 以降では、コマンドラインと Visual Studio の両方でビルドに対してコードスタイルの分析を有効にすることができます。 コードスタイル違反は、"IDE" プレフィックスが付いた警告またはエラーとして表示されます。 これにより、ビルド時に一貫したコードスタイルを適用できます。
 
 コードスタイルの分析規則の完全な一覧については、「 [コードスタイル規則](style-rules/index.md)」を参照してください。
 
-> [!NOTE]
-> コードスタイル分析機能は試験段階であり、.NET 5 リリースと .NET 6 リリース間で変更される可能性があります。
+### <a name="enable-on-build"></a>ビルドで有効にする
 
-ビルドでコードスタイル分析を有効にする手順:
+ビルドでコードスタイルの分析を有効にするには、次の手順に従います。
 
 1. MSBuild プロパティ [EnforceCodeStyleInBuild](../../core/project-sdk/msbuild-props.md#enforcecodestyleinbuild) をに設定し `true` ます。
 
@@ -136,6 +135,9 @@ ms.locfileid: "96851817"
    # IDE0040: Accessibility modifiers required (disabled on build)
    dotnet_diagnostic.IDE0040.severity = silent
    ```
+
+> [!NOTE]
+> コードスタイルの分析機能は試験段階であり、.NET 5 リリースと .NET 6 リリース間で変更される可能性があります。
 
 ## <a name="suppress-a-warning"></a>警告の非表示
 
