@@ -2,12 +2,12 @@
 title: 破壊的変更:OSPlatform 属性の名前変更または削除
 description: Core .NET ライブラリにおける .NET 5.0 の破壊的変更について学習します。プレビュー バージョンで実装された OS プラットフォームの属性が削除または名前変更されました。
 ms.date: 11/01/2020
-ms.openlocfilehash: 7e709b84005a7b807e390e12d9f36d8b4f73a9df
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: be2ddd4909bef70f531ca48246f091923d6435ec
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759416"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739491"
 ---
 # <a name="osplatform-attributes-renamed-or-removed"></a>OSPlatform 属性の名前変更または削除
 
@@ -34,7 +34,7 @@ ms.locfileid: "95759416"
 
 ## <a name="reason-for-change"></a>変更理由
 
-.NET 5.0 Preview 8 で API をサポートするプラットフォームの指定に、<xref:System.Runtime.Versioning> に属性が実装されました。 これらの属性は、プラットフォーム固有の API がそれらの API をサポートしないプラットフォームで使用された場合に、ビルド警告を生成する、[プラットフォーム互換性アナライザー](../../../../core/compatibility/code-analysis.md#ca1416-platform-compatibility)によって使用されます。
+.NET 5.0 Preview 8 で API をサポートするプラットフォームの指定に、<xref:System.Runtime.Versioning> に属性が実装されました。 これらの属性は、プラットフォーム固有の API がそれらの API をサポートしないプラットフォームで使用された場合に、ビルド警告を生成する、[プラットフォーム互換性アナライザー](../../code-analysis/5.0/ca1416-platform-compatibility-analyzer.md)によって使用されます。
 
 .NET 5.0 RC1 では、プラットフォーム互換性アナライザーにプラットフォームを除外する機能が追加されています。 この機能を使用すると、API を OS プラットフォームで完全にサポートされていないものとしてマークできます。 この機能では、より適切な名前を使用するなど、属性への変更が求められています。 不要になった `ObsoletedInOSPlatformAttribute` は、削除されています。
 

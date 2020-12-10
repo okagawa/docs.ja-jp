@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 5489c77fa7290bdd1c03e04d8cc777ab772fdce7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7b8c634404cf2f214cc4bee5d754443e9302a723
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699631"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739517"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! (null 免除) 演算子 (C# リファレンス)
 
-C# 8.0 以降では、単項の接尾辞 `!` 演算子は null 免除演算子です。 有効な [null 許容注釈コンテキスト](../../nullable-references.md#nullable-annotation-context)では、null 免除演算子を使用して、参照型の式 `x` が `null`: `x!` ではないことを宣言します。 単項の接頭辞 `!` 演算子は、[論理否定演算子](boolean-logical-operators.md#logical-negation-operator-)です。
+C# 8.0 以降では、単項の接尾辞 `!` 演算子は null 免除 (または null 抑制) 演算子です。 有効な [null 許容注釈コンテキスト](../../nullable-references.md#nullable-annotation-context)では、null 免除演算子を使用して、参照型の式 `x` が `null`: `x!` ではないことを宣言します。 単項の接頭辞 `!` 演算子は、[論理否定演算子](boolean-logical-operators.md#logical-negation-operator-)です。
 
 null 免除演算子は実行時には影響を与えません。 式の null 状態を変更することによって、コンパイラの静的フロー分析にのみ影響を与えます。 実行時に、式 `x!` は基になる式 `x` の結果に評価されます。
 

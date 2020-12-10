@@ -1,7 +1,7 @@
 ---
 title: JSON シリアル化のためのカスタム コンバーターを作成する方法 - .NET
 description: System.Text.Json 名前空間で提供される JSON シリアル化クラス用のカスタム コンバーターを作成する方法について説明します。
-ms.date: 01/10/2020
+ms.date: 11/30/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: ba6b61232ccf7ed493fe5809e5c0b8ba21091d3d
-ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
+ms.openlocfilehash: 17671b86dc6d1d7b45a01cb0bf7c5c42f624d99f
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94329808"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438126"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET で JSON シリアル化 (マーシャリング) のためのカスタム コンバーターを作成する方法
 
 この記事では、<xref:System.Text.Json> 名前空間で提供される JSON シリアル化クラス用のカスタム コンバーターを作成する方法について説明します。 `System.Text.Json` の概要については、[.NET で JSON のシリアル化と逆シリアル化を行う方法](system-text-json-how-to.md)に関するページを参照してください。
 
-" *コンバーター* " は、オブジェクトまたは値を JSON との間で双方向に変換するクラスです。 `System.Text.Json` 名前空間には、JavaScript のプリミティブに対応するほとんどのプリミティブ型に対して、組み込みのコンバーターがあります。 次の目的で、カスタム コンバーターを作成することができます。
+"*コンバーター*" は、オブジェクトまたは値を JSON との間で双方向に変換するクラスです。 `System.Text.Json` 名前空間には、JavaScript のプリミティブに対応するほとんどのプリミティブ型に対して、組み込みのコンバーターがあります。 次の目的で、カスタム コンバーターを作成することができます。
 
 * 組み込みコンバーターの既定の動作をオーバーライドするため。 たとえば、`DateTime` の値を、既定の ISO 8601-1:2019 形式ではなく、mm/dd/yyyy 形式で表すことができます。
 * カスタム値型をサポートするため。 たとえば、`PhoneNumber` 構造体などです。
@@ -49,17 +49,17 @@ ms.locfileid: "94329808"
 
 カスタム コンバーターの作成には、基本パターンとファクトリ パターンという 2 つのパターンがあります。 ファクトリ パターンは、`Enum` 型またはオープン ジェネリックを処理するコンバーター用です。 基本パターンは、非ジェネリック型およびクローズ ジェネリック型用です。  たとえば、次のような型のコンバーターには、ファクトリ パターンが必要です。
 
-* `Dictionary<TKey, TValue>`
-* `Enum`
-* `List<T>`
+* <xref:System.Collections.Generic.Dictionary%602>
+* <xref:System.Enum>
+* <xref:System.Collections.Generic.List%601>
 
 基本パターンで処理できる型の例としては、次のようなものがあります。
 
 * `Dictionary<int, string>`
 * `WeekdaysEnum`
 * `List<DateTimeOffset>`
-* `DateTime`
-* `Int32`
+* <xref:System.DateTime>
+* <xref:System.Int32>
 
 基本パターンでは、1 つの型を処理できるクラスが作成されます。 ファクトリ パターンによって作成されるクラスの場合は、実行時に必要な特定の型が決定されて、適切なコンバーターが動的に作成されます。
 
@@ -67,13 +67,13 @@ ms.locfileid: "94329808"
 
 次のサンプルは、既存のデータ型に対する既定のシリアル化をオーバーライドするコンバーターです。 そのコンバーターでは、`DateTimeOffset` のプロパティに対して mm/dd/yyyy の形式が使用されます。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/DateTimeOffsetConverter.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/DateTimeOffsetConverter.cs":::
 
 ## <a name="sample-factory-pattern-converter"></a>ファクトリ パターン コンバーターのサンプル
 
 次のコードでは、`Dictionary<Enum,TValue>` で動作するカスタム コンバーターを示します。 そのコードは、1 番目のジェネリック型パラメーターが `Enum` で、2 番目がオープンであるため、ファクトリ パターンに従います。 `CanConvert` メソッドでは、2 つのジェネリック パラメーターを持つ `Dictionary` に対してのみ `true` が返されます。最初のパラメーターは `Enum` 型です。 内部のコンバーターでは、実行時に `TValue` に対して提供される任意の型を処理するために、既存のコンバーターが取得されます。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/DictionaryTKeyEnumTValueConverter.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/DictionaryTKeyEnumTValueConverter.cs":::
 
 上記のコードは、後の「[文字列以外のキーでディクショナリをサポートする](#support-dictionary-with-non-string-key)」で示されているものと同じです。
 
@@ -115,7 +115,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 ## <a name="register-a-custom-converter"></a>カスタム コンバーターを登録する
 
-" *カスタム コンバーター* " を登録して、`Serialize` メソッドと `Deserialize` メソッドでそれが使用されるようにします。 次のいずれかの方法を使用します。
+"*カスタム コンバーター*" を登録して、`Serialize` メソッドと `Deserialize` メソッドでそれが使用されるようにします。 次のいずれかの方法を使用します。
 
 * コンバーター クラスのインスタンスを <xref:System.Text.Json.JsonSerializerOptions.Converters?displayProperty=nameWithType> コレクションに追加します。
 * カスタム コンバーターを必要とするプロパティに、[[JsonConverter]](xref:System.Text.Json.Serialization.JsonConverterAttribute) 属性を適用します。
@@ -125,11 +125,11 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 <xref:System.ComponentModel.DateTimeOffsetConverter> を <xref:System.DateTimeOffset> 型のプロパティの既定値にする例を次に示します。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/RegisterConverterWithConvertersCollection.cs?name=SnippetSerialize)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RegisterConverterWithConvertersCollection.cs" id="Serialize":::
 
 次の型のインスタンスをシリアル化するとします。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWF)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WF":::
 
 カスタム コンバーターが使用されたことを示す JSON 出力の例を次に示します。
 
@@ -143,35 +143,35 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 次のコードでは、同じ方法を使用し、カスタム `DateTimeOffset` コンバーターを使用して逆シリアル化します。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/RegisterConverterWithConvertersCollection.cs?name=SnippetDeserialize)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RegisterConverterWithConvertersCollection.cs" id="Deserialize":::
 
 ## <a name="registration-sample---jsonconverter-on-a-property"></a>登録の例 - [JsonConverter] プロパティ
 
 次のコードでは、`Date` プロパティのカスタム コンバーターを選択します。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithConverterAttribute)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithConverterAttribute":::
 
 `WeatherForecastWithConverterAttribute` をシリアル化するコードでは、`JsonSerializeOptions.Converters` を使用する必要はありません。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/RegisterConverterWithAttributeOnProperty.cs?name=SnippetSerialize)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RegisterConverterWithAttributeOnProperty.cs" id="Serialize":::
 
 逆シリアル化するコードでも、`Converters` を使用する必要はありません。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/RegisterConverterWithAttributeOnProperty.cs?name=SnippetDeserialize)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RegisterConverterWithAttributeOnProperty.cs" id="Deserialize":::
 
 ## <a name="registration-sample---jsonconverter-on-a-type"></a>登録の例 - 型での [JsonConverter]
 
 構造体を作成し、それに `[JsonConverter]` 属性を適用するコードを次に示します。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/Temperature.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/Temperature.cs":::
 
 上記の構造体のカスタム コンバーターは次のようになります。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/TemperatureConverter.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/TemperatureConverter.cs":::
 
 構造体の `[JsonConvert]` 属性では、`Temperature` 型のプロパティに対する既定値としてカスタム コンバーターが登録されます。 次の型の `TemperatureCelsius` プロパティでは、シリアル化または逆シリアル化のときに、コンバーターが自動的に使用されます。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithTemperatureStruct)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithTemperatureStruct":::
 
 ## <a name="converter-registration-precedence"></a>コンバーターの登録の優先順位
 
@@ -219,15 +219,15 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 * 文字列は `string` に
 * それ以外はすべて `JsonElement` に
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/ObjectToInferredTypesConverter.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/ObjectToInferredTypesConverter.cs":::
 
 次のコードではコンバーターが登録されます。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/DeserializeInferredTypesToObject.cs?name=SnippetRegister)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/DeserializeInferredTypesToObject.cs" id="Register":::
 
 `object` プロパティを含む型の例を次に示します。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithObjectProperties)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithObjectProperties":::
 
 次の逆シリアル化を行う JSON の例には、`DateTime`、`long`、`string` として逆シリアル化される値が含まれています。
 
@@ -251,15 +251,15 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 次のコードでは、`Dictionary<Enum,TValue>` で動作するカスタム コンバーターを示します。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/DictionaryTKeyEnumTValueConverter.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/DictionaryTKeyEnumTValueConverter.cs":::
 
 次のコードではコンバーターが登録されます。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripDictionaryTkeyEnumTValue.cs?name=SnippetRegister)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripDictionaryTkeyEnumTValue.cs" id="Register":::
 
 このコンバーターでは、次の `Enum` を使用する次のクラスの `TemperatureRanges` プロパティをシリアル化および逆シリアル化できます。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithEnumDictionary)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithEnumDictionary":::
 
 シリアル化からの JSON 出力は、次の例のようになります。
 
@@ -280,19 +280,19 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 ### <a name="support-polymorphic-deserialization"></a>ポリモーフィックな逆シリアル化をサポートする
 
-組み込み機能では、[ポリモーフィックなシリアル化](system-text-json-how-to.md#serialize-properties-of-derived-classes)は限られた範囲で提供されていますが、逆シリアル化はまったくサポートされていません。 逆シリアル化を行うには、カスタム コンバーターが必要です。
+組み込み機能では、[ポリモーフィックなシリアル化](system-text-json-polymorphism.md)は限られた範囲で提供されていますが、逆シリアル化はまったくサポートされていません。 逆シリアル化を行うには、カスタム コンバーターが必要です。
 
 たとえば、抽象基底クラス `Person` と、派生クラス `Employee` および `Customer` があるとします。 ポリモーフィックな逆シリアル化とは、デザイン時に逆シリアル化ターゲットとして `Person` を指定すると、実行時に JSON 内の `Customer` オブジェクトと `Employee` オブジェクトが正しく逆シリアル化されることを意味します。 逆シリアル化の間に、JSON で必要な型を識別する手掛かりを見つける必要があります。 使用できる手掛かりの種類は、シナリオによって異なります。 たとえば、識別子プロパティを使用できる場合や、特定のプロパティの有無に依存しなければならない場合があります。 `System.Text.Json` の現在のリリースでは、ポリモーフィックな逆シリアル化のシナリオを処理する方法を指定する属性が提供されていないため、カスタム コンバーターが必要になります。
 
 次のコードでは、基底クラス、2 つの派生クラス、およびそれらのカスタム コンバーターを示します。 コンバーターでは、識別子プロパティを使用して、ポリモーフィックな逆シリアル化を行います。 型の識別子はクラス定義には含まれていませんが、シリアル化の間に作成され、逆シリアル化の間に読み取られます。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/Person.cs?name=SnippetPerson)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/Person.cs" id="Person":::
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/PersonConverterWithTypeDiscriminator.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/PersonConverterWithTypeDiscriminator.cs":::
 
 次のコードではコンバーターが登録されます。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripPolymorphic.cs?name=SnippetRegister)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripPolymorphic.cs" id="Register":::
 
 コンバーターでは、次のように、同じコンバーターを使用してシリアル化することによって作成された JSON を逆シリアル化できます。
 
@@ -327,17 +327,17 @@ JSON 文字列を <xref:System.Collections.Generic.Stack%601> オブジェクト
 
 次のコードでは、`Stack<T>` オブジェクトとの間でのラウンドトリップを可能にするカスタム コンバーターを示します。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/JsonConverterFactoryForStackOfT.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/JsonConverterFactoryForStackOfT.cs":::
 
 次のコードではコンバーターが登録されます。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripStackOfT.cs?name=SnippetRegister)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripStackOfT.cs" id="Register":::
 
 ## <a name="handle-null-values"></a>null 値を処理する
 
 既定では、null 値はシリアライザーにより次のように処理されます。
 
-* 参照型と `Nullable<T>` 型の場合:
+* 参照型と <xref:System.Nullable%601> 型の場合:
 
   * シリアル化のときにカスタム コンバーターに `null` は渡されません。
   * 逆シリアル化のときにカスタム コンバーターに `JsonTokenType.Null` は渡されません。
@@ -374,9 +374,7 @@ JSON 文字列を <xref:System.Collections.Generic.Stack%601> オブジェクト
 
 * [組み込みコンバーターのソース コード](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)
 * [System.Text.Json での DateTime と DateTimeOffset のサポート](../datetime/system-text-json-support.md)
-* [System.Text.Json の概要](system-text-json-overview.md)
-* [System.Text.Json の使用方法](system-text-json-how-to.md)
-* [Newtonsoft.Json から移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [文字エンコードをカスタマイズする方法](system-text-json-character-encoding.md)
+* [カスタム シリアライザーと逆シリアライザーを作成する方法](write-custom-serializer-deserializer.md)
 * [System.Text.Json API リファレンス](xref:System.Text.Json)
 * [System.Text.Json.Serialization API リファレンス](xref:System.Text.Json.Serialization)
-<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

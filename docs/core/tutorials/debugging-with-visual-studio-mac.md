@@ -1,21 +1,21 @@
 ---
-title: Visual Studio for Mac を使用して .NET Core コンソール アプリケーションをデバッグする
-description: Visual Studio Mac を使用して .NET Core コンソール アプリをデバッグする方法について説明します。
-ms.date: 06/08/2020
-ms.openlocfilehash: 011647a6e3e676909880befa3b770205eb9616d6
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+title: Visual Studio for Mac を使用して .NET コンソール アプリケーションをデバッグする
+description: Visual Studio Mac を使用して .NET コンソール アプリをデバッグする方法について説明します。
+ms.date: 11/30/2020
+ms.openlocfilehash: e35bbef5582b6eec00ee48669a0f5d028eb051fb
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957526"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599617"
 ---
-# <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-for-mac"></a>チュートリアル: Visual Studio for Mac を使用して .NET Core コンソール アプリケーションをデバッグする
+# <a name="tutorial-debug-a-net-console-application-using-visual-studio-for-mac"></a>チュートリアル: Visual Studio for Mac を使用して .NET コンソール アプリケーションをデバッグする
 
 このチュートリアルでは、Visual Studio for Mac で使用できるデバッグ ツールについて説明します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- このチュートリアルでは、「[Visual Studio for Mac を使用して .NET Core コンソール アプリケーションを作成する](with-visual-studio-mac.md)」で作成したコンソール アプリを使用します。
+- このチュートリアルでは、「[Visual Studio for Mac を使用して .NET コンソール アプリケーションを作成する](with-visual-studio-mac.md)」で作成したコンソール アプリを使用します。
 
 ## <a name="use-debug-build-configuration"></a>デバッグ ビルド構成の使用
 
@@ -27,7 +27,7 @@ ms.locfileid: "88957526"
 
 1. Visual Studio for Mac を起動します。
 
-1. 「[Visual Studio for Mac を使用して .NET Core コンソール アプリケーションを作成する](with-visual-studio-mac.md)」で作成したプロジェクトを開きます。
+1. 「[Visual Studio for Mac を使用して .NET コンソール アプリケーションを作成する](with-visual-studio-mac.md)」で作成したプロジェクトを開きます。
 
    現時点のビルド構成はツールバーに表示されています。 次のツール バーの画像では、アプリのデバッグ バージョンをコンパイルするように Visual Studio が構成されています。
 
@@ -178,4 +178,4 @@ Visual Studio では、1 行ずつプログラムをステップ実行して、�
 このチュートリアルでは、Visual Studio のデバッグ ツールを使用しました。 次のチュートリアルでは、アプリの展開可能なバージョンを発行します。
 
 > [!div class="nextstepaction"]
-> [Visual Studio for Mac を使用して .NET Core コンソール アプリケーションを発行する](publishing-with-visual-studio-mac.md)
+> [Visual Studio for Mac を使用して .NET コンソール アプリケーションを発行する](publishing-with-visual-studio-mac.md)

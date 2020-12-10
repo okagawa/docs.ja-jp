@@ -2,12 +2,12 @@
 title: Visual Studio Code を使用して .NET コンソール アプリケーションをデバッグする
 description: Visual Studio Code を使用して .NET コンソール アプリをデバッグする方法について説明します。
 ms.date: 05/26/2020
-ms.openlocfilehash: 85095a9e70ee3ff846716ef91239b240d8c42410
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 7215ed4a93b31ebac313c04708734667148c4e02
+ms.sourcegitcommit: 30fef5b0ed76e334377d28fa8e80159b29353e10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916230"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96556110"
 ---
 # <a name="tutorial-debug-a-net-console-application-using-visual-studio-code"></a>チュートリアル: Visual Studio Code を使用して .NET コンソール アプリケーションをデバッグする
 
@@ -47,15 +47,7 @@ ms.locfileid: "94916230"
 
 1. *.vscode/launch.json* を開きます。
 
-1. `console` 設定を `integratedTerminal` に変更します。
-
-   差出人:
-
-   ```json
-   "console": "internalConsole",
-   ```
-
-   移動先:
+1. `console` 設定を `internalConsole` から `integratedTerminal` に変更します。
 
    ```json
    "console": "integratedTerminal",

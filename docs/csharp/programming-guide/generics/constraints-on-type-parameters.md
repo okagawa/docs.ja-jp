@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 71c853b38e56c56d0077d7eb20e36cd83d3cd23c
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 8230dfed11bb4ba21e922827cc1a525ce45ba3e5
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224317"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599116"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>型パラメーターの制約 (C# プログラミング ガイド)
 
@@ -20,7 +20,7 @@ ms.locfileid: "92224317"
 
 |制約|説明|
 |----------------|-----------------|
-|`where T : struct`|この型引数は null 非許容値型である必要があります。 null 許容値型の詳細については、「[null 許容値型](../../language-reference/builtin-types/nullable-value-types.md)」を参照してください。 すべての値の型にはアクセス可能なパラメーターなしのコンストラクターがあるため、`struct` 制約は `new()` 制約を意味し、`new()` 制約と組み合わせることはできません。 `struct` 制約を `unmanaged` 制約と組み合わせることはできません。|
+|`where T : struct`|この型引数は null 非許容[値型](../../language-reference/builtin-types/value-types.md)である必要があります。 null 許容値型の詳細については、「[null 許容値型](../../language-reference/builtin-types/nullable-value-types.md)」を参照してください。 すべての値の型にはアクセス可能なパラメーターなしのコンストラクターがあるため、`struct` 制約は `new()` 制約を意味し、`new()` 制約と組み合わせることはできません。 `struct` 制約を `unmanaged` 制約と組み合わせることはできません。|
 |`where T : class`|この型引数は参照型である必要があります。 この制約は、任意のクラス、インターフェイス、デリゲート、または配列型にも適用されます。 C# 8.0 以降の null 許容コンテキストでは、`T` は null 非許容の参照型である必要があります。 |
 |`where T : class?`|型の引数は、null 許容または null 非許容の参照型である必要があります。 この制約は、任意のクラス、インターフェイス、デリゲート、または配列型にも適用されます。|
 |`where T : notnull`|この型引数は null 非許容型である必要があります。 引数は、C# 8.0 以降の null 非許容参照型、または null 非許容値型にできます。 |

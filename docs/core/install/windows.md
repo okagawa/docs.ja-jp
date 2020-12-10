@@ -4,12 +4,12 @@ description: .NET をインストールできる Windows のバージョンに�
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 4d3abde965d9a2ab0f86477feeb7c10f274a4b9a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 786814549724948fa69b18a05cee966e0940aaf4
+ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715122"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96549346"
 ---
 # <a name="install-net-on-windows"></a>Windows に .NET をインストールする
 
@@ -32,22 +32,26 @@ ms.locfileid: "95715122"
 
 Windows 10 のバージョンのサービス終了日は、エディションごとに分かれています。 次の表では、**Home**、**Pro**、**Pro Education**、**Pro for Workstations** の各エディションだけが考慮されています。 具体的な詳細については、「[Windows ライフサイクルのファクト シート](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)」を確認してください。
 
-- ✔️ は、Windows または .NET Core のバージョンがまだサポートされていることを示します。
-- ❌ は、Windows または .NET Core のバージョンがその Windows のリリースではサポートされていないことを示しています。
-- Windows のバージョンと .NET Core のバージョンの両方に ✔️ が付いている場合、その OS と .NET の組み合わせはサポートされています。
+> [!TIP]
+> `+` 記号は、最小バージョンを表します。
 
-| オペレーティング システム                      | .NET Core 2.1 | .NET Core 3.1 | .NET 5 |
-|-----------------------------|---------------|---------------|----------------|
-| ✔️ Windows 10 バージョン 2004 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ✔️ Windows 10 バージョン 1909 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ✔️ Windows 10 バージョン 1903 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ✔️ Windows 10 バージョン 1809 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ❌ Windows 10 バージョン 1803 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ❌ Windows 10 バージョン 1709 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ❌ Windows 10 バージョン 1703 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 |
-| ❌ Windows 10 バージョン 1607 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ❌ Windows 10 バージョン 1511 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 |
-| ❌ Windows 10 バージョン 1507 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 |
+| オペレーティング システム            | .NET Core 2.1 | .NET Core 3.1 | .NET 5 |
+|-----------------------------|---------------|---------------|--------|
+| Windows 10 バージョン 2004    | ✔️           | ✔️            | ✔️    |
+| Windows 10 バージョン 1909    | ✔️           | ✔️            | ✔️    |
+| Windows 10 バージョン 1903    | ✔️           | ✔️            | ✔️    |
+| Windows 10 バージョン 1809    | ✔️           | ✔️            | ✔️    |
+|  Windows 10 バージョン 1803    | ✔️           | ✔️            | ✔️    |
+| Windows 10 バージョン 1709    | ✔️           | ✔️            | ✔️    |
+| Windows 10 バージョン 1607    | ✔️           | ✔️            | ✔️    |
+| Windows 8.1                 | ✔️           | ✔️            | ✔️    |
+| Windows 7 SP1 [ESU][esu]    | ✔️           | ✔️            | ✔️    |
+| Windows 10 バージョン 1607    | ✔️           | ✔️            | ✔️    |
+| Windows 10 バージョン 1607    | ✔️           | ✔️            | ✔️    |
+| Windows Server 2012 R2      | ✔️           | ✔️            | ✔️    |
+| Windows Server Core 2012 R2 | ✔️           | ✔️            | ✔️    |
+| Nano Server バージョン 1809 以上  | ✔️           | ✔️            | ✔️    |
+| Nano Server バージョン 1803   | ✔️           | ✔️            | ❌    |
 
 ## <a name="unsupported-releases"></a>サポートされていないリリース
 
@@ -111,7 +115,7 @@ SDK は、.NET アプリとライブラリを作成して公開するために�
 | OS                            | バージョン                        | アーキテクチャ   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows クライアント                | 7 SP1+、8.1                    | x64、x86        |
-| Windows 10 クライアント             | バージョン 1609+                  | x64、x86        |
+| Windows 10 クライアント             | バージョン 1607+                  | x64、x86        |
 | Windows Server                | 2012 R2+                       | x64、x86        |
 | Nano Server                   | バージョン 1803+                  | x64、ARM32      |
 
@@ -119,7 +123,7 @@ SDK は、.NET アプリとライブラリを作成して公開するために�
 
 # <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
 
-" *.NET Core 3.0 は現在サポートされていません。詳細については、「[.NET Core のサポート ポリシー](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)」をご覧ください。* "
+" *.NET Core 3.0 は現在 ❌ サポートされていません。詳細については、「[.NET Core のサポート ポリシー](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)」をご覧ください。* "
 
 .NET Core 3.0 では以下の Windows のバージョンがサポートされます。
 
@@ -137,7 +141,7 @@ SDK は、.NET アプリとライブラリを作成して公開するために�
 
 # <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
 
-" *.NET Core 2.2 は現在サポートされていません。詳細については、「[.NET Core のサポート ポリシー](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)」をご覧ください。* "
+" *.NET Core 2.2 は現在 ❌ サポートされていません。詳細については、「[.NET Core のサポート ポリシー](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)」をご覧ください。* "
 
 .NET Core 2.2 では以下の Windows のバージョンがサポートされます。
 
@@ -177,11 +181,11 @@ SDK は、.NET アプリとライブラリを作成して公開するために�
 
 次の Windows のバージョンに .NET SDK またはランタイムをインストールする場合は、追加の依存関係が必要です。
 
-- ❌ Windows 7 SP1
-- ❌ Windows Vista SP 2
-- ✔️ Windows 8.1
-- ✔️ Windows Server 2008 R2
-- ✔️ Windows Server 2012 R2
+- Windows 7 SP1 [ESU][esu]
+- Windows Vista SP 2
+- Windows 8.1
+- Windows Server 2008 R2
+- Windows Server 2012 R2
 
 以下をインストールします。
 
@@ -260,15 +264,25 @@ Visual Studio Code には、Visual Studio のような自動化された .NET Co
 01. [.NET Core SDK をダウンロードしてインストールします](https://dotnet.microsoft.com/download/dotnet-core)。
 01. [Visual Studio Code マーケットプレースから C# 拡張機能をインストールします](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)。
 
+## <a name="windows-installer"></a>Windows インストーラー
+
+.NET の[ダウンロード ページ](https://dotnet.microsoft.com/download/dotnet-core)には、Windows インストーラーの実行可能ファイルが用意されています。
+
+MSI ファイルを使用して .NET をインストールする場合、`DOTNETHOME_X64` と `DOTNETHOME_X86` パラメーターを設定することによってインストール パスをカスタマイズできます。
+
+```console
+dotnet-sdk-3.1.301-win-x64.exe DOTNETHOME_X64="F:\dotnet\x64" DOTNETHOME_X86="F:\dotnet\x86"
+```
+
 ## <a name="download-and-manually-install"></a>手動でダウンロードしてインストールする
 
 .NET 用 Windows インストーラーの代わりに、SDK またはランタイムをダウンロードして手動でインストールすることもできます。 手動インストールは、通常、継続的インテグレーション テストの一環として実行されます。 開発者またはユーザーの場合、通常は[インストーラー](https://dotnet.microsoft.com/download/dotnet-core)を使用することをお勧めします。
 
 .NET SDK と .NET ランタイムはどちらも、ダウンロード後に手動でインストールできます。 .NET SDK をインストールする場合、対応するランタイムをインストールする必要はありません。 まず、次のいずれかのサイトから SDK またはランタイムのバイナリ リリースをダウンロードします。
 
-- ✔️ [.NET 5.0 のダウンロード](https://dotnet.microsoft.com/download/dotnet/5.0)
-- ✔️ [.NET Core 3.1 のダウンロード](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- ✔️ [.NET Core 2.1 のダウンロード](https://dotnet.microsoft.com/download/dotnet-core/2.1)
+- [.NET 5.0 のダウンロード](https://dotnet.microsoft.com/download/dotnet/5.0)
+- [.NET Core 3.1 のダウンロード](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [.NET Core 2.1 のダウンロード](https://dotnet.microsoft.com/download/dotnet-core/2.1)
 - [すべての .NET Core のダウンロード](https://dotnet.microsoft.com/download/dotnet-core)
 
 .NET を抽出するためのディレクトリを作成します (`%USERPROFILE%\dotnet` など)。 次に、ダウンロードした zip ファイルをそのディレクトリに抽出します。
@@ -301,3 +315,5 @@ Docker コンテナー内で .NET を使用する方法の詳細については�
 - [チュートリアル: Hello World チュートリアル](../tutorials/with-visual-studio.md)。
 - [チュートリアル: Visual Studio Code を使用して新しいアプリを作成する](../tutorials/with-visual-studio-code.md)。
 - [チュートリアル: NET Core アプリをコンテナー化する](../docker/build-container.md)。
+
+[esu]: /troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq

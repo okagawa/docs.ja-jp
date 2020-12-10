@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 6fb33ad2eb3f6a5e8f6506527f3807f31bf33fdc
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 64c9e9eba2495531cfef8a603d53fb21c95c87a4
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92471652"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599396"
 ---
 # <a name="value-types-c-reference"></a>値型 (C# リファレンス)
 
@@ -31,7 +31,7 @@ C# 型の 2 つの主なカテゴリは、*値型* と [参照型](../keywords/r
 > [!NOTE]
 > ご自分のコードをエラーがより発生しにくく、より堅牢にするには、変更できない値型を定義して使用します。 この記事では、デモンストレーションの目的でのみ、変更可能な値型を使用します。
 
-## <a name="kinds-of-value-types"></a>値型の種類
+## <a name="kinds-of-value-types-and-type-constraints"></a>値型と型制約の種類
 
 値型には、次の 2 種類のいずれかを指定できます。
 
@@ -39,6 +39,8 @@ C# 型の 2 つの主なカテゴリは、*値型* と [参照型](../keywords/r
 - 名前付き定数のセットによって定義され、選択肢または選択肢の組み合わせを表す、[列挙型](enum.md)
 
 [null 許容値型](nullable-value-types.md) `T?` は、基になる値型のすべての値 `T` と、追加の [null](../keywords/null.md) 値を表します。 値型の変数には、Null 許容値型でない限り `null` を割り当てることはできません。
+
+[`struct` 制約](../../programming-guide/generics/constraints-on-type-parameters.md)を使用して、型パラメーターが null 非許容値型であることを指定できます。 構造体と列挙型の型は、どちらも `struct` 制約を満たしています。 C# 7.3 以降、基底クラス制約 ([列挙の制約](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints)と呼ばれます) で `System.Enum` を使用して、型パラメーターが列挙型であることを指定できます。
 
 ## <a name="built-in-value-types"></a>組み込みの値型
 

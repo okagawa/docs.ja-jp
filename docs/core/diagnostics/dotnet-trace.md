@@ -2,12 +2,12 @@
 title: dotnet-trace 診断ツール - .NET CLI
 description: dotnet-trace CLI ツールをインストールして使用し、.NET EventPipe を使って、ネイティブ プロファイラーなしで実行中のプロセスの .NET トレースを収集する方法について学習します。
 ms.date: 11/17/2020
-ms.openlocfilehash: d0798e4f703c18c48db47193ac24ec0d13b66ae5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6bc5ad449f62ed0080ff6b1f401f1871d90cf5ec
+ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829311"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96549333"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace パフォーマンス分析ユーティリティ
 
@@ -115,7 +115,13 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 - **`--profile <profile-name>`**
 
-  共通のトレース シナリオを簡潔に指定できるようにする、事前定義されたプロバイダーの名前付き構成のセット。
+  共通のトレース シナリオを簡潔に指定できるようにする、事前定義されたプロバイダーの名前付き構成のセット。 次のプロファイルを利用できます。
+
+ | [プロファイル] | 説明 |
+ |---------|-------------|
+ |`cpu-sampling`|CPU 使用率および一般的な .NET ランタイム情報の追跡に役立ちます。 プロファイルまたはプロバイダーが指定されていない場合は、これが既定のオプションです。|
+ |`gc-verbose`|GC コレクションを追跡し、オブジェクトの割り当てをサンプリングします。|
+ |`gc-collect`|オーバーヘッドが非常に低い場合にのみ GC コレクションを追跡します。|
 
 - **`--providers <list-of-comma-separated-providers>`**
 

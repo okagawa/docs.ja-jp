@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 17fde81f9734966692c9f41d2213f8682dedea46
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 639cd13978cc33bd7c4524a17e92d566404bbaea
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89496913"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96478540"
 ---
 ### <a name="contractinvariant-or-contractrequirestexception-do-not-consider-stringisnullorempty-to-be-pure"></a>Contract.Invariant または Contract.Requires\<TException> が String.IsNullOrEmpty の純粋性を考慮しない
 

@@ -3,12 +3,12 @@ title: C# 言語のバージョン管理 - C# ガイド
 description: C# 言語のバージョンがプロジェクトに基づいて決定されるしくみとその選択の背後にある理由について説明します。 既定値を手動でオーバーライドする方法について説明します。
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: a06aa8812dad6f4b9a9254eef9f7c678c22af860
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: b022b726861bd6ea45b188df44549dc279d34a74
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634509"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96598919"
 ---
 # <a name="c-language-versioning"></a>C# 言語のバージョン管理
 
@@ -41,8 +41,8 @@ C# 9.0 は、.NET 5 以降のバージョンでのみサポートされていま
 
 ご自分のプロジェクトが、対応するプレビュー バージョンの言語を持つプレビュー フレームワークをターゲットにしている場合、使用される言語バージョンはプレビュー バージョンの言語です。 環境を問わず、そのプレビューでは最新の機能が使用されます。リリース済みの .NET Core バージョンをターゲットにするプロジェクトに影響はありません。
 
-> [!TIP]
-> 現在使用している言語バージョンを確認するには、コードに `#error version` を入れます (大文字と小文字を区別します)。 これによりコンパイラから診断の CS8304 と、使用されているコンパイラのバージョンと現在選択されている言語バージョンが含まれるメッセージが生成されます。
+> [!IMPORTANT]
+> Visual Studio 2017 では、作成されたすべてのプロジェクト ファイルに `<LangVersion>latest</LangVersion>` エントリが追加されました。 これは、追加されたときには *C# 7.0* を意味しました。 しかし、Visual Studio 2019 にアップグレードすると、ターゲット フレームワークに関係なく、それは最新リリース バージョンを意味します。 これらのプロジェクトでは[既定の動作がオーバーライドされるようになります](#override-a-default)。 プロジェクト ファイルを編集して、そのノードを削除する必要があります。 その後、プロジェクトでは、ターゲット フレームワークに対して推奨されるコンパイラ バージョンが使用されます。
 
 ## <a name="override-a-default"></a>既定値のオーバーライド
 
@@ -51,6 +51,9 @@ C# のバージョンを明示的に指定する必要がある場合は、い�
 - [プロジェクト ファイル](#edit-the-project-file)を手動で編集する。
 - [サブディレクトリ内の複数のプロジェクトに対して](#configure-multiple-projects)言語バージョンを設定する。
 - [`-langversion` コンパイラ オプション](compiler-options/langversion-compiler-option.md)を構成する。
+
+> [!TIP]
+> 現在使用している言語バージョンを確認するには、コードに `#error version` を入れます (大文字と小文字を区別します)。 これによりコンパイラから診断の CS8304 と、使用されているコンパイラのバージョンと現在選択されている言語バージョンが含まれるメッセージが生成されます。
 
 ### <a name="edit-the-project-file"></a>プロジェクト ファイルを編集する
 

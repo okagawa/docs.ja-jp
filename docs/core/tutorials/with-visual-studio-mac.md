@@ -1,35 +1,33 @@
 ---
-title: Visual Studio for Mac を使用して .NET Core コンソール アプリケーションを作成する
-description: Visual Studio for Mac を使用して .NET Core コンソール アプリケーションを作成する方法について説明します。
-ms.date: 06/02/2020
-ms.openlocfilehash: 0248e48865541a7c73b9e219a06a57996c5cf601
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+title: Visual Studio for Mac を使用して .NET コンソール アプリケーションを作成する
+description: Visual Studio for Mac を使用して .NET コンソール アプリケーションを作成する方法について説明します。
+ms.date: 11/30/2020
+ms.openlocfilehash: 1351b06eec32cd8d3d9d44926655405fe2246f58
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400527"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599487"
 ---
-# <a name="tutorial-create-a-net-core-console-application-using-visual-studio-for-mac"></a>チュートリアル: Visual Studio for Mac を使用して .NET Core コンソール アプリケーションを作成する
+# <a name="tutorial-create-a-net-console-application-using-visual-studio-for-mac"></a>チュートリアル: Visual Studio for Mac を使用して .NET コンソール アプリケーションを作成する
 
-このチュートリアルでは、Visual Studio for Mac を使用して .NET Core コンソール アプリケーションを作成および実行する方法について説明します。
+このチュートリアルでは、Visual Studio for Mac を使用して .NET コンソール アプリケーションを作成および実行する方法について説明します。
 
 > [!NOTE]
 > お客様のフィードバックは非常に貴重です。 次の 2 つの方法で Visual Studio for Mac の開発チームにフィードバックを送信できます。
 >
 > * Visual Studio for Mac で、メニューから **[ヘルプ]**  >  **[問題の報告]** の順に選択するか、ようこそ画面から **[問題の報告]** を選択して、バグ報告を提出するためのウィンドウを開きます。 お客様のフィードバックは、[開発者コミュニティ](https://aka.ms/feedback/report?space=41) ポータルで追跡することができます。
-> * 提案するには、メニューから **[ヘルプ]**  >  **[提案の送信]** の順に選択するか、ようこそ画面から **[提案の送信]** を選択し、 [Visual Studio for Mac の開発者コミュニティの Web ページ](https://aka.ms/feedback/suggest?space=41)に移動します。
+> * 提案するには、メニューから **[ヘルプ]**  >  **[提案の送信]** の順に選択するか、ようこそ画面から **[提案の送信]** を選択し、[Visual Studio for Mac の開発者コミュニティの Web ページ](https://aka.ms/feedback/suggest?space=41)に移動します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* [Visual Studio for Mac バージョン 8.6 以降](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)。 .NET Core をインストールするオプションを選択します。 .NET Core 開発の場合、Xamarin のインストールは省略可能です。 詳細については、次のリソースを参照してください。
+* [Visual Studio for Mac バージョン 8.8 以降](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)。 .NET Core をインストールするオプションを選択します。 .NET 開発の場合、Xamarin のインストールは省略可能です。 詳細については、次のリソースを参照してください。
 
   * [チュートリアル: Visual Studio for Mac をインストールする](/visualstudio/mac/installation)。
   * [サポート対象の macOS のバージョン](../install/windows.md)。
-  * [Visual Studio for Mac でサポートされている .NET Core のバージョン](/visualstudio/mac/net-core-support)。
+  * [Visual Studio for Mac でサポートされている .NET のバージョン](/visualstudio/mac/net-core-support)。
 
 ## <a name="create-the-app"></a>アプリを作成する
-
-"HelloWorld" という名前の .NET Core コンソール アプリ プロジェクトを作成します。
 
 1. Visual Studio for Mac を起動します。
 
@@ -41,9 +39,7 @@ ms.locfileid: "93400527"
 
    :::image type="content" source="media/with-visual-studio-mac/visual-studio-mac-new-dialog.png" alt-text="新しいプロジェクト テンプレートの一覧":::
 
-1. **[Configure your new Console Application]\(新しいコンソール アプリケーションの構成\)** ダイアログの **[ターゲット フレームワーク]** ドロップダウンで、 **[.NET Core 3.1]** を選択し、 **[次へ]** を選択します。
-
-   :::image type="content" source="media/with-visual-studio-mac/target-framework.png" alt-text="ターゲット フレームワークの選択":::
+1. **[Configure your new Console Application]\(新しいコンソール アプリケーションの構成\)** ダイアログの **[ターゲット フレームワーク]** ドロップダウンで、 **[.NET 5.0]** を選択し、 **[次へ]** を選択します。
 
 1. **[プロジェクト名]** に「HelloWorld」と入力し、 **[作成]** を選択します。
 
@@ -102,7 +98,7 @@ namespace HelloWorld
 
 ## <a name="next-steps"></a>次の手順
 
-このチュートリアルでは、.NET Core コンソール アプリケーションを作成しました。 次のチュートリアルでは、アプリをデバッグします。
+このチュートリアルでは、.NET コンソール アプリケーションを作成しました。 次のチュートリアルでは、アプリをデバッグします。
 
 > [!div class="nextstepaction"]
-> [Visual Studio for Mac を使用して .NET Core コンソール アプリケーションをデバッグする](debugging-with-visual-studio-mac.md)
+> [Visual Studio for Mac を使用して .NET コンソール アプリケーションをデバッグする](debugging-with-visual-studio-mac.md)

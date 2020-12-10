@@ -1,21 +1,21 @@
 ---
-title: Visual Studio for Mac を使用して .NET Core で .NET Standard クラス ライブラリをテストする
-description: .NET Core クラス ライブラリ用の単体テスト プロジェクトを作成します。 .NET Core クラス ライブラリが単体テストで正しく動作することを確認します。
-ms.date: 06/08/2020
-ms.openlocfilehash: 3adcddc96abf77012f89a28c1cf60ea57ae506a2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+title: Visual Studio for Mac を使用して .NET クラス ライブラリをテストする
+description: .NET クラス ライブラリ用の単体テスト プロジェクトを作成します。 .NET クラス ライブラリが単体テストで正しく動作することを確認します。
+ms.date: 11/18/2020
+ms.openlocfilehash: 02d5aa74258ec15c5447b23246a3c7e9c61a6760
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180531"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599527"
 ---
-# <a name="test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>Visual Studio を使用して .NET Core で .NET Standard クラス ライブラリをテストする
+# <a name="test-a-net-class-library-using-visual-studio"></a>Visual Studio を使用して .NET クラス ライブラリをテストする
 
 このチュートリアルでは、テスト プロジェクトをソリューションに追加して、単体テストを自動化する方法について説明します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- このチュートリアルでは、「[Visual Studio for Mac を使用して .NET Standard ライブラリを作成する](library-with-visual-studio-mac.md)」で作成したソリューションを使用します。
+- このチュートリアルでは、「[Visual Studio for Mac を使用して .NET クラス ライブラリを作成する](library-with-visual-studio-mac.md)」で作成するソリューションを使用します。
 
 ## <a name="create-a-unit-test-project"></a>単体テスト プロジェクトを作成する
 
@@ -23,19 +23,19 @@ ms.locfileid: "91180531"
 
 1. Visual Studio for Mac を起動します。
 
-1. 「[Visual Studio for Mac を使用して .NET Standard ライブラリを作成する](library-with-visual-studio-mac.md)」で作成した `ClassLibraryProjects` ソリューションを開きます。
+1. 「[Visual Studio for Mac を使用して .NET クラス ライブラリを作成する](library-with-visual-studio-mac.md)」で作成した `ClassLibraryProjects` ソリューションを開きます。
 
 1. **[ソリューション]** パッドで、<kbd>ctrl</kbd> キーを押しながら `ClassLibraryProjects` ソリューションをクリックし、 **[追加]**  >  **[新しいプロジェクト]** の順に選択します。
 
 1. **[新しいプロジェクト]** ダイアログで、 **[Web and Console]\(Web とコンソール\)** ノードから **[テスト]** を選択します。 **[MSTest プロジェクト]** を選択してから **[次へ]** を選択します。
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-project.png" alt-text="テスト プロジェクトを作成する Visual Studio Mac の [新しいプロジェクト] ダイアログ&quot;:::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-project.png" alt-text="テスト プロジェクトを作成する Visual Studio Mac の [新しいプロジェクト] ダイアログ":::
 
-1. **.NET Core 3.1** を選択します。 新しいプロジェクトに &quot;StringLibraryTest" という名前を付けて、 **[作成]** を選択します。
+1. **[ターゲット フレームワーク]** として **[.NET 5.0]** を選択し、 **[次へ]** を選択します。
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-new-project-name.png" alt-text="テスト プロジェクトを作成する Visual Studio Mac の [新しいプロジェクト] ダイアログ&quot;:::
+1. 新しいプロジェクトに "StringLibraryTest" という名前を付けて、 **[作成]** を選択します。
 
-1. **.NET Core 3.1** を選択します。 新しいプロジェクトに &quot;StringLibraryTest":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-new-project-name.png" alt-text="プロジェクト名を指定する Visual Studio Mac の [新しいプロジェクト] ダイアログ":::
 
    Visual Studio によって、次のコードを含むクラス ファイルが作成されます。
 
@@ -71,9 +71,7 @@ ms.locfileid: "91180531"
 
 1. **[参照]** ダイアログで、 **[StringLibrary]** プロジェクトを選択します。 **[OK]** を選択します。
 
-      :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-edit-references.png" alt-text="テスト プロジェクトを作成する Visual Studio Mac の [新しいプロジェクト] ダイアログ&quot;:::
-
-1. **.NET Core 3.1** を選択します。 新しいプロジェクトに &quot;StringLibraryTest":::
+      :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-edit-references.png" alt-text="Visual Studio Mac の [参照の編集] ダイアログ":::
 
 ## <a name="add-and-run-unit-test-methods"></a>単体テスト メソッドの追加と実行
 
@@ -106,9 +104,7 @@ Visual Studio で単体テストを実行すると、<xref:Microsoft.VisualStudi
 
 1. メニュー バーから、 **[ファイル]**  >  **[名前を付けて保存]** の順に選択します。 ダイアログで、 **[エンコード]** が **[Unicode (UTF-8)]** に設定されていることを確認します。
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/save-file-as-dialog.png" alt-text="テスト プロジェクトを作成する Visual Studio Mac の [新しいプロジェクト] ダイアログ&quot;:::
-
-1. **.NET Core 3.1** を選択します。 新しいプロジェクトに &quot;StringLibraryTest":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/save-file-as-dialog.png" alt-text="Visual Studio の [名前を付けてファイルを保存] ダイアログ":::
 
 1. 既存のファイルを置き換えるかどうかを確認するメッセージが表示されたら、 **[置換]** を選択します。
 
@@ -118,17 +114,13 @@ Visual Studio で単体テストを実行すると、<xref:Microsoft.VisualStudi
 
 1. **[ドッキング]** アイコンをクリックして、パネルを開いたままにします。
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-dock-icon.png" alt-text="テスト プロジェクトを作成する Visual Studio Mac の [新しいプロジェクト] ダイアログ&quot;:::
-
-1. **.NET Core 3.1** を選択します。 新しいプロジェクトに &quot;StringLibraryTest":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-dock-icon.png" alt-text="Visual Studio for Mac の [単体テスト] パネルの [ドッキング] アイコン":::
 
 1. **[すべて実行]** ボタンをクリックします。
 
    すべてのテストに成功します。
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-pass.png" alt-text="テスト プロジェクトを作成する Visual Studio Mac の [新しいプロジェクト] ダイアログ&quot;:::
-
-1. **.NET Core 3.1** を選択します。 新しいプロジェクトに &quot;StringLibraryTest":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-pass.png" alt-text="Visual Studio for Mac の予測されるテスト成功":::
 
 ## <a name="handle-test-failures"></a>テストの失敗の処理
 
@@ -145,13 +137,15 @@ Visual Studio で単体テストを実行すると、<xref:Microsoft.VisualStudi
 
    今回は、 **[テスト エクスプローラー]** ウィンドウに、2 つのテストが成功し、1 つが失敗したことが示されます。
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/failed-test-window.png" alt-text="テスト プロジェクトを作成する Visual Studio Mac の [新しいプロジェクト] ダイアログ&quot;:::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/failed-test-window.png" alt-text="[テスト エクスプローラー] ウィンドウと失敗したテスト":::
 
-1. **.NET Core 3.1** を選択します。 新しいプロジェクトに &quot;StringLibraryTest" の後ろの文字列はテストされませんでした。
+1. <kbd>ctrl</kbd> キーを押しながら、失敗したテスト、`TestDoesNotStartWithUpper` の順にクリックして、コンテキスト メニューから **[結果パッドを表示する]** を選択します。
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-failure.png" alt-text="テスト プロジェクトを作成する Visual Studio Mac の [新しいプロジェクト] ダイアログ&quot;:::
+   **[結果]** パッドに、アサートによって生成されたメッセージが表示されます。"Assert.IsFalse failed. Expected for 'Error': false; actual:True" が表示されます。 エラーのため、配列内の "Error" の後ろの文字列はテストされませんでした。
 
-1. **.NET Core 3.1** を選択します。 新しいプロジェクトに &quot;StringLibraryTest" を削除します。 テストを再実行すると、テストは成功します。
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-failure.png" alt-text="IsFalse アサーションの失敗を示す [テスト エクスプローラー] ウィンドウ":::
+
+1. 手順 1 で追加した文字列 "Error" を削除します。 テストを再実行すると、テストは成功します。
 
 ## <a name="test-the-release-version-of-the-library"></a>ライブラリのリリース バージョンのテスト
 
@@ -161,15 +155,11 @@ Visual Studio で単体テストを実行すると、<xref:Microsoft.VisualStudi
 
 1. Visual Studio のツールバーで、ビルド構成を **[デバッグ]** から **[リリース]** に変更します。
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-toolbar-release.png" alt-text="テスト プロジェクトを作成する Visual Studio Mac の [新しいプロジェクト] ダイアログ&quot;:::
-
-1. **.NET Core 3.1** を選択します。 新しいプロジェクトに &quot;StringLibraryTest":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-toolbar-release.png" alt-text="リリース ビルドが強調表示された Visual Studio のツールバー":::
 
 1. **[ソリューション]** パッドで、<kbd>ctrl</kbd> キーを押しながら **StringLibrary** プロジェクトをクリックし、コンテキスト メニューから **[ビルド]** を選択してライブラリを再コンパイルします。
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/build-library-context-menu.png" alt-text="テスト プロジェクトを作成する Visual Studio Mac の [新しいプロジェクト] ダイアログ&quot;:::
-
-1. **.NET Core 3.1** を選択します。 新しいプロジェクトに &quot;StringLibraryTest":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/build-library-context-menu.png" alt-text="StringLibrary のコンテキスト メニューとビルド コマンド":::
 
 1. 単体テストをもう一度実行します。
 
@@ -177,13 +167,13 @@ Visual Studio で単体テストを実行すると、<xref:Microsoft.VisualStudi
 
 ## <a name="debug-tests"></a>テストのデバッグ
 
-IDE として Visual Studio for Mac を使用する場合は、「[チュートリアル:Visual Studio for Mac を使用して .NET Core コンソール アプリケーションをデバッグする](debugging-with-visual-studio-mac.md)」に記載されているのと同じプロセスに従って、単体テスト プロジェクトを使用してコードをデバッグできます。 *ShowCase* アプリ プロジェクトを開始する代わりに、<kbd>ctrl</kbd> キーを押しながら **StringLibraryTests** プロジェクトをクリックし、コンテキスト メニューから **[プロジェクトのデバッグを開始]** を選択します。
+IDE として Visual Studio for Mac を使用する場合は、「[チュートリアル:Visual Studio for Mac を使用して .NET コンソール アプリケーションをデバッグする](debugging-with-visual-studio-mac.md)」に記載されているのと同じプロセスに従って、単体テスト プロジェクトを使用してコードをデバッグできます。 *ShowCase* アプリ プロジェクトを開始する代わりに、<kbd>ctrl</kbd> キーを押しながら **StringLibraryTests** プロジェクトをクリックし、コンテキスト メニューから **[プロジェクトのデバッグを開始]** を選択します。
 
 Visual Studio により、デバッガーがアタッチされた状態でテスト プロジェクトが開始されます。 実行は、テスト プロジェクトまたは基になるライブラリ コードに追加したブレークポイントで停止します。
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-* [.NET Core と .NET Standard の単体テスト](../testing/index.md)
+* [.NET での単体テスト](../testing/index.md)
 
 ## <a name="next-steps"></a>次の手順
 
@@ -200,4 +190,4 @@ Visual Studio により、デバッガーがアタッチされた状態でテス
 ライブラリはパッケージとして配布する必要はありません。 それが使用されるコンソール アプリにバンドルすることができます。 コンソール アプリを発行する方法については、このシリーズの前のチュートリアルを参照してください。
 
 > [!div class="nextstepaction"]
-> [Visual Studio for Mac を使用して .NET Core コンソール アプリケーションを発行する](publishing-with-visual-studio-mac.md)
+> [Visual Studio for Mac を使用して .NET コンソール アプリケーションを発行する](publishing-with-visual-studio-mac.md)

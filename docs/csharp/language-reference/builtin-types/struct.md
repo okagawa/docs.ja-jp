@@ -9,24 +9,24 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: daf332dae483d75ef27e78dad5ee912734ccdb5f
-ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
+ms.openlocfilehash: 96a39609e9ae8b11e9872b049134136fe1ff3e2a
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2020
-ms.locfileid: "92526599"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599103"
 ---
 # <a name="structure-types-c-reference"></a>構造体型 (C# リファレンス)
 
-" *構造体型* " (または " *構造体型* ") とは、データおよび関連する機能をカプセル化できる [値の型](value-types.md)です。 構造体型を定義するには、`struct` キーワードを使用します。
+"*構造体型*" (または "*構造体型*") とは、データおよび関連する機能をカプセル化できる [値の型](value-types.md)です。 構造体型を定義するには、`struct` キーワードを使用します。
 
 [!code-csharp[struct example](snippets/shared/StructType.cs#StructExample)]
 
-構造体型には、" *値のセマンティクス* " があります。 つまり、構造体型の変数には、型のインスタンスが含まれます。 既定では、変数値が代入時にコピーされ、引数がメソッドに渡され、メソッドの結果が返されます。 構造体型の変数の場合は、型のインスタンスがコピーされます。 詳細については、[値の型](value-types.md)に関するページを参照してください。
+構造体型には、"*値のセマンティクス*" があります。 つまり、構造体型の変数には、型のインスタンスが含まれます。 既定では、変数値が代入時にコピーされ、引数がメソッドに渡され、メソッドの結果が返されます。 構造体型の変数の場合は、型のインスタンスがコピーされます。 詳細については、[値の型](value-types.md)に関するページを参照してください。
 
-通常は、構造体型を使用して、ほとんどまたはまったく動作を提供しない小さなデータ中心型を設計します。 たとえば、.NET では、構造体型を使用して数値 ([整数](integral-numeric-types.md)と[実数](floating-point-numeric-types.md)の両方)、[ブール値](bool.md)、[Unicode 文字](char.md)、[時刻インスタンス](xref:System.DateTime)が表現されます。 型の動作に重点を置いている場合は、[class](../keywords/class.md) を定義することを検討してください。 クラス型には " *参照セマンティクス* " があります。 つまり、クラス型の変数には、インスタンス自体ではなく、型のインスタンスへの参照が含まれています。
+通常は、構造体型を使用して、ほとんどまたはまったく動作を提供しない小さなデータ中心型を設計します。 たとえば、.NET では、構造体型を使用して数値 ([整数](integral-numeric-types.md)と[実数](floating-point-numeric-types.md)の両方)、[ブール値](bool.md)、[Unicode 文字](char.md)、[時刻インスタンス](xref:System.DateTime)が表現されます。 型の動作に重点を置いている場合は、[class](../keywords/class.md) を定義することを検討してください。 クラス型には "*参照セマンティクス*" があります。 つまり、クラス型の変数には、インスタンス自体ではなく、型のインスタンスへの参照が含まれています。
 
-構造体型には値セマンティクスがあるため、" *変更不可* " の構造体型を定義することをお勧めします。
+構造体型には値セマンティクスがあるため、"*変更不可*" の構造体型を定義することをお勧めします。
 
 ## <a name="readonly-struct"></a>`readonly` 構造体
 
@@ -129,6 +129,10 @@ C# 7.2 以降、`ref` 修飾子は、構造体型の宣言内で使用できま�
 [!code-csharp[readonly ref struct](snippets/shared/StructType.cs#ReadonlyRef)]
 
 .NET では、`ref` 構造体の例として <xref:System.Span%601?displayProperty=nameWithType> と <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> があります。
+
+## <a name="struct-constraint"></a>struct 制約
+
+また、[`struct` 制約](../../programming-guide/generics/constraints-on-type-parameters.md)の `struct` キーワードを使用して、型パラメーターが null 非許容値型であることを指定します。 構造体と[列挙型](enum.md)の型は、どちらも `struct` 制約を満たしています。
 
 ## <a name="conversions"></a>変換
 

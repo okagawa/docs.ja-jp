@@ -2,12 +2,12 @@
 title: .NET Core の EventCounters
 description: この記事では、EventCounters の概要とその実装方法および使用方法について学習します。
 ms.date: 08/07/2020
-ms.openlocfilehash: 212cd6b495785dcd091187f97a1b5e44e5597a4a
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 68c831713eed8c49d24ebf93da301ef68d213bf9
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687643"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437821"
 ---
 # <a name="eventcounters-in-net-core"></a>.NET Core の EventCounters
 
@@ -61,10 +61,10 @@ dotnet-counters ps
    1400180 sample-counters C:\sample-counters\bin\Debug\netcoreapp3.1\sample-counters.exe
 ```
 
-カウンターの監視を開始するには、<xref:System.Diagnostics.Tracing.EventSource> の名前を `counter_list` スイッチに渡します。
+カウンターの監視を開始するには、<xref:System.Diagnostics.Tracing.EventSource> の名前を `--counters` オプションに渡します。
 
 ```console
-dotnet-counters monitor --process-id 1400180 Sample.EventCounter.Minimal
+dotnet-counters monitor --process-id 1400180 --counters Sample.EventCounter.Minimal
 ```
 
 次の例は監視出力を示しています。

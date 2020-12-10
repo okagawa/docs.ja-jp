@@ -11,16 +11,16 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 930efdbdc6a20ea301331c1ce6fc664da43bfc5f
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: a21bdf63247dc5fec95922de017e1d3502e08565
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471851"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599435"
 ---
 # <a name="enumeration-types-c-reference"></a>列挙型 (C# リファレンス)
 
-" *列挙型* " は、基になる [整数値](integral-numeric-types.md)型の一連の名前付き定数によって定義された [値の型](value-types.md)です。 列挙型を定義するには、`enum` キーワードを使用して " *列挙型メンバー* " の名前を指定します。
+"*列挙型*" は、基になる [整数値](integral-numeric-types.md)型の一連の名前付き定数によって定義された [値の型](value-types.md)です。 列挙型を定義するには、`enum` キーワードを使用して "*列挙型メンバー*" の名前を指定します。
 
 ```csharp
 enum Season
@@ -62,7 +62,7 @@ enum ErrorCode : ushort
 
 <xref:System.Enum?displayProperty=nameWithType> 型は、すべての列挙型の抽象基底クラスです。 この型には、列挙型とその値に関する情報を取得するためのメソッドがいくつか用意されています。 詳細と例については、<xref:System.Enum?displayProperty=nameWithType> API リファレンス ページを参照してください。
 
-C# 7.3 以降、基底クラス制約 ([列挙の制約](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints)と呼ばれます) で `System.Enum` を使用して、型パラメーターが列挙型であることを指定できます。
+C# 7.3 以降、基底クラス制約 ([列挙の制約](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints)と呼ばれます) で `System.Enum` を使用して、型パラメーターが列挙型であることを指定できます。 また、任意の列挙型も `struct` 制約を満たしています。これは、型パラメーターが null 非許容値型であることを指定するために使用されます。
 
 ## <a name="conversions"></a>変換
 
