@@ -17,12 +17,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: d0a928fffb84e925ae167885e6d2456dc45b6892
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bf11edc3669916ba4d30a3648692ca9b084d4340
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825079"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009820"
 ---
 # <a name="best-practices-for-comparing-strings-in-net"></a>.NET での文字列の比較に関するベスト プラクティス
 
@@ -167,9 +167,6 @@ ms.locfileid: "94825079"
 
 とはいえ、これらの比較はどちらも非常に高速です。
 
-> [!NOTE]
-> ファイル システム、レジストリのキーと値、および環境変数の文字列の動作は、<xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> によって最もよく表現されます。
-
 <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> と <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> は、どちらもバイナリ値を直接使用するため、照合に最適です。 比較の設定について確信を持てない場合は、この 2 つのいずれかの値を使用してください。 ただし、これらの値を使用するとバイトごとの比較が行われるため、言語的な順序 (英語の辞書のような順序) ではなくバイナリの順序で並べ替えが行われます。 したがって、結果をユーザーに表示すると、ほとんどの場合不自然に見えます。
 
 序数に基づくセマンティクスは、<xref:System.StringComparison> 引数を含まない <xref:System.String.Equals%2A?displayProperty=nameWithType> のオーバーロード (等値演算子を含む) で既定で使用されます。 どのような場合でも、 <xref:System.StringComparison> パラメーターを持つオーバーロードを呼び出すことをお勧めします。
@@ -271,7 +268,7 @@ LATIN SMALL LETTER A 文字 "a" (\u0061) は、COMBINING RING ABOVE 文字 "+ " 
 - 現在のカルチャを使用する、大文字と小文字を区別しない比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.CurrentCultureIgnoreCase%2A?displayProperty=nameWithType> プロパティによって返されます。
 - インバリアント カルチャの単語ベースの比較規則を使用する、カルチャに依存しない比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.InvariantCulture%2A?displayProperty=nameWithType> プロパティによって返されます。
 - インバリアント カルチャの単語ベースの比較規則を使用する、大文字と小文字を区別しない、カルチャに依存しない比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.InvariantCultureIgnoreCase%2A?displayProperty=nameWithType> プロパティによって返されます。
-- 序数に基づく比較。 この <xref:System.StringComparer> オブジェクトは、 <xref:System.StringComparer.Ordinal%2A?displayProperty=nameWithType> プロパティによって返されます。
+- 序数に基づく比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.Ordinal%2A?displayProperty=nameWithType> プロパティによって返されます。
 - 大文字と小文字を区別しない、序数に基づく比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType> プロパティによって返されます。
 
 ### <a name="arraysort-and-arraybinarysearch"></a>Array.Sort と Array.BinarySearch
