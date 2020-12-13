@@ -2,12 +2,12 @@
 title: 非同期プログラミング
 description: 'F # が、コア関数型プログラミングの概念から派生した言語レベルのプログラミングモデルに基づいて、非同期性のクリーンサポートを提供する方法について説明します。'
 ms.date: 08/15/2020
-ms.openlocfilehash: 04b397ddbfb468aa3bc4ee245175d3ec9bdedb50
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 8bf8d6987187377cc1f44e77141b5d70d873f849
+ms.sourcegitcommit: fcbe432482464b1639decad78cc4dc8387c6269e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739328"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97366814"
 ---
 # <a name="async-programming-in-f"></a>F での非同期プログラミング\#
 
@@ -33,7 +33,7 @@ ms.locfileid: "96739328"
 - "a"、つまり "not" を意味します。
 - "同期"、つまり "同時に"。
 
-これらの2つの用語をまとめておくと、"非同期" とは "同時に実行しない" ことを意味します。 これで完了です。 この定義では、同時実行または並列処理には意味がありません。 これは実際にも当てはまります。
+これらの2つの用語をまとめておくと、"非同期" とは "同時に実行しない" ことを意味します。 以上で作業は終了です。 この定義では、同時実行または並列処理には意味がありません。 これは実際にも当てはまります。
 
 実際には、F # での非同期計算は、メインプログラムフローとは別に実行するようにスケジュールされています。 この独立した実行は、同時実行または並列処理を意味しません。また、計算が常にバックグラウンドで発生することも意味しません。 実際、非同期計算は、計算の性質と計算が実行されている環境に応じて、同期的に実行することもできます。
 
@@ -93,7 +93,7 @@ let printTotalFileBytes path =
 [<EntryPoint>]
 let main argv =
     argv
-    |> Array.map printTotalFileBytes
+    |> Seq.map printTotalFileBytes
     |> Async.Parallel
     |> Async.Ignore
     |> Async.RunSynchronously
@@ -101,14 +101,14 @@ let main argv =
     0
 ```
 
-ご覧のように、関数には `main` さらに多くの呼び出しが行われています。 概念的には、次のことが行われます。
+ご覧のように、関数には `main` さらにいくつかの要素があります。 概念的には、次のことが行われます。
 
-1. コマンドライン引数を、 `Async<unit>` を使用した計算に変換 `Array.map` します。
+1. コマンドライン引数を、 `Async<unit>` を使用した計算のシーケンスに変換 `Seq.map` します。
 2. `Async<'T[]>` `printTotalFileBytes` 実行時に並列で計算をスケジュールして実行するを作成します。
-3. `Async<unit>`並列計算を実行するを作成し、その結果を無視します。
-4. 最後の計算をで明示的に実行 `Async.RunSynchronously` し、完了するまでブロックします。
+3. `Async<unit>`並列計算を実行するを作成し、その結果 () を無視し `unit[]` ます。
+4. 構成された計算全体をで明示的に実行し `Async.RunSynchronously` ます。この処理が完了するまでブロックします。
 
-このプログラムが実行されると、は `printTotalFileBytes` コマンドライン引数ごとに並列で実行されます。 非同期計算はプログラムフローとは無関係に実行されるため、情報を出力して実行を終了する順序はありません。 計算は並列でスケジュールされますが、実行の順序は保証されません。
+このプログラムが実行されると、は `printTotalFileBytes` コマンドライン引数ごとに並列で実行されます。 非同期計算はプログラムフローとは無関係に実行されるため、情報を出力して実行を終了する順序は定義されていません。 計算は並列でスケジュールされますが、実行の順序は保証されません。
 
 ## <a name="sequence-asynchronous-computations"></a>シーケンスの非同期計算
 
@@ -125,18 +125,18 @@ let printTotalFileBytes path =
 [<EntryPoint>]
 let main argv =
     argv
-    |> Array.map printTotalFileBytes
+    |> Seq.map printTotalFileBytes
     |> Async.Sequential
     |> Async.Ignore
     |> Async.RunSynchronously
     |> ignore
 ```
 
-これは、 `printTotalFileBytes` 並列でスケジュールするのではなく、の要素の順序で実行するようにスケジュールされ `argv` ます。 次の項目は、最後の計算の実行が完了するまではスケジュールされないため、実行中に重複が発生しないように計算がシーケンス処理されます。
+これは、 `printTotalFileBytes` 並列でスケジュールするのではなく、の要素の順序で実行するようにスケジュールされ `argv` ます。 後続の各操作は、前の計算の実行が完了するまではスケジュールされないため、実行中に重複が発生しないように計算がシーケンス処理されます。
 
 ## <a name="important-async-module-functions"></a>重要な非同期モジュール関数
 
-F # で非同期コードを記述する場合は、通常、計算のスケジューリングを処理するフレームワークと対話します。 ただし、これは常にであるとは限りません。そのため、非同期処理をスケジュールするためのさまざまな開始関数について学習することをお勧めします。
+F # で非同期コードを記述する場合は、通常、計算のスケジューリングを処理するフレームワークと対話します。 ただし、常にそうであるとは限りません。そのため、非同期処理のスケジュール設定に使用できるさまざまな関数について理解しておくことをお勧めします。
 
 F # の非同期計算は、既に実行されている作業の表現ではなく、作業の _仕様_ であるため、開始関数を使用して明示的に開始する必要があります。 さまざまなコンテキストで役に立つ [非同期開始メソッド](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html#section0) が多数あります。 次のセクションでは、より一般的な開始関数のいくつかについて説明します。
 
@@ -190,7 +190,7 @@ computation: Async<'T> * taskCreationOptions: ?TaskCreationOptions * cancellatio
 
 使う状況:
 
-- <xref:System.Threading.Tasks.Task%601>非同期計算の結果を表すためにを予期する .NET API を呼び出す必要がある場合。
+- <xref:System.Threading.Tasks.Task%601>非同期計算の結果を表すためにを生成する .NET API を呼び出す必要がある場合。
 
 注意事項:
 
@@ -198,12 +198,12 @@ computation: Async<'T> * taskCreationOptions: ?TaskCreationOptions * cancellatio
 
 ### <a name="asyncparallel"></a>Async. Parallel
 
-並列で実行される一連の非同期計算をスケジュールします。 並列処理の次数は、パラメーターを指定することによって、必要に応じてチューニング/調整できます `maxDegreesOfParallelism` 。
+並列実行される一連の非同期計算をスケジュールし、指定された順序で結果の配列を生成します。 並列処理の次数は、パラメーターを指定することによって、必要に応じてチューニング/調整できます `maxDegreeOfParallelism` 。
 
 署名:
 
 ```fsharp
-computations: seq<Async<'T>> * ?maxDegreesOfParallelism: int -> Async<'T[]>
+computations: seq<Async<'T>> * ?maxDegreeOfParallelism: int -> Async<'T[]>
 ```
 
 使用するタイミング:
@@ -251,7 +251,7 @@ task: Task<'T> -> Async<'T>
 
 注意事項:
 
-- 例外は、 <xref:System.AggregateException> タスク並列ライブラリの規則に従うことによってラップされます。この動作は、F # async が一般に例外を示す方法とは異なります。
+- 例外は、 <xref:System.AggregateException> タスク並列ライブラリの規則に従ってラップされます。この動作は、F # の非同期で一般的に例外が表面化する方法とは異なります。
 
 ### <a name="asynccatch"></a>Async. Catch
 
@@ -273,7 +273,7 @@ computation: Async<'T> -> Async<Choice<'T, exn>>
 
 ### <a name="asyncignore"></a>Async. Ignore
 
-指定された計算を実行し、その結果を無視する非同期計算を作成します。
+指定された計算を実行する非同期計算を作成しますが、その結果は削除されます。
 
 署名:
 
@@ -283,7 +283,7 @@ computation: Async<'T> -> Async<unit>
 
 使う状況:
 
-- 結果が不要な非同期計算がある場合。 これは、 `ignore` 非非同期コードのコードに似ています。
+- 結果が不要な非同期計算がある場合。 これは、非同期で `ignore` ないコードの関数に似ています。
 
 注意事項:
 
@@ -291,7 +291,7 @@ computation: Async<'T> -> Async<unit>
 
 ### <a name="asyncrunsynchronously"></a>Async. RunSynchronously
 
-非同期計算を実行し、呼び出し元のスレッドでその結果を待機します。 この呼び出しはブロックされています。
+非同期計算を実行し、呼び出し元のスレッドでその結果を待機します。 計算によって例外が生成されるように、例外を伝達します。 この呼び出しはブロックされています。
 
 署名:
 
@@ -310,7 +310,7 @@ computation: Async<'T> * timeout: ?int * cancellationToken: ?CancellationToken -
 
 ### <a name="asyncstart"></a>Async。開始
 
-を返すスレッドプールで非同期計算を開始 `unit` します。 は結果を待機しません。 で始まる入れ子になった計算 `Async.Start` は、それを呼び出した親の計算とは無関係に開始されます。 有効期間は、どの親計算にも関連付けられていません。 親計算が取り消された場合、子計算は取り消されません。
+スレッドプールでを返す非同期計算を開始 `unit` します。 は、完了するのを待たず、または例外の結果を観察します。 で開始した入れ子になった計算 `Async.Start` は、それらを呼び出した親計算とは無関係に開始されます。有効期間は親計算に関連付けられていません。 親計算が取り消された場合、子計算は取り消されません。
 
 署名:
 
@@ -323,7 +323,7 @@ computation: Async<unit> * cancellationToken: ?CancellationToken -> unit
 - 非同期計算によって結果が得られないか、または処理が必要ありません。
 - 非同期計算がいつ完了するかを知る必要はありません。
 - 非同期計算を実行するスレッドを気にする必要はありません。
-- タスクの結果として発生した例外を認識したり、報告したりする必要はありません。
+- 実行の結果として発生した例外を認識したりレポートしたりする必要はありません。
 
 注意事項:
 
@@ -382,7 +382,7 @@ module Async =
 
 F # では、現在のスレッドで (または現在のスレッドではなく) 非同期計算を開始する機能が提供されますが、非同期性は通常、特定のスレッド処理方法に関連付けられていません。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [F # の非同期プログラミングモデル](https://www.microsoft.com/research/publication/the-f-asynchronous-programming-model)
 - [Jet .com の F # 非同期ガイド](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)

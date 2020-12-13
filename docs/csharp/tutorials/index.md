@@ -2,12 +2,12 @@
 title: C# のチュートリアル
 description: 以下の C# のチュートリアルでは、C# プログラムをビルドする方法と C# 言語機能について説明します。
 ms.date: 10/25/2018
-ms.openlocfilehash: 9542f4919c9b1f0363fb8bc27136eb9a7e074913
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: d6eeed2ed5fbf68120c789b7d8203e811fb8608d
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414820"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110170"
 ---
 # <a name="c-tutorials"></a>C# のチュートリアル
 
@@ -47,7 +47,6 @@ Hello World レッスンに続くすべての入門用チュートリアルは�
 
 ## <a name="explore-new-features-in-c"></a>C\# の新機能を詳しく学習する
 
-* [C# 6 の新機能を対話形式で試す](exploration/csharp-6.yml):[C# 6](../whats-new/csharp-6.md) に追加された機能を、ご自身のブラウザーで対話的に調べます。
 * [文字列補間](string-interpolation.md): 文字列補間を使用して C# で書式設定された文字列を作成する方法について説明します。
 * [Null 許容参照型](nullable-reference-types.md): Null 許容参照型を使って null 参照の意図を表現する方法について説明します。
 * [Null 許容参照型を利用するようプロジェクトを更新する](upgrade-to-nullable-references.md): null 許容参照型を利用するよう既存のプロジェクトをアップグレードする手法について説明します。
