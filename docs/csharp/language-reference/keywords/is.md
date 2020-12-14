@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: d30ebfa2dc47265185a96514efbddc3e4937438c
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: c38649a9e3b3f75ec35fb8711324302a682b504e
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982395"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851335"
 ---
 # <a name="is-c-reference"></a>is (C# リファレンス)
 
@@ -32,7 +32,7 @@ C# 7.0 以降では、`is` および [switch](switch.md) ステートメント�
 型パターンを使用してパターン マッチングを実行すると、式を指定された型に変換できるかどうかが `is` によってテストされ、変換できる場合はその型の変数にキャストされます。 `is` ステートメントのわかりやすい拡張機能であり、型の評価および変換を簡潔に記述できます。 `is` 型パターンの一般的な形式は次のとおりです。
 
 ```csharp
-   expr is type varname
+expr is type varname
 ```
 
 ここで *expr* は何らかの型のインスタンスに評価される式、*type* は *expr* の結果が変換される型の名前、*varname* は `is` のテスト結果が `true` である場合に *expr* の結果が変換されるオブジェクトをそれぞれ表しています。

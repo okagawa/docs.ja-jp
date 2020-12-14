@@ -5,12 +5,12 @@ ms.date: 04/02/2020
 author: natke
 ms.author: nakersha
 ms.custom: how-to
-ms.openlocfilehash: c744b42b4b95681de7b0cbeaef338cc890708fd8
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 75d29c6bafdce5c9bb104229ddc8d7b847f57e29
+ms.sourcegitcommit: fcbe432482464b1639decad78cc4dc8387c6269e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008431"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97366807"
 ---
 # <a name="install-extra-mlnet-dependencies"></a>追加の ML.NET 依存関係のインストール
 
@@ -24,7 +24,7 @@ dotnet add package Microsoft.ML
 
 ## <a name="microsoftmltimeseries-microsoftmlautoml"></a>Microsoft.ML.TimeSeries、Microsoft.ML.AutoML
 
-これらのパッケージはどちらも `Microsoft.ML.MKL.Redist` に依存しており、これは `libiomp` に依存しています。
+これらのパッケージはどちらも `Microsoft.ML.MKL.Redist` に依存しており、これは `libomp` に依存しています。
 
 ### <a name="windows"></a>Windows
 

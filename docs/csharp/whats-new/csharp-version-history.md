@@ -3,12 +3,12 @@ title: C# の歴史 - C# ガイド
 description: この言語の最初のバージョンがどのようなものであったか、そしてそれ以降どのように進化してきたかについて説明します。
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: 349f2cfbe0fc93060eb6927ee8c3528c16b99aca
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 7258dc8b8fcfbd6354b5ceee4183429bfee14038
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805090"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110729"
 ---
 # <a name="the-history-of-c"></a>C\# の歴史
 
@@ -134,17 +134,17 @@ Visual Studio 2012 でリリースされた C# バージョン 5.0 は、この�
 
 C# バージョン 3.0 と 5.0 では、主要な新機能がオブジェクト指向言語に追加されました。 Visual Studio 2015 と共にリリースされたバージョン 6.0 では、主要な目玉機能を投入する代わりに、C# プログラミングをより生産的にする多くの小さな機能をリリースしました。 その一部を次に示します。
 
-- [静的インポート](./csharp-6.md#using-static)
-- [例外フィルター](./csharp-6.md#exception-filters)
-- [自動プロパティ初期化子](./csharp-6.md#auto-property-initializers)
-- [式形式のメンバー](./csharp-6.md#expression-bodied-function-members)
-- [Null 伝達子](./csharp-6.md#null-conditional-operators)
-- [文字列補間](./csharp-6.md#string-interpolation)
-- [nameof 演算子](./csharp-6.md#the-nameof-expression)
-- [インデックス初期化子](csharp-6.md#extension-add-methods-in-collection-initializers)
+- [静的インポート](../language-reference/keywords/using-static.md)
+- [例外フィルター](../language-reference/keywords/when.md)
+- [自動プロパティ初期化子](../properties.md)
+- [式形式のメンバー](../language-reference/operators/lambda-operator.md#expression-body-definition)
+- [Null 伝達子](../language-reference/operators/member-access-operators.md#null-conditional-operators--and-)
+- [文字列補間](../language-reference/tokens/interpolated.md)
+- [nameof 演算子](../language-reference/operators/nameof.md)
 
 その他に次の新機能があります。
 
+- インデックス初期化子
 - Catch/Finally ブロックでの Await
 - ゲッターのみのプロパティの既定値
 
@@ -254,4 +254,4 @@ C# 8.0 は、特に C# .NET Core をターゲットとする最初のメジャ�
 
 既定のインターフェイス メンバーには、CLR の拡張機能が必要です。 これらの機能は、CLR for .NET Core 3.0 で追加されました。 範囲とインデックス、および非同期ストリームには、.NET Core 3.0 ライブラリの新しい型が必要です。 null 許容参照型は、コンパイラに実装されていますが、引数と戻り値の null 状態に関するセマンティック情報を提供する注釈がライブラリに付けられている場合に非常に役立ちます。 このような注釈は .NET Core ライブラリに追加されています。
 
-_記事_は、[_NDepend ブログで元々公開されていたものです_](https://blog.ndepend.com/c-versions-look-language-history/) _(提供: Erik Dietrich および Patrick Smacchia)。_
+_記事_ は、[_NDepend ブログで元々公開されていたものです_](https://blog.ndepend.com/c-versions-look-language-history/) _(提供: Erik Dietrich および Patrick Smacchia)。_
