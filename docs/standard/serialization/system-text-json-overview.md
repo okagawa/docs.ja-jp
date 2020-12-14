@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: d8bd5bcf78db534bd722972db01253cbd13a7a06
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: cb5c15c2a5c336e2d5b4a3754fa7a02a370602f3
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282399"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009886"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>.NET での JSON のシリアル化と逆シリアル化 (マーシャリングとマーシャリング解除) - 概要
 
@@ -37,9 +37,19 @@ ms.locfileid: "93282399"
 ## <a name="additional-resources"></a>その他の技術情報
 
 * [ライブラリを使用する方法](system-text-json-how-to.md)
-* [Newtonsoft.Json から移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [コンバーターを記述する方法](system-text-json-converters-how-to.md)
-* [System.Text.Json ソース コード](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json)
+* [JsonSerializerOptions インスタンスのインスタンスを作成する](system-text-json-configure-options.md)
+* [大文字と小文字を区別しない一致を有効にする](system-text-json-character-casing.md)
+* [プロパティの名前と値をカスタマイズする](system-text-json-customize-properties.md)
+* [プロパティを無視する](system-text-json-ignore-properties.md)
+* [無効な JSON を許可する](system-text-json-invalid-json.md)
+* [オーバーフロー JSON の処理](system-text-json-handle-overflow.md)
+* [参照を保持する](system-text-json-preserve-references.md)
+* [変更できない型と非パブリック アクセサー](system-text-json-immutability.md)
+* [ポリモーフィックなシリアル化](system-text-json-polymorphism.md)
+* [Newtonsoft.Json から System.Text.Json に移行する](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [文字エンコードをカスタマイズする](system-text-json-character-encoding.md)
+* [カスタム シリアライザーと逆シリアライザーを作成する](write-custom-serializer-deserializer.md)
+* [JSON シリアル化のためのカスタム コンバーターの作成](system-text-json-converters-how-to.md)
+* [DateTime および DateTimeOffset のサポート](../datetime/system-text-json-support.md)
 * [System.Text.Json API リファレンス](xref:System.Text.Json)
 * [System.Text.Json.Serialization API リファレンス](xref:System.Text.Json.Serialization)
-<!-- * [Roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

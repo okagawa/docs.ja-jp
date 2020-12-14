@@ -1,36 +1,34 @@
 ---
-title: .NET Core ランタイムと SDK をバージョン管理する方法
-description: この記事では、.NET Core SDK と ランタイムをバージョン管理する方法について説明します (セマンティック バージョニングと似ています)。
-ms.date: 06/24/2020
-ms.openlocfilehash: baa3f94947699d21ce7426054359d91f7781b565
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+title: .NET ランタイムおよび SDK のバージョン管理の方法
+description: この記事では、.NET SDK とランタイムがどのようにバージョン管理されているかについて説明します (セマンティック バージョニングと似ています)。
+ms.date: 12/07/2020
+ms.openlocfilehash: 2fe0b162b52f1e4500ec87f7d5d92054cd569552
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726705"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009307"
 ---
-# <a name="overview-of-how-net-core-is-versioned"></a>.NET Core をバージョン管理する方法の概要
+# <a name="overview-of-how-net-is-versioned"></a>.NET のバージョン管理の方法の概要
 
-.NET Core とは .NET Core ランタイムと .NET Core SDK を示しており、これにはアプリケーションを開発するのに必要なツールが含まれています。 .NET Core SDK は、前のバージョンの .NET Core ランタイムをどれでも使用できるように設計されています。 この記事では、ランタイムおよび SDK のバージョン戦略について説明します。 .NET Standard のバージョン番号については、[.NET Standard](../../standard/net-standard.md#net-implementation-support) に関する記事を参照してください。
-
-.NET Core ランタイムと .NET Core SDK ではそれぞれ異なるレートで新しい機能が追加されます。一般に、運用環境で使用しているランタイムが .NET Core ランタイムによって変更されるよりも速く、.NET Core SDK でのツールの更新が行われます。
+[.NET ランタイムと .NET SDK](../introduction.md#sdk-and-runtimes) では、新しい機能が追加される頻度が異なります。 一般には、ランタイムよりも SDK の方がより頻繁に更新されます。 この記事では、ランタイムと SDK のバージョン番号について説明します。
 
 ## <a name="versioning-details"></a>バージョン管理の詳細
 
-".NET Core 2.1" は、.NET Core ランタイムのバージョン番号を示しています。 .NET Core ランタイムでは、バージョン管理に対してメジャー/マイナー/パッチ アプローチが使用されており、これは[セマンティック バージョニング](#semantic-versioning)に従っています。
+.NET ランタイムでは、[セマンティック バージョニング](#semantic-versioning)に従い、メジャー、マイナーおよびパッチを使用してバージョン管理を行っています。
 
-.NET Core SDK の場合は、セマンティック バージョニングに従っていません。 .NET Core SDK の方が速くリリースされます。そのバージョンでは、揃えられたランタイムと SDK 独自のマイナー/パッチ リリースの両方が示される必要があります。 .NET Core SDK バージョンの 1 番目と 2 番目の位置は、一緒にリリースされる .NET Core ランタイムと揃えられます。 SDK の各バージョンでは、このランタイムまたはより低いバージョンに対するアプリケーションを作成できます。
+.NET SDK は、セマンティックバージョニングには従っていません。 .NET SDK の方が速くリリースされ、そのバージョン番号では、それと連携しているランタイムとその SDK 自体のマイナーおよびパッチ リリースの両方が示されている必要があります。
 
-SDK バージョン番号の 3 番目の位置には、マイナー番号とパッチ番号の両方が示されます。 マイナー バージョンには 100 が乗算されます。 マイナー バージョン 1、パッチ バージョン 2 の場合は、102 と表現されます。 最後の 2 桁はパッチの番号を示しています。 たとえば、.NET Core 2.2 のリリースの場合、次の表のようなリリースが作成される可能性があります。
+.NET SDK のバージョン番号の 1 番目と 2 番目の位置は、一緒にリリースされる .NET ランタイムと固定されています。 SDK の各バージョンでは、このランタイムまたはより低いバージョンに対するアプリケーションを作成できます。
 
-| 変更                | .NET Core ランタイム | .NET Core SDK (\*) |
+SDK バージョン番号の 3 番目の位置には、マイナー番号とパッチ番号の両方が示されます。 マイナー バージョンには 100 が乗算されます。 マイナー バージョン 1、パッチ バージョン 2 の場合は、102 と表現されます。 最後の 2 桁はパッチの番号を示しています。 たとえば、ランタイムと SDK のバージョン番号の順番としては、次が可能です。
+
+| Change                | .NET ランタイム      | .NET SDK (\*)     |
 |-----------------------|-------------------|-------------------|
 | 初期リリース       | 2.2.0             | 2.2.100           |
 | SDK パッチ             | 2.2.0             | 2.2.101           |
 | ランタイムおよび SDK パッチ | 2.2.1             | 2.2.102           |
 | SDK 機能変更    | 2.2.1             | 2.2.200           |
-
-(\*) 上記の表では、2.2 .NET Core Runtime が例として使用されています。 .NET Core 2.1 に対する最初の SDK が 2.1.300 であることが、履歴アーティファクトで示されていたからです。 詳細については、「[.NET Core のバージョンの選択](selection.md)」を参照してください。
 
 注:
 
@@ -41,7 +39,7 @@ SDK バージョン番号の 3 番目の位置には、マイナー番号とパ�
 
 ## <a name="semantic-versioning"></a>セマンティック バージョン管理
 
-.NET Core *ランタイム* は、[セマンティック バージョニング (SemVer)](https://semver.org/) にほぼ準拠しています。`MAJOR.MINOR.PATCH` バージョン管理の使用が採用され、バージョン番号のさまざまな部分を使用して変更の程度と種類が記述されています。
+.NET *ランタイム* は、[セマンティック バージョニング (SemVer)](https://semver.org/) にほぼ準拠しています。`MAJOR.MINOR.PATCH` バージョン管理の使用が採用され、バージョン番号のさまざまな部分を使用してどの程度のどのような種類の変更があったかが示されています。
 
 ```
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
@@ -76,11 +74,11 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ## <a name="version-numbers-in-file-names"></a>ファイル名に含まれるバージョン番号
 
-.NET Core でダウンロードされるファイルには、バージョンが伴います (たとえば、`dotnet-sdk-2.1.300-win10-x64.exe` のように)。
+.NET 用にダウンロードされるファイルは、たとえば、`dotnet-sdk-2.1.300-win10-x64.exe` のようにバージョンを含んでいます。
 
 ### <a name="preview-versions"></a>プレビュー バージョン
 
-プレビュー バージョンには、`-preview[number]-([build]|"final")` がバージョンに追加されます。 たとえば、`2.0.0-preview1-final` のようにします。
+プレビュー バージョンには、`-preview[number]-([build]|"final")` がバージョン番号に追加されます。 たとえば、`2.0.0-preview1-final` のようにします。
 
 ### <a name="servicing-versions"></a>サービスのバージョン
 
@@ -88,29 +86,17 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ## <a name="relationship-to-net-standard-versions"></a>.NET Standard との関係
 
-.NET Standard は、.NET 参照アセンブリで構成されています。 各プラットフォームに固有の複数の実装があります。 参照アセンブリには、指定された .NET Standard バージョンの一部である .NET API の定義が含まれています。 各実装では、特定のプラットフォームに対する .NET Standard コントラクトが満たされます。 .NET Standard の詳細については、.NET ガイド内の [.NET Standard](../../standard/net-standard.md) に関する記事を参照してください。
+.NET Standard は、.NET 参照アセンブリで構成されています。 各プラットフォームに固有の複数の実装があります。 参照アセンブリには、指定された .NET Standard バージョンの一部である .NET API の定義が含まれています。 各実装では、特定のプラットフォームに対する .NET Standard コントラクトが満たされます。
 
 .NET Standard 参照アセンブリでは、`MAJOR.MINOR` バージョン管理スキームが使用されます。 .NET Standard の場合、`PATCH` レベルは有用ではありません。 .NET Standard では、API 仕様しか公開されず (実装は対象外)、定義上、API に対する変更はいずれも機能セット内の変更を示すものであり、`MINOR` バージョンとなるためです。
 
 各プラットフォーム上の実装の場合は、通常、プラットフォーム リリースの一部として更新されるので、そのプラットフォーム上で .NET Standard を使用しているプログラマには明らかにされません。
 
-.NET Core の各バージョンでは、.NET Standard のバージョンが実装されます。 .NET Standard のバージョンを実装すると、以前のバージョンの .NET Standard のサポートが含まれます。 .NET Standard と .NET Core のバージョンは独立しています。 .NET Core 2.0 によって .NET Standard 2.0 が実装されるのは偶然です。 .NET core 2.1 では .NET Standard 2.0 も実装されます。 .NET Core では、.NET Standard の将来のバージョンについても、リリースされた場合はサポートされます。
-
-| .NET Core | .NET Standard |
-|-----------|---------------|
-| 1.0       | 最大 1.6     |
-| 2.0       | 最大 2.0     |
-| 2.1       | 最大 2.0     |
-| 2.2       | 最大 2.0     |
-| 3.0       | 最大 2.1     |
-| 3.1       | 最大 2.1     |
-
-.NET Standard のバージョンの対話型テーブルと、それらが .NET 実装にどのように対応しているのかについては、「[.NET Standard のバージョン](https://dotnet.microsoft.com/platform/dotnet-standard#versions)」を参照してください。
+詳細については、「[.NET Standard](../../standard/net-standard.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
 - [ターゲット フレームワーク](../../standard/frameworks.md)
-- [.NET Core の配布パッケージ](../distribution-packaging.md)
-- [.NET Core サポート ライフサイクルのファクト シート](https://dotnet.microsoft.com/platform/support/policy)
-- [.NET core 2 + バージョン バインディング](https://github.com/dotnet/designs/issues/3)
-- [.NET Core の Docker イメージ](https://hub.docker.com/_/microsoft-dotnet/)
+- [.NET の配布パッケージ](../distribution-packaging.md)
+- [.NET サポート ライフサイクルのファクト シート](https://dotnet.microsoft.com/platform/support/policy)
+- [.NET の Docker イメージ](https://hub.docker.com/_/microsoft-dotnet/)

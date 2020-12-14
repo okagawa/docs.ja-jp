@@ -1,7 +1,7 @@
 ---
 title: System.Text.Json で参照を保持する方法
 description: .NET で JSON との間のシリアル化および逆シリアル化を行うときに、参照を保持し、循環参照を処理する方法について説明します。
-ms.date: 11/30/2020
+ms.date: 12/09/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -11,18 +11,14 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 9254ca261c7d748c04c311fa56359014f752ff31
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: d358c953c0979ca097c080fcd750d5ef95b07de0
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439788"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97008735"
 ---
-# <a name="how-to-handle-circular-references-with-no-locsystemtextjson"></a>System.Text.Json で循環参照を処理する方法
-
-この記事では、`System.Text.Json` 名前空間を使用して循環参照を処理する方法について説明します。
-
-## <a name="preserve-references-and-handle-circular-references"></a>参照を保持し、循環参照を処理する
+# <a name="how-to-preserve-references-and-handle-circular-references-with-no-locsystemtextjson"></a>System.Text.Json で参照を保持して循環参照を処理する
 
 ::: zone pivot="dotnet-5-0"
 
@@ -59,7 +55,8 @@ ms.locfileid: "96439788"
 ## <a name="see-also"></a>関連項目
 
 * [System.Text.Json の概要](system-text-json-overview.md)
-* [JsonSerializerOptions をインスタンス化する](system-text-json-configure-options.md)
+* [JSON をシリアル化および逆シリアル化する方法](system-text-json-how-to.md)
+* [JsonSerializerOptions インスタンスのインスタンスを作成する](system-text-json-configure-options.md)
 * [大文字と小文字を区別しない一致を有効にする](system-text-json-character-casing.md)
 * [プロパティの名前と値をカスタマイズする](system-text-json-customize-properties.md)
 * [プロパティを無視する](system-text-json-ignore-properties.md)
@@ -67,4 +64,10 @@ ms.locfileid: "96439788"
 * [オーバーフロー JSON の処理](system-text-json-handle-overflow.md)
 * [変更できない型と非パブリック アクセサー](system-text-json-immutability.md)
 * [ポリモーフィックなシリアル化](system-text-json-polymorphism.md)
+* [Newtonsoft.Json から System.Text.Json に移行する](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [文字エンコードをカスタマイズする](system-text-json-character-encoding.md)
+* [カスタム シリアライザーと逆シリアライザーを作成する](write-custom-serializer-deserializer.md)
+* [JSON シリアル化のためのカスタム コンバーターの作成](system-text-json-converters-how-to.md)
+* [DateTime および DateTimeOffset のサポート](../datetime/system-text-json-support.md)
 * [System.Text.Json API リファレンス](xref:System.Text.Json)
+* [System.Text.Json.Serialization API リファレンス](xref:System.Text.Json.Serialization)

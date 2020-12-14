@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 2d663ac8c1c15d61959a62c40d9a3b0993484032
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: 3e2fb8cbdd35e772b5e97c731199f69aa834bd0a
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599077"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009743"
 ---
 # <a name="how-to-enable-case-insensitive-property-name-matching-with-no-locsystemtextjson"></a>System.Text.Json で大文字と小文字を区別しないプロパティ名の照合を有効にする方法
 
@@ -45,12 +45,19 @@ ms.locfileid: "96599077"
 ## <a name="see-also"></a>関連項目
 
 * [System.Text.Json の概要](system-text-json-overview.md)
-* [JsonSerializerOptions をインスタンス化する](system-text-json-configure-options.md)
+* [JSON をシリアル化および逆シリアル化する方法](system-text-json-how-to.md)
+* [JsonSerializerOptions インスタンスのインスタンスを作成する](system-text-json-configure-options.md)
 * [プロパティの名前と値をカスタマイズする](system-text-json-customize-properties.md)
 * [プロパティを無視する](system-text-json-ignore-properties.md)
 * [無効な JSON を許可する](system-text-json-invalid-json.md)
 * [オーバーフロー JSON の処理](system-text-json-handle-overflow.md)
-* [循環参照の保持](system-text-json-preserve-references.md)
+* [参照を保持する](system-text-json-preserve-references.md)
 * [変更できない型と非パブリック アクセサー](system-text-json-immutability.md)
 * [ポリモーフィックなシリアル化](system-text-json-polymorphism.md)
+* [Newtonsoft.Json から System.Text.Json に移行する](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [文字エンコードをカスタマイズする](system-text-json-character-encoding.md)
+* [カスタム シリアライザーと逆シリアライザーを作成する](write-custom-serializer-deserializer.md)
+* [JSON シリアル化のためのカスタム コンバーターの作成](system-text-json-converters-how-to.md)
+* [DateTime および DateTimeOffset のサポート](../datetime/system-text-json-support.md)
 * [System.Text.Json API リファレンス](xref:System.Text.Json)
+* [System.Text.Json.Serialization API リファレンス](xref:System.Text.Json.Serialization)

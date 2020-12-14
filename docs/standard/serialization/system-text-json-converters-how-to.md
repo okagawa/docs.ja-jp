@@ -1,7 +1,7 @@
 ---
 title: JSON シリアル化のためのカスタム コンバーターを作成する方法 - .NET
 description: System.Text.Json 名前空間で提供される JSON シリアル化クラス用のカスタム コンバーターを作成する方法について説明します。
-ms.date: 11/30/2020
+ms.date: 12/09/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 17671b86dc6d1d7b45a01cb0bf7c5c42f624d99f
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 33334ccd8bad4ac5a9f5dccde79ff3ae09ca8f89
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438126"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97008865"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET で JSON シリアル化 (マーシャリング) のためのカスタム コンバーターを作成する方法
 
@@ -25,7 +25,7 @@ ms.locfileid: "96438126"
 
 "*コンバーター*" は、オブジェクトまたは値を JSON との間で双方向に変換するクラスです。 `System.Text.Json` 名前空間には、JavaScript のプリミティブに対応するほとんどのプリミティブ型に対して、組み込みのコンバーターがあります。 次の目的で、カスタム コンバーターを作成することができます。
 
-* 組み込みコンバーターの既定の動作をオーバーライドするため。 たとえば、`DateTime` の値を、既定の ISO 8601-1:2019 形式ではなく、mm/dd/yyyy 形式で表すことができます。
+* 組み込みコンバーターの既定の動作をオーバーライドするため。 たとえば、`DateTime` の値を、mm/dd/yyyy の形式で表したい場合があります。 既定では、RFC 3339 プロファイルを含め、ISO 8601-1:2019 がサポートされています。 詳細については、「[System.Text.Json での DateTime と DateTimeOffset のサポート](../datetime/system-text-json-support.md)」を参照してください。
 * カスタム値型をサポートするため。 たとえば、`PhoneNumber` 構造体などです。
 
 また、カスタム コンバーターを作成し、現在のリリースには含まれない機能で `System.Text.Json` をカスタマイズまたは拡張することもできます。 この記事ではこの後、次のシナリオについて説明します。
@@ -44,6 +44,8 @@ ms.locfileid: "96438126"
 * [ポリモーフィックな逆シリアル化をサポートする](#support-polymorphic-deserialization)。
 * [Stack\<T> のラウンドトリップをサポートする](#support-round-trip-for-stackt)。
 ::: zone-end
+
+カスタム コンバーター用に作成したコードでは、新しい <xref:System.Text.Json.JsonSerializerOptions> インスタンスを使用することによってパフォーマンスが大幅に低下することに注意してください。 詳細については、[JsonSerializerOptions インスタンスの再利用](system-text-json-configure-options.md#reuse-jsonserializeroptions-instances)に関する説明を参照してください。
 
 ## <a name="custom-converter-patterns"></a>カスタム コンバーターのパターン
 
@@ -103,7 +105,11 @@ ms.locfileid: "96438126"
 
 ## <a name="error-handling"></a>エラー処理
 
-エラー処理コードで例外をスローする必要がある場合は、メッセージを含まない <xref:System.Text.Json.JsonException> をスローすることを検討します。 この例外型では、エラーの原因となった JSON の部分へのパスを含むメッセージが自動的に作成されます。 たとえば、`throw new JsonException();` というステートメントでは、次の例のようなエラー メッセージが生成されます。
+シリアライザーは、<xref:System.Text.Json.JsonException> および <xref:System.NotSupportedException> の例外の種類を特別に処理します。
+
+### <a name="jsonexception"></a>JsonException
+
+メッセージなしで `JsonException` をスローする場合、シリアライザーがそのエラーの原因となった JSON の部分へのパスを含むメッセージを作成します。 たとえば、`throw new JsonException()` というステートメントでは、次の例のようなエラー メッセージが生成されます。
 
 ```output
 Unhandled exception. System.Text.Json.JsonException:
@@ -111,7 +117,25 @@ The JSON value could not be converted to System.Object.
 Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 ```
 
-メッセージ (`throw new JsonException("Error occurred")` など) を指定した場合でも、例外の <xref:System.Text.Json.JsonException.Path> プロパティでパスが提供されます。
+メッセージを指定した場合 (たとえば `throw new JsonException("Error occurred")` でも、シリアライザーは <xref:System.Text.Json.JsonException.Path>、<xref:System.Text.Json.JsonException.LineNumber>、および <xref:System.Text.Json.JsonException.BytePositionInLine> プロパティを設定します。
+
+### <a name="notsupportedexception"></a>NotSupportedException
+
+`NotSupportedException` をスローした場合は、メッセージには常にパス情報が含まれます。 メッセージを指定すると、そのメッセージにパス情報が追加されます。 たとえば、`throw new NotSupportedException("Error occurred.")` というステートメントでは、次の例のようなエラー メッセージが生成されます。
+
+```output
+Error occurred. The unsupported member type is located on type
+'System.Collections.Generic.Dictionary`2[Samples.SummaryWords,System.Int32]'.
+Path: $.TemperatureRanges | LineNumber: 4 | BytePositionInLine: 24
+```
+
+### <a name="when-to-throw-which-exception-type"></a>どのようなときにどのような種類の例外をスローするか
+
+JSON ペイロードに、逆シリアル化される型に無効なトークンが含まれている場合は `JsonException` をスローします。
+
+特定の型を許可しない場合は、`NotSupportedException` をスローします。 この例外は、サポートされていない型にシリアライザーが自動的にスローします。 たとえば、セキュリティ上の理由で `System.Type` はサポートされていないため、これを逆シリアル化しようとすると、`NotSupportedException` になります。
+
+必要に応じて他の例外をスローすることもできますが、それらには JSON パス情報は自動的に含まれません。
 
 ## <a name="register-a-custom-converter"></a>カスタム コンバーターを登録する
 
@@ -373,8 +397,20 @@ JSON 文字列を <xref:System.Collections.Generic.Stack%601> オブジェクト
 ## <a name="additional-resources"></a>その他の技術情報
 
 * [組み込みコンバーターのソース コード](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)
-* [System.Text.Json での DateTime と DateTimeOffset のサポート](../datetime/system-text-json-support.md)
-* [文字エンコードをカスタマイズする方法](system-text-json-character-encoding.md)
-* [カスタム シリアライザーと逆シリアライザーを作成する方法](write-custom-serializer-deserializer.md)
+* [System.Text.Json の概要](system-text-json-overview.md)
+* [JSON をシリアル化および逆シリアル化する方法](system-text-json-how-to.md)
+* [JsonSerializerOptions インスタンスのインスタンスを作成する](system-text-json-configure-options.md)
+* [大文字と小文字を区別しない一致を有効にする](system-text-json-character-casing.md)
+* [プロパティの名前と値をカスタマイズする](system-text-json-customize-properties.md)
+* [プロパティを無視する](system-text-json-ignore-properties.md)
+* [無効な JSON を許可する](system-text-json-invalid-json.md)
+* [オーバーフロー JSON の処理](system-text-json-handle-overflow.md)
+* [参照を保持する](system-text-json-preserve-references.md)
+* [変更できない型と非パブリック アクセサー](system-text-json-immutability.md)
+* [ポリモーフィックなシリアル化](system-text-json-polymorphism.md)
+* [Newtonsoft.Json から System.Text.Json に移行する](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [文字エンコードをカスタマイズする](system-text-json-character-encoding.md)
+* [カスタム シリアライザーと逆シリアライザーを作成する](write-custom-serializer-deserializer.md)
+* [DateTime および DateTimeOffset のサポート](../datetime/system-text-json-support.md)
 * [System.Text.Json API リファレンス](xref:System.Text.Json)
 * [System.Text.Json.Serialization API リファレンス](xref:System.Text.Json.Serialization)

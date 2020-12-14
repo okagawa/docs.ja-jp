@@ -13,12 +13,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: bc256c5129cd4a7306e632685474b159a43ce76c
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 418637639790199755803bf374ef99af949ae9b3
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438061"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009899"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>Newtonsoft.Json から System.Text.Json に移行する方法
 
@@ -535,7 +535,7 @@ JSON に `Date` プロパティがない場合に逆シリアル化が失敗す�
 * `DateTimeZoneHandling` 設定を使用すると、すべての `DateTime` 値を UTC 日付としてシリアル化できます。
 * `DateFormatString` 設定と `DateTime` コンバーターを使用すると、日付文字列の形式をカスタマイズできます。
 
-<xref:System.Text.Json> では、サポートが組み込まれている形式は ISO 8601-1:2019 のみです。これが広く採用されていて明確であり、ラウンド トリップが正確に行われるためです。 他の形式を使用するには、カスタム コンバーターを作成します。 詳細については、「[System.Text.Json での DateTime と DateTimeOffset のサポート](../datetime/system-text-json-support.md)」を参照してください。
+<xref:System.Text.Json> は、RFC 3339 プロファイルを含む ISO 8601-1:2019 をサポートしています。 この形式は広く採用されており、明確で、正確にラウンドトリップを行います。 他の形式を使用するには、カスタム コンバーターを作成します。 詳細については、「[System.Text.Json での DateTime と DateTimeOffset のサポート](../datetime/system-text-json-support.md)」を参照してください。
 
 ### <a name="callbacks"></a>コールバック
 
@@ -806,10 +806,20 @@ doc.WriteTo(writer);
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)[Restore this when the roadmap is updated.]-->
 * [System.Text.Json の概要](system-text-json-overview.md)
-* [System.Text.Json の使用方法](system-text-json-how-to.md)
-* [カスタム コンバーターを記述する方法](system-text-json-converters-how-to.md)
-* [System.Text.Json での DateTime と DateTimeOffset のサポート](../datetime/system-text-json-support.md)
+* [JSON をシリアル化および逆シリアル化する方法](system-text-json-how-to.md)
+* [JsonSerializerOptions インスタンスのインスタンスを作成する](system-text-json-configure-options.md)
+* [大文字と小文字を区別しない一致を有効にする](system-text-json-character-casing.md)
+* [プロパティの名前と値をカスタマイズする](system-text-json-customize-properties.md)
+* [プロパティを無視する](system-text-json-ignore-properties.md)
+* [無効な JSON を許可する](system-text-json-invalid-json.md)
+* [オーバーフロー JSON の処理](system-text-json-handle-overflow.md)
+* [参照を保持する](system-text-json-preserve-references.md)
+* [変更できない型と非パブリック アクセサー](system-text-json-immutability.md)
+* [ポリモーフィックなシリアル化](system-text-json-polymorphism.md)
+* [文字エンコードをカスタマイズする](system-text-json-character-encoding.md)
+* [カスタム シリアライザーと逆シリアライザーを作成する](write-custom-serializer-deserializer.md)
+* [JSON シリアル化のためのカスタム コンバーターの作成](system-text-json-converters-how-to.md)
+* [DateTime および DateTimeOffset のサポート](../datetime/system-text-json-support.md)
 * [System.Text.Json API リファレンス](xref:System.Text.Json)
 * [System.Text.Json.Serialization API リファレンス](xref:System.Text.Json.Serialization)

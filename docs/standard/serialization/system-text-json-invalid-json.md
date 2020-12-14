@@ -1,7 +1,7 @@
 ---
 title: System.Text.Json でいくつかの種類の無効な JSON を許可する方法
 description: .NET で JSON との間のシリアル化または逆シリアル化を行うときに、コメント、末尾のコンマ、および引用符で囲まれた数値を許可する方法について説明します。
-ms.date: 11/30/2020
+ms.date: 12/03/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 60cbb98bb65ee5c1ffdd3043e42a04004530a115
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 2559b081010fb0a2fa208b121cb095efdeb8da2e
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439782"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009810"
 ---
 # <a name="how-to-allow-some-kinds-of-invalid-json-with-no-locsystemtextjson"></a>System.Text.Json でいくつかの種類の無効な JSON を許可する方法
 
@@ -36,6 +36,8 @@ ms.locfileid: "96439782"
   "Date": "2019-08-01T00:00:00-07:00",
   "TemperatureCelsius": 25, // Fahrenheit 77
   "Summary": "Hot", /* Zharko */
+  // Comments on
+  /* separate lines */
 }
 ```
 
@@ -77,12 +79,19 @@ ASP.NET Core を通じて間接的に `System.Text.Json` を使用すると、AS
 ## <a name="see-also"></a>関連項目
 
 * [System.Text.Json の概要](system-text-json-overview.md)
-* [JsonSerializerOptions をインスタンス化する](system-text-json-configure-options.md)
+* [JSON をシリアル化および逆シリアル化する方法](system-text-json-how-to.md)
+* [JsonSerializerOptions インスタンスのインスタンスを作成する](system-text-json-configure-options.md)
 * [大文字と小文字を区別しない一致を有効にする](system-text-json-character-casing.md)
 * [プロパティの名前と値をカスタマイズする](system-text-json-customize-properties.md)
 * [プロパティを無視する](system-text-json-ignore-properties.md)
 * [オーバーフロー JSON の処理](system-text-json-handle-overflow.md)
-* [循環参照の保持](system-text-json-preserve-references.md)
+* [参照を保持する](system-text-json-preserve-references.md)
 * [変更できない型と非パブリック アクセサー](system-text-json-immutability.md)
 * [ポリモーフィックなシリアル化](system-text-json-polymorphism.md)
+* [Newtonsoft.Json から System.Text.Json に移行する](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [文字エンコードをカスタマイズする](system-text-json-character-encoding.md)
+* [カスタム シリアライザーと逆シリアライザーを作成する](write-custom-serializer-deserializer.md)
+* [JSON シリアル化のためのカスタム コンバーターの作成](system-text-json-converters-how-to.md)
+* [DateTime および DateTimeOffset のサポート](../datetime/system-text-json-support.md)
 * [System.Text.Json API リファレンス](xref:System.Text.Json)
+* [System.Text.Json.Serialization API リファレンス](xref:System.Text.Json.Serialization)

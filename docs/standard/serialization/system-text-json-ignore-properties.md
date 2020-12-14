@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: ed7ef8509d6660bbbbaf194a87aa9d4815143507
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 6d703156d50a3e00a33cea5e15be2df911ed7c1b
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439783"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97008813"
 ---
 # <a name="how-to-ignore-properties-with-no-locsystemtextjson"></a>System.Text.Json でプロパティを無視する方法
 
@@ -137,12 +137,19 @@ C# オブジェクトを JavaScript Object Notation (JSON) にシリアル化す
 ## <a name="see-also"></a>関連項目
 
 * [System.Text.Json の概要](system-text-json-overview.md)
-* [JsonSerializerOptions をインスタンス化する](system-text-json-configure-options.md)
+* [JSON をシリアル化および逆シリアル化する方法](system-text-json-how-to.md)
+* [JsonSerializerOptions インスタンスのインスタンスを作成する](system-text-json-configure-options.md)
 * [大文字と小文字を区別しない一致を有効にする](system-text-json-character-casing.md)
 * [プロパティの名前と値をカスタマイズする](system-text-json-customize-properties.md)
 * [無効な JSON を許可する](system-text-json-invalid-json.md)
 * [オーバーフロー JSON の処理](system-text-json-handle-overflow.md)
-* [循環参照の保持](system-text-json-preserve-references.md)
+* [参照を保持する](system-text-json-preserve-references.md)
 * [変更できない型と非パブリック アクセサー](system-text-json-immutability.md)
 * [ポリモーフィックなシリアル化](system-text-json-polymorphism.md)
+* [Newtonsoft.Json から System.Text.Json に移行する](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [文字エンコードをカスタマイズする](system-text-json-character-encoding.md)
+* [カスタム シリアライザーと逆シリアライザーを作成する](write-custom-serializer-deserializer.md)
+* [JSON シリアル化のためのカスタム コンバーターの作成](system-text-json-converters-how-to.md)
+* [DateTime および DateTimeOffset のサポート](../datetime/system-text-json-support.md)
 * [System.Text.Json API リファレンス](xref:System.Text.Json)
+* [System.Text.Json.Serialization API リファレンス](xref:System.Text.Json.Serialization)

@@ -1,7 +1,7 @@
 ---
 title: C# を使用して JSON をシリアル化および逆シリアル化する方法 - .NET
 description: System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について学習します。 サンプル コードが含まれています。
-ms.date: 11/30/2020
+ms.date: 12/02/2020
 ms.custom: contperfq2
 no-loc:
 - System.Text.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 9ea9e2fef5ef66f2a5ff816168abfbd7b2e75276
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 1ea4ff71b9e21bd7c5b12598581b33e1e96ebb19
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437677"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97008839"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET 内で JSON のシリアル化と逆シリアル化 (マーシャリングとマーシャリングの解除) を行う方法
 
@@ -249,6 +249,8 @@ JSON 出力を整形するには、<xref:System.Text.Json.JsonSerializerOptions.
 }
 ```
 
+同じオプションで `JsonSerializerOptions` を繰り返し使用する場合、使用のたびに新しい `JsonSerializerOptions` インスタンスを作成しないでください。 すべての呼び出しで同じインスタンスを再利用します。 詳細については、[JsonSerializerOptions インスタンスの再利用](system-text-json-configure-options.md#reuse-jsonserializeroptions-instances)に関する説明を参照してください。
+
 ## <a name="include-fields"></a>フィールドを含める
 
 ::: zone pivot="dotnet-5-0"
@@ -283,8 +285,19 @@ JSON 出力を整形するには、<xref:System.Text.Json.JsonSerializerOptions.
 ## <a name="see-also"></a>関連項目
 
 * [System.Text.Json の概要](system-text-json-overview.md)
-* [カスタム コンバーターを記述する方法](system-text-json-converters-how-to.md)
-* [Newtonsoft.Json から移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [System.Text.Json での DateTime と DateTimeOffset のサポート](../datetime/system-text-json-support.md)
+* [JsonSerializerOptions インスタンスのインスタンスを作成する](system-text-json-configure-options.md)
+* [大文字と小文字を区別しない一致を有効にする](system-text-json-character-casing.md)
+* [プロパティの名前と値をカスタマイズする](system-text-json-customize-properties.md)
+* [プロパティを無視する](system-text-json-ignore-properties.md)
+* [無効な JSON を許可する](system-text-json-invalid-json.md)
+* [オーバーフロー JSON の処理](system-text-json-handle-overflow.md)
+* [参照を保持する](system-text-json-preserve-references.md)
+* [変更できない型と非パブリック アクセサー](system-text-json-immutability.md)
+* [ポリモーフィックなシリアル化](system-text-json-polymorphism.md)
+* [Newtonsoft.Json から System.Text.Json に移行する](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [文字エンコードをカスタマイズする](system-text-json-character-encoding.md)
+* [カスタム シリアライザーと逆シリアライザーを作成する](write-custom-serializer-deserializer.md)
+* [JSON シリアル化のためのカスタム コンバーターの作成](system-text-json-converters-how-to.md)
+* [DateTime および DateTimeOffset のサポート](../datetime/system-text-json-support.md)
 * [System.Text.Json API リファレンス](xref:System.Text.Json)
-<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->
+* [System.Text.Json.Serialization API リファレンス](xref:System.Text.Json.Serialization)

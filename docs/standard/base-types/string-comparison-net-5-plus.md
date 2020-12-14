@@ -1,13 +1,13 @@
 ---
 title: .NET 5 以降で文字列を比較するときの動作の変更
 description: Windows の .NET 5 以降のバージョンでの文字列比較の動作の変更について説明します。
-ms.date: 11/04/2020
-ms.openlocfilehash: fa1a1d12f45e5b41877a674d7b8747bb2b2f9658
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 12/07/2020
+ms.openlocfilehash: a53c36b31785fb43c0aa5f5040042abb6d40031a
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734232"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851752"
 ---
 # <a name="behavior-changes-when-comparing-strings-on-net-5"></a>.NET 5 以降で文字列を比較するときの動作の変更
 
@@ -43,16 +43,29 @@ Console.WriteLine(idx);
 
 ### <a name="enable-code-analyzers"></a>コード アナライザーを有効にする
 
-[コード アナライザー](../../fundamentals/code-analysis/overview.md)を使用すると、バグがある可能性のある呼び出しサイトを検出できます。 予期しない動作を防ぐため、[__Microsoft.CodeAnalysis.FxCopAnalyzers__ NuGet パッケージ](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/)をプロジェクトに インストールすることをお勧めします。 このパッケージに含まれるコード分析規則 [CA1307](../../fundamentals/code-analysis/quality-rules/ca1307.md) と [CA1309](../../fundamentals/code-analysis/quality-rules/ca1309.md) は、序数比較子が意図されていたと思われる箇所で誤って言語比較子が使用されている可能性のあるコードにフラグを設定するのに役立ちます。
+[コード アナライザー](../../fundamentals/code-analysis/overview.md)を使用すると、バグがある可能性のある呼び出しサイトを検出できます。 予期せぬ動作を防ぐには、自分のプロジェクトで .NET コンパイラ プラットフォーム (Roslyn) アナライザーを有効にすることをお勧めします。 アナライザーは、序数比較子を意図していると思われる箇所で誤って言語比較子が使用されている場合、コードにフラグを設定するのに役立ちます。 これらの問題にフラグを設定するには、次の規則が役立ちます。
 
-次に例を示します。
+- [CA1307:意味を明確にするための StringComparison の指定](../../fundamentals/code-analysis/quality-rules/ca1307.md)
+- [CA1309:順序を示す StringComparison を使用します](../../fundamentals/code-analysis/quality-rules/ca1309.md)
+- [CA1310:正確な StringComparison の指定](../../fundamentals/code-analysis/quality-rules/ca1310.md)
+
+これらの特定の規則は、既定では有効になっていません。 これらを有効にし、違反をビルド エラーとして表示するには、自分のプロジェクト ファイルで次のプロパティを設定します。
+
+```xml
+<PropertyGroup>
+  <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+  <WarningsAsErrors>$(WarningsAsErrors);CA1307;CA1309;CA1310</WarningsAsErrors>
+</PropertyGroup>
+```
+
+次のスニペットは、関連するコード アナライザーの警告またはエラーを生成するコード例を示しています。
 
 ```cs
 //
 // Potentially incorrect code - answer might vary based on locale.
 //
 string s = GetString();
-// Produces analyzer warning CA1307.
+// Produces analyzer warning CA1310 for string; CA1307 matches on char ','
 int idx = s.IndexOf(",");
 Console.WriteLine(idx);
 
@@ -89,17 +102,12 @@ List<string> list = GetListOfStrings();
 list.Sort(StringComparer.Ordinal);
 ```
 
-独自のコード ベースでこれらの規則を抑制することが適切な場合など、これらのコード アナライザー規則の詳細については、次の記事を参照してください。
-
-* [CA1307:意味を明確にするための StringComparison の指定](../../fundamentals/code-analysis/quality-rules/ca1307.md)
-* [CA1309:順序を示す StringComparison を使用します](../../fundamentals/code-analysis/quality-rules/ca1309.md)
-
 ### <a name="revert-back-to-nls-behaviors"></a>NLS の動作に戻す
 
 Windows で実行されるときに、.NET 5 アプリケーションを古い NLS の動作に戻すには、「[.NET グローバリゼーションと ICU](../globalization-localization/globalization-icu.md)」の手順のようにします。 このアプリケーション全体の互換性スイッチは、アプリケーション レベルで設定する必要があります。 個々のライブラリについてこの動作をオプトインまたはオプトアウトすることはできません。
 
 > [!TIP]
-> コードの安全性を向上させ、既存の潜在的なバグを検出するため、[CA1307](../../fundamentals/code-analysis/quality-rules/ca1307.md) と [CA1309](../../fundamentals/code-analysis/quality-rules/ca1309.md) のコード分析規則を有効にすることを強くお勧めします。 詳細については、「[コード アナライザーを有効にする](#enable-code-analyzers)」を参照してください。
+> コードの安全性を向上させ、既存の潜在的なバグを検出するため、[CA1307](../../fundamentals/code-analysis/quality-rules/ca1307.md)、[CA1309](../../fundamentals/code-analysis/quality-rules/ca1309.md)、および [CA1310](../../fundamentals/code-analysis/quality-rules/ca1310.md) のコード分析規則を有効にすることを強くお勧めします。 詳細については、「[コード アナライザーを有効にする](#enable-code-analyzers)」を参照してください。
 
 ## <a name="affected-apis"></a>影響を受ける API
 
@@ -196,7 +204,7 @@ Console.WriteLine("re\u0301sume\u0301".IndexOf("E", StringComparison.OrdinalIgno
 
 照合順序要素は、読み手が 1 つの文字または文字の塊として認識するものと緩く対応しています。 概念的には[書記素クラスター](character-encoding-introduction.md#grapheme-clusters)に似ていますが、より大きな包括的なものが含まれています。
 
-言語比較子では、完全一致は必要ありません。 照合順序要素が、そのセマンティックの意味に基づいて代わりに比較されます。 たとえば、言語比較子の場合、部分文字列 `"\u00E9"` と `"e\u0301"` は、どちらもセマンティック的には "小文字の e とアキュート アクセント修飾子" を意味するので、等しいものとして扱われます。 これにより、次のコード サンプルに示すように、`IndexOf` メソッドを使用すると、セマンティック的に等しい部分文字列 `"\u00E9"` が含まれる大きな文字列内で部分文字列 `"e\u0301"` を照合できます。
+言語比較子では、完全一致は必要ありません。 照合順序要素が、そのセマンティックの意味に基づいて代わりに比較されます。 たとえば、部分文字列 `"\u00E9"` と `"e\u0301"` は、いずれも "アキュート アクセント修飾子付きの小文字の e" を意味するものとして、言語比較子に等しく扱われます。 これにより、次のコード サンプルに示すように、`IndexOf` メソッドを使用すると、セマンティック的に等しい部分文字列 `"\u00E9"` が含まれる大きな文字列内で部分文字列 `"e\u0301"` を照合できます。
 
 ```cs
 Console.WriteLine("r\u00E9sum\u00E9".IndexOf("e")); // prints '-1' (not found)
