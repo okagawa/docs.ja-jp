@@ -2,12 +2,12 @@
 title: F# の関数型プログラミングの概要
 description: F# での関数型プログラミングの基礎について説明し ます。
 ms.date: 10/29/2018
-ms.openlocfilehash: fc2aebe80de16b92942c3557c0e03c198883dde1
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 44242a4319a331312a003a555d1483f2a3f1a90d
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740329"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110586"
 ---
 # <a name="introduction-to-functional-programming-in-f"></a>F\# の関数型プログラミングの概要
 
@@ -54,7 +54,7 @@ val addOne: x:int -> int
 
 ### <a name="expressions"></a>式
 
-式は、1 つの値へと評価されるコンストラクトです。 アクションを実行するステートメントとは対照的に、式は、値を返すアクションを実行すると考えることができます。 式は、関数型プログラミングにおいて、ステートメントを優先してほとんど常に使用されます。
+式は、1 つの値へと評価されるコンストラクトです。 アクションを実行するステートメントとは対照的に、式は、値を返すアクションを実行すると考えることができます。 関数型プログラミングでは、ステートメントではなく式がほとんど常に使用されます。
 
 前の関数 `addOne` について考えてみます。 `addOne` の本体は式です。
 
