@@ -6,13 +6,13 @@ ms.author: wiwagn
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 12/04/2019
-ms.openlocfilehash: 6241a9a3a51bd4d5228841caeaf3a7b652fc6eaa
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.date: 12/01/2020
+ms.openlocfilehash: 2a9e55250018352c8019d30a4d615ec39e619e31
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608362"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851231"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>最新の Web アプリケーションの特徴
 
@@ -42,7 +42,7 @@ ASP.NET Core は、メモリ使用量が低く高スループットなので、�
 
 ## <a name="cross-platform"></a>クロス プラットフォーム
 
-ASP.NET Core はクロスプラットフォームであり、Linux、macOS、Windows で動作します。 そのため、ASP.NET Core で構築されたアプリケーションの開発と展開には、多くの新しい選択肢があります。 Docker コンテナーは、Linux の場合も Windows の場合も、ASP.NET Core アプリケーションをホストすることができるので、[コンテナーとマイクロサービス](../microservices/index.md)の利点を活用できます。
+ASP.NET Core はクロスプラットフォームであり、Linux、macOS、Windows で動作します。 この機能により、ASP.NET Core で構築されたアプリケーションの開発と展開に多くの新しい選択肢が広がります。 Docker コンテナーは、Linux の場合も Windows の場合も、ASP.NET Core アプリケーションをホストすることができるので、[コンテナーとマイクロサービス](../microservices/index.md)の利点を活用できます。
 
 ## <a name="modular-and-loosely-coupled"></a>モジュール式と疎結合
 

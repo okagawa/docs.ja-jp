@@ -1,24 +1,27 @@
 ---
 title: インストールされている .NET Framework バージョンを確認する
 description: コード、regedit.exe、または PowerShell を使用して、Windows レジストリに対してクエリを実行することで、コンピューターにインストールされている .NET Framework のバージョンを検出します。
-ms.date: 02/03/2020
+ms.date: 12/04/2020
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - versions, determining for .NET Framework
-- .NET Framework, determining version
+- .NET Framework, determining installed versions
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: b4c5b6911a4be4f9ac156b600646c649549f88f8
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: a219514fafdcb17db259e089afa8318dbab24811
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438142"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851830"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>方法: インストールされている .NET Framework バージョンを確認する
 
 ユーザーはコンピューターに複数のバージョンの .NET Framework を[インストール](../install/index.md)して実行できます。 アプリを開発または配置する場合、どのバージョンの .NET Framework がユーザーのコンピューターにインストールされているかを確認しなければならない場合があります。 レジストリには、コンピューターにインストールされている .NET Framework のバージョンの一覧が含まれています。
+
+> [!NOTE]
+> この記事は .NET Framework に固有のものです。 インストールされている .NET Core および .NET 5 以降の SDK とランタイムを確認するには、「[.NET が既にインストールされていることを確認する方法](../../core/install/how-to-detect-installed-versions.md)」を参照してください。
 
 .NET Framework は、個別にバージョン管理される 2 つの主要コンポーネントで構成されています。
 
@@ -37,6 +40,21 @@ ms.locfileid: "96438142"
   PowerShell 2.0 モジュール。
 
 .NET Framework の各バージョン用にインストールされている更新プログラムの検出については、「[方法: インストールされている .NET Framework の更新プログラムを確認する](how-to-determine-which-net-framework-updates-are-installed.md)」を参照してください。
+
+## <a name="determine-which-net-implementation-and-version-an-app-is-running-on"></a>アプリが実行されている .NET の実装とバージョンを確認する
+
+<xref:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription?displayProperty=nameWithType> プロパティを使用して、アプリが実行されている .NET の実装とバージョンを照会できます。 アプリが .NET Framework で実行されている場合、出力は次のようになります。
+
+```output
+.NET Framework 4.8.4250.0
+```
+
+これに対して、アプリが .NET Core または .NET 5 以降で実行されている場合、出力は次のようになります。
+
+```output
+.NET Core 3.1.9
+.NET 5.0.0
+```
 
 ## <a name="detect-net-framework-45-and-later-versions"></a>.NET Framework 4.5 以降のバージョンを検出する
 
@@ -81,13 +99,13 @@ ms.locfileid: "96438142"
 
 ### <a name="use-registry-editor"></a>レジストリ エディターを使用する
 
-01. **スタート** メニューの **[ファイル名を指定して実行]** を選択し、「*regedit*」と入力し、 **[OK]** を選択します。
+1. **スタート** メニューの **[ファイル名を指定して実行]** を選択し、「*regedit*」と入力し、 **[OK]** を選択します。
 
    (regedit を実行するには、管理特権が必要です。)
 
-01. レジストリ エディターで、次のサブキーを開きます。**HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full**。 **Full** サブキーが存在しない場合は、.NET Framework 4.5 以降はインストールされていません。
+1. レジストリ エディターで、次のサブキーを開きます。**HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full**。 **Full** サブキーが存在しない場合は、.NET Framework 4.5 以降はインストールされていません。
 
-01. **Release** という REG_DWORD のエントリを確認します。 それがある場合、.NET Framework 4.5 以降がインストールされています。 その値は、.NET Framework の特定のバージョンに対応しています。 たとえば、次の図では、**Release** エントリの値は 528040 で、これは .NET Framework 4.8 のリリース キーです。
+1. **Release** という REG_DWORD のエントリを確認します。 それがある場合、.NET Framework 4.5 以降がインストールされています。 その値は、.NET Framework の特定のバージョンに対応しています。 たとえば、次の図では、**Release** エントリの値は 528040 で、これは .NET Framework 4.8 のリリース キーです。
 
    ![.NET Framework 4.5 のレジストリ エントリ](./media/clr-installdir.png )
 

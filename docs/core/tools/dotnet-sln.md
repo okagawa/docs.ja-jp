@@ -1,13 +1,13 @@
 ---
 title: dotnet sln コマンド
 description: dotnet-sln コマンドは、ソリューション ファイルでプロジェクトを追加、削除、一覧表示するための便利なオプションを提供します。
-ms.date: 02/14/2020
-ms.openlocfilehash: 898c53772a28b8cc3b65532dfc3d9bd6e73d467c
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.date: 12/07/2020
+ms.openlocfilehash: 480634550f6fa1983bb46f51b439dc8a686ead3c
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634371"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851700"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -194,3 +194,19 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
   ```dotnetcli
   dotnet sln todo.sln remove (ls -r **/*.csproj)
   ```
+
+- ソリューション、コンソール アプリ、および 2 つのクラス ライブラリを作成します。 ソリューションにプロジェクトを追加し、`dotnet sln` の `--solution-folder` オプションを使用して、クラス ライブラリをソリューション フォルダーに整理します。
+
+  ```dotnetcli
+  dotnet new sln -n mysolution
+  dotnet new console -o myapp
+  dotnet new classlib -o mylib1
+  dotnet new classlib -o mylib2
+  dotnet sln mysolution.sln add myapp\myapp.csproj
+  dotnet sln mysolution.sln add mylib1\mylib1.csproj --solution-folder mylibs
+  dotnet sln mysolution.sln add mylib2\mylib2.csproj --solution-folder mylibs
+  ```
+
+  次のスクリーンショットは、Visual Studio 2019 **ソリューション エクスプローラー** の結果を示しています。
+
+  :::image type="content" source="media/dotnet-sln/dotnet-sln-solution-folder.png" alt-text="ソリューション フォルダーにグループ化されたクラス ライブラリ プロジェクトを示すソリューション エクスプローラー。":::

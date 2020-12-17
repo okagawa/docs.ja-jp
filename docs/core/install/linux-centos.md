@@ -4,12 +4,12 @@ description: CentOS に .NET SDK と .NET ランタイムをインストール�
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: b30aa206057107aa17fcd62e0f042f9fe3ad56dc
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 2c3453c79a1dc31f01577bc0c1b9e320eb307c0a
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031931"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851680"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-centos"></a>CentOS に .NET SDK または .NET ランタイムをインストールする
 
@@ -50,14 +50,7 @@ CentOS 7 と CentOS 8 の両方で現在サポートされている .NET のリ�
 
 ## <a name="centos-8-"></a>CentOS 8 ✔️
 
-> [!TIP]
-> .NET 5.0 は、既定のパッケージ リポジトリにはまだありませんが、.NET Core 3.1 はあります。 .NET Core 3.1 をインストールするには、`aspnetcore-runtime-3.1` や `dotnet-sdk-3.1` などの適切なパッケージで `dnf install` コマンドを使用します。 以下の手順は .NET 5.0 の場合です。
-
-[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
-
-```bash
-sudo rpm -Uvh https://packages.microsoft.com/config/centos/8/packages-microsoft-prod.rpm
-```
+.NET 5.0 は CentOS 8 の既定のパッケージ リポジトリで利用できます。
 
 [!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
 

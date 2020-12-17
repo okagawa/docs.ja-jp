@@ -2,12 +2,12 @@
 title: dotnet-counters 診断ツール - .NET CLI
 description: dotnet-counter CLI ツールをインストールし、アドホックな正常性監視と最初のレベルのパフォーマンス調査に使用する方法について学習します。
 ms.date: 11/17/2020
-ms.openlocfilehash: 7dd4c06f3abe423552ba1d3eb82f6d0c35a84d0b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 48e3b038ddb5c9421367612a592c5ba6b9459791
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822218"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009548"
 ---
 # <a name="investigate-performance-counters-dotnet-counters"></a>パフォーマンス カウンターを調べる (dotnet-counters)
 
@@ -71,7 +71,7 @@ dotnet-counters [-h|--help] [--version] <command>
 ### <a name="synopsis"></a>構文
 
 ```console
-dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--refresh-interval] [--counters <COUNTERS>] [--format] [-o|--output] [-- <command>]
+dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--diagnostic-port] [--refresh-interval] [--counters <COUNTERS>] [--format] [-o|--output] [-- <command>]
 ```
 
 ### <a name="options"></a>オプション
@@ -83,6 +83,10 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--refresh-int
 - **`-n|--name <name>`**
 
   カウンター データを収集するプロセスの名前。
+
+- **`--diagnostic-port`**
+
+  作成する診断ポートの名前。 このオプションを使用し、アプリの起動からカウンターの監視を開始する方法については、「[診断ポートの使用](#using-diagnostic-port)」を参照してください。
 
 - **`--refresh-interval <SECONDS>`**
 
@@ -105,7 +109,10 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--refresh-int
   ユーザーは、コレクション構成パラメーターの後に `--` を付加し、5.0 以降のランタイムで .NET アプリケーションを起動するコマンドを続けて指定できます。 `dotnet-counters` を使用して、指定したコマンドでプロセスを起動し、要求したメトリックを収集します。 これは、アプリケーションの起動パスのメトリックを収集するのに役立つことが多く、メイン エントリポイントの前または直後に発生する問題を診断または監視するために使用できます。
 
   > [!NOTE]
-  > このオプションを使用して、ツールに応答する最初の .NET 5.0 プロセスを監視します。つまり、コマンドから複数の .NET アプリケーションを起動する場合、最初のアプリのみ収集されます。 このため、このオプションを自己完結型アプリケーションで使用するか、`dotnet exec <app.dll>` オプションを使用することをお勧めします。
+  > このオプションを使用して、ツールに応答する最初の .NET 5.0 プロセスを監視します。つまり、コマンドから複数の .NET アプリケーションを起動する場合、最初のアプリのみ収集されます。 このため、このオプションについては、自己完結型アプリケーションに対して使用するか、または `dotnet exec <app.dll>` オプションを使用することをお勧めします。
+
+  > [!NOTE]
+  > dotnet-counters を使用して .NET 実行可能ファイルを起動すると、その入力/出力がリダイレクトされ、その stdin/stdout とやりとりができなくなります。 CTRL + C または SIGTERM を介してツールを終了すると、ツールと子プロセスの両方が安全に終了します。 ツールの前に子プロセスが終了すると、ツールも終了し、トレースを安全に表示できるようになります。 stdin/stdout を使用する必要がある場合は、`--diagnostic-port` オプションを使用します。 詳細については、「[診断ポートの使用](#using-diagnostic-port)」を参照してください。
 
 ### <a name="examples"></a>使用例
 
@@ -180,7 +187,7 @@ Microsoft.AspNetCore.Hosting
 ### <a name="synopsis"></a>構文
 
 ```console
-dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--refresh-interval] [--counters] [-- <command>]
+dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--diagnostic-port] [--refresh-interval] [--counters] [-- <command>]
 ```
 
 ### <a name="options"></a>オプション
@@ -192,6 +199,10 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--refresh-int
 - **`-n|--name <name>`**
 
   監視するプロセスの名前。
+
+- **`--diagnostic-port`**
+
+  作成する診断ポートの名前。 このオプションを使用し、アプリの起動からカウンターの監視を開始する方法については、「[診断ポートの使用](#using-diagnostic-port)」を参照してください。
 
 - **`--refresh-interval <SECONDS>`**
 
@@ -206,7 +217,10 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--refresh-int
   ユーザーは、コレクション構成パラメーターの後に `--` を付加し、5.0 以降のランタイムで .NET アプリケーションを起動するコマンドを続けて指定できます。 `dotnet-counters` を使用して、指定したコマンドでプロセスを起動し、要求したメトリックを監視します。 これは、アプリケーションの起動パスのメトリックを収集するのに役立つことが多く、メイン エントリポイントの前または直後に発生する問題を診断または監視するために使用できます。
 
   > [!NOTE]
-  > このオプションを使用して、ツールに応答する最初の .NET 5.0 プロセスを監視します。つまり、コマンドから複数の .NET アプリケーションを起動する場合、最初のアプリのみ収集されます。 このため、このオプションを自己完結型アプリケーションで使用するか、`dotnet exec <app.dll>` オプションを使用することをお勧めします。
+  > このオプションを使用して、ツールに応答する最初の .NET 5.0 プロセスを監視します。つまり、コマンドから複数の .NET アプリケーションを起動する場合、最初のアプリのみ収集されます。 このため、このオプションについては、自己完結型アプリケーションに対して使用するか、または `dotnet exec <app.dll>` オプションを使用することをお勧めします。
+
+  > [!NOTE]
+  > dotnet-counters を使用して .NET 実行可能ファイルを起動すると、その入力/出力がリダイレクトされ、その stdin/stdout とやりとりができなくなります。 CTRL + C または SIGTERM を介してツールを終了すると、ツールと子プロセスの両方が安全に終了します。 ツールの前に子プロセスが終了すると、ツールも終了し、トレースを安全に表示できるようになります。 stdin/stdout を使用する必要がある場合は、`--diagnostic-port` オプションを使用します。 詳細については、「[診断ポートの使用](#using-diagnostic-port)」を参照してください。
 
 ### <a name="examples"></a>例
 
@@ -313,6 +327,48 @@ dotnet-counters ps [-h|--help]
 ```console
 > dotnet-counters ps
   
-  15683 WebApi     /home/suwhang/repos/WebApi/WebApi
+  15683 WebApi     /home/user/repos/WebApi/WebApi
   16324 dotnet     /usr/local/share/dotnet/dotnet
 ```
+
+## <a name="using-diagnostic-port"></a>診断ポートの使用
+
+  > [!IMPORTANT]
+  > これは、.NET 5.0 以降を実行しているアプリに対してのみ機能します。
+
+診断ポートは、監視やカウンターの収集をアプリの起動から開始できる、.NET 5 で追加された新しいランタイム機能です。 `dotnet-counters` を使用してこれを行うには、上記の例の説明に従って `dotnet-counters <collect|monitor> -- <command>` を使用するか、`--diagnostic-port` オプションを使用します。
+
+起動からすぐにアプリケーションを監視するには、`dotnet-counters <collect|monitor> -- <command>` を使用して子プロセスとしてアプリケーションを起動するのが最も簡単です。
+
+ただし、(アプリを最初の 10 分だけ監視し、実行を継続するなど) 監視しているアプリの有効期間をより細かく制御する場合、または CLI を使用してアプリと対話する必要がある場合は、`--diagnostic-port` オプションを使用すると、監視対象アプリと `dotnet-counters` の両方を制御できます。
+
+1. 次のコマンドにより、dotnet-counters は `myport.sock` という名前の診断ソケットを作成し、接続を待機します。
+
+    > ```dotnet-cli
+    > dotnet-counters collect --diagnostic-port myport.sock
+    > ```
+
+    出力:
+
+    > ```bash
+    > Waiting for connection on myport.sock
+    > Start an application with the following environment variable: DOTNET_DiagnosticPorts=/home/user/myport.sock
+    > ```
+
+2. 別のコンソールで、`dotnet-counters` の出力値に設定された環境変数 `DOTNET_DiagnosticPorts` を使用して対象アプリケーションを起動します。
+
+    > ```bash
+    > export DOTNET_DiagnosticPorts=/home/user/myport.sock
+    > ./my-dotnet-app arg1 arg2
+    > ```
+
+    これにより、`dotnet-counters` が `my-dotnet-app` でカウンターを収集し始めます。
+
+    > ```bash
+    > Waiting for connection on myport.sock
+    > Start an application with the following environment variable: DOTNET_DiagnosticPorts=myport.sock
+    > Starting a counter session. Press Q to quit.
+    > ```
+
+    > [!IMPORTANT]
+    > `dotnet run` を使用してアプリを起動すると、dotnet CLI によってお使いのアプリのものではない子プロセスが多数生成され、お使いのアプリに先立ってそれらが `dotnet-counters` に接続されてしまい、実行時にお使いのアプリが中断されることで、問題が発生する場合があります。 アプリケーションの起動には、アプリの自己完結型バージョンを直接使用するか、`dotnet exec` を使用することをお勧めします。

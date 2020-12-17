@@ -3,13 +3,13 @@ title: Azure の開発プロセス
 description: ASP.NET Core および Azure での最新の Web アプリケーションの設計 | Azure の開発プロセス
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 8907c63f8dcd57ec22c3c196cbb1db52d91a3b5f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.date: 12/01/2020
+ms.openlocfilehash: 2706a4091565e6f3cb795acf031a238ae55a1068
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2020
-ms.locfileid: "91169038"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851628"
 ---
 # <a name="development-process-for-azure"></a>Azure の開発プロセス
 
@@ -30,9 +30,9 @@ ms.locfileid: "91169038"
 
 [Visual Studio 2019 のダウンロード](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
-**Visual Studio Code と dotnet CLI** (Mac、Linux および Windows 用のクロスプラット フォーム ツール)。 任意の開発言語をサポートする軽量なクロスプラットフォーム エディターを選択すると、Microsoft Visual Studio Code と dotnet CLI を使用することができます。 これらの製品は、開発者のワークフローを効率化する、簡単かつ堅牢性の高いエクスペリエンスを提供します。 さらに、Visual Studio Code は C\# および Web 開発の拡張機能をサポートし、エディター内での IntelliSense およびショートカット タスクを提供します。
+**Visual Studio Code と dotnet CLI** (Mac、Linux、および Windows 用のクロスプラットフォーム ツール)。 任意の開発言語をサポートする軽量なクロスプラットフォーム エディターを選択すると、Microsoft Visual Studio Code と dotnet CLI を使用することができます。 これらの製品は、開発者のワークフローを効率化する、簡単かつ堅牢性の高いエクスペリエンスを提供します。 さらに、Visual Studio Code は C\# および Web 開発の拡張機能をサポートし、エディター内での IntelliSense およびショートカット タスクを提供します。
 
-[.NET Core SDK をダウンロードする](https://dotnet.microsoft.com/download)
+[.NET SDK をダウンロードする](https://dotnet.microsoft.com/download)
 
 [Visual Studio Code をダウンロードする](https://code.visualstudio.com/download)
 
@@ -56,17 +56,17 @@ CI/CD を使用して ASP.NET Core アプリケーションの開発を開始す
 
 **図 10-1** Azure Portal での新しい Azure App Service Web アプリの作成。
 
-CI ビルド プロセスでは、新しいコードがプロジェクトのソース管理リポジトリにコミットされるたびに自動ビルドが実行されます。 これにより、コードがビルドし (理想的には、自動テストに合格し)、デプロイされる可能性のあるフィードバックがすぐに返されます。 この CI ビルドでは Web デプロイ パッケージ成果物が生成され、CD プロセスで使用するために公開されます。
+CI ビルド プロセスでは、新しいコードがプロジェクトのソース管理リポジトリにコミットされるたびに自動ビルドが実行されます。 このプロセスにより、コードがビルドし (理想的には、自動テストに合格し)、デプロイされる可能性のあるフィードバックがすぐに返されます。 この CI ビルドでは Web デプロイ パッケージ成果物が生成され、CD プロセスで使用するために公開されます。
 
 [CI ビルド プロセスを定義する](/azure/devops/pipelines/ecosystems/dotnet-core)
 
 自分のチームのメンバーが新しいコードをコミットするたびにシステムによってビルドがキューに入れられるように、必ず、継続的インテグレーションを有効にしてください。 ビルドをテストし、成果物の 1 つとして Web デプロイ パッケージが生成されることを確認します。
 
-ビルドに成功すると、CD プロセスでは CI ビルドの結果が Azure Web アプリにデプロイされます。 これを構成するには、*リリース* を作成して構成します。これは、Azure App Service にデプロイされます。
+ビルドに成功すると、CD プロセスでは CI ビルドの結果が Azure Web アプリにデプロイされます。 このステップを構成するには、"*リリース*" を作成して構成します。これは、Azure App Service にデプロイされます。
 
 [Azure Web アプリをデプロイする](/azure/devops/pipelines/targets/webapp)
 
-CI/CD パイプラインが構成されたら、Web アプリを更新して、それをソース管理にコミットしてデプロイするだけです。
+CI/CD パイプラインが構成されたら、簡単に Web アプリを更新し、それをソース管理にコミットしてデプロイすることができます。
 
 ### <a name="workflow-for-developing-azure-hosted-aspnet-core-applications"></a>Azure でホストされる ASP.NET Core アプリケーションの開発ワークフロー
 
@@ -78,7 +78,7 @@ Azure アカウントと CI/CD プロセスを構成したら、Azure でホス�
 
 #### <a name="step-1-local-dev-environment-inner-loop"></a>手順 1. ローカル開発環境の内側のループ
 
-Azure にデプロイする場合の ASP.NET Core アプリケーションの開発と、それ以外の場合のアプリケーションの開発は同じです。 使い慣れたローカル開発環境を使用します。つまり、Visual Studio 2017 または dotnet CLI および Visual Studio Code または好みのエディターを使用できます。 コードを記述し、変更を実行してデバッグし、自動テストを実行し、変更を共有ソース管理リポジトリにプッシュできるようになるまで、ソース管理へのローカル コミットを行うことができます。
+Azure にデプロイする場合の ASP.NET Core アプリケーションの開発と、それ以外の場合のアプリケーションの開発は同じです。 使い慣れたローカル開発環境を使用します。つまり、Visual Studio 2019 または dotnet CLI および Visual Studio Code または好みのエディターを使用できます。 コードを記述し、変更を実行してデバッグし、自動テストを実行し、変更を共有ソース管理リポジトリにプッシュできるようになるまで、ソース管理へのローカル コミットを行うことができます。
 
 #### <a name="step-2-application-code-repository"></a>手順 2. アプリケーション コード リポジトリ
 
@@ -90,7 +90,7 @@ Azure にデプロイする場合の ASP.NET Core アプリケーションの開
 
 #### <a name="step-4-build-server-continuous-delivery"></a>手順 4. ビルド サーバー:継続的デリバリー
 
-ビルドが成功すると、CD プロセスは生成されたビルド成果物を選択します。 これには、Web デプロイ パッケージが含まれます。 ビルド サーバーは Azure App Service にこのパッケージをデプロイして、既存のサービスを新しく作成されたものに置き換えます。 通常、この手順の対象はステージング環境ですが、一部のアプリケーションは CD プロセスを通じて運用環境に直接デプロイします。
+ビルドが成功すると、CD プロセスは生成されたビルド成果物を選択します。 このプロセスには、Web デプロイ パッケージが含まれます。 ビルド サーバーは Azure App Service にこのパッケージをデプロイして、既存のサービスを新しく作成されたものに置き換えます。 通常、この手順の対象はステージング環境ですが、一部のアプリケーションは CD プロセスを通じて運用環境に直接デプロイします。
 
 #### <a name="step-5-azure-app-service-web-app"></a>手順 5. Azure App Service Web アプリ
 

@@ -2,12 +2,12 @@
 title: 破壊的変更:Environment.OSVersion で正しいオペレーティング システム バージョンが返される
 description: Environment.OSVersion から、たとえば、アプリケーションの互換性にために選択されている OS ではなく、オペレーティング システムの実際のバージョンが返されるという、コア .NET ライブラリの .NET 5.0 破壊的変更について学習します。
 ms.date: 11/01/2020
-ms.openlocfilehash: b78ca1c7be50f76b99b5558a976d8f00e2f560c3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c810d9a7a028a0c60c30d69e78a9b9c695d933ef
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760073"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009522"
 ---
 # <a name="environmentosversion-returns-the-correct-operating-system-version"></a>Environment.OSVersion で正しいオペレーティング システム バージョンが返される
 
@@ -15,13 +15,22 @@ ms.locfileid: "95760073"
 
 ## <a name="change-description"></a>変更の説明
 
-以前のバージョンの .NET では、アプリケーションが Windows 互換モードで実行されている場合、<xref:System.Environment.OSVersion?displayProperty=nameWithType> によって、正しくない可能性がある OS バージョンが返されます。 詳細については、[GetVersionExA 関数の解説](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getversionexa#remarks)に関する記述を参照してください。
+以前のバージョンの .NET では、アプリケーションが Windows 互換モードで実行されている場合、<xref:System.Environment.OSVersion?displayProperty=nameWithType> によって、正しくない可能性がある OS バージョンが返されます。 詳細については、[GetVersionExA 関数の解説](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getversionexa#remarks)に関する記述を参照してください。 macOS では、基になる Darwin カーネルのバージョンが <xref:System.Environment.OSVersion?displayProperty=nameWithType> によって返されます。
 
-.NET 5.0 以降では、<xref:System.Environment.OSVersion?displayProperty=nameWithType> によってオペレーティング システムの実際のバージョンが返されます。
+.NET 5.0 以降では、Windows と macOS のオペレーティング システムの実際のバージョンが <xref:System.Environment.OSVersion?displayProperty=nameWithType> によって返されます。
+
+次の表に、動作の違いを示します。
+
+|  | 以前の .NET バージョン | .NET 5+ |
+|--|------------------------|---------|
+| Windows | 6.2.9200.0 | 10.0.19042.0 |
+| macOS | 19.6.0.0 | 10.15.7 |
 
 ## <a name="reason-for-change"></a>変更理由
 
 このプロパティのユーザーは、オペレーティング システムの実際のバージョンが返されることを期待しています。 ほとんどの .NET アプリにより、アプリケーション マニフェストでサポートされているバージョンが指定されないため、dotnet ホストから既定でサポートされているバージョンが取得されます。 その結果、実行されているアプリでは互換性 shim はほとんど意味がなくなります。 Windows で新しいバージョンがリリースされており、古い dotnet ホストがまだ使用されている場合は、これらのアプリの OS バージョンが正しくない可能性があります。 実際のバージョンを返すことが、この API に対する開発者の期待により沿うことになります。
+
+.NET 5.0 での <xref:System.OperatingSystem.IsWindowsVersionAtLeast%2A?displayProperty=nameWithType>、<xref:System.OperatingSystem.IsMacOSVersionAtLeast%2A?displayProperty=nameWithType>、および <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute?displayProperty=nameWithType> の導入により、Windows および macOS で <xref:System.Environment.OSVersion?displayProperty=nameWithType> が整合するように変更されました。
 
 ## <a name="version-introduced"></a>導入されたバージョン
 

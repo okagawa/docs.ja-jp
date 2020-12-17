@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 11/10/2020
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 39020a32cdea9b82dc9d30e62e663ebc4ee39ebb
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 2fc12c8c398b1a74d623e53884df666f4d4b85f1
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687443"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851615"
 ---
 # <a name="how-to-check-that-net-is-already-installed"></a>.NET が既にインストールされていることを確認する方法
 
@@ -139,7 +139,7 @@ Microsoft.NETCore.App 5.0.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ## <a name="check-for-install-folders"></a>インストール フォルダーを確認する
 
-.NET がインストールされていても、オペレーティング システムまたはユーザー プロファイルの `PATH` 変数に追加されていない可能性があります。 前のセクションのコマンドを実行しても、機能しない場合があります。 別の方法として、.NET のインストール フォルダーが存在することを確認できます。
+.NET がインストールされていても、オペレーティング システムまたはユーザー プロファイルの `PATH` 変数に追加されていない可能性があります。 この場合、前のセクションのコマンドが機能しない場合があります。 別の方法として、.NET のインストール フォルダーが存在することを確認できます。
 
 インストーラーまたはスクリプトから .NET をインストールすると、標準のフォルダーにインストールされます。 通常、.NET のインストールに使用するインストーラーまたはスクリプトには、別のフォルダーにインストールするためのオプションがあります。 別のフォルダーにインストールする場合は、フォルダー パスの先頭を調整します。
 
@@ -191,3 +191,7 @@ _/usr/local/share/dotnet/shared/<ランタイムの種類>/<バージョン>/_
 - [Windows 用の .NET ランタイムと SDK をインストールする](windows.md)。
 - [macOS 用の .NET ランタイムと SDK をインストールする](macos.md)。
 - [Linux 用の .NET ランタイムと SDK をインストールする](linux.md)。
+
+## <a name="see-also"></a>関連項目
+
+- [インストールされている .NET Framework バージョンを確認する](../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)

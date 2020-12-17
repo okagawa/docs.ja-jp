@@ -2,12 +2,12 @@
 title: dotnet-trace 診断ツール - .NET CLI
 description: dotnet-trace CLI ツールをインストールして使用し、.NET EventPipe を使って、ネイティブ プロファイラーなしで実行中のプロセスの .NET トレースを収集する方法について学習します。
 ms.date: 11/17/2020
-ms.openlocfilehash: 6bc5ad449f62ed0080ff6b1f401f1871d90cf5ec
-ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
+ms.openlocfilehash: 868ce7828eee6bd7f2101d5d6a65c7f7bf87fe24
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96549333"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009535"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace パフォーマンス分析ユーティリティ
 
@@ -78,7 +78,7 @@ dotnet-trace [-h, --help] [--version] <command>
 ```console
 dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--clrevents <clrevents>]
     [--format <Chromium|NetTrace|Speedscope>] [-h|--help]
-    [-n, --name <name>]  [-o|--output <trace-file-path>] [-p|--process-id <pid>]
+    [-n, --name <name>] [--diagnostic-port] [-o|--output <trace-file-path>] [-p|--process-id <pid>]
     [--profile <profile-name>] [--providers <list-of-comma-separated-providers>]
     [-- <command>] (for target applications running .NET 5.0 or later)
 ```
@@ -104,6 +104,10 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 - **`-n, --name <name>`**
 
   トレースを収集するプロセスの名前。
+
+- **`--diagnostic-port <path-to-port>`**
+
+  作成する診断ポートの名前。 このオプションを使用してアプリの起動からトレースを収集する方法については、「[診断ポートを使用してアプリの起動からトレースを収集する](#use-diagnostic-port-to-collect-a-trace-from-app-startup)」を参照してください。
 
 - **`-o|--output <trace-file-path>`**
 
@@ -250,6 +254,48 @@ Press <Enter> or <Ctrl+C> to exit...
 > dotnet-trace を介して `hello.exe` を起動すると、その入力/出力がリダイレクトされ、その stdin/stdout とやりとりができなくなります。
 > CTRL + C または SIGTERM を介してツールを終了すると、ツールと子プロセスの両方が安全に終了します。
 > ツールの前に子プロセスが終了すると、ツールも終了し、トレースを安全に表示できるようになります。
+
+## <a name="use-diagnostic-port-to-collect-a-trace-from-app-startup"></a>診断ポートを使用してアプリの起動からトレースを収集する
+
+  > [!IMPORTANT]
+  > これは、.NET 5.0 以降を実行しているアプリに対してのみ機能します。
+
+診断ポートは、.NET 5 で追加された新しいランタイム機能で、アプリの起動からトレースを開始することができます。 `dotnet-trace` を使用してこれを行うには、上記の例の説明に従って `dotnet-trace collect -- <command>` を使用するか、`--diagnostic-port` オプションを使用します。
+
+起動からすばやくトレースする方法としては、アプリケーションを子プロセスとして起動するために `dotnet-trace <collect|monitor> -- <command>` を使用するのが最も簡単です。
+
+ただし、(アプリを最初の 10 分だけ監視し、実行を継続するなど) トレースしているアプリの有効期間をより細かく制御する場合、または CLI を使用してアプリと対話する必要がある場合は、`--diagnostic-port` オプションを使用すると、監視対象アプリと `dotnet-trace` の両方を制御できます。
+
+1. 次のコマンドにより、`dotnet-trace` で `myport.sock` という名前の診断ソケットを作成し、接続を待機します。
+
+    > ```dotnet-cli
+    > dotnet-trace collect --diagnostic-port myport.sock
+    > ```
+
+    出力:
+
+    > ```bash
+    > Waiting for connection on myport.sock
+    > Start an application with the following environment variable: DOTNET_DiagnosticPorts=/home/user/myport.sock
+    > ```
+
+2. 別のコンソールで、`dotnet-trace` の出力値に設定された環境変数 `DOTNET_DiagnosticPorts` を使用して対象アプリケーションを起動します。
+
+    > ```bash
+    > export DOTNET_DiagnosticPorts=/home/user/myport.sock
+    > ./my-dotnet-app arg1 arg2
+    > ```
+
+    これにより、`dotnet-trace` による `my-dotnet-app` のトレースが開始します。
+
+    > ```bash
+    > Waiting for connection on myport.sock
+    > Start an application with the following environment variable: DOTNET_DiagnosticPorts=myport.sock
+    > Starting a counter session. Press Q to quit.
+    > ```
+
+    > [!IMPORTANT]
+    > `dotnet run` を使用してアプリを起動すると、dotnet CLI によってお使いのアプリのものではない子プロセスが多数生成され、お使いのアプリよりも先にそれらが `dotnet-trace` に接続されてしまい、実行時にお使いのアプリが中断されることで、問題が発生する場合があります。 アプリケーションの起動には、アプリの自己完結型バージョンを直接使用するか、`dotnet exec` を使用することをお勧めします。
 
 ## <a name="view-the-trace-captured-from-dotnet-trace"></a>dotnet-trace からキャプチャされたトレースを表示する
 
