@@ -6,16 +6,16 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 10/11/2019
-ms.openlocfilehash: 639755dd78892df1b70ea5245a9584e575fbf691
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: dbb0a94b0401d58139c024fd8ca3e00353a19efa
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267881"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678029"
 ---
 # <a name="modules-handlers-and-middleware"></a>モジュール、ハンドラー、ミドルウェア
 
-ASP.NET Core アプリは一連の *ミドルウェア*に基づいて構築されています。 ミドルウェアは、要求と応答を処理するためにパイプラインに配置されるハンドラーです。 Web フォームアプリでは、HTTP ハンドラーとモジュールは同様の問題を解決します。 ASP.NET Core では、モジュール、ハンドラー、 *Global.asax.cs*、およびアプリのライフサイクルはミドルウェアに置き換えられます。 この章では、アプリのコンテキストにおけるミドルウェアについて説明し Blazor ます。
+ASP.NET Core アプリは一連の *ミドルウェア* に基づいて構築されています。 ミドルウェアは、要求と応答を処理するためにパイプラインに配置されるハンドラーです。 Web フォームアプリでは、HTTP ハンドラーとモジュールは同様の問題を解決します。 ASP.NET Core では、モジュール、ハンドラー、 *Global.asax.cs*、およびアプリのライフサイクルはミドルウェアに置き換えられます。 この章では、アプリのコンテキストにおけるミドルウェアについて説明し Blazor ます。
 
 ## <a name="overview"></a>概要
 
@@ -39,7 +39,7 @@ ASP.NET 4.x には多数のモジュールが含まれています。 同様に�
 |-----------------------|-----------------------------|-------------------|
 |HTTP エラー            |`CustomErrorModule`          |[状態コード ページ ミドルウェア](/aspnet/core/fundamentals/error-handling#usestatuscodepages)|
 |既定のドキュメント       |`DefaultDocumentModule`      |[既定のファイル ミドルウェア](/aspnet/core/fundamentals/static-files#serve-a-default-document)|
-|ディレクトリの参照     |`DirectoryListingModule`     |[ディレクトリ参照ミドルウェア](/aspnet/core/fundamentals/static-files#enable-directory-browsing)|
+|ディレクトリ参照     |`DirectoryListingModule`     |[ディレクトリ参照ミドルウェア](/aspnet/core/fundamentals/static-files#enable-directory-browsing)|
 |動的な圧縮    |`DynamicCompressionModule`   |[応答圧縮ミドルウェア](/aspnet/core/performance/response-compression)|
 |失敗した要求のトレース|`FailedRequestsTracingModule`|[ASP.NET Core のログ](/aspnet/core/fundamentals/logging/index#tracesource-provider)|
 |ファイルのキャッシュ           |`FileCacheModule`            |[応答キャッシュ ミドルウェア](/aspnet/core/performance/caching/middleware)|
