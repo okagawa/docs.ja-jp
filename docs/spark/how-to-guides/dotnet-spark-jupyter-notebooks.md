@@ -1,5 +1,5 @@
 ---
-title: Jupyter Notebook の使用
+title: Jupyter Notebook を使用する
 titleSuffix: .NET for Apache Spark
 description: Jupyter Notebook、Jupyter Lab、Visual Studio Code (VS Code) などの対話型環境で .NET for Apache Spark を使用する
 ms.author: luquinta
@@ -7,12 +7,12 @@ author: luisquintanilla
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc, how-to
-ms.openlocfilehash: efebaf0a66863eae0f71fbf1158b80260d7469cf
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: cf19b4e4b7a7b9033fb97b2b2736ab0383c11f93
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688177"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96598934"
 ---
 # <a name="use-net-for-apache-spark-in-jupyter-notebooks"></a>.NET for Apache Spark を Jupyter Notebook で使用する
 
