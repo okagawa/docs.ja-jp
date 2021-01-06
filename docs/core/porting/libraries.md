@@ -3,12 +3,12 @@ title: .NET Core にライブラリを移植する
 description: ライブラリ プロジェクトを .NET Framework から .NET Core に移植する方法を説明します。
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: dcacf4d59964e0ef2009b4e9694d7f562e3a1547
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 25c53cdc71f4269b058953ef1903dc72d222f65f
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223571"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633911"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>.NET Framework ライブラリを .NET Core に移植する
 
@@ -31,7 +31,7 @@ ms.locfileid: "92223571"
 この記事では、.NET Core CLI を使用してライブラリを作成する方法について説明します。
 
 [.NET Core の *csproj* 形式に追加されたもの](../tools/csproj.md)\
-この記事では、 *csproj* および MSBuild への移行に伴ってプロジェクト ファイルに追加された変更について説明します。
+この記事では、*csproj* および MSBuild への移行に伴ってプロジェクト ファイルに追加された変更について説明します。
 
 [.NET Core への移植 - サード パーティの依存関係の分析](third-party-deps.md)\
 この記事では、サード パーティの依存関係の移植性と、NuGet パッケージの依存関係が .NET Core で機能しない場合の対処方法について説明します。
@@ -107,8 +107,8 @@ ms.locfileid: "92223571"
 
 コードを移植したときにすべての機能が動作することを確認するには、コードを .NET Core に移植してテストすることをお勧めします。 このテストを行うには、.NET Core 用のテストを構築して実行するためのテスト フレームワークを使用する必要があります。 現在のところ、次の 3 つの選択肢があります。
 
-- [xUnit](https://xunit.github.io/)
-  - [はじめに](https://xunit.github.io/docs/getting-started-dotnet-core.html)
+- [xUnit](https://xunit.net/)
+  - [はじめに](https://xunit.net/docs/getting-started/netcore/cmdline)
   - [MSTest プロジェクトを xUnit に変換するツール](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
 - [NUnit](https://nunit.org/)
   - [はじめに](https://github.com/nunit/docs/wiki/Installation)
@@ -117,7 +117,7 @@ ms.locfileid: "92223571"
 
 ## <a name="recommended-approach"></a>推奨されるアプローチ
 
-最終的に、移植作業は .NET Framework コードの構成内容に大きく左右されます。 コードを移植するのに良い方法は、コードの基本コンポーネントであるライブラリの " *ベース* " から始めることです。 ベースは、その他すべてが直接または間接的に使用するデータ モデル、または他の基本クラスやメソッドの場合があります。
+最終的に、移植作業は .NET Framework コードの構成内容に大きく左右されます。 コードを移植するのに良い方法は、コードの基本コンポーネントであるライブラリの "*ベース*" から始めることです。 ベースは、その他すべてが直接または間接的に使用するデータ モデル、または他の基本クラスやメソッドの場合があります。
 
 1. 移植対象のライブラリのレイヤーをテストするテスト プロジェクトを移植します。
 1. ライブラリのベースを新しい .NET Core プロジェクトにコピーし、サポートする .NET Standard のバージョンを選択します。

@@ -2,12 +2,12 @@
 title: F# コンポーネント デザインのガイドライン
 description: '他の呼び出し元による使用を目的とした F # コンポーネントを作成するためのガイドラインについて説明します。'
 ms.date: 05/14/2018
-ms.openlocfilehash: 590bda0660d54ea73c590d31e694f3d499e0fd9f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 24be2a422c97b9334f749e3d9dfcccd0feec219b
+ms.sourcegitcommit: e395fabeeea5c705d243d246fa64446839ac85b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209137"
+ms.lasthandoff: 01/03/2021
+ms.locfileid: "97856108"
 ---
 # <a name="f-component-design-guidelines"></a>F# コンポーネント デザインのガイドライン
 
@@ -24,7 +24,7 @@ ms.locfileid: "83209137"
 * アセンブリ境界を越えて .NET 言語による使用を目的としたライブラリ。
 * [NuGet](https://nuget.org)などのパッケージリポジトリを使用した配布を目的としたライブラリ。
 
-この記事で説明する手法は、[優れた F # コードの5つの原則](index.md#five-principles-of-good-f-code)に従っているため、必要に応じて機能とオブジェクトの両方のプログラミングを利用します。
+この記事で説明する手法は、 [優れた F # コードの5つの原則](index.md#five-principles-of-good-f-code)に従っているため、必要に応じて機能とオブジェクトの両方のプログラミングを利用します。
 
 どの方法論にもかかわらず、コンポーネントおよびライブラリデザイナーは、開発者が最も簡単に使用できる API を開発する際に、いくつかの実用的で prosaic の問題に直面しています。 [.Net ライブラリの設計ガイドライン](../../standard/design-guidelines/index.md)の Conscientious アプリケーションでは、使用してもよい api の一貫性のあるセットを作成することを目指しています。
 
@@ -40,7 +40,7 @@ ms.locfileid: "83209137"
 
 ### <a name="add-xml-documentation-comments-to-your-code"></a>XML ドキュメントコメントをコードに追加する
 
-パブリック Api に関する XML ドキュメントでは、これらの型とメンバーを使用するときに、ユーザーが優れた Intellisense と Quickinfo を取得し、ライブラリのドキュメントファイルのビルドを有効にすることができます。 Xmldoc コメント内の追加のマークアップに使用できるさまざまな xml タグに関する[Xml ドキュメント](../language-reference/xml-documentation.md)を参照してください。
+パブリック Api に関する XML ドキュメントでは、これらの型とメンバーを使用するときに、ユーザーが優れた Intellisense と Quickinfo を取得し、ライブラリのドキュメントファイルのビルドを有効にすることができます。 Xmldoc コメント内の追加のマークアップに使用できるさまざまな xml タグに関する [Xml ドキュメント](../language-reference/xml-documentation.md) を参照してください。
 
 ```fsharp
 /// A class for representing (x,y) coordinates
@@ -58,7 +58,7 @@ F # ライブラリで明示的なシグネチャファイルを使用すると�
 
 ### <a name="always-follow-best-practices-for-using-strings-in-net"></a>.NET で文字列を使用する場合は常にベストプラクティスに従う
 
-.NET のガイダンス[で文字列を使用するためのベストプラクティス](../../standard/base-types/best-practices-strings.md)に従ってください。 特に、文字列の変換と比較には、常に*カルチャの意図*を明示的に指定します (該当する場合)。
+.NET のガイダンス [で文字列を使用するためのベストプラクティス](../../standard/base-types/best-practices-strings.md) に従ってください。 特に、文字列の変換と比較には、常に *カルチャの意図* を明示的に指定します (該当する場合)。
 
 ## <a name="guidelines-for-f-facing-libraries"></a>F # に接続されるライブラリのガイドライン
 
@@ -73,13 +73,13 @@ F # ライブラリで明示的なシグネチャファイルを使用すると�
 | 構成体 | ケース | パーツ | 例 | Notes |
 |-----------|------|------|----------|-------|
 | 具象型 | パスカルケース | 名詞/形容詞 | List、Double、Complex | 具象型は、構造体、クラス、列挙体、デリゲート、レコード、および共用体です。 OCaml では、型名は従来は小文字ですが、F # では型の .NET 名前付けスキームが採用されています。
-| DLL           | パスカルケース |                 | Fabrikam. Core .dll |  |
-| 共用体タグ     | パスカルケース | [名詞] | Some、Add、Success | パブリック Api でプレフィックスを使用しないでください。 必要に応じて、内部でプレフィックスを使用します。たとえば、`type Teams = TAlpha | TBeta | TDelta.` |
-| Event          | パスカルケース | 動詞 | ValueChanged/ValueChanging |  |
+| DLL           | パスカルケース |                 | Fabrikam.Core.dll |  |
+| 共用体タグ     | パスカルケース | [名詞] | Some、Add、Success | パブリック Api でプレフィックスを使用しないでください。 必要に応じて、内部でプレフィックスを使用します。たとえば、 `type Teams = TAlpha | TBeta | TDelta.` |
+| イベント          | パスカルケース | 動詞 | ValueChanged/ValueChanging |  |
 | 例外     | パスカルケース |      | WebException | 名前は "Exception" で終わる必要があります。 |
 | フィールド          | パスカルケース | [名詞] | CurrentName  | |
 | インターフェイス型 |  パスカルケース | 名詞/形容詞 | IDisposable | 名前は "I" で始まる必要があります。 |
-| Method |  パスカルケース |  動詞 | ToString | |
+| メソッド |  パスカルケース |  動詞 | ToString | |
 | 名前空間 | パスカルケース | | Fsharp.core | 一般 `<Organization>.<Technology>[.<Subnamespace>]` に、テクノロジが組織に依存していない場合は、組織を削除します。 |
 | パラメーター | キャメルケース | [名詞] |  typeName、transform、range | |
 | let 値 (内部) | キャメルケースまたはパスワードの大文字と小文字の区別 | 名詞/動詞 |  getValue、myTable |
@@ -191,8 +191,8 @@ type Counter() =
 
 ```fsharp
 type Serializer =
-    abstract Serialize<'T>: preserveRefEq: bool -> value: 'T -> string
-    abstract Deserialize<'T>: preserveRefEq: bool -> pickle: string -> 'T
+    abstract Serialize<'T> : preserveRefEq: bool -> value: 'T -> string
+    abstract Deserialize<'T> : preserveRefEq: bool -> pickle: string -> 'T
 ```
 
 次のように設定します。
@@ -222,7 +222,7 @@ module CollectionType =
 
 #### <a name="use-a-module-to-group-functions-for-common-canonical-functions-especially-in-math-and-dsl-libraries"></a>モジュールを使用して、一般的な正規関数の関数をグループ化します。数学および DSL ライブラリでは特にそうです。
 
-たとえば、 `Microsoft.FSharp.Core.Operators` は、 `abs` `sin` fsharp.core によって提供されるトップレベル関数 (やなど) の自動オープンコレクションです。
+たとえば、 `Microsoft.FSharp.Core.Operators` は、 `abs` `sin` FSharp.Core.dll によって提供されるトップレベル関数 (やなど) の自動オープンコレクションです。
 
 同様に、統計ライブラリには関数と関数を含むモジュールが含まれている場合があり `erf` `erfc` ます。このモジュールは、明示的に、または自動的に開くように設計されています。
 
@@ -234,7 +234,7 @@ module CollectionType =
 
 `[<AutoOpen>]`モジュールに属性を追加すると、含まれている名前空間を開いたときにモジュールが開かれることを意味します。 アセンブリ `[<AutoOpen>]` を参照するときに自動的に開くモジュールを示すために、属性をアセンブリに適用することもできます。
 
-たとえば、統計ライブラリ**MathsHeaven**には、を `module MathsHeaven.Statistics.Operators` 含む関数とが含まれている場合があります。 `erf` `erfc` このモジュールをとしてマークするのは妥当です `[<AutoOpen>]` 。 また、 `open MathsHeaven.Statistics` このモジュールを開き、名前 `erf` とスコープをにすることもでき `erfc` ます。 のもう1つの優れた使用 `[<AutoOpen>]` 方法は、拡張メソッドを含むモジュールです。
+たとえば、統計ライブラリ **MathsHeaven** には、を `module MathsHeaven.Statistics.Operators` 含む関数とが含まれている場合があります。 `erf` `erfc` このモジュールをとしてマークするのは妥当です `[<AutoOpen>]` 。 また、 `open MathsHeaven.Statistics` このモジュールを開き、名前 `erf` とスコープをにすることもでき `erfc` ます。 のもう1つの優れた使用 `[<AutoOpen>]` 方法は、拡張メソッドを含むモジュールです。
 
 `[<AutoOpen>]`潜在顧客を汚染され名前空間に使用すると、属性を慎重に使用する必要があります。 特定のドメイン内の特定のライブラリについては、を慎重 `[<AutoOpen>]` に使用することで、使いやすさを向上させることができます。
 
@@ -329,7 +329,7 @@ type System.ServiceModel.Channels.IInputChannel with
 
 ### <a name="exceptions"></a>例外
 
-例外、結果、およびオプションの適切な使用方法については、「[エラー管理](conventions.md#error-management)」を参照してください。
+例外、結果、およびオプションの適切な使用方法については、「 [エラー管理](conventions.md#error-management) 」を参照してください。
 
 ### <a name="extension-members"></a>拡張メンバー
 
@@ -653,7 +653,7 @@ member this.ParamOverload(x: int) = x
 member this.ParamOverload(x: int, y: int) = x + y
 ```
 
-#### <a name="use-the-net-collection-interface-types-ienumerablet-and-idictionarykeyvalue-for-parameters-and-return-values"></a>.NET コレクションインターフェイスの型 IEnumerable \< T \> と IDictionary \< キー、 \> パラメーターと戻り値の値を使用します。
+#### <a name="use-the-net-collection-interface-types-ienumerablet-and-idictionarykeyvalue-for-parameters-and-return-values"></a>\<T\> \<Key,Value\> パラメーターと戻り値には、.net コレクションインターフェイスの型 IEnumerable および IDictionary を使用します。
 
 .NET 配列 `T[]` 、F # 型、などの具象コレクション型やなどの `list<T>` `Map<Key,Value>` `Set<T>` .net 具象コレクション型は使用しないようにして `Dictionary<Key,Value>` ください。 .NET ライブラリの設計ガイドラインでは、などのさまざまなコレクション型を使用するタイミングに関するアドバイスがあり `IEnumerable<T>` ます。 一部の `T[]` 状況では、パフォーマンス grounds で配列 () を使用することができます。 特に `seq<T>` 、はの F # エイリアスであるため、 `IEnumerable<T>` seq は通常はバニラ .net API に適した型です。
 

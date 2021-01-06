@@ -2,12 +2,12 @@
 title: .NET 5 以降の古い機能
 description: SYSLIB コンパイラの警告を発生させる、.NET 5.0 以降のバージョンで古いものとしてマークされた API について説明します。
 ms.date: 10/20/2020
-ms.openlocfilehash: aa5716ba8fe46c7c4ae2faafe7cc963551eecef7
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 336958c93e3db8f66cfbec89476a666e5e103b70
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440765"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593306"
 ---
 # <a name="obsolete-features-in-net-5"></a>.NET 5 の古い機能
 
@@ -25,18 +25,18 @@ ms.locfileid: "94440765"
 
 | 診断 ID | Description |
 | - | - |
-| [SYSLIB0001](syslib0001.md) | UTF-7 エンコードは安全ではないため、使用しないでください。 代わりに UTF-8 を使用することを検討してください。 |
-| [SYSLIB0002](syslib0002.md) | <xref:System.Security.Permissions.PrincipalPermissionAttribute> はランタイムによって受け入れられず、使用することはできません。 |
-| [SYSLIB0003](syslib0003.md) | コード アクセス セキュリティ (CAS) はサポートされていないか、ランタイムによって受け入れられていません。 |
-| [SYSLIB0004](syslib0004.md) | 制約された実行領域 (CER) 機能はサポートされていません。 |
-| [SYSLIB0005](syslib0005.md) | グローバル アセンブリ キャッシュ (GAC) はサポートされていません。 |
-| [SYSLIB0006](syslib0006.md) | <xref:System.Threading.Thread.Abort?displayProperty=nameWithType> はサポートされていません。<xref:System.PlatformNotSupportedException> がスローされます。 |
-| [SYSLIB0007](syslib0007.md) | この暗号化アルゴリズムの既定の実装はサポートされていません。 |
-| [SYSLIB0008](syslib0008.md) | <xref:System.Runtime.CompilerServices.DebugInfoGenerator.CreatePdbGenerator> API はサポートされていません。<xref:System.PlatformNotSupportedException> がスローされます。 |
-| [SYSLIB0009](syslib0009.md) | <xref:System.Net.AuthenticationManager.Authenticate%2A?displayProperty=nameWithType> および <xref:System.Net.AuthenticationManager.PreAuthenticate%2A?displayProperty=nameWithType> メソッドはサポートされていません。<xref:System.PlatformNotSupportedException> がスローされます。 |
-| [SYSLIB0010](syslib0010.md) | 一部のリモート処理 API はサポートされていません。<xref:System.PlatformNotSupportedException> がスローされます。 |
-| [SYSLIB0011](syslib0011.md) | <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> シリアル化は古いので使用しないでください。 |
-| [SYSLIB0012](syslib0012.md) | <xref:System.Reflection.Assembly.CodeBase?displayProperty=nameWithType> と <xref:System.Reflection.Assembly.EscapedCodeBase?displayProperty=nameWithType> は .NET Framework との互換性のためだけに含まれています。 代わりに、<xref:System.Reflection.Assembly.Location?displayProperty=nameWithType> を使用してください。 |
+| [SYSLIB0001](syslib-warnings/syslib0001.md) | UTF-7 エンコードは安全ではないため、使用しないでください。 代わりに UTF-8 を使用することを検討してください。 |
+| [SYSLIB0002](syslib-warnings/syslib0002.md) | <xref:System.Security.Permissions.PrincipalPermissionAttribute> はランタイムによって受け入れられず、使用することはできません。 |
+| [SYSLIB0003](syslib-warnings/syslib0003.md) | コード アクセス セキュリティ (CAS) はサポートされていないか、ランタイムによって受け入れられていません。 |
+| [SYSLIB0004](syslib-warnings/syslib0004.md) | 制約された実行領域 (CER) 機能はサポートされていません。 |
+| [SYSLIB0005](syslib-warnings/syslib0005.md) | グローバル アセンブリ キャッシュ (GAC) はサポートされていません。 |
+| [SYSLIB0006](syslib-warnings/syslib0006.md) | <xref:System.Threading.Thread.Abort?displayProperty=nameWithType> はサポートされていません。<xref:System.PlatformNotSupportedException> がスローされます。 |
+| [SYSLIB0007](syslib-warnings/syslib0007.md) | この暗号化アルゴリズムの既定の実装はサポートされていません。 |
+| [SYSLIB0008](syslib-warnings/syslib0008.md) | <xref:System.Runtime.CompilerServices.DebugInfoGenerator.CreatePdbGenerator> API はサポートされていません。<xref:System.PlatformNotSupportedException> がスローされます。 |
+| [SYSLIB0009](syslib-warnings/syslib0009.md) | <xref:System.Net.AuthenticationManager.Authenticate%2A?displayProperty=nameWithType> および <xref:System.Net.AuthenticationManager.PreAuthenticate%2A?displayProperty=nameWithType> メソッドはサポートされていません。<xref:System.PlatformNotSupportedException> がスローされます。 |
+| [SYSLIB0010](syslib-warnings/syslib0010.md) | 一部のリモート処理 API はサポートされていません。<xref:System.PlatformNotSupportedException> がスローされます。 |
+| [SYSLIB0011](syslib-warnings/syslib0011.md) | <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> シリアル化は古いので使用しないでください。 |
+| [SYSLIB0012](syslib-warnings/syslib0012.md) | <xref:System.Reflection.Assembly.CodeBase?displayProperty=nameWithType> と <xref:System.Reflection.Assembly.EscapedCodeBase?displayProperty=nameWithType> は .NET Framework との互換性のためだけに含まれています。 代わりに、<xref:System.Reflection.Assembly.Location?displayProperty=nameWithType> を使用してください。 |
 
 ## <a name="suppress-warnings"></a>警告を表示しない
 

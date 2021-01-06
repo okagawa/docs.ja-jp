@@ -2,16 +2,16 @@
 title: 型拡張
 description: 'F # の型拡張機能を使用して、以前に定義したオブジェクト型に新しいメンバーを追加する方法について説明します。'
 ms.date: 02/05/2020
-ms.openlocfilehash: 8fdb2d5e527643b23d24a6118e8cef6b11f1a546
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: c9adddb3133a4af57a12be0b09c22954a8bff6a7
+ms.sourcegitcommit: c3093e9d106d8ca87cc86eef1f2ae4ecfb392118
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559129"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97737269"
 ---
 # <a name="type-extensions"></a>型拡張
 
-型拡張機能 ( _拡張_とも呼ばれます) は、以前に定義されたオブジェクト型に新しいメンバーを追加できるようにするための機能ファミリです。 次の3つの機能があります。
+型拡張機能 ( _拡張_ とも呼ばれます) は、以前に定義されたオブジェクト型に新しいメンバーを追加できるようにするための機能ファミリです。 次の3つの機能があります。
 
 - 組み込み型拡張機能
 - 省略可能な型拡張
@@ -34,7 +34,7 @@ open System.Runtime.CompilerServices
 [<Extension>]
 type Extensions() =
     [<Extension>]
-    static member self-identifier.extension-name (ty: typename, [args]) =
+    static member extension-name (ty: typename, [args]) =
         body
     ...
 ```
@@ -180,4 +180,4 @@ do ()
 ## <a name="see-also"></a>関連項目
 
 - [F# 言語リファレンス](index.md)
-- [[メンバー]](./members/index.md)
+- [メンバー](./members/index.md)

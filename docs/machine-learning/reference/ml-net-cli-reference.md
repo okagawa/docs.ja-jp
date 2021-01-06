@@ -3,12 +3,12 @@ title: ML.NET CLI コマンド リファレンス
 description: ML.NET CLI ツールの auto-train コマンドの概要、サンプル、およびリファレンス。
 ms.date: 06/03/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 4c6cb1346c16f6162077d3414140d693de9e0d8c
-ms.sourcegitcommit: 182c7b6c079ebcc0e1898dfd9e921b9ef472ea2c
+ms.openlocfilehash: 6f07cd8b4237f8931bbc0ec97bc0bbe18c488f16
+ms.sourcegitcommit: e395fabeeea5c705d243d246fa64446839ac85b6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85946942"
+ms.lasthandoff: 01/03/2021
+ms.locfileid: "97856069"
 ---
 # <a name="the-mlnet-cli-command-reference"></a>ML.NET CLI コマンド リファレンス
 
@@ -99,7 +99,7 @@ mlnet classification
 `mlnet regression` を実行すると、回帰モデルがトレーニングされます。 ML モデルで数値を予測する場合 (例: 価格予測) は、このコマンドを選択します。
 
 ```console
-mlnet classification
+mlnet regression
 
 --dataset <path> (REQUIRED)
 
@@ -134,7 +134,7 @@ mlnet classification
 `mlnet recommendation` を実行すると、推奨モデルがトレーニングされます。  ML モデルで評価に基づいてユーザーに項目を推奨する場合 (例: 製品推奨) は、このコマンドを選択します。
 
 ```console
-mlnet classification
+mlnet recommendation
 
 --dataset <path> (REQUIRED)
 

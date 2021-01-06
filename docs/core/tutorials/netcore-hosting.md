@@ -4,12 +4,12 @@ description: .NET Core ランタイムの動作を制御する必要がある高
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 79336396de3058e40cf7328e6d92e7e9e54296e9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 358cbff1ded3bd4ee9a3f78965eac1e1b1883ede
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242917"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633847"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>ネイティブ コードから .NET ランタイムを制御するカスタム .NET Core ホストを作成する
 
@@ -30,7 +30,7 @@ ms.locfileid: "96242917"
 .NET Core をホストするために使用できる API が 2 種類あります。 この記事 (とそれに関連する[サンプル](https://github.com/dotnet/samples/tree/master/core/hosting)) では、これら 2 つのオプションについて説明します。
 
 * .NET Core 3.0 以降の .NET Core ランタイムをホストする推奨される方法は、`nethost` および `hostfxr` ライブラリの API を使うことです。 これらのエントリ ポイントは、初期化のためにランタイムを検索して設定する複雑な処理が行われ、マネージド アプリケーションの起動と静的マネージド メソッドの呼び出しの両方が可能です。
-* .NET Core 3.0 より前の .NET Core ランタイムをホストする推奨される方法は、[`coreclrhost.h`](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/hosts/inc/coreclrhost.h) API を使うことです。 この API では、ランタイムを簡単に開始および停止し、(マネージド exe を起動するか、静的マネージド メソッドを呼び出すことで) マネージド コードを呼び出すために関数が公開されます。
+* .NET Core 3.0 より前の .NET Core ランタイムをホストする推奨される方法は、[`coreclrhost.h`](https://github.com/dotnet/runtime/blob/master/src/coreclr/hosts/inc/coreclrhost.h) API を使うことです。 この API では、ランタイムを簡単に開始および停止し、(マネージド exe を起動するか、静的マネージド メソッドを呼び出すことで) マネージド コードを呼び出すために関数が公開されます。
 
 ## <a name="sample-hosts"></a>サンプル ホスト
 
@@ -84,7 +84,7 @@ public delegate int ComponentEntryPoint(IntPtr args, int sizeBytes);
 
 以下は、`coreclrhost.h` API を使用してネイティブ アプリケーションで .NET Core ランタイムを起動し、静的マネージド メソッドを呼び出す手順を詳しくまとめたものです。 このドキュメントのコード スニペットでは Windows 固有の API が使用されてますが、[こちら](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithCoreClrHost)にある完全版サンプル ホストでは、Windows コード パスと Linux コード パスの両方を確認できます。
 
-[Unix CoreRun ホスト](https://github.com/dotnet/runtime/tree/master/src/coreclr/src/hosts/unixcorerun)では、`coreclrhost.h` を使ったホスティングの、より複雑で現実的な例が示されています。
+[Unix CoreRun ホスト](https://github.com/dotnet/runtime/tree/master/src/coreclr/hosts/unixcorerun)では、`coreclrhost.h` を使ったホスティングの、より複雑で現実的な例が示されています。
 
 ### <a name="step-1---find-and-load-coreclr"></a>手順 1 - CoreCLR を見つけて読み込む
 

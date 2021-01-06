@@ -5,13 +5,13 @@ ms.date: 08/07/2020
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet,contperfq1
-ms.openlocfilehash: 6a3f61525ca86afc9ee71d56cbc9450862760ba4
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.custom: vs-dotnet,contperf-fy21q1
+ms.openlocfilehash: 2d9b02a155c950b77565a66417948568f5fa039f
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599513"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513121"
 ---
 # <a name="tutorial-create-a-net-class-library-using-visual-studio"></a>チュートリアル: Visual Studio を使用して .NET クラス ライブラリを作成する
 

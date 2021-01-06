@@ -2,7 +2,7 @@
 title: 名前付き引数と省略可能な引数 - C# プログラミング ガイド
 description: C# の名前付き引数は、位置ではなく名前で引数を指定します。 省略可能な引数は省略できます。
 ms.date: 09/25/2020
-ms.custom: contperfq1
+ms.custom: contperf-fy21q1
 f1_keywords:
 - namedParameter_CSharpKeyword
 - cs_namedParameter
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: a0606d6acccb47347c663a9fe3ffb8ab65b0ecec
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: bb79d956124a610bac0de6825c1f42655789e98d
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91438007"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513108"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>名前付き引数と省略可能な引数 (C# プログラミング ガイド)
 
-C# 4 では、名前付き引数と省略可能な引数が導入されています。 "*名前付き引数*" を使用すると、引数をそのパラメーター リスト内の位置ではなく名前で照合することで、パラメーターの引数を指定できます。 *省略可能な引数*を使用すると、一部のパラメーターの引数を省略できます。 両方の手法をメソッド、インデクサー、コンストラクター、デリゲートで使用できます。
+C# 4 では、名前付き引数と省略可能な引数が導入されています。 "*名前付き引数*" を使用すると、引数をそのパラメーター リスト内の位置ではなく名前で照合することで、パラメーターの引数を指定できます。 *省略可能な引数* を使用すると、一部のパラメーターの引数を省略できます。 両方の手法をメソッド、インデクサー、コンストラクター、デリゲートで使用できます。
 
 名前付き引数と省略可能な引数を使用すると、引数は、パラメーター リストではなく、引数リストに記述されている順に評価されます。
 

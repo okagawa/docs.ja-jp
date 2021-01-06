@@ -2,12 +2,12 @@
 title: ASP.NET Core サービスと Web アプリのテスト
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | コンテナーで ASP.NET Core サービスと Web アプリをテストするためのアーキテクチャについて調べる。
 ms.date: 08/07/2020
-ms.openlocfilehash: af1187fb1e2afbb9fa953db5a280c9cc317ab6a8
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 67872668781d8ae5d79bf360aee73f744cf4404b
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804771"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633950"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core サービスと Web アプリのテスト
 
@@ -31,7 +31,7 @@ ms.locfileid: "91804771"
 
 単体テストは、xUnit.net、MSTest、Moq、NUnit などのテスト フレームワークに基づいて実装されます。 eShopOnContainers サンプル アプリケーションでは、xUnit を使用します。
 
-Web API コントローラーの単体テストを記述する際には、C\# で new キーワードを直接使用してコントローラー クラスをインスタンス化することにより、できるだけ速くテストを実行します。 次の例では、[xUnit](https://xunit.github.io/) をテスト フレームワークとして使用し、これを行う方法を示します。
+Web API コントローラーの単体テストを記述する際には、C\# で new キーワードを直接使用してコントローラー クラスをインスタンス化することにより、できるだけ速くテストを実行します。 次の例では、[xUnit](https://xunit.net/) をテスト フレームワークとして使用し、これを行う方法を示します。
 
 ```csharp
 [Fact]
@@ -111,7 +111,7 @@ public class PrimeWebDefaultRequestShould
     [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 - **xUnit.net**。 公式サイト。 \
-    <https://xunit.github.io/>
+    <https://xunit.net/>
 
 - **単体テストの基本。** \
     [https://docs.microsoft.com/visualstudio/test/unit-test-basics](/visualstudio/test/unit-test-basics)
@@ -134,7 +134,7 @@ Compose アプリケーションが起動し実行されると、Visual Studio �
 
 参照アプリケーション (eShopOnContainers) のテストが再構築され、次の 4 つのカテゴリができました。
 
-1. **単体**テスト。 **{MicroserviceName}.UnitTests** プロジェクトに含まれている、従来の単純で定期的な単体テスト
+1. **単体** テスト。 **{MicroserviceName}.UnitTests** プロジェクトに含まれている、従来の単純で定期的な単体テスト
 
 2. **マイクロサービスの機能/統合テスト**。各マイクロサービスのインフラストラクチャに関するテスト ケースを含みます。他からは分離されていて、 **{MicroserviceName}.FunctionalTests** プロジェクトに含まれています。
 
@@ -198,10 +198,10 @@ docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
 
 ### <a name="additional-resources"></a>その他の技術情報
 
-- eShopOnContainers の**ユニットと統合テスト** \
+- eShopOnContainers の **ユニットと統合テスト** \
     <https://github.com/dotnet-architecture/eShopOnContainers/wiki/Unit-and-integration-testing>
 
-- eShopOnContainers の**ロード テスト** \
+- eShopOnContainers の **ロード テスト** \
     <https://github.com/dotnet-architecture/eShopOnContainers/wiki/Load-testing>
 
 > [!div class="step-by-step"]
