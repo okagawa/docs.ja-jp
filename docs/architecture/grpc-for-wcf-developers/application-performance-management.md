@@ -1,17 +1,17 @@
 ---
 title: アプリケーションパフォーマンス管理-WCF 開発者向け gRPC
 description: ASP.NET Core gRPC アプリケーションのログ記録、メトリック、トレース。
-ms.date: 09/02/2019
-ms.openlocfilehash: 8a13d1c4df95768e55c90ac491150bfc78ec2bab
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.date: 12/15/2020
+ms.openlocfilehash: 8a2a89e268e3b2dffdcc945ac71b2de85b4d4964
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982343"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938456"
 ---
 # <a name="application-performance-management"></a>アプリケーション パフォーマンス管理
 
-Kubernetes のような運用環境では、アプリケーションが最適に実行されるように監視することが重要です。 ログ記録とメトリックは特に重要です。 GRPC を含む ASP.NET Core には、ログメッセージとメトリックデータの生成と管理のための組み込みのサポートと、 *トレース* データが用意されています。
+Kubernetes のような運用環境では、アプリケーションが最適に実行されるように監視することが重要です。 特にログとメトリックは重要です。 GRPC を含む ASP.NET Core には、ログメッセージとメトリックデータの生成と管理のための組み込みのサポートと、 *トレース* データが用意されています。
 
 ## <a name="the-difference-between-logging-and-metrics"></a>ログ記録とメトリックの違い
 
@@ -25,7 +25,7 @@ Kubernetes のような運用環境では、アプリケーションが最適に
 
 ## <a name="logging-in-aspnet-core-grpc"></a>GRPC ASP.NET Core のログイン
 
-ASP.NET Core には、ログ記録の組み込みサポートが用意されて[います。](https://www.nuget.org/packages/Microsoft.Extensions.Logging) このライブラリのコア部分は Web SDK に含まれているため、手動でインストールする必要はありません。 既定では、ログメッセージは、標準出力 ("コンソール") と、アタッチされている任意のデバッガーに書き込まれます。 永続的な外部データストアにログを書き込むには、オプションの [ログシンクパッケージ](/aspnet/core/fundamentals/logging/?view=aspnetcore-3.0#third-party-logging-providers)のインポートが必要になることがあります。
+ASP.NET Core には、ログを記録するための組み込みのサポートが用意されて[います。](https://www.nuget.org/packages/Microsoft.Extensions.Logging) このライブラリのコア部分は Web SDK に含まれているため、手動でインストールする必要はありません。 既定では、ログメッセージは、標準出力 ("コンソール") と、アタッチされている任意のデバッガーに書き込まれます。 永続的な外部データストアにログを書き込むには、オプションの [ログシンクパッケージ](/aspnet/core/fundamentals/logging/?view=aspnetcore-3.0#third-party-logging-providers)のインポートが必要になることがあります。
 
 ASP.NET Core gRPC フレームワークは、詳細な診断ログメッセージをこのログ記録フレームワークに書き込みます。これにより、アプリケーション独自のメッセージと共に処理および格納することができます。
 
@@ -110,7 +110,7 @@ public class StockData : Stocks.StocksBase
 
 ## <a name="distributed-tracing"></a>分散トレース
 
-分散トレースは、監視の比較的最近の開発で、マイクロサービスと分散アーキテクチャの使用量が増加してきました。 クライアントのブラウザー、アプリケーション、またはデバイスからの単一の要求は、多くの手順とサブ要求に分割でき、ネットワーク全体で多くのサービスを使用します。 これにより、ログメッセージとメトリックを、トリガーされた特定の要求と関連付けるのが困難になります。 分散トレースは、要求に識別子を適用します。これにより、ログとメトリックを特定の操作に関連付けることができます。 これは、 [WCF のエンドツーエンドのトレース](../../framework/wcf/diagnostics/tracing/end-to-end-tracing.md)に似ていますが、複数のプラットフォームに適用されます。
+分散トレースは、監視の比較的最近の開発で、マイクロサービスと分散アーキテクチャの使用量が増加してきました。 クライアントのブラウザー、アプリケーション、またはデバイスからの単一の要求は、多くの手順とサブ要求に分割でき、ネットワーク全体で多くのサービスを使用します。 このアクティビティを使用すると、ログメッセージとメトリックを、トリガーされた特定の要求と関連付けるのが困難になります。 分散トレースは、要求に識別子を適用し、ログとメトリックを特定の操作に関連付けることができるようにします。 このトレースは、 [WCF のエンドツーエンドのトレース](../../framework/wcf/diagnostics/tracing/end-to-end-tracing.md)に似ていますが、複数のプラットフォームに適用されます。
 
 分散トレースは急速に成長しており、標準化が開始されています。 クラウドネイティブコンピューティングファンデーションは、 [Jaeger](https://www.jaegertracing.io/)や[エラスティック APM](https://www.elastic.co/products/apm)などのバックエンドを操作するために、ベンダー中立のライブラリを提供しようとして、[オープントレース標準](https://opentracing.io)を作成しました。 同時に、Google は同じ問題のセットを解決するために [OpenCensus プロジェクト](https://opencensus.io/) を作成しました。 これら2つのプロジェクトは、新しいプロジェクトである [OpenTelemetry](https://opentelemetry.io)にマージされます。これは、将来の業界標準です。
 
@@ -120,9 +120,9 @@ public class StockData : Stocks.StocksBase
 
 ### <a name="distributed-tracing-with-diagnosticsource"></a>分散トレース `DiagnosticSource`
 
-.NET Core には、分散トレースおよびスパン ( [DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide)) に適切にマップされる内部モジュールがあります。 また、プロセス内で診断を生成して使用する簡単な方法が用意されているので、モジュールには `DiagnosticSource` *アクティビティ* の概念があります。 アクティビティは、実質的には、分散トレースまたはトレース内のスパンの実装です。 モジュールの内部では、識別子の割り当てなど、親/子アクティビティが処理されます。 型の使用方法の詳細については `Activity` 、 [GitHub のアクティビティユーザーガイド](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide)を参照してください。
+.NET には、分散トレースおよびスパン ( [DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide)) に適切にマップされる内部モジュールがあります。 また、プロセス内で診断を生成して使用する簡単な方法が用意されているので、モジュールには `DiagnosticSource` *アクティビティ* の概念があります。 アクティビティは、実質的には、分散トレースまたはトレース内のスパンの実装です。 モジュールの内部では、識別子の割り当てなど、親/子アクティビティが処理されます。 型の使用方法の詳細については `Activity` 、 [GitHub のアクティビティユーザーガイド](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide)を参照してください。
 
-`DiagnosticSource`はコアフレームワークの一部であるため、いくつかのコアコンポーネントでサポートされています。 これには <xref:System.Net.Http.HttpClient> 、gRPC フレームワークでの明示的なサポートを含む、、Entity Framework Core、ASP.NET Core が含まれます。 ASP.NET Core が要求を受信すると、 [W3C トレースコンテキスト](https://www.w3.org/TR/trace-context) 標準に一致する HTTP ヘッダーのペアが確認されます。 ヘッダーが見つかった場合は、ヘッダーの id 値とコンテキストを使用してアクティビティが開始されます。 ヘッダーが見つからない場合は、標準形式に一致する生成された id 値を使用してアクティビティが開始されます。 このアクティビティの有効期間中に、フレームワークまたはアプリケーションコードによって生成される診断には、トレース id とスパン識別子をタグ付けできます。 サポートは、 `HttpClient` すべての要求の現在のアクティビティを確認し、トレースヘッダーを送信要求に自動的に追加することで、これをさらに拡張します。
+`DiagnosticSource`はコアフレームワーク以降の一部であるため、いくつかのコアコンポーネントでサポートされています。 これには <xref:System.Net.Http.HttpClient> 、gRPC フレームワークでの明示的なサポートを含む、、Entity Framework Core、ASP.NET Core が含まれます。 ASP.NET Core が要求を受信すると、 [W3C トレースコンテキスト](https://www.w3.org/TR/trace-context) 標準に一致する HTTP ヘッダーのペアが確認されます。 ヘッダーが見つかった場合は、ヘッダーの id 値とコンテキストを使用してアクティビティが開始されます。 ヘッダーが見つからない場合は、標準形式に一致する生成された id 値を使用してアクティビティが開始されます。 このアクティビティの有効期間中に、フレームワークまたはアプリケーションコードによって生成される診断には、トレース id とスパン識別子をタグ付けできます。 サポートは、 `HttpClient` この機能をさらに拡張するために、すべての要求の現在のアクティビティを確認し、トレースヘッダーを送信要求に自動的に追加します。
 
 ASP.NET Core gRPC クライアントおよびサーバーライブラリには、およびの明示的なサポートが含まれて `DiagnosticSource` `Activity` います。また、アクティビティを作成し、ヘッダー情報を自動的に適用して使用します。
 

@@ -1,13 +1,13 @@
 ---
 title: WCF 開発者向け Docker-gRPC
 description: ASP.NET Core gRPC アプリケーション用の Docker イメージの作成
-ms.date: 09/02/2019
-ms.openlocfilehash: 0a680d0918868829042e521506fa8c1a1628bf5c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 12/15/2020
+ms.openlocfilehash: f662dbd67f00b828f3e1dfa47359a450dd1c5900
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688446"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938417"
 ---
 # <a name="create-docker-images"></a>Docker イメージを作成する
 
@@ -29,10 +29,10 @@ Microsoft では、.NET Core アプリケーションをビルドして実行す
 
 | イメージタグ | Linux | Notes |
 | --------- | ----- | ----- |
-| 3.0-buster、3.0 | Debian 10 | OS バリアントが指定されていない場合の既定のイメージ。 |
-| 3.0-アルペン | Alpine 3.9 | Alpine base イメージは Debian または Ubuntu よりもはるかに小さいものです。 |
-| 3.0-disco | Ubuntu 19.04 | |
-| 3.0-bionic | Ubuntu 18.04 | |
+| 5.0-buster、5.0 | Debian 10 | OS バリアントが指定されていない場合の既定のイメージ。 |
+| 5.0-アルペン | Alpine 3.9 | Alpine base イメージは Debian または Ubuntu よりもはるかに小さいものです。 |
+| 5.0-disco | Ubuntu 19.04 | |
+| 5.0-bionic | Ubuntu 18.04 | |
 
 Alpine base イメージは約 100 MB であり、Debian および Ubuntu イメージでは 200 MB と比較しています。 一部のソフトウェアパッケージまたはライブラリは、アルペンのパッケージ管理では利用できない場合があります。 使用するイメージがわからない場合は、既定の Debian を選択することをお勧めします。
 
@@ -41,29 +41,31 @@ Alpine base イメージは約 100 MB であり、Debian および Ubuntu イメ
 
 ## <a name="create-a-docker-image"></a>Docker イメージを作成します。
 
-Docker イメージは、 *Dockerfile* によって定義されます。 これは、アプリケーションを構築するために必要なすべてのコマンドを含むテキストファイルで、アプリケーションをビルドまたは実行するために必要なすべての依存関係をインストールします。 次の例は、ASP.NET Core 3.0 アプリケーションの最も単純な Dockerfile を示しています。
+Docker イメージは、 *Dockerfile* によって定義されます。 この *Dockerfile* は、アプリケーションを構築するために必要なすべてのコマンドを含むテキストファイルで、アプリケーションをビルドまたは実行するために必要なすべての依存関係をインストールします。 次の例は、ASP.NET Core 5.0 アプリケーションの最も単純な Dockerfile を示しています。
 
 ```dockerfile
-# Application build steps
-FROM mcr.microsoft.com/dotnet/sdk:3.0 as builder
+FROM mcr.microsoft.com/dotnet/sdk:5.0 as build
 
 WORKDIR /src
 
-COPY . .
+COPY ./StockKube.sln .
+COPY ./src/StockData/StockData.csproj ./src/StockData/
+COPY ./src/StockWeb/StockWeb.csproj ./src/StockWeb/
 
 RUN dotnet restore
 
-RUN dotnet publish -c Release -o /published src/StockData/StockData.csproj
+COPY . .
 
-# Runtime image creation
-FROM mcr.microsoft.com/dotnet/aspnet:3.0
+RUN dotnet publish --no-restore -c Release -o /published src/StockData/StockData.csproj
+
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 as runtime
 
 # Uncomment the line below if running with HTTPS
 # ENV ASPNETCORE_URLS=https://+:443
 
 WORKDIR /app
 
-COPY --from=builder /published .
+COPY --from=build /published .
 
 ENTRYPOINT [ "dotnet", "StockData.dll" ]
 ```
@@ -91,18 +93,18 @@ Dockerfile には、2つの部分があります。1つ目は基本イメージ�
 
 ### <a name="https-in-docker"></a>Docker での HTTPS
 
-Docker 用の Microsoft 基本イメージは `ASPNETCORE_URLS` 、環境変数をに設定し `http://+:80` ます。これは、Kestrel が HTTPS を使用せずにそのポートで実行されることを意味します。 ( [自己ホスト型 gRPC アプリケーション](self-hosted.md)で説明されているように) カスタム証明書と共に HTTPS を使用している場合は、これをオーバーライドする必要があります。 Dockerfile のランタイムイメージ作成部分で環境変数を設定します。
+Docker 用の Microsoft 基本イメージは `ASPNETCORE_URLS` 、環境変数をに設定し `http://+:80` ます。これは、Kestrel が HTTPS を使用せずにそのポートで実行されることを意味します。 ( [自己ホスト型 gRPC アプリケーション](self-hosted.md)で説明されているように) カスタム証明書で HTTPS を使用している場合は、この構成をオーバーライドする必要があります。 Dockerfile のランタイムイメージ作成部分で環境変数を設定します。
 
 ```dockerfile
 # Runtime image creation
-FROM mcr.microsoft.com/dotnet/aspnet:3.0
+FROM mcr.microsoft.com/dotnet/aspnet:5.0
 
 ENV ASPNETCORE_URLS=https://+:443
 ```
 
 ### <a name="the-dockerignore-file"></a>Dockerignore ファイル
 
-ソース管理から特定のファイルやディレクトリを除外するファイルと同じように、ファイルを使用して、 `.gitignore` `.dockerignore` ビルド中にファイルとディレクトリをイメージにコピーしないようにすることができます。 これにより、時間を節約できるだけでなく、 `obj` PC からのディレクトリがイメージにコピーされた場合に発生するエラーを回避することもできます。 少なくとも、ファイルにとのエントリを追加する必要があり `bin` `obj` `.dockerignore` ます。
+ソース管理から特定のファイルやディレクトリを除外するファイルと同じように、ファイルを使用して、 `.gitignore` `.dockerignore` ビルド中にファイルとディレクトリをイメージにコピーしないようにすることができます。 このファイルを使用すると、時間を節約できるだけでなく、 `obj` PC からのディレクトリがイメージにコピーされることによって発生するエラーを回避することもできます。 少なくとも、ファイルにとのエントリを追加する必要があり `bin` `obj` `.dockerignore` ます。
 
 ```console
 bin/
@@ -111,10 +113,10 @@ obj/
 
 ## <a name="build-the-image"></a>イメージをビルドする
 
-単一のアプリケーションと1つの Dockerfile を持つソリューションでは、Dockerfile を基本ディレクトリに配置するのが最も簡単です。 つまり、ファイルと同じディレクトリに配置し `.sln` ます。 その場合は、イメージをビルドするために、Dockerfile が格納されているディレクトリから次のコマンドを使用し `docker build` ます。
+`StockKube.sln`2 つの異なるアプリケーションとが含まれているソリューションでは `StockData` `StockWeb` 、1つの dockerfile をベースディレクトリに配置するのが最も簡単です。 この場合、イメージをビルドするには、ファイルが `docker build` 置かれているディレクトリから次のコマンドを使用し `.sln` ます。
 
 ```console
-docker build --tag stockdata .
+docker build -t stockdata:1.0.0 -f .\src\StockData\Dockerfile .
 ```
 
 紛らわしい名前付き `--tag` フラグ (に短縮できます) は、 `-t` 指定されている場合は、イメージの完全な名前 (実際のタグを含む) を指定します。 `.`末尾のは、ビルドを実行するコンテキストを指定します。 Dockerfile 内のコマンドの現在の作業ディレクトリです `COPY` 。
@@ -122,7 +124,7 @@ docker build --tag stockdata .
 1つのソリューション内に複数のアプリケーションがある場合は、各アプリケーションの Dockerfile を、ファイルの横にある独自のフォルダーに保持でき `.csproj` ます。 引き続き、 `docker build` ベースディレクトリからコマンドを実行して、ソリューションとすべてのプロジェクトがイメージにコピーされるようにする必要があります。 `--file`(または) フラグを使用して、現在のディレクトリの下に Dockerfile を指定でき `-f` ます。
 
 ```console
-docker build --tag stockdata --file src/StockData/Dockerfile .
+docker build -t stockdata:1.0.0 -f .\src\StockData\Dockerfile .
 ```
 
 ## <a name="run-the-image-in-a-container-on-your-machine"></a>コンピューターのコンテナーでイメージを実行する
@@ -130,27 +132,27 @@ docker build --tag stockdata --file src/StockData/Dockerfile .
 ローカルの Docker インスタンスでイメージを実行するには、コマンドを使用し `docker run` ます。
 
 ```console
-docker run -ti -p 5000:80 stockdata
+docker run -ti -p 5000:80 stockdata:1.0.0
 ```
 
 フラグは、 `-ti` 現在のターミナルをコンテナーのターミナルに接続し、対話モードで実行します。 は、 `-p 5000:80` コンテナーのポート80を localhost ネットワークインターフェイスのポート5000に発行 (リンク) します。
 
 ## <a name="push-the-image-to-a-registry"></a>イメージをレジストリにプッシュする
 
-イメージが動作することを確認したら、それを Docker レジストリにプッシュして、他のシステムで使用できるようにします。 内部ネットワークでは、Docker レジストリをプロビジョニングする必要があります。 これは、 [docker の独自の `registry` イメージ](https://docs.docker.com/registry/deploying/) を実行するのと同じように簡単ですが (Docker レジストリは docker コンテナーで実行されます)、さまざまな包括的なソリューションが用意されています。 外部共有とクラウド使用については、 [Azure Container Registry](/azure/container-registry/) や [Docker Hub](https://docs.docker.com/docker-hub/repos/)などのさまざまな管理対象レジストリを利用できます。
+イメージが動作することを確認したら、それを Docker レジストリにプッシュして、他のシステムで使用できるようにします。 内部ネットワークでは、Docker レジストリをプロビジョニングする必要があります。 このアクティビティは、 [docker の独自の `registry` イメージ](https://docs.docker.com/registry/deploying/) を実行するのと同じように簡単に行うことができます (Docker レジストリは docker コンテナーで実行されます) が、さまざまな包括的なソリューションを利用できます。 外部共有とクラウド使用については、 [Azure Container Registry](/azure/container-registry/) や [Docker Hub](https://docs.docker.com/docker-hub/repos/)などのさまざまな管理対象レジストリを利用できます。
 
 Docker Hub にプッシュするには、イメージ名の前にユーザー名または組織名を付けます。
 
 ```console
-docker tag stockdata myorg/stockdata
-docker push myorg/stockdata
+docker tag stockdata:1.0.0 <myorg>/stockdata:1.0.0
+docker push <myorg>/stockdata:1.0.0
 ```
 
 プライベートレジストリにプッシュするには、イメージ名の前にレジストリのホスト名と組織名を付けます。
 
 ```console
-docker tag stockdata internal-registry:5000/myorg/stockdata
-docker push internal-registry:5000/myorg/stockdata
+docker tag stockdata <internal-registry:5000>/<myorg>/stockdata:1.0.0
+docker push <internal-registry:5000>/<myorg>/stockdata:1.0.0
 ```
 
 イメージがレジストリに格納された後、個々の Docker ホスト、または Kubernetes のようなコンテナーオーケストレーションエンジンにイメージを展開できます。

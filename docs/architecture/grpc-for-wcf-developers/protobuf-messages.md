@@ -1,13 +1,13 @@
 ---
 title: Protobuf messages-WCF 開発者向け gRPC
 description: Protobuf メッセージを IDL で定義し、C# で生成する方法について説明します。
-ms.date: 09/09/2019
-ms.openlocfilehash: 6fc7b9c34810abaa8d674af56d1517a5cf87521b
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.date: 12/15/2020
+ms.openlocfilehash: c1f2a3071d45dcbe4b98d747f19fed508bad102f
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325037"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938105"
 ---
 # <a name="protobuf-messages"></a>Protobuf メッセージ
 
@@ -62,16 +62,16 @@ message Stock {
 
 ## <a name="field-numbers"></a>フィールド番号
 
-フィールド番号は Protobuf の重要な部分です。 これらは、バイナリエンコードデータ内のフィールドを識別するために使用されます。つまり、サービスのバージョンごとに変更することはできません。 長所は、下位互換性と上位互換性が可能であることです。 クライアントとサービスは、不足値が処理される可能性がある限り、認識していないフィールド番号を無視します。
+フィールド番号は Protobuf の重要な部分です。 これらは、バイナリエンコードデータ内のフィールドを識別するために使用されます。つまり、サービスのバージョンごとに変更することはできません。 長所は、下位互換性と上位互換性が可能であることです。 クライアントとサービスは、不明な値が処理される可能性がある限り、知られていないフィールド番号を無視します。
 
 バイナリ形式では、フィールド番号が型識別子と結合されます。 1 ~ 15 のフィールド番号は、その型で1バイトとしてエンコードできます。 16から2047の数値は2バイトになります。 何らかの理由でメッセージに2047を超えるフィールドが必要な場合は、より高い値にすることができます。 フィールド番号が 1 ~ 15 の1バイト識別子ではパフォーマンスが向上します。そのため、最も基本的で頻繁に使用されるフィールドで使用する必要があります。
 
-## <a name="types"></a>型
+## <a name="types"></a>種類
 
-型宣言は、Protobuf のネイティブスカラーデータ型を使用しています。詳細については、[次のセクション](protobuf-data-types.md)で説明します。 この章の残りの部分では、Protobuf の組み込み型について説明し、一般的な .NET 型にどのように関連しているかを示します。
+型宣言は、Protobuf のネイティブスカラーデータ型を使用しています。詳細については、 [次のセクション](protobuf-data-types.md)で説明します。 この章の残りの部分では、Protobuf の組み込み型について説明し、一般的な .NET 型にどのように関連しているかを示します。
 
 > [!NOTE]
-> Protobuf は型をネイティブでサポートしていない `decimal` ため、 `double` 代わりにを使用します。 完全な10進数の有効桁数を必要とするアプリケーションについては、この章の次の部分にある10進数[に関するセクション](protobuf-data-types.md#decimals)を参照してください。
+> Protobuf は型をネイティブでサポートしていない `decimal` ため、 `double` 代わりにを使用します。 完全な10進数の有効桁数を必要とするアプリケーションについては、この章の次の部分にある10進数 [に関するセクション](protobuf-data-types.md#decimals) を参照してください。
 
 ## <a name="the-generated-code"></a>生成されたコード
 

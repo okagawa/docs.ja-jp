@@ -2,16 +2,16 @@
 title: ネットワークプロトコル-WCF 開発者向け gRPC
 description: GRPC ネットワークプロトコルの概要について説明します。
 ms.date: 09/02/2019
-ms.openlocfilehash: 1ceb140f7b7ac7e796a87612ebb9d21e28d33968
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 801d57c95aec748e5dcf667ca480775ff945b55c
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628489"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938560"
 ---
 # <a name="network-protocols"></a>ネットワーク プロトコル
 
-Windows Communication Foundation (WCF) とは異なり、gRPC はネットワークのベースとして HTTP/2 を使用します。 これは、HTTP/1.1 でのみ動作する WCF と SOAP よりも大きな利点を提供します。 GRPC の使用を検討している開発者にとって、HTTP/2 の代替手段がない場合は、HTTP/2 の詳細を確認し、gRPC を使用する利点をさらに特定することが理想的です。
+Windows Communication Foundation (WCF) とは異なり、gRPC はネットワークのベースとして HTTP/2 を使用します。 このプロトコルは、HTTP/1.1 でのみ動作する WCF と SOAP よりも大きな利点を提供します。 GRPC の使用を検討している開発者にとって、HTTP/2 の代替手段がない場合は、HTTP/2 の詳細を確認し、gRPC を使用する利点をさらに特定することが理想的です。
 
 2015の Internet Engineering Task Force によってリリースされた HTTP/2 は、既に Google によって使用されていた実験的な SPDY プロトコルから派生しました。 これは、HTTP/1.1 よりも効率的で高速かつ安全になるように設計されています。
 
@@ -21,7 +21,7 @@ Windows Communication Foundation (WCF) とは異なり、gRPC はネットワー
 
 ### <a name="binary-protocol"></a>バイナリプロトコル
 
-要求/応答サイクルでは、テキストコマンドが不要になりました。 これにより、コマンドの実装が簡略化され、高速化されます。 具体的には、データの解析が高速で、使用するメモリが少なくなるため、ネットワーク待機時間が短縮されます。
+要求/応答サイクルでは、テキストコマンドが不要になりました。 このアクティビティは、コマンドの実装を簡素化し、高速化します。 具体的には、データの解析が高速で、使用するメモリが少なくなるため、ネットワーク待機時間が短縮されます。
 
 ### <a name="streams"></a>ストリーム
 

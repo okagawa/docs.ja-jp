@@ -1,13 +1,13 @@
 ---
 title: 資格情報の呼び出し-WCF 開発者向けの gRPC
 description: ASP.NET Core 3.0 で gRPC 通話資格情報を実装して使用する方法。
-ms.date: 09/02/2019
-ms.openlocfilehash: 01f21f58ed4235f45509c948c84653cd99d35618
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.date: 12/15/2020
+ms.openlocfilehash: 66394c75929bf068f83d631e022b467386e59ec5
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711534"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938443"
 ---
 # <a name="call-credentials"></a>資格情報を呼び出す
 
@@ -15,19 +15,19 @@ ms.locfileid: "74711534"
 
 ## <a name="ws-federation"></a>WS-Federation
 
-ASP.NET Core は、 [wsfederation](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.WsFederation) NuGet パッケージを使用した ws-federation をサポートしています。 WS フェデレーションは、HTTP/2 でサポートされていない Windows 認証の代替として使用できる最も近いものです。 ユーザーは Active Directory フェデレーションサービス (AD FS) (AD FS) を使用して認証されます。これにより、ASP.NET Core での認証に使用できるトークンが提供されます。
+ASP.NET Core は、 [Wsfederation](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.WsFederation) NuGet パッケージを使用した WS-Federation をサポートしています。 WS-Federation は、HTTP/2 でサポートされていない Windows 認証の代替手段として最も近いものです。 ユーザーは Active Directory フェデレーションサービス (AD FS) (AD FS) を使用して認証されます。これにより、ASP.NET Core での認証に使用できるトークンが提供されます。
 
-この認証方法の使用を開始する方法の詳細については、「 [ASP.NET Core で ws-federation を使用](/aspnet/core/security/authentication/ws-federation)してユーザーを認証する」を参照してください。
+この認証方法の使用を開始する方法の詳細については、「 [ASP.NET Core での WS-Federation を使用したユーザーの認証](/aspnet/core/security/authentication/ws-federation)」を参照してください。
 
 ## <a name="jwt-bearer-tokens"></a>JWT ベアラートークン
 
 [JSON Web Token](https://jwt.io) (JWT) 標準は、エンコードされた文字列でユーザーとそのクレームに関する情報をエンコードする手段を提供します。 また、公開キー暗号化を使用して、コンシューマーがトークンの整合性を検証できるように、そのトークンに署名する方法も提供します。 IdentityServer4 などのさまざまなサービスを使用して、ユーザーを認証し、gRPC と HTTP Api で使用する OpenID Connect (OIDC) トークンを生成することができます。
 
-ASP.NET Core 3.0 は JWT ベアラーパッケージを使用して JWTs を処理できます。 GRPC アプリケーションの構成は、ASP.NET Core MVC アプリケーションの場合とまったく同じです。 ここでは、JWT ベアラートークンに焦点を絞って説明します。これは、WS-FEDERATION を使用した開発が簡単であるためです。
+ASP.NET Core 5.0 は JWT ベアラーパッケージを使用して JWTs を処理できます。 GRPC アプリケーションの構成は、ASP.NET Core MVC アプリケーションの場合とまったく同じです。 ここでは、JWT ベアラートークンに焦点を絞って説明します。これは、WS-FEDERATION を使用した開発が簡単であるためです。
 
 ## <a name="add-authentication-and-authorization-to-the-server"></a>サーバーに認証と承認を追加する
 
-JWT ベアラーパッケージは、既定では ASP.NET Core 3.0 には含まれていません。 アプリに[AspNetCore JwtBearer](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer) NuGet パッケージをインストールします。
+JWT ベアラーパッケージは、既定では ASP.NET Core 5.0 には含まれていません。 アプリに [AspNetCore JwtBearer](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer) NuGet パッケージをインストールします。
 
 スタートアップクラスに認証サービスを追加し、JWT ベアラーハンドラーを構成します。
 
@@ -55,7 +55,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-`IssuerSigningKey` プロパティには、署名されたトークンを検証するために必要な暗号化データと共に `Microsoft.IdentityModels.Tokens.SecurityKey` の実装が必要です。 このトークンは、Azure Key Vault などの*シークレットサーバー*に安全に格納します。
+プロパティは、 `IssuerSigningKey` 署名され `Microsoft.IdentityModels.Tokens.SecurityKey` たトークンを検証するために必要な暗号化データを使用して、の実装を必要とします。 このトークンは、Azure Key Vault などの *シークレットサーバー* に安全に格納します。
 
 次に、承認サービスを追加します。これにより、システムへのアクセスが制御されます。
 
@@ -74,7 +74,7 @@ public void ConfigureServices(IServiceCollection services)
 > [!TIP]
 > 認証と承認は、2つの別個の手順です。 認証を使用して、ユーザーの id を決定します。 承認を使用して、ユーザーがシステムのさまざまな部分へのアクセスを許可されているかどうかを判断します。
 
-次に、認証と承認のミドルウェアを `Configure` メソッドの ASP.NET Core パイプラインに追加します。
+次に、認証と承認のミドルウェアをメソッドの ASP.NET Core パイプラインに追加し `Configure` ます。
 
 ```csharp
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -97,7 +97,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 }
 ```
 
-最後に、`[Authorize]` 属性をセキュリティで保護するすべてのサービスまたはメソッドに適用し、基になる `HttpContext` の `User` プロパティを使用してアクセス許可を確認します。
+最後に、 `[Authorize]` セキュリティで保護されるすべてのサービスまたはメソッドに属性を適用し、 `User` 基になっているのプロパティを使用し `HttpContext` てアクセス許可を確認します。
 
 ```csharp
 [Authorize]

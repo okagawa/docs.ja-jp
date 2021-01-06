@@ -1,21 +1,21 @@
 ---
 title: 暗号化とネットワークセキュリティ-WCF 開発者向けの gRPC
 description: GRPC でのネットワークセキュリティと暗号化に関する注意事項
-ms.date: 09/02/2019
-ms.openlocfilehash: f8a7aeaf2a65e4ff56ac33d728e40f09a436f7a6
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.date: 12/15/2020
+ms.openlocfilehash: 0735158ed69ce425c4f00eed6c42689b888a1885
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542771"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938625"
 ---
 # <a name="encryption-and-network-security"></a>暗号化とネットワークセキュリティ
 
-Windows Communication Foundation (WCF) のネットワークセキュリティモデルは広範で複雑です。 これには、HTTPS または TLS over TCP を使用したトランスポートレベルのセキュリティと、WS-SECURITY 仕様を使用して個々のメッセージを暗号化するメッセージレベルのセキュリティが含まれます。
+Windows Communication Foundation (WCF) のネットワークセキュリティモデルは広範で複雑です。 これには、HTTPS または TLS over TCP を使用したトランスポートレベルのセキュリティと、個々のメッセージを暗号化するための WS-Security 仕様を使用したメッセージレベルのセキュリティが含まれます。
 
 gRPC は、基盤となる HTTP/2 プロトコルにセキュリティで保護されたネットワークを残し、TLS 証明書を使用してセキュリティで保護することができます。
 
-Web ブラウザーは、HTTP/2 の TLS 接続を使用することを主張していますが、を含むほとんどのプログラム用クライアントです。NET の `HttpClient`では、暗号化されていない接続を介して HTTP/2 を使用できます。 `HttpClient` には既定で暗号化が必要ですが、<xref:System.AppContext> スイッチを使用して上書きすることができます。
+Web ブラウザーは、HTTP/2 の TLS 接続を使用することを主張していますが、を含むほとんどのプログラム用クライアントです。NET は `HttpClient` 、暗号化されていない接続を介して HTTP/2 を使用できます。 `HttpClient` 既定では暗号化が必要ですが、スイッチを使用してこの動作をオーバーライドでき <xref:System.AppContext> ます。
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);

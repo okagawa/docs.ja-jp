@@ -1,13 +1,13 @@
 ---
 title: Wcf 開発者向けの WCF と gRPC-gRPC の比較
 description: 分散アプリケーションを構築するための WCF および gRPC フレームワークの比較。
-ms.date: 09/02/2019
-ms.openlocfilehash: 4f54db76c9512b770b4dd993496d95437dd89753
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.date: 12/15/2020
+ms.openlocfilehash: 7dd41c3d6f248bb1ef5eacb323b1443c7bc575a7
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503335"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938495"
 ---
 # <a name="comparing-wcf-to-grpc"></a>WCF と gRPC の比較
 
@@ -18,11 +18,11 @@ ms.locfileid: "77503335"
 - RPC の種類
 - メタデータ
 - エラー処理
-- WS-MANAGEMENT プロトコル\*
+- \*プロトコル
 
 ## <a name="grpc-example"></a>gRPC の例
 
-Visual Studio 2019 またはコマンドラインから新しい ASP.NET Core 3.0 gRPC プロジェクトを作成すると、"Hello World" に相当する gRPC が生成されます。 これは、サービスとそのメッセージを定義する `greeter.proto` ファイルと、サービスを実装する `GreeterService.cs` ファイルで構成されます。
+Visual Studio 2019 またはコマンドラインから新しい ASP.NET Core 5.0 gRPC プロジェクトを作成すると、"Hello World" に相当する gRPC が生成されます。 `greeter.proto`サービスとそのメッセージ、および `GreeterService.cs` サービスの実装を含むファイルを定義するファイルで構成されます。
 
 ```protobuf
 syntax = "proto3";

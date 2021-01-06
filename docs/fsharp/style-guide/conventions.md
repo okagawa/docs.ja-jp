@@ -1,13 +1,13 @@
 ---
 title: F# のコーディング規則
 description: 'F # コードを記述するときの一般的なガイドラインと表現方法について説明します。'
-ms.date: 01/15/2020
-ms.openlocfilehash: 87955c379f0abba929b0ced75d62d2601f37dc5a
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.date: 01/5/2021
+ms.openlocfilehash: e69ceb2f3c37404ca8d8ed972f985340e62ecb59
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739903"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938690"
 ---
 # <a name="f-coding-conventions"></a>F# のコーディング規則
 
@@ -135,7 +135,7 @@ open Internal.Utilities.Collections
 ```fsharp
 // This is bad!
 module MyApi =
-    let dep1 = File.ReadAllText "/Users/{your name}/connectionstring.txt"
+    let dep1 = File.ReadAllText "/Users/<name>/connectionstring.txt"
     let dep2 = Environment.GetEnvironmentVariable "DEP_2"
 
     let private r = Random()
@@ -190,9 +190,9 @@ type MoneyWithdrawalResult =
 let handleWithdrawal amount =
     let w = withdrawMoney amount
     match w with
-    | Success am -> printfn "Successfully withdrew %f{am}"
-    | InsufficientFunds balance -> printfn "Failed: balance is %f{balance}"
-    | CardExpired expiredDate -> printfn "Failed: card expired on %O{expiredDate}"
+    | Success am -> printfn $"Successfully withdrew %f{am}"
+    | InsufficientFunds balance -> printfn $"Failed: balance is %f{balance}"
+    | CardExpired expiredDate -> printfn $"Failed: card expired on {expiredDate}"
     | UndisclosedFailure -> printfn "Failed: unknown"
 ```
 
@@ -238,7 +238,7 @@ with
 
 ### <a name="do-not-use-monadic-error-handling-to-replace-exceptions"></a>Monadic のエラー処理を使用して例外を置き換えることはできません
 
-関数型プログラミングでは、例外がいくつかのタブに表示されます。 実際には、例外は純粋性に違反するため、非常に機能していないと考えるのは安全です。 ただし、これにより、コードを実行する必要がある場合は無視され、実行時エラーが発生する可能性があります。 一般に、望ましくない問題を最小限に抑えるために、ほとんどのものが純粋でも合計でもないことを前提としてコードを記述します。
+関数型プログラミングでは、多くの場合、例外は taboo と表示されます。 実際には、例外は純粋性に違反するため、非常に機能していないと考えるのは安全です。 ただし、これにより、コードを実行する必要がある場合は無視され、実行時エラーが発生する可能性があります。 一般に、望ましくない問題を最小限に抑えるために、ほとんどのものが純粋でも合計でもないことを前提としてコードを記述します。
 
 .NET ランタイムでの関連性と妥当性、および言語間のエコシステム全体に関して、例外の次の主要な長所や側面を考慮することが重要です。
 
@@ -317,7 +317,7 @@ F # では、部分的なアプリケーションをサポートしているた�
 
 ```fsharp
 let func name age =
-    printfn "My name is {name} and I am %d{age} years old!"
+    printfn $"My name is {name} and I am %d{age} years old!"
 
 let funcWithApplication =
     printfn "My name is %s and I am %d years old!"
@@ -331,7 +331,7 @@ val func : name:string -> age:int -> unit
 val funcWithApplication : (string -> int -> unit)
 ```
 
-呼び出しサイトでは、Visual Studio などのツールのツールヒントには、 `string` 入力型と入力型が実際に表す内容に関する意味のある情報は含まれません `int` 。
+呼び出しサイトでは、Visual Studio などのツールのツールヒントによって型シグネチャが提供されますが、名前が定義されていないため、名前は表示されません。 名前は、呼び出し元が API の背後にある意味をより深く理解するのに役立つため、優れた API 設計に不可欠です。 パブリック API でポイントフリーコードを使用すると、呼び出し元が理解しづらくなる可能性があります。
 
 パブリックに使用できるようなポイントフリーのコードが発生した場合は `funcWithApplication` 、ηを完全に展開することをお勧めします。これにより、ツールが引数の意味のある名前を取得できるようになります。
 
