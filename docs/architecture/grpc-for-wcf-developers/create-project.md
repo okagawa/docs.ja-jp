@@ -1,13 +1,13 @@
 ---
 title: WCF 開発者向けの新しい ASP.NET Core gRPC プロジェクト-gRPC を作成する
 description: Visual Studio またはコマンドラインを使用して gRPC プロジェクトを作成する方法について説明します。
-ms.date: 12/15/2020
-ms.openlocfilehash: 960725a9507797f43b2c15283e384b0ad827c2b1
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.date: 01/06/2021
+ms.openlocfilehash: c9d66a773f0633c2ae93c42ce3ce53084032cd17
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938658"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970259"
 ---
 # <a name="create-a-new-aspnet-core-grpc-project"></a>新しい ASP.NET Core gRPC プロジェクトを作成する
 
@@ -16,7 +16,7 @@ ms.locfileid: "97938658"
 ## <a name="create-the-project-by-using-visual-studio"></a>Visual Studio を使用してプロジェクトを作成する
 
 > [!IMPORTANT]
-> ASP.NET Core 5.0 アプリを開発するには、 **ASP.NET と web 開発** ワークロードがインストールされた Visual Studio 2019 バージョン16.3 以降が必要です。
+> ASP.NET Core 5.0 アプリを開発するには、 **ASP.NET と web 開発** ワークロードがインストールされた Visual Studio 2019 バージョン16.8 以降が必要です。
 
 空の *ソリューション* テンプレートから、 **TraderSys** という名前の空のソリューションを作成します。 という名前のソリューションフォルダーを追加 `src` します。 次に、フォルダーを右クリックし、[   >  **新しいプロジェクト** の追加] を選択します。 [ `grpc` テンプレート検索] ボックスに「」と入力すると、という名前のプロジェクトテンプレートが表示され `gRPC Service` ます。
 

@@ -1,13 +1,13 @@
 ---
 title: WCF 開発者向け Docker-gRPC
 description: ASP.NET Core gRPC アプリケーション用の Docker イメージの作成
-ms.date: 12/15/2020
-ms.openlocfilehash: f662dbd67f00b828f3e1dfa47359a450dd1c5900
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.date: 01/06/2021
+ms.openlocfilehash: f59518a28b0a1dee75c792ba03bd4af826638502
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938417"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970090"
 ---
 # <a name="create-docker-images"></a>Docker イメージを作成する
 
@@ -15,7 +15,7 @@ ms.locfileid: "97938417"
 
 ## <a name="microsoft-base-images-for-aspnet-core-applications"></a>ASP.NET Core アプリケーション用の Microsoft 基本イメージ
 
-Microsoft では、.NET Core アプリケーションをビルドして実行するためのさまざまな基本イメージを提供しています。 ASP.NET Core 3.0 イメージを作成するには、次の2つの基本イメージを使用します。
+Microsoft では、.NET アプリケーションをビルドして実行するためのさまざまな基本イメージを提供しています。 ASP.NET Core 5.0 イメージを作成するには、次の2つの基本イメージを使用します。
 
 - アプリケーションをビルドして発行するための SDK イメージ。
 - 配置のランタイムイメージ。
@@ -29,10 +29,9 @@ Microsoft では、.NET Core アプリケーションをビルドして実行す
 
 | イメージタグ | Linux | Notes |
 | --------- | ----- | ----- |
-| 5.0-buster、5.0 | Debian 10 | OS バリアントが指定されていない場合の既定のイメージ。 |
-| 5.0-アルペン | Alpine 3.9 | Alpine base イメージは Debian または Ubuntu よりもはるかに小さいものです。 |
-| 5.0-disco | Ubuntu 19.04 | |
-| 5.0-bionic | Ubuntu 18.04 | |
+| 5.0-buster-スリム、5.0 | Debian 10 | OS バリアントが指定されていない場合の既定のイメージ。 |
+| 5.0-アルペン | Alpine 3.12 | Alpine base イメージは Debian または Ubuntu よりもはるかに小さいものです。 |
+| 5.0-焦点| Ubuntu 20.04 | |
 
 Alpine base イメージは約 100 MB であり、Debian および Ubuntu イメージでは 200 MB と比較しています。 一部のソフトウェアパッケージまたはライブラリは、アルペンのパッケージ管理では利用できない場合があります。 使用するイメージがわからない場合は、既定の Debian を選択することをお勧めします。
 
@@ -116,7 +115,7 @@ obj/
 `StockKube.sln`2 つの異なるアプリケーションとが含まれているソリューションでは `StockData` `StockWeb` 、1つの dockerfile をベースディレクトリに配置するのが最も簡単です。 この場合、イメージをビルドするには、ファイルが `docker build` 置かれているディレクトリから次のコマンドを使用し `.sln` ます。
 
 ```console
-docker build -t stockdata:1.0.0 -f .\src\StockData\Dockerfile .
+docker build -t stockdata:1.0.0 -f ./src/StockData/Dockerfile .
 ```
 
 紛らわしい名前付き `--tag` フラグ (に短縮できます) は、 `-t` 指定されている場合は、イメージの完全な名前 (実際のタグを含む) を指定します。 `.`末尾のは、ビルドを実行するコンテキストを指定します。 Dockerfile 内のコマンドの現在の作業ディレクトリです `COPY` 。
@@ -124,7 +123,7 @@ docker build -t stockdata:1.0.0 -f .\src\StockData\Dockerfile .
 1つのソリューション内に複数のアプリケーションがある場合は、各アプリケーションの Dockerfile を、ファイルの横にある独自のフォルダーに保持でき `.csproj` ます。 引き続き、 `docker build` ベースディレクトリからコマンドを実行して、ソリューションとすべてのプロジェクトがイメージにコピーされるようにする必要があります。 `--file`(または) フラグを使用して、現在のディレクトリの下に Dockerfile を指定でき `-f` ます。
 
 ```console
-docker build -t stockdata:1.0.0 -f .\src\StockData\Dockerfile .
+docker build -t stockdata:1.0.0 -f ./src/StockData/Dockerfile .
 ```
 
 ## <a name="run-the-image-in-a-container-on-your-machine"></a>コンピューターのコンテナーでイメージを実行する

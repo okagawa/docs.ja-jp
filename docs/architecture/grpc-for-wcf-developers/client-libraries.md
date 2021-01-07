@@ -1,13 +1,13 @@
 ---
 title: GRPC クライアントライブラリの作成-WCF 開発者向け gRPC
 description: GRPC サービス用の共有クライアントライブラリ/パッケージについて説明します。
-ms.date: 12/15/2020
-ms.openlocfilehash: b1233bb40a5fa2119a325be2657b500a4c626c18
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.date: 01/06/2021
+ms.openlocfilehash: c55b6d1da2377af0b687e32e7776f12b96b0a2ba
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938430"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970129"
 ---
 # <a name="create-grpc-client-libraries"></a>GRPC クライアントライブラリを作成する
 
@@ -147,7 +147,7 @@ namespace Grpc.Core
 
 ## <a name="summary"></a>まとめ
 
-<xref:System.IAsyncDisposable>モデルと <xref:System.IObservable%601> モデルは、.net でのデータの非同期ストリームを処理するための適切にサポートされ、適切に記述された方法です。 gRPC ストリームは、両方のパラダイムに適しており、.NET との密接な統合と、事後対応と非同期のプログラミングスタイルを提供します。
+<xref:System.Collections.Generic.IAsyncEnumerable%601>モデルと <xref:System.IObservable%601> モデルは、.net でのデータの非同期ストリームを処理するための適切にサポートされ、適切に記述された方法です。 gRPC ストリームは、両方のパラダイムに適しており、.NET との密接な統合と、事後対応と非同期のプログラミングスタイルを提供します。
 
 >[!div class="step-by-step"]
 >[前へ](streaming-versus-repeated.md)
