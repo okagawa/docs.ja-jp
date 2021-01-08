@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 2f59b97de6f92e5a9bf927e1318286e400017dad
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 80815b5913ad72756de503209b52e8848dd708bf
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009847"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025082"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET ソース コード分析の概要
 
@@ -48,8 +48,8 @@ ms.locfileid: "97009847"
 | [CA2013](/visualstudio/code-quality/ca2013) | [信頼性] | 警告 | `ReferenceEquals`値型では使用しない |
 | [CA2014](/visualstudio/code-quality/ca2014) | [信頼性] | 警告 | In ループを使用しない `stackalloc` |
 | [CA2015](/visualstudio/code-quality/ca2015) | [信頼性] | 警告 | から派生した型にはファイナライザーを定義しないでください。 <xref:System.Buffers.MemoryManager%601> |
-| [CA2200](/visualstudio/code-quality/ca2200) | 使用方法 | 警告 | スタック詳細を保持するために再度スローします
-| [CA2247](/visualstudio/code-quality/ca2247) | 使用方法 | 警告 | Taskのソースコンストラクターに渡される引数は、ではなく列挙型にする必要があり <xref:System.Threading.Tasks.TaskCreationOptions> ます <xref:System.Threading.Tasks.TaskContinuationOptions> |
+| [CA2200](/visualstudio/code-quality/ca2200) | 使用法 | 警告 | スタック詳細を保持するために再度スローします
+| [CA2247](/visualstudio/code-quality/ca2247) | 使用法 | 警告 | Taskのソースコンストラクターに渡される引数は、ではなく列挙型にする必要があり <xref:System.Threading.Tasks.TaskCreationOptions> ます <xref:System.Threading.Tasks.TaskContinuationOptions> |
 
 これらのルールを無効にするか、エラーに昇格するように、これらのルールの重大度を変更することができます。 [さらに多くのルールを有効に](#enable-additional-rules)することもできます。
 
@@ -60,7 +60,7 @@ ms.locfileid: "97009847"
 
 *分析モード* とは、定義されていないコード分析構成を意味します。この構成では、すべての規則が有効になっていません。 既定の分析モードでは、いくつかのルールのみが [ビルド警告として有効になり](#enabled-rules)ます。 プロジェクトファイルの [AnalysisMode](../../core/project-sdk/msbuild-props.md#analysismode) プロパティを設定することにより、プロジェクトの分析モードを変更できます。 使用できる値は次のとおりです。
 
-| 値 | 説明 |
+| [値] | 説明 |
 | - | - |
 | `AllDisabledByDefault` | これは最も控えめなモードです。 既定では、すべてのルールが無効になっています。 個々のルールを選択的に[オプトイン](configuration-options.md)して有効にすることができます。<br /><br />`<AnalysisMode>AllDisabledByDefault</AnalysisMode>` |
 | `AllEnabledByDefault` | これは最も積極的なモードです。 すべてのルールがビルド警告として有効になります。 個別 [の](configuration-options.md) ルールを選択して無効にすることができます。<br /><br />`<AnalysisMode>AllEnabledByDefault</AnalysisMode>` |
@@ -104,19 +104,22 @@ ms.locfileid: "97009847"
 *コードスタイルの分析* ("ide xxxx") 規則を使用すると、コードベースで一貫性のあるコードスタイルを定義および維持できます。 既定の有効化設定は次のとおりです。
 
 - コマンドラインビルド: コマンドラインビルドのすべての .NET プロジェクトに対して、コードスタイルの分析が既定で無効になっています。
-- Visual Studio: コードスタイルの分析は、Visual Studio 内のすべての .NET プロジェクトに対して、 [コードリファクタリングのクイックアクション](/visualstudio/ide/code-generation-in-visual-studio)として既定で有効になっています。
 
-.NET 5.0 以降では、コマンドラインと Visual Studio の両方でビルドに対してコードスタイルの分析を有効にすることができます。 コードスタイル違反は、"IDE" プレフィックスが付いた警告またはエラーとして表示されます。 これにより、ビルド時に一貫したコードスタイルを適用できます。
+  .NET 5.0 以降では、コマンドラインと Visual Studio の両方で [ビルドに対してコードスタイルの分析を有効に](#enable-on-build)することができます。 コードスタイル違反は、"IDE" プレフィックスが付いた警告またはエラーとして表示されます。 これにより、ビルド時に一貫したコードスタイルを適用できます。
+
+- Visual Studio: コードスタイルの分析は、Visual Studio 内のすべての .NET プロジェクトに対して、 [コードリファクタリングのクイックアクション](/visualstudio/ide/code-generation-in-visual-studio)として既定で有効になっています。
 
 コードスタイルの分析規則の完全な一覧については、「 [コードスタイル規則](style-rules/index.md)」を参照してください。
 
 ### <a name="enable-on-build"></a>ビルドで有効にする
 
+.NET 5.0 SDK 以降のバージョンでは、コマンドラインや Visual Studio からビルドするときに、コードスタイルの分析を有効にすることができます。 (ただし、パフォーマンス上の理由から、 [いくつかのコードスタイルルール](https://github.com/dotnet/roslyn/blob/9f87b444da9c48a4d492b19f8337339056bf2b95/src/Analyzers/Core/Analyzers/EnforceOnBuildValues.cs#L95) は、VISUAL Studio IDE にのみ適用されます)。
+
 ビルドでコードスタイルの分析を有効にするには、次の手順に従います。
 
 1. MSBuild プロパティ [EnforceCodeStyleInBuild](../../core/project-sdk/msbuild-props.md#enforcecodestyleinbuild) をに設定し `true` ます。
 
-1. *Editorconfig* ファイルで、ビルド時に実行する各 "IDE" コードスタイルルールを警告またはエラーとして [構成](configuration-options.md)します。 次に例を示します。
+1. *Editorconfig* ファイルで、ビルド時に実行する各 "IDE" コードスタイルルールを警告またはエラーとして [構成](configuration-options.md)します。 例:
 
    ```ini
    [*.{cs,vb}]
@@ -124,7 +127,7 @@ ms.locfileid: "97009847"
    dotnet_diagnostic.IDE0040.severity = warning
    ```
 
-   または、[スタイル] カテゴリ全体を警告またはエラーとして構成し、既定では、ビルドで実行しない規則を選択的にオフにすることができます。 次に例を示します。
+   または、[スタイル] カテゴリ全体を警告またはエラーとして構成し、既定では、ビルドで実行しない規則を選択的にオフにすることができます。 例:
 
    ```ini
    [*.{cs,vb}]
@@ -141,7 +144,7 @@ ms.locfileid: "97009847"
 
 ## <a name="suppress-a-warning"></a>警告の非表示
 
-規則違反を抑制するには、その規則 ID の重大度オプションを `none` EditorConfig ファイルでに設定します。 次に例を示します。
+規則違反を抑制するには、その規則 ID の重大度オプションを `none` EditorConfig ファイルでに設定します。 例:
 
 ```ini
 dotnet_diagnostic.CA1822.severity = none
