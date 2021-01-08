@@ -3,12 +3,12 @@ title: 診断ツールの概要 - .NET Core
 description: .NET Core アプリケーションの診断に使用できるツールと手法の概要。
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: c43e661ad8c9f665151e0240bf6b54e61b9acfef
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: d468ec5b9cc050cc54f6c53f8a4ea4531f8b58f5
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031918"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753615"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core で使用できる診断ツール
 
@@ -24,6 +24,10 @@ ms.locfileid: "96031918"
 
 [ログとトレース](logging-tracing.md)は、関連する手法です。 ログ ファイルを作成するためのコードのインストルメント化を指します。 ファイルには、プログラムの機能の詳細が記録されます。 これらの詳細は、複雑度の高い問題を診断するために使用できます。 タイム スタンプと組み合わせると、これらの手法はパフォーマンスの調査にも役立ちます。
 
+## <a name="metrics"></a>メトリック
+
+[EventCounters](event-counters.md) を使用すると、パフォーマンスの問題を特定して監視するためのメトリックを作成できます。 メトリックを使用すると、トレースと比較してパフォーマンスのオーバーヘッドが低くなるため、常時接続のパフォーマンスの監視に適しています。 .NET ランタイムとライブラリでは、いくつかの[既知の EventCounters](available-counters.md) を発行して、同様に監視することができます。
+
 ## <a name="unit-testing"></a>単体テスト
 
 [単体テスト](../testing/index.md)は、高品質のソフトウェアを継続的に統合して展開するための重要なコンポーネントです。 単体テストは、何かを中断するときに早期警告を提供するように設計されています。
@@ -32,13 +36,13 @@ ms.locfileid: "96031918"
 
 [ダンプ](./dumps.md)は、作成時のプロセスのスナップショットを含むファイルです。 これらは、デバッグのためにアプリケーションの状態を調べるのに役立ちます。
 
+## <a name="symbols"></a>シンボル
+
+シンボルは、デバッグやその他の診断ツールの基本的な要件です。 シンボル ファイルの内容は、言語、コンパイラ、およびプラットフォームによって異なります。 非常に高いレベルのシンボルは、ソース コードとコンパイラによって生成されるバイナリとの間のマッピングです。 これらのマッピングは、[Visual Studio](/visualstudio/debugger/what-is-debugging) や [Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) などの診断ツールで、行番号の情報やローカル変数の名前などを提供するために使用されます。  次のリンクには、Windows の[シンボル](/windows/win32/dxtecharts/debugging-with-symbols)の詳細な説明が含まれていますが、他のプラットフォームにも多くの概念が当てはまります。 [.NET ポータブル シンボル](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md)には、Windows PDB と同様の "PDB" ファイル拡張子が付いていますが、Windows PDB 形式と互換性がありません。
+
 ## <a name="collect-diagnostics-in-containers"></a>コンテナーでの診断の収集
 
 コンテナー化されていない Linux 環境で使用されているのと同じ診断ツールを使用して、[コンテナーで診断を収集](diagnostics-in-containers.md)することもできます。 Docker コンテナーでツールを動作させるために必要ないくつかの使用方法が変更されています。
-
-## <a name="debug-linux-dumps"></a>Linux ダンプのデバッグ
-
-「[Linux ダンプのデバッグ](debug-linux-dumps.md)」では、Linux でダンプを収集して分析する方法について説明します。
 
 ## <a name="net-core-diagnostic-global-tools"></a>.NET Core 診断グローバル ツール
 
@@ -64,7 +68,7 @@ ms.locfileid: "96031918"
 
 ### <a name="dotnet-sos"></a>dotnet-sos
 
-[dotnet-sos](dotnet-sos.md) を使用すると、Linux または MacOS (または、以前のデバッグ ツールを使用している場合は Windows) に [SOS デバッガー拡張](../../framework/tools/sos-dll-sos-debugging-extension.md)をインストールできます。
+[dotnet-sos](dotnet-sos.md) によって、Linux と macOS に [SOS デバッグ拡張機能](sos-debugging-extension.md) がインストールされます ([Windbg/cdb](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-tools) を使用している場合は Windows でも)。
 
 ### <a name="perfcollect"></a>PerfCollect
 
@@ -83,6 +87,14 @@ ms.locfileid: "96031918"
 ### <a name="debug-deadlock"></a>デッドロックをデバッグする
 
 [チュートリアル: デッドロックのデバッグ](debug-deadlock.md)に関するページに、[dotnet-dump](dotnet-dump.md) ツールを使用してスレッドとロックを調査する方法が示されています。
+
+### <a name="debug-a-stackoverflow"></a>スタック オーバーフローのデバッグ
+
+[チュートリアル: スタック オーバーフローのデバッグ](debug-stackoverflow.md)」は、Linux で <xref:System.StackOverflowException> をデバッグする方法を示します。
+
+### <a name="debug-linux-dumps"></a>Linux ダンプのデバッグ
+
+「[Linux ダンプのデバッグ](debug-linux-dumps.md)」では、Linux でダンプを収集して分析する方法について説明します。
 
 ### <a name="measure-performance-using-eventcounters"></a>EventCounters を使用してパフォーマンスを測定する
 

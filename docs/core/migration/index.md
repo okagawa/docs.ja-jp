@@ -2,12 +2,12 @@
 title: project.json からの .NET Core の移行
 description: project.json を使って以前の .NET Core プロジェクトを移行する方法について説明します
 ms.date: 07/19/2017
-ms.openlocfilehash: 0d4190a02389089a888d8b52dd8e7c412636b575
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 73fbfed6943e3eb535e6eead3b3496edd3426c26
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538251"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970721"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>project.json からの .NET Core プロジェクトの移行
 
@@ -80,7 +80,7 @@ Visual Studio 2017 または Visual Studio 2019 バージョン 16.2 以前で *
 - プロジェクトの一番上と一番下から `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` および `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` ステートメントを削除します。 これらの import ステートメントは SDK で暗黙的に指定されているので、プロジェクトに含める必要はありません。
 - プロジェクト内に `Microsoft.NETCore.App` または `NETStandard.Library` `<PackageReference>` アイテムがある場合は、削除することをお勧めします。 これらのパッケージ参照は、[SDK で暗黙的に指定されています](../tools/csproj.md)。
 - `Microsoft.NET.Sdk` `<PackageReference>` 要素がある場合は削除します。 SDK の参照は、`<Project>` 要素の `Sdk` 属性によって行われます。
-- [SDK で暗黙的に指定](../project-sdk/overview.md#default-compilation-includes)されている [glob](https://en.wikipedia.org/wiki/Glob_(programming)) を削除します。 プロジェクトにこれらの glob を残すと、コンパイル アイテムが重複するため、ビルド時にエラーが発生します。
+- [SDK で暗黙的に指定](../project-sdk/overview.md#default-includes-and-excludes)されている [glob](https://en.wikipedia.org/wiki/Glob_(programming)) を削除します。 プロジェクトにこれらの glob を残すと、コンパイル アイテムが重複するため、ビルド時にエラーが発生します。
 
 これらの手順を実行すると、RTM .NET Core csproj 形式と完全に互換性のあるプロジェクトになります。
 
