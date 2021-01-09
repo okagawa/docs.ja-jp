@@ -1,16 +1,16 @@
 ---
-title: <gcAllowVeryLargeObjects> 要素
+title: gcAllowVeryLargeObjects 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - gcAllowVeryLargeObjects element
 - <gcAllowVeryLargeObjects> element
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
-ms.openlocfilehash: 78a42596aae6c3ea0d94ac759d11ed52d0ace539
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1e54b0780ffb5bbe81ab1be2b376ff7a038ee05c
+ms.sourcegitcommit: 0273f8845eb1ea8de64086bef2271b4f22182c91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178230"
+ms.lasthandoff: 01/09/2021
+ms.locfileid: "98058130"
 ---
 # <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects> 要素
 
@@ -23,32 +23,27 @@ ms.locfileid: "91178230"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<gcAllowVeryLargeObjects
-   enabled="true|false" />  
+<gcAllowVeryLargeObjects enabled="true|false" />  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
-
- 以降のセクションでは、属性、子要素、および親要素について説明します。  
-  
-### <a name="attributes"></a>属性  
+## <a name="attributes"></a>属性
   
 |属性|説明|  
 |---------------|-----------------|  
 |`enabled`|必須の属性です。<br /><br /> 64 ビット プラットフォームで、合計サイズが 2 GB (ギガバイト) を超える配列が有効であるかどうかを指定します。|  
   
-## <a name="enabled-attribute"></a>enabled 属性  
+### <a name="enabled-attribute"></a>enabled 属性  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`false`|合計サイズが 2 GB を超える配列は有効ではありません。 これは既定値です。|  
 |`true`|64 ビット プラットフォームで、合計サイズが 2 GB を超える配列が有効になっています。|  
   
-### <a name="child-elements"></a>子要素  
+## <a name="child-elements"></a>子要素  
 
- なし。  
+なし。  
   
-### <a name="parent-elements"></a>親要素  
+## <a name="parent-elements"></a>親要素
   
 |要素|説明|  
 |-------------|-----------------|  
@@ -61,12 +56,12 @@ ms.locfileid: "91178230"
   
 - 配列の要素の最大数は <xref:System.UInt32.MaxValue?displayProperty=nameWithType> です。  
   
-- バイト配列および 1 バイト構造体の配列の場合、単一次元の最大インデックスは 2,147,483,591 (0x7FFFFFC7) です。その他の種類の場合は 2,146,435,071 (0X7FEFFFFF) です。  
+- 1つの次元の最大サイズは、バイト配列と1バイト構造の配列の場合は 2147483591 (0x7FFFFFC7)、他の型を含む配列の場合は 2146435071 (0X7FEFFFFF) です。  
   
 - 文字列およびその他の非配列オブジェクトの最大サイズは変更されません。  
   
 > [!CAUTION]
-> この機能を有効にする前に、すべての配列のサイズが 2 GB よりも小さいことを前提としたアンセーフ コードがアプリケーションに含まれていないことを確認します。 たとえば、バッファーとして配列を使用するアンセーフ コードが、配列は 2 GB を超えないという前提で記述されている場合、バッファー オーバーランが発生しやすくなる可能性があります。  
+> この機能を有効にする前に、すべての配列のサイズが 2 GB よりも小さいことを前提としたアンセーフ コードがアプリケーションに含まれていないことを確認します。 たとえば、配列をバッファーとして使用するアンセーフコードは、配列が 2 GB を超えることを想定して記述されている場合、バッファーオーバーランの影響を受ける可能性があります。  
   
 ## <a name="example"></a>例  
 
