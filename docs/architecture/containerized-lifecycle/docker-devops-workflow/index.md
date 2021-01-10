@@ -1,13 +1,13 @@
 ---
 title: Microsoft ツールを使用した Docker アプリケーション DevOps ワークフロー
 description: Microsoft プラットフォームでのコンテナー化された Docker アプリケーションのライフサイクルと Microsoft ツールでの Tools DevOps ワークフロー
-ms.date: 08/06/2020
-ms.openlocfilehash: 30c5066fa90d8792d8eef8f760dc63c00ce32130
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.date: 01/06/2021
+ms.openlocfilehash: 7f2d380dec046804772ea7d13e764ab6f3224c12
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915206"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970155"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Microsoft ツールを使用した Docker アプリケーション DevOps ワークフロー
 
@@ -15,11 +15,11 @@ ms.locfileid: "87915206"
 
 クラウドの Visual Studio と Azure DevOps Services と、オンプレミスの Team Foundation Server により、開発チームは、Windows または Linux を対象にするコンテナー化アプリケーションを生産的に直接ビルド、テスト、リリースできます。
 
-Microsoft ツールは、Docker、.NET Core、または他のプラットフォームとのあらゆる組み合わせのコンテナー化アプリケーションの特定の実装の、グローバル ビルド、継続的インテグレーション (CI)、Azure DevOps Services または Team Foundation Server でのテストから、Docker 環境 (開発、ステージング、実稼働) への継続的デプロイ (CD) と Azure Monitor を介した開発チームへのサービスに関する分析情報の転送のパイプラインを自動化できます。 すべてのコードのコミットでビルド (CI) を開始して、特定のコンテナー化された環境 (CD) に自動的にサービスを展開できます。
+Microsoft ツールは、Docker、.NET、または他のプラットフォームとのあらゆる組み合わせのコンテナー化アプリケーションの特定の実装の、グローバル ビルド、継続的インテグレーション (CI)、Azure DevOps Services または Team Foundation Server でのテストから、Docker 環境 (開発、ステージング、実稼働) への継続的デプロイ (CD) と Azure Monitor を介した開発チームへのサービスに関する分析情報の転送のパイプラインを自動化できます。 すべてのコードのコミットでビルド (CI) を開始して、特定のコンテナー化された環境 (CD) に自動的にサービスを展開できます。
 
 開発者およびテスト担当者は、Microsoft Azure のテンプレートを使用して、Docker に基づく運用環境のような開発とテストの環境を、簡単かつ迅速にプロビジョニングできます。
 
-コンテナー化アプリケーションの開発は、ビジネスが複雑であり、拡張のニーズがあればあるほど、着実に複雑になります。 この複雑性の良い例は、マイクロサービス アーキテクチャに基づいたアプリケーションです。 このような環境で成功するには、プロジェクトのライフ サイクル全体が自動化される必要があります。ビルドやデプロイのみでなく、製品利用統計情報のコレクションと共に、バージョンも管理される必要があります。 Azure DevOps Services と Azure には、次の機能があります。
+コンテナー化アプリケーションの開発は、ビジネスが複雑であり、拡張のニーズがあればあるほど、着実に複雑になります。 この複雑性の良い例は、マイクロサービス アーキテクチャに基づいたアプリケーションです。 このような環境で成功するには、プロジェクトのライフ サイクル全体が自動化される必要があります。ビルドや展開のみでなく、製品利用統計情報のコレクションと共に、バージョンも管理される必要があります。 Azure DevOps Services と Azure には、次の機能があります。
 
 - (Git または Team Foundation バージョン管理に基づく) Azure DevOps Services と Team Foundation Server のソース コード管理、(アジャイル、スクラム、CMMI がサポートされている) アジャイル計画、CI、リリース管理、アジャイル チーム用の他のツール。
 

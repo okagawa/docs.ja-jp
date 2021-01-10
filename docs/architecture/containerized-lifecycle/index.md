@@ -1,19 +1,19 @@
 ---
 title: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
 description: Docker および Microsoft のプラットフォームとツールでコンテナー化されたアプリケーションを開発およびデプロイするための、開発とデプロイのプロセスの概要を説明します。
-ms.date: 11/10/2020
-ms.openlocfilehash: cf20ea97ec252649cdb14add40ead67b6319520a
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.date: 01/06/2021
+ms.openlocfilehash: 94c277e349bacee9b9fc7b160043005dd4135958
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506663"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970116"
 ---
 # <a name="containerized-docker-application-lifecycle-with-microsoft-platform-and-tools"></a>Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
 
 ![本の表紙](./media/devops-book-cover-large-we.png)
 
-**エディション v3.1** - ASP.NET Core 3.1 に更新
+**エディション v5.0** - ASP.NET Core 5.0 に更新されました
 
 書籍の更新とコミュニティへの投稿については、「[changelog](https://aka.ms/DockerLifecycleEbookChangelog)」を参照してください。
 
@@ -29,7 +29,7 @@ ms.locfileid: "94506663"
 
 作成者:
 
-> **Cesar de la Torre** 、Microsoft Corp.、.NET 製品チーム、シニア PM
+> **Cesar de la Torre**、Microsoft Corp.、.NET 製品チーム、シニア PM
 
 総合編集者:
 
@@ -37,7 +37,7 @@ ms.locfileid: "94506663"
 
 監修者:
 
-> **Bob Russell** 、Microsoft、ソリューション プロフェッショナル
+> **Bob Russell**、Microsoft、ソリューション プロフェッショナル
 >
 > [**Octal Publishing, Inc.**](http://www.octalpub.com/)
 
@@ -49,15 +49,15 @@ ms.locfileid: "94506663"
 
 原稿整理編集者:
 
-> **Bob Russell** 、Microsoft、ソリューション プロフェッショナル
+> **Bob Russell**、Microsoft、ソリューション プロフェッショナル
 
 参加者とレビュー担当者:
 
-> **Nish Anil** 、Microsoft、.NET チーム、シニア プログラム マネージャー
+> **Nish Anil**、Microsoft、.NET チーム、シニア プログラム マネージャー
 >
-> **Miguel Veloso** 、Plain Concepts のソフトウェア開発エンジニア
+> **Miguel Veloso**、Plain Concepts のソフトウェア開発エンジニア
 >
-> **Sumit Ghosh** 、Neudesic、主席コンサルタント
+> **Sumit Ghosh**、Neudesic、主席コンサルタント
 
 ## <a name="copyright"></a>Copyright
 
@@ -71,7 +71,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright &copy; 2020 by Microsoft Corporation
+Copyright &copy; 2021 by Microsoft Corporation
 
 All rights reserved. 本書のいかなる部分も、書面による発行者の許可なしに、いかなる形式または方法によっても、複製または伝送することを禁じます。
 
