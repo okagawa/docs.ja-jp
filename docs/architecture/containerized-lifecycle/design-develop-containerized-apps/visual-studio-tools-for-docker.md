@@ -1,14 +1,14 @@
 ---
 title: Windows 上の Visual Studio Tools for Docker
 description: Visual Studio 2017 バージョン 15.7 以降で使用できる Docker ツールについて説明します。
-ms.date: 08/06/2020
+ms.date: 01/06/2021
 ms.custom: vs-dotnet
-ms.openlocfilehash: ae20ebf7c3c27d7f2ebe51c33719b82048f86241
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 0f6a0ca0e90021f5d374cfacc5c498f257ab5422
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96032191"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970508"
 ---
 # <a name="use-docker-tools-in-visual-studio-on-windows"></a>Windows 上の Visual Studio で Docker ツールを使用する
 

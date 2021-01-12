@@ -3,13 +3,13 @@ title: RHEL に .NET をインストールする - .NET
 description: RHEL に .NET SDK と .NET ランタイムをインストールするさまざまな方法を示します。
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: 0b6138185bfd3e2f50c1b31e82779165715a5b6e
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.date: 01/06/2021
+ms.openlocfilehash: d585017919507a8fdcbb24778a0ff3ab3d9049c2
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851641"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970799"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-rhel"></a>RHEL に .NET SDK または .NET ランタイムをインストールする
 
@@ -43,10 +43,6 @@ RHEL 7 と RHEL 8 の両方で現在サポートされている .NET のリリ�
 ## <a name="remove-preview-versions"></a>プレビュー バージョンの削除
 
 [!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
-
-## <a name="how-to-install-other-versions"></a>その他のバージョンをインストールする方法
-
-.NET の他のリリースをインストールするために必要な手順については、[.NET 向けの Red Hat のドキュメント](https://access.redhat.com/documentation/net/5.0/)を参照してください。
 
 ## <a name="rhel-8-"></a>RHEL 8 ✔️
 
@@ -140,22 +136,15 @@ source scl_source enable rh-dotnet31
 
 ASP.NET Core ランタイムの代替手段として、ASP.NET Core サポートを含まない .NET Core ランタイムをインストールできます。それには、前述のコマンドの `rh-dotnet31-aspnetcore-runtime-3.1` を `rh-dotnet31-dotnet-runtime-3.1` で置き換えます。
 
-## <a name="snap"></a>Snap
-
-[!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
-
 ## <a name="dependencies"></a>依存関係
 
 [!INCLUDE [linux-rpm-install-dependencies](includes/linux-rpm-install-dependencies.md)]
 
-## <a name="scripted-install"></a>スクリプトでのインストール
+## <a name="how-to-install-other-versions"></a>その他のバージョンをインストールする方法
 
-[!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
+.NET の他のリリースをインストールするために必要な手順については、[.NET 向けの Red Hat のドキュメント](https://access.redhat.com/documentation/net/5.0/)を参照してください。
 
-## <a name="manual-install"></a>手動インストール
+## <a name="next-steps"></a>次のステップ
 
-[!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
-
-## <a name="next-steps"></a>次の手順
-
+- [.NET CLI のタブ補完を有効にする方法](../tools/enable-tab-autocomplete.md)
 - [チュートリアル: Visual Studio Code を使用して .NET SDK でコンソール アプリケーションを作成する](../tutorials/with-visual-studio-code.md)

@@ -3,13 +3,13 @@ title: openSUSE に .NET をインストールする - .NET
 description: openSUSE に .NET SDK と .NET ランタイムをインストールするさまざまな方法を示します。
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: eb31e3109ccd40999c22a27607d48544bf117dc2
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.date: 01/06/2021
+ms.openlocfilehash: 7a519f19f708e1f12af1e9715bad4f38a607f9c3
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031866"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970812"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-opensuse"></a>openSUSE に .NET SDK または .NET ランタイムをインストールする
 
@@ -41,10 +41,6 @@ ms.locfileid: "96031866"
 
 [!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
-## <a name="how-to-install-other-versions"></a>その他のバージョンをインストールする方法
-
-[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
-
 ## <a name="opensuse-15-"></a>openSUSE 15 ✔️
 
 [!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
@@ -59,6 +55,10 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 
 [!INCLUDE [linux-zyp-install-50](includes/linux-install-50-zyp.md)]
 
+## <a name="how-to-install-other-versions"></a>その他のバージョンをインストールする方法
+
+[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
 ## <a name="troubleshoot-the-package-manager"></a>パッケージ マネージャーのトラブルシューティング
 
 このセクションでは、パッケージ マネージャーを使用して .NET をインストールするときに発生するおそれがある一般的なエラーについて説明します。
@@ -70,10 +70,6 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 ### <a name="failed-to-fetch"></a>フェッチできない
 
 [!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]
-
-## <a name="snap"></a>Snap
-
-[!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
 
 ## <a name="dependencies"></a>依存関係
 
@@ -94,14 +90,7 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
   > [!WARNING]
   > 最新バージョンの *libgdiplus* をインストールするには、システムに Mono リポジトリを追加します。 詳細については、「<https://www.mono-project.com/download/stable/>」を参照してください。
 
-## <a name="scripted-install"></a>スクリプトでのインストール
-
-[!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
-
-## <a name="manual-install"></a>手動インストール
-
-[!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
-
 ## <a name="next-steps"></a>次の手順
 
+- [.NET CLI のタブ補完を有効にする方法](../tools/enable-tab-autocomplete.md)
 - [チュートリアル: Visual Studio Code を使用して .NET SDK でコンソール アプリケーションを作成する](../tutorials/with-visual-studio-code.md)

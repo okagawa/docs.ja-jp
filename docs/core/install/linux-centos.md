@@ -3,13 +3,13 @@ title: CentOS に .NET をインストールする - .NET
 description: CentOS に .NET SDK と .NET ランタイムをインストールするさまざまな方法を示します。
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: 2c3453c79a1dc31f01577bc0c1b9e320eb307c0a
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.date: 01/06/2021
+ms.openlocfilehash: 7e73f90a1f1f7e11e592b1b074f243c9f5b32ced
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851680"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970864"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-centos"></a>CentOS に .NET SDK または .NET ランタイムをインストールする
 
@@ -44,10 +44,6 @@ CentOS 7 と CentOS 8 の両方で現在サポートされている .NET のリ�
 
 [!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
-## <a name="how-to-install-other-versions"></a>その他のバージョンをインストールする方法
-
-[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
-
 ## <a name="centos-8-"></a>CentOS 8 ✔️
 
 .NET 5.0 は CentOS 8 の既定のパッケージ リポジトリで利用できます。
@@ -64,6 +60,10 @@ sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-
 
 [!INCLUDE [linux-yum-install-50](includes/linux-install-50-yum.md)]
 
+## <a name="how-to-install-other-versions"></a>その他のバージョンをインストールする方法
+
+[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
 ## <a name="troubleshoot-the-package-manager"></a>パッケージ マネージャーのトラブルシューティング
 
 このセクションでは、パッケージ マネージャーを使用して .NET をインストールするときに発生するおそれがある一般的なエラーについて説明します。
@@ -76,22 +76,11 @@ sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-
 
 [!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]
 
-## <a name="snap"></a>Snap
-
-[!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
-
 ## <a name="dependencies"></a>依存関係
 
 [!INCLUDE [linux-rpm-install-dependencies](includes/linux-rpm-install-dependencies.md)]
 
-## <a name="scripted-install"></a>スクリプトでのインストール
+## <a name="next-steps"></a>次のステップ
 
-[!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
-
-## <a name="manual-install"></a>手動インストール
-
-[!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
-
-## <a name="next-steps"></a>次の手順
-
+- [.NET CLI のタブ補完を有効にする方法](../tools/enable-tab-autocomplete.md)
 - [チュートリアル: Visual Studio Code を使用して .NET SDK でコンソール アプリケーションを作成する](../tutorials/with-visual-studio-code.md)

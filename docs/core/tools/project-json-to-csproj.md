@@ -3,12 +3,12 @@ title: project.json と csproj の比較
 description: 「project.json 要素と csproj 要素の間のマッピング」を参照してください。
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: c8638bc30ba09d8e8d464159aded60dcde4b8dc0
-ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
+ms.openlocfilehash: 7de9f623a57a6a094debd3e018edc1560d837fc2
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87427022"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970877"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json プロパティと csproj プロパティの間のマッピング
 
@@ -144,7 +144,7 @@ And it's really great!</Description>
 ## <a name="dependencies"></a>依存関係
 
 > [!IMPORTANT]
-> 依存関係がパッケージではなく、**プロジェクト**の場合、形式は異なります。
+> 依存関係がパッケージではなく、**プロジェクト** の場合、形式は異なります。
 > 詳細については、「[依存関係の種類](#dependency-type)」セクションを参照してください。
 
 ### <a name="netstandardlibrary-metapackage"></a>NETStandard.Library のメタパッケージ
@@ -333,7 +333,7 @@ csproj には同等のものがありません。
 ### <a name="standalone-apps-self-contained-deployment"></a>スタンドアロン アプリ (自己完結型の展開)
 
 project.json では、`runtimes` セクションを定義することは、ビルドと公開の間にアプリがスタンドアロンであったことを意味します。
-MSBuild では、ビルド中、すべてのプロジェクトが*移植可能*ですが、スタンドアロンとして公開できます。
+MSBuild では、ビルド中、すべてのプロジェクトが *移植可能* ですが、スタンドアロンとして公開できます。
 
 `dotnet publish --framework netcoreapp1.0 --runtime osx.10.11-x64`
 
@@ -620,13 +620,13 @@ MSBuild では、これは[項目](/visualstudio/msbuild/common-msbuild-project-
 ```
 
 > [!NOTE]
-> 既定の [Glob パターン](https://en.wikipedia.org/wiki/Glob_(programming))の多くは .NET Core SDK により自動的に追加されます。 詳細については、「[コンパイルへの既定の組み込み](../project-sdk/overview.md#default-compilation-includes)」を参照してください。
+> 既定の [Glob パターン](https://en.wikipedia.org/wiki/Glob_(programming))の多くは .NET Core SDK により自動的に追加されます。 詳細については、「[コンパイルへの既定の組み込み](../project-sdk/overview.md#default-includes-and-excludes)」を参照してください。
 
 すべての MSBuild `ItemGroup` 要素で `Include`、`Exclude`、`Remove` がサポートされています。
 
 .nupkg 内のパッケージ レイアウトは `PackagePath="path"` で変更できます。
 
-`Content` を除き、ほとんどの項目グループで、パッケージに `Pack="true"` を明示的に追加する必要があります。 MSBuild の `<IncludeContentInPack>` プロパティが既定で `true` に設定されているため、`Content` はパッケージの*コンテンツ* フォルダーに置かれます。
+`Content` を除き、ほとんどの項目グループで、パッケージに `Pack="true"` を明示的に追加する必要があります。 MSBuild の `<IncludeContentInPack>` プロパティが既定で `true` に設定されているため、`Content` はパッケージの *コンテンツ* フォルダーに置かれます。
 詳細については、「[Including content in a package](/nuget/schema/msbuild-targets#including-content-in-a-package)」 (パッケージにコンテンツを追加する) を参照してください。
 
 `PackagePath="%(Identity)"` は、パッケージ パスをプロジェクト関連のファイル パスに設定する簡単な方法です。
