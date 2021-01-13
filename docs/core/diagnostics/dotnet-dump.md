@@ -2,12 +2,12 @@
 title: dotnet-dump 診断ツール - .NET CLI
 description: dotnet-dump CLI ツールをインストールして使用し、ネイティブ デバッガーなしで Windows と Linux のダンプを収集して分析する方法について学習します。
 ms.date: 11/17/2020
-ms.openlocfilehash: ea9a70c4dc47b5006339e9a197712092eb66b241
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: eaffbb1f2959dba5c25a603b6f785c7480e4a8c0
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822205"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97765047"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>ダンプの収集と分析のユーティリティ (dotnet-dump)
 
@@ -146,34 +146,37 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 | `clrstack <arguments>`              | マネージド コードのみのスタック トレースを提供します。                                                  |
 | `clrthreads <arguments>`            | 実行中のマネージド スレッドを一覧表示します。                                                            |
 | `dumpasync <arguments>`             | ガベージ コレクトされたヒープ上の非同期状態のマシンに関する情報を表示します。                |
-| `dumpassembly <arguments>`          | アセンブリに関する詳細を表示します。                                                           |
-| `dumpclass <arguments>`             | 指定したアドレスにある EE クラスの構造体に関する情報を表示します。                     |
-| `dumpdelegate <arguments>`          | デリゲートに関する情報を表示します。                                                        |
-| `dumpdomain <arguments>`            | すべての AppDomain と、そのドメイン内のすべてのアセンブリに関する情報を表示します。                |
+| `dumpassembly <arguments>`          | 指定されたアドレスにあるアセンブリに関する詳細を表示します。                                 |
+| `dumpclass <arguments>`             | 指定されたアドレスにある `EEClass` 構造体に関する情報を表示します。                  |
+| `dumpdelegate <arguments>`          | 指定されたアドレスにあるデリゲートに関する情報を表示します。                             |
+| `dumpdomain <arguments>`            | すべての AppDomain と、指定されたドメイン内のすべてのアセンブリに関する情報を表示します。       |
 | `dumpheap <arguments>`              | ガベージ コレクトされたヒープと、オブジェクトの収集統計に関する情報を表示します。       |
 | `dumpil <arguments>`                | マネージド メソッドに関連付けられている Microsoft Intermediate Language (MSIL) を表示します。 |
 | `dumplog <arguments>`               | メモリ内ストレス ログの内容を、指定したファイルに書き込みます。                         |
-| `dumpmd <arguments>`                | 指定したアドレスにある MethodDesc 構造体に関する情報を表示します。                   |
-| `dumpmodule <arguments>`            | 指定したアドレスにある EE モジュール構造体に関する情報を表示します。                    |
-| `dumpmt <arguments>`                | 指定したアドレスにあるメソッド テーブルに関する情報を表示します。                           |
-| `dumpobj <arguments>`               | 指定したアドレスにあるオブジェクトに関する情報を表示します。                                       |
+| `dumpmd <arguments>`                | 指定されたアドレスにある `MethodDesc` 構造体に関する情報を表示します。               |
+| `dumpmodule <arguments>`            | 指定されたアドレスにあるモジュールに関する情報を表示します。                               |
+| `dumpmt <arguments>`                | 指定されたアドレスにある `MethodTable` に関する情報を表示します。                        |
+| `dumpobj <arguments>`               | 指定したアドレスにあるオブジェクトに関する情報を表示します。                                      |
 | `dso|dumpstackobjects <arguments>`  | 現在のスタックの範囲内で見つかったすべてのマネージド オブジェクトを表示します。                    |
 | `eeheap <arguments>`                | 内部のランタイム データ構造体によって消費されたプロセス メモリに関する情報を表示します。              |
 | `finalizequeue <arguments>`         | 完了の目的で登録されているすべてのオブジェクトを表示します。                                             |
-| `gcroot <arguments>`                | 指定したアドレスにあるオブジェクトへの参照 (またはルート) に関する情報を表示します。              |
+| `gcroot <arguments>`                | 指定されたアドレスにあるオブジェクトへの参照 (またはルート) に関する情報を表示します。             |
 | `gcwhere <arguments>`               | 渡された引数の GC ヒープ内の場所を表示します。                               |
-| `ip2md <arguments>`                 | 指定したアドレスにある JIT コード内の MethodDesc 構造体に関する情報を表示します。                       |
+| `ip2md <arguments>`                 | 指定したアドレスにある JIT コード内の `MethodDesc` 構造体に関する情報を表示します。                     |
 | `histclear <arguments>`             | `hist*` コマンドのファミリによって使用されているすべてのリソースを解放します。                                |
 | `histinit <arguments>`              | デバッグ対象に保存されているストレス ログから SOS 構造体を初期化します。                     |
 | `histobj <arguments>`               | `<arguments>` に関連するガベージ コレクションのストレス ログの再配置を表示します。              |
-| `histobjfind <arguments>`           | 指定したアドレスにあるオブジェクトを参照するすべてのログ エントリを表示します。               |
+| `histobjfind <arguments>`           | 指定されたアドレスにあるオブジェクトを参照するすべてのログ エントリを表示します。              |
 | `histroot <arguments>`              | 指定したルートの上位変換と再配置の両方に関係する情報を表示します。        |
 | `lm|modules`                        | プロセス内のネイティブ モジュールを表示します。                                                   |
-| `name2ee <arguments>`               | `<argument>` の MethodTable 構造体と EEClass 構造体を表示します。                |
-| `pe|printexception <arguments>`     | アドレス `<argument>` で Exception クラスから派生したすべてのオブジェクトを表示します。             |
+| `name2ee <arguments>`               | `<argument>` の `MethodTable` 構造体と `EEClass` 構造体を表示します。                     |
+| `pe|printexception <arguments>`     | `<argument>` の <xref:System.Exception> クラスから派生したオブジェクトを表示します。      |
 | `setsymbolserver <arguments>`       | シンボル サーバーのサポートを有効にします。                                                             |
 | `syncblk <arguments>`               | SyncBlock の所有者の情報を表示します。                                                           |
 | `threads|setthread <threadid>`      | SOS コマンドの現在のスレッド ID を設定するか表示します。                                  |
+
+> [!NOTE]
+> その他の詳細は、「[.NET 用 SOS デバッガー拡張](sos-debugging-extension.md)」に記載されています。
 
 ## <a name="using-dotnet-dump"></a>`dotnet-dump` を使用する
 

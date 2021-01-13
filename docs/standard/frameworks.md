@@ -5,12 +5,12 @@ ms.date: 11/06/2020
 ms.prod: dotnet
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 1a0d6ef9d31b85fd6c083604dd11b9ca9ff09c79
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7a3dcd61c330607bacf0d05dbd775c62cfa15b37
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827920"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97765060"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK スタイルのプロジェクトでのターゲット フレームワーク
 
@@ -22,7 +22,7 @@ ms.locfileid: "94827920"
 
 .NET Framework などの一部のターゲット フレームワークでは、API はフレームワークがシステムにインストールするアセンブリによって定義され、アプリケーション フレームワーク API (ASP.NET など) を含む場合があります。
 
-パッケージ ベースのターゲット フレームワーク (.NET 5、.NET Core、.NET Standard など) では、API はアプリまたはライブラリに含まれるパッケージによって定義されます。 "*メタパッケージ*" は、それ独自の内容はなく、依存するもの (他のパッケージ) のリストを保持している NuGet パッケージです。 NuGet パッケージ ベースのターゲット フレームワークでは、全体としてフレームワークを構成するすべてのパッケージを参照するメタパッケージが暗黙的に指定されます。
+パッケージ ベースのターゲット フレームワーク (.NET 5、.NET Core、.NET Standard など) では、API はアプリまたはライブラリに含まれる NuGet パッケージによって定義されます。
 
 ## <a name="latest-versions"></a>最新バージョン
 

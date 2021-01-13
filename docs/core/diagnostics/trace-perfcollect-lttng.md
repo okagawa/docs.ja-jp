@@ -3,12 +3,12 @@ title: PerfCollect を使用した .NET アプリケーションのトレース�
 description: .NET で PerfCollect を使用してトレースを収集する手順について説明するチュートリアル。
 ms.topic: tutorial
 ms.date: 10/23/2020
-ms.openlocfilehash: 376c957833924a9991e574557671ea3c8503d7c2
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 53e4584953d2af4e766daadfa757cca752ae7329
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507242"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593221"
 ---
 # <a name="trace-net-applications-with-perfcollect"></a>PerfCollect を使用して .NET アプリケーションをトレースする
 
@@ -250,3 +250,31 @@ export COMPlus_ZapDisable=1
 ## <a name="collect-in-a-docker-container"></a>Docker コンテナー内で収集する
 
 コンテナー環境で `perfcollect` を使用する方法の詳細については、「[コンテナーでの診断の収集](./diagnostics-in-containers.md)」を参照してください。
+
+## <a name="learn-more-about-collection-options"></a>収集オプションについての詳細情報
+
+診断のニーズに合わせて、`perfcollect` を使用して次のオプションのフラグを指定できます。
+
+### <a name="collect-for-a-specific-duration"></a>特定の期間について収集する
+
+特定の期間についてトレースを収集する場合は、`-collectsec` オプションに続けて、トレースを収集する合計秒数を数値で指定できます。
+
+### <a name="collect-threadtime-traces"></a>threadtime のトレースを収集する
+
+`-threadtime` と共に `perfcollect` を指定すると、スレッドごとの CPU 使用率データを収集できます。 これにより、各スレッドが CPU 時間を費やしていた場所を分析できます。
+
+### <a name="collect-traces-for-managed-memory-and-garbage-collector-performance"></a>マネージド メモリとガベージ コレクターのパフォーマンスのトレースを収集する
+
+次のオプションを使用すると、ランタイムから特に GC イベントを収集できます。
+
+* `perfcollect collect -gccollectonly`
+
+GC 収集イベントの最小セットのみを収集します。 これは、ターゲット アプリのパフォーマンスへの影響が最も少ない、最も詳細度の低い GC イベント収集プロファイルです。 このコマンドは PerfView の `PerfView.exe /GCCollectOnly collect` コマンドと似ています。
+
+* `perfcollect collect -gconly`
+
+JIT、ローダー、例外イベントを使用して、より詳細な GC 収集イベントを収集します。 これにより、より詳細なイベント (割り当て情報や GC 結合情報など) が要求され、`-gccollectonly` オプションよりもターゲット アプリのパフォーマンスに大きく影響します。 このコマンドは PerfView の `PerfView.exe /GCOnly collect` コマンドと似ています。
+
+* `perfcollect collect -gcwithheap`
+
+最も詳細な GC コレクション イベントを収集します。これにより、ヒープの存続と移動も追跡されます。 これにより、GC の動作を詳細に分析できますが、各 GC に 2 倍以上の時間がかかるおそれがあるため、パフォーマンス コストが高くなります。 運用環境でトレースするときにこのトレース オプションを使用した場合のパフォーマンスへの影響を理解しておくことをお勧めします。

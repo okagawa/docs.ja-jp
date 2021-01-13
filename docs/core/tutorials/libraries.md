@@ -1,23 +1,23 @@
 ---
-title: .NET Core CLI を使用したライブラリの開発
-description: .NET Core CLI を使用して .NET Core ライブラリを作成する方法について説明します。 複数のフレームワークをサポートするライブラリを作成します。
+title: .NET CLI を使用してライブラリを開発する
+description: .NET CLI を使用して .NET ライブラリを作成する方法について説明します。 複数のフレームワークをサポートするライブラリを作成します。
 author: cartermp
 ms.topic: how-to
-ms.date: 05/01/2017
-ms.openlocfilehash: 8a0b1c5645f41a256bfb9d0e5dac74f8706d84e6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 12/14/2020
+ms.openlocfilehash: 6f4c1feac7630a6a0250e4b0b39ef01152f5a400
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725080"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633677"
 ---
-# <a name="develop-libraries-with-the-net-core-cli"></a>.NET Core CLI を使用したライブラリの開発
+# <a name="develop-libraries-with-the-net-cli"></a>.NET CLI を使用してライブラリを開発する
 
-この記事では、.NET Core CLI を使用して .NET 用ライブラリを作成する方法について説明します。 CLI は、サポートされる任意の OS で動作する効率的で低レベルのエクスペリエンスを提供します。 Visual Studio でライブラリを構築することもできます。Visual Studio で構築する場合は、[Visual Studio ガイドを参照](library-with-visual-studio.md)してください。
+この記事では、.NET CLI を使用して .NET 用ライブラリを作成する方法について説明します。 CLI は、サポートされる任意の OS で動作する効率的で低レベルのエクスペリエンスを提供します。 Visual Studio でライブラリを構築することもできます。Visual Studio で構築する場合は、[Visual Studio ガイドを参照](library-with-visual-studio.md)してください。
 
 ## <a name="prerequisites"></a>前提条件
 
-[.NET Core SDK と CLI](https://dotnet.microsoft.com/download) がコンピューターにインストールされている必要があります。
+[.NET SDK と CLI](https://dotnet.microsoft.com/download) がコンピューターにインストールされている必要があります。
 
 このドキュメントで [.NET Framework](https://dotnet.microsoft.com) バージョンについて扱うセクションでは、.NET Framework が Windows コンピューターにインストールされている必要があります。
 
@@ -33,35 +33,27 @@ ms.locfileid: "95725080"
 | 4.0                    | Windows SDK for Windows 7 および .NET Framework 4         |
 | 2.0、3.0、および 3.5      | .NET Framework 3.5 SP1 Runtime (または Windows 8 以降のバージョン) |
 
-## <a name="how-to-target-net-standard"></a>.NET Standard をターゲット設定する方法
+## <a name="how-to-target-net-50-or-net-standard"></a>.NET 5.0 または .NET Standard をターゲットにする方法
 
-.NET Standard にあまりなじみがない場合、詳細については、「[.NET Standard](../../standard/net-standard.md)」をご覧ください。
+プロジェクト ファイル ( *.csproj* または *.fsproj*) に追加することでプロジェクトのターゲット フレームワークを制御します。 ターゲットとして .NET 5.0 と .NET Standard のいずれを選択するかについては、「[.NET 5 と .NET Standard](../../standard/net-standard.md#net-5-and-net-standard)」を参照してください。
 
-この記事には、.NET Standard バージョンを多様な実装にマップする表が掲載されています。
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+</Project>
+```
 
-[!INCLUDE [net-standard-table](../../../includes/net-standard-table.md)]
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+</Project>
+```
 
-ライブラリを作成する目的でこの表の意味について説明します。
-
-選択する .NET Standard のバージョンは、最新の API にアクセスできることと、より多くの .NET 実装と .NET Standard バージョンをターゲット設定できることのトレードオフで決まります。 ターゲット設定可能なプラットフォームとバージョンの範囲は、`netstandardX.X` のバージョンを選択し (`X.X` はバージョン番号です)、プロジェクト ファイル (`.csproj` または `.fsproj`) に追加することで制御します。
-
-.NET Standard をターゲット設定する場合、ニーズに応じて 3 つの主要なオプションがあります。
-
-1. テンプレートで提供されている既定のバージョンの .NET Standard (`netstandard1.4`) を使用できます。これにより、UWP、.NET Framework 4.6.1、.NET Standard 2.0 との互換性を保ちながら、.NET Standard 上のほとんどの API にアクセスできます。
-
-    ```xml
-    <Project Sdk="Microsoft.NET.Sdk">
-      <PropertyGroup>
-        <TargetFramework>netstandard1.4</TargetFramework>
-      </PropertyGroup>
-    </Project>
-    ```
-
-2. プロジェクト ファイルの `TargetFramework` ノードの値を変更することで、.NET Standard の下位または上位バージョンを使用することができます。
-
-    .NET Standard バージョンは下位互換性があります。 つまり、`netstandard1.0` ライブラリは、`netstandard1.1` プラットフォーム以降で実行されます。 ただし、上位互換性はありません。 下位の .NET Standard プラットフォームは、上位のものを参照できません。 つまり、`netstandard1.0` ライブラリは、`netstandard1.1` 以降をターゲットとするライブラリを参照できません。 API とプラットフォームを適切に組み合わせ、ニーズに対応できる Standard バージョンを選択してください。 現時点では `netstandard1.4` が推奨されます。
-
-3. .NET Framework バージョン 4.0 以前をターゲットにする場合、または .NET Framework では利用できて .NET Standard では利用できない API (`System.Drawing` など) を使用する場合は、マルチターゲットの方法について次のセクションを参照してください。
+.NET Framework バージョン 4.0 以前をターゲットにする場合、または .NET Framework では利用できて .NET Standard では利用できない API (`System.Drawing` など) を使用する場合は、マルチターゲットの方法について次のセクションを参照してください。
 
 ## <a name="how-to-target-net-framework"></a>.NET Framework をターゲット設定する方法
 
@@ -104,7 +96,7 @@ ms.locfileid: "95725080"
 > [!NOTE]
 > 次の手順では、.NET Framework がコンピューターにインストールされている想定です。 インストールする必要がある依存関係と、そのダウンロードできる場所については、「[前提条件](#prerequisites)」セクションを参照してください。
 
-プロジェクトが .NET Framework と .NET Core の両方をサポートしている場合、状況によっては古いバージョンの .NET Framework をターゲットにする必要があります。 このシナリオで、新しい API と新しいターゲット向けの言語構成を使用する場合、コードで `#if` ディレクティブを使用します。 また、必要に応じて、ターゲットにする各プラットフォームに応じて異なるパッケージと依存関係追加して、それぞれに異なる必要な API を含めます。
+プロジェクトが .NET Framework と .NET の両方をサポートしている場合、状況によっては古いバージョンの .NET Framework をターゲットにする必要があります。 このシナリオで、新しい API と新しいターゲット向けの言語構成を使用する場合、コードで `#if` ディレクティブを使用します。 また、必要に応じて、ターゲットにする各プラットフォームに応じて異なるパッケージと依存関係追加して、それぞれに異なる必要な API を含めます。
 
 たとえば、HTTP 上でネットワークキング操作を行うライブラリがあるとします。 .NET Standard と .NET Framework バージョン 4.5 以降の場合、`System.Net.Http` 名前空間の `HttpClient` クラスを使用できます。 ただし、それより前のバージョンの .NET Framework に `HttpClient` クラスはないので、代わりに `System.Net` 名前空間の `WebClient` クラスを使用できます。
 
@@ -113,7 +105,7 @@ ms.locfileid: "95725080"
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.4;net40;net45</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net40;net45</TargetFrameworks>
   </PropertyGroup>
 
   <!-- Need to conditionally bring in references for the .NET Framework 4.0 target -->
@@ -207,17 +199,17 @@ namespace MultitargetLib
 ```
 net40/
 net45/
-netstandard1.4/
+netstandard2.0/
 ```
 
-各ディレクトリには、各ターゲットの `.dll` ファイルがあります。
+それぞれに各ターゲットの `.dll` ファイルが含まれています。
 
-## <a name="how-to-test-libraries-on-net-core"></a>.NET Core でライブラリをテストする方法
+## <a name="how-to-test-libraries-on-net"></a>.NET でライブラリをテストする方法
 
-プラットフォーム全体でテストできることが重要です。 [xUnit](https://xunit.github.io/) または MSTest はそのまま利用できます。 どちらも、.NET Core 上のライブラリの単体テストに最適です。 テスト プロジェクトでソリューションをセットアップする方法は、[ソリューションの構造](#structuring-a-solution)によって異なります。 次の例は、テスト ディレクトリとソース ディレクトリが同じ最上位ディレクトリにある場合です。
+プラットフォーム全体でテストできることが重要です。 [xUnit](https://xunit.net/) または MSTest はそのまま利用できます。 どちらも、.NET 上のライブラリの単体テストに最適です。 テスト プロジェクトでソリューションをセットアップする方法は、[ソリューションの構造](#structuring-a-solution)によって異なります。 次の例は、テスト ディレクトリとソース ディレクトリが同じ最上位ディレクトリにある場合です。
 
 > [!NOTE]
-> ここでは、いくつかの [.NET Core CLI](../tools/index.md) コマンドが使用されます。 詳細については、「[dotnet new](../tools/dotnet-new.md)」と「[dotnet sln](../tools/dotnet-sln.md)」を参照してください。
+> この例ではいくつかの [.NET CLI コマンド](../tools/index.md)を使用しています。 詳細については、「[dotnet new](../tools/dotnet-new.md)」と「[dotnet sln](../tools/dotnet-sln.md)」を参照してください。
 
 1. ソリューションを設定します。 次のコマンドで実行することができます。
 
@@ -253,8 +245,6 @@ netstandard1.4/
    dotnet restore
    dotnet build
    ```
-
-   [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 1. `dotnet test` コマンドを実行して、xUnit が実行されることを確認します。 MSTest を使用する場合は、MSTest コンソール実行ツールが実行されることを確認します。
 
@@ -319,7 +309,7 @@ dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 
 ### <a name="project-to-project-referencing"></a>プロジェクト間参照
 
-プロジェクトを参照するには、.NET Core CLI を使用してプロジェクト参照を追加することをお勧めします。 **AwesomeLibrary.CSharp** と **AwesomeLibrary.FSharp** のプロジェクト ディレクトリから、次のコマンドを実行できます。
+プロジェクトを参照するには、.NET CLI を使用してプロジェクト参照を追加することをお勧めします。 **AwesomeLibrary.CSharp** と **AwesomeLibrary.FSharp** のプロジェクト ディレクトリから、次のコマンドを実行できます。
 
 ```dotnetcli
 dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
@@ -333,7 +323,7 @@ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 </ItemGroup>
 ```
 
-この .NET Core CLI を使用しない場合は、このセクションを各プロジェクト ファイルに手動で追加します。
+この.NET CLI を使用しない場合は、このセクションを各プロジェクト ファイルに手動で追加します。
 
 ### <a name="structuring-a-solution"></a>ソリューションの構築
 

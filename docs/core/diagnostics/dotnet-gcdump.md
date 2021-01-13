@@ -2,12 +2,12 @@
 title: dotnet-gcdump 診断ツール - .NET CLI
 description: dotnet-gcdump CLI ツールをインストールして使用し、.NET EventPipe を使ってライブ .NET プロセスの GC (ガベージ コレクター) ダンプを収集する方法について学習します。
 ms.date: 11/17/2020
-ms.openlocfilehash: 59de1845ada9e5bdd0b24bf4312517283324ce94
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 02e1a7c5d86b582289672a027464aefd67a6f490
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826041"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593371"
 ---
 # <a name="heap-analysis-tool-dotnet-gcdump"></a>ヒープ分析ツール (dotnet-gcdump)
 
@@ -69,7 +69,10 @@ Windows では、分析のために [PerfView](https://github.com/microsoft/perf
 
 現在実行中のプロセスから GC ダンプを収集します。
 
-### <a name="synopsis"></a>概要
+> [!WARNING]
+> GC ヒープをウォークするために、このコマンドによって第 2 世代の (完全な) ガベージ コレクションがトリガーされます。これにより、特に GC ヒープが大きい場合に、ランタイムが長時間中断されるおそれがあります。 GC ヒープが大きい場合、パフォーマンスを重視する環境ではこのコマンドを使用しないでください。
+
+### <a name="synopsis"></a>構文
 
 ```console
 dotnet-gcdump collect [-h|--help] [-p|--process-id <pid>] [-o|--output <gcdump-file-path>] [-v|--verbose] [-t|--timeout <timeout>] [-n|--name <name>]

@@ -4,12 +4,12 @@ description: 製品売上データの異常検出アプリケーションを構�
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: cf61f197e4befebdbb1fbf2ca4cbcdc61c48780a
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 48a8b26409b20e2a01aa97425153336b34c9b5b7
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281668"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97594177"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>チュートリアル: ML.NET で製品売上の異常を検出する
 
@@ -38,11 +38,11 @@ ms.locfileid: "86281668"
 
 ## <a name="create-a-console-application"></a>コンソール アプリケーションを作成する
 
-1. "ProductSalesAnomalyDetection" という **.NET Core コンソール アプリケーション**を作成します。
+1. "ProductSalesAnomalyDetection" という **.NET Core コンソール アプリケーション** を作成します。
 
 2. データ セット ファイルを保存するために、プロジェクトに *Data* という名前のディレクトリを作成します。
 
-3. **Microsoft.ML NuGet パッケージ**をインストールします。
+3. **Microsoft.ML NuGet パッケージ** をインストールします。
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
@@ -78,9 +78,9 @@ ms.locfileid: "86281668"
 
 プロジェクトに新しいクラスを追加します。
 
-1. **ソリューション エクスプローラー**で、プロジェクトを右クリックして、 **[追加]、[新しいアイテム]** の順に選びます。
+1. **ソリューション エクスプローラー** で、プロジェクトを右クリックして、 **[追加]、[新しいアイテム]** の順に選びます。
 
-2. **[新しい項目の追加] ダイアログ ボックス**で、 **[クラス]** を選択し、 **[名前]** フィールドを「*ProductSalesData.cs*」に変更します。 次に **[追加]** を選択します。
+2. **[新しい項目の追加] ダイアログ ボックス** で、 **[クラス]** を選択し、 **[名前]** フィールドを「*ProductSalesData.cs*」に変更します。 次に **[追加]** を選択します。
 
    コード エディターで *ProductSalesData.cs* ファイルが開きます。
 
@@ -140,9 +140,9 @@ ML.NET 内のデータは、[IDataView クラス](xref:Microsoft.ML.IDataView)�
 
 検出できる時系列の異常には 2 つの種類があります。
 
-* **スパイク**は、システム内の異常動作の一時的なバーストを示します。
+* **スパイク** は、システム内の異常動作の一時的なバーストを示します。
 
-* **変化点**は、システム内での長期にわたる永続的な変化の始まりを示します。
+* **変化点** は、システム内での長期にわたる永続的な変化の始まりを示します。
 
 ML.NET では、[独立した同一分散のデータセット](https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables)には IID Spike Detection (IID スパイク検出) アルゴリズムまたは IID Change point Detection (IID 変化点検出) アルゴリズムが適しています。
 
@@ -384,6 +384,6 @@ Alert   Score   P-Value Martingale value
 
 ## <a name="next-steps"></a>次の手順
 
-Machine Learning サンプルの GitHub リポジトリを確認し、Power Consumption Anomaly Detection サンプルを調べてください。
+Machine Learning サンプルの GitHub リポジトリを確認し、季節性データの異常検出サンプルを調べてください。
 > [!div class="nextstepaction"]
-> [dotnet/machinelearning-samples GitHub リポジトリ](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/AnomalyDetection_PowerMeterReadings)
+> [dotnet/machinelearning-samples GitHub リポジトリ](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls)

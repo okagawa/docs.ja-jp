@@ -2,13 +2,13 @@
 title: 'チュートリアル: .NET ツールを作成する'
 description: .NET ツールを作成する方法について説明します。 ツールは、.NET CLI を使用してインストールするコンソール アプリケーションです。
 ms.topic: tutorial
-ms.date: 02/12/2020
-ms.openlocfilehash: 93d0567f3d73707f828f84fad6128804debf6579
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.date: 12/14/2020
+ms.openlocfilehash: dc5cf014336848ff1a3035647a386419653a083b
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633779"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633898"
 ---
 # <a name="tutorial-create-a-net-tool-using-the-net-cli"></a>チュートリアル: .NET CLI を使用して .NET ツールを作成する
 
@@ -18,14 +18,14 @@ ms.locfileid: "94633779"
 
 作成するツールは、メッセージを入力として受け取り、ロボットの画像を作成するテキスト行と共にメッセージを表示するコンソール アプリケーションです。
 
-これは、3 つのチュートリアル シリーズの第 1 回です。 このチュートリアルでは、ツールを作成してパッケージ化します。 次の 2 つのチュートリアルでは、[グローバル ツールとしてツールを使用する](global-tools-how-to-use.md)方法と、[ローカル ツールとしてツールを使用する](local-tools-how-to-use.md)方法を説明します。
+これは、3 つのチュートリアル シリーズの第 1 回です。 このチュートリアルでは、ツールを作成してパッケージ化します。 次の 2 つのチュートリアルでは、[グローバル ツールとしてツールを使用する](global-tools-how-to-use.md)方法と、[ローカル ツールとしてツールを使用する](local-tools-how-to-use.md)方法を説明します。 ツールを作成する手順は、グローバル ツールとローカル ツールのどちらとして使用する場合でも同じです。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
-- [.NET Core SDK 3.1](https://dotnet.microsoft.com/download) 以降のバージョン。
+- [.NET SDK 5.0.100](https://dotnet.microsoft.com/download) 以降のバージョン。
 
-  このチュートリアルと次の[グローバル ツールのチュートリアル](global-tools-how-to-use.md)は、.NET Core SDK 2.1 以降のバージョンに適用されます。これは、そのバージョンからグローバル ツールを使用できるようになったためです。 ただし、このチュートリアルでは、[ローカル ツールのチュートリアル](local-tools-how-to-use.md)に進むことができるように、3.1 以降がインストールされていることを前提としています。 ローカル ツールは .NET Core SDK 3.0 以降で使用できます。 ツールを作成する手順は、グローバル ツールとローカル ツールのどちらとして使用する場合でも同じです。
-  
+  このチュートリアルでは .NET SDK 5.0 を使用しますが、.NET Core SDK 2.1 より、グローバル ツールが利用できます。 ローカル ツールは .NET Core SDK 3.0 以降で使用できます。
+
 - ユーザーが選んだテキスト エディターまたはコード エディター。
 
 ## <a name="create-a-project"></a>プロジェクトを作成する
@@ -35,10 +35,22 @@ ms.locfileid: "94633779"
 1. *repository* フォルダーに移動し、次のコマンドを入力します。
 
    ```dotnetcli
-   dotnet new console -n microsoft.botsay
+   dotnet new console -n microsoft.botsay -f net5.0
    ```
 
    このコマンドを実行すると、*repository* フォルダーの下に *microsoft.botsay* という名前の新しいフォルダーが作成されます。
+
+   > [!NOTE]
+   > このチュートリアルでは、.NET 5.0 を対象にするツールを作成します。 別のフレームワークを対象にするには、`-f|--framework` オプションを変更します。 複数のフレームワークを対象にするには、次の例に示すように、プロジェクト ファイルの `TargetFrameworks` 要素に `TargetFramework` 要素を変更します。
+   >
+   > ```xml
+   > <Project Sdk="Microsoft.NET.Sdk">
+   >   <PropertyGroup>
+   >     <OutputType>Exe</OutputType>
+   >     <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
+   >   </PropertyGroup>
+   > </Project>
+   > ```
 
 1. *microsoft.botsay* フォルダーに移動します。
 
@@ -158,22 +170,22 @@ dotnet run -- Hello from the bot
 
    `<ToolCommandName>` は、インストール後にツールを呼び出すコマンドを指定する省略可能な要素です。 この要素を指定しない場合、ツールのコマンド名は、 *.csproj* 拡張子のないプロジェクト ファイル名になります。
 
-   `<PackageOutputPath>` は、NuGet パッケージが生成される場所を決定する省略可能な要素です。 NuGet パッケージは、.NET Core CLI でツールのインストールに使用されるものです。
+   `<PackageOutputPath>` は、NuGet パッケージが生成される場所を決定する省略可能な要素です。 NuGet パッケージは、.NET CLI でツールのインストールに使用されるものです。
 
    プロジェクト ファイルは次の例のようになります。
 
    ```xml
    <Project Sdk="Microsoft.NET.Sdk">
-  
+
      <PropertyGroup>
 
        <OutputType>Exe</OutputType>
-       <TargetFramework>netcoreapp3.1</TargetFramework>
-  
+       <TargetFramework>net5.0</TargetFramework>
+
        <PackAsTool>true</PackAsTool>
        <ToolCommandName>botsay</ToolCommandName>
        <PackageOutputPath>./nupkg</PackageOutputPath>
-  
+
      </PropertyGroup>
 
    </Project>
@@ -186,7 +198,7 @@ dotnet run -- Hello from the bot
    ```
 
    *microsoft.botsay.1.0.0.nupkg* ファイルは、*microsoft.botsay.csproj* ファイルの `<PackageOutputPath>` 値で識別されるフォルダー (この例では、 *./nupkg* フォルダー) に作成されます。
-  
+
    ツールをリリースする場合は、`https://www.nuget.org` にアップロードすることができます。 NuGet 上でツールを使用できるようになると、開発者は [dotnet tool install](dotnet-tool-install.md) コマンドを使用してツールをインストールできます。 このチュートリアルでは、ローカルの *nupkg* フォルダーからパッケージを直接インストールするため、NuGet にパッケージをアップロードする必要はありません。
 
 ## <a name="troubleshoot"></a>トラブルシューティング

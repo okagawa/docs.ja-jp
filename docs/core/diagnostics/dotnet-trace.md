@@ -2,12 +2,12 @@
 title: dotnet-trace 診断ツール - .NET CLI
 description: dotnet-trace CLI ツールをインストールして使用し、.NET EventPipe を使って、ネイティブ プロファイラーなしで実行中のプロセスの .NET トレースを収集する方法について学習します。
 ms.date: 11/17/2020
-ms.openlocfilehash: 868ce7828eee6bd7f2101d5d6a65c7f7bf87fe24
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: a3b5748cb2a6c2060971fbad0d81ade00dc83087
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009535"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753667"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace パフォーマンス分析ユーティリティ
 
@@ -144,6 +144,9 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
   > [!NOTE]
   > このオプションを使用すると、ツールに返信する最初の .NET 5.0 プロセスが監視されます。つまり、ご利用のコマンドで複数の .NET アプリケーションが起動される場合、収集されるのは最初のアプリのみとなります。 このため、このオプションについては、自己完結型アプリケーションに対して使用するか、または `dotnet exec <app.dll>` オプションを使用することをお勧めします。
 
+> [!NOTE]
+> 大きなアプリケーションの場合、トレースの停止に時間がかかることがあります (最大数分)。 ランタイムでは、トレースにキャプチャされたすべてのマネージド コードを対象に、型キャッシュを送信する必要があります。
+
 ## <a name="dotnet-trace-convert"></a>dotnet-trace convert
 
 `nettrace` トレースを、別のトレース分析ツールで使用するために、別の形式に変換します。
@@ -169,6 +172,9 @@ dotnet-trace convert [<input-filename>] [--format <Chromium|NetTrace|Speedscope>
 - **`-o|--output <output-filename>`**
 
   出力ファイルの名前。 ターゲットの形式の拡張子が追加されます。
+
+> [!NOTE]
+> `nettrace` ファイルを `chromium` または `speedscope` ファイルに変換した場合、元に戻せません。 `speedscope` ファイルと `chromium` ファイルには、`nettrace` ファイルを再構築するために必要な情報が一部含まれていません。 ただし、`convert` コマンドによって元の `nettrace` ファイルが保持されます。今後開くことがある場合、このファイルは削除しないでください。
 
 ## <a name="dotnet-trace-ps"></a>dotnet-trace ps
 
@@ -329,12 +335,31 @@ dotnet-trace collect --process-id <PID> --providers System.Runtime:0:1:EventCoun
 
 上のコマンドでは、ランタイム イベントとマネージド スタック プロファイラーが無効になります。
 
-## <a name="net-providers"></a>.NET プロバイダー
+## <a name="use-rsp-file-to-avoid-typing-long-commands"></a>.rsp ファイルを使用し、長いコマンドの入力を避ける
 
-.NET Core ランタイムでは、次の .NET プロバイダーがサポートされています。 .NET Core では、`Event Tracing for Windows (ETW)` と `EventPipe` トレースの有効化に、いずれも同じキーワードを使用しています。
+渡す引数が含まれる `.rsp` ファイルで `dotnet-trace` を起動できます。 これは、文字を取り除くシェル環境を使用しているとき、長い引数を求めるプロバイダーを有効にするときに便利です。
 
-| プロバイダー名                            | 情報 |
-|------------------------------------------|-------------|
-| `Microsoft-Windows-DotNETRuntime`        | [ランタイム プロバイダー](../../framework/performance/clr-etw-providers.md#the-runtime-provider)<br>[CLR ランタイム キーワード](../../framework/performance/clr-etw-keywords-and-levels.md#runtime) |
-| `Microsoft-Windows-DotNETRuntimeRundown` | [ランダウン プロバイダー](../../framework/performance/clr-etw-providers.md#the-rundown-provider)<br>[CLR ランダウン キーワード](../../framework/performance/clr-etw-keywords-and-levels.md#rundown) |
-| `Microsoft-DotNETCore-SampleProfiler`    | サンプル プロファイラーを有効にします。 |
+たとえば、次のプロバイダーの場合、トレースのたびに入力するのが面倒です。
+
+```cmd
+dotnet-trace collect --providers Microsoft-Diagnostics-DiagnosticSource:0x3:5:FilterAndPayloadSpecs="SqlClientDiagnosticListener/System.Data.SqlClient.WriteCommandBefore@Activity1Start:-Command;Command.CommandText;ConnectionId;Operation;Command.Connection.ServerVersion;Command.CommandTimeout;Command.CommandType;Command.Connection.ConnectionString;Command.Connection.Database;Command.Connection.DataSource;Command.Connection.PacketSize\r\nSqlClientDiagnosticListener/System.Data.SqlClient.WriteCommandAfter@Activity1Stop:\r\nMicrosoft.EntityFrameworkCore/Microsoft.EntityFrameworkCore.Database.Command.CommandExecuting@Activity2Start:-Command;Command.CommandText;ConnectionId;IsAsync;Command.Connection.ClientConnectionId;Command.Connection.ServerVersion;Command.CommandTimeout;Command.CommandType;Command.Connection.ConnectionString;Command.Connection.Database;Command.Connection.DataSource;Command.Connection.PacketSize\r\nMicrosoft.EntityFrameworkCore/Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted@Activity2Stop:",OtherProvider,AnotherProvider
+```
+
+また、前の例には、引数の一部として `"` が含まれています。 引用符の処理がシェルごとに異なるため、異なるシェルを使用するとき、さまざまな問題が発生するおそれがあります。 たとえば、`zsh` に入力するコマンドは、`cmd` のコマンドとは異なります。
+
+これを毎回入力する代わりに、`myprofile.rsp` という名称のファイルに次のテキストを保存できます。
+
+```txt
+--providers
+Microsoft-Diagnostics-DiagnosticSource:0x3:5:FilterAndPayloadSpecs="SqlClientDiagnosticListener/System.Data.SqlClient.WriteCommandBefore@Activity1Start:-Command;Command.CommandText;ConnectionId;Operation;Command.Connection.ServerVersion;Command.CommandTimeout;Command.CommandType;Command.Connection.ConnectionString;Command.Connection.Database;Command.Connection.DataSource;Command.Connection.PacketSize\r\nSqlClientDiagnosticListener/System.Data.SqlClient.WriteCommandAfter@Activity1Stop:\r\nMicrosoft.EntityFrameworkCore/Microsoft.EntityFrameworkCore.Database.Command.CommandExecuting@Activity2Start:-Command;Command.CommandText;ConnectionId;IsAsync;Command.Connection.ClientConnectionId;Command.Connection.ServerVersion;Command.CommandTimeout;Command.CommandType;Command.Connection.ConnectionString;Command.Connection.Database;Command.Connection.DataSource;Command.Connection.PacketSize\r\nMicrosoft.EntityFrameworkCore/Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted@Activity2Stop:",OtherProvider,AnotherProvider
+```
+
+`myprofile.rsp` を保存したら、次のコマンドを使用し、この構成で `dotnet-trace` を起動できます。
+
+```bash
+dotnet-trace @myprofile.rsp
+```
+
+## <a name="see-also"></a>関連項目
+
+- [.NET の既知のイベント プロバイダー](well-known-event-providers.md)

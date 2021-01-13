@@ -4,12 +4,12 @@ description: さまざまな種類のアプリをビルドするための無料�
 author: tdykstra
 ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 1fd452ac9b7740c428e92cc6a510bab5f4d2d7d0
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 0adc348c1fc340fe481d9987cdbe28c6cf8b065d
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687518"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938677"
 ---
 # <a name="introduction-to-net"></a>.NET の概要
 
@@ -144,6 +144,13 @@ SDK のダウンロードには次のコンポーネントが含まれます。
 * [ランタイム ライブラリ](#runtime-libraries)。 プリミティブ データ型および基本的なユーティリティを提供します。
 * ASP.NET Core ランタイム。 Web アプリ、IoT アプリ、モバイル バックエンドなど、インターネットに接続されたアプリ用の基本的なサービスを提供します。
 * デスクトップ ランタイム。 Windows フォームや WPF など、Windows デスクトップ アプリ用の基本的なサービスを提供します。
+
+ランタイムのダウンロードには、次のコンポーネントが含まれます。
+
+* (省略可能) デスクトップまたは ASP.NET Core ランタイム。
+* [.NET ランタイム](#clr)。 型システム、アセンブリ読み込み、ガベージ コレクター、ネイティブ相互運用機能、およびその他の基本的なサービスを提供します。
+* [ランタイム ライブラリ](#runtime-libraries)。 プリミティブ データ型および基本的なユーティリティを提供します。
+* `dotnet` [ドライバー](tools/index.md#driver)。 フレームワーク依存アプリを実行する CLI コマンド。
 
 詳細については、次のリソースを参照してください。
 

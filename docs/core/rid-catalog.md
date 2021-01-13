@@ -1,13 +1,13 @@
 ---
 title: .NET Core ランタイム識別子 (RID) のカタログ
 description: ランタイム識別子 (RID) と .NET Core での RID の使用方法について説明します。
-ms.date: 02/22/2019
-ms.openlocfilehash: 096ce8e33a82df3b9de682ed16e10fbe9f07fd03
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.date: 12/15/2020
+ms.openlocfilehash: f818ab2d503be7960d9eb8450a7dd749766637a6
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "90538225"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633612"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core の RID カタログ
 
@@ -114,15 +114,15 @@ RID を使用するには、どのような RID があるのか知る必要が�
 
 一般的な値のみを示します。 最新の完全なバージョンについては、`dotnet/runtime` リポジトリの [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) ファイルをご覧ください。 以下の一覧にないディストリビューションが実行されているデバイスでも、ポータブル RID のいずれかで動作する可能性があります。 たとえば、一覧にない Linux ディストリビューションが実行されている Raspberry Pi デバイスは、`linux-arm` の対象にできます。
 
-- ポータブル (.NET Core 2.0 以降のバージョン)
+- 移植性があります。
   - `linux-x64` (CentOS、Debian、Fedora、Ubuntu、および派生ディストリビューションなどのほとんどのデスクトップ ディストリビューション)
   - `linux-musl-x64` (Alpine Linux など、[musl](https://wiki.musl-libc.org/projects-using-musl.html) を使用している軽量ディストリビューション)
   - `linux-arm` (Raspberry Pi Model 2+ 上の Raspbian など、ARM で実行されている Linux ディストリビューション)
   - `linux-arm64` (Raspberry Pi Model 3+ 上の Ubuntu Server 64 ビットなど、64 ビット ARM で実行されている Linux ディストリビューション)
 - Red Hat Enterprise Linux
   - `rhel-x64` (RHEL バージョン 6 より後では、`linux-x64` に置き換えられます)
-  - `rhel.6-x64` (.NET Core 2.0 以降)
-- Tizen (.NET Core 2.0 以降)
+  - `rhel.6-x64`
+- Tizen
   - `tizen`
   - `tizen.4.0.0`
   - `tizen.5.0.0`
@@ -133,18 +133,23 @@ RID を使用するには、どのような RID があるのか知る必要が�
 
 macOS RID では、以前の "OSX" ブランドが使用されています。 一般的な値のみを示します。 最新の完全なバージョンについては、`dotnet/runtime` リポジトリの [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) ファイルをご覧ください。
 
-- ポータブル (.NET Core 2.0 以降のバージョン)
+- 移植性があります。
   - `osx-x64` (最小 OS バージョンは、macOS 10.12 Sierra です)
 - macOS 10.10 Yosemite
   - `osx.10.10-x64`
 - macOS 10.11 El Capitan
   - `osx.10.11-x64`
-- macOS 10.12 Sierra (.NET Core 1.1 以降のバージョン)
+- macOS 10.12 Sierra
   - `osx.10.12-x64`
-- macOS 10.13 High Sierra (.NET Core 1.1 以降のバージョン)
+- macOS 10.13 High Sierra
   - `osx.10.13-x64`
-- macOS 10.14 Mojave (.NET Core 1.1 以降のバージョン)
+- macOS 10.14 Mojave
   - `osx.10.14-x64`
+- macOS 10.15 Catalina
+  - `osx.10.15-x64`
+- macOS 11.01 Big Sur
+  - `osx.11.0-x64`
+  - `osx.11.0-arm64`
 
 詳細については、[.NET Core の依存関係と要件](./install/macos.md#dependencies)に関する記事を参照してください。
 

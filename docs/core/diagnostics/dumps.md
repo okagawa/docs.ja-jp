@@ -2,12 +2,12 @@
 title: ダンプ - .NET
 description: .NET でのダンプの概要。
 ms.date: 10/12/2020
-ms.openlocfilehash: 56cf4085d10658c828bac39be93eed3f774e00d5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7a4c7bf54b3e9ea43e685eafbd00b4a373326520
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242774"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97764943"
 ---
 # <a name="dumps"></a>ダンプ
 
@@ -53,7 +53,13 @@ ms.locfileid: "96242774"
 
 ## <a name="analyze-dumps"></a>ダンプを分析する
 
-ダンプは [`dotnet-dump`](dotnet-dump.md) を使用して分析できます。
+[`dotnet-dump`](dotnet-dump.md) CLI ツールか [Visual Studio](https://docs.microsoft.com/visualstudio/debugger/using-dump-files) を使用し、ダンプを分析できます。
+
+> [!NOTE]
+> Visual Studio バージョン 16.8 以降では、.NET Core 3.1.7 以降で生成された [Linux ダンプ](https://devblogs.microsoft.com/visualstudio/linux-managed-memory-dump-debugging/)を開くことができます。  
+
+> [!NOTE]
+> ネイティブ デバッグが必要な場合、[SOS デバッガー拡張機能](sos-debugging-extension.md)を [Linux と macOS で LLDB](debug-linux-dumps.md#analyze-dumps-on-linux) と共に使用できます。 SOS は、Windows の場合、[Windbg/cdb](/windows-hardware/drivers/debugger/debugger-download-tools) でもサポートされています。ただし、Visual Studio が推奨されています。
 
 ## <a name="see-also"></a>関連項目
 

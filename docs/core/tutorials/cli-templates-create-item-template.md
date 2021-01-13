@@ -1,20 +1,21 @@
 ---
-title: dotnet new 用の項目テンプレートを作成する - .NET Core CLI
+title: dotnet new 用の項目テンプレートを作成する - .NET CLI
+titleSuffix: ''
 description: dotnet new コマンド用の項目テンプレートを作成する方法を説明します。 項目テンプレートには、任意の数のファイルを含めることができます。
 author: adegeo
-ms.date: 06/25/2019
+ms.date: 12/11/2020
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 0b804d26b2f33d4d600c17de2f7f71101a0f9c98
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: d213646a933c77bd0d9a3f1aa9b6b4948b66439b
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324379"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633664"
 ---
 # <a name="tutorial-create-an-item-template"></a>チュートリアル: 項目テンプレートを作成する
 
-.NET Core では、プロジェクト、ファイル、さらにはリソースを生成するテンプレートを作成して配置することができます。 このチュートリアルは、`dotnet new` コマンドで使用するテンプレートの作成、インストール、アンインストール方法を説明するシリーズのパート 1 です。
+.NET を使用すると、プロジェクト、ファイル、さらにはリソースを生成するテンプレートを作成して配置することができます。 このチュートリアルは、`dotnet new` コマンドで使用するテンプレートの作成、インストール、アンインストール方法を説明するシリーズのパート 1 です。
 
 シリーズのこのパートで学習する内容は次のとおりです。
 
@@ -28,7 +29,7 @@ ms.locfileid: "85324379"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download) 以降のバージョン。
+* [.NET 5.0 SDK](https://dotnet.microsoft.com/download) 以降のバージョン。
 * 参照記事「[dotnet new のカスタム テンプレート](../tools/custom-templates.md)」を確認しておきます。
 
   この参照記事では、テンプレートの基本と、テンプレートをまとめる方法が説明されています。 ここでは、この情報の一部を繰り返して示します。
@@ -85,7 +86,7 @@ namespace System
 
 ## <a name="create-the-template-config"></a>テンプレートの構成を作成する
 
-.NET Core では、テンプレートが、テンプレートのルートに存在する特別なフォルダーと構成ファイルによって認識されます。 このチュートリアルでは、テンプレート フォルダーは _working\templates\extensions_ にあります。
+テンプレートは、テンプレートのルートに存在する特別なフォルダーと構成ファイルによって認識されます。 このチュートリアルでは、テンプレート フォルダーは _working\templates\extensions_ にあります。
 
 テンプレートを作成すると、特別な構成フォルダーを除く、テンプレート フォルダー内のすべてのファイルとフォルダーがテンプレートの一部として含まれます。 この構成フォルダーの名前は _.template.config_ です。
 
@@ -116,7 +117,7 @@ working
 }
 ```
 
-この構成ファイルには、テンプレートのすべての設定が含まれます。 `name` や `shortName` などの基本設定を確認できますが、`item` に設定された `tags/type` 値もあります。 これにより、テンプレートが項目テンプレートとして分類されます。 作成するテンプレートの種類に制限はありません。 `item` および `project` 値は、ユーザーが検索しているテンプレートの種類を簡単にフィルター処理できるように .NET Core で推奨されている一般的な名前です。
+この構成ファイルには、テンプレートのすべての設定が含まれます。 `name` や `shortName` などの基本設定を確認できますが、`item` に設定された `tags/type` 値もあります。 これにより、テンプレートが項目テンプレートとして分類されます。 作成するテンプレートの種類に制限はありません。 `item` および `project` 値は、ユーザーが検索しているテンプレートの種類を簡単にフィルター処理できるように .NET で推奨されている一般的な名前です。
 
 `classifications` 項目は、`dotnet new` を実行してテンプレートの一覧を取得したときに表示される **tags** 列を表します。 ユーザーは分類タグに基づいて検索することもできます。 \*.json ファイル内の `tags` プロパティと、`classifications` の tags 一覧を混同しないようにしてください。 これらは残念ながら同じ名前を付けられてしまった 2 つの異なるものです。 *template.json* ファイルの完全スキーマは [JSON Schema Store](http://json.schemastore.org/template) にあります。 *template.json* ファイルについて詳しくは、[dotnet テンプレート wiki](https://github.com/dotnet/templating/wiki) をご覧ください。
 
@@ -137,14 +138,12 @@ Options:
 
 ... cut to save space ...
 
-Templates                                         Short Name            Language          Tags
--------------------------------------------------------------------------------------------------------------------------------
-Example templates: string extensions              stringext             [C#]              Common/Code
-Console Application                               console               [C#], F#, VB      Common/Console
-Class library                                     classlib              [C#], F#, VB      Common/Library
-WPF Application                                   wpf                   [C#], VB          Common/WPF
-Windows Forms (WinForms) Application              winforms              [C#], VB          Common/WinForms
-Worker Service                                    worker                [C#]              Common/Worker/Web
+Templates                                         Short Name               Language          Tags
+--------------------------------------------      -------------------      ------------      ----------------------
+Example templates: string extensions              stringext                [C#]              Common/Code
+Console Application                               console                  [C#], F#, VB      Common/Console
+Class library                                     classlib                 [C#], F#, VB      Common/Library
+WPF Application                                   wpf                      [C#], VB          Common/WPF
 ```
 
 ## <a name="test-the-item-template"></a>項目テンプレートをテストする
@@ -209,11 +208,11 @@ dotnet run
 !dlroW olleH
 ```
 
-おめでとうございます! .NET Core で項目テンプレートを作成し、配置しました。 このチュートリアル シリーズの次のパートの準備として、作成したテンプレートをアンインストールする必要があります。 また、必ず _test_ フォルダーからすべてのファイルを削除してください。 これにより、このチュートリアルの次の主要なセクションの準備が整った状態に戻ります。
+おめでとうございます! .NET で項目テンプレートを作成し、配置しました。 このチュートリアル シリーズの次のパートの準備として、作成したテンプレートをアンインストールする必要があります。 また、必ず _test_ フォルダーからすべてのファイルを削除してください。 これにより、このチュートリアルの次の主要なセクションの準備が整った状態に戻ります。
 
 ## <a name="uninstall-the-template"></a>テンプレートをアンインストールする
 
-ファイル パスを使用してテンプレートをインストールしたので、**絶対**ファイル パスを使用してアンインストールする必要があります。 `dotnet new -u` コマンドを実行すると、インストールされているテンプレートの一覧を表示できます。 作成したテンプレートは最後に表示されているはずです。 一覧にあるパスを使用して、`dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>` コマンドでテンプレートをアンインストールします。
+ファイル パスを使用してテンプレートをインストールしたので、**絶対** ファイル パスを使用してアンインストールする必要があります。 `dotnet new -u` コマンドを実行すると、インストールされているテンプレートの一覧を表示できます。 作成したテンプレートは最後に表示されているはずです。 一覧にある `Uninstall Command` を利用してテンプレートをアンインストールします。
 
 ```dotnetcli
 dotnet new -u
@@ -225,31 +224,31 @@ dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
-  Microsoft.DotNet.Common.ItemTemplates
+  Microsoft.DotNet.Common.ProjectTemplates.2.2
+    Details:
+      NuGetPackageId: Microsoft.DotNet.Common.ProjectTemplates.2.2
+      Version: 1.0.2-beta4
+      Author: Microsoft
     Templates:
-      dotnet gitignore file (gitignore)
-      global.json file (globaljson)
-      NuGet Config (nugetconfig)
-      Solution File (sln)
-      Dotnet local tool manifest file (tool-manifest)
-      Web Config (webconfig)
+      Class library (classlib) C#
+      Class library (classlib) F#
+      Class library (classlib) VB
+      Console Application (console) C#
+      Console Application (console) F#
+      Console Application (console) VB
+    Uninstall Command:
+      dotnet new -u Microsoft.DotNet.Common.ProjectTemplates.2.2
 
 ... cut to save space ...
 
-  NUnit3.DotNetNew.Template
-    Templates:
-      NUnit 3 Test Project (nunit) C#
-      NUnit 3 Test Item (nunit-test) C#
-      NUnit 3 Test Project (nunit) F#
-      NUnit 3 Test Item (nunit-test) F#
-      NUnit 3 Test Project (nunit) VB
-      NUnit 3 Test Item (nunit-test) VB
-  C:\working\templates\extensions
+C:\Test\templatetutorial\working\templates\extensions
     Templates:
       Example templates: string extensions (stringext) C#
+    Uninstall Command:
+      dotnet new -u C:\working\templates\extensions
 ```
 
-テンプレートをアンインストールするには、次のコマンドを実行します。
+作成したテンプレートをアンインストールするには、出力に表示されている `Uninstall Command` を実行します。
 
 ```dotnetcli
 dotnet new -u C:\working\templates\extensions

@@ -2,12 +2,12 @@
 title: Linux ダンプのデバッグ
 description: この記事では、Linux 環境からダンプを収集して分析する方法について学習します。
 ms.date: 08/27/2020
-ms.openlocfilehash: 94f923f2ec7b5fa20c2ebc9b83540094348dff03
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: e6f2eea3af718853ad7365a5209b397a66035dde
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099147"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753602"
 ---
 # <a name="debug-linux-dumps"></a>Linux ダンプのデバッグ
 
@@ -15,7 +15,10 @@ ms.locfileid: "95099147"
 
 ## <a name="collect-dumps-on-linux"></a>Linux でダンプを収集する
 
-Linux でダンプを収集するための推奨される 2 つの方法として、[`dotnet-dump`](dotnet-dump.md) や [`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) のツールがあります。
+Linux でダンプを収集するための推奨される 2 つの方法:
+
+* [`dotnet-dump`](dotnet-dump.md) CLI ツール
+* クラッシュ時にダンプを収集する[環境変数](dumps.md#collecting-dumps-on-crash)
 
 ### <a name="managed-dumps-with-dotnet-dump"></a>`dotnet-dump` を使用するマネージド ダンプ
 

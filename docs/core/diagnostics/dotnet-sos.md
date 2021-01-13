@@ -2,12 +2,12 @@
 title: dotnet-sos 診断ツール - .NET CLI
 description: dotnet-sos CLI ツールをインストールして使用し、Windows および Linux のネイティブ デバッガーで使われる SOS デバッガー拡張機能を管理する方法について学習します。
 ms.date: 11/17/2020
-ms.openlocfilehash: 59512c42a778f68bb3cd092dc854dcc727fd2881
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 09e8228c47bdc632bccf3c9ad2296d55fe420060
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825443"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97765008"
 ---
 # <a name="sos-installer-dotnet-sos"></a>SOS インストーラー (dotnet-sos)
 
@@ -43,7 +43,10 @@ dotnet-sos [-h|--help] [options] [command]]
 
 ## <a name="description"></a>説明
 
-`dotnet-sos` グローバル ツールによって、[SOS デバッガー拡張機能](../../framework/tools/sos-dll-sos-debugging-extension.md)がインストールされます。これにより、Windows 上の WinDbg または cdb、Linux および macOS 上の lldb などのネイティブ デバッガーから[マネージド .NET Core 状態を検査](https://github.com/dotnet/diagnostics/blob/master/documentation/sos-debugging-extension.md)できるようになります。 最新バージョンの Windows デバッガー (WinDbg または cdb のバージョン 10.0.18317.1001 以降) では、Microsoft 拡張機能ギャラリーから SOS が自動的に読み込まれます。そのため、`dotnet-sos` ツールを使用して SOS をインストールする必要があるのは、Linux および macOS の場合、または古いデバッグ ツールを使用している場合のみとなります。
+`dotnet-sos` グローバル ツールによって [SOS デバッガー拡張機能](sos-debugging-extension.md)が追加されます。 この拡張機能では、lldb や windbg のようなネイティブ デバッガーからマネージド .NET Core の状態を検査できます。
+
+> [!NOTE]
+> `dotnet-sos` ツールから SOS をインストールすることは、Linux または macOS の場合のみ必要です。  古いデバッグ ツールを使用している場合、Windows でも必要になることがあります。 [Windows Debugger](/windows-hardware/drivers/debugger/debugger-download-tools) (>= WinDbg または cdb のバージョン 10.0.18317.1001) の最近のバージョンでは、Microsoft 拡張機能ギャラリーから自動的に SOS がロードされます。  
 
 ## <a name="options"></a>オプション
 
@@ -57,17 +60,30 @@ dotnet-sos [-h|--help] [options] [command]]
 
 ## <a name="dotnet-sos-install"></a>dotnet-sos install
 
-.NET Core プロセスをデバッグするために、[SOS 拡張機能](../../framework/tools/sos-dll-sos-debugging-extension.md)をローカルにインストールします。 macOS および Linux では、lldb の起動時に拡張機能が自動的に読み込まれるように、.lldbinit ファイルが更新されます。 古いデバッグ ツール (バージョン 10.0.18317.1001 より前) を使用して Windows に SOS をインストールする場合は、WinDbg または cdb で `.load %USERPROFILE%\.dotnet\sos\sos.dll` を実行して、デバッガーで拡張機能を手動で読み込む必要があります。
+.NET Core プロセスをデバッグするために、[SOS 拡張機能](sos-debugging-extension.md)をローカルにインストールします。 macOS および Linux では、lldb の起動時に拡張機能が自動的に読み込まれるように、 *.lldbinit* ファイルが更新されます。 古いデバッグ ツール (バージョン 10.0.18317.1001 より前) を使用して Windows に SOS をインストールする場合は、WinDbg または cdb で `.load %USERPROFILE%\.dotnet\sos\sos.dll` を実行して、デバッガーで拡張機能を手動で読み込む必要があります。
 
-### <a name="synopsis"></a>構文
+### <a name="synopsis"></a>概要
 
 ```console
-dotnet-sos install
+dotnet-sos install [--architecture <arch>]
 ```
+
+### <a name="options"></a>オプション
+
+- **`--architecture <arch>`**
+
+  インストールする SOS バイナリのプロセッサ アーキテクチャを指定します。 既定では、`dotnet-sos` によってホスト コンピューターのアーキテクチャがインストールされます。 dotnet ホスト アーキテクチャとは異なるアーキテクチャに対して SOS をインストールするときにこのオプションを使用します。 たとえば、Arm64 ホストから Arm32 バイナリを実行している場合、`dotnet-sos install --architecture Arm` で SOS をインストールする必要があります。
+
+  次のアーキテクチャを利用できます。
+
+  - `Arm`
+  - `Arm64`
+  - `X86`
+  - `X64`
 
 ## <a name="dotnet-sos-uninstall"></a>dotnet-sos uninstall
 
-[SOS 拡張機能](../../framework/tools/sos-dll-sos-debugging-extension.md)をアンインストールします。Linux または macOS の場合は、lldb 構成から削除します。
+[SOS 拡張機能](sos-debugging-extension.md)をアンインストールします。Linux と macOS の場合、lldb 構成から削除します。
 
 ### <a name="synopsis"></a>構文
 

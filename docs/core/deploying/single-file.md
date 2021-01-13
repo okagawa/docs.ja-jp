@@ -3,13 +3,13 @@ title: 単一ファイル アプリケーション
 description: 単一ファイル アプリケーションの概要、およびこのアプリケーション デプロイ モデルの使用を検討すべき理由について説明します。
 author: lakshanf
 ms.author: lakshanf
-ms.date: 08/28/2020
-ms.openlocfilehash: 16e9586cfc29072fa2ca70dc482272a5a0e7306a
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.date: 12/17/2020
+ms.openlocfilehash: e2d2c9ed4c28d11a77e4f840602982a36cf1c80c
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050417"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678150"
 ---
 # <a name="single-file-deployment-and-executable"></a>単一ファイルの配置と実行可能ファイル
 
@@ -96,6 +96,39 @@ Windows と Mac では、Visual Studio と VS Code を使用してクラッシ�
 </PropertyGroup>
 ```
 
+## <a name="publish-a-single-file-app---sample-project-file"></a>単一のファイル アプリを発行する - サンプル プロジェクト ファイル
+
+単一ファイルの発行を指定するサンプル プロジェクト ファイルを次に示します。
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishTrimmed>true</PublishTrimmed>
+    <PublishReadyToRun>true</PublishReadyToRun>
+  </PropertyGroup>
+
+</Project>
+```
+
+これらのプロパティには、次の関数があります。
+
+* `PublishSingleFile` - 単一ファイルの発行を有効にします。
+* `SelfContained` - アプリが自己完結型またはフレームワーク依存であるかを判断します。
+* `RuntimeIdentifier` - ターゲットとする [OS と CPU の種類](../rid-catalog.md)を指定します。
+* `PublishTrimmed` - 自己完結型アプリでのみサポートされている[アセンブリのトリミング](trim-self-contained.md)の使用を有効にします。
+* `PublishReadyToRun` - [Ahead-Of-Time (AOT) コンパイル](ready-to-run.md)を有効にします。
+
+**注:**
+
+* アプリは OS とアーキテクチャに固有のものです。 Linux x64、Linux ARM64、Windows x64 など、構成ごとに発行する必要があります。
+* 構成ファイル ( *\*.runtimeconfig.json* など) は、単一ファイルに含まれています。 追加の構成ファイルが必要な場合は、その単一ファイルの横に配置することができます。
+
 ## <a name="publish-a-single-file-app---cli"></a>単一ファイル アプリを発行する - CLI
 
 [dotnet publish](../tools/dotnet-publish.md) コマンドを使用して、単一ファイル アプリケーションを発行します。 アプリを発行する場合、次のプロパティを設定します。
@@ -129,7 +162,7 @@ Visual Studio を使用すると、アプリケーションの発行方法を制
 
 01. **[編集]** を選択します。
 
-    :::image type="content" source="media/single-file/visual-studio-publish-edit-settings.png" alt-text="右クリック メニューの [発行] オプションが強調表示されたソリューション エクスプローラー。":::
+    :::image type="content" source="media/single-file/visual-studio-publish-edit-settings.png" alt-text="Visual Studio の発行プロファイルと [編集] ボタン":::
 
 01. **[プロファイル設定]** ダイアログで、次のオプションを設定します。
 
@@ -139,7 +172,7 @@ Visual Studio を使用すると、アプリケーションの発行方法を制
 
     **[保存]** を選択して設定を保存し、 **[発行]** ダイアログに戻ります。
 
-    :::image type="content" source="media/single-file/visual-studio-publish-single-file-properties.png" alt-text="右クリック メニューの [発行] オプションが強調表示されたソリューション エクスプローラー。":::
+    :::image type="content" source="media/single-file/visual-studio-publish-single-file-properties.png" alt-text="[配置モード]、[ターゲット ランタイム]、[単一ファイルの作成] の各オプションが強調表示されている [プロファイル設定] ダイアログ。":::
 
 01. **[発行]** を選択して、アプリを単一ファイルとして発行します。
 

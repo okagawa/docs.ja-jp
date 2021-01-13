@@ -2,12 +2,12 @@
 title: dotnet-symbol 診断ツール - .NET CLI
 description: dotnet-symbol CLI ツールをインストールして使用し、.NET ダンプとミニダンプのデバッグに必要なファイルをダウンロードする方法について学習します。
 ms.date: 11/17/2020
-ms.openlocfilehash: 8ea694e5331f1e4e75b3b3ad644428568e515331
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 69c05544e886d9d41113c8a2383f760b85d01124
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825339"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97764995"
 ---
 # <a name="symbol-downloader-dotnet-symbol"></a>シンボル ダウンローダー (dotnet-symbol)
 
@@ -15,7 +15,7 @@ ms.locfileid: "94825339"
 
 ## <a name="install"></a>インストール
 
-`dotnet-trace` [NuGet パッケージ](https://www.nuget.org/packages/dotnet-trace)の最新のリリース バージョンをインストールするには、次のように [dotnet tool install](../tools/dotnet-tool-install.md) コマンドを使用します。
+`dotnet-symbol` [NuGet パッケージ](https://www.nuget.org/packages/dotnet-symbol)の最新のリリース バージョンをインストールするには、次のように [dotnet tool install](../tools/dotnet-tool-install.md) コマンドを使用します。
 
 ```dotnetcli
 dotnet tool install --global dotnet-symbol
@@ -98,3 +98,8 @@ dotnet-symbol --host-only --debugging <dump file path>
 - シンボルのダウンロード中の 404 Not Found。
 
    シンボルのダウンロードは、[公式 Web サイト](https://dotnet.microsoft.com/download/dotnet-core)などの公式チャネルを通じて取得された公式の .NET Core ランタイム バージョンと、[dotnet インストール スクリプト内の既定のソース](../tools/dotnet-install-script.md)でのみサポートされています。 デバッグ ファイルのダウンロード中に 404 エラーが発生した場合は、ダンプが別のソースの .NET Core ランタイムを使って作成されたことが示されている可能性があります。たとえば、ソースからローカルに構築されたものや、特定の Linux ディストリビューション用のもの、または archlinux のようなコミュニティ サイトから作成されたものです。 このような場合は、デバッグに必要なファイル (dotnet、libcoreclr.so、libmscordaccore.so) を、それらのソースから、またはダンプ ファイルが作成された環境からコピーする必要があります。
+
+## <a name="see-also"></a>関連項目
+
+* [シンボルでデバッグする](/windows/win32/dxtecharts/debugging-with-symbols)
+* [ポータブル PDB](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md)

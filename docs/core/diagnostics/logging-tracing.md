@@ -2,12 +2,12 @@
 title: ログとトレース - .NET Core
 description: .NET Core のログとトレースの概要について説明します。
 ms.date: 10/12/2020
-ms.openlocfilehash: 86444f2451079e54050f6698f3e45ddff0700acf
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: fac8eeed63e8737ad42699d81b421747b207c69a
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820580"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753628"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core のログとトレース
 
@@ -36,11 +36,11 @@ ms.locfileid: "94820580"
   - 顧客がリリースで参照する必要のある情報の場合に便利です。
   - 最も簡単な方法であるため、アドホックな一時デバッグによく使用されます。 このデバッグ コードは、多くの場合、ソース管理にチェックインされません。
 - <xref:System.Diagnostics.Trace?displayProperty=nameWithType>
-  - `TRACE` が定義されている場合にのみ有効になります。
+  - ソースに `#define TRACE` を追加するか、コンパイル時、オプション `/d:TRACE` を指定することで `TRACE` が定義されたときにのみ有効です。
   - アタッチされている <xref:System.Diagnostics.Trace.Listeners> (既定では <xref:System.Diagnostics.DefaultTraceListener>) に書き込みます。
   - ほとんどのビルドで有効になるログを作成するときに、この API を使用します。
 - <xref:System.Diagnostics.Debug?displayProperty=nameWithType>
-  - `DEBUG` が定義されている場合にのみ有効になります。
+  - ソースに `#define DEBUG` を追加するか、コンパイル時、オプション `/d:DEBUG` を指定することで `DEBUG` が定義されたときにのみ有効です。
   - アタッチされたデバッガーに書き込みます。
   - `*nix` では、`COMPlus_DebugWriteToStdErr` が設定されている場合は stderr に書き込みます。
   - デバッグ ビルドでのみ有効になるログを作成するときに、この API を使用します。
@@ -95,6 +95,8 @@ ms.locfileid: "94820580"
 - [C# の文字列補間](../../csharp/language-reference/tokens/interpolated.md)を使用すると、ログ記録コードを簡単に記述できます。
 
 - [ランタイム プロバイダー イベント一覧](../../fundamentals/diagnostics/runtime-events.md)
+
+- [.NET の既知のイベント プロバイダー](well-known-event-providers.md)
 
 - <xref:System.Exception.Message?displayProperty=nameWithType> プロパティは、例外をログに記録する場合に便利です。
 

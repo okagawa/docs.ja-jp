@@ -2,13 +2,13 @@
 title: 'チュートリアル: .NET ローカル ツールをインストールして使用する'
 description: .NET ツールをローカル ツールとしてインストールして使用する方法について説明します。
 ms.topic: tutorial
-ms.date: 02/12/2020
-ms.openlocfilehash: 2cb25443706293b66325d43136afcd3fd886294d
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.date: 12/11/2020
+ms.openlocfilehash: f32a5c4091ff63c7c50cf339dddd89b78e543c4c
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633882"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512464"
 ---
 # <a name="tutorial-install-and-use-a-net-local-tool-using-the-net-cli"></a>チュートリアル: .NET CLI を使って .NET ローカル ツールをインストールして使用する
 
@@ -172,7 +172,7 @@ dotnet tool run botsay hello from the bot
 
 ## <a name="update-a-local-tool"></a>ローカル ツールを更新する
 
-インストールされているローカルツール `dotnetsay` のバージョンは 2.1.3 です。  最新バージョンは 2.1.4 です。 [dotnet tool update](dotnet-tool-update.md) コマンドを使用して、ツールを最新バージョンに更新します。
+インストールされているローカルツール `dotnetsay` のバージョンは 2.1.3 です。  [dotnet tool update](dotnet-tool-update.md) コマンドを使用して、ツールを最新バージョンに更新します。
 
 ```dotnetcli
 dotnet tool update dotnetsay
@@ -181,7 +181,7 @@ dotnet tool update dotnetsay
 出力には、新しいバージョン番号が示されます。
 
 ```console
-Tool 'dotnetsay' was successfully updated from version '2.1.3' to version '2.1.4'
+Tool 'dotnetsay' was successfully updated from version '2.1.3' to version '2.1.7'
 (manifest file /home/name/repository/.config/dotnet-tools.json).
 ```
 
@@ -205,4 +205,4 @@ dotnet tool uninstall dotnetsay
 
 ## <a name="see-also"></a>関連項目
 
-詳細については、[.NET Core ツール](global-tools.md)に関するページを参照してください。
+詳細については、[.NET ツール](global-tools.md)に関するページを参照してください。
