@@ -3,19 +3,19 @@ title: MSBuild によるマニフェスト ファイル名の生成方法
 description: MSBuild によってコンパイル時に生成されるリソース マニフェスト ファイル名の名前に影響する要因について説明します。
 ms.date: 05/08/2020
 ms.topic: conceptual
-ms.openlocfilehash: 383bf6a077b0631e70ddaa4721b20e992127a73c
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 2e0461e34bbd7f8da35bea1db1913a32915c7117
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "97866385"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970682"
 ---
 # <a name="how-resource-manifest-files-are-named"></a>リソース マニフェスト ファイルの名前付け方法
 
 MSBuild により .NET Core プロジェクトがコンパイルされると、 *.resx* ファイル拡張子を持つ XML リソース ファイルがバイナリ *.resources* ファイルに変換されます。 バイナリ ファイルは、コンパイラの出力に埋め込まれ、<xref:System.Resources.ResourceManager> で読み取ることができます。 この記事では、MSBuild によって各 *.resources* ファイルの名前がどのように選択されるかについて説明します。
 
 > [!TIP]
-> リソース項目をプロジェクト ファイルに明示的に追加するときに、それが [.NET Core の既定の include glob にも含まれる](../project-sdk/overview.md#default-compilation-includes)場合、ビルド エラーが発生します。 リソース ファイルを `EmbeddedResource` 項目として手動で含めるには、`EnableDefaultEmbeddedResourceItems` プロパティを false に設定します。
+> リソース項目をプロジェクト ファイルに明示的に追加するときに、それが [.NET Core の既定の include glob にも含まれる](../project-sdk/overview.md#default-includes-and-excludes)場合、ビルド エラーが発生します。 リソース ファイルを `EmbeddedResource` 項目として手動で含めるには、`EnableDefaultEmbeddedResourceItems` プロパティを false に設定します。
 
 ## <a name="default-name"></a>既定名
 
@@ -36,7 +36,7 @@ MSBuild により .NET Core プロジェクトがコンパイルされると、 
 <EmbeddedResource Include="X.resx" LogicalName="SomeName.resources" />
 ```
 
-または
+- または -
 
 ```xml
 <EmbeddedResource Include="X.fr-FR.resx" LogicalName="SomeName.resources" />
