@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 11/20/2020
-ms.openlocfilehash: d91430eb654ee16934408bf064803b34ca700640
-ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
+ms.openlocfilehash: ba7113c88db728f30812821deaf7c06a80663d1f
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96509807"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189090"
 ---
 # <a name="project-structure-for-no-locblazor-apps"></a>アプリのプロジェクト構造 Blazor
 
@@ -132,7 +132,7 @@ ASP.NET Web フォームアプリの構成は、通常、1つ以上の *web.conf
 @using BlazorApp1.Shared
 ```
 
-## <a name="pages"></a>ページ
+## <a name="pages"></a>Pages
 
 アプリ内のページはどこにあり Blazor ますか。 Blazor では、ASP.NET Web フォームアプリの *.aspx* ファイルのように、アドレス指定可能なページに対して個別のファイル拡張子は定義されません。 代わりに、ページはコンポーネントにルートを割り当てることによって定義されます。 ルートは通常、Razor ディレクティブを使用して割り当てられ `@page` ます。 たとえば、 `Counter` *Pages/Counter. razor* ファイルで作成されたコンポーネントは、次のルートを定義します。
 
@@ -146,7 +146,7 @@ ASP.NET Web フォームアプリの構成は、通常、1つ以上の *web.conf
 
 詳細につい Blazor ては、「 [ページ、ルーティング、およびレイアウト](./pages-routing-layouts.md) 」セクションの「ルーティング」を参照してください。
 
-## <a name="layout"></a>レイアウト
+## <a name="layout"></a>Layout
 
 ASP.NET Web フォームアプリでは、共通ページレイアウトはマスターページ (*.master*) を使用して処理されます。 Blazorアプリでは、ページレイアウトはレイアウトコンポーネント (*Shared/mainlayout. razor*) を使用して処理されます。 レイアウトコンポーネントの詳細につい [ては、「ページ、ルーティング、レイアウト](./pages-routing-layouts.md) 」セクションを参照してください。
 
@@ -223,7 +223,7 @@ Blazorサーバーアプリでは、ルートコンポーネントのホスト�
 
 ```
 
-レンダリングするルートコンポーネントは、アプリのメソッドで構成され、 `Program.Main` 依存関係の挿入によってさまざまなサービスを登録する柔軟性があります。「」で[ Blazor WebAssembly ](https://docs.microsoft.com/aspnet/core/blazor/fundamentals/dependency-injection?view=aspnetcore-5.0#blazor-webassembly)は、アプリにサービスを追加する方法を参照できます。
+レンダリングするルートコンポーネントは、アプリのメソッドで指定され、 `Program.Main` 依存関係の挿入によってサービスを登録する柔軟性があります。 詳細については、「 [ASP.NET Core Blazor 依存関係の挿入](/aspnet/core/blazor/fundamentals/dependency-injection?pivots=webassembly)」を参照してください。
 
 ```csharp
 public class Program

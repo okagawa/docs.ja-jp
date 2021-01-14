@@ -2,12 +2,12 @@
 title: .NET Core 3.1 への移行の例
 description: .NET Framework を対象とするサンプルアプリケーションを .NET Core 3.1 に移行する方法を示します。
 ms.date: 05/12/2020
-ms.openlocfilehash: 6a0311e9aaeb25ac39f3394d3a62e17046fe03d8
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: dc0d3d825847bd72a38469615cfc5b2d793f1977
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "97866656"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188778"
 ---
 # <a name="example-of-migrating-to-net-core-31"></a>.NET Core 3.1 への移行の例
 
@@ -65,7 +65,7 @@ ms.locfileid: "97866656"
 
 ほとんどの場合、既存のプロジェクトを新しい .NET Core 形式に更新する必要があります。 ただし、古いプロジェクトを維持しながら新しいプロジェクトを作成することもできます。 古いプロジェクトを更新することによる主な欠点は、デザイナーのサポートが失われることです。これは、お客様にとって重要な場合があります。 デザイナーを引き続き使用する場合は、新しい .NET Core プロジェクトを古いものと並行して作成し、アセットを共有する必要があります。 デザイナーで UI 要素を変更する必要がある場合は、古いプロジェクトに切り替えてそれを行うことができます。 また、資産はリンクされているため、.NET Core プロジェクトでも更新されます。
 
-.NET Core 用の [SDK スタイルのプロジェクト](../../core/project-sdk/msbuild-props.md) は、.NET Framework のプロジェクト形式よりもはるかに簡単です。 前述のエントリとは別 `PackageReference` に、さらに多くのことを行う必要はありません。 新しいプロジェクト形式には、ファイルやファイルなど、 [既定で](../../core/tools/csproj.md#default-compilation-includes-in-net-core-projects)特定のファイル拡張子が含まれていますが、 `.cs` `.xaml` プロジェクトファイルに明示的に含める必要はありません。
+.NET Core 用の [SDK スタイルのプロジェクト](../../core/project-sdk/msbuild-props.md) は、.NET Framework のプロジェクト形式よりもはるかに簡単です。 前に説明したエントリとは別 `PackageReference` に、それ以上の操作は必要ありません。 新しいプロジェクト形式には、ファイルやファイルなど、 [既定で特定の拡張子を持つファイルが含まれ](../../core/project-sdk/overview.md#default-includes-and-excludes)て `.cs` おり、それらを `.xaml` プロジェクトファイルに明示的に含める必要はありません。
 
 #### <a name="assemblyinfo-considerations"></a>Assembly.info に関する考慮事項
 
