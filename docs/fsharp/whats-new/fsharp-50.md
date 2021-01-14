@@ -2,12 +2,12 @@
 title: 'F # 5.0 の新機能-F # ガイド'
 description: 'F # 5.0 で利用可能な新機能の概要を説明します。'
 ms.date: 11/06/2020
-ms.openlocfilehash: 2384f1a75f5e708dc6f170d82fa15c5e0f54c85d
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 9b138e4801a3e599db650990acd53c0f956b78b8
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740186"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190729"
 ---
 # <a name="whats-new-in-f-50"></a>F# 5.0 の新機能
 
@@ -15,7 +15,7 @@ F # 5.0 では、F # 言語と F# インタラクティブにいくつかの機�
 
 最新の .NET SDK は [.NET のダウンロード ページ](https://dotnet.microsoft.com/download)でダウンロードできます。
 
-## <a name="get-started"></a>作業開始
+## <a name="get-started"></a>はじめに
 
 F # 5.0 は、すべての .NET Core ディストリビューションと Visual Studio ツールで使用できます。 詳細については、「 [F # の使用を開始](../get-started/index.md) する」を参照してください。
 
@@ -272,7 +272,7 @@ m.[*, 0, 1]
 
 ## <a name="f-quotations-improvements"></a>F # による引用符の機能強化
 
-F # の [コード引用符](../language-reference/code-quotations.md) で、型の制約情報を保持できるようになりました。 次の例を確認してください。
+F # の [コード引用符](../language-reference/code-quotations.md) で、型の制約情報を保持できるようになりました。 次に例を示します。
 
 ```fsharp
 open FSharp.Linq.RuntimeHelpers
@@ -407,7 +407,7 @@ printfn $"DIM from C# but via Object Expression: %d{md'.Z}"
 
 ## <a name="simplified-interop-with-nullable-value-types"></a>単純化と null 許容の値型との相互運用
 
-[Null 許容型 (値) 型](https://docs.microsoft.com/dotnet/api/system.nullable-1) (以前は Null 許容型と呼ばれます) は F # でサポートされていますが、通常 `Nullable` は、値を渡すたびにまたはラッパーを構築する必要があるため、これらの型を操作するのはかなり困難でした `Nullable<SomeType>` 。 これで、 `Nullable<ThatValueType>` ターゲットの型がと一致する場合、コンパイラは値型をに暗黙的に変換します。 現在、次のコードを使用できます。
+[Null 許容型 (値) 型](/dotnet/api/system.nullable-1) (以前は Null 許容型と呼ばれます) は F # でサポートされていますが、通常 `Nullable` は、値を渡すたびにまたはラッパーを構築する必要があるため、これらの型を操作するのはかなり困難でした `Nullable<SomeType>` 。 これで、 `Nullable<ThatValueType>` ターゲットの型がと一致する場合、コンパイラは値型をに暗黙的に変換します。 現在、次のコードを使用できます。
 
 ```fsharp
 #r "nuget: Microsoft.Data.Analysis"

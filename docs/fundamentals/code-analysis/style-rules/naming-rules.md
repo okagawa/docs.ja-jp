@@ -16,12 +16,12 @@ helpviewer_keywords:
 - naming code style rules [EditorConfig]
 - naming rules
 - EditorConfig naming conventions
-ms.openlocfilehash: 8ce209e64ee7f9f9028c221daedef8fc6a993ef7
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 0eea5e89ac5055a45d9ead14363cc2f2fc574401
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96594162"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98191080"
 ---
 # <a name="naming-rules"></a>名前付け規則
 
@@ -75,11 +75,11 @@ dotnet_naming_symbols.types.applicable_accessibilities = public, internal, priva
 
 ルールを有効にするには、すべての名前付けルールプロパティが必要です。
 
-| プロパティ | 説明 |
+| プロパティ | Description |
 | -- | -- |
 | `symbols` | シンボルグループのタイトル。このルールを適用するシンボルを定義します。 |
 | `style` | この規則に関連付ける必要がある名前付けスタイルのタイトル |
-| `severity` |  名前付け規則を適用するための重大度を設定します。 関連する値を、使用可能な [重大度レベル](https://docs.microsoft.com/dotnet/fundamentals/code-analysis/configuration-options#severity-level)のいずれかに設定します。<sup>1</sup> |
+| `severity` |  名前付け規則を適用するための重大度を設定します。 関連する値を、使用可能な [重大度レベル](../configuration-options.md#severity-level)のいずれかに設定します。<sup>1</sup> |
 
 **注:**
 
@@ -99,9 +99,9 @@ EditorConfig ファイルで名前付け規則を定義する順序は問題で�
 
 | プロパティ | 説明 | 使用できる値 | 必須 |
 | -- | -- | -- | -- |
-| `applicable_kinds` | グループ<sup>1</sup>のシンボルの種類 | `*`(この値を使用すると、すべてのシンボルが指定されます)<br/>`namespace`<br/>`class`<br/>`struct`<br/>`interface`<br/>`enum`<br/>`property`<br/>`method`<br/>`field`<br/>`event`<br/>`delegate`<br/>`parameter`<br/>`type_parameter`<br/>`local`<br/>`local_function` | はい |
-| `applicable_accessibilities` | グループ内のシンボルのアクセシビリティレベル | `*`(この値を使用すると、すべてのアクセシビリティ レベルが指定されます)<br/>`public`<br/>`internal` または `friend`<br/>`private`<br/>`protected`<br/>`protected_internal` または `protected_friend`<br/>`private_protected`<br/>`local` (メソッド内で定義されたシンボルの場合) | はい |
-| `required_modifiers` | 指定した _すべて_ の修飾子を持つシンボルのみ一致 <sup>2</sup> | `abstract` または `must_inherit`<br/>`async`<br/>`const`<br/>`readonly`<br/>`static` または `shared` <sup>3</sup> | いいえ |
+| `applicable_kinds` | グループ<sup>1</sup>のシンボルの種類 | `*`(この値を使用すると、すべてのシンボルが指定されます)<br/>`namespace`<br/>`class`<br/>`struct`<br/>`interface`<br/>`enum`<br/>`property`<br/>`method`<br/>`field`<br/>`event`<br/>`delegate`<br/>`parameter`<br/>`type_parameter`<br/>`local`<br/>`local_function` | Yes |
+| `applicable_accessibilities` | グループ内のシンボルのアクセシビリティレベル | `*`(この値を使用すると、すべてのアクセシビリティ レベルが指定されます)<br/>`public`<br/>`internal` または `friend`<br/>`private`<br/>`protected`<br/>`protected_internal` または `protected_friend`<br/>`private_protected`<br/>`local` (メソッド内で定義されたシンボルの場合) | Yes |
+| `required_modifiers` | 指定した _すべて_ の修飾子を持つシンボルのみ一致 <sup>2</sup> | `abstract` または `must_inherit`<br/>`async`<br/>`const`<br/>`readonly`<br/>`static` または `shared` <sup>3</sup> | No |
 
 **注:**
 
@@ -123,9 +123,9 @@ EditorConfig ファイルで名前付け規則を定義する順序は問題で�
 | プロパティ | 説明 | 使用できる値 | 必須 |
 | -- | -- | -- | -- |
 | `capitalization` | シンボル内の単語の大文字/小文字のスタイル | `pascal_case`<br/>`camel_case`<br/>`first_word_upper`<br/>`all_upper`<br/>`all_lower` | 可<sup>1</sup> |
-| `required_prefix` | 次の文字で始まる必要があります。 | | いいえ |
-| `required_suffix` | 次の文字で終わる必要があります。 | | いいえ |
-| `word_separator` | シンボル内の単語は、この文字で区切る必要があります。 | | いいえ |
+| `required_prefix` | 次の文字で始まる必要があります。 | | No |
+| `required_suffix` | 次の文字で終わる必要があります。 | | No |
+| `word_separator` | シンボル内の単語は、この文字で区切る必要があります。 | | No |
 
 **注:**
 
@@ -172,7 +172,7 @@ dotnet_diagnostic.IDE1006.severity = <severity value>
 
 重大度値は、 `warning` `error` [ビルドで適用](../overview.md#code-style-analysis)される必要があります。 可能なすべての重要度の値については、「 [重大度レベル](../configuration-options.md#severity-level)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 - [言語規則](language-rules.md)
 - [書式設定規則](formatting-rules.md)

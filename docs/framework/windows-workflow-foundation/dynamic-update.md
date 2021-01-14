@@ -2,16 +2,16 @@
 title: 動的な更新
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: 2553e6a29f498a9b53752d6c191df21a391dee34
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: cb4b63a67aa6e9033b227198e2ecc2b1b80db927
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378277"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190157"
 ---
 # <a name="dynamic-update"></a>動的な更新
 
-動的更新は、ワークフロー アプリケーションの開発者が永続化されたワークフロー インスタンスのワークフロー定義を更新するためのメカニズムを提供します。 これには、バグ修正の実装、新しい要件の実装、または予期しない変更への対応があります。 このトピックでは、.NET Framework 4.5 で導入された、動的な更新機能の概要を示します。
+動的更新は、ワークフロー アプリケーションの開発者が永続化されたワークフロー インスタンスのワークフロー定義を更新するためのメカニズムを提供します。 これには、バグ修正の実装、新しい要件の実装、または予期しない変更への対応があります。 このトピックでは、.NET Framework 4.5 で導入された動的更新機能の概要について説明します。
 
 ## <a name="dynamic-update"></a>動的な更新
 
@@ -26,18 +26,18 @@ ms.locfileid: "66378277"
 4. [目的の永続化されたワークフロー インスタンスに更新マップを適用します。](dynamic-update.md#Apply)
 
 > [!NOTE]
-> 更新マップの作成に対応する手順 1. ～ 3. は、更新の適用とは関係なく実行できます。 マップをオフラインで、ワークフロー開発者が、更新プログラムを作成する一般的なシナリオと、管理者が後で更新プログラムを適用します。
+> 更新マップの作成に対応する手順 1. ～ 3. は、更新の適用とは関係なく実行できます。 ワークフロー開発者が更新マップをオフラインで作成する一般的なシナリオでは、管理者が後で更新プログラムを適用します。
 
 このトピックでは、コンパイルされた XAML ワークフローの永続インスタンスに新しいアクティビティを追加するという動的更新プロセスの概要について説明します。
 
-### <a name="Prepare"></a> 動的更新用のワークフロー定義を準備します。
+### <a name="prepare-the-workflow-definition-for-dynamic-update"></a><a name="Prepare"></a> 動的更新のワークフロー定義を準備する
 
 動的更新プロセスでは、最初に、更新に必要なワークフロー定義を準備します。 これを行うには、<xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> メソッドを呼び出し、変更するワークフロー定義を渡します。 このメソッドは、ワークフロー ツリーを検証して、変更後のワークフロー定義と後で比較できるようにタグ付けを必要とする、パブリック アクティビティやパブリック変数などのすべてのオブジェクトを特定します。 この処理が完了すると、ワークフロー ツリーは複製され、元のワークフロー定義にアタッチされます。 更新マップを作成すると、ワークフロー定義の更新後のバージョンが元のワークフロー定義と比較され、その相違点に基づいて更新マップが生成されます。
 
 動的更新用に XAML ワークフローを準備するために、XAML ワークフローが <xref:System.Activities.ActivityBuilder> に読み込まれた後、<xref:System.Activities.ActivityBuilder> が <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> に渡される場合があります。
 
 > [!NOTE]
-> シリアル化されたワークフローの操作の詳細については、<xref:System.Activities.ActivityBuilder>を参照してください[ワークフローのシリアル化と XAML との間のアクティビティ](serializing-workflows-and-activities-to-and-from-xaml.md)します。
+> シリアル化されたワークフローの操作の詳細について <xref:System.Activities.ActivityBuilder> は、「 [XAML との間でのワークフローとアクティビティのシリアル](serializing-workflows-and-activities-to-and-from-xaml.md)化」を参照してください。
 
 次の例では、(複数の子アクティビティを持つ `MortgageWorkflow` で構成される) <xref:System.Activities.Statements.Sequence> の定義が <xref:System.Activities.ActivityBuilder> に読み込まれ、動的更新用に準備されます。 メソッドから制御が戻ると、<xref:System.Activities.ActivityBuilder> には元のワークフロー定義とコピーが格納されます。
 
@@ -59,10 +59,7 @@ ActivityBuilder ab = XamlServices.Load(
 DynamicUpdateServices.PrepareForUpdate(ab);
 ```
 
-> [!NOTE]
-> このトピックに付属するサンプル コードをダウンロードするには、次を参照してください。[動的更新のサンプル コード](https://go.microsoft.com/fwlink/?LinkId=227905)します。
-
-### <a name="Update"></a> 必要な変更を反映するようにワークフロー定義を更新します。
+### <a name="update-the-workflow-definition-to-reflect-the-desired-changes"></a><a name="Update"></a> 必要な変更を反映するようにワークフロー定義を更新する
 
 ワークフロー定義を更新するための準備が完了したら、必要な変更を加えることができます。 アクティビティの追加または削除、パブリック変数の追加、移動、または削除、引数の追加または削除、およびアクティビティ デリゲートのシグネチャの変更を実行できます。 実行中のアクティビティを削除したり、実行中のデリゲートのシグネチャを変更したりすることはできません。 これらの変更は、コードを使用して行うか、再ホストされたワークフロー デザイナーで行うことができます。 次の例では、カスタムの `VerifyAppraisal` アクティビティが、前の例の `MortgageWorkflow` の本体を構成する Sequence に追加されます。
 
@@ -81,7 +78,7 @@ Sequence s = ab.Implementation as Sequence;
 s.Activities.Insert(2, va);
 ```
 
-### <a name="Create"></a> 更新マップを作成します。
+### <a name="create-the-update-map"></a><a name="Create"></a> 更新マップを作成する
 
 更新用に準備されたワークフロー定義を変更すると、更新マップを作成できます。 動的更新マップを作成するには、<xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> メソッドを呼び出します。 これにより、永続化されたワークフロー インスタンスを新しいワークフロー定義で読み込んで再開できるように変更するためにランタイムに必要な情報を含む <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> が返されます。 次の例では、前の例で変更した `MortgageWorkflow` 定義に対して動的マップが作成されます。
 
@@ -111,7 +108,7 @@ XamlServices.Save(xw, ab);
 sw.Close();
 ```
 
-### <a name="Apply"></a> 目的の永続化されたワークフロー インスタンスに更新マップを適用します。
+### <a name="apply-the-update-map-to-the-desired-persisted-workflow-instances"></a><a name="Apply"></a> 目的の永続化されたワークフローインスタンスに更新マップを適用する
 
 更新マップは作成後にいつでも適用できます。 これは、<xref:System.Activities.DynamicUpdate.DynamicUpdateMap> によって返された <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> インスタンスを使用してすぐに実行することも、更新マップの保存したコピーを使用して後で実行することもできます。 ワークフロー インスタンスを更新するには、<xref:System.Activities.WorkflowApplicationInstance> を使用して、そのワークフロー インスタンスを <xref:System.Activities.WorkflowApplication.GetInstance%2A?displayProperty=nameWithType> に読み込みます。 次に、更新されたワークフロー定義と必要な <xref:System.Activities.WorkflowApplication> を使用して、<xref:System.Activities.WorkflowIdentity> を作成します。 この <xref:System.Activities.WorkflowIdentity> は、元のワークフローの永続化に使用されたものとは異なる場合があるため、通常は、永続化されたインスタンスが変更されていることを示すために使用されます。 <xref:System.Activities.WorkflowApplication> は、作成されると、<xref:System.Activities.WorkflowApplication.Load%2A?displayProperty=nameWithType> を取得する <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> のオーバーロードを使用して読み込まれ、<xref:System.Activities.WorkflowApplication.Unload%2A?displayProperty=nameWithType> の呼び出しを使用してアンロードされます。 これにより、動的更新が適用され、更新されたワークフロー インスタンスが永続化されます。
 
@@ -171,7 +168,7 @@ foreach (Guid id in ids)
 動的更新が適用されると、ワークフロー インスタンスが再開される場合があります。 更新された新しい定義と <xref:System.Activities.WorkflowIdentity> を使用する必要があります。
 
 > [!NOTE]
-> 操作の詳細については<xref:System.Activities.WorkflowApplication>と<xref:System.Activities.WorkflowIdentity>を参照してください[を使用して WorkflowIdentity と Versioning](using-workflowidentity-and-versioning.md)します。
+> との使用の詳細について <xref:System.Activities.WorkflowApplication> <xref:System.Activities.WorkflowIdentity> は、「 [WorkflowIdentity とバージョン管理の使用](using-workflowidentity-and-versioning.md)」を参照してください。
 
 次の例では、前の例の `MortgageWorkflow_v1.1.xaml` ワークフローがコンパイルされ、更新されたワークフロー定義を使用して読み込まれ、再開されます。
 
@@ -196,6 +193,3 @@ wfApp.Load(InstanceId);
 // Resume the workflow.
 // wfApp.ResumeBookmark(...);
 ```
-
-> [!NOTE]
-> このトピックに付属するサンプル コードをダウンロードするには、次を参照してください。[動的更新のサンプル コード](https://go.microsoft.com/fwlink/?LinkId=227905)します。

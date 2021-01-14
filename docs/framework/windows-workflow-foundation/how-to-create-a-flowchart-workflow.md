@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: f8e0703591629a72e0a8f6eeb05dd9d19c8c4c91
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: eb30a3a21ffc4cffe64d2f5d0bc741728f1ea87d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275828"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190482"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>方法: フローチャート ワークフローを作成する
 
@@ -19,9 +19,6 @@ ms.locfileid: "96275828"
   
 > [!NOTE]
 > チュートリアル入門の各トピックは、前のトピックに応じて異なります。 このトピックを完了するには、まず「 [方法: アクティビティを作成](how-to-create-an-activity.md)する」を完了する必要があります。  
-  
-> [!NOTE]
-> チュートリアルの完成版をダウンロードするには、「 [Windows Workflow Foundation (WF45) - Getting Started Tutorial (Windows Workflow Foundation (WF45) - チュートリアル入門)](https://go.microsoft.com/fwlink/?LinkID=248976)」を参照してください。  
   
 ### <a name="to-create-the-workflow"></a>ワークフローを作成するには  
   
@@ -41,7 +38,7 @@ ms.locfileid: "96275828"
   
 3. [**Create Argument**] (引数の作成) をクリックします。  
   
-4. [名前] ボックスに「」と入力し、[ `MaxNumber` **方向**] ドロップダウンリストから [ **In** ] を選択します。次に、[**引数の型**] ドロップダウンリストから [ **Int32** ] を選択し、enter キーを押して引数を保存します。 **Name**  
+4. [名前] ボックスに「」と入力し、[ `MaxNumber` **方向**] ドロップダウンリストから [ **In** ] を選択します。次に、[**引数の型**] ドロップダウンリストから [ **Int32** ] を選択し、enter キーを押して引数を保存します。   
   
 5. [**Create Argument**] (引数の作成) をクリックします。  
   
@@ -101,7 +98,7 @@ ms.locfileid: "96275828"
   
 5. [**ツールボックス**] の [**プリミティブ**] セクションから **Assign** アクティビティをドラッグして、前の手順で説明したメソッドのいずれかを使用して接続し、 **Prompt** アクティビティの下に表示されるようにします。  
   
-6. [ `Turns` **To** ] ボックスに「」と入力し、[C# の式を入力するか、VB の式を入力してください `Turns + 1` ] ボックスに入力します **Enter a C# expression** 。 **Enter a VB expression**  
+6. [ `Turns` **To** ] ボックスに「」と入力し、[C# の式を入力するか、VB の式を入力してください `Turns + 1` ] ボックスに入力します 。   
   
 7. **ツールボックス** の [**フローチャート**] セクションから **Flowdecision** をドラッグし、 **Assign** アクティビティの下に接続します。 [ **プロパティ] ウィンドウ** で、[ **条件** ] プロパティ値ボックスに次の式を入力します。  
   
@@ -152,7 +149,7 @@ ms.locfileid: "96275828"
   
      ワークフローを実行する方法については、次のトピック「 [方法: ワークフローを実行](how-to-run-a-workflow.md)する」を参照してください。 [「方法:](how-to-run-a-workflow.md)別のスタイルのワークフローを使用してワークフローステップを実行する」を既に完了している場合、この手順のフローチャートワークフローを使用して実行するには、「[方法: ワークフローを実行](how-to-run-a-workflow.md)する」の「[アプリケーションをビルドして実行するに](how-to-run-a-workflow.md#BKMK_ToRunTheApplication)は」に進んでください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>

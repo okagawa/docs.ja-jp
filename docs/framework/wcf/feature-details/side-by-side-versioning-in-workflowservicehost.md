@@ -5,19 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
-ms.openlocfilehash: 878e610bd1fe0b7e2496f251333a3ad21909788a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1505582e5ac7303a2df20539fdcf67435746b9d3
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96245095"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190495"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>WorkflowServiceHost による side-by-side でのバージョン管理
 
 <xref:System.ServiceModel.Activities.WorkflowServiceHost>.NET Framework 4.5 で導入されたサイドバイサイドバージョン管理には、1つのエンドポイントでワークフローサービスの複数のバージョンをホストする機能が用意されています。 提供される side-by-side 機能により、既存の定義を使用してインスタンスを実行しているときに、新しいワークフロー定義を使用してワークフロー サービスの新しいインスタンスが作成されるように、ワークフロー サービスを構成できます。 このトピックでは、<xref:System.ServiceModel.Activities.WorkflowServiceHost> を使用したワークフロー サービスの side-by-side での実行の概要を提供します。  
-  
-> [!NOTE]
-> サンプルをダウンロードして、ワークフローサービスのサイドバイサイドバージョン管理のチュートリアルビデオを見るには、「 [Web-Hosted .Xamlx ワークフローサービスを使用したサイドバイサイドバージョン管理](https://go.microsoft.com/fwlink/?LinkId=393746)」を参照してください。  
   
 ## <a name="hosting-multiple-versions-in-a-workflow-service"></a>ワークフロー サービスでの複数のバージョンのホスティング  
 

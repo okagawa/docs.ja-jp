@@ -5,19 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: 5f00997b059d7ea6f6ac6fb6d7bd83e4515ac02a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6fc8584b979c606a32e70e971be30a4bed89bdc2
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275802"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190508"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>方法: カスタム追跡参加要素を作成する
 
 ワークフロー追跡により、ワークフロー実行の状態が視覚的に示されます。 ワークフロー ランタイムによって、ワークフローのライフサイクル イベント、アクティビティのライフサイクル イベント、ブックマークの再開、およびエラーについて説明する追跡レコードが出力されます。 これらの追跡レコードは、追跡参加要素によって使用されます。 Windows Workflow Foundation (WF) には、追跡レコードを Windows イベントトレーシング (ETW) イベントとして書き込む標準の追跡参加要素が含まれています。 これで要件が満たされない場合は、カスタムの追跡参加要素を作成することもできます。 チュートリアルのこの手順では、`WriteLine` アクティビティの出力をキャプチャするカスタム追跡参加要素と追跡プロファイルを作成して、ユーザーに表示できるようにする方法について説明します。  
-  
-> [!NOTE]
-> チュートリアル入門の各トピックは、前のトピックに応じて異なります。 このトピックを完了する前に、これまでのトピックを完了する必要があります。 チュートリアルの完成したバージョンをダウンロードしたり、ビデオチュートリアルを表示したりするには、「 [Windows Workflow Foundation (WF45)-はじめにチュートリアル](https://go.microsoft.com/fwlink/?LinkID=248976)」を参照してください。  
   
 ## <a name="to-create-the-custom-tracking-participant"></a>カスタム追跡参加要素を作成するには  
   
