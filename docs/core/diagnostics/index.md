@@ -3,12 +3,12 @@ title: 診断ツールの概要 - .NET Core
 description: .NET Core アプリケーションの診断に使用できるツールと手法の概要。
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: d468ec5b9cc050cc54f6c53f8a4ea4531f8b58f5
-ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
+ms.openlocfilehash: ee79057e45700e17fdd37cc36288b790d64d7a09
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753615"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188479"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core で使用できる診断ツール
 
@@ -68,7 +68,7 @@ ms.locfileid: "97753615"
 
 ### <a name="dotnet-sos"></a>dotnet-sos
 
-[dotnet-sos](dotnet-sos.md) によって、Linux と macOS に [SOS デバッグ拡張機能](sos-debugging-extension.md) がインストールされます ([Windbg/cdb](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-tools) を使用している場合は Windows でも)。
+[dotnet-sos](dotnet-sos.md) によって、Linux と macOS に [SOS デバッグ拡張機能](sos-debugging-extension.md) がインストールされます ([Windbg/cdb](/windows-hardware/drivers/debugger/debugger-download-tools) を使用している場合は Windows でも)。
 
 ### <a name="perfcollect"></a>PerfCollect
 

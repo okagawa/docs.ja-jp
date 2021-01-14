@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: c347dbc6af46d4c334445d606d7cedfdf17e43f6
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 6a1a5b230e427a4991162a702245f1a87352784d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098711"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190248"
 ---
 # <a name="types-c-programming-guide"></a>型 (C# プログラミング ガイド)
 
@@ -74,8 +74,6 @@ C# には、整数、浮動小数点値、ブール式、テキスト文字、10
 - CTS の各型は、"*値型*" または "*参照型*" として定義されます。 この型には、.NET クラス ライブラリのすべてのカスタムの型だけでなく、ユーザーが独自に定義した型も含まれます。 [struct](../../language-reference/builtin-types/struct.md) キーワードを使用して定義した型は値型であり、すべての組み込み数値型は `structs` です。 [class](../../language-reference/keywords/class.md) キーワードを使用して定義した型は、参照型です。 参照型と値型では、コンパイル時の規則や実行時の動作が異なります。
 
 次の図は、CTS における値型と参照型の関係を示しています。
-
-次の画像は、CTS の値の型と参照型を示しています。
 
 ![CTS の値の型と参照型を示すスクリーンショット。](./media/index/value-reference-types-common-type-system.png)
 

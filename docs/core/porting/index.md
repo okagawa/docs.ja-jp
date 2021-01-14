@@ -3,12 +3,12 @@ title: .NET Framework から .NET Core への移植
 description: 移植プロセスを理解し、.NET Framework プロジェクトを .NET Core に移植する際に役立つツールを確認します。
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: 764c615d250474573f873b1745b9f1469e637d29
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 247e709ac6898a6a89318626e3aa9a2a8e239a9a
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687413"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189936"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>.NET Framework から .NET Core への移植の概要
 
@@ -53,7 +53,7 @@ ms.locfileid: "94687413"
 
 1. ご自分のプロジェクト ファイルのファイル構造を新しい SDK 形式のものに変換します。 .NET Core 用の新しいプロジェクトを作成してソース ファイルをコピーするか、ツールを使ってお使いの既存のプロジェクト ファイルを変換することができます。
 
-   .NET Core では、.NET Framework よりも簡素化された (異なる) [プロジェクト ファイル形式](../tools/csproj.md)が使用されます。 続行するには、プロジェクト ファイルをこの形式に変換する必要があります。 このプロジェクト形式では、この時点では、まだターゲットとしたい .NET Framework もターゲットにすることができます。
+   .NET Core では、.NET Framework よりも簡素化された (異なる) [プロジェクト ファイル形式](../project-sdk/overview.md)が使用されます。 続行するには、プロジェクト ファイルをこの形式に変換する必要があります。 このプロジェクト形式では、この時点では、まだターゲットとしたい .NET Framework もターゲットにすることができます。
 
    [dotnet try-convert](https://github.com/dotnet/try-convert) ツールを使用すると、より小規模なソリューションや個々のプロジェクトを、1 回の操作で .NET Core プロジェクトのファイル形式に移植することが可能です。 `dotnet try-convert` がすべてのプロジェクトに対して動作する保証はありません。また、これが原因となって、依存していた動作に微妙な変更が生じる可能性があります。 これは、自動化できる基本的なことを自動化するための "_開始点_" としてお使いください。 SDK 形式のプロジェクトで使用されるターゲットと旧形式のプロジェクト ファイルで使用されるものとの間には違いが多数あるため、このソリューションではプロジェクトの移行は保証されません。
 
