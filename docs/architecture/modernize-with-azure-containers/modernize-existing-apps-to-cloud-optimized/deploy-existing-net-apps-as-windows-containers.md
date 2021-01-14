@@ -1,13 +1,13 @@
 ---
 title: Windows コンテナーとして既存の .NET アプリを展開する
 description: Azure Cloud と Windows コンテナーで既存の .NET アプリケーションを最新化する | 既存の .NET アプリを Windows コンテナーとして展開する
-ms.date: 04/29/2018
-ms.openlocfilehash: 15e99e2ec0edd072a3d47d5c212ebbbf6705ecef
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.date: 12/21/2020
+ms.openlocfilehash: f3f164ca0578d5358f2c5365fd5a1d2e8e22d8c5
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738424"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025351"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Windows コンテナーとして既存の .NET アプリを展開する
 
@@ -65,11 +65,11 @@ Docker コンテナー (簡単にする場合は、"*コンテナー*") は、Li
 
 Windows コンテナーを使用することの利点は、一般にコンテナーから得られる利点と基本的に同じです。 Windows コンテナーを使用すれば、機敏性、移植性、および制御が大幅に向上します。
 
-既存の .NET アプリケーションは、.NET Framework を使用して作成されたアプリケーションを参照します。 たとえば、それらが、従来の ASP.NET Web アプリケーションである場合、より新しく、Linux、Windows、および MacOS に対してクロスプラットフォームで実行される .NET Core は使用されません。
+既存の .NET アプリケーションは、.NET Framework を使用して作成されたアプリケーションを参照します。 たとえば、それらが従来の ASP.NET Web アプリケーションである場合、より新しく、Linux、Windows、および MacOS に対してクロスプラットフォームで実行される .NET Core や .NET 5.0 は使用されません。
 
 .NET Framework 内の主な依存関係は Windows です。 また、IIS や、従来の ASP.NET の System.Web などの、セカンダリの依存関係もあります。
 
-.NET Framework アプリケーションは、Windows 上で実行する必要があります。 既存の .NET Framework アプリケーションをコンテナー化したいが、.NET Core への移行には投資できない、または投資したくない場合 ("正常に動作している場合は移行しないでください")、コンテナーに対して取り得る選択肢は Windows コンテナーを使用することだけです。
+.NET Framework アプリケーションは、Windows 上で実行する必要があります。 既存の .NET Framework アプリケーションをコンテナー化したいが、.NET Core 以上への移行には投資できない、あるいはしたくない場合 ("正常に動作している場合は移行しないでください")、コンテナーに対する唯一の選択肢は Windows コンテナーを使用することです。
 
 したがって、Windows コンテナーの主な利点の 1 つは、Windows 上で実行されている既存の .NET Framework アプリケーションをコンテナー化を使用して最新化する方法を得られるということです。 最終的に、Windows コンテナーでは、コンテナーを使用することで、期待している利点 (機敏性、移植性、およびより優れた制御) が得られます。
 
@@ -77,7 +77,7 @@ Windows コンテナーを使用することの利点は、一般にコンテナ
 
 Docker でサポートされているオペレーティング システムの多様性に加えて、.NET Framework と .NET Core の違いを考慮し、使用しているフレームワークに基づいて特定の OS と特定のバージョンをターゲットにする必要があります。
 
-Windows の場合、Windows Server Core または Windows Nano Server を使用できます。 これらの Windows バージョンは、.NET Framework または .NET Core アプリケーションで必要とされる可能性があるさまざまな特性を備えています (IIS と、Kestrel のような自己ホスト型 Web サーバーのように)。
+Windows の場合、Windows Server Core または Windows Nano Server を使用できます。 これらの Windows バージョンは、.NET Framework または .NET アプリケーションで必要とされる可能性があるさまざまな特性を備えています (IIS と、Kestrel のような自己ホスト型 Web サーバーのように)。
 
 Linux の場合、複数のディストリビューションを利用できます。また、Linux は公式の .NET Docker イメージ (Debian など) でサポートされています。
 
@@ -93,19 +93,19 @@ Linux の場合、複数のディストリビューションを利用できま�
 
 > | **Tag** | **システムとバージョン** |
 > |---|---|
-> | **microsoft/dotnet-framework:4.x-windowsservercore** | Windows Server Core での .NET Framework 4.x |
-> | **microsoft/aspnet:4.x-windowsservercore** | Windows Server Core 上での、追加の ASP.NET カスタマイズを含む .NET Framework 4.x |
+> | **mcr.microsoft.com/dotnet/framework/runtime:4.x-windowsservercore-20H2** | Windows Server Core での .NET Framework 4.x |
+> | **mcr.microsoft.com/dotnet/framework/aspnet:4.x-windowsservercore-20H2** | Windows Server Core 上での、追加の ASP.NET カスタマイズを含む .NET Framework 4.x |
 
-.NET Core (Linux と Windows のクロスプラットフォーム) の場合、タグは次のようになります。
+.NET (Linux と Windows のクロスプラットフォーム) の場合、タグは次のようになります。
 
 > | **Tag** | **システムとバージョン**
 > |---|---|
-> | **microsoft/dotnet:2.0.0-runtime** | Linux 上の .NET Core 2.0 ランタイムのみ |
-> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | Windows Nano Server 上の .NET Core 2.0 ランタイムのみ |
+> | **mcr.microsoft.com/dotnet/runtime:5.0** | Linux 上の .NET ランタイムのみ |
+> | **mcr.microsoft.com/dotnet/runtime:5.0-nanoserver-20H2** | Windows Nano Server 上の .NET ランタイムのみ |
 
 ### <a name="multi-arch-images"></a>マルチアーキテクチャ イメージ
 
-また、2017 年半ばから、[マルチアーキテクチャ](https://github.com/moby/moby/issues/15866) イメージと呼ばれる Docker の新機能を使用できるようになりました。 .NET Core Docker イメージでは、マルチアーキテクチャ タグを使用できます。 ご利用の Dockerfile ファイルでは、ターゲットとするオペレーティング システムを定義する必要がなくなりました。 マルチアーキテクチャ機能では、1 つのタグを、複数のコンピューター構成にわたって使用できます。 たとえば、マルチアーキテクチャでは、次に示す 1 つの一般的なタグを使用できます: **microsoft/dotnet:2.0.0-runtime**。 Linux コンテナー環境からそのタグをプルすると、Debian ベースのイメージが得られます。 Windows コンテナー環境からそのタグをプルすると、Nano Server ベースのイメージが得られます。
+また、2017 年半ばから、[マルチアーキテクチャ](https://github.com/moby/moby/issues/15866) イメージと呼ばれる Docker の新機能を使用できるようになりました。 .NET Docker イメージにはマルチアーキテクチャ タグを使用できます。 ご利用の Dockerfile ファイルでは、ターゲットとするオペレーティング システムを定義する必要がなくなりました。 マルチアーキテクチャ機能では、1 つのタグを、複数のコンピューター構成にわたって使用できます。 たとえば、マルチアーキテクチャでは、**mcr.microsoft.com/dotnet/runtime:5.0** という 1 つの一般的なタグを使用できます。 Linux コンテナー環境からそのタグをプルすると、Debian ベースのイメージが得られます。 Windows コンテナー環境からそのタグをプルすると、Nano Server ベースのイメージが得られます。
 
 .NET Framework イメージの場合、従来の .NET Framework では Windows しかサポートされていないため、マルチアーキテクチャ機能は使用できません。
 

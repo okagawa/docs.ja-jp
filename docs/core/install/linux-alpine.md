@@ -3,13 +3,13 @@ title: Alpine に .NET をインストールする - .NET
 description: Alpine に .NET SDK と .NET ランタイムをインストールするさまざまな方法を示します。
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: 29901cc24ddd4bbe8200a36765ddd29f501394c0
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.date: 01/06/2021
+ms.openlocfilehash: 6adaa905c400b45526ebbc3d8e2606522863eec3
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506813"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970851"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-alpine"></a>Alpine に .NET SDK または .NET ランタイムをインストールする
 
@@ -17,7 +17,13 @@ ms.locfileid: "94506813"
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
-Alpine には、インストーラーはありません。 [インストール スクリプト](#scripted-install)を使用するか、[手動でのインストール](#manual-install)手順に従う必要があります。
+## <a name="install"></a>[インストール]
+
+Alpine Linux 用に使用できるインストーラーはありません。 次のいずれかの方法で .NET をインストールする必要があります。
+
+- [Snap パッケージ](linux-snap.md)
+- [_install-dotnet.sh_ でスクリプト化されたインストール](linux-scripted-manual.md#scripted-install)
+- [手動によるバイナリ抽出](linux-scripted-manual.md#manual-install)
 
 ## <a name="supported-distributions"></a>サポートされているディストリビューション
 
@@ -54,14 +60,7 @@ Alpine Linux 上の .NET には、次の依存関係がインストールされ�
 - libstdc++
 - zlib
 
-## <a name="scripted-install"></a>スクリプトでのインストール
+## <a name="next-steps"></a>次のステップ
 
-[!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
-
-## <a name="manual-install"></a>手動インストール
-
-[!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
-
-## <a name="next-steps"></a>次の手順
-
+- [.NET CLI のタブ補完を有効にする方法](../tools/enable-tab-autocomplete.md)
 - [チュートリアル: Visual Studio Code を使用して .NET SDK でコンソール アプリケーションを作成する](../tutorials/with-visual-studio-code.md)

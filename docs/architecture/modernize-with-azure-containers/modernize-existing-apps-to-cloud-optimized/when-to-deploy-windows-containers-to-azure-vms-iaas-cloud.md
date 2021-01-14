@@ -1,13 +1,13 @@
 ---
 title: Azure Vm (IaaS クラウド) に Windows コンテナーを展開するタイミング
 description: Azure Cloud と Windows コンテナーで既存の .NET アプリケーションを最新化する | Azure VM (IaaS クラウド) に Windows コンテナーをデプロイするタイミング
-ms.date: 04/28/2018
-ms.openlocfilehash: e9a2903662306b607977a7751018e24161ab80ab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 12/21/2020
+ms.openlocfilehash: 64ba53fa56227266ee0e61a128d18373a2dbbc93
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69577905"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025095"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-vms-iaas-cloud"></a>Azure Vm (IaaS クラウド) に Windows コンテナーを展開するタイミング
 
@@ -15,7 +15,7 @@ ms.locfileid: "69577905"
 
 - **Dev/test 環境**:クラウド内の VM は、クラウドでの開発とテストに最適です。 ニーズに合わせて環境を短時間で構築したり、停止したりできます。
 
-- **小規模/中規模のスケーラビリティ ニーズ**:運用環境に必要な VM が 2 つか 3 つのシナリオでは、オーケストレーターなど、さらに高度な PaaS 環境に移行できるまで少数の VM を管理すれば安上がりになります。
+- **小規模/中規模のスケーラビリティ ニーズ**:運用環境に必要な VM が 2 つか 3 つのシナリオでは、オーケストレーターなどのさらに高度な PaaS 環境に移行できるまで、少数の VM を管理すれば安上がりになります。
 
 - **既存のデプロイ ツールを使用した運用環境**:VM またはベアメタル サーバー (Puppet や同様のツールなど) に複雑なデプロイを行う目的で、ツールに投資しているオンプレミス環境から移行することがあります。 運用環境のデプロイ プロシージャの変更を最小限に留めてクラウドに移行するために、そのツールを引き続き使用し、Azure VM にデプロイするかもしれません。 しかしながら、開発単位として Windows コンテナーを使用すれば、より良いデプロイが可能になります。
 

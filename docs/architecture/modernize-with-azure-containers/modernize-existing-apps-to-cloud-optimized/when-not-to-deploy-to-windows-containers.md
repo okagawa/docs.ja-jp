@@ -1,13 +1,13 @@
 ---
 title: Windows コンテナーを展開しない状況
 description: Azure Cloud と Windows コンテナーで既存の .NET アプリケーションを最新化する | Windows コンテナーをデプロイしない状況
-ms.date: 04/28/2018
-ms.openlocfilehash: 65e793b846b495e9a1be6db9ddfa38bbf0d49445
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 12/21/2020
+ms.openlocfilehash: 4eea24ab8deb3719c778b45b3ddc1309277a3f50
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69577955"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025174"
 ---
 # <a name="when-not-to-deploy-to-windows-containers"></a>Windows コンテナーを展開しない状況
 

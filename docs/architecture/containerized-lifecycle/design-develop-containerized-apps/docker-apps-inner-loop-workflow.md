@@ -1,13 +1,13 @@
 ---
 title: Docker アプリの内部ループ開発ワークフロー
 description: Docker アプリケーションの "内部ループ" 開発ワークフローについて説明します。
-ms.date: 08/06/2020
-ms.openlocfilehash: d66274a64591f79f242c1e8a63951b51d94a9ecd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 01/06/2021
+ms.openlocfilehash: 78c593890d56a6888d4c4ea6752497918222ebee
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676531"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970586"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker アプリの内部ループ開発ワークフロー
 
@@ -85,11 +85,11 @@ Docker 拡張機能をインストールするには、Ctrl + Shift + P キー�
 
 **図 4-23**.  Visual Studio Code で Docker 拡張機能をインストールする
 
-### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>手順 2: 既存のイメージ (プレーンな OS か、.NET Core、Node.js、Ruby などの開発環境) に関連する DockerFile を作成する
+### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-nodejs-and-ruby"></a>手順 2: 既存のイメージ (プレーンな OS か、.NET、Node.js、Ruby などの開発環境) に関連する DockerFile を作成する
 
 ビルドするカスタム イメージごとと、展開するコンテナーごとに `DockerFile` が必要になります。 アプリが 1 つのカスタム サービスで構成される場合、`DockerFile` が 1 つ必要になります。 ただし、(マイクロサービス アーキテクチャの場合のように) アプリが複数のサービスで構成される場合、サービスごとに `Dockerfile` が 1 つ必要になります。
 
-`DockerFile` は通常、アプリまたはサービスのルート フォルダーに配置され、そのアプリまたはサービスを設定し、実行する方法を Docker に認識させるための必須のコマンドが含まれています。 `DockerFile` を作成し、コード (node.js や .NET Core など) とともにプロジェクトに追加できます。この環境が初めての場合、次のヒントをご覧ください。
+`DockerFile` は通常、アプリまたはサービスのルート フォルダーに配置され、そのアプリまたはサービスを設定し、実行する方法を Docker に認識させるための必須のコマンドが含まれています。 `DockerFile` を作成し、コード (node.js や .NET など) とともにプロジェクトに追加できます。この環境が初めての場合、次のヒントをご覧ください。
 
 > [!TIP]
 > Docker コンテナーに関連する `Dockerfile` および `docker-compose.yml` ファイルを使用するとき、Docker 拡張機能を利用してガイドを表示することができます。 最終的には、このツールなしでこの種類のファイルを記述することになるでしょうが、Docker 拡張機能の使用は学習曲線を加速するので、開始点として推奨されます。
@@ -107,7 +107,7 @@ Docker 拡張機能をインストールするには、Ctrl + Shift + P キー�
 
 **図 4-24** **Add Docker files to Workspace** コマンドで追加された Docker ファイル
 
-DockerFile を追加するとき、(`FROM mcr.microsoft.com/dotnet/aspnet` を使用するなどして) 使用する基本の Docker イメージを指定します。 通常、[Docker Hub レジストリ](https://hub.docker.com/)にある公式リポジトリから得られる基本イメージ ([.NET Core 用のイメージ](https://hub.docker.com/_/microsoft-dotnet/)や [Node.js 用のイメージ](https://hub.docker.com/_/node/)など) を基礎にしてカスタム イメージをビルドします。
+DockerFile を追加するとき、(`FROM mcr.microsoft.com/dotnet/aspnet` を使用するなどして) 使用する基本の Docker イメージを指定します。 通常、[Docker Hub レジストリ](https://hub.docker.com/)にある公式リポジトリから得られる基本イメージ ([.NET 用のイメージ](https://hub.docker.com/_/microsoft-dotnet/)や [Node.js 用のイメージ](https://hub.docker.com/_/node/)など) を基礎にしてカスタム イメージをビルドします。
 
 > [!TIP]
 > アプリケーション内のすべてのプロジェクトに対してこの手順を繰り返す必要があります。 ただし、拡張機能によって、2 回目以降は生成された docker-compose ファイルを上書きするように求められます。 それを上書きしないように応答する必要があります。そうすると拡張機能によって個別の docker-compose ファイルが作成され、docker-compose を実行する前に手動でマージできます。
@@ -116,15 +116,15 @@ DockerFile を追加するとき、(`FROM mcr.microsoft.com/dotnet/aspnet` を�
 
 バージョン番号を持つ言語スタックの公式イメージ リポジトリを使うと、同じ言語機能が (開発、テスト、運用環境など) すべてのコンピューターで使用できるようになります。
 
-次は .NET Core コンテナー向けサンプル DockerFile です。
+次は .NET コンテナー向けサンプル DockerFile です。
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["src/WebApi/WebApi.csproj", "src/WebApi/"]
 RUN dotnet restore "src/WebApi/WebApi.csproj"
@@ -141,22 +141,22 @@ COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "WebApi.dll"]
 ```
 
-この場合、イメージは、`FROM mcr.microsoft.com/dotnet/aspnet:3.1` の行から、公式の ASP.NET Core Docker イメージ (Linux および Windows 用マルチアーキテクチャ) のバージョン 3.1 に基づいています。 (このトピックの詳細については、[ASP.NET Core Docker イメージ](https://hub.docker.com/_/microsoft-dotnet-aspnet/)に関するページと [.NET Core Docker イメージ](https://hub.docker.com/_/microsoft-dotnet/)に関するページを参照してください)。
+この場合、イメージは、`FROM mcr.microsoft.com/dotnet/aspnet:5.0` の行から、公式の ASP.NET Core Docker イメージ (Linux および Windows 用マルチアーキテクチャ) のバージョン 5.0 に基づいています (このトピックの詳細については、[ASP.NET Core Docker イメージ](https://hub.docker.com/_/microsoft-dotnet-aspnet/)に関するページと [.NET Docker イメージ](https://hub.docker.com/_/microsoft-dotnet/)に関するページを参照してください)。
 
 DockerFile では、実行時に使用する TCP ポートをリッスンするように Docker に指示することもできます (ポート 80 や 443 など)。
 
-使用している言語とフレームワークによっては、Dockerfile に別の構成設定を指定できます。 たとえば、`["dotnet", "WebMvcApplication.dll"]` を含む `ENTRYPOINT` 行では、.NET Core アプリケーションを実行するように Docker に指示します。 SDK と .NET Core CLI (`dotnet CLI`) を使用して .NET アプリケーションをビルドし、実行する場合、この設定は異なるものになります。 ここで重要なことは、ENTRYPOINT 行とその他の設定はアプリケーションに選択した言語とプラットフォームに依存するということです。
+使用している言語とフレームワークによっては、Dockerfile に別の構成設定を指定できます。 たとえば、`["dotnet", "WebMvcApplication.dll"]` を含む `ENTRYPOINT` 行では、.NET アプリケーションを実行するように Docker に指示します。 SDK と .NET CLI (`dotnet CLI`) を使用して .NET アプリケーションをビルドし、実行する場合、この設定は異なるものになります。 ここで重要なことは、ENTRYPOINT 行とその他の設定はアプリケーションに選択した言語とプラットフォームに依存するということです。
 
 > [!TIP]
-> .NET Core アプリケーション向け Docker イメージのビルド方法については、<https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images> にお進みください。
+> .NET アプリケーション向け Docker イメージのビルド方法については、<https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images> にお進みください。
 >
 > 独自のイメージをビルドする方法については、<https://docs.docker.com/engine/tutorials/dockerimages/> にお進みください。
 
 **マルチアーキテクチャ イメージ リポジトリを使用する**
 
-リポジトリの単一のイメージ名には、Linux イメージや Windows イメージなどのプラットフォーム バリアントを含めることができます。 この機能では、Microsoft (基本イメージの作成者) などのベンダーが、複数のプラットフォーム (つまり、Linux および Windows) に対応できるリポジトリを 1 つ作成できます。 たとえば、Docker Hub レジストリにある [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/) リポジトリでは、同じイメージ名を使用して Linux および Windows Nano Server をサポートしています。
+リポジトリの単一のイメージ名には、Linux イメージや Windows イメージなどのプラットフォーム バリアントを含めることができます。 この機能では、Microsoft (基本イメージの作成者) などのベンダーが、複数のプラットフォーム (つまり、Linux および Windows) に対応できるリポジトリを 1 つ作成できます。 たとえば、Docker Hub レジストリにある [dotnet/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/) リポジトリでは、同じイメージ名を使用して Linux および Windows Nano Server をサポートしています。
 
-Windows ホストから [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/) イメージをプルした場合、Windows バリアントがプルされ、同じイメージ名が Linux ホストからプルされた場合、Linux バリアントがプルされます。
+Windows ホストから [dotnet/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/) イメージをプルした場合、Windows バリアントがプルされ、同じイメージ名が Linux ホストからプルされた場合、Linux バリアントがプルされます。
 
 **_基本イメージを一から作成する_**
 
@@ -181,7 +181,7 @@ Docker の[この記事](https://docs.docker.com/engine/userguide/eng-image/base
 
 任意で、プロジェクト フォルダーから `docker build` を直接実行する代わりに、`dotnet publish` 実行コマンドを使用し、それから `docker build` を実行することで、まず、必要な .NET ライブラリで展開可能なフォルダーを生成できます。
 
-この例では、`explore-docker-vscode/webapi:latest` という名前で Docker イメージが作成されます (`:latest` は特定のバージョンのようなタグです)。 いくつかのコンテナーで作成した Docker アプリケーション用に作成する必要のあるカスタム イメージごとにこの手順を行うことができます。 一方で、次のセクションでは、`docker-compose` を使用してこれをもっと簡単に行う方法を説明します。
+この例では、`webapi:latest` という名前で Docker イメージが作成されます (`:latest` は特定のバージョンのようなタグです)。 いくつかのコンテナーで作成した Docker アプリケーション用に作成する必要のあるカスタム イメージごとにこの手順を行うことができます。 一方で、次のセクションでは、`docker-compose` を使用してこれをもっと簡単に行う方法を説明します。
 
 図 4-26 に示すように、`docker images` コマンドを使用して、ローカル リポジトリ (開発コンピューター) の既存のイメージを検索できます。
 
@@ -249,7 +249,7 @@ services:
 次に示すように docker run コマンドを使用し、Docker イメージを実行できます。
 
 ```console
-docker run -t -d -p 50080:80 explore-docker-vscode/webapp:latest
+docker run -t -d -p 50080:80 webapp:latest
 ```
 
 この特定の配置の場合、ホストのポート 50080 に送信された要求を内部ポート 80 にリダイレクトします。
@@ -272,7 +272,7 @@ VM を表現する図 4-28 で示すように、`docker-compose up` の実行後
 
 この手順は、アプリで何が実行されているかによって異なります。
 
-1 つのコンテナーまたはサービスとして展開される単純な .NET Core Web API "Hello World" の場合、DockerFile に指定されている TCP ポートを指定し、サービスにアクセスするだけです。
+1 つのコンテナーまたはサービスとして展開される単純な .NET Web API "Hello World" の場合、DockerFile に指定されている TCP ポートを指定し、サービスにアクセスするだけです。
 
 Docker ホストでブラウザーを開き、そのサイトに移動します。図 4-29 に示すように、アプリ/サービスが実行中であることを確認できるはずです。
 
@@ -290,9 +290,9 @@ Docker ホストでブラウザーを開き、そのサイトに移動します�
 
 **Docker で実行されているコンテナーをデバッグする**
 
-Visual Studio Code では、Node.js かその他のプラットフォーム (.NET Core コンテナーなど) を使用している場合、Docker をデバッグできます。
+Visual Studio Code では、Node.js かその他のプラットフォーム (.NET コンテナーなど) を使用している場合、Docker をデバッグできます。
 
-次のセクションで説明するように、Windows または Mac 向けの Visual Studio の使用時、Docker で .NET Core または .NET Framework コンテナーをデバッグすることもできます。
+次のセクションで説明するように、Windows または Mac 向けの Visual Studio の使用時、Docker で .NET または .NET Framework コンテナーをデバッグすることもできます。
 
 > [!TIP]
 > Node.js Docker コンテナーのデバッグの詳細については、<https://blog.docker.com/2016/07/live-debugging-docker/> と <https://docs.microsoft.com/archive/blogs/user_ed/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more> を参照してください。

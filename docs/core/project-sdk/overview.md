@@ -4,16 +4,16 @@ titleSuffix: ''
 description: .NET プロジェクト SDK について説明します。
 ms.date: 09/17/2020
 ms.topic: conceptual
-ms.openlocfilehash: 6b6651f674f09d5d0d18ddb873096037ad3b2ba5
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: 270735c9eef9f1930680687917317ac8bdf39e6d
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247575"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970695"
 ---
 # <a name="net-project-sdks"></a>.NET プロジェクト SDK
 
-.NET Core および .NET 5.0 以降のプロジェクトは、ソフトウェア開発キット (SDK) に関連付けられています。 各 "*プロジェクト SDK*" は、MSBuild [ターゲット](/visualstudio/msbuild/msbuild-targets)と、コードのコンパイル、パッキング、発行を行う関連する[タスク](/visualstudio/msbuild/msbuild-tasks)のセットです。 プロジェクト SDK を参照するプロジェクトは、"*SDK スタイルのプロジェクト*" と呼ばれることもあります。
+.NET Core および .NET 5.0 以降のプロジェクトは、ソフトウェア開発キット (SDK) に関連付けられています。 各 "*プロジェクト SDK*" は、MSBuild [ターゲット](/visualstudio/msbuild/msbuild-targets)と、コードのコンパイル、パッキング、発行を行う関連する [タスク](/visualstudio/msbuild/msbuild-tasks)のセットです。 プロジェクト SDK を参照するプロジェクトは、"*SDK スタイルのプロジェクト*" と呼ばれることもあります。
 
 ## <a name="available-sdks"></a>使用可能な SDK
 
@@ -83,9 +83,9 @@ MSBuild では、`dotnet msbuild -preprocess` コマンドを使用して、SDK 
 
 `dotnet msbuild -property:TargetFramework=netcoreapp2.0 -preprocess:output.xml`
 
-### <a name="default-compilation-includes"></a>コンパイルへの既定の組み込み
+### <a name="default-includes-and-excludes"></a>既定で含まれるものと除外されるもの
 
-コンパイル項目、埋め込みリソース、および `None` 項目の既定の組み込みと除外が SDK で定義されています。 SDK 以外の .NET Framework プロジェクトとは異なり、既定値がほとんどの一般的なユース ケースに対応しているため、これらの項目をプロジェクト ファイルで指定する必要はありません。 これにより、プロジェクト ファイルのサイズがより小さく、より簡単に理解できるようになり、必要に応じて手作業で編集できます。
+[`Compile` 項目](/visualstudio/msbuild/common-msbuild-project-items#compile)、[埋め込みリソース](/visualstudio/msbuild/common-msbuild-project-items#embeddedresource)、[`None` 項目](/visualstudio/msbuild/common-msbuild-project-items#none)に既定で含まれるものと除外されるものが SDK で定義されています。 SDK 以外の .NET Framework プロジェクトとは異なり、既定値がほとんどの一般的なユース ケースに対応しているため、これらの項目をプロジェクト ファイルで指定する必要はありません。 この動作により、プロジェクト ファイルのサイズがより小さく、より簡単に理解できるようになり、必要に応じて手作業で編集できます。
 
 次の表は、.NET SDK に組み込まれる、および除外される要素と [glob](https://en.wikipedia.org/wiki/Glob_(programming)) の一覧を示します。
 
@@ -96,7 +96,7 @@ MSBuild では、`dotnet msbuild -preprocess` コマンドを使用して、SDK 
 | None              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx |
 
 > [!NOTE]
-> `./bin` フォルダーと `./obj` フォルダーは、`$(BaseOutputPath)` と `$(BaseIntermediateOutputPath)` の MSBuild プロパティによって表され、既定で glob から除外されます。 除外は `$(DefaultItemExcludes)` プロパティによって表されます。
+> `./bin` フォルダーと `./obj` フォルダーは、`$(BaseOutputPath)` と `$(BaseIntermediateOutputPath)` の MSBuild プロパティによって表され、既定で glob から除外されます。 除外されるものは、[DefaultItemExcludes プロパティ](msbuild-props.md#defaultitemexcludes)によって表されます。
 
 #### <a name="build-errors"></a>ビルド エラー
 
@@ -110,7 +110,7 @@ MSBuild では、`dotnet msbuild -preprocess` コマンドを使用して、SDK 
 
 - 前の表に列挙されている暗黙的な項目と一致する明示的な `Compile`、`EmbeddedResource`、または `None` の項目を削除します。
 
-- 次のように `EnableDefaultItems` プロパティを `false` に設定して、暗黙的なファイルの組み込みをすべて無効にします。
+- 暗黙的なファイルの組み込みをすべて無効にするには、[EnableDefaultItems プロパティ](msbuild-props.md#enabledefaultitems)を `false` に設定します。
 
   ```xml
   <PropertyGroup>
@@ -120,7 +120,7 @@ MSBuild では、`dotnet msbuild -preprocess` コマンドを使用して、SDK 
 
   アプリで発行する一部のファイルを指定する必要がある場合は、そのために既知の MSBuild のしくみ (たとえば `Content` 要素) を引き続き使用できます。
 
-- `EnableDefaultCompileItems`、`EnableDefaultEmbeddedResourceItems`、または `EnableDefaultNoneItems` プロパティを `false` に設定することによって、`Compile`、`EmbeddedResource`、または `None` glob のみを選択的に無効にします。
+- `Compile`、`EmbeddedResource`、または `None` glob を選択的に無効にするには、[EnableDefaultCompileItems](msbuild-props.md#enabledefaultcompileitems)、[EnableDefaultEmbeddedResourceItems](msbuild-props.md#enabledefaultembeddedresourceitems)、または [EnableDefaultNoneItems](msbuild-props.md#enabledefaultnoneitems) プロパティを `false` に設定します。
 
   ```xml
   <PropertyGroup>

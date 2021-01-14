@@ -1,13 +1,13 @@
 ---
 title: クラウドの準備が整っている回復力のあるサービスを構築する。 クラウド内の一時的な障害を受け入れる
 description: Azure Cloud と Windows コンテナーを使って既存の .NET アプリケーションを最新化する | クラウドに対応する回復力のあるサービスを構築する。 クラウド内の一時的な障害を受け入れる
-ms.date: 04/30/2018
-ms.openlocfilehash: 8e9f1eda71e4b98a56cbfc1c7a4ff34e67bee3f4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/21/2020
+ms.openlocfilehash: 4d592a5761cdf696f3e57516d747cbd770512053
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172158"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025330"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>クラウドの準備が整っている回復力のあるサービスの構築:クラウド内の一時的な障害を受け入れる
 
@@ -35,11 +35,11 @@ HTTP サービスを使用するアプリでも、同様のシナリオが発生
 
 データベースにアクセスする回復性がある通信を実装する場合、使用している .NET のバージョンによっては簡単な可能性があります (たとえば、[Entity Framework 6 以降](/ef/ef6/fundamentals/connection-resiliency/retry-logic)。 これは、データベース接続を構成するだけの問題です)。 または、[一時的エラー処理アプリケーション ブロック](/previous-versions/msp-n-p/hh680934(v=pandp.50)) (以前のバージョンの .NET の場合) などの追加のライブラリを使用したり、独自のライブラリを実装したりする必要がある場合があります。
 
-HTTP 再試行とサーキット ブレーカーを実装する場合、.NET の推奨事項は、.NET Framework サポートを含む .NET Framework 4.0、.NET Framework 4.5、および .NET Standard 1.1 を対象とする [Polly](https://github.com/App-vNext/Polly) ライブラリを使用することです。
+HTTP 再試行とサーキット ブレーカーを実装する場合、.NET の推奨事項は、.NET Standard 1.1 (カバレッジ: .NET Core 1.0、Mono、Xamarin、UWP、WP8.1 以降) と .NET Standard 2.0 以降 (カバレッジ: .NET Core 2.0 以降、.NET Core 3.0、および最近の Mono、Xamarin、UWP ターゲット) をターゲットとする、[Polly](https://github.com/App-vNext/Polly) ライブラリを使用することです。 nuget パッケージには、.NET Framework 4.6.1 と 4.7.2 の直接ターゲットも含まれています。
 
 クラウドで部分的なエラーを処理する戦略を実装する方法については、次の参照情報を参照してください。
 
-### <a name="additional-resources"></a>その他の技術情報
+### <a name="additional-resources"></a>その他のリソース
 
 - **部分的なエラーを処理するための回復性がある通信の実装**
 

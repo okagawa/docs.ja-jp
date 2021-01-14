@@ -3,12 +3,12 @@ title: dotnet nuget push コマンド
 description: dotnet nuget push コマンドでは、パッケージをサーバーにプッシュして発行します。
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 50a4a542c2d192bfbd927845489d04fd1b6c6cf3
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 99e735f7bb18b7af1c12c3ef77fc150a19083542
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555124"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970656"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -74,7 +74,9 @@ dotnet nuget push -h|--help
 
 - **`-s|--source <SOURCE>`**
 
-  サーバー URL を指定します。 `DefaultPushSource` 構成値が NuGet 構成ファイルに設定されない限り、このオプションは必須です。
+  サーバー URL を指定します。 NuGet によって UNC またはローカル フォルダー ソースが識別され、HTTP を使用してファイルがプッシュされるのではなく、単にそこにファイルがコピーされます。
+  > [!IMPORTANT]
+  > NuGet 3.4.2 以降では、NuGet 構成ファイルで `DefaultPushSource` 値が指定されていない限り、これは必須パラメーターです。 詳しくは、「[NuGet の動作の構成](/nuget/consume-packages/configuring-nuget-behavior)」をご覧ください。
 
 - **`--skip-duplicate`**
 
@@ -94,7 +96,7 @@ dotnet nuget push -h|--help
 
 ## <a name="examples"></a>使用例
 
-- API キーを指定して、既定のプッシュ ソースに *foo.nupkg* をプッシュします。
+- API キーを使用して、NuGet 構成ファイルで指定されている既定のプッシュ ソースに *foo.nupkg* をプッシュします。
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
@@ -112,7 +114,7 @@ dotnet nuget push -h|--help
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
-- 既定のプッシュ ソースに *foo.nupkg* をプッシュします。
+- NuGet 構成ファイルで指定されている既定のプッシュ ソースに *foo.nupkg* をプッシュします。
 
   ```dotnetcli
   dotnet nuget push foo.nupkg
@@ -124,13 +126,13 @@ dotnet nuget push -h|--help
   dotnet nuget push foo.symbols.nupkg
   ```
 
-- 360 秒のタイムアウトを指定して、既定のプッシュ ソースに *foo.nupkg* をプッシュします。
+- NuGet 構成ファイルで指定されている既定のプッシュ ソースに *foo.nupkg* を 360 秒のタイムアウトでプッシュします。
 
   ```dotnetcli
   dotnet nuget push foo.nupkg --timeout 360
   ```
 
-- 既定のプッシュ ソースに現在のディレクトリ内のすべての *.nupkg* ファイルをプッシュします。
+- NuGet 構成ファイルで指定されている既定のプッシュ ソースに、現在のディレクトリにあるすべての *.nupkg* ファイルをプッシュします。
 
   ```dotnetcli
   dotnet nuget push "*.nupkg"
@@ -143,7 +145,7 @@ dotnet nuget push -h|--help
   > [!NOTE]
   > ファイル グロビングを実行する bash など、シェルには引用符が必須です。 詳細については、[NuGet/Home#4393](https://github.com/NuGet/Home/issues/4393#issuecomment-667618120) を参照してください。
 
-- HTTP(S) サーバーによって 409 競合応答が返された場合でも、すべての *.nupkg* ファイルをプッシュします。
+- HTTP(S) サーバーによって競合応答 409 が返された場合でも、NuGet 構成ファイルで指定されている既定のプッシュ ソースにすべての *.nupkg* ファイルをプッシュします。
 
   ```dotnetcli
   dotnet nuget push "*.nupkg" --skip-duplicate

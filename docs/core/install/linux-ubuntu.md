@@ -3,17 +3,17 @@ title: Ubuntu に .NET をインストールする - .NET
 description: Ubuntu に .NET SDK と .NET ランタイムをインストールするさまざまな方法を示します。
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: 22ce3379e028f065528e1f507a2d8c1ae598f0e8
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.date: 01/06/2021
+ms.openlocfilehash: 14e5e9548d4aa09a586e2038f3e35a489ee65cd2
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031848"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970768"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-ubuntu"></a>Ubuntu に .NET SDK または .NET ランタイムをインストールする
 
-.NET は Ubuntu でサポートされています。 この記事では、Ubuntu に .NET をインストールする方法について説明します。 Ubuntu のバージョンがサポート対象外である場合、.NET もそのバージョンでサポート対象外となります。 ただし、サポート対象外の場合でも、これらの手順がそれらのバージョンで .NET を実行するのに役立つことがあります。
+.NET は Ubuntu でサポートされています。 この記事では、Ubuntu に .NET をインストールする方法について説明します。 Ubuntu のバージョンがサポート対象外である場合、.NET もそのバージョンでサポート対象外となります。
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
@@ -50,14 +50,7 @@ ms.locfileid: "96031848"
 
 [!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
-## <a name="how-to-install-other-versions"></a>その他のバージョンをインストールする方法
-
-[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
-
 ## <a name="2010-"></a>20.10 ✔️
-
-> [!IMPORTANT]
-> .NET Core 2.1 はパッケージ フィードではまだ利用できません。
 
 [!INCLUDE [linux-prep-intro-apt](includes/linux-prep-intro-apt.md)]
 
@@ -179,7 +172,11 @@ sudo dpkg -i packages-microsoft-prod.deb
 
 [!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
-## <a name="apt-update-sdk-or-runtime"></a>APT での SDK またはランタイムの更新
+## <a name="how-to-install-other-versions"></a>その他のバージョンをインストールする方法
+
+[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="use-apt-to-update-net"></a>APT を使用して .NET を更新する
 
 .NET で新しい修正プログラムのリリースを利用できる場合は、次のコマンドを使用して、APT で簡単にアップグレードすることができます。
 
@@ -218,10 +215,6 @@ sudo apt-get update; \
 
 [!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]
 
-## <a name="snap"></a>Snap
-
-[!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
-
 ## <a name="dependencies"></a>依存関係
 
 パッケージ マネージャーを使用してインストールする場合、次のライブラリが自動的にインストールされます。 ただし、手動で .NET をインストールする場合、または自己完結型アプリを公開する場合は、次のライブラリがインストールされていることを確認する必要があります。
@@ -245,14 +238,7 @@ sudo apt-get update; \
   > [!WARNING]
   > 最新バージョンの *libgdiplus* をインストールするには、システムに Mono リポジトリを追加します。 詳細については、「<https://www.mono-project.com/download/stable/>」を参照してください。
 
-## <a name="scripted-install"></a>スクリプトでのインストール
-
-[!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
-
-## <a name="manual-install"></a>手動インストール
-
-[!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
-
 ## <a name="next-steps"></a>次の手順
 
+- [.NET CLI のタブ補完を有効にする方法](../tools/enable-tab-autocomplete.md)
 - [チュートリアル: Visual Studio Code を使用して .NET SDK でコンソール アプリケーションを作成する](../tutorials/with-visual-studio-code.md)

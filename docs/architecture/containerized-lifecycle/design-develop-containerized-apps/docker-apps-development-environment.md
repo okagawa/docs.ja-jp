@@ -1,13 +1,13 @@
 ---
 title: Docker アプリの開発環境
 description: Docker 開発ライフサイクルをサポートする最も重要な開発ツールのオプションについて説明します。
-ms.date: 08/06/2020
-ms.openlocfilehash: 07b42b2bd05ab16ba0fbf61863b050ee2c9e242b
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.date: 01/06/2021
+ms.openlocfilehash: c6c4a1fda41131c00ba87808ed408f1d3250cabf
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916032"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970526"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker アプリの開発環境
 
@@ -36,7 +36,7 @@ Docker ベースのアプリケーションを開発するときに、[Visual St
 
 最新の言語で Microsoft のツールを使用して Docker アプリケーションを開発できます。 次が初期一覧ですが、これに限定されているわけではありません。
 
-- .NET Core および ASP.NET Core
+- .NET と ASP.NET Core
 - Node.js
 - 移動
 - Java

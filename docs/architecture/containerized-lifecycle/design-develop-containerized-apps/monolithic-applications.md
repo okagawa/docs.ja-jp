@@ -1,13 +1,13 @@
 ---
 title: モノリシック アプリケーション
 description: モノリシック アプリケーションのコンテナー化の中心概念を理解します。
-ms.date: 08/06/2020
-ms.openlocfilehash: c9a5baf209a47f62f421a236c0b04fe5dae37e3a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/06/2021
+ms.openlocfilehash: a66c76c473c116b303975040d893348182b96713
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163545"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970539"
 ---
 # <a name="monolithic-applications"></a>モノリシック アプリケーション
 
@@ -35,7 +35,7 @@ ms.locfileid: "91163545"
 
 **図 4-2** 複数のアプリ/コンテナーを実行しているホスト
 
-最後に、可用性の観点から考えた場合、モノリシック アプリケーションをデプロイする場合、全体をデプロイする必要があります。つまり、デプロイ期間中に、*停止および起動*する必要がある場合、すべての機能とすべてのユーザーが影響を受けます。 図 4-3 のとおり、特定の状況では、Azure とコンテナーの使用でこれらの状況を最小限に抑えることができ、アプリケーションをダウンさせる可能性を減らすことができます。
+最後に、可用性の観点から考えた場合、モノリシック アプリケーションをデプロイする場合、全体をデプロイする必要があります。つまり、デプロイ期間中に、*停止および起動* する必要がある場合、すべての機能とすべてのユーザーが影響を受けます。 図 4-3 のとおり、特定の状況では、Azure とコンテナーの使用でこれらの状況を最小限に抑えることができ、アプリケーションをダウンさせる可能性を減らすことができます。
 
 Azure にモノリシック アプリケーションをデプロイするには、各インスタンスに専用の VM を使用します。 [Azure Virtual Machine Scale Sets](/azure/virtual-machine-scale-sets/) を使用すると、VM のスケーリングを簡単に行うことができます。
 
@@ -69,7 +69,7 @@ Azure にデプロイしたコンテナーを迅速に検証する場合でも�
 
 Azure App Service は直感的に使用でき、起動してすぐに実行することができます。これは、コードを取得し Microsoft Visual Studio でビルドして Azure に直接デプロイするための Git との優れた統合が提供されているためです。 しかし、従来 (Docker を使用しない場合)、App Services でサポートされていないその他の機能、フレームワークまたは依存関係が必要であった場合、Azure チームがそれらの依存関係を App Service で更新するまで待つか、ユーザーがさらに制御でき、使用しているアプリケーションで必要なコンポーネントやフレームワークをインストールできる Service Fabric、Cloud Services、または単純な VM に切り替える必要がありました。
 
-さて、図 4-4 に示すように、Visual Studio 2017 を使用する場合、Azure App Service のコンテナー サポートにより、アプリケーション環境に必要なものをすべて含めることができます。 お使いのアプリに依存関係を追加した場合、それをコンテナー内で実行しているため、それらの依存関係を Dockerfile または Docker イメージに含めることができるようになります。
+さて、図 4-4 に示すように、Visual Studio 2019 を使用する場合、Azure App Service のコンテナー サポートにより、アプリケーション環境に必要なものをすべて含めることができます。 お使いのアプリに依存関係を追加した場合、それをコンテナー内で実行しているため、それらの依存関係を Dockerfile または Docker イメージに含めることができるようになります。
 
 ![Container Registry が表示される [App Service の作成] ダイアログのスクリーンショット。](./media/monolithic-applications/publish-azure-app-service-container.png)
 

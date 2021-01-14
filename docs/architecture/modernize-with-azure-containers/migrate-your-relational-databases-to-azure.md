@@ -1,15 +1,15 @@
 ---
-title: リレーショナル データベースを Azure に移行する
+title: リレーショナル データベースの Azure への移行
 description: Azure Cloud および Windows コンテナーを使用して既存の .NET アプリケーションを最新化する | リレーショナル データベースを Azure に移行する
-ms.date: 04/28/2018
-ms.openlocfilehash: efd1548c3f74fc27450f4949d71a1c4d61907ba5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 12/21/2020
+ms.openlocfilehash: c8dc92e1c5c5fb36a68bcad000c10e47c946ca0c
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73093615"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025382"
 ---
-# <a name="migrate-your-relational-databases-to-azure"></a>リレーショナル データベースを Azure に移行する
+# <a name="migrate-your-relational-databases-to-azure"></a>リレーショナル データベースの Azure への移行
 
 展望:Azure には、最も包括的なデータベース移行が用意されています。
 

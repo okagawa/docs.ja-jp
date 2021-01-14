@@ -9,12 +9,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 96a39609e9ae8b11e9872b049134136fe1ff3e2a
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: 2ceac94c04dd8deb169e836f09928dfd9a38ac35
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599103"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025434"
 ---
 # <a name="structure-types-c-reference"></a>構造体型 (C# リファレンス)
 
@@ -30,11 +30,7 @@ ms.locfileid: "96599103"
 
 ## <a name="readonly-struct"></a>`readonly` 構造体
 
-C# 7.2 以降では、構造体型が変更不可であることを宣言するには、`readonly` 修飾子を使用します。
-
-[!code-csharp[readonly struct](snippets/shared/StructType.cs#ReadonlyStruct)]
-
-`readonly` 構造体のすべてのデータ メンバーを、次のように読み取り専用にする必要があります。
+C# 7.2 以降では、`readonly` 修飾子を使用して、構造体型が変更不可であることを宣言します。 `readonly` 構造体のすべてのデータ メンバーを、次のように読み取り専用にする必要があります。
 
 - すべてのフィールド宣言には、[`readonly` 修飾子が必要です](../keywords/readonly.md)
 - 自動的に実装されるものも含めて、すべてのプロパティは、読み取り専用である必要があります。 C# 9.0 以降では、プロパティに [`init` アクセサー](../../whats-new/csharp-9.md#init-only-setters)が含まれる場合があります。
@@ -43,6 +39,10 @@ C# 7.2 以降では、構造体型が変更不可であることを宣言する�
 
 > [!NOTE]
 > `readonly` 構造体でも、変更可能な参照型のデータ メンバーは、それ自身の状態を変更できます。 たとえば、<xref:System.Collections.Generic.List%601> インスタンスを置き換えることはできませんが、新しい要素をそれに追加することはできます。
+
+次のコードでは、C# 9.0 以降で使用できる、init 専用プロパティの setter を持つ `readonly` 構造体を定義します。
+
+[!code-csharp[readonly struct](snippets/shared/StructType.cs#ReadonlyStruct)]
 
 ## <a name="readonly-instance-members"></a>`readonly` インスタンス メンバー
 

@@ -1,13 +1,13 @@
 ---
 title: クラウドの CI/CD パイプラインや DevOps ツールでアプリのライフ サイクルを最新化する
 description: Azure クラウドおよび Windows コンテナーを使用して既存の .NET アプリケーションを最新化する | クラウドの CI/CD パイプラインと DevOps ツールを使用してアプリのライフサイクルを最新化する
-ms.date: 04/30/2018
-ms.openlocfilehash: 98ebd29b8ab81c8fff6da546942825133f06f4de
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/21/2018
+ms.openlocfilehash: e7ad76edb659fbacfc85cb398ec0c9fe9e3c66c9
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172054"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025252"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>クラウドの CI/CD パイプラインや DevOps ツールでアプリのライフ サイクルを最新化する
 
@@ -15,7 +15,7 @@ ms.locfileid: "91172054"
 
 継続的インテグレーションとデプロイの方法は確立されていますが、コンテナーを導入することにより、複数コンテナー アプリケーションを使用している場合は特に、新たな考慮事項が生じます。
 
-Azure DevOps Services では、Azure DevOps Services の公式のデプロイ タスクにより、さまざまな環境への複数コンテナー アプリケーションの継続的インテグレーションとデプロイをサポートしています。
+Azure DevOps Services では、Azure DevOps Services の公式のデプロイ タスクにより、さまざまな環境への複数コンテナー アプリケーションの継続的インテグレーションとデプロイがサポートされています。
 
 - [Azure Web App for Containers にデプロイする](/azure/devops/pipelines/apps/cd/deploy-docker-webapp?tabs=dotnet-core)
 

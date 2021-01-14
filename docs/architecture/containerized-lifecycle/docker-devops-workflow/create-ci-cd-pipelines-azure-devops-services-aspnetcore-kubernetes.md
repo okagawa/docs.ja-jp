@@ -1,15 +1,15 @@
 ---
-title: Docker アプリケーションの外側のループ DevOps ワークフローの手順
+title: コンテナーで .NET アプリケーション用の Azure DevOps Services で CI/CD パイプラインを作成し、Kubernetes クラスターにデプロイする
 description: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
-ms.date: 08/06/2020
-ms.openlocfilehash: 1a973407d59484899f99fb6e326b8d7c8e97079b
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.date: 01/06/2021
+ms.openlocfilehash: ef994f132716547ee402237016ee71013528d779
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915224"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970487"
 ---
-# <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>コンテナーで .NET Core アプリケーション用の Azure DevOps Services で CI/CD パイプラインを作成し、Kubernetes クラスターにデプロイする
+# <a name="create-cicd-pipelines-in-azure-devops-services-for-a-net-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>コンテナーで .NET アプリケーション用の Azure DevOps Services で CI/CD パイプラインを作成し、Kubernetes クラスターにデプロイする
 
 図 5-12 では、コード管理、コードのコンパイル、Docker イメージ ビルド、Docker レジストリへの Docker イメージのプッシュ、および最終的な Azure での Kubernetes クラスターへのデプロイを含むエンドツーエンドの DevOps シナリオを参照できます。
 

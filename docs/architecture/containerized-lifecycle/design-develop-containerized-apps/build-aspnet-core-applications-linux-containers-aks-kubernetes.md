@@ -1,13 +1,13 @@
 ---
 title: Linux コンテナーとして AKS/Kubernetes クラスターにデプロイされる ASP.NET Core アプリケーションをビルドする
 description: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
-ms.date: 08/06/2020
-ms.openlocfilehash: 831d2372131e20788d0f48190eb8c600aa02485c
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.date: 01/06/2021
+ms.openlocfilehash: 7a8f8272ab2faabd0398aeeb2039b6f034b4dedb
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440830"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970648"
 ---
 # <a name="build-aspnet-core-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Linux コンテナーとして AKS/Kubernetes オーケストレーターにデプロイされる ASP.NET Core アプリケーションをビルドする
 
@@ -21,13 +21,13 @@ AKS の主な機能は次のとおりです。
 - ユーザーが構成可能なスケーリング
 - 開発者とクラスター オペレーターの両方のよりシンプルなユーザー エクスペリエンス。
 
-次の例では、Linux で実行され、Azure の AKS クラスターにデプロイされる、ASP.NET Core 3.1 アプリケーションの作成について確認しますが、開発は Visual Studio 2019 を使用して行われています。
+次の例では、Linux で実行され、Azure の AKS クラスターにデプロイされる、ASP.NET Core 5.0 アプリケーションの作成について確認しますが、開発は Visual Studio 2019 バージョン 16.8 を使用して行われています。
 
 ## <a name="creating-the-aspnet-core-project-using-visual-studio-2019"></a>Visual Studio 2019 を使用する ASP.NET Core プロジェクトの作成
 
 ASP.NET Core は、GitHub で Microsoft および .NET コミュニティによって管理される汎用開発プラットフォームです。 これはクロスプラットフォームであり、Windows、macOS、Linux がサポートされ、デバイス、クラウド、および埋め込み/IoT シナリオで使用できます。
 
-この例では、Visual Studio テンプレートに基づくいくつかのシンプルなプロジェクトを使用します。したがって、サンプルを作成するための多くの追加の知識は必要ありません。 ASP.NET Core 3.1 テクノロジを使用し、Razor Pages で Web アプリおよび REST API で小さなプロジェクトを実行するための要素をすべて含む、標準テンプレートを使ってプロジェクトを作成するだけで済みます。
+この例では、Visual Studio テンプレートに基づくいくつかのシンプルなプロジェクトを使用します。したがって、サンプルを作成するための多くの追加の知識は必要ありません。 ASP.NET Core 5.0 テクノロジを使用し、Razor Pages で Web アプリおよび REST API で小さなプロジェクトを実行するための要素をすべて含む、標準テンプレートを使ってプロジェクトを作成するだけで済みます。
 
 ![ASP.NET Core Web アプリケーションが選択されている、Visual Studio の新しいプロジェクトの追加ウィンドウ。](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/create-aspnet-core-application.png)
 
@@ -41,11 +41,11 @@ Visual Studio でサンプル プロジェクトを作成するには、 **[フ�
 
 **図 4-36**. Visual Studio 2019 でプロジェクト名と場所を入力する。
 
-ASP.NET Core 3.1 をフレームワークとして選択したことを確認します。 .NET Core 3.1 は最新リリースの Visual Studio 2019 に含まれており、Visual Studio のインストール時に自動的にインストールされ、構成されます。
+ASP.NET Core 5.0 をフレームワークとして選択したことを確認します。 .NET 5.0 は最新リリースの Visual Studio 2019 に含まれており、Visual Studio のインストール時に自動的にインストールされ、構成されます。
 
 ![API オプションが選択された状態の、ASP.NET Core Web アプリケーションの種類を選択するための Visual Studio ダイアログ。](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/create-web-api-application.png)
 
-**図 4-37**. ASP.NET Core 3.1 と Web API プロジェクトの種類の選択
+**図 4-37**. ASP.NET Core 5.0 と Web API プロジェクトの種類の選択
 
 現在、Docker のサポートが有効になっておらず、単にプロジェクトの作成後に実行できることが示されていることに注目してください。
 
@@ -63,7 +63,7 @@ Docker サポートの追加を完了するために、Windows または Linux �
 
 **図 4-39**. Linux コンテナーの選択。
 
-これらのシンプルな手順では、Linux コンテナーで実行される ASP.NET Core 3.1 アプリケーションを作成します。
+これらのシンプルな手順では、Linux コンテナーで実行される ASP.NET Core 5.0 アプリケーションを作成します。
 
 同様に、Web API エンドポイントを使用するために、非常にシンプルな **WebApp** プロジェクトを追加することもできます (図 4-40)。しかし、詳細についてはここでは説明しません。
 

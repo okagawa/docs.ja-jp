@@ -1,13 +1,13 @@
 ---
 title: Docker アプリケーションの外側のループ DevOps ワークフローの手順
 description: DevOps の "外部ループ" ワークフローの手順について学習する
-ms.date: 08/06/2020
-ms.openlocfilehash: 82a45c8669812580623811e18cc55f55f45cb6d3
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.date: 01/06/2021
+ms.openlocfilehash: bfac2d2c7866bfd11cd18201a93cb17a72cae588
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271908"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970298"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker アプリケーションの外側のループ DevOps ワークフローの手順
 
@@ -77,7 +77,7 @@ Visual Studio の Azure DevOps Services にはビルドとリリース テンプ
 
 これらの Visual Studio Team Services タスク、Azure でプロビジョニングされたビルド Linux-Docker ホスト/VM、および任意の Docker レジストリ (Azure Container Registry、Docker Hub、プライベート Docker DTR、またはその他の Docker レジストリ) では、非常に一貫した方法で Docker CI パイプラインをアセンブルすることができます。
 
-***要件:***
+**_必要条件:_*
 
 - Azure DevOps Services。オンプレミス インストールの場合は、Team Foundation Server 2015 Update 3 以降。
 
@@ -90,7 +90,7 @@ Visual Studio の Azure DevOps Services にはビルドとリリース テンプ
 > - Docker コンテナーとしての Visual Studio Team Services (現在の Azure DevOps Services) エージェントの実行: \
 >   <https://hub.docker.com/_/microsoft-azure-pipelines-vsts-agent>
 >
-> - Azure DevOps Services を使用する .NET Core Linux Docker イメージのビルド: \
+> - Azure DevOps Services を使用する .NET Linux Docker イメージのビルド: \
 >   <https://docs.microsoft.com/archive/blogs/stevelasker/building-net-core-linux-docker-images-with-visual-studio-team-services>
 >
 > - Docker サポートを利用する Linux ベースの Visual Studio Team Service ビルド コンピューターのビルド: \
@@ -126,7 +126,7 @@ SCC リポジトリ (Git など) に格納されているアプリケーショ�
 
 ![カスタム イメージをコンテナー レジストリにプッシュする方法を示す図。](./media/docker-application-outer-loop-devops-workflow/docker-push-custom-images.png)
 
-**図 5-4** カスタム イメージの Docker レジストリへの公開
+_*図 5-4**。 カスタム イメージの Docker レジストリへの公開
 
 ビルド、統合およびテスト (CI) に関する手順 3 では、結果の Docker イメージをプライベートまたはパブリック レジストリに公開する場合があります。 Azure Container Registry、Amazon Web Services Container Registry、Google Container Registry、Quay レジストリなど、クラウド ベンダーからの Docker レジストリには複数のオファリングがあります。
 

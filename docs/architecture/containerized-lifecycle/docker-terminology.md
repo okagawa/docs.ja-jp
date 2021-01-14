@@ -1,13 +1,13 @@
 ---
 title: Docker に関する用語
 description: Docker の使用時に日常的に使われる基本的な用語の一部について説明します。
-ms.date: 08/06/2020
-ms.openlocfilehash: a323075bdd73a117769913ac59426b5bec5df614
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 01/06/2021
+ms.openlocfilehash: 640c3481e271b8fe2b7d7eeb7d5eaeb02af1cc21
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686452"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970103"
 ---
 # <a name="docker-terminology"></a>Docker に関する用語
 
@@ -35,7 +35,7 @@ docker build
 
 **レジストリ**:リポジトリへのアクセス権を提供するサービスです。 ほとんどのパブリック イメージの既定のレジストリは [Docker Hub](https://hub.docker.com/) です (Docker によって組織として所有されている)。 レジストリには、通常、複数のチームからのリポジトリが含まれています。 企業は、多くの場合、自社で作成したイメージを格納および管理するためのプライベート レジストリを持っています。 Azure Container Registry は別の例となります。
 
-**マルチアーキテクチャ イメージ**:マルチアーキテクチャの場合は、Docker が実行されているプラットフォームに応じて、適切なイメージの選択を簡略化する機能です。 たとえば、Dockerfile でレジストリから基本イメージ **FROM mcr.microsoft.com/dotnet/sdk:3.1** を要求すると、Docker が実行されているオペレーティング システムとバージョンに応じて、**3.1-sdk-nanoserver-1909**、**3.1-sdk-nanoserver-1809**、または **3.1-sdk-buster-slim** が実際に取得されます。
+**マルチアーキテクチャ イメージ**:マルチアーキテクチャの場合は、Docker が実行されているプラットフォームに応じて、適切なイメージの選択を簡略化する機能です。 たとえば、Dockerfile でレジストリから基本イメージ **FROM mcr.microsoft.com/dotnet/sdk:5.0** を要求すると、Docker が実行されているオペレーティング システムとバージョンに応じて、**5.0-nanoserver-20H2**、**5.0-nanoserver-2004**、または **5.0-buster-slim** が実際に取得されます。
 
 **Docker Hub**:イメージをアップロードし、それらを操作するパブリック レジストリです。 Docker Hub は、Docker イメージ ホスティング、パブリックまたはプライベート レジストリ、ビルド トリガーおよび Web フック、さらに GitHub および Bitbucket との統合を提供します。
 

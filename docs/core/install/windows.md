@@ -3,13 +3,13 @@ title: Windows に .NET をインストールする
 description: .NET をインストールできる Windows のバージョンについて説明します。
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: b5c0949bbd591906536094a33d8583a265d8a4c8
-ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
+ms.date: 01/06/2021
+ms.openlocfilehash: d8ca3eed3786a728002d8ffe80b774a0018eee82
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97110235"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025454"
 ---
 # <a name="install-net-on-windows"></a>Windows に .NET をインストールする
 
@@ -180,30 +180,21 @@ SDK は、.NET アプリとライブラリを作成して公開するために�
 
 ### <a name="windows-7--vista--81--server-2008-r2--server-2012-r2"></a><a name="additional-deps"></a> Windows 7 / Vista / 8.1 / Server 2008 R2 / Server 2012 R2
 
-次の Windows のバージョンに .NET SDK またはランタイムをインストールする場合は、追加の依存関係が必要です。
+次の Windows のバージョンに .NET SDK またはランタイムをインストールする場合は、さらに依存関係が必要になります。
 
-- Windows 7 SP1 [ESU][esu]
-- Windows Vista SP 2
-- Windows 8.1
-- Windows Server 2008 R2
-- Windows Server 2012 R2
+| オペレーティング システム         | 前提条件                                                                    |
+|--------------------------|----------------------------------------------------------------------------------|
+| Windows 7 SP1 [ESU][esu] | - Microsoft Visual C++ 2015-2019 再頒布可能パッケージ [64 ビット][vcc64] / [32 ビット][vcc32] <br> - KB3063858 [64 ビット][kb64] / [32 ビット][kb32] <br> - [MicrosoftRootCertificateAuthority2011.cer](https://go.microsoft.com/fwlink/?linkid=747875&clcid=0x409) (.NET Core 2.1 のみ) |
+| Windows Vista SP 2       | Microsoft Visual C++ 2015-2019 再頒布可能パッケージ [64 ビット][vcc64] / [32 ビット][vcc32] |
+| Windows 8.1              | Microsoft Visual C++ 2015-2019 再頒布可能パッケージ [64 ビット][vcc64] / [32 ビット][vcc32] |
+| Windows Server 2008 R2   | Microsoft Visual C++ 2015-2019 再頒布可能パッケージ [64 ビット][vcc64] / [32 ビット][vcc32] |
+| Windows Server 2012 R2   | Microsoft Visual C++ 2015-2019 再頒布可能パッケージ [64 ビット][vcc64] / [32 ビット][vcc32] |
 
-以下をインストールします。
+上記の要件は、次のいずれかの dll に関するエラーが発生した場合にも必要です。
 
-- [Microsoft Visual C++ 2015 再頒布可能パッケージ Update 3](https://www.microsoft.com/download/details.aspx?id=52685)。
-- [KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot)
-
-上記の要件は、次のいずれかのエラーが発生した場合にも必要です。
-
-> お使いのコンピューターに *api-ms-win-crt-runtime-l1-1-0.dll* が見つからず、プログラムを開始できない。 この問題を解決するには、プログラムを再インストールしてください。
->
-> \- または
->
-> お使いのコンピューターに *api-ms-win-cor-timezone-l1-1-0.dll* が見つからず、プログラムを開始できない。 この問題を解決するには、プログラムを再インストールしてください。
->
-> \- または
->
-> ライブラリ *hostfxr.dll* は見つかったが、その *C:\\\<path_to_app>\\hostfxr.dll* からの読み込みに失敗した。
+- *api-ms-win-crt-runtime-l1-1-0.dll*
+- *api-ms-win-cor-timezone-l1-1-0.dll*
+- *hostfxr.dll*
 
 ## <a name="install-with-powershell-automation"></a>PowerShell オートメーションを使用してインストールする
 
@@ -318,3 +309,7 @@ Docker コンテナー内で .NET を使用する方法の詳細については�
 - [チュートリアル: NET Core アプリをコンテナー化する](../docker/build-container.md)。
 
 [esu]: /troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq
+[vcc64]: https://aka.ms/vs/16/release/vc_redist.x64.exe
+[vcc32]: https://aka.ms/vs/16/release/vc_redist.x86.exe
+[kb64]: https://www.microsoft.com/en-us/download/details.aspx?id=47442
+[kb32]: https://www.microsoft.com/en-us/download/details.aspx?id=47409

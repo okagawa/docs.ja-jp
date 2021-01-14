@@ -1,13 +1,13 @@
 ---
 title: Azure Container Instances (ACI) に Windows コンテナーをデプロイするタイミング
 description: Azure Cloud と Windows コンテナーで既存の .NET アプリケーションを最新化する | Azure Container Instances (ACI) に Windows コンテナーをデプロイするタイミング
-ms.date: 04/29/2018
-ms.openlocfilehash: 6c889db6f0475f24a196144c7fb62faec4c173ed
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 12/21/2020
+ms.openlocfilehash: 556fe7cbec7d259db9ec886b777feda9eed09116
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989156"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025134"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Azure Container Instances (ACI) に Windows コンテナーをデプロイするタイミング
 
