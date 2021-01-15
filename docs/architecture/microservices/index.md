@@ -1,23 +1,23 @@
 ---
 title: .NET マイクロサービス。 コンテナー化された .NET アプリケーションのアーキテクチャ
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービスはモジュール式で独自に展開可能なサービスです。 Docker コンテナー (Linux と Windows 向け) は、サービスとその依存関係を 1 つの単位にバンドル化する (その後、分離された環境で実行される) ことで、展開とテストを簡略化します。
-ms.date: 11/10/2020
-ms.openlocfilehash: 2055dacd46f90ba3714edb1437bcacad4c175e65
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.date: 01/13/2021
+ms.openlocfilehash: a9017d2e9acbcbb861a35f0187632dc90c52e171
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507268"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188375"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ
 
 ![本の表紙](./media/cover-small.png)
 
-**エディション v3.1** - ASP.NET Core 3.1 に更新
+**エディション v5.0** - ASP.NET Core 5.0 に更新されました
 
 書籍の更新とコミュニティへの投稿については、「[changelog](https://aka.ms/MicroservicesEbookChangelog)」を参照してください。
 
-このガイドでは、マイクロサービス ベースのアプリケーションの開発とコンテナーを使用してこれらを管理する方法を紹介します。 .NET Core と Docker のコンテナーを使用したアーキテクチャの設計と実装アプローチについて説明します。
+このガイドでは、マイクロサービス ベースのアプリケーションの開発とコンテナーを使用してこれらを管理する方法を紹介します。 .NET と Docker のコンテナーを使用したアーキテクチャの設計と実装アプローチについて説明します。
 
 使用開始を容易にするため、このガイドでは、ユーザーが探究できるコンテナー化されたマイクロサービス ベースの参照アプリケーションに重点を置いています。 参照アプリケーションは、[eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) GitHub リポジトリから入手できます。
 
@@ -41,15 +41,15 @@ Docker は、コンテナー業界では事実上の標準になりつつあり�
 
 ## <a name="about-this-guide"></a>このガイドについて
 
-このガイドでは、マイクロサービス ベースのアプリケーションの開発とコンテナーを使用してこれらを管理する方法を紹介します。 .NET Core と Docker のコンテナーを使用したアーキテクチャの設計と実装アプローチについて説明します。 コンテナーとマイクロサービスの使用の開始を容易にするため、このガイドでは、ユーザーが探究できる参照コンテナー化されたマイクロサービス ベースのアプリケーションに重点を置いています。 サンプル アプリケーションは、[eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) GitHub リポジトリから入手できます。
+このガイドでは、マイクロサービス ベースのアプリケーションの開発とコンテナーを使用してこれらを管理する方法を紹介します。 .NET と Docker のコンテナーを使用したアーキテクチャの設計と実装アプローチについて説明します。 コンテナーとマイクロサービスの使用の開始を容易にするため、このガイドでは、ユーザーが探究できる参照コンテナー化されたマイクロサービス ベースのアプリケーションに重点を置いています。 サンプル アプリケーションは、[eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) GitHub リポジトリから入手できます。
 
-このガイドでは、基本的な開発とアーキテクチャに関する、主に開発環境レベルでのガイダンスが提供されます。重点は 2 つのテクノロジ:Docker と .NET Core に置かれます。 このガイドは、運用環境のインフラストラクチャ (クラウドまたはオンプレミス) を重視することなく、アプリケーションの設計について考慮する際にお読みいただくことを意図しています。 インフラストラクチャに関する決定は、後で実稼働可能なアプリケーションを作成するときに行います。 そのため、このガイドは、インフラストラクチャに依存しない、より開発環境中心としたものになることを意図しています。
+このガイドでは、基本的な開発とアーキテクチャに関する、主に開発環境レベルでのガイダンスが提供されます。重点は 2 つのテクノロジ:Docker と .NET に置かれます。 このガイドは、運用環境のインフラストラクチャ (クラウドまたはオンプレミス) を重視することなく、アプリケーションの設計について考慮する際にお読みいただくことを意図しています。 インフラストラクチャに関する決定は、後で実稼働可能なアプリケーションを作成するときに行います。 そのため、このガイドは、インフラストラクチャに依存しない、より開発環境中心としたものになることを意図しています。
 
 このガイドで学習したら、次の段階は Microsoft Azure での実稼働可能なマイクロサービスについて学習することです。
 
 ## <a name="version"></a>バージョン
 
-このガイドは、 **.NET Core 3.1** バージョンと、.NET Core 3.1 のリリースと同時期に更新された関連するその他の多数の同じ “相次ぐ” テクノロジ (つまり、Azure やサードパーティ製のテクノロジ) を説明するように改訂されています。 本書がバージョン **3.1** に更新されているのはそれが理由です。
+このガイドは、 **.NET 5** バージョンと、.NET 5 のリリースと同時期に更新された関連するその他の多数の同じ “相次ぐ” テクノロジ (つまり、Azure やサードパーティ製のテクノロジ) を説明するように改訂されています。 本書がバージョン **5.0** に更新されているのはそれが理由です。
 
 ## <a name="what-this-guide-does-not-cover"></a>このガイドに含まれないもの
 
@@ -62,7 +62,7 @@ Docker は、コンテナー業界では事実上の標準になりつつあり�
 
 ## <a name="who-should-use-this-guide"></a>対象読者
 
-このガイドは、Docker ベースのアプリケーションの開発とマイクロサービス ベースのアーキテクチャに詳しくない開発者およびソリューション設計者を対象にしています。 このガイドは、Microsoft 開発テクノロジ (特に .NET Core を中心とした) と Docker コンテナーを使用して、概念実証アプリケーションの設計、デザインおよび実装する方法を学習したい人向けに書かれています。
+このガイドは、Docker ベースのアプリケーションの開発とマイクロサービス ベースのアーキテクチャに詳しくない開発者およびソリューション設計者を対象にしています。 このガイドは、Microsoft 開発テクノロジ (特に .NET を中心とした) と Docker コンテナーを使用して、概念実証アプリケーションの設計、デザインおよび実装する方法を学習したい人向けに書かれています。
 
 新しいモダンな分散アプリケーションにどのアプローチを選択するかを決定する前に、アーキテクチャとテクノロジーの概要を必要とする、エンタープライズ アーキテクトなどの技術的意思決定者にもこのガイドは役立ちます。
 
@@ -74,9 +74,9 @@ Docker は、コンテナー業界では事実上の標準になりつつあり�
 
 ## <a name="related-microservice-and-container-based-reference-application-eshoponcontainers"></a>関連するマイクロサービスとコンテナー ベースの参照アプリケーション: eShopOnContainers
 
-eShopOnContainers アプリケーションは、 Docker コンテナーを使用して展開するように設計された .NET Core とマイクロサービスのためのオープン ソースの参照アプリです。 アプリケーションは、さまざまな e ストア UI フロントエンド (Web MVC アプリ、Web SPA、およびネイティブ モバイル アプリ) を含む複数のサブシステムで構成されます。 また、バック エンドのマイクロサービスと必要なサーバー側のすべての操作のためのコンテナーも含まれています。
+eShopOnContainers アプリケーションは、Docker コンテナーを使用して展開するように設計された .NET とマイクロサービスのためのオープンソースの参照アプリです。 アプリケーションは、さまざまな e ストア UI フロントエンド (Web MVC アプリ、Web SPA、およびネイティブ モバイル アプリ) を含む複数のサブシステムで構成されます。 また、バック エンドのマイクロサービスと必要なサーバー側のすべての操作のためのコンテナーも含まれています。
 
-このアプリケーションの目的は、アーキテクチャのパターンを紹介することです。 それは、現実の世界で使用されるアプリケーションを開始するための **実稼働可能なテンプレートではありません** 。 実際は、このアプリケーションは永久にベータ版の状態であり、新しい可能性のある興味深いテクノロジをテストするためにも使用されます。
+このアプリケーションの目的は、アーキテクチャのパターンを紹介することです。 それは、現実の世界で使用されるアプリケーションを開始するための **実稼働可能なテンプレートではありません**。 実際は、このアプリケーションは永久にベータ版の状態であり、新しい可能性のある興味深いテクノロジをテストするためにも使用されます。
 
 ## <a name="send-us-your-feedback"></a>フィードバックをお寄せください。
 
@@ -86,11 +86,11 @@ eShopOnContainers アプリケーションは、 Docker コンテナーを使用
 
 共同作成者:
 
-> **Cesar de la Torre** 、Microsoft Corp.、.NET 製品チーム、シニア PM
+> **Cesar de la Torre**、Microsoft Corp.、.NET 製品チーム、シニア PM
 >
-> **Bill Wagner** 、Microsoft Corp.、C+E、シニア コンテンツ開発者
+> **Bill Wagner**、Microsoft Corp.、C+E、シニア コンテンツ開発者
 >
-> **Mike Rousos** 、Microsoft、DevDiv CAT チーム、主任ソフトウェア エンジニア
+> **Mike Rousos**、Microsoft、DevDiv CAT チーム、主任ソフトウェア エンジニア
 
 編集者:
 
@@ -100,55 +100,55 @@ eShopOnContainers アプリケーションは、 Docker コンテナーを使用
 
 参加者とレビュー担当者:
 
-> **Jeffrey Richter** 、Microsoft、Azure チーム、パートナー ソフトウェア エンジニア
+> **Jeffrey Richter**、Microsoft、Azure チーム、パートナー ソフトウェア エンジニア
 >
-> **Jimmy Bogard** 、Headspring のチーフ アーキテクト
+> **Jimmy Bogard**、Headspring のチーフ アーキテクト
 >
-> **Udi Dahan** 、Particular Software、創設者兼最高経営責任者
+> **Udi Dahan**、Particular Software、創設者兼最高経営責任者
 >
-> **Jimmy Nilsson** 、Factor10 の共同創始者兼最高経営責任者
+> **Jimmy Nilsson**、Factor10 の共同創始者兼最高経営責任者
 >
-> **Glenn Condron** 、ASP.NET チーム、シニア プログラム マネージャー
+> **Glenn Condron**、ASP.NET チーム、シニア プログラム マネージャー
 >
-> **Mark Fussell** 、Microsoft、Azure Service Fabric チーム、プリンシパル PM リーダー
+> **Mark Fussell**、Microsoft、Azure Service Fabric チーム、プリンシパル PM リーダー
 >
-> **Diego Vega** 、Microsoft、Entity Framework チーム、PM リーダー
+> **Diego Vega**、Microsoft、Entity Framework チーム、PM リーダー
 >
-> **Barry Dorrans** 、シニア セキュリティ プログラム マネージャー
+> **Barry Dorrans**、シニア セキュリティ プログラム マネージャー
 >
-> **Rowan Miller** 、Microsoft、シニア プログラム マネージャー
+> **Rowan Miller**、Microsoft、シニア プログラム マネージャー
 >
-> **Ankit Asthana** 、Microsoft、.NET チーム、主任 PM マネージャー
+> **Ankit Asthana**、Microsoft、.NET チーム、主任 PM マネージャー
 >
-> **Scott Hunter** 、Microsoft、.NET チーム、パートナー ディレクター PM
+> **Scott Hunter**、Microsoft、.NET チーム、パートナー ディレクター PM
 >
-> **Nish Anil** 、Microsoft、.NET チーム、シニア プログラム マネージャー
+> **Nish Anil**、Microsoft、.NET チーム、シニア プログラム マネージャー
 >
-> **Dylan Reisenberger** 、Polly のアーキテクト兼開発リーダー
+> **Dylan Reisenberger**、Polly のアーキテクト兼開発リーダー
 >
 > **Steve "ardalis" Smith** - ソフトウェア アーキテクトおよびトレーナー - [Ardalis.com](https://ardalis.com)
 >
-> **Ian Cooper** 、Brighter のコーディング アーキテクト
+> **Ian Cooper**、Brighter のコーディング アーキテクト
 >
-> **Unai Zorrilla** 、Plain Concepts のアーキテクト兼開発リーダー
+> **Unai Zorrilla**、Plain Concepts のアーキテクト兼開発リーダー
 >
-> **Eduard Tomas** 、Plain Concepts の開発リーダー
+> **Eduard Tomas**、Plain Concepts の開発リーダー
 >
-> **Ramon Tomas** 、Plain Concepts の開発者
+> **Ramon Tomas**、Plain Concepts の開発者
 >
-> **David Sanz** 、Plain Concepts の開発者
+> **David Sanz**、Plain Concepts の開発者
 >
-> **Javier Valero** 、Grupo Solutio の最高執行責任者
+> **Javier Valero**、Grupo Solutio の最高執行責任者
 >
-> **Pierre Millet** 、Microsoft、シニア コンサルタント
+> **Pierre Millet**、Microsoft、シニア コンサルタント
 >
-> **Michael Friis** 、Docker Inc、製品マネージャー
+> **Michael Friis**、Docker Inc、製品マネージャー
 >
-> **Charles Lowell** 、Microsoft、VS CAT チーム、ソフトウェア エンジニア
+> **Charles Lowell**、Microsoft、VS CAT チーム、ソフトウェア エンジニア
 >
-> **Miguel Veloso** 、Plain Concepts のソフトウェア開発エンジニア
+> **Miguel Veloso**、Plain Concepts のソフトウェア開発エンジニア
 >
-> **Sumit Ghosh** 、Neudesic、主席コンサルタント
+> **Sumit Ghosh**、Neudesic、主席コンサルタント
 
 ## <a name="copyright"></a>Copyright
 

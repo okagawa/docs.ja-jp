@@ -4,12 +4,12 @@ description: .NET SDK によって認識される MSBuild のプロパティと�
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 27944a6726f8d74a3b00c7c774faa8037c0f2f0e
-ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
+ms.openlocfilehash: e7deb8c32fd01452524122e41f758ab037020ee4
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97899627"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970708"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK プロジェクトの MSBuild リファレンス
 
@@ -81,11 +81,37 @@ ms.locfileid: "97899627"
 
 ## <a name="publish-properties-and-items"></a>プロパティと項目の発行
 
+- [AppendRuntimeIdentifierToOutputPath](#appendruntimeidentifiertooutputpath)
+- [AppendTargetFrameworkToOutputPath](#appendtargetframeworktooutputpath)
 - [CopyLocalLockFileAssemblies](#copylocallockfileassemblies)
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
 - [TrimmerRootAssembly](#trimmerrootassembly)
 - [UseAppHost](#useapphost)
+
+### <a name="appendtargetframeworktooutputpath"></a>AppendTargetFrameworkToOutputPath
+
+`AppendTargetFrameworkToOutputPath` プロパティは、[ターゲット フレームワーク モニカー (TFM)](../../standard/frameworks.md) を出力パス ([OutputPath](/visualstudio/msbuild/common-msbuild-project-properties#list-of-common-properties-and-parameters) で定義されている) に追加するかどうかを制御します。 .NET SDK はターゲット フレームワークを、それが存在する場合にはランタイム識別子を出力パスに自動的に追加します。 `AppendTargetFrameworkToOutputPath` を `false` に設定すると、TFM が出力パスに追加されなくなります。 ただし、出力パスに TFM がないと、複数のビルド成果物が相互に上書きされる可能性があります。
+
+たとえば、.NET 5.0 アプリの場合、出力パスは次の設定を使用して `bin\Debug\net5.0` から `bin\Debug` に変更されます。
+
+```xml
+<PropertyGroup>
+  <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+</PropertyGroup>
+```
+
+### <a name="appendruntimeidentifiertooutputpath"></a>AppendRuntimeIdentifierToOutputPath
+
+`AppendRuntimeIdentifierToOutputPath` プロパティは、[ランタイム識別子 (RID)](../rid-catalog.md) を出力パスに追加するかどうかを制御します。 .NET SDK はターゲット フレームワークを、それが存在する場合にはランタイム識別子を出力パスに自動的に追加します。 `AppendRuntimeIdentifierToOutputPath` を `false` に設定すると、RID が出力パスに追加されなくなります。
+
+たとえば、.NET 5.0 アプリで RID が `win10-x64` の場合、出力パスは次の設定を使用して `bin\Debug\net5.0\win10-x64` から `bin\Debug\net5.0` に変更されます。
+
+```xml
+<PropertyGroup>
+  <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+</PropertyGroup>
+```
 
 ### <a name="copylocallockfileassemblies"></a>CopyLocalLockFileAssemblies
 
@@ -181,7 +207,86 @@ ms.locfileid: "97899627"
 
 詳細については、「[C# 言語のバージョン管理](../../csharp/language-reference/configure-language-version.md#override-a-default)」を参照してください。
 
+## <a name="default-item-inclusion-properties"></a>既定の項目の包含プロパティ
+
+- [DefaultExcludesInProjectFolder](#defaultexcludesinprojectfolder)
+- [DefaultItemExcludes](#defaultitemexcludes)
+- [EnableDefaultCompileItems](#enabledefaultcompileitems)
+- [EnableDefaultEmbeddedResourceItems](#enabledefaultembeddedresourceitems)
+- [EnableDefaultItems](#enabledefaultitems)
+- [EnableDefaultNoneItems](#enabledefaultnoneitems)
+
+詳細については、「[既定で含まれるものと除外されるもの](overview.md#default-includes-and-excludes)」を参照してください。
+
+### <a name="defaultitemexcludes"></a>DefaultItemExcludes
+
+`DefaultItemExcludes` プロパティを使用して、含まれる、除外される、および削除の glob から除外するファイルとフォルダーの glob パターンを定義します。 既定では、 *./bin* および *./obj* フォルダーは、glob パターンから除外されます。
+
+```xml
+<PropertyGroup>
+  <DefaultItemExcludes>$(DefaultItemExcludes);**/*.myextension</DefaultItemExcludes>
+</PropertyGroup>
+```
+
+### <a name="defaultexcludesinprojectfolder"></a>DefaultExcludesInProjectFolder
+
+`DefaultExcludesInProjectFolder` プロパティを使用して、含まれる、除外される、および削除の glob から除外する、プロジェクト フォルダーのファイルとフォルダーの glob パターンを定義します。 既定では、ピリオド (`.`) で始まるフォルダー ( *.git* や *.vs* など) は、glob パターンから除外されます。
+
+このプロパティは、プロジェクト フォルダー内のファイルとフォルダーのみが考慮される点を除いて、`DefaultItemExcludes` プロパティとよく似ています。 glob パターンが意図せずにプロジェクト フォルダー外の項目と相対パスを照合する場合は、`DefaultItemExcludes` プロパティの代わりに `DefaultExcludesInProjectFolder` プロパティを使用します。
+
+```xml
+<PropertyGroup>
+  <DefaultExcludesInProjectFolder>$(DefaultExcludesInProjectFolder);**/myprefix*/**</DefaultExcludesInProjectFolder>
+</PropertyGroup>
+```
+
+### <a name="enabledefaultitems"></a>EnableDefaultItems
+
+`EnableDefaultItems` プロパティは、コンパイル項目、埋め込みリソース項目、および `None` 項目がプロジェクトに暗黙的に含まれるかどうかを制御します。 既定値は `true` です。 `EnableDefaultItems` プロパティを `false` に設定して、暗黙的なファイルの組み込みをすべて無効にします。
+
+```xml
+<PropertyGroup>
+  <EnableDefaultItems>false</EnableDefaultItems>
+</PropertyGroup>
+```
+
+### <a name="enabledefaultcompileitems"></a>EnableDefaultCompileItems
+
+`EnableDefaultCompileItems` プロパティは、コンパイル項目がプロジェクトに暗黙的に含まれるかどうかを制御します。 既定値は `true` です。 `EnableDefaultCompileItems` プロパティを `false` に設定して、*.cs およびその他の言語拡張ファイルの暗黙的な包含を無効にします。
+
+```xml
+<PropertyGroup>
+  <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+</PropertyGroup>
+```
+
+### <a name="enabledefaultembeddedresourceitems"></a>EnableDefaultEmbeddedResourceItems
+
+`EnableDefaultEmbeddedResourceItems` プロパティは、埋め込みリソース項目がプロジェクトに暗黙的に含まれるかどうかを制御します。 既定値は `true` です。 埋め込みリソース ファイルの暗黙的な包含を無効にするには、`EnableDefaultEmbeddedResourceItems` プロパティを `false` に設定します。
+
+```xml
+<PropertyGroup>
+  <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+</PropertyGroup>
+```
+
+### <a name="enabledefaultnoneitems"></a>EnableDefaultNoneItems
+
+`EnableDefaultNoneItems` プロパティは、`None` 項目 (ビルド プロセスでロールがないファイル) がプロジェクトに暗黙的に含まれるかどうかを制御します。 既定値は `true` です。 `EnableDefaultNoneItems` プロパティを `false` に設定して、`None` 項目の暗黙的な包含を無効にします。
+
+```xml
+<PropertyGroup>
+  <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
+</PropertyGroup>
+```
+
 ## <a name="code-analysis-properties"></a>コード分析のプロパティ
+
+- [AnalysisLevel](#analysislevel)
+- [AnalysisMode](#analysismode)
+- [CodeAnalysisTreatWarningsAsErrors](#codeanalysistreatwarningsaserrors)
+- [EnableNETAnalyzers](#enablenetanalyzers)
+- [EnforceCodeStyleInBuild](#enforcecodestyleinbuild)
 
 ### <a name="analysislevel"></a>AnalysisLevel
 
@@ -471,7 +576,7 @@ ms.locfileid: "97899627"
 
 ### <a name="runworkingdirectory"></a>RunWorkingDirectory
 
-`RunWorkingDirectory` プロパティを使用すると、開始するアプリケーション プロセスの作業ディレクトリが定義されます。 ディレクトリを指定しない場合、作業ディレクトリとして `OutDir` が使用されます。
+`RunWorkingDirectory` プロパティを使用すると、開始するアプリケーション プロセスの作業ディレクトリが定義されます。 絶対パスまたはプロジェクト ディレクトリに対する相対パスを指定できます。 ディレクトリを指定しない場合、作業ディレクトリとして `OutDir` が使用されます。
 
 ```xml
 <PropertyGroup>
@@ -479,7 +584,7 @@ ms.locfileid: "97899627"
 </PropertyGroup>
 ```
 
-## <a name="hosting-properties-and-items"></a>ホストのプロパティと項目
+## <a name="hosting-properties"></a>ホストのプロパティ
 
 - [EnableComHosting](#enablecomhosting)
 - [EnableDynamicLoading](#enabledynamicloading)

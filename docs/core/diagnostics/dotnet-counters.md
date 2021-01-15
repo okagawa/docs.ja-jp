@@ -2,12 +2,12 @@
 title: dotnet-counters 診断ツール - .NET CLI
 description: dotnet-counter CLI ツールをインストールし、アドホックな正常性監視と最初のレベルのパフォーマンス調査に使用する方法について学習します。
 ms.date: 11/17/2020
-ms.openlocfilehash: 89695c77e7913d41f030890be7cc00947e42fa3a
-ms.sourcegitcommit: e395fabeeea5c705d243d246fa64446839ac85b6
+ms.openlocfilehash: 44d74cfaca7483b1506fe7ad762818e9b9ed7d63
+ms.sourcegitcommit: 0273f8845eb1ea8de64086bef2271b4f22182c91
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2021
-ms.locfileid: "97856056"
+ms.lasthandoff: 01/09/2021
+ms.locfileid: "98058091"
 ---
 # <a name="investigate-performance-counters-dotnet-counters"></a>パフォーマンス カウンターを調べる (dotnet-counters)
 
@@ -220,7 +220,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--diagnostic-
   > このオプションを使用して、ツールに応答する最初の .NET 5.0 プロセスを監視します。つまり、コマンドから複数の .NET アプリケーションを起動する場合、最初のアプリのみ収集されます。 このため、このオプションについては、自己完結型アプリケーションに対して使用するか、または `dotnet exec <app.dll>` オプションを使用することをお勧めします。
 
   > [!NOTE]
-  > dotnet-counters を使用して .NET 実行可能ファイルを起動すると、その入力/出力がリダイレクトされ、その stdin/stdout とやりとりができなくなります。 CTRL + C または SIGTERM を介してツールを終了すると、ツールと子プロセスの両方が安全に終了します。 ツールの前に子プロセスが終了すると、ツールも終了し、トレースを安全に表示できるようになります。 stdin/stdout を使用する必要がある場合は、`--diagnostic-port` オプションを使用します。 詳細については、「[診断ポートの使用](#using-diagnostic-port)」を参照してください。
+  > dotnet-counters を使用して .NET 実行可能ファイルを起動すると、その入力/出力がリダイレクトされ、その stdin/stdout とやりとりができなくなります。 CTRL + C または SIGTERM を介してツールを終了すると、ツールと子プロセスの両方が安全に終了します。 ツールの前に子プロセスが終了すると、ツールも終了します。 stdin/stdout を使用する必要がある場合は、`--diagnostic-port` オプションを使用します。 詳細については、「[診断ポートの使用](#using-diagnostic-port)」を参照してください。
 
 ### <a name="examples"></a>例
 

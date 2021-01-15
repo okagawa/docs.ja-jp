@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.custom: devx-track-dotnet
 ms.author: daberry
 author: daberry
-ms.openlocfilehash: 43737aaf5dfd02b8c4ffa6c213d7221cfe38162f
-ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
+ms.openlocfilehash: aa2739cc6c11145887e64921398c72affeaec729
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97700972"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025030"
 ---
 # <a name="install-the-azure-cli"></a>Azure CLI のインストール
 
@@ -35,3 +35,7 @@ Azure CLI は、Windows、macOS、Linux で使用できます。
 Azure Cloud Shell ([https://shell.azure.com](https://shell.azure.com)) でも Azure CLI を使用することができます。  Azure Cloud Shell は、Azure リソースを管理するための、完全に機能するブラウザーベースのシェルです。  Azure Cloud Shell は、コマンドライン環境が必要だが、Azure CLI をインストールできないデバイスで作業している場合に役立ちます。
 
 ![ブラウザーで実行されている Azure Cloud Shell のスクリーンショット](media/azure-cloud-shell.png)
+
+### <a name="next-steps"></a>次のステップ
+
+次に、Azure を使用して生産性を向上させるために、Azure Storage Explorer や Azure Data Studio などの[追加の Azure ツールをインストール](./azure-tools.md)します。

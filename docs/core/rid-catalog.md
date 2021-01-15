@@ -2,12 +2,12 @@
 title: .NET Core ランタイム識別子 (RID) のカタログ
 description: ランタイム識別子 (RID) と .NET Core での RID の使用方法について説明します。
 ms.date: 12/15/2020
-ms.openlocfilehash: f818ab2d503be7960d9eb8450a7dd749766637a6
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 6b45c42d626de41c7d67c66aac7dc31c51c36a22
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633612"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970669"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core の RID カタログ
 
@@ -39,7 +39,7 @@ RID は *ランタイム識別子* の略です。 RID の値は、アプリケ�
 
 ## <a name="rid-graph"></a>RID グラフ
 
-RID グラフまたはランタイム フォールバック グラフとは、相互に互換性のある RID の一覧です。 RID は [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) パッケージで定義されています。 サポートされている RID および RID グラフの一覧は、`dotnet/runtime` リポジトリにある [*runtime.json*](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) ファイルで確認できます。 このファイルでは、基本となる RID を除くすべての RID に `"#import"` ステートメントが記述されていることを確認できます。 このステートメントは互換性のある RID を示しています。
+RID グラフまたはランタイム フォールバック グラフとは、相互に互換性のある RID の一覧です。 RID は [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) パッケージで定義されています。 サポートされている RID および RID グラフの一覧は、`dotnet/runtime` リポジトリにある [*runtime.json*](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json) ファイルで確認できます。 このファイルでは、基本となる RID を除くすべての RID に `"#import"` ステートメントが記述されていることを確認できます。 このステートメントは互換性のある RID を示しています。
 
 NuGet はパッケージを復元する際、指定されたランタイムと正確に一致するものを見つけようとします。
 正確に一致するものが見つからない場合、NuGet は、RID グラフに基づいて最も互換性のあるシステムが見つかるまでグラフを遡ります。
@@ -80,7 +80,7 @@ RID を使用する際に留意しておく必要のある注意事項があり�
 ## <a name="using-rids"></a>RID の使用
 
 RID を使用するには、どのような RID があるのか知る必要があります。 プラットフォームには新しい RID が定期的に追加されます。
-最新の完全なバージョンについては、`dotnet/runtime` リポジトリの [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) ファイルをご覧ください。
+最新の完全なバージョンについては、`dotnet/runtime` リポジトリの [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json) ファイルをご覧ください。
 
 .NET Core 2.0 SDK には、ポータブル RID の概念が導入されています。 それらは、RID グラフに新しく追加された値であり、特定のバージョンや OS のディストリビューションに関連付けられていません。 .NET Core 2.0 以降を使用するときは、それらを選択することをお勧めします。 ほとんどのディストリビューション RID はポータブル RID にマップされるため、複数の Linux ディストリビューションを扱うときは特に便利です。
 
@@ -88,7 +88,7 @@ RID を使用するには、どのような RID があるのか知る必要が�
 
 ## <a name="windows-rids"></a>Windows RID
 
-一般的な値のみを示します。 最新の完全なバージョンについては、`dotnet/runtime` リポジトリの [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) ファイルをご覧ください。
+一般的な値のみを示します。 最新の完全なバージョンについては、`dotnet/runtime` リポジトリの [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json) ファイルをご覧ください。
 
 - ポータブル (.NET Core 2.0 以降のバージョン)
   - `win-x64`
@@ -112,7 +112,7 @@ RID を使用するには、どのような RID があるのか知る必要が�
 
 ## <a name="linux-rids"></a>Linux RID
 
-一般的な値のみを示します。 最新の完全なバージョンについては、`dotnet/runtime` リポジトリの [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) ファイルをご覧ください。 以下の一覧にないディストリビューションが実行されているデバイスでも、ポータブル RID のいずれかで動作する可能性があります。 たとえば、一覧にない Linux ディストリビューションが実行されている Raspberry Pi デバイスは、`linux-arm` の対象にできます。
+一般的な値のみを示します。 最新の完全なバージョンについては、`dotnet/runtime` リポジトリの [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json) ファイルをご覧ください。 以下の一覧にないディストリビューションが実行されているデバイスでも、ポータブル RID のいずれかで動作する可能性があります。 たとえば、一覧にない Linux ディストリビューションが実行されている Raspberry Pi デバイスは、`linux-arm` の対象にできます。
 
 - 移植性があります。
   - `linux-x64` (CentOS、Debian、Fedora、Ubuntu、および派生ディストリビューションなどのほとんどのデスクトップ ディストリビューション)
@@ -131,7 +131,7 @@ RID を使用するには、どのような RID があるのか知る必要が�
 
 ## <a name="macos-rids"></a>macOS RID
 
-macOS RID では、以前の "OSX" ブランドが使用されています。 一般的な値のみを示します。 最新の完全なバージョンについては、`dotnet/runtime` リポジトリの [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) ファイルをご覧ください。
+macOS RID では、以前の "OSX" ブランドが使用されています。 一般的な値のみを示します。 最新の完全なバージョンについては、`dotnet/runtime` リポジトリの [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json) ファイルをご覧ください。
 
 - 移植性があります。
   - `osx-x64` (最小 OS バージョンは、macOS 10.12 Sierra です)
@@ -155,4 +155,4 @@ macOS RID では、以前の "OSX" ブランドが使用されています。 �
 
 ## <a name="see-also"></a>関連項目
 
-- [ランタイム ID](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/readme.md)
+- [ランタイム ID](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.NETCore.Platforms/readme.md)
