@@ -1,7 +1,8 @@
 ---
 description: C# リファレンス
 title: C# リファレンス
-ms.date: 02/14/2017
+ms.date: 01/13/2021
+ms.custom: updateeachrelease
 f1_keywords:
 - _CSharpKeyword
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 317f375c46eee3bb9c719afb68993cd4720e54fe
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 663d08921b1fb6c5013ce8dddb044ba12ead8409
+ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89127192"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98235236"
 ---
 # <a name="c-reference"></a>C# リファレンス
 
@@ -61,7 +62,10 @@ C# 6.0 より後のバージョンで実装された機能は、言語仕様の�
   
  [C# 8.0 仕様の提案](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
  C# 8.0 は .NET Core 3.0 で使用できます。 null 許容参照型、再帰的なパターン マッチング、既定のインターフェイス メソッド、非同期ストリーム、範囲とインデックス、using および using 宣言に基づくパターン、null 合体演算子割り当て、読み取り専用インスタンス メンバーなどの機能が含まれています。
-  
+
+ [C# 9.0 仕様の提案](../../../_csharplang/proposals/csharp-9.0/records.md)  
+ C# 9.0 は .NET 5.0 で使用できます。 特徴としては、レコード、最上位のステートメント、パターン マッチングの拡張、初期化のみのセッター、ターゲット型の新しい式、モジュール初期化子、部分メソッドの拡張、静的匿名関数、型指定された条件式、共変の戻り値の型、foreach ループでの拡張機能 GetEnumerator、ラムダ ディスカード パラメーター、ローカル関数の属性、ネイティブ サイズの整数、関数ポインター、localsinit フラグの出力の抑制、制約のない型パラメーターの注釈が含まれます。
+
 ## <a name="related-sections"></a>関連項目  
 
  [C# 用 Visual Studio 開発環境の使用](/visualstudio/get-started/csharp)  
