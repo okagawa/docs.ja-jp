@@ -8,19 +8,19 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-ms.openlocfilehash: 4ea1954841696ef28cceca2968e750d9771be038
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 45ae10a92b66bc1b487e3ed4e1e29b6905b895f5
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543712"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190781"
 ---
 # <a name="install-the-net-framework-for-developers"></a>開発者向けの .NET Framework のインストール
 
 .NET は、Windows 上で実行されている多数のアプリケーションに不可欠な部分であり、それらのアプリケーションが稼働するための共通の機能を提供します。 .NET Framework は、視覚的に美しいユーザー エクスペリエンスと、シームレスでありながらもセキュリティで保護された通信機能を備えたアプリケーションを構築するための包括的で一貫性のあるプログラミング モデルを開発者に提供します。
 
 > [!NOTE]
-> このトピックは、独自のシステムに .NET Framework をインストールする**開発者**や自分のアプリケーションで .NET Framework をインストールする開発者のために作成されています。 .NET Framework のインストールに関心がある**ユーザー**は、個別トピックをご覧ください。[Windows 10 と Windows Server 2016 に .NET Framework をインストールする方法](on-windows-10.md)など、特定のオペレーティング システムに .NET Framework をインストールする方法を紹介しています。
+> このトピックは、独自のシステムに .NET Framework をインストールする **開発者** や自分のアプリケーションで .NET Framework をインストールする開発者のために作成されています。 .NET Framework のインストールに関心がある **ユーザー** は、個別トピックをご覧ください。[Windows 10 と Windows Server 2016 に .NET Framework をインストールする方法](on-windows-10.md)など、特定のオペレーティング システムに .NET Framework をインストールする方法を紹介しています。
 
 この記事では、.NET Framework 4.5 から .NET Framework 4.8 までのすべての .NET Framework バージョンをご利用のコンピューターにインストールするためのリンクを示します。 開発者の場合、これらのリンクを使用して、.NET Framework をダウンロードし、アプリと共に .NET Framework を再配布することもできます。 アプリと一緒に .NET Framework のバージョンを配置する方法の詳細については、「[.NET Framework 配置ガイド (開発者向け)](../deployment/deployment-guide-for-developers.md)」をご覧ください。
 
@@ -48,7 +48,7 @@ ms.locfileid: "90543712"
 
 .NET Framework の特定のバージョンの **Developer Pack** は、利用可能な場合には、サポートされているすべてのプラットフォームにインストールできます。
 
-以下に **Web またはオフライン インストーラー**をインストールできます。
+以下に **Web またはオフライン インストーラー** をインストールできます。
 
 - Windows 8.1 以前
 
@@ -119,7 +119,7 @@ Web インストーラーとオフライン インストーラーはどちらも
 
 1. メッセージが表示されたら、システムのアーキテクチャに一致するダウンロードを選択し、 **[次へ]** を選択してください。
 
-1. ダウンロードのプロンプトが表示されたら、次のいずれか **1 つ**を実行します。
+1. ダウンロードのプロンプトが表示されたら、次のいずれか **1 つ** を実行します。
 
    - コンピューターに .NET Framework をインストールする場合は、 **[実行]** を選択し、画面の指示に従います。
 
@@ -134,7 +134,7 @@ Web インストーラーとオフライン インストーラーはどちらも
 
 - .NET Framework 4.0 は、.NET Framework 4.5 以降のバージョンによって置き換えられます。 .NET Framework 4 がインストールされたシステムにこれらのバージョンをインストールすると、アセンブリが置き換えられます。
 
-- .NET Framework 4.5 以降のバージョンをアンインストールすると、前に存在していた .NET Framework 4 ファイルも削除されます。 .NET Framework 4 に戻る場合は、そのバージョンとすべての更新プログラムを再インストールする必要があります。 「[.NET Framework 4 のインストール](https://go.microsoft.com/fwlink/p/?LinkId=230665)」を参照してください。
+- .NET Framework 4.5 以降のバージョンをアンインストールすると、前に存在していた .NET Framework 4 ファイルも削除されます。 .NET Framework 4 に戻る場合は、そのバージョンとすべての更新プログラムを再インストールする必要があります。 「[.NET Framework 4 のインストール](/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))」を参照してください。
 
 - .NET Framework 4.5 以降のバージョンをインストールするには、管理者資格情報が必要です。
 

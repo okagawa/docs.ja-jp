@@ -5,12 +5,12 @@ ms.date: 11/30/2020
 ms.custom: devx-track-dotnet
 ms.author: daberry
 author: daberry
-ms.openlocfilehash: 3ec1ee9e8da3a6e03581ce2a29a655ec0d68fe54
-ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
+ms.openlocfilehash: b547e105b13d380ffae049ab55e76aa25abe8cc3
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97700918"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189201"
 ---
 # <a name="azure-sdk-for-net-overview"></a>Azure SDK for .NET の概要
 
@@ -32,4 +32,4 @@ Azure SDK for .NET は、.NET Core (2.1 以降) と .NET Framework (4.6.1 以上
 
 3. **アプリケーションで SDK を使用してコードを記述する -** Azure サービスを使用する場合は、コードによって、まずサービスと連携するクライアント オブジェクトが作成されてから、そのクライアント オブジェクトでサービスとやり取りするためのメソッドが呼び出されます。  同期メソッドと非同期メソッドの両方が用意されています。  個々の SDK パッケージを使用する例については、Azure ドキュメントを参照してください。
 
-4. **SDK のログを構成する (省略可能) -** アプリケーションと Azure の間の問題を診断する必要がある場合は、[Azure SDK for .NET でログを有効にする](./logging.md)ことができます。
+4. **SDK のログを構成する (省略可能) -** アプリケーションと Azure の間の問題を診断する必要がある場合は、[Azure SDK for .NET でログを有効にする](../logging.md)ことができます。

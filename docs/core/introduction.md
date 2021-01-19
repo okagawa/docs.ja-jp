@@ -4,12 +4,12 @@ description: さまざまな種類のアプリをビルドするための無料�
 author: tdykstra
 ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 0adc348c1fc340fe481d9987cdbe28c6cf8b065d
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.openlocfilehash: e0c86b377d4ea73bb275bc48c0f0cccb2db249dd
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938677"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190001"
 ---
 # <a name="introduction-to-net"></a>.NET の概要
 
@@ -24,7 +24,7 @@ ms.locfileid: "97938677"
   * [Windows フォーム](/dotnet/desktop/winforms/)
   * [ユニバーサル Windows プラットフォーム (UWP)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
 * [ゲーム](https://dotnet.microsoft.com/apps/games)
-* [モノのインターネット (IoT)](/dotnet/iot)
+* [モノのインターネット (IoT)](../iot/index.yml)
 * [Machine Learning](../machine-learning/index.yml)
 * [コンソール アプリ](tutorials/with-visual-studio-code.md)
 * [Windows サービス](/aspnet/core/host-and-deploy/windows-service)

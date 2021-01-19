@@ -2,12 +2,12 @@
 title: dotnet clean コマンド
 description: dotnet clean コマンドは現在のディレクトリを消去します。
 ms.date: 02/14/2020
-ms.openlocfilehash: a59922feba75e940a5cee2dfeb500f4f86372870
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 1023f13c7662abb7dad613128631c7644ca15bb9
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463703"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189604"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
@@ -46,7 +46,7 @@ dotnet clean -h|--help
 
 * **`-f|--framework <FRAMEWORK>`**
 
-  ビルド時に指定された[フレームワーク](../../standard/frameworks.md)です。 フレームワークは、[プロジェクト ファイル](csproj.md)で定義する必要があります。 ビルド時にフレームワークを指定した場合は、消去時にフレームワークを指定する必要があります。
+  ビルド時に指定された[フレームワーク](../../standard/frameworks.md)です。 フレームワークは、[プロジェクト ファイル](../project-sdk/overview.md)で定義する必要があります。 ビルド時にフレームワークを指定した場合は、消去時にフレームワークを指定する必要があります。
 
 * **`-h|--help`**
 

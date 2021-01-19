@@ -3,12 +3,12 @@ title: .NET Web アプリまたはサービスを Azure App Service に移行す
 description: .NET Web アプリまたはサービスをオンプレミスから Azure App Service に移行する方法について説明します。
 ms.topic: conceptual
 ms.date: 07/08/2020
-ms.openlocfilehash: a5e193b2dbaedb86ff0e24bc8b70043896bbeea3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0e2aaa23aedabef007878901ec7297711f140533
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539087"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189253"
 ---
 # <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>.NET Web アプリまたはサービスを Azure App Service に移行する
 
@@ -24,7 +24,7 @@ ms.locfileid: "90539087"
 
 * [Azure Virtual Network](/azure/app-service/web-sites-integrate-with-vnet) を使用して、App Service をオンプレミスのリソースに接続する VPN を作成します。
 * [Azure Relay](/azure/service-bus-relay/relay-what-is-it) を使用して、ファイアウォールを変更せずに、オンプレミス サービスをクラウドに安全に公開します。
-* [SQL データベース](https://go.microsoft.com/fwlink/?linkid=863217)などの依存関係を Azure に移行します。
+* [SQL データベース](./sql.md)などの依存関係を Azure に移行します。
 * クラウドのサービスとしてのプラットフォーム サービスを使用して依存関係を減らします。 たとえば、オンプレミスのメール サーバーに接続するのではなく、[SendGrid](/azure/sendgrid-dotnet-how-to-send-email) を使用することを検討します。
 
 ### <a name="port-bindings"></a>ポートのバインド

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4fd5ed2c-b03a-4054-a3ed-3ddb380d7d9d
-ms.openlocfilehash: 8bfcd8ae5d81c0d04ca7a43e6d5b25a492266605
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9573b1bf9dad77567fee8801a5e612c7efd53b1e
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189345"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98187809"
 ---
 # <a name="method-based-query-syntax-examples-join-linq-to-dataset"></a>メソッド ベースのクエリ構文例:結合 (LINQ to DataSet)
 
@@ -51,5 +51,3 @@ ms.locfileid: "91189345"
 - [LINQ to DataSet の例](linq-to-dataset-examples.md)
 - [標準クエリ演算子の概要 (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [標準クエリ演算子の概要 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [結合のサンプル](https://go.microsoft.com/fwlink/?LinkId=187357)
-- [データセットのサンプル](https://go.microsoft.com/fwlink/?LinkId=187358)

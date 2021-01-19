@@ -1,13 +1,13 @@
 ---
 title: クラウドの CI/CD パイプラインや DevOps ツールでアプリのライフ サイクルを最新化する
 description: Azure クラウドおよび Windows コンテナーを使用して既存の .NET アプリケーションを最新化する | クラウドの CI/CD パイプラインと DevOps ツールを使用してアプリのライフサイクルを最新化する
-ms.date: 12/21/2018
-ms.openlocfilehash: e7ad76edb659fbacfc85cb398ec0c9fe9e3c66c9
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.date: 12/21/2020
+ms.openlocfilehash: f8517ebe8570b8d2be7b49c3cb9e1bc436076af2
+ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98025252"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98235340"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>クラウドの CI/CD パイプラインや DevOps ツールでアプリのライフ サイクルを最新化する
 

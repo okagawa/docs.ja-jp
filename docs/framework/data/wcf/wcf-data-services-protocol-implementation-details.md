@@ -2,12 +2,12 @@
 title: WCF Data Services プロトコル実装の詳細
 ms.date: 03/30/2017
 ms.assetid: 712d689b-fada-4cbb-bcdb-d65a3ef83b4c
-ms.openlocfilehash: 0723d5a473bb87b8bd464a944a5c68f1a8d3f5da
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a9b996671f2d8b57593f80fb13e966c5f03a2801
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202163"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190391"
 ---
 # <a name="wcf-data-services-protocol-implementation-details"></a>WCF Data Services プロトコル実装の詳細
 
@@ -17,7 +17,7 @@ Open Data Protocol (OData) では、プロトコルを実装するデータ サ�
   
 ### <a name="support-for-the-format-query-option"></a>$format クエリ オプションのサポート  
 
- OData プロトコルでは、JavaScript Notation (JSON) フィードと Atom フィードの両方がサポートされており、OData の `$format` システム クエリ オプションを使用すると、クライアントで応答フィードの形式を要求できます。 このシステム クエリ オプションは、データ サービスでサポートされている場合、要求の Accept ヘッダーの値をオーバーライドする必要があります。 WCF Data Services では、JSON フィードと Atom フィードのどちらでも返すことができます。 ただし、既定の実装では `$format` クエリ オプションをサポートしておらず、Accept ヘッダーの値だけを使用して応答の形式を決定します。 クライアントが Accept ヘッダーを設定できない場合のように、データ サービスで `$format` クエリ オプションをサポートしなければならないこともあります。 このようなシナリオをサポートするには、このオプションを URI で処理するように、データ サービスを拡張する必要があります。 この機能をデータ サービスに追加するには、MSDN コード ギャラリー Web サイトから「[ADO.NET Data Services のための JSONP および URL 制御の形式のサポート](https://go.microsoft.com/fwlink/?LinkId=208228)」のサンプル プロジェクトをダウンロードして、データ サービス プロジェクトに追加します。 このサンプルは、`$format` クエリ オプションを削除し、Accept ヘッダーを `application/json` に変更します。 サンプル プロジェクトを含めるときに、`JSONPSupportBehaviorAttribute` をデータ サービス クラスに追加すると、サービスが `$format` クエリ オプションの `$format=json` を処理できるようになります。 `$format=atom` や他のカスタム形式も処理するには、このサンプル プロジェクトをさらにカスタマイズする必要があります。  
+ OData プロトコルでは、JavaScript Notation (JSON) フィードと Atom フィードの両方がサポートされており、OData の `$format` システム クエリ オプションを使用すると、クライアントで応答フィードの形式を要求できます。 このシステム クエリ オプションは、データ サービスでサポートされている場合、要求の Accept ヘッダーの値をオーバーライドする必要があります。 WCF Data Services では、JSON フィードと Atom フィードのどちらでも返すことができます。 ただし、既定の実装では `$format` クエリ オプションをサポートしておらず、Accept ヘッダーの値だけを使用して応答の形式を決定します。 クライアントが Accept ヘッダーを設定できない場合のように、データ サービスで `$format` クエリ オプションをサポートしなければならないこともあります。 このようなシナリオをサポートするには、このオプションを URI で処理するように、データ サービスを拡張する必要があります。
   
 ## <a name="wcf-data-services-behaviors"></a>WCF Data Services の動作  
 

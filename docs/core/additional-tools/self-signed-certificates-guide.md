@@ -3,12 +3,12 @@ title: 自己署名証明書の生成の概要
 description: .NET Core および ASP.NET Core プロジェクトの機能を追加する Microsoft dotnet dev-certs ツール、および自己署名証明書を使用するためのその他のオプションの概要。
 author: angee
 ms.date: 11/19/2020
-ms.openlocfilehash: b5bf4b719495c2d6ec248e8592367ac452be91c1
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: d1675abb7d584b72d981f9db739e02269abe662c
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96032178"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189142"
 ---
 # <a name="generate-self-signed-certificates-with-the-net-cli"></a>.NET CLI を使用して自己署名証明書を生成する
 
@@ -210,7 +210,7 @@ dotnet dev-certs https --clean
 
 ### <a name="with-powershell"></a>PowerShell の場合
 
-PowerShell を使用して自己署名証明書を生成できます。 自己署名証明書を生成するには、[PKI クライアント](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps&preserver-view=true)を使用できます。
+PowerShell を使用して自己署名証明書を生成できます。 自己署名証明書を生成するには、[PKI クライアント](/powershell/module/pkiclient/new-selfsignedcertificate?preserve-view=true&view=win10-ps)を使用できます。
 
 ```powershell
 $cert = New-SelfSignedCertificate -DnsName @("contoso.com", "www.contoso.com") -CertStoreLocation "cert:\LocalMachine\My"

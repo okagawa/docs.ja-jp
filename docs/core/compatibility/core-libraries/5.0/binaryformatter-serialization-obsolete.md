@@ -2,12 +2,12 @@
 title: 破壊的変更:BinaryFormatter シリアル化メソッドが古い形式になり、ASP.NET アプリでは使用不可に
 description: Core .NET ライブラリにおける .NET 5.0 の破壊的変更について学習します。BinaryFormatter、Formatter、および IFormatter におけるシリアル化と逆シリアル化メソッドが古いものになりました。
 ms.date: 11/01/2020
-ms.openlocfilehash: 5807a7d4e6beab26b9848b803922396dd893075b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1dca30d33f2aa0a6fe8f05fe728557092f836b2d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759783"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189845"
 ---
 # <a name="binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps"></a>BinaryFormatter シリアル化メソッドが古い形式になり、ASP.NET アプリでは使用不可に
 
@@ -75,7 +75,7 @@ ms.locfileid: "95759783"
   </PropertyGroup>
   ```
 
-推奨される操作の詳細については、「[BinaryFormatter の廃止と無効化に関するエラーの解決](https://aka.ms/binaryformatter)」をご覧ください。
+推奨される操作の詳細については、「[BinaryFormatter の廃止と無効化に関するエラーの解決](../../../../standard/serialization/binaryformatter-security-guide.md)」をご覧ください。
 
 ## <a name="affected-apis"></a>影響を受ける API
 

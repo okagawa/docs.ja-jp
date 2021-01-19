@@ -3,12 +3,12 @@ title: Azure VM に ASP.NET Web アプリを移行する
 description: ASP.NET Web アプリケーションをオンプレミスから Azure 仮想マシンに移行する方法について説明します。
 ms.topic: how-to
 ms.date: 06/20/2020
-ms.openlocfilehash: 940243310c5e6ed13d2a42c8d9d87244200479f5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0bf591ce0bd02537414527c8f3ba22bd41cf51d6
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91171560"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189214"
 ---
 # <a name="migrate-an-aspnet-web-application-to-an-azure-virtual-machine"></a>Azure 仮想マシンへの ASP.NET Web アプリケーションの移行
 
@@ -26,7 +26,7 @@ ms.locfileid: "91171560"
   - [ASP.NET アプリケーション用の新しい仮想マシンを作成する](https://go.microsoft.com/fwlink/?linkid=863237)
   - [オンプレミスの既存の VMWare 仮想マシンを移行する](/azure/migrate/tutorial-migrate-vmware)
   - [オンプレミスの既存の Hyper-V 仮想マシンを移行する](/azure/migrate/tutorial-migrate-hyper-v)
-- [Visual Studio を使用してアプリを発行する](https://go.microsoft.com/fwlink/?linkid=863240)
+- [Visual Studio を使用してアプリを発行する](/azure/virtual-machines/windows/publish-web-app-from-visual-studio)
 - [VM 用のセキュリティで保護された仮想ネットワークを作成する](/azure/virtual-network/virtual-network-get-started-vnet-subnet)
 - [アプリケーションの CI/CD パイプラインを作成する](/vsts/build-release/apps/cd/deploy-webdeploy-iis-deploygroups)
 - [高可用性とスケーラビリティを確保するために VM スケール セットに移行する](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app)
