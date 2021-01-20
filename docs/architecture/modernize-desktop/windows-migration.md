@@ -1,13 +1,13 @@
 ---
 title: Windows 10 の移行
 description: パッケージ化や XAML アイランドなどの Windows 10 の機能の詳細について説明します。
-ms.date: 09/16/2019
-ms.openlocfilehash: cd17088b086a32fd3bb37e617d3a1047acedde0e
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.date: 12/29/2020
+ms.openlocfilehash: 139a8f2354803dafeb0178b4dbfb57a95c4ddb34
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "97866548"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615946"
 ---
 # <a name="windows-10-migration"></a>Windows 10 の移行
 
@@ -19,9 +19,9 @@ Windows 10 のリリースでは、タブレットやタッチデバイスのよ
 - ペンを使用して、自動的に認識され、digitalized されるテキストを描画または手書き入力します。
 - WinML を使用して、クラウド上に構築されたローカルでカスタマイズされた AI モデルを実行します。
 
-これらのすべての機能は、Windows ランタイム (WinRT) ライブラリを通じて Windows 開発者に対して有効になっています。 これらの機能は、既存のデスクトップアプリでも利用できます。これは、ライブラリが .NET Framework と .NET Core の両方に公開されるためです。 XAML アイランドを使用して UI を最新化し、時間に従ってアプリのビジュアルと動作を向上させることもできます。
+これらのすべての機能は、Windows ランタイム (WinRT) ライブラリを通じて Windows 開発者に対して有効になっています。 これらの機能は、既存のデスクトップアプリで利用できます。これは、ライブラリが .NET Framework と .NET の両方にも公開されているためです。 XAML アイランドを使用して UI を最新化し、時間に従ってアプリのビジュアルと動作を向上させることもできます。
 
-ここで注意すべき重要な点の1つは、この近代化パスに従うために .NET Framework テクノロジを破棄する必要がないことです。 .NET Core に移行することなく、Windows 10 のすべての利点を維持しながら、そのままにしておくことができます。 そのため、最新化パスを選択するための能力と柔軟性が得られます。
+ここで注意すべき重要な点の1つは、この近代化パスに従うために .NET Framework テクノロジを破棄する必要がないことです。 .NET に移行しなくても、Windows 10 のすべての利点を活用して、その機能を維持することができます。 そのため、最新化パスを選択するための能力と柔軟性が得られます。
 
 ## <a name="winrt-apis"></a>WinRT Api
 
@@ -40,19 +40,19 @@ UWP アプリには、OS がアプリケーションのインストールとア�
 
 一部の WinRT Api では、このパッケージ id が想定どおりに動作する必要があります。 ただし、ネイティブ C++ や .NET アプリなどの従来のデスクトップアプリでは、パッケージ id を必要としない異なる展開システムを使用します。 これらの WinRT Api をデスクトップアプリケーションで使用する場合は、パッケージ id を提供する必要があります。
 
-続行する1つの方法は、追加のパッケージプロジェクトをビルドすることです。 パッケージプロジェクト内で、元のソースコードプロジェクトをポイントし、提供する Id 情報を指定します。パッケージをインストールし、インストールされているアプリを実行すると、Id を必要とするすべての WinRT Api をコードで呼び出すことができるように自動的に識別されます。
+続行する1つの方法は、追加のパッケージプロジェクトをビルドすることです。 パッケージプロジェクト内で、元のソースコードプロジェクトをポイントし、提供する Id 情報を指定します。 パッケージをインストールし、インストールされているアプリを実行すると、Id を必要とするすべての WinRT Api をコードで呼び出すことができるように自動的に識別されます。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10">
-    <Identity Name="YOUR-APP-GUID "
-              Publisher="CN=YOUR COMPANY"
-              Version="1.x.x.x" />
+         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10">
+    <Identity Name="YOUR-APP-GUID "
+              Publisher="CN=YOUR COMPANY"
+              Version="1.x.x.x" />
 </Package>
 ```
 
-API を含む型が [DualApiPartition](xref:Windows.Foundation.Metadata.DualApiPartitionAttribute) 属性でマークされているかどうかを調べることによって、パッケージ化されたアプリケーション id を必要とする api を確認できます。そうであれば、従来のデスクトップアプリからの場合はを呼び出すことができます。 それ以外の場合は、パッケージプロジェクトのヘルプを使用して、クラシックデスクトップアプリを UWP に変換する必要があります。
+API を含む型が [DualApiPartition](xref:Windows.Foundation.Metadata.DualApiPartitionAttribute) 属性でマークされているかどうかを調べることによって、パッケージ化されたアプリケーション id を必要とする api を確認できます。 そうであれば、従来のデスクトップアプリからの場合はを呼び出すことができます。 それ以外の場合は、パッケージプロジェクトのヘルプを使用して、クラシックデスクトップアプリを UWP に変換する必要があります。
 
 <https://docs.microsoft.com/windows/desktop/apiindex/uwp-apis-callable-from-a-classic-desktop-app>
 
@@ -78,7 +78,7 @@ API を含む型が [DualApiPartition](xref:Windows.Foundation.Metadata.DualApiP
 
 ##### <a name="installation"></a>インストール
 
-アプリパッケージは *% ProgramFiles% \\ windowsapps \\ package_name* にインストールされます。実行可能ファイルはという名前  `app_name.exe` です。 各パッケージフォルダーには、パッケージ `AppxManifest.xml` アプリの特別な XML 名前空間を含むという名前のマニフェストが含まれています。 このマニフェストファイル内には、  `<EntryPoint>`   完全に信頼されたアプリを参照する要素があります。 アプリケーションが起動されると、アプリコンテナー内で実行されるのではなく、通常どおりユーザーとして実行されます。
+アプリパッケージは *% ProgramFiles% \\ windowsapps \\ package_name* にインストールされます。実行可能ファイルはという名前 `app_name.exe` です。 各パッケージフォルダーには、パッケージ `AppxManifest.xml` アプリの特別な XML 名前空間を含むという名前のマニフェストが含まれています。 マニフェスト ファイル内の `<EntryPoint>` 要素で、完全信頼アプリを参照します。 アプリケーションが起動されると、アプリコンテナー内で実行されるのではなく、通常どおりユーザーとして実行されます。
 
 展開後、パッケージ ファイルは読み取り専用としてマークされ、オペレーティング システムによって厳重にロックダウンされます。 これらのファイルが改ざんされると、Windows によりアプリの起動が回避されます。
 
@@ -90,13 +90,13 @@ OS は、フォルダーの場所に応じて、パッケージデスクトッ�
 
 ##### <a name="registry"></a>レジストリ
 
-アプリケーションパッケージには、実際のレジストリのと同等のものとして機能する、レジストリの .dat ファイルが含まれています。  `HKLM\Software`   実行時には、この仮想レジストリのハイブの内容がネイティブ システム ハイブにマージされ、両方が一括して表示されます。
+アプリケーションパッケージには、実際のレジストリのと同等のものとして機能する、レジストリの .dat ファイルが含まれています。 `HKLM\Software` 実行時には、この仮想レジストリのハイブの内容がネイティブ システム ハイブにマージされ、両方が一括して表示されます。
 
 すべての書き込みはパッケージのアップグレード中に保持され、アプリケーションがアンインストールされると削除されます。
 
 ##### <a name="uninstallation"></a>アンインストール
 
-ユーザーがパッケージをアンインストールすると、の下にあるすべてのファイルとフォルダー  `C:\Program Files\WindowsApps\package_name` が削除されます。また、AppData またはプロセス中にキャプチャされたレジストリへのリダイレクトされた書き込みもすべて削除されます。
+ユーザーがパッケージをアンインストールすると、の下にあるすべてのファイルとフォルダー `C:\Program Files\WindowsApps\package_name` が削除されます。また、AppData またはプロセス中にキャプチャされたレジストリへのリダイレクトされた書き込みもすべて削除されます。
 
 パッケージ化されたアプリケーションがインストール、ファイルアクセス、レジストリ、およびアンインストールを処理する方法の詳細については、「」を参照してください <https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-behind-the-scenes> 。
 
@@ -118,7 +118,7 @@ OS は、フォルダーの場所に応じて、パッケージデスクトッ�
 
 ![Microsoft ドキュメントの Notification クラス](./media/windows-migration/notification-class-documentation.png)
 
-WinRT API にアクセスするには、NuGet パッケージへの参照を追加 `Microsoft.Windows.SDK.Contracts`   します。このパッケージは、バックグラウンドでマジックを実行します (詳細については、「」を参照してください <https://blogs.windows.com/windowsdeveloper/2019/04/30/calling-windows-10-apis-from-a-desktop-application-just-got-easier/> )。
+WinRT API にアクセスするには、NuGet パッケージへの参照を追加 `Microsoft.Windows.SDK.Contracts` します。このパッケージは、バックグラウンドでマジックを実行します (詳細については、「」を参照してください <https://blogs.windows.com/windowsdeveloper/2019/04/30/calling-windows-10-apis-from-a-desktop-application-just-got-easier/> )。
 
 これで、コードの追加を開始する準備が整いました。
 
@@ -193,11 +193,11 @@ XAML アイランドへの道路は、Microsoft が Win32 アプリ (Windows フ
 
 ### <a name="how-it-works"></a>しくみ
 
-Windows 10 1903 更新プログラムでは、いくつかの XAML ホスティング Api が導入されています。 そのうちの2つは `WindowsXamlManager`   、と  `DesktopWindowXamlSource` です。
+Windows 10 1903 更新プログラムでは、いくつかの XAML ホスティング Api が導入されています。 そのうちの2つは `WindowsXamlManager` 、と `DesktopWindowXamlSource` です。
 
-クラスは、  `WindowsXamlManager`   UWP XAML フレームワークを処理します。 この `InitializeForCurrentThread` メソッドは、Win32 アプリの現在のスレッド内の UWP XAML フレームワークを読み込みます。
+クラスは、 `WindowsXamlManager` UWP XAML フレームワークを処理します。 この `InitializeForCurrentThread` メソッドは、Win32 アプリの現在のスレッド内の UWP XAML フレームワークを読み込みます。
 
- `DesktopWindowXamlSource`   は、XAML アイランドコンテンツのインスタンスです。 このプロパティには、を `Content` インスタンス化して設定するためのプロパティがあります。 は、 `DesktopWindowXamlSource`   HWND からの入力をレンダリングして取得します。 XAML アイランドのどの HWND がアタッチされるかを把握しておく必要があります。また、親の HWND のサイズと位置を決定します。
+`DesktopWindowXamlSource`は、XAML アイランドコンテンツのインスタンスです。 このプロパティには、を `Content` インスタンス化して設定するためのプロパティがあります。 は、 `DesktopWindowXamlSource` HWND からの入力をレンダリングして取得します。 XAML アイランドのどの HWND がアタッチされるかを把握しておく必要があります。また、親の HWND のサイズと位置を決定します。
 
 WPF や Windows フォーム開発者は、通常は HWND をコード内に処理しないので、HWND ポインターや、Win32 および UWP ワールドを通信するための基になる配線について理解し、処理するのは困難な場合があります。
 
@@ -223,12 +223,12 @@ Windows Community Toolkit には、ラップされたコントロールとホス
         ...
         xmlns:uwpControls="clr-namespace:Microsoft.Toolkit.Wpf.UI.Controls;assembly=Microsoft.Toolkit.Wpf.UI.Controls">
 <Grid>
-    <Grid.RowDefinitions>
-        <RowDefinition Height="Auto"/>
-        <RowDefinition Height="\*"/>
-    </Grid.RowDefinitions>
-    <uwpControls:InkToolbar TargetInkCanvas="{x:Reference Name=inkCanvas}"/>
-    <uwpControls:InkCanvas Grid.Row="1" x:Name="inkCanvas" />
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="\*"/>
+    </Grid.RowDefinitions>
+    <uwpControls:InkToolbar TargetInkCanvas="{x:Reference Name=inkCanvas}"/>
+    <uwpControls:InkCanvas Grid.Row="1" x:Name="inkCanvas" />
 </Grid>
 ```
 
@@ -263,7 +263,7 @@ XAML アイランドの使用方法に関するチュートリアルについて
 
 XAML カスタムコントロールは、ユーザーまたはサードパーティ (WinUI 2.x コントロールを含む) によって作成されたコントロール (またはユーザーコントロール) です。 Windows フォームまたは WPF アプリでカスタム UWP コントロールをホストするには、次のものが必要です。
 
-- `WindowsXamlHost`.Net Core 3.x アプリで UWP コントロールを使用する場合は。
+- `WindowsXamlHost`.Net アプリで UWP コントロールを使用する場合。
 - オブジェクトを定義する UWP アプリプロジェクトを作成するには `XamlApplication`
 
 WPF または Windows フォームプロジェクトは、 `Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication` Windows Community Toolkit によって提供されるクラスのインスタンスにアクセスできる必要があります。 このオブジェクトは、アプリケーションの現在のディレクトリにあるアセンブリ内のカスタム UWP XAML 型のメタデータを読み込むためのルートメタデータプロバイダーとして機能します。 これを行うには、WPF または Windows フォームプロジェクトと同じソリューションに空のアプリ (ユニバーサル Windows) プロジェクトを追加し、このプロジェクトの既定のアプリクラスを変更します。
@@ -284,9 +284,9 @@ WinUI 2 はオープンソースであり、に関する情報を見つけるこ
 
 ### <a name="do-you-need-xaml-islands"></a>XAML アイランドが必要です
 
-XAML アイランドは、アプリを完全に書き換えずに新しい UWP コントロールと動作を利用することで、ユーザーエクスペリエンスを向上させる既存の Win32 アプリを対象としています。  [Windows 10 api](/windows/uwp/porting/desktop-to-uwp-enhance)は既に利用できますが、XAML アイランドまでは UI に関連しない api のみを利用できます。
+XAML アイランドは、アプリを完全に書き換えずに新しい UWP コントロールと動作を利用することで、ユーザーエクスペリエンスを向上させる既存の Win32 アプリを対象としています。 [Windows 10 api](/windows/uwp/porting/desktop-to-uwp-enhance)は既に利用できますが、XAML アイランドまでは UI に関連しない api のみを利用できます。
 
-新しい Windows アプリを開発している場合は、 [UWP アプリ](/windows/uwp/get-started/universal-application-platform-guide)   が適切な方法であると思います。
+新しい Windows アプリを開発している場合は、 [UWP アプリ](/windows/uwp/get-started/universal-application-platform-guide) が適切な方法であると思います。
 
 ### <a name="the-road-ahead-xaml-islands-winui-30"></a>先行する XAML アイランド: WinUI 3.0
 
@@ -300,7 +300,7 @@ WinUI 3 は、アクティブな開発中であり、WinUI の範囲を大幅に
 
 ![WinUI 3.0 の構造](./media/windows-migration/winui3.png)
 
-XAML フレームワークは、GitHub で開発され、 [NuGet](/nuget/what-is-nuget)パッケージとして帯域外で出荷されるようになりました   。
+XAML フレームワークは、GitHub で開発され、 [NuGet](/nuget/what-is-nuget) パッケージとして帯域外で出荷されるようになりました。
 
 OS の一部として同梱されている既存の UWP XAML API に対して、新しい機能更新プログラムが提供されることはなくなります。 Windows 10 のサポートライフサイクルに従って、セキュリティ更新プログラムと重要な修正プログラムが引き続き提供されます。
 
@@ -315,7 +315,7 @@ WinUI 3 は **、デスクトップアプリでの winui の追加に** 関す�
 この集計では、WinUI 3 を使用すると、開発者は次のような組み合わせを簡単に組み合わせて使用できます。
 
 * アプリモデル: UWP、Win32
-* プラットフォーム: .NET Core またはネイティブ
+* プラットフォーム: .NET またはネイティブ
 * 言語: .NET (C \# 、Visual Basic)、標準 C++
 * パッケージング: MSIX、Microsoft Store の AppX、パッケージ化されていません。
 * 相互運用: winui 3 を使用して、既存の WPF、WinForms、および MFC アプリを、WinUI XAML アイランドを使用して拡張します。
@@ -324,4 +324,4 @@ WinUI 3 は **、デスクトップアプリでの winui の追加に** 関す�
 
 >[!div class="step-by-step"]
 >[前へ](migrate-modern-applications.md)
->[次へ](example-migration-core.md)
+>[次へ](example-migration.md)

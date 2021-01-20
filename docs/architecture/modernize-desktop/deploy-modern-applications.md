@@ -2,12 +2,12 @@
 title: 最新デスクトップ アプリケーションのデプロイ
 description: 最新のデスクトップアプリケーションの展開について理解しておく必要があるすべての情報。
 ms.date: 05/12/2020
-ms.openlocfilehash: 4a4d93caf1c2f8f58d48ee3199bbe6983fa939f4
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: ba47f09b27adf270734bbfff285fe44dd4175d29
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "97866560"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615855"
 ---
 # <a name="deploying-modern-desktop-applications"></a>最新デスクトップ アプリケーションのデプロイ
 
@@ -115,7 +115,7 @@ MSIX に関する講演の1つは、アプリケーションカタログ全体�
 
 #### <a name="windows-application-packaging-project"></a>Windows アプリケーション パッケージ プロジェクト
 
-Visual Studio の **Windows アプリケーションパッケージプロジェクト** プロジェクトを使用して、   デスクトップアプリのパッケージを生成できます。 その後、そのパッケージを Microsoft Store に発行したり、1つまたは複数の Pc にサイドロードすることができます。
+Visual Studio の **Windows アプリケーション パッケージ プロジェクト** というプロジェクトを使用して、デスクトップ アプリのパッケージを生成できます。 その後、そのパッケージを Microsoft Store に発行したり、1つまたは複数の Pc にサイドロードすることができます。
 
 #### <a name="msix-packaging-tool"></a>MSIX パッケージ作成ツール
 
@@ -226,4 +226,4 @@ MSIX は、パッケージの一部のプロパティを自動的に表示する
 新しい MSIX パッケージを生成してデプロイサーバーに移動したら、 *appinstaller* ファイルを編集して、これらの変更を反映する必要があります。これは、主に新しい msix ファイルのバージョンとパスです。 次回ユーザーがアプリケーションを起動したときに、システムは変更を検出し、新しいバージョンのファイルをバックグラウンドでダウンロードします。 この処理が完了すると、ユーザーに対して透過的に新しいアプリケーションの起動時にインストールが実行されます。
 
 >[!div class="step-by-step"]
->[[戻る]](example-migration-core.md)
+>[[戻る]](example-migration.md)
