@@ -1,13 +1,13 @@
 ---
 title: ASP.NET Core サービスと Web アプリのテスト
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | コンテナーで ASP.NET Core サービスと Web アプリをテストするためのアーキテクチャについて調べる。
-ms.date: 08/07/2020
-ms.openlocfilehash: 67872668781d8ae5d79bf360aee73f744cf4404b
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.date: 01/13/2021
+ms.openlocfilehash: dfd0a320491f92154bc9e2804d56c00120224e62
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633950"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188004"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core サービスと Web アプリのテスト
 
@@ -15,13 +15,13 @@ ms.locfileid: "97633950"
 
 有効または無効な入力に基づくコントローラーの動作、および実行するビジネス操作の結果に基づくコントローラーの応答をテストする必要があります。 ただし、マイクロサービスに対してこれらの種類のテストを実行すべきです。
 
-- 単体テスト。 これは、アプリケーションの個々のコンポーネントが期待どおりに動作することを確認します。 アサーションは、コンポーネント API をテストします。
+- 単体テスト。 これらのテストにより、アプリケーションの個々のコンポーネントが想定どおりに動作することが保証されます。 アサーションは、コンポーネント API をテストします。
 
-- 統合テスト。 これは、コンポーネント間の相互作用が、データベースなどの外部成果物に対して期待どおりに動作することを確認します。 アサーションは、コンポーネント API や UI をテストしたり、データベース I/O やログ記録などの操作の副作用をテストしたりできます。
+- 統合テスト。 これらのテストにより、コンポーネント間の相互作用が、データベースなどの外部成果物に対して想定どおりに動作することが保証されます。 アサーションは、コンポーネント API や UI をテストしたり、データベース I/O やログ記録などの操作の副作用をテストしたりできます。
 
-- 各マイクロサービスの機能テスト。 これにより、ユーザーの観点から、アプリケーションが想定どおりに動作することを確認します。
+- 各マイクロサービスの機能テスト。 これらのテストにより、ユーザーの観点から、アプリケーションが想定どおりに動作することが保証されます。
 
-- サービス テスト。 これは、複数のサービスを同時にテストするなど、エンド ツー エンドのサービスのユース ケースがテストされることを確認します。 この種類のテストでは、まず環境を準備する必要があります。 この場合、サービスを開始することを意味します (たとえば、docker-compose up を使用します)。
+- サービス テスト。 これらのテストでは、複数のサービスを同時にテストするなど、エンドツーエンド サービスのユース ケースが確実にテストされます。 この種類のテストでは、まず環境を準備する必要があります。 この場合、サービスを開始することを意味します (たとえば、docker-compose up を使用します)。
 
 ### <a name="implementing-unit-tests-for-aspnet-core-web-apis"></a>ASP.NET Core Web API の単体テストの実装
 
@@ -70,7 +70,7 @@ public async Task Get_order_detail_success()
 
 ASP.NET Core には、ネットワークのオーバーヘッドなしで HTTP 要求を処理するために使用できる、組み込みのテスト Web ホストが含まれています。これは、実際の Web ホストの使用時よりもそれらのテストをより速く実行できるということです。 テスト Web ホスト (TestServer) は、Microsoft.AspNetCore.TestHost として NuGet コンポーネントでご利用いただけます。 これを統合テスト プロジェクトに追加して、ASP.NET Core アプリケーションをホストするために使用できます。
 
-次のコードからわかるように、ASP.NET Core コントローラーの統合テストを作成すると、テスト ホストによってコントローラーがインスタンス化されます。 これは、HTTP 要求に相当しますが、より速く実行されます。
+次のコードからわかるように、ASP.NET Core コントローラーの統合テストを作成すると、テスト ホストによってコントローラーがインスタンス化されます。 この機能は、HTTP 要求に相当しますが、より速く実行されます。
 
 ```csharp
 public class PrimeWebDefaultRequestShould
@@ -107,7 +107,7 @@ public class PrimeWebDefaultRequestShould
 - **Steve Smith。統合テスト** (ASP.NET Core) \
     [https://docs.microsoft.com/aspnet/core/test/integration-tests](/aspnet/core/test/integration-tests)
 
-- **dotnet テストを使用した .NET Core での単体テスト** \
+- **dotnet テストを使用した .NET での単体テスト** \
     [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 - **xUnit.net**。 公式サイト。 \
@@ -146,7 +146,7 @@ Compose アプリケーションが起動し実行されると、Visual Studio �
 
 **図 6-25**。 eShopOnContainers のテスト フォルダーの構造
 
-マイクロサービスとアプリケーションの機能/単体テストは定期テスト ランナーを使用して Visual Studio から実行されますが、最初にソリューションの test フォルダーに含まれる一連の docker-compose ファイルを使用して必要なインフラストラクチャ サービスを開始する必要があります。
+マイクロサービスとアプリケーションの機能または統合テストは定期テスト ランナーを使用して Visual Studio から実行されますが、最初にソリューションの test フォルダーに含まれる一連の docker-compose ファイルを用いて必要なインフラストラクチャ サービスを開始する必要があります。
 
 **docker-compose-test.yml**
 

@@ -1,19 +1,19 @@
 ---
 title: Entity Framework Core でインフラストラクチャの永続レイヤーを実装する
 description: コンテナー化された .NET アプリケーション向け .NET マイクロサービス アーキテクチャ | Entity Framework Core を使用してインフラストラクチャの永続レイヤーを実装する方法の詳細を確認します。
-ms.date: 01/30/2020
-ms.openlocfilehash: 878d4d64e92ca92fd2393d60d496f1c5671e7029
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 2c7b6dbe2f59a26d33a4842e74aed2b7588bd14d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172353"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188895"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Core でインフラストラクチャの永続レイヤーを実装する
 
 SQL Server、Oracle、PostgreSQL など、リレーショナル データベースを使用するとき、Entity Framework (EF) に基づいて永続レイヤーを実装することをお勧めします。 EF は LINQ 対応であり、厳密に型指定されたオブジェクトをモデルに与えます。また、データベースにシンプルな永続性が与えられます。
 
-Entity Framework は長い間、.NET Framework の一部でした。 .NET Core を使用するとき、Entity Framework Core も使用してください。 .NET Core と同様に、Windows または Linux で実行されます。 EF Core は Entity Framework を完全に書き換えたものであり、フットプリントが大幅に少なくなっており、パフォーマンス面で重要な改善が行われています。
+Entity Framework は長い間、.NET Framework の一部でした。 .NET を使用するとき、Entity Framework Core も使用してください。これは .NET と同様に、Windows または Linux 上でも実行されます。 EF Core は Entity Framework を完全に書き換えたものであり、フットプリントが大幅に少なくなっており、パフォーマンス面で重要な改善が行われています。
 
 ## <a name="introduction-to-entity-framework-core"></a>Entity Framework Core の概要
 
@@ -37,7 +37,7 @@ EF Core の概要は Microsoft ドキュメントで既に利用可能になっ�
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>DDD の観点から見た Entity Framework Core のインフラストラクチャ
 
-DDD の観点から見ると、EF の重要な機能は、POCO ドメイン エンティティを使用できることです。EF 用語では、*POCO Code First エンティティ*と呼ばれています。 POCO ドメイン エンティティを使用する場合、ドメイン モデル クラスは永続性無視になります。[永続化の無視 (Persistence Ignorance)](https://deviq.com/persistence-ignorance/) の原則と[インフラストラクチャの無視 (Infrastructure Ignorance)](https://ayende.com/blog/3137/infrastructure-ignorance) の原則に従います。
+DDD の観点から見ると、EF の重要な機能は、POCO ドメイン エンティティを使用できることです。EF 用語では、*POCO Code First エンティティ* と呼ばれています。 POCO ドメイン エンティティを使用する場合、ドメイン モデル クラスは永続性無視になります。[永続化の無視 (Persistence Ignorance)](https://deviq.com/persistence-ignorance/) の原則と[インフラストラクチャの無視 (Infrastructure Ignorance)](https://ayende.com/blog/3137/infrastructure-ignorance) の原則に従います。
 
 DDD パターンごとに、エンティティ クラス自体の中にドメインの動作とルールをカプセル化してください。そうすることで、エンティティ クラス自体でコレクションにアクセスするとき、インバリアント、検証、ルールを制御できます。 そのため、子エンティティや値オブジェクトのコレクションにパブリック アクセスを許可することは、DDD ではお勧めされません。 それよりも、フィールドとプロパティのコレクションを更新する方法とタイミング、更新時のビヘイビアーとアクションを制御するメソッドを公開することをお勧めします。
 
@@ -243,7 +243,7 @@ DbContext の有効期間が範囲 (InstancePerLifetimeScope) として設定さ
 
 ## <a name="table-mapping"></a>テーブル マッピング
 
-テーブル マッピングでは、データベースに問い合わせたり、保存したりするテーブル データが識別されます。 先に、ドメイン エンティティ (製品や注文のドメインなど) を利用し、関連データベース スキーマを生成する方法を確認しました。 EF は、*規則*という概念を中心に作られています。 規則は "テーブルの名前は何になるのか?" または "主キーはどのようなプロパティか?" のような質問に対処するものです。 規則は通常、慣例的な名前に基づきます。 たとえば、主キーであれば、`Id` で終わるプロパティが一般的に与えられます。
+テーブル マッピングでは、データベースに問い合わせたり、保存したりするテーブル データが識別されます。 先に、ドメイン エンティティ (製品や注文のドメインなど) を利用し、関連データベース スキーマを生成する方法を確認しました。 EF は、*規則* という概念を中心に作られています。 規則は "テーブルの名前は何になるのか?" または "主キーはどのようなプロパティか?" のような質問に対処するものです。 規則は通常、慣例的な名前に基づきます。 たとえば、主キーであれば、`Id` で終わるプロパティが一般的に与えられます。
 
 規則では、派生コンテキストでエンティティを公開する `DbSet<TEntity>` プロパティと同じ名前を持つテーブルにマッピングされるように各エンティティが設定されます。 所与のエンティティに `DbSet<TEntity>` 値が指定されない場合、クラス名が使用されます。
 

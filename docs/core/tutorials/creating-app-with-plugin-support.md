@@ -4,12 +4,12 @@ description: プラグインをサポートする .NET Core アプリケーシ�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: ce7ac826feaf4542307abefde6d40a319d78e423
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: d3b532ae72a80eef9603fc6f3ada8c11cae966dd
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247593"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98187900"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>プラグインがある .NET Core アプリケーションを作成する
 
@@ -22,7 +22,10 @@ ms.locfileid: "91247593"
 
 ## <a name="prerequisites"></a>前提条件
 
-- [NET Core 3.0 SDK](https://dotnet.microsoft.com/download) 以降のバージョンをインストールします。
+- [.NET 5 SDK](https://dotnet.microsoft.com/download) 以降のバージョンをインストールする。
+
+> [!NOTE]
+> このサンプル コードのターゲットは .NET 5 ですが、使用されるすべての機能が .NET Core 3.0 で導入されており、それ以降のすべての .NET リリースで使用可能です。
 
 ## <a name="create-the-application"></a>アプリケーションを作成する
 
@@ -239,7 +242,7 @@ static Assembly LoadPlugin(string relativePath)
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>net5</TargetFramework>
   </PropertyGroup>
 
 </Project>
@@ -287,7 +290,7 @@ static Assembly LoadPlugin(string relativePath)
 
 ## <a name="plugin-target-framework-recommendations"></a>プラグインのターゲット フレームワークの推奨事項
 
-プラグインの依存関係の読み込みでは *.deps.json* ファイルが使用されるため、プラグインのターゲット フレームワークに関連する課題があります。 具体的には、プラグインでは .NET Standard のバージョンではなく、.NET Core 3.0 などのランタイムをターゲットとする必要があります。 プロジェクトがターゲットとするフレームワークに基づいて *.deps.json* ファイルが生成されます。また、多くの .NET Standard と互換性のあるパッケージでは .NET Standard に対してビルドするための参照アセンブリと、特定のランタイムのための実装アセンブリが同梱されているため、 *.deps.json* が実装アセンブリを正しく認識できない場合や、想定していた .NET Core バージョンではなく、アセンブリの .NET Standard バージョンが取得される場合があります。
+プラグインの依存関係の読み込みでは *.deps.json* ファイルが使用されるため、プラグインのターゲット フレームワークに関連する課題があります。 具体的には、プラグインでは .NET Standard のバージョンではなく、.NET 5 などのランタイムをターゲットとする必要があります。 プロジェクトがターゲットとするフレームワークに基づいて *.deps.json* ファイルが生成されます。また、多くの .NET Standard と互換性のあるパッケージでは .NET Standard に対してビルドするための参照アセンブリと、特定のランタイムのための実装アセンブリが同梱されているため、 *.deps.json* が実装アセンブリを正しく認識できない場合や、想定していた .NET Core バージョンではなく、アセンブリの .NET Standard バージョンが取得される場合があります。
 
 ## <a name="plugin-framework-references"></a>プラグイン フレームワークの参照
 

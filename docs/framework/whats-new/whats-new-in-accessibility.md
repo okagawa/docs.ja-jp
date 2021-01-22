@@ -1,22 +1,23 @@
 ---
 title: .NET Framework のアクセシビリティの新機能
+titleSuffix: ''
 description: .NET Framework 4.7.1 以降の .NET アクセシビリティの新機能について確認します。 ユーザー補助機能を使用すると、アプリで支援機能の利用者に適切なエクスペリエンスを提供できます。
-ms.date: 04/18/2019
+ms.date: 01/05/2021
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: d204bea7f5ec1ed0c25b7b2dedd04d61c7f3e93d
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: c2ebaed8bf347eb8d8764f4bdf76dcc33db86bad
+ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679548"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98536165"
 ---
-# <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework のアクセシビリティの新機能
+# <a name="whats-new-in-accessibility-in-net-framework"></a>.NET Framework のアクセシビリティの新機能
 
-.NET Framework では、ユーザーのためにアプリケーションのアクセシビリティ向上を目指しています。 ユーザー補助機能により、支援機能の利用者にとってアプリケーションがさらに使いやすくなります。 .NET Framework 4.7.1 以降、.NET Framework にはさまざまなアクセシビリティ機能改善が含まれるようになりました。それを利用することで開発者はアクセシビリティを備えたアプリケーションを開発できます。
+.NET Framework は、ユーザーのためにアプリケーションのアクセシビリティ向上を目指しています。 ユーザー補助機能により、支援機能の利用者にとってアプリケーションがさらに使いやすくなります。 .NET Framework 4.7.1 以降、.NET Framework にはさまざまなアクセシビリティ機能改善が含まれるようになりました。それを利用することで開発者はアクセシビリティを備えたアプリケーションを開発できます。
 
 ## <a name="accessibility-switches"></a>アクセシビリティのスイッチ
 
@@ -27,10 +28,11 @@ ms.locfileid: "90679548"
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
 |.NET Framework 4.8|"Switch.UseLegacyAccessibilityFeatures.3"|
+|2020 年 8 月 11 日- KB4569746 .NET Framework 4.8 の累積的な更新プログラム|"Switch.UseLegacyAccessibilityFeatures.4"|
 
 ### <a name="taking-advantage-of-accessibility-enhancements"></a>アクセシビリティ拡張機能の利用
 
-.NET Framework 4.7.1 以降をターゲット対象とするアプリケーションでは、この新しいユーザー補助機能が既定で有効になっています。 また、それより前のバージョンの .NET Framework がターゲットであっても、実行環境が .NET Framework 4.7.1 以降であるアプリケーションの場合は、アプリケーションの構成ファイルの [`<runtime>`](../configure-apps/file-schema/runtime/index.md) セクションの [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 要素にスイッチを追加し、値を `false` に設定することで、古いアクセシビリティ動作を利用しないことを (そして、それにより向上したアクセシビリティ機能改善を利用することを) 選択できます。 .NET Framework 4.7.1 で導入されたアクセシビリティの機能強化を有効にする方法を次に示します。
+.NET Framework 4.7.1 以降をターゲット対象とするアプリケーションでは、この新しいユーザー補助機能が既定で有効になっています。 また、それより前のバージョンの .NET Framework がターゲットであっても、実行環境が .NET Framework 4.7.1 以降であるアプリケーションの場合は、アプリケーションの構成ファイルの [`<runtime>`](../configure-apps/file-schema/runtime/index.md) セクションの [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 要素にスイッチを追加し、値を `false` に設定することで、古いアクセシビリティ動作を利用しないことを (そして、それにより向上したアクセシビリティ機能改善を利用することを) 選択できます。 次のスニペットは、.NET Framework 4.7.1 で導入されたアクセシビリティの機能強化を有効にする方法を示しています。
 
 ```xml
 <runtime>
@@ -39,7 +41,7 @@ ms.locfileid: "90679548"
 </runtime>
 ```
 
-新しいバージョンの .NET Framework のユーザー補助機能を選択する場合は、古いバージョンの .NET Framework の機能も明示的に選択する必要があります。 .NET Framework 4.7.1 と 4.7.2 両方のアクセシビリティ機能改善を利用するようにアプリを構成するには、次の [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 要素が必要です。
+より新しい .NET Framework バージョンのユーザー補助機能を選択する場合は、以前のバージョンの機能も明示的に選択する必要があります。 .NET Framework 4.7.1 と 4.7.2 両方のアクセシビリティ機能改善を利用するようにアプリを構成するには、次の [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 要素を追加します。
 
 ```xml
 <runtime>
@@ -48,18 +50,18 @@ ms.locfileid: "90679548"
 </runtime>
 ```
 
-.NET Framework 4.7.1、4.7.2、4.8 のアクセシビリティ機能改善を利用するようにアプリを構成するには、次の [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 要素が必要です。
+.NET Framework 4.7.1、4.7.2、4.8、および 2020 年 8 月の .NET Framework 4.8 の累積的な更新プログラムでのアクセシビリティ向上を利用するようにアプリを構成するには、次の [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 要素を追加します。
 
 ```xml
 <runtime>
     <!-- AppContextSwitchOverrides value attribute is in the form of 'key1=true|false;key2=true|false  -->
-    <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false" />
+    <AppContextSwitchOverrides value=Switch.UseLegacyAccessibilityFeatures=false|Switch.UseLegacyAccessibilityFeatures.2=false|Switch.UseLegacyAccessibilityFeatures.3=false|Switch.UseLegacyAccessibilityFeatures.4=false"/>
 </runtime>
 ```
 
 ### <a name="restoring-legacy-behavior"></a>従来の動作に戻す
 
-アプリケーションがバージョン 4.7.1 以降の .NET Framework をターゲットにしている場合、アプリケーションの構成ファイルの [`<runtime>`](../configure-apps/file-schema/runtime/index.md) セクションの [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 要素にスイッチを追加し、値を `true` に設定することで、アクセシビリティ機能を無効にできます。 たとえば、次の構成は、.NET Framework 4.7.2 で導入されたユーザー補助機能を無効にします。
+アプリケーションがバージョン 4.7.1 以降の .NET Framework をターゲットにしている場合、アプリケーションの構成ファイルで [`<runtime>`](../configure-apps/file-schema/runtime/index.md) セクションの [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 要素にスイッチを追加し、値を `true` に設定することで、アクセシビリティ機能を無効にできます。 たとえば、次の構成は、.NET Framework 4.7.2 で導入されたユーザー補助機能を無効にします。
 
 ```xml
 <runtime>
@@ -67,6 +69,20 @@ ms.locfileid: "90679548"
     <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures.2=true" />
 </runtime>
 ```
+
+## <a name="whats-new-in-accessibility-in-the-august-11-2020-cumulative-update-for-net-framework-48"></a>.NET Framework 4.8 用の 2020 年 8 月 11 日の累積的な更新プログラムにおけるアクセシビリティの新機能
+
+2020 年 8 月 11 日 - KB4569746 .NET Framework 4.8 の累積的な更新プログラムには、Windows フォームの新しいユーザー補助機能が含まれています。
+
+- スクリーン リーダーによる `PropertyGrid` コントロール項目およびカテゴリの展開または折りたたみ状態の通知に関する問題に対処します。
+
+- `PropertyGrid` コントロールとその内部要素のアクセス可能なパターンを更新します。
+
+- スクリーン リーダーによって正しく通知されるように、`PropertyGrid` コントロールの内部要素のアクセス可能な名前を更新します。
+
+- `PropertyGridView` コントロールの境界ボックスのアクセス可能なプロパティに対処します。
+
+- `DataGridView` コンボ ボックスのセルの展開または折りたたみ状態をスクリーン リーダーで正しく通知できるようにします。
 
 ## <a name="whats-new-in-accessibility-in-net-framework-48"></a>.NET Framework 4.8 のアクセシビリティの新機能
 
@@ -149,7 +165,7 @@ if (raiseMethod != null) {
 
 **キーボード アクセスのツールヒント**
 
-.NET Framework 4.7.2 以前のバージョンをターゲットとしたアプリケーションでは、[tooltip](xref:System.Windows.Forms.ToolTip) コントロールがポップ アップするようトリガーする唯一の方法は、マウス ポインターをそのコントロールに移動することでした。 .NET Framework 4.8 以降、キーボードを使用するユーザーは、Tab キーまたは方向キーを修飾キーと共に、または修飾キーなしで使用してコントロールにフォーカスすることで、コントロールのツールヒントをトリガーできます。 この特別なアクセシビリティの機能強化には、追加の [AppContext スイッチ](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)が必要となります。
+.NET Framework 4.7.2 以前のバージョンをターゲットとしたアプリケーションでは、[tooltip](xref:System.Windows.Forms.ToolTip) コントロールがポップ アップするようトリガーする唯一の方法は、マウス ポインターをそのコントロールに移動することでした。 .NET Framework 4.8 以降、キーボードを使用するユーザーは、Tab キーまたは方向キーを修飾キーと共に、または修飾キーなしで使用してコントロールにフォーカスすることで、コントロールのヒントをトリガーできます。 この特別なアクセシビリティの機能強化には、追加の [AppContext スイッチ](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)が必要となります。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -445,8 +461,8 @@ Windows 10 では 2 つの新しい UIAutomation プロパティである `SizeO
 
 - <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType> 列挙。次の指定可能 **LiveSetting** 値を定義します。
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>。 ライブ領域の内容が変更された場合でも、要素が通知を送信することはありません。
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>。 ライブ領域の内容が変更された場合、要素は非割り込み型の通知を送信します。
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. ライブ領域の内容が変更された場合でも、要素が通知を送信することはありません。
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. ライブ領域の内容が変更された場合、要素は非割り込み型の通知を送信します。
 
   - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. ライブ領域の内容が変更された場合、要素により割り込み通知が送信されます。
 
@@ -630,7 +646,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - **[詳細の表示]** ウィザードの **[フィールドの追加]** ダイアログや **ListView** ウィザードの **[ListView の構成]** ダイアログなど、コントロールで不足していた UI アクセシビリティ パターンを実装するための変更。
 
-- **データ ページャー フィールド エディター**など、ハイ コントラスト モードでの表示を改善するための変更。
+- **データ ページャー フィールド エディター** など、ハイ コントラスト モードでの表示を改善するための変更。
 
 - DataPager コントロールの **[ページャーのフィールドを編集]** ウィザードの **[フィールド]** ダイアログ、 **[ObjectContext の構成]** ダイアログ、 **[データ ソースの構成]** ウィザードの **[データの選択の構成]** ダイアログなど、キーボードの操作性を改善するための変更。
 

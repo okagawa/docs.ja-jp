@@ -1,13 +1,13 @@
 ---
 title: 高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 description: Kubernetes アプリケーション ライフサイクルを開発しながら、高いスケーラビリティおよび可用性と Azure Dev Spaces の可能性のためにマイクロサービスと複数のコンテナー アプリケーションを調整するオプションについて説明します。
-ms.date: 01/30/2020
-ms.openlocfilehash: a61e883ab0d27300e00b177c2621c6521e85ac84
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 7ba0367bca98edbab1be2059ee37e863359edad3
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172503"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189421"
 ---
 # <a name="orchestrate-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 
@@ -21,9 +21,9 @@ ms.locfileid: "91172503"
 
 サービス インスタンスごとに 1 つのコンテナーを使用します。 Docker コンテナーは "配置の単位" であり、コンテナーは Docker のインスタンスです。 ホストでは多くのコンテナーが処理されます。 これは論理的な方法のように見えます。 しかし、これらの構成されたアプリケーションの負荷分散、ルーティング、オーケストレーションはどのように処理するのでしょうか。
 
-単一の Docker ホストのプレーン Docker エンジンは 1 つのホストでの単一のイメージ インスタンスの管理に関するニーズを満たしますが、より複雑な分散アプリケーションの複数のホストに展開されている複数のコンテナーの管理に関しては対応できません。 ほとんどの場合、管理プラットフォームが必要になります。このプラットフォームは自動的にコンテナーを開始し、イメージごとに複数のインスタンスでコンテナーをスケールアウトし、必要に応じて一時停止またはシャットダウンします。また、ネットワークおよびデータ ストレージなどのリソースへのアクセス方法を制御するのが理想的です。
+単一の Docker ホストのプレーン Docker エンジンは 1 つのホストでの単一のイメージ インスタンスの管理に関するニーズを満たしますが、より複雑な分散アプリケーションの複数のホストに展開されている複数のコンテナーの管理に関しては対応できません。 多くの場合は、自動的にコンテナーを開始し、イメージごとに複数のインスタンスでコンテナーをスケールアウトし、必要に応じてそれらを一時停止またはシャットダウンする管理プラットフォームが必要になります。また、理想的には、ネットワークおよびデータ ストレージなどのリソースへのアクセス方法を制御できる必要があります。
 
-個々のコンテナーまたは非常に単純な構成アプリを管理するだけでなく、マイクロサービスを使用してより大きなエンタープライズ アプリケーションを管理するには、オーケストレーションおよびクラスタリング プラットフォームが必要になります。
+個々のコンテナーまたは単純な構成アプリを管理するだけでなく、マイクロサービスを含むより大きなエンタープライズ アプリケーションを管理するには、オーケストレーションおよびクラスタリング プラットフォームが必要になります。
 
 アーキテクチャと開発の観点から、マイクロサービス ベースのアプリケーションで構成される大規模なエンタープライズを構築する場合、高度なシナリオをサポートする次のプラットフォームと製品を理解することが重要です。
 
@@ -60,7 +60,7 @@ Azure Kubernetes Service によって、一般的な Docker クラスタリン�
 
 ## <a name="development-environment-for-kubernetes"></a>Kubernetes 用の開発環境
 
-開発環境において、単に [Docker Desktop](https://docs.docker.com/install/) をインストールすることにより 1 台の開発マシン (Windows 10 または macOS) でも Kubernetes を実行できることが [2018 年 7 月に Docker から発表](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/)されました。 図 4-25 に示すように、さらなる統合テストを行うために、後でクラウド (AKS) にデプロイすることができます。
+開発環境において、[Docker Desktop](https://docs.docker.com/install/) をインストールすることにより 1 台の開発マシン (Windows 10 または macOS) でも Kubernetes を実行できることが [2018 年 7 月に Docker から発表](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/)されました。 図 4-25 に示すように、さらなる統合テストを行うために、後でクラウド (AKS) にデプロイすることができます。
 
 ![開発マシン上にあり、AKS にデプロイされる Kubernetes を示す図](./media/scalable-available-multi-container-microservice-applications/kubernetes-development-environment.png)
 
@@ -78,11 +78,11 @@ Kubernetes 用の既定の運用環境デプロイ オプションでは、次�
 
 Kubernetes クラスターにアプリケーションをデプロイする場合は、前のセクションで既に述べたように、ネイティブ形式 (.yaml ファイル) に基づくデプロイ ファイルを使用することにより、元の kubectl.exe CLI ツールを使用できます。 ただし、複雑なマイクロサービス ベースのアプリケーションをデプロイする場合など、より複雑な Kubernetes アプリケーションについては、[Helm](https://helm.sh/) の使用をお勧めします。
 
-Helm Chart を使用すると、非常に複雑な Kubernetes アプリケーションについても、その定義、バージョン管理、インストール、共有、アップグレード、またはロールバックを容易に行うことができます。
+Helm Chart を使用すると、非常に複雑な Kubernetes アプリケーションでも、その定義、バージョン管理、インストール、共有、アップグレード、またはロールバックを容易に行うことができます。
 
 さらに述べると、Azure におけるその他の Kubernetes 環境 ([Azure Dev Spaces](/azure/dev-spaces/azure-dev-spaces) など) も Helm Chart に基づいているので、Helm の使用が推奨されます。
 
-Helm は、[Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/) が維持しています (Microsoft、Google、Bitnami、および Helm の共同作成者コミュニティとの協力で)。
+Helm は、Microsoft、Google、Bitnami、および Helm の共同作成者コミュニティが協力し、[Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/) が維持しています。
 
 Helm Chart および Kubernetes の実装の詳細については、[Helm Chart を使用した AKS への eShopOnContainers のデプロイ](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS))に関する投稿記事を参照してください。
 
@@ -92,7 +92,7 @@ Helm Chart および Kubernetes の実装の詳細については、[Helm Chart 
 
 前述のように、Azure Dev Spaces では、コンテナー ベースのアプリケーションのデプロイ時に Helm Chart が使用されます。
 
-Azure Dev Spaces では、Visual Studio 2019 または Visual Studio Code を使用するだけで、Azure 内のグローバルな Kubernetes クラスターで直接、コードを迅速に反復およびデバッグすることができます。このため、Azure Dev Spaces は開発チームが Kubernetes での生産性を高めるのに役立ちます。 Azure 内の Kubernetes クラスターは共有されたマネージド Kubernetes クラスターであるため、チームは共同で作業を行うことができます。 コードを個別に開発してから、グローバル クラスターにデプロイし、依存関係のレプリケートやモックアップの作成なしで、他のコンポーネントでエンドツーエンド テストを実行することができます。
+Azure Dev Spaces で、Visual Studio 2019 または Visual Studio Code を使用して、Azure 内のグローバルな Kubernetes クラスターで直接、コードを迅速に反復およびデバッグすることができます。このため、Azure Dev Spaces は開発チームが Kubernetes での生産性を高めるのに役立ちます。 Azure 内の Kubernetes クラスターは共有されたマネージド Kubernetes クラスターであるため、チームは共同で作業を行うことができます。 コードを個別に開発してから、グローバル クラスターにデプロイし、依存関係のレプリケートやモックアップの作成なしで、他のコンポーネントでエンドツーエンド テストを実行することができます。
 
 図 4-26 に示すように、Azure Dev Spaces の他と最も異なる機能は、クラスター内の残りのグローバル デプロイに統合された運用可能な "スペース" を作成できるということです。
 
@@ -108,7 +108,7 @@ Azure Dev Spaces ではスペースの概念が提供されます。これによ
 
 実際のビューの具体的な例を確認するには、[Azure Dev Spaces に関する eShopOnContainers Wiki ページ](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)を参照してください。
 
-詳細については、「[Azure Dev Spaces を使用したチーム開発](/azure/dev-spaces/team-development-netcore)」を参照してください。
+詳細については、[Azure Dev Spaces を使用したチーム開発](/azure/dev-spaces/team-development-netcore)に関するページを参照してください。
 
 ## <a name="additional-resources"></a>その他の技術情報
 

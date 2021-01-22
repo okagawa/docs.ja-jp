@@ -1,17 +1,17 @@
 ---
-title: .NET Core でマイクロサービス ドメイン モデルを実装する
+title: .NET でマイクロサービス ドメイン モデルを実装する
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | DDD 指向ドメイン モデルの実装の詳細について
-ms.date: 10/08/2018
-ms.openlocfilehash: e24f4e643d258450a2b33ed4dc4aded718bebd82
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 9689058b77701eee35ef018ed2e3f18bd648b0f4
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152547"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188271"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core でマイクロサービス ドメイン モデルを実装する
 
-前のセクションでは、ドメイン モデルの基本的な設計原則と設計パターンを説明しました。 ここでは、.NET Core (プレーンな C\# コード) と EF Core を使用してドメイン モデルを実装するために可能な手段を調べます。 ドメイン モデルは、自分が書くコードのみで構成されます。 EF Core モデルの要件があるだけで、EF に対する実際の依存関係は存在しません。 ドメイン モデルには EF Core または他の ORM への緊密な依存関係や参照を含めないでください。
+前のセクションでは、ドメイン モデルの基本的な設計原則と設計パターンを説明しました。 ここでは、.NET (プレーンな C\# コード) と EF Core を使用してドメイン モデルを実装するために可能な手段を確認します。 ドメイン モデルは、自分が書くコードのみで構成されます。 EF Core モデルの要件があるだけで、EF に対する実際の依存関係は存在しません。 ドメイン モデルには EF Core または他の ORM への緊密な依存関係や参照を含めないでください。
 
 ## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>カスタム .NET Standard ライブラリのドメイン モデル構造
 
@@ -46,7 +46,7 @@ OrderAggregate フォルダーの詳細な表示:Address.cs は値オブジェ�
 ドメイン エンティティを実装する POCO クラスを作成して、.NET でドメイン モデルを実装します。 次の例では、Order クラスがエンティティとして、さらには集約ルートとしても定義されています。 Order クラスは Entity 基底クラスから派生しているため、エンティティに関連する共通コードを再利用できます。 これらの基底クラスとインターフェイスはドメイン モデル プロジェクト内で自分で定義するため、EF などの ORM のインフラストラクチャ コードではなくユーザー コードです。
 
 ```csharp
-// COMPATIBLE WITH ENTITY FRAMEWORK CORE 2.0
+// COMPATIBLE WITH ENTITY FRAMEWORK CORE 5.0
 // Entity is a custom base class with the ID
 public class Order : Entity, IAggregateRoot
 {
@@ -97,7 +97,7 @@ public class Order : Entity, IAggregateRoot
 
 重要なこととして、これが POCO クラスとして実装されるドメイン エンティティである点にご注意ください。 Entity Framework Core または他のインフラストラクチャ フレームワークへの直接の依存関係はありません。 この実装は、DDD の場合と同様に、ドメイン モデルを実装する C# コードに過ぎません。
 
-また、このクラスは IAggregateRoot というインターフェイスで修飾されます。 このインターフェイスは、このエンティティ クラスが集約ルートでもあることを示すためだけに使用される空のインターフェイスであり、*マーカー インターフェイス*と呼ばれることもあります。
+また、このクラスは IAggregateRoot というインターフェイスで修飾されます。 このインターフェイスは、このエンティティ クラスが集約ルートでもあることを示すためだけに使用される空のインターフェイスであり、*マーカー インターフェイス* と呼ばれることもあります。
 
 マーカー インターフェイスはアンチ パターンと見なされることもありますが、このインターフェイスが進化していく可能性がある場合には特に、クラスをマークするためのわかりやすい方法ともなります。 属性はマーカーのもう 1 つの選択肢ですが、クラスの上に集約属性マーカーを配置するよりも、IAggregate インターフェイスの隣に基底クラス (Entity) を配置する方がより迅速に確認できます。 いずれにせよ、これは好みの問題です。
 
@@ -109,7 +109,7 @@ public class Order : Entity, IAggregateRoot
 
 前のコードでは、多くの属性が読み取り専用かプライベートであり、クラス メソッドによってでなければ更新できないことにご注意ください。そのため、更新ではどれもビジネス ドメインの不変条件と、クラス メソッドに指定されたロジックが考慮されます。
 
-たとえば、DDD パターンに従い、コマンド ハンドラー メソッドやアプリケーション レイヤー クラスから**以下を実行すべきでは *ありません*** (実際には、そのようにできないようになっています)。
+たとえば、DDD パターンに従い、コマンド ハンドラー メソッドやアプリケーション レイヤー クラスから **以下を実行すべきでは *ありません*** (実際には、そのようにできないようになっています)。
 
 ```csharp
 // WRONG ACCORDING TO DDD PATTERNS – CODE AT THE APPLICATION LAYER OR
@@ -170,7 +170,7 @@ EF Core 1.1 以降の機能で列をフィールドにマップすれば、プ�
 
 ### <a name="additional-resources"></a>その他の技術情報
 
-- **Vaughn Vernon。DDD および Entity Framework による集約のモデル化。** これは、Entity Framework Core では*ない*ことにご注意ください。 \
+- **Vaughn Vernon。DDD および Entity Framework による集約のモデル化。** これは、Entity Framework Core では *ない* ことにご注意ください。 \
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
 - **Julie Lerman。データ ポイント - ドメイン駆動設計のコーディング:データを重視する開発者のためのヒント** \

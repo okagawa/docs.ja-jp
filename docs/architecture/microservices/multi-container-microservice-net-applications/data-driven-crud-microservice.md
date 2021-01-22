@@ -1,13 +1,13 @@
 ---
 title: 単純なデータ ドリブン CRUD マイクロサービスの作成
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービス アプリケーションのコンテキストでの単純な CRUD (データ ドリブン) マイクロサービスの作成を理解する。
-ms.date: 08/14/2020
-ms.openlocfilehash: 27c9b331573ff08ea16c756552818df285156282
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.date: 01/13/2021
+ms.openlocfilehash: cf6540347771105ea2ee9cdcab0fa347bf0121cf
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739870"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188357"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>単純なデータ ドリブン CRUD マイクロサービスの作成
 
@@ -29,19 +29,19 @@ ms.locfileid: "96739870"
 
 前の図では、論理 Catalog マイクロサービスが示されています。そこには、その Catalog データベースが含まれており、Docker ホストは同じ場合もそうでない場合もあります。 同じ Docker ホストにデータベースを置くことは、開発には適しているかもしれませんが、運用の場合はお勧めしません。 この種のサービスを開発するときに必要なのは、[ASP.NET Core](/aspnet/core/) と、データ アクセス API または [Entity Framework Core](/ef/core/index) のような ORM だけです。 次のセクションで説明するように、[Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) を通じて [Swagger](https://swagger.io/) メタデータを自動的に生成して、サービスが提供する内容の説明を提供することもできます。
 
-クラウドまたはオンプレミスでデータベースをプロビジョニングしなくてもすべての依存関係を稼働させることができるので、Docker コンテナー内の SQL Server のようなデータベース サーバーの実行は開発環境に適しています。 これは、統合テストの実行時にとても便利です。 ただし運用環境では、コンテナーでデータベース サーバーを実行すると、通常は高可用性が実現されないため、このアプローチはお勧めしません。 Azure の運用環境では、Azure SQL DB、または高可用性と高スケーラビリティを提供できるその他のデータベース テクノロジを使用することをお勧めします。 たとえば、NoSQL アプローチでは、CosmosDB を選択できます。
+クラウドまたはオンプレミスでデータベースをプロビジョニングしなくてもすべての依存関係を稼働させることができるので、Docker コンテナー内の SQL Server のようなデータベース サーバーの実行は開発環境に適しています。 この方法は、統合テストを実行する場合に便利です。 ただし運用環境では、コンテナーでデータベース サーバーを実行すると、通常は高可用性が実現されないため、このアプローチはお勧めしません。 Azure の運用環境では、Azure SQL DB、または高可用性と高スケーラビリティを提供できるその他のデータベース テクノロジを使用することをお勧めします。 たとえば、NoSQL アプローチでは、CosmosDB を選択できます。
 
 最後に、Dockerfile と docker-compose.yml メタデータ ファイルを編集して、このコンテナーのイメージの作成方法 (使用される基本イメージに加えて、内部および外部の名前と TCP ポートなどの設計設定) を構成できます。
 
 ## <a name="implementing-a-simple-crud-microservice-with-aspnet-core"></a>ASP.NET Core での単純な CRUD マイクロサービスの実装
 
-.NET Core と Visual Studio を使用して単純な CRUD マイクロサービスを実装するには、図 6-6 に示すように、まず単純な ASP.NET Core Web API プロジェクトを作成します (.NET Core で稼働するため Linux Docker ホスト上で実行できます)。
+.NET と Visual Studio を使用してシンプルな CRUD マイクロサービスを実装するには、図 6-6 に示すように、まずシンプルな ASP.NET Core Web API プロジェクトを作成します (.NET で稼働するため Linux Docker ホスト上で実行できます)。
 
 ![プロジェクトの設定が示されている Visual Studio のスクリーンショット。](./media/data-driven-crud-microservice/create-asp-net-core-web-api-project.png)
 
 **図 6-6**。 Visual Studio 2019 での ASP.NET Core Web API プロジェクトの作成
 
-ASP.NET Core Web API プロジェクトを作成するには、最初に ASP.NET Core Web アプリケーションを選択し、次に API の種類を選択します。 プロジェクトを作成した後、Entity Framework API またはその他の API を使用して、他の Web API プロジェクトの場合と同様に MVC コントローラーを実装できます。 新しい Web API プロジェクトでは、そのマイクロサービスの依存関係が ASP.NET Core 自体のみにあることがわかります。 内部的には、*Microsoft.AspNetCore.All* 依存関係内で、図 6-7 に示すように Entity Framework やその他の多くの .NET Core NuGet パッケージを参照しています。
+ASP.NET Core Web API プロジェクトを作成するには、最初に ASP.NET Core Web アプリケーションを選択し、次に API の種類を選択します。 プロジェクトを作成した後、Entity Framework API またはその他の API を使用して、他の Web API プロジェクトの場合と同様に MVC コントローラーを実装できます。 新しい Web API プロジェクトでは、そのマイクロサービスの依存関係が ASP.NET Core 自体のみにあることがわかります。 内部的には、*Microsoft.AspNetCore.All* 依存関係内で、図 6-7 に示すように Entity Framework やその他の多くの .NET NuGet パッケージを参照しています。
 
 ![Catalog.Api の NuGet 依存関係が示されている VS のスクリーンショット。](./media/data-driven-crud-microservice/simple-crud-web-api-microservice-dependencies.png)
 
@@ -270,7 +270,7 @@ catalog-api:
 
 Azure Key Vault は、暗号化キーと、クラウド アプリケーションやサービスで使用されるシークレットを保管したり、保護したりするのに役立ちます。 API キー、接続文字列、パスワードなど、厳重に管理するあらゆるものがシークレットです。厳重な管理としては、使用を記録したり、有効期限を設定したり、アクセスを管理したり *します*。
 
-Azure Key Vault を利用することで、誰にも知らせる必要なく、アプリケーション シークレットの使用を非常に細かく制御できます。 シークレットは一定の周期で再利用し、開発や運用を妨げることなくセキュリティを強化できます。
+Azure Key Vault を利用することで、誰にも知らせる必要なく、アプリケーション シークレットの使用を細かく制御できます。 シークレットは一定の周期で再利用し、開発や運用を妨げることなくセキュリティを強化できます。
 
 アプリケーションで Azure Key Vault を使用するには、組織の Active Directory に登録する必要があります。
 
@@ -344,7 +344,7 @@ Swagger のメタデータは、Microsoft Flow、PowerApps、Azure Logic Apps �
 
 機能 API のヘルプ ページのフォームでは、ASP.NET Core REST API アプリケーションの Swagger メタデータ生成はいくつかの方法で自動化でき、*swagger-ui* によって異なります。
 
-最もよく知られている方法はおそらく、[Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) です。これは現在、[eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) で使用されています。これについてはこのガイドで取り上げますが、[NSwag](https://github.com/RSuter/NSwag) を使用するという選択肢もあります。その場合、Swagger または OpenAPI の仕様から、さらには [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio) を使用し、コントローラーを含む .dll をスキャンするという方法によって、Typescript、C\# API クライアント、C\# コントローラーを生成できます。
+最もよく知られている方法はおそらく、[Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) です。これは現在、[eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) で使用されています。これについてはこのガイドである程度詳しく説明しますが、[NSwag](https://github.com/RSuter/NSwag) を使用するという選択肢もあります。その場合、Swagger または OpenAPI の仕様から、さらには [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio) を使用し、コントローラーを含む .dll をスキャンするという方法によって、Typescript、C\# API クライアント、C\# コントローラーを生成できます。
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Swashbuckle NuGet パッケージで API Swagger メタデータの生成を自動化する方法
 
@@ -354,7 +354,7 @@ Swashbuckle では、ASP.NET Web API プロジェクトの Swagger メタデー�
 
 Swashbuckle は API Explorer と Swagger または [swagger-ui](https://github.com/swagger-api/swagger-ui) を結合して API コンシューマーに充実した検出およびドキュメント エクスペリエンスを提供します。 Swagger メタデータ ジェネレーター エンジンに加えて、Swashbuckle には、Swashbuckle のインストール後に自動的に提供される埋め込みバージョンの swagger-ui も含まれています。
 
-これは、優れた検出 UI で API を補完し、開発者による API の使用を支援できることを意味します。 これは自動的に生成されるため、必要なコードとメンテナンスの量がとても少なく、API の構築に専念することができます。 API Explorer の結果は、図 6-8 のようになります。
+これは、優れた検出 UI で API を補完し、開発者による API の使用を支援できることを意味します。 これは自動的に生成されるため、必要なコードとメンテナンスの量が少なく、API の構築に専念することができます。 API Explorer の結果は、図 6-8 のようになります。
 
 ![eShopOContainers API を表示している Swagger API Explorer のスクリーンショット。](./media/data-driven-crud-microservice/swagger-metadata-eshoponcontainers-catalog-microservice.png)
 

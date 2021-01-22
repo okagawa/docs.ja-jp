@@ -1,13 +1,13 @@
 ---
 title: Docker コンテナー、イメージ、レジストリ
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | Docker コンテナー、イメージ、レジストリ
-ms.date: 08/31/2018
-ms.openlocfilehash: 3b643a3bf4ca3ce1b8ba3fc40cd2f3ad8bbe5ffb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 01/13/2021
+ms.openlocfilehash: 0dfde34cd9dab1ef47237746ca6ac2ed75379635
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73737773"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189370"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker コンテナー、イメージ、レジストリ
 

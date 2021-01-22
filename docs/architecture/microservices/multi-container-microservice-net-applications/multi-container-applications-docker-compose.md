@@ -1,13 +1,13 @@
 ---
 title: docker-compose.yml で複数のコンテナー アプリケーションを定義する
 description: docker-compose.yml を使用して複数コンテナーのアプリケーション用にマイクロサービスの構成を指定する方法。
-ms.date: 01/30/2020
-ms.openlocfilehash: 81303be621da54b7336228585e86d1120a6b7598
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.date: 01/13/2021
+ms.openlocfilehash: 224b06c6a10834b42218746964f05b055d947235
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739790"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188791"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml で複数のコンテナー アプリケーションを定義する
 
@@ -17,7 +17,7 @@ ms.locfileid: "96739790"
 
 基本的には、展開する各コンテナーを定義することに加え、各コンテナー展開に対して特定の特性も定義します。 マルチコンテナー展開の記述ファイルを作成したら、全体のソリューションを、[docker-compose up](https://docs.docker.com/compose/overview/) CLI コマンドで調整された 1 つのアクションで展開することができます。または、Visual Studio から透過的に展開することもできます。 それ以外の場合は、Docker CLI を使用して、コマンドラインから `docker run` コマンドを使用して、複数の手順でコンテナーごとに展開する必要があります。 そのため、docker-compose.yml で定義された各サービスは、イメージまたはビルドを 1 つだけ指定する必要があります。 その他のキーは省略可能で、その対応する `docker run` コマンド ラインと似ています。
 
-次の YAML コードは、グローバルに使用できる定義ですが、eShopOnContainers サンプル用の 1 つの docker-compose.yml ファイルです。 これは eShopOnContainers からの実際の docker-compose ファイルではありません。 むしろ、簡素化され、1 つのファイルに統合されたバージョンです。後述しますが、これは docker-compose ファイルで使用するには最善の方法ではありません。
+次の YAML コードは、グローバルに使用できる定義ですが、eShopOnContainers サンプル用の 1 つの docker-compose.yml ファイルです。 このコードは eShopOnContainers からの実際の docker-compose ファイルではありません。 むしろ、簡素化され、1 つのファイルに統合されたバージョンです。後述しますが、これは docker-compose ファイルで使用するには最善の方法ではありません。
 
 ```yml
 version: '3.4'
@@ -127,7 +127,7 @@ services:
 
 - コンテナー上で公開されているポート 80 を、Docker ホスト コンピューター (Linux VM) 上のポート 5101 に転送します。
 
-- Web サービスを **sqldata** サービス (コンテナーで実行されている Linux データベースの SQL Server インスタンス) にリンクします。 この依存関係を指定すると、catalog-api コンテナーは、sqldata コンテナーが起動するまで起動しなくなります。これが重要なのは、catalog-api では、SQL Server データベースが先に起動して実行されている必要があるからです。 ただし、このようなコンテナーの依存関係は、Docker がコンテナー レベルでしかチェックしないため、多くの場合、不十分です。 サービス (この場合は SQL Server) がまだ準備できていない場合もあるため、クライアント マイクロサービスで指数バックオフによる再試行ロジックを実装することをお勧めします。 そうすることで、依存関係のコンテナーが少しの間、準備できない場合でも、アプリケーションが回復力を保つことができます。
+- Web サービスを **sqldata** サービス (コンテナーで実行されている Linux データベースの SQL Server インスタンス) にリンクします。 この依存関係を指定すると、catalog-api コンテナーは、sqldata コンテナーが起動するまで起動しなくなります。この点が重要なのは、catalog-api では、SQL Server データベースが先に起動して実行されている必要があるからです。 ただし、このようなコンテナーの依存関係は、Docker がコンテナー レベルでしかチェックしないため、多くの場合、不十分です。 サービス (この場合は SQL Server) がまだ準備できていない場合もあるため、クライアント マイクロサービスで指数バックオフによる再試行ロジックを実装することをお勧めします。 そうすることで、依存関係のコンテナーが少しの間、準備できない場合でも、アプリケーションが回復力を保つことができます。
 
 - これは外部サーバーへのアクセスを許可するように構成されます: extra\_hosts 設定により、開発用 PC 上のローカル SQL Server インスタンスなど、Docker ホストの外 (つまり、開発用 Docker ホストである既定の Linux VM の外) にある外部のサーバーやマシンにアクセスすることができます。
 
@@ -169,7 +169,7 @@ Compose を使用してリモート Docker エンジンに展開することも�
 
 ### <a name="using-multiple-docker-compose-files-to-handle-several-environments"></a>複数の docker-compose ファイルを使用して複数の環境を処理する
 
-さまざまな環境をターゲットとする場合は、複数の compose ファイルを使用する必要があります。 これにより、環境に応じて複数の構成バリアントを作成できます。
+さまざまな環境をターゲットとする場合は、複数の compose ファイルを使用する必要があります。 このアプローチにより、環境に応じて複数の構成バリアントを作成できます。
 
 #### <a name="overriding-the-base-docker-compose-file"></a>基本の docker-compose ファイルをオーバーライドする
 
@@ -434,10 +434,10 @@ Docker-compose は、.env ファイル内の各行が \<variable\>=\<value\> の
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>最適化された ASP.NET Core Docker イメージをビルドする
 
-インターネット上のソースで Docker や .NET Core を検索すると、ソースをコンテナーにコピーして Docker イメージを簡単にビルドする方法を示す Dockerfile が見つかります。 これらの例では、単純な構成を使用することで、ご利用のアプリケーションにパッケージ化された環境で Docker イメージを持つことができます。 次の例は、このような単純な Dockerfile を示しています。
+インターネット上のソースで Docker や .NET を検索すると、ソースをコンテナーにコピーして Docker イメージを簡単にビルドする方法を示す Dockerfile が見つかります。 これらの例では、単純な構成を使用することで、ご利用のアプリケーションにパッケージ化された環境で Docker イメージを持つことができます。 次の例は、このような単純な Dockerfile を示しています。
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/sdk:3.1
+FROM mcr.microsoft.com/dotnet/sdk:5.0
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
 EXPOSE 80
@@ -448,9 +448,9 @@ ENTRYPOINT ["dotnet", "run"]
 
 このような Dockerfile は機能します。 ただし、イメージ、とりわけ運用イメージは大幅に最適化できます。
 
-コンテナーとマイクロサービス モデルでは、常にコンテナーを起動します。 コンテナーは破棄可能なため、コンテナーの一般的な使用方法では、スリープ状態のコンテナーを再起動しません。 オーケストレーター (Kubernetes や Azure Service Fabric など) では、イメージの新しいインスタンスが作成されるだけです。 これは、インスタンス化のプロセスを高速化するため、アプリケーションのビルド時に、アプリケーションをプリコンパイルして最適化する必要があることを意味します。 コンテナーは起動すると、実行できる状態になります。 .NET Core と Docker に関するブログ記事で説明されているように、`dotnet restore` および `dotnet build` CLI コマンドを使用して実行時に復元およびコンパイルしないでください。
+コンテナーとマイクロサービス モデルでは、常にコンテナーを起動します。 コンテナーは破棄可能なため、コンテナーの一般的な使用方法では、スリープ状態のコンテナーを再起動しません。 オーケストレーター (Kubernetes や Azure Service Fabric など) によって、イメージの新しいインスタンスが作成されます。 これは、インスタンス化のプロセスを高速化するため、アプリケーションのビルド時に、アプリケーションをプリコンパイルして最適化する必要があることを意味します。 コンテナーは起動すると、実行できる状態になります。 .NET と Docker に関するブログ記事で説明されているように、`dotnet restore` および `dotnet build` CLI コマンドを使用して実行時に復元およびコンパイルしないでください。
 
-.NET チームは、.NET Core と ASP.NET Core をコンテナー用に最適化されたフレームワークにするための重要な作業を行っています。 .NET Core は、メモリの使用量を抑えた簡易フレームワークというだけではありません。バージョン 2.1 以降、チームでは次の 3 つの主なシナリオに合わせた Docker イメージの最適化に重点を置き、*dotnet/core* にある Docker Hub レジストリに、最適化されたイメージを発行してきました。
+.NET チームは、.NET と ASP.NET Core をコンテナー用に最適化されたフレームワークにするための重要な作業を行っています。 .NET は、メモリ占有領域を抑えた簡易フレームワークというだけではありません。バージョン 2.1 以降、チームでは次の 3 つの主なシナリオに合わせた Docker イメージの最適化に重点を置き、それらを *dotnet/* にある Docker Hub レジストリに発行してきました。
 
 1. **開発**: 変更の繰り返しとデバッグを迅速に行う機能が優先され、サイズは 2 番目です。
 
@@ -458,7 +458,7 @@ ENTRYPOINT ["dotnet", "run"]
 
 3. **実稼働**: コンテナーを迅速に展開し、開始することに重点が置かれます。そのため、これらのイメージは、バイナリと、アプリケーションを稼働させるために必要なコンテンツに限定されます。
 
-.NET チームは、次の 4 つの基本的なバリエーションを [dotnet/core](https://hub.docker.com/_/microsoft-dotnet/) (Docker Hub) に用意しています。
+.NET チームは、次の 4 つの基本的なバリエーションを [dotnet/](https://hub.docker.com/_/microsoft-dotnet/) (Docker Hub) に用意しています。
 
 1. **sdk**: 開発シナリオおよびビルド シナリオ向け
 1. **aspnet**: ASP.NET 運用シナリオ向け
@@ -472,7 +472,7 @@ ENTRYPOINT ["dotnet", "run"]
 - **ASP.NET Core を使用して最適化された Docker イメージをビルドする**
   <https://docs.microsoft.com/archive/blogs/stevelasker/building-optimized-docker-images-with-asp-net-core>
 
-- **.NET Core アプリケーションの Docker イメージのビルド**
+- **.NET アプリケーション用の Docker イメージのビルド**
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 > [!div class="step-by-step"]

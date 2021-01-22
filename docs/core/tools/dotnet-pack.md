@@ -2,12 +2,12 @@
 title: dotnet pack コマンド
 description: dotnet pack コマンドを実行すると、.NET プロジェクトの NuGet パッケージが作成されます。
 ms.date: 04/28/2020
-ms.openlocfilehash: 3ca7947b4ed9902b163f09a7b57696f304610cce
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a9a634c358f5de4f28c3de06edc9a2b4d2eb8d57
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674802"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190079"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -46,7 +46,7 @@ dotnet pack -h|--help
 > [!NOTE]
 > 場合によっては、暗黙的なビルドは実行できません。 これは、ビルドとパック ターゲット間の循環依存を回避するため `GeneratePackageOnBuild` が設定されている場合に発生します。 ロックされているファイルがある場合や、その他の問題がある場合にも、ビルドは失敗します。
 
-パッキング プロセスのために `dotnet pack` コマンドに MSBuild のプロパティを使用できます。 詳細については、「[NuGet メタデータ プロパティ](csproj.md#nuget-metadata-properties)」と「[MSBuild コマンド ライン リファレンス](/visualstudio/msbuild/msbuild-command-line-reference)」を参照してください。 「[例](#examples)」のセクションでは、MSBuild の -p スイッチを使用する方法について、2 つの異なるシナリオで説明します。
+パッキング プロセスのために `dotnet pack` コマンドに MSBuild のプロパティを使用できます。 詳細については、[NuGet の pack ターゲットのプロパティ](/nuget/reference/msbuild-targets#pack-target)に関するページと、「[MSBuild コマンド ライン リファレンス](/visualstudio/msbuild/msbuild-command-line-reference)」を参照してください。 「[使用例](#examples)」のセクションでは、MSBuild の `-p` スイッチを使用する方法を、2 つの異なるシナリオについて説明します。
 
 Web プロジェクトは既定でパッケージ化可能ではありません。 既定の動作をオーバーライドするには、 *.csproj* ファイルに次のプロパティを追加します。
 
@@ -64,7 +64,7 @@ Web プロジェクトは既定でパッケージ化可能ではありません�
 
 `PROJECT | SOLUTION`
 
-  パックするプロジェクトまたはソリューション。 [csproj ファイル](csproj.md)、vbproj ファイル、fsproj ファイル、ソリューション ファイル、またはディレクトリのいずれかへのパスです。 指定されていない場合、コマンドによりプロジェクトまたはソリューション ファイルが現在のディレクトリで検索されます。
+  パックするプロジェクトまたはソリューション。 csproj、vbproj、または fsproj ファイル、ソリューション ファイル、またはディレクトリのいずれかへのパスです。 指定されていない場合、コマンドによりプロジェクトまたはソリューション ファイルが現在のディレクトリで検索されます。
 
 ## <a name="options"></a>オプション
 

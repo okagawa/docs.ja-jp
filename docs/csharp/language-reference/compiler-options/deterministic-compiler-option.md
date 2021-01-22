@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -deterministic compiler option [C#]
 - deterministic compiler option [C#]
 - /deterministic compiler option [C#]
-ms.openlocfilehash: 9d0bcc2957e5a666c21cdc2ce61e74fc90fe3530
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d64f4d4b0d4e9b5ed2cc1ee40662dc669fc6660d
+ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125827"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98235327"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -27,7 +27,7 @@ ms.locfileid: "89125827"
 
 ## <a name="remarks"></a>Remarks
 
-既定では、コンパイラはタイムスタンプと乱数から生成された GUID を追加するため、指定した入力のセットからのコンパイラの出力は固有になります。 `-deterministic` オプションを使用して、*決定論的アセンブリ*を生成します。そのバイナリ コンテンツは、入力が同じである限り、コンパイル全体で同一になります。
+既定では、コンパイラはタイムスタンプと乱数から生成された MVID を追加するため、指定した入力のセットからのコンパイラの出力は固有になります。 `-deterministic` オプションを使用して、*決定論的アセンブリ* を生成します。そのバイナリ コンテンツは、入力が同じである限り、コンパイル全体で同一になります。 このようなビルドでは、タイムスタンプおよび MVID フィールドは、すべてのコンパイル入力のハッシュから派生した値に置き換えられます。
 
 コンパイラでは決定性のために次の入力が考慮されます。
 

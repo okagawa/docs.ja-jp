@@ -1,13 +1,13 @@
 ---
 title: Docker に関する用語
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | Docker 用語
-ms.date: 01/30/2020
-ms.openlocfilehash: b30ea26ee174caf3484931945c832c72a1acf93d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 01/13/2021
+ms.openlocfilehash: 567635060502ec3b2293f5eee6dd8dfe4d934ff7
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707766"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189344"
 ---
 # <a name="docker-terminology"></a>Docker に関する用語
 
@@ -35,7 +35,7 @@ docker build
 
 **レジストリ**:リポジトリへのアクセス権を提供するサービスです。 ほとんどのパブリック イメージの既定のレジストリは [Docker Hub](https://hub.docker.com/) です (Docker によって組織として所有されている)。 レジストリには、通常、複数のチームからのリポジトリが含まれています。 企業は、多くの場合、自社で作成したイメージを格納および管理するためのプライベート レジストリを持っています。 Azure Container Registry は別の例となります。
 
-**マルチアーキテクチャ イメージ**:マルチアーキテクチャの場合は、Docker が実行されているプラットフォームに応じて、適切なイメージの選択を簡略化する機能です。 たとえば、Dockerfile でレジストリから基本イメージ **FROM mcr.microsoft.com/dotnet/sdk:3.1** を要求すると、Docker が実行されているオペレーティング システムとバージョンに応じて、**3.1-sdk-nanoserver-1909**、**3.1-sdk-nanoserver-1809**、または **3.1-sdk-buster-slim** が実際に取得されます。
+**マルチアーキテクチャ イメージ**:マルチアーキテクチャの場合は、Docker が実行されているプラットフォームに応じて、適切なイメージの選択を簡略化する機能です。 たとえば、Dockerfile でレジストリから基本イメージ **mcr.microsoft.com/dotnet/sdk:5.0** を要求すると、Docker が実行されているオペレーティング システムとバージョンに応じて、**5.0-nanoserver-1909**、**5.0-nanoserver-1809**、または **5.0-buster-slim** が実際に取得されます。
 
 **Docker Hub**:イメージをアップロードし、それらを操作するパブリック レジストリです。 Docker Hub は、Docker イメージ ホスティング、パブリックまたはプライベート レジストリ、ビルド トリガーおよび Web フック、さらに GitHub および Bitbucket との統合を提供します。
 
@@ -43,7 +43,7 @@ docker build
 
 **Docker Trusted Registry (DTR)** :組織のデータ センターやネットワーク内で有効になるようにオンプレミスにインストール可能な Docker レジストリ サービス (Docker からの) です。 企業内で管理する必要があるプライベート イメージにおいて便利です。 Docker Trusted Registry は Docker Datacenter 製品の一部として含められています。 詳細については、[Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/) に関するページを参照してください。
 
-**Docker Community Edition (CE)** :コンテナーをローカルにビルド、実行、テストのための Windows および macOS 用の開発ツールです。 Docker for Windows CE は、Linux コンテナーと Windows コンテナーの両方に開発環境を提供します。 Windows 上の Linux Docker ホストは、[Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization) 仮想マシンをベースにしています。 Windows コンテナーのホストは、Windows に直接基づいています。 Docker CE for Mac は、Apple Hypervisor フレームワークと [xhyve ハイパーバイザー](https://github.com/mist64/xhyve) (Mac OS X 上で Linux Docker ホスト仮想マシンを提供する) に基づいています。Docker CE for Windows と Docker CE for Mac は、Oracle VirtualBox に基づく Docker Toolbox に取って代わります。
+**Docker Community Edition (CE)** :コンテナーをローカルにビルド、実行、テストのための Windows および macOS 用の開発ツールです。 Docker for Windows CE は、Linux コンテナーと Windows コンテナーの両方に開発環境を提供します。 Windows 上の Linux Docker ホストは、[Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization) 仮想マシンをベースにしています。 Windows コンテナーのホストは、Windows に直接基づいています。 Docker CE for Mac は、Apple Hypervisor フレームワークと [xhyve ハイパーバイザー](https://github.com/mist64/xhyve) (macOS X 上で Linux Docker ホスト仮想マシンを提供する) に基づいています。Docker CE for Windows と Docker CE for Mac は、Oracle VirtualBox に基づく Docker Toolbox に取って代わります。
 
 **Docker Enterprise Edition (EE)** :Linux および Windows 開発用の Docker ツールのエンタープライズ規模のバージョンです。
 

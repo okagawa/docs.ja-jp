@@ -1,13 +1,13 @@
 ---
 title: マイクロサービスを基にしている複合 UI を作成する
 description: マイクロサービス アーキテクチャは、バックエンド専用ではありません。 フロントエンドで使用してピーク ビューを取得します。
-ms.date: 09/20/2018
-ms.openlocfilehash: 1861d3bb6e5d4a0226aa8f3f72a2e0d3e83be56f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 01/13/2021
+ms.openlocfilehash: 3d866172cf7d15486dd2cc0d5dbb286c77693cea
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72275743"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189413"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>マイクロサービスを基にしている複合 UI を作成する
 
@@ -23,7 +23,7 @@ ms.locfileid: "72275743"
 
 クライアント アプリケーションの起動時、各クライアント UI コンポーネント (TypeScript クラスなど) は、特定のシナリオで ViewModels を提供できるインフラストラクチャ マイクロサービスに自らを登録します。 マイクロサービスがシェイプを変更すると、UI も変わります。
 
-図 4-21 に、この複合 UI アプローチのバージョンを示します。 これは、異なる手法に基づく細分化された部分を集計する他のマイクロサービスが存在する可能性があるため、簡略化されています。 それは、従来の Web アプローチ (ASP.NET MVC) または SPA (シングル ページ アプリケーション) のどちらを構築しているかに依存します。
+図 4-21 に、この複合 UI アプローチのバージョンを示します。 このアプローチは、異なる手法に基づく細分化された部分を集計する他のマイクロサービスが存在する可能性があるため、簡略化されています。 それは、従来の Web アプローチ (ASP.NET MVC) または SPA (シングル ページ アプリケーション) のどちらを構築しているかに依存します。
 
 ![多くのビュー モデルで構成された複合 UI の図。](./media/microservice-based-composite-ui-shape-layout/microservice-generate-composite-ui.png)
 

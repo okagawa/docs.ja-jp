@@ -2,12 +2,12 @@
 title: dotnet-trace 診断ツール - .NET CLI
 description: dotnet-trace CLI ツールをインストールして使用し、.NET EventPipe を使って、ネイティブ プロファイラーなしで実行中のプロセスの .NET トレースを収集する方法について学習します。
 ms.date: 11/17/2020
-ms.openlocfilehash: a3b5748cb2a6c2060971fbad0d81ade00dc83087
-ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
+ms.openlocfilehash: 93698882e94f58eda84abebc277e1eacfe22a3da
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753667"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189703"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace パフォーマンス分析ユーティリティ
 
@@ -34,6 +34,9 @@ ms.locfileid: "97753667"
   | Windows | [x86](https://aka.ms/dotnet-trace/win-x86) \| [x64](https://aka.ms/dotnet-trace/win-x64) \| [arm](https://aka.ms/dotnet-trace/win-arm) \| [arm-x64](https://aka.ms/dotnet-trace/win-arm64) |
   | macOS   | [x64](https://aka.ms/dotnet-trace/osx-x64) |
   | Linux   | [x64](https://aka.ms/dotnet-trace/linux-x64) \| [arm](https://aka.ms/dotnet-trace/linux-arm) \| [arm64](https://aka.ms/dotnet-trace/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-trace/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-trace/linux-musl-arm64) |
+
+> [!NOTE]
+> x86 アプリ上で `dotnet-trace` を使用するには、対応する x86 バージョンのツールが必要です。
 
 ## <a name="synopsis"></a>構文
 
@@ -95,7 +98,47 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 - **`--clrevents <clrevents>`**
 
-  生成する CLR ランタイム イベントの一覧。
+  有効にする CLR ランタイム プロバイダーのキーワードの、`+` 記号で区切られたリスト。 これは、16 進値ではなく文字列の別名を使用してイベント キーワードを指定できるようにする、単純なマッピングです。 たとえば、`dotnet-trace collect --providers Microsoft-Windows-DotNETRuntime:3:4` では、`dotnet-trace collect --clrevents gc+gchandle --clreventlevel informational` と同じイベントのセットが要求されます。 次の表に、使用できるキーワードの一覧を示します。
+
+  | キーワードの文字列別名 | キーワードの 16 進値 |
+  | ------------ | ------------------- |
+  | `gc` | `0x1` |
+  | `gchandle` | `0x2` |
+  | `fusion` | `0x4` |
+  | `loader` | `0x8` |
+  | `jit` | `0x10` |
+  | `ngen` | `0x20` |
+  | `startenumeration` | `0x40` |
+  | `endenumeration` | `0x80` |
+  | `security` | `0x400` |
+  | `appdomainresourcemanagement` | `0x800` |
+  | `jittracing` | `0x1000` |
+  | `interop` | `0x2000` |
+  | `contention` | `0x4000` |
+  | `exception` | `0x8000` |
+  | `threading` | `0x10000` |
+  | `jittedmethodiltonativemap` | `0x20000` |
+  | `overrideandsuppressngenevents` | `0x40000` |
+  | `type` | `0x80000` |
+  | `gcheapdump` | `0x100000` |
+  | `gcsampledobjectallocationhigh` | `0x200000` |
+  | `gcheapsurvivalandmovement` | `0x400000` |
+  | `gcheapcollect` | `0x800000` |
+  | `gcheapandtypenames` | `0x1000000` |
+  | `gcsampledobjectallocationlow` | `0x2000000` |
+  | `perftrack` | `0x20000000` |
+  | `stack` | `0x40000000` |
+  | `threadtransfer` | `0x80000000` |
+  | `debugger` | `0x100000000` |
+  | `monitoring` | `0x200000000` |
+  | `codesymbols` | `0x400000000` |
+  | `eventsource` | `0x800000000` |
+  | `compilation` | `0x1000000000` |
+  | `compilationdiagnostic` | `0x2000000000` |
+  | `methoddiagnostic` | `0x4000000000` |
+  | `typediagnostic` | `0x8000000000` |
+
+  CLR プロバイダーの詳細については、[.NET ランタイム プロバイダーのリファレンス ドキュメント](../../fundamentals/diagnostics/runtime-events.md)を参照してください。
 
 - **`--format {Chromium|NetTrace|Speedscope}`**
 
@@ -146,6 +189,12 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 > [!NOTE]
 > 大きなアプリケーションの場合、トレースの停止に時間がかかることがあります (最大数分)。 ランタイムでは、トレースにキャプチャされたすべてのマネージド コードを対象に、型キャッシュを送信する必要があります。
+
+> [!NOTE]
+> Linux と macOS 上でこのコマンドを使用するには、ターゲット アプリケーションと `dotnet-trace` で同じ `TMPDIR` 環境変数が共有されることが前提とされています。 それ以外の場合、このコマンドはタイムアウトします。
+
+> [!NOTE]
+> `dotnet-trace` を使用してトレースを収集するには、ターゲット プロセスを実行しているユーザーと同じユーザーとして、またはルートとしてそれを実行する必要があります。 それ以外の場合、このツールでターゲット プロセスとの接続を確立することはできません。
 
 ## <a name="dotnet-trace-convert"></a>dotnet-trace convert
 

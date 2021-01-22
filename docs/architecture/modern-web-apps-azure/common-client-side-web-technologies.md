@@ -6,12 +6,12 @@ ms.author: wiwagn
 no-loc:
 - Blazor
 ms.date: 12/01/2020
-ms.openlocfilehash: a4549e48152b21af05c67f601c1db65029e346fa
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 75c696d881ad0586b11cdbd264f3ff90ec3bce8d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851667"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98187965"
 ---
 # <a name="common-client-side-web-technologies"></a>一般的なクライアント側の Web テクノロジ
 
@@ -169,7 +169,7 @@ WebAssembly (略称 `wasm`) によって、Web ブラウザー内で .NET コー
 
 WebAssembly コードを使用すると、JavaScript を介してブラウザーの全機能にアクセスできます。これは、"JavaScript の相互運用性" と呼ばれますが、"JavaScript 相互運用" や "JS 相互運用" とよく省略されます。 ブラウザーの WebAssembly 経由で実行される .NET コードは、ブラウザーの JavaScript サンドボックス内で実行されます。その際、クライアント コンピューター上での悪意のある操作に対して、サンドボックスに備わった保護が適用されます。
 
-詳細については、「[ASP.NET Core Blazor の概要](https://docs.microsoft.com/aspnet/core/blazor/?view=aspnetcore-5.0)」を参照してください。
+詳細については、「[ASP.NET Core Blazor の概要](/aspnet/core/blazor/)」を参照してください。
 
 ### <a name="choosing-a-spa-framework"></a>SPA フレームワークを選択する
 

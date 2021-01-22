@@ -4,12 +4,12 @@ description: 単一ファイル アプリケーションの概要、およびこ
 author: lakshanf
 ms.author: lakshanf
 ms.date: 12/17/2020
-ms.openlocfilehash: e2d2c9ed4c28d11a77e4f840602982a36cf1c80c
-ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
+ms.openlocfilehash: 10ffc947f6a3adcf2889a03edd2616007ce236f3
+ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97678150"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98536139"
 ---
 # <a name="single-file-deployment-and-executable"></a>単一ファイルの配置と実行可能ファイル
 
@@ -56,6 +56,8 @@ Windows と Mac では、Visual Studio と VS Code を使用してクラッシ�
 ## <a name="other-considerations"></a>その他の考慮事項
 
 既定では、単一ファイルを使用してネイティブ ライブラリをバンドルすることができません。 Linux では、ランタイム ライブラリをバンドルに事前にリンクして、アプリケーション ネイティブ ライブラリのみを単一ファイル アプリと同じディレクトリに配置します。 Windows では、ホスト コードのみを事前にリンクして、ランタイム ライブラリとアプリケーション ネイティブ ライブラリの両方を単一ファイル アプリと同じディレクトリに配置します。 これにより、優れたデバッグ エクスペリエンスが確保されます。それには、ネイティブ ファイルを単一ファイルから除外する必要があります。 単一ファイル バンドルにネイティブ ライブラリを含めるようにフラグ `IncludeNativeLibrariesForSelfExtract` を設定するオプションがありますが、これらのファイルは、単一ファイル アプリケーションが実行されるときに、クライアント コンピューターの一時ディレクトリに抽出されます。
+
+`IncludeAllContentForSelfExtract` を指定すると、実行可能ファイルを実行する前にすべてのファイルが抽出されます。 これにより、元の .NET Core の単一ファイル展開動作が保持されます。
 
 単一ファイル アプリケーションでは、関連するすべての PDB ファイルは隣に配置され、既定ではバンドルされません。 ビルドするプロジェクトのアセンブリ内に PDB を含めるには、[以下](#include-pdb-files-inside-the-bundle)で詳しく説明するように、`DebugType` を `embedded` に設定します。
 

@@ -1,13 +1,13 @@
 ---
 title: 正常性の監視
 description: 正常性の監視を実施する 1 つの方法を探ります。
-ms.date: 03/02/2020
-ms.openlocfilehash: 3e3e8ec41de1469f0c397d8d80d224dd2f7a2bd2
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 01/13/2021
+ms.openlocfilehash: 4b85193c260b950b0c7a1c97ca5c83dfc87e5fb3
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267894"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189064"
 ---
 # <a name="health-monitoring"></a>正常性の監視
 
@@ -31,10 +31,10 @@ ASP.NET Core のマイクロサービスまたは Web アプリケーション�
 
 開始するには、各マイクロサービスの正常性状態の構成要素を定義する必要があります。 このサンプル アプリケーションでは、API が HTTP 経由でアクセス可能であり、関連する SQL Server データベースも使用できる場合、マイクロサービスが正常であると定義します。
 
-.NET Core 3.1 では、組み込み API を使用することで、次のようにサービスを構成し、マイクロサービスとそれに依存している SQL Server データベースに対する正常性チェックを追加できます。
+.NET 5 では、組み込み API を使用することで、次のようにサービスを構成し、マイクロサービスとそれに依存している SQL Server データベースに対する正常性チェックを追加できます。
 
 ```csharp
-// Startup.cs from .NET Core 3.1 Web API sample
+// Startup.cs from .NET 5 Web API sample
 //
 public void ConfigureServices(IServiceCollection services)
 {
@@ -109,7 +109,7 @@ public class SqlConnectionHealthCheck : IHealthCheck
 最後に、URL パス `/hc` に応答するミドルウェアを追加します。
 
 ```csharp
-// Startup.cs from .NET Core 3.1 Web Api sample
+// Startup.cs from .NET 5 Web Api sample
 //
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
@@ -130,7 +130,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 eShopOnContainers のマイクロサービスは、そのタスクを実行するために複数のサービスに依存しています。 たとえば、eShopOnContainers の `Catalog.API` マイクロサービスは、Azure Blob Storage、SQL Server、RabbitMQ など、さまざまなサービスに依存しています。 そのため、`AddCheck()` メソッドを使用していくつかの正常性チェックが追加されています。 あらゆる従属サービスに対して、それぞれの正常性状態を定義するカスタム `IHealthCheck` 実装を追加する必要があります。
 
-オープンソース プロジェクト [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) により、.NET Core 3.1 の上に構築されるそれぞれのエンタープライズ サービス向けのカスタムの正常性チェックが実装され、この問題が解決されます。 各正常性チェックは、プロジェクトに簡単に追加できる個別の NuGet パッケージとして利用できます。 eShopOnContainers では、そのすべてのマイクロサービスでそれらが広範囲に使用されます。
+オープンソース プロジェクト [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) により、.NET 5 の上に構築されるそれぞれのエンタープライズ サービス向けのカスタムの正常性チェックが実装され、この問題が解決されます。 各正常性チェックは、プロジェクトに簡単に追加できる個別の NuGet パッケージとして利用できます。 eShopOnContainers では、そのすべてのマイクロサービスでそれらが広範囲に使用されます。
 
 たとえば、`Catalog.API` マイクロ サービスでは、次の NuGet パッケージが追加されています。
 
@@ -267,7 +267,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 たとえば、ほとんどのオーケストレーターでは、ダウンタイムなしの展開を管理するために正常性チェックを使用できます。 サービス/コンテナーの状態が正常に変わった場合にのみ、オーケストレーターはサービス/コンテナー インスタンスへのトラフィックのルーティングを開始します。
 
-正常性の監視は、オーケストレーターがアプリケーションのアップグレードを実行する場合に特に重要です。 いくつかのオーケストレーター (Azure Service Fabric など) ではサービスを段階的に更新します。たとえば、アプリケーションのアップグレードごとに 5 分の 1 のクラスター サーフェスを更新する場合があります。 同時にアップグレードされるノード セットは*アップグレード ドメイン* と呼ばれます。 各アップグレード ドメインがアップグレードされ、ユーザーが使用できるようになったら、そのアップグレード ドメインは、展開が次のアップグレード ドメインに移る前に正常性チェックを渡す必要があります。
+正常性の監視は、オーケストレーターがアプリケーションのアップグレードを実行する場合に特に重要です。 いくつかのオーケストレーター (Azure Service Fabric など) ではサービスを段階的に更新します。たとえば、アプリケーションのアップグレードごとに 5 分の 1 のクラスター サーフェスを更新する場合があります。 同時にアップグレードされるノード セットは *アップグレード ドメイン* と呼ばれます。 各アップグレード ドメインがアップグレードされ、ユーザーが使用できるようになったら、そのアップグレード ドメインは、展開が次のアップグレード ドメインに移る前に正常性チェックを渡す必要があります。
 
 サービスの正常性のもう 1 つの側面は、サービスからのメトリックのレポートです。 これは、Service Fabric などの一部のオーケストレーターの正常性モデルの高度な機能です。 メトリックは、リソース使用量のバランスをとるために使用されるため、オーケストレーターの使用時に重要になります。 メトリックをシステム正常性のインジケーターにすることもできます。 たとえば、アプリケーションに多くのマイクロサービスがあり、各インスタンスで要求/秒 (RPS) メトリックをレポートするとします。 1 つのサービスが別のサービスより多くのリソース (メモリやプロセッサなど) を使用している場合、オーケストレーターはクラスター内でサービス インスタンスを移動して、リソース使用率を均一に保つことができます。
 

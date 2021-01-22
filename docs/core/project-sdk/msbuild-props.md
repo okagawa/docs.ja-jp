@@ -4,12 +4,12 @@ description: .NET SDK によって認識される MSBuild のプロパティと�
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: e7deb8c32fd01452524122e41f758ab037020ee4
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: e35ccc3540756a4cb7905d5864caf65cded4362b
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970708"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189982"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK プロジェクトの MSBuild リファレンス
 
@@ -79,15 +79,43 @@ ms.locfileid: "97970708"
 </PropertyGroup>
 ```
 
-## <a name="publish-properties-and-items"></a>プロパティと項目の発行
+## <a name="publish-properties-items-and-metadata"></a>プロパティ、項目、メタデータを発行する
 
 - [AppendRuntimeIdentifierToOutputPath](#appendruntimeidentifiertooutputpath)
 - [AppendTargetFrameworkToOutputPath](#appendtargetframeworktooutputpath)
 - [CopyLocalLockFileAssemblies](#copylocallockfileassemblies)
+- [CopyToPublishDirectory](#copytopublishdirectory)
+- [LinkBase](#linkbase)
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
 - [TrimmerRootAssembly](#trimmerrootassembly)
 - [UseAppHost](#useapphost)
+
+### <a name="copytopublishdirectory"></a>CopyToPublishDirectory
+
+MSBuild 項目の `CopyToPublishDirectory` メタデータにより、項目が発行ディレクトリにコピーされるタイミングが制御されます。 使用できる値は、項目が変更された場合にのみコピーする `PreserveNewest`、常に項目をコピーする `Always`、項目をコピーしない `Never` です。 パフォーマンスの観点からは、インクリメンタル ビルドが有効になるので `PreserveNewest` をお勧めします。
+
+```xml
+<ItemGroup>
+  <None Update="appsettings.Development.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+</ItemGroup>
+```
+
+### <a name="linkbase"></a>LinkBase
+
+プロジェクト ディレクトリとそのサブディレクトリの外部にある項目の場合、発行先で項目のコピー先を決定するために、項目の [Link メタデータ](/visualstudio/msbuild/common-msbuild-item-metadata)が使用されます。 また、プロジェクト ツリーの外部にある項目が Visual Studio の [ソリューション エクスプローラー] ウィンドウにどのように表示されるかも、`Link` によって決定されます。
+
+プロジェクト コーンの外部にある項目に対して `Link` が指定されていない場合は、既定で `%(LinkBase)\%(RecursiveDir)%(Filename)%(Extension)` になります。 `LinkBase` を使用して、プロジェクト コーンの外部の項目に適切なベース フォルダーを指定できます。 ベース フォルダーの下のフォルダー階層は、`RecursiveDir` によって保持されます。 `LinkBase` を指定しないと、それは `Link` パスから省略されます。
+
+```xml
+<ItemGroup>
+  <Content Include="..\Extras\**\*.cs" LinkBase="Shared"/>
+</ItemGroup>
+```
+
+次の図は、前の項目の `Include` glob によって含められるファイルがソリューション エクスプローラーにどのように表示されるかを示したものです。
+
+:::image type="content" source="media/solution-explorer-linkbase.png" alt-text="LinkBase メタデータが指定された項目が表示されているソリューション エクスプローラー。":::
 
 ### <a name="appendtargetframeworktooutputpath"></a>AppendTargetFrameworkToOutputPath
 
@@ -478,7 +506,7 @@ ms.locfileid: "97970708"
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
 
-`AssetTargetFallback` プロパティを使用すると、プロジェクト参照と NuGet パッケージに対して、互換性のある追加のフレームワーク バージョンを指定できます。 たとえば、`PackageReference` を使用してパッケージの依存関係を指定し、そのパッケージにプロジェクトの `TargetFramework` と互換性のある資産が含まれない場合は、`AssetTargetFallback` プロパティが機能します。 参照されたパッケージの互換性は、`AssetTargetFallback` で指定された各ターゲット フレームワークを使用して再確認されます。
+`AssetTargetFallback` プロパティを使用すると、プロジェクト参照と NuGet パッケージに対して、互換性のある追加のフレームワーク バージョンを指定できます。 たとえば、`PackageReference` を使用してパッケージの依存関係を指定し、そのパッケージにプロジェクトの `TargetFramework` と互換性のある資産が含まれない場合は、`AssetTargetFallback` プロパティが機能します。 参照されたパッケージの互換性は、`AssetTargetFallback` で指定された各ターゲット フレームワークを使用して再確認されます。 このプロパティは、非推奨のプロパティ `PackageTargetFallback` に代わるものです。
 
 `AssetTargetFallback` プロパティを 1 つ以上の[ターゲット フレームワーク バージョン](../../standard/frameworks.md#supported-target-frameworks)に設定できます。
 
@@ -504,7 +532,7 @@ ms.locfileid: "97970708"
 
 `PackageReference` 項目では、NuGet パッケージへの参照が定義されます。
 
-`Include` 属性は、パッケージ ID を指定します。 `Version` 属性では、バージョンまたはバージョン範囲を指定します。 最小バージョン、最大バージョン、範囲、厳密一致を指定する方法については、「[バージョン範囲](/nuget/concepts/package-versioning#version-ranges)」を参照してください。 また、メタデータ `IncludeAssets`、`ExcludeAssets`、`PrivateAssets` をプロジェクト参照に追加できます。
+`Include` 属性は、パッケージ ID を指定します。 `Version` 属性では、バージョンまたはバージョン範囲を指定します。 最小バージョン、最大バージョン、範囲、厳密一致を指定する方法については、「[バージョン範囲](/nuget/concepts/package-versioning#version-ranges)」を参照してください。 また、[アセット属性](#asset-attributes)をパッケージ参照に追加することもできます。
 
 次の例のプロジェクト ファイル スニペットでは、[System.Runtime](https://www.nuget.org/packages/System.Runtime/) パッケージを参照しています。
 
@@ -515,6 +543,30 @@ ms.locfileid: "97970708"
 ```
 
 詳細については、[プロジェクト ファイルのパッケージ参照](/nuget/consume-packages/package-references-in-project-files)に関するページを参照してください。
+
+#### <a name="asset-attributes"></a>アセット属性
+
+`IncludeAssets`、`ExcludeAssets`、`PrivateAssets` の各メタデータを、パッケージ参照に追加できます。
+
+| 属性 | 説明 |
+| - | - |
+| `IncludeAssets` | `<PackageReference>` によって指定されているパッケージに属するアセットで、使用する必要があるものを指定します。 既定では、パッケージのすべてのアセットが含まれます。 |
+| `ExcludeAssets`| `<PackageReference>` によって指定されているパッケージに属するアセットで、使用してはならないものを指定します。 |
+| `PrivateAssets` | `<PackageReference>` で指定されているパッケージに属するアセットで、使用する必要はあるが、次のプロジェクトに渡してはならないものを指定します。 この属性が存在しない場合、`Analyzers`、`Build`、`ContentFiles` の各アセットは既定でプライベートになります。 |
+
+これらの属性には以下の項目を 1 つ以上含めることができ、複数ある場合はセミコロン `;` で区切ります。
+
+- `Compile` - コンパイルで使用できる *lib* フォルダーの内容です。
+- `Runtime` - 配布する *runtime* フォルダーの内容です。
+- `ContentFiles` - 使用する *contentfiles* フォルダーの内容です。
+- `Build` - 使用する *build* フォルダーのプロパティ/ターゲットです。
+- `Native` - ランタイムの *output* フォルダーにコピーするネイティブ アセットの内容です。
+- `Analyzers` - アナライザーが使用されます。
+
+代わりに、次の値を属性に含めることもできます。
+
+- `None` - いずれのアセットも使用されません。
+- `All` - すべてのアセットが使用されます。
 
 ### <a name="projectreference"></a>ProjectReference
 

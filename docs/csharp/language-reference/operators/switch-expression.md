@@ -1,13 +1,13 @@
 ---
 title: switch 式 - C# リファレンス
 description: パターン マッチングとその他のデータ イントロスペクションに C# の switch 式を使用する方法について説明します
-ms.date: 03/19/2020
-ms.openlocfilehash: 2249afc1ff1cc81e9ad423d910ebb95df8c787d4
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.date: 01/14/2021
+ms.openlocfilehash: 55fef8d351b178fd0ec23847e81e6c56eb1367b0
+ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916654"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98536087"
 ---
 # <a name="switch-expression-c-reference"></a>switch 式 (C# リファレンス)
 
@@ -48,10 +48,13 @@ switch 式アームでは、多くのパターンがサポートされていま�
 
 前の例では、`null` パターンが追加され、`IEnumerable<T>` 型パターンが `_` パターンに変更されています。 `null` パターンでは、switch 式アームとして null チェックが提供されます。 そのアームの式によって、<xref:System.ArgumentNullException> がスローされます。 `_` パターンは、それより前にあるアームで一致していないすべての入力と一致します。 `null` チェックの後で指定する必要があります。そうしないと、`null` 入力と一致します。
 
-[再帰パターン](~/_csharplang/proposals/csharp-8.0/patterns.md#switch-expression)に関する C# 言語仕様の提案について詳しくは、こちらをご覧ください。
+## <a name="non-exhaustive-switch-expressions"></a>網羅的でない switch 式
+
+switch 式のどのパターンでも引数がキャッチされない場合、ランタイムで例外がスローされます。 .NET Core 3.0 以降のバージョンでは、例外は <xref:System.Runtime.CompilerServices.SwitchExpressionException?displayProperty=nameWithType> です。 .NET Framework では、例外は <xref:System.InvalidOperationException> です。
 
 ## <a name="see-also"></a>関連項目
 
+- [再帰パターンに関する C# 言語仕様の提案](~/_csharplang/proposals/csharp-8.0/patterns.md#switch-expression)
 - [C# リファレンス](../index.md)
 - [C# の演算子と式](index.md)
 - [パターン マッチング](../../pattern-matching.md)

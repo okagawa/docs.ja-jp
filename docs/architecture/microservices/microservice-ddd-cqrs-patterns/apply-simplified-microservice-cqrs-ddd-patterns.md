@@ -1,21 +1,21 @@
 ---
 title: マイクロサービスに簡略化された CQRS と DDD パターンを適用する
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | CQRS と DDD のパターンの全体的な関係を理解する。
-ms.date: 10/08/2018
-ms.openlocfilehash: e4e36bafff39f5f30d6371ed7c113322a85c3362
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.date: 01/13/2021
+ms.openlocfilehash: c1a990689a446e2efba48beafe4b55d614b54427
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805595"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188960"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>マイクロサービスに簡略化された CQRS と DDD のパターンを適用する
 
-CQRS は、データを読み取りと書き込みのモデルを分離するアーキテクチャ パターンです。 関連する用語の[コマンド クエリ分離 (CQS: Command Query Separation)](https://martinfowler.com/bliki/CommandQuerySeparation.html) は、元々 Bertrand Meyer 氏が著作の『*Object Oriented Software Construction*』(オブジェクト指向のソフトウェア構築) で定義した用語です。 基本的な考え方は、システムの操作は 2 つの別のカテゴリにはっきりと分けることができるということです。
+CQRS は、データを読み取りと書き込みのモデルを分離するアーキテクチャ パターンです。 関連する用語の [コマンド クエリ分離 (CQS: Command Query Separation)](https://martinfowler.com/bliki/CommandQuerySeparation.html) は、元々 Bertrand Meyer 氏が著作の『*Object Oriented Software Construction*』(オブジェクト指向のソフトウェア構築) で定義した用語です。 基本的な考え方は、システムの操作は 2 つの別のカテゴリにはっきりと分けることができるということです。
 
-- クエリ。 クエリは結果を返し、システムの状態を変更しません。また、副作用がありません。
+- クエリ。 これらのクエリによって結果が返され、システムの状態は変更されません。また、副作用はありません。
 
-- コマンド。 コマンドはシステムの状態を変更します。
+- コマンド。 これらのコマンドによってシステムの状態が変更されます。
 
 CQS はシンプルな概念です。つまり、同じオブジェクト内のメソッドはクエリまたはコマンドである、というものです。 各メソッドは、状態を返すか、状態を変更しますが、両方を行うことはありません。 1 つのリポジトリ パターン オブジェクトでも、CQS に準拠する可能性があります。 CQS は CQRS の基本原則と考えることができます。
 

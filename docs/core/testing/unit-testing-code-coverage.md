@@ -4,16 +4,16 @@ description: .NET の単体テストでコードカバレッジ機能を使用�
 author: IEvangelist
 ms.author: dapine
 ms.date: 07/01/2020
-ms.openlocfilehash: 4d2c8f3db26eaabcb973378a349ef57912e92bfa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 98652de8e8b5c3765dfee8e1b511399bc5a0be25
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538148"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189656"
 ---
 # <a name="use-code-coverage-for-unit-testing"></a>単体テストにコードカバレッジを使用する
 
-単体テストは、機能を保証し、リファクタリングの際の検証手段となります。 コードカバレッジとは、単体テストで実行する、行、分岐、またはメソッドのいずれかのコード量の尺度です。 たとえば、条件分岐が (_分岐 a_ と_分岐 b_ の) 2 つしかない単純なアプリケーションのコードで、条件付き_分岐 a_ を単体テストで検証する場合、分岐のコードカバレッジは 50% と報告されます。
+単体テストは、機能を保証し、リファクタリングの際の検証手段となります。 コードカバレッジとは、単体テストで実行する、行、分岐、またはメソッドのいずれかのコード量の尺度です。 たとえば、条件分岐が (_分岐 a_ と _分岐 b_ の) 2 つしかない単純なアプリケーションのコードで、条件付き _分岐 a_ を単体テストで検証する場合、分岐のコードカバレッジは 50% と報告されます。
 
 この記事では、Coverlet での単体テストでのコードカバレッジの用途と、ReportGenerator でのレポートの生成について説明します。 この記事では、テスト フレームワークとして C# と xUnit を使用していますが、MSTest と NUnit のいずれも使用することが可能です。 Coverlet とは、C# 用のクロスプラットフォームのコードカバレッジのフレームワークである、[GitHub 上のオープン ソース プロジェクト](https://github.com/coverlet-coverage/coverlet)です。 [Coverlet](https://dotnetfoundation.org/projects/coverlet) は .NET Foundation に含まれています。 Coverlet は、レポートの生成に使用する Cobertura のカバレッジのテストの実行データを収集します。
 
@@ -297,7 +297,7 @@ reportgenerator
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Studio 単体テストのカバー カバレッジ](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested)
+- [Visual Studio 単体テストのコード カバレッジ](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested)
 - [GitHub - Coverlet リポジトリ](https://github.com/coverlet-coverage/coverlet)
 - [GitHub - ReportGenerator リポジトリ](https://github.com/danielpalme/ReportGenerator)
 - [ReportGenerator プロジェクト サイト](https://danielpalme.github.io/ReportGenerator)

@@ -4,12 +4,12 @@ titleSuffix: ''
 description: .NET プロジェクト SDK について説明します。
 ms.date: 09/17/2020
 ms.topic: conceptual
-ms.openlocfilehash: 270735c9eef9f1930680687917317ac8bdf39e6d
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 2adb0713fabda142d071425a2affe66cc9d4c172
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970695"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189669"
 ---
 # <a name="net-project-sdks"></a>.NET プロジェクト SDK
 
@@ -83,7 +83,7 @@ MSBuild では、`dotnet msbuild -preprocess` コマンドを使用して、SDK 
 
 `dotnet msbuild -property:TargetFramework=netcoreapp2.0 -preprocess:output.xml`
 
-### <a name="default-includes-and-excludes"></a>既定で含まれるものと除外されるもの
+## <a name="default-includes-and-excludes"></a>既定で含まれるものと除外されるもの
 
 [`Compile` 項目](/visualstudio/msbuild/common-msbuild-project-items#compile)、[埋め込みリソース](/visualstudio/msbuild/common-msbuild-project-items#embeddedresource)、[`None` 項目](/visualstudio/msbuild/common-msbuild-project-items#none)に既定で含まれるものと除外されるものが SDK で定義されています。 SDK 以外の .NET Framework プロジェクトとは異なり、既定値がほとんどの一般的なユース ケースに対応しているため、これらの項目をプロジェクト ファイルで指定する必要はありません。 この動作により、プロジェクト ファイルのサイズがより小さく、より簡単に理解できるようになり、必要に応じて手作業で編集できます。
 
@@ -98,7 +98,7 @@ MSBuild では、`dotnet msbuild -preprocess` コマンドを使用して、SDK 
 > [!NOTE]
 > `./bin` フォルダーと `./obj` フォルダーは、`$(BaseOutputPath)` と `$(BaseIntermediateOutputPath)` の MSBuild プロパティによって表され、既定で glob から除外されます。 除外されるものは、[DefaultItemExcludes プロパティ](msbuild-props.md#defaultitemexcludes)によって表されます。
 
-#### <a name="build-errors"></a>ビルド エラー
+### <a name="build-errors"></a>ビルド エラー
 
 これらの項目をプロジェクト ファイルに明示的に定義すると、次のような "NETSDK1022" ビルド エラーが発生する可能性があります。
 
@@ -131,6 +131,31 @@ MSBuild では、`dotnet msbuild -preprocess` コマンドを使用して、SDK 
   ```
 
   `Compile` glob のみを無効にすると、Visual Studio のソリューション エクスプローラーに \*.cs 項目がプロジェクトの一部として (`None` 項目として組み込まれて) 引き続き表示されます。 暗黙的な `None` glob を無効にするには、`EnableDefaultNoneItems` も `false` に設定します。
+
+## <a name="build-events"></a>ビルド イベント
+
+SDK スタイルのプロジェクトでは、`PreBuild` または `PostBuild` という名前の MSBuild ターゲットを使用し、`PreBuild` の `BeforeTargets` プロパティまたは `AfterTargets` の `PostBuild` プロパティを設定します。
+
+```xml
+<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="&quot;$(ProjectDir)PreBuildEvent.bat&quot; &quot;$(ProjectDir)..\&quot; &quot;$(ProjectDir)&quot; &quot;$(TargetDir)&quot;" />
+</Target>
+
+<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+   <Exec Command="echo Output written to $(TargetDir)" />
+</Target>
+```
+
+> [!NOTE]
+>
+> - MSBuild ターゲットには任意の名前を使用できます。 ただし、`PreBuild` および `PostBuild` ターゲットは Visual Studio IDE によって認識されるため、これらの名前を使用することにより、IDE でコマンドを編集できます。
+> - `$(ProjectDir)` などのマクロが解決されないため、SDK スタイルのプロジェクトでは、プロパティ `PreBuildEvent` と `PostBuildEvent` は推奨されません。 たとえば、次のようなコードはサポートされません。
+>
+> ```xml
+> <PropertyGroup>
+>   <PreBuildEvent>"$(ProjectDir)PreBuildEvent.bat" "$(ProjectDir)..\" "$(ProjectDir)" "$(TargetDir)"</PreBuildEvent>
+> </PropertyGroup>
+> ```
 
 ## <a name="customize-the-build"></a>ビルドのカスタマイズ
 
@@ -168,7 +193,7 @@ MSBuild では、`dotnet msbuild -preprocess` コマンドを使用して、SDK 
     </ItemGroup>
   </Target>
   ...
-  
+
 </Project>
 ```
 

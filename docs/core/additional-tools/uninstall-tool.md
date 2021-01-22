@@ -3,12 +3,12 @@ title: アンインストール ツール
 description: .NET CORE アンインストール ツールの概要です。これは、.NET Core SKD とランタイムの制御されたクリーンアップを可能にするガイド付きツールです。
 author: sfoslund
 ms.date: 05/27/2020
-ms.openlocfilehash: dcfa12a3ec5fe0e8a29c5897ee4c71bfc7352eda
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ed43b4ec8437ae0ccaf5f1234758dda9f16bd51e
+ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590800"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98235353"
 ---
 # <a name="net-core-uninstall-tool"></a>.NET Core アンインストール ツール
 
@@ -23,7 +23,7 @@ Windows では、ツールは次のいずれかのインストーラーを使用
 
 macOS では、このツールでアンインストールできるのは */usr/local/share/dotnet* フォルダーにある SDK とランタイムのみです。
 
-これらの制限のため、このツールでは、コンピューター上の一部の .NET Core SDK とランタイムをアンインストールできない可能性があります。 `dotnet --info` コマンドを使用して、インストールされているすべての .NET Core SDK とランタイム (このツールで削除できない SDK やランタイムを含む) を検出できます。 `dotnet-core-uninstall list` コマンドを実行すると、このツールでアンインストールできる SDK が表示されます。
+これらの制限のため、このツールでは、コンピューター上の一部の .NET Core SDK とランタイムをアンインストールできない可能性があります。 `dotnet --info` コマンドを使用して、インストールされているすべての .NET Core SDK とランタイム (このツールで削除できない SDK やランタイムを含む) を検出できます。 `dotnet-core-uninstall list` コマンドを実行すると、このツールでアンインストールできる SDK が表示されます。 バージョン 1.2 以降はバージョン 5.0 以前の SDK とランタイムをアンインストールできます。以前のバージョンのツールは、3.1 以前のものをアンインストールできます。
 
 ## <a name="install-the-tool"></a>ツールをインストールする
 
@@ -295,9 +295,9 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 ### <a name="step-3---uninstall-net-core-sdks-and-runtimes"></a>手順 3 - .NET Core SDK とランタイムをアンインストールする
 
-`dotnet-core-uninstall remove` は、一連のオプションによって指定された .NET Core SDK とランタイムをアンインストールします。 このツールを使用して、バージョン 5.0 以上の SDK とランタイムをアンインストールすることはできません。
+`dotnet-core-uninstall remove` は、一連のオプションによって指定された .NET Core SDK とランタイムをアンインストールします。 バージョン 1.2 以降はバージョン 5.0 以前の SDK とランタイムをアンインストールできます。以前のバージョンのツールは、3.1 以前のものをアンインストールできます。
 
-このツールには破壊的動作があるため、remove コマンドを実行する前に、ドライ ランを実行することを**強く**お勧めします。 ドライランにより、`remove` コマンドを使用したときに削除される .NET Core SDK とランタイムが示されます。 削除しても安全な SDK とランタイムを確認するには、「[バージョンを削除する必要はあるか](../install/remove-runtime-sdk-versions.md#should-i-remove-a-version)」を参照してください。
+このツールには破壊的動作があるため、remove コマンドを実行する前に、ドライ ランを実行することを **強く** お勧めします。 ドライランにより、`remove` コマンドを使用したときに削除される .NET Core SDK とランタイムが示されます。 削除しても安全な SDK とランタイムを確認するには、「[バージョンを削除する必要はあるか](../install/remove-runtime-sdk-versions.md#should-i-remove-a-version)」を参照してください。
 
 > [!CAUTION]
 > 次の注意事項に留意してください。

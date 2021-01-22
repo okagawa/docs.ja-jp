@@ -1,19 +1,19 @@
 ---
 title: IHttpClientFactory を使用して回復力の高い HTTP 要求を実装する
 description: .NET Core 2.1 以降で使用できる IHttpClientFactory を使用して、`HttpClient` インスタンスを作成し、それをアプリケーションで簡単に使用できるようにする方法について説明します。
-ms.date: 08/31/2020
-ms.openlocfilehash: 4ebb82395dd685d30846b3549b654abf7c41d43f
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.date: 01/13/2021
+ms.openlocfilehash: 056a8982fe4331e7e680b33cf1f43785b48da7d6
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804810"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188999"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>IHttpClientFactory を使用して回復力の高い HTTP 要求を実装する
 
 <xref:System.Net.Http.IHttpClientFactory> はコントラクトであり、ご利用のアプリケーションで使用する <xref:System.Net.Http.HttpClient> インスタンスを作成するために .NET Core 2.1 以降で使用できる自己主張の強いファクトリ `DefaultHttpClientFactory` によって実装されます。
 
-## <a name="issues-with-the-original-httpclient-class-available-in-net-core"></a>.NET Core で使用可能な元の HttpClient クラスに関する問題
+## <a name="issues-with-the-original-httpclient-class-available-in-net"></a>.NET で使用可能な元の HttpClient クラスに関する問題
 
 よく知られている元の <xref:System.Net.Http.HttpClient> クラスは、簡単に使用できますが、場合によっては、多くの開発者が適切に使用していません。
 
@@ -190,7 +190,7 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-- **.NET Core で HttpClientFactory を使用する**  
+- **.NET で HttpClientFactory を使用する**  
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
 - **`dotnet/extensions` GitHub リポジトリ内の HttpClientFactory ソース コード**  

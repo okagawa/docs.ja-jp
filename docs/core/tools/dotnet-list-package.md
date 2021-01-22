@@ -2,12 +2,12 @@
 title: dotnet list package コマンド
 description: "\"dotnet list package\" コマンドでは、プロジェクトまたはソリューションのパッケージ参照を列挙する便利なオプションが提供されています。"
 ms.date: 11/11/2020
-ms.openlocfilehash: ecb83e5485c9fb49a454a35091e1a7b753b1f291
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 684b73dec553a424252e1368c265847622fb7850
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94556889"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189897"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -43,7 +43,7 @@ Project 'SentimentAnalysis' has the following package references
 (A) : Auto-referenced package.
 ```
 
-**[Requested]** 列は、プロジェクト ファイルで指定されているパッケージのバージョンを示し、範囲で示されることもあります。 **[Resolved]** 列には、プロジェクトで現在使用されているバージョンが一覧表示され、常に単一の値です。 名前の隣に `(A)` と表示されているパッケージは、プロジェクトの設定から推論される[暗黙的なパッケージ参照](csproj.md#implicit-package-references)を表します (`Sdk` 型、`<TargetFramework>` プロパティ、`<TargetFrameworks>` プロパティなど)。
+**[Requested]** 列は、プロジェクト ファイルで指定されているパッケージのバージョンを示し、範囲で示されることもあります。 **[Resolved]** 列には、プロジェクトで現在使用されているバージョンが一覧表示され、常に単一の値です。 名前の隣に `(A)` と表示されているパッケージは、プロジェクトの設定から推論される暗黙的なパッケージ参照を表します (`Sdk` 型、`<TargetFramework>` プロパティ、`<TargetFrameworks>` プロパティなど)。
 
 プロジェクトで使用されているパッケージのさらに新しいバージョンを利用可能かどうかを調べるには、`--outdated` オプションを使用します。 既定では、解決済みのバージョンがプレリリース バージョンでもある場合を除き、`--outdated` では最新の安定したパッケージが一覧表示されます。 新しいバージョンを一覧表示するときにプレリリース版を含めるには、`--include-prerelease` オプションも指定します。 次の例では、前の例と同じプロジェクトに対する `dotnet list package --outdated --include-prerelease` コマンドの出力を示します。
 

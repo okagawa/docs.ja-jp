@@ -1,19 +1,19 @@
 ---
 title: IHostedService と BackgroundService クラスを使ってマイクロサービスのバックグラウンド タスクを実装する
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービスの .NET Core でバックグラウンド タスクを実装する IHostedService と BackgroundService を使用する新しいオプションについて理解します。
-ms.date: 08/14/2020
-ms.openlocfilehash: 279f9e0093deafab51e63d72dce233c8e9466a55
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 26bc06c4a63cddcd32bf7da705f6258fab8eaafa
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173355"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188804"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>IHostedService と BackgroundService クラスを使ってマイクロサービスのバックグラウンド タスクを実装する
 
 バックグラウンド タスクとスケジュールされたジョブは、マイクロサービス アーキテクチャのパターンに従っているかどうかにかかわらず、すべてのアプリケーションで使用する必要があります。 マイクロサービス アーキテクチャを使用する場合との違いは、自分のニーズに応じてスケールアップおよびスケールダウンできるように、バックグラウンド タスクをホスト用の別のプロセスまたはコンテナーに実装することです。
 
-これらの種類のタスクは、ホスト、アプリケーション、マイクロサービス内でホストするサービス、ロジックであるため、全体的な観点から、.NET Core では*ホステッド サービス*と呼びます。 このケースでは、ホステッド サービスは、単にバックグラウンド タスク ロジックを持つクラスを意味していることに注意してください。
+これらの種類のタスクは、ホスト、アプリケーション、マイクロサービス内でホストするサービス、ロジックであるため、全体的な観点から、.NET では "*ホステッド サービス*" と呼びます。 このケースでは、ホステッド サービスは、単にバックグラウンド タスク ロジックを持つクラスを意味していることに注意してください。
 
 .NET Core 2.0 以降では、ホステッド サービスを簡単に実装できるようにする <xref:Microsoft.Extensions.Hosting.IHostedService> という名前の新しいインターフェイスが、フレームワークによって提供されています。 基本的な考え方は、図 6-26 に示すように、ご利用の Web ホストまたはホストが実行されているときに、バックグラウンドで実行される複数のバックグラウンド タスク (ホステッド サービス) を登録できることです。
 
@@ -45,7 +45,7 @@ SignalR はホステッド サービスを使用している成果物の一例�
 
 基本的に、`IHostedService` を実装するバックグラウンド タスクにこれらのアクションのいずれかをオフロードできます。
 
-1 つまたは複数の `IHostedServices` を `WebHost` または `Host` に追加するには、<xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A> ASP.NET Core `WebHost` (または .NET Core 2.1 以降の `Host`) の拡張メソッドでそれらを登録します。 基本的に、次のコードのように、一般的な ASP.NET WebHost から、`Startup` クラスの使い慣れた `ConfigureServices()` メソッド内でホステッド サービスを登録する必要があります。
+1 つまたは複数の `IHostedServices` を `WebHost` または `Host` に追加するには、ASP.NET Core `WebHost` (または .NET Core 2.1 以降の `Host`) の <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A> 拡張メソッドでそれらを登録します。 基本的に、次のコードのように、一般的な ASP.NET WebHost から、`Startup` クラスの使い慣れた `ConfigureServices()` メソッド内でホステッド サービスを登録する必要があります。
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -54,8 +54,8 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 
     // Register Hosted Services
     services.AddHostedService<GracePeriodManagerService>();
-    services.AddHostedService<MyHostedServiceB>();
-    services.AddHostedService<MyHostedServiceC>();
+    services.AddHostedService<MyHostedServiceB>();
+    services.AddHostedService<MyHostedServiceC>();
     //...
 }
 ```
@@ -68,7 +68,7 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 
 ## <a name="the-ihostedservice-interface"></a>IHostedService インターフェイス
 
-`IHostedService` を登録すると、アプリケーションの起動時と停止時にそれぞれ、.NET Core によって `IHostedService` 型の `StartAsync()` メソッドと `StopAsync()` メソッドが呼び出されます。 詳細については、「[IHostedService インターフェイス](/aspnet/core/fundamentals/host/hosted-services?tabs=visual-studio&view=aspnetcore-3.1#ihostedservice-interface)」を参照してください。
+`IHostedService` を登録すると、アプリケーションの起動時と停止時にそれぞれ、.NET によって `IHostedService` 型の `StartAsync()` および `StopAsync()` メソッドが呼び出されます。 詳細については、「[IHostedService インターフェイス](/aspnet/core/fundamentals/host/hosted-services?tabs=visual-studio&view=aspnetcore-3.1#ihostedservice-interface)」を参照してください。
 
 ご想像のとおり、以前に示したように、IHostedService の複数の実装を作成し、`ConfigureService()` メソッドでそれらを DI コンテナーに登録することができます。 これらすべてのホステッド サービスが、アプリケーション/マイクロサービスと共に開始および停止されます。
 
@@ -76,13 +76,13 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 
 ## <a name="implementing-ihostedservice-with-a-custom-hosted-service-class-deriving-from-the-backgroundservice-base-class"></a>BackgroundService 基底クラスから派生したカスタムのホステッド サービス クラスを使用して IHostedService を実装する
 
-続行して、ホステッド サービスのカスタム クラスをゼロから作成し、`IHostedService` を実装します。これは .NET Core 2.0 を使用する場合に行う必要があります。
+続行して、ホステッド サービスのカスタム クラスをゼロから作成し、`IHostedService` を実装します。これは .NET Core 2.0 以降を使用する場合に行う必要があります。
 
 ただし、ほとんどのバックグラウンド タスクでは、キャンセル トークンの管理およびその他の一般的な操作で同様のニーズがあるため、派生元として使用できる非常に便利な `BackgroundService` という名前の抽象基底クラスがあります (.NET Core 2.1 以降で利用できます)。
 
 そのクラスは、バックグラウンド タスクを設定するために必要な主要な作業を提供します。
 
-次のコードは、.NET Core に実装されている BackgroundService 抽象基底クラスです。
+次のコードは、.NET に実装されている BackgroundService 抽象基底クラスです。
 
 ```csharp
 // Copyright (c) .NET Foundation. Licensed under the Apache License, Version 2.0.
@@ -210,7 +210,7 @@ WebHost.CreateDefaultBuilder(args)
 
 ### <a name="deployment-considerations-and-takeaways"></a>展開に関する注意事項と習得事項
 
-ASP.NET Core `WebHost` または .NET Core `Host` を展開する方法が最終的なソリューションに影響を与える可能性があることに注意してください。 たとえば、`WebHost` を IIS または正規の Azure App Service に展開する場合、アプリ プールのリサイクルが原因でホストがシャットダウンされる場合があります。 ただし、ホストをコンテナーとして Kubernetes などのオーケストレーターに展開する場合は、ご利用のホストのライブ インスタンスの確実な数を制御することができます。 さらに、Azure Functions のように、これらのシナリオ用に特別に作成されたクラウド内で、他の方法を検討することができます。 最後になりますが、サービスを常時実行する必要があるとき、および Windows Server にデプロイする場合、Windows Service を使用できることがあります。
+ASP.NET Core `WebHost` または .NET`Host` を展開する方法が最終的なソリューションに影響を与える可能性があることに注意することが重要です。 たとえば、`WebHost` を IIS または正規の Azure App Service に展開する場合、アプリ プールのリサイクルが原因でホストがシャットダウンされる場合があります。 ただし、ホストをコンテナーとして Kubernetes などのオーケストレーターに展開する場合は、ご利用のホストのライブ インスタンスの確実な数を制御することができます。 さらに、Azure Functions のように、これらのシナリオ用に特別に作成されたクラウド内で、他の方法を検討することができます。 最後になりますが、サービスを常時実行する必要があるとき、および Windows Server にデプロイする場合、Windows Service を使用できることがあります。
 
 ただし、アプリ プールに展開された `WebHost` に対しても、適用可能なアプリケーションのメモリ内キャッシュの再作成またはフラッシュのようなシナリオがあります。
 

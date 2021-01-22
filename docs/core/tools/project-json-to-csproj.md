@@ -3,12 +3,12 @@ title: project.json と csproj の比較
 description: 「project.json 要素と csproj 要素の間のマッピング」を参照してください。
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: 7de9f623a57a6a094debd3e018edc1560d837fc2
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 3c9b2f266c2fcc3acdfbe40e19509edde20eec93
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970877"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190183"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json プロパティと csproj プロパティの間のマッピング
 
@@ -253,6 +253,9 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
+> [!NOTE]
+> `PackageTargetFallback` プロパティは非推奨となっています。 代わりに [AssetTargetFallback](../project-sdk/msbuild-props.md#assettargetfallback) を使用します。
+
 ### <a name="dependency-type"></a>依存関係の種類
 
 #### <a name="type-project"></a>type: project
@@ -356,7 +359,9 @@ MSBuild では、ビルド中、すべてのプロジェクトが *移植可能*
 ```
 
 > [!NOTE]
-> ツールの `imports` は、csproj ではサポートされません。 インポートを必要とするツールは、新しい `Microsoft.NET.Sdk` で機能しません。
+>
+> - ツールの `imports` は、csproj ではサポートされません。 インポートを必要とするツールは、`Microsoft.NET.Sdk` で機能しません。
+> - [ローカル ツール](global-tools.md#install-a-local-tool)が推奨されており、`DotNetCliToolReference` は非推奨です。
 
 ## <a name="buildoptions"></a>buildOptions
 
@@ -609,7 +614,7 @@ MSBuild では、これは[項目](/visualstudio/msbuild/common-msbuild-project-
   <EmbeddedResource Include="..\Shared\*.resx" />
   <Content Include="Views\**\*" PackagePath="%(Identity)" />
   <None Include="some/path/in/project.txt" Pack="true" PackagePath="in/package.txt" />
-  
+
   <None Include="notes.txt" CopyToOutputDirectory="Always" />
   <!-- CopyToOutputDirectory = { Always, PreserveNewest, Never } -->
 
@@ -674,3 +679,4 @@ MSBuild では、これは[項目](/visualstudio/msbuild/common-msbuild-project-
 ## <a name="see-also"></a>関連項目
 
 - [CLI の変更の概要](cli-msbuild-architecture.md)
+- [.NET SDK プロジェクトの MSBuild リファレンス](../project-sdk/msbuild-props.md)

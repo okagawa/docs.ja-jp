@@ -1,13 +1,13 @@
 ---
 title: Docker アプリの開発ワークフロー
 description: Docker ベースのアプリケーションを開発するためのワークフローの詳細を理解します。 まず、段階的に見ていき、Dockerfile の最適化について詳しく確認し、最終的には Visual Studio を使用する際に利用できる簡略化されたワークフローを理解します。
-ms.date: 01/30/2020
-ms.openlocfilehash: 4019eed6b814f4c7e8bc4f32758e8cfd7f4c7ec9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 01/13/2021
+ms.openlocfilehash: fff0a59bb6001eeb50c31c68bfeceeb71c439223
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711183"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189546"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker アプリの開発ワークフロー
 
@@ -59,7 +59,7 @@ Docker アプリケーションの開発方法は、Docker を使用しないア
 
 **図 5-2** Visual Studio 2019 のセットアップ時の **.NET Core クロスプラットフォーム開発** ワークロードの選択
 
-アプリケーションのコーディングは、アプリケーションで Docker を有効にし、Docker で展開してテストする前から、単純な .NET で開始することができます (コンテナーを使用する計画がある場合、通常は .NET Core で)。 ただし、実際の環境となることに加え、問題が早く検出されるため、できるだけ早く Docker で作業を開始することをお勧めします。 Docker は、Visual Studio では、ほとんど透過的で、使用しやすくなっているため、このようにすることが推奨されます。この最良の例は、Visual Studio からのマルチコンテナー アプリケーションのデバッグです。
+単純な .NET でのアプリケーションのコーディングは、アプリケーションで Docker を有効にし、Docker で展開してテストする前からでも、始めることができます (コンテナーを使用する計画がある場合、通常は .NET Core 以降で)。 ただし、実際の環境となることに加え、問題が早く検出されるため、できるだけ早く Docker で作業を開始することをお勧めします。 Docker は、Visual Studio では、ほとんど透過的で、使用しやすくなっているため、このようにすることが推奨されます。この最良の例は、Visual Studio からのマルチコンテナー アプリケーションのデバッグです。
 
 ### <a name="additional-resources"></a>その他の技術情報
 
@@ -97,14 +97,14 @@ Visual Studio と Docker 用のツールでは、このタスクはマウスを�
 
 通常、[Docker Hub](https://hub.docker.com/) レジストリなどの公式のリポジトリから取得する基本イメージ上に、コンテナーのカスタム イメージをビルドします。 Visual Studio で Docker のサポートを有効にした場合、背後ではこれがまさに発生します。 Dockerfile では、既存の `dotnet/core/aspnet` イメージを使用します。
 
-選択した OS とフレームワークによって、使用できる Docker イメージとリポジトリについては、既に説明しています。 たとえば、ASP.NET Core (Linux または Windows) を使用したい場合は、`mcr.microsoft.com/dotnet/aspnet:3.1` のイメージを使用します。 この場合は、コンテナーに使用する基本の Docker イメージのみを指定する必要があります。 これは、`FROM mcr.microsoft.com/dotnet/aspnet:3.1` を Dockerfile に追加することで行います。 これは、Visual Studio が自動的に実行しますが、バージョンを更新する場合は、この値を更新する必要があります。
+選択した OS とフレームワークによって、使用できる Docker イメージとリポジトリについては、既に説明しています。 たとえば、ASP.NET Core (Linux または Windows) を使用したい場合は、`mcr.microsoft.com/dotnet/aspnet:5.0` のイメージを使用します。 この場合は、コンテナーに使用する基本の Docker イメージのみを指定する必要があります。 これは、`FROM mcr.microsoft.com/dotnet/aspnet:5.0` を Dockerfile に追加することで行います。 これは、Visual Studio が自動的に実行しますが、バージョンを更新する場合は、この値を更新する必要があります。
 
 バージョン番号を使用して Docker Hub の公式の .NET イメージ リポジトリを使うと、同じ言語機能が (開発、テスト、および実稼働環境などの) すべてのコンピューターで使用できるようになります。
 
 次の例では、ASP.NET Core コンテナー用のサンプルの Dockerfile を示しています。
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/aspnet:3.1
+FROM mcr.microsoft.com/dotnet/aspnet:5.0
 ARG source
 WORKDIR /app
 EXPOSE 80
@@ -112,13 +112,13 @@ COPY ${source:-obj/Docker/publish} .
 ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ```
 
-この場合、イメージは、公式の ASP.NET Core Docker イメージ (Linux および Windows 用マルチアーキテクチャ) のバージョン 3.1 に基づいています。 この設定は、`FROM mcr.microsoft.com/dotnet/aspnet:3.1` です。 (この基本イメージの詳細については、[ASP.NET Core Docker イメージ](https://hub.docker.com/_/microsoft-dotnet-aspnet/)に関するページを参照してください)。Dockerfile では、実行時に使用する、リッスンする TCP ポートを、Docker に指示する必要があります (ここでは、EXPOSE 設定で構成したポート 80)。
+この場合、イメージは、公式の ASP.NET Core Docker イメージ (Linux および Windows 用マルチアーキテクチャ) のバージョン 5.0 に基づいています。 この設定は、`FROM mcr.microsoft.com/dotnet/aspnet:5.0` です。 (この基本イメージの詳細については、[ASP.NET Core Docker イメージ](https://hub.docker.com/_/microsoft-dotnet-aspnet/)に関するページを参照してください)。Dockerfile では、実行時に使用する、リッスンする TCP ポートを、Docker に指示する必要があります (ここでは、EXPOSE 設定で構成したポート 80)。
 
-使用している言語とフレームワークによっては、Dockerfile に別の構成設定を指定できます。 たとえば、`["dotnet", "MySingleContainerWebApp.dll"]` の ENTRYPOINT 行では、.NET Core アプリケーションを実行するように Docker に指示します。 SDK と .NET Core CLI (dotnet CLI) を使用して、.NET アプリケーションをビルドおよび実行している場合、この設定は異なります。 つまり、アプリケーションに選択した言語とプラットフォームにより、ENTRYPOINT 行とその他の設定は別になります。
+使用している言語とフレームワークによっては、Dockerfile に別の構成設定を指定できます。 たとえば、`["dotnet", "MySingleContainerWebApp.dll"]` の ENTRYPOINT 行では、.NET アプリケーションを実行するように Docker に指示します。 SDK と .NET CLI (dotnet CLI) を使用して、.NET アプリケーションをビルドおよび実行している場合、この設定は異なります。 つまり、アプリケーションに選択した言語とプラットフォームにより、ENTRYPOINT 行とその他の設定は別になります。
 
 ### <a name="additional-resources"></a>その他の技術情報
 
-- **.NET Core アプリケーションの Docker イメージのビルド** \
+- **.NET 5 アプリケーション用の Docker イメージのビルド** \
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 - **Build your own image (独自のイメージのビルド)** 。 Docker の公式なドキュメント内にあります。\
@@ -136,16 +136,16 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 
 タグを指定する場合、次の場合のように、明示的にプラットフォームを指定できます。
 
-- `mcr.microsoft.com/dotnet/aspnet:3.1-buster-slim` \
-  ターゲット: Linux の .NET Core 3.1 ランタイムのみ
+- `mcr.microsoft.com/dotnet/aspnet:5.0-buster-slim` \
+  ターゲット: Linux での .NET 5 ランタイムのみ
 
-- `mcr.microsoft.com/dotnet/aspnet:3.1-nanoserver-1909` \
-  ターゲット: Windows Nano Server の .NET Core 3.1 ランタイムのみ
+- `mcr.microsoft.com/dotnet/aspnet:5.0-nanoserver-1909` \
+  ターゲット: Windows Nano Server での .NET 5 ランタイムのみ
 
 しかし、同じイメージ名を指定した場合、タグが同じでも、次の例に示すように、マルチアーキテクチャ イメージ (`aspnet` イメージなど) では、展開する Docker ホスト OS に応じて、Linux または Windows バージョンが使用されます。
 
-- `mcr.microsoft.com/dotnet/aspnet:3.1` \
-  マルチアーキテクチャ: Docker ホスト OS に応じて、Linux または Windows Nano Server の .NET Core 3.1 ランタイムのみ
+- `mcr.microsoft.com/dotnet/aspnet:5.0` \
+  マルチアーキテクチャ: Docker ホスト OS に応じて、Linux または Windows Nano Server での .NET 5 ランタイムのみ
 
 この場合、Windows ホストからイメージをプルした場合、Windows バリアントがプルされ、同じイメージ名が Linux ホストからプルされた場合、Linux バリアントがプルされます。
 
@@ -174,11 +174,11 @@ Dockerfile はバッチ スクリプトに似ています。 コマンド ライ
 初期の Dockerfile は、次のようになります。
 
 ```dockerfile
- 1  FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
+ 1  FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
+ 5  FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
  6  WORKDIR /src
  7  COPY src/Services/Catalog/Catalog.API/Catalog.API.csproj …
  8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks …
@@ -277,11 +277,11 @@ RUN dotnet restore
 結果のファイルは次のようになります。
 
 ```dockerfile
- 1  FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
+ 1  FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM mcr.microsoft.com/dotnet/sdk:3.1 AS publish
+ 5  FROM mcr.microsoft.com/dotnet/sdk:5.0 AS publish
  6  WORKDIR /src
  7  COPY . .
  8  RUN dotnet restore /ignoreprojectextensions:.dcproj

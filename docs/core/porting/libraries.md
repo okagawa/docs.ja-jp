@@ -3,12 +3,12 @@ title: .NET Core にライブラリを移植する
 description: ライブラリ プロジェクトを .NET Framework から .NET Core に移植する方法を説明します。
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 25c53cdc71f4269b058953ef1903dc72d222f65f
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 09874899018abc09051af17771c9df829b8dbe96
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633911"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189682"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>.NET Framework ライブラリを .NET Core に移植する
 
@@ -30,8 +30,8 @@ ms.locfileid: "97633911"
 [クロス プラットフォーム ツールによるライブラリの作成](../tutorials/libraries.md)\
 この記事では、.NET Core CLI を使用してライブラリを作成する方法について説明します。
 
-[.NET Core の *csproj* 形式に追加されたもの](../tools/csproj.md)\
-この記事では、*csproj* および MSBuild への移行に伴ってプロジェクト ファイルに追加された変更について説明します。
+[.NET プロジェクト SDK](../project-sdk/overview.md)\
+この記事では、SDK スタイルのプロジェクト ファイルの形式が説明されています。
 
 [.NET Core への移植 - サード パーティの依存関係の分析](third-party-deps.md)\
 この記事では、サード パーティの依存関係の移植性と、NuGet パッケージの依存関係が .NET Core で機能しない場合の対処方法について説明します。

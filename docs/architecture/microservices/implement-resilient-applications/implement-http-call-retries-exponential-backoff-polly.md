@@ -1,19 +1,19 @@
 ---
 title: Polly で指数バックオフを含む HTTP 呼び出しの再試行を実装する
 description: HTTP エラーを Polly と IHttpClientFactory で処理する方法について説明します
-ms.date: 03/03/2020
-ms.openlocfilehash: 49396dd545a05699278254474c77acf1483e0e0c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 01/13/2021
+ms.openlocfilehash: 8cffc644d73eaec5019e00c6a83de8635b569cde
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846797"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189051"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-ihttpclientfactory-and-polly-policies"></a>IHttpClientFactory ポリシーと Polly ポリシーで指数バックオフを含む HTTP 呼び出しの再試行を実装する
 
 指数のバックオフでの再試行のためのアプローチとしては、オープン ソースである [Polly ライブラリ](https://github.com/App-vNext/Polly)のような高度な .NET ライブラリを利用することをお勧めします。
 
-Polly とは、回復機能と一時的な障害処理の機能を提供する .NET ライブラリです。 このような機能は、再試行、遮断器、バルクヘッド分離、タイムアウト、フォールバックなどの Polly ポリシーを適用することで実装できます。 Polly は .NET Framework 4.x と .NET Standard 1.0、1.1、および 2.0 (.NET Core をサポート) を対象としています。
+Polly とは、回復機能と一時的な障害処理の機能を提供する .NET ライブラリです。 このような機能は、再試行、遮断器、バルクヘッド分離、タイムアウト、フォールバックなどの Polly ポリシーを適用することで実装できます。 Polly は .NET Framework 4.x と .NET Standard 1.0、1.1、および 2.0 (.NET Core 以降をサポート) を対象としています。
 
 次の手順では、前のセクションで説明した、`IHttpClientFactory` に統合された Polly で HTTP 再試行を使用する方法を示します。
 

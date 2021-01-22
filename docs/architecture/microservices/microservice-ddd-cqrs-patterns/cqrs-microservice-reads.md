@@ -1,17 +1,17 @@
 ---
 title: CQRS マイクロサービスに読み取り/クエリを実装する
 description: コンテナー化された .NET アプリケーション用の .NET マイクロサービス アーキテクチャ | Dapper を使用した eShopOnContainers でのオーダリング マイクロサービスの CQRS のクエリ側の実装を理解する。
-ms.date: 10/08/2018
-ms.openlocfilehash: e6ea7b4b7b37df9ee972319f597ab045bf3bd215
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.date: 01/13/2021
+ms.openlocfilehash: 047fc3893dcaf72a17d29f5560c928879757d024
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90678804"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188921"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>CQRS マイクロサービスに読み取り/クエリを実装する
 
-読み取り/クエリの場合、eShopOnContainers 参照アプリケーションのオーダリング マイクロサービスでは、DDD モデルおよびトランザクション領域とは別にクエリを実装します。 この主な理由は、クエリとトランザクションの要求が大幅に異なるためです。 書き込みでは、ドメイン ロジックに準拠する必要があるトランザクションが実行されます。 一方、クエリはべき等であり、ドメイン ルールから分離することができます。
+読み取り/クエリの場合、eShopOnContainers 参照アプリケーションのオーダリング マイクロサービスでは、DDD モデルおよびトランザクション領域とは別にクエリを実装します。 この実装を行う主な理由は、クエリとトランザクションの要求が大幅に異なるためです。 書き込みでは、ドメイン ロジックに準拠する必要があるトランザクションが実行されます。 一方、クエリはべき等であり、ドメイン ルールから分離することができます。
 
 図 7-3 に示すように、方法は単純です。 API インターフェイスは、Dapper のようなマイクロ オブジェクト リレーショナル マッパー (ORM) などの任意のインフラストラクチャを使用して、UI アプリケーションのニーズに応じて動的な ViewModel を返すことで Web API コントローラーによって実装されます。
 
@@ -21,7 +21,7 @@ ms.locfileid: "90678804"
 
 単純化された CQRS アプローチにおけるクエリ側の最も単純なアプローチは、動的な ViewModel を返す Micro-ORM のような Dapper を使用してデータベースに対するクエリを実行することで実装できます。 クエリ定義ではデータベースをクエリし、各クエリに対してオンザフライでビルドされた動的な ViewModel を返します。 クエリはべき等であるため、クエリの実行回数に関係なく、データが変更されることはありません。 したがって、トランザクション側で使用される DDD パターン (集計などのパターン) によって制限される必要はありません。これが、クエリがトランザクション領域から分離される理由です。 UI に必要なデータをデータベースに照会し、SQL ステートメント自体以外の場所 (ViewModel のクラスがない) で静的に定義する必要のない動的な ViewModel を返します。
 
-このアプローチはシンプルであるため、クエリ側で必要なコード ([Dapper](https://github.com/StackExchange/Dapper) のようなマイクロ ORM を使用するコードなど) を[同じ Web API プロジェクト内で](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs)実装することができます。 これは図 7-4 に示されています。 クエリは eShopOnContainers 内の **Ordering.API** マイクロサービス プロジェクトで定義されています。
+このアプローチはシンプルであるため、クエリ側で必要なコード ([Dapper](https://github.com/StackExchange/Dapper) のようなマイクロ ORM を使用するコードなど) を[同じ Web API プロジェクト内で](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs)実装することができます。 図 7-4 に、このアプローチを示します。 クエリは eShopOnContainers 内の **Ordering.API** マイクロサービス プロジェクトで定義されています。
 
 ![Ordering.API プロジェクトの Queries フォルダーのスクリーンショット。](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
 
@@ -33,7 +33,7 @@ ms.locfileid: "90678804"
 
 返されるデータ (ViewModel) は、データベースの複数のエンティティまたはテーブルからの、あるいはトランザクション領域のドメイン モデルで定義されている複数の集計全体のデータの結合結果である場合があります。 この場合、ドメイン モデルには依存しないクエリを作成するため、集約の境界と制約は無視され、必要なテーブルと列に対して自由にクエリを実行できます。 この方法では、開発者がクエリの作成または更新を行う場合に優れた柔軟性と生産性が提供されます。
 
-ViewModels は、クラスに定義されている静的な型にすることができます (オーダリング マイクロサービスで実装されているように)。 または、実行されたクエリに基づいて動的に作成することもできます。これは、開発者にとって非常にアジャイルな方法です。
+ViewModels は、クラスに定義されている静的な型にすることができます (オーダリング マイクロサービスで実装されているように)。 または、実行されたクエリに基づいて動的に作成することもできます。これは、開発者にとってアジャイルな方法です。
 
 ## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>クエリを実行するためのマイクロ ORM としての Dapper の使用
 
@@ -55,7 +55,7 @@ ViewModel をサーバー側からクライアント アプリに返す場合、
 
 ### <a name="viewmodel-as-dynamic-type"></a>動的な型としての ViewModel
 
-次のコードに示すように、`ViewModel` は、内部的にクエリによって返される属性に基づく*動的な*型を単に返すことで、クエリで直接返すことができます。 これは、返される属性のサブセットがクエリ自体に基づいていることを意味します。 そのため、クエリまたは結合に新しい列を追加する場合、そのデータは返される `ViewModel` に動的に追加されます。
+次のコードに示すように、`ViewModel` は、内部的にクエリによって返される属性に基づく *動的な* 型を単に返すことで、クエリで直接返すことができます。 これは、返される属性のサブセットがクエリ自体に基づいていることを意味します。 そのため、クエリまたは結合に新しい列を追加する場合、そのデータは返される `ViewModel` に動的に追加されます。
 
 ```csharp
 using Dapper;
@@ -173,7 +173,7 @@ public class OrderSummary
 }
 ```
 
-これが、長期的に見ると、明示的な戻り値の型が動的な型より適しているもう 1 つの理由です。 `ProducesResponseType` 属性を使用する場合は、200、400 などの考えられる HTTP エラー/コードで予期できる結果を指定することもできます。
+これが、長期的に見ると、明示的な戻り値の型が動的な型より適しているもう 1 つの理由です。 `ProducesResponseType` 属性を使用する場合、200、400 などの考えられる HTTP エラーまたはコードに関して予期できる結果を指定することもできます。
 
 次のイメージで、Swagger UI にどのように ResponseType 情報が表示されるかを確認できます。
 
