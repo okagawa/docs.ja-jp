@@ -2,12 +2,12 @@
 title: dotnet test コマンド
 description: dotnet test コマンドは、指定されたプロジェクトで単体テストを実行する場合に使用されます。
 ms.date: 04/29/2020
-ms.openlocfilehash: 4834da766bd052f44127a72635b65866eb7e3352
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 2671cbe6f610cfa8aa98e63e67f3240a1650cd6b
+ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189155"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98757877"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -250,7 +250,7 @@ dotnet test -h|--help
 | テスト フレームワーク | サポートされるプロパティ                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
 | MSTest         | <ul><li>FullyQualifiedName</li><li>名前</li><li>ClassName</li><li>優先度</li><li>TestCategory</li></ul> |
-| xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Traits</li></ul>                                   |
+| xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>カテゴリ</li></ul>                                 |
 | NUnit          | <ul><li>FullyQualifiedName</li><li>名前</li><li>TestCategory</li><li>優先度</li></ul>                                   |
 
 `<operator>` は、プロパティと値の関係を示します。

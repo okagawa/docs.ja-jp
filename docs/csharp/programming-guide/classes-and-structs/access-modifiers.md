@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: 557f5d9f302b08d32896b462e86ce1d96710ff36
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: d800116137e088a54edb221fb4f81ecd47b0278f
+ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474528"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98757864"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>アクセス修飾子 (C# プログラミング ガイド)
 
@@ -32,7 +32,7 @@ ms.locfileid: "86474528"
 
 ## <a name="class-and-struct-accessibility"></a>クラスと構造体のアクセシビリティ  
 
-名前空間に直接宣言されている (つまり、他のクラスや構造体の入れ子にされていない) クラスと構造体には、`public` または `internal` を指定できます。 アクセス修飾子が指定されなかった場合は、既定で `Internal` が適用されます。  
+名前空間に直接宣言されている (つまり、他のクラスや構造体の入れ子にされていない) クラスと構造体には、`public` または `internal` を指定できます。 アクセス修飾子が指定されなかった場合は、既定で `internal` が適用されます。
 
 構造体のメンバー (入れ子にされているクラスや構造体も含む) は `public`、`internal`、`private` のいずれかとして宣言できます。 クラスのメンバー (入れ子にされているクラスや構造体も含む) は `public`、`protected internal`、`protected`、`internal`、`private protected`、`private` のいずれかになります。 クラスのメンバーと構造体のメンバー (入れ子にされているクラスや構造体も含む) には、既定で `private` のアクセスが与えられます。 入れ子にされた型のうち、private が指定されているものには、それを含んでいる型の外部からはアクセスできません。
 
