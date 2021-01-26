@@ -2,12 +2,12 @@
 title: ランタイムの構成オプション
 description: ランタイム構成設定を使用して .NET Core アプリケーションを構成する方法について説明します。
 ms.date: 01/21/2020
-ms.openlocfilehash: 21673a221d0f21202febf4730b955da66132d5f7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5e9f292476cf953c3e63bb8e89268f7cc06b3bfc
+ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538199"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98757851"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>.NET Core ランタイム構成設定
 
@@ -37,7 +37,7 @@ ms.locfileid: "90538199"
 
 ## <a name="runtimeconfigjson"></a>runtimeconfig.json
 
-プロジェクトが[ビルドされた](../tools/dotnet-build.md)場合、出力ディレクトリに *[appname].runtimeconfig.json* ファイルが生成されます。 *runtimeconfig.template.json* ファイルがプロジェクト ファイルと同じフォルダーにある場合、それに設定されているすべてのオプションは *[appname].runtimeconfig.json* ファイルにマージされます。 そのアプリをご自分でビルドする場合は、構成オプションはすべて *runtimeconfig.template.json* ファイルに追加してください。 そのアプリを実行しているだけの場合は、 *[appname].runtimeconfig.json* ファイルに直接挿入します。
+プロジェクトが [ビルドされた](../tools/dotnet-build.md)場合、出力ディレクトリに *[appname].runtimeconfig.json* ファイルが生成されます。 *runtimeconfig.template.json* ファイルがプロジェクト ファイルと同じフォルダーにある場合、それに設定されているすべてのオプションは *[appname].runtimeconfig.json* ファイルに挿入されます。 そのアプリをご自分でビルドする場合は、構成オプションはすべて *runtimeconfig.template.json* ファイルに追加してください。 そのアプリを実行しているだけの場合は、 *[appname].runtimeconfig.json* ファイルに直接挿入します。
 
 > [!NOTE]
 > この *[appname].runtimeconfig.json* ファイルは、以降のビルドで上書きされます。
@@ -88,7 +88,7 @@ ms.locfileid: "90538199"
 
 ## <a name="msbuild-properties"></a>MSBuild プロパティ
 
-一部の実行構成オプションは、 *.csproj* の MSBuild のプロパティ、または SDK 形式の .NET Core プロジェクトの *.vbproj* ファイルを使用して設定できます。 MSBuild のプロパティは、*runtimeconfig.template.json* ファイルで設定されているオプションよりも優先されます。 また、 *[appname].runtimeconfig.json* ファイルに設定されているすべてのオプションもビルド時に上書きします。
+一部の実行構成オプションは、 *.csproj* の MSBuild のプロパティ、または SDK 形式の .NET Core プロジェクトの *.vbproj* ファイルを使用して設定できます。 MSBuild のプロパティは、*runtimeconfig.template.json* ファイルで設定されているオプションよりも優先されます。
 
 次に、ランタイム動作を構成する MSBuild のプロパティがある SDK 形式のプロジェクト ファイルの例を示します。
 
