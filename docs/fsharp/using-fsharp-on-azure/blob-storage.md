@@ -1,25 +1,25 @@
 ---
-title: F# を使用した Azure Blob Storage の概要
-description: Azure Blob storage を使用して、非構造化データをクラウドに格納します。
+title: F を使用した Azure Blob Storage の概要#
+description: Azure Blob Storage を使用して、非構造化データをクラウドに格納します。
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: 91aec8fc2b57c71ce4ba47d62619912af6c71e59
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 58c120c26a1e99481b49ae3a0fb096a2188f359e
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756248"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794812"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>F を使用して Azure Blob storage を使ってみる\#
+# <a name="get-started-with-azure-blob-storage-using-f"></a>F を使用した Azure Blob Storage の概要\#
 
-Azure Blob Storage は、非構造化データをクラウド内にオブジェクト/BLOB として格納するサービスです。 Blob Storage は、ドキュメント、メディア ファイル、アプリケーション インストーラーなど、任意の種類のテキスト データやバイナリ データを格納できます。 Blob Storage は、オブジェクト ストレージとも呼ばれます。
+Azure Blob Storage は、非構造化データをオブジェクトまたは blob としてクラウドに格納するサービスです。 Blob Storage は、ドキュメント、メディア ファイル、アプリケーション インストーラーなど、任意の種類のテキスト データやバイナリ データを格納できます。 Blob Storage は、オブジェクト ストレージとも呼ばれます。
 
 この記事では、Blob storage を使用して一般的なタスクを実行する方法について説明します。 サンプルは、.NET 用の Azure Storage クライアントライブラリを使用して F # を使用して記述されています。 説明するタスクには、blob のアップロード、一覧表示、ダウンロード、および削除の方法が含まれます。
 
 Blob storage の概念の概要については、「 [.net ガイド](/azure/storage/blobs/storage-quickstart-blobs-dotnet)」を参照してください。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 このガイドを使用するには、最初に [Azure ストレージアカウントを作成](/azure/storage/common/storage-account-create)する必要があります。 また、このアカウントのストレージアクセスキーも必要です。
 
@@ -185,7 +185,7 @@ Blob を削除するには、まず blob の参照を取得し、次 `Delete` �
 
 ## <a name="concurrent-access"></a>同時アクセス
 
-複数のクライアントまたは複数のプロセス インスタンスからの BLOB への同時アクセスをサポートするには、**ETag** または**占有**を使います。
+複数のクライアントまたは複数のプロセス インスタンスからの BLOB への同時アクセスをサポートするには、**ETag** または **占有** を使います。
 
 - **Etag** - BLOB またはコンテナーが別のプロセスによって変更されていることを検出する手段を提供します。
 
@@ -221,7 +221,7 @@ Azure Storage のどの BLOB もコンテナーに格納する必要がありま
 
 Azure Storage は、クライアントとサーバーの両方で blob データの暗号化をサポートしています。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 これで、Blob Storage の基本を学習できました。さらに詳細な情報が必要な場合は、次のリンク先を参照してください。
 
@@ -246,5 +246,5 @@ Windows、OS X、Linux で Azure Storage データを視覚的に操作できる
 - [.NET 用の Azure Blob Storage サンプル](/samples/azure-samples/storage-blob-dotnet-getting-started/storage-blob-dotnet-getting-started/)
 - [AzCopy を使ってみる](/azure/storage/common/storage-use-azcopy-v10)
 - [Azure Storage の接続文字列を構成する](/azure/storage/common/storage-configure-connection-string)
-- [Azure のストレージ チーム ブログ](/archive/blogs/windowsazurestorage/)
+- [Azure Storage Team Blog](/archive/blogs/windowsazurestorage/)
 - [クイック スタート: .NET を使用してオブジェクト ストレージ内に BLOB を作成する](/azure/storage/blobs/storage-quickstart-blobs-dotnet)
