@@ -2,12 +2,12 @@
 title: 完了後の残りの非同期タスクのキャンセル
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: be716e98263c865adad3c197236467b2f48d7740
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a0a04c62378ddf70ab3dee9a522e490b0a73b83e
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396676"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615959"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>完了後の残りの非同期タスクのキャンセル (Visual Basic)
 
@@ -16,11 +16,11 @@ ms.locfileid: "84396676"
 この例では、キャンセル トークンを `WhenAny` と共に使用して、タスクのコレクションから最初のタスクを終了まで保持し、残りのタスクを取り消す方法を示しています。 各タスクは、Web サイトのコンテンツをダウンロードします。 この例は最初のダウンロードが完了したコンテンツの長さを表示し、他のダウンロードを取り消します。
 
 > [!NOTE]
-> この例を実行するには、Visual Studio 2012 以降および .NET Framework 4.5 以降が、コンピューターにインストールされている必要があります。
+> この例を実行するには、コンピューターに Visual Studio 2012 以降および .NET Framework 4.5 以降がインストールされている必要があります。
 
 ## <a name="downloading-the-example"></a>例をダウンロードする
 
-完全な Windows Presentation Foundation (WPF) プロジェクトは「[Async Sample: Fine Tuning Your Application (非同期のサンプル: アプリケーションの微調整)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」からダウンロードできます。ダウンロード後、次の手順に従います。
+完全な Windows Presentation Foundation (WPF) プロジェクトは、「[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」(非同期のサンプル: アプリケーションの微調整) からダウンロードできます。その後、次の手順に従います。
 
 1. ダウンロードしたファイルを圧縮解除し、Visual Studio を起動します。
 
@@ -28,7 +28,7 @@ ms.locfileid: "84396676"
 
 3. **[プロジェクトを開く]** ダイアログ ボックスで、圧縮解除したサンプル コードを含むフォルダーを開き、AsyncFineTuningVB 用のソリューション (.sln) ファイルを開きます。
 
-4. **ソリューション エクスプローラー**で、**CancelAfterOneTask** プロジェクトのショートカット メニューを開き、 **[スタートアップ プロジェクトに設定]** をクリックします。
+4. **ソリューション エクスプローラー** で、**CancelAfterOneTask** プロジェクトのショートカット メニューを開き、 **[スタートアップ プロジェクトに設定]** をクリックします。
 
 5. F5 キーを押してプロジェクトを実行します。
 
@@ -47,7 +47,7 @@ ms.locfileid: "84396676"
 **CancelAListOfTasks** プロジェクトの MainWindow.xaml.vb ファイルで、各 Web サイトの処理ステップを `AccessTheWebAsync` のループから次の非同期メソッドに移動して、遷移を開始します。
 
 ```vb
-' ***Bundle the processing steps for a website into one async method.
+' **_Bundle the processing steps for a website into one async method.
 Async Function ProcessURLAsync(url As String, client As HttpClient, ct As CancellationToken) As Task(Of Integer)
 
     ' GetAsync returns a Task(Of HttpResponseMessage).
@@ -69,7 +69,7 @@ End Function
 2. 実行されると、一般的なタスクのコレクションを生成するクエリを作成します。 `ProcessURLAsync` に対する各呼び出しは、<xref:System.Threading.Tasks.Task%601> が整数である `TResult` を返します。
 
     ```vb
-    ' ***Create a query that, when executed, returns a collection of tasks.
+    ' _*_Create a query that, when executed, returns a collection of tasks.
     Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
         From url In urlList Select ProcessURLAsync(url, client, ct)
     ```
@@ -77,29 +77,29 @@ End Function
 3. `ToArray` を呼び出してクエリを実行し、タスクを開始します。 次の手順で `WhenAny` メソッドのアプリケーションは、`ToArray` を使用せずにクエリを実行してタスクを開始しますが、他のメソッドはそうでない場合があります。 最も安全な方法は、クエリの実行を明示的に強制することです。
 
     ```vb
-    ' ***Use ToArray to execute the query and start the download tasks.
+    ' _*_Use ToArray to execute the query and start the download tasks.
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()
     ```
 
-4. タスクのコレクションで `WhenAny` を呼び出します。 `WhenAny` は `Task(Of Task(Of Integer))` または `Task<Task<int>>` を返します。  つまり、`WhenAny` は、待機すると、単一の `Task(Of Integer)` または `Task<int>` に評価するタスクを返します。 その単一のタスクが、コレクションで最初に終了するタスクです。 最初に終了したタスクは `firstFinishedTask` に割り当てられます。 `firstFinishedTask` の型は、<xref:System.Threading.Tasks.Task%601> が整数である `TResult` です。それは `ProcessURLAsync` の戻り値の型であるためです。
+4. タスクのコレクションで `WhenAny` を呼び出します。 `WhenAny` は `Task(Of Task(Of Integer))` または `Task<Task<int>>` を返します。  つまり、`WhenAny` は、待機すると、単一の `Task(Of Integer)` または `Task<int>` に評価するタスクを返します。 その単一のタスクが、コレクションで最初に終了するタスクです。 最初に終了したタスクは `finishedTask` に割り当てられます。 `finishedTask` の型は、<xref:System.Threading.Tasks.Task%601> が整数である `TResult` です。それは `ProcessURLAsync` の戻り値の型であるためです。
 
     ```vb
-    ' ***Call WhenAny and then await the result. The task that finishes
-    ' first is assigned to firstFinishedTask.
-    Dim firstFinishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)
+    ' _*_Call WhenAny and then await the result. The task that finishes
+    ' first is assigned to finishedTask.
+    Dim finishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)
     ```
 
 5. この例では、最初に終了したタスクにのみ焦点を当てています。 したがって、<xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> を使用して、残りのタスクを取り消します。
 
     ```vb
-    ' ***Cancel the rest of the downloads. You just want the first one.
+    ' _*_Cancel the rest of the downloads. You just want the first one.
     cts.Cancel()
     ```
 
-6. 最後に、`firstFinishedTask` を待機して、ダウンロードされたコンテンツの長さを取得します。
+6. 最後に、`finishedTask` を待機して、ダウンロードされたコンテンツの長さを取得します。
 
     ```vb
-    Dim length = Await firstFinishedTask
+    Dim length = Await finishedTask
     resultsTextBox.Text &= vbCrLf & $"Length of the downloaded website:  {length}" & vbCrLf
     ```
 
@@ -111,7 +111,7 @@ End Function
 
 <xref:System.Net.Http> の参照を追加する必要があることに注意してください。
 
-このプロジェクトは「[Async Sample: Fine Tuning Your Application (非同期のサンプル: アプリケーションの微調整)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」からダウンロードできます。
+プロジェクトは、「[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」(非同期のサンプル: アプリケーションの微調整) からダウンロードできます。
 
 ```vb
 ' Add an Imports directive and a reference for System.Net.Http.
@@ -178,28 +178,28 @@ Class MainWindow
         ''        vbCrLf & $"Length of the downloaded string: {urlContents.Length}." & vbCrLf
         ''Next
 
-        ' ***Create a query that, when executed, returns a collection of tasks.
+        ' _*_Create a query that, when executed, returns a collection of tasks.
         Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
             From url In urlList Select ProcessURLAsync(url, client, ct)
 
-        ' ***Use ToArray to execute the query and start the download tasks.
+        ' _*_Use ToArray to execute the query and start the download tasks.
         Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()
 
-        ' ***Call WhenAny and then await the result. The task that finishes
-        ' first is assigned to firstFinishedTask.
-        Dim firstFinishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)
+        ' _*_Call WhenAny and then await the result. The task that finishes
+        ' first is assigned to finishedTask.
+        Dim finishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)
 
-        ' ***Cancel the rest of the downloads. You just want the first one.
+        ' _*_Cancel the rest of the downloads. You just want the first one.
         cts.Cancel()
 
-        ' ***Await the first completed task and display the results
+        ' _*_Await the first completed task and display the results
         ' Run the program several times to demonstrate that different
         ' websites can finish first.
-        Dim length = Await firstFinishedTask
+        Dim length = Await finishedTask
         resultsTextBox.Text &= vbCrLf & $"Length of the downloaded website:  {length}" & vbCrLf
     End Function
 
-    ' ***Bundle the processing steps for a website into one async method.
+    ' _**Bundle the processing steps for a website into one async method.
     Async Function ProcessURLAsync(url As String, client As HttpClient, ct As CancellationToken) As Task(Of Integer)
 
         ' GetAsync returns a Task(Of HttpResponseMessage).
@@ -236,9 +236,9 @@ End Class
 ' Download complete.
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [非同期アプリケーションの微調整 (Visual Basic)](fine-tuning-your-async-application.md)
 - [Async および Await を使用した非同期プログラミング (Visual Basic)](index.md)
-- [非同期のサンプル: アプリケーションの微調整](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async Sample:Fine Tuning Your Application (非同期のサンプル: アプリケーションの微調整)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

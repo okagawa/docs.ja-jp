@@ -2,12 +2,12 @@
 title: 完了時での複数の同期タスクとプロセスの実行
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: 52e4d786667a70730f311ca20a30acd7108107e3
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4eb4d15739da82cbfcc8dc5e03af4c1ae761d553
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090370"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615907"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>完了時での複数の同期タスクとプロセスの実行 (Visual Basic)
 
@@ -28,7 +28,7 @@ ms.locfileid: "91090370"
   
 3. **[プロジェクトを開く]** ダイアログ ボックスで、圧縮解除したサンプル コードを含むフォルダーを開き、AsyncFineTuningVB 用のソリューション (.sln) ファイルを開きます。  
   
-4. **ソリューション エクスプローラー**で、**ProcessTasksAsTheyFinish** プロジェクトのショートカット メニューを開き、 **[スタートアップ プロジェクトに設定]** をクリックします。  
+4. **ソリューション エクスプローラー** で、**ProcessTasksAsTheyFinish** プロジェクトのショートカット メニューを開き、 **[スタートアップ プロジェクトに設定]** をクリックします。  
   
 5. F5 キーを押してプロジェクトを実行します。  
   
@@ -64,19 +64,19 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
     1. `WhenAny` への呼び出しを待機し、ダウンロードを終了する、コレクションの最初のタスクを識別します。  
   
         ```vb  
-        Dim firstFinishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)  
+        Dim finishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)  
         ```  
   
     2. コレクションからそのタスクを削除します。  
   
         ```vb  
-        downloadTasks.Remove(firstFinishedTask)  
+        downloadTasks.Remove(finishedTask)  
         ```  
   
-    3. `firstFinishedTask` への呼び出しから返される、`ProcessURLAsync` を待機します。 `firstFinishedTask` 変数は <xref:System.Threading.Tasks.Task%601> が整数である `TReturn` です。 次の例に示すように、タスクは既に完了していますが、ダウンロードした Web サイトの長さの取得を待機します。  
+    3. `finishedTask` への呼び出しから返される、`ProcessURLAsync` を待機します。 `finishedTask` 変数は <xref:System.Threading.Tasks.Task%601> が整数である `TReturn` です。 次の例に示すように、タスクは既に完了していますが、ダウンロードした Web サイトの長さの取得を待機します。  
   
         ```vb  
-        Dim length = Await firstFinishedTask  
+        Dim length = Await finishedTask  
         resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:  {0}" & vbCrLf, length)  
         ```  
   
@@ -144,24 +144,24 @@ Class MainWindow
         ' Call SetUpURLList to make a list of web addresses.  
         Dim urlList As List(Of String) = SetUpURLList()  
   
-        ' ***Create a query that, when executed, returns a collection of tasks.  
+        ' **_Create a query that, when executed, returns a collection of tasks.  
         Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =  
             From url In urlList Select ProcessURLAsync(url, client, ct)  
   
-        ' ***Use ToList to execute the query and start the download tasks.
+        ' _*_Use ToList to execute the query and start the download tasks.
         Dim downloadTasks As List(Of Task(Of Integer)) = downloadTasksQuery.ToList()  
   
-        ' ***Add a loop to process the tasks one at a time until none remain.  
+        ' _*_Add a loop to process the tasks one at a time until none remain.  
         While downloadTasks.Count > 0  
-            ' ***Identify the first task that completes.  
-            Dim firstFinishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)  
+            ' _*_Identify the first task that completes.  
+            Dim finishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)  
   
-            ' ***Remove the selected task from the list so that you don't  
+            ' _*_Remove the selected task from the list so that you don't  
             ' process it more than once.  
-            downloadTasks.Remove(firstFinishedTask)  
+            downloadTasks.Remove(finishedTask)  
   
-            ' ***Await the first completed task and display the results.  
-            Dim length = Await firstFinishedTask  
+            ' _**Await the first completed task and display the results.  
+            Dim length = Await finishedTask  
             resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:  {0}" & vbCrLf, length)  
         End While  
   

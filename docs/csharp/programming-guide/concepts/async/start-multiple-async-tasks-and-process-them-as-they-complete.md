@@ -3,12 +3,12 @@ title: 完了時の非同期タスクの処理
 description: この例では、C# で Task.WhenAny を使用して複数のタスクを開始し、その結果を開始の順番で処理するのではなく、完了時に処理する方法を示します。
 ms.date: 08/19/2020
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 860e94a9c3973ce56e7321741a1136f752aa3d18
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 4cdd35af900863895911ea5c2c9772af362951ec
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805240"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615972"
 ---
 # <a name="process-asynchronous-tasks-as-they-complete-c"></a>完了時の非同期タスクの処理 (C#)
 
@@ -128,13 +128,13 @@ List<Task<int>> downloadTasks = downloadTasksQuery.ToList();
 1. `WhenAny` への呼び出しを待機し、コレクション内で最初にダウンロードが終了したタスクを識別します。
 
     ```csharp
-    Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);
+    Task<int> finishedTask = await Task.WhenAny(downloadTasks);
     ```
 
 1. コレクションからそのタスクを削除します。
 
     ```csharp
-    downloadTasks.Remove(firstFinishedTask);
+    downloadTasks.Remove(finishedTask);
     ```
 
 1. `finishedTask` への呼び出しから返される、`ProcessUrlAsync` を待機します。 `finishedTask` 変数は <xref:System.Threading.Tasks.Task%601> が整数である `TResult` です。 次の例に示すように、タスクは既に完了していますが、ダウンロードした Web サイトの長さの取得を待機します。 タスクが失敗した場合、`AggregateException` がスローされる <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> プロパティの読み取りとは異なり、`await` からは `AggregateException` に格納されている最初の子の例外がスローされます。
