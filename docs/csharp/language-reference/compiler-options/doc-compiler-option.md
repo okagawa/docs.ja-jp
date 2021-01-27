@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: b1d7fbbe98aaad16454fdd71c161f2a17a2f4f2e
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: e55b86e5b028fb871f309d80217477cfd164c106
+ms.sourcegitcommit: f0eb7eeedf3ceec726499fa678786d03083214ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91173257"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98629255"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (C# コンパイラ オプション)
 
@@ -54,15 +54,19 @@ ms.locfileid: "91173257"
   
  コードのコメントからドキュメントを生成する方法については、「[ドキュメント コメント用の推奨タグ](../../programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)」を参照してください。  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
-  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-2019-development-environment"></a>Visual Studio 2019 開発環境でこのコンパイラ オプションを設定するには  
+
 1. プロジェクトの **[プロパティ]** ページを開きます。  
+2. **[ビルド]** タブをクリックします。
+3. **[XML ドキュメント ファイル]** プロパティを変更します。
   
-2. **[ビルド]** タブをクリックします。  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-for-mac-development-environment"></a>Visual Studio for Mac 開発環境でこのコンパイラ オプションを設定するには  
   
-3. **[XML ドキュメント ファイル]** プロパティを変更します。  
-  
- このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>」を参照してください。  
+1. プロジェクトの **[オプション]** ページを開きます。
+2. **[コンパイラ]** タブを選択します。
+3. **[XML ドキュメントを生成する]** を選択してから、テキスト ボックスにファイル名を入力します。
+
+このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

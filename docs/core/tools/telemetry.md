@@ -3,12 +3,12 @@ title: .NET SDK 製品利用統計情報
 description: 分析に使用する使用状況情報を収集する .NET SDK 製品利用統計情報機能、収集されるデータ、この機能を無効にする方法について説明します。
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 4f137822c61e1a04eccd28ebd0cd56c04f4a85e2
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 137b703dc9369f09fb535af40edf057e4e02117a
+ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633870"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98757838"
 ---
 # <a name="net-sdk-telemetry"></a>.NET SDK 製品利用統計情報
 
@@ -33,6 +33,9 @@ ms.locfileid: "94633870"
 .NET SDK 製品利用統計情報機能は、既定では有効になっています。 製品利用統計情報機能をオプトアウトするには、`DOTNET_CLI_TELEMETRY_OPTOUT` 環境変数を `1` または `true` に設定します。
 
 また、インストールが成功したときにも、.NET SDK インストーラーによって製品利用統計情報の 1 エントリが送信されます。 オプトアウトするには、.NET SDK をインストールする前に `DOTNET_CLI_TELEMETRY_OPTOUT` 環境変数を設定します。
+
+> [!IMPORTANT]
+> インストーラーの開始後にオプト アウトするには、インストーラーを閉じ、環境変数を設定してから、その値を設定した状態でインストーラーをもう一度実行します。
 
 ## <a name="disclosure"></a>開示
 
@@ -98,7 +101,7 @@ Read more about .NET CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 | `--language`            | `dotnet new`                                                                                   |
 | `--configuration`       | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`                  |
 | `--framework`           | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`, `dotnet vstest` |
-| `--runtime`             | `dotnet build`、`dotnet publish`                                                              |
+| `--runtime`             | `dotnet build`,  `dotnet publish`                                                              |
 | `--platform`            | `dotnet vstest`                                                                                |
 | `--logger`              | `dotnet vstest`                                                                                |
 | `--sdk-package-version` | `dotnet migrate`                                                                               |

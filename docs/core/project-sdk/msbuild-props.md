@@ -4,12 +4,12 @@ description: .NET SDK によって認識される MSBuild のプロパティと�
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: e35ccc3540756a4cb7905d5864caf65cded4362b
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 21bbe46cf60540c01344cc8fcb82c62ff0fbbee5
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189982"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98692710"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK プロジェクトの MSBuild リファレンス
 
@@ -86,6 +86,8 @@ ms.locfileid: "98189982"
 - [CopyLocalLockFileAssemblies](#copylocallockfileassemblies)
 - [CopyToPublishDirectory](#copytopublishdirectory)
 - [LinkBase](#linkbase)
+- [PreserveCompilationContext](#preservecompilationcontext)
+- [PreserveCompilationReferences](#preservecompilationreferences)
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
 - [TrimmerRootAssembly](#trimmerrootassembly)
@@ -153,6 +155,30 @@ MSBuild 項目の `CopyToPublishDirectory` メタデータにより、項目が�
 
 > [!TIP]
 > あるいは、`dotnet publish` を使用し、クラス ライブラリを発行できます。 詳細については、「[dotnet publish](../tools/dotnet-publish.md)」を参照してください。
+
+### <a name="preservecompilationcontext"></a>PreserveCompilationContext
+
+`PreserveCompilationContext` プロパティを使うと、ビルド時に使用されたのと同じ設定で、ビルドまたは発行されたアプリケーションで実行時により多くのコードをコンパイルできるようになります。 ビルド時に参照されるアセンブリは、出力ディレクトリの *ref* サブディレクトリにコピーされます。 参照アセンブリの名前は、コンパイラに渡されるオプションと共に、アプリケーションの *.deps.json* ファイルに格納されます。 この情報は、<xref:Microsoft.Extensions.DependencyModel.DependencyContext.CompileLibraries?displayProperty=nameWithType> と <xref:Microsoft.Extensions.DependencyModel.DependencyContext.CompilationOptions?displayProperty=nameWithType> のプロパティを使用して取得できます。
+
+この機能は、ほとんどの場合、Razor ファイルの実行時コンパイルをサポートするために ASP.NET Core MVC と Razor Pages によって内部的に使用されます。
+
+```xml
+<PropertyGroup>
+  <PreserveCompilationContext>true</PreserveCompilationContext>
+</PropertyGroup>
+```
+
+### <a name="preservecompilationreferences"></a>PreserveCompilationReferences
+
+`PreserveCompilationReferences` プロパティは [PreserveCompilationContext](#preservecompilationcontext) プロパティと似ていますが、 *.deps.json* ファイルではなく、発行ディレクトリに参照アセンブリのみがコピーされる点が異なります。
+
+```xml
+<PropertyGroup>
+  <PreserveCompilationReferences>true</PreserveCompilationReferences>
+</PropertyGroup>
+```
+
+詳細については、「[Razor SDK」の「プロパティ](/aspnet/core/razor-pages/sdk#properties)」を参照してください。
 
 ### <a name="runtimeidentifier"></a>RuntimeIdentifier
 

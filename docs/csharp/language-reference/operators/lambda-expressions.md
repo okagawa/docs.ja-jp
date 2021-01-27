@@ -9,16 +9,16 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 51bf44af5ec3478f2b2557b047df270c0c22990d
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 2ae63396c0b1bb0bf1fe5c33b1103f69f6dcf664
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94556843"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615868"
 ---
 # <a name="lambda-expressions-c-reference"></a>ラムダ式 (C# リファレンス)
 
-"*ラムダ式*" は、次の 2 つのいずれかの形式を持つ式です。
+"*ラムダ式*" を使用して匿名関数を作成します。 [ラムダ宣言演算子`=>`](lambda-operator.md)を使用して、ラムダのパラメーター リストを式本体から分離します。 ラムダ式は、次の 2 つの形式のいずれかにすることができます。
 
 - [式形式のラムダ](#expression-lambdas)は、式本体に式が含まれます。
 
@@ -32,7 +32,7 @@ ms.locfileid: "94556843"
   (input-parameters) => { <sequence-of-statements> }
   ```
 
-[ラムダ宣言演算子`=>`](lambda-operator.md)を使用して、ラムダのパラメーター リストを式本体から分離します。 ラムダ式を作成するには、ラムダ演算子の左辺に入力パラメーターを指定し (ある場合)、右辺に式またはステートメント ブロックを指定します。
+ラムダ式を作成するには、ラムダ演算子の左辺に入力パラメーターを指定し (ある場合)、右辺に式またはステートメント ブロックを指定します。
 
 ラムダ式は、[デリゲート](../builtin-types/reference-types.md#the-delegate-type)型に変換できます。 ラムダ式を変換できるデリゲート型は、パラメータと戻り値の型で定義されます。 ラムダ式が値を返さない場合は `Action` デリゲート型のいずれかに変換でき、値を返す場合は`Func` デリゲート型のいずれかに変換できます。 たとえば、2 つのパラメーターがあり、値を返さないラムダ式は、<xref:System.Action%602> デリゲートに変換できます。 1 つのパラメーターがあり、値を返すラムダ式は、<xref:System.Func%602> デリゲートに変換できます。 次の例では、`x` という名前のパラメーターを指定し、`x` の二乗の値を返すラムダ式 `x => x * x` を、デリゲート型の変数に割り当てます。
 
