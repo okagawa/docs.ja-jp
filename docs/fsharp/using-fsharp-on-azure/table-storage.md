@@ -1,23 +1,23 @@
 ---
-title: F# を使用した Azure Table Storage の概要
+title: F を使用して Azure Table Storage を使ってみる#
 description: Azure Table Storage または Azure Cosmos DB を使用して、構造化データをクラウドに格納します。
 author: sylvanc
 ms.date: 03/26/2018
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: bf4f2e63c847e18d253fe5b6cf5dd7773c320fb7
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: bc8e111636013930f7c7d4f59d1ef0720298cb9f
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756209"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899283"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>F を使用して Azure Table storage と Azure Cosmos DB Table API を開始する\#
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>F を使用して Azure Table Storage と Azure Cosmos DB Table API を使ってみる\#
 
-Azure Table Storage は、NoSQL の構造化データをクラウド内に格納するサービスです。 Table Storage は、スキーマなしの設計によるキーまたは属性ストアです。 Table Storage はスキーマがないため、アプリケーションの進化のニーズに合わせてデータを容易に修正できます。 あらゆる種類のデータに、高速かつ経済的にアクセスできます。 Table Storage は、通常、従来の SQL と比較して、同様の容量のデータをはるかに低コストで保存できます。
+Azure Table Storage は、構造化された NoSQL データをクラウドに格納するサービスです。 Table Storage は、スキーマなしの設計によるキーまたは属性ストアです。 Table Storage はスキーマがないため、アプリケーションの進化のニーズに合わせてデータを容易に修正できます。 あらゆる種類のデータに、高速かつ経済的にアクセスできます。 Table Storage は、通常、従来の SQL と比較して、同様の容量のデータをはるかに低コストで保存できます。
 
 テーブル ストレージを使用すると、Web アプリケーションのユーザー データ、アドレス帳、デバイス情報、およびサービスに必要なその他の種類のメタデータなど、柔軟なデータセットを保存できます。 ストレージ アカウントの容量の上限を超えない限り、テーブルには任意の数のエンティティを保存でき、ストレージ アカウントには任意の数のテーブルを含めることができます。
 
-Azure Cosmos DB は、Azure Table storage 用に作成されたアプリケーションの Table API を提供し、次のような premium 機能を必要とします。
+Azure Cosmos DB は、Azure Table Storage 向けに作成され、次のような premium 機能を必要とするアプリケーションの Table API を提供します。
 
 - ターンキー グローバル配信。
 - 世界規模での専用スループット。
@@ -25,15 +25,15 @@ Azure Cosmos DB は、Azure Table storage 用に作成されたアプリケー�
 - 高可用性の保証。
 - 自動セカンダリ インデックス作成。
 
-Azure Table Storage 用に作成されたアプリケーションについては、Table API を使って Azure Cosmos DB に移行することで、コードに変更を加えることなく、高度な機能を活用できるようになります。 Table API には、.NET、Java、Python、および Node.js で利用可能なクライアント SDK があります。
+Azure Table Storage 用に作成されたアプリケーションは、コードを変更せずに Table API を使用して Azure Cosmos DB に移行し、premium 機能を活用できます。 Table API には、.NET、Java、Python、および Node.js で利用可能なクライアント SDK があります。
 
 詳細については、「 [Azure Cosmos DB Table API の概要](/azure/cosmos-db/table-introduction)」を参照してください。
 
 ## <a name="about-this-tutorial"></a>このチュートリアルについて
 
-このチュートリアルでは、Azure Table storage または Azure Cosmos DB Table API を使用して、テーブルの作成と削除、テーブルデータの挿入、更新、削除、クエリなど、いくつかの一般的なタスクを実行する F # コードを記述する方法について説明します。
+このチュートリアルでは、Azure Table Storage または Azure Cosmos DB Table API を使用して、テーブルの作成と削除、テーブルデータの挿入、更新、削除、クエリなど、いくつかの一般的なタスクを実行する F # コードを記述する方法について説明します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 このガイドを使用するには、最初に [Azure ストレージアカウント](/azure/storage/storage-create-storage-account) または [Azure Cosmos DB アカウント](https://azure.microsoft.com/try/cosmosdb/)を作成する必要があります。
 
@@ -188,12 +188,12 @@ Azure Configuration Manager の使用はオプションです。 .NET Framework 
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L193-L193)]
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 これで、Table storage の基本を学習できました。さらに複雑なストレージタスクと Azure Cosmos DB Table API については、次のリンク先を参照してください。
 
 - [Azure Cosmos DB Table API の概要](/azure/cosmos-db/table-introduction)
 - [.NET 用ストレージ クライアント ライブラリ リファレンス](/dotnet/api/overview/azure/storage)
 - [Azure Storage 型プロバイダー](https://fsprojects.github.io/AzureStorageTypeProvider/)
-- [Azure のストレージ チーム ブログ](/archive/blogs/windowsazurestorage/)
+- [Azure Storage Team Blog](/archive/blogs/windowsazurestorage/)
 - [接続文字列の構成](/azure/storage/common/storage-configure-connection-string)

@@ -1,23 +1,23 @@
 ---
-title: F# を使用した Azure File Storage の概要
-description: Azure File Storage を使用してクラウドにファイル データを格納し、Azure 仮想マシン (VM) から、または Windows を実行しているオンプレミスのアプリケーションからクラウド ファイル共有をマウントします。
+title: F を使用して Azure File Storage を使ってみる#
+description: Azure File Storage を使用してクラウドにファイルデータを格納し、Azure 仮想マシン (VM) または Windows を実行するオンプレミスアプリケーションからクラウドファイル共有をマウントします。
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: dd19b156e73774f4eca63afd3f4c10a4a7b8d46c
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: bcea58b4bf756fc9d696cd5a1010b0feffb127a7
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100127"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899426"
 ---
-# <a name="get-started-with-azure-file-storage-using-f"></a>F を使用して Azure File storage を使ってみる\#
+# <a name="get-started-with-azure-file-storage-using-f"></a>F を使用して Azure File Storage を使ってみる\#
 
-Azure File Storage は、標準の [サーバー メッセージ ブロック (SMB) プロトコル](/windows/win32/fileio/microsoft-smb-protocol-and-cifs-protocol-overview)を使用してクラウドでファイル共有を提供するサービスです。 SMB 2.1 と SMB 3.0 の両方がサポートされます。 Azure File Storage を使用すると、コストがかかる書き換えを行わずに、ファイル共有に依存しているレガシ アプリケーションをすばやく Azure に移行することができます。 Azure 仮想マシンまたはクラウド サービスで実行されているアプリケーション、またはオンプレミスのクライアントから実行されているアプリケーションは、デスクトップ アプリケーションが一般的な SMB 共有をマウントするのと同じように、クラウドにファイル共有をマウントできます。 このため、任意の数のアプリケーション コンポーネントが、File Storage 共有をマウントして同時にアクセスできます。
+Azure File Storage は、標準の [サーバーメッセージブロック (SMB) プロトコル](/windows/win32/fileio/microsoft-smb-protocol-and-cifs-protocol-overview)を使用してクラウドでファイル共有を提供するサービスです。 SMB 2.1 と SMB 3.0 の両方がサポートされます。 Azure File Storage を使用すると、ファイル共有に依存するレガシアプリケーションを迅速かつコストのかかる書き換えなしで Azure に移行できます。 Azure 仮想マシンまたはクラウド サービスで実行されているアプリケーション、またはオンプレミスのクライアントから実行されているアプリケーションは、デスクトップ アプリケーションが一般的な SMB 共有をマウントするのと同じように、クラウドにファイル共有をマウントできます。 このため、任意の数のアプリケーション コンポーネントが、File Storage 共有をマウントして同時にアクセスできます。
 
 ファイルストレージの概念の概要については、「 [.net ガイド](/azure/storage/storage-dotnet-how-to-use-files)」を参照してください。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 このガイドを使用するには、最初に [Azure ストレージアカウントを作成](/azure/storage/storage-create-storage-account)する必要があります。
 また、このアカウントのストレージアクセスキーも必要になります。
@@ -92,7 +92,7 @@ Azure Configuration Manager の使用はオプションです。 .NET Framework 
 
 ### <a name="set-the-maximum-size-for-a-file-share"></a>ファイル共有の最大サイズの設定
 
-次の例では、共有の現在の使用状況を確認する方法と、共有のクォータを設定する方法を示します。 `FetchAttributes` 共有のを設定し、ローカルの `Properties` 変更を `SetProperties` Azure File storage に反映するには、を呼び出す必要があります。
+次の例では、共有の現在の使用状況を確認する方法と、共有のクォータを設定する方法を示します。 `FetchAttributes` 共有のを設定し、ローカルの `Properties` 変更を `SetProperties` Azure File Storage に反映するには、を呼び出す必要があります。
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L62-L72)]
 
@@ -132,9 +132,9 @@ Azure Storage Analytics は、ファイルストレージのメトリックを�
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L126-L140)]
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-Azure File storage の詳細については、次のリンクを参照してください。
+Azure File Storage の詳細については、次のリンクを参照してください。
 
 ### <a name="conceptual-articles-and-videos"></a>概念に関する記事とビデオ
 

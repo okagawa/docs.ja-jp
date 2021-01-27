@@ -1,27 +1,27 @@
 ---
-title: F# を使用した Azure Queue Storage の概要
+title: F を使用して Azure Queue Storage を使ってみる#
 description: Azure Queue は、アプリケーション コンポーネント間の信頼性の高い非同期メッセージングを提供します。 クラウド メッセージングにより、アプリケーション コンポーネントのスケールを個別に変更できます。
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: daa5372b7903f10c0d966c5c92e35c8bf9d362d8
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 0ab131647e37985d45073966ffc01b9a7f379e2f
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756222"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899296"
 ---
-# <a name="get-started-with-azure-queue-storage-using-f"></a>F を使用して Azure Queue storage の使用を開始する\#
+# <a name="get-started-with-azure-queue-storage-using-f"></a>F を使用して Azure Queue Storage を使ってみる\#
 
-Azure Queue Storage は、アプリケーション コンポーネント間のクラウド メッセージングを提供します。 拡張性を重視してアプリケーションを設計する場合、通常、アプリケーション コンポーネントを個別に拡張できるように分離します。 Queue Storage は、アプリケーション コンポーネントがクラウド、デスクトップ、オンプレミスのサーバー、モバイル デバイスのいずれで実行されている場合でも、アプリケーション コンポーネント間の通信に非同期メッセージングを提供します。 Queue Storage ではまた、非同期タスクの管理とプロセス ワークフローの構築もサポートします。
+Azure Queue Storage を使用すると、アプリケーション コンポーネント間のクラウド メッセージングが提供されます。 拡張性を重視してアプリケーションを設計する場合、通常、アプリケーション コンポーネントを個別に拡張できるように分離します。 Queue Storage は、アプリケーション コンポーネントがクラウド、デスクトップ、オンプレミスのサーバー、モバイル デバイスのいずれで実行されている場合でも、アプリケーション コンポーネント間の通信に非同期メッセージングを提供します。 Queue Storage ではまた、非同期タスクの管理とプロセス ワークフローの構築もサポートします。
 
 ### <a name="about-this-tutorial"></a>このチュートリアルについて
 
-このチュートリアルでは、Azure Queue storage を使用していくつかの一般的なタスクの F # コードを記述する方法について説明します。 キューの作成と削除、キューメッセージの追加、読み取り、削除などのタスクについて説明します。
+このチュートリアルでは、Azure Queue Storage を使用していくつかの一般的なタスクの F # コードを記述する方法について説明します。 キューの作成と削除、キューメッセージの追加、読み取り、削除などのタスクについて説明します。
 
 Queue storage の概念の概要については、「 [.net のキューストレージに関するガイド](/azure/storage/storage-dotnet-how-to-use-queues)」を参照してください。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 このガイドを使用するには、最初に [Azure ストレージアカウントを作成](/azure/storage/storage-create-storage-account)する必要があります。
 また、このアカウントのストレージアクセスキーも必要になります。
@@ -78,7 +78,7 @@ Azure Configuration Manager の使用はオプションです。 .NET Framework 
 
 ## <a name="insert-a-message-into-a-queue"></a>メッセージをキューに挿入する
 
-既存のキューにメッセージを挿入するには、最初に新しいを作成 `CloudQueueMessage` します。 次に、メソッドを呼び出し `AddMessage` ます。 は、次のように、 `CloudQueueMessage` 文字列 (utf-8 形式) または配列のいずれかから作成でき `byte` ます。
+既存のキューにメッセージを挿入するには、最初に新しい `CloudQueueMessage` を作成します。 次に、`AddMessage` メソッドを呼び出します。 は、次のように、 `CloudQueueMessage` 文字列 (utf-8 形式) または配列のいずれかから作成でき `byte` ます。
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L42-L44)]
 
@@ -104,7 +104,7 @@ Azure Configuration Manager の使用はオプションです。 .NET Framework 
 
 ## <a name="de-queue-the-next-message"></a>次のメッセージをデキューする
 
-コードでは、2 つの手順でキューからメッセージをデキューします。 を呼び出すと `GetMessage` 、キュー内の次のメッセージが取得されます。 `GetMessage` から返されたメッセージは、このキューからメッセージを読み取る他のコードから参照できなくなります。 既定では、このメッセージを参照できない状態は 30 秒間続きます。 キューからのメッセージの削除を完了するには、もを呼び出す必要があり `DeleteMessage` ます。 このようにメッセージを 2 つの手順で削除することで、ハードウェアまたはソフトウェアの問題が原因でコードによるメッセージの処理が失敗した場合に、コードの別のインスタンスで同じメッセージを取得し、もう一度処理することができます。 ご自分のコードで、メッセージが処理された直後に `DeleteMessage` を呼び出します。
+コードでは、2 つの手順でキューからメッセージをデキューします。 `GetMessage`を呼び出すと、キュー内の次のメッセージを取得します。 `GetMessage` から返されたメッセージは、このキューからメッセージを読み取る他のコードから参照できなくなります。 既定では、このメッセージを参照できない状態は 30 秒間続きます。 また、キューからのメッセージの削除を完了するには、`DeleteMessage` を呼び出す必要があります。 このようにメッセージを 2 つの手順で削除することで、ハードウェアまたはソフトウェアの問題が原因でコードによるメッセージの処理が失敗した場合に、コードの別のインスタンスで同じメッセージを取得し、もう一度処理することができます。 ご自分のコードで、メッセージが処理された直後に `DeleteMessage` を呼び出します。
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L75-L76)]
 
@@ -129,7 +129,7 @@ Azure Configuration Manager の使用はオプションです。 .NET Framework 
 
 ## <a name="delete-a-queue"></a>キューを削除する
 
-キューおよびキューに格納されているすべてのメッセージを削除するには、 `Delete` キューオブジェクトに対してメソッドを呼び出します。
+キューおよびキューに格納されているすべてのメッセージを削除するには、キュー オブジェクトの `Delete` メソッドを呼び出します。
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L112-L113)]
 
@@ -139,6 +139,6 @@ Azure Configuration Manager の使用はオプションです。 .NET Framework 
 
 - [.NET 用 Azure Storage API](/dotnet/api/overview/azure/storage)
 - [Azure Storage 型プロバイダー](https://github.com/fsprojects/AzureStorageTypeProvider)
-- [Azure のストレージ チーム ブログ](/archive/blogs/windowsazurestorage/)
+- [Azure Storage Team Blog](/archive/blogs/windowsazurestorage/)
 - [Azure Storage の接続文字列を構成する](/azure/storage/common/storage-configure-connection-string)
 - [Azure Storage サービスの REST API リファレンス](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)
