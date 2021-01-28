@@ -6,14 +6,18 @@ helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: c36967236c40efbf432d554c3f551aea22cfb148
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2d3da2ca9cd958fc70d3b91362dde71d68dc9d8a
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90549680"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98898758"
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+## <a name="overview"></a>概要
 
 WCF Data Services (従来の "ADO.NET Data Services") は .NET Framework のコンポーネントです。これを使用すると、[Representational State Transfer (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) のセマンティクスを使用し、Open Data Protocol (OData) を使用して Web またはイントラネット上のデータを公開および使用するサービスを作成できます。 OData は、URI でアドレス指定できるリソースとしてデータを公開します。 標準的な HTTP 動詞である GET、PUT、POST、および DELETE を使用してデータにアクセスし、変更できます。 OData では、[Entity Data Model](../adonet/entity-data-model.md) のエンティティとリレーションシップの規則を使用して、アソシエーションで関連付けられた一連のエンティティとしてリソースを公開します。
 
