@@ -12,12 +12,12 @@ helpviewer_keywords:
 - language code style rules [EditorConfig]
 - language rules
 - EditorConfig language conventions
-ms.openlocfilehash: b77d9aa2a528a6cf540babd5e5acc148e48c489c
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 2aa2261534363f1da6a2109f092e08d210ebd915
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96594163"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957976"
 ---
 # <a name="language-rules"></a>言語規則
 
@@ -31,10 +31,21 @@ ms.locfileid: "96594163"
 
 言語ルールのオプションは、次の形式で EditorConfig ファイルで指定できます。
 
+`option_name = value` (Visual Studio 2019 バージョン 16.9 Preview 2 以降)
+
+または
+
 `option_name = value:severity`
 
-- **値**: 各言語ルールで、スタイルを優先するかどうかを定義する値を指定します。 多くのルールでは、`true` (このスタイルを優先する) または `false` (このスタイルを優先しない) の値が受け付けられます。 それ以外では、`when_on_single_line` や `never` などの値が受け付けられます。
-- **重要度**: ルールの2番目の部分では、ルールの [重大度レベル](../configuration-options.md#severity-level) を指定します。 上記のオプション構文の一部としての重要度の指定は、Visual Studio などの開発 Ide 内でのみ尊重されます。 この設定は、C# または VB コンパイラで認識されないため、ビルド時には尊重されません。 代わりに、ビルドでコードスタイルルールを適用するには、アナライザーのルール ID ベースの重大度構成構文を使用して重大度を設定する必要があります。 この構文では `dotnet_diagnostic.<rule ID>.severity = <severity>` 形式が使用されます。たとえば、`dotnet_diagnostic.IDE0040.severity = silent` のようになります。 詳細については、[こちらの GitHub の問題](https://github.com/dotnet/roslyn/issues/44201)のページを参照してください。
+- **Value**
+
+  言語ルールごとに、スタイルを優先するかどうかを定義する値を指定します。 多くのルールでは、`true` (このスタイルを優先する) または `false` (このスタイルを優先しない) の値が受け付けられます。 それ以外では、`when_on_single_line` や `never` などの値が受け付けられます。
+
+- **重要度** (Visual Studio 2019 バージョン 16.9 Preview 2 以降のバージョンでは省略可能)
+
+  ルールの2番目の部分では、ルールの [重大度レベル](../configuration-options.md#severity-level) を指定します。 この方法で指定した場合、重要度の設定は、Visual Studio などの開発 Ide 内でのみ尊重されます。 ビルド時には尊重され *ません* 。
+
+  ビルド時にコードスタイル規則を適用するには、代わりにアナライザーの規則 ID ベースの重要度構成構文を使用して重大度を設定します。 この構文では `dotnet_diagnostic.<rule ID>.severity = <severity>` 形式が使用されます。たとえば、`dotnet_diagnostic.IDE0040.severity = silent` のようになります。 詳細については、「 [重大度レベル](../configuration-options.md#severity-level)」を参照してください。
 
 > [!TIP]
 >
