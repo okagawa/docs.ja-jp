@@ -1,17 +1,17 @@
 ---
 title: 配列 - C# プログラミング ガイド
 description: C# の配列データ構造に、同じ型の複数の変数を格納します。 配列を宣言するには、型を指定するか、任意の型を格納する場合は Object を指定します。
-ms.date: 07/20/2015
+ms.date: 01/22/2021
 helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: e302ff2e4c2488c4899c4eb99a666d2d322119ce
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 203d8b86da4e74d8c5397132a0ba68618eedf348
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474736"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794765"
 ---
 # <a name="arrays-c-programming-guide"></a>配列 (C# プログラミング ガイド)
 
@@ -31,7 +31,7 @@ type[] arrayName;
 
 配列には、次の特徴があります。
 
-- 配列は、[1 次元配列](single-dimensional-arrays.md)、[多次元配列](multidimensional-arrays.md)、または[ジャグ配列](jagged-arrays.md)のいずれかになります。
+- 配列は、[1 次元](single-dimensional-arrays.md)、[多次元](multidimensional-arrays.md)、または[ジャグ](jagged-arrays.md)のいずれかになります。
 - 次元数と各次元の長さは、配列インスタンスの作成時に設定されます。 インスタンスの有効期間中にこれらの値を変更することはできません。
 - 数値配列要素の既定値はゼロに設定され、参照要素は null に設定されます。
 - ジャグ配列は配列の配列です。そのため、配列要素は参照型で、`null` に初期化されます。
@@ -39,17 +39,25 @@ type[] arrayName;
 - 配列の要素および配列型は、どのような型でもかまいません。
 - 配列型は、抽象基本型 <xref:System.Array> から派生した[参照型](../../language-reference/keywords/reference-types.md)です。 この型は <xref:System.Collections.IEnumerable> と <xref:System.Collections.Generic.IEnumerable%601> を実装するので、C# のすべての配列で [foreach](../../language-reference/keywords/foreach-in.md) 反復処理を使用できます。
 
-## <a name="related-sections"></a>関連項目
+### <a name="arrays-as-objects"></a>オブジェクトとしての配列
 
-- [オブジェクトとしての配列](arrays-as-objects.md)
-- [配列での foreach の使用](using-foreach-with-arrays.md)
-- [引数としての配列の受け渡し](passing-arrays-as-arguments.md)
+C# の配列は、実際はオブジェクトです。C や C++ の場合のように、単なるアドレス指定可能な連続メモリ領域ではありません。 <xref:System.Array> はすべての配列型の抽象基本データ型で、 <xref:System.Array> のプロパティとその他のクラス メンバーを使用できます。 この例としては、<xref:System.Array.Length%2A> プロパティを使用して、配列の長さを取得します。 `numbers` 配列の長さ `5` を `lengthOfNumbers` という変数に代入するコードは、次のようになります。
 
-## <a name="c-language-specification"></a>C# 言語仕様
+[!code-csharp[csProgGuideArrays#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#3)]
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+<xref:System.Array> クラスには、配列の並べ替え、検索、コピーを行うための便利なメソッドやプロパティが他にも多数用意されています。 次の例では、<xref:System.Array.Rank%2A> プロパティを使用して、配列の次元数を表示します。
+
+[!code-csharp[csProgGuideArrays#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#2)]
 
 ## <a name="see-also"></a>関連項目
 
+- [1 次元配列の使用方法](single-dimensional-arrays.md)
+- [多次元配列の使用方法](multidimensional-arrays.md)
+- [ジャグ配列の使用方法](jagged-arrays.md)
+- [配列での foreach の使用](using-foreach-with-arrays.md)
+- [引数としての配列の受け渡し](passing-arrays-as-arguments.md)
+- [暗黙的に型指定される配列](implicitly-typed-arrays.md)
 - [C# プログラミング ガイド](../index.md)
 - [コレクション](../concepts/collections.md)
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
