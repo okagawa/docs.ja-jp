@@ -5,12 +5,12 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: 4f7b392a2b066023fec75c5295bd94651654d645
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 0687bcb16cae6a0a2dde6c7864a1af1d0027e122
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851791"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216461"
 ---
 # <a name="configuration-options-for-code-analysis"></a>コード分析の構成オプション
 
@@ -72,7 +72,7 @@ generated_code = true
 > [!TIP]
 > Visual Studio でのルールの重大度の詳細については、「 [重大度レベル](/visualstudio/ide/editorconfig-language-conventions#severity-levels)」を参照してください。
 
-#### <a name="scope"></a>Scope
+#### <a name="scope"></a>スコープ
 
 ルールの重要度を1つのルールに設定するには、次の構文を使用します。
 
@@ -80,7 +80,7 @@ generated_code = true
 dotnet_diagnostic.<rule ID>.severity = <severity value>
 ```
 
-アナライザールールのカテゴリに既定のルールの重要度を設定するには、次の構文を使用します。
+アナライザールールのカテゴリに既定のルールの重要度を設定するには、次の構文を使用します。 各ルールのカテゴリは、個々のルールの参照ページ ( [CA1000](quality-rules/ca1000.md)など) に表示されます。
 
 ```ini
 dotnet_analyzer_diagnostic.category-<rule category>.severity = <severity value>

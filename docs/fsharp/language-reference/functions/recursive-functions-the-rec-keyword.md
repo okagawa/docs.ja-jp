@@ -2,12 +2,12 @@
 title: '再帰関数: rec キーワード'
 description: "再帰関数を定義するために、' let ' キーワードと共に F # ' rec ' キーワードを使用する方法について説明します。"
 ms.date: 08/12/2020
-ms.openlocfilehash: 1ab00ff9400129e531fd7320861b3d9625cad08c
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: 27f215f7b6f09646e847898c2618cfac10175e6e
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91438081"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99215713"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>再帰関数: rec キーワード
 
@@ -38,20 +38,20 @@ and function2-nameparameter-list =
 ```fsharp
 let rec fib n =
     match n with
-    | 0 | 1 -> 1
+    | 0 | 1 -> n
     | n -> fib (n-1) + fib (n-2)
 ```
 
 > [!NOTE]
 > 実際には、前のサンプルのようなコードは、既に計算されている値を unecessarily しているため、理想的ではありません。 これは、この記事で詳しく説明されている末尾の再帰ではないためです。
 
-メソッドは、定義されている型内で暗黙的に再帰的に行われます。つまり、キーワードを追加する必要はありません `rec` 。 次に例を示します。
+メソッドは、定義されている型内で暗黙的に再帰的に行われます。つまり、キーワードを追加する必要はありません `rec` 。 例:
 
 ```fsharp
 type MyClass() =
     member this.Fib(n) =
         match n with
-        | 0 | 1 -> 1
+        | 0 | 1 -> n
         | n -> this.Fib(n-1) + this.Fib(n-2)
 ```
 
@@ -86,7 +86,7 @@ let fib n =
 
 ## <a name="mutually-recursive-functions"></a>相互再帰関数
 
-場合によっては、関数が *相互に再帰的*であることを意味します。これは、呼び出しが円を形成することを意味します。この場合、1つ目の関数はを呼び出し、その間に任意の数の呼び出しを呼び出します。 このような関数は、1つのバインディングで定義し `let` 、キーワードを使用してそれらをリンクする必要があり `and` ます。
+場合によっては、関数が *相互に再帰的* であることを意味します。これは、呼び出しが円を形成することを意味します。この場合、1つ目の関数はを呼び出し、その間に任意の数の呼び出しを呼び出します。 このような関数は、1つのバインディングで定義し `let` 、キーワードを使用してそれらをリンクする必要があり `and` ます。
 
 次の例は、2つの相互再帰関数を示しています。
 

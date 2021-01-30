@@ -2,12 +2,12 @@
 title: .NET 5 への移行の例
 description: .NET Framework を対象とするサンプルアプリケーションを .NET 5 に移行する方法を示します。
 ms.date: 01/19/2021
-ms.openlocfilehash: f924f90046fdcd7dfe5e23740fc921a09383a81a
-ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
+ms.openlocfilehash: 39ecdfa639f4d68a4a8821da839f014c8de42ab0
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98618034"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216266"
 ---
 # <a name="example-of-migrating-to-net"></a>.NET への移行の例
 
@@ -89,7 +89,7 @@ try-convert -w "<path to your solution>"
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>    
+  <PropertyGroup>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 </Project>
@@ -224,7 +224,7 @@ Windows フォームアプリケーションの移行プロセスを完了する
 string image_name = Environment.CurrentDirectory + "\\..\\..\\Assets\\Images\\Catalog\\" + catalogItems.Picturefilename;
 ```
 
-から
+を
 
 ```csharp
 string image_name = Environment.CurrentDirectory + "\\..\\..\\..\\Assets\\Images\\Catalog\\" + catalogItems.Picturefilename;

@@ -5,19 +5,19 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: 0d64df42ffb1763afed3e883c4f043755e158489
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: b98fdd48f2373bd23fcd3273834860a60c682969
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633989"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216383"
 ---
 # <a name="configuration-files-for-code-analysis-rules"></a>コード分析規則の構成ファイル
 
 コード分析規則には、さまざまな [構成オプション](configuration-options.md)があります。 これらのオプションは、次のいずれかのアナライザー構成ファイルのキーと値のペアとして指定します。
 
 - [EditorConfig](#editorconfig) ファイル: ファイルベースまたはフォルダーベースの構成オプション。
-- [Global AnalyzerConfig](#global-analyzerconfig) File: プロジェクトレベルの構成オプション。
+- [Global AnalyzerConfig](#global-analyzerconfig) File: プロジェクトレベルの構成オプション。 プロジェクトフォルダーの外部に存在するプロジェクトファイルがある場合に便利です。
 
 ## EditorConfig
 
@@ -58,7 +58,7 @@ tab_width = 4
 #### .NET Coding Conventions ####
 
 # this. and Me. preferences
-dotnet_style_qualification_for_method = true:warning
+dotnet_style_qualification_for_method = true
 
 #### Diagnostic configuration ####
 
@@ -68,13 +68,13 @@ dotnet_diagnostic.CA1000.severity = warning
 
 ## <a name="global-analyzerconfig"></a>グローバル AnalyzerConfig
 
-.NET 5 SDK (Visual Studio 2019 バージョン16.8 以降のバージョンでサポートされています) 以降では、グローバル _AnalyzerConfig_ ファイルを使用してアナライザーオプションを構成することもできます。 これらのファイルは、ファイル名やファイルパスに関係なく、 **プロジェクト内のすべてのソースファイルに適用されるオプション** を提供するために使用されます。
+.NET 5 SDK (Visual Studio 2019 バージョン16.8 以降でサポートされています) 以降では、グローバル _AnalyzerConfig_ ファイルを使用してアナライザーオプションを構成することもできます。 これらのファイルは、ファイル名やファイルパスに関係なく、 **プロジェクト内のすべてのソースファイルに適用されるオプション** を提供するために使用されます。
 
 ファイルとは異なり [EditorConfig](#editorconfig) 、グローバル構成ファイルを使用して、インデントサイズや末尾の空白をトリミングするかどうかなど、ide のエディタースタイル設定を構成することはできません。 代わりに、プロジェクトレベルのアナライザーの構成オプションを指定するために、純粋に設計されています。
 
-### <a name="format"></a>Format
+### <a name="format"></a>フォーマット
 
-EditorConfig該当するファイルとフォルダーを識別するためになどのセクションヘッダーを持つ必要があるファイルとは異なり `[*.cs]` 、グローバル AnalyzerConfig ファイルにはセクションヘッダーがありません。 代わりに、 `is_global = true` 通常のファイルと区別するために、フォームの最上位レベルのエントリが必要 EditorConfig です。 これは、ファイル内のすべてのオプションがプロジェクト全体に適用されることを示します。 次に例を示します。
+EditorConfig該当するファイルとフォルダーを識別するためになどのセクションヘッダーを持つ必要があるファイルとは異なり `[*.cs]` 、グローバル AnalyzerConfig ファイルにはセクションヘッダーがありません。 代わりに、 `is_global = true` 通常のファイルと区別するために、フォームの最上位レベルのエントリが必要 EditorConfig です。 これは、ファイル内のすべてのオプションがプロジェクト全体に適用されることを示します。 例:
 
 ```ini
 is_global = true

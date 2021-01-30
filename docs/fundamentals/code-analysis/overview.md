@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 80815b5913ad72756de503209b52e8848dd708bf
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.openlocfilehash: efc440adb59da1ef9838ec5445d9c55544c14380
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98025082"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216474"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET ソース コード分析の概要
 
@@ -60,7 +60,7 @@ ms.locfileid: "98025082"
 
 *分析モード* とは、定義されていないコード分析構成を意味します。この構成では、すべての規則が有効になっていません。 既定の分析モードでは、いくつかのルールのみが [ビルド警告として有効になり](#enabled-rules)ます。 プロジェクトファイルの [AnalysisMode](../../core/project-sdk/msbuild-props.md#analysismode) プロパティを設定することにより、プロジェクトの分析モードを変更できます。 使用できる値は次のとおりです。
 
-| [値] | 説明 |
+| 値 | 説明 |
 | - | - |
 | `AllDisabledByDefault` | これは最も控えめなモードです。 既定では、すべてのルールが無効になっています。 個々のルールを選択的に[オプトイン](configuration-options.md)して有効にすることができます。<br /><br />`<AnalysisMode>AllDisabledByDefault</AnalysisMode>` |
 | `AllEnabledByDefault` | これは最も積極的なモードです。 すべてのルールがビルド警告として有効になります。 個別 [の](configuration-options.md) ルールを選択して無効にすることができます。<br /><br />`<AnalysisMode>AllEnabledByDefault</AnalysisMode>` |
@@ -127,7 +127,7 @@ ms.locfileid: "98025082"
    dotnet_diagnostic.IDE0040.severity = warning
    ```
 
-   または、[スタイル] カテゴリ全体を警告またはエラーとして構成し、既定では、ビルドで実行しない規則を選択的にオフにすることができます。 例:
+   また、既定では、カテゴリ全体を警告またはエラーとして構成してから、ビルドで実行したくないカテゴリの規則を選択的にオフにすることもできます。 例:
 
    ```ini
    [*.{cs,vb}]
