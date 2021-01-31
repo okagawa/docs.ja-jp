@@ -1,20 +1,11 @@
 ---
-ms.openlocfilehash: b26e346f7076a57aef8ae7587ab1222b4100a323
-ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
+ms.openlocfilehash: 8ce8b233169ec2854f6f92b166ff9a367f562553
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98957937"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99217650"
 ---
 ## <a name="suppress-a-warning"></a>警告の非表示
 
-規則違反を抑制するには、特定の規則 ID の重大度オプションを `none` EditorConfig ファイルでに設定します。 例:
-
-```ini
-[*.{cs,vb}]
-dotnet_diagnostic.CA1822.severity = none
-```
-
-Visual Studio には、コード分析規則からの警告を抑制するための追加の方法が用意されています。 詳細については、「 [違反の抑制](/visualstudio/code-quality/use-roslyn-analyzers#suppress-violations)」を参照してください。
-
-規則の重大度の詳細については、「 [規則の重要度の構成](~/docs/fundamentals/code-analysis/configuration-options.md#severity-level)」を参照してください。
+コード分析の警告を非表示にするには、さまざまな方法があります。たとえば、プロジェクトのルールを無効にしたり、プリプロセッサディレクティブを使用して特定のコード行に対して無効にしたり、属性を適用したりし <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> ます。 詳細については、「 [コード分析の警告を抑制する方法](../../docs/fundamentals/code-analysis/suppress-warnings.md)」を参照してください。
