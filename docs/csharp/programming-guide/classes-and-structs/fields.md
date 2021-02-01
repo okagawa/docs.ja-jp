@@ -5,34 +5,34 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 9bd2e198cd623788a21d4da73e89851a6d77e3bb
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 58e60e1dc0b574ae922e6a27a22978b91aca4ec4
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474788"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899049"
 ---
 # <a name="fields-c-programming-guide"></a>フィールド (C# プログラミング ガイド)
 
-*フィールド*とは、[クラス](../../language-reference/keywords/class.md)または[構造体](../../language-reference/builtin-types/struct.md)で直接宣言される任意の型の変数です。 フィールドは、それを含んでいる型の*メンバー*です。
+*フィールド* とは、[クラス](../../language-reference/keywords/class.md)または [構造体](../../language-reference/builtin-types/struct.md)で直接宣言される任意の型の変数です。 フィールドは、それを含んでいる型の *メンバー* です。
 
 クラスまたは構造体には、インスタンス フィールドと静的フィールドのいずれか、またはその両方が含まれる場合があります。 インスタンス フィールドは、型のインスタンスに固有です。 たとえば、クラス T と、そのクラスのインスタンス フィールド F があるとします。型 T のオブジェクトを 2 つ作成した場合、他方のオブジェクトの値に影響を与えることなく、各オブジェクトの F の値を変更できます。 これとは対照的に、クラス自体に属する静的フィールドは、そのクラスのすべてのインスタンスで共有されます。 静的フィールドにアクセスするには、クラス名を使用する必要があります。 インスタンス名を使用して静的フィールドにアクセスすると、[CS0176](../../misc/cs0176.md) コンパイル時エラーが発生します。
 
-通常、フィールドは、プライベートまたは保護されたアクセシビリティを持つ変数に対してのみ使用します。 クラスからクライアント コードに公開するデータは、[メソッド](./methods.md)、[プロパティ](./properties.md)、および[インデクサー](../indexers/index.md)を使用して提供する必要があります。 これらの構成要素を使用して、内部フィールドに間接的にアクセスすることで、無効な値が入力されることを防止できます。 パブリック プロパティによって公開されるデータを格納するプライベート フィールドは、*バッキング ストア*または*バッキング フィールド*と呼ばれます。
+通常、フィールドは、プライベートまたは保護されたアクセシビリティを持つ変数に対してのみ使用します。 クラスからクライアント コードに公開するデータは、[メソッド](./methods.md)、[プロパティ](./properties.md)、および[インデクサー](../indexers/index.md)を使用して提供する必要があります。 これらの構成要素を使用して、内部フィールドに間接的にアクセスすることで、無効な値が入力されることを防止できます。 パブリック プロパティによって公開されるデータを格納するプライベート フィールドは、*バッキング ストア* または *バッキング フィールド* と呼ばれます。
 
-一般に、フィールドは、複数のクラス メソッドからアクセスできるようにする必要があり、かつ 1 つのメソッドの有効期間より長く保持する必要があるデータを格納します。 たとえば、暦の日付を表すクラスには、月、日、年を表す 3 つの整数フィールドが存在します。 1 つのメソッドのスコープ外で使用されることのない変数は、メソッド本体内で*ローカル変数*として宣言する必要があります。
+一般に、フィールドは、複数のクラス メソッドからアクセスできるようにする必要があり、かつ 1 つのメソッドの有効期間より長く保持する必要があるデータを格納します。 たとえば、暦の日付を表すクラスには、月、日、年を表す 3 つの整数フィールドが存在します。 1 つのメソッドのスコープ外で使用されることのない変数は、メソッド本体内で *ローカル変数* として宣言する必要があります。
 
 フィールドは、フィールドのアクセス レベル、フィールドの型、フィールドの名前の順に指定して、クラス ブロック内で宣言します。 次に例を示します。
 
-[!code-csharp[csProgGuideObjects#61](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#61)]
+[!code-csharp[fields#1](snippets/fields/Program.cs#1)]
 
 オブジェクト内のフィールドにアクセスするには、`objectname.fieldname` のように、オブジェクト名の後にピリオドを追加し、その後にフィールド名を続けます。 次に例を示します。
 
-[!code-csharp[csProgGuideObjects#62](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#62)]
+[!code-csharp[fields#2](snippets/fields/Program.cs#2)]
 
 フィールドには、フィールドの宣言時に代入演算子を使用して初期値を指定できます。 たとえば、`day` フィールドに `"Monday"` を自動的に代入するには、次の例のように `day` を宣言します。
 
-[!code-csharp[csProgGuideObjects#63](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#63)]
+[!code-csharp[fields#3](snippets/fields/Program.cs#3)]
 
 フィールドは、オブジェクト インスタンスのコンストラクターが呼び出される直前に初期化されます。 コンストラクターがフィールドの値を代入すると、フィールドの宣言時に指定された値はすべて上書きされます。 詳細については、「[コンストラクターの使用](./using-constructors.md)」を参照してください。
 

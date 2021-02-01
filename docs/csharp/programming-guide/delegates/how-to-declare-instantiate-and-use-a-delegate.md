@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 83dbd2dc497fafaf1922f8ad53208d0ab14f14a9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 08d8e10b4aba3fd75e200b2c8c14bb3d1825b318
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185900"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98898880"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>デリゲートを宣言し、インスタンス化して使用する方法 (C# プログラミング ガイド)
 
@@ -34,7 +34,7 @@ C# 1.0 以降では、次の例に示すようにデリゲートを宣言でき�
   
  詳細については、「[ラムダ式](../../language-reference/operators/lambda-expressions.md)」を参照してください。  
   
- 次の例で、デリゲートの宣言、インスタンス化、および使用の方法について説明します。 `BookDB` クラスにより、書籍のデータベースを保持する書店データベースをカプセル化します。 これは、データベース内にあるすべてのペーパーバックを検索し、各ペーパーバックに対してデリゲートを呼び出す `ProcessPaperbackBooks` メソッドを公開します。 使用する `delegate` 型には `ProcessBookDelegate` という名前を付けます。 `Test` クラスでは、このクラスを使用してペーパーバックのタイトルと平均価格を出力します。  
+ 次の例で、デリゲートの宣言、インスタンス化、および使用の方法について説明します。 `BookDB` クラスにより、書籍のデータベースを保持する書店データベースをカプセル化します。 これは、データベース内にあるすべてのペーパーバックを検索し、各ペーパーバックに対してデリゲートを呼び出す `ProcessPaperbackBooks` メソッドを公開します。 使用する `delegate` 型には `ProcessBookCallback` という名前を付けます。 `Test` クラスでは、このクラスを使用してペーパーバックのタイトルと平均価格を出力します。  
   
  デリゲートを使用することで、書店データベースとクライアント コードの機能を適切に分離しやすくなります。 クライアント コードからは、書籍の格納方法や書店コードでのペーパーバックの検索方法はわかりません。 書店コードからは、検索後にペーパーバックに対して行われる処理はわかりません。  
   

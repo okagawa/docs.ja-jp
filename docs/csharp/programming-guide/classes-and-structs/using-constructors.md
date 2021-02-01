@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 6b441b04bd6bfcb5564f40a90718e822f56ac21e
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 161c243f16f6705fa8fcf79360f92a74e4d0b27b
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86863956"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899257"
 ---
 # <a name="using-constructors-c-programming-guide"></a>コンストラクターの使用 (C# プログラミング ガイド)
 
@@ -18,7 +18,7 @@ ms.locfileid: "86863956"
   
  次の例では、`Taxi` というクラスが、簡単なコンストラクターを使用して定義された後、 [new](../../language-reference/operators/new-operator.md) 演算子によってインスタンス化されます。 `Taxi` コンストラクターは、新しいオブジェクトに対してメモリが割り当てられるとすぐに、`new` 演算子によって呼び出されます。  
   
- [!code-csharp[csProgGuideObjects#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#53)]  
+ [!code-csharp[TaxiExample#1](snippets/using-constructors/Program.cs#1)]
   
  パラメーターを取らないコンストラクターを "*パラメーターなしのコンストラクター*" と呼びます。 `new` 演算子を使ってオブジェクトをインスタンス化する際に `new` に引数を渡さなかった場合、常にパラメーターなしのコンストラクターが呼び出されます。 詳細については、「[インスタンス コンストラクター](./instance-constructors.md)」を参照してください。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "86863956"
   
  次のようにコンストラクターをプライベートにすれば、クラスがインスタンス化されないようにできます。  
   
- [!code-csharp[csProgGuideObjects#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#11)]  
+ [!code-csharp[PrivateConstructor#2](snippets/using-constructors/Program.cs#2)]
   
  詳細については、「[プライベート コンストラクター](./private-constructors.md)」を参照してください。  
   
@@ -57,33 +57,33 @@ Console.WriteLine("{0}, {1}", a, b);
   
  クラスと `structs` のどちらも、パラメーターを受け取るコンストラクターを定義できます。 パラメーターを受け取るコンストラクターは、`new` ステートメントまたは [base](../../language-reference/keywords/base.md) ステートメントを使用して呼び出す必要があります。 クラスと `structs` は複数のコンストラクターを定義することもできます。また、どちらも、パラメーターなしのコンストラクターの定義には必要ありません。 次に例を示します。  
   
- [!code-csharp[csProgGuideObjects#54](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#54)]  
+ [!code-csharp[EmployeeExample#3](snippets/using-constructors/Program.cs#3)]
   
  このクラスは、次のいずれかのステートメントを使用して作成できます。  
   
- [!code-csharp[csProgGuideObjects#55](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#55)]  
+ [!code-csharp[InstantiatingEmployeeConstructors#4](snippets/using-constructors/Program.cs#4)]
   
  コンストラクターでは、`base` キーワードを使用して、基底クラスのコンストラクターを呼び出すことができます。 次に例を示します。  
   
- [!code-csharp[csProgGuideObjects#56](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#56)]  
+ [!code-csharp[ManagerInheritingEmployee#5](snippets/using-constructors/Program.cs#5)]
   
  この例では、コンストラクターのブロックを実行する前に、基底クラスのコンストラクターを呼び出しています。 `base` キーワードは、パラメーターの有無に関係なく使用できます。 コンストラクターのパラメーターは、`base` のパラメーターまたは式の一部として使用できます。 詳細については、「[base](../../language-reference/keywords/base.md)」を参照してください。  
   
  派生クラスで基底クラスのコンストラクターが `base` キーワードを使用して明示的に呼び出されていない場合、パラメーターなしのコンストラクター (存在する場合) は暗黙的に呼び出されます。 つまり、次に示すコンストラクターの宣言は実質的に同じです。  
   
- [!code-csharp[csProgGuideObjects#58](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#58)]  
+ [!code-csharp[ManagerImplicitlyCallingParameterlessBaseConstructor#6](snippets/using-constructors/Program.cs#6)]
   
- [!code-csharp[csProgGuideObjects#57](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#57)]  
+ [!code-csharp[ManagerExplicitlyCallingParameterlessBaseConstructor#7](snippets/using-constructors/Program.cs#7)]
   
  基底クラスがパラメーターなしのコンストラクターを提供しない場合、派生クラスでは、`base` を使って基本コンストラクターを明示的に呼び出す必要があります。  
   
  コンストラクターで [this](../../language-reference/keywords/this.md) キーワードを使用すると、同じオブジェクトで別のコンストラクターを呼び出すことができます。 `base` と同様、`this` もパラメーターの有無に関係なく使用でき、コンストラクターのパラメーターはいずれも `this` のパラメーターとしても、式の一部としても使用できます。 たとえば、上の例の 2 番目のコンストラクターは `this` を使用して次のように書き直すことができます。  
   
- [!code-csharp[csProgGuideObjects#59](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#59)]  
+ [!code-csharp[EmployeeCallingConstructorInSameClass#8](snippets/using-constructors/Program.cs#8)]
   
  上の例で `this` キーワードを使用すると、このコンストラクターが呼び出されます。  
   
- [!code-csharp[csProgGuideObjects#60](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#60)]  
+ [!code-csharp[ConstructorBeingCalledByThisKeyword#9](snippets/using-constructors/Program.cs#9)]
   
  コンストラクターは、[public](../../language-reference/keywords/public.md)、[private](../../language-reference/keywords/private.md)、[protected](../../language-reference/keywords/protected.md)、[internal](../../language-reference/keywords/internal.md)、[protected internal](../../language-reference/keywords/protected-internal.md) または [private protected](../../language-reference/keywords/private-protected.md) としてマークできます。 こうしたアクセス修飾子により、クラスのユーザーによるクラスの作成方法が定義されます。 詳細については、「[アクセス修飾子](./access-modifiers.md)」を参照してください。  
   

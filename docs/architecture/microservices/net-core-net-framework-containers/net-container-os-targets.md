@@ -2,12 +2,12 @@
 title: .NET コンテナーで対象とする OS
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | .NET コンテナーで対象とする OS'
 ms.date: 01/13/2021
-ms.openlocfilehash: 1b914d9afca9ade37f13e639f73001b91f338d26
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: b128a7b98d7f46034a56314bd8cc6b4f5731f121
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98187985"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957911"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>.NET コンテナーで対象とする OS
 
@@ -27,9 +27,6 @@ Linux の場合、複数のディストリビューションを利用できま�
 
 別の Linux ディストリビューションを使用したい場合や、Microsoft が提供していないバージョンのイメージが必要な場合は、独自の Docker イメージを作成することもできます。 たとえば、従来の .NET Framework と Windows Server Core 上で実行されている ASP.NET Core を使用してイメージを作成することができます (ただし、Docker の場合はあまり一般的ではないシナリオです)。
 
-> [!IMPORTANT]
-> Windows Server Core イメージを使用する場合、完全な Windows イメージと比較すると、一部の DLL が不足している可能性があります。 この [GitHub コメント](https://github.com/microsoft/dotnet-framework-docker/issues/299#issuecomment-511537448)に記載されているように、カスタムの Server Core イメージを作成し、不足しているファイルをイメージのビルド時に追加することで、この問題を解決できる場合があります。
-
 Dockerfile ファイルにイメージ名を追加すると、次の例のように、使用するタグに応じてオペレーティング システムとバージョンを選択できます。
 
 | イメージ | コメント |
@@ -38,11 +35,6 @@ Dockerfile ファイルにイメージ名を追加すると、次の例のよう
 | mcr.microsoft.com/dotnet/aspnet:5.0 | ASP.NET Core 5.0 マルチアーキテクチャ: Docker ホストに応じて、Linux と Windows Nano Server をサポートします。 <br/> aspnetcore イメージでは、ASP.NET Core 用に 少しの最適化が行われています。 |
 | mcr.microsoft.com/dotnet/aspnet:5.0-buster-slim | Linux Debian ディストリビューションの .NET 5 ランタイムのみ |
 | mcr.microsoft.com/dotnet/aspnet:5.0-nanoserver-1809 | Windows Nano Server (Windows Server バージョン 1809) の .NET 5 ランタイムのみ |
-
-## <a name="additional-resources"></a>その他の技術情報
-
-- **WindowsCodecsExt.dll が見つからないため、BitmapDecoder が失敗する (GitHub の問題)**  
-  <https://github.com/microsoft/dotnet-framework-docker/issues/299>
 
 > [!div class="step-by-step"]
 > [前へ](container-framework-choice-factors.md)

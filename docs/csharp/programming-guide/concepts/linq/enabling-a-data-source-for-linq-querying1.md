@@ -3,12 +3,12 @@ title: データ ソースの LINQ クエリの有効化
 description: C# で LINQ を拡張して、LINQ パターンで任意のデータ ソースに対してクエリを実行できるようにする方法について学習します。これにより、クライアントがデータ ソースのクエリを簡単に実行できるようになります。
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: d7d751c0584072e740b4e5292071e400a5020f82
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 84769e27e3f8b8d7ee30b79c219b180333337af9
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202618"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794836"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>データ ソースの LINQ クエリの有効化
 
@@ -32,7 +32,7 @@ LINQ を拡張して、データ ソースを LINQ パターンでクエリで�
   
 ### <a name="remote-data"></a>リモート データ  
 
- リモート データ ソースの LINQ クエリを有効にするための最善の選択肢は、<xref:System.Linq.IQueryable%601> インターフェイスを実装することです。 しかしこれは、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] などのプロバイダーをデータ ソースに対して拡張することとは別です。 Visual Studio 2008 では、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] などの既存の LINQ テクノロジを別の型のデータ ソースに拡張するためにプロバイダー モデルを使用することができません。
+ リモート データ ソースの LINQ クエリを有効にするための最善の選択肢は、<xref:System.Linq.IQueryable%601> インターフェイスを実装することです。 しかしこれは、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] などのプロバイダーをデータ ソースに対して拡張することとは別です。
   
 ## <a name="iqueryable-linq-providers"></a>IQueryable LINQ プロバイダー  
 

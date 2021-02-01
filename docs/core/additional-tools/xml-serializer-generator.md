@@ -1,16 +1,16 @@
 ---
 title: Microsoft XML Serializer Generator
 description: Microsoft XML Serializer Generator の概要。 XML Serializer Generator を使用して、プロジェクトに格納される型のために XML シリアル化アセンブリを生成します。
-author: mlacouture
+author: honggit
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 8005a8a3e5202b0255ec482dfb7e3c284bc2e19b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4b408326bb9f1bc3b82acb92e8daabfd90be43f6
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538905"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957898"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>.NET Core で Microsoft XML Serializer Generator を使用する
 

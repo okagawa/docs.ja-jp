@@ -5,14 +5,18 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: a1844ab3449b6bce526276eba693a1f2da0ebf6b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6f085f87286aa5af4a3c2aaf2b74c9bf19023356
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202176"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899439"
 ---
 # <a name="wcf-data-services-overview"></a>WCF Data Services の概要
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+## <a name="overview"></a>概要
 
 WCF Data Services では、Open Data Protocol (OData) を使用して、Web またはイントラネット用のデータ サービスを作成し、それらを使用することができます。 OData を使用すると、URI でアドレス指定できるリソースとしてデータを公開できます。 したがって、Representational State Transfer (REST) のセマンティクス (標準的な HTTP 動詞 GET、PUT、POST、DELETE) を使用してデータにアクセスし、そのデータを変更できます。 このトピックでは、OData で定義されるパターンとプラクティスの両方の概要について説明します。また、.NET Framework ベースのアプリケーションで OData を利用するために WCF Data Services で提供される機能についても説明します。  
   
