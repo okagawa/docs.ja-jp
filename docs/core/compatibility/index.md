@@ -1,27 +1,27 @@
 ---
 title: 破壊的変更の種類
-description: .NET Core が .NET のバージョン間で開発者向けの互換性をどのように維持しようとしているか、およびどのような変更が重大な変更と見なされるかについて説明します。
-ms.date: 06/10/2019
-ms.openlocfilehash: bc93316141ae99d8cfedc5e6d88a9e91216f9c6e
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+description: .NET により開発者のために .NET のバージョン間での互換性が維持される方法、および破壊的変更と見なされる変更の種類について説明します。
+ms.date: 01/28/2021
+ms.openlocfilehash: d539a82b21abc4df8d726673ef728020f36551bf
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415746"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216039"
 ---
 # <a name="changes-that-affect-compatibility"></a>互換性に影響を与える変更点
 
-.NET は、その歴史を通じて、バージョンからバージョンへ、.NET のさまざまなフレーバー間で高いレベルの互換性を維持しようと試行してきました。 これは .NET Core でも引き続き同様の状況です。 .NET Core は、.NET Framework から独立した新しいテクノロジと見なすことができますが、.NET Core が .NET Framework から逸脱する能力を制限する主な要因が 2 つあります。
+.NET の歴史を通じて、.NET のバージョン間および異なる実装間で高いレベルの互換性を維持することに力が注がれてきました。 .NET 5 (および .NET Core) 以降のバージョンは、.NET Framework と比較すると新しいテクノロジと見なすことができますが、2 つの大きな要因により、.NET のこの実装が .NET Framework と大きく異なるものになることはできません。
 
 - 開発者の多くは、.NET Framework アプリケーションをもともと開発していたか、現在も開発を続けています。 .NET の実装間には一貫した動作が期待されます。
 
-- .NET Standard ライブラリ プロジェクトを使用すると、開発者は .NET Core と .NET Framework で共有される共通の API をターゲットとするライブラリを作成できます。 開発者は、.NET Core アプリケーションで使用されるライブラリが、.NET Framework アプリケーションで使用される同じライブラリと同じように動作するはずであると期待します。
+- .NET Standard ライブラリ プロジェクトを使用すると、開発者は .NET Framework と .NET 5 (および .NET Core) 以降のバージョンで共有される共通の API をターゲットとするライブラリを作成できます。 開発者は、.NET 5 アプリケーションで使用されるライブラリが、.NET Framework アプリケーションで使用される同じライブラリと同じように動作するはずであると期待します。
 
-.NET 実装間の互換性と共に、開発者は .NET Core バージョン間の高いレベルの互換性を期待しています。 特に、以前のバージョンの .NET Core 用に書かれたコードは、新しいバージョンの .NET Core でもシームレスに動作するはずです。 実際、多くの開発者は、新しくリリースされたバージョンの .NET Core にある新しい API が、それらの API が導入されたプレリリース バージョンとも互換性があると期待します。
+.NET の実装間の互換性と共に、開発者は .NET の特定の実装のバージョン間についても高いレベルの互換性を期待します。 特に、以前のバージョンの .NET Core 用に書かれたコードは、.NET 5 以降のバージョンでもシームレスに動作する必要があります。 実際、多くの開発者は、新しくリリースされたバージョンの .NET にある新しい API が、それらの API が導入されたプレリリース バージョンとも互換性があると期待します。
 
 この記事では、互換性に影響する変更と、.NET チームが各種の変更を評価する方法について説明します。 .NET チームが考えられる破壊的変更にどのように対処しているかの理解は、特に[既存の .NET API](https://github.com/dotnet/runtime) の動作を変更する pull request をオープンする開発者に役立ちます。
 
-次のセクションでは、.NET Core API に加えられた変更のカテゴリと、それがアプリケーションの互換性に与える影響について説明しています。 変更は許可 ✔️ されているか、未許可 ❌ であるか、または以前の動作の予測可能性、明確性、一貫性の程度の判断と評価が必要 ❓ であるかのいずれかです。
+以下のセクションでは、.NET API に対して行われた変更のカテゴリと、それがアプリケーションの互換性に与える影響について説明します。 変更は許可 ✔️ されているか、未許可 ❌ であるか、または以前の動作の予測可能性、明確性、一貫性の程度の判断と評価が必要 ❓ であるかのいずれかです。
 
 > [!NOTE]
 >
@@ -46,7 +46,7 @@ ms.locfileid: "85415746"
 
 - ✔️ **許可:あるアセンブリから別のアセンブリに型を移動する**
 
-  *以前の*アセンブリは、新しいアセンブリを指す <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> でマークする必要があります。
+  *以前の* アセンブリは、新しいアセンブリを指す <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> でマークする必要があります。
 
 - ✔️ **許可:[struct](../../csharp/language-reference/builtin-types/struct.md) 型を `readonly struct` 型に変更する**
 
@@ -90,11 +90,11 @@ ms.locfileid: "85415746"
 
 - ✔️ **許可:[virtual](../../csharp/language-reference/keywords/sealed.md) ではないメンバーの可視性を拡張する**
 
-- ✔️ **許可: *アクセス可能な* (パブリックまたは保護された) コンストラクターを持たない、または型が[シールされている](../../csharp/language-reference/keywords/sealed.md)パブリック型に抽象メンバーを追加する**
+- ✔️ **許可: *アクセス可能な* (パブリックまたは保護された) コンストラクターを持たない、または型が [シールされている](../../csharp/language-reference/keywords/sealed.md)パブリック型に抽象メンバーを追加する**
 
   ただし、アクセス可能な (パブリックまたは保護された) コンストラクターを持ち、`sealed` ではない型に抽象メンバーを追加することは許可されていません。
 
-- ✔️ **許可:型にアクセス可能な (パブリックまたは保護された) コンストラクターがない、または型が[シールされている](../../csharp/language-reference/keywords/sealed.md)場合に、[保護された](../../csharp/language-reference/keywords/protected.md)メンバーの可視性を制限する**
+- ✔️ **許可:型にアクセス可能な (パブリックまたは保護された) コンストラクターがない、または型が [シールされている](../../csharp/language-reference/keywords/sealed.md)場合に、[保護された](../../csharp/language-reference/keywords/protected.md)メンバーの可視性を制限する**
 
 - ✔️ **許可:削除された型より上位の層のクラスにメンバーを移動する**
 
@@ -110,7 +110,7 @@ ms.locfileid: "85415746"
 
 - ✔️ **許可:戻り値を `ref readonly` から `ref` に変更する (仮想メソッドまたはインターフェイスを除く)**
 
-- ✔️ **許可:フィールドの静的な型が可変値型ではない場合に、フィールドから [readonly ](../../csharp/language-reference/keywords/readonly.md)を削除する**
+- ✔️ **許可:フィールドの静的な型が可変値型ではない場合に、フィールドから [readonly](../../csharp/language-reference/keywords/readonly.md)を削除する**
 
 - ✔️ **許可:以前定義されていなかった新しいイベントを呼び出す**
 
@@ -177,7 +177,7 @@ ms.locfileid: "85415746"
 
 - ❌ **未許可:メンバーの可視性を下げる**
 
-   これには、*アクセス可能な* (`public` または `protected`) コンストラクターがあり、型が[シールド](../../csharp/language-reference/keywords/sealed.md)*されていない*場合に、[保護された](../../csharp/language-reference/keywords/protected.md)メンバーの可視性を下げることも含まれます。 そうでない場合は、保護されたメンバーの可視性を下げることができます。
+   これには、*アクセス可能な* (`public` または `protected`) コンストラクターがあり、型が [シールド](../../csharp/language-reference/keywords/sealed.md)*されていない* 場合に、[保護された](../../csharp/language-reference/keywords/protected.md)メンバーの可視性を下げることも含まれます。 そうでない場合は、保護されたメンバーの可視性を下げることができます。
 
    メンバーの可視性を上げることは許可されています。
 

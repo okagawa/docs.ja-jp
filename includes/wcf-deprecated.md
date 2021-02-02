@@ -1,13 +1,13 @@
 ---
-ms.openlocfilehash: cfe06de07950d287d59f3812a6b31e76d73775e1
-ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
+ms.openlocfilehash: ff19012f0041487ab971214b1413f8f3627dbeff
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98898757"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99217610"
 ---
 > [!IMPORTANT]
-> WCF Data Services は非推奨になっており、Microsoft ダウンロード センターからダウンロードできなくなりました。
+> WCF Data Services は非推奨になっており、Microsoft ダウンロード センターからはダウンロードできません。
 > WCF Data Services では以前のバージョンの Microsoft OData (V1-V3) プロトコルのみがサポートされていました。また、アクティブな開発の対象ではなくなっています。 OData V1-V3 は OData V4 に置き換えられました。これは、OASIS によって公開され ISO によって承認された業界標準です。 OData V4 は、[Microsoft.OData.Core](https://www.nuget.org/packages/Microsoft.OData.Core/) で入手できる OData V4 準拠のコア ライブラリ全体でサポートされています。 サポート ドキュメントは [OData.Net](https://odata.github.io/odata.net) で入手でき、OData V4 のサービス ライブラリは [Microsoft.AspNetCore.OData](https://www.nuget.org/packages/Microsoft.AspNetCore.OData) で入手できます。
 >
 > [RESTier](https://github.com/OData/RESTier) は WCF Data Services の後継です。 RESTier は、標準化された、クエリ可能な、HTTP ベースの REST インターフェイスを数分でブートストラップするのに役立ちます。

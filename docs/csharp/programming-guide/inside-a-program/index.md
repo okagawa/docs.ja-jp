@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# program
 - Visual C#, program structure
 ms.assetid: 9551354b-33f0-4e11-bbf0-1a35e3702b22
-ms.openlocfilehash: ecf526d77fcf9df83fa832c57de0e1921d27e3f3
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 05b0d6542e5a786d0aa36a034c08b07acea26e74
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303349"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216825"
 ---
 # <a name="inside-a-c-program"></a>インサイド C# プログラム
 
@@ -29,7 +29,7 @@ ms.locfileid: "87303349"
 
 ## <a name="related-sections"></a>関連項目
 
-- [C# の概要](../../getting-started/index.md)
+- [C# の使用を開始する](../../tour-of-csharp/index.md)
 
 - [C# プログラミング ガイド](../index.md)
 
