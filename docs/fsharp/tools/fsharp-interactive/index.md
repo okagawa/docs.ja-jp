@@ -4,12 +4,12 @@ description: F# インタラクティブ (dotnet fsi) を使用して、コン�
 ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: fe8ee2ebb97f4a47e80f39d5be8d95ba5b72ddc7
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: fe48d4d7de92eea800a489b12342e3ae181e8cb1
+ms.sourcegitcommit: 38999dc0ec4f7c4404de5ce0951b64c55997d9ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739314"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99426978"
 ---
 # <a name="interactive-programming-with-f"></a>F\# による対話型プログラミング
 
@@ -91,7 +91,7 @@ F# スクリプトは [Visual Studio](../../get-started/get-started-visual-studi
 ## <a name="referencing-packages-in-f-interactive"></a>F# インタラクティブでのパッケージの参照
 
 > [!NOTE]
-> パッケージ管理システムは拡張可能です。その他の拡張機能については、[こちら](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager)をご覧ください。
+> パッケージ管理システムは拡張可能です。その他の拡張機能については、[こちら](https://fsharp.github.io/FSharp.Compiler.Service/reference/Microsoft.DotNet.DependencyManager.html)をご覧ください。
 
 F# インタラクティブでは、`#r "nuget:"` 構文と省略可能なバージョンを使用した、NuGet パッケージの参照がサポートされています。
 
@@ -126,7 +126,7 @@ printfn $"{f (dsharp.tensor 1.2)}"
 `#i` コマンドを使用してパッケージ ソースを指定することもできます。 次の例では、リモートおよびローカルのソースを指定しています。
 
 ```fsharp
-#i "nuget:https://my-remote-package-source/index.json
+#i "nuget:https://my-remote-package-source/index.json"
 #i @"path-to-my-local-source"
 ```
 
