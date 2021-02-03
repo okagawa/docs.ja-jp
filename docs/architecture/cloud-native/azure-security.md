@@ -1,13 +1,13 @@
 ---
 title: クラウドネイティブアプリ向けの Azure セキュリティ
 description: Azure 向けのクラウドネイティブ .NET アプリの設計 |クラウドネイティブアプリ向けの Azure セキュリティ
-ms.date: 12/01/2020
-ms.openlocfilehash: 5e541606c762ea192ab8767e78e9b7346b3ec9c1
-ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
+ms.date: 01/19/2021
+ms.openlocfilehash: 1e2dce97a43479d49aecf220893efcc19bb00a8c
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96509820"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505883"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>クラウドネイティブアプリ向けの Azure セキュリティ
 
@@ -117,7 +117,7 @@ RBAC の最初のコンポーネントはセキュリティプリンシパルで
 - サービスプリンシパル-サービスまたはアプリケーションの実行に使用するセキュリティ id。
 - 管理対象 id-Azure によって管理される Azure Active Directory id。 管理対象 id は、通常、Azure サービスに対する認証用の資格情報を管理するクラウドアプリケーションを開発するときに使用されます。
 
-セキュリティプリンシパルは、ほとんどすべてのリソースに適用できます。 これは、Azure Kubernetes 内で実行されているコンテナーにセキュリティプリンシパルを割り当てることができることを意味します。これにより、Key Vault に格納されているシークレットにアクセスできるようになります。 Azure 関数は、呼び出し元のユーザーの JWT を検証するために、Active Directory インスタンスと対話できるアクセス許可を受け取ることができます。 サービスプリンシパルを使用してサービスを有効にすると、そのアクセス許可はロールとスコープを使用して細かく管理できます。
+セキュリティプリンシパルは、ほとんどすべてのリソースに適用できます。 この側面は、Azure Kubernetes 内で実行されているコンテナーにセキュリティプリンシパルを割り当てることができることを意味します。これにより、Key Vault に格納されているシークレットにアクセスできるようになります。 Azure 関数は、呼び出し元のユーザーの JWT を検証するために、Active Directory インスタンスと対話できるアクセス許可を受け取ることができます。 サービスプリンシパルを使用してサービスを有効にすると、そのアクセス許可はロールとスコープを使用して細かく管理できます。
 
 ## <a name="roles"></a>ロール
 

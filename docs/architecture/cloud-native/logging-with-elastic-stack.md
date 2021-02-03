@@ -1,13 +1,13 @@
 ---
 title: エラスティック スタックを使用したログ記録
 description: エラスティックスタック、Logstash、および Kibana を使用したログ記録
-ms.date: 05/13/2020
-ms.openlocfilehash: 3f10b0d06c87b7bed6d3e302742b1dc52e2c9d3b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: ebe7eef16d3b1a73d0fd3a010a509bbaf7be3fd5
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155342"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505818"
 ---
 # <a name="logging-with-elastic-stack"></a>エラスティック スタックを使用したログ記録
 
@@ -26,10 +26,10 @@ KUBE_ENABLE_NODE_LOGGING=true
 
 **図 7-5**。 Kubernetes の構成変数
 
-これにより、クラスターに Elasticsearch がインストールされ、すべてのクラスターログをそのクラスターに送信するターゲットになります。
+この手順では、クラスターに Elasticsearch をインストールし、すべてのクラスターログをそのターゲットに送信します。
 
 ![Kibana ダッシュボードの例。 Kubernetes 図7-6 からのログ取り込まれたに対するクエリの結果を示して ](./media/kibana-dashboard.png)
- **Figure 7-6**います。 Kubernetes から取り込まれたのログに対するクエリの結果を表示する Kibana ダッシュボードの例
+ います。 Kubernetes から取り込まれたのログに対するクエリの結果を表示する Kibana ダッシュボードの例
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>エラスティックスタックの利点は何ですか?
 
@@ -39,7 +39,7 @@ KUBE_ENABLE_NODE_LOGGING=true
 
 最初のコンポーネントは [Logstash](https://www.elastic.co/products/logstash)です。 このツールは、さまざまなソースからログ情報を収集するために使用されます。 たとえば、Logstash はディスクからログを読み取り、 [Serilog](https://serilog.net/)などのログライブラリからもメッセージを受信できます。 Logstash では、ログの受信時に基本的なフィルター処理と拡張を行うことができます。 たとえば、ログに IP アドレスが含まれている場合は、地理的な参照を行うように Logstash を構成し、そのメッセージの国または郵便の発信元を取得するように構成することができます。
 
-Serilog は、パラメーター化されたログ記録が可能な .NET 言語のログライブラリです。 フィールドを埋め込むテキストログメッセージを生成する代わりに、パラメーターが個別に保持されます。 これにより、よりインテリジェントなフィルター処理と検索が可能になります。 Logstash に書き込むためのサンプル Serilog 構成は、図7-7 に示されています。
+Serilog は、パラメーター化されたログ記録が可能な .NET 言語のログライブラリです。 フィールドを埋め込むテキストログメッセージを生成する代わりに、パラメーターが個別に保持されます。 このライブラリを使用すると、よりインテリジェントなフィルター処理と検索が可能になります。 Logstash に書き込むためのサンプル Serilog 構成は、図7-7 に示されています。
 
 ```csharp
 var log = new LoggerConfiguration()
@@ -111,7 +111,7 @@ output {
 
 もう1つのオプションは、最近発表された [サービスとしての ELK オファリング](https://devops.com/logz-io-unveils-azure-open-source-elk-monitoring-solution/)です。
 
-## <a name="references"></a>References
+## <a name="references"></a>リファレンス
 
 - [エラスティックスタックを Azure にインストールする](/azure/virtual-machines/linux/tutorial-elasticsearch)
 

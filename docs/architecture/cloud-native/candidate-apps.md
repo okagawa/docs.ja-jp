@@ -2,13 +2,13 @@
 title: クラウドネイティブ向けアプリ候補
 description: クラウドネイティブアプローチによってメリットが得られるアプリケーションの種類について説明します
 author: robvet
-ms.date: 05/14/2020
-ms.openlocfilehash: 8f00633a575dad12b0bc1d5adb83acac03db0659
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: 443a7c1a1aaef078b33f352f597b33b768d989a3
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160945"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506189"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>クラウドネイティブ向けアプリ候補
 
@@ -68,17 +68,17 @@ ms.locfileid: "91160945"
 
 ここでは、クラウドネイティブの詳細について説明します。
 
-### <a name="references"></a>References
+### <a name="references"></a>リファレンス
 
 - [クラウドネイティブコンピューティングファンデーション](https://www.cncf.io/)
 
 - [.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
 
-- [Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを最新化する](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook)
+- [Azure クラウドと Windows コンテナーで既存の .NET アプリケーションを最新式にする](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook)
 
 - [Cornelia Davis によるクラウドネイティブパターン](https://www.manning.com/books/cloud-native-patterns)
 
-- [12要素を超えるアプリケーション](https://content.pivotal.io/blog/beyond-the-twelve-factor-app)
+- [Twelve-Factor アプリケーション以外](https://content.pivotal.io/blog/beyond-the-twelve-factor-app)
 
 - [コードとしてのインフラストラクチャとは](/azure/devops/learn/what-is-infrastructure-as-code)
 

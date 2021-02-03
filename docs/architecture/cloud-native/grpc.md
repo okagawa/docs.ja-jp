@@ -5,13 +5,13 @@ author: robvet
 no-loc:
 - Blazor
 - Blazor WebAssembly
-ms.date: 05/13/2020
-ms.openlocfilehash: 9ed6906bd388a1ddef7f97bbaac001b4274853f9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: 8667f2d3a7a19aa6dffdd8ce8bef103eab5cc54f
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158085"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505701"
 ---
 # <a name="grpc"></a>gRPC
 
@@ -61,7 +61,7 @@ gRPC は .NET Core 3.0 SDK 以降に統合されています。 次のツール�
 - Visual Studio Code
 - dotnet CLI
 
-SDK には、エンドポイントルーティング、組み込み IoC、およびログ記録用のツールが含まれています。 オープンソースの Kestrel web サーバーは、HTTP/2 接続をサポートしています。 図4-20 は、gRPC サービスのスケルトンプロジェクトをスキャフォールディングする Visual Studio 2019 テンプレートを示しています。 .NET Core が Windows、Linux、および macOS を完全にサポートしていることに注意してください。
+SDK には、エンドポイントルーティング、組み込み IoC、およびログ記録用のツールが含まれています。 オープンソースの Kestrel web サーバーは、HTTP/2 接続をサポートしています。 図4-20 は、gRPC サービスのスケルトンプロジェクトをスキャフォールディングする Visual Studio 2019 テンプレートを示しています。 .NET で Windows、Linux、および macOS が完全にサポートされていることに注意してください。
 
 ![Visual Studio 2019 での gRPC のサポート](./media/visual-studio-2019-grpc-template.png)
 
@@ -93,19 +93,19 @@ SDK には、エンドポイントルーティング、組み込み IoC、およ
 
 ## <a name="grpc-implementation"></a>gRPC の実装
 
-Microsoft からの [コンテナーである](https://github.com/dotnet-architecture/eShopOnContainers)、マイクロサービス参照アーキテクチャは、.net Core アプリケーションで grpc サービスを実装する方法を示しています。 図4-22 は、バックエンドアーキテクチャを示しています。
+Microsoft からの [コンテナーである](https://github.com/dotnet-architecture/eShopOnContainers)、マイクロサービス参照アーキテクチャは、.net アプリケーションで grpc サービスを実装する方法を示しています。 図4-22 は、バックエンドアーキテクチャを示しています。
 
 ![コンテナーの eShop のバックエンドアーキテクチャ](./media/eshop-with-aggregators.png)
 
 **図 4-22** コンテナーの eShop のバックエンドアーキテクチャ
 
-前の図では、eShop が複数の API ゲートウェイを公開することによって、フロントエンド pattern (bff) [のバックエンド](/azure/architecture/patterns/backends-for-frontends) を採用していることに注意してください。 BFF パターンについては、この章で前に説明しました。 Web ショッピング API ゲートウェイとバックエンドショッピングマイクロサービスの間にあるアグリゲーターマイクロサービス (灰色) に細心の注意を払ってください。 アグリゲーターは、クライアントから1つの要求を受信し、それをさまざまなマイクロサービスにディスパッチし、結果を集計して、要求元のクライアントに送信します。 このような操作では、通常、即時応答を生成するために同期通信が必要です。 EShop では、アグリゲーターからのバックエンド呼び出しは、図4-23 に示すように gRPC を使用して実行されます。
+前の図では、eShop が複数の API ゲートウェイを公開することによって、フロントエンド pattern (bff) [のバックエンド](/azure/architecture/patterns/backends-for-frontends) を採用していることに注意してください。 BFF パターンについては、この章で前に説明しました。 Web-Shopping API ゲートウェイとバックエンドショッピングマイクロサービスの間にあるアグリゲーターマイクロサービス (灰色) に注意してください。 アグリゲーターは、クライアントから1つの要求を受信し、それをさまざまなマイクロサービスにディスパッチし、結果を集計して、要求元のクライアントに送信します。 このような操作では、通常、即時応答を生成するために同期通信が必要です。 EShop では、アグリゲーターからのバックエンド呼び出しは、図4-23 に示すように gRPC を使用して実行されます。
 
 ![コンテナーの eShop にある gRPC](./media/grpc-implementation.png)
 
-**図 4-23**.  コンテナーの eShop にある gRPC
+**図 4-23**. コンテナーの eShop にある gRPC
 
-gRPC 通信には、クライアントコンポーネントとサーバーコンポーネントの両方が必要です。 前の図で、ショッピングアグリゲーターが gRPC クライアントを実装する方法に注目してください。 クライアントは、同期 gRPC 呼び出し (赤) をバックエンドマイクロサービスに対して実行し、それぞれが gRPC サーバーを実装します。 クライアントとサーバーの両方で、.NET Core SDK から組み込まれている gRPC の組み込み機能を利用します。 クライアント側 *スタブ* は、リモート grpc 呼び出しを呼び出すための機構を提供します。 サーバー側コンポーネントは、カスタムサービスクラスが継承して使用できる gRPC の組み込み機能を提供します。
+gRPC 通信には、クライアントコンポーネントとサーバーコンポーネントの両方が必要です。 前の図で、ショッピングアグリゲーターが gRPC クライアントを実装する方法に注目してください。 クライアントは、同期 gRPC 呼び出し (赤) をバックエンドマイクロサービスに対して実行し、それぞれが gRPC サーバーを実装します。 クライアントとサーバーはどちらも、.NET SDK の組み込み gRPC の組み込み機能を利用しています。 クライアント側 *スタブ* は、リモート grpc 呼び出しを呼び出すための機構を提供します。 サーバー側コンポーネントは、カスタムサービスクラスが継承して使用できる gRPC の組み込み機能を提供します。
 
 RESTful API と gRPC 通信の両方を公開するマイクロサービスでは、複数のエンドポイントでトラフィックを管理する必要があります。 RESTful 呼び出しの場合は HTTP トラフィックをリッスンし、gRPC 呼び出しの場合は別のエンドポイントを開きます。 Grpc 通信に必要な HTTP/2 プロトコル用に gRPC エンドポイントを構成する必要があります。
 

@@ -1,22 +1,22 @@
 ---
 title: eShopOnContainers を Azure サービスにマッピングする
 description: Azure Kubernetes Service、API Gateway、Azure Service Bus などの Azure サービスへの eShopOnContainers のマッピング。
-ms.date: 05/13/2020
-ms.openlocfilehash: c4627a4b6d9d8b62737984b507e638019544ab67
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.date: 01/19/2021
+ms.openlocfilehash: aa0d5cc3bf6c0226627ce558606f974b0e7ec238
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400449"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506254"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>eShopOnContainers を Azure サービスにマッピングする
 
-必須ではありませんが、Azure は eShopOnContainers のサポートに適しています。これは、プロジェクトがクラウドネイティブアプリケーションとして構築されたためです。 アプリケーションは .NET Core を使用して構築されているため、Docker ホストに応じて Linux または Windows コンテナーで実行できます。 アプリケーションは複数の自律マイクロサービスで構成され、それぞれに独自のデータがあります。 さまざまなマイクロサービスは、単純な CRUD 操作から複雑な DDD や CQRS パターンまで、さまざまなアプローチを紹介しています。 マイクロサービスは、HTTP 経由でクライアントと通信し、メッセージベースの通信を介して相互に通信します。 アプリケーションでは、標準の通信プロトコルとして HTTP を採用し、Android、iOS、Windows の各プラットフォームで実行される ASP.NET Core および Xamarin mobile アプリを含むため、クライアントの複数のプラットフォームもサポートしています。
+必須ではありませんが、Azure は eShopOnContainers のサポートに適しています。これは、プロジェクトがクラウドネイティブアプリケーションとして構築されたためです。 アプリケーションは .NET でビルドされるため、Docker ホストに応じて Linux または Windows コンテナーで実行できます。 アプリケーションは複数の自律マイクロサービスで構成され、それぞれに独自のデータがあります。 さまざまなマイクロサービスは、単純な CRUD 操作から複雑な DDD や CQRS パターンまで、さまざまなアプローチを紹介しています。 マイクロサービスは、HTTP 経由でクライアントと通信し、メッセージベースの通信を介して相互に通信します。 アプリケーションでは、標準の通信プロトコルとして HTTP を採用し、Android、iOS、Windows の各プラットフォームで実行される ASP.NET Core および Xamarin mobile アプリを含むため、クライアントの複数のプラットフォームもサポートしています。
 
 図2-5 に、アプリケーションのアーキテクチャを示します。 左側にはクライアントアプリがあり、モバイル、従来の Web、および Web シングルページアプリケーション (SPA) のフレーバーに分割されています。 右側には、システムを構成するサーバー側コンポーネントがあります。各コンポーネントは、Docker コンテナーと Kubernetes クラスターでホストできます。 従来の web アプリには、黄色で示されている ASP.NET Core MVC アプリケーションが搭載されています。 このアプリとモバイルおよび web SPA アプリケーションは、1つまたは複数の API ゲートウェイを介して個々のマイクロサービスと通信します。 API ゲートウェイは、"バックエンドのフロントエンド" (BFF) パターンに従います。つまり、各ゲートウェイは、特定のフロントエンドクライアントをサポートするように設計されています。 個々のマイクロサービスは API ゲートウェイの右側に一覧表示され、ビジネスロジックといくつかの永続化ストアが含まれます。 さまざまなサービスで、SQL Server データベース、Redis cache インスタンス、および MongoDB/CosmosDB ストアを使用します。 一番右には、マイクロサービス間の通信に使用されるシステムのイベントバスがあります。
 
 ![eShopOnContainers アーキテクチャ ](./media/eshoponcontainers-architecture.png)
- **図 2-5** 。 EShopOnContainers アーキテクチャ。
+ **図 2-5**。 EShopOnContainers アーキテクチャ。
 
 このアーキテクチャのサーバー側コンポーネントはすべて、Azure サービスに簡単にマップできます。
 
@@ -40,15 +40,15 @@ Azure portal では、API スキーマを定義し、さまざまな Api を製�
 
 APIM を使用すると、アプリケーションは複数の異なるサービスグループを公開でき、それぞれが特定のフロントエンドクライアントのバックエンドを提供します。 APIM は複雑なシナリオに使用することをお勧めします。 ニーズを簡単にするために、軽量の API ゲートウェイ Ocelot を使用できます。 EShopOnContainers アプリでは、単純であり、アプリケーション自体と同じアプリケーション環境にデプロイできるため、Ocelot が使用されます。 [EShopOnContainers、APIM、および Ocelot の詳細については、こちらを参照してください。](../microservices/architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md#azure-api-management)
 
-アプリケーションが AKS を使用している場合のもう1つのオプションは、AKS クラスター内のポッドとして Azure ゲートウェイの受信コントローラーをデプロイすることです。 これにより、クラスターを Azure アプリケーションゲートウェイと統合し、ゲートウェイがトラフィックを AKS ポッドに負荷分散できるようになります。 [詳細については、AKS 用の Azure ゲートウェイの受信コントローラーに関するページを参照して](https://github.com/Azure/application-gateway-kubernetes-ingress)ください。
+アプリケーションが AKS を使用している場合のもう1つのオプションは、AKS クラスター内のポッドとして Azure ゲートウェイの受信コントローラーをデプロイすることです。 このアプローチにより、クラスターを Azure アプリケーションゲートウェイと統合し、ゲートウェイが AKS ポッドにトラフィックを負荷分散できるようになります。 [詳細については、AKS 用の Azure ゲートウェイの受信コントローラーに関するページを参照して](https://github.com/Azure/application-gateway-kubernetes-ingress)ください。
 
-## <a name="data"></a>データ
+## <a name="data"></a>Data
 
 EShopOnContainers で使用されるさまざまなバックエンドサービスには、異なる記憶域要件があります。 複数のマイクロサービスで SQL Server データベースを使用します。 バスケットマイクロサービスは、永続化のために Redis キャッシュを活用します。 場所マイクロサービスでは、データに MongoDB API が必要です。 Azure では、これらの各データ形式をサポートしています。
 
 SQL Server データベースのサポートのために、Azure には、1つのデータベースから拡張性の高い SQL Database エラスティックプールまで、あらゆるものに対応する製品が用意されています。 個々のマイクロサービスは、個々の SQL Server データベースとすばやく簡単に通信できるように構成できます。 これらのデータベースは、ニーズに応じて各マイクロサービスをサポートするために、必要に応じてスケールすることができます。
 
-EShopOnContainers アプリケーションでは、ユーザーの現在の買い物かごが要求間に保存されます。 これは、データを Redis cache に格納するバスケットマイクロサービスによって管理されます。 開発時には、このキャッシュをコンテナーにデプロイできます。運用環境では、Azure Cache for Redis を利用できます。 Redis の Azure Cache は、完全に管理されたサービスであり、Redis インスタンスやコンテナーを独自にデプロイおよび管理することなく、高いパフォーマンスと信頼性を提供します。
+EShopOnContainers アプリケーションでは、ユーザーの現在の買い物かごが要求間に保存されます。 この側面は、データを Redis cache に格納するバスケットマイクロサービスによって管理されます。 開発時には、このキャッシュをコンテナーにデプロイできます。運用環境では、Azure Cache for Redis を利用できます。 Redis の Azure Cache は、完全に管理されたサービスであり、Redis インスタンスやコンテナーを独自にデプロイおよび管理することなく、高いパフォーマンスと信頼性を提供します。
 
 場所マイクロサービスは、その永続化に MongoDB NoSQL データベースを使用します。 開発時には、データベースを独自のコンテナーに配置できます。運用環境では、サービスは [Azure Cosmos DB の MongoDB 用 API](/azure/cosmos-db/mongodb-introduction)を活用できます。 Azure Cosmos DB の利点の1つは、SQL API や、MongoDB、Cassandra、NoSQL、Azure Table Storage などの一般的な Api を含む、複数の異なる通信プロトコルを利用できることです。 Azure Cosmos DB は、完全に管理されたグローバルに分散されたデータベースをサービスとして提供し、それを使用するサービスのニーズに合わせて拡張することができます。
 

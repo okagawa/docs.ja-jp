@@ -1,13 +1,13 @@
 ---
 title: Azure Kubernetes Services での監視
 description: Azure Kubernetes Services での監視
-ms.date: 05/13/2020
-ms.openlocfilehash: 3900f169b9be4f807e72392da38a1224d6ce28e3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: d044337150edddac9e24218ccaeaace1f413e654
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163701"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506033"
 ---
 # <a name="monitoring-in-azure-kubernetes-services"></a>Azure Kubernetes Services での監視
 
@@ -26,10 +26,10 @@ Kubernetes の組み込みログはプリミティブです。 ただし、Kuber
 
 ログコレクターのインストールは、 [Windows](/azure/azure-monitor/insights/containers#configure-a-log-analytics-windows-agent-for-kubernetes) クラスターと [Linux](/azure/azure-monitor/insights/containers#configure-a-log-analytics-linux-agent-for-kubernetes) クラスターで異なります。 ただし、どちらの場合も、ログの収集は Kubernetes [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/)として実装されます。つまり、ログコレクターは各ノード上のコンテナーとして実行されます。
 
-Azure Monitor デーモンを実行している orchestrator またはオペレーティングシステムにかかわらず、ログ情報は、ユーザーが使い慣れているのと同じ Azure Monitor ツールに転送されます。 これにより、ハイブリッド Kubernetes/Azure Functions 環境などのさまざまなログソースが混在する環境での並行操作が可能になります。
+Azure Monitor デーモンを実行している orchestrator またはオペレーティングシステムにかかわらず、ログ情報は、ユーザーが使い慣れているのと同じ Azure Monitor ツールに転送されます。 この方法では、ハイブリッド Kubernetes/Azure Functions 環境などのさまざまなログソースが混在する環境で、並列操作を行うことができます。
 
 ![多数の実行中のコンテナーからのログ記録とメトリック情報を示すサンプルダッシュボードです。 ](./media/containers-dashboard.png)
-**図 7-11**. 多数の実行中のコンテナーからのログ記録とメトリック情報を示すサンプルダッシュボードです。
+**図 7-11**. 多数の実行中のコンテナーのログ記録とメトリック情報を示すサンプルダッシュボードです。
 
 ## <a name="logfinalize"></a>Log. Finalize ()
 

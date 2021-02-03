@@ -1,13 +1,13 @@
 ---
 title: eShopOnContainers を Azure にデプロイする
 description: Azure Kubernetes Service、ヘルム、および DevSpaces を使用した eShopOnContainers アプリケーションのデプロイ。
-ms.date: 05/13/2020
-ms.openlocfilehash: b3871dae2b414709bfe24b6f7bdbf06de1689d12
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: 8fc1343eac7f03c984c3a279d5a8c7908e37f0d1
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160724"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505792"
 ---
 # <a name="deploying-eshoponcontainers-to-azure"></a>eShopOnContainers を Azure にデプロイする
 
@@ -15,9 +15,9 @@ EShopOnContainers アプリケーションは、さまざまな Azure プラッ�
 
 ## <a name="azure-kubernetes-service"></a>Azure Kubernetes Service
 
-AKS で eShop をホストするには、最初の手順として、AKS クラスターを作成します。 これを行うには、Azure portal を使用します。これにより、必要な手順を実行できます。 また、Azure CLI からクラスターを作成して、ロールベースの Access Control (RBAC) とアプリケーションルーティングを有効にすることもできます。 EShopOnContainers のドキュメントでは、独自の AKS クラスターを作成する手順について詳しく説明しています。 作成したら、Kubernetes ダッシュボードからクラスターにアクセスして管理できます。
+AKS で eShop をホストするには、最初の手順として、AKS クラスターを作成します。 これを行うには、Azure portal を使用します。これにより、必要な手順を実行できます。 また、Azure CLI からクラスターを作成して、Role-Based Access Control (RBAC) とアプリケーションルーティングを有効にすることもできます。 EShopOnContainers のドキュメントでは、独自の AKS クラスターを作成する手順について詳しく説明しています。 作成したら、Kubernetes ダッシュボードからクラスターにアクセスして管理できます。
 
-これで、ヘルムと Tiller を利用して、eShop アプリケーションをクラスターにデプロイできるようになりました。
+これで、ヘルムを使用して、eShop アプリケーションをクラスターにデプロイできるようになりました。
 
 ## <a name="deploying-to-azure-kubernetes-service-using-helm"></a>ヘルムを使用した Azure Kubernetes Service へのデプロイ
 

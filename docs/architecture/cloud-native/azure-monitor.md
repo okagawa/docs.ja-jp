@@ -1,13 +1,13 @@
 ---
 title: Azure Monitor
 description: Azure Monitor を使用すると、システムが実行されていることを確認できます。
-ms.date: 07/05/2020
-ms.openlocfilehash: 65e17740dba49c3ac3f6e13462897b5342da6710
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: a93b71db642e05a830b20b80d8387c24d35ea8c1
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160971"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506176"
 ---
 # <a name="azure-monitor"></a>Azure Monitor
 
@@ -52,7 +52,7 @@ StormEvents
 Azure Monitor から情報を表示するために使用できる、いくつかの異なるダッシュボードテクノロジがあります。 単純に、Application Insights でクエリを実行し、 [データをグラフにプロット](/azure/azure-monitor/learn/tutorial-app-dashboards)するだけです。
 
 ![メインの Azure ダッシュボード図7-14 に埋め込まれている Application Insights のグラフの例を次に示し ](./media/azure_dashboard.png)
- **Figure 7-14**ます。 メインの Azure ダッシュボードに埋め込まれている Application Insights グラフの例を示します。
+ ます。 メインの Azure ダッシュボードに埋め込まれている Application Insights グラフの例を示します。
 
 これらのグラフは、ダッシュボード機能を使用して適切に Azure portal に埋め込むことができます。 複数の層のデータにドリルダウンできるなど、より厳しい要件を持つユーザーには、Azure Monitor データを [Power BI](https://powerbi.microsoft.com/)できます。 Power BI は、業界をリードするエンタープライズクラスのビジネスインテリジェンスツールであり、さまざまなデータソースからデータを集計できます。
 
@@ -74,9 +74,9 @@ Azure Monitor から情報を表示するために使用できる、いくつか
 
 アラートの一般的な原因を特定すると、アラートの原因と解決方法についての詳細情報を使用してアラートを強化できます。 クラウドネイティブアプリケーションの高成熟した展開では、障害が発生したノードをスケールセットから削除する、または自動スケールアクティビティをトリガーするなどの操作を実行する自己復旧タスクを開始することを選択できます。 最終的には、午前2時に勤務先の担当者をウェイクアップして、ライブサイトの問題を解決する必要がなくなる可能性があります。システムは、翌朝に仕事が到着するまで、補償または少なくとも limp を調整できるようにするためです。
 
-Azure Monitor は、自動的に機械学習を活用して、デプロイされたアプリケーションの通常の動作パラメーターを把握します。 これにより、通常のパラメーターの外部で動作しているサービスを検出できます。 たとえば、サイトでの一般的な平日のトラフィックは、1分あたり1万の要求になることがあります。 その後、特定の週に、要求の数が突然、1分あたりの非常に異常な2万要求に達します。 [スマート検出](/azure/azure-monitor/app/proactive-diagnostics) では、この偏差が基準からのものであることがわかり、アラートがトリガーされます。 同時に、傾向分析は、トラフィックの負荷が予想されるときに偽陽性が発生しないようにするのに十分なスマートです。
+Azure Monitor は、自動的に機械学習を活用して、デプロイされたアプリケーションの通常の動作パラメーターを把握します。 この方法では、通常のパラメーターの外部で動作しているサービスを検出できます。 たとえば、サイトでの一般的な平日のトラフィックは、1分あたり1万の要求になることがあります。 その後、特定の週に、要求の数が突然、1分あたりの非常に異常な2万要求に達します。 [スマート検出](/azure/azure-monitor/app/proactive-diagnostics) では、この偏差が基準からのものであることがわかり、アラートがトリガーされます。 同時に、傾向分析は、トラフィックの負荷が予想されるときに偽陽性が発生しないようにするのに十分なスマートです。
 
-## <a name="references"></a>References
+## <a name="references"></a>リファレンス
 
 - [Azure Monitor](/azure/azure-monitor/overview)
 
