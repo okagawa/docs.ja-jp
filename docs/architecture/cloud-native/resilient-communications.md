@@ -3,12 +3,12 @@ title: 回復性のある通信
 description: Azure 向けのクラウドネイティブ .NET アプリの設計 |回復力のある通信
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 18b26223634efc5c05f680d0cbb7c8cbc2490a59
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 52f08c066767175c699f5a058267cb42d2b1d4aa
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166041"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99547695"
 ---
 # <a name="resilient-communications"></a>回復力のある通信
 
@@ -30,7 +30,7 @@ ms.locfileid: "91166041"
 
 ## <a name="service-mesh"></a>サービスメッシュ
 
-より優れたアプローチは、 *サービスメッシュ*を利用する進化テクノロジです。 [サービスメッシュ](https://www.nginx.com/blog/what-is-a-service-mesh/)は、構成可能なインフラストラクチャレイヤーであり、サービスの通信と上記の他の課題に対処するための組み込みの機能を備えています。 これらの問題は、サービスプロキシに移動することで分離されます。 プロキシは、ビジネスコードから分離するために、別のプロセス (サイド [カーと呼ばれます) に](/azure/architecture/patterns/sidecar)展開されます。 ただし、サイドカーはサービスにリンクされており、それを使用して作成され、ライフサイクルを共有します。 図6-7 はこのシナリオを示しています。
+より優れたアプローチは、 *サービスメッシュ* を利用する進化テクノロジです。 [サービスメッシュ](https://www.nginx.com/blog/what-is-a-service-mesh/)は、構成可能なインフラストラクチャレイヤーであり、サービスの通信と上記の他の課題に対処するための組み込みの機能を備えています。 これらの問題は、サービスプロキシに移動することで分離されます。 プロキシは、ビジネスコードから分離するために、別のプロセス (サイド [カーと呼ばれます) に](/azure/architecture/patterns/sidecar)展開されます。 ただし、サイドカーはサービスにリンクされており、それを使用して作成され、ライフサイクルを共有します。 図6-7 はこのシナリオを示しています。
 
 ![サイドカーを使用したサービスメッシュ](./media/service-mesh-with-side-car.png)
 
@@ -79,7 +79,7 @@ Azure クラウドは、azure Kubernetes Services 内での直接サポートを
 
 ### <a name="references"></a>References
 
-- [Polly](http://www.thepollyproject.org/)
+- [Polly](https://dotnetfoundation.org/projects/polly)
 
 - [再試行パターン](/azure/architecture/patterns/retry)
 

@@ -3,18 +3,18 @@ title: アプリケーションの回復性パターン
 description: Azure 向けのクラウドネイティブ .NET アプリの設計 |アプリケーションの回復性パターン
 author: robvet
 ms.date: 01/19/2021
-ms.openlocfilehash: 9a59a7d93b61b0dea11680f6caf0bd3b68a0f853
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: 655df16ef58f1deb2d2f4d0487c47658499f2108
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99505922"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99547721"
 ---
 # <a name="application-resiliency-patterns"></a>アプリケーションの回復性パターン
 
 最初の防御ラインは、アプリケーションの回復性です。
 
-独自の回復性フレームワークの作成にかなりの時間を費やすことができますが、このような製品は既に存在しています。 これは、開発者が堅牢性とスレッドセーフの方法で回復性ポリシーを表すことができる、包括的な .NET 復元と一時的な障害処理[ライブラリです。](http://www.thepollyproject.org/) .NET Framework または .NET 5 でビルドされたアプリケーションを対象にしています。 次の表では、と呼ばれる回復性機能について説明し `policies` ます。 個別に適用することも、グループ化することもできます。
+独自の回復性フレームワークの作成にかなりの時間を費やすことができますが、このような製品は既に存在しています。 これは、開発者が堅牢性とスレッドセーフの方法で回復性ポリシーを表すことができる、包括的な .NET 復元と一時的な障害処理[ライブラリです。](https://dotnetfoundation.org/projects/polly) .NET Framework または .NET 5 でビルドされたアプリケーションを対象にしています。 次の表では、と呼ばれる回復性機能について説明し `policies` ます。 個別に適用することも、グループ化することもできます。
 
 | ポリシー | エクスペリエンス |
 | :-------- | :-------- |
