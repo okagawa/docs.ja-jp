@@ -2,12 +2,12 @@
 title: エラスティック スタックを使用したログ記録
 description: エラスティックスタック、Logstash、および Kibana を使用したログ記録
 ms.date: 01/19/2021
-ms.openlocfilehash: ebe7eef16d3b1a73d0fd3a010a509bbaf7be3fd5
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: f8dbcd68bf809715a10d0ea1ab36cf5ceb6a96a9
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99505818"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99548085"
 ---
 # <a name="logging-with-elastic-stack"></a>エラスティック スタックを使用したログ記録
 
@@ -17,7 +17,7 @@ ms.locfileid: "99505818"
 
 ## <a name="elastic-stack"></a>エラスティックスタック
 
-エラスティックスタックは、Kubernetes クラスターから情報を収集するための強力なオプションです。 Kubernetes では、Elasticsearch エンドポイントへのログの送信がサポートされています。 [ほとんど](https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/)の場合、図7-5 に示すように、環境変数を設定するだけで始める必要があります。
+エラスティックスタックは、Kubernetes クラスターから情報を収集するための強力なオプションです。 Kubernetes では、Elasticsearch エンドポイントへのログの送信がサポートされています。 [ほとんど](https://v1-19.docs.kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/)の場合、図7-5 に示すように、環境変数を設定するだけで始める必要があります。
 
 ```kubernetes
 KUBE_LOGGING_DESTINATION=elasticsearch
@@ -111,7 +111,7 @@ output {
 
 もう1つのオプションは、最近発表された [サービスとしての ELK オファリング](https://devops.com/logz-io-unveils-azure-open-source-elk-monitoring-solution/)です。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>References
 
 - [エラスティックスタックを Azure にインストールする](/azure/virtual-machines/linux/tutorial-elasticsearch)
 

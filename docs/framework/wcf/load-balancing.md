@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: ccafce51cadba588dc6c4e8fc8b476f3cd8ee699
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ccb915c33be217d2a8d00a54c5bd57384286140f
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262711"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99548098"
 ---
 # <a name="load-balancing"></a>負荷分散
 
@@ -85,7 +85,9 @@ Windows Communication Foundation (WCF) アプリケーションの容量を増�
 
  <xref:System.ServiceModel.WSHttpBinding> と <xref:System.ServiceModel.WSDualHttpBinding> はどちらも、既定のバインド構成をいくつか変更すれば、HTTP の負荷分散手法を使用して負荷分散できます。  
   
-- セキュリティ コンテキストの確立を無効にします。これは、<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> の <xref:System.ServiceModel.WSHttpBinding> プロパティを `false` に設定することで実現されます。 また、セキュリティセッションが必要な場合は、「セキュリティ [で保護さ](./feature-details/secure-sessions.md) れたセッション」のトピックの説明に従って、ステートフルなセキュリティセッションを使用することもできます。 ステートフルなセキュリティ セッションは、セキュリティ セッションのすべての状態 (ステート) を保護セキュリティ トークンの一部として要求ごとに転送するため、サービスをステートレスな状態に保つことができます。 ステートフルなセキュリティ セッションを有効にする場合、システムによって提供される <xref:System.ServiceModel.Channels.CustomBinding> と <xref:System.ServiceModel.Channels.Binding> では、必要な構成設定が公開されないため、<xref:System.ServiceModel.WSHttpBinding> またはユーザー定義の <xref:System.ServiceModel.WSDualHttpBinding> を使用する必要があります。  
+- セキュリティコンテキストの確立を無効にするか、ステートフルなセキュリティセッションを使用します。 セキュリティコンテキストの確立は、のプロパティをに設定することによって無効にすることができ <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> <xref:System.ServiceModel.WSHttpBinding> `false` ます。 またはのセキュリティセッションを使用している場合は <xref:System.ServiceModel.WSDualHttpBinding> 、「セキュリティで [保護されたセッション](./feature-details/secure-sessions.md)」で説明されているように、ステートフルなセキュリティセッションを使用することができます。 ステートフルなセキュリティセッションを使用すると、セキュリティセッションのすべての状態が保護セキュリティトークンの一部として各要求と共に送信されるため、サービスをステートレスな状態に保つことができます。 ステートフルなセキュリティセッションを有効にするには、またはユーザー定義を使用する必要があります。これは、 <xref:System.ServiceModel.Channels.CustomBinding> <xref:System.ServiceModel.Channels.Binding> 必要な構成設定がシステムに用意されているおよびでは公開されないため <xref:System.ServiceModel.WSHttpBinding> <xref:System.ServiceModel.WSDualHttpBinding> です。
+
+- セキュリティコンテキストの確立を無効にした場合は、サービス資格情報のネゴシエーションを無効にする必要もあります。 オフにするに <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential> は、のプロパティ <xref:System.ServiceModel.WSHttpBinding> をに設定し `false` ます。 サービス資格情報のネゴシエーションを無効にするには、クライアントでエンドポイント id を明示的に指定する必要がある場合があります。
   
 - 信頼できるセッションを使用しないでください。 この機能は既定では無効です。  
   
