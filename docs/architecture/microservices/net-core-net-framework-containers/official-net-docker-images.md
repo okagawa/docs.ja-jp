@@ -2,12 +2,12 @@
 title: 公式の .NET Docker イメージ
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 公式の .NET Docker イメージ
 ms.date: 01/13/2021
-ms.openlocfilehash: 3f4b58b2775c4e80b69cbd707396ebe98ccfe29c
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 072e565260bf81c123ee837ccca46fbdf7c67361
+ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188622"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99065123"
 ---
 # <a name="official-net-docker-images"></a>公式の .NET Docker イメージ
 
@@ -48,7 +48,7 @@ Docker Hub の .NET イメージ リポジトリを探索すると、タグで�
 | Image | コメント |
 |-------|----------|
 | mcr.microsoft.com/dotnet/aspnet:**5.0** | ASP.NET Core、ランタイムのみ、ASP.NET Core の最適化、Linux および Windows (マルチアーキテクチャ) |
-| mcr.microsoft.com/dotnet/sdk:**5.01** | .NET 5、SDK 含む、Linux および Windows (マルチアーキテクチャ) |
+| mcr.microsoft.com/dotnet/sdk:**5.0** | .NET 5、SDK 含む、Linux および Windows (マルチアーキテクチャ) |
 
 > [!div class="step-by-step"]
 > [前へ](net-container-os-targets.md)

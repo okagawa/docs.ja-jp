@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 945e494e8a027d438bf4659d989da6033a13f6f0
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 3889088ce32046f72a9a3392e28a5a36cda4745e
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687604"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957846"
 ---
 # <a name="connect-net-for-apache-spark-to-mongodb"></a>.NET for Apache Spark を MongoDB に接続する
 
@@ -19,7 +19,7 @@ ms.locfileid: "94687604"
 
 ## <a name="prerequisites"></a>前提条件
 
-1. [データベースといくつかのコレクション](https://docs.mongodb.com/manual/core/databases-and-collections/)が追加された稼働中の MongoDB サーバー (ローカル サーバーの場合は[こちらのコミュニティ サーバー](https://www.mongodb.com/try/download/community)をダウンロードします。または、クラウド MongoDB サービスの場合は [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) を試すことができます)。
+- [データベースといくつかのコレクション](https://docs.mongodb.com/manual/core/databases-and-collections/)が追加された稼働中の MongoDB サーバー (ローカル サーバーの場合は[こちらのコミュニティ サーバー](https://www.mongodb.com/try/download/community)をダウンロードします。または、クラウド MongoDB サービスの場合は [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) を試すことができます)。
 
 ## <a name="set-up-your-mongodb-instance"></a>MongoDB インスタンスを設定する
 
@@ -38,7 +38,7 @@ ms.locfileid: "94687604"
     )
     ```
 
-2. .NET for Apache Spark アプリケーションが実行されているマシンの IP アドレスが、MongoDB サーバーが接続できるようにホワイトリストに登録されていることを確認します。 その方法については、[こちらのガイド](https://docs.atlas.mongodb.com/security/add-ip-address-to-list/)を参照してください。
+2. .NET for Apache Spark アプリケーションが実行されているコンピューターの IP アドレスが、MongoDB サーバーが接続できるように許可リストに登録されていることを確認します。 その方法については、[こちらのガイド](https://docs.atlas.mongodb.com/security/add-ip-address-to-list/)を参照してください。
 
 ## <a name="configure-your-net-for-apache-spark-application"></a>.NET for Apache Spark アプリケーションを構成する
 
@@ -88,7 +88,7 @@ spark-submit --master local --packages org.mongodb.spark:mongo-spark-connector_2
 > [!NOTE]
 > 実行する Spark のバージョンに合わせて、パッケージのバージョンを必ず含めてください。
 
-表示される結果は、次のように DataFrame (`df`) です。
+表示される結果は、ここに示されている DataFrame (`df`) となります。
 
 ```text
 +--------------------+----+-------+

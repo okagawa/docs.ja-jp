@@ -1,49 +1,49 @@
 ---
 title: アンインストール ツール
-description: .NET CORE アンインストール ツールの概要です。これは、.NET Core SKD とランタイムの制御されたクリーンアップを可能にするガイド付きツールです。
+description: .NET アンインストール ツールの概要です。これは、.NET SDK とランタイムの制御されたクリーンアップを可能にするガイド付きツールです。
 author: sfoslund
-ms.date: 05/27/2020
-ms.openlocfilehash: ed43b4ec8437ae0ccaf5f1234758dda9f16bd51e
-ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
+ms.date: 01/28/2021
+ms.openlocfilehash: a3819b11af94d4fec3ecb072ec3d5ddf6de706c9
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98235353"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216318"
 ---
-# <a name="net-core-uninstall-tool"></a>.NET Core アンインストール ツール
+# <a name="net-uninstall-tool"></a>.NET アンインストール ツール
 
-[.NET Core アンインストール ツール](https://aka.ms/dotnet-core-uninstall-tool) (`dotnet-core-uninstall`) を使用すると、.NET Core SDK とランタイムをシステムから削除できます。 一連のオプションを使用して、アンインストールするバージョンを指定できます。
+[.NET アンインストール ツール](https://aka.ms/dotnet-core-uninstall-tool) (`dotnet-core-uninstall`) を使用すると、.NET SDK とランタイムをシステムから削除できます。 一連のオプションを使用して、アンインストールするバージョンを指定できます。
 
 このツールでは、Windows と macOS がサポートされています。 Linux は現在サポートされていません。
 
 Windows では、ツールは次のいずれかのインストーラーを使用してインストールされた SDK とランタイムのみをアンインストールできます。
 
-- .NET Core SDK およびランタイム インストーラー。
+- .NET SDK およびランタイム インストーラー。
 - Visual Studio 2019 バージョン 16.3 より前のバージョンの Visual Studio インストーラー。
 
 macOS では、このツールでアンインストールできるのは */usr/local/share/dotnet* フォルダーにある SDK とランタイムのみです。
 
-これらの制限のため、このツールでは、コンピューター上の一部の .NET Core SDK とランタイムをアンインストールできない可能性があります。 `dotnet --info` コマンドを使用して、インストールされているすべての .NET Core SDK とランタイム (このツールで削除できない SDK やランタイムを含む) を検出できます。 `dotnet-core-uninstall list` コマンドを実行すると、このツールでアンインストールできる SDK が表示されます。 バージョン 1.2 以降はバージョン 5.0 以前の SDK とランタイムをアンインストールできます。以前のバージョンのツールは、3.1 以前のものをアンインストールできます。
+これらの制限のため、このツールでは、コンピューター上の一部の .NET SDK とランタイムをアンインストールできない可能性があります。 `dotnet --info` コマンドを使用して、インストールされているすべての .NET SDK とランタイム (このツールで削除できない SDK やランタイムを含む) を見つけることができます。 `dotnet-core-uninstall list` コマンドを実行すると、このツールでアンインストールできる SDK が表示されます。 バージョン 1.2 以降はバージョン 5.0 以前の SDK とランタイムをアンインストールできます。以前のバージョンのツールは、3.1 以前のものをアンインストールできます。
 
 ## <a name="install-the-tool"></a>ツールをインストールする
 
-.NET Core アンインストール ツールは、[ツールのリリース ページ](https://aka.ms/dotnet-core-uninstall-tool)からダウンロードできます。また、ソース コードは [dotnet/cli-lab](https://github.com/dotnet/cli-lab) GitHub リポジトリにあります。
+.NET アンインストール ツールは、[ツールのリリース ページ](https://aka.ms/dotnet-core-uninstall-tool)からダウンロードできます。また、ソース コードは [dotnet/cli-lab](https://github.com/dotnet/cli-lab) GitHub リポジトリにあります。
 
 > [!NOTE]
-> このツールでは、.NET Core SDK とランタイムをアンインストールするために昇格が必要です。 そのため、Windows では *C:\Program Files*、macOS では */usr/local/bin* などの書き込み保護されたディレクトリにインストールする必要があります。 「[dotnet コマンドの特権アクセス](../tools/elevated-access.md)」も参照してください。 詳細については、[詳細なインストール手順](https://aka.ms/dotnet-core-uninstall-tool)に関するページを参照してください。
+> このツールでは、.NET SDK とランタイムをアンインストールするために昇格が必要です。 そのため、Windows では *C:\Program Files*、macOS では */usr/local/bin* などの書き込み保護されたディレクトリにインストールする必要があります。 「[dotnet コマンドの特権アクセス](../tools/elevated-access.md)」も参照してください。 詳細については、[詳細なインストール手順](https://aka.ms/dotnet-core-uninstall-tool)に関するページを参照してください。
 
 ## <a name="run-the-tool"></a>ツールを実行します。
 
 次の手順は、アンインストール ツールを実行するための推奨方法を示しています。
 
-- [手順 1 - インストールされている .NET Core SDK とランタイムを表示する](#step-1---display-installed-net-core-sdks-and-runtimes)
+- [手順 1 - インストールされている .NET SDK とランタイムを表示する](#step-1---display-installed-net-sdks-and-runtimes)
 - [手順 2 - ドライ ランを実行する](#step-2---do-a-dry-run)
-- [手順 3 - .NET Core SDK とランタイムをアンインストールする](#step-3---uninstall-net-core-sdks-and-runtimes)
+- [手順 3 - .NET SDK とランタイムをアンインストールする](#step-3---uninstall-net-sdks-and-runtimes)
 - [手順 4 - NuGet フォールバック フォルダーを削除する (省略可能)](#step-4---delete-the-nuget-fallback-folder-optional)
 
-### <a name="step-1---display-installed-net-core-sdks-and-runtimes"></a>手順 1 - インストールされている .NET Core SDK とランタイムを表示する
+### <a name="step-1---display-installed-net-sdks-and-runtimes"></a>手順 1 - インストールされている .NET SDK とランタイムを表示する
 
-`dotnet-core-uninstall list` コマンドを実行すると、このツールで削除できる、インストールされている .NET Core SDK とランタイムが一覧表示されます。 一部の SDK とランタイムは、Visual Studio で必要な場合があり、それらのアンインストールが推奨されない理由を示す注釈と共に表示されます。
+`dotnet-core-uninstall list` コマンドを実行すると、このツールで削除できる、インストールされている .NET SDK とランタイムが一覧表示されます。 一部の SDK とランタイムは、Visual Studio で必要な場合があり、それらのアンインストールが推奨されない理由を示す注釈と共に表示されます。
 
 > [!NOTE]
 > `dotnet-core-uninstall list` コマンドの出力は、ほとんどの場合、`dotnet --info` で出力されるインストールされているバージョンの一覧と一致しません。 具体的には、このツールでは、zip ファイルによってインストールされたバージョンや、Visual Studio によって管理されているバージョン (Visual Studio 2019 16.3 以降を使用してインストールされたバージョン) は表示されません。 バージョンが Visual Studio によって管理されているかどうかを確認する方法の 1 つは、これを `Add or Remove Programs` で表示することです。そこでは、Visual Studio によって管理されているバージョンの表示名にそれを示すマークが付きます。
@@ -62,19 +62,19 @@ dotnet-core-uninstall list [options]
 
 * **`--aspnet-runtime`**
 
-  このツールでアンインストールできるすべての ASP.NET Core ランタイムを一覧表示します。
+  このツールでアンインストールできるすべての ASP.NET ランタイムを一覧表示します。
 
 * **`--hosting-bundle`**
 
-  このツールでアンインストールできるすべての .NET Core ホスティング バンドルを一覧表示します。
+  このツールでアンインストールできるすべての .NET ホスティング バンドルを一覧表示します。
 
 * **`--runtime`**
 
-  このツールでアンインストールできるすべての .NET Core ランタイムを一覧表示します。
+  このツールでアンインストールできるすべての .NET ランタイムを一覧表示します。
 
 * **`--sdk`**
 
-  このツールでアンインストールできるすべての .NET Core SDK を一覧表示します。
+  このツールでアンインストールできるすべての .NET SDK を一覧表示します。
 
 * **`-v, --verbosity <LEVEL>`**
 
@@ -82,21 +82,21 @@ dotnet-core-uninstall list [options]
 
 * **`--x64`**
 
-  このツールでアンインストールできるすべての x64 .NET Core SDK とランタイムを一覧表示します。
+  このツールでアンインストールできるすべての x64 .NET SDK とランタイムを一覧表示します。
 
 * **`--x86`**
 
-  このツールでアンインストールできるすべての x86 .NET Core SDK とランタイムを一覧表示します。
+  このツールでアンインストールできるすべての x86 .NET SDK とランタイムを一覧表示します。
 
 ## <a name="macos"></a>[macOS](#tab/macos)
 
 * **`--runtime`**
 
-  このツールでアンインストールできるすべての .NET Core ランタイムを一覧表示します。
+  このツールでアンインストールできるすべての .NET ランタイムを一覧表示します。
 
 * **`--sdk`**
 
-  このツールでアンインストールできるすべての .NET Core SDK を一覧表示します。
+  このツールでアンインストールできるすべての .NET SDK を一覧表示します。
 
 * **`-v, --verbosity <LEVEL>`**
 
@@ -106,19 +106,19 @@ dotnet-core-uninstall list [options]
 
 #### <a name="examples"></a>使用例
 
-* このツールで削除できるすべての .NET Core SDK とランタイムを一覧表示します。
+* このツールで削除できるすべての .NET SDK とランタイムを一覧表示します。
 
   ```console
   dotnet-core-uninstall list
   ```
 
-* すべての x64 .NET Core SDK とランタイムを一覧表示します。
+* すべての x64 .NET SDK とランタイムを一覧表示します。
 
   ```console
   dotnet-core-uninstall list --x64
   ```
 
-* すべての x86 .NET Core SDK を一覧表示します。
+* すべての x86 .NET SDK を一覧表示します。
 
   ```console
   dotnet-core-uninstall list --sdk --x86
@@ -126,7 +126,7 @@ dotnet-core-uninstall list [options]
 
 ### <a name="step-2---do-a-dry-run"></a>手順 2 - ドライ ランを実行する
 
-`dotnet-core-uninstall dry-run` および `dotnet-core-uninstall whatif` コマンドは、アンインストールを実行せずに指定されたオプションに基づいて削除される .NET Core SDK とランタイムを表示します。 これらのコマンドはシノニムです。
+`dotnet-core-uninstall dry-run` および `dotnet-core-uninstall whatif` コマンドでは、アンインストールを実行せずに指定されたオプションに基づいて削除される .NET SDK とランタイムを表示します。 これらのコマンドはシノニムです。
 
 **dotnet-core-uninstall dry-run and dotnet-core-uninstall whatif**
 
@@ -155,51 +155,51 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 * **`--all`**
 
-  すべての .NET Core SDK とランタイムを削除します。
+  すべての .NET SDK とランタイムを削除します。
 
 * **`--all-below <VERSION>[ <VERSION>...]`**
 
-  指定したバージョンよりも小さいバージョンの .NET Core SDK とランタイムのみを削除します。 指定したバージョンはインストールされたままになります。
+  指定されたバージョンよりも小さいバージョンの .NET SDK とランタイムのみを削除します。 指定したバージョンはインストールされたままになります。
 
 * **`--all-but <VERSIONS>[ <VERSION>...]`**
 
-  指定したバージョンを除く、すべての .NET Core SDK とランタイムを削除します。
+  指定されたバージョンを除く、すべての .NET SDK とランタイムを削除します。
 
 * **`--all-but-latest`**
 
-  最上位の 1 つのバージョンを除く、すべての .NET Core SDK とランタイムを削除します。
+  最上位の 1 つのバージョンを除く、すべての .NET SDK とランタイムを削除します。
 
 * **`--all-lower-patches`**
 
-  上位の修正プログラムによって置き換えられた .NET Core SDK とランタイムを削除します。 このオプションは、global. json を保護します。
+  上位の修正プログラムによって置き換えられた .NET SDK とランタイムを削除します。 このオプションは、global. json を保護します。
 
 * **`--all-previews`**
 
-  プレビューとしてマークされている .NET Core SDK とランタイムを削除します。
+  プレビューとしてマークされている .NET SDK とランタイムを削除します。
 
 * **`--all-previews-but-latest`**
 
-  最上位の 1 つのプレビューを除き、プレビューとしてマークされているすべての .NET Core SDK とランタイムを削除します。
+  最上位の 1 つのプレビューを除き、プレビューとしてマークされているすべての .NET SDK とランタイムを削除します。
 
 * **`--aspnet-runtime`**
 
-  ASP.NET Core ランタイムのみを削除します。
+  ASP.NET ランタイムのみを削除します。
 
 * **`--hosting-bundle`**
 
-  .NET Core ランタイムとホスティングのバンドルのみを削除します。
+  .NET ランタイムとホスティングのバンドルのみを削除します。
 
 * **`--major-minor <MAJOR_MINOR>`**
 
-  指定した `major.minor` バージョンに一致する .NET Core SDK とランタイムを削除します。
+  指定された `major.minor` バージョンに一致する .NET SDK とランタイムを削除します。
 
 * **`--runtime`**
 
-  .NET Core ランタイムのみを削除します。
+  .NET ランタイムのみを削除します。
 
 * **`--sdk`**
 
-  .NET Core SDK のみを削除します。
+  .NET SDK のみを削除します。
 
 * **`-v, --verbosity <LEVEL>`**
 
@@ -225,43 +225,43 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 * **`--all`**
 
-  すべての .NET Core SDK とランタイムを削除します。
+  すべての .NET SDK とランタイムを削除します。
 
 * **`--all-below <VERSION>[ <VERSION>...]`**
 
-  指定したバージョンより下の .NET Core SDK とランタイムを削除します。 指定したバージョンはそのまま残ります。
+  指定されたバージョンより下の .NET SDK とランタイムを削除します。 指定したバージョンはそのまま残ります。
 
 * **`--all-but <VERSIONS>[ <VERSION>...]`**
 
-  指定したバージョンを除き、.NET Core SDK とランタイムを削除します。
+  指定されたバージョンを除く、.NET SDK とランタイムを削除します。
 
 * **`--all-but-latest`**
 
-  最上位の 1 つのバージョンを除く、すべての .NET Core SDK とランタイムを削除します。
+  最上位の 1 つのバージョンを除く、すべての .NET SDK とランタイムを削除します。
 
 * **`--all-lower-patches`**
 
-  上位の修正プログラムによって置き換えられた .NET Core SDK とランタイムを削除します。 このオプションは、global. json を保護します。
+  上位の修正プログラムによって置き換えられた .NET SDK とランタイムを削除します。 このオプションは、global. json を保護します。
 
 * **`--all-previews`**
 
-  プレビューとしてマークされている .NET Core SDK とランタイムを削除します。
+  プレビューとしてマークされている .NET SDK とランタイムを削除します。
 
 * **`--all-previews-but-latest`**
 
-  最上位の 1 つのプレビューを除き、プレビューとしてマークされているすべての .NET Core SDK とランタイムを削除します。
+  最上位の 1 つのプレビューを除き、プレビューとしてマークされているすべての .NET SDK とランタイムを削除します。
 
 * **`--major-minor <MAJOR_MINOR>`**
 
-  指定した `major.minor` バージョンに一致する .NET Core SDK とランタイムを削除します。
+  指定された `major.minor` バージョンに一致する .NET SDK とランタイムを削除します。
 
 * **`--runtime`**
 
-  .NET Core ランタイムのみを削除します。
+  .NET ランタイムのみを削除します。
 
 * **`--sdk`**
 
-  .NET Core SDK のみを削除します。
+  .NET SDK のみを削除します。
 
 * **`-v, --verbosity <LEVEL>`**
 
@@ -279,36 +279,36 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 #### <a name="examples"></a>使用例
 
 > [!NOTE]
-> 既定で、Visual Studio またはその他の SDK に必要な可能性がある .NET Core SDK とランタイムは `dotnet-core-uninstall dry-run` 出力には含まれません。 次の例では、コンピューターの状態によっては、指定された SDK とランタイムの一部が出力に含まれない可能性があります。 すべての SDK とランタイムを含めるには、それらを引数として明示的に指定するか、`--force` オプションを使用してください。
+> 既定では、Visual Studio またはその他の SDK に必要な可能性がある .NET SDK とランタイムは `dotnet-core-uninstall dry-run` 出力には含まれません。 次の例では、コンピューターの状態によっては、指定された SDK とランタイムの一部が出力に含まれない可能性があります。 すべての SDK とランタイムを含めるには、それらを引数として明示的に指定するか、`--force` オプションを使用してください。
 
-* 上位の修正プログラムによって置き換えられたすべての .NET Core ランタイムを削除するドライ ラン。
+* 上位の修正プログラムによって置き換えられたすべての .NET ランタイムを削除するドライ ラン。
 
   ```console
   dotnet-core-uninstall dry-run --all-lower-patches --runtime
   ```
 
-* バージョン `2.2.301` より下のすべての .NET Core SDK を削除するドライ ラン。
+* バージョン `2.2.301` より下のすべての .NET SDK を削除するドライ ラン。
 
   ```console
   dotnet-core-uninstall whatif --all-below 2.2.301 --sdk
   ```
 
-### <a name="step-3---uninstall-net-core-sdks-and-runtimes"></a>手順 3 - .NET Core SDK とランタイムをアンインストールする
+### <a name="step-3---uninstall-net-sdks-and-runtimes"></a>手順 3 - .NET SDK とランタイムをアンインストールする
 
-`dotnet-core-uninstall remove` は、一連のオプションによって指定された .NET Core SDK とランタイムをアンインストールします。 バージョン 1.2 以降はバージョン 5.0 以前の SDK とランタイムをアンインストールできます。以前のバージョンのツールは、3.1 以前のものをアンインストールできます。
+`dotnet-core-uninstall remove` では、一連のオプションによって指定された .NET SDK とランタイムをアンインストールします。 バージョン 1.2 以降はバージョン 5.0 以前の SDK とランタイムをアンインストールできます。以前のバージョンのツールは、3.1 以前のものをアンインストールできます。
 
-このツールには破壊的動作があるため、remove コマンドを実行する前に、ドライ ランを実行することを **強く** お勧めします。 ドライランにより、`remove` コマンドを使用したときに削除される .NET Core SDK とランタイムが示されます。 削除しても安全な SDK とランタイムを確認するには、「[バージョンを削除する必要はあるか](../install/remove-runtime-sdk-versions.md#should-i-remove-a-version)」を参照してください。
+このツールには破壊的動作があるため、remove コマンドを実行する前に、ドライ ランを実行することを **強く** お勧めします。 ドライ ランにより、`remove` コマンドを使用したときに削除される .NET SDK とランタイムが示されます。 削除しても安全な SDK とランタイムを確認するには、「[バージョンを削除する必要はあるか](../install/remove-runtime-sdk-versions.md#should-i-remove-a-version)」を参照してください。
 
 > [!CAUTION]
 > 次の注意事項に留意してください。
 >
->- このツールは、コンピューター上の `global.json` ファイルに必要な .NET Core SDK のバージョンをアンインストールできます。 .NET Core SDK は、「[.NET Core のダウンロード](https://dotnet.microsoft.com/download/dotnet-core)」ページから再インストールできます。
->- このツールは、コンピューター上のフレームワークに依存するアプリケーションに必要な .NET Core ランタイムのバージョンをアンインストールできます。 .NET Core ランタイムは、「[.NET Core のダウンロード](https://dotnet.microsoft.com/download/dotnet-core)」ページから再インストールできます。
->- このツールは、Visual Studio が依存する .NET Core SDK とランタイムのバージョンをアンインストールできます。 Visual Studio のインストールを中断した場合は、Visual Studio インストーラーで [修復] を実行すると稼働状態に戻ります。
+>- このツールでは、コンピューター上の `global.json` ファイルに必要な .NET SDK のバージョンをアンインストールできます。 .NET SDK は、[.NET のダウンロード](https://dotnet.microsoft.com/download/dotnet-core) ページから再インストールできます。
+>- このツールでは、コンピューター上のフレームワークに依存するアプリケーションに必要な .NET ランタイムのバージョンをアンインストールできます。 .NET ランタイムは、[.NET のダウンロード](https://dotnet.microsoft.com/download/dotnet-core) ページから再インストールできます。
+>- このツールでは、Visual Studio が依存する .NET SDK とランタイムのバージョンをアンインストールできます。 Visual Studio のインストールを中断した場合は、Visual Studio インストーラーで [修復] を実行すると稼働状態に戻ります。
 
-既定で、すべてのコマンドは、Visual Studio またはその他の SDK に必要な可能性がある .NET Core SDK とランタイムを保持します。 これらの SDK とランタイムは、引数として明示的に指定するか、`--force` オプションを使用することによってアンインストールできます。
+既定で、すべてのコマンドでは、Visual Studio またはその他の SDK に必要な可能性がある .NET SDK とランタイムを保持します。 これらの SDK とランタイムは、引数として明示的に指定するか、`--force` オプションを使用することによってアンインストールできます。
 
-このツールでは、.NET Core SDK とランタイムをアンインストールするために昇格が必要です。 Windows では管理者コマンド プロンプトで、macOS では `sudo` を使用してツールを実行してください。 `dry-run` および `whatif` コマンドには、昇格は必要ありません。
+このツールでは、.NET SDK とランタイムをアンインストールするために昇格が必要です。 Windows では管理者コマンド プロンプトで、macOS では `sudo` を使用してツールを実行してください。 `dry-run` および `whatif` コマンドには、昇格は必要ありません。
 
 **dotnet-core-uninstall remove**
 
@@ -335,51 +335,51 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 * **`--all`**
 
-  すべての .NET Core SDK とランタイムを削除します。
+  すべての .NET SDK とランタイムを削除します。
 
 * **`--all-below <VERSION>[ <VERSION>...]`**
 
-  指定したバージョンよりも小さいバージョンの .NET Core SDK とランタイムのみを削除します。 指定したバージョンはインストールされたままになります。
+  指定されたバージョンよりも小さいバージョンの .NET SDK とランタイムのみを削除します。 指定したバージョンはインストールされたままになります。
 
 * **`--all-but <VERSIONS>[ <VERSION>...]`**
 
-  指定したバージョンを除く、すべての .NET Core SDK とランタイムを削除します。
+  指定されたバージョンを除く、すべての .NET SDK とランタイムを削除します。
 
 * **`--all-but-latest`**
 
-  最上位の 1 つのバージョンを除く、すべての .NET Core SDK とランタイムを削除します。
+  最上位の 1 つのバージョンを除く、すべての .NET SDK とランタイムを削除します。
 
 * **`--all-lower-patches`**
 
-  上位の修正プログラムによって置き換えられた .NET Core SDK とランタイムを削除します。 このオプションは、global. json を保護します。
+  上位の修正プログラムによって置き換えられた .NET SDK とランタイムを削除します。 このオプションは、global. json を保護します。
 
 * **`--all-previews`**
 
-  プレビューとしてマークされている .NET Core SDK とランタイムを削除します。
+  プレビューとしてマークされている .NET SDK とランタイムを削除します。
 
 * **`--all-previews-but-latest`**
 
-  最上位の 1 つのプレビューを除き、プレビューとしてマークされているすべての .NET Core SDK とランタイムを削除します。
+  最上位の 1 つのプレビューを除き、プレビューとしてマークされているすべての .NET SDK とランタイムを削除します。
 
 * **`--aspnet-runtime`**
 
-  ASP.NET Core ランタイムのみを削除します。
+  ASP.NET ランタイムのみを削除します。
 
 * **`--hosting-bundle`**
 
-  .NET Core ホスティングのバンドルのみを削除します。
+  .NET ホスティングのバンドルのみを削除します。
 
 * **`--major-minor <MAJOR_MINOR>`**
 
-  指定した `major.minor` バージョンに一致する .NET Core SDK とランタイムを削除します。
+  指定された `major.minor` バージョンに一致する .NET SDK とランタイムを削除します。
 
 * **`--runtime`**
 
-  .NET Core ランタイムのみを削除します。
+  .NET ランタイムのみを削除します。
 
 * **`--sdk`**
 
-  .NET Core SDK のみを削除します。
+  .NET SDK のみを削除します。
 
 * **`-v, --verbosity <LEVEL>`**
 
@@ -407,43 +407,43 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 * **`--all`**
 
-  すべての .NET Core SDK とランタイムを削除します。
+  すべての .NET SDK とランタイムを削除します。
 
 * **`--all-below <VERSION>[ <VERSION>...]`**
 
-  指定したバージョンより下の .NET Core SDK とランタイムを削除します。 指定したバージョンはそのまま残ります。
+  指定されたバージョンより下の .NET SDK とランタイムを削除します。 指定したバージョンはそのまま残ります。
 
 * **`--all-but <VERSIONS>[ <VERSION>...]`**
 
-  指定したバージョンを除き、.NET Core SDK とランタイムを削除します。
+  指定されたバージョンを除く、.NET SDK とランタイムを削除します。
 
 * **`--all-but-latest`**
 
-  最上位の 1 つのバージョンを除く、すべての .NET Core SDK とランタイムを削除します。
+  最上位の 1 つのバージョンを除く、すべての .NET SDK とランタイムを削除します。
 
 * **`--all-lower-patches`**
 
-  上位の修正プログラムによって置き換えられた .NET Core SDK とランタイムを削除します。 このオプションは、global. json を保護します。
+  上位の修正プログラムによって置き換えられた .NET SDK とランタイムを削除します。 このオプションは、global. json を保護します。
 
 * **`--all-previews`**
 
-  プレビューとしてマークされている .NET Core SDK とランタイムを削除します。
+  プレビューとしてマークされている .NET SDK とランタイムを削除します。
 
 * **`--all-previews-but-latest`**
 
-  最上位の 1 つのプレビューを除き、プレビューとしてマークされているすべての .NET Core SDK とランタイムを削除します。
+  最上位の 1 つのプレビューを除き、プレビューとしてマークされているすべての .NET SDK とランタイムを削除します。
 
 * **`--major-minor <MAJOR_MINOR>`**
 
-  指定した `major.minor` バージョンに一致する .NET Core SDK とランタイムを削除します。
+  指定された `major.minor` バージョンに一致する .NET SDK とランタイムを削除します。
 
 * **`--runtime`**
 
-  .NET Core ランタイムのみを削除します。
+  .NET ランタイムのみを削除します。
 
 * **`--sdk`**
 
-  .NET Core SDK のみを削除します。
+  .NET SDK のみを削除します。
 
 * **`-v, --verbosity <LEVEL>`**
 
@@ -463,9 +463,9 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 #### <a name="examples"></a>使用例
 
 > [!NOTE]
-> 既定で、Visual Studio またはその他の SDK に必要な可能性がある .NET Core SDK とランタイムは保持されます。 次の例では、コンピューターの状態によっては、指定された SDK とランタイムの一部が保持される可能性があります。 すべての SDK とランタイムを削除するには、それらを引数として明示的に指定するか、`--force` オプションを使用してください。
+> 既定で、Visual Studio またはその他の SDK に必要な可能性がある .NET SDK とランタイムは保持されます。 次の例では、コンピューターの状態によっては、指定された SDK とランタイムの一部が保持される可能性があります。 すべての SDK とランタイムを削除するには、それらを引数として明示的に指定するか、`--force` オプションを使用してください。
 
-* Y/N の確認を要求せずに、バージョン `3.0.0-preview6-27804-01` を除くすべての .NET Core ランタイムを削除します。
+* Y/N の確認を要求せずに、バージョン `3.0.0-preview6-27804-01` を除くすべての .NET ランタイムを削除します。
 
   ```console
   dotnet-core-uninstall remove --all-but 3.0.0-preview6-27804-01 --runtime --yes
@@ -483,19 +483,19 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
   dotnet-core-uninstall remove 1.1.11 --sdk --yes --verbosity q
   ```
 
-* このツールで安全に削除できるすべての .NET Core SDK を削除します。
+* このツールで安全に削除できるすべての .NET SDK を削除します。
 
   ```console
   dotnet-core-uninstall remove --all --sdk
   ```
 
-* Visual Studio で必要な可能性がある SDK を含め、このツールで削除できるすべての .NET Core SDK を削除します (推奨されません)。
+* Visual Studio で必要な可能性がある SDK を含め、このツールで削除できるすべての .NET SDK を削除します (推奨されません)。
 
   ```console
   dotnet-core-uninstall remove --all --sdk --force
   ```
 
-* 応答ファイル `versions.rsp` に指定されたすべての .NET Core SDK を削除します。
+* 応答ファイル `versions.rsp` に指定されたすべての .NET SDK を削除します
 
   ```console
   dotnet-core-uninstall remove --sdk @versions.rsp
@@ -517,7 +517,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 ## <a name="windows"></a>[Windows](#tab/windows)
 
 1. **[プログラムの追加と削除]** を開きます。
-2. `Microsoft .NET Core SDK Uninstall Tool` を検索します。
+2. `Microsoft .NET SDK Uninstall Tool` を検索します。
 3. **[アンインストール]** を選択します。
 
 ## <a name="macos"></a>[macOS](#tab/macos)

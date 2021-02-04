@@ -4,12 +4,12 @@ description: この高度なチュートリアルでは、パターン マッチ
 ms.date: 10/06/2020
 ms.technology: csharp-whats-new
 ms.custom: contperf-fy21q1
-ms.openlocfilehash: 730098bf599dfc855676c86ab7a6e7f3ef7658f1
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: be1c330973859df62cd4706e5f6f9ca4326fb221
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513225"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794818"
 ---
 # <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>チュートリアル: パターン マッチングを使用して、型ドリブンおよびデータ ドリブンのアルゴリズムを構築する
 
@@ -152,7 +152,7 @@ namespace toll_calculator
 - 乗車率が 50% 未満のバスは、$2.00 余分に支払う。
 - 乗車率が 90% を超えるバスは、$1.00 割引される。
 
-このルールは、同じ switch 式で **プロパティ パターン** を使用して実装できます。 プロパティ パターンでは、型が決定した後、オブジェクトのプロパティが調べられます。 `Car` に対する 1 つの case が、4 つの異なる case に拡張されます。
+このルールは、同じ switch 式で **プロパティ パターン** を使用して実装できます。 プロパティ パターンは、プロパティ値を定数値と比較する `when` 句です。 プロパティ パターンでは、型が決定した後、オブジェクトのプロパティが調べられます。 `Car` に対する 1 つの case が、4 つの異なる case に拡張されます。
 
 ```csharp
 vehicle switch

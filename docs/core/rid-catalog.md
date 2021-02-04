@@ -1,21 +1,21 @@
 ---
-title: .NET Core ランタイム識別子 (RID) のカタログ
-description: ランタイム識別子 (RID) と .NET Core での RID の使用方法について説明します。
-ms.date: 12/15/2020
-ms.openlocfilehash: 6b45c42d626de41c7d67c66aac7dc31c51c36a22
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+title: .NET Runtime Identifier (RID) カタログ
+description: ランタイム識別子 (RID) と .NET での RID の使用方法について学習します。
+ms.date: 01/28/2021
+ms.openlocfilehash: e5e1c4712965211b25a02b14a7cf2c91d74d8306
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970669"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216006"
 ---
-# <a name="net-core-rid-catalog"></a>.NET Core の RID カタログ
+# <a name="net-rid-catalog"></a>.NET RID カタログ
 
 RID は *ランタイム識別子* の略です。 RID の値は、アプリケーションが実行されている対象プラットフォームの識別に使用されます。
 これは NuGet パッケージのプラットフォーム固有のアセットを表すために、.NET パッケージによって使用されます。 RID は、たとえば `linux-x64`、`ubuntu.14.04-x64`、`win7-x64`、または `osx.10.12-x64` などの値です。
 ネイティブ依存関係のあるパッケージの場合、パッケージを復元できるプラットフォームが RID によって指定されます。
 
-プロジェクト ファイルの `<RuntimeIdentifier>` 要素では、1 つの RID を設定できます。 複数の RID は、プロジェクト ファイルの `<RuntimeIdentifiers>` 要素でセミコロン区切りのリストとして定義できます。 以下の [.NET Core CLI コマンド](./tools/index.md)の `--runtime` オプションで使用することもできます。
+プロジェクト ファイルの `<RuntimeIdentifier>` 要素では、1 つの RID を設定できます。 複数の RID は、プロジェクト ファイルの `<RuntimeIdentifiers>` 要素でセミコロン区切りのリストとして定義できます。 以下の [.NET CLI コマンド](./tools/index.md)の `--runtime` オプションで使用することもできます。
 
 - [dotnet build](./tools/dotnet-build.md)
 - [dotnet clean](./tools/dotnet-clean.md)
@@ -82,7 +82,7 @@ RID を使用する際に留意しておく必要のある注意事項があり�
 RID を使用するには、どのような RID があるのか知る必要があります。 プラットフォームには新しい RID が定期的に追加されます。
 最新の完全なバージョンについては、`dotnet/runtime` リポジトリの [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json) ファイルをご覧ください。
 
-.NET Core 2.0 SDK には、ポータブル RID の概念が導入されています。 それらは、RID グラフに新しく追加された値であり、特定のバージョンや OS のディストリビューションに関連付けられていません。 .NET Core 2.0 以降を使用するときは、それらを選択することをお勧めします。 ほとんどのディストリビューション RID はポータブル RID にマップされるため、複数の Linux ディストリビューションを扱うときは特に便利です。
+ポータブル RID は、RID グラフに追加された値であり、特定のバージョンや OS のディストリビューションに関連付けられていません。 ほとんどのディストリビューション RID はポータブル RID にマップされるため、複数の Linux ディストリビューションを扱うときは特にこれらを選択することをお勧めします。
 
 次の一覧では、各 OS に使用される最も一般的な RID の小さいサブセットを示します。
 
@@ -90,7 +90,7 @@ RID を使用するには、どのような RID があるのか知る必要が�
 
 一般的な値のみを示します。 最新の完全なバージョンについては、`dotnet/runtime` リポジトリの [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json) ファイルをご覧ください。
 
-- ポータブル (.NET Core 2.0 以降のバージョン)
+- 移植性があります。
   - `win-x64`
   - `win-x86`
   - `win-arm`
@@ -108,7 +108,7 @@ RID を使用するには、どのような RID があるのか知る必要が�
   - `win10-arm`
   - `win10-arm64`
 
-詳細については、[.NET Core の依存関係と要件](./install/windows.md#dependencies)に関する記事を参照してください。
+詳細については、[.NET の依存関係と要件](./install/windows.md#dependencies)に関するセクションを参照してください。
 
 ## <a name="linux-rids"></a>Linux RID
 
@@ -127,7 +127,7 @@ RID を使用するには、どのような RID があるのか知る必要が�
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-詳細については、[.NET Core の依存関係と要件](./install/linux.md)に関する記事を参照してください。
+詳細については、[.NET の依存関係と要件](./install/linux.md)に関するセクションを参照してください。
 
 ## <a name="macos-rids"></a>macOS RID
 
@@ -151,7 +151,7 @@ macOS RID では、以前の "OSX" ブランドが使用されています。 �
   - `osx.11.0-x64`
   - `osx.11.0-arm64`
 
-詳細については、[.NET Core の依存関係と要件](./install/macos.md#dependencies)に関する記事を参照してください。
+詳細については、[.NET の依存関係と要件](./install/macos.md#dependencies)に関するセクションを参照してください。
 
 ## <a name="see-also"></a>関連項目
 

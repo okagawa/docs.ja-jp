@@ -3,20 +3,19 @@ title: .NET Core と .NET 5 以降で使用できない .NET Framework テクノ
 titleSuffix: ''
 description: .NET Core と .NET 5.0 以降のバージョンで使用できない .NET Framework テクノロジについて学習します。
 author: cartermp
-ms.date: 10/13/2020
-ms.openlocfilehash: 492aace9db3dc3acef18e995f10b7b5fbe251558
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.date: 01/26/2021
+ms.openlocfilehash: d5926d2c0cfe6d2073ac6ad74046ca48b9cb18f1
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161037"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98898776"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core-and-net-5"></a>.NET Core と .NET 5 以降で使用できない .NET Framework テクノロジ
 
-.NET Framework ライブラリで使用できるテクノロジの中には、.NET Core と .NET 5.0 以降で使用できないものがあります。たとえば、アプリ ドメイン、リモート処理、コード アクセス セキュリティ (CAS)、セキュリティ透過性、<xref:System.EnterpriseServices?displayProperty=fullName> などです。 ご利用のライブラリがこれらのテクノロジの 1 つ以上に依存する場合、ここに記載されている代替方法を検討してください。 API の互換性の詳細については、[.NET の破壊的変更](../compatibility/breaking-changes.md)に関するページを参照してください。
+.NET Framework ライブラリで使用できるテクノロジの中には、.NET Core と .NET 5.0 以降のバージョンで使用できないものがあります。たとえば、アプリ ドメイン、リモート処理、コード アクセス セキュリティ (CAS) などです。 ご利用のライブラリがこのページに一覧表示されているテクノロジの 1 つ以上に依存する場合は、記載されている代替方法を検討してください。
 
-> [!TIP]
-> API またはテクノロジが現在実装されていないからといって、意図的にサポートされていないわけではありません。 .NET GitHub リポジトリを検索して、発生した特定の問題が設計によるものかどうかを確認します。 このようなインジケーターが見つからない場合は、特定の API とテクノロジを求めるために [dotnet/runtime リポジトリ](https://github.com/dotnet/runtime/issues)でイシューを報告してください。
+API の互換性の詳細については、[.NET の破壊的変更](../compatibility/breaking-changes.md)に関するページを参照してください。
 
 ## <a name="application-domains"></a>アプリケーション ドメイン
 
@@ -47,6 +46,10 @@ CAS と同様に、セキュリティ透過性はサンドボックス コード
 ## <a name="systementerpriseservices"></a>System.EnterpriseServices
 
 <xref:System.EnterpriseServices?displayProperty=fullName> (COM+) は、.NET Core および .NET 5 以降によりサポートされていません。
+
+## <a name="workflow-foundation-and-wcf"></a>Workflow Foundation と WCF
+
+Windows Workflow Foundation (WF) と Windows Communication Foundation (WCF) は、.NET 5 以降 (.NET Core を含む) ではサポートされていません。 代替方法については、「[CoreWF](https://github.com/UiPath/corewf)」、および [CoreWCF](https://github.com/CoreWCF/CoreWCF) に関するページを参照してください。
 
 ## <a name="see-also"></a>関連項目
 

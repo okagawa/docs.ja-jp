@@ -1,20 +1,20 @@
 ---
-title: .NET Core の依存関係を管理する
-description: .NET Core アプリケーションのプロジェクトの依存関係を管理する方法について説明します。
+title: .NET の依存関係を管理する
+description: .NET アプリケーションのプロジェクトの依存関係を管理する方法について説明します。
 no-loc:
 - dotnet add package
 - dotnet remove package
 - dotnet list package
 ms.topic: how-to
-ms.date: 02/25/2020
-ms.openlocfilehash: 2aeedb56f774b51076764c2772eb02b2fa095d92
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.date: 01/28/2021
+ms.openlocfilehash: 9f5f814d0b4dc7aa3ff1a938c172475169a55bf2
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062861"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216129"
 ---
-# <a name="manage-dependencies-in-net-core-applications"></a>.NET Core アプリケーションの依存関係を管理する
+# <a name="manage-dependencies-in-net-applications"></a>.NET アプリケーションの依存関係を管理する
 
 この記事では、プロジェクト ファイルを編集するか、CLI を使用して依存関係を追加および削除する方法について説明します。
 
@@ -37,7 +37,7 @@ ms.locfileid: "88062861"
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
-前の例の依存関係は、指定されたターゲットでビルドが行われている場合にのみ有効です。 条件の `$(TargetFramework)` は、プロジェクトで設定される MSBuild プロパティです。 最も一般的な .NET Core アプリケーションの場合、これを行う必要はありません。
+前の例の依存関係は、指定されたターゲットでビルドが行われている場合にのみ有効です。 条件の `$(TargetFramework)` は、プロジェクトで設定される MSBuild プロパティです。 最も一般的な .NET アプリケーションの場合、これを行う必要はありません。
 
 ## <a name="add-a-dependency-by-editing-the-project-file"></a>プロジェクト ファイルを編集して依存関係を追加する
 

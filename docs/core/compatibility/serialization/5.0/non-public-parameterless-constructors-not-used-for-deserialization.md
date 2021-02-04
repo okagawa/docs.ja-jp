@@ -2,12 +2,12 @@
 title: 破壊的変更:非パブリック、パラメーターなしのコンストラクターが逆シリアル化に使用されない
 description: .NET 5.0 での破壊的変更について学習します。JsonSerializer で非パブリック、パラメーターなしのコンストラクターが逆シリアル化に使用されなくなりました。
 ms.date: 10/18/2020
-ms.openlocfilehash: 6bdcc92c61008aa4ee27370bbac4dbf4ee3ef7c8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a2ea54b6a76692dae7d6e01b06b11218d66b1cd7
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759968"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794702"
 ---
 # <a name="non-public-parameterless-constructors-not-used-for-deserialization"></a>非パブリック、パラメーターなしのコンストラクターが逆シリアル化に使用されない
 
@@ -37,7 +37,7 @@ ms.locfileid: "95759968"
 ## <a name="recommended-action"></a>推奨される操作
 
 - 型を所有していて、それが実行可能な場合は、パラメーターなしのコンストラクターをパブリックにします。
-- それ以外の場合は、型に対して `JsonConverter<T>` を実装し、逆シリアル化動作を制御します。
+- それ以外の場合は、型に対して <xref:System.Text.Json.Serialization.JsonConverter%601> を実装し、逆シリアル化動作を制御します。 そのシナリオの C# アクセシビリティ規則で許可されている場合は、<xref:System.Text.Json.Serialization.JsonConverter%601> の実装から非パブリック コンストラクターを呼び出すことができます。
 
 ## <a name="affected-apis"></a>影響を受ける API
 

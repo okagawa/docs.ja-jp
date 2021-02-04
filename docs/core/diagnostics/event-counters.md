@@ -2,12 +2,12 @@
 title: .NET Core の EventCounters
 description: この記事では、EventCounters の概要とその実装方法および使用方法について学習します。
 ms.date: 08/07/2020
-ms.openlocfilehash: 08180b5580d2e7fe782fbd531a26872715825cdf
-ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
+ms.openlocfilehash: 843f1ec645bf7f52fd4f85e30d183e6e21fee5c6
+ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97678202"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99065065"
 ---
 # <a name="eventcounters-in-net-core"></a>.NET Core の EventCounters
 
@@ -195,11 +195,11 @@ EventCounters は Azure Monitor、つまり、Azure Application Insights で使�
 
 まず、カウンター値を生成する <xref:System.Diagnostics.Tracing.EventSource> を有効にする必要があります。 <xref:System.Diagnostics.Tracing.EventSource> が作成されたときに通知を受け取るように <xref:System.Diagnostics.Tracing.EventListener.OnEventSourceCreated%2A?displayProperty=nameWithType> メソッドをオーバーライドします。これが EventCounters に適切な <xref:System.Diagnostics.Tracing.EventSource> である場合は、それに対して <xref:System.Diagnostics.Tracing.EventListener.EnableEvents%2A?displayProperty=nameWithType> を呼び出すことができます。 オーバーライドの例を以下に示します。
 
-:::code language="csharp" source="snippets/EventCounters/SimpleEventListener.cs" range="16-27":::
+:::code language="csharp" source="snippets/EventCounters/SimpleEventListener.cs" range="11-22":::
 
 #### <a name="sample-code"></a>サンプル コード
 
-以下は、内部カウンター (`System.Runtime`) を一定の間隔で公開するために、.NET ランタイムの <xref:System.Diagnostics.Tracing.EventSource> からすべてのカウンターの名前と値を出力する <xref:System.Diagnostics.Tracing.EventListener> クラスのサンプルです。
+以下は、内部カウンター (`System.Runtime`) を 1 秒ごとに公開するために、.NET ランタイムの <xref:System.Diagnostics.Tracing.EventSource> からすべてのカウンターの名前と値を出力する <xref:System.Diagnostics.Tracing.EventListener> クラスのサンプルです。
 
 :::code language="csharp" source="snippets/EventCounters/SimpleEventListener.cs":::
 

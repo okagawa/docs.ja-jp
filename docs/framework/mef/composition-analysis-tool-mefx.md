@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MEF, Composition Analysis Tool
 - Mefx [MEF], Composition Analysis Tool
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
-ms.openlocfilehash: d3f3a282cfa9274a1939d312987dd58b24eab2af
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a7c76bfe169a23322a5a0cdfe0d2e2e5d82f0346
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255794"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957879"
 ---
 # <a name="composition-analysis-tool-mefx"></a>コンポジション分析ツール (Mefx)
 
@@ -130,11 +130,11 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
   
 <a name="white_lists"></a>
 
-## <a name="white-lists"></a>ホワイト リスト  
+## <a name="allow-lists"></a>許可リスト
 
- `/whitelist` オプションでは、拒否されることが予想されるパートの一覧を示すテキスト ファイルを指定できます。 予期されない拒否にはフラグが設定されます。 これは、一部の依存関係が見つからない不完全なライブラリまたはサブライブラリを分析する際に役立ちます。 `/whitelist` オプションは、 `/rejected` アクションまたは `/causes` アクションに適用できます。  
+ `/whitelist` オプションでは、拒否されることが予想されるパートの一覧を示すテキスト ファイルを指定できます。 予期されない拒否にはフラグが設定されます。 これは、不完全なライブラリ、または一部の依存関係が欠落しているサブライブラリを分析する際に役立つ場合があります。 `/whitelist` オプションは、 `/rejected` アクションまたは `/causes` アクションに適用できます。  
   
- "ClassLibrary1.ChainOne" というテキストが含まれた test.txt という名前のファイルがあるとします。 前の例で、 `/rejected` アクションに `/whitelist` オプションを指定して実行すると、次の出力が生成されます。  
+ "ClassLibrary1.ChainOne" というテキストが含まれた test.txt という名前のファイルがあるとします。 前の例で `/rejected` アクションに `/whitelist` オプションを指定して実行すると、次の出力が生成されます。  
   
 ```console
 mefx /file:ClassLibrary1.dll /rejected /whitelist:test.txt  

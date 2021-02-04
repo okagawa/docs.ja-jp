@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK セマンティック モデルの使用
 description: この概要は、コードのセマンティック モデルを理解して操作するために使用する型を理解するためのものです。
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 8575988cd98a4c0ba3f24107788f065f7472f55d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f0d254045a168f82888c5cc77a34f194a68aed0e
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156936"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899127"
 ---
 # <a name="work-with-semantics"></a>セマンティクスの使用
 
@@ -23,7 +23,7 @@ ms.locfileid: "79156936"
 
 ソース コードで表されるプログラム要素がいくつかあります。プログラムは、以前にコンパイルされ、アセンブリ ファイルにパッケージ化されたライブラリを参照することもできます。 アセンブリで使用できるソース コードはありません (したがって、構文ノードやツリーもありません) が、プログラムは引き続き、その内部の要素を参照することができます。
 
-これらのタスクには、**セマンティック モデル**が必要です。
+これらのタスクには、**セマンティック モデル** が必要です。
 
 ソース コードの構文モデルだけでなく、セマンティック モデルでも言語規則がカプセル化されます。これにより、参照される正しいプログラム要素と識別子を簡単に一致させることができます。
 
@@ -41,7 +41,7 @@ ms.locfileid: "79156936"
 
 <xref:Microsoft.CodeAnalysis.Compilation> 型のさまざまなメソッドとプロパティは、シンボルを見つけるのに役立ちます。 たとえば、共通のメタデータ名で宣言された型のシンボルを見つけることができます。 グローバル名前空間をルートとするシンボルのツリーとしてシンボル テーブル全体にアクセスすることもできます。
 
-シンボルには、他の参照シンボルなど、ソースまたはメタデータからコンパイラが判別した追加情報も含まれます。 各種類のシンボルは <xref:Microsoft.CodeAnalysis.ISymbol> から派生した個別のインターフェイスによって表され、それぞれ独自のメソッドとプロパティで、コンパイラが収集した情報が詳細に示されます。 これらのプロパティの多くは、他のシンボルを直接参照します。 たとえば、<xref:Microsoft.CodeAnalysis.IMethodSymbol.ReturnType?displayProperty=nameWithType> プロパティは、メソッドの宣言で参照される実際の型のシンボルを示します。
+シンボルには、他の参照シンボルなど、ソースまたはメタデータからコンパイラが判別した追加情報も含まれます。 各種類のシンボルは <xref:Microsoft.CodeAnalysis.ISymbol> から派生した個別のインターフェイスによって表され、それぞれ独自のメソッドとプロパティで、コンパイラが収集した情報が詳細に示されます。 これらのプロパティの多くは、他のシンボルを直接参照します。 たとえば、<xref:Microsoft.CodeAnalysis.IMethodSymbol.ReturnType?displayProperty=nameWithType> プロパティは、メソッドから返される実際の型のシンボルを示します。
 
 シンボルは、ソース コードとメタデータ間の名前空間、型、メンバーの共通表現を示します。 たとえば、ソース コードで宣言されたメソッドと、メタデータからインポートされたメソッドは両方とも、同じプロパティを持つ <xref:Microsoft.CodeAnalysis.IMethodSymbol> で表されます。
 

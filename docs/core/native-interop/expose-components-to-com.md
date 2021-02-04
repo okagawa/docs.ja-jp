@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 346776ebae3a6077fd39f26d5bd19d599d163db2
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 13c91e5cb6728c5669642d1b5f7bb461efdd44f8
+ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608336"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99065052"
 ---
 # <a name="exposing-net-core-components-to-com"></a>COM への .NET Core コンポーネントの公開
 
@@ -92,6 +92,9 @@ GitHub の dotnet/samples リポジトリには、完全に機能する [COM サ
 ## <a name="additional-notes"></a>補足メモ
 
 .NET Core では、.NET Framework とは異なり、.NET Core アセンブリからの COM タイプ ライブラリ (TLB) の生成はサポートしていません。 このガイダンスは、COM インターフェイスのネイティブ宣言のために、IDL ファイルまたは C/C++ ヘッダーを手動で記述する方法について説明するものです。
+
+> [!IMPORTANT]
+> .NET Framework では、32 ビットと 64 ビットの両方のクライアントで "Any CPU" アセンブリを使用できます。 .NET Core、.NET 5、およびそれ以降のバージョンでは、既定で "Any CPU" アセンブリに 64 ビットの *\*.comhost.dll* が付属しています。 このため、これらを使用できるのは 64 ビットのクライアントでのみとなります。 これは SDK で示されるものであるため、既定値となります。 この動作は、"自己完結型" 機能が公開される方法と同じです。既定では、SDK によって提供されるものが使用されます。 MSBuild の `NETCoreSdkRuntimeIdentifier` プロパティによって、 *\*.comhost.dll* のビットが決まります。 マネージド部分は実際には想定どおりにビットには対応していませんが、付随するネイティブ資産の既定値はターゲットとなる SDK になります。
 
 COM コンポーネントの[自己完結型の配置](../deploying/index.md#publish-self-contained)はサポートされていません。 COM コンポーネントの[フレームワークに依存する配置](../deploying/index.md#publish-framework-dependent)のみがサポートされています。
 

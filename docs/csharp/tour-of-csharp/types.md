@@ -2,14 +2,16 @@
 title: 型とそのメンバーの定義 ‐ C# のツアー
 description: プログラムの構成要素は型です。 C# でクラス、構造体、インターフェイスなどを作成する方法について説明します。
 ms.date: 08/06/2020
-ms.openlocfilehash: efd353fe8c1e6a57952bcb2586a05ad38ecd52b9
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: b1ce24611fec6fdf01d5ecb8d6ae974e147c78c5
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88559116"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216604"
 ---
 # <a name="types-and-members"></a>型とメンバー
+
+C# は、オブジェクト指向言語として、カプセル化、継承、およびポリモーフィズムの概念をサポートしています。 クラスは 1 つの親クラスから直接継承でき、任意の数のインターフェイスを実装できます。 親クラスの仮想メソッドをオーバーライドする場合、誤って再定義しないように、`override` キーワードを指定する必要があります。 C# の構造体はコンパクトなクラスのようなものです。インターフェイスを実装できるスタック割り当て型ですが、継承はサポートされていません。 C# には、主にデータ値を格納する目的を持つクラス型であるレコードも用意されています。
 
 ## <a name="classes-and-objects"></a>クラスとオブジェクト
 
@@ -32,7 +34,7 @@ ms.locfileid: "88559116"
 
 :::code language="csharp" source="./snippets/shared/Types.cs" ID="CreatePoints":::
 
-オブジェクトで占有されたメモリは、そのオブジェクトに到達できなくなると自動的に解放されます。 C# では、オブジェクトの割り当てを明示的に解放する必要がなく、また解放することもできません。
+オブジェクトで占有されたメモリは、そのオブジェクトに到達できなくなると自動的に解放されます。 C# では、オブジェクトの割り当てを明示的に解除する必要がなく、また解除することもできません。
 
 ### <a name="type-parameters"></a>型パラメーター
 

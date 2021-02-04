@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK ワークスペース モデルの使用
 description: この概要は、コードのワークスペースとプロジェクトを照会して操作するために使用する型を理解するためのものです。
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: d21873b132d5f0788033693a319e556feeac59a9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b613c85c01cc054dea9dd4bb9cf0062ffedb08bf
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156884"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899114"
 ---
 # <a name="work-with-a-workspace"></a>ワークスペースの使用
 
@@ -24,7 +24,7 @@ IDE のようなホスト環境では、開いているソリューションに�
 
 ホスト環境から切断されているか、ホスト環境がないアプリケーションで使用されるスタンドアロンのワークスペースを作成することもできます。
 
-## <a name="solutions-projects-documents"></a>ソリューション、プロジェクト、ドキュメント
+## <a name="solutions-projects-and-documents"></a>ソリューション、プロジェクト、およびドキュメント
 
 キーが押されるたびにワークスペースが変更されることがありますが、ソリューションのモデルを単独で操作することができます。
 

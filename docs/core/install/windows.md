@@ -4,12 +4,12 @@ description: .NET をインストールできる Windows のバージョンに�
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 57cebc562949627be70aabe24e75ad4567d072fd
-ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
+ms.openlocfilehash: 33492cc6fa6c64ec3a1d745a4fa0c6cc418f87bd
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98536126"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98898789"
 ---
 # <a name="install-net-on-windows"></a>Windows に .NET をインストールする
 
@@ -56,7 +56,7 @@ Windows 10 のバージョンのサービス終了日は、エディションご
 
 ## <a name="unsupported-releases"></a>サポートされていないリリース
 
-次のバージョンの .NET は、❌ サポート対象外となりました。 これらのダウンロードは、まだ公開されています。
+次のバージョンの .NET は、❌ サポート対象外となりました。 これらのバージョンのダウンロードはまだ公開されています。
 
 - 3.0
 - 2.2
@@ -174,6 +174,18 @@ SDK は、.NET アプリとライブラリを作成して公開するために�
 
 .NET Core 2.1 でサポートされているオペレーティング システム、ディストリビューション、ライフサイクル ポリシーの詳細については、「[.NET Core 2.1 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)」(.NET Core 2.1 でサポートされている OS バージョン) を参照してください。
 
+### <a name="offline-install-for-windows-7"></a>Windows 7 用のオフライン インストール
+
+Windows 7 で .NET Core 2.1 用のオフライン インストールを実行する場合は、まず最新の [Microsoft Root Certificate Authority 2011](https://www.microsoft.com/pkiops/Docs/Repository.htm) がターゲット コンピューターにインストールされていることを確認する必要があります。
+
+_certmgr.exe_ ツールを使用すると、証明書のインストールを自動化できます。これは、Visual Studio または Windows SDK から取得されます。 .NET Core 2.1 インストーラーを実行する前に、次のコマンドを使用して証明書をインストールします。
+
+```console
+certmgr.exe /add MicRooCerAut2011_2011_03_22.crt /s /r localMachine root
+```
+
+[以下の Windows 7](#additional-deps) に必要な依存関係を確認してください。
+
 ---
 
 <!-- markdownlint-disable MD001 -->
@@ -184,7 +196,7 @@ SDK は、.NET アプリとライブラリを作成して公開するために�
 
 | オペレーティング システム         | 前提条件                                                                    |
 |--------------------------|----------------------------------------------------------------------------------|
-| Windows 7 SP1 [ESU][esu] | - Microsoft Visual C++ 2015-2019 再頒布可能パッケージ [64 ビット][vcc64] / [32 ビット][vcc32] <br> - KB3063858 [64 ビット][kb64] / [32 ビット][kb32] <br> - [MicrosoftRootCertificateAuthority2011.cer](https://go.microsoft.com/fwlink/?linkid=747875&clcid=0x409) (.NET Core 2.1 のみ) |
+| Windows 7 SP1 [ESU][esu] | - Microsoft Visual C++ 2015-2019 再頒布可能パッケージ [64 ビット][vcc64] / [32 ビット][vcc32] <br> - KB3063858 [64 ビット][kb64] / [32 ビット][kb32] <br> - [Microsoft Root Certificate Authority 2011](https://www.microsoft.com/pkiops/Docs/Repository.htm) (.NET Core 2.1 のオフライン インストーラーのみ) |
 | Windows Vista SP 2       | Microsoft Visual C++ 2015-2019 再頒布可能パッケージ [64 ビット][vcc64] / [32 ビット][vcc32] |
 | Windows 8.1              | Microsoft Visual C++ 2015-2019 再頒布可能パッケージ [64 ビット][vcc64] / [32 ビット][vcc32] |
 | Windows Server 2008 R2   | Microsoft Visual C++ 2015-2019 再頒布可能パッケージ [64 ビット][vcc64] / [32 ビット][vcc32] |
@@ -288,7 +300,7 @@ dotnet-sdk-3.1.301-win-x64.exe /install /quiet /norestart
 
 ## <a name="download-and-manually-install"></a>手動でダウンロードしてインストールする
 
-.NET 用 Windows インストーラーの代わりに、SDK またはランタイムをダウンロードして手動でインストールすることもできます。 手動インストールは、通常、継続的インテグレーション テストの一環として実行されます。 開発者またはユーザーの場合、通常は[インストーラー](https://dotnet.microsoft.com/download/dotnet-core)を使用することをお勧めします。
+.NET 用 Windows インストーラーの代わりに、SDK またはランタイムをダウンロードして手動でインストールすることもできます。 手動インストールは、通常、継続的インテグレーション テストの一環として行われます。 開発者またはユーザーの場合、通常は[インストーラー](https://dotnet.microsoft.com/download/dotnet-core)を使用することをお勧めします。
 
 .NET SDK と .NET ランタイムはどちらも、ダウンロード後に手動でインストールできます。 .NET SDK をインストールする場合、対応するランタイムをインストールする必要はありません。 まず、次のいずれかのサイトから SDK またはランタイムのバイナリ リリースをダウンロードします。
 
@@ -331,5 +343,5 @@ Docker コンテナー内で .NET を使用する方法の詳細については�
 [esu]: /troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq
 [vcc64]: https://aka.ms/vs/16/release/vc_redist.x64.exe
 [vcc32]: https://aka.ms/vs/16/release/vc_redist.x86.exe
-[kb64]: https://www.microsoft.com/en-us/download/details.aspx?id=47442
-[kb32]: https://www.microsoft.com/en-us/download/details.aspx?id=47409
+[kb64]: https://www.microsoft.com/download/details.aspx?id=47442
+[kb32]: https://www.microsoft.com/download/details.aspx?id=47409

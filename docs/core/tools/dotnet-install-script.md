@@ -2,12 +2,12 @@
 title: dotnet-install スクリプト
 description: .NET SDK と共有ランタイムをインストールするための dotnet-install スクリプトについて説明します。
 ms.date: 09/22/2020
-ms.openlocfilehash: a1598a84aa31aeac970f0493d1481651164d733e
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 1904d0322774de25aeba7e7a53ab36ce135d685d
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634443"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957880"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install スクリプト リファレンス
 
@@ -157,9 +157,15 @@ bash スクリプトは PowerShell のスイッチも読み取るので、Linux/
   - `aspnetcore` - `Microsoft.AspNetCore.App` 共有ランタイム。
   - `windowsdesktop` - `Microsoft.WindowsDesktop.App` 共有ランタイム。
 
-- **`--runtime-id <RID>`**
+- **`--runtime-id <RID>` [非推奨]**
 
-  ツールのインストール先の[ランタイム識別子](../rid-catalog.md)を指定します。 Portable Linux には `linux-x64` を使用します。 (Linux または macOS でのみ有効)。
+  ツールのインストール先の[ランタイム識別子](../rid-catalog.md)を指定します。 Portable Linux には `linux-x64` を使用します。 (Linux または macOS の場合、および .NET Core 2.1 より前のバージョンの場合にのみ有効)。
+
+  **`--os <OPERATING_SYSTEM>`**
+
+  ツールのインストール先のオペレーティング システムを指定します。 指定できる値は、`osx`、`linux`、`linux-musl`、`freebsd`、`rhel.6` です。 (.NET Core 2.1 以降の場合に有効)。
+
+  パラメーターは省略可能です。スクリプトによって検出されたオペレーティング システムをオーバーライドする必要がある場合にのみ使用してください。
 
 - **`-SharedRuntime|--shared-runtime`**
 
