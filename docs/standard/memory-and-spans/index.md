@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Span<T>
 - buffers"
 - pipeline processing
-ms.openlocfilehash: 4b0464cc81cf0908a907f8305ea4e35b716c18fb
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b81531d77bae1dce9d6cf58fe1b5439bf79f9e9c
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830663"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506371"
 ---
 # <a name="memory--and-span-related-types"></a>メモリおよびスパンに関連する型
 
@@ -21,7 +21,7 @@ ms.locfileid: "94830663"
 
 - <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>: <xref:System.Span%601> 構造体の変更できないバージョンです。
 
-- <xref:System.Memory%601?displayProperty=nameWithType>: スタックではなくマネージド ヒープ上に割り当てられるメモリの連続する領域です。 <xref:System.Memory%601> インスタンスは、`T` 型の配列か <xref:System.String> によってバックアップできます。 これはマネージド ヒープに格納できるため、<xref:System.Memory%601> には <xref:System.Span%601> の制限事項はありません。
+- <xref:System.Memory%601?displayProperty=nameWithType>: メモリの隣接した領域に対するラッパーです。 <xref:System.Memory%601> インスタンスは、`T` 型の配列、<xref:System.String>、またはメモリ マネージャーによってバックアップできます。 これはマネージド ヒープに格納できるため、<xref:System.Memory%601> には <xref:System.Span%601> の制限事項はありません。
 
 - <xref:System.ReadOnlyMemory%601?displayProperty=nameWithType>: <xref:System.Memory%601> 構造体の変更できないバージョンです。
 
@@ -34,6 +34,8 @@ ms.locfileid: "94830663"
 - <xref:System.ArraySegment%601>: 特定のインデックスから始まる、特定の数の配列要素のラッパーです。
 
 - <xref:System.MemoryExtensions?displayProperty=nameWithType>: 文字列、配列、および配列セグメントを、<xref:System.Memory%601> ブロックに変換するための拡張メソッドのコレクションです。
+
+<xref:System.Span%601?displayProperty=nameWithType>、<xref:System.Memory%601?displayProperty=nameWithType>、およびそれらに対応する読み取り専用の型は、必要以上にメモリをコピーしたり、マネージド ヒープに割り当てたりすることのないアルゴリズムを作成できるように設計されています。 (`Slice` またはそれらのコンストラクターを使用して) それらを作成しても、基になるバッファーの複製は行われません。ラップされたメモリの "ビュー" を表す関連する参照とオフセットのみが更新されます。
 
 > [!NOTE]
 > 以前のフレームワークでは、[System.Memory NuGet パッケージ](https://www.nuget.org/packages/System.Memory/)で <xref:System.Span%601> と <xref:System.Memory%601> を利用できます。

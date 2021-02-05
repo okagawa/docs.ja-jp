@@ -3,19 +3,19 @@ title: .NET サンプルおよびチュートリアル
 description: .NET Core、ASP.NET Core、C# 言語に関する、.NET の学習に役立つサンプルとチュートリアルの情報です。
 author: BillWagner
 ms.author: wiwagn
-ms.date: 08/19/2020
-ms.openlocfilehash: 00718491df00e5747ba6e0043b70dc1019dd906b
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.date: 02/01/2021
+ms.openlocfilehash: 3f54221f0b22b2ee24750c01885e39a6eec39e0e
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805012"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506410"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET サンプルおよびチュートリアル
 
-.NET ドキュメントには、.NET について学習できるサンプルとチュートリアルが含まれています。 この記事では、.NET Core、ASP.NET Core、C# のサンプルとチュートリアルを検索、表示、ダウンロードする方法について説明します。 F# プログラミング言語の学習に最適なリソースは [F# Foundation のサイト](https://fsharp.org/learn/)にあります。 オンラインでのコード エディターを使用して C# を学習する場合は、まず[この対話型のチュートリアル](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)、次に [C# の対話型チュートリアル](../csharp/tutorials/intro-to-csharp/index.md)をご覧ください。 サンプル コードの表示とダウンロード方法については、「[サンプルの表示とダウンロード](#view-and-download-samples)」セクションをご覧ください。
+.NET ドキュメントには、.NET について学習できるサンプルとチュートリアルが含まれています。 この記事では、.NET、ASP.NET Core、C# のサンプルとチュートリアルを検索、表示、ダウンロードする方法について説明します。 F# プログラミング言語の学習に最適なリソースは [F# Foundation のサイト](https://fsharp.org/learn/)にあります。 オンラインでのコード エディターを使用して C# を学習する場合は、まず[この対話型のチュートリアル](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)、次に [C# の対話型チュートリアル](../csharp/tutorials/intro-to-csharp/index.md)をご覧ください。 サンプル コードの表示とダウンロード方法については、「[サンプルの表示とダウンロード](#view-and-download-samples)」セクションをご覧ください。
 
-## <a name="net-core"></a>.NET Core
+## <a name="net"></a>.NET
 
 ### <a name="samples"></a>サンプル
 
@@ -25,13 +25,15 @@ ms.locfileid: "91805012"
 
 ### <a name="tutorials"></a>チュートリアル
 
-**[チュートリアル: Visual Studio Code を使用して .NET Core コンソール アプリケーションを作成する](../core/tutorials/with-visual-studio-code.md)**
+**[チュートリアル: Visual Studio Code を使用して .NET コンソール アプリケーションを作成する](../core/tutorials/with-visual-studio-code.md)**
 
-このチュートリアルでは、Visual Studio Code と .NET Core CLI を使用して .NET Core コンソール アプリケーションを作成して実行する方法について説明します。 プロジェクトの作成、コンパイル、実行などのプロジェクト タスクは、.NET Core CLI を使用して実行されます。
+このチュートリアルでは、Visual Studio Code と .NET CLI を使用して NET コンソール アプリケーションを作成して実行する方法を示します。 プロジェクトの作成、コンパイル、実行などのプロジェクト タスクは、.NET CLI を使用して行われます。
 
-**[クロス プラットフォーム ツールによるライブラリの作成](../core/tutorials/libraries.md)**
+**[チュートリアル: Visual Studio Code を使用して .NET クラス ライブラリを作成する](../core/tutorials/library-with-visual-studio-code.md)**
 
-このサンプルでは、.NET Core CLI を使用して .NET 用ライブラリを作成する方法について説明します。 これらのツールは、サポートされる任意のオペレーティング システムで動作する効率的で低レベルのエクスペリエンスを提供します。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library)は、GitHub の dotnet/samples リポジトリにあります。
+このチュートリアルでは、Visual Studio Code と .NET CLI を使用して .NET 用ライブラリを作成する方法について説明します。 プロジェクトの作成、コンパイル、実行などのプロジェクト タスクは、.NET CLI を使用して行われます。
+
+.NET チュートリアルについて詳しくは、[.NET および .NET SDK ツールの学習](../core/tutorials/index.md)に関する記事を参照してください。
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
@@ -83,13 +85,13 @@ ms.locfileid: "91805012"
 
 このチュートリアルでは、LINQ の多くの機能と、それをサポートする言語要素について説明します。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq)は、GitHub の dotnet/samples リポジトリにあります。
 
-**[チュートリアル: Visual Studio for Mac を使用して .NET Core コンソール アプリケーションを作成する](../core/tutorials/with-visual-studio-mac.md)**
+**[チュートリアル: Visual Studio for Mac を使用して .NET コンソール アプリケーションを作成する](../core/tutorials/with-visual-studio-mac.md)**
 
-このチュートリアルでは、Visual Studio for Mac を使用した、簡単な .NET Core コンソール アプリを構築する方法を示します。
+このチュートリアルでは、Visual Studio for Mac を使用した、簡単な .NET コンソール アプリを構築する方法を示します。
 
-**[Visual Studio for Mac を使用して macOS で .NET Standard ライブラリを作成する](../core/tutorials/library-with-visual-studio-mac.md)**
+**[Visual Studio for Mac を使用して macOS で .NET クラス ライブラリを作成する](../core/tutorials/library-with-visual-studio-mac.md)**
 
-このチュートリアルでは、Visual Studio for Mac を使用して .NET Standard ライブラリを構築する方法について説明します。
+このチュートリアルでは、Visual Studio for Mac を使用して .NET クラス ライブラリを構築する方法について説明します。
 
 **[プラグインをサポートする .NET Core アプリケーションの作成](../core/tutorials/creating-app-with-plugin-support.md)**
 
@@ -111,7 +113,7 @@ ms.locfileid: "91805012"
    * リポジトリをローカル環境にクローンします。 ローカル システムにドキュメントのリポジトリを直接クローンすると、公式のリポジトリに対して直接コミットできないため、後でドキュメントに貢献できなくなります。 後でドキュメントに貢献する可能性がある場合は、前述のフォークとクローンの手順を使用してください。
 1. リポジトリ フォルダー内のサンプルがある場所に移動します。 サンプルへのリンクをクリックすると、サンプルがある場所への相対パスがブラウザーのアドレス バーに表示されます。
 1. サンプルを実行するには、次のいくつかのオプションがあります。
-   * [.NET Core CLI](../core/tools/index.md) を使用する:コンソール ウィンドウで、サンプルのフォルダーに移動し、dotnet CLI コマンドを使用する。
+   * [.NET CLI](../core/tools/index.md) を使用する: コンソール ウィンドウで、サンプルのフォルダーに移動し、dotnet CLI コマンドを使用する。
    * [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) または [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) を使用する: メニュー バーから **[ファイル] > [開く] > [プロジェクト/ソリューション]** の順に選択し、サンプルを開きます。次にサンプルのプロジェクト フォルダーに移動し、プロジェクト ファイル ( *.csproj* または *.fsproj*) を選択します。
    * [Visual Studio Code](https://code.visualstudio.com/) を使用する: メニュー バーから **[ファイル] > [フォルダーを開く]** の順に選択し、サンプルのプロジェクト フォルダーを選択してサンプルを開きます。
-   * .NET Core プロジェクトをサポートする別の IDE を使用する。
+   * .NET プロジェクトをサポートする別の IDE を使用する。

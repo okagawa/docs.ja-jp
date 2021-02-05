@@ -2,19 +2,19 @@
 title: Azure 向けクラウド ネイティブ .NET アプリケーションの設計
 description: Azure のコンテナー、マイクロサービス、サーバーレス機能を活用するクラウドネイティブなアプリケーションを構築するためのガイド。
 author: ardalis
-ms.date: 11/10/2020
-ms.openlocfilehash: 673bfef27c3767f68b1c30d4383cee010ba377f0
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.date: 01/19/2021
+ms.openlocfilehash: ad641517f9dc24aed9180cf6a092f4754739bceb
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506650"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506124"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Azure 向けクラウド ネイティブ .NET アプリケーションの設計
 
 ![カバーの画像](./media/cover.png)
 
-**エディション v1.0**
+**エディション v1.0.2**
 
 書籍の更新とコミュニティへの投稿については、「[changelog](https://aka.ms/cn-ebook-changelog)」を参照してください。
 
@@ -28,7 +28,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright &copy; 2020 by Microsoft Corporation
+Copyright &copy; 2021 by Microsoft Corporation
 
 All rights reserved. 本書のいかなる部分も、書面による発行者の許可なしに、いかなる形式または方法によっても、複製または伝送することを禁じます。
 
@@ -46,27 +46,31 @@ Docker のクジラのロゴは Docker, Inc. の登録商標です。許可を�
 
 作成者:
 
-> **Rob Vettor** 、Microsoft、プリンシパル クラウド システム アーキテクト/IP アーキテクト - [thinkingincloudnative.com](https://thinkingincloudnative.com/about/)
+> **Rob Vettor**、Microsoft、プリンシパル クラウド システム アーキテクト/IP アーキテクト - [thinkingincloudnative.com](https://thinkingincloudnative.com/about/)
 >
-> **Steve "ardalis" Smith** 、ソフトウェア アーキテクトおよびトレーナー - [Ardalis.com](https://ardalis.com)
+> **Steve "ardalis" Smith**、ソフトウェア アーキテクトおよびトレーナー - [Ardalis.com](https://ardalis.com)
 
 参加者とレビュー担当者:
 
-> **Cesar De la Torre** 、Microsoft、.NET チーム、プリンシパル プログラム マネージャー
+> **Cesar De la Torre**、Microsoft、.NET チーム、プリンシパル プログラム マネージャー
 >
-> **Nish Anil** 、Microsoft、.NET チーム、シニア プログラム マネージャー
+> **Nish Anil**、Microsoft、.NET チーム、シニア プログラム マネージャー
 >
-> **Jeremy Likness** 、Microsoft、.NET チーム、シニア プログラム マネージャー
+> **Jeremy Likness**、Microsoft、.NET チーム、シニア プログラム マネージャー
 >
-> **Cecil Phillip** 、Microsoft、上級クラウド アドボケイト
+> **Cecil Phillip**、Microsoft、上級クラウド アドボケイト
+>
+> **Sumit Ghosh**、Neudesic、主席コンサルタント
 
 編集者:
 
-> **Maira Wenzel** 、Microsoft、.NET チーム、シニア プログラム マネージャー
+> **Maira Wenzel**、Microsoft、.NET チーム、シニア プログラム マネージャー
+
+> **David Pine**、Microsoft、.NET Docs、シニア コンテンツ開発者
 
 ## <a name="version"></a>バージョン
 
-このガイドは、 **.NET Core 3.1** バージョンと、.NET Core 3.1 のリリースと同時期に更新された関連するその他の多数の同じ “相次ぐ” テクノロジ (つまり、Azure やサードパーティ製のテクノロジ) を説明するように記述されています。
+このガイドは、 **.NET 5** バージョンと、.NET 5 のリリースと同時期に更新された関連するその他の多数の同じ "相次ぐ" テクノロジ (つまり、Azure やサードパーティ製のテクノロジ) を説明するように記述されています。
 
 ## <a name="who-should-use-this-guide"></a>対象読者
 
