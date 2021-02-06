@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback:: COMClassicVTableCreated メソッド'
 title: ICorProfilerCallback::COMClassicVTableCreated メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e1834ab-c359-498a-b10b-984ae23cdda4
 topic_type:
 - apiref
-ms.openlocfilehash: c4d1f2467927e64ae08c0e7d8067c2ce96b95522
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 134ca44cbcd7a275e3ad61a3dd4decaa92668b5b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700211"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99657711"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>ICorProfilerCallback::COMClassicVTableCreated メソッド
 
@@ -54,7 +55,7 @@ HRESULT COMClassicVTableCreated(
 
   \[in] vtable 内のスロットの数。
 
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  プロファイラーは、このメソッドの実装でブロックしないでください。スタックがガベージコレクションを許可する状態にならないため、プリエンプティブガベージコレクションを有効にすることはできません。 プロファイラーがここでブロックし、ガベージコレクションを実行しようとすると、このコールバックが戻るまでランタイムはブロックします。  
   

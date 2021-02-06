@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback:: RuntimeThreadSuspended メソッド'
 title: ICorProfilerCallback::RuntimeThreadSuspended メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de830a8b-6ee1-4900-ace3-4237108f6b12
 topic_type:
 - apiref
-ms.openlocfilehash: 33a39cf2781f49ff0e31989831c4c9829889ec3d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f7c2f5baf5a320375d9a2606ca05b13d522336be
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732000"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99657334"
 ---
 # <a name="icorprofilercallbackruntimethreadsuspended-method"></a>ICorProfilerCallback::RuntimeThreadSuspended メソッド
 
@@ -38,7 +39,7 @@ HRESULT RuntimeThreadSuspended(
  `threadId`  
  から中断されたスレッドの ID。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  通知は、 `RuntimeThreadSuspended` [ICorProfilerCallback:: RuntimeSuspendStarted](icorprofilercallback-runtimesuspendstarted-method.md) と、関連付けられている [ICorProfilerCallback:: RuntimeResumeStarted](icorprofilercallback-runtimeresumestarted-method.md) コールバックの間でいつでも発生する可能性があります。 [ICorProfilerCallback:: RuntimeSuspendFinished](icorprofilercallback-runtimesuspendfinished-method.md)との間で発生する通知 `RuntimeResumeStarted` は、アンマネージコードで実行されていて、ランタイムへの入力時に中断されたスレッド用です。  
   

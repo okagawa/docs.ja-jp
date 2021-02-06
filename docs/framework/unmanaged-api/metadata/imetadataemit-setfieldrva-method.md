@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataEmit:: SetFieldRVA メソッド'
 title: IMetaDataEmit::SetFieldRVA メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6dc37f9d-87ee-4cb3-9216-ced600184ce8
 topic_type:
 - apiref
-ms.openlocfilehash: 8468b0e7faa520fe2d27e17674af5503871d3b62
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5d78880b892dc948337aa1ec1a471a5d380f1e2f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730384"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99657932"
 ---
 # <a name="imetadataemitsetfieldrva-method"></a>IMetaDataEmit::SetFieldRVA メソッド
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback:: RuntimeSuspendStarted メソッド'
 title: ICorProfilerCallback::RuntimeSuspendStarted メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c8461cac-e31b-4efa-ad2c-26598173eb96
 topic_type:
 - apiref
-ms.openlocfilehash: b778088f53a3c49def95d715f5fefcb26af81489
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7f7ba6a2a8523589b025d98ea925b77d05d8a59d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731983"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99657425"
 ---
 # <a name="icorprofilercallbackruntimesuspendstarted-method"></a>ICorProfilerCallback::RuntimeSuspendStarted メソッド
 
@@ -38,7 +39,7 @@ HRESULT RuntimeSuspendStarted(
  `suspendReason`  
  から中断の理由を示す [COR_PRF_SUSPEND_REASON](cor-prf-suspend-reason-enumeration.md) 列挙体の値。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  アンマネージコード内のすべてのランタイムスレッドは、ランタイムを再入力しようとするまで実行を継続できます。 その時点で、ランタイムが再開されるまで中断されます。 これは、ランタイムに入る新しいスレッドにも当てはまります。 ランタイム内のすべてのスレッドは、割り込み可能なコードに既に存在する場合は直ちに中断されます。または、割り込み可能なコードになると中断するように求められます。  
   

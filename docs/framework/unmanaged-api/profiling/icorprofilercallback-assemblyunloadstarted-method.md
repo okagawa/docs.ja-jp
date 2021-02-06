@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback:: AssemblyUnloadStarted メソッド'
 title: ICorProfilerCallback::AssemblyUnloadStarted メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e47b7e5-0335-4dd3-8c42-d3c07d62b102
 topic_type:
 - apiref
-ms.openlocfilehash: bb7dade1ccd46cb9e13d45468c2ca2a8b451b70b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e9c72d481df7242f305b5efa6f747866984b31f7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700302"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99657835"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>ICorProfilerCallback::AssemblyUnloadStarted メソッド
 
@@ -39,7 +40,7 @@ HRESULT AssemblyUnloadStarted(
 
   \[in] は、アンロードされるアセンブリを識別します。
 
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `assemblyId`メソッドから制御が戻った後、の値は情報要求に対して無効です `AssemblyUnloadStarted` 。これは、このアセンブリに関する情報を取得する最後の機会です。  
   

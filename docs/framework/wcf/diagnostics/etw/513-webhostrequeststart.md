@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 513-WebHostRequestStart'
 title: 513 - WebHostRequestStart
 ms.date: 03/30/2017
 ms.assetid: d664cf1e-f114-4441-8c59-65b98ea498e9
-ms.openlocfilehash: bd9b0f21a10bcf2e86fb7f1bb6b06d45b4984561
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 946659733068155b9cacf73db475dac40bb5d4cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287099"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99656190"
 ---
 # <a name="513---webhostrequeststart"></a>513 - WebHostRequestStart
 
@@ -15,12 +16,12 @@ ms.locfileid: "96287099"
   
 |||  
 |-|-|  
-|ID|513|  
+|id|513|  
 |Keywords|WebHost|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、WebHostRequest が開始されたときに生成されます。  
   

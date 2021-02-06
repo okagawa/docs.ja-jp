@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback:: UnmanagedToManagedTransition メソッド'
 title: ICorProfilerCallback::UnmanagedToManagedTransition メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ade2cc01-9b81-4e09-a5f9-b3b9dda27e96
 topic_type:
 - apiref
-ms.openlocfilehash: 446de663d437c950f3a9be968e7dcbe8d25ed2b0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2b2bd86798df8b8c46506c924ee201c191e6cb82
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717265"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99657145"
 ---
 # <a name="icorprofilercallbackunmanagedtomanagedtransition-method"></a>ICorProfilerCallback::UnmanagedToManagedTransition メソッド
 
@@ -42,7 +43,7 @@ HRESULT UnmanagedToManagedTransition(
  `reason`  
  からアンマネージコードからのマネージコードの呼び出しによって移行が発生したかどうか、またはマネージ関数によって呼び出されたアンマネージ関数からの戻りが原因で発生したかどうかを示す [COR_PRF_TRANSITION_REASON](cor-prf-transition-reason-enumeration.md) 列挙体の値。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  の値 `reason` が COR_PRF_TRANSITION_RETURN であり、 `functionId` が null でない場合、関数 ID はアンマネージ関数の ID であり、JUST-IN-TIME (JIT) コンパイラを使用してコンパイルされることはありません。 アンマネージ関数には、名前やメタデータなど、いくつかの基本的な情報が関連付けられています。  
   

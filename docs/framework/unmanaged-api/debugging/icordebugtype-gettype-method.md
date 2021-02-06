@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: の型:: GetType type:: GetType メソッド'
 title: ICorDebugType::GetType メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d6e64534-4d47-4ad0-a340-7590e07e2b4a
 topic_type:
 - apiref
-ms.openlocfilehash: f0f45d5f0b2ea8cefa6bd36e909ae43d80c968ed
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 922791e51855badfb1fd548e08953a2f660f971a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700887"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99658218"
 ---
 # <a name="icordebugtypegettype-method"></a>ICorDebugType::GetType メソッド
 
@@ -39,7 +40,7 @@ HRESULT GetType (
  `ty`  
  入出力 `CorElementType` このが表す CLR を示す列挙体の値へのポインター <xref:System.Type> `ICorDebugType` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  の値 `ty` が ELEMENT_TYPE_CLASS または ELEMENT_TYPE_VALUETYPE の場合は、インスタンス type [:: getclass](icordebugtype-getclass-method.md) メソッドを呼び出してジェネリック型の型を取得することができます。それ以外の場合は、を呼び出さないで `ICorDebugType::GetClass` ください。  
   

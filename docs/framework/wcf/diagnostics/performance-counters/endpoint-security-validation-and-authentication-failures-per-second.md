@@ -1,19 +1,20 @@
 ---
+description: '詳細については、「エンドポイント: 1 秒あたりのセキュリティ検証と認証エラー」を参照してください。'
 title: 'エンドポイント : 1 秒あたりのセキュリティ検証と認証エラー'
 ms.date: 03/30/2017
 ms.assetid: 89a70b90-d7e4-4b03-9b84-4dc88ce3d605
-ms.openlocfilehash: b2c5022caa5abe6154a3cb4dd4281dd212599b74
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: aa5ccc4049dc81a7c2d545cfc70e9078ac72d87a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96256483"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99655436"
 ---
 # <a name="endpoint-security-validation-and-authentication-failures-per-second"></a>エンドポイント : 1 秒あたりのセキュリティ検証と認証エラー
 
 カウンター名 : 1 秒あたりのセキュリティ検証と認証エラー  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このカウンターは、"承認されていないセキュリティ呼び出し" カウンターでカウントの対象とならないセキュリティ上の問題が原因でメッセージが拒否されるたびにインクリメントされます。 この問題には、次のようなものがあります。  
   

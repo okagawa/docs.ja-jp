@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 4015-MessageQueueRegisterCompleted'
 title: 4015 - MessageQueueRegisterCompleted
 ms.date: 03/30/2017
 ms.assetid: d8d65570-9dcc-436c-b446-a33404e31652
-ms.openlocfilehash: ae45ccf730077ddabbd09d94b63ebd060a9c7ddb
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f02675c8e0f4740d1b13fd28eb166ef6b6324789
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96266130"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99656827"
 ---
 # <a name="4015---messagequeueregistercompleted"></a>4015 - MessageQueueRegisterCompleted
 
@@ -15,12 +16,12 @@ ms.locfileid: "96266130"
   
 |||  
 |-|-|  
-|ID|4015|  
+|id|4015|  
 |Keywords|ActivationServices|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、メッセージ キューの登録が完了したときに生成されます。  
   

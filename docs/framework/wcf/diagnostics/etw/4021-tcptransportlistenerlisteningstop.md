@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 4021-TcpTransportListenerListeningStop'
 title: 4021 - TcpTransportListenerListeningStop
 ms.date: 03/30/2017
 ms.assetid: 00108ffa-fe02-477e-b9aa-6f08f6849cd2
-ms.openlocfilehash: a5aae7f1dbec809ebe635cf1d73797adabaca2a3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 09f5d9f70e4bf5a740951767bf8d06d9bd6f4f3d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275750"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99656658"
 ---
 # <a name="4021---tcptransportlistenerlisteningstop"></a>4021 - TcpTransportListenerListeningStop
 
@@ -15,12 +16,12 @@ ms.locfileid: "96275750"
   
 |||  
 |-|-|  
-|ID|4021|  
+|id|4021|  
 |Keywords|ActivationServices|  
 |Level|"詳細"|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、TCP トランスポート リスナーがリッスンしているときに生成されます。  
   

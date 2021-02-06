@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback:: ThreadCreated メソッド'
 title: ICorProfilerCallback::ThreadCreated メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cca0f799-09b8-4689-a33c-6d6537943a9b
 topic_type:
 - apiref
-ms.openlocfilehash: 72b074d1794a6039060cbd84aabb0bc0155c154e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8b6208856b78298f643161cd6bb78773ac86bc3b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717271"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99657204"
 ---
 # <a name="icorprofilercallbackthreadcreated-method"></a>ICorProfilerCallback::ThreadCreated メソッド
 
@@ -38,7 +39,7 @@ HRESULT ThreadCreated(
  `threadId`  
  から作成されたスレッドの ID。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  この `threadId` 値はすぐに有効です。  
   

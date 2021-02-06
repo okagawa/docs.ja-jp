@@ -1,13 +1,14 @@
 ---
+description: '詳細について: ISymUnmanagedAsyncMethod:: GetCatchHandlerILOffset メソッド'
 title: ISymUnmanagedAsyncMethod::GetCatchHandlerILOffset メソッド
 ms.date: 03/30/2017
 ms.assetid: d5f88656-433d-447c-b21c-2a12bed2e72a
-ms.openlocfilehash: f5bb5f069060baa9d553d72ccf6274bbc70c2575
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9b081087a401d51ab83d5043302ad30be07290bf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707205"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99658114"
 ---
 # <a name="isymunmanagedasyncmethodgetcatchhandleriloffset-method"></a>ISymUnmanagedAsyncMethod::GetCatchHandlerILOffset メソッド
 
@@ -27,7 +28,7 @@ HRESULT GetCatchHandlerILOffset(    [out, retval] ULONG32* pRetVal);
   
 ## <a name="return-value"></a>戻り値  
 
- `HRESULT` を返します。  
+ `HRESULT` が返されます。  
   
 ## <a name="requirements"></a>要件  
 

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: WebHostUnhandledException'
 title: WebHostUnhandledException
 ms.date: 03/30/2017
 ms.assetid: 9e8564c6-8fd2-4bc9-85b5-68e0b55438ee
-ms.openlocfilehash: 12d96a19c96802aeaf81bafaeb7eeb999514f94a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a8fc7a0dde5f7860791673364f771ccb041a804e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253766"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99655605"
 ---
 # <a name="webhostunhandledexception"></a>WebHostUnhandledException
 
@@ -17,7 +18,7 @@ Id: 109
   
  カテゴリ : ServiceModel  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、WebHost で処理されない例外が発生したことを示します。 イベントには、送信者の情報、例外、プロセス名、およびプロセス ID が表示されます。  
   
