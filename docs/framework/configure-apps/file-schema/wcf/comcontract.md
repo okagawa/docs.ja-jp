@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <comContract>'
 title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: 35596f32bf0e0de9081bc0d4c33fb370c7ab708b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: fde1188a087f13da6629460bcebcea16ceefc0e8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173784"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638666"
 ---
 # \<comContract>
 
@@ -51,7 +52,7 @@ COM+ 統合サービス コントラクトを指定します。
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |コントラクト (contract)|コントラクトの種類を含む文字列。|  
 |name|コントラクト名を含む文字列。|  

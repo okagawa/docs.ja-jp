@@ -1,13 +1,14 @@
 ---
+description: 詳細については <certificate> 、 <peer>
 title: <certificate> の <peer>
 ms.date: 03/30/2017
 ms.assetid: 48b69142-c957-4305-a042-c9d0c9a55c0e
-ms.openlocfilehash: 8ec839df02af4a01d31192eebc96e4c5e58313e9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e48a96a3f1fa486b19289584ae0c059eb5b7048d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91151117"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639056"
 ---
 # <a name="certificate-of-peer"></a>\<certificate> の \<peer>
 
@@ -37,7 +38,7 @@ ms.locfileid: "91151117"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |`findValue`|X.509 証明書ストアで検索する値を含む文字列。 属性に格納されている型は、指定された `x509FindType` の要件を満たす必要があります。 既定値は空の文字列です。|  
 |`storeLocation`|クライアントがピアの証明書の検証に使用する X.509 証明書ストアの場所を指定します。 有効な値は次のとおりです。<br /><br /> -LocalMachine: ローカルコンピューターに割り当てられた証明書ストア。<br />-CurrentUser: 現在のユーザーに割り当てられている証明書ストア。<br /><br /> 既定値は LocalMachine です。|  
@@ -68,7 +69,7 @@ ms.locfileid: "91151117"
 - <xref:System.ServiceModel.Security.PeerCredential.Certificate%2A>
 - <xref:System.ServiceModel.Security.PeerCredential>
 - [証明書の使用](../../../wcf/feature-details/working-with-certificates.md)
-- [ピアツーピアネットワーク](../../../wcf/feature-details/peer-to-peer-networking.md)
+- [ピアツーピア ネットワーク](../../../wcf/feature-details/peer-to-peer-networking.md)
 - [ピア チャネル メッセージの認証](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
 - [ピア チャネル カスタム認証](/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [セキュリティによるピア チャネル アプリケーションの保護](../../../wcf/feature-details/securing-peer-channel-applications.md)

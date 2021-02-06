@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: AddFile2 メソッド'
 title: AddFile2 メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 03bc49bf-a89b-4fb6-a88d-97482e061195
 topic_type:
 - apiref
-ms.openlocfilehash: cff6707496c7d9657796deb8bf6fa9165ff295a2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d53527ecf7e8b3a99a11ea99512fbc812125de3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717085"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638614"
 ---
 # <a name="addfile2-method"></a>AddFile2 メソッド
 

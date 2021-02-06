@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRReferenceAssemblyEnum:: Get メソッド'
 title: ICLRReferenceAssemblyEnum::Get メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f21c1612-9c5d-4abc-a337-577086d29c17
 topic_type:
 - apiref
-ms.openlocfilehash: 3968adf418fcea847ee2be5a412385d041a53544
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ea4e71631a9ebb381f721b78f17507603891a032
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728908"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637301"
 ---
 # <a name="iclrreferenceassemblyenumget-method"></a>ICLRReferenceAssemblyEnum::Get メソッド
 
@@ -60,7 +61,7 @@ HRESULT Get (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返す場合、そのプロセス内で CLR は使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `Get` は通常、2回呼び出されます。 最初の呼び出しでは、に null 値を指定し、に `pwzBuffer` `pcchBufferSize` 適したサイズに設定し `pwzBuffer` ます。 2番目の呼び出しでは、適切にサイズ `pwzBuffer` を指定し、完了時に正規のアセンブリ id データを格納します。  
   

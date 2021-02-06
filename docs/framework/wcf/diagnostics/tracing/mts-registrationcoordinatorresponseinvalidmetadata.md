@@ -1,19 +1,20 @@
 ---
+description: 詳細については、RegistrationCoordinatorResponseInvalidMetadata を参照してください。
 title: Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorResponseInvalidMetadata
 ms.date: 03/30/2017
 ms.assetid: a174bbf5-0ffe-4fda-969d-e7fbd1996123
-ms.openlocfilehash: 65c82541e04bba71bf786681757f07efc1df41ca
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 2eeb5955f2d0bf3afd01ebfc7474cbccbcb70980
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96236664"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99635689"
 ---
 # <a name="microsofttransactionstransactionbridgeregistrationcoordinatorresponseinvalidmetadata"></a>Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorResponseInvalidMetadata
 
 WS-AtomicTransaction プロトコル サービスは、無効または互換性のないメタデータのあるエンドポイント参照を含むそのコーディネーターから、RegisterResponse メッセージを受信しました。  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  ローカルのトランザクション マネージャーが、その上位のトランザクション マネージャーに登録を試み、上位のトランザクション マネージャーが、RegisterResponse メッセージ内の無効なアドレスを返すときにトレースされます。  
   

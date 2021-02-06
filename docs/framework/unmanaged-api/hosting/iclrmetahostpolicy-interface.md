@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICLRMetaHostPolicy インターフェイス」を参照してください。
 title: ICLRMetaHostPolicy インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1bdeccb6-0698-4c97-ad69-eae2b69e59f1
 topic_type:
 - apiref
-ms.openlocfilehash: 515b73b019c683bd3e5aa3b895ee5623e75e4ad0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b14ad417617c32242f8a59844f7c1f1a8d05c78d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707608"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637418"
 ---
 # <a name="iclrmetahostpolicy-interface"></a>ICLRMetaHostPolicy インターフェイス
 
@@ -31,7 +32,7 @@ ms.locfileid: "95707608"
 |------------|-----------------|  
 |[GetRequestedRuntime メソッド](iclrmetahostpolicy-getrequestedruntime-method.md)|ポリシー条件、マネージアセンブリ、バージョン、および構成ファイルに基づいて、優先する CLR インターフェイスを提供します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このインターフェイスへの参照を取得するには、次のコードに示すように [Clrcreateinstance](clrcreateinstance-function.md) 関数を呼び出します。  
   

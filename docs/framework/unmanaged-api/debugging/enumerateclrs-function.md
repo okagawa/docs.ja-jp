@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「列挙 Ateclrs 関数」を参照してください。
 title: EnumerateCLRs 関数
 ms.date: 03/30/2017
 api_name:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f8d50cb3-ec4f-4529-8fe3-bd61fd28e13c
 topic_type:
 - apiref
-ms.openlocfilehash: 8fe0df3ee08f9915ed43990b6f9686e25b183a0b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 75124ef1e1e8588cb3d709161c3c1119e960be9e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676102"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637782"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs 関数
 
@@ -66,7 +67,7 @@ HRESULT EnumerateCLRs (
  E_FAIL (またはその他の E_ リターン コード)  
  読み込まれている CLR を列挙できません。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  この関数は、`debuggeePID` で指定された対象プロセスについて、プロセスに読み込まれている CLR のパスの配列 (`ppStringArrayOut`)、同じインデックスにある CLR の継続スタートアップ イベントを含むイベント ハンドルの配列 (`ppHandleArrayOut`)、および読み込まれている CLR の数を示す配列のサイズ (`pdwArrayLengthOut`) を返します。  
   

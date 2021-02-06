@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次の情報を参照してください: テキストボックス'
 title: ICorDebugNativeFrame::CanSetIP メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 13258ac6-f4e4-4f66-8fc3-f1244417a3c3
 topic_type:
 - apiref
-ms.openlocfilehash: 194065e53d550c9bbd0486de54462309a4d9ffa1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ec8f257b44143332063d7579b62dcc2afe0fccdd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695739"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637860"
 ---
 # <a name="icordebugnativeframecansetip-method"></a>ICorDebugNativeFrame::CanSetIP メソッド
 
@@ -39,7 +40,7 @@ HRESULT CanSetIP (
  `nOffset`  
  から命令ポインターに必要な設定。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  次のメソッドを使用して、 `CanSetIP` [テキストボックス:: SetIP](icordebugnativeframe-setip-method.md) メソッドを呼び出します。 が `CanSetIP` S_OK 以外の HRESULT を返した場合でもを呼び出すことはでき `ICorDebugNativeFrame::SetIP` ますが、デバッガーがデバッグ中のコードの安全かつ適切な実行を継続する保証はありません。  
   

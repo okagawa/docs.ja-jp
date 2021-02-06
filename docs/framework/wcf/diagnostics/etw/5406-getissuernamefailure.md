@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 5406-GetIssuerNameFailure'
 title: 5406 - GetIssuerNameFailure
 ms.date: 03/30/2017
 ms.assetid: ea38c75b-f594-49c1-8800-ccbf1b8306f1
-ms.openlocfilehash: 1b4b5bd3bc4c72cc6b7c55f936ad4f0303dfbec1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: dc241e436f805cce91050537a98f3da1f74ca480
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276374"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636079"
 ---
 # <a name="5406---getissuernamefailure"></a>5406 - GetIssuerNameFailure
 
@@ -15,12 +16,12 @@ ms.locfileid: "96276374"
   
 |||  
 |-|-|  
-|ID|5406|  
+|id|5406|  
 |Keywords|セキュリティ|  
 |Level|エラー|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、発行者名の取得に失敗したときに生成されます。  
   

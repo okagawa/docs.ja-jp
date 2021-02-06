@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: AssemblyOptions 列挙型'
 title: AssemblyOptions 列挙体
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 84f83921-64cb-49e3-ac8b-22a0b77b18a8
 topic_type:
 - apiref
-ms.openlocfilehash: 352e1acd1fdd8297754e18b2e8c6448ea723a557
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aba9ecb3176f533e2d53e2e45fef3d1dc4e55077
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717032"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638419"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions 列挙体
 
 アセンブリオプションを列挙します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 typedef enum _AssemblyOptions {  

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRRuntimeInfo:: BindAsLegacyV2Runtime メソッド'
 title: ICLRRuntimeInfo::BindAsLegacyV2Runtime メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 65fd55ac-4a24-4479-9384-a2e8013bfb2b
 topic_type:
 - apiref
-ms.openlocfilehash: f0a03ecce49bbc3c1c03d037c9be31a8e994259d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 77b340cba18ea86546e1a8f4a17933f09289b1de
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732095"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637180"
 ---
 # <a name="iclrruntimeinfobindaslegacyv2runtime-method"></a>ICLRRuntimeInfo::BindAsLegacyV2Runtime メソッド
 
@@ -41,7 +42,7 @@ HRESULT BindAsLegacyV2Runtime ();
 |S_OK|バインドが成功したか、またはこのランタイムが従来の CLR バージョン2アクティブ化ポリシーのランタイムとして既にバインドされています。|  
 |CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|以前の CLR バージョン2のアクティブ化ポリシーに、別のランタイムが既にバインドされています。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  現在のランタイムが、従来の CLR バージョン2アクティブ化ポリシーの決定 (構成ファイルの要素で属性を使用するなど) に対して既にバインドされている場合 `useLegacyV2RuntimeActivationPolicy` 、このメソッドはエラー結果を返しません。メソッドが従来のアクティブ化ポリシーに正常にバインドされている場合と同じように、結果が S_OK されます。 [ \<startup> ](../../configure-apps/file-schema/startup/startup-element.md)  
   

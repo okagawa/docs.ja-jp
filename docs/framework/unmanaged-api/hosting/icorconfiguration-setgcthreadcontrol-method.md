@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorConfiguration:: SetGCThreadControl メソッド'
 title: ICorConfiguration::SetGCThreadControl メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 72e38e61-3d56-4ae3-b8f6-0ab7922aaf11
 topic_type:
 - apiref
-ms.openlocfilehash: 28b012bbe3f8c11ecd0afb8b5905336bd99c349c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8b9388bdefb9da2ce51b62ab68eeee54645e43ad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724027"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636640"
 ---
 # <a name="icorconfigurationsetgcthreadcontrol-method"></a>ICorConfiguration::SetGCThreadControl メソッド
 
@@ -39,7 +40,7 @@ HRESULT SetGCThreadControl (
  `pGCThreadControl`  
  から非ランタイムタスクのスレッドの中断をホストに通知する [Igcthreadcontrol](igcthreadcontrol-interface.md) オブジェクトへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ホストは、スレッドを再スケジュールするかどうかにかかわらず、 [Igcthreadcontrol:: ThreadIsBlockingForSuspension](igcthreadcontrol-threadisblockingforsuspension-method.md) コールバック内で選択できます。  
   

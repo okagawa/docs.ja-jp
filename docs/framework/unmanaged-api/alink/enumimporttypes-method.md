@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: EnumImportTypes メソッド'
 title: EnumImportTypes メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 83a0e4e7-ec06-40cb-9b63-700b9695bb04
 topic_type:
 - apiref
-ms.openlocfilehash: ca7c7570aff63aa328dddc0626648fa74397addc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 39570740f3560f5bfef8ba80b95c0eb2aca41f59
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448736"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638120"
 ---
 # <a name="enumimporttypes-method"></a>EnumImportTypes メソッド
 
@@ -46,10 +47,10 @@ HRESULT EnumImportTypes(
 取得する型の最大数。
 
 `aTypeDefs`\
-`dwMax`を超えないように、型トークンを受け取ります。
+は、を超えない型トークンを受け取り `dwMax` ます。
 
 `pdwCount`\
-`aTypeDefs`内の実際の型の数を受け取ります。
+の実際の型数を受け取り `aTypeDefs` ます。
 
 ## <a name="return-value"></a>戻り値
 

@@ -1,13 +1,14 @@
 ---
+description: '詳細については、「コア通信: TCP トランスポートチャネル」を参照してください。'
 title: 'コア通信: TCP トランスポート チャネル'
 ms.date: 03/30/2017
 ms.assetid: d5cd057f-faec-4e21-ae0e-18bbc22bcfb1
-ms.openlocfilehash: c9b2b31aaffccaae442f4444f69538245a813570
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7479135878c867cb84783e8208626a456ae10fac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96277336"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99635754"
 ---
 # <a name="core-communications-tcp-transport-channels"></a>コア通信: TCP トランスポート チャネル
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo4:: GetReJITIDs メソッド'
 title: ICorProfilerInfo4::GetReJITIDs メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 634ac28c-a5b7-4fc3-af84-256c24ca8177
 topic_type:
 - apiref
-ms.openlocfilehash: 2ac645cbaaa45554568874653be016e4691bbd2f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 60df4cb6023bbee68d2909e1cc0e9de5595ac0b9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707478"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636404"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs メソッド
 
@@ -50,7 +51,7 @@ HRESULT GetReJITIDs (
  `reJitIds`  
  入出力指定した関数の JIT 再コンパイルされた Id を格納する、呼び出し元が割り当てた配列。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `GetReJITIDs` 指定された関数インスタンスのアクティブな JIT 再コンパイル済み Id を列挙します。 これは、 `ICorProfilerInfo` 呼び出し元が割り当てたバッファーを受け入れる他の関数と同じ使用パターンに従います。  
   

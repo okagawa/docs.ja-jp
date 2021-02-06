@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: StrongNameTokenFromAssemblyEx 関数'
 title: StrongNameTokenFromAssemblyEx 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 67a8a9f2-dee3-44b2-a1c0-f307a3bdf90f
 topic_type:
 - apiref
-ms.openlocfilehash: 566bba09f6bfac2f7616dc5caf32ef431f2e1e67
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4ca08c8cfa90415723fc2632e32aa8f45c334db3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719802"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636281"
 ---
 # <a name="strongnametokenfromassemblyex-function"></a>StrongNameTokenFromAssemblyEx 関数
 
@@ -60,7 +61,7 @@ BOOLEAN StrongNameTokenFromAssemblyEx (
 
  `true` 正常に完了した場合は。それ以外の場合は `false` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  厳密な名前トークンは、公開キーの短縮形です。 トークンは、アセンブリの署名に使用される公開キーから作成された64ビットのハッシュです。 トークンはアセンブリの厳密な名前の一部であり、アセンブリメタデータから読み取ることができます。  
   

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorDebugObjectValue2 インターフェイス」を参照してください。
 title: ICorDebugObjectValue2 インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f93cc2ec-0a12-4499-9bf6-405dc58c9a81
 topic_type:
 - apiref
-ms.openlocfilehash: a166648252215e49b206aae1c3ab1e08985fde2d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 78a83bf6b296326087a0b01c1a8e989e2c59cc9b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724638"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637730"
 ---
 # <a name="icordebugobjectvalue2-interface"></a>ICorDebugObjectValue2 インターフェイス
 
@@ -31,7 +32,7 @@ ms.locfileid: "95724638"
 |------------|-----------------|  
 |[GetVirtualMethodAndType メソッド](icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType` はまだ実装されていません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  

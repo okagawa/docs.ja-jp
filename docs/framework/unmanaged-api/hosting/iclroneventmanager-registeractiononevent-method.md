@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: ICLROnEventManager:: RegisterActionOnEvent メソッド'
 title: ICLROnEventManager::RegisterActionOnEvent メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b944cf49-918d-4c4e-993b-77d097a52550
 topic_type:
 - apiref
-ms.openlocfilehash: 7f0770585e977f5299a40517c28dfb776b2ab898
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b13209aed6a169185b42c6b9520f21f59f6be3bb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725613"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637431"
 ---
 # <a name="iclroneventmanagerregisteractiononevent-method"></a>ICLROnEventManager::RegisterActionOnEvent メソッド
 
@@ -54,7 +55,7 @@ HRESULT RegisterActionOnEvent (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ホストは、で説明されている2つのイベントの種類のいずれかまたは両方のコールバックを登録でき `EClrEvent` ます。 ホストは、 `ICLROnEventManager` [ICLRControl:: GetCLRManager](iclrcontrol-getclrmanager-method.md) メソッドを呼び出すことによって、インターフェイスを取得します。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: StrongNameGetBlobFromImage 関数'
 title: StrongNameGetBlobFromImage 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1de658e6-da32-4d01-9097-6f43c92222e1
 topic_type:
 - apiref
-ms.openlocfilehash: 3a84221f94bad76d69f0dc67fe695ada3f3862f4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c68d6914d47fbb711c49c1e8432cae1bf33e771f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732243"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636352"
 ---
 # <a name="strongnamegetblobfromimage-function"></a>StrongNameGetBlobFromImage 関数
 
@@ -56,7 +57,7 @@ BOOLEAN StrongNameGetBlobFromImage (
 
  `true` 正常に完了した場合は。それ以外の場合は `false` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  関数が `StrongNameGetBlobFromImage` 正常に完了しない場合は、 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 関数を呼び出して、最後に生成されたエラーを取得します。  
   

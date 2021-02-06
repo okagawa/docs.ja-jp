@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 伝達'
 title: 伝達
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: be010178d8f0face8f6c7e986107e4ea90d91953
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 43ecbf7b8db66f26accc058501730300a2891284
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96240135"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99635598"
 ---
 # <a name="propagation"></a>伝達
 
@@ -77,7 +78,7 @@ ms.locfileid: "96240135"
 
  エンドポイント間でアクティビティ ID が伝達されると、メッセージの受信側は、その (伝達された) アクティビティ ID を使用して Start トレースと Stop トレースを出力します。 したがって、各トレース ソースごとに、該当の gAId を持つ Start/Stop トレースが存在することになります。 複数のエンドポイントが同じプロセス内に存在し、同じトレース ソース名を使用している場合、同じ lAId (同じ gAId、同じトレース ソース、同じプロセス) を持つ複数の Start と Stop が作成されます。  
   
-## <a name="synchronization"></a>Synchronization  
+## <a name="synchronization"></a>同期  
 
  異なるコンピューター上で実行されるエンドポイント間でイベントを同期するには、メッセージ内で伝達される ActivityId ヘッダーに CorrelationId を追加します。 ツールはこの ID を使用することにより、クロックにずれのあるコンピューター間でもイベントを同期できます。 具体的に言うと、サービス トレース ビューアー ツールは、エンドポイント間のメッセージ フローを示す際に、この ID を使用します。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRTask:: Reset メソッド'
 title: ICLRTask::Reset メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1bfb5d3a-0ffd-4bb4-9bf6-aec00cb675b7
 topic_type:
 - apiref
-ms.openlocfilehash: b87bc026a2cac2d0b913128c43142d56aee03025
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d30738b98003e0543c1a2a31c7471b15811efe5f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725197"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636989"
 ---
 # <a name="iclrtaskreset-method"></a>ICLRTask::Reset メソッド
 
@@ -52,7 +53,7 @@ HRESULT Reset (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  CLR では、 `ICLRTask` 新しいタスクが必要になるたびに新しいインスタンスを繰り返し作成するオーバーヘッドを回避するために、以前に作成されたインスタンスをリサイクルできます。 ホストは、 `ICLRTask::Reset` タスクを完了したときに、 [ICLRTask:: exittask](iclrtask-exittask-method.md) ではなくを呼び出すことにより、この機能を有効にします。 インスタンスの通常のライフサイクルの概要を次に示し `ICLRTask` ます。  
   

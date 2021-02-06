@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRHostProtectionManager:: SetProtectedCategories メソッド'
 title: ICLRHostProtectionManager::SetProtectedCategories メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fa21dc7b-5da7-440b-b59e-9180e5181f9d
 topic_type:
 - apiref
-ms.openlocfilehash: 0557a8f1c7c495950933a44cacd23ada8e84964e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9138c31ea1a2d9b7ebeaeac8ef5ef9305eabef8d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730501"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637535"
 ---
 # <a name="iclrhostprotectionmanagersetprotectedcategories-method"></a>ICLRHostProtectionManager::SetProtectedCategories メソッド
 
@@ -50,7 +51,7 @@ HRESULT SetProtectedCategories (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  各 `EApiCategories` 値は、マネージ型とメンバーのリストを参照します。 `EApiCategories`列挙体と `SetProtectedCategories` メソッドは、マネージクラスに直接関連付けられ <xref:System.Security.Permissions.HostProtectionAttribute> ます。これは、マネージ型と、によって記述されたカテゴリに対応する機能を公開するメンバーをマークするために使用され `EApiCategories` ます。 詳細については、「」および列挙を参照してください <xref:System.Security.Permissions.HostProtectionAttribute> <xref:System.Security.Permissions.HostProtectionResource> 。これは、に直接対応 `EApiCategories` します。  
   

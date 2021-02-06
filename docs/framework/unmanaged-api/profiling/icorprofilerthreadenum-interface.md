@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorProfilerThreadEnum インターフェイス」を参照してください。
 title: ICorProfilerThreadEnum インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e35031b-e095-4c14-9644-8deeb3081e0b
 topic_type:
 - apiref
-ms.openlocfilehash: 147694431d2c378b856577ef5a60e8a8b4e9a7a7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 035296412aabf20503588a558c8e8ccc1338210e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721219"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636391"
 ---
 # <a name="icorprofilerthreadenum-interface"></a>ICorProfilerThreadEnum インターフェイス
 
@@ -31,11 +32,11 @@ ms.locfileid: "95721219"
 |------------|-----------------|  
 |[Clone メソッド](icorprofilerthreadenum-clone-method.md)|この `ICorProfilerThreadEnum` インターフェイスのコピーへのインターフェイス ポインターを取得します。|  
 |[GetCount メソッド](icorprofilerthreadenum-getcount-method.md)|アプリケーションで使用されるスレッドの数を取得します。|  
-|[Next メソッド](icorprofilerthreadenum-next-method.md)|スレッドのシーケンシャル コレクションから、列挙子の現在の位置以降にある指定した数の隣接するスレッドを取得します。|  
+|[次のメソッド](icorprofilerthreadenum-next-method.md)|スレッドのシーケンシャル コレクションから、列挙子の現在の位置以降にある指定した数の隣接するスレッドを取得します。|  
 |[Reset メソッド](icorprofilerthreadenum-reset-method.md)|列挙子のカーソルをシーケンスの開始位置に移動します。|  
 |[Skip メソッド](icorprofilerthreadenum-skip-method.md)|指定した数の要素をスキップするため、この列挙子のカーソルを現在の位置から進めます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ICorProfilerThreadEnum` インターフェイスは列挙子です。 このインターフェイスにより、配列の受信側は、受信側に適した速度で送信側から要素をプルできます。 つまり、受信側は配列要素のフローを明示的に制御できるため、大きな配列をメソッド パラメーターとして渡す場合に関連する問題を回避できます。  
   

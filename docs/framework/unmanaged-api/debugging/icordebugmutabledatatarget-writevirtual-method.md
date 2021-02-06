@@ -1,13 +1,14 @@
 ---
+description: '詳細について: ICorDebugMutableDataTarget:: WriteVirtual メソッド'
 title: ICorDebugMutableDataTarget::WriteVirtual メソッド
 ms.date: 03/30/2017
 ms.assetid: 80833648-58a7-491a-8dc8-9a48e9bb3adc
-ms.openlocfilehash: 453ab23e292c5eab4a8300c32bf76743b787750d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3f3400456b7af51f4b24d7e14e35d641f03a8bfd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709337"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637821"
 ---
 # <a name="icordebugmutabledatatargetwritevirtual-method"></a>ICorDebugMutableDataTarget::WriteVirtual メソッド
 
@@ -37,7 +38,7 @@ HRESULT WriteVirtual(
 
  正常に完了した場合は `S_OK`、失敗した場合はその他の `HRESULT`。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  バイトを書き込むことができない場合、メソッド呼び出しは失敗し、ターゲット アドレス空間のバイトは変更されません。 (それ以外の場合、ターゲットは不整合な状態になり、デバッグの信頼性がさらに低下します。)  
   

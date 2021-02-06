@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「」を参照してください。 <certificateReference><identity>
 title: <identity> の <certificateReference>
 ms.date: 03/30/2017
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
-ms.openlocfilehash: f3daa2dcdf9b464b51cfb9c883cbb828bccb42df
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2c30e7ad035b560d766f3b5592af18210df53aad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148998"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639043"
 ---
 # <a name="certificatereference-for-identity"></a>\<identity> の \<certificateReference>
 
@@ -37,7 +38,7 @@ X.509 証明書検証の設定を指定します。 この id を持つエンド
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |findValue|X.509 証明書ストアで検索する値を指定します。 この属性に格納されている型は、指定された `X509FindType` 値の要件を満たす必要があります。 既定値は空の文字列です。|  
 |isChainIncluded|証明書チェーンを使用して検証を行うかどうかを指定するブール値です。|  

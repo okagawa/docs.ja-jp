@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRStrongName:: GetHashFromFileW メソッド'
 title: ICLRStrongName::GetHashFromFileW メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c6ff45fc-905d-4c6e-b00c-97c6c7c55d99
 topic_type:
 - apiref
-ms.openlocfilehash: eda78976f175230cc2405b9cb151993e63697e48
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6145a044f490ef3827de6db8d84d16222306642d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685761"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636976"
 ---
 # <a name="iclrstrongnamegethashfromfilew-method"></a>ICLRStrongName::GetHashFromFileW メソッド
 
@@ -59,7 +60,7 @@ HRESULT GetHashFromFileW (
 
  `S_OK` メソッドが正常に完了した場合は。それ以外の場合は、失敗を示す HRESULT 値 (「リストの [一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values) 」を参照してください)。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドは [ICLRStrongName:: GetHashFromFile](iclrstrongname-gethashfromfile-method.md) メソッドと同じですが、ファイル名の指定は ANSI ではなく Unicode である点が異なります。  
   

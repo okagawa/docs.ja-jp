@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRPolicyManager:: SetDefaultAction メソッド'
 title: ICLRPolicyManager::SetDefaultAction メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9411e7a-27df-451f-9f6c-d643d6a7a7ce
 topic_type:
 - apiref
-ms.openlocfilehash: 93070690ea6b30b22949953f1ed0b8c5b1e92764
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cedf29f6217660493b151e06220158e931385d79
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732481"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637366"
 ---
 # <a name="iclrpolicymanagersetdefaultaction-method"></a>ICLRPolicyManager::SetDefaultAction メソッド
 
@@ -55,7 +56,7 @@ HRESULT SetDefaultAction (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_INVALIDARG|に対して無効なが指定された `action` `operation` か、またはに無効な値が指定されました `operation` 。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  すべてのポリシーアクション値を、CLR 操作の既定の動作として指定することはできません。 `SetDefaultAction` 通常は、動作をエスカレートするためにのみ使用できます。 たとえば、ホストは、スレッドの中止をルースレッドの中止に変換するように指定できますが、逆のを指定することはできません。 次の表は、 `action` 使用可能な各値の有効な値を示して `operation` います。  
   

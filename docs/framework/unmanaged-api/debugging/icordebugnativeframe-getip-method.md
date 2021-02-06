@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次の情報を参照してください: テキストボックス'
 title: ICorDebugNativeFrame::GetIP メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 99f693f3-d3b9-4fd8-9d09-b8efd03f7b67
 topic_type:
 - apiref
-ms.openlocfilehash: c9c0598f8e7b3e8654124f50663c912f3cd61659
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f36a14c38aa6c3754cf78eca8c657adc76469067
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709305"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637836"
 ---
 # <a name="icordebugnativeframegetip-method"></a>ICorDebugNativeFrame::GetIP メソッド
 
@@ -39,7 +40,7 @@ HRESULT GetIP (
  `pnOffset`  
  入出力ネイティブコード内のオフセット位置を指すポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  この "テキストフレーム" によって表されるスタックフレームがアクティブな場合、オフセットは次に実行される命令のアドレスになります。 このスタックフレームがアクティブでない場合、オフセットは、スタックフレームが再アクティブ化されたときに実行される次の命令のアドレスになります。  
   

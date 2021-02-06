@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: StrongNameTokenFromPublicKey 関数'
 title: StrongNameTokenFromPublicKey 関数
 ms.date: 03/30/2017
 api_name:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 997e9e57-abb2-4217-bf20-1df621a75add
 topic_type:
 - apiref
-ms.openlocfilehash: 89556cf0e1ef65c35278a526e10fc791063ea2c6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f978c9b2727db4b293b9c92a8789fbf9ba749d41
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95708349"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636282"
 ---
 # <a name="strongnametokenfrompublickey-function"></a>StrongNameTokenFromPublicKey 関数
 
@@ -34,7 +35,7 @@ ms.locfileid: "95708349"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-BOOLEANStrongNameTokenFromPublicKey (
+BOOLEAN StrongNameTokenFromPublicKey (
     [in]  BYTE    *pbPublicKeyBlob,  
     [in]  ULONG   cbPublicKeyBlob,  
     [out] BYTE    **ppbStrongNameToken,  
@@ -60,7 +61,7 @@ BOOLEANStrongNameTokenFromPublicKey (
 
  `true` 正常に完了した場合は。それ以外の場合は `false` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  厳密な名前トークンは、キー情報をメタデータに格納するときに領域を節約するために使用される公開キーの短縮形です。 具体的には、アセンブリ参照では、依存アセンブリを参照するために厳密な名前トークンが使用されます。  
   

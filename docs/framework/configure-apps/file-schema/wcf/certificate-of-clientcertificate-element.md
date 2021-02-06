@@ -1,13 +1,14 @@
 ---
+description: '詳細については、次を参照してください: <certificate> of <clientCertificate> 要素'
 title: <certificate><clientCertificate>要素の
 ms.date: 03/30/2017
 ms.assetid: 00297efb-a7f2-4e03-bc2b-943d545610fc
-ms.openlocfilehash: 35ea3814e208921abaf44e6ef431c4e1b44cde60
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a677c04055016c77794dd99a8c237b5eb6c13f5f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91151142"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639095"
 ---
 # <a name="certificate-of-clientcertificate-element"></a>\<certificate>\<clientCertificate>要素の
 
@@ -37,7 +38,7 @@ ms.locfileid: "91151142"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |`findValue`|X.509 証明書ストアで検索する値を含む文字列。 属性に含まれている型は、指定された X509FindType の要件を満たしている必要があります。 既定値は空の文字列です。|  
 |`storeLocation`|クライアントがサーバーの証明書の検証に使用する X.509 証明書ストアの場所を指定します。 有効な値は次のとおりです。<br /><br /> -LocalMachine: ローカルコンピューターに割り当てられた証明書ストア。<br />-CurrentUser: 現在のユーザーに割り当てられている証明書ストア。<br /><br /> 既定値は LocalMachine です。|  

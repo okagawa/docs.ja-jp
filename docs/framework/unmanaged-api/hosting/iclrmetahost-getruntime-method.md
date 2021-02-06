@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRMetaHost:: GetRuntime メソッド'
 title: ICLRMetaHost::GetRuntime メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a10749f1-ab91-47cf-982f-d8ccd2e81bd2
 topic_type:
 - apiref
-ms.openlocfilehash: 093fa64a7d51e0c2fdc304d2bb4f1c9f7b03e2ec
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8a2ada652dbb139337150cb8ed20986ebf8ae7f4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730410"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637522"
 ---
 # <a name="iclrmetahostgetruntime-method"></a>ICLRMetaHost::GetRuntime メソッド
 
@@ -61,7 +62,7 @@ HRESULT GetRuntime (
 |S_OK|メソッドは正常に完了しました。|  
 |E_POINTER|`pwzVersion` または `ppRuntime` が null です。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドは、 [ICorRuntimeHost](icorruntimehost-interface.md) インターフェイスや、非推奨の関数などの従来の関数のようなレガシインターフェイスと常に相互作用し `CorBindTo*` ます (「.NET FRAMEWORK 2.0 ホスティング API の [非推奨の CLR ホスト関数](deprecated-clr-hosting-functions.md) 」を参照してください)。 つまり、レガシ API で読み込まれたランタイムは新しい API から参照でき、新しい API で読み込まれたランタイムはレガシ API から参照できます。  
   

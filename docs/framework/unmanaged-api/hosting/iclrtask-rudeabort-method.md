@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: ICLRTask:: は、: ICLRTask Deabort メソッド'
 title: ICLRTask::RudeAbort メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b5785468-fcd7-4cc3-8a5d-8796337b53fc
 topic_type:
 - apiref
-ms.openlocfilehash: 5b0e2265810b00fe0760d4e25c0f9904a96d9f2a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f152f11ce41018b458ed2cb4df255e486ad54da0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95691046"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636885"
 ---
 # <a name="iclrtaskrudeabort-method"></a>ICLRTask::RudeAbort メソッド
 
@@ -43,7 +44,7 @@ HRESULT RudeAbort ();
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ホストは、 `RudeAbort` タスクをすぐに中止するためにを呼び出します。 ファイナライザーと例外処理ルーチンは、必ずしも実行されるとは限りません。  
   

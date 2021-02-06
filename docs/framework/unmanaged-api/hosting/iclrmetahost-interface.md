@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICLRMetaHost インターフェイス」を参照してください。
 title: ICLRMetaHost インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c627fcdd-fc4f-4b1c-8e91-df8536f627d8
 topic_type:
 - apiref
-ms.openlocfilehash: 75c8d550e572795a291f4639f9f28bd5214ff188
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5dc50af85c067bcb525414e47cddd34070b83a27
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714017"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637509"
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost インターフェイス
 
@@ -37,7 +38,7 @@ ms.locfileid: "95714017"
 |[QueryLegacyV2RuntimeBinding メソッド](iclrmetahost-querylegacyv2runtimebinding-method.md)|レガシアクティブ化ポリシーがバインドされているランタイムを表すインターフェイスを返します。たとえば、 `useLegacyV2RuntimeActivationPolicy` [ \<startup> 要素](../../configure-apps/file-schema/startup/startup-element.md)構成ファイルのエントリで属性を使用したり、レガシアクティベーション api を直接使用したり、 [ICLRRuntimeInfo:: BindAsLegacyV2Runtime](iclrruntimeinfo-bindaslegacyv2runtime-method.md)メソッドを呼び出したりします。|  
 |[RequestRuntimeLoadedNotification メソッド](iclrmetahost-requestruntimeloadednotification-method.md)|CLR バージョンが最初に読み込まれたが、まだ開始されていない場合は、指定された関数ポインターへのコールバックを保証します。 このメソッドは、 [Lockclrversion](lockclrversion-function.md)を置き換えます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このインターフェイスのインスタンスを取得する唯一の方法は、 [Clrcreateinstance](clrcreateinstance-function.md) 関数を次のように呼び出します。  
   

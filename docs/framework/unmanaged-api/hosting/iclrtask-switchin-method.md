@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: ICLRTask:: SwitchIn メソッド'
 title: ICLRTask::SwitchIn メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d37ce20-aa65-4043-8f13-7c728b5d8a52
 topic_type:
 - apiref
-ms.openlocfilehash: e98ae17d55c74d32844da96137c258d076ebc2db
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0bbcd2b9594a8ce465a1dcd7b5ae3f8a0799826d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95691059"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636833"
 ---
 # <a name="iclrtaskswitchin-method"></a>ICLRTask::SwitchIn メソッド
 
@@ -51,7 +52,7 @@ HRESULT SwitchIn (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |HOST_E_INVALIDOPERATION|`SwitchIn` は、以前の [Switchout メソッド](iclrtask-switchout-method.md)の呼び出しなしで呼び出されました。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  パラメーターは、 `threadHandle` 現在のインスタンスによって表されるタスク `ICLRTask` がスケジュールされているオペレーティングシステムスレッドへのハンドルを表します。 このスレッドで偽装が発生した場合は、タスクを切り替える前に [IHostSecurityManager:: RevertToSelf](ihostsecuritymanager-reverttoself-method.md) を呼び出す必要があります。  
   

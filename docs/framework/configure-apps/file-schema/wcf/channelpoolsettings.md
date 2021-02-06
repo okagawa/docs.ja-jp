@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <channelPoolSettings>'
 title: <channelPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-ms.openlocfilehash: 8638d56ccb4aaa1c5ac735aa268823af2b1fbc6d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 85220cac360aaf32195c0b0f1d2866729e11c442
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91176072"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638978"
 ---
 # \<channelPoolSettings>
 
@@ -35,7 +36,7 @@ ms.locfileid: "91176072"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |`idleTimeout`|プール内のチャネルの接続が切断されるまでの最大アイドル時間を指定する正の <xref:System.TimeSpan>。 既定値は 00:02:00 です。|  
 |`leaseTimeout`|プールに返されたチャネルが閉じられるまでの時間を指定する <xref:System.TimeSpan>。 既定値は 00:10:00 です。|  
@@ -73,5 +74,5 @@ ms.locfileid: "91176072"
 - [\<oneWay>](oneway.md)
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

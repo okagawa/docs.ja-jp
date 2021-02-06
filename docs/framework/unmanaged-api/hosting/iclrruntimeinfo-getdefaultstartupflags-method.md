@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRRuntimeInfo:: GetDefaultStartupFlags メソッド'
 title: ICLRRuntimeInfo::GetDefaultStartupFlags メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 35c2173e-3b0b-4b2a-950d-e0a01c6df052
 topic_type:
 - apiref
-ms.openlocfilehash: 2f828a3720f7313ee9cb851c6adae78bd5ea4fe8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c6afb19319fd24d499c2c216f2ce0adc2e7a886c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732094"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637177"
 ---
 # <a name="iclrruntimeinfogetdefaultstartupflags-method"></a>ICLRRuntimeInfo::GetDefaultStartupFlags メソッド
 
@@ -54,7 +55,7 @@ HRESULT GetDefaultStartupFlags(
 |-------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドは、既定のフラグ値 ( `STARTUP_CONCURRENT_GC` および `NULL` )、または [ICLRRuntimeInfo:: SetDefaultStartupFlags メソッド](iclrruntimeinfo-setdefaultstartupflags-method.md)の以前の呼び出しによって提供された値、または `CorBind*` メソッドがこのランタイムにバインドされている場合は、いずれかのメソッドによって設定された値を返します。  
   

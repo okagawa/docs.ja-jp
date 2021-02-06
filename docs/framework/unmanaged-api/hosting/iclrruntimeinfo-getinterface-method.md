@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRRuntimeInfo:: GetInterface メソッド'
 title: ICLRRuntimeInfo::GetInterface メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cc7b0e5b-48c3-4509-8ebb-611ddb1f7ec2
 topic_type:
 - apiref
-ms.openlocfilehash: 192163ed8af680e39f7f3a03aee3f46546bc7450
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5a5c55823ff9954735a712423d8aaab1256c947d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732074"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637132"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>ICLRRuntimeInfo::GetInterface メソッド
 
@@ -59,7 +60,7 @@ HRESULT GetInterface(
 |E_OUTOFMEMORY|要求を処理するのに十分なメモリがありません。|  
 |CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|以前の CLR バージョン2のアクティブ化ポリシーに、別のランタイムが既にバインドされています。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドを使用すると、CLR が読み込まれますが、初期化されません。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRRuntimeHost:: UnloadAppDomain メソッド'
 title: ICLRRuntimeHost::UnloadAppDomain メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 571912bc-3429-4ff8-8eb2-ea993ffbd901
 topic_type:
 - apiref
-ms.openlocfilehash: cc5d0d65d213d952c0897a72d8ec38ea6b8b22db
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2a47c6250434c3ee4122f8eeae75f25ee4c08a34
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700666"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637288"
 ---
 # <a name="iclrruntimehostunloadappdomain-method"></a>ICLRRuntimeHost::UnloadAppDomain メソッド
 
@@ -54,7 +55,7 @@ HRESULT UnloadAppDomain(
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返す場合、そのプロセス内で CLR は使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  [GetCurrentAppDomainId](iclrruntimehost-getcurrentappdomainid-method.md)を呼び出すことにより、現在のスレッドが実行されているアプリケーションドメインの数値識別子を取得できます。 この識別子は <xref:System.AppDomain.Id%2A> 、マネージ型のプロパティに対応 <xref:System.AppDomain> しています。  
   
