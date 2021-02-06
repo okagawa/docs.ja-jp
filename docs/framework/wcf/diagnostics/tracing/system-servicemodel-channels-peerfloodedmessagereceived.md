@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「PeerFloodedMessageReceived」を参照してください。
 title: System.ServiceModel.Channels.PeerFloodedMessageReceived
 ms.date: 03/30/2017
 ms.assetid: 778e4e15-2855-4a94-a703-8fa31acc935a
-ms.openlocfilehash: 61a61ee2205791fca3c37814e1c5368eb392275d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ab2bb155a9435a85e1c6d3e948772227f6efbc4f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96264310"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99654357"
 ---
 # <a name="systemservicemodelchannelspeerfloodedmessagereceived"></a>System.ServiceModel.Channels.PeerFloodedMessageReceived
 
 PeerNode は大量に送られたメッセージを受信しました。  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このトレースは、受信した大量のメッセージの処理中に行われます。  
   

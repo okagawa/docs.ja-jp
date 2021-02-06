@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「MessageReceived」を参照してください。
 title: System.ServiceModel.Channels.MessageReceived
 ms.date: 03/30/2017
 ms.assetid: 9e6942a4-051f-416c-9674-7e729b9edd33
-ms.openlocfilehash: 32c0ea635c4cbfd59c8b774bf12fdb09171df4d6
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: dad00b734fe566f113de1c49eabe43756980b627
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96260566"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99654383"
 ---
 # <a name="systemservicemodelchannelsmessagereceived"></a>System.ServiceModel.Channels.MessageReceived
 
 System.ServiceModel.Channels.MessageReceived  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  チャネルを介してメッセージを受信しました。  
   

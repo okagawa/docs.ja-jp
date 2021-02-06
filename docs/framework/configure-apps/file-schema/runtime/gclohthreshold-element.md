@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: GCLOHThreshold 要素'
 title: GCLOHThreshold 要素
 ms.date: 11/20/2019
 helpviewer_keywords:
 - GCLOHThreshold element
 - <GCLOHThreshold> element
-ms.openlocfilehash: d72dc9d27984f60dfb6296217263ce8b176093c6
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5d4ef4e6aaf44642c2307dc27ac2e99e966d3ad0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74451324"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652810"
 ---
 # <a name="gclohthreshold-element"></a>GCLOHThreshold 要素
 
@@ -34,7 +35,7 @@ ms.locfileid: "74451324"
 
 ### <a name="enabled-attribute"></a>enabled 属性
 
-|値|Description|
+|値|説明|
 |-----------|-----------------|
 |`nnnn`|オブジェクトが大きなオブジェクトヒープに対して実行されるしきい値のサイズ (バイト単位)。|
 
@@ -44,7 +45,7 @@ ms.locfileid: "74451324"
 
 ## <a name="parent-elements"></a>親要素
 
-|要素|Description|
+|要素|説明|
 |-------------|-----------------|
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|

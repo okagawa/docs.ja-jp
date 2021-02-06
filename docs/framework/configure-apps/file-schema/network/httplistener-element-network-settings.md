@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <httpListener> 要素 (ネットワーク設定)'
 title: <httpListener> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-ms.openlocfilehash: 78526559164939667eab8848bc5fd2af6749d474
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 18c139ad7767370ecd3a4116e352b7614914d199
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91195442"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652862"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener> 要素 (ネットワーク設定)
 
@@ -26,7 +27,7 @@ ms.locfileid: "91195442"
 />  
 ```  
   
-## <a name="type"></a>種類  
+## <a name="type"></a>Type  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
 
@@ -34,7 +35,7 @@ ms.locfileid: "91195442"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |unescapeRequestUrl|インスタンスが、 <xref:System.Net.HttpListener> 変換後の uri ではなく、未加工のエスケープされていない uri を使用するかどうかを示すブール値。|  
   
@@ -50,7 +51,7 @@ ms.locfileid: "91195442"
   
 ## <a name="remarks"></a>解説  
 
- **UnescapeRequestUrl**属性は、が変換された uri では <xref:System.Net.HttpListener> なく、生のエスケープされていない uri を使用するかどうかを示します。  
+ **UnescapeRequestUrl** 属性は、が変換された uri では <xref:System.Net.HttpListener> なく、生のエスケープされていない uri を使用するかどうかを示します。  
   
  インスタンスは、 <xref:System.Net.HttpListener> サービスを介して要求を受け取ると、 `http.sys` によって提供される URI 文字列のインスタンスを作成 `http.sys` し、プロパティとして公開し <xref:System.Net.HttpListenerRequest.Url%2A?displayProperty=nameWithType> ます。  
   
@@ -111,9 +112,9 @@ ms.locfileid: "91195442"
   
  これは、要求の送信者の意図ではありません。  
   
- **UnescapeRequestUrl**属性が**false**に設定されている場合、が要求を受信すると、から変換された uri ではなく、 <xref:System.Net.HttpListener> 未加工の uri が `http.sys` プロパティへの入力として使用され <xref:System.Net.HttpListenerRequest.Url%2A> ます。  
+ **UnescapeRequestUrl** 属性が **false** に設定されている場合、が要求を受信すると、から変換された uri ではなく、 <xref:System.Net.HttpListener> 未加工の uri が `http.sys` プロパティへの入力として使用され <xref:System.Net.HttpListenerRequest.Url%2A> ます。  
   
- **UnescapeRequestUrl**属性の既定値は**true**です。  
+ **UnescapeRequestUrl** 属性の既定値は **true** です。  
   
  プロパティは、 <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A> 適用可能な構成ファイルから **unescapeRequestUrl** 属性の現在の値を取得するために使用できます。  
   

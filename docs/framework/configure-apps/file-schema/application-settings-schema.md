@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「アプリケーション設定スキーマ」を参照してください。
 title: アプリケーション設定スキーマ
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, application settings schema
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
-ms.openlocfilehash: fc9cd8ac3819c6a02019c871e7bd45ceb4c2cef7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 24c5771e9d98d07bbdc8dab5fce0f1535bc9b582
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552311"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652901"
 ---
 # <a name="application-settings-schema"></a>アプリケーション設定スキーマ
 
@@ -44,7 +45,7 @@ ms.locfileid: "90552311"
 | 属性        | 説明 |
 | ---------------- | ----------- |
 | **name**         | 必須。 設定の一意の ID。 Visual Studio で作成された設定は、という名前で保存され `ProjectName.Properties.Settings` ます。 |
-| **serializeAs** | 必須です。 値をテキストにシリアル化するために使用する形式。 有効な値は次のとおりです。<br><br>- `string`. 値は、を使用して文字列としてシリアル化され <xref:System.ComponentModel.TypeConverter> ます。<br>- `xml`. 値は、XML シリアル化を使用してシリアル化されます。<br>- `binary`. この値は、バイナリシリアル化を使用して、テキストエンコードバイナリとしてシリアル化されます。<br />- `custom`. 設定プロバイダーは、この設定に固有の情報を持ち、シリアル化および逆シリアル化を行います。 |
+| **serializeAs** | 必須。 値をテキストにシリアル化するために使用する形式。 有効な値は次のとおりです。<br><br>- `string`. 値は、を使用して文字列としてシリアル化され <xref:System.ComponentModel.TypeConverter> ます。<br>- `xml`. 値は、XML シリアル化を使用してシリアル化されます。<br>- `binary`. この値は、バイナリシリアル化を使用して、テキストエンコードバイナリとしてシリアル化されます。<br />- `custom`. 設定プロバイダーは、この設定に固有の情報を持ち、シリアル化および逆シリアル化を行います。 |
 
 ## <a name="value-element"></a>\<value> 要素
 

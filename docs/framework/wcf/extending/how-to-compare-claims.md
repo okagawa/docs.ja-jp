@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: 要求を比較する」を参照してください。'
 title: '方法: クレームを比較する'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: 29254bd661e72b926b21695ccb646480c53b5475
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c2088ad3992852bdc12e7bcd71d5f3598a237b45
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797102"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99653850"
 ---
 # <a name="how-to-compare-claims"></a>方法: クレームを比較する
 
@@ -31,7 +32,7 @@ ms.locfileid: "70797102"
 [!code-csharp[c_CustomClaimComparison#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#4)]
 [!code-vb[c_CustomClaimComparison#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#4)]
 
-<xref:System.IdentityModel.Claims.Claim.Equals%2A>メソッドの比較コードはを返し`true`ます。 `example\someone`これは、と同じドメインユーザーsomeone@example.comが "" として識別されることを前提としています。
+メソッドの比較コードはを <xref:System.IdentityModel.Claims.Claim.Equals%2A> 返し `true` ます。これは、 `example\someone` と同じドメインユーザーが "" として識別されることを前提として someone@example.com います。
 
 カスタム クレームの型の比較にも、<xref:System.IdentityModel.Claims.Claim.Equals%2A> メソッドを使用できます。 ただし、クレームの <xref:System.IdentityModel.Claims.Claim.Resource%2A> プロパティから返された型がプリミティブ型ではない場合、<xref:System.IdentityModel.Claims.Claim.Equals%2A> が `true` を返すのは、`Resource` プロパティから返された値どうしが等しいと <xref:System.IdentityModel.Claims.Claim.Equals%2A> メソッドが見なした場合のみです。 これに該当しない場合は、`Resource` プロパティから返されたカスタム型で <xref:System.IdentityModel.Claims.Claim.Equals%2A> メソッドと <xref:System.Object.GetHashCode%2A> メソッドをオーバーライドし、必要なカスタム処理を実行する必要があります。
 
@@ -75,4 +76,4 @@ ms.locfileid: "70797102"
 ## <a name="see-also"></a>関連項目
 
 - [ID モデルを使用したクレームと承認の管理](../feature-details/managing-claims-and-authorization-with-the-identity-model.md)
-- [方法: カスタム要求の作成](how-to-create-a-custom-claim.md)
+- [方法: カスタム クレームを作成する](how-to-create-a-custom-claim.md)

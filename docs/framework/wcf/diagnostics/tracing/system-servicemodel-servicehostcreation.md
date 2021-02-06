@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「ServiceHostCreation」を参照してください。
 title: System.ServiceModel.ServiceHostCreation
 ms.date: 03/30/2017
 ms.assetid: 0b9cb4f7-48bb-4e89-b5c2-d2d22e0e8088
-ms.openlocfilehash: 257abe09b8a6e00af8376e79d8a093c762650cf4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cd87fcc586348f71be09c6f949ee4a16b19c8d91
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96273829"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99654214"
 ---
 # <a name="systemservicemodelservicehostcreation"></a>System.ServiceModel.ServiceHostCreation
 
 System.ServiceModel.ServiceHostCreation  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  ServiceHost を作成します。  
   
