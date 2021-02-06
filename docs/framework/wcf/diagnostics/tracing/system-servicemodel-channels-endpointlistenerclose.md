@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「EndpointListenerClose」を参照してください。
 title: System.ServiceModel.Channels.EndpointListenerClose
 ms.date: 03/30/2017
 ms.assetid: fe554dc7-8260-404a-935a-ab2131979b46
-ms.openlocfilehash: aea53886fcb963259b2086598e9072e5f41c3b1c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5e1be6585b23c3adc45b187d0e645a2ad8eb6387
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96263894"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99644555"
 ---
 # <a name="systemservicemodelchannelsendpointlistenerclose"></a>System.ServiceModel.Channels.EndpointListenerClose
 
 System.ServiceModel.Channels.EndpointListenerClose  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  エンドポイントのリスナーが閉じました。  
   

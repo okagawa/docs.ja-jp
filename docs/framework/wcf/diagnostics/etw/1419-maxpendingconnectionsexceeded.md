@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 1419-MaxPendingConnectionsExceeded'
 title: 1419 - MaxPendingConnectionsExceeded
 ms.date: 03/30/2017
 ms.assetid: e48e438e-f4c1-4f4f-85d6-c6c820a81df9
-ms.openlocfilehash: 51996ca825d1aa810c8121110a1b893f6bfde420
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 91b0c5380a67bd840dbfc4c36c499a763d92276e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96241331"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99645582"
 ---
 # <a name="1419---maxpendingconnectionsexceeded"></a>1419 - MaxPendingConnectionsExceeded
 
@@ -15,12 +16,12 @@ ms.locfileid: "96241331"
   
 |||  
 |-|-|  
-|ID|1419|  
+|id|1419|  
 |Keywords|Quota|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、保留接続の最大数に達したときに生成されます。  
   

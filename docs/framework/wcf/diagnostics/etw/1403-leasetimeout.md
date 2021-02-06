@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 1403-LeaseTimeout'
 title: 1403 - LeaseTimeout
 ms.date: 03/30/2017
 ms.assetid: 3908748b-f060-46a2-8043-49e09218d2e5
-ms.openlocfilehash: 912c948c01bab40520d5f446b55140cf515bce4d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 2decf2b0d08db533e90c353460d35428193da916
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96241410"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99645816"
 ---
 # <a name="1403---leasetimeout"></a>1403 - LeaseTimeout
 
@@ -15,12 +16,12 @@ ms.locfileid: "96241410"
   
 |||  
 |-|-|  
-|ID|1403|  
+|id|1403|  
 |Keywords|ServiceModel|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントはリース タイムアウト時に生成されます。  
   

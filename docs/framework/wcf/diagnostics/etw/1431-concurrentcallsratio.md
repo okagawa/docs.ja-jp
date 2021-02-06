@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 1431-ConcurrentCallsRatio'
 title: 1431 - ConcurrentCallsRatio
 ms.date: 03/30/2017
 ms.assetid: 571dc259-78a7-4e91-9a7e-b83644d20229
-ms.openlocfilehash: 2af55cae4fd1d1c17674c11256284da9ab5d8c96
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ee8b9ff7740af1572ec8589e6a3190a5df239533
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96271078"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99645478"
 ---
 # <a name="1431---concurrentcallsratio"></a>1431 - ConcurrentCallsRatio
 
@@ -15,12 +16,12 @@ ms.locfileid: "96271078"
   
 |||  
 |-|-|  
-|ID|1431|  
+|id|1431|  
 |Keywords|Quota|  
 |Level|"詳細"|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、同時呼び出しの比率に関する情報を提供するために生成されます。  
   

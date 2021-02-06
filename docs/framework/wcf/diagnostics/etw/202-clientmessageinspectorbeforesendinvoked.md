@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 202-ClientMessageInspectorBeforeSendInvoked'
 title: 202 - ClientMessageInspectorBeforeSendInvoked
 ms.date: 03/30/2017
 ms.assetid: 0b02ca82-8a55-45e3-b2e2-ddfe28a7269c
-ms.openlocfilehash: f05a0f817b8cb4857a4fa50eada15d3ff9e06855
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0267304ba805c8f23109c820c8516a27958c3040
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96266624"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99645049"
 ---
 # <a name="202---clientmessageinspectorbeforesendinvoked"></a>202 - ClientMessageInspectorBeforeSendInvoked
 
@@ -15,12 +16,12 @@ ms.locfileid: "96266624"
   
 |||  
 |-|-|  
-|ID|202|  
+|id|202|  
 |Keywords|Troubleshooting、ServiceModel|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、クライアント メッセージ インスペクターで Service Model が `BeforeSendRequest` メソッドを呼び出した後に生成されます。  
   

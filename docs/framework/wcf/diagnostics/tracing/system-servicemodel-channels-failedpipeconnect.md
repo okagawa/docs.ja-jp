@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「FailedPipeConnect」を参照してください。
 title: System.ServiceModel.Channels.FailedPipeConnect
 ms.date: 03/30/2017
 ms.assetid: 9a827e0f-fb91-46bb-bd54-926d4b74d8a6
-ms.openlocfilehash: b3b34b2f4ab2987360030d614c8e65cd878d4d14
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: dbbb3ba2848eaefe70a6d6308daecf84e0a8c7a0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96256249"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99644477"
 ---
 # <a name="systemservicemodelchannelsfailedpipeconnect"></a>System.ServiceModel.Channels.FailedPipeConnect
 
 名前付きパイプ エンドポイントに接続しようとして失敗しました。 指定されたタイムアウト期間内に再試行します。  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  この情報トレースは、名前付きパイプ エンドポイントへの接続に失敗したことを示します。 これは、名前付きパイプ エンドポイントが見つからなかったか、ビジーであった場合に発生します。 接続に成功するか、OpenTimeout の有効期間が切れるまで、短い間隔を置いて再試行が繰り返されます。  
   

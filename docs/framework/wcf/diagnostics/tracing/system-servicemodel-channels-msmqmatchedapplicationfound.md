@@ -1,19 +1,20 @@
 ---
+description: '詳細については、次を参照してください: System.servicemodel. MsmqMatchedApplicationFound'
 title: System.ServiceModel.Channels.MsmqMatchedApplicationFound
 ms.date: 03/30/2017
 ms.assetid: 41557327-504e-4394-a3e6-1f076a7c35e6
-ms.openlocfilehash: af38d45d74108652fa46e9141504643ee0b893c3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0e3ea2808513c08625011dab08adc41a50301ae1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96260424"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99644425"
 ---
 # <a name="systemservicemodelchannelsmsmqmatchedapplicationfound"></a>System.ServiceModel.Channels.MsmqMatchedApplicationFound
 
 System.ServiceModel.Channels.MsmqMatchedApplicationFound  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  MSMQ アクティベーション サービスによって、キューに一致するアプリケーションが検出されました。  
   

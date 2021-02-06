@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「WCF ライブラリプロジェクトの配置」を参照してください。
 title: WCF ライブラリ プロジェクトの配置
 ms.date: 03/30/2017
 ms.assetid: 9f9222fe-d358-443c-9a49-12c5498e35e7
-ms.openlocfilehash: e3a90f03639a888b4528a1962a24b7adc5d43c58
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1476f564e3e341c77ab9ba4e4281d6f242a735cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96260891"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646102"
 ---
 # <a name="deploying-a-wcf-library-project"></a>WCF ライブラリ プロジェクトの配置
 
