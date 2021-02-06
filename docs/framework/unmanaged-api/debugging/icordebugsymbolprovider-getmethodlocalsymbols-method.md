@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: コードプロバイダー:: GetMethodLocalSymbols メソッド'
 title: ICorDebugSymbolProvider::GetMethodLocalSymbols メソッド
 ms.date: 03/30/2017
 ms.assetid: 8b989e38-e779-49d1-9e90-f1f920484b08
-ms.openlocfilehash: c5a21436c939ddfca0219618efe64d9e0e40aef4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f4eaac208d98b25ae4a53acfd977d354c6f6ac1b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730852"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659817"
 ---
 # <a name="icordebugsymbolprovidergetmethodlocalsymbols-method"></a>ICorDebugSymbolProvider::GetMethodLocalSymbols メソッド
 
@@ -38,7 +39,7 @@ HRESULT GetMethodLocalSymbols(
  `pcFetchedSymbols`  
  入出力メソッドのローカルシンボルを格納している [ICorDebugVariableSymbol](icordebugvariablesymbol-interface.md) 配列へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  

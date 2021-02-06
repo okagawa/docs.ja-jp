@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次を参照してください
 title: ICorDebugThread::GetActiveChain メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f50de1f7-40ef-4949-b542-1d9a61f7bfef
 topic_type:
 - apiref
-ms.openlocfilehash: e6b1d78b2bd95ea27f4b19a045cd2680342e8a80
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d9aff80801fa72a227a84b3b5216e3ffa72b0e24
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728096"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659284"
 ---
 # <a name="icordebugthreadgetactivechain-method"></a>ICorDebugThread::GetActiveChain メソッド
 
@@ -39,7 +40,7 @@ HRESULT GetActiveChain (
  `ppChain`  
  入出力スタックチェーンを表す、のオブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ppChain`現在アクティブになっているスタックチェーンがない場合、パラメーターは null になります。  
   

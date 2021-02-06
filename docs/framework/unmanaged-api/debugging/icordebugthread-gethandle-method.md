@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: GetHandle メソッド'
 title: ICorDebugThread::GetHandle メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 172ef8c4-2ead-4cfc-bd2e-dee4fb7191cd
 topic_type:
 - apiref
-ms.openlocfilehash: 5debd09f3ca0b4562f62913f9530cc4fa6f9110b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 378bb395e56f0fc287a480d67d2047e082d0796f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728031"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659102"
 ---
 # <a name="icordebugthreadgethandle-method"></a>ICorDebugThread::GetHandle メソッド
 
@@ -39,7 +40,7 @@ HRESULT GetHandle (
  `phThreadHandle`  
  入出力このスレッドのアクティブな部分のハンドルである HTHREAD へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ハンドルは、プロセスが実行されると変化する場合があり、スレッドのさまざまな部分で異なる場合があります。  
   

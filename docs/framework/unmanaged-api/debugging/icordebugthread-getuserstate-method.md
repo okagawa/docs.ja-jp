@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次のページを参照してください: いい Thread:: GetUserState メソッド'
 title: ICorDebugThread::GetUserState メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ae0cfd73-8ead-4d36-9310-dccaac9db0bd
 topic_type:
 - apiref
-ms.openlocfilehash: dd3936656ce1c9482b7f07a5780fcf651356b4be
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b63b474525534f9e934954ebe660691db90b8b67
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727966"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99658868"
 ---
 # <a name="icordebugthreadgetuserstate-method"></a>ICorDebugThread::GetUserState メソッド
 
@@ -39,7 +40,7 @@ HRESULT GetUserState (
  `pState`  
  入出力このスレッドの現在のユーザー状態を示す CorDebugUserState 列挙値のビットごとの組み合わせへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  スレッドのユーザー状態は、デバッグ中のプログラムによって検査されるときのスレッドの状態です。 スレッドに複数の状態ビットが設定されている可能性があります。  
   

@@ -1,13 +1,14 @@
 ---
+description: 詳細については、次の説明
 title: ICorDebugSymbolProvider::GetTypeProps メソッド
 ms.date: 03/30/2017
 ms.assetid: 35ac4140-91ea-4c77-b1c4-1daf41986ca5
-ms.openlocfilehash: 4738d35aabbc2197c796405e0657607f75ff685d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b6a4a5a68e1e377fa839940832dfc49574009641
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95694504"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659661"
 ---
 # <a name="icordebugsymbolprovidergettypeprops-method"></a>ICorDebugSymbolProvider::GetTypeProps メソッド
 
@@ -38,7 +39,7 @@ HRESULT GetTypeProps(
  `signature`  
  [out] すべてのジェネリック パラメーターの typespec シグネチャを保持するバッファー。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  型の配列の必要なサイズを取得するには `signature` 、 `cbSignature` 引数を0に設定し、 `signature` を **null** に設定します。 このメソッドから制御が戻ると、`pcbSignature` には `signature` 配列の必要なバイト数が格納されます。  
   

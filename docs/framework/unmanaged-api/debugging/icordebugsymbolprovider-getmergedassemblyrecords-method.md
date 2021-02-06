@@ -1,13 +1,14 @@
 ---
+description: '詳細については、次の情報を参照してください: GetMergedAssemblyRecords メソッド'
 title: ICorDebugSymbolProvider::GetMergedAssemblyRecords メソッド
 ms.date: 03/30/2017
 ms.assetid: cc4c510d-550d-4941-af34-81987caf3425
-ms.openlocfilehash: 10bbcf2e6a536eeb4ab8141c10c177a53faa1c95
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f12bb3a49d7b49f9f8916c9d04417340502d44ba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730878"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659882"
 ---
 # <a name="icordebugsymbolprovidergetmergedassemblyrecords-method"></a>ICorDebugSymbolProvider::GetMergedAssemblyRecords メソッド
 
@@ -34,7 +35,7 @@ HRESULT GetMergedAssemblyRecords(
  `pRecords`  
  [ICorDebugMergedAssemblyRecord](icordebugmergedassemblyrecord-interface.md)オブジェクトの配列へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  

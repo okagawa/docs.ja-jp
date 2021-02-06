@@ -1,13 +1,14 @@
 ---
+description: '詳細について: ICorDebugSymbolProvider2:: GetGenericDictionaryInfo メソッド'
 title: ICorDebugSymbolProvider2::GetGenericDictionaryInfo メソッド
 ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
-ms.openlocfilehash: a6c32b72c5924399aeb13d56ddf9242fe7990f35
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 3488cab9ee21ea027e16089f066369ab8c6c69d0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379321"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659544"
 ---
 # <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2::GetGenericDictionaryInfo メソッド
 
@@ -24,18 +25,18 @@ HRESULT GetGenericDictionaryInfo(
 ## <a name="parameters"></a>パラメーター
 
 `ppMemoryBuffer`\
-入出力ジェネリックディクショナリマップを格納している、[のオブジェクトの](icordebugmemorybuffer-interface.md)アドレスへのポインター。 詳細については、「解説」を参照してください。
+入出力ジェネリックディクショナリマップを格納している、 [のオブジェクトの](icordebugmemorybuffer-interface.md) アドレスへのポインター。 詳細については、次の「解説」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。
 
 このマップは最上位レベルの 2 つのセクションで構成されています。
 
-- このマップに含まれるすべてのディクショナリの相対仮想アドレス (RVA) を格納している[ディレクトリ](#Directory)。
+- このマップに含まれるすべてのディクショナリの相対仮想アドレス (RVA) を格納している [ディレクトリ](#Directory) 。
 
-- オブジェクトのインスタンス化情報を格納するバイト固定[ヒープ](#Heap)。 最後のディレクトリ エントリの直後から開始します。
+- オブジェクトのインスタンス化情報を格納するバイト固定 [ヒープ](#Heap) 。 最後のディレクトリ エントリの直後から開始します。
 
 <a name="Directory"></a>
 
@@ -45,9 +46,9 @@ HRESULT GetGenericDictionaryInfo(
 
 汎用のディクショナリ マップのディレクトリ部分の構造は次のとおりです。
 
-- 最初の 4 バイトには、ディクショナリのエントリ数 (ディクショナリ内の相対仮想アドレスの数) が格納されています。 この値は*N*として参照されます。上位ビットが設定されている場合、エントリは相対仮想アドレスで昇順に並べ替えられます。
+- 最初の 4 バイトには、ディクショナリのエントリ数 (ディクショナリ内の相対仮想アドレスの数) が格納されています。 この値は *N* として参照されます。上位ビットが設定されている場合、エントリは相対仮想アドレスで昇順に並べ替えられます。
 
-- *N*ディレクトリエントリは次のようになります。 各エントリは 8 バイトであり、次の 2 つの 4 バイト セグメントからなります。
+- *N* ディレクトリエントリは次のようになります。 各エントリは 8 バイトであり、次の 2 つの 4 バイト セグメントからなります。
 
   - バイト 0 ～ 3: RVA (ディクショナリの相対仮想アドレス)。
 
@@ -71,11 +72,11 @@ Heap Size = Stream.Length – (Directory Size + 4)
 
 - 圧縮された ECMA メタデータ形式のジェネリックインスタンス化型 ( *T*) の数。
 
-- *T*型はそれぞれ ECMA 型シグネチャ形式で表されます。
+- *T* 型はそれぞれ ECMA 型シグネチャ形式で表されます。
 
 各ヒープ要素の長さを含めることで、ヒープに影響を与えずに、ディレクトリ セクションの単純な並べ替えを実行できるようになります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: EnumerateTypeParameters Type:: メソッド'
 title: ICorDebugType::EnumerateTypeParameters メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1ee1f6e6-1bd7-4ebb-83b8-ff9a08ca03de
 topic_type:
 - apiref
-ms.openlocfilehash: 3717497ab6e72f0ce67f688813ee7264206e8c84
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5189394cbb39cd133ebce494107f4ca65660bb5b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727953"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99658413"
 ---
 # <a name="icordebugtypeenumeratetypeparameters-method"></a>ICorDebugType::EnumerateTypeParameters メソッド
 
@@ -39,7 +40,7 @@ HRESULT EnumerateTypeParameters (
  `ppTyParEnum`  
  入出力 `ICorDebugTypeEnum` 型のパラメーターを格納しているのアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  を使用することができます、 `EnumerateTypeParameters` [corelementtype:: GetType](icordebugtype-gettype-method.md) によって返される corelementtype 値が ELEMENT_TYPE_CLASS、ELEMENT_TYPE_VALUETYPE、ELEMENT_TYPE_ARRAY、ELEMENT_TYPE_SZARRAY、ELEMENT_TYPE_BYREF、ELEMENT_TYPE_PTR、または ELEMENT_TYPE_FNPTR です。 パラメーターの数と順序は、型によって異なります。  
   

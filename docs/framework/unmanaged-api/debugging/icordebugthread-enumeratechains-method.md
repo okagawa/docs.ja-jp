@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次を参照してください
 title: ICorDebugThread::EnumerateChains メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ec00bc21-117e-4acd-9301-2cfafd5be8d3
 topic_type:
 - apiref
-ms.openlocfilehash: 76b231f00651186518d3bccfafa5780f258c4f75
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b9184a1b298e1d29970c5e56ceca76715b0ed096
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688186"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659297"
 ---
 # <a name="icordebugthreadenumeratechains-method"></a>ICorDebugThread::EnumerateChains メソッド
 
@@ -39,7 +40,7 @@ HRESULT EnumerateChains (
  `ppChains`  
  入出力 `ICorDebugChainEnum` アクティブな (つまり、最新の) チェーンを開始位置として、このスレッド内のすべてのスタックチェーンを列挙できるようにするオブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  スタックチェーンは、スレッドの物理的な呼び出し履歴を表します。 次の状況では、スタックチェーン境界が作成されます。  
   

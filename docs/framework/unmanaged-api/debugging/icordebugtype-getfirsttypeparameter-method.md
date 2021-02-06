@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください:、テキスト:: テキストメソッド'
 title: ICorDebugType::GetFirstTypeParameter メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 35bb594f-af6a-4349-83fe-e98702674e03
 topic_type:
 - apiref
-ms.openlocfilehash: be69636056d5510b72dbce39917f5e8d3b05cd87
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4c37217f34f80c916d618d88e4917eab794a1d90
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723975"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99658283"
 ---
 # <a name="icordebugtypegetfirsttypeparameter-method"></a>ICorDebugType::GetFirstTypeParameter メソッド
 
@@ -39,7 +40,7 @@ HRESULT GetFirstTypeParameter (
  `value`  
  入出力最初のパラメーターを表すオブジェクトのアドレスへのポインター `ICorDebugType` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `GetFirstTypeParameter` 型に関する追加情報には、最大で1つの型パラメーターが含まれる場合に、を呼び出すことができます。 具体的には、型が ELEMENT_TYPE_ARRAY、ELEMENT_TYPE_SZARRAY、ELEMENT_TYPE_BYREF、または ELEMENT_TYPE_PTR である場合に使用できます。これは、のように、の型 [:: GetType](icordebugtype-gettype-method.md) メソッドによって示されます。  
   

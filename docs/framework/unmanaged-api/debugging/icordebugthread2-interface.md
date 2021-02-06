@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorDebugThread2 インターフェイス」を参照してください。
 title: ICorDebugThread2 インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 678f89f9-cce7-46d1-af87-5e989abaa93c
 topic_type:
 - apiref
-ms.openlocfilehash: fd4ad536d7d3df2b8f91f206459122cf083c8b9c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 81f687f6daff9ffa7298ec6d818a214b8934bcc3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95691137"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99658504"
 ---
 # <a name="icordebugthread2-interface"></a>ICorDebugThread2 インターフェイス
 
@@ -35,7 +36,7 @@ ms.locfileid: "95691137"
 |[GetVolatileOSThreadID メソッド](icordebugthread2-getvolatileosthreadid-method.md)|こののオペレーティングシステムスレッド識別子を取得し `ICorDebugThread2` ます。|  
 |[InterceptCurrentException メソッド](icordebugthread2-interceptcurrentexception-method.md)|デバッガーがスレッドの現在の例外をインターセプトできるようにします。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  

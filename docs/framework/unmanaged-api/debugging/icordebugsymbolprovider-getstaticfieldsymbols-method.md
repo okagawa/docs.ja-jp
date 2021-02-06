@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: コードプロバイダー:: GetStaticFieldSymbols メソッド'
 title: ICorDebugSymbolProvider::GetStaticFieldSymbols メソッド
 ms.date: 03/30/2017
 ms.assetid: b178367f-a6e4-413c-b06f-daf3804b456b
-ms.openlocfilehash: 09e68c751da6500c5580f4945e8dd1c486a09217
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e95f77be86ef88a73ca4c833b242617a0d405e21
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95698664"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659707"
 ---
 # <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>ICorDebugSymbolProvider::GetStaticFieldSymbols メソッド
 
@@ -42,7 +43,7 @@ HRESULT GetStaticFieldSymbols(
  `pSymbols`  
  入出力要求された静的なフィールドシンボルが格納されている、表示名のある [シンボル](icordebugstaticfieldsymbol-interface.md) 配列へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  

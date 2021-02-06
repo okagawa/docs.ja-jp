@@ -1,13 +1,14 @@
 ---
+description: 詳細については、次の説明
 title: ICorDebugSymbolProvider::GetMethodProps メソッド
 ms.date: 03/30/2017
 ms.assetid: 8f836b80-b7a5-460b-bf76-5f0e45652aea
-ms.openlocfilehash: 5412b2f06445627c1240d6c8f4efb3ce6bbbec54
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 53a329426ecadfe5559c0e6a08ffbd250163e177
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730826"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659726"
 ---
 # <a name="icordebugsymbolprovidergetmethodprops-method"></a>ICorDebugSymbolProvider::GetMethodProps メソッド
 
@@ -46,7 +47,7 @@ HRESULT GetMethodProps(
  `signature`  
  [out] すべてのジェネリック パラメーターの typespec シグネチャを保持するバッファー。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  メソッドの配列の必要なサイズを取得するには `signature` 、 `cbSignature` 引数を0に設定し、 `signature` を **null** に設定します。 このメソッドから制御が戻ると、`pcbSignature` には `signature` 配列の必要なバイト数が格納されます。  
   

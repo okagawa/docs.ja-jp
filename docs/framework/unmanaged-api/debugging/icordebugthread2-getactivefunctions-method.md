@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugThread2:: GetActiveFunctions メソッド'
 title: ICorDebugThread2::GetActiveFunctions メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 27fae01a-ecec-423a-973e-24f8de55826c
 topic_type:
 - apiref
-ms.openlocfilehash: 2d5674d6b5962ca539de02cda1e5658daed83622
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 841e8ff17f15cfb14e1c1bf65c651a5177db2eaa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678754"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99658764"
 ---
 # <a name="icordebugthread2getactivefunctions-method"></a>ICorDebugThread2::GetActiveFunctions メソッド
 
@@ -50,7 +51,7 @@ HRESULT GetActiveFunctions (
   
  最初の要素はリーフフレームに使用され、その後スタックのルートに戻ります。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `pFunctions`入力時にが null の場合、 `GetActiveFunctions` スタック上の関数の数だけを返します。 つまり、 `pFunctions` 入力時にが null の場合、は `GetActiveFunctions` でのみ値を返し `pcFunctions` ます。  
   

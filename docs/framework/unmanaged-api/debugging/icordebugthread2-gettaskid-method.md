@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugThread2:: GetTaskID メソッド'
 title: ICorDebugThread2::GetTaskID メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6ba3c6ee-4ba1-4c98-bf1e-8531acd3da09
 topic_type:
 - apiref
-ms.openlocfilehash: 9b17a179745af65bde05527bd0157f3ce06c12c6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5429daee9150d63834c747dd5ebb763dd6f0da6c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678663"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99658673"
 ---
 # <a name="icordebugthread2gettaskid-method"></a>ICorDebugThread2::GetTaskID メソッド
 
@@ -39,7 +40,7 @@ HRESULT GetTaskID (
  `pTaskId`  
  入出力この ICorDebugThread2 オブジェクトによって表されるスレッド上で実行されているタスクの識別子へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  スレッドが接続に関連付けられている場合にのみ、スレッドでタスクを実行できます。 `GetTaskID``pTaskId`スレッドが接続に関連付けられていない場合は、で0を返します。  
   

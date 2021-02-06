@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次のページを参照してください: いい Thread:: GetCurrentException メソッド'
 title: ICorDebugThread::GetCurrentException メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 331ed465-a195-4359-8584-b82c6098b29b
 topic_type:
 - apiref
-ms.openlocfilehash: c21be7b062b7e2d4129bafabae004351442ab853
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cb241995520f26ca0e35f2b9e3b3187c2a2906a2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728057"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659167"
 ---
 # <a name="icordebugthreadgetcurrentexception-method"></a>ICorDebugThread::GetCurrentException メソッド
 
@@ -39,7 +40,7 @@ HRESULT GetCurrentException (
  `ppExceptionObject`  
  入出力 `ICorDebugValue` 現在マネージコードによってスローされている例外を表すオブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  例外オブジェクトは、ブロックの末尾まで例外がスローされた時点から存在し `catch` ます。 関数の評価は、テキストの評価メソッドによって実行され、セットアップ時に例外オブジェクトをクリアし、完了時に復元します。  
   
