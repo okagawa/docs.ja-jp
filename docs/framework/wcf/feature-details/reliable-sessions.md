@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 信頼できるセッション'
 title: 信頼できるセッション
 ms.date: 03/30/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - instances [WCF]
 - sessions [WCF]
 ms.assetid: 143951b3-3aa0-4540-b4b7-d33e77e874a1
-ms.openlocfilehash: 910ad952192243c6aa8a79417ad711d8c2a4ba2e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 86df4ccf9c1fd52d162ad7272ece5591f0ca7482
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590541"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632881"
 ---
 # <a name="reliable-sessions"></a>信頼できるセッション
 
@@ -26,15 +27,15 @@ WCF アプリケーションで信頼できるセッションを使用するに�
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[信頼できるセッションの概要](reliable-sessions-overview.md)信頼できるセッション、使用するタイミング、信頼できるセッションをサポートするさまざまなバインディング、および動作のしくみについて説明します。
+[信頼できるセッションの概要](reliable-sessions-overview.md) 信頼できるセッション、使用するタイミング、信頼できるセッションをサポートするさまざまなバインディング、および動作のしくみについて説明します。
 
-[方法: 信頼できるセッション内でメッセージを交換](how-to-exchange-messages-within-a-reliable-session.md)する構成で指定されたカスタムバインディングを使用して、HTTP 経由で信頼できるセッションを作成する方法について説明します。
+[方法: 信頼できるセッション内でメッセージを交換](how-to-exchange-messages-within-a-reliable-session.md) する構成で指定されたカスタムバインディングを使用して、HTTP 経由で信頼できるセッションを作成する方法について説明します。
 
-[方法: 信頼できるセッション内のメッセージをセキュリティで保護する](how-to-secure-messages-within-reliable-sessions.md)信頼できるセッションをセキュリティで保護する方法について説明します。
+[方法: 信頼できるセッション内のメッセージをセキュリティで保護する](how-to-secure-messages-within-reliable-sessions.md) 信頼できるセッションをセキュリティで保護する方法について説明します。
 
-[方法: HTTPS を使用してカスタムの信頼できるセッションバインディングを作成](how-to-create-a-custom-reliable-session-binding-with-https.md)するHTTPS を介して信頼できるセッションを作成する方法について説明します。
+[方法: HTTPS を使用してカスタムの信頼できるセッションバインディングを作成](how-to-create-a-custom-reliable-session-binding-with-https.md) するHTTPS を介して信頼できるセッションを作成する方法について説明します。
 
-[信頼できるセッションのベストプラクティス](best-practices-for-reliable-sessions.md)信頼できるセッションの使用に関連するベストプラクティスについて説明します。
+[信頼できるセッションのベストプラクティス](best-practices-for-reliable-sessions.md) 信頼できるセッションの使用に関連するベストプラクティスについて説明します。
 
 ## <a name="reference"></a>関連項目
 

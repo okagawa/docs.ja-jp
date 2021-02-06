@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「MaxPendingConnectionsReached」を参照してください。
 title: System.ServiceModel.Channels.MaxPendingConnectionsReached
 ms.date: 03/30/2017
 ms.assetid: 6138b01d-199b-45db-b875-c1cca68e6894
-ms.openlocfilehash: a019252eca350decfd5ea83ab3c552ad911aa77e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3b18f7a8d19d8cb3f4fe1c4c5d4d937bc75ac0b8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96260592"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99635156"
 ---
 # <a name="systemservicemodelchannelsmaxpendingconnectionsreached"></a>System.ServiceModel.Channels.MaxPendingConnectionsReached
 
 System.ServiceModel.Channels.MaxPendingConnectionsReached  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  保留状態の接続の最大数に達しました。  
   

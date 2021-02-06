@@ -1,13 +1,14 @@
 ---
+description: 詳細については、ルーティングサービスを使用した Hello World に関するページを参照してください。
 title: ルーティング サービスを使用した Hello World
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 3d91634d72481427f04e958f6dc2734829b6158b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1741c7d1f1e474864d66220fd160633997744876
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253857"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99631971"
 ---
 # <a name="hello-world-with-the-routing-service"></a>ルーティング サービスを使用した Hello World
 
@@ -44,7 +45,7 @@ ms.locfileid: "96253857"
 
  サンプルは、提供された時点では、App.config ファイルを使用してルーターの動作を定義するように構成されています。 App.config ファイルの名前を別の名前に変更して認識されないようにし、ConfigureRouterViaCode() に対するメソッド呼び出しのコメントを解除することもできます。 どちらの方法でも、ルーターの動作は同じになります。
 
-### <a name="scenario"></a>通信の種類
+### <a name="scenario"></a>シナリオ
 
  このサンプルでは、基本的なメッセージ ポンプとして機能するルーターを示します。 ルーティング サービスは、構成済みの一連の送信先エンドポイントに直接メッセージを渡すように構成された透過的なプロキシ ノードとして機能します。
 

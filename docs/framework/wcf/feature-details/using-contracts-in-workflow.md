@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「ワークフローでのコントラクトの使用」を参照してください。
 title: ワークフロー内でのコントラクトの使用
 ms.date: 03/30/2017
 ms.assetid: 939c64e9-e7cc-4abc-b41e-27cfce1d7e50
-ms.openlocfilehash: e32130395e05a56de081620f82e0e6f72ae0db38
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d1ef5a4c494643d521a5fe045ff87c0cbeb34db1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96289621"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632218"
 ---
 # <a name="using-contracts-in-workflow"></a>ワークフロー内でのコントラクトの使用
 

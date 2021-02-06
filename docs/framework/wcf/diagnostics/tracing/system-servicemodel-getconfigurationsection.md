@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「System.servicemodel. GetConfigurationSection」を参照してください。
 title: System.ServiceModel.GetConfigurationSection
 ms.date: 03/30/2017
 ms.assetid: 4872884d-4de9-4968-b703-380677830f0b
-ms.openlocfilehash: b6d61eaf8d183e6321db7824cb9a61c98b8ee13b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4293a13a6ff2721978757045ca890f5fac7868a0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96270785"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99633452"
 ---
 # <a name="systemservicemodelgetconfigurationsection"></a>System.ServiceModel.GetConfigurationSection
 
 System.ServiceModel.GetConfigurationSection  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  構成セクションを取得します。  
   

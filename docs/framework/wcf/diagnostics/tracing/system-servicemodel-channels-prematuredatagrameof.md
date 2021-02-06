@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「PrematureDatagramEof」を参照してください。
 title: System.ServiceModel.Channels.PrematureDatagramEof
 ms.date: 03/30/2017
 ms.assetid: ec07be8b-b537-4090-be7e-086679dba78d
-ms.openlocfilehash: 3371676f31a03f2d479d6565b81be5b49a744fc5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b7a93cf5dcf932b9867185ccce051d0d4de1964d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96292104"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99634675"
 ---
 # <a name="systemservicemodelchannelsprematuredatagrameof"></a>System.ServiceModel.Channels.PrematureDatagramEof
 
 System.ServiceModel.Channels.PrematureDatagramEof  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  NULL メッセージ (チャネルの信号終了) が、データグラム チャネルから受信されましたが、チャネルはまだ Opened 状態のままです。 これは、データグラム チャネルにエラーがあり、デマルチプレクサー受信ループが途中で止まったことを示しています。  
   

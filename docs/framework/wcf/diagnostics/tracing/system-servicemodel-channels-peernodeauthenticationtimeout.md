@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「System.servicemodel」を参照してください。
 title: System.ServiceModel.Channels.PeerNodeAuthenticationTimeout
 ms.date: 03/30/2017
 ms.assetid: f294ee94-be83-426c-b40d-6e8a4e5e987c
-ms.openlocfilehash: 4b3c88ce0b018fbff262c2781644a18803b03c5a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: bd23b607c3bd7e1f52a93bd0235b8a55d080302e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96292416"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99634922"
 ---
 # <a name="systemservicemodelchannelspeernodeauthenticationtimeout"></a>System.ServiceModel.Channels.PeerNodeAuthenticationTimeout
 
 セキュリティ ハンドシェイクが、指定した時間内に正常に終了しませんでした。  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このトレースは、セキュリティで保護された近隣との接続を確立するときに行われます。  
   

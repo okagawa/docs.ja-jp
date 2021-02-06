@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「System.servicemodel Connectioncreate」を参照してください。
 title: System.ServiceModel.Channels.SocketConnectionCreate
 ms.date: 03/30/2017
 ms.assetid: 707015f1-a41f-4a42-b74e-a19677e2517b
-ms.openlocfilehash: 475301cc828d0996b97394cdd99d6b490abd22bb
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6f01881e3f74b0cef161f5033288e150ac6cd303
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291883"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99634493"
 ---
 # <a name="systemservicemodelchannelssocketconnectioncreate"></a>System.ServiceModel.Channels.SocketConnectionCreate
 
 System.ServiceModel.Channels.SocketConnectionCreate  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このトレースは、クライアントによって実行される最初の "プロセス アクション" アクティビティおよびサービスの "バイトを受信" アクティビティで出力されます。 ローカルとリモートの IP アドレスを提供します。 情報レベルで出力されます。  
   

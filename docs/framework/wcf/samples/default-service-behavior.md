@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「既定のサービス動作」を参照してください。
 title: 既定のサービスの動作
 ms.date: 03/30/2017
 helpviewer_keywords:
 - service behaviors, defaults
 - Default Service Behavior Sample [Windows Communication Foundation]
 ms.assetid: 442d4f71-c64e-4c62-816a-a66c38e7d3ec
-ms.openlocfilehash: acdb4652c0f49b610b8e7cad2aa5c0074fe00511
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a0b83180c9ab758cb7a8db7f92a8bf0c081e4489
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96292754"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99631984"
 ---
 # <a name="default-service-behavior"></a>既定のサービスの動作
 
@@ -48,7 +49,7 @@ public class CalculatorService : ICalculator
   
  サービスの動作は、<xref:System.ServiceModel.ServiceBehaviorAttribute> 属性で指定されます。 これらの動作のいくつかを次の表に示します。  
   
-|サービスの動作|Description|  
+|サービスの動作|説明|  
 |----------------------|-----------------|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.AutomaticSessionShutdown%2A>|セッションをクライアントの要求で自動的にシャットダウンします。|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>|各サービス インスタンスのコンカレンシー モードを指定します。|  
@@ -60,7 +61,7 @@ public class CalculatorService : ICalculator
   
  操作の動作は <xref:System.ServiceModel.OperationBehaviorAttribute> 属性を使用して指定されます。 これらの動作のいくつかを次の表に示します。  
   
-|操作の動作|Description|  
+|操作の動作|説明|  
 |------------------------|-----------------|  
 |<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>|現在のトランザクションがサービス操作の完了によってコミットされるかどうかを判断します。|  
 |<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>|サービス操作がクライアントからフローされたトランザクションに参加するかどうかを判断します。|  

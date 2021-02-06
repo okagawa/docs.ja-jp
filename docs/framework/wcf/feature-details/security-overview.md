@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: Windows Communication Foundation セキュリティの概要'
 title: セキュリティの概要
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: c14ccb88d12622308f2474844f86b5f73c1f34b2
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e2fba11e71b3e30c1dae6cd889f710455d840b59
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293703"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632426"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Windows Communication Foundation セキュリティの概要
 

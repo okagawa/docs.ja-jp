@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「System.servicemodel Connectionabort」を参照してください。
 title: System.ServiceModel.Channels.SocketConnectionAbort
 ms.date: 03/30/2017
 ms.assetid: 5e1a7716-b23a-46c5-952a-19c53b447a71
-ms.openlocfilehash: c05238afd081368b835078815586e022bf2cd554
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d897196f27a99b24db254f3cf23edf7617e3d90f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291948"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99634636"
 ---
 # <a name="systemservicemodelchannelssocketconnectionabort"></a>System.ServiceModel.Channels.SocketConnectionAbort
 
 System.ServiceModel.Channels.SocketConnectionAbort  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  SocketConnection が中止されました。  
   

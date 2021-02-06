@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「Request-Reply 関連付け」を参照してください。
 title: 要求/応答の相関関係
 ms.date: 03/30/2017
 ms.assetid: cf4379bf-2d08-43f3-9584-dfa30ffcb1f6
-ms.openlocfilehash: da7739af7368cd7ebb55ed0ea2511e10f0bcb3f5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e745c9061f227e08400973f43613da73e68c8d70
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239069"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632842"
 ---
 # <a name="request-reply-correlation"></a>要求/応答の相関関係
 

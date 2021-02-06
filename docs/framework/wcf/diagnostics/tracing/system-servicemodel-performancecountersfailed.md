@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「PerformanceCountersFailed」を参照してください。
 title: System.ServiceModel.PerformanceCountersFailed
 ms.date: 03/30/2017
 ms.assetid: 3bf030f3-e218-4300-943f-03aaa7dfe2d3
-ms.openlocfilehash: cea7e72461b22d0407f5aec323d641adb314fac0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: bcc0c22975a83fe775a8ce7db9115041720c87bb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96252661"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99633115"
 ---
 # <a name="systemservicemodelperformancecountersfailed"></a>System.ServiceModel.PerformanceCountersFailed
 
 System.ServiceModel.PerformanceCountersFailed  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  指定されたパフォーマンス カウンターを読み込むことができませんでした。 一部のパフォーマンス カウンターは利用できません。  
   

@@ -1,13 +1,14 @@
 ---
+description: 配信不能キューについての詳細情報
 title: 配信不能キュー
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: cf281ff08d56669d0257d693af93d8a9b5b2e81a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5cec218f993fd99d1419aab884addfba686337c4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96292827"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632153"
 ---
 # <a name="dead-letter-queues"></a>配信不能キュー
 
@@ -350,7 +351,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     > [!NOTE]
     > `security mode` を `None` に設定することは、`MsmqAuthenticationMode`、`MsmqProtectionLevel`、および `Message` のセキュリティを `None` に設定することに相当します。
 
-## <a name="comments"></a>説明
+## <a name="comments"></a>コメント
 
  `netMsmqBinding` バインディング トランスポートを使用する場合の既定では、セキュリティが有効です。 トランスポート セキュリティの種類は、`MsmqAuthenticationMode` と `MsmqProtectionLevel` の 2 つのプロパティで決まります。 既定の設定では、認証モードは `Windows`、保護レベルは `Sign` です。 MSMQ の認証および署名の機能を利用するには、ドメインに属している必要があります。 ドメインに属していないコンピューターでこのサンプルを実行すると、"User's internal message queuing certificate does not exist" というエラーが表示されます。
 

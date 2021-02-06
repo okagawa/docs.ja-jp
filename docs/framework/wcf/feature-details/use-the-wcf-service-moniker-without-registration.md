@@ -1,15 +1,16 @@
 ---
+description: '詳細については、「方法: 登録せずに Windows Communication Foundation サービスモニカーを使用する」を参照してください。'
 title: '方法: 未登録で Windows Communication Foundation のサービス モニカーを使用する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
-ms.openlocfilehash: 41761313fae68a1a348a73f104e21dc19e07eb65
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ed3ea221bc32c4334f609b6740fa10bb63cb2830
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293508"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632387"
 ---
 # <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>方法: 未登録で Windows Communication Foundation のサービス モニカーを使用する
 

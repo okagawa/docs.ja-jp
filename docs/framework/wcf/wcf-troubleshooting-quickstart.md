@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「WCF トラブルシューティングクイックスタート」をご覧ください。
 title: WCF トラブルシューティング クイックスタート
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 7df178334ca3ef5b901e3e82bf39592434ee059e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 686b008752704ed54700d9c49e2df71f9fc3fd98
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279728"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99631659"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF トラブルシューティング クイックスタート
 

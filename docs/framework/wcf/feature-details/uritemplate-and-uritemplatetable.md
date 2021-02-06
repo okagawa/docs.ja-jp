@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「UriTemplate と UriTemplateTable」を参照してください。
 title: UriTemplate と UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 212cc0a7f90ac2e74837118a905519148ddc089d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7abcf0125108e4f48e392e8bb817dda77dfedd38
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96289673"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632413"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate と UriTemplateTable
 
@@ -17,7 +18,7 @@ Web 開発者は、サービスの応答先となる URI の形状とレイア�
 
  テンプレートとは、一連の相対 URI を記述する方法です。 次の表の URI テンプレートのセットは、各種気象情報を取得するシステムがどのように定義されているかを示しています。  
   
-|Data|Template|  
+|データ|Template|  
 |----------|--------------|  
 |国の天気予報|weather/national|  
 |州の天気予報|weather/{state}|  

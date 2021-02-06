@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「System.servicemodel」を参照してください。
 title: System.ServiceModel.Channels.PeerNodeOpening
 ms.date: 03/30/2017
 ms.assetid: 132d4928-ea20-4952-b115-d050499bc728
-ms.openlocfilehash: 9c36b405d34645668327d80eceba818fb05696ec
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 73b11acada1b0ccade9b1c6b5c0539f126cb48e8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96292338"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99634779"
 ---
 # <a name="systemservicemodelchannelspeernodeopening"></a>System.ServiceModel.Channels.PeerNodeOpening
 
 PeerNode の初期化が開始されました。  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このトレースは、PeerNode の初期化 (開始) コード実行の開始時に行われます。  
   

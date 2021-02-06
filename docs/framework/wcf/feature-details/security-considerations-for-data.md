@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: データのセキュリティに関する考慮事項'
 title: セキュリティに関するデータの考慮事項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: b9b033f779b083be8bcec195caf8e55607f14d31
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 6e0bf681ad8dd141ad030ef850c3e50c1d6e65c8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188316"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632621"
 ---
 # <a name="security-considerations-for-data"></a>セキュリティに関するデータの考慮事項
 
@@ -44,7 +45,7 @@ Windows Communication Foundation (WCF) インフラストラクチャのさま�
 
 セキュリティを念頭に置いてシリアル化可能な型を設計するとき、情報の漏えい公開は考慮事項の 1 つです。
 
-次の点を考慮してください。
+次の点を考慮します。
 
 - <xref:System.Runtime.Serialization.DataContractSerializer> プログラミング モデルでは、シリアル化中に型またはアセンブリの外側で、プライベートな内部データの公開が許可されます。 さらに、スキーマのエクスポート時に型の形状が公開されることがあります。 必ず、型のシリアル化射影について理解してください。 型を公開しない場合は、シリアル化を無効にします (たとえば、データ コントラクトの場合、 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性を適用しないことによって無効にします)。
 

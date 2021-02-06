@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「セキュリティネゴシエーションとタイムアウト」を参照してください。
 title: セキュリティ ネゴシエーションとタイムアウト
 ms.date: 03/30/2017
 ms.assetid: 02a428f1-84e5-4d28-a11f-53ce31d63196
-ms.openlocfilehash: 4ccc7e5539b1a772be6f9edb5a4cb4d94a8d1c1b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 50055698f9a9946d0c0110a964cf9ce5b9f4fa28
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275984"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632439"
 ---
 # <a name="security-negotiation-and-timeouts"></a>セキュリティ ネゴシエーションとタイムアウト
 

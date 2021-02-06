@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「39456-TrackingRecordDropped」を参照してください。
 title: 39456 - TrackingRecordDropped
 ms.date: 03/30/2017
 ms.assetid: da13d5bc-1736-47a4-b3fd-064ca8040326
-ms.openlocfilehash: d958b506e057bc0d59f954debdc9da6015bf5f1f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0f6920ef85327318f4ea8662ae36f26c7494bcb2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96273101"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99631295"
 ---
 # <a name="39456---trackingrecorddropped"></a>39456 - TrackingRecordDropped
 
@@ -15,12 +16,12 @@ ms.locfileid: "96273101"
   
 |||  
 |-|-|  
-|ID|39456|  
+|id|39456|  
 |Keywords|WFTracking|  
 |Level|警告|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  サイズが ETW セッション プロバイダーによって許可される最大値を超えているため、追跡レコードが削除されたことを示します。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96273101"
   
 ## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|Description|  
+|データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  
 |例外|xs:string|例外の詳細|  
 |AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName で返される文字列。|

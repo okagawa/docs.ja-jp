@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: セキュリティで保護されたセッションのセキュリティに関する考慮事項'
 title: セキュリティで保護されたセッションに関するセキュリティの検討
 ms.date: 03/30/2017
 ms.assetid: 0d5be591-9a7b-4a6f-a906-95d3abafe8db
-ms.openlocfilehash: abfbb565e06059e05eda3900ba9b8769e3657af8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 565797d9354d4c274dd843350d7c9035e5413c07
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276036"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632608"
 ---
 # <a name="security-considerations-for-secure-sessions"></a>セキュリティで保護されたセッションに関するセキュリティの検討
 

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 信頼できるセッションの概要'
 title: 信頼できるセッションの概要
 ms.date: 03/30/2017
 ms.assetid: a7fc4146-ee2c-444c-82d4-ef6faffccc2d
-ms.openlocfilehash: a85a34c5e2ec7928c01586e4b01cdf5e90e896a7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 51de6012245b4fc0a367069d02fe69ee031f2b30
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601089"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632894"
 ---
 # <a name="reliable-sessions-overview"></a>信頼できるセッションの概要
 
@@ -17,9 +18,9 @@ Windows Communication Foundation (WCF) SOAP reliable messaging は、SOAP エン
 
 ## <a name="wcf-reliable-sessions"></a>WCF の信頼できるセッション
 
-WCF reliable sessions は、ws-reliablemessaging プロトコルで定義されている SOAP reliable messaging の実装です。
+WCF reliable sessions は、WS-ReliableMessaging プロトコルで定義されている SOAP reliable messaging の実装です。
 
-WCF SOAP reliable messaging は、メッセージングエンドポイントを分離する中継局の数や種類に関係なく、2つのエンドポイント間のエンドツーエンドの信頼できるセッションを提供します。 これには、soap を使用しないトランスポート仲介 (HTTP プロキシなど) や、エンドポイント間のメッセージフローに必要な soap (SOAP ベースのルーターやブリッジなど) を使用する中継局が含まれます。 信頼できるセッションチャネルは、*対話型*通信をサポートしているので、このようなチャネルに接続されているサービスは同時に実行され、待機時間が短い状況 (比較的短い間隔) でメッセージを処理します。 この結合によって、これらのコンポーネントの進行状況がまとめられたり、失敗したりします。そのため、これらのコンポーネント間に分離が提供されることはありません。
+WCF SOAP reliable messaging は、メッセージングエンドポイントを分離する中継局の数や種類に関係なく、2つのエンドポイント間のエンドツーエンドの信頼できるセッションを提供します。 これには、soap を使用しないトランスポート仲介 (HTTP プロキシなど) や、エンドポイント間のメッセージフローに必要な soap (SOAP ベースのルーターやブリッジなど) を使用する中継局が含まれます。 信頼できるセッションチャネルは、 *対話型* 通信をサポートしているので、このようなチャネルに接続されているサービスは同時に実行され、待機時間が短い状況 (比較的短い間隔) でメッセージを処理します。 この結合によって、これらのコンポーネントの進行状況がまとめられたり、失敗したりします。そのため、これらのコンポーネント間に分離が提供されることはありません。
 
 信頼できるセッションでは次の 2 種類のエラーがマスクされます。
 
@@ -59,7 +60,7 @@ WCF SOAP reliable messaging は、メッセージングエンドポイントを�
 
   - `NetTcpBinding` : 双方向、要求/応答、または一方向のコントラクトを公開します。
 
-HTTPS (問題の詳細については、「<a href="#reliable-sessions-and-security">信頼できるセッションとセキュリティ</a>」を参照) または名前付きパイプバインドを作成して、その他のバインディングで信頼できるセッションを使用します。
+HTTPS (問題の詳細については、「 <a href="#reliable-sessions-and-security">信頼できるセッションとセキュリティ</a>」を参照) または名前付きパイプバインドを作成して、その他のバインディングで信頼できるセッションを使用します。
 
 信頼できるセッションは、基になるさまざまな種類のチャネルにスタックでき、結果として得られる信頼できるセッションチャネルの形状は異なります。 クライアントとサーバーの両方で、サポートされている信頼できるセッションチャネルの種類は、使用される基になるチャネルの種類によって異なります。 次の表では、基になるチャネルの種類ごとに、クライアントでサポートされるセッション チャネルの種類を示します。
 
@@ -105,9 +106,9 @@ WCF の信頼できるセッションを使用するには、信頼できるセ�
 
 - <xref:System.ServiceModel.NetTcpBinding>
 
-カスタムバインディングを作成する方法の例については、「[方法: HTTPS を使用してカスタムの信頼できるセッションのバインディングを作成](how-to-create-a-custom-reliable-session-binding-with-https.md)する」を参照してください。
+カスタムバインディングを作成する方法の例については、「 [方法: HTTPS を使用してカスタムの信頼できるセッションのバインディングを作成](how-to-create-a-custom-reliable-session-binding-with-https.md)する」を参照してください。
 
-信頼できるセッションをサポートする WCF バインディングの詳細については、「[システム指定のバインディング](../system-provided-bindings.md)」を参照してください。
+信頼できるセッションをサポートする WCF バインディングの詳細については、「 [システム指定のバインディング](../system-provided-bindings.md)」を参照してください。
 
 ## <a name="when-to-use-reliable-sessions"></a>信頼できるセッションを使用する場合
 

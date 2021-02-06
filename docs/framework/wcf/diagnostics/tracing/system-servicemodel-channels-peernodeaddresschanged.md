@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「System.servicemodel」を参照してください。
 title: System.ServiceModel.Channels.PeerNodeAddressChanged
 ms.date: 03/30/2017
 ms.assetid: 14bd4be6-1ff1-4df5-b89f-af7950f62ef4
-ms.openlocfilehash: 85d93483ffec2f625f1cb2b451ec39201a0b4876
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 28ec5e00b85e416e5c60604e8998584bcaea6a50
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96263270"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99634961"
 ---
 # <a name="systemservicemodelchannelspeernodeaddresschanged"></a>System.ServiceModel.Channels.PeerNodeAddressChanged
 
 1つまたは複数の PeerNode のアドレスが変更されました。  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このトレースは、アドレス変更の通知コールバックの終了時に行われます。  
   

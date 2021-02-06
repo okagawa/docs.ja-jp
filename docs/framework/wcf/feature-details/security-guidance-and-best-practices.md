@@ -1,15 +1,16 @@
 ---
+description: 詳細については、セキュリティのガイダンスとベストプラクティスに関するページを参照してください。
 title: セキュリティ ガイドラインとベスト プラクティス
 ms.date: 03/30/2017
 helpviewer_keywords:
 - secure applications [WCF]
 ms.assetid: 79e4e6f7-0c00-4045-b0f0-e6a7c37c7788
-ms.openlocfilehash: 9eaa401f9ba7c62a684e912005a8f13fd443a900
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e121532708ca77e106fe1e731fe496af7efb725a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276010"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632452"
 ---
 # <a name="security-guidance-and-best-practices"></a>セキュリティ ガイドラインとベスト プラクティス
 

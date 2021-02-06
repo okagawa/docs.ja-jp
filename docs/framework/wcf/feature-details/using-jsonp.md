@@ -1,13 +1,14 @@
 ---
+description: 詳細については、JSONP の使用に関するページをご覧ください。
 title: JSONP の使用
 ms.date: 03/30/2017
 ms.assetid: f386718c-b4ba-4931-a610-40c27a46672a
-ms.openlocfilehash: 82290319b5d8b58708f0b2ebf40522ee76127b84
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f4d21670cf468328b8579fa8a9cf2c2e06f09337
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594960"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632192"
 ---
 # <a name="using-jsonp"></a>JSONP の使用
 
@@ -74,7 +75,7 @@ HTTP 状態コードが 200 以外の JSONP 応答には、次の例のように
 anotherFunction ({"root":"Something"}, 201);
 ```
 
-## <a name="validations"></a>Validations (検証)
+## <a name="validations"></a>確認
 
 JSONP が有効な場合、以下の検証が行われます。
 
