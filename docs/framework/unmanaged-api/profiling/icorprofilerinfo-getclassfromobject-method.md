@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: ICorProfilerInfo:: GetClassFromObject メソッド'
 title: ICorProfilerInfo::GetClassFromObject メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b97493fb-713e-49d5-a73e-5688b2ad0700
 topic_type:
 - apiref
-ms.openlocfilehash: 5a7edc6045969861679d1b80c0563e99f48932cf
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1c0224137c839d167263eefb17e3ae0b3ac29ef3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680249"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99647805"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a>ICorProfilerInfo::GetClassFromObject メソッド
 
@@ -42,7 +43,7 @@ HRESULT GetClassFromObject(
  `pClassId`  
  入出力返されたへのポインター `ClassID` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  Null は、が `pClassId` `objectId` アンロード中の型を持つことを示します。  
   

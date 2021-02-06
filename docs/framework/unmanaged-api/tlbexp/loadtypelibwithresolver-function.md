@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: LoadTypeLibWithResolver 関数'
 title: LoadTypeLibWithResolver 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7123a89b-eb9b-463a-a552-a081e33b0a3a
 topic_type:
 - apiref
-ms.openlocfilehash: 6497dd3e720874e47de9dfda74e483a642cbb181
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6747199364a549d922ad73bfac3e93b329d1172a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95708232"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646219"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 関数
 
@@ -70,7 +71,7 @@ HRESULT LoadTypeLibWithResolver(
 |`TYPE_E_INVALIDSTATE`|タイプライブラリを開けませんでした。|  
 |`TYPE_E_CANTLOADLIBRARY`|タイプライブラリまたは DLL を読み込めませんでした。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  [Tlbexp.exe (タイプライブラリエクスポーター)](../../tools/tlbexp-exe-type-library-exporter.md)は、 `LoadTypeLibWithResolver` アセンブリからタイプライブラリへの変換プロセス中に関数を呼び出します。  
   

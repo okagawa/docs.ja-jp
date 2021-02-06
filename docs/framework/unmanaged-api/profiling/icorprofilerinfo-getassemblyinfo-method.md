@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo:: GetAssemblyInfo メソッド'
 title: ICorProfilerInfo::GetAssemblyInfo メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7a3c97c3-1e31-47b1-bf23-386785c509c4
 topic_type:
 - apiref
-ms.openlocfilehash: ff81da15b17ab0a7fbe62b08e358f65eed3edb71
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 64e94031e0e4fc5f768e94b83e4e97c3a9a7cb61
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680274"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99647845"
 ---
 # <a name="icorprofilerinfogetassemblyinfo-method"></a>ICorProfilerInfo::GetAssemblyInfo メソッド
 
@@ -59,7 +60,7 @@ HRESULT GetAssemblyInfo(
  `pModuleId`  
  [out] アセンブリのマニフェスト モジュールの ID へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドから制御が戻った後で、`szName` バッファーのサイズが十分で、アセンブリの完全名を格納できたかどうかを確認する必要があります。 これを行うには、`pcchName` が指している値を `cchName` パラメーターの値と比較します。 `pcchName` が指している値が `cchName` の値より大きい場合は、`szName` バッファーの割り当てを増やし、`cchName` を新しい大きいサイズに更新して、`GetAssemblyInfo` を再度呼び出します。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo8:: IsFunctionDynamic メソッド'
 title: 'ICorProfilerInfo8:: IsFunctionDynamic'
 ms.date: 08/06/2019
 dev_langs:
@@ -11,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: c88279d361ea78a2e910c4621e92c500902d9124
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8ab942e6919f8029ef0d1c20336917622a1d22ad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84495126"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646531"
 ---
 # <a name="icorprofilerinfo8isfunctiondynamic-method"></a>ICorProfilerInfo8:: IsFunctionDynamic メソッド
 
@@ -41,7 +42,7 @@ HRESULT IsFunctionDynamic( [in]  FunctionID  functionId,
 
 ## <a name="remarks"></a>解説
 
-関数は、メタデータがない場合は動的と見なされます。 IL スタブや LCG メソッドなどの特定のメソッドには、IMetaDataImport Api を使用して取得できるメタデータが関連付けられていません。 これらのメソッドは、命令ポインターを通じて、または[ICorProfilerCallback::D ynamicmethodjitcompilationstarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)をリッスンすることによって、プロファイラーによって検出されます。
+関数は、メタデータがない場合は動的と見なされます。 IL スタブや LCG メソッドなどの特定のメソッドには、IMetaDataImport Api を使用して取得できるメタデータが関連付けられていません。 これらのメソッドは、命令ポインターを通じて、または [ICorProfilerCallback::D ynamicmethodjitcompilationstarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)をリッスンすることによって、プロファイラーによって検出されます。
 
 ## <a name="requirements"></a>要件
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ICorProfilerInfo3:: EnumModules メソッド'
 title: ICorProfilerInfo3::EnumModules メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1bf00b42-69da-4019-91b3-bf88026e83fb
 topic_type:
 - apiref
-ms.openlocfilehash: 698f6abc872a7e072ae47520386aa9c7ddfb44fa
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9cdb76b77f78fa68eafa111e60b31b738173d658
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95681471"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646856"
 ---
 # <a name="icorprofilerinfo3enummodules-method"></a>ICorProfilerInfo3::EnumModules メソッド
 

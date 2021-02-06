@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback:: AssemblyUnloadFinished メソッド'
 title: ICorProfilerCallback::AssemblyUnloadFinished メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 53fca564-84b1-44d4-9e21-17a492d2aae7
 topic_type:
 - apiref
-ms.openlocfilehash: 3f2b4a64b3f17b043f193e054c56601d706a10e1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 30d6bd805a1466d6a65728b22f677ba00e09ffb6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700380"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648026"
 ---
 # <a name="icorprofilercallbackassemblyunloadfinished-method"></a>ICorProfilerCallback::AssemblyUnloadFinished メソッド
 
@@ -44,7 +45,7 @@ HRESULT AssemblyUnloadFinished(
 
   \[in] アセンブリが正常にアンロードされたかどうかを示す HRESULT。
 
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `assemblyId` [ICorProfilerCallback:: AssemblyUnloadStarted](icorprofilercallback-assemblyunloadstarted-method.md)メソッドがを返すと、の値は情報要求に対して有効ではありません。  
   

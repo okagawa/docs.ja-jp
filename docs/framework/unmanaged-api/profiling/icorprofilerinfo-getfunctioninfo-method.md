@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo:: GetFunctionInfo メソッド'
 title: ICorProfilerInfo::GetFunctionInfo メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c42b5891-019d-46b3-b551-4606295b75b8
 topic_type:
 - apiref
-ms.openlocfilehash: 6aaa02d72dd10fe72d773246d55216143786dabb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e6ad1112f0e6938fc6de549d3a1d2f0901150025
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722540"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99647525"
 ---
 # <a name="icorprofilerinfogetfunctioninfo-method"></a>ICorProfilerInfo::GetFunctionInfo メソッド
 
@@ -50,7 +51,7 @@ HRESULT GetFunctionInfo(
  `pToken`  
  [out] 関数のメタデータ トークンへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  プロファイラーコードは、 [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) を呼び出して、指定されたモジュールのメタデータインターフェイスを取得できます。 `pToken` が参照している場所に返されるメタデータ トークンを使用すると、関数のメタデータにアクセスできます。  
   

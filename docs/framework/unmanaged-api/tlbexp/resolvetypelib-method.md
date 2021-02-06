@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ResolveTypeLib メソッド'
 title: ResolveTypeLib メソッド
 ms.date: 03/30/2017
 api_name:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 95d2aa0d-8eeb-4a9f-a216-5249f7e2c167
 topic_type:
 - apiref
-ms.openlocfilehash: 84eea78b9c2e73e24238a5ecbc9442f3d63dbd4e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ca7f94f630479d30bb9129497b38bcf04e759e5d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719789"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646284"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib メソッド
 
@@ -60,7 +61,7 @@ HRESULT ResolveTypeLib(
  `pbstrResolvedTlbName`  
  入出力パラメーターで指定されたタイプライブラリの完全パスを格納する [BSTR](/previous-versions/windows/desktop/automat/bstr) へのポインター `bstrSimpleName` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ResolveTypeLib`メソッドは[Tlbexp.exe (タイプライブラリエクスポーター)](../../tools/tlbexp-exe-type-library-exporter.md)の処理中に[LoadTypeLibWithResolver 関数](loadtypelibwithresolver-function.md)によって呼び出されます。  
   

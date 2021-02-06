@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorProfilerInfo2 インターフェイス」を参照してください。
 title: ICorProfilerInfo2 インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 91bd49b6-4d12-494f-a8f1-2f251e8c65e3
 topic_type:
 - apiref
-ms.openlocfilehash: 6c146f3deed31601411bef39ab12b52dfec8cd39
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 07828c6f55b72068e9021991600ed17eb6ffe6ad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95681582"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99647012"
 ---
 # <a name="icorprofilerinfo2-interface"></a>ICorProfilerInfo2 インターフェイス
 
@@ -51,7 +52,7 @@ ms.locfileid: "95681582"
 |[GetThreadStaticAddress メソッド](icorprofilerinfo2-getthreadstaticaddress-method.md)|指定したスレッドのスコープ内にある、指定したスレッド静的フィールドのアドレスを取得します。|  
 |[SetEnterLeaveFunctionHooks2 メソッド](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)|マネージ関数の "enter"、"leave"、および "tailcall" フックで呼び出されるプロファイラー実装関数を指定します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  プロファイラーは、 `ICorProfilerInfo2` CLR と通信してイベントの監視と要求情報を制御するために、インターフェイスのメソッドを呼び出します。  
   

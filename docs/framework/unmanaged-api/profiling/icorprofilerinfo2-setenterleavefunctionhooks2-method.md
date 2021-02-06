@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo2:: SetEnterLeaveFunctionHooks2 メソッド'
 title: ICorProfilerInfo2::SetEnterLeaveFunctionHooks2 メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3c26b3e7-f72b-48a5-bf8c-edc122523a4b
 topic_type:
 - apiref
-ms.openlocfilehash: f71d0b5c77d4a514001bcbe6904ed912be388d18
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 34f292d9bec4bcd334f824f7e3e1fd127331ba33
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95681549"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646973"
 ---
 # <a name="icorprofilerinfo2setenterleavefunctionhooks2-method"></a>ICorProfilerInfo2::SetEnterLeaveFunctionHooks2 メソッド
 
@@ -46,7 +47,7 @@ HRESULT SetEnterLeaveFunctionHooks2(
  `pFuncTailcall`  
  から [FunctionTailcall2](functiontailcall2-function.md) コールバックとして使用される実装へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `SetEnterLeaveFunctionHooks2`メソッドは、 [ICorProfilerInfo:: SetEnterLeaveFunctionHooks](icorprofilerinfo-setenterleavefunctionhooks-method.md)メソッドに似ています。 前者を使用して、enter/leave/tailcall コールバックの新しいバージョンとして使用する関数を指定します。後者の場合は、以前のバージョンの enter/leave/tailcall コールバックとして使用する関数を指定します。  
   

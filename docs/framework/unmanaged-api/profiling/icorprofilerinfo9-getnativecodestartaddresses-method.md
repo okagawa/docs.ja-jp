@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo9:: GetNativeCodeStartAddresses メソッド'
 title: ICorProfilerInfo9::GetNativeCodeStartAddresses
 ms.date: 08/06/2019
 dev_langs:
@@ -11,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: ca1643dfa980fa647164accf6432082428124acb
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1ca686cef4a45ebb9e05190fa790ed5300c0d816
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541240"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646492"
 ---
 # <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9:: GetNativeCodeStartAddresses メソッド
 
@@ -54,11 +55,11 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 
   \[out] の配列 `UINT_PTR` 。各は、指定された関数のネイティブ本体の開始アドレスです。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 階層化コンパイルが有効になっている場合、関数は複数のネイティブコード本体を持つことができます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **プラットフォーム:** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/install/windows.md?pivots=os-windows)」を参照してください。
 

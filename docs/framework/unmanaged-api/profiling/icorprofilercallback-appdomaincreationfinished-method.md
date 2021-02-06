@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback:: AppDomainCreationFinished メソッド'
 title: ICorProfilerCallback::AppDomainCreationFinished メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dbab7d90-d515-4dc9-8195-294d5d04bab6
 topic_type:
 - apiref
-ms.openlocfilehash: 688b9975cc68463de066e5225c6ab1e04cbb5337
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6995c6cda168b5be5815e6f7b2b4d900ae0d4d67
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685376"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648364"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>ICorProfilerCallback::AppDomainCreationFinished メソッド
 
@@ -44,7 +45,7 @@ HRESULT AppDomainCreationFinished(
 
   \[in] アプリケーションドメインの作成が正常に完了したかどうかを示す HRESULT。
 
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  アプリケーション ID は、メソッドが呼び出されるまで、情報要求に対して有効ではありません `AppDomainCreationFinished` 。  
   

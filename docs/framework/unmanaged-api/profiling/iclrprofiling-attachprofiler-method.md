@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRProfiling:: AttachProfiler メソッド'
 title: ICLRProfiling::AttachProfiler メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-ms.openlocfilehash: 94495ca0ea75bd41996d430159474c707a3e68b2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 11b53b39d3332d1f72304352fad525e5881e05a6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685423"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648455"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler メソッド
 
@@ -83,7 +84,7 @@ HRESULT AttachProfiler(
 |E_FAIL|他の何らかの未指定のエラーが発生しました。|  
 |その他のエラー コード|プロファイラーの [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) メソッドが失敗を示す hresult を返した場合、は `AttachProfiler` その同じ hresult を返します。 この場合、E_NOTIMPL は CORPROF_E_PROFILER_NOT_ATTACHABLE に変換されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 ## <a name="memory-management"></a>メモリ管理  
 

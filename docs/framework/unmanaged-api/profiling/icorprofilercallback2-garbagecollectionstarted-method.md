@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback2:: GarbageCollectionStarted メソッド'
 title: ICorProfilerCallback2::GarbageCollectionStarted メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44eef087-f21f-4fe2-b481-f8a0ee022e7d
 topic_type:
 - apiref
-ms.openlocfilehash: 63a8d212a61bd73f44995f0e057eeff96f9a5554
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2b57a21dc3a1751b5d4767ea940f64df61af4318
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731952"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99647883"
 ---
 # <a name="icorprofilercallback2garbagecollectionstarted-method"></a>ICorProfilerCallback2::GarbageCollectionStarted メソッド
 
@@ -48,7 +49,7 @@ HRESULT GarbageCollectionStarted(
  `reason`  
  からガベージコレクションが発生した理由を示す [COR_PRF_GC_REASON](cor-prf-gc-reason-enumeration.md) 列挙体の値。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このガベージコレクションに関連するすべてのコールバックは、 `GarbageCollectionStarted` コールバックとそれに対応する [ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md) コールバックの間で発生します。 これらのコールバックは、同じスレッドでは実行されません。  
   

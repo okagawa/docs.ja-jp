@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo3:: GetRuntimeInformation メソッド'
 title: ICorProfilerInfo3::GetRuntimeInformation メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4400fb8c-0407-4791-8557-f011fd2aee51
 topic_type:
 - apiref
-ms.openlocfilehash: fdb2b1601e0164de19bcc1e8f60856346aeaacb1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f615cc54e12b6f2f6eaa7335353f2f5f6a8ecfce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95698014"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646713"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation メソッド
 
@@ -71,7 +72,7 @@ HRESULT GetRuntimeInformation(
  `szVersionString`  
  入出力CLR のバージョン文字列。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  任意のパラメーターに null を渡すことができます。 ただし、が null の場合を除き、を `pcchVersionString` null にすることはできません `szVersionString` 。  
   

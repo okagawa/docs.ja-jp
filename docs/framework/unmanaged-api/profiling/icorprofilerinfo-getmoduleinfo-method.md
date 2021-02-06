@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo:: GetModuleInfo メソッド'
 title: ICorProfilerInfo::GetModuleInfo メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5a90d16f-7929-4987-8f83-a631becf564d
 topic_type:
 - apiref
-ms.openlocfilehash: 863fa1bf50830bb46e5c2939c99fe1e15897ac3d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 003f40e6637490be23e8bf87a6bac8ab76bc50e5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724131"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99647194"
 ---
 # <a name="icorprofilerinfogetmoduleinfo-method"></a>ICorProfilerInfo::GetModuleInfo メソッド
 
@@ -59,7 +60,7 @@ HRESULT GetModuleInfo(
  `pAssemblyId`  
  [out] モジュールの親アセンブリ ID へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  動的モジュールの場合、`szName` パラメーターは空の文字列、ベース アドレスは 0 (ゼロ) になります。  
   

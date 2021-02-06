@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: FunctionLeave 関数'
 title: FunctionLeave 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 18e89f45-e068-426a-be16-9f53a4346860
 topic_type:
 - apiref
-ms.openlocfilehash: 13636da9c3e8ac4aa9e8dc1fa02b2e33afef4717
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cc0db68df8976ce86197cc9b7570b00c6f662cb5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722259"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648481"
 ---
 # <a name="functionleave-function"></a>FunctionLeave 関数
 
@@ -42,7 +43,7 @@ void __stdcall FunctionLeave (
 
   \[in] を返す関数の識別子。
 
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `FunctionLeave`関数はコールバックであるため、実装する必要があります。 実装では、 `__declspec` ( `naked` ) ストレージクラス属性を使用する必要があります。  
   

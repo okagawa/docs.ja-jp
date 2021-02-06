@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ICorProfilerAssemblyReferenceProvider:: AddAssemblyReference メソッド'
 title: ICorProfilerAssemblyReferenceProvider::AddAssemblyReference メソッド
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 3d5af8e7-c337-48f4-9fa6-97c83878b9b1
 topic_type:
 - apiref
-ms.openlocfilehash: 56468fd38bc110318e04d9b1beda61e279f731d1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 343e76dd64329c88bf4b52e24d45a1e7c8b639bd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685321"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648377"
 ---
 # <a name="icorprofilerassemblyreferenceprovideraddassemblyreference-method"></a>ICorProfilerAssemblyReferenceProvider::AddAssemblyReference メソッド
 
@@ -39,7 +40,7 @@ HRESULT AddAssemblyReference(
 
   アセンブリ参照クロージャウォークを実行するときに考慮する必要があるアセンブリ参照に関する情報を CLR に提供する、 [COR_PRF_ASSEMBLY_REFERENCE_INFO](cor-prf-assembly-reference-info-structure.md) 構造体へのポインター。
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  プロファイラーは、 `wszAssemblyPath` [ICorProfilerCallback6:: GetAssemblyReferences](icorprofilercallback6-getassemblyreferences-method.md) コールバックの引数で指定されたアセンブリから参照するターゲットアセンブリごとに、このメソッドを呼び出します。 [ICorProfilerAssemblyReferenceProvider](icorprofilerassemblyreferenceprovider-interface.md)インターフェイスオブジェクトは、引数のアセンブリパスと名前と共に、プロファイラーの[ICorProfilerCallback6:: GetAssemblyReferences](icorprofilercallback6-getassemblyreferences-method.md)コールバックに渡され `wszAssemblyPath` ます。  
   

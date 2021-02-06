@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo:: GetInprocInspectionIThisThread メソッド'
 title: ICorProfilerInfo::GetInprocInspectionIThisThread メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: badddccd-f85c-416e-9f0f-419eab2c9d42
 topic_type:
 - apiref
-ms.openlocfilehash: 8daa84e3abbbc64c9a48d8957b4ad9c6756d0d8b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 07ff904170750976e54e623101a2552db0c7f290
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682082"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99647246"
 ---
 # <a name="icorprofilerinfogetinprocinspectionithisthread-method"></a>ICorProfilerInfo::GetInprocInspectionIThisThread メソッド
 
@@ -38,7 +39,7 @@ HRESULT GetInprocInspectionIThisThread(
  `ppicd`  
  インターフェイスに対してクエリを実行できる[out](/cpp/atl/iunknown)オブジェクト `ICorDebugThread` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  共通言語ランタイム (CLR) のデバッグサービスでは、.NET Framework バージョン1.0 でサポートされているプロセス内デバッグが制限されています。 インプロセスデバッグでは、デバッグ API の検査部分を使用するプロファイラーが有効になりました。 お客様からのフィードバックの結果として、プロセス内デバッグはバージョン2.0 の .NET Framework から削除され、プロファイル API により多くの機能を備えた一連の機能に置き換えられました。  
   

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorProfilerAssemblyReferenceProvider インターフェイス」を参照してください。
 title: ICorProfilerAssemblyReferenceProvider インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -10,12 +11,12 @@ api_type:
 ms.assetid: 17205116-66e1-4acc-8f01-532fb3867028
 topic_type:
 - apiref
-ms.openlocfilehash: 2cee012be2665f5a7212600ec11e401b18160d8b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0f16bad95dba46452ce5cc8ad1bbe6ca1bfeb7c8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95691397"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648351"
 ---
 # <a name="icorprofilerassemblyreferenceprovider-interface"></a>ICorProfilerAssemblyReferenceProvider インターフェイス
 
@@ -29,7 +30,7 @@ ms.locfileid: "95691397"
 |------------|-----------------|  
 |[AddAssemblyReference メソッド](icorprofilerassemblyreferenceprovider-addassemblyreference-method.md)|プロファイラーが [Moduleloadfinished](icorprofilercallback-moduleloadfinished-method.md) コールバックに追加する予定のアセンブリ参照を CLR に通知します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  CLR は、プロファイラーに `ICorProfilerAssemblyReferenceProvider` [ICorProfilerCallback6:: GetAssemblyReferences](icorprofilercallback6-getassemblyreferences-method.md) コールバックのインターフェイスオブジェクトを渡します。 これにより、プロファイラーは、後で [ICorProfilerCallback:: ModuleLoadFinished 終了](icorprofilercallback-moduleloadfinished-method.md)した後に追加することを計画しているアセンブリ参照を CLR に通知できます。 コールバック。 これにより、CLR のアセンブリ参照クロージャ ウォーカーの正確性とアセンブリが共有可能かどうかを判断するアルゴリズムが強化されます。  
   

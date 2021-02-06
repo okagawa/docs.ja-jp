@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: ICorProfilerInfo2:: GetThreadStaticAddress メソッド'
 title: ICorProfilerInfo2::GetThreadStaticAddress メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8e7dbf14-98a2-4384-a950-58a7640e59df
 topic_type:
 - apiref
-ms.openlocfilehash: 8b9b76fd58d8b3ec5c2d98156b7935051aff074b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bab4190f3751967031806dccbea2fdf6add73f6e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731229"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99647052"
 ---
 # <a name="icorprofilerinfo2getthreadstaticaddress-method"></a>ICorProfilerInfo2::GetThreadStaticAddress メソッド
 
@@ -50,7 +51,7 @@ HRESULT GetThreadStaticAddress(
  `ppAddress`  
  入出力指定したスレッド内の静的フィールドのアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `GetThreadStaticAddress`メソッドは、次のいずれかを返す場合があります。  
   
