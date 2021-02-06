@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: セキュリティイベントの監査'
 title: セキュリティ イベントの監査
 ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 985004313c7d9843f2e9960805a6c0623d43a41f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 84eebeec5ebeec047d840e9902d52b4ae409599f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96234818"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643723"
 ---
 # <a name="auditing-security-events"></a>セキュリティ イベントの監査
 
@@ -82,7 +83,7 @@ Windows Communication Foundation (WCF) を使用して作成されたアプリ�
   
  監査が有効になっているが、`auditLogLocation` が指定されていない場合、セキュリティ ログへの書き込みをサポートしているプラットフォームでの既定のログ名は "セキュリティ" ログになります。それ以外の場合は、"アプリケーション" ログになります。 セキュリティログへの書き込みをサポートしているのは、Windows Server 2003 および Windows Vista オペレーティングシステムだけです。 詳細については、このトピックで後述する「オペレーティングシステム」を参照してください。  
   
-## <a name="security-considerations"></a>セキュリティの考慮事項  
+## <a name="security-considerations"></a>セキュリティに関する考慮事項  
 
  監査が有効になっていることが悪意のあるユーザーに知られた場合、そのユーザーは監査エントリの書き込みにつながる無効なメッセージを送信する可能性があります。 このような方法で監査ログに書き込みが行われると、監査システムに障害が発生します。 これを防ぐには、<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> プロパティを `true` に設定し、イベント ビューアーのプロパティを使用して監査動作を制御します。  
   
@@ -94,7 +95,7 @@ Windows Communication Foundation (WCF) を使用して作成されたアプリ�
   
 #### <a name="operating-system"></a>オペレーティング システム  
   
-|システム|アプリケーション ログ|Security log|  
+|System (システム)|アプリケーション ログ|Security log|  
 |------------|---------------------|------------------|  
 |Windows XP SP2 以降|サポートされています|サポートされていません|  
 |Windows Server 2003 SP1 および Windows Vista|サポートされています|スレッド コンテキストが `SeAuditPrivilege` を持つ必要があります。|  

@@ -1,13 +1,14 @@
 ---
+description: '詳細については、「方法: メタデータを取得して準拠サービスを実装する」を参照してください。'
 title: '方法: メタデータの取得および準拠サービスの実装をする'
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-ms.openlocfilehash: 92d1549bfaf1f08c4e4200b5305aa130fdfc152c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f9af65115fa4d60faa332159ccd99319a916bc73
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276049"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643411"
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>方法: メタデータの取得および準拠サービスの実装をする
 

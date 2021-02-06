@@ -1,13 +1,14 @@
 ---
+description: '詳細については、「方法: 探索プロキシをテストする」を参照してください。'
 title: '方法: 探索プロキシをテストする'
 ms.date: 03/30/2017
 ms.assetid: d96e3fa2-3c42-4e5d-8244-2694081bdc32
-ms.openlocfilehash: b08e8561ceff9f0a427a9ea9acb2309772579853
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 32360fd1f3724f2a557182ce2e11d346ba5c959d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294665"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643112"
 ---
 # <a name="how-to-test-the-discovery-proxy"></a>方法: 探索プロキシをテストする
 
@@ -15,7 +16,7 @@ ms.locfileid: "96294665"
   
 ### <a name="run-the-discovery-proxy"></a>探索プロキシの実行  
   
-1. コマンド プロンプトを管理者として開きます。  
+1. 管理者としてコマンド プロンプトを開きます。  
   
 2. "このプログラムの機能のいくつかが Windows ファイアウォールでブロックされています" という内容のダイアログが表示される場合があります。 このメッセージが表示された場合は、[ **ブロック解除** ] ボタンをクリックします。  
   
@@ -25,7 +26,7 @@ ms.locfileid: "96294665"
   
 ### <a name="run-the-discoverable-service"></a>探索サービスの実行  
   
-1. コマンド プロンプトを管理者として開きます。  
+1. 管理者としてコマンド プロンプトを開きます。  
   
 2. コマンド プロンプトから、探索サービス Service.exe を実行します。  
   

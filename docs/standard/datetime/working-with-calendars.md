@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: カレンダーの操作'
 title: カレンダーの使用
 ms.date: 04/01/2019
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - international applications [.NET], calendars
 - culture, calendars
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
-ms.openlocfilehash: c30af36b3426c4abbdf9c55f6c9062a5d8fc8c23
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 978b084906573a18e19cca20db0740ba2a1276cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824253"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99642475"
 ---
 # <a name="work-with-calendars"></a>カレンダーを操作する
 
@@ -240,9 +241,9 @@ ms.locfileid: "94824253"
 
    |  |  |
    |--|--|
-   | **[キー]** | **HKEY_LOCAL_MACHINE\Software\Microsoft\\ 。Netframework\ appcontext** |
+   | **キー** | **HKEY_LOCAL_MACHINE\Software\Microsoft\\ 。Netframework\ appcontext** |
    | **名前** | Tem を Switch.Sysします。EnforceJapaneseEraYearRanges |
-   | **Type** | REG_SZ |
+   | **種類** | REG_SZ |
    | **Value** | true |
 
 厳密な範囲チェックが有効になっている場合、前の例ではがスロー <xref:System.ArgumentOutOfRangeException> され、次の出力が表示されます。
@@ -315,9 +316,9 @@ Parameter name: year
 
    |  |  |
    |--|--|
-   | **[キー]** | **HKEY_LOCAL_MACHINE\Software\Microsoft\\ 。Netframework\ appcontext** |
+   | **キー** | **HKEY_LOCAL_MACHINE\Software\Microsoft\\ 。Netframework\ appcontext** |
    | **名前** | Tem を Switch.Sysします。FormatJapaneseFirstYearAsANumber |
-   | **Type** | REG_SZ |
+   | **種類** | REG_SZ |
    | **Value** | true |
 
 書式設定操作が無効になっている場合、前の例では次の出力が表示されます。
@@ -353,9 +354,9 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
 
    |  |  |
    |--|--|
-   | **[キー]** | **HKEY_LOCAL_MACHINE\Software\Microsoft\\ 。Netframework\ appcontext** |
+   | **キー** | **HKEY_LOCAL_MACHINE\Software\Microsoft\\ 。Netframework\ appcontext** |
    | **名前** | Tem を Switch.Sysします。EnforceLegacyJapaneseDateParsing |
-   | **Type** | REG_SZ |
+   | **種類** | REG_SZ |
    | **Value** | true |
 
 ## <a name="see-also"></a>関連項目

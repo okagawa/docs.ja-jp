@@ -1,4 +1,5 @@
 ---
+description: の詳細については、「」を参照してください。 <add> <listeners><trace>
 title: <add> のの <listeners> 要素 <trace>
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <add> element for <listeners>
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
-ms.openlocfilehash: da5c0ccae08a32c324a1633b5a7ff7592efa6e2d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ffc0823e0c0ce1dcd9d9f19853929496b3248177
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91174044"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639784"
 ---
 # <a name="add-element-for-listeners-for-trace"></a>\<add> のの \<listeners> 要素 \<trace>
 
@@ -62,14 +63,14 @@ ms.locfileid: "91174044"
   
 ## <a name="remarks"></a>解説  
 
- <xref:System.Diagnostics.Debug>クラスと <xref:System.Diagnostics.Trace> クラスは、同じ**Listeners**コレクションを共有します。 これらのクラスのいずれかのコレクションにリスナーオブジェクトを追加すると、他のクラスは同じリスナーを使用します。 リスナークラスはから派生し <xref:System.Diagnostics.TraceListener> ます。  
+ <xref:System.Diagnostics.Debug>クラスと <xref:System.Diagnostics.Trace> クラスは、同じ **Listeners** コレクションを共有します。 これらのクラスのいずれかのコレクションにリスナーオブジェクトを追加すると、他のクラスは同じリスナーを使用します。 リスナークラスはから派生し <xref:System.Diagnostics.TraceListener> ます。  
   
  トレースリスナーの属性を指定しない場合 `name` 、 <xref:System.Diagnostics.TraceListener.Name%2A> トレースリスナーのは既定で空の文字列 ("") になります。 アプリケーションにリスナーが1つしかない場合は、名前を指定せずにリスナーを追加し、名前に空の文字列を指定することで削除できます。 ただし、アプリケーションに複数のリスナーがある場合は、各トレースリスナーに一意の名前を指定する必要があります。これにより、コレクションとコレクション内の個々のトレースリスナーを識別して管理でき <xref:System.Diagnostics.Debug.Listeners%2A> <xref:System.Diagnostics.Trace.Listeners%2A> ます。  
   
 > [!NOTE]
 > 同じ種類の複数のトレースリスナーを同じ名前で追加すると、その型と名前のトレースリスナーは1つだけになり、コレクションに追加され `Listeners` ます。 ただし、プログラムを使用して複数の同じリスナーをコレクションに追加することはでき `Listeners` ます。  
   
- **Initializedata**属性の値は、作成するリスナーの種類によって異なります。 すべてのトレースリスナーで **Initializedata**を指定する必要はありません。  
+ **Initializedata** 属性の値は、作成するリスナーの種類によって異なります。 すべてのトレースリスナーで **Initializedata** を指定する必要はありません。  
   
 > [!NOTE]
 > 属性を使用すると、 `initializeData` "initializeData" 属性が宣言されていないことを示すコンパイラの警告が表示されることがあります。 この警告は、属性を認識しない抽象基本クラスに対して構成設定が検証されるために発生し <xref:System.Diagnostics.TraceListener> `initializeData` ます。 通常、パラメーターを受け取るコンストラクターを持つトレースリスナーの実装では、この警告を無視できます。  

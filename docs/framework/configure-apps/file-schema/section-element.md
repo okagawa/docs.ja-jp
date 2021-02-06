@@ -1,4 +1,5 @@
 ---
+description: 詳細については、下記のリンクをクリックしてください。 <section> 要素
 title: <section> 要素
 ms.date: 05/01/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - section Element
 - <section> Element
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
-ms.openlocfilehash: 88f74c02ef627e9136e4437ffa150c36445266a3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7756f7ee3be2391a0d068708f3719083640b5595
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153732"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639940"
 ---
 # <a name="section-element"></a>\<section> 要素
 
@@ -42,22 +43,22 @@ ms.locfileid: "79153732"
 |           | 説明 |
 | --------- | ----------- |
 | **name**  | 構成セクションの名前を指定します。 |
-| **type**  | 構成ファイルからセクションを読み取る構成セクションハンドラークラスの名前を指定します。 型の値には、"完全修飾名"、"完全修飾名"、".. アセンブリ名" の構文があります。 単純なアセンブリ名は、 *.dll*ファイル拡張子のないルートファイル名です。 |
+| **type**  | 構成ファイルからセクションを読み取る構成セクションハンドラークラスの名前を指定します。 型の値には、"完全修飾名"、"完全修飾名"、".. アセンブリ名" の構文があります。 単純なアセンブリ名は、 *.dll* ファイル拡張子のないルートファイル名です。 |
 
 ## <a name="optional-attributes"></a>省略可能な属性
 
 次の属性は、ASP.NET アプリケーションにのみ適用されます。 構成システムは、他のアプリケーションの種類に対してこれらの属性を無視します。
 
-|                     | Description |
+|                     | 説明 |
 | ------------------- | ----------- |
-| **allowDefinition** | セクションを使用できる構成ファイルを指定します。 次のいずれかの値を使用します。<br><br>**すべての場所**<br>すべての構成ファイルでセクションを使用できるようにします。 既定値です。<br>**MachineOnly**<br>セクション*をコンピューターの構成ファイル (machine.config*) でのみ使用できるようにします。<br>**MachineToApplication**<br>コンピューターの構成ファイルまたはアプリケーション構成ファイルでセクションを使用できるようにします。 |
+| **allowDefinition** | セクションを使用できる構成ファイルを指定します。 次のいずれかの値を使用します。<br><br>**すべての場所**<br>すべての構成ファイルでセクションを使用できるようにします。 既定値です。<br>**MachineOnly**<br>セクションをコンピューターの構成ファイル (*Machine.config*) でのみ使用できるようにします。<br>**MachineToApplication**<br>コンピューターの構成ファイルまたはアプリケーション構成ファイルでセクションを使用できるようにします。 |
 | **allowLocation**   | 要素内でセクションを使用できるかどうかを判断し **\<location>** ます。 次のいずれかの値を使用します。<br><br>**true**<br>要素内でセクションを使用できるようにし **\<location>** ます。 既定値です。<br>**false**<br>では、要素内でセクションを使用することはできません **\<location>** 。 |
 
 ## <a name="parent-elements"></a>親要素
 
-|     | Description |
+|     | 説明 |
 | --- | ----------- |
-| [**\<configSections>** Element](configsections-element-for-configuration.md) | 構成セクションと名前空間の宣言が含まれています。 |
+| [**\<configSections>** 要素](configsections-element-for-configuration.md) | 構成セクションと名前空間の宣言が含まれています。 |
 | [**\<sectionGroup>** Element](sectiongroup-element-for-configsections.md) | 構成セクションの名前空間を定義します。 |
 
 > [!NOTE]
@@ -71,7 +72,7 @@ ms.locfileid: "79153732"
 
 構成セクションを宣言すると、基本的に構成ファイルの新しい要素が定義されます。 新しい要素には、構成セクションハンドラー (つまり、インターフェイスを実装するクラス) の読み取りの設定が含まれ <xref:System.Configuration.IConfigurationSectionHandler> ます。 定義するセクションの属性と子要素は、設定の読み取りに使用するセクションハンドラーによって異なります。
 
-*Machine.config*ファイルで構成セクションハンドラーを宣言すると、 **allowdefinition**属性で特に指定されていない限り、そのコンピューター上の任意のアプリケーション構成ファイルの構成セクションを使用できます。
+*Machine.config* ファイルで構成セクションハンドラーを宣言すると、 **allowdefinition** 属性で特に指定されていない限り、そのコンピューター上の任意のアプリケーション構成ファイルの構成セクションを使用できます。
 
 ## <a name="example"></a>例
 
@@ -92,7 +93,7 @@ ms.locfileid: "79153732"
 
 ## <a name="configuration-file"></a>構成ファイル
 
-この要素は、アプリケーション構成ファイル *、コンピューター構成*ファイル (machine.config)、およびアプリケーションディレクトリレベルでは*ない web.config ファイル*で使用できます。
+この要素は、アプリケーション構成ファイル、マシン構成ファイル (*Machine.config*)、およびアプリケーションディレクトリレベルではないファイル *Web.config* で使用できます。
 
 ## <a name="see-also"></a>関連項目
 

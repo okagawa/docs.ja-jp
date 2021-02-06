@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: efc440adb59da1ef9838ec5445d9c55544c14380
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: 2cda5a23bbc90ca5dc2305b5d7023e8ea6120b79
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216474"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643073"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET ソース コード分析の概要
 
@@ -48,8 +48,8 @@ ms.locfileid: "99216474"
 | [CA2013](/visualstudio/code-quality/ca2013) | [信頼性] | 警告 | `ReferenceEquals`値型では使用しない |
 | [CA2014](/visualstudio/code-quality/ca2014) | [信頼性] | 警告 | In ループを使用しない `stackalloc` |
 | [CA2015](/visualstudio/code-quality/ca2015) | [信頼性] | 警告 | から派生した型にはファイナライザーを定義しないでください。 <xref:System.Buffers.MemoryManager%601> |
-| [CA2200](/visualstudio/code-quality/ca2200) | 使用法 | 警告 | スタック詳細を保持するために再度スローします
-| [CA2247](/visualstudio/code-quality/ca2247) | 使用法 | 警告 | Taskのソースコンストラクターに渡される引数は、ではなく列挙型にする必要があり <xref:System.Threading.Tasks.TaskCreationOptions> ます <xref:System.Threading.Tasks.TaskContinuationOptions> |
+| [CA2200](/visualstudio/code-quality/ca2200) | 使用 | 警告 | スタック詳細を保持するために再度スローします
+| [CA2247](/visualstudio/code-quality/ca2247) | 使用 | 警告 | Taskのソースコンストラクターに渡される引数は、ではなく列挙型にする必要があり <xref:System.Threading.Tasks.TaskCreationOptions> ます <xref:System.Threading.Tasks.TaskContinuationOptions> |
 
 これらのルールを無効にするか、エラーに昇格するように、これらのルールの重大度を変更することができます。 [さらに多くのルールを有効に](#enable-additional-rules)することもできます。
 
@@ -119,7 +119,7 @@ ms.locfileid: "99216474"
 
 1. MSBuild プロパティ [EnforceCodeStyleInBuild](../../core/project-sdk/msbuild-props.md#enforcecodestyleinbuild) をに設定し `true` ます。
 
-1. *Editorconfig* ファイルで、ビルド時に実行する各 "IDE" コードスタイルルールを警告またはエラーとして [構成](configuration-options.md)します。 例:
+1. *Editorconfig* ファイルで、ビルド時に実行する各 "IDE" コードスタイルルールを警告またはエラーとして [構成](configuration-options.md)します。 次に例を示します。
 
    ```ini
    [*.{cs,vb}]
@@ -127,7 +127,7 @@ ms.locfileid: "99216474"
    dotnet_diagnostic.IDE0040.severity = warning
    ```
 
-   また、既定では、カテゴリ全体を警告またはエラーとして構成してから、ビルドで実行したくないカテゴリの規則を選択的にオフにすることもできます。 例:
+   また、既定では、カテゴリ全体を警告またはエラーとして構成してから、ビルドで実行したくないカテゴリの規則を選択的にオフにすることもできます。 次に例を示します。
 
    ```ini
    [*.{cs,vb}]
@@ -144,15 +144,13 @@ ms.locfileid: "99216474"
 
 ## <a name="suppress-a-warning"></a>警告の非表示
 
-規則違反を抑制するには、その規則 ID の重大度オプションを `none` EditorConfig ファイルでに設定します。 例:
+規則違反を抑制する方法の1つとして、 `none` EditorConfig ファイル内の規則 ID の重大度オプションをに設定します。 次に例を示します。
 
 ```ini
 dotnet_diagnostic.CA1822.severity = none
 ```
 
-Visual Studio には、コード分析規則からの警告を抑制するための追加の方法が用意されています。 詳細については、「 [違反の抑制](/visualstudio/code-quality/use-roslyn-analyzers#suppress-violations)」を参照してください。
-
-規則の重大度の詳細については、「 [規則の重要度の構成](configuration-options.md#severity-level)」を参照してください。
+警告を非表示にするための詳細およびその他の方法については、「 [コード分析の警告を抑制する方法](suppress-warnings.md)」を参照してください。
 
 ## <a name="third-party-analyzers"></a>サード パーティのアナライザー
 

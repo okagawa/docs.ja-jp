@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <binaryMessageEncoding>'
 title: <binaryMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e4ae3cd4-6b67-4ce1-af4b-9400e0a38dba
-ms.openlocfilehash: 1b72b73f0d9d312fd54ea6a5517d55bf251c0e05
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 910b8b70bab40c1eb099ed2b54c0545e73e96c6f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201474"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639498"
 ---
 # \<binaryMessageEncoding>
 
@@ -35,7 +36,7 @@ ms.locfileid: "91201474"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |maxReadPoolSize|新しいリーダーを割り当てずに同時に読み取り可能なメッセージの数を定義する整数です。 プール サイズを大きくすると、システムでは、比較的大きい作業セットで、アクティビティの急増に対する許容度が高まります。 既定値は、64 です。|  
 |maxSessionSize|エンコーディングに使用されるバッファーのサイズをバイト単位で設定する正の整数。 バッファーが大きくなると、作業セットのサイズの増加時に、エンコーディングの速度が高まります。 既定値は 2048 です。|  
@@ -78,5 +79,5 @@ ms.locfileid: "91201474"
 - [メッセージ エンコーダーを選択する](../../../wcf/feature-details/choosing-a-message-encoder.md)
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

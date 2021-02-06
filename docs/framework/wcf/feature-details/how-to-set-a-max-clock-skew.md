@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: 最大時刻のずれを設定する」を参照してください。'
 title: '方法: 時刻のずれの最大値を設定する'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - MaxClockSkew property
 - WCF, custom bindings
 ms.assetid: 491d1705-eb29-43c2-a44c-c0cf996f74eb
-ms.openlocfilehash: 8dd38f3d07773a4be67648b9c1830206438200d6
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 688be1bb42dd7b30fce577082992741b76819e3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242878"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643203"
 ---
 # <a name="how-to-set-a-max-clock-skew"></a>方法: 時刻のずれの最大値を設定する
 

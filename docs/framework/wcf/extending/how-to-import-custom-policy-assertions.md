@@ -1,16 +1,17 @@
 ---
+description: '詳細については、「方法: カスタムポリシーアサーションをインポートする」を参照してください。'
 title: '方法: カスタム ポリシー アサーションをインポートする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: fb5e3ba5faca1b32eef63ac174bcd7731ee50771
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e9190a97ed7d2d369b8f9ddc3d7fec71daf1e54f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96249151"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99644334"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>方法: カスタム ポリシー アサーションをインポートする
 

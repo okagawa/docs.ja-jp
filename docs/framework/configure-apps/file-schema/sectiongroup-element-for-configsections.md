@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <sectionGroup> の要素 <configSections>'
 title: <configSections> の <sectionGroup> 要素
 ms.date: 05/01/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - sectionGroup Element
 - <sectionGroup> Element
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
-ms.openlocfilehash: eb221027470fe6e485f8fcc4b939b71e4f219712
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0d822b98acbc041b9d6e146e9cd15848a73d2f88
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "77215257"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639888"
 ---
 # <a name="sectiongroup-element-for-configsections"></a>\<configSections> の \<sectionGroup> 要素
 
@@ -40,11 +41,11 @@ ms.locfileid: "77215257"
 
 |     | 説明 |
 | --- | ----------- |
-| [**\<configSections>** Element](configsections-element-for-configuration.md) | 構成セクションと名前空間の宣言が含まれています。 |
+| [**\<configSections>** 要素](configsections-element-for-configuration.md) | 構成セクションと名前空間の宣言が含まれています。 |
 
 ## <a name="child-elements"></a>子要素
 
-|     | Description |
+|     | 説明 |
 | --- | ----------- |
 | [**\<section>**](section-element.md) | 構成セクションの宣言が含まれています。 |
 
@@ -74,7 +75,7 @@ ms.locfileid: "77215257"
 
 ## <a name="configuration-file"></a>構成ファイル
 
-この要素は、アプリケーション構成ファイル *、コンピューター構成*ファイル (machine.config)、およびアプリケーションディレクトリレベルでは*ない web.config ファイル*で使用できます。
+この要素は、アプリケーション構成ファイル、マシン構成ファイル (*Machine.config*)、およびアプリケーションディレクトリレベルではないファイル *Web.config* で使用できます。
 
 ## <a name="see-also"></a>関連項目
 

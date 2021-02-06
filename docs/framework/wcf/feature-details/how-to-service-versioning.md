@@ -1,13 +1,14 @@
 ---
+description: '詳細については、「方法: サービスのバージョン管理」を参照してください。'
 title: '方法: サービスのバージョン管理'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: ec0f776f296e5ab24f4f628a204b04aa8d903d39
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d32ea2051783ccaec7a66bfffada7f08887f8559
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96268470"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643229"
 ---
 # <a name="how-to-service-versioning"></a>方法: サービスのバージョン管理
 

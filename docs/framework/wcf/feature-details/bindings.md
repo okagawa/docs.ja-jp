@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「Windows Communication Foundation バインド」を参照してください。
 title: Windows Communication Foundation バインディング
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], bindings
 - bindings [WCF]
 ms.assetid: 83639133-89f7-43f0-b4ef-8d9e57c08d25
-ms.openlocfilehash: 50c430489144589f6deb0930aeb3006bcb7efe8c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0104a33acbef7738607865b135561860f395dd71
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262100"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643632"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Windows Communication Foundation バインディング
 
@@ -31,7 +32,7 @@ Windows Communication Foundation (WCF) は、アプリケーション用のソ�
  [サービスとクライアントを構成するためのバインディングの使用](../using-bindings-to-configure-services-and-clients.md)  
  サービスとクライアントの Windows Communication Foundation (WCF) バインドをコード内で強制的に定義し、構成を使用して宣言する方法について説明します。  
   
- [カスタム バインディング](../extending/custom-bindings.md)  
+ [カスタムバインド](../extending/custom-bindings.md)  
  <xref:System.ServiceModel.Channels.CustomBinding> の概要と使用する状況について説明します。  
   
 ## <a name="reference"></a>関連項目  

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <callbackTimeouts>'
 title: <callbackTimeouts>
 ms.date: 03/30/2017
 ms.assetid: d7fcfc5f-6d35-491e-8fa6-2f964c1e792f
-ms.openlocfilehash: 98523489aacebf910bcf5d81c479819183887dff
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8e2e05ad23f661c38430ccddc615c37705e6fc44
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198887"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639199"
 ---
 # \<callbackTimeouts>
 
@@ -26,7 +27,7 @@ ms.locfileid: "91198887"
 <callbackTimeOuts transactionTimeout="TimeSpan" />
 ```  
   
-## <a name="type"></a>種類  
+## <a name="type"></a>Type  
 
  `Type`  
   
@@ -36,7 +37,7 @@ ms.locfileid: "91198887"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |`transactionTimeout`|トランザクションが完了する必要があるまたは自動的に終了される必要がある制限時間を指定する <xref:System.TimeSpan> 値。 既定値は "00:00:00" です。|  
   

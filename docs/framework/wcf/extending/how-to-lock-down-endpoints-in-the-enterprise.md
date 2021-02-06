@@ -1,13 +1,14 @@
 ---
+description: '詳細については、「方法: 企業内のエンドポイントをロックダウンする」を参照してください。'
 title: '方法: 企業内のエンドポイントをロックダウンする'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 68a7b80a01d9b1a8c5243331e63a1b82996e8ee6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8e54c3d1cadcfdb6f0102281813eb3758320a143
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558148"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99644230"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>方法: 企業内のエンドポイントをロックダウンする
 

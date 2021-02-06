@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: 署名と暗号化に個別の x.509 証明書を使用する」を参照してください。'
 title: '方法: 署名および暗号化に個別の X.509 証明書を使用する'
 ms.date: 03/30/2017
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: e464aff46f311ede1cd629fb459ade9a6e627d59
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a1cb72265d9fa2742718b88bd574efe4cc9a4918
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796953"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99644243"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>方法: 署名および暗号化に個別の X.509 証明書を使用する
 
@@ -34,17 +35,17 @@ ms.locfileid: "70796953"
 
   - メソッド <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> は、<xref:System.IdentityModel.Selectors.X509SecurityTokenProvider> のインスタンスを返します。
 
-![クライアント資格情報の使用方法を示すグラフ](./media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")
+![クライアント資格情報がどのように使用されるのかを示す図](./media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")
 
-カスタム資格情報の詳細について[は、「チュートリアル:カスタムクライアントおよびサービスの資格](walkthrough-creating-custom-client-and-service-credentials.md)情報を作成しています。
+カスタム資格情報の詳細については、「 [チュートリアル: カスタムクライアントおよびサービスの資格情報の作成](walkthrough-creating-custom-client-and-service-credentials.md)」を参照してください。
 
 また、カスタム ID 検証機能を作成し、カスタム バインドのセキュリティ バインド要素にリンクする必要があります。 さらに、既定の資格情報の代わりにカスタム資格情報を使用する必要があります。
 
 カスタム バインドに関連したクラス、およびカスタム ID 検証機能のリンク方法を次の図に示します。 関連するバインド要素はいくつかありますが、そのすべてが <xref:System.ServiceModel.Channels.BindingElement> から継承されています。 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> には、<xref:System.ServiceModel.Channels.LocalClientSecuritySettings> プロパティがあります。このプロパティは、<xref:System.ServiceModel.Security.IdentityVerifier> のカスタマイズの元となる `MyIdentityVerifier` のインスタンスを返します。
 
-![カスタムバインド要素を示すグラフ](./media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")
+![カスタム バインディング要素を示す図](./media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")
 
-カスタム id 検証機能の作成の詳細については、「方法:[方法: カスタムのクライアント Id 検証](how-to-create-a-custom-client-identity-verifier.md)機能を作成します。
+カスタム id 検証機能の作成の詳細については、「方法: [カスタムクライアント Id 検証](how-to-create-a-custom-client-identity-verifier.md)機能を作成する」を参照してください。
 
 ### <a name="to-use-separate-certificates-for-signing-and-encryption"></a>署名と暗号化に別個の証明書を使用するには
 
@@ -97,4 +98,4 @@ ms.locfileid: "70796953"
 - <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
-- [チュートリアル: カスタムのクライアントおよびサービスの資格情報の作成](walkthrough-creating-custom-client-and-service-credentials.md)
+- [チュートリアル: カスタム クライアントおよびサービスの資格情報を作成する](walkthrough-creating-custom-client-and-service-credentials.md)

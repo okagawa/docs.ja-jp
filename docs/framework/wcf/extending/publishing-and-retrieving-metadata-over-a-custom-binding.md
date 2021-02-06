@@ -1,13 +1,14 @@
 ---
+description: 詳細については、カスタムバインドを介したメタデータの公開と取得に関するページを参照してください。
 title: カスタム バインディングを介したメタデータの公開と取得
 ms.date: 03/30/2017
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
-ms.openlocfilehash: 2c88ab92bb9cbe2fc07240d0934d246fa4de5cc0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 26532c3478d8250e9f6ec7dbb9431be5052239b4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262763"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99644126"
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>カスタム バインディングを介したメタデータの公開と取得
 
@@ -23,7 +24,7 @@ ms.locfileid: "96262763"
 
  メタデータは、標準の HTTP 要求または HTTPS GET 要求を使用して HTTP Get および HTTPS Get メタデータ エンドポイントから取得できます。  
   
- MEX メタデータエンドポイントからメタデータを取得するには、通常、WCF でサポートされている標準の MEX バインディングのいずれかを使用します。 詳細については、 <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType> を参照してください。 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 型および Svcutil.exe ツールでは、指定したメタデータ エンドポイントのアドレスに基づいて、標準の MEX バインディングの 1 つが自動的に選択されます。  
+ MEX メタデータエンドポイントからメタデータを取得するには、通常、WCF でサポートされている標準の MEX バインディングのいずれかを使用します。 詳細については、「<xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>」を参照してください。 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 型および Svcutil.exe ツールでは、指定したメタデータ エンドポイントのアドレスに基づいて、標準の MEX バインディングの 1 つが自動的に選択されます。  
   
  MEX メタデータ エンドポイントで標準の MEX バインディングとは異なるバインディングを使用する場合は、コードを使用するか、<xref:System.ServiceModel.Description.MetadataExchangeClient> クライアント エンドポイント構成を提供することにより、<xref:System.ServiceModel.Description.IMetadataExchange> で使用されるバインディングを構成できます。 Svcutil.exe ツールは、構成ファイルから、メタデータ エンドポイント アドレスの URI スキームと同じ名前を持つ <xref:System.ServiceModel.Description.IMetadataExchange> クライアント エンドポイント構成を自動的に読み込みます。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <listeners> の要素 <trace>'
 title: <trace> の <listeners> 要素
 ms.date: 03/30/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-ms.openlocfilehash: 59d078f8dc573a1ce949d225f497dd4500fe808f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 25f6d4b49eeb57b25b4afbbdfdba484d6d7eea3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173862"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639628"
 ---
 # <a name="listeners-element-for-trace"></a>\<trace> の \<listeners> 要素
 
@@ -59,7 +60,7 @@ ms.locfileid: "91173862"
   
 ## <a name="remarks"></a>解説  
 
- <xref:System.Diagnostics.Debug>クラスと <xref:System.Diagnostics.Trace> クラスは、同じ**Listeners**コレクションを共有します。 これらのクラスのいずれかのコレクションにリスナーオブジェクトを追加すると、他のクラスは同じリスナーを使用します。 .NET Framework に付属しているリスナークラスは、クラスから派生し <xref:System.Diagnostics.TraceListener> ます。  
+ <xref:System.Diagnostics.Debug>クラスと <xref:System.Diagnostics.Trace> クラスは、同じ **Listeners** コレクションを共有します。 これらのクラスのいずれかのコレクションにリスナーオブジェクトを追加すると、他のクラスは同じリスナーを使用します。 .NET Framework に付属しているリスナークラスは、クラスから派生し <xref:System.Diagnostics.TraceListener> ます。  
   
 ## <a name="configuration-file"></a>構成ファイル  
 
