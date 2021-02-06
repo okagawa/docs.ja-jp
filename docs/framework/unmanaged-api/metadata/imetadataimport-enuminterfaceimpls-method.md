@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataImport:: EnumInterfaceImpls メソッド'
 title: IMetaDataImport::EnumInterfaceImpls メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ba6e178f-128b-4e47-a13c-b4be73eb106c
 topic_type:
 - apiref
-ms.openlocfilehash: 0b040a2741a44b9d361dabc38c26b8934659003b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5276d1edb3be0cae76b18a06241dc6b9952e1a72
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711521"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649417"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls メソッド
 
@@ -62,7 +63,7 @@ HRESULT EnumInterfaceImpls (
 |`S_OK`|`EnumInterfaceImpls` 正常に返されました。|  
 |`S_FALSE`|列挙する MethodDef トークンがありません。 この場合、 `pcImpls` は0に設定されます。|  
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 列挙体は `mdInterfaceImpl` 、指定したによって実装された各インターフェイスのトークンのコレクションを返し `TypeDef` ます。 インターフェイストークンは、インターフェイスが指定された順序で返され `DefineTypeDef` ます (またはを使用 `SetTypeDefProps` )。 返されたトークンのプロパティは、 `mdInterfaceImpl` [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md)を使用して照会できます。
   

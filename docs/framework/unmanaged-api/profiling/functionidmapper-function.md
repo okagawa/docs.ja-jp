@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: FunctionIDMapper 関数'
 title: FunctionIDMapper 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8205b60-1893-4303-8cff-7ac5a00892aa
 topic_type:
 - apiref
-ms.openlocfilehash: 17396d3038578c16b74c3717174dc0fa4dc17631
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: dca39d9d5269148fda12c50130f35bdeb10cb19d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722844"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648650"
 ---
 # <a name="functionidmapper-function"></a>FunctionIDMapper 関数
 
@@ -48,7 +49,7 @@ UINT_PTR __stdcall FunctionIDMapper (
 
  プロファイラーは、実行エンジンが代替関数識別子として使用する値を返します。 `false` で `pbHookFunction` を返さない限り、戻り値を null にすることはできません。 それ以外の場合、null 値が返されると、処理が停止する可能性があるなど、予測できない結果が生成されます。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `FunctionIDMapper`関数はコールバックです。 プロファイラーによって実装され、関数 ID を他の識別子にマップし直すことができます。これは、プロファイラーにとって便利です。 は、指定された `FunctionIDMapper` 関数に使用される代替 ID を返します。 次に、実行エンジンは、従来の関数 ID に加えて、この代替 ID を `clientData` 、、、およびフックのパラメーターでプロファイラーに渡して `FunctionEnter2` 、 `FunctionLeave2` フックが呼び出されている関数を識別することによって、プロファイラーの要求を受け入れ `FunctionTailcall2` ます。  
   

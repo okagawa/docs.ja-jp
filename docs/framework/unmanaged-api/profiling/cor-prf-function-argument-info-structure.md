@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: COR_PRF_FUNCTION_ARGUMENT_INFO 構造'
 title: COR_PRF_FUNCTION_ARGUMENT_INFO 構造体
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07cf3bab-e193-4991-8205-3f41cf2d67b3
 topic_type:
 - apiref
-ms.openlocfilehash: 5feda2ce6dc97576d0b1d4f16ca2b9dd5f3fb05e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c40c9b20dad79fa36a1ed4471106a54f2c55b422
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718561"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649066"
 ---
 # <a name="cor_prf_function_argument_info-structure"></a>COR_PRF_FUNCTION_ARGUMENT_INFO 構造体
 
@@ -43,7 +44,7 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
 |`totalArgumentSize`|すべての引数の合計サイズ。 言い換えると、この値は引数の長さの合計になります。|  
 |`ranges`|`COR_PRF_FUNCTION_ARGUMENT_RANGE`構造体の配列。それぞれが関数の引数の1つのブロックを表します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  関数には、多くの引数を含めることができます。 これらの引数は、連続してメモリに格納されていない可能性があります。 1つの場所に3つの引数のブロック、別の場所に2つの引数のブロック、および別の場所にある1つの引数の最後のブロックがある場合があります。 これらの引数はすべて同じ関数に対して使用されます。これらは、さまざまな場所に格納されています。  
   

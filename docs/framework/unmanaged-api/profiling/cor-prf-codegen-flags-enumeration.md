@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: COR_PRF_CODEGEN_FLAGS 列挙型'
 title: COR_PRF_CODEGEN_FLAGS 列挙体
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3e184022-0247-4824-a23d-6b29593d8d01
 topic_type:
 - apiref
-ms.openlocfilehash: 3252e3b33da743c0e146e25f798c0e669aeb74ef
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 40ddaa77047e0b1daa743b512f21ba7643127230
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718606"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649176"
 ---
 # <a name="cor_prf_codegen_flags-enumeration"></a>COR_PRF_CODEGEN_FLAGS 列挙体
 
@@ -41,7 +42,7 @@ typedef enum {
 |`COR_PRF_CODEGEN_DISABLE_INLINING`|関数は、この関数の本体にインライン展開されません。 ただし、関数自体は、その呼び出し元にインライン展開される場合があります。|  
 |`COR_PRF_CODEGEN_DISABLE_ALL_OPTIMIZATIONS`|この関数の本体では、すべての最適化が無効になります。 ただし、関数自体を呼び出し元にインライン化することはできます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `COR_PRF_CODEGEN_FLAGS`列挙体は、 [ICorProfilerFunctionControl:: SetCodegenFlags](icorprofilerfunctioncontrol-setcodegenflags-method.md)メソッドによって使用され、プロファイラーが JIT 再コンパイル関数のコード生成を制御できるようにします。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: COR_PRF_GC_GENERATION 列挙型'
 title: COR_PRF_GC_GENERATION 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d6ece160-26ad-4d39-abd7-05acd6f78c48
 topic_type:
 - apiref
-ms.openlocfilehash: 1d7489e997868a9486f77d176580cee18213a99d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 108bb4b2b4cba57235d354efe3b815a0e0df17ca
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718562"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648936"
 ---
 # <a name="cor_prf_gc_generation-enumeration"></a>COR_PRF_GC_GENERATION 列挙型
 
@@ -47,7 +48,7 @@ typedef enum {
 |`COR_PRF_GC_LARGE_OBJECT_HEAP`|オブジェクトは、ラージオブジェクトヒープに格納されます。|  
 |`COR_PRF_GC_PINNED_OBJECT_HEAP`|オブジェクトは、固定されたオブジェクトヒープに格納されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ガベージコレクターは、オブジェクトを経過期間に基づいてジェネレーションに分割することによって、メモリ管理のパフォーマンスを向上させます。 現在、ガベージコレクターは、番号0、1、および2の3つのジェネレーションと、2つの特殊なヒープセグメント (大きなオブジェクト用とピン留めオブジェクト用) を使用しています。
   

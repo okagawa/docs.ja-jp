@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CLR プロファイラーと Windows ストアアプリ」を参照してください。
 title: CLR プロファイラと Windows ストア アプリ
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: 04b4b529a5a1adaa40e804988dee506942c863c4
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: e864f67aff106659194b91814bc2509d50cbf701
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440081"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649277"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR プロファイラと Windows ストア アプリ
 
@@ -94,7 +95,7 @@ Windows RT デバイスは非常にロックダウンされています。 サ�
 
 **プロファイラー DLL に署名しています**
 
-Windows がプロファイラー DLL を読み込もうとすると、プロファイラー DLL が正しく署名されているかどうかが検証されます。 それ以外の場合、既定では読み込みに失敗します。 これには、2 つの方法があります。
+Windows がプロファイラー DLL を読み込もうとすると、プロファイラー DLL が正しく署名されているかどうかが検証されます。 それ以外の場合、既定では読み込みに失敗します。 この作業を実行する 2 つの方法があります。
 
 - プロファイラー DLL が署名されていることを確認します。
 
@@ -249,7 +250,7 @@ Windows ストアアプリは最後にプロファイラー DLL を読み込み�
 
 ### <a name="stick-to-the-windows-store-app-apis"></a>Windows ストアアプリ Api に従う
 
-Windows API を参照すると、すべての API がデスクトップアプリ、Windows ストアアプリ、またはその両方に適用されることがわかります。 たとえば、 [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount)関数のドキュメントの「 **要件** 」セクションでは、関数がデスクトップアプリにのみ適用されることを示しています。 これに対し、 [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex) 関数は、デスクトップアプリと Windows ストアアプリの両方で使用できます。
+Windows API を参照すると、すべての API がデスクトップアプリ、Windows ストアアプリ、またはその両方に適用されることがわかります。 たとえば、 [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount)関数のドキュメントの「**要件**」セクションでは、関数がデスクトップアプリにのみ適用されることを示しています。 これに対し、 [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex) 関数は、デスクトップアプリと Windows ストアアプリの両方で使用できます。
 
 プロファイラー DLL を開発するときは、それを Windows ストアアプリであるかのように扱い、Windows ストアアプリで使用可能なものとしてドキュメント化されている Api のみを使用します。 依存関係を分析し (たとえば、プロファイラー DLL に対して実行して監査することができ `link /dump /imports` ます)、ドキュメントを検索して、どの依存関係が ok であるかを確認します。 ほとんどの場合、違反を修正するには、安全として記述されている API の新しい形式を使用します (たとえば、 [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) を [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)に置き換えます)。
 
@@ -390,7 +391,7 @@ WinMDs でのメタデータの変更はサポートされていません。 Win
 
 .NET Framework 4.5 以降では、新しい GC コールバックである [Conditional/Tableelementreferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md)が使用されます。これにより、プロファイラーは *依存ハンドル* に関するより詳細な情報を得ることができます。 これらのハンドルは、GC 有効期間管理の目的で、ソースオブジェクトからターゲットオブジェクトへの参照を効果的に追加します。 依存ハンドルはまったく新しいものではなく、マネージコードをプログラミングする開発者は、 <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType> Windows 8 および .NET Framework 4.5 の前であっても、クラスを使用して独自の依存ハンドルを作成できるようになりました。
 
-ただし、マネージ XAML Windows ストアアプリでは、依存ハンドルが頻繁に使用されるようになりました。 特に、CLR では、マネージオブジェクトとアンマネージ Windows ランタイムオブジェクトの間の参照サイクルの管理を支援するために使用されます。 これは、メモリプロファイラーがこれらの依存ハンドルを通知して、ヒープグラフの残りの部分と共に視覚化できるようにするために、これまでよりも重要であることを意味します。 プロファイラー DLL は、RootReferences2、 [ObjectReferences](icorprofilercallback-objectreferences-method.md)、および[Conditional tableelementreferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md)を一緒に使用して、ヒープグラフの完全なビューを形成する必要があります。 [RootReferences2](icorprofilercallback2-rootreferences2-method.md)
+ただし、マネージ XAML Windows ストアアプリでは、依存ハンドルが頻繁に使用されるようになりました。 特に、CLR では、マネージオブジェクトとアンマネージ Windows ランタイムオブジェクトの間の参照サイクルの管理を支援するために使用されます。 これは、メモリプロファイラーがこれらの依存ハンドルを通知して、ヒープグラフの残りの部分と共に視覚化できるようにするために、これまでよりも重要であることを意味します。 プロファイラー DLL は、RootReferences2、 [ObjectReferences](icorprofilercallback-objectreferences-method.md)、および[Conditional tableelementreferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md)を一緒に使用して、ヒープグラフの完全なビューを形成する必要があります。 [](icorprofilercallback2-rootreferences2-method.md)
 
 ## <a name="conclusion"></a>まとめ
 
@@ -408,7 +409,7 @@ CLR プロファイル API を使用して、Windows ストアアプリ内で実
 
 - [Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 
-**Windows ストア アプリ**
+**Windows ストアアプリ**
 
 - [ファイルアクセスとアクセス許可 (Windows ランタイムアプリ](/previous-versions/windows/apps/hh967755(v=win.10))
 

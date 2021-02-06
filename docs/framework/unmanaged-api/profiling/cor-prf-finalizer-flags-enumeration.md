@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: COR_PRF_FINALIZER_FLAGS 列挙型'
 title: COR_PRF_FINALIZER_FLAGS 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 297d7721-3911-4f36-9e34-d9da0c33e22a
 topic_type:
 - apiref
-ms.openlocfilehash: 2b766715d6d87ab17a7cdabf721bbebf67e1ff13
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 96430b1ba3a38cce2801ed55f030395154c78dab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718580"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649183"
 ---
 # <a name="cor_prf_finalizer_flags-enumeration"></a>COR_PRF_FINALIZER_FLAGS 列挙型
 
@@ -39,7 +40,7 @@ typedef enum {
 |------------|-----------------|  
 |`COR_PRF_FINALIZER_CRITICAL`|ファイナライザーは重要です。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `COR_PRF_FINALIZER_FLAGS`列挙体は、 [ICorProfilerCallback2:: FinalizeableObjectQueued](icorprofilercallback2-finalizeableobjectqueued-method.md)メソッドによって、オブジェクトのファイナライザーを記述するために使用されます。  
   

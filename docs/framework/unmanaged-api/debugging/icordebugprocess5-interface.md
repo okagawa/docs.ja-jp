@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorDebugProcess5 インターフェイス」を参照してください。
 title: ICorDebugProcess5 インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 30a39d79-1f10-4328-9c5d-094ed824e2ba
 topic_type:
 - apiref
-ms.openlocfilehash: cef69ac7e3572b67dd676ce8408e4210d93accf0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 880c305c1d9786f87d9727836a973696aa686ecf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717579"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649768"
 ---
 # <a name="icordebugprocess5-interface"></a>ICorDebugProcess5 インターフェイス
 
@@ -42,9 +43,9 @@ ms.locfileid: "95717579"
 |[GetTypeID メソッド](icordebugprocess5-gettypeid-method.md)|指定したアドレスにあるオブジェクトの型識別子を取得します。|  
 |[GetTypeLayout メソッド](icordebugprocess5-gettypelayout-method.md)|型識別子に基づいて、メモリ内のオブジェクトのレイアウトに関する情報を取得します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
- このインターフェイスは、ICorDebugProcess2、ICorDebugProcess3、および[ICorDebugProcess3](icordebugprocess3-interface.md)の各インターフェイスを論理的に拡張します。  
+ このインターフェイスは、ICorDebugProcess2、ICorDebugProcess3、および[](icordebugprocess3-interface.md)の各インターフェイスを論理的に拡張します。  
   
 > [!NOTE]
 > このインターフェイスは、別のコンピューターまたは別のプロセスからのリモート呼び出しをサポートしていません。  

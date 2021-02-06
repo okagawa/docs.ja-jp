@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugProcess5:: EnumerateHeapRegions メソッド'
 title: ICorDebugProcess5::EnumerateHeapRegions メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b1edba68-9c36-4f69-be9f-678ce0b33480
 topic_type:
 - apiref
-ms.openlocfilehash: 5a51670200f8fc8a98ff7b80334253b37c7d89ed
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 034b1ebcd003e6854fa4f308b0464aac0a8c4839
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95671123"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649846"
 ---
 # <a name="icordebugprocess5enumerateheapregions-method"></a>ICorDebugProcess5::EnumerateHeapRegions メソッド
 
@@ -39,7 +40,7 @@ HRESULT EnumerateHeapRegions(
  `ppRegions`  
  入出力マネージヒープ内にオブジェクトが格納されているメモリ範囲の列挙子である [ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md) interface オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  メソッドを呼び出す前に `ICorDebugProcess5::EnumerateHeapRegions` 、 [ICorDebugProcess5:: Getg](icordebugprocess5-getgcheapinformation-method.md) メソッドを呼び出し、 `areGCStructuresValid` 返された [COR_HEAPINFO](cor-heapinfo-structure.md) オブジェクトのフィールドの値を調べて、現在の状態のガベージコレクションヒープが列挙可能であることを確認する必要があります。 さらに、 `ICorDebugProcess5::EnumerateHeapRegions` `E_FAIL` メモリ領域が作成される前に、プロセスの有効期間が早すぎると、メソッドはを返します。  
   

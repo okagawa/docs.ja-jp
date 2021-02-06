@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: COR_PRF_EX_CLAUSE_INFO 構造'
 title: COR_PRF_EX_CLAUSE_INFO 構造体
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d0d6fb7-bc9d-40f0-8163-c0d162eaba7d
 topic_type:
 - apiref
-ms.openlocfilehash: e8dd9f21803021975f4651ba3e6e5f4d3da0ea82
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: af8d404e55a8996abc69923924e87c95e3c5eae8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674997"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649209"
 ---
 # <a name="cor_prf_ex_clause_info-structure"></a>COR_PRF_EX_CLAUSE_INFO 構造体
 
@@ -45,7 +46,7 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
 |`framePointer`|句ハンドラーの論理フレームへのポインター。たとえば、X86 EBP レジスタの内容。|  
 |`shadowStackPointer`|シャドウスタックへのポインター。 この値は、BSP レジスタの内容であり、IA64 にのみ適用されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  例外通知が受信されると、 [ICorProfilerInfo2:: GetNotifiedExceptionClauseInfo](icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md)を使用して、実行しようとし `catch` / `finally` ているまたは実行されたばかりの例外句 (フィルター) のネイティブアドレスとフレーム情報を取得できます。  
   

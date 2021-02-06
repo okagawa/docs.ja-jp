@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugProcess2:: GetThreadForTaskID メソッド'
 title: ICorDebugProcess2::GetThreadForTaskID メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 32d54a5b-8ad3-405b-a1b9-0936a3b49d1e
 topic_type:
 - apiref
-ms.openlocfilehash: 2b18289af460f64085fedd7b32387ebcb8c51715
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aafb1223f6e2e73aae600fd482c76b84c57dae52
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713549"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650132"
 ---
 # <a name="icordebugprocess2getthreadfortaskid-method"></a>ICorDebugProcess2::GetThreadForTaskID メソッド
 
@@ -43,7 +44,7 @@ HRESULT GetThreadForTaskID (
  `ppThread`  
  入出力取得するスレッドを表す ICorDebugThread2 オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ホストは、 [ICLRTask:: SetTaskIdentifier](../hosting/iclrtask-settaskidentifier-method.md) メソッドを使用してタスク識別子を設定できます。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugProcess5:: EnumerateHandles メソッド'
 title: ICorDebugProcess5::EnumerateHandles メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7d7fa796-0dc6-4ee8-9d56-40166246d91d
 topic_type:
 - apiref
-ms.openlocfilehash: 607847180cca039d4c71f26e446a17a14dc2fb9e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 62ca1390ceec634e6651dc013345688fe5892bcd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724339"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649911"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles メソッド
 
@@ -41,7 +42,7 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
  `ppENum`  
  入出力ガベージコレクションの対象となるオブジェクトの列挙子 [である、](icordebuggcreferenceenum-interface.md) ツールのアドレスへのポインターです。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `EnumerateHandles` は、ハンドルテーブルの検査をサポートするヘルパー関数です。 これは [ICorDebugProcess5:: EnumerateGCReferences](icordebugprocess5-enumerategcreferences-method.md) メソッドに似ていますが、すべてのオブジェクトがガベージコレクトされるよう [に、すべて](icordebuggcreferenceenum-interface.md) のオブジェクトを使用してすべてのオブジェクトを作成するのではなく、handle テーブルからハンドルを持つオブジェクトのみが含まれる点が異なります。  
   

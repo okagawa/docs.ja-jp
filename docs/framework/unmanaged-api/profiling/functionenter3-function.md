@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: FunctionEnter3 関数'
 title: FunctionEnter3 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef782c53-dae7-4990-b4ad-fddb1e690d4e
 topic_type:
 - apiref
-ms.openlocfilehash: 98a821eabb393d8b5042647e6ef6ffce7ab10783
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 664b0ca5b40937eaa129e6843e55024802befbb7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722883"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648676"
 ---
 # <a name="functionenter3-function"></a>FunctionEnter3 関数
 
@@ -37,7 +38,7 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
 
   \[in] コントロールが渡される関数の識別子。
 
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `FunctionEnter3`コールバック関数は、関数が呼び出されていることをプロファイラーに通知しますが、引数の検査はサポートしていません。 [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3 メソッド](icorprofilerinfo3-setenterleavefunctionhooks3-method.md)を使用して、この関数の実装を登録します。  
   

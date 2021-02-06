@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugProcess2:: GetReferenceValueFromGCHandle メソッド'
 title: ICorDebugProcess2::GetReferenceValueFromGCHandle メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8bdd7f4c-19f2-4ede-875e-603773e8c128
 topic_type:
 - apiref
-ms.openlocfilehash: a5b9d57aab834ba3ca72a2ea8576ec70cd88eb77
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 02047dee9116d34a365242f2a532766eb60e1c81
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713575"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650223"
 ---
 # <a name="icordebugprocess2getreferencevaluefromgchandle-method"></a>ICorDebugProcess2::GetReferenceValueFromGCHandle メソッド
 
@@ -43,7 +44,7 @@ HRESULT GetReferenceValueFromGCHandle (
  `pOutValue`  
  入出力指定したマネージオブジェクトへの参照を表す、値オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  返された参照値とガベージコレクション参照値を混同しないようにしてください。  
   

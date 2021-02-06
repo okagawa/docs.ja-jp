@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「ICorDebugMergedAssemblyRecord インターフェイス」を参照してください。
 title: ICorDebugMergedAssemblyRecord インターフェイス
 ms.date: 03/30/2017
 ms.assetid: fe280b11-9479-4e34-a07c-0d1ea8088422
-ms.openlocfilehash: a26702c6b21e4bfe352d861387a80b976a8dc556
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e64c0ee30a8e8956dd336a30e6c81962c75f04e9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710494"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650288"
 ---
 # <a name="icordebugmergedassemblyrecord-interface"></a>ICorDebugMergedAssemblyRecord インターフェイス
 
@@ -24,7 +25,7 @@ ms.locfileid: "95710494"
 |[GetSimpleName メソッド](icordebugmergedassemblyrecord-getsimplename-method.md)|アセンブリの簡易名を取得します。|  
 |[GetVersion メソッド](icordebugmergedassemblyrecord-getversion-method.md)|アセンブリのバージョン情報を取得します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このインターフェイスは .NET ネイティブでのみ使用可能です。 .NET ネイティブの外部で ICorDebug シナリオについてこのインターフェイスを実装する場合は、共通言語ランタイムはこのインターフェイスを無視します。  

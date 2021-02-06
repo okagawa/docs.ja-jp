@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugProcess2:: SetDesiredNGENCompilerFlags メソッド'
 title: ICorDebugProcess2::SetDesiredNGENCompilerFlags メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98320175-7c5e-4dbb-8683-86fa82e2641f
 topic_type:
 - apiref
-ms.openlocfilehash: 40b944f6a1204bfe506ed64408be30f68adf3170
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3a4749ad26e88d1a602876f28a52754323093fce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675257"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650087"
 ---
 # <a name="icordebugprocess2setdesiredngencompilerflags-method"></a>ICorDebugProcess2::SetDesiredNGENCompilerFlags メソッド
 
@@ -39,13 +40,13 @@ HRESULT SetDesiredNGENCompilerFlags (
  `pdwFlags`  
  から適切なプリコンパイル済みイメージを選択するために使用されるコンパイラフラグを指定する [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) 列挙体の値。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  メソッドは、 `SetDesiredNGENCompilerFlags` プリコンパイル済みイメージに埋め込まれる必要があるフラグを指定します。これにより、ランタイムはそのイメージをこのプロセスに読み込みます。 このメソッドによって設定されるフラグは、正しいプリコンパイル済みイメージを選択するためにのみ使用されます。 そのようなイメージが存在しない場合、ランタイムは Microsoft 中間言語 (MSIL) イメージと just-in-time (JIT) コンパイラを読み込みます。 その場合でも、デバッガーは [ICorDebugModule2:: SetJITCompilerFlags](icordebugmodule2-setjitcompilerflags-method.md) メソッドを使用して、JIT コンパイルに必要なフラグを設定する必要があります。  
   
  イメージが読み込まれるときに、そのイメージに対して一部の JIT コンパイルを実行する必要がある場合 (イメージにジェネリックが含まれている場合)、メソッドによって指定されたコンパイラフラグ `SetDesiredNGENCompilerFlags` が追加の jit コンパイルに適用されます。  
   
- このメソッドは、の `SetDesiredNGENCompilerFlags` メソッドを[ICorDebugManagedCallback::CreateProcess](icordebugmanagedcallback-createprocess-method.md)呼び出さなければなりません。 その後、メソッドを呼び出そうとすると `SetDesiredNGENCompilerFlags` 失敗します。 また、列挙型で定義されていないフラグや、指定されたプロセスに対して有効ではないフラグを設定しようとすると `CorDebugJITCompilerFlags` 失敗します。  
+ このメソッドは、の `SetDesiredNGENCompilerFlags` メソッドを[](icordebugmanagedcallback-createprocess-method.md)呼び出さなければなりません。 その後、メソッドを呼び出そうとすると `SetDesiredNGENCompilerFlags` 失敗します。 また、列挙型で定義されていないフラグや、指定されたプロセスに対して有効ではないフラグを設定しようとすると `CorDebugJITCompilerFlags` 失敗します。  
   
 ## <a name="requirements"></a>要件  
 

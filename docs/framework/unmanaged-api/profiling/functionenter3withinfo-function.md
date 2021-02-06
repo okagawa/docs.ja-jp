@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: FunctionEnter3WithInfo 関数'
 title: FunctionEnter3WithInfo 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 277c3344-d0cb-431e-beae-eb1eeeba8eea
 topic_type:
 - apiref
-ms.openlocfilehash: b511c5abe10ab6c0ec856a5686b082132ed4a5d9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 573326c05275192a7b324377237ba057fb54bffb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722864"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648728"
 ---
 # <a name="functionenter3withinfo-function"></a>FunctionEnter3WithInfo 関数
 
@@ -43,7 +44,7 @@ void __stdcall FunctionEnter3WithInfo(
 
   \[in) 特定のスタックフレームに関する情報を表す不透明なハンドル。 このハンドルは、渡されるコールバック中にのみ有効です。
 
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `FunctionEnter3WithInfo`コールバックメソッドは、関数が呼び出されたことをプロファイラーに通知し、プロファイラーが[ICorProfilerInfo3:: GetFunctionEnter3Info メソッド](icorprofilerinfo3-getfunctionenter3info-method.md)を使用して引数値を検査できるようにします。 引数情報にアクセスするには、 `COR_PRF_ENABLE_FUNCTION_ARGS` フラグを設定する必要があります。 プロファイラーは、 [ICorProfilerInfo:: SetEventMask メソッド](icorprofilerinfo-seteventmask-method.md) を使用してイベントフラグを設定し、 [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo メソッド](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) を使用してこの関数の実装を登録できます。  
   
