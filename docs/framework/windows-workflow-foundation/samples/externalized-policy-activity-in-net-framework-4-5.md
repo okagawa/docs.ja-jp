@@ -1,13 +1,14 @@
 ---
+description: 詳細については、.NET Framework 4.5 での外部化 Policy アクティビティに関するページを参照してください。
 title: .NET Framework 4.5 の外部化されたポリシー アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 00b671f169696728610e8ee32f874b44fbff9e33
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 52dad208aacf2993acffa605b896c14c0a906d4e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556916"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99631217"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 の外部化されたポリシー アクティビティ
 
@@ -68,19 +69,19 @@ ExternalizedPolicy4 デザイナーを使用すると、コードを記述せず
 
 1. Visual Studio を使用して、 *policy4sample.sln* ソリューションファイルを開きます。
 
-2. **ソリューションエクスプローラー**で、 **ImperativeCodeClientSample**プロジェクトを右クリックし、[**スタートアッププロジェクトに設定**] を選択します。
+2. **ソリューションエクスプローラー** で、 **ImperativeCodeClientSample** プロジェクトを右クリックし、[**スタートアッププロジェクトに設定**] を選択します。
 
-3. プロジェクトを実行するには、 **Ctrl** + **F5**キーを押します。
+3. プロジェクトを実行するには、 **Ctrl** + **F5** キーを押します。
 
 ### <a name="run-the-designerclientsample-application"></a>デザイナ Clientsample アプリケーションを実行する
 
 1. Visual Studio を使用して、 *policy4sample.sln* ソリューションファイルを開きます。
 
-2. **ソリューションエクスプローラー**で、**デザイナ clientsample**プロジェクトを右クリックし、[**スタートアッププロジェクトに設定**] を選択します。
+2. **ソリューションエクスプローラー** で、**デザイナ clientsample** プロジェクトを右クリックし、[**スタートアッププロジェクトに設定**] を選択します。
 
-3. **Ctrl** + **Shift** + **B**キーを押して、プロジェクトをコンパイルします。
+3. **Ctrl** + **Shift** + **B** キーを押して、プロジェクトをコンパイルします。
 
-4. **Ctrl** + **F5**キーを押してプロジェクトを実行します。
+4. **Ctrl** + **F5** キーを押してプロジェクトを実行します。
 
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。

@@ -1,16 +1,17 @@
 ---
+description: '詳細については、「方法: 実行中のワークフローインスタンスの定義を更新する」を参照してください。'
 title: '方法: 実行中のワークフロー インスタンスの定義を更新する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
-ms.openlocfilehash: b94c7564b1ce87695f82f28eb6daf7686203b41f
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: a3b1faa933cb79301946427823ef3e9f114823f5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98190430"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99631227"
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>方法: 実行中のワークフロー インスタンスの定義を更新する
 

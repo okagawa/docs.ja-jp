@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: インスタンスストア'
 title: インスタンス ストア
 ms.date: 03/30/2017
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
-ms.openlocfilehash: 0e3cc0c6c635d9c42b4242581ce039b186116113
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4d2f7c72d744d2de87a8c2af7b89090b4261de83
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279871"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99631178"
 ---
 # <a name="instance-stores"></a>インスタンス ストア
 
@@ -25,8 +26,8 @@ ms.locfileid: "96279871"
   
 1. 永続化プロバイダーから **InstanceStore** を取得します。  
 
-2. InstanceStore のメソッドを呼び出して、インスタンスへのハンドルを取得し <xref:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle%2A> ます。 **InstanceStore**  
+2. InstanceStore のメソッドを呼び出して、インスタンスへのハンドルを取得し <xref:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle%2A> ます。   
   
-3. InstanceStore のメソッドを呼び出すことによって、インスタンスハンドルに対してコマンドを呼び出し <xref:System.Runtime.DurableInstancing.InstanceStore.Execute%2A> ます。 **InstanceStore**  
+3. InstanceStore のメソッドを呼び出すことによって、インスタンスハンドルに対してコマンドを呼び出し <xref:System.Runtime.DurableInstancing.InstanceStore.Execute%2A> ます。   
   
 4. <xref:System.Runtime.DurableInstancing.InstanceView> **InstanceStore.Exeかわいらしい** によって返されたを調べて、コマンドの結果を確認します。
