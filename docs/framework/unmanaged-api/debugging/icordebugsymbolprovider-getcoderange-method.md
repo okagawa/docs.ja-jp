@@ -1,13 +1,14 @@
 ---
+description: '詳細については、次の情報を参照してください: GetCodeRange メソッド'
 title: ICorDebugSymbolProvider::GetCodeRange メソッド
 ms.date: 03/30/2017
 ms.assetid: 49a2451f-d250-4e73-aa96-9ff49d9f11c6
-ms.openlocfilehash: f61a98dbd5a65207a46e033d54f9d5f60adac201
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 98b228be7483e6365815f6b783167b20fb3bcc48
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709128"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659908"
 ---
 # <a name="icordebugsymbolprovidergetcoderange-method"></a>ICorDebugSymbolProvider::GetCodeRange メソッド
 
@@ -34,7 +35,7 @@ HRESULT GetCodeRange(
  `pCodeSize`  
  メソッドのコードのサイズ (メソッドのコードのバイト数) へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  

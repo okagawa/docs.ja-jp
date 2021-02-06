@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次を参照
 title: ICorDebugManagedCallback::StepComplete メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e1f2c47-81df-4530-826d-96489cd68719
 topic_type:
 - apiref
-ms.openlocfilehash: 8de0858abe7db9ae1225f449083e417e13507b3d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 653abee26f09ac8877be9fa4183763739845666a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703042"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99660363"
 ---
 # <a name="icordebugmanagedcallbackstepcomplete-method"></a>ICorDebugManagedCallback::StepComplete メソッド
 
@@ -51,7 +52,7 @@ HRESULT StepComplete (
  `reason`  
  から個々のステップの結果を示す CorDebugStepReason 列挙値。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  デバッグが終了しない限り、必要に応じてステップを続行するためにステッパを使用できます。  
   

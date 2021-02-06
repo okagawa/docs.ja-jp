@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「IsInMemory Module:: メソッド」を参照してください。'
 title: ICorDebugModule::IsInMemory メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 89940711-98e7-4aa6-bffc-5e39e91e1b7d
 topic_type:
 - apiref
-ms.openlocfilehash: 637cac67e73d38aca0fdc5eaeae5405c4a859aa3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 41454ede15e1d45775af8fb0ab7a6b571d9c0e41
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709818"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99660090"
 ---
 # <a name="icordebugmoduleisinmemory-method"></a>ICorDebugModule::IsInMemory メソッド
 
@@ -39,7 +40,7 @@ HRESULT IsInMemory(
  `pInMemory`  
  [出力] `true` このモジュールがメモリ内にのみ存在する場合は、それ以外の場合は `false` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  共通言語ランタイム (CLR) では、未加工のバイトストリームからのモジュールの読み込みがサポートされています。 このようなモジュールは *メモリ内モジュール* と呼ばれ、ディスク上には存在しません。  
   

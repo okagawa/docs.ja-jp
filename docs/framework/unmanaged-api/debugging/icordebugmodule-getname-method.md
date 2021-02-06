@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ヘルプモジュール:: GetName メソッド'
 title: ICorDebugModule::GetName メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: db499637-7ba9-421e-b8b1-35856995e80b
 topic_type:
 - apiref
-ms.openlocfilehash: c2aecadf8688e763a69bd40ca877e44bc0ce5c29
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0f81271b2be283621027f4c835b6f220a383d771
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710039"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99660194"
 ---
 # <a name="icordebugmodulegetname-method"></a>ICorDebugModule::GetName メソッド
 
@@ -47,7 +48,7 @@ HRESULT GetName(
  `szName`  
  入出力返された名前を格納する配列。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `GetName`モジュールのファイル名がディスク上の名前と一致する場合、メソッドは S_OK HRESULT を返します。 `GetName` 動的またはメモリ内モジュールの場合など、名前が使用されている場合は S_FALSE HRESULT を返します。  
   

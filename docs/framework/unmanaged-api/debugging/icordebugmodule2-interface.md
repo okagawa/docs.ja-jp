@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorDebugModule2 インターフェイス」を参照してください。
 title: ICorDebugModule2 インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0847e64f-fdbe-4c96-8168-da20fdc84d80
 topic_type:
 - apiref
-ms.openlocfilehash: 2b8e6048dd6b8df71ac3dddcc4397f6d512127c7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 28de1f0d3411218ac92991d4fceda0612c8199bf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695882"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659934"
 ---
 # <a name="icordebugmodule2-interface"></a>ICorDebugModule2 インターフェイス
 
@@ -35,7 +36,7 @@ ms.locfileid: "95695882"
 |[SetJITCompilerFlags メソッド](icordebugmodule2-setjitcompilerflags-method.md)|このの JIT コンパイルを制御するフラグを設定 `ICorDebugModule2` します。|  
 |[SetJMCStatus メソッド](icordebugmodule2-setjmcstatus-method.md)|こののすべてのクラスのすべてのメソッドのマイコードのみ (JMC) の状態を、 `ICorDebugModule2` 指定した値に設定し `pTokens` ます。ただし、逆の値に設定されている配列内のすべてのメソッドを除きます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  

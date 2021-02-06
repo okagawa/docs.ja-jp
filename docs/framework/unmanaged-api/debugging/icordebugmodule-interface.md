@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「モジュールインターフェイス」を参照してください。
 title: ICorDebugModule インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 32e4d6fa-e5a3-413e-9166-d5e2871d3114
 topic_type:
 - apiref
-ms.openlocfilehash: 86e17b48bc491c45f8b46be23ab626dc1f2a6962
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f78023fe9975b609309c1c511380a3a394426283
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709844"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99660116"
 ---
 # <a name="icordebugmodule-interface"></a>ICorDebugModule インターフェイス
 
@@ -35,7 +36,7 @@ ms.locfileid: "95709844"
 |[GetAssembly メソッド](icordebugmodule-getassembly-method.md)|このモジュールの格納アセンブリを取得します。|  
 |[GetBaseAddress メソッド](icordebugmodule-getbaseaddress-method.md)|モジュールのベースアドレスを取得します。|  
 |[GetClassFromToken メソッド](icordebugmodule-getclassfromtoken-method.md)|メタデータから、このクラスを取得します。|  
-|[GetEditAndContinueSnapshot メソッド](icordebugmodule-geteditandcontinuesnapshot-method.md)|非推奨。|  
+|[GetEditAndContinueSnapshot メソッド](icordebugmodule-geteditandcontinuesnapshot-method.md)|非推奨になりました。|  
 |[GetFunctionFromRVA メソッド](icordebugmodule-getfunctionfromrva-method.md)|実装されていません。|  
 |[GetFunctionFromToken メソッド](icordebugmodule-getfunctionfromtoken-method.md)|メタデータトークンによって指定された関数を取得します。|  
 |[GetGlobalVariableValue メソッド](icordebugmodule-getglobalvariablevalue-method.md)|指定したグローバル変数の値オブジェクトを取得します。|  
@@ -47,7 +48,7 @@ ms.locfileid: "95709844"
 |[IsDynamic メソッド](icordebugmodule-isdynamic-method.md)|モジュールが動的かどうかを示します。|  
 |[IsInMemory メソッド](icordebugmodule-isinmemory-method.md)|このモジュールがメモリ内にのみ存在するかどうかを示します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  

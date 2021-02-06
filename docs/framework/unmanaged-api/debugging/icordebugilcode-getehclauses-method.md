@@ -1,4 +1,5 @@
 ---
+description: '詳細について: 「GetEHClauses メソッド」を参照してください。'
 title: ICorDebugILCode::GetEHClauses メソッド
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: cf7a0e00-06ae-47a5-8037-598b26196802
 topic_type:
 - apiref
-ms.openlocfilehash: 38936a57944e9a0920c374f473c4cbe8e8d70abb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e790f0f1f69a38d3a1be9e98eacfc5e37be0fd05
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728668"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99660662"
 ---
 # <a name="icordebugilcodegetehclauses-method"></a>ICorDebugILCode::GetEHClauses メソッド
 
@@ -45,7 +46,7 @@ HRESULT GetEHClauses(
  句  
  入出力この IL に対して定義されている例外処理句に関する情報を格納する [CorDebugEHClause](cordebugehclause-structure.md) オブジェクトの配列。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `cClauses`が0で、 `pcClauses` が **null** 以外の場合、 `pcClauses` は使用可能な例外処理句の数に設定されます。 `cClauses` が 0 以外の場合は、`clauses` アレイの記憶容量を表します。 メソッドが戻るとき、`clauses` には、`cClauses` の最大項目が含まれ、`pcClauses` は、実際に`clauses` アレイに書き込まれる句の数が設定されます。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: LoadModule メソッド'
 title: ICorDebugManagedCallback::LoadModule メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66ec04e9-87cb-42ce-9720-81522abb5d5a
 topic_type:
 - apiref
-ms.openlocfilehash: 698a5cb88884febc4dfb3b916c00df20c1a77819
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9a547d384b3f450054ebc70072664c6dcfb5992f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679651"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99660506"
 ---
 # <a name="icordebugmanagedcallbackloadmodule-method"></a>ICorDebugManagedCallback::LoadModule メソッド
 
@@ -43,7 +44,7 @@ HRESULT LoadModule (
  `pModule`  
  からCLR モジュールを表す、のモジュールオブジェクトへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `LoadModule`コールバックは、モジュールのメタデータを確認したり、just-in-time (JIT) コンパイラフラグを設定したり、モジュールのクラス読み込みコールバックを有効または無効にしたりするための適切な時間を提供します。  
   
