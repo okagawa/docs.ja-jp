@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugManagedCallback2:: MDANotification メソッド'
 title: ICorDebugManagedCallback2::MDANotification メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 93f79627-bd31-4f4f-b95d-46a032a52fe4
 topic_type:
 - apiref
-ms.openlocfilehash: 09a410f54ddf07c9a5f6bb7dd34f2aaf266e0734
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3f0c69c13ec30e604e07c284adca05f86283a5cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704579"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650496"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>ICorDebugManagedCallback2::MDANotification メソッド
 
@@ -53,7 +54,7 @@ HRESULT MDANotification(
  `pMDA`  
  からMDA 情報を公開 [する、ツールのインターフェイスへ](icordebugmda-interface.md) のポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  MDA は、ヒューリスティック警告であり、 [例外を明示的に呼び出す必要](icordebugcontroller-continue-method.md) はありません。ただし、デバッグ中のアプリケーションの実行を再開する場合を除き、明示的なデバッガーアクションは必要ありません。  
   
