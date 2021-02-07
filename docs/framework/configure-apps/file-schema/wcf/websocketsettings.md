@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <webSocketSettings>'
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 6cfddfb9ebfc7c3447af977e14738baabebc8fe9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a0b67a0088491c73ed0214191283ae5292a654b0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177852"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682489"
 ---
 # \<webSocketSettings>
 
@@ -43,7 +44,7 @@ Web ソケット設定を指定するために使用される構成要素。
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |createNotificationOnConnection|通知を接続時に送信するかどうかを指定します。|  
 |disablePayloadMasking|Web ソケットのマスクが無効であるかどうかを指定します。|  
@@ -56,15 +57,15 @@ Web ソケット設定を指定するために使用される構成要素。
   
 ## <a name="transportusage-attribute"></a>transportUsage 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |WhenDuplex|コントラクトが双方向の場合に、Web ソケット プロトコルを使用します。|  
-|Always (常に)|コントラクトにかかわらず、常にWeb ソケット プロトコルを使用します。|  
+|Always|コントラクトにかかわらず、常にWeb ソケット プロトコルを使用します。|  
 |行わない|Web ソケット プロトコルを使用しません。|  
   
 ### <a name="child-elements"></a>子要素  
 
- None  
+ なし  
   
 ### <a name="parent-elements"></a>親要素  
   

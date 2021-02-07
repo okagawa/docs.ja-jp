@@ -1,14 +1,15 @@
 ---
+description: '詳細情報: <certificateReference>'
 title: <certificateReference>
 ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
-ms.openlocfilehash: c21e5186b8afdf8c72cbfc605af94c95bc2bc0d5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3404d44457849fb78ae88617d049a2199f2b5509
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201379"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681787"
 ---
 # \<certificateReference>
 
@@ -44,17 +45,17 @@ ms.locfileid: "91201379"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
-|storeName|X.509 証明書ストアの名前。 既定値は "My" です。 省略可能。|  
-|storeLocation|<xref:System.Security.Cryptography.X509Certificates.StoreLocation>X.509 証明書ストアの場所を示す値です。 既定値は "LocalMachine" です。 省略可能。|  
-|x509FindType|<xref:System.Security.Cryptography.X509Certificates.X509FindType>実行する検索の種類を示す値です。 既定値は "Findbysubjectdistinguishedname です" です。 省略可能。|  
-|findValue|X.509 証明書ストアで検索する値。 省略可能。|  
-|isChainIncluded|証明書チェーンを使用して検証を実行するかどうかを指定します。 既定値は "true" です。検証は、証明書チェーンを使用して実行されます。 省略可能。|  
+|storeName|X.509 証明書ストアの名前。 既定値は "My" です。 任意。|  
+|storeLocation|<xref:System.Security.Cryptography.X509Certificates.StoreLocation>X.509 証明書ストアの場所を示す値です。 既定値は "LocalMachine" です。 任意。|  
+|x509FindType|<xref:System.Security.Cryptography.X509Certificates.X509FindType>実行する検索の種類を示す値です。 既定値は "Findbysubjectdistinguishedname です" です。 任意。|  
+|findValue|X.509 証明書ストアで検索する値。 任意。|  
+|isChainIncluded|証明書チェーンを使用して検証を実行するかどうかを指定します。 既定値は "true" です。検証は、証明書チェーンを使用して実行されます。 任意。|  
   
 ### <a name="child-elements"></a>子要素  
 
- None  
+ なし  
   
 ### <a name="parent-elements"></a>親要素  
   

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <ws2007HttpBinding>'
 title: <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8586ecc9-bdaa-44d6-8d4d-7038e4ea1741
-ms.openlocfilehash: 5f35029806172c3abe639052798c0a018e8514f0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1a74fb604054a4215c89c2d772ee4f83e6416a08
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158605"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682164"
 ---
 # \<ws2007HttpBinding>
 
@@ -65,23 +66,23 @@ ms.locfileid: "91158605"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
-|`allowCookies`|クライアントがクッキーを受け入れて、それらを今後の要求に反映させるかどうかを指定する値です。 既定では、 `false`です。<br /><br /> クッキーを使用する ASMX (ASP.NET Web サービス) と対話する場合に、このプロパティを使用できます。 これにより、サーバーから返されるクッキーが、このサービスに対するそれ以降のすべてのクライアント要求に自動的にコピーされます。|  
-|`bypassProxyOnLocal`|ローカル アドレスでプロキシ サーバーをバイパスするかどうかを示す値。 既定では、 `false`です。|  
+|`allowCookies`|クライアントがクッキーを受け入れて、それらを今後の要求に反映させるかどうかを指定する値です。 既定値は、`false` です。<br /><br /> クッキーを使用する ASMX (ASP.NET Web サービス) と対話する場合に、このプロパティを使用できます。 これにより、サーバーから返されるクッキーが、このサービスに対するそれ以降のすべてのクライアント要求に自動的にコピーされます。|  
+|`bypassProxyOnLocal`|ローカル アドレスでプロキシ サーバーをバイパスするかどうかを示す値。 既定値は、`false` です。|  
 |`closeTimeout`|クローズ操作が完了するまでの期間を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
 |`hostNameComparisonMode`|URI (Uniform Resource Identifier) の解析に使用する HTTP ホスト名比較モードを指定します。 この属性は <xref:System.ServiceModel.HostNameComparisonMode> 型で、URI が一致したときにサービスへのアクセスにホスト名を使用するかどうかを指定します。 既定値は <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard> で、一致しているホスト名を無視します。|  
 |`maxBufferPoolSize`|このバインドに使用するバッファー プールの最大サイズ。 既定値は 524,288 バイト (512 × 1,024) です。 Windows Communication Foundation (WCF) では、多くの部分でバッファーを使用します。 使用するたびに毎回バッファーを作成および破棄すると負荷が高くなります。バッファーのガベージ コレクションも同様です。 バッファー プールを使用すると、バッファーをプールから取得して使用し、作業が終わったらプールに戻すことができます。 これで、バッファーの作成と破棄によるオーバーヘッドを回避できます。|  
 |`maxReceivedMessageSize`|このバインディングで構成されたチャネルで受信可能な、ヘッダーを含む最大メッセージ サイズ (バイト単位) です。 この制限を超える場合、メッセージの送信者は SOAP エラーを受け取ります。 メッセージは受信者によってドロップされ、トレース ログにこのイベントのエントリが作成されます。 既定値は 65536 です。|  
-|`messageEncoding`|メッセージのエンコードに使用されるエンコーダーを定義します。 有効な値は次のとおりです。<br /><br /> -   `Text`: テキストメッセージエンコーダーを使用します。<br />-   `Mtom`: メッセージ伝送組織機構 1.0 (MTOM) エンコーダーを使用します。<br /><br /> 既定では、 `Text`です。<br /><br /> この属性は <xref:System.ServiceModel.WSMessageEncoding> 型です。|  
+|`messageEncoding`|メッセージのエンコードに使用されるエンコーダーを定義します。 有効な値は次のとおりです。<br /><br /> -   `Text`: テキストメッセージエンコーダーを使用します。<br />-   `Mtom`: メッセージ伝送組織機構 1.0 (MTOM) エンコーダーを使用します。<br /><br /> 既定値は、`Text` です。<br /><br /> この属性は <xref:System.ServiceModel.WSMessageEncoding> 型です。|  
 |`name`|バインドの構成名。 この値は、バインディングの ID として使用されるため、一意にする必要があります。 .NET Framework 4 以降では、バインドと動作に名前を付ける必要はありません。 既定の構成と無名のバインドおよび動作の詳細については、「 [WCF サービスの](../../../wcf/samples/simplified-configuration-for-wcf-services.md)構成と簡略化された構成の[簡略化](../../../wcf/simplified-configuration.md)」を参照してください。|  
 |`openTimeout`|実行中の操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
-|`proxyAddress`|HTTP プロキシのアドレスを指定する URI。 `useSystemWebProxy` が `true` の場合、この設定を `null` にする必要があります。 既定では、 `null`です。|  
+|`proxyAddress`|HTTP プロキシのアドレスを指定する URI。 `useSystemWebProxy` が `true` の場合、この設定を `null` にする必要があります。 既定値は、`null` です。|  
 |`receiveTimeout`|受信操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
 |`sendTimeout`|送信操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
-|`textEncoding`|バインディングでメッセージの発行に使用する文字セット エンコーディングを指定します。 有効な値は次のとおりです。<br /><br /> -   `UnicodeFffeTextEncoding`: Unicode ビッグエンディアンエンコーディング。<br />-   `Utf16TextEncoding`:16 ビットエンコード。<br />-   `Utf8TextEncoding`: 8 ビットエンコーディング。<br /><br /> 既定では、 `Utf8TextEncoding`です。<br /><br /> この属性は <xref:System.Text.Encoding> 型です。|  
-|`transactionFlow`|バインドが WS-Transactions のフローをサポートするかどうかを指定する値。 既定では、 `false`です。|  
-|`useDefaultWebProxy`|システムの自動設定 HTTP プロキシを使用するかどうかを示す値です。 既定では、 `true`です。|  
+|`textEncoding`|バインディングでメッセージの発行に使用する文字セット エンコーディングを指定します。 有効な値は次のとおりです。<br /><br /> -   `UnicodeFffeTextEncoding`: Unicode ビッグエンディアンエンコーディング。<br />-   `Utf16TextEncoding`:16 ビットエンコード。<br />-   `Utf8TextEncoding`: 8 ビットエンコーディング。<br /><br /> 既定値は、`Utf8TextEncoding` です。<br /><br /> この属性は <xref:System.Text.Encoding> 型です。|  
+|`transactionFlow`|バインドが WS-Transactions のフローをサポートするかどうかを指定する値。 既定値は、`false` です。|  
+|`useDefaultWebProxy`|システムの自動設定 HTTP プロキシを使用するかどうかを示す値です。 既定値は、`true` です。|  
   
 ### <a name="child-elements"></a>子要素  
   

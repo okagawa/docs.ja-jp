@@ -1,13 +1,14 @@
 ---
+description: '詳細については、次を参照してください: <windows> of <clientCredentials> 要素'
 title: <windows><clientCredentials>要素の
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-ms.openlocfilehash: 115e1822659c04ee37a7364f7b25616b52dc5efe
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d693ad914dfa02ef12a7c8520ca84be3a9595e73
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177827"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682424"
 ---
 # <a name="windows-of-clientcredentials-element"></a>\<windows>\<clientCredentials>要素の
 
@@ -34,7 +35,7 @@ ms.locfileid: "91177827"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |`allowedImpersonationLevel`|クライアントがサーバーと通信する偽装設定を設定します。 クライアントが選択する偽装モードは、サーバーでは適用されません。 有効な値は次のとおりです。<br /><br /> -識別: サーバーはクライアントの id と特権を取得できますが、クライアントの権限を借用することはできません。<br />-権限借用: サーバーは、ローカルシステム上のクライアントのセキュリティコンテキストを偽装できます。<br />-委任: サーバーは、リモートシステム上のクライアントのセキュリティコンテキストを偽装できます。<br />-Anonymous: サーバーはクライアントの権限を借用または識別できません。<br />-None: 偽装レベルが割り当てられていません。<br /><br /> 既定値は Identification です。 この属性は <xref:System.Security.Principal.TokenImpersonationLevel> 型です。|  
 |`allowNtlm`|このプロパティを `true` に設定すると、Kerberos 認証を利用できない場合、NTLM 認証にダウングレードできます。<br /><br /> このプロパティをに設定する `false` と、NTLM が使用されている場合に Windows Communication Foundation (WCF) がベストエフォートで例外をスローするようになります。 ただし、このプロパティを `false` に設定しても、ネットワーク経由で NTLM 資格情報が送信されなくなるとは限りません。|  

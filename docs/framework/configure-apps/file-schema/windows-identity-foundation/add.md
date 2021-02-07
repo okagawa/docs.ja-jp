@@ -1,14 +1,15 @@
 ---
+description: '詳細情報: <add>'
 title: <add>
 ms.date: 03/30/2017
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
 author: BrucePerlerMS
-ms.openlocfilehash: 2f37019fa0787f5c5553dbd3debc173ec0a047ee
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c79fb66fb4e87f15c2bf7f2c02e57f473c7262a8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189956"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681865"
 ---
 # \<add>
 
@@ -41,7 +42,7 @@ ms.locfileid: "91189956"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |type|追加するトークンハンドラーの CLR 型名。 属性を指定する方法の詳細については `type` 、「 [カスタム型参照](/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references)」を参照してください。|  
   

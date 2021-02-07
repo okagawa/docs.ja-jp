@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <wsdlImporters>'
 title: <wsdlImporters>
 ms.date: 03/30/2017
 ms.assetid: 270c7f93-eab7-47b6-8b94-ac3f5b7f17e4
-ms.openlocfilehash: c88fb549674f9cad59c4e23a0cc4099a378bec9b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 55334d231a1467974bc58608ecd133e864a6535f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158579"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682125"
 ---
 # \<wsdlImporters>
 

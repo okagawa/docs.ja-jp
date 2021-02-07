@@ -1,13 +1,14 @@
 ---
+description: 詳細については <windowsAuthentication> 、 <serviceCredentials>
 title: <windowsAuthentication> の <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: e0709473-0997-4de3-8f49-783527309a48
-ms.openlocfilehash: bda375959b535ce5f2996d594f719893164b0bd4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 94f5804ac22a8c3ee1b8fc646ece8521ff639aec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91195000"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682411"
 ---
 # <a name="windowsauthentication-of-servicecredentials"></a>\<windowsAuthentication> の \<serviceCredentials>
 
@@ -34,10 +35,10 @@ Windows サービス資格情報の設定を指定します。
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
-|`includeWindowsGroups`|セキュリティ コンテキストに Windows グループが含まれるかどうかを指定する省略可能なブール属性。 既定では、 `true`です。<br /><br /> この属性を `true` に設定すると、グループ全体が拡張されるため、パフォーマンスに影響が及びます。 ユーザーが属するグループの一覧を生成する必要がない場合は、この属性を `false` に設定します。|  
-|`allowAnonymousLogons`|認証されていない匿名の呼び出し元を許可するかどうかを指定する省略可能なブール属性。 既定では、 `false`です。<br /><br /> バインディングの `clientCredentialType` 属性が `Windows` に設定されている場合、匿名の呼び出し元は許可されません。 これは、ドメインまたはワークグループの認証済み呼び出し元だけがシステムへのアクセスを許可されていることを示します。 この動作は、この属性を使用してオーバーライドできます。<br /><br /> この設定を使用するときは十分に注意してください。|  
+|`includeWindowsGroups`|セキュリティ コンテキストに Windows グループが含まれるかどうかを指定する省略可能なブール属性。 既定値は、`true` です。<br /><br /> この属性を `true` に設定すると、グループ全体が拡張されるため、パフォーマンスに影響が及びます。 ユーザーが属するグループの一覧を生成する必要がない場合は、この属性を `false` に設定します。|  
+|`allowAnonymousLogons`|認証されていない匿名の呼び出し元を許可するかどうかを指定する省略可能なブール属性。 既定値は、`false` です。<br /><br /> バインディングの `clientCredentialType` 属性が `Windows` に設定されている場合、匿名の呼び出し元は許可されません。 これは、ドメインまたはワークグループの認証済み呼び出し元だけがシステムへのアクセスを許可されていることを示します。 この動作は、この属性を使用してオーバーライドできます。<br /><br /> この設定を使用するときは十分に注意してください。|  
   
 ### <a name="child-elements"></a>子要素  
 

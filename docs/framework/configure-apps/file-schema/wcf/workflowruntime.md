@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <workflowRuntime>'
 title: <workflowRuntime>
 ms.date: 03/30/2017
 ms.assetid: 304c70fa-78d1-4d0f-b89f-0ca23d734c6f
-ms.openlocfilehash: 4a450fb6f02bbf0f1681f7b2fabea9da7b65cbea
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9c234073bbbbfc8f1b5bb1579ff1dfa54a744ec1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183599"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682219"
 ---
 # \<workflowRuntime>
 
@@ -43,12 +44,12 @@ ms.locfileid: "91183599"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |cachedInstanceExpiration|ワークフロー インスタンスが強制的にアンロードまたは中止される前に、アイドル状態でメモリに残ることができる最大期間を指定する、省略可能な <xref:System.TimeSpan> 値。 unloadOnIdle を実行する `PersistenceService` が workflowruntime に設定されている場合、この属性は無視されます。|  
 |enablePerformanceCounters|パフォーマンス カウンターが有効であるかどうかを指定する省略可能なブール値。 パフォーマンス カウンターは、ワークフローに関連したさまざまな統計情報を提供します。ただしそのために、ワークフロー ランタイム エンジンが起動してワークフロー インスタンスが実行されている間は、パフォーマンスが低下します。 既定値は `true` です。|  
 |name|ワークフロー ランタイム エンジンの名前を含む文字列。 名前は出力で使用され、このランタイムを、システムで実行されている他のランタイム (パフォーマンス カウンターなど) と区別するために使用されます。<br /><br /> 既定値は空の文字列です。|  
-|validateOnCreate|WorkflowServiceHost を開いたときにワークフロー定義の検証を行うかどうかを指定する省略可能なブール値。  この属性が `true` に設定されているときは、`WorkflowServiceHost.Open` が呼び出されるたびにワークフローの検証が実行されます。 検証エラーが見つかった場合は、<xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException> エラーがスローされます。<br /><br /> このプロパティが `false` に設定されている場合、ワークフロー定義の検証は行われません。<br /><br /> このプロパティの既定値は、`true` です。|  
+|validateOnCreate|WorkflowServiceHost を開いたときにワークフロー定義の検証を行うかどうかを指定する省略可能なブール値。  この属性が `true` に設定されているときは、`WorkflowServiceHost.Open` が呼び出されるたびにワークフローの検証が実行されます。 検証エラーが見つかった場合は、<xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException> エラーがスローされます。<br /><br /> このプロパティが `false` に設定されている場合、ワークフロー定義の検証は行われません。<br /><br /> このプロパティの既定値は `true` です。|  
   
 ### <a name="child-elements"></a>子要素  
   

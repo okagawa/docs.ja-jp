@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <windowsStreamSecurity>'
 title: <windowsStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 926bea29-90c7-4a26-9cf0-fb4aa44f6f70
-ms.openlocfilehash: 3c82bd81bd0fabf10f2dd835188b346f62d038b5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c623dc23ca67d0341b66a2a4d97de564be77dcc5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91167081"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682398"
 ---
 # \<windowsStreamSecurity>
 
@@ -32,13 +33,13 @@ ms.locfileid: "91167081"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |protectionLevel|メッセージ レベルのセキュリティを定義します。 メッセージに署名を付けることで、メッセージの転送中に第三者によって改ざんされるリスクが軽減されます。 暗号化によって、トランスポート中にデータ レベルのプライバシーが提供されます。 有効な値は次のとおりです。<br /><br /> -None: 保護がありません。<br />-Sign: メッセージは署名されています。<br />-EncryptAndSign: メッセージは署名され、暗号化されます。<br /><br /> 既定値は EncryptAndSign です。<br /><br /> この属性は <xref:System.Net.Security.ProtectionLevel> 型です。|  
   
 ### <a name="child-elements"></a>子要素  
 
- None  
+ なし  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -57,5 +58,5 @@ ms.locfileid: "91167081"
 - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

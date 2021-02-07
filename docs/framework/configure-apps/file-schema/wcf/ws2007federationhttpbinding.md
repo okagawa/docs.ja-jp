@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <ws2007FederationHttpBinding>'
 title: <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9af4ec79-cdef-457e-9dca-09d5eb821594
-ms.openlocfilehash: fe9ab2e19706a5d295b5916aeb818621d1132c11
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 90635805573e5bee64d8adf0f79de827733f178b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558772"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682190"
 ---
 # \<ws2007FederationHttpBinding>
 
@@ -96,7 +97,7 @@ ms.locfileid: "90558772"
 |-------------|-----------------|
 |[\<bindings>](bindings.md)|この要素には、標準バインディングおよびカスタム バインドのコレクションが保持されます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 フェデレーションは、複数の企業または信頼するドメインで認証と承認用の ID を共有する機能です。 フェデレーションは、WS-Trust プロトコルを使用して、ID 形式を、ある信頼するドメインから別の信頼するドメインにマップします。 フェデレーション HTTP バインドは、SOAP セキュリティと混合モード セキュリティをサポートしますが、トランスポート セキュリティの単独使用はサポートしません。 このバインディングで構成されたサービスは、HTTP トランスポートを使用する必要があります。 詳細については、「[\<wsFederationHttpBinding>](wsfederationhttpbinding.md)」を参照してください。
 

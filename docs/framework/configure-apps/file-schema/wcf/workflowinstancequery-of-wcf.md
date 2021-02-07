@@ -1,15 +1,16 @@
 ---
-title: <workflowInstanceQuery>WCF の
+description: 詳細については、「WCF」を参照してください。 <workflowInstanceQuery>
+title: <workflowInstanceQuery> WCF の
 ms.date: 03/30/2017
 ms.assetid: 35c73f9d-474e-42eb-874d-ddc04b1987f3
-ms.openlocfilehash: eaf0cd204265aac7c1421e3de0c33963e6bbb7a1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 30df1a6b4fc0aeac5b7094f1a1f7d9d02599c94d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854729"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682320"
 ---
-# <a name="workflowinstancequery-of-wcf"></a>\<workflowInstanceQuery>WCF の
+# <a name="workflowinstancequery-of-wcf"></a>\<workflowInstanceQuery> WCF の
 
 開始したイベントや完了したイベントなど、ワークフロー インスタンスのライフサイクルの変化を追跡するクエリを表します。  
   

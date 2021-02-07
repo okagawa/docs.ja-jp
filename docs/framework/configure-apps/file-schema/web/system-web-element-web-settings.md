@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次のページを参照してください: <system.web> 要素 (Web 設定)'
 title: <system.web> 要素 (Web 設定)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: c8b01ec217fc1b6b91ccf36c8667922b57f26852
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2adcd3eba1eb6d67bcb4dc82243cd70d31d64fe9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185588"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681904"
 ---
 # <a name="systemweb-element-web-settings"></a>\<system.web> 要素 (Web 設定)
 
