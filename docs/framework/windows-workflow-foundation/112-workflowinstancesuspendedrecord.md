@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 112-WorkflowInstanceSuspendedRecord'
 title: 112 - WorkflowInstanceSuspendedRecord
 ms.date: 03/30/2017
 ms.assetid: bc825c7c-8c90-48f7-9336-9a978a8246c6
-ms.openlocfilehash: 697dfe18fdb4ae6c05ae758077c1c2d9198e053c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6d2088da6e395476bba05d5e2f4557ea527ecdd8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96265818"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667396"
 ---
 # <a name="112---workflowinstancesuspendedrecord"></a>112 - WorkflowInstanceSuspendedRecord
 
@@ -17,10 +18,10 @@ ms.locfileid: "96265818"
 |-|-|  
 |Id|112|  
 |Keywords|EndToEndMonitoring、Troubleshooting、HealthMonitoring、WFTracking|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、ワークフロー インスタンスが WorkflowInstanceSuspended Record を生成したときに、ETW 追跡参加要素によって生成されます。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96265818"
   
 ## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|Description|  
+|データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  
 |InstanceId|xs:GUID|ワークフローのインスタンス ID|  
 |RecordNumber|xs:long|生成されたレコードのシーケンス番号|  

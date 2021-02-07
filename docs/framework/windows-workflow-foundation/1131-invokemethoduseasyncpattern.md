@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 1131-InvokeMethodUseAsyncPattern'
 title: 1131 - InvokeMethodUseAsyncPattern
 ms.date: 03/30/2017
 ms.assetid: eca50fa7-5276-4759-ad1c-e490b9bd1f82
-ms.openlocfilehash: 2192b63b8a08657b69f6e3984f898bd6baddbc5f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 59d8e5e1fe7c5b038df6fce3211fd01977abc4f9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294184"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667318"
 ---
 # <a name="1131---invokemethoduseasyncpattern"></a>1131 - InvokeMethodUseAsyncPattern
 
@@ -15,12 +16,12 @@ ms.locfileid: "96294184"
   
 |||  
 |-|-|  
-|ID|1131|  
+|id|1131|  
 |Keywords|WFRuntime|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  CacheMetadata の手順では、InvokeMethod アクティビティはメソッドを呼び出すときの非同期パターンを使用していることを示します。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96294184"
   
 ## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|Description|  
+|データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  
 |InvokeMethod|xs:string|InvokeMethod アクティビティの表示名。|  
 |BeginMethod|xs:string|begin メソッドの名前。|  

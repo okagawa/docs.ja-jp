@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 1104-WorkflowActivityResume'
 title: 1104 - WorkflowActivityResume
 ms.date: 03/30/2017
 ms.assetid: 7fe95d1e-34bd-43ca-b92e-587d2d248fff
-ms.openlocfilehash: 2a9c40e2c403d43dc980af116e4b6e98b3b2090b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 875bbae9bdfd772cc9156cf544b7069d8d0b791f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96243561"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667500"
 ---
 # <a name="1104---workflowactivityresume"></a>1104 - WorkflowActivityResume
 
@@ -15,12 +16,12 @@ ms.locfileid: "96243561"
   
 |||  
 |-|-|  
-|ID|1104|  
+|id|1104|  
 |Keywords|WFRuntime|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  ワークフロー アクティビティが再開されたことを示します。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96243561"
   
 ## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|Description|  
+|データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  
 |WorkflowInstanceId|xs:string|ワークフロー インスタンス ID。|  
 |AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName で返される文字列。|
