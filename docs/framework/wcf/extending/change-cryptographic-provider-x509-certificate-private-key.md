@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: x.509 証明書の秘密キーの暗号化サービスプロバイダーを変更する」を参照してください。'
 title: '方法: X.509 証明書の秘密キーの暗号化プロバイダーを変更する'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: 33d42f26407787b26e1447f8b8f619dd6fc15229
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e68f4ffb5626a2c332853bd97eb513516401a185
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262113"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756709"
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificates-private-key"></a>方法: X.509 証明書の秘密キーの暗号化プロバイダーを変更する
 

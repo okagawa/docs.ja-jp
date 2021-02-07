@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「トランザクションアプリケーションの診断」を参照してください。
 title: トランザクション アプリケーションの診断
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: 696ebe7249a8388eaaf38a678581e28d472e821a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4b80dd5273781feaad0ef1c964c737a1cd470c75
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96290245"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756449"
 ---
 # <a name="diagnosing-transactional-applications"></a>トランザクション アプリケーションの診断
 
@@ -54,36 +55,36 @@ ms.locfileid: "96290245"
   
  サービスの `ServiceBehaviorAttribute` には、次のプロパティがあります。  
   
-|名前|Type|Description|  
+|名前|Type|説明|  
 |----------|----------|-----------------|  
-|ReleaseServiceInstanceOnTransactionComplete|ブール型|現在のトランザクションの完了時に、サービス オブジェクトをリサイクルするかどうかを指定します。|  
-|TransactionAutoCompleteOnSessionClose|ブール型|現在のセッションの終了時に、保留中のトランザクションを完了するかどうかを指定します。|  
+|ReleaseServiceInstanceOnTransactionComplete|Boolean|現在のトランザクションの完了時に、サービス オブジェクトをリサイクルするかどうかを指定します。|  
+|TransactionAutoCompleteOnSessionClose|Boolean|現在のセッションの終了時に、保留中のトランザクションを完了するかどうかを指定します。|  
 |TransactionIsolationLevel|<xref:System.Transactions.IsolationLevel> 列挙体の有効な値を含む文字列。|このサービスがサポートするトランザクションの分離レベルを指定します。|  
 |TransactionTimeout|<xref:System.DateTime>|トランザクションを完了しなければならない期間を指定します。|  
   
  `ServiceTimeoutsBehavior` には、次のプロパティがあります。  
   
-|名前|Type|Description|  
+|名前|Type|説明|  
 |----------|----------|-----------------|  
 |TransactionTimeout|<xref:System.DateTime>|トランザクションを完了しなければならない期間を指定します。|  
   
  バインディングの `TransactionFlowBindingElement` には、次のプロパティがあります。  
   
-|名前|Type|Description|  
+|名前|Type|説明|  
 |----------|----------|-----------------|  
 |TransactionProtocol|<xref:System.ServiceModel.TransactionProtocol> 型の有効な値を含む文字列。|トランザクションをフローさせるために使用するトランザクション プロトコルを指定します。|  
-|TransactionFlow|ブール型|受信トランザクション フローを有効にするかどうかを指定します。|  
+|TransactionFlow|Boolean|受信トランザクション フローを有効にするかどうかを指定します。|  
   
  操作の `OperationBehaviorAttribute` には、次のプロパティがあります。  
   
-|名前|Type|Description|  
+|名前|Type|説明|  
 |----------|----------|-----------------|  
-|TransactionAutoComplete|ブール型|未処理の例外が発生しなかった場合に、現在のトランザクションを自動的にコミットするかどうかを指定します。|  
-|TransactionScopeRequired|ブール型|操作がトランザクションを必要とするかどうかを指定します。|  
+|TransactionAutoComplete|Boolean|未処理の例外が発生しなかった場合に、現在のトランザクションを自動的にコミットするかどうかを指定します。|  
+|TransactionScopeRequired|Boolean|操作がトランザクションを必要とするかどうかを指定します。|  
   
  操作の `TransactionFlowAttribute` には、次のプロパティがあります。  
   
-|名前|Type|Description|  
+|名前|Type|説明|  
 |----------|----------|-----------------|  
 |TransactionFlowOption|<xref:System.ServiceModel.TransactionFlowOption> 列挙体の有効な値を含む文字列。|トランザクション フローが要求される範囲を指定します。|  
   

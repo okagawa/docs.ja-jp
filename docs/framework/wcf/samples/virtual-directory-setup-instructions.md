@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「仮想ディレクトリのセットアップ手順」を参照してください。
 title: 仮想ディレクトリのセットアップ手順
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: dba6547888935ccf36ec0924fd3c95e8fbda5688
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4b1a68fb657a59e9858c6efa7931c5d106231605
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96243652"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755708"
 ---
 # <a name="virtual-directory-setup-instructions"></a>仮想ディレクトリのセットアップ手順
 
@@ -42,7 +43,7 @@ Windows Communication Foundation (WCF) サンプルは、%SystemDrive%\inetpub\w
     > [!NOTE]
     > このドキュメントでは、`virtual directory`という用語は `Web application`と同じ意味で使用しています。  
   
-     仮想ディレクトリを作成するだけでなく、そのプロパティを設定して、WCF サービスを実行できるようにする必要もあります。 詳細については、以下をご覧ください。  
+     仮想ディレクトリを作成するだけでなく、そのプロパティを設定して、WCF サービスを実行できるようにする必要もあります。 詳細については、以下を参照してください。  
   
 #### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a>仮想ディレクトリを IIS 5.1 または 6.0 で作成するには  
   
@@ -77,7 +78,7 @@ Windows Communication Foundation (WCF) サンプルは、%SystemDrive%\inetpub\w
   
 3. [操作] ウィンドウで、[ **有効にする** ] オプションを選択します。 これにより、Internet Explorer でディレクトリにアクセスできるようになり、サービスのデバッグに役立ちます。  
   
- 最後に、servicemodelsamples フォルダーのセキュリティ プロパティを、他のユーザーがアクセスできるように設定する必要があります。 詳細については、以下をご覧ください。  
+ 最後に、servicemodelsamples フォルダーのセキュリティ プロパティを、他のユーザーがアクセスできるように設定する必要があります。 詳細については、以下を参照してください。  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-51-or-60"></a>仮想ディレクトリの追加プロパティを IIS 5.1 または 6.0 で設定するには  
   

@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「CustomBindingElement」を参照してください。
 title: CustomBindingElement
 ms.date: 03/30/2017
 ms.assetid: df959dc5-1aef-4338-a123-6ff3e7bc37af
-ms.openlocfilehash: d7c8a46032aff4d5d2b3c4be8e887953ec1d2c11
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: fc3f1fcbfc54ff082f87e04a894226ff9ca996bd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96270733"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99757515"
 ---
 # <a name="custombindingelement"></a>CustomBindingElement
 

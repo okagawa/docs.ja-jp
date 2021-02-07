@@ -1,15 +1,16 @@
 ---
+description: 詳細については、Windows Vista、Windows Server 2003、および Windows XP のキュー機能の相違点に関するページを参照してください。
 title: Windows Vista、Windows Server 2003、および Windows XP におけるキュー機能の相違点
 ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-ms.openlocfilehash: 6ec20a0d9512b1f80da1fd423282fc1538c750ef
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6a6206b3033454528797f3c8f4276add9c35023d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254273"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756384"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Windows Vista、Windows Server 2003、および Windows XP におけるキュー機能の相違点
 

@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「データコントラクトスキーマリファレンス」を参照してください。
 title: データ コントラクト スキーマの参照
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 04d1f753e5788460404942a21a29e1612f674e90
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3449340600ea5c55ef46433031e53266a218bd6d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593569"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756644"
 ---
 # <a name="data-contract-schema-reference"></a>データ コントラクト スキーマの参照
 
@@ -17,7 +18,7 @@ ms.locfileid: "84593569"
 
 ## <a name="datacontractserializer-mappings"></a>DataContractSerializer のマッピング
 
-は、メタデータ `DataContractSerializer` エンドポイントまたは[ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を使用して Windows Communication Foundation (WCF) サービスからメタデータをエクスポートするときに、CLR 型を XSD にマップします。 詳細については、「[データコントラクトシリアライザー](data-contract-serializer.md)」を参照してください。
+は、メタデータ `DataContractSerializer` エンドポイントまたは [ServiceModel メタデータユーティリティツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を使用して Windows Communication Foundation (WCF) サービスからメタデータをエクスポートするときに、CLR 型を XSD にマップします。 詳細については、「 [データコントラクトシリアライザー](data-contract-serializer.md)」を参照してください。
 
 また、 `DataContractSerializer` は、Svcutil.exe を使用して Web サービス記述言語 (WSDL) や XSD ドキュメントにアクセスし、サービスまたはクライアントのデータ コントラクトを生成するときに、XSD を CLR 型にマッピングします。
 
@@ -27,9 +28,9 @@ ms.locfileid: "84593569"
 
 `DataContractSerializer` は、特定の XML スキーマ機能に次のサポート レベルを提供します。
 
-- **サポートされて**います。 この機能から CLR 型または属性の一方または両方への、 `DataContractSerializer`を使用する明示的なマッピングが存在します。
+- **サポートされています**。 この機能から CLR 型または属性の一方または両方への、 `DataContractSerializer`を使用する明示的なマッピングが存在します。
 
-- **無視**されます。 この機能は、 `DataContractSerializer`によってインポートされたスキーマで使用できますが、コードの生成に影響しません。
+- **無視** されます。 この機能は、 `DataContractSerializer`によってインポートされたスキーマで使用できますが、コードの生成に影響しません。
 
 - **禁止**。 `DataContractSerializer` は、この機能を使用するスキーマのインポートをサポートしません。 たとえば、Svcutil.exe は、この機能を使用するスキーマに基づいて WSDL にアクセスする場合、代わりに <xref:System.Xml.Serialization.XmlSerializer> を使用します。 これは既定です。
 
@@ -57,18 +58,18 @@ ms.locfileid: "84593569"
 
 |内容|スキーマ|
 |--------------|------------|
-|`include`|サポートされています。 `DataContractSerializer` では xs:include と xs:import がサポートされています。 ただし、メタデータをローカル ファイルから読み込む場合、Svcutil.exe では、後続の `xs:include/@schemaLocation` 参照と `xs:import/@location` 参照が制限されます。 この場合、 `include` ではなく帯域外機構を通じてスキーマ ファイルの一覧を渡す必要があります。 `include`されたスキーマ ドキュメントは無視されます。|
-|`redefine`|Forbidden.  セキュリティ上の理由により、 `xs:redefine` では、 `DataContractSerializer` の使用が禁止されています。 `x:redefine` では、 `schemaLocation` を後続させる必要があります。 状況によっては、DataContract を使用する Svcutil.exe では、 `schemaLocation`の使用が制限されます。|
-|`import`|サポートされています。 `DataContractSerializer` では、 `xs:include` と `xs:import`がサポートされています。 ただし、メタデータをローカル ファイルから読み込む場合、Svcutil.exe では、後続の `xs:include/@schemaLocation` 参照と `xs:import/@location` 参照が制限されます。 この場合、 `include` ではなく帯域外機構を通じてスキーマ ファイルの一覧を渡す必要があります。 `include`されたスキーマ ドキュメントは無視されます。|
-|`simpleType`|サポートされています。 `xs:simpleType` のセクションを参照してください。|
+|`include`|サポートしています。 `DataContractSerializer` では xs:include と xs:import がサポートされています。 ただし、メタデータをローカル ファイルから読み込む場合、Svcutil.exe では、後続の `xs:include/@schemaLocation` 参照と `xs:import/@location` 参照が制限されます。 この場合、 `include` ではなく帯域外機構を通じてスキーマ ファイルの一覧を渡す必要があります。 `include`されたスキーマ ドキュメントは無視されます。|
+|`redefine`|Forbidden. セキュリティ上の理由により、 `xs:redefine` では、 `DataContractSerializer` の使用が禁止されています。 `x:redefine` では、 `schemaLocation` を後続させる必要があります。 状況によっては、DataContract を使用する Svcutil.exe では、 `schemaLocation`の使用が制限されます。|
+|`import`|サポートしています。 `DataContractSerializer` では、 `xs:include` と `xs:import`がサポートされています。 ただし、メタデータをローカル ファイルから読み込む場合、Svcutil.exe では、後続の `xs:include/@schemaLocation` 参照と `xs:import/@location` 参照が制限されます。 この場合、 `include` ではなく帯域外機構を通じてスキーマ ファイルの一覧を渡す必要があります。 `include`されたスキーマ ドキュメントは無視されます。|
+|`simpleType`|サポートしています。 `xs:simpleType` のセクションを参照してください。|
 |`complexType`|サポートされます。データ コントラクトにマッピングされます。 `xs:complexType` のセクションを参照してください。|
 |`group`|無視されます。 `DataContractSerializer` では、 `xs:group`、 `xs:attributeGroup`、および `xs:attribute`の使用はサポートされていません。 これらの宣言は `xs:schema`の子として無視され、 `complexType` やその他のサポートされている構文内から参照できません。|
 |`attributeGroup`|無視されます。 `DataContractSerializer` では、 `xs:group`、 `xs:attributeGroup`、および `xs:attribute`の使用はサポートされていません。 これらの宣言は `xs:schema`の子として無視され、 `complexType` やその他のサポートされている構文内から参照できません。|
-|`element`|サポートされています。 グローバル要素宣言 (GED) を参照してください。|
+|`element`|サポートしています。 グローバル要素宣言 (GED) を参照してください。|
 |`attribute`|無視されます。 `DataContractSerializer` では、 `xs:group`、 `xs:attributeGroup`、および `xs:attribute`の使用はサポートされていません。 これらの宣言は `xs:schema`の子として無視され、 `complexType` やその他のサポートされている構文内から参照できません。|
 |`notation`|無視されます。|
 
-## <a name="complex-types--xscomplextype"></a>複合型–\<xs:complexType>
+## <a name="complex-types--xscomplextype"></a>複合型– \<xs:complexType>
 
 ### <a name="general-information"></a>一般情報
 
@@ -79,7 +80,7 @@ ms.locfileid: "84593569"
 |属性|スキーマ|
 |---------------|------------|
 |`abstract`|false (既定) のみ有効です。|
-|`block`|Forbidden. |
+|`block`|Forbidden.|
 |`final`|無視されます。|
 |`id`|無視されます。|
 |`mixed`|false (既定) のみ有効です。|
@@ -90,17 +91,17 @@ ms.locfileid: "84593569"
 |内容|スキーマ|
 |--------------|------------|
 |`simpleContent`|拡張は禁止です。<br /><br /> 制限は、 `anySimpleType`からのみ許可されます。|
-|`complexContent`|サポートされています。 「継承」を参照してください。|
-|`group`|Forbidden. |
-|`all`|Forbidden. |
+|`complexContent`|サポートしています。 「継承」を参照してください。|
+|`group`|Forbidden.|
+|`all`|Forbidden.|
 |`choice`|Forbidden|
 |`sequence`|サポートされます。データ コントラクトのデータ メンバーにマッピングされます。|
 |`attribute`|use="prohibited" の場合でも禁止です (ただし、例外が 1 つあります)。 標準シリアル化スキーマ名前空間のオプションの属性のみがサポートされます。 これらは、データ コントラクト プログラミング モデルのデータ メンバーにマッピングされません。 現在、これらの属性で意味のあるものは 1 つだけです。詳細については、ISerializable のセクションを参照してください。 他の属性はすべて無視されます。|
-|`attributeGroup`|Forbidden.  WCF v1 リリースでは、は `DataContractSerializer` 内部のの存在を無視し `attributeGroup` `xs:complexType` ます。|
-|`anyAttribute`|Forbidden. |
+|`attributeGroup`|Forbidden. WCF v1 リリースでは、は `DataContractSerializer` 内部のの存在を無視し `attributeGroup` `xs:complexType` ます。|
+|`anyAttribute`|Forbidden.|
 |(空)|データ メンバーを持たないデータ コントラクトにマッピングされます。|
 
-### <a name="xssequence-in-a-complex-type-attributes"></a>\<xs:sequence>複合型: attributes 内
+### <a name="xssequence-in-a-complex-type-attributes"></a>\<xs:sequence> 複合型: attributes 内
 
 |属性|スキーマ|
 |---------------|------------|
@@ -108,18 +109,18 @@ ms.locfileid: "84593569"
 |`maxOccurs`|1 (既定) のみ有効です。|
 |`minOccurs`|1 (既定) のみ有効です。|
 
-### <a name="xssequence-in-a-complex-type-contents"></a>\<xs:sequence>複合型の場合: 内容
+### <a name="xssequence-in-a-complex-type-contents"></a>\<xs:sequence> 複合型の場合: 内容
 
 |内容|スキーマ|
 |--------------|------------|
 |`element`|各インスタンスがデータ メンバーにマッピングされます。|
-|`group`|Forbidden. |
-|`choice`|Forbidden. |
-|`sequence`|Forbidden. |
-|`any`|Forbidden. |
+|`group`|Forbidden.|
+|`choice`|Forbidden.|
+|`sequence`|Forbidden.|
+|`any`|Forbidden.|
 |(空)|データ メンバーを持たないデータ コントラクトにマッピングされます。|
 
-## <a name="elements--xselement"></a>要素\<xs:element>
+## <a name="elements--xselement"></a>要素 \<xs:element>
 
 ### <a name="general-information"></a>一般情報
 
@@ -135,12 +136,12 @@ ms.locfileid: "84593569"
 
 |属性|スキーマ|
 |---------------|------------|
-|`ref`|Forbidden. |
+|`ref`|Forbidden.|
 |`name`|サポートされます。データ メンバー名にマッピングされます。|
 |`type`|サポートされます。データ メンバー型にマッピングされます。 詳細については、「型/プリミティブのマッピング」を参照してください。 指定しない場合 (および要素に匿名型が含まれていない場合) は、 `xs:anyType` が使用されます。|
 |`block`|無視されます。|
-|`default`|Forbidden. |
-|`fixed`|Forbidden. |
+|`default`|Forbidden.|
+|`fixed`|Forbidden.|
 |`form`|修飾する必要があります。 この属性は、 `elementFormDefault` の `xs:schema`を通じて設定できます。|
 |`id`|無視されます。|
 |`maxOccurs`|1|
@@ -189,7 +190,7 @@ ms.locfileid: "84593569"
 |`final`|関連 GED では false のみ有効です。|
 |`fixed`|関連 GED では禁止です。|
 |`id`|無視されます。|
-|`name`|サポートされています。 関連 GED の定義を参照してください。|
+|`name`|サポートしています。 関連 GED の定義を参照してください。|
 |`nillable`|関連 GED では true のみ有効です。|
 |`substitutionGroup`|関連 GED では禁止です。|
 |`type`|サポートされます。関連 GED に関連付けられた型に一致させる必要があります (ただし、要素に匿名型が含まれている場合を除きます)。|
@@ -203,9 +204,9 @@ ms.locfileid: "84593569"
 |`unique`|無視されます。|
 |`key`|無視されます。|
 |`keyref`|無視されます。|
-|(空白)|サポートされています。|
+|(空白)|サポートしています。|
 
-\*匿名型に対してとのマッピングを使用する場合は、匿名 `simpleType` `complexType,` のデータコントラクトが存在しない点を除いて、匿名型の場合と同じです。そのため、名前付きのデータコントラクトが作成され、要素名から派生した名前が生成されます。 匿名型のルールは、次のとおりです。
+\* 匿名型に対してとのマッピングを使用する場合は、匿名 `simpleType` `complexType,` のデータコントラクトが存在しない点を除いて、匿名型の場合と同じです。そのため、名前付きのデータコントラクトが作成され、要素名から派生した名前が生成されます。 匿名型のルールは、次のとおりです。
 
 - WCF 実装の詳細: `xs:element` 名前にピリオドが含まれていない場合、匿名型は外部データコントラクト型の内部型にマップされます。 名前にピリオドが含まれている場合、結果のデータ コントラクト型は、内部型ではなく、独立した型になります。
 
@@ -213,7 +214,7 @@ ms.locfileid: "84593569"
 
 - そのような名前を持つデータ コントラクトが既に存在する場合は、"1"、"2"、"3" などの番号が付加されて一意の名前になります。
 
-## <a name="simple-types---xssimpletype"></a>単純型-\<xs:simpleType>
+## <a name="simple-types---xssimpletype"></a>単純型- \<xs:simpleType>
 
 ### <a name="xssimpletype-attributes"></a>\<xs:simpleType>: 属性
 
@@ -227,9 +228,9 @@ ms.locfileid: "84593569"
 
 |内容|スキーマ|
 |--------------|------------|
-|`restriction`|サポートされています。 列挙データ コントラクトにマッピングされます。 列挙パターンに一致しない場合、この属性は無視されます。 `xs:simpleType` の制限のセクションを参照してください。|
-|`list`|サポートされています。 フラグ列挙データ コントラクトにマッピングされます。 `xs:simpleType` の一覧のセクションを参照してください。|
-|`union`|Forbidden. |
+|`restriction`|サポートしています。 列挙データ コントラクトにマッピングされます。 列挙パターンに一致しない場合、この属性は無視されます。 `xs:simpleType` の制限のセクションを参照してください。|
+|`list`|サポートしています。 フラグ列挙データ コントラクトにマッピングされます。 `xs:simpleType` の一覧のセクションを参照してください。|
+|`union`|Forbidden.|
 
 ### \<xs:restriction>
 
@@ -246,7 +247,7 @@ ms.locfileid: "84593569"
 |`base`|サポートされている単純型または `xs:anyType`のみ有効です。|
 |`id`|無視されます。|
 
-### <a name="xsrestriction-for-all-other-cases-contents"></a>\<xs:restriction>その他のすべての場合: 内容
+### <a name="xsrestriction-for-all-other-cases-contents"></a>\<xs:restriction> その他のすべての場合: 内容
 
 |内容|スキーマ|
 |--------------|------------|
@@ -263,18 +264,18 @@ ms.locfileid: "84593569"
 |`enumeration`|無視されます。|
 |`whiteSpace`|無視されます。|
 |`pattern`|無視されます。|
-|(空白)|サポートされています。|
+|(空白)|サポートしています。|
 
-## <a name="enumeration"></a>Enumeration
+## <a name="enumeration"></a>列挙
 
-### <a name="xsrestriction-for-enumerations-attributes"></a>\<xs:restriction>列挙型の場合: 属性
+### <a name="xsrestriction-for-enumerations-attributes"></a>\<xs:restriction> 列挙型の場合: 属性
 
 |属性|スキーマ|
 |---------------|------------|
 |`base`|存在する場合、 `xs:string`のみ有効です。|
 |`id`|無視されます。|
 
-### <a name="xsrestriction-for-enumerations-contents"></a>\<xs:restriction>列挙型の場合: 内容
+### <a name="xsrestriction-for-enumerations-contents"></a>\<xs:restriction> 列挙型の場合: 内容
 
 |内容|スキーマ|
 |--------------|------------|
@@ -285,12 +286,12 @@ ms.locfileid: "84593569"
 |`maxInclusive`|無視されます。|
 |`totalDigits`|無視されます。|
 |`fractionDigits`|無視されます。|
-|`length`|Forbidden. |
-|`minLength`|Forbidden. |
-|`maxLength`|Forbidden. |
-|`enumeration`|サポートされています。 列挙体 "id" は無視され、"値" が列挙データ コントラクトの値の名前にマッピングされます。|
-|`whiteSpace`|Forbidden. |
-|`pattern`|Forbidden. |
+|`length`|Forbidden.|
+|`minLength`|Forbidden.|
+|`maxLength`|Forbidden.|
+|`enumeration`|サポートしています。 列挙体 "id" は無視され、"値" が列挙データ コントラクトの値の名前にマッピングされます。|
+|`whiteSpace`|Forbidden.|
+|`pattern`|Forbidden.|
 |(空)|サポートされます。空の列挙型にマッピングされます。|
 
  次のコードは、C# の列挙クラスを示しています。
@@ -339,7 +340,7 @@ public enum MyEnum
 
 |属性|スキーマ|
 |---------------|------------|
-|`itemType`|Forbidden. |
+|`itemType`|Forbidden.|
 |`id`|無視されます。|
 
 ### <a name="xslist-contents"></a>\<xs:list>: コンテンツ
@@ -451,14 +452,14 @@ public class Employee : Person
 |内容|スキーマ|
 |--------------|------------|
 |`restriction`|禁止ですが、base="`xs:anyType`" の場合を除きます。 後者は、 `xs:restriction` のコンテナーの下に `xs:complexContent`のコンテンツを直接配置するのと同じです。|
-|`extension`|サポートされています。 データ コントラクトの継承にマッピングされます。|
+|`extension`|サポートしています。 データ コントラクトの継承にマッピングされます。|
 
 ### <a name="xsextension-in-xscomplexcontent-attributes"></a>\<xs:extension>\<xs:complexContent>: 属性
 
 |属性|スキーマ|
 |---------------|------------|
 |`id`|無視されます。|
-|`base`|サポートされています。 この型が継承する基本データ コントラクト型にマッピングされます。|
+|`base`|サポートしています。 この型が継承する基本データ コントラクト型にマッピングされます。|
 
 ### <a name="xsextension-in-xscomplexcontent-contents"></a>\<xs:extension>\<xs:complexContent>: コンテンツ
 
@@ -478,7 +479,7 @@ public class Employee : Person
 
 `DataContractSerializer` は、XML スキーマのプリミティブ型で次のマッピングを使用します。
 
-|XSD 型|.NET 型|
+|XSD 型|.NET の種類|
 |--------------|---------------|
 |`anyType`|<xref:System.Object>.|
 |`anySimpleType`|<xref:System.String>.|
@@ -541,7 +542,7 @@ public class Employee : Person
 </xs:complexType>
 ```
 
-データ コントラクトのシリアル化スキーマで宣言されたオプションの属性 `ser:FactoryType` は、型を逆シリアル化できるファクトリ クラスを参照します。 ファクトリ クラスは、使用する `DataContractSerializer` インスタンスの既知の型コレクションの一部である必要があります。 既知の型の詳細については、「[データコントラクトの既知の型](data-contract-known-types.md)」を参照してください。
+データ コントラクトのシリアル化スキーマで宣言されたオプションの属性 `ser:FactoryType` は、型を逆シリアル化できるファクトリ クラスを参照します。 ファクトリ クラスは、使用する `DataContractSerializer` インスタンスの既知の型コレクションの一部である必要があります。 既知の型の詳細については、「 [データコントラクトの既知の型](data-contract-known-types.md)」を参照してください。
 
 ## <a name="datacontract-serialization-schema"></a>DataContract のシリアル化スキーマ
 

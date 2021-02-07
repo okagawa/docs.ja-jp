@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「クラスからのスキーマのエクスポート」を参照してください。
 title: クラスからのスキーマのエクスポート
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-ms.openlocfilehash: 8105ada41a2ec9dac962f5029ac89b66c69893ab
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f9ca33bb26237b3af9ff26b1ed693088c62e3b13
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255560"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756280"
 ---
 # <a name="exporting-schemas-from-classes"></a>クラスからのスキーマのエクスポート
 
@@ -52,7 +53,7 @@ ms.locfileid: "96255560"
   
 ## <a name="helper-methods"></a>ヘルパー メソッド  
 
- `XsdDataContractExporter` には、主要な機能であるスキーマのエクスポート処理に加え、型に関する情報を調べるためのヘルパー メソッドが定義されています。 これには以下が含まれます。  
+ `XsdDataContractExporter` には、主要な機能であるスキーマのエクスポート処理に加え、型に関する情報を調べるためのヘルパー メソッドが定義されています。 次に例を示します。  
   
 - <xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> メソッド `Type` を受け取り、この型をルート オブジェクトとしてシリアル化した場合に使用されるルート要素名と名前空間を表す <xref:System.Xml.XmlQualifiedName> を返します。  
   

@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「揮発性キュー通信」を参照してください。
 title: 揮発性キューによる通信
 ms.date: 03/30/2017
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
-ms.openlocfilehash: a9f7e8a96fd293c7f87cc19846a42a42f28de288
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8ced65dc28719416fb9b1059d2be8f29315013b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602344"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755721"
 ---
 # <a name="volatile-queued-communication"></a>揮発性キューによる通信
 
@@ -49,7 +50,7 @@ public class StockTickerService : IStockTicker
 }
 ```
 
-サービスは自己ホスト型です。 MSMQ トランスポートを使用する場合、使用するキューをあらかじめ作成しておく必要があります。 手動で作成することもコードで作成することもできます。 このサンプルでは、キューの存在を確認して、必要な場合は作成するためのコードがサービスに含まれています。 キュー名は構成ファイルから読み込まれます。 このベースアドレスは、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)によって、サービスのプロキシを生成するために使用されます。
+サービスは自己ホスト型です。 MSMQ トランスポートを使用する場合、使用するキューをあらかじめ作成しておく必要があります。 手動で作成することもコードで作成することもできます。 このサンプルでは、キューの存在を確認して、必要な場合は作成するためのコードがサービスに含まれています。 キュー名は構成ファイルから読み込まれます。 このベースアドレスは、 [ServiceModel メタデータユーティリティツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) によって、サービスのプロキシを生成するために使用されます。
 
 ```csharp
 // Host the service within this EXE console application.
@@ -224,6 +225,6 @@ Stock Tick zzz9:43.3
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Volatile`

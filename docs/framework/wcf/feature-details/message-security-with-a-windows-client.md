@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: Windows クライアントを使用したメッセージセキュリティ'
 title: Windows クライアントとのメッセージ セキュリティ
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: 1fe50f711c65871b811837a7f48cf6f45f4455b4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 97d415f68b4374ab2b18360347d7753f6be51313
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275607"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756098"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows クライアントとのメッセージ セキュリティ
 
@@ -25,13 +26,13 @@ ms.locfileid: "96275607"
 |認証 (サーバー)|サーバーとクライアントの相互認証|  
 |認証 (クライアント)|サーバーとクライアントの相互認証|  
 |整合性|はい、共有のセキュリティ コンテキストを使用します|  
-|機密情報|はい、共有のセキュリティ コンテキストを使用します|  
+|機密性|はい、共有のセキュリティ コンテキストを使用します|  
 |トランスポート|NET.TCP|  
 |バインド|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>サービス  
 
- 次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
+ 次のコードと構成は、別々に実行します。 以下のいずれかを実行します。  
   
 - 構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
   
@@ -78,7 +79,7 @@ ms.locfileid: "96275607"
   
 ## <a name="client"></a>クライアント  
 
- 次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
+ 次のコードと構成は、別々に実行します。 以下のいずれかを実行します。  
   
 - コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。  
   

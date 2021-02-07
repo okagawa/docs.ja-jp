@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「Windows 認証エラーのデバッグ」を参照してください。
 title: Windows 認証エラーのデバッグ
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: c8aa87bdbf9488bce8e1a62f6d1a3898f923d349
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cfc8bf8ce9b9c5da3d9b25949321ed1ac2b62d98
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291662"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756488"
 ---
 # <a name="debug-windows-authentication-errors"></a>Windows 認証エラーのデバッグ
 
@@ -52,9 +53,9 @@ ms.locfileid: "96291662"
   
 - Local System : ドメインに参加していないコンピューターの SYSTEM ビルトイン アカウント。  
   
-- Domain User : Windows ドメインのユーザー アカウント。 例: `DomainName\ProfileName`。  
+- Domain User : Windows ドメインのユーザー アカウント。 たとえば、`DomainName\ProfileName` のように指定します。  
   
-- Domain Machine : Windows ドメインに参加しているコンピューターで実行されている、コンピューター ID を使用するプロセス。 例: `MachineName\Network Service`。  
+- Domain Machine : Windows ドメインに参加しているコンピューターで実行されている、コンピューター ID を使用するプロセス。 たとえば、`MachineName\Network Service` のように指定します。  
   
 > [!NOTE]
 > サービス資格情報は、<xref:System.ServiceModel.ICommunicationObject.Open%2A> クラスの <xref:System.ServiceModel.ServiceHost> メソッドが呼び出されたときにキャプチャされます。 クライアント資格情報は、クライアントがメッセージを送信するたびに読み取られます。  

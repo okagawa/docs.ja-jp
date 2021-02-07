@@ -1,24 +1,25 @@
 ---
+description: 詳細については、「トランスポートセキュリティを使用した BasicBinding」を参照してください。
 title: トランスポート セキュリティ付き BasicBinding
 ms.date: 03/30/2017
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
-ms.openlocfilehash: 822a7dcb20c6559a70ba77719b6e7a62633bb31c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e3d196136fcf91e3e61f82cee7e16421db221192
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575668"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755903"
 ---
 # <a name="basicbinding-with-transport-security"></a>トランスポート セキュリティ付き BasicBinding
 
-このサンプルでは、基本的なバインディングを使用した SSL トランスポート セキュリティを示します。 このサンプルは、電卓サービスを実装する[はじめに](getting-started-sample.md)に基づいています。
+このサンプルでは、基本的なバインディングを使用した SSL トランスポート セキュリティを示します。 このサンプルは、電卓サービスを実装する [はじめに](getting-started-sample.md) に基づいています。
 
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\TransportSecurity`
 
@@ -29,7 +30,7 @@ ms.locfileid: "84575668"
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。
 
-サンプル内のプログラムコードは、[はじめに](getting-started-sample.md)サービスのプログラムコードと同じです。 次に示すサンプル構成のように、構成ファイル設定でエンドポイントとバインディングを定義すると、通信のセキュリティ保護が有効になるように変更されます。
+サンプル内のプログラムコードは、 [はじめに](getting-started-sample.md) サービスのプログラムコードと同じです。 次に示すサンプル構成のように、構成ファイル設定でエンドポイントとバインディングを定義すると、通信のセキュリティ保護が有効になるように変更されます。
 
 ```xml
 <system.serviceModel>
@@ -56,7 +57,7 @@ ms.locfileid: "84575668"
 </system.serviceModel>
 ```
 
-このサンプルで使用される証明書は、Makecert で作成されたテスト証明書であるため、ブラウザーで HTTPS: アドレスにアクセスしようとすると (など)、セキュリティ警告が表示されます `https://localhost/servicemodelsamples/service.svc` 。 Windows Communication Foundation (WCF) クライアントがテスト証明書を使用できるようにするには、セキュリティの警告を抑制するために、いくつかの追加コードをクライアントに追加します。 そのためのコードとそれに必要なクラスは、実際の証明書を使用するときには不要です。
+このサンプルで使用される証明書は Makecert.exe で作成されたテスト証明書であるため、ブラウザーで HTTPS: アドレスにアクセスしようとすると (など)、セキュリティ警告が表示され `https://localhost/servicemodelsamples/service.svc` ます。 Windows Communication Foundation (WCF) クライアントがテスト証明書を使用できるようにするには、セキュリティの警告を抑制するために、いくつかの追加コードをクライアントに追加します。 そのためのコードとそれに必要なクラスは、実際の証明書を使用するときには不要です。
 
 ```csharp
 // This code is required only for test certificates such as those

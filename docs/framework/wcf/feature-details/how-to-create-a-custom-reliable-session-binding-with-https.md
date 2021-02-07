@@ -1,13 +1,14 @@
 ---
+description: '詳細については、「方法: HTTPS を使用してカスタムの信頼できるセッションのバインディングを作成する」を参照してください。'
 title: '方法: カスタムの信頼できるセッションによる HTTPS を使用したバインディングを作成する'
 ms.date: 03/30/2017
 ms.assetid: fa772232-da1f-4c66-8c94-e36c0584b549
-ms.openlocfilehash: 70f8f4f33626ab0d1705e03750bfd9baa324e60a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 97e0386c3694552099a623a319f566fa4db2a39b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598997"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756176"
 ---
 # <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>方法: カスタムの信頼できるセッションによる HTTPS を使用したバインディングを作成する
 
@@ -15,7 +16,7 @@ ms.locfileid: "84598997"
 
 この手順の重要な部分は、 **\<endpoint>** 構成要素に `bindingConfiguration` という名前のカスタムバインディング構成を参照する属性が含まれていることです `reliableSessionOverHttps` 。 [**\<binding>**](../../configure-apps/file-schema/wcf/bindings.md)構成要素は、この名前を参照して、信頼できるセッションと HTTPS トランスポートを使用して **\<reliableSession>** 、要素と要素を含めることを指定し **\<httpsTransport>** ます。
 
-この例のソースコピーについては、「HTTPS を使用した[カスタムバインディングの信頼できるセッション](../samples/custom-binding-reliable-session-over-https.md)」を参照してください。
+この例のソースコピーについては、「HTTPS を使用した [カスタムバインディングの信頼できるセッション](../samples/custom-binding-reliable-session-over-https.md)」を参照してください。
 
 ### <a name="configure-the-service-with-a-custombinding-to-use-a-reliable-session-with-https"></a>HTTPS で信頼できるセッションを使用するための CustomBinding でサービスを構成する
 
@@ -27,19 +28,19 @@ ms.locfileid: "84598997"
 
    [!code-csharp[c_HowTo_CreateReliableSessionHTTPS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/service.cs#1122)]
 
-1. *Web.config ファイルを*作成して、 `CalculatorService` `reliableSessionOverHttps` 信頼できるセッションと HTTPS トランスポートを使用するという名前のカスタムバインドを持つのエンドポイントを構成します。
+1.  `CalculatorService` `reliableSessionOverHttps` 信頼できるセッションと HTTPS トランスポートを使用するという名前のカスタムバインディングを使用して、のエンドポイントを構成するためのWeb.configファイルを作成します。
 
    [!code-xml[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]
 
-1. 次の行を含む .svc ファイルを作成*し*ます。
+1. 次の行を含む .svc ファイルを作成 *し* ます。
 
    `<%@ServiceHost language=c# Service="CalculatorService" %>`
 
-1. サービスの *.svc*ファイルをインターネットインフォメーションサービス (IIS) 仮想ディレクトリに配置します。
+1. サービスの *.svc* ファイルをインターネットインフォメーションサービス (IIS) 仮想ディレクトリに配置します。
 
 ### <a name="configure-the-client-with-a-custombinding-to-use-a-reliable-session-with-https"></a>HTTPS で信頼できるセッションを使用するようにクライアントを構成する (CustomBinding)
 
-1. コマンドラインから[ServiceModel メタデータユーティリティツール (*svcutil.exe*)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を使用して、サービスメタデータからコードを生成します。
+1. コマンドラインから [ServiceModel メタデータユーティリティツール (*Svcutil.exe*)](../servicemodel-metadata-utility-tool-svcutil-exe.md) を使用して、サービスメタデータからコードを生成します。
 
    ```console
    Svcutil.exe <Metadata Exchange (MEX) address or HTTP GET address>
@@ -65,7 +66,7 @@ ms.locfileid: "84598997"
 
 ## <a name="net-framework-security"></a>.NET Framework のセキュリティ
 
-このサンプルで使用される証明書は、 *Makecert*で作成されたテスト証明書であるため、ブラウザーからなどの HTTPS アドレスにアクセスしようとすると、セキュリティの警告が表示されます `https://localhost/servicemodelsamples/service.svc` 。
+このサンプルで使用される証明書は *Makecert.exe* で作成されたテスト証明書であるため、ブラウザーからなどの HTTPS アドレスにアクセスしようとすると、セキュリティの警告が表示され `https://localhost/servicemodelsamples/service.svc` ます。
 
 ## <a name="see-also"></a>関連項目
 

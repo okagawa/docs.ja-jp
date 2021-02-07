@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「ユーザー名クライアントを使用したメッセージセキュリティ」を参照してください。
 title: ユーザー名クライアントを使用したメッセージ セキュリティ
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: 7168b393bde626c8c413cda3c7422e0eee4ce267
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4502635df3b52ba069c19fca7a73cc9395dd105d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96292871"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756111"
 ---
 # <a name="message-security-with-a-user-name-client"></a>ユーザー名クライアントを使用したメッセージ セキュリティ
 
@@ -27,13 +28,13 @@ ms.locfileid: "96292871"
 |認証 (サーバー)|初期ネゴシエーションにはサーバー認証が必要|  
 |認証 (クライアント)|ユーザー名/パスワード|  
 |整合性|はい、共有のセキュリティ コンテキストを使用します|  
-|機密情報|はい、共有のセキュリティ コンテキストを使用します|  
+|機密性|はい、共有のセキュリティ コンテキストを使用します|  
 |トランスポート|HTTP|  
 |バインド|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>サービス  
 
- 次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
+ 次のコードと構成は、別々に実行します。 以下のいずれかを実行します。  
   
 - 構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
   

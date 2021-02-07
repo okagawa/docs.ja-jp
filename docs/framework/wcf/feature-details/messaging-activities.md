@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「メッセージングアクティビティ」を参照してください。
 title: メッセージング アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
-ms.openlocfilehash: 69a0e9a415b10d9c58d04eac27e48b1ed6a78064
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fc98081cabc552cd51bf35db3bed9443220fc065
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576396"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756072"
 ---
 # <a name="messaging-activities"></a>メッセージング アクティビティ
 
@@ -17,11 +18,11 @@ ms.locfileid: "84576396"
 
 基本的なメッセージ交換パターンは、次の 3 種類です。
 
-- **データグラム**-データグラム mep を使用する場合、クライアントはサービスにメッセージを送信しますが、サービスは応答しません。 これは、"ファイア アンド フォーゲット (撃ち放し)" と呼ばれる場合があります。 このような交換では、配信の成否について帯域外での確認が必要になります。 メッセージが移動中に失われて、サービスに到達しない可能性があります。 クライアントが正常にメッセージを送信した場合でも、サービスがメッセージを受信したとは限りません。 サービスは、メッセージングの不可欠な構成要素であり、これを基盤として独自の MEP を構築できます。
+- **データグラム** -データグラム mep を使用する場合、クライアントはサービスにメッセージを送信しますが、サービスは応答しません。 これは、"ファイア アンド フォーゲット (撃ち放し)" と呼ばれる場合があります。 このような交換では、配信の成否について帯域外での確認が必要になります。 メッセージが移動中に失われて、サービスに到達しない可能性があります。 クライアントが正常にメッセージを送信した場合でも、サービスがメッセージを受信したとは限りません。 サービスは、メッセージングの不可欠な構成要素であり、これを基盤として独自の MEP を構築できます。
 
-- **要求-応答**-要求-応答 mep を使用する場合、クライアントはサービスにメッセージを送信し、サービスは必要な処理を実行してから、クライアントに応答を返します。 パターンは、要求 - 応答のペアで構成されます。 要求 - 応答呼び出しの例として、リモート プロシージャ コール (RPC) やブラウザー GET 要求などがあります。 このパターンは、半二重とも呼ばれます。
+- **要求-応答** -要求-応答 mep を使用する場合、クライアントはサービスにメッセージを送信し、サービスは必要な処理を実行してから、クライアントに応答を返します。 パターンは、要求 - 応答のペアで構成されます。 要求 - 応答呼び出しの例として、リモート プロシージャ コール (RPC) やブラウザー GET 要求などがあります。 このパターンは、半二重とも呼ばれます。
 
-- **双方向-双**方向 mep を使用すると、クライアントとサービスはメッセージを任意の順序で相互に送信できます。 二重 MEP は、話される語の 1 つずつがメッセージである電話の会話に似ています。
+- **双方向-双** 方向 mep を使用すると、クライアントとサービスはメッセージを任意の順序で相互に送信できます。 二重 MEP は、話される語の 1 つずつがメッセージである電話の会話に似ています。
 
 メッセージング アクティビティを使用すると、これらの基本の MEP のほかに、任意の複雑な MEP を実装できます。
 
@@ -41,7 +42,7 @@ ms.locfileid: "84576396"
 
 データグラム MEP には、メッセージを送信するクライアントとメッセージを受信するサービスが必要です。 クライアントがワークフローの場合は、<xref:System.ServiceModel.Activities.Send> アクティビティを使用してメッセージを送信します。 そのメッセージをワークフローで受信するには、<xref:System.ServiceModel.Activities.Receive> アクティビティを使用します。 <xref:System.ServiceModel.Activities.Send> アクティビティと <xref:System.ServiceModel.Activities.Receive> アクティビティのどちらにも、`Content` という名前のプロパティがあります。 このプロパティには、送信または受信されるデータが保持されます。 要求 - 応答 MEP を実装する場合は、クライアントとサービスの両方で、アクティビティの組を使用します。 クライアントは、<xref:System.ServiceModel.Activities.Send> アクティビティを使用してメッセージを送信し、<xref:System.ServiceModel.Activities.ReceiveReply> アクティビティを使用してサービスからの応答を受信します。 これらの 2 つのアクティビティは、<xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> プロパティによって互いに関連付けられています。 このプロパティは、元のメッセージを送信した <xref:System.ServiceModel.Activities.Send> アクティビティに設定されます。 サービスも、相互に関連付けられた、<xref:System.ServiceModel.Activities.Receive> および <xref:System.ServiceModel.Activities.SendReply> というアクティビティのペアを使用します。 これらの 2 つのアクティビティは、<xref:System.ServiceModel.Activities.SendReply.Request%2A> プロパティによって関連付けられています。 このプロパティは、元のメッセージを受信した <xref:System.ServiceModel.Activities.Receive> アクティビティに設定されます。 <xref:System.ServiceModel.Activities.ReceiveReply> アクティビティおよび <xref:System.ServiceModel.Activities.SendReply> アクティビティを使用すると、<xref:System.ServiceModel.Activities.Send> アクティビティおよび <xref:System.ServiceModel.Activities.Receive> アクティビティと同様に、<xref:System.ServiceModel.Channels.Message> インスタンスまたはメッセージ コントラクト型を送信できます。
 
-ワークフローは長時間にわたって実行されることが多いため、通信の二重パターンでは、長時間のメッセージ交換をサポートすることも重要です。 長時間のメッセージ交換をサポートするには、メッセージ交換を開始するクライアントが、後でデータが利用可能になった時点でクライアントにコールバックする機会をサービスに提供する必要があります。 たとえば、マネージャーの承認を受けるために発注書の要求が送信された場合に、この要求が、1 日、1 週間、または 1 年間処理されない可能性があるとします。この場合、マネージャーが発注書を承認するワークフローは、承認を受けた後に再開することを認識している必要があります。 この二重通信のパターンは、相関関係を使用するワークフローでサポートされています。 二重パターンを実装するには、<xref:System.ServiceModel.Activities.Send> アクティビティと <xref:System.ServiceModel.Activities.Receive> アクティビティを使用します。 アクティビティで <xref:System.ServiceModel.Activities.Receive> 、を使用して関連付けを初期化し <xref:System.ServiceModel.Activities.CorrelationHandle> ます。 <xref:System.ServiceModel.Activities.Send> アクティビティで、その関連付けハンドルを <xref:System.ServiceModel.Activities.Send.CorrelatesWith%2A> プロパティの値として設定します。 詳細については、「[永続的な二重](durable-duplex-correlation.md)」を参照してください。
+ワークフローは長時間にわたって実行されることが多いため、通信の二重パターンでは、長時間のメッセージ交換をサポートすることも重要です。 長時間のメッセージ交換をサポートするには、メッセージ交換を開始するクライアントが、後でデータが利用可能になった時点でクライアントにコールバックする機会をサービスに提供する必要があります。 たとえば、マネージャーの承認を受けるために発注書の要求が送信された場合に、この要求が、1 日、1 週間、または 1 年間処理されない可能性があるとします。この場合、マネージャーが発注書を承認するワークフローは、承認を受けた後に再開することを認識している必要があります。 この二重通信のパターンは、相関関係を使用するワークフローでサポートされています。 二重パターンを実装するには、<xref:System.ServiceModel.Activities.Send> アクティビティと <xref:System.ServiceModel.Activities.Receive> アクティビティを使用します。 アクティビティで <xref:System.ServiceModel.Activities.Receive> 、を使用して関連付けを初期化し <xref:System.ServiceModel.Activities.CorrelationHandle> ます。 <xref:System.ServiceModel.Activities.Send> アクティビティで、その関連付けハンドルを <xref:System.ServiceModel.Activities.Send.CorrelatesWith%2A> プロパティの値として設定します。 詳細については、「 [永続的な二重](durable-duplex-correlation.md)」を参照してください。
 
 > [!NOTE]
 > コールバック相関関係 ("永続的な二重") を使用したワークフローの二重化の実装は、実行時間の長いメッセージ交換を想定しています。 これは、コールバック コントラクトを使用する WCF の二重と同じではありません。WCF の二重では、メッセージ交換が短時間 (チャネルの有効期間) で処理されます。
@@ -101,7 +102,7 @@ Request = rcv
 
 ## <a name="add-service-reference"></a>サービス参照の追加
 
-ワークフローアプリケーションからワークフローサービスを呼び出すと、Visual Studio 2012 は、 <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.ReceiveReply> 要求/応答 mep で使用される通常のアクティビティとアクティビティをカプセル化するカスタムメッセージングアクティビティを生成します。 この機能を使用するには、Visual Studio でクライアントプロジェクトを右クリック**Add**し、[  >  **サービス参照**の追加] を選択します。 アドレス ボックスにサービスのベース アドレスを入力し、[移動] をクリックします。 使用可能なサービスが [**サービス:** ] ボックスに表示されます。 サービス ノードを展開して、サポートされるコントラクトを表示します。 呼び出すコントラクトを選択すると、[**操作**] ボックスに使用可能な操作の一覧が表示されます。 生成されたアクティビティの名前空間を指定し、[ **OK]** をクリックします。 操作が正常に完了したことを示すダイアログが表示され、プロジェクトを再度ビルドすると、生成されたカスタム アクティビティがツールボックスに表示されます。 サービス コントラクトに定義されている操作ごとに 1 つのアクティビティがあります。 プロジェクトを再度ビルドしたら、カスタム アクティビティをワークフローにドラッグ アンド ドロップして、必要なプロパティをプロパティ ウィンドウで設定できます。
+ワークフローアプリケーションからワークフローサービスを呼び出すと、Visual Studio 2012 は、 <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.ReceiveReply> 要求/応答 mep で使用される通常のアクティビティとアクティビティをカプセル化するカスタムメッセージングアクティビティを生成します。 この機能を使用するには、Visual Studio でクライアントプロジェクトを右クリックし、[  >  **サービス参照** の追加] を選択します。 アドレス ボックスにサービスのベース アドレスを入力し、[移動] をクリックします。 使用可能なサービスが [ **サービス:** ] ボックスに表示されます。 サービス ノードを展開して、サポートされるコントラクトを表示します。 呼び出すコントラクトを選択すると、[ **操作** ] ボックスに使用可能な操作の一覧が表示されます。 生成されたアクティビティの名前空間を指定し、[ **OK]** をクリックします。 操作が正常に完了したことを示すダイアログが表示され、プロジェクトを再度ビルドすると、生成されたカスタム アクティビティがツールボックスに表示されます。 サービス コントラクトに定義されている操作ごとに 1 つのアクティビティがあります。 プロジェクトを再度ビルドしたら、カスタム アクティビティをワークフローにドラッグ アンド ドロップして、必要なプロパティをプロパティ ウィンドウで設定できます。
 
 ## <a name="messaging-activity-templates"></a>メッセージングアクティビティテンプレート
 
@@ -109,7 +110,7 @@ Request = rcv
 
 ## <a name="messaging-activities-and-transactions"></a>メッセージングアクティビティとトランザクション
 
-ワークフロー サービスが呼び出されるときに、サービス操作にトランザクションをフローする必要がある場合があります。 それには、<xref:System.ServiceModel.Activities.Receive> アクティビティを <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティ内に配置します。 <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティには、`Receive` アクティビティと本体が含まれます。 サービスにフローされるトランザクションは、<xref:System.ServiceModel.Activities.TransactedReceiveScope> の本体の実行の開始から終了まで、アンビエント トランザクションのままです。 トランザクションは、本体の実行が終了した時点で完了します。 ワークフローとトランザクションの詳細については、「[ワークフロートランザクション](../../windows-workflow-foundation/workflow-transactions.md)」を参照してください。
+ワークフロー サービスが呼び出されるときに、サービス操作にトランザクションをフローする必要がある場合があります。 それには、<xref:System.ServiceModel.Activities.Receive> アクティビティを <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティ内に配置します。 <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティには、`Receive` アクティビティと本体が含まれます。 サービスにフローされるトランザクションは、<xref:System.ServiceModel.Activities.TransactedReceiveScope> の本体の実行の開始から終了まで、アンビエント トランザクションのままです。 トランザクションは、本体の実行が終了した時点で完了します。 ワークフローとトランザクションの詳細については、「 [ワークフロートランザクション](../../windows-workflow-foundation/workflow-transactions.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「WCF 分析トレース」を参照してください。
 title: WCF 分析トレース
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 490c67c92407626a67ea8561a378ef3e70266fe2
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1f5ec26828bba99a127fea6a81f57fed717943a2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96243665"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755695"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 分析トレース
 
@@ -39,7 +40,7 @@ ms.locfileid: "96243665"
 
  WCF の ETW イベントプロバイダーマニフェストは、サービスコード内から WCF サービス作成者によって出力されるように設計された3つのイベントを定義します。 次の表に、その 3 つのイベントの概要を示します。  
   
-|Event|説明|イベント ID|  
+|event|説明|イベント ID|  
 |-----------|-----------------|--------------|  
 |UserDefinedInformationEventOccurred|このイベントは、問題以外の通知すべき処理がサービスで発生した場合に生成します。 たとえば、データベースの呼び出しに成功した後にイベントを生成します。|301|  
 |UserDefinedWarningOccurred|このイベントは、後続の処理でエラーになる可能性がある問題が発生した場合に生成します。 たとえば、データベースの呼び出しが失敗したものの、冗長なデータ ストアを使用して回復できた場合に警告イベントを生成します。|302|  

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「データ転送アーキテクチャの概要」を参照してください。
 title: データ転送のアーキテクチャの概要
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: efb6933ba90975d5ba35deb2bf22af12fc7c2cdc
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3064797b41e146505062a07dc1786dd492a01298
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291688"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756501"
 ---
 # <a name="data-transfer-architectural-overview"></a>データ転送のアーキテクチャの概要
 
@@ -133,7 +134,7 @@ Windows Communication Foundation (WCF) は、メッセージングインフラ�
   
 ## <a name="the-channel-stack"></a>チャネル スタック  
   
-### <a name="channels"></a>チャンネル  
+### <a name="channels"></a>チャネル  
 
  既に説明したように、チャネル スタックは、送信 <xref:System.ServiceModel.Channels.Message> インスタンスをアクション (ネットワーク上でのパケットの送信など) に変換したり、アクション (ネットワーク パケットの受信など) を受信 `Message` インスタンスに変換したりする役割を担います。  
   
@@ -159,7 +160,7 @@ Windows Communication Foundation (WCF) は、メッセージングインフラ�
 
  エンコーダーの一般的な動作を記述する場合、次の 4 つのケースについて検討すると有益です。  
   
-|操作|解説|  
+|Operation|解説|  
 |---------------|-------------|  
 |エンコード (バッファー)|バッファー モードでは、通常、エンコーダーは可変サイズのバッファーを作成し、このバッファーに XML ライターを作成します。 エンコーダーは、エンコードするメッセージに対して <xref:System.ServiceModel.Channels.Message.WriteMessage%28System.Xml.XmlWriter%29> を呼び出してヘッダーを書き込みます。次に、このトピックの <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29>に関するセクションで説明したように、 `Message` を使用して本文を書き込みます。 その後、トランスポート チャネルで使用できるように、(バイト配列として表される) バッファーの内容が返されます。|  
 |エンコード (ストリーミング)|ストリーミング モードでは、動作が上記に似ていますが、より単純です。 バッファーは必要ありません。 通常、XML ライターがストリームに作成され、このライターに書き込むために <xref:System.ServiceModel.Channels.Message.WriteMessage%28System.Xml.XmlWriter%29> に対して `Message` が呼び出されます。|  
@@ -279,7 +280,7 @@ Windows Communication Foundation (WCF) は、メッセージングインフラ�
   
  メッセージ フォーマッタが実装できるメソッドを次の表に示します。  
   
-|インターフェイス|Method|アクション|  
+|インターフェイス|メソッド|アクション|  
 |---------------|------------|------------|  
 |<xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>|<xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter.DeserializeRequest%28System.ServiceModel.Channels.Message%2CSystem.Object%5B%5D%29>|受信 `Message` を操作パラメーターに変換します。|  
 |<xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>|<xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter.SerializeReply%28System.ServiceModel.Channels.MessageVersion%2CSystem.Object%5B%5D%2CSystem.Object%29>|操作の戻り値または出力パラメーターから送信 `Message` を作成します。|  

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 検出検索と FindCriteria'
 title: 探索検索と FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 1d6a0e3fcca45c3fe57aab84b0f2b6b86fabb404
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3a4428a89ba4122f528d1c01e4b5a6b8ea8d2935
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599179"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756319"
 ---
 # <a name="discovery-find-and-findcriteria"></a>探索検索と FindCriteria
 
@@ -31,7 +32,7 @@ ms.locfileid: "84599179"
 
   - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType>: 大文字と小文字が区別される基本の文字列比較を実行します。
 
-  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType>"/" で区切られたセグメントで一致します。 の検索は、 `http://contoso/building1` スコープを持つサービスと一致 `http://contoso/building/floor1` します。 `http://contoso/building100`最後の2つのセグメントが一致しないため、一致しないことに注意してください。
+  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> "/" で区切られたセグメントで一致します。 の検索は、 `http://contoso/building1` スコープを持つサービスと一致 `http://contoso/building/floor1` します。 `http://contoso/building100`最後の2つのセグメントが一致しないため、一致しないことに注意してください。
 
   - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType>: LDAP URL を使用してセグメント単位でスコープの一致を判定します。
 
