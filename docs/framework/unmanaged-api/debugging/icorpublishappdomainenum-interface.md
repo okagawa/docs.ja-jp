@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorPublishAppDomainEnum インターフェイス」を参照してください。
 title: ICorPublishAppDomainEnum インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bb798c56-042e-475d-a245-b6fac36d0c07
 topic_type:
 - apiref
-ms.openlocfilehash: 5b5a901bef779948467cfcc3d71a1fcd057c1aeb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4e84af576103a792308fd44f903f2ae4daa5d736
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95693711"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721789"
 ---
 # <a name="icorpublishappdomainenum-interface"></a>ICorPublishAppDomainEnum インターフェイス
 
@@ -29,9 +30,9 @@ ms.locfileid: "95693711"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Next メソッド](icorpublishappdomainenum-next-method.md)|現在の位置から開始して、指定した数の `ICorPublishAppDomain` インスタンスをコレクションから取得します。|  
+|[次のメソッド](icorpublishappdomainenum-next-method.md)|現在の位置から開始して、指定した数の `ICorPublishAppDomain` インスタンスをコレクションから取得します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  インターフェイスは、 `ICorPublishAppDomainEnum` 抽象インターフェイス [ICorPublishEnum](icorpublishenum-interface.md)のメソッドを実装します。  
   

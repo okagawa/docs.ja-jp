@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CorTypeAttr 列挙型」を参照してください。
 title: CorTypeAttr 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bede0ec-5fdf-42a2-b5b7-bee64056acb6
 topic_type:
 - apiref
-ms.openlocfilehash: 50ce4e5e6125eae493bb62032d5c6bd8887c1afb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d4f7d25ce8ead945790defae800b7a45dc88bc38
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699093"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721166"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr 列挙型
 

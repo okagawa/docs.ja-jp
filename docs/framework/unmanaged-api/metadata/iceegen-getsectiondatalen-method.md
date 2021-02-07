@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICeeGen:: GetSectionDataLen メソッド'
 title: ICeeGen::GetSectionDataLen メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e2a06ee4-b8ee-49c7-935a-c1031a29eef2
 topic_type:
 - apiref
-ms.openlocfilehash: b45b0a59a29a27e7b0a395f3928215959450f9a5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9475112a6f25e9a4c57c4ded6cd11dab9bf352b9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95698469"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721054"
 ---
 # <a name="iceegengetsectiondatalen-method"></a>ICeeGen::GetSectionDataLen メソッド
 
@@ -45,7 +46,7 @@ HRESULT GetSectionDataLen (
  `dataLen`  
  入出力指定したセクションの返された長さ。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `GetSectionDataLen`他のメソッドによって処理されない特殊なセクション要件がある場合にのみ、を呼び出します。  
   

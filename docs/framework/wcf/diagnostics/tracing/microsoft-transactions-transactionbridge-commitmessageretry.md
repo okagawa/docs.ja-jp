@@ -1,19 +1,20 @@
 ---
+description: 詳細については、CommitMessageRetry を参照してください。
 title: Microsoft.Transactions.TransactionBridge.CommitMessageRetry
 ms.date: 03/30/2017
 ms.assetid: 4abe01f0-6398-4fba-b2f3-c054b7f7e971
-ms.openlocfilehash: 28b83b293570adf3b1cfdc15c77afd0f0cf768eb
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8f45463ac31c210acd8534df2c4e1ef2922f1c8e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96259026"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99720606"
 ---
 # <a name="microsofttransactionstransactionbridgecommitmessageretry"></a>Microsoft.Transactions.TransactionBridge.CommitMessageRetry
 
 コミット メッセージの再試行は、応答しない参加要素に送信されました。  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  ローカル トランザクション マネージャーが一定時間内に応答を受信せず、下位の参加要素にコミット メッセージを再送信する必要があった場合にトレースされます。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ISymUnmanagedENCUpdate:: GetLocalVariables メソッド'
 title: ISymUnmanagedENCUpdate::GetLocalVariables メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5c8840be-ffea-447f-9c8d-178f1eaf8d06
 topic_type:
 - apiref
-ms.openlocfilehash: 9e907450b4ae985ee30d9958eec8baba797b495a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bc034603dd6a09ea78dad789e11ea951d65e839b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728603"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721464"
 ---
 # <a name="isymunmanagedencupdategetlocalvariables-method"></a>ISymUnmanagedENCUpdate::GetLocalVariables メソッド
 

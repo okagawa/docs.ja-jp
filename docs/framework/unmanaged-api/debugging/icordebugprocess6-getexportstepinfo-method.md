@@ -1,13 +1,14 @@
 ---
+description: '詳細について: ICorDebugProcess6:: GetExportStepInfo メソッド'
 title: ICorDebugProcess6::GetExportStepInfo メソッド
 ms.date: 03/30/2017
 ms.assetid: a927e0ac-f110-426d-bbec-9377a29c8f17
-ms.openlocfilehash: e2c04672e51ffb16043b14735cd5375073194c27
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e14b5e66d90fb2ece91991b3634fc2ad86fac895
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732620"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722010"
 ---
 # <a name="icordebugprocess6getexportstepinfo-method"></a>ICorDebugProcess6::GetExportStepInfo メソッド
 
@@ -43,7 +44,7 @@ HRESULT GetExportStepInfo(
 |`E_POINTER`|`pInvokeKind` または `pInvokePurpose` が **null** です。|  
 |その他の失敗した `HRESULT` 値。|必要に応じて。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  

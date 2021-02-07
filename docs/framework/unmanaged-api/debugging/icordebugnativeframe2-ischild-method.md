@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ICorDebugNativeFrame2:: IsChild メソッド'
 title: ICorDebugNativeFrame2::IsChild メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9e2aae09-49cb-4fbd-81e5-e29cd864a88b
 topic_type:
 - apiref
-ms.openlocfilehash: 0d65849aba08c7d143a6977e7dfb8cff85274a64
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7c698c5a49ee445b4ba9c591c96f700f86a86c32
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695570"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722296"
 ---
 # <a name="icordebugnativeframe2ischild-method"></a>ICorDebugNativeFrame2::IsChild メソッド
 

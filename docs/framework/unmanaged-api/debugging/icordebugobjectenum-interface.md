@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次のページを参照してください。
 title: ICorDebugObjectEnum インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9ffb4498-7719-49d3-8890-df2c22248a0c
 topic_type:
 - apiref
-ms.openlocfilehash: 9400c4fa3ddcefef923d7bcfaae80e2cef62dc7d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d5cd8580bfa81af7d644c2fb11524a43a9062ddf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695466"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722244"
 ---
 # <a name="icordebugobjectenum-interface"></a>ICorDebugObjectEnum インターフェイス
 
@@ -29,9 +30,9 @@ ICorDebugEnum メソッドを実装し、相対仮想アドレス (RVAs) によ�
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Next メソッド](icordebugobjectenum-next-method.md)|現在の位置から開始して、指定した数のオブジェクトの RVAs を列挙から取得します。|  
+|[次のメソッド](icordebugobjectenum-next-method.md)|現在の位置から開始して、指定した数のオブジェクトの RVAs を列挙から取得します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  

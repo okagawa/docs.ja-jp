@@ -1,13 +1,14 @@
 ---
+description: '詳細について: ICorDebugProcess6:: EnableVirtualModuleSplitting メソッド'
 title: ICorDebugProcess6::EnableVirtualModuleSplitting メソッド
 ms.date: 03/30/2017
 ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
-ms.openlocfilehash: 56795c6879d95253383c26c92e060f252a018914
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e56e66744ab971deba18f3bdc66d0cfb2053087f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690214"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722023"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>ICorDebugProcess6::EnableVirtualModuleSplitting メソッド
 
@@ -26,7 +27,7 @@ HRESULT EnableVirtualModuleSplitting(
  `enableSplitting`  
  仮想モジュール分割を有効にするには、`true`。無効にするには、`false`。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  仮想モジュール分割により、 [ICorDebug](icordebug-interface.md) は、ビルド処理中にマージされたモジュールを認識し、1つの大きなモジュールではなく個別のモジュールのグループとして表示します。 これにより、以下で説明するさまざまな [ICorDebug](icordebug-interface.md) メソッドの動作が変更されます。  
   
@@ -108,7 +109,7 @@ HRESULT EnableVirtualModuleSplitting(
 |[ICorDebugClass::GetModule](icordebugclass-getmodule-method.md)|このクラスが最初に定義されたサブモジュールを返します。|このクラスがマージされたコンテナー モジュールを返します。|  
 |ICorDebugModuleDebugEvent::GetModule|読み込まれたコンテナー モジュールを返します。 サブモジュールは、この設定に関係なく、読み込みイベントを提供されません。|読み込まれたコンテナー モジュールを返します。|  
 |[ICorDebugAppDomain::EnumerateAssemblies](icordebugappdomain-enumerateassemblies-method.md)|サブアセンブリと標準アセンブリのリストを返します。コンテナー アセンブリは含まれません。 **注:**  いずれかのコンテナーアセンブリにシンボルがない場合、そのサブアセンブリは列挙されません。 いずれかの標準アセンブリにシンボルがない場合、列挙される場合と列挙されない場合があります。|コンテナー アセンブリと標準アセンブリのリストを返します。サブアセンブリは含まれません。 **注:**  通常のアセンブリにシンボルがない場合は、そのアセンブリが列挙される場合と列挙されない場合があります。|  
-|[GetCode code::](icordebugcode-getcode-method.md) (IL コードのみを参照している場合)|マージ前のアセンブリ イメージ内で有効な IL を返します。 具体的には、参照先の型が IL を含む仮想モジュールで定義されていない場合、インライン メタデータ トークンは正確に TypeRef または MemberRef トークンになります。 これらの TypeRef または MemberRef トークンは、対応する仮想 IMetaDataImport モジュールオブジェクトの[IMetaDataImport](../metadata/imetadataimport-interface.md)オブジェクトで検索できます。|マージ後のアセンブリ イメージ内の IL を返します。|  
+|[GetCode code::](icordebugcode-getcode-method.md) (IL コードのみを参照している場合)|マージ前のアセンブリ イメージ内で有効な IL を返します。 具体的には、参照先の型が IL を含む仮想モジュールで定義されていない場合、インライン メタデータ トークンは正確に TypeRef または MemberRef トークンになります。 これらの TypeRef または MemberRef トークンは、対応する仮想 IMetaDataImport モジュールオブジェクトの[](../metadata/imetadataimport-interface.md)オブジェクトで検索できます。|マージ後のアセンブリ イメージ内の IL を返します。|  
   
 ## <a name="requirements"></a>要件  
 

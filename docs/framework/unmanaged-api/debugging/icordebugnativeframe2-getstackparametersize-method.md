@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugNativeFrame2:: GetStackParameterSize メソッド'
 title: ICorDebugNativeFrame2::GetStackParameterSize メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f6a449c8-a941-43ba-9a90-c98b29ae3c36
 topic_type:
 - apiref
-ms.openlocfilehash: 21af3980de9b5a768b6af9a8aca74b693c7ac528
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 08a17ced0be75737c1c49aa3f9bb42b13bbe8aa0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695492"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722335"
 ---
 # <a name="icordebugnativeframe2getstackparametersize-method"></a>ICorDebugNativeFrame2::GetStackParameterSize メソッド
 

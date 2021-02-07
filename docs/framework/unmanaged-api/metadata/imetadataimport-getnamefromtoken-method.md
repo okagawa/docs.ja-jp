@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataImport:: GetNameFromToken メソッド'
 title: IMetaDataImport::GetNameFromToken メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 32114ecf-8916-4ab2-a201-179c017344f1
 topic_type:
 - apiref
-ms.openlocfilehash: 867fb0ee4bc1a093eb7fd46e25497d585c4d9b6b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6195020a2b291a47e908b257896bdba64b0a40d9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727498"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99720853"
 ---
 # <a name="imetadataimportgetnamefromtoken-method"></a>IMetaDataImport::GetNameFromToken メソッド
 
@@ -43,7 +44,7 @@ HRESULT GetNameFromToken (
  `pszUtf8NamePtr`  
  入出力ヒープ内の UTF-8 オブジェクト名へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `GetNameFromToken` は互換性のために残されています。 別の方法として、フィールドやメソッドなど、必要な特定の種類のトークンのプロパティを取得するには、メソッドを呼び出し `GetFieldProps` `GetMethodProps` ます。  
   

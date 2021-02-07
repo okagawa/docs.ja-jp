@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IMetaDataImport2:: EnumGenericParams メソッド'
 title: IMetaDataImport2::EnumGenericParams メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b50488a5-3cf0-483c-82dc-2892a3ec61ac
 topic_type:
 - apiref
-ms.openlocfilehash: 6b1a8e66eea6caec9dfc8d99e343c987cefa1b0c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9d4e9d163da07ec4a3af1aa628b8b6ec4b2338fe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702759"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99720944"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams メソッド
 
