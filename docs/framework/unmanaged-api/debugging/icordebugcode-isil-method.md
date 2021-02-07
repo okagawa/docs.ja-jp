@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 「コード:: IsIL メソッド」を参照してください。'
 title: ICorDebugCode::IsIL メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 132ef8cc-d938-43f3-b8f2-e3b97c0ceb33
 topic_type:
 - apiref
-ms.openlocfilehash: 77e55c4c3644ac4bd76f5c92152f4ee86cf5fa9a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: db41f9ebaa6a6403b21e10d1daa0e8b167c7cb96
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125565"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711127"
 ---
 # <a name="icordebugcodeisil-method"></a>ICorDebugCode::IsIL メソッド
 
@@ -37,14 +38,14 @@ HRESULT IsIL (
 ## <a name="parameters"></a>パラメーター
 
 `pbIL`  
-[out] この `ICorDebugCode` が MSIL でコンパイルされたコードを表している場合は `true`。それ以外の場合は、`false`ます。
+[出力] `true` このが `ICorDebugCode` MSIL でコンパイルされたコードを表す場合は。それ以外の場合は `false` 。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
-**:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。
+**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。
 
 **ヘッダー:** CorDebug.idl、CorDebug.h
 
 **ライブラリ:** CorGuids.lib
 
-**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

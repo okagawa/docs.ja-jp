@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: いいね。'
 title: ICorDebugController インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dbb1c4dc-269a-459b-ab1d-6c70788782ce
 topic_type:
 - apiref
-ms.openlocfilehash: 1ca9e55a2183ca4293d30607496b588cbf21d6dd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 588c41b5b8d87589facd6085655ed0ad415ec3aa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679950"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99710752"
 ---
 # <a name="icordebugcontroller-interface"></a>ICorDebugController インターフェイス
 
@@ -40,7 +41,7 @@ ms.locfileid: "95679950"
 |[Stop メソッド](icordebugcontroller-stop-method.md)|プロセスでマネージコードを実行しているすべてのスレッドで協調停止を実行します。|  
 |[Terminate メソッド](icordebugcontroller-terminate-method.md)|指定された終了コードを使用してプロセスを終了します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  がプロセスを制御している場合、 `ICorDebugController` スコープにはプロセスのすべてのスレッドが含まれます。 `ICorDebugController`がアプリケーションドメインを制御している場合、スコープにはその特定のアプリケーションドメインのスレッドだけが含まれます。  
   

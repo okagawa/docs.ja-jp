@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次のページを参照してください: いいね。'
 title: ICorDebugController::Continue メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8684cd06-ad3e-48ef-832e-15320e1f43a2
 topic_type:
 - apiref
-ms.openlocfilehash: 0fd7dfc1a48e21abbc80692c110bee55beb68e6b
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: e5858a8c287e8dd5a493a85c9f427ad8acd9ecc5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82892865"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99710804"
 ---
 # <a name="icordebugcontrollercontinue-method"></a>ICorDebugController::Continue メソッド
 
@@ -37,19 +38,19 @@ HRESULT Continue (
 ## <a name="parameters"></a>パラメーター
 
 `fIsOutOfBand`  
-から帯域外`true`イベントから続行する場合はに設定します。それ以外の場合`false`は、をに設定します。
+から `true` 帯域外イベントから続行する場合はに設定し、それ以外の場合はに設定 `false` します。
 
 ## <a name="remarks"></a>解説
 
-`Continue`メソッドの`ICorDebugController::Stop`呼び出し後にプロセスを続行します。
+`Continue` メソッドの呼び出し後にプロセスを続行し `ICorDebugController::Stop` ます。
 
-混合モードのデバッグを実行する場合は、 `Continue`帯域外のイベントから継続している場合を除き、Win32 イベントスレッドでを呼び出さないでください。
+混合モードのデバッグを実行する場合は、 `Continue` 帯域外のイベントから継続している場合を除き、Win32 イベントスレッドでを呼び出さないでください。
 
-*帯域内イベント*は、マネージイベント、またはデバッガーがプロセスのマネージ状態との対話をサポートする通常のアンマネージイベントのいずれかです。 この場合、デバッガーは、 `fOutOfBand`パラメーターがに`false`設定された状態で[ICorDebugUnmanagedCallback::D eのイベント](icordebugunmanagedcallback-debugevent-method.md)コールバックを受け取ります。
+*帯域内イベント* は、マネージイベント、またはデバッガーがプロセスのマネージ状態との対話をサポートする通常のアンマネージイベントのいずれかです。 この場合、デバッガーは、パラメーターがに設定された状態で [ICorDebugUnmanagedCallback::D Eのイベント](icordebugunmanagedcallback-debugevent-method.md) コールバックを受け取り `fOutOfBand` `false` ます。
 
-*アウトオブバンドイベント*は、イベントによってプロセスが停止されている間に、プロセスのマネージ状態との相互作用が不可能なアンマネージイベントです。 この場合、デバッガーは`ICorDebugUnmanagedCallback::DebugEvent` `fOutOfBand`パラメーターをに`true`設定してコールバックを受け取ります。
+*アウトオブバンドイベント* は、イベントによってプロセスが停止されている間に、プロセスのマネージ状態との相互作用が不可能なアンマネージイベントです。 この場合、デバッガーは `ICorDebugUnmanagedCallback::DebugEvent` `fOutOfBand` パラメーターをに設定してコールバックを受け取り `true` ます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。
 

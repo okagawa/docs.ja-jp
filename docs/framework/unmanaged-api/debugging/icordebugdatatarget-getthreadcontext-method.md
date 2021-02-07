@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次のページを参照してください: いいね。:: GetThreadContext メソッド'
 title: ICorDebugDataTarget::GetThreadContext メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c8954268-1821-4b23-b665-dbb55f2af31b
 topic_type:
 - apiref
-ms.openlocfilehash: faacea6a2f04ef20025fd33adb4ce76eaf54f32c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cf40579aa0a495af4e5e775334d177ca6f3da86f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679742"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99710635"
 ---
 # <a name="icordebugdatatargetgetthreadcontext-method"></a>ICorDebugDataTarget::GetThreadContext メソッド
 
@@ -50,7 +51,7 @@ HRESULT GetThreadContext(
  `pContext`  
  入出力スレッドコンテキストが格納されるバッファー。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  Windows プラットフォームでは、は、の `pContext` `CONTEXT` 構造体 (winnt.h で定義されています) である必要があります。これは [、の](icordebugdatatarget-getplatform-method.md) 型によって指定されたコンピューターの種類に適しています。 `contextFlags` 構造体のフィールドと同じ値を持つ必要があり `ContextFlags` `CONTEXT` ます。 `CONTEXT`構造体はプロセッサに固有です。詳細については、winnt.h の .h ファイルを参照してください。  
   

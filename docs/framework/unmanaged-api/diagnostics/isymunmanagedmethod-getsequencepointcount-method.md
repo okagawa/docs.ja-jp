@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ISymUnmanagedMethod:: GetSequencePointCount メソッド'
 title: ISymUnmanagedMethod::GetSequencePointCount メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 836133e8-6108-4b9b-b0a9-bce4e08dccda
 topic_type:
 - apiref
-ms.openlocfilehash: 44472c7beff72d24853b7fb9865071a9b15ef0e0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6e0341ddc151454de8764a47a92556ab1925bfa1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699431"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99710005"
 ---
 # <a name="isymunmanagedmethodgetsequencepointcount-method"></a>ISymUnmanagedMethod::GetSequencePointCount メソッド
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: いいね。'
 title: ICorDebugComObjectValue のインターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 505a7f6c-d92b-42b4-b539-433f5102ea9b
 topic_type:
 - apiref
-ms.openlocfilehash: 40df1416e68c86efe6d404119cb37277fe21ac56
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3c071c371ae6e330431630cfb1934b538d62efe6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677545"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99710817"
 ---
 # <a name="icordebugcomobjectvalue-interface"></a>ICorDebugComObjectValue のインターフェイス
 
@@ -32,7 +33,7 @@ ms.locfileid: "95677545"
 |[GetCachedInterfacePointers メソッド](icordebugcomobjectvalue-getcachedinterfacepointers-method.md)|現在の RCW でキャッシュされている生のインターフェイスポインターを取得します。|  
 |[GetCachedInterfaceTypes メソッド](icordebugcomobjectvalue-getcachedinterfacetypes-method.md)|現在のオブジェクトで使用または使用されているインターフェイス型の列挙子を提供します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  "ICorDebugValue" インターフェイスのインスタンスが RCW を表すかどうかを確認するために、デバッガーは `QueryInterface` を使用して "icordebugvalue" でを呼び出し `IID_ICorDebugComObjectValue` ます。  
   

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ISymUnmanagedMethod インターフェイス」を参照してください。
 title: ISymUnmanagedMethod インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f204d74c-cc79-4092-83bb-60654be95649
 topic_type:
 - apiref
-ms.openlocfilehash: b72a77fecd15a43efbddd9dfd4618897c3372f88
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 18f87784a959ddc62415592e51d1971ea10f90bf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699275"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709959"
 ---
 # <a name="isymunmanagedmethod-interface"></a>ISymUnmanagedMethod インターフェイス
 

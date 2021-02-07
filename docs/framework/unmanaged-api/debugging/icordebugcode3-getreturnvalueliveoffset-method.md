@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugCode3:: Getreturnvalu Veoffset メソッド'
 title: ICorDebugCode3::GetReturnValueLiveOffset メソッド
 ms.date: 03/30/2017
 dev_langs:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8c2ff5d8-8c04-4423-b1e1-e1c8764b36d3
 topic_type:
 - apiref
-ms.openlocfilehash: 6153ebf24ae939a50d71cad2d4323090aa905851
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6ec9a342805c047d7331c3ce2af2a4ffba596a26
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720816"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711012"
 ---
 # <a name="icordebugcode3getreturnvalueliveoffset-method"></a>ICorDebugCode3::GetReturnValueLiveOffset メソッド
 
@@ -53,7 +54,7 @@ HRESULT GetReturnValueLiveOffset(
  `pOffsets`  
  ネイティブ オフセットの配列。 通常、`pOffsets` には単一のオフセットが含まれますが、単一の IL 命令が複数の `CALL` アセンブリ命令に対する複数のマップに対応する場合があります。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドは、参照型を返すメソッドの戻り値を取得するために、 [ICorDebugILFrame3:: GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md) メソッドと共に使用されます。 関数呼び出しサイトに対する IL オフセットをこのメソッドに渡すと、1 つ以上のネイティブ オフセットが返されます。 これによってデバッガーは、関数内のこうしたネイティブ オフセット上でブレークポイントを設定できます。 デバッガーがいずれかのブレークポイントにヒットすると、このメソッドに渡された同じ IL オフセットを [ICorDebugILFrame3:: GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md) メソッドに渡して、戻り値を取得できます。 この場合、デバッガーは設定したブレークポイントすべてをクリアする必要があります。  
   
