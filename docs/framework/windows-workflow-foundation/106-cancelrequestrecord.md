@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 106-CancelRequestRecord'
 title: 106 - CancelRequestRecord
 ms.date: 03/30/2017
 ms.assetid: f72a59aa-8093-4a8e-94df-40acaffb1ffb
-ms.openlocfilehash: e7b736d78486b0de7c108e6212d2aa1857e01cc4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a5d65ef8606821dc8aa7b64b36498b343ff986e2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238900"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667657"
 ---
 # <a name="106---cancelrequestrecord"></a>106 - CancelRequestRecord
 
@@ -17,10 +18,10 @@ ms.locfileid: "96238900"
 |-|-|  
 |Id|106|  
 |Keywords|EndToEndMonitoring、Troubleshooting、HealthMonitoring、WFTracking|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、ワークフロー インスタンス内のアクティビティが cancelrequestedrecord を生成したときに、ETW 追跡参加要素によって生成されます。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96238900"
   
 ## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|Description|  
+|データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  
 |InstanceId|xs:GUID|ワークフローのインスタンス ID|  
 |RecordNumber|xs:long|生成されたレコードのシーケンス番号|  

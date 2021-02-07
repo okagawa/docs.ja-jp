@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 1035-RuntimeTransactionSet'
 title: 1035 - RuntimeTransactionSet
 ms.date: 03/30/2017
 ms.assetid: 03b37de9-778c-4beb-b0e3-de73ece6088e
-ms.openlocfilehash: b8bf8431c4e2b82c6aac95820eb45de2a404e976
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 513ba49962a8f02ab47b8e5b762949cd09154a3c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294275"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667903"
 ---
 # <a name="1035---runtimetransactionset"></a>1035 - RuntimeTransactionSet
 
@@ -15,12 +16,12 @@ ms.locfileid: "96294275"
   
 |||  
 |-|-|  
-|ID|1035|  
+|id|1035|  
 |Keywords|WFRuntime|  
 |Level|"詳細"|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  アクティビティがランタイムのトランザクションを設定したことを示します。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96294275"
   
 ## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|Description|  
+|データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  
 |アクティビティ|xs:string|アクティビティの型名。|  
 |DisplayName|xs:string|アクティビティの表示名。|  

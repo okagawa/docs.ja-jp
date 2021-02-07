@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「WS トランザクションフロー」を参照してください。
 title: WS トランザクション フロー
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 7fd4968bbe4e1a3dafbfc35cc0617cef7083d291
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4d0a0af77dd516bf98c5dc8318ac110a31e731e7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96252401"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668371"
 ---
 # <a name="ws-transaction-flow"></a>WS トランザクション フロー
 
-このサンプルでは、クライアントによって調整されるトランザクションの使用方法と、WS-AtomicTransaction プロトコルまたは OleTransactions プロトコルを使用するトランザクション フローに関するクライアントとサーバーのオプションの使用方法を示します。 このサンプルは、電卓サービスを実装する [はじめに](getting-started-sample.md)に基づいていますが、操作には、TransactionFlowOption 列挙でを使用して、 `TransactionFlowAttribute` どの程度トランザクションフローが有効になっているかを判断する方法が示されています。 **TransactionFlowOption** フローされたトランザクションのスコープ内では、要求された操作のログがデータベースに書き込まれ、クライアント調整トランザクションが完了するまで保持されます。クライアント トランザクションが完了しない場合は、データベースに対する該当する更新はコミットされません。  
+このサンプルでは、クライアントによって調整されるトランザクションの使用方法と、WS-AtomicTransaction プロトコルまたは OleTransactions プロトコルを使用するトランザクション フローに関するクライアントとサーバーのオプションの使用方法を示します。 このサンプルは、電卓サービスを実装する[はじめに](getting-started-sample.md)に基づいていますが、操作には、TransactionFlowOption 列挙でを使用して、 `TransactionFlowAttribute` どの程度トランザクションフローが有効になっているかを判断する方法が示されています。  フローされたトランザクションのスコープ内では、要求された操作のログがデータベースに書き込まれ、クライアント調整トランザクションが完了するまで保持されます。クライアント トランザクションが完了しない場合は、データベースに対する該当する更新はコミットされません。  
   
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  

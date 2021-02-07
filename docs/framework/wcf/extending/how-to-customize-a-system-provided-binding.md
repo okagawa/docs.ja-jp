@@ -1,16 +1,17 @@
 ---
+description: '詳細については、「方法: System-Provided バインディングをカスタマイズする」を参照してください。'
 title: '方法: システム指定のバインディングをカスタマイズする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-ms.openlocfilehash: e3d7cb72bcbdd636530e7861071b73f8a5f38b31
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c0463a8e427e6503f0e68bc58eb488f9b0bad15a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96249229"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668956"
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>方法: システム指定のバインディングをカスタマイズする
 
@@ -56,4 +57,4 @@ Windows Communication Foundation (WCF) には、いくつかのシステム指�
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [カスタム バインディング](custom-bindings.md)
+- [カスタムバインド](custom-bindings.md)

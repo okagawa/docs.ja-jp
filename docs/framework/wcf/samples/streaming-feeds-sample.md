@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: ストリーミングフィードのサンプル'
 title: ストリーミング フィードのサンプル
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: 735a72cba3c953ea4774d89751dad3216aa44400
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1de295391316396d6c454496d34d8b82ad8129d5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257185"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668748"
 ---
 # <a name="streaming-feeds-sample"></a>ストリーミング フィードのサンプル
 

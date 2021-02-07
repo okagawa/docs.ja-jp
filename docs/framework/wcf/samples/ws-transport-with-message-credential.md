@@ -1,13 +1,14 @@
 ---
+description: 詳細については、メッセージ資格情報を使用した WS トランスポートに関するページをご覧ください。
 title: メッセージ資格情報付き WS トランスポート
 ms.date: 03/30/2017
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-ms.openlocfilehash: 673eb864bd21a2092f30a9f3ad6f6e6c368eea00
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 02514ad4d0bfd103126667f5ecdd21a6bc9151fb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96252310"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668332"
 ---
 # <a name="ws-transport-with-message-credential"></a>メッセージ資格情報付き WS トランスポート
 

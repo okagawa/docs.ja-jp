@@ -1,16 +1,17 @@
 ---
+description: '詳細については、「方法: カスタムポリシーアサーションをエクスポートする」を参照してください。'
 title: '方法: カスタム ポリシー アサーションをエクスポートする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-ms.openlocfilehash: 8bdc9948d6846631fde1d428c113682f40d15ec3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b49d5a88809039f59537d79f92e31711085e580a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96249216"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668931"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>方法: カスタム ポリシー アサーションをエクスポートする
 

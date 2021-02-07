@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 1037-RuntimeTransactionComplete'
 title: 1037 - RuntimeTransactionComplete
 ms.date: 03/30/2017
 ms.assetid: 2c8c31e0-42a9-4f46-865b-2da9ab16a0ba
-ms.openlocfilehash: ad05151a1497ea4b31e0fe33fe2983c1f145f224
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5784dc1b0eede5ddad0e6aae4cb79c6e859f325e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294249"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667864"
 ---
 # <a name="1037---runtimetransactioncomplete"></a>1037 - RuntimeTransactionComplete
 
@@ -15,12 +16,12 @@ ms.locfileid: "96294249"
   
 |||  
 |-|-|  
-|ID|1037|  
+|id|1037|  
 |Keywords|WFRuntime|  
 |Level|"詳細"|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  ランタイム トランザクションが完了したことを示します。  
   

@@ -1,13 +1,14 @@
 ---
+description: '詳細については、次を参照してください: 103-ActivityStateRecord'
 title: 103 - ActivityStateRecord
 ms.date: 03/30/2017
 ms.assetid: 57636a9a-561e-44aa-aef9-1f1894aaa6dd
-ms.openlocfilehash: 02c33f02b7650c9f9b7527c319de3b58980fdd6c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 14afbfdb0869b6ee65e1482fa73aa36ccd58f307
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275077"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668124"
 ---
 # <a name="103---activitystaterecord"></a>103 - ActivityStateRecord
 
@@ -17,10 +18,10 @@ ms.locfileid: "96275077"
 |-|-|  
 |Id|103|  
 |Keywords|EndToEndMonitoring、Troubleshooting、HealthMonitoring、WFTracking|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、ワークフロー インスタンス内のアクティビティが ActivityStateRecord を生成したときに、ETW 追跡参加要素によって生成されます。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96275077"
   
 ## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|Description|  
+|データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  
 |InstanceId|xs:GUID|ワークフローのインスタンス ID|  
 |RecordNumber|xs:long|生成されたレコードのシーケンス番号|  

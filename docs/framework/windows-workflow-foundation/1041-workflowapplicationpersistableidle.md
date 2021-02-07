@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 1041-WorkflowApplicationPersistableIdle'
 title: 1041 - WorkflowApplicationPersistableIdle
 ms.date: 03/30/2017
 ms.assetid: 966adf2f-e21d-44df-a3ec-a8e285e0a316
-ms.openlocfilehash: 9995823753fc78ca3f278cd635fcf6c7d2b84325
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: eb004077a36ed3e78229df92a73972ed5feda665
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238939"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667760"
 ---
 # <a name="1041---workflowapplicationpersistableidle"></a>1041 - WorkflowApplicationPersistableIdle
 
@@ -15,12 +16,12 @@ ms.locfileid: "96238939"
   
 |||  
 |-|-|  
-|ID|1041|  
+|id|1041|  
 |Keywords|WFRuntime|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  ワークフロー アプリケーションがアイドル状態のままであることを示します。 ワークフロー アプリケーションはアイドル状態または永続化されます。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96238939"
   
 ## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|Description|  
+|データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  
 |WorkflowApplicationId|xs:string|ワークフロー アプリケーション ID|  
 |ActionTaken|xs:string|ワークフロー アプリケーションで実行されるアクション。|  

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 105-FaultPropagationRecord'
 title: 105 - FaultPropagationRecord
 ms.date: 03/30/2017
 ms.assetid: 168473b1-b1e5-4e9f-8a2a-35bbdb2ef531
-ms.openlocfilehash: 3390a77f16cc52e52ea1b3e4c1a34d0f44795abb
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 95f82763606bf16219fa4234b5f6e7101c0954fa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238913"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667682"
 ---
 # <a name="105---faultpropagationrecord"></a>105 - FaultPropagationRecord
 
@@ -20,7 +21,7 @@ ms.locfileid: "96238913"
 |Level|警告|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、ワークフロー インスタンスを持つアクティビティが FaultPropagationRecord を生成したときに、ETW 追跡参加要素によって生成されます。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96238913"
   
 ## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|Description|  
+|データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  
 |InstanceId|xs:GUID|ワークフローのインスタンス ID|  
 |RecordNumber|xs:long|生成されたレコードのシーケンス番号|  

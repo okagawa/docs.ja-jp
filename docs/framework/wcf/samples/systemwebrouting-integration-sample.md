@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「SystemWebRouting Integration Sample」を参照してください。
 title: SystemWebRouting 統合サンプル
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: 04c3093097c5bf11e1d4dd5d3124c9fbae4b3665
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 84b442dfb7f0e5877f742fb055aea49a5625bb78
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293911"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668646"
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting 統合サンプル
 
@@ -65,7 +66,7 @@ ms.locfileid: "96293911"
   
     3. [ **物理パス**] で、プロジェクト内のサービスフォルダーを選択します。  
   
-    4. **[OK]** を押します。  
+    4. **[OK]** をクリックします。  
   
 4. アプリケーションを起動します。そのためには、Web アプリケーションを右クリックして [ **アプリケーションの管理** ] を選択し、[ **参照**] をクリックします。  
   

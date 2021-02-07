@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 104-ActivityScheduledRecord'
 title: 104 - ActivityScheduledRecord
 ms.date: 03/30/2017
 ms.assetid: ae202178-8fb1-4646-a3aa-18beeda8ff93
-ms.openlocfilehash: b2c7cbd169053188d5e84a0b8afd87c4916c87cb
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9d52dac3ec68de0d38959e81294c5c6ead21428e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238965"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667812"
 ---
 # <a name="104---activityscheduledrecord"></a>104 - ActivityScheduledRecord
 
@@ -17,10 +18,10 @@ ms.locfileid: "96238965"
 |-|-|  
 |Id|104|  
 |Keywords|EndToEndMonitoring、Troubleshooting、HealthMonitoring、WFTracking|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、ワークフロー インスタンス内のアクティビティが ActivityScheduledRecord を生成したときに、ETW 追跡参加要素によって生成されます。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96238965"
   
 ## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|Description|  
+|データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  
 |InstanceId|xs:GUID|ワークフローのインスタンス ID|  
 |RecordNumber|xs:long|生成されたレコードのシーケンス番号|  
