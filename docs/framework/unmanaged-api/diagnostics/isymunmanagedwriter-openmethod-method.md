@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ISymUnmanagedWriter:: OpenMethod メソッド'
 title: ISymUnmanagedWriter::OpenMethod メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fb90cb7f-af88-45e8-a99f-80a0bbddb08b
 topic_type:
 - apiref
-ms.openlocfilehash: deb3a28ffb73754b4c03496a6a72325418f1a4fc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2cf7e6bf7c632449c25a2b49c7658fa7b1cc287e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722909"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762228"
 ---
 # <a name="isymunmanagedwriteropenmethod-method"></a>ISymUnmanagedWriter::OpenMethod メソッド
 

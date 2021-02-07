@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ISymUnmanagedWriter:: RemapToken メソッド'
 title: ISymUnmanagedWriter::RemapToken メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bca92682-ee1e-467f-8fb0-d8d4617f82fe
 topic_type:
 - apiref
-ms.openlocfilehash: 8799815f7c6c6aefc7081f3583e6fd174cd478f7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c065d42c3d2749f0262fdd81a74de918274ba67d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683558"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762085"
 ---
 # <a name="isymunmanagedwriterremaptoken-method"></a>ISymUnmanagedWriter::RemapToken メソッド
 

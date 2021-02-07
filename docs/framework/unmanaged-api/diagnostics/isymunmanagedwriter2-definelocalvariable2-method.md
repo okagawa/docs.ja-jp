@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ISymUnmanagedWriter2::D efineLocalVariable2 メソッド'
 title: ISymUnmanagedWriter2::DefineLocalVariable2 メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e774eefe-858c-4362-8d2d-28ebf2ba1a24
 topic_type:
 - apiref
-ms.openlocfilehash: cdbb09d25f51e479a8a8ddfc23348305ba7c0a71
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 169a086b8420b5dbe20af8e16b21d5b41a958ead
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683421"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761812"
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a>ISymUnmanagedWriter2::DefineLocalVariable2 メソッド
 

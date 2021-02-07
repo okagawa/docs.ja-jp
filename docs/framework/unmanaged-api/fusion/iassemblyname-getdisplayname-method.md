@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IAssemblyName:: GetDisplayName メソッド'
 title: IAssemblyName::GetDisplayName メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9a26547a-9a34-4284-a463-78a7d4b496cf
 topic_type:
 - apiref
-ms.openlocfilehash: 13d71a9da2539c45076e5eb92e153e37c1df4b47
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9b52a901385fa9b3ba7cb6bcd1678d0718f8f695
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727914"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760759"
 ---
 # <a name="iassemblynamegetdisplayname-method"></a>IAssemblyName::GetDisplayName メソッド
 

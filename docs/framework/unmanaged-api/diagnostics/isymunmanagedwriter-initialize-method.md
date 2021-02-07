@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ISymUnmanagedWriter:: Initialize メソッド'
 title: ISymUnmanagedWriter::Initialize メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e0ebd793-3764-4df0-8f12-0e95f60b9eae
 topic_type:
 - apiref
-ms.openlocfilehash: c702aa32e8c8d6d5c137f7968d1578715102180f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: eab60e9539df3d43a1602268d704ac324f028915
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726862"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762293"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>ISymUnmanagedWriter::Initialize メソッド
 

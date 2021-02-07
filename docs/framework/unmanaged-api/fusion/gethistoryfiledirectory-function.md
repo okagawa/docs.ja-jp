@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: GetHistoryFileDirectory 関数'
 title: GetHistoryFileDirectory 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93232222-926e-42ac-b85d-8a6d33977672
 topic_type:
 - apiref
-ms.openlocfilehash: 484adf288356b9955fe0cac0bb30002ec1f012d3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 960bc75d69f4be6d1639e109d6327b5e65d3e129
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724439"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760967"
 ---
 # <a name="gethistoryfiledirectory-function"></a>GetHistoryFileDirectory 関数
 
@@ -51,7 +52,7 @@ HRESULT GetHistoryFileDirectory (
 |S_OK|メソッドは正常に完了しました。|  
 |E_INVALIDARG|`wzDir` または `pdwSize` が null であるか、またはバージョン文字列が正しくありません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  正常に完了すると、 `pdwSize` 引数はパス文字列の長さに設定されます。  
   

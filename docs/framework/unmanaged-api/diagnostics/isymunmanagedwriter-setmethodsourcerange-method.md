@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: ISymUnmanagedWriter:: Setmethod Ourcer メソッド'
 title: ISymUnmanagedWriter::SetMethodSourceRange メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c698b86e-ace7-4b21-9549-f52d6a034959
 topic_type:
 - apiref
-ms.openlocfilehash: a918b5c2334683348adc6a7382527faedb52d7b6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2e2f0f664d8be30a8c3628100fafb3740d34f54f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683538"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762072"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>ISymUnmanagedWriter::SetMethodSourceRange メソッド
 

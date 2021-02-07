@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CompareAssemblyIdentity 関数'
 title: CompareAssemblyIdentity 関数
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8b364ae1-8efa-4744-a7da-81fd093d84d6
 topic_type:
 - apiref
-ms.openlocfilehash: da32ce6a40378a6f88cf71bd7707be2079d71068
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aa55d1ea0b1968ec4e50106139e154e29e159ec7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717592"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761214"
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity 関数
 
@@ -63,7 +64,7 @@ STDAPI CompareAssemblyIdentity (
 
  `pfEquivalent` 2つのアセンブリが等しいかどうかを示すブール値を返します。 `pResult` 値の1つを返し `AssemblyComparisonResult` 、の値のより詳細な理由を指定し `pfEquivalent` ます。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `CompareAssemblyIdentity` とが等価かどうかを確認し `pwzAssemblyIdentity1` `pwzAssemblyIdentity2` ます。 `pfEquivalent` は `true` 、次の条件の1つ以上でに設定されます。  
   

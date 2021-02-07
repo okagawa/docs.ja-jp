@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ISymUnmanagedScope2:: GetConstants メソッド'
 title: ISymUnmanagedScope2::GetConstants メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f241b620-9ec5-42fd-92ef-3b22329db72a
 topic_type:
 - apiref
-ms.openlocfilehash: df42e58a9bb3bf00b3fa4df45086dc2219658e25
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 025bb9ddd0501f2309b2c0a3f7af20eb961604cb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725847"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763216"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a>ISymUnmanagedScope2::GetConstants メソッド
 

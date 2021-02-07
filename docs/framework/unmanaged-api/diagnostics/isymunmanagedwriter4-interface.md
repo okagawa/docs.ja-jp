@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「ISymUnmanagedWriter4 インターフェイス」を参照してください。
 title: ISymUnmanagedWriter4 インターフェイス
 ms.date: 03/30/2017
 ms.assetid: 4af5e8c0-987d-405e-b934-8b9e70fcae6e
-ms.openlocfilehash: c2b57897e4f0e8b23337302f344065d79677e0c4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3814d7e2728f28d224a4e9a6d99f699f220e8a4d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725808"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761682"
 ---
 # <a name="isymunmanagedwriter4-interface"></a>ISymUnmanagedWriter4 インターフェイス
 
 ISymUnmanagedWriter4 インターフェイス。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```idl  
 [object,uuid(BC7E3F53-F458-4C23-9DBD-A189E6E96594),pointer_default(unique)]interface ISymUnmanagedWriter4 : ISymUnmanagedWriter3  

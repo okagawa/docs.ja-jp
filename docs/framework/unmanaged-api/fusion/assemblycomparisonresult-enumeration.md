@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: AssemblyComparisonResult 列挙型'
 title: AssemblyComparisonResult 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bd042f89-10b1-40ca-946e-46da082f5263
 topic_type:
 - apiref
-ms.openlocfilehash: cde25a9507006c89ef6490c13ae82033f04c2931
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 093cff830aa87d28ee86ecaeb6965887279a72d6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731034"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761288"
 ---
 # <a name="assemblycomparisonresult-enumeration"></a>AssemblyComparisonResult 列挙型
 

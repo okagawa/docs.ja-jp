@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ISymUnmanagedWriter:: SetScopeRange メソッド'
 title: ISymUnmanagedWriter::SetScopeRange メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d4d98676-444b-46ca-bfe6-0d827385cd22
 topic_type:
 - apiref
-ms.openlocfilehash: 06dff4847ec3d15f446f1c89219b10eddb8eec4f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 43cfbeaa0d366b9f2d25068cfa7b91a0fea8ac59
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683525"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762059"
 ---
 # <a name="isymunmanagedwritersetscoperange-method"></a>ISymUnmanagedWriter::SetScopeRange メソッド
 
@@ -50,7 +51,7 @@ HRESULT OpenScope(
 
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  [ISymUnmanagedWriter:: OpenScope](isymunmanagedwriter-openscope-method.md) は、 `ISymUnmanagedWriter::SetScopeRange` 後でスコープの開始オフセットと終了オフセットを定義するためにと共に使用できる非透過スコープ識別子を返します。 この場合、 `ISymUnmanagedWriter::OpenScope` と [ISymUnmanagedWriter:: cloに](isymunmanagedwriter-closescope-method.md) 渡されるオフセットは無視されます。 スコープ識別子は、現在のメソッドでのみ有効です。  
   

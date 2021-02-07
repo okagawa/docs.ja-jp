@@ -1,13 +1,14 @@
 ---
+description: '詳細について: ISymUnmanagedWriter5:: CloseMapTokensToSourceSpans メソッド'
 title: ISymUnmanagedWriter5::CloseMapTokensToSourceSpans メソッド
 ms.date: 03/30/2017
 ms.assetid: f8a0c0a2-a11d-436c-aa85-bc110215cfd6
-ms.openlocfilehash: b57174f9f76b174927b8f1997beac3dd1482583a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 687a853441a4406c2eb0a9c4b3d5d59df3575e1d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725912"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761656"
 ---
 # <a name="isymunmanagedwriter5closemaptokenstosourcespans-method"></a>ISymUnmanagedWriter5::CloseMapTokensToSourceSpans メソッド
 
@@ -21,7 +22,7 @@ HRESULT CloseMapTokensToSourceSpans();
   
 ## <a name="return-value"></a>戻り値  
 
- `HRESULT` を返します。  
+ `HRESULT` が返されます。  
   
 ## <a name="requirements"></a>要件  
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: ISymUnmanagedWriter::D efineSequencePoints メソッド'
 title: ISymUnmanagedWriter::DefineSequencePoints メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64202baf-be6b-40ba-8162-8cc6c0c9b8e1
 topic_type:
 - apiref
-ms.openlocfilehash: af8beb1ec627b93faeb7329a03579319ca3880ed
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0c5ac9854ef341512f58cb1cd63ed7dfcde9962e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678325"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762332"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints メソッド
 
