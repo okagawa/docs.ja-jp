@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 117-WorkflowInstanceTerminatedRecordWithId'
 title: 117 - WorkflowInstanceTerminatedRecordWithId
 ms.date: 03/30/2017
 ms.assetid: e68539d0-5338-468a-9f75-7e5b09d39a3c
-ms.openlocfilehash: 5e16eff8e8ce9815cac604be110e899a29b4af3d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d57940801cd9850136355a9ad4f91ba7c44fd5b1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96281730"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99703238"
 ---
 # <a name="117---workflowinstanceterminatedrecordwithid"></a>117 - WorkflowInstanceTerminatedRecordWithId
 
@@ -15,12 +16,12 @@ ms.locfileid: "96281730"
   
 |||  
 |-|-|  
-|ID|117|  
+|id|117|  
 |Keywords|HealthMonitoring、WFTracking|  
 |Level|エラー|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、ワークフロー インスタンスが WorkflowInstanceTerminatedRecord を生成したときに、ETW 追跡参加要素によって生成されます。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96281730"
   
 ## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|Description|  
+|データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  
 |InstanceId|xs:GUID|ワークフローのインスタンス ID|  
 |RecordNumber|xs:long|生成されたレコードのシーケンス番号|  

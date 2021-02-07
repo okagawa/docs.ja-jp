@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: 埋め込みリソースにタイムゾーンを保存する」を参照してください。'
 title: '方法: 埋め込みリソースにタイム ゾーンを保存する'
 ms.date: 04/10/2017
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - time zone objects [.NET], serializing
 - time zone objects [.NET], saving
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
-ms.openlocfilehash: 23f86076b2858404f3dbc900d8c40a6509abe8db
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4f1455ffa790652d2dad605a0eb71fb81a05326d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817602"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702471"
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>方法: 埋め込みリソースにタイム ゾーンを保存する
 
@@ -22,7 +23,7 @@ ms.locfileid: "94817602"
 
 通常、オブジェクトのシリアル化は、 <xref:System.TimeZoneInfo> タイムゾーン対応アプリケーションとは別に行われます。 シリアル化されたオブジェクトを保持するために使用するデータストアに応じて <xref:System.TimeZoneInfo> 、タイムゾーンデータは、セットアップまたはインストールルーチンの一部としてシリアル化できます (たとえば、データがレジストリのアプリケーションキーに格納されている場合)。または、最終的なアプリケーションをコンパイルする前に実行されるユーティリティルーチンの一部としてシリアル化されます (たとえば、シリアル化されたデータが .NET XML リソース (.resx) ファイル
 
-アプリケーションと共にコンパイルされるリソースファイルに加えて、他のいくつかのデータストアをタイムゾーン情報に使用できます。 これらには、次のものが含まれます。
+アプリケーションと共にコンパイルされるリソースファイルに加えて、他のいくつかのデータストアをタイムゾーン情報に使用できます。 デモには次のものが含まれます。
 
 - レジストリ。 アプリケーションでは、独自のアプリケーションキーのサブキーを使用して、HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones のサブキーを使用するのではなく、カスタムタイムゾーンデータを格納する必要があることに注意してください。
 

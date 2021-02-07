@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「WCF の簡略化機能」を参照してください。
 title: WCF の単純化機能
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: 8a818ec0852cfae20ef23fede04b55b08a7449a5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cf89ff7775e2a162760c3c6c598a045ddccdf8d8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732919"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99703380"
 ---
 # <a name="wcf-simplification-features"></a>WCF の単純化機能
 
@@ -94,7 +95,7 @@ WCF には ASP.NET 互換性モードが用意されています。これによ�
 
 次の表は、変更された設定と追加情報の場所を示しています。
 
-|プロパティ|オン|新しい既定値|説明|
+|プロパティ|オン|新しい既定値|詳細情報|
 |--------------|--------|-----------------|----------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|このプロパティは、TCP 接続が .NET フレーミングプロトコルを使用して自身を認証するために実行できる時間を決定します。 クライアントは、サーバーが認証を実行するための十分な情報を得る前に初期データを送信する必要があります。 このタイムアウトは意図的に ReceiveTimeout (10 分) よりも小さい値に設定されます。これにより、悪意のある認証されていないクライアントは、長時間にわたってサーバーへの接続を保持できません。 既定値は 30 秒です。 の詳細については、 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * プロセッサの数|このソケット レベルのプロパティは、キューに入れられる "受入保留中の" 要求の数を示します。 リッスン バックログ キューがいっぱいになると、新しいソケット要求は拒否されます。 の詳細については、 <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|

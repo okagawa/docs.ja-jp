@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: セットアップに関する問題のトラブルシューティング'
 title: セットアップに関する問題のトラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 596aae345061796535895a091c59d50a5bffe0d8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8beb404040c15ade8f435772fe1b947eef766702
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255118"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99703472"
 ---
 # <a name="troubleshoot-setup-issues"></a>セットアップに関する問題のトラブルシューティング
 

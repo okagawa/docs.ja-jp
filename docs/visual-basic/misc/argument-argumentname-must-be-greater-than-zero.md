@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「引数 ' <argumentname> ' は0より大きくなければなりません」を参照してください。
 title: 引数 '<argumentname>' は、0 より大きくする必要があります。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_GTZero1
 ms.assetid: f9939fbd-6c4f-4871-9452-9ea0267e948e
-ms.openlocfilehash: 41d56616abc7782dd4beed44e5bb083eba09a76c
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2ce2337e4a5232e0c23c9f4c65821f0bc773900a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91079881"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699871"
 ---
 # <a name="argument-argumentname-must-be-greater-than-zero"></a>引数 '\<argumentname>' は、0 より大きくする必要があります。
 
@@ -21,6 +22,6 @@ ms.locfileid: "91079881"
   
 2. 式の変数 (特に、他のプロシージャから引数としてプロシージャに渡されたもの) に対してこれまで実行した操作を確認します。  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [引数の値渡しと参照渡し](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

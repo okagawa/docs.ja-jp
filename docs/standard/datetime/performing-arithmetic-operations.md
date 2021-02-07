@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 日付と時刻を使用した算術演算の実行'
 title: 日付と時刻を使用した算術演算の実行
 ms.date: 04/10/2017
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - DateTime structure, arithmetic operations
 - DateTimeOffset structure, arithmetic operations
 ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
-ms.openlocfilehash: af294c45359f6226c4189aabb34fdfc670bbd1c9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7b39a6dec3abc2206c8eef7566f74aab6614aae6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817771"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702562"
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>日付と時刻を使用した算術演算の実行
 
@@ -67,7 +68,7 @@ ms.locfileid: "94817771"
 
 ## <a name="arithmetic-operations-with-times-in-time-zones"></a>タイムゾーンの時刻を使用した算術演算
 
-クラスには <xref:System.TimeZoneInfo> 、あるタイムゾーンから別のタイムゾーンに時刻を変換するときに調整を自動的に適用する多くの変換メソッドが含まれています。 これらには、次のものが含まれます。
+クラスには <xref:System.TimeZoneInfo> 、あるタイムゾーンから別のタイムゾーンに時刻を変換するときに調整を自動的に適用する多くの変換メソッドが含まれています。 デモには次のものが含まれます。
 
 - <xref:System.TimeZoneInfo.ConvertTime%2A>メソッドと <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A> メソッド。2つのタイムゾーン間で時刻を変換します。
 

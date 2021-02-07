@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 119-WorkflowInstanceUpdatedRecord'
 title: 119 - WorkflowInstanceUpdatedRecord
 ms.date: 03/30/2017
 ms.assetid: 32485d0a-dcdb-45bc-b1e3-79fa9ad9439b
-ms.openlocfilehash: c76ce2ffcd25ebe09463e6d704787f321baa2cb3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e59bbe81d548fccb0d44d6f8c1b442ee6ad685f3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96278662"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99703199"
 ---
 # <a name="119---workflowinstanceupdatedrecord"></a>119 - WorkflowInstanceUpdatedRecord
 
@@ -15,12 +16,12 @@ ms.locfileid: "96278662"
   
 |||  
 |-|-|  
-|ID|119|  
+|id|119|  
 |Keywords|HealthMonitoring、WFTracking|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、ワークフロー インスタンスが更新されたときに、ETW 追跡参加要素によって生成されます。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96278662"
   
 ## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|Description|  
+|データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  
 |InstanceId|xs:GUID|ワークフローのインスタンス ID|  
 |RecordNumber|xs:long|生成されたレコードのシーケンス番号|  

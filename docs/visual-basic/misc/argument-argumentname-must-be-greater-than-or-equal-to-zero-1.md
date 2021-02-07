@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「引数は <argumentname> 0 以上でなければなりません」を参照してください。
 title: 引数 '<argumentname>' は 0 と同じかそれ以上でなければなりません。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_GEZero1
 ms.assetid: 6f54fdc6-e263-4b2f-a66f-f206f3a59818
-ms.openlocfilehash: b91a280d6f2e1238035781d9420c55fba05d3696
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 53a25fd2b0fa9ff5a0ea9f00268940697296c34f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91079920"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699910"
 ---
 # <a name="argument-argumentname-must-be-greater-than-or-equal-to-zero"></a>引数 '\<argumentname>' は 0 と同じかそれ以上でなければなりません。
 
@@ -21,6 +22,6 @@ ms.locfileid: "91079920"
   
 2. 引数が計算によって指定される場合は、計算で処理される値を確認します。  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [引数の値渡しと参照渡し](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
