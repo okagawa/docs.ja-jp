@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: <appDomainResourceMonitoring> 要素'
 title: <appDomainResourceMonitoring> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - appDomainResourceMonitoring element
 - <appDomainResourceMonitoring> element
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
-ms.openlocfilehash: 9ecf2e382b5d483377df871835793219b3f74760
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: aee85386e6d0af2ca4fd30c0ad8fe69bae240315
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91170273"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719293"
 ---
 # <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring> 要素
 
@@ -39,7 +40,7 @@ ms.locfileid: "91170273"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |`true`|アプリケーションドメインのリソース監視の統計情報が収集されます。|  
 |`false`|アプリケーションドメインのリソース監視の統計情報は収集されません。|  

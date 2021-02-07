@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <AppContextSwitchOverrides> 要素'
 title: AppContextSwitchOverrides 要素
 ms.date: 04/18/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: ab74886edcc86c900c56017867a3b81c9cb7886e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1c2e4ceaec83ee23990c2146960f602eb12361a6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91176150"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719332"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides> 要素
 
@@ -40,7 +41,7 @@ ms.locfileid: "91176150"
 
 ### <a name="value-attribute"></a>value 属性
 
-|値|[説明]|
+|値|説明|
 |-----------|-----------------|
 |"name = value"|定義済みのスイッチ名とその値 ( `true` または `false` )。 複数のスイッチの名前と値のペアは、セミコロン (";") で区切られます。 .NET Framework でサポートされている定義済みスイッチ名の一覧については、「解説」を参照してください。|
 
@@ -63,7 +64,7 @@ ms.locfileid: "91176150"
 
 .NET Framework では、次のスイッチがサポートされています。
 
-|スイッチ名|[説明]|導入時期|
+|スイッチ名|説明|導入時期|
 |-----------------|-----------------|----------------|
 |`Switch.MS.Internal.`<br/>`DoNotApplyLayoutRoundingToMarginsAndBorderThickness`|コントロールレイアウトのために Windows Presentation Foundation レガシアルゴリズムを使用するかどうかを制御します。 詳細については、「[軽減策: WPF レイアウト](../../../migration-guide/mitigation-wpf-layout.md)」を参照してください。|.NET Framework 4.6|
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|PackageDigitalSignatureManager によってパッケージの部分に署名するために使用される既定のアルゴリズムが SHA1 と SHA256 のどちらであるかを制御します。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。|.NET Framework 4.7.1|

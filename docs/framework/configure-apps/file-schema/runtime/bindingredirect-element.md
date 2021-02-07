@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <bindingRedirect> 要素'
 title: <bindingRedirect> 要素
 ms.date: 03/30/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - container tags, <bindingRedirect> element
 - bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
-ms.openlocfilehash: 7667f78d2c341990585526fd153c0b230658a2ee
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 833ee73fa11d179ac855f3ac4d2bca8d7a2226ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91167250"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719176"
 ---
 # <a name="bindingredirect-element"></a>\<bindingRedirect> 要素
 
@@ -42,14 +43,14 @@ newVersion="new assembly version"/>
   
 |属性|説明|  
 |---------------|-----------------|  
-|`oldVersion`|必須の属性です。<br /><br /> 初めに要求されていたアセンブリのバージョンを指定します。 アセンブリバージョン番号の形式は major. *minor. build. revision*です。 このバージョン番号の各部分で有効値は、0 ～ 65535 です。<br /><br /> バージョン範囲は、次の形式でも指定できます。<br /><br /> *n. n. n. n. n. n. n. n. n*|  
-|`newVersion`|必須の属性です。<br /><br /> 最初に要求されたバージョンの代わりに *、次の*形式で使用するアセンブリのバージョンを指定します。 n. n. n. n<br /><br /> この値では `oldVersion` より前のバージョンを指定できます。|  
+|`oldVersion`|必須の属性です。<br /><br /> 初めに要求されていたアセンブリのバージョンを指定します。 アセンブリバージョン番号の形式は major. *minor. build. revision* です。 このバージョン番号の各部分で有効値は、0 ～ 65535 です。<br /><br /> バージョン範囲は、次の形式でも指定できます。<br /><br /> *n. n. n. n. n. n. n. n. n*|  
+|`newVersion`|必須の属性です。<br /><br /> 最初に要求されたバージョンの代わりに *、次の* 形式で使用するアセンブリのバージョンを指定します。 n. n. n. n<br /><br /> この値では `oldVersion` より前のバージョンを指定できます。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|None||  
+|なし||  
   
 ### <a name="parent-elements"></a>親要素  
   

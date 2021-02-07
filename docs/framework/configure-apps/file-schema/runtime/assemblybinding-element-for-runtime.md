@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <assemblyBinding> の要素 <runtime>'
 title: <runtime> の <assemblyBinding> 要素
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - assemblyBinding element
 - container tags, <assemblyBinding> element
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
-ms.openlocfilehash: b6a39bcecfd2485481677496adcf026d986c283b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a797b541f9f13852234872f1eb2fc68a2eac727d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91170247"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719228"
 ---
 # <a name="assemblybinding-element-for-runtime"></a>\<runtime> の \<assemblyBinding> 要素
 
@@ -37,10 +38,10 @@ ms.locfileid: "91170247"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |**xmlns**|必須の属性です。<br /><br /> アセンブリのバインディングに必要な XML 名前空間を指定します。 値として、文字列 "urn:schemas-microsoft-com:asm.v1" を使用します。|  
-|**appliesTo**|.NET Framework アセンブリのリダイレクトを適用するランタイムのバージョンを指定します。 このオプションの属性では、.NET Framework バージョン番号を使用して、適用するバージョンを指定します。 **appliesTo** 属性が指定されていない場合、 **\<assemblyBinding>** 要素は、すべてのバージョンの .NET Framework に適用されます。 **AppliesTo**属性は .NET Framework バージョン1.1 で導入されました。.NET Framework バージョン1.0 では無視されます。 つまり、**appliesTo** 属性が指定されている場合でも、.NET Framework バージョン1.0 を使用しているときは、すべての **\<assemblyBinding>** 要素が適用されます。|  
+|**appliesTo**|.NET Framework アセンブリのリダイレクトを適用するランタイムのバージョンを指定します。 このオプションの属性では、.NET Framework バージョン番号を使用して、適用するバージョンを指定します。 **appliesTo** 属性が指定されていない場合、 **\<assemblyBinding>** 要素は、すべてのバージョンの .NET Framework に適用されます。 **AppliesTo** 属性は .NET Framework バージョン1.1 で導入されました。.NET Framework バージョン1.0 では無視されます。 つまり、**appliesTo** 属性が指定されている場合でも、.NET Framework バージョン1.0 を使用しているときは、すべての **\<assemblyBinding>** 要素が適用されます。|  
   
 ### <a name="child-elements"></a>子要素  
   

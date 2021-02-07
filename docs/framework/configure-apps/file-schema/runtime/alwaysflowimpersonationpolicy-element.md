@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <alwaysFlowImpersonationPolicy> 要素'
 title: <alwaysFlowImpersonationPolicy> 要素
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - alwaysFlowImpersonationPolicy element
 - <alwaysFlowImpersonationPolicy> element
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
-ms.openlocfilehash: 9316f026a807b6ad36014157061f67bdbd7d3d18
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5ee8e763eddb810143522ce9e6df780ee77c26c3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149440"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719371"
 ---
 # <a name="alwaysflowimpersonationpolicy-element"></a>\<alwaysFlowImpersonationPolicy> 要素
 
@@ -42,9 +43,9 @@ ms.locfileid: "91149440"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|`false`|などのマネージメソッドを使用して偽装を実行しない限り、Windows id は非同期ポイント間ではフローしません <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> 。 これは既定値です。|  
+|`false`|などのマネージメソッドを使用して偽装を実行しない限り、Windows id は非同期ポイント間ではフローしません <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> 。 既定値です。|  
 |`true`|Windows id は、偽装がどのように実行されたかに関係なく、常に非同期のポイント間でフローします。|  
   
 ### <a name="child-elements"></a>子要素  

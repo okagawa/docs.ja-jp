@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <bypassTrustedAppStrongNames> 要素'
 title: <bypassTrustedAppStrongNames> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - <bypassTrustedAppStrongNames> element
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
-ms.openlocfilehash: 96361a6742d1d2f76cb237344189d3277d7c8069
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d23b9efa19481027480f2a1c7dab22bc97a05e13
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73739083"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719163"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> 要素
 
@@ -41,7 +42,7 @@ ms.locfileid: "73739083"
 
 ## <a name="enabled-attribute"></a>enabled 属性
 
-|値|Description|
+|値|説明|
 |-----------|-----------------|
 |`true`|完全に信頼されたアセンブリの厳密な名前の署名は、アセンブリが完全に信頼されているときには検証されません <xref:System.AppDomain> 。 既定値です。|
 |`false`|完全に信頼されたアセンブリの厳密な名前の署名は、アセンブリが完全信頼に読み込まれるときに検証され <xref:System.AppDomain> ます。 厳密な名前の署名は、署名が正しいかどうかのみを確認します。一致のために別の厳密な名前と比較されることはありません。|
@@ -52,7 +53,7 @@ ms.locfileid: "73739083"
 
 ### <a name="parent-elements"></a>親要素
 
-|要素|Description|
+|要素|説明|
 |-------------|-----------------|
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|
@@ -72,7 +73,7 @@ ms.locfileid: "73739083"
 - 遅延署名されていない。
 
 > [!NOTE]
-> レジストリキーを使用して、コンピューター上のすべてのアプリケーションでバイパス機能が無効になっている場合、この構成ファイルの設定は無効です。 詳細については、「[方法: 厳密な名前のバイパス機能を無効](../../../../standard/assembly/disable-strong-name-bypass-feature.md)にする」を参照してください。
+> レジストリキーを使用して、コンピューター上のすべてのアプリケーションでバイパス機能が無効になっている場合、この構成ファイルの設定は無効です。 詳細については、「 [方法: Strong-Name バイパス機能を無効](../../../../standard/assembly/disable-strong-name-bypass-feature.md)にする」を参照してください。
 
 ## <a name="example"></a>例
 
