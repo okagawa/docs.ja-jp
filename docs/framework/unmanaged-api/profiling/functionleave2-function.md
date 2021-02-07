@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: FunctionLeave2 関数'
 title: FunctionLeave2 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8cdac941-8b94-4497-b874-4e571785f3fe
 topic_type:
 - apiref
-ms.openlocfilehash: 5fa6ffff3cdb64a7471568e1f6e76fea9194c5a0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 475def9af448182003ef36782a84d501a9f2661d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722285"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687559"
 ---
 # <a name="functionleave2-function"></a>FunctionLeave2 関数
 
@@ -58,7 +59,7 @@ void __stdcall FunctionLeave2 (
 
   戻り値の情報にアクセスするには、 `COR_PRF_ENABLE_FUNCTION_RETVAL` フラグを設定する必要があります。 プロファイラーは、 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) メソッドを使用してイベントフラグを設定できます。
 
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  値が変更さ `func` `retvalRange` `FunctionLeave2` れるか、値が破棄される可能性があるため、関数から制御が戻った後に、パラメーターとパラメーターの値が無効になります。  
   

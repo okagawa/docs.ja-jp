@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: FunctionLeave3WithInfo 関数'
 title: FunctionLeave3WithInfo 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5fa68a67-ced6-41c6-a2c0-467060fd0692
 topic_type:
 - apiref
-ms.openlocfilehash: 69ee0ea78e0c7edbb61999ef8fba1791e6f682bc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6a861f455e827258368764b80547c3b3e9c986cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722246"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687416"
 ---
 # <a name="functionleave3withinfo-function"></a>FunctionLeave3WithInfo 関数
 
@@ -43,7 +44,7 @@ void __stdcall FunctionLeave3WithInfo(
 
   \[in) 特定のスタックフレームに関する情報を表す不透明なハンドル。 このハンドルは、渡されるコールバック中にのみ有効です。
 
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `FunctionLeave3WithInfo`コールバックメソッドは、関数が呼び出されたことをプロファイラーに通知します。また、プロファイラーは[ICorProfilerInfo3:: GetFunctionLeave3Info メソッド](icorprofilerinfo3-getfunctionleave3info-method.md)を使用して、戻り値を調べることができます。 戻り値の情報にアクセスするには、 `COR_PRF_ENABLE_FUNCTION_RETVAL` フラグを設定する必要があります。 プロファイラーは、 [ICorProfilerInfo:: SetEventMask メソッド](icorprofilerinfo-seteventmask-method.md) を使用してイベントフラグを設定し、 [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo メソッド](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) を使用してこの関数の実装を登録できます。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: FunctionTailcall3 関数'
 title: FunctionTailcall3 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e48243f-5de6-4bd6-a1d0-e1d248bca4b8
 topic_type:
 - apiref
-ms.openlocfilehash: dfe1a530ea009300e7cfbf002053d2e2b6034845
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 07ab49e8aeccdd82680a677c8b94e8a0c075d242
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719282"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687299"
 ---
 # <a name="functiontailcall3-function"></a>FunctionTailcall3 関数
 
@@ -37,7 +38,7 @@ void __stdcall FunctionTailcall3 (FunctionOrRemappedID functionOrRemappedID);
 
   \[in] 末尾呼び出しを実行しようとしている現在実行中の関数の識別子。
 
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `FunctionTailcall3`コールバック関数は、関数が呼び出されていることをプロファイラーに通知します。 [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3 メソッド](icorprofilerinfo3-setenterleavefunctionhooks3-method.md)を使用して、この関数の実装を登録します。  
   

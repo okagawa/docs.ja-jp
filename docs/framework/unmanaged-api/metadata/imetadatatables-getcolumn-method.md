@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: IMetaDataTables 許容:: GetColumn メソッド'
 title: IMetaDataTables::GetColumn メソッド
 ms.date: 02/25/2019
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1032055b-cabb-45c5-a50e-7e853201b175
 topic_type:
 - apiref
-ms.openlocfilehash: 270546f0270521e38cfdcae5e4d2137202c13cb1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4c4cec7216f93783b34b594330358d1e6036ed40
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711075"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99688274"
 ---
 # <a name="imetadatatablesgetcolumn-method"></a>IMetaDataTables::GetColumn メソッド
 
@@ -51,7 +52,7 @@ HRESULT GetColumn (
  `pVal`  
  入出力セル内の値へのポインター。  
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 によって返される値の interpretion は、 `pVal` 列の型によって異なります。 列の型は、 [GetColumnInfo](imetadatatables-getcolumninfo-method.md)を呼び出すことによって決定できます。
 
@@ -59,7 +60,7 @@ HRESULT GetColumn (
 - また、8ビットまたは16ビットの値を完全な32ビット値に自動的に変換します。
 - *ヒープ* 型の列の場合、返される *pVal* は、対応するヒープのインデックスになります。
 
-| 列の型              | pVal を含む | コメント                          |
+| 列の型              | pVal を含む | 解説                          |
 |--------------------------|---------------|-----------------------------------|
 | `0`..`iRidMax`<br>(0.. 63)  | mdToken     | *pVal* には完全なトークンが含まれます。 関数は、自動的に Rid を完全なトークンに変換します。 |
 | `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | mdToken | 返されると、 *pVal* には完全なトークンが含まれます。 関数は、CodedToken を完全なトークンに自動的に圧縮解除します。 |

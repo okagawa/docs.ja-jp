@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo:: SetEventMask メソッド'
 title: ICorProfilerInfo::SetEventMask メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44bc0f56-32fa-491e-a62d-52fc96d48125
 topic_type:
 - apiref
-ms.openlocfilehash: 9d319b6523b2c2a1bcc5cb6ea7a28efa67d898e8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e389d25abfecfc9a5dec8834e412fe618324e311
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720947"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687195"
 ---
 # <a name="icorprofilerinfoseteventmask-method"></a>ICorProfilerInfo::SetEventMask メソッド
 
@@ -38,7 +39,7 @@ HRESULT SetEventMask(
  `dwEvents`  
  [in] イベントのカテゴリを指定する 4 バイトの値。 各ビットは、異なる性能、動作、またはイベントの型を制御します。 ビットは、 [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md) 列挙体に記述されています。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このメソッドではなく、 [SetEventMask2](icorprofilerinfo5-seteventmask2-method.md) メソッドを呼び出す必要があります。 メソッドは `SetEventMask` 引き続きサポートされますが、 [SetEventMask2](icorprofilerinfo5-seteventmask2-method.md) には追加機能が用意されています。  

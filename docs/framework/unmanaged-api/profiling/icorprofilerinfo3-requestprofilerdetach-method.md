@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo3:: RequestProfilerDetach メソッド'
 title: ICorProfilerInfo3::RequestProfilerDetach メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea102e62-0454-4477-bcf3-126773acd184
 topic_type:
 - apiref
-ms.openlocfilehash: 2ea39c94a5a0f3d24d4123d6405115ac75105e26
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6d37c6df823aaebe4209e45cd459a8815a39852f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721583"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687039"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>ICorProfilerInfo3::RequestProfilerDetach メソッド
 
@@ -51,7 +52,7 @@ HRESULT RequestProfilerDetach(
 |CORPROF_E_RUNTIME_UNINITIALIZED|マネージド アプリケーションでランタイムがまだ初期化されていません。 (つまり、ランタイムが完全に読み込まれていません)。このエラーコードは、プロファイラーコールバックの [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) メソッド内でデタッチが要求された場合に返されることがあります。|  
 |CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT|サポートされていないタイミングで `RequestProfilerDetach` が呼び出されました。 このエラーは、メソッドがマネージスレッドで呼び出されたが、 [ICorProfilerCallback](icorprofilercallback-interface.md) メソッド内、またはガベージコレクションを許容できない [ICorProfilerCallback](icorprofilercallback-interface.md) メソッド内から呼び出されなかった場合に発生します。 詳細については、「 [HRESULT CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](corprof-e-unsupported-call-sequence-hresult.md)」を参照してください。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  デタッチ プロシージャの実行中に、デタッチ スレッド (プロファイラーのデタッチのために作成されたスレッド) は、すべてのスレッドがプロファイラーのコードを終了したかどうかを時々チェックします。 プロファイラーは、退避が終了するまでの予想時間を、`dwExpectedCompletionMilliseconds` パラメーターを介して提供する必要があります。 使用に適した値は、特定の `ICorProfilerCallback*` メソッド内でプロファイラーが使う通常の時間です。この値は、プロファイラーが使うと想定される最大時間の半分未満にしないでください。  
   

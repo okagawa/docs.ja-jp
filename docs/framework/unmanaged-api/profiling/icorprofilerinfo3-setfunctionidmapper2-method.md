@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo3:: SetFunctionIDMapper2 メソッド'
 title: ICorProfilerInfo3::SetFunctionIDMapper2 メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8cdb1188-952a-4ba8-9f05-bfebc18cdd29
 topic_type:
 - apiref
-ms.openlocfilehash: 26c26cf204f1a2743f46cfcfdfadbf2c3e3df38e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4847d3bd7b8bf6142da0f32c3558016b2c758087
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721570"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99686987"
 ---
 # <a name="icorprofilerinfo3setfunctionidmapper2-method"></a>ICorProfilerInfo3::SetFunctionIDMapper2 メソッド
 
@@ -37,14 +38,14 @@ HRESULT SetFunctionIDMapper2(
 ## <a name="parameters"></a>パラメーター  
 
  `pFunc`  
- から[FunctionIDMapper2](functionidmapper2-function.md) `FunctionID` 値を代替値にマップするために呼び出される FunctionIDMapper2 実装へのポインター。  
+ から[](functionidmapper2-function.md) `FunctionID` 値を代替値にマップするために呼び出される FunctionIDMapper2 実装へのポインター。  
   
  `clientData`  
  から現在のランタイムによって行われたすべての [FunctionIDMapper2](functionidmapper2-function.md) 関数呼び出しに渡されるポインター。 プロファイラーはこの情報を使用して、ランタイム間を明確に区別できます。  
   
 ## <a name="return-value"></a>戻り値  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  FunctionID 値の代替手段は、 [FunctionLeave3WithInfo](icorprofilerinfo3-setenterleavefunctionhooks3-method.md)または[FunctionTailcall3WithInfo](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)メソッドによって指定されたプロファイラーの関数の開始/終了フック ([FunctionEnter3](functionenter3-function.md)、 [FunctionLeave3](functionleave3-function.md)、 [FunctionTailcall3](functiontailcall3-function.md)、 [FunctionEnter3WithInfo](functionenter3withinfo-function.md)、 [SetEnterLeaveFunctionHooks3](functionleave3withinfo-function.md)、および[SetEnterLeaveFunctionHooks3WithInfo](functiontailcall3withinfo-function.md)) に渡されます。  
   

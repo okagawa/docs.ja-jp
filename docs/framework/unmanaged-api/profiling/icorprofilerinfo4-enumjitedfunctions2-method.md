@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo4:: EnumJITedFunctions2 メソッド'
 title: ICorProfilerInfo4::EnumJITedFunctions2 メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 40e9a1be-9bd2-4fad-9921-34a84b61c1e3
 topic_type:
 - apiref
-ms.openlocfilehash: 2a6ddaef7b64427f8349abedbbd85b4d82a0b88c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3740236cfe2bc7ecc6cd3bbeb3345c7510dd159f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95697793"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99686948"
 ---
 # <a name="icorprofilerinfo4enumjitedfunctions2-method"></a>ICorProfilerInfo4::EnumJITedFunctions2 メソッド
 
@@ -37,7 +38,7 @@ HRESULT EnumJITedFunctions([out] ICorProfilerFunctionEnum** ppEnum);
  `ppEnum`  
  入出力 [ICorProfilerFunctionEnum](icorprofilerfunctionenum-interface.md) 列挙子へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドは `JITCompilation` 、 [ICorProfilerCallback:: JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md) メソッドなどのコールバックと重複する場合があります。 返される列挙体には、フィールドの値が含まれ `COR_PRF_FUNCTION::reJitId` ます。 このメソッドで置き換えられる [ICorProfilerInfo3:: EnumJITedFunctions](icorprofilerinfo3-enumjitedfunctions-method.md) メソッドでは、 `COR_PRF_FUNCTION::reJitId` フィールドが常に0に設定されているため、JIT 再コンパイルされた id は列挙されません。 `ICorProfilerInfo4::EnumJITedFunctions`フィールドが適切に設定されているため、メソッドは JIT 再コンパイルされた id を列挙し `COR_PRF_FUNCTION::reJitId` ます。 [ICorProfilerInfo4:: EnumJITedFunctions2](icorprofilerinfo4-enumjitedfunctions2-method.md)メソッドではガベージコレクションをトリガーできるのに対し、 [ICorProfilerInfo3:: EnumJITedFunctions メソッド](icorprofilerinfo3-enumjitedfunctions-method.md)ではトリガーされないことに注意してください。  詳細については、「 [HRESULT CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](corprof-e-unsupported-call-sequence-hresult.md)」を参照してください。  
   

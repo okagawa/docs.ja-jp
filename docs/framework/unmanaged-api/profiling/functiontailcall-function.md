@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: FunctionTailcall 関数'
 title: FunctionTailcall 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66347e03-9a97-41e8-8f9d-89b80803f7b5
 topic_type:
 - apiref
-ms.openlocfilehash: 02bc6f4bbb6754bd160fe2694f27563908f3a759
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8da3efde7d925fdb02232ca98662f8d6a6fd0adf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722220"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687312"
 ---
 # <a name="functiontailcall-function"></a>FunctionTailcall 関数
 
@@ -42,7 +43,7 @@ void __stdcall FunctionTailcall (
 
   \[in] 末尾呼び出しを実行しようとしている現在実行中の関数の識別子。
 
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  Tail 呼び出しの対象となる関数は、現在のスタックフレームを使用し、末尾呼び出しを行った関数の呼び出し元に直接戻ります。 これは、tail 呼び出しの対象である関数に対して [Functionleave](functionleave-function.md) コールバックが発行されないことを意味します。  
   

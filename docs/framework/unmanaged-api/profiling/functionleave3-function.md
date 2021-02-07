@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: FunctionLeave3 関数'
 title: FunctionLeave3 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5d798088-7992-48a0-ae55-d2a7ee31913f
 topic_type:
 - apiref
-ms.openlocfilehash: 8eaf36579bb82d66ff356aa68afc38c70d7eaca3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9da68ffa2c54ada1437b3bef8bd6324c0791d610
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720387"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687455"
 ---
 # <a name="functionleave3-function"></a>FunctionLeave3 関数
 
@@ -37,7 +38,7 @@ void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);
 
   \[in] コントロールが返される関数の識別子。
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `FunctionLeave3`コールバック関数は、関数が呼び出されていることをプロファイラーに通知しますが、戻り値の検査はサポートしていません。 [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3 メソッド](icorprofilerinfo3-setenterleavefunctionhooks3-method.md)を使用して、この関数の実装を登録します。  
   

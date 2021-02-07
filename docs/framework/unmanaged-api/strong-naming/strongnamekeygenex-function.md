@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: StrongNameKeyGenEx 関数'
 title: StrongNameKeyGenEx 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36bd10b9-9857-45f3-8d3b-0da091d6169e
 topic_type:
 - apiref
-ms.openlocfilehash: f28ee5767997240018d182b8303e4f65be81c702
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b6c103d16cac1b4668e4b478a0947970b5b44a0b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95708544"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99686818"
 ---
 # <a name="strongnamekeygenex-function"></a>StrongNameKeyGenEx 関数
 
@@ -64,7 +65,7 @@ BOOLEAN StrongNameKeyGenEx (
 
  `true` 正常に完了した場合は。それ以外の場合は `false` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  .NET Framework バージョン1.0 および1.1 では、 `dwKeySize` 厳密な名前でアセンブリに署名するには1024ビットが必要です。バージョン2.0 では、2048ビットキーのサポートが追加されます。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataImport2:: GetVersionString メソッド'
 title: IMetaDataImport2::GetVersionString メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 308183ee-fd44-4432-9d86-ef00d181b49b
 topic_type:
 - apiref
-ms.openlocfilehash: 3e62b1177c0161883ad03086723cc43b71292df5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6f7e296607dc3167936c69d52a8baae4f5555b88
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702564"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99688560"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>IMetaDataImport2::GetVersionString メソッド
 
@@ -47,7 +48,7 @@ HRESULT GetVersionString (
  `pccBufSize`  
  入出力配列内で返された、null 終端文字を含むワイド文字の数 `pwzBuf` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  メソッドは、 `GetVersionString` 現在のメタデータスコープの組み込みバージョンを取得します。 スコープが一度も保存されていない場合は、ビルドされたバージョンがないため、空の文字列が返されます。  
   

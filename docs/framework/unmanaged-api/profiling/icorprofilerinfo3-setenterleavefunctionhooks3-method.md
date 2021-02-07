@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3 メソッド'
 title: ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f0621465-b84f-40ab-a4e5-56a7abc776a7
 topic_type:
 - apiref
-ms.openlocfilehash: a7272d55771620db129125ce543d12d19a0b4dfb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c741054c50fb74afe79f10607e24424a07d2f8c5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95697845"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687026"
 ---
 # <a name="icorprofilerinfo3setenterleavefunctionhooks3-method"></a>ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 メソッド
 
@@ -46,7 +47,7 @@ HRESULT SetEnterLeaveFunctionHooks3(
  `pFuncTailcall3`  
  からコールバックとして使用される実装へのポインター `FunctionTailcall3` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  [FunctionEnter3](functionenter3-function.md)、 [FunctionLeave3](functionleave3-function.md)、および [FunctionTailcall3](functiontailcall3-function.md) フックは、スタックフレームと引数検査を提供しません。 この情報にアクセスするには、 `COR_PRF_ENABLE_FUNCTION_ARGS` 、 `COR_PRF_ENABLE_FUNCTION_RETVAL` 、および/または  `COR_PRF_ENABLE_FRAME_INFO` フラグを設定する必要があります。 プロファイラーは、 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) メソッドを使用してイベントフラグを設定し、 [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) メソッドを使用してこの関数の実装を登録できます。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataInfo:: GetFileMapping メソッド'
 title: IMetaDataInfo::GetFileMapping メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2868dfec-c992-4606-88bb-a8e0b6b18271
 topic_type:
 - apiref
-ms.openlocfilehash: 8823f3cc016072d3f20100c29532459da5e97492
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 82a1a23c50a4d8340804f66966933fc6a11e0f8c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682391"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99688482"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping メソッド
 
@@ -55,7 +56,7 @@ HRESULT GetFileMapping (
 |`E_INVALIDARG`|引数の値として NULL が渡されました。|  
 |`COR_E_NOTSUPPORTED`|CLR 実装では、メモリ領域に関する情報を提供できません。 これが発生する理由としては次のようなことが考えられます。<br /><br /> -メタデータスコープがまたはフラグで開かれました `ofWrite` `ofCopyMemory` 。<br />-フラグなしでメタデータスコープが開かれました `ofReadOnly` 。<br />- [IMetaDataDispenser:: OpenScopeOnMemory](imetadatadispenser-openscopeonmemory-method.md) メソッドは、ファイルのメタデータ部分のみを開くために使用されました。<br />-ファイルは、ポータブル実行可能 (PE) ファイルではありません。 **注:**  これらの条件は CLR の実装によって異なり、CLR の将来のバージョンでは緩和される可能性があります。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  が指すメモリ `ppvData` は、基になるメタデータスコープが開いている間のみ有効です。  
   

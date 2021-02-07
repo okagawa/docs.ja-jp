@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo4:: GetCodeInfo3 メソッド'
 title: ICorProfilerInfo4::GetCodeInfo3 メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb8c105e-4d9a-4684-8c05-ed6909cc1b8c
 topic_type:
 - apiref
-ms.openlocfilehash: 44454b87bb656d2a4ad6e597ae001f64222b905f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6bc2beb291101257448ab58ac9a93362005fecbe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95697767"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99686828"
 ---
 # <a name="icorprofilerinfo4getcodeinfo3-method"></a>ICorProfilerInfo4::GetCodeInfo3 メソッド
 
@@ -55,7 +56,7 @@ HRESULT GetCodeInfo3(
  `codeInfos`  
  [out] 呼び出し元が提供したバッファー。 メソッドから制御が戻った後で、それぞれがネイティブ コードのブロックを記述する `COR_PRF_CODE_INFO` の構造体の配列が含まれます。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `GetCodeInfo3`メソッドは、指定された IP アドレスを含む関数の JIT 再コンパイルされた ID を取得する点を除いて、 [GetCodeInfo2](icorprofilerinfo2-getcodeinfo2-method.md)に似ています。  
   

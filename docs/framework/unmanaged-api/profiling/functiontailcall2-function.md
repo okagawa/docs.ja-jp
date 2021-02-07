@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: FunctionTailcall2 関数'
 title: FunctionTailcall2 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-ms.openlocfilehash: e1cd3ef78d303aaa325699e1bcdec95f077fef21
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 03547537d43a76f26d6946666589f38ca4e02ec4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703981"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687429"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 関数
 
@@ -51,7 +52,7 @@ void __stdcall FunctionTailcall2 (
 
   プロファイラーは、これを [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) メソッドの実行エンジンに渡すことができる不透明なハンドルとして処理する必要があります。
 
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  Tail 呼び出しの対象となる関数は、現在のスタックフレームを使用し、末尾呼び出しを行った関数の呼び出し元に直接戻ります。 つまり、 [FunctionLeave2](functionleave2-function.md) コールバックは、末尾呼び出しのターゲットである関数に対しては発行されません。  
   

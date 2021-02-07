@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「サービスフレームワーク」を参照してください。
 title: サービス フレームワーク
 ms.date: 03/30/2017
 ms.assetid: 75f60b87-f80e-4377-ba7c-8e6becaa2b28
-ms.openlocfilehash: 1fb39f2106e027cc5d4125cfb0bc89f3e5983cec
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: aa53a6c0740c292c1f34920edabdb81f7c5a13ab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96285721"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99686141"
 ---
 # <a name="service-framework"></a>サービス フレームワーク
 
@@ -108,7 +109,7 @@ ms.locfileid: "96285721"
 |SFxErrorReflectingOnType2|指定された型の指定された属性を読み込み中にエラーが発生しました。  See InnerException for more details. (詳細については、InnerException を参照してください。)|  
 |SFxErrorSerializingBody|指定されたメッセージの本文のシリアル化中にエラーが発生しました。 See InnerException for more details. (詳細については、InnerException を参照してください。)|  
 |SFxErrorSerializingHeader|指定されたメッセージに含まれるヘッダーの 1 つのシリアル化中にエラーが発生しました。 See InnerException for more details. (詳細については、InnerException を参照してください。)|  
-|SFxExpectedIMethodCallMessage|内部エラー。 メッセージは有効な IMethodCallMessage である必要があります。|  
+|SFxExpectedIMethodCallMessage|内部エラーです。 メッセージは有効な IMethodCallMessage である必要があります。|  
 |SFxExportMustHaveType|指定された操作の指定された部分には有効な CLR 型が含まれていないため、エクスポートできません。|  
 |SFxHeaderNotUnderstood|メッセージは処理されませんでした。 指定された名前空間の指定されたヘッダーをこのメッセージの受信側で認識できませんでした。 このエラーは一般に、受信側で処理できない通信プロトコルがこのメッセージの送信側で有効になっていることを示します。 クライアントのバインディングの構成がサービスのバインディングと一致していることを確認してください。|  
 |SFxHeadersAreNotSupportedInEncoded|指定されたメッセージに、リモート プロシージャ コールでエンコードされたスタイルで使用するヘッダーを含めることはできません。|  

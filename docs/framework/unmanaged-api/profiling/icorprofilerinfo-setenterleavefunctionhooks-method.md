@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo:: SetEnterLeaveFunctionHooks メソッド'
 title: ICorProfilerInfo::SetEnterLeaveFunctionHooks メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 72399636-c219-4ffd-8ac8-39432c9d4641
 topic_type:
 - apiref
-ms.openlocfilehash: 18aed5c5314fc1057767b599c538952a1d4d6b57
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 45c161a76f3ae568da6a83a2c45acb214a327ff1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722233"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687208"
 ---
 # <a name="icorprofilerinfosetenterleavefunctionhooks-method"></a>ICorProfilerInfo::SetEnterLeaveFunctionHooks メソッド
 
@@ -46,7 +47,7 @@ HRESULT SetEnterLeaveFunctionHooks(
  `pFuncTailcall`  
  から [FunctionTailcall](functiontailcall-function.md) コールバックとして使用される実装へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  .NET Framework バージョン1.0 では、対応するコールバックを無効にするために、各関数ポインターを null にすることができます。  
   

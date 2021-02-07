@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: セキュリティ例外'
 title: セキュリティ例外
 ms.date: 03/30/2017
 ms.assetid: 76d5e5cd-e4f4-404f-9a5a-ec3522494ad8
-ms.openlocfilehash: e96c317862867b9e461eb2d13dce6ede5b30cf13
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: efa3b7e132f3f3fdc8f2cb5b7dc09614ce584fdb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348243"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99686233"
 ---
 # <a name="security-exceptions"></a>セキュリティ例外
 
@@ -27,9 +28,9 @@ ms.locfileid: "75348243"
 |BasicTokenCannotBeWrittenWithoutEncryption|基本トークンを暗号化せずに書き込むことはできません。|
 |BindingDoesNotSupportProtectionForRst|指定されたコントラクトの指定されたバインディングには SecureConversation が構成されていますが、この認証モードでは、ネゴシエーションに必要な要求/応答ベースの整合性と機密性を実現できません。|
 |BindingDoesNotSupportWindowsIdenityForImpersonation|自動的に偽装を行うには指定されたコントラクト操作に Windows ID が必要です。 呼び出し元を表す Windows ID が、指定されたコントラクトの指定されたバインディングによって提供されていません。|
-|CachedNegotiationStateQuotaReached|容量が指定された制限に達したため、サービスがネゴシエーションの状態をキャッシュできません。 要求を再試行してください。|
+|CachedNegotiationStateQuotaReached|容量が指定された制限に達したため、サービスがネゴシエーションの状態をキャッシュできません。 要求をやり直してください。|
 |CacheQuotaReached|項目を追加できません。 キャッシュの最大サイズが指定されています。|
-|CannotDetermineSPNBasedOnAddress|クライアントは、SspiNegotiation/Kerberos に使用される指定された対象アドレスの ID から、サービス プリンシパル名を特定できません。 ターゲットアドレス id は、UPN id (acmedomain\\\ alice など) または SPN id (host/bobs など) である必要があります。|
+|CannotDetermineSPNBasedOnAddress|クライアントは、SspiNegotiation/Kerberos に使用される指定された対象アドレスの ID から、サービス プリンシパル名を特定できません。 ターゲットアドレス id は、UPN id (acmedomain \\ 、alice など) または SPN id (host/bobs など) である必要があります。|
 |CannotFindCert|StoreName、StoreLocation、FindType、FindValue という検索条件で検索しましたが、X.509 証明書が見つかりません。|
 |CannotFindCertForTarget|指定された対象の StoreName、StoreLocation、FindType、FindValue という、指定された検索条件で検索しましたが、X.509 証明書が見つかりません。|
 |CannotFindCorrelationStateForApplyingSecurity|応答側の応答にセキュリティを適用するために必要な相関状態が見つかりません。|
@@ -121,7 +122,7 @@ ms.locfileid: "75348243"
 |SecurityProtocolFactoryShouldBeSetBeforeThisOperation|この操作が実行される前に、セキュリティ プロトコル ファクトリが設定されている必要があります。|
 |SecuritySessionAbortedFaultReason|セキュリティ セッションが中止されました。 これは、セッションでメッセージが長時間受信されなかったことが原因である可能性があります。|
 |SecuritySessionKeyIsStale|セッション キーを使用してアプリケーション メッセージをセキュリティで保護するには、セッション キーを更新する必要があります。|
-|SecuritySessionLimitReached|セキュリティ セッションを作成できません。 後でやり直してください。|
+|SecuritySessionLimitReached|セキュリティ セッションを作成できません。 後で再試行してください。|
 |SecuritySessionNotPending|指定された ID を持つセキュリティセッションは保留されていません。|
 |SecurityTokenParametersHasIncompatibleInclusionMode|指定されたバインディングは、互換性のないセキュリティ トークンの指定されたインクルード モードが設定されたセキュリティ トークン パラメーターを使用して構成されています。 別のセキュリティ トークンのインクルード モードを指定してください。|
 |SecurityVersionDoesNotSupportEncryptedKeyBinding|指定されたコントラクトの指定されたバインディングは、EncryptedKeys への添付されない参照をサポートしていない、互換性のないセキュリティ バージョンで構成されています。 バインディングのセキュリティ バージョンとして、指定された値以降を使用してください。|
