@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「メタデータシステムの拡張」を参照してください。
 title: メタデータ システムの拡張
 ms.date: 03/30/2017
 helpviewer_keywords:
 - extending metadata [WCF]
 ms.assetid: 8c6b3b00-61b8-4589-8fa5-546cc33719bf
-ms.openlocfilehash: 7113120a3cde6b4e6a7eb1d329da625e25996952
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e8409e29f9dc604ccc6bf399497f3d48f3bcd8f9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96272984"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685557"
 ---
 # <a name="extending-the-metadata-system"></a>メタデータ システムの拡張
 

@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: チャネルモデルの概要'
 title: チャネル モデルの概要
 ms.date: 03/30/2017
 helpviewer_keywords:
 - channel model [WCF]
 ms.assetid: 07a81e11-3911-4632-90d2-cca99825b5bd
-ms.openlocfilehash: 8a71adbc9c9b3f13cde250ff0bfbca67e9f23df9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8b22c2b957eec6e3b52a84c7a30d4a17c41293e6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262178"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685882"
 ---
 # <a name="channel-model-overview"></a>チャネル モデルの概要
 
@@ -41,7 +42,7 @@ Windows Communication Foundation (WCF) チャネルスタックは、メッセ�
   
 - <xref:System.ServiceModel.Channels.IDuplexChannel>  
   
- さらに、これらの形状には、それぞれ <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> を拡張してセッションをサポートする同等の形状があります。 これらのボタンの役割は、次のとおりです。  
+ さらに、これらの形状には、それぞれ <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> を拡張してセッションをサポートする同等の形状があります。 次のとおりです。  
   
 - <xref:System.ServiceModel.Channels.IInputSessionChannel>  
   

@@ -1,15 +1,16 @@
 ---
-title: TCP のアクティブ化
+description: TCP アクティブ化に関する詳細情報
+title: TCP アクティベーション
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: e6f40b31656746d3db37545709c4e4813a7422cf
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bfa98eff1bcab31df3e28d46e77d90456020507c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555186"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685635"
 ---
-# <a name="tcp-activation"></a>TCP のアクティブ化
+# <a name="tcp-activation"></a>TCP アクティベーション
 
 このサンプルでは、net.tcp プロトコルで通信するサービスをアクティブ化するために、Windows プロセス アクティブ化サービス (WAS) を使用してサービスをホストする方法について示します。 このサンプルは、 [はじめに](getting-started-sample.md)に基づいています。
 
@@ -151,7 +152,7 @@ Press <ENTER> to terminate client.
 
     2. [ **プログラムと機能**] を選択します。
 
-    3. [ **Windows コンポーネントの有効化または無効化] を**クリックします。
+    3. [ **Windows コンポーネントの有効化または無効化] を** クリックします。
 
     4. [ **Microsoft .NET Framework 3.0** ] ノードを展開し、[ **WINDOWS COMMUNICATION FOUNDATION の非 HTTP アクティブ化** ] 機能をオンにします。
 

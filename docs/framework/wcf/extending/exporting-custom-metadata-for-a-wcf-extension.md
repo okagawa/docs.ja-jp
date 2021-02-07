@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「WCF 拡張機能のカスタムメタデータのエクスポート」を参照してください。
 title: WCF 拡張に対するカスタム メタデータのエクスポート
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-ms.openlocfilehash: 1aad43eb59a92df9376577ba0108661a0cb9cd87
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5803dd7d2e03f9597ecac34bf38641656a9077b8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96249333"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685791"
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>WCF 拡張に対するカスタム メタデータのエクスポート
 

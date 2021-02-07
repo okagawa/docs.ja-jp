@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: セキュリティの拡張'
 title: セキュリティの拡張
 ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], extending
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
-ms.openlocfilehash: d91f4812dbccb7807be2e0780cccd1d0c38b1f40
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8dd514e16106ac5cdae072d92c7de66cefd39fe4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96273062"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685726"
 ---
 # <a name="extending-security"></a>セキュリティの拡張
 
