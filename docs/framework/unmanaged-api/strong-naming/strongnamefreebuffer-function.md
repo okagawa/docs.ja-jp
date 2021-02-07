@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: StrongNameFreeBuffer 関数'
 title: StrongNameFreeBuffer 関数
 ms.date: 03/30/2017
 api_name:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: eda21ecf-4734-4f92-aaba-9f34884385db
 topic_type:
 - apiref
-ms.openlocfilehash: d93bda046a79dbdec2195eee48fefc1e5538b2e4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fa1b1d7710a981c5284ee79d551cbf51ede285db
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732256"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736454"
 ---
 # <a name="strongnamefreebuffer-function"></a>StrongNameFreeBuffer 関数
 

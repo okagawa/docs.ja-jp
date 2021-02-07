@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IMethodMalloc インターフェイス'
 title: IMethodMalloc インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8c8ab5dc-557c-473a-82f2-6e403eca7dac
 topic_type:
 - apiref
-ms.openlocfilehash: 8eccdba75b59df505ae72d74cfcd2bc83de2b45a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6b84ac0ddb49718d24b2cad174613bc311dc509b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688173"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736960"
 ---
 # <a name="imethodmalloc-interface"></a>IMethodMalloc インターフェイス
 
@@ -34,7 +35,7 @@ ms.locfileid: "95688173"
 |------------|-----------------|  
 |[Alloc メソッド](imethodmalloc-alloc-method.md)|新しい MSIL 関数本体に指定された量のメモリを割り当てようとします。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  各アロケーターはモジュール固有であり、関数本体がモジュールのベースから正のオフセットになるようにします。 モジュールのベースを超えるメモリは貴重な場合があるため、アロケーターを使用して、関数本体にのみメモリを割り当てる必要があります。  
   

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: FailFast'
 title: FailFast
 ms.date: 03/30/2017
 ms.assetid: 4fc4e476-997b-4166-90af-8d164f775924
-ms.openlocfilehash: 3dfcd5a3eccb54f6c28ce8ac189a76abdec6fe93
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 98910dc97a8cf0c7c3b2357fbcfd0793f233ee02
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96284356"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736259"
 ---
 # <a name="failfast"></a>FailFast
 
@@ -17,7 +18,7 @@ Id: 102
   
  カテゴリ : トレース  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  FailFast が呼び出されました。 イベントには、メッセージ、スタック トレース、プロセス名、およびプロセス ID が表示されます。  
   

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「PublicKeyBlob 構造」を参照してください。
 title: PublicKeyBlob 構造体
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9240712-829c-4c8d-9a09-a6e7aa63f63a
 topic_type:
 - apiref
-ms.openlocfilehash: 42cd3cc22fbbb8eb3d5ac44544fce36650b6461f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 94c1ea3d5a41bbb8941658e87f97cd6d6336187a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705931"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736481"
 ---
 # <a name="publickeyblob-structure"></a>PublicKeyBlob 構造体
 
@@ -45,7 +46,7 @@ typedef struct {
 |`cbPublicKey`|キーの長さ (バイト単位)。|  
 |`PublicKey`|CryptoAPI によって返される形式のキー値を格納する可変長バイト配列。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `PublicKeyBlob`構造体は、公開キーと秘密キーのペアの公開キーを表すために、 [StrongNameGetPublicKey](strongnamegetpublickey-function.md)、 [StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md)、およびその他の厳密な名前関数によって使用されます。  
   

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: MessageAuthenticationFailure'
 title: MessageAuthenticationFailure
 ms.date: 03/30/2017
 ms.assetid: cde6beae-2d57-447e-8885-a1cfc66bbcbb
-ms.openlocfilehash: 0ec440f0273e58d4a4ae0ae21fec765320a7f093
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 87b0bd2aa0ee2d51e3e27e5d82c9e807a0439f82
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96245186"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736246"
 ---
 # <a name="messageauthenticationfailure"></a>MessageAuthenticationFailure
 
@@ -17,7 +18,7 @@ ID : 170
   
  カテゴリ : SecurityAudit  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、メッセージの承認に失敗したことを示します。 イベントには、サービス、アクション、クライアント ID、およびアクティビティ ID が表示されます。  
   

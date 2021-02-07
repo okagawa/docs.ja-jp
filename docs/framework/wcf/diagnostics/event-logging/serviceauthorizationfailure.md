@@ -1,13 +1,14 @@
 ---
+description: ServiceAuthorizationFailure の詳細情報
 title: ServiceAuthorizationFailure
 ms.date: 03/30/2017
 ms.assetid: a6a57896-41d5-4c05-a2fb-184d828e20c1
-ms.openlocfilehash: fbb54c6f67be6ed4f1abc1142fb3729115d7349c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1c3cd5c199906a0a19fcd6a4be579bca61c0ecce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96263348"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735973"
 ---
 # <a name="serviceauthorizationfailure"></a>ServiceAuthorizationFailure
 
@@ -17,7 +18,7 @@ Id: 168
   
  カテゴリ : SecurityAudit  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、サービスの承認に失敗したことを示します。 イベントには、サービス、アクション、クライアント ID、承認コンテキスト、アクティビティ ID、および ServiceAuthorizationManager が表示されます。  
   

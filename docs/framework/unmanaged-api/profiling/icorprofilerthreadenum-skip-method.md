@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ICorProfilerThreadEnum:: Skip メソッド'
 title: ICorProfilerThreadEnum::Skip メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: acb8b029-4a96-4ed7-ae3c-310204e5ceea
 topic_type:
 - apiref
-ms.openlocfilehash: 12b7b53c408388c21d7508f6591ead5ccf55936b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1da191980364868ed4237fccaf7495d5417705cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721180"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736896"
 ---
 # <a name="icorprofilerthreadenumskip-method"></a>ICorProfilerThreadEnum::Skip メソッド
 
@@ -47,7 +48,7 @@ HRESULT Skip (    [in] ULONG celt
 |S_OK|`celt` 要素はスキップされました。|  
 |S_FALSE|より小さい `celt` 要素がスキップされました。これは、要素がこれ以上存在しないことを示します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  この列挙子のカーソルの新しい位置は、(現在位置) + `celt` です。  
   

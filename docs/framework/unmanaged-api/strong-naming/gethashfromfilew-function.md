@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: GetHashFromFileW 関数'
 title: GetHashFromFileW 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 97c2d7a6-5376-45a1-ba65-146a249147cc
 topic_type:
 - apiref
-ms.openlocfilehash: 8038d0abc93e058e6bde897bbf2261d8f1df885a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: daebd06de02dfe936f1bdeb8697de4fe6524dce3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732324"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736550"
 ---
 # <a name="gethashfromfilew-function"></a>GetHashFromFileW 関数
 
@@ -56,7 +57,7 @@ HRESULT GetHashFromFileW (
  `pchHash`  
  入出力のサイズ (バイト単位) `pbHash` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  この関数は [GetHashFromFile](gethashfromfile-function.md)と同じですが、ファイル名の指定は ANSI ではなく Unicode である点が異なります。  
   

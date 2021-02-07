@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: GetHashFromBlob 関数'
 title: GetHashFromBlob 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: b712d862-f2d0-4b55-87d4-65bbeadef982
 topic_type:
 - apiref
-ms.openlocfilehash: d1027aea1d800bda1654b223fec992aa70efd4b7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dc5039e44440afa7a000bc61167faec0e5b6cc84
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140714"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736610"
 ---
 # <a name="gethashfromblob-function"></a>GetHashFromBlob 関数
 
 指定したハッシュ アルゴリズムを使用して、指定したメモリ アドレスにあるアセンブリのハッシュが取得されます。
 
-この関数は非推奨とされます。 代わりに[ICLRStrongName:: GetHashFromBlob](../hosting/iclrstrongname-gethashfromblob-method.md)メソッドを使用してください。
+この関数は非推奨とされます。 代わりに [ICLRStrongName:: GetHashFromBlob](../hosting/iclrstrongname-gethashfromblob-method.md) メソッドを使用してください。
 
 ## <a name="syntax"></a>構文
 
@@ -55,20 +56,20 @@ HRESULT GetHashFromBlob (
 入出力返されたハッシュバッファー。
 
 `cchHash`\
-から要求された `pbHash`の最大サイズ。
+から要求された最大サイズ `pbHash` 。
 
 `pchHash`\
-入出力返された `pbHash`のサイズ (バイト単位)。
+入出力返されたのサイズ (バイト単位) `pbHash` 。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
-**:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。
+**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。
 
 **ヘッダー:** StrongName
 
-**ライブラリ:** Mscoree.dll にリソースとして含まれています
+**ライブラリ:** MsCorEE.dll にリソースとして含まれています
 
-**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>関連項目
 

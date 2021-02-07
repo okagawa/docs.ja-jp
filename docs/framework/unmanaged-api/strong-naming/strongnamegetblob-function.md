@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: StrongNameGetBlob 関数'
 title: StrongNameGetBlob 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 15d09166-be00-4696-913f-2c1fbc7ac2e1
 topic_type:
 - apiref
-ms.openlocfilehash: 8f5cb89294004dfb1f020627ceb1edb58735f72c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 72f7ce50ce6170a23e5b24b68f911ff58bebe3bc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732282"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736441"
 ---
 # <a name="strongnamegetblob-function"></a>StrongNameGetBlob 関数
 
@@ -52,7 +53,7 @@ BOOLEAN StrongNameGetBlob (
 
  `true` 正常に完了した場合は。それ以外の場合は `false` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  関数が `StrongNameGetBlob` 正常に完了しない場合は、 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 関数を呼び出して、最後に生成されたエラーを取得します。  
   
