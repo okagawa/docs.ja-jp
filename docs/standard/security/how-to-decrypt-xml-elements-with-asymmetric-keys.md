@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: 非対称キーを使用して XML 要素を復号化する」を参照してください。'
 title: '方法: 非対称キーで XML 要素を復号化する'
 ms.date: 07/14/2020
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - XML encryption
 - decryption
 ms.assetid: dd5de491-dafe-4b94-966d-99714b2e754a
-ms.openlocfilehash: 0456c89987b37840daa1c84342528d11c6da73a4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bd3bd142aa5800efa83bc20a4b1af6d5bc61eba2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822231"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675573"
 ---
 # <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>方法: 非対称キーで XML 要素を復号化する
 

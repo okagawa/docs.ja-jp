@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「CommunicationObjectFaultReason」を参照してください。
 title: System.ServiceModel.CommunicationObjectFaultReason
 ms.date: 03/30/2017
 ms.assetid: d2530933-bfba-4b20-aba6-b1f99e97699d
-ms.openlocfilehash: 0da888104818d91b679e6d29c105627f670a9225
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 49c0ca7cbe72ceff431909abfdd48094e3d4220b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96256912"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99676639"
 ---
 # <a name="systemservicemodelcommunicationobjectfaultreason"></a>System.ServiceModel.CommunicationObjectFaultReason
 
 System.ServiceModel.CommunicationObjectFaultReason  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  例外により通信オブジェクトでエラーが発生しました。  
   
