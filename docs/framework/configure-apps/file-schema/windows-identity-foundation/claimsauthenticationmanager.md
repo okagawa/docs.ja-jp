@@ -1,14 +1,15 @@
 ---
+description: '詳細情報: <claimsAuthenticationManager>'
 title: <claimsAuthenticationManager>
 ms.date: 03/30/2017
 ms.assetid: 6d30a450-6d13-4671-81a8-77e0204500c5
 author: BrucePerlerMS
-ms.openlocfilehash: 9e099b8de486631702548b8a035a46a7e0f4eb30
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5a94861d6b2684b9f66c7d5e14f72aa419a0c66f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158475"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664250"
 ---
 # \<claimsAuthenticationManager>
 
@@ -37,7 +38,7 @@ ms.locfileid: "91158475"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |type|クラスから派生するカスタム型を指定し <xref:System.Security.Claims.ClaimsAuthenticationManager> ます。 属性を指定する方法の詳細については `type` 、「[カスタム型参照]」を参照してください。|  
   

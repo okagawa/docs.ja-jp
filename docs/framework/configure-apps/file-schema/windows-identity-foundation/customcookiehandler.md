@@ -1,14 +1,15 @@
 ---
+description: '詳細情報: <customCookieHandler>'
 title: <customCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: a03b153d-5ec6-4915-9031-6f0c3fd348be
 author: BrucePerlerMS
-ms.openlocfilehash: a8ee23ac6facaea18cd7f1820616cb9b16afa336
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6b433769c429ed4149efb324d7c4b216d6042705
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189852"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664081"
 ---
 # \<customCookieHandler>
 
@@ -39,13 +40,13 @@ ms.locfileid: "91189852"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |type|クラスから派生するカスタム型を指定し <xref:System.IdentityModel.Services.CookieHandler> ます。 属性を指定する方法の詳細については `type` 、「 [カスタム型参照](../windows-workflow-foundation/index.md)」を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
 
- None  
+ なし  
   
 ### <a name="parent-elements"></a>親要素  
   
