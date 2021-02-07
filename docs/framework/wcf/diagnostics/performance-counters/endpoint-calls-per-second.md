@@ -1,19 +1,20 @@
 ---
+description: '詳細情報: エンドポイント: 1 秒あたりの呼び出し数'
 title: 'エンドポイント : 1 秒あたりの呼び出し回数'
 ms.date: 03/30/2017
 ms.assetid: ca0fc06d-d68f-4236-bd5f-c7ff6214acdd
-ms.openlocfilehash: 3c9f9882be935474ec187e2829e8e1e58b091afa
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 10e3cb892119999225abaa8b85ea59065650795d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253155"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759576"
 ---
 # <a name="endpoint-calls-per-second"></a>エンドポイント : 1 秒あたりの呼び出し回数
 
 カウンター名 : 1 秒あたりの呼び出し  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このエンドポイントが 1 秒あたりに呼び出される回数です。  
   

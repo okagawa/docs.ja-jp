@@ -1,19 +1,20 @@
 ---
+description: '詳細情報: 1 秒あたりの失敗した呼び出し'
 title: 1 秒あたりの失敗した呼び出し
 ms.date: 03/30/2017
 ms.assetid: 81c88073-8e32-4520-a71a-2c56b71ee515
-ms.openlocfilehash: 0e69cadfdbb4e387382ba33aa9cf977e4cdb9c08
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cbff7b24d2aa457bdbe3c600109f24c9672c7ab2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96271422"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759680"
 ---
 # <a name="calls-faulted-per-second"></a>1 秒あたりの失敗した呼び出し
 
 カウンター名 : 1 秒あたりの失敗した呼び出し  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  この操作への呼び出しに失敗した回数です (1 秒あたり)。  
   

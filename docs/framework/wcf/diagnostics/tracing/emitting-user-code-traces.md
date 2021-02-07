@@ -1,19 +1,20 @@
 ---
+description: 詳細については、User-Code トレースの出力
 title: ユーザー コード トレースの出力
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: e8b2031165a83e24ba15a2fcf847a170f47e696a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0abc8a4b39979942fd291ffd9cbb96047274dab0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589293"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759511"
 ---
 # <a name="emitting-user-code-traces"></a>ユーザー コード トレースの出力
 
 Windows Communication Foundation (WCF) によって生成されたインストルメンテーションデータを収集するように構成でトレースを有効にするだけでなく、ユーザーコードでトレースをプログラムによって出力することもできます。 この方法では、インストルメンテーション データを能動的に作成でき、後でそのデータを診断目的で詳細に調べることができます。 ここでは、この方法について説明します。
 
-さらに、[トレースの拡張](../../samples/extending-tracing.md)サンプルには、次のセクションに示すすべてのコードが含まれています。
+さらに、 [トレースの拡張](../../samples/extending-tracing.md) サンプルには、次のセクションに示すすべてのコードが含まれています。
 
 ## <a name="creating-a-trace-source"></a>トレース ソースの作成
 
@@ -109,7 +110,7 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
 
 ## <a name="viewing-user-traces-in-the-service-trace-viewer-tool"></a>サービス トレース ビューアー ツールでのユーザー トレースの表示
 
-このセクションには、[サービストレースビューアーツール (svctraceviewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)を使用して表示するときに、[拡張トレース](../../samples/extending-tracing.md)サンプルを実行して生成されるトレースのスクリーンショットが含まれています。
+このセクションには、[サービストレースビューアーツール (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)を使用して表示するときに、[拡張トレース](../../samples/extending-tracing.md)サンプルを実行して生成されるトレースのスクリーンショットが含まれています。
 
 次の図では、前に作成した "要求の追加" アクティビティが左側のパネルで選択されています。 アプリケーション クライアント プログラムを構成する他の 3 つの算術演算アクティビティ (Divide、Subtract、Multiply) も表示されています。 どの要求でどのようなエラーが発生したかを明確にするため、ユーザー コードでは、操作ごとに新しいアクティビティが 1 つ定義されています。
 
@@ -131,7 +132,7 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
 
 次の図には、Calculator アクティビティと要求アクティビティ間の転送トレースに加え、1 つの要求アクティビティについて Start トレースと Stop トレースが 2 組表示されています。1 組はクライアントのトレースで、もう 1 組はサーバーのトレースです (各トレース ソースにつき 1 組)。
 
-![トレースビューアー: ユーザー&#45;コードトレースの出力](media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")作成時刻別のアクティビティの一覧 (左側のパネル) とその入れ子になったアクティビティ (右上のパネル)
+![トレースビューアー: ユーザー&#45;コードトレースの出力](media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd") 作成時刻別のアクティビティの一覧 (左側のパネル) とその入れ子になったアクティビティ (右上のパネル)
 
 クライアントがスローする原因となる例外を、サービス コードがスローする場合 (たとえば、クライアントが要求に対する応答を取得できなかった場合など)、直接的な相関関係を示すために、サービスとクライアントの両方の警告メッセージまたはエラー メッセージは、同じアクティビティ内に発生します。 次の図では、サービスは "この要求をユーザーコードで処理できません" という状態を示す例外をスローします。 また、クライアントは、"内部エラーのため、サーバーは要求を処理できませんでした。" というメッセージを示す例外をスローします。
 

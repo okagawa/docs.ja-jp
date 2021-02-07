@@ -1,19 +1,20 @@
 ---
+description: '詳細については、「サービス: セキュリティ検証と認証エラー」を参照してください。'
 title: 'サービス : セキュリティ検証と認証エラー'
 ms.date: 03/30/2017
 ms.assetid: 55c98268-b1ad-459d-851b-25ef52248187
-ms.openlocfilehash: d89419d7d579d29a1c57370d61eefb8b26333a40
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8938c74e706526a02bf2ea5885951d067d6ebae9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96236859"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759485"
 ---
 # <a name="service-security-validation-and-authentication-failures"></a>サービス : セキュリティ検証と認証エラー
 
 カウンター名 : セキュリティ検証と認証エラー  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このカウンターは、"承認されていないセキュリティ呼び出し" カウンターでカウントの対象とならないセキュリティ上の問題が原因でメッセージが拒否されるたびにインクリメントされます。 この問題には、次のようなものがあります。  
   

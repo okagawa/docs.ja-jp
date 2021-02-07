@@ -1,19 +1,20 @@
 ---
+description: '詳細情報: 1 秒あたりのキュー破棄メッセージ数'
 title: 1 秒あたりの破棄されたメッセージのキュー
 ms.date: 03/30/2017
 ms.assetid: 74540f52-8762-4147-b5ba-e171180515a3
-ms.openlocfilehash: 81ba15965676ba7ffe5ca2aaac5e1d0e94e27962
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e5959b76795514dec03d6ae4d08ac248994777fa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96266039"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759550"
 ---
 # <a name="queue-dropped-messages-per-second"></a>1 秒あたりの破棄されたメッセージのキュー
 
 カウンター名: 1 秒あたりの破棄されたメッセージのキュー。  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このサービスでキューに置かれたトランスポートによって 1 秒あたりに破棄されたメッセージの数です。  
   

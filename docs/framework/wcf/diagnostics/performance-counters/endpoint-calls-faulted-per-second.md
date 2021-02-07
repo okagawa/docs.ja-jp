@@ -1,19 +1,20 @@
 ---
+description: '詳細情報: エンドポイント: 1 秒あたりの失敗した呼び出し'
 title: 'エンドポイント : 1 秒あたりの失敗した呼び出し'
 ms.date: 03/30/2017
 ms.assetid: 9840fc0a-0e4d-4638-96fd-40e3ab9e4667
-ms.openlocfilehash: e69e37de9605afd4806fd628088948d0d69291da
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 160680f215dbb3eea5ad15c756c7dc68a0629a90
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250165"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759615"
 ---
 # <a name="endpoint-calls-faulted-per-second"></a>エンドポイント : 1 秒あたりの失敗した呼び出し
 
 カウンター名 : 1 秒あたりの失敗した呼び出し。  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このエンドポイントの呼び出しのうち、エラーを返したものの 1 秒あたりの回数です。  
   

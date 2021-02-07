@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「SecurityPendingServerSessionClosed」を参照してください。
 title: System.ServiceModel.Security.SecurityPendingServerSessionClosed
 ms.date: 03/30/2017
 ms.assetid: 1fa7098b-1724-4524-ad91-be7592951f69
-ms.openlocfilehash: 150bf7967f9b8e653d3b65d6ee9ab77597fb6877
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1bec54d66eaed61ee286004a135f79a0c12d648d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291519"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99758861"
 ---
 # <a name="systemservicemodelsecuritysecuritypendingserversessionclosed"></a>System.ServiceModel.Security.SecurityPendingServerSessionClosed
 
 System.ServiceModel.Security.SecurityPendingServerSessionClosed  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  保留中のセキュリティ セッションはサーバーによって閉じられました。  
   

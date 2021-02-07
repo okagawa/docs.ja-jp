@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「SecurityServerSessionCloseResponseReceived」を参照してください。
 title: System.ServiceModel.Security.SecurityServerSessionCloseResponseReceived
 ms.date: 03/30/2017
 ms.assetid: 899d663e-6a6d-49e9-9480-182b6860ae17
-ms.openlocfilehash: aaf38021f0d051320e2bb4e696a3bcbb568e6e24
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a2ae82333907197454e36d90b88d9d61207e827a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291441"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99758783"
 ---
 # <a name="systemservicemodelsecuritysecurityserversessioncloseresponsereceived"></a>System.ServiceModel.Security.SecurityServerSessionCloseResponseReceived
 
 System.ServiceModel.Security.SecurityServerSessionCloseReceived  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  サーバーのセキュリティ セッションでクライアントからの終了メッセージを受信しました。  
   

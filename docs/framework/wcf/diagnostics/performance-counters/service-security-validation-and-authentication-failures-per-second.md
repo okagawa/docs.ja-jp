@@ -1,19 +1,20 @@
 ---
+description: '詳細については、「サービス: 1 秒あたりのセキュリティ検証と認証エラー」を参照してください。'
 title: 'サービス : 1 秒あたりのセキュリティ検証と認証エラー'
 ms.date: 03/30/2017
 ms.assetid: 4af18009-e778-490b-9ba6-e76485285830
-ms.openlocfilehash: f66e6b90622cf181229938bc4fd877a98cd23a48
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8c0baedab3335031ed1737e0e4cecff7febc2944
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96236885"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759524"
 ---
 # <a name="service-security-validation-and-authentication-failures-per-second"></a>サービス : 1 秒あたりのセキュリティ検証と認証エラー
 
 カウンター名 : 1 秒あたりのセキュリティ検証と認証エラー  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このカウンターは、"承認されていないセキュリティ呼び出し" カウンターでカウントの対象とならないセキュリティ上の問題が原因でメッセージが拒否されるたびにインクリメントされます。 この問題には、次のようなものがあります。  
   
