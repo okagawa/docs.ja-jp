@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IMapToken:: Map メソッド'
 title: IMapToken::Map メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b9b4bf2f-1098-43d6-9619-a99b4bda1940
 topic_type:
 - apiref
-ms.openlocfilehash: 51cca1ab61027090b0d22781dfd740038bc9372d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: da78f22e944a0e4ec25adcd7cdf97b69131a6612
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718203"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99706735"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map メソッド
 
@@ -43,7 +44,7 @@ HRESULT Map (
  `tkEmit`  
  から出力されたコードオブジェクトを表すメタデータトークン。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  マージ中にトークンの再マップが行われると、元のトークンはインポートされた (ソース) メタデータスコープ内でスコープが設定され、新しいトークンのスコープは、出力された (ターゲット) メタデータスコープに設定されます。  
   

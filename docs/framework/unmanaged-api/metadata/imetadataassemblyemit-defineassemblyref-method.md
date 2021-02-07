@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataAssemblyEmit::D efineAssemblyRef メソッド'
 title: IMetaDataAssemblyEmit::DefineAssemblyRef メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b284b18-0084-4b3a-912a-5ebe9f29c88b
 topic_type:
 - apiref
-ms.openlocfilehash: ba53ff30f0b6d0ae7fed7db422b7c0a242204a2c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e3c3acce77e6b0cb2943d66f3477898c90ea6251
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95689434"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99706709"
 ---
 # <a name="imetadataassemblyemitdefineassemblyref-method"></a>IMetaDataAssemblyEmit::DefineAssemblyRef メソッド
 
@@ -56,7 +57,7 @@ HRESULT DefineAssemblyRef (
  から参照されたアセンブリのバージョン、プラットフォーム、およびロケール情報を格納している ASSEMBLYMETADATA インスタンス。  
   
  `pbHashValue`  
- から参照アセンブリに関連付けられているハッシュデータ。 省略可能。  
+ から参照アセンブリに関連付けられているハッシュデータ。 任意。  
   
  `cbHashValue`  
  からのサイズ (バイト単位) `pbHashValue` 。  
@@ -67,7 +68,7 @@ HRESULT DefineAssemblyRef (
  `pmdar`  
  入出力返された `AssemblyRef` メタデータトークンへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `AssemblyRef`このアセンブリが参照するアセンブリごとに1つのメタデータ構造を定義する必要があります。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ICorProfilerCallback:: Initialize メソッド'
 title: ICorProfilerCallback::Initialize メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dc5fab2a-4b45-4b12-8727-b89c9915f23e
 topic_type:
 - apiref
-ms.openlocfilehash: 26df1599af247bd08d3702d4ef3c5aa2f648620c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b3ff579dee384b331450aa54aace39890febfe30
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720374"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705942"
 ---
 # <a name="icorprofilercallbackinitialize-method"></a>ICorProfilerCallback::Initialize メソッド
 
@@ -39,7 +40,7 @@ HRESULT Initialize(
 
   \[in) プロファイラーが[ICorProfilerInfo](icorprofilerinfo-interface.md)インターフェイスポインターを照会する必要がある[IUnknown](/cpp/atl/iunknown)インターフェイスへのポインター。  
 
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `Initialize`呼び出しは、変更できないコールバックを有効 (または無効) にする唯一の機会です。 呼び出しによってコールバックが有効になると `Initialize` 、後で [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md)を使用して無効にすることはできません。 [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md)列挙の COR_PRF_MONITOR_IMMUTABLE 値は、どのイベントが不変であるかを示します。  
   

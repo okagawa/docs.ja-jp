@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ICorProfilerCallback:: COMClassicVTableDestroyed メソッド'
 title: ICorProfilerCallback::COMClassicVTableDestroyed メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 29da20ca-bf39-4356-8099-d9c3ac3423a9
 topic_type:
 - apiref
-ms.openlocfilehash: aa02b4def015d5badfd0003e08bea5289fe58e17
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 91ed5bb65d3a64f1f85a09a710b507974f51c79b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700185"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99706384"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed メソッド
 
@@ -52,7 +53,7 @@ HRESULT COMClassicVTableDestroyed(
 
   \[) vtable の先頭へのポインター。
 
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  プロファイラーは、このメソッドの実装でブロックしないでください。スタックがガベージコレクションを許可する状態にならないため、プリエンプティブガベージコレクションを有効にすることはできません。 プロファイラーがここでブロックし、ガベージコレクションを実行しようとすると、このコールバックが戻るまでランタイムはブロックします。  
   

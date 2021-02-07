@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataEmit:: SetClassLayout メソッド'
 title: IMetaDataEmit::SetClassLayout メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2576c449-388d-4434-a0e1-9f53991e11b6
 topic_type:
 - apiref
-ms.openlocfilehash: ee10907fb7f5d90db1bdce845272cd3de38e35a6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e0ce8e93137b9a32a13ca86ead539385523fa8a3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718697"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99706605"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout メソッド
 
@@ -51,7 +52,7 @@ HRESULT SetClassLayout (
  `ulClassSize`  
  からクラスのサイズ (バイト単位)。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  クラスを最初に定義するには、 [IMetaDataEmit::D efineTypeDef](imetadataemit-definetypedef-method.md) メソッドを呼び出し、クラスのフィールドに対して3つのレイアウト (automatic、シーケンシャル、explicit) のいずれかを指定します。 通常は、自動レイアウトを使用し、フィールドをレイアウトする最適な方法をランタイムが選択できるようにします。  
   

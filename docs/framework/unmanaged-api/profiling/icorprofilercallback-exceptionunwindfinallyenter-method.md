@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback:: ExceptionUnwindFinallyEnter メソッド'
 title: ICorProfilerCallback::ExceptionUnwindFinallyEnter メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c7fab986-b69f-4ec8-b7b7-91dcfc239cd0
 topic_type:
 - apiref
-ms.openlocfilehash: 46e1fccc40606e10d8ff4083c7fe51da711c039a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e4a701597b318a387405a152f2c3b4758d616eb0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686125"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99706085"
 ---
 # <a name="icorprofilercallbackexceptionunwindfinallyenter-method"></a>ICorProfilerCallback::ExceptionUnwindFinallyEnter メソッド
 
@@ -39,7 +40,7 @@ HRESULT ExceptionUnwindFinallyEnter(
 
   \[in] 句を含む関数の ID `finally` 。
 
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  プロファイラーは、このメソッドの実装でブロックしないでください。スタックがガベージコレクションを許可する状態にならないため、プリエンプティブガベージコレクションを有効にすることはできません。 プロファイラーがここでブロックし、ガベージコレクションを実行しようとすると、このコールバックが戻るまでランタイムはブロックします。  
   

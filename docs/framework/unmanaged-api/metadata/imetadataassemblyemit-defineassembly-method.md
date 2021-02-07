@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataAssemblyEmit::D efineAssembly メソッド'
 title: IMetaDataAssemblyEmit::DefineAssembly メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0637d66-74bf-4f2d-8137-9ff838bccece
 topic_type:
 - apiref
-ms.openlocfilehash: 6d783e27c60db7381025f3b2382728e3996323ae
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cd53a4398f49ca96072fc5f5b6dcac35a94bdc59
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725730"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99706748"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>IMetaDataAssemblyEmit::DefineAssembly メソッド
 
@@ -63,7 +64,7 @@ HRESULT DefineAssembly (
  `pmda`  
  入出力メタデータトークンへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `Assembly`マニフェスト内で定義できるメタデータ構造は1つだけです。  
   

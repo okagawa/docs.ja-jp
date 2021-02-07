@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: COR_PRF_MODULE_FLAGS 列挙型'
 title: COR_PRF_MODULE_FLAGS 列挙体
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7bc3a938-0df1-4739-9ff1-89cff454b704
 topic_type:
 - apiref
-ms.openlocfilehash: 7d9e187d4aede772b7a002359cd3bdd350aaec77
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0be5d97bfb6bea069d039d175fc554e0ef59993d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682147"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99706439"
 ---
 # <a name="cor_prf_module_flags-enumeration"></a>COR_PRF_MODULE_FLAGS 列挙体
 
@@ -52,7 +53,7 @@ typedef enum
 |COR_PRF_MODULE_FLAT_LAYOUT|メモリ内のモジュールのレイアウトはフラットであり、マップされていません。 モジュールにこのビットが設定されている場合、移植可能な実行可能 (PE) ファイルヘッダーから情報を直接読み取るプロファイラーは、ヘッダーの相対仮想アドレス (RVAs) を解釈する際に注意する必要があります。|  
 |COR_PRF_MODULE_WINDOWS_RUNTIME|Windows ランタイム content type フラグが、このモジュールのアセンブリのメタデータで設定されています。 これは、すべての Windows メタデータ (winmd) モジュールに当てはまります。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  COR_PRF_MODULE_FLAGS のビットは、 `pdwModuleFlags` [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md) メソッドの output パラメーターでプロファイラーに返されます。 複数のフラグの組み合わせが可能ですが、すべての組み合わせが可能であるとは限りません。  
   
