@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <serviceTimeouts>'
 title: <serviceTimeouts>
 ms.date: 03/30/2017
 ms.assetid: ada536cf-97dc-4cd7-89ec-ed1466c1c557
-ms.openlocfilehash: 92d3de42daf6f7baf288e3e74242381a60e76618
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: bc9ef99078f8c6fa3b441604e14df928eec054e1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153600"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682727"
 ---
 # \<serviceTimeouts>
 
@@ -26,7 +27,7 @@ ms.locfileid: "91153600"
 <serviceTimeouts transactionTimeout="TimeSpan" />
 ```  
   
-## <a name="type"></a>種類  
+## <a name="type"></a>Type  
 
  `Type`  
   
@@ -36,7 +37,7 @@ ms.locfileid: "91153600"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |`transactionTimeout`|クライアントからサーバーへのトランザクションが発生するまでに待機できる時間を指定する <xref:System.TimeSpan> 値。 既定値は "00:00:00" です。|  
   

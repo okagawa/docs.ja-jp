@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <serviceAuthorization> 要素'
 title: <serviceAuthorization> 要素
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
-ms.openlocfilehash: f476f754a340f52859be2986e42754cba0ef3771
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ee447f487027ed12f829dd0fd364556ce095d7d3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71834023"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682931"
 ---
 # <a name="serviceauthorization-element"></a>\<serviceAuthorization> 要素
 
@@ -42,19 +43,19 @@ ms.locfileid: "71834023"
 |属性|説明|  
 |---------------|-----------------|  
 |impersonateCallerForAllOperations|サービスのすべての操作が呼び出し元を偽装するかどうかを指定するブール値。 既定値は、`false` です。<br /><br /> 特定のサービス操作が呼び出し元を偽装する場合、スレッド コンテキストは、指定されたサービスを実行する前に呼び出し元のコンテキストに切り替えられます。|  
-|principalPermissionMode|サーバーでの操作を実行するために使用されるプリンシパルを設定します。 次の値があります。<br /><br /> -なし<br />-UseWindowsGroups<br />-UseAspNetRoles<br />-カスタム<br /><br /> 既定値は UseWindowsGroups です。 値は、<xref:System.ServiceModel.Description.PrincipalPermissionMode> 型です。 この属性の使用方法の詳細については、「[方法: PrincipalPermissionAttribute クラスを使用してアクセスを制限する](../../../wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)」を参照してください。|  
+|principalPermissionMode|サーバーでの操作を実行するために使用されるプリンシパルを設定します。 次の値があります。<br /><br /> -なし<br />-UseWindowsGroups<br />-UseAspNetRoles<br />-カスタム<br /><br /> 既定値は UseWindowsGroups です。 値は、<xref:System.ServiceModel.Description.PrincipalPermissionMode> 型です。 この属性の使用方法の詳細については、「 [方法: PrincipalPermissionAttribute クラスを使用してアクセスを制限する](../../../wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)」を参照してください。|  
 |roleProviderName|Windows Communication Foundation (WCF) アプリケーションにロール情報を提供するロール プロバイダーの名前を指定する文字列。 既定値は空の文字列です。|  
 |ServiceAuthorizationManagerType|サービス承認マネージャーの型を含む文字列。 詳細については、「<xref:System.ServiceModel.ServiceAuthorizationManager>」を参照してください。|  
 
 ### <a name="child-elements"></a>子要素
 
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |authorizationPolicies|`add` キーワードを使用して追加できる承認ポリシーの種類のコレクションを含みます。 各承認ポリシーは、文字列の単一の必須属性 `policyType` を含みます。 この属性は、入力クレームのセットをクレームの別のセットに変換することを可能にする承認ポリシーを指定します。 アクセス制御は、それに基づいて許可または拒否されます。 詳細については、「<xref:System.ServiceModel.Configuration.AuthorizationPolicyTypeElement>」を参照してください。|  
 
 ### <a name="parent-elements"></a>親要素
 
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|サービスの動作設定のコレクションが含まれています。|  
 
@@ -97,7 +98,7 @@ ms.locfileid: "71834023"
 </behaviors>
 ```
 
-この構成要素の使用例については、「[サービス操作](../../../wcf/samples/authorizing-access-to-service-operations.md)と[承認ポリシー](../../../wcf/samples/authorization-policy.md)へのアクセスの承認」を参照してください。
+この構成要素の使用例については、「 [サービス操作](../../../wcf/samples/authorizing-access-to-service-operations.md) と [承認ポリシー](../../../wcf/samples/authorization-policy.md)へのアクセスの承認」を参照してください。
   
 ## <a name="see-also"></a>関連項目
 

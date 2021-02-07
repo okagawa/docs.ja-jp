@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <serviceSecurityAudit>'
 title: <serviceSecurityAudit>
 ms.date: 03/30/2017
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-ms.openlocfilehash: 6cec3373dae3127f16bb8a418a91a684554f2b0c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 262341f44adb7657086edb8d33514c07195ddfa3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153665"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682749"
 ---
 # \<serviceSecurityAudit>
 
@@ -35,10 +36,10 @@ ms.locfileid: "91153665"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |auditLogLocation|監査ログの場所を指定します。 有効な値は次のとおりです。<br /><br /> -既定: セキュリティイベントは、windows XP の場合はアプリケーションログに、windows Server 2003 および Windows Vista の場合はイベントログに書き込まれます。<br />-Application: 監査イベントは、アプリケーションイベントログに書き込まれます。<br />-Security: 監査イベントは、セキュリティイベントログに書き込まれます。<br /><br /> 既定値は Default です。 詳細については、「<xref:System.ServiceModel.AuditLogLocation>」を参照してください。|  
-|suppressAuditFailure|監査ログへの書き込みエラーを非表示にする動作を指定します。<br /><br /> アプリケーションには、監査ログへの書き込みエラーを通知する必要があります。 アプリケーションが監査エラーを処理するように設計されていない場合は、この属性を使用して、監査ログへの書き込みでのエラーが表示されないようにする必要があります。<br /><br /> この属性が `true` の場合、監査イベントの書き込み試行の結果発生する例外 (ただし、OutOfMemoryException、StackOverFlowException、ThreadAbortException、および ArgumentException を除く) はシステムによって処理され、アプリケーションには伝達されません。 この属性が `false` の場合、監査イベントの書き込み試行の結果発生する例外は、すべてアプリケーションまで渡されます。<br /><br /> 既定では、 `true`です。|  
+|suppressAuditFailure|監査ログへの書き込みエラーを非表示にする動作を指定します。<br /><br /> アプリケーションには、監査ログへの書き込みエラーを通知する必要があります。 アプリケーションが監査エラーを処理するように設計されていない場合は、この属性を使用して、監査ログへの書き込みでのエラーが表示されないようにする必要があります。<br /><br /> この属性が `true` の場合、監査イベントの書き込み試行の結果発生する例外 (ただし、OutOfMemoryException、StackOverFlowException、ThreadAbortException、および ArgumentException を除く) はシステムによって処理され、アプリケーションには伝達されません。 この属性が `false` の場合、監査イベントの書き込み試行の結果発生する例外は、すべてアプリケーションまで渡されます。<br /><br /> 既定値は、`true` です。|  
 |serviceAuthorizationAuditLevel|監査ログに記録される承認イベントの種類を指定します。 有効な値は次のとおりです。<br /><br /> -None: サービス承認イベントの監査は実行されません。<br />-Success: 成功したサービス承認イベントだけが監査されます。<br />-Failure: 失敗したサービス承認イベントだけが監査されます。<br />-SuccessOrFailure: 成功と失敗の両方のサービス承認イベントが監査されます。<br /><br /> 既定値は None です。 詳細については、「<xref:System.ServiceModel.AuditLevel>」を参照してください。|  
 |messageAuthenticationAuditLevel|ログに記録されるメッセージ認証監査イベントの種類を指定します。 有効な値は次のとおりです。<br /><br /> -None: 監査イベントは生成されません。<br />-Success: 成功したセキュリティ (メッセージ署名の検証、暗号、トークンの検証を含む完全な検証) イベントのみが記録されます。<br />-Failure: エラーイベントのみがログに記録されます。<br />-SuccessOrFailure: 成功イベントと失敗イベントの両方がログに記録されます。<br /><br /> 既定値は None です。 詳細については、「<xref:System.ServiceModel.AuditLevel>」を参照してください。|  
   

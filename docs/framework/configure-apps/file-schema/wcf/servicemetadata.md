@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <serviceMetadata>'
 title: <serviceMetadata>
 ms.date: 03/30/2017
 ms.assetid: 2b4c3b4c-31d4-4908-a9b7-5bb411c221f2
-ms.openlocfilehash: 2236361316254d065abd1fb62fd2e509be289a4c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b519de04c333f9ddc12de72757587c9b38f29dba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153860"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682827"
 ---
 # \<serviceMetadata>
 
@@ -41,22 +42,22 @@ ms.locfileid: "91153860"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |externalMetadataLocation|WSDL ファイルの位置を含む URI。これは、自動生成される WSDL の代わりに、WSDL 要求および MEX 要求に応答してユーザーに返されます。 この属性が設定されていない場合は、既定の WSDL が返されます。 既定値は空の文字列です。|  
 |httpGetBinding|HTTP GET 経由でメタデータを取得する場合に使用するバインディングの種類を指定する文字列。 この設定はオプションです。 指定しない場合、既定のバインディングが使用されます。<br /><br /> <xref:System.ServiceModel.Channels.IReplyChannel> をサポートする内部バインディング要素を使用したバインディングでのみサポートされます。 さらに、バインディングの <xref:System.ServiceModel.Channels.MessageVersion> プロパティが <xref:System.ServiceModel.Channels.MessageVersion.None%2A> である必要があります。|  
 |httpGetBindingConfiguration|このバインディングの追加の構成情報を参照する `httpGetBinding` 属性に指定されるバインディングの名前を設定する文字列。 同じ名前を `<bindings>` セクションに定義する必要があります。|  
-|httpGetEnabled|HTTP/Get 要求を使用した取得用にサービス メタデータを公開するかどうかを指定するブール値。 既定では、 `false`です。<br /><br /> httpGetUrl 属性が指定されていない場合、メタデータが公開されるアドレスは、サービス アドレスに "?wsdl" を加えたものになります。 たとえば、サービスアドレスがの場合、 `http://localhost:8080/CalculatorService` HTTP/Get メタデータアドレスはに `http://localhost:8080/CalculatorService?wsdl` なります。<br /><br /> このプロパティがの場合、 `false` またはサービスのアドレスが HTTP または HTTPS に基づいていない場合、"? wsdl" は無視されます。|  
+|httpGetEnabled|HTTP/Get 要求を使用した取得用にサービス メタデータを公開するかどうかを指定するブール値。 既定値は、`false` です。<br /><br /> httpGetUrl 属性が指定されていない場合、メタデータが公開されるアドレスは、サービス アドレスに "?wsdl" を加えたものになります。 たとえば、サービスアドレスがの場合、 `http://localhost:8080/CalculatorService` HTTP/Get メタデータアドレスはに `http://localhost:8080/CalculatorService?wsdl` なります。<br /><br /> このプロパティがの場合、 `false` またはサービスのアドレスが HTTP または HTTPS に基づいていない場合、"? wsdl" は無視されます。|  
 |httpGetUrl|HTTP/Get 要求を使用した取得用にメタデータが公開されるアドレスを指定する URI。 相対 URI を指定した場合、サービスのベース アドレスに対する相対として処理されます。|  
 |httpsGetBinding|HTTPS GET 経由でメタデータを取得する場合に使用するバインディングの種類を指定する文字列。 この設定はオプションです。 指定しない場合、既定のバインディングが使用されます。<br /><br /> <xref:System.ServiceModel.Channels.IReplyChannel> をサポートする内部バインディング要素を使用したバインディングでのみサポートされます。 さらに、バインディングの <xref:System.ServiceModel.Channels.MessageVersion> プロパティが <xref:System.ServiceModel.Channels.MessageVersion.None%2A> である必要があります。|  
 |httpsGetBindingConfiguration|このバインディングの追加の構成情報を参照する `httpsGetBinding` 属性に指定されるバインディングの名前を設定する文字列。 同じ名前を `<bindings>` セクションに定義する必要があります。|  
-|httpsGetEnabled|HTTPS/Get 要求を使用した取得用にサービス メタデータを公開するかどうかを指定するブール値。 既定では、 `false`です。<br /><br /> httpsGetUrl 属性が指定されていない場合、メタデータが公開されるアドレスは、サービス アドレスに "?wsdl" を加えたものになります。 たとえば、サービスアドレスが "" の場合、 https://localhost:8080/CalculatorService HTTP/Get メタデータアドレスは " https://localhost:8080/CalculatorService?wsdl " です。<br /><br /> このプロパティがの場合、 `false` またはサービスのアドレスが HTTP または HTTPS に基づいていない場合、"? wsdl" は無視されます。|  
+|httpsGetEnabled|HTTPS/Get 要求を使用した取得用にサービス メタデータを公開するかどうかを指定するブール値。 既定値は、`false` です。<br /><br /> httpsGetUrl 属性が指定されていない場合、メタデータが公開されるアドレスは、サービス アドレスに "?wsdl" を加えたものになります。 たとえば、サービスアドレスが "" の場合、 https://localhost:8080/CalculatorService HTTP/Get メタデータアドレスは " https://localhost:8080/CalculatorService?wsdl " です。<br /><br /> このプロパティがの場合、 `false` またはサービスのアドレスが HTTP または HTTPS に基づいていない場合、"? wsdl" は無視されます。|  
 |httpsGetUrl|HTTPS/Get 要求を使用した取得用にメタデータが公開されるアドレスを指定する URI。|  
 |policyVersion|使用する WS-Policy 仕様のバージョンを指定する文字列。 この属性は <xref:System.ServiceModel.Description.PolicyVersion> 型です。|  
   
 ### <a name="child-elements"></a>子要素  
 
- None  
+ なし  
   
 ### <a name="parent-elements"></a>親要素  
   

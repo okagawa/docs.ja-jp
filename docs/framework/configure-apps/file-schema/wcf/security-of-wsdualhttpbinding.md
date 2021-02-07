@@ -1,13 +1,14 @@
 ---
+description: 詳細については <security> 、 <wsDualHttpBinding>
 title: <security> の <wsDualHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
-ms.openlocfilehash: 7398cd538bb240e78413575f7c28abe7f797d05c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6d2e87912aef6114d7dcb99b82e4a7804317b28a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91162206"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683035"
 ---
 # <a name="security-of-wsdualhttpbinding"></a>\<security> の \<wsDualHttpBinding>
 
@@ -36,7 +37,7 @@ ms.locfileid: "91162206"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |mode|Optional. 適用するセキュリティの種類を指定します。 既定値は `Message` です。 この属性は <xref:System.ServiceModel.WSDualHttpSecurityMode> 型です。|  
   
@@ -44,7 +45,7 @@ ms.locfileid: "91162206"
   
 |値|説明|  
 |-----------|-----------------|  
-|None|セキュリティを無効にします。|  
+|なし|セキュリティを無効にします。|  
 |Message|セキュリティは、SOAP メッセージ セキュリティを使用して確保されます。|  
   
 ### <a name="child-elements"></a>子要素  

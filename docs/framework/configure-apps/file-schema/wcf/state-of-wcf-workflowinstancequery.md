@@ -1,13 +1,14 @@
 ---
+description: 詳細については <state> 、「」を参照してください。 <workflowInstanceQuery>
 title: <state> WCF の <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
-ms.openlocfilehash: c323f7dba265e7fbcb09482115694088e761af0e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8dbf741473e5f3c15c1833868c2c17abdfba6643
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148894"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682645"
 ---
 # <a name="state-of-wcf-workflowinstancequery"></a>\<state> WCF の \<workflowInstanceQuery>
 
@@ -52,7 +53,7 @@ ms.locfileid: "91148894"
   
 ### <a name="attributes"></a>属性
 
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |`name`|追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態を指定する文字列。|  
   
@@ -72,7 +73,7 @@ ms.locfileid: "91148894"
   
 次の表で、使用可能な状態の値について説明します。
   
-|状態|説明|  
+|State|説明|  
 |-----------|-----------------|  
 |Aborted|ワークフロー インスタンスは中止されました。|  
 |完了|ワークフロー インスタンスは完了しました。|  

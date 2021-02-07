@@ -1,13 +1,14 @@
 ---
+description: 詳細については <security> 、 <wsHttpBinding>
 title: <security> の <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
-ms.openlocfilehash: 9f984759fb52242bf8030a101b567c14627dd314
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 646d49bd67b2b544ae2616f206bfdeabf7806579
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158696"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683061"
 ---
 # <a name="security-of-wshttpbinding"></a>\<security> の \<wsHttpBinding>
 
@@ -43,15 +44,15 @@ ms.locfileid: "91158696"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
-|mode|Optional. 適用するセキュリティの種類を指定します。 既定では、 `Message`です。<br />-この属性の型は <xref:System.ServiceModel.SecurityMode> です。|  
+|mode|Optional. 適用するセキュリティの種類を指定します。 既定値は、`Message` です。<br />-この属性の型は <xref:System.ServiceModel.SecurityMode> です。|  
   
 ## <a name="mode-attribute"></a>Mode 属性  
   
 |値|説明|  
 |-----------|-----------------|  
-|None|セキュリティを無効にします。|  
+|なし|セキュリティを無効にします。|  
 |トランスポート|セキュリティは、HTTPS を使用して確保されます。 サービスは、SSL 証明書を使用して構成する必要があります。 メッセージは、HTTPS を使用して完全にセキュリティで保護され、サービスの SSL 証明書を使用するクライアントによって認証されます。 クライアント認証は、`ClientCredentials` 属性を使用して制御されます。 の [\<transport>](transport-of-wshttpbinding.md) 。|  
 |Message|セキュリティは、SOAP メッセージ セキュリティを使用して確保されます。 既定では、SOAP 本文は暗号化および署名されます。 このモードは、サービス資格情報をクライアントの帯域外で使用可能にするかどうか、使用するアルゴリズム スイート、Security.Message プロパティを使用してメッセージ本文に適用する保護レベルなど、さまざまな機能を提供します。 クライアント認証はセッションごとに 1 回実行され、認証の結果はセッションの存続中にキャッシュされます。|  
 |TransportWithMessageCredential|このモードでは、HTTPS は、整合性、機密性、およびサーバー認証を提供し、SOAP メッセージ セキュリティはクライアント認証を提供します。 既定では、クライアント認証はセッションごとに 1 回実行され、認証の結果はセッションの存続中にキャッシュされます。|  

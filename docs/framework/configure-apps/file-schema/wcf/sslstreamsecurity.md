@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <sslStreamSecurity>'
 title: <sslStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
-ms.openlocfilehash: aa6bc7f5a94afc8a190d3d9d2d71ea8b38d8c25b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 77e08deb5263e330ead5df21ed1ef2dddbba28ba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153574"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682697"
 ---
 # \<sslStreamSecurity>
 
@@ -33,9 +34,9 @@ SSL ストリームを使用するチャネル セキュリティをサポート
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
-|requireClientCertificate|クライアント証明書がこのバインディングに必要かどうかを指定するブール値。 既定では、 `false`です。|  
+|requireClientCertificate|クライアント証明書がこのバインディングに必要かどうかを指定するブール値。 既定値は、`false` です。|  
 |sslProtocols|どの SslProtocols がサポートされているのかを指定する SslProtocols 列挙型フラグの値。 既定値は、Ssl3&#124;Tls&#124;Tls11&#124;Tls12 です。|  
   
 ### <a name="child-elements"></a>子要素  
@@ -55,5 +56,5 @@ SSL ストリームを使用するチャネル セキュリティをサポート
 - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
