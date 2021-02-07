@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo7:: Getinmemoryシンボルの長さメソッド'
 title: 'ICorProfilerInfo7:: Getinmemoryシンボルの長さメソッド'
 ms.date: 03/30/2017
 api_name:
@@ -9,12 +10,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
-ms.openlocfilehash: 46ffa5cb4fac6988240d32cb1939cc25bdf0a412
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5d96b17e8abbd023f2d050eff3f121a871a94754
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686073"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99737117"
 ---
 # <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>ICorProfilerInfo7:: Getinmemoryシンボルの長さメソッド
 
@@ -45,7 +46,7 @@ HRESULT GetInMemorySymbolsLength(
   
  メソッドが `CORPROF_E_MODULE_IS_DYNAMIC` を使用して作成された場合、メソッドはを返し <xref:System.Reflection.Emit?displayProperty=nameWithType> ます。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  モジュールにメモリ内シンボルがある場合は、ストリームの長さがに配置され `pCountSymbolBytes` ます。 モジュールにメモリ内シンボルがない場合は `*pCountSymbolBytes = 0` 。  
   

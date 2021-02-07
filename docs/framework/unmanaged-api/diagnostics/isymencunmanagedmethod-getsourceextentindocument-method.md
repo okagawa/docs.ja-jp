@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ISymENCUnmanagedMethod:: GetSourceExtentInDocument メソッド'
 title: ISymENCUnmanagedMethod::GetSourceExtentInDocument メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9c5566ab-4ec7-4b61-9753-839bb90ae78c
 topic_type:
 - apiref
-ms.openlocfilehash: 2cd362279f5c5ff281b9674fe3d1e293ddbab5f1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6fa9edb524a59b4420ebc737eb8d34eaf0c5c873
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707296"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99737884"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a>ISymENCUnmanagedMethod::GetSourceExtentInDocument メソッド
 

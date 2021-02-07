@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo:: SetILInstrumentedCodeMap メソッド'
 title: ICorProfilerInfo::SetILInstrumentedCodeMap メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bce1dcf8-b4ec-4e73-a917-f2df1ad49c8a
 topic_type:
 - apiref
-ms.openlocfilehash: cac8e9570dab55af6b6e1fcf6f53b6a697727972
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0cf3b4ccf31076c2d1ea2df581003e3a07f0e795
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502913"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99737351"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap メソッド
 
@@ -55,7 +56,7 @@ HRESULT SetILInstrumentedCodeMap(
 
 ## <a name="remarks"></a>解説
 
-多くの場合、プロファイラーは、メソッドのソースコード内にステートメントを挿入して、そのメソッドをインストルメント化します (たとえば、特定のソース行に到達したときに通知します)。 `SetILInstrumentedCodeMap`プロファイラーが元の MSIL 命令を新しい場所にマップできるようにします。 プロファイラーは、 [ICorProfilerInfo:: GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md)メソッドを使用して、指定されたネイティブオフセットの元の MSIL オフセットを取得できます。
+多くの場合、プロファイラーは、メソッドのソースコード内にステートメントを挿入して、そのメソッドをインストルメント化します (たとえば、特定のソース行に到達したときに通知します)。 `SetILInstrumentedCodeMap` プロファイラーが元の MSIL 命令を新しい場所にマップできるようにします。 プロファイラーは、 [ICorProfilerInfo:: GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md) メソッドを使用して、指定されたネイティブオフセットの元の MSIL オフセットを取得できます。
 
 デバッガーは、古い各オフセットが元の変更されていない MSIL コード内の MSIL オフセットを参照し、新しい各オフセットが新しいインストルメント化されたコード内の MSIL オフセットを参照することを想定します。 マップは昇順に並べ替える必要があります。 ステップ実行を正常に行うには、次のガイドラインに従ってください。
 
@@ -83,7 +84,7 @@ HRESULT SetILInstrumentedCodeMap(
 
   - 20以上の新しいオフセットは、古いオフセット9にマップされます。
 
-.NET Framework 3.5 およびそれ以前のバージョンでは、 `rgILMapEntries` [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)メソッドを呼び出すことによって配列を割り当てます。 ランタイムはこのメモリの所有権を取得するため、プロファイラーは解放を試みることはできません。
+.NET Framework 3.5 およびそれ以前のバージョンでは、 `rgILMapEntries` [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) メソッドを呼び出すことによって配列を割り当てます。 ランタイムはこのメモリの所有権を取得するため、プロファイラーは解放を試みることはできません。
 
 ## <a name="requirements"></a>要件
 

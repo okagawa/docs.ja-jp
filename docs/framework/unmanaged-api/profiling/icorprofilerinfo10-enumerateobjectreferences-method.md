@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo10:: EnumerateObjectReferences メソッド'
 title: ICorProfilerInfo10::EnumerateObjectReferences
 ms.date: 08/06/2019
 dev_langs:
@@ -11,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: a276ecfe65ed9752f39ed68a36e8e17a24255508
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3e31192426ea38e177b636bcc6a4b6e54057801f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558317"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99737325"
 ---
 # <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10:: EnumerateObjectReferences メソッド
 
@@ -44,11 +45,11 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 
   \[in) 関数に渡すプロファイラーが提供するデータ `callback` 。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 `EnumerateObjectReferences`メソッドは[ObjectReferences](icorprofilercallback-objectreferences-method.md)に似ていますが、参照を格納するために配列を事前に割り当てるのではなく、プロファイラーの要求時に参照をステップインする点が異なります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **プラットフォーム:** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/install/windows.md?pivots=os-windows)」を参照してください。
 

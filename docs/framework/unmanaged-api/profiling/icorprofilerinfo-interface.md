@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorProfilerInfo インターフェイス」を参照してください。
 title: ICorProfilerInfo インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eb4e4ce0-06e7-4469-bbc4-edc2eb5da4b1
 topic_type:
 - apiref
-ms.openlocfilehash: a029784a28036e531670ad373893b4256c5864c4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d1da0f41a7c7358b7f71c8d931fff723b3144cdd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95671188"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99737390"
 ---
 # <a name="icorprofilerinfo-interface"></a>ICorProfilerInfo インターフェイス
 
@@ -66,7 +67,7 @@ ms.locfileid: "95671188"
 |[SetILFunctionBody メソッド](icorprofilerinfo-setilfunctionbody-method.md)|指定したモジュール内の指定した関数の本体を置き換えます。|  
 |[SetILInstrumentedCodeMap メソッド](icorprofilerinfo-setilinstrumentedcodemap-method.md)|指定された関数の元の MSIL のオフセットが、関数のプロファイラーによって変更された MSIL の新しいオフセットにどのようにマップされるかを指定します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  プロファイラーは、 `ICorProfilerInfo` CLR と通信してイベントの監視と要求情報を制御するために、インターフェイスのメソッドを呼び出します。  
   

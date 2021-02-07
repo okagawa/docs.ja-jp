@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugType2:: GetTypeID メソッド'
 title: 'ICorDebugType2:: GetTypeID メソッド'
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b933686-226e-4373-92b7-fac579ee7b1a
 topic_type:
 - apiref
-ms.openlocfilehash: 2a4a0bfae6f9a1970f0d4aca8b37f8fc68194462
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8143ede1a11ee5f73c49fc723920f53430339ed0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725691"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738105"
 ---
 # <a name="icordebugtype2gettypeid-method"></a>ICorDebugType2:: GetTypeID メソッド
 
@@ -49,7 +50,7 @@ HRESULT GetTypeID(
 |`CORDBG_E_CLASS_NOT_LOADED`|型が読み込まれていません。|  
 |`CORDBG_E_UNSUPPORTED`|この型はサポートされていません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドは、ランタイムに読み込まれている可能性がある型を表す、または [COR_TYPEID](cor-typeid-structure.md)ランタイムに読み込まれていない可能性のある型を表す、、ランタイムに読み込まれた型を識別する不透明なハンドルとして機能する、の型からのマッピングを提供します。  
   

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「のヘルプ」を参照してください。
 title: ICorDebugStackWalk インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16d695e8-975d-431b-8421-e9e6c3e3f476
 topic_type:
 - apiref
-ms.openlocfilehash: b37a89c0a86df49c894dc43676f8feafb80f5c95
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 27dcdfc90829a3a28d81ad28dce0cd4d1d674948
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687516"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738092"
 ---
 # <a name="icordebugstackwalk-interface"></a>ICorDebugStackWalk インターフェイス
 
@@ -31,10 +32,10 @@ ms.locfileid: "95687516"
 |------------|-----------------|  
 |[GetContext メソッド](icordebugstackwalk-getcontext-method.md)|オブジェクト内の現在のフレームのコンテキストを返し `ICorDebugStackWalk` ます。|  
 |[SetContext メソッド](icordebugstackwalk-setcontext-method.md)|`ICorDebugStackWalk`オブジェクトの現在のコンテキストをスレッドの有効なコンテキストに設定します。|  
-|[Next メソッド](icordebugstackwalk-next-method.md)|オブジェクトを `ICorDebugStackWalk` 次のフレームに移動します。|  
+|[次のメソッド](icordebugstackwalk-next-method.md)|オブジェクトを `ICorDebugStackWalk` 次のフレームに移動します。|  
 |[GetFrame メソッド](icordebugstackwalk-getframe-method.md)|オブジェクト内の現在のフレームを取得し `ICorDebugStackWalk` ます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  

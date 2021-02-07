@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorThreadpool:: CorDeleteTimer メソッド'
 title: ICorThreadpool::CorDeleteTimer メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 74847c35-7ca1-466a-b750-b25e7b03d100
 topic_type:
 - apiref
-ms.openlocfilehash: 97658d5418ac3c04abd423ffff86324acf0e99c8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9096f9969702d522427640b2f881cae4aa23284d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720546"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99737729"
 ---
 # <a name="icorthreadpoolcordeletetimer-method"></a>ICorThreadpool::CorDeleteTimer メソッド
 
