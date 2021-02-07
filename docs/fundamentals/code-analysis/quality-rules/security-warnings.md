@@ -12,12 +12,12 @@ helpviewer_keywords:
 - rules, security
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: e907905b065d786fc8b3c370fb2d2e2b19e62a2b
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 861827662a771ec7cc1827cdd8125be6c05bf05c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "96594085"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719722"
 ---
 # <a name="security-rules"></a>セキュリティ規則
 
@@ -93,7 +93,7 @@ ms.locfileid: "96594085"
 |[CA5375: アカウントの Shared Access Signature を使用しないでください](ca5375.md)|アカウント SAS は、blob コンテナー、テーブル、キュー、およびサービス SAS で許可されていないファイル共有に対する読み取り、書き込み、および削除操作へのアクセスを委任できます。 ただし、コンテナーレベルのポリシーはサポートされておらず、付与されるアクセス許可をより柔軟に制御することはできません。 悪意のあるユーザーがアクセスすると、ストレージアカウントが簡単に侵害されます。|
 |[CA5376: SharedAccessProtocol HttpsOnly を使用します](ca5376.md)|SAS は、HTTP でプレーンテキストで転送できない機密データです。|
 |[CA5377: コンテナー レベルのアクセス ポリシーを使用します](ca5377.md)|コンテナーレベルのアクセスポリシーは、いつでも変更または失効できます。 これにより、付与されるアクセス許可をより柔軟に制御できるようになります。|
-|[CA5378: ServicePointManagerSecurityProtocols を無効にしません](ca5378.md)|`Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols`をに設定すると、 `true` Windows Communication Framework の (WCF) Transport Layer SECURITY (tls) 接続が tls 1.0 を使用するように制限されます。 このバージョンの TLS は非推奨とされます。|
+|[CA5378: ServicePointManagerSecurityProtocols を無効にしません](ca5378.md)|`DisableUsingServicePointManagerSecurityProtocols`をに設定すると、 `true` Windows Communication Framework の (WCF) Transport Layer SECURITY (tls) 接続が tls 1.0 を使用するように制限されます。 このバージョンの TLS は非推奨とされます。|
 |[CA5379: キー派生関数アルゴリズムが十分に強力であることを確認してください](ca5379.md)|クラスは、 <xref:System.Security.Cryptography.Rfc2898DeriveBytes> 既定でアルゴリズムを使用し <xref:System.Security.Cryptography.HashAlgorithmName.SHA1> ます。 またはそれ以上のコンストラクターの一部のオーバーロードで使用するハッシュアルゴリズムを指定する必要があり <xref:System.Security.Cryptography.HashAlgorithmName.SHA256> ます。 プロパティに <xref:System.Security.Cryptography.Rfc2898DeriveBytes.HashAlgorithm> はアクセサーのみがあり、 `get` 修飾子はありません `overriden` 。|
 |[CA5380:ルート ストアに証明書を追加しません](ca5380.md)|このルールは、信頼されたルート証明機関の証明書ストアに証明書を追加するコードを検出します。 既定では、信頼されたルート証明機関の証明書ストアは、Microsoft ルート証明書プログラムの要件を満たしている一連のパブリック Ca で構成されます。|
 |[CA5381:証明書がルート ストアに追加されていないことを確認します](ca5381.md)|このルールは、信頼されたルート証明機関の証明書ストアに証明書を追加する可能性のあるコードを検出します。 既定では、信頼されたルート証明機関の証明書ストアは、Microsoft ルート証明書プログラムの要件を満たす公開証明機関 (Ca) のセットを使用して構成されます。|
