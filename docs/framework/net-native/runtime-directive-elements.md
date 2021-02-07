@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「ランタイムディレクティブ要素」を参照してください。
 title: ランタイム ディレクティブ要素
 ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
-ms.openlocfilehash: 96bce89c02ad17d1b30eda66237f69a15123dcd3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 74ff6c7d782f48106e37b99187770d8e82926be4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250802"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738430"
 ---
 # <a name="runtime-directive-elements"></a>ランタイム ディレクティブ要素
 
@@ -23,7 +24,7 @@ ms.locfileid: "96250802"
  それを含む [\<Type>](type-element-net-native.md) ディレクティブが属性の場合、は、その属性が適用されるコード要素に実行時ポリシーを適用します。  
   
  [\<Directives>](directives-element-net-native.md)  
- .NET ネイティブのすべてのランタイムディレクティブファイルのルート要素。 その子要素は [\<Application>](application-element-net-native.md) と [\<Library>](library-element-net-native.md) です。  
+ .NET Native のすべてのランタイムディレクティブファイルのルート要素。 その子要素は [\<Application>](application-element-net-native.md) と [\<Library>](library-element-net-native.md) です。  
   
  [\<Event>](event-element-net-native.md)  
  イベントに実行時ポリシーを適用します。 これは、 [\<Type>](type-element-net-native.md) 要素と要素の子です [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 。  

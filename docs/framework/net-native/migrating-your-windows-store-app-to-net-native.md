@@ -1,17 +1,18 @@
 ---
+description: 詳細については、「Windows ストアアプリを .NET Native に移行する」を参照してください。
 title: Windows ストア アプリの .NET ネイティブへの移行
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: ee17e50590a80d8973197b46910d5e22296c265f
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 39f8427474b37c42d856366bf4e4d677ba77e7f1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440895"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738716"
 ---
-# <a name="migrate-your-windows-store-app-to-net-native"></a>Windows ストアアプリを .NET ネイティブに移行する
+# <a name="migrate-your-windows-store-app-to-net-native"></a>Windows ストアアプリを .NET Native に移行する
 
-.NET ネイティブは、Windows ストアまたは開発者のコンピューターでアプリの静的なコンパイルを行います。 これは、デバイス上で Just-In-Time (JIT) コンパイラまたは [ネイティブ イメージ ジェネレーター (Ngen.exe)](../tools/ngen-exe-native-image-generator.md) によって Windows ストア アプリに対して実行される動的なコンパイルとは異なります。 違いにかかわらず、.NET ネイティブは [Windows ストアアプリ用 .net](/previous-versions/windows/apps/br230302(v=vs.140))との互換性を維持しようとします。 ほとんどの場合、Windows ストアアプリ用 .NET で動作するものは、.NET ネイティブでも動作します。  ただし、動作に違いがある場合もあります。 このドキュメントでは、Windows ストアアプリ用の標準 .NET と、次の領域の .NET ネイティブにおけるこれらの違いについて説明します。
+.NET Native は、Windows ストアまたは開発者のコンピューターでアプリの静的なコンパイルを行います。 これは、デバイス上で Just-In-Time (JIT) コンパイラまたは [ネイティブ イメージ ジェネレーター (Ngen.exe)](../tools/ngen-exe-native-image-generator.md) によって Windows ストア アプリに対して実行される動的なコンパイルとは異なります。 違いにかかわらず、.NET Native は [Windows ストアアプリ用 .net](/previous-versions/windows/apps/br230302(v=vs.140))との互換性を維持しようとします。 ほとんどの場合、Windows ストアアプリ用 .NET で動作するものは、.NET Native でも動作します。  ただし、動作に違いがある場合もあります。 このドキュメントでは、Windows ストアアプリ用の標準 .NET と、次の領域の .NET Native におけるこれらの違いについて説明します。
 
 - [全般的なランタイムの違い](#Runtime)
 
@@ -27,38 +28,38 @@ ms.locfileid: "94440895"
 
 ## <a name="general-runtime-differences"></a>全般的なランタイムの違い
 
-- <xref:System.TypeLoadException>CLR (共通言語ランタイム) でアプリを実行するときに JIT コンパイラによってスローされる例外 (など) は、通常、.NET ネイティブによって処理されるときにコンパイル時エラーが発生します。
+- <xref:System.TypeLoadException>CLR (共通言語ランタイム) でアプリを実行するときに JIT コンパイラによってスローされる例外 (など) は、通常、.NET Native によって処理されるときにコンパイル時エラーが発生します。
 
-- アプリの UI スレッドから <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> メソッドを呼び出さないでください。 これにより、.NET ネイティブでデッドロックが発生する可能性があります。
+- アプリの UI スレッドから <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> メソッドを呼び出さないでください。 これにより、.NET Native でデッドロックが発生する可能性があります。
 
-- 静的クラス コンストラクターの呼び出し順序に依存しないでください。 .NET ネイティブでは、呼び出し順序は標準ランタイムの順序とは異なります。 (標準ランタイムを使用する場合であっても、静的クラス コンストラクターの実行順序に依存しないでください。)
+- 静的クラス コンストラクターの呼び出し順序に依存しないでください。 .NET Native では、呼び出し順序は標準ランタイムの順序とは異なります。 (標準ランタイムを使用する場合であっても、静的クラス コンストラクターの実行順序に依存しないでください。)
 
 - スレッドでの呼び出しを行わない無限ループ (たとえば、 `while(true);`) によって、アプリが停止する可能性があります。 同様に、長時間または無限の待機によってもアプリが停止する可能性があります。
 
-- 特定の汎用初期化サイクルでは、.NET ネイティブで例外がスローされません。 たとえば、次のコードは標準 CLR では <xref:System.TypeLoadException> 例外をスローします。 .NET ネイティブでは、そうではありません。
+- 特定の汎用初期化サイクルでは、.NET Native で例外がスローされません。 たとえば、次のコードは標準 CLR では <xref:System.TypeLoadException> 例外をスローします。 .NET Native では、そうではありません。
 
   [!code-csharp[ProjectN#8](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat1.cs#8)]
 
-- 場合によっては、.NET ネイティブは .NET Framework クラスライブラリのさまざまな実装を提供します。 メソッドから返されるオブジェクトは、常に、返される型のメンバーを実装します。 ただし、その補助的な実装が異なるため、その他の .NET Framework プラットフォームの場合と同じ型セットへのオブジェクトのキャストを行うことができない場合があります。 たとえば、 <xref:System.Collections.Generic.IEnumerable%601> や <xref:System.Reflection.TypeInfo.DeclaredMembers%2A?displayProperty=nameWithType> などのメソッドにより返される <xref:System.Reflection.TypeInfo.DeclaredProperties%2A?displayProperty=nameWithType> インターフェイス オブジェクトを `T[]`にキャストできない場合があります。
+- 場合によっては、.NET Native は .NET Framework クラスライブラリのさまざまな実装を提供します。 メソッドから返されるオブジェクトは、常に、返される型のメンバーを実装します。 ただし、その補助的な実装が異なるため、その他の .NET Framework プラットフォームの場合と同じ型セットへのオブジェクトのキャストを行うことができない場合があります。 たとえば、 <xref:System.Collections.Generic.IEnumerable%601> や <xref:System.Reflection.TypeInfo.DeclaredMembers%2A?displayProperty=nameWithType> などのメソッドにより返される <xref:System.Reflection.TypeInfo.DeclaredProperties%2A?displayProperty=nameWithType> インターフェイス オブジェクトを `T[]`にキャストできない場合があります。
 
-- WinInet キャッシュは、Windows ストアアプリ用 .NET では既定で有効になっていませんが、.NET ネイティブにあります。 これによりパフォーマンスが向上しますが、作業セットへの影響があります。 開発者のアクションは必要ありません。
+- WinInet キャッシュは、Windows ストアアプリ用 .NET では既定で有効になっていませんが、.NET Native にあります。 これによりパフォーマンスが向上しますが、作業セットへの影響があります。 開発者のアクションは必要ありません。
 
 <a name="Dynamic"></a>
 
 ## <a name="dynamic-programming-differences"></a>動的プログラミングの違い
 
-.NET Framework からコード内の静的なリンクを .NET ネイティブして、最大のパフォーマンスを実現するためにコードをアプリケーションローカルにします。 ただし、バイナリ サイズは小さいままである必要があるため、.NET Framework 全体を取り入れることはできません。 .NET ネイティブコンパイラは、使用されていないコードへの参照を削除する依存関係 reducer を使用して、この制限を解決します。 ただし、コンパイル時にその情報を静的に推論できず、代わりに実行時に動的に取得される場合、.NET ネイティブは、型情報やコードを維持または生成しないことがあります。
+.NET Framework からコード内の静的なリンクを .NET Native して、最大のパフォーマンスを実現するためにコードをアプリケーションローカルにします。 ただし、バイナリ サイズは小さいままである必要があるため、.NET Framework 全体を取り入れることはできません。 .NET Native コンパイラは、使用されていないコードへの参照を削除する依存関係 reducer を使用して、この制限を解決します。 ただし、コンパイル時にその情報を静的に推論できず、代わりに実行時に動的に取得される場合、.NET Native は、型情報やコードを維持または生成しないことがあります。
 
-.NET ネイティブは、リフレクションと動的プログラミングを有効にします。 ただし、すべての型をリフレクション対象としてマークできるわけではありません。そうすると、生成されるコード サイズが大きくなりすぎるため (特に、.NET Framework での パブリック API へのリフレクションがサポートされているため) です。 .NET ネイティブコンパイラは、リフレクションをサポートする型についての賢明な選択を行い、メタデータを保持し、それらの型に対してのみコードを生成します。
+.NET Native は、リフレクションと動的プログラミングを有効にします。 ただし、すべての型をリフレクション対象としてマークできるわけではありません。そうすると、生成されるコード サイズが大きくなりすぎるため (特に、.NET Framework での パブリック API へのリフレクションがサポートされているため) です。 .NET Native コンパイラは、リフレクションをサポートする型についての賢明な選択を行い、メタデータを保持し、それらの型に対してのみコードを生成します。
 
-たとえば、データ バインディングは、プロパティ名を関数にマップするためにアプリを必要とします。 Windows ストア アプリ用 .NET では、共通言語ランタイムが自動的にリフレクションを使用して、マネージド型および公開されているネイティブ型にこの機能を提供します。 .NET ネイティブでは、データのバインド先となる型のメタデータがコンパイラによって自動的に含まれます。
+たとえば、データ バインディングは、プロパティ名を関数にマップするためにアプリを必要とします。 Windows ストア アプリ用 .NET では、共通言語ランタイムが自動的にリフレクションを使用して、マネージド型および公開されているネイティブ型にこの機能を提供します。 .NET Native では、データのバインド先となる型のメタデータがコンパイラによって自動的に含まれます。
 
-.NET ネイティブコンパイラでは、やなどの一般的に使用されるジェネリック型を処理することもできます <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.Dictionary%602> 。これはヒントやディレクティブを必要とせずに機能します。 [dynamic](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type) キーワードも、一定の制限の下でサポートされます。
+.NET Native コンパイラでは、やなどの一般的に使用されるジェネリック型を処理することもできます <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.Dictionary%602> 。これはヒントやディレクティブを必要とせずに機能します。 [dynamic](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type) キーワードも、一定の制限の下でサポートされます。
 
 > [!NOTE]
-> アプリを .NET ネイティブに移植するときは、すべての動的コードパスを十分にテストする必要があります。
+> アプリを .NET Native に移植するときは、すべての動的コードパスを十分にテストする必要があります。
 
-ほとんどの開発者には .NET ネイティブの既定の構成で十分ですが、ランタイムディレクティブ (.rd.xml) ファイルを使用して構成を微調整する場合もあります。 また、場合によっては、.NET ネイティブコンパイラは、リフレクションで使用できる必要があるメタデータを判断できず、次の場合には特にヒントに依存します。
+ほとんどの開発者には .NET Native の既定の構成で十分ですが、ランタイムディレクティブ (.rd.xml) ファイルを使用して構成を微調整する場合もあります。 また、場合によっては、.NET Native コンパイラは、リフレクションで使用できる必要があるメタデータを判断できず、次の場合には特にヒントに依存します。
 
 - <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> や <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> などの一部の構造体は、静的に決定できません。
 
@@ -67,15 +68,15 @@ ms.locfileid: "94440895"
 > [!NOTE]
 > ランタイム ディレクティブは、ランタイム ディレクティブ (.rd.xml) ファイルで定義されます。 このファイルの使用方法に関する全般的な情報は、「[Getting Started with .NET Native](getting-started-with-net-native.md)」(.NET ネイティブの概要) をご覧ください。 ランタイム ディレクティブについては、「 [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md)」をご覧ください。
 
-.NET ネイティブには、開発者が既定のセットの外部でリフレクションをサポートする必要のある型を判断するのに役立つプロファイリングツールも含まれています。
+.NET Native には、開発者が既定のセットの外部でリフレクションをサポートする必要のある型を判断するのに役立つプロファイリングツールも含まれています。
 
 <a name="Reflection"></a>
 
 ## <a name="other-reflection-related-differences"></a>リフレクションに関するその他の違い
 
-Windows ストアアプリ用 .NET と .NET ネイティブの動作には、リフレクションに関連するその他のさまざまな違いがいくつかあります。
+Windows ストアアプリ用 .NET と .NET Native の動作には、リフレクションに関連するその他のさまざまな違いがいくつかあります。
 
-.NET ネイティブ:
+.NET Native:
 
 - .NET Framework クラス ライブラリでの型とメンバーに対するプライベート リフレクションはサポートされません。 ただし、独自のプライベート型とメンバー、およびサードパーティ ライブラリの型とメンバーに対するリフレクションは行うことができます。
 
@@ -91,7 +92,7 @@ Windows ストアアプリ用 .NET と .NET ネイティブの動作には、リ
 
 - リフレクションを使用して、ポインター フィールドを取得または設定することはできません。
 
-- 引数の数が間違っていて、いずれかの引数の型が正しくない場合、.NET ネイティブはではなくをスロー <xref:System.ArgumentException> <xref:System.Reflection.TargetParameterCountException> します。
+- 引数の数が間違っていて、いずれかの引数の型が正しくない場合、.NET Native はではなくをスロー <xref:System.ArgumentException> <xref:System.Reflection.TargetParameterCountException> します。
 
 - 通常、例外のバイナリ シリアル化はサポートされません。 そのため、シリアル化不可能なオブジェクトを <xref:System.Exception.Data%2A?displayProperty=nameWithType> ディクショナリに追加できます。
 
@@ -115,11 +116,11 @@ Windows ストアアプリ用 .NET と .NET ネイティブの動作には、リ
 
 **値型**
 
-- 値型の <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> メソッドと <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> メソッドをオーバーライドする場合は、基底クラスの実装を呼び出さないでください。 Windows ストア アプリ用 .NET では、これらのメソッドはリフレクションに依存します。 コンパイル時に、.NET ネイティブによって、ランタイムリフレクションに依存しない実装が生成されます。 つまり、これらの2つのメソッドをオーバーライドしないと、コンパイル時に .NET ネイティブによって実装が生成されるため、これらのメソッドは想定どおりに動作します。 ただし、基底クラスの実装を呼び出さずにこれらのメソッドをオーバーライドすると、例外が発生します。
+- 値型の <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> メソッドと <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> メソッドをオーバーライドする場合は、基底クラスの実装を呼び出さないでください。 Windows ストア アプリ用 .NET では、これらのメソッドはリフレクションに依存します。 コンパイル時に、.NET Native によって、ランタイムリフレクションに依存しない実装が生成されます。 つまり、これらの2つのメソッドをオーバーライドしないと、コンパイル時に .NET Native によって実装が生成されるため、これらのメソッドは想定どおりに動作します。 ただし、基底クラスの実装を呼び出さずにこれらのメソッドをオーバーライドすると、例外が発生します。
 
 - 1 mb を超える値の型はサポートされていません。
 
-- 値型では、.NET ネイティブにパラメーターなしのコンストラクターを指定することはできません。 (C# および Visual Basic 値型のパラメーターなしのコンストラクターを禁止します。 ただし、IL ではこれらを作成できます。)
+- 値型では、.NET Native にパラメーターなしのコンストラクターを指定することはできません。 (C# および Visual Basic 値型のパラメーターなしのコンストラクターを禁止します。 ただし、IL ではこれらを作成できます。)
 
 **配列**
 
@@ -157,35 +158,35 @@ Windows ストアアプリ用 .NET と .NET ネイティブの動作には、リ
 
 **その他の API**
 
-- [TypeInfo.GUID](xref:System.Type.GUID) <xref:System.PlatformNotSupportedException> <xref:System.Runtime.InteropServices.GuidAttribute> 属性が型に適用されていない場合、TypeInfo プロパティは例外をスローします。 GUID は主に COM サポートで使用されます。
+- [](xref:System.Type.GUID) <xref:System.PlatformNotSupportedException> <xref:System.Runtime.InteropServices.GuidAttribute> 属性が型に適用されていない場合、TypeInfo プロパティは例外をスローします。 GUID は主に COM サポートで使用されます。
 
-- メソッドは、 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> .NET ネイティブの短い日付を含む文字列を正しく解析します。 ただし、Microsoft サポート技術情報の記事 [KB2803771](https://support.microsoft.com/kb/2803771) と [KB2803755](https://support.microsoft.com/kb/2803755)で説明されている日付と時刻の解析の変更に対する互換性は保持されません。
+- メソッドは、 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> .NET Native の短い日付を含む文字列を正しく解析します。 ただし、Microsoft サポート技術情報の記事 [KB2803771](https://support.microsoft.com/kb/2803771) と [KB2803755](https://support.microsoft.com/kb/2803755)で説明されている日付と時刻の解析の変更に対する互換性は保持されません。
 
-- <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType>`("E")`が .NET ネイティブで正しく丸められています。 CLR の一部のバージョンでは、結果の文字列が丸められるのではなく、切り捨てられます。
+- <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType>`("E")`が .NET Native で正しく丸められています。 CLR の一部のバージョンでは、結果の文字列が丸められるのではなく、切り捨てられます。
 
 <a name="HttpClient"></a>
 
 ### <a name="httpclient-differences"></a>HttpClient の違い
 
-.NET ネイティブでは、 <xref:System.Net.Http.HttpClientHandler> クラスは、 <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> 標準の <xref:System.Net.WebRequest> <xref:System.Net.WebResponse> Windows ストアアプリ用 .net で使用されるクラスとクラスではなく、WinINet を内部で (クラスを通じて) 使用します。  WinINet では、 <xref:System.Net.Http.HttpClientHandler> クラスでサポートされる構成オプションがすべてサポートされるわけではありません。  その結果、次のような影響が出ています。
+.NET Native では、 <xref:System.Net.Http.HttpClientHandler> クラスは、 <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> 標準の <xref:System.Net.WebRequest> <xref:System.Net.WebResponse> Windows ストアアプリ用 .net で使用されるクラスとクラスではなく、WinINet を内部で (クラスを通じて) 使用します。  WinINet では、 <xref:System.Net.Http.HttpClientHandler> クラスでサポートされる構成オプションがすべてサポートされるわけではありません。  その結果、次のような影響が出ています。
 
-- の機能プロパティの一部は <xref:System.Net.Http.HttpClientHandler> `false` .NET ネイティブで返されますが、 `true` Windows ストアアプリ用の標準 .net ではを返します。
+- の機能プロパティの一部は <xref:System.Net.Http.HttpClientHandler> `false` .NET Native で返されますが、 `true` Windows ストアアプリ用の標準 .net ではを返します。
 
-- 一部の構成プロパティアクセサーは、 `get` Windows ストアアプリ用 .net の既定の構成可能な値とは異なる .NET ネイティブに、常に固定値を返します。
+- 一部の構成プロパティアクセサーは、 `get` Windows ストアアプリ用 .net の既定の構成可能な値とは異なる .NET Native に、常に固定値を返します。
 
 次のサブセクションで、その他の動作の違いについて説明します。
 
 **Proxy**
 
-クラスは、要求ごとの <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> プロキシの構成またはオーバーライドをサポートしていません。  これは、プロパティの値に応じて、.NET ネイティブ上のすべての要求が、システム構成のプロキシサーバーを使用するか、プロキシサーバーを使用しないことを意味 <xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType> します。  Windows ストア アプリ用 .NET では、プロキシ サーバーは <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> プロパティにより定義されます。  .NET ネイティブで、を <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> 以外の値に設定すると、 `null` 例外がスローさ <xref:System.PlatformNotSupportedException> れます。  <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType>プロパティは .NET ネイティブ `false` でを返しますが、 `true` Windows ストアアプリの標準 .NET Framework ではを返します。
+クラスは、要求ごとの <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> プロキシの構成またはオーバーライドをサポートしていません。  これは、プロパティの値に応じて、.NET Native 上のすべての要求が、システム構成のプロキシサーバーを使用するか、プロキシサーバーを使用しないことを意味 <xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType> します。  Windows ストア アプリ用 .NET では、プロキシ サーバーは <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> プロパティにより定義されます。  .NET Native で、を <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> 以外の値に設定すると、 `null` 例外がスローさ <xref:System.PlatformNotSupportedException> れます。  <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType>プロパティは .NET Native `false` でを返しますが、 `true` Windows ストアアプリの標準 .NET Framework ではを返します。
 
 **自動リダイレクト**
 
-クラスでは <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> 、自動リダイレクトの最大数を構成することはできません。  標準の Windows ストア アプリ用 .NET での <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> プロパティの値は既定で 50 で、変更できません。 .NET ネイティブでは、このプロパティの値は10であり、変更しようとすると例外がスローさ <xref:System.PlatformNotSupportedException> れます。  <xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType>プロパティは `false` .NET ネイティブでを返しますが、 `true` Windows ストアアプリの .net ではを返します。
+クラスでは <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> 、自動リダイレクトの最大数を構成することはできません。  標準の Windows ストア アプリ用 .NET での <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> プロパティの値は既定で 50 で、変更できません。 .NET Native では、このプロパティの値は10であり、変更しようとすると例外がスローさ <xref:System.PlatformNotSupportedException> れます。  <xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType>プロパティは `false` .NET Native でを返しますが、 `true` Windows ストアアプリの .net ではを返します。
 
 **自動展開**
 
-Windows ストア アプリ用 .NET では、 <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> プロパティを <xref:System.Net.DecompressionMethods.Deflate>、 <xref:System.Net.DecompressionMethods.GZip>、 <xref:System.Net.DecompressionMethods.Deflate> と <xref:System.Net.DecompressionMethods.GZip>の両方、または <xref:System.Net.DecompressionMethods.None>に設定できます。  .NET ネイティブ <xref:System.Net.DecompressionMethods.Deflate> は、、またはと共にのみサポートさ <xref:System.Net.DecompressionMethods.GZip> <xref:System.Net.DecompressionMethods.None> れます。  <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> プロパティを <xref:System.Net.DecompressionMethods.Deflate> のみまたは <xref:System.Net.DecompressionMethods.GZip> のみに設定しようとすると、 <xref:System.Net.DecompressionMethods.Deflate> と <xref:System.Net.DecompressionMethods.GZip>の両方に自動的に設定されます。
+Windows ストア アプリ用 .NET では、 <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> プロパティを <xref:System.Net.DecompressionMethods.Deflate>、 <xref:System.Net.DecompressionMethods.GZip>、 <xref:System.Net.DecompressionMethods.Deflate> と <xref:System.Net.DecompressionMethods.GZip>の両方、または <xref:System.Net.DecompressionMethods.None>に設定できます。  .NET Native <xref:System.Net.DecompressionMethods.Deflate> は、、またはと共にのみサポートさ <xref:System.Net.DecompressionMethods.GZip> <xref:System.Net.DecompressionMethods.None> れます。  <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> プロパティを <xref:System.Net.DecompressionMethods.Deflate> のみまたは <xref:System.Net.DecompressionMethods.GZip> のみに設定しようとすると、 <xref:System.Net.DecompressionMethods.Deflate> と <xref:System.Net.DecompressionMethods.GZip>の両方に自動的に設定されます。
 
 **Cookie**
 
@@ -193,11 +194,11 @@ Windows ストア アプリ用 .NET では、 <xref:System.Net.Http.HttpClientHa
 
 **資格情報**
 
-Windows ストア アプリ用 .NET では、 <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A?displayProperty=nameWithType> プロパティと <xref:System.Net.Http.HttpClientHandler.Credentials%2A?displayProperty=nameWithType> プロパティは独立して動作します。  また、 <xref:System.Net.Http.HttpClientHandler.Credentials%2A> プロパティは <xref:System.Net.ICredentials> インターフェイスを実装するオブジェクトをすべて受け入れます。  .NET ネイティブでは、プロパティを <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A> に設定する `true` と、プロパティがに <xref:System.Net.Http.HttpClientHandler.Credentials%2A> なり `null` ます。  さらに、 <xref:System.Net.Http.HttpClientHandler.Credentials%2A> プロパティは、 `null`、 <xref:System.Net.CredentialCache.DefaultCredentials%2A>、または <xref:System.Net.NetworkCredential>型のオブジェクトにしか設定できません。  その他の <xref:System.Net.ICredentials> オブジェクト (最も一般的なものは <xref:System.Net.CredentialCache>) を <xref:System.Net.Http.HttpClientHandler.Credentials%2A> プロパティに割り当てると、 <xref:System.PlatformNotSupportedException>がスローされます。
+Windows ストア アプリ用 .NET では、 <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A?displayProperty=nameWithType> プロパティと <xref:System.Net.Http.HttpClientHandler.Credentials%2A?displayProperty=nameWithType> プロパティは独立して動作します。  また、 <xref:System.Net.Http.HttpClientHandler.Credentials%2A> プロパティは <xref:System.Net.ICredentials> インターフェイスを実装するオブジェクトをすべて受け入れます。  .NET Native では、プロパティを <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A> に設定する `true` と、プロパティがに <xref:System.Net.Http.HttpClientHandler.Credentials%2A> なり `null` ます。  さらに、 <xref:System.Net.Http.HttpClientHandler.Credentials%2A> プロパティは、 `null`、 <xref:System.Net.CredentialCache.DefaultCredentials%2A>、または <xref:System.Net.NetworkCredential>型のオブジェクトにしか設定できません。  その他の <xref:System.Net.ICredentials> オブジェクト (最も一般的なものは <xref:System.Net.CredentialCache>) を <xref:System.Net.Http.HttpClientHandler.Credentials%2A> プロパティに割り当てると、 <xref:System.PlatformNotSupportedException>がスローされます。
 
 **その他のサポートされていない機能または構成できない機能**
 
-.NET ネイティブ:
+.NET Native:
 
 - <xref:System.Net.Http.HttpClientHandler.ClientCertificateOptions%2A?displayProperty=nameWithType> プロパティの値は常に <xref:System.Net.Http.ClientCertificateOption.Automatic>です。  Windows ストア アプリ用 .NET での既定値は <xref:System.Net.Http.ClientCertificateOption.Manual>です。
 
@@ -213,7 +214,7 @@ Windows ストア アプリ用 .NET では、 <xref:System.Net.Http.HttpClientHa
 
  **非推奨の API**
 
- マネージド コードで相互運用性のために使用される頻度が低い API のいくつかが、非推奨にされました。 これらの Api を .NET ネイティブと共に使用すると、または例外がスローされるか、コンパイラエラーが発生する可能性があり <xref:System.NotImplementedException> <xref:System.PlatformNotSupportedException> ます。 Windows ストア アプリ用 .NET では、これらの API は廃止としてマークされていますが、これらの API を呼び出すとコンパイラ エラーではなくコンパイラの警告が生成されます。
+ マネージド コードで相互運用性のために使用される頻度が低い API のいくつかが、非推奨にされました。 これらの Api を .NET Native と共に使用すると、または例外がスローされるか、コンパイラエラーが発生する可能性があり <xref:System.NotImplementedException> <xref:System.PlatformNotSupportedException> ます。 Windows ストア アプリ用 .NET では、これらの API は廃止としてマークされていますが、これらの API を呼び出すとコンパイラ エラーではなくコンパイラの警告が生成されます。
 
  非推奨の `VARIANT` マーシャリング api には次のものがあります。
 
@@ -240,7 +241,7 @@ Windows ストア アプリ用 .NET では、 <xref:System.Net.Http.HttpClientHa
 - <xref:System.Runtime.InteropServices.ComEventsHelper?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>
 
-<xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType>.NET ネイティブでサポートされていない、インターフェイスの非推奨の api には次のものがあります。
+<xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType>.NET Native でサポートされていない、インターフェイスの非推奨の api には次のものがあります。
 
 - <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> (すべてのメンバー)
 - <xref:System.Runtime.InteropServices.CustomQueryInterfaceMode?displayProperty=nameWithType> (すべてのメンバー)
@@ -272,7 +273,7 @@ Windows ストア アプリ用 .NET では、 <xref:System.Net.Http.HttpClientHa
 
  **プラットフォーム呼び出しと COM 相互運用の互換性**
 
- ほとんどのプラットフォーム呼び出しと COM 相互運用のシナリオは、.NET ネイティブでもサポートされています。 特に、Windows ランタイム (WinRT) API とのすべての相互運用性と Windows ランタイムで必要なすべてのマーシャリングがサポートされます。 これには、次のものに対するマーシャリング サポートが含まれます。
+ ほとんどのプラットフォーム呼び出しと COM 相互運用のシナリオは、.NET Native でもサポートされています。 特に、Windows ランタイム (WinRT) API とのすべての相互運用性と Windows ランタイムで必要なすべてのマーシャリングがサポートされます。 これには、次のものに対するマーシャリング サポートが含まれます。
 
 - 配列 ( <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType>を含む)
 
@@ -320,7 +321,7 @@ Windows ストア アプリ用 .NET では、 <xref:System.Net.Http.HttpClientHa
 
   - [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
 
-ただし、.NET ネイティブは次の機能をサポートしていません。
+ただし、.NET Native は次の機能をサポートしていません。
 
 - クラシック COM イベントの使用
 
@@ -334,11 +335,11 @@ Windows ストア アプリ用 .NET では、 <xref:System.Net.Http.HttpClientHa
 
 ### <a name="other-differences-from-net-apis-for-windows-store-apps"></a>その他の Windows ストア アプリ用 .NET API との違い
 
-このセクションでは、.NET ネイティブでサポートされていないその他の Api の一覧を示します。 サポートされていない Api の最大セットは、Windows Communication Foundation (WCF) Api です。
+このセクションでは、.NET Native でサポートされていないその他の Api の一覧を示します。 サポートされていない Api の最大セットは、Windows Communication Foundation (WCF) Api です。
 
 **DataAnnotations (System.ComponentModel.DataAnnotations)**
 
-<xref:System.ComponentModel.DataAnnotations>名前空間と名前空間の型は、 <xref:System.ComponentModel.DataAnnotations.Schema> .NET ネイティブではサポートされていません。 これには、Windows 8 用 Windows ストアアプリ用 .NET に存在する次の型が含まれます。
+<xref:System.ComponentModel.DataAnnotations>名前空間と名前空間の型は、 <xref:System.ComponentModel.DataAnnotations.Schema> .NET Native ではサポートされていません。 これには、Windows 8 用 Windows ストアアプリ用 .NET に存在する次の型が含まれます。
 
 - <xref:System.ComponentModel.DataAnnotations.AssociationAttribute?displayProperty=nameWithType>
 - <xref:System.ComponentModel.DataAnnotations.ConcurrencyCheckAttribute?displayProperty=nameWithType>
@@ -368,7 +369,7 @@ Windows ストア アプリ用 .NET では、 <xref:System.Net.Http.HttpClientHa
 
  **Visual Basic**
 
-Visual Basic は、現在 .NET ネイティブではサポートされていません。 名前空間と名前空間の次の型は、 <xref:Microsoft.VisualBasic> <xref:Microsoft.VisualBasic.CompilerServices> .NET ネイティブでは使用できません。
+Visual Basic は、現在 .NET Native ではサポートされていません。 名前空間と名前空間の次の型は、 <xref:Microsoft.VisualBasic> <xref:Microsoft.VisualBasic.CompilerServices> .NET Native では使用できません。
 
 - <xref:Microsoft.VisualBasic.CallType?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Constants?displayProperty=nameWithType>
@@ -390,15 +391,15 @@ Visual Basic は、現在 .NET ネイティブではサポートされていま�
 
 **リフレクション コンテキスト (System.Reflection.Context 名前空間)**
 
-<xref:System.Reflection.Context.CustomReflectionContext?displayProperty=nameWithType>クラスは .NET ネイティブではサポートされていません。
+<xref:System.Reflection.Context.CustomReflectionContext?displayProperty=nameWithType>クラスは .NET Native ではサポートされていません。
 
 **RTC (System.Net.Http.Rtc)**
 
-`System.Net.Http.RtcRequestFactory`クラスは .NET ネイティブではサポートされていません。
+`System.Net.Http.RtcRequestFactory`クラスは .NET Native ではサポートされていません。
 
 **Windows Communication Foundation (WCF) (System.ServiceModel.\*)**
 
-[System.servicemodel. * 名前空間](xref:System.ServiceModel)の型は、.NET ネイティブではサポートされていません。 次のような型があります。
+[System.servicemodel. * 名前空間](xref:System.ServiceModel)の型は、.NET Native ではサポートされていません。 次のような型があります。
 
 - <xref:System.ServiceModel.ActionNotSupportedException?displayProperty=nameWithType>
 - <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>
@@ -583,7 +584,7 @@ Visual Basic は、現在 .NET ネイティブではサポートされていま�
 
 <xref:System.Runtime.Serialization.DataContractSerializer>、 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>、および <xref:System.Xml.Serialization.XmlSerializer> クラスによるシリアル化と逆シリアル化に関する違いを次に示します。
 
-- .NET ネイティブでは、とは、 <xref:System.Runtime.Serialization.DataContractSerializer> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 型がルートシリアル化型ではない基底クラスメンバーを持つ派生クラスのシリアル化または逆シリアル化に失敗します。 たとえば、次のコードでは、 `Y` をシリアル化または逆シリアル化しようとするとエラーになります。
+- .NET Native では、とは、 <xref:System.Runtime.Serialization.DataContractSerializer> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 型がルートシリアル化型ではない基底クラスメンバーを持つ派生クラスのシリアル化または逆シリアル化に失敗します。 たとえば、次のコードでは、 `Y` をシリアル化または逆シリアル化しようとするとエラーになります。
 
   [!code-csharp[ProjectN#10](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat3.cs#10)]
 
@@ -641,7 +642,7 @@ Visual Basic は、現在 .NET ネイティブではサポートされていま�
 
 **例外とデバッグ**
 
-デバッガーで .NET ネイティブを使用してコンパイルされたアプリを実行している場合は、次の例外の種類に対して初回例外が有効になります。
+デバッガーで .NET Native を使用してコンパイルされたアプリを実行している場合は、次の例外の種類に対して初回例外が有効になります。
 
 - <xref:System.MemberAccessException>
 
@@ -661,7 +662,7 @@ Visual Studio で既定で使用される x86 ビルド ツールを使用しま
 
 **単体テスト ライブラリ プロジェクト**
 
-Windows ストアアプリプロジェクトの単体テストライブラリで .NET ネイティブを有効にすることはサポートされていないため、プロジェクトのビルドに失敗します。
+Windows ストアアプリプロジェクトの単体テストライブラリで .NET Native を有効にすることはサポートされていないため、プロジェクトのビルドに失敗します。
 
 ## <a name="see-also"></a>関連項目
 

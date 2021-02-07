@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRDataTarget:: SetThreadContext メソッド'
 title: ICLRDataTarget::SetThreadContext メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 103c8502-81fe-40d7-9c1e-9008d8fb19e1
 topic_type:
 - apiref
-ms.openlocfilehash: c135c051637858682c22db58d562e1d50eea562b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fc428bc887f7ba10f3096cdf17a757fb252418f0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723702"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738204"
 ---
 # <a name="iclrdatatargetsetthreadcontext-method"></a>ICLRDataTarget::SetThreadContext メソッド
 
@@ -50,7 +51,7 @@ HRESULT SetThreadContext (
   
  バッファー内のデータは、 `context` Win32 構造体の形式になり `CONTEXT` ます。 コンテキストはプロセッサ固有のレジスタデータを指定するため、Win32 構造体の定義は `CONTEXT` プロセッサのアーキテクチャによって異なります。 Win32 構造体の定義については、Winnt.h ヘッダーファイルを参照してください `CONTEXT` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドは、デバッグ アプリケーションの作成者によって実装されます。  
   

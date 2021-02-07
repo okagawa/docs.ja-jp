@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: _EFN_GetManagedExcepStack 関数'
 title: _EFN_GetManagedExcepStack 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21ceed9e-62b2-4024-b027-6d095109955a
 topic_type:
 - apiref
-ms.openlocfilehash: b86277836b1be48c9f8020d59071aba8c5b1e457
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a3c7e30a377e10b9d4d0b1dd663a594a0e872f3c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676232"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738313"
 ---
 # <a name="_efn_getmanagedexcepstack-function"></a>\_EFN \_ getmanagedexcepstack 関数
 
@@ -50,7 +51,7 @@ HRESULT _EFN_GetManagedExcepStack(
  `cbString`  
  入出力文字列バッファーで使用できる文字数。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  現在コンテキスト内にあるスレッドにマネージコードがない場合、関数は、ファシリティ値が0xa0 でエラーコードが0x1000 の HRESULT SOS_E_NOMANAGEDCODE を返します。  
   

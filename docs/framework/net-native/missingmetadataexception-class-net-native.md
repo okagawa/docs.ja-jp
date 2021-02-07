@@ -1,24 +1,25 @@
 ---
+description: '詳細について: MissingMetadataException クラス (.NET Native)'
 title: MissingMetadataException クラス (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
-ms.openlocfilehash: d73d66529bc30358c946eb0a7072f0cb8910b19a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b5d93a8dc098a542791df303450d64e4abcc5de9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128290"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738651"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>MissingMetadataException クラス (.NET ネイティブ)
 
-**Windows アプリ用 .NET (Windows 10 用)、.NET ネイティブのみ**
+**Windows アプリ用 .NET (Windows 10 用)、.NET Native のみ**
 
 この例外は、存在しないメタデータを取得するためにリフレクションが使用された場合にスローされます。
 
 **名前空間:** System.Reflection
 
 > [!IMPORTANT]
-> クラスは、 `MissingMetadataException` .NET ネイティブツールチェーンによる内部使用のみを目的としています。 サード パーティのコードで使用することを目的としていません。また、アプリケーション コードで、例外を処理する必要はありません。 代わりに、[ランタイム ディレクティブ ファイル](runtime-directives-rd-xml-configuration-file-reference.md)にエントリを追加することにより、例外を除去します。 詳細については、「解説」を参照してください。
+> クラスは、 `MissingMetadataException` .NET Native ツールチェーンによる内部使用のみを目的としています。 サード パーティのコードで使用することを目的としていません。また、アプリケーション コードで、例外を処理する必要はありません。 代わりに、[ランタイム ディレクティブ ファイル](runtime-directives-rd-xml-configuration-file-reference.md)にエントリを追加することにより、例外を除去します。 詳細については、「解説」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -32,12 +33,12 @@ ms.locfileid: "73128290"
 
 |コンストラクター|説明|
 |-----------------|-----------------|
-|`public MissingMetadataException()`|エラーを説明するシステム提供のメッセージを使用して、`MissingMetadataException` クラスの新しいインスタンスを初期化します。<br /><br /> このコンストラクターは、.NET ネイティブツールチェーンのみによって内部で使用されます。|
-|`public MissingMetadataException(String message)`|指定したエラー メッセージを使用して、`MissingMetadataException` クラスの新しいインスタンスを初期化します。<br /><br /> このコンストラクターは、.NET ネイティブツールチェーンのみによって内部で使用されます。|
+|`public MissingMetadataException()`|エラーを説明するシステム提供のメッセージを使用して、`MissingMetadataException` クラスの新しいインスタンスを初期化します。<br /><br /> このコンストラクターは、.NET Native ツールチェーンのみによって内部で使用されます。|
+|`public MissingMetadataException(String message)`|指定したエラー メッセージを使用して、`MissingMetadataException` クラスの新しいインスタンスを初期化します。<br /><br /> このコンストラクターは、.NET Native ツールチェーンのみによって内部で使用されます。|
 
-## <a name="properties"></a>Properties
+## <a name="properties"></a>プロパティ
 
-|プロパティ|Description|
+|プロパティ|説明|
 |--------------|-----------------|
 |`public IDictionary Data { get; }`|例外に関する追加のユーザー定義情報を提供する、キーと値のペアのコレクションを取得します。 (<xref:System.Exception?displayProperty=nameWithType> から継承。)|
 |`public string HelpLink { get; set; }`|この例外に関連付けられているヘルプ ファイルへのリンクを取得または設定します。 (<xref:System.Exception?displayProperty=nameWithType> から継承。)|
@@ -51,7 +52,7 @@ ms.locfileid: "73128290"
 
 ## <a name="methods"></a>メソッド
 
-|メソッド|Description|
+|メソッド|説明|
 |------------|-----------------|
 |`public bool Equals(Object obj)`|指定されたオブジェクトが現在のオブジェクトと等しいかどうかを判断します。  (<xref:System.Exception?displayProperty=nameWithType> から継承。)|
 |`protected void Finalize()`|オブジェクトが、ガベージ コレクションによって収集される前に、リソースの解放とその他のクリーンアップ操作の実行を試みることができるようにします。 (<xref:System.Object> から継承。)|
@@ -64,7 +65,7 @@ ms.locfileid: "73128290"
 
 ## <a name="events"></a>events
 
-|Event|Description|
+|event|説明|
 |-----------|-----------------|
 |`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|例外がシリアル化され、例外に関するシリアル化されたデータを含む例外状態オブジェクトが作成されたときに発生します。 (<xref:System.Exception?displayProperty=nameWithType> から継承。)|
 
@@ -72,7 +73,7 @@ ms.locfileid: "73128290"
 
 `MissingMetadataException` 例外は、アセンブリで使用できないメタデータにアクセスするためにリフレクションが使用されるとスローされます。
 
-実行時にアプリで使用できるメタデータは、ランタイムディレクティブ (XML 構成) ファイル (.xml) によって定義さ \* れます。 アプリからこの例外がスローされないようにするには、\*.rd.xml を変更して、実行時に存在する必要があるメタデータを定義する必要があります。 \*.rd.xml ファイルの形式の詳細については、「[Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md)」(ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス) を参照してください。
+実行時にアプリで使用できるメタデータは、ランタイムディレクティブ (XML 構成) ファイルの.rd.xml によって定義され \* ます。 アプリからこの例外がスローされないようにするには、\*.rd.xml を変更して、実行時に存在する必要があるメタデータを定義する必要があります。 \*.rd.xml ファイルの形式の詳細については、「[Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md)」(ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス) を参照してください。
 
 > [!IMPORTANT]
 > この例外はアプリケーションで必要なメタデータを実行時に使用できないことを示しているため、この例外に `try`/`catch` ブロックで対処しないでください。 代わりに、ランタイム ディレクティブ ファイルを使用して、例外の原因を診断して排除する必要があります。 例外を除去するためにランタイム ディレクティブ ファイルに追加できるエントリを取得するには、次の 2 つのトラブルシューティング ツールのいずれかを使用できます。

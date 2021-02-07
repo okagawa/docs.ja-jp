@@ -1,24 +1,25 @@
 ---
+description: '詳細について: 誤 Singruntimeartifactexception クラス (.NET Native)'
 title: MissingRuntimeArtifactException クラス (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
-ms.openlocfilehash: 2618af8e122964d64126f945c337101cb5bbe5ae
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: fae0ae708ab8d87347f29571ddb00e53bf7f6931
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250906"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738638"
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>MissingRuntimeArtifactException クラス (.NET ネイティブ)
 
-**Windows アプリ用 .NET (Windows 10 用)、.NET ネイティブのみ**  
+**Windows アプリ用 .NET (Windows 10 用)、.NET Native のみ**  
   
  この例外は、型または型のメンバーのメタデータは使用可能だが、その実装が削除されている場合にスローされます。  
   
  **名前空間:** System.Reflection  
   
 > [!IMPORTANT]
-> クラスは、 `MissingRuntimeArtifactException` .NET ネイティブツールチェーンによる内部使用のみを目的としています。 サード パーティのコードで使用することを目的としていません。また、アプリケーション コードで、例外を処理する必要はありません。 代わりに、[ランタイム ディレクティブ ファイル](runtime-directives-rd-xml-configuration-file-reference.md)にエントリを追加することにより、例外を除去します。 詳細については、「解説」を参照してください。  
+> クラスは、 `MissingRuntimeArtifactException` .NET Native ツールチェーンによる内部使用のみを目的としています。 サード パーティのコードで使用することを目的としていません。また、アプリケーション コードで、例外を処理する必要はありません。 代わりに、[ランタイム ディレクティブ ファイル](runtime-directives-rd-xml-configuration-file-reference.md)にエントリを追加することにより、例外を除去します。 詳細については、「解説」を参照してください。  
   
 ## <a name="syntax"></a>構文  
 
@@ -32,12 +33,12 @@ ms.locfileid: "96250906"
   
 |コンストラクター|説明|  
 |-----------------|-----------------|  
-|`public MissingRuntimeArtifactException()`|エラーを説明するシステム提供のメッセージを使用して、`MissingRuntimeArtifactException` クラスの新しいインスタンスを初期化します。<br /><br /> このコンストラクターは、.NET ネイティブツールチェーンのみによって内部で使用されます。|  
-|`public MissingRuntimeArtifactException(String message)`|指定したエラー メッセージを使用して、`MissingRuntimeArtifactException` クラスの新しいインスタンスを初期化します。<br /><br /> このコンストラクターは、.NET ネイティブツールチェーンのみによって内部で使用されます。|  
+|`public MissingRuntimeArtifactException()`|エラーを説明するシステム提供のメッセージを使用して、`MissingRuntimeArtifactException` クラスの新しいインスタンスを初期化します。<br /><br /> このコンストラクターは、.NET Native ツールチェーンのみによって内部で使用されます。|  
+|`public MissingRuntimeArtifactException(String message)`|指定したエラー メッセージを使用して、`MissingRuntimeArtifactException` クラスの新しいインスタンスを初期化します。<br /><br /> このコンストラクターは、.NET Native ツールチェーンのみによって内部で使用されます。|  
   
 ## <a name="properties"></a>プロパティ  
   
-|プロパティ|Description|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |`public IDictionary Data { get; }`|例外に関する追加のユーザー定義情報を提供する、キーと値のペアのコレクションを取得します。 (<xref:System.Exception?displayProperty=nameWithType> から継承。)|  
 |`public string HelpLink { get; set; }`|この例外に関連付けられているヘルプ ファイルへのリンクを取得または設定します。 (<xref:System.Exception?displayProperty=nameWithType> から継承。)|  
@@ -63,7 +64,7 @@ ms.locfileid: "96250906"
   
 ## <a name="events"></a>events  
   
-|Event|説明|  
+|event|説明|  
 |-----------|-----------------|  
 |`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|例外がシリアル化され、例外に関するシリアル化されたデータを含む例外状態オブジェクトが作成されたときに発生します。 (<xref:System.Exception?displayProperty=nameWithType> から継承。)|  
   

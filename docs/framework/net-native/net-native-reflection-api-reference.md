@@ -1,20 +1,21 @@
 ---
+description: 詳細については、「.NET Native リフレクション API リファレンス」を参照してください。
 title: .NET ネイティブ リフレクション API リファレンス
 ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
-ms.openlocfilehash: 4cded310397ffa4dea057899b6f008146d35a03b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 44786812b5bf8c7bd470a588730b7b03ee91f00c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250880"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738521"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET ネイティブ リフレクション API リファレンス
 
-.NET ネイティブには、MissingInteropDataException、 [MissingMetadataException](missingmetadataexception-class-net-native.md)、 [system.runtime.compilerservices](missinginteropdataexception-class-net-native.md)の3つの新しい例外の種類が含まれています。この[例外](missingruntimeartifactexception-class-net-native.md)については、次のとおりです。 3 つの例外型すべてについて、次の点に注意してください。  
+.NET Native には、MissingInteropDataException、 [MissingMetadataException](missingmetadataexception-class-net-native.md)、 [system.runtime.compilerservices](missinginteropdataexception-class-net-native.md)の3つの新しい例外の種類が含まれています。この[例外](missingruntimeartifactexception-class-net-native.md)については、次のとおりです。 3 つの例外型すべてについて、次の点に注意してください。  
   
  これらの型は、内部でのみ使用してください。  
- この3つの例外の種類は、.NET ネイティブツールチェーンのみを使用するためのものです。 例外は、.NET ネイティブツールチェーンが、プログラムの実行を続行できない欠損データを検出した場合にスローされます。  
+ この3つの例外の種類は、.NET Native ツールチェーンのみを使用するためのものです。 例外は、.NET Native ツールチェーンが、プログラムの実行を続行できない欠損データを検出した場合にスローされます。  
   
  これらの例外をコード内で処理しないでください。  
  これらの例外は、アプリケーションで必要なメタデータが存在しないこと ( [MissingInteropDataException](missinginteropdataexception-class-net-native.md) 例外と [MissingMetadataException](missingmetadataexception-class-net-native.md) 例外)、またはアプリケーションで必要な実装コードが欠落していること ( [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) 例外) のどちらかを示します。 これらの例外状態を修正するには、ランタイム ディレクティブ (.rd.xml) ファイルを変更して必要なメタデータまたは実装コードを実行時に使用できるようにします。 詳細については、「 [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md)」を参照してください。 次の 2 つのトラブルシューティング ツールを使用して、 [MissingMetadataException](missingmetadataexception-class-net-native.md) および [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) 例外を取り除くための適切なエントリをランタイム ディレクティブ ファイルに提供できます。  
@@ -24,11 +25,11 @@ ms.locfileid: "96250880"
 - [MissingMetadataException トラブルシューティング ツール](https://dotnet.github.io/native/troubleshooter/method.html) (メソッドの場合)。  
   
 > [!NOTE]
-> このリファレンスでは、.NET ネイティブに固有の3つの例外の種類について説明します。 .NET Framework コアリフレクション API のリファレンスドキュメントについては、 <xref:System.Reflection> 、、およびの各 <xref:System.Reflection.Context> 名前空間を参照してください <xref:System.Reflection.Emit> 。 .NET Framework の主要な相互運用 API に関するリファレンス ドキュメントについては、「 <xref:System.Runtime.InteropServices>」を参照してください。  
+> このリファレンスでは、.NET Native に固有の3つの例外の種類について説明します。 .NET Framework コアリフレクション API のリファレンスドキュメントについては、 <xref:System.Reflection> 、、およびの各 <xref:System.Reflection.Context> 名前空間を参照してください <xref:System.Reflection.Emit> 。 .NET Framework の主要な相互運用 API に関するリファレンス ドキュメントについては、「 <xref:System.Runtime.InteropServices>」を参照してください。  
   
 ## <a name="systemreflection-namespace"></a>System.Reflection 名前空間  
 
- <xref:System.Reflection> 名前空間には、.NET Framework でリフレクションに使用される主要な型が含まれています。 .NET ネイティブには、次の2つの新しい例外の種類も含まれています。  
+ <xref:System.Reflection> 名前空間には、.NET Framework でリフレクションに使用される主要な型が含まれています。 .NET Native には、次の2つの新しい例外の種類も含まれています。  
   
 |インスタンス|説明|  
 |-----------|-----------------|  
@@ -39,7 +40,7 @@ ms.locfileid: "96250880"
   
 ## <a name="systemruntimecompilerservices-namespace"></a>System.Runtime.CompilerServices 名前空間  
 
- <xref:System.Runtime.CompilerServices> 名前空間には、言語コンパイラによって自動的にデザインされた型が含まれています。 .NET ネイティブには、新しい例外の種類も含まれています。  
+ <xref:System.Runtime.CompilerServices> 名前空間には、言語コンパイラによって自動的にデザインされた型が含まれています。 .NET Native には、新しい例外の種類も含まれています。  
   
 |インスタンス|説明|  
 |-----------|-----------------|  

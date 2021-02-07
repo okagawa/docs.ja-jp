@@ -1,27 +1,28 @@
 ---
+description: '詳細について: MissingInteropDataException クラス (.NET Native)'
 title: MissingInteropDataException クラス (.NET ネイティブ)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
-ms.openlocfilehash: bbbb484e5cb8060568b321a2a41474d60c9f87f6
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ee1544d6a0e1e6a3f0e4386650754ed84b49015b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250919"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738703"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>MissingInteropDataException クラス (.NET ネイティブ)
 
-**Windows アプリ用 .NET (Windows 10 用)、.NET ネイティブのみ**  
+**Windows アプリ用 .NET (Windows 10 用)、.NET Native のみ**  
   
  この例外は、手動マーシャリング メソッドが呼び出されたが、型のメタデータがスタティック分析でも、ランタイム ディレクティブ ファイルにも見つからない場合にスローされます。  
   
  **名前空間:** System.Runtime.CompilerServices  
   
 > [!IMPORTANT]
-> クラスは、 `MissingInteropDataException` .NET ネイティブツールチェーンによる内部使用のみを目的としています。 サード パーティのコードで使用することを目的としていません。また、アプリケーション コードで、例外を処理する必要はありません。 代わりに、[ランタイム ディレクティブ ファイル](runtime-directives-rd-xml-configuration-file-reference.md)にエントリを追加することにより、例外を除去します。 詳細については、「解説」を参照してください。  
+> クラスは、 `MissingInteropDataException` .NET Native ツールチェーンによる内部使用のみを目的としています。 サード パーティのコードで使用することを目的としていません。また、アプリケーション コードで、例外を処理する必要はありません。 代わりに、[ランタイム ディレクティブ ファイル](runtime-directives-rd-xml-configuration-file-reference.md)にエントリを追加することにより、例外を除去します。 詳細については、「解説」を参照してください。  
   
 ## <a name="syntax"></a>構文  
 
@@ -34,11 +35,11 @@ ms.locfileid: "96250919"
   
 |コンストラクター|説明|  
 |-----------------|-----------------|  
-|`public MissingInteropDataException(String resourceId, Type pertinentType)`|エラーとデータが欠落している型について説明するシステム提供のメッセージの ID を使用して、`MissingInteropDataException` クラスの新しいインスタンスを初期化します。 このコンストラクターは、.NET ネイティブツールチェーンのみによって内部で使用されます。|  
+|`public MissingInteropDataException(String resourceId, Type pertinentType)`|エラーとデータが欠落している型について説明するシステム提供のメッセージの ID を使用して、`MissingInteropDataException` クラスの新しいインスタンスを初期化します。 このコンストラクターは、.NET Native ツールチェーンのみによって内部で使用されます。|  
   
 ## <a name="properties"></a>プロパティ  
   
-|プロパティ|Description|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |`public IDictionary Data { get; }`|例外に関する追加のユーザー定義情報を提供する、キーと値のペアのコレクションを取得します。 (<xref:System.Exception?displayProperty=nameWithType> から継承。)|  
 |`public string HelpLink { get; set; }`|この例外に関連付けられているヘルプ ファイルへのリンクを取得または設定します。 (<xref:System.Exception?displayProperty=nameWithType> から継承。)|  
@@ -65,7 +66,7 @@ ms.locfileid: "96250919"
   
 ## <a name="events"></a>events  
   
-|Event|説明|  
+|event|説明|  
 |-----------|-----------------|  
 |`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|例外がシリアル化され、例外に関するシリアル化されたデータを含む例外状態オブジェクトが作成されたときに発生します。 (<xref:System.Exception?displayProperty=nameWithType> から継承。)|  
   

@@ -1,13 +1,14 @@
 ---
+description: 詳細については、.NET Native とコンパイルに関するページを参照してください。
 title: .NET Native とコンパイル
 ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
-ms.openlocfilehash: cf5c9f05b2f2cb4ca15e4add5b53bc9bdca757a3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1a847340f48d97eb255869895f9a5b963e45e8ab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128242"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738560"
 ---
 # <a name="net-native-and-compilation"></a>.NET Native とコンパイル
 

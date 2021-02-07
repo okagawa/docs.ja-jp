@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICLRDataTarget インターフェイス」を参照してください。
 title: ICLRDataTarget インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2f05155-9bef-4e11-b703-7f05890665ca
 topic_type:
 - apiref
-ms.openlocfilehash: 0d3e6a95d8fd71a67b97923dac53c1f615dfe666
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f24760f638705a1bde7e055069cbc3a18a0896fd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703422"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738222"
 ---
 # <a name="iclrdatatarget-interface"></a>ICLRDataTarget インターフェイス
 
@@ -41,7 +42,7 @@ ms.locfileid: "95703422"
 |[SetTLSValue メソッド](iclrdatatarget-settlsvalue-method.md)|ターゲットプロセス内の指定したスレッドのスレッドローカルストレージ (TLS) の値を設定します。|  
 |[WriteVirtual メソッド](iclrdatatarget-writevirtual-method.md)|指定されたバッファーから指定された仮想メモリアドレスにデータを書き込みます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  API クライアント (つまり、デバッガー) は、特定のターゲット項目に適した方法でこのインターフェイスを実装する必要があります。 たとえば、ライブ プロセスの実装は、メモリ ダンプの実装とは異なります。  
   
