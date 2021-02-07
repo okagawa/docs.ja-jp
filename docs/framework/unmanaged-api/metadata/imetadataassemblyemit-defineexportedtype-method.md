@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataAssemblyEmit::D efineExportedType メソッド'
 title: IMetaDataAssemblyEmit::DefineExportedType メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fad01d7a-3178-4c8c-9f0a-4641e3701c9b
 topic_type:
 - apiref
-ms.openlocfilehash: 6b30218cc7373494870ec54a3196857fcc5c08a5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0da1b1eb0880b0ba9df0ba9ad70b460163dffc39
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95689421"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99671114"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType メソッド
 
@@ -63,7 +64,7 @@ HRESULT DefineExportedType (
  `pmdct`  
  入出力エクスポートされた型を示す、返されたメタデータトークンへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ExportedType`このアセンブリによって公開され、マニフェストを含むモジュール以外のモジュールで実装される型ごとに、メタデータ構造を定義する必要があります。  
   

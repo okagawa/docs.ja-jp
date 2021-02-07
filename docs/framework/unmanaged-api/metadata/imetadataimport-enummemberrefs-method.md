@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataImport:: EnumMemberRefs メソッド'
 title: IMetaDataImport::EnumMemberRefs メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e97c97a6-6e4f-41f5-9af1-9b3cf3bdbd6b
 topic_type:
 - apiref
-ms.openlocfilehash: d8b02e85efc2cd7364690dd42104a313ba6ec272
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0c9b10342f73ae5b604ac25b6ff8ccec58deb5ab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711456"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99670945"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>IMetaDataImport::EnumMemberRefs メソッド
 

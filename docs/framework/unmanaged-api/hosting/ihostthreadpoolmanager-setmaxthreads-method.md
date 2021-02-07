@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IHostThreadPoolManager:: SetMaxThreads メソッド'
 title: IHostThreadPoolManager::SetMaxThreads メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 77cfd347-95c2-4425-b807-4ecc2a8d4578
 topic_type:
 - apiref
-ms.openlocfilehash: 68e806daa63d13ad6c1f3b5de634c20ca02e8eb4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 83266b05f639c0aa63e492bca525cbbf09a30775
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730717"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99671244"
 ---
 # <a name="ihostthreadpoolmanagersetmaxthreads-method"></a>IHostThreadPoolManager::SetMaxThreads メソッド
 
@@ -51,7 +52,7 @@ HRESULT SetMaxThreads (
 |E_FAIL|不明な重大なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_NOTIMPL|ホストはの実装を提供していません `SetMaxThreads` 。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  CLR がスレッドプールのサイズを構成できるようにするために、ホストは必要ありません。 ホストによっては、実装、パフォーマンス、スケーラビリティなどの理由から、スレッドプールを排他的に制御することが必要になる場合があります。 この場合、ホストは E_NOTIMPL の HRESULT 値を返す必要があります。  
   

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「IHostSecurityContext インターフェイス」を参照してください。
 title: IHostSecurityContext インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88e2eac0-8ccb-404f-abbc-287d55159842
 topic_type:
 - apiref
-ms.openlocfilehash: aafaa1d648396ddaa76193fa15cf7f74394777a9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c4c1be00a8b1c9df58797a0f2fc7e60abcab9673
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724807"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99671647"
 ---
 # <a name="ihostsecuritycontext-interface"></a>IHostSecurityContext インターフェイス
 
@@ -31,7 +32,7 @@ ms.locfileid: "95724807"
 |------------|-----------------|  
 |[Capture メソッド](ihostsecuritycontext-capture-method.md)|`IHostSecurityContext` [IHostSecurityManager:: GetSecurityContext](ihostsecuritymanager-getsecuritycontext-method.md)への呼び出しから返されたインスタンスの複製を取得します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ホストは、CLR とユーザーコードの両方によって、スレッドトークンへのすべてのコードアクセスを制御できます。 また、完全なセキュリティコンテキスト情報が、制限されたコードアクセスで非同期操作またはコードポイント全体に渡されるようにすることもできます。 `IHostSecurityContext` このセキュリティコンテキスト情報をカプセル化します。この情報は、ランタイムに対して非透過的です。 ランタイムはを使用してこの情報をキャプチャ `Capture` し、スレッドプールのワーカー項目のディスパッチ、ファイナライザーの実行、およびモジュールコンストラクターとクラスコンストラクター間で移動します。  
   

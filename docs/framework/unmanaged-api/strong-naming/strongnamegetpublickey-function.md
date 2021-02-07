@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: StrongNameGetPublicKey 関数'
 title: StrongNameGetPublicKey 関数
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5b58c87f-3f72-40df-9b9a-291076931cc3
 topic_type:
 - apiref
-ms.openlocfilehash: c97cc0c1d4c022583d0823abeff998e2ed5f719e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c94ffdd20e83b03da27b2f44ebbc279cfd8b8afc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710975"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99670569"
 ---
 # <a name="strongnamegetpublickey-function"></a>StrongNameGetPublicKey 関数
 
@@ -65,7 +66,7 @@ BOOLEAN StrongNameGetPublicKey (
 
  `true` 正常に完了した場合は。それ以外の場合は `false` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  公開キーは [Publickeyblob](publickeyblob-structure.md) 構造に含まれています。  
   

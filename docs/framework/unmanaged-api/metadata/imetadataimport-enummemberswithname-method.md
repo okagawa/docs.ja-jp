@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataImport:: EnumMembersWithName メソッド'
 title: IMetaDataImport::EnumMembersWithName メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7c9e9120-3104-42f0-86ce-19a025f20dcc
 topic_type:
 - apiref
-ms.openlocfilehash: 35b82c33e54619eb9bebd5e5749ae202e905357a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bb6d8f0769029dccaf1f52dd211c67d47bf32a73
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720993"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99670763"
 ---
 # <a name="imetadataimportenummemberswithname-method"></a>IMetaDataImport::EnumMembersWithName メソッド
 
@@ -59,7 +60,7 @@ HRESULT EnumMembersWithName (
  `pcTokens`  
  入出力で返された MemberDef トークンの実際の数 `rMembers` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドは、フィールドとメソッドを列挙しますが、プロパティやイベントは列挙しません。 [IMetaDataImport:: EnumMembers](imetadataimport-enummembers-method.md)とは異なり、では、 `EnumMembersWithName` 指定された名前のないすべてのフィールドとメンバートークンが破棄されます。  
   

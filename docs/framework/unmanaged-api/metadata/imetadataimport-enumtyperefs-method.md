@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataImport:: EnumTypeRefs メソッド'
 title: IMetaDataImport::EnumTypeRefs メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4896b8f-8e97-469c-8089-e72a025661b5
 topic_type:
 - apiref
-ms.openlocfilehash: e77520552eea9b58e4358cc5928e5ce666037009
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1155357e82c08660a852225f0b1a54629cbee0ca
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678156"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99670620"
 ---
 # <a name="imetadataimportenumtyperefs-method"></a>IMetaDataImport::EnumTypeRefs メソッド
 
@@ -58,7 +59,7 @@ HRESULT EnumTypeRefs (
 |`S_OK`|`EnumTypeRefs` 正常に返されました。|  
 |`S_FALSE`|列挙するトークンがありません。 この場合、 `pcTypeRefs` は0になります。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  TypeRef トークンは、型への参照を表します。  
   

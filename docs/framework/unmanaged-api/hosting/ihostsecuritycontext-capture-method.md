@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IHostSecurityContext:: Capture メソッド'
 title: IHostSecurityContext::Capture メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ae0836d0-1170-4494-bac5-d0e809df51a2
 topic_type:
 - apiref
-ms.openlocfilehash: 7760e178984798fac5cde2e8c0143a9c8716a212
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d46bbae7b94dcad6d1356243c938c9d3690f26a7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672761"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99671712"
 ---
 # <a name="ihostsecuritycontextcapture-method"></a>IHostSecurityContext::Capture メソッド
 
@@ -50,7 +51,7 @@ HRESULT Capture (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  から返されるインターフェイスポインター `Capture` は、キャプチャされたコンテキストの複製です。 この情報が非同期コードポイント間で移動されると、その有効期間は、呼び出しが行われたポインターとは分離されます。 したがって、元のポインターは解放できます。  
   

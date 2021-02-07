@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataImport:: EnumMembers メソッド'
 title: IMetaDataImport::EnumMembers メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3fb8e178-342b-4c89-9bcf-f7f834e6cb77
 topic_type:
 - apiref
-ms.openlocfilehash: 92503df60ae44dfd44819fe3eda8e6a0549b2b66
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3b56b25c6c581f6bfc3303a55a49a12ffcc73494
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720992"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99670815"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers メソッド
 
@@ -62,7 +63,7 @@ HRESULT EnumMembers (
 |`S_OK`|`EnumMembers` 正常に返されました。|  
 |`S_FALSE`|列挙する MemberDef トークンがありません。 この場合、 `pcTokens` は0になります。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  クラスのメンバーのコレクションを列挙するときに、 `EnumMembers` クラスで直接定義されたメンバー (プロパティまたはイベントでは **ない** ) のみを返します。 クラスが継承されたメンバーの実装を提供している場合でも、クラスが継承するメンバーは返しません。 継承されたメンバーを列挙するには、呼び出し元が継承チェーンを明示的にウォークする必要があります。 継承チェーンの規則は、元のメタデータを出力した言語またはコンパイラによって異なる場合があることに注意してください。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IHostSecurityManager:: RevertToSelf メソッド'
 title: IHostSecurityManager::RevertToSelf メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 189f28f8-f9a1-4192-aedc-91084e4f8b99
 topic_type:
 - apiref
-ms.openlocfilehash: a54c25cb0cae906dc2d030900b9a1e1dbbbb2f1e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f3488653bcb498c7521de0e368b33bc444967f21
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680522"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99671504"
 ---
 # <a name="ihostsecuritymanagerreverttoself-method"></a>IHostSecurityManager::RevertToSelf メソッド
 
@@ -43,7 +44,7 @@ HRESULT RevertToSelf ();
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `RevertToSelf` は、 [ImpersonateLoggedOnUser](ihostsecuritymanager-impersonateloggedonuser-method.md) メソッドを以前に呼び出した後、元のスレッドトークンに戻るために呼び出されます。  
   

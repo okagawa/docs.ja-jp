@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: StrongNameSignatureSize 関数'
 title: StrongNameSignatureSize 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4fde4cd0-f53e-4411-a2fe-fc5c54472f95
 topic_type:
 - apiref
-ms.openlocfilehash: 6a2b3afe66f1eaa358c5f80de50f14ceb730048b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b3f22a6a4d5455af4dd17cb75edfd18befed7de3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95708479"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99670516"
 ---
 # <a name="strongnamesignaturesize-function"></a>StrongNameSignatureSize 関数
 
@@ -52,7 +53,7 @@ BOOLEAN StrongNameSignatureSize (
 
  `true` 正常に完了した場合は。それ以外の場合は `false` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  関数が `StrongNameSignatureSize` 正常に完了しない場合は、 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 関数を呼び出して、最後に生成されたエラーを取得します。  
   

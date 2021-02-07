@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「IHostSecurityManager インターフェイス」を参照してください。
 title: IHostSecurityManager インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3be2cbd-2d93-438b-9888-9a0251b63c03
 topic_type:
 - apiref
-ms.openlocfilehash: 37f606a67bef79936c81b2a36f12a00d24bd82f1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 76ba26443fa2a4e65459dd073eb6d22031548112
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680535"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99671543"
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager インターフェイス
 
@@ -36,7 +37,7 @@ ms.locfileid: "95680535"
 |[SetSecurityContext メソッド](ihostsecuritymanager-setsecuritycontext-method.md)|現在実行中のスレッドのセキュリティコンテキストを設定します。|  
 |[SetThreadToken メソッド](ihostsecuritymanager-setthreadtoken-method.md)|現在実行中のスレッドのハンドルを設定します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ホストは、共通言語ランタイム (CLR) とユーザーコードの両方によって、スレッドトークンへのすべてのコードアクセスを制御できます。 また、完全なセキュリティコンテキスト情報が、制限されたコードアクセスで非同期操作またはコードポイント全体に渡されるようにすることもできます。 `IHostSecurityContext` CLR に対して非透過的なこのセキュリティコンテキスト情報をカプセル化します。  
   
