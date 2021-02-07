@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 3810-RoutingServiceConfigurationApplied'
 title: 3810 - RoutingServiceConfigurationApplied
 ms.date: 03/30/2017
 ms.assetid: 1bef4b66-6a63-4f42-8396-6e21510fa4fb
-ms.openlocfilehash: 22af1aec09a4ba98a7282f58cbd5b0eb7211d158
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d1be238b50b9826564eeaa17603faf1093ab20a5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96284772"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99669411"
 ---
 # <a name="3810---routingserviceconfigurationapplied"></a>3810 - RoutingServiceConfigurationApplied
 
@@ -15,12 +16,12 @@ ms.locfileid: "96284772"
   
 |||  
 |-|-|  
-|ID|3810|  
+|id|3810|  
 |Keywords|RoutingServices|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、ルーティング構成がルーティング サービスに適用されると生成されます。  
   

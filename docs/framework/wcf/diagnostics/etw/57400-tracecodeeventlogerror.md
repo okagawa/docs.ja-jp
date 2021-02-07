@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 57400-TraceCodeEventLogError'
 title: 57400 - TraceCodeEventLogError
 ms.date: 03/30/2017
 ms.assetid: 89864cd9-24fd-4568-920f-d0ba434b6f15
-ms.openlocfilehash: 10f24d1850f1306f0ec5e2400226d3f6195260e2
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0d85234df06e1a385c515467602d9388eb167fdf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275685"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99669268"
 ---
 # <a name="57400---tracecodeeventlogerror"></a>57400 - TraceCodeEventLogError
 
@@ -15,12 +16,12 @@ ms.locfileid: "96275685"
   
 |||  
 |-|-|  
-|ID|57400|  
+|id|57400|  
 |Keywords|インフラストラクチャ|  
 |Level|エラー|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは TraceCodeEventLogError で生成されます。  
   

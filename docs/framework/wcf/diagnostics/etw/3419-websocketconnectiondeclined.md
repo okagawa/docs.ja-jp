@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 3419-WebSocketConnectionDeclined'
 title: 3419 - WebSocketConnectionDeclined
 ms.date: 03/30/2017
 ms.assetid: d1d27f33-7d59-40c7-b464-6cd1f13b7c72
-ms.openlocfilehash: fdaa64cfe0dc1632488d8cbdd8750fe65c873a43
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9a520ffa47490acb32c8fab97b6753b184feee23
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96245394"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99669424"
 ---
 # <a name="3419---websocketconnectiondeclined"></a>3419 - WebSocketConnectionDeclined
 
@@ -15,12 +16,12 @@ ms.locfileid: "96245394"
   
 |||  
 |-|-|  
-|ID|3419|  
+|id|3419|  
 |Keywords|HTTP|  
 |Level|エラー|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、WebSocket 接続が拒否されたときに生成されます。  
   

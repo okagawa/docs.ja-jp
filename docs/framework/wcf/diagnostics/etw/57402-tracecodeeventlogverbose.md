@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 57402-TraceCodeEventLogVerbose'
 title: 57402 - TraceCodeEventLogVerbose
 ms.date: 03/30/2017
 ms.assetid: d6b1d6a7-a067-40d9-842a-ef451cebe03b
-ms.openlocfilehash: b3141d52317ad436a6dc20454b0f003b40b6ad0b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9febe0bd7f6af95bfd38e0845aa7ba1f63152765
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96282159"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99669151"
 ---
 # <a name="57402---tracecodeeventlogverbose"></a>57402 - TraceCodeEventLogVerbose
 
@@ -15,12 +16,12 @@ ms.locfileid: "96282159"
   
 |||  
 |-|-|  
-|ID|57402|  
+|id|57402|  
 |Keywords|インフラストラクチャ|  
 |Level|"詳細"|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは TraceCodeEventLogVerbose で生成されます。  
   
