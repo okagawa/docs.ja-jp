@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: ReliableSessionBindingElement'
 title: ReliableSessionBindingElement
 ms.date: 03/30/2017
 ms.assetid: effda125-b8d3-4de6-8c0e-f59f5ea8f6eb
-ms.openlocfilehash: f91e38ab88cd9f93e9bec0e3a6ca65254bc49570
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 582fd62a8751a31c2834b7d81219a237c9887236
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96273322"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743864"
 ---
 # <a name="reliablesessionbindingelement"></a>ReliableSessionBindingElement
 

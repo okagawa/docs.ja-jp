@@ -1,19 +1,20 @@
 ---
+description: '詳細情報: サービス: 1 秒あたりの呼び出し数'
 title: 'サービス : 1 秒あたりの呼び出し数'
 ms.date: 03/30/2017
 ms.assetid: 6261d28d-d449-425a-b9fc-a4ee14079134
-ms.openlocfilehash: 7e702d402909c4a85a2cb42c837e0813c4d9f841
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f6e21f5f1c7a0d5d4ceeb11f954ebbc95f66a3ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96252882"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99744033"
 ---
 # <a name="service-calls-per-second"></a>サービス : 1 秒あたりの呼び出し数
 
 カウンター名 : 1 秒あたりの呼び出し  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このサービスが 1 秒あたりに呼び出される回数です。  
   

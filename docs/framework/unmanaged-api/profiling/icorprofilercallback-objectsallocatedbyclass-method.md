@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback:: ObjectsAllocatedByClass メソッド'
 title: ICorProfilerCallback::ObjectsAllocatedByClass メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 91d688f3-a80e-419d-9755-ff94bc04188a
 topic_type:
 - apiref
-ms.openlocfilehash: 70d43d7526376c40d0f8358ebd65e4a00a41b969
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: df9f3dde27664de7db4afb264b221f640753ddb3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95701668"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99745061"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a>ICorProfilerCallback::ObjectsAllocatedByClass メソッド
 
@@ -46,7 +47,7 @@ HRESULT ObjectsAllocatedByClass(
  `cObjects`  
  から整数の配列。各整数は、配列内の対応するクラスのインスタンスの数を指定し `classIds` ます。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `classIds`配列と `cObjects` 配列は並列配列です。 たとえば、 `classIds[i]` とは `cObjects[i]` 同じクラスを参照します。 前のガベージコレクションの後にクラスのインスタンスが作成されていない場合、クラスは省略されます。 `ObjectsAllocatedByClass`コールバックは、大きなオブジェクトヒープに割り当てられたオブジェクトを報告しません。  
   

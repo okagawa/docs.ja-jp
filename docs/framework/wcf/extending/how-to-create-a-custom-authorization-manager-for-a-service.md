@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: サービスのカスタム承認マネージャーを作成する」を参照してください。'
 title: '方法: サービスで使用するカスタム承認マネージャーを作成する'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 9c28cb81b78f80505cfcf5f7e4dfdba083bd0793
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e5b5655bb8cd087e2c5140f45e80f8b079cf06c0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797115"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743721"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>方法: サービスで使用するカスタム承認マネージャーを作成する
 
@@ -58,17 +59,17 @@ Windows Communication Foundation (WCF) の Id モデルインフラストラク�
 
 1. サービスの構成ファイルを開きます。
 
-2. [動作\<>](../../configure-apps/file-schema/wcf/behaviors.md)に[ serviceauthorization\<>](../../configure-apps/file-schema/wcf/serviceauthorization-element.md)を追加します。
+2. を [\<serviceAuthorization>](../../configure-apps/file-schema/wcf/serviceauthorization-element.md) に追加し [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) ます。
 
-    Serviceauthorization `serviceAuthorizationManagerType` > に属性を追加し、その値をカスタム承認マネージャーを表す型に設定します。 [ \<](../../configure-apps/file-schema/wcf/serviceauthorization-element.md)
+    に [\<serviceAuthorization>](../../configure-apps/file-schema/wcf/serviceauthorization-element.md) 属性を追加 `serviceAuthorizationManagerType` し、その値をカスタム承認マネージャーを表す型に設定します。
 
 3. クライアントとサービスの間の通信をセキュリティで保護するバインディングを追加します。
 
-    この通信用に選択されたバインディングによって、<xref:System.IdentityModel.Policy.AuthorizationContext> に追加されるクレームが決まります。これは、カスタム承認マネージャーが承認に関する決定を行うために使用します。 システム指定のバインディングの詳細については、「[システム指定のバインディング](../system-provided-bindings.md)」を参照してください。
+    この通信用に選択されたバインディングによって、<xref:System.IdentityModel.Policy.AuthorizationContext> に追加されるクレームが決まります。これは、カスタム承認マネージャーが承認に関する決定を行うために使用します。 システム指定のバインディングの詳細については、「 [システム指定のバインディング](../system-provided-bindings.md)」を参照してください。
 
-4. サービス > 要素を追加`behaviorConfiguration`し、属性の値を[ \<behavior >](../../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)要素の name 属性の値に設定することによって、動作をサービスエンドポイントに関連付けます。 [ \<](../../configure-apps/file-schema/wcf/service.md)
+4. 要素を追加 [\<service>](../../configure-apps/file-schema/wcf/service.md) し、属性の値 `behaviorConfiguration` を要素の name 属性の値に設定することによって、動作をサービスエンドポイントに関連付け [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) ます。
 
-    サービスエンドポイントの構成の詳細について[は、「」を参照してください。構成](../feature-details/how-to-create-a-service-endpoint-in-configuration.md)にサービスエンドポイントを作成します。
+    サービスエンドポイントの構成の詳細については、「 [方法: 構成でサービスエンドポイントを作成](../feature-details/how-to-create-a-service-endpoint-in-configuration.md)する」を参照してください。
 
     カスタム承認マネージャー `Samples.MyServiceAuthorizationManager` を登録するコード例を次に示します。
 
@@ -114,7 +115,7 @@ Windows Communication Foundation (WCF) の Id モデルインフラストラク�
 
 ## <a name="example"></a>例
 
-<xref:System.ServiceModel.ServiceAuthorizationManager> メソッドのオーバーライドを含む <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> クラスの基本実装を次のコード例に示します。 このコード例は、<xref:System.IdentityModel.Policy.AuthorizationContext> のカスタム クレームを調べ、そのカスタム クレームのリソースが `true` のアクション値と一致した場合に <xref:System.ServiceModel.OperationContext> を返します。 <xref:System.ServiceModel.ServiceAuthorizationManager>クラスの完全な実装については、「[承認ポリシー](../samples/authorization-policy.md)」を参照してください。
+<xref:System.ServiceModel.ServiceAuthorizationManager> メソッドのオーバーライドを含む <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> クラスの基本実装を次のコード例に示します。 このコード例は、<xref:System.IdentityModel.Policy.AuthorizationContext> のカスタム クレームを調べ、そのカスタム クレームのリソースが `true` のアクション値と一致した場合に <xref:System.ServiceModel.OperationContext> を返します。 クラスの完全な実装につい <xref:System.ServiceModel.ServiceAuthorizationManager> ては、「 [承認ポリシー](../samples/authorization-policy.md)」を参照してください。
 
 [!code-csharp[c_CustomAuthMgr#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#2)]
 [!code-vb[c_CustomAuthMgr#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#2)]
