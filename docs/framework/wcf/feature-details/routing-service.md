@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「ルーティングサービス」を参照してください。
 title: ルーティング サービス
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-ms.openlocfilehash: 833c824e17d70a982a2f7bb13fe388b9b2b0dec1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 29fec780e6bc9266a8fe17d779ff0998e13e5c68
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590450"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733256"
 ---
 # <a name="routing-service"></a>ルーティング サービス
 
@@ -21,7 +22,7 @@ ms.locfileid: "84590450"
 
   - サービスのバージョン管理
 
-  - 優先度ルーティング
+  - 優先順位によるルーティング
 
   - 動的構成
 
@@ -38,13 +39,13 @@ ms.locfileid: "84590450"
 ルーティングサービスは、WCF サービスおよびチャネルモデルと互換性があり、SOAP ベースのメッセージのコンテンツベースのルーティングを実行できる、動的に構成可能な汎用のプラグ可能な SOAP 中継局を提供します。
 
 > [!NOTE]
-> ルーティング サービスは、現在 WCF REST サービスのルーティングをサポートしていません。  REST 呼び出しをルーティングするに <xref:System.Web.Routing> は、または[アプリケーション要求ルーティング](https://go.microsoft.com/fwlink/?LinkId=164589)を使用することを検討してください。
+> ルーティング サービスは、現在 WCF REST サービスのルーティングをサポートしていません。  REST 呼び出しをルーティングするに <xref:System.Web.Routing> は、または [アプリケーション要求ルーティング](https://go.microsoft.com/fwlink/?LinkId=164589)を使用することを検討してください。
 
 ## <a name="content-based-routing"></a>コンテンツ ベースのルーティング
 
 コンテンツ ベースのルーティングは、メッセージに含まれている 1 つ以上の値に基づいて、メッセージをルーティングする機能です。 ルーティング サービスでは、各メッセージを確認し、メッセージの内容と開発者が作成したルーティング ロジックに基づいて、送信先エンドポイントにメッセージをルーティングします。 コンテンツ ベースのルーティングは、サービス集計、サービスのバージョン管理、および優先度ルーティングの基礎になります。
 
-コンテンツ ベースのルーティングを実装するために、ルーティング サービスは <xref:System.ServiceModel.Dispatcher.MessageFilter> 実装に依存しています。これらの実装は、ルーティングするメッセージ内の特定の値を照合するために使用されます。 **Messagefilter**がメッセージに一致する場合、メッセージは**messagefilter**に関連付けられている送信先エンドポイントにルーティングされます。  メッセージ フィルターはフィルター テーブル (<xref:System.ServiceModel.Routing.Configuration.FilterTableCollection>) にグループ化されて、複雑なルーティング ロジックを構築します。 たとえば、フィルター テーブルに 5 つの相互に排他的なメッセージ フィルターが含まれ、それによって、5 つの送信先エンドポイントのうちの 1 つだけにメッセージがルーティングされる場合があります。
+コンテンツ ベースのルーティングを実装するために、ルーティング サービスは <xref:System.ServiceModel.Dispatcher.MessageFilter> 実装に依存しています。これらの実装は、ルーティングするメッセージ内の特定の値を照合するために使用されます。 **Messagefilter** がメッセージに一致する場合、メッセージは **messagefilter** に関連付けられている送信先エンドポイントにルーティングされます。  メッセージ フィルターはフィルター テーブル (<xref:System.ServiceModel.Routing.Configuration.FilterTableCollection>) にグループ化されて、複雑なルーティング ロジックを構築します。 たとえば、フィルター テーブルに 5 つの相互に排他的なメッセージ フィルターが含まれ、それによって、5 つの送信先エンドポイントのうちの 1 つだけにメッセージがルーティングされる場合があります。
 
 ルーティング サービスを使用すると、コンテンツ ベースのルーティングの実行に使用するロジックを構成できるほか、ルーティング ロジックを実行時に動的に更新できます。
 
@@ -54,11 +55,11 @@ ms.locfileid: "84590450"
 
 - サービスのバージョン管理
 
-- 優先度ルーティング
+- 優先順位によるルーティング
 
 - 動的構成
 
-メッセージフィルターとフィルターテーブルの詳細については、「[ルーティングの概要](routing-introduction.md)」と「[メッセージフィルター](message-filters.md)」を参照してください。
+メッセージフィルターとフィルターテーブルの詳細については、「 [ルーティングの概要](routing-introduction.md) 」と「 [メッセージフィルター](message-filters.md)」を参照してください。
 
 ### <a name="service-aggregation"></a>サービスの集計
 
@@ -66,7 +67,7 @@ ms.locfileid: "84590450"
 
 ### <a name="service-versioning"></a>サービスのバージョン管理
 
-ソリューションを新しいバージョンに移行するときに、既存の顧客に対応するために、古いバージョンを同時に維持する必要がある場合があります。 このような場合の多くでは、新しいバージョンに接続するクライアントが、ソリューションとの通信時に別のアドレスを使用することが必要になります。 ルーティング サービスを使用すると、メッセージに含まれるバージョン固有の情報に基づいて、適切なソリューションにメッセージをルーティングすることで、ソリューションの両方のバージョンに対応する単一のサービス エンドポイントを公開できます。 このような実装の例については、「[方法: サービスのバージョン管理](how-to-service-versioning.md)」を参照してください。
+ソリューションを新しいバージョンに移行するときに、既存の顧客に対応するために、古いバージョンを同時に維持する必要がある場合があります。 このような場合の多くでは、新しいバージョンに接続するクライアントが、ソリューションとの通信時に別のアドレスを使用することが必要になります。 ルーティング サービスを使用すると、メッセージに含まれるバージョン固有の情報に基づいて、適切なソリューションにメッセージをルーティングすることで、ソリューションの両方のバージョンに対応する単一のサービス エンドポイントを公開できます。 このような実装の例については、「 [方法: サービスのバージョン管理](how-to-service-versioning.md)」を参照してください。
 
 ### <a name="priority-routing"></a>優先度ルーティング
 
@@ -76,7 +77,7 @@ ms.locfileid: "84590450"
 
 サービスを中断させずにメッセージを処理する必要があるミッション クリティカルなシステムをサポートするには、システム内のコンポーネントの構成を実行時に変更できることが非常に重要です。 このニーズを満たすために、ルーティング サービスでは <xref:System.ServiceModel.IExtension%601> 実装が提供されています。これは、実行時にルーティング サービス構成を動的に更新できるようにする <xref:System.ServiceModel.Routing.RoutingExtension> です。
 
-ルーティングサービスの動的構成の詳細については、「[ルーティングの概要](routing-introduction.md)」を参照してください。
+ルーティングサービスの動的構成の詳細については、「 [ルーティングの概要](routing-introduction.md)」を参照してください。
 
 ## <a name="protocol-bridging"></a>プロトコル ブリッジ
 
@@ -86,23 +87,23 @@ ms.locfileid: "84590450"
 
 ## <a name="soap-processing"></a>SOAP 処理
 
-一般的なルーティング要件は、異なる SOAP 要件を持つエンドポイント間でメッセージをルーティングできることです。 この要件をサポートするために、ルーティングサービスは、 <xref:System.ServiceModel.Routing.SoapProcessingBehavior> メッセージがルーティングされる前に、送信先エンドポイントの要件を満たす新しい**MessageVersion**を自動的に作成するを提供します。 また、この動作により、応答メッセージを要求元のクライアントアプリケーションに返す前に、応答メッセージの新しい**MessageVersion**が作成され、応答の**MessageVersion**が元の要求のものと一致するようになります。
+一般的なルーティング要件は、異なる SOAP 要件を持つエンドポイント間でメッセージをルーティングできることです。 この要件をサポートするために、ルーティングサービスは、 <xref:System.ServiceModel.Routing.SoapProcessingBehavior> メッセージがルーティングされる前に、送信先エンドポイントの要件を満たす新しい **MessageVersion** を自動的に作成するを提供します。 また、この動作により、応答メッセージを要求元のクライアントアプリケーションに返す前に、応答メッセージの新しい **MessageVersion** が作成され、応答の **MessageVersion** が元の要求のものと一致するようになります。
 
-SOAP 処理の詳細については、「[ルーティングの概要](routing-introduction.md)」を参照してください。
+SOAP 処理の詳細については、「 [ルーティングの概要](routing-introduction.md)」を参照してください。
 
 ## <a name="error-handling"></a>エラー処理
 
 システムを構成する分散サービスがネットワーク通信に依存する場合は、システム内の通信が、一時的なネットワーク障害に対応可能である必要があります。  ルーティング サービスはエラー処理を実装しており、これによって、サービスの停止を招く可能性がある多くの通信障害を処理できます。
 
-ルーティング サービスがメッセージを送信している間に <xref:System.ServiceModel.CommunicationException> が発生した場合は、エラー処理が実行されます。  これらの例外は、一般的に、<xref:System.ServiceModel.EndpointNotFoundException>、<xref:System.ServiceModel.ServerTooBusyException>、<xref:System.ServiceModel.CommunicationObjectFaultedException> など、定義されているクライアント エンドポイントとの通信を試みている間に問題が発生したことを示します。  また、エラー処理コードは、 **TimeoutException**が発生したときに送信を試行します。これは、 **CommunicationException**から派生していないもう1つの一般的な例外です。
+ルーティング サービスがメッセージを送信している間に <xref:System.ServiceModel.CommunicationException> が発生した場合は、エラー処理が実行されます。  これらの例外は、一般的に、<xref:System.ServiceModel.EndpointNotFoundException>、<xref:System.ServiceModel.ServerTooBusyException>、<xref:System.ServiceModel.CommunicationObjectFaultedException> など、定義されているクライアント エンドポイントとの通信を試みている間に問題が発生したことを示します。  また、エラー処理コードは、 **TimeoutException** が発生したときに送信を試行します。これは、 **CommunicationException** から派生していないもう1つの一般的な例外です。
 
-エラー処理の詳細については、「[ルーティングの概要](routing-introduction.md)」を参照してください。
+エラー処理の詳細については、「 [ルーティングの概要](routing-introduction.md)」を参照してください。
 
 ## <a name="backup-endpoints"></a>バックアップ エンドポイント
 
 フィルター テーブル内の各フィルター定義と関連付けられる送信先クライアント エンドポイントに加えて、転送エラーが発生した場合にメッセージをルーティングする、バックアップ エンドポイントのリストも作成できます。 エラーが発生した場合に、フィルター エントリのバックアップ リストが定義されていると、ルーティング サービスにより、そのリストに定義されている最初のエンドポイントにメッセージが送信されます。 この送信に失敗した場合は、送信に成功する、送信失敗に関連しないエラーが返される、またはバックアップ リスト内のすべてのエンドポイントで送信エラーが返されるまで、次のエンドポイントへの送信が試みられます。
 
-バックアップエンドポイントの詳細については、「[ルーティングの概要](routing-introduction.md)」と「[メッセージフィルター](message-filters.md)」を参照してください。
+バックアップエンドポイントの詳細については、「 [ルーティングの概要](routing-introduction.md) 」と「 [メッセージフィルター](message-filters.md)」を参照してください。
 
 ## <a name="streaming"></a>ストリーミング
 

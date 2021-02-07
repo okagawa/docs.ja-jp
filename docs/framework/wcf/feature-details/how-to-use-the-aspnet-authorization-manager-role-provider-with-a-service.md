@@ -1,13 +1,14 @@
 ---
+description: '詳細については、「方法: ASP.NET Authorization Manager ロールプロバイダーをサービスと共に使用する」を参照してください。'
 title: '方法: ASP.NET の承認マネージャー ロール プロバイダーとサービスを使用する'
 ms.date: 03/30/2017
 ms.assetid: f21deb81-91ef-49ef-94d6-494785143271
-ms.openlocfilehash: bbdafdd96a32b41d7c6892944ed872e3f8702f0e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 24d6bbbf2181189104fb0df0068130c402fd2f68
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96280599"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734127"
 ---
 # <a name="how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service"></a>方法: ASP.NET の承認マネージャー ロール プロバイダーとサービスを使用する
 

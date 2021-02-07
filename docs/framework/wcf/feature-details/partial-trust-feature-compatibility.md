@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 部分信頼機能の互換性'
 title: 部分信頼機能の互換性
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: baf7758bc83419a68f900aa51233006ecb61d8e0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 470cedde3eb38508feb1c2950f7f504390914834
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247994"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733529"
 ---
 # <a name="partial-trust-feature-compatibility"></a>部分信頼機能の互換性
 

@@ -1,13 +1,14 @@
 ---
+description: '詳細については、「方法: Svcutil.exe を使用してコンパイル済みのサービスコードからメタデータをエクスポートする」を参照してください。'
 title: '方法: Svcutil.exe を使用してコンパイル済みのサービス コードからメタデータをエクスポートする'
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: f60d0c9ad3f6fc4e9596d466b5eabdaab0f4822f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 509d987ff27f9a05ca59d6065d76f27006f3cb25
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96280612"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734205"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>方法: Svcutil.exe を使用してコンパイル済みのサービス コードからメタデータをエクスポートする
 

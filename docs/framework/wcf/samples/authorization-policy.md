@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 承認ポリシー'
 title: 承認ポリシー
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: a789faae1f6224512f9a8a9ab084c8a82e4a2b87
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c096585803f07aff157726bce850c09e27c51df5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553663"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732710"
 ---
 # <a name="authorization-policy"></a>承認ポリシー
 
@@ -456,9 +457,9 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
     > [!NOTE]
     > Setup.bat バッチファイルは、Visual Studio の開発者コマンドプロンプトから実行するように設計されています。 Visual Studio の開発者コマンドプロンプト内で設定された PATH 環境変数は、 *Setup.bat* スクリプトで必要な実行可能ファイルを含むディレクトリを指します。
 
-1. *Service\bin*から Service.exe を起動します。
+1. *Service\bin* から Service.exe を起動します。
 
-1. *\ Client\bin*から Client.exe を起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。
+1. *\ Client\bin* から Client.exe を起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。
 
 クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。
 
@@ -474,15 +475,15 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 5. サーバーで、 `setup.bat service` 管理者特権で開いた Visual Studio の開発者コマンドプロンプトでを実行します。
 
-    引数を指定してを実行する `setup.bat` `service` と、コンピューターの完全修飾ドメイン名を使用してサービス証明書が作成され、service *.cer*という名前のファイルにエクスポートされます。
+    引数を指定してを実行する `setup.bat` `service` と、コンピューターの完全修飾ドメイン名を使用してサービス証明書が作成され、service *.cer* という名前のファイルにエクスポートされます。
 
-6. *Service.exe.config*を編集して、新しい証明書名 ( `findValue` の属性) を反映し [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) ます。これは、コンピューターの完全修飾ドメイン名と同じです。 また、要素の**computername**を \<service> / \<baseAddresses> localhost からサービスコンピューターの完全修飾名に変更します。
+6. *Service.exe.config* を編集して、新しい証明書名 ( `findValue` の属性) を反映し [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) ます。これは、コンピューターの完全修飾ドメイン名と同じです。 また、要素の **computername** を \<service> / \<baseAddresses> localhost からサービスコンピューターの完全修飾名に変更します。
 
 7. サービスの *.cer* ファイルを、サービスディレクトリからクライアントコンピューターのクライアントディレクトリにコピーします。
 
 8. クライアントで、 `setup.bat client` 管理者特権で開いた Visual Studio の開発者コマンドプロンプトでを実行します。
 
-    引数を指定してを実行する `setup.bat` `client` と、 **test1** という名前のクライアント証明書が作成され、クライアント証明書が *クライアント .cer*という名前のファイルにエクスポートされます。
+    引数を指定してを実行する `setup.bat` `client` と、 **test1** という名前のクライアント証明書が作成され、クライアント証明書が *クライアント .cer* という名前のファイルにエクスポートされます。
 
 9. クライアントコンピューターの *Client.exe.config* ファイルで、エンドポイントのアドレス値をサービスの新しいアドレスに変更します。 これを行うには、 **localhost** をサーバーの完全修飾ドメイン名に置き換えます。
 

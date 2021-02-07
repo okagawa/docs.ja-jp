@@ -1,15 +1,16 @@
 ---
+description: '詳細については、「方法: COM + サービスモデル構成ツールを使用する」を参照してください。'
 title: '方法: COM+ サービス モデル構成ツールを使用する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 2d21ec8ccf84a7c9af235af8e0afd444044cf81b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2047604f327cd871629bbdac403e9acd816bbdb1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729388"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734088"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>方法: COM+ サービス モデル構成ツールを使用する
 

@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「ルーティングシナリオ」を参照してください。
 title: ルーティング シナリオ
 ms.date: 03/30/2017
 helpviewer_keywords:
 - routing [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: b84cd4ba49e9deaf4ffc0e901716efc56059d60f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cce69ca846f5179d78b2e7321e62444fc6f6ec26
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288528"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733282"
 ---
 # <a name="routing-scenarios"></a>ルーティング シナリオ
 
@@ -19,7 +20,7 @@ ms.locfileid: "96288528"
 
  ルーティング サービスの最も基本的な用法は、複数の送信先エンドポイントを集約してクライアント アプリケーションに公開するエンドポイントの数を減らし、その後にメッセージ フィルターを使用して、各メッセージを適切な送信先にルーティングすることです。 メッセージは、論理的または物理的な処理要件 (特定のサービスで処理する必要がある種類のメッセージなど)、または任意のビジネス ニーズ (特定の送信元からのメッセージを優先的に処理するなど) に基づいてルーティングされます。 次の表に、いくつかの一般的なシナリオと、それらが発生する場面の一覧を示します。  
   
-|通信の種類|使用する状況|  
+|シナリオ|使用する状況|  
 |--------------|--------------|  
 |サービスのバージョン管理|サービスの複数のバージョンをサポートする必要がある、または更新されたサービスを将来配置する可能性がある場合|  
 |サービス データのパーティション分割|複数のホストにわたってサービスをパーティション分割する必要がある場合|  

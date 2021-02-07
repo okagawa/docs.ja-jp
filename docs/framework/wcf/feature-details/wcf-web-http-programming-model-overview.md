@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: WCF Web HTTP プログラミングモデルの概要'
 title: WCF Web HTTP プログラミング モデルの概要
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: 713dd05daa5071f253afd70e735475e49a986aa7
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3359b0018458256cb3436e0fb631ee5fa438521e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239017"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732879"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP プログラミング モデルの概要
 
@@ -21,7 +22,7 @@ Windows Communication Foundation (WCF) WEB HTTP プログラミングモデル�
   
  WCF WEB HTTP プログラミングモデルは、WEB HTTP サービス、AJAX および JSON サービス、配信 (ATOM/RSS) フィードを含む Web スタイルのシナリオに対応するために、WCF の範囲を拡張します。 AJAX および JSON サービスの詳細については、「 [ajax の統合と json のサポート](ajax-integration-and-json-support.md)」を参照してください。 配信の詳細については、「 [WCF 配信の概要](wcf-syndication-overview.md)」を参照してください。  
   
- WEB HTTP サービスから返されるデータの種類に追加の制限はありません。 WEB HTTP サービス操作からは任意のシリアル化可能な型を返すことができます。 WEB HTTP サービス操作は Web ブラウザーによって呼び出すことができるため、URL に指定できるデータ型に制限があります。 既定でサポートされている型の詳細については、以下の「 **UriTemplate クエリ文字列パラメーターと url** 」セクションを参照してください。 既定の動作は、URL で指定されたパラメーターから実際のパラメーター型への変換方法を指定する独自の T:System.ServiceModel.Dispatcher.QueryStringConverter 実装を提供することで変更できます。 詳細については、「<xref:System.ServiceModel.Dispatcher.QueryStringConverter>」を参照してください。  
+ WEB HTTP サービスから返されるデータの種類に追加の制限はありません。 WEB HTTP サービス操作からは任意のシリアル化可能な型を返すことができます。 WEB HTTP サービス操作は Web ブラウザーによって呼び出すことができるため、URL に指定できるデータ型に制限があります。 既定でサポートされている型の詳細については、以下の「 **UriTemplate クエリ文字列パラメーターと url** 」セクションを参照してください。 既定の動作は、URL で指定されたパラメーターから実際のパラメーター型への変換方法を指定する独自の T:System.ServiceModel.Dispatcher.QueryStringConverter 実装を提供することで変更できます。 詳細については、<xref:System.ServiceModel.Dispatcher.QueryStringConverter> を参照してください。  
   
 > [!CAUTION]
 > WCF WEB HTTP プログラミングモデルで記述されたサービスは、SOAP メッセージを使用しません。 SOAP は使用されないため、WCF によって提供されるセキュリティ機能は使用できません。 ただし、HTTPS でサービスをホストすることによってトランスポート ベースのセキュリティを使用できます。 WCF セキュリティの詳細については、「[セキュリティの概要](security-overview.md)」を参照してください。  

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、サービス操作へのアクセスの承認に関するページを参照してください。
 title: サービス操作へのアクセスの承認
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - Authorizing Access To Service Operations Sample [Windows Communication Foundation]
 - authorization, Windows Communication Foundation sample
 ms.assetid: ddcfdaa5-8b2e-4e13-bd85-887209dc6328
-ms.openlocfilehash: 68e6d53b656cb6327487598f65fa4f04c2495292
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 052adc6104b75884c90c266e2e0e7a045032c457
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255456"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732697"
 ---
 # <a name="authorizing-access-to-service-operations"></a>サービス操作へのアクセスの承認
 

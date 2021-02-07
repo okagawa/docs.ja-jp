@@ -1,25 +1,26 @@
 ---
+description: '詳細については、「方法: サービスで ASP.NET ロールプロバイダーを使用する」を参照してください。'
 title: '方法: ASP.NET のロール プロバイダーとサービスを使用する'
 ms.date: 03/30/2017
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
-ms.openlocfilehash: 45eeda046e877b4379d7d0e5edd90fac305f5e44
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 24bf9ad72d3634baf1d7120e4e60ccde5a4078a9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595298"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734114"
 ---
 # <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>方法: ASP.NET のロール プロバイダーとサービスを使用する
 
 ASP.NET ロールプロバイダー (ASP.NET メンバーシッププロバイダーと共に) は、ASP.NET 開発者がサイトを使用してアカウントを作成し、承認のためにロールを割り当てることができる Web サイトを作成できるようにする機能です。 この機能を使用すれば、ユーザーはだれでもサイトでアカウントを作成し、そのサイトにログインしてサービスに排他的にアクセスできます。 これは、ユーザーが Windows ドメイン内にアカウントを持っていることが必要な Windows セキュリティとは対照的です。 代わりに、資格情報 (ユーザー名とパスワードの組み合わせ) を指定するすべてのユーザーが、サイトとそのサービスを使用できます。  
   
-サンプルアプリケーションについては、「[メンバーシップとロールプロバイダー](../samples/membership-and-role-provider.md)」を参照してください。 メンバーシッププロバイダーの ASP.NET 機能の詳細については、「[方法: ASP.NET メンバーシッププロバイダーを使用](how-to-use-the-aspnet-membership-provider.md)する」を参照してください。  
+サンプルアプリケーションについては、「 [メンバーシップとロールプロバイダー](../samples/membership-and-role-provider.md)」を参照してください。 メンバーシッププロバイダーの ASP.NET 機能の詳細については、「 [方法: ASP.NET メンバーシッププロバイダーを使用](how-to-use-the-aspnet-membership-provider.md)する」を参照してください。  
   
 ロール プロバイダー機能では、SQL Server データベースを使用してユーザー情報を格納します。 Windows Communication Foundation (WCF) 開発者は、これらの機能をセキュリティ上の目的で利用できます。 WCF アプリケーションに統合されている場合、ユーザーは、WCF クライアントアプリケーションに対してユーザー名とパスワードの組み合わせを指定する必要があります。 WCF でデータベースを使用できるようにするには、クラスのインスタンスを作成し、 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> その <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> プロパティをに設定 <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles> して、サービスをホストしているへの動作のコレクションにインスタンスを追加する必要があり <xref:System.ServiceModel.ServiceHost> ます。  
   
 ## <a name="configure-the-role-provider"></a>ロールプロバイダーを構成する  
   
-1. Web.config ファイルの < > 要素の下に `system.web` < > 要素を追加し、 `roleManager` その `enabled` 属性をに設定し `true` ます。  
+1. Web.config ファイルの <> 要素の下に、 `system.web` <の `roleManager`> 要素を追加し、その `enabled` 属性をに設定し `true` ます。  
   
 2. `defaultProvider` 属性を `SqlRoleProvider` に設定します。  
   

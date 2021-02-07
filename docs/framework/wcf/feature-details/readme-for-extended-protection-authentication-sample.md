@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「拡張保護認証サンプルの ReadMe」を参照してください。
 title: 拡張保護認証のサンプルの ReadMe
 ms.date: 03/30/2017
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
-ms.openlocfilehash: 9b0a3535282a1fcc1103651f5601459e80d3d8d4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: edab04c7762bf8964f634107debd3de35a7702ab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601102"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733308"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>拡張保護認証のサンプルの ReadMe
 
 拡張保護は、攻撃者 ("man-in-the-middle") がクライアントの資格情報を傍受し、クライアントの目的のサーバー上のセキュリティで保護されたリソースにアクセスするために使用する man-in-the-middle (MITM) 攻撃から保護するためのセキュリティ上の取り組みです。
 
-詳細については、「[認証の拡張保護の概要](extended-protection-for-authentication-overview.md)」を参照してください。
+詳細については、「 [認証の拡張保護の概要](extended-protection-for-authentication-overview.md)」を参照してください。
 
 > [!NOTE]
 > このサンプルは、IIS でホストされた場合にのみ機能します。 このサンプルは HTTPS をサポートしないので、Visual Studio Development Server 上では機能しません。

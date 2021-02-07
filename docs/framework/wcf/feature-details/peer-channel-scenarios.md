@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「ピアチャネルのシナリオ」を参照してください。
 title: ピア チャネルのシナリオ
 ms.date: 03/30/2017
 ms.assetid: dae6e0f7-900c-45ee-8be9-3647698382fb
-ms.openlocfilehash: 3c05583a6795eb5b78b54d287f7f4d4fe2c8d39e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ae21cdb5452864ce3852f2c10892fd082a79fa29
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247929"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733477"
 ---
 # <a name="peer-channel-scenarios"></a>ピア チャネルのシナリオ
 

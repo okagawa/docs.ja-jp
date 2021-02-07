@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「WCF でのキュー」を参照してください。
 title: WCF でのキュー
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-ms.openlocfilehash: a55e9e38472f67b609685224e5dda34729c6481a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 21ba3980d7ef5d043a1bf9fed03e0c98ea34a933
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295185"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733360"
 ---
 # <a name="queuing-in-wcf"></a>WCF でのキュー
 

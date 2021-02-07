@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ルーティング」を参照してください。
 title: ルーティング
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - WCF [WCF], routing
 - Windows communication Foundation [WCF], routing
 ms.assetid: bd56516c-420d-4c4e-97f9-f72d28d149a9
-ms.openlocfilehash: f4d87d5ea1df85dd383fb6274ba55491c2cd5c34
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ed3458bd9076866f5afbf6a4940f5f3bbdce2ebf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288549"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733191"
 ---
 # <a name="routing"></a>ルーティング
 
@@ -34,5 +35,5 @@ ms.locfileid: "96288549"
  [メッセージ フィルター](message-filters.md)  
  メッセージ フィルターのコンテンツ ベースのルーティングへの使用方法を説明します。  
   
- [ルーティング シナリオ](routing-scenarios.md)  
+ [ルーティングシナリオ](routing-scenarios.md)  
  共通のルーティング シナリオについて説明します。

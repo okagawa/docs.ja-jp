@@ -1,13 +1,14 @@
 ---
+description: 詳細については、ASP.NET Web サービスの WCF への移行に関するページを参照してください。
 title: ASP.NET Web サービスを WCF に移行する
 ms.date: 03/30/2017
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
-ms.openlocfilehash: 1471e9913f787a76b474e9d862a22b24d464be92
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c0d78f1086c72eb853bd80ab378b4d0e78362f60
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96281652"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733776"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>ASP.NET Web サービスを WCF に移行する
 

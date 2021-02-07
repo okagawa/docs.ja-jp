@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「メッセージングプロトコル」を参照してください。
 title: メッセージング プロトコル
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: 871297abb0ccc46e079ab85b098705602d14a161
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f4dd15d41266d3e5492b584f9f8e31f456a70ef7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96248319"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733971"
 ---
 # <a name="messaging-protocols"></a>メッセージング プロトコル
 
@@ -344,7 +345,7 @@ WS-ADDR および WS-ADDR10 のセキュリティに関する考慮事項のセ�
 
 メッセージの整合性を保護するために WS-Security を使用する場合は、メッセージの本文と共に、WS-Addressing メッセージ ヘッダーと、参照パラメーターまたは参照プロパティ (または両方) によって生成されたヘッダーに署名する必要があります。
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 #### <a name="one-way-message"></a>一方向のメッセージ
 
@@ -492,7 +493,7 @@ RFC 2387 では二重引用符を使用するための要件が明示されて�
                         / "_" / "," / "-" / "." / "/" / ":" / "=" / "?"
     ```
 
-     例 :
+     次に例を示します。
 
      正
 
@@ -603,7 +604,7 @@ WCF では、次のポリシーアサーションを使用して、エンドポ�
 
 MTOM は `text/xml` 、および WCF バイナリ XML に似たエンコーディング機構です。 MTOM は、WS-Security とその他の WS-* プロトコルによる自然なコンポジションを提供します。WS-Security を使用してセキュリティ保護されたメッセージは、MTOM を使用して最適化できます。
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 #### <a name="wcf-soap-11-message-encoded-using-mtom"></a>MTOM を使用してエンコードされた WCF SOAP 1.1 メッセージ
 

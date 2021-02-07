@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「WSE 3.0 Web サービスの WCF への移行」を参照してください。
 title: WSE 3.0 Web サービスの WCF への移行
 ms.date: 03/30/2017
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
-ms.openlocfilehash: 84d227a46c4d17291ccf35a759018ffbe6f48b82
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 92ba60410747399e7a58944c08a082d56fc524d2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96248163"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733737"
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>WSE 3.0 Web サービスの WCF への移行
 
@@ -136,6 +137,6 @@ WSE 3.0 Web サービスを Windows Communication Foundation (WCF) に移行す�
 ## <a name="see-also"></a>関連項目
 
 - [基本的なプログラミング ライフサイクル](../basic-programming-lifecycle.md)
-- [カスタム バインディング](../extending/custom-bindings.md)
+- [カスタムバインド](../extending/custom-bindings.md)
 - [方法: SecurityBindingElement を使用してカスタム バインドを作成する](how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [方法: 指定した認証モード用の SecurityBindingElement を作成する](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
