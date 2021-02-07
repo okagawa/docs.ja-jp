@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ControlBuilderInterceptor クラス'
 title: ControlBuilderInterceptor クラス
 ms.date: 08/11/2020
 api_name:
@@ -9,12 +10,12 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 0cd7409deb9cb84783cfa70600999fa4b2a2d2e2
-ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
+ms.openlocfilehash: ac32709bf814d17ac2a02222d4d92edc6cc93337
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88187986"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664822"
 ---
 # <a name="controlbuilderinterceptor-class"></a>ControlBuilderInterceptor クラス
 
@@ -67,7 +68,7 @@ string assemblyQualifiedName = typeof(Fabrikam.Interceptor).AssemblyQualifiedNam
 
 インターセプターのサポートが存在する場合、コンパイルプロセスは、前述の方法で表示されている型と対話します。 インターセプターのサポートが存在しない場合、アプリケーションの設定は無視され、効果はありません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **名前空間:** System.web. コンパイル
 

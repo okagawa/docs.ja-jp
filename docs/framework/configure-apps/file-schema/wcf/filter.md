@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <filter>'
 title: <filter>
 ms.date: 03/30/2017
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
-ms.openlocfilehash: 6e78275aaeb202405e327302455d56fa431d7f27
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 993d2265ac3a714475e8cbe9e8a2c3f93c46bde2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855251"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664679"
 ---
 # \<filter>
 
@@ -39,7 +40,7 @@ ms.locfileid: "70855251"
 
 | 属性  | 説明 |
 | ---------- | ----------- |
-| customType | フィルターとして使用されるカスタム型の完全修飾型名を示す文字列。 `filterType`がに設定されている場合 `custom` 、この属性には作成するクラスの完全修飾型名が含まれます。  `filterData`には、カスタム型フィルターの評価時に使用される値を含めることもできます。 |
+| customType | フィルターとして使用されるカスタム型の完全修飾型名を示す文字列。 `filterType`がに設定されている場合 `custom` 、この属性には作成するクラスの完全修飾型名が含まれます。  `filterData` には、カスタム型フィルターの評価時に使用される値を含めることもできます。 |
 | filterData | フィルター データを示す文字列。 この属性を指定する方法の詳細については、「<xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>」を参照してください。 |
 | filterType | フィルターの種類を示す文字列。 この属性は <xref:System.ServiceModel.Routing.Configuration.FilterType> 型です。  `filterData` 属性を使用する方法の詳細については、「<xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>」を参照してください。 |
 | name       | フィルター要素の一意の名前を示す文字列。 |
@@ -50,7 +51,7 @@ ms.locfileid: "70855251"
 
 ### <a name="parent-elements"></a>親要素
 
-| 要素 | Description |
+| 要素 | 説明 |
 | ------- | ----------- |
 | [\<routing>](routing.md) | 一連のルーティングフィルターを定義するための構成セクション <xref:System.ServiceModel.Dispatcher.MessageFilter> 。受信メッセージを評価するときに使用する Windows Communication Foundation (WCF) の種類を決定します。 |
 

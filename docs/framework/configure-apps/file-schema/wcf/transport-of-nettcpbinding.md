@@ -1,13 +1,14 @@
 ---
+description: 詳細については <transport> 、 <netTcpBinding>
 title: <transport> の <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 8f752373c51992c51b747f5f4dc4a63910a387c6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9005de300b41c9f53c62875ee185d0f8a3ee8d7f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91162193"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664549"
 ---
 # <a name="transport-of-nettcpbinding"></a>\<transport> の \<netTcpBinding>
 
@@ -47,10 +48,10 @@ ms.locfileid: "91162193"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
-|clientCredentialType|省略可能。 トランスポート セキュリティを使用してクライアント認証を実行するときに使用される資格情報の種類を指定します。<br /><br /> -既定値は `Windows` です。<br />-この属性の型は <xref:System.ServiceModel.TcpClientCredentialType> です。|  
-|protectionLevel|省略可能。 TCP トランスポートのレベルでセキュリティを定義します。 メッセージに署名を付けることで、メッセージの転送中に第三者によって改ざんされるリスクが軽減されます。 暗号化によって、トランスポート中にデータ レベルのプライバシーが提供されます。<br /><br /> 既定値は `EncryptAndSign` です。|  
+|clientCredentialType|任意。 トランスポート セキュリティを使用してクライアント認証を実行するときに使用される資格情報の種類を指定します。<br /><br /> -既定値は `Windows` です。<br />-この属性の型は <xref:System.ServiceModel.TcpClientCredentialType> です。|  
+|protectionLevel|任意。 TCP トランスポートのレベルでセキュリティを定義します。 メッセージに署名を付けることで、メッセージの転送中に第三者によって改ざんされるリスクが軽減されます。 暗号化によって、トランスポート中にデータ レベルのプライバシーが提供されます。<br /><br /> 既定値は `EncryptAndSign` です。|  
 |sslProtocols|どの SslProtocols がサポートされているのかを指定する SslProtocols 列挙型フラグの値。 既定値は Tls&#124;Tls11&#124;Tls12 です。|  
 |policyEnforcement|この列挙体は、<xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> を適用するタイミングを指定します。<br /><br /> 1. never –ポリシーは適用されません (拡張保護は無効になります)。<br />2. WhenSupported –ポリシーは、クライアントが拡張保護をサポートしている場合にのみ適用されます。<br />3. always –ポリシーは常に適用されます。 拡張保護をサポートしていないクライアントは認証に失敗します。|  
   
@@ -58,7 +59,7 @@ ms.locfileid: "91162193"
   
 |値|説明|  
 |-----------|-----------------|  
-|None|クライアントは匿名です。 これには、サービスの証明書が必要です。|  
+|なし|クライアントは匿名です。 これには、サービスの証明書が必要です。|  
 |Windows|SP ネゴシエーション (Kerberos ネゴシエーション) を使用して、クライアントの Windows 認証を指定します。|  
 |Certificate|クライアントは、証明書を使用して認証されます。 これは SSL ネゴシエーションを使用し、サービスの証明書が必要です。|  
   
@@ -66,13 +67,13 @@ ms.locfileid: "91162193"
   
 |値|説明|  
 |-----------|-----------------|  
-|None|保護されません。|  
-|署名|メッセージは署名されます。|  
+|なし|保護されません。|  
+|Sign|メッセージは署名されます。|  
 |EncryptAndSign|-メッセージは暗号化され、署名されます。|  
   
 ### <a name="child-elements"></a>子要素  
 
- None  
+ なし  
   
 ### <a name="parent-elements"></a>親要素  
   

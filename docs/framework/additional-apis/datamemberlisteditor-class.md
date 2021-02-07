@@ -1,5 +1,6 @@
 ---
-title: クラスをリストします。
+description: '詳細情報: DataMemberListEditor クラス'
+title: DataMemberListEditor クラス
 ms.date: 03/30/2017
 ms.technology: dotnet-winforms
 api_name:
@@ -11,16 +12,16 @@ api_type:
 ms.assetid: c11d5231-78f2-45a7-9210-3b2d0969370e
 topic_type:
 - apiref
-ms.openlocfilehash: 407bbe87e3d186dc901b18dbfee38e2ff69d356a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a78be03733e8338e2c02f4675d3cfbd5f6e27c90
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79156000"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664770"
 ---
-# <a name="datamemberlisteditor-class"></a>クラスをリストします。
+# <a name="datamemberlisteditor-class"></a>DataMemberListEditor クラス
 
-値のソースを選択するオブジェクトのすべてのプロパティを一覧表示することにより、データ バインド オブジェクト (null`DataSource`以外のプロパティを持つオブジェクト`DataSource`) のプロパティを編集するためのドロップダウン ユーザー インターフェイスを提供します。  
+`DataSource` `DataSource` 値ソースを選択するためにオブジェクトのすべてのプロパティを一覧表示することにより、データバインドオブジェクト (null 以外のプロパティを持つオブジェクト) のプロパティを編集するためのドロップダウンユーザーインターフェイスを提供します。  
   
 ## <a name="syntax"></a>構文
   
@@ -29,17 +30,17 @@ internal class DataMemberListEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> クラス`DataMemberListEditor`は内部クラスであり、コード内で直接使用するためのものではありません。
+> `DataMemberListEditor`クラスは内部であり、コードで直接使用するためのものではありません。
 >
-> マイクロソフトでは、どのような状況でも、運用環境のアプリケーションでこのクラスを使用することはできません。
+> Microsoft では、どのような状況でも、実稼働アプリケーションでのこのクラスの使用はサポートしていません。
   
 ## <a name="requirements"></a>必要条件
 
-**名前空間:**<xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
+**名前空間:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
-**アセンブリ:** システム設計 (システムデザイン.dll 内)  
+**アセンブリ:** System.string (System.Design.dll)  
   
-**.NET フレームワークのバージョン:** 2.0 以降で利用可能。  
+**.NET Framework のバージョン:** 2.0 以降で使用できます。  
   
 ## <a name="see-also"></a>関連項目
 
