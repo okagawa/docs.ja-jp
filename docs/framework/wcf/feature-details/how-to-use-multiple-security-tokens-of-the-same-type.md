@@ -1,13 +1,14 @@
 ---
+description: '詳細については、「方法: 同じ種類の複数のセキュリティトークンを使用する」を参照してください。'
 title: '方法: 同じ型の複数のセキュリティ トークンを使用する'
 ms.date: 03/30/2017
 ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
-ms.openlocfilehash: 7374eebb9e42ef761b7ab8980b3eacf4d5671e6d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0cbf831c82fdc2aee5a09237c586286a5776d234
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96280703"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734257"
 ---
 # <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>方法: 同じ型の複数のセキュリティ トークンを使用する
 

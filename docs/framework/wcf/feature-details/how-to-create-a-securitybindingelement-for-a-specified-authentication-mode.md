@@ -1,16 +1,17 @@
 ---
+description: '詳細については、「方法: 指定した認証モードのための説明を作成する」を参照してください。'
 title: '方法: 指定した認証モード用の SecurityBindingElement を作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a7c7747a-5b8c-463f-8493-7266dac75066
-ms.openlocfilehash: 7b71224c74d7e9e766fb17101219dc5718d5d6a6
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cb0831787b6d54daf561fc2750f1efe81bebfb0f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96286436"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734478"
 ---
 # <a name="how-to-create-a-securitybindingelement-for-a-specified-authentication-mode"></a>方法: 指定した認証モード用の SecurityBindingElement を作成する
 

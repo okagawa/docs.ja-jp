@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: WSFederationHttpBinding を作成する」を参照してください。'
 title: '方法: WSFederationHttpBinding を作成する'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
-ms.openlocfilehash: ccc28c46e8be0b835cf08d372ef85b8a66e989ef
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f0b40cf074d5c3f2575c5a94baa2fdd4271f280f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595441"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734400"
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>方法: WSFederationHttpBinding を作成する
 
@@ -24,7 +25,7 @@ Windows Communication Foundation (WCF) では、 <xref:System.ServiceModel.WSFed
 1. セキュリティ モードを選択します。 <xref:System.ServiceModel.WSFederationHttpBinding> には、メッセージ レベルでエンドツーエンドのセキュリティを提供する `Message` を指定できます。複数のホップや `TransportWithMessageCredential` にまたがる通信であってもこれは有効です。クライアントとサービスが HTTPS 上で直接接続できる場合に、特に性能を発揮します。
 
     > [!NOTE]
-    > <xref:System.ServiceModel.WSFederationHttpBinding> には、セキュリティ モードとして `None` を指定することもできます。 このモードは安全性が低く、デバッグ目的での使用のみを目的としています。 サービスエンドポイントが、セキュリティモードがに設定されたを使用してデプロイされている場合 <xref:System.ServiceModel.WSFederationHttpBinding> `None` 、( [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)によって生成される) クライアントバインディングは、 <xref:System.ServiceModel.WSHttpBinding> セキュリティモードがののに `None` なります。
+    > <xref:System.ServiceModel.WSFederationHttpBinding> には、セキュリティ モードとして `None` を指定することもできます。 このモードは安全性が低く、デバッグ目的での使用のみを目的としています。 サービスエンドポイントが、セキュリティモードがに設定されたを使用してデプロイされた場合 <xref:System.ServiceModel.WSFederationHttpBinding> `None` 、クライアントバインディング ( [ServiceModel メタデータユーティリティツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)によって生成される) は、 <xref:System.ServiceModel.WSHttpBinding> セキュリティモードがののに `None` なります。
 
      `WSFederationHttpBinding` の場合、システムに組み込まれている他のバインディングとは違って、クライアント資格情報の種類を選択する必要はありません。 これは、常に、発行されたトークンを資格情報として使うからです。 WCF は、指定された発行者からトークンを取得し、そのトークンをサービスに提示してクライアントを認証します。
 
@@ -36,7 +37,7 @@ Windows Communication Foundation (WCF) では、 <xref:System.ServiceModel.WSFed
 
      SAML 1.1 トークンの URI は `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1` です。
 
-4. 任意。 フェデレーション サービスの場合、<xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> プロパティの値として、セキュリティ トークン サービスのメタデータ URL を指定します。 メタデータ エンドポイントは、サービスがメタデータを公開するよう設定されている場合に、クライアントが適切なバインディング/エンドポイントのペアを選択するために必要です。 メタデータの公開の詳細については、「[メタデータの公開](publishing-metadata.md)」を参照してください。
+4. 任意。 フェデレーション サービスの場合、<xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> プロパティの値として、セキュリティ トークン サービスのメタデータ URL を指定します。 メタデータ エンドポイントは、サービスがメタデータを公開するよう設定されている場合に、クライアントが適切なバインディング/エンドポイントのペアを選択するために必要です。 メタデータの公開の詳細については、「 [メタデータの公開](publishing-metadata.md)」を参照してください。
 
  他に設定できるプロパティとしては、発行されたトークンの証明キーとして使用するキーの種類、クライアント/サーバー間で使用するアルゴリズム スイート、サービス資格情報をネゴシエートするか明示的に指定するか、トークンに入っていればそれに応じてサービス側で処理できるクレームの種類、クライアントがセキュリティ トークン サービスに送信する要求に追加しなければならない他の XML 要素などがあります。
 
@@ -79,9 +80,9 @@ Windows Communication Foundation (WCF) では、 <xref:System.ServiceModel.WSFed
 
 6. 任意。 `algorithmSuite` 要素の `<message>` 属性に適切な値を設定します。 既定値は、`Basic256` です。
 
-7. 任意。 非対称証明キーが必要ならば、`issuedKeyType` 要素の `<message>` 属性を `AsymmetricKey` に設定します。 既定値は、`SymmetricKey` です。
+7. 省略可能。 非対称証明キーが必要ならば、`issuedKeyType` 要素の `<message>` 属性を `AsymmetricKey` に設定します。 既定値は、`SymmetricKey` です。
 
-8. 任意。 `issuedTokenType` 要素の `<message>` 属性を設定します。
+8. 省略可能。 `issuedTokenType` 要素の `<message>` 属性を設定します。
 
 9. クライアント側ではローカル発行者が指定されていなければ必須。サービス側では省略可能。 `<issuer>` 要素の子要素として `<message>` 要素を作成します。
 
@@ -89,9 +90,9 @@ Windows Communication Foundation (WCF) では、 <xref:System.ServiceModel.WSFed
 
 11. 任意。 `<identity>` 子要素を追加し、セキュリティ トークン サービスの識別子を指定します。
 
-12. 詳細については、「[サービス id と認証](service-identity-and-authentication.md)」を参照してください。
+12. 詳細については、「 [サービス id と認証](service-identity-and-authentication.md)」を参照してください。
 
-13. クライアント側ではローカル発行者が指定されていなければ必須。サービス側では不要。 [\<binding>](../../configure-apps/file-schema/wcf/bindings.md)Security Token Service との通信に使用できる要素をバインドセクションに作成します。 バインディングの作成の詳細については、「[方法: 構成でサービスバインディングを指定](../how-to-specify-a-service-binding-in-configuration.md)する」を参照してください。
+13. クライアント側ではローカル発行者が指定されていなければ必須。サービス側では不要。 [\<binding>](../../configure-apps/file-schema/wcf/bindings.md)Security Token Service との通信に使用できる要素をバインドセクションに作成します。 バインディングの作成の詳細については、「 [方法: 構成でサービスバインディングを指定](../how-to-specify-a-service-binding-in-configuration.md)する」を参照してください。
 
 14. `binding` 要素の `bindingConfiguration` 属性および `<issuer>` 属性に設定して、前の手順で作成したバインディングを指定します。
 

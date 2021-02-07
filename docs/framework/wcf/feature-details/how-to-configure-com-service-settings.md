@@ -1,15 +1,16 @@
 ---
+description: '詳細については、「方法: COM + サービス設定を構成する」を参照してください。'
 title: '方法: COM+ サービス設定を構成する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: b75f5c2a64b7184959e929439893b33193aa7bae
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 95d58c9db5fa4d3c5e1830401b1ab0651a56d265
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257471"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734946"
 ---
 # <a name="how-to-configure-com-service-settings"></a>方法: COM+ サービス設定を構成する
 

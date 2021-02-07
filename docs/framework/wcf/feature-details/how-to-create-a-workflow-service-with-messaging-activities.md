@@ -1,13 +1,14 @@
 ---
+description: '詳細については、「方法: メッセージングアクティビティを使用してワークフローサービスを作成する」を参照してください。'
 title: '方法: メッセージング アクティビティを使用してワークフロー サービスを作成する'
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 21d08d9c3c78cc8774d038018703ffb0c7ceb1fe
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c8f01574c2880e3a75a4db8edea949648d49426c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96286319"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734543"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>方法: メッセージング アクティビティを使用してワークフロー サービスを作成する
 
@@ -53,13 +54,13 @@ ms.locfileid: "96286319"
   
      [ **変数** ] ボタンをもう一度クリックして、変数エディターを閉じます。  
   
-6. [定義] をクリックし **ます**。 [コンテンツ定義] ダイアログボックスを表示するには、アクティビティの [**コンテンツ**] テキストボックス内のリンクを選択し <xref:System.ServiceModel.Activities.Receive> ます。 **Content Definition** [**パラメーター** ] オプションボタンを選択し、[**新しいパラメーターの追加**] リンクをクリックし、[名前] テキストボックスに「」と入力し `inMsg` **name** ます。次の図に示すように、[**型**] ボックスで [**文字列**] を選択し、[ `msg` **割り当て先**] テキストボックスに「」と入力します。  
+6. [定義] をクリックし **ます**。 [コンテンツ定義] ダイアログボックスを表示するには、アクティビティの [**コンテンツ**] テキストボックス内のリンクを選択し <xref:System.ServiceModel.Activities.Receive> ます。  [**パラメーター** ] オプションボタンを選択し、[**新しいパラメーターの追加**] リンクをクリックし、[名前] テキストボックスに「」と入力し `inMsg` ます。次の図に示すように、[**型**] ボックスで [**文字列**] を選択し、[ `msg` **割り当て先**] テキストボックスに「」と入力します。  
   
      ![パラメーターの内容の追加を示すスクリーンショット。](./media/how-to-create-a-workflow-service-with-messaging-activities/adding-parameters-content.jpg)  
   
      これにより、Receive アクティビティが文字列パラメーターを受け取り、そのデータが `msg` 変数にバインドされるように指定されます。 [ **OK** ] をクリックして、[ **コンテンツ定義** ] ダイアログを閉じます。  
   
-7. アクティビティの [**コンテンツ**] ボックスの [**定義...** ] リンクをクリックして <xref:System.ServiceModel.Activities.SendReply> 、[**コンテンツ定義**] ダイアログを表示します。 [**パラメーター** ] オプションボタンを選択し、[**新しいパラメーターの追加**] リンクをクリックします。次の図に示すように、[名前] ボックスに「」と入力し、[ `outMsg` **型**] ドロップダウンリストボックスで [**文字列**] を選択し、[ **name** `msg` **値**] テキストボックスに「」と入力します。  
+7. アクティビティの [**コンテンツ**] ボックスの [**定義...** ] リンクをクリックして <xref:System.ServiceModel.Activities.SendReply> 、[**コンテンツ定義**] ダイアログを表示します。 [**パラメーター** ] オプションボタンを選択し、[**新しいパラメーターの追加**] リンクをクリックします。次の図に示すように、[名前] ボックスに「」と入力し、[ `outMsg` **型**] ドロップダウンリストボックスで [**文字列**] を選択し、[  `msg` **値**] テキストボックスに「」と入力します。  
   
      ![OutMsg パラメーターを追加する方法を示すスクリーンショット。](./media/how-to-create-a-workflow-service-with-messaging-activities/outmsg-parameters-content.jpg)  
   

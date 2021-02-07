@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: リソースへのアクセスの要求と拒否'
 title: リソースへのアクセスのクレームと拒否
 ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], denying access to resources
 ms.assetid: 145ebb41-680e-4256-b14c-1efb4af1e982
-ms.openlocfilehash: 2c903d5b5aa520b9c79fb8b36912324feaf9a432
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0bbef26b0df06305db4ce460da4ba6177c79f56a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96264922"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734972"
 ---
 # <a name="claims-and-denying-access-to-resources"></a>リソースへのアクセスのクレームと拒否
 

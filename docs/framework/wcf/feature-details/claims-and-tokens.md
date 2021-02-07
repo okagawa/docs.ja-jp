@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「クレームとトークン」を参照してください。
 title: クレームとトークン
 ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-ms.openlocfilehash: cbc97f2224bce640757e1cef88fe325db477cfd7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d7d05fb63886ca7562ce478bcbcea73c3cbafcb8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587028"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734959"
 ---
 # <a name="claims-and-tokens"></a>クレームとトークン
 
@@ -53,7 +54,7 @@ ms.locfileid: "84587028"
 
   - `Claim` が Thumbprint、`ClaimType` が PossessProperty で、`Right` が証明書の拇印を含んだバイト配列である `Resource`。
 
-  - 証明書のさまざまなプロパティを表す X500DistinguishedName、Dns、Name、Upn、Rsa などの複数の種類の追加の PossessProperty クレーム。 Rsa 要求のリソースは、証明書に関連付けられている公開キーです。**メモ**クライアント資格情報の種類が、サービスが Windows アカウントにマップする証明書である場合、2つの `ClaimSet` オブジェクトが生成されます。 最初のオブジェクトには、Windows アカウントに関するすべてのクレームが入り、2 番目のオブジェクトには、証明書に関するすべてのクレームが入ります。
+  - 証明書のさまざまなプロパティを表す X500DistinguishedName、Dns、Name、Upn、Rsa などの複数の種類の追加の PossessProperty クレーム。 Rsa 要求のリソースは、証明書に関連付けられている公開キーです。**メモ** クライアント資格情報の種類が、サービスが Windows アカウントにマップする証明書である場合、2つの `ClaimSet` オブジェクトが生成されます。 最初のオブジェクトには、Windows アカウントに関するすべてのクレームが入り、2 番目のオブジェクトには、証明書に関するすべてのクレームが入ります。
 
 ## <a name="user-namepassword"></a>ユーザー名/パスワード
 

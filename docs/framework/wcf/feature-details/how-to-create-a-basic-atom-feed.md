@@ -1,16 +1,17 @@
 ---
+description: '詳細については、「方法: 基本的な Atom フィードを作成する」を参照してください。'
 title: '方法: 基本的な ATOM フィードを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
-ms.openlocfilehash: 76362684d289ca6aaac852158a05087a0a28f837
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4f4fa6e5b4e2b6935fb51cbc200e5ed9e03843ba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254052"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734790"
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>方法: 基本的な ATOM フィードを作成する
 

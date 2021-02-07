@@ -1,13 +1,14 @@
 ---
+description: '詳細については、「方法: Request-Reply コントラクトを作成する」を参照してください。'
 title: '方法: 要求/応答コントラクトを作成する'
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 506ce527348286bb53223c64245c74e4cb21879a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f5e63538a405aa451ffd3be114485604c00fa407
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96286553"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734699"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>方法: 要求/応答コントラクトを作成する
 
@@ -47,7 +48,7 @@ public interface ICalculator
   
 - 操作コントラクトを指定する方法の詳細については、 <xref:System.ServiceModel.OperationContractAttribute> クラスとプロパティを参照してください <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 。  
   
-- <xref:System.ServiceModel.ServiceContractAttribute> 属性と <xref:System.ServiceModel.OperationContractAttribute> 属性を適用すると、サービスを展開した後に Web サービス記述言語 (WSDL) ドキュメントでサービス コントラクト定義が自動的に生成されます。 ドキュメントは、サービスの HTTP ベース アドレスに `?wsdl` を付け加えてしてダウンロードできます。 例: `http://microsoft/CalculatorService?wsdl`  
+- <xref:System.ServiceModel.ServiceContractAttribute> 属性と <xref:System.ServiceModel.OperationContractAttribute> 属性を適用すると、サービスを展開した後に Web サービス記述言語 (WSDL) ドキュメントでサービス コントラクト定義が自動的に生成されます。 ドキュメントは、サービスの HTTP ベース アドレスに `?wsdl` を付け加えてしてダウンロードできます。 たとえば、`http://microsoft/CalculatorService?wsdl`  
   
 ## <a name="see-also"></a>関連項目
 
