@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRDebugging:: OpenVirtualProcess メソッド'
 title: ICLRDebugging::OpenVirtualProcess メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8ab7c41-d508-4ed9-8a31-ead072b5a314
 topic_type:
 - apiref
-ms.openlocfilehash: 2edd7f628e17c8dc6cbcbb577d06269ba8c64cb1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f9f195e1202a26a13b09cace74328c3937a9fcf1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723542"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723297"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess メソッド
 
@@ -75,7 +76,7 @@ HRESULT OpenVirtualProcess(
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|E_POINTER|`pDataTarget` が `null`です。|  
+|E_POINTER|`pDataTarget` は `null` です。|  
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|[ICLRDebuggingLibraryProvider](iclrdebugginglibraryprovider-interface.md)コールバックによってエラーが返されたか、有効なハンドルが提供されていません。|  
 |CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` は、このバージョンのランタイムに必要なデータターゲットインターフェイスを実装していません。|  
 |CORDBG_E_NOT_CLR|指定されたモジュールは CLR モジュールではありません。 この HRESULT は、メモリが破損している、モジュールが使用できない、または CLR バージョンが shim バージョンより後であるために CLR モジュールが検出できない場合にも返されます。|  
