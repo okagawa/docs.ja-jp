@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「WCF Web HTTP プログラミングオブジェクトモデル」を参照してください。
 title: WCF Web HTTP プログラミング オブジェクト モデル
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: 4cd23ccb1956a73e36d5c7d3e444c347247e338d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cfec94d323e2580cab64b426215cc2c7284743ec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96266884"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752575"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF Web HTTP プログラミング オブジェクト モデル
 
@@ -47,7 +48,7 @@ WCF WEB HTTP プログラミングモデルを使用すると、開発者は SOA
 
  <xref:System.ServiceModel.Web.WebGetAttribute> 属性は、サービス操作を HTTP GET 要求に応答する操作としてマークするために使用されます。 メタデータを操作の説明に追加する受信操作の動作です (<xref:System.ServiceModel.Description.IOperationBehavior> メソッドは何の処理も行いません)。 このメタデータを操作の説明で検索する動作 (特に <xref:System.ServiceModel.Web.WebGetAttribute>) がサービスの動作コレクションに追加されていない場合は、<xref:System.ServiceModel.Description.WebHttpBehavior> を適用しても機能しません。 <xref:System.ServiceModel.Web.WebGetAttribute> 属性には、次の表に示すパラメーターをオプションで指定できます。  
   
-|パラメーター|Description|  
+|パラメーター|説明|  
 |---------------|-----------------|  
 |`BodyStyle`|属性が適用されているサービス操作との間で送受信される要求と応答をラップするかどうかを制御します。|  
 |`RequestFormat`|要求メッセージの書式設定方法を制御します。|  
@@ -64,7 +65,7 @@ WCF WEB HTTP プログラミングモデルを使用すると、開発者は SOA
   
  <xref:System.ServiceModel.Web.WebInvokeAttribute> 属性には、次の表に示すパラメーターをオプションで指定できます。  
   
-|パラメーター|Description|  
+|パラメーター|説明|  
 |---------------|-----------------|  
 |`BodyStyle`|属性が適用されているサービス操作との間で送受信される要求と応答をラップするかどうかを制御します。|  
 |`Method`|サービス操作がマップされる HTTP メソッドを指定します。|  

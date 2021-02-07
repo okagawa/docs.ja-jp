@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 3370-BinaryMessageEncodingStart'
 title: 3370 - BinaryMessageEncodingStart
 ms.date: 03/30/2017
 ms.assetid: 624f8dab-a150-468e-9709-613621a8627f
-ms.openlocfilehash: 922dc0e20eacc71072333976d42b295374995fe8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 2f62f3148307f99da604b68ceb41faae92e5ecf7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96282393"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753030"
 ---
 # <a name="3370---binarymessageencodingstart"></a>3370 - BinaryMessageEncodingStart
 
@@ -15,12 +16,12 @@ ms.locfileid: "96282393"
   
 |||  
 |-|-|  
-|ID|3370|  
+|id|3370|  
 |Keywords|チャネル|  
 |Level|"詳細"|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、BinaryMessageEncoder がメッセージのエンコードを開始したときに生成されます。  
   

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 3369-Sslonacceptupgrade が'
 title: 3369 - SslOnAcceptUpgrade
 ms.date: 03/30/2017
 ms.assetid: dec93b38-d97c-4c9e-8891-7cefa0a8aa5b
-ms.openlocfilehash: ab99849f4a8389e7691ffaaca6bae693dd120346
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8df6375d3f63d82288691b174bf62461e664e408
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96259670"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753043"
 ---
 # <a name="3369---sslonacceptupgrade"></a>3369 - SslOnAcceptUpgrade
 
@@ -15,12 +16,12 @@ ms.locfileid: "96259670"
   
 |||  
 |-|-|  
-|ID|3369|  
+|id|3369|  
 |Keywords|セキュリティ|  
 |Level|"詳細"|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、SslOnAcceptUpgrade が停止すると生成されます。  
   

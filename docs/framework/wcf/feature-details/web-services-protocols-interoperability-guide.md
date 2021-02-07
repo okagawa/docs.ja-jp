@@ -1,13 +1,14 @@
 ---
+description: 詳細については、Web サービスプロトコルの相互運用性に関するガイドを参照してください。
 title: Web サービスプロトコルの相互運用性ガイド
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: f35ca629da65af749897d28d28808d06eced7aa8
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: cab744818d3a52c6f6cd0d95195d9112ac9babf6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720115"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752549"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web サービスプロトコルの相互運用性ガイド
 
@@ -21,7 +22,7 @@ WCF では、コントラクト機能を通じて、チャネルと Web サー�
 
 <xref:System.ServiceModel.Channels.HttpTransportBindingElement> は、次の表の仕様をサポートします。
 
-|仕様/ドキュメント|Link|
+|仕様/ドキュメント|リンク|
 |-----------------------------|----------|
 |HTTP 1.1|[RFC 2616](https://www.rfc-editor.org/rfc/rfc2616.txt)|
 |SOAP 1.1 HTTP バインディング|[Simple Object Access Protocol (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)、セクション7|
@@ -29,7 +30,7 @@ WCF では、コントラクト機能を通じて、チャネルと Web サー�
 
 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> および <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> は、次の表の仕様をサポートします。
 
-|仕様/ドキュメント|Link|
+|仕様/ドキュメント|リンク|
 |-----------------------------|----------|
 |XML|[Extensible Markup Language (XML) 1.0 (Fourth Edition)](https://www.w3.org/TR/REC-xml/)|
 |SOAP 1.1|[Simple Object Access Protocol (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)|
@@ -44,7 +45,7 @@ WCF では、コントラクト機能を通じて、チャネルと Web サー�
 
 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> は、次の表の仕様をサポートします。
 
-|仕様/ドキュメント|Link|
+|仕様/ドキュメント|リンク|
 |-----------------------------|----------|
 |XOP|[XML-binary Optimized Packaging](https://www.w3.org/TR/xop10/)|
 |MTOM + SOAP1.2 バインディング|[SOAP Message Transmission Optimization Mechanism](https://www.w3.org/TR/soap12-mtom/)|
@@ -53,7 +54,7 @@ WCF では、コントラクト機能を通じて、チャネルと Web サー�
 
 <xref:System.ServiceModel.Channels.SecurityBindingElement> は、次の表の仕様をサポートします。
 
-|仕様/ドキュメント|Link|
+|仕様/ドキュメント|リンク|
 |-----------------------------|----------|
 |WSS SOAP Message Security 1.0|[Web Services Security: SOAP メッセージセキュリティ1.0](https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf)|
 |WSS: Username Token Profile 1.0|[Web Services Security UsernameToken Profile 1.0](https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf)<br /><br /> 必須 Password/@Type = passwordtext (既定値)|
@@ -71,7 +72,7 @@ WCF では、コントラクト機能を通じて、チャネルと Web サー�
 
 <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> は、次の表の仕様をサポートします。
 
-|仕様/ドキュメント|Link|
+|仕様/ドキュメント|リンク|
 |-----------------------------|----------|
 |WS-Coordination|[Web Services Coordination](/previous-versions/ms951231(v=msdn.10))|
 |WS-AtomicTransaction|[Web Services Atomic Transaction](http://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf)|

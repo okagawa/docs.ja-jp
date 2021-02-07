@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: クライアント資格情報の種類を指定する」を参照してください。'
 title: '方法: クライアントの資格情報の種類を指定する'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - security credentials, adding to SOAP messages
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
-ms.openlocfilehash: b45d7b58d8a1fe79f9d7a8cff6e328b46633985c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f6536778e8814a1b5a4c03e22c0fe4108f89b6eb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293677"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752536"
 ---
 # <a name="how-to-specify-the-client-credential-type"></a>方法: クライアントの資格情報の種類を指定する
 

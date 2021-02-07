@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 3378-SocketAsyncReadStop'
 title: 3378 - SocketAsyncReadStop
 ms.date: 03/30/2017
 ms.assetid: c7b5b73e-c1cd-41a5-9a0b-ab86af437f60
-ms.openlocfilehash: 60d300c1944ed1c57d0775cde978cee9c5c4870a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8a6bd9efcb727d52d3ec0f8532db8e8dd3c54e19
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96260838"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752874"
 ---
 # <a name="3378---socketasyncreadstop"></a>3378 - SocketAsyncReadStop
 
@@ -15,12 +16,12 @@ ms.locfileid: "96260838"
   
 |||  
 |-|-|  
-|ID|3378|  
+|id|3378|  
 |Keywords|TCP|  
 |Level|"詳細"|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、SocketAsyncRead が停止している場合に生成されます。  
   

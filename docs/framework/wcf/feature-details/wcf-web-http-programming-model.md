@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「WCF Web HTTP プログラミングモデル」を参照してください。
 title: WCF Web HTTP プログラミング モデル
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - POX
 - REST
 ms.assetid: 2312a8d3-b66e-4623-ba42-978434300c7f
-ms.openlocfilehash: 644bcba9f8ced965ff962962bd83e1ae170159a7
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f439e69e0e0c041f49e7fc5e64637337880e8459
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239004"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752588"
 ---
 # <a name="wcf-web-http-programming-model"></a>WCF Web HTTP プログラミング モデル
 

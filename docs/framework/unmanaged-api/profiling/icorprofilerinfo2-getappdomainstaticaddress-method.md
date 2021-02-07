@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo2:: GetAppDomainStaticAddress メソッド'
 title: ICorProfilerInfo2::GetAppDomainStaticAddress メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2a9e0ea7-a9e2-4817-b1c4-fcf15b215ea9
 topic_type:
 - apiref
-ms.openlocfilehash: 271f9f4fd0d85407aedf088ffb524fa6e0398e37
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4ef8511e75a18f7626fa7a30ea194140de051bb2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727212"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753238"
 ---
 # <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a>ICorProfilerInfo2::GetAppDomainStaticAddress メソッド
 
@@ -50,7 +51,7 @@ RESULT GetAppDomainStaticAddress(
  `ppAddress`  
  入出力指定されたアプリケーションドメイン内の静的フィールドのアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `GetAppDomainStaticAddress`メソッドは、次のいずれかを返す場合があります。  
   

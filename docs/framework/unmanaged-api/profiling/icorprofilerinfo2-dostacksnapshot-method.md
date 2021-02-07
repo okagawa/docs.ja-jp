@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo2::D oStackSnapshot メソッド'
 title: ICorProfilerInfo2::DoStackSnapshot メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 287b11e9-7c52-4a13-ba97-751203fa97f4
 topic_type:
 - apiref
-ms.openlocfilehash: 10cc9dedfa34cd5235df721d7010bbd928fbc3ba
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e30e11dfe04da1e7a5adfef004036507b724963d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727238"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753251"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot メソッド
 
@@ -66,7 +67,7 @@ HRESULT DoStackSnapshot(
  `contextSize`  
  から `CONTEXT` パラメーターによって参照される構造体のサイズ `context` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  に null を渡す `thread` と、現在のスレッドのスナップショットが生成されます。 スナップショットは、その時点でターゲットスレッドが中断されている場合にのみ、他のスレッドで取得できます。  
   

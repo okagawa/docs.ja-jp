@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「トランザクションプロトコル」を参照してください。
 title: トランザクション プロトコル
 ms.date: 03/30/2017
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
-ms.openlocfilehash: 08ce12109d89e9087ced06be409435ac8c5b9d08
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a790e5d79128fb606d89cb6a3b6a925b3084d481
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96261541"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752692"
 ---
 # <a name="transaction-protocols"></a>トランザクション プロトコル
 
 Windows Communication Foundation (WCF) は WS-Atomic トランザクションと WS-Coordination プロトコルを実装します。  
   
-|仕様/ドキュメント|バージョン|Link|  
+|仕様/ドキュメント|Version|リンク|  
 |-----------------------------|-------------|----------|  
 |WS-Coordination|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wscoor/><br /><br /> <https://docs.oasis-open.org/ws-tx/wscoor/2006/06>|  
 |WS-AtomicTransaction|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wsat/><br /><br /> <https://docs.oasis-open.org/ws-tx/wsat/2006/06>|  
@@ -58,7 +59,7 @@ Windows Communication Foundation (WCF) は WS-Atomic トランザクションと
   
  このドキュメントでは、次の XML 名前空間と関連付けられたプレフィックスが使用されます。  
   
-|Prefix|バージョン|名前空間 URI|  
+|Prefix|Version|名前空間 URI|  
 |------------|-------------|-------------------|  
 |s11||<https://schemas.xmlsoap.org/soap/envelope/>|  
 |wsa|1.0 より前<br /><br /> 1.0|`http://www.w3.org/2004/08/addressing`<br /><br /> <https://www.w3.org/2005/08/addressing/>|  

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: キューに登録されたアプリケーションをホストする Web'
 title: キューに置かれたアプリケーションの Web ホスト
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: c2b41ee1d0a82693760bc3e1b6144d2190153f24
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5fb056a75598523554869f0089689979986dba7f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96249775"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752562"
 ---
 # <a name="web-hosting-a-queued-application"></a>キューに置かれたアプリケーションの Web ホスト
 
