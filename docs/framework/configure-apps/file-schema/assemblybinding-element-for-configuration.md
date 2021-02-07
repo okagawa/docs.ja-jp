@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <assemblyBinding> の要素 <configuration>'
 title: <configuration> の <assemblyBinding> 要素
 ms.date: 03/30/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - assemblyBinding Element
 - <assemblyBinding> Element
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
-ms.openlocfilehash: 21cf5e749b0dae310c3326f8abf82c6678fc97e9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5cc3fc7cccd4b9dc7b62815734ff76e32e2243d3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155480"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730110"
 ---
 # <a name="assemblybinding-element-for-configuration"></a>\<configuration> の \<assemblyBinding> 要素
 
@@ -30,13 +31,13 @@ ms.locfileid: "79155480"
 
 ## <a name="attribute"></a>属性
 
-|           | [説明] |
+|           | 説明 |
 | --------- | ----------- |
 | **xmlns** | 必須の属性です。<br><br>アセンブリのバインディングに必要な XML 名前空間を指定します。 値として、文字列 "urn:schemas-microsoft-com:asm.v1" を使用します。 |
 
 ## <a name="parent-element"></a>親要素
 
-|     | Description |
+|     | 説明 |
 | --- | ----------- |
 | [**\<configuration>**](configuration-element.md) | 共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。 |
 

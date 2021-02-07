@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <add> connectionManagement の要素 (ネットワーク設定)'
 title: connectionManagement の <add> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 05e4a1bc42dc39c7d2b56e30c98bdeefd31e4416
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 646d9fcfb73cfd8f4f533672c1a92883274f6e39
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149479"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729941"
 ---
 # <a name="add-element-for-connectionmanagement-network-settings"></a>connectionManagement の \<add> 要素 (ネットワーク設定)
 

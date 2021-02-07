@@ -1,4 +1,5 @@
 ---
+description: 詳細については、SingleTagSectionHandler のカスタム要素に関するページを参照してください。
 title: SingleTagSectionHandler のカスタム要素
 ms.date: 05/01/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-ms.openlocfilehash: a40f35838655f6021af0b2e966335803ec8c16b4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 83022a1ebf295b89d5f868589e3d9a77c78e3fab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "80635400"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729980"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>SingleTagSectionHandler のカスタム要素
 
@@ -61,7 +62,7 @@ ms.locfileid: "80635400"
 
 ## <a name="configuration-file"></a>構成ファイル
 
-この要素は、アプリケーション構成ファイル *、マシン構成ファイル (machine.config*)、およびアプリケーションディレクトリレベルではない*web.config ファイル*で使用できます。
+この要素は、アプリケーション構成ファイル、マシン構成ファイル (*Machine.config*)、およびアプリケーションディレクトリレベルではない *Web.config* ファイルで使用できます。
 
 ## <a name="see-also"></a>関連項目
 
