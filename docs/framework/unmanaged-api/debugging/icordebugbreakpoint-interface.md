@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorDebugBreakpoint インターフェイス」を参照してください。
 title: ICorDebugBreakpoint インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aa5ad3d7-e1bb-42af-99bc-471224e3bcaa
 topic_type:
 - apiref
-ms.openlocfilehash: 0c84a91c7da553d0c84a4995b4744576d861dcb9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 63917512cceeccedea37acdf2ba7ab3b849d9fad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730202"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711805"
 ---
 # <a name="icordebugbreakpoint-interface"></a>ICorDebugBreakpoint インターフェイス
 
@@ -32,7 +33,7 @@ ms.locfileid: "95730202"
 |[Activate メソッド](icordebugbreakpoint-activate-method.md)|こののアクティブな状態を設定 `ICorDebugBreakpoint` します。|  
 |[IsActive メソッド](icordebugbreakpoint-isactive-method.md)|このがアクティブかどうかを示す値を取得し `ICorDebugBreakpoint` ます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ブレークポイントは、条件式を直接サポートしません。 このような機能が必要な場合は、デバッガーでを上に実装する必要があり `ICorDebugBreakpoint` ます。  
   

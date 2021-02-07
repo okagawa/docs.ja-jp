@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: EnumerateFrames メソッド'
 title: ICorDebugChain::EnumerateFrames メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9fcefa98-750d-4168-8915-8173a43accf2
 topic_type:
 - apiref
-ms.openlocfilehash: ae6d81e6fdab0f8e3346d8a08a3b5ebc329a542a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 45bf69760eeccebada743d81e859a19e209b611a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730150"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711597"
 ---
 # <a name="icordebugchainenumerateframes-method"></a>ICorDebugChain::EnumerateFrames メソッド
 
@@ -39,7 +40,7 @@ HRESULT EnumerateFrames (
  `ppFrames`  
  入出力スタックフレームの列挙子である、テキストフレームの列挙型オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  チェーンは、スレッドの物理呼び出し履歴を表します。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: のクラスインターフェイス'
 title: ICorDebugClass インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 03a6facb-f12f-49be-9839-e73b9c791cd5
 topic_type:
 - apiref
-ms.openlocfilehash: 4f488741f4233f06c128e0a262ce798ef27af3ff
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5ded26a8b3a98bd273bbfe1bfa9efd1bb70d5595
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699639"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711506"
 ---
 # <a name="icordebugclass-interface"></a>ICorDebugClass インターフェイス
 
@@ -33,7 +34,7 @@ ms.locfileid: "95699639"
 |[GetStaticFieldValue メソッド](icordebugclass-getstaticfieldvalue-method.md)|指定された静的フィールドの値を取得します。|  
 |[GetToken メソッド](icordebugclass-gettoken-method.md)|`TypeDef`このクラスのメタデータトークンを取得します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  インターフェイスは、 `ICorDebugClass` インスタンスジェネリック型を表します。 は、インスタンス化されたジェネリック型を表します。 たとえば、は `Hashtable<K, V>` で表されますが、は `ICorDebugClass` `Hashtable<Int32, String>` によって表さ `ICorDebugType` れます。  
   

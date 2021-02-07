@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: を参照してください。値:: GetObject メソッド'
 title: ICorDebugBoxValue::GetObject メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3a867a5b-bf94-493f-a4f5-b28685cf5325
 topic_type:
 - apiref
-ms.openlocfilehash: df151e9fc89214d0851ebe60c7ebdb87224f880c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fc5376fa7ddbbeae3464427b34caf991d0a2f59a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719078"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711862"
 ---
 # <a name="icordebugboxvaluegetobject-method"></a>ICorDebugBoxValue::GetObject メソッド
 
