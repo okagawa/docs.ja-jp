@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「ワークフローデザインエクスペリエンスのカスタマイズ」を参照してください。
 title: ワークフロー デザイン操作のカスタマイズ
 ms.date: 03/30/2017
 helpviewer_keywords:
 - extending [WF], Workflow Designer
 ms.assetid: 98135077-0f5d-4d16-9337-01094e843537
-ms.openlocfilehash: 27be398d874747b65ae051224070d3f40f1fbbb0
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 02049f8b42de3de6e4dfdfe8a4151be1500bcca9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715136"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742655"
 ---
 # <a name="customizing-the-workflow-design-experience"></a>ワークフロー デザイン操作のカスタマイズ
 
@@ -29,13 +30,13 @@ ms.locfileid: "74715136"
 
  Visual Studio 2010 の外部で再ホストされたワークフローデザイナーで使用するカスタム式エディターを実装する方法について説明します。
 
-## <a name="reference"></a>辞書／辞典／その他
+## <a name="reference"></a>関連項目
 
 <xref:System.Activities.Presentation.ActivityDesigner>
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [Windows Workflow Foundation の拡張](extend.md)
-- [デザイナー](./samples/designer.md)
+- [Designer](./samples/designer.md)
 - [カスタム アクティビティ デザイナー](./samples/custom-activity-designers.md)
-- [デザイナーのホスト変更](./samples/designer-rehosting.md)
+- [デザイナーのホスト](./samples/designer-rehosting.md)

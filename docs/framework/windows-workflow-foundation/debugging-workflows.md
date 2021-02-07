@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「ワークフローのデバッグ」をご覧ください。
 title: デバッグのワークフロー
 ms.date: 03/30/2017
 ms.assetid: b23b4814-ebb1-4c51-b7a9-469f4da7a96d
-ms.openlocfilehash: 31c688f5f45b41f337176108486ec2074e1915a7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9de65e580d47395a9528f4672014ceb491b09230
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543837"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742564"
 ---
 # <a name="debugging-workflows"></a>デバッグのワークフロー
 
@@ -29,12 +30,12 @@ ms.locfileid: "90543837"
 
 ワークフローのデバッグは、Visual Studio のインフラストラクチャを使用したプロセスへのアタッチもサポートしています。 そのため、ワークフロー作成者は、Internet Information Services (IIS) 7.0 など異なるホスト環境で実行されているワークフローをデバッグできます。
 
-## <a name="remote-debugging"></a>リモート デバッグ
+## <a name="remote-debugging"></a>Remote Debugging
 
 Windows Workflow Foundation (WF) リモートデバッグは、他の Visual Studio コンポーネントのリモートデバッグと同じように機能します。 リモートデバッグの使用方法の詳細については、「 [方法: リモートデバッグを有効](/previous-versions/visualstudio/visual-studio-2010/febz73k0(v=vs.100))にする」を参照してください。
 
 > [!NOTE]
-> ワークフローアプリケーションが x86 アーキテクチャを対象としていて、64ビットオペレーティングシステムを実行しているコンピューターでホストされている場合、リモートデバッグは、Visual Studio がリモートコンピューターにインストールされていない場合、またはワークフローアプリケーションのターゲットが **ANY CPU**に変更されている場合を除き、機能しません。
+> ワークフローアプリケーションが x86 アーキテクチャを対象としていて、64ビットオペレーティングシステムを実行しているコンピューターでホストされている場合、リモートデバッグは、Visual Studio がリモートコンピューターにインストールされていない場合、またはワークフローアプリケーションのターゲットが **ANY CPU** に変更されている場合を除き、機能しません。
 
 ## <a name="extending-the-workflow-debugging-service"></a>ワークフロー デバッグ サービスの拡張
 

@@ -1,5 +1,6 @@
 ---
-title: メソッドを作成します。
+description: 詳細については、「XmlReader」を参照してください。
+title: XmlReader Qlreader メソッド (System.Xml)
 ms.date: 10/17/2019
 topic_type:
 - apiref
@@ -9,12 +10,12 @@ api_location:
 - system.xml.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 7bd2ef5158516acede47f73f9937d06159bc16c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 61d594c0438c86863ce4052387439f5483d8a34c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155740"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740435"
 ---
 # <a name="xmlreadercreatesqlreader-method"></a>XmlReader.CreateSqlReader  メソッド
 
@@ -31,10 +32,10 @@ internal static XmlReader CreateSqlReader(Stream input,
   XML データを格納しているストリーム。
 
 - `settings` <xref:System.Xml.XmlReaderSettings>  
-  新しい <xref:System.Xml.XmlReader> インスタンスの設定。 この値には `null` を指定できます。
+  新しい <xref:System.Xml.XmlReader> インスタンスの設定。 この値は、`null` の場合もあります。
 
 - `inputContext` <xref:System.Xml.XmlParserContext>  
-  XML フラグメントの解析に必要なコンテキスト情報。 この値には `null` を指定できます。
+  XML フラグメントの解析に必要なコンテキスト情報。 この値は、`null` の場合もあります。
 
 ## <a name="returns"></a>戻り値
 
@@ -44,14 +45,14 @@ internal static XmlReader CreateSqlReader(Stream input,
 ## <a name="remarks"></a>解説
 
 > [!WARNING]
-> メソッド`XmlReader.CreateSqlReader`は内部であり、コード内で直接使用するためのものではありません。
+> `XmlReader.CreateSqlReader`メソッドは内部であり、コードで直接使用するためのものではありません。
 >
-> マイクロソフトでは、どのような状況でも、本稼動アプリケーションでこの方法の使用をサポートしていません。
+> Microsoft では、どのような状況でも、実稼働アプリケーションでこの方法を使用することはサポートしていません。
 
 ## <a name="requirements"></a>必要条件
 
-**名前空間:**<xref:System.Xml>
+**名前空間:** <xref:System.Xml>
 
-**アセンブリ:** システム.Xml.dll
+**アセンブリ:** System.Xml.dll
 
-**.NET フレームワークのバージョン:** 2.0 以降で利用可能。
+**.NET Framework のバージョン:** 2.0 以降で使用できます。

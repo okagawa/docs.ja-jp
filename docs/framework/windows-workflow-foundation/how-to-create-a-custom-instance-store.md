@@ -1,27 +1,28 @@
 ---
+description: '詳細については、「方法: カスタムインスタンスストアを作成する」を参照してください。'
 title: '方法: カスタム インスタンス ストアを作成する'
 ms.date: 03/30/2017
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
-ms.openlocfilehash: cacee7d95a543525ba031de0cc0636d05fc72fc8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a1a511e6a97dffe510c839aceec8c9d91a77ec1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945640"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742135"
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>方法: カスタム インスタンス ストアを作成する
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] には、<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> という、SQL Server を使用してワークフロー データの永続化を行うインスタンス ストアが含まれています。 ワークフロー データの永続化を別のメディアで行う、つまり、別のデータベースやファイル システムなどを使用して行う必要があるアプリケーションの場合は、カスタム インスタンス ストアを実装できます。 カスタム インスタンス ストアを作成するには、抽象 <xref:System.Runtime.DurableInstancing.InstanceStore> クラスを拡張し、その実装に必要なメソッドを実装します。 カスタム インスタンス ストアの完全な実装を参照してください、[企業の購買プロセス](./samples/corporate-purchase-process.md)サンプル。
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] には、<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> という、SQL Server を使用してワークフロー データの永続化を行うインスタンス ストアが含まれています。 ワークフロー データの永続化を別のメディアで行う、つまり、別のデータベースやファイル システムなどを使用して行う必要があるアプリケーションの場合は、カスタム インスタンス ストアを実装できます。 カスタム インスタンス ストアを作成するには、抽象 <xref:System.Runtime.DurableInstancing.InstanceStore> クラスを拡張し、その実装に必要なメソッドを実装します。 カスタムインスタンスストアの完全な実装については、「 [企業の購入プロセス](./samples/corporate-purchase-process.md) 」のサンプルを参照してください。
 
 ## <a name="implementing-the-begintrycommand-method"></a>BeginTryCommand メソッドの実装
 
 <xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A> は永続化エンジンによってインスタンス ストアに送信されます。 `command` パラメーターの型は、どのコマンドを実行するかを示します。このパラメーターは次のいずれかになります:
 
-- <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>:永続化エンジンでは、ワークフローは、ストレージ メディアに永続化するときに、このコマンドをインスタンス ストアに送信します。 ワーク フローの永続性データは、<xref:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData%2A> パラメーターの `command` メンバー内のメソッドに提供されます。
+- <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>: ワークフローをストレージ メディアに永続化する場合は、永続化エンジンがこのコマンドをインスタンス ストアに送信します。 ワーク フローの永続性データは、<xref:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData%2A> パラメーターの `command` メンバー内のメソッドに提供されます。
 
-- <xref:System.Activities.DurableInstancing.LoadWorkflowCommand>:永続化エンジンでは、ワークフローは、ストレージ メディアから読み込まれるときに、このコマンドをインスタンス ストアに送信します。 読み込むワークフローのインスタンス ID は、`instanceId` パラメーターの <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.InstanceView%2A> プロパティの `context` パラメーター内のメソッドに提供されます。
+- <xref:System.Activities.DurableInstancing.LoadWorkflowCommand>: ワークフローをストレージ メディアから読み込む場合は、永続化エンジンがこのコマンドをインスタンス ストアに送信します。 読み込むワークフローのインスタンス ID は、`instanceId` パラメーターの <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.InstanceView%2A> プロパティの `context` パラメーター内のメソッドに提供されます。
 
-- <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>:次のコマンド インスタンスを格納ときに永続化エンジンの送信、<xref:System.ServiceModel.Activities.WorkflowServiceHost>ロック所有者として登録する必要があります。 現在のワーク フローのインスタンス ID を、<xref:System.Runtime.DurableInstancing.InstancePersistenceContext.BindInstanceOwner%2A> パラメーターの `context` メソッドを使用してインスタンス ストアに提供する必要があります。
+- <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>: <xref:System.ServiceModel.Activities.WorkflowServiceHost> をロック所有者として登録する必要がある場合は、永続化エンジンがこのコマンドをインスタンス ストアに送信します。 現在のワーク フローのインスタンス ID を、<xref:System.Runtime.DurableInstancing.InstancePersistenceContext.BindInstanceOwner%2A> パラメーターの `context` メソッドを使用してインスタンス ストアに提供する必要があります。
 
      次のコード スニペットは、CreateWorkflowOwner コマンドを実装して明示的なロック所有者を割り当てる方法を示しています。
 
@@ -43,7 +44,7 @@ ms.locfileid: "61945640"
     childInstance.AddInitialInstanceValues(new Dictionary<XName, object>() { { WorkflowHostTypeName, WFInstanceScopeName } });
     ```
 
-- <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>:永続化エンジンでは、ロック所有者のインスタンス ID は、インスタンス ストアから削除できる場合、このコマンドをインスタンス ストアに送信します。 <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand> と同様に、アプリケーションがロック所有者の ID を提供する必要があります。
+- <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>: ロック所有者のインスタンス ID をインスタンス ストアから削除してよい場合は、永続化エンジンがこのコマンドをインスタンス ストアに送信します。 <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand> と同様に、アプリケーションがロック所有者の ID を提供する必要があります。
 
      次のコード スニペットは、<xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand> を使用してロックを解除する方法を示しています。
 
@@ -87,11 +88,11 @@ ms.locfileid: "61945640"
     }
     ```
 
-- <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand>:永続化エンジンでは、ワークフロー インスタンスが、ワークフローのインスタンス キーを使用して読み込まれるときに、インスタンス ストアにこのコマンドを送信します。 インスタンス キーの ID は、このコマンドの <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.LookupInstanceKey%2A> パラメーターを使用して確認できます。
+- <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand>: ワークフローのインスタンス キーを使用してワークフローのインスタンスを読み込む場合は、永続化エンジンがこのコマンドをインスタンス ストアに送信します。 インスタンス キーの ID は、このコマンドの <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.LookupInstanceKey%2A> パラメーターを使用して確認できます。
 
-- <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>:永続化エンジンは、ワークフローを読み込むワークフロー ホストを作成するには、永続化されたワークフローのアクティブ化パラメーターを取得する、インスタンス ストアにこのコマンドを送信します。 このコマンドは、インスタンス ストアがアクティブ化できるインスタンスを見つけて、ホストに <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent> を発生させたとき、それに対する応答としてエンジンにより送信されます。 アクティブ化できるワーク フローがあるかどうかを判別するには、インスタンス ストアをポーリングする必要があります。
+- <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>: ワークフローを読み込むワークフロー ホストを作成するために永続化ワークフローのアクティベーション パラメーターを取得する場合は、永続化エンジンがこのコマンドをインスタンス ストアに送信します。 このコマンドは、インスタンス ストアがアクティブ化できるインスタンスを見つけて、ホストに <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent> を発生させたとき、それに対する応答としてエンジンにより送信されます。 アクティブ化できるワーク フローがあるかどうかを判別するには、インスタンス ストアをポーリングする必要があります。
 
-- <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>:永続化エンジンは、このコマンドを実行可能なワークフロー インスタンスの読み込みにインスタンス ストアに送信します。 このコマンドは、インスタンス ストアが実行できるインスタンスを見つけて、ホストに <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> を発生させたとき、それに対する応答としてエンジンにより送信されます。 実行できるワークフローを見つけるには、インスタンス ストアをポーリングする必要があります。 次のコード スニペットは、実行またはアクティブ化できるワークフローのために、インスタンス ストアのポーリングを行う方法を示しています。
+- <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>: 実行可能なワークフロー インスタンスを読み込む場合、永続化エンジンがインスタンス ストアにこのコマンドを送信します。 このコマンドは、インスタンス ストアが実行できるインスタンスを見つけて、ホストに <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> を発生させたとき、それに対する応答としてエンジンにより送信されます。 実行できるワークフローを見つけるには、インスタンス ストアをポーリングする必要があります。 次のコード スニペットは、実行またはアクティブ化できるワークフローのために、インスタンス ストアのポーリングを行う方法を示しています。
 
     ```csharp
     public void PollForEvents()
@@ -226,11 +227,11 @@ ms.locfileid: "61945640"
 
 ## <a name="using-a-custom-instance-store"></a>カスタム インスタンス ストアの使用
 
-カスタム インスタンス ストアを実装するには、インスタンス ストアのインスタンスを <xref:System.Activities.WorkflowApplication.InstanceStore%2A> に割り当て、<xref:System.Activities.WorkflowApplication.PersistableIdle%2A> メソッドを実装します。 参照してください、[方法。作成および実行 a Long Running Workflow](how-to-create-and-run-a-long-running-workflow.md)の仕様についてのチュートリアル。
+カスタム インスタンス ストアを実装するには、インスタンス ストアのインスタンスを <xref:System.Activities.WorkflowApplication.InstanceStore%2A> に割り当て、<xref:System.Activities.WorkflowApplication.PersistableIdle%2A> メソッドを実装します。 詳細については、「 [方法: 実行時間の長いワークフローを作成および実行](how-to-create-and-run-a-long-running-workflow.md) する」を参照してください。
 
 ## <a name="a-sample-instance-store"></a>サンプル インスタンス ストア
 
-次のコード サンプルから取得した、完成したインスタンス ストア実装は、[企業の購買プロセス](./samples/corporate-purchase-process.md)サンプル。 このインスタンス ストアは、XML を使用してファイルにワークフロー データを永続化します。
+次のコードサンプルは、 [企業の購入プロセス](./samples/corporate-purchase-process.md) サンプルから取得した完全なインスタンスストアの実装です。 このインスタンス ストアは、XML を使用してファイルにワークフロー データを永続化します。
 
 ```csharp
 using System;

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: C# の式'
 title: C# の式
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
-ms.openlocfilehash: b0e5d7f2fbb1f7b84c6d8f0110bd111165f0ea52
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ce918bb96164643f1adbc73f749d2b5f88f4eb3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239622"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742811"
 ---
 # <a name="c-expressions"></a>C# の式
 
@@ -184,7 +185,7 @@ static void CompileExpressions(DynamicActivity dynamicActivity)
 
 - 型名および名前空間の取得に `DynamicActivity.Name` プロパティが使用されます。
 
-- `TextExpressionCompilerSettings.ForImplementation` が `true` に設定されます。
+- `TextExpressionCompilerSettings.ForImplementation` は `true` に設定されます。
 
 - `CompiledExpressionInvoker.SetCompiledExpressionRootForImplementation` の代わりに `CompiledExpressionInvoker.SetCompiledExpressionRoot` が呼び出されます。
 

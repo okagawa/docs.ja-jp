@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <clear> webRequestModules の要素 (ネットワーク設定)'
 title: webRequestModules の <clear> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: 892058dd8af8a38bd7bde868b34a2c6899d9a989
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0782bf9edeafed2d61a368c3f6a8b37ef226c990
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91184041"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740419"
 ---
 # <a name="clear-element-for-webrequestmodules-network-settings"></a>webRequestModules の \<clear> 要素 (ネットワーク設定)
 

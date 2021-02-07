@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: SQL 追跡'
 title: SQL 追跡
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 916c04b03dee296b7e6f5c792f0c4e50fb4203c0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2b336839b9c63c0b7bde8b6451add00cb353fec6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559351"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741745"
 ---
 # <a name="sql-tracking"></a>SQL 追跡
 
@@ -24,7 +25,7 @@ ms.locfileid: "90559351"
 
 3. Visual Studio 2010 で SqlTrackingSample .sln を開きます。
 
-4. **Ctrl** + **Shift** + **B**キーを押して、ソリューションをビルドします。
+4. **Ctrl** + **Shift** + **B** キーを押して、ソリューションをビルドします。
 
 5. **F5** キーを押してアプリケーションを実行します。
 
@@ -36,7 +37,7 @@ ms.locfileid: "90559351"
 
    ローカルサービスの WSDL アドレスの例は、 `http://localhost:65193/StockPriceService.xamlx?wsdl` です。
 
-8. エクスプローラーを使用して、WCF テストクライアント (WcfTestClient.exe) を実行します。 これは、 *Microsoft Visual Studio 10.0 \ Common7\IDE ディレクトリ*にあります。
+8. エクスプローラーを使用して、WCF テストクライアント (WcfTestClient.exe) を実行します。 これは、 *Microsoft Visual Studio 10.0 \ Common7\IDE ディレクトリ* にあります。
 
 9. WCF テストクライアントで、[ **ファイル** ] メニューをクリックし、[ **サービスの追加**] を選択します。 テキスト ボックスにローカル サービスのアドレスを貼り付けます。 [**OK**] をクリックしてダイアログ ボックスを閉じます。
 
@@ -48,7 +49,7 @@ ms.locfileid: "90559351"
 
 ## <a name="uninstall-the-sample"></a>サンプルをアンインストールする
 
-1. サンプル*ディレクトリ (-*----------/) で、スクリプトを実行します。
+1. サンプル *ディレクトリ (-*----------/) で、スクリプトを実行します。
 
     > [!NOTE]
     > Trackingcleanup.cmd は、ローカル コンピューターの SQL Express 内にあるデータベースを削除しようとします。 別の SQL Server インスタンスを使用している場合は、Trackingcleanup.cmd を編集します。

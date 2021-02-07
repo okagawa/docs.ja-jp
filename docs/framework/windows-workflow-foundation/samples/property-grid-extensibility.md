@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「プロパティグリッド機能拡張」を参照してください。
 title: プロパティグリッドの拡張性-WF サンプル
 ms.date: 03/30/2017
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
-ms.openlocfilehash: 130d8702795bccf0d5f28b5c0940bd7c25be3556
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 784705146974ffca5cd2e6c21dba722598544771
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715601"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741810"
 ---
 # <a name="property-grid-extensibility"></a>プロパティグリッドの機能拡張
 
 開発者は、デザイナー内で特定のアクティビティを選択したときに表示されるプロパティ グリッドをカスタマイズできます。 これにより、高度な編集操作の作成が可能になります。 このサンプルでは、その方法を示します。
 
-## <a name="demonstrates"></a>例
+## <a name="demonstrates"></a>対象
 
 ワークフロー デザイナーのプロパティ グリッドの拡張。
 
@@ -22,7 +23,7 @@ ms.locfileid: "74715601"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`
 
@@ -36,7 +37,7 @@ ms.locfileid: "74715601"
 
 - <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor> から派生する型を作成します。
 
-- コンストラクターでは、<xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> 値は Windows Presentation Foundation (WPF) データテンプレートを使用して設定されます。 これは XAML テンプレートにバインドできますが、このサンプルではコードを使用してデータ バインディングを初期化します。
+- コンストラクターで <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> は、値は Windows Presentation Foundation (WPF) データテンプレートを使用して設定されます。 これは XAML テンプレートにバインドできますが、このサンプルではコードを使用してデータ バインディングを初期化します。
 
 - プロパティ グリッドに表示される項目の <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> のデータ コンテキストは、データ テンプレートに含まれています。 次のコード (CustomInlineEditor.cs のコード) で、このコンテキストが `Value` プロパティにバインドされていることに注意してください。
 
@@ -69,7 +70,7 @@ ms.locfileid: "74715601"
 
 1. <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor> から派生する型を作成します。
 
-2. WPF データテンプレートを使用して、コンストラクターの <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> 値を設定します。 これは XAML で作成できますが、このサンプルではコードで作成します。
+2. WPF データテンプレートを使用してコンストラクターの値を設定し <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> ます。 これは XAML で作成できますが、このサンプルではコードで作成します。
 
 3. プロパティ グリッドに表示される項目の <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> のデータ コンテキストは、データ テンプレートに含まれています。 次のコードで、これが `Value` プロパティにバインドされています。 FilePickerEditor.cs では、ダイアログを起動するボタンを指定するための <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton> を含めることも重要です。
 
@@ -123,15 +124,15 @@ ms.locfileid: "74715601"
 
 1. ソリューションをビルドし、Workflow1.xaml を開きます。
 
-2. ツールボックスからデザイナーキャンバスに**SimpleCodeActivity**をドラッグします。
+2. ツールボックスからデザイナーキャンバスに **SimpleCodeActivity** をドラッグします。
 
-3. **SimpleCodeActivity**をクリックし、[プロパティ] グリッドを開きます。スライダーコントロールとファイルの選択コントロールが表示されます。
+3. **SimpleCodeActivity** をクリックし、[プロパティ] グリッドを開きます。スライダーコントロールとファイルの選択コントロールが表示されます。
 
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`

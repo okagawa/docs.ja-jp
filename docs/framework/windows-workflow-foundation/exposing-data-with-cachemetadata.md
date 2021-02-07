@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: CacheMetadata を使用したデータの公開'
 title: CacheMetadata を使用したデータの公開
 ms.date: 03/30/2017
 ms.assetid: 34832f23-e93b-40e6-a80b-606a855a00d9
-ms.openlocfilehash: a044c896e56541ee954fc33853376eb8293c6ede
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac4623881ebd76270f773a3b7acfe205ad365118
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945705"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742343"
 ---
 # <a name="exposing-data-with-cachemetadata"></a>CacheMetadata を使用したデータの公開
 
@@ -17,19 +18,19 @@ ms.locfileid: "61945705"
 
 <xref:System.Activities.NativeActivity.CacheMetadata%2A> から派生したアクティビティの <xref:System.Activities.NativeActivity> の既定の実装は、次のメソッド型を以下の方法で処理します。
 
-- <xref:System.Activities.InArgument%601>、 <xref:System.Activities.OutArgument%601>、または<xref:System.Activities.InOutArgument%601>(ジェネリック引数)。これらの引数では、名前を引数としてランタイムに公開され、公開されているプロパティ名と型、引数の方向、およびいくつかの検証データに入力します。
+- <xref:System.Activities.InArgument%601>、<xref:System.Activities.OutArgument%601>、または <xref:System.Activities.InOutArgument%601> (ジェネリック引数): これらの引数は公開されたプロパティと同じ名前、データ型、引数の方向、および検証データで引数としてランタイムに公開されます。
 
-- <xref:System.Activities.Variable> またはそのサブクラス:これらのメンバーは、パブリック変数としてランタイムに公開されます。
+- <xref:System.Activities.Variable> またはそのサブクラス: これらのメンバーはパブリック変数としてランタイムに公開されます。
 
-- <xref:System.Activities.Activity> またはそのサブクラス:これらのメンバーは、パブリック子アクティビティとしてランタイムに公開されます。 呼び出すことで、既定の動作を明示的に実装できます<xref:System.Activities.ActivityMetadata.AddImportedChild%2A>、子アクティビティに渡します。
+- <xref:System.Activities.Activity> またはそのサブクラス: これらのメンバーはパブリック子アクティビティとしてランタイムに公開されます。 既定の動作は、を呼び出して子アクティビティを渡すことによって、明示的に実装でき <xref:System.Activities.ActivityMetadata.AddImportedChild%2A> ます。
 
-- <xref:System.Activities.ActivityDelegate> またはそのサブクラス:これらのメンバーは、パブリック デリゲートとしてランタイムに公開されます。
+- <xref:System.Activities.ActivityDelegate> またはそのサブクラス: これらのメンバーはパブリック デリゲートとしてランタイムに公開されます。
 
-- <xref:System.Collections.ICollection> 型の<xref:System.Activities.Variable>:コレクション内のすべての要素は、パブリック変数としてランタイムに公開されます。
+- <xref:System.Activities.Variable> 型の <xref:System.Collections.ICollection>: コレクション内のすべての要素がパブリック変数としてランタイムに公開されます。
 
-- <xref:System.Collections.ICollection> 型の<xref:System.Activities.Activity>:コレクション内のすべての要素は、パブリック子としてランタイムに公開されます。
+- <xref:System.Collections.ICollection> 型の <xref:System.Activities.Activity>: コレクション内のすべての要素がパブリック子としてランタイムに公開されます。
 
-- <xref:System.Collections.ICollection> 型の<xref:System.Activities.ActivityDelegate>:コレクション内のすべての要素は、パブリック デリゲートとしてランタイムに公開されます。
+- <xref:System.Activities.ActivityDelegate> 型の <xref:System.Collections.ICollection>: コレクション内のすべての要素がパブリック デリゲートとしてランタイムに公開されます。
 
 <xref:System.Activities.Activity.CacheMetadata%2A>、<xref:System.Activities.Activity>、および <xref:System.Workflow.Activities.CodeActivity> から派生したアクティビティの <xref:System.Activities.AsyncCodeActivity> も次の相違点を除いて前述と同様に機能します。
 

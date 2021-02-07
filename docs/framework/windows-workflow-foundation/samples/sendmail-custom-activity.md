@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: SendMail カスタムアクティビティ'
 title: SendMail カスタム アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: f518beebe336080853e4dec3bca6f8539bbec304
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 853e28d26c41338670d377593d5a3536b011d112
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96267591"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741758"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail カスタム アクティビティ
 
@@ -17,22 +18,22 @@ ms.locfileid: "96267591"
   
 |名前|Type|説明|  
 |-|-|-|  
-|Host|文字列型|SMTP サーバー ホストのアドレス。|  
-|Port|文字列型|ホストの SMTP サービスのポート。|  
+|Host|String|SMTP サーバー ホストのアドレス。|  
+|ポート|String|ホストの SMTP サービスのポート。|  
 |EnableSsl|[bool]|<xref:System.Net.Mail.SmtpClient> が、接続を暗号化するために SSL (Secure Sockets Layer) を使用するかどうかを指定します。|  
 |UserName|文字列型|差出人の <xref:System.Net.Mail.SmtpClient.Credentials%2A> プロパティを認証する資格情報を設定するユーザー名。|  
-|パスワード|文字列型|差出人の <xref:System.Net.Mail.SmtpClient.Credentials%2A> プロパティを認証する資格情報を設定するパスワード。|  
+|Password|String|差出人の <xref:System.Net.Mail.SmtpClient.Credentials%2A> プロパティを認証する資格情報を設定するパスワード。|  
 |サブジェクト|<xref:System.Activities.InArgument%601>\<string>|メッセージの件名。|  
 |本文|<xref:System.Activities.InArgument%601>\<string>|メッセージの本文。|  
 |[Attachments]|<xref:System.Activities.InArgument%601>\<string>|この電子メールメッセージに添付されたデータを格納するために使用される添付ファイルのコレクションです。|  
-|ソース|<xref:System.Net.Mail.MailAddress>|この電子メールメッセージの差出人アドレス。|  
+|差出人|<xref:System.Net.Mail.MailAddress>|この電子メールメッセージの差出人アドレス。|  
 |終了|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|この電子メールメッセージの受信者を含むアドレスコレクション。|  
 |CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|この電子メールメッセージのカーボンコピー (CC) 受信者を格納するアドレスのコレクション。|  
 |BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|この電子メールメッセージの BCC (ブラインドカーボンコピー) 受信者を含むアドレスコレクション。|  
 |トークン|<xref:System.Activities.InArgument%601><IDictionary\<string, string>>|本文で置換するトークン。 この機能を使用すると、本文にいくつかの値を指定した後、このプロパティを使用して提供されるトークンで置換できます。|  
-|BodyTemplateFilePath|文字列型|本文のテンプレートのパス。 `SendMail` アクティビティは、このファイルの内容をその body プロパティにコピーします。<br /><br /> テンプレートは、tokens プロパティの内容によって置き換えられるトークンを含めることができます。|  
+|BodyTemplateFilePath|String|本文のテンプレートのパス。 `SendMail` アクティビティは、このファイルの内容をその body プロパティにコピーします。<br /><br /> テンプレートは、tokens プロパティの内容によって置き換えられるトークンを含めることができます。|  
 |TestMailTo|<xref:System.Net.Mail.MailAddress>|このプロパティを設定すると、すべての電子メールが、その中に指定されたアドレスに送信されます。<br /><br /> このプロパティは、ワークフローをテストするときに使用するためのものです。 たとえば、すべての電子メールが実際の受信者に送信されることなく送信されるようにする場合です。|  
-|TestDropPath|文字列型|このプロパティが設定されている場合、すべての電子メールも指定したファイルに保存されます。<br /><br /> このプロパティは、ワークフローをテストまたはデバッグするときに使用することを目的としており、送信メールの形式と内容が適切であることを確認します。|  
+|TestDropPath|String|このプロパティが設定されている場合、すべての電子メールも指定したファイルに保存されます。<br /><br /> このプロパティは、ワークフローをテストまたはデバッグするときに使用することを目的としており、送信メールの形式と内容が適切であることを確認します。|  
   
 ## <a name="solution-contents"></a>ソリューションのコンテンツ  
 

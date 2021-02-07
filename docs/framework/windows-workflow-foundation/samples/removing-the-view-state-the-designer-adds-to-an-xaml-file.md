@@ -1,19 +1,20 @@
 ---
+description: '詳細情報: デザイナーによって XAML ファイルに追加されるビューステートの削除'
 title: デザイナーによって XAML ファイルに追加されるビューステートを削除する-WF
 ms.date: 03/30/2017
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
-ms.openlocfilehash: f431275140e821aa5ec4d2235322f06be87d5ee2
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: e6be1e8e4f754085b98f912923ad67cb12893910
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715621"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741797"
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>デザイナーによって XAML ファイルに追加されるビューステートを削除する
 
-このサンプルでは、<xref:System.Xaml.XamlWriter> から派生するクラスを作成する方法を示し、XAML ファイルからビュー ステートを削除します。 Windows ワークフローデザイナーは、ビューステートと呼ばれる情報を XAML ドキュメントに書き込みます。 ビュー ステートは、ランタイムでは不必要なレイアウト配置などの、デザイン時に必要な情報を参照します。 ワークフローデザイナーは、編集時にこの情報を XAML ドキュメントに挿入します。 ワークフローデザイナーは、`mc:Ignorable` 属性を使用してビューステートを XAML ファイルに書き込みます。このため、ランタイムが XAML ファイルを読み込むときに、この情報は読み込まれません。 このサンプルでは、XAML ノードの処理中にそのビューステート情報を削除するクラスを作成する方法を示します。
+このサンプルでは、<xref:System.Xaml.XamlWriter> から派生するクラスを作成する方法を示し、XAML ファイルからビュー ステートを削除します。 Windows ワークフローデザイナーは、ビューステートと呼ばれる情報を XAML ドキュメントに書き込みます。 ビュー ステートは、ランタイムでは不必要なレイアウト配置などの、デザイン時に必要な情報を参照します。 ワークフローデザイナーは、編集時にこの情報を XAML ドキュメントに挿入します。 ワークフローデザイナーは、属性を使用してビューステートを XAML ファイルに書き込み `mc:Ignorable` ます。そのため、ランタイムが xaml ファイルを読み込むときに、この情報は読み込まれません。 このサンプルでは、XAML ノードの処理中にそのビューステート情報を削除するクラスを作成する方法を示します。
 
-## <a name="discussion"></a>説明
+## <a name="discussion"></a>ディスカッション
 
 このサンプルでは、カスタム ライターを作成する方法を示します。
 
@@ -99,7 +100,7 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
    ViewStateCleaningWriter.exe [input file] [output file]
    ```
 
-   これにより、すべてのビューステート情報が削除された \の [ファイル名] に XAML ファイルが出力されます。
+   これにより \[ 、すべてのビューステート情報が削除された状態で、XAML ファイルがに出力されます。
 
 > [!NOTE]
 > <xref:System.Activities.Statements.Sequence> ワークフローでは、多数の仮想化のヒントが削除されます。 その結果、デザイナーは次回の読み込み時にレイアウトを再計算します。 このサンプルを <xref:System.Activities.Statements.Flowchart> に対して使用すると、すべての配置情報および線のルーティング情報が削除され、後続のデザイナーへの読み込み時にすべてのアクティビティが画面の左側に積み上げられます。
@@ -121,6 +122,6 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ViewStateCleaningWriter`
