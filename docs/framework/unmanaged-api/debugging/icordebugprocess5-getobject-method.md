@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugProcess5:: GetObject メソッド'
 title: ICorDebugProcess5::GetObject メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c8111502-5a20-447f-9dc2-76e8acd7ed5a
 topic_type:
 - apiref
-ms.openlocfilehash: ff2913399e1dbeb33bbfb697058db3caf2a8d1fb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4e295e1afc19cc5b9ca763b04b05097d48f0302c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713107"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746361"
 ---
 # <a name="icordebugprocess5getobject-method"></a>ICorDebugProcess5::GetObject メソッド
 
@@ -43,7 +44,7 @@ HRESULT GetObject(
  `ppObject`  
  入出力"の値" オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `addr`が有効なマネージオブジェクトを指していない場合、 `GetObject` メソッドはを返し `E_FAIL` ます。  
   

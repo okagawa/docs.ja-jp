@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataImport:: GetCustomAttributeByName メソッド'
 title: IMetaDataImport::GetCustomAttributeByName メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 909aa530-2e3b-4d0a-a38a-a2750e535d7d
 topic_type:
 - apiref
-ms.openlocfilehash: 3eb894aaf8ccdc99ea23ddf946f39f3ec71773d1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1a9ca5f7fe13243c01c5dbcb9f49955e9ce05c26
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711209"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99745490"
 ---
 # <a name="imetadataimportgetcustomattributebyname-method"></a>IMetaDataImport::GetCustomAttributeByName メソッド
 
@@ -51,7 +52,7 @@ HRESULT GetCustomAttributeByName (
  `pcbData`  
  入出力* で返されるデータのサイズ (バイト単位) `ppData` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  同じ所有者に対して複数のカスタム属性を定義することは有効です。同じ名前を持つ場合もあります。 ただし、は `GetCustomAttributeByName` 1 つのインスタンスのみを返します。 ( `GetCustomAttributeByName` 最初に見つかったインスタンスを返します)。カスタム属性のすべてのインスタンスを検索するには、 [IMetaDataImport:: EnumCustomAttributes](imetadataimport-enumcustomattributes-method.md) メソッドを呼び出します。  
   

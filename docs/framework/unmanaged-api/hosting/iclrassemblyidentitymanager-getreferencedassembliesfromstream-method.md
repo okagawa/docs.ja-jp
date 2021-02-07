@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRAssemblyIdentityManager:: GetReferencedAssembliesFromStream メソッド'
 title: ICLRAssemblyIdentityManager::GetReferencedAssembliesFromStream メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe9849c1-c3fc-477b-a31f-e8619f5516f5
 topic_type:
 - apiref
-ms.openlocfilehash: a5e71d6ca90c8d0aa489176eb5a90bfe6896b1cb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9173587125e7b528e203dcb7e6a19d3e3f2fb990
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679322"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746114"
 ---
 # <a name="iclrassemblyidentitymanagergetreferencedassembliesfromstream-method"></a>ICLRAssemblyIdentityManager::GetReferencedAssembliesFromStream メソッド
 
@@ -62,7 +63,7 @@ HRESULT GetReferencedAssembliesFromStream (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返す場合、そのプロセス内で CLR は使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  呼び出し元は、返された一覧から一連の既知のアセンブリ参照を除外することを選択できます。 このセットはによって定義され `pExcludeAssembliesList` ます。  
   

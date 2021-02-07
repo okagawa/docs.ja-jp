@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ICLRDebugManager:: BeginConnection メソッド'
 title: ICLRDebugManager::BeginConnection メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bdd98146-ff4d-4150-a264-a4c1a32d31f3
 topic_type:
 - apiref
-ms.openlocfilehash: c5b41e4209141c0396ec8a1da766b80043be8807
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9b4ee64ad96bddfd5d7d650b657c6691b27d8c69
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726159"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746140"
 ---
 # <a name="iclrdebugmanagerbeginconnection-method"></a>ICLRDebugManager::BeginConnection メソッド
 
@@ -56,7 +57,7 @@ HRESULT BeginConnection (
 |E_INVALIDARG|`dwConnectionId` が0であるか、 `BeginConnection` 既にこの値を使用して呼び出されたか `dwConnectionId` 、または `szConnectionName` が null でした。|  
 |E_OUTOFMEMORY|この接続に関連付けられたタスクの一覧を保持するために十分なメモリを割り当てることができません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  [ICLRDebugManager](iclrdebugmanager-interface.md) には `BeginConnection` 、、 [Setconnectiontasks](iclrdebugmanager-setconnectiontasks-method.md)、 [endconnection](iclrdebugmanager-endconnection-method.md)という3つのメソッドが用意されており、タスクリストを識別子と表示名に関連付けることができます。  
   

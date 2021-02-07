@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRGCManager:: Collect メソッド'
 title: ICLRGCManager::Collect メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c6cbbea-c27c-4695-bda3-17c1910d8ddb
 topic_type:
 - apiref
-ms.openlocfilehash: 90ce4e888ddb3a10dd0dfd7e68463311db86742f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7c2649f7ce3472c504c1e48a203cf89d4b8508e3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677766"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746062"
 ---
 # <a name="iclrgcmanagercollect-method"></a>ICLRGCManager::Collect メソッド
 
@@ -50,7 +51,7 @@ HRESULT Collect (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  メソッドは、 `Collect` 現在の状態に関係なく、CLR のガベージコレクターがコレクションを実行するように強制します。  
   

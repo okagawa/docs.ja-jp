@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback:: ModuleUnloadStarted メソッド'
 title: ICorProfilerCallback::ModuleUnloadStarted メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2debcaab-6005-4245-afdb-4268bb7e74bd
 topic_type:
 - apiref
-ms.openlocfilehash: 12d5f7e073337af6034b8f313a2e0161620a65ea
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3d10654e23481fe6f8956129a0aef7ed4206bba9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720959"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99745230"
 ---
 # <a name="icorprofilercallbackmoduleunloadstarted-method"></a>ICorProfilerCallback::ModuleUnloadStarted メソッド
 
@@ -38,7 +39,7 @@ HRESULT ModuleUnloadStarted(
  `moduleId`  
  からアンロードされるモジュールの ID。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  の値は、 `moduleId` メソッドから制御が戻った後の情報要求に対して有効ではありません `ModuleUnloadStarted` 。これは、このモジュールに関する情報を取得する最後の機会です。  
   

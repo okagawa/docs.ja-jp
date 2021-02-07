@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback:: ModuleLoadStarted メソッド'
 title: ICorProfilerCallback::ModuleLoadStarted メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9cd2fe75-408a-400f-a6b1-9979624a2fe2
 topic_type:
 - apiref
-ms.openlocfilehash: 6fbd009b5785c5dc78df81e4411fbdf8e8eadf71
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e8d15bece7baf82f69162663da00d331c7904837
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730334"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99745269"
 ---
 # <a name="icorprofilercallbackmoduleloadstarted-method"></a>ICorProfilerCallback::ModuleLoadStarted メソッド
 
@@ -38,7 +39,7 @@ HRESULT ModuleLoadStarted(
  `moduleId`  
  から読み込まれているモジュールの ID。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  の値は、 `moduleId` [ICorProfilerCallback:: ModuleLoadFinished](icorprofilercallback-moduleloadfinished-method.md) メソッドが呼び出されるまで、情報要求に対して無効です。  
   

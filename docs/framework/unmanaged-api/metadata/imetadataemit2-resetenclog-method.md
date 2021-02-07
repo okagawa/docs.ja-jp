@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataEmit2:: ResetENCLog メソッド'
 title: IMetaDataEmit2::ResetENCLog メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44b9fd76-a022-4e9a-aea3-dec5411a9c22
 topic_type:
 - apiref
-ms.openlocfilehash: 91f29c0f815221e2318a26e528a9fd3f7f80be31
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 77e7aff99cefa4f8f7dc9b1c4a63f6a9347901df
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690604"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99745620"
 ---
 # <a name="imetadataemit2resetenclog-method"></a>IMetaDataEmit2::ResetENCLog メソッド
 

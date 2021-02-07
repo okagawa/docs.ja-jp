@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataImport:: FindMemberRef メソッド'
 title: IMetaDataImport::FindMemberRef メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1ccda329-d752-4d89-abe8-511af3c3f4c9
 topic_type:
 - apiref
-ms.openlocfilehash: 0ba25c981cc389baf06ecca0db543d48ac60317b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 301d4dc88b36ca2284ca3b8d70444820befdc0aa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711404"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99745581"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>IMetaDataImport::FindMemberRef メソッド
 
@@ -55,7 +56,7 @@ HRESULT FindMemberRef (
  `pmr`  
  入出力一致する MemberRef トークンへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  メンバーは、外側のクラスまたはインターフェイス ( `td` )、その名前 ( `szName` )、および必要に応じてシグネチャ () を使用して指定し `pvSigBlob` ます。  
   

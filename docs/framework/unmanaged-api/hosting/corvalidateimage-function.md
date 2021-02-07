@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: _CorValidateImage 関数'
 title: _CorValidateImage 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-ms.openlocfilehash: 2d49a40610bd0e1a7629594e245bde9eacfcc06d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f3d91c2d7e05786f7bfb0ab94b64e2cfb84a21d3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687978"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746244"
 ---
 # <a name="_corvalidateimage-function"></a>_CorValidateImage 関数
 
@@ -51,7 +52,7 @@ STDAPI _CorValidateImage (
 |`STATUS_INVALID_IMAGE_FORMAT`|イメージが無効です。 この値には HRESULT 0xC000007BL があります。|  
 |`STATUS_SUCCESS`|イメージは有効です。 この値には、HRESULT 0x00000000L が含まれています。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  Windows XP 以降のバージョンでは、オペレーティングシステムローダーは、Common Object File Format (COFF) ヘッダーの COM 記述子ディレクトリビットを調べて、マネージモジュールをチェックします。 セットビットはマネージモジュールを示します。 ローダーがマネージモジュールを検出すると、MsCorEE.dll を読み込み、 `_CorValidateImage` を呼び出します。これにより、次のアクションが実行されます。  
   

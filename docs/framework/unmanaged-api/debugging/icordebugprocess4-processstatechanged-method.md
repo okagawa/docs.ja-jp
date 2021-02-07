@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugProcess4::P rocessStateChanged メソッド'
 title: ICorDebugProcess4::P rocessStateChanged メソッド
 ms.date: 02/07/2019
 api_name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 910c411d2c63ce2c6cf262e28e08546657dc2a4c
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 35a76b3c6dd9b37d3f06f23bc2ffea82f125a29e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213570"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746471"
 ---
 # <a name="icordebugprocess4processstatechanged-method"></a>ICorDebugProcess4::P rocessStateChanged メソッド
 
@@ -37,13 +38,13 @@ HRESULT ProcessStateChanged(
 ## <a name="parameters"></a>パラメーター
 
  `eChange`\
-からプロセスの実行状態の変更を記述する[CorDebugStateChange 列挙体](cordebugstatechange-enumeration.md)のメンバー。
+からプロセスの実行状態の変更を記述する [CorDebugStateChange 列挙体](cordebugstatechange-enumeration.md) のメンバー。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 指定されたメソッドはインターフェイスの一部で `ICorDebugProcess4` あり、仮想メソッドテーブルの4番目のスロットに対応します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。
 

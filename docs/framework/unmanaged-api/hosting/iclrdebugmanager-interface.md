@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICLRDebugManager インターフェイス」を参照してください。
 title: ICLRDebugManager インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e835062c-c7d6-4945-8a44-2de7ebf3928e
 topic_type:
 - apiref
-ms.openlocfilehash: 3836bd349423670a19a19dda67eba75419507a29
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4306e38b7c868561276d5b00e7730b6fcee46fd7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724289"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746023"
 ---
 # <a name="iclrdebugmanager-interface"></a>ICLRDebugManager インターフェイス
 
@@ -37,7 +38,7 @@ ms.locfileid: "95724289"
 |[SetDacl メソッド](iclrdebugmanager-setdacl-method.md)|このメソッドは実装されていません。|  
 |[SetSymbolReadingPolicy メソッド](iclrdebugmanager-setsymbolreadingpolicy-method.md)|プログラムデータベース (PDB) ファイルを読み取るためのポリシーを設定します。 ポリシーは、行番号とファイルに関する情報が呼び出し履歴に含まれるかどうかを決定します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  デバッグシナリオでは、ホストは、独自のプログラミングロジックに従ってタスクをグループ化することが必要になる場合があります。 たとえば、グループ化により、開発者は、プロセスで実行されているすべてのタスクを表示するのではなく、開発者の Api に必要なタスクのみを参照できます。 `ICLRDebugManager` ホストがこの種のグループ化を実装できるようにします。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback:: ModuleUnloadFinished メソッド'
 title: ICorProfilerCallback::ModuleUnloadFinished メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 185e3327-9f9c-44bc-8a5c-febea9a6bb5b
 topic_type:
 - apiref
-ms.openlocfilehash: 514c20455b95ecf74ffaecd349982fd8f8f49816
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 32182beb879813a4e60f69494bd93799c0f66e1d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723234"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99745256"
 ---
 # <a name="icorprofilercallbackmoduleunloadfinished-method"></a>ICorProfilerCallback::ModuleUnloadFinished メソッド
 
@@ -42,7 +43,7 @@ HRESULT ModuleUnloadFinished(
  `hrStatus`  
  からモジュールが正常にアンロードされたかどうかを示す HRESULT。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `moduleId` [ICorProfilerCallback:: ModuleUnloadStarted](icorprofilercallback-moduleunloadstarted-method.md)メソッドがを返すと、の値は情報要求に対して有効ではありません。  
   
