@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ISymUnmanagedReaderSymbolSearchInfo:: Getシンボル Searchinfocount メソッド'
 title: ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4068b6ec-525f-4446-8818-0296178cbd19
 topic_type:
 - apiref
-ms.openlocfilehash: 5883b35bb3f1fec24ec108c9839501f0e81881fc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b8bfa61397850c3f960fe30c0136e0a8b074cf1e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95708869"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763593"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a>ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount メソッド
 

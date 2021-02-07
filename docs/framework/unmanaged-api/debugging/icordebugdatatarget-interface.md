@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: いいね。'
 title: ICorDebugDataTarget インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: df5f05be-bed7-4f3c-bc89-dbb435d79a0b
 topic_type:
 - apiref
-ms.openlocfilehash: 14f0b247ded363dedce193886aab50538db3e6a6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 34121b56080a8adc17543ce5716962c17c1a156d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683681"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764425"
 ---
 # <a name="icordebugdatatarget-interface"></a>ICorDebugDataTarget インターフェイス
 
@@ -33,7 +34,7 @@ ms.locfileid: "95683681"
 |[ReadVirtual メソッド](icordebugdatatarget-readvirtual-method.md)|指定したアドレスを開始位置として連続したメモリのブロックを取得し、指定したバッファー内でそれを返します。|  
 |[GetThreadContext メソッド](icordebugdatatarget-getthreadcontext-method.md)|指定されたスレッドの現在のスレッドコンテキストを要求します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ICorDebugDataTarget` およびそのメソッドの特性は次のとおりです。  
   

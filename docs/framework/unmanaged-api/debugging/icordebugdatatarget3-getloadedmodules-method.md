@@ -1,13 +1,14 @@
 ---
+description: '詳細について: ICorDebugDataTarget3:: Getロードモジュールメソッド'
 title: ICorDebugDataTarget3::GetLoadedModules メソッド
 ms.date: 03/30/2017
 ms.assetid: 9a48c05b-1949-416e-933c-52549b6fcf5e
-ms.openlocfilehash: efbada02b7a24e0a7ed613b86b8a4a1a0b5b051a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ea6350155fd79b52a37133cad95f624635433a3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713751"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764347"
 ---
 # <a name="icordebugdatatarget3getloadedmodules-method"></a>ICorDebugDataTarget3::GetLoadedModules メソッド
 
@@ -34,7 +35,7 @@ HRESULT GetLoadedModules(
  `pLoadedModules`  
  入出力読み込まれたモジュールに関する情報を提供する [ICorDebugLoadedModule](icordebugloadedmodule-interface.md) オブジェクトの配列へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  

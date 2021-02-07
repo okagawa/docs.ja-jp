@@ -1,13 +1,14 @@
 ---
+description: '詳細については、次を参照してください: ICorDebugDataTarget2:: Getシンボル Providerforimage メソッド'
 title: ICorDebugDataTarget2::GetSymbolProviderForImage メソッド
 ms.date: 03/30/2017
 ms.assetid: b7c0a2f0-e904-43b3-98e1-d669e8a589e8
-ms.openlocfilehash: 5a5ccaeb36dcda82c0189026e19c6a7c023f3e1c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7b4493b6c0959dc39d955d7691a22ac6905034b1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713770"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764386"
 ---
 # <a name="icordebugdatatarget2getsymbolproviderforimage-method"></a>ICorDebugDataTarget2::GetSymbolProviderForImage メソッド
 
@@ -30,7 +31,7 @@ HRESULT GetSymbolProviderForImage(
  `ppSymProvider`  
  入出力ツール [プロバイダー](icordebugsymbolprovider-interface.md) オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  

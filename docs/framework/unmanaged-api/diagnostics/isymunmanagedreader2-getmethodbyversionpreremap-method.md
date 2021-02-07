@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ISymUnmanagedReader2:: GetMethodByVersionPreRemap メソッド'
 title: ISymUnmanagedReader2::GetMethodByVersionPreRemap メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0d144ed4-bdb0-4cac-960c-cb90f4dca173
 topic_type:
 - apiref
-ms.openlocfilehash: 5484242562deaf463b7435ad4e54735a7abee45e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b827821f529b9917c6bbb3452f0c3fe3283f1ee9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730488"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763723"
 ---
 # <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a>ISymUnmanagedReader2::GetMethodByVersionPreRemap メソッド
 

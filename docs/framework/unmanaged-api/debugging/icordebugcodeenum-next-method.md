@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次のメソッドを参照してください:、次のメソッド
 title: ICorDebugCodeEnum::Next メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 644ece86-384d-4c63-9fba-52c789616ff7
 topic_type:
 - apiref
-ms.openlocfilehash: 04c36d1e5f0e79b71963683a3b613a9ad7392bcf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 51d46718891ce3df537c675175eacc4e33b92f79
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125525"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764750"
 ---
 # <a name="icordebugcodeenumnext-method"></a>ICorDebugCodeEnum::Next メソッド
 
@@ -40,20 +41,20 @@ HRESULT Next (
 ## <a name="parameters"></a>パラメーター
 
 `celt`  
-から取得する `ICorDebugCode` インスタンスの数。
+から `ICorDebugCode` 取得するインスタンスの数。
 
 `values`  
-入出力ポインターの配列。それぞれが `ICorDebugCode` オブジェクトを指します。
+入出力ポインターの配列。それぞれがオブジェクトを指し `ICorDebugCode` ます。
 
 `pceltFetched`  
-入出力実際に返された `ICorDebugCode` インスタンスの数へのポインター。 `celt` が1の場合、この値は null になります。
+入出力実際に返されたインスタンスの数へのポインター `ICorDebugCode` 。 が1の場合、この値は null `celt` になります。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
-**:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。
+**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。
 
 **ヘッダー:** CorDebug.idl、CorDebug.h
 
 **ライブラリ:** CorGuids.lib
 
-**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

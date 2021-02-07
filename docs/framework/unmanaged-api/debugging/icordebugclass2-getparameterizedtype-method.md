@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugClass2:: GetParameterizedType メソッド'
 title: ICorDebugClass2::GetParameterizedType メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 94b591c4-9302-4af2-a510-089496afb036
 topic_type:
 - apiref
-ms.openlocfilehash: 139181975d16c2cdacec10ed646cfc2b8fb31a20
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4810e10e88af9256a466579ee607c0ef314d984b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717995"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765025"
 ---
 # <a name="icordebugclass2getparameterizedtype-method"></a>ICorDebugClass2::GetParameterizedType メソッド
 
@@ -51,7 +52,7 @@ HRESULT GetParameterizedType (
  `ppType`  
  入出力型宣言を表すオブジェクトのアドレスへのポインター `ICorDebugType` 。 このオブジェクトは、 <xref:System.Type> マネージコード内のオブジェクトに相当します。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  クラスが非ジェネリックの場合、つまり、型パラメーターがない場合は、 `GetParameterizedType` クラスに対応するランタイム型オブジェクトを取得します。 クラス `elementType` が値型の場合は、パラメーターをクラスの正しい要素型に設定する必要があります。それ以外の場合は、ELEMENT_TYPE_CLASS を ELEMENT_TYPE_VALUETYPE ます。  
   

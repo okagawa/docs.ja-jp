@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次の情報を参照してください:: HasQueuedCallbacks メソッド'
 title: ICorDebugController::HasQueuedCallbacks メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0d6a1cd9-370b-4462-adbf-e3980e897ea7
 topic_type:
 - apiref
-ms.openlocfilehash: bd623f8bee2feafebe80c0c7513bcfb33d6ad367
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bdc22831b912d3bad565b6abf5c73591d07ffe11
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707907"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764649"
 ---
 # <a name="icordebugcontrollerhasqueuedcallbacks-method"></a>ICorDebugController::HasQueuedCallbacks メソッド
 
@@ -45,7 +46,7 @@ HRESULT HasQueuedCallbacks (
   
  パラメーターに null が指定されている場合 `pThread` 、 `HasQueuedCallbacks` は、 `true` 現在マネージコールバックが任意のスレッドに対してキューに置かれている場合、を返します。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  コールバックは [、次の](icordebugcontroller-continue-method.md) ように表示されるたびに1つずつディスパッチされます。 デバッガーでは、同時に発生する複数のデバッグイベントを報告する場合に、このフラグをチェックできます。  
   

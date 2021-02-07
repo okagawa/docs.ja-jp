@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorDebugCode4 インターフェイス」を参照してください。
 title: ICorDebugCode4 インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3fdf523-274a-449c-920b-9fcb0aed1d97
 topic_type:
 - apiref
-ms.openlocfilehash: 8a373afdf41590ec44a7cbac7360719a12faa82e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1276db5c55c3d98e5ffa379f6126f700d93c1670
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720725"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764724"
 ---
 # <a name="icordebugcode4-interface"></a>ICorDebugCode4 インターフェイス
 
@@ -31,7 +32,7 @@ ms.locfileid: "95720725"
 |------------|-----------------|  
 |[EnumerateVariableHomes メソッド](icordebugcode4-enumeratevariablehomes-method.md)|関数のローカル変数および引数に対する列挙子を取得します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  

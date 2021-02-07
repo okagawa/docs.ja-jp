@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ISymUnmanagedReader:: GetDocument メソッド'
 title: ISymUnmanagedReader::GetDocument メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb203853-6a6d-4027-b9e9-603a7f28b9d3
 topic_type:
 - apiref
-ms.openlocfilehash: 4604d78f66b872a30457c51bf65890caf613c4fa
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7f2f31467cfd00de68737224a2c1af5b1e78efed
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707634"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764100"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>ISymUnmanagedReader::GetDocument メソッド
 

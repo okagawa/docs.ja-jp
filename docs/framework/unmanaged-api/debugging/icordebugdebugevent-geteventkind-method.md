@@ -1,13 +1,14 @@
 ---
+description: 詳細については、次を参照してください
 title: ICorDebugDebugEvent::GetEventKind メソッド
 ms.date: 03/30/2017
 ms.assetid: c37aaceb-c948-46bd-a943-08be4cbb76f4
-ms.openlocfilehash: 7876dc6ec5ecee52b64e54e1c42533f8348e4dc4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9e15eb82195fae8aa3797ea47cb04d0bb407d2ad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713679"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764321"
 ---
 # <a name="icordebugdebugeventgeteventkind-method"></a>ICorDebugDebugEvent::GetEventKind メソッド
 
@@ -26,7 +27,7 @@ HRESULT GetEventKind(
  pDebugEventKind  
  イベントの種類を示す [Cordebugdebugeventkind](cordebugdebugeventkind-enumeration.md) 列挙体メンバーへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `pDebugEventKind` の値に基づいて、`QueryInterface` を呼び出して、追加データを含むより正確なデバッグ イベント インターフェイスを取得できます。  
   

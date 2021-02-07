@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次のページを参照してください: いいね。:: GetPlatform メソッド'
 title: ICorDebugDataTarget::GetPlatform メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9ee96c9d-7a3d-4129-a6cc-7675c7f2dda4
 topic_type:
 - apiref
-ms.openlocfilehash: e8612b23cbfa506fddb2fad712848b285b9ac28e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: dec691238009ad69d2e48d994ac250bfb6641863
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679794"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764529"
 ---
 # <a name="icordebugdatatargetgetplatform-method"></a>ICorDebugDataTarget::GetPlatform メソッド
 
@@ -37,7 +38,7 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
  `pTargetPlatform`  
  入出力ターゲットプラットフォームを記述する [Cordebugplatformenum](cordebugplatform-enumeration.md) 列挙体へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `CorDebugPlatformEnum`列挙型の戻り値は、ポインターのサイズ、アドレス空間のレイアウト、レジスタセット、命令形式、コンテキストレイアウト、呼び出し規約などのターゲットプロセスの詳細を確認するために、 [ICorDebug](icordebug-interface.md)インターフェイスによって使用されます。  
   
