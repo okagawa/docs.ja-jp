@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: ストアの機能拡張'
 title: ストア拡張
 ms.date: 03/30/2017
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-ms.openlocfilehash: 46c1ea40925a5c79180171da9a705d7e6b7c8b89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f04c466224aacd1c8f755e7aa60b18846d0c7180
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641607"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755227"
 ---
 # <a name="store-extensibility"></a>ストア拡張
 
@@ -36,9 +37,9 @@ ms.locfileid: "61641607"
     application.Extensions.Add(documentStatusExtension);
     ```
 
-     カスタム永続参加要素を追加する方法の詳細については、次を参照してください。、[永続参加要素](persistence-participants.md)サンプル。
+     カスタムの永続参加要素を追加する方法の詳細については、 [永続参加](persistence-participants.md) 要素のサンプルを参照してください。
 
-3. DP アプリケーションでカスタム アクティビティのさまざまな状態フィールドの設定、 **Execute**メソッド。
+3. DP アプリケーションのカスタムアクティビティは、 **Execute** メソッドにさまざまな状態フィールドを設定します。
 
     ```csharp
     public override void Execute(CodeActivityContext context)
@@ -52,7 +53,7 @@ ms.locfileid: "61641607"
     }
     ```
 
-4. ワークフロー インスタンスが永続性ポイントに達すると、 **CollectValues**のメソッド、 **DocumentStatusExtension**永続参加要素は、永続性データにこれらのプロパティを保存しますコレクションです。
+4. ワークフローインスタンスが永続化ポイントに到達すると、 **Documentstatusextension** 永続化参加要素の **collectvalues** メソッドによって、これらのプロパティが永続性データコレクションに保存されます。
 
     ```csharp
     class DocumentStatusExtension : PersistenceParticipant
@@ -74,9 +75,9 @@ ms.locfileid: "61641607"
     ```
 
     > [!NOTE]
-    > これらすべてのプロパティに渡される**SqlWorkflowInstanceStore**を介して、永続化フレームワークによって、 **SaveWorkflowCommand.InstanceData**コレクション。
+    > これらのプロパティはすべて、 **SaveWorkflowCommand** コレクションを通じて永続化フレームワークによって **SqlWorkflowInstanceStore** に渡されます。
 
-5. DP アプリケーションは、SQL Workflow Instance Store を初期化しを呼び出す、**昇格**メソッドをこのデータを昇格します。
+5. DP アプリケーションは SQL Workflow Instance Store を初期化し、 **promote** メソッドを呼び出してこのデータを昇格させます。
 
     ```csharp
     SqlWorkflowInstanceStore store = new SqlWorkflowInstanceStore(connectionString);
@@ -92,7 +93,7 @@ ms.locfileid: "61641607"
     store.Promote("DocumentStatus", variantProperties, null);
     ```
 
-    この昇格情報に基づいて**SqlWorkflowInstanceStore**の列のデータのプロパティを配置、 [InstancePromotedProperties](#InstancePromotedProperties)ビュー。
+    このプロモーション情報に基づいて、 **SqlWorkflowInstanceStore** は [InstancePromotedProperties](#InstancePromotedProperties) ビューの列にデータプロパティを配置します。
 
 6. 昇格テーブルのデータのサブセットを照会するために、DP アプリケーションによって昇格ビューの上にカスタマイズされたビューが追加されます。
 
@@ -109,7 +110,7 @@ ms.locfileid: "61641607"
     go
     ```
 
-## <a name="InstancePromotedProperties"></a> [System.Activities.DurableInstancing.InstancePromotedProperties] view
+## <a name="systemactivitiesdurableinstancinginstancepromotedproperties-view"></a><a name="InstancePromotedProperties"></a> [System.activities.durableinstancing.instances. InstancePromotedProperties] ビュー
 
 |列名|列の型|説明|
 |-----------------|-----------------|-----------------|

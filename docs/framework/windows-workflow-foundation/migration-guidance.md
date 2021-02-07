@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 移行ガイダンス'
 title: 移行のガイドライン
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: b9b90aedc06fb4a4564596d61aa0ac2dc4c6143f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 05aede02d7ad615ddeeceab6d71a545db9bcf5ba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733595"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755355"
 ---
 # <a name="migration-guidance"></a>移行のガイドライン
 
