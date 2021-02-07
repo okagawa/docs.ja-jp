@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: いいね。'
 title: ICorDebugFrameEnum インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee3f85d3-044e-46b8-945c-93ebfa5d9e91
 topic_type:
 - apiref
-ms.openlocfilehash: 4277a552d217ad7f601bfe72cae32a1f25dd6be4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 61a83bd960182c28888d3c5459cf43c9bc7f2be3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696233"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692811"
 ---
 # <a name="icordebugframeenum-interface"></a>ICorDebugFrameEnum インターフェイス
 
@@ -29,9 +30,9 @@ ICorDebugEnum メソッドを実装し、テキストボックスの配列を列
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Next メソッド](icordebugframeenum-next-method.md)|現在の位置から開始して、指定した数の `ICorDebugFrame` インスタンスを列挙から取得します。|  
+|[次のメソッド](icordebugframeenum-next-method.md)|現在の位置から開始して、指定した数の `ICorDebugFrame` インスタンスを列挙から取得します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  

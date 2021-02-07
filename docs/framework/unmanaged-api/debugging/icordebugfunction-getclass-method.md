@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: の関数:: GetClass メソッド'
 title: ICorDebugFunction::GetClass メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 27967230-144f-40d3-9e23-961d0241abd9
 topic_type:
 - apiref
-ms.openlocfilehash: 40cb59a2ad0539764702369b13d632eddbab8174
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 09049962082bc51cc47a56b0de591a26c2ef93fc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728161"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692590"
 ---
 # <a name="icordebugfunctiongetclass-method"></a>ICorDebugFunction::GetClass メソッド
 

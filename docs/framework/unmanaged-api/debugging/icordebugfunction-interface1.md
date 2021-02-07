@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: の関数インターフェイス'
 title: ICorDebugFunction インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 783faea9-8083-41c1-b04a-51a81ac4c8f3
 topic_type:
 - apiref
-ms.openlocfilehash: 668b27932ea7a2bdc244e1ac0bb8e6891cbd4d17
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 835625341889e89e15ceb66ca71531cf7b8311c4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726298"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692382"
 ---
 # <a name="icordebugfunction-interface"></a>ICorDebugFunction インターフェイス
 
@@ -38,7 +39,7 @@ ms.locfileid: "95726298"
 |[GetNativeCode メソッド](icordebugfunction-getnativecode-method.md)|この関数のネイティブコードを取得します。|  
 |[GetToken メソッド](icordebugfunction-gettoken-method.md)|この関数のメタデータトークンを取得します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  インターフェイスは、 `ICorDebugFunction` ジェネリック型パラメーターを持つ関数を表していません。 たとえば、インスタンスはを `ICorDebugFunction` 表しますが、では `Func<T>` ありません `Func<string>` 。 [ICorDebugILFrame2:: EnumerateTypeParameters](icordebugilframe2-enumeratetypeparameters-method.md)を呼び出して、ジェネリック型パラメーターを取得します。  
   

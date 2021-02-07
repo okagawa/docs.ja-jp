@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugFunction2:: GetJMCStatus メソッド'
 title: ICorDebugFunction2::GetJMCStatus メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 840a71ed-bf5a-4f5e-8ed6-762222b34493
 topic_type:
 - apiref
-ms.openlocfilehash: 747f165a98dfd1264ea58d61aaa1615c6d71e073
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 42c72256df57b96a52737f4a0e5e90d6ba5d4e0c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726295"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692291"
 ---
 # <a name="icordebugfunction2getjmcstatus-method"></a>ICorDebugFunction2::GetJMCStatus メソッド
 
@@ -39,7 +40,7 @@ HRESULT GetJMCStatus (
  `pbIsJustMyCode`  
  入出力 `true`この関数がユーザーコードとしてマークされている場合は、ブール値へのポインター。それ以外の場合は、値は `false` です。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このによって表される関数を `ICorDebugFunction2` デバッグできない場合、 `pbIsJustMyCode` は常にになり `false` ます。  
   

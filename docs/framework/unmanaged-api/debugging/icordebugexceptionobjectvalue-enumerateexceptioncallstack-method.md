@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「EnumerateExceptionCallStack メソッド」を参照してください。
 title: ICorDebugExceptionObjectValue::EnumerateExceptionCallStack メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 00c64533-15dd-47f4-bb97-fe80a1ebadef
 topic_type:
 - apiref
-ms.openlocfilehash: 101151469e2eece20afe289c9d95387ce6dc7c6a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 97918d280299fae16eb55185baee19c27d99005b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672124"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99693279"
 ---
 # <a name="icordebugexceptionobjectvalueenumerateexceptioncallstack-method"></a>ICorDebugExceptionObjectValue::EnumerateExceptionCallStack メソッド
 
@@ -37,9 +38,9 @@ HRESULT EnumerateExceptionCallStack(
 ## <a name="parameters"></a>パラメーター  
 
  ppCallStackEnum  
- 入出力マネージ例外オブジェクトのスタックトレース列挙[ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md)子である、というコードのアドレスへのポインターを示します。  
+ 入出力マネージ例外オブジェクトのスタックトレース列挙[](icordebugexceptionobjectcallstackenum-interface.md)子である、というコードのアドレスへのポインターを示します。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  呼び出し履歴情報が使用できない場合、メソッドはを返し `S_OK` ます。また、は、値が0の有効な列挙子 [です](icordebugexceptionobjectcallstackenum-interface.md) 。 メソッドがスタックトレース情報を取得できない場合、戻り値はで `E_FAIL` あり、列挙子は返されません。  
   

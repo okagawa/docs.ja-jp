@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorDebugEval2 インターフェイス」を参照してください。
 title: ICorDebugEval2 インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fce34531-2687-406d-9131-d6ad94f2ce0e
 topic_type:
 - apiref
-ms.openlocfilehash: 090b587ef509795609250914ce8883ad96d28c18
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2c279335bdd30b8dc2698f348d9537443b236a45
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729682"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99693760"
 ---
 # <a name="icordebugeval2-interface"></a>ICorDebugEval2 インターフェイス
 
@@ -37,7 +38,7 @@ ms.locfileid: "95729682"
 |[NewStringWithLength メソッド](icordebugeval2-newstringwithlength-method.md)|指定したコンテンツを使用して、指定した長さの新しい文字列を作成します。|  
 |[RudeAbort メソッド](icordebugeval2-rudeabort-method.md)|このが現在実行している計算を中止し `ICorDebugEval2` ます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  

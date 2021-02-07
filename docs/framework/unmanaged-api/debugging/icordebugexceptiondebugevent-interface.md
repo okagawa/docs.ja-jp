@@ -1,13 +1,14 @@
 ---
+description: '詳細については、次を参照してください: を参照'
 title: ICorDebugExceptionDebugEvent インターフェイス
 ms.date: 03/30/2017
 ms.assetid: f9ba60d8-b54d-417e-bb3e-fde4b41ca44c
-ms.openlocfilehash: c280852d421742cf9e8c2f8dcaa9c0f588f8537b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: eacaa344763fb77faef5f66282809d741f017b37
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95697390"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99693422"
 ---
 # <a name="icordebugexceptiondebugevent-interface"></a>ICorDebugExceptionDebugEvent インターフェイス
 
@@ -21,7 +22,7 @@ ms.locfileid: "95697390"
 |[GetNativeIP メソッド](icordebugexceptiondebugevent-getnativeip-method.md)|この例外デバッグ イベントのネイティブ インターフェイス ポインターを取得します。|  
 |[GetStackPointer メソッド](icordebugexceptiondebugevent-getstackpointer-method.md)|この例外デバッグ イベントのスタック ポインターを取得します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ICorDebugExceptionDebugEvent` インターフェイスは、次のイベントの種類によって実装されます。  
   

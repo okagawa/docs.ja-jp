@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: いいね:: CallFunction メソッド'
 title: ICorDebugEval::CallFunction メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 7f470c5c-e1c0-4d8d-aad8-830f113ae751
 topic_type:
 - apiref
-ms.openlocfilehash: 1cf0080945ad78565fae3fedb454ceba7825cb4a
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: c0978ab3bdffc83e3eb5e3a6553e7f374ab6d5da
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976240"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99694189"
 ---
 # <a name="icordebugevalcallfunction-method"></a>ICorDebugEval::CallFunction メソッド
 
 指定された関数の呼び出しを設定します。
 
-このメソッドは .NET Framework バージョン2.0 では廃止されています。 代わりに[ICorDebugEval2:: CallParameterizedFunction](icordebugeval2-callparameterizedfunction-method.md)を使用してください。
+このメソッドは .NET Framework バージョン2.0 では廃止されています。 代わりに [ICorDebugEval2:: CallParameterizedFunction](icordebugeval2-callparameterizedfunction-method.md) を使用してください。
 
 ## <a name="syntax"></a>構文
 
@@ -49,11 +50,11 @@ HRESULT CallFunction (
 `ppArgs`\
 からポインターの配列。各ポインターは、関数に渡される引数を指定する ICorDebugValue オブジェクトを指します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-関数が virtual の場合、 `CallFunction`は仮想ディスパッチを実行します。 関数が別のアプリケーションドメインにある場合は、すべての引数がそのアプリケーションドメインにも存在する限り、遷移が発生します。
+関数が virtual の場合、 `CallFunction` は仮想ディスパッチを実行します。 関数が別のアプリケーションドメインにある場合は、すべての引数がそのアプリケーションドメインにも存在する限り、遷移が発生します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。
 

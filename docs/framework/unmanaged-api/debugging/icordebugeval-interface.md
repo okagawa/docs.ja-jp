@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次をご覧ください。
 title: ICorDebugEval インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3a5c9815-832d-47e1-b7f7-bbba135d7cf1
 topic_type:
 - apiref
-ms.openlocfilehash: 5d8fd79b242f2b88b82c5c3d78dfe45d80f1194f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c6eda0f63b377399cad391346dc6bedfa860e4b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729786"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99694099"
 ---
 # <a name="icordebugeval-interface"></a>ICorDebugEval インターフェイス
 
@@ -40,7 +41,7 @@ ms.locfileid: "95729786"
 |[NewObjectNoConstructor メソッド](icordebugeval-newobjectnoconstructor-method.md)|コンストラクターメソッドを呼び出さずに、指定した型の新しいオブジェクトインスタンスを割り当てます。 (.NET Framework 2.0 で廃止されました。代わりに [ICorDebugEval2:: NewParameterizedObjectNoConstructor](icordebugeval2-newparameterizedobjectnoconstructor-method.md) を使用してください。)|  
 |[NewString メソッド](icordebugeval-newstring-method.md)|指定された内容を持つ新しい文字列オブジェクトを割り当てます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ICorDebugEval`オブジェクトは、評価を実行するために使用される特定のスレッドのコンテキストで作成されます。 特定の評価で使用されるすべてのオブジェクトと型は、同じアプリケーションドメイン内に存在する必要があります。 このアプリケーションドメインは、スレッドの現在のアプリケーションドメインと同じである必要はありません。 評価は入れ子にすることができます。  
   

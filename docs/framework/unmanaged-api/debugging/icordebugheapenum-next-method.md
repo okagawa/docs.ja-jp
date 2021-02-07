@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次のメソッドを参照してください。
 title: ICorDebugHeapEnum::Next メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2221fd06-9e27-4113-972e-2530db8c3594
 topic_type:
 - apiref
-ms.openlocfilehash: 320b3ca55a60ec7751c88a246ab6ee90b6b6c4cc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 22e81b9b0c4ac2027f932187b6f860d08adf6f97
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724352"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99691953"
 ---
 # <a name="icordebugheapenumnext-method"></a>ICorDebugHeapEnum::Next メソッド
 
@@ -46,7 +47,7 @@ HRESULT Next(
  pceltFetched  
  入出力実際にで返される [COR_HEAPOBJECT](cor-heapobject-structure.md) オブジェクトの数へのポインター `objects` 。 `celt` が 1 の場合、この値は`null` になることがあります。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `COR_HEAPOBJECT.type` フィールドは、入れ子になった参照カウントの COM インターフェイスの識別子です。 この参照は、`ICorDebugHeapEnum::Next` の呼び出し元によって解放される必要があります。  
   

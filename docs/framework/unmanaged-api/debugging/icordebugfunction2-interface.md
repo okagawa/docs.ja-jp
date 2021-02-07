@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorDebugFunction2 インターフェイス」を参照してください。
 title: ICorDebugFunction2 インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b936bef-9b75-48bf-859f-42e419c65f1c
 topic_type:
 - apiref
-ms.openlocfilehash: d9e84a70d72db1338c80140ce3350774bfae4bca
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e5297d46acb9b174537363fc185fa2d540d55a75
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726276"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692200"
 ---
 # <a name="icordebugfunction2-interface"></a>ICorDebugFunction2 インターフェイス
 
@@ -34,7 +35,7 @@ ms.locfileid: "95726276"
 |[GetVersionNumber メソッド](icordebugfunction2-getversionnumber-method.md)|この関数のエディットコンティニュバージョンを取得します。|  
 |[SetJMCStatus メソッド](icordebugfunction2-setjmcstatus-method.md)|マイコードのみのステップ実行のために、この関数をマークします。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  

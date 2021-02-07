@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: ICorDebugEval2:: NewParameterizedArray メソッド'
 title: ICorDebugEval2::NewParameterizedArray メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 45efb8ba-c4de-4109-945f-e734d376b43c
 topic_type:
 - apiref
-ms.openlocfilehash: 14274932461fa7a5278c9a09b421f50be098cb91
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0ce8582328013ad02357361f05efb55ade8780e5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729666"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99693747"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>ICorDebugEval2::NewParameterizedArray メソッド
 
@@ -51,7 +52,7 @@ HRESULT NewParameterizedArray(
  `lowBounds`  
  [in] オプション。 配列の各次元の下限。 この値を省略すると、次元ごとに下限0が想定されます。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  配列の要素は、ジェネリック型のインスタンスである場合があります。 配列は常に、スレッドが現在実行されているアプリケーションドメインで作成されます。 .NET Framework 2.0 では、の値は `rank` 1 である必要があります。  
   

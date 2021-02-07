@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugFunction3:: GetActiveReJitRequestILCode メソッド'
 title: ICorDebugFunction3::GetActiveReJitRequestILCode メソッド
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 88584574-ade5-45b2-9778-489ed5c4dd7f
 topic_type:
 - apiref
-ms.openlocfilehash: 7ab5f8826da0b38fc9f92d9be955991a88d15f69
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9225c5cdf97395b7e1b11c61d653cab8d52031c6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695999"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692122"
 ---
 # <a name="icordebugfunction3getactiverejitrequestilcode-method"></a>ICorDebugFunction3::GetActiveReJitRequestILCode メソッド
 
@@ -38,7 +39,7 @@ HRESULT GetActiveReJitRequestILCode(
  `ppReJitedILCode`  
  アクティブな ReJIT 要求からの、IL へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  この `ICorDebugFunction3` オブジェクトによって表示されるメソッドがアクティブな ReJIT 要求を持っている場合、`ppReJitedILCode` は IL へのポインターを返します。 一般的なケースであるアクティブな要求がない場合、 `ppReJitedILCode` は **null** になります。  
   

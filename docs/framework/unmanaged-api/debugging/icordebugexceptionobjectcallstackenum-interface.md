@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: を参照してください。表示インターフェイス'
 title: ICorDebugExceptionObjectCallStackEnum インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 39dffa18-c71b-48c4-b11d-e814631ab1e9
 topic_type:
 - apiref
-ms.openlocfilehash: 1c45faecdb8b95af8d9e981962151c2c5d071a4f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c72f4299bf3ebc5de2d2ed196801d93ff5fe4356
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731892"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99693357"
 ---
 # <a name="icordebugexceptionobjectcallstackenum-interface"></a>ICorDebugExceptionObjectCallStackEnum インターフェイス
 
@@ -31,7 +32,7 @@ ms.locfileid: "95731892"
 |------------|-----------------|  
 |[いい Exceptionobjectcallstackenum:: Next](icordebugexceptionobjectcallstackenum-next-method.md)|例外オブジェクトの呼び出し履歴に関する情報を格納している、指定した数の [CorDebugExceptionObjectStackFrame](cordebugexceptionobjectstackframe-structure.md) オブジェクトを取得します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ICorDebugExceptionObjectCallStackEnum`インターフェイスは、ICorDebugEnum インターフェイスを実装します。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugEval2:: CallParameterizedFunction メソッド'
 title: ICorDebugEval2::CallParameterizedFunction メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 72f54a45-dbe6-4bb4-8c99-e879a27368e5
 topic_type:
 - apiref
-ms.openlocfilehash: c36dec80b6885b0ee56670b94dbd0b155a9710b4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f3947d819caf42bc174dbbba4f5054b9fc4ab1f1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729708"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99693825"
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a>ICorDebugEval2::CallParameterizedFunction メソッド
 
@@ -55,7 +56,7 @@ HRESULT CallParameterizedFunction (
  `ppArgs`  
  からポインターの配列。各ポインターは、関数の引数で渡された値を表す ICorDebugValue オブジェクトを指します。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `CallParameterizedFunction`は、関数が型パラメーターを持つクラス内に存在しても、それ自体が型パラメーターを受け取る可能性があるか、またはその両方であるかを除いて、のように[します。](icordebugeval-callfunction-method.md) 型引数は、クラスに対して最初に指定する必要があります。その後、関数に対して指定する必要があります。  
   

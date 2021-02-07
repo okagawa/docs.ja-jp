@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次の情報を参照してください: いい値インターフェイス'
 title: ICorDebugGenericValue インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bc14f408-b359-4c8c-ade2-888ccdf7261b
 topic_type:
 - apiref
-ms.openlocfilehash: cfa0950ca2ef4e969258c147b762fa95e52a82e5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7c81855849d7b72bc509d20072b96bb64f5d395a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705818"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692035"
 ---
 # <a name="icordebuggenericvalue-interface"></a>ICorDebugGenericValue インターフェイス
 
@@ -32,7 +33,7 @@ ms.locfileid: "95705818"
 |[GetValue メソッド](icordebuggenericvalue-getvalue-method.md)|指定したバッファーに値をコピーします。|  
 |[SetValue メソッド](icordebuggenericvalue-setvalue-method.md)|指定したバッファーから新しい値をコピーします。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ICorDebugGenericValue` は、リモート処理が不可能なため、サブインターフェイスです。  
   

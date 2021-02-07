@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次のメソッドを参照してください:: いいね。'
 title: ICorDebugFrameEnum::Next メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0bc96acb-6179-4328-a447-cda562ce9e98
 topic_type:
 - apiref
-ms.openlocfilehash: 76b96dfd9d22c7e770671dcc01cb421430df729f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 67b7dd0282c07358f942990f8915150d6449fd32
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728187"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692668"
 ---
 # <a name="icordebugframeenumnext-method"></a>ICorDebugFrameEnum::Next メソッド
 

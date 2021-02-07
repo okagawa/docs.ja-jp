@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorDebugEnum インターフェイス」を参照してください。
 title: ICorDebugEnum インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-ms.openlocfilehash: b208444de3b427329988f27b9d252b54143b7240
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 20d2bb14bddcaf40802567ec78a8e318ac1db380
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95698794"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99694475"
 ---
 # <a name="icordebugenum-interface"></a>ICorDebugEnum インターフェイス
 
@@ -34,7 +35,7 @@ ms.locfileid: "95698794"
 |[Reset メソッド](icordebugenum-reset-method.md)|カーソルを列挙体の先頭に移動します。|  
 |[Skip メソッド](icordebugenum-skip-method.md)|指定した数の項目だけ、列挙内でカーソルを前方に移動します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  次の列挙子は、から派生し `ICorDebugEnum` ます。  
   

@@ -1,13 +1,14 @@
 ---
+description: '詳細については、次のページを参照してください: を参照'
 title: ICorDebugExceptionDebugEvent::GetNativeIP メソッド
 ms.date: 03/30/2017
 ms.assetid: 12e6a262-d9ac-49b8-9b80-1e653a2a3819
-ms.openlocfilehash: f3b29b3ceda521afe9543588af332531aa03e84e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 89bda36efc59e2462634c3d8a3a5835c9d4b3354
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95697416"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99693461"
 ---
 # <a name="icordebugexceptiondebugeventgetnativeip-method"></a>ICorDebugExceptionDebugEvent::GetNativeIP メソッド
 
@@ -26,7 +27,7 @@ HRESULT GetNativeIP(
  `pIP`  
  [out] この例外デバッグ イベントのネイティブ命令ポインターに対するポインター。 詳細については、次の「解説」を参照してください。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  この命令ポインターの意味は、次の表に示すように、イベントの種類によって異なります。  
   

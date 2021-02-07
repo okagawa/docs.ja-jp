@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次のページを参照してください:、:、NewObjectNoConstructor メソッド
 title: ICorDebugEval::NewObjectNoConstructor メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80d509ca-b5e3-4c46-9c14-800db73d9bf7
 topic_type:
 - apiref
-ms.openlocfilehash: bb27ec755fb83dc71af7dd48b5ed6e7699436335
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4bc8f95da1a554091052dc7e7f49aef4f494578d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729730"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99693812"
 ---
 # <a name="icordebugevalnewobjectnoconstructor-method"></a>ICorDebugEval::NewObjectNoConstructor メソッド
 

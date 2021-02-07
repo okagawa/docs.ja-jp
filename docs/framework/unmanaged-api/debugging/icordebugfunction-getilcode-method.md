@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次の情報を参照してください: GetILCode メソッド'
 title: ICorDebugFunction::GetILCode メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f794dd47-a7cd-47f6-96e9-a41a4dae8e72
 topic_type:
 - apiref
-ms.openlocfilehash: b7d3fbafaab6d43fa89d45855628dbd6b9ab81e2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3b7bb29a028b189b24d3fbf02edc8190d9989a51
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696220"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692525"
 ---
 # <a name="icordebugfunctiongetilcode-method"></a>ICorDebugFunction::GetILCode メソッド
 
@@ -39,7 +40,7 @@ HRESULT GetILCode (
  `ppCode`  
  入出力インスタンスへのポインター。 `ICorDebugCode` 関数が MSIL にコンパイルされなかった場合は null。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  この関数でエディットコンティニュが許可されている場合、メソッドは、 `GetILCode` 共通言語ランタイム (CLR) で、この関数の編集されたバージョンのコードに対応する MSIL コードを取得します。  
   

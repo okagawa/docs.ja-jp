@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugEditAndContinueSnapshot:: SetPESymbolBytes メソッド'
 title: ICorDebugEditAndContinueSnapshot::SetPESymbolBytes メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ec00fbdd-6451-4888-ac6f-08e1e2d9b2fd
 topic_type:
 - apiref
-ms.openlocfilehash: df909b4479f70b27a5385ebd7ecce51b963f0e91
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 05fd650286c2e8bdabdb96ec0a02e633ea592914
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677380"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99694514"
 ---
 # <a name="icordebugeditandcontinuesnapshotsetpesymbolbytes-method"></a>ICorDebugEditAndContinueSnapshot::SetPESymbolBytes メソッド
 

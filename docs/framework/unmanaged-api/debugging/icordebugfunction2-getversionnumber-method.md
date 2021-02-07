@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugFunction2:: GetVersionNumber メソッド'
 title: ICorDebugFunction2::GetVersionNumber メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e3a1ce48-9bb9-4ed6-a5fe-5e1819a6333f
 topic_type:
 - apiref
-ms.openlocfilehash: 88fb205235cfaf3566fbd74b05a4e9833058f4a0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7a703789099b82121c65214d6b1929e354405c8d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696101"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692213"
 ---
 # <a name="icordebugfunction2getversionnumber-method"></a>ICorDebugFunction2::GetVersionNumber メソッド
 
@@ -39,7 +40,7 @@ HRESULT GetVersionNumber (
  `pnVersion`  
  入出力この ICorDebugFunction2 オブジェクトによって表される関数のバージョン番号である整数を指すポインターです。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ランタイムは、デバッグセッション中に各モジュールに対して行われた編集の数を追跡します。 関数のバージョン番号は、関数を導入した編集の数を1つ超えています。 関数の元のバージョンは、バージョン1です。 この値は、そのモジュールで [ICorDebugModule2:: ApplyChanges](icordebugmodule2-applychanges-method.md) が呼び出されるたびに、モジュールに対してインクリメントされます。 したがって、関数の本体がの最初の呼び出しと3番目の呼び出しで置き換えられた場合、は `ICorDebugModule2::ApplyChanges` 、 `GetVersionNumber` その関数についてバージョン1、2、または4を返すことがありますが、バージョン3は返されません。 (この関数にはバージョン3はありません)。  
   

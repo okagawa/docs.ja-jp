@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ヘルプモジュール:: GetFunctionFromToken メソッド'
 title: ICorDebugModule::GetFunctionFromToken メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6fe12194-4ef7-43c1-9570-ade35ccf127a
 topic_type:
 - apiref
-ms.openlocfilehash: bf2acd897c9c45e445b864f85550ed7ed6e00886
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d6da43441f3774cff44a6f867c3ccf2a8581ebab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710156"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99691654"
 ---
 # <a name="icordebugmodulegetfunctionfromtoken-method"></a>ICorDebugModule::GetFunctionFromToken メソッド
 
@@ -43,7 +44,7 @@ HRESULT GetFunctionFromToken(
  `ppFunction`  
  入出力関数を表す、のオブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  渡された `GetFunctionFromToken` 値 `methodDef` が Microsoft 中間言語 (MSIL) メソッドを参照していない場合、メソッドは CORDBG_E_FUNCTION_NOT_IL HRESULT を返します。  
   
