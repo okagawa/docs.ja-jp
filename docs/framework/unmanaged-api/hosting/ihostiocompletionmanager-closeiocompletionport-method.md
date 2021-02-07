@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: Ihohoo参照マネージャー:: Closeioて Port メソッド'
 title: IHostIoCompletionManager::CloseIoCompletionPort メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e86ad7be-3758-498a-a972-5522d69dfbb3
 topic_type:
 - apiref
-ms.openlocfilehash: a45f8ab6372776bece09e408bc9887bfaddb0955
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 987b9f4e0fa22fa977fa1b14c77c8c0381e3e399
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727368"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728510"
 ---
 # <a name="ihostiocompletionmanagercloseiocompletionport-method"></a>IHostIoCompletionManager::CloseIoCompletionPort メソッド
 
@@ -51,7 +52,7 @@ HRESULT CloseIoCompletionPort (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_INVALIDARG|無効なポートハンドルが渡されました。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `hPort` は、の以前の呼び出しによって作成されたポートへのハンドルである必要があり `CreateIoCompletionPort` ます。  
   

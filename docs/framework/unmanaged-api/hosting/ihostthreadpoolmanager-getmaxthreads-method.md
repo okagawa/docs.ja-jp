@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IHostThreadPoolManager:: GetMaxThreads メソッド'
 title: IHostThreadPoolManager::GetMaxThreads メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: db268876-6178-4a81-aca3-318ee7f96001
 topic_type:
 - apiref
-ms.openlocfilehash: 3aecebe2803d3a795db801491d0f60a5eb7c00ce
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e8cae2aa29a50ef58a5b87deba9e275a441d43ef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730787"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728382"
 ---
 # <a name="ihostthreadpoolmanagergetmaxthreads-method"></a>IHostThreadPoolManager::GetMaxThreads メソッド
 
@@ -51,7 +52,7 @@ HRESULT GetMaxThreads (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_NOTIMPL|ホストはの実装を提供していません `GetMaxThreads` 。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  CLR はを呼び出して、 `GetMaxThreads` スレッドプール内のスレッドの合計数を確認します。 [Get利用スレッド](ihostthreadpoolmanager-getavailablethreads-method.md)メソッドは、現在作業項目を処理していないスレッドの数を取得します。 パラメーターの戻り値を超えるすべての要求は `pdwMaxWorkerThreads` 、スレッドが使用可能になるまでキューに置かれたままになります。  
   

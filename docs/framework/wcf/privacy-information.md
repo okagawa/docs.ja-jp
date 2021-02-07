@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Windows Communication Foundation のプライバシー情報'
 title: Windows Communication Foundation のプライバシー情報
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 5ecd1c39a4ad6a146c734aab8349c5caa4212662
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4f942e84a072d15a12b6db7cc2c310d629a59f6b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96249944"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726690"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation のプライバシー情報
 
@@ -49,7 +50,7 @@ Microsoft は、エンドユーザーのプライバシーの保護に努めて�
   
  認証によって、通信するエンドポイント間にセキュリティで保護されたセッションを確立できます。 このセッションは、セキュリティ セッションの有効期間が切れるまで有効な GUID によって識別されます。 格納されるデータと格納場所を次の表に示します。  
   
-|Data|Storage|  
+|データ|ストレージ|  
 |----------|-------------|  
 |ユーザー名、X.509 証明書、Kerberos トークンなどのプレゼンテーション資格情報、および資格情報への参照|Windows 証明書ストアなど、標準の Windows 資格情報管理機構|  
 |ユーザー名とパスワードなど、ユーザーのメンバーシップ情報|ASP.NET メンバーシッププロバイダー。|  

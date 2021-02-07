@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <issuedToken>'
 title: <issuedToken>
 ms.date: 03/30/2017
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
-ms.openlocfilehash: 9f3feb11fbe45cbb4b952c70feaa99f9c481dd2b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: aa7486a621d5a6e6900f67300792e29ce2538257
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91157370"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725689"
 ---
 # \<issuedToken>
 
@@ -39,9 +40,9 @@ ms.locfileid: "91157370"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
-|`cacheIssuedTokens`|トークンがキャッシュされるかどうかを指定する省略可能なブール属性。 既定では、 `true`です。|  
+|`cacheIssuedTokens`|トークンがキャッシュされるかどうかを指定する省略可能なブール属性。 既定値は、`true` です。|  
 |`defaultKeyEntropyMode`|ハンドシェイク操作に使用されるランダム値 (エントロピ) を指定する省略可能な文字列属性。 値には、`ClientEntropy`、`ServerEntropy`、および `CombinedEntropy` があります。既定値は `CombinedEntropy` です。 この属性は <xref:System.ServiceModel.Security.SecurityKeyEntropyMode> 型です。|  
 |`issuedTokenRenewalThresholdPercentage`|トークンが更新されるまでに待機できる有効な期間 (トークン発行者によって提供される) のパーセンテージを指定する省略可能な整数属性。 値は 0 ～ 100 の範囲です。 既定値は 60 で、更新の実行までに待機できる期間の 60% を示します。|  
 |`issuerChannelBehaviors`|発行者との通信時に使用するチャネル動作を指定する省略可能な属性。|  

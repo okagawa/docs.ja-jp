@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataImport:: GetParamProps メソッド'
 title: IMetaDataImport::GetParamProps メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4d5e5f00-bcab-4f41-b191-176511a186a7
 topic_type:
 - apiref
-ms.openlocfilehash: a16621f4c9b06f049239dc4e2335d70a167dd756
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2c48215836dfb3ae44edc9a2bf10d4028fd82bb3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729266"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728120"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps メソッド
 
@@ -75,7 +76,7 @@ HRESULT GetParamProps (
  `pcchValue`  
  入出力のサイズ `ppValue` 。ワイド文字の場合は `ppValue` 。が文字列を保持しない場合は0。  
   
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 パラメーターの場合、のシーケンス値は `pulSequence` 1 から始まります。 戻り値のシーケンス番号は0です。
 

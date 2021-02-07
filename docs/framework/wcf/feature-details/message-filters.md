@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: メッセージフィルター'
 title: メッセージ フィルター
 ms.date: 03/30/2017
 helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
-ms.openlocfilehash: a0cc4663b9a3044d0ab80f03479a024acba50a3f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1b52b2b50dc94e79ba6960e834f601af18200f52
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279780"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99727055"
 ---
 # <a name="message-filters"></a>メッセージ フィルター
 

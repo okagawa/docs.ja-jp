@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <probing> 要素'
 title: <probing> 要素
 ms.date: 03/30/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - container tags, <probing> element
 - probing element
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
-ms.openlocfilehash: 1435ee8ea887b5d7d3e785eef0f25ffed14b1b97
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 404e53f735ce02c2a3d7911216f834d38e309789
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91195273"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726105"
 ---
 # <a name="probing-element"></a>\<probing> 要素
 
@@ -70,6 +71,6 @@ ms.locfileid: "91195273"
 ## <a name="see-also"></a>関連項目
 
 - [ランタイム設定スキーマ](index.md)
-- [構成ファイル スキーマ](../index.md)
+- [構成ファイルスキーマ](../index.md)
 - [アセンブリの場所を指定します](../../../../standard/assembly/location.md)
 - [ランタイムがアセンブリを検索する方法](../../../deployment/how-the-runtime-locates-assemblies.md)

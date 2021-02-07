@@ -1,18 +1,19 @@
 ---
+description: '詳細情報: DataContractJsonSerializer サンプル'
 title: DataContractJsonSerializer サンプル
 ms.date: 03/30/2017
 ms.assetid: 3c2c4747-7510-4bdf-b4fe-64f98428ef4a
-ms.openlocfilehash: 4aa0ee679ae424251000b14abfbacf0590a6ccd3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 258cd38f9ee532e5d750b4cabaa4214366835be7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84592022"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726352"
 ---
 # <a name="datacontractjsonserializer-sample"></a>DataContractJsonSerializer サンプル
 
 > [!NOTE]
-> このサンプルは、を対象と <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> しています。 JSON のシリアル化と逆シリアル化を含むほとんどのシナリオでは、Api を使用することをお勧めし[ます。](../../../standard/serialization/system-text-json-overview.md)
+> このサンプルは、を対象と <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> しています。 JSON のシリアル化と逆シリアル化を含むほとんどのシナリオでは、 [ 名前空間のSystem.Text.Js](../../../standard/serialization/system-text-json-overview.md)で api を使用することをお勧めします。
 
 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> では、<xref:System.Runtime.Serialization.DataContractSerializer> と同じ型をサポートしています。 JSON データ形式は、特に Asynchronous JavaScript and XML (AJAX) スタイルの Web アプリケーションを作成するときに便利です。 Windows Communication Foundation (WCF) での AJAX サポートは、ScriptManager コントロールを介して ASP.NET AJAX で使用できるように最適化されています。 ASP.NET AJAX で Windows Communication Foundation (WCF) を使用する方法の例については、 [ajax のサンプル](ajax.md)を参照してください。  
   
@@ -61,7 +62,7 @@ Person p2 = (Person)ser.ReadObject(stream1);
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\JsonSerialization`  
   

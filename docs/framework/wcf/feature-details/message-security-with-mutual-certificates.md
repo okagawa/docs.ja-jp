@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 相互証明書を使用したメッセージセキュリティ'
 title: メッセージ セキュリティと相互の証明書
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: 521b2a887792d41dd28342ca4bfe7be71ceba4b7
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c894f457dcd0fdc449c2f94eaee15004300df5fa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96237379"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726989"
 ---
 # <a name="message-security-with-mutual-certificates"></a>メッセージ セキュリティと相互の証明書
 
@@ -29,13 +30,13 @@ ms.locfileid: "96237379"
 |相互運用性|○ WS-Security および X.509 証明書トークン プロファイルと互換性があるクライアントとサービスで相互運用性があります。|  
 |認証|サーバーとクライアントの相互認証|  
 |整合性|はい|  
-|機密情報|はい|  
+|機密性|はい|  
 |トランスポート|HTTP|  
 |バインド|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>サービス  
 
- 次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
+ 次のコードと構成は、別々に実行します。 以下のいずれかを実行します。  
   
 - 構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
   
@@ -96,7 +97,7 @@ ms.locfileid: "96237379"
   
 ## <a name="client"></a>クライアント  
 
- 次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
+ 次のコードと構成は、別々に実行します。 以下のいずれかを実行します。  
   
 - コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。  
   

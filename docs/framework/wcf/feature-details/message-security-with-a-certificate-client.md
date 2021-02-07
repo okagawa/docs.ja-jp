@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 証明書クライアントを使用したメッセージセキュリティ'
 title: メッセージ セキュリティと証明書クライアント
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: 4a1cb6d804d313f438fc8e7a92946d55f73b9ee5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f1924510c5860b377568da204bbd9154e4970c24
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288581"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99727064"
 ---
 # <a name="message-security-with-a-certificate-client"></a>メッセージ セキュリティと証明書クライアント
 
@@ -27,13 +28,13 @@ ms.locfileid: "96288581"
 |認証 (サーバー)|サービス証明書を使用|  
 |認証 (クライアント)|クライアント証明書を使用|  
 |整合性|はい|  
-|機密情報|はい|  
+|機密性|はい|  
 |トランスポート|HTTP|  
 |バインド|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>サービス  
 
- 次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
+ 次のコードと構成は、別々に実行します。 以下のいずれかを実行します。  
   
 - 構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
   
@@ -90,7 +91,7 @@ ms.locfileid: "96288581"
   
 ## <a name="client"></a>クライアント  
 
- 次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
+ 次のコードと構成は、別々に実行します。 以下のいずれかを実行します。  
   
 - コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。  
   

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <message> の要素 <ws2007FederationHttpBinding>'
 title: <message> の要素 <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
-ms.openlocfilehash: d71bce5e94568bdad3c52226fa1029a1dd87bfd9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f9116a5075f30421dfb26adc29ec0b167db33673
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204919"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725455"
 ---
 # <a name="message-element-of-ws2007federationhttpbinding"></a>\<message> の要素 \<ws2007FederationHttpBinding>
 
@@ -89,14 +90,14 @@ ms.locfileid: "91204919"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`algorithmSuite`|省略可能。 メッセージの暗号化、署名、およびキー ラップ アルゴリズムを設定します。 アルゴリズムとキー サイズは、<xref:System.ServiceModel.Security.SecurityAlgorithmSuite> クラスにより決まります。 これらのアルゴリズムは、セキュリティ ポリシー言語 (WS-SecurityPolicy) 仕様で指定されたアルゴリズムにマップされます。<br /><br /> それぞれの値については次の表を参照してください。 既定値は Basic256 です。|  
+|`algorithmSuite`|任意。 メッセージの暗号化、署名、およびキー ラップ アルゴリズムを設定します。 アルゴリズムとキー サイズは、<xref:System.ServiceModel.Security.SecurityAlgorithmSuite> クラスにより決まります。 これらのアルゴリズムは、セキュリティ ポリシー言語 (WS-SecurityPolicy) 仕様で指定されたアルゴリズムにマップされます。<br /><br /> それぞれの値については次の表を参照してください。 既定値は Basic256 です。|  
 |`issuedKeyType`|発行されるキーの種類を指定します。 有効な値は次のとおりです。<br /><br /> -SymmetricKey<br />-PublicKey<br />-BearerKey<br /><br /> 既定値は SymmetricKey です。 この属性は <xref:System.IdentityModel.Tokens.SecurityKeyType> 型です。|  
-|`issuedTokenType`|発行されるトークンの型を指定する URI。 既定では、 `null`です。|  
+|`issuedTokenType`|発行されるトークンの型を指定する URI。 既定値は、`null` です。|  
 |`negotiateServiceCredential`|サービス資格情報がネゴシエーションの一部として交換されるか、帯域外で使用できるかを指定する値。 既定値は `true` で、サービス資格情報がネゴシエートされます。|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |Basic128|Aes128 暗号化を使用し、メッセージ ダイジェストには Sha1 を、キー ラップには Rsa-oaep-mgf1p を使用します。|  
 |Basic192|Aes192 暗号化を使用し、メッセージ ダイジェストには Sha1 を、キー ラップには Rsa-oaep-mgf1p を使用します。|  

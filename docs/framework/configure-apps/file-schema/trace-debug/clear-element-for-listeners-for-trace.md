@@ -1,4 +1,5 @@
 ---
+description: の詳細については、「」を参照してください。 <clear> <listeners><trace>
 title: <clear> のの <listeners> 要素 <trace>
 ms.date: 03/30/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - clear element for <listeners> for <trace>
 - <clear> element for <listeners> for <trace>
 ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
-ms.openlocfilehash: 2d301d588e33b0eea4164a6bf62dedd7b0c450ec
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3c1b3816f4ccd0ceb9e9bc0fc6acfd9b6e8ade85
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149271"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725975"
 ---
 # <a name="clear-element-for-listeners-for-trace"></a>\<clear> のの \<listeners> 要素 \<trace>
 

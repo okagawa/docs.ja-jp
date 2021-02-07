@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <issuedTokenParameters>'
 title: <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
-ms.openlocfilehash: c90024a0629f39d160967ca00434e48f682d8933
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 92c8f5aa25ddb71561eb702ba3eb0396456008a6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91157318"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725663"
 ---
 # \<issuedTokenParameters>
 
@@ -40,7 +41,7 @@ ms.locfileid: "91157318"
 </issuedTokenParameters>
 ```  
   
-## <a name="type"></a>種類  
+## <a name="type"></a>Type  
 
  `Type`  
   
@@ -50,12 +51,12 @@ ms.locfileid: "91157318"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |defaultMessageSecurityVersion|バインドでサポートする必要があるセキュリティ仕様 (WS-Security、WS-Trust、WS-Secure Conversation、および WS-Security Policy) のバージョンを指定します。 この値は、<xref:System.ServiceModel.MessageSecurityVersion> 型です。|  
 |inclusionMode|トークン包含要件を指定します。 この属性は <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode> 型です。|  
 |keySize|トークン キー サイズを指定する整数。 既定値は 256 です。|  
-|keyType|キーの型を指定する <xref:System.IdentityModel.Tokens.SecurityKeyType> の有効な値。 既定では、 `SymmetricKey`です。|  
+|keyType|キーの型を指定する <xref:System.IdentityModel.Tokens.SecurityKeyType> の有効な値。 既定値は、`SymmetricKey` です。|  
 |tokenType|トークンの種類を指定する文字列。 既定値は "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAML" です。|  
   
 ### <a name="child-elements"></a>子要素  
@@ -82,7 +83,7 @@ ms.locfileid: "91157318"
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
 - [方法: SecurityBindingElement を使用してカスタム バインドを作成する](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [カスタム バインディング セキュリティ](../../../wcf/samples/custom-binding-security.md)

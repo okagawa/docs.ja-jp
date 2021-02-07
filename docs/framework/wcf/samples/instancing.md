@@ -1,18 +1,19 @@
 ---
-title: "\"インスタンス化\""
+description: '詳細情報: インスタンス化'
+title: インスタンス化
 ms.date: 03/30/2017
 helpviewer_keywords:
 - service behaviors, instancing sample
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
-ms.openlocfilehash: 55042af1e6eec1fe4b3e2cf07d03596e4793575f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 88cff6912e3285370a456d5d8575c995ff15ef57
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96237756"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726456"
 ---
-# <a name="instancing"></a>"インスタンス化"
+# <a name="instancing"></a>インスタンス化
 
 インスタンス化のサンプルでは、インスタンス化動作の設定を示します。この設定は、クライアント要求への応答として作成される、サービス クラスのインスタンスの作成方法を制御します。 このサンプルは、サービスコントラクトを実装する [はじめに](getting-started-sample.md)に基づいてい `ICalculator` ます。 このサンプルでは、`ICalculatorInstance` から継承される新しいコントラクト `ICalculator` を定義します。 `ICalculatorInstance` によって指定されるコントラクトにより、サービス インスタンスの状態を検査するための 3 つの操作が追加されます。 インスタンス化設定を変更することにより、クライアントを実行して動作の変更を確認できます。  
   

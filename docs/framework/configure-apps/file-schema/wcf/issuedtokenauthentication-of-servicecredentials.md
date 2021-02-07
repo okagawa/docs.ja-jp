@@ -1,13 +1,14 @@
 ---
+description: 詳細については <issuedTokenAuthentication> 、 <serviceCredentials>
 title: <issuedTokenAuthentication> の <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 5c2e288f-f603-4d13-839a-0fd6d1981bec
-ms.openlocfilehash: 88657b6982108596c8d9030161390f76fcff6609
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 62c60cc467217312c349ecdbe8e98b04dd022ddf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202475"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725676"
 ---
 # <a name="issuedtokenauthentication-of-servicecredentials"></a>\<issuedTokenAuthentication> の \<serviceCredentials>
 
@@ -49,7 +50,7 @@ ms.locfileid: "91202475"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |`allowedAudienceUris`|<xref:System.IdentityModel.Tokens.SamlSecurityToken> インスタンスにより有効と見なされるように、<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> セキュリティ トークンのターゲットとなる URI のセットを取得します。 この属性の使い方の詳細については、「<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>」を参照してください。|  
 |`allowUntrustedRsaIssuers`|信頼できない RSA 証明書の発行者を許可するかどうかを指定するブール値。<br /><br /> 証明書は、信頼性を検証する証明機関 (CA) によって署名されます。 信頼できない発行者とは、証明書の署名が信頼できると指定されていない CA です。|  
@@ -74,7 +75,7 @@ ms.locfileid: "91202475"
   
 ## <a name="remarks"></a>解説  
 
- 発行されるトークンのシナリオには、3 つの段階があります。 最初の段階では、サービスにアクセスしようとしているクライアントは、 *セキュリティで保護されたトークンサービス*と呼ばれます。 次に、セキュリティ トークン サービスがクライアントを認証し、その後、クライアントにトークン (通常は、SAML (Security Assertions Markup Language) トークン) を発行します。 最後に、クライアントがトークンを持ってサービスに戻ります。 サービスはトークンを調べ、トークンを認証することでクライアントの認証を可能にするデータを確認します。 トークンを認証するには、セキュリティ トークン サービスで使用される証明書がサービスによって認識されている必要があります。  
+ 発行されるトークンのシナリオには、3 つの段階があります。 最初の段階では、サービスにアクセスしようとしているクライアントは、 *セキュリティで保護されたトークンサービス* と呼ばれます。 次に、セキュリティ トークン サービスがクライアントを認証し、その後、クライアントにトークン (通常は、SAML (Security Assertions Markup Language) トークン) を発行します。 最後に、クライアントがトークンを持ってサービスに戻ります。 サービスはトークンを調べ、トークンを認証することでクライアントの認証を可能にするデータを確認します。 トークンを認証するには、セキュリティ トークン サービスで使用される証明書がサービスによって認識されている必要があります。  
   
  この要素は、このようなセキュリティ トークン サービス証明書のリポジトリです。 証明書を追加するには、を使用し [\<knownCertificates>](knowncertificates.md) ます。 次の [\<add>](add-of-knowncertificates.md) 例に示すように、各証明書のを挿入します。  
   

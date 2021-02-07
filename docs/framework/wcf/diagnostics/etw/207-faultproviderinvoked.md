@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 207-FaultProviderInvoked 呼び出されました'
 title: 207 - FaultProviderInvoked
 ms.date: 03/30/2017
 ms.assetid: b730d903-01c2-4deb-85a4-da12f8a21fe4
-ms.openlocfilehash: 71381c9eee6aed4792500c8558db88e239bf89f7
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 03c4f1669fc61019ccf4d23d2994f136e231fbec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295172"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728068"
 ---
 # <a name="207---faultproviderinvoked"></a>207 - FaultProviderInvoked
 
@@ -15,12 +16,12 @@ ms.locfileid: "96295172"
   
 |||  
 |-|-|  
-|ID|207|  
+|id|207|  
 |Keywords|Troubleshooting、ServiceModel|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、`FaultProvider` が呼び出された後に生成されます。  
   

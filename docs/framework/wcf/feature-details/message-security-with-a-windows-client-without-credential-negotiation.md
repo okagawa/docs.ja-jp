@@ -1,16 +1,17 @@
 ---
+description: '詳細: 資格情報ネゴシエーションを使用しない Windows クライアントを使用したメッセージセキュリティ'
 title: 資格情報ネゴシエーションを使用しない Windows クライアントを使用するメッセージ セキュリティ
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 3e5838c474a4f13136ed29baab440dc1559b95f5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e9edd63c80d868024d8a4b664c42456bb454cb69
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551094"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99727015"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>資格情報ネゴシエーションを使用しない Windows クライアントを使用するメッセージ セキュリティ
 
@@ -25,7 +26,7 @@ ms.locfileid: "90551094"
 
 |特徴|説明|
 |--------------------|-----------------|
-|セキュリティ モード|メッセージ|
+|セキュリティ モード|Message|
 |相互運用性|○ Kerberos トークン プロファイル互換クライアントを使用する WS-Security|
 |認証 (サーバー)|サーバーとクライアントの相互認証|
 |認証 (クライアント)|サーバーとクライアントの相互認証|
@@ -36,7 +37,7 @@ ms.locfileid: "90551094"
 
 ## <a name="service"></a>サービス
 
-次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。
+次のコードと構成は、別々に実行します。 以下のいずれかを実行します。
 
 - 構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。
 
@@ -98,7 +99,7 @@ Spn、Kerberos プロトコル、および Active Directory の詳細につい�
 
 ## <a name="client"></a>クライアント
 
-次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。
+次のコードと構成は、別々に実行します。 以下のいずれかを実行します。
 
 - コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。
 

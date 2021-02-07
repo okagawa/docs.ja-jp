@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: x.509 Certificate バリデーター'
 title: X.509 証明書検証
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: 2d117dda8e6748407b6d58677ec55e4e8e4e4740
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3fead47cab4d639640f5af755717636ca2e8d01e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554242"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726235"
 ---
 # <a name="x509-certificate-validator"></a>X.509 証明書検証
 
