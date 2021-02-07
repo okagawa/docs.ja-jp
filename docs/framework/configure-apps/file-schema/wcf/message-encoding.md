@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「メッセージエンコード」を参照してください。
 title: メッセージ エンコーディング
 ms.date: 03/30/2017
 ms.assetid: f30ee941-aca9-4c67-82a5-421568496f07
-ms.openlocfilehash: 018cbc778627fc429e443fc590fa4c0f52d2a68a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6c0afd61bbdb28c9bcf4dee662b31d93c590c464
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204880"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725351"
 ---
 # <a name="message-encoding"></a>メッセージ エンコーディング
 
@@ -25,6 +26,6 @@ ms.locfileid: "91204880"
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
 - [メッセージ エンコーダーを選択する](../../../wcf/feature-details/choosing-a-message-encoder.md)

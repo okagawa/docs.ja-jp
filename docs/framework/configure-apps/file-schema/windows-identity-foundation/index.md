@@ -1,14 +1,15 @@
 ---
+description: 詳細については、「Windows Identity Foundation の構成スキーマ」を参照してください。
 title: Windows Identity Foundation 構成スキーマ
 ms.date: 03/30/2017
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 author: BrucePerlerMS
-ms.openlocfilehash: 14d596ae77019932d169e1a84732fb8522bfc46c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 926b2dbe25359ebc789c95f75a59090c7e5a52e6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152724"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725338"
 ---
 # <a name="windows-identity-foundation-configuration-schema"></a>Windows Identity Foundation 構成スキーマ
 
@@ -111,6 +112,6 @@ ms.locfileid: "79152724"
   
 ## <a name="in-this-section"></a>このセクションの内容  
 
-[\<system.identityModel>](system-identitymodel.md)アプリケーションの WIF オプションを有効にするための構成を提供します。  
+[\<system.identityModel>](system-identitymodel.md) アプリケーションの WIF オプションを有効にするための構成を提供します。  
   
-[\<system.identityModel.services>](system-identitymodel-services.md)WIF を使用して、パッシブフェデレーションの構成を提供します。 セッション認証モジュール (SAM) とフェデレーション認証モジュール (WSFAM) を構成します。
+[\<system.identityModel.services>](system-identitymodel-services.md) WIF を使用して、パッシブフェデレーションの構成を提供します。 セッション認証モジュール (SAM) とフェデレーション認証モジュール (WSFAM) を構成します。

@@ -1,18 +1,19 @@
 ---
+description: 詳細については、「」を参照してください。 <behavior> <serviceBehaviors>
 title: <behavior><serviceBehaviors>ワークフローの
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a4b718a-1b40-4957-935a-f6122819ab3c
-ms.openlocfilehash: 14c528746963a3078e0ab377d095414d2fca0dbe
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7504e9b307286871440bb6efdb672a59d3d13cb1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189618"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725286"
 ---
 # <a name="behavior-of-servicebehaviors-of-workflow"></a>\<behavior>\<serviceBehaviors>ワークフローの
 
-**Behavior**要素には、サービスの動作に関する設定のコレクションが含まれています。 各動作は、 **名前**によってインデックスが作成されます。 サービスは、要素の **設定** 属性を使用して、この名前を使用して各動作にリンクでき [\<endpoint>](../wcf/endpoint-element.md) ます。 これにより、設定を再定義することなく、エンドポイント間で共通の動作構成を共有できます。  
+**Behavior** 要素には、サービスの動作に関する設定のコレクションが含まれています。 各動作は、 **名前** によってインデックスが作成されます。 サービスは、要素の **設定** 属性を使用して、この名前を使用して各動作にリンクでき [\<endpoint>](../wcf/endpoint-element.md) ます。 これにより、設定を再定義することなく、エンドポイント間で共通の動作構成を共有できます。  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)\
