@@ -1,13 +1,14 @@
 ---
+description: '詳細については、「方法: WorkflowServiceHost を使用してワークフローの未処理の例外動作を構成する」を参照してください。'
 title: '方法: WorkflowServiceHost を使用してワークフロー サービスの未処理の例外動作を構成する'
 ms.date: 03/30/2017
 ms.assetid: 51b25c86-292c-43e4-8d13-273d2badc8ad
-ms.openlocfilehash: 93eb2f4493b70f54336a5d47957c6913239088e5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7d32ccf1262895d948cae26f0922adf3003664ba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96264856"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743383"
 ---
 # <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a>方法: WorkflowServiceHost を使用してワークフロー サービスの未処理の例外動作を構成する
 

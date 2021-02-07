@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「インターネットインフォメーションサービスでのホスト」を参照してください。
 title: インターネット インフォメーション サービスでのホスティング
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: 7bfdf2b057c791da7e15619d69c0314557944093
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 23c81bcfccba316500d333d277907d66e5d457c7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555836"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743136"
 ---
 # <a name="host-in-internet-information-services"></a>インターネットインフォメーションサービスのホスト
 
@@ -55,7 +56,7 @@ IIS でホストされる WCF サービスの開発と展開は、次のタス�
 
 - WCF サービスを構成します。
 
-これらの各タスクの詳細については、「 [インターネットインフォメーションサービスでホストされる WCF サービスの配置](deploying-an-internet-information-services-hosted-wcf-service.md)」を参照してください。
+これらの各タスクの詳細については、「 [WCF サービス Services-Hosted のインターネット情報の展開](deploying-an-internet-information-services-hosted-wcf-service.md)」を参照してください。
 
 ## <a name="wcf-services-and-aspnet"></a>WCF サービスと ASP.NET
 

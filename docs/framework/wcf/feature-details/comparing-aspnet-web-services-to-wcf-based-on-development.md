@@ -1,13 +1,14 @@
 ---
+description: '詳細: 開発に基づく WCF と ASP.NET ウェブサービスの比較'
 title: 開発者の視点から見た ASP.NET Web サービスと WCF との比較
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-ms.openlocfilehash: c6e83bb234751dc477776f0fa540ffa8688dc667
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fa9db35070bdde32d509f0e9c25dbf179d64da32
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597593"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743461"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>開発者の視点から見た ASP.NET Web サービスと WCF との比較
 
@@ -201,7 +202,7 @@ public class LineItem
 }
 ```
 
-Windows ソフトウェア開発キット (SDK) には、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)と呼ばれるコマンドラインツールが含まれています。 ASP.NET Web サービスで使用される xsd.exe ツールと同様に、Svcutil.exe は XML スキーマから .NET データ型の定義を生成できます。 <xref:System.Runtime.Serialization.DataContractSerializer> が XML スキーマで定義された形式の XML を出力できる場合、型はデータ コントラクトの形に変換されます。そうでなければ、<xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化します。 Svcutil.exe では、スイッチを使用してデータコントラクトから XML スキーマを生成することもでき `dataContractOnly` ます。
+Windows ソフトウェア開発キット (SDK) には、 [ServiceModel メタデータユーティリティツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)と呼ばれるコマンドラインツールが含まれています。 ASP.NET ウェブサービスで使用される xsd.exe ツールと同様に、Svcutil.exe は XML スキーマから .NET データ型の定義を生成できます。 <xref:System.Runtime.Serialization.DataContractSerializer> が XML スキーマで定義された形式の XML を出力できる場合、型はデータ コントラクトの形に変換されます。そうでなければ、<xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化します。 また Svcutil.exe は、スイッチを使用してデータコントラクトから XML スキーマを生成することもでき `dataContractOnly` ます。
 
 > [!NOTE]
 > ASP.NET ウェブサービスではを使用しますが、 <xref:System.Xml.Serialization.XmlSerializer> wcf ASP.NET 互換モードでは wcf サービスが ASP.NET Web サービスの動作を模倣しますが、ASP.NET compatibility オプションでは、を使用するように制限されていません <xref:System.Xml.Serialization.XmlSerializer> 。 必要であれば ASP.NET 互換モードでも <xref:System.Runtime.Serialization.DataContractSerializer> も使えるようになっています。
@@ -418,11 +419,11 @@ WCF ASP.NET 互換モードオプションを使用するには、IIS または 
 
 ## <a name="client-development"></a>クライアント開発
 
-ASP.NET Web サービスのクライアントの開発にはコマンド ライン ツール WSDL.exe を使用します。.asmx ファイルの URL を入力として指定します。 WCF によって提供される対応ツールは、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)です。 これにより、サービスコントラクトの定義と WCF クライアントクラスの定義を含むコードモジュールが生成されます。 また、サービスのアドレスとバインディングを指定して、構成ファイルを生成することもできます。
+ASP.NET Web サービスのクライアントの開発にはコマンド ライン ツール WSDL.exe を使用します。.asmx ファイルの URL を入力として指定します。 WCF によって提供される対応ツールは、 [ServiceModel Metadata Utility tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)です。 これにより、サービスコントラクトの定義と WCF クライアントクラスの定義を含むコードモジュールが生成されます。 また、サービスのアドレスとバインディングを指定して、構成ファイルを生成することもできます。
 
-リモート サービスのクライアントを開発する場合、通常は、非同期パターンに従ってプログラムを記述するようお勧めします。 WSDL.exe ツールは、特段の指定をしなくても、同期パターンと非同期パターンを使ったコードをそれぞれ生成します。 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)によって生成されたコードは、どちらのパターンでも提供できます。 特に指定しなければ同期パターン用です。 `/async` スイッチを指定して実行すれば、生成されるコードは非同期パターン用になります。
+リモート サービスのクライアントを開発する場合、通常は、非同期パターンに従ってプログラムを記述するようお勧めします。 WSDL.exe ツールは、特段の指定をしなくても、同期パターンと非同期パターンを使ったコードをそれぞれ生成します。 [ServiceModel メタデータユーティリティツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)によって生成されるコードは、どちらのパターンでも提供できます。 特に指定しなければ同期パターン用です。 `/async` スイッチを指定して実行すれば、生成されるコードは非同期パターン用になります。
 
-ASP によって生成される WCF クライアントクラスに名前があることは保証されません。既定では、.NET の WSDL.EXE ツールは、Svcutil.exe ツールによって生成される WCF クライアントクラスの名前と一致します。 特に、<xref:System.Xml.Serialization.XmlSerializer> でシリアル化したクラスのプロパティ名は、Svcutil.exe で生成した場合 "Property" という接頭辞が付きますが、WSDL.exe の場合はそうなりません。
+ASP によって生成される WCF クライアントクラスに名前があることは保証されません。既定では、NET の WSDL.exe ツールは、Svcutil.exe ツールによって生成される WCF クライアントクラスの名前と一致します。 特に、<xref:System.Xml.Serialization.XmlSerializer> でシリアル化したクラスのプロパティ名は、Svcutil.exe で生成した場合 "Property" という接頭辞が付きますが、WSDL.exe の場合はそうなりません。
 
 ## <a name="message-representation"></a>メッセージ表現
 
@@ -551,7 +552,7 @@ ASP.NET が WSDL で生成したサービス記述はカスタマイズ可能で
 
 IIS 51、6.0、または WAS でホストされている HTTP エンドポイントを使用して、WCF サービスの .svc ファイルのクエリ WSDL を使用して HTTP GET 要求を発行すると、WCF は WSDL と応答してサービスを記述します。 httpGetEnabled が true に設定されている場合は、WSDL で記述したクエリを HTTP GET 要求として、.NET アプリケーション上でホストされているサービスの HTTP ベース アドレスに発行しても同じ効力があります。
 
-ただし、WCF は、サービスを説明するために生成された WSDL による Ws-metadataexchange 要求にも応答します。 ASP.NET Web サービスには、WS-MetadataExchange 要求に応答する機能がありません。
+ただし、WCF では、サービスを記述するために生成される WSDL を使用した WS-MetadataExchange 要求にも応答します。 ASP.NET Web サービスには、WS-MetadataExchange 要求に応答する機能がありません。
 
 WCF によって生成される WSDL は、広範囲にカスタマイズできます。 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> クラスには、WSDL による記述をカスタマイズするための機能がいくつか組み込まれています。 WCF は、WSDL を生成しないように構成することもできますが、特定の URL で静的 WSDL ファイルを使用するように構成することもできます。
 
@@ -673,7 +674,7 @@ void ITradingService.AddTrade(Trade trade)
 
 ASP.NET では、クラス内の状態情報を実際に格納する場所を制御でき <xref:System.Web.HttpContext> ますが、WCF は少なくとも最初のバージョンでは、拡張可能なオブジェクトが格納される場所を制御できません。 これは、WCF サービスの ASP.NET 互換モードを選択するための非常に最良の理由です。 このような制御が不可欠な応用の場合、ASP.NET 互換モードにすれば、ASP.NET と同様に <xref:System.Web.HttpContext> クラスの機能を活用できるばかりでなく、<xref:System.Web.HttpContext> クラスで管理する状態情報の実際の格納場所も制御できます。
 
-## <a name="security"></a>Security
+## <a name="security"></a>セキュリティ
 
 ASP.NET Web サービスのセキュリティ保全の手順は、IIS アプリケーションのセキュリティ保全の手順と同じです。 WCF アプリケーションは IIS 内だけでなく、.NET 実行可能ファイル内でもホストできるため、WCF アプリケーションをセキュリティで保護するためのオプションは、IIS の機能とは独立したものにする必要があります。 ただし、ASP.NET Web サービスに提供されている機能は、ASP.NET 互換モードで実行されている WCF サービスでも使用できます。
 
@@ -757,7 +758,7 @@ WCF では、任意の種類のセキュリティトークンからのクレー�
 
 ### <a name="security-confidentiality"></a>セキュリティ : 機密性
 
-ASP.NET Web サービスとの間でやり取りするメッセージの機密性は、トランスポート層で、IIS 上のアプリケーションが Secure Hypertext Transfer Protocol (HTTPS) を使うように構成することによって確保します。 IIS 内でホストされている WCF アプリケーションに対しても同じことができます。 ただし、IIS の外部でホストされている WCF アプリケーションは、セキュリティで保護されたトランスポートプロトコルを使用するように構成することもできます。 さらに重要な点として、WCF アプリケーションは、WS-SECURITY プロトコルを使用してメッセージを転送する前にセキュリティで保護するように構成することもできます。 メッセージの本体を WS-Security で保護することにより、最終送信先に到達するまでの中継ノードで機密が洩れないようにすることができます。
+ASP.NET Web サービスとの間でやり取りするメッセージの機密性は、トランスポート層で、IIS 上のアプリケーションが Secure Hypertext Transfer Protocol (HTTPS) を使うように構成することによって確保します。 IIS 内でホストされている WCF アプリケーションに対しても同じことができます。 ただし、IIS の外部でホストされている WCF アプリケーションは、セキュリティで保護されたトランスポートプロトコルを使用するように構成することもできます。 さらに重要な点として、WS-Security プロトコルを使用して、メッセージを転送する前にセキュリティで保護するように WCF アプリケーションを構成することもできます。 メッセージの本体を WS-Security で保護することにより、最終送信先に到達するまでの中継ノードで機密が洩れないようにすることができます。
 
 ## <a name="globalization"></a>グローバリゼーション
 

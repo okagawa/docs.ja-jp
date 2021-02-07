@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「分散アプリケーションセキュリティ」を参照してください。
 title: 分散アプリケーションのセキュリティ
 ms.date: 03/30/2017
 helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 80878857145c7a4e09106b6e1c4cb9ad68b7680a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 79e206157e7bb0a242b66064d345038d4272cf3b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254247"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743162"
 ---
 # <a name="distributed-application-security"></a>分散アプリケーションのセキュリティ
 
@@ -32,10 +33,10 @@ Windows Communication Foundation (WCF) セキュリティは、転送セキュ�
 
  整合性、機密性、および認証の 3 つの機能は、合わせて転送セキュリティと呼ばれます。 転送セキュリティは、分散アプリケーションに対する脅威の軽減に役立つ機能を提供します。 転送セキュリティを構成するこれら 3 つの機能について、次の表で簡単に説明します。  
   
-|機能|Description|  
+|Function|説明|  
 |--------------|-----------------|  
 |整合性|*整合性* とは、データが完全かつ正確であることを保証することです。特に、ある地点から別のポイントに走査した後に、多くのアクターによって読み取られた場合に役立ちます。 整合性は、データの改ざんを防止するために保持する必要があり、一般にメッセージのデジタル署名によって実現されます。|  
-|機密情報|*機密性* とは、メッセージが目的の閲覧者以外のユーザーによって読み取られていないことを保証することです。 たとえば、クレジット カード番号などは、インターネット経由で送信されるときに機密性を保持する必要があります。 機密性は、多くの場合、公開キー/秘密キー スキームを使用するデータ暗号化によって実現されます。|  
+|機密性|*機密性* とは、メッセージが目的の閲覧者以外のユーザーによって読み取られていないことを保証することです。 たとえば、クレジット カード番号などは、インターネット経由で送信されるときに機密性を保持する必要があります。 機密性は、多くの場合、公開キー/秘密キー スキームを使用するデータ暗号化によって実現されます。|  
 |認証|*認証* は、要求された id の検証です。 たとえば、銀行口座の使用時には、口座の実際の所有者だけが預金の引き出しを許可されるようにすることが必須です。 認証は、さまざまな手段によって実現できます。 一般的な方法の 1 つとして、ユーザー/パスワード システムがあります。 また、サードパーティから提供される X.509 証明書を使用する方法もあります。|  
   
 ## <a name="security-modes"></a>セキュリティ モード  
@@ -71,7 +72,7 @@ Windows Communication Foundation (WCF) セキュリティは、転送セキュ�
 |設定|説明|  
 |-------------|-----------------|  
 |なし|クライアントが資格情報を提示する必要がないことを指定します。 匿名クライアントであると解釈されます。|  
-|基本|基本認証を指定します。 詳細については、「RFC2617、[HTTP authentication: Basic And Digest authentication](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)」を参照してください。|  
+|Basic|基本認証を指定します。 詳細については、「RFC2617、[HTTP authentication: Basic And Digest authentication](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)」を参照してください。|  
 |ダイジェスト|ダイジェスト認証を指定します。 詳細については、「RFC2617、[HTTP authentication: Basic And Digest authentication](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)」を参照してください。|  
 |Ntlm|Windows ドメインで SSPI ネゴシエーションを使用する Windows 認証を指定します。<br /><br /> SSPI ネゴシエーションの結果、Kerberos プロトコルまたは NTLM (NT LanMan) を使用することになります。|  
 |Windows|Windows ドメインで SSPI を使用する Windows 認証を指定します。 SSPI では、認証サービスとして Kerberos プロトコルまたは NTLM が選択されます。<br /><br /> SSPI は、最初に Kerberos プロトコルの使用を試み、使用できない場合は NTLM を使用します。|  

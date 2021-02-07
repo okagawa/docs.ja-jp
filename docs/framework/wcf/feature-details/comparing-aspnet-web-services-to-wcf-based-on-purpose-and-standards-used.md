@@ -1,13 +1,14 @@
 ---
+description: 詳細については、使用する目的と標準に基づいた WCF への ASP.NET ウェブサービスの比較に関するページを参照してください。
 title: 使用目的と使用標準に基づく ASP.NET Web サービスと WCF との比較
 ms.date: 03/30/2017
 ms.assetid: d3890278-fa9b-4902-91ea-8da73b7143cc
-ms.openlocfilehash: 62917d7a188d0863f6ebcb7dd3531ef2dd6a5132
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: debc20f3ab3e8e9f83641eaa7d3b52dabe82055c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295068"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743448"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used"></a>使用目的と使用標準に基づく ASP.NET Web サービスと WCF との比較
 

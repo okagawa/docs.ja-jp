@@ -1,13 +1,14 @@
 ---
+description: '詳細については、「方法: ワークフローアプリケーションからサービスにアクセスする」を参照してください。'
 title: '方法: ワークフロー アプリケーションからサービスにアクセスする'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 13fae7dec3026e96e3c196467da29fe768a3655f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f8972bf7755c0103d164633d53d8d32508ce2efe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257933"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743097"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>方法: ワークフロー アプリケーションからサービスにアクセスする
 
@@ -31,7 +32,7 @@ ms.locfileid: "96257933"
 
      ![WCF ヘルプページと URI を表示している IE](./media/how-to-access-a-service-from-a-workflow-application/ie-wcf-help-page-uri.jpg)
 
-6. **ソリューションエクスプローラー** で **myのクライアント** プロジェクトを右クリックし、[ **Add**  >  **サービス参照** の追加] を選択します。 [ **検出** ] ボタンをクリックして、現在のソリューションで任意のサービスを検索します。 [サービス] ボックスで、Service1.xamlx の横にある三角形をクリックします。 Service1 の横にある三角形をクリックして、Service1 サービスによって実装されるコントラクトの一覧を表示します。 **サービス** の一覧で [ **Service1** ] ノードを展開します。 次の図に示すように、Echo 操作は **操作** の一覧に表示されます。
+6. **ソリューションエクスプローラー** で **myのクライアント** プロジェクトを右クリックし、[   >  **サービス参照** の追加] を選択します。 [ **検出** ] ボタンをクリックして、現在のソリューションで任意のサービスを検索します。 [サービス] ボックスで、Service1.xamlx の横にある三角形をクリックします。 Service1 の横にある三角形をクリックして、Service1 サービスによって実装されるコントラクトの一覧を表示します。 **サービス** の一覧で [ **Service1** ] ノードを展開します。 次の図に示すように、Echo 操作は **操作** の一覧に表示されます。
 
      ![[サービス参照の追加] ダイアログ](./media/how-to-access-a-service-from-a-workflow-application/add-service-reference.jpg)
 
@@ -53,7 +54,7 @@ ms.locfileid: "96257933"
 
      ![変数への引数のバインド](./media/how-to-access-a-service-from-a-workflow-application/bind-arguments-variables.jpg)
 
-10. **WriteLine** アクティビティを **Echo** アクティビティの下にドラッグアンドドロップして、サービス呼び出しによって返された文字列を表示します。 **WriteLine** アクティビティは、[ツールボックス] の [**プリミティブ**] ノードにあります。 Writeline アクティビティのテキストボックスに「」と入力して、 **writeline** アクティビティの **text** 引数を変数にバインド `outString` `outString` します。 **WriteLine** この時点で、ワークフローは次の図のようになります。
+10. **WriteLine** アクティビティを **Echo** アクティビティの下にドラッグアンドドロップして、サービス呼び出しによって返された文字列を表示します。 **WriteLine** アクティビティは、[ツールボックス] の [**プリミティブ**] ノードにあります。 Writeline アクティビティのテキストボックスに「」と入力して、 **writeline** アクティビティの **text** 引数を変数にバインド `outString` `outString` します。  この時点で、ワークフローは次の図のようになります。
 
      ![完全なクライアント ワークフロー](./media/how-to-access-a-service-from-a-workflow-application/complete-client-workflow.jpg)
 

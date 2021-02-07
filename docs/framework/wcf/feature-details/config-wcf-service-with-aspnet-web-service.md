@@ -1,16 +1,17 @@
 ---
+description: '詳細については、「方法: ASP.NET Web サービスクライアントと相互運用するように WCF サービスを構成する」を参照してください。'
 title: '方法: WCF サービスおよび ASP.NET Web サービス クライアントを相互運用するために構成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 9c241c06f153e4f85c70459ff3c50889057103f5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 180307763054f8dfe5696fb0bbf294ec2b5ee3db
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295042"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743396"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>方法: WCF サービスおよび ASP.NET Web サービス クライアントを相互運用するために構成する
 
