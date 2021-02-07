@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorDebugProcess2 インターフェイス」を参照してください。
 title: ICorDebugProcess2 インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 73332138-5fea-441f-b893-61af87d45a42
 topic_type:
 - apiref
-ms.openlocfilehash: f1a30c197373928ec10c2b84de4e805b94ea2384
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 47e94ee8ee4f45e365fa9efe888cb706f8bb1dfd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724508"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746595"
 ---
 # <a name="icordebugprocess2-interface"></a>ICorDebugProcess2 インターフェイス
 
@@ -37,7 +38,7 @@ ms.locfileid: "95724508"
 |[SetDesiredNGENCompilerFlags メソッド](icordebugprocess2-setdesiredngencompilerflags-method.md)|Just-in-time (JIT) コンパイラがデバッグ中のプロセスにイメージを読み込むために必要なフラグを設定します。|  
 |[SetUnmanagedBreakpoint メソッド](icordebugprocess2-setunmanagedbreakpoint-method.md)|指定したネイティブイメージオフセットにアンマネージブレークポイントを設定します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  

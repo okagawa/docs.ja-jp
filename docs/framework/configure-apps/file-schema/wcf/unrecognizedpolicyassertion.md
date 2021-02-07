@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <unrecognizedPolicyAssertion>'
 title: <unrecognizedPolicyAssertion>
 ms.date: 03/30/2017
 ms.assetid: 043c3c8f-f263-4ac7-a1af-945d03413f0b
-ms.openlocfilehash: a2e0bf9dc4d72bd8f5fed528cb22e2ea7008a5c1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 59911861e9f4a4bdc201940bac27d5a57035e0ab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172854"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749130"
 ---
 # \<unrecognizedPolicyAssertion>
 
@@ -26,7 +27,7 @@ ms.locfileid: "91172854"
 <unrecognizedPolicyAssertion />
 ```  
   
-## <a name="type"></a>種類  
+## <a name="type"></a>Type  
 
  `Type`  
   
@@ -40,7 +41,7 @@ ms.locfileid: "91172854"
   
 ### <a name="child-elements"></a>子要素  
 
- None  
+ なし  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -53,5 +54,5 @@ ms.locfileid: "91172854"
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: のプロセスインターフェイス'
 title: ICorDebugProcess インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: be86f4b5-418a-4c5c-a67c-97148c65ed8c
 topic_type:
 - apiref
-ms.openlocfilehash: 7f9d4ac99234545ef75d9b91e6e84f79a133ffef
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7172ee12bf450235db1c18601c8ff7de51435520
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95694920"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746790"
 ---
 # <a name="icordebugprocess-interface"></a>ICorDebugProcess インターフェイス
 
@@ -44,10 +45,10 @@ ms.locfileid: "95694920"
 |[ModifyLogSwitch メソッド](icordebugprocess-modifylogswitch-method.md)|指定されたログスイッチの重大度レベルを設定します。|  
 |[ReadMemory メソッド](icordebugprocess-readmemory-method.md)|プロセスからメモリを読み取ります。|  
 |[SetThreadContext メソッド](icordebugprocess-setthreadcontext-method.md)|指定されたスレッドのコンテキストを設定します。|  
-|[ThreadForFiberCookie メソッド](icordebugprocess-threadforfibercookie-method.md)|非推奨。|  
+|[ThreadForFiberCookie メソッド](icordebugprocess-threadforfibercookie-method.md)|非推奨になりました。|  
 |[WriteMemory メソッド](icordebugprocess-writememory-method.md)|プロセスのメモリ領域にデータを書き込みます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  

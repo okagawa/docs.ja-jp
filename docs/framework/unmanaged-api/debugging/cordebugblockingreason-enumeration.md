@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: CorDebugBlockingReason 列挙型'
 title: CorDebugBlockingReason 列挙体
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6ac2531-ddfe-46fd-88fe-8b1eabe0b255
 topic_type:
 - apiref
-ms.openlocfilehash: ddd03d70656ad52fd9d577beedc60b51c7b305d5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c2d9c805549d046fe40ab5ea00f30e2fd0a680a3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672852"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747106"
 ---
 # <a name="cordebugblockingreason-enumeration"></a>CorDebugBlockingReason 列挙体
 
@@ -44,7 +45,7 @@ Typedef enum CorDebugBlockingReason
 |`BLOCKING_MONITOR_CRITICAL_SECTION`|スレッドが、オブジェクトのモニターロックに関連付けられているクリティカルセクションを取得しようとしています。 通常、このエラー <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> は、メソッドまたはメソッドのいずれかを呼び出すと発生し <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> ます。|  
 |`BLOCKING_MONITOR_EVENT`|スレッドが、オブジェクトのモニターロックに関連付けられているイベントを待機しています。 通常、これは、メソッドのいずれかを呼び出すと発生し <xref:System.Threading.Monitor?displayProperty=nameWithType> `Wait` ます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `BLOCKING_MONITOR_CRITICAL_SECTION`メンバーまたは `BLOCKING_MONITOR_EVENT` メンバーが[CorDebugBlockingObject](cordebugblockingobject-structure.md)構造体で使用されている場合、 `pBlockingObject` 構造体のメンバーは、入力されるオブジェクトを表す "ICorDebugValue" インターフェイスを指します。 また、 [ICorDebugHeapValue3](icordebugheapvalue3-interface.md) インターフェイスを実装することも保証されます。  
   

@@ -1,20 +1,21 @@
 ---
+description: '詳細情報: <faultPropagationQuery>'
 title: <faultPropagationQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4fb5c2b1-3dad-4eca-9c7f-3efb51899813
-ms.openlocfilehash: 6b43a570b4d4534adce1ef5ab394849651e3ac0e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 08786bfa66d74f5f29353c4d6a86a2abd34df8f9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398714"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748701"
 ---
 # \<faultPropagationQuery>
 
 1 つのアクティビティ内で発生するエラーの処理を追跡するために使用するクエリを表します。  このイベントは、FaultHandler がエラーを処理するたびに発生します。 1 つのアクティビティ内で発生したエラーの処理は、このようなクエリを使用して追跡する必要があります。 追跡参加要素がエラー伝達レコードを定期受信するには、このクエリが必要です。
 
- 追跡プロファイルのクエリの詳細については、「[追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)」を参照してください。
+ 追跡プロファイルのクエリの詳細については、「 [追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)」を参照してください。
 
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)\
@@ -56,7 +57,7 @@ ms.locfileid: "70398714"
 
 ### <a name="parent-elements"></a>親要素
 
-|要素|Description|
+|要素|説明|
 |-------------|-----------------|
 |[\<faultPropagationQueries>](faultpropagationqueries.md)|1 つのアクティビティ内で発生するエラーの処理を追跡するために使用する、構成要素の一覧を表します。  このイベントは、FaultHandler がエラーを処理するたびに発生します。|
 

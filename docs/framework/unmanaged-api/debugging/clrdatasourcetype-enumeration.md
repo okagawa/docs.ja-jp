@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: CLRDataSourceType 列挙型'
 title: CLRDataSourceType 列挙型
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 7ace405e2624f15b1cdb6d383222ae87c93289bb
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 06590e21aa4cdf6e89977a79da36a413d5ff4f1c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274092"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747243"
 ---
 # <a name="clrdatasourcetype-enumeration"></a>CLRDataSourceType 列挙型
 
@@ -43,18 +44,18 @@ typedef enum
 | ----------------------------- | ------------------------------------- |
 | `CLRDATA_SOURCE_TYPE_INVALID` | 他に何も適用されないことを示すには |
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 この列挙体はランタイム内に存在し、ヘッダーまたはライブラリファイルを介して公開されることはありません。 これを使用するには、コードで前述したように、列挙型を定義します。 これは、「 `CLRDATA_ENUM` [Common Data Types](../common-data-types-unmanaged-api-reference.md)」で説明されているように、という別名でもあります。
 
 ## <a name="requirements"></a>要件
 
-**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
-**ヘッダー:** なし  
-**ライブラリ**なし  
-**.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+**ヘッダー:** 存在  
+**ライブラリ:** 存在  
+**.NET Framework のバージョン:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>関連項目
 
 - [デバッグ](index.md)
-- [列挙型のデバッグ](debugging-enumerations.md)
+- [列挙体のデバッグ](debugging-enumerations.md)

@@ -1,20 +1,21 @@
 ---
+description: '詳細情報: 例: データバインド時の例外の処理'
 title: 例:データ バインド時の例外の処理
 ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
-ms.openlocfilehash: 399bd1af9ef25eca9cdfe1e13fdc4c01021babcd
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 434520e42afa3e1ab7c453c3ddf41863ceb62eb6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96251075"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747895"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>例:データ バインド時の例外の処理
 
 > [!NOTE]
 > このトピックでは、プレリリース ソフトウェアである .NET Native Developer Preview について述べています。 プレビュー版は、[Microsoft Connect Web サイト](https://go.microsoft.com/fwlink/?LinkId=394611)からダウンロードできます (登録が必要です)。  
   
- 次の例は、.NET ネイティブツールチェーンを使用してコンパイルされたアプリがデータをバインドしようとしたときにスローされる [MissingMetadataException](missingmetadataexception-class-net-native.md) 例外を解決する方法を示しています。 例外情報は次のとおりです。  
+ 次の例は、.NET Native ツールチェーンを使用してコンパイルされたアプリがデータをバインドしようとしたときにスローされる [MissingMetadataException](missingmetadataexception-class-net-native.md) 例外を解決する方法を示しています。 例外情報は次のとおりです。  
   
 ```output
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:

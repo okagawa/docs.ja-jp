@@ -1,15 +1,16 @@
 ---
-title: <AttributeImplies> 要素 (.NET ネイティブ)
+description: '詳細情報: <AttributeImplies> 要素 (.NET Native)'
+title: <AttributeImplies> 要素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
-ms.openlocfilehash: 4171345bb5337436142128623abc7d183c4477ff
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5af1f60f2c1e556281f2f1d392b1a046e52dd277
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288113"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747908"
 ---
-# <a name="attributeimplies-element-net-native"></a>\<AttributeImplies> 要素 (.NET ネイティブ)
+# <a name="attributeimplies-element-net-native"></a>\<AttributeImplies> 要素 (.NET Native)
 
 それを含む属性が適用されるコード要素のポリシーを定義します。  
   
@@ -34,7 +35,7 @@ ms.locfileid: "96288113"
   
 ### <a name="attributes"></a>属性  
   
-|属性|属性の型|Description|  
+|属性|属性の型|説明|  
 |---------------|--------------------|-----------------|  
 |`Activate`|リフレクション|省略可能な属性です。 コンストラクターへの実行時アクセスを制御して、インスタンスのアクティブ化を有効にします。|  
 |`Browse`|リフレクション|省略可能な属性です。 プログラム要素に関する情報の照会を制御しますが、実行時アクセスは有効にしません。|  

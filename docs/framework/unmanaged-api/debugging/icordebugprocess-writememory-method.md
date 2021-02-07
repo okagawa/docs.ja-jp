@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: WriteMemory Method:: メソッド'
 title: ICorDebugProcess::WriteMemory メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d5c07d86-045d-4391-893b-0bcd2959f90e
 topic_type:
 - apiref
-ms.openlocfilehash: 18416954517c3cac09d013b8075bd097305a1dca
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6ea48aff2e1ea812d851a228976b458f58a60e14
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673970"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746624"
 ---
 # <a name="icordebugprocesswritememory-method"></a>ICorDebugProcess::WriteMemory メソッド
 
@@ -50,7 +51,7 @@ HRESULT WriteMemory(
  `written`  
  入出力このプロセスのメモリ領域に書き込まれたバイト数を受け取る変数へのポインター。 `written`が NULL の場合、このパラメーターは無視されます。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  データは、ブレークポイントの背後に自動的に書き込まれます。 .NET Framework バージョン2.0 では、ネイティブデバッガーは、このメソッドを使用して命令ストリームにブレークポイントを挿入することはできません。 代わりに [ICorDebugProcess2:: SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md) を使用してください。  
   

@@ -1,15 +1,16 @@
 ---
-title: <Method> 要素 (.NET ネイティブ)
+description: '詳細情報: <Method> 要素 (.NET Native)'
+title: <Method> 要素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
-ms.openlocfilehash: 1d57457c90e44c70caa301eccc02c5831d283cea
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 76c379ed81e721316e4293b20ba89acfbc9d174f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287905"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747525"
 ---
-# <a name="method-element-net-native"></a>\<Method> 要素 (.NET ネイティブ)
+# <a name="method-element-net-native"></a>\<Method> 要素 (.NET Native)
 
 コンストラクターまたはメソッドにランタイム リフレクション ポリシーを適用します。  
   

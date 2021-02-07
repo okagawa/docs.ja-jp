@@ -1,17 +1,18 @@
 ---
+description: 詳細については、.NET Native でのはじめにに関するページを参照してください
 title: .NET ネイティブの概要
 ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
-ms.openlocfilehash: b6cd4acaa377de7fc172fb12c9fb9ff1b832f88a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6079e21764ebc39515eb9b9f217057d916da8942
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551211"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747804"
 ---
 # <a name="getting-started-with-net-native"></a>.NET ネイティブの概要
 
-Windows 10 用に新しい Windows アプリを作成する場合も、既存の Windows ストア アプリを移行する場合も、次に示す同じ手順を実行することになります。 .NET ネイティブアプリを作成するには、次の手順を実行します。
+Windows 10 用に新しい Windows アプリを作成する場合も、既存の Windows ストア アプリを移行する場合も、次に示す同じ手順を実行することになります。 .NET Native アプリを作成するには、次の手順を実行します。
 
 1. [Windows 10 を対象とするユニバーサル Windows プラットフォーム (UWP) ストア アプリを開発](#Step1)し、アプリのデバッグ ビルドをテストして、そのアプリが適切に動作することを確認します。
 
@@ -22,7 +23,7 @@ Windows 10 用に新しい Windows アプリを作成する場合も、既存の
 4. [メタデータの欠落を手動で解決し](#Step4)、すべての問題が解決されるまで [手順 3](#Step3) を繰り返します。
 
 > [!NOTE]
-> 既存の Windows ストアアプリを .NET ネイティブに移行する場合は、「 [Windows ストアアプリの .NET ネイティブへの移行](migrating-your-windows-store-app-to-net-native.md)」を必ず確認してください。
+> 既存の Windows ストアアプリを .NET Native に移行する場合は、「 [Windows ストアアプリの .NET Native への移行](migrating-your-windows-store-app-to-net-native.md)」を必ず確認してください。
 
 <a name="Step1"></a>
 
@@ -34,12 +35,12 @@ Windows 10 用に新しい Windows アプリを作成する場合も、既存の
 
 2. UWP アプリ プロジェクトのコンパイルに .NET ネイティブ ツール チェーンを使用する場合と使用しない場合では、両者の間に既知の互換性問題がある点にご注意ください。 詳細については、 [移行ガイド](migrating-your-windows-store-app-to-net-native.md) を参照してください。
 
-ローカルシステム (またはシミュレーター) で実行される .NET ネイティブの領域に対して C# または Visual Basic コードを記述できるようになりました。
+ローカルシステム (またはシミュレーター) で実行される .NET Native の領域に対して C# または Visual Basic コードを記述できるようになりました。
 
 > [!IMPORTANT]
 > アプリを開発するときに、コードでのシリアル化またはリフレクションを使用する場合は注意してください。
 
-既定では、デバッグビルドは、F5 を使用した迅速な配置を可能にするために JIT でコンパイルされますが、リリースビルドは .NET ネイティブプリコンパイルテクノロジを使用してコンパイルされます。 つまり、アプリのデバッグ ビルドが正常に動作するようにするには、.NET ネイティブ ツール チェーンでコンパイルする前に、これをビルドしてテストする必要があるということです。
+既定では、デバッグビルドは、F5 を使用した迅速な配置を可能にするために JIT でコンパイルされますが、リリースビルドは .NET Native プリコンパイルテクノロジを使用してコンパイルされます。 つまり、アプリのデバッグ ビルドが正常に動作するようにするには、.NET ネイティブ ツール チェーンでコンパイルする前に、これをビルドしてテストする必要があるということです。
 
 <a name="Step2"></a>
 
@@ -79,17 +80,17 @@ Windows 10 用に新しい Windows アプリを作成する場合も、既存の
 
 ## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>手順 3: リリース ビルドのアプリを展開してテストする
 
-ランタイム ディレクティブ ファイルを更新したら、アプリのリリース ビルドを再ビルドして配置できます。 .NET ネイティブバイナリは、プロジェクトの [**プロパティ**] ダイアログボックスの [**コンパイル**] タブにある [**ビルド出力パス**] テキストボックスで指定したディレクトリの ILC サブディレクトリに配置されます。このフォルダーにないバイナリは .NET ネイティブでコンパイルされていません。 ターゲット プラットフォームごとに、アプリを十分にテストし、失敗シナリオを含むすべてのシナリオをテストします。
+ランタイム ディレクティブ ファイルを更新したら、アプリのリリース ビルドを再ビルドして配置できます。 .NET Native バイナリは、プロジェクトの [**プロパティ**] ダイアログボックスの [**コンパイル**] タブにある [**ビルド出力パス**] テキストボックスで指定したディレクトリの ILC サブディレクトリに配置されます。このフォルダーにないバイナリは .NET Native でコンパイルされていません。 ターゲット プラットフォームごとに、アプリを十分にテストし、失敗シナリオを含むすべてのシナリオをテストします。
 
 アプリが正常に動作しない場合 (特に実行時に [MissingMetadataException](missingmetadataexception-class-net-native.md) 例外または [MissingInteropDataException](missinginteropdataexception-class-net-native.md) 例外をスローする場合)、次のセクション「[手順 4: メタデータの欠落を手動で解決する](#Step4)」の手順を実行してください。 初回例外を有効にすると、このようなバグの検出に役立ちます。
 
-アプリのデバッグビルドをテストしてデバッグし、 [MissingMetadataException](missingmetadataexception-class-net-native.md) 例外と [MissingInteropDataException](missinginteropdataexception-class-net-native.md) 例外を削除したことが確実な場合は、アプリを最適化された .NET ネイティブアプリとしてテストする必要があります。 これを行うには、アクティブ プロジェクトの構成を **[デバッグ]** から **[リリース]** に変更します。
+アプリのデバッグビルドをテストしてデバッグし、 [MissingMetadataException](missingmetadataexception-class-net-native.md) 例外と [MissingInteropDataException](missinginteropdataexception-class-net-native.md) 例外を削除したことが確実な場合は、アプリを最適化された .NET Native アプリとしてテストする必要があります。 これを行うには、アクティブ プロジェクトの構成を **[デバッグ]** から **[リリース]** に変更します。
 
 <a name="Step4"></a>
 
 ## <a name="step-4-manually-resolve-missing-metadata"></a>手順 4: メタデータの欠落を手動で解決する
 
-デスクトップでは発生しない .NET ネイティブで発生する最も一般的なエラーは、ランタイムの [MissingMetadataException](missingmetadataexception-class-net-native.md)、 [MissingInteropDataException](missinginteropdataexception-class-net-native.md)、または [誤 singruntimeartifactexception](missingruntimeartifactexception-class-net-native.md) 例外です。 メタデータの欠落は、予期しない動作やアプリの失敗によって判明することもあります。 このセクションでは、ランタイム ディレクティブ ファイルにディレクティブを追加することによって、これらの例外をデバッグして解決する方法を説明します。 ランタイム ディレクティブの形式については、「[ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)」を参照してださい。 ランタイム ディレクティブを追加したら、もう一度 [アプリを配置およびテスト](#Step3) して、例外が発生しなくなるまで新しい [MissingMetadataException](missingmetadataexception-class-net-native.md)、 [MissingInteropDataException](missinginteropdataexception-class-net-native.md)、および  [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) 例外を解決する必要があります。
+デスクトップでは発生しない .NET Native で発生する最も一般的なエラーは、ランタイムの [MissingMetadataException](missingmetadataexception-class-net-native.md)、 [MissingInteropDataException](missinginteropdataexception-class-net-native.md)、または [誤 singruntimeartifactexception](missingruntimeartifactexception-class-net-native.md) 例外です。 メタデータの欠落は、予期しない動作やアプリの失敗によって判明することもあります。 このセクションでは、ランタイム ディレクティブ ファイルにディレクティブを追加することによって、これらの例外をデバッグして解決する方法を説明します。 ランタイム ディレクティブの形式については、「[ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)」を参照してださい。 ランタイム ディレクティブを追加したら、もう一度 [アプリを配置およびテスト](#Step3) して、例外が発生しなくなるまで新しい [MissingMetadataException](missingmetadataexception-class-net-native.md)、 [MissingInteropDataException](missinginteropdataexception-class-net-native.md)、および  [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) 例外を解決する必要があります。
 
 > [!TIP]
 > 高いレベルでランタイム ディレクティブを指定して、アプリがコードの変更に対応できるようにします。  メンバー レベルではなく、名前空間レベルおよび型レベルでランタイム ディレクティブを追加することをお勧めします。 回復性と、バイナリを大きくすることに伴うコンパイル時間の延長の間にはトレードオフがある場合があることに注意してください。
@@ -111,7 +112,7 @@ Windows 10 用に新しい Windows アプリを作成する場合も、既存の
   - より適切な他の方法を使用できる場合に、リフレクションに依存するメソッドをコードで呼び出していますか。
 
 > [!NOTE]
-> リフレクションの違い、およびデスクトップアプリと .NET ネイティブでのメタデータの可用性に起因する問題の処理の詳細については、「 [リフレクションに依存する api](apis-that-rely-on-reflection.md)」を参照してください。
+> リフレクションの違い、およびデスクトップアプリと .NET Native でのメタデータの可用性に起因する問題の処理の詳細については、「 [リフレクションに依存する api](apis-that-rely-on-reflection.md)」を参照してください。
 
 アプリのテスト時に発生する例外およびその他の問題の処理に関する具体的な例については、次のページを参照してください。
 

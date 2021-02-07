@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Isoprocess:: IsOSSuspended メソッド'
 title: ICorDebugProcess::IsOSSuspended メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 83406cb2-5797-4402-872d-89c9516aefec
 topic_type:
 - apiref
-ms.openlocfilehash: fffa61d8e406162251b0934a9846e5a813422798
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aa5e438418330d9fee51fcdb56a617421df06904
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724586"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746768"
 ---
 # <a name="icordebugprocessisossuspended-method"></a>ICorDebugProcess::IsOSSuspended メソッド
 
@@ -42,7 +43,7 @@ HRESULT IsOSSuspended(
  `pbSuspended`  
  入出力`true`指定したスレッドが中断された場合は、それ以外の場合 `pbSuspended` はとなるブール値へのポインター。 `false`  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  デバッガーがこのプロセスを停止した結果として、指定されたスレッドが中断された場合、指定されたスレッドの Win32 中断カウントは1だけインクリメントされます。 デバッガーのユーザーインターフェイス (UI) では、ユーザーに対してスレッドのオペレーティングシステム (OS) の中断カウントを表示すると、この情報を考慮に入れることができます。  
   

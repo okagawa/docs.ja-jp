@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <useManagedPresentation>'
 title: <useManagedPresentation>
 ms.date: 03/30/2017
 ms.assetid: 17a0dd77-af54-41db-a9d0-4b17ff42878f
-ms.openlocfilehash: 86a6f975b05133d5f9f21fcfb82ef4c23d2ffaba
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9203daedcc0553c7a1308b2763b9e818ca6560c1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148813"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749039"
 ---
 # \<useManagedPresentation>
 
@@ -36,7 +37,7 @@ WS-Trust の CardSpace プロファイルをサポートする CardSpace セキ�
   
 ### <a name="child-elements"></a>子要素  
 
- None  
+ なし  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -55,5 +56,5 @@ WS-Trust の CardSpace プロファイルをサポートする CardSpace セキ�
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

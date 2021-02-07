@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次の情報を参照してください: いい Process:: ModifyLogSwitch メソッド'
 title: ICorDebugProcess::ModifyLogSwitch メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5fd30875-555e-4e96-877b-5dd266cde7c4
 topic_type:
 - apiref
-ms.openlocfilehash: 3ac1b3606131f534195df9b6b59bf72b1bff27fb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3c825d6c6b075139793b54526dca696c8fba35a4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724534"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746774"
 ---
 # <a name="icordebugprocessmodifylogswitch-method"></a>ICorDebugProcess::ModifyLogSwitch メソッド
 
@@ -42,7 +43,7 @@ HRESULT ModifyLogSwitch(
  `lLevel`  
  から指定されたログスイッチに設定される重大度レベル。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドは、によって実行される場合にのみ有効です: [: CreateProcess managedcallback:: CreateProcess](icordebugmanagedcallback-createprocess-method.md) コールバックが発生しました。  
   

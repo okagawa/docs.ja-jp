@@ -1,15 +1,16 @@
 ---
-title: <Field> 要素 (.NET ネイティブ)
+description: '詳細情報: <Field> 要素 (.NET Native)'
+title: <Field> 要素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
-ms.openlocfilehash: e63dc293c42aa620b7f7ac15fc0454bc603b9dde
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1f8c8b6720fb90bdc5855da7b17694253bbb7629
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96251049"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747843"
 ---
-# <a name="field-element-net-native"></a>\<Field> 要素 (.NET ネイティブ)
+# <a name="field-element-net-native"></a>\<Field> 要素 (.NET Native)
 
 フィールドにランタイム リフレクション ポリシーを適用します。  
   

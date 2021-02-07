@@ -1,20 +1,21 @@
 ---
+description: '詳細情報: 例: 動的プログラミングのトラブルシューティング'
 title: 例:動的プログラミングのトラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
-ms.openlocfilehash: 0cff232668b9eb65b09a22b14e4ae58673ccd6d0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7ad3fde9c81800123abe899e2f696c3833fed5bc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288074"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747856"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>例:動的プログラミングのトラブルシューティング
 
 > [!NOTE]
 > このトピックでは、プレリリース ソフトウェアである .NET Native Developer Preview について述べています。 プレビュー版は、[Microsoft Connect Web サイト](https://go.microsoft.com/fwlink/?LinkId=394611)からダウンロードできます (登録が必要です)。  
   
- .NET ネイティブツールチェーンを使用して開発されたアプリでのメタデータ参照の失敗によっては、例外が発生します。  予測できない方法でアプリに出現するものもあります。  次の例は、null オブジェクトの参照により生じるアクセス違反を示しています。  
+ .NET Native ツールチェーンを使用して開発されたアプリでのメタデータ参照の失敗によっては、例外が発生します。  予測できない方法でアプリに出現するものもあります。  次の例は、null オブジェクトの参照により生じるアクセス違反を示しています。  
   
 ```output
 Access violation - code c0000005 (first chance)  
@@ -50,7 +51,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
   
  この場合、`App.Core.ViewModels` のランタイム ディレクティブを追加すると、問題が解決します。 根本原因は、**null** を返した <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> メソッドへの API 呼び出しで、アプリではクラッシュが発生するまでエラーを出さずにこの問題を無視していました。  
   
- 動的プログラミングでは、.NET ネイティブでリフレクション Api を使用する場合は、 <xref:System.Type.GetType%2A?displayProperty=nameWithType> エラー発生時に例外をスローするオーバーロードを使用することをお勧めします。  
+ 動的プログラミングでは、.NET Native でリフレクション Api を使用する場合は、 <xref:System.Type.GetType%2A?displayProperty=nameWithType> エラー発生時に例外をスローするオーバーロードを使用することをお勧めします。  
   
 ## <a name="is-this-an-isolated-case"></a>特殊なケースかどうか  
 

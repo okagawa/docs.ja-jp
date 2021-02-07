@@ -1,15 +1,16 @@
 ---
-title: <ImpliesType> 要素 (.NET ネイティブ)
+description: '詳細情報: <ImpliesType> 要素 (.NET Native)'
+title: <ImpliesType> 要素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
-ms.openlocfilehash: 04c3a9498a5c9c24d67dedd02fb4c9d68d9efbdd
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6476876f335788a276907fd2aef02d5623382699
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287957"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747687"
 ---
-# <a name="impliestype-element-net-native"></a>\<ImpliesType> 要素 (.NET ネイティブ)
+# <a name="impliestype-element-net-native"></a>\<ImpliesType> 要素 (.NET Native)
 
 型にポリシーを適用します (含んでいる型またはメソッドにそのポリシーが適用されている場合)。  
   
@@ -93,7 +94,7 @@ ms.locfileid: "96287957"
   
  このディレクティブは、`Explicit` のインスタンス化に `Dynamic` ポリシー設定が定義されていない場合は効果がありません。 たとえば、`Explicit<Int32>` の場合、`Implicit<Int32>` はそのパブリック メンバーをルートとしてインスタンス化され、そのメタデータが動的プログラミングで使用できるようになります。  
   
- 1 つ以上のシリアライザーに適用される、実際の例を次に示します。 ディレクティブは、 `IList<` *something* `>` アプリケーションごとの注釈を必要とせずに、対応する何らかの型に対してリフレクション `List<` *something* を行う必要があるという要件を記述し `>` ます。  
+ 1 つ以上のシリアライザーに適用される、実際の例を次に示します。 ディレクティブは、 `IList<`  `>` アプリケーションごとの注釈を必要とせずに、対応する何らかの型に対してリフレクション `List<` を行う必要があるという要件を記述し `>` ます。  
   
 ```xml  
 <Type Name="System.Collections.Generic.IList{T}">  

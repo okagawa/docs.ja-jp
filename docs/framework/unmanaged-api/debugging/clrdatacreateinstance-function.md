@@ -1,4 +1,5 @@
 ---
+description: CLRDataCreateInstance 関数の詳細について説明します。
 title: CLRDataCreateInstance 関数
 ms.date: 03/30/2017
 api_name:
@@ -7,7 +8,7 @@ api_location:
 - mscordbi.dll
 - mscordacwks.dll
 api_type:
-- COM
+- DLLExport
 f1_keywords:
 - CLRDataCreateInstance
 helpviewer_keywords:
@@ -15,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 440bad90-5a88-45e7-9157-4596801d8d19
 topic_type:
 - apiref
-ms.openlocfilehash: 2ffc575cfcef1089a70ef3b6d38787a5b4c50443
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 923b0c687d2b337eacb475973927452e3b47ad0d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729825"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747258"
 ---
 # <a name="clrdatacreateinstance-function"></a>CLRDataCreateInstance 関数
 
-指定したターゲット項目のインターフェイスオブジェクトを作成します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-HRESULT CLRDataCreateInstance (  
+指定したターゲット項目のインターフェイスオブジェクトを作成します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+HRESULT CLRDataCreateInstance (
     [in]  REFIID           iid,
     [in]  ICLRDataTarget  *target,
     [out] void           **iface  
@@ -47,7 +48,7 @@ HRESULT CLRDataCreateInstance (
  `iface`  
  入出力返されたインターフェイスオブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ICLRDataTarget`オブジェクトは、デバッグアプリケーションのライターによって実装されます。 実装は、表示されるターゲット項目の種類によって異なります。 ターゲット項目には、プロセス、メモリダンプ、リモートコンピューターなどがあります。  
   
@@ -58,8 +59,10 @@ HRESULT CLRDataCreateInstance (
  **ヘッダー:** ClrData .idl  
   
  **ライブラリ:** CorGuids.lib  
+
+ **アセンブリ**: mscordacwks.dll、mscordbi.dll
   
- **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** .NET Framework 2.0 以降で使用可能
   
 ## <a name="see-also"></a>関連項目
 

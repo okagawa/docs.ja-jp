@@ -1,18 +1,19 @@
 ---
+description: '詳細情報: <federationConfiguration>'
 title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: 39e96a161a2e75d5f00b73f6b08b1e4a0c109aee
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f8793a8fbd6fc6d5e6994c8e368f587b740e5973
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201357"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748987"
 ---
 # \<federationConfiguration>
 
-<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> <xref:System.IdentityModel.Services.SessionAuthenticationModule> Ws-federation プロトコルを介してフェデレーション認証を使用する場合、(wsfam) と (SAM) を構成します。 <xref:System.Security.Claims.ClaimsAuthorizationManager> <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> またはクラスを使用して <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> クレームベースのアクセス制御を提供するときに、を構成します。  
+<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> <xref:System.IdentityModel.Services.SessionAuthenticationModule> WS-Federation プロトコルを介してフェデレーション認証を使用する場合、(wsfam) と (SAM) を構成します。 <xref:System.Security.Claims.ClaimsAuthorizationManager> <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> またはクラスを使用して <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> クレームベースのアクセス制御を提供するときに、を構成します。  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.identityModel.services>**](system-identitymodel-services.md)\
@@ -35,28 +36,28 @@ ms.locfileid: "91201357"
   
 |属性|説明|  
 |---------------|-----------------|  
-|name|フェデレーション構成要素の名前。 この属性は、主に将来のプロトコルの機能拡張ポイントを提供します。 省略可能。|  
-|identity Configurationname|使用する要素で指定されている id 構成セクションの名前 [\<identityConfiguration>](identityconfiguration.md) 。 この属性が指定されていない場合は、既定の id 構成セクションが使用されます。 省略可能。|  
+|name|フェデレーション構成要素の名前。 この属性は、主に将来のプロトコルの機能拡張ポイントを提供します。 任意。|  
+|identity Configurationname|使用する要素で指定されている id 構成セクションの名前 [\<identityConfiguration>](identityconfiguration.md) 。 この属性が指定されていない場合は、既定の id 構成セクションが使用されます。 任意。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<cookieHandler>](cookiehandler.md)|SAM によって使用されるクッキーハンドラーを構成します。 省略可能。|  
-|[\<serviceCertificate>](servicecertificate.md)|トークンの暗号化と復号化に使用される証明書を構成します。 省略可能。|  
-|[\<wsFederation>](wsfederation.md)|WS-FEDERATION 認証モジュール (WSFAM) を構成します。 省略可能。|  
+|[\<cookieHandler>](cookiehandler.md)|SAM によって使用されるクッキーハンドラーを構成します。 任意。|  
+|[\<serviceCertificate>](servicecertificate.md)|トークンの暗号化と復号化に使用される証明書を構成します。 任意。|  
+|[\<wsFederation>](wsfederation.md)|WS-Federation 認証モジュール (WSFAM) を構成します。 任意。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<system.identityModel.services>](system-identitymodel-services.md)|WS-FEDERATION プロトコルを使用した認証の構成セクション。|  
+|[\<system.identityModel.services>](system-identitymodel-services.md)|WS-Federation プロトコルを使用した認証の構成セクション。|  
   
 ## <a name="remarks"></a>解説  
 
  要素は、 \<federationConfiguration> 2 つの異なるシナリオで設定を提供します。  
   
-- パッシブ Web アプリケーションで WS-FEDERATION を使用する場合、要素には、 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (wsfam) と (SAM) を構成する設定が含まれ <xref:System.IdentityModel.Services.SessionAuthenticationModule> ます。 また、セキュリティトークンハンドラーと証明書の構成に使用される id 構成と、要求承認マネージャーや要求認証マネージャーなどのコンポーネントも参照しています。  
+- パッシブ Web アプリケーションで WS-Federation を使用する場合、要素には、 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (wsfam) と (SAM) を構成する設定が含まれ <xref:System.IdentityModel.Services.SessionAuthenticationModule> ます。 また、セキュリティトークンハンドラーと証明書の構成に使用される id 構成と、要求承認マネージャーや要求認証マネージャーなどのコンポーネントも参照しています。  
   
 - クラスまたはクラスを使用して、 <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> コード内にクレームベースのアクセス制御を提供する場合、要素は、承認の決定に使用されるクレーム承認マネージャーとポリシーを構成する id 構成を参照します。 これは、パッシブな Web シナリオではないシナリオでも当てはまります。たとえば、Windows Communication Foundation (WCF) アプリケーションや、Web ベースではないアプリケーションなどです。 アプリケーションがパッシブな Web アプリケーションでない場合は、要素 [\<claimsAuthorizationManager>](claimsauthorizationmanager.md) (およびその子ポリシー要素が存在する場合) は、要素によって参照される id 構成に適用される `<federationConfiguration>` 唯一の設定です。 他の属性はすべて無視されます。  
   
