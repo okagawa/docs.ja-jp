@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「WS 2007 フェデレーション HTTP バインド」を参照してください。
 title: WS 2007 フェデレーション HTTP バインディング
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: bf61e64733859d96adf42fbacf08266eca1f5b45
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 12363abb1c8c503db8ec4aac9197276c8ec41c58
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183187"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99715055"
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 フェデレーション HTTP バインディング
 
@@ -16,9 +17,9 @@ ms.locfileid: "79183187"
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。
 
-このサンプルは、コンソール ベースのクライアント プログラム (*Client.exe*) 、コンソール ベースのセキュリティ トークン サービス プログラム (*Securitytokenservice.exe*) 、およびコンソール ベースのサービス プログラム (*Service.exe*) から構成されます。 サービスは、要求/応答通信パターンを定義するコントラクトを実装します。 このコントラクトは `ICalculator` インターフェイスによって定義されており、算術演算 (`Add`、`Subtract`、`Multiply`、`Divide`) を公開しています。 クライアントは、セキュリティ トークンをセキュリティ トークン サービス (STS) から取得し、指定された算術演算を実行する同期要求をサービスに対して行います。 サービスが応答し、結果を返します。 クライアント アクティビティは、コンソール ウィンドウに表示されます。
+このサンプルは、コンソールベースのクライアントプログラム (*Client.exe*)、コンソールベースの Security Token Service プログラム (*Securitytokenservice.exe*)、コンソールベースのサービスプログラム (*Service.exe*) で構成されています。 サービスは、要求/応答通信パターンを定義するコントラクトを実装します。 このコントラクトは `ICalculator` インターフェイスによって定義されており、算術演算 (`Add`、`Subtract`、`Multiply`、`Divide`) を公開しています。 クライアントは、セキュリティ トークンをセキュリティ トークン サービス (STS) から取得し、指定された算術演算を実行する同期要求をサービスに対して行います。 サービスが応答し、結果を返します。 クライアント アクティビティは、コンソール ウィンドウに表示されます。
 
-このサンプルは、`ICalculator` 要素を使用して `ws2007FederationHttpBinding` コントラクトを利用できるようにします。 クライアント上のこのバインディングの構成は、次のコードに示されています。
+このサンプルは、`ICalculator` 要素を使用して `ws2007FederationHttpBinding` コントラクトを利用できるようにします。 クライアントでのこのバインディングの構成を次のコードに示します。
 
 ```xml
 <bindings>
@@ -37,9 +38,9 @@ ms.locfileid: "79183187"
 </bindings>
 ```
 
-セキュリティ[\<>](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)では、`security`どのセキュリティ モードを使用するかを指定します。 このサンプルでは、`message`セキュリティが使用されています[\<>](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md) [ \<>。](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) [\<発行者](../../configure-apps/file-schema/wcf/issuer.md)は[\<、クライアントが](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)サービスに対して認証できるように、クライアントにセキュリティ トークンを発行する STS のアドレスとバインドを指定>メッセージ内の`ICalculator`要素を>します。
+では、値によって、 [\<security>](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md) `security` 使用するセキュリティモードを指定します。 このサンプルでは、セキュリティが使用されているので、が `message` [\<message>](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) 内で指定されてい [\<security>](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md) ます。 内の要素は、クライアントが [\<issuer>](../../configure-apps/file-schema/wcf/issuer.md) [\<message>](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) サービスに対して認証できるように、セキュリティトークンをクライアントに発行する STS のアドレスとバインディングを指定し `ICalculator` ます。
   
-サービス上のこのバインディングの構成は、次のコードに示されています。
+サービスでのこのバインディングの構成を次のコードに示します。
 
 ```xml
 <bindings>
@@ -64,7 +65,7 @@ ms.locfileid: "79183187"
 </bindings>
 ```
 
-セキュリティ[\<>](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)では、`security`どのセキュリティ モードを使用するかを指定します。 このサンプルでは、`message`セキュリティが使用されています[\<>](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md) [ \<>。](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) [ \<](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) `ws2007FederationHttpBinding` [ \<issuerMetadata>](../../configure-apps/file-schema/wcf/issuermetadata.md)メッセージ内の要素>STS のメタデータを取得するために使用できるエンドポイントのアドレスと ID を指定します。
+では、値によって、 [\<security>](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md) `security` 使用するセキュリティモードを指定します。 このサンプルでは、セキュリティが使用されているので、が `message` [\<message>](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) 内で指定されてい [\<security>](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md) ます。 [\<issuerMetadata>](../../configure-apps/file-schema/wcf/issuermetadata.md)内のの要素は、 `ws2007FederationHttpBinding` [\<message>](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) STS のメタデータを取得するために使用できるエンドポイントのアドレスと id を指定します。
 
 サービスの動作を次のコードに示します。
 
@@ -93,7 +94,7 @@ ms.locfileid: "79183187"
 </behaviors>
 ```
   
-[\<発行されたトークン認証>>](../../configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)では、認証中にクライアントが提示できるトークンに対する制約をサービスが指定できるようにします。 この構成の指定では、サブジェクト名が CN=STS である証明書によって署名されたトークンがサービスによって受け入れられます。
+[\<issuedTokenAuthentication>](../../configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)> を使用すると、サービスは、認証時にクライアントが提示できるトークンに対して制約を指定できます。 この構成の指定では、サブジェクト名が CN=STS である証明書によって署名されたトークンがサービスによって受け入れられます。
 
 STS は、標準の <xref:System.ServiceModel.WS2007HttpBinding> を使用して、単一のエンドポイントを利用できるようにします。 このサービスは、クライアントからのトークンの要求に応答し、 クライアントが Windows アカウントを使用して認証されている場合は、クライアントのユーザー名がクレームとして含まれているトークンを発行します。 STS は、トークン作成の一環として、CN=STS 証明書に関連付けられている秘密キーを使用して、トークンに署名します。 また、対称キーを作成し、CN=localhost 証明書に関連付けられている秘密キーを使用して暗号化します。 STS は、トークンをクライアントに返すときに、対称キーも返します。 クライアントは、発行されたトークンを `ICalculator` サービスに提示し、対称キーを使用してメッセージに署名することで対称キーを認識していることを証明します。
 
@@ -107,25 +108,25 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.
 ```
 
-このサンプルに含まれている*Setup.bat*ファイルを使用すると、自己ホスト型アプリケーションを実行するために、関連する証明書を使用してサーバーと STS を構成できます。 このバッチ ファイルにより、LocalMachine/TrustedPeople 証明書ストアに 2 つの証明書が作成されます。 片方の証明書は CN=STS のサブジェクト名を持ち、クライアントに発行するセキュリティ トークンを署名するために STS が使用します。 もう片方の証明書は CN=localhost のサブジェクト名を持ち、サービスが暗号化を解除できるようにシークレットを暗号化するために STS が使用します。
+このサンプルに含まれている *Setup.bat* ファイルを使用すると、適切な証明書を使用してサーバーと STS を構成し、自己ホスト型アプリケーションを実行できます。 このバッチ ファイルにより、LocalMachine/TrustedPeople 証明書ストアに 2 つの証明書が作成されます。 片方の証明書は CN=STS のサブジェクト名を持ち、クライアントに発行するセキュリティ トークンを署名するために STS が使用します。 もう片方の証明書は CN=localhost のサブジェクト名を持ち、サービスが暗号化を解除できるようにシークレットを暗号化するために STS が使用します。
 
 ## <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには
   
-1. [Windows コミュニケーションファウンデーション サンプルのワンタイム セットアップ手順を](one-time-setup-procedure-for-the-wcf-samples.md)実行したことを確認します。
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。
 
-2. 管理者権限を持つ Visual Studio の開発者コマンド プロンプトを開き、Setup.bat ファイルを実行して必要な証明書を作成します。
+2. 管理者特権で Visual Studio の開発者コマンドプロンプトを開き、Setup.bat ファイルを実行して必要な証明書を作成します。
 
- このバッチ ファイルでは、Windows SDK と共に配布される*Certmgr.exe*および Makecert.exe を使用します。 ただし、スクリプトでこれらのツールを検索できるようにするには、Visual Studio コマンド プロンプトから*Setup.bat*を実行する必要があります。
+ このバッチファイルは、Windows SDK と共に配布される *Certmgr.exe* と Makecert.exe を使用します。 ただし、スクリプトでこれらのツールを検索できるようにするには、Visual Studio コマンドプロンプト内から *Setup.bat* を実行する必要があります。
 
 1. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](building-the-samples.md)」の手順に従います。
 
-2. 単一または複数のコンピューターにまたがる構成でサンプルを実行するには、「 [Windows コミュニケーション ファウンデーション サンプルの実行](running-the-samples.md)」の手順に従います。 Windows Vista を使用している場合は、昇格された特権を持つ*Service.exe* *、Client.exe、* および*セキュリティトークンサービス.exe*を実行する必要があります ( ファイルを右クリックし、[**管理者として実行**] をクリック ) 。
+2. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](running-the-samples.md)」の手順に従います。 Windows Vista を使用している場合は、 *Service.exe*、 *Client.exe*、および *SecurityTokenService.exe* を昇格された特権で実行する必要があります (ファイルを右クリックし、[ **管理者として実行**] をクリックします)。
 
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\WS2007FederationHttp`
