@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICLRTask2 インターフェイス」を参照してください。
 title: ICLRTask2 インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b5a22ebc-0582-49de-91f9-97a3d9789290
 topic_type:
 - apiref
-ms.openlocfilehash: 9332b3462ba389783a113d173e32850d40427ce2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 835b01e1c808c071e9393c5117d5e38415ec8eba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720231"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728635"
 ---
 # <a name="iclrtask2-interface"></a>ICLRTask2 インターフェイス
 
@@ -32,7 +33,7 @@ ms.locfileid: "95720231"
 |[BeginPreventAsyncAbort メソッド](iclrtask2-beginpreventasyncabort-method.md)|現在のスレッドの新しいスレッド中止要求を遅延します。|  
 |[EndPreventAsyncAbort メソッド](iclrtask2-endpreventasyncabort-method.md)|新しいまたは保留中のスレッド中止要求に対して、現在のスレッドでのスレッドの中止を許可します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  インターフェイスは、 `ICLRTask2` インターフェイスを継承 `ICLRTask` し、ホストがスレッドの中止を遅らせて、失敗しないコードの領域を保護できるようにするメソッドを追加します。 を呼び出す `BeginPreventAsyncAbort` と、現在のスレッドの遅延スレッド中止カウンターがインクリメントされ、を呼び出すと、 `EndPreventAsyncAbort` そのカウンターがデクリメントされます。 およびへの呼び出しは入れ子にする `BeginPreventAsyncAbort` `EndPreventAsyncAbort` ことができます。 カウンターがゼロより大きい限り、現在のスレッドのスレッド中止は遅延されます。  
   

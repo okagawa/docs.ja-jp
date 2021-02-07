@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次の情報を参照してください: テキスト:: テキストボックス'
 title: ICorDebugNativeFrame::GetLocalRegisterMemoryValue メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d350f69d-9aff-4f5a-8301-daea22dee2da
 topic_type:
 - apiref
-ms.openlocfilehash: 4b77ad2f31f10bd14ce7d8242a584da737428344
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 36cf4d38c65e233a8be91a1e2aeca01ea009f340
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709306"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729186"
 ---
 # <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterMemoryValue メソッド
 

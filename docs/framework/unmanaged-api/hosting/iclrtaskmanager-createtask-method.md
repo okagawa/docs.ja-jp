@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ICLRTaskManager:: CreateTask メソッド'
 title: ICLRTaskManager::CreateTask メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: eea570d9-2e53-4320-9ea0-eb777bf9dcf3
 topic_type:
 - apiref
-ms.openlocfilehash: c8d18b78cf0185271eae763892610d13f76e42ab
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 98a287f10a84b18579ebf2a4294cbb8a67cabc9c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733998"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728614"
 ---
 # <a name="iclrtaskmanagercreatetask-method"></a>ICLRTaskManager::CreateTask メソッド
 
@@ -51,7 +52,7 @@ HRESULT CreateTask (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_OUTOFMEMORY|要求されたリソースを割り当てるのに十分なメモリがありません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  CLR は、初期化時、ユーザーコードが名前空間の型を使用してスレッドを作成するとき、 <xref:System.Threading> またはスレッドプールのサイズが増加したときに、新しいタスクを自動的に作成します。 また、アンマネージコードがマネージ関数を呼び出す場合にも、タスクが作成されます。  
   

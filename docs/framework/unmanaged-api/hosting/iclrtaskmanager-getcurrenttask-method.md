@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRTaskManager:: GetCurrentTask メソッド'
 title: ICLRTaskManager::GetCurrentTask メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c0b82a9f-edc6-4878-9c81-48de53c02142
 topic_type:
 - apiref
-ms.openlocfilehash: af855e3ba47dc329a4fb722c3e13d5f1816beba4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d7435f9099d6a8ceb173afbf79c1d0f5d4005980
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723273"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728549"
 ---
 # <a name="iclrtaskmanagergetcurrenttask-method"></a>ICLRTaskManager::GetCurrentTask メソッド
 
@@ -50,7 +51,7 @@ HRESULT GetCurrentTask (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ICLRTask`パラメーターが指すインスタンスは、 `ppTask` CLR に対して現在実行中のタスクを表します。 `ICLRTask`インスタンスは、ホストのタスクを表す、対応する[IHostTask](ihosttask-interface.md)インスタンスに関連付けられています。  
   

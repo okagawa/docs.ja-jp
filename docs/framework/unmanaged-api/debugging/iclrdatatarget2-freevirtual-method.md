@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRDataTarget2:: FreeVirtual メソッド'
 title: ICLRDataTarget2::FreeVirtual メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 26fb69f8-1467-4711-bd24-cb117c63938f
 topic_type:
 - apiref
-ms.openlocfilehash: 1fb701a40abe2dc6e51443837c07ee5ba05ddfbe
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ef4048f421fcdc7d284663036f8cc9f2614f4e13
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723650"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729251"
 ---
 # <a name="iclrdatatarget2freevirtual-method"></a>ICLRDataTarget2::FreeVirtual メソッド
 
@@ -47,7 +48,7 @@ HRESULT FreeVirtual(
  `typeFlags`  
  からメモリの解放を制御するフラグ。 Win32 関数を参照してください `VirtualFree` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  この `FreeVirtual` メソッドは、Win32 関数の論理ラッパーとして機能し `VirtualFree` ます。  
   

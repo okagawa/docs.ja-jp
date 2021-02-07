@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ICLRDebugManager:: SetConnectionTasks メソッド'
 title: ICLRDebugManager::SetConnectionTasks メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b38bbc9a-872c-41a9-b8c3-ca011d25456a
 topic_type:
 - apiref
-ms.openlocfilehash: 5df01ac929874d00a5fddda83f532927dc46d67b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 851b3f54cc5599781596314dfb70296a3d86491a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719841"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728744"
 ---
 # <a name="iclrdebugmanagersetconnectiontasks-method"></a>ICLRDebugManager::SetConnectionTasks メソッド
 
@@ -59,9 +60,9 @@ HRESULT SetConnectionTasks (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_INVALIDARG|[Beginconnection](iclrdebugmanager-beginconnection-method.md) がこの値を使用して呼び出されていないか、 `id` `dwCount` またはが0であるか、または `id` の要素の1つが `ppCLRTask` null です。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
- [ICLRDebugManager](iclrdebugmanager-interface.md)では、、、および endconnection という3つのメソッドを使用し `BeginConnection` `SetConnectionTasks` て、タスクリストを識別子とフレンドリ名に関連付けることができます。 [EndConnection](iclrdebugmanager-endconnection-method.md)  
+ [ICLRDebugManager](iclrdebugmanager-interface.md)では、、、および endconnection という3つのメソッドを使用し `BeginConnection` `SetConnectionTasks` て、タスクリストを識別子とフレンドリ名に関連付けることができます。 [](iclrdebugmanager-endconnection-method.md)  
   
 > [!IMPORTANT]
 > これら3つのメソッドは、一連のタスクごとに特定の順序で呼び出す必要があります。 `BeginConnection` は、新しい接続を確立するために最初に呼び出されます。 `SetConnectionTasks` は、その接続に関連する一連のタスクを提供するために、次に呼び出されます。 `EndConnection` は、タスク一覧と識別子とフレンドリ名の間の関連付けを削除するために最後に呼び出されます。ただし、異なる接続の呼び出しは入れ子にすることができます。  

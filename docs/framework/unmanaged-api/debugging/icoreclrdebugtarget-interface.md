@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICoreClrDebugTarget インターフェイス」を参照してください。
 title: ICoreClrDebugTarget インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -16,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 7cfaee76-e284-4a66-a431-8e33f0f60038
 topic_type:
 - apiref
-ms.openlocfilehash: 791bd2754a96b97a38e2509c0c61a644324857cb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f0ed4dd75cd1daca6e83617433b29bbaecb1dd36
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716955"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728757"
 ---
 # <a name="icoreclrdebugtarget-interface"></a>ICoreClrDebugTarget インターフェイス
 
 参照カウントを制御し、プロセスを列挙し、リモートの Macintosh Silverlight ターゲットにアタッチされているデバッガーに関連付けられているメモリを解放するメソッドを提供します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 class ICoreClrDebugTarget {  
@@ -56,7 +57,7 @@ class ICoreClrDebugTarget {
 |[ICoreClrDebugTarget::EnumRuntimes メソッド](icoreclrdebugtarget-enumruntimes-method.md)|リモートコンピューター上の指定されたプロセスの共通言語ランタイム (CLRs) を列挙します。|  
 |[ICoreClrDebugTarget::FreeMemory メソッド](icoreclrdebugtarget-freememory-method.md)|このクラスの列挙メソッドによって割り当てられたメモリを解放します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  現在、この機能は、リモートの Macintosh コンピューターで実行されている Silverlight ベースのアプリケーションターゲットをデバッグする場合にのみサポートされます。  
   
