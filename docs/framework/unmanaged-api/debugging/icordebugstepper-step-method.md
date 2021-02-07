@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugStepper:: Step メソッド'
 title: ICorDebugStepper::Step メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 38c1940b-ada1-40ba-8295-4c0833744e1e
 topic_type:
 - apiref
-ms.openlocfilehash: 234705e4495a1a582f3801ad1e645f923cd6f4b2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cb45575f7818784addf67eacda35442764e706af
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727693"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99717629"
 ---
 # <a name="icordebugstepperstep-method"></a>ICorDebugStepper::Step メソッド
 
@@ -39,7 +40,7 @@ HRESULT Step (
  `bStepIn`  
  から `true` スレッド内で呼び出される関数にステップインするには、をに設定します。 関数を `false` ステップオーバーするには、をに設定します。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  共通言語ランタイムがこのステッパのフレームで次のマネージ命令を実行すると、手順が完了します。 `Step`マネージコードに含まれていないステッパでが呼び出された場合、次のマネージコード命令がスレッドによって実行されると、手順が完了します。  
   

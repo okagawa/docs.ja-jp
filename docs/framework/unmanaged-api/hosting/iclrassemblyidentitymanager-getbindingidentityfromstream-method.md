@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: ICLRAssemblyIdentityManager:: Getbinding Fromstream メソッド'
 title: ICLRAssemblyIdentityManager::GetBindingIdentityFromStream メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 40123b30-a589-46b3-95d3-af7b2b0baa05
 topic_type:
 - apiref
-ms.openlocfilehash: f1e6a47c0838782ae0610d49ca7fce3eb8554458
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aed5968a5f5c22a2f5cbea66a350dbe452368325
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716708"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99716889"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromstream-method"></a>ICLRAssemblyIdentityManager::GetBindingIdentityFromStream メソッド
 

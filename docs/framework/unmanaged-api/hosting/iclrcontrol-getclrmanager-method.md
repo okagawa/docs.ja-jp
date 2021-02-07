@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRControl:: GetCLRManager メソッド'
 title: ICLRControl::GetCLRManager メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a11bfa4-cbb0-4082-82b5-f9fba66c93f5
 topic_type:
 - apiref
-ms.openlocfilehash: d18b3a5c06ac0d3a86f7823f3b140c76c6c9a746
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fc24cbdfd4bebfff5c2f8d73a9cd6961a8c94e94
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728356"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99716719"
 ---
 # <a name="iclrcontrolgetclrmanager-method"></a>ICLRControl::GetCLRManager メソッド
 
@@ -40,19 +41,19 @@ HRESULT GetCLRManager (
  `riid`  
  から `IID` 返されるマネージャーの型の。 次の `IID` 値がサポートされています。  
   
-- IID_ICLRDebugManager: が ICLRDebugManager 型であることを指定し `ppObject` ます。 [ICLRDebugManager](iclrdebugmanager-interface.md)  
+- IID_ICLRDebugManager: が ICLRDebugManager 型であることを指定し `ppObject` ます。 [](iclrdebugmanager-interface.md)  
   
-- IID_ICLRErrorReportingManager: が ICLRErrorReportingManager 型であることを指定し `ppObject` ます。 [ICLRErrorReportingManager](iclrerrorreportingmanager-interface.md)  
+- IID_ICLRErrorReportingManager: が ICLRErrorReportingManager 型であることを指定し `ppObject` ます。 [](iclrerrorreportingmanager-interface.md)  
   
-- IID_ICLRGCManager: が ICLRGCManager 型であることを指定し `ppObject` ます。 [ICLRGCManager](iclrgcmanager-interface.md)  
+- IID_ICLRGCManager: が ICLRGCManager 型であることを指定し `ppObject` ます。 [](iclrgcmanager-interface.md)  
   
-- IID_ICLRHostProtectionManager: が ICLRHostProtectionManager 型であることを指定し `ppObject` ます。 [ICLRHostProtectionManager](iclrhostprotectionmanager-interface.md)  
+- IID_ICLRHostProtectionManager: が ICLRHostProtectionManager 型であることを指定し `ppObject` ます。 [](iclrhostprotectionmanager-interface.md)  
   
-- IID_ICLROnEventManager: が ICLROnEventManager 型であることを指定し `ppObject` ます。 [ICLROnEventManager](iclroneventmanager-interface.md)  
+- IID_ICLROnEventManager: が ICLROnEventManager 型であることを指定し `ppObject` ます。 [](iclroneventmanager-interface.md)  
   
-- IID_ICLRPolicyManager: が ICLRPolicyManager 型であることを指定し `ppObject` ます。 [ICLRPolicyManager](iclrpolicymanager-interface.md)  
+- IID_ICLRPolicyManager: が ICLRPolicyManager 型であることを指定し `ppObject` ます。 [](iclrpolicymanager-interface.md)  
   
-- IID_ICLRTaskManager: が ICLRTaskManager 型であることを指定し `ppObject` ます。 [ICLRTaskManager](iclrtaskmanager-interface.md)  
+- IID_ICLRTaskManager: が ICLRTaskManager 型であることを指定し `ppObject` ます。 [](iclrtaskmanager-interface.md)  
   
  `ppObject`  
  入出力要求されたマネージャーへのインターフェイスポインター。無効なマネージャーの種類が要求された場合は null。  

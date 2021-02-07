@@ -1,13 +1,14 @@
 ---
+description: '詳細については、次の情報を参照してください: GetAssemblyImageMetadata メソッド'
 title: ICorDebugSymbolProvider::GetAssemblyImageMetadata メソッド
 ms.date: 03/30/2017
 ms.assetid: c3c9de67-b865-4ecf-b887-1f1d0719a0c0
-ms.openlocfilehash: 9644d1323660730d210bd0305c2785fce4174455
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4abe5cc2b2a31f89e6ca4f8fc643f26eac276515
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709142"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99717187"
 ---
 # <a name="icordebugsymbolprovidergetassemblyimagemetadata-method"></a>ICorDebugSymbolProvider::GetAssemblyImageMetadata メソッド
 
@@ -26,7 +27,7 @@ HRESULT GetAssemblyImageMetadata(
  `ppMemoryBuffer`  
  入出力マージされたアセンブリのメタデータのサイズとアドレスに関する情報を格納して [いる、のオブジェクトの](icordebugmemorybuffer-interface.md) アドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  

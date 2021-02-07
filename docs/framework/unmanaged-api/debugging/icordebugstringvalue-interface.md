@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: いいねインターフェイス'
 title: ICorDebugStringValue インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bf84d0af-53e1-4c04-bc5b-7e5f81ba2cc2
 topic_type:
 - apiref
-ms.openlocfilehash: cd6c5726b9a938d04cf4eb018ec9851c81d9c745
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b4e762d8c0a62c1b76b59364e9d29c4b8d2386fa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95697052"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99717330"
 ---
 # <a name="icordebugstringvalue-interface"></a>ICorDebugStringValue インターフェイス
 
@@ -32,7 +33,7 @@ ms.locfileid: "95697052"
 |[GetLength メソッド](icordebugstringvalue-getlength-method.md)|このによって参照される文字列の文字数を取得し `ICorDebugStringValue` ます。|  
 |[GetString メソッド](icordebugstringvalue-getstring-method.md)|このによって参照される文字列を取得し `ICorDebugStringValue` ます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo2:: GetStringLayout メソッド'
 title: ICorProfilerInfo2::GetStringLayout メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 43189651-a535-4803-a1d1-f1c427ace2ca
 topic_type:
 - apiref
-ms.openlocfilehash: d141a78a953d4e0ab922535ad2363c79f2e18ecd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 145d748d756fd30ef0522d1c516f8f63ca604545
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727043"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99716368"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout メソッド
 
@@ -49,7 +50,7 @@ HRESULT GetStringLayout(
  `pBufferOffset`  
  入出力 `ObjectID` ワイド文字の文字列を格納する、ポインターを基準としたバッファーのオフセットへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  メソッドは、ポインターを基準として、 `GetStringLayout` `ObjectID` 次のが格納されている位置のオフセットを取得します。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRProbingAssemblyEnum:: Get メソッド'
 title: ICLRProbingAssemblyEnum::Get メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fdb67a77-782f-44cf-a8a1-b75999b0f3c8
 topic_type:
 - apiref
-ms.openlocfilehash: 9a6145ff2874890f052f18a7e537e20ff259933c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 77fb93b30a3b9b01b32fef9af661c84f484ef758
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728941"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99716524"
 ---
 # <a name="iclrprobingassemblyenumget-method"></a>ICLRProbingAssemblyEnum::Get メソッド
 
@@ -60,7 +61,7 @@ HRESULT Get (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返す場合、そのプロセス内で CLR は使用できなくなります。 後続のホストメソッドを呼び出すと HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  インデックス0の id は、プロセッサアーキテクチャに固有の id です。 インデックス1の id は、Microsoft 中間言語 (MSIL) のアーキテクチャに依存しないアセンブリです。 インデックス2の id にアーキテクチャ情報が含まれていません。  
   

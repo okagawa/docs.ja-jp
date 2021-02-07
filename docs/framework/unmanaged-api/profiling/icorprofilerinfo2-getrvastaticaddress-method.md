@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo2:: GetRVAStaticAddress メソッド'
 title: ICorProfilerInfo2::GetRVAStaticAddress メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a25a8f8b-5cfa-440d-9376-a1a1c3a9fc11
 topic_type:
 - apiref
-ms.openlocfilehash: ea4f6f129cf2919124b1bef1fd837f2b1e13760e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e72a136ca0d8462d19c57da021e9429528555dac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727056"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99716407"
 ---
 # <a name="icorprofilerinfo2getrvastaticaddress-method"></a>ICorProfilerInfo2::GetRVAStaticAddress メソッド
 
@@ -46,7 +47,7 @@ HRESULT GetRVAStaticAddress(
  `ppAddress`  
  入出力RVA の静的フィールドのアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `GetRVAStaticAddress`メソッドは、次のいずれかを返す場合があります。  
   
