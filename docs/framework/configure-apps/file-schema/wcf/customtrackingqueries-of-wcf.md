@@ -1,19 +1,20 @@
 ---
-title: <customTrackingQueries>WCF の
+description: 詳細については、「WCF」を参照してください。 <customTrackingQueries>
+title: <customTrackingQueries> WCF の
 ms.date: 03/30/2017
 ms.assetid: 14cfe47e-9935-4120-84f1-8f38de8ca4c1
-ms.openlocfilehash: 2c4bd74ae346c536e8bc0ae454e638b7c76a40fc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ac1cdcc074201b97344b3727f6957e1b62c88dab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855439"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754473"
 ---
-# <a name="customtrackingqueries-of-wcf"></a>\<customTrackingQueries>WCF の
+# <a name="customtrackingqueries-of-wcf"></a>\<customTrackingQueries> WCF の
 
 コード アクティビティで定義するイベントを追跡するために使用する、クエリのコレクションを表します。 追跡参加要素がカスタム追跡レコードを定期受信するには、このクエリが必要です。  
   
-追跡プロファイルのクエリの詳細については、「[追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)」を参照してください。
+追跡プロファイルのクエリの詳細については、「 [追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)」を参照してください。
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\

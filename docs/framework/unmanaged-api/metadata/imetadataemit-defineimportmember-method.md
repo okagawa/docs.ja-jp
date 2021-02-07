@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: IMetaDataEmit::D efineImportMember メソッド'
 title: IMetaDataEmit::DefineImportMember メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c7dd94c6-335b-46ff-9dfe-505056db5673
 topic_type:
 - apiref
-ms.openlocfilehash: 60210bc8f93294c3c3380c36096f3e80e5b26643
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 91c6ea70d38b8d4f73570ed19d86bacca30ebae5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723260"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753459"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember メソッド
 
@@ -67,11 +68,11 @@ HRESULT DefineImportMember (
  `pmr`  
  入出力 `mdMemberRef` メンバー参照の現在のスコープで定義されているトークン。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  メソッドは、で指定された `DefineImportMember` メンバーを検索し `mbMember` ます。このメンバーは、で指定した別のスコープで定義され、 `pImport` そのプロパティを取得します。 この情報を使用して、現在のスコープで [IMetaDataEmit::D efinememberref](imetadataemit-definememberref-method.md) メソッドを呼び出し、メンバー参照を作成します。  
   
- 一般に、メソッドを使用する前に、 `DefineImportMember` ターゲットメンバーの親クラス、インターフェイス、またはモジュールの型参照またはモジュール参照を、現在のスコープで作成する必要があります。 その後、この参照のメタデータトークンが引数として渡され `tkParent` ます。 後でコンパイラまたはリンカーによって解決される場合は、ターゲットメンバーの親への参照を作成する必要はありません。 まとめると次のようになります。  
+ 一般に、メソッドを使用する前に、 `DefineImportMember` ターゲットメンバーの親クラス、インターフェイス、またはモジュールの型参照またはモジュール参照を、現在のスコープで作成する必要があります。 その後、この参照のメタデータトークンが引数として渡され `tkParent` ます。 後でコンパイラまたはリンカーによって解決される場合は、ターゲットメンバーの親への参照を作成する必要はありません。 まとめ  
   
 - ターゲットメンバーがフィールドまたはメソッドの場合は、 [IMetaDataEmit::D efinetyperefbyname](imetadataemit-definetyperefbyname-method.md) または [IMetaDataEmit::D efineImportType](imetadataemit-defineimporttype-method.md) メソッドを使用して、メンバーの親クラスまたは親インターフェイスの型参照を現在のスコープ内に作成します。  
   

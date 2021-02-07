@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorDebugAssembly2 インターフェイス」を参照してください。
 title: ICorDebugAssembly2 インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0766e29-e573-4f9a-a928-167d1de5aa7e
 topic_type:
 - apiref
-ms.openlocfilehash: 5add8f18a91f2ea1a2833ffa2cf3dc4bf3b644bd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2a2d035329ba66153bfee83daa9501581f32842f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728473"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754122"
 ---
 # <a name="icordebugassembly2-interface"></a>ICorDebugAssembly2 インターフェイス
 
@@ -31,7 +32,7 @@ ms.locfileid: "95728473"
 |------------|-----------------|  
 |[IsFullyTrusted メソッド](icordebugassembly2-isfullytrusted-method.md)|アセンブリにランタイムセキュリティシステムによる完全信頼が付与されているかどうかを示す値を取得します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  

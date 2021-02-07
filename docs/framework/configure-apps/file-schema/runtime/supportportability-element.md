@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: <supportPortability> 要素'
 title: <supportPortability> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - supportPortability element
 - <supportPortability> element
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
-ms.openlocfilehash: 05ce6943b9456d4fd380ea8d6cf354d197b92f96
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5a39f946d5b3841af5f4254cc2f70142aa6c013d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183950"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754512"
 ---
 # <a name="supportportability-element"></a>\<supportPortability> 要素
 
@@ -33,7 +34,7 @@ ms.locfileid: "91183950"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |PKT|必須の属性です。<br /><br /> 対象となるアセンブリの公開キー トークンを文字列で指定します。|  
 |enabled|省略可能な属性です。<br /><br /> 指定した .NET Framework アセンブリの複数の実装間での移植性に対するサポートを有効にするかどうかを指定します。|  
@@ -42,7 +43,7 @@ ms.locfileid: "91183950"
   
 |値|説明|  
 |-----------|-----------------|  
-|true|指定した .NET Framework アセンブリの複数の実装間での移植性に対するサポートを有効にします。 これは既定値です。|  
+|true|指定した .NET Framework アセンブリの複数の実装間での移植性に対するサポートを有効にします。 既定値です。|  
 |false|指定した .NET Framework アセンブリの複数の実装間での移植性に対するサポートを無効にします。 この場合、指定したアセンブリの複数の実装をアプリケーションで参照できます。|  
   
 ### <a name="child-elements"></a>子要素  

@@ -1,13 +1,14 @@
 ---
+description: '詳細について: ICorDebugAssembly3:: EnumerateContainedAssemblies メソッド'
 title: ICorDebugAssembly3::EnumerateContainedAssemblies メソッド
 ms.date: 03/30/2017
 ms.assetid: 98f15b05-afad-4616-9e2a-1a9af31948b6
-ms.openlocfilehash: 1e040453d5eb7a312f2e665974486492b99de16d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8933500713661ef785eb3ce5abc574e512580b6b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719685"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754083"
 ---
 # <a name="icordebugassembly3enumeratecontainedassemblies-method"></a>ICorDebugAssembly3::EnumerateContainedAssemblies メソッド
 
@@ -30,7 +31,7 @@ HRESULT EnumerateContainedAssemblies(
 
  この `S_OK` オブジェクトがコンテナーの場合は、`ICorDebugAssembly3`。それ以外の場合は、`S_FALSE` で、列挙子は空です。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  含まれているアセンブリを列挙するためにシンボルが必要です。 シンボルがない場合、メソッドは `S_FALSE` を返し、有効な列挙子は提供されません。  
   

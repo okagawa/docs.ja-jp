@@ -1,27 +1,28 @@
 ---
-title: 'タスク 3: ツールボックス ペインと PropertyGrid ペインの作成'
+description: '詳細については、「タスク 3: ツールボックスペインと PropertyGrid ペインを作成する」を参照してください。'
+title: タスク 3:ツールボックス ペインと PropertyGrid ペインの作成
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 29e50b24135cd3d6a02052d846e1781b0d9fa325
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c07bfc2f974018cb0d789a6cc1181f9bed861382
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716230"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755163"
 ---
-# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>タスク 3: ツールボックス ペインと PropertyGrid ペインの作成
+# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>タスク 3:ツールボックス ペインと PropertyGrid ペインの作成
 
-このタスクでは、**ツールボックス**ペインと**PropertyGrid**ペインを作成し、再ホストされた Windows ワークフローデザイナーに追加します。
+このタスクでは、 **ツールボックス** ペインと **PropertyGrid** ペインを作成し、再ホストされた Windows ワークフローデザイナーに追加します。
 
-参考として、このトピックの最後に、ワークフローデザイナーシリーズのトピックの再[ホスト](rehosting-the-workflow-designer.md)に関する3つのタスクを完了した後に MainWindow.xaml.cs ファイルに含まれている必要があるコードについて説明します。
+参考として、このトピックの最後に、ワークフローデザイナーシリーズのトピックの再 [ホスト](rehosting-the-workflow-designer.md) に関する3つのタスクを完了した後に MainWindow.xaml.cs ファイルに含まれている必要があるコードについて説明します。
 
 ## <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>ツールボックスを作成し、グリッドに追加するには
 
-1. 「[タスク 2: ワークフローデザイナーをホストする](task-2-host-the-workflow-designer.md)」で説明されている手順に従って、取得した HostingApplication プロジェクトを開きます。
+1. 「 [タスク 2: ワークフローデザイナーをホストする](task-2-host-the-workflow-designer.md)」で説明されている手順に従って、取得した HostingApplication プロジェクトを開きます。
 
-2. **ソリューションエクスプローラー**ペインで、 *mainwindow.xaml*ファイルを右クリックし、 **[コードの表示]** を選択します。
+2. **ソリューションエクスプローラー** ペインで、 *mainwindow.xaml* ファイルを右クリックし、[**コードの表示**] を選択します。
 
-3. <xref:System.Activities.Presentation.Toolbox.ToolboxControl>を作成する `MainWindow` クラスに `GetToolboxControl` メソッドを追加し **、ツールボックス**に新しい**ツールボックス**のカテゴリを追加して、<xref:System.Activities.Statements.Assign> および <xref:System.Activities.Statements.Sequence> のアクティビティの種類をそのカテゴリに割り当てます。
+3. `GetToolboxControl` `MainWindow` を作成するクラスにメソッドを追加し <xref:System.Activities.Presentation.Toolbox.ToolboxControl> 、**ツール** ボックスに新しい **ツールボックス** カテゴリを追加して、 <xref:System.Activities.Statements.Assign> アクティビティの <xref:System.Activities.Statements.Sequence> 種類とアクティビティの種類をそのカテゴリに割り当てます。
 
     ```csharp
     private ToolboxControl GetToolboxControl()
@@ -50,7 +51,7 @@ ms.locfileid: "74716230"
     }
     ```
 
-4. **ツールボックス**をグリッドの左側の列に配置する、`MainWindow` クラスにプライベート `AddToolbox` メソッドを追加します。
+4. `AddToolbox` `MainWindow` グリッドの左側の列に **ツールボックス** を配置するプライベートメソッドをクラスに追加します。
 
     ```csharp
     private void AddToolBox()
@@ -61,7 +62,7 @@ ms.locfileid: "74716230"
     }
     ```
 
-5. 次のコードに示すように、`MainWindow()` クラスコンストラクターに `AddToolBox` メソッドの呼び出しを追加します。
+5. `AddToolBox`次のコードに示すように、クラスコンストラクターにメソッドの呼び出しを追加 `MainWindow()` します。
 
     ```csharp
     public MainWindow()
@@ -74,13 +75,13 @@ ms.locfileid: "74716230"
     }
     ```
 
-6. <kbd>F5</kbd>キーを押して、ソリューションをビルドして実行します。 <xref:System.Activities.Statements.Assign> アクティビティと <xref:System.Activities.Statements.Sequence> アクティビティを含む**ツールボックス**が表示されます。
+6. <kbd>F5</kbd>キーを押して、ソリューションをビルドして実行します。 アクティビティとアクティビティを含む **ツールボックス** が <xref:System.Activities.Statements.Assign> <xref:System.Activities.Statements.Sequence> 表示されます。
 
 ## <a name="to-create-the-propertygrid"></a>PropertyGrid を作成するには
 
-1. **ソリューションエクスプローラー**ペインで、 *mainwindow.xaml*ファイルを右クリックし、 **[コードの表示]** を選択します。
+1. **ソリューションエクスプローラー** ペインで、 *mainwindow.xaml* ファイルを右クリックし、[**コードの表示**] を選択します。
 
-2. `AddPropertyInspector` メソッドを `MainWindow` クラスに追加して、グリッドの右端の列に **[PropertyGrid]** ペインを配置します。
+2. クラスにメソッドを追加して、 `AddPropertyInspector` `MainWindow` グリッドの一番右の列に **PropertyGrid** ペインを配置します。
 
     ```csharp
     private void AddPropertyInspector()
@@ -90,7 +91,7 @@ ms.locfileid: "74716230"
     }
     ```
 
-3. 次のコードに示すように、`MainWindow()` クラスコンストラクターに `AddPropertyInspector` メソッドの呼び出しを追加します。
+3. `AddPropertyInspector`次のコードに示すように、クラスコンストラクターにメソッドの呼び出しを追加 `MainWindow()` します。
 
     ```csharp
     public MainWindow()
@@ -104,11 +105,11 @@ ms.locfileid: "74716230"
     }
     ```
 
-4. <kbd>F5</kbd>キーを押して、ソリューションをビルドして実行します。 **[ツールボックス]** 、ワークフローデザインキャンバス、および  **[PropertyGrid]** の各ウィンドウがすべて表示されます。また、デザインキャンバスに <xref:System.Activities.Statements.Assign> アクティビティまたは <xref:System.Activities.Statements.Sequence> アクティビティをドラッグすると、強調表示されているアクティビティに応じてプロパティグリッドが更新されます。
+4. <kbd>F5</kbd>キーを押して、ソリューションをビルドして実行します。 [ **ツールボックス**]、[ワークフローデザインキャンバス]、および [ **PropertyGrid** ] の各ウィンドウがすべて表示され <xref:System.Activities.Statements.Assign> ます。また、アクティビティまたはアクティビティをデザインキャンバスにドラッグすると、 <xref:System.Activities.Statements.Sequence> 強調表示されているアクティビティに応じてプロパティグリッドが更新されます。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
-*MainWindow.xaml.cs*ファイルには、次のコードが含まれています。
+*MainWindow.xaml.cs* ファイルには、次のコードが含まれています。
 
 ```csharp
 using System;
@@ -214,8 +215,8 @@ namespace HostingApplication
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ワークフロー デザイナーのホスト変更](rehosting-the-workflow-designer.md)
-- [タスク 1: 新しい Windows Presentation Foundation アプリケーションの作成](task-1-create-a-new-wpf-app.md)
-- [タスク 2: ワークフロー デザイナーのホスティング](task-2-host-the-workflow-designer.md)
+- [タスク 1:新しい Windows Presentation Foundation アプリケーションの作成](task-1-create-a-new-wpf-app.md)
+- [タスク 2:ワークフロー デザイナーのホスティング](task-2-host-the-workflow-designer.md)

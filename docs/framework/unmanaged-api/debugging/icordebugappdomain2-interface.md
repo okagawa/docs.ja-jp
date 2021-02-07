@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorDebugAppDomain2 インターフェイス」を参照してください。
 title: ICorDebugAppDomain2 インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 314d29f3-feb0-4a92-9530-b569c280cc31
 topic_type:
 - apiref
-ms.openlocfilehash: f20ae6977504f958b7bfa8e2f073b7db6e8b822b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2f2fcc4166a0c825abaa04392f9905d17e286803
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731476"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754187"
 ---
 # <a name="icordebugappdomain2-interface"></a>ICorDebugAppDomain2 インターフェイス
 
@@ -32,7 +33,7 @@ ms.locfileid: "95731476"
 |[GetArrayOrPointerType メソッド](icordebugappdomain2-getarrayorpointertype-method.md)|指定した型、または指定した型へのポインターまたは参照の配列を取得します。|  
 |[GetFunctionPointerType](icordebugappdomain2-getfunctionpointertype-method.md)|指定されたシグネチャを持つ関数へのポインターを取得します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  

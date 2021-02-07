@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IHostTaskManager:: EnterRuntime メソッド'
 title: IHostTaskManager::EnterRuntime メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1aa7a4b1-636a-4f5e-b834-b406d72f7120
 topic_type:
 - apiref
-ms.openlocfilehash: 11515bbb5717222a0030c1953b4eab4eb1b83bb2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 924fa18c9acbf02d8c614ffd9bf95657fd73ed14
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731645"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753836"
 ---
 # <a name="ihosttaskmanagerenterruntime-method"></a>IHostTaskManager::EnterRuntime メソッド
 
@@ -44,7 +45,7 @@ HRESULT EnterRuntime ();
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_OUTOFMEMORY|要求された割り当てを完了するのに十分なメモリがありませんでした。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `EnterRuntime` が呼び出され、ホストに対して、以前のバージョンの [最小 Veruntime](ihosttaskmanager-leaveruntime-method.md) メソッドへの呼び出しが行われたこと、実行が終了したこと、およびランタイムに実行制御が返されたことをホストに通知します。  
   

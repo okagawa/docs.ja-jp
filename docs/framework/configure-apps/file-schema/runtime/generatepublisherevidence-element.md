@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: <generatePublisherEvidence> 要素'
 title: <generatePublisherEvidence> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - generatePublisherEvidence element
 - <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-ms.openlocfilehash: 506e7873fab8e41fce121587c22d85600a8b1760
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2a949b52abe5ec10872d2cade49a0556063b2018
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158774"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754525"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence> 要素
 
@@ -39,10 +40,10 @@ ms.locfileid: "91158774"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |`false`|は <xref:System.Security.Policy.Publisher> 証拠を作成しません。|  
-|`true`|<xref:System.Security.Policy.Publisher>証拠を作成します。 これは既定値です。|  
+|`true`|<xref:System.Security.Policy.Publisher>証拠を作成します。 既定値です。|  
   
 ### <a name="child-elements"></a>子要素  
 

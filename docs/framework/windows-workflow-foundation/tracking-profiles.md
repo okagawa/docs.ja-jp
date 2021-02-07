@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 追跡プロファイル'
 title: 追跡プロファイル
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: ceeb0f5533bb4c637ea7df52249f5b00067d9b3d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9748f0452a1699e08760372f826f2458d82f4b79
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551388"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755149"
 ---
 # <a name="tracking-profiles"></a>追跡プロファイル
 
@@ -64,9 +65,9 @@ TrackingProfile profile = new TrackingProfile()
 
 追跡プロファイルの `implementationVisibility` 属性で指定される 2 つの表示モードは、`RootScope` と `All` です。 `RootScope` モードを使用すると、複合アクティビティがワークフローのルート アクティビティでない場合にアクティビティの実装を形成するアクティビティの追跡レコードが抑制されます。 したがって、他のアクティビティを使用して実装されているアクティビティがワークフローに追加された場合、`implementationVisibility` が RootScope に設定されていると、その複合アクティビティ内の最上位アクティビティのみが追跡されます。 アクティビティがワークフローのルート アクティビティである場合、アクティビティの実装はワークフローそのものであり、追跡レコードはその実装を形成するアクティビティを対象として生成されます。 All モードを使用すると、ルート アクティビティとそのすべての複合アクティビティを対象として、すべての追跡レコードを生成できます。
 
-たとえば、 *myactivity* が、 *Activity1* と *Activity2*の2つのアクティビティを含む実装を持つ複合アクティビティであるとします。 このアクティビティがワークフローに追加され、がに設定された追跡プロファイルで追跡が有効になっている場合 `implementationVisibility` `RootScope` 、追跡レコードは *myactivity*に対してのみ生成されます。 ただし、アクティビティ *Activity1* と *Activity2*のレコードは出力されません。
+たとえば、 *myactivity* が、 *Activity1* と *Activity2* の2つのアクティビティを含む実装を持つ複合アクティビティであるとします。 このアクティビティがワークフローに追加され、がに設定された追跡プロファイルで追跡が有効になっている場合 `implementationVisibility` `RootScope` 、追跡レコードは *myactivity* に対してのみ生成されます。 ただし、アクティビティ *Activity1* と *Activity2* のレコードは出力されません。
 
-ただし、 `implementationVisibility` 追跡プロファイルの属性がに設定されている場合、 `All` 追跡レコードは *myactivity*だけでなく、アクティビティ *Activity1* と *Activity2*にも出力されます。
+ただし、 `implementationVisibility` 追跡プロファイルの属性がに設定されている場合、 `All` 追跡レコードは *myactivity* だけでなく、アクティビティ *Activity1* と *Activity2* にも出力されます。
 
 `implementationVisibility` フラグは、次の追跡レコード タイプに適用されます。
 

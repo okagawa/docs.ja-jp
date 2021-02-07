@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: ICLRAppDomainResourceMonitor:: GetCurrentAllocated メソッド'
 title: ICLRAppDomainResourceMonitor::GetCurrentAllocated メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7bab209c-efd4-44c2-af30-61abab0ae2fc
 topic_type:
 - apiref
-ms.openlocfilehash: d3bd948dfe4a5cf97e3e3e430f551e7bc6404690
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d7aaf31f775a9d6e2af95cf1a832c78587a85fe1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700789"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753953"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentallocated-method"></a>ICLRAppDomainResourceMonitor::GetCurrentAllocated メソッド
 
@@ -50,7 +51,7 @@ HRESULT GetCurrentAllocated([in]  DWORD dwAppDomainId,
 |S_OK|メソッドは正常に完了しました。|  
 |COR_E_APPDOMAINUNLOADED|アプリケーションドメインがアンロードされているか、または存在しません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドは、マネージプロパティに相当するアンマネージドです <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> 。  
   

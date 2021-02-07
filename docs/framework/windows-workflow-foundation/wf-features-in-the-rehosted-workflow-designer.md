@@ -1,13 +1,14 @@
 ---
+description: 詳細については、再ホストされたワークフローデザイナーでの Workflow Foundation 4.5 の新機能のサポートに関するページを参照してください。
 title: 再ホストされたワークフロー デザイナーにおける Workflow Foundation 4.5 の新機能のサポート
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 139215131afa38bc33539fa242a3584eb67d7941
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 948519265383e9fd3850c44304f7c02283b3f579
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293950"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755006"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>再ホストされたワークフロー デザイナーにおける Workflow Foundation 4.5 の新機能のサポート
 
@@ -16,7 +17,7 @@ ms.locfileid: "96293950"
 > [!NOTE]
 > .NET Framework 4.5 で導入された新しい Windows Workflow Foundation (WF) 機能の一覧については、「 [.NET Framework 4.5](whats-new-in-wf-in-dotnet.md)における Windows Workflow Foundation の新機能」を参照してください。
 
-## <a name="activities"></a>アクティビティ
+## <a name="activities"></a>Activities
 
  組み込みのアクティビティ ライブラリには、既存のアクティビティ用の新しいアクティビティと新しい機能が含まれています。 これらの新しいアクティビティはすべて、再ホストされたデザイナーでサポートされています。 これらの新しいアクティビティの詳細については、 [.NET Framework 4.5 の「Windows Workflow Foundation の新機能](whats-new-in-wf-in-dotnet.md)」の「[アクティビティ](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities)」セクションを参照してください。
 

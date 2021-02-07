@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「変数と引数の追跡」を参照してください。
 title: 変数と引数の追跡
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: 85cecbfaf1db224152d4582325326f1f80e08266
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f2663e585ca280739f9c4ec176c31cf1d7c30657
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242904"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754980"
 ---
 # <a name="variable-and-argument-tracking"></a>変数と引数の追跡
 

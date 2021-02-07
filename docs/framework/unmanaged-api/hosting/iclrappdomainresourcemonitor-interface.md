@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICLRAppDomainResourceMonitor インターフェイス」を参照してください。
 title: ICLRAppDomainResourceMonitor インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 72fa83a1-8997-41d7-b355-ab177a24a303
 topic_type:
 - apiref
-ms.openlocfilehash: 84c53f0666d0e04b898e28c1d8e146eab566ca1b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 85321eabedb6912efabe57553732f8c6a4063155
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674698"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753901"
 ---
 # <a name="iclrappdomainresourcemonitor-interface"></a>ICLRAppDomainResourceMonitor インターフェイス
 
@@ -33,7 +34,7 @@ ms.locfileid: "95674698"
 |[GetCurrentSurvived メソッド](iclrappdomainresourcemonitor-getcurrentsurvived-method.md)|最後の完全なブロッキングガベージコレクションの後に残った、現在のアプリケーションドメインによって参照されているバイト数を取得します。|  
 |[GetCurrentCpuTime メソッド](iclrappdomainresourcemonitor-getcurrentcputime-method.md)|アプリケーションドメインが作成されてから、現在のアプリケーションドメインでの実行中にすべてのスレッドによって使用された合計プロセッサ時間を取得します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  インターフェイスには、 `ICLRAppDomainResourceMonitor` 次のマネージプロパティと同様の機能が用意されています。  
   

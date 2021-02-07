@@ -1,15 +1,16 @@
 ---
-title: <customTrackingQuery>WCF の
+description: 詳細については、「WCF」を参照してください。 <customTrackingQuery>
+title: <customTrackingQuery> WCF の
 ms.date: 03/30/2017
 ms.assetid: 164446ae-8440-4b67-b217-6786cfae1e01
-ms.openlocfilehash: 204bbb6cf5ebcb30bf92b697885ecbbbd94385e0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3eac26ee94a95b480d743e3c6ec554a84b8747a3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855426"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754460"
 ---
-# <a name="customtrackingquery-of-wcf"></a>\<customTrackingQuery>WCF の
+# <a name="customtrackingquery-of-wcf"></a>\<customTrackingQuery> WCF の
 
 コードアクティビティで定義するイベントを追跡するために使用されるクエリを表します。 追跡参加要素がカスタム追跡レコードを定期受信するには、このクエリが必要です。
 
@@ -58,7 +59,7 @@ ms.locfileid: "70855426"
 
 ### <a name="parent-elements"></a>親要素
 
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<customTrackingQueries>](customtrackingqueries-of-wcf.md)|コード アクティビティで定義するイベントを追跡するために使用する、クエリのコレクションを表します。|
   

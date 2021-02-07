@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: の説明'
 title: ICorDebugAppDomain インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: be7ae711-1217-4a44-be40-166e29641b77
 topic_type:
 - apiref
-ms.openlocfilehash: 98273a5d4602c023863758045bdb2a6a502ba7a7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5f1ac20a7376a741da2e34de74c810c0f45e8293
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687230"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754200"
 ---
 # <a name="icordebugappdomain-interface"></a>ICorDebugAppDomain インターフェイス
 
@@ -40,7 +41,7 @@ ms.locfileid: "95687230"
 |[GetProcess メソッド](icordebugappdomain-getprocess-method.md)|アプリケーションドメインを格納しているプロセスを取得します。|  
 |[IsAttached メソッド](icordebugappdomain-isattached-method.md)|デバッガーがアプリケーションドメインにアタッチされているかどうかを判断します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  

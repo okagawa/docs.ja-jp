@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: ワークフローでの入力を待機しています'
 title: ワークフロー内での入力の待機
 ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], bookmarks
 ms.assetid: 50a007c5-8ab7-4b9a-a7ec-1b7e2f4930fe
-ms.openlocfilehash: 68fe5373e1bff80470fe4296448d28976974b714
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e8b5ed117b5058c48b3670d2bb501128f914349d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293872"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754954"
 ---
 # <a name="waiting-for-input-in-a-workflow"></a>ワークフロー内での入力の待機
 

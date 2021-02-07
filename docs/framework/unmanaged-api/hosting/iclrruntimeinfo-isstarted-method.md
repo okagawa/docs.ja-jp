@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ICLRRuntimeInfo:: IsStarted メソッド'
 title: ICLRRuntimeInfo::IsStarted メソッド
 ms.date: 03/30/2017
 api_name:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - IsStarted method [.NET Framework hosting]
 - ICLRRuntimeInfo::IsStarted method [.NET Framework hosting]
 ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
-ms.openlocfilehash: 1dfeb6101a6b8e33ab2fe35f318087d7f1834b6a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 22059ecbded9eae9659cdaae8b9b92f2d7df0650
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714888"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753849"
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a>ICLRRuntimeInfo::IsStarted メソッド
 
@@ -49,7 +50,7 @@ HRESULT IsStarted(
 |S_OK|メソッドは正常に完了しました。|  
 |E_NOTIMPL|共通言語ランタイム (CLR) のバージョンは、.NET Framework 4 の CLR バージョンよりも前のバージョンです。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドは、.NET Framework 4 の CLR バージョンより前の CLR バージョンでは機能しません。  
   

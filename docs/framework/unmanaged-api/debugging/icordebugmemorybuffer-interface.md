@@ -1,13 +1,14 @@
 ---
+description: '詳細については、次を参照してください: いい Memorybuffer インターフェイス'
 title: ICorDebugMemoryBuffer インターフェイス
 ms.date: 03/30/2017
 ms.assetid: 85dc2d65-3657-4b93-9f23-9feaa95d37ff
-ms.openlocfilehash: 2765852309401d2aa30f91b506ba55156cd8a3e2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 94eeb0f31c0e1c053fabbd556768fa65dda2d328
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710741"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754018"
 ---
 # <a name="icordebugmemorybuffer-interface"></a>ICorDebugMemoryBuffer インターフェイス
 
@@ -20,7 +21,7 @@ ms.locfileid: "95710741"
 |[GetSize メソッド](icordebugmemorybuffer-getsize-method.md)|メモリ バッファーのサイズ (バイト単位) を取得します。|  
 |[GetStartAddress メソッド](icordebugmemorybuffer-getstartaddress-method.md)|メモリ バッファーの開始アドレスを取得します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このインターフェイスは .NET ネイティブでのみ使用可能です。 .NET ネイティブの外部で ICorDebug シナリオについてこのインターフェイスを実装する場合は、共通言語ランタイムはこのインターフェイスを無視します。  

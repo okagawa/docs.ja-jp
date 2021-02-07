@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRAppDomainResourceMonitor:: GetCurrentSurvived メソッド'
 title: ICLRAppDomainResourceMonitor::GetCurrentSurvived メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 392e9009-40ef-40e3-ad4d-7ce93a989e78
 topic_type:
 - apiref
-ms.openlocfilehash: eba9caece91e369cd46aed652b559ace49c77725
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 20aea8583da207144aa0ffe29591a113da789fa8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704907"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753914"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>ICLRAppDomainResourceMonitor::GetCurrentSurvived メソッド
 
@@ -55,7 +56,7 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
 |S_OK|メソッドは正常に完了しました。|  
 |COR_E_APPDOMAINUNLOADED|アプリケーションドメインがアンロードされているか、または存在しません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  統計は、完全なブロッキングガベージコレクションの後にのみ更新されます。つまり、コレクションの実行中にアプリケーションを停止する、すべてのジェネレーションを含むコレクションです。 たとえば、 <xref:System.GC.Collect?displayProperty=nameWithType> メソッドオーバーロードは、完全なブロッキングコレクションを実行します。 同時実行ガベージコレクションはバックグラウンドで発生し、アプリケーションをブロックしません。  
   

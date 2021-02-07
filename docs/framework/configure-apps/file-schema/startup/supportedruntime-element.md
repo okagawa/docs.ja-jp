@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <supportedRuntime> 要素'
 title: <supportedRuntime> configuration 要素-.NET
 ms.date: 04/02/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: 79b49cbc9b122e6591d07643a341841b262edff4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 04c2b3fec591e1b99757085afdddf26c529591b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201708"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754499"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime> 要素
 
@@ -31,9 +32,9 @@ ms.locfileid: "91201708"
 
 ## <a name="attributes"></a>属性
 
-|属性|[説明]|
+|属性|説明|
 |---------------|-----------------|
-|**version**|省略可能な属性です。<br /><br /> このアプリケーションがサポートする共通言語ランタイム (CLR: Common Language Runtime) のバージョンを指定する文字列値。 属性の有効な値については、「 `version` [ランタイムバージョン」の値](#version) に関するセクションを参照してください。 **注:**  .NET Framework 3.5 では、"*runtime version*" の値は *major*という形式になります。*minor*。*ビルド*。 .NET Framework 4 以降では、メジャーバージョン番号とマイナーバージョン番号 ("v v4.0.30319" の代わりに "v4.0") のみが必要です。 短い文字列を使用することをお勧めします。|
+|**version**|省略可能な属性です。<br /><br /> このアプリケーションがサポートする共通言語ランタイム (CLR: Common Language Runtime) のバージョンを指定する文字列値。 属性の有効な値については、「 `version` [ランタイムバージョン」の値](#version) に関するセクションを参照してください。 **注:**  .NET Framework 3.5 では、"*runtime version*" の値は *major* という形式になります。*minor*。*ビルド*。 .NET Framework 4 以降では、メジャーバージョン番号とマイナーバージョン番号 ("v v4.0.30319" の代わりに "v4.0") のみが必要です。 短い文字列を使用することをお勧めします。|
 |**sku**|省略可能な属性です。<br /><br /> 在庫管理単位 (SKU) を指定する文字列の値。SKU はこのアプリケーションがサポートする .NET Framework リリースを指定します。<br /><br /> .NET Framework 4.0 以降では、`sku` 属性の使用が推奨されます。  この属性が指定される場合は、アプリケーションが対象とする .NET Framework のバージョンを示します。<br /><br /> Sku 属性の有効な値については、「 [sku id」の値](#sku) に関するセクションを参照してください。|
 
 ## <a name="remarks"></a>解説

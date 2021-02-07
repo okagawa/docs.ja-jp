@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次のページを参照してください: いい Process:: EnableLogMessages メソッド'
 title: ICorDebugProcess::EnableLogMessages メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 14a4e5a3-3eaf-4f53-9dd1-762726963a23
 topic_type:
 - apiref
-ms.openlocfilehash: 86cb1a2eb18840419d2a4e8ee4f6475edafe8397
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d44f1a14611493372c7321feaa14329d5d77b01b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724625"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753992"
 ---
 # <a name="icordebugprocessenablelogmessages-method"></a>ICorDebugProcess::EnableLogMessages メソッド
 
@@ -37,7 +38,7 @@ HRESULT EnableLogMessages([in]BOOL fOnOff);
  `fOnOff`  
  [入力] `true` ログメッセージの転送を有効にします。 `false` 転送を無効にします。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドは、によって実行される場合にのみ有効です: [: CreateProcess managedcallback:: CreateProcess](icordebugmanagedcallback-createprocess-method.md) コールバックが発生します。  
   

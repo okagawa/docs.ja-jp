@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IMetaDataDispenserEx:: GetOption メソッド'
 title: IMetaDataDispenserEx::GetOption メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d7f794e5-8e25-4d65-850a-7c34fbfce87d
 topic_type:
 - apiref
-ms.openlocfilehash: 0ceadf42ac49fd3fc89c78a6a26b2f529afeeaf0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cf52a251c3c0e0485558a150b727d58eeae81995
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700562"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753550"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>IMetaDataDispenserEx::GetOption メソッド
 
@@ -43,7 +44,7 @@ HRESULT GetOption (
  `pValue`  
  入出力返されたオプションの値。 この値の型は、指定されたオプションの型のバリアントになります。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  次の一覧は、このメソッドでサポートされている Guid を示しています。 説明については、 [IMetaDataDispenserEx:: SetOption](imetadatadispenserex-setoption-method.md) メソッドを参照してください。 `optionId`がこのリストに含まれていない場合、このメソッドは HRESULT を返し `E_INVALIDARG` ます。パラメーターが正しくないことを示します。  
   

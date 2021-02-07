@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICLRRuntimeHost インターフェイス」を参照してください。
 title: ICLRRuntimeHost インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cb0c5f65-3791-47bc-b833-2f84f4101ba5
 topic_type:
 - apiref
-ms.openlocfilehash: 8d88222215eb31e1c63f3b26079517c4b088e81b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 92bab42fa1cf2cca5caa0eb039c88fec3e65390c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728837"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753888"
 ---
 # <a name="iclrruntimehost-interface"></a>ICLRRuntimeHost インターフェイス
 
@@ -43,7 +44,7 @@ ms.locfileid: "95728837"
 |[Stop メソッド](iclrruntimehost-stop-method.md)|ランタイムによるコードの実行を停止します。|  
 |[UnloadAppDomain メソッド](iclrruntimehost-unloadappdomain-method.md)|指定した <xref:System.AppDomain> 数値識別子に対応するをアンロードします。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  .NET Framework 4 以降では、 [ICLRMetaHost](iclrmetahost-interface.md) インターフェイスを使用して [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) インターフェイスへのポインターを取得し、 [ICLRRuntimeInfo:: getinterface](iclrruntimeinfo-getinterface-method.md) メソッドを呼び出して、へのポインターを取得し `ICLRRuntimeHost` ます。 以前のバージョンの .NET Framework では、ホストは `ICLRRuntimeHost` [Corbindtoruntimeex](corbindtoruntimeex-function.md) または [Corbindtoの entruntime](corbindtocurrentruntime-function.md)を呼び出すことによって、インスタンスへのポインターを取得します。 .NET Framework バージョン2.0 で提供されるテクノロジの実装を提供するには、の代わりにを使用する必要があり `ICLRRuntimeHost` `ICorRuntimeHost` ます。  
   

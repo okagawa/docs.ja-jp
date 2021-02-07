@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRRuntimeHost:: GetCLRControl メソッド'
 title: ICLRRuntimeHost::GetCLRControl メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e47e3655-efd5-4572-a1dc-50c69bf2a468
 topic_type:
 - apiref
-ms.openlocfilehash: 928ac05fbd3a19a17e7f37674b2a75f8bc799fc6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 832ae03c0126f0c08afa9b5c0312a636ec1de294
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728874"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753940"
 ---
 # <a name="iclrruntimehostgetclrcontrol-method"></a>ICLRRuntimeHost::GetCLRControl メソッド
 
@@ -51,7 +52,7 @@ HRESULT GetCLRControl(
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返す場合、そのプロセス内で CLR は使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |HOST_E_INVALIDOPERATION|CLR は既に開始されています。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ICLRControl`[Getclrmanager メソッド](iclrcontrol-getclrmanager-method.md)を提供します。このメソッドを使用すると、ホストは、マネージャーの型のいずれかへのインターフェイスポインターを取得できます。  
   
