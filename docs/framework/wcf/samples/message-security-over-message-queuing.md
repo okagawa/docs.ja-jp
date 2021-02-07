@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「メッセージキュー経由のメッセージセキュリティ」を参照してください。
 title: メッセージ キューを介したメッセージ セキュリティ
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-ms.openlocfilehash: 1b262a5f4343e07aecf5eebda32cc995f86ec77b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: bfbec02dec11d4f4eb153db942eb12ce4cb595e4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96248930"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752328"
 ---
 # <a name="message-security-over-message-queuing"></a>メッセージ キューを介したメッセージ セキュリティ
 
@@ -95,7 +96,7 @@ ms.locfileid: "96248930"
 
  このサンプルは、MSMQ でメッセージ レベルの相互認証を使用する方法を示します。 証明書は、帯域外で交換されます。 サービスとクライアントは同時に実行される必要がないため、キューに置かれたアプリケーションでは常にその状態です。
 
-## <a name="description"></a>Description
+## <a name="description"></a>説明
 
  サンプルクライアントとサービスコードは、 [トランザクション MSMQ バインディング](transacted-msmq-binding.md) サンプルと同じであり、1つの違いがあります。 操作コントラクトには、メッセージの署名および暗号化が必要であることを示す注釈が保護レベルで付けられます。
 
@@ -289,7 +290,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
         Order status: Pending
 ```
 
-## <a name="comments"></a>説明
+## <a name="comments"></a>コメント
 
 - クライアント証明書の作成。
 

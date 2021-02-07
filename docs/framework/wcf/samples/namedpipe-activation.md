@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: NamedPipe のアクティブ化'
 title: NamedPipe アクティベーション
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 56775842a742d0c6b07c6870bfce524ed1d275fa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4955511f24d831f4aa9e3aa67fdb3f6a218d7af0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556103"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752209"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe アクティベーション
 
@@ -169,7 +170,7 @@ Press <ENTER> to terminate client.
 
     2. [ **プログラムと機能**] を選択します。
 
-    3. [ **Windows コンポーネントの有効化または無効化] を**クリックします。
+    3. [ **Windows コンポーネントの有効化または無効化] を** クリックします。
 
     4. [ **Microsoft .NET Framework 3.0** ] ノードを展開し、[ **WINDOWS COMMUNICATION FOUNDATION の非 HTTP アクティブ化** ] 機能をオンにします。
 

@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: メタデータの公開動作'
 title: メタデータ公開動作
 ms.date: 03/30/2017
 helpviewer_keywords:
 - service behaviors, metadata publishing sample
 - Metadata Publishing Behaviors Sample [Windows Communication Foundation]
 ms.assetid: 78c13633-d026-4814-910e-1c801cffdac7
-ms.openlocfilehash: 7df0a8ce41b7a26f70a010b377213c8438fe659d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 13e52e5f2a8d301eac3100cbf2350cc5a089aa34
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294353"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752228"
 ---
 # <a name="metadata-publishing-behavior"></a>メタデータ公開動作
 

@@ -1,13 +1,14 @@
 ---
+description: MSMQ のアクティブ化に関する詳細情報
 title: MSMQ アクティベーション
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 349eadb8f517993c343e81656204ad25e62ed931
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3360ae560cba9c3b42551617beb295154668814b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555238"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752232"
 ---
 # <a name="msmq-activation"></a>MSMQ アクティベーション
 
@@ -220,7 +221,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
     2. [ **プログラムと機能**] を選択します。
 
-    3. [ **Windows の機能の有効化または無効化] を**クリックします。
+    3. [ **Windows の機能の有効化または無効化] を** クリックします。
 
     4. [ **機能の概要**] で、[ **機能の追加**] をクリックします。
 
@@ -269,7 +270,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
         このコマンドは、およびを使用して/servicemodelsamples アプリケーションにアクセスできるようにし `http://localhost/servicemodelsamples` `net.msmq://localhost/servicemodelsamples` ます。
 
-7. まだ確認していない場合は、MSMQ アクティベーション サービスが有効になっていることを確認します。 [ **スタート** ] メニューの [ **実行**] をクリックし、「」と入力し `Services.msc` ます。 サービスの一覧で、 **Net.tcp リスナーアダプター**を検索します。 右クリックし、**[プロパティ]** を選択します。 [ **スタートアップの種類** ] を [ **自動**] に設定し、[ **適用** ] をクリックして、[ **開始** ] ボタンをクリックします。 この手順は、Net.Msmq リスナー アダプター サービスを初めて使用する前に 1 回だけ実行する必要があります。
+7. まだ確認していない場合は、MSMQ アクティベーション サービスが有効になっていることを確認します。 [ **スタート** ] メニューの [ **実行**] をクリックし、「」と入力し `Services.msc` ます。 サービスの一覧で、 **Net.tcp リスナーアダプター** を検索します。 右クリックし、**[プロパティ]** を選択します。 [ **スタートアップの種類** ] を [ **自動**] に設定し、[ **適用** ] をクリックして、[ **開始** ] ボタンをクリックします。 この手順は、Net.Msmq リスナー アダプター サービスを初めて使用する前に 1 回だけ実行する必要があります。
 
 8. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](running-the-samples.md)」の手順に従います。 さらに、発注書を送信するときのキューの URI 内のコンピューター名を反映するように、発注書を送信するクライアントのコードを変更します。 次のコードを使用します。
 
@@ -337,7 +338,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
     1. Services.msc を実行します。
 
-    2. **Net.tcp リスナーアダプター**を右クリックし、[**プロパティ**] を選択します。
+    2. **Net.tcp リスナーアダプター** を右クリックし、[**プロパティ**] を選択します。
 
 4. [ **ログオン** ] タブでアカウントを変更します。
 

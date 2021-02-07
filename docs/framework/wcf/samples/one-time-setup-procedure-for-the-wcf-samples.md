@@ -1,19 +1,20 @@
 ---
+description: 詳細については、Windows Communication Foundation のサンプルのセットアップ手順に関するページを参照してください One-Time
 title: Windows Communication Foundation サンプルの 1 回限りのセットアップの手順
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: bf25ea4734bad007fa3ac19df0664932d981519c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8d57da5e018a61c6d11c9a9dc319ee74ec19d2ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548118"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752094"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation サンプルの 1 回限りのセットアップの手順
 
-ほとんどの Windows Communication Foundation (WCF) サンプルはインターネットインフォメーションサービス (IIS) でホストされ、共通の仮想ディレクトリから実行されます。 この1回限りのセットアップ手順では、ディスク上にフォルダーを作成します。また、 **ServiceModelSamples**という名前の IIS に仮想ディレクトリを追加します。
+ほとんどの Windows Communication Foundation (WCF) サンプルはインターネットインフォメーションサービス (IIS) でホストされ、共通の仮想ディレクトリから実行されます。 この1回限りのセットアップ手順では、ディスク上にフォルダーを作成します。また、 **ServiceModelSamples** という名前の IIS に仮想ディレクトリを追加します。
 
-**ServiceModelSamples**仮想ディレクトリは、IIS でホストされるサービスを使用するすべてのサンプルをビルドして実行するために使用されます。 サンプルの実行に必要な仮想ディレクトリはこれだけです。 サンプルをビルドすると、この仮想ディレクトリにある、以前に配置されたサービスがすべて置き換えられます。この仮想ディレクトリには最近ビルドされたサンプルだけが配置されるため、そのサンプルしか使用できません。
+**ServiceModelSamples** 仮想ディレクトリは、IIS でホストされるサービスを使用するすべてのサンプルをビルドして実行するために使用されます。 サンプルの実行に必要な仮想ディレクトリはこれだけです。 サンプルをビルドすると、この仮想ディレクトリにある、以前に配置されたサービスがすべて置き換えられます。この仮想ディレクトリには最近ビルドされたサンプルだけが配置されるため、そのサンプルしか使用できません。
 
 > [!NOTE]
 > すべてのコマンドは、ローカル管理者アカウントで実行する必要があります。 Windows 7、Windows Vista、または Windows Server 2008 R2 を使用している場合は、管理者特権でコマンドプロンプトを実行する必要もあります。 これを行うには、コマンドプロンプトアイコンを右クリックし、[ **管理者として実行**] をクリックします。 このトピックで使用するすべてのコマンドは、適切なパスが設定されているコマンド プロンプトで実行する必要があります。  このようにするための最も簡単な方法は、Visual Studio コマンド プロンプトを使用する方法です。 このプロンプトを開くには、[ **スタート**] ボタンをクリックし、[ **すべてのプログラム**]、[ **visual studio 2010**] の順にスクロールし、[ **Visual Studio Tools**] をクリックします。次に、[ **visual studio コマンドプロンプト (2010)**] を右クリックし、[ **管理者として実行**] をクリックします。 Visual Studio Express Editions のいずれかがインストールされている場合は、このコマンド プロンプトを使用できません。この場合、システム パスに "C:\Windows\Microsoft.Net\Framework\v4.0" を追加する必要があります。
@@ -41,13 +42,13 @@ ms.locfileid: "90548118"
 
 5. [ファイアウォールの指示](firewall-instructions.md)に従って、サンプルで使用するポートを有効にします。
 
-6. 次の既定のディレクトリ \<InstallDrive> **:\ WF_WCF_Samples**を確認します。 サンプルが既にインストールされている場合は、これが既定のディレクトリです。
+6. 次の既定のディレクトリ \<InstallDrive> **:\ WF_WCF_Samples** を確認します。 サンプルが既にインストールされている場合は、これが既定のディレクトリです。
 
 7. サンプルがインストールされていない場合は、 [Windows Communication Foundation (WCF) および Windows Workflow Foundation (WF) のサンプル (.NET Framework 4)](https://www.microsoft.com/download/details.aspx?id=21459)からインストールします。
 
-8. サンプルをインストールした後、: \<InstallDrive> **:\ WF_WCF_Samples \wcf\setup \\ **にアクセスします。
+8. サンプルをインストールした後、: \<InstallDrive> **:\ WF_WCF_Samples \wcf\setup \\** にアクセスします。
 
-9. **Setupvroot.bat**バッチファイルを実行します。 次の手順を実行します。
+9. **Setupvroot.bat** バッチファイルを実行します。 次の手順を実行します。
 
     - ServiceModelSamples という名前の仮想ディレクトリが IIS に作成されます。
 
@@ -63,7 +64,7 @@ ms.locfileid: "90548118"
     > [!NOTE]
     > この手順を完了していない場合は、ビルドの実行時に IIS でホストされているすべてのサンプルでエラーが発生します。 アクセス許可が正しく設定されていることを確認するか、SDK コマンド プロンプトと Visual Studio コマンド プロンプト (2012) を管理者として実行してください。
 
-11. コンピューター上に C:\logs ディレクトリを作成します (一部のサンプルで必要になることがあります)。 このフォルダーに対する書き込みアクセスが適切なアカウントに付与されていることを確認してください。 Windows 7、Windows Vista、および Windows Server 2008 R2 では、このアカウントは **Network Service**です。 Windows Server 2008 の場合、アカウントは NT Authority\Network Service です。 Windows XP および Windows Server 2003 の場合、アカウントは ASPNET です。
+11. コンピューター上に C:\logs ディレクトリを作成します (一部のサンプルで必要になることがあります)。 このフォルダーに対する書き込みアクセスが適切なアカウントに付与されていることを確認してください。 Windows 7、Windows Vista、および Windows Server 2008 R2 では、このアカウントは **Network Service** です。 Windows Server 2008 の場合、アカウントは NT Authority\Network Service です。 Windows XP および Windows Server 2003 の場合、アカウントは ASPNET です。
 
 12. Setupcerttool.bat ファイルを実行します。 このファイルは  \<InstallPath> \ WF_WCF_Samples \wcf\setup\ フォルダーにあります。  このスクリプトでは、次のタスクが実行されます。
 
