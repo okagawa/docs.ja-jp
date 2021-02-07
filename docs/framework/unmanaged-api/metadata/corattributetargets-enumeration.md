@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: CorAttributeTargets 列挙型'
 title: CorAttributeTargets 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-ms.openlocfilehash: fbe721bad56ec2be434039f00e741ad9a177815f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6f80df31b9da8591fac3d979ede1e9bf0f8ecfc4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718970"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678498"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets 列挙型
 
@@ -80,7 +81,7 @@ typedef enum CorAttributeTargets
 |`catAll`|任意のアプリケーション要素に属性を適用できます。|  
 |`catClassMembers`|属性は、クラスのメンバーに適用できます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `CorAttributeTargets`列挙値をビットごとの or 演算と組み合わせて、適切な組み合わせを取得できます。  
   

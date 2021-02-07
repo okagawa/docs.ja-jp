@@ -1,19 +1,20 @@
 ---
+description: 詳細については、VolatileOutcomeTimeout を参照してください。
 title: Microsoft.Transactions.TransactionBridge.VolatileOutcomeTimeout
 ms.date: 03/30/2017
 ms.assetid: 2dbe34c5-57c7-4b64-9257-63021911d03c
-ms.openlocfilehash: bc2cdc2221ec522b44c36ef3320b77124d61850e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5dd6ecce995d315581e1335e4dc83c425a6381b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96236703"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99677237"
 ---
 # <a name="microsofttransactionstransactionbridgevolatileoutcometimeout"></a>Microsoft.Transactions.TransactionBridge.VolatileOutcomeTimeout
 
 不安定な参加要素からの結果メッセージに対する応答を受信するのを待機しているときに WS-AT プロトコル サービスがタイムアウトしました。 受信者が応答した場合、トランザクションの結果が不明である場合があります。  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  不安定な参加要素がコミットまたは中止を決定したが、一定時間内にコミット要求またはロールバック要求に応答していない場合にトレースされます。  
   

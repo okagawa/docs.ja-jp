@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataAssemblyImport:: EnumExportedTypes メソッド'
 title: IMetaDataAssemblyImport::EnumExportedTypes メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5912ed8-e4ce-438b-8ea3-d9e4c288d109
 topic_type:
 - apiref
-ms.openlocfilehash: a8b2377c48331ff9f0e69876c51fb78c7190f694
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ecddcbd87586f5f61c57f8c04ea3bd68dc652839
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95708895"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678030"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>IMetaDataAssemblyImport::EnumExportedTypes メソッド
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: AssemblyFlags 列挙型'
 title: AssemblyFlags 列挙体
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 40f9bd9e-16ec-447e-81b0-168c875e9866
 topic_type:
 - apiref
-ms.openlocfilehash: 561b4d68a574a2859286fb5f2e2d950518a9d29d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 17cc0dec305c21d21693fe8f4f8d82c039f73278
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732781"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679005"
 ---
 # <a name="assemblyflags-enumeration"></a>AssemblyFlags 列挙体
 
@@ -47,7 +48,7 @@ typedef enum {
 |`afNonSideBySideProcess`|同じプロセスで実行されている場合、アセンブリを他のバージョンと一緒に実行できないことを指定します。|  
 |`afNonSideBySideMachine`|アセンブリが同じコンピューター上で実行されている場合、その他のバージョンでは実行できないことを指定します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  0x0010 と0x0070 の間の値は、参照アセンブリのサイドバイサイドの互換性機能を記述するために使用されます。 これらの値のいずれも設定されていない場合、アセンブリはサイドバイサイドで互換性があると見なされます。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: CeeSectionRelocType 列挙型'
 title: CeeSectionRelocType 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 124656f6-0dad-4ceb-9043-d3869ab65cde
 topic_type:
 - apiref
-ms.openlocfilehash: f7aa9699e9929608c90020c6b2d66c301fc11955
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 49f7b39b3cc4c2e71dd3e4e426d0ca787e9ac0b3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732711"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678836"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType 列挙型
 

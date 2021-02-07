@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: StackOverflowInfo 構造体'
 title: StackOverflowInfo 構造体
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 519389f2-0217-436c-99d4-93a76ebce5b5
 topic_type:
 - apiref
-ms.openlocfilehash: a8a57cfcaf36949d4d10c6ec267a5f55a2aee5eb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cca65e4293c05b89ebefc3c6dd36a6b8898eb15f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729929"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679395"
 ---
 # <a name="stackoverflowinfo-structure"></a>StackOverflowInfo 構造体
 
@@ -41,7 +42,7 @@ typedef struct _StackOverflowInfo {
 |`soType`|オーバーフローの種類を指定する [StackOverflowType](stackoverflowtype-enumeration.md) 列挙体の値。|  
 |`pExceptionInfo`|Win32 オブジェクトへのポインター。このオブジェクトには、例外 `EXCEPTION_POINTERS` のコンピューターに依存しない記述と、例外の発生時にプロセッサコンテキストのコンピューターに依存する記述を持つコンテキストレコードが含まれています。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `StackOverflowInfo`オブジェクトは、イベントの[Iactiononclrevent:: OnEvent](iactiononclrevent-onevent-method.md)メソッドに渡され `Event_StackOverflow` ます。  
   

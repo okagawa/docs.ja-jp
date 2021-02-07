@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: WAIT_OPTION 列挙型'
 title: WAIT_OPTION 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 962fc293-8ded-4b3b-90ce-2c21a4f1b244
 topic_type:
 - apiref
-ms.openlocfilehash: 056d41df328de5796eec9f04589205d18b408f1f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1d651909e0f62f2db7478a6e0b37139d1f953196
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732802"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679135"
 ---
 # <a name="wait_option-enumeration"></a>WAIT_OPTION 列挙型
 
@@ -43,7 +44,7 @@ typedef enum {
 |`WAIT_MSGPUMP`|スレッドがブロックされた場合に、現在の OS スレッドでメッセージをポンプする必要があることをホストに通知します。 ランタイムは、スレッドに対してのみこの値を指定し <xref:System.Threading.ApartmentState.STA> ます。|  
 |`WAIT_NOTINDEADLOCK`|指定された同期要求がホストによって壊れていないことをホストに通知します。 つまり、ホストはを返すことができません `HOST_E_DEADLOCK` 。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  [IHostTaskManager:: Sleep](ihosttaskmanager-sleep-method.md)メソッドと[IHostTaskManager:: switchtotask](ihosttaskmanager-switchtotask-method.md)メソッドは、どちらもこの型のパラメーターを受け取ります。  
   

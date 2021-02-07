@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataAssemblyEmit:: SetAssemblyRefProps メソッド'
 title: IMetaDataAssemblyEmit::SetAssemblyRefProps メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 70a32bf3-9051-4f96-ae87-11356d06a073
 topic_type:
 - apiref
-ms.openlocfilehash: e28659f3c6912489775dd09951610f19e4400942
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 704fff656b705bb246e2742ce991d41fcadcdfcd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672748"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678173"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyRefProps メソッド
 
@@ -67,7 +68,7 @@ HRESULT SetAssemblyRefProps (
  `dwAssemblyRefFlags`  
  から参照アセンブリの属性を指定する [Assemblyrefflags](assemblyrefflags-enumeration.md) 値のビットごとの組み合わせ。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  メタデータ構造を作成するには `AssemblyRef` 、 [IMetaDataAssemblyEmit::D efineAssemblyRef](imetadataassemblyemit-defineassemblyref-method.md) メソッドを使用します。  
   

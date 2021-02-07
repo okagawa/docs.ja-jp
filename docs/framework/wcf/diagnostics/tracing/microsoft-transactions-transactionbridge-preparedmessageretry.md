@@ -1,19 +1,20 @@
 ---
+description: 詳細については、PreparedMessageRetry を参照してください。
 title: Microsoft.Transactions.TransactionBridge.PreparedMessageRetry
 ms.date: 03/30/2017
 ms.assetid: 2194292d-bf5f-4aef-9336-cd3c4795cb71
-ms.openlocfilehash: edab153123ae48702811532df3b5b5bf0849c26a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 99106493f0eec900875a713b439111fadb150c62
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275919"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99677276"
 ---
 # <a name="microsofttransactionstransactionbridgepreparedmessageretry"></a>Microsoft.Transactions.TransactionBridge.PreparedMessageRetry
 
 準備メッセージの再試行は、応答しないコーディネーターに送信されました。  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  ローカル トランザクション マネージャーが一定時間内に応答を受信せず、上位のコーディネーターに準備メッセージを再送信する必要があった場合にトレースされます。  
   

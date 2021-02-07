@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: StackOverflowType 列挙型'
 title: StackOverflowType 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dab648ad-972b-479c-b129-b4c1dcbd932e
 topic_type:
 - apiref
-ms.openlocfilehash: bbdc68721378e6bbb09f5e4eade08e2e6e03b097
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d39ccd99331a3e839236f1ede21254edb92b2dfb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729914"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679356"
 ---
 # <a name="stackoverflowtype-enumeration"></a>StackOverflowType 列挙型
 
@@ -43,7 +44,7 @@ typedef enum {
 |`SO_Managed`|スタックオーバーフローは、マネージコードによって発生しました。|  
 |`SO_Other`|スタックオーバーフローは、アンマネージコードによって発生しました。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  この情報は、 [Iactiononclrevent:: OnEvent](iactiononclrevent-onevent-method.md) メソッドの呼び出しによってホストに渡されます。  
   

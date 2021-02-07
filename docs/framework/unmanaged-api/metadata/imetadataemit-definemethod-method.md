@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataEmit::D efineMethod メソッド'
 title: IMetaDataEmit::DefineMethod メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3e2102c5-48b7-4c0e-b805-7e2b5e156e3d
 topic_type:
 - apiref
-ms.openlocfilehash: a32a1eb850943b84a0d368f883e44fd4ccf32ee9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b0ba2bb68f1d4387229767f6f2550d64b9008898
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719581"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99677965"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod メソッド
 
@@ -67,7 +68,7 @@ HRESULT DefineMethod (
  `pmd`  
  入出力メンバートークン。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  メタデータ API は、呼び出し元が指定された外側のクラスまたはインターフェイスに対してメソッドを出力するのと同じ順序でメソッドを永続化することを保証します。これは、パラメーターで指定し `td` ます。  
   

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CorTokenType 列挙型」を参照してください。
 title: CorTokenType 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93c9a369-225f-4eff-9b78-3fbee4902cf1
 topic_type:
 - apiref
-ms.openlocfilehash: 70b28ab0ca73988093eadb9628142fecd9442948
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 954bddccd8fe20be46080f8843bcf754e0cf1bbb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705476"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678407"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType 列挙型
 
@@ -91,7 +92,7 @@ typedef enum CorTokenType {
 |`mdtName`|`mdName`トークン。|  
 |`mdtBaseType`|使用されていません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  各値は、対応するメタデータトークンの上位バイトの値に相当します。  
   

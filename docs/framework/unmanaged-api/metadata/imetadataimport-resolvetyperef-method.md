@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataImport:: ResolveTypeRef メソッド'
 title: IMetaDataImport::ResolveTypeRef メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 556bccfb-61bc-4761-b1d5-de4b1c18a38f
 topic_type:
 - apiref
-ms.openlocfilehash: 76c5519a6cd1b8994e2f869281f13d8269e89fde
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0634bac77f457432948d0c2887d676e95430d05d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702824"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99677562"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>IMetaDataImport::ResolveTypeRef メソッド
 
@@ -51,7 +52,7 @@ HRESULT ResolveTypeRef (
  `ptd`  
  入出力参照された型を表す TypeDef トークンへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!IMPORTANT]
 > 複数のアプリケーションドメインが読み込まれる場合は、この方法を使用しないでください。 メソッドは、アプリケーションドメインの境界を尊重しません。 アセンブリの複数のバージョンが読み込まれ、同じ名前空間を持つ同じ型が含まれている場合、メソッドは最初に見つかった型のモジュールスコープを返します。  

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IMetaDataImport2:: EnumMethodSpecs メソッド'
 title: IMetaDataImport2::EnumMethodSpecs メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b3fc1e6c-bcb6-4915-baf8-7dc0a31b8724
 topic_type:
 - apiref
-ms.openlocfilehash: 26b345567699c5780827ed835cff13069ea8f609
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 19fff1d78599d968bb1fd0ab27b0f71e41fae20b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702746"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99677523"
 ---
 # <a name="imetadataimport2enummethodspecs-method"></a>IMetaDataImport2::EnumMethodSpecs メソッド
 
