@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CorDebugIntercept 列挙型」を参照してください。
 title: CorDebugIntercept 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3d5b642e-7ef2-428b-a5ae-509c35ed461a
 topic_type:
 - apiref
-ms.openlocfilehash: 3d3d4af8e9ee073c0aefec418a3b53c4589adf0d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ddd17aff309396fdcda37c731ff907224ee17db2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729110"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661975"
 ---
 # <a name="cordebugintercept-enumeration"></a>CorDebugIntercept 列挙型
 
@@ -51,7 +52,7 @@ typedef enum CorDebugIntercept {
 |`INTERCEPT_INTERCEPTION`|使用されていません。|  
 |`INTERCEPT_ALL`|すべてのコードをインターセプトできます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  インターセプトできるコードの型を確立するには、 [ICorDebugStepper:: SetInterceptMask](icordebugstepper-setinterceptmask-method.md) メソッドを使用します。  
   

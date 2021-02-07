@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: DacpModuleData 構造体'
 title: DacpModuleData 構造体
 ms.date: 02/01/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 5d27ba2de9ff6ed184b6ddf50a517d0dae7715f5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 376a49ab78db08e5906e8d33389cdc45fe76e81e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723052"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661585"
 ---
 # <a name="dacpmoduledata-structure"></a>DacpModuleData 構造体
 
@@ -49,7 +50,7 @@ struct DacpModuleData
 | `ilBase`  | 読み込まれたイメージのベースのアドレス。                                 |
 | `payLoad` | ランタイムによって使用される追加のモジュール情報のペイロードバッファー。 |
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 この構造体はランタイム内に存在し、ヘッダーまたはライブラリファイルを介して公開されることはありません。 これを使用するには、前に示したように構造体を定義します。
 

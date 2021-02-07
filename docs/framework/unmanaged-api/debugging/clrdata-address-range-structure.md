@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CLRDATA_ADDRESS_RANGE 構造'
 title: CLRDATA_ADDRESS_RANGE 構造体
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 8eb841b4c4f06a3932805ae6222bdd693def5ea0
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 5d671a08064781b71756efc3c753468e6769d4ce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274310"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662339"
 ---
 # <a name="clrdata_address_range-structure"></a>CLRDATA_ADDRESS_RANGE 構造体
 
@@ -45,16 +46,16 @@ typedef struct
 | `startAddress` | 範囲の開始アドレス。 |
 | `endAddress`   | 範囲の終了アドレス。   |
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-この構造体はランタイム内に存在し、ヘッダーまたはライブラリファイルを介して公開されることはありません。 これを使用するに`CLRDATA_ADDRESS`は、上で指定したように構造体を定義します。は、64ビットの符号なし整数です。
+この構造体はランタイム内に存在し、ヘッダーまたはライブラリファイルを介して公開されることはありません。 これを使用するには、上で指定したように構造体を定義し `CLRDATA_ADDRESS` ます。は、64ビットの符号なし整数です。
 
 ## <a name="requirements"></a>要件
 
-**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
-**ヘッダー:** なし  
-**ライブラリ**なし  
-**.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+**ヘッダー:** 存在  
+**ライブラリ:** 存在  
+**.NET Framework のバージョン:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>関連項目
 

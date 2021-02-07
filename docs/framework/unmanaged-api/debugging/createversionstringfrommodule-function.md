@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CreateVersionStringFromModule 関数'
 title: CreateVersionStringFromModule 関数
 ms.date: 03/30/2017
 api_name:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3d2fe9bd-75ef-4364-84a6-da1e1994ac1a
 topic_type:
 - apiref
-ms.openlocfilehash: 1b944034251b34350057866b2a52e63e934d72d4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 45ae3ec31cf77e4c96e42a58b23e1f52dcf7c54b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733348"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661546"
 ---
 # <a name="createversionstringfrommodule-function"></a>CreateVersionStringFromModule 関数
 
@@ -74,7 +75,7 @@ HRESULT CreateVersionStringFromModule (
  E_FAIL (またはその他の E_ リターン コード)  
  `pidDebuggee` が有効なプロセスを参照していません。または、その他のエラーが発生しました。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  この関数は、`pidDebuggee` が識別した CLR プロセスと、`szModuleName` で指定された文字列パスを受け取ります。 バージョン文字列は、`pBuffer` が指すバッファーに返されます。 この文字列は関数のユーザーには不透明です。つまり、バージョン文字列自体に特別な意味はありません。 この関数と [CreateDebuggingInterfaceFromVersion 関数](createdebugginginterfacefromversion-function-for-silverlight.md)のコンテキストでのみ使用されます。  
   

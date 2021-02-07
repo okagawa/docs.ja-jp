@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: CorDebugThreadState 列挙型'
 title: CorDebugThreadState 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3ccdf18-4ec6-494d-9024-48e5c8c724f5
 topic_type:
 - apiref
-ms.openlocfilehash: 5eee2aee5873fe512136bc5407e395acdc31af29
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0cf83ee31547e49ccc7d09e0ab4ee85548688b36
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722610"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661806"
 ---
 # <a name="cordebugthreadstate-enumeration"></a>CorDebugThreadState 列挙型
 
@@ -41,7 +42,7 @@ typedef enum CorDebugThreadState {
 |`THREAD_RUN`|デバッグイベントが発生しない限り、スレッドは自由に実行できます。|  
 |`THREAD_SUSPEND`|スレッドを実行できません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  デバッガーは、列挙体を使用して `CorDebugThreadState` スレッドの実行を制御します。 スレッドの状態を設定するには、次のように指定する必要があります: [: SetDebugState](icordebugthread-setdebugstate-method.md) または、モジュール [:: SetAllThreadsDebugState](icordebugcontroller-setallthreadsdebugstate-method.md) メソッド。  
   

@@ -1,15 +1,16 @@
 ---
-title: <Parameter> 要素 (.NET ネイティブ)
+description: '詳細情報: <Parameter> 要素 (.NET Native)'
+title: <Parameter> 要素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
-ms.openlocfilehash: 7e812ab60eb0a89eb868346733a8ea74e2f76d3e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 53b84027e8393e0a799d9652767d173c2787cd27
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287866"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662794"
 ---
-# <a name="parameter-element-net-native"></a>\<Parameter> 要素 (.NET ネイティブ)
+# <a name="parameter-element-net-native"></a>\<Parameter> 要素 (.NET Native)
 
 メソッドに渡された引数の型にリフレクション ポリシーを適用します。  
   

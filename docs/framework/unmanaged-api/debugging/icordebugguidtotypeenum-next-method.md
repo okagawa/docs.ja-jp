@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次の説明を参照してください:、次のメソッド
 title: ICorDebugGuidToTypeEnum::Next メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c9937666-8e18-484d-9fe0-b9ac95199530
 topic_type:
 - apiref
-ms.openlocfilehash: 68f548705213da7d715ae569116abae0cd24129d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0ab05cc0689c76c0bb185205ea00c5ccebfcbe03
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705658"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661000"
 ---
 # <a name="icordebugguidtotypeenumnext-method"></a>ICorDebugGuidToTypeEnum::Next メソッド
 

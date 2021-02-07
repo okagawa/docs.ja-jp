@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Init メソッド'
 title: Init メソッド
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e48b5c64-049f-4f93-ad87-d07ae9cd5845
 topic_type:
 - apiref
-ms.openlocfilehash: 25a1c29ab94a785304b83d5b1bcb2d7176742a68
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 531e05a09cbecbfb67c8c004d1e4ba1deb7e59a0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726019"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662560"
 ---
 # <a name="init-method"></a>Init メソッド
 

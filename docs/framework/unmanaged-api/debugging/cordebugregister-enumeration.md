@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CorDebugRegister 列挙型」を参照してください。
 title: CorDebugRegister 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 003bb138-7960-4291-ac88-0d87e470ff70
 topic_type:
 - apiref
-ms.openlocfilehash: 85df98e83396c9439c28dd41a3ffa02b820c9c3e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7a5dc771a239a82448f898e2f518e920993ec35a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726055"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661871"
 ---
 # <a name="cordebugregister-enumeration"></a>CorDebugRegister 列挙型
 
@@ -190,7 +191,7 @@ typedef enum CorDebugRegister {
 |`REGISTER_ARM_R12`|ARM プロセッサ上のレジスタ R12。|  
 |`REGISTER_ARM_LR`|ARM プロセッサ上のリンク レジスタ (R14)。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  IA-64 プロセッサには、128 個の汎用データ レジスタおよび 128 個の浮動小数点データ レジスタがありますが、提供されているのは `REGISTER_IA64_R0` および `REGISTER_IA64_F0` の値のみです。 その他の値は、次のように判断されます。  
   
