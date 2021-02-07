@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugProcess7:: SetWriteableMetadataUpdateMode メソッド'
 title: ICorDebugProcess7::SetWriteableMetadataUpdateMode メソッド
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 8589bba7-7304-45ba-9e31-7bf43dfd5c19
 topic_type:
 - apiref
-ms.openlocfilehash: 5671f8cb51210c27dffdedba28b4b145b3fedc55
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 86ece68e160fbd61f44adcf495656c7b5d6b5153
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732555"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99691264"
 ---
 # <a name="icordebugprocess7setwriteablemetadataupdatemode-method"></a>ICorDebugProcess7::SetWriteableMetadataUpdateMode メソッド
 
@@ -38,7 +39,7 @@ HRESULT SetWriteableMetadataUpdateMode(
  `flags`  
  ターゲットプロセス内のメタデータに対するメモリ内更新をデバッガーに対して表示 () するか、非表示 () するかを指定する [WriteableMetadataUpdateMode](writeablemetadataupdatemode-enumeration.md) 列挙値です `WriteableMetadataUpdateMode::AlwaysShowUpdates` `WriteableMetadataUpdateMode::LegacyCompatPolicy` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ターゲット プロセスのメタデータに対する更新は、[編集]、[続行] で行うか、プロファイラー、または <xref:System.Reflection.Emit?displayProperty=nameWithType> で行うことができます。  
   

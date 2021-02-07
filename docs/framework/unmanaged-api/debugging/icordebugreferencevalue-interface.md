@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: の値インターフェイス'
 title: ICorDebugReferenceValue インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2040e2be-119a-4cfb-ae52-b0b6f052665c
 topic_type:
 - apiref
-ms.openlocfilehash: 343e504e086e740236d7b5977452cc0d789883fc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e516b1178b4f4268472dedd37d6443e673e16af6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728408"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690965"
 ---
 # <a name="icordebugreferencevalue-interface"></a>ICorDebugReferenceValue インターフェイス
 
@@ -35,7 +36,7 @@ ms.locfileid: "95728408"
 |[IsNull メソッド](icordebugreferencevalue-isnull-method.md)|このが null 値であるかどうかを示す値を取得します。この値を指定した `ICorDebugReferenceValue` 場合、は `ICorDebugReferenceValue` オブジェクトをポイントしません。|  
 |[SetValue メソッド](icordebugreferencevalue-setvalue-method.md)|現在のメモリアドレスを設定します。 つまり、このメソッドは、 `ICorDebugReferenceValue` オブジェクトを指すようにこれを設定します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  共通言語ランタイム (CLR) は、デバッグされたプロセスが続行されると、オブジェクトのガベージコレクションを実行する場合があります。 ガベージコレクションでは、メモリ内でオブジェクトを移動できます。 はガベージコレクションと連携して、ガベージコレクション `ICorDebugReferenceValue` の後に情報が更新されるか、ガベージコレクションの前に暗黙的に無効にされます。  
   

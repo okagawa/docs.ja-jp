@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ISymUnmanagedConstant:: GetValue メソッド'
 title: ISymUnmanagedConstant::GetValue メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0036fc10-e768-47a8-b9cf-bf47faf8d194
 topic_type:
 - apiref
-ms.openlocfilehash: 7a1c795f4a162699078e91bcaa274253169234e7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 05818028deb804bf2a2426285b5185b01776199d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732841"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689691"
 ---
 # <a name="isymunmanagedconstantgetvalue-method"></a>ISymUnmanagedConstant::GetValue メソッド
 

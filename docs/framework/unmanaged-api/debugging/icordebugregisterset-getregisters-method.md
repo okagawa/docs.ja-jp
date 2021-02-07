@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次のページを参照してください: いいね!:: GetRegisters メソッド'
 title: ICorDebugRegisterSet::GetRegisters メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fdf91864-48ea-4aa6-b70c-361b7a3184c7
 topic_type:
 - apiref
-ms.openlocfilehash: 315e4cc3b93fc78e11a4fb399bbe6f8a9f55ac84
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: efb0f19fe9eb823912203b82267803739fc3e2cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705008"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690848"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a>ICorDebugRegisterSet::GetRegisters メソッド
 
@@ -48,7 +49,7 @@ HRESULT GetRegisters (
  `regBuffer`  
  入出力オブジェクトの配列 `CORDB_REGISTER` 。各オブジェクトは、レジスタの値を受け取ります。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  配列のサイズは、ビットマスクで1に設定されているビット数と同じである必要があります。 パラメーターは、 `regCount` レジスタ値を受け取るバッファー内の要素の数を指定します。 `regCount`マスクによって示されるレジスタの数に対して値が小さすぎる場合は、番号が大きいレジスタがセットから切り捨てられます。 `regCount`値が大きすぎる場合、未使用の `regBuffer` 要素は変更されません。  
   

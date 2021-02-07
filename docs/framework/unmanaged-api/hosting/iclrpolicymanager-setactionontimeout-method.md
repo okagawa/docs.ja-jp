@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRPolicyManager:: SetActionOnTimeout メソッド'
 title: ICLRPolicyManager::SetActionOnTimeout メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 38439fa1-2b99-4fa8-a6ec-08afc0f83b9c
 topic_type:
 - apiref
-ms.openlocfilehash: 3ddd78ea35d5709abb30af085b2212a09b28c2ef
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d682acd49bdc4fa0f8c58a1300e2215816fe2718
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725561"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689028"
 ---
 # <a name="iclrpolicymanagersetactionontimeout-method"></a>ICLRPolicyManager::SetActionOnTimeout メソッド
 
@@ -63,7 +64,7 @@ HRESULT SetActionOnTimeout (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_INVALIDARG|指定されたに対してタイムアウトを設定できない `operation` か、に無効な値が指定されました `operation` 。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  タイムアウト値は、CLR によって設定された既定のタイムアウトか、 [ICLRPolicyManager:: SetTimeout](iclrpolicymanager-settimeout-method.md) メソッドの呼び出しでホストによって指定された値のいずれかになります。  
   

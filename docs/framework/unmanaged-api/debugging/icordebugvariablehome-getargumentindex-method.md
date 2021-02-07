@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次のページを参照してください: GetArgumentIndex メソッド'
 title: 'いい変数 Home:: GetArgumentIndex メソッド'
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e86fcc72-388d-4009-ab21-8f9c3323e9a3
 topic_type:
 - apiref
-ms.openlocfilehash: 27a676fd1d2d7903943e44f8a7201b88af4fba89
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 827ef55d3e3509cbfbfc8213ef5b53fbe2e2220e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396991"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690042"
 ---
 # <a name="icordebugvariablehomegetargumentindex-method"></a>いい変数 Home:: GetArgumentIndex メソッド
 
@@ -46,7 +47,7 @@ HRESULT GetArgumentIndex(
 |値|説明|
 |-----------|-----------------|
 |`S_OK`|メソッド呼び出しによって有効な引数インデックスが返されました。|
-|`E_FAIL`|現在の[ページ](icordebugvariablehome-interface.md)は、ローカル変数を表します。|
+|`E_FAIL`|現在の [ページ](icordebugvariablehome-interface.md) は、ローカル変数を表します。|
 
 ## <a name="remarks"></a>解説
 

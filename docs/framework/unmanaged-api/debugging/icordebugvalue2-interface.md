@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorDebugValue2 インターフェイス」を参照してください。
 title: ICorDebugValue2 インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3ff2ad2a-da5a-461b-8627-1a8eba49df9c
 topic_type:
 - apiref
-ms.openlocfilehash: 7aca5fcb5a55331756b4f98c08eb46fc4db1e289
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b408bb5d1732a60fc9aa8ffb93321d3542f2cab7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720335"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690263"
 ---
 # <a name="icordebugvalue2-interface"></a>ICorDebugValue2 インターフェイス
 
@@ -31,7 +32,7 @@ ms.locfileid: "95720335"
 |------------|-----------------|  
 |[GetExactType メソッド](icordebugvalue2-getexacttype-method.md)|この値のを表すオブジェクトへのインターフェイスポインターを取得し `ICorDebugType` <xref:System.Type> ます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  

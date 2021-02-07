@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugUnmanagedCallback::D Eバグイベントメソッド'
 title: ICorDebugUnmanagedCallback::DebugEvent メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: be9cab04-65ec-44d5-a39a-f90709fdd043
 topic_type:
 - apiref
-ms.openlocfilehash: 75341b1af034972c861b75f29a06eaa2c4e33c3a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fcd7bc3b380add7465473cb01585eb1656d00aad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703037"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690575"
 ---
 # <a name="icordebugunmanagedcallbackdebugevent-method"></a>ICorDebugUnmanagedCallback::DebugEvent メソッド
 
@@ -43,7 +44,7 @@ HRESULT DebugEvent (
  `fOutOfBand`  
  [in] `true` 、アンマネージイベントが発生した後にマネージプロセス状態との相互作用が不可能な場合は、デバッガーが "を実行しています [:: Continue](icordebugcontroller-continue-method.md)" を呼び出す場合は。それ以外の場合は `false` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  デバッグ中のスレッドが Win32 スレッドである場合は、Win32 デバッグインターフェイスのメンバーを使用しないでください。 を呼び出すことができるのは、 `ICorDebugController::Continue` Win32 スレッドだけで、帯域外のイベントを継続している場合のみです。  
   

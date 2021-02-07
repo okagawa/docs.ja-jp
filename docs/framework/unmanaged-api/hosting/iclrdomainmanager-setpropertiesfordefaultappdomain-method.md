@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRDomainManager:: SetPropertiesForDefaultAppDomain メソッド'
 title: ICLRDomainManager::SetPropertiesForDefaultAppDomain メソッド
 ms.date: 03/30/2017
 api_name:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - ICLRDomainManager::SetPropertiesForDefaultAppDomain method [.NET Framework hosting]
 - SetPropertiesForDefaultAppDomain method [.NET Framework hosting]
 ms.assetid: 43e61c4b-c435-45ec-9ef6-c68403aa4200
-ms.openlocfilehash: b5577d0444caf14fb47d9d7e2de60a8399378db7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 08e6c885d5d089fa22c30a4e3cef69480b840031
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702135"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689444"
 ---
 # <a name="iclrdomainmanagersetpropertiesfordefaultappdomain-method"></a>ICLRDomainManager::SetPropertiesForDefaultAppDomain メソッド
 
@@ -54,7 +55,7 @@ HRESULT SetPropertiesForDefaultAppDomain(
 |S_OK|メソッドは正常に完了しました。|  
 |HRESULT_FROM_WIN32 (ERROR_UNKNOWN_PROPERTY)|`pwszPropertyNames` には、このメソッドで認識されないプロパティ名が含まれています。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  "PARTIAL_TRUST_VISIBLE_ASSEMBLIES" のプロパティ値は、条件付き (APTCA) 属性を持つアセンブリのリストです。このフラグは、 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType> 既定のアプリケーションドメインの部分的に信頼された呼び出し元に対して表示されます。  
   

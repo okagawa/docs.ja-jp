@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICLRMemoryNotificationCallback インターフェイス」を参照してください。
 title: ICLRMemoryNotificationCallback インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 873639e2-4837-4568-83b3-4493e67e4174
 topic_type:
 - apiref
-ms.openlocfilehash: 5762a354bec485cb382b5460dfd2a337f79bee1a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 46e53cdf0b7f797b8945237d47fc3b521b08ddb7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95689538"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689226"
 ---
 # <a name="iclrmemorynotificationcallback-interface"></a>ICLRMemoryNotificationCallback インターフェイス
 
@@ -31,7 +32,7 @@ Win32 関数と同様の方法を使用して、ホストがメモリ不足状�
 |------------|-----------------|  
 |[OnMemoryNotification メソッド](iclrmemorynotificationcallback-onmemorynotification-method.md)|コンピューターのメモリ負荷の共通言語ランタイム (CLR) に通知します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ホストは、このインターフェイスを使用して、 `ICLRMemoryNotificationCallback` CLR のメモリリソースを解放するように要求します。  
   

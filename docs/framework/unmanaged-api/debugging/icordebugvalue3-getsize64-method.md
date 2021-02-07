@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugValue3:: GetSize64 メソッド'
 title: ICorDebugValue3::GetSize64 メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fee56a29-3154-4192-958d-71da2ced3740
 topic_type:
 - apiref
-ms.openlocfilehash: d1d057d38e16503175138c6ec978eb6c1f12bc6d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ce7db5211c6a8fc16b58e0197fa3142b5b744d96
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722337"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690198"
 ---
 # <a name="icordebugvalue3getsize64-method"></a>ICorDebugValue3::GetSize64 メソッド
 
@@ -39,7 +40,7 @@ HRESULT GetSize64(
  pSize  
  入出力このオブジェクトのサイズ (バイト単位) へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  この値の型が参照型の場合、このメソッドはオブジェクトのサイズではなく、ポインターのサイズを返します。  
   

@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「ICorDebugProcess8 インターフェイス」を参照してください。
 title: ICorDebugProcess8 インターフェイス
 ms.date: 03/30/2017
 ms.assetid: 7ab1a70f-ec11-46ff-8869-cd8ca679cc51
-ms.openlocfilehash: 00c432374eeb82692492b8e6b10472f13bc44d6e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d858470216cfe64c60902836e552f750f4b2d5ec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732516"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99691290"
 ---
 # <a name="icordebugprocess8-interface"></a>ICorDebugProcess8 インターフェイス
 
 [.NET Framework 4.6 以降のバージョンでサポートされています]  
   
- ICorDebugManagedCallback2 Process インターフェイスを論理的に拡張して、特定の種類の[ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)例外コールバックを有効または無効にします。  
+ ICorDebugManagedCallback2 Process インターフェイスを論理的に拡張して、特定の種類の[](icordebugmanagedcallback2-interface.md)例外コールバックを有効または無効にします。  
   
 ## <a name="methods"></a>メソッド  
   

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ISymUnmanagedConstant インターフェイス」を参照してください。
 title: ISymUnmanagedConstant インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e11c9baa-4cf1-4bb4-a95f-b1908893b46c
 topic_type:
 - apiref
-ms.openlocfilehash: 0d0c1462bc1c19f47bfbdcfa9694988da9acd9d2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fe54f84d25fee0d98aea9da82655a10e07595974
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95706867"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689665"
 ---
 # <a name="isymunmanagedconstant-interface"></a>ISymUnmanagedConstant インターフェイス
 

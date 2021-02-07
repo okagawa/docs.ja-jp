@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次のページを参照してください: いいね!:: GetThreadContext メソッド'
 title: ICorDebugRegisterSet::GetThreadContext メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0f63400b-dc1c-48d6-b51a-75c3f7f28e03
 topic_type:
 - apiref
-ms.openlocfilehash: a7d78daf74d3cc01c2313f092bce53950dbd7bfb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: be6384562858d04b6e139eda83c172c09f2dfc0d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95681224"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690796"
 ---
 # <a name="icordebugregistersetgetthreadcontext-method"></a>ICorDebugRegisterSet::GetThreadContext メソッド
 
@@ -44,7 +45,7 @@ HRESULT GetThreadContext(
  `context`  
  [入力、出力] `CONTEXT` 現在のプラットフォームの Win32 構造体を構成するバイト配列。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `GetThreadContext`スレッドはコンテキストが一時的に変更されている "ハイジャック" 状態になる可能性があるため、デバッガーは Win32 関数の代わりにこの関数を呼び出す必要があります。 返されるデータは、 `CONTEXT` 現在のプラットフォームの Win32 構造体です。  
   

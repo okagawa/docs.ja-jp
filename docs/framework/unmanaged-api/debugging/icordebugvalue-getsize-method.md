@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「ICorDebugValue:: GetSize メソッド」を参照してください。'
 title: ICorDebugValue::GetSize メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 445a9ee3-e050-4f3a-931a-96b0efb00110
 topic_type:
 - apiref
-ms.openlocfilehash: 9f5688ae4f76f9ddfde231aa6252d666c9152eec
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3fc2582990d58fa2e42f240dfd3e563eed34e372
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731082"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690341"
 ---
 # <a name="icordebugvaluegetsize-method"></a>ICorDebugValue::GetSize メソッド
 
@@ -39,7 +40,7 @@ HRESULT GetSize (
  `pSize`  
  入出力この値オブジェクトのサイズ (バイト単位)。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  値の型が参照型の場合、このメソッドはオブジェクトのサイズではなく、ポインターのサイズを返します。  
   

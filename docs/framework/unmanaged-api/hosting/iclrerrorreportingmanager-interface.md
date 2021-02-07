@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICLRErrorReportingManager インターフェイス」を参照してください。
 title: ICLRErrorReportingManager インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea8af0d5-4133-4472-8a1f-50570d7e85fa
 topic_type:
 - apiref
-ms.openlocfilehash: d3816c8a3b6204b053505aa888eb28d696f8990b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 094fe52858983fd0e1e5826e823932cb150b6087
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677846"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689275"
 ---
 # <a name="iclrerrorreportingmanager-interface"></a>ICLRErrorReportingManager インターフェイス
 
@@ -33,7 +34,7 @@ ms.locfileid: "95677846"
 |[EndCustomDump メソッド](iclrerrorreportingmanager-endcustomdump-method.md)|以前のの呼び出しで設定されたカスタムスタックダンプ構成を消去し `BeginCustomDump` ます。|  
 |[GetBucketParametersForCurrentException メソッド](iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md)|呼び出し元のスレッドで現在の例外の Watson バケットを取得します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  メソッドは、 `BeginCustomDump` カスタムスタックダンプ構成を設定します。 メソッドは、 `EndCustomDump` カスタムスタックダンプ構成をクリアし、関連付けられているすべての状態を解放します。 カスタムダンプの完了後に呼び出す必要があります。  
   

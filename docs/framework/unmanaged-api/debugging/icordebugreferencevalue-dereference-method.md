@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ereference メソッド」を参照してください:D。
 title: ICorDebugReferenceValue::Dereference メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5ec8cf76-3deb-4ce6-9a49-77a4c35d80b9
 topic_type:
 - apiref
-ms.openlocfilehash: cbcee923ecbb1106bb129f05d2e602a0fd17258d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: af225f746a9c67a90a7ad73046cd03401e4ba735
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732488"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99691108"
 ---
 # <a name="icordebugreferencevaluedereference-method"></a>ICorDebugReferenceValue::Dereference メソッド
 
@@ -39,7 +40,7 @@ HRESULT Dereference (
  `ppValue`  
  入出力この値のオブジェクトが指すオブジェクトを表す ICorDebugValue のアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ICorDebugValue`オブジェクトは、その参照がまだ無効になっていない場合にのみ有効です。  
   

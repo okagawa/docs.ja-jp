@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「ICorDebugValue:: GetAddress メソッド」を参照してください。'
 title: ICorDebugValue::GetAddress メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a247c792-45e1-4538-9e1f-b46acca4a463
 topic_type:
 - apiref
-ms.openlocfilehash: 47c0c4dfa78e85bcc83f0bb2a333955c8e8666fa
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c922388fbab820e50edffc140be94a2c0920099d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728369"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690432"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>ICorDebugValue::GetAddress メソッド
 
@@ -39,7 +40,7 @@ HRESULT GetAddress (
  `pAddress`  
  入出力 `CORDB_ADDRESS` この値オブジェクトのアドレスを指定するオブジェクトへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  値が使用できない場合は、0 (ゼロ) が返されます。 これは、値がレジスタの少なくとも一部の場合、またはガベージコレクターハンドル () に格納されている場合に発生する可能性が `GCHandle` あります。  
   

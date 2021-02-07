@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICoreClrDebugTarget:: FreeMemory メソッド'
 title: ICoreClrDebugTarget::FreeMemory メソッド
 ms.date: 03/30/2017
 api_name:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 98f2a0db-a6ec-4f9b-861d-f82485237d08
 topic_type:
 - apiref
-ms.openlocfilehash: 1e159cacd297d56d63e512643ec4d3fe0c3709c0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9572e0c3df1fdd064e78ba170d39c1415c68dc85
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95694402"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690003"
 ---
 # <a name="icoreclrdebugtargetfreememory-method"></a>ICoreClrDebugTarget::FreeMemory メソッド
 

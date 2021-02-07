@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次のページを参照してください: いいね!:: GetRegistersAvailable メソッド'
 title: ICorDebugRegisterSet::GetRegistersAvailable メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4ba08ffa-55a2-4662-9d6d-4738f1db60c9
 topic_type:
 - apiref
-ms.openlocfilehash: d28c130e55cbebf29348752780c03b03c1b8f358
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a1727c594733fe6529fe1e78f341723623b68be2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716994"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690822"
 ---
 # <a name="icordebugregistersetgetregistersavailable-method"></a>ICorDebugRegisterSet::GetRegistersAvailable メソッド
 
@@ -39,7 +40,7 @@ HRESULT GetRegistersAvailable (
  `pAvailable`  
  入出力現在使用できるレジスタを示すビットマスク。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  特定の状況でその値を特定できない場合は、レジスタを使用できない可能性があります。  
   

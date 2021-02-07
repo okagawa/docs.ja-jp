@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRGCManager2:: SetGCStartupLimitsEx メソッド'
 title: ICLRGCManager2::SetGCStartupLimitsEx メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6c3a08a9-5d65-48d4-8bbf-2a86ed7d356a
 topic_type:
 - apiref
-ms.openlocfilehash: 27d1ce06800075d2690bc508554b70f8d10168af
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2a4801d2f6255f5f84e0a4bae7a1886689ee8dc5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715018"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689239"
 ---
 # <a name="iclrgcmanager2setgcstartuplimitsex-method"></a>ICLRGCManager2::SetGCStartupLimitsEx メソッド
 
@@ -58,7 +59,7 @@ HRESULT SetGCStartupLimitsEx (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  を設定する値は、 `SetGCStartupLimitsEx` ホストを開始する前にのみ指定できます。 の後の呼び出し `SetGCStartupLimitsEx` は無視されます。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: いいね!'
 title: ICorDebugRegisterSet インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d3d9676d-0b87-4bc3-b679-7bbc7a186c88
 topic_type:
 - apiref
-ms.openlocfilehash: 940810288b72be0d4dfc5366176663c22c369ebb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7d888e9e395e9f5fa88c6a6d96b2b8e3171ef4ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712379"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690783"
 ---
 # <a name="icordebugregisterset-interface"></a>ICorDebugRegisterSet インターフェイス
 
@@ -35,7 +36,7 @@ ms.locfileid: "95712379"
 |[SetRegisters メソッド](icordebugregisterset-setregisters-method.md)|.NET Framework バージョン2.0 には実装されていません。|  
 |[SetThreadContext メソッド](icordebugregisterset-setthreadcontext-method.md)|.NET Framework 2.0 には実装されていません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  インターフェイスでは、 `ICorDebugRegisterSet` 32 ビットレジスタのみがサポートされます。 追加のレジスタを必要とする IA-64 などのプラットフォームで [ICorDebugRegisterSet2](icordebugregisterset2-interface.md) インターフェイスを使用します。  
   
