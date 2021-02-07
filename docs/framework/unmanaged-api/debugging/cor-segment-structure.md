@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: COR_SEGMENT 構造'
 title: COR_SEGMENT 構造体
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93aeecb9-7fef-4545-8daf-f566dfc47084
 topic_type:
 - apiref
-ms.openlocfilehash: 738e29fa15340c76b055b608140f3c3bfbd29611
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9bbc452b2c2036d019175ac1be8b9917ffa07b6a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726354"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712183"
 ---
 # <a name="cor_segment-structure"></a>COR_SEGMENT 構造体
 
@@ -45,7 +46,7 @@ typedef struct _COR_SEGMENT {
 |`gen`|メモリ領域の生成を示す [CorDebugGenerationTypes](cordebuggenerationtypes-enumeration.md) 列挙メンバー。|  
 |`heap`|メモリ領域が存在するヒープ番号。 詳細については、次の「解説」を参照してください。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `COR_SEGMENTS` 構造体は、マネージド ヒープのメモリ領域を表します。  `COR_SEGMENTS` オブジェクトは、[ICorDebugProcess5::EnumerateHeapRegions](icordebugprocess5-enumerateheapregions-method.md) メソッドを呼び出すことによって入力される [ICorDebugHeapRegionEnum](icordebugheapsegmentenum-interface.md) コレクション オブジェクトのメンバーです。  
   

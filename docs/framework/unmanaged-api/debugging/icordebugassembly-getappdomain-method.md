@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次の情報を参照してください: のアセンブリ:: GetAppDomain メソッド'
 title: ICorDebugAssembly::GetAppDomain メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 14e18510-23ac-4cba-9f96-c86147a2df9d
 topic_type:
 - apiref
-ms.openlocfilehash: 55a798bcc575aee3f309c35eb454a0675e0cbd97
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f67b2a211b080843e2bd7b8820a5bf54dae638e3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734076"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712104"
 ---
 # <a name="icordebugassemblygetappdomain-method"></a>ICorDebugAssembly::GetAppDomain メソッド
 
@@ -39,7 +40,7 @@ HRESULT GetAppDomain (
  `ppAppDomain`  
  入出力アプリケーションドメインを表す、のアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このアセンブリがシステムアセンブリの場合、は `GetAppDomain` null を返します。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: COR_IL_MAP 構造'
 title: COR_IL_MAP 構造体
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 534ebc17-963d-4b26-8375-8cd940281db3
 topic_type:
 - apiref
-ms.openlocfilehash: fb6b5d43e60b52c867535c42d59a098ef3c959bc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ff3d636429f51119342baea5d71163eb9d764e03
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726386"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712325"
 ---
 # <a name="cor_il_map-structure"></a>COR_IL_MAP 構造体
 
@@ -43,7 +44,7 @@ typedef struct _COR_IL_MAP {
 |`newOffset`|関数の先頭を基準とする新しい MSIL オフセット。|  
 |`fAccurate`|`true` マッピングが正確であることがわかっている場合は。それ以外の場合は `false` 。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  マップの形式は次のとおりです。デバッガーでは、が `oldOffset` 元の変更されていない msil コード内の msil オフセットを参照していると仮定します。 パラメーターは、新しいインストルメント化され `newOffset` たコード内で、対応する MSIL オフセットを参照します。  
   

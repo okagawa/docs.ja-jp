@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: CodeChunkInfo 構造体'
 title: CodeChunkInfo 構造体
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f482454-8517-48de-ba7a-d7aedab13bb5
 topic_type:
 - apiref
-ms.openlocfilehash: 11197246662a93f6a8b57c6e61e49505a9999d00
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 017a9ee8c608d4efae98eb0a342a3371ef8ec310
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727433"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712351"
 ---
 # <a name="codechunkinfo-structure"></a>CodeChunkInfo 構造体
 
@@ -41,7 +42,7 @@ typedef struct _CodeChunkInfo {
 |`startAddr`|`CORDB_ADDRESS`チャンクの開始アドレスを示す値です。|  
 |`length`|チャンクのサイズ (バイト単位)。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  コードの1つのチャンクは、関数などのコードオブジェクトの一部であるネイティブコードの領域です。  
   

@@ -1,5 +1,6 @@
 ---
-title: <add>NameValueSectionHandler および DictionarySectionHandler の要素
+description: '詳細情報: <add> NameValueSectionHandler および DictionarySectionHandler の要素'
+title: <add> NameValueSectionHandler および DictionarySectionHandler の要素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/add
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
-ms.openlocfilehash: 57722f3518fad12cb8e6e35d68f40bb8465bdd86
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5a8cf22b21370e60086408f792f8137386d07aa3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "77215435"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713053"
 ---
-# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<add>NameValueSectionHandler および DictionarySectionHandler の要素
+# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<add> NameValueSectionHandler および DictionarySectionHandler の要素
 
 カスタムアプリケーション設定を追加します。 各 **\<add>** タグには、キーと値のペアが含まれています。
 
@@ -37,9 +38,9 @@ ms.locfileid: "77215435"
 
 ## <a name="parent-element"></a>親要素
 
-| 要素 | Description |
+| 要素 | 説明 |
 | ------- | ------------|
-| [**\<sectionName>** Element](custom-element-2.md) | クラスおよびクラスを使用するカスタム構成セクションの設定を定義し <xref:System.Configuration.NameValueSectionHandler> <xref:System.Configuration.DictionarySectionHandler> ます。 |
+| [**\<sectionName>** 要素](custom-element-2.md) | クラスおよびクラスを使用するカスタム構成セクションの設定を定義し <xref:System.Configuration.NameValueSectionHandler> <xref:System.Configuration.DictionarySectionHandler> ます。 |
 
 ## <a name="child-elements"></a>子要素
 
@@ -62,7 +63,7 @@ ms.locfileid: "77215435"
 
 ## <a name="configuration-file"></a>構成ファイル
 
-この要素は、アプリケーション構成ファイル *、コンピューター構成*ファイル (machine.config)、およびアプリケーションディレクトリレベルでは*ない web.config ファイル*で使用できます。
+この要素は、アプリケーション構成ファイル、マシン構成ファイル (*Machine.config*)、およびアプリケーションディレクトリレベルではないファイル *Web.config* で使用できます。
 
 ## <a name="see-also"></a>関連項目
 

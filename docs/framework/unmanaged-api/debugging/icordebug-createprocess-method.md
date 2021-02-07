@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebug:: CreateProcess メソッド'
 title: ICorDebug::CreateProcess メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-ms.openlocfilehash: aeb39782c4c0624501a0e2a71960f5d16ab3c03e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b504b5f7a60fd0fd4a8f8f1c5d8e3c3b8dcfd858
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723481"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712117"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess メソッド
 
@@ -83,7 +84,7 @@ HRESULT CreateProcess (
  `ppProcess`  
  入出力プロセスを表す、オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドのパラメーターは、Win32 メソッドのパラメーターと同じ `CreateProcess` です。  
   

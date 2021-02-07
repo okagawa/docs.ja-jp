@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: COR_HEAPINFO 構造'
 title: COR_HEAPINFO 構造体
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bfb2cd39-3e0b-4d51-ba0c-f009755c1456
 topic_type:
 - apiref
-ms.openlocfilehash: 5400350e1c489ec4c2ff3cddf83a4f1a8a0c7947
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0841739172b3eaf807813af28e0b20fbb54608b2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726601"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712315"
 ---
 # <a name="cor_heapinfo-structure"></a>COR_HEAPINFO 構造体
 
@@ -47,7 +48,7 @@ typedef struct _COR_HEAPINFO {
 |`concurrent`|`TRUE` 同時実行 (バックグラウンド) ガベージコレクションが有効な場合は。それ以外の場合は `FALSE` 。|  
 |`gcType`|ガベージコレクターがワークステーションまたはサーバーのどちらで実行されているかを示す [CorDebugGCType](cordebuggctype-enumeration.md) 列挙体のメンバー。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  構造体のインスタンス `COR_HEAPINFO` は、 [ICorDebugProcess5:: Getg apinformation](icordebugprocess5-getgcheapinformation-method.md) メソッドを呼び出すことによって返されます。  
   
