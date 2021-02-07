@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「カスタム資格情報と資格情報の検証」を参照してください。
 title: カスタム資格情報と資格情報の検証
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - credential validation [WCF]
 - credentials [WCF], validation
 ms.assetid: da831bec-e281-4d44-b343-437b5eef688e
-ms.openlocfilehash: 5f2909bb088a5f3d3203fe3c9e24b2df3450aa3f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f1ceb8cf46cca01ac31faeb9485cbeb6c8663d31
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257829"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735310"
 ---
 # <a name="custom-credential-and-credential-validation"></a>カスタム資格情報と資格情報の検証
 

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: BindingElement の作成'
 title: BindingElement の作成
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: 285bed029cf8487b37757de6a56075abe448f3ce
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: de5ef045f2e83985cabd36c53652d46536889fa2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257868"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735427"
 ---
 # <a name="creating-a-bindingelement"></a>BindingElement の作成
 
@@ -49,7 +50,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
   
 #### <a name="protocol-binding-elements"></a>プロトコル バインド要素  
 
- 含まれているバインド要素を新しいバインド要素で置き換えたり補足したりすることにより、新しいトランスポート、エンコーディング、または高レベルのプロトコルを追加できます。 新しいプロトコル バインド要素を作成するには、まず <xref:System.ServiceModel.Channels.BindingElement> クラスを拡張します。 少なくとも、を実装し、を使用してを実装する必要があり <xref:System.ServiceModel.Channels.BindingElement.Clone%2A?displayProperty=nameWithType> `ChannelProtectionRequirements` <xref:System.ServiceModel.Channels.IChannel.GetProperty%2A?displayProperty=nameWithType> ます。 これにより、このバインド要素の <xref:System.ServiceModel.Security.ChannelProtectionRequirements> が返されます。  詳細については、 <xref:System.ServiceModel.Security.ChannelProtectionRequirements> を参照してください。  
+ 含まれているバインド要素を新しいバインド要素で置き換えたり補足したりすることにより、新しいトランスポート、エンコーディング、または高レベルのプロトコルを追加できます。 新しいプロトコル バインド要素を作成するには、まず <xref:System.ServiceModel.Channels.BindingElement> クラスを拡張します。 少なくとも、を実装し、を使用してを実装する必要があり <xref:System.ServiceModel.Channels.BindingElement.Clone%2A?displayProperty=nameWithType> `ChannelProtectionRequirements` <xref:System.ServiceModel.Channels.IChannel.GetProperty%2A?displayProperty=nameWithType> ます。 これにより、このバインド要素の <xref:System.ServiceModel.Security.ChannelProtectionRequirements> が返されます。  詳細については、「<xref:System.ServiceModel.Security.ChannelProtectionRequirements>」を参照してください。  
   
  <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> は、このバインド要素の新しいコピーを返します。 最善の方法としては、バインド要素の作成者は基本の copy コンストラクターを呼び出す copy コンストラクターを使用して、<xref:System.ServiceModel.Channels.BindingElement.Clone%2A> を実装し、このクラスに含まれるすべての追加フィールドを複製することをお勧めします。  
   
