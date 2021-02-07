@@ -11,12 +11,12 @@ helpviewer_keywords:
 - rules, design
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 7b49403b1aa3d48008e6f7448ab0ed5a84468373
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 548e0eaaa6239a9b9ee6a08677cd720710bb48c2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851530"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99714132"
 ---
 # <a name="design-rules"></a>デザイン規則
 
@@ -75,4 +75,3 @@ ms.locfileid: "96851530"
 | [CA1068:CancellationToken パラメーターは最後に指定する必要があります](ca1068.md) | メソッドに、最後のパラメーターではない CancellationToken パラメーターが指定されています。 |
 | [CA1069: 列挙型には重複する値を指定できません](ca1069.md) | 列挙には、同じ定数値が明示的に割り当てられている複数のメンバーがあります。 |
 | [CA1070: イベント フィールドを virtual として宣言しません](ca1070.md) | [フィールドに似たイベント](../../../csharp/event-pattern.md#defining-and-raising-field-like-events)が virtual として宣言されました。 |
-| [CA1071: オーバーライド base.IEquatable を実装するときに等しい](ca1071.md) | 派生型はを実装し <xref:System.IEquatable%601> ますが、基底クラスのメソッドをオーバーライドしません <xref:System.IEquatable%601.Equals%2A> 。 |
