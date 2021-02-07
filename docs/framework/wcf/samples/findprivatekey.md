@@ -1,32 +1,33 @@
 ---
+description: '詳細情報: FindPrivateKey サンプル'
 title: FindPrivateKey サンプル
 ms.date: 12/04/2017
 helpviewer_keywords:
 - FindPrivateKey
 ms.assetid: 16b54116-0ceb-4413-af0c-753bb2a785a6
-ms.openlocfilehash: 0ed1e5e81a5d2f7f3586e5dce306e8244b5ebd48
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 0e876aa3e1f6dde16acbb3ddd2a130ad49d369fc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346013"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732424"
 ---
 # <a name="findprivatekey-sample"></a>FindPrivateKey サンプル
 
 証明書ストア内の特定の X.509 証明書に関連付けられている秘密キー ファイルの場所と名前を見つけることが困難な場合があります。 FindPrivateKey.exe ツールを使用すると、この処理を容易に実行できます。
 
 > [!IMPORTANT]
-> FindPrivateKey は、使用する前にコンパイルする必要があるサンプルです。 FindPrivateKey ツールのビルド方法については、「 [FindPrivateKey プロジェクトをビルドするに](#to-build-the-findprivatekey-project)は」セクションを参照してください。
+> FindPrivateKey は、使用する前にコンパイルする必要があるサンプルです。 FindPrivateKey ツールのビルド方法については、「 [FindPrivateKey プロジェクトをビルドするに](#to-build-the-findprivatekey-project) は」セクションを参照してください。
 
 X.509 証明書は、コンピューターの管理者または任意のユーザーによってインストールされます。 ただし、別のアカウントで実行されているサービスが証明書にアクセスする可能性があります。 たとえば、NETWORK SERVICE アカウントなどです。
 
 別のアカウントでは、秘密キー ファイルへアクセスできない場合があります。これは、証明書が最初にこのアカウントによってインストールされていないからです。 FindPrivateKey ツールでは、指定された X.509 証明書の秘密キー ファイルの場所を検索できます。 特定の X.509 証明書の秘密キー ファイルの場所がわかれば、このファイルに対するアクセス許可の追加または削除を実行できます。
 
-セキュリティのために証明書を使用するサンプルでは、*セットアップの .bat*ファイルで FindPrivateKey ツールを使用します。 秘密キーファイルが見つかったら、 *cacls.exe*などの他のツールを使用して、ファイルに対する適切なアクセス権を設定できます。
+セキュリティのために証明書を使用するサンプルでは、 *Setup.bat* ファイルの FindPrivateKey ツールを使用します。 秘密キーファイルが見つかったら、 *Cacls.exe* などの他のツールを使用して、ファイルに対する適切なアクセス権を設定できます。
 
-自己ホスト型実行可能ファイルなどのユーザーアカウントで Windows Communication Foundation (WCF) サービスを実行する場合は、そのユーザーアカウントにファイルへの読み取り専用アクセス権があることを確認します。 インターネットインフォメーションサービス (IIS) で WCF サービスを実行する場合、サービスを実行する既定のアカウントは、IIS 7 以前のバージョンのネットワークサービス、または IIS 7.5 以降のバージョンのアプリケーションプール Id です。 詳細については、「[アプリケーションプール id](/iis/manage/configuring-security/application-pool-identities)」を参照してください。
+自己ホスト型実行可能ファイルなどのユーザーアカウントで Windows Communication Foundation (WCF) サービスを実行する場合は、そのユーザーアカウントにファイルへの読み取り専用アクセス権があることを確認します。 インターネットインフォメーションサービス (IIS) で WCF サービスを実行する場合、サービスを実行する既定のアカウントは、IIS 7 以前のバージョンのネットワークサービス、または IIS 7.5 以降のバージョンのアプリケーションプール Id です。 詳細については、「 [アプリケーションプール id](/iis/manage/configuring-security/application-pool-identities)」を参照してください。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 プロセスに読み取り権限がない証明書にアクセスすると、次の例のような例外メッセージが表示されます。
 
@@ -46,11 +47,11 @@ cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto
 
 プロジェクトをダウンロードするには、 [Windows Communication Foundation (WCF) および Windows Workflow Foundation (WF) のサンプル .NET Framework 4 を](https://www.microsoft.com/download/details.aspx?id=21459)参照してください。
 
-1. ファイルエクスプローラーを開き、サンプルをインストールしたディレクトリの場所にある*WF_WCF_Samples \wcf\setup\findprivatekey\cs*フォルダーに移動します。
+1. ファイルエクスプローラーを開き、サンプルをインストールしたディレクトリの場所にある *WF_WCF_Samples \wcf\setup\findprivatekey\cs* フォルダーに移動します。
 
 2. .sln ファイルのアイコンをダブルクリックして、このファイルを Visual Studio で開きます。
 
-3. **[ビルド]** メニューの **[ソリューションのリビルド]** をクリックします。
+3. [ **ビルド** ] メニューの [ **ソリューションのリビルド**] をクリックします。
 
 4. ソリューションをビルドすると、FindPrivateKey.exe ファイルが生成されます。
 
@@ -62,27 +63,27 @@ cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto
 
  "*オプション 1* &#124; *option2*" は、オプションのセット間の選択を表します。
 
- "\<*値*>" は、入力するパラメーター値を表します。
+ " \<*value*> " は、入力するパラメーター値を表します。
 
-## <a name="usage"></a>使用状況
+## <a name="usage"></a>使用
 
 ```console
 FindPrivateKey <storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprint>} } [-f | -d | -a]]
 ```
 
-ここで:
+条件:
 
-| パラメータ         | 説明                                                                       |
+| パラメーター         | 説明                                                                       |
 |-----------------|-----------------------------------------------------------------------------------|
 | `<subjectName>` | 証明書のサブジェクト名                                               |
-| `<thumbprint>`  | 証明書のサムプリント (この検索には、Certmgr.exe ツールを使用できます) |
+| `<thumbprint>`  | 証明書の拇印 (Certmgr.exe ツールを使用して見つけることができます) |
 | `-f`            | 出力ファイル名のみ                                                             |
 | `-d`            | 出力ディレクトリのみ                                                             |
 | `-a`            | 出力の絶対ファイル名                                                         |
 
 コマンドプロンプトでパラメーターが指定されていない場合は、この情報を含むヘルプテキストが表示されます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 この例では、現在のユーザーの個人用ストアで、サブジェクト名が "CN = localhost" の証明書のファイル名を検索します。
 
