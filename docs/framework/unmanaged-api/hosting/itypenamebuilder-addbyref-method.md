@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ITypeNameBuilder:: AddByRef メソッド'
 title: ITypeNameBuilder::AddByRef メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3f1b6bc4-6efb-4b90-8be0-b1ba8d856ca0
 topic_type:
 - apiref
-ms.openlocfilehash: 5afc38cb4406117a7ea59b436e84f7dfbace3887
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: d9aed20550ab7e8f890d69bcf67a4b79849ce74a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842076"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99680780"
 ---
 # <a name="itypenamebuilderaddbyref-method"></a>ITypeNameBuilder::AddByRef メソッド
 
@@ -38,7 +39,7 @@ HRESULT AddByRef ( );
 
 **ヘッダー:** Mscoree.dll
 
-**ライブラリ:** Mscoree.dll にリソースとして含まれています
+**ライブラリ:** MSCorEE.dll にリソースとして含まれています
 
 **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
