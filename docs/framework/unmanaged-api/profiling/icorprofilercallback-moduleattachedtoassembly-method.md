@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback:: ModuleAttachedToAssembly メソッド'
 title: ICorProfilerCallback::ModuleAttachedToAssembly メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b595798a-5d40-4cac-ab4f-911c61d2c5d2
 topic_type:
 - apiref
-ms.openlocfilehash: bcf5c5c9044a30fc8259dbc54bad8f3141f0f926
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cc6a83188a8bdc4826232aa6ff6e416cbb8ae893
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733114"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705579"
 ---
 # <a name="icorprofilercallbackmoduleattachedtoassembly-method"></a>ICorProfilerCallback::ModuleAttachedToAssembly メソッド
 
@@ -42,7 +43,7 @@ HRESULT ModuleAttachedToAssembly(
  `AssemblyId`  
  からモジュールがアタッチされている親アセンブリの ID。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  モジュールは、インポートアドレステーブル (IAT)、の呼び出し、 `LoadLibrary` またはメタデータ参照を使用して読み込むことができます。 その結果、共通言語ランタイム (CLR) ローダーには、モジュールが存在するアセンブリを決定するための複数のコードパスがあります。 したがって、 [ICorProfilerCallback:: ModuleLoadFinished](icorprofilercallback-moduleloadfinished-method.md) が呼び出された後、モジュールは、そのアセンブリを認識し、親アセンブリ ID を取得できない可能性があります。 この `ModuleAttachedToAssembly` メソッドは、モジュールが親アセンブリにアタッチされ、その親アセンブリ ID を取得できる場合に呼び出されます。  
   

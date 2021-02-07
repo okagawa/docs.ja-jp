@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback:: JITFunctionPitched メソッド'
 title: ICorProfilerCallback::JITFunctionPitched メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 116085df-7a77-404a-afac-d0557a12b986
 topic_type:
 - apiref
-ms.openlocfilehash: 51fec26837b3c7f0a0328a7b64ff4a02148283da
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 11729de2188fe2f2cec7ec16ff7a5d1928cbd75d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725513"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705721"
 ---
 # <a name="icorprofilercallbackjitfunctionpitched-method"></a>ICorProfilerCallback::JITFunctionPitched メソッド
 
@@ -38,7 +39,7 @@ HRESULT JITFunctionPitched(
  `functionId`  
  から削除された関数の ID。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  削除された関数が呼び出されると、関数が再コンパイルされると、プロファイラーは新しい JIT コンパイルイベントを受け取ります。 現在、共通言語ランタイム (CLR) の JIT コンパイラでは、メモリから関数が削除されないため、このコールバックは現在使用されていないため、プロファイラーによって受信されません。  
   

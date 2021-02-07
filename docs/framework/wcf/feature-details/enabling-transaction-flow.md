@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「トランザクションフローの有効化」を参照してください。
 title: トランザクション フローの有効化
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], enabling flow
 ms.assetid: a03f5041-5049-43f4-897c-e0292d4718f7
-ms.openlocfilehash: 206cbecc35c6b517ddfc3b14f4a1d139cf72fc34
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: abf8875c870894f6c1b0a08138356950a646e4d9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276751"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704928"
 ---
 # <a name="enabling-transaction-flow"></a>トランザクション フローの有効化
 
@@ -49,13 +50,13 @@ Windows Communication Foundation (WCF) では、トランザクションフロ�
   
 |受信メッセージ|トランザクション フローの設定|トランザクション ヘッダー|メッセージ処理の結果|  
 |----------------------|-----------------------------|------------------------|-------------------------------|  
-|トランザクションは予期されたプロトコル形式に一致します|Allowed または Mandatory|`MustUnderstand` と `true` は等しい。|Process|  
+|トランザクションは予期されたプロトコル形式に一致します|Allowed または Mandatory|`MustUnderstand` と `true` は等しい。|プロセス|  
 |トランザクションは予期されたプロトコル形式に一致しません|Mandatory|`MustUnderstand` と `false` は等しい。|トランザクションが必須のため拒否|  
 |トランザクションは予期されたプロトコル形式に一致しません|許可されます。|`MustUnderstand` と `false` は等しい。|ヘッダーが認識されないため拒否|  
 |任意のプロトコル形式を使用しているトランザクション|禁止|`MustUnderstand` と `false` は等しい。|ヘッダーが認識されないため拒否|  
 |トランザクションなし|Mandatory|該当なし|トランザクションが必須のため拒否|  
-|トランザクションなし|許可されます。|該当なし|Process|  
-|トランザクションなし|禁止|該当なし|Process|  
+|トランザクションなし|許可されます。|該当なし|プロセス|  
+|トランザクションなし|禁止|該当なし|プロセス|  
   
  コントラクトの各メソッドには、トランザクション フローに関するさまざまな要件を割り当てることができますが、トランザクション フローのプロトコル設定のスコープは、バインディングのレベルになります。 このため、同じエンドポイント (ひいては同じバインディング) を共有するすべてのメソッドは、トランザクション フローを許可または必要とする同じポリシー、および同じトランザクション プロトコル (該当する場合) を共有します。  
   

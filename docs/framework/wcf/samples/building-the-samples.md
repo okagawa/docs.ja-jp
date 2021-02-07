@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「Windows Communication Foundation サンプルのビルド」を参照してください。
 title: Windows Communication Foundation サンプルのビルド
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-ms.openlocfilehash: ee1c8101e31464fa203341d53137525433782c18
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a53073ac92369574b204dbce998bebb8844fce8d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253837"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704187"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Windows Communication Foundation サンプルのビルド
 
@@ -27,7 +28,7 @@ Windows Communication Foundation (WCF) のサンプルは、Visual Studio IDE �
 
 ## <a name="to-build-the-sample-using-visual-studio"></a>Visual Studio を使用してサンプルをビルドするには
 
-1. Visual Studio の [**ファイル**] メニューの [ **Open**  >  **プロジェクト/ソリューション** を開く] をクリックします。 サンプルをインストールしたディレクトリの下にある言語固有のサブディレクトリに移動し、.sln ファイルアイコンをダブルクリックして、Visual Studio でソリューションを開きます。
+1. Visual Studio の [**ファイル**] メニューの [   >  **プロジェクト/ソリューション** を開く] をクリックします。 サンプルをインストールしたディレクトリの下にある言語固有のサブディレクトリに移動し、.sln ファイルアイコンをダブルクリックして、Visual Studio でソリューションを開きます。
 
 1. [ **ビルド** ] メニューの [ **ソリューションのリビルド**] をクリックします。
 

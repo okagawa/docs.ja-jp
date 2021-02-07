@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「データコントラクトの等価性」を参照してください
 title: データ コントラクトの等価性
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
-ms.openlocfilehash: 2a8c186c839be5008bbc5315c7c9fae638680714
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d47107cfaeea5093977a919df1a5edb226cb4ebc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293924"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704993"
 ---
 # <a name="data-contract-equivalence"></a>データ コントラクトの等価性
 

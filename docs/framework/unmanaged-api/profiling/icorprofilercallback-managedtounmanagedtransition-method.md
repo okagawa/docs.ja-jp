@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback:: ManagedToUnmanagedTransition メソッド'
 title: ICorProfilerCallback::ManagedToUnmanagedTransition メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef3cd619-912d-40c5-a449-03ba02a39ee7
 topic_type:
 - apiref
-ms.openlocfilehash: ef65ed908c71bcc2755aaf42070439fd7dab3f6d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bf7f45ae576f9812dee24cd3799a3a87678f7c61
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733140"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705580"
 ---
 # <a name="icorprofilercallbackmanagedtounmanagedtransition-method"></a>ICorProfilerCallback::ManagedToUnmanagedTransition メソッド
 
@@ -42,7 +43,7 @@ HRESULT ManagedToUnmanagedTransition(
  `reason`  
  からマネージコードからアンマネージコードへの呼び出しによって移行が発生したかどうか、またはアンマネージコードによって呼び出されたマネージ関数からの戻り値によって発生したものかどうかを示す [COR_PRF_TRANSITION_REASON](cor-prf-transition-reason-enumeration.md) 列挙体の値。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  の値 `reason` が COR_PRF_TRANSITION_CALL の場合、関数 ID はアンマネージ関数の ID であり、just-in-time コンパイラを使用してコンパイルされることはありません。 アンマネージ関数には、名前やメタデータなどの基本的な情報が関連付けられています。 アンマネージ関数が暗黙のプラットフォーム呼び出し (PInvoke) を使用して呼び出された場合、ランタイムは呼び出し先を特定できず、の値は null になり `functionId` ます。 暗黙の PInvoke の詳細については、「 [C++ Interop の使用 (暗黙的な pinvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)」を参照してください。  
   

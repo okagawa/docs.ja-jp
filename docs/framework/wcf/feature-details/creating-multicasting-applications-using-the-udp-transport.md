@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: UDP トランスポートを使用したマルチキャストアプリケーションの作成'
 title: UDP トランスポートを使用するマルチキャスト アプリケーションの作成
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
-ms.openlocfilehash: fd2fdc812f5fe06b3b89605b9478325932199a96
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cea76bc1256d52dabebe525b0fdd8b64c08f9e7e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239199"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705162"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>UDP トランスポートを使用するマルチキャスト アプリケーションの作成
 
@@ -116,7 +117,7 @@ else
   
  このコードは、送信者のアドレスの先頭バイトをチェックして、アドレスがマルチキャスト アドレスであることを示す 0xE0 が含まれているかどうかを調べます。  
   
-### <a name="security-considerations"></a>セキュリティの考慮事項  
+### <a name="security-considerations"></a>セキュリティに関する考慮事項  
 
  マルチキャストのメッセージをリッスンする場合、マルチキャストのアドレスでリッスンしていることを通知するルーターに ICMP パケットが送信されます。 アクセス許可を持つローカル サブネット上に存在するすべてのユーザーが、これらの型のパケットをリッスンし、リッスンしているマルチキャストのアドレスとポートを特定できます。  
   

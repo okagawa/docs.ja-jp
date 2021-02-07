@@ -1,19 +1,20 @@
 ---
+description: '詳細情報: サービス: 1 秒あたりの失敗した呼び出し'
 title: 'サービス : 1 秒あたりの失敗した呼び出し'
 ms.date: 03/30/2017
 ms.assetid: 94247356-2b29-4b50-b639-91ca8c1cf3a9
-ms.openlocfilehash: d9db777d17de51caff74610d099a79228df1f6d8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 87b4ec8a6868f2694f7aefa34d977e618db16e16
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96252947"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705422"
 ---
 # <a name="service-calls-faulted-per-second"></a>サービス : 1 秒あたりの失敗した呼び出し
 
 カウンター名 : 1 秒あたりの失敗した呼び出し。  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このサービスの呼び出しのうち、エラーを返したものの 1 秒あたりの回数です。  
   

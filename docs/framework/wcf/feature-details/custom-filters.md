@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「カスタムフィルター」を参照してください。
 title: カスタム フィルター
 ms.date: 03/30/2017
 ms.assetid: 97cf247d-be0a-4057-bba9-3be5c45029d5
-ms.openlocfilehash: b5ec07c2e2a77c7de8b240d21b1eb54bf858b43b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 95a419823cf69575f951c0984e2136f9e7afca56
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96258427"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704980"
 ---
 # <a name="custom-filters"></a>カスタム フィルター
 
@@ -43,7 +44,7 @@ public class MyMessageFilter: MessageFilter
 > [!NOTE]
 > 実際の実装では、Match メソッドには、このメッセージフィルターが **true** または **false** を返すかどうかを確認するメッセージを確認するロジックが含まれています。  
   
-### <a name="performance"></a>[パフォーマンス]  
+### <a name="performance"></a>パフォーマンス  
 
  カスタム フィルターを実装する場合は、フィルターがメッセージの評価を完了するのに要する最大時間を考慮する必要があります。 メッセージは、一致が見つかるまでに複数のフィルターに対して評価される場合があるので、すべてのフィルターを評価する前にクライアント要求がタイムアウトしないようにすることが重要です。 したがって、カスタム フィルターのコードは、メッセージがフィルター条件に一致するかどうかを調べるために、メッセージのコンテンツまたは属性を評価するのに必要なコードだけにする必要があります。  
   

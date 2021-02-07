@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback:: JITCachedFunctionSearchStarted メソッド'
 title: ICorProfilerCallback::JITCachedFunctionSearchStarted メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5cba642c-0d80-48ee-889d-198c5044d821
 topic_type:
 - apiref
-ms.openlocfilehash: 938da4e3b7cc45c24dcac872ab504755116197a0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1faaf8fbc1e0fee9ce76850cfedcd4e8cf934371
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684032"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705773"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchstarted-method"></a>ICorProfilerCallback::JITCachedFunctionSearchStarted メソッド
 
@@ -44,7 +45,7 @@ HRESULT JITCachedFunctionSearchStarted(
 
   \[out] `true` (使用可能な場合) キャッシュされたバージョンの関数を実行エンジンが使用する必要がある場合は。それ以外の場合は `false` 。 値がの場合、 `false` 実行エンジンは、jit コンパイルされていないバージョンを使用するのではなく、関数を jit コンパイルします。
 
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  .NET Framework バージョン2.0 では、 `JITCachedFunctionSearchStarted` 通常の NGen イメージのすべての関数に対して、および [ICorProfilerCallback:: JITCachedFunctionSearchFinished メソッド](icorprofilercallback-jitcachedfunctionsearchfinished-method.md) のコールバックは行われません。 プロファイル用に最適化された NGen イメージのみが、イメージ内のすべての関数のコールバックを生成します。 ただし、オーバーヘッドが増加するため、プロファイラーは、これらのコールバックを使用して just-in-time (JIT) コンパイルを強制的に実行する場合にのみ、プロファイラーで最適化された NGen イメージを要求する必要があります。 それ以外の場合、プロファイラーは関数情報を収集するためにレイジー戦略を使用する必要があります。  
   

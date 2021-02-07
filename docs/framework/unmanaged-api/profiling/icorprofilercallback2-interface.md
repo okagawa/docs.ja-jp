@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorProfilerCallback2 インターフェイス」を参照してください。
 title: ICorProfilerCallback2 インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a261dba-450d-4f1f-8d98-865b58bfc992
 topic_type:
 - apiref
-ms.openlocfilehash: 597a3dfecd42e206c98974093fa2417eba570f6a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b6a6fa62d8d1b119ce1a52b06cb562c6da32b1a2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729466"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705526"
 ---
 # <a name="icorprofilercallback2-interface"></a>ICorProfilerCallback2 インターフェイス
 
@@ -41,7 +42,7 @@ ms.locfileid: "95729466"
 |[SurvivingReferences メソッド](icorprofilercallback2-survivingreferences-method.md)|ガベージコレクションで残ったオブジェクト参照をプロファイラーに通知します。|  
 |[ThreadNameChanged メソッド](icorprofilercallback2-threadnamechanged-method.md)|スレッドの名前が変更されたことをコードプロファイラーに通知します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  CLR は、(または) インターフェイスのメソッドを呼び出して、 `ICorProfilerCallback` `ICorProfilerCallback2` プロファイラーがサブスクライブしているイベントが発生したときにプロファイラーに通知します。 これは、CLR がコードプロファイラーと通信するときに使用する主要なコールバックインターフェイスです。  
   

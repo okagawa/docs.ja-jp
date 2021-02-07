@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「ワークフローサービスホストの機能拡張」を参照してください。
 title: ワークフロー サービス ホストの拡張機能
 ms.date: 03/30/2017
 ms.assetid: c0e8f7bb-cb13-49ec-852f-b85d7c23972f
-ms.openlocfilehash: 67a7830c564cabafb9441e86eb0d87164d854ee5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7454d894823a67b3621828afdd70a28cf2e7506c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96258453"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704343"
 ---
 # <a name="workflow-service-host-extensibility"></a>ワークフロー サービス ホストの拡張機能
 

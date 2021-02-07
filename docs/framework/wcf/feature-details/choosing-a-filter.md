@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「フィルターの選択」を参照してください。
 title: フィルターの選択
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: f783b6416f2330d272c4c756a3ca0cd332f3c6e7
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7fa484775f0a08ccef28da358cd057465c49f390
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276101"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705279"
 ---
 # <a name="choosing-a-filter"></a>フィルターの選択
 
@@ -17,7 +18,7 @@ ms.locfileid: "96276101"
 
 ルーティング サービスで使用するフィルターを選択する際には、各フィルターのしくみと、受信メッセージの一部として使用できる情報について理解しておくことが重要です。 たとえば、すべてのメッセージが同じエンドポイントを介して受信される場合は、すべてのメッセージが Address フィルターと EndpointName フィルターに一致するため、これらのフィルターは役に立ちません。
 
-### <a name="action"></a>アクション
+### <a name="action"></a>操作
 
 Action フィルターは <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> プロパティを確認します。 メッセージの Action ヘッダーの内容が、フィルター構成で指定されているフィルター データ値と一致する場合、このフィルターは `true` を返します。 次の例では、アクションフィルターを使用して、 `FilterElement` の値を含むアクションヘッダーを持つメッセージを照合するを定義し `http://namespace/contract/operation/` ます。
 

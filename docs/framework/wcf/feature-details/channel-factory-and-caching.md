@@ -1,13 +1,14 @@
 ---
+description: 詳細については、チャネルファクトリとキャッシュに関するページを参照してください。
 title: チャネル ファクトリとキャッシュ
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-ms.openlocfilehash: 5b8348a98b484ca08e3dbeba141dc49825c8c071
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6922191c2b99dea516d0e85aac9ed7bc12a67b81
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587366"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705201"
 ---
 # <a name="channel-factory-and-caching"></a>チャネル ファクトリとキャッシュ
 
@@ -26,7 +27,7 @@ WCF クライアント アプリケーションでは、<xref:System.ServiceMode
 > [!TIP]
 > <xref:System.ServiceModel.ChannelFactory%601> クラスを直接使用する場合は、チャネル ファクトリの作成を直接制御できます。
 
-[ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を使用して生成された WCF クライアントプロキシは、から派生 <xref:System.ServiceModel.ClientBase%601> します。 <xref:System.ServiceModel.ClientBase%601> では、チャネル ファクトリのキャッシュ動作を定義する静的な <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> プロパティを定義します。 キャッシュ設定は特定の型に対して行われます。 たとえば、 `ClientBase<ITest>.CacheSettings` 以下に定義されているいずれかの値に設定すると、型のプロキシ/ClientBase にのみ影響し `ITest` ます。 最初のプロキシ/ClientBase インスタンスが作成された時点で、特定の <xref:System.ServiceModel.ClientBase%601> のキャッシュ設定は不変になります。
+[ServiceModel メタデータユーティリティツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を使用して生成された WCF クライアントプロキシは、から派生 <xref:System.ServiceModel.ClientBase%601> します。 <xref:System.ServiceModel.ClientBase%601> では、チャネル ファクトリのキャッシュ動作を定義する静的な <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> プロパティを定義します。 キャッシュ設定は特定の型に対して行われます。 たとえば、  `ClientBase<ITest>.CacheSettings` 以下に定義されているいずれかの値に設定すると、型のプロキシ/ClientBase にのみ影響し `ITest` ます。 最初のプロキシ/ClientBase インスタンスが作成された時点で、特定の <xref:System.ServiceModel.ClientBase%601> のキャッシュ設定は不変になります。
 
 ## <a name="specifying-caching-behavior"></a>キャッシュ動作の指定
 

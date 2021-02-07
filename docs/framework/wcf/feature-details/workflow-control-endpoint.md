@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: ワークフローコントロールエンドポイント'
 title: ワークフロー コントロール エンドポイント
 ms.date: 03/30/2017
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
-ms.openlocfilehash: ecc0946833db578c524ce7e4579024bd4cd46fd0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 235d7ce3552bb3452fc3ace52249311a7605a519
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96266897"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704408"
 ---
 # <a name="workflow-control-endpoint"></a>ワークフロー コントロール エンドポイント
 
@@ -35,7 +36,7 @@ ms.locfileid: "96266897"
 
  <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> インターフェイスでは、同期バージョンおよび非同期バージョンで、一連の管理操作が定義されます。 トランザクション処理されたバージョンでは、トランザクションに対応するバインディングを使用する必要があります。 次の表は、サポートされる管理操作の一覧を示します。  
   
-|管理操作|Description|  
+|管理操作|説明|  
 |-----------------------|-----------------|  
 |中止|ワークフロー インスタンスの実行を強制的に停止します。|  
 |キャンセル|ワークフロー インスタンスをアクティブ状態または一時停止状態から完了状態に移行します。|  

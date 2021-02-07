@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「System-Provided 相互運用性バインドでサポートされる Web サービスプロトコル」を参照してください。
 title: システム標準の相互運用性バインディングがサポートしている Web サービス プロトコル
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-ms.openlocfilehash: 0dbfca5d56fe588864a371f4a81bbefbdfeb284c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a970cdffe864861f4b6f0163d21a69648c777726
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238978"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704356"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>システム標準の相互運用性バインディングがサポートしている Web サービス プロトコル
 
@@ -26,19 +27,19 @@ Windows Communication Foundation (WCF) は、web サービス仕様と呼ばれ�
 > [!NOTE]
 > メタデータの公開に使用するバインディングについては、このトピックで後述する「システム指定のメタデータ バインディング」を参照してください。  
   
-|カテゴリ|Protocol|仕様と用途|  
+|カテゴリ|プロトコル|仕様と用途|  
 |--------------|--------------|-----------------------------|  
 |トランスポート|HTTP 1.1|[HTTP 1.1](https://www.ietf.org/rfc/rfc2616.txt)<br /><br /> `BasicHttpBinding`、`WSHttpBinding`、および `WS2007HttpBinding` は、HTTP トランスポートおよび HTTPS トランスポートを使用します。|  
 |メッセージング|MTOM|[MTOM](https://www.w3.org/TR/soap12-mtom/)<br /><br /> `basicHttpBinding`、`wsHttpBinding`、および `ws2007HttpBinding` は、MTOM (Message Transmission Optimization Mechanism) をサポートしています。 既定では使用されません。 MTOM を使用するには、`messageEncoding` 属性を `"Mtom"` に設定します。<br /><br /> 例:<br /><br /> `<wsHttpBinding> <binding messageEncoding="Mtom"/> </wsHttpBinding>`|  
-|Metadata|WSDL 1.1|[WSDL 1.1](https://www.w3.org/TR/wsdl/)<br /><br /> WCF では、Web サービス記述言語 (WSDL) を使用してサービスを記述します。|  
-|Metadata|WS-Policy|[WS-Policy](https://www.w3.org/Submission/WS-Policy/)<br /><br /> WCF では、ドメイン固有のアサーションと共に WS-Policy 仕様を使用して、サービスの要件と機能を記述します。|  
-|Metadata|WS-Policy 1.5|[WS-Policy 1.5](https://www.w3.org/TR/2007/CR-ws-policy-20070605/)<br /><br /> WCF では、ドメイン固有のアサーションと共に WS-Policy 仕様を使用して、サービスの要件と機能を記述します。|  
-|Metadata|WS-PolicyAttachment|[WS-PolicyAttachment](http://specs.xmlsoap.org/ws/2004/09/policy/ws-policyattachment.pdf)<br /><br /> WCF では、Web サービス記述言語 (WSDL) のさまざまなスコープでポリシー式をアタッチするために WS-PolicyAttachment を実装しています。|  
-|Metadata|WS-MetadataExchange|[WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> WCF では、XML スキーマ、WSDL、および WS-POLICY を取得するために WS-MetadataExchange を実装しています。|  
+|メタデータ|WSDL 1.1|[WSDL 1.1](https://www.w3.org/TR/wsdl/)<br /><br /> WCF では、Web サービス記述言語 (WSDL) を使用してサービスを記述します。|  
+|メタデータ|WS-Policy|[WS-Policy](https://www.w3.org/Submission/WS-Policy/)<br /><br /> WCF では、ドメイン固有のアサーションと共に WS-Policy 仕様を使用して、サービスの要件と機能を記述します。|  
+|メタデータ|WS-Policy 1.5|[WS-Policy 1.5](https://www.w3.org/TR/2007/CR-ws-policy-20070605/)<br /><br /> WCF では、ドメイン固有のアサーションと共に WS-Policy 仕様を使用して、サービスの要件と機能を記述します。|  
+|メタデータ|WS-PolicyAttachment|[WS-PolicyAttachment](http://specs.xmlsoap.org/ws/2004/09/policy/ws-policyattachment.pdf)<br /><br /> WCF では、Web サービス記述言語 (WSDL) のさまざまなスコープでポリシー式をアタッチするために WS-PolicyAttachment を実装しています。|  
+|メタデータ|WS-MetadataExchange|[WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> WCF では、XML スキーマ、WSDL、および WS-POLICY を取得するために WS-MetadataExchange を実装しています。|  
   
 ### <a name="basichttpbinding"></a>basicHttpBinding  
   
-|カテゴリ|Protocol|仕様と用途|  
+|カテゴリ|プロトコル|仕様と用途|  
 |--------------|--------------|-----------------------------|  
 |メッセージング|SOAP 1.1|[SOAP 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)<br /><br /> Basic Profile 1.1 に従って、`basicHttpBinding` 要素は SOAP 1.1 メッセージ プロトコルを実装しています。|  
 |セキュリティ|WSS SOAP Message Security 1.0|[WSS SOAP Message Security 1.0](http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf)<br /><br /> Basic Security Profile に従って、`basicHttpBinding` 要素は、ユーザー名/パスワードおよび X.509 ベースのセキュリティを実現するために、WSS (Web Services Security) SOAP Message Security 1.0 仕様を実装しています。<br /><br /> `<basicHttpBinding> <binding name="Binding1"> <security mode="TransportWithMessageCredential &#124;                     "Message" .../> </binding> </basicHttpBinding>`|  
@@ -47,7 +48,7 @@ Windows Communication Foundation (WCF) は、web サービス仕様と呼ばれ�
   
 ### <a name="wshttpbinding-ws2007httpbinding-and-wsdualhttpbinding"></a>wsHttpBinding、ws2007HttpBinding、および wsDualHttpBinding  
   
-|カテゴリ|Protocol|仕様と用途|  
+|カテゴリ|プロトコル|仕様と用途|  
 |--------------|--------------|-----------------------------|  
 |メッセージング|SOAP 1.2|[基本](https://www.w3.org/TR/soap12-part0/)<br /><br /> [Messaging Framework](https://www.w3.org/TR/2007/REC-soap12-part1-20070427/)<br /><br /> [Adjuncts (HTTP バインディングを含む)](https://www.w3.org/TR/soap12-part2/)|  
 |メッセージング|WS-Addressing 2005/08|[Web Services Addressing 1.0 - Core](https://www.w3.org/TR/ws-addr-core/)<br /><br /> [Web Services Addressing 1.0 - SOAP](https://www.w3.org/TR/ws-addr-soap/)<br /><br /> `wsHttpBinding`、`ws2007HttpBinding`、および `wsDualHttpBinding` は、非同期メッセージング、メッセージ相関、およびトランスポート中立のアドレス指定機構を有効にするために、W3C (World Wide Web Consortium) WS-Addressing 勧告を実装しています。<br /><br /> WCF は WS-Addressing ヘッダーの暗号化をサポートしていませんが、これは WS-* 仕様によって許可されています。|  
@@ -96,23 +97,23 @@ Windows Communication Foundation (WCF) は、web サービス仕様と呼ばれ�
 
  バインディングは、 [\<mexHttpBinding>](../../configure-apps/file-schema/wcf/mexhttpbinding.md) 次のプロトコルをサポートします。 このバインディングの使用方法の詳細については、「 [メタデータの公開](publishing-metadata.md)」を参照してください。  
   
-|カテゴリ|Protocol|仕様と用途|  
+|カテゴリ|プロトコル|仕様と用途|  
 |--------------|--------------|-----------------------------|  
 |トランスポート|HTTP 1.1|[HTTP 1.1](https://www.ietf.org/rfc/rfc2616.txt)|  
 |メッセージング|SOAP 1.2|[基本](https://www.w3.org/TR/soap12-part0/)<br /><br /> [Messaging Framework](https://www.w3.org/TR/2007/REC-soap12-part1-20070427/)<br /><br /> [Adjuncts (HTTP バインディングを含む)](https://www.w3.org/TR/soap12-part2/)|  
 |メッセージング|WS-Addressing 2005/08|[Web Services Addressing 1.0 - Core](https://www.w3.org/TR/ws-addr-core/)<br /><br /> [Web Services Addressing 1.0 - SOAP](https://www.w3.org/TR/ws-addr-soap/)|  
-|Metadata|WS-MetadataExchange|[WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> WCF では、XML スキーマ、WSDL、および WS-POLICY を取得するために WS-MetadataExchange を実装しています。|  
+|メタデータ|WS-MetadataExchange|[WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> WCF では、XML スキーマ、WSDL、および WS-POLICY を取得するために WS-MetadataExchange を実装しています。|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
 
  [\<mexHttpsBinding>](../../configure-apps/file-schema/wcf/mexhttpsbinding.md) では、次のプロトコルがサポートされています。 このバインディングの使用方法の詳細については、「 [メタデータの公開](publishing-metadata.md)」を参照してください。  
   
-|カテゴリ|Protocol|仕様と用途|  
+|カテゴリ|プロトコル|仕様と用途|  
 |--------------|--------------|-----------------------------|  
 |トランスポート|HTTP 1.1|[HTTP 1.1](https://www.ietf.org/rfc/rfc2616.txt)<br /><br /> トランスポート セキュリティは有効です。|  
 |メッセージング|SOAP 1.2|[基本](https://www.w3.org/TR/soap12-part0/)<br /><br /> [Messaging Framework](https://www.w3.org/TR/2007/REC-soap12-part1-20070427/)<br /><br /> [Adjuncts (HTTP バインディングを含む)](https://www.w3.org/TR/soap12-part2/)|  
 |メッセージング|WS-Addressing 2005/08|[Web Services Addressing 1.0 - Core](https://www.w3.org/TR/ws-addr-core/)<br /><br /> [Web Services Addressing 1.0 - SOAP](https://www.w3.org/TR/ws-addr-soap/)|  
-|Metadata|WS-MetadataExchange|[WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> WCF では、XML スキーマ、WSDL、および WS-POLICY を取得するために WS-MetadataExchange を実装しています。|  
+|メタデータ|WS-MetadataExchange|[WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> WCF では、XML スキーマ、WSDL、および WS-POLICY を取得するために WS-MetadataExchange を実装しています。|  
   
 ## <a name="see-also"></a>関連項目
 

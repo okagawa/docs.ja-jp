@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「Windows Communication Foundation でのエラー処理 (WCF)」を参照してください。
 title: エラー処理
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 9c7d6814a6bf1189fd85de5eb440ec4a6840447e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e09c07037e2b3398e2f82307242032a29c356ce5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539984"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704772"
 ---
 # <a name="error-handling-in-windows-communication-foundation-wcf"></a>Windows Communication Foundation でのエラー処理 (WCF)
 

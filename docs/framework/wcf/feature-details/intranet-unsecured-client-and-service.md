@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: イントラネットのセキュリティで保護されていないクライアントとサービス'
 title: セキュリティで保護されていないイントラネットのクライアントとサービス
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: f9cd297b479a07f2330eabbaaf81605a3874ec25
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a03abc5b8eb0317c4d5d19347b3974d615570069
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257222"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704525"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>セキュリティで保護されていないイントラネットのクライアントとサービス
 
@@ -26,11 +27,11 @@ ms.locfileid: "96257222"
 |相互運用性|WCF のみ|  
 |認証|なし|  
 |整合性|なし|  
-|機密情報|なし|  
+|機密性|なし|  
   
 ## <a name="service"></a>サービス  
 
- 次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
+ 次のコードと構成は、別々に実行します。 以下のいずれかを実行します。  
   
 - 構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
   
@@ -76,7 +77,7 @@ ms.locfileid: "96257222"
   
 ## <a name="client"></a>クライアント  
 
- 次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
+ 次のコードと構成は、別々に実行します。 以下のいずれかを実行します。  
   
 - コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。  
   
