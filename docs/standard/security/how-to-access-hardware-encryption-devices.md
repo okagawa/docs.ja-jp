@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: ハードウェア暗号化デバイスにアクセスする」を参照してください。'
 title: '方法: ハードウェア暗号化デバイスにアクセスする'
 ms.date: 07/14/2020
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - hardware encryption
 - CspParameters
 ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
-ms.openlocfilehash: c4f0b77985dea1818729af41b69a4a7d30427415
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: fcf12314490542848d20bd3a4977d68c386853bb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829896"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685271"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a>方法: ハードウェア暗号化デバイスにアクセスする
 

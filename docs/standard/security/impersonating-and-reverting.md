@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「偽装と復帰」を参照してください。
 title: 偽装と復帰
 ms.date: 07/15/2020
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - security [.NET], impersonating Windows accounts
 - impersonating Windows accounts
 ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
-ms.openlocfilehash: 90f43510eb0e71fb324012fa00ac08f9ee3292ac
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f3e536f87ef5aa09cd727fe9674c7a40f3a09150
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820060"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685011"
 ---
 # <a name="impersonating-and-reverting"></a>偽装と復帰
 
@@ -61,7 +62,7 @@ ms.locfileid: "94820060"
   
  信頼されたコードが既にオブジェクトをスレッドにアタッチしている場合は、 <xref:System.Security.Principal.WindowsPrincipal> アカウントトークンを受け取らないインスタンスメソッド **Impersonate** を呼び出すことができます。 この方法が役立つのは、スレッドで **WindowsPrincipal** オブジェクトが表しているユーザーが、現在プロセスが実行されているユーザーではない場合のみです。 このような状態は、たとえば、Windows 認証を有効にして、偽装を無効にした ASP.NET を使用している場合に発生することがあります。 その場合、プロセスはインターネット インフォメーション サービス (IIS) で構成されたアカウントで実行されますが、現在のプリンシパルは、ページにアクセスしている Windows ユーザーを表しています。  
   
- **Impersonate** も **Undo** も、現在の **Principal** <xref:System.Security.Principal.IPrincipal> 呼び出しコンテキストに関連付けられているプリンシパルオブジェクト () を変更しないことに注意してください。 代わりに、偽装と復帰によって、現在のオペレーティングシステムプロセスに関連付けられているトークンが変更されます。  
+ **Impersonate** も **Undo** も、現在の <xref:System.Security.Principal.IPrincipal> 呼び出しコンテキストに関連付けられているプリンシパルオブジェクト () を変更しないことに注意してください。 代わりに、偽装と復帰によって、現在のオペレーティングシステムプロセスに関連付けられているトークンが変更されます。  
   
 ## <a name="see-also"></a>関連項目
 

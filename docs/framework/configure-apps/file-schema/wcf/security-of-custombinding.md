@@ -1,13 +1,14 @@
 ---
+description: 詳細については <security> 、 <customBinding>
 title: <security> の <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-ms.openlocfilehash: eb661864e2540a9b9f5f217402d37515043c862a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0c7a534754f19d46984911ba1dec60d9c517e6b6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91170117"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683243"
 ---
 # <a name="security-of-custombinding"></a>\<security> の \<customBinding>
 
@@ -48,19 +49,19 @@ ms.locfileid: "91170117"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
-|allowSerializedSigningTokenOnReply|省略可能。 シリアル化されたトークンを応答で使用できる場合に指定するブール値。 既定値は `false` です。 二重バインドを使用する場合、この設定の既定値は `true` に設定され、行った設定はすべて無視されます。|  
-|authenticationMode|省略可能。 イニシエーターとレスポンダーの間で使用される認証モードを指定します。 すべての値については、以下を参照してください。<br /><br /> 既定では、 `sspiNegotiated`です。|  
-|defaultAlgorithmSuite|省略可能。 メッセージの暗号化とキー ラップ アルゴリズムを設定します。 アルゴリズムとキー サイズは、<xref:System.ServiceModel.Security.SecurityAlgorithmSuite> クラスにより決まります。 これらのアルゴリズムは、セキュリティ ポリシー言語 (WS-SecurityPolicy) 仕様で指定されたアルゴリズムにマップされます。<br /><br /> 指定できる値を以下に示します。 既定値は `Basic256` です。<br /><br /> この属性は、既定とは異なるアルゴリズムのセットを選択する別のプラットフォームで操作するときに使用されます。 この設定を修正する場合、関連するアルゴリズムの強さと脆弱性に注意する必要があります。 この属性は <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 型です。|  
-|includeTimestamp|各メッセージにタイム スタンプが含まれるかどうかを指定するブール値です。 既定では、 `true`です。|  
-|keyEntropyMode|メッセージをセキュリティで保護するキーを計算する方法を指定します。 キーは、クライアント キー マテリアルのみ、サービス キー マテリアルのみ、または両方の組み合わせに基づいて生成できます。 有効な値は、次のとおりです。<br /><br /> -   `ClientEntropy`: セッションキーは、クライアントによって提供されるキーデータに基づいています。<br />-   `ServerEntropy`: セッションキーは、サーバーによって提供されるキーデータに基づいています。<br />-   `CombinedEntropy`: セッションキーは、クライアントとサービスによって提供されるキーデータに基づいています。<br /><br /> 既定では、 `CombinedEntropy`です。<br /><br /> この属性は <xref:System.ServiceModel.Security.SecurityKeyEntropyMode> 型です。|  
+|allowSerializedSigningTokenOnReply|任意。 シリアル化されたトークンを応答で使用できる場合に指定するブール値。 既定値は `false` です。 二重バインドを使用する場合、この設定の既定値は `true` に設定され、行った設定はすべて無視されます。|  
+|authenticationMode|任意。 イニシエーターとレスポンダーの間で使用される認証モードを指定します。 すべての値については、以下を参照してください。<br /><br /> 既定値は、`sspiNegotiated` です。|  
+|defaultAlgorithmSuite|任意。 メッセージの暗号化とキー ラップ アルゴリズムを設定します。 アルゴリズムとキー サイズは、<xref:System.ServiceModel.Security.SecurityAlgorithmSuite> クラスにより決まります。 これらのアルゴリズムは、セキュリティ ポリシー言語 (WS-SecurityPolicy) 仕様で指定されたアルゴリズムにマップされます。<br /><br /> 指定できる値を以下に示します。 既定値は `Basic256` です。<br /><br /> この属性は、既定とは異なるアルゴリズムのセットを選択する別のプラットフォームで操作するときに使用されます。 この設定を修正する場合、関連するアルゴリズムの強さと脆弱性に注意する必要があります。 この属性は <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 型です。|  
+|includeTimestamp|各メッセージにタイム スタンプが含まれるかどうかを指定するブール値です。 既定値は、`true` です。|  
+|keyEntropyMode|メッセージをセキュリティで保護するキーを計算する方法を指定します。 キーは、クライアント キー マテリアルのみ、サービス キー マテリアルのみ、または両方の組み合わせに基づいて生成できます。 有効な値は、次のとおりです。<br /><br /> -   `ClientEntropy`: セッションキーは、クライアントによって提供されるキーデータに基づいています。<br />-   `ServerEntropy`: セッションキーは、サーバーによって提供されるキーデータに基づいています。<br />-   `CombinedEntropy`: セッションキーは、クライアントとサービスによって提供されるキーデータに基づいています。<br /><br /> 既定値は、`CombinedEntropy` です。<br /><br /> この属性は <xref:System.ServiceModel.Security.SecurityKeyEntropyMode> 型です。|  
 |messageProtectionOrder|メッセージ レベルのセキュリティ アルゴリズムをメッセージに適用する順序を設定します。 有効な値は次のとおりです。<br /><br /> -   `SignBeforeEncrypt`: 最初に署名してから、暗号化します。<br />-   `SignBeforeEncryptAndEncryptSignature`: 最初に署名し、次に署名を暗号化して、暗号化します。<br />-   `EncryptBeforeSign`: 最初に暗号化し、次に署名します。<br /><br /> 既定値は、使用している WS-Security のバージョンによって異なります。 WS-Security 1.1 を使用する場合、既定値は `SignBeforeEncryptAndEncryptSignature` です。 WS-Security 1.0 を使用する場合、既定値は `SignBeforeEncrypt` です。<br /><br /> この属性は <xref:System.ServiceModel.Security.MessageProtectionOrder> 型です。|  
-|messageSecurityVersion|省略可能。 使用される WS-Security のバージョンを設定します。 有効な値は次のとおりです。<br /><br /> - WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11<br />- WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br />- WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br /><br /> 既定は、WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11 であり、単純に `Default` として XML で表現できます。 この属性は <xref:System.ServiceModel.MessageSecurityVersion> 型です。|  
-|requireDerivedKeys|キーを元の証明キーから派生できる場合に指定するブール値。 既定では、 `true`です。|  
-|requireSecurityContextCancellation|省略可能。 セキュリティ コンテキストが不要になったときにそれをキャンセルして終了する必要がある場合に指定するブール値。 既定では、 `true`です。|  
-|requireSignatureConfirmation|省略可能。 WS-Security 署名確認を有効にするかどうかを指定するブール値です。 `true` に設定されている場合、メッセージ署名が応答側で確認されます。  カスタム バインディングが相互証明書に対して構成されているか、発行されたトークンを使用するように構成されている場合 (WSS 1.1 バインド)、この属性の既定値は `true` です。 それ以外の場合、既定値は `false` です。<br /><br /> サービスが要求を完全に認識して応答していることを確認するために、署名確認を使用します。|  
-|securityHeaderLayout|省略可能。 セキュリティ ヘッダーでの要素の順序を指定します。 有効な値は、次のとおりです。<br /><br /> -   `Strict`: "使用前に宣言する" という一般的な原則に従って、項目がセキュリティヘッダーに追加されます。<br />-   `Lax`: WSS: SOAP メッセージセキュリティを確認する任意の順序で、項目がセキュリティヘッダーに追加されます。<br />-   `LaxWithTimestampFirst`: WSS: SOAP メッセージセキュリティを確認する任意の順序で、項目がセキュリティヘッダーに追加されます。ただし、セキュリティヘッダーの最初の要素は wsse: Timestamp 要素である必要があります。<br />-   `LaxWithTimestampLast`: WSS: SOAP メッセージセキュリティを確認する任意の順序で、項目がセキュリティヘッダーに追加されます。ただし、セキュリティヘッダーの最後の要素は wsse: Timestamp 要素である必要があります。<br /><br /> 既定では、 `Strict`です。<br /><br /> この要素は <xref:System.ServiceModel.Channels.SecurityHeaderLayout> 型です。|  
+|messageSecurityVersion|任意。 使用される WS-Security のバージョンを設定します。 有効な値は次のとおりです。<br /><br /> - WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11<br />- WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br />- WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br /><br /> 既定は、WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11 であり、単純に `Default` として XML で表現できます。 この属性は <xref:System.ServiceModel.MessageSecurityVersion> 型です。|  
+|requireDerivedKeys|キーを元の証明キーから派生できる場合に指定するブール値。 既定値は、`true` です。|  
+|requireSecurityContextCancellation|任意。 セキュリティ コンテキストが不要になったときにそれをキャンセルして終了する必要がある場合に指定するブール値。 既定値は、`true` です。|  
+|requireSignatureConfirmation|任意。 WS-Security 署名確認を有効にするかどうかを指定するブール値です。 `true` に設定されている場合、メッセージ署名が応答側で確認されます。  カスタム バインディングが相互証明書に対して構成されているか、発行されたトークンを使用するように構成されている場合 (WSS 1.1 バインド)、この属性の既定値は `true` です。 それ以外の場合、既定値は `false` です。<br /><br /> サービスが要求を完全に認識して応答していることを確認するために、署名確認を使用します。|  
+|securityHeaderLayout|任意。 セキュリティ ヘッダーでの要素の順序を指定します。 有効な値は、次のとおりです。<br /><br /> -   `Strict`: "使用前に宣言する" という一般的な原則に従って、項目がセキュリティヘッダーに追加されます。<br />-   `Lax`: WSS: SOAP メッセージセキュリティを確認する任意の順序で、項目がセキュリティヘッダーに追加されます。<br />-   `LaxWithTimestampFirst`: WSS: SOAP メッセージセキュリティを確認する任意の順序で、項目がセキュリティヘッダーに追加されます。ただし、セキュリティヘッダーの最初の要素は wsse: Timestamp 要素である必要があります。<br />-   `LaxWithTimestampLast`: WSS: SOAP メッセージセキュリティを確認する任意の順序で、項目がセキュリティヘッダーに追加されます。ただし、セキュリティヘッダーの最後の要素は wsse: Timestamp 要素である必要があります。<br /><br /> 既定値は、`Strict` です。<br /><br /> この要素は <xref:System.ServiceModel.Channels.SecurityHeaderLayout> 型です。|  
   
 ## <a name="authenticationmode-attribute"></a>authenticationMode 属性  
   
@@ -70,7 +71,7 @@ ms.locfileid: "91170117"
   
 ## <a name="defaultalgorithm-attribute"></a>defaultAlgorithm 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |Basic128|Aes128 暗号化を使用し、メッセージ ダイジェストには Sha1 を、キー ラップには Rsa-oaep-mgf1p を使用します。|  
 |Basic192|Aes192 暗号化を使用し、メッセージ ダイジェストには Sha1 を、キー ラップには Rsa-oaep-mgf1p を使用します。|  
@@ -178,7 +179,7 @@ ms.locfileid: "91170117"
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
 - [方法: SecurityBindingElement を使用してカスタム バインドを作成する](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [カスタム バインディング セキュリティ](../../../wcf/samples/custom-binding-security.md)

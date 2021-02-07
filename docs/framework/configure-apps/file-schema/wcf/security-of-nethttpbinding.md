@@ -1,13 +1,14 @@
 ---
+description: 詳細については <security> 、 <netHttpBinding>
 title: <security> の <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: dc41f6f7-cabc-4a64-9fa0-ceabf861b348
-ms.openlocfilehash: 97c52fa4f062ed0c65d5b1a8ca47a1439ab04cf5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 70d6363c0ac7fa00d83880ddc8c873548b385a29
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73736483"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683126"
 ---
 # <a name="security-of-nethttpbinding"></a>\<security> の \<netHttpBinding>
 
@@ -40,7 +41,7 @@ ms.locfileid: "73736483"
 
 |属性|説明|
 |---------------|-----------------|
-|mode|省略可能。 使用されるセキュリティの種類を指定します。 既定値は、`None` です。 この属性は <xref:System.ServiceModel.BasicHttpSecurityMode> 型です。|
+|mode|任意。 使用されるセキュリティの種類を指定します。 既定値は、`None` です。 この属性は <xref:System.ServiceModel.BasicHttpSecurityMode> 型です。|
 
 ## <a name="mode-attribute"></a>mode 属性
 
@@ -54,14 +55,14 @@ ms.locfileid: "73736483"
 
 ### <a name="child-elements"></a>子要素
 
-|要素|Description|
+|要素|説明|
 |-------------|-----------------|
 |[\<transport>](transport-of-nethttpbinding.md)|基本 HTTP サービスのトランスポート セキュリティ設定を定義します。 この要素は、<xref:System.ServiceModel.HttpTransportSecurity> に対応しています。|
 |[\<message>](message-of-nethttpbinding.md)|基本 HTTP サービスのメッセージ セキュリティ設定を定義します。 この要素は、<xref:System.ServiceModel.BasicHttpMessageSecurity> に対応しています。|
 
 ### <a name="parent-elements"></a>親要素
 
-|要素|Description|
+|要素|説明|
 |-------------|-----------------|
 |binding|のバインディング要素 [\<basicHttpBinding>](basichttpbinding.md) 。|
 

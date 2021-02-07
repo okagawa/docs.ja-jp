@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <parameter>'
 title: <parameter>
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: 2ef674dc8601bc9afaf6b547265988bb8a99f943
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: fb04cfb5bf451cdb99c23ae41ea8fafeb13f0d11
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91170169"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683815"
 ---
 # \<parameter>
 
@@ -41,7 +42,7 @@ ms.locfileid: "91170169"
   
 ## <a name="index-attribute"></a>index 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |"0"|ジェネリック型の最初のパラメーター。 たとえば、<xref:System.Collections.Generic.List%601> にはパラメーターが 1 つだけあります。 宣言型として使用される場合、index は "0" に設定されます。|  
 |"1"|ジェネリック型の 2 番目のパラメーター。 たとえば、<xref:System.Collections.Generic.Dictionary%602> には 2 つのパラメーターがあります。 2 番目のパラメーターによって既知の型が返される場合は、index 属性を "1" に設定します。|  

@@ -1,13 +1,14 @@
 ---
+description: 詳細については <security> 、 <netNamedPipeBinding>
 title: <security> の <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
-ms.openlocfilehash: 1a231a60d29cc6a4460de69a98753c23c0386027
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d64917c53390cade00d9e104c8581ce45355ac34
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91170039"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683100"
 ---
 # <a name="security-of-netnamedpipebinding"></a>\<security> の \<netNamedPipeBinding>
 
@@ -38,7 +39,7 @@ ms.locfileid: "91170039"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |mode|このバインディングに適用されるセキュリティの種類を指定します。 有効な値は次のとおりです。<br /><br /> -None: セキュリティを無効にします。<br />-Transport: セキュリティは、基になるトランスポートベースのセキュリティを使用して提供されます。 このモードでは保護レベルを制御することができます。<br />-既定値は Transport です。 この属性は <xref:System.ServiceModel.NetNamedPipeSecurityMode> 型です。|  
   

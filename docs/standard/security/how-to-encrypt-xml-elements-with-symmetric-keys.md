@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: 対称キーを使用して XML 要素を暗号化する」を参照してください。'
 title: '方法: 共通キーで XML 要素を暗号化する'
 ms.date: 07/14/2020
 dev_langs:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - XML encryption
 - Advanced Encryption Standard algorithm
 ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
-ms.openlocfilehash: cfda1835a1390b025f2ee0509a91c59104a77ae9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 137e1592a73ff9eb25fd6a5ba29b92c839f44575
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820229"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685115"
 ---
 # <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>方法: 共通キーで XML 要素を暗号化する
 

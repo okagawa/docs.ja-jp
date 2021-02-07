@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <persistenceProvider>'
 title: <persistenceProvider>
 ms.date: 03/30/2017
 ms.assetid: a37049c5-a7ea-4519-94f2-912eeb010380
-ms.openlocfilehash: dbf0ba565d4e3e2d65b4a81eb5d345fa90fb43c7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 60ddaf9f26f496bd7d79ccab84f84135e46963d1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181428"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683555"
 ---
 # \<persistenceProvider>
 
@@ -33,7 +34,7 @@ ms.locfileid: "91181428"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |persistenceOperationTimeout|永続化動作に使用するタイムアウトを指定する <xref:System.TimeSpan> 値。 既定値は "00:00:30" です。|  
 |type|使用する永続化プロバイダー ファクトリの型を指定する文字列。|  

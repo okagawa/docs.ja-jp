@@ -1,13 +1,14 @@
 ---
+description: 詳細については、標準エンドポイントの使用に関するページを参照してください。
 title: 標準エンドポイントの使用
 ms.date: 03/30/2017
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-ms.openlocfilehash: 2b210bfe683669aeebf54a1701f07d492e6abdb4
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 804fdd84d3f6ff6f961aed81e8bd14cf8c43063c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715339"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685414"
 ---
 # <a name="usage-of-standard-endpoints"></a>標準エンドポイントの使用
 
@@ -143,13 +144,13 @@ public class CustomEndpoint : ServiceEndpoint
 
 2. 複数のプロジェクトを起動できるようにします。
 
-    1. **ソリューションエクスプローラー**で、標準エンドポイントソリューションを右クリックし、 **[プロパティ]** を選択します。
+    1. **ソリューションエクスプローラー** で、標準エンドポイントソリューションを右クリックし、[**プロパティ**] を選択します。
 
-    2. **[共通プロパティ]** で、 **[スタートアッププロジェクト]** を選択し、 **[マルチスタートアッププロジェクト]** をクリックします。
+    2. [ **共通プロパティ**] で、[ **スタートアッププロジェクト**] を選択し、[ **マルチスタートアッププロジェクト**] をクリックします。
 
-    3. サービスプロジェクトを一覧の先頭に移動し、**アクション**を **[開始]** に設定します。
+    3. サービスプロジェクトを一覧の先頭に移動し、 **アクション** を [ **開始**] に設定します。
 
-    4. サービスプロジェクトの後に、**アクション**が **[開始]** に設定されているクライアントプロジェクトを移動します。
+    4. サービスプロジェクトの後に、 **アクション** が [ **開始**] に設定されているクライアントプロジェクトを移動します。
 
          これで、Client プロジェクトは Service プロジェクトの後に実行されます。
 
@@ -167,6 +168,6 @@ public class CustomEndpoint : ServiceEndpoint
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [.NET Framework 4 の Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプル](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\StandardEndpoints`

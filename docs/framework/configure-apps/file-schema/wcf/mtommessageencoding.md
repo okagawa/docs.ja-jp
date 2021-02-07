@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <mtomMessageEncoding>'
 title: <mtomMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 7865d171-cd1e-430a-8421-39cc13541d1b
-ms.openlocfilehash: 76b83381849b8519c1b758ef52c6d5c3f682f9b7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 37ac0be5f3de84a4c310b8ec2a09ed6f3c4def56
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204633"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99684114"
 ---
 # \<mtomMessageEncoding>
 
@@ -36,7 +37,7 @@ SOAP Message Transmission Optimization Mechanism (MTOM) ベースのメッセー
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |maxBufferSize|使用できるバッファーの最大サイズを指定する整数。|  
 |maxReadPoolSize|新しいリーダーを割り当てずに同時に読み取り可能なメッセージの数を指定する整数です。 プール サイズを大きくすると、システムでは、比較的大きい作業セットで、アクティビティの急増に対する許容度が高まります。 既定値は、64 です。|  
@@ -81,5 +82,5 @@ SOAP Message Transmission Optimization Mechanism (MTOM) ベースのメッセー
 - [メッセージ エンコーダーを選択する](../../../wcf/feature-details/choosing-a-message-encoder.md)
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

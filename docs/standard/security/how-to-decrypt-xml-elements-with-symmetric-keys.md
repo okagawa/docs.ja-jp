@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: 対称キーを使用して XML 要素を復号化する」を参照してください。'
 title: '方法: 共通キーで XML 要素を復号化する'
 ms.date: 07/14/2020
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - XML encryption
 - decryption
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
-ms.openlocfilehash: 67ace547fc539ab0a2d7affb339f908eb9670a29
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 894b202143daf2af767fd9877266e2323e0057e2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729357"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685180"
 ---
 # <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>方法: 共通キーで XML 要素を復号化する
 

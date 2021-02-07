@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: セキュリティの主要な概念'
 title: セキュリティの基本概念
 ms.date: 07/15/2020
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - permissions [.NET]
 - security [.NET], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-ms.openlocfilehash: 73e4d0474810d097c5eee8b99ae30b6096ee1695
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8643c87197049465371da00b2ecb70ac99d70f9e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687548"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99684998"
 ---
 # <a name="key-security-concepts"></a>セキュリティの基本概念
 

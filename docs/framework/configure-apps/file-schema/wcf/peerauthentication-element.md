@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <peerAuthentication> 要素'
 title: <peerAuthentication> 要素
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: 7e4f86c361dc3ade5dedf4017921516357bb9a58
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 887b65a4a2a7da9d545bc25636be0ea6c646f6fb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181584"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683724"
 ---
 # <a name="peerauthentication-element"></a>\<peerAuthentication> 要素
 
@@ -39,12 +40,12 @@ ms.locfileid: "91181584"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |`customCertificateValidatorType`|省略可能な文字列。 カスタム型の検証に使用される型およびアセンブリです。 `certificateValidationMode` が `Custom` に設定されている場合は、この属性を設定する必要があります。|  
 |`certificateValidationMode`|省略可能な列挙体です。 資格情報の検証に使用される 3 つのモードのいずれかを指定します。 `Custom` に設定されている場合、`customCertificateValidator` も指定する必要があります。 既定値は、`ChainTrust` です。|  
-|`revocationMode`|省略可能な列挙体です。 証明書失効リスト (CRL) のチェックに使用されるモードのいずれかです。 既定では、 `Online`です。|  
-|`trustedStoreLocation`|省略可能な列挙体です。 2 つのシステム格納場所 (`LocalMachine` または `CurrentUser`) のいずれかです。 この値は、サービス証明書がクライアントにネゴシエートされるときに使用されます。 指定されたストアの場所にある **信頼さ** れた People ストアに対して検証が実行されます。 既定では、 `CurrentUser`です。|  
+|`revocationMode`|省略可能な列挙体です。 証明書失効リスト (CRL) のチェックに使用されるモードのいずれかです。 既定値は、`Online` です。|  
+|`trustedStoreLocation`|省略可能な列挙体です。 2 つのシステム格納場所 (`LocalMachine` または `CurrentUser`) のいずれかです。 この値は、サービス証明書がクライアントにネゴシエートされるときに使用されます。 指定されたストアの場所にある **信頼さ** れた People ストアに対して検証が実行されます。 既定値は、`CurrentUser` です。|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType 属性  
   
@@ -54,21 +55,21 @@ ms.locfileid: "91181584"
   
 ## <a name="certificatevalidationmode-attribute"></a>certificateValidationMode 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|列挙|`None`、`PeerTrust`、`ChainTrust`、`PeerOrChainTrust`、`Custom` のいずれかの値にします。 既定では、 `ChainTrust`です。<br /><br /> 詳細については、「 [証明書の使用](../../../wcf/feature-details/working-with-certificates.md)」を参照してください。|  
+|列挙|`None`、`PeerTrust`、`ChainTrust`、`PeerOrChainTrust`、`Custom` のいずれかの値にします。 既定値は、`ChainTrust` です。<br /><br /> 詳細については、「 [証明書の使用](../../../wcf/feature-details/working-with-certificates.md)」を参照してください。|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|列挙|`NoCheck`、`Online`、`Offline` のいずれかの値にします。 既定では、 `Online`です。<br /><br /> 詳細については、「 [証明書の使用](../../../wcf/feature-details/working-with-certificates.md)」を参照してください。|  
+|列挙|`NoCheck`、`Online`、`Offline` のいずれかの値にします。 既定値は、`Online` です。<br /><br /> 詳細については、「 [証明書の使用](../../../wcf/feature-details/working-with-certificates.md)」を参照してください。|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|列挙|次のいずれかの値を指定できます。`LocalMachine` または `CurrentUser`。 既定では、 `CurrentUser`です。 クライアント アプリケーションがシステム アカウントで実行されている場合、証明書は通常 `LocalMachine` の下にあります。 クライアント アプリケーションがユーザー アカウントで実行されている場合、証明書は通常 `CurrentUser` の下にあります。|  
+|列挙|次のいずれかの値を指定できます。`LocalMachine` または `CurrentUser`。 既定値は、`CurrentUser` です。 クライアント アプリケーションがシステム アカウントで実行されている場合、証明書は通常 `LocalMachine` の下にあります。 クライアント アプリケーションがユーザー アカウントで実行されている場合、証明書は通常 `CurrentUser` の下にあります。|  
   
 ### <a name="child-elements"></a>子要素  
 
@@ -114,7 +115,7 @@ ms.locfileid: "91181584"
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement.PeerAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
 - [証明書の使用](../../../wcf/feature-details/working-with-certificates.md)
-- [ピアツーピアネットワーク](../../../wcf/feature-details/peer-to-peer-networking.md)
+- [ピアツーピア ネットワーク](../../../wcf/feature-details/peer-to-peer-networking.md)
 - [ピア チャネル メッセージの認証](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
 - [ピア チャネル カスタム認証](/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [セキュリティによるピア チャネル アプリケーションの保護](../../../wcf/feature-details/securing-peer-channel-applications.md)

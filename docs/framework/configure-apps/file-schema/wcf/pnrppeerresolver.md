@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <pnrpPeerResolver>'
 title: <pnrpPeerResolver>
 ms.date: 03/30/2017
 ms.assetid: c1b34f3b-68e5-4911-a367-de49fb61dbc6
-ms.openlocfilehash: 0a8cc60226b13552d47faec3a156ed1f59acacb9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4af6a63312fa300cfa33e578f01b8e07267ad3a1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181402"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683542"
 ---
 # \<pnrpPeerResolver>
 
@@ -32,13 +33,13 @@ ms.locfileid: "91181402"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |resolverType|使用されるリゾルバーを指定する文字列。 この属性は省略可能です。 設定されていない場合、または空の文字列に設定されている場合は、PNRP が使用されます。|  
   
 ### <a name="child-elements"></a>子要素  
 
- None  
+ なし  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -59,6 +60,6 @@ ms.locfileid: "91181402"
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
 - [ピア リゾルバー](../../../wcf/feature-details/peer-resolvers.md)

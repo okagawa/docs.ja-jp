@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <privacyNoticeAt>'
 title: <privacyNoticeAt>
 ms.date: 03/30/2017
 ms.assetid: 4cc96942-4eb9-4241-b2fd-45aa239915e8
-ms.openlocfilehash: 5e772e23b21c566c906be854e33b924698dcf3e0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2e38d43becd783cc50afba5a029d3ab9905ec15a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158709"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683503"
 ---
 # \<privacyNoticeAt>
 
@@ -27,7 +28,7 @@ ms.locfileid: "91158709"
                version="Integer" />
 ```  
   
-## <a name="type"></a>種類  
+## <a name="type"></a>Type  
 
  `Type`  
   
@@ -37,7 +38,7 @@ ms.locfileid: "91158709"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |`url`|プライバシーに関する声明の場所を示す URI を指定する文字列。|  
 |`version`|このプライバシーに関する声明のバージョンを指定する整数。|  
@@ -59,5 +60,5 @@ ms.locfileid: "91158709"
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

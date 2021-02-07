@@ -1,13 +1,14 @@
 ---
+description: 詳細については <peer> 、 <serviceCredentials>
 title: <peer> の <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: b134e21d-e5b5-458e-9309-626dbf8db4ed
-ms.openlocfilehash: 7f6669d3f53a6ee0d189786fa9ca3625fdedd127
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4d959f5061bb8069623b277219576dbd77ea52c3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91162479"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683737"
 ---
 # <a name="peer-of-servicecredentials"></a>\<peer> の \<serviceCredentials>
 
@@ -59,7 +60,7 @@ ms.locfileid: "91162479"
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.Peer%2A>
 - <xref:System.ServiceModel.Description.ServiceCredentials.Peer%2A>
 - <xref:System.ServiceModel.Security.PeerCredential>
-- [ピアツーピアネットワーク](../../../wcf/feature-details/peer-to-peer-networking.md)
+- [ピアツーピア ネットワーク](../../../wcf/feature-details/peer-to-peer-networking.md)
 - [ピア チャネル メッセージの認証](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
 - [ピア チャネル カスタム認証](/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [セキュリティによるピア チャネル アプリケーションの保護](../../../wcf/feature-details/securing-peer-channel-applications.md)

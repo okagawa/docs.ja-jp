@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「プリンシパルオブジェクトの置き換え」を参照してください。
 title: プリンシパル オブジェクトの置き換え
 ms.date: 07/15/2020
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - security [.NET], replacing principal objects
 - security [.NET], principals
 ms.assetid: c323687e-b196-487b-beba-f38f9b3f961b
-ms.openlocfilehash: b8f7a8fbd3b9c65126d6a3a65a5f6722f2ad93de
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 3f413a3b0824cef9f28454bf109d40556f61c26b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824175"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99684985"
 ---
 # <a name="replacing-a-principal-object"></a>プリンシパル オブジェクトの置き換え
 

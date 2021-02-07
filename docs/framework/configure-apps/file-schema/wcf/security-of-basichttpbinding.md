@@ -1,13 +1,14 @@
 ---
+description: 詳細については <security> 、 <basicHttpBinding>
 title: <security> の <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
-ms.openlocfilehash: 6144e5448526d7f2a7c89693f70f71a7f26c4a22
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 92d938d062d56cbb066a1170a9d3b8f3f5ba0186
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183664"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683256"
 ---
 # <a name="security-of-basichttpbinding"></a>\<security> の \<basicHttpBinding>
 
@@ -38,15 +39,15 @@ ms.locfileid: "91183664"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
-|mode|省略可能。 使用されるセキュリティの種類を指定します。 既定では、 `None`です。 この属性は <xref:System.ServiceModel.BasicHttpSecurityMode> 型です。|  
+|mode|任意。 使用されるセキュリティの種類を指定します。 既定値は、`None` です。 この属性は <xref:System.ServiceModel.BasicHttpSecurityMode> 型です。|  
   
 ## <a name="mode-attribute"></a>mode 属性  
   
 |値|説明|  
 |-----------|-----------------|  
-|None|-メッセージは、転送中にセキュリティ保護されません。|  
+|なし|-メッセージは、転送中にセキュリティ保護されません。|  
 |トランスポート|セキュリティは、HTTPS トランスポートを使用して提供されます。 SOAP メッセージは、HTTPS を使用してセキュリティ保護されます。 サービスは、サービスの X.509 証明書を使用してクライアントに認証されます。 クライアントは、提供される ClientCredentialType を使用して認証されます。 「」を参照してください [\<transport>](transport-of-basichttpbinding.md) 。|  
 |Message|セキュリティは、SOAP メッセージ セキュリティを使用して確保されます。 既定では、本文は暗号化および署名されます。 このバインディングの場合、サーバー証明書をクライアントの帯域外で提供するように要求されます。 このバインディングの唯一の有効な `ClientCredentialType` は、`Certificate` です。|  
 |TransportWithMessageCredential|整合性、機密性、およびサーバー認証は、トランスポート セキュリティによって提供されます。 クライアント認証は、SOAP メッセージ セキュリティで提供されます。 このモードは、ユーザーがユーザー名およびパスワードを使用して認証し、メッセージ転送をセキュリティで保護するために既存の HTTP が配置されている場合に関連します。|  
