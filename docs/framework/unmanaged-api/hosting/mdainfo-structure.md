@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: MDAInfo 構造体'
 title: MDAInfo 構造体
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fb8c14f7-d461-43d1-8b47-adb6723b9b93
 topic_type:
 - apiref
-ms.openlocfilehash: 8e88d90e3291d21888fae7aa162f84b6377658c5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5c42537a68d38e6cff3d70dcb796cd733ce64a1e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730020"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679759"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo 構造体
 
@@ -41,7 +42,7 @@ typedef struct _MDAInfo {
 |`lpMDACaption`|現在の MDA のタイトル。 タイトルには、イベントを発生させたエラーの種類が示され `Event_MDAFired` ます。|  
 |`lpMDAMessage`|現在の MDA によって提供される出力メッセージ。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  マネージデバッグアシスタント (Mda) は、共通言語ランタイム (CLR) と連携して動作し、ランタイム実行エンジンで無効な条件を特定したり、エンジンの状態に関する追加情報をダンプするなどのタスクを実行したりするためのデバッグ補助機能です。 Mda は、トラップが困難なイベントに関する XML メッセージを生成します。 これらは、マネージコードとアンマネージコードの間の遷移をデバッグする場合に特に便利です。  
   

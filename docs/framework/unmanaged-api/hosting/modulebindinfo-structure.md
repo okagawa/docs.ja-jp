@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ModuleBindInfo 構造体」を参照してください。
 title: ModuleBindInfo 構造体
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 632d4adc-dbc9-4ce8-9397-abc3285c1c69
 topic_type:
 - apiref
-ms.openlocfilehash: 505015877985492edab4b761b379f33f1e5c6660
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0969c0ecc459414336800e8e7da5817ac0c1a8ce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729981"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679624"
 ---
 # <a name="modulebindinfo-structure"></a>ModuleBindInfo 構造体
 
@@ -43,7 +44,7 @@ typedef struct _ModuleBindInfo {
 |`lpAssemblyIdentity`|参照されたモジュールを含むアセンブリの一意の識別子。|  
 |`lpModuleName`|参照されているモジュールの名前。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ModuleBindInfo` は、にパラメーターとして渡され `IHostAssemblyStore::ProvideModule` ます。 ホストは、一意の識別子 `dwAppDomainId` を共通言語ランタイム (CLR) に提供します。 [IHostAssemblyStore::P rovideassembly](ihostassemblystore-provideassembly-method.md)メソッドの呼び出しが返されると、ランタイムは識別子を使用して、の内容が `IStream` マップされているかどうかを判断します。 その場合、ランタイムはストリームを再マップするのではなく、既存のコピーを読み込みます。 ランタイムは、メソッドへの呼び出しから返されるストリームの参照キーとしても、この識別子を使用し `IHostAssemblyStore::ProvideAssembly` ます。 このため、識別子は、モジュール要求とアセンブリ要求に対して一意である必要があります。  
   

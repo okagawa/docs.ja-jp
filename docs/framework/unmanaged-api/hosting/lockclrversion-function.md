@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: LockClrVersion 関数'
 title: LockClrVersion 関数
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1318ee37-c43b-40eb-bbe8-88fc46453d74
 topic_type:
 - apiref
-ms.openlocfilehash: 2ff08ec8f194ccc9e968b3a7ee017afe788f4b03
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 268c08cdd24a826ba92cc8865dfd036f544febcd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704943"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679916"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion 関数
 
@@ -58,7 +59,7 @@ HRESULT LockClrVersion (
 |S_OK|メソッドは正常に完了しました。|  
 |E_INVALIDARG|1つ以上の引数が null です。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  CLR を初期化する前に、ホストがを呼び出し `LockClrVersion` ます。 `LockClrVersion` は、3つのパラメーターを受け取ります。これらはすべて [Flockclrversioncallback](flockclrversioncallback-function-pointer.md)型のコールバックです。 この型は次のように定義されています。  
   

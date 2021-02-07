@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: METAHOST_POLICY_FLAGS 列挙型'
 title: METAHOST_POLICY_FLAGS 列挙体
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3bb4b526-0118-42e2-ba59-c95648528ce9
 topic_type:
 - apiref
-ms.openlocfilehash: 16fb112cf5b209091001872567c95bb0b3a8ab61
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3a3ebe602c8f048b7f9fc907f5d4741722bd0ed3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729994"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679623"
 ---
 # <a name="metahost_policy_flags-enumeration"></a>METAHOST_POLICY_FLAGS 列挙体
 

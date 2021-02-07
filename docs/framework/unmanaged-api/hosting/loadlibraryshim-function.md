@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: LoadLibraryShim 関数'
 title: LoadLibraryShim 関数
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30931874-4d0e-4df1-b3d1-e425b50655d1
 topic_type:
 - apiref
-ms.openlocfilehash: d5e9ba0023b6516eb6190f32bc65b2b8b6af79f9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 829d64b5215fc21b2d8c8b753f5ad99212267b6a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727563"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99680006"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim 関数
 
@@ -62,7 +63,7 @@ HRESULT LoadLibraryShim (
 |S_OK|メソッドは正常に完了しました。|  
 |CLR_E_SHIM_RUNTIMELOAD|読み込みには `szDllName` 共通言語ランタイム (clr) を読み込む必要があり、必要なバージョンの clr を読み込むことはできません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  この関数は、.NET Framework 再頒布可能パッケージに含まれている Dll を読み込むために使用されます。 ユーザーが生成した Dll は読み込まれません。  
   

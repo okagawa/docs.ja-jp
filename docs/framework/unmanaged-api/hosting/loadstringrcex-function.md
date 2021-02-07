@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: LoadStringRCEx 関数'
 title: LoadStringRCEx 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bc789636-ca14-4f07-8f77-9305874d7495
 topic_type:
 - apiref
-ms.openlocfilehash: 1aa5c9f5dd7dd63e69c2eed1f6dd8ad6f007f01f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d3fe4b97014e5093dd8d209a5e27bac4ed7b879f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727537"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679915"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx 関数
 
@@ -69,7 +70,7 @@ HRESULT LoadStringRCEx (
 |S_OK|メソッドは正常に完了しました。|  
 |E_INVALIDARG|`szBuffer` が null であるか、または `iMax` がゼロ (0) です。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  メソッドが正常に完了しなかった場合、には `szBuffer` 空の文字列が含まれます。  
   

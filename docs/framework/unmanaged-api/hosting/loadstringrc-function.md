@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: LoadStringRC 関数'
 title: LoadStringRC 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 752e49b4-987c-4c28-a118-1a0c1ed510c5
 topic_type:
 - apiref
-ms.openlocfilehash: 16f95f8fce20f2cf46d4cda214e4494bd288bf60
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 188597f9dc21b6a67fb84e91cd66b50ba5a514f3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727550"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679919"
 ---
 # <a name="loadstringrc-function"></a>LoadStringRC 関数
 
@@ -61,7 +62,7 @@ HRESULT LoadStringRC (
 |S_OK|メソッドは正常に完了しました。|  
 |E_INVALIDARG|`szBuffer` が null または `iMax` がゼロ (0) です。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  メソッドが正常に完了しなかった場合、には `szBuffer` 空の文字列が含まれます。  
   

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「関数ポインターの LPOVERLAPPED_COMPLETION_ROUTINE」を参照してください。
 title: LPOVERLAPPED_COMPLETION_ROUTINE 関数ポインター
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5fb645d9-b818-401c-8c2c-c30d86de58ba
 topic_type:
 - apiref
-ms.openlocfilehash: a3a45a13073cf422064d28554a274e068db6f517
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6645e6a9746404a4ae355a22cf16e6d164c63bed
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727511"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679837"
 ---
 # <a name="lpoverlapped_completion_routine-function-pointer"></a>LPOVERLAPPED_COMPLETION_ROUTINE 関数ポインター
 
@@ -50,7 +51,7 @@ typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (
  `lpOverlapped`  
  からI/o 要求を完了するために使用される情報を格納する構造体へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `LPOVERLAPPED_COMPLETION_ROUTINE`ポイントがコールバック関数であり、ホストアプリケーションのライターによって実装されている必要がある関数。 コールバック関数を使用すると、ホストは、完了した i/o 要求を処理できます。  
   
