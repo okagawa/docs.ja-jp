@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRDataTarget:: GetTLSValue メソッド'
 title: ICLRDataTarget::GetTLSValue メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0d8a7730-edc9-4728-898f-41b219cf5a28
 topic_type:
 - apiref
-ms.openlocfilehash: f6066774961b3fba2c466e156296907efc2e53df
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5c0c4a462d89c2eceada4180ea532f36fc9e48b9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703409"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718045"
 ---
 # <a name="iclrdatatargetgettlsvalue-method"></a>ICLRDataTarget::GetTLSValue メソッド
 
@@ -47,7 +48,7 @@ HRESULT GetTLSValue (
  `value`  
  入出力指定された `CLRDATA_ADDRESS` TLS の場所から返される値を指定する値へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドは、デバッグ アプリケーションの作成者によって実装されます。  
   

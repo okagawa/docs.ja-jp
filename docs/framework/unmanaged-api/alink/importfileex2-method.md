@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ImportFileEx2 メソッド'
 title: ImportFileEx2 メソッド
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 02c789fd-16fc-48c6-9619-56e87e2a37ca
 topic_type:
 - apiref
-ms.openlocfilehash: 59149e79e926a0b9a3e549e013bf178e54ddf6fa
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0968318ab7e416e56b71f2f30f2745d538d0ff8a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705177"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718006"
 ---
 # <a name="importfileex2-method"></a>ImportFileEx2 メソッド
 
