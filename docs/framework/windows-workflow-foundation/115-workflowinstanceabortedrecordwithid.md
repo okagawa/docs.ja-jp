@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 115-WorkflowInstanceAbortedRecordWithId'
 title: 115 - WorkflowInstanceAbortedRecordWithId
 ms.date: 03/30/2017
 ms.assetid: 0293dd4e-e6ae-473a-b3d6-c2d38f9bd875
-ms.openlocfilehash: 69c0c58de36a7fff916b11deba888b7cef7c626e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6d9eb387ba61a646cbf1423d01175b0230272ca5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96285149"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755435"
 ---
 # <a name="115---workflowinstanceabortedrecordwithid"></a>115 - WorkflowInstanceAbortedRecordWithId
 
@@ -15,12 +16,12 @@ ms.locfileid: "96285149"
   
 |||  
 |-|-|  
-|ID|115|  
+|id|115|  
 |Keywords|HealthMonitoring、WFTracking|  
 |Level|警告|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、ワークフロー インスタンスが WorkflowInstanceAbortedRecord を生成したときに、ETW 追跡参加要素によって生成されます。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96285149"
   
 ## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|Description|  
+|データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  
 |InstanceId|xs:GUID|ワークフローのインスタンス ID|  
 |RecordNumber|xs:long|生成されたレコードのシーケンス番号|  

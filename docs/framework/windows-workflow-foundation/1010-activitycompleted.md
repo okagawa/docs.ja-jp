@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「1010-ActivityCompleted」を参照してください。
 title: 1010 - ActivityCompleted
 ms.date: 03/30/2017
 ms.assetid: d256284e-3fd2-4c33-82f4-abb617575706
-ms.openlocfilehash: d0ebf32ec1d5fe5b34ffe650d5547891be0eb665
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c72339449b94b0ea5d6d8fa227b606cc25c29704
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239914"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755539"
 ---
 # <a name="1010---activitycompleted"></a>1010 - ActivityCompleted
 
@@ -15,12 +16,12 @@ ms.locfileid: "96239914"
   
 |||  
 |-|-|  
-|ID|1010|  
+|id|1010|  
 |Keywords|WFRuntime|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  アクティビティが実行を完了したことを示します。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96239914"
   
 ## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|Description|  
+|データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  
 |アクティビティ|xs:string|アクティビティの型名。|  
 |DisplayName|xs:string|アクティビティの表示名。|  
