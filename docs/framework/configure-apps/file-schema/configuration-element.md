@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <configuration> 要素'
 title: <configuration> 要素
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - configuration element
 - container tags, <configuration> element
 ms.assetid: 2ec1c9dc-2e5c-4ef0-9958-81670ab88449
-ms.openlocfilehash: 8f79981a55d0bc9b1cd522e45f5606fda102c72c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ee48a45ddb987201e84213a0d7674da004951ab1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544691"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698999"
 ---
 # <a name="configuration-element"></a>\<configuration> 要素
 
@@ -49,11 +50,11 @@ ms.locfileid: "90544691"
 | [**\<cryptographySettings>** 設定スキーマ](./cryptography/index.md) | 暗号化設定スキーマのすべての要素。 |
 | [**\<configuration>** セクションスキーマ](configuration-sections-schema.md) | 構成セクション設定スキーマ内のすべての要素。 |
 | [トレースおよびデバッグ設定のスキーマ](./trace-debug/index.md) | トレースおよびデバッグ設定スキーマのすべての要素。 |
-| [ASP.NET 構成設定スキーマ](/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)) | ASP.NET 構成スキーマのすべての要素。 ASP.NET Web サイトおよびアプリケーションを構成するための要素が含まれています。 *Web.config*ファイルで使用されます。 |
+| [ASP.NET 構成設定スキーマ](/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)) | ASP.NET 構成スキーマのすべての要素。 ASP.NET Web サイトおよびアプリケーションを構成するための要素が含まれています。 *Web.config* ファイルで使用されます。 |
 | [**\<webServices>** 設定スキーマ](/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100)) | Web サービス設定スキーマ内のすべての要素。 |
-| [Web 設定スキーマ](./web/index.md) | IIS などのホスト アプリケーションと ASP.NET の連携を構成する要素も含め、Web 設定スキーマのすべての要素。 *aspnet.config*ファイルで使用されます。 |
+| [Web 設定スキーマ](./web/index.md) | IIS などのホスト アプリケーションと ASP.NET の連携を構成する要素も含め、Web 設定スキーマのすべての要素。 *aspnet.config* ファイルで使用されます。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 各構成ファイルには、要素が1つだけ含まれている必要があり **\<configuration>** ます。
 

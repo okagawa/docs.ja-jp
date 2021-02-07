@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <clear> の要素 <appSettings>'
 title: <appSettings> の <clear> 要素
 ms.date: 05/01/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
-ms.openlocfilehash: 266d32ccb8b322f0472e0f552f9c0fc877c9a78e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 88c6a02441c038619cb74947c024de7712189915
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "77214805"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699338"
 ---
 # <a name="clear-element-for-appsettings"></a>\<appSettings> の \<clear> 要素
 

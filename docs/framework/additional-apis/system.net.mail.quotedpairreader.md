@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: QuotedPairReader クラス'
 title: QuotedPairReader クラス (System.Net)
 ms.date: 06/12/2020
 ms.technology: dotnet-networking
@@ -11,11 +12,12 @@ api_location:
 - System.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 898c6e9d2d5dd02f3d5f9c096ad470b5dd445d1d
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 810a7b02948a1b7aa542a179563af9a6d79dd763
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051312"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699663"
 ---
 # <a name="quotedpairreader-class"></a>QuotedPairReader クラス
 
@@ -50,13 +52,13 @@ internal static int CountQuotedChars(string data, int index, bool permitUnicodeE
 
 - `permitUnicodeEscaping` <xref:System.Boolean>
 
-  `true`Unicode 文字のエスケープを許可するにはそれ以外の場合は `false` 。
+  `true` Unicode 文字のエスケープを許可するにはそれ以外の場合は `false` 。
 
 ### <a name="return-value"></a>戻り値
 
 <xref:System.Int32?displayProperty=nameWithType>
 
-`0`指定したインデックス位置にある文字がエスケープされない場合は。それ以外の場合は、の文字を含む、連続する引用符で囲まれた文字の数 `index` 。
+`0` 指定したインデックス位置にある文字がエスケープされない場合は。それ以外の場合は、の文字を含む、連続する引用符で囲まれた文字の数 `index` 。
 
 ### <a name="exceptions"></a>例外
 

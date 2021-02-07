@@ -1,14 +1,15 @@
 ---
+description: '詳細情報: <bookmarkResumptionQueries>'
 title: <bookmarkResumptionQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 8ed61a7f-4254-439c-bdd8-b474971533f7
-ms.openlocfilehash: 047d13bc8477214fa1e3c9ffdbed6785b29da637
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e8ff21e2183fe31411674e9d4de6bf3d99d14836
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189580"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698155"
 ---
 # \<bookmarkResumptionQueries>
 
@@ -55,7 +56,7 @@ ms.locfileid: "91189580"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<workflow>](workflow.md)|**ActivityDefinitionId**プロパティによって識別される特定のワークフローのすべてのクエリを格納する構成要素。|  
+|[\<workflow>](workflow.md)|**ActivityDefinitionId** プロパティによって識別される特定のワークフローのすべてのクエリを格納する構成要素。|  
   
 ## <a name="see-also"></a>関連項目
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <requestCaching> 要素 (ネットワーク設定)'
 title: <requestCaching> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: 3eb32b7ae643efdb19892410b669c1e7ff80e0ad
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d09da8ad7a38ac363aaa740cca4de25e33fa8c56
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91174161"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698558"
 ---
 # <a name="requestcaching-element-network-settings"></a>\<requestCaching> 要素 (ネットワーク設定)
 
@@ -42,7 +43,7 @@ ms.locfileid: "91174161"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |`isPrivateCache`|キャッシュがさまざまなユーザーの情報の分離を提供するかどうかを指定します。 既定値は `true` です。 中間層アプリケーションの場合は、この値をにする必要があり `false` ます。|  
 |`disableAllCaching`|すべての Web 応答に対してキャッシュを無効にし、プログラムでオーバーライドすることはできないことを指定します。|  
@@ -51,7 +52,7 @@ ms.locfileid: "91174161"
   
 ## <a name="policylevel-attribute"></a>policyLevel 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |`Default`|リソースが最新で、コンテンツの長さが正確で、有効期限、変更、およびコンテンツの長さの属性が存在する場合、キャッシュされたリソースを返します。|  
 |`BypassCache`|サーバーからリソースを返します。|  

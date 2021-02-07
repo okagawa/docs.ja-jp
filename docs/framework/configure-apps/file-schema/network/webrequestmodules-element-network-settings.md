@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <webRequestModules> 要素 (ネットワーク設定)'
 title: <webRequestModules> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - webRequestModules element
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-ms.openlocfilehash: 9396ca393523dce5593531f332e5c07241987947
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 851aec2bf38910239874cb5792239a48de6efb70
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91187005"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698428"
 ---
 # <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules> 要素 (ネットワーク設定)
 

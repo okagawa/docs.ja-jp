@@ -1,5 +1,6 @@
 ---
-title: <clear>NameValueSectionHandler および DictionarySectionHandler の要素
+description: '詳細情報: <clear> NameValueSectionHandler および DictionarySectionHandler の要素'
+title: <clear> NameValueSectionHandler および DictionarySectionHandler の要素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/clear
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
-ms.openlocfilehash: f6d860f35d22002030ffa3d09dd0d8a96116bf5e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 896aa7e8f0e3b41574538fcd9e4be9d6155da889
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "77214750"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699234"
 ---
-# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<clear>NameValueSectionHandler および DictionarySectionHandler の要素
+# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<clear> NameValueSectionHandler および DictionarySectionHandler の要素
 
 セクションで以前に定義したすべての設定を消去します。
 
@@ -36,7 +37,7 @@ ms.locfileid: "77214750"
 
 |     | 説明 |
 | --- | ------------|
-| [**\<sectionName>** Element](custom-element-2.md) | クラスおよびクラスを使用するカスタム構成セクションの設定を定義し <xref:System.Configuration.NameValueSectionHandler> <xref:System.Configuration.DictionarySectionHandler> ます。 |
+| [**\<sectionName>** 要素](custom-element-2.md) | クラスおよびクラスを使用するカスタム構成セクションの設定を定義し <xref:System.Configuration.NameValueSectionHandler> <xref:System.Configuration.DictionarySectionHandler> ます。 |
 
 ## <a name="child-elements"></a>子要素
 
@@ -78,7 +79,7 @@ ms.locfileid: "77214750"
 
 ## <a name="configuration-file"></a>構成ファイル
 
-この要素は、アプリケーション構成ファイル *、コンピューター構成*ファイル (machine.config)、およびアプリケーションディレクトリレベルでは*ない web.config ファイル*で使用できます。
+この要素は、アプリケーション構成ファイル、マシン構成ファイル (*Machine.config*)、およびアプリケーションディレクトリレベルではないファイル *Web.config* で使用できます。
 
 ## <a name="see-also"></a>関連項目
 

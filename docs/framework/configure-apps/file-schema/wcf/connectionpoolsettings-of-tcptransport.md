@@ -1,13 +1,14 @@
 ---
+description: 詳細については <connectionPoolSettings> 、 <tcpTransport>
 title: <connectionPoolSettings> の <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
-ms.openlocfilehash: 53523fd550ecad931bfb2af5eb9beb71c60d44f8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 065d3529740714ffd740c2cec71832a7b386b4a3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91176007"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698389"
 ---
 # <a name="connectionpoolsettings-of-tcptransport"></a>\<connectionPoolSettings> の \<tcpTransport>
 
@@ -36,7 +37,7 @@ TCP トランスポートの追加の接続プール設定を指定します。
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |`groupName`|送信チャネルに使用される接続プールの名前を定義する文字列です。 ストリーム配信モードでは、接続が共有されません。したがって、接続プールは無効です。 既定は、"default" 文字列です。 この値を変更して、特定のクライアントの接続を、個別のグループに分離できます。|  
 |`idleTimeout`|接続が切断されるまでの最大アイドル時間を指定する正の <xref:System.TimeSpan>。 既定値は 00:02:00 です。|  
@@ -64,5 +65,5 @@ TCP トランスポートの追加の接続プール設定を指定します。
 - [トランスポートの選択](../../../wcf/feature-details/choosing-a-transport.md)
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

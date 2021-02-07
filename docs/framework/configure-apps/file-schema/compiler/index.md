@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラおよび言語プロバイダー設定スキーマ'
 title: コンパイラおよび言語プロバイダー設定のスキーマ
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - language providers, settings schema
 - compiler configuration settings
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
-ms.openlocfilehash: 457e90c92530e04070575e42e3fc282ce45b3d03
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 64dd57581711358c9051cda5609e0c5ff4fc05bc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153951"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699195"
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>コンパイラおよび言語プロバイダー設定のスキーマ
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <add> bypasslist の要素 (ネットワーク設定)'
 title: bypasslist の <add> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: 927a43f352fd776d9e6ba52ebea6ba2a1ccd4d48
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6bbd42cdf5d3b9bc31326b619cde96cfac0c755a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149492"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698636"
 ---
 # <a name="add-element-for-bypasslist-network-settings"></a>bypasslist の \<add> 要素 (ネットワーク設定)
 

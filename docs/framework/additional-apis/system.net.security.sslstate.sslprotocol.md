@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「Sslstate プロパティ」を参照してください。
 title: SslState. Sslstate プロパティ (システム .Net. Security)
 ms.date: 10/21/2019
 ms.technology: dotnet-networking
@@ -11,12 +12,12 @@ api_location:
 - System.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 6983ac071dad29b240308031ecd0a3562a6856e4
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: b0b9bebf23fcd8d643d06f1cff10c260c77a7c08
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72847248"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699624"
 ---
 # <a name="sslstatesslprotocol-property"></a>SslState. Sslstate プロパティ
 
@@ -33,17 +34,17 @@ internal SslProtocols SslProtocol { get; }
 <xref:System.Security.Authentication.SslProtocols>  
 SSL プロトコルのバージョンを指定する列挙値のビットごとの組み合わせ。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 > [!WARNING]
-> `SslState.SslProtocol` プロパティは内部であり、コードで直接使用するためのものではありません。
+> `SslState.SslProtocol`プロパティは内部であり、コードで直接使用するためのものではありません。
 >
 > Microsoft では、どのような状況でも、実稼働アプリケーションでのこのプロパティの使用はサポートしていません。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
 **名前空間:** <xref:System.Net.Security>
 
-**アセンブリ:** システム (.dll 内)
+**アセンブリ:** システム (System.dll)
 
 **.NET Framework のバージョン:** 2.0 以降で使用できます。

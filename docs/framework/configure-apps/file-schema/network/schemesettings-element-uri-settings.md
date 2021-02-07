@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <schemeSettings> 要素 (Uri 設定)'
 title: <schemeSettings> 要素 (Uri 設定)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
-ms.openlocfilehash: 5a146b854239fd516125e66e05312e27b90c73ec
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 218676c10a8acaa79c2eb2146214e77beee9a972
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91187018"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698441"
 ---
 # <a name="schemesettings-element-uri-settings"></a>\<schemeSettings> 要素 (Uri 設定)
 
@@ -30,7 +31,7 @@ ms.locfileid: "91187018"
   
 ### <a name="attributes"></a>属性  
 
- None  
+ なし  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -84,7 +85,7 @@ ms.locfileid: "91187018"
   
 |||
 |-|-|  
-|名前空間|システム|  
+|名前空間|System (システム)|  
 |スキーマ名||  
 |検証ファイル||  
 |空にすることができます||  

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <compiler> 要素'
 title: <compiler> 要素
 ms.date: 08/14/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - compiler configuration attributes
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
-ms.openlocfilehash: 0abbe594754cbd70ec4732a1e7ef98e8e88bf167
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 91540d2217320b225ae67a48d616720ef2a0b679
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544753"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699221"
 ---
 # <a name="compiler-element"></a>\<compiler> 要素
 
@@ -66,7 +67,7 @@ ms.locfileid: "90544753"
 |[\<system.codedom> 要素](system-codedom-element.md)|使用可能な言語プロバイダーのコンパイラ構成設定を指定します。|
 |[\<compilers> 要素](compilers-element.md)|コンパイラ構成要素のコンテナー。0個以上の要素が含まれてい `<compiler>` ます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 各 `<compiler>` 要素は、特定の言語プロバイダーのコンパイラ構成属性を指定します。 プロバイダーは、 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 特定の言語のクラスを拡張します。要素は、 `<compiler>` 言語プロバイダーのコンパイラとコードジェネレーターの設定を定義します。
 

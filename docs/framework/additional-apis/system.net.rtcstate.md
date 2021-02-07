@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: RtcState クラス'
 title: RtcState クラス (System.Net)
 ms.date: 11/01/2019
 ms.technology: dotnet-networking
@@ -11,16 +12,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
-ms.openlocfilehash: 861bf2fc0dfef8f836e98e45ba22c7e2e24e19f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea16b46a918387d2333124ad82ec7b707627575e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155779"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699611"
 ---
-# <a name="rtcstate-class"></a>クラス
+# <a name="rtcstate-class"></a>RtcState クラス
 
-この`RtcState`クラスは、リアルタイム通信 (RTC) 要求の状態データを表します。
+クラスは、 `RtcState` リアルタイム通信 (RTC) 要求の状態データを表します。
 
 ## <a name="syntax"></a>構文
   
@@ -29,14 +30,14 @@ internal class RtcState
 ```
 
 > [!WARNING]
-> クラス`RtcState`は内部クラスであり、コード内で直接使用するためのものではありません。
+> `RtcState`クラスは内部であり、コードで直接使用するためのものではありません。
 >
-> マイクロソフトでは、どのような状況でも、運用環境のアプリケーションでこのクラスを使用することはできません。
+> Microsoft では、どのような状況でも、実稼働アプリケーションでのこのクラスの使用はサポートしていません。
 
 ## <a name="requirements"></a>必要条件
 
-**名前空間:**<xref:System.Net>
+**名前空間:** <xref:System.Net>
 
-**アセンブリ:** システム (システム.dll 内)
+**アセンブリ:** システム (System.dll)
 
-**.NET フレームワークのバージョン:** 4.5以降で利用可能。
+**.NET Framework のバージョン:** 4.5 以降で使用できます。

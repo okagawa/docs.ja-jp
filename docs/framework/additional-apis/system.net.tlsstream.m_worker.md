@@ -1,5 +1,6 @@
 ---
-title: TlsStream. m_Worker フィールド (System.Net)
+description: '詳細情報: TlsStream.m_Worker フィールド'
+title: TlsStream.m_Worker フィールド (System.Net)
 ms.date: 10/21/2019
 ms.technology: dotnet-networking
 topic_type:
@@ -10,14 +11,14 @@ api_location:
 - System.dll
 api_type:
 - Assembly
-ms.openlocfilehash: d335820d13e1e15e054e824a284615cdbf6c2094
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: d929b0b1949bc1902425c016bfd770d4c66a3257
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72847242"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699520"
 ---
-# <a name="tlsstreamm_worker-field"></a>TlsStream. m_Worker フィールド
+# <a name="tlsstreamm_worker-field"></a>TlsStream.m_Worker フィールド
 
 SSL ストリームの状態を表します。
 
@@ -32,17 +33,17 @@ private SslState m_Worker;
 `System.Net.Security.SslState`  
 SSL ストリームの状態。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 > [!WARNING]
-> `TlsStream.m_Worker` フィールドはプライベートであり、コードで直接使用するためのものではありません。
+> `TlsStream.m_Worker`フィールドはプライベートであり、コードで直接使用するためのものではありません。
 >
 > Microsoft では、どのような状況でも、実稼働アプリケーションでのこのフィールドの使用はサポートしていません。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
 **名前空間:** <xref:System.Net>
 
-**アセンブリ:** システム (.dll 内)
+**アセンブリ:** システム (System.dll)
 
 **.NET Framework のバージョン:** 2.0 以降で使用できます。

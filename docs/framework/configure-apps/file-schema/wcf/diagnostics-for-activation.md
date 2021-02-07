@@ -1,13 +1,14 @@
 ---
+description: 詳細については <diagnostics> 、「アクティブ化」を参照してください。
 title: <diagnostics> アクティブ化の場合
 ms.date: 03/30/2017
 ms.assetid: 1486e0eb-fe2a-46c3-b584-c924889477dd
-ms.openlocfilehash: c16f32357d40b9b69d52c525ce8a395a3de8fdb1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: aa1529a478ac367ea89c8926571c6c6f2f57cf74
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192322"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698363"
 ---
 # <a name="diagnostics-for-activation"></a>\<diagnostics> アクティブ化の場合
 
@@ -27,7 +28,7 @@ Windows Communication Foundation (WCF) リスナーの診断機能を構成し�
 </configuration>
 ```  
   
-## <a name="type"></a>種類  
+## <a name="type"></a>Type  
 
  `Type`  
   
@@ -37,7 +38,7 @@ Windows Communication Foundation (WCF) リスナーの診断機能を構成し�
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |`performanceCountersEnabled`|診断用パフォーマンス カウンターが有効であるかどうかを示すブール値。|  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <configSections> の要素 <configuration>'
 title: <configuration> の <configSections> 要素
 ms.date: 05/01/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - configSections Element
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
-ms.openlocfilehash: 1e4bb7a7cfb0b140ca6d13c162708c3c30bd496d
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: 543ceed8d53fd299e8a0b65594592b64d6b833a8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86441688"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698988"
 ---
 # <a name="configsections-element-for-configuration"></a>\<configuration> の \<configSections> 要素
 
@@ -59,7 +60,7 @@ ms.locfileid: "86441688"
 
 ## <a name="configuration-file"></a>構成ファイル
 
-この要素は、アプリケーション構成ファイル、マシン構成ファイル (*Machine.config*)、およびアプリケーションディレクトリレベルではないファイル*Web.config*で使用できます。
+この要素は、アプリケーション構成ファイル、マシン構成ファイル (*Machine.config*)、およびアプリケーションディレクトリレベルではないファイル *Web.config* で使用できます。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次を参照してください。 PooledStream. NetworkStream プロパティ
 title: PooledStream. NetworkStream プロパティ (System.Net)
 ms.date: 10/21/2019
 ms.technology: dotnet-networking
@@ -12,16 +13,16 @@ api_location:
 - System.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 541b8c94b30675c1286b48a2291c3bd3e4aeea0b
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 8a4f1d6bd9297028e763ef73bf96f85cbbfdafd6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72847230"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699637"
 ---
 # <a name="pooledstreamnetworkstream-property"></a>PooledStream. NetworkStream プロパティ
 
-`PooledStream` ソケットのネットワークストリームを取得または設定します。
+ソケットのネットワークストリームを取得または設定し `PooledStream` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -32,19 +33,19 @@ internal NetworkStream NetworkStream { get; set; }
 ## <a name="property-value"></a>プロパティ値
 
 <xref:System.Net.Sockets.NetworkStream>  
-`PooledStream` ソケットのネットワークストリーム。
+ソケットのネットワークストリーム `PooledStream` 。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 > [!WARNING]
-> `PooledStream.NetworkStream` プロパティは内部であり、コードで直接使用するためのものではありません。
+> `PooledStream.NetworkStream`プロパティは内部であり、コードで直接使用するためのものではありません。
 >
 > Microsoft では、どのような状況でも、実稼働アプリケーションでのこのプロパティの使用はサポートしていません。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
 **名前空間:** <xref:System.Net>
 
-**アセンブリ:** システム (.dll 内)
+**アセンブリ:** システム (System.dll)
 
 **.NET Framework のバージョン:** 2.0 以降で使用できます。

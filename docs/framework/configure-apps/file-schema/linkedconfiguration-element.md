@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <linkedConfiguration> 要素'
 title: <linkedConfiguration> 要素
 ms.date: 03/30/2017
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - linked configuration files
 - linkedConfiguration Element
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
-ms.openlocfilehash: 14ee2275ecf690ab16ffaabd71fbbe7e1a4897bc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e4312cf788784241efc35304b632dfe1fdef1bc4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74087961"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698662"
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedConfiguration> 要素
 
@@ -34,15 +35,15 @@ ms.locfileid: "74087961"
 
 ## <a name="attribute"></a>属性
 
-|           | [説明] |
+|           | 説明 |
 | --------- | ----------- |
-| **href**  | 必須の属性です。<br><br>含める構成ファイルの URL。 **Href**属性でサポートされている形式はのみ `file://` です。 ローカルファイルと UNC ファイルがサポートされています。 |
+| **href**  | 必須の属性です。<br><br>含める構成ファイルの URL。 **Href** 属性でサポートされている形式はのみ `file://` です。 ローカルファイルと UNC ファイルがサポートされています。 |
 
 ## <a name="parent-element"></a>親要素
 
 |     | 説明 |
 | --- | ----------- |
-| [**\<assemblyBinding>** Element](assemblybinding-element-for-configuration.md) | 構成レベルでのアセンブリ バインディング ポリシーを指定します。 |
+| [**\<assemblyBinding>** 要素](assemblybinding-element-for-configuration.md) | 構成レベルでのアセンブリ バインディング ポリシーを指定します。 |
 
 ## <a name="child-elements"></a>子要素
 
@@ -65,7 +66,7 @@ ms.locfileid: "74087961"
 
 - `#include`C/c + + のディレクティブの動作と同様に、すべてのリンクされた構成ファイルが1つのファイルに結合されます。
 
-- **\<linkedConfiguration>** 要素は、アプリケーション構成ファイル内でのみ許可されます。 *machine.config*では無視されます。
+- **\<linkedConfiguration>** 要素は、アプリケーション構成ファイル内でのみ許可されます。 *Machine.config* では無視されます。
 
 - 循環参照が検出され、終了します。 つまり、 **\<linkedConfiguration>** 一連の構成ファイルの要素がループを形成すると、ループが検出され、停止されます。
 
@@ -83,5 +84,5 @@ ms.locfileid: "74087961"
 
 ## <a name="see-also"></a>関連項目
 
-- [**\<assemblyBinding>** Element](assemblybinding-element-for-configuration.md)
+- [**\<assemblyBinding>** 要素](assemblybinding-element-for-configuration.md)
 - [.NET Framework の構成ファイルスキーマ](index.md)
