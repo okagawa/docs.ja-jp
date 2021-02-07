@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <additionalRequestParameters> 要素'
 title: <additionalRequestParameters> 要素
 ms.date: 03/30/2017
 ms.assetid: da8109fb-581c-48f4-b718-3bbda1edc47d
-ms.openlocfilehash: e175e2b68610ea91f78a04d2c9a4ed202c1f2605
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d27a8f25f4b45509989e4a348a0aeed0c2c22f15
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172919"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750001"
 ---
 # <a name="additionalrequestparameters-element"></a>\<additionalRequestParameters> 要素
 
@@ -24,7 +25,7 @@ ms.locfileid: "91172919"
 - [フェデレーションと発行済みトークン](../../../wcf/feature-details/federation-and-issued-tokens.md)
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
 - [方法: SecurityBindingElement を使用してカスタム バインドを作成する](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [カスタム バインディング セキュリティ](../../../wcf/samples/custom-binding-security.md)

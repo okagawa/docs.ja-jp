@@ -1,4 +1,5 @@
 ---
+description: の詳細については、「」を参照してください。 <remove> <listeners><trace>
 title: <remove> のの <listeners> 要素 <trace>
 ms.date: 03/30/2017
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-ms.openlocfilehash: 01b797e1fb62d32e9f0d44c54b803dd969615361
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8b863cb535c28f090374e284717d5bf38f22e881
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173836"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750599"
 ---
 # <a name="remove-element-for-listeners-for-trace"></a>\<remove> のの \<listeners> 要素 \<trace>
 
-**リスナーコレクションから**リスナーを削除します。  
+**リスナーコレクションから** リスナーを削除します。  
 
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
@@ -38,7 +39,7 @@ ms.locfileid: "91173836"
   
 |属性|説明|  
 |---------------|-----------------|  
-|**name**|必須の属性です。<br /><br /> **リスナー**コレクションから削除するリスナーの名前。|  
+|**name**|必須の属性です。<br /><br /> **リスナー** コレクションから削除するリスナーの名前。|  
   
 ### <a name="child-elements"></a>子要素  
 

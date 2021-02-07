@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <allowAccounts>'
 title: <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 166923a9-a8ac-478f-92f9-529d9667f3a6
-ms.openlocfilehash: 3432d33c0cd65af03d2b1ac1302ca2c8ff3e0f43
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5211d694e5318faf0cfc31b404764acb405bd096
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201643"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749988"
 ---
 # \<allowAccounts>
 
@@ -36,7 +37,7 @@ Windows Communication Foundation (WCF) サービスをホストするプロセ�
   
 ### <a name="child-elements"></a>子要素  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |[\<add>](add-of-allowaccounts.md)|WCF サービスをホストし、共有サービスへの接続アクセスが付与されているプロセスのユーザーアカウントを追加します。|  
   

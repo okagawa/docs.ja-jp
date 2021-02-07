@@ -1,13 +1,14 @@
 ---
+description: 詳細については <message> 、 <netHttpBinding>
 title: <message> の <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: b37d6b1bd8f5372c230acbc2ada299415b2e40b3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 508e58e58dbb298081a075588ddda87289c1a3d1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204854"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749616"
 ---
 # <a name="message-of-nethttpbinding"></a>\<message> の \<netHttpBinding>
 
@@ -34,10 +35,10 @@ ms.locfileid: "91204854"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |algorithmSuite|メッセージの暗号化とキー ラップ アルゴリズムを設定します。 この属性は、アルゴリズムとキー サイズを指定する <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 型です。 これらのアルゴリズムは、セキュリティ ポリシー言語 (WS-SecurityPolicy) 仕様で指定されたアルゴリズムにマップされます。<br /><br /> 既定値は `Basic256` です。|  
-|clientCredentialType|メッセージ ベースのセキュリティを使用してクライアント認証を実行するときに使用される資格情報の種類を指定します。 既定では、 `UserName`です。|  
+|clientCredentialType|メッセージ ベースのセキュリティを使用してクライアント認証を実行するときに使用される資格情報の種類を指定します。 既定値は、`UserName` です。|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 属性  
   
@@ -48,7 +49,7 @@ ms.locfileid: "91204854"
   
 ### <a name="child-elements"></a>子要素  
 
- None  
+ なし  
   
 ### <a name="parent-elements"></a>親要素  
   

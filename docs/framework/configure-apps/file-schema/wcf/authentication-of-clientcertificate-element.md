@@ -1,13 +1,14 @@
 ---
+description: '詳細については、次を参照してください: <authentication> of <clientCertificate> 要素'
 title: <authentication><clientCertificate>要素の
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-ms.openlocfilehash: 13296dbc2b3bc8836770197a1549586c841b4635
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 346e1012fd9d799b093be15381aebbc026ea2591
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201604"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749897"
 ---
 # <a name="authentication-of-clientcertificate-element"></a>\<authentication>\<clientCertificate>要素の
 
@@ -39,14 +40,14 @@ ms.locfileid: "91201604"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |customCertificateValidatorType|省略可能な文字列。 カスタム型の検証に使用される型およびアセンブリです。 `certificateValidationMode` が `Custom` に設定されている場合は、この属性を設定する必要があります。|  
 |certificateValidationMode|省略可能な列挙体です。 資格情報の検証に使用されるモードのいずれかを指定します。 この属性は <xref:System.ServiceModel.Security.X509CertificateValidationMode> 型です。 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom?displayProperty=nameWithType> に設定されている場合、`customCertificateValidator` も指定する必要があります。 既定値は、<xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust?displayProperty=nameWithType> です。|  
 |includeWindowsGroups|省略可能なブール。 セキュリティ コンテキストに Windows グループが含まれているかどうかを指定します。 この属性を `true` に設定すると、グループ全体が拡張されるため、パフォーマンスに影響が及びます。 ユーザーが属するグループの一覧を生成する必要がない場合は、この属性を `false` に設定します。|  
-|mapClientCertificateToWindowsAccount|Boolean です。 証明書を使用してクライアントを Windows ID にマップできるかどうかを指定します。 これを行うには、Active Directory が有効である必要があります。|  
-|revocationMode|省略可能な列挙体です。 証明書失効リスト (RCL) のチェックに使用されるモードのいずれかです。 既定では、 `Online`です。 この値は、HTTP トランスポート セキュリティを使用する場合は無視されます。|  
-|trustedStoreLocation|省略可能な列挙体です。 2 つのシステム格納場所 (`LocalMachine` または `CurrentUser`) のいずれかです。 この値は、サービス証明書がクライアントにネゴシエートされるときに使用されます。 指定されたストアの場所にある **信頼さ** れた People ストアに対して検証が実行されます。 既定では、 `CurrentUser`です。|  
+|mapClientCertificateToWindowsAccount|ブール型。 証明書を使用してクライアントを Windows ID にマップできるかどうかを指定します。 これを行うには、Active Directory が有効である必要があります。|  
+|revocationMode|省略可能な列挙体です。 証明書失効リスト (RCL) のチェックに使用されるモードのいずれかです。 既定値は、`Online` です。 この値は、HTTP トランスポート セキュリティを使用する場合は無視されます。|  
+|trustedStoreLocation|省略可能な列挙体です。 2 つのシステム格納場所 (`LocalMachine` または `CurrentUser`) のいずれかです。 この値は、サービス証明書がクライアントにネゴシエートされるときに使用されます。 指定されたストアの場所にある **信頼さ** れた People ストアに対して検証が実行されます。 既定値は、`CurrentUser` です。|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType 属性  
   
@@ -56,21 +57,21 @@ ms.locfileid: "91201604"
   
 ## <a name="certificatevalidationmode-attribute"></a>certificateValidationMode 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |列挙|None、PeerTrust、ChainTrust、PeerOrChainTrust、Custom のいずれかの値にします。<br /><br /> 詳細については、「 [証明書の使用](../../../wcf/feature-details/working-with-certificates.md)」を参照してください。|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |列挙|NoCheck、Online、Offline のいずれかの値にします。 詳細については、「 [証明書の使用](../../../wcf/feature-details/working-with-certificates.md)」を参照してください。|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|列挙|次のいずれかの値を指定できます。`LocalMachine` または `CurrentUser`。 既定では、 `CurrentUser`です。 クライアント アプリケーションがシステム アカウントで実行されている場合、証明書は通常 `LocalMachine` の下にあります。 クライアント アプリケーションがユーザー アカウントで実行されている場合、証明書は通常 `CurrentUser` の下にあります。|  
+|列挙|次のいずれかの値を指定できます。`LocalMachine` または `CurrentUser`。 既定値は、`CurrentUser` です。 クライアント アプリケーションがシステム アカウントで実行されている場合、証明書は通常 `LocalMachine` の下にあります。 クライアント アプリケーションがユーザー アカウントで実行されている場合、証明書は通常 `CurrentUser` の下にあります。|  
   
 ### <a name="child-elements"></a>子要素  
 

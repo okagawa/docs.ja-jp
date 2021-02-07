@@ -1,13 +1,14 @@
 ---
+description: 詳細については <add> 、 <knownCertificates>
 title: <add> の <knownCertificates>
 ms.date: 03/30/2017
 ms.assetid: 128aaabe-3f1a-4c3b-b59f-898d0f02910f
-ms.openlocfilehash: 453593918de15613edb801cca8a16c9dbf71aa90
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1669495e6119a35543e39230fc5dcc986ee2dec5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91176085"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750287"
 ---
 # <a name="add-of-knowncertificates"></a>\<add> の \<knownCertificates>
 
@@ -40,9 +41,9 @@ ms.locfileid: "91176085"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
-|findValue|文字列。 検索する値。|  
+|findValue|文字列 をオンにします。 検索する値。|  
 |storeLocation|列挙値。 検索する 2 つの格納場所のいずれかです。|  
 |storeName|列挙値。 検索するシステム ストアのいずれかです。|  
 |x509FindType|列挙値。 検索する証明書フィールドのいずれかです。|  
@@ -55,19 +56,19 @@ ms.locfileid: "91176085"
   
 ## <a name="x509findtype-attribute"></a>x509FindType 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |列挙|値は、FindByThumbprint、FindBySubjectName、FindBySubjectDistinguishedName、FindByIssuerName、FindByIssuerDistinguishedName、FindBySerialNumber、FindByTimeValid、FindByTimeNotYetValid、FindBySerialNumber、FindByTimeExpired、FindByTemplateName、FindByApplicationPolicy、FindByCertificatePolicy、FindByExtension、FindByKeyUsage、FindBySubjectKeyIdentifier です。|  
   
 ## <a name="storelocation-attribute"></a>storeLocation 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |列挙|CurrentUser または LocalMachine です。|  
   
 ## <a name="storename-attribute"></a>storeName 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |列挙|値は、AddressBook、AuthRoot、CertificateAuthority、Disallowed、My、Root、TrustedPeople、および TrustedPublisher です。|  
   
@@ -83,7 +84,7 @@ ms.locfileid: "91176085"
   
 ## <a name="remarks"></a>解説  
 
- 発行されるトークンのシナリオには、3 つの段階があります。 最初の段階では、サービスにアクセスしようとしているクライアントは、 *セキュリティで保護されたトークンサービス*と呼ばれます。 次に、セキュリティ トークン サービスがクライアントを認証し、その後、クライアントにトークン (通常は、SAML (Security Assertions Markup Language) トークン) を発行します。 最後に、クライアントがトークンを持ってサービスに戻ります。 サービスはトークンを調べ、トークンを認証することでクライアントの認証を可能にするデータを確認します。 トークンを認証するには、セキュリティ トークン サービスで使用される証明書がサービスによって認識されている必要があります。  
+ 発行されるトークンのシナリオには、3 つの段階があります。 最初の段階では、サービスにアクセスしようとしているクライアントは、 *セキュリティで保護されたトークンサービス* と呼ばれます。 次に、セキュリティ トークン サービスがクライアントを認証し、その後、クライアントにトークン (通常は、SAML (Security Assertions Markup Language) トークン) を発行します。 最後に、クライアントがトークンを持ってサービスに戻ります。 サービスはトークンを調べ、トークンを認証することでクライアントの認証を可能にするデータを確認します。 トークンを認証するには、セキュリティ トークン サービスで使用される証明書がサービスによって認識されている必要があります。  
   
  要素は、 [\<issuedTokenAuthentication>](issuedtokenauthentication-of-servicecredentials.md) このようなセキュリティトークンサービス証明書のリポジトリです。 証明書を追加するには、を使用し [\<knownCertificates>](knowncertificates.md) ます。 次の例に示すように、各証明書の[ \<add> 要素 \<knownCertificates> 要素](add-of-knowncertificates.md)を挿入します。  
   

@@ -1,12 +1,14 @@
 ---
+description: '詳細情報: @ServiceHost'
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: cb425d9f4dadd97e93946a2b4cd9d059ea8504ce
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: d16fda68bdc753121f02f6332dabedf236fac257
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051364"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750313"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 
@@ -32,21 +34,21 @@ CodeBehind = "CodeBehind"
 
 ### <a name="factory"></a>ファクトリ
 
-サービス ホストのインスタンス化に使用されるサービス ホスト ファクトリの CLR 型名。 この属性は省略できます。 未指定の場合は、<xref:System.ServiceModel.Activation.ServiceHostFactory> のインスタンスを返す既定の <xref:System.ServiceModel.ServiceHost> が使用されます。
+サービス ホストのインスタンス化に使用されるサービス ホスト ファクトリの CLR 型名。 この属性は省略可能です。 未指定の場合は、<xref:System.ServiceModel.Activation.ServiceHostFactory> のインスタンスを返す既定の <xref:System.ServiceModel.ServiceHost> が使用されます。
 
 ### <a name="debug"></a>デバッグ
 
-デバッグシンボルを使用して Windows Communication Foundation (WCF) サービスをコンパイルする必要があるかどうかを示します。 `true`デバッグシンボルを使用して WCF サービスをコンパイルする必要がある場合は、それ以外の場合は `false` 。
+デバッグシンボルを使用して Windows Communication Foundation (WCF) サービスをコンパイルする必要があるかどうかを示します。 `true` デバッグシンボルを使用して WCF サービスをコンパイルする必要がある場合は、それ以外の場合は `false` 。
 
-### <a name="language"></a>Language
+### <a name="language"></a>言語
 
-ファイル (.svc) 内のすべてのインライン コードをコンパイルするときに使用する言語を指定します。 値は任意のを表すことができます。、、およびを含む、.NET でサポートされている言語 `C#` `VB` `JS` 。それぞれ C#、Visual Basic、JScript .net を参照します。 この属性は省略できます。
+ファイル (.svc) 内のすべてのインライン コードをコンパイルするときに使用する言語を指定します。 値は任意のを表すことができます。、、およびを含む、.NET でサポートされている言語 `C#` `VB` `JS` 。それぞれ C#、Visual Basic、JScript .net を参照します。 この属性は省略可能です。
 
 ### <a name="codebehind"></a>分離コード
 
-Xml web サービスを実装するクラスが同じファイル内に存在せず、アセンブリにコンパイルされずに*\bin*ディレクトリに配置されている場合に、xml web サービスを実装するソースファイルを指定します。
+Xml web サービスを実装するクラスが同じファイル内に存在せず、アセンブリにコンパイルされずに *\bin* ディレクトリに配置されている場合に、xml web サービスを実装するソースファイルを指定します。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 <xref:System.ServiceModel.ServiceHost>サービスをホストするために使用されるは、Windows Communication Foundation (WCF) プログラミングモデル内の機能拡張ポイントです。 ファクトリ パターンは、ホスティング環境が直接インスタンス化できないポリモーフィック型の可能性があるため、<xref:System.ServiceModel.ServiceHost> のインスタンス化に使用されます。
 

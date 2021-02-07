@@ -1,13 +1,14 @@
 ---
+description: 詳細については <add> 、 <issuerChannelBehaviors>
 title: <add> の <issuerChannelBehaviors>
 ms.date: 03/30/2017
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-ms.openlocfilehash: cf7ac2691ad1c641352a8047373ced538b19e983
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ccd8ba015b7a6837c74ce2c051a794d36ce8ceaa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398331"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750300"
 ---
 # <a name="add-of-issuerchannelbehaviors"></a>\<add> の \<issuerChannelBehaviors>
 
@@ -50,13 +51,13 @@ STS と通信するときに使用されるエンドポイントの動作を追�
 
 ### <a name="parent-elements"></a>親要素
 
-|要素|Description|
+|要素|説明|
 |-------------|-----------------|
 |[\<issuerChannelBehaviors>](issuerchannelbehaviors-element.md)|指定されたサービストークンサービスと通信するときに使用される Windows Communication Foundation (WCF) クライアントエンドポイントの動作のコレクションを格納します。|
 
 ## <a name="remarks"></a>解説
 
-`issuerAddress` には、クライアントの通信相手となるセキュリティ トークン サービスの URI が含まれます。 `behaviorConfiguration`セキュリティトークンサービスから発行済みトークンを取得するために Windows Communication Foundation (WCF) によって作成されたチャネルでアプリケーションが使用するエンドポイント動作を指します。
+`issuerAddress` には、クライアントの通信相手となるセキュリティ トークン サービスの URI が含まれます。 `behaviorConfiguration` セキュリティトークンサービスから発行済みトークンを取得するために Windows Communication Foundation (WCF) によって作成されたチャネルでアプリケーションが使用するエンドポイント動作を指します。
 
 ## <a name="see-also"></a>関連項目
 

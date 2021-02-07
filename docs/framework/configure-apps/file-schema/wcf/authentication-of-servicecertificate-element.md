@@ -1,13 +1,14 @@
 ---
+description: '詳細については、次を参照してください: <authentication> of <serviceCertificate> 要素'
 title: <authentication><serviceCertificate>要素の
 ms.date: 03/30/2017
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
-ms.openlocfilehash: c6f2578d85971740e5bd3d75151305a475187492
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 35a94f4f9c089f86aef38e7e9a1115a7cd22a325
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201591"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749884"
 ---
 # <a name="authentication-of-servicecertificate-element"></a>\<authentication>\<serviceCertificate>要素の
 
@@ -37,12 +38,12 @@ SSL/TLS ネゴシエーションを使用して取得されたサービス証明
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
-|customCertificateValidatorType|文字列。 カスタム型の検証に使用される型およびアセンブリです。|  
-|certificateValidationMode|資格情報の検証に使用される 3 つのモードのいずれかを指定します。 `Custom` に設定されている場合、customCertificateValidator も指定する必要があります。 既定では、 `ChainTrust`です。|  
-|revocationMode|証明書失効リスト (CRL) のチェックに使用されるモードのいずれかです。 既定では、 `Online`です。|  
-|trustedStoreLocation|2 つのシステム格納場所 (`LocalMachine` または `CurrentUser`) のいずれかです。 この値は、サービス証明書がクライアントにネゴシエートされるときに使用されます。 指定されたストアの場所にある **信頼さ** れた People ストアに対して検証が実行されます。 既定では、 `CurrentUser`です。|  
+|customCertificateValidatorType|文字列 をオンにします。 カスタム型の検証に使用される型およびアセンブリです。|  
+|certificateValidationMode|資格情報の検証に使用される 3 つのモードのいずれかを指定します。 `Custom` に設定されている場合、customCertificateValidator も指定する必要があります。 既定値は、`ChainTrust` です。|  
+|revocationMode|証明書失効リスト (CRL) のチェックに使用されるモードのいずれかです。 既定値は、`Online` です。|  
+|trustedStoreLocation|2 つのシステム格納場所 (`LocalMachine` または `CurrentUser`) のいずれかです。 この値は、サービス証明書がクライアントにネゴシエートされるときに使用されます。 指定されたストアの場所にある **信頼さ** れた People ストアに対して検証が実行されます。 既定値は、`CurrentUser` です。|  
   
 ## <a name="customcertificatevalidator-attribute"></a>customCertificateValidator 属性  
   
@@ -52,19 +53,19 @@ SSL/TLS ネゴシエーションを使用して取得されたサービス証明
   
 ## <a name="certificatevalidationmode-attribute"></a>certificateValidationMode 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |列挙|None、PeerTrust、ChainTrust、PeerOrChainTrust、Custom のいずれかの値にします。<br /><br /> 詳細については、「 [証明書の使用](../../../wcf/feature-details/working-with-certificates.md)」を参照してください。|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |列挙|NoCheck、Online、Offline のいずれかの値にします。<br /><br /> 詳細については、「 [証明書の使用](../../../wcf/feature-details/working-with-certificates.md)」を参照してください。|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |列挙|LocalMachine または CurrentUser のいずれかの値。 既定の値は CurrentUser です。 クライアント アプリケーションがシステム アカウントで実行されている場合、証明書は通常 LocalMachine の下にあります。 クライアント アプリケーションがユーザー アカウントで実行されている場合、証明書は通常 CurrentUser の下にあります。|  
   

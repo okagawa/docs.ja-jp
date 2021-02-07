@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <messageSenderAuthentication> 要素'
 title: <messageSenderAuthentication> 要素
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-ms.openlocfilehash: e7e636571c0dbb1845438c22f7e7509dfc7987f9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 03c1cd626e7c3ad71026c076df3d757419810d74
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204789"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749338"
 ---
 # <a name="messagesenderauthentication-element"></a>\<messageSenderAuthentication> 要素
 
@@ -39,7 +40,7 @@ ms.locfileid: "91204789"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |`customCertificateValidatorType`|カスタム型の検証に使用される型およびアセンブリです。 `certificateValidationMode` が `Custom` に設定されている場合は、この属性を設定する必要があります。|  
 |`certificateValidationMode`|資格情報の検証に使用される 3 つのモードのいずれかを指定します。 `Custom` に設定されている場合、`customCertificateValidator` も指定する必要があります。|  
@@ -54,21 +55,21 @@ ms.locfileid: "91204789"
   
 ## <a name="certificatevalidationmode-attribute"></a>certificateValidationMode 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|列挙|省略可能。 `None`、`PeerTrust`、`ChainTrust`、`PeerOrChainTrust`、`Custom` のいずれかの値にします。 既定では、 `ChainTrust`です。 既定では、 `ChainTrust`です。<br /><br /> 詳細については、「 [証明書の使用](../../../wcf/feature-details/working-with-certificates.md)」を参照してください。|  
+|列挙|任意。 `None`、`PeerTrust`、`ChainTrust`、`PeerOrChainTrust`、`Custom` のいずれかの値にします。 既定値は、`ChainTrust` です。 既定値は、`ChainTrust` です。<br /><br /> 詳細については、「 [証明書の使用](../../../wcf/feature-details/working-with-certificates.md)」を参照してください。|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|列挙|`NoCheck`、`Online`、`Offline` のいずれかの値にします。 既定では、 `Online`です。<br /><br /> 詳細については、「 [証明書の使用](../../../wcf/feature-details/working-with-certificates.md)」を参照してください。|  
+|列挙|`NoCheck`、`Online`、`Offline` のいずれかの値にします。 既定値は、`Online` です。<br /><br /> 詳細については、「 [証明書の使用](../../../wcf/feature-details/working-with-certificates.md)」を参照してください。|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|列挙|次のいずれかの値を指定できます。`LocalMachine` または `CurrentUser`。 既定では、 `CurrentUser`です。 クライアント アプリケーションがシステム アカウントで実行されている場合、証明書は通常 `LocalMachine` の下にあります。 クライアント アプリケーションがユーザー アカウントで実行されている場合、証明書は通常 `CurrentUser` の下にあります。 既定では、 `CurrentUser`です。|  
+|列挙|次のいずれかの値を指定できます。`LocalMachine` または `CurrentUser`。 既定値は、`CurrentUser` です。 クライアント アプリケーションがシステム アカウントで実行されている場合、証明書は通常 `LocalMachine` の下にあります。 クライアント アプリケーションがユーザー アカウントで実行されている場合、証明書は通常 `CurrentUser` の下にあります。 既定値は、`CurrentUser` です。|  
   
 ### <a name="child-elements"></a>子要素  
 
@@ -113,7 +114,7 @@ ms.locfileid: "91204789"
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement.MessageSenderAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
 - [証明書の使用](../../../wcf/feature-details/working-with-certificates.md)
-- [ピアツーピアネットワーク](../../../wcf/feature-details/peer-to-peer-networking.md)
+- [ピアツーピア ネットワーク](../../../wcf/feature-details/peer-to-peer-networking.md)
 - [ピア チャネル メッセージの認証](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
 - [ピア チャネル カスタム認証](/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [セキュリティによるピア チャネル アプリケーションの保護](../../../wcf/feature-details/securing-peer-channel-applications.md)

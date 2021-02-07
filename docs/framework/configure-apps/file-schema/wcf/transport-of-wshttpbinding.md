@@ -1,13 +1,14 @@
 ---
+description: 詳細については <transport> 、 <wsHttpBinding>
 title: <transport> の <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 21e38acf-450a-4bda-82b6-de305e1f7cd8
-ms.openlocfilehash: 1afeed62fcbf3b083d69a7cedb7eb80b81f5c17b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7801148d76aaa9c074eeb7a83c1dd2fa152d871c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732739"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749299"
 ---
 # <a name="transport-of-wshttpbinding"></a>\<transport> の \<wsHttpBinding>
 
@@ -60,7 +61,7 @@ HTTP トランスポートの認証設定を定義します。
 
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 属性
 
-|値|Description|
+|値|説明|
 |-----------|-----------------|
 |`None`|セキュリティを無効にします。|
 |`Basic`|基本認証を使用します。|
@@ -71,7 +72,7 @@ HTTP トランスポートの認証設定を定義します。
 
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType 属性
 
-|値|Description|
+|値|説明|
 |-----------|-----------------|
 |`None`|セキュリティを無効にします。|
 |`Basic`|基本認証を使用します。|
@@ -86,7 +87,7 @@ HTTP トランスポートの認証設定を定義します。
 
 ### <a name="parent-elements"></a>親要素
 
-|要素|Description|
+|要素|説明|
 |-------------|-----------------|
 |[\<security>](security-of-wshttpbinding.md)|のセキュリティ機能を表し [\<wsHttpBinding>](wshttpbinding.md) ます。|
 

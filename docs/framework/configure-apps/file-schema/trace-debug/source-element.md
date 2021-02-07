@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <source> 要素'
 title: <source> 要素
 ms.date: 09/29/2017
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - <source> element
 - source element
-ms.openlocfilehash: e9c6a06ca9e481ecc2277e1d1ea76a0b99edb158
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: acf510dd5813900f36ac431418d55bbc6c2f364a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173823"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750586"
 ---
 # <a name="source-element"></a>\<source> 要素
 

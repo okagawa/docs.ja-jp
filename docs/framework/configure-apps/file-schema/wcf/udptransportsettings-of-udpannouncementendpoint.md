@@ -1,13 +1,14 @@
 ---
+description: 詳細については <udpTransportSettings> 、 <udpAnnouncementEndpoint>
 title: <udpTransportSettings> の <udpAnnouncementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: a7ddff1a-5eed-4bbc-8580-b95ef8890e1f
-ms.openlocfilehash: 9b2efe706777550f300f5b88710874342c51c5cc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2997004e162728b20daa4f137e1edf132cd33d52
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148856"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749208"
 ---
 # <a name="udptransportsettings-of-udpannouncementendpoint"></a>\<udpTransportSettings> の \<udpAnnouncementEndpoint>
 
@@ -47,7 +48,7 @@ ms.locfileid: "91148856"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |duplicateMessageHistoryLength|重複するメッセージを特定するためにトランスポートによって使用されるメッセージ ハッシュの最大数を指定する整数。  重複の検出は、TransportManager レベルで実行されます。 このプロパティを 0 に設定すると、重複の検出は無効になります。<br /><br /> この属性を使用して、システムの管理者や開発者は重複するメッセージの検出アルゴリズムをオフにできます。 これは、独自の重複検出アルゴリズムを実行する場合に望ましいことがあります。<br /><br /> 既定値は 4112 です。|  
 |maxBufferPoolSize|トランスポートによって使用されるバッファー プールの最大サイズを指定する整数。|  

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <trace> 要素'
 title: <trace> 要素
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: 617b42a0be2be272a78b33be997cce632d1c6dcb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 470bc300911656a9c9951e52e3883ba5c8b01c59
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198926"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750326"
 ---
 # <a name="trace-element"></a>\<trace> 要素
 
@@ -47,17 +48,17 @@ ms.locfileid: "91198926"
   
 ## <a name="autoflush-attribute"></a>autoflush 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|`false`|では、出力バッファーは自動的にはフラッシュされません。 これは既定値です。|  
+|`false`|では、出力バッファーは自動的にはフラッシュされません。 既定値です。|  
 |`true`|出力バッファーを自動的にフラッシュします。|  
   
 ## <a name="usegloballock-attribute"></a>useGlobalLock 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |`false`|リスナーがスレッドセーフである場合、はグローバルロックを使用しません。それ以外の場合、はグローバルロックを使用します。|  
-|`true`|は、リスナーがスレッドセーフかどうかに関係なく、グローバルロックを使用します。 これは既定値です。|  
+|`true`|は、リスナーがスレッドセーフかどうかに関係なく、グローバルロックを使用します。 既定値です。|  
   
 ### <a name="child-elements"></a>子要素  
   
