@@ -1,14 +1,15 @@
 ---
+description: '詳細情報: <sendMessageChannelCache>'
 title: <sendMessageChannelCache>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 241e428e-5030-4b13-8a0a-69f05288d3d9
-ms.openlocfilehash: c1775ddabffda58c7529a64b89c9c53ff3da7b99
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2c77372bb44df74a1d2186500367c5164e1e5042
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164923"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739782"
 ---
 # \<sendMessageChannelCache>
 
@@ -46,9 +47,9 @@ ms.locfileid: "91164923"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
-|allowUnsafeCaching|キャッシュをオンにするかどうかを示すブール値。 ワークフロー サービスにカスタムのバインディングまたは動作がある場合は、キャッシュが安全性を損う可能性があるため、既定では無効になります。 ただし、キャッシュを有効にする場合は、このプロパティを **true**に設定します。|  
+|allowUnsafeCaching|キャッシュをオンにするかどうかを示すブール値。 ワークフロー サービスにカスタムのバインディングまたは動作がある場合は、キャッシュが安全性を損う可能性があるため、既定では無効になります。 ただし、キャッシュを有効にする場合は、このプロパティを **true** に設定します。|  
   
 ### <a name="child-elements"></a>子要素  
   

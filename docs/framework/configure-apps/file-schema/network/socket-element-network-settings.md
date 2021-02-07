@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <socket> 要素 (ネットワーク設定)'
 title: <socket> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: b8df32745007b2a145d35b8cfcc4cbd2bd17eb33
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 564d6566bf6f6b1997b986cb6c0d85f841195e55
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201734"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740133"
 ---
 # <a name="socket-element-network-settings"></a>\<socket> 要素 (ネットワーク設定)
 
@@ -60,7 +61,7 @@ ms.locfileid: "91201734"
 
  `alwaysUseCompletionPortsForAccept`属性と `alwaysUseCompletionPortsForConnect` 属性は、名前空間のクラスによる完了ポートの使用に関する既定の動作を指定するために使用されます。 <xref:System.Net.Sockets?displayProperty=nameWithType> ハイパフォーマンスサーバーアプリケーションでは、完了ポートをお勧めします。  
   
- `alwaysUseCompletionPortsForAccept`属性と属性の既定値 `alwaysUseCompletionPortsForConnect` は**false**です。  
+ `alwaysUseCompletionPortsForAccept`属性と属性の既定値 `alwaysUseCompletionPortsForConnect` は **false** です。  
   
  は、 <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForAccept%2A> 適用可能な `alwaysUseCompletionPortsForAccept` 構成ファイルから属性の現在の値を取得するために使用できます。 は、 <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForConnect%2A> 適用可能な `alwaysUseCompletionPortsForConnect` 構成ファイルから属性の現在の値を取得するために使用できます。  
   
@@ -76,14 +77,14 @@ ms.locfileid: "91201734"
   
  属性の設定に使用できる値は、次のよう `ipProtectionLevel` に、列挙で指定されている定義済みの保護レベルに対応してい <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> ます。  
   
-|**属性値**|**説明**|  
+|**属性の値**|**説明**|  
 |-|-|  
 |EdgeRestricted|IP 保護レベルはエッジ制限付きです。 この値は、インターネット経由で動作するように設計されているアプリケーションによって使用されます。 この設定を使用する場合、Windows Teredo 実装を使用したネットワーク アドレス変換 (NAT: Network Address Translation) トラバーサルは使用できません。 これらのアプリケーションは、IPv4 のファイアウォールをバイパスすることがあるため、開いているポートを対象としたインターネットからの攻撃に対して堅牢である必要があります。 Windows Server 2003 と Windows XP では、ソケットの IP 保護レベルの既定値はエッジ制限付きです。|  
 |制限付き|IP 保護レベルは制限付きです。 この値は、インターネットのシナリオを実装しないイントラネット アプリケーションによって使用されます。 これらのアプリケーションは、一般的に、インターネット型の攻撃に対してテストが行われていなかったり堅牢ではなかったりします。 この設定を使用する場合、受信トラフィックはリンクローカルのみに制限されます。|  
 |無制限|IP 保護レベルは無制限です。 この値は、Windows に組み込まれている IPv6 NAT Traversal 機能 (たとえば、Teredo) を使用するアプリケーションを含む、インターネット経由で動作するように設計されているアプリケーションによって使用されます。 これらのアプリケーションは、IPv4 のファイアウォールをバイパスすることがあるため、開いているポートを対象としたインターネットからの攻撃に対して堅牢である必要があります。 Windows Server 2008 R2 と Windows Vista では、ソケットの IP 保護レベルの既定値は無制限です。|  
 |指定されていません。|IP 保護レベルは未指定です。 Windows 7 と Windows Server 2008 R2 では、ソケットの IP 保護レベルの既定値は未指定です。|  
   
- 属性の既定値 `ipProtectionLevel` は **指定**されていません。  
+ 属性の既定値 `ipProtectionLevel` は **指定** されていません。  
   
  プロパティは、 <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> `ipProtectionLevel` 適用可能な構成ファイルから属性の現在の値を取得するために使用できます。  
   

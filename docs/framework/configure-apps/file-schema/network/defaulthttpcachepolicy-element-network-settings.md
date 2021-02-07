@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <defaultHttpCachePolicy> 要素 (ネットワーク設定)'
 title: <defaultHttpCachePolicy> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: 4120c57fbb65da1c124414cbe9cfba7ae64388f8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d2df27c9b140c9bdb4def49aef7de1a3d80f4a11
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91190320"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740328"
 ---
 # <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy> 要素 (ネットワーク設定)
 
@@ -41,7 +42,7 @@ HTTP キャッシュがアクティブかどうか、および既定のキャッ
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |`maximumAge`|キャッシュされたオブジェクトを期限切れとしてマークするまでの最大時間間隔を指定します。|  
 |`maximumStale`|キャッシュされたオブジェクトを期限切れとしてマークするまでの、計算された鮮度時間を超える最大時間を指定します。|  
@@ -50,7 +51,7 @@ HTTP キャッシュがアクティブかどうか、および既定のキャッ
   
 ### <a name="child-elements"></a>子要素  
 
- None  
+ なし  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -62,7 +63,7 @@ HTTP キャッシュがアクティブかどうか、および既定のキャッ
 
  属性の値 `policyLevel` がまたはのいずれか `BypassCache` `Default` です。  
   
- `maximumAge`、、およびの各要素の値 `maximumStale` は、明示的な時間間隔であり、形式は `minimumFresh` *d*です。*hh*:*mm*:*ss* (日数、時間、分、秒)、または必要に応じ `minValue` て定数または `maxValue` 。  
+ `maximumAge`、、およびの各要素の値 `maximumStale` は、明示的な時間間隔であり、形式は `minimumFresh` *d* です。*hh*:*mm*:*ss* (日数、時間、分、秒)、または必要に応じ `minValue` て定数または `maxValue` 。  
   
 ## <a name="configuration-files"></a>構成ファイル  
 

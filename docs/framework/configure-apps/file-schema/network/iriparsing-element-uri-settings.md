@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <iriParsing> 要素 (Uri 設定)'
 title: <iriParsing> 要素 (Uri 設定)
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: ec2610e47957d5560bc7f51e0641afc9ba60c814
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 460216b64056cd9c9f769c5bcd1b651d249e98b4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158891"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740302"
 ---
 # <a name="iriparsing-element-uri-settings"></a>\<iriParsing> 要素 (Uri 設定)
 
@@ -37,7 +38,7 @@ International Resource Identifier (IRI) 解析が、<xref:System.Uri> に適用�
   
 ### <a name="child-elements"></a>子要素  
 
- None  
+ なし  
   
 ### <a name="parent-elements"></a>親要素  
   

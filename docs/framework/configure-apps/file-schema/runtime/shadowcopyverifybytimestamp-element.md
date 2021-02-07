@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: <shadowCopyVerifyByTimestamp> 要素'
 title: <shadowCopyVerifyByTimestamp> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <shadowCopyTimeStampVerification> element
 - shadowCopyTimeStampVerification element
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
-ms.openlocfilehash: c0dc190e69ca9650d518ee297b12f79f8c47d58b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 273bf4c5b01b300cfd564de4ee29c402c6f3e7ff
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183976"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740094"
 ---
 # <a name="shadowcopyverifybytimestamp-element"></a>\<shadowCopyVerifyByTimestamp> 要素
 
