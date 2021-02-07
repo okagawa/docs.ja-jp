@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: の説明'
 title: ICorDebugManagedCallback インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b47f1d61-c7dc-4196-b926-0b08c94f7041
 topic_type:
 - apiref
-ms.openlocfilehash: 6eebabc3a08027eab4ac55c1e46dd75b1f75bd21
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0dd33e4295caa8f5ae41c65d9bd10152737156ca
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679703"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722816"
 ---
 # <a name="icordebugmanagedcallback-interface"></a>ICorDebugManagedCallback インターフェイス
 
@@ -37,7 +38,7 @@ ms.locfileid: "95679703"
 |[CreateProcess メソッド](icordebugmanagedcallback-createprocess-method.md)|プロセスが初めてアタッチまたは開始されたときにデバッガーに通知します。|  
 |[CreateThread メソッド](icordebugmanagedcallback-createthread-method.md)|スレッドがマネージコードの実行を開始したことをデバッガーに通知します。|  
 |[DebuggerError メソッド](icordebugmanagedcallback-debuggererror-method.md)|CLR からのイベントを処理しようとしたときにエラーが発生したことをデバッガーに通知します。|  
-|[EditAndContinueRemap メソッド](icordebugmanagedcallback-editandcontinueremap-method.md)|非推奨。 リマップイベントが IDE に送信されたことをデバッガーに通知します。|  
+|[EditAndContinueRemap メソッド](icordebugmanagedcallback-editandcontinueremap-method.md)|非推奨になりました。 リマップイベントが IDE に送信されたことをデバッガーに通知します。|  
 |[EvalComplete メソッド](icordebugmanagedcallback-evalcomplete-method.md)|評価が完了したことをデバッガーに通知します。|  
 |[EvalException メソッド](icordebugmanagedcallback-evalexception-method.md)|ハンドルされない例外で評価が終了したことをデバッガーに通知します。|  
 |[Exception メソッド](icordebugmanagedcallback-exception-method.md)|マネージコードから例外がスローされたことをデバッガーに通知します。|  
@@ -56,7 +57,7 @@ ms.locfileid: "95679703"
 |[UnloadModule メソッド](icordebugmanagedcallback-unloadmodule-method.md)|CLR モジュール (DLL) がアンロードされたことをデバッガーに通知します。|  
 |[UpdateModuleSymbols メソッド](icordebugmanagedcallback-updatemodulesymbols-method.md)|CLR モジュールのシンボルが変更されたことをデバッガーに通知します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  すべてのコールバックがシリアル化され、同じスレッドで呼び出され、プロセスと同期された状態で呼び出されます。  
   

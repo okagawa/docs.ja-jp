@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugArrayValue:: GetElementAtPosition メソッド'
 title: ICorDebugArrayValue::GetElementAtPosition メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6fd5eaa4-1997-4910-82f5-3887480db764
 topic_type:
 - apiref
-ms.openlocfilehash: a6e5ecee9a89da98a73dfb20935c5ec594d5958f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ef8e4a39f5fe4088b1883803aee037c51f410241
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732932"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723033"
 ---
 # <a name="icordebugarrayvaluegetelementatposition-method"></a>ICorDebugArrayValue::GetElementAtPosition メソッド
 
@@ -43,7 +44,7 @@ HRESULT GetElementAtPosition (
  `ppValue`  
  入出力要素の値を表す ICorDebugValue オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  多次元配列のレイアウトは、C++ スタイルの配列レイアウトに従います。  
   

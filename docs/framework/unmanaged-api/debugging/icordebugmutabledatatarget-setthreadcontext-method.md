@@ -1,13 +1,14 @@
 ---
+description: '詳細について: ICorDebugMutableDataTarget:: SetThreadContext メソッド'
 title: ICorDebugMutableDataTarget::SetThreadContext メソッド
 ms.date: 03/30/2017
 ms.assetid: 8c0d01d5-67e5-4522-9ccf-c8f3a78cb4fd
-ms.openlocfilehash: 558a1ee2eb0ac06213c2ebcebbd5595b69ecc43e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4674df92b72b44e19eff663c9a17dd8ca4b5a1b0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695711"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722478"
 ---
 # <a name="icordebugmutabledatatargetsetthreadcontext-method"></a>ICorDebugMutableDataTarget::SetThreadContext メソッド
 
@@ -32,7 +33,7 @@ HRESULT SetThreadContext(
  `pContext`  
  [in]書き込まれるバイト数へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `SetThreadContext` メソッドは、オペレーティング システム定義の `dwThreadID` 引数で指定されるスレッドの現在のコンテキストを更新します。 コンテキストレコードの形式は、のプラットフォームによって決定されます。このプラットフォームでは、次 [のように](icordebugdatatarget-getplatform-method.md) 指定します。 Windows では、これは [コンテキスト](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) 構造です。  
   

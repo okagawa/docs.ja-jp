@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「EnableJITDebugging Module:: メソッド」を参照してください。'
 title: ICorDebugModule::EnableJITDebugging メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0a65e2a4-5bb6-496c-ae6f-40474426b5a6
 topic_type:
 - apiref
-ms.openlocfilehash: 359db27878ea4adf794bcd6221d4b5387026e5c0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 30077bd586e1cb9cb8766290804e31f5999d9e72
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710312"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722686"
 ---
 # <a name="icordebugmoduleenablejitdebugging-method"></a>ICorDebugModule::EnableJITDebugging メソッド
 
@@ -43,7 +44,7 @@ HRESULT EnableJITDebugging(
  `bAllowJitOpts`  
  からこの値をに設定すると `true` 、jit コンパイラはデバッグのために特定の jit 固有の最適化を使用してコードを生成できます。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  JIT デバッグは、デバッガーがアクティブなときに読み込まれるすべてのモジュールに対して、既定で有効になっています。 プログラムを使用して設定を有効または無効にすると、グローバル設定が上書きされます。  
   
