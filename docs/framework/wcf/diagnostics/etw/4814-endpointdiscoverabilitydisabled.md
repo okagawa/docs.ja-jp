@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 4814-EndpointDiscoverabilityDisabled'
 title: 4814 - EndpointDiscoverabilityDisabled
 ms.date: 03/30/2017
 ms.assetid: b3805218-4865-42d8-976a-cbbd4ff6fcc8
-ms.openlocfilehash: 59177cfbbf215fba78ec5b9b0549c4b283b32f18
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1bb787bd3e477e2874c70253fd46b2cbdd4e9579
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96285942"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760226"
 ---
 # <a name="4814---endpointdiscoverabilitydisabled"></a>4814 - EndpointDiscoverabilityDisabled
 
@@ -15,12 +16,12 @@ ms.locfileid: "96285942"
   
 |||  
 |-|-|  
-|ID|4814|  
+|id|4814|  
 |Keywords|探索|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、エンドポイントの探索が無効になっているときに生成されます。  
   

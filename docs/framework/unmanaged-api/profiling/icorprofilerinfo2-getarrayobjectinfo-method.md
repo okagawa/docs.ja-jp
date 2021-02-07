@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo2:: GetArrayObjectInfo メソッド'
 title: ICorProfilerInfo2::GetArrayObjectInfo メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bda75017-739f-4ce5-9000-f3b526e8473c
 topic_type:
 - apiref
-ms.openlocfilehash: a1e321e141059ccf1da7292d28e7099418a5134e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1427ad696f73d90a2a07698c71456571fb14ee70
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727199"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760538"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo メソッド
 
@@ -54,7 +55,7 @@ HRESULT GetArrayObjectInfo(
  `ppData`  
  入出力配列の生バッファーのアドレスへのポインター。これは、C++ 規則に従ってレイアウトされます。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `pDimensionSizes`とは `pDimensionLowerBounds` 並列配列であるため、各配列内の同じインデックスにある要素は同じエンティティの特性です。  
   

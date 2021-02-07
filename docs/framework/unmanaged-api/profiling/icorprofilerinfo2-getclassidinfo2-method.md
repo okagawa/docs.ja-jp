@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo2:: GetClassIDInfo2 メソッド'
 title: ICorProfilerInfo2::GetClassIDInfo2 メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0141d582-d066-4d49-8d1f-ae82129a1960
 topic_type:
 - apiref
-ms.openlocfilehash: 4b018a329396e0be684c999a33d4ef7c3518cb1c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 44ef38b5f50da0f0aea045bd755614e00dae8c22
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703906"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760510"
 ---
 # <a name="icorprofilerinfo2getclassidinfo2-method"></a>ICorProfilerInfo2::GetClassIDInfo2 メソッド
 
@@ -62,7 +63,7 @@ HRESULT GetClassIDInfo2(
  `typeArgs`  
  [out] `ClassID` 値の配列。各値は、クラスの型引数の ID を表します。 このメソッドが戻るとき、使用できる `ClassID` 値の一部またはすべてが `typeArgs` に格納されます。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `GetClassIDInfo2`メソッドは[ICorProfilerInfo:: Getclassid dinfo](icorprofilerinfo-getclassidinfo-method.md)メソッドに似ていますが、 `GetClassIDInfo2` ジェネリック型に関する追加情報を取得します。  
   

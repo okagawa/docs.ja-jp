@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo2:: GetClassLayout メソッド'
 title: ICorProfilerInfo2::GetClassLayout メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a3a36987-5666-4e2f-95b5-d0cb246502ec
 topic_type:
 - apiref
-ms.openlocfilehash: a2bac05e7471a0df8d624bf5dfbe2aa58c25cf4c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6b515ff84240e227914404379efcfc063c25c5a2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727173"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760480"
 ---
 # <a name="icorprofilerinfo2getclasslayout-method"></a>ICorProfilerInfo2::GetClassLayout メソッド
 
@@ -54,7 +55,7 @@ HRESULT GetClassLayout(
  `pulClassSize`  
  [out] クラスのサイズ (バイト単位) を含む位置へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `GetClassLayout` メソッドは、クラス自体によって定義されているフィールドのみを返します。 クラスの親クラスもフィールドを定義している場合、プロファイラーは親クラスで `GetClassLayout` を呼び出してそのフィールドを取得する必要があります。  
   

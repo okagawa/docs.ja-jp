@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo2:: GetCodeInfo2 メソッド'
 title: ICorProfilerInfo2::GetCodeInfo2 メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 532da6ee-7f0a-401b-a61e-fc47ec235d2e
 topic_type:
 - apiref
-ms.openlocfilehash: e88fe1b3c93ca278d0e64a5eb3274c86bd8f0f6d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 69b877b2dfe3bf23cd2b13417386c45d51de44d6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727134"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760503"
 ---
 # <a name="icorprofilerinfo2getcodeinfo2-method"></a>ICorProfilerInfo2::GetCodeInfo2 メソッド
 
@@ -51,7 +52,7 @@ HRESULT GetCodeInfo2(
  `codeInfos`  
  [out] 呼び出し元が提供したバッファー。 メソッドから制御が戻った後で、それぞれがネイティブ コードのブロックを記述する `COR_PRF_CODE_INFO` の構造体の配列が含まれます。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  エクステンとは Microsoft Intermediate Language (MSIL) オフセットの昇順に並べ替えられます。  
   

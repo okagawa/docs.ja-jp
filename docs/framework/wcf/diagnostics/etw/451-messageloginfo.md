@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 451-MessageLogInfo'
 title: 451 - MessageLogInfo
 ms.date: 03/30/2017
 ms.assetid: 485b4b29-dc21-4a35-93f8-5f4726d6aa5a
-ms.openlocfilehash: 2b5dd36099e1d9978cb1136462c224a79465f823
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9df1911eaee3300b770175f2af26e6dafd3de90c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242787"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760278"
 ---
 # <a name="451---messageloginfo"></a>451 - MessageLogInfo
 
@@ -15,12 +16,12 @@ ms.locfileid: "96242787"
   
 |||  
 |-|-|  
-|ID|451|  
+|id|451|  
 |Keywords|Troubleshooting、WCFMessageLogging|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、メッセージ ログ情報が送信されるときに出力されます。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96242787"
   
 ## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|Description|  
+|データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  
 |data1|`xs:string`||  
 |AppDomain|`xs:string`|AppDomain.CurrentDomain.FriendlyName で返される文字列。|

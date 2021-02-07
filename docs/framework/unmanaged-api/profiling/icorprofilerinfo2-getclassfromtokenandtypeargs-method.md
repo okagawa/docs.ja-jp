@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo2:: GetClassFromTokenAndTypeArgs メソッド'
 title: ICorProfilerInfo2::GetClassFromTokenAndTypeArgs メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b25c88f0-71b9-443b-8eea-1c94db0a44b9
 topic_type:
 - apiref
-ms.openlocfilehash: 62aad8339b34a4831211a45bd645906d73393d25
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 810445d2617beff55e00df6bb30130d81c740ba4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727147"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760488"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetClassFromTokenAndTypeArgs メソッド
 
@@ -54,13 +55,13 @@ HRESULT GetClassFromTokenAndTypeArgs(
  `pClassID`  
  入出力 `ClassID` 指定した型のへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  メタデータトークンの代わりにを指定してメソッドを呼び出すと、 `GetClassFromTokenAndTypeArgs` `mdTypeRef` `mdTypeDef` 予期しない結果が発生する可能性があります。呼び出し元は、 `mdTypeRef` を `mdTypeDef` 渡すときにを解決する必要があります。  
   
  型がまだ読み込まれていない場合、を呼び出す `GetClassFromTokenAndTypeArgs` と読み込みがトリガーされます。これは、多くのコンテキストでは危険な操作です。 たとえば、モジュールまたはその他の型の読み込み中にこのメソッドを呼び出すと、ランタイムが循環読み込みを試みたときに無限ループが発生する可能性があります。  
   
- 一般に、の使用 `GetClassFromTokenAndTypeArgs` は推奨されていません。 プロファイラーが特定の型のイベントに関心を持っている場合は、その型のとを格納し、ICorProfilerInfo2:: GetClassIDInfo2 を使用して、特定の `ModuleID` `mdTypeDef` [ICorProfilerInfo2::GetClassIDInfo2](icorprofilerinfo2-getclassidinfo2-method.md) `ClassID` が目的の型であるかどうかを確認する必要があります。  
+ 一般に、の使用 `GetClassFromTokenAndTypeArgs` は推奨されていません。 プロファイラーが特定の型のイベントに関心を持っている場合は、その型のとを格納し、ICorProfilerInfo2:: GetClassIDInfo2 を使用して、特定の `ModuleID` `mdTypeDef` [](icorprofilerinfo2-getclassidinfo2-method.md) `ClassID` が目的の型であるかどうかを確認する必要があります。  
   
 ## <a name="requirements"></a>要件  
 

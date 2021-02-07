@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CreateDebuggingInterfaceFromVersion 関数'
 title: CreateDebuggingInterfaceFromVersion 関数
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a746a849-463c-44f5-a2f0-9e812ed8bcc3
 topic_type:
 - apiref
-ms.openlocfilehash: b68fbc713374642c9f55d49ee51a88c5785cf4b2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 163ada49f028071b48c93ee3c565152a773782ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727875"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760630"
 ---
 # <a name="createdebugginginterfacefromversion-function"></a>CreateDebuggingInterfaceFromVersion 関数
 
@@ -58,7 +59,7 @@ HRESULT CreateDebuggingInterfaceFromVersion (
 |S_OK|メソッドは正常に完了しました。|  
 |E_INVALIDARG|`szDebuggeeVersion` または `ppCordb` が null であるか、またはバージョン文字列が正しくありません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  パラメーターは、 `szDebuggeeVersion` 対応するバージョンの MSCorDbi.dll にマップされます。  
   

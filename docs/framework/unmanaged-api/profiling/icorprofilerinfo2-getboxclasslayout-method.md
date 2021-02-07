@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo2:: GetBoxClassLayout メソッド'
 title: ICorProfilerInfo2::GetBoxClassLayout メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 624672b5-1189-488a-85d2-3e12b49617c1
 topic_type:
 - apiref
-ms.openlocfilehash: ff39a688132112e88438bc192d7c1ab61f169400
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0bc9ccc80da8bcc89cfe73eaa240310c01e6ca8f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727160"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760509"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>ICorProfilerInfo2::GetBoxClassLayout メソッド
 
@@ -42,7 +43,7 @@ HRESULT GetBoxClassLayout(
  `pBufferOffset`  
  入出力値型のボックス化されたオブジェクト ID ポインターを基準とするオフセットを表す整数。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `pBufferOffset`値は、ボックス内の値の型の場所です。 ボックス化されたオブジェクトにを適用した後 `pBufferOffset` 、値型のクラスレイアウトを使用して、オブジェクトの値を解釈できます。  
   
