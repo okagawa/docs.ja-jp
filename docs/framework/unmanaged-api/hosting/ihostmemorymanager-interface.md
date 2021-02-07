@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「IHostMemoryManager インターフェイス」を参照してください。
 title: IHostMemoryManager インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a945d439-3b34-4aa4-b575-8413dd7806ce
 topic_type:
 - apiref
-ms.openlocfilehash: 0f71e4c45e43c2027b12998532f2b04401a51951
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c9b6f83b5c70a53388e886e1047798f660b826e0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731333"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707884"
 ---
 # <a name="ihostmemorymanager-interface"></a>IHostMemoryManager インターフェイス
 
@@ -40,7 +41,7 @@ ms.locfileid: "95731333"
 |[VirtualProtect メソッド](ihostmemorymanager-virtualprotect-method.md)|対応する Win32 関数の論理ラッパーとして機能します。これにより、呼び出し元プロセスの仮想アドレス空間でコミットされたページの領域の保護が変更されます。|  
 |[VirtualQuery メソッド](ihostmemorymanager-virtualquery-method.md)|対応する Win32 関数の論理ラッパーとして機能し、呼び出し元プロセスの仮想アドレス空間にあるページの範囲に関する情報を取得します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `IHostMemoryManager` また、は、ヒープ上でメモリ要求を行うためのポインターを取得し、ホストによって報告されたプロセスのメモリ負荷のレベルを取得するために、CLR のメソッドも提供します。  
   

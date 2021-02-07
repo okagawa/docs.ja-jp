@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IHostMemoryManager:: CreateMAlloc メソッド'
 title: IHostMemoryManager::CreateMAlloc メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9ee6e052-bef7-4350-9e4f-edfffd99ad6f
 topic_type:
 - apiref
-ms.openlocfilehash: 79580170d544cd3763992a4bc67fd20e3446bb1d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: de73490a5c8b4e1672beb4750bcc617c2371f07b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685722"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707888"
 ---
 # <a name="ihostmemorymanagercreatemalloc-method"></a>IHostMemoryManager::CreateMAlloc メソッド
 
@@ -55,7 +56,7 @@ HRESULT CreateMalloc (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_OUTOFMEMORY|割り当て要求を完了するために必要な物理メモリが不足しています。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `CreateMAlloc` CLR が標準の Win32 関数を使用する代わりに、ホストを通じて割り当て要求を行うことができるようにするオブジェクトを返します。  
   

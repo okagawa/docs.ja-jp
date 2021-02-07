@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「Corthreadsaf Etyoptions 列挙型」を参照してください。
 title: CorThreadSafetyOptions 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dae07d9b-df51-488c-b17e-52d6e48217bd
 topic_type:
 - apiref
-ms.openlocfilehash: 8c0527a7bc3cde7344bf809dc8e6f5a3fac04852
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 7915bcf5e7b71fa84ea83642467c1600cd38712d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007508"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707320"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>CorThreadSafetyOptions 列挙型
 
@@ -43,7 +44,7 @@ typedef enum CorThreadSafetyOptions {
 |`MDThreadSafetyOff`|リーダー/ライターロックを設定できないことを示します。|
 |`MDThreadSafetyOn`|リーダー/ライターロックを設定できることを示します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。
 

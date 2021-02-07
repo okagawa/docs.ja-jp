@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IHostTaskManager:: ReverseEnterRuntime メソッド'
 title: IHostTaskManager::ReverseEnterRuntime メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b1e26bff-d3ea-436e-9867-29720df999f4
 topic_type:
 - apiref
-ms.openlocfilehash: 163bf3327219f1198c5ed078308096ac3d0325be
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1c2d2d7d60bd110999591ed5e94c86d680560d12
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672956"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707542"
 ---
 # <a name="ihosttaskmanagerreverseenterruntime-method"></a>IHostTaskManager::ReverseEnterRuntime メソッド
 
@@ -44,7 +45,7 @@ HRESULT ReverseEnterRuntime ();
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_OUTOFMEMORY|要求されたリソース割り当てを完了するために必要なメモリが不足しています。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  マネージコードで開始されたシーケンスから CLR への呼び出しが行われる場合、への各呼び出しは、 `ReverseEnterRuntime` [ReverseLeaveRuntime](ihosttaskmanager-reverseleaveruntime-method.md)の呼び出しに対応します。  
   

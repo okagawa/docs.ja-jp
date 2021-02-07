@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IHostAssemblyStore::P rovideModule メソッド'
 title: IHostAssemblyStore::ProvideModule メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f42e3dd0-c88e-4748-b6c0-4c515a633180
 topic_type:
 - apiref
-ms.openlocfilehash: 35805d277774e1de03bb7dee1740a2e1305a97c9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9e783b9f8db303d095995507689d7567225a51fd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732997"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709014"
 ---
 # <a name="ihostassemblystoreprovidemodule-method"></a>IHostAssemblyStore::ProvideModule メソッド
 
@@ -64,7 +65,7 @@ HRESULT ProvideModule (
 |COR_E_FILENOTFOUND (0x80070002)|要求されたアセンブリまたはリンクされたリソースが見つかりませんでした。|  
 |E_NOT_SUFFICIENT_BUFFER|`pdwModuleId` は、ホストが返す識別子を格納するのに十分な大きさではありません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  に対して返される id 値 `pdwModuleId` は、ホストによって指定されます。 識別子は、プロセスの有効期間内で一意である必要があります。 CLR は、この値を、関連付けられているストリームの一意の識別子として使用します。 これは、各値を、の `pAssemblyId` 呼び出しによって返された値と比較し [、の](ihostassemblystore-provideassembly-method.md) `pdwModuleId` 他の呼び出しによって返された値と比較して確認 `ProvideModule` します。 ホストが別のと同じ識別子の値を返した場合、 `IStream` CLR は、そのストリームの内容が既にマップされているかどうかを確認します。 その場合、CLR は新しいイメージをマップするのではなく、イメージの既存のコピーを読み込みます。 したがって、識別子も、から返されるアセンブリ識別子と重複しないようにする必要があり `ProvideAssembly` ます。  
   

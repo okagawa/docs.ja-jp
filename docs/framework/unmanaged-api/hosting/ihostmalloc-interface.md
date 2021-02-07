@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「IHostMalloc インターフェイス」を参照してください。
 title: IHostMalloc インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e3c6643b-6fc7-4a99-959d-4b7b4e63fdee
 topic_type:
 - apiref
-ms.openlocfilehash: 2530c7fcd63f81b566d6623a533bd8e2af084047
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cd04a0f71fd429ea10b9edcce02806f4afa57148
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702161"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708178"
 ---
 # <a name="ihostmalloc-interface"></a>IHostMalloc インターフェイス
 
@@ -33,7 +34,7 @@ ms.locfileid: "95702161"
 |[DebugAlloc メソッド](ihostmalloc-debugalloc-method.md)|は、要求されたメモリ量をヒープから割り当て、さらにメモリが割り当てられた場所を追跡することをホストに要求します。|  
 |[Free メソッド](ihostmalloc-free-method.md)|メソッドを使用して割り当てられたメモリを解放し `Alloc` ます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  CLR は、 `IHostMalloc` [IHostMemoryManager:: CreateMalloc](ihostmemorymanager-createmalloc-method.md) メソッドを呼び出すことによって、インスタンスへのインターフェイスポインターを取得します。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IGCHost2:: SetGCStartupLimitsEx メソッド'
 title: IGCHost2::SetGCStartupLimitsEx メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bba941c2-1c57-46d3-bbf5-5fb92700c490
 topic_type:
 - apiref
-ms.openlocfilehash: 4dca62903a123765ceb8bb251b79455ad0e4730a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 32d3bcbb467a1a418c7123779c881c46e983edef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726809"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709309"
 ---
 # <a name="igchost2setgcstartuplimitsex-method"></a>IGCHost2::SetGCStartupLimitsEx メソッド
 
@@ -43,7 +44,7 @@ HRESULT SetGCStartupLimitsEx (
  `MaxGen0Size`  
  からジェネレーション0の最大サイズ。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  を設定する値は、 `SetGCStartupLimitsEx` ホストを開始する前にのみ指定できます。 これらの値は後で変更することはできません。  
   

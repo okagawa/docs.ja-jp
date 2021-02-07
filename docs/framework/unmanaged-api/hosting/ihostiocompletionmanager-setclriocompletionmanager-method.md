@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: IHostIoCompletionManager:: Setclrio参照マネージャーメソッド'
 title: IHostIoCompletionManager::SetCLRIoCompletionManager メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4254bb01-3a14-4f34-a3be-60ff1f5072b5
 topic_type:
 - apiref
-ms.openlocfilehash: d370cc81942269bd79e06e0fa57fe5d79832b3c2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1075c33d6de4f5edf34364d67cbc0a21c4f19802
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724846"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708295"
 ---
 # <a name="ihostiocompletionmanagersetclriocompletionmanager-method"></a>IHostIoCompletionManager::SetCLRIoCompletionManager メソッド
 
@@ -50,7 +51,7 @@ HRESULT SetCLRIoCompletionManager (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  CLR が呼び出された後 `SetCLRIoCompletionManager` 、ホストは [Iclriocompleted manager:: oncomplete](iclriocompletionmanager-oncomplete-method.md) を呼び出して、i/o 要求が完了したことを clr に通知する必要があります。  
   

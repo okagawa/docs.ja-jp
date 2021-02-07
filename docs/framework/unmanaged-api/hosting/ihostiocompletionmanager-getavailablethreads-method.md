@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: Ihohoo参照マネージャー:: Get持つスレッドメソッド'
 title: IHostIoCompletionManager::GetAvailableThreads メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bab363d1-b859-47a4-9884-5661c611cce7
 topic_type:
 - apiref
-ms.openlocfilehash: 3e9f4e98962532efe4b2e2a779add841b7b3a835
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d50f79716f72b902102a2a97a0bce5dfe645334f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724261"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708545"
 ---
 # <a name="ihostiocompletionmanagergetavailablethreads-method"></a>IHostIoCompletionManager::GetAvailableThreads メソッド
 
@@ -51,7 +52,7 @@ HRESULT GetAvailableThreads (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_NOTIMPL|ホストはの実装を提供していません `GetAvailableThreads` 。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ホストは、実装、パフォーマンス、スケーラビリティなどの理由から、i/o 完了スレッドプールのサイズを排他的に制御することが必要な場合があります。 したがって、ホストでを実装する必要はありません `GetAvailableThreads` 。 この場合、ホストはこのメソッドから E_NOTIMPL を返す必要があります。  
   

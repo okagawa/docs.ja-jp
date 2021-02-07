@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IHostAssemblyManager:: GetAssemblyStore メソッド'
 title: IHostAssemblyManager::GetAssemblyStore メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d0f74593-9bb1-4a11-8096-e29734b20698
 topic_type:
 - apiref
-ms.openlocfilehash: 936ea068f3cc5567a00af5f2bdd5f3d9cd52bc81
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5edfdc5481803ce0dd3a6f8f400b18e3f1600ea8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95681185"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709114"
 ---
 # <a name="ihostassemblymanagergetassemblystore-method"></a>IHostAssemblyManager::GetAssemblyStore メソッド
 
@@ -51,7 +52,7 @@ HRESULT GetAssemblyStore (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_NOINTERFACE|ホストはの実装を提供していません `IHostAssemblyStore` 。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `IHostAssemblyStore` ホストが CLR とは無関係にアセンブリおよびモジュールにバインドできるようにするメソッドを提供します。 通常、ホストはアセンブリストアを提供して、アセンブリをファイルシステム以外の形式から読み込むことができるようにします。  
   

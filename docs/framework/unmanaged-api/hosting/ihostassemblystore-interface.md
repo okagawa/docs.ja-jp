@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「IHostAssemblyStore インターフェイス」を参照してください。
 title: IHostAssemblyStore インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cccb650f-abe0-41e2-9fd1-b383788eb1f6
 topic_type:
 - apiref
-ms.openlocfilehash: 4b2fed963d2d0ebec54e5f7a4d95cba26c1bac1f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a05fee7916911687143d5953e26187162a2fa544
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680953"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709036"
 ---
 # <a name="ihostassemblystore-interface"></a>IHostAssemblyStore インターフェイス
 
@@ -32,7 +33,7 @@ ms.locfileid: "95680953"
 |[ProvideAssembly メソッド](ihostassemblystore-provideassembly-method.md)|[IHostAssemblyManager:: GetNonHostStoreAssemblies](ihostassemblymanager-getnonhoststoreassemblies-method.md)の呼び出しから返された[ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md)によって参照されていないアセンブリへの参照を取得します。|  
 |[ProvideModule メソッド](ihostassemblystore-providemodule-method.md)|アセンブリ内のモジュール、またはリンクされた (埋め込まれていない) リソースファイル内のモジュールを解決します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `IHostAssemblyStore` ホストがアセンブリ id に基づいてアセンブリを効率的に読み込む方法を提供します。 ホストは、 `IStream` バイトを直接指し示すインスタンスを返すことによって、アセンブリを読み込みます。  
   

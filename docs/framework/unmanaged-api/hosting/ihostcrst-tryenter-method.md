@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IHostCrst:: TryEnter メソッド'
 title: IHostCrst::TryEnter メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a922fa98-beab-4f09-a342-cc94fc65687f
 topic_type:
 - apiref
-ms.openlocfilehash: 02f36068f12bf0a40e5f0ac477803abfb84c72a9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 59c632b7c9edd422e2ceee1e0526a7bb077759a4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729537"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708724"
 ---
 # <a name="ihostcrsttryenter-method"></a>IHostCrst::TryEnter メソッド
 
@@ -54,7 +55,7 @@ HRESULT TryEnter (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `TryEnter` を直ちに返し、呼び出し元のスレッドがクリティカルセクションに入ったかどうかを示します。 このメソッドは、Wind32 関数をミラー化 `TryEnterCriticalSection` します。  
   

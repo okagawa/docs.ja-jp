@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IGCHost:: SetGCStartupLimits メソッド'
 title: IGCHost::SetGCStartupLimits メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cae53926-82ac-4d1d-b297-0bde0bd1bebb
 topic_type:
 - apiref
-ms.openlocfilehash: 0eea9dba57886edfef13c31948a9cff94c6c1bfd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 91c74d54189bbfb7e9f208e507fe6e75b7023e00
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687874"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709491"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>IGCHost::SetGCStartupLimits メソッド
 
@@ -46,7 +47,7 @@ HRESULT SetGCStartupLimits (
  `MaxGen0Size`  
  からジェネレーション0の最大サイズ。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `SetGCStartupLimits`メソッドを呼び出すことができるのは1回だけです。 これらの値は後で変更することはできません。  
   

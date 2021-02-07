@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IHostMemoryManager:: VirtualAlloc メソッド'
 title: IHostMemoryManager::VirtualAlloc メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4dff3646-a050-4bd9-ac31-fe307e8637ec
 topic_type:
 - apiref
-ms.openlocfilehash: a2deabc5f1c7ea0f42b6d8ec3944d984854ae571
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 28682aea5e6e7951b3b8f0a9af946a3f3828601b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731281"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707851"
 ---
 # <a name="ihostmemorymanagervirtualalloc-method"></a>IHostMemoryManager::VirtualAlloc メソッド
 
@@ -71,7 +72,7 @@ HRESULT VirtualAlloc (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_OUTOFMEMORY|割り当て要求を完了するのに十分なメモリがありませんでした|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  を呼び出して、プロセスのアドレス空間にリージョンを予約し `VirtualAlloc` ます。 パラメーターには、 `pAddress` 必要なメモリブロックの開始アドレスが格納されます。 通常、このパラメーターは null に設定されます。 オペレーティングシステムは、プロセスで使用可能な空きアドレス範囲の記録を保持します。 値が null の場合は、 `pAddress` 必要に応じてリージョンを予約するようにシステムに指示します。 または、メモリブロックの特定の開始アドレスを指定することもできます。 どちらの場合も、出力パラメーター `ppMem` は、割り当てられたメモリへのポインターとして返されます。 関数自体は HRESULT 値を返します。  
   

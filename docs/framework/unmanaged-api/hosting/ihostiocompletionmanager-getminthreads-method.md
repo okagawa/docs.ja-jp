@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: IhohooGetMinThreads Manager:: メソッド'
 title: IHostIoCompletionManager::GetMinThreads メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d7a7f733-677d-481c-b3d5-444fcc502b8e
 topic_type:
 - apiref
-ms.openlocfilehash: d321ce08edf4780fc5f26ac627849b9129c2f283
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 73b8d8cbff3777fe6aa956f282d3da5d4ac1b5c8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673229"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708505"
 ---
 # <a name="ihostiocompletionmanagergetminthreads-method"></a>IHostIoCompletionManager::GetMinThreads メソッド
 
@@ -51,7 +52,7 @@ HRESULT GetMinThreads (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_NOTIMPL|ホストはの実装を提供していません `GetMinThreads` 。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ホストは、実装、パフォーマンス、スケーラビリティなどの理由から、サービス i/o 要求に割り当てられたスレッド数を排他的に制御することが必要な場合があります。 このため、ホストでを実装する必要はありません `GetMinThreads` 。 この場合、ホストはこのメソッドから E_NOTIMPL を返す必要があります。  
   

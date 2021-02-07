@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IGCHost:: GetStats メソッド'
 title: IGCHost::GetStats メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c4ae022c-46ac-4f19-9ddd-09b955f19412
 topic_type:
 - apiref
-ms.openlocfilehash: 7e664d88bf9f67e936e693b663f27ca490da13ed
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 564224d01e23c8ac1fe81025ee87dabc41ed5166
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95670109"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709692"
 ---
 # <a name="igchostgetstats-method"></a>IGCHost::GetStats メソッド
 
@@ -39,7 +40,7 @@ HRESULT GetStats (
  `pStats`  
  [入力、出力]ガベージコレクションシステムの現在の状態の統計情報を格納している [COR_GC_STATS](cor-gc-stats-structure.md) 構造体へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  統計は、ガベージコレクションシステムが動作するためにスマートアロケーションシステムによって使用される場合があります。 たとえば、割り当てシステムでは、統計情報を確認した後に、メモリを追加したり、コレクションを強制したりする必要があることを判断できます。  
   

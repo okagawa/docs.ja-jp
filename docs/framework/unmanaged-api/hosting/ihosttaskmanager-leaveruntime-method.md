@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IHostTaskManager:: 最小 Veruntime メソッド'
 title: IHostTaskManager::LeaveRuntime メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 43689cc4-e48e-46e5-a22d-bafd768b8759
 topic_type:
 - apiref
-ms.openlocfilehash: 855f8a5d3582bbad59301a344d8a51198c40a051
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7b18bdc17b9cfd52b68309a07c6714fd1efa66cb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673047"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707438"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>IHostTaskManager::LeaveRuntime メソッド
 
@@ -54,11 +55,11 @@ HRESULT LeaveRuntime (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_OUTOFMEMORY|要求された割り当てを完了するために必要なメモリが不足しています。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  アンマネージコードとの間の呼び出しシーケンスは入れ子にすることができます。 たとえば、次の一覧は、 `LeaveRuntime` 、 [IHostTaskManager:: ReverseEnterRuntime](ihosttaskmanager-reverseenterruntime-method.md)、 [IHostTaskManager:: ReverseLeaveRuntime](ihosttaskmanager-reverseleaveruntime-method.md)に対する呼び出しのシーケンスによって、 `IHostTaskManager::EnterRuntime` ホストが入れ子になったレイヤーを識別できるようにする仮定の状況を示しています。  
   
-|アクション|対応するメソッド呼び出し|  
+|操作|対応するメソッド呼び出し|  
 |------------|-------------------------------|  
 |マネージ Visual Basic 実行可能ファイルは、プラットフォーム呼び出しを使用して C で記述されたアンマネージ関数を呼び出します。|`IHostTaskManager::LeaveRuntime`|  
 |アンマネージ C 関数は、C# で記述されたマネージ DLL 内のメソッドを呼び出します。|`IHostTaskManager::ReverseEnterRuntime`|  

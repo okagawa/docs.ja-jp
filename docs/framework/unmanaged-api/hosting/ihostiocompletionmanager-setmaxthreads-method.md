@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: IhohooSetMaxThreads Manager:: メソッド'
 title: IHostIoCompletionManager::SetMaxThreads メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ebad4f40-d9f1-4dc6-9b27-a89c9eb3926f
 topic_type:
 - apiref
-ms.openlocfilehash: 3cb001db74587beb5417bf57738c5efb9a274591
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6b36523b0b0d6cefba383d324eb23debefd7c41b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724820"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708282"
 ---
 # <a name="ihostiocompletionmanagersetmaxthreads-method"></a>IHostIoCompletionManager::SetMaxThreads メソッド
 
@@ -51,7 +52,7 @@ HRESULT SetMaxThreads (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_NOTIMPL|ホストはの実装を提供していません `SetMaxThreads` 。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `SetMaxThreads` i/o ポートでサービス要求に使用できるスレッドの最大数を設定する機会を CLR に提供します。 ホストには、実装、パフォーマンス、スケーラビリティなどの理由から、スレッドプールのサイズを排他的に制御する必要がある場合があります。 このため、ホストでを実装する必要はありません `SetMaxThreads` 。 この場合、ホストはこのメソッドから E_NOTIMPL を返す必要があります。  
   

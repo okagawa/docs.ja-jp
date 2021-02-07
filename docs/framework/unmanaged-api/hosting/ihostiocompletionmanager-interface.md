@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: Ihohoo参照マネージャーインターフェイス'
 title: IHostIoCompletionManager インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c28d1983-83f7-46e2-990f-dbb9dc07c818
 topic_type:
 - apiref
-ms.openlocfilehash: 75ad8670008242008aa344835143ff9b2add0a6c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 30cb0ecbfd9645bc0374e3570751832d6fa8eced
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719594"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708321"
 ---
 # <a name="ihostiocompletionmanager-interface"></a>IHostIoCompletionManager インターフェイス
 
@@ -41,7 +42,7 @@ ms.locfileid: "95719594"
 |[SetMaxThreads メソッド](ihostiocompletionmanager-setmaxthreads-method.md)|ホストが大量の i/o 要求を処理するスレッドの最大数を設定します。|  
 |[SetMinThreads メソッド](ihostiocompletionmanager-setminthreads-method.md)|ホストが i/o 完了に割り当てる必要があるスレッドの最小数を設定します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `IHostIoCompletionManager` CLR によって実装されるインターフェイスに対応し `ICLRIoCompletionManager` ます。 CLR は、のメソッドを呼び出して、 `IHostIoCompletionManager` ホストが提供するポートにハンドルをバインドします。また、ホストはのメソッドを呼び出して、i/o `ICLRIoCompletionManager` 要求の完了を報告します。  
   

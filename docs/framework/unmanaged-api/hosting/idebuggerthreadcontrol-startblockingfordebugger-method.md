@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Iデバッガ Threadcontrol:: StartBlockingForDebugger メソッド'
 title: IDebuggerThreadControl::StartBlockingForDebugger メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5c8f11b4-35d3-4c39-9bbd-58b896ba5ba6
 topic_type:
 - apiref
-ms.openlocfilehash: 1e0cb52a6b9f03209256e5398415b4ec632fb5e5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3e19817c4adbefd1dd70be047656b3fea261c389
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705507"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709675"
 ---
 # <a name="idebuggerthreadcontrolstartblockingfordebugger-method"></a>IDebuggerThreadControl::StartBlockingForDebugger メソッド
 
@@ -39,7 +40,7 @@ HRESULT StartBlockingForDebugger (
  `dwUnused`  
  から将来使用するために予約されています。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `StartBlockingForDebugger`ランタイムスレッドでメソッドを呼び出すことができます。  
   

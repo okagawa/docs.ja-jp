@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IHostGCManager:: SuspensionEnding メソッド'
 title: IHostGCManager::SuspensionEnding メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8849a1db-17f0-44b7-880a-bd36d431eb91
 topic_type:
 - apiref
-ms.openlocfilehash: e2624f5fce168662fac8fd5f4324617c7acf802c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 43ec3db76e6e6448719f9c40ef2476da4e2ccf9c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729552"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708621"
 ---
 # <a name="ihostgcmanagersuspensionending-method"></a>IHostGCManager::SuspensionEnding メソッド
 
@@ -50,7 +51,7 @@ HRESULT SuspensionEnding (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  CLR は、 `SuspensionEnding` ガベージコレクションを実行した後にを呼び出して、スレッドが実行を再開していることをホストに通知します。  
   

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CorValidatorModuleType 列挙型」を参照してください。
 title: CorValidatorModuleType 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 748f1ab2-fbcb-4f55-89ec-8d23d81ebc80
 topic_type:
 - apiref
-ms.openlocfilehash: 2fb7f11677870f7d53439f1867f167fabe70b22a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 13792c461660ddd8cfd530f5b34d642d806cdea4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723858"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707242"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType 列挙型
 
