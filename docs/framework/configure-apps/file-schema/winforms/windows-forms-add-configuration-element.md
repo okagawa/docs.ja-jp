@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「Windows フォームの構成要素の追加」を参照してください。
 title: 構成要素の追加 Windows フォーム
 ms.date: 04/07/2017
 helpviewer_keywords:
 - Windows Forms Add configuration element
 - configuring Windows Forms applications
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
-ms.openlocfilehash: dc1786f1f2dcc7bd01488dd24c6ef454f7e1cfbd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a0db81e0dd86f9ee6f2a47183100645ece78280c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557633"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773258"
 ---
 # <a name="windows-forms-add-configuration-element"></a>構成要素の追加 Windows フォーム
 
@@ -59,7 +60,7 @@ ms.locfileid: "90557633"
 | ------- | ----------- |
 | [`<System.Windows.Forms.ApplicationConfigurationSection>`](index.md) | 新しい Windows フォームアプリケーション機能のサポートを構成します。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 .NET Framework 4.7 を使用すれば、.NET Framework の最近のリリースで追加された機能が利用できる Windows フォームのアプリケーションを、`<System.Windows.Forms.ApplicationConfigurationSection>` 要素で構成できます。
 
@@ -69,13 +70,13 @@ ms.locfileid: "90557633"
 
 ### <a name="dpiawareness"></a>DpiAwareness
 
-Windows 10 の作成者エディションと .NET Framework 4.7 以降の .NET Framework のターゲットバージョンで実行される Windows フォームアプリは、.NET Framework 4.7 で導入された高 DPI の機能強化を利用するように構成できます。 次の設定があります。
+Windows 10 の作成者エディションと .NET Framework 4.7 以降の .NET Framework のターゲットバージョンで実行される Windows フォームアプリは、.NET Framework 4.7 で導入された高 DPI の機能強化を利用するように構成できます。 次に例を示します。
 
 - Windows フォームアプリケーションの起動後にユーザーが DPI またはスケールファクターを変更する動的な DPI シナリオのサポート。
 
 - コントロールやコントロールなど、多数の Windows フォームコントロールのスケーリングとレイアウトの機能強化 <xref:System.Windows.Forms.MonthCalendar> <xref:System.Windows.Forms.CheckedListBox> 。
 
-高 DPI 認識はオプトイン機能です。既定では、の値 `DpiAwareness` は `false` です。 アプリケーション構成ファイルでこのキーの値をに設定することにより、Windows フォーム ' DPI 対応のサポートを有効にすることができ `PerMonitorV2` ます。 DPI 認識が有効になっている場合は、すべての個別の DPI 機能も有効になります。 次の設定があります。
+高 DPI 認識はオプトイン機能です。既定では、の値 `DpiAwareness` は `false` です。 アプリケーション構成ファイルでこのキーの値をに設定することにより、Windows フォーム ' DPI 対応のサポートを有効にすることができ `PerMonitorV2` ます。 DPI 認識が有効になっている場合は、すべての個別の DPI 機能も有効になります。 次に例を示します。
 
 - DPI 変更メッセージ。キーによって制御され `DisableDpiChangedMessageHandling` ます。
 

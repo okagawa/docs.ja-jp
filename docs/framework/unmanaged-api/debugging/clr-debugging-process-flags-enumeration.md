@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CLR_DEBUGGING_PROCESS_FLAGS 列挙型'
 title: CLR_DEBUGGING_PROCESS_FLAGS 列挙体
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85b85fde-1f87-490b-ba8d-d604670959c3
 topic_type:
 - apiref
-ms.openlocfilehash: dd148d23d6e29f03052d3bbf1fcd5d02fb332a0a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 81510bde123ef9a8adefaec5b0708086dacbbf2d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729851"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99772810"
 ---
 # <a name="clr_debugging_process_flags-enumeration"></a>CLR_DEBUGGING_PROCESS_FLAGS 列挙体
 
@@ -42,7 +43,7 @@ typedef enum CLR_DEBUGGING_PROCESS_FLAGS
 |`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|このランタイムには、送信するキャッチアップマネージデバッガーイベントがありません。 キャッチアップイベントと非キャッチアップイベントの違いについては、「解説」を参照してください。|  
 |`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`|保留中のマネージイベントは、 <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> 要求です。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  キャッチアップイベントには、プロセスにアタッチした後にデバッガーが現在の状態になるようにするプロセス、アプリケーションドメイン、アセンブリ、モジュール、スレッド作成通知が含まれます。 フラグによって示されるキャッチアップ以外のイベントには、 `CLR_DEBUGGING_MANAGED_EVENT_PENDING` 例外やマネージデバッグアシスタント (MDA) 通知など、他のすべてのデバッガーイベントが含まれます。  
   

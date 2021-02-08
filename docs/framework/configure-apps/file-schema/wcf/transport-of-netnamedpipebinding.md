@@ -1,13 +1,14 @@
 ---
+description: 詳細については <transport> 、 <netNamedPipeBinding>
 title: <transport> の <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: 81c52405478d4c1ab5c65aab73f7feff61b879d0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a54c429bcac192ddc46df7232c33ab98bd1a4c58
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178022"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773486"
 ---
 # <a name="transport-of-netnamedpipebinding"></a>\<transport> の \<netNamedPipeBinding>
 
@@ -39,13 +40,13 @@ ms.locfileid: "91178022"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |protectionLevel|名前付きパイプの保護レベルを定義します。 メッセージに署名を付けることで、メッセージの転送中に第三者によって改ざんされるリスクが軽減されます。 暗号化によって、トランスポート中にデータ レベルのプライバシーが提供されます。 有効な値は次のとおりです。<br /><br /> -None: 保護がありません。<br />-Sign: メッセージは署名されています。<br />-EncryptAndSign: メッセージは暗号化され、署名されます。<br /><br /> 既定値は EncryptAndSign です。|  
   
 ### <a name="child-elements"></a>子要素  
 
- None  
+ なし  
   
 ### <a name="parent-elements"></a>親要素  
   

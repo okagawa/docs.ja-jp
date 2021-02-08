@@ -1,13 +1,14 @@
 ---
+description: 詳細については <transport> 、 <basicHttpBinding>
 title: <transport> の <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: d575b7e282775e2e2c498ac94bb54a563b8d125e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6148bbd5fa234adb51266714fff818e72f0abf40
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201396"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773538"
 ---
 # <a name="transport-of-basichttpbinding"></a>\<transport> の \<basicHttpBinding>
 
@@ -47,9 +48,9 @@ HTTP トランスポートの認証パラメーターを制御するプロパテ
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
-|clientCredentialType|-HTTP 認証を使用してクライアント認証を実行するときに使用される資格情報の種類を指定します。  既定では、 `None`です。 この属性は <xref:System.ServiceModel.HttpClientCredentialType> 型です。|  
+|clientCredentialType|-HTTP 認証を使用してクライアント認証を実行するときに使用される資格情報の種類を指定します。  既定値は、`None` です。 この属性は <xref:System.ServiceModel.HttpClientCredentialType> 型です。|  
 |proxyCredentialType|-HTTP 経由のプロキシを使用してドメイン内からクライアント認証を実行するときに使用される資格情報の種類を指定します。 この属性は、親 `mode` 要素の `security` 属性が `Transport` または `TransportCredentialsOnly` の場合にだけ適用されます。 この属性は <xref:System.ServiceModel.HttpProxyCredentialType> 型です。|  
 |realm|ダイジェストまたは基本認証の HTTP 認証方式によって使用されるレルムを指定する文字列。 既定値は空の文字列です。|  
 |policyEnforcement|この列挙体は、<xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> を適用するタイミングを指定します。<br /><br /> 1. never –ポリシーは適用されません (拡張保護は無効になります)。<br />2. WhenSupported –ポリシーは、クライアントが拡張保護をサポートしている場合にのみ適用されます。<br />3. always –ポリシーは常に適用されます。 拡張保護をサポートしていないクライアントは認証に失敗します。|  
@@ -59,7 +60,7 @@ HTTP トランスポートの認証パラメーターを制御するプロパテ
   
 |値|説明|  
 |-----------|-----------------|  
-|None|メッセージは、転送中はセキュリティで保護されません。|  
+|なし|メッセージは、転送中はセキュリティで保護されません。|  
 |Basic|基本認証を指定します。|  
 |ダイジェスト|ダイジェスト認証を指定します。|  
 |Ntlm|Windows 認証に失敗した場合で可能な場合は、NTLM 認証を指定します。|  
@@ -69,7 +70,7 @@ HTTP トランスポートの認証パラメーターを制御するプロパテ
   
 |値|説明|  
 |-----------|-----------------|  
-|None|-メッセージは、転送中にセキュリティ保護されません。|  
+|なし|-メッセージは、転送中にセキュリティ保護されません。|  
 |Basic|RFC 2617 『HTTP Authentication: Basic and Digest Authentication』で定義されているとおりに基本認証を指定します。|  
 |ダイジェスト|RFC 2617 『HTTP Authentication: Basic and Digest Authentication』で定義されているとおりにダイジェスト認証を指定します。|  
 |Ntlm|Windows 認証に失敗した場合で可能な場合は、NTLM 認証を指定します。|  
@@ -78,7 +79,7 @@ HTTP トランスポートの認証パラメーターを制御するプロパテ
   
 ### <a name="child-elements"></a>子要素  
 
- None  
+ なし  
   
 ### <a name="parent-elements"></a>親要素  
   

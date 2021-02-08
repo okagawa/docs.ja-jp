@@ -1,13 +1,14 @@
 ---
+description: 詳細については <transport> 、 <netMsmqBinding>
 title: <transport> の <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 72e1b338-39f0-4af1-a5d9-7a2fb79f6a0b
-ms.openlocfilehash: 84a5437de851ecdb96d0463ec574186ba5f91d9e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 04768f259629277abd758d102f3873bb28f16514
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203879"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773499"
 ---
 # <a name="transport-of-netmsmqbinding"></a>\<transport> の \<netMsmqBinding>
 
@@ -42,16 +43,16 @@ ms.locfileid: "91203879"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
-|msmqAuthenticationMode|MSMQ トランスポートによるメッセージの認証方法を指定します。 有効な値は次のとおりです。<br /><br /> -None: 認証なし。<br />-WindowsDomain: 認証メカニズムは Active Directory を使用して、メッセージに関連付けられているセキュリティ識別子の x.509 証明書を取得します。 次に、これを使用してキューの ACL がチェックされ、ユーザーがキューへの書き込み権限を持っていることが確認されます。<br />-Certificate: チャネルは、証明書ストアから証明書を取得します。<br /><br /> 既定では、 `WindowsDomain`です。<br /><br /> この属性が `None` に設定されている場合、`msmqProtectionLevel` 属性も `None` に設定する必要があります。 この属性は <xref:System.ServiceModel.MsmqAuthenticationMode> 型です。|  
+|msmqAuthenticationMode|MSMQ トランスポートによるメッセージの認証方法を指定します。 有効な値は次のとおりです。<br /><br /> -None: 認証なし。<br />-WindowsDomain: 認証メカニズムは Active Directory を使用して、メッセージに関連付けられているセキュリティ識別子の x.509 証明書を取得します。 次に、これを使用してキューの ACL がチェックされ、ユーザーがキューへの書き込み権限を持っていることが確認されます。<br />-Certificate: チャネルは、証明書ストアから証明書を取得します。<br /><br /> 既定値は、`WindowsDomain` です。<br /><br /> この属性が `None` に設定されている場合、`msmqProtectionLevel` 属性も `None` に設定する必要があります。 この属性は <xref:System.ServiceModel.MsmqAuthenticationMode> 型です。|  
 |msmqEncryptionAlgorithm|メッセージ キュー マネージャー間でメッセージを転送するときに、ネットワーク上でメッセージの暗号化に使用されるアルゴリズムを指定します。 有効な値は次のとおりです。<br /><br /> - RC4Stream<br />-AES<br />-既定値は `RC4Stream` です。 この属性は <xref:System.ServiceModel.MsmqEncryptionAlgorithm> 型です。|  
 |msmqProtectionLevel|MSMQ トランスポートのレベルでメッセージをセキュリティで保護する方法を指定します。 暗号化を行うとメッセージの整合性が確保されますが、署名および暗号化を使用するとメッセージの整合性と否認防止の両方が確保されます。 つまり、実際には送信者から送信されたメッセージであり、送信者はその人物であると言います。 有効な値は次のとおりです。<br /><br /> -None: 保護がありません。<br />-Sign: メッセージは署名されています。<br />-EncryptAndSign: メッセージは暗号化され、署名されます。<br />-既定値は `Sign` です。|  
-|msmqSecureHashAlgorithm|メッセージ ダイジェストの計算に使用されるハッシュ アルゴリズムを指定します。 有効な値は次のとおりです。<br /><br /> -MD5<br />-SHA1<br />-SHA256<br />-SHA512<br /><br /> 既定では、 `SHA1`です。 この属性は <xref:System.ServiceModel.MsmqSecureHashAlgorithm> 型です。<br>MD5 と SHA1 の衝突の問題のため、SHA256 以上をお勧めします。|  
+|msmqSecureHashAlgorithm|メッセージ ダイジェストの計算に使用されるハッシュ アルゴリズムを指定します。 有効な値は次のとおりです。<br /><br /> -MD5<br />-SHA1<br />-SHA256<br />-SHA512<br /><br /> 既定値は、`SHA1` です。 この属性は <xref:System.ServiceModel.MsmqSecureHashAlgorithm> 型です。<br>MD5 と SHA1 の衝突の問題のため、SHA256 以上をお勧めします。|  
   
 ### <a name="child-elements"></a>子要素  
 
- None  
+ なし  
   
 ### <a name="parent-elements"></a>親要素  
   

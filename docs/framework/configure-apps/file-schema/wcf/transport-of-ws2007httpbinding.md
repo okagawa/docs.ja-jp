@@ -1,13 +1,14 @@
 ---
+description: 詳細については <transport> 、 <ws2007HttpBinding>
 title: <transport> の <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: 60e8758d653848176ca3f287e253bd7990e78470
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8c6890bc291458ba0849ab7a206487431b279576
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91162050"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773434"
 ---
 # <a name="transport-of-ws2007httpbinding"></a>\<transport> の \<ws2007HttpBinding>
 
@@ -29,7 +30,7 @@ HTTP トランスポートの認証設定を定義します。
            realm="string" />
 ```  
   
-## <a name="type"></a>種類  
+## <a name="type"></a>Type  
 
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
@@ -39,7 +40,7 @@ HTTP トランスポートの認証設定を定義します。
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |`clientCredentialType`|サービスに対するクライアントの認証に使用される資格情報を指定します。 この属性は <xref:System.ServiceModel.HttpClientCredentialType> 型です。|  
 |`proxyCredentialType`|ドメイン プロキシに対するクライアントの認証に使用される資格情報を指定します。 この属性は <xref:System.ServiceModel.HttpProxyCredentialType> 型です。|  
@@ -49,7 +50,7 @@ HTTP トランスポートの認証設定を定義します。
   
 |値|説明|  
 |-----------|-----------------|  
-|None|セキュリティを無効にします。|  
+|なし|セキュリティを無効にします。|  
 |Basic|基本認証を使用します。|  
 |ダイジェスト|ダイジェスト認証を使用します。|  
 |Ntlm|Windows ドメインのフォールバックとして NTLM 認証を使用します。|  
@@ -60,7 +61,7 @@ HTTP トランスポートの認証設定を定義します。
   
 |値|説明|  
 |-----------|-----------------|  
-|None|セキュリティを無効にします。|  
+|なし|セキュリティを無効にします。|  
 |Basic|基本認証を使用します。|  
 |ダイジェスト|ダイジェスト認証を使用します。|  
 |Ntlm|Windows ドメインのフォールバックとして NTLM を使用します。|  
@@ -69,7 +70,7 @@ HTTP トランスポートの認証設定を定義します。
   
 ### <a name="child-elements"></a>子要素  
 
- None  
+ なし  
   
 ### <a name="parent-elements"></a>親要素  
   

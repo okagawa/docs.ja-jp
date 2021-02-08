@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CLR_DEBUGGING_VERSION 構造'
 title: CLR_DEBUGGING_VERSION 構造体
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d821186-3ddf-405a-ac44-d79438a9f7f3
 topic_type:
 - apiref
-ms.openlocfilehash: 8a2abe847728a2bb1f1345ef73e55b58e4704001
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2d274a91948b98dc309cd5670c3dd3bf6cd01e2b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729812"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99772784"
 ---
 # <a name="clr_debugging_version-structure"></a>CLR_DEBUGGING_VERSION 構造体
 
@@ -48,7 +49,7 @@ typedef struct _CLR_DEBUGGING_VERSION
 |`wBuild`|ビルド番号。|  
 |`wRevision`|リビジョン番号。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  構造体 `CLR_DEBUGGING_VERSION` は COR_VERSION 構造体と同じですが、構造体には `CLR_DEBUGGING_VERSION` 追加の構造体のバージョンフィールド () が用意されて `wStructVersion` います。 現在、このフィールドは0に設定する必要があります。  
   
