@@ -1,19 +1,20 @@
 ---
-title: <faultPropagationQuery>WCF の
+description: 詳細については、「WCF」を参照してください。 <faultPropagationQuery>
+title: <faultPropagationQuery> WCF の
 ms.date: 03/30/2017
 ms.assetid: fabafbc8-3e45-4feb-8321-0725e9f4079c
-ms.openlocfilehash: a6ef4e198caec4a1f21cedf2ff46d390aeaa2d3b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: cd26bf76fec54371ef0455b93c98650bdab19068
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855332"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782066"
 ---
-# <a name="faultpropagationquery-of-wcf"></a>\<faultPropagationQuery>WCF の
+# <a name="faultpropagationquery-of-wcf"></a>\<faultPropagationQuery> WCF の
 
 1 つのアクティビティ内で発生するエラーの処理を追跡するために使用するクエリを表します。  このイベントは、FaultHandler がエラーを処理するたびに発生します。 1 つのアクティビティ内で発生したエラーの処理は、このようなクエリを使用して追跡する必要があります。 追跡参加要素がエラー伝達レコードを定期受信するには、このクエリが必要です。
 
-追跡プロファイルのクエリの詳細については、「[追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)」を参照してください。
+追跡プロファイルのクエリの詳細については、「 [追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)」を参照してください。
 
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
@@ -58,7 +59,7 @@ ms.locfileid: "70855332"
 
 ### <a name="parent-elements"></a>親要素
 
-|要素|Description|
+|要素|説明|
 |-------------|-----------------|
 |[\<faultPropagationQueries>](faultpropagationqueries-of-wcf.md)|1 つのアクティビティ内で発生するエラーの処理を追跡するために使用する、構成要素の一覧を表します。  このイベントは、FaultHandler がエラーを処理するたびに発生します。|
 

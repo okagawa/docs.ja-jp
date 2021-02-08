@@ -1,4 +1,5 @@
 ---
+description: ': IHostTask:: Start メソッドの詳細について説明します。'
 title: IHostTask::Start メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b18742b0-d8c4-401c-ae89-e6eccdaa81d0
 topic_type:
 - apiref
-ms.openlocfilehash: 4143c3d25dd5262a10b53708a249910cc79f5314
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 48352a3df49ba2ef3e008ed211da19f54deb82f6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720439"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784627"
 ---
 # <a name="ihosttaskstart-method"></a>IHostTask::Start メソッド
 
@@ -39,7 +40,7 @@ HRESULT Start ();
 |S_OK|Start が正常に返されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドから E_FAIL が返された場合、そのプロセス内で共通言語ランタイム (CLR) は使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `Start` 重大なエラーが発生した場合を除き、は常に S_OK の HRESULT 値を返します。  
   

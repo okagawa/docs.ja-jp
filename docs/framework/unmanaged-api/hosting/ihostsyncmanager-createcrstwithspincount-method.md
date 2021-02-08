@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IHostSyncManager:: CreateCrstWithSpinCount メソッド'
 title: IHostSyncManager::CreateCrstWithSpinCount メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7280fa8c-3639-4abf-91cb-bc343da742d1
 topic_type:
 - apiref
-ms.openlocfilehash: 6b2f57c7147cc8ff2abff848bd1e4661c2f5e728
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3c43f1a3d52eb7174844ecb4079cf54413f20853
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682884"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784822"
 ---
 # <a name="ihostsyncmanagercreatecrstwithspincount-method"></a>IHostSyncManager::CreateCrstWithSpinCount メソッド
 
@@ -55,7 +56,7 @@ HRESULT CreateCrstWithSpinCount (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_OUTOFMEMORY|要求されたクリティカルセクションを作成するのに十分なメモリがありませんでした。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  スピンカウントは、マルチプロセッサシステムでのみ使用されます。 スピンカウントは、使用できないクリティカルセクションに関連付けられているセマフォで待機操作を実行する前に、呼び出し元のスレッドがスピンする必要がある回数を指定します。 スピン操作中にクリティカルセクションが解放されると、呼び出し元のスレッドは待機操作を回避します。 `CreateCrstWithSpinCount` Win32 関数をミラー化 `InitializeCriticalSectionAndSpinCount` します。  
   

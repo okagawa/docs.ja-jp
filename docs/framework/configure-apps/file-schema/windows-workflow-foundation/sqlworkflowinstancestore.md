@@ -1,14 +1,15 @@
 ---
+description: '詳細情報: <sqlWorkflowInstanceStore>'
 title: <sqlWorkflowInstanceStore>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 8a4e4214-fc51-4f4d-b968-0427c37a9520
-ms.openlocfilehash: d6c86d02e14a38c2a35ba4858c4abfea73268fd8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8fcf5dd970adf5aa668d90b012c94e04c5373752
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148712"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782012"
 ---
 # \<sqlWorkflowInstanceStore>
 
@@ -44,7 +45,7 @@ ms.locfileid: "91148712"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |connectionString|基になる永続性データベースへの接続に使用する接続文字列を含む文字列。|  
 |connectionStringName|データベース サーバーへの名前付き接続文字列を含む文字列。 名前付き接続文字列の例としては、"DefaultConnectionString" などがあります。|  

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: IHostSyncManager:: SetCLRSyncManager メソッド'
 title: IHostSyncManager::SetCLRSyncManager メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b8bbe76-a45d-4989-bacb-11df42f8798c
 topic_type:
 - apiref
-ms.openlocfilehash: 79a41b6705b41414f0926c2ed819e437ecfb51d5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e2a6a54334f7b8a63696ead918f4f34e0c36e438
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714836"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784715"
 ---
 # <a name="ihostsyncmanagersetclrsyncmanager-method"></a>IHostSyncManager::SetCLRSyncManager メソッド
 
@@ -50,7 +51,7 @@ HRESULT SetCLRSyncManager (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ホストと CLR の間の通信を容易にするために、ホストインターフェイスは通常、ペアになっています。 ペアの1つのメンバーはホストによって実装され、もう一方のメンバーは CLR によって実装されます。 ホスト側の実装として、 `IHostSyncManager` インターフェイスは、 `ICLRSyncManager` CLR によって実装されるインターフェイスに対応します。 CLR は、を呼び出して、 `SetCLRSyncManager` `ICLRSyncManager` 現在のインスタンスに関連付けられているホストのインスタンスを指定 `IHostSyncManager` します。  
   

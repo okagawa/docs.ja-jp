@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IHostTaskManager:: BeginThreadAffinity メソッド'
 title: IHostTaskManager::BeginThreadAffinity メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fea3ab88-ce41-4c5a-847b-bb78cd748da6
 topic_type:
 - apiref
-ms.openlocfilehash: 6f6d57a52d960c975d468f370477b5d7e29c3aa2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 15ee917f5c81ee605c0cb4df3180041797c18daf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727342"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784601"
 ---
 # <a name="ihosttaskmanagerbeginthreadaffinity-method"></a>IHostTaskManager::BeginThreadAffinity メソッド
 
@@ -43,7 +44,7 @@ HRESULT BeginThreadAffinity ();
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  CLR は、通常、 `IHostTaskManager::BeginThreadAffinity` の呼び出しのコンテキストでを呼び出し <xref:System.Threading.Thread.BeginThreadAffinity%2A?displayProperty=nameWithType> ます。 [IHostTaskManager:: EndThreadAffinity](ihosttaskmanager-endthreadaffinity-method.md)に対応する呼び出しが行われるまで、現在のタスクを再スケジュールすることはできません。 タスクは切り替えることができますが、切り替えられたときには、切り替え元のオペレーティングシステムスレッドに割り当てられている必要があります。 `BeginThreadAffinity` 呼び出しは現在のタスクを参照しているので、の入れ子になった呼び出しは無効です。  
   

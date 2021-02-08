@@ -1,16 +1,17 @@
 ---
+description: '詳細については、次を参照してください: <NetFx40_LegacySecurityPolicy> 要素'
 title: <NetFx40_LegacySecurityPolicy> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <NetFx40_LegacySecurityPolicy> element
 - NetFx40_LegacySecurityPolicy element
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
-ms.openlocfilehash: d5192eb56bb8b640544bdc52a0bb9d8a5277efef
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6be520d4cfd4f9ec05f4aceec82e4fef5440f55d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73116253"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782313"
 ---
 # <a name="netfx40_legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy> 要素
 
@@ -39,7 +40,7 @@ ms.locfileid: "73116253"
 
 ## <a name="enabled-attribute"></a>enabled 属性
 
-|値|Description|
+|値|説明|
 |-----------|-----------------|
 |`false`|ランタイムでは、従来の CAS ポリシーは使用されません。 既定値です。|
 |`true`|ランタイムは、従来の CAS ポリシーを使用します。|
@@ -50,7 +51,7 @@ ms.locfileid: "73116253"
 
 ### <a name="parent-elements"></a>親要素
 
-|要素|Description|
+|要素|説明|
 |-------------|-----------------|
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|
@@ -61,10 +62,10 @@ ms.locfileid: "73116253"
 
 CAS ポリシーはバージョン固有です。 以前のバージョンの .NET Framework に存在するカスタム CAS ポリシーは、.NET Framework 4 で再指定する必要があります。
 
-要素を `<NetFx40_LegacySecurityPolicy>` .NET Framework 4 アセンブリに適用しても、[セキュリティ透過的なコード](../../../misc/security-transparent-code.md)には影響しません。透過性ルールが適用されます。
+要素を `<NetFx40_LegacySecurityPolicy>` .NET Framework 4 アセンブリに適用しても、 [セキュリティ透過的なコード](../../../misc/security-transparent-code.md)には影響しません。透過性ルールが適用されます。
 
 > [!IMPORTANT]
-> 要素を適用すると、 `<NetFx40_LegacySecurityPolicy>` [グローバルアセンブリキャッシュ](../../../app-domains/gac.md)にインストールされていない[ネイティブイメージジェネレーター (ngen.exe)](../../../tools/ngen-exe-native-image-generator.md)によって作成されたネイティブイメージアセンブリのパフォーマンスが大幅に低下する可能性があります。 パフォーマンスの低下は、属性が適用されたときにランタイムがネイティブイメージとしてアセンブリを読み込むことができないことが原因で発生し、その結果、ジャストインタイムアセンブリとして読み込まれます。
+> 要素を適用すると、 `<NetFx40_LegacySecurityPolicy>` [グローバルアセンブリキャッシュ](../../../app-domains/gac.md)にインストールされていない[ネイティブイメージジェネレーター (Ngen.exe)](../../../tools/ngen-exe-native-image-generator.md)によって作成されたネイティブイメージアセンブリのパフォーマンスが大幅に低下する可能性があります。 パフォーマンスの低下は、属性が適用されたときにランタイムがネイティブイメージとしてアセンブリを読み込むことができないことが原因で発生し、その結果、ジャストインタイムアセンブリとして読み込まれます。
 
 > [!NOTE]
 > Visual Studio プロジェクトの [プロジェクトの設定] で、.NET Framework 4 より前のターゲット .NET Framework バージョンを指定した場合、そのバージョンに指定したカスタム CAS ポリシーも含めて、CAS ポリシーが有効になります。 ただし、新しい .NET Framework 4 種類とメンバーを使用することはできません。 [アプリケーション構成ファイル](../../index.md)のスタートアップ設定スキーマの[ \<supportedRuntime> 要素](../startup/supportedruntime-element.md)を使用して、以前のバージョンの .NET Framework を指定することもできます。

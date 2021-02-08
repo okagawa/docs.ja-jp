@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IHostSyncManager:: CreateAutoEvent メソッド'
 title: IHostSyncManager::CreateAutoEvent メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3153643e-cf5c-4b44-8e0e-c2b22cb08208
 topic_type:
 - apiref
-ms.openlocfilehash: 37c306df76a796d6e0a2b7540ebd85c13865dfbe
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 69767f1e01ead93c874eecf01c3167a5dc0e4b82
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682979"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784848"
 ---
 # <a name="ihostsyncmanagercreateautoevent-method"></a>IHostSyncManager::CreateAutoEvent メソッド
 
@@ -51,7 +52,7 @@ HRESULT CreateAutoEvent (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_OUTOFMEMORY|要求されたイベントオブジェクトを作成するのに十分なメモリがありませんでした。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `CreateAutoEvent` 待機中のスレッドが解放された後に、状態が自動的に非シグナルに変更される自動イベントオブジェクトを作成します。 このメソッドは、 `CreateEvent` `false` パラメーターに指定された値を使用して、Win32 関数をミラー化します。 `bManualReset`  
   

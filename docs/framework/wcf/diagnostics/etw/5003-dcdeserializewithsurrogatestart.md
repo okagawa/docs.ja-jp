@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 5003-DCDeserializeWithSurrogateStart'
 title: 5003 - DCDeserializeWithSurrogateStart
 ms.date: 03/30/2017
 ms.assetid: 497a78ca-d4d6-4b9d-9b35-bc2db33d6e9c
-ms.openlocfilehash: fdd41d4260720d5725bd8bcceb42812000821deb
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 94dc62a5823e07fe71583359e1bb92986fab6f89
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254766"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783535"
 ---
 # <a name="5003---dcdeserializewithsurrogatestart"></a>5003 - DCDeserializeWithSurrogateStart
 
@@ -15,12 +16,12 @@ ms.locfileid: "96254766"
   
 |||  
 |-|-|  
-|ID|5003|  
+|id|5003|  
 |Keywords|シリアル化|  
 |Level|"詳細"|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、DataContract のサロゲートによる逆シリアル化を開始すると生成されます。  
   

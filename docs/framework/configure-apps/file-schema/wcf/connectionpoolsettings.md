@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <connectionPoolSettings>'
 title: <connectionPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 6fa7fa65-2c6e-4eab-b8cf-7690112c0be5
-ms.openlocfilehash: d8787bc2ef8da4fdc01237ac9b041dfdd66fce03
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5acf2d800f1a18f45750d0fabd23516f987b2c5e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175994"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782170"
 ---
 # \<connectionPoolSettings>
 
@@ -35,7 +36,7 @@ ms.locfileid: "91175994"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |`groupName`|送信チャネルに使用される接続プールの名前を定義する文字列です。 ストリーム配信モードでは、接続が共有されません。したがって、接続プールは無効です。 既定は、"default" 文字列です。 この値を変更して、特定のクライアントの接続を、個別のグループに分離できます。|  
 |`idleTimeout`|接続が切断されるまでの最大アイドル時間を指定する正の <xref:System.TimeSpan>。 既定値は 00:02:00 です。|  
@@ -62,5 +63,5 @@ ms.locfileid: "91175994"
 - [トランスポートの選択](../../../wcf/feature-details/choosing-a-transport.md)
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

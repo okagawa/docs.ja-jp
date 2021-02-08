@@ -1,4 +1,5 @@
 ---
+description: ': IHostTask:: SetCLRTask メソッドの詳細について説明します。'
 title: IHostTask::SetCLRTask メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e9d39c80-41a1-49e7-bb5e-ea3433bfb5d7
 topic_type:
 - apiref
-ms.openlocfilehash: e6b9a4015a6139d6c8d7101fa7811c7ad9134e4c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 381b7827f043b6ef1d4a6698f5eb103233c9af55
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720465"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784679"
 ---
 # <a name="ihosttasksetclrtask-method"></a>IHostTask::SetCLRTask メソッド
 
@@ -50,7 +51,7 @@ HRESULT SetCLRTask (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  CLR は `SetCLRTask` を呼び出して、インスタンスを現在のインスタンスに関連付けます `ICLRTask` `IHostTask` 。これは [IHostTaskManager:: createtask](ihosttaskmanager-createtask-method.md)の呼び出しによって作成されたものです。  
   

@@ -1,19 +1,20 @@
 ---
-title: <activityStateQueries>WCF の
+description: 詳細については、「WCF」を参照してください。 <activityStateQueries>
+title: <activityStateQueries> WCF の
 ms.date: 10/08/2018
 ms.assetid: 9e45db49-ed85-4fdf-bd65-0d5477e31823
-ms.openlocfilehash: 249ac3d91f6251a943dd856e4122b8b54f691702
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 00795a26a37f62fae8aa884b5a4188be79453186
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850574"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782235"
 ---
-# <a name="activitystatequeries-of-wcf"></a>\<activityStateQueries>WCF の
+# <a name="activitystatequeries-of-wcf"></a>\<activityStateQueries> WCF の
 
 ワークフロー インスタンスを構成するアクティビティのライフサイクルの変化を追跡するために使用する、クエリのコレクションを表します。 たとえば、ワークフローインスタンス内で "電子メールの送信" アクティビティが完了するたびに追跡することができます。 追跡参加要素がアクティビティ状態レコード オブジェクトを定期受信するには、このクエリが必要です。 定期受信可能な状態は ActivityStates で指定します。
 
-追跡プロファイルのクエリの詳細については、「[追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)」を参照してください。
+追跡プロファイルのクエリの詳細については、「 [追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)」を参照してください。
 
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\

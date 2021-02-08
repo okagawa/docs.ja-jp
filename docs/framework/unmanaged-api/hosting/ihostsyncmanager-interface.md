@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「IHostSyncManager インターフェイス」を参照してください。
 title: IHostSyncManager インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2e081a37-6a28-4c93-b7ab-1c96a464637c
 topic_type:
 - apiref
-ms.openlocfilehash: 8a5fc42191634a2e5a441baecc4b78212ffad687
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c3bd2928315567605d320c772de8ff824ad3cd09
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720495"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784731"
 ---
 # <a name="ihostsyncmanager-interface"></a>IHostSyncManager インターフェイス
 
@@ -39,7 +40,7 @@ Win32 同期関数を使用する代わりに、共通言語ランタイム (CLR
 |[CreateSemaphore メソッド](ihostsyncmanager-createsemaphore-method.md)|CLR が待機イベントのセマフォとして使用する [IHostSemaphore](ihostsemaphore-interface.md) オブジェクトを作成します。|  
 |[SetCLRSyncManager メソッド](ihostsyncmanager-setclrsyncmanager-method.md)|現在のインスタンスに関連付ける [ICLRSyncManager](iclrsyncmanager-interface.md) インスタンスを設定 `IHostSyncManager` します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  CLR は、 `IHostSyncManager` IID_IHostSyncManager のを使用して [IHostControl:: GetHostManager](ihostcontrol-gethostmanager-method.md) メソッドを呼び出すことで、ホストのの実装を検出し `IID` ます。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataEmit:: GetSaveSize メソッド'
 title: IMetaDataEmit::GetSaveSize メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8aea2e2c-23a3-4cda-9a06-e19f97383830
 topic_type:
 - apiref
-ms.openlocfilehash: 5cb202f5284c1c18545ec750b2fa0f04d4b0d2e2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 871e9f911eaaf1b1a7259466402e492d75aa7fb8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722064"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783938"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize メソッド
 
@@ -49,7 +50,7 @@ HRESULT GetSaveSize (
  `pdwSaveSize`  
  入出力ファイルを保存するために必要なサイズへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `GetSaveSize` 現在のスコープ内のアセンブリとそのすべてのメタデータを保存するために必要な領域をバイト単位で計算します。 ( [IMetaDataEmit:: SaveToStream](imetadataemit-savetostream-method.md) メソッドを呼び出すと、このバイト数が出力されます)。  
   

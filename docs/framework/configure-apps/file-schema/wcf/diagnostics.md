@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <diagnostics>'
 title: <diagnostics>
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 775ec3a4d3dd8709c61fb46155b5085a3343d218
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d1651d949cdc095e630e9cde0bacbe51a5eb6062
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192270"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782157"
 ---
 # \<diagnostics>
 
@@ -47,11 +48,11 @@ ms.locfileid: "91192270"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |etwProviderId|イベントを ETW セッションに書き込むイベント追跡プロバイダーの識別子を指定する文字列。|  
 |performanceCounters|アセンブリのパフォーマンス カウンターが有効であるかどうかを指定します。 有効な値は、次のとおりです。<br /><br /> -Off: パフォーマンスカウンターが無効になっています。<br />-ServiceOnly: このサービスに関連するパフォーマンスカウンターのみが有効になっています。<br />-All: パフォーマンスカウンターは実行時に表示できます。<br />-Default: 1 つのパフォーマンスカウンターインスタンス _WCF_Admin が作成されます。 このインスタンスは、インフラストラクチャで使用される SQM データのコレクションを有効にするために使用されます。 このインスタンスのカウンター値は更新されず、0 のままになります。 WCF の構成が存在しない場合は、これが既定値になります。|  
-|wmiProviderEnabled|アセンブリの WMI プロバイダーが有効であるかどうかを指定するブール値。 ユーザーが Windows Communication Foundation (WCF) の検査および制御機能に対する実行時アクセス権を取得するには、WMI プロバイダーが必要です。 既定では、 `false`です。|  
+|wmiProviderEnabled|アセンブリの WMI プロバイダーが有効であるかどうかを指定するブール値。 ユーザーが Windows Communication Foundation (WCF) の検査および制御機能に対する実行時アクセス権を取得するには、WMI プロバイダーが必要です。 既定値は、`false` です。|  
   
 ### <a name="child-elements"></a>子要素  
   

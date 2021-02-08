@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ICLRTask:: ExitTask メソッド'
 title: ICLRTask::ExitTask メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 746c85a6-4b33-4f72-a2e9-379fdf2e96af
 topic_type:
 - apiref
-ms.openlocfilehash: bcd1cac47e4b59cc47c95145f0ccf60c92ea54fe
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 267b7f284ccac5b535a72dab425c035b6c689361
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690839"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784965"
 ---
 # <a name="iclrtaskexittask-method"></a>ICLRTask::ExitTask メソッド
 
@@ -43,7 +44,7 @@ HRESULT ExitTask ();
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ExitTask` アンマネージタイプライブラリからスレッドをデタッチするのと同様の方法で、タスクのクリーンシャットダウンを試みます。  
   

@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: <PreferComInsteadOfManagedRemoting> 要素'
 title: <PreferComInsteadOfManagedRemoting> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <PreferComInsteadOfManagedRemoting> element
 - PreferComInsteadOfManagedRemoting element
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
-ms.openlocfilehash: 2fb0d94f91d28f9d9d4f247411d273f786f7b63b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b621af9b584d1ea2623ffe5a44f74b5b7bd520e7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91195286"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782274"
 ---
 # <a name="prefercominsteadofmanagedremoting-element"></a>\<PreferComInsteadOfManagedRemoting> 要素
 
@@ -38,9 +39,9 @@ ms.locfileid: "91195286"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|`false`|ランタイムは、アプリケーションドメインの境界を越えてリモート処理を使用します。 これは既定値です。|  
+|`false`|ランタイムは、アプリケーションドメインの境界を越えてリモート処理を使用します。 既定値です。|  
 |`true`|ランタイムは、アプリケーションドメインの境界を越えて COM 相互運用を使用します。|  
   
 ### <a name="child-elements"></a>子要素  

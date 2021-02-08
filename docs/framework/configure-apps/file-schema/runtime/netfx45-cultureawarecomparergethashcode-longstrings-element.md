@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: <NetFx45_CultureAwareComparerGetHashCode_LongStrings> 要素'
 title: <NetFx45_CultureAwareComparerGetHashCode_LongStrings> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - GetHashCode method
 - hash codes, calculating
 ms.assetid: 3a5f38d1-ebc8-44de-aaeb-2929f6e6b48f
-ms.openlocfilehash: 413eb6c6e61b509135601c65cf045eabd849e8b3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ca4099d3bf812cb25e6a611b9b51b3752b1ad361
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74802115"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782287"
 ---
 # <a name="netfx45_cultureawarecomparergethashcode_longstrings-element"></a>\<NetFx45_CultureAwareComparerGetHashCode_LongStrings> 要素
 
@@ -51,7 +52,7 @@ ms.locfileid: "74802115"
 
 ### <a name="parent-elements"></a>親要素
 
-|要素|Description|
+|要素|説明|
 |-------------|-----------------|
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|

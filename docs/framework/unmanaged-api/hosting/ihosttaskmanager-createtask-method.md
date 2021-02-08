@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IHostTaskManager:: CreateTask メソッド'
 title: IHostTaskManager::CreateTask メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a6f8ad36-61e1-42b0-9db2-add575646d18
 topic_type:
 - apiref
-ms.openlocfilehash: 7fdf25d44bdf630e306cf0f5dcb3387a3b0f7c76
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c14c80ea9067b0a28e7b9186ea66eb695687bf27
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731684"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784575"
 ---
 # <a name="ihosttaskmanagercreatetask-method"></a>IHostTaskManager::CreateTask メソッド
 
@@ -63,7 +64,7 @@ HRESULT CreateTask (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_OUTOFMEMORY|要求されたタスクを作成するのに十分なメモリがありませんでした。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  CLR はを呼び出して、 `CreateTask` ホストが新しいタスクを作成することを要求します。 ホストは、インスタンスへのインターフェイスポインターを返し `IHostTask` ます。 を呼び出すことによって明示的に開始されるまで、返されたタスクは中断されたままである必要があり `IHostTask::Start` ます。  
   

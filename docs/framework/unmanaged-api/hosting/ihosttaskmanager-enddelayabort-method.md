@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IHostTaskManager:: EndDelayAbort メソッド'
 title: IHostTaskManager::EndDelayAbort メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e02facb-2504-4356-9af5-0cee1f8436a7
 topic_type:
 - apiref
-ms.openlocfilehash: 6add3cf4d83796b2d95de46cb64f5880a835b6ac
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e0d1c4231d381baf2ff92d187d33714f1c6f3003
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731671"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784562"
 ---
 # <a name="ihosttaskmanagerenddelayabort-method"></a>IHostTaskManager::EndDelayAbort メソッド
 
@@ -44,7 +45,7 @@ HRESULT EndDelayAbort ();
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_UNEXPECTED|`EndDelayAbort` は、への対応する呼び出しなしで呼び出されました `BeginDelayAbort` 。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  CLR は、を `BeginDelayAbort` 呼び出す前に、現在のタスクに対して、に対応する呼び出しを行い `EndDelayAbort` ます。 このような対応する呼び出しがない場合、ホストの [IHostTaskManager](ihosttaskmanager-interface.md) の実装はから E_UNEXPECTED を返す必要があり、アクションを実行する必要はあり `EndDelayAbort` ません。  
   

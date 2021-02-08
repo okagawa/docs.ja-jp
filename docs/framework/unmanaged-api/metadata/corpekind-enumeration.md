@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CorPEKind 列挙型」を参照してください。
 title: CorPEKind 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22dc6dea-b1b9-4982-a730-a022d586b117
 topic_type:
 - apiref
-ms.openlocfilehash: 001be0c5e8897bacf76d2a044fb9400768473052
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6d1f29a220ce9d4be4151d8eff6557fa8c693ed2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673528"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784276"
 ---
 # <a name="corpekind-enumeration"></a>CorPEKind 列挙型
 
@@ -51,7 +52,7 @@ typedef enum CorPEKind {
 |`pe32Unmanaged`|この PE ファイルがネイティブコードであることを示します。|  
 |pe32BitPreferred|この PE ファイルがプラットフォームに依存せず、32ビット環境で読み込まれることを示すことを示します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  これらの値は、ビットごとの組み合わせで使用できます。  
   

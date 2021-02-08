@@ -1,4 +1,5 @@
 ---
+description: ': IHostTask インターフェイスの詳細情報'
 title: IHostTask インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a71dbbd5-64b8-47eb-9f03-8e8c85fbe2bc
 topic_type:
 - apiref
-ms.openlocfilehash: 10efe853c9a7ad7676058bc01b07063c557623d8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c46bbdd2e881c20d1ffd634bec8ddfa3b70b0f82
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699223"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784666"
 ---
 # <a name="ihosttask-interface"></a>IHostTask インターフェイス
 
@@ -36,7 +37,7 @@ ms.locfileid: "95699223"
 |[SetPriority メソッド](ihosttask-setpriority-method.md)|現在のインスタンスによって表されるタスクのスレッドの優先度レベルをホストが調整するように要求 `IHostTask` します。|  
 |[Start メソッド](ihosttask-start-method.md)|現在のインスタンスによって表されるタスクを中断状態からライブ状態に移行するようホストに要求し `IHostTask` ます。このとき、コードを実行できます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  CLR は、によって定義されたメソッドを呼び出して、 `IHostTask` タスクを開始したり、スレッドの優先度レベルを設定したりします。  
   

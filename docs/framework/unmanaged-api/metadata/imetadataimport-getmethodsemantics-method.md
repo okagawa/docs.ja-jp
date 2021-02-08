@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataImport:: GetMethodSemantics メソッド'
 title: IMetaDataImport::GetMethodSemantics メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e018eaa-d60e-4a0b-a2c5-8c36bd09d905
 topic_type:
 - apiref
-ms.openlocfilehash: cc01a417c3246ad2554c506f21e37a3cbbdeb991
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2b17e2ffaeef3a451850ce2cc9c4861d68df3a81
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733188"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783860"
 ---
 # <a name="imetadataimportgetmethodsemantics-method"></a>IMetaDataImport::GetMethodSemantics メソッド
 
@@ -47,7 +48,7 @@ HRESULT GetMethodSemantics (
  `pdwSemanticsFlags`  
  入出力関連付けられているセマンティクスフラグへのポインター。 この値は、 [CorMethodSemanticsAttr](cormethodsemanticsattr-enumeration.md) 列挙体のビットマスクです。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  [IMetaDataEmit::D efineProperty](imetadataemit-defineproperty-method.md)メソッドは、メソッドのセマンティクスフラグを設定します。  
   

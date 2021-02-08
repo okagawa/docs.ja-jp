@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CorNotificationForTokenMovement 列挙型」を参照してください。
 title: CorNotificationForTokenMovement 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1edd1670-976a-4fc8-bef7-7c41e60ad989
 topic_type:
 - apiref
-ms.openlocfilehash: 0f9cb8db35a1669cead6f9f26c9a89e063628dd8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1975598b756499c9c0b017bf7eba9a134af5185f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687672"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784315"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>CorNotificationForTokenMovement 列挙型
 
@@ -88,7 +89,7 @@ typedef enum CorNotificationForTokenMovement {
 |`MDNotifyExportedType`|トークンが移動したときに通知 `mdExportedType` します。|  
 |`MDNotifyResource`|トークンが移動したときに通知 `mdManifestResource` します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  メタデータのマージ中に、トークンが再マップ (移動) される場合があります。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IHostSyncManager:: CreateCrst メソッド'
 title: IHostSyncManager::CreateCrst メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ac278cc8-2540-4a6c-b5c6-b90c3970b4f4
 topic_type:
 - apiref
-ms.openlocfilehash: 27861a9258916f4c188d981c44833e5be4c507f2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7d1880f1553d159f62efe65afe8368a60b5bf9cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682881"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784809"
 ---
 # <a name="ihostsyncmanagercreatecrst-method"></a>IHostSyncManager::CreateCrst メソッド
 
@@ -51,7 +52,7 @@ HRESULT CreateCrst (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_OUTOFMEMORY|要求されたクリティカルセクションを作成するのに十分なメモリがありませんでした。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  クリティカルセクションオブジェクトは、1つのプロセスのスレッドのみが使用できるクリティカルセクションを除き、ミューテックスオブジェクトで提供されるものと同様の同期を提供します。 `CreateCrst` Win32 関数をミラー化 `InitializeCriticalSection` します。  
   

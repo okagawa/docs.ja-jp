@@ -1,4 +1,5 @@
 ---
+description: '次の詳細情報: ICLRTask:: SetTaskIdentifier メソッド'
 title: ICLRTask::SetTaskIdentifier メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bdb7f047-1e90-40fc-9e3b-d44a16509073
 topic_type:
 - apiref
-ms.openlocfilehash: d1f731e00d4917b997dfba392cb9b6ce2afc082e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e746d8ec96d16f7761dd49ac814ddbed073c2686
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690747"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784952"
 ---
 # <a name="iclrtasksettaskidentifier-method"></a>ICLRTask::SetTaskIdentifier メソッド
 
@@ -50,7 +51,7 @@ HRESULT SetTaskIdentifier (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ホストは、デバッグ環境で CLR とホストを統合できるように、識別子をタスクに関連付けることができます。 この識別子は、CLR には意味がありません。 CLR はこれをデバッガーアプリケーションに渡します。 デバッガーはこの識別子を使用して、CLR 呼び出し履歴をホストの呼び出し履歴に関連付けて、デバッガーのユーザーインターフェイスに表示されたときに、それぞれのトレース情報を統合できるようにします。  
   

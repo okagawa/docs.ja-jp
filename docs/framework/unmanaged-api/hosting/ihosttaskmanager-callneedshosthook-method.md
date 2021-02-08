@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: IHostTaskManager:: Call Shosthook メソッド'
 title: IHostTaskManager::CallNeedsHostHook メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b60f1f59-9825-4b57-961f-d2979518e6a7
 topic_type:
 - apiref
-ms.openlocfilehash: 7c7af1bbf3d13c3f66d525dfce69d8b49fbe045c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 777e1e6c4ac094a7af077c481415167f57eed14d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675140"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784588"
 ---
 # <a name="ihosttaskmanagercallneedshosthook-method"></a>IHostTaskManager::CallNeedsHostHook メソッド
 
@@ -54,7 +55,7 @@ HRESULT CallNeedsHostHook (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  コードの実行を最適化するために、CLR はコンパイル中に各プラットフォーム呼び出しの分析を実行し、呼び出しをインライン化できるかどうかを判断します。 `CallNeedsHostHook` アンマネージ関数の呼び出しをフックするように要求することによって、ホストがその決定をオーバーライドできるようにします。 ホストにフックが必要な場合、ランタイムは呼び出しをインライン化しません。  
   

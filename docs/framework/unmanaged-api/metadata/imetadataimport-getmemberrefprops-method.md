@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataImport:: GetMemberRefProps メソッド'
 title: IMetaDataImport::GetMemberRefProps メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0ea73055-ece0-4151-a094-414c88ef8941
 topic_type:
 - apiref
-ms.openlocfilehash: 3237b67f8f711e9ef213d6fc66f1513c534fbdeb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b441f39d95c9af1e18d34a1a4d86d6cea33508c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733205"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783880"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps メソッド
 

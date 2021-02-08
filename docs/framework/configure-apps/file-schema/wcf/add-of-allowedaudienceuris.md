@@ -1,13 +1,14 @@
 ---
+description: 詳細については <add> 、 <allowedAudienceUris>
 title: <add> の <allowedAudienceUris>
 ms.date: 03/30/2017
 ms.assetid: 4e7b7637-e0ea-4a91-988f-6b6ef28d9fc3
-ms.openlocfilehash: bcbc9c7dbc5b57da2de2685fff8eee4aca64f7cc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: caa61da0ee7e00691213b95e31c943f5d81eea32
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181688"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782204"
 ---
 # <a name="add-of-allowedaudienceuris"></a>\<add> の \<allowedAudienceUris>
 
@@ -37,7 +38,7 @@ ms.locfileid: "91181688"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |allowedAudienceUri|<xref:System.IdentityModel.Tokens.SamlSecurityToken> インスタンスにより有効と見なされるように、<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> セキュリティ トークンのターゲットとなる URI を含む文字列です。|  
   

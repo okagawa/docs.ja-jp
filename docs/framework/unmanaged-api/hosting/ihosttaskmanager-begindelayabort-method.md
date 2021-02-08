@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IHostTaskManager:: BeginDelayAbort メソッド'
 title: IHostTaskManager::BeginDelayAbort メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 75f42a8b-ed68-4718-a030-a179cfba7d72
 topic_type:
 - apiref
-ms.openlocfilehash: f72cc15904d098e159dd7f75f673d43ae987998d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f991690af4f7e634c8d845bdbd09f690b4ea3af7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727329"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784614"
 ---
 # <a name="ihosttaskmanagerbegindelayabort-method"></a>IHostTaskManager::BeginDelayAbort メソッド
 
@@ -44,7 +45,7 @@ HRESULT BeginDelayAbort ();
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_UNEXPECTED|`BeginDelayAbort` は既に呼び出されていますが、 [Enddelayabort](ihosttaskmanager-enddelayabort-method.md) への対応する呼び出しはまだ受信されていません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ホストは、が呼び出されるまで、現在のタスクを中止することはできません `EndDelayAbort` 。 の `BeginDelayAbort` 呼び出しが介在せずにの別の呼び出しが行われた場合 `EndDelayAbort` 、ホストはから E_UNEXPECTED を返す必要があり、アクションを実行する必要はあり `BeginDelayAbort` ません。  
   

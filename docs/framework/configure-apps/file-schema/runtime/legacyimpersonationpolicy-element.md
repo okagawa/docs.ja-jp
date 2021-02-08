@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <legacyImpersonationPolicy> 要素'
 title: <legacyImpersonationPolicy> 要素
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <legacyImpersonationPolicy> element
 - legacyImpersonationPolicy element
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
-ms.openlocfilehash: ca10c809ddf319817aaa074ba5fc3415abf6387d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 36cc3336e8e3c0196ae20fc749fc2239c35c8584
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192517"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782365"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<legacyImpersonationPolicy> 要素
 
@@ -42,9 +43,9 @@ Windows ID が、現在のスレッドの実行コンテキストのフロー設
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|`false`|<xref:System.Security.Principal.WindowsIdentity> 現在のスレッドのフロー設定に応じて、非同期ポイント間 <xref:System.Threading.ExecutionContext> をフローします。 これは既定値です。|  
+|`false`|<xref:System.Security.Principal.WindowsIdentity> 現在のスレッドのフロー設定に応じて、非同期ポイント間 <xref:System.Threading.ExecutionContext> をフローします。 既定値です。|  
 |`true`|<xref:System.Security.Principal.WindowsIdentity> は、現在のスレッドのフロー設定に関係なく、非同期ポイント間ではフローしません <xref:System.Threading.ExecutionContext> 。|  
   
 ### <a name="child-elements"></a>子要素  

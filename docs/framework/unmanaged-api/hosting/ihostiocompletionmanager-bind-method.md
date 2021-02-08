@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: Ihohoo参照マネージャー:: Bind メソッド'
 title: IHostIoCompletionManager::Bind メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: acd74cb5-7e22-4a07-83c3-82288e1abd9f
 topic_type:
 - apiref
-ms.openlocfilehash: 5231db8de6129ed593e4e0d508b312b7034c01f0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2105bf06c23f70588d0c1bc0cd849b8e810d121e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733907"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784861"
 ---
 # <a name="ihostiocompletionmanagerbind-method"></a>IHostIoCompletionManager::Bind メソッド
 
@@ -54,7 +55,7 @@ HRESULT Bind (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  I/o 完了ポートは、の呼び出しを使用して作成され `CreateIoCompletionPort` ます。 CLR はを呼び出し `Bind` て、そのポートにハンドルをバインドします。  
   

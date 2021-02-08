@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IHostSyncManager:: CreateRWLockWriterEvent メソッド'
 title: IHostSyncManager::CreateRWLockWriterEvent メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 70e488c2-cf53-4dc0-ba52-74372d215c41
 topic_type:
 - apiref
-ms.openlocfilehash: 5b5faf14337f78d9b176787528ae8947f5810ba6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 509f18ff49966e5da3a25e39258d33caf69249a0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704371"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784757"
 ---
 # <a name="ihostsyncmanagercreaterwlockwriterevent-method"></a>IHostSyncManager::CreateRWLockWriterEvent メソッド
 
@@ -55,7 +56,7 @@ HRESULT CreateRWLockWriterEvent (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_OUTOFMEMORY|要求されたイベントオブジェクトを作成するのに十分なメモリがありませんでした。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  CLR は、メソッドを呼び出して、 `CreateRWLockWriterEvent` `IHostAutoEvent` ライターロックの実装で使用するインスタンスへの参照を取得します。 ホストは、指定された cookie を使用して、 [ICLRSyncManager](iclrsyncmanager-interface.md) インターフェイスの反復メソッドを呼び出すことによって、ロックを待機しているタスクを判別できます。  
   

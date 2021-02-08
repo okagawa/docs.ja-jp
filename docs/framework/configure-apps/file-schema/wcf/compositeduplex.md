@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <compositeDuplex>'
 title: <compositeDuplex>
 ms.date: 03/30/2017
 ms.assetid: 725004d1-ce88-4405-a220-78e89844f81f
-ms.openlocfilehash: a5209efddd489f8cb04b3266e6ba0bb033eeae6c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0a9ec47027618a5f4fb30b627ccb9ad04c547f48
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91176020"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782183"
 ---
 # \<compositeDuplex>
 
@@ -32,13 +33,13 @@ ms.locfileid: "91176020"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
-|clientBaseAddress|二重モードのバック チャネルのアドレスを設定する URI。 サービスは、このアドレスを使用して、クライアントへのアクセス、接続の確立を行います。<br /><br /> この属性が設定されていない場合、既定のアドレス " `full qualified name+default port\TemporaryIndigoAddress\guid` " が生成されます。 既定では、 `null`です。|  
+|clientBaseAddress|二重モードのバック チャネルのアドレスを設定する URI。 サービスは、このアドレスを使用して、クライアントへのアクセス、接続の確立を行います。<br /><br /> この属性が設定されていない場合、既定のアドレス " `full qualified name+default port\TemporaryIndigoAddress\guid` " が生成されます。 既定値は、`null` です。|  
   
 ### <a name="child-elements"></a>子要素  
 
- None  
+ なし  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -65,5 +66,5 @@ ms.locfileid: "91176020"
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

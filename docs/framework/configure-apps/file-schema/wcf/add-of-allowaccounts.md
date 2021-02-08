@@ -1,13 +1,14 @@
 ---
+description: 詳細については <add> 、 <allowAccounts>
 title: <add> の <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 763c7b1f-e7b0-4d99-a42c-4506fcb8da00
-ms.openlocfilehash: cd4b9fd02eee2de1d0e8be185ffb69c0eae1cd58
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 275631c4467a888966e89a2f664b186f989ae101
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181727"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782222"
 ---
 # <a name="add-of-allowaccounts"></a>\<add> の \<allowAccounts>
 
@@ -33,7 +34,7 @@ WCF サービスをホストし、共有サービスへの接続アクセスが�
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |securityIdentifier|ユーザー アカウントの識別に使用される一意の識別子を指定する文字列。 既定値は LocalSystem、Administrators、NS、LS、および IIS_USRS です。|  
   

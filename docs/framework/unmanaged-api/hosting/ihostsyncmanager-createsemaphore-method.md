@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IHostSyncManager:: CreateSemaphore メソッド'
 title: IHostSyncManager::CreateSemaphore メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37679e94-5ff9-4173-8fa5-457febeb89bf
 topic_type:
 - apiref
-ms.openlocfilehash: 9af38a58ce8786c56d9f50089605dc994167497e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5a03ef7532e2ac8357ec015b40cc54942f5420e5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722129"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784744"
 ---
 # <a name="ihostsyncmanagercreatesemaphore-method"></a>IHostSyncManager::CreateSemaphore メソッド
 
@@ -59,7 +60,7 @@ HRESULT CreateSemaphore (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_OUTOFMEMORY|要求されたイベントオブジェクトを作成するのに十分なメモリがありませんでした。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `CreateSemaphore` 同じ名前を持つ Win32 関数をミラー化します。 `dwInitial`パラメーターと `dwMax` パラメーターは、それぞれ、Win32 およびパラメーターと同じセマンティクスを使用し `lInitialCount` `lMaximumCount` ます。 `dwInitial` 0からまでの範囲で指定する必要があり `dwMax` ます。 `dwMax` は 0 よりも大きい値にする必要があります。  
   

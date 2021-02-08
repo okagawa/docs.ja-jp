@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <namedCaches> 要素 (キャッシュ設定)'
 title: <namedCaches> 要素 (キャッシュ設定)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-ms.openlocfilehash: ad76c01bba859934be399d73262bd974309efe98
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 543650513270c0cee24d965b8efe98a75d7b8f9a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192400"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782326"
 ---
 # <a name="namedcaches-element-cache-settings"></a>\<namedCaches> 要素 (キャッシュ設定)
 
@@ -30,7 +31,7 @@ ms.locfileid: "91192400"
 </namedCaches>  
 ```  
   
-## <a name="type"></a>種類  
+## <a name="type"></a>Type  
 
  `None`  
   
@@ -40,7 +41,7 @@ ms.locfileid: "91192400"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |`cacheMemoryLimitMegabytes`|のインスタンスを拡張できる最大許容サイズを mb 単位で指定する整数値 <xref:System.Runtime.Caching.MemoryCache> 。 既定値は0です。これは、クラスの自動サイズ調整ヒューリスティックが <xref:System.Runtime.Caching.MemoryCache> 既定で使用されることを意味します。|  
 |`name`|キャッシュの名前。|  

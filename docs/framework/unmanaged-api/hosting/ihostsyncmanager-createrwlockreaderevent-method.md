@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IHostSyncManager:: CreateRWLockReaderEvent メソッド'
 title: IHostSyncManager::CreateRWLockReaderEvent メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 68c4ea19-c47c-45c6-b420-d3a2ba1c2d50
 topic_type:
 - apiref
-ms.openlocfilehash: 7c9bf2186d3dc4500694225ea4023df3609b9010
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: be20757924aa45d2a44edab9bf921026aa0247a5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704384"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784770"
 ---
 # <a name="ihostsyncmanagercreaterwlockreaderevent-method"></a>IHostSyncManager::CreateRWLockReaderEvent メソッド
 
@@ -59,7 +60,7 @@ HRESULT CreateRWLockReaderEvent (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_OUTOFMEMORY|要求されたイベントオブジェクトを作成するのに十分なメモリがありませんでした。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  CLR は、を呼び出して、 `CreateRWLockReaderEvent` `IHostManualEvent` リーダーロックの実装で使用するインスタンスへの参照を取得します。 ホストは cookie を使用して、 [ICLRSyncManager](iclrsyncmanager-interface.md) インターフェイスを照会することによって、リーダーロックを待機しているタスクを特定できます。  
   

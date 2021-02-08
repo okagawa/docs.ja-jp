@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CorManifestResourceFlags 列挙型」を参照してください。
 title: CorManifestResourceFlags 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b0306b7-622b-4b57-8edc-3c713bb147ae
 topic_type:
 - apiref
-ms.openlocfilehash: f8334cb44042e21c086bc05c723e99b0c079fa2c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a863e1248bf5274e12fc16d2edea6b28dd493963
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677064"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784406"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a>CorManifestResourceFlags 列挙型
 
