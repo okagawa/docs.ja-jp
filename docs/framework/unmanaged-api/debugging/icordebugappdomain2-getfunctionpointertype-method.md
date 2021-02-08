@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ICorDebugAppDomain2:: Getfunctionポインター Type メソッド'
 title: ICorDebugAppDomain2::GetFunctionPointerType メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0aba6096-5b38-435c-a72a-86d35db4daef
 topic_type:
 - apiref
-ms.openlocfilehash: be797b1b3f288fd367d7f624e9cf33015dd114ac
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2b9e10295df40b8e7db82e489fe8a6d28214ff38
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95698274"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99772394"
 ---
 # <a name="icordebugappdomain2getfunctionpointertype-method"></a>ICorDebugAppDomain2::GetFunctionPointerType メソッド
 

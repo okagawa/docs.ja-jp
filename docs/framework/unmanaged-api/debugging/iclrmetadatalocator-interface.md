@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICLRMetadataLocator インターフェイス」を参照してください。
 title: ICLRMetadataLocator インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43c944f4-406a-4df6-981e-0eabb33dd5d0
 topic_type:
 - apiref
-ms.openlocfilehash: 69c52c13a4a0aca5094274de969ebed6e09651b2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6e7fd45197294563e12da020379d1bd54b088698
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723507"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99772610"
 ---
 # <a name="iclrmetadatalocator-interface"></a>ICLRMetadataLocator インターフェイス
 
@@ -31,7 +32,7 @@ ms.locfileid: "95723507"
 |------------|-----------------|  
 |[GetMetadata メソッド](iclrmetadatalocator-getmetadata-method.md)|ターゲットプロセスからイメージのメタデータを取得します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  API クライアント (つまりデバッガー) は、特定のターゲット プロセスに応じてこのインターフェイスを実装する必要があります。 たとえば、ライブプロセスの実装は、メモリダンプの実装とは異なります。  
   

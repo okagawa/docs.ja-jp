@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorDebug インターフェイス」を参照してください。
 title: ICorDebug インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 33f431d7-ab1a-494d-8af2-20ab15aba194
 topic_type:
 - apiref
-ms.openlocfilehash: 21838bdd8ff45f8f74524dc4da52364fb032b396
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b989013f7eb54e163feeb965e10448a3a1756e3a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723403"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99772524"
 ---
 # <a name="icordebug-interface"></a>ICorDebug インターフェイス
 
@@ -42,7 +43,7 @@ ms.locfileid: "95723403"
 |[SetUnmanagedHandler メソッド](icordebug-setunmanagedhandler-method.md)|アンマネージイベントのイベントハンドラーオブジェクトを指定します。|  
 |[Terminate メソッド](icordebug-terminate-method.md)|オブジェクトを終了 `ICorDebug` します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ICorDebug` デバッガープロセスのイベント処理ループを表します。 デバッガーは、このインターフェイスを解放する前に、デバッグされているすべてのプロセスからの "ExitProcess" コール [バック](icordebugmanagedcallback-exitprocess-method.md) を待機する必要があります。  
   
