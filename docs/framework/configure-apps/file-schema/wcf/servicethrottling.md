@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <serviceThrottling>'
 title: <serviceThrottling>
 ms.date: 03/30/2017
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-ms.openlocfilehash: 0c6d844ac287037b7a546d3a48e7cd924e8a63d1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: eb65f6d60a266a367789d87e4e6ea10ebfd2c7a7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153613"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786682"
 ---
 # \<serviceThrottling>
 
@@ -34,7 +35,7 @@ WCF (Windows Communication Foundation) サービスの調整機構を指定し�
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |maxConcurrentCalls|<xref:System.ServiceModel.ServiceHost> で同時に処理できるメッセージ数を制限する正の整数。 制限を超える呼び出しはキューに格納されます。 この値を 0 に設定することは、Int32.MaxValue に設定することと同じです。 既定値は 16 x プロセッサ数です。|  
 |maxConcurrentInstances|<xref:System.ServiceModel.InstanceContext> で同時に実行できる <xref:System.ServiceModel.ServiceHost> オブジェクト数を制限する正の整数。 追加インスタンスの作成要求は、キューに置かれ、制限下のスロットが利用できるようになったときに完了されます。 既定値は maxConcurrentSessions と MaxConcurrentCalls の合計です。|  

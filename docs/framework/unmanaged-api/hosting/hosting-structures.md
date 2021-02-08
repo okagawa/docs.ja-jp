@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ホスト構造体」を参照してください
 title: ホスト構造体
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], hosting
 - structures [.NET Framework hosting]
 ms.assetid: 492e010f-7493-4134-9505-f7008ccdaae6
-ms.openlocfilehash: 9d0349e4801c550731b6d126197003917c4a46e8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0eb7c95c22d7dc6c6018ad5071eaa47b0ecea2d9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721791"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785160"
 ---
 # <a name="hosting-structures"></a>ホスト構造体
 

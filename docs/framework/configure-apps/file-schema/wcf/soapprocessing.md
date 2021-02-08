@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <soapProcessing>'
 title: <soapProcessing>
 ms.date: 03/30/2017
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
-ms.openlocfilehash: 0728e22205d4ac2c7674f7690e142aed51d42440
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1355dc5b344891d7b6ed0fa0d5c64f877ec0ba48
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399540"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786669"
 ---
 # \<soapProcessing>
 
@@ -42,7 +43,7 @@ ms.locfileid: "70399540"
 
 ### <a name="parent-elements"></a>親要素
 
-|     | Description |
+|     | 説明 |
 | --- | ----------- |
 | [**\<behavior>**](behavior-of-endpointbehaviors.md) | エンドポイントの動作を指定します。 |
 

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <tcpTransport>'
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 6d4302e1840f58e2daad855942493cc96b7d5e34
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b660443ac58e8ed72d70adb5bf9e9e87b060e3af
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158670"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786617"
 ---
 # \<tcpTransport>
 
@@ -50,7 +51,7 @@ ms.locfileid: "91158670"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |channelInitializationTimeout|チャネルの初期化に対して許容される時間制限を取得または設定します。  接続が切断されるまでのチャネルの初期化ステータスの最大時間 (秒単位)。 このクォータには、TCP 接続が .NET メッセージフレーミングプロトコルを使用して自身を認証するのにかかる時間が含まれます。 クライアントは、サーバーが認証を実行するための十分な情報を得る前に初期データを送信する必要があります。 既定値は 30 秒です。|  
 |connectionBufferSize|クライアントまたサービスからネットワークでシリアル化されたメッセージのチャンクを転送するために使用されるバッファーのサイズを取得または設定します。|  
@@ -63,14 +64,14 @@ ms.locfileid: "91158670"
 |maxPendingAccepts|サービスに対する着信接続処理に使用できる保留中の非同期受け入れ操作の最大数を取得または設定します。|  
 |maxPendingConnections|サービスでディスパッチを待機している最大接続数を取得または設定します。|  
 |maxReceivedMessageSize|受信できる最大メッセージ サイズを取得または設定します。|  
-|portSharingEnabled|TCP ポート共有をこの接続で有効にする場合に指定するブール値。 これが `false` の場合、各バインディングは独自の排他ポートを使用します。 既定では、 `false`です。<br /><br /> この設定は、サービスのみに関連します。 クライアントには影響はありません。<br /><br /> この設定を使用するには、[スタートアップの種類] を [手動] または [自動] に変更して、Windows Communication Foundation (WCF) の TCP ポート共有サービスを有効にする必要があります。|  
-|teredoEnabled|Teredo (ファイアウォールの内側にあるクライアントをアドレス指定するためのテクノロジ) が有効であるかどうかを指定するブール値。 既定では、 `false`です。<br /><br /> このプロパティは、基になる TCP ソケットで Tredo を有効にします。 詳細については、「 [Teredo の概要](/previous-versions/windows/it-pro/windows-xp/bb457011(v=technet.10))」を参照してください。<br /><br /> このプロパティは、Windows XP SP2 および Windows Server 2003 でのみ適用できます。 Windows Vista には、Teredo 用のコンピューター全体の構成オプションがあるため、Vista を実行する場合、このプロパティは無視されます。 Teredo の場合、クライアント コンピューターおよびサービス コンピューターの両方に Microsoft IPv6 スタックをインストールし、Teredo 用に正しく設定する必要があります。|  
+|portSharingEnabled|TCP ポート共有をこの接続で有効にする場合に指定するブール値。 これが `false` の場合、各バインディングは独自の排他ポートを使用します。 既定値は、`false` です。<br /><br /> この設定は、サービスのみに関連します。 クライアントには影響はありません。<br /><br /> この設定を使用するには、[スタートアップの種類] を [手動] または [自動] に変更して、Windows Communication Foundation (WCF) の TCP ポート共有サービスを有効にする必要があります。|  
+|teredoEnabled|Teredo (ファイアウォールの内側にあるクライアントをアドレス指定するためのテクノロジ) が有効であるかどうかを指定するブール値。 既定値は、`false` です。<br /><br /> このプロパティは、基になる TCP ソケットで Tredo を有効にします。 詳細については、「 [Teredo の概要](/previous-versions/windows/it-pro/windows-xp/bb457011(v=technet.10))」を参照してください。<br /><br /> このプロパティは、Windows XP SP2 および Windows Server 2003 でのみ適用できます。 Windows Vista には、Teredo 用のコンピューター全体の構成オプションがあるため、Vista を実行する場合、このプロパティは無視されます。 Teredo の場合、クライアント コンピューターおよびサービス コンピューターの両方に Microsoft IPv6 スタックをインストールし、Teredo 用に正しく設定する必要があります。|  
 |transferMode|接続指向のトランスポートでメッセージをバッファーするか、ストリーム配信するかを示す値を取得または設定します。|  
 |connectionPoolSettings|名前付きパイプ バインディングの追加の接続プール設定を指定します。|  
   
 ### <a name="child-elements"></a>子要素  
 
- None  
+ なし  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -94,5 +95,5 @@ ms.locfileid: "91158670"
 - [トランスポートの選択](../../../wcf/feature-details/choosing-a-transport.md)
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

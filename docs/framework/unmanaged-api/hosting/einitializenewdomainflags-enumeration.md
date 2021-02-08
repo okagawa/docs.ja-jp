@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: EInitializeNewDomainFlags 列挙型'
 title: EInitializeNewDomainFlags 列挙体
 ms.date: 03/30/2017
 api_name:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - EInitializeNewDomainFlags enumeration [.NET Framework hosting]
 ms.assetid: 3a120ab2-f5ef-4c9b-8595-d3ed7247c342
-ms.openlocfilehash: 8350b507609e63c060cda08514200d386c37a6b3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b856d061e86c0c79b35f842975378307b79a37e7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724326"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785466"
 ---
 # <a name="einitializenewdomainflags-enumeration"></a>EInitializeNewDomainFlags 列挙体
 
@@ -39,7 +40,7 @@ typedef enum {
 |`eInitializeNewDomainFlags_None`|フラグなし。|  
 |`eInitializeNewDomainFlags_NoSecurityChanges`|ホストがメソッド内のアプリケーションドメインのセキュリティ状態に変更を加えないことを、共通言語ランタイム (CLR) に通知し <xref:System.AppDomainManager.InitializeNewDomain%2A> ます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  [ICLRDomainManager:: SetAppDomainManagerType](iclrdomainmanager-setappdomainmanagertype-method.md)メソッドは、型のパラメーターを受け取り `EInitializeNewDomainFlags` ます。  
   

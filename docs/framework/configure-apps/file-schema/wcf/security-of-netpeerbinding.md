@@ -1,13 +1,14 @@
 ---
+description: 詳細については <security> 、 <netPeerBinding>
 title: <security> の <netPeerBinding>
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-ms.openlocfilehash: 543c57d6b2dba1ff5934b49e0e219cf2e5cad153
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f67cfa445a5a605b99783cfd67dd1bae6e17b51e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91170026"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786838"
 ---
 # <a name="security-of-netpeerbinding"></a>\<security> の \<netPeerBinding>
 
@@ -38,16 +39,16 @@ ms.locfileid: "91170026"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
-|mode|省略可能。 このバインディングで構成されたピアが使用するセキュリティの種類を指定します。 既定値は `Message` です。 この属性は <xref:System.ServiceModel.SecurityMode> 型です。|  
+|mode|任意。 このバインディングで構成されたピアが使用するセキュリティの種類を指定します。 既定値は `Message` です。 この属性は <xref:System.ServiceModel.SecurityMode> 型です。|  
   
 ## <a name="mode-attribute"></a>mode 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |Message|SOAP セキュリティにより、認証、整合性、および機密性が実現します。|  
-|None|セキュリティを無効にします。|  
+|なし|セキュリティを無効にします。|  
 |トランスポート|セキュリティは、HTTPS を使用して確保されます。|  
 |TransportWithMessageCredential|HTTPS により、認証および機密性が実現します。 SOAP メッセージには、豊富な資格情報の種類が用意されています。|  
   

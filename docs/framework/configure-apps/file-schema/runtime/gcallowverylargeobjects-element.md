@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: <gcAllowVeryLargeObjects> 要素'
 title: gcAllowVeryLargeObjects 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - gcAllowVeryLargeObjects element
 - <gcAllowVeryLargeObjects> element
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
-ms.openlocfilehash: 1e54b0780ffb5bbe81ab1be2b376ff7a038ee05c
-ms.sourcegitcommit: 0273f8845eb1ea8de64086bef2271b4f22182c91
+ms.openlocfilehash: ff8380a13c4284cc24178e185344207c3b9a39b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2021
-ms.locfileid: "98058130"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787020"
 ---
 # <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects> 要素
 
@@ -34,9 +35,9 @@ ms.locfileid: "98058130"
   
 ### <a name="enabled-attribute"></a>enabled 属性  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|`false`|合計サイズが 2 GB を超える配列は有効ではありません。 これは既定値です。|  
+|`false`|合計サイズが 2 GB を超える配列は有効ではありません。 既定値です。|  
 |`true`|64 ビット プラットフォームで、合計サイズが 2 GB を超える配列が有効になっています。|  
   
 ## <a name="child-elements"></a>子要素  

@@ -1,13 +1,14 @@
 ---
+description: 詳細については <security> 、 <ws2007HttpBinding>
 title: <security> の <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
-ms.openlocfilehash: 48b49bf69f791f90ed5b2eea8e6d412438cd9519
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ef8b82d34b318db79db061b9c01b147e619d39c4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169844"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786812"
 ---
 # <a name="security-of-ws2007httpbinding"></a>\<security> の \<ws2007HttpBinding>
 
@@ -45,13 +46,13 @@ ms.locfileid: "91169844"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
-|`mode`|Optional. 適用するセキュリティの種類を指定します。 既定では、 `Message`です。<br /><br /> この属性は <xref:System.ServiceModel.SecurityMode> 型です。|  
+|`mode`|Optional. 適用するセキュリティの種類を指定します。 既定値は、`Message` です。<br /><br /> この属性は <xref:System.ServiceModel.SecurityMode> 型です。|  
   
 ## <a name="mode-attribute"></a>Mode 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |`None`|セキュリティを無効にします。|  
 |`Transport`|セキュリティは、HTTPS を使用して確保されます。 サービスは、Secure Sockets Layer (SSL) 証明書を使用して構成する必要があります。 メッセージは、HTTPS およびサービスを使用して完全にセキュリティで保護され、サービスの SSL 証明書を使用するクライアントによって認証されます。 クライアント認証は、要素の属性によって制御され `ClientCredentials` [\<transport>](transport-of-ws2007httpbinding.md) ます。|  

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <serviceAuthenticationManager>'
 title: <serviceAuthenticationManager>
 ms.date: 03/30/2017
 ms.assetid: 5d69e64f-f325-4d55-8e2d-0fb30f222dda
-ms.openlocfilehash: a7c1e06c74bd3ba62d52ef833b8ffb6a8fd594fb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ae9c8d7f74b3ad7d0c61a77d20f38f228c695970
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91167172"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786773"
 ---
 # \<serviceAuthenticationManager>
 
@@ -38,7 +39,7 @@ ms.locfileid: "91167172"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |serviceAuthenticationManagerType|現在の動作の認証ポリシーの種類を指定する文字列。|  
   

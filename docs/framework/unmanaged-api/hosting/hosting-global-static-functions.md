@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ホストするグローバル静的関数」を参照してください。
 title: ホスト グローバル静的関数
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - hosting global static functions [.NET Framework]
 - unmanaged global static functions [.NET Framework], hosting
 ms.assetid: 4e4ad69d-9343-4f6a-aed8-fe0335a3b979
-ms.openlocfilehash: cc9af7397bc165e0ca68f58134fd5df3c02b1f4b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3d5339dbf4fd84d24919f9286a81f065b06e9d2b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721817"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785199"
 ---
 # <a name="hosting-global-static-functions"></a>ホスト グローバル静的関数
 

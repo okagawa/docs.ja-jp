@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「EClrFailure 列挙型」を参照してください。
 title: EClrFailure 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37b95cce-9bfb-4ecf-a00b-33dcba782c67
 topic_type:
 - apiref
-ms.openlocfilehash: d2794b53ed17640413928b3af0d1ed3656e25f22
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9f3a2270651e5b05d2d31ed90511b8eb05dd4d44
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675764"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785589"
 ---
 # <a name="eclrfailure-enumeration"></a>EClrFailure 列挙型
 
@@ -51,7 +52,7 @@ typedef enum {
 |`FAIL_AccessViolation`|保護されたメモリの読み取りまたは書き込みが試行されました。 .NET Framework 4 ではサポートされていません。|  
 |`FAIL_CodeContract`|コードコントラクトエラーが発生しました。 「 [コードコントラクト](../../debug-trace-profile/code-contracts.md)」を参照してください。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  エラー条件のポリシーアクションを指定するためにホストで使用できる[Epolicyaction](epolicyaction-enumeration.md)値の一覧については、 [ICLRPolicyManager:: SetActionOnFailure](iclrpolicymanager-setactiononfailure-method.md)メソッドを参照してください。 クリティカルな、またはクリティカルでないコード領域の詳細については、「 [EClrOperation](eclroperation-enumeration.md)」を参照してください。  
   

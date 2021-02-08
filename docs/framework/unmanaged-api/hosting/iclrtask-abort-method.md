@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRTask:: Abort メソッド'
 title: ICLRTask::Abort メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b3594b5f-2e41-4e36-9096-3586276a138c
 topic_type:
 - apiref
-ms.openlocfilehash: aadbbb5fc6abd3829f14670e42149174f6ef238d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ddb761ac50d7401180355236aa8fdc22cca1c580
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690851"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785007"
 ---
 # <a name="iclrtaskabort-method"></a>ICLRTask::Abort メソッド
 
@@ -43,7 +44,7 @@ HRESULT Abort ();
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  CLR は、 <xref:System.Threading.ThreadAbortException> ホストがを呼び出したときにを発生させ `Abort` ます。 ファイナライザーや例外処理機構などのユーザーコードが実行されるのを待たずに、例外情報が初期化された直後に制御が戻ります。 を呼び出すと、が `Abort` すぐに返されます。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: EPolicyAction 列挙型'
 title: EPolicyAction 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 72dd76ba-239e-45ac-9ded-318fb07d6c6d
 topic_type:
 - apiref
-ms.openlocfilehash: 72b371d72b2f055f2840da5595d9022ffd7e2507
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fb66de2211972bd4d25ccfbab4965f315c0144a2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674743"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785472"
 ---
 # <a name="epolicyaction-enumeration"></a>EPolicyAction 列挙型
 
@@ -57,7 +58,7 @@ typedef enum {
 |`eThrowException`|メモリ不足、バッファーオーバーフローなどの条件に適した例外をスローする必要があることを指定します。|  
 |`eUnloadAppDomain`|をアンロードすることを指定し <xref:System.AppDomain> ます。 CLR はファイナライザーの実行を試みます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ホストは、 [ICLRPolicyManager](iclrpolicymanager-interface.md) インターフェイスのメソッドを呼び出すことによって、ポリシーアクションを設定します。 ルードと正常な中止の詳細については、 [EClrOperation](eclroperation-enumeration.md) 列挙体を参照してください。  
   

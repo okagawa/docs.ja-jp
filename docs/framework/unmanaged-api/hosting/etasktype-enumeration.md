@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ETaskType 列挙型'
 title: ETaskType 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aa527b31-89d4-41f2-ad6f-63b76950b7df
 topic_type:
 - apiref
-ms.openlocfilehash: 332488fee4c982fdbaecceeaa2a6a3876f1602a5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7cb241765b2ff3b4a3402221c6b3e2b7ff6305c1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733699"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785407"
 ---
 # <a name="etasktype-enumeration"></a>ETaskType 列挙型
 

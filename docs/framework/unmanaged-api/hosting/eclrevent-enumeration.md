@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「EClrEvent 列挙型」を参照してください。
 title: EClrEvent 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7c36a7c2-75a2-4971-bc23-abf54c812154
 topic_type:
 - apiref
-ms.openlocfilehash: 5d6ec42da60a7b294177063b9f8bd5afbf352c62
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7c2365d1a2fb0109bab9159c3af4e2da3a46de6f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726822"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785602"
 ---
 # <a name="eclrevent-enumeration"></a>EClrEvent 列挙型
 
@@ -45,7 +46,7 @@ typedef enum {
 |`Event_MDAFired`|マネージデバッグアシスタント (MDA) メッセージが生成されたことを示します。|  
 |`Event_StackOverflow`|スタックオーバーフローエラーが発生したことを示します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ホストは、 `EClrEvent` [ICLROnEventManager](iclroneventmanager-interface.md) インターフェイスのメソッドを呼び出すことによって、によって記述された任意のイベントの種類のコールバックを登録できます。 ホストは、 [ICLRControl:: GetCLRManager](iclrcontrol-getclrmanager-method.md) メソッドを呼び出すことによって、このインターフェイスへのポインターを取得します。  
   

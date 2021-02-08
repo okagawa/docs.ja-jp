@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <enforceFIPSPolicy> 要素'
 title: <enforceFIPSPolicy> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - <enforceFIPSPolicy> element
 - Federal Information Processing Standards (FIPS)
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
-ms.openlocfilehash: 864a371d4ad10585e672452ad85cc09d4b684068
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d445570db634867a15b6d97d4e20186bd0641c2d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158839"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787072"
 ---
 # <a name="enforcefipspolicy-element"></a>\<enforceFIPSPolicy> 要素
 
@@ -40,9 +41,9 @@ ms.locfileid: "91158839"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|`true`|暗号化アルゴリズムが FIPS に準拠するようにコンピューターが構成されている場合は、その要件が適用されます。 クラスが FIPS に準拠していないアルゴリズムを実装している場合、そのクラスのコンストラクターまたはメソッドは、その `Create` コンピューターで実行されるときに例外をスローします。 これは既定値です。|  
+|`true`|暗号化アルゴリズムが FIPS に準拠するようにコンピューターが構成されている場合は、その要件が適用されます。 クラスが FIPS に準拠していないアルゴリズムを実装している場合、そのクラスのコンストラクターまたはメソッドは、その `Create` コンピューターで実行されるときに例外をスローします。 既定値です。|  
 |`false`|アプリケーションで使用される暗号化アルゴリズムは、コンピューターの構成に関係なく、FIPS に準拠している必要はありません。|  
   
 ### <a name="child-elements"></a>子要素  

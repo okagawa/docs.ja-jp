@@ -1,13 +1,14 @@
 ---
+description: 詳細については <security> 、 <peerTransport>
 title: <security> の <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
-ms.openlocfilehash: f37c336b0e42993e1eef3f06e2f919705f425a2e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 592f886377a2d5f2008be900a9e7586385fb3782
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169961"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786825"
 ---
 # <a name="security-of-peertransport"></a>\<security> の \<peerTransport>
 
@@ -35,13 +36,13 @@ ms.locfileid: "91169961"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |`mode`|適用するセキュリティの種類を指定します。 既定値は Message です。 この属性は <xref:System.ServiceModel.SecurityMode> 型です。|  
   
 ## <a name="mode-attribute"></a>mode 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |`None`|セキュリティを無効にします。|  
 |`Transport`|セキュリティは、HTTPS を使用して確保されます。|  
@@ -70,5 +71,5 @@ ms.locfileid: "91169961"
 - [トランスポートの選択](../../../wcf/feature-details/choosing-a-transport.md)
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

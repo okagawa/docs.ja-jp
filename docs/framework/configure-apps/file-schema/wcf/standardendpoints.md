@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <standardEndpoints>'
 title: <standardEndpoints>
 ms.date: 03/30/2017
 ms.assetid: d62153d7-a6e6-462a-a784-cca61e9c2ba1
-ms.openlocfilehash: 5d0607b5c541fc5ae402a50a0f8c464355b6b246
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f792f55b2c0c76727f4aaee50df072ee0c8bdbc5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91157201"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786656"
 ---
 # \<standardEndpoints>
 

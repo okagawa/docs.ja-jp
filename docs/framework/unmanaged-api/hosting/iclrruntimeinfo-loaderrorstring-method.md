@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRRuntimeInfo:: LoadErrorString メソッド'
 title: ICLRRuntimeInfo::LoadErrorString メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 52c543ab-9ef5-4ee7-b836-c0ffc35cd45b
 topic_type:
 - apiref
-ms.openlocfilehash: 0e029aa848a6630ae00c834dd2b924dc4ebce537
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0523b5b89072db50c83c52065c22e9df7167a027
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95671773"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785069"
 ---
 # <a name="iclrruntimeinfoloaderrorstring-method"></a>ICLRRuntimeInfo::LoadErrorString メソッド
 

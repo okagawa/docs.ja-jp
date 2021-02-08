@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRRuntimeInfo:: LoadLibrary メソッド'
 title: ICLRRuntimeInfo::LoadLibrary メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4517ada3-4417-4ac5-a150-73da7a87c686
 topic_type:
 - apiref
-ms.openlocfilehash: aa45c814568188a5fe93e3acd2514cb54bb0f984
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 47557934868c7c1b68b23bf4eded0e90705d7252
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688615"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785056"
 ---
 # <a name="iclrruntimeinfoloadlibrary-method"></a>ICLRRuntimeInfo::LoadLibrary メソッド
 
@@ -54,7 +55,7 @@ HRESULT LoadLibrary(
 |E_POINTER|`pwzDllName` または `phndModule` が null です。|  
 |E_OUTOFMEMORY|要求を処理するのに十分なメモリがありません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドは、.NET Framework 再頒布可能パッケージに含まれている Dll のみを読み込みます。 ユーザーが生成したアセンブリを読み込むことはできません。  
   

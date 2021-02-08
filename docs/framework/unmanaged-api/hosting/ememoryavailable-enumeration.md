@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: EMemoryAvailable 列挙型'
 title: EMemoryAvailable 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 38e72a06-dbed-473b-a59b-7e0b3ea4f2af
 topic_type:
 - apiref
-ms.openlocfilehash: 6a8765bfd62a2e6543661804ab8d009ce19f8813
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fdb33b45c354d39b1a52fd815a44041b659181ec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724313"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785448"
 ---
 # <a name="ememoryavailable-enumeration"></a>EMemoryAvailable 列挙型
 
@@ -43,7 +44,7 @@ typedef enum {
 |`eMemoryAvailableLow`|使用できる物理メモリが非常に少なくなっています。|  
 |`eMemoryAvailableNeutral`|使用可能な物理メモリはニュートラルです。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  この値は、 [ICLRMemoryNotificationCallback:: OnMemoryNotification](iclrmemorynotificationcallback-onmemorynotification-method.md) メソッドの呼び出しを使用して、ホストによって共通言語ランタイム (CLR) に渡されます。  
   

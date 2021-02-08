@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「GetVersionFromProcess 関数」を参照してください。
 title: GetVersionFromProcess 関数
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a9f7f824-64a1-408d-8607-91c7f19d21fe
 topic_type:
 - apiref
-ms.openlocfilehash: da0d159da6eef7745c1fa7f7320d5e1355f6e413
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ab665d2984f79baf049009690b36782528094937
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721882"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785251"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess 関数
 
@@ -60,7 +61,7 @@ HRESULT GetVersionFromProcess (
 |リターン コード|説明|  
 |-----------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|E_INVALIDARG|`pVersion` が null で `cchBuffer` あり、が null ではないか、またはその逆です。<br /><br /> - または -<br /><br /> `hProcess` は、プロセスへの有効なハンドルではありません。<br /><br /> - または -<br /><br /> CLR が読み込まれていません。|  
+|E_INVALIDARG|`pVersion` が null で `cchBuffer` あり、が null ではないか、またはその逆です。<br /><br /> \- または -<br /><br /> `hProcess` は、プロセスへの有効なハンドルではありません。<br /><br /> \- または -<br /><br /> CLR が読み込まれていません。|  
 |ERROR_INSUFFICIENT_BUFFER|`cchBuffer` が null であるか、またはバージョン文字列の長さを下回っています。|  
 |E_NOTIMPL|この方法は、Microsoft Windows 95、Microsoft Windows 98、または Microsoft Windows Millennium Edition オペレーティングシステムでは使用できません。|  
   

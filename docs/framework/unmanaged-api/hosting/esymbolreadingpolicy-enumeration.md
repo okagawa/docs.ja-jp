@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: ESymbolReadingPolicy 列挙型'
 title: ESymbolReadingPolicy 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4dc6c80d-b694-480b-a378-d5b18420ce17
 topic_type:
 - apiref
-ms.openlocfilehash: 42ce1f02294db98c5c593a5f16de5226703d5f9d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e84c31343b589cb6019d88fafc9b94207c5f5892
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733712"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785420"
 ---
 # <a name="esymbolreadingpolicy-enumeration"></a>ESymbolReadingPolicy 列挙型
 
@@ -43,7 +44,7 @@ typedef enum {
 |`eSymbolReadingFullTrustOnly`|デバッガーが、完全に信頼されたアセンブリに関連付けられている PDB ファイルのみを読み取るように指定します。|  
 |`eSymbolReadingNever`|デバッガーが PDB ファイルを読み取らないように指定します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ESymbolReadingPolicy`列挙体は、 [ICLRDebugManager:: SetSymbolReadingPolicy](iclrdebugmanager-setsymbolreadingpolicy-method.md)メソッドと共に使用されます。  
   

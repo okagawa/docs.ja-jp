@@ -1,14 +1,15 @@
 ---
+description: '詳細情報: <samlSecurityTokenRequirement>'
 title: <samlSecurityTokenRequirement>
 ms.date: 03/30/2017
 ms.assetid: 09202d12-88d3-49cc-953b-703bcc1690eb
 author: BrucePerlerMS
-ms.openlocfilehash: f93ec0007b537e306a570b166eaa4cd2fe7f81e2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 21e584480aae6f620e0809be77e02789536db426
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91157032"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786565"
 ---
 # \<samlSecurityTokenRequirement>
 
@@ -49,7 +50,7 @@ ms.locfileid: "91157032"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |mapToWindows|受信 UPN 要求を使用して、トークンハンドラーが検証トークンを Windows アカウントにマップする必要があるかどうかを指定します。 既定値は "false" です。|  
 |issuerCertificateRevocationMode|<xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>X.509 証明書に使用する失効モードを指定する値。 既定値は "Online" です。|  

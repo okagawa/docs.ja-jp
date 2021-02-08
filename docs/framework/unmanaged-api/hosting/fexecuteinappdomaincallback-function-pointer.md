@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「FExecuteInAppDomainCallback 関数ポインター」を参照してください。
 title: FExecuteInAppDomainCallback 関数ポインター
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2709f18f-3eee-497f-bc33-3ab7a485599b
 topic_type:
 - apiref
-ms.openlocfilehash: 8b9c6bb41b7438b9764ac2a8a7fc1677bc08557a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 97c7fe14a3eafd6f4626d8729be3b45ad5502f1a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733686"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785394"
 ---
 # <a name="fexecuteinappdomaincallback-function-pointer"></a>FExecuteInAppDomainCallback 関数ポインター
 

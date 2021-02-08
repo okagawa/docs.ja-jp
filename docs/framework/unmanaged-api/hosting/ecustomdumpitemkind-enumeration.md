@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: ECustomDumpItemKind 列挙型'
 title: ECustomDumpItemKind 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7105a6c8-6e4e-48de-ac3d-74ac75e5de2e
 topic_type:
 - apiref
-ms.openlocfilehash: 6520815106ae1084d4281d5ebeb0680bb9bb91c5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e12bfdc3cd7c38d8fbb2326e05d05b6a7b2daa27
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686307"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785505"
 ---
 # <a name="ecustomdumpitemkind-enumeration"></a>ECustomDumpItemKind 列挙型
 

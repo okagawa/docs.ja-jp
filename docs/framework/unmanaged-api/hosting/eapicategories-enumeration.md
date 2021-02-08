@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: EApiCategories 列挙型'
 title: EApiCategories 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c4a8a5a-8a46-4ac9-947f-4959bc9d6ac6
 topic_type:
 - apiref
-ms.openlocfilehash: f90e08373c0497201816bc7eead89b83b84be255
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 58a7d4fa4d0c965bf9158ad6713185782d4ae94a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726874"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785628"
 ---
 # <a name="eapicategories-enumeration"></a>EApiCategories 列挙型
 
@@ -59,7 +60,7 @@ typedef enum {
 |`eSynchronization`|ユーザーコードがロックを保持することを許可する共通言語ランタイムクラスおよびメンバーが、部分的に信頼されたコードでの実行をブロックするように指定します。|  
 |`eUI`|人間の操作を許可または必要とするマネージクラスおよびメンバーが、部分的に信頼されたコードでの実行をブロックされることを指定します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  [ICLRHostProtectionManager:: SetProtectedCategories](iclrhostprotectionmanager-setprotectedcategories-method.md)メソッドは、型のパラメーターを受け取り `EApiCategories` ます。  
   

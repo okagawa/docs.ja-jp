@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: EClrUnhandledException 列挙型'
 title: EClrUnhandledException 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d231044e-2b53-4836-93f9-8117ff0e5c3a
 topic_type:
 - apiref
-ms.openlocfilehash: bccd44e1bead4feadf67929dc104557715904577
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 088d448a92c4d9030208537b9c788477c85f9d37
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686444"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785550"
 ---
 # <a name="eclrunhandledexception-enumeration"></a>EClrUnhandledException 列挙型
 
@@ -41,7 +42,7 @@ typedef enum {
 |`eRuntimeDeterminedPolicy`|既定の動作を実行することを指定します。 プロセスが破棄されます。|  
 |`eHostDeterminedPolicy`|共通言語ランタイム (CLR) が未処理の例外を無視し、ホストがそれ以上のアクションを決定できるように指定します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  CLR が以前のバージョンと同じように動作するように指定するには、メンバーを使用し `eHostDeterminedPolicy` ます。  
   

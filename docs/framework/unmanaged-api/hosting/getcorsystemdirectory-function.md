@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: GetCORSystemDirectory 関数'
 title: GetCORSystemDirectory 関数
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3dcd16a7-dafc-4ca8-b5cd-20ffb37db91d
 topic_type:
 - apiref
-ms.openlocfilehash: 21b01156afceb24ab5c132894fae6922d7b97e59
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 267736c2f8cdea03fbd9f77108a3d88193830ab4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733296"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785342"
 ---
 # <a name="getcorsystemdirectory-function"></a>GetCORSystemDirectory 関数
 
@@ -49,7 +50,7 @@ HRESULT GetCORSystemDirectory (
  `dwLength`  
  入出力で返された文字数 `pbuffer` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!CAUTION]
 > CLR のバージョン4を実行しているプロセスでは、この関数を使用しないでください。 コンピューターに以前のバージョンの CLR がインストールされている場合、この関数はそのバージョンのインストールディレクトリを返します。  

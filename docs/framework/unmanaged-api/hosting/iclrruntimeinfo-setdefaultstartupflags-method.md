@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRRuntimeInfo:: SetDefaultStartupFlags メソッド'
 title: ICLRRuntimeInfo::SetDefaultStartupFlags メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98ae174f-bff0-48f1-9e05-6cb63b451824
 topic_type:
 - apiref
-ms.openlocfilehash: 8020db491c3b66be38a9f6cbcb7551721859dcd5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: eb839b2ff71836adc1b3858092f7caf5787275b1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723117"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785043"
 ---
 # <a name="iclrruntimeinfosetdefaultstartupflags-method"></a>ICLRRuntimeInfo::SetDefaultStartupFlags メソッド
 
@@ -50,7 +51,7 @@ HRESULT SetDefaultStartupFlags(
 |-------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  マルチスレッドホストは、このメソッドの呼び出しを同期する必要があります。 それ以外の場合、スレッド B は、の `SetStartupFlags` 呼び出しを完了し `SetStartupFlags` てからランタイムを開始する前に、メソッドを呼び出すことがあります。  
   

@@ -1,13 +1,14 @@
 ---
+description: 詳細については <security> 、 <netMsmqBinding>
 title: <security> の <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
-ms.openlocfilehash: 32b066fdf4d8edbbd36fdff7b14bdec87ddc970d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1b60d9e390e371555f4c3abf4988e79bb0f04fe8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91170078"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786851"
 ---
 # <a name="security-of-netmsmqbinding"></a>\<security> の \<netMsmqBinding>
 
@@ -39,7 +40,7 @@ MSMQ バインディングのセキュリティ設定を定義します。 ト�
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |mode|整合性、機密性、および認証を制御するセキュリティの種類を指定します。 有効な値は次のとおりです。<br /><br /> -None: セキュリティを無効にします。<br />-Transport: 保護と認証はトランスポートによって提供されます。 これは、2 つのキュー マネージャー間のメッセージ セキュリティに適用されます。 アプリケーションとキュー マネージャーとの間にセキュリティは提供されません。 既存の Msmq アプリケーションは、この種類のセキュリティ モードと機能的に等価です。<br />-Message: エンドツーエンドアプリケーションのセキュリティを指定します。 トランスポート層で提供されるセキュリティありません。 これは、他の標準バインディングによって提供されたセキュリティと同様です。<br />-Both: トランスポートと SOAP メッセージング層の両方でセキュリティを提供します。 同じ資格情報が、両方のレベルで要求されます。<br /><br /> 既定値は、Transport です。 この属性は <xref:System.ServiceModel.NetMsmqSecurityMode> 型です。|  
   

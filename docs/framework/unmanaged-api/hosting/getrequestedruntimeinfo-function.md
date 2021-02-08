@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「GetRequestedRuntimeInfo 関数」を参照してください。
 title: GetRequestedRuntimeInfo 関数
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0dfd7cdc-c116-4e25-b56a-ac7b0378c942
 topic_type:
 - apiref
-ms.openlocfilehash: b120b854e1787824808dd64d95b0fa78ba6c9fa2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 63d0bdcd07be5727cddc0acc352e8358b5ff0090
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705489"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785290"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo 関数
 
@@ -90,7 +91,7 @@ HRESULT GetRequestedRuntimeInfo (
 |S_OK|メソッドは正常に完了しました。|  
 |ERROR_INSUFFICIENT_BUFFER|ディレクトリのバッファーが、ディレクトリパスを格納するのに十分な大きさではありません。<br /><br /> または<br /><br /> バージョンバッファーが、バージョン文字列を格納するのに十分な大きさではありません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  メソッドは、 `GetRequestedRuntimeInfo` プロセスに読み込まれたバージョンに関するランタイム情報を返します。これは、必ずしもコンピューターにインストールされている最新バージョンではありません。  
   

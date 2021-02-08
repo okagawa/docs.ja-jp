@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <EnableAmPmParseAdjustment> 要素'
 title: <EnableAmPmParseAdjustment> 要素
 ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
-ms.openlocfilehash: f935f213e1bca8dac7a5401970bc6183575e2301
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 86fd04ab536f44f0cffdb5a37f4718fc03698485
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91167230"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787059"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment> 要素
 
@@ -35,7 +36,7 @@ ms.locfileid: "91167230"
   
 ### <a name="enabled-attribute"></a>enabled 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |0|日付と時刻の解析メソッドでは、日、月、時、および AM/PM 指定子のみを含む日付文字列を解析するために調整された規則は使用されません。|  
 |1|日付と時刻の解析メソッドでは、日、月、時、および AM/PM 指定子のみを含む日付文字列を解析するための調整された規則が使用されます。|  
@@ -70,7 +71,7 @@ ms.locfileid: "91167230"
  `<EnableAmPmParseAdjustment>`要素は <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> 、、、 <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType> 、およびの各 <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> メソッドには影響しません <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> 。  
   
 > [!IMPORTANT]
-> .NET Core と .NET ネイティブでは、調整された AM/PM 解析規則は既定で有効になっています。  
+> .NET Core と .NET Native では、調整された AM/PM 解析規則は既定で有効になっています。  
   
  解析調整規則が有効になっていない場合、文字列の最初の桁は12時間形式の時刻として解釈され、AM/PM 指定子を除く文字列の残りの部分は無視されます。 解析メソッドによって返される日付と時刻は、現在の日付と、日付文字列から抽出された日の時刻で構成されます。  
   
@@ -80,7 +81,7 @@ ms.locfileid: "91167230"
   
 |カルチャ名|enabled = "0"|enabled = "1"|  
 |------------------|------------------|------------------|  
-|ja-JP|1/5/2017 4:00:00 AM|4/10/2017 6:00:00 AM|  
+|en-US|1/5/2017 4:00:00 AM|4/10/2017 6:00:00 AM|  
 |en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
 ## <a name="see-also"></a>関連項目

@@ -1,13 +1,14 @@
 ---
+description: 詳細については <routing> 、 <serviceBehavior>
 title: <routing> の <serviceBehavior>
 ms.date: 03/30/2017
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
-ms.openlocfilehash: cd53b720bad5752189f1c30d9e4acd3a66830396
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1d8a056d708b3c42aeccf3e46a0703b3fc78a17d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150883"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786890"
 ---
 # <a name="routing-of-servicebehavior"></a>\<routing> の \<serviceBehavior>
 
@@ -40,10 +41,10 @@ ms.locfileid: "91150883"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |filterTable|ルーティング サービスによって評価されるフィルターを含むルーティング テーブルの名前を指定する文字列。 この値は `name` 、セクション内の要素の属性と一致している必要があり [\<filterTable>](filtertable.md) [\<filterTables>](filtertables.md) ます。|  
-|routeOnHeaderOnly|フィルターがメッセージの本文とヘッダーの両方を調べるか、ヘッダーのみを調べるかを指定するブール値。 既定では、 `true`です。|  
+|routeOnHeaderOnly|フィルターがメッセージの本文とヘッダーの両方を調べるか、ヘッダーのみを調べるかを指定するブール値。 既定値は、`true` です。|  
 |soapProcessingEnabled|SOAP 処理を実行するかどうかを指定するブール値。|  
   
 ### <a name="child-elements"></a>子要素  

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <textMessageEncoding>'
 title: <textMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e6d834d0-356e-45eb-b530-bbefbb9ec3f0
-ms.openlocfilehash: 159c581955336575af87a66a796cb78dd35d09c7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a8c7820b2e22152850d6d21c5091e328feb7a9f3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158657"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786604"
 ---
 # \<textMessageEncoding>
 
@@ -35,7 +36,7 @@ ms.locfileid: "91158657"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |maxReadPoolSize|新しいリーダーを割り当てずに同時に読み取り可能なメッセージの数を指定する整数です。 プール サイズを大きくすると、システムでは、比較的大きい作業セットで、アクティビティの急増に対する許容度が高まります。 既定値は、64 です。|  
 |maxWritePoolSize|新しいライターを割り当てずに同時に送信可能なメッセージの数を指定する整数です。 プール サイズを大きくすると、システムでは、比較的大きい作業セットで、アクティビティの急増に対する許容度が高まります。 既定値は 16 です。|  
@@ -79,5 +80,5 @@ ms.locfileid: "91158657"
 - [メッセージ エンコーディング](message-encoding.md)
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: <disableFusionUpdatesFromADManager> 要素'
 title: <disableFusionUpdatesFromADManager> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - disableFusionUpdatesFromADManager element
 - <disableFusionUpdatesFromADManager> element
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
-ms.openlocfilehash: c3971379b358ae16fc463df2b8d6288cf8881391
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c3b5758a12fc78c67ec0a4a9631361808724e72a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91205036"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787085"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager> 要素
 
@@ -38,7 +39,7 @@ ms.locfileid: "91205036"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |0|Fusion の設定をオーバーライドする機能を無効にしないでください。 これは、.NET Framework 4 から始まる既定の動作です。|  
 |1|Fusion の設定をオーバーライドする機能を無効にします。 これにより、.NET Framework の以前のバージョンの動作に戻ります。|  

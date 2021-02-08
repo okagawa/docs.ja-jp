@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: <forcePerformanceCounterUniqueSharedMemoryReads> 要素'
 title: <forcePerformanceCounterUniqueSharedMemoryReads> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - forcePerformanceCounterUniqueSharedMemoryReads element
 - <forcePerformanceCounterUniqueSharedMemoryReads> element
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
-ms.openlocfilehash: 719448ba3de2aca0621fc17b9fadbdd3b8588f2e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 63fe695cc993faa851a9ea3196294397d2992c45
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178243"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787033"
 ---
 # <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads> 要素
 
@@ -39,7 +40,7 @@ enabled="true|false"/>
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |`false`|PerfCounter.dll では、[カテゴリオプション] レジストリ設定を使用しません。これが既定値です。|  
 |`true`|PerfCounter.dll では、[カテゴリオプション] レジストリ設定を使用します。|  
@@ -66,7 +67,7 @@ enabled="true|false"/>
 > [!NOTE]
 > 要素を有効 `<forcePerformanceCounterUniqueSharedMemoryReads>` にしても、カテゴリ固有の共有メモリが使用されることは保証されません。 を有効に設定する `true` と、PerfCounter.dll がカテゴリオプションのレジストリ設定を参照するだけになります。 カテゴリのオプションの既定の設定では、カテゴリ固有の共有メモリを使用します。ただし、カテゴリのオプションを変更して、グローバルな共有メモリを使用する必要があることを示すことができます。  
   
- [カテゴリオプション] 設定が含まれているレジストリキーは、HKEY_LOCAL_MACHINE \System\CurrentControlSet\Services \\<の区分名 \> \ パフォーマンスです。 既定では、カテゴリのオプションは3に設定されています。これは、PerfCounter.dll がカテゴリ固有の共有メモリを使用するように指示します。 [カテゴリ] オプションが0に設定されている場合、PerfCounter.dll はグローバル共有メモリを使用します。 インスタンスデータが再利用されるのは、作成されるインスタンスの名前が再利用されるインスタンスと同一である場合だけです。 すべてのバージョンがカテゴリに書き込むことができます。 Category オプションが1に設定されている場合、グローバル共有メモリが使用されますが、カテゴリ名が再利用されるカテゴリと同じ長さの場合は、インスタンスデータを再利用できます。  
+ [カテゴリオプション] の設定を含むレジストリキーは、<の HKEY_LOCAL_MACHINE\System\CurrentControlSet\Servicesの \\ 区分 \> \ パフォーマンスです。 既定では、カテゴリのオプションは3に設定されています。これは、PerfCounter.dll がカテゴリ固有の共有メモリを使用するように指示します。 [カテゴリ] オプションが0に設定されている場合、PerfCounter.dll はグローバル共有メモリを使用します。 インスタンスデータが再利用されるのは、作成されるインスタンスの名前が再利用されるインスタンスと同一である場合だけです。 すべてのバージョンがカテゴリに書き込むことができます。 Category オプションが1に設定されている場合、グローバル共有メモリが使用されますが、カテゴリ名が再利用されるカテゴリと同じ長さの場合は、インスタンスデータを再利用できます。  
   
  設定0および1を使用すると、メモリリークが発生し、パフォーマンスカウンターのメモリがいっぱいになる可能性があります。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: DestroyICeeFileGen 関数'
 title: DestroyICeeFileGen 関数
 ms.date: 03/30/2017
 api_name:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dc1e2235-e721-4cb2-a0b8-6b0c030d7bab
 topic_type:
 - apiref
-ms.openlocfilehash: 495d84470c559df13ea64b63dd00582f4335d4e3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 14ae990999247b90f16b10115dea3408b965a04a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673194"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785654"
 ---
 # <a name="destroyiceefilegen-function"></a>DestroyICeeFileGen 関数
 
@@ -46,7 +47,7 @@ HRESULT DestroyICeeFileGen (
 
  このメソッドは、標準の COM エラーコードを返します。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `DestroyICeeFileGen``ICeeFileGen` [CreateICeeFileGen](createiceefilegen-function.md)関数によって作成されたオブジェクトを破棄します。  
   

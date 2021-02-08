@@ -1,13 +1,14 @@
 ---
+description: 詳細については <security> 、 <wsFederationHttpBinding>
 title: <security> の <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
-ms.openlocfilehash: 650483099c7d70450cfc56a9a28efac076d64675
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6c01c7a50b05f1723b3620407eb5e5761bae35cb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91162238"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786799"
 ---
 # <a name="security-of-wsfederationhttpbinding"></a>\<security> の \<wsFederationHttpBinding>
 
@@ -88,13 +89,13 @@ ms.locfileid: "91162238"
   
 |属性|説明|  
 |---------------|-----------------|  
-|モード|省略可能。 適用するセキュリティの種類を指定します。 既定値は `Message` です。 この属性は <xref:System.ServiceModel.WSFederationHttpSecurityMode> 型です。|  
+|モード|任意。 適用するセキュリティの種類を指定します。 既定値は `Message` です。 この属性は <xref:System.ServiceModel.WSFederationHttpSecurityMode> 型です。|  
   
 ## <a name="mode-attribute"></a>Mode 属性  
   
 |値|説明|  
 |-----------|-----------------|  
-|None|SOAP メッセージは、転送中はセキュリティで保護されません。|  
+|なし|SOAP メッセージは、転送中はセキュリティで保護されません。|  
 |Message|SOAP メッセージ セキュリティを使用して、整合性、機密性、サーバー認証、およびクライアント認証を提供します。 既定では、本文は暗号化および署名されます。 このサービスは、証明書を使用して設定する必要があります。 クライアント認証は、セキュリティ トークン サービスによってクライアントに発行されるトークンに基づいています。|  
 |TransportWithMessageCredential|整合性、機密性、およびサーバー認証は、HTTPS によって提供されます。 このサービスは、証明書を使用して設定する必要があります。 クライアント認証は、SOAP メッセージ セキュリティによって提供され、セキュリティ トークン サービスによってクライアントに発行されるトークンに基づいています。|  
   

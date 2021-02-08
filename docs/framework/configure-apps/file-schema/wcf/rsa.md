@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <rsa>'
 title: <rsa>
 ms.date: 03/30/2017
 ms.assetid: ae1f2267-e40d-42ff-8abf-06ab7067bdb9
-ms.openlocfilehash: 1698ce421b4dcefc6ab94206443d2d7bca47aca8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5e558e608ec1196081166d01415e12fb2c3083b0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91162284"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786877"
 ---
 # \<rsa>
 
@@ -38,7 +39,7 @@ ms.locfileid: "91162284"
   
 ### <a name="child-elements"></a>子要素  
 
- None  
+ なし  
   
 ### <a name="parent-elements"></a>親要素  
   

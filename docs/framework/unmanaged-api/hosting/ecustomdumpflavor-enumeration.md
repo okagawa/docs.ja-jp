@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: ECustomDumpFlavor 列挙型'
 title: ECustomDumpFlavor 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b39b3320-fac7-41f1-9a03-ab6fb0cd89c7
 topic_type:
 - apiref
-ms.openlocfilehash: 1b8440ed6e878aac3dd08d9f8ed528c93739a724
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3ef118368fc827472bdaacb0b03d8c2011275056
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686320"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785529"
 ---
 # <a name="ecustomdumpflavor-enumeration"></a>ECustomDumpFlavor 列挙型
 
@@ -41,7 +42,7 @@ typedef enum {
 |`DUMP_FLAVOR_Mini`|カスタムヒープダンプをミニダンプとして起動し、同じメソッドに渡される [Customdumpitem](customdumpitem-structure.md) インスタンスによって指定された追加データを含めるように指定します。|  
 |`DUMP_FLAVOR_NonHeapCLRState`|カスタムヒープダンプで、動的に割り当てられていないすべての実行時状態データを収集するように指定します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  型のパラメーター `ECustomDumpFlavor` は、 [ICLRErrorReportingManager:: BeginCustomDump](iclrerrorreportingmanager-begincustomdump-method.md) メソッドに渡されます。  
   

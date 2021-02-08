@@ -1,15 +1,16 @@
 ---
-title: <states>WCF の<workflowInstanceQuery>
+description: 詳細については <states> 、「」を参照してください。 <workflowInstanceQuery>
+title: <states> WCF の <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: d17f7525-8035-4e9e-85a0-4cddae59f85d
-ms.openlocfilehash: 5b779cf1074687dbd648b23d04f7cf3a354a2014
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 66b3008b352d1f76c30aab9a0ec038836f33d408
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855029"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786643"
 ---
-# <a name="states-of-wcf-workflowinstancequery"></a>\<states>WCF の\<workflowInstanceQuery>
+# <a name="states-of-wcf-workflowinstancequery"></a>\<states> WCF の \<workflowInstanceQuery>
 
 追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態のコレクションを表します。  
   
@@ -55,13 +56,13 @@ ms.locfileid: "70855029"
   
 ### <a name="child-elements"></a>子要素
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<states>](state-of-wcf-workflowinstancequery.md)|追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<workflowInstanceQuery>](../windows-workflow-foundation/workflowinstancequery.md)|開始したイベントや完了したイベントなど、ワークフロー インスタンスのライフサイクルの変化を追跡するクエリ。|  
   
@@ -71,11 +72,11 @@ ms.locfileid: "70855029"
   
 次の表に、有効な状態の値を示します。  
   
-|州|Description|  
+|状態|説明|  
 |-----------|-----------------|  
 |Aborted|ワークフロー インスタンスは中止されました。|  
 |完了|ワークフロー インスタンスは完了しました。|  
-|削除済み|ワークフロー インスタンスは削除されました。|  
+|Deleted|ワークフロー インスタンスは削除されました。|  
 |アイドル|ワークフロー インスタンスはアイドル状態です。|  
 |Persisted|ワークフロー インスタンスは永続化されました。|  
 |Resumed|ワークフロー インスタンスが再開されました。|  
@@ -84,7 +85,7 @@ ms.locfileid: "70855029"
 |アンロードされました|ワークフロー インスタンスはアンロードされました。|  
 |Canceled|ワークフロー インスタンスは取り消されました。|  
 |Suspended|ワークフロー インスタンスが中断されています。|  
-|Terminated|ワークフロー インスタンスは終了しました。|  
+|終了|ワークフロー インスタンスは終了しました。|  
 |Unsuspended|ワークフロー インスタンスの中断が解除されました。|  
   
 ## <a name="example"></a>例
