@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataEmit:: SetPropertyProps メソッド'
 title: IMetaDataEmit::SetPropertyProps メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e2501fc8-b2bc-4dcc-9205-e3acd5a53ffe
 topic_type:
 - apiref
-ms.openlocfilehash: 553a82475f241fac3a56c1fb009e3ed56b2c14f8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ad5efa86b4f774bcaa2251cb992c2dd52ac28bdd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704254"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99771835"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps メソッド
 

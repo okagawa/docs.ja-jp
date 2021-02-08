@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataEmit:: SetPinvokeMap メソッド'
 title: IMetaDataEmit::SetPinvokeMap メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c6bfd574-1da3-4ba7-82f2-46ca5efcbaba
 topic_type:
 - apiref
-ms.openlocfilehash: 236fc848087f64c2327c2c9e790065cc3f64dc58
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e50f06385b599a99454da0a9b971b00806d3140a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704306"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99771848"
 ---
 # <a name="imetadataemitsetpinvokemap-method"></a>IMetaDataEmit::SetPinvokeMap メソッド
 

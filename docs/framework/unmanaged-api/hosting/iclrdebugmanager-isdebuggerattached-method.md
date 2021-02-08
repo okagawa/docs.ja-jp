@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ICLRDebugManager:: Isデバッガ添付メソッド'
 title: ICLRDebugManager::IsDebuggerAttached メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2f105fe0-f52d-49c5-bda5-583fb27e3aa6
 topic_type:
 - apiref
-ms.openlocfilehash: 71e11d7db3bd679e7972fb2f6ce098edc3399885
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 74305989797bcb553feb727a133e24bd308ac715
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731021"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99772134"
 ---
 # <a name="iclrdebugmanagerisdebuggerattached-method"></a>ICLRDebugManager::IsDebuggerAttached メソッド
 
@@ -50,7 +51,7 @@ HRESULT IsDebuggerAttached (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `IsDebuggerAttached` デバッガーがプロセスにアタッチされているかどうかを判断するために、ホストが CLR を照会できるようにします。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataEmit:: SetParent メソッド'
 title: IMetaDataEmit::SetParent メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 02a02ff7-ae0e-4692-a20e-372405f23052
 topic_type:
 - apiref
-ms.openlocfilehash: cef817b52718acfbc4360e9d3742a5a78abd3afe
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9025d4a37de85a0e657059f63ef781dc4377c036
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675049"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99772004"
 ---
 # <a name="imetadataemitsetparent-method"></a>IMetaDataEmit::SetParent メソッド
 
