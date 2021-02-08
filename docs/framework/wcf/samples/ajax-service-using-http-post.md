@@ -1,17 +1,18 @@
 ---
+description: 詳細については、「HTTP POST を使用した AJAX サービス」を参照してください。
 title: HTTP POST を使用する AJAX サービス
 ms.date: 03/30/2017
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
-ms.openlocfilehash: 143585b40a493983b7265971a17224165de6f36d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4d319d4120310d79af5bda6026a2192d1270943b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575889"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779102"
 ---
 # <a name="ajax-service-using-http-post"></a>HTTP POST を使用する AJAX サービス
 
-このサンプルでは、Windows Communication Foundation (WCF) を使用して、HTTP POST を使用する AJAX (ASP.NET 非同期 JavaScript and XML) サービスを作成する方法を示します。 AJAX サービスには、Web ブラウザー クライアントから基本的な JavaScript コードを使用してアクセスできます。 このサンプルは、[基本的な AJAX サービス](basic-ajax-service.md)のサンプルに基づいています。2つのサンプルの唯一の違いは、http GET の代わりに HTTP POST を使用することです。
+このサンプルでは、Windows Communication Foundation (WCF) を使用して、HTTP POST を使用する AJAX (ASP.NET 非同期 JavaScript and XML) サービスを作成する方法を示します。 AJAX サービスには、Web ブラウザー クライアントから基本的な JavaScript コードを使用してアクセスできます。 このサンプルは、 [基本的な AJAX サービス](basic-ajax-service.md) のサンプルに基づいています。2つのサンプルの唯一の違いは、http GET の代わりに HTTP POST を使用することです。
 
 Windows Communication Foundation (WCF) での AJAX サポートは、コントロールを介して ASP.NET AJAX で使用できるように最適化されてい `ScriptManager` ます。 ASP.NET AJAX で WCF を使用する例については、 [ajax のサンプル](ajax-service-using-http-post.md)を参照してください。
 
@@ -36,14 +37,14 @@ public interface ICalculator
 
 GET 要求とは異なり、POST サービスはブラウザーから呼び出すことができません。 たとえば、に移動する `http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200` と、エラーが発生します。これは、POST サービスでは、 `n1` `n2` URL ではなく JSON 形式のメッセージ本文で、およびパラメーターが送信されることを想定しているためです。
 
-クライアントの Web ページの PostAjaxClientPage.aspx には、ユーザーがページ上のいずれかの操作ボタンをクリックするとサービスを呼び出す ASP.NET コードが含まれています。 サービスは、[基本 AJAX サービス](basic-ajax-service.md)サンプルと同じ方法で GET 要求を使用して応答します。
+クライアントの Web ページの PostAjaxClientPage.aspx には、ユーザーがページ上のいずれかの操作ボタンをクリックするとサービスを呼び出す ASP.NET コードが含まれています。 サービスは、 [基本 AJAX サービス](basic-ajax-service.md) サンプルと同じ方法で GET 要求を使用して応答します。
 
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\PostAjaxService`
 

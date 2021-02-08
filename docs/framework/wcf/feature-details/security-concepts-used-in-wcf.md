@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「WCF で使用されるセキュリティの概念」を参照してください。
 title: WCF で使用されるセキュリティの概要
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: 2c7bc01ba45c02be4a1d40c2600fde62e94afe32
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5ad5b80c69e5dec5675879984fbcd2585b295dd4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96251387"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779765"
 ---
 # <a name="security-concepts-used-in-wcf"></a>WCF で使用されるセキュリティの概要
 

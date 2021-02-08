@@ -1,17 +1,18 @@
 ---
+description: '詳細情報: 複合型を使用した AJAX サービスのサンプル'
 title: 複合型を使用した AJAX サービスのサンプル
 ms.date: 03/30/2017
 ms.assetid: 88242b99-4811-4cbe-8201-52ddf48fb174
-ms.openlocfilehash: 4227446e8844accd06490d8e7cf933da43d875a6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 438bceb91f10f5ba91d02272d2ba266a50a05f82
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575915"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779128"
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>複合型を使用した AJAX サービスのサンプル
 
-このサンプルでは、Windows Communication Foundation (WCF) を使用して、複合型のインスタンスを作成し、それらをサービスとクライアントの間で JavaScript Object Notation (JSON) として送信する、ASP.NET の非同期 JavaScript and XML (AJAX) サービスを作成する方法を示します。 AJAX サービスには、Web ブラウザー クライアントから JavaScript コードを使用してアクセスできます。 このサンプルは、[基本的な AJAX サービス](basic-ajax-service.md)のサンプルに基づいています。
+このサンプルでは、Windows Communication Foundation (WCF) を使用して、複合型のインスタンスを作成し、それらをサービスとクライアントの間で JavaScript Object Notation (JSON) として送信する、ASP.NET の非同期 JavaScript and XML (AJAX) サービスを作成する方法を示します。 AJAX サービスには、Web ブラウザー クライアントから JavaScript コードを使用してアクセスできます。 このサンプルは、 [基本的な AJAX サービス](basic-ajax-service.md) のサンプルに基づいています。
 
 WCF での AJAX サポートは、コントロールを介して ASP.NET AJAX で使用できるように最適化されてい <xref:System.Web.UI.ScriptManager> ます。 ASP.NET AJAX で WCF を使用する例については、 [ajax のサンプル](ajax.md)を参照してください。
 
@@ -37,7 +38,7 @@ public class MathResult
 
 基本的な AJAX サービスのサンプルの場合と同様に、<xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> を使用してサービスに AJAX エンドポイントを作成します。
 
-クライアント Web ページ Complextypeclientpage.aspx には、ユーザーがページの [**計算の実行**] ボタンをクリックしたときにサービスを呼び出すための ASP.NET と JavaScript のコードが含まれています。 サービスを呼び出すコードは、 [HTTP post サンプルを使用する AJAX サービス](ajax-service-using-http-post.md)と同様に、JSON 本文を構築し、http post を使用して送信します。
+クライアント Web ページ Complextypeclientpage.aspx には、ユーザーがページの [ **計算の実行** ] ボタンをクリックしたときにサービスを呼び出すための ASP.NET と JavaScript のコードが含まれています。 サービスを呼び出すコードは、 [HTTP post サンプルを使用する AJAX サービス](ajax-service-using-http-post.md) と同様に、JSON 本文を構築し、http post を使用して送信します。
 
 サービス呼び出しに成功したら、生成された JavaScript オブジェクトのそれぞれのデータ メンバー (`sum`、`difference`、`product`、および `quotient`) にアクセスできます。
 
@@ -63,7 +64,7 @@ function onSuccess(mathResult){
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\ComplexTypeAjaxService`
 

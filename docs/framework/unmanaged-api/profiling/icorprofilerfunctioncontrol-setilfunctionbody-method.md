@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerFunctionControl:: SetILFunctionBody メソッド'
 title: ICorProfilerFunctionControl::SetILFunctionBody メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c33f0f7-75b2-4c19-b2c7-c94b54997576
 topic_type:
 - apiref
-ms.openlocfilehash: fa82cd1e646777c9841c1b3d653134aa7ba7ed7c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 470eefce5b211adcfd111951be9a004b3bd7d8fc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712743"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781611"
 ---
 # <a name="icorprofilerfunctioncontrolsetilfunctionbody-method"></a>ICorProfilerFunctionControl::SetILFunctionBody メソッド
 
@@ -50,7 +51,7 @@ HRESULT SetILFunctionBody(
 |-------------|-----------------|  
 |S_OK|置換が成功しました。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  [ICorProfilerInfo:: SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md)メソッドとは異なり、 `SetILFunctionBody` メソッドは新しい CIL 本体に必要なメモリを管理します。 これは、プロファイラーによって提供される CIL 本体を [Imethodmalloc](imethodmalloc-interface.md) インターフェイスを使用して割り当てたり、特定の範囲内で割り当てたりする必要がないことを意味します。 この本体は、どのヒープにも割り当てることができます。 プロファイラーは、が返された後に、その CIL 本体に使用されるメモリを解放でき `SetILFunctionBody` ます。  
   

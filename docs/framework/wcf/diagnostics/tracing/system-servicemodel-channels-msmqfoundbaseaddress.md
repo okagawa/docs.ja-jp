@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「MsmqFoundBaseAddress」を参照してください。
 title: System.ServiceModel.Channels.MsmqFoundBaseAddress
 ms.date: 03/30/2017
 ms.assetid: 5431889d-c296-44f3-a54d-a356e9f1eb5e
-ms.openlocfilehash: c8793176424ac42d6510dda107bf4eccc89eaf50
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 926f790bd92f95e5819ce8423a9a73a3c42f967b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96260449"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781000"
 ---
 # <a name="systemservicemodelchannelsmsmqfoundbaseaddress"></a>System.ServiceModel.Channels.MsmqFoundBaseAddress
 
 System.ServiceModel.Channels.MsmqFoundBaseAddress  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  ホスト環境によって、サービスのベース アドレスが検出されました。  
   

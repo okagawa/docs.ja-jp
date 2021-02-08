@@ -1,17 +1,18 @@
 ---
+description: '詳細情報: JSON と XML を使用した AJAX サービスのサンプル'
 title: JSON および XML 形式の AJAX サービスのサンプル
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: 8f70b6aa2e61d01a075a6edb3fe490ef593e73b0
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e47f6cbd7e4659488325e158e5594ca94322c520
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575954"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779063"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>JSON および XML 形式の AJAX サービスのサンプル
 
-このサンプルでは、Windows Communication Foundation (WCF) を使用して、JavaScript Object Notation (JSON) データまたは XML データを返す非同期 JavaScript and XML (AJAX) サービスを作成する方法を示します。 AJAX サービスには、Web ブラウザー クライアントから JavaScript コードを使用してアクセスできます。 このサンプルは、[基本的な AJAX サービス](basic-ajax-service.md)のサンプルに基づいています。
+このサンプルでは、Windows Communication Foundation (WCF) を使用して、JavaScript Object Notation (JSON) データまたは XML データを返す非同期 JavaScript and XML (AJAX) サービスを作成する方法を示します。 AJAX サービスには、Web ブラウザー クライアントから JavaScript コードを使用してアクセスできます。 このサンプルは、 [基本的な AJAX サービス](basic-ajax-service.md) のサンプルに基づいています。
 
 他の AJAX サンプルとは異なり、このサンプルでは ASP.NET AJAX および <xref:System.Web.UI.ScriptManager> コントロールを使用しません。 いくつかの追加構成では、JavaScript を通じて任意の HTML ページから WCF AJAX サービスにアクセスできます。このシナリオを次に示します。 ASP.NET AJAX で WCF を使用する例については、「 [ajax のサンプル](ajax.md)」を参照してください。
 
@@ -59,7 +60,7 @@ MathResult DoMathJson(double n1, double n2);
 
 どちらの場合も、操作は、 `MathResult` 標準の WCF データコントラクト型である複合型を返します。
 
-クライアント Web ページ Xmlajaxclientpage.htm には、ユーザーが [**計算の実行] (JSON を返す)** または [**計算の実行] (XML を返す)** ボタンをクリックしたときに、上記の2つの操作のいずれかを呼び出す JavaScript コードが含まれています。 サービスを呼び出すコードによって JSON 本文が作成され、HTTP POST を使用して送信されます。 [基本的な Ajax サービス](basic-ajax-service.md)サンプルと ASP.NET ajax を使用したその他のサンプルとは異なり、要求は JavaScript で手動で作成されます。
+クライアント Web ページ XmlAjaxClientPage.htm には、ユーザーが [ **計算の実行] (JSON を返す)** または [ **計算の実行] (XML を返す)** ボタンをクリックしたときに、上記の2つの操作のいずれかを呼び出す JavaScript コードが含まれています。 サービスを呼び出すコードによって JSON 本文が作成され、HTTP POST を使用して送信されます。 [基本的な Ajax サービス](basic-ajax-service.md)サンプルと ASP.NET ajax を使用したその他のサンプルとは異なり、要求は JavaScript で手動で作成されます。
 
 ```csharp
 // Create HTTP request
@@ -98,7 +99,7 @@ xmlHttp.onreadystatechange=function(){
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\AJAX\XmlAjaxService`
 
@@ -108,7 +109,7 @@ xmlHttp.onreadystatechange=function(){
 
 2. 「 [Windows Communication Foundation サンプルのビルド](building-the-samples.md)」の説明に従って、ソリューション XmlAjaxService をビルドします。
 
-3. に移動 `http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm` します (プロジェクトディレクトリからブラウザーで xmlajaxclientpage.htm を開かないでください)。
+3. に移動 `http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm` します (プロジェクトディレクトリからブラウザーで XmlAjaxClientPage.htm を開かないでください)。
 
 ## <a name="see-also"></a>関連項目
 

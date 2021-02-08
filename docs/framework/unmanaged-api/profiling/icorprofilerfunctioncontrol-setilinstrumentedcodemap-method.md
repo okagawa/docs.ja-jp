@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerFunctionControl:: SetILInstrumentedCodeMap メソッド'
 title: ICorProfilerFunctionControl::SetILInstrumentedCodeMap メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ecf56646-7e5f-46c4-8340-f3a04e88920f
 topic_type:
 - apiref
-ms.openlocfilehash: d22d789724a62cebb0136b9b01be22d6825384ac
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bb345f737459342e0146cbb0e0bd7dd4b1e9a037
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714537"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781546"
 ---
 # <a name="icorprofilerfunctioncontrolsetilinstrumentedcodemap-method"></a>ICorProfilerFunctionControl::SetILInstrumentedCodeMap メソッド
 
@@ -42,7 +43,7 @@ HRESULT SetILInstrumentedCodeMap(
  `rgILMapEntries`  
  [in] COR_IL_MAP エントリの呼び出し元が割り当てたアレイ。 これらのエントリの解釈は、 [ICorProfilerInfo:: SetILInstrumentedCodeMap](icorprofilerinfo-setilinstrumentedcodemap-method.md) メソッドの場合と同じです。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドを呼び出すことによってマッピングを設定すると、デバッガーは [ICorDebugILCode2:: GetInstrumentedILMap](../debugging/icordebugilcode2-getinstrumentedilmap-method.md)を呼び出すことによってマッピングを取得できます。 またデバッガーは、スタック トレースおよび可変的な有効期間に対する IL オフセットを計算するときに、マッピングを内部で使用できます。  
   

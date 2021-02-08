@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「COM + サービスモデル構成ツール (ComSvcConfig.exe)」を参照してください。
 title: COM+ サービス モデル構成ツール (ComSvcConfig.exe)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-ms.openlocfilehash: ee0fb5f08446b03485f97de0037e898415016fea
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 81bfcbd468cb5401646a49967b6381b48e2f7cf0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295276"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781065"
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>COM+ サービス モデル構成ツール (ComSvcConfig.exe)
 
@@ -57,7 +58,7 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
 |`/help`|使用方法を示すメッセージを表示します。<br /><br /> 短縮形 : `/?`。|  
 |`/partial`|指定されたインターフェイスが、公開できる 1 つ以上のメソッド署名を含む場合にサービス構成を生成します。 サービスの初期化時に、互換性のあるメソッドはサービス コントラクトで操作として表示され、互換性のないメソッドはサービス コントラクトから除外されます。<br /><br /> このフラグが指定されていない場合は、指定されたインターフェイスが互換性のないメソッドを 1 つ以上含むとツールはサービス構成を生成しません。|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="description"></a>説明  
 

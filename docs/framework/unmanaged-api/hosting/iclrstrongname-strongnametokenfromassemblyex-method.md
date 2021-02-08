@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRStrongName:: StrongNameTokenFromAssemblyEx メソッド'
 title: ICLRStrongName::StrongNameTokenFromAssemblyEx メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 648ea90e-5e60-40a0-a56a-3e61bf2fba7c
 topic_type:
 - apiref
-ms.openlocfilehash: 35fe86f856360814cfbb5453bfb6e5efaaef02fd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e0a05d2aa0b41c370bde2bbff5367f25a1b13322
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677727"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781806"
 ---
 # <a name="iclrstrongnamestrongnametokenfromassemblyex-method"></a>ICLRStrongName::StrongNameTokenFromAssemblyEx メソッド
 
@@ -59,7 +60,7 @@ HRESULT StrongNameTokenFromAssemblyEx (
 
  `S_OK` メソッドが正常に完了した場合は。それ以外の場合は、失敗を示す HRESULT 値 (「リストの [一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values) 」を参照してください)。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  厳密な名前トークンは、公開キーの短縮形です。 トークンは、アセンブリの署名に使用される公開キーから作成された64ビットのハッシュです。 トークンはアセンブリの厳密な名前の一部であり、アセンブリメタデータから読み取ることができます。  
   

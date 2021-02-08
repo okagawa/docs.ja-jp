@@ -1,16 +1,17 @@
 ---
+description: '詳細については、「方法: ポート共有を使用するように Windows Communication Foundation サービスを構成する」を参照してください。'
 title: '方法 : ポート共有を使用するように Windows Communication Foundation サービスを構成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: 39b9da1096c38eba648f528f7c2b3ecaa39ab7c2
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 53fe3449ece5a5e545d7add5c4e6c7feebe5a8ff
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257510"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780103"
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>方法 : ポート共有を使用するように Windows Communication Foundation サービスを構成する
 

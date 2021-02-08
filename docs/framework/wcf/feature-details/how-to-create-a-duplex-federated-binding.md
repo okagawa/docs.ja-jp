@@ -1,19 +1,20 @@
 ---
+description: '詳細については、「方法: 双方向フェデレーションバインディングを作成する」を参照してください。'
 title: '方法: 双方向フェデレーション バインディングを作成する'
 ms.date: 03/30/2017
 ms.assetid: 4331d2bc-5455-492a-9189-634a82597726
-ms.openlocfilehash: e93651ce9fe9dae55c299fcb061da6bdc4b6bc5e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 92d5eeeffab88d88aa245b51738048dced2d5d2d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598971"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779908"
 ---
 # <a name="how-to-create-a-duplex-federated-binding"></a>方法: 双方向フェデレーション バインディングを作成する
 
 <xref:System.ServiceModel.WSFederationHttpBinding> はデータグラムと要求/応答メッセージの交換コントラクトのみをサポートします。 双方向メッセージ交換コントラクトを使用するには、カスタム バインディングを作成する必要があります。 次の手順は、構成の中でそれを行う方法を説明します。HTTP と TCP トランスポートにはメッセージ モード セキュリティを、TCP トランスポートには混合モード セキュリティを使用します。 このトピックの最後に 3 つのバインディングすべてのサンプル コードがあります。
 
-バインディングはコード内でも作成できます。 作成するバインド要素スタックの説明については、「[方法: カスタムバインディングを使用してカスタムバインディングを作成](how-to-create-a-custom-binding-using-the-securitybindingelement.md)する」を参照してください。
+バインディングはコード内でも作成できます。 作成するバインド要素スタックの説明については、「 [方法: カスタムバインディングを使用してカスタムバインディングを作成](how-to-create-a-custom-binding-using-the-securitybindingelement.md)する」を参照してください。
 
 ## <a name="to-create-a-duplex-federated-custom-binding-with-http"></a>HTTP で双方向カスタム フェデレーション バインディングを作成するには
 

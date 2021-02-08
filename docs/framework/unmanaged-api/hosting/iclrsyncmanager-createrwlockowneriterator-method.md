@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRSyncManager:: CreateRWLockOwnerIterator メソッド'
 title: ICLRSyncManager::CreateRWLockOwnerIterator メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b5535b87-9439-424e-b9b3-7d6fafb9819e
 topic_type:
 - apiref
-ms.openlocfilehash: 2b6a2082d27fca4c78dcb15a13cfd87e8066e388
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c6997b7720586f422cba3c96ca06a93f747d05bc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687217"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781780"
 ---
 # <a name="iclrsyncmanagercreaterwlockowneriterator-method"></a>ICLRSyncManager::CreateRWLockOwnerIterator メソッド
 
@@ -55,7 +56,7 @@ HRESULT CreateRWLockOwnerIterator (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |HOST_E_INVALIDOPERATION|`CreateRWLockOwnerIterator` は、現在マネージコードを実行しているスレッドで呼び出されました。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  通常、ホストは `CreateRWLockOwnerIterator` 、 `DeleteRWLockOwnerIterator` デッドロックの検出時に、、およびの各メソッドを呼び出し `GetRWLockOwnerNext` ます。 ホストは、リーダーライターロックが有効であることを CLR が防ぐため、リーダーライターロックが引き続き有効であることを保証する役割を担います。 ホストでは、次のようないくつかの方法でロックの有効性を確認できます。  
   

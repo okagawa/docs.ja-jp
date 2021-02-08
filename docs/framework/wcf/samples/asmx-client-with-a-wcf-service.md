@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「WCF サービスを使用した ASMX クライアント」を参照してください。
 title: WCF サービス付き ASMX クライアント
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: fd13d4907f1be09440387a36e14ecdc4926ba7e7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b9f561f6651c591556f821478c4c4bfd7d7da23d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594778"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778920"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>WCF サービス付き ASMX クライアント
 
@@ -51,7 +52,7 @@ public interface ICalculator
 </services>
 ```
 
-ASMX クライアントは、Web サービス記述言語 (wsdl) ユーティリティ (Wsdl.exe) によって生成される型指定されたプロキシを使用して、WCF サービスと通信します。 型指定のあるプロキシは、ファイル generatedClient.cs に含まれています。 WSDL ユーティリティは、指定されたサービスが使用するメタデータを取得し、クライアントが通信に使用する型指定のあるプロキシを生成します。 既定では、フレームワークはメタデータを公開しません。 プロキシを生成するために必要なメタデータを公開するには、 [\<serviceMetadata>](../../configure-apps/file-schema/wcf/servicemetadata.md) `httpGetEnabled` 次の `True` 構成に示すように、を追加し、その属性をに設定する必要があります。
+ASMX クライアントは、Web サービス記述言語 (WSDL) ユーティリティ (Wsdl.exe) によって生成される型指定されたプロキシを使用して、WCF サービスと通信します。 型指定のあるプロキシは、ファイル generatedClient.cs に含まれています。 WSDL ユーティリティは、指定されたサービスが使用するメタデータを取得し、クライアントが通信に使用する型指定のあるプロキシを生成します。 既定では、フレームワークはメタデータを公開しません。 プロキシを生成するために必要なメタデータを公開するには、 [\<serviceMetadata>](../../configure-apps/file-schema/wcf/servicemetadata.md) `httpGetEnabled` 次の `True` 構成に示すように、を追加し、その属性をに設定する必要があります。
 
 ```xml
 <behaviors>
@@ -146,6 +147,6 @@ Press <ENTER> to terminate client.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\ASMX`

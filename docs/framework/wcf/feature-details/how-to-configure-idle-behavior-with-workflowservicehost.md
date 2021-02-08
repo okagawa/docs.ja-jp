@@ -1,16 +1,17 @@
 ---
+description: '詳細については、「方法: WorkflowServiceHost を使用してアイドル動作を構成する」を参照してください。'
 title: '方法: WorkflowServiceHost を使用してアイドル動作を構成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1bb93652-d687-46ff-bff6-69ecdcf97437
-ms.openlocfilehash: 8491fccee9f148412aed89280ccd20b315d25da6
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 530ab1833f3f8bb91d39b19161070bc75c45f11a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257367"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780051"
 ---
 # <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>方法: WorkflowServiceHost を使用してアイドル動作を構成する
 

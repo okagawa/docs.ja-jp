@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「How to: Audit Windows Communication Foundation Security Events」を参照してください。'
 title: '方法 : Windows Communication Foundation セキュリティ イベントを監査する'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: 67ab5d4a4592a8b772cfdd70befe32f339062b8c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b9cd258f51dbc726108fef0bbf173c7ee26c1d0f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257562"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780207"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>方法 : Windows Communication Foundation セキュリティ イベントを監査する
 
@@ -80,7 +81,7 @@ Windows Communication Foundation (WCF) を使用すると、windows イベント
  [!code-csharp[AuditingSecurityEvents#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#1)]
  [!code-vb[AuditingSecurityEvents#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#1)]  
   
-## <a name="net-framework-security"></a>.NET Framework セキュリティ  
+## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
 
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> プロパティを `true` に設定すると、セキュリティ監査を生成する失敗が抑制されます (`false` に設定した場合は、例外がスローされます)。 ただし、次の Windows **ローカルセキュリティ設定** プロパティを有効にすると、監査イベントの生成に失敗すると、windows が直ちにシャットダウンします。  
   

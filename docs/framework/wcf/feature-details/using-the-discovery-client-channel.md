@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「探索クライアントチャネルの使用」を参照してください。
 title: 探索クライアント チャネルの使用
 ms.date: 03/30/2017
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
-ms.openlocfilehash: baf822b5c5acd34913fdd58c346426ad91971cb0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f83068c248ab8e2f1e2b3bfba3eb29fcf8aa20ff
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96289400"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779661"
 ---
 # <a name="using-the-discovery-client-channel"></a>探索クライアント チャネルの使用
 

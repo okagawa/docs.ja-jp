@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback8::D ynamicMethodJITCompilationStarted メソッド'
 title: ICorProfilerCallback8::D ynamicMethodJITCompilationStarted メソッド
 ms.date: 04/10/2018
 api_name:
@@ -8,12 +9,12 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: 46a25fc6e9119481f728275e0569429cc6c46dc9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 186b41564e0aabb069b06356b8eccbe90296ec4b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725431"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781702"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>ICorProfilerCallback8::D ynamicMethodJITCompilationStarted メソッド
 
@@ -44,7 +45,7 @@ JIT コンパイルが開始されるメモリ内関数の識別子。
 
 [入力] `cbILHeader` IL ヘッダー内のバイト数。
 
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
 このコールバックは、動的メソッドが JIT コンパイルされるたびにトリガーされます。 これには、さまざまな IL スタブおよび LCG メソッドが含まれます。 その目的は、コンパイルされたメソッドをユーザーに識別するのに十分な情報をプロファイラーライターに提供することです。
 

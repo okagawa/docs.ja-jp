@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorProfilerObjectEnum インターフェイス」を参照してください。
 title: ICorProfilerObjectEnum インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 13e1651c-9523-40ef-bfd7-87fb94519f8b
 topic_type:
 - apiref
-ms.openlocfilehash: 73c9f07ff9a7bffc2fb01c0dde390ca8364500b4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a41900c104818566704af0070a8cd3c6cf1bba8a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731177"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781364"
 ---
 # <a name="icorprofilerobjectenum-interface"></a>ICorProfilerObjectEnum インターフェイス
 
@@ -31,11 +32,11 @@ ms.locfileid: "95731177"
 |------------|-----------------|  
 |[Clone メソッド](icorprofilerobjectenum-clone-method.md)|この `ICorProfilerObjectEnum` インターフェイスのコピーへのインターフェイス ポインターを取得します。|  
 |[GetCount メソッド](icorprofilerobjectenum-getcount-method.md)|コレクション内の固定されたオブジェクトの合計数を取得します。|  
-|[Next メソッド](icorprofilerobjectenum-next-method.md)|シーケンス内の列挙子の現在位置を開始位置として、オブジェクトのシーケンシャルコレクションから、指定された数の連続するオブジェクトを取得します。|  
+|[次のメソッド](icorprofilerobjectenum-next-method.md)|シーケンス内の列挙子の現在位置を開始位置として、オブジェクトのシーケンシャルコレクションから、指定された数の連続するオブジェクトを取得します。|  
 |[Reset メソッド](icorprofilerobjectenum-reset-method.md)|この列挙子のカーソルをシーケンスの開始位置に移動します。|  
 |[Skip メソッド](icorprofilerobjectenum-skip-method.md)|指定された数の要素がスキップされるように、この列挙子のカーソルを現在の位置から進めます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ICorProfilerObjectEnum` インターフェイスは列挙子です。 このインターフェイスにより、配列の受信側は、受信側に適した速度で送信側から要素をプルできます。 つまり、受信側は配列要素のフローを明示的に制御できるため、大きな配列をメソッドパラメーターとして渡すことに関連する問題を回避できます。  
   

@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「構成を使用しない AJAX サービス」を参照してください。
 title: 構成を使用しない AJAX サービス
 ms.date: 03/30/2017
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
-ms.openlocfilehash: ab3731ab6aeb80e0e46228b8bf702b0fe5c6e6e9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 137f0845f042d1919c1cb070c91a473ff81863cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575902"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779037"
 ---
 # <a name="ajax-service-without-configuration"></a>構成を使用しない AJAX サービス
 
@@ -18,7 +19,7 @@ WCF での AJAX サポートは、コントロールを介して ASP.NET AJAX �
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。
 
- このサンプルは、HTTP POST を使用した AJAX サービスに基づいています。 「[基本的な AJAX サービス](basic-ajax-service.md)のサンプル」で説明されているように、を使用して <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> サービスをホストします。
+ このサンプルは、HTTP POST を使用した AJAX サービスに基づいています。 「 [基本的な AJAX サービス](basic-ajax-service.md) のサンプル」で説明されているように、を使用して <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> サービスをホストします。
 
 ```text
 <%ServiceHost
@@ -36,7 +37,7 @@ WCF での AJAX サポートは、コントロールを介して ASP.NET AJAX �
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\ConfigFreeAjaxService`
 

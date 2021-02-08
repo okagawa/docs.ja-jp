@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「WCF で必要なオペレーティングシステムのリソース」を参照してください。
 title: WCF に必要なオペレーティング システム リソース
 ms.date: 03/30/2017
 ms.assetid: cdd9a331-53fe-4e0d-bdfe-782264aec5c9
-ms.openlocfilehash: c2c26d769424a8d0655591cb10b4b13df8a15884
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 717ab2074c0dcf840919c2bd8afa2641e106ac11
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72961136"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779219"
 ---
 # <a name="operating-system-resources-required-by-wcf"></a>WCF に必要なオペレーティング システム リソース
 

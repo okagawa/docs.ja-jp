@@ -1,16 +1,17 @@
 ---
+description: '詳細については、「方法: チャネルファクトリを使用して操作を非同期に呼び出す」を参照してください。'
 title: '方法: チャネル ファクトリを使用して、非同期的に操作を呼び出す'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-ms.openlocfilehash: c288df6059cfe1cd1f4ff35cebffafd3fddb38d1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 081211d0202550e93e3aabb5c8b5b5b5adbcdcde
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257536"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780194"
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>方法: チャネル ファクトリを使用して、非同期的に操作を呼び出す
 
@@ -18,7 +19,7 @@ ms.locfileid: "96257536"
   
  このトピックのサービスは、`ICalculator` インターフェイスを実装しています。 クライアントはこのインターフェイスにある操作を非同期に呼び出すことができます。これはたとえば `Add` という操作を `BeginAdd` と `EndAdd` の 2 つのメソッドに分割できることを意味します。前者によって呼び出しを開始し、後者によって操作の完了時に結果を取得します。 サービスで操作を非同期に実装する方法を示す例については、「 [方法: 非同期サービス操作を実装](../how-to-implement-an-asynchronous-service-operation.md)する」を参照してください。 同期操作と非同期操作の詳細については、「 [同期操作と非同期操作](../synchronous-and-asynchronous-operations.md)」を参照してください。  
   
-## <a name="procedure"></a>手順  
+## <a name="procedure"></a>プロシージャ  
   
 #### <a name="to-call-wcf-service-operations-asynchronously"></a>WCF サービス操作を非同期に呼び出すには  
   

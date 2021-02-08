@@ -1,19 +1,20 @@
 ---
+description: '詳細情報: 基本的なデータコントラクト'
 title: 基本的なデータ コントラクト
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Data Contract
 ms.assetid: b124e9e0-cb73-4ae0-b9c3-e6cdf5eced98
-ms.openlocfilehash: 66df6a1d7c2df17e79925490644891c0a536b1cd
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 332b9325e87c91be70e1ddd708902c4cef3777b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585494"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778868"
 ---
 # <a name="basic-data-contract"></a>基本的なデータ コントラクト
 
-このサンプルでは、データ コントラクトを実装する方法を示します。 データ コントラクトを使用すると、サービスと構造化データをやり取りできます。 このサンプルは[はじめに](getting-started-sample.md)に基づいていますが、基本的な数値型ではなく複素数を使用します。
+このサンプルでは、データ コントラクトを実装する方法を示します。 データ コントラクトを使用すると、サービスと構造化データをやり取りできます。 このサンプルは [はじめに](getting-started-sample.md) に基づいていますが、基本的な数値型ではなく複素数を使用します。
 
 この例では、サービスはインターネット インフォメーション サービス (IIS) によってホストされています。クライアントはコンソール アプリケーション (.exe) です。
 
@@ -96,7 +97,7 @@ public class CalculatorService : ICalculator
 }
 ```
 
-クライアント実装でも複素数を使用します。 サービスコントラクトとデータコントラクトは両方とも、サービスメタデータから[ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)によって生成されるソースファイル generatedClient.cs に定義されています。
+クライアント実装でも複素数を使用します。 サービスコントラクトとデータコントラクトは両方とも、サービスメタデータから [ServiceModel メタデータユーティリティツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) によって生成されるソースファイル generatedClient.cs に定義されています。
 
 ```csharp
 // Create a client.
@@ -144,6 +145,6 @@ Press <ENTER> to terminate client.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\Basic`

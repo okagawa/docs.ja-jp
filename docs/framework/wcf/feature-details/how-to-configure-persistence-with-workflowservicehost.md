@@ -1,13 +1,14 @@
 ---
+description: '詳細については、「方法: WorkflowServiceHost で永続化を構成する」を参照してください。'
 title: '方法: WorkflowServiceHost を使用して永続性を構成する'
 ms.date: 03/30/2017
 ms.assetid: e31cd4df-13a3-4a9a-9be8-5243e0055356
-ms.openlocfilehash: 3d8b7183b11c138b8da1f04d9084f8b94b7dcaa6
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 79945fb791cc25bdf362302fa884636942fb5692
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257341"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780038"
 ---
 # <a name="how-to-configure-persistence-with-workflowservicehost"></a>方法: WorkflowServiceHost を使用して永続性を構成する
 

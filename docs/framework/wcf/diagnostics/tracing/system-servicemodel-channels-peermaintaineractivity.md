@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「PeerMaintainerActivity」を参照してください。
 title: System.ServiceModel.Channels.PeerMaintainerActivity
 ms.date: 03/30/2017
 ms.assetid: ef28d086-d7fb-4e81-82e9-45a54647783b
-ms.openlocfilehash: c1e82611bb776531ad3e3d60283d970602eb7f15
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: da4e4cf87da808cb6779445b6507b51d098132b3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293027"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780882"
 ---
 # <a name="systemservicemodelchannelspeermaintaineractivity"></a>System.ServiceModel.Channels.PeerMaintainerActivity
 
 PeerMaintainer モジュールは、特定の操作を実行しています (詳細はトレース メッセージの本文に含まれています)。  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このトレースは、各種の PeerMaintainer 操作中に行われます。  
   

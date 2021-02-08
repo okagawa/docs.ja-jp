@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRStrongName:: StrongNameSignatureGenerationEx メソッド'
 title: ICLRStrongName::StrongNameSignatureGenerationEx メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c3f34584-c6e2-41fd-bb44-e44da8546309
 topic_type:
 - apiref
-ms.openlocfilehash: 78cc043953e6288df136b43590831569d112afef
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 911f55aa509c25eb0d95d6d2a31c9f715af2080d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674516"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781871"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>ICLRStrongName::StrongNameSignatureGenerationEx メソッド
 
@@ -77,7 +78,7 @@ HRESULT StrongNameSignatureGenerationEx (
 
  `S_OK` メソッドが正常に完了した場合は。それ以外の場合は、失敗を示す HRESULT 値 (「リストの [一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values) 」を参照してください)。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `wszFilePath`署名を作成せずに署名のサイズを計算するには、に null を指定します。  
   

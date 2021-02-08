@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「WCF でのセキュリティの動作」を参照してください。
 title: Windows Communication Foundation のセキュリティ動作
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: 4e8452d2beb93c9ae59ef6535f45445352a48e22
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a9ebdc44b3770ab4d0cf931db4bf23c9a4cd8e4e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288334"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779856"
 ---
 # <a name="security-behaviors-in-wcf"></a>Windows Communication Foundation のセキュリティ動作
 
@@ -89,7 +90,7 @@ Windows Communication Foundation (WCF) では、動作によって、サービ�
   
 - このコレクションに URI を追加して、有効な URI のセットを指定します。 これを行うには、 [\<add>](../../configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md) URI ごとにを挿入します。  
   
- 詳細については、 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> を参照してください。  
+ 詳細については、「<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>」を参照してください。  
   
  この構成要素の使用方法の詳細については、「 [方法: フェデレーションサービスで資格情報を構成する](how-to-configure-credentials-on-a-federation-service.md)」を参照してください。  
   

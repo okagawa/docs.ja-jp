@@ -1,16 +1,17 @@
 ---
+description: '詳細については、「方法: WSE 3.0 サービスと相互運用するように WCF クライアントを構成する」を参照してください。'
 title: '方法: WCF クライアントと WSE3.0 サービスを相互運用するために構成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
-ms.openlocfilehash: b5284db1329c572bdecf3ef607e697c63835d508
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 97de90c491a29cdacf881a92013a11db6aea416f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257523"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780129"
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>方法: WCF クライアントと WSE3.0 サービスを相互運用するために構成する
 

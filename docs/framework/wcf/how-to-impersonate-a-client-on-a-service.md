@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: サービスでクライアントを偽装する」を参照してください。'
 title: '方法: サービスでクライアントに偽装する'
 ms.date: 03/30/2017
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - impersonation
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
-ms.openlocfilehash: 24a06df5b6fbb908aff3ef1b2166fd5162549ba2
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 84d50b0c22161a829da66e42b4b3bbf004b68487
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96290115"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779375"
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>方法: サービスでクライアントに偽装する
 

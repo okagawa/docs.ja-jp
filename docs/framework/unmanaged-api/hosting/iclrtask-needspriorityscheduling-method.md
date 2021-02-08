@@ -1,4 +1,5 @@
 ---
+description: ': ICLRTask:: NeedsPriorityScheduling メソッドの詳細について説明します。'
 title: ICLRTask::NeedsPriorityScheduling メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9c9db3f3-26bf-4317-88de-5eb926a22a1d
 topic_type:
 - apiref
-ms.openlocfilehash: 86e0899b883f09f2e7b27c0f957e943deb73bb66
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e6e1b93b38d86259dc2f405f8512ec1063fe7b3b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690799"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781767"
 ---
 # <a name="iclrtaskneedspriorityscheduling-method"></a>ICLRTask::NeedsPriorityScheduling メソッド
 
@@ -50,7 +51,7 @@ HRESULT NeedsPriorityScheduling (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ガベージコレクターによってタスクが収集されるのを終了する場合、CLR はの値をに設定して `pbNeedsPriorityScheduling` `true` 、優先度の高い再スケジュールを示します。 これにより、ホストはタスクを迅速に再スケジュールすることができます。これにより、ガベージコレクションの遅延の可能性が最小限に抑えられ、ホストとランタイムがメモリリソースを節約できるようになります。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback8::D ynamicMethodJITCompilationFinished メソッド'
 title: ICorProfilerCallback8::D ynamicMethodJITCompilationFinished メソッド
 ms.date: 04/10/2018
 api_name:
@@ -8,12 +9,12 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: 6354667e754da42692cc0de2dc5330c56f951aa1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d076307b9e57c27753297cad8eebc1b9aa9433f6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725444"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781715"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>ICorProfilerCallback8::D ynamicMethodJITCompilationFinished メソッド
 
@@ -41,7 +42,7 @@ JIT コンパイルが開始されるメモリ内関数の識別子。
 [入力] `fIsSafeToBlock` 
  `true`ブロックが原因で、ランタイムが呼び出し元のスレッドがこのコールバックから戻るのを待機する場合があることを示します。`false`ブロックがランタイムの動作に影響を与えないことを示す場合。  
 
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
 このコールバックは、動的メソッドの JIT コンパイルが完了するたびにトリガーされます。 これには、さまざまな IL スタブおよび LCG メソッドが含まれます。 その目的は、コンパイルされたメソッドをユーザーに識別するのに十分な情報をプロファイラーライターに提供することです。
 

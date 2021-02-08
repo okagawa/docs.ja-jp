@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ICLRPolicyManager:: SetTimeout メソッド'
 title: ICLRPolicyManager::SetTimeout メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 954404fd-d52d-4e68-b582-8692f3a5f608
 topic_type:
 - apiref
-ms.openlocfilehash: 459c5bc0699487b62d5dcf76f1044faf53ebab8b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5fb65e93cc6eea7826498ff6b03147773f06e0b8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732464"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781897"
 ---
 # <a name="iclrpolicymanagersettimeout-method"></a>ICLRPolicyManager::SetTimeout メソッド
 

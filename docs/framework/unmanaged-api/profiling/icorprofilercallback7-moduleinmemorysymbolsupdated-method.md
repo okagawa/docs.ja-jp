@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: ICorProfilerCallback7:: Moduleinmemoryシンボル Supmethod'
 title: 'ICorProfilerCallback7:: Moduleinmemory メソッド'
 ms.date: 03/30/2017
 api_name:
@@ -9,12 +10,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: f362a896-3247-4894-9727-e48dbbcd2c78
-ms.openlocfilehash: 248d2f749ddcbd772313558af2b2721f4d1c0f58
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 74adf7edc5269824a924933eb3284a5964e1bac1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723091"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781728"
 ---
 # <a name="icorprofilercallback7moduleinmemorysymbolsupdated-method"></a>ICorProfilerCallback7:: Moduleinmemory メソッド
 
@@ -35,7 +36,7 @@ HRESULT ModuleInMemorySymbolsUpdated(
  [入力] `moduleId`  
  シンボルストリームが更新されるメモリ内モジュールの識別子。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このコールバックは、 [ICorProfilerCallback5:: SetEventMask2](icorprofilerinfo5-seteventmask2-method.md)メソッドを呼び出すときに、 [COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED](cor-prf-high-monitor-enumeration.md)イベントマスクフラグを設定することによって制御されます。  
   
