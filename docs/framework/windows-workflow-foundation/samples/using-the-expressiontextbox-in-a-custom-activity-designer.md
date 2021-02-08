@@ -1,13 +1,14 @@
 ---
+description: 詳細については、カスタムアクティビティデザイナーでの式の使用に関するページを参照してください。
 title: カスタム アクティビティ デザイナーでの ExpressionTextBox の使用
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
-ms.openlocfilehash: dfb53096be59abd9924a024880d4125ca774d4b8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c333832c2f955354233371c6572f8ae27e5d8643
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96267495"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787761"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>カスタム アクティビティ デザイナーでの ExpressionTextBox の使用
 
