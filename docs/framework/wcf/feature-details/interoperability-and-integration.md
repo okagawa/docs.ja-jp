@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 相互運用性と統合'
 title: 相互運用性と統合
 ms.date: 03/30/2017
 ms.assetid: 0d925119-01a1-45c2-9ea0-23061323ad33
-ms.openlocfilehash: 23d87cd98f42ee713f741057d2d60cea8513cc87
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9f469b3ed516c679dc3af1d2f53dce1a9251d2fd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96260293"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802724"
 ---
 # <a name="interoperability-and-integration"></a>相互運用性と統合
 

@@ -1,13 +1,14 @@
 ---
+description: 詳細については <add> 、 <contractTypeNames>
 title: <add> の <contractTypeNames>
 ms.date: 03/30/2017
 ms.assetid: 03aff6be-5dfb-4a64-ada3-e36227cd43c7
-ms.openlocfilehash: 69a0bbbc8774251dbdc062875bb06453f355c882
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0708aa277b4250cb4134a98ddf7af661840981a8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149141"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803998"
 ---
 # <a name="add-of-contracttypenames"></a>\<add> の \<contractTypeNames>
 
@@ -62,7 +63,7 @@ ms.locfileid: "91149141"
   
 ### <a name="child-elements"></a>子要素  
 
- None  
+ なし  
   
 ### <a name="parent-elements"></a>親要素  
   

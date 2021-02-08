@@ -1,13 +1,14 @@
 ---
+description: 詳細については <add> 、 <baseAddressPrefixFilter>
 title: <add> の <baseAddressPrefixFilter>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: fefe85381aec113da123e6f2246aee340b0cf97a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f3abdf59223921a56c96e02dd95babc54f91dc03
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181597"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99804050"
 ---
 # <a name="add-of-baseaddressprefixfilter"></a>\<add> の \<baseAddressPrefixFilter>
 
@@ -35,7 +36,7 @@ IIS で Windows Communication Foundation (WCF) アプリケーションをホス
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |prefix|ベース アドレスの一部の一致に使用される URI。|  
   

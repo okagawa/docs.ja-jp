@@ -1,15 +1,16 @@
 ---
-title: <TypeInstantiation> 要素 (.NET ネイティブ)
+description: '詳細情報: <TypeInstantiation> 要素 (.NET Native)'
+title: <TypeInstantiation> 要素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
-ms.openlocfilehash: a1db497762b3dc8c135154086d72fb3ac92ff5a4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8939767e016283ea525fbd74554fe30b1cca952a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250750"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801931"
 ---
-# <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation> 要素 (.NET ネイティブ)
+# <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation> 要素 (.NET Native)
 
 構築されたジェネリック型にランタイム リフレクション ポリシーを適用します。  
   
@@ -105,7 +106,7 @@ ms.locfileid: "96250750"
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   
- .NET ネイティブツールチェーンを使用してコンパイルした後、この例では、メソッドを呼び出す行で [MissingMetadataException](missingmetadataexception-class-net-native.md) 例外がスローされ <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType> ます。 次の `<TypeInstantiation>` 要素をランタイム ディレクティブ ファイルに追加すると、この例外を排除して、必要なメタデータを提供できます。  
+ .NET Native ツールチェーンを使用してコンパイルした後、この例では、メソッドを呼び出す行で [MissingMetadataException](missingmetadataexception-class-net-native.md) 例外がスローされ <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType> ます。 次の `<TypeInstantiation>` 要素をランタイム ディレクティブ ファイルに追加すると、この例外を排除して、必要なメタデータを提供できます。  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

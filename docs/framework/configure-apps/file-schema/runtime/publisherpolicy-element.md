@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <publisherPolicy> 要素'
 title: <publisherPolicy> 要素
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - container tags, <publisherPolicy> element
 - <publisherPolicy> element
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
-ms.openlocfilehash: bd6ab1123ef3f84f7e8a06b25ce48aed37e4bef7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 35d729d5b195e010a80e7272312f14ac5802001b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91195260"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802438"
 ---
 # <a name="publisherpolicy-element"></a>\<publisherPolicy> 要素
 
@@ -39,15 +40,15 @@ ms.locfileid: "91195260"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |`apply`|発行者ポリシーを適用するかどうかを指定します。|  
   
 ## <a name="apply-attribute"></a>属性の適用  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|`yes`|発行者ポリシーを適用します。 これが既定の設定です。|  
+|`yes`|発行者ポリシーを適用します。 これは、既定の設定です。|  
 |`no`|発行者ポリシーは適用されません。|  
   
 ### <a name="child-elements"></a>子要素  
@@ -67,7 +68,7 @@ ms.locfileid: "91195260"
 
  コンポーネントベンダーがアセンブリの新しいバージョンをリリースする場合、ベンダーには発行者ポリシーを含めることができるため、以前のバージョンを使用するアプリケーションでは新しいバージョンが使用されるようになりました。 特定のアセンブリに対して発行者ポリシーを適用するかどうかを指定するには、要素に要素を配置し **\<publisherPolicy>** **\<dependentAssembly>** ます。  
   
- **適用**属性の既定の設定は **[はい]** です。 **適用**属性を [**いいえ** **]** に設定すると、アセンブリの以前のすべての設定がオーバーライドされます。  
+ **適用** 属性の既定の設定は **[はい]** です。 **適用** 属性を [**いいえ** **]** に設定すると、アセンブリの以前のすべての設定がオーバーライドされます。  
   
  アプリケーションが [\<publisherPolicy apply="no"/>](publisherpolicy-element.md) アプリケーション構成ファイルの要素を使用して発行者ポリシーを明示的に無視するためのアクセス許可が必要です。 権限は、にフラグを設定することによって付与され <xref:System.Security.Permissions.SecurityPermissionFlag> <xref:System.Security.Permissions.SecurityPermission> ます。 詳細については、「 [アセンブリバインディングリダイレクトのセキュリティアクセス許可](../../assembly-binding-redirection-security-permission.md)」を参照してください。  
   

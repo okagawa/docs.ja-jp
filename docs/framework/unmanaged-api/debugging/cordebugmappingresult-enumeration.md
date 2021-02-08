@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CorDebugMappingResult 列挙型」を参照してください。
 title: CorDebugMappingResult 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 701281dd-2936-45c8-a1f0-3bf7332b093b
 topic_type:
 - apiref
-ms.openlocfilehash: 0e7afa386af1bd2eebc2b58592d01b764660248f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 03454e2fbfa8fabca89805ea51a6cfba27aa792f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704696"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801593"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>CorDebugMappingResult 列挙型
 
@@ -49,7 +50,7 @@ typedef enum CorDebugMappingResult {
 |`MAPPING_EXACT`|メソッドが MSIL コードに厳密にマップされているか、フレームが解釈されているため、IP の値は正確です。|  
 |`MAPPING_APPROXIMATE`|メソッドは正常にマップされましたが、IP の値は概数である可能性があります。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  指示ポインターの値を取得するには、「ツール」を [使用します](icordebugilframe-getip-method.md) 。  
   

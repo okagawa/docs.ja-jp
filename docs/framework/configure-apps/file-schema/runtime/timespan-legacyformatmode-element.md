@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: <TimeSpan_LegacyFormatMode> 要素'
 title: <TimeSpan_LegacyFormatMode> 要素
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <TimeSpan_LegacyFormatMode> element
 - TimeSpan_LegacyFormatMode element
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
-ms.openlocfilehash: 9d9eedf52f5d711412e4549e39e6ea23abb68ff3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1fa5c3a15941004ebab9e3622d4b3e7b27130e22
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73968908"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802386"
 ---
 # <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode> 要素
 
@@ -42,7 +43,7 @@ ms.locfileid: "73968908"
 
 ## <a name="enabled-attribute"></a>enabled 属性
 
-|値|Description|
+|値|説明|
 |-----------|-----------------|
 |`false`|ランタイムでは、従来の書式設定動作は復元されません。|
 |`true`|ランタイムは、従来の書式設定動作を復元します。|
@@ -53,7 +54,7 @@ ms.locfileid: "73968908"
 
 ### <a name="parent-elements"></a>親要素
 
-|要素|Description|
+|要素|説明|
 |-------------|-----------------|
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|
@@ -62,7 +63,7 @@ ms.locfileid: "73968908"
 
 .NET Framework 4 以降では、 <xref:System.TimeSpan?displayProperty=nameWithType> 構造体はインターフェイスを実装 <xref:System.IFormattable> し、標準およびカスタムの書式指定文字列を使用した書式設定操作をサポートします。 解析メソッドで、サポートされていない書式指定子または書式指定文字列が検出されると、がスローさ <xref:System.FormatException> れます。
 
-以前のバージョンの .NET Framework では、構造体がを実装しておらず、 <xref:System.TimeSpan> <xref:System.IFormattable> 書式指定文字列をサポートしていませんでした。 しかし、多くの開発者は、 <xref:System.TimeSpan> 書式指定文字列のセットをサポートし、などのメソッドを使用して[複合書式指定操作](../../../../standard/base-types/composite-formatting.md)で使用したことを誤って想定していました <xref:System.String.Format%2A?displayProperty=nameWithType> 。 通常、型がを実装 <xref:System.IFormattable> し、書式指定文字列をサポートする場合、サポートされていない書式指定文字列を使用した書式指定メソッドの呼び出しは、通常、をスロー <xref:System.FormatException> します。 ただし、が <xref:System.TimeSpan> 実装されていないため、 <xref:System.IFormattable> ランタイムは書式指定文字列を無視し、代わりにメソッドを呼び出しました <xref:System.TimeSpan.ToString?displayProperty=nameWithType> 。 これは、書式指定文字列が書式設定操作に影響を与えないことを意味しますが、その存在はになりませんでした <xref:System.FormatException> 。
+以前のバージョンの .NET Framework では、構造体がを実装しておらず、 <xref:System.TimeSpan> <xref:System.IFormattable> 書式指定文字列をサポートしていませんでした。 しかし、多くの開発者は、 <xref:System.TimeSpan> 書式指定文字列のセットをサポートし、などのメソッドを使用して [複合書式指定操作](../../../../standard/base-types/composite-formatting.md) で使用したことを誤って想定していました <xref:System.String.Format%2A?displayProperty=nameWithType> 。 通常、型がを実装 <xref:System.IFormattable> し、書式指定文字列をサポートする場合、サポートされていない書式指定文字列を使用した書式指定メソッドの呼び出しは、通常、をスロー <xref:System.FormatException> します。 ただし、が <xref:System.TimeSpan> 実装されていないため、 <xref:System.IFormattable> ランタイムは書式指定文字列を無視し、代わりにメソッドを呼び出しました <xref:System.TimeSpan.ToString?displayProperty=nameWithType> 。 これは、書式指定文字列が書式設定操作に影響を与えないことを意味しますが、その存在はになりませんでした <xref:System.FormatException> 。
 
 レガシコードによって複合書式指定メソッドと無効な書式指定文字列が渡され、そのコードを再コンパイルできない場合は、要素を使用して `<TimeSpan_LegacyFormatMode>` 従来の動作を復元でき <xref:System.TimeSpan> ます。 `enabled`この要素の属性をに設定すると、 `true` 複合書式指定メソッドによってではなくが呼び出され、 <xref:System.TimeSpan.ToString?displayProperty=nameWithType> がスローされ <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> <xref:System.FormatException> ません。
 

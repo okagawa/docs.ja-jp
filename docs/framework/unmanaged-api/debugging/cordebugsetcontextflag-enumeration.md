@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CorDebugSetContextFlag 列挙型」を参照してください。
 title: CorDebugSetContextFlag 列挙体
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b30280bb-fe75-44ed-8589-bcff081fae44
 topic_type:
 - apiref
-ms.openlocfilehash: 078dfefc70704eaadb9cf3c06cfe58f276f7dfce
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 625f24e516ff462cf3d0e628dfff6c08793807ce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726030"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801554"
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a>CorDebugSetContextFlag 列挙体
 
@@ -42,7 +43,7 @@ typedef enum CorDebugSetContextFlag
 |SET_CONTEXT_FLAG_ACTIVE_FRAME|コンテキストは、スレッドのアクティブなコンテキストです。|  
 |SET_CONTEXT_FLAG_UNWIND_FRAME|コンテキストは、別のフレームからのアンワインドによって計算されています。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `CorDebugSetContextFlag` によって使用される値を提供する、には、「 [SetContext](icordebugstackwalk-setcontext-method.md) メソッドです。  
   

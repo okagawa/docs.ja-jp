@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <localServiceSettings> 要素'
 title: <localServiceSettings> 要素
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-ms.openlocfilehash: 3043c07afd316d90cc5525a67bef144f33d9b136
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ee3306588d6a86ed9ced9c66624cd34f18e2c5c6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204932"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802204"
 ---
 # <a name="localservicesettings-element"></a>\<localServiceSettings> 要素
 
@@ -48,9 +49,9 @@ ms.locfileid: "91204932"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
-|`detectReplays`|チャネルに対するリプレイ攻撃を検出し、自動的に処理するかどうかを指定するブール値です。 既定では、 `false`です。|  
+|`detectReplays`|チャネルに対するリプレイ攻撃を検出し、自動的に処理するかどうかを指定するブール値です。 既定値は、`false` です。|  
 |`inactivityTimeout`|<xref:System.TimeSpan>チャネルがタイムアウトまで待機する非アクティブな時間を指定する正の。既定値は "01:00:00" です。|  
 |`issuedCookieLifeTime`|すべての新しいセキュリティ クッキーに発行される有効期間を指定する <xref:System.TimeSpan>。 有効期間を超えるクッキーは、再利用され、再度ネゴシエートされる必要があります。 既定値は、"10:00:00" です。|  
 |`maxCachedCookies`|キャッシュできるクッキーの最大数を指定する正の整数。 既定値は 1000 です。|  
@@ -101,7 +102,7 @@ ms.locfileid: "91204932"
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
 - [方法: SecurityBindingElement を使用してカスタム バインドを作成する](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [カスタム バインディング セキュリティ](../../../wcf/samples/custom-binding-security.md)

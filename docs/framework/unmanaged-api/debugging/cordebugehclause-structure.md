@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: CorDebugEHClause 構造体'
 title: CorDebugEHClause 構造体
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 0e350a1b-6997-46d0-bfc5-962a5011ef43
 topic_type:
 - apiref
-ms.openlocfilehash: 225523280a2e1e0d8f51321e9dd865d901e725ba
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ecb00e2a110719ab82de32fb1f1c861e2033a528
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712704"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801671"
 ---
 # <a name="cordebugehclause-structure"></a>CorDebugEHClause 構造体
 
@@ -51,7 +52,7 @@ typedef struct _CorDebugEHClause {
 |`ClassToken`|型に基づく例外ハンドラーのメタデータ トークン。|  
 |`FilterOffset`|フィルターに基づく例外ハンドラーのメソッド本体の先頭からのオフセット (バイト単位)。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  値の配列 `CoreDebugEHClause` は、 [GetEHClauses](icordebugilcode-getehclauses-method.md) メソッドによって返されます。  
   

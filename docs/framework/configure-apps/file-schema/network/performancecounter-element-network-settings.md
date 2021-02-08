@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <performanceCounters> 要素 (ネットワーク設定)'
 title: <performanceCounters> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - performanceCounters element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 584bdafbbd60303401cbc6ad96b8654fe11c7077
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: a923ba2420bd15e33f4564a196854fdf9e130e12
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756261"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99804115"
 ---
 # <a name="performancecounters-element-network-settings"></a>\<performanceCounters> 要素 (ネットワーク設定)
 

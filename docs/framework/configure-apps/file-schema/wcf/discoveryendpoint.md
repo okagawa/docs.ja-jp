@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <discoveryEndpoint>'
 title: <discoveryEndpoint>
 ms.date: 03/30/2017
 ms.assetid: fae2f48b-a635-4e4b-859d-a1432ac37e1c
-ms.openlocfilehash: 32b14f8fb3235040a51455f2099a403c8312c699
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 32be673aac9604d8285d002640f11a29b9545afb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855398"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802308"
 ---
 # \<discoveryEndpoint>
 
@@ -52,7 +53,7 @@ ms.locfileid: "70855398"
   
 ### <a name="parent-elements"></a>親要素
 
-| 要素 | Description |  
+| 要素 | 説明 |  
 | ------- | ----------- |  
 | [\<standardEndpoints>](standardendpoints.md) | 1 つ以上のプロパティ (アドレス、バインディング、コントラクト) が固定されている、あらかじめ定義されたエンドポイントである標準エンドポイントのコレクション。 |  
   

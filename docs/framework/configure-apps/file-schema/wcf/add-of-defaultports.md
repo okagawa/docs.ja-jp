@@ -1,13 +1,14 @@
 ---
+description: 詳細については <add> 、 <defaultPorts>
 title: <add> の <defaultPorts>
 ms.date: 03/30/2017
 ms.assetid: f162ce42-963b-4779-96a7-d6d8b4ea0d2f
-ms.openlocfilehash: 2c6b5de51e6508965daf6022a47d12d8d73f2a4d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9db7afa5183b185eb842530b051d98236e7fa381
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149128"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803959"
 ---
 # <a name="add-of-defaultports"></a>\<add> の \<defaultPorts>
 
@@ -39,7 +40,7 @@ ms.locfileid: "91149128"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |port|既定の通信ポート番号を指定する整数。|  
 |scheme|通信ポートに関連付けられているプロトコル設定のグループを示す文字列。|  

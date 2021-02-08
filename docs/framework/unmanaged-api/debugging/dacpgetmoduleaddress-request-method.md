@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: DacpGetModuleAddress:: Request メソッド'
 title: DacpGetModuleAddress::Request メソッド
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 1755526636bed6d78663112e4c2ad5ab7c3f731c
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 4cdec9cf6b9bd818ce1137fb5b2c691532fab94e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860844"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801502"
 ---
 # <a name="dacpgetmoduleaddressrequest-method"></a>DacpGetModuleAddress::Request メソッド
 
@@ -45,9 +46,9 @@ HRESULT Request(
 
 この構造体はランタイム内に存在し、ヘッダーまたはライブラリファイルを介して公開されることはありません。 これを使用する最も簡単な方法は、実装を模倣することです。
 
-- 次のパラメーターを使用して`Request` 、 `IXCLRDataModule*`パラメーターのメソッドの呼び出しから取得した値を返します。`((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`
+- 次のパラメーターを使用して、パラメーターのメソッドの呼び出しから取得した値を返し `Request` `IXCLRDataModule*` ます。 `((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **プラットフォーム:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。\
 **ヘッダー:** 存在

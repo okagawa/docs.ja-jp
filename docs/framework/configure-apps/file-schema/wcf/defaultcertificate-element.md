@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <defaultCertificate> 要素'
 title: <defaultCertificate> 要素
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: 2eaec4f4296f90579ca32d817f0a20da4ccc9a37
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 580236e521e91c8b475586f6c6378630960f233c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153899"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803920"
 ---
 # <a name="defaultcertificate-element"></a>\<defaultCertificate> 要素
 
@@ -37,9 +38,9 @@ ms.locfileid: "91153899"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
-|findValue|文字列。 検索する値。|  
+|findValue|文字列 をオンにします。 検索する値。|  
 |x509FindType|列挙値。 検索する証明書フィールドのいずれかです。|  
 |storeLocation|列挙値。 検索する 2 つのシステム格納場所のいずれかです。|  
 |storeName|列挙値。 検索するシステム ストアのいずれかです。|  
@@ -52,19 +53,19 @@ ms.locfileid: "91153899"
   
 ## <a name="x509findtype-attribute"></a>x509FindType 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |列挙|値は、FindByThumbprint、FindBySubjectName、FindBySubjectDistinguishedName、FindByIssuerName、FindByIssuerDistinguishedName、FindBySerialNumber、FindByTimeValid、FindByTimeNotYetValid、FindBySerialNumber、FindByTimeExpired、FindByTemplateName、FindByApplicationPolicy、FindByCertificatePolicy、FindByExtension、FindByKeyUsage、FindBySubjectKeyIdentifier です。|  
   
 ## <a name="storelocation-attribute"></a>storeLocation 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |列挙|CurrentUser または LocalMachine です。|  
   
 ## <a name="storename-attribute"></a>storeName 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |列挙|値は、AddressBook、AuthRoot、CertificateAuthority、Disallowed、My、Root、TrustedPeople、および TrustedPublisher です。|  
   

@@ -1,13 +1,14 @@
 ---
+description: 詳細については <add> 、 <authorizationPolicies>
 title: <add> の <authorizationPolicies>
 ms.date: 03/30/2017
 ms.assetid: 613a03d8-4384-4556-bce2-8c23286c0bb0
-ms.openlocfilehash: 39cb89340907743c727a425bb2f140ac34842e3b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 616f09abfad51f41348b0ffa8557a4fd54492437
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181675"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99804102"
 ---
 # <a name="add-of-authorizationpolicies"></a>\<add> の \<authorizationPolicies>
 
@@ -30,7 +31,7 @@ ms.locfileid: "91181675"
 </authorizationPolicies>
 ```  
   
-## <a name="type"></a>種類  
+## <a name="type"></a>Type  
 
  `Type`  
   
@@ -40,7 +41,7 @@ ms.locfileid: "91181675"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |`policyType`|必須の文字列属性。<br /><br /> Windows Communication Foundation (WCF) アクセス制御モデルは、一連の承認ポリシーを型としてプロビジョニングすることをサポートしています。 この属性は、入力クレームのセットをクレームの別のセットに変換することを可能にする承認ポリシーを指定します。 アクセス制御は、それに基づいて許可または拒否されます。|  
   

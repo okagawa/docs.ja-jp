@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: DacpReJitData 構造体'
 title: DacpReJitData 構造体
 ms.date: 02/01/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 46708acc77dad00727ee35e7d06e4228eacbd502
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8e8d506856dbc6579ac6ea0eee2b2088a980a315
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723039"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801437"
 ---
 # <a name="dacprejitdata-structure"></a>DacpReJitData 構造体
 
@@ -55,7 +56,7 @@ struct MSLAYOUT DacpReJitData
 | `flags`          | 指定されたバージョンのメソッドの ReJit インストルメンテーションの現在の状態を示すフラグ。 |
 | `NativeCodeAddr` | メソッドの rejitted 実装のベースアドレス。                                         |
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 この構造体はランタイム内に存在し、ヘッダーまたはライブラリファイルを介して公開されることはありません。 これを使用するには、前に示したように構造体を定義します。 `ms_struct`Microsoft コンパイラを使用していない場合は、パッキングを使用して構造体を定義する必要もあります。
 

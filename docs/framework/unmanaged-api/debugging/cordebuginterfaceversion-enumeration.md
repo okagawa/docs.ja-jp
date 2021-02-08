@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CorDebugInterfaceVersion 列挙型」を参照してください。
 title: CorDebugInterfaceVersion 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d1e6cd9-2a15-41c6-9b68-008705a4ed90
 topic_type:
 - apiref
-ms.openlocfilehash: 939400fcc40edd62532d459d6ed626dbdc4f41fc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 35b8fd6eae2b7999d7669632506cfea43dffbd45
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675309"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801645"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion 列挙型
 
@@ -221,9 +222,9 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugILFrame3`|[ICorDebugILFrame3](icordebugilframe3-interface.md)|4.5|  
 |`CorDebugLatestVersion`|(すべてのサービス パックを含めて) .NET Framework のバージョンは最新バージョン。|-|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
- デバッガーでは、CreateDebuggingInterfaceFromVersion 関数の列挙体を使用して、 `CorDebugInterfaceVersion` デバッガーがサポートしている[CreateDebuggingInterfaceFromVersion](../hosting/createdebugginginterfacefromversion-function.md) .NET Framework の最大バージョンを指定できます。  
+ デバッガーでは、CreateDebuggingInterfaceFromVersion 関数の列挙体を使用して、 `CorDebugInterfaceVersion` デバッガーがサポートしている[](../hosting/createdebugginginterfacefromversion-function.md) .NET Framework の最大バージョンを指定できます。  
   
 ## <a name="interface-names"></a>インターフェイス名  
 

@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: COM + アプリケーションとの統合の概要'
 title: COM+ アプリケーションとの統合の概要
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 1b9b7e57760c2aba0a8e9eadd53ca8e72529b787
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c24ce95651aff222b8374243143afc7166406fcf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96248969"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802789"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM+ アプリケーションとの統合の概要
 
@@ -92,7 +93,7 @@ Windows Communication Foundation (WCF) は、分散アプリケーションを�
   
      Web サービスと COM+ アプリケーション ロジックの両方を Web サーバーのワーカー プロセス内で提供します。 Web サービス要求を転送することなく、自動的に Web ホスト モードにすることができます。 ただし、サーバー アプリケーションに DCOM でアクセスできない、という短所があります。  
   
-### <a name="security-considerations"></a>セキュリティの考慮事項  
+### <a name="security-considerations"></a>セキュリティに関する考慮事項  
 
  他の WCF サービスと同様に、公開されたサービスのセキュリティ設定は、WCF チャネルの構成設定を通じて管理されます。 従来の DCOM セキュリティ設定には、コンピューター全体のアクセス権限設定などがありましたが、これは必須ではありません。 COM+ アプリケーション ロールを強制する場合、コンポーネントの "コンポーネント レベルのアクセス確認" 承認を有効にする必要があります。  
   

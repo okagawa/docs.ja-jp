@@ -1,14 +1,15 @@
 ---
+description: '詳細情報: <issuerNameRegistry>'
 title: <issuerNameRegistry>
 ms.date: 03/30/2017
 ms.assetid: 58b39d12-c953-40c4-88af-d7eb3343ca28
 author: BrucePerlerMS
-ms.openlocfilehash: 9991430f09cb6a63d0a3cdde24a4ff03d3dd746d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 73eb0d9d4d19f8e25f2db501e8cb3858d346ac2c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91165053"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803855"
 ---
 # \<issuerNameRegistry>
 
@@ -43,7 +44,7 @@ ms.locfileid: "91165053"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |type|クラスから派生する型 <xref:System.IdentityModel.Tokens.IssuerNameRegistry> 。 カスタムを指定する方法の詳細については `type` 、「[カスタム型参照]」を参照してください。|  
   

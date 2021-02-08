@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <message> の要素 <wsFederationHttpBinding>'
 title: <message> の要素 <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: ea320b1d97e742d4f90ec55502f3bd429803283d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 64978902081ec9e5a603804fed3b378da12fe42e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204893"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802191"
 ---
 # <a name="message-element-of-wsfederationhttpbinding"></a>\<message> の要素 \<wsFederationHttpBinding>
 
@@ -87,16 +88,16 @@ ms.locfileid: "91204893"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |algorithmSuite|メッセージの暗号化とキー ラップ アルゴリズムを設定します。 この属性の有効な値については、「algorithmSuite 属性」の表を参照してください。 既定値は `Basic256` です。<br /><br /> この属性は <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 型です。 これらのアルゴリズムは、セキュリティ ポリシー言語 (WS-SecurityPolicy) 仕様で指定されたアルゴリズムにマップされます。|  
-|issuedKeyType|発行されるキーの種類を指定します。 有効な値は次のとおりです。<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> 既定では、 `SymmetricKey`です。 この属性は <xref:System.IdentityModel.Tokens.SecurityKeyType> 型です。|  
-|issuedTokenType|発行されるトークンの型を指定する URI を含む文字列。 既定では、 `null`です。|  
+|issuedKeyType|発行されるキーの種類を指定します。 有効な値は次のとおりです。<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> 既定値は、`SymmetricKey` です。 この属性は <xref:System.IdentityModel.Tokens.SecurityKeyType> 型です。|  
+|issuedTokenType|発行されるトークンの型を指定する URI を含む文字列。 既定値は、`null` です。|  
 |negotiateServiceCredential|サービス資格情報がネゴシエーションの一部として交換されるか、帯域外で使用できるかを指定するブール値。 既定値は `true` で、サービス資格情報がネゴシエートされます。|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |Basic128|Basic128 暗号化を使用し、メッセージ ダイジェストには Sha1 を、キー ラップには Rsa-oaep-mgf1p を使用します。|  
 |Basic192|Basic192 暗号化を使用し、メッセージ ダイジェストには Sha1 を、キー ラップには Rsa-oaep-mgf1p を使用します。|  

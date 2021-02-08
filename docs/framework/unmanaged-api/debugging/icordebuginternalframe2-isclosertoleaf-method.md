@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugInternalFrame2:: IsCloserToLeaf メソッド'
 title: ICorDebugInternalFrame2::IsCloserToLeaf メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c1d3d1eb-8370-4f25-8297-3bd262b4740a
 topic_type:
 - apiref
-ms.openlocfilehash: 83d3eda0f3c4619ec7a5df91d13ab9f3a58e5f01
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d773f8670f600a5bcd2a8dad7f23fe243195957c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721349"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801281"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>ICorDebugInternalFrame2::IsCloserToLeaf メソッド
 
@@ -51,7 +52,7 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
 |E_FAIL|比較を実行できませんでした。|  
 |E_INVALIDARG|`pFrameToCompare` または `pIsCloser` が null です。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `IsCloserToLeaf` を使用すると、スタック上の他のフレームと内部フレームをインターリーブするポリシーを実装できます。  
   

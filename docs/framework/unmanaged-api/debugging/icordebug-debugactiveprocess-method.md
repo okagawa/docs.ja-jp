@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: ICorDebug::D Eて Activeprocess メソッド'
 title: ICorDebug::DebugActiveProcess メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fdab0ade-7f56-4fa2-b3ef-f7a1d2852bba
 topic_type:
 - apiref
-ms.openlocfilehash: 1713623fa575bea6df649106b37212f7aeaee6db
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9c3a212adf962f96fd2c7345fe8b580b6af3b544
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723468"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801320"
 ---
 # <a name="icordebugdebugactiveprocess-method"></a>ICorDebug::DebugActiveProcess メソッド
 
@@ -47,7 +48,7 @@ HRESULT DebugActiveProcess (
  `ppProcess`  
  入出力デバッガーがアタッチされているプロセスを表す "いいプロセス" オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  相互運用デバッグは、IA-64 ベースおよび AMD64 ベースのプラットフォームなど、Win9x および x86 以外のプラットフォームではサポートされていません。  
   

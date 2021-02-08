@@ -1,14 +1,15 @@
 ---
+description: '詳細情報: <activityScheduledQuery>'
 title: <activityScheduledQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: a8bcd6d4-b389-4daf-86bf-1ade85fec114
-ms.openlocfilehash: 207931f68303883c29161cc28a5fc1974d01b6b8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 72aa9c2d3480488d4468d008fa8a4306929c190d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148738"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802113"
 ---
 # \<activityScheduledQuery>
 
@@ -45,7 +46,7 @@ ms.locfileid: "91148738"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |activityName|キャンセルを要求しているアクティビティの名前を指定する文字列。|  
 |childActivityName|キャンセルが要求された子アクティビティの名前を指定する文字列。|  

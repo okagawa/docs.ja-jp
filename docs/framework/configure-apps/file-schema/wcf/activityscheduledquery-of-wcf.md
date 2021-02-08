@@ -1,15 +1,16 @@
 ---
-title: <activityScheduledQuery>WCF の
+description: 詳細については、「WCF」を参照してください。 <activityScheduledQuery>
+title: <activityScheduledQuery> WCF の
 ms.date: 03/30/2017
 ms.assetid: 25f6eee1-3d98-4c39-b517-c0813f03f106
-ms.openlocfilehash: b173964cf5d691f4b9300bca69ca4a1fe1ea7e11
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b1b5f971dccfbc650ee12a08a9ae2fa7b745db50
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850466"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802360"
 ---
-# <a name="activityscheduledquery-of-wcf"></a>\<activityScheduledQuery>WCF の
+# <a name="activityscheduledquery-of-wcf"></a>\<activityScheduledQuery> WCF の
 
 親アクティビティによる実行がスケジュールされているアクティビティを追跡するために使用する、クエリのコレクションを表します。 アクティビティがスケジュールされたレコードを追跡参加要素が定期受信するには、このクエリが必要です。  
   
@@ -58,7 +59,7 @@ ms.locfileid: "70850466"
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<activityScheduledQueries>](activityscheduledqueries-of-wcf.md)|親アクティビティによって実行されるようにスケジュールされたアクティビティを追跡するために使用されるクエリのコレクション。|  
   

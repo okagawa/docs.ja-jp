@@ -1,4 +1,5 @@
 ---
+description: の詳細については、「」を参照してください。 <filter> <add><sharedListeners>
 title: <filter> のの <add> 要素 <sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: e140148a342e31d6ade7def8849d8a7738301704
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5d6567ff029dea5ed98054dbc524bb7ed405324c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173927"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802373"
 ---
 # <a name="filter-element-for-add-for-sharedlisteners"></a>\<filter> のの \<add> 要素 \<sharedListeners>
 

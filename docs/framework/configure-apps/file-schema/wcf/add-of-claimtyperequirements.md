@@ -1,13 +1,14 @@
 ---
+description: 詳細については <add> 、 <claimTypeRequirements>
 title: <add> の <claimTypeRequirements>
 ms.date: 03/30/2017
 ms.assetid: c68e83c9-39e8-4264-b1ce-b6a9eb5b98aa
-ms.openlocfilehash: 00699a6fa5d0de7ac554db6ef8d0bbe511a85c0a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 63cdbce62c20cda1cabe18bbd7b045e2b9a109d5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149219"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99804024"
 ---
 # <a name="add-of-claimtyperequirements"></a>\<add> の \<claimTypeRequirements>
 
@@ -38,7 +39,7 @@ ms.locfileid: "91149219"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |claimType|クレームの種類を定義する URI。 たとえば、Web サイトから製品を購入するために、ユーザーは、十分な与信限度額を備えた有効なクレジット カードを示す必要があります。 クレームの種類として、クレジット カードの URI があります。|  
 |isOptional|これが省略可能なクレームかどうかを指定するブール値。 これが必須のクレームの場合は、この属性を `false` に設定します。<br /><br /> サービスが必須でない情報を求めるときにこの属性を使用できます。 たとえば、ユーザーが名、姓、住所を入力する必要があるのに、電話番号は任意であると判断したとします。|  
@@ -90,7 +91,7 @@ ms.locfileid: "91149219"
 - [\<claimTypeRequirements>](claimtyperequirements-element.md)
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
 - [方法: SecurityBindingElement を使用してカスタム バインドを作成する](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [カスタム バインディング セキュリティ](../../../wcf/samples/custom-binding-security.md)

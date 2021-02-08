@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <customBinding>'
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: cdaaacf0dfa75209d001f6e8d6ac7175816048aa
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a4d297750d107648aa10b349c6febc1a8929a30b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74140796"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803946"
 ---
 # \<customBinding>
 
@@ -189,7 +190,7 @@ ms.locfileid: "74140796"
 
 ### <a name="child-elements"></a>子要素
 
-|要素|Description|
+|要素|説明|
 |-------------|-----------------|
 |[\<compositeDuplex>](compositeduplex.md)|カスタム バインドの双方向のメッセージングを指定します。 たとえば HTTP のように、ネイティブでの二重通信を許可しないトランスポートで使用されます。 これとは対照的に、TCP では、二重通信がネイティブで許可されているので、クライアントにメッセージを返信するためにこのバインディング要素をサービスで使用する必要はありません。<br /><br /> クライアントは、サービスのアドレスを公開して、アクセスおよび接続の確立ができるようにする必要があります。 このクライアント アドレスは、`ClientBaseAddress` 属性によって提供されます。<br /><br /> この要素は <xref:System.ServiceModel.Configuration.CompositeDuplexElement> 型です。|
 |[\<pnrpPeerResolver>](pnrppeerresolver.md)|PNRP (Peer Name Resolution Protocol) ピア名リゾルバーを指定します。 この要素は <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement> 型です。|
@@ -201,7 +202,7 @@ ms.locfileid: "74140796"
 
 ### <a name="parent-elements"></a>親要素
 
-|要素|Description|
+|要素|説明|
 |-------------|-----------------|
 |バインディング|Windows Communication Foundation アプリケーションのすべてのバインディングを含みます。|
 
@@ -291,7 +292,7 @@ ms.locfileid: "74140796"
 
 さらに、独自のバインド要素を定義し、それを定義済みの層のいずれかの間に挿入できます。
 
-カスタムバインディングを使用してシステム指定のバインディングを変更する方法の詳細については、「[方法: システム指定のバインディングをカスタマイズ](../../../wcf/extending/how-to-customize-a-system-provided-binding.md)する」を参照してください。
+カスタムバインディングを使用してシステム指定のバインディングを変更する方法の詳細については、「 [方法: System-Provided バインディングをカスタマイズ](../../../wcf/extending/how-to-customize-a-system-provided-binding.md)する」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
@@ -302,7 +303,7 @@ ms.locfileid: "74140796"
 - [\<binding>](bindings.md)
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
 - [customBinding 要素](custombinding.md)
 - [バインド](../../../wcf/bindings.md)
 - [システムが提供するバインディングの構成](../../../wcf/feature-details/configuring-system-provided-bindings.md)

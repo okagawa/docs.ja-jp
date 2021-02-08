@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugHeapValue2:: CreateHandle メソッド'
 title: ICorDebugHeapValue2::CreateHandle メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fbc418e8-fa22-420d-84ec-e0e1800db041
 topic_type:
 - apiref
-ms.openlocfilehash: 278120c6e1bc87a061a3f81f71bdb7b89cd421be
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d93fee71441b9c510d517acb9582b8d1d9ce9e10
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726562"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803660"
 ---
 # <a name="icordebugheapvalue2createhandle-method"></a>ICorDebugHeapValue2::CreateHandle メソッド
 
@@ -43,7 +44,7 @@ HRESULT CreateHandle (
  `ppHandle`  
  入出力このヒープ値の新しいハンドルを表す、値オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ハンドルは、ヒープ値に関連付けられているアプリケーションドメインに作成され、アプリケーションドメインがアンロードされると無効になります。  
   

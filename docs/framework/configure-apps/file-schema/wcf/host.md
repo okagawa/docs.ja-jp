@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: <host>'
 title: <host>
 ms.date: 03/30/2017
 ms.assetid: be566d55-9d50-4b2e-985d-52a5cc26cbbb
-ms.openlocfilehash: 524226cbb826486def18c1b3b66c5b4a3c456dec
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ff240c85af3aab7c1208a6a49b1943f3c6a8cd99
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185679"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802282"
 ---
 # \<host>
 
@@ -31,7 +32,7 @@ ms.locfileid: "91185679"
 </host>
 ```  
   
-## <a name="type"></a>種類  
+## <a name="type"></a>Type  
 
  `Type`  
   

@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: <remove> の要素 <namedCaches>'
 title: <namedCaches> の <remove> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - remove element for namedCaches
 - <remove> element for namedCaches
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
-ms.openlocfilehash: c8ad5a0ce6d7a3059943b3962b9255385cea6e15
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5b39fc596735d746c52cdb5623962f5b9952fa3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183989"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802463"
 ---
 # <a name="remove-element-for-namedcaches"></a>\<namedCaches> の \<remove> 要素
 
@@ -31,7 +32,7 @@ ms.locfileid: "91183989"
  </namedCaches>  
 ```  
   
-## <a name="type"></a>種類  
+## <a name="type"></a>Type  
 
  `None`  
   

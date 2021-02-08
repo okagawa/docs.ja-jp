@@ -1,13 +1,14 @@
 ---
+description: 詳細については <add> 、 <entries>
 title: <add> の <entries>
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
-ms.openlocfilehash: 156d8b8d9d0eb05efbf306434ab4555a98bc317e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0be24fb9d2327d411368dd05afc21156dfaf3d3a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149050"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803972"
 ---
 # <a name="add-of-entries"></a>\<add> の \<entries>
 
@@ -44,7 +45,7 @@ ms.locfileid: "91149050"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |backupList|エンドポイントのバックアップ リストへの参照を指定する文字列。|  
 |endpoint|`filterName` 属性で指定されたフィルターに一致するメッセージを受信するクライアント エンドポイントへの参照を指定する文字列。|  

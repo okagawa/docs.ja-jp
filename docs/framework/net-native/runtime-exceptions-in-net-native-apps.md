@@ -1,20 +1,21 @@
 ---
+description: 詳細については、「.NET Native アプリでのランタイム例外」を参照してください。
 title: .NET ネイティブ アプリでのランタイム例外
 ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
-ms.openlocfilehash: 5c521eed94590e583a761cc2003460875e690fa9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 11a85d36a95e74dac36cd45e080428fcba0c673e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287853"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801983"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>.NET ネイティブ アプリでのランタイム例外
 
 デバッグ構成とリリース構成は完全に異なるため、ターゲット プラットフォームでユニバーサル Windows プラットフォーム アプリのリリース ビルドをテストすることは重要です。 既定では、デバッグ構成は .NET Core ランタイムを使用してアプリをコンパイルしますが、リリース構成は .NET ネイティブを使用してアプリをネイティブ コードにコンパイルします。  
   
 > [!IMPORTANT]
-> アプリのリリースバージョンをテストするときに発生する可能性がある [MissingMetadataException](missingmetadataexception-class-net-native.md)、 [MissingInteropDataException](missinginteropdataexception-class-net-native.md)、および [誤 Singruntimeartifactexception](missingruntimeartifactexception-class-net-native.md) 例外の処理については、 [はじめに](getting-started-with-net-native.md) トピックの「手順 4: メタデータの欠落を手動で解決する」、および「 [リフレクションと .NET ネイティブ](reflection-and-net-native.md) と [ランタイムディレクティブ (rd.xml) 構成ファイルリファレンス](runtime-directives-rd-xml-configuration-file-reference.md)」を参照してください。  
+> アプリのリリースバージョンをテストするときに発生する可能性がある [MissingMetadataException](missingmetadataexception-class-net-native.md)、 [MissingInteropDataException](missinginteropdataexception-class-net-native.md)、および [誤 Singruntimeartifactexception](missingruntimeartifactexception-class-net-native.md) 例外の処理については、 [はじめに](getting-started-with-net-native.md) トピックの「手順 4: メタデータの欠落を手動で解決する」、および「 [リフレクションと .NET Native](reflection-and-net-native.md) と [ランタイムディレクティブ (rd.xml) 構成ファイルリファレンス](runtime-directives-rd-xml-configuration-file-reference.md)」を参照してください。  
   
 ## <a name="debug-and-release-builds"></a>デバッグ ビルドとリリース ビルド  
 
@@ -28,7 +29,7 @@ ms.locfileid: "96287853"
   
 - 実行可能ファイルのサイズは、最大限削減されます。 .NET ネイティブが実行可能ファイルのサイズを削減する方法の 1 つは、ランタイムの例外メッセージを大幅にトリミングする方法です。これについては、「 [Runtime exception messages](#Messages) 」セクションでトピックとして詳細に説明しています。  
   
-- コードは大幅に最適化されます。 つまり、できる限りインライン展開が使用されます。 (インライン展開では、外部ルーチンから呼び出し元ルーチンにコードを移動します)。  .NET ネイティブが特殊なランタイムを提供し、積極的なインライン化を実装すると、デバッグ時に表示される呼び出し履歴に影響します。  詳細については、「 [Runtime call stack](#CallStack) 」を参照してください。  
+- コードは大幅に最適化されます。 つまり、できる限りインライン展開が使用されます。 (インライン展開では、外部ルーチンから呼び出し元ルーチンにコードを移動します)。  .NET Native が特殊なランタイムを提供し、積極的なインライン化を実装すると、デバッグ時に表示される呼び出し履歴に影響します。  詳細については、「 [Runtime call stack](#CallStack) 」を参照してください。  
   
 > [!NOTE]
 > **[.NET ネイティブ ツール チェーンを使用してコンパイルする]** ボックスをオンまたはオフにすることによって、デバッグ ビルドとリリース ビルドを .NET ネイティブ ツール チェーンでコンパイルするかどうかを制御できます。   ただし、Windows ストアは常に .NET ネイティブ ツールのチェーンを使用してアプリの製品バージョンをコンパイルすることに注意してください。  

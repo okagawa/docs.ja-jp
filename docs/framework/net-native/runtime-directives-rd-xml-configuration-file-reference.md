@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「ランタイムディレクティブ (rd.xml) 構成ファイルリファレンス」を参照してください。
 title: ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス
 ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
-ms.openlocfilehash: e74d34693446cca645003a9f93bc1777849e3182
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9c995bd831f01e47c651d015895398e1ad42633d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "76738411"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801996"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス
 
@@ -42,17 +43,17 @@ ms.locfileid: "76738411"
 - [Directives](directives-element-net-native.md) [1:1]
   - [Application](application-element-net-native.md) [0:1]
     - [Assembly](assembly-element-net-native.md) [0:M]
-      - [名前空間](namespace-element-net-native.md)[0: M]。 . .
+      - [名前空間](namespace-element-net-native.md) [0: M]。 . .
       - [「](type-element-net-native.md) [0: M]」と入力します。 . .
-      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 . .
+      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0: M]。 . .
     - [Namespace](namespace-element-net-native.md) [0:M]
-      - [名前空間](namespace-element-net-native.md)[0: M]。 . .
+      - [名前空間](namespace-element-net-native.md) [0: M]。 . .
       - [「](type-element-net-native.md) [0: M]」と入力します。 . .
-      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 . .
+      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0: M]。 . .
     - [Type](type-element-net-native.md) [0:M]
       - [Subtypes](subtypes-element-net-native.md) (それを含む型のサブクラス) [O:1]
       - [「](type-element-net-native.md) [0: M]」と入力します。 . .
-      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 . .
+      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0: M]。 . .
       - [AttributeImplies](attributeimplies-element-net-native.md) (それを含む型が属性) [O:1]
       - [GenericParameter](genericparameter-element-net-native.md) [0:M]
       - [Method](method-element-net-native.md) [0:M]
@@ -65,7 +66,7 @@ ms.locfileid: "76738411"
       - [Event](event-element-net-native.md) [0:M]
     - [TypeInstantiation](typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0:M]
       - [「](type-element-net-native.md) [0: M]」と入力します。 . .
-      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 . .
+      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0: M]。 . .
       - [Method](method-element-net-native.md) [0:M]
         - [Parameter](parameter-element-net-native.md) [0:M]
         - [TypeParameter](typeparameter-element-net-native.md) [0:M]
@@ -76,17 +77,17 @@ ms.locfileid: "76738411"
       - [Event](event-element-net-native.md) [0:M]
   - [Library](library-element-net-native.md) [0:M]
     - [Assembly](assembly-element-net-native.md) [0:M]
-      - [名前空間](namespace-element-net-native.md)[0: M]。 . .
+      - [名前空間](namespace-element-net-native.md) [0: M]。 . .
       - [「](type-element-net-native.md) [0: M]」と入力します。 . .
-      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 . .
+      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0: M]。 . .
     - [Namespace](namespace-element-net-native.md) [0:M]
-      - [名前空間](namespace-element-net-native.md)[0: M]。 . .
+      - [名前空間](namespace-element-net-native.md) [0: M]。 . .
       - [「](type-element-net-native.md) [0: M]」と入力します。 . .
-      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 . .
+      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0: M]。 . .
     - [Type](type-element-net-native.md) [0:M]
       - [Subtypes](subtypes-element-net-native.md) (それを含む型のサブクラス) [O:1]
       - [「](type-element-net-native.md) [0: M]」と入力します。 . .
-      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 . .
+      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0: M]。 . .
       - [AttributeImplies](attributeimplies-element-net-native.md) (それを含む型が属性) [O:1]
       - [GenericParameter](genericparameter-element-net-native.md) [0:M]
       - [Method](method-element-net-native.md) [0:M]
@@ -96,7 +97,7 @@ ms.locfileid: "76738411"
       - [Event](event-element-net-native.md) [0:M]
     - [TypeInstantiation](typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0:M]
       - [「](type-element-net-native.md) [0: M]」と入力します。 . .
-      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 . .
+      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0: M]。 . .
       - [Method](method-element-net-native.md) [0:M]
       - [MethodInstantiation](methodinstantiation-element-net-native.md) (構築されたジェネリック メソッド) [0:M]
       - [Property](property-element-net-native.md) [0:M]
@@ -445,7 +446,7 @@ ms.locfileid: "76738411"
 
 #### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>XmlSerializer、DataContractSerializer、DataContractJsonSerializer の各ポリシーの影響
 
-`Serialize`リフレクションベースのシリアライザーを対象とするポリシーとは異なり、、、およびの各ポリシーを使用して、 <xref:System.Xml.Serialization.XmlSerializer> <xref:System.Runtime.Serialization.DataContractSerializer> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> .NET ネイティブツールチェーンで認識されているシリアライザーのセットを有効にします。 これらのシリアライザーはリフレクションを使用して実装されるのではなく、実行時にシリアル化可能な型のセットが、リフレクション可能な型と同様の方法で決定されます。
+`Serialize`リフレクションベースのシリアライザーを対象とするポリシーとは異なり、、、およびの各ポリシーを使用して、 <xref:System.Xml.Serialization.XmlSerializer> <xref:System.Runtime.Serialization.DataContractSerializer> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> .NET Native ツールチェーンで認識されているシリアライザーのセットを有効にします。 これらのシリアライザーはリフレクションを使用して実装されるのではなく、実行時にシリアル化可能な型のセットが、リフレクション可能な型と同様の方法で決定されます。
 
 これらのポリシーのいずれかを型に適用すると、対応するシリアライザーで型をシリアル化できるようになります。 また、シリアル化が必要であることをシリアル化エンジンが静的に決定できる、すべての型もシリアル化されます。
 

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: ICorDebugLoadedModule:: GetName メソッド'
 title: ICorDebugLoadedModule::GetName メソッド
 ms.date: 03/30/2017
 ms.assetid: 88c304d5-edaa-4c0e-a8e1-144e8a76877e
-ms.openlocfilehash: c18af45184f5a9485e13b9d4789bff2c570834cc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 40a0715b513115177cabac01727ce9166a40d50b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731853"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801255"
 ---
 # <a name="icordebugloadedmodulegetname-method"></a>ICorDebugLoadedModule::GetName メソッド
 
@@ -35,7 +36,7 @@ HRESULT GetName(
  `szName`  
  [out] 読み込まれたモジュールの名前が含まれている文字配列。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  

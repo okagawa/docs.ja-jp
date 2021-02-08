@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <ThrowUnobservedTaskExceptions> 要素'
 title: <ThrowUnobservedTaskExceptions> 要素
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - ThrowUnobservedTaskExceptions element
 - <ThrowUnobservedTaskExceptions> element
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
-ms.openlocfilehash: 012c2e70e66015bc317606a7eea07812b5df26e7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 53f3f1275ea8419bed52fd73726c043e1c49eed7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183924"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802399"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions> 要素
 
@@ -42,9 +43,9 @@ ms.locfileid: "91183924"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|`false`|は、未処理のタスク例外の実行中のプロセスを終了しません。 これは既定値です。|  
+|`false`|は、未処理のタスク例外の実行中のプロセスを終了しません。 既定値です。|  
 |`true`|未処理のタスク例外の実行中のプロセスを終了します。|  
   
 ### <a name="child-elements"></a>子要素  
@@ -73,7 +74,7 @@ ms.locfileid: "91183924"
   
 - 環境変数 () を設定する `COMPlus_ThrowUnobservedTaskExceptions` `set COMPlus_ThrowUnobservedTaskExceptions=1` 。  
   
-- レジストリの DWORD 値 ThrowUnobservedTaskExceptions = 1 を HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft に設定し \\ ます。NETFramework キー。  
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoftでレジストリの DWORD 値 ThrowUnobservedTaskExceptions = 1 を設定し \\ ます。NETFramework キー。  
   
 ## <a name="example"></a>例  
 

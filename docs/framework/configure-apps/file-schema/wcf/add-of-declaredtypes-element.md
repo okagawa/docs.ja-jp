@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: <add> of <declaredTypes> 要素'
 title: <add><declaredTypes>要素の
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - DataContractSerializer
 - DataContractAttribute
 ms.assetid: c3d37ae4-8f1c-463f-b195-658c5a7e90a1
-ms.openlocfilehash: 9af47848b03074ec88f38a5884089bc50239ee50
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8e2be6e553ee5dc5c96bcae81d1c1c6bf609afed
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201669"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803985"
 ---
 # <a name="add-of-declaredtypes-element"></a>\<add>\<declaredTypes>要素の
 
@@ -41,7 +42,7 @@ ms.locfileid: "91201669"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |type|必須の文字列属性です。<br /><br /> 型名 (名前空間を含む)、アセンブリ名、バージョン番号、カルチャ、および公開キー トークンを指定します。|  
   

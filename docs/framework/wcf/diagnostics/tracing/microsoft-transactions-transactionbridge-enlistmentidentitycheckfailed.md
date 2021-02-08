@@ -1,19 +1,20 @@
 ---
+description: 詳細については、EnlistmentIdentityCheckFailed を参照してください。
 title: Microsoft.Transactions.TransactionBridge.EnlistmentIdentityCheckFailed
 ms.date: 03/30/2017
 ms.assetid: 74aeb3e7-f9eb-4491-9e78-5f8c9cbcb434
-ms.openlocfilehash: af7cbcabda031fd6aeed12ac153d15c92ee8de6b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 763c5d1c0bcb55fd66aaf5a4077836aed9e87701
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96258999"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803296"
 ---
 # <a name="microsofttransactionstransactionbridgeenlistmentidentitycheckfailed"></a>Microsoft.Transactions.TransactionBridge.EnlistmentIdentityCheckFailed
 
 受信メッセージの送信者の ID が登録リストのエンドポイント参照から派生した ID と一致しませんでした。  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  メッセージ セキュリティの検証に失敗した場合にトレースされます。  
   

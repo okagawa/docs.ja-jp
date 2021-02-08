@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: DacpMethodDescData 構造体'
 title: DacpMethodDescData 構造体
 ms.date: 02/01/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: dcf01c00a106c131646a16597dca4092a06c5983
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fe5b09874b3f8e123cb2501fcb00e3351aa44757
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723065"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801463"
 ---
 # <a name="dacpmethoddescdata-structure"></a>DacpMethodDescData 構造体
 
@@ -73,7 +74,7 @@ struct DacpMethodDescData
 | `rejitDataRequested`         | 要求されたネイティブアドレスの rejit 情報。                                             |
 | `cJittedRejitVersions`       | メソッドがインストルメンテーションによって rejitted された回数。                           |
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 この構造体はランタイム内に存在し、ヘッダーまたはライブラリファイルを介して公開されることはありません。 これを使用するには、前に示したように構造体を定義します。
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CorDebugRecordFormat 列挙型」を参照してください。
 title: CorDebugRecordFormat 列挙体
 ms.date: 03/30/2017
 api_name:
@@ -10,12 +11,12 @@ api_type:
 ms.assetid: d680c1c0-16ab-4ccc-9444-39cf8e0e05ee
 topic_type:
 - apiref
-ms.openlocfilehash: b3a22d7b32eb258263d373ae91b3fb7fbc9aae99
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 856522497a8f858abdb39ac232fb3034d4d91dfc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696389"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801567"
 ---
 # <a name="cordebugrecordformat-enumeration"></a>CorDebugRecordFormat 列挙体
 
@@ -37,7 +38,7 @@ typedef enum CorDebugRecordFormat {
 |`FORMAT_WINDOWS_EXCEPTIONRECORD32`|データは、32 ビット Windows 例外レコードです。|  
 |`FORMAT_WINDOWS_EXCEPTIONRECORD64`|データは、64 ビット Windows 例外レコードです。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  列挙体のメンバーは、 `CorDebugRecordFormat` 引数のバイト配列の形式を示すために、 [DecodeEvent](icordebugprocess6-decodeevent-method.md) メソッドに渡され `pRecord` ます。  
   

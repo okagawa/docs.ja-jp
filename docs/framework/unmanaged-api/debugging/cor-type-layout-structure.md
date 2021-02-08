@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: COR_TYPE_LAYOUT 構造'
 title: COR_TYPE_LAYOUT 構造体
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43a7addd-f25a-4049-9907-abec3eb17af2
 topic_type:
 - apiref
-ms.openlocfilehash: f33c8f5cf218979404063342d9b1cc5123839f83
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 07bed0c526aae38cb380b57da505a3f02bdf4aae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726328"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801766"
 ---
 # <a name="cor_type_layout-structure"></a>COR_TYPE_LAYOUT 構造体
 
@@ -47,7 +48,7 @@ typedef struct COR_TYPE_LAYOUT {
 |`boxOffset`|この型がボックス化されている場合は、オブジェクトのフィールドの開始オフセット。 このフィールドは、プリミティブや構造体などの値型に対してのみ有効です。|  
 |`type`|この型が属する CorElementType。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `numFields`が0より大きい場合は、 [ICorDebugProcess5:: GetTypeFields](icordebugprocess5-gettypefields-method.md)メソッドを呼び出して、この型のフィールドに関する情報を取得できます。 `type`が `ELEMENT_TYPE_STRING` 、 `ELEMENT_TYPE_ARRAY` 、またはの場合 `ELEMENT_TYPE_SZARRAY` 、この型のオブジェクトのサイズは可変になり、 [COR_TYPEID](cor-typeid-structure.md)構造体を[ICorDebugProcess5:: getarraylayout](icordebugprocess5-getarraylayout-method.md)メソッドに渡すことができます。  
   

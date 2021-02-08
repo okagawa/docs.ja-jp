@@ -1,13 +1,14 @@
 ---
+description: 詳細については <issuerMetadata> 、 <issuedTokenParameters>
 title: <issuerMetadata> の <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 1a85ca37-496d-4fa3-8d44-d6c9383d735c
-ms.openlocfilehash: 389ac9e96c1462f59bc42b2e20cb511acdefda00
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6b0b5064254caf1c6bcf72c2e6d3449402853b98
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185666"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802243"
 ---
 # <a name="issuermetadata-of-issuedtokenparameters"></a>\<issuerMetadata> の \<issuedTokenParameters>
 
@@ -60,7 +61,7 @@ ms.locfileid: "91185666"
 - [フェデレーションと発行済みトークン](../../../wcf/feature-details/federation-and-issued-tokens.md)
 - [バインド](../../../wcf/bindings.md)
 - [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [カスタムバインド](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
 - [方法: SecurityBindingElement を使用してカスタム バインドを作成する](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [カスタム バインディング セキュリティ](../../../wcf/samples/custom-binding-security.md)

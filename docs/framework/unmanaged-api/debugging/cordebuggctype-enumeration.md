@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: CorDebugGCType 列挙型'
 title: CorDebugGCType 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 880ca92a-42d4-42a5-9b9c-c2848eb39c6a
 topic_type:
 - apiref
-ms.openlocfilehash: 6b3075613af0403527ecf67d574c0f5733a5cd8b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4be835a9a028a882fa050991beb31d2a8dec5354
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712613"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801658"
 ---
 # <a name="cordebuggctype-enumeration"></a>CorDebugGCType 列挙型
 

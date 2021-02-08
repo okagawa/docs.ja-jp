@@ -1,13 +1,14 @@
 ---
+description: 詳細については <add> 、 <filters>
 title: <add> の <filters>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: c1de0605bc8afc502a85d9b2917b975ee45a3d26
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 546ff41fddfd8a48e14508e27f09236c67c9abc9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201656"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802347"
 ---
 # <a name="add-of-filters"></a>\<add> の \<filters>
 
@@ -34,7 +35,7 @@ ms.locfileid: "91201656"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |filter|XPath 1.0 の式によって定義される、XML ドキュメントのクエリを指定する文字列。 詳細については、「<xref:System.ServiceModel.Dispatcher.XPathMessageFilter>」を参照してください。|  
   

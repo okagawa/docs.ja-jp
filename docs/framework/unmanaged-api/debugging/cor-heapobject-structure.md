@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: COR_HEAPOBJECT 構造'
 title: COR_HEAPOBJECT 構造体
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a92fdf95-492b-49ae-a741-2186e5c1d7c5
 topic_type:
 - apiref
-ms.openlocfilehash: 54af02b48dabdf2042763954805f0d454323ac89
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f41e02e7c528063f4b7ed485cbadbabb4d3e5ca7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726367"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801801"
 ---
 # <a name="cor_heapobject-structure"></a>COR_HEAPOBJECT 構造体
 
@@ -43,7 +44,7 @@ typedef struct _COR_HEAPOBJECT {
 |`size`|オブジェクトの合計サイズ (バイト単位)。|  
 |`type`|オブジェクトの型を表す [COR_TYPEID](cor-typeid-structure.md) トークン。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `COR_HEAPOBJECT`インスタンスを取得するには、 [ICorDebugProcess5:: EnumerateHeap](icordebugprocess5-enumerateheap-method.md)メソッドを呼び出すことによって設定される、表示されている[heapheapenum](icordebugheapenum-interface.md)インターフェイスオブジェクトを列挙します。  
   
@@ -53,7 +54,7 @@ typedef struct _COR_HEAPOBJECT {
   
  パフォーマンスを向上させるために、この `COR_HEAPOBJECT.type` フィールドは、 `COR_TYPEID` デバッグ API の多くで使用されている、テキスト型のインターフェイス値ではなく、値です。 指定された型 ID の `COR_TYPEID` [ICorDebugProcess5:: GetTypeForTypeID](icordebugprocess5-gettypefortypeid-method.md) メソッドに値を渡すことができます。  
   
- 構造体には、 `COR_HEAPOBJECT` 参照カウントの COM インターフェイスが含まれています。 のインスタンスを列挙子から取得する場合は、次の `COR_HEAPOBJECT` メソッドを呼び出す必要があります。その後、参照を解放する必要があります。 [ICorDebugHeapEnum::Next](icordebugheapenum-next-method.md)  
+ 構造体には、 `COR_HEAPOBJECT` 参照カウントの COM インターフェイスが含まれています。 のインスタンスを列挙子から取得する場合は、次の `COR_HEAPOBJECT` メソッドを呼び出す必要があります。その後、参照を解放する必要があります。 [](icordebugheapenum-next-method.md)  
   
 ## <a name="requirements"></a>要件  
 

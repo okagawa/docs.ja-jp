@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorDebugManagedCallback3 インターフェイス」を参照してください。
 title: ICorDebugManagedCallback3 インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a95389d3-cf2e-47a4-9805-61426acc6b65
 topic_type:
 - apiref
-ms.openlocfilehash: e04f5be6d2612b26bf7d71807753d170e6a5a7a0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9fb3d44b1d793935ac997e8e4d8d86de4466f7b2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723299"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801190"
 ---
 # <a name="icordebugmanagedcallback3-interface"></a>ICorDebugManagedCallback3 インターフェイス
 
@@ -31,7 +32,7 @@ ms.locfileid: "95723299"
 |------------|-----------------|  
 |[CustomNotification メソッド](icordebugmanagedcallback3-customnotification-method.md)|有効なカスタムデバッガー通知が発生したことを示します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このインターフェイスは、" [ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md) [" というインターフェイスを論理的](icordebugmanagedcallback-interface.md)に拡張したものです。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: s_isDebuggerCheckDisabledForTestPurposes フィールド'
 title: s_isDebuggerCheckDisabledForTestPurposes フィールド
 ms.date: 03/30/2017
 ms.technology: dotnet-wpf
@@ -11,16 +12,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 9033a513-c255-4f31-b6d7-09b8d8c50e2d
-ms.openlocfilehash: ad9bc0ecf4b7a8e5f3ef13fdff5aa59ca8915922
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a71235c13a7a35872bcf5374be8077bafad5ff9a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634656"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802659"
 ---
-# <a name="sisdebuggercheckdisabledfortestpurposes-field"></a>s_isDebuggerCheckDisabledForTestPurposes フィールド
+# <a name="s_isdebuggercheckdisabledfortestpurposes-field"></a>s_isDebuggerCheckDisabledForTestPurposes フィールド
 
-このプライベート フィールドで、`System.Windows.Diagnostics.VisualDiagnostics`クラスは、アクティブなデバッガー、内部のチェックを実行するかどうかを判断する Visual Studio によって使用されます。
+クラスのこのプライベートフィールド `System.Windows.Diagnostics.VisualDiagnostics` は、アクティブなデバッガーの内部チェックが実行されるかどうかを判断するために Visual Studio によって使用されます。
 
 ## <a name="syntax"></a>構文
 
@@ -29,14 +30,14 @@ private static bool s_isDebuggerCheckDisabledForTestPurposes
 ```
 
 > [!WARNING]
-> Api、`System.Windows.Diagnostics.VisualDiagnostics`クラスは、アプリケーションがデバッガーで実行されている場合にのみ使用できます。 設定`s_isDebuggerCheckDisabledForTestPurposes`に`true`デバッガーの外部 Api にアクセスします。
+> クラスの Api `System.Windows.Diagnostics.VisualDiagnostics` は、アプリケーションがデバッガーで実行されている場合にのみ使用できます。 `s_isDebuggerCheckDisabledForTestPurposes` `true` デバッガーの外部で api にアクセスするには、をに設定します。
 >
-> Microsoft はいかなる運用アプリケーションでこのフィールドの使用をサポートしていません。
+> Microsoft では、どのような状況でも、実稼働アプリケーションでのこのフィールドの使用はサポートしていません。
 
 ## <a name="requirements"></a>必要条件
 
 **名前空間:** <xref:System.Windows.Diagnostics>
 
-**アセンブリ:** PresentationCore (presentationcore.dll 内)
+**アセンブリ:** プレゼンテーションコア (PresentationCore.dll)
 
-**.NET framework のバージョン:** 4.6 以降で使用可能です。
+**.NET Framework のバージョン:** 4.6 以降で使用できます。

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <appSettings> の要素 <configuration>'
 title: <configuration> の <appSettings> 要素
 ms.date: 05/01/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - appSettings Element
 - <appSettings> Element
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
-ms.openlocfilehash: 66260d15768781b7fa3d9397b8e8a7d9ad68ab95
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 74a25bb0dffd97057cda45575745b6f51ad2a675
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009795"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802490"
 ---
 # <a name="appsettings-element-for-configuration"></a>\<configuration> の \<appSettings> 要素
 
@@ -49,7 +50,7 @@ ms.locfileid: "97009795"
 | [**\<clear>**](clear-element-for-appsettings.md) | 以前に定義したアプリケーション設定をすべてクリアします。 |
 | [**\<remove>**](remove-element-for-appsettings.md) | 以前に定義したアプリケーション設定を削除します。 |
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 要素には、 **\<appSettings>** データベース接続文字列、ファイルパス、XML Web サービス url などのカスタムアプリケーション構成情報、またはアプリケーションのその他のカスタム構成情報が格納されます。 要素で指定されたキーと値のペア **\<appSettings>** は、クラスを使用してコードでアクセスされ <xref:System.Configuration.ConfigurationSettings> ます。
 

@@ -1,13 +1,14 @@
 ---
+description: '詳細については、次を参照してください: <Thread_UseAllCpuGroups> 要素'
 title: <Thread_UseAllCpuGroups> 要素
 ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
-ms.openlocfilehash: a3a612c0ffbcb211157b9623d298ce8ad7a13e94
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3f11ba6855caab25bd261de71c80c78232f2690f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73115409"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802412"
 ---
 # <a name="thread_useallcpugroups-element"></a>\<Thread_UseAllCpuGroups> 要素
 
@@ -36,7 +37,7 @@ ms.locfileid: "73115409"
 
 ## <a name="enabled-attribute"></a>enabled 属性
 
-|値|Description|
+|値|説明|
 |-----------|-----------------|
 |`false`|ランタイムは、複数の CPU グループにマネージド スレッドを分散しません。 既定値です。|
 |`true`|コンピューターに複数の CPU グループがあり、 [\<GCCpuGroup>](gccpugroup-element.md) 要素が有効になっている場合、ランタイムは複数の cpu グループにマネージスレッドを分散します。|
@@ -47,7 +48,7 @@ ms.locfileid: "73115409"
 
 ### <a name="parent-elements"></a>親要素
 
-|要素|Description|
+|要素|説明|
 |-------------|-----------------|
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|
@@ -74,4 +75,4 @@ ms.locfileid: "73115409"
 
 - [ランタイム設定スキーマ](index.md)
 - [構成ファイル スキーマ](../index.md)
-- [\<GCCpuGroup>Element](gccpugroup-element.md)
+- [\<GCCpuGroup> 要素](gccpugroup-element.md)

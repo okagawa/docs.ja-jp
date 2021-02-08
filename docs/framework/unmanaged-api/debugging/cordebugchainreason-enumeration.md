@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: CorDebugChainReason 列挙型'
 title: CorDebugChainReason 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c915da51-50b2-41df-841a-2b971f4d0975
 topic_type:
 - apiref
-ms.openlocfilehash: 6185c5dda69a0cf7e9847ddc021448612a426b19
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 18b6ac9c50c3a44a77a0f63a680b84c70e667e9f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716058"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801749"
 ---
 # <a name="cordebugchainreason-enumeration"></a>CorDebugChainReason 列挙型
 
@@ -63,7 +64,7 @@ typedef enum CorDebugChainReason {
 |`CHAIN_CONTEXT_SWITCH`|使用しません。|  
 |`CHAIN_FUNC_EVAL`|関数の評価によって、チェーンが開始されました。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  呼び出しチェーンが開始された理由を確認するには、と [いう方法を使用します](icordebugchain-getreason-method.md) 。  
   

@@ -1,15 +1,16 @@
 ---
-title: <Type> 要素 (.NET ネイティブ)
+description: '詳細情報: <Type> 要素 (.NET Native)'
+title: <Type> 要素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
-ms.openlocfilehash: e71df41c4a37206910d835ee85dc3d68b4cbad4a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9a0304049c5b8f97c30a85de1c6ed60cde111df1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287710"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801944"
 ---
-# <a name="type-element-net-native"></a>\<Type> 要素 (.NET ネイティブ)
+# <a name="type-element-net-native"></a>\<Type> 要素 (.NET Native)
 
 クラスや構造体などの特定の型に実行時ポリシーを適用します。
 
@@ -104,7 +105,7 @@ ms.locfileid: "96287710"
 
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]
 
- クラスのメタデータは <xref:System.Collections.Generic.List%601> .NET ネイティブツールチェーンによって自動的に含まれないため、この例では、要求されたメンバー情報を実行時に表示できません。 必要なメタデータを提供するには、次の `<Type>` 要素をランタイム ディレクティブ ファイルに追加します。 親要素 [<Namespace\>](namespace-element-net-native.md) を指定しているため、`<Type>` 要素で完全修飾型名を指定する必要はないことに注意してください。
+ クラスのメタデータは <xref:System.Collections.Generic.List%601> .NET Native ツールチェーンによって自動的に含まれないため、この例では、要求されたメンバー情報を実行時に表示できません。 必要なメタデータを提供するには、次の `<Type>` 要素をランタイム ディレクティブ ファイルに追加します。 親要素 [<Namespace\>](namespace-element-net-native.md) を指定しているため、`<Type>` 要素で完全修飾型名を指定する必要はないことに注意してください。
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -123,7 +124,7 @@ ms.locfileid: "96287710"
 
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]
 
- オブジェクトのメタデータは <xref:System.String> 使用できないため、メソッドの呼び出しでは、 <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> <xref:System.NullReferenceException> .NET ネイティブツールチェーンを使用してコンパイルしたときに、実行時に例外がスローされます。 例外を排除し、必要なメタデータを提供するには、次の `<Type>` 要素をランタイム ディレクティブ ファイルに追加します。
+ オブジェクトのメタデータは <xref:System.String> 使用できないため、メソッドの呼び出しでは、 <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> <xref:System.NullReferenceException> .NET Native ツールチェーンを使用してコンパイルしたときに、実行時に例外がスローされます。 例外を排除し、必要なメタデータを提供するには、次の `<Type>` 要素をランタイム ディレクティブ ファイルに追加します。
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: Cordebugexception/Type 列挙型'
 title: CorDebugExceptionCallbackType 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d946ad4-3c19-42cb-bec9-8633325ba769
 topic_type:
 - apiref
-ms.openlocfilehash: cddcf66939a2ae7ab9e7f63a6fd61b72c56f6c7a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 41b9cdf707de017703ee3756b3d04a38163bb03b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712730"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801684"
 ---
 # <a name="cordebugexceptioncallbacktype-enumeration"></a>CorDebugExceptionCallbackType 列挙型
 

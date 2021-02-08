@@ -1,13 +1,14 @@
 ---
+description: '詳細については、「方法: Websocket 経由で通信する WCF サービスを作成する」を参照してください。'
 title: '方法: WebSockets 上で通信する WCF サービスを作成する'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 64f856bcce1234c8e833cc9be723b4af91c4569c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b2d755080f982c575f18269b3d103301aa7317e2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96286163"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802919"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>方法: WebSockets 上で通信する WCF サービスを作成する
 

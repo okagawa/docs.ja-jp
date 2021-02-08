@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「シリアル化とメタデータ」をご覧ください。
 title: シリアル化とメタデータ
 ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-ms.openlocfilehash: 739d482330103a2a79d0d640781b5516bbc15c01
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: da7424d683922618abda4b896bc0e7cf2dbc87be
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250789"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801970"
 ---
 # <a name="serialization-and-metadata"></a>シリアル化とメタデータ
 
@@ -43,11 +44,11 @@ ms.locfileid: "96250789"
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
- このコードは、.NET ネイティブコンパイラによって自動的に処理されます。  
+ このコードは、.NET Native コンパイラによって自動的に処理されます。  
   
 ### <a name="typeof-used-outside-the-constructor"></a>コンストラクターの外部で使用される typeof
 
- 次のコードのように、これらのシリアル化クラスのコンストラクターを呼び出し、コンストラクターのパラメーターに指定された式の外部で C# [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) 演算子を使用した場合、 <xref:System.Type> .NET ネイティブコンパイラは型を解決できません。  
+ 次のコードのように、これらのシリアル化クラスのコンストラクターを呼び出し、コンストラクターのパラメーターに指定された式の外部で C# [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) 演算子を使用した場合、 <xref:System.Type> .NET Native コンパイラは型を解決できません。  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
@@ -57,7 +58,7 @@ ms.locfileid: "96250789"
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- 同様に、のようなコンストラクターを呼び出し、次のコードのよう <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29> に、シリアル化する追加のオブジェクトの配列を指定すると、 <xref:System.Type> .NET ネイティブコンパイラはこれらの型を解決できません。  
+ 同様に、のようなコンストラクターを呼び出し、次のコードのよう <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29> に、シリアル化する追加のオブジェクトの配列を指定すると、 <xref:System.Type> .NET Native コンパイラはこれらの型を解決できません。  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   

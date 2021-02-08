@@ -1,13 +1,14 @@
 ---
+description: 詳細については <add> 、 <baseAddresses>
 title: <add> の <baseAddresses>
 ms.date: 03/30/2017
 ms.assetid: 1bd7426f-5f4f-43fc-b8e9-de842219aa32
-ms.openlocfilehash: cd0ef5cc5f0f809bdafa23bd312e7e30fcdccc21
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b25a4b5551784ecd8e67569c82c1388a144a9c9f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181610"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99804063"
 ---
 # <a name="add-of-baseaddresses"></a>\<add> の \<baseAddresses>
 
@@ -27,7 +28,7 @@ ms.locfileid: "91181610"
 <add baseAddress="string" />
 ```  
   
-## <a name="type"></a>種類  
+## <a name="type"></a>Type  
 
  `Type`  
   
@@ -37,7 +38,7 @@ ms.locfileid: "91181610"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |`baseAddress`|サービス ホストによって使用されるベース アドレスを指定する文字列。|  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: Corgcreの Encetype 列挙型'
 title: CorGCReferenceType 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d9f16439-5a36-4474-8ffd-4f0b2c2bb686
 topic_type:
 - apiref
-ms.openlocfilehash: e2903637faa11a3c0a62080cc6fafcf1fc668a56
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a1f534f9fe4b9ba4ede0bef94f35cf1688fe1817
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704995"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801515"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType 列挙型
 
@@ -65,7 +66,7 @@ typedef enum {
 |`CorHandleWeakOnly`|ハンドルテーブルからの弱い参照だけを返します。 この値は、 [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) メソッドによってのみ使用されます。|  
 |`CorHandleAll`|Handle テーブルからすべての参照を返します。 この値は、 [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) メソッドによってのみ使用されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `CorGCReferenceType`列挙体は次のように使用されます。  
   
