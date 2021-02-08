@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: CorPinvokeMap 列挙型'
 title: CorPinvokeMap 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f14f986e-f6ce-42bc-aa23-18150c46d28c
 topic_type:
 - apiref
-ms.openlocfilehash: da3ee54b1c3361149c11a9cfad8bdb07a5007ecf
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8285632725096b4e6afc85fe54a89f12fc899dd1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95706139"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784263"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap 列挙型
 
@@ -79,9 +80,9 @@ typedef enum  CorPinvokeMap {
 |`pmThrowOnUnmappableCharUseAssem`|予約済み。|  
 |`pmThrowOnUnmappableCharEnabled`|相互運用マーシャラーがマップされていない文字を検出したときに、例外をスローします。|  
 |`pmThrowOnUnmappableCharDisabled`|相互運用マーシャラーがマップ不可能な文字を検出した場合は、例外をスローしないでください。|  
-|`pmThrowOnUnmappableCharMask`|予約されています。|  
+|`pmThrowOnUnmappableCharMask`|予約済み|  
 |`pmSupportsLastError`|`SetLastError`属性付きメソッドから戻る前に、呼び出し先が Win32 関数を呼び出すことができるようにします。|  
-|`pmCallConvMask`|予約されています。|  
+|`pmCallConvMask`|予約済み|  
 |`pmCallConvWinapi`|既定のプラットフォーム呼び出し規約を使用します。 たとえば、Windows では、既定値はで `StdCall` あり、Windows CE .net ではです `Cdecl` 。|  
 |`pmCallConvCdecl`|呼び出し規約を使用し `Cdecl` ます。 この場合、呼び出し元はスタックを消去します。 これにより `varargs` 、(つまり、可変個のパラメーターを受け取る関数) を使用して関数を呼び出すことができます。|  
 |`pmCallConvStdcall`|呼び出し規約を使用し `StdCall` ます。 この場合、呼び出し先がスタックを消去します。 これは、プラットフォーム呼び出しでアンマネージ関数を呼び出すための既定の規約です。|  

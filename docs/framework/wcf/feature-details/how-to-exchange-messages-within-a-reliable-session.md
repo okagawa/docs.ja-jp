@@ -1,13 +1,14 @@
 ---
+description: '詳細については、「方法: 信頼できるセッション内でメッセージを交換する」を参照してください。'
 title: '方法: 信頼されたセッション内のメッセージを変換する'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 97371f8572d5d0db633ab8dd1ca82067d9d55c3f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e4a8f6a180b9c2ff9471558997034d02acc817e7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550190"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802906"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>方法: 信頼されたセッション内のメッセージを変換する
 
@@ -27,7 +28,7 @@ ms.locfileid: "90550190"
 
    [!code-csharp[c_HowTo_UseReliableSession#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/service.cs#1122)]
 
-1. *Web.config*ファイルを作成して、 `CalculatorService` <xref:System.ServiceModel.WSHttpBinding> 信頼できるセッションを有効にし、必要なメッセージを順次配信するを使用するのエンドポイントを構成します。
+1. *Web.config* ファイルを作成して、 `CalculatorService` <xref:System.ServiceModel.WSHttpBinding> 信頼できるセッションを有効にし、必要なメッセージを順次配信するを使用するのエンドポイントを構成します。
 
    [!code-xml[c_HowTo_UseReliableSession#2111](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/web.config#2111)]
 
@@ -55,7 +56,7 @@ ms.locfileid: "90550190"
 
    [!code-csharp[C_HowTo_UseReliableSession#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1222)]
 
-1. また*Svcutil.exe*は、クラスを使用するクライアントの構成も生成し <xref:System.ServiceModel.WSHttpBinding> ます。 Visual Studio を使用する場合は、構成ファイルに *App.config* 名前を指定します。
+1. また *Svcutil.exe* は、クラスを使用するクライアントの構成も生成し <xref:System.ServiceModel.WSHttpBinding> ます。 Visual Studio を使用する場合は、構成ファイルに *App.config* 名前を指定します。
 
    [!code-xml[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]
 
@@ -67,7 +68,7 @@ ms.locfileid: "90550190"
 
 ## <a name="example"></a>例
 
-システム指定のバインディングの中には、信頼できるセッションを既定でサポートするものがあります。 次の設定があります。
+システム指定のバインディングの中には、信頼できるセッションを既定でサポートするものがあります。 次に例を示します。
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
 

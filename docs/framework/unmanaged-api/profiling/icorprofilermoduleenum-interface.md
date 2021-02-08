@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorProfilerModuleEnum インターフェイス」を参照してください。
 title: ICorProfilerModuleEnum インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 24d0fcfa-1601-4fba-868f-da8c97303467
 topic_type:
 - apiref
-ms.openlocfilehash: 98b64289b7d512c4e73cf4d40e89319532c6704a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 195379e9ad6bce94fc93465fe5e1418c5d8c076d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722818"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783821"
 ---
 # <a name="icorprofilermoduleenum-interface"></a>ICorProfilerModuleEnum インターフェイス
 
@@ -31,11 +32,11 @@ ms.locfileid: "95722818"
 |------------|-----------------|  
 |[Clone メソッド](icorprofilermoduleenum-clone-method.md)|この `ICorProfilerModuleEnum` インターフェイスのコピーへのインターフェイス ポインターを取得します。|  
 |[GetCount メソッド](icorprofilermoduleenum-getcount-method.md)|アプリケーションによって読み込まれたマネージド モジュールの数を取得します。|  
-|[Next メソッド](icorprofilermoduleenum-next-method.md)|オブジェクトのシーケンシャル コレクションから、列挙子の現在の位置以降にある指定した数の隣接するモジュールを取得します。|  
+|[次のメソッド](icorprofilermoduleenum-next-method.md)|オブジェクトのシーケンシャル コレクションから、列挙子の現在の位置以降にある指定した数の隣接するモジュールを取得します。|  
 |[Reset メソッド](icorprofilermoduleenum-reset-method.md)|列挙子のカーソルをシーケンスの開始位置に移動します。|  
 |[Skip メソッド](icorprofilermoduleenum-skip-method.md)|指定した数の要素がスキップされるように、この列挙子のカーソルの位置を進めます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ICorProfilerModuleEnum` インターフェイスは列挙子です。 このインターフェイスにより、配列の受信側は、受信側に適した速度で送信側から要素をプルできます。 つまり、受信側は配列要素のフローを明示的に制御できるため、大きな配列をメソッド パラメーターとして渡す場合に関連する問題を回避できます。  
   

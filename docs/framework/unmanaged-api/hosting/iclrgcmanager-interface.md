@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICLRGCManager インターフェイス」を参照してください。
 title: ICLRGCManager インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fb511c9b-3fe4-41b0-822a-6ba4a079d1f5
 topic_type:
 - apiref
-ms.openlocfilehash: dbe3df6bb20e5ad8f9eb534a366405eb9c33984f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 648b2b131e28da8aabc7028b6d745351cae772fe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678247"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789997"
 ---
 # <a name="iclrgcmanager-interface"></a>ICLRGCManager インターフェイス
 
@@ -36,7 +37,7 @@ ms.locfileid: "95678247"
 |[GetStats メソッド](iclrgcmanager-getstats-method.md)|ガベージコレクションシステムに関する現在の統計のセットを取得します。|  
 |[SetGCStartupLimits メソッド](iclrgcmanager-setgcstartuplimits-method.md)|ガベージコレクションセグメントのサイズとガベージコレクションシステムのジェネレーション0の最大サイズを設定します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  共通言語ランタイム (CLR) は、マネージ型を使用してガベージコレクション機構を実装し <xref:System.GC> ます。 ガベージコレクションシステムの詳細については、「 [ガベージコレクション](../../../standard/garbage-collection/index.md)」を参照してください。  
   

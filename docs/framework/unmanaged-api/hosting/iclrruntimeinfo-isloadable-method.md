@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRRuntimeInfo:: IsLoadable メソッド'
 title: ICLRRuntimeInfo::IsLoadable メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 205ca53b-e78e-49b2-9a46-2a7823e96b8c
 topic_type:
 - apiref
-ms.openlocfilehash: 2236e815211168d8e7105375b75f30128f7f209a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cf63212350bfbd18e2a312add72818b163c32d0c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714972"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789789"
 ---
 # <a name="iclrruntimeinfoisloadable-method"></a>ICLRRuntimeInfo::IsLoadable メソッド
 
@@ -47,7 +48,7 @@ HRESULT IsLoadable(
 |S_OK|メソッドは正常に完了しました。|  
 |E_POINTER|`pbLoadable` が null です。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  別のランタイムが既にプロセスに読み込まれていて、このインターフェイスに関連付けられているランタイムをインプロセス side-by-side 実行用に読み込むことができる場合、はを `pbLoadable` 返し `true` ます。 2つのランタイムをインプロセスで並列実行できない場合、はを `pbLoadable` 返し `false` ます。 たとえば、共通言語ランタイム (CLR) バージョン4は、CLR バージョン2.0 または CLR バージョン1.1 と同じプロセスでサイドバイサイドで実行できます。 ただし、CLR バージョン1.1 と CLR バージョン2.0 をインプロセスで並列実行することはできません。  
   

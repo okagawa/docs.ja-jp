@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataEmit::D eleteToken メソッド'
 title: IMetaDataEmit::DeleteToken メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a4926d0a-261b-46b1-9994-82633661a64b
 topic_type:
 - apiref
-ms.openlocfilehash: eaa465855c9e933286bcdd189e62048510088ec7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5c28b56b06f994057409ef8fa17179cb0b0e205b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722077"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783951"
 ---
 # <a name="imetadataemitdeletetoken-method"></a>IMetaDataEmit::DeleteToken メソッド
 

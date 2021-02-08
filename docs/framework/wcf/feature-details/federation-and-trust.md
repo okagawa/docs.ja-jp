@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「フェデレーションと信頼」を参照してください。
 title: フェデレーションと信頼
 ms.date: 03/30/2017
 helpviewer_keywords:
 - federation [WCF], and trust
 ms.assetid: 4bdec4f2-f8a2-4512-bdcf-14ef54b5877a
-ms.openlocfilehash: 6baa336f96f2349315cab2ed51bfb67c4745a110
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ccacb38f9542fab5522331d53dc29792318c5dea
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255482"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802945"
 ---
 # <a name="federation-and-trust"></a>フェデレーションと信頼
 
@@ -21,7 +22,7 @@ ms.locfileid: "96255482"
   
  同様に、対称キーを使用する場合も、キーがターゲット サービス用に暗号化されるため、セキュリティ トークン サービスがターゲット サービスの正しい資格情報で構成される必要があります。そうでないと、セキュリティ トークン サービスはターゲット サービス用にキーを暗号化できないため、この場合も、クライアントはサービスと通信できなくなります。  
   
- WCF サービスは、のプロパティの値を使用して、 <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxClockSkew%2A> クライアントとサービスの間のクロックスキューを可能にします。 [SecurityBindingElement](../diagnostics/wmi/securitybindingelement.md) フェデレーションでは、`MaxClockSkew` 設定が、クライアントと、クライアントが発行済みトークンを取得したセキュリティ トークン サービスの両方の時刻のずれに対して適用されます。 そのため、発行済みトークンの有効期間の開始時刻と終了時刻が設定する際、セキュリティ トークン サービスで時刻のずれを許可する必要はありません。  
+ WCF サービスは、のプロパティの値を使用して、 <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxClockSkew%2A> クライアントとサービスの間のクロックスキューを可能にします。 [](../diagnostics/wmi/securitybindingelement.md) フェデレーションでは、`MaxClockSkew` 設定が、クライアントと、クライアントが発行済みトークンを取得したセキュリティ トークン サービスの両方の時刻のずれに対して適用されます。 そのため、発行済みトークンの有効期間の開始時刻と終了時刻が設定する際、セキュリティ トークン サービスで時刻のずれを許可する必要はありません。  
   
 > [!NOTE]
 > 時刻のずれの重要性は、発行済みトークンの有効期間が短くなるほど大きくなります。 トークンの有効期間が 30 分以上あれば、多くの場合、時刻のずれは大きな問題にはなりません。 短い有効期間が使用されるシナリオやトークンの正確な有効時間が重要となるシナリオでは、時刻のずれを考慮に入れて設計する必要があります。  

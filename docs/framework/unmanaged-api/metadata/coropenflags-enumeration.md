@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CorOpenFlags 列挙型」を参照してください。
 title: CorOpenFlags 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e27a83b5-2698-4996-9032-1e0fed8b91ca
 topic_type:
 - apiref
-ms.openlocfilehash: e676547d20dc9535241150d24b65e1fbaf9e89ab
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b8bc31b5c2b7ff0c7984aa92c38e96569b80d22e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725106"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784302"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags 列挙型
 
@@ -57,7 +58,7 @@ typedef enum CorOpenFlags
 |`ofCopyMemory`|ファイルがメモリ内に読み込まれることを示します。 メタデータは自身のコピーを保持する必要があります。|  
 |`ofCacheImage`|互換性のために残されています。 このフラグは無視されます。|  
 |`ofManifestMetadata`|互換性のために残されています。 このフラグは無視されます。|  
-|`ofReadOnly`|は、ファイルを読み取り用に開く必要があること、および IMetaDataEmit に対するの呼び出しを行うことができないことを示し `QueryInterface` ます。 [IMetaDataEmit](imetadataemit-interface.md)|  
+|`ofReadOnly`|は、ファイルを読み取り用に開く必要があること、および IMetaDataEmit に対するの呼び出しを行うことができないことを示し `QueryInterface` ます。 [](imetadataemit-interface.md)|  
 |`ofTakeOwnership`|[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)への呼び出しを使用してメモリが割り当てられ、メタデータによって解放されることを示します。|  
 |`ofNoTypeLib`|互換性のために残されています。 このフラグは無視されます。|  
 |`ofNoTransform`|.winmd ファイルの自動変換を無効にする必要があることを示します。 つまり、Windows Runtime タイプから .NET Framework タイプへの投射は無効になります。 詳細については、「 [Windows ランタイムと CLR-.net と Windows ランタイム](/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime)」を参照してください。|  

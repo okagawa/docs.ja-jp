@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: CorBindToRuntimeByCfg 関数'
 title: CorBindToRuntimeByCfg 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ded1e492-a782-4185-9c66-709e421c1782
 topic_type:
 - apiref
-ms.openlocfilehash: d319382b577844a804c3e4562676491a15de5f63
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c1acf6a8f1d8637bc2d6cd180016ff51cf500107
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673784"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790075"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>CorBindToRuntimeByCfg 関数
 
@@ -60,7 +61,7 @@ HRESULT CorBindToRuntimeByCfg (
  `ppv`  
  入出力返されたインターフェイスのアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  XML ファイルの形式は、標準のアプリケーション構成ファイルの後にモデル化されています。 XML ファイルの詳細については、「 [構成ファイルのスキーマ](../../configure-apps/file-schema/index.md)」を参照してください。  
   

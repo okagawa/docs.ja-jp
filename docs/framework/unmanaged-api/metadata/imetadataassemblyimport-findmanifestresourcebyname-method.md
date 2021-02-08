@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataAssemblyImport:: FindManifestResourceByName メソッド'
 title: IMetaDataAssemblyImport::FindManifestResourceByName メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7b72fa11-3866-402b-bdea-2b966b77cfe0
 topic_type:
 - apiref
-ms.openlocfilehash: 152f62fddee3eaa7fa14e454e6eb7ea2547265ad
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1d1312277675a1f2bf213221ab8d9d2a584733a4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731580"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784172"
 ---
 # <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a>IMetaDataAssemblyImport::FindManifestResourceByName メソッド
 
@@ -43,7 +44,7 @@ HRESULT FindManifestResourceByName (
  `ptkManifestResource`  
  入出力メタデータトークンを格納するために使用される配列 `mdManifestResource` 。それぞれがマニフェストリソースを表します。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  メソッドは、 `FindManifestResourceByName` 参照を解決するために共通言語ランタイムによって採用されている標準の規則を使用します。  
   

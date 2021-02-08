@@ -1,13 +1,14 @@
 ---
+description: '詳細については、「方法: 再ホストされたデザイナーで検証エラーを表示する」を参照してください。'
 title: '方法: 再ホストされたデザイナーの検証エラーを表示する'
 ms.date: 03/30/2017
 ms.assetid: 5aa8fb53-8f75-433b-bc06-7c7d33583d5d
-ms.openlocfilehash: ccdb8941f46683dd1fd12387c0c5db2abe1d8dec
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 75ff45e6e9a81df96a9940ce21d1b160cab1000e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96280040"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99777737"
 ---
 # <a name="how-to-display-validation-errors-in-a-rehosted-designer"></a>方法: 再ホストされたデザイナーの検証エラーを表示する
 

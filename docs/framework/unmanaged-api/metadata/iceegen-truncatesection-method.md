@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICeeGen:: TruncateSection メソッド'
 title: ICeeGen::TruncateSection メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0451d752-1e5c-4c9a-8bad-6cd35b7ba3df
 topic_type:
 - apiref
-ms.openlocfilehash: 3005db62bba4089c669a00f62e3c1e62f9e1dae9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 074c7d7b4222b5b22f1d9b79169d531cd5544b1e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685708"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784211"
 ---
 # <a name="iceegentruncatesection-method"></a>ICeeGen::TruncateSection メソッド
 
@@ -45,7 +46,7 @@ HRESULT TruncateSection (
  `len`  
  からセクションを切り捨てる長さ (バイト単位)。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `TruncateSection`他のメソッドによって処理されない特殊なセクション要件がある場合にのみ、を呼び出します。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataEmit::D efineSecurityAttributeSet メソッド'
 title: IMetaDataEmit::DefineSecurityAttributeSet メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 27064ca2-4186-4433-90a7-3b297785e891
 topic_type:
 - apiref
-ms.openlocfilehash: 5caf07414c9e64169f272eb11169c4d4ee399c6b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3512857ca23d65389b0e150bd24234d272ddd9b6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719464"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784055"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>IMetaDataEmit::DefineSecurityAttributeSet メソッド
 

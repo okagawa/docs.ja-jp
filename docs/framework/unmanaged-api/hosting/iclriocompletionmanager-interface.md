@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Iclrio参照マネージャーインターフェイス'
 title: ICLRIoCompletionManager インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c6c3ace6-e5e7-4450-8cc5-a9a48208c493
 topic_type:
 - apiref
-ms.openlocfilehash: e23675351e1fd0de510243c9ee8b3a6dd6f29cec
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b2d18f9c9900d448f0c6517520c303eb4258f8d3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714121"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789889"
 ---
 # <a name="iclriocompletionmanager-interface"></a>ICLRIoCompletionManager インターフェイス
 
@@ -31,7 +32,7 @@ ms.locfileid: "95714121"
 |------------|-----------------|  
 |[OnComplete メソッド](iclriocompletionmanager-oncomplete-method.md)|[Ihohooの](ihostiocompletionmanager-bind-method.md)呼び出しを使用して作成された i/o 要求の状態を CLR に通知します:: Bind メソッド。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ホストは、 [Ihohoocompletion manager](ihostiocompletionmanager-interface.md) インターフェイスを使用して i/o 完了の抽象化を実装します。 CLR はこのインターフェイスを介して i/o 要求を行い、ホストはインターフェイスを使用して、そのような要求の結果をランタイムに通知し `ICLRIoCompletionManager` ます。  
   
