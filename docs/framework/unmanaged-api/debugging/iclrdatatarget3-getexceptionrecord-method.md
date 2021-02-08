@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRDataTarget3:: GetExceptionRecord メソッド'
 title: ICLRDataTarget3::GetExceptionRecord メソッド
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 6643c2af-2ee6-4789-aa25-1d8eaf500c94
 topic_type:
 - apiref
-ms.openlocfilehash: 8f6eaa6ad310e9a01b2307bff091b670c3e1d6cb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cb816d1be72ee57b556b78dba6ed7503d941b210
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723611"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794807"
 ---
 # <a name="iclrdatatarget3getexceptionrecord-method"></a>ICLRDataTarget3::GetExceptionRecord メソッド
 
@@ -36,7 +37,7 @@ HRESULT GetExceptionRecord(
 ## <a name="parameters"></a>パラメーター  
 
  `bufferSize`  
- [入力] 入力バッファー サイズ (バイト単位)。 これは MINIDUMP_EXCEPTION と同じである必要があり `sizeof(` [MINIDUMP_EXCEPTION](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception) `)` ます。  
+ [入力] 入力バッファー サイズ (バイト単位)。 これは MINIDUMP_EXCEPTION と同じである必要があり `sizeof(` [](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception) `)` ます。  
   
  `bufferUsed`  
  [出力] 実際にバッファーに書き込まれるバイト数を受け取る `ULONG32` 型へのポインター。  
@@ -54,7 +55,7 @@ HRESULT GetExceptionRecord(
 |`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|例外レコードはターゲットに関連付けられていません。|  
 |`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|入力バッファーのサイズは `sizeof(MINIDUMP_EXCEPTION)` と等しくありません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  [MINIDUMP_EXCEPTION](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception) は、Windows SDK の dbghelp .h と imagehlp.dll に定義されている構造体です。  
   

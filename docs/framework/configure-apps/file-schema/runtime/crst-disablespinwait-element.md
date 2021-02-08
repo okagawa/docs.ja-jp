@@ -1,16 +1,17 @@
 ---
+description: '詳細については、次を参照してください: <Crst_DisableSpinWait> 要素'
 title: <Crst_DisableSpinWait> 要素
 ms.date: 04/18/2019
 f1_keywords:
 - Crst_DisableSpinWait
 helpviewer_keywords:
 - Crst_DisableSpinWait element
-ms.openlocfilehash: 45052d99bb297ac39d058fa405fe57a7c991f738
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: fca6fed2dabc3d1319ad030bb13bbb35a561b9aa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91151351"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795106"
 ---
 # <a name="crst_disablespinwait-element"></a>\<Crst_DisableSpinWait> 要素
 
@@ -32,13 +33,13 @@ ms.locfileid: "91151351"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |**有効**|重要なセクションが競合している場合は、スピンを待機するかどうかを指定します。|  
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |1|クリティカルセクションを取得できないときに、スピン待機を無効にします。|  
 |0|クリティカルセクションを取得できない場合は、スピン待機を無効にしないでください。 これが既定値です。|  

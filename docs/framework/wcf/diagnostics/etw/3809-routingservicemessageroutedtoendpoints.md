@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 3809-RoutingServiceMessageRoutedToEndpoints'
 title: 3809 - RoutingServiceMessageRoutedToEndpoints
 ms.date: 03/30/2017
 ms.assetid: 22479cc6-72d1-48df-912c-fc37bddeb043
-ms.openlocfilehash: c34c4a96f708845ec639b77dd1fe53e56deed757
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 638d6652d8abac3302c2b98daaf3e4d114abdbd5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96284837"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794170"
 ---
 # <a name="3809---routingservicemessageroutedtoendpoints"></a>3809 - RoutingServiceMessageRoutedToEndpoints
 
@@ -15,12 +16,12 @@ ms.locfileid: "96284837"
   
 |||  
 |-|-|  
-|ID|3809|  
+|id|3809|  
 |Keywords|RoutingServices|  
 |Level|"詳細"|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、ルーティング サービスがエンドポイントにルーティングされたときに生成されます。  
   

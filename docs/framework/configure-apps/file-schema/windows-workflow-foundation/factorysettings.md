@@ -1,14 +1,15 @@
 ---
+description: '詳細情報: <factorySettings>'
 title: <factorySettings>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 202aad17-1b8b-4c87-ad57-4ca5de18ed35
-ms.openlocfilehash: 9f9183d4c579c4f7c7985e5c7f372604d8d82947
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 766e68bbf2a48725b2603221bfbbcd25b0a83acb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150857"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795067"
 ---
 # \<factorySettings>
 
@@ -44,7 +45,7 @@ ms.locfileid: "91150857"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |idleTimeout|オブジェクトが破棄されるまでにキャッシュ内でアイドル状態を維持できる最大時間を指定する TimeSpan 値。|  
 |leaseTimeout|オブジェクトがキャッシュから削除されるまでの時間間隔を指定する TimeSpan 値。|  

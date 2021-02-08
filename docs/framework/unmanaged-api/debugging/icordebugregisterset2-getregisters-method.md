@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugRegisterSet2:: GetRegisters メソッド'
 title: ICorDebugRegisterSet2::GetRegisters メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dbc498a8-ba3f-42f2-bdd9-b623c77a1019
 topic_type:
 - apiref
-ms.openlocfilehash: 71b9d59621efb547713cb4a6c9df7a7142f4a677
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 58af939b0e88185e2be23b69ca70d28e93ff873f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615190"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794779"
 ---
 # <a name="icordebugregisterset2getregisters-method"></a>ICorDebugRegisterSet2:: GetRegisters メソッド
 
@@ -59,7 +60,7 @@ HRESULT GetRegisters (
   
  メソッドは、64を超える `ICorDebugRegisterSet2::GetRegisters` レジスタを持つプラットフォームに必要です。 たとえば、IA64 には128汎用レジスタと128浮動小数点レジスタがあるため、ビットマスクには64ビット以上が必要です。  
   
- X86 などのプラットフォームの場合と同様に、64以上のレジスタがない場合、メソッドは単にバイト配列のバイトをに変換し、次に、 `GetRegisters` `mask` `ULONG64` マスクを取得する[ICorDebugRegisterSet::GetRegisters](icordebugregisterset-getregisters-method.md) 、は、のようにします。 `ULONG64`  
+ X86 などのプラットフォームの場合と同様に、64以上のレジスタがない場合、メソッドは単にバイト配列のバイトをに変換し、次に、 `GetRegisters` `mask` `ULONG64` マスクを取得する[](icordebugregisterset-getregisters-method.md) 、は、のようにします。 `ULONG64`  
   
 ## <a name="requirements"></a>要件
 

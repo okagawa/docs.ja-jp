@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRDataTarget3:: GetExceptionContextRecord メソッド'
 title: ICLRDataTarget3::GetExceptionContextRecord メソッド
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 66076ed5-f05c-4114-9788-94cb143abb8a
 topic_type:
 - apiref
-ms.openlocfilehash: 87065b83e0b28eafdf5099f99fd188e2e21e7a12
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c722eaaf0f9935bc7adaa69a1792f934f631a728
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723624"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794833"
 ---
 # <a name="iclrdatatarget3getexceptioncontextrecord-method"></a>ICLRDataTarget3::GetExceptionContextRecord メソッド
 
@@ -54,7 +55,7 @@ HRESULT GetExceptionContextRecord(
 |`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|コンテキスト レコードはターゲットに関連付けられていません。|  
 |`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|入力バッファーのサイズが足りないため、コンテキスト レコードを格納できません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  [CONTEXT](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) は、Windows SDK によって提供されるヘッダーで定義されているプラットフォーム固有の構造体です。  
   

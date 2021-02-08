@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 715-ClientChannelOpenStart'
 title: 715 - ClientChannelOpenStart
 ms.date: 03/30/2017
 ms.assetid: 62be7826-9c4e-4fec-b958-185ddfaed976
-ms.openlocfilehash: c62f90a1b177bcbd10833b25b49882a7e1268d27
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9d83765885c887c33abeaa8041eb88e22155521c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96259552"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793923"
 ---
 # <a name="715---clientchannelopenstart"></a>715 - ClientChannelOpenStart
 
@@ -15,12 +16,12 @@ ms.locfileid: "96259552"
   
 |||  
 |-|-|  
-|ID|715|  
+|id|715|  
 |Keywords|ServiceModel|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは ServiceChannel Open を開始すると生成されます。  
   

@@ -1,13 +1,14 @@
 ---
+description: '詳細については、「方法: サポート資格情報を作成する」を参照してください。'
 title: '方法: サポート資格情報を作成する'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 1e11da11de68b1d3e24115387ec61ad22ec031b1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 2f84e58eb0b8df5e1297fcbc50ddcac96db4fe5c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96286306"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793819"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>方法: サポート資格情報を作成する
 
@@ -30,7 +31,7 @@ ms.locfileid: "96286306"
 
  サポート資格情報は、メッセージ内で送信される *サポートトークン* になります。 WS-SecurityPolicy 仕様では、次の表に示すように、サポート トークンをメッセージに追加する方法が 4 つ定義されています。  
   
-|目的|Description|  
+|目的|説明|  
 |-------------|-----------------|  
 |符号付き|サポート トークンはセキュリティ ヘッダーに追加され、メッセージ署名によって署名されます。|  
 |保証|保証 *トークン* は、メッセージ署名に署名します。|  

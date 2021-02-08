@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: フィルター処理'
 title: フィルター処理
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: cc95852a5eb191befe7e3cd563939c340ef16e06
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d5f2abc1050ece8ebf2bed53a1c963134afad43a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96268483"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793871"
 ---
 # <a name="filtering"></a>フィルター処理
 
@@ -23,7 +24,7 @@ Windows Communication Foundation (WCF) フィルター処理システムは、�
 
  フィルター処理は、メッセージを適切なアプリケーション コンポーネントにディスパッチする処理の一部であり、メッセージの受信後に行われます。 フィルター処理システムの設計では、メッセージング、ルーティング、セキュリティ、イベント処理、システム管理など、いくつかの WCF サブシステムの要件に対応しています。  
   
-## <a name="filters"></a>フィルター  
+## <a name="filters"></a>フィルタ  
 
  フィルター エンジンには、フィルターとフィルター テーブルという 2 つの主要コンポーネントが含まれます。 フィルターは、ユーザーが指定した論理条件に基づいてメッセージに関する論理判定を行います。 フィルターは <xref:System.ServiceModel.Dispatcher.MessageFilter> クラスを実装します。  
   

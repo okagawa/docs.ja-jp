@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo4:: GetObjectSize2 メソッド'
 title: ICorProfilerInfo4::GetObjectSize2 メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4a3e43ed-3ee3-4395-ab14-f78b903be13e
 topic_type:
 - apiref
-ms.openlocfilehash: 960f8f1fe2315e068d599aa5a31e03f521b235a8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 986c3d99501e21feec95dd3b6014f8d11d809704
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733868"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794525"
 ---
 # <a name="icorprofilerinfo4getobjectsize2-method"></a>ICorProfilerInfo4::GetObjectSize2 メソッド
 
@@ -42,7 +43,7 @@ HRESULT GetObjectSize2(
  `pcSize`  
  入出力オブジェクトのサイズへのポインター (バイト単位)。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  多くの場合、同じ種類の異なるオブジェクトのサイズは同じです。 ただし、配列や文字列など、一部の型では、オブジェクトごとにサイズが異なる場合があります。  
   

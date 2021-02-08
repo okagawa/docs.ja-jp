@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRDataTarget3:: GetExceptionThreadID メソッド'
 title: ICLRDataTarget3::GetExceptionThreadID メソッド
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 307d6ac7-4a86-45f3-999d-6b47004a68f2
 topic_type:
 - apiref
-ms.openlocfilehash: 0a8b7a90cd909379f870f6a501a940386d2e1451
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8202b6d83d0c81853111c5da7cfb8deec4d4e222
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723598"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794820"
 ---
 # <a name="iclrdatatarget3getexceptionthreadid-method"></a>ICLRDataTarget3::GetExceptionThreadID メソッド
 
@@ -45,7 +46,7 @@ HRESULT GetExceptionThreadID(
 |`S_OK`|メソッドが成功しました。|  
 |`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|例外の有効なスレッド ID を見つけることができませんでした。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドは、デバッグ アプリケーションの作成者によって実装されます。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRDataTarget:: GetImageBase メソッド'
 title: ICLRDataTarget::GetImageBase メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 091c5f32-c160-49e3-a75f-4692e084c8e4
 topic_type:
 - apiref
-ms.openlocfilehash: f1b9f55a383f1deb867c6b3e2fa385a82158d1e9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 34e8341b219aaa184b4894c631f854e0a31921d6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703578"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794872"
 ---
 # <a name="iclrdatatargetgetimagebase-method"></a>ICLRDataTarget::GetImageBase メソッド
 
@@ -43,7 +44,7 @@ HRESULT GetImageBase (
  `baseAddress`  
  入出力イメージのベースアドレスを格納する CLRDATA_ADDRESS へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  イメージファイル名には、パスを指定することも、パスを指定することもできません。 パスが指定されている場合、パス全体で一致が行われます。それ以外の場合、一致はファイル名でのみ実行されます。  
   

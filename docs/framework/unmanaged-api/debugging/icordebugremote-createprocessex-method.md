@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: Okremote:: CreateProcessEx メソッド'
 title: ICorDebugRemote::CreateProcessEx メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41af93c7-e448-4251-8d4d-413d38c635f2
 topic_type:
 - apiref
-ms.openlocfilehash: 37bf800f27754d1bf80aece962b7cbb85b1cbedc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cd27400f5c9f348621fb66b3b7730cf15d397151
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712184"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794729"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>ICorDebugRemote::CreateProcessEx メソッド
 
@@ -95,7 +96,7 @@ HRESULT CreateProcessEx (
  E_FAIL (またはその他の E_ リターン コード)  
  リモートコンピューターでプロセスを起動できず、デバッグのために "のプロセスインターフェイス" を返します。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  混合モードのデバッグは、Silverlight ではサポートされていません。  
   

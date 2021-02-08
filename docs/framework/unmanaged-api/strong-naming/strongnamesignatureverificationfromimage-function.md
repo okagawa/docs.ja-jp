@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: StrongNameSignatureVerificationFromImage 関数'
 title: StrongNameSignatureVerificationFromImage 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9fb144d2-07e0-4a0e-8e05-907bbb6c9e03
 topic_type:
 - apiref
-ms.openlocfilehash: b90cc6fe99cf592f1b3fd117888462a957e4ce35
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9dca8d0b221dfe8959be2de9b8347b95d3802a0e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95708427"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794495"
 ---
 # <a name="strongnamesignatureverificationfromimage-function"></a>StrongNameSignatureVerificationFromImage 関数
 
@@ -70,7 +71,7 @@ BOOLEAN StrongNameSignatureVerificationFromImage (
 
  `true` 正常に完了した場合は。それ以外の場合は `false` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  関数が `StrongNameSignatureVerificationFromImage` 正常に完了しない場合は、 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 関数を呼び出して、最後に生成されたエラーを取得します。  
   

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 219-ServiceException'
 title: 219 - ServiceException
 ms.date: 03/30/2017
 ms.assetid: 81e2efac-39aa-4ed2-85a9-97eb8793b844
-ms.openlocfilehash: 832ced406b6079fad8f4b9bea512a6d390bdcc0f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b2ac12d6c5c68517b085b39dd7d0f81c39db9ebd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96241942"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794326"
 ---
 # <a name="219---serviceexception"></a>219 - ServiceException
 
@@ -15,12 +16,12 @@ ms.locfileid: "96241942"
   
 |||  
 |-|-|  
-|ID|219|  
+|id|219|  
 |Keywords|EndToEndMonitoring、HealthMonitoring、Troubleshooting、ServiceModel|  
 |Level|エラー|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、WCF サービスがハンドルされない例外を検出した場合に生成されます。 これには、アクティベーション中のハンドルされない例外、メッセージ処理中のハンドルされない例外、およびユーザー コード内でのハンドルされない例外が含まれます。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96241942"
   
 ## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|Description|  
+|データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  
 |ExceptionToString|`xs:string`|CLR 例外に対して `ToString`() を呼び出した結果。|  
 |ExceptionTypeName|`xs:string`|例外の型の CLR FullName。|  

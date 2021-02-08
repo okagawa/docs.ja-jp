@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ICorPublishProcess:: EnumAppDomains メソッド'
 title: ICorPublishProcess::EnumAppDomains メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7da621fc-e7d0-4c00-9439-5c93619d7414
 topic_type:
 - apiref
-ms.openlocfilehash: 2acf8fb507ab617e066a31c9c2657b1ef0d18e47
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c7834b23967ab467c1589ee31929bf346b4b3b8f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95693282"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794612"
 ---
 # <a name="icorpublishprocessenumappdomains-method"></a>ICorPublishProcess::EnumAppDomains メソッド
 
@@ -39,7 +40,7 @@ HRESULT EnumAppDomains (
  `ppEnum`  
  入出力このプロセス内のアプリケーションドメインのコレクションを反復処理できる [ICorPublishAppDomainEnum](icorpublishappdomainenum-interface.md) インスタンスのアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  アプリケーションドメインの一覧は、メソッドが呼び出されたときに存在するアプリケーションドメインのスナップショットに基づいてい `EnumAppDomains` ます。 このメソッドは、新しい最新の一覧を作成するために複数回呼び出すことができます。 既存のリストは、このメソッドの後続の呼び出しの影響を受けません。  
   

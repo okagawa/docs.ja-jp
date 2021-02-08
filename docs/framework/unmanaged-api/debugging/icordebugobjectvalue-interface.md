@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次の情報を参照してください: の値インターフェイス'
 title: ICorDebugObjectValue インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 937de6a0-6fbf-4ddc-80ea-a6217b73e62b
 topic_type:
 - apiref
-ms.openlocfilehash: 2a5a618491bf2c624669728d97a690cca315bff8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a2af438bbb4c2f56eb1a72151e339b6b0a978eec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724677"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794772"
 ---
 # <a name="icordebugobjectvalue-interface"></a>ICorDebugObjectValue インターフェイス
 
@@ -37,7 +38,7 @@ ms.locfileid: "95724677"
 |[IsValueClass メソッド](icordebugobjectvalue-isvalueclass-method.md)|このによって参照されるオブジェクトが値型かどうかを示す値を取得し `ICorDebugObjectValue` ます。|  
 |[SetFromManagedCopy メソッド](icordebugobjectvalue-setfrommanagedcopy-method.md)|互換性のために残されています。 このメソッドは呼び出さないでください。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  は、 `ICorDebugObjectValue` デバッグ中のプロセスが続行されるまで有効なままです。  
   

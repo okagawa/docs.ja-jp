@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 215-MessageReceivedByTransport'
 title: 215 - MessageReceivedByTransport
 ms.date: 03/30/2017
 ms.assetid: bb32aa60-5207-4711-9f08-110e8ac327e5
-ms.openlocfilehash: 2f247e751a0690f13d059eff29d633c6d047775d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e9645cfc8c4013f8891cb645db7df35477a57412
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279078"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794365"
 ---
 # <a name="215---messagereceivedbytransport"></a>215 - MessageReceivedByTransport
 
@@ -15,12 +16,12 @@ ms.locfileid: "96279078"
   
 |||  
 |-|-|  
-|ID|215|  
+|id|215|  
 |Keywords|Troubleshooting、ServiceModel|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、TCP ベースのトランスポートがメッセージを受信するときに発生します。 トランスポート レベルでは、1 つの操作に対して複数のメッセージが、クライアントとサービス間で交換されることがあります。 これはインフラストラクチャの動作によるもので、セキュリティがその一例です。 そのため、生成される `MessageReceivedByTransport` イベントの数が、サービスのバインディングとその構成に応じて異なります。  
   
@@ -33,7 +34,7 @@ ms.locfileid: "96279078"
   
 ## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|Description|  
+|データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  
 |Listen Address|`xs:string`|メッセージを受信したアドレス。|  
 |HostReference|`xs:string`|Web ホスト サービスの場合は、このフィールドにより、サービスが Web 階層内で一意に識別されます。 この形式は、' Web サイト名アプリケーションの仮想パス&#124;サービスの仮想パス&#124;ServiceName ' として定義されています。 例: ' 既定の Web サイト/計算 Atorapplication&#124;/電卓&#124;電卓 Atorservice '。|  

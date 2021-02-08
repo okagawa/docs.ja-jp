@@ -1,13 +1,14 @@
 ---
+description: '詳細については、「方法: Windows Server App Fabric を使用してワークフローサービスをホストする」を参照してください。'
 title: '方法: Windows Server AppFabric を使用してワークフロー サービスをホストする'
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-ms.openlocfilehash: 2cf77753a0540e75ae6778065f7fa006729f8d6a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 057e81c50844d1a36e32fe899de3469f024d775b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555986"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793806"
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>方法: Windows Server AppFabric を使用してワークフロー サービスをホストする
 
@@ -17,7 +18,7 @@ AppFabric でのワークフロー サービスのホスティングは IIS/WAS 
   
 1. Visual Studio 2012 を開き、 [実行時間の長いワークフローサービスの作成](creating-a-long-running-workflow-service.md) に関するトピックで作成した orderprocessing ソリューションを読み込みます。  
   
-2. **Orderservice**プロジェクトを右クリックし、[**プロパティ**] をクリックして、[ **Web** ] タブを選択します。  
+2. **Orderservice** プロジェクトを右クリックし、[**プロパティ**] をクリックして、[ **Web** ] タブを選択します。  
   
 3. プロパティページの [ **開始アクション** ] セクションで、 **特定のページ** を選択し、編集ボックスに「Service1. .xamlx」と入力します。  
   
@@ -35,23 +36,23 @@ AppFabric でのワークフロー サービスのホスティングは IIS/WAS 
   
 4. [ **全般** ] タブを選択すると、次のスクリーンショットに示すように、アプリケーションに関する全般的な情報が表示されます。  
   
-     ![[全般] タブ ([App Fabric の 構成] ダイアログ ボックス)](media/appfabricconfiguration-general.gif "AppFabricConfiguration-全般")  
+     ![[全般] タブ ([App Fabric の 構成] ダイアログ ボックス)](media/appfabricconfiguration-general.gif "AppFabricConfiguration-General")  
   
 5. [ **監視** ] タブを選択します。次のスクリーンショットに示すように、さまざまな監視設定が表示されます。  
   
-     ![App Fabric の構成の [監視] タブ](media/appfabricconfiguration-monitoring.gif "AppFabricConfiguration-監視")  
+     ![App Fabric の構成の [監視] タブ](media/appfabricconfiguration-monitoring.gif "AppFabricConfiguration-Monitoring")  
   
      App Fabric でのワークフローサービスの監視の構成の詳細については、「 [App fabric で監視を構成する](/previous-versions/appfabric/ee677384(v=azure.10))」を参照してください。  
   
 6. [ **ワークフローの永続** 化] タブを選択します。これにより、次のスクリーンショットに示すように、App Fabric の既定の永続化プロバイダーを使用するようにアプリケーションを構成できます。  
   
-     ![App Fabric の構成 &#45; 永続化](media/appfabricconfiguration-persistence.gif "AppFabricConfiguration-永続化")  
+     ![App Fabric の構成 &#45; 永続化](media/appfabricconfiguration-persistence.gif "AppFabricConfiguration-Persistence")  
   
      Windows Server App Fabric でのワークフロー永続化の構成の詳細については、「 [App fabric でのワークフロー永続化の構成](/previous-versions/appfabric/ee677353(v=azure.10))」を参照してください。  
   
 7. [ **ワークフローホストの管理** ] タブを選択します。これにより、次のスクリーンショットに示すように、アイドル状態のワークフローサービスインスタンスをアンロードして永続化する必要があることを指定できます。  
   
-     ![App Fabric の構成ワークフローのホスト管理](media/appfabricconfiguration-management.gif "AppFabricConfiguration-管理")  
+     ![App Fabric の構成ワークフローのホスト管理](media/appfabricconfiguration-management.gif "AppFabricConfiguration-Management")  
   
      ワークフローホスト管理の構成の詳細については、「 [App Fabric でのワークフローホスト管理の構成](/previous-versions/appfabric/ff383424(v=azure.10))」を参照してください。  
   
@@ -69,7 +70,7 @@ AppFabric でのワークフロー サービスのホスティングは IIS/WAS 
   
 10. [ **セキュリティ** ] タブを選択します。これにより、次のスクリーンショットに示すように、アプリケーションのセキュリティ設定を構成できます。  
   
-     ![App Fabric のセキュリティ構成](media/appfabricconfiguration-security.gif "AppFabricConfiguration-セキュリティ")  
+     ![App Fabric のセキュリティ構成](media/appfabricconfiguration-security.gif "AppFabricConfiguration-Security")  
   
      Windows Server App Fabric でセキュリティを構成する方法の詳細については、「 [App fabric でのセキュリティの構成](/previous-versions/appfabric/ee677278(v=azure.10))」を参照してください。  
   
@@ -85,7 +86,7 @@ AppFabric でのワークフロー サービスのホスティングは IIS/WAS 
   
      ![App Fabric ダッシュボードを示すスクリーンショット。](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/app-fabric-dashboard.gif)  
   
-     **WF インスタンス履歴**には、ワークフローサービスのアクティブ化の数、ワークフローサービスインスタンスの入力候補の数、失敗したワークフローインスタンスの数など、ワークフローサービスに関する情報が表示されます。 アクティブまたはアイドル状態のインスタンスの下にリンクが表示されます。リンクをクリックすると、次のスクリーンショットに示すように、アイドル状態のワークフローインスタンスに関する詳細情報が表示されます。  
+     **WF インスタンス履歴** には、ワークフローサービスのアクティブ化の数、ワークフローサービスインスタンスの入力候補の数、失敗したワークフローインスタンスの数など、ワークフローサービスに関する情報が表示されます。 アクティブまたはアイドル状態のインスタンスの下にリンクが表示されます。リンクをクリックすると、次のスクリーンショットに示すように、アイドル状態のワークフローインスタンスに関する詳細情報が表示されます。  
   
      ![永続化されたワークフローインスタンスの詳細を示すスクリーンショット。](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/persisted-workflow-instance-detail.gif)  
   

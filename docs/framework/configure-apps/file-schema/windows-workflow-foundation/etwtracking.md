@@ -1,14 +1,15 @@
 ---
+description: '詳細情報: <etwTracking>'
 title: <etwTracking>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: cb45c82e-6ea1-4c4d-924c-118a25ae1f35
-ms.openlocfilehash: e1048cf3a9f56e4177f3ffe2dcd561a1babadacd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b89d832e73440d5b60a05477ccf85178c2f43a2d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198770"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795080"
 ---
 # \<etwTracking>
 
@@ -39,7 +40,7 @@ ms.locfileid: "91198770"
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |profileName|この動作に関連付けられた追跡プロファイルの名前を指定する文字列。|  
   

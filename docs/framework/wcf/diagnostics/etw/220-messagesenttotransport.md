@@ -1,13 +1,14 @@
 ---
+description: '詳細については、次を参照してください: 220-通知 Enttotransport'
 title: 220 - MessageSentToTransport
 ms.date: 03/30/2017
 ms.assetid: aef4e781-240b-45bc-bff8-400053037e71
-ms.openlocfilehash: 1b63877998ea7942886c83d8795fe5ee49fdf053
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8d76f147c8a31a5aa08c21073cd03e63436095ff
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96241929"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794313"
 ---
 # <a name="220---messagesenttotransport"></a>220 - MessageSentToTransport
 
@@ -17,10 +18,10 @@ ms.locfileid: "96241929"
 |-|-|  
 |Id|220|  
 |Keywords|EndToEndMonitoring、Troubleshooting、ServiceModel|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、サービス モデルがトランスポートにメッセージを送信すると生成されます。  
   
@@ -33,7 +34,7 @@ ms.locfileid: "96241929"
   
 ## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|Description|  
+|データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  
 |関連付け ID|`xs:GUID`|サービスまたはクライアントからの `MessageSentToTransport` イベントを、反対側の対応する `MessageReceivedFromTransport` と関連付けるのに使用する、アクティビティ ID。|  
 |HostReference|`xs:string`|Web ホスト サービスの場合は、このフィールドにより、サービスが Web 階層内で一意に識別されます。 この形式は、' Web サイト名アプリケーションの仮想パス&#124;サービスの仮想パス&#124;ServiceName ' として定義されています。 例: ' 既定の Web サイト/計算 Atorapplication&#124;/電卓&#124;電卓 Atorservice '。|  

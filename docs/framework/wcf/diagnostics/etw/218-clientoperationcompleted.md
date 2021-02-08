@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 218-ClientOperationCompleted'
 title: 218 - ClientOperationCompleted
 ms.date: 03/30/2017
 ms.assetid: b069bced-7bb2-4e01-8227-e5dbda17af09
-ms.openlocfilehash: d74aa77aff7b45b50f6891c999889011d9e03381
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3719b77ce653c5177cf7b92901ecd51982504b83
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96278857"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794339"
 ---
 # <a name="218---clientoperationcompleted"></a>218 - ClientOperationCompleted
 
@@ -15,12 +16,12 @@ ms.locfileid: "96278857"
   
 |||  
 |-|-|  
-|ID|218|  
+|id|218|  
 |Keywords|Troubleshooting、ServiceModel|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、ある操作が完了した直後にクライアントによって生成されます。 一方向の操作の場合は、メッセージが正常に送信された直後に生成されます。 要求 - 応答の操作の場合は、応答の受信後に生成されます。  
   
