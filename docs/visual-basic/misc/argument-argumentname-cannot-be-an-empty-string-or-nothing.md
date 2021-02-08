@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「引数に <argumentname> 空の文字列または Nothing を指定することはできません
 title: 引数 <argumentname> は、空の文字列または Nothing を使用できません。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrGeneral_ArgumentEmptyOrNothing_Name
 ms.assetid: 2c458944-1bdf-4ea7-9caf-560ca7582cc0
-ms.openlocfilehash: a0367405979fd79f01b069d6b0e5bb0c4b530788
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 13e7b420ef84eb6ff050dee6046297b77a51b6e1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91087350"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787280"
 ---
 # <a name="argument-argumentname-cannot-be-an-empty-string-or-nothing"></a>引数 \<argumentname> は、空の文字列または Nothing を使用できません。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <developmentMode> 要素'
 title: <developmentMode> 要素
 ms.date: 03/30/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - container tags, <developmentMode> element
 - <developmentMode> element
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
-ms.openlocfilehash: ddcabb831193baee30016f663f32d8562283d936
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 668461d13c8a1767268692804e9783bb6d4b9a56
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91205023"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787124"
 ---
 # <a name="developmentmode-element"></a>\<developmentMode> 要素
 
@@ -36,13 +37,13 @@ DEVPATH 環境変数によって指定されたディレクトリで、ランタ
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |**developerInstallation**|DEVPATH 環境変数によって指定されたディレクトリで、ランタイムがアセンブリの検索を行うかどうかを指定します。|  
   
 ## <a name="developerinstallation-attribute"></a>developerInstallation 属性  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**true**|DEVPATH 環境変数によって指定されたディレクトリ内のアセンブリを検索します。|  
 |**false**|は、DEVPATH 環境変数によって指定されたディレクトリ内のアセンブリを検索しません。 これは既定値です。|  

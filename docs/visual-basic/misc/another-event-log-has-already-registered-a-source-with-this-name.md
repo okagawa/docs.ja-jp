@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 別のイベントログがこの名前のソースを既に登録しています'
 title: 別のイベント ログが、既にこの名前のソースを登録しています
 ms.date: 07/20/2015
 ms.assetid: e6f5cd95-bb3f-4845-84fb-ae623a9bd44e
-ms.openlocfilehash: 333c28036e2d1b7514c7370b98ff70a6d195a9dd
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ec6ae0b3ef12452a0135e5bf17dbdd5844c0f478
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058392"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787358"
 ---
 # <a name="another-event-log-has-already-registered-a-source-with-this-name"></a>別のイベント ログが、既にこの名前のソースを登録しています
 
@@ -21,6 +22,6 @@ ms.locfileid: "91058392"
   
 2. ソースを新しいログに登録します。  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
