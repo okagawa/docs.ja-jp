@@ -1,4 +1,5 @@
 ---
+description: 詳細については、.NET Framework 4 および4.5 で追加された CLR ホストインターフェイスに関するページを参照してください。
 title: .NET Framework 4 および 4.5 で追加された CLR ホスト インターフェイス
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework 4, hosting interfaces
 - interfaces [.NET Framework hosting], version 4
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
-ms.openlocfilehash: 6ee3b8cdf348a5eade3903e2d26b4f9b93886305
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e7c5dd042822be8653d9c068e85a751aed622f06
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95706815"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799916"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>.NET Framework 4 および 4.5 で追加された CLR ホスト インターフェイス
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRStrongName:: StrongNameGetPublicKey メソッド'
 title: ICLRStrongName::StrongNameGetPublicKey メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a31dcaa9-a404-4c1d-8cc7-081827c52935
 topic_type:
 - apiref
-ms.openlocfilehash: 5bd314b2b63474d2a1d159f74564e2d4ca13aef6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7be64e145f1e26a1260e2b23fd9fe5f97e289478
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725548"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799604"
 ---
 # <a name="iclrstrongnamestrongnamegetpublickey-method"></a>ICLRStrongName::StrongNameGetPublicKey メソッド
 
@@ -63,7 +64,7 @@ HRESULT StrongNameGetPublicKey (
 
  `S_OK` メソッドが正常に完了した場合は。それ以外の場合は、失敗を示す HRESULT 値 (「リストの [一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values) 」を参照してください)。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  公開キーは [Publickeyblob](../strong-naming/publickeyblob-structure.md) 構造に含まれています。  
   

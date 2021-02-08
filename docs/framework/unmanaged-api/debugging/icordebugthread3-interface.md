@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorDebugThread3 インターフェイス」を参照してください。
 title: ICorDebugThread3 インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eb2860ef-06cb-4968-a6c3-6d048ecda2a4
 topic_type:
 - apiref
-ms.openlocfilehash: 015d0061e5be5bbc212243ca06f1d165abe4496a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 88c668f1e08d0843f26d231937c85d80e03bee6e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729305"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800969"
 ---
 # <a name="icordebugthread3-interface"></a>ICorDebugThread3 インターフェイス
 
@@ -32,7 +33,7 @@ ms.locfileid: "95729305"
 |[CreateStackWalk メソッド](icordebugthread3-createstackwalk-method.md)|スタックをアンワインドするスレッドに対し [て、このオブジェクトを](icordebugstackwalk-interface.md) 作成します。|  
 |[GetActiveInternalFrames メソッド](icordebugthread3-getactiveinternalframes-method.md)|スタック上の内部フレーム ([ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) objects) の配列を返します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ICorDebugThread3` は、のように、の論理上の拡張機能です。  
   

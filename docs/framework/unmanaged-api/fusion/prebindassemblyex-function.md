@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: PreBindAssemblyEx 関数'
 title: PreBindAssemblyEx 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bd285233-a4a2-4b52-bbca-0025a60e4864
 topic_type:
 - apiref
-ms.openlocfilehash: a729249f7b0681941a0b1a478dbe2c0d9d6cd01c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e94bd7c335555e8109df60a00cadc76f7e13434b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723962"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800007"
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx 関数
 
@@ -60,7 +61,7 @@ HRESULT PreBindAssemblyEx (
  `pvReserved`  
  [入力] 将来の機能拡張に備えて予約されています。 `pvReserved` null 参照である必要があります。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ppNamePostPolicy`出力パラメーターは、関数が HRESULT FUSION_E_REF_DEF_MISMATCH を返す場合にのみ設定されます。 それ以外の場合は null です。  
   

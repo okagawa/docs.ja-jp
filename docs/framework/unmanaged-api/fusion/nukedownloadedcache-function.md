@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: NukeDownloadedCache 関数'
 title: NukeDownloadedCache 関数
 ms.date: 03/30/2017
 api_name:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fac2b1c6-6fa3-4818-805b-b63972024c86
 topic_type:
 - apiref
-ms.openlocfilehash: 5ae0a887d666a150b717d495848c8a411d030a09
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2239473b8e6e43a539b0507c8255d40f87e72043
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728577"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800033"
 ---
 # <a name="nukedownloadedcache-function"></a>NukeDownloadedCache 関数
 
@@ -37,7 +38,7 @@ HRESULT NukeDownloadedCache();
 
  このメソッドは、Winerror.h で定義されているように、標準の COM エラーコードを返します。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  CLR ダウンロードキャッシュは、URL からダウンロードされる厳密な名前付きアセンブリが再利用できるように格納される領域です。  
   

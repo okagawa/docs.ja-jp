@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IMetaDataImport:: FindField メソッド'
 title: IMetaDataImport::FindField メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 38cd4e16-fbb2-471c-aa73-ac51a1931ad2
 topic_type:
 - apiref
-ms.openlocfilehash: 9b42f0f7c8e2878ee3ec140344f51517a24247c4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b8041a37b91f22722a05aec99c92c4f17c2b0610
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729864"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799305"
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField メソッド
 
@@ -55,7 +56,7 @@ HRESULT FindField (
  `pmb`  
  入出力一致する FieldDef トークンへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  フィールドは、外側のクラスまたはインターフェイス ( `td` )、その名前 ( `szName` )、および必要に応じてシグネチャ () を使用して指定し `pvSigBlob` ます。  
   

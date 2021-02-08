@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: WriteableMetadataUpdateMode 列挙型'
 title: WriteableMetadataUpdateMode 列挙型
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 6758f4d3-6bc7-4c99-8582-e9be00566784
 topic_type:
 - apiref
-ms.openlocfilehash: 1553e18da10844da28bbaf84ba76bc5c34ca49b2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b8136963e315c429643bd0ebf4bdb509d5173bec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725301"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800514"
 ---
 # <a name="writeablemetadataupdatemode-enumeration"></a>WriteableMetadataUpdateMode 列挙型
 
@@ -41,7 +42,7 @@ typedef enum WriteableMetadataUpdateMode {
 |`LegacyCompatPolicy`|メモリ内のメタデータ更新を可視にするときに、.NET Framework の以前のバージョンとの互換性を保持します。 詳細については、次の「解説」を参照してください。|  
 |`AlwaysShowUpdates`|メモリ内のメタデータ更新をデバッガーに対して可視にします。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  列挙体のメンバーを `WriteableMetadataUpdateMode` [SetWriteableMetadataUpdateMode](icordebugprocess7-setwriteablemetadataupdatemode-method.md) メソッドに渡して、ターゲットプロセス内のメタデータに対するメモリ内更新がデバッガーに表示されるかどうかを制御できます。  
   

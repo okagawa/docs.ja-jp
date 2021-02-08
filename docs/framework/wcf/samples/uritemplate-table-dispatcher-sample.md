@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: UriTemplate テーブルディスパッチャーのサンプル'
 title: UriTemplate テーブル ディスパッチャーのサンプル
 ms.date: 03/30/2017
 ms.assetid: 3b32975d-ba90-4c5c-83bc-2fbb48f11c0c
-ms.openlocfilehash: 57489264de62b6adbca1c98230a0f90735b3918a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 68cd7e87c9768995210f369e2d55a10ad048e338
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294951"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798200"
 ---
 # <a name="uritemplate-table-dispatcher-sample"></a>UriTemplate テーブル ディスパッチャーのサンプル
 

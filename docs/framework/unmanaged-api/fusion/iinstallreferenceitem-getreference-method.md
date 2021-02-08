@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IInstallReferenceItem:: GetReference メソッド'
 title: IInstallReferenceItem::GetReference メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8960332f-c98a-405a-ba92-7003de0c1187
 topic_type:
 - apiref
-ms.openlocfilehash: 14286970a4f7093d72b47b780ea880f5ccb1bca5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 88f5ca21b6f3494031e1cd232f71253e39d9e648
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721076"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800115"
 ---
 # <a name="iinstallreferenceitemgetreference-method"></a>IInstallReferenceItem::GetReference メソッド
 

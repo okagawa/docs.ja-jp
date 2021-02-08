@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「IXCLRDataProcess:: EnumModule メソッド」を参照してください。'
 title: 'IXCLRDataProcess:: EnumModule メソッド'
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 5caadcfe091393a8ff79106d57a50a532c349829
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 33b15da6939a0fb78a4eeafcf75e1a2b2f0d0ab1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420777"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800683"
 ---
 # <a name="ixclrdataprocessenummodule-method"></a>IXCLRDataProcess:: EnumModule メソッド
 

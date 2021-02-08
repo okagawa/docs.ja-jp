@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugThread4:: HadUnhandledException メソッド'
 title: ICorDebugThread4::HadUnhandledException メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 05558daa-39e2-4c38-aeaf-e2aec4a09468
 topic_type:
 - apiref
-ms.openlocfilehash: 4e368b2c63e8e43b5c392bec4b79daac8bae249d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cd0ccdbdd68c37b5fbdbd705da7136e5d36baa60
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678538"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800930"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>ICorDebugThread4::HadUnhandledException メソッド
 
@@ -48,7 +49,7 @@ HRESULT GetBlockingObjects (
 |S_OK|スレッドの作成以降、ハンドルされない例外が発生しました。|  
 |S_FALSE|スレッドでハンドルされない例外が発生していません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドは、スレッドにハンドルされない例外が発生したかどうかを示します。 未処理の例外のコールバックがトリガーされるか、ネイティブ JIT アタッチが開始されるまで、このメソッドは S_OK を返すことが保証されます。 処理不能な例外が返されるという保証はありませ [ん。](icordebugthread-getcurrentexception-method.md) ただし、ハンドルされない例外コールバックを取得した後、またはネイティブ JIT アタッチによってプロセスがまだ続行されていない場合に発生します。 また、ネイティブ JIT アタッチがトリガーされたときに、ハンドルされない例外を持つ複数のスレッドを使用することもできます。 このような場合は、どの例外が JIT アタッチをトリガーしたかを判断する方法はありません。  
   

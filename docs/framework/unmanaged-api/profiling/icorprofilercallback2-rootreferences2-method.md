@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback2:: RootReferences2 メソッド'
 title: ICorProfilerCallback2::RootReferences2 メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55a2f907-d216-42eb-8f2f-e5d59c2eebd6
 topic_type:
 - apiref
-ms.openlocfilehash: 9e53e7bcecd900bb6c71d0a822e9b63ff6726e58
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a599014cc9fb47b103a136b9e5569d38031c9377
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729516"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799084"
 ---
 # <a name="icorprofilercallback2rootreferences2-method"></a>ICorProfilerCallback2::RootReferences2 メソッド
 
@@ -56,7 +57,7 @@ HRESULT RootReferences2(
   
  ルートの型がスタックの場合、ルート ID は変数を含む関数を示します。 そのルート ID が0の場合、関数は CLR の内部にある名前のない関数です。 ルートの型がハンドルの場合、ルート ID はガベージコレクションハンドル用です。 その他のルート型では、ID は不透明な値であるため、無視する必要があります。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `rootRefIds`、、 `rootKinds` 、およびの各 `rootFlags` `rootIds` 配列は、並列配列です。 つまり、、 `rootRefIds[i]` 、 `rootKinds[i]` `rootFlags[i]` 、およびは `rootIds[i]` すべて同じルートを考慮します。  
   

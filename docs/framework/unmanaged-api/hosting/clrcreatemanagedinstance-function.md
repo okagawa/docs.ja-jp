@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ClrCreateManagedInstance 関数'
 title: ClrCreateManagedInstance 関数
 ms.date: 03/30/2017
 api_name:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 58ba42c0-4857-43bf-a039-73a4dc6544c2
 topic_type:
 - apiref
-ms.openlocfilehash: 9aed79138499f1aa7b6fa3a28ad4505edd51b041
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b6d3b014f54dd563e53cd8a4c48907d01945015f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731772"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799929"
 ---
 # <a name="clrcreatemanagedinstance-function"></a>ClrCreateManagedInstance 関数
 
@@ -52,7 +53,7 @@ STDAPI ClrCreateManagedInstance (
  `ppObject`  
  入出力呼び出し元によって要求されたマネージ型のインスタンスへのポインターへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  共通言語ランタイムは、既にプロセスに読み込まれている必要があります。 たとえば、関数が呼び出される前に [Corbindtoruntimeex](corbindtoruntimeex-function.md) 関数の呼び出しを使用して読み込むことができ `ClrCreateManagedInstance` ます。 ランタイムが読み込まれていない場合、は `ClrCreateManagedInstance` まず、ランタイムの v v1.0.3705 の読み込みを試みます。 失敗した場合は、ランタイムの最新バージョンの読み込みが試行されます。  
   

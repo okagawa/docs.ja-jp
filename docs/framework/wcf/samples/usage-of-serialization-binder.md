@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「シリアル化バインダーの使用」を参照してください。
 title: シリアル化バインダーの使用
 ms.date: 03/30/2017
 ms.assetid: ab46c087-200c-45bf-9c95-5a6cda6e8b98
-ms.openlocfilehash: 061afb94d97e3d8a1222e6de9932344fb3ebbe59
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ee00d8049ae644525f8013801dc7c453b9ad5aeb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294899"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798174"
 ---
 # <a name="usage-of-serialization-binder"></a>シリアル化バインダーの使用
 

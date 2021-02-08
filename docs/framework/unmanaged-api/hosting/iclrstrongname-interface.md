@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICLRStrongName インターフェイス」を参照してください。
 title: ICLRStrongName インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2fac66fd-6b3b-4dbd-8baf-86038bd85526
 topic_type:
 - apiref
-ms.openlocfilehash: 691cc3cf4ec8d036a4de04247f243d99daa887d4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5565e864d35e68e714602b291a724a0ad9999a28
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733634"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799669"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName インターフェイス
 
@@ -55,7 +56,7 @@ ms.locfileid: "95733634"
 |[StrongNameTokenFromAssemblyEx メソッド](iclrstrongname-strongnametokenfromassemblyex-method.md)|指定したアセンブリ ファイルから厳密な名前のトークンが作成され、公開キーが返されます。|  
 |[StrongNameTokenFromPublicKey メソッド](iclrstrongname-strongnametokenfrompublickey-method.md)|公開キーを表すトークンが取得されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ICLRStrongName`パラメーターとしておよびを使用して[ICLRRuntimeInfo:: getinterface](iclrruntimeinfo-getinterface-method.md)メソッドを呼び出すことにより、のインスタンスを取得でき `CLSID_CLRStrongName` `IID_ICLRStrongName` ます。  
   

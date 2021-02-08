@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「のテキストインターフェイス」を参照してください。
 title: ICorDebugType インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 94e02e31-67ea-4b00-8148-a46740a4571d
 topic_type:
 - apiref
-ms.openlocfilehash: 9407dda7aab337f667cd5043b562d0eac94f0f04
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4cd668263906ef21e1bb665795425ca3a239c2bd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711924"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800891"
 ---
 # <a name="icordebugtype-interface"></a>ICorDebugType インターフェイス
 
@@ -37,7 +38,7 @@ ms.locfileid: "95711924"
 |[GetStaticFieldValue メソッド](icordebugtype-getstaticfieldvalue-method.md)|指定したスタックフレーム内の指定したフィールドトークンによって参照される静的フィールドの値を格納する、ICorDebugValue へのインターフェイスポインターを取得します。|  
 |[GetType メソッド](icordebugtype-gettype-method.md)|このによって参照される共通言語ランタイムのネイティブ型を記述する CorElementType 値を取得し <xref:System.Type> `ICorDebugType` ます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  型がジェネリックの場合、は `ICorDebugClass` インスタンス型を表します。 インターフェイスは、 `ICorDebugType` インスタンス化されたジェネリック型を表します。 たとえば、Hashtable はに \<K, V> よって表さ `ICorDebugClass` れますが、hashtable は \<Int32, String> によって表さ `ICorDebugType` れます。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細: ICLRTask インターフェイス'
 title: ICLRTask インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b3a44df3-578a-4451-b55e-70c8e7695f5e
 topic_type:
 - apiref
-ms.openlocfilehash: 5ecc42950775a620796a1c775e5f088f461a12c3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f48216b19dd2c1d0d0ba64117169b74767dbdf2b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690825"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799534"
 ---
 # <a name="iclrtask-interface"></a>ICLRTask インターフェイス
 
@@ -41,7 +42,7 @@ ms.locfileid: "95690825"
 |[SwitchOut メソッド](iclrtask-switchout-method.md)|現在のインスタンスによって表されるタスクが操作可能 `ICLRTask` な状態ではなくなったことを CLR に通知します。|  
 |[YieldTask メソッド](iclrtask-yieldtask-method.md)|CLR がプロセッサ時間を他のタスクで使用できるようにすることを要求します。 CLR では、処理時間を生成できる状態にタスクが配置されるという保証はありません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ICLRTask`は、CLR のタスクの表現です。 コードの実行中はいつでも、実行中または実行の待機中のいずれかのタスクを記述できます。 ホストは、メソッドを呼び出して、 `ICLRTask::SwitchIn` 現在のインスタンスが表すタスクが操作可能 `ICLRTask` な状態になったことを CLR に通知します。 を呼び出した後、 `ICLRTask::SwitchIn` ホストは任意のオペレーティングシステムスレッドでタスクをスケジュールできます。ただし、 [IHostTaskManager:: beginthreadaffinity](ihosttaskmanager-beginthreadaffinity-method.md) メソッドと [IHostTaskManager:: endthreadaffinity](ihosttaskmanager-endthreadaffinity-method.md) メソッドの呼び出しで指定されているように、ランタイムにスレッドアフィニティが必要な場合を除きます。 しばらくすると、オペレーティングシステムは、スレッドからタスクを削除して、実行されていない状態にする可能性があります。 たとえば、タスクが同期プリミティブでブロックされた場合や、i/o 操作が完了するまで待機している場合に発生することがあります。 ホストは [Switchout](iclrtask-switchout-method.md) を呼び出して、現在のインスタンスによって表されるタスクが操作可能 `ICLRTask` な状態ではなくなったことを CLR に通知します。  
   

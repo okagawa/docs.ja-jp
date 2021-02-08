@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRTaskManager:: SetUILocale メソッド'
 title: ICLRTaskManager::SetUILocale メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 03adaa9a-2beb-49b3-b2c4-6b4fc3f10715
 topic_type:
 - apiref
-ms.openlocfilehash: a426fca1b7ca4bfb9cbb30a221859f7c114db682
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f4fcc916c520489bd1e39f6a44bc1bb971df4bba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732425"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799461"
 ---
 # <a name="iclrtaskmanagersetuilocale-method"></a>ICLRTaskManager::SetUILocale メソッド
 
@@ -50,7 +51,7 @@ HRESULT SetUILocale (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `SetUILocale` ロケールの同期に必要なメカニズムをホストが実行する機会を提供します。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CALL_ID 構造'
 title: CALL_ID 構造体
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bfd46324-afec-4782-9c18-586d81fb4740
 topic_type:
 - apiref
-ms.openlocfilehash: 3f41dd969e25f7a42308ff0b7b2d617344284b38
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4ef6023e382e8c5fead48494f428648a37f3bef4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725249"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800488"
 ---
 # <a name="call_id-structure"></a>CALL_ID 構造体
 

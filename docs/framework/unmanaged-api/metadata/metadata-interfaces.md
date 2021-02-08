@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: メタデータインターフェイス'
 title: メタデータ インターフェイス
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - metadata interfaces [.NET Framework]
 - interfaces (.NET Framework metadata]
 ms.assetid: f5cdac93-a28c-48ef-8a19-5773376e9e7c
-ms.openlocfilehash: 5d9b48df740668797a7c901219401e9ea304a8f8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4851fbc93bfa29f1b4b5015c82f05c1b200b9092
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672882"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799136"
 ---
 # <a name="metadata-interfaces"></a>メタデータ インターフェイス
 
@@ -38,7 +39,7 @@ ms.locfileid: "95672882"
  タイプ ライブラリをそれぞれのメタデータ署名にマップして、一方から他方に変換するメソッドを提供します。  
   
  [IMetaDataDispenser インターフェイス](imetadatadispenser-interface.md)  
- `IMetaDataDispenser` は互換性のために残されています。 代わりに、`IMetaDataDispenserEx` を使用してください。  
+ `IMetaDataDispenser` は互換性のために残されています。 代わりに `IMetaDataDispenserEx` を使用してください  
   
  [IMetaDataDispenserEx インターフェイス](imetadatadispenserex-interface.md)  
  メタデータを作成または変更するためのメモリ領域を割り当てるメソッドを提供します。  

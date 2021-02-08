@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRRuntimeHost:: GetCurrentAppDomainId メソッド'
 title: ICLRRuntimeHost::GetCurrentAppDomainId メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 33800475-7815-4976-8aca-a1038761a2ef
 topic_type:
 - apiref
-ms.openlocfilehash: 2b1c9e99604664c99960a0741de6eae6b38fe963
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 88d5288e2e8ee7d8d1f5430261e21052334240be
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728850"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799728"
 ---
 # <a name="iclrruntimehostgetcurrentappdomainid-method"></a>ICLRRuntimeHost::GetCurrentAppDomainId メソッド
 
@@ -50,7 +51,7 @@ HRESULT GetCurrentAppDomainId(
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返す場合、そのプロセス内で CLR は使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `pdwAppDomainId`パラメーターは <xref:System.AppDomain.Id%2A> 、 <xref:System.AppDomain> 現在のスレッドが実行されているのプロパティの値に設定されます。  
   

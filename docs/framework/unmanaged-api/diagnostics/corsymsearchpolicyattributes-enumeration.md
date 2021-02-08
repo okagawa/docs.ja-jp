@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CorSymSearchPolicyAttributes 列挙型」を参照してください。
 title: CorSymSearchPolicyAttributes 列挙体
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 03abde84-930a-49d3-bac3-23abb34a0184
 topic_type:
 - apiref
-ms.openlocfilehash: 2d5d19fb3fb7c727227827dacbaac2c910ac8b3c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a9af0e96809ec8eba5c03c2e372e818c74914baf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725223"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800475"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes 列挙体
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IXCLRDataModule:: GetVersionId メソッド'
 title: 'IXCLRDataModule:: GetVersionId メソッド'
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 9d5ef137a5d76c3d7545ab16921352123e978fb1
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 1b924757f43d106df555ea028270ac873f8f4558
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420865"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800761"
 ---
 # <a name="ixclrdatamodulegetversionid-method"></a>IXCLRDataModule:: GetVersionId メソッド
 

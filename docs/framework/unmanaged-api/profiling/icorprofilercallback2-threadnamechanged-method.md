@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback2:: ThreadNameChanged メソッド'
 title: ICorProfilerCallback2::ThreadNameChanged メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c8bbd76d-a9ff-44f2-87a6-be052819da36
 topic_type:
 - apiref
-ms.openlocfilehash: 8398febd17c7e77f2ad281ebeafc138fca4a47d5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 161247f9692d1307d063e244b200eb0d8f739e9a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718034"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799045"
 ---
 # <a name="icorprofilercallback2threadnamechanged-method"></a>ICorProfilerCallback2::ThreadNameChanged メソッド
 

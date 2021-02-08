@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRRuntimeInfo:: IsLoaded メソッド'
 title: ICLRRuntimeInfo::IsLoaded メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fdc5a3a7-71ff-4025-99a1-59e4ee0bfe1b
 topic_type:
 - apiref
-ms.openlocfilehash: 66ae74deba9ceab9d1ea6b2c0b96a87bf44f32ab
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e6a5984dbd2340fe07af546dd48ae6760d5b4271
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714927"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799704"
 ---
 # <a name="iclrruntimeinfoisloaded-method"></a>ICLRRuntimeInfo::IsLoaded メソッド
 
@@ -51,7 +52,7 @@ HRESULT IsLoaded(
 |S_OK|メソッドは正常に完了しました。|  
 |E_POINTER|`pbLoaded` が null です。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドは、次の関数およびインターフェイスと下位互換性があります。  
   
@@ -63,7 +64,7 @@ HRESULT IsLoaded(
   
  ホストは、 `CorBindTo*` [Corbindtoruntime](corbindtoruntime-function.md) 関数など、非推奨の関数の1つを呼び出して、特定のバージョンの CLR をインスタンス化することができます。 ホストは [ICLRMetaHost:: GetRuntime](iclrmetahost-getruntime-method.md) メソッドを呼び出し、同じバージョン番号を指定して [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) インターフェイスを取得することができます。  
   
- その後、返された ICLRRuntimeInfo インターフェイスでホストがメソッドを呼び出すと、はを返します。 `IsLoaded` [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) `pbLoaded` `true` それ以外の場合はを返し `false` ます。  
+ その後、返された ICLRRuntimeInfo インターフェイスでホストがメソッドを呼び出すと、はを返します。 `IsLoaded` [](iclrruntimeinfo-interface.md) `pbLoaded` `true` それ以外の場合はを返し `false` ます。  
   
 ## <a name="requirements"></a>要件  
 

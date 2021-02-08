@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRStrongName:: GetHashFromHandle メソッド'
 title: ICLRStrongName::GetHashFromHandle メソッド
 ms.date: 03/30/2017
 api_name:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3bedbb7d-3cdd-4175-b370-10ae734062db
 topic_type:
 - apiref
-ms.openlocfilehash: 68bfdb2f66147b54c75b8f577a01278016e248b7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 30248b5cb5d102adaa06293c92cc4f21e905cba5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685735"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799682"
 ---
 # <a name="iclrstrongnamegethashfromhandle-method"></a>ICLRStrongName::GetHashFromHandle メソッド
 

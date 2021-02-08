@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「AssemblyBindInfo 構造体」を参照してください。
 title: AssemblyBindInfo 構造体
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6fc01e98-c2e7-49de-ab9f-95937cc89017
 topic_type:
 - apiref
-ms.openlocfilehash: d2ba7d8e66472f771a932a2dfb05bb9e1ee96290
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3e11e05924ee6818737f84d9ca92394ee5313292
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685878"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799981"
 ---
 # <a name="assemblybindinfo-structure"></a>AssemblyBindInfo 構造体
 
@@ -45,7 +46,7 @@ typedef struct _AssemblyBindInfo {
 |`lpPostPolicyIdentity`|バインドポリシー値の適用後に参照されるアセンブリの識別子。|  
 |`ePolicyLevel`|参照先のアセンブリに適用するバージョン管理ポリシーを示す [Epolicyaction](epolicyaction-enumeration.md) 値の1つ。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ホストは、一意の識別子 `dwAppDomainId` を共通言語ランタイム (CLR) に提供します。 の呼び出しが戻ると、 `IHostAssemblyStore::ProvideAssembly` ランタイムは識別子を使用して、の内容が `IStream` マップされているかどうかを判断します。 その場合、ランタイムはストリームを再マップするのではなく、既存のコピーを読み込みます。 ランタイムは、 [IHostAssemblyStore::P rovidemodule](ihostassemblystore-providemodule-method.md)への呼び出しから返されたストリームの参照キーとしても、この識別子を使用します。 このため、識別子はモジュール要求とアセンブリ要求に対して一意である必要があります。  
   

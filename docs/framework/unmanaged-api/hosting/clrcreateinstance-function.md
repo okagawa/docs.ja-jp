@@ -1,4 +1,5 @@
 ---
+description: '詳細: CLRCreateInstance 関数'
 title: CLRCreateInstance 関数
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5de13327-96c6-4697-a89e-b8bf40717855
 topic_type:
 - apiref
-ms.openlocfilehash: 3c7a14f828e55310435a99693c1195f2f0dd40c6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3b4dd9f07444f3e7ca68af3b85a7a053fc72b772
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711677"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799942"
 ---
 # <a name="clrcreateinstance-function"></a>CLRCreateInstance 関数
 
@@ -56,7 +57,7 @@ HRESULT CLRCreateInstance(
 |S_OK|メソッドは正常に完了しました。|  
 |E_POINTER|`ppInterface` が null です。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  次の表は、とでサポートされている組み合わせを示して `clsid` `riid` います。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataImport:: EnumUnresolvedMethods メソッド'
 title: IMetaDataImport::EnumUnresolvedMethods メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: eb3187d7-74cf-44b1-aeeb-7a8d2b60e3b7
 topic_type:
 - apiref
-ms.openlocfilehash: 6b5e7bbe2303a200d7829fea12e228a513595f97
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e894ecdde91a2263783234d73fa50d890a13e413
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716552"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799331"
 ---
 # <a name="imetadataimportenumunresolvedmethods-method"></a>IMetaDataImport::EnumUnresolvedMethods メソッド
 
@@ -58,7 +59,7 @@ HRESULT EnumUnresolvedMethods (
 |`S_OK`|`EnumUnresolvedMethods` 正常に返されました。|  
 |`S_FALSE`|列挙するトークンがありません。 この場合、 `pcTokens` は0になります。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  未解決のメソッドとは、宣言されていても実装されていないメソッドです。 メソッドがマークされ、 `miForwardRef` `mdPinvokeImpl` またはが0に設定されている場合、メソッドは列挙体に含まれ `miRuntime` ます。 つまり、未解決のメソッドは、とマークされているものの、 `miForwardRef` アンマネージコードでは実装されていない (PInvoke 経由で)、またはランタイム自体によって内部的に実装されていないクラスメソッドです。  
   

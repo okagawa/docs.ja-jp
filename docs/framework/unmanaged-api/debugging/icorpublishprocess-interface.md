@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorPublishProcess インターフェイス」を参照してください。
 title: ICorPublishProcess インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6d1dc41b-8aa2-4889-bb00-1cbccc00c123
 topic_type:
 - apiref
-ms.openlocfilehash: 8ee59e9d416d1c53312e4fccb6953f20b03b29b3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8dbc619d33c2c9b625dde852948dff00b5be926e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95693087"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800878"
 ---
 # <a name="icorpublishprocess-interface"></a>ICorPublishProcess インターフェイス
 

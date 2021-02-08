@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugThread4:: GetBlockingObjects メソッド'
 title: ICorDebugThread4::GetBlockingObjects メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a7e6c54e-7be9-4e52-bbb4-95f52458e8e4
 topic_type:
 - apiref
-ms.openlocfilehash: eb8692aebe7b702b5778b3f13e496d81dcd45784
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6a60ebe6f5f6dac93dcb11dad7658aba9c934329
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678543"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800956"
 ---
 # <a name="icordebugthread4getblockingobjects-method"></a>ICorDebugThread4::GetBlockingObjects メソッド
 
@@ -38,7 +39,7 @@ HRESULT GetBlockingObjects (
  `ppBlockingObjectEnum`  
  入出力 [CorDebugBlockingObject](cordebugblockingobject-structure.md) 構造体の順序付けられた列挙体へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  返された列挙体の最初の要素は、スレッドをブロックしている最初の構造体に対応します。 2番目の要素は、非同期プロシージャ呼び出し (APC) の実行中に検出されるブロッキング項目に対応します。  
   

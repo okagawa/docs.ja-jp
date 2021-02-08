@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: GetOSThreadId:: メソッド'
 title: ICorDebugMDA::GetOSThreadId メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7ca7c364-ade4-4219-b434-9f6ae2359be6
 topic_type:
 - apiref
-ms.openlocfilehash: 80248bba6d11b8af07aa0517cb41c8a4f783b5e0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f965585a6e6060a14f0cbc2a80b46124b2751e0e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710897"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801151"
 ---
 # <a name="icordebugmdagetosthreadid-method"></a>ICorDebugMDA::GetOSThreadId メソッド
 
@@ -39,7 +40,7 @@ HRESULT GetOSThreadId (
  `pOsTid`  
  入出力OS スレッド識別子へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  システムスレッドを使用すると、ネイティブスレッドで、またはまだマネージコードを入力していないマネージスレッド上で MDA が発生する状況に対応できます。  
   

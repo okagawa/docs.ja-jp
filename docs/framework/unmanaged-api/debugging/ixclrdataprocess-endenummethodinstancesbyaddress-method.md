@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「IXCLRDataProcess:: EndEnumMethodInstancesByAddress メソッド」を参照してください。'
 title: 'IXCLRDataProcess:: EndEnumMethodInstancesByAddress メソッド'
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 5960d08ccfc09010a20d28a22c2e2f3f5b339c7d
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 2e01fe0737319a7b336d9f6992bf81b2c57f9e70
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420826"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800722"
 ---
 # <a name="ixclrdataprocessendenummethodinstancesbyaddress-method"></a>IXCLRDataProcess:: EndEnumMethodInstancesByAddress メソッド
 

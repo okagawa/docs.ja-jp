@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: VariableLocationType 列挙型'
 title: VariableLocationType 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8635ee3a-c84b-4626-876c-416bee54f787
 topic_type:
 - apiref
-ms.openlocfilehash: 1c65efa006a8b2f4fb4db257b4ad2cde99c4e75e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8561077b9f3f4d318eeb743d51538b2a9a22a217
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725262"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800527"
 ---
 # <a name="variablelocationtype-enumeration"></a>VariableLocationType 列挙型
 
@@ -44,7 +45,7 @@ typedef enum VariableLocationType
 |`VLT_REGISTER_RELATIVE`|変数は、レジスタ相対メモリの場所にあります。|  
 |`VLT_INVALID`|変数はレジスタまたはレジスタの相対メモリ位置に格納されません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  列挙体のメンバー `VariableLocationType` は、 [GetLocationType](icordebugvariablehome-getlocationtype-method.md) メソッドによって返されます。  
   

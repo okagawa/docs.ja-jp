@@ -1,4 +1,5 @@
 ---
+description: ': ICLRTask:: LocksHeld メソッドの詳細について説明します。'
 title: ICLRTask::LocksHeld メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e88a4dc3-02cc-4703-a474-292b71c40657
 topic_type:
 - apiref
-ms.openlocfilehash: 755dfed4107a602390a4402a2dde83e08986b623
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5dff0b2a80594e03d61d50c6d9fa52bb12bb42f2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731697"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799533"
 ---
 # <a name="iclrtasklocksheld-method"></a>ICLRTask::LocksHeld メソッド
 

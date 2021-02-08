@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「IEnumDefinitionIdentity インターフェイス」を参照してください。
 title: IEnumDefinitionIdentity インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 8263e75d-251b-4abc-8a1a-c62884142232
 topic_type:
 - apiref
-ms.openlocfilehash: f3872a2b03d3b22d695af1c104e9ae8ba8856990
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1055031c064115410334bbe4b20b48deee7ec4c4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729006"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800163"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>IEnumDefinitionIdentity インターフェイス
 
 オブジェクトのコレクションの列挙子として機能し `IDefinitionIdentity` ます。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 IEnumDefinitionIdentity : IUnknown {  

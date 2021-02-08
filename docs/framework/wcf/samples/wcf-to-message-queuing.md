@@ -1,13 +1,14 @@
 ---
+description: 詳細については、メッセージキューへの Windows Communication Foundation に関するページを参照してください。
 title: Windows Communication Foundation でのメッセージ キュー
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: a6e322936740f7d88d30b9a205ac937a807bedc1
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ef4fe5f23b4ce462b13e12b706a3a72225a74f8a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552928"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798187"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation でのメッセージ キュー
 

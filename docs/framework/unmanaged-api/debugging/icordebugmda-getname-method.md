@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次のページを参照してください: いいね:: GetName メソッド'
 title: ICorDebugMDA::GetName メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 885bf5e8-00b7-4cd7-9d8d-e720d47918c4
 topic_type:
 - apiref
-ms.openlocfilehash: 516fcf8a97b92eac8dfff9eae34199caa97c2d2f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4ea39f062071073684a20d8f60875fbaaab43a2f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710936"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801167"
 ---
 # <a name="icordebugmdagetname-method"></a>ICorDebugMDA::GetName メソッド
 
@@ -48,7 +49,7 @@ HRESULT GetName (
  `szName`  
  入出力名前を格納する配列。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  MDA 名は一意の値です。 この `GetName` メソッドは、XML ストリームを取得し、そのスキーマに基づいてストリームから名前を抽出する場合に適しています。  
   

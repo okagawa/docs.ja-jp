@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次の情報を参照してください: いい Process:: Geb Perthreadid メソッド'
 title: ICorDebugProcess::GetHelperThreadID メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 84e1e605-37c1-49a5-8e12-35db85654622
 topic_type:
 - apiref
-ms.openlocfilehash: 77cc658e28c7a69d8c4aeeed2f3e7ea40f0d2af6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ee7bd2106a37c5c67df48a54ff9ab7fa49a03f80
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724573"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801021"
 ---
 # <a name="icordebugprocessgethelperthreadid-method"></a>ICorDebugProcess::GetHelperThreadID メソッド
 
@@ -39,7 +40,7 @@ HRESULT GetHelperThreadID (
  `pThreadID`  
  入出力デバッガーの内部ヘルパースレッドの OS スレッド ID へのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  マネージデバッグおよびアンマネージデバッグ中は、デバッガーによって設定されたブレークポイントにヒットした場合に、指定した ID を持つスレッドが実行された状態を維持する必要があります。 デバッガーでは、このスレッドをユーザーに対して非表示にすることもできます。 まだプロセスにヘルパースレッドが存在しない場合、 `GetHelperThreadID` メソッドは * で0を返し `pThreadID` ます。  
   

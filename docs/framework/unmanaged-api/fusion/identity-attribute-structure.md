@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IDENTITY_ATTRIBUTE 構造'
 title: IDENTITY_ATTRIBUTE 構造体
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ee7c434-9681-4fa8-badd-652cb1a9742b
 topic_type:
 - apiref
-ms.openlocfilehash: da4b1d6f2a7079ef33859fce29c9555ac06fcfc2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 52610961ab202fc79351073eac1846a1a63889e3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725652"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800176"
 ---
 # <a name="identity_attribute-structure"></a>IDENTITY_ATTRIBUTE 構造体
 
@@ -43,7 +44,7 @@ typedef struct _IDENTITY_ATTRIBUTE {
 |`pszName`|属性の名前を含む null で終わる文字列へのポインター。|  
 |`pszValue`|属性の値を格納している null で終わる文字列へのポインター。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  構造体には、 `IDENTITY_ATTRIBUTE` null で終わる文字列への3つのポインターが含まれています。 これら3つの文字列は、1つの属性を表します。  
   

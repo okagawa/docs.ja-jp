@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IMetaDataImport:: EnumFields メソッド'
 title: IMetaDataImport::EnumFields メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1d23247e-c58c-45db-afd8-83aa89cde18e
 topic_type:
 - apiref
-ms.openlocfilehash: 74035e9551cb1d622b326e511c3884e1eadf057f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5cb9b3a47dc4c51b9eba24b9519e4b97846c1a6d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711592"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799383"
 ---
 # <a name="imetadataimportenumfields-method"></a>IMetaDataImport::EnumFields メソッド
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: StackTrace_SimpleContext 構造'
 title: StackTrace_SimpleContext 構造体
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d4cef11f-a8ca-49bc-a1b8-6631f9e28f3e
 topic_type:
 - apiref
-ms.openlocfilehash: 30775b4a6f904d06b9c77e6b2b64aec693c446d7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 22a0acada5ef2d392dfdef5326953be137280d7f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95671799"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800553"
 ---
 # <a name="stacktrace_simplecontext-structure"></a>StackTrace_SimpleContext 構造体
 
@@ -45,7 +46,7 @@ struct StackTrace_SimpleContext
 |`FrameOffset`|フレームオフセット、または x86 プラットフォームでの EBP レジスタ。|  
 |`InstructionOffset`|命令ポインター、または x86 プラットフォームの enter 命令ポインター (EIP)。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  通常、スタックトレース関数はアドレス、フレームオフセット、およびスタックアドレスだけを返す必要があるため、必要に応じて、大きな構造体の代わりに構造体を使用することもでき `SimpleContext` `CONTEXT` ます。  
   
