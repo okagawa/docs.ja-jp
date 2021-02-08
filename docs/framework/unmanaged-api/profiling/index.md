@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: プロファイル (アンマネージ API リファレンス)'
 title: プロファイル (アンマネージ API リファレンス)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - native API reference [.NET Framework], profiling
 - unmanaged API reference [.NET Framework], profiling
 ms.assetid: 14c68e84-657e-49c2-aa8b-4978dbaf4454
-ms.openlocfilehash: 40c464a6070ad7fd4c21ad4ea366e907ca1e4a31
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e6419b59b8cccd30b96ee4d4180b834d1c04c45
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76868162"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736805"
 ---
 # <a name="profiling-unmanaged-api-reference"></a>プロファイル (アンマネージ API リファレンス)
 

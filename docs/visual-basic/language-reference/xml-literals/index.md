@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: XML リテラル (Visual Basic)'
 title: XML リテラル
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - XML literals [Visual Basic], reference
 - literals [Visual Basic], XML
 ms.assetid: 16b28c40-8768-423f-bd9c-22ff10de2b54
-ms.openlocfilehash: 3477196230ec5e87b49e94f45c842b90b19102fb
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: bbc00530f3ce1efa801ee9fae5dd9a94d8806e43
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869428"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740874"
 ---
 # <a name="xml-literals-visual-basic"></a>XML リテラル (Visual Basic)
 

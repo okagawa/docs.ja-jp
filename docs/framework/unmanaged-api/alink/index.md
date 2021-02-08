@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ALink API (アンマネージド API リファレンス)'
 title: ALink API (アンマネージ API リファレンス)
 ms.date: 03/30/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ALink API
 ms.assetid: f4a84be2-309c-439c-b686-6facb85f4654
-ms.openlocfilehash: d018ae41bd9bf0360bd3a0e492a88e911699ef27
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 927ba040a5c63d091ebf83c8b9ffa6a8a07f05dc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705021"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662599"
 ---
 # <a name="alink-api-unmanaged-api-reference"></a>ALink API (アンマネージ API リファレンス)
 

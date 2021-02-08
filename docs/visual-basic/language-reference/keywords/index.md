@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: キーワード (Visual Basic)'
 title: キーワード
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: 9e331a1ae4ca4117ab0c27fde4e04ef53ad83990
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 9794c8e48ef5085347bebbc9e3b28e985c241f12
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617510"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730604"
 ---
 # <a name="keywords-visual-basic"></a>キーワード (Visual Basic)
 
@@ -23,7 +24,7 @@ ms.locfileid: "85617510"
 
 ## <a name="reserved-keywords"></a>予約済みのキーワード
 
-次のキーワードは*予約済み*であり、プログラミングの要素 (変数やプロシージャなど) の名前として使用できません。 ただし、名前を角かっこ (`[]`) で囲むと、この制約を回避できます。 詳細については、「[宣言された要素の名前](../../programming-guide/language-features/declared-elements/declared-element-names.md)」の「エスケープされた名前」を参照してください。
+次のキーワードは *予約済み* であり、プログラミングの要素 (変数やプロシージャなど) の名前として使用できません。 ただし、名前を角かっこ (`[]`) で囲むと、この制約を回避できます。 詳細については、「[宣言された要素の名前](../../programming-guide/language-features/declared-elements/declared-element-names.md)」の「エスケープされた名前」を参照してください。
 
 > [!NOTE]
 > エスケープされた名前を使用すると、コードの可読性が低下し、検出しにくい微妙なエラーの原因となる可能性があるため、使用を避けてください。

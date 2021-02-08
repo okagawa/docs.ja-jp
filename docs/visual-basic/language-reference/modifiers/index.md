@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 修飾子 (Visual Basic)'
 title: 修飾子
 ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
-ms.openlocfilehash: 6ee477e8d09ea7c8ea559ff8245784b2d0123141
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 581f484e81a7de2cb6c80061eb4730adc18f316b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875448"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701054"
 ---
 # <a name="modifiers-visual-basic"></a>修飾子 (Visual Basic)
 

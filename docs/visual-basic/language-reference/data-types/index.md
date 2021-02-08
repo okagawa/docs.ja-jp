@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: データ型の概要 (Visual Basic)'
 title: データ型の概要
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - storage order, controlling in Visual Basic
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-ms.openlocfilehash: 5eb52ef937a677c0b7498d058b5a39a375351ddc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ac5b8e438210c2d1407e0d6a12d560f29523620c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "85503841"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792194"
 ---
 # <a name="data-type-summary-visual-basic"></a>データ型の概要 (Visual Basic)
 
@@ -68,7 +69,7 @@ ms.locfileid: "85503841"
 |[ユーザー定義](user-defined-data-type.md) (構造体)|(<xref:System.ValueType> から継承)|実装するプラットフォームに依存|構造体の各メンバーには、そのデータ型によって決定され、他のメンバーの範囲からは独立した範囲がある|  
 |[UShort](ushort-data-type.md)|<xref:System.UInt16>|2 バイト|0 から 65,535 (符号なし)|  
   
- <sup>†</sup> *指数表記*では、"E" は 10 の累乗を表します。 したがって、3.56E+2 は 3.56 x 10<sup>2</sup> (356) を意味し、3.56E-2 は 3.56/10<sup>2</sup> (0.0356) を意味します。  
+ <sup>†</sup> *指数表記* では、"E" は 10 の累乗を表します。 したがって、3.56E+2 は 3.56 x 10<sup>2</sup> (356) を意味し、3.56E-2 は 3.56/10<sup>2</sup> (0.0356) を意味します。  
   
 > [!NOTE]
 > テキストを含む文字列の場合は、<xref:Microsoft.VisualBasic.Strings.StrConv%2A> 関数を使用してテキスト形式間で変換します。  

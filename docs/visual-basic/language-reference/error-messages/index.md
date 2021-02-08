@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic のエラー メッセージ'
 title: Visual Basic のエラー メッセージ
 titleSuffix: ''
 ms.date: 10/13/2020
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - errors [Visual Basic]
 - error messages
 ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
-ms.openlocfilehash: 70973b6d34ed1a84a38af3694e144dfcefa61c20
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 28e59a47c47ff7905dfec93b057f7cb534842b91
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163377"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796068"
 ---
 # <a name="error-messages-in-visual-basic"></a>Visual Basic のエラー メッセージ
 
@@ -31,7 +32,7 @@ Visual Basic アプリケーションがシステムで実行できないアク�
 
 ## <a name="compile-time-errors"></a>コンパイル時のエラー
 
-Visual Basic コンパイラがコード内で問題を検出すると、コンパイル時エラーが発生します。 Visual Studio コード エディターでは、エラーの原因となったコード行の下に波線が表示されるため、簡単にその行を特定できます。 波線をポイントするか**エラー一覧**を開くと、エラー メッセージが表示されます。エラー一覧には他のメッセージも表示されます。
+Visual Basic コンパイラがコード内で問題を検出すると、コンパイル時エラーが発生します。 Visual Studio コード エディターでは、エラーの原因となったコード行の下に波線が表示されるため、簡単にその行を特定できます。 波線をポイントするか **エラー一覧** を開くと、エラー メッセージが表示されます。エラー一覧には他のメッセージも表示されます。
 
 識別子の下に波線があり、右端の文字の下に短い下線が表示されている場合は、クラス、コンストラクター、メソッド、プロパティ、フィールド、または列挙型のスタブを生成できます。 詳細については、[使用法からの生成 (Visual Studio)](/visualstudio/ide/visual-csharp-intellisense#generate-from-usage) に関する記事を参照してください。
 

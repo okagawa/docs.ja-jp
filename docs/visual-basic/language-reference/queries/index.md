@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: クエリ (Visual Basic)'
 title: クエリ
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: 006a4b67094b258d440c2046fe3ae02274e1c337
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: f816078ea7a8a02b84ebf2d23940c67e54997091
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869890"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700430"
 ---
 # <a name="queries-visual-basic"></a>クエリ (Visual Basic)
 

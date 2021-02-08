@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: アンマネージ API リファレンス'
 title: アンマネージ API リファレンス
 ms.date: 11/06/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - native API reference [.NET Framework]
 - unmanaged API reference [.NET Framework]
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
-ms.openlocfilehash: 16b18f4fede11e776e5656843ed9a408dff370eb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3c9c485d8dced9641d0d1af850de190318902aa9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732750"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678992"
 ---
 # <a name="unmanaged-api-reference"></a>アンマネージ API リファレンス
 
