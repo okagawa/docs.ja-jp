@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICLROnEventManager インターフェイス」を参照してください。
 title: ICLROnEventManager インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e15a0c1-8ab6-43d0-ae28-6ec7a4edd913
 topic_type:
 - apiref
-ms.openlocfilehash: 1948075d87b5a44397a1eaab3adb4edbc96d7143
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7a9c0beec5083bc93f5361bb0e701da5beeedea2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725635"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789828"
 ---
 # <a name="iclroneventmanager-interface"></a>ICLROnEventManager インターフェイス
 
@@ -32,7 +33,7 @@ ms.locfileid: "95725635"
 |[RegisterActionOnEvent メソッド](iclroneventmanager-registeractiononevent-method.md)|指定されたイベントのコールバックポインターを登録します。|  
 |[UnregisterActionOnEvent メソッド](iclroneventmanager-unregisteractiononevent-method.md)|指定されたイベントに対して、以前に登録されたコールバックポインターの登録を解除します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  イベントコールバックの登録と登録解除を行うために、ホストは `ICLROnEventManager` [ICLRControl:: GetCLRManager](iclrcontrol-getclrmanager-method.md) メソッドを呼び出すことによってへの参照を取得します。  
   

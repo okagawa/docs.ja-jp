@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IHostAssemblyStore::P rovideAssembly メソッド'
 title: IHostAssemblyStore::ProvideAssembly メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 625c3dd5-a3f0-442c-adde-310dadbb5054
 topic_type:
 - apiref
-ms.openlocfilehash: db65519579104dd01816bb6d7cacaec947f24f53
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f8917cb28dd3898343a7b6ee08bd54096df8cfa7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680868"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789503"
 ---
 # <a name="ihostassemblystoreprovideassembly-method"></a>IHostAssemblyStore::ProvideAssembly メソッド
 
@@ -68,7 +69,7 @@ HRESULT ProvideAssembly (
 |COR_E_FILENOTFOUND (0x80070002)|要求されたアセンブリが見つかりませんでした。|  
 |E_NOT_SUFFICIENT_BUFFER|によって指定されたバッファーサイズ `pAssemblyId` が、ホストが返す識別子を保持するのに十分な大きさではありません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  に対して返される id 値 `pAssemblyId` は、ホストによって指定されます。 識別子は、プロセスの有効期間内で一意である必要があります。 CLR は、この値をストリームの一意の識別子として使用します。 このメソッドは、 `pAssemblyId` の他の呼び出しによって返された値と比較して、それぞれの値をチェック `ProvideAssembly` します。 ホストが別のと同じ値を返す場合、 `pAssemblyId` `IStream` CLR は、そのストリームの内容が既にマップされているかどうかをチェックします。 その場合、ランタイムは新しいイメージをマップするのではなく、イメージの既存のコピーを読み込みます。  
   

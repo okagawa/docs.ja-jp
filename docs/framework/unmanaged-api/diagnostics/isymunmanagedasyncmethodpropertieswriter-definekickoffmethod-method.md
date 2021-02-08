@@ -1,13 +1,14 @@
 ---
+description: '詳細について: ISymUnmanagedAsyncMethodPropertiesWriter::D efineKickoffMethod メソッド'
 title: ISymUnmanagedAsyncMethodPropertiesWriter::DefineKickoffMethod メソッド
 ms.date: 03/30/2017
 ms.assetid: 4662f70d-817b-4374-8da8-e0545585939f
-ms.openlocfilehash: 418a77855d1cb34a07f5957059b5a6f5a106c321
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7333823bce27eace4e9cb988ac31252743cca952
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707088"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790231"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefinekickoffmethod-method"></a>ISymUnmanagedAsyncMethodPropertiesWriter::DefineKickoffMethod メソッド
 
@@ -27,7 +28,7 @@ HRESULT DefineKickoffMethod(    [in] mdToken kickoffMethod);
   
 ## <a name="return-value"></a>戻り値  
 
- `HRESULT` を返します。  
+ `HRESULT` が返されます。  
   
 ## <a name="requirements"></a>要件  
 

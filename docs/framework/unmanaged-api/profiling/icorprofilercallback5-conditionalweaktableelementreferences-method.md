@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ICorProfilerCallback5:: Conditional Tableelementreferences メソッド'
 title: ICorProfilerCallback5::ConditionalWeakTableElementReferences メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 532c7a02-a9de-4cea-bb2b-7f470da594de
 topic_type:
 - apiref
-ms.openlocfilehash: 17fbc99b30921f795c1f7ff882ec73432aade8c6
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 40114f6e1d80719eceaf2dbc398b74c1e790c76a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499247"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788671"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::ConditionalWeakTableElementReferences メソッド
 
@@ -55,7 +56,7 @@ HRESULT ConditionalWeakTableElementReferences(
 
 ## <a name="example"></a>例
 
-次のコード例は、 [ICorProfilerCallback5](icorprofilercallback5-interface.md)を実装し、このメソッドを使用する方法を示しています。
+次のコード例は、 [ICorProfilerCallback5](icorprofilercallback5-interface.md) を実装し、このメソッドを使用する方法を示しています。
 
 ```cpp
 HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
@@ -80,7 +81,7 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 
 ## <a name="remarks"></a>解説
 
-.NET Framework 4.5 以降のバージョンのプロファイラーは、 [ICorProfilerCallback5](icorprofilercallback5-interface.md)インターフェイスを実装し、メソッドによって指定された依存関係を記録し `ConditionalWeakTableElementReferences` ます。 `ICorProfilerCallback5`エントリによって表されるライブオブジェクト間の依存関係の完全なセットを提供し `ConditionalWeakTable` ます。 これらの依存関係および[ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md)メソッドによって指定されたメンバーフィールド参照を使用すると、マネージプロファイラーでライブオブジェクトの完全オブジェクトグラフを生成できます。
+.NET Framework 4.5 以降のバージョンのプロファイラーは、 [ICorProfilerCallback5](icorprofilercallback5-interface.md) インターフェイスを実装し、メソッドによって指定された依存関係を記録し `ConditionalWeakTableElementReferences` ます。 `ICorProfilerCallback5` エントリによって表されるライブオブジェクト間の依存関係の完全なセットを提供し `ConditionalWeakTable` ます。 これらの依存関係および [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md) メソッドによって指定されたメンバーフィールド参照を使用すると、マネージプロファイラーでライブオブジェクトの完全オブジェクトグラフを生成できます。
 
 ## <a name="requirements"></a>要件
 

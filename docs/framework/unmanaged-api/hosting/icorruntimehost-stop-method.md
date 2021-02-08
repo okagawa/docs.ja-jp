@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorRuntimeHost:: Stop メソッド'
 title: ICorRuntimeHost::Stop メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 46a0d450-b516-4bef-8b71-8d3bf265cbed
 topic_type:
 - apiref
-ms.openlocfilehash: 9342233317535ebecbcddea48b9029b81868eb0c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b44c77b7d0fe3a078efa11756f5fac7ba400ca5e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690149"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789594"
 ---
 # <a name="icorruntimehoststop-method"></a>ICorRuntimeHost::Stop メソッド
 
@@ -41,7 +42,7 @@ HRESULT Stop ();
 |E_FAIL|不明な重大なエラーが発生しました。 メソッドが E_FAIL を返す場合、このプロセスでは共通言語ランタイム (CLR) は使用できなくなります。 後続のホスト Api への呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージドコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  通常、メソッドを呼び出す必要はありません。これは、 `Stop` プロセスが終了したときにコードが実行を停止するためです。  
   

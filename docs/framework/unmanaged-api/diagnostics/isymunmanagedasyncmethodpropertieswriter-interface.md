@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「ISymUnmanagedAsyncMethodPropertiesWriter インターフェイス」を参照してください。
 title: ISymUnmanagedAsyncMethodPropertiesWriter インターフェイス
 ms.date: 03/30/2017
 ms.assetid: caa71820-8058-4b6a-93a2-25ee757d92d3
-ms.openlocfilehash: 779b737da43f61d1023a0a640dce936e11c4704c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4c8b1bc037485e22160af28b59d751859a157499
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707036"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790192"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriter-interface"></a>ISymUnmanagedAsyncMethodPropertiesWriter インターフェイス
 
 各メソッドシンボルに対してオプションの非同期メソッド情報を定義できます。 開いているメソッドでは常にを使用します。つまり、 [Openmethod メソッド](isymunmanagedwriter-openmethod-method.md) と [closemethod メソッド](isymunmanagedwriter-closemethod-method.md)の呼び出しの間です。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```idl  
 [object,uuid(FC073774-1739-4232-BD56-A027294BEC15),pointer_default(unique)]interface ISymUnmanagedAsyncMethodPropertiesWriter : IUnknown  

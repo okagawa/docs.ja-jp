@@ -1,13 +1,14 @@
 ---
+description: '詳細について: 1450'
 title: 1450 - WfMessageSent
 ms.date: 03/30/2017
 ms.assetid: 1acc8b92-a76d-479b-a6fe-328affff5f3d
-ms.openlocfilehash: 9e0af754ead3102627e8621ff714104b2ddcc21e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ded3acafa222b6b323db897897cb4430ac27d057
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294613"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788021"
 ---
 # <a name="1450---wfmessagesent"></a>1450 - WfMessageSent
 
@@ -15,12 +16,12 @@ ms.locfileid: "96294613"
   
 |||  
 |-|-|  
-|ID|1450|  
+|id|1450|  
 |Keywords|WFServices|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  メッセージがワークフローで送信されたことを示します。  
   
@@ -30,6 +31,6 @@ ms.locfileid: "96294613"
   
 ## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|Description|  
+|データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  
 |AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName で返される文字列。|

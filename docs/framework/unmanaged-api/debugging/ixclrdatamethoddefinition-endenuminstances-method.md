@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「IXCLRDataMethodDefinition:: EndEnumInstances メソッド」を参照してください。'
 title: 'IXCLRDataMethodDefinition:: EndEnumInstances メソッド'
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 7271c9594a679af205c404f59ff6731821aa0acf
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: bfdcb9046b4983e6686410bf2ceadf7119b89e74
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420995"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790374"
 ---
 # <a name="ixclrdatamethoddefinitionendenuminstances-method"></a>IXCLRDataMethodDefinition:: EndEnumInstances メソッド
 

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: デザイナーコントロールへのカスタムアクティビティプロパティのバインド'
 title: デザイナー コントロールへのカスタム アクティビティ プロパティのバインド
 ms.date: 03/30/2017
 ms.assetid: 2e8061ea-10f5-407c-a31f-d0d74ce12f27
-ms.openlocfilehash: 142a9eb273a98d3a2d83a1239d6d7c891d5cc305
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 522e3df3028270d42f7654026383c628ec951e8d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945900"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787943"
 ---
 # <a name="binding-a-custom-activity-property-to-a-designer-control"></a>デザイナー コントロールへのカスタム アクティビティ プロパティのバインド
 

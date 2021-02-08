@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback4:: ReJITError メソッド'
 title: ICorProfilerCallback4::ReJITError メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d7888aa9-dfaa-420f-9f99-e06ab35ca482
 topic_type:
 - apiref
-ms.openlocfilehash: 46312aaf530e69f0e6a90e35515f1373d01b4340
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f5173d90e65a1e9f1049ba7eadc1ce9cf7630096
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730241"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788697"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError メソッド
 

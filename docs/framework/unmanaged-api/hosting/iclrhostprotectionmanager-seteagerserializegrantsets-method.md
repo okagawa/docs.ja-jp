@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRHostProtectionManager:: SetEagerSerializeGrantSets メソッド'
 title: ICLRHostProtectionManager::SetEagerSerializeGrantSets メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d6158360-22b1-4ace-ad85-d830b9964783
 topic_type:
 - apiref
-ms.openlocfilehash: 9ce4a5e042e838da8e9eba614f26e35b38af56c5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 04eb00b1422523e8057c3a0fc27dfe7e49f98f08
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714134"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789914"
 ---
 # <a name="iclrhostprotectionmanagerseteagerserializegrantsets-method"></a>ICLRHostProtectionManager::SetEagerSerializeGrantSets メソッド
 

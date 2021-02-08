@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「IMetaDataImport インターフェイス」を参照してください。
 title: IMetaDataImport インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0adbbd35-5e8d-4fec-8268-dc70a07c5975
 topic_type:
 - apiref
-ms.openlocfilehash: 0049db66d7a753488388c85e87e1f907db56c7cf
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4fb0dc4cce6901858cde8cfbc494fce7ddbfeb0c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679092"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789087"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport インターフェイス
 
@@ -92,7 +93,7 @@ ms.locfileid: "95679092"
 |[ResetEnum メソッド](imetadataimport-resetenum-method.md)|指定した列挙子を指定した位置にリセットします。|  
 |[ResolveTypeRef メソッド](imetadataimport-resolvetyperef-method.md)|指定した TypeRef トークンによって参照される型の型情報を取得します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `IMetaDataImport` インターフェイスは、型情報のインポート (開発ツールなど)、または配置されたコンポーネントの管理 (解決サービス、アクティブ化サービスなど) を行うツールとサービスで使用することを主な目的としてデザインされています。 `IMetaDataImport` のメソッドは、次のタスク カテゴリに分類されます。  
   

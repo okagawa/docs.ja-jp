@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRPolicyManager:: SetActionOnFailure メソッド'
 title: ICLRPolicyManager::SetActionOnFailure メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4664033f-db97-4388-b988-2ec470796e58
 topic_type:
 - apiref
-ms.openlocfilehash: 8f44247ca7904a40f5ebc092d95c2e08b6048438
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 67d3ca5d7924caf0a768b4de53b4b24f1c72fa27
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725574"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789802"
 ---
 # <a name="iclrpolicymanagersetactiononfailure-method"></a>ICLRPolicyManager::SetActionOnFailure メソッド
 
@@ -55,7 +56,7 @@ HRESULT SetActionOnFailure (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_INVALIDARG|指定された操作に対してポリシーアクションを設定できないか、操作に無効なポリシーアクションが指定されました。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  既定では、メモリなどのリソースの割り当てに失敗した場合、CLR は例外をスローします。 `SetActionOnFailure` エラー発生時に実行するポリシーアクションを指定して、ホストがこの動作をオーバーライドできるようにします。 次の表は、サポートされている [Eclrfailure](eclrfailure-enumeration.md) 値と [epolicyaction](epolicyaction-enumeration.md) 値の組み合わせを示しています。 (FAIL_ プレフィックスは [Eclrfailure](eclrfailure-enumeration.md) 値から省略されています)。  
   

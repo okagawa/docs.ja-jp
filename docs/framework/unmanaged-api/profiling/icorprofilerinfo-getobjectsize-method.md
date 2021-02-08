@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo:: GetObjectSize メソッド'
 title: ICorProfilerInfo::GetObjectSize メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9f02e763-73f7-42cb-a41c-f78499d9482c
 topic_type:
 - apiref
-ms.openlocfilehash: 4abcf9f4575b32dd125fd8a00783043900993c3e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c762b43e87c6f25b301f3f677728ca8cbe19b138
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724105"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788632"
 ---
 # <a name="icorprofilerinfogetobjectsize-method"></a>ICorProfilerInfo::GetObjectSize メソッド
 
@@ -42,7 +43,7 @@ HRESULT GetObjectSize(
  `pcSize`  
  入出力オブジェクトのサイズへのポインター (バイト単位)。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!IMPORTANT]
 > このメソッドは、互換性のために残されています。 64ビットプラットフォームで 4 GB を超えるオブジェクトの COR_E_OVERFLOW を返します。 代わりに  [ICorProfilerInfo4:: GetObjectSize2](icorprofilerinfo4-getobjectsize2-method.md) メソッドを使用してください。  

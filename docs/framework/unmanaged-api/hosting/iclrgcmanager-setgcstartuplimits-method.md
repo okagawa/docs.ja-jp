@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICLRGCManager:: SetGCStartupLimits メソッド'
 title: ICLRGCManager::SetGCStartupLimits メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1c8d9959-95b5-4131-be4a-556d97774014
 topic_type:
 - apiref
-ms.openlocfilehash: 169d344975762b97f89e8dc32d72f2b9c95fea11
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5614b41cfd7a7938cdb653d879119ddbd9560b9d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678169"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789984"
 ---
 # <a name="iclrgcmanagersetgcstartuplimits-method"></a>ICLRGCManager::SetGCStartupLimits メソッド
 
@@ -61,7 +62,7 @@ HRESULT SetGCStartupLimits (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  を設定する値は、 `SetGCStartupLimits` 1 回だけ指定できます。 の後の呼び出し `SetGCStartupLimits` は無視されます。  
   

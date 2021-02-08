@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataDispenser::D efineScope メソッド'
 title: IMetaDataDispenser::DefineScope メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: af28db02-29af-45ac-aec6-8d6c6123c2ff
 topic_type:
 - apiref
-ms.openlocfilehash: 87a39350986cb7bb62f76b0d9a6a9aae8f82e2f9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b7a7870ec06af4c08a4ef3609077eb93f74da776
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726094"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789243"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>IMetaDataDispenser::DefineScope メソッド
 
@@ -53,7 +54,7 @@ HRESULT DefineScope (
  `ppIUnk`  
  入出力返されたインターフェイスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `DefineScope` メモリ内メタデータテーブルのセットを作成し、メタデータの一意の GUID (モジュールバージョン識別子または MVID) を生成し、出力されるコンパイル単位のエントリをモジュールテーブルに作成します。  
   

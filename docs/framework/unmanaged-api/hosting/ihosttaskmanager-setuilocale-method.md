@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IHostTaskManager:: SetUILocale メソッド'
 title: IHostTaskManager::SetUILocale メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d0c87a9c-ea81-4237-a16b-c22b36ec9dc8
 topic_type:
 - apiref
-ms.openlocfilehash: bd1a1d7d2f7f945f345e8af802b881392d6d93e5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0b81f127c6afb64670424a05db6cc57c4918396a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724222"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789386"
 ---
 # <a name="ihosttaskmanagersetuilocale-method"></a>IHostTaskManager::SetUILocale メソッド
 
@@ -51,7 +52,7 @@ HRESULT SetUILocale (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_NOTIMPL|ホストでは、マネージユーザーコードで UI カルチャを変更することはできません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ランタイムは、 `SetUILocale` プロパティの値 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> がマネージコードによって変更されたときにを呼び出します。 この方法を使用すると、ホストはロケールの同期に必要なメカニズムを実行できます。 ホストで UI ロケールをマネージコードから変更できない場合、またはロケールを同期する機構を実装していない場合は、このメソッドから E_NOTIMPL が返されます。  
   

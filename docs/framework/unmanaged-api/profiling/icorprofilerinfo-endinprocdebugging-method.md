@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerInfo:: EndInprocDebugging メソッド'
 title: ICorProfilerInfo::EndInprocDebugging メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 35bc1188-9767-4141-8038-60ea015b99ac
 topic_type:
 - apiref
-ms.openlocfilehash: e929c74ba0f1f33ddbb28476b3c9e0a512567ac6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5e172abaa99e0a64031a9c1ec1beac5f23386d1a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95669056"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788619"
 ---
 # <a name="icorprofilerinfoendinprocdebugging-method"></a>ICorProfilerInfo::EndInprocDebugging メソッド
 
@@ -38,7 +39,7 @@ HRESULT EndInprocDebugging(
  `dwProfilerContext`  
  からデバッグセッションを識別する値。 この値は、 [ICorProfilerInfo:: BeginInprocDebugging](icorprofilerinfo-begininprocdebugging-method.md) メソッドで受け取った値と同じである必要があります。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  同じコールバックメソッド内で [ICorProfilerInfo:: BeginInprocDebugging](icorprofilerinfo-begininprocdebugging-method.md) およびを呼び出す必要があり `EndInprocDebugging` ます。  
   

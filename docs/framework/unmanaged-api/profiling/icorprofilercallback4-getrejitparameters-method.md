@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback4:: GetReJITParameters メソッド'
 title: ICorProfilerCallback4::GetReJITParameters メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0e9bfe07-9f20-498c-b568-9017c8f6056c
 topic_type:
 - apiref
-ms.openlocfilehash: 2cee763674da7472ca48355e7eaba3b7dfb7adbe
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f8dbf2c6ae80e41b8427fdaf0ef617a83138bb14
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730306"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788762"
 ---
 # <a name="icorprofilercallback4getrejitparameters-method"></a>ICorProfilerCallback4::GetReJITParameters メソッド
 
@@ -43,7 +44,7 @@ HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef met
  `pFunctionControl`  
  から再コンパイルされるメソッドの JIT 再コンパイル情報を提供するためにプロファイラーが使用できる [ICorProfilerFunctionControl](icorprofilerfunctioncontrol-interface.md) インターフェイスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  CLR は、 `GetReJITParameters` 指定されたメソッドを再コンパイルするためのパラメーターをプロファイラーが指定できるように、コールバックを発行します。 `GetReJITParameters`コールバックは、関数ごとに1回だけ発行されます。プロファイラーによって提供されるパラメーターは、その関数のすべてのインスタンスに適用されます。  
   

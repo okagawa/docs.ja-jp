@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: COR_PRF_SUSPEND_REASON 列挙型'
 title: COR_PRF_SUSPEND_REASON 列挙型
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 75594833-bed3-47b2-a426-b75c5fe6fbcf
 topic_type:
 - apiref
-ms.openlocfilehash: f7d76c72ed5db95425f5b1fa2db5e4346983daa4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9e8b3dc98aa6b1a989088f5f4d0efb74d488d927
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696675"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789009"
 ---
 # <a name="cor_prf_suspend_reason-enumeration"></a>COR_PRF_SUSPEND_REASON 列挙型
 
@@ -52,7 +53,7 @@ typedef enum {
 |`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|ランタイムは、ガベージコレクションの準備のために中断されています。|  
 |`COR_PRF_SUSPEND_FOR_REJIT`|ランタイムは JIT 再コンパイルのために中断されています。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  アンマネージコード内のすべてのランタイムスレッドは、ランタイムを再入力しようとするまで実行を継続することができます。ランタイムは、ランタイムが再開されるまで中断されます。 これは、ランタイムに入る新しいスレッドにも当てはまります。 ランタイム内のすべてのスレッドは、中断可能なコードに含まれている場合はすぐに中断されます。または、中断可能なコードに到着したときに中断するように求められます。  
   

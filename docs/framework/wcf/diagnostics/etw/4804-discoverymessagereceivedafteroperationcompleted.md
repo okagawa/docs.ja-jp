@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 4804-DiscoveryMessageReceivedAfterOperationCompleted'
 title: 4804 - DiscoveryMessageReceivedAfterOperationCompleted
 ms.date: 03/30/2017
 ms.assetid: 61d2791c-e1a2-400a-a57e-66818ac5962e
-ms.openlocfilehash: b9096c24cd0848b931509df5359193956f42caa4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: aecbe1ce5dc4187e2a62d92684bf222d3b734aec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242592"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788411"
 ---
 # <a name="4804---discoverymessagereceivedafteroperationcompleted"></a>4804 - DiscoveryMessageReceivedAfterOperationCompleted
 
@@ -15,12 +16,12 @@ ms.locfileid: "96242592"
   
 |||  
 |-|-|  
-|ID|4804|  
+|id|4804|  
 |Keywords|探索|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、操作の完了後、探索メッセージを受信したときに生成されます。  
   

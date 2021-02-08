@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IHostAutoEvent:: Wait メソッド'
 title: IHostAutoEvent::Wait メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 535d51c5-9112-401b-8c36-85f35d7ee609
 topic_type:
 - apiref
-ms.openlocfilehash: f07958a1a21bb3e93e4ca8202a65407b39188af4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0b75b44075dda46a3d84850cebd6b8f3851b055c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680782"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789477"
 ---
 # <a name="ihostautoeventwait-method"></a>IHostAutoEvent::Wait メソッド
 

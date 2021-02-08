@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ISymUnmanagedDispose インターフェイス」を参照してください。
 title: ISymUnmanagedDispose インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b1d74e83-a200-4d00-8fbd-27918808616d
 topic_type:
 - apiref
-ms.openlocfilehash: 932e76e73d5d40b36abcb17d8a53e6745927d873
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a94a8e8e462b5031cac3f0a8702a5685f993910d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719607"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790179"
 ---
 # <a name="isymunmanageddispose-interface"></a>ISymUnmanagedDispose インターフェイス
 

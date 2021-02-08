@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「会社の購入プロセス」を参照してください。
 title: 企業の購買プロセス
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: aa2ca2577eb68204ffcb755ce1b16b9354348ee3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c26b1f46f29b7a6ec06acf5d19381b5c8f460433
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293469"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787865"
 ---
 # <a name="corporate-purchase-process"></a>企業の購買プロセス
 
@@ -132,7 +133,7 @@ ms.locfileid: "96293469"
 
  次の表には、WinForms Client プロジェクトの最も重要なフォームの説明が含まれています。  
   
-|フォーム|Description|  
+|フォーム|説明|  
 |-|-|  
 |NewRfp|新しい Request for Proposals を作成して送信します。|  
 |ShowProposals|アクティブな Request for Proposals と完了した Request for Proposals をすべて表示します。 **注:**  提案の要求を作成または変更した後で、その画面の変更を表示するには、UI の [ **更新** ] ボタンをクリックする必要があります。|  

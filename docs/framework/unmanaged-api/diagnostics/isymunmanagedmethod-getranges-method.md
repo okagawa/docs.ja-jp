@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ISymUnmanagedMethod:: GetRanges メソッド'
 title: ISymUnmanagedMethod::GetRanges メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a85283d8-379c-417a-9736-ddeeef9bcf50
 topic_type:
 - apiref
-ms.openlocfilehash: 8ed492b573215736c82ab6c231cc5f2e188ea013
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e6a1da285c0574ef5910e8e727c3bcc5cb9e5d35
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732152"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790101"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>ISymUnmanagedMethod::GetRanges メソッド
 

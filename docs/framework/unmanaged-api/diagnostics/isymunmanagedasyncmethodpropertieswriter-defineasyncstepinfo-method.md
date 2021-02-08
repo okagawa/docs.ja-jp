@@ -1,13 +1,14 @@
 ---
+description: '詳細について: ISymUnmanagedAsyncMethodPropertiesWriter::D efineAsyncStepInfo メソッド'
 title: ISymUnmanagedAsyncMethodPropertiesWriter::DefineAsyncStepInfo メソッド
 ms.date: 03/30/2017
 ms.assetid: f738a6ed-7cd9-4106-a5cd-355481e5771c
-ms.openlocfilehash: f8c77e44183fd92704aa91ca1cfd7e3fa68aa27f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f95436b10041ae5bfd56ca080a9b8ce70748022c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719620"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790244"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefineasyncstepinfo-method"></a>ISymUnmanagedAsyncMethodPropertiesWriter::DefineAsyncStepInfo メソッド
 
@@ -32,7 +33,7 @@ HRESULT DefineAsyncStepInfo(    [in] ULONG32 count,    [in, size_is(count)] ULON
   
 ## <a name="return-value"></a>戻り値  
 
- `HRESULT` を返します。  
+ `HRESULT` が返されます。  
   
 ## <a name="requirements"></a>要件  
 

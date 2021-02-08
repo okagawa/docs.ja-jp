@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ICLRHostBindingPolicyManager:: ModifyApplicationPolicy メソッド'
 title: ICLRHostBindingPolicyManager::ModifyApplicationPolicy メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d82d633e-cce6-427c-8b02-8227e34e12ba
 topic_type:
 - apiref
-ms.openlocfilehash: 8da9c9fea5cf5b3a27eeb9d0222f0845c832b7da
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3f7d992f4b7d24233da175814f991106bb97a937
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714199"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789932"
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy メソッド
 
@@ -76,7 +77,7 @@ HRESULT  ModifyApplicationPolicy (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  メソッドは、 `ModifyApplicationPolicy` 2 回呼び出すことができます。 最初の呼び出しでは、パラメーターに null 値を指定する必要があり `pbNewApplicationPolicy` ます。 この呼び出しは、に必要な値で返され `pcbNewAppPolicySize` ます。 2番目の呼び出しでは、にこの値を指定 `pcbNewAppPolicySize` し、のサイズのバッファーを指す必要があり `pbNewApplicationPolicy` ます。  
   

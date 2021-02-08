@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IHostCrst:: Enter メソッド'
 title: IHostCrst::Enter メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 100dd7eb-7053-4295-9bb3-32ba47f6ec79
 topic_type:
 - apiref
-ms.openlocfilehash: a5c2646d7c9dbf8a7aea4a7fb9bd0a6b8c1d5d66
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ef8e4ce71cde75fe6b834802b08d22aedbd6fab9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680551"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789451"
 ---
 # <a name="ihostcrstenter-method"></a>IHostCrst::Enter メソッド
 
@@ -50,7 +51,7 @@ HRESULT Enter (
 |HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `Enter` Win32 関数をミラー化 `EnterCriticalSection` します。  
   

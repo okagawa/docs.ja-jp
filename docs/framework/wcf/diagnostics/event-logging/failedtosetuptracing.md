@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 失敗 Tosetuptracing'
 title: FailedToSetupTracing
 ms.date: 03/30/2017
 ms.assetid: dd61db93-4687-4832-8dc9-99e38fa83671
-ms.openlocfilehash: 73939d4497e5500ffdd0cc407949a4c295db0f81
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 12e577ab0f8c028292f53f97642eb138e659d5e4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96284421"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788125"
 ---
 # <a name="failedtosetuptracing"></a>FailedToSetupTracing
 
@@ -17,7 +18,7 @@ ID : 100
   
  カテゴリ : トレース  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  トレースを設定できませんでした。 トレースは無効になります。  
   

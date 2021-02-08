@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback6:: GetAssemblyReferences メソッド'
 title: ICorProfilerCallback6::GetAssemblyReferences メソッド
 ms.date: 03/30/2017
 dev_langs:
@@ -13,12 +14,12 @@ api_type:
 ms.assetid: 8b391afb-d79f-41bd-94ce-43ce62c6b5fc
 topic_type:
 - apiref
-ms.openlocfilehash: c9e973009f46ef7e554ee2df63493464f4956342
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 27c2b5e0ed935501de551bac32b6d229d5c59f79
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725483"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788645"
 ---
 # <a name="icorprofilercallback6getassemblyreferences-method"></a>ICorProfilerCallback6::GetAssemblyReferences メソッド
 
@@ -46,13 +47,13 @@ HRESULT GetAssemblyReferences(        [in, string] const WCHAR* wszAssemblyPath,
 
  このコールバックからの戻り値は無視されます。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
- このコールバックは、 [ICorProfilerCallback5:: SetEventMask2](icorprofilerinfo5-seteventmask2-method.md)メソッドを呼び出すときに、 [COR_PRF_HIGH_ADD_ASSEMBLY_REFERENCES](cor-prf-high-monitor-enumeration.md)イベントマスクフラグを設定することによって制御されます。 プロファイラーが [ICorProfilerCallback6:: GetAssemblyReferences](icorprofilercallback6-getassemblyreferences-method.md) callback メソッドを登録すると、ランタイムは、読み込まれるアセンブリのパスと名前、およびそのメソッドへの [ICorProfilerAssemblyReferenceProvider](icorprofilerassemblyreferenceprovider-interface.md) インターフェイスオブジェクトへのポインターを渡します。 その後、プロファイラーは、 [ICorProfilerAssemblyReferenceProvider::AddAssemblyReference](icorprofilerassemblyreferenceprovider-addassemblyreference-method.md) `COR_PRF_ASSEMBLY_REFERENCE_INFO` コールバックで指定されたアセンブリから参照するターゲットアセンブリごとに、オブジェクトを使用して ICorProfilerAssemblyReferenceProvider:: addassemblyreference メソッドを呼び出すことができます `GetAssemblyReferences` 。  
+ このコールバックは、 [ICorProfilerCallback5:: SetEventMask2](icorprofilerinfo5-seteventmask2-method.md)メソッドを呼び出すときに、 [COR_PRF_HIGH_ADD_ASSEMBLY_REFERENCES](cor-prf-high-monitor-enumeration.md)イベントマスクフラグを設定することによって制御されます。 プロファイラーが [ICorProfilerCallback6:: GetAssemblyReferences](icorprofilercallback6-getassemblyreferences-method.md) callback メソッドを登録すると、ランタイムは、読み込まれるアセンブリのパスと名前、およびそのメソッドへの [ICorProfilerAssemblyReferenceProvider](icorprofilerassemblyreferenceprovider-interface.md) インターフェイスオブジェクトへのポインターを渡します。 その後、プロファイラーは、 [](icorprofilerassemblyreferenceprovider-addassemblyreference-method.md) `COR_PRF_ASSEMBLY_REFERENCE_INFO` コールバックで指定されたアセンブリから参照するターゲットアセンブリごとに、オブジェクトを使用して ICorProfilerAssemblyReferenceProvider:: addassemblyreference メソッドを呼び出すことができます `GetAssemblyReferences` 。  
   
  `GetAssemblyReferences` コールバックを使用するのは、プロファイラーがアセンブリのメタデータを変更してアセンブリ参照を追加する必要がある場合のみです (ただし、アセンブリのメタデータの実際の変更は、 [ICorProfilerCallback:: ModuleLoadFinished](icorprofilercallback-moduleloadfinished-method.md)コールバックメソッドで行われることに注意してください)。プロファイラーは、 `GetAssemblyReferences` モジュールが読み込まれたときにアセンブリ参照が追加されることを共通言語ランタイム (CLR) に通知するために、コールバックメソッドを実装する必要があります。  これにより、プロファイラーが後でメタデータのアセンブリ参照を変更するつもりでも、アセンブリが共有している "初期の段階で CLR によって行われた決定" は有効なままになります。  このため一部のインスタンスでの、プロファイラーのメタデータ変更による `SECURITY_E_INCOMPATIBLE_SHARE` エラーの発生を回避できる場合があります。  
   
- プロファイラーは、このメソッドによって提供される [ICorProfilerAssemblyReferenceProvider](icorprofilerassemblyreferenceprovider-interface.md) オブジェクトを使用して、CLR アセンブリ参照クロージャのウォーカーにアセンブリ参照を追加します。  [ICorProfilerAssemblyReferenceProvider](icorprofilerassemblyreferenceprovider-interface.md)オブジェクトは、このコールバック内からのみ使用する必要があります。 このコールバックから [ICorProfilerAssemblyReferenceProvider:: AddAssemblyReference](icorprofilerassemblyreferenceprovider-addassemblyreference-method.md) メソッドを呼び出すと、変更されたメタデータは生成されませんが、変更されたアセンブリ参照クロージャウォークでのみ発生します。 また、コールバックが実装され[IMetaDataAssemblyEmit](../metadata/imetadataassemblyemit-interface.md)ている場合でも、参照元のアセンブリの[ICorProfilerCallback:: moduleloadfinished](icorprofilercallback-moduleloadfinished-method.md)コールバック内からアセンブリ参照を明示的に追加するには、プロファイラーでは、そのオブジェクトを使用する必要があり `GetAssemblyReferences` ます。  
+ プロファイラーは、このメソッドによって提供される [ICorProfilerAssemblyReferenceProvider](icorprofilerassemblyreferenceprovider-interface.md) オブジェクトを使用して、CLR アセンブリ参照クロージャのウォーカーにアセンブリ参照を追加します。  [ICorProfilerAssemblyReferenceProvider](icorprofilerassemblyreferenceprovider-interface.md)オブジェクトは、このコールバック内からのみ使用する必要があります。 このコールバックから [ICorProfilerAssemblyReferenceProvider:: AddAssemblyReference](icorprofilerassemblyreferenceprovider-addassemblyreference-method.md) メソッドを呼び出すと、変更されたメタデータは生成されませんが、変更されたアセンブリ参照クロージャウォークでのみ発生します。 また、コールバックが実装され[](../metadata/imetadataassemblyemit-interface.md)ている場合でも、参照元のアセンブリの[ICorProfilerCallback:: moduleloadfinished](icorprofilercallback-moduleloadfinished-method.md)コールバック内からアセンブリ参照を明示的に追加するには、プロファイラーでは、そのオブジェクトを使用する必要があり `GetAssemblyReferences` ます。  
   
  プロファイラーは、同じアセンブリに対してこのコールバックへの重複する呼び出しを受け取るように準備する必要があります。また、同じ [ICorProfilerAssemblyReferenceProvider:: AddAssemblyReference](icorprofilerassemblyreferenceprovider-addassemblyreference-method.md) 呼び出しのセットを作成することによって、重複する各呼び出しに対して同じように応答する必要があります。  
   

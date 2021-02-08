@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: FunctionEnter2 関数'
 title: FunctionEnter2 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce7a21f9-0ca3-4b92-bc4b-bb803cae3f51
 topic_type:
 - apiref
-ms.openlocfilehash: e8466970a1c137276e842b37f0305fdfd9169be6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8b8061b213d02efd845e214c1177db4e5351869b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717260"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788983"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 関数
 
@@ -58,7 +59,7 @@ void __stdcall FunctionEnter2 (
 
   引数情報にアクセスするには、 `COR_PRF_ENABLE_FUNCTION_ARGS` フラグを設定する必要があります。 プロファイラーは、 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) メソッドを使用してイベントフラグを設定できます。
 
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  値が変更さ `func` `argumentInfo` `FunctionEnter2` れるか、値が破棄される可能性があるため、関数から制御が戻った後に、パラメーターとパラメーターの値が無効になります。  
   

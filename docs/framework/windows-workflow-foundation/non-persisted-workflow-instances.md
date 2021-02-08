@@ -1,19 +1,20 @@
 ---
+description: 永続化されていないワークフローインスタンスについての詳細情報
 title: 非永続化ワークフロー インスタンス
 ms.date: 03/30/2017
 ms.assetid: 5e01af77-6b14-4964-91a5-7dfd143449c0
-ms.openlocfilehash: 315d791585ace6ce4adf281abbba0a4c8c72d75a
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0ee5968426a6bb800b9e70ac592c6da191c22511
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663043"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787904"
 ---
 # <a name="non-persisted-workflow-instances"></a>非永続化ワークフロー インスタンス
 
 状態が永続するワークフローの新しいインスタンスを <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> に作成すると、サービス ホストはそのサービスのエントリをインスタンス ストアに作成します。 その後、ワークフロー インスタンスが初めて永続化されると、<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> は現在のインスタンス状態を格納します。 ワークフローが Windows プロセス アクティブ化サービスにホストされている場合は、インスタンスが初めて永続化するとサービス配置データもインスタンス ストアに書き込まれます。
 
-ワークフロー インスタンスが永続化されていない限り、**非永続的**状態。 この状態の場合、アプリケーション ドメインのリサイクル、ホストの障害、またはコンピューターの障害の後にワークフロー インスタンスを回復することはできません。
+ワークフローインスタンスが永続化されていない限り、 **永続化** されていない状態になります。 この状態の場合、アプリケーション ドメインのリサイクル、ホストの障害、またはコンピューターの障害の後にワークフロー インスタンスを回復することはできません。
 
 ## <a name="the-non-persisted-state"></a>非永続化状態
 
@@ -23,9 +24,9 @@ ms.locfileid: "67663043"
 
 - ワークフロー インスタンスが初めて永続化される前にインスタンスで例外が発生した場合。 返される <xref:System.Activities.UnhandledExceptionAction> に応じて、次のシナリオが発生します。
 
-  - <xref:System.Activities.UnhandledExceptionAction> 設定されている<xref:System.Activities.UnhandledExceptionAction.Abort>:例外が発生したときに、サービス展開情報は、インスタンス ストアに書き込まれます、ワークフロー インスタンスがメモリからアンロードします。 ワークフロー インスタンスは非永続化状態となり、再読み込みできません。
+  - <xref:System.Activities.UnhandledExceptionAction> が <xref:System.Activities.UnhandledExceptionAction.Abort> に設定されている場合:  例外が発生すると、サービス配置情報がインスタンス ストアに書き込まれ、ワークフロー インスタンスがメモリからアンロードされます。 ワークフロー インスタンスは非永続化状態となり、再読み込みできません。
 
-  - <xref:System.Activities.UnhandledExceptionAction> 設定されている<xref:System.Activities.UnhandledExceptionAction.Cancel>または<xref:System.Activities.UnhandledExceptionAction.Terminate>:例外が発生するし、サービス展開情報は、インスタンス ストアに書き込まれます、アクティビティ インスタンスの状態が に設定されている<xref:System.Activities.ActivityInstanceState.Closed>します。
+  - <xref:System.Activities.UnhandledExceptionAction> が <xref:System.Activities.UnhandledExceptionAction.Cancel> または <xref:System.Activities.UnhandledExceptionAction.Terminate> に設定されている場合:  例外が発生すると、サービス配置情報がインスタンス ストアに書き込まれ、アクティビティ インスタンスの状態が <xref:System.Activities.ActivityInstanceState.Closed> に設定されます。
 
 アンロードされている非永続化ワークフロー インスタンスが発生するリスクを最低限に抑えるため、ライフサイクルの早い段階でワークフローを永続化することをお勧めします。
 

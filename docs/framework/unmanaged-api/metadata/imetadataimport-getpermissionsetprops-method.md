@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataImport:: GetPermissionSetProps メソッド'
 title: IMetaDataImport::GetPermissionSetProps メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9855f0e4-12c0-4d3d-ab5d-d6bc52d25eae
 topic_type:
 - apiref
-ms.openlocfilehash: 89c45c049ebadf9e1f16bef8d2626b4e2a17fb70
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9dc10b7bf531b6eec389334d80cf6a1cece20ee9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729253"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789191"
 ---
 # <a name="imetadataimportgetpermissionsetprops-method"></a>IMetaDataImport::GetPermissionSetProps メソッド
 

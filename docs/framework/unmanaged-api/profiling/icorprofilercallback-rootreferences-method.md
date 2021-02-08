@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ICorProfilerCallback:: RootReferences メソッド'
 title: ICorProfilerCallback::RootReferences メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dbdf853b-d1a4-4828-8ef7-53d121d8e6ae
 topic_type:
 - apiref
-ms.openlocfilehash: 2d084ce0a785ba37c5b7dc937ed116cee74b7594
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e09434c425784e646c9856693abdfd4ac0d49273
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720673"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788866"
 ---
 # <a name="icorprofilercallbackrootreferences-method"></a>ICorProfilerCallback::RootReferences メソッド
 
@@ -42,7 +43,7 @@ HRESULT RootReferences(
  `rootRefIds`  
  から静的オブジェクトまたはスタック上のオブジェクトのいずれかを参照するオブジェクト Id の配列。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `RootReferences`と[ICorProfilerCallback2:: RootReferences2](icorprofilercallback2-rootreferences2-method.md)の両方が呼び出され、プロファイラーに通知されます。 通常、プロファイラーはどちらか一方を実装しますが、渡され `RootReferences2` た情報は渡されたのスーパーセットであるため、両方ではありません `RootReferences` 。  
   

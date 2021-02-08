@@ -1,4 +1,5 @@
 ---
+description: ': ISOSDacInterface:: GetModuleData メソッドの詳細について説明します。'
 title: 'ISOSDacInterface:: GetModuleData メソッド'
 ms.date: 02/01/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: b302100eb6cbfa83896cd358762c496ea01f7509
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: c01f55d55d5ee9082dee4b3adb3022bb17807aa2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420982"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790387"
 ---
 # <a name="isosdacinterfacegetmoduledata-method"></a>ISOSDacInterface:: GetModuleData メソッド
 
@@ -43,7 +44,7 @@ HRESULT GetModuleData(
 から情報を取得するモジュールのアドレス。
 
 `data`\
-入出力読み込まれたモジュールの情報を保持する[Dacpmoduledata 構造体](dacpmoduledata-structure.md)。
+入出力読み込まれたモジュールの情報を保持する [Dacpmoduledata 構造体](dacpmoduledata-structure.md) 。
 
 ## <a name="remarks"></a>解説
 

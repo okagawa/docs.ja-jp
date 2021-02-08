@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: IhohooCreateIoCompletionPort Manager:: メソッド'
 title: IHostIoCompletionManager::CreateIoCompletionPort メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 907a2b43-68db-44a7-acac-89e792e7bb3c
 topic_type:
 - apiref
-ms.openlocfilehash: 0c74e073d55ab7dc98620052a0cfd68c294f7a1c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: da4cd595e84c341eb15837ff97f4ba23cac23210
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724274"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789438"
 ---
 # <a name="ihostiocompletionmanagercreateiocompletionport-method"></a>IHostIoCompletionManager::CreateIoCompletionPort メソッド
 
@@ -51,7 +52,7 @@ HRESULT CreateIoCompletionPort (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_OUTOFMEMORY|要求されたリソースを割り当てるのに十分なメモリがありませんでした。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  CLR は、メソッドを呼び出して、 `CreateIoCompletionPort` ホストが新しい i/o 完了ポートを作成するように要求します。 このポートは、 [Ihoを](ihostiocompletionmanager-bind-method.md) 呼び出して、このポートに i/o 操作をバインドします。 ホストは、 [Iclriocomplete manager:: OnComplete](iclriocompletionmanager-oncomplete-method.md)を呼び出すことによって、状態を CLR に報告します。  
   

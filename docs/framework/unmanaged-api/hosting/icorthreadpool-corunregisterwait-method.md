@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorThreadpool:: CorUnregisterWait メソッド'
 title: ICorThreadpool::CorUnregisterWait メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 42c933f1-30a8-4011-bdea-e117f3c3265e
 topic_type:
 - apiref
-ms.openlocfilehash: 38b3655da75750ffc3ea1c7983ce3b549d76f087
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 61b6c7a1fa8459ddd173d2857cff982f353afc31
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733972"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789529"
 ---
 # <a name="icorthreadpoolcorunregisterwait-method"></a>ICorThreadpool::CorUnregisterWait メソッド
 

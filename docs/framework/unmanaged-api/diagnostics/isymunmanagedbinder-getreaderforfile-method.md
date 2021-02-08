@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ISymUnmanagedBinder:: GetReaderForFile メソッド'
 title: ISymUnmanagedBinder::GetReaderForFile メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 46c06258-831e-47c8-a50a-8650af6b637e
 topic_type:
 - apiref
-ms.openlocfilehash: ac895032e70cf31532ab4c73409d6d750eae65df
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ede494cbc1bbe4059b98a639c1d0621dc2cbdfa6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95706997"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790218"
 ---
 # <a name="isymunmanagedbindergetreaderforfile-method"></a>ISymUnmanagedBinder::GetReaderForFile メソッド
 

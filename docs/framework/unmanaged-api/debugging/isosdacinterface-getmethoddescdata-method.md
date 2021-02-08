@@ -1,4 +1,5 @@
 ---
+description: ': ISOSDacInterface:: GetMethodDescData メソッドの詳細について説明します。'
 title: 'ISOSDacInterface:: GetMethodDescData メソッド'
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 105149d0abf312c33a8498e7428e3a8b23d6ae7d
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: a1284aa4d810ed9d6db7ad3c1b471702b1dad54d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421021"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790426"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>ISOSDacInterface:: GetMethodDescData メソッド
 

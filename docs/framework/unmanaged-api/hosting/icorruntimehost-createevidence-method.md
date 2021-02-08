@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorRuntimeHost:: CreateEvidence メソッド'
 title: ICorRuntimeHost::CreateEvidence メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e235ea80-b84c-4442-a4c3-fc96c25a8eb9
 topic_type:
 - apiref
-ms.openlocfilehash: 6627fce519934177aefd26a612e5b00ca1941d02
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 34694f7e867066430a28120b412237ef9c64c740
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715668"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789672"
 ---
 # <a name="icorruntimehostcreateevidence-method"></a>ICorRuntimeHost::CreateEvidence メソッド
 
@@ -48,7 +49,7 @@ HRESULT CreateEvidence (
 |E_FAIL|不明な重大なエラーが発生しました。 メソッドが E_FAIL を返す場合、このプロセスでは共通言語ランタイム (CLR) は使用できなくなります。 後続のホスト Api への呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージドコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドは、ネイティブコードから設定できない空のコレクションを返します。 代わりに、メソッドを使用する必要があり <xref:System.Security.Policy.Evidence> ます。  
   

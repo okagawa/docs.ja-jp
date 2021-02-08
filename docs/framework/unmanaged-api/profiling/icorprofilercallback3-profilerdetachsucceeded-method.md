@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorProfilerCallback3::P rofilerDetachSucceeded メソッド'
 title: ICorProfilerCallback3::ProfilerDetachSucceeded メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 05164966-16ce-4cc9-a530-43a640c00711
 topic_type:
 - apiref
-ms.openlocfilehash: b9b284de102dc75a637803ca5be0f2769da452ec
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bc80b5bd5301bb5b0278534cfba6ac23e5968620
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730319"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788775"
 ---
 # <a name="icorprofilercallback3profilerdetachsucceeded-method"></a>ICorProfilerCallback3::ProfilerDetachSucceeded メソッド
 
@@ -36,7 +37,7 @@ HRESULT ProfilerDetachSucceeded();
 
  このコールバックからの戻り値は無視されます。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ProfilerDetachSucceeded` コールバックは、すべてのスレッドでプロファイラーのコードが終了した後に発行されます。 このメソッドが呼び出された場合、プロファイラーは、そのデストラクターに適さない最後の段階のタスク (その UI またはログ コンポーネントの通知など) を実行する必要があります。 ただし、プロファイラーは、このコールバック中に CLR によって提供されるインターフェイス ( [ICorProfilerInfo](icorprofilerinfo-interface.md) やインターフェイスなど) で関数を呼び出すことはできません `IMetaData*` 。  
   

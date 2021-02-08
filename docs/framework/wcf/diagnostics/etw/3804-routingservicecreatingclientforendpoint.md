@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 3804-RoutingServiceCreatingClientForEndpoint'
 title: 3804 - RoutingServiceCreatingClientForEndpoint
 ms.date: 03/30/2017
 ms.assetid: f53304b0-1201-4fff-94ed-d054774871c7
-ms.openlocfilehash: 8cad0ba95b8952c4a2253628347fa3c5635c7028
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d5975b40bcaa89e431a67d45cb67116886771e5f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96282315"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788424"
 ---
 # <a name="3804---routingservicecreatingclientforendpoint"></a>3804 - RoutingServiceCreatingClientForEndpoint
 
@@ -15,12 +16,12 @@ ms.locfileid: "96282315"
   
 |||  
 |-|-|  
-|ID|3804|  
+|id|3804|  
 |Keywords|RoutingServices|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、ルーティング サービスがエンドポイントのクライアントを作成しているときに生成されます。  
   

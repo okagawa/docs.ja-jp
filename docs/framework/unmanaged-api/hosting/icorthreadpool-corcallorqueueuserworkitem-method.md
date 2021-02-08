@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorThreadpool:: CorCallOrQueueUserWorkItem メソッド'
 title: ICorThreadpool::CorCallOrQueueUserWorkItem メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2081223-84ca-4331-a8d3-9352f422f3e7
 topic_type:
 - apiref
-ms.openlocfilehash: 6046ff8486b356ca781a42a34a5a18bdae8c4c73
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 630afab4eac94d0361b0c83c962ff6e7d59be42d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690019"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789581"
 ---
 # <a name="icorthreadpoolcorcallorqueueuserworkitem-method"></a>ICorThreadpool::CorCallOrQueueUserWorkItem メソッド
 

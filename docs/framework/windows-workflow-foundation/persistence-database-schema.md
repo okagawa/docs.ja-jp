@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「永続性データベーススキーマ」を参照してください。
 title: 永続性データベース スキーマ
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: f0ee076aa327f298007dfb18af324fb81c309067
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 40c47c5bfcb6c974eab6f2f2c926e0fa13054a38
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96246096"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787839"
 ---
 # <a name="persistence-database-schema"></a>永続性データベース スキーマ
 
@@ -41,8 +42,8 @@ ms.locfileid: "96246096"
 |IdentityName|Nvarchar(max)|ワークフロー定義の名前。|  
 |IdentityPackage|Nvarchar(max)|ワークフローが作成されたときに指定されたパッケージの情報 (アセンブリ名など)。|  
 |Build|BigInt|ワークフロー バージョンのビルド番号。|  
-|Major|BigInt|ワークフロー バージョンのメジャー番号。|  
-|マイナー|BigInt|ワークフロー バージョンのマイナー番号。|  
+|メジャー|BigInt|ワークフロー バージョンのメジャー番号。|  
+|Minor|BigInt|ワークフロー バージョンのマイナー番号。|  
 |リビジョン|BigInt|ワークフロー バージョンのリビジョン番号。|  
   
 > [!CAUTION]

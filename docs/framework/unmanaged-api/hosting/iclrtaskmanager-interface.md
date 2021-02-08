@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICLRTaskManager インターフェイス」を参照してください。
 title: ICLRTaskManager インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2bd55e0c-001b-41fd-b29d-f01670fe8216
 topic_type:
 - apiref
-ms.openlocfilehash: 1170b29c01275b108a6ccdf6e324c96d97c10c82
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0ce3641042725bc2f3acb95933ccd7a5bbe3bc4d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732451"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789740"
 ---
 # <a name="iclrtaskmanager-interface"></a>ICLRTaskManager インターフェイス
 
@@ -35,7 +36,7 @@ ms.locfileid: "95732451"
 |[SetLocale メソッド](iclrtaskmanager-setlocale-method.md)|現在実行中のタスクのロケール識別子がホストによって変更されたことを CLR に通知します。|  
 |[SetUILocale メソッド](iclrtaskmanager-setuilocale-method.md)|現在実行中のタスクのユーザーインターフェイスのロケール識別子がホストによって変更されたことを、共通言語ランタイムに通知します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ホスト環境で実行されている各タスクは、ホスト側 ( [IHostTask](ihosttask-interface.md)のインスタンス) と CLR 側 ( [ICLRTask](iclrtask-interface.md)のインスタンス) の両方で表現されます。 ホストまたは CLR がタスクの作成を開始することはできますが、ホストと CLR の間でタスクに関して正常に通信できるように、ホスト側表現を対応する CLR 側表現に関連付ける必要があります。 マネージコードをオペレーティングシステムのスレッドで実行するには、2つのオブジェクトを作成してインスタンス化する必要があります。  
   

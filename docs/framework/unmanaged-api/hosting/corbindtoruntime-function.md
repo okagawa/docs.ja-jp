@@ -1,4 +1,5 @@
 ---
+description: 詳細については、CorBindToRuntime 関数
 title: CorBindToRuntime 関数
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 799740aa-46ec-4532-95da-6444565b4971
 topic_type:
 - apiref
-ms.openlocfilehash: 426e95281b648217642ca06f04dfbd9ec991221e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 727abdccd692a431960d293404025cf9ccc1d7ee
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733777"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790088"
 ---
 # <a name="corbindtoruntime-function"></a>CorBindToRuntime 関数
 
@@ -65,7 +66,7 @@ HRESULT CorBindToRuntime (
  `ppv`  
  [出力] 返された `riid` へのインターフェイス ポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `pwszVersion` で指定したランタイムのバージョンが存在しない場合は、`CorBindToRuntimeEx` は CLR_E_SHIM_RUNTIMELOAD の HRESULT 値を返します。  
   
@@ -85,7 +86,7 @@ HRESULT CorBindToRuntime (
   
      バージョン 1 互換モードは、その処理全体および処理のすべてのアプリケーション ドメインに適用されます。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  [Corbindtoruntimeex](corbindtoruntimeex-function.md) とは `CorBindToRuntime` 同じ操作を実行しますが、関数を使用すると、 `CorBindToRuntimeEx` CLR の動作を指定するフラグを設定できます。  
   

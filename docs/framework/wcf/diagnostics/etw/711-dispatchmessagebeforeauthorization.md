@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 711-DispatchMessageBeforeAuthorization'
 title: 711 - DispatchMessageBeforeAuthorization
 ms.date: 03/30/2017
 ms.assetid: ea7f7228-e642-441d-9470-6609a9fe08f0
-ms.openlocfilehash: ab44d8bb3c9541f64e92d4c425b6d38064a83f2d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a4dd0e3190e2c42b72b7115455f3a2651a52fb7a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242163"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788216"
 ---
 # <a name="711---dispatchmessagebeforeauthorization"></a>711 - DispatchMessageBeforeAuthorization
 
@@ -15,12 +16,12 @@ ms.locfileid: "96242163"
   
 |||  
 |-|-|  
-|ID|711|  
+|id|711|  
 |Keywords|ServiceModel|  
 |Level|"詳細"|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  このイベントは、メッセージのディスパッチの認証が開始されると生成されます。  
   

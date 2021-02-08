@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: FunctionEnter 関数'
 title: FunctionEnter 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bf4ffa50-4506-4dd4-aa13-a0457b47ca74
 topic_type:
 - apiref
-ms.openlocfilehash: 9bc88d7dd5b00213da634dc9f511cfe0d39b42f1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 07b91a81480e453be16e840b89fa822cb91002ba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729838"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788957"
 ---
 # <a name="functionenter-function"></a>FunctionEnter 関数
 
@@ -42,7 +43,7 @@ void __stdcall FunctionEnter (
 
   \[in] コントロールが渡される関数の識別子。
 
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `FunctionEnter`関数はコールバックであるため、実装する必要があります。 実装では、 `__declspec` ( `naked` ) ストレージクラス属性を使用する必要があります。  
   
