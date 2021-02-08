@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「カスタムバインド命令」を参照してください。
 title: カスタム バインド強制
 ms.date: 03/30/2017
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
-ms.openlocfilehash: 6be5105831fa3845db9a55a14a7ed8821dc1cbc4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 670f32f12f85a0ded6f2357d10ac9cfbbd5ac107
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96241916"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778322"
 ---
 # <a name="custom-binding-imperative"></a>カスタム バインド強制
 

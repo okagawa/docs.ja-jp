@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 3501-InferredContractDescription'
 title: 3501 - InferredContractDescription
 ms.date: 03/30/2017
 ms.assetid: 21a70849-4fc0-41d2-b9a4-db5aa2acdf1a
-ms.openlocfilehash: 88a04c0eb6d12876592702ad4dba3a17aa8da122
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 2eab180780a1475bff421441b7cef23f58f627c6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96245290"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778088"
 ---
 # <a name="3501---inferredcontractdescription"></a>3501 - InferredContractDescription
 
@@ -15,12 +16,12 @@ ms.locfileid: "96245290"
   
 |||  
 |-|-|  
-|ID|3501|  
+|id|3501|  
 |Keywords|WFServices|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  ContractDescription が WorkflowService から推論されたことを示します。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96245290"
   
 ## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|Description|  
+|データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  
 |名前|xs:string|ContractDescription の名前。|  
 |名前空間|xs:string|ContractDescription の名前空間。|  

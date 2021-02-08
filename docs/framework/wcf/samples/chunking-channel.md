@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: チャンキングチャネル'
 title: チャネルのチャンキング
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 7a5e5292bcb37e83de21458716e34887a0557d91
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 826db33186aa8e01ade9123d6b0d8b696b7e77ce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585546"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778777"
 ---
 # <a name="chunking-channel"></a>チャネルのチャンキング
 
@@ -23,7 +24,7 @@ Windows Communication Foundation (WCF) を使用してサイズの大きいメ�
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ChunkingChannel`
 
@@ -256,7 +257,7 @@ interface ITestService
 
 - Send に渡されるタイムアウトは、すべてのチャンクの送信を含む送信操作全体のタイムアウトとして使用されます。
 
-- 元のメッセージ本文全体がバッファされないように、カスタムの <xref:System.Xml.XmlDictionaryWriter> デザインが選択されています。 <xref:System.Xml.XmlDictionaryReader> を使用して本文の `message.GetReaderAtBodyContents` を取得する場合、本文全体がバッファされます。 代わりに、 <xref:System.Xml.XmlDictionaryWriter> に渡されるカスタムがあり `message.WriteBodyContents` ます。 メッセージがライタの WriteBase64 を呼び出すと、ライタはチャンクをパッケージ化してメッセージを作成し、内部チャンネルを使用して送信します。 WriteBase64 は、チャンクが送信されるまでブロックされます。
+- 元のメッセージ本文全体がバッファされないように、カスタムの <xref:System.Xml.XmlDictionaryWriter> デザインが選択されています。 <xref:System.Xml.XmlDictionaryReader> を使用して本文の `message.GetReaderAtBodyContents` を取得する場合、本文全体がバッファされます。 代わりに、  <xref:System.Xml.XmlDictionaryWriter> に渡されるカスタムがあり `message.WriteBodyContents` ます。 メッセージがライタの WriteBase64 を呼び出すと、ライタはチャンクをパッケージ化してメッセージを作成し、内部チャンネルを使用して送信します。 WriteBase64 は、チャンクが送信されるまでブロックされます。
 
 ## <a name="implementing-the-receive-operation"></a>Receive 操作の実装
 
@@ -308,7 +309,7 @@ interface ITestService
 
 `ChunkingBindingElement` は、`ChunkingChannelFactory` および `ChunkingChannelListener` を作成します。 は、 `ChunkingBindingElement` との T `CanBuildChannelFactory` \<T> `CanBuildChannelListener` \<T> が型 `IDuplexSessionChannel` (チャンキングチャネルでサポートされる唯一のチャネル) であること、およびバインディング内の他のバインド要素がこのチャネルの種類をサポートしているかどうかを確認します。
 
-`BuildChannelFactory`\<T>は、要求されたチャネルの種類を構築できることを最初に確認し、次にチャンク対象のメッセージアクションのリストを取得します。 詳しくは、次のセクションをご覧ください。 次に、新しい `ChunkingChannelFactory` を作成し、それに内部チャネル ファクトリ (`context.BuildInnerChannelFactory<IDuplexSessionChannel>` から返されたままの状態での)、メッセージ アクションのリスト、およびバッファするチャンクの最大数を渡します。 チャンクの最大数は、`MaxBufferedChunks` によって公開される `ChunkingBindingElement` というプロパティによって指定されます。
+`BuildChannelFactory`\<T> は、要求されたチャネルの種類を構築できることを最初に確認し、次にチャンク対象のメッセージアクションのリストを取得します。 詳しくは、次のセクションをご覧ください。 次に、新しい `ChunkingChannelFactory` を作成し、それに内部チャネル ファクトリ (`context.BuildInnerChannelFactory<IDuplexSessionChannel>` から返されたままの状態での)、メッセージ アクションのリスト、およびバッファするチャンクの最大数を渡します。 チャンクの最大数は、`MaxBufferedChunks` によって公開される `ChunkingBindingElement` というプロパティによって指定されます。
 
 `BuildChannelListener<T>` には、`ChunkingChannelListener` を作成してこれに内部チャネル リスナーを渡す同様の実装があります。
 

@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「WCF セキュリティにおける暗号化の機敏性」を参照してください。
 title: WCF セキュリティにおける暗号化の機敏性
 ms.date: 03/30/2017
 ms.assetid: c2c549e5-ac19-40c5-b686-8f67f52b6dbf
-ms.openlocfilehash: 2dbacd53876ded76ea212dd5656cd2dded4a6e48
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ab46034b16a846f7399220480fc928655d931be0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714922"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778348"
 ---
 # <a name="cryptographic-agility-in-wcf-security"></a>WCF セキュリティにおける暗号化の機敏性
 
@@ -15,7 +16,7 @@ ms.locfileid: "74714922"
 
 **サービス**
 
-これは、`ICalculator` インターフェイスを実装し、セキュリティで保護されたセッションと信頼できるセッションが無効になっている <xref:System.ServiceModel.WSHttpBinding> を使用してエンドポイントをセキュリティで保護する、自己ホスト型 WCF サービスです。 このサービスは、カスタム `SecurityAlgorithmSuite` クラスを定義し、メッセージのセキュリティを確保するために使用される暗号化アルゴリズムを指定します。
+これは、インターフェイスを実装 `ICalculator` し、セキュリティで保護された <xref:System.ServiceModel.WSHttpBinding> セッションと信頼できるセッションを無効にしたを使用してエンドポイントをセキュリティで保護する、自己ホスト型 WCF サービスです。 このサービスは、カスタム `SecurityAlgorithmSuite` クラスを定義し、メッセージのセキュリティを確保するために使用される暗号化アルゴリズムを指定します。
 
 **クライアント**
 
@@ -25,9 +26,9 @@ ms.locfileid: "74714922"
 
 1. Visual Studio 2012 で、CryptoAgility 性 .sln ソリューションを開きます。
 
-2. Ctrl キーと Shift キーを押しながら B キーを押して、ソリューションをビルドします。
+2. Ctrl + Shift + B キーを押して、ソリューションをビルドします。
 
-3. ファイルエクスプローラーを開き、\WCF\Basic\Security\CryptoAgility\Service\bin ディレクトリに移動して、管理者特権で service .exe ファイルを実行します。そのためには、service .exe を右クリックし、 **[管理者として実行]** を選択します。
+3. エクスプローラーを開き、\WCF\Basic\Security\CryptoAgility\Service\bin ディレクトリに移動し、[service.exe を右クリックして [ **管理者として実行**] を選択して、管理者特権で service.exe ファイルを実行します。
 
 4. \WCF\Basic\Security\CryptoAgility\Client\bin ディレクトリに移動して、client.exe ファイルを通常の方法で実行します。
 
@@ -36,10 +37,10 @@ ms.locfileid: "74714922"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Security\CryptoAgility`
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [Windows Communication Foundation のセキュリティ](../feature-details/security.md)
+- [Windows Communication Foundation セキュリティ](../feature-details/security.md)

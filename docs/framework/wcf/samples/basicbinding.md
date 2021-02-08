@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「BasicBinding」を参照してください。
 title: BasicBinding
 ms.date: 03/30/2017
 ms.assetid: 86fbeb87-4d89-4b61-9577-867e0ac12945
-ms.openlocfilehash: 84bfe78aa9e82b9600c48e0a32514f669fcc7d77
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3a539ccec12d86b40198b01597b152b60b03c49b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575655"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778764"
 ---
 # <a name="basicbinding"></a>BasicBinding
 
@@ -21,13 +22,13 @@ ms.locfileid: "84575655"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\Http`
 
 ## <a name="sample-details"></a>サンプルの詳細
 
-このサンプルは、電卓サービスを実装する[はじめに](getting-started-sample.md)に基づいています。
+このサンプルは、電卓サービスを実装する [はじめに](getting-started-sample.md) に基づいています。
 
 既定の動作で基本的なバインディングを使用する場合、必要なものはバインディング セクション名だけです。 基本的なバインディングを構成してその設定の一部を変更する場合は、バインド構成を定義する必要があります。 エンドポイントは、 `bindingConfiguration` `endpoint` 次のサンプルコードに示すように、<> 要素の属性を使用して、名前によってバインディング構成を参照する必要があります。
 

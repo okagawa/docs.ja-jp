@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 3551-BufferOutOfOrderMessageNoBookmark'
 title: 3551 - BufferOutOfOrderMessageNoBookmark
 ms.date: 03/30/2017
 ms.assetid: 7930d6c4-c843-4a83-933a-cecd71b80d1e
-ms.openlocfilehash: 5e6a5f9d21435fee8309bd222443407e50ec2cee
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 573056fed1753ac55c51d9a074047e8eea15e229
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96263608"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99777997"
 ---
 # <a name="3551---bufferoutofordermessagenobookmark"></a>3551 - BufferOutOfOrderMessageNoBookmark
 
@@ -15,12 +16,12 @@ ms.locfileid: "96263608"
   
 |||  
 |-|-|  
-|ID|3551|  
+|id|3551|  
 |Keywords|WFServices|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  ブックマークの再開が失敗したことを示します。 サービス インスタンスがこの特定の操作を処理する準備が整ったら、バッファーされた受信操作が再試行されます。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96263608"
   
 ## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|Description|  
+|データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  
 |OperationName|xs:string|操作の名前。|  
 |ServiceInstanceId|xs:string|サービス インスタンスの ID。|  

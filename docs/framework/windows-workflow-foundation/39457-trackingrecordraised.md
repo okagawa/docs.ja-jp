@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 39457-TrackingRecordRaised'
 title: 39457 - TrackingRecordRaised
 ms.date: 03/30/2017
 ms.assetid: 5a2731d1-c731-4b79-bb69-016cb69ef481
-ms.openlocfilehash: 5bf343f29528bdb3941e253b2fd5b39799d94c2a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 551e13e32dbb690458877ceed0b532799f238966
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275906"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99777906"
 ---
 # <a name="39457---trackingrecordraised"></a>39457 - TrackingRecordRaised
 
@@ -15,12 +16,12 @@ ms.locfileid: "96275906"
   
 |||  
 |-|-|  
-|ID|39457|  
+|id|39457|  
 |Keywords|WFRuntime|  
-|Level|情報|  
+|Level|Information|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  TrackingRecord が TrackingParticipant に発生したことを示します。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96275906"
   
 ## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|Description|  
+|データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  
 |RecordNumber|xs:string|追跡レコード番号。|  
 |ParticipantId|xs:string|追跡参加要素|  
