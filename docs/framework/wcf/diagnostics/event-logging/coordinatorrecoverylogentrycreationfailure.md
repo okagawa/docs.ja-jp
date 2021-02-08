@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: CoordinatorRecoveryLogEntryCreationFailure'
 title: CoordinatorRecoveryLogEntryCreationFailure
 ms.date: 03/30/2017
 ms.assetid: 9f2b1a5c-f5a6-4203-87ff-601635b9ae40
-ms.openlocfilehash: d7137603aabb758a595f04343408848b97f2b28a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8c70093a5d40476aa177c05bda32a5419ecdfca7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96284642"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99771315"
 ---
 # <a name="coordinatorrecoverylogentrycreationfailure"></a>CoordinatorRecoveryLogEntryCreationFailure
 
@@ -17,7 +18,7 @@ Id: 140
   
  カテゴリ : TransactionBridge  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  回復ログのエントリを、コーディネーターの登録用に生成できませんでした。 トランザクションは中止されます。 イベントには、トランザクション ID、理由、例外、プロセス名、およびプロセス ID が表示されます。  
   

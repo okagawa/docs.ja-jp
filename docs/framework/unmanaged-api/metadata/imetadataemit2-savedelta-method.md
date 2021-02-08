@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataEmit2:: SaveDelta メソッド'
 title: IMetaDataEmit2::SaveDelta メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b95739fe-d2fa-4776-ae0d-31d9707ef799
 topic_type:
 - apiref
-ms.openlocfilehash: ab2f30c485a755d4788926c13c2608e55a716c5c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6e7a7527125869fea041f407da056db3eea88cbe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704267"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99771770"
 ---
 # <a name="imetadataemit2savedelta-method"></a>IMetaDataEmit2::SaveDelta メソッド
 

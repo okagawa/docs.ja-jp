@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「メッセージログのセキュリティに関する考慮事項」を参照してください。
 title: メッセージ ログ記録のセキュリティの考慮事項
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 8594329fb27aa1d77a2baffee2a7e37ea0d009c4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 88adc4eb772ad8c39ace23f2771ee68fa2288c3c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96283771"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99771016"
 ---
 # <a name="security-concerns-for-message-logging"></a>メッセージ ログ記録のセキュリティの考慮事項
 
@@ -109,7 +110,7 @@ ms.locfileid: "96283771"
   
 - Log Known PII On : このイベントは、既知の PII のログ記録が有効になっている場合に発生します。 このエラーは、 `enableLoggingKnownPii` `machineSettings` Machine.config ファイルの要素の属性がに設定され、 `true` `logKnownPii` `source` App.config または Web.config ファイルの要素の属性がに設定さ `true` れている場合に発生します。  
   
-- Log Known PII Not Allowed : このイベントは既知の PII のログ記録が許可されていない場合に発生します。 このエラーは、 `logKnownPii` `source` App.config または Web.config ファイルの要素の属性がに設定されて `true` いても、 `enableLoggingKnownPii` `machineSettings` Machine.config ファイルの要素の属性がに設定さ `false` れている場合に発生します。 例外をスローすることはありません。  
+- Log Known PII Not Allowed : このイベントは既知の PII のログ記録が許可されていない場合に発生します。 このエラーは、 `logKnownPii` `source` App.config または Web.config ファイルの要素の属性がに設定されて `true` いても、 `enableLoggingKnownPii` `machineSettings` Machine.config ファイルの要素の属性がに設定さ `false` れている場合に発生します。 例外はスローされません。  
   
  これらのイベントは、Windows に付属するイベント ビューアー ツールを使用して表示できます。 詳細については、「 [イベントログ](./event-logging/index.md)」を参照してください。  
   

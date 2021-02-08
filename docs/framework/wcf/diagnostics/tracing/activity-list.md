@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: アクティビティ一覧'
 title: アクティビティ リスト
 ms.date: 03/30/2017
 ms.assetid: 5540e185-ce8e-4db3-83b0-2b9f5bf71829
-ms.openlocfilehash: d28ae2e4750c718c35105d090aff8d085025b9d6
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 656c605e81872405aa8637b647b40278b06913cb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96236092"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99770873"
 ---
 # <a name="activity-list"></a>アクティビティ リスト
 
@@ -20,14 +21,14 @@ ms.locfileid: "96236092"
 
  主要な使用シナリオに対応するすべてのアクティビティを次の表に示します。  
   
-|Label|Activity Name (アクティビティ名)|Activity Type (アクティビティの種類)|Description|  
+|ラベル|Activity Name (アクティビティ名)|Activity Type (アクティビティの種類)|説明|  
 |-----------|-------------------|-------------------|-----------------|  
 |A、M|アンビエント アクティビティ|N/A (ServiceModel によって制御されません)|ServiceModel コード (クライアント側またはサーバー側) を呼び出す前に、ID が TLS に設定されるアクティビティ。<br /><br /> 例: WCF クライアントまたは serviceHost で open が呼び出されるアクティビティ。 open が呼び出されます。|  
 |B|構成体<br /><br /> 構築する。 ContractType: '[種類]'。|構成体||  
-|C|開く<br /><br /> [ClientBase&#124;ChannelFactory]。 ContractType: '[種類]'。|開く||  
+|C|[ファイル]<br /><br /> [ClientBase&#124;ChannelFactory]。 ContractType: '[種類]'。|[ファイル]||  
 |I|[ClientBase&#124;ChannelFactory] を閉じます。 ContractType: '[種類]'。|閉じる||  
 |M|ServiceHost を構築する。 ServiceType: '[種類]'。|構成体||  
-|N|ServiceHost を開く。 ServiceType: '[種類]'。|開く||  
+|×|ServiceHost を開く。 ServiceType: '[種類]'。|[ファイル]||  
 |Z|ServiceHost を閉じる。 ServiceType: '[種類]'。|閉じる||  
 |O|'[アドレス]' でリッスンする。|ListenAt|このアクティビティと次のアクティビティはトランスポート固有です。 ListenAt アクティビティは、チャネル リスナーがリッスンするアドレスにマップされるコンテンツを表します。 MSMQ の場合は、キューが 1 つのアドレスにマップされるため、これはキューそのものです。 このアクティビティは、接続指向のトランスポートの場合は受信接続をリッスンし、MSMQ の場合は MSMQ メッセージをリッスンします。 このアクティビティは ServiceHost.Open() の間に作成され、リスナーの作成と破棄、およびすべての ReceiveBytes アクティビティへの転送に関連するトレースを格納します。|  
 |P|接続 '[アドレス]' でのバイトを受信する。 MSMQ メッセージを受信する。|ReceiveBytes|このアクティビティでは、最終的に WCF メッセージを取得するデータが処理されます。 接続指向のトランスポートまたは http の場合は、受信バイトを待ちます。 TCP/名前付きパイプの場合は、接続が作成されるときにアクティビティが作成されるため、このアクティビティの有効期間は接続の有効期間と等しくなります。 http の場合、これはメッセージ要求の有効期間と等しく、メッセージが送信されるときにアクティビティが作成されます。 このアクティビティは、接続の作成と破棄 (該当する場合)、およびすべてのメッセージ (オブジェクト) 処理アクティビティへの転送に関連するトレースを格納します。<br /><br /> MSMQ の場合、これは MSMQ メッセージが取得されるアクティビティです。|  
@@ -39,14 +40,14 @@ ms.locfileid: "96236092"
 
  セキュリティに関連するすべてのアクティビティを次の表に示します。  
   
-|Activity Name (アクティビティ名)|Activity Type (アクティビティの種類)|Description|  
+|Activity Name (アクティビティ名)|Activity Type (アクティビティの種類)|説明|  
 |-------------------|-------------------|-----------------|  
 |セキュリティで保護されたセッションをセットアップする|SetupSecurity|クライアント側だけに存在します。 認証およびセキュリティ コンテキストの設定のためのすべての "RST*/SCT 交換" を格納します。 の場合 `propagateActivity` = `true` 、このアクティビティは、サービスの対応するプロセスアクションの RST/SCT アクティビティにマージされ \* ます。|  
 |セキュリティで保護されたセッションを閉じる|SetupSecurity|クライアント側に存在します。 セキュリティで保護されたセッションを閉じるための "メッセージ交換のキャンセル" を格納します。 `propagateActivity` = `true` の場合、このアクティビティはサービスからのプロセスアクション "Cancel" にマージされます。|  
   
  COM+ に関連するすべてのアクティビティを次の表に示します。  
   
-|Activity Name (アクティビティ名)|Activity Type (アクティビティの種類)|Description|  
+|Activity Name (アクティビティ名)|Activity Type (アクティビティの種類)|説明|  
 |-------------------|-------------------|-----------------|  
 |COM+ インスタンスを作成する|TransferToCOMPlus|WCF コードからの COM + 呼び出しごとに1つのアクティビティインスタンス|  
 |COM + の実行 \<operation>|TransferToCOMPlus|WCF コードからの COM + 呼び出しごとに1つのアクティビティインスタンス|  
@@ -55,7 +56,7 @@ ms.locfileid: "96236092"
 
  WMI に関連するすべてのアクティビティを次の表に示します。  
   
-|Activity Name (アクティビティ名)|Activity Type (アクティビティの種類)|Description|  
+|Activity Name (アクティビティ名)|Activity Type (アクティビティの種類)|説明|  
 |-------------------|-------------------|-----------------|  
 |WMI Get|WMIGetObject|ユーザーは、WMI からデータを取得しています。|  
 |WMI Put|WmiPutInstance|ユーザーは、WMI でデータを更新しています。|

@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「HTTP、TCP、または Named-Pipe を使用した非同期シナリオ」を参照してください。
 title: HTTP、TCP、または名前付きパイプを使用した非同期シナリオ
 ms.date: 03/30/2017
 ms.assetid: a4d62402-43a4-48a4-9ced-220633ebc4ce
-ms.openlocfilehash: 00213c8d117f4319d7e29312dd0b9805d916231a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5e01866cd20d63796741a097a6d7d774ea45d3d9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96244146"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99770951"
 ---
 # <a name="asynchronous-scenarios-using-http-tcp-or-named-pipe"></a>HTTP、TCP、または名前付きパイプを使用した非同期シナリオ
 

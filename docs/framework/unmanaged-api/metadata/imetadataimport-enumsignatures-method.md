@@ -1,4 +1,5 @@
 ---
+description: '詳細について: IMetaDataImport:: EnumSignatures メソッド'
 title: IMetaDataImport::EnumSignatures メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d0d65060-6f90-42a2-95cf-6ffb04352996
 topic_type:
 - apiref
-ms.openlocfilehash: 3021124184ab0491337a07144e6f77b5bfea3681
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ed41dd42151791e3d27950f30b10d91217ad7e7a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721973"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99771627"
 ---
 # <a name="imetadataimportenumsignatures-method"></a>IMetaDataImport::EnumSignatures メソッド
 
@@ -58,7 +59,7 @@ HRESULT EnumSignatures (
 |`S_OK`|`EnumSignatures` 正常に返されました。|  
 |`S_FALSE`|列挙するトークンがありません。 この場合、 `pcSignatures` は0になります。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  署名トークンは、 [IMetaDataEmit:: GetTokenFromSig](imetadataemit-gettokenfromsig-method.md) メソッドによって作成されます。  
   

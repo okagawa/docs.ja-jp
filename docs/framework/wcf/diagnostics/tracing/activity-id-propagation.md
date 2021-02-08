@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: アクティビティ ID の伝達'
 title: アクティビティ ID の伝達
 ms.date: 03/30/2017
 ms.assetid: cd1c1ae5-cc8a-4f51-90c9-f7b476bcfe70
-ms.openlocfilehash: 0f0478b16bf2ca0975ae0290a8855756ecfc383e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d407af04304298bcc04a7aa4264eb6fc46563d3a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96236105"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99770899"
 ---
 # <a name="activity-id-propagation"></a>アクティビティ ID の伝達
 
