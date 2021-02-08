@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: StrongNameSignatureGenerationEx 関数'
 title: StrongNameSignatureGenerationEx 関数
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9a75469e-aa49-4e32-ad48-3bafd5202f09
 topic_type:
 - apiref
-ms.openlocfilehash: 96dae519d73505a30c8593e9883da7338525ea2c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e4d35cf51df6047d3a89d4146ceb8bf62e3f1b8b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95708520"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798876"
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>StrongNameSignatureGenerationEx 関数
 
@@ -78,7 +79,7 @@ BOOLEAN StrongNameSignatureGenerationEx (
 
  `true` 正常に完了した場合は。それ以外の場合は `false` 。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `wszFilePath`署名を作成せずに署名のサイズを計算するには、に null を指定します。  
   

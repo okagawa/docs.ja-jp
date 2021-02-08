@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: プロファイリングの概要'
 title: プロファイリングの概要
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-ms.openlocfilehash: cf29260c36437aaf679498f648d0fcac5d65f321
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f83a4435f6a4a62a190383543cf824c76a54a838
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558330"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798915"
 ---
 # <a name="profiling-overview"></a>プロファイリングの概要
 
@@ -46,9 +47,9 @@ CLR アプリケーションのプロファイリングには、通常のコン�
 
 ## <a name="the-profiling-api"></a>プロファイル API
 
-通常、プロファイリング API は、マネージアプリケーションの実行を監視するプログラムである *コードプロファイラー*を記述するために使用されます。
+通常、プロファイリング API は、マネージアプリケーションの実行を監視するプログラムである *コードプロファイラー* を記述するために使用されます。
 
-プロファイル API は、プロファイラー DLL によって使用されます。プロファイラー DLL は、プロファイリング対象アプリケーションと同じプロセスに読み込まれます。 プロファイラー DLL は、コールバックインターフェイスを実装します (ICorProfilerCallback バージョン1.0 および1.1 では[ICorProfilerCallback2](icorprofilercallback2-interface.md) 、バージョン2.0 以降では .NET Framework[ICorProfilerCallback](icorprofilercallback-interface.md) )。 CLR は、このインターフェイス内のメソッドを呼び出して、プロファイリングされたプロセスのイベントをプロファイラーに通知します。 プロファイラーは、 [ICorProfilerInfo](icorprofilerinfo-interface.md) インターフェイスと [ICorProfilerInfo2](icorprofilerinfo2-interface.md) インターフェイスのメソッドを使用して、プロファイリングされたアプリケーションの状態に関する情報を取得することにより、ランタイムにコールバックできます。
+プロファイル API は、プロファイラー DLL によって使用されます。プロファイラー DLL は、プロファイリング対象アプリケーションと同じプロセスに読み込まれます。 プロファイラー DLL は、コールバックインターフェイスを実装します (ICorProfilerCallback バージョン1.0 および1.1 では[ICorProfilerCallback2](icorprofilercallback2-interface.md) 、バージョン2.0 以降では .NET Framework[](icorprofilercallback-interface.md) )。 CLR は、このインターフェイス内のメソッドを呼び出して、プロファイリングされたプロセスのイベントをプロファイラーに通知します。 プロファイラーは、 [ICorProfilerInfo](icorprofilerinfo-interface.md) インターフェイスと [ICorProfilerInfo2](icorprofilerinfo2-interface.md) インターフェイスのメソッドを使用して、プロファイリングされたアプリケーションの状態に関する情報を取得することにより、ランタイムにコールバックできます。
 
 > [!NOTE]
 > プロファイリングされたアプリケーションと同じプロセスで実行するのは、プロファイラー ソリューションのデータ収集の部分だけにしてください。 ユーザー インターフェイスとデータ分析は、すべて別のプロセスで実行する必要があります。
@@ -105,7 +106,7 @@ CLR アプリケーションのプロファイリングには、通常のコン�
 
 API は、CPU とメモリの消費に関しては効率的です。 プロファイルを実行しても、誤った結果をもたらすほどの大きい変化がプロファイリング対象のアプリケーションで発生することはありません。
 
-プロファイル API は、サンプリング プロファイラーと非サンプリング プロファイラーの両方に役立ちます。 *サンプリングプロファイラー*は、プロファイルを通常のクロックティック (たとえば、5ミリ秒) で検査します。 *非サンプリングプロファイラー*は、イベントの原因となったスレッドと同期的にイベントを通知します。
+プロファイル API は、サンプリング プロファイラーと非サンプリング プロファイラーの両方に役立ちます。 *サンプリングプロファイラー* は、プロファイルを通常のクロックティック (たとえば、5ミリ秒) で検査します。 *非サンプリングプロファイラー* は、イベントの原因となったスレッドと同期的にイベントを通知します。
 
 ### <a name="unsupported-functionality"></a>サポートされていない機能
 
@@ -127,7 +128,7 @@ API は、CPU とメモリの消費に関しては効率的です。 プロフ�
 
 通常は、イベントを生成するスレッドが通知も実行します。 このような通知 ( [Functionenter](functionenter-function.md) や [functionenter](functionleave-function.md)など) では、明示的なを指定する必要はありません `ThreadID` 。 また、プロファイラーでは、グローバル ストレージに分析ブロックのインデックスを作成するのではなく、影響を受けるスレッドの `ThreadID` を基に、スレッド ローカル ストレージを使用して分析ブロックを格納および更新する方法を採用する場合があります。
 
-これらのコールバックはシリアル化されないことに注意してください。 ユーザーは、スレッド セーフなデータ構造を作成すると共に、必要に応じてプロファイラー コードをロックして、複数のスレッドからの並行アクセスを防ぐことで、コードを保護する必要があります。 そのため、状況によっては、通常とは異なるシーケンスでコールバックを受け取る場合があります。 たとえば、マネージド アプリケーションで、まったく同じコードを実行する 2 つのスレッドを生成するとします。 この場合、 [ICorProfilerCallback::JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md) `FunctionEnter` [ICorProfilerCallback:: JITCompilationFinished](icorprofilercallback-jitcompilationfinished-method.md)コールバックを受け取る前に、あるスレッドからの一部の関数に対して ICorProfilerCallback:: JITCompilationStarted イベントを受け取り、もう一方のスレッドからコールバックを受け取ることができます。 この場合、ユーザーは、まだ完全に Just-In-Time (JIT) コンパイルが行われていない可能性がある関数についての `FunctionEnter` コールバックを受け取ります。
+これらのコールバックはシリアル化されないことに注意してください。 ユーザーは、スレッド セーフなデータ構造を作成すると共に、必要に応じてプロファイラー コードをロックして、複数のスレッドからの並行アクセスを防ぐことで、コードを保護する必要があります。 そのため、状況によっては、通常とは異なるシーケンスでコールバックを受け取る場合があります。 たとえば、マネージド アプリケーションで、まったく同じコードを実行する 2 つのスレッドを生成するとします。 この場合、 [](icorprofilercallback-jitcompilationstarted-method.md) `FunctionEnter` [ICorProfilerCallback:: JITCompilationFinished](icorprofilercallback-jitcompilationfinished-method.md)コールバックを受け取る前に、あるスレッドからの一部の関数に対して ICorProfilerCallback:: JITCompilationStarted イベントを受け取り、もう一方のスレッドからコールバックを受け取ることができます。 この場合、ユーザーは、まだ完全に Just-In-Time (JIT) コンパイルが行われていない可能性がある関数についての `FunctionEnter` コールバックを受け取ります。
 
 ## <a name="security"></a>セキュリティ
 

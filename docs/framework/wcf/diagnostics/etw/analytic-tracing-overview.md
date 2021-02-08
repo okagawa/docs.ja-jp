@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「分析トレースの概要」を参照してください。
 title: 分析トレースの概要
 ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-ms.openlocfilehash: b519156faba68c769f4c1380a11706aebaab7e7c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 574236b364ab03afbf3c1f3dc3a63842220e38b0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559058"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798863"
 ---
 # <a name="analytic-tracing-overview"></a>分析トレースの概要
 
@@ -32,7 +33,7 @@ WCF 診断は、構成セクション内で有効になってい `<system.servic
 
 Web でホストされる IIS 仮想アプリケーションの WCF 診断設定は、その *Web.config* ファイルで有効になります。 別の方法として、アプリケーション内のサブディレクトリに *Web.config* ファイルを作成することもできます。 このオプションを選択すると、サブディレクトリ内のすべてのサービスに設定が適用されます。 診断設定がアプリケーション内のすべてのサービスに対して一貫して初期化されるようにするには、アプリケーション内の個々のサブディレクトリの1つではなく、アプリケーションディレクトリ内の *Web.config* ファイル内に設定を配置する必要があります。
 
-## <a name="channels"></a>チャンネル
+## <a name="channels"></a>チャネル
 
 ETW の場合、ソフトウェア コンポーネントは、チャネルを使用することで、トレース イベントをユーザーの種類に応じて振り分けることができます。 たとえば、システム管理者のイベントを1つのチャネルに送信し、アプリケーション開発者にとって重要なイベントを別のチャネルに送信できます。 チャネルには名前が付けられ、Windows に登録されるため、コンシューマーはイベントビューアーを使用してチャネルのイベントを表示できます。
 
