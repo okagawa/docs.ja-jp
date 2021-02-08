@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次のページを参照してください。表示方法
 title: ICorDebugVariableHome インターフェイス
 ms.date: 03/30/2017
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76f2bf3b-759f-4eed-bce7-119415b25915
 topic_type:
 - apiref
-ms.openlocfilehash: 089e68278113dfdf509ed848f424ad32baa145ed
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a1dcc959ba9aeffc0e511dcd2f5bb15f58445139
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679547"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790634"
 ---
 # <a name="icordebugvariablehome-interface"></a>ICorDebugVariableHome インターフェイス
 

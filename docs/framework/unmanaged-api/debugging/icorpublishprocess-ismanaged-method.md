@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorPublishProcess:: IsManaged メソッド'
 title: ICorPublishProcess::IsManaged メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 06b1f7cc-acdf-47a6-9d53-d9dec2424152
 topic_type:
 - apiref
-ms.openlocfilehash: dfe247bda75c3695c7c09b85729b4e057c13c62d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 55f620a896efd87c2f154ac68ef2db1a1b0a1ebc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95692632"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790504"
 ---
 # <a name="icorpublishprocessismanaged-method"></a>ICorPublishProcess::IsManaged メソッド
 
@@ -39,7 +40,7 @@ HRESULT IsManaged (
  `pbManaged`  
  入出力プロセスにマネージコードがあるかどうかを示すブール値へのポインター。 `true`プロセスにマネージコードがある場合は、値はです。それ以外の場合は `false` です。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  現在のバージョンのでは `ICorPublishProcess` 、マネージコードを持つプロセスのみにアクセスが許可されるため、は `IsManaged` 常にを返し `true` ます。  
   

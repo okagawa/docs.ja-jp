@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「ワークフローの追跡の構成」を参照してください。
 title: ワークフローの追跡の構成
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 098b295be00b1b8283e26e79ea14e78634fdb504
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 061a0edf107296e04d86ed1a50b9a8bfefd7bfce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557555"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792766"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>ワークフローの追跡の構成
 
@@ -148,7 +149,7 @@ invoker.Invoke();
 
 ### <a name="viewing-tracking-records-in-event-viewer"></a>イベント ビューアーでの追跡レコードの表示
 
-WF 実行 - 分析ログとデバッグ ログ - を追跡すると、特に興味深い 2 つのイベント ビューアーのログ記録があります。 どちらも、Microsoft&#124;Windows&#124;アプリケーションサーバー-アプリケーションノードの下に存在します。 このセクション含まれるログは、システム全体に影響を及ぼすイベントではなく、1 つのアプリケーションからのイベントを格納します。
+WF 実行 - 分析ログとデバッグ ログ - を追跡すると、特に興味深い 2 つのイベント ビューアーのログ記録があります。 どちらも、Microsoft&#124;Windows&#124;アプリケーション Server-Applications ノードの下に存在します。 このセクション含まれるログは、システム全体に影響を及ぼすイベントではなく、1 つのアプリケーションからのイベントを格納します。
 
 デバッグ トレースのイベントがデバッグ ログに書き込まれます。 イベント ビューアー内の WF のデバッグ トレース イベントを収集するには、デバッグ ログを有効にします。
 
@@ -196,7 +197,7 @@ WF 4 には、追跡レコードを ETW (Event Tracing for Windows) セッショ
     </system.serviceModel>
     ```
 
-2. マニフェストファイルを%windir%\Microsoft.NET\Framework \Microsoft.Windows.ApplicationServer.Applications.man から \\ \<latest version of [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> 一時的な場所にコピーし、名前を Applications_Provider1 ApplicationServer に変更します。
+2. マニフェストファイルを%windir%\Microsoft.NET\Framework \Microsoft.Windows.ApplicationServer.Applications.man から \\ \<latest version of [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> 一時的な場所にコピーし、名前を Microsoft.Windows.ApplicationServer.Applications_Provider1 に変更します。
 
 3. マニフェスト ファイルの GUID を新しい GUID に変更します。
 

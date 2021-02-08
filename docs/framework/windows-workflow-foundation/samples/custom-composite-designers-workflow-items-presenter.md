@@ -1,22 +1,23 @@
 ---
+description: 詳細については、「カスタム複合デザイナー-ワークフロー項目プレゼンター」を参照してください。
 title: カスタム複合デザイナー - Workflow Items Presenter
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 081dce85946fab85cff474508c46770c762b9e76
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 07970763e12eccd981370f1241642cc28f675824
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338721"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792584"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>カスタム複合デザイナー - Workflow Items Presenter
 
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> は、格納されている要素のコレクションを編集できる、WF デザイナー プログラミング モデル内の主要な型です。 このサンプルでは、このような編集可能なコレクションを表示するアクティビティ デザイナーの構築方法を示します。
 
-このサンプルでは、次の方法を示します。
+このサンプルは次の方法を示します。
 
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> を使用したカスタム アクティビティ デザイナーの作成
 
@@ -26,7 +27,7 @@ ms.locfileid: "75338721"
 
 ## <a name="set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行する
 
-1. または Visual Studio 2010 の Visual Basic 用の UsingWorkflowItemsPresenter サンプルソリューションを開きます。 C#
+1. C# の **UsingWorkflowItemsPresenter** サンプルソリューション、または Visual Studio 2010 の Visual Basic を開きます。
 
 2. ソリューションをビルドして実行します。
 
@@ -157,7 +158,7 @@ ms.locfileid: "75338721"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemsPresenter`
 

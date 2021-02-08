@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 1021-ScheduleBookmarkWorkItem'
 title: 1021 - ScheduleBookmarkWorkItem
 ms.date: 03/30/2017
 ms.assetid: 2e0da311-b219-4637-9460-90cdafcc4ecd
-ms.openlocfilehash: 42ed23654622e29df8ffc210c8d5ba572fa69fd4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5153d2e90a75bab90c76ee8786dc82d4ddac19a1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275350"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792818"
 ---
 # <a name="1021---schedulebookmarkworkitem"></a>1021 - ScheduleBookmarkWorkItem
 
@@ -15,12 +16,12 @@ ms.locfileid: "96275350"
   
 |||  
 |-|-|  
-|ID|1021|  
+|id|1021|  
 |Keywords|WFRuntime|  
 |Level|"詳細"|  
 |チャネル|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>説明  
 
  BookmarkWorkItem がスケジュールされていることを示します。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96275350"
   
 ## <a name="details"></a>詳細  
   
-|データ項目名|データ項目の型|Description|  
+|データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  
 |アクティビティ|xs:string|アクティビティの型名。|  
 |DisplayName|xs:string|アクティビティの表示名。|  

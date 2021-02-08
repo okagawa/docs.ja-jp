@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「ICorDebugMutableDataTarget インターフェイス」を参照してください。
 title: ICorDebugMutableDataTarget インターフェイス
 ms.date: 03/30/2017
 ms.assetid: 14aad5b3-84ab-4bbc-94e3-1eb92e258d10
-ms.openlocfilehash: cd22707832504ca2f08299872bc39bca2af782bb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 387c5317bea015459e306994c36761571b427628
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709350"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790699"
 ---
 # <a name="icordebugmutabledatatarget-interface"></a>ICorDebugMutableDataTarget インターフェイス
 
@@ -21,7 +22,7 @@ ms.locfileid: "95709350"
 |[SetThreadContext メソッド](icordebugmutabledatatarget-setthreadcontext-method.md)|スレッドのコンテキスト (レジスタの値) を設定します。|  
 |[WriteVirtual メソッド](icordebugmutabledatatarget-writevirtual-method.md)|ターゲット プロセスのアドレス空間にメモリを書き込みます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このモジュール [へのこの](icordebugdatatarget-interface.md) 拡張機能は、ターゲットプロセスを変更する (たとえば、ライブによる干渉デバッグを実行する) デバッグツールで実装できます。  
   

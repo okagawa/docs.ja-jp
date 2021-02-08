@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: テキストの表示'
 title: ICorDebugILFrame インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d5cf5056-da4d-4629-914d-afe42a5393df
 topic_type:
 - apiref
-ms.openlocfilehash: 4f34fdf9a0eeb47e027cc874afee5bd04f5bd9bc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 251fa18151ff286bee3e1bcf7707bf5f7145b4f1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712392"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791349"
 ---
 # <a name="icordebugilframe-interface"></a>ICorDebugILFrame インターフェイス
 
@@ -39,7 +40,7 @@ Microsoft 中間言語 (MSIL) コードのスタックフレームを表しま�
 |[GetStackValue メソッド](icordebugilframe-getstackvalue-method.md)|実装されていません。|  
 |[SetIP メソッド](icordebugilframe-setip-method.md)|命令ポインターを MSIL コード内の指定したオフセット位置に設定します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  インターフェイスは、 `ICorDebugILFrame` 特別なテキストフレームインターフェイスです。 これは、MSIL コードフレームまたは just-in-time (JIT) コンパイルフレームに対して使用されます。 JIT でコンパイルされたフレームは、 `ICorDebugILFrame` インターフェイスとの両方のフレームインターフェイスを実装します。  
   

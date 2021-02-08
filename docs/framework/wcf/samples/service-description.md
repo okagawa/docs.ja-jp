@@ -1,15 +1,16 @@
 ---
-title: 確認してください
+description: '詳細情報: サービスの説明'
+title: サービスの説明
 ms.date: 03/30/2017
 ms.assetid: 7034b5d6-d608-45f3-b57d-ec135f83ff24
-ms.openlocfilehash: c0fa389e9c894bcfec49ce7538b512c96f176c23
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0985933bb48708faac716575f6a95588df1620d1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262581"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793091"
 ---
-# <a name="service-description"></a>確認してください
+# <a name="service-description"></a>サービスの説明
 
 サービスの説明のサンプルでは、サービスが実行時にそのサービスの説明情報を取得する方法を示します。 このサンプルは、サービスに関する説明的な情報を返すために定義された追加のサービス操作を使用して、 [はじめに](getting-started-sample.md)に基づいています。 返される情報には、サービスのベース アドレスとエンドポイントが示されます。 サービスは、<xref:System.ServiceModel.OperationContext>、<xref:System.ServiceModel.ServiceHost>、および <xref:System.ServiceModel.Description.ServiceDescription> クラスを使用してこの情報を提供します。  
   

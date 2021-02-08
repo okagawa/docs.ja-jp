@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「有害メッセージの処理」を参照してください。
 title: 有害メッセージ処理
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 9aeb404cea18a7dd6a9c416c0728d9905c0d782d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1d6c8027d44da4d79562e4e427654a3d85df3e88
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96244822"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793624"
 ---
 # <a name="poison-message-handling"></a>有害メッセージ処理
 
@@ -35,7 +36,7 @@ ms.locfileid: "96244822"
   
 - Reject :  このオプションは、Windows Vista でのみ使用できます。 これにより、メッセージキュー (MSMQ) は、メッセージを受信できないという否定受信確認を送信キューマネージャーに返信するように指示します。 メッセージは、送信側キュー マネージャーの配信不能キューに置かれます。  
   
-- Move :  このオプションは、Windows Vista でのみ使用できます。 有害メッセージを有害メッセージ キューに移動して、後で有害メッセージ処理アプリケーションで処理できるようにします。 有害メッセージ キューは、アプリケーション キューのサブキューです。 有害メッセージ処理アプリケーションは、有害キューからメッセージを読み取る WCF サービスにすることができます。 有害キューはアプリケーションキューのサブキューであり、oison://applicationqueue queue としてアドレス指定できます。ここで、 \<*machine-name*> / *applicationQueue**コンピューター名* はキューが存在するコンピューターの名前、 *applicationqueue* はアプリケーション固有のキューの名前です。  
+- Move :  このオプションは、Windows Vista でのみ使用できます。 有害メッセージを有害メッセージ キューに移動して、後で有害メッセージ処理アプリケーションで処理できるようにします。 有害メッセージ キューは、アプリケーション キューのサブキューです。 有害メッセージ処理アプリケーションは、有害キューからメッセージを読み取る WCF サービスにすることができます。 有害キューはアプリケーションキューのサブキューであり、oison://applicationqueue queue としてアドレス指定できます。ここで、 \<*machine-name*> / *コンピューター名* はキューが存在するコンピューターの名前、 *applicationqueue* はアプリケーション固有のキューの名前です。  
   
 メッセージに対して実行される配信の最大試行回数は、次のようになります。  
   

@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「ICorDebugVariableSymbol インターフェイス」を参照してください。
 title: ICorDebugVariableSymbol インターフェイス
 ms.date: 03/30/2017
 ms.assetid: 0e58b85e-69bd-41ff-bedb-8cdc8be6a7a2
-ms.openlocfilehash: 3d808fd49eb7767f1f48ad4e07d8ba7e47c8f34b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fa3fc1f318627e9175a3066c3bd3eac00929ea60
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679482"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790543"
 ---
 # <a name="icordebugvariablesymbol-interface"></a>ICorDebugVariableSymbol インターフェイス
 
@@ -23,7 +24,7 @@ ms.locfileid: "95679482"
 |[GetValue メソッド](icordebugvariablesymbol-getvalue-method.md)|変数の値をバイト配列として取得します。|  
 |[SetValue メソッド](icordebugvariablesymbol-setvalue-method.md)|バイト配列の値を変数に代入します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このインターフェイスは .NET ネイティブでのみ使用可能です。 .NET ネイティブの外部で ICorDebug シナリオについてこのインターフェイスを実装する場合は、共通言語ランタイムはこのインターフェイスを無視します。  

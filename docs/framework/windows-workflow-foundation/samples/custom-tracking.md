@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「カスタム追跡」を参照してください。
 title: カスタム追跡
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: 3d125c59196cb2a7d33961e0f271aab8c5663a50
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a06faaaa50a06d613f7183ca018438a8f2b4460b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96234572"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792558"
 ---
 # <a name="custom-tracking"></a>カスタム追跡
 
@@ -25,7 +26,7 @@ ms.locfileid: "96234572"
 
  次の表で、ワークフロー ランタイムが出力する追跡レコードの詳細を説明します。
 
-|追跡レコード|Description|
+|追跡レコード|説明|
 |---------------------|-----------------|
 |ワークフロー インスタンスの追跡レコード|ワークフロー インスタンスのライフサイクルを表します。 たとえば、ワークフローの開始時または完了時にインスタンス レコードが出力されます。|
 |アクティビティ状態の追跡レコード|アクティビティの実行状況を詳しく記録します。 これらのレコードは、アクティビティをスケジュールしたとき、アクティビティが完了したとき、エラーがスローされたときなど、ワークフロー アクティビティの状態を示します。|

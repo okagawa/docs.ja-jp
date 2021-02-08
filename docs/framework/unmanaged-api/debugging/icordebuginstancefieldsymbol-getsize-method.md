@@ -1,13 +1,14 @@
 ---
+description: '詳細については、次の情報を参照してください: GetSize メソッド'
 title: ICorDebugInstanceFieldSymbol::GetSize メソッド
 ms.date: 03/30/2017
 ms.assetid: a4af1e3b-6a9f-4855-95ba-5317565c8e2b
-ms.openlocfilehash: c4b193b45e30b0eba3367f18cb1e4c2b4e108fa8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fa143620b57ec053ab26ff79b7ea2b2f386431e7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724911"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791154"
 ---
 # <a name="icordebuginstancefieldsymbolgetsize-method"></a>ICorDebugInstanceFieldSymbol::GetSize メソッド
 
@@ -26,7 +27,7 @@ HRESULT GetSize(
  `pcbSize`  
  [out] フィールドの長さへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  

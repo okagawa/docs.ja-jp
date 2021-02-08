@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次の説明
 title: は、次のメソッドを実行します。
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: eb9ea96c-5b58-4655-8104-094fc8b393b8
 topic_type:
 - apiref
-ms.openlocfilehash: 4ef4ed19033b0857b9970ee8103bbd92f383898c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0aa0174e67bceaa724ddfeadc2560d12e112b859
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679534"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790608"
 ---
 # <a name="icordebugvariablehomeenumnext-method"></a>は、次のメソッドを実行します。
 
@@ -56,7 +57,7 @@ HRESULT Next(
 |`S_OK`|メソッドは正常に完了しました。|  
 |`S_FALSE`|に反映された実際のインスタンス数 `pceltFetched` が、要求されたインスタンスの数より少なくなっています。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  [次](icordebugvariablehomeenum-next-method.md)のメソッドは、 `celt` 列挙子の現在位置を起点として、最大オブジェクトを取得します。 メソッドから制御が戻るときに、 `pceltFetched` 取得したオブジェクトの実際の数を格納します。  
   

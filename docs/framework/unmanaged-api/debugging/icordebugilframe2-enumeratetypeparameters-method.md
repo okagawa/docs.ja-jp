@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugILFrame2:: EnumerateTypeParameters メソッド'
 title: ICorDebugILFrame2::EnumerateTypeParameters メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 722d0d74-e0df-491f-98c4-62d501dfaf6f
 topic_type:
 - apiref
-ms.openlocfilehash: 73c17864047270302dbc115667eec4bf5ea1569d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 34f305b7793e4909318ae2301d72e2af7c12f2c1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725046"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791292"
 ---
 # <a name="icordebugilframe2enumeratetypeparameters-method"></a>ICorDebugILFrame2::EnumerateTypeParameters メソッド
 
@@ -41,7 +42,7 @@ HRESULT EnumerateTypeParameters (
   
  型パラメーターの一覧には、クラス型パラメーター (存在する場合) と、その後にメソッド型パラメーター (存在する場合) が含まれます。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  [IMetaDataImport2:: EnumGenericParams](../metadata/imetadataimport2-enumgenericparams-method.md)メソッドを使用して、このリストに含まれるクラス型パラメーターとメソッド型パラメーターの数を確認します。  
   

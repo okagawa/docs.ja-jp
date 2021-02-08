@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugModule3:: CreateReaderForInMemorySymbols メソッド'
 title: ICorDebugModule3::CreateReaderForInMemorySymbols メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: af317171-d66d-4114-89eb-063554c74940
 topic_type:
 - apiref
-ms.openlocfilehash: 44f4c59f95c28f9982d67875584e2f9803c0ed3b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: af037cc891e83f53fd94bad290f40286ed665e6f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709571"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790777"
 ---
 # <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a>ICorDebugModule3::CreateReaderForInMemorySymbols メソッド
 
@@ -56,7 +57,7 @@ HRESULT CreateReaderForInMemorySymbols (
  E_FAIL (またはその他の E_ リターン コード)  
  リーダーを作成できません。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドを使用して、インメモリ (非動的) モジュール用のシンボルリーダーオブジェクトを作成することもできますが、最初にシンボルを使用できるようになった後 ( [UpdateModuleSymbols メソッド](icordebugmanagedcallback-updatemodulesymbols-method.md) コールバックによって示されます) にのみ使用できます。  
   

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 永続的に発行されたトークンプロバイダー'
 title: 永続性発行済みトークン プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 7e0025eb4bc4918b977d9d8c4e2b1435b0425973
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: dfde4efa961704659d9d1de6010b16616467a779
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291675"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793273"
 ---
 # <a name="durable-issued-token-provider"></a>永続性発行済みトークン プロバイダー
 

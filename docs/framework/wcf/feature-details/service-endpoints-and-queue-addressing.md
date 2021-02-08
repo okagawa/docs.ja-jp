@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「サービスエンドポイントとキューのアドレス指定」を参照してください。
 title: サービス エンドポイントとキューのアドレス指定
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: f7c3221d466d2599139eb29a8358d726c2b4edda
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 61b4e35de6bd89f45aa9f5e54a55beaf8536b74b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253922"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793559"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>サービス エンドポイントとキューのアドレス指定
 
@@ -35,7 +36,7 @@ ms.locfileid: "96253922"
   
  net.tcp:// \<*host-name*> /[private/] \<*queue-name*>  
   
- ここで、  
+ 各値の説明:  
   
 - \<*host-name*> 対象のキューをホストするコンピューターの名前を指定します。  
   

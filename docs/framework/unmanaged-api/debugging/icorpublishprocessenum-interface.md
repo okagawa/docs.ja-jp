@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorPublishProcessEnum インターフェイス」を参照してください。
 title: ICorPublishProcessEnum インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aac8fcf9-ac09-437c-bd5c-2fda14ae1007
 topic_type:
 - apiref
-ms.openlocfilehash: ebf484524b32d8e917d88c21425fab314dfc41be
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 87d80d066995dbeca67f461e01652dd3deb3bf1b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95692619"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790491"
 ---
 # <a name="icorpublishprocessenum-interface"></a>ICorPublishProcessEnum インターフェイス
 
@@ -29,9 +30,9 @@ ms.locfileid: "95692619"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Next メソッド](icorpublishprocessenum-next-method.md)|現在の位置から開始して、指定した数の `ICorPublishProcess` インスタンスをコレクションから取得します。|  
+|[次のメソッド](icorpublishprocessenum-next-method.md)|現在の位置から開始して、指定した数の `ICorPublishProcess` インスタンスをコレクションから取得します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  インターフェイスは、 `ICorPublishProcessEnum` 抽象インターフェイス [ICorPublishEnum](icorpublishenum-interface.md)のメソッドを実装します。  
   

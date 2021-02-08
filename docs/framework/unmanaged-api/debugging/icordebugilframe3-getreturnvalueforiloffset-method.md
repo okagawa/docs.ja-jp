@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugILFrame3:: GetReturnValueForILOffset メソッド'
 title: ICorDebugILFrame3::GetReturnValueForILOffset メソッド
 ms.date: 03/30/2017
 dev_langs:
@@ -13,12 +14,12 @@ api_type:
 ms.assetid: 06522727-5f64-4391-9331-11386883c352
 topic_type:
 - apiref
-ms.openlocfilehash: 11207298b071527151535144330790df767c2101
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4be4cb3a108394f2701f6690b06f6c2252ae25cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725002"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791271"
 ---
 # <a name="icordebugilframe3getreturnvalueforiloffset-method"></a>ICorDebugILFrame3::GetReturnValueForILOffset メソッド
 
@@ -41,7 +42,7 @@ HRESULT GetReturnValueForILOffset(
  `ppReturnValue`  
  関数呼び出しの戻り値に関する情報を提供する "ICorDebugValue" インターフェイスオブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドは、メソッドの戻り値を取得するために、 [ICorDebugCode3:: Getreturnvalu Veoffset](icordebugcode3-getreturnvalueliveoffset-method.md) メソッドと共に使用されます。 次の 2 つのコード例で示すように、これは戻り値が無視されるメソッドの場合に特に役立ちます。 1 番目の例では、<xref:System.Int32.TryParse%2A?displayProperty=nameWithType> メソッドを呼び出しますが、メソッドの戻り値を無視します。  
   

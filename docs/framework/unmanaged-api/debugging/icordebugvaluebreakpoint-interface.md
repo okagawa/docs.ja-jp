@@ -1,4 +1,5 @@
 ---
+description: 詳細について
 title: ICorDebugValueBreakpoint インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c02338fe-da6c-467f-9567-70ebb387e901
 topic_type:
 - apiref
-ms.openlocfilehash: cf0a87afd1c0057c054205432fea7aa5844afb53
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ff53b1f6e1557a3e98cc642f80eaaa2feaeac473
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684413"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790686"
 ---
 # <a name="icordebugvaluebreakpoint-interface"></a>ICorDebugValueBreakpoint インターフェイス
 
@@ -31,7 +32,7 @@ ICorDebugBreakpoint インターフェイスを拡張して、特定の値にア
 |------------|-----------------|  
 |[GetValue メソッド](icordebugvaluebreakpoint-getvalue-method.md)|ブレークポイントが設定されたオブジェクトの値を表す、ICorDebugValue オブジェクトへのインターフェイスポインターを取得します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  

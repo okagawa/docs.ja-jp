@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugManagedCallback2::D estroyConnection メソッド'
 title: ICorDebugManagedCallback2::DestroyConnection メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf7940e9-4558-4319-925c-09f6c98c8fcd
 topic_type:
 - apiref
-ms.openlocfilehash: d725cbe89e0631630affb6b0540a7d5f57ab6b89
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f17def5599dc02ed6b7b49d7f8ed4db02eb40181
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720114"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790894"
 ---
 # <a name="icordebugmanagedcallback2destroyconnection-method"></a>ICorDebugManagedCallback2::DestroyConnection メソッド
 
@@ -43,7 +44,7 @@ HRESULT DestroyConnection (
  `dwConnectionId`  
  から破棄された接続の ID。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ホストがホスト `DestroyConnection` [API](../hosting/index.md)で[ICLRDebugManager:: endconnection](../hosting/iclrdebugmanager-endconnection-method.md)を呼び出すと、コールバックが発生します。  
   

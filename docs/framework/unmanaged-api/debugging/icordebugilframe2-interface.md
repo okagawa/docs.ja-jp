@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorDebugILFrame2 インターフェイス」を参照してください。
 title: ICorDebugILFrame2 インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f94b9d53-d8f8-4424-a95e-53a1bfd26e4a
 topic_type:
 - apiref
-ms.openlocfilehash: 3ada9e19bb1a92b3bd7e41340b99bf81b651dd37
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8379fda39a210e1df902dab3ac85132f04aee5fc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725015"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791310"
 ---
 # <a name="icordebugilframe2-interface"></a>ICorDebugILFrame2 インターフェイス
 
@@ -32,7 +33,7 @@ ms.locfileid: "95725015"
 |[EnumerateTypeParameters メソッド](icordebugilframe2-enumeratetypeparameters-method.md)|このフレームのパラメーターを格納している、テキスト型の型の列挙体オブジェクトを取得し <xref:System.Type> ます。|  
 |[RemapFunction メソッド](icordebugilframe2-remapfunction-method.md)|新しい MSIL オフセットを指定して、編集された関数を再マップします。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  

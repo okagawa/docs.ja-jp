@@ -1,13 +1,14 @@
 ---
+description: '詳細については、次の情報を参照してください: いいでしょう。シンボルインターフェイス'
 title: ICorDebugInstanceFieldSymbol インターフェイス
 ms.date: 03/30/2017
 ms.assetid: a4a8f259-b83a-4425-ae8b-72b067dbc0d9
-ms.openlocfilehash: 4ef0f7a46acf7e9df732d630c9eb22044e09d658
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aa47c858ec5b4b0d04b851357fe81c0fc9b2e30a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724898"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791133"
 ---
 # <a name="icordebuginstancefieldsymbol-interface"></a>ICorDebugInstanceFieldSymbol インターフェイス
 
@@ -21,7 +22,7 @@ ms.locfileid: "95724898"
 |[GetOffset メソッド](icordebuginstancefieldsymbol-getoffset-method.md)|このインスタンス フィールドの親クラスにおける、このインスタンス フィールドのオフセット (バイト単位) を取得します。|  
 |[GetSize メソッド](icordebuginstancefieldsymbol-getsize-method.md)|インスタンス フィールドのサイズ (バイト単位) を取得します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ICorDebugInstanceFieldSymbol` インターフェイスは、インスタンス フィールドのデバッグ シンボル情報を取得するために使用されます。  
   

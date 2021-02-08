@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: を参照'
 title: ICorDebugManagedCallback::ControlCTrap メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0500854e-2121-43d9-a028-64312da35258
 topic_type:
 - apiref
-ms.openlocfilehash: 0c38269ea4d730d8f3f9ba5d2c5d8f0edf6d7d45
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9fa71dacb20ff6df21d8aabb687c2601f27643c7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731840"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791068"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>ICorDebugManagedCallback::ControlCTrap メソッド
 
@@ -46,7 +47,7 @@ HRESULT ControlCTrap (
 |S_OK|デバッガーは CTRL + C トラップを処理します。|  
 |S_FALSE|デバッガーは CTRL + C トラップを処理しません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  プロセス内のすべてのアプリケーションドメインがこのコールバックに対して停止されています。  
   

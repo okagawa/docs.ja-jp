@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: ServiceModel 属性と ServiceDescription 参照'
 title: ServiceModel 属性および ServiceDescription 参照
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-ms.openlocfilehash: db2824d7452f1ec4c675782e18ad25bd4be6a483
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 52d800d1aab7fc7d60f0b1234065aa876944ea3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253870"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793507"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel 属性および ServiceDescription 参照
 
@@ -44,7 +45,7 @@ ms.locfileid: "96253870"
   
 |OperationContractAttribute 値|影響を受ける説明ツリーの値|  
 |--------------------------------------|-------------------------------------|  
-|アクション|出力メッセージまたは入力メッセージの <xref:System.ServiceModel.Description.MessageDescription.Action%2A>。コントラクトまたはコールバック コントラクトによって異なります。|  
+|操作|出力メッセージまたは入力メッセージの <xref:System.ServiceModel.Description.MessageDescription.Action%2A>。コントラクトまたはコールバック コントラクトによって異なります。|  
 |AsyncPattern|true の場合は、<xref:System.ServiceModel.Description.OperationDescription.BeginMethod%2A> と <xref:System.ServiceModel.Description.OperationDescription.EndMethod%2A>|  
 |IsOneWay|<xref:System.ServiceModel.Description.MessageDescription> の 1 つの <xref:System.ServiceModel.Description.OperationDescription.Messages%2A> にマップします。|  
 |IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
@@ -55,7 +56,7 @@ ms.locfileid: "96253870"
   
 |FaultContractAttribute 値|影響を受ける説明ツリーの値|  
 |----------------------------------|-------------------------------------|  
-|アクション|<xref:System.ServiceModel.Description.FaultDescription.Action%2A>。コントラクトまたはコールバック コントラクトによって異なります。|  
+|操作|<xref:System.ServiceModel.Description.FaultDescription.Action%2A>。コントラクトまたはコールバック コントラクトによって異なります。|  
 |DetailType|<xref:System.ServiceModel.Description.FaultDescription.DetailType%2A>|  
 |名前|<xref:System.ServiceModel.Description.FaultDescription.Name%2A>|  
 |名前空間|<xref:System.ServiceModel.Description.FaultDescription.Namespace%2A>|  
@@ -93,7 +94,7 @@ ms.locfileid: "96253870"
 |--------------------------------------|-------------------------------------|  
 |名前|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> の対応する部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |名前空間|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> の対応する部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|Order|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A> の対応する部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|注文|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A> の対応する部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> の対応する部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
 |MessageHeaderArrayAttribute 値|影響を受ける説明ツリーの値|  

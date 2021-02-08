@@ -1,24 +1,25 @@
 ---
+description: 詳細については、「データベースアクセスアクティビティ」を参照してください。
 title: データベース アクセス アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: ed3f0ad3f2fd19f622c9cb0faf7d5cd864b81995
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 421da4a55997dac62ccc5c598bc401a20711ec61
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094645"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792545"
 ---
 # <a name="database-access-activities"></a>データベース アクセス アクティビティ
 
-データベース アクセス アクティビティを使用すると、ワークフロー内でデータベースにアクセスできます。 これらのアクティビティにより、データベースにアクセスして情報を取得または変更したり、 [ADO.NET](../../data/adonet/index.md)を使用してデータベースにアクセスしたりすることができます。
+データベース アクセス アクティビティを使用すると、ワークフロー内でデータベースにアクセスできます。 これらのアクティビティにより、データベースにアクセスして情報を取得または変更したり、 [ADO.NET](../../data/adonet/index.md) を使用してデータベースにアクセスしたりすることができます。
 
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、(ダウンロードページ) にアクセスして、すべての Windows Communication Foundation (WCF) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] のサンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、(ダウンロードページ) にアクセスして、すべての Windows Communication Foundation (WCF) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`
 
@@ -72,7 +73,7 @@ Public class DbUpdate: AsyncCodeActivity
 }
 ```
 
-|引数|[説明]|
+|引数|説明|
 |-|-|
 |ProviderName|ADO.NET プロバイダーの不変名。 この引数を設定する場合は、`ConnectionString` も設定する必要があります。|
 |ConnectionString|データベースに接続するための接続文字列。 この引数を設定する場合は、`ProviderName` も設定する必要があります。|
@@ -92,7 +93,7 @@ Public class DbUpdate: AsyncCodeActivity
 
 実行するクエリは `Sql` プロパティで構成し、パラメーターは `Parameters` コレクションを通じて渡します。
 
-`DbQueryScalar` の実行後、スカラーは、基本クラス <xref:System.Activities.AsyncCodeActivity%601>) で定義されている `Result out` 引数 (`TResult`型) で返されます。
+`DbQueryScalar`が実行されると、スカラーが `Result out` 引数 (型は `TResult` 、基本クラスで定義されている) で返され <xref:System.Activities.AsyncCodeActivity%601> ます。
 
 ```csharp
 public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
@@ -126,7 +127,7 @@ public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
 }
 ```
 
-|引数|[説明]|
+|引数|説明|
 |-|-|
 |ProviderName|ADO.NET プロバイダーの不変名。 この引数を設定する場合は、`ConnectionString` も設定する必要があります。|
 |ConnectionString|データベースに接続するための接続文字列。 この引数を設定する場合は、`ProviderName` も設定する必要があります。|
@@ -138,13 +139,13 @@ public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
 
 ## <a name="dbquery"></a>DbQuery
 
-オブジェクトのリストを取得するクエリを実行します。 クエリが実行されると、マッピング関数が実行されます (<`DbDataReader`、`TResult`> または <xref:System.Activities.ActivityFunc%601><`DbDataReader`、`TResult`>) <xref:System.Func%601>できます。 このマッピング関数は、`DbDataReader` 内のレコードを取得して、返されるオブジェクトにマップします。
+オブジェクトのリストを取得するクエリを実行します。 クエリが実行されると、マッピング関数が実行されます (つまり <xref:System.Func%601> < `DbDataReader` 、、 `TResult`> または <xref:System.Activities.ActivityFunc%601> < `DbDataReader` `TResult`>)。 このマッピング関数は、`DbDataReader` 内のレコードを取得して、返されるオブジェクトにマップします。
 
 接続情報を構成するには、プロバイダーの不変名 (`ProviderName`) と接続文字列 (`ConnectionString`) を設定するか、アプリケーション構成ファイルの接続文字列構成名 (`ConfigFileSectionName`) を使用します。
 
 実行するクエリは `Sql` プロパティで構成し、パラメーターは `Parameters` コレクションを通じて渡します。
 
-SQL クエリの結果は、`DbDataReader` を使用して取得されます。 `DbDataReader` が反復処理されて、`DbDataReader` の行が `TResult` のインスタンスにマップされます。 `DbQuery` のユーザーは、マッピングコードを指定する必要があります。これを行うには、<xref:System.Func%601><`DbDataReader`、`TResult`>、<xref:System.Activities.ActivityFunc%601><`DbDataReader`、`TResult`> の2つの方法があります。 1 つ目の方法は、マッピングが 1 つのパルスで実行されるので 高速ですが、XAML にシリアル化することはできません。 2 つ目の方法は、マッピングが複数のパルスで実行されるので 時間がかかることがありますが、XAML へのシリアル化や宣言による作成が可能です (既存のアクティビティをマッピングに参加させることができます)。
+SQL クエリの結果は、`DbDataReader` を使用して取得されます。 `DbDataReader` が反復処理されて、`DbDataReader` の行が `TResult` のインスタンスにマップされます。 のユーザーは、 `DbQuery` マッピングコードを指定する必要があります。これは、、>、または> の使用という2つの方法で行うことができ <xref:System.Func%601> < `DbDataReader` `TResult` <xref:System.Activities.ActivityFunc%601> < `DbDataReader` `TResult` ます。 1 つ目の方法は、マッピングが 1 つのパルスで実行されるので 高速ですが、XAML にシリアル化することはできません。 2 つ目の方法は、マッピングが複数のパルスで実行されるので 時間がかかることがありますが、XAML へのシリアル化や宣言による作成が可能です (既存のアクティビティをマッピングに参加させることができます)。
 
 ```csharp
 public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult : class
@@ -186,7 +187,7 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 }
 ```
 
-|引数|[説明]|
+|引数|説明|
 |-|-|
 |ProviderName|ADO.NET プロバイダーの不変名。 この引数を設定する場合は、`ConnectionString` も設定する必要があります。|
 |ConnectionString|データベースに接続するための接続文字列。 この引数を設定する場合は、`ProviderName` も設定する必要があります。|
@@ -194,19 +195,19 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 |CommandType|実行する <xref:System.Data.Common.DbCommand> の種類。|
 |Sql|実行する SQL コマンド。|
 |パラメーター|SQL クエリのパラメーターのコレクション。|
-|Mapper|マッピング関数 (<xref:System.Func%601><`DbDataReader`、`TResult`>)。クエリの実行結果として取得された `DataReader` のレコードを受け取り、`TResult` コレクションに追加する型のオブジェクトのインスタンスを返します。`Result`<br /><br /> この場合、マッピングは 1 つのパルスで実行されますが、デザイナーを使用して宣言で作成することはできません。|
-|MapperFunc|マッピング関数 (<xref:System.Activities.ActivityFunc%601><`DbDataReader`、`TResult`>)。クエリの実行結果として取得された `DataReader` のレコードを受け取り、`TResult` コレクションに追加する型のオブジェクトのインスタンスを返します。`Result`<br /><br /> この場合、マッピングは複数のパルスで実行されます。 この関数は、XAML へのシリアル化や宣言による作成が可能です (既存のアクティビティをマッピングに参加させることができます)。|
+|Mapper|<xref:System.Func%601> < `DbDataReader` `TResult` クエリの `DataReader` 実行結果として取得された内のレコードを取得し、 `TResult` コレクションに追加する型のオブジェクトのインスタンスを返すマッピング関数 (、>) `Result` 。<br /><br /> この場合、マッピングは 1 つのパルスで実行されますが、デザイナーを使用して宣言で作成することはできません。|
+|MapperFunc|<xref:System.Activities.ActivityFunc%601> < `DbDataReader` `TResult` クエリの `DataReader` 実行結果として取得された内のレコードを取得し、 `TResult` コレクションに追加する型のオブジェクトのインスタンスを返すマッピング関数 (、>) `Result` 。<br /><br /> この場合、マッピングは複数のパルスで実行されます。 この関数は、XAML へのシリアル化や宣言による作成が可能です (既存のアクティビティをマッピングに参加させることができます)。|
 |結果|クエリを実行し、`DataReader` の各レコードに対してマッピング関数を実行した結果として取得されたオブジェクトのリスト。|
 
 ## <a name="dbquerydataset"></a>DbQueryDataSet
 
-<xref:System.Data.DataSet> を返すクエリを実行します。 このクラスは作業を非同期に実行します これは <xref:System.Activities.AsyncCodeActivity><`TResult`> から派生し、その非同期機能を使用します。
+<xref:System.Data.DataSet> を返すクエリを実行します。 このクラスは作業を非同期に実行します  > から派生 <xref:System.Activities.AsyncCodeActivity> < `TResult` し、その非同期機能を使用します。
 
 接続情報を構成するには、プロバイダーの不変名 (`ProviderName`) と接続文字列 (`ConnectionString`) を設定するか、アプリケーション構成ファイルの接続文字列構成名 (`ConfigFileSectionName`) を使用します。
 
 実行するクエリは `Sql` プロパティで構成し、パラメーターは `Parameters` コレクションを通じて渡します。
 
-`DbQueryDataSet` が実行されると、`DataSet` が `Result out` 引数 (`TResult`型の) に返されます。これは、基本クラス <xref:System.Activities.AsyncCodeActivity%601>で定義されています。
+`DbQueryDataSet`が実行された後、 `DataSet` は、 `Result out` 基本クラスで定義されている型の引数で返され `TResult` <xref:System.Activities.AsyncCodeActivity%601> ます。
 
 ```csharp
 public class DbQueryDataSet : AsyncCodeActivity<DataSet>
@@ -240,7 +241,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 }
 ```
 
-|引数|[説明]|
+|引数|説明|
 |-|-|
 |ProviderName|ADO.NET プロバイダーの不変名。 この引数を設定する場合は、`ConnectionString` も設定する必要があります。|
 |ConnectionString|データベースに接続するための接続文字列。 この引数を設定する場合は、`ProviderName` も設定する必要があります。|
@@ -333,6 +334,6 @@ Setup.cmd スクリプトは、CreateDb.sql スクリプト ファイルを呼�
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`

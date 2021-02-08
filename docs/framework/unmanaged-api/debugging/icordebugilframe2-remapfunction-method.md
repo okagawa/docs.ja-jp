@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugILFrame2:: RemapFunction メソッド'
 title: ICorDebugILFrame2::RemapFunction メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd639ba0-f77b-426d-9ff6-f92706840348
 topic_type:
 - apiref
-ms.openlocfilehash: 5eb6299526d69624056961cfb7f0387ff8f873cf
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d8a6c7f966488e7b74a9661e3a18b5248df7400b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725028"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791291"
 ---
 # <a name="icordebugilframe2remapfunction-method"></a>ICorDebugILFrame2::RemapFunction メソッド
 
@@ -41,7 +42,7 @@ HRESULT RemapFunction (
   
  この値の有効性を保証するのは、呼び出し元の責任です。 たとえば、関数の境界の外側にある場合、MSIL オフセットは無効です。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  フレームの関数が編集されると、デバッガーはメソッドを呼び出して、 `RemapFunction` 最後のバージョンのフレームの関数をスワップして実行できるようになります。 コードの実行は、指定された MSIL オフセットから開始されます。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次のページを参照してください:: テキストの追加方法'
 title: ICorDebugILFrame::GetLocalVariable メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c8706356-d50b-4f87-a40c-39c3b7f4fd38
 topic_type:
 - apiref
-ms.openlocfilehash: 54ecce830b928ded115233eb99932cc15a471033
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c4bb3e5a5d970539607efbaf55f3f7f08f7e72af
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703136"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791375"
 ---
 # <a name="icordebugilframegetlocalvariable-method"></a>ICorDebugILFrame::GetLocalVariable メソッド
 
@@ -43,7 +44,7 @@ HRESULT GetLocalVariable (
  `ppValue`  
  [out] 取得した値を表す ICorDebugValue オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  メソッドは、 `GetLocalVariable` MSIL スタックフレーム内または just-in-time (JIT) コンパイルフレームで使用できます。  
   

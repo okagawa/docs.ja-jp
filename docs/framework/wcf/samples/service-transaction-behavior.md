@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「サービストランザクションの動作」を参照してください。
 title: サービス トランザクションの動作
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: 0be5bf0dbe6416febb898fb5150c5a516c8b0969
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1f8b76de250ef87ec5ca2d4ea4353a9a28bac248
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591528"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793065"
 ---
 # <a name="service-transaction-behavior"></a>サービス トランザクションの動作
 
-このサンプルでは、クライアント調整トランザクションの使用方法と、サービス トランザクションの動作を制御する ServiceBehaviorAttribute と OperationBehaviorAttribute の設定方法について説明します。 このサンプルは、電卓サービスを実装する[はじめに](getting-started-sample.md)に基づいていますが、データベーステーブル内の実行された操作のサーバーログと、計算操作のためのステートフル実行合計を維持するために拡張されています。 サーバー ログ テーブルへの書き込みを保存するかどうかは、クライアント調整トランザクションの結果によって異なります。クライアント トランザクションが完了しない場合は、Web サービス トランザクションにより、データベースへの更新はコミットされません。
+このサンプルでは、クライアント調整トランザクションの使用方法と、サービス トランザクションの動作を制御する ServiceBehaviorAttribute と OperationBehaviorAttribute の設定方法について説明します。 このサンプルは、電卓サービスを実装する [はじめに](getting-started-sample.md) に基づいていますが、データベーステーブル内の実行された操作のサーバーログと、計算操作のためのステートフル実行合計を維持するために拡張されています。 サーバー ログ テーブルへの書き込みを保存するかどうかは、クライアント調整トランザクションの結果によって異なります。クライアント トランザクションが完了しない場合は、Web サービス トランザクションにより、データベースへの更新はコミットされません。
 
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。
@@ -213,21 +214,21 @@ Creating new service instance...
 
 3. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](running-the-samples.md)」の手順に従います。
 
-サンプルを複数のコンピューターで実行する場合は、Microsoft 分散トランザクションコーディネーター (MSDTC) を構成してネットワークトランザクションフローを有効にし、WsatConfig .exe ツールを使用して Windows Communication Foundation (WCF) トランザクションネットワークサポートを有効にする必要があります。
+サンプルを複数のコンピューターで実行する場合は、Microsoft 分散トランザクションコーディネーター (MSDTC) を構成してネットワークトランザクションフローを有効にし、WsatConfig.exe ツールを使用して Windows Communication Foundation (WCF) トランザクションネットワークサポートを有効にする必要があります。
 
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>分散トランザクション コーディネータ (MSDTC) を構成してサンプルを別のコンピュータで実行できるようにするには
 
 1. サービス コンピューターで、受信ネットワーク トランザクションを許可するように MSDTC を構成します。
 
-    1. [**スタート**] メニューから、[**コントロールパネル**]、[**管理ツール**]、[**コンポーネントサービス**] の順に移動します。
+    1. [ **スタート** ] メニューから、[ **コントロールパネル**]、[ **管理ツール**]、[ **コンポーネントサービス**] の順に移動します。
 
-    2. **マイコンピューター**を右クリックし、[**プロパティ**] を選択します。
+    2. **マイコンピューター** を右クリックし、[**プロパティ**] を選択します。
 
-    3. [ **MSDTC** ] タブで、[**セキュリティの構成**] をクリックします。
+    3. [ **MSDTC** ] タブで、[ **セキュリティの構成**] をクリックします。
 
-    4. **ネットワーク DTC アクセス**を確認し、**受信を許可**します。
+    4. **ネットワーク DTC アクセス** を確認し、**受信を許可** します。
 
-    5. [**はい**] をクリックして MS DTC サービスを再起動し、[ **OK**] をクリックします。
+    5. [ **はい** ] をクリックして MS DTC サービスを再起動し、[ **OK**] をクリックします。
 
     6. **[OK]** をクリックしてダイアログ ボックスを閉じます。
 
@@ -235,25 +236,25 @@ Creating new service instance...
 
     1. Windows ファイアウォール アプリケーションをコントロール パネルから実行します。
 
-    2. [**例外**] タブで、[**プログラムの追加**] をクリックします。
+    2. [ **例外** ] タブで、[ **プログラムの追加**] をクリックします。
 
     3. C:\WINDOWS\System32 フォルダーに移動します。
 
-    4. [Msdtc] を選択し、[**開く**] をクリックします。
+    4. [Msdtc.exe を選択し、[ **開く**] をクリックします。
 
-    5. [ **Ok** ] をクリックして [**プログラムの追加**] ダイアログボックスを閉じ、もう一度 [ **ok** ] をクリックして Windows ファイアウォールアプレットを閉じます。
+    5. [ **Ok** ] をクリックして [ **プログラムの追加** ] ダイアログボックスを閉じ、もう一度 [ **ok** ] をクリックして Windows ファイアウォールアプレットを閉じます。
 
 3. クライアント コンピューターで、送信ネットワーク トランザクションを許可するよう MSDTC を構成します。
 
-    1. [**スタート**] メニューから、[**コントロールパネル**]、[**管理ツール**]、[**コンポーネントサービス**] の順に移動します。
+    1. [ **スタート** ] メニューから、[ **コントロールパネル**]、[ **管理ツール**]、[ **コンポーネントサービス**] の順に移動します。
 
-    2. **マイコンピューター**を右クリックし、[**プロパティ**] を選択します。
+    2. **マイコンピューター** を右クリックし、[**プロパティ**] を選択します。
 
-    3. [ **MSDTC** ] タブで、[**セキュリティの構成**] をクリックします。
+    3. [ **MSDTC** ] タブで、[ **セキュリティの構成**] をクリックします。
 
-    4. **ネットワーク DTC アクセス**を確認し、**送信を許可**します。
+    4. **ネットワーク DTC アクセス** を確認し、**送信を許可** します。
 
-    5. [**はい**] をクリックして MS DTC サービスを再起動し、[ **OK**] をクリックします。
+    5. [ **はい** ] をクリックして MS DTC サービスを再起動し、[ **OK**] をクリックします。
 
     6. **[OK]** をクリックしてダイアログ ボックスを閉じます。
 
@@ -262,6 +263,6 @@ Creating new service instance...
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`

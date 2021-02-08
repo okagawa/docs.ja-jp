@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「System.web. Routing Integration」を参照してください。
 title: System.Web.Routing 統合
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-ms.openlocfilehash: bb820f535a69a24e05b7374bcf97539ae2b87aef
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8f396d5a3cad30f5cc67cb0cf44fad76a0bb54c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96266429"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793338"
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing 統合
 

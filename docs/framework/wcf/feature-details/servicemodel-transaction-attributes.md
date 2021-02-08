@@ -1,19 +1,20 @@
 ---
+description: '詳細情報: ServiceModel トランザクション属性'
 title: ServiceModel トランザクションの属性
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], ServiceModel attributes
 ms.assetid: 1e0d2436-6ae5-439b-9765-a448d6f60000
-ms.openlocfilehash: d4b7482431404241577111d8dd3841319b65696e
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0b443fc6b9503007574608afe03c5e0508f666d9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663694"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793481"
 ---
 # <a name="servicemodel-transaction-attributes"></a>ServiceModel トランザクションの属性
 
-Windows Communication Foundation (WCF) の 3 つの標準のプロパティを提供<xref:System.ServiceModel>WCF サービスのトランザクションの動作を構成するための属性。
+Windows Communication Foundation (WCF) には、 <xref:System.ServiceModel> wcf サービスのトランザクションの動作を構成するための3つの標準属性のプロパティが用意されています。
 
 - <xref:System.ServiceModel.TransactionFlowAttribute>
 
@@ -23,7 +24,7 @@ Windows Communication Foundation (WCF) の 3 つの標準のプロパティを�
 
 ## <a name="transactionflowattribute"></a>TransactionFlowAttribute
 
-<xref:System.ServiceModel.TransactionFlowAttribute> 属性は、クライアントから受信トランザクションを受け入れるときのサービス コントラクトにおける操作の受け入れやすさを指定します。 属性は、次のプロパティを使用してこのコントロールを提供します。トランザクションを使用して、<xref:System.ServiceModel.TransactionFlowOption>受信トランザクションかどうかを指定する列挙体<xref:System.ServiceModel.TransactionFlowOption.Mandatory>、 <xref:System.ServiceModel.TransactionFlowOption.Allowed>、または<xref:System.ServiceModel.TransactionFlowOption.NotAllowed>します。
+<xref:System.ServiceModel.TransactionFlowAttribute> 属性は、クライアントから受信トランザクションを受け入れるときのサービス コントラクトにおける操作の受け入れやすさを指定します。 この属性は、次のプロパティを使用してこの制御を行います。トランザクションは、<xref:System.ServiceModel.TransactionFlowOption> 列挙型を使用して、受信トランザクションが <xref:System.ServiceModel.TransactionFlowOption.Mandatory>、<xref:System.ServiceModel.TransactionFlowOption.Allowed>、<xref:System.ServiceModel.TransactionFlowOption.NotAllowed> のいずれであるかを指定します。
 
 これは、サービス操作をクライアントの外部とのやり取りに関連付ける唯一の属性です。 次のセクションで説明する属性は、操作の実行内部におけるトランザクションの使用と関連しています。
 
@@ -41,11 +42,11 @@ Windows Communication Foundation (WCF) の 3 つの標準のプロパティを�
 
 ## <a name="operationbehaviorattribute"></a>OperationBehaviorAttribute
 
-<xref:System.ServiceModel.OperationBehaviorAttribute> 属性は、サービス実装におけるメソッドの動作を指定します。 この属性を使用して、操作の特定の実行動作を示すことができます。 この属性のプロパティは、サービス コントラクトの Web サービス記述言語 (WSDL) の説明には影響しません、自体を実装するために開発者がそれ以外の場合がある一般的な機能を有効に、WCF プログラミング モデルの要素だけです。
+<xref:System.ServiceModel.OperationBehaviorAttribute> 属性は、サービス実装におけるメソッドの動作を指定します。 この属性を使用して、操作の特定の実行動作を示すことができます。 この属性のプロパティは、サービスコントラクトの Web サービス記述言語 (WSDL) の説明には影響しません。また、開発者がそれ自体を実装する必要のある共通機能を有効にする WCF プログラミングモデルの純粋な要素です。
 
 この属性には、次のようなトランザクション固有のプロパティがあります。
 
-- <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> は、メソッドをアクティブなトランザクション スコープ内で実行する必要があるかどうかを指定します。 既定値は `false` です。 <xref:System.ServiceModel.OperationBehaviorAttribute> 属性がメソッドに対して設定されていない場合は、そのメソッドがトランザクション内で実行されないことを意味します。 操作のトランザクション スコープが要求されない場合、メッセージ ヘッダーにあるトランザクションはアクティブ化されず、<xref:System.ServiceModel.OperationContext.IncomingMessageProperties%2A> の <xref:System.ServiceModel.OperationContext> の要素として残ります。 操作のトランザクション スコープが必要な場合は、トランザクションのソースは次のいずれかから派生します。
+- <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> は、メソッドをアクティブなトランザクション スコープ内で実行する必要があるかどうかを指定します。 既定値は、`false` です。 <xref:System.ServiceModel.OperationBehaviorAttribute> 属性がメソッドに対して設定されていない場合は、そのメソッドがトランザクション内で実行されないことを意味します。 操作のトランザクション スコープが要求されない場合、メッセージ ヘッダーにあるトランザクションはアクティブ化されず、<xref:System.ServiceModel.OperationContext.IncomingMessageProperties%2A> の <xref:System.ServiceModel.OperationContext> の要素として残ります。 操作のトランザクション スコープが必要な場合は、トランザクションのソースは次のいずれかから派生します。
 
   - トランザクションがクライアントからフローされた場合、その分散トランザクションを使用して作成されたトランザクション スコープの下でメソッドが実行されます。
 

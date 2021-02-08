@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: デザイナー'
 title: デザイナー
 ms.date: 03/30/2017
 ms.assetid: bf28aae3-ddfb-4a86-b55d-1957f08c4e10
-ms.openlocfilehash: c39ad096c0003f365100510e320ac0d3e2b4d9aa
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3d0e6adfdbb546f6edb7b05e5144a162d016e3c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96251621"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792506"
 ---
 # <a name="designer"></a>デザイナー
 

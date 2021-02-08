@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorDebugHeapValue3 インターフェイス」を参照してください。
 title: ICorDebugHeapValue3 インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9c421bb0-e647-4b2d-a986-f3d578cc7f20
 topic_type:
 - apiref
-ms.openlocfilehash: a1f4964c89aa3b658c57946d4b5a0327797118f1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2483f74e2cfc105fd23c37af6ada467f17b9556b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728707"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791466"
 ---
 # <a name="icordebugheapvalue3-interface"></a>ICorDebugHeapValue3 インターフェイス
 
@@ -32,7 +33,7 @@ ms.locfileid: "95728707"
 |[GetThreadOwningMonitorLock メソッド](icordebugheapvalue3-getthreadowningmonitorlock-method.md)|このオブジェクトのモニターロックを所有するマネージスレッドを返します。|  
 |[GetMonitorEventWaitList メソッド](icordebugheapvalue3-getmonitoreventwaitlist-method.md)|モニターロックに関連付けられているイベントでキューに登録されているスレッドの順序付きリストを提供します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  

@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「ICorDebugAssembly3 インターフェイス」を参照してください。
 title: ICorDebugAssembly3 インターフェイス
 ms.date: 03/30/2017
 ms.assetid: 17fc5d76-75a9-4933-83f0-594de7f973f3
-ms.openlocfilehash: 0260267a05a880fbb3ac48325e55deff326f5f87
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3a8cabf41dffa75d82c2b6fde53dff2ede4838e7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688368"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791505"
 ---
 # <a name="icordebugassembly3-interface"></a>ICorDebugAssembly3 インターフェイス
 
@@ -20,7 +21,7 @@ ms.locfileid: "95688368"
 |[EnumerateContainedAssemblies メソッド](icordebugassembly3-enumeratecontainedassemblies-method.md)|このアセンブリに含まれているアセンブリの列挙子を取得します。|  
 |[GetContainerAssembly メソッド](icordebugassembly3-getcontainerassembly-method.md)|この `ICorDebugAssembly3` オブジェクトのコンテナー アセンブリを返します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このインターフェイスは .NET ネイティブでのみ使用可能です。 インターフェイス ポインターを取得するために `QueryInterface` を呼び出そうとすると、.NET ネイティブ外の ICorDebug シナリオに対して `E_NOINTERFACE` が返されます。  

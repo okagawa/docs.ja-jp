@@ -1,17 +1,18 @@
 ---
-title: Session
+description: '詳細情報: セッション'
+title: セッション
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Sessions
 ms.assetid: 36e1db50-008c-4b32-8d09-b56e790b8417
-ms.openlocfilehash: 23b42e48c715c9c723ce9ac8ba8c3c1af7ace969
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ba8d2d44d0be22243bd1562f9bd499d68a1112af
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96290050"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793026"
 ---
-# <a name="session"></a>Session
+# <a name="session"></a>セッション
 
 このセッションのサンプルでは、セッションを必要とするコントラクトを実装する方法を示します。 セッションは、複数の操作を実行するためのコンテキストを提供します。 これにより、サービスは特定のセッションに状態を関連付けることができ、後続の操作はその前の操作の状態を使用できます。 このサンプルは、電卓サービスを実装する [はじめに](getting-started-sample.md)に基づいています。 `ICalculator` コントラクトは、一連の算術演算を実行して実行結果を保持できるように変更されました。 この機能は `ICalculatorSession` コントラクトによって定義されます。 サービスは、複数のサービス操作が呼び出されて計算を実行する際に、クライアントの状態を保持します。 クライアントは `Result()` を呼び出して現在の結果を取得したり、`Clear()` を呼び出してその結果をクリアし、0 にすることができます。  
   

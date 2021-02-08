@@ -1,13 +1,14 @@
 ---
+description: '詳細については、「方法: XmlSerializer を使用して WCF クライアントアプリケーションの起動時間を向上させる」を参照してください。'
 title: '方法: XmlSerializer を使用する WCF クライアント アプリケーションの起動時間を短縮する'
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
-ms.openlocfilehash: ac54a766161db146331a3e072b97822b609344c0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8cf46cc35753934e8f4cb3abadc20c912e9efca9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96246382"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793403"
 ---
 # <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>方法: XmlSerializer を使用する WCF クライアント アプリケーションの起動時間を短縮する
 
@@ -48,7 +49,7 @@ ms.locfileid: "96246382"
   
 1. Visual Studio で WCF サービスとクライアントプロジェクトを作成します。 次に、クライアントプロジェクトにサービス参照を追加します。  
   
-2. <xref:System.ServiceModel.XmlSerializerFormatAttribute>クライアントアプリプロジェクトの *reference.cs* ファイルの **serviceReference** の下に、サービスコントラクトにを追加  ->  **reference.svcmap** します。 これらのファイルを表示するには、 **ソリューションエクスプローラー** 内のすべてのファイルを表示する必要があることに注意してください。  
+2. <xref:System.ServiceModel.XmlSerializerFormatAttribute>クライアントアプリプロジェクトの *reference.cs* ファイルの **serviceReference** の下に、サービスコントラクトにを追加  ->  します。 これらのファイルを表示するには、 **ソリューションエクスプローラー** 内のすべてのファイルを表示する必要があることに注意してください。  
   
 3. クライアントアプリをビルドします。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugManagedCallback2:: FunctionRemapComplete メソッド'
 title: ICorDebugManagedCallback2::FunctionRemapComplete メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5396c4c3-4ec3-4e3a-a38d-d65b21f0a2fc
 topic_type:
 - apiref
-ms.openlocfilehash: 7eb7fb55a5077d2914eb85a67ca62163a1aa8cc0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fcb4388185de17d602c1e3dbc725e104a0a48b3b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704592"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790851"
 ---
 # <a name="icordebugmanagedcallback2functionremapcomplete-method"></a>ICorDebugManagedCallback2::FunctionRemapComplete メソッド
 
@@ -47,7 +48,7 @@ HRESULT FunctionRemapComplete (
  `pFunction`  
  からスレッドで現在実行されている関数のバージョンを表す、のオブジェクトへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このコールバックは、以前に存在していたすべての steppers を再作成する機会をデバッガーに与えます。  
   

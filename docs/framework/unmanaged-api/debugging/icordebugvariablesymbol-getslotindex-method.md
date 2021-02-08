@@ -1,13 +1,14 @@
 ---
+description: '詳細について: ICorDebugVariableSymbol:: GetSlotIndex メソッド'
 title: ICorDebugVariableSymbol::GetSlotIndex メソッド
 ms.date: 03/30/2017
 ms.assetid: 09c19f5f-afc4-4e0c-bffe-cd7147bc7a43
-ms.openlocfilehash: fc42517cb95dfc14c472b5bb9111ebd70639cee7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3b5cba06a5e80ffa323d2e6521e9ec4666f6f5f3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725990"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790556"
 ---
 # <a name="icordebugvariablesymbolgetslotindex-method"></a>ICorDebugVariableSymbol::GetSlotIndex メソッド
 
@@ -30,7 +31,7 @@ HRESULT GetSlotIndex(
 
  正常終了した場合は、`S_OK`。 変数が関数引数の場合は `E_FAIL`。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  ローカル変数のマネージド スロット インデックスを使用すると、変数のメタデータ情報を取得できます。  
   

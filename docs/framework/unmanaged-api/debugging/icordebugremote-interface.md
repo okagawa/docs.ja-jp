@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「のリモートインターフェイス」を参照してください。
 title: ICorDebugRemote インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 53d073c6-fa02-40d2-82e1-b9452bb6abaa
 topic_type:
 - apiref
-ms.openlocfilehash: 276d36c511105087190cb7e9dfeaa6932efc67ff
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4c9d92800c68155216a077180ea0b613c67423dd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712106"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790673"
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote インターフェイス
 
 リモート ターゲット プロセスに対してマネージド デバッガーを起動または接続する機能を提供します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 interface ICorDebugRemote : IUnknown  
@@ -64,7 +65,7 @@ interface ICorDebugRemote : IUnknown
 |[ICorDebugRemote::CreateProcessEx メソッド](icordebugremote-createprocessex-method.md)|マネージデバッグ用にリモートコンピューター上にプロセスを作成します。|  
 |[ICorDebugRemote::DebugActiveProcessEx メソッド](icordebugremote-debugactiveprocessex-method.md)|デバッガーでリモートコンピューター上のプロセスを起動します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  現在、この機能は、リモートの Macintosh コンピューターで実行されている Silverlight ベースのアプリケーションターゲットをデバッグする場合にのみサポートされます。  
   

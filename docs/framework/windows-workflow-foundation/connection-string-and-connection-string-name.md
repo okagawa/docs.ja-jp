@@ -1,13 +1,14 @@
 ---
+description: 詳細については、接続文字列と接続文字列名に関するページを参照してください。
 title: 接続文字列と接続文字列名
 ms.date: 03/30/2017
 ms.assetid: 473e7a3c-c88a-4a01-914a-bea82ba42866
-ms.openlocfilehash: 5352dbac09565e872493581a2809409b156d1300
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5de81228434d3099df6e60664db0fea22f63c6ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96248865"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792740"
 ---
 # <a name="connection-string-and-connection-string-name"></a>接続文字列と接続文字列名
 

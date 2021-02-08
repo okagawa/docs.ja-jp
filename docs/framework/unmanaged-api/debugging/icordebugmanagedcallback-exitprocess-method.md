@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: ExitProcess メソッド'
 title: ICorDebugManagedCallback::ExitProcess メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 63a7d47a-0d54-4e29-9767-9f09feaa38b7
 topic_type:
 - apiref
-ms.openlocfilehash: 67f3e63b58e08a4b9ccfbd555e6edcdef0d00d90
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3418931b8397edefcb801986275c35b28e00072d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688944"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790959"
 ---
 # <a name="icordebugmanagedcallbackexitprocess-method"></a>ICorDebugManagedCallback::ExitProcess メソッド
 
@@ -39,7 +40,7 @@ HRESULT ExitProcess (
  `pProcess`  
  からプロセスを表す、のオブジェクトへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  イベントから続行することはできません `ExitProcess` 。 このイベントは、プロセスの停止中に、他のイベントに非同期に発生する場合があります。 これは、プロセスが停止中に終了した場合に発生する可能性があります。通常は、何らかの外部強制が原因です。  
   

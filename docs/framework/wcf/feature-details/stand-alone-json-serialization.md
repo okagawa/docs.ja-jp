@@ -1,26 +1,27 @@
 ---
-title: DataContractJsonSerializer を使用したスタンドアロン JSON シリアル化
+description: 詳細については、DataContractJsonSerializer を使用した JSON シリアル化の Stand-Alone
+title: DataContractJsonSerializer を使用した JSON シリアル化の Stand-Alone
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 5561cddb22a02fdae9f792b1d1ec71d01c4fc916
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c88a996eeac7e9e62caa7797bc0bf7cd68dfd67b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600907"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793416"
 ---
-# <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>DataContractJsonSerializer を使用したスタンドアロン JSON シリアル化
+# <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>DataContractJsonSerializer を使用した JSON シリアル化の Stand-Alone
 
 > [!NOTE]
-> この記事では、について説明 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> します。 JSON のシリアル化と逆シリアル化を含むほとんどのシナリオでは、Api を使用することをお勧めし[ます。](../../../standard/serialization/system-text-json-overview.md)
+> この記事では、について説明 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> します。 JSON のシリアル化と逆シリアル化を含むほとんどのシナリオでは、 [ 名前空間のSystem.Text.Js](../../../standard/serialization/system-text-json-overview.md)で api を使用することをお勧めします。
 
 JSON (JavaScript Object Notation) は、ブラウザー内の Web ページで実行される JavaScript コードで使用するために特別に設計されたデータ形式です。 これは Windows Communication Foundation (WCF) で作成された ASP.NET AJAX サービスによって使用される既定のデータ形式です。
 
 この形式は、ASP.NET と統合せずに AJAX サービスを作成する場合にも使用できます。この場合、XML が既定のデータ形式になりますが、JSON を選択することもできます。
 
-JSON をサポートする必要はあっても AJAX サービスを作成する予定はない場合は、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> を使用することで、.NET オブジェクトを JSON データに直接シリアル化したり、このようなデータを .NET 型のインスタンスに逆シリアル化したりできます。 これを行う方法の詳細については、「[方法: JSON データをシリアル化および逆シリアル化](how-to-serialize-and-deserialize-json-data.md)する」を参照してください。
+JSON をサポートする必要はあっても AJAX サービスを作成する予定はない場合は、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> を使用することで、.NET オブジェクトを JSON データに直接シリアル化したり、このようなデータを .NET 型のインスタンスに逆シリアル化したりできます。 これを行う方法の詳細については、「 [方法: JSON データをシリアル化および逆シリアル化](how-to-serialize-and-deserialize-json-data.md)する」を参照してください。
 
-JSON を使用する場合、一部例外はありますが、<xref:System.Runtime.Serialization.DataContractSerializer> でサポートされているものと同じ .NET 型 がサポートされます。 サポートされている型の一覧については、「[データコントラクトシリアライザーでサポートされる型](types-supported-by-the-data-contract-serializer.md)」を参照してください。 これには、ほとんどのプリミティブ型、ほとんどの配列型とコレクション型、<xref:System.Runtime.Serialization.DataContractAttribute> と <xref:System.Runtime.Serialization.DataMemberAttribute> を使用する複合型などがあります。
+JSON を使用する場合、一部例外はありますが、<xref:System.Runtime.Serialization.DataContractSerializer> でサポートされているものと同じ .NET 型 がサポートされます。 サポートされている型の一覧については、「 [データコントラクトシリアライザーでサポートされる型](types-supported-by-the-data-contract-serializer.md)」を参照してください。 これには、ほとんどのプリミティブ型、ほとんどの配列型とコレクション型、<xref:System.Runtime.Serialization.DataContractAttribute> と <xref:System.Runtime.Serialization.DataMemberAttribute> を使用する複合型などがあります。
 
 ## <a name="mapping-net-types-to-json-types"></a>.NET 型から JSON 型へのマッピング
 
@@ -28,11 +29,11 @@ JSON を使用する場合、一部例外はありますが、<xref:System.Runti
 
 |.NET 型|JSON/JavaScript|メモ|
 |----------------|----------------------|-----------|
-|すべての数値型 (<xref:System.Int32>、<xref:System.Decimal>、<xref:System.Double> など)|Number|`Double.NaN`、`Double.PositiveInfinity`、`Double.NegativeInfinity` などの特殊な値はサポートされていないため、無効な JSON になります。|
-|<xref:System.Enum>|Number|このトピックの「列挙体と JSON」を参照してください。|
+|すべての数値型 (<xref:System.Int32>、<xref:System.Decimal>、<xref:System.Double> など)|数値|`Double.NaN`、`Double.PositiveInfinity`、`Double.NegativeInfinity` などの特殊な値はサポートされていないため、無効な JSON になります。|
+|<xref:System.Enum>|数値|このトピックの「列挙体と JSON」を参照してください。|
 |<xref:System.Boolean>|Boolean|--|
 |<xref:System.String>, <xref:System.Char>|String|--|
-|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|JSON でのこれらの型の形式は、XML の場合と同じです (実質的には、ISO 8601 の期間形式の TimeSpan、"12345678-abcd-abcd-890AB" 形式の GUID、"" などの自然文字列形式の URI http://www.example.com )。 詳細については、「[データコントラクトスキーマのリファレンス](data-contract-schema-reference.md)」を参照してください。|
+|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|JSON でのこれらの型の形式は、XML の場合と同じです (実質的には、ISO 8601 の期間形式の TimeSpan、"12345678-abcd-abcd-890AB" 形式の GUID、"" などの自然文字列形式の URI http://www.example.com )。 詳細については、「 [データコントラクトスキーマのリファレンス](data-contract-schema-reference.md)」を参照してください。|
 |<xref:System.Xml.XmlQualifiedName>|String|形式は "name:namespace" です (最初のコロンの前が名前です)。 名前または名前空間が存在しない場合があります。 名前空間がない場合、コロンも省略されることがあります。|
 |<xref:System.Array> 型の <xref:System.Byte>|数値の配列型|各数値は、1 バイトの値を表します。|
 |<xref:System.DateTime>|DateTime 型または文字列型|このトピックの「日付/時刻と JSON」を参照してください。|
@@ -46,7 +47,7 @@ JSON を使用する場合、一部例外はありますが、<xref:System.Runti
 
 ### <a name="enumerations-and-json"></a>列挙体と JSON
 
-列挙メンバー値は、JSON では数値として処理されるため、列挙メンバー値がメンバー名として含まれているデータ コントラクトでの処理方法とは異なります。 データコントラクト処理の詳細については、「[データコントラクトの列挙型](enumeration-types-in-data-contracts.md)」を参照してください。
+列挙メンバー値は、JSON では数値として処理されるため、列挙メンバー値がメンバー名として含まれているデータ コントラクトでの処理方法とは異なります。 データコントラクト処理の詳細については、「 [データコントラクトの列挙型](enumeration-types-in-data-contracts.md)」を参照してください。
 
 - たとえば、`public enum Color {red, green, blue, yellow, pink}` の場合、`yellow` をシリアル化すると、文字列の "yellow" ではなく、数字の 3 が生成されます。
 
@@ -91,11 +92,11 @@ XML 型は JSON 文字列になります。
 
   - <xref:System.Runtime.Serialization.ISerializable> インターフェイスと逆シリアル化コンストラクターを使用することを検討します。この 2 つの機構を使用すると、シリアル化と逆シリアル化の実行時にそれぞれ JSON のキーと値のペアにアクセスできます。ただし、これらの機構は、部分信頼シナリオでは機能しません。
 
-  - シリアライザーを使用する代わりに、 [JSON と XML 間のマッピング](mapping-between-json-and-xml.md)を使用することを検討してください。
+  - シリアライザーを使用する代わりに、 [JSON と XML 間のマッピング](mapping-between-json-and-xml.md) を使用することを検討してください。
 
-  - シリアル化のコンテキストでの*ポリモーフィズム*とは、基本型が想定されている派生型をシリアル化する機能を指します。 コレクションをポリモーフィックに使用する場合は (コレクションを <xref:System.Object> に割り当てる場合など)、JSON 固有の特別なルールがあります。 この問題については、後の「高度な情報」で詳しく説明します。
+  - シリアル化のコンテキストでの *ポリモーフィズム* とは、基本型が想定されている派生型をシリアル化する機能を指します。 コレクションをポリモーフィックに使用する場合は (コレクションを <xref:System.Object> に割り当てる場合など)、JSON 固有の特別なルールがあります。 この問題については、後の「高度な情報」で詳しく説明します。
 
-## <a name="additional-details"></a>追加情報
+## <a name="additional-details"></a>追加の詳細
 
 ### <a name="order-of-data-members"></a>データ メンバーの順序
 
@@ -113,7 +114,7 @@ JSON の型は、逆シリアル化時には前述の表と一致する必要は
 
 インターフェイス型に逆シリアル化する場合、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> は、宣言された型がオブジェクトである場合と同様に逆シリアル化します。
 
-独自の基本型と派生型を使用している場合は、通常、<xref:System.Runtime.Serialization.KnownTypeAttribute>、<xref:System.ServiceModel.ServiceKnownTypeAttribute>、または同等の機構を使用する必要があります。 たとえば、戻り値を持つ操作があり、 `Animal` 実際にのインスタンス (から派生) が返された場合は、 `Cat` `Animal` <xref:System.Runtime.Serialization.KnownTypeAttribute> を型またはのに適用 `Animal` <xref:System.ServiceModel.ServiceKnownTypeAttribute> して、これらの `Cat` 属性の型を指定する必要があります。 詳細については、「[データコントラクトの既知の型](data-contract-known-types.md)」を参照してください。
+独自の基本型と派生型を使用している場合は、通常、<xref:System.Runtime.Serialization.KnownTypeAttribute>、<xref:System.ServiceModel.ServiceKnownTypeAttribute>、または同等の機構を使用する必要があります。 たとえば、戻り値を持つ操作があり、 `Animal` 実際にのインスタンス (から派生) が返された場合は、 `Cat` `Animal` <xref:System.Runtime.Serialization.KnownTypeAttribute> を型またはのに適用 `Animal` <xref:System.ServiceModel.ServiceKnownTypeAttribute> して、これらの `Cat` 属性の型を指定する必要があります。 詳細については、「 [データコントラクトの既知の型](data-contract-known-types.md)」を参照してください。
 
 ポリモーフィックなシリアル化のしくみの詳細、およびポリモーフィックなシリアル化を使用するときに留意する必要のある制限事項については、このトピックで後述する「高度な情報」を参照してください。
 
@@ -179,7 +180,7 @@ ASP.NET AJAX クライアントの JavaScript コードにより、このよう�
 
 #### <a name="ixmlserializable-types-including-xelement-and-dataset"></a>XElement と DataSet を含む IXmlSerializable 型
 
-<xref:System.Runtime.Serialization.ISerializable> 型は、"コンテンツ型"、"DataSet 型"、および "要素型" に細分化されます。 これらの型の定義については、「[データコントラクトの XML 型と ADO.NET 型](xml-and-ado-net-types-in-data-contracts.md)」を参照してください。
+<xref:System.Runtime.Serialization.ISerializable> 型は、"コンテンツ型"、"DataSet 型"、および "要素型" に細分化されます。 これらの型の定義については、「 [データコントラクトの XML 型と ADO.NET 型](xml-and-ado-net-types-in-data-contracts.md)」を参照してください。
 
 "コンテンツ" 型と "DataSet" 型は、前のセクションで説明した <xref:System.Array> の <xref:System.Xml.XmlNode> オブジェクトと同様にシリアル化されます。 これらの型は、その型のデータ コントラクトの名前と名前空間に対応する名前と名前空間を持つ要素にラップされます。
 
@@ -275,7 +276,7 @@ Object に割り当てられたコレクションは、<xref:System.Collections.
 
 <xref:System.Object> に逆シリアル化するときは、次の点に注意してください。
 
-- `Shape`は既知の型リストに含まれている必要があります。 <xref:System.Collections.Generic.List%601>既知の型の型 `Shape` がある場合、効果はありません。 この場合、シリアル化時に既知の型に追加する必要はないことに注意してください `Shape` 。これは自動的に行われます。
+- `Shape` は既知の型リストに含まれている必要があります。 <xref:System.Collections.Generic.List%601>既知の型の型 `Shape` がある場合、効果はありません。 この場合、シリアル化時に既知の型に追加する必要はないことに注意してください `Shape` 。これは自動的に行われます。
 
 - コレクションは、 <xref:System.Array> インスタンスを含む型のとして逆シリアル化され <xref:System.Object> `Shape` ます。
 

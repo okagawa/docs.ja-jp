@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「ネイティブアクティビティを使用したカスタム複合」を参照してください。
 title: ネイティブ アクティビティを使用したカスタム複合
 ms.date: 03/30/2017
 ms.assetid: ef9e739c-8a8a-4d11-9e25-cb42c62e3c76
-ms.openlocfilehash: 82cfd8605d66e2cb489326c40f6ae3e960123788
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3203de6a46daf6a9d9a054cd944a5ca41557de3d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242241"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792571"
 ---
 # <a name="custom-composite-using-native-activity"></a>ネイティブ アクティビティを使用したカスタム複合
 

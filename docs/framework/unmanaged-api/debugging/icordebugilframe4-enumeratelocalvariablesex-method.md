@@ -1,4 +1,5 @@
 ---
+description: '詳細について: ICorDebugILFrame4:: EnumerateLocalVariablesEx メソッド'
 title: ICorDebugILFrame4::EnumerateLocalVariablesEx メソッド
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 6f60aae6-70ec-4c4c-963a-138df98c4668
 topic_type:
 - apiref
-ms.openlocfilehash: 86a3b22851aa07a546cba5a0c0b69c81ec580cee
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8808b1ac337304ab37a35f7733b317dad274d48e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724976"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791245"
 ---
 # <a name="icordebugilframe4enumeratelocalvariablesex-method"></a>ICorDebugILFrame4::EnumerateLocalVariablesEx メソッド
 
@@ -42,7 +43,7 @@ HRESULT EnumerateLocalVariablesEx(
  `ppValueEnum`  
  入出力このフレーム内のローカル変数の列挙子である "テキスト" オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このメソッドは、 [EnumerateLocalVariables](icordebugilframe-enumeratelocalvariables-method.md) メソッドに似ていますが、プロファイラー rejit インストルメンテーションに追加された変数にオプションでアクセスする点が異なります。 をに設定すること `flags` `ILCODE_ORIGINAL_IL` は、 [EnumerateLocalVariables](icordebugilframe-enumeratelocalvariables-method.md)を呼び出した場合と同じです。 `flags` を `ILCODE_REJIT_IL` に設定することにより、デバッガは プロファイラー ReJIT インストルメンテーションに追加されるローカル変数にアクセスできるようになります。 中間言語 (IL) がインストルメント化されていない場合は、列挙子は空になり、メソッドは `S_OK` を返します。  
   

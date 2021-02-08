@@ -1,17 +1,18 @@
 ---
+description: 詳細については、「サービスデバッグの動作」を参照してください。
 title: サービス デバッグ動作
 ms.date: 03/30/2017
 ms.assetid: 9d8fd3fb-dc39-427a-8235-336a7e7162ba
-ms.openlocfilehash: 53f21129860c644d09d1a2eb9cb956aecf8ab0ad
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3aae4a4cca53fce50bff8ec02896e748f430166f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596644"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793104"
 ---
 # <a name="service-debug-behavior"></a>サービス デバッグ動作
 
-このサンプルでは、サービス デバッグ動作の設定を構成する方法を示します。 このサンプルは、サービスコントラクトを実装する[はじめに](getting-started-sample.md)に基づいてい `ICalculator` ます。 このサンプルは、サービス デバッグ動作を構成ファイルで明示的に定義します。 コードで強制的に定義することもできます。
+このサンプルでは、サービス デバッグ動作の設定を構成する方法を示します。 このサンプルは、サービスコントラクトを実装する [はじめに](getting-started-sample.md)に基づいてい `ICalculator` ます。 このサンプルは、サービス デバッグ動作を構成ファイルで明示的に定義します。 コードで強制的に定義することもできます。
 
 この例では、クライアントはコンソール アプリケーション (.exe) であり、サービスはインターネット インフォメーション サービス (IIS) によってホストされます。
 
@@ -32,7 +33,7 @@ ms.locfileid: "84596644"
 </behaviors>
 ```
 
-[\<serviceDebug>](../../configure-apps/file-schema/wcf/servicedebug.md)は、サービスデバッグ動作のプロパティを変更できる構成要素です。 ユーザーはこの動作を変更して、次を実現することができます。
+[\<serviceDebug>](../../configure-apps/file-schema/wcf/servicedebug.md) は、サービスデバッグ動作のプロパティを変更できる構成要素です。 ユーザーはこの動作を変更して、次を実現することができます。
 
 - 例外が <xref:System.ServiceModel.FaultContractAttribute> を使用して宣言されていない場合でも、サービスでは、アプリケーション コードによってスローされる例外を返すことができます。 これを行うには、`includeExceptionDetailInFaults` を `true` に設定します。 この設定は、サーバーが予期しない例外をスローしている場合のデバッグ時に役立ちます。
 
@@ -56,6 +57,6 @@ ms.locfileid: "84596644"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\ServiceDebug`

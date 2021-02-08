@@ -1,13 +1,14 @@
 ---
+description: '詳細について: ICorDebugVirtualUnwinder:: GetContext メソッド'
 title: ICorDebugVirtualUnwinder::GetContext メソッド
 ms.date: 03/30/2017
 ms.assetid: fe502a76-3068-47e5-a0a0-85ccb72dfac3
-ms.openlocfilehash: a5a1afa47e52eff7c930698a3354a03d8c62259f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 864f32ce82149658b2d4a617b08e8d7aa41fe642
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679456"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790530"
 ---
 # <a name="icordebugvirtualunwindergetcontext-method"></a>ICorDebugVirtualUnwinder::GetContext メソッド
 
@@ -42,7 +43,7 @@ HRESULT GetContext(
 
  mscordbi によって受信された失敗を示す HRESULT 値は致命的と見なされ、ICorDebug API によって `CORDBG_E_DATA_TARGET_ERROR` が返されます。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  引数の初期値は、「 `contextBuf` [GetContext](icordebugstackwalk-getcontext-method.md) 」メソッドを呼び出すことによって返されるコンテキストバッファーに設定します。  
   

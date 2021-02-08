@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「ServiceDescription と WSDL リファレンス」を参照してください。
 title: ServiceDescription と WSDL 参照
 ms.date: 03/30/2017
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-ms.openlocfilehash: 11a5d65026d13db56d1d349c130861094c3e123b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0ce3dc49d71eda1f9fe36940f153735b43be917b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253883"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793520"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription と WSDL 参照
 

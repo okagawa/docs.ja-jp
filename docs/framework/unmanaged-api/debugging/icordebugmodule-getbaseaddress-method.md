@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「GetBaseAddress Module:: メソッド」を参照してください。'
 title: ICorDebugModule::GetBaseAddress メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 26a82815-1982-4eb7-92d1-5c3d318d5be4
 topic_type:
 - apiref
-ms.openlocfilehash: 4562318c87b79fba5f3d99860ee438c0144e9aae
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bdfa4aeac3a9c06f666d56f1ee08ec503626ce7d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710247"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790816"
 ---
 # <a name="icordebugmodulegetbaseaddress-method"></a>ICorDebugModule::GetBaseAddress メソッド
 
@@ -39,7 +40,7 @@ HRESULT GetBaseAddress(
  `pAddress`  
  入出力 `CORDB_ADDRESS` モジュールのベースアドレスを指定する。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  モジュールがネイティブイメージの場合 (つまり、モジュールがネイティブイメージジェネレーターによって生成された場合は、NGen.exe)、そのベースアドレスはゼロになります。  
   

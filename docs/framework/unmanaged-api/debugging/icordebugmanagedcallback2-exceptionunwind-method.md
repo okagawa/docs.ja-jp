@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ICorDebugManagedCallback2:: ExceptionUnwind ワインドメソッド'
 title: ICorDebugManagedCallback2::ExceptionUnwind メソッド
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: aaf5938d-179c-4eaa-8d35-8523a4fadded
 topic_type:
 - apiref
-ms.openlocfilehash: a15391b63012fec3d0e6a0aa67540c3d2541944c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2d98fb21cdbb0db25a11761ac9b00e99e1526cc0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95671318"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790848"
 ---
 # <a name="icordebugmanagedcallback2exceptionunwind-method"></a>ICorDebugManagedCallback2::ExceptionUnwind メソッド
 
@@ -51,7 +52,7 @@ HRESULT ExceptionUnwind (
  `dwFlags`  
  から例外に関する追加情報を指定する [Cordebugexceptionflags](cordebugexceptionflags-enumeration.md) 列挙体の値。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  `ExceptionUnwind` は、例外処理プロセスのアンワインドフェーズ中にさまざまなポイントで呼び出されます。 `ExceptionUnwind` 1つの例外をアンワインドしている間に、複数回呼び出すことができます。  
   

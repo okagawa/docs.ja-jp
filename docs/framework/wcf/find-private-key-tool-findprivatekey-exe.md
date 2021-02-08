@@ -1,17 +1,18 @@
 ---
+description: '詳細情報: 秘密キーの検索ツール (FindPrivateKey.exe)'
 title: 秘密キー検索ツール (FindPrivateKey.exe)
 ms.date: 09/11/2017
 ms.assetid: b8846a95-3fcc-4e8c-b9c0-128d975a6307
-ms.openlocfilehash: 316f55b93cf4d867b99878bf483b73cb3f09ad04
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 1d87d19e17c1de89c13db6d7ca092eedf630e6ca
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990355"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793286"
 ---
 # <a name="find-private-key-tool-findprivatekeyexe"></a>秘密キー検索ツール (FindPrivateKey.exe)
 
-このコマンド ライン ツールを使用して、証明書ストアから秘密キーを取得できます。 たとえば、 *FindPrivateKey*を使用して、証明書ストア内の特定の x.509 証明書に関連付けられている秘密キーファイルの場所と名前を見つけることができます。
+このコマンド ライン ツールを使用して、証明書ストアから秘密キーを取得できます。 たとえば、 *FindPrivateKey.exe* を使用して、証明書ストア内の特定の x.509 証明書に関連付けられている秘密キーファイルの場所と名前を見つけることができます。
 
 > [!IMPORTANT]
 > FindPrivateKey ツールは、WCF のサンプルとして付属しています。 サンプルの場所とビルド方法の詳細については、「 [FindPrivateKey](./samples/findprivatekey.md)」を参照してください。
@@ -22,7 +23,7 @@ ms.locfileid: "70990355"
 FindPrivateKey<storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprint>} } [-f | -d | -a]]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 次の表では、秘密キー検索ツール (FindPrivateKey.exe) で使用できる引数とオプションについて説明します。
 
@@ -39,7 +40,7 @@ FindPrivateKey<storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprin
 |`/d`|ディレクトリだけを出力します。|
 |`/a`|絶対ファイル名を出力します。|
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 John Doe の秘密キーを取得するコマンドを次に示します。
 

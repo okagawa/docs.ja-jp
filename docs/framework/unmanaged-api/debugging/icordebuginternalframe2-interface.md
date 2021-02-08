@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ICorDebugInternalFrame2 インターフェイス」を参照してください。
 title: ICorDebugInternalFrame2 インターフェイス
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4755569-85b8-4ff4-bf50-0e608e76429f
 topic_type:
 - apiref
-ms.openlocfilehash: a17c46d5ef08963bb0d7fc280ba8b90531e41c5b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3edc666c043513562b2fcece478b2879f294ce33
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719633"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791102"
 ---
 # <a name="icordebuginternalframe2-interface"></a>ICorDebugInternalFrame2 インターフェイス
 
@@ -32,7 +33,7 @@ ms.locfileid: "95719633"
 |[GetFrameAddress メソッド](icordebuginternalframe2-getframeaddress-method.md)|内部フレームのスタックアドレスを返します。|  
 |[IsCloserToLeaf メソッド](icordebuginternalframe2-isclosertoleaf-method.md)|内部フレームが、指定されたのは、指定されたとしての `this` オブジェクトよりもリーフの近くにあるかどうかを確認します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
  このインターフェイスは、によって、、の各フレームインターフェイスを拡張します。  
   
