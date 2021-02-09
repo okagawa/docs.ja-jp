@@ -1,17 +1,20 @@
 ---
+description: '詳細情報: WCF Data Services の定義'
 title: WCF Data Services の定義
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 05006ff3-02dc-410e-831e-54ec3e7e24ef
-ms.openlocfilehash: 26cfee95f7cd3b956ff263d90b713e9d70b98202
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 43a4887226b03e80c4a966a118f210fe8a28000d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975327"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766089"
 ---
 # <a name="defining-wcf-data-services"></a>WCF Data Services の定義
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 このセクションでは、WCF Data Services を作成し、Open Data Protocol (OData) フィードとしてデータを公開するように構成する方法について説明します。 データ サービスの基本的な作成手順については、「[サービスとしてのデータの公開](exposing-your-data-as-a-service-wcf-data-services.md)」を参照してください。
 

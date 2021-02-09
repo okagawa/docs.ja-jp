@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: SByte データ型 (Visual Basic)'
 title: SByte 型
 ms.date: 04/20/2017
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: e7d45c74056ce5b6aa66674c99e48b5ab60015f0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e6e314a34469083433289c0fff9b404d4549824d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415571"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792168"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte データ型 (Visual Basic)
 

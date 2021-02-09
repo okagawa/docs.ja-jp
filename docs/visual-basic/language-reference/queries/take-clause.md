@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Take 句 (Visual Basic)'
 title: Take 句
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-ms.openlocfilehash: f2377d8d1635912885a310b2b0429a6a00083b47
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 6542d262490d9d4acff893b2a99ffb60dd1446a2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869677"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99653538"
 ---
 # <a name="take-clause-visual-basic"></a>Take 句 (Visual Basic)
 

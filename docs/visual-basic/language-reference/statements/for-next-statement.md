@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: For...Next ステートメント (Visual Basic)'
 title: For...Next ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 6896c6cfb4ec5d6207011e56b72639c459120e53
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f26d9cb1885d9d22b96d622f44325aad64e34d1d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404642"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769079"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next ステートメント (Visual Basic)
 

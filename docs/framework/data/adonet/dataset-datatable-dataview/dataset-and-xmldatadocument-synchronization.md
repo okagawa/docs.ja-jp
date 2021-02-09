@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DataSet と XmlDataDocument の同期'
 title: DataSet と XmlDataDocument の同期
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: 2790f0a9edd5bfde96683e00725dd04555379adf
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c3bb1af305dfc319cb2c4783f4e4edc108e9d737
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153301"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739561"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>DataSet と XmlDataDocument の同期
 

@@ -1,20 +1,21 @@
 ---
+description: '詳細情報: 方法:モデル定義関数をオブジェクト メソッドとして呼び出す'
 title: '方法: モデル定義関数をオブジェクト メソッドとして呼び出す'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 5e5ae2fd838a34d7f665b23a14db2a599367e801
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 46f171d5785bf715382e87c3fb7dae932db0bb65
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197795"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748675"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>方法: モデル定義関数をオブジェクト メソッドとして呼び出す
 
-ここでは、モデル定義関数を <xref:System.Data.Objects.ObjectContext> オブジェクトのメソッドまたはカスタム クラスの静的メソッドとして呼び出す方法について説明します。 *モデル定義関数*は、概念モデルで定義される関数です。 このトピックで説明する手順は、これらの関数を LINQ to Entities クエリから呼び出すのではなく、直接呼び出す方法を示すものです。 モデル定義関数を LINQ to Entities クエリに呼び出す方法の詳細については、「[方法:クエリを使用してモデル定義関数を呼び出す](how-to-call-model-defined-functions-in-queries.md)」を参照してください。  
+ここでは、モデル定義関数を <xref:System.Data.Objects.ObjectContext> オブジェクトのメソッドまたはカスタム クラスの静的メソッドとして呼び出す方法について説明します。 *モデル定義関数* は、概念モデルで定義される関数です。 このトピックで説明する手順は、これらの関数を LINQ to Entities クエリから呼び出すのではなく、直接呼び出す方法を示すものです。 モデル定義関数を LINQ to Entities クエリに呼び出す方法の詳細については、「[方法:クエリを使用してモデル定義関数を呼び出す](how-to-call-model-defined-functions-in-queries.md)」を参照してください。  
   
  モデル定義関数を <xref:System.Data.Objects.ObjectContext> メソッドとして呼び出す場合も、カスタム クラスの静的メソッドとして呼び出す場合も、ます <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> でメソッドをモデル定義関数にマップする必要があります。 ただし、<xref:System.Data.Objects.ObjectContext> クラスのメソッドを定義するときには、<xref:System.Data.Objects.ObjectContext.QueryProvider%2A> プロパティを使用して LINQ プロバイダーを公開する必要があります。それに対して、カスタム クラスの静的メソッドを定義するときには、<xref:System.Linq.IQueryable.Provider%2A> プロパティを使用して LINQ プロバイダーを公開する必要があります。 詳細については、下の手順の後に示した例を参照してください。  
   

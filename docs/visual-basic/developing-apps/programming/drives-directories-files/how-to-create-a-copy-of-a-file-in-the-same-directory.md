@@ -1,5 +1,6 @@
 ---
-title: '方法 : ファイルのコピーを同じディレクトリに作成する'
+description: '詳細情報: 方法:Visual Basic でファイルのコピーを同じディレクトリに作成する'
+title: '方法: ファイルのコピーを同じディレクトリに作成する'
 ms.date: 07/20/2015
 f1_keywords:
 - File.Copy
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: b2fdda86-e666-42c2-9706-9527e9fa68ff
-ms.openlocfilehash: 741f0c80ba268369ebdd598460e9d5fa13d09571
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 27fecc22a9317dd45e663aa37884c6c1f1e36349
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401681"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797615"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>方法 : Visual Basic でファイルのコピーを同じディレクトリに作成する
 
@@ -36,13 +37,13 @@ ms.locfileid: "84401681"
 
  次の条件を満たす場合は、例外がスローされる可能性があります。  
   
-- パスが正しくない。長さが 0 の文字列である、空白だけが含まれている、使用できない文字が含まれている、デバイス パスである (先頭が \\\\.\\)、のいずれかの理由が考えられる (<xref:System.ArgumentException>)。  
+- 次のいずれかの理由で、パスが正しくない。長さが 0 の文字列である、空白だけが含まれている、使用できない文字が含まれている、デバイス パスである (先頭が \\\\.\\) (<xref:System.ArgumentException>)。  
   
 - システムが絶対パスを取得できなかった (<xref:System.ArgumentException>)。  
   
 - パスが `Nothing` であるため、有効でない (<xref:System.ArgumentNullException>)  
   
-- ソース ファイルが正しくないか、存在しない (<xref:System.IO.FileNotFoundException>)。  
+- ソース ファイルが正しくない、または存在しない (<xref:System.IO.FileNotFoundException>)。  
   
 - 結合したパスが、既存のディレクトリを指している (<xref:System.IO.IOException>)。  
   
@@ -64,7 +65,7 @@ ms.locfileid: "84401681"
   
 - ユーザーがパスを参照するのに必要なアクセス許可がない (<xref:System.Security.SecurityException>)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>

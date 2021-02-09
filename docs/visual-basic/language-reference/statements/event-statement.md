@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Event ステートメント'
 title: Event ステートメント
 ms.date: 05/12/2018
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 0575a67f89f734c79259036fe48d6e2671c2d1ed
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 719b7af664795e2ff39d86bfa204112b7a90e1b2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873258"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769124"
 ---
 # <a name="event-statement"></a>Event ステートメント
 
@@ -91,7 +92,7 @@ End Event
   
  イベントを処理するためには、`Handles` ステートメントまたは `AddHandler` ステートメントを使用して、イベントをイベント ハンドラー サブルーチンに関連付ける必要があります。 サブルーチンとイベントの署名が一致する必要があります。 共有イベントを処理するには、`AddHandler` ステートメントを使う必要があります。  
   
- `Event` は、モジュール レベルでのみ使用できます。 つまり、イベントの*宣言コンテキスト*は、クラス、構造体、モジュール、またはインターフェイスである必要があり、ソース ファイル、名前空間、プロシージャ、ブロックでは宣言できません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。  
+ `Event` は、モジュール レベルでのみ使用できます。 つまり、イベントの *宣言コンテキスト* は、クラス、構造体、モジュール、またはインターフェイスである必要があり、ソース ファイル、名前空間、プロシージャ、ブロックでは宣言できません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。  
   
  ほとんどの状況で、このトピックの「構文」のセクションにある最初の構文を使ってイベントを宣言できますが、 一部のシナリオでは、イベントの動作をより詳細に制御することが必要になります。 このトピックの「構文」セクションの最後には、`Custom` キーワードを使用した構文があります。これを使用すると、カスタム イベントを定義してイベントを詳細に制御できます。 カスタム イベントでは、コードでイベント ハンドラーを追加または削除するときに、つまりコードでイベントを生成するときに、何が起こるかを正確に指定します。 たとえば、「[方法:カスタム イベントを宣言してメモリを節約する](../../programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)」および「[方法:カスタム イベントを宣言してブロックを回避する](../../programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)」を参照してください。  
   

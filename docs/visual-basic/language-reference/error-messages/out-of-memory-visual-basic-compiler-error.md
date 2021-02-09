@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: BC2004:メモリ不足'
 title: メモリが不足しています。(Visual Basic コンパイラ エラー)
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC2004
 ms.assetid: 6bc0939c-e279-4875-a91c-f4076860b5b9
-ms.openlocfilehash: 9d7843f19855bbed413699d7ea7e2d3b87eaa876
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 6cef35c1351a72ac83108d2e8422ee8a5c076022
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162415"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795509"
 ---
 # <a name="bc2004-out-of-memory"></a>BC2004:メモリ不足
 

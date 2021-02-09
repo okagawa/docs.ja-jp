@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: クエリ式の構文例:結合演算子 (LINQ to DataSet)'
 title: クエリ式の構文例:結合演算子 (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f4d86667-3392-470d-a076-5ca6cbb660f6
-ms.openlocfilehash: 637b815553d7c7f9a5fb4ffe644d2975468e1090
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c405f111ce4461f246782283fe39146092fce424
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189098"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663613"
 ---
 # <a name="query-expression-syntax-examples-join-operators-linq-to-dataset"></a>クエリ式の構文例:結合演算子 (LINQ to DataSet)
 

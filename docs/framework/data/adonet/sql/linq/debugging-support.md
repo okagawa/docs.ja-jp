@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: デバッグのサポート'
 title: デバッグのサポート
 ms.date: 03/30/2017
 ms.assetid: 262d8e60-8e71-42d7-8340-1b5276a0ad35
-ms.openlocfilehash: 89558b634c9fdfae13c13aca3041e22271feaa1e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 05ffe9790ce1b73361db55bb96cc703b01e4d69c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194506"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786135"
 ---
 # <a name="debugging-support"></a>デバッグのサポート
 

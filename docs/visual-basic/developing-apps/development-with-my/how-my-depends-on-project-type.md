@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: プロジェクトの種類に応じた My の機能 (Visual Basic)'
 title: プロジェクトの種類に応じた My の機能
 ms.date: 07/20/2015
 helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-ms.openlocfilehash: 740185d8030c09e8813bc7680b451f6326588593
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 69c1ffdbd241816c9061bf4b4feb6d4359258059
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411715"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797979"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>プロジェクトの種類に応じた My の機能 (Visual Basic)
 
@@ -31,7 +32,7 @@ ms.locfileid: "84411715"
   
  3 つのバージョンの `My.Application` オブジェクト、2 つのバージョンの `My.Computer` オブジェクト、2 つのバージョンの `My.User` オブジェクトがあります。これらのバージョンの詳細については、表の後の脚注で説明しています。  
   
-|My オブジェクト|Windows アプリケーション|クラス ライブラリ|コンソール アプリケーション|Windows コントロール ライブラリ|Web コントロール ライブラリ|Windows サービス|空|Web サイト|  
+|My オブジェクト|Windows アプリケーション|クラス ライブラリ|コンソール アプリケーション|Windows コントロール ライブラリ|Web コントロール ライブラリ|Windows サービス|Empty|Web サイト|  
 |---|---|---|---|---|---|---|---|---|  
 |`My.Application`|**はい** <sup>1</sup>|**はい** <sup>2</sup>|**はい** <sup>3</sup>|**はい** <sup>2</sup>|いいえ|**はい** <sup>3</sup>|いいえ|いいえ|  
 |`My.Computer`|**はい** <sup>4</sup>|**はい** <sup>4</sup>|**はい** <sup>4</sup>|**はい** <sup>4</sup>|**はい** <sup>5</sup>|**はい** <sup>4</sup>|いいえ|**はい** <sup>5</sup>|  

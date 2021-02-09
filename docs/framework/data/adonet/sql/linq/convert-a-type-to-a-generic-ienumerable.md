@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 汎用 IEnumerable への型の変換'
 title: 汎用 IEnumerable への型の変換
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 64774fb5-7447-4296-ad3b-8a94346f99a1
-ms.openlocfilehash: c2d34ae708f79d9f920679b3714a100fe8943c38
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9be9022bce84808e18514937116ea962065dc1a8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164416"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712520"
 ---
 # <a name="convert-a-type-to-a-generic-ienumerable"></a>汎用 IEnumerable への型の変換
 

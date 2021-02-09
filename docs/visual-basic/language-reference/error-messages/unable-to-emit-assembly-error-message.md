@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: BC30145:アセンブリを作成できません : <error message>'
 title: 'アセンブリを作成できません : <error message>'
 ms.date: 08/14/2018
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: c088f273c100b1a7eefcf74047865093f378e970
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 015ab6e1d186495d72bddd65678ab15088c0f1b2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161661"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674884"
 ---
 # <a name="bc30145-unable-to-emit-assembly-error-message"></a>BC30145:アセンブリを作成できません : \<error message>
 
@@ -38,7 +39,7 @@ Visual Basic コンパイラは、マニフェストを伴うアセンブリを�
 
 3. [Visual Studio の開発者コマンド プロンプト](../../../framework/tools/developer-command-prompt-for-vs.md)を開きます。
 
-   Windows 10 で、タスク バーの検索ボックスに「**開発者コマンド プロンプト**」と入力します。 次に、結果の一覧から **VS 2017 用開発者コマンド プロンプト**を選択します。
+   Windows 10 で、タスク バーの検索ボックスに「**開発者コマンド プロンプト**」と入力します。 次に、結果の一覧から **VS 2017 用開発者コマンド プロンプト** を選択します。
 
 4. アセンブリ ラッパーを格納するディレクトリに、ディレクトリを変更します。
 

@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: よく寄せられる質問'
 title: よく寄せられる質問
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 3cc879e97438138554f1d39cf588e01bfbba28a6
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 476e9adc3dc88bce786b8b8423e05e800c821320
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634704"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739080"
 ---
 # <a name="frequently-asked-questions"></a>よく寄せられる質問
 

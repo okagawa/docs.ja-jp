@@ -1,16 +1,17 @@
 ---
-title: ディレクトリを作成する方法
+description: '詳細情報: 方法:Visual Basic でディレクトリを作成する'
+title: '方法: ディレクトリを作成する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - directories [Visual Basic], creating
 - folders [Visual Basic], creating
 ms.assetid: 0351a2ca-24d8-43b5-bb39-9b99e6401cff
-ms.openlocfilehash: 0da915054a2e38c778f15bc0b472fe9b02521189
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 39a0f1b2f482b27b6f207f0ca8a498db198e9d59
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401668"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797602"
 ---
 # <a name="how-to-create-a-directory-in-visual-basic"></a>方法 : Visual Basic でディレクトリを作成する
 
@@ -42,7 +43,7 @@ ms.locfileid: "84401668"
   
 - 部分的に信頼されている状況でユーザーにアクセス許可がない場合 (<xref:System.Security.SecurityException>)。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CreateDirectory%2A>
 - [ファイルおよびディレクトリの作成、削除、および移動](creating-deleting-and-moving-files-and-directories.md)

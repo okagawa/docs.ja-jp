@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: End ステートメント'
 title: End ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - End statement [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-ms.openlocfilehash: 0c99b919b50701e93fab7caf5fb5d8b6b976d44b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 29e0e203689d3516a19f7e6a2b5f1c231f349ddb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90865848"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769183"
 ---
 # <a name="end-statement"></a>End ステートメント
 

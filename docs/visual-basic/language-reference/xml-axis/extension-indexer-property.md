@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 拡張インデクサー プロパティ (Visual Basic)'
 title: 拡張インデクサー プロパティ
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-ms.openlocfilehash: 23417cd982c2ddf06afce69d9b120ae0737fb87d
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: ec165836f739db9a74ea266ebba32be5bb42cca6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866106"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700326"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>拡張インデクサー プロパティ (Visual Basic)
 

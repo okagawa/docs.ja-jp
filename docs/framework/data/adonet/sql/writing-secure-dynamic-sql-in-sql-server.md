@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: SQL Server での安全な動的 SQL の作成'
 title: SQL Server での安全な動的 SQL の作成
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: c598427a17ceb289f75fab481a55016f0efe5624
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 35db22358bae1150a80daa72cf4a86ef8fba9620
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91147451"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766947"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>SQL Server での安全な動的 SQL の作成
 
@@ -31,7 +32,7 @@ SQL インジェクションとは、悪意のあるユーザーによって、�
   
 - 入力のサイズとデータ型をテストし、適切な制限を適用します。 これは、意図的なバッファー オーバーランを防ぐのに役立ちます。  
   
-- 文字列変数の内容をテストし、期待値のみを許可します。 バイナリ データ、エスケープ シーケンス、およびコメント文字を含む入力は拒否します。  
+- 文字列変数の内容をテストし、予測される値のみを受け入れる。 バイナリ データ、エスケープ シーケンス、およびコメント文字を含む入力は拒否します。  
   
 - XML ドキュメントを扱う場合、入力時にすべてのデータをスキーマに照らして検証します。  
   

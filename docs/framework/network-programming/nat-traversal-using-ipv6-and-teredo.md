@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: IPv6 および Teredo を使用した NAT トラバーサル'
 title: IPv6 および Teredo を使用した NAT トラバーサル
 ms.date: 03/30/2017
 ms.assetid: 568cd245-3300-49ef-a995-d81bf845d961
-ms.openlocfilehash: a6448ddf117e1f454338869820751ae5d9e0070e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4ff7f273c01ef52f4d307cbd3e0698c5cc2ead4d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96258622"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785745"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>IPv6 および Teredo を使用した NAT トラバーサル
 
@@ -47,7 +48,7 @@ ms.locfileid: "96258622"
   
  <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> および関連したクラスを使用するアプリケーションでは、<xref:System.Net.Sockets.Socket.GetSocketOption%2A> メソッドと <xref:System.Net.Sockets.Socket.SetSocketOption%2A> メソッドを <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType> ソケット オプションと共に使用して、NAT トラバーサルのクエリ、有効化、または無効化を行うことができます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=nameWithType>
 - <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A?displayProperty=nameWithType>

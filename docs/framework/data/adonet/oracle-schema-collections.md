@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: Oracle スキーマ コレクション'
 title: Oracle スキーマ コレクション
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-ms.openlocfilehash: cb91a90ae7323283556954caa401646a2063a37e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c3093887c9359cbb170846c0ae425e0f77fc2580
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783297"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672414"
 ---
 # <a name="oracle-schema-collections"></a>Oracle スキーマ コレクション
 

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: データ バインディングと LINQ to DataSet'
 title: データ バインディングと LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: 310bff4a-32dd-4f20-a271-6dbd82912631
-ms.openlocfilehash: 3203310029f463e55d7517e79f5a1f0424a0a80c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9a23ee8cc53048e848afd14a04934409dff9a404
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166873"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663782"
 ---
 # <a name="data-binding-and-linq-to-dataset"></a>データ バインディングと LINQ to DataSet
 

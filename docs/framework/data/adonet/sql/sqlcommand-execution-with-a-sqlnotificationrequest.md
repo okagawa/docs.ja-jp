@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: SqlCommand の実行と SqlNotificationRequest'
 title: SqlCommand の実行と SqlNotificationRequest
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1776f48f-9bea-41f6-83a4-c990c7a2c991
-ms.openlocfilehash: 3115bfb80d4e5e61ed49da11e36eaa37bc24334f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d3e82022794aa67d4bd20223cac852097f2be9dc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791536"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767051"
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>SqlCommand の実行と SqlNotificationRequest
 

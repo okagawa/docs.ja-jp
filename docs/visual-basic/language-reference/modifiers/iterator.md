@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 反復子 (Visual Basic)'
 title: Iterator
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Iterator keyword [Visual Basic]
 ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
-ms.openlocfilehash: 0b459a16317b8ba55886e52ecadb227ddf2fee83
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 7a3329ba23a3f2487343b332f3bb9c4b19c36496
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875441"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730526"
 ---
 # <a name="iterator-visual-basic"></a>反復子 (Visual Basic)
 
@@ -19,7 +20,7 @@ ms.locfileid: "90875441"
   
 ## <a name="remarks"></a>Remarks  
 
- *反復子*は、コレクションに対するカスタム イテレーションを実行します。 反復子は、[Yield](../statements/yield-statement.md) ステートメントを使用して、コレクションの各要素を 1 回に 1 つ返します。 `Yield` ステートメントに達すると、コードの現在の場所が保持されます。 次回、Iterator 関数が呼び出されると、この位置から実行が再開されます。  
+ *反復子* は、コレクションに対するカスタム イテレーションを実行します。 反復子は、[Yield](../statements/yield-statement.md) ステートメントを使用して、コレクションの各要素を 1 回に 1 つ返します。 `Yield` ステートメントに達すると、コードの現在の場所が保持されます。 次回、Iterator 関数が呼び出されると、この位置から実行が再開されます。  
   
  反復子は、関数として実装することも、プロパティ定義の `Get` アクセサーとして実装することもできます。 `Iterator` 修飾子は、Iterator 関数または `Get` アクセサーの宣言に記述されます。  
   

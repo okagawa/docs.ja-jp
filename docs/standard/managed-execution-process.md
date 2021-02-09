@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: マネージド実行プロセス'
 title: マネージド実行プロセス
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: bf62afff86a6a315e40a681250396af4bd3563e2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d8f37d5c9e93da3c7741690b92032a72360be60d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95706360"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731709"
 ---
 # <a name="managed-execution-process"></a>マネージド実行プロセス
 

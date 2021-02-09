@@ -1,4 +1,5 @@
 ---
+description: "詳細情報: BC40056:インポート '<qualifiedelementname>' で指定された名前空間または型が、パブリック メンバーを含んでいないか、または見つかりません。"
 title: インポート '<qualifiedelementname>' で指定された名前空間または型が、パブリック メンバーを含んでいないか、または見つかりません。
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40056
 ms.assetid: b59f5754-444f-4378-9272-9678b437e84a
-ms.openlocfilehash: 284a8c71fee8835f78ca5435932819fded1b1f30
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: e98ba70660823196e763300cd33ec1ba9a9db3b4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160133"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795704"
 ---
 # <a name="bc40056-namespace-or-type-specified-in-the-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>BC40056:インポート '\<qualifiedelementname>' で指定された名前空間または型が、パブリック メンバーを含んでいないか、または見つかりません。
 
@@ -20,7 +21,7 @@ ms.locfileid: "92160133"
 
 `Imports` ステートメントは、見つからないか、`Public` メンバーを定義しないコンテナー要素を指定しています。
 
-*コンテナー要素*は、名前空間、クラス、構造体、モジュール、インターフェイス、または列挙型にすることができます。 コンテナー要素には、変数、プロシージャ、その他のコンテナー要素などのメンバーが含まれています。
+*コンテナー要素* は、名前空間、クラス、構造体、モジュール、インターフェイス、または列挙型にすることができます。 コンテナー要素には、変数、プロシージャ、その他のコンテナー要素などのメンバーが含まれています。
 
 インポートの目的は、コードによって名前空間または型のメンバーに、それらを修飾しなくてもアクセスできるようにすることです。 また、プロジェクトで名前空間や型への参照を追加する必要がある場合もあります。 詳細については、「[宣言された要素の参照](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)」の "コンテナー要素のインポート" に関するセクションを参照してください。
 

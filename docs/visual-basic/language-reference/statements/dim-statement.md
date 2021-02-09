@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Dim ステートメント (Visual Basic)'
 title: Dim ステートメント
 ms.date: 05/12/2018
 f1_keywords:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-ms.openlocfilehash: 1b0c3089c366c417af926c8c0703cea021674432
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: b950ae95af01be4e064ac9177300f144e0cc08b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744729"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795197"
 ---
 # <a name="dim-statement-visual-basic"></a>Dim ステートメント (Visual Basic)
 
@@ -135,7 +136,7 @@ Dim bottomLabel As New System.Windows.Forms.Label
 
 プロシージャ、ブロック、クラス、構造体、またはモジュールで変数を宣言できます。 ソース ファイル、名前空間、またはインターフェイスで変数を宣言することはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。
 
-プロシージャの外部のモジュール レベルで宣言されている変数は、*メンバー変数*または*フィールド*です。 メンバー変数のスコープは、クラス、構造体、またはモジュール全体になります。 プロシージャ レベルで宣言された変数は、*ローカル変数*です。 ローカル変数のスコープは、それらのプロシージャまたはブロック内のみになります。
+プロシージャの外部のモジュール レベルで宣言されている変数は、*メンバー変数* または *フィールド* です。 メンバー変数のスコープは、クラス、構造体、またはモジュール全体になります。 プロシージャ レベルで宣言された変数は、*ローカル変数* です。 ローカル変数のスコープは、それらのプロシージャまたはブロック内のみになります。
 
 プロシージャの外部で変数を宣言するために、次のアクセス修飾子を使用します。`Public`、`Protected`、`Friend`、`Protected Friend`、`Private`。 詳しくは、「[Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
 
@@ -152,7 +153,7 @@ Static runningTotal As Integer
 
 ## <a name="specifying-an-initial-value"></a>初期値の指定
 
-変数を作成するときに、変数に値を割り当てることができます。 値型の場合は、*初期化子*を使用して、変数に割り当てる式を指定します。 式は、コンパイル時に計算可能な定数に評価される必要があります。
+変数を作成するときに、変数に値を割り当てることができます。 値型の場合は、*初期化子* を使用して、変数に割り当てる式を指定します。 式は、コンパイル時に計算可能な定数に評価される必要があります。
 
 ```vb
 Dim quantity As Integer = 10
@@ -173,7 +174,7 @@ Dim num2 = 3
 
 データ型または初期化子が指定されていない場合の動作については、このトピックで後述する「[既定のデータ型と値](dim-statement.md#default)」を参照してください。
 
-*オブジェクト初期化子*を使用すると、名前付き型と匿名型のインスタンスを宣言できます。 次のコードでは、`Student` クラスのインスタンスを作成し、オブジェクト初期化子を使用してプロパティを初期化しています。
+*オブジェクト初期化子* を使用すると、名前付き型と匿名型のインスタンスを宣言できます。 次のコードでは、`Student` クラスのインスタンスを作成し、オブジェクト初期化子を使用してプロパティを初期化しています。
 
 ```vb
 Dim student1 As New Student With {.First = "Michael",
@@ -201,7 +202,7 @@ Dim a, b, c As Single, x, y As Double, i As Integer
 
 ## <a name="arrays"></a>配列
 
-複数の値を保持できる*配列*を保持する変数を宣言できます。 変数で配列を保持するように指定するには、その `variablename` の直後にかっこで囲んで続けます。 配列の詳細については、「[配列](../../programming-guide/language-features/arrays/index.md)」を参照してください。
+複数の値を保持できる *配列* を保持する変数を宣言できます。 変数で配列を保持するように指定するには、その `variablename` の直後にかっこで囲んで続けます。 配列の詳細については、「[配列](../../programming-guide/language-features/arrays/index.md)」を参照してください。
 
 配列の各次元の下限と上限を指定できます。 これを行うには、`boundslist` をかっこ内に含めます。 次元ごとに、`boundslist` では上限を指定し、必要に応じて下限を指定します。 下限は、指定したかどうかにかかわらず、常に 0 になります。 各インデックスは、0 から上限値までさまざまに異なる可能性があります。
 
@@ -235,7 +236,7 @@ ReDim messages(4)
 Dim oneDimension(), twoDimensions(,), threeDimensions(,,) As Byte
 ```
 
-配列の次元の 1 つを -1 として宣言することによって、*長さゼロの配列*を宣言できます。 長さゼロの配列を保持する変数の値は、`Nothing` になりません。 特定の共通言語ランタイム関数では、長さゼロの配列が必要です。 このような配列にアクセスしようとすると、ランタイム例外が発生します。 詳細については、「[配列](../../programming-guide/language-features/arrays/index.md)」を参照してください。
+配列の次元の 1 つを -1 として宣言することによって、*長さゼロの配列* を宣言できます。 長さゼロの配列を保持する変数の値は、`Nothing` になりません。 特定の共通言語ランタイム関数では、長さゼロの配列が必要です。 このような配列にアクセスしようとすると、ランタイム例外が発生します。 詳細については、「[配列](../../programming-guide/language-features/arrays/index.md)」を参照してください。
 
 配列の値を初期化するには、配列リテラルを使用します。 これを行うには、初期化値を中かっこ (`{}`) で囲みます。
 

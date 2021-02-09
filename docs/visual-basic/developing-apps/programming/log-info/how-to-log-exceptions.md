@@ -1,22 +1,23 @@
 ---
-title: '方法 : 例外をログに記録する'
+description: '詳細情報: 方法:Visual Basic で例外をログに記録する'
+title: '方法: 例外をログに記録する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions, logging
 - exceptions, tracking
 ms.assetid: a26c60e2-ae39-444a-aebb-33eccadc0eeb
-ms.openlocfilehash: 59ed7b836126a38f32b7c6f479570a566d236e6c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a4155de4e73c632edf071256976161cfdbffba77
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410115"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775215"
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a>方法: Visual Basic で例外をログに記録する
 
 `My.Application.Log` オブジェクトおよび `My.Log` オブジェクトを使用すると、アプリケーション内で発生した例外に関する情報をログに記録できます。 以下の例では、`My.Application.Log.WriteException` メソッドを使用して、明示的にキャッチした例外および未処理の例外をログに記録する方法を示します。  
   
- トレース情報をログに記録するには、`My.Application.Log.WriteEntry` メソッドを使用します。 詳細については、「<xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>」を参照してください。  
+ トレース情報をログに記録するには、`My.Application.Log.WriteEntry` メソッドを使用します。 詳細については、<xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> を参照してください。  
   
 ### <a name="to-log-a-handled-exception"></a>処理した例外をログに記録するには  
   
@@ -44,7 +45,7 @@ ms.locfileid: "84410115"
   
 ### <a name="to-log-an-unhandled-exception"></a>未処理の例外をログに記録するには  
   
-1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
+1. **ソリューション エクスプローラー** でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
 2. **[アプリケーション]** タブをクリックします。  
   
@@ -66,7 +67,7 @@ ms.locfileid: "84410115"
   
      [!code-vb[VbVbalrMyApplicationLog#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#5)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
@@ -74,4 +75,4 @@ ms.locfileid: "84410115"
 - [アプリケーション ログの使用](working-with-application-logs.md)
 - [方法: ログ メッセージを書き込む](how-to-write-log-messages.md)
 - [チュートリアル : My.Application.Log による情報の書き込み先の確認](walkthrough-determining-where-my-application-log-writes-information.md)
-- [チュートリアル : My.Application.Log による情報の書き込み先の変更](walkthrough-changing-where-my-application-log-writes-information.md)
+- [チュートリアル: My.Application.Log による情報の書き込み先の変更](walkthrough-changing-where-my-application-log-writes-information.md)

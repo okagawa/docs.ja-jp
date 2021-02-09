@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DataSet 内容の XML データとしての書き込み'
 title: DataSet 内容の XML データとしての書き込み
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-ms.openlocfilehash: c8a5c747e4ec60fcb97edf631aa3a0ae184ffec5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0ad232f744f69f822d09c0af6c4374b6e5f0147d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173719"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651367"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>DataSet 内容の XML データとしての書き込み
 

@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: クエリのリモート実行とローカル実行'
 title: クエリのリモート実行とローカル実行
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
-ms.openlocfilehash: c99e726902192fc8324e77441b80aa4519c55ddc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ea4d85faedd4a299da292029e64d77132e1a65a9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91196950"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695196"
 ---
 # <a name="remote-vs-local-execution"></a>クエリのリモート実行とローカル実行
 

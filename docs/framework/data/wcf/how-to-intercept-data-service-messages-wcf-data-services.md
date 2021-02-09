@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:データ サービス メッセージを先に取得する (WCF Data Services)'
 title: '方法: データ サービス メッセージを先に取得する (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
-ms.openlocfilehash: 8cc8bdcf776befafba967ee2649a6ada789d07c5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6768fa9f0c7ca9a5a6ed6faa318675f2c2c51543
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194363"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765283"
 ---
 # <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>方法: データ サービス メッセージを先に取得する (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services では、要求メッセージを先に取得して、操作にカスタム ロジックを追加することができます。 メッセージを先に取得するには、データ サービスで特別なメソッドを使用する必要があります。 詳細については、「[インターセプター](interceptors-wcf-data-services.md)」を参照してください。  
   

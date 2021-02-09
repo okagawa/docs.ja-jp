@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: プログラミング ガイド'
 title: プログラミング ガイド
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-ms.openlocfilehash: 50c4370e23faf8400eb23f1e8c0cc74cd4dce80e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 37f3974864e9bfc11bff762617bab27e25a44007
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203567"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695223"
 ---
 # <a name="programming-guide"></a>プログラミング ガイド
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ユーザー データへのアクセス (Visual Basic)'
 title: ユーザー データへのアクセス
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - login names [Visual Basic]
 - examples [Visual Basic], accessing user data
 ms.assetid: 32492a15-ee59-4a63-a1f1-9b24cc13140a
-ms.openlocfilehash: 463d3bc77237482d4cd568b9558bb72cd19e7216
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f7f7a8cb121b74a2680f29c0aa14491f6e38434
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74349218"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797875"
 ---
 # <a name="accessing-user-data-visual-basic"></a>ユーザー データへのアクセス (Visual Basic)
 
@@ -24,14 +25,14 @@ ms.locfileid: "74349218"
   
  `My.User` オブジェクトを利用すれば、<xref:System.Security.Principal.IPrincipal> インターフェイスを実装するオブジェクトを返すことで、ログオン ユーザーに関する情報にアクセスできます。  
   
-## <a name="tasks"></a>処理手順  
+## <a name="tasks"></a>タスク  
   
-|ターゲット|参照先|  
+|終了|解決方法については、|  
 |--------|---------|  
 |ユーザーのログイン名を取得する|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
 |アプリケーションで Windows 認証が使用される場合、ユーザーのドメイン名を取得する|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
 |ユーザーの役割を判断する|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>

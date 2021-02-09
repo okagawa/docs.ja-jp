@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: XML 子孫軸プロパティ (Visual Basic)'
 title: XML Descendant Axis Property
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], descendant
 - XML [Visual Basic], accessing
 ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
-ms.openlocfilehash: 52544619171dbc7034baeb5feb61395d81096387
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c356d4d6f9a84755e9df171b26060fc6bfc4ead6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400254"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768780"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>XML 子孫軸プロパティ (Visual Basic)
 

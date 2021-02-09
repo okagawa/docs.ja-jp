@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 行の検索'
 title: 行の検索
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
-ms.openlocfilehash: dc0661e29e6d3ee5aa3f54179e8abf265cd67d58
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: bf4752255945d5bbc0dd5551cd6e84c98fd78c3f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91186979"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652472"
 ---
 # <a name="finding-rows"></a>行の検索
 

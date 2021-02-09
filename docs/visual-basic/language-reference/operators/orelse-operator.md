@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: OrElse 演算子 (Visual Basic)'
 title: OrElse 演算子
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - short-circuit evaluation
 - OrElse operator [Visual Basic]
 ms.assetid: 253803d8-05b0-47d7-b213-abd222847779
-ms.openlocfilehash: edac3eeaef5d0127f10a0d570ca27c8158806ff3
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 48ccbda1e0cb4f655b28e902b22fbfe0c3e66ac8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866718"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795327"
 ---
 # <a name="orelse-operator-visual-basic"></a>OrElse 演算子 (Visual Basic)
 
@@ -45,7 +46,7 @@ result = expression1 OrElse expression2
   
  いずれかまたは両方の式が `True` に評価される場合、`result` は `True` です。 次の表は、`result` がどのように決定されるかを示しています。  
   
-|`expression1` が次の場合|かつ、`expression2` が次の場合|`result` の値は次のとおり|  
+|`expression1` が次の場合|かつ、`expression2` が次の場合|`result` の値は次のようになります|  
 |-------------------------|--------------------------|------------------------------|  
 |`True`|(評価されていない)|`True`|  
 |`False`|`True`|`True`|  
@@ -76,7 +77,7 @@ result = expression1 OrElse expression2
   
 ## <a name="see-also"></a>関連項目
 
-- [論理/ビット演算子 (Visual Basic)](logical-bitwise-operators.md)
+- [論理演算子とビット処理演算子 (Visual Basic)](logical-bitwise-operators.md)
 - [Visual Basic における演算子の優先順位](operator-precedence.md)
 - [機能別の演算子一覧](operators-listed-by-functionality.md)
 - [Or 演算子](or-operator.md)

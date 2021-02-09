@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Property Statement'
 title: Property Statement
 ms.date: 05/12/2018
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-ms.openlocfilehash: 80bce2442d96ecb9c548a88c8e5ee44c6258473b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 95f2ac1f993fc8698d2033dfe50d925cd55a7dc4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346758"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741394"
 ---
 # <a name="property-statement"></a>Property Statement
 
@@ -105,7 +106,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `Iterator`
 
-  任意。 「[反復子](../modifiers/iterator.md)」を参照してください。
+  任意。 「[Iterator](../modifiers/iterator.md)」を参照してください。
 
 - `name`
 
@@ -166,7 +167,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 `Property` ステートメントは、プロパティの宣言を導入します。 プロパティには `Get` プロシージャ (読み取り専用)、`Set` プロシージャ (書き込み専用)、またはその両方 (読み取り/書き込み) を指定できます。 自動実装プロパティを使用する場合は、`Get` プロシージャと `Set` プロシージャを省略できます。 詳細については、「[自動実装プロパティ](../../programming-guide/language-features/procedures/auto-implemented-properties.md)」を参照してください。
 
-`Property` は、クラス レベルでのみ使用できます。 つまり、プロパティの*宣言コンテキスト*は、クラス、構造体、モジュール、またはインターフェイスであることが必要で、ソース ファイル、名前空間、プロシージャ、ブロックでは宣言できません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。
+`Property` は、クラス レベルでのみ使用できます。 つまり、プロパティの *宣言コンテキスト* は、クラス、構造体、モジュール、またはインターフェイスであることが必要で、ソース ファイル、名前空間、プロシージャ、ブロックでは宣言できません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。
 
 既定では、プロパティはパブリック アクセスを使用します。 `Property` ステートメントでアクセス修飾子を使用してプロパティのアクセス レベルを調整できます。また、必要に応じて、そのプロパティ プロシージャの 1 つをより制限の厳しいアクセス レベルに調整することもできます。
 

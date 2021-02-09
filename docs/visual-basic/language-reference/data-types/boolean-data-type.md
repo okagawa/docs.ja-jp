@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ブール型 (Boolean) (Visual Basic)'
 title: Boolean データ型
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-ms.openlocfilehash: 851c524a83c5f24b77a151634a96798249c5905e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cdda6bc0571eb0a2a9ee6a079ffd276bfc89a9b4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374422"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731410"
 ---
 # <a name="boolean-data-type-visual-basic"></a>ブール型 (Boolean) (Visual Basic)
 

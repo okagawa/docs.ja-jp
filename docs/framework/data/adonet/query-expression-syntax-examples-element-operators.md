@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: クエリ式の構文例:要素演算子 (LINQ to DataSet)'
 title: クエリ式の構文例:要素演算子 (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ca392dda-16e3-45c7-8d87-12d8d4ee0578
-ms.openlocfilehash: 1d722f642941c9ec37cd6304dfb428fd621a314a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0bef18eb78a03c8b41220dd51cdccea34e3c64b1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189111"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663626"
 ---
 # <a name="query-expression-syntax-examples-element-operators-linq-to-dataset"></a>クエリ式の構文例:要素演算子 (LINQ to DataSet)
 

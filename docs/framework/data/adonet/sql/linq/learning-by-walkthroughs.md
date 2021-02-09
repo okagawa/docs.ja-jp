@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: チュートリアルによる学習'
 title: チュートリアルによる学習
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: f3d313fd50108420b631cff783708191f97a8b04
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8a0163e03ee7e992d75c8f8864a6a2b256c40a7c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158241"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803829"
 ---
 # <a name="learning-by-walkthroughs"></a>チュートリアルによる学習
 
@@ -60,7 +61,7 @@ ms.locfileid: "91158241"
   
 1. Windows の **[スタート]** メニューをクリックし、 **[すべてのプログラム]** をポイントします。次に **[Microsoft SQL Server 2005]** をポイントし、 **[構成ツール]** をポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
-2. **SQL Server 構成マネージャー**の左ペインで、 **[SQL Server 2005 のサービス]** をクリックします。  
+2. **SQL Server 構成マネージャー** の左ペインで、 **[SQL Server 2005 のサービス]** をクリックします。  
   
 3. 右ペインで **[SQL Server (SQLEXPRESS)]** を右クリックし、 **[プロパティ]** をクリックします。  
   
@@ -72,11 +73,11 @@ ms.locfileid: "91158241"
   
 ### <a name="protocols"></a>プロトコル  
 
- 場合によっては、アプリケーションがデータベースにアクセスするためのプロトコルが正しく設定されていないこともあります。 たとえば、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のチュートリアルに必要な**名前付きパイプ** プロトコルは、既定では有効になっていません。  
+ 場合によっては、アプリケーションがデータベースにアクセスするためのプロトコルが正しく設定されていないこともあります。 たとえば、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のチュートリアルに必要な **名前付きパイプ** プロトコルは、既定では有効になっていません。  
   
 ##### <a name="to-enable-the-named-pipes-protocol"></a>名前付きパイプ プロトコルを有効にするには  
   
-1. **SQL Server 構成マネージャー**の左ペインで、 **[SQL Server 2005 ネットワークの構成]** を展開し、 **[SQLEXPRESS のプロトコル]** をクリックします。  
+1. **SQL Server 構成マネージャー** の左ペインで、 **[SQL Server 2005 ネットワークの構成]** を展開し、 **[SQLEXPRESS のプロトコル]** をクリックします。  
   
 2. 右ペインで、 **[名前付きパイプ]** プロトコルが有効になっていることを確認します。 有効になっていない場合は、 **[名前付きパイプ]** を右クリックし、 **[有効化]** をクリックします。  
   
@@ -88,7 +89,7 @@ ms.locfileid: "91158241"
   
 ##### <a name="to-stop-and-restart-the-service"></a>サービスを停止および再起動するには  
   
-1. **SQL Server 構成マネージャー**の左ペインで、 **[SQL Server 2005 のサービス]** をクリックします。  
+1. **SQL Server 構成マネージャー** の左ペインで、 **[SQL Server 2005 のサービス]** をクリックします。  
   
 2. 右ペインで、 **[SQL Server (SQLEXPRESS)]** を右クリックし、 **[停止]** をクリックします。  
   

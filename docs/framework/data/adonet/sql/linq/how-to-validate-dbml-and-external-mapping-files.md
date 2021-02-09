@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 方法:DBML ファイルおよび外部マッピング ファイルを検証する'
 title: '方法: DBML ファイルおよび外部マッピング ファイルを検証する'
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: b5901705ac7c0692025ff1f4a4b78f976d62176d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 46e5c787bef8e152020fc97631ef8c1c4928fe74
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793038"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785784"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>方法: DBML ファイルおよび外部マッピング ファイルを検証する
 
@@ -21,7 +22,7 @@ ms.locfileid: "70793038"
 
 2. **[ファイルを開く]** ダイアログ ボックスで、検証する .dbml ファイルまたは XML マッピング ファイルをクリックします。
 
-    **XML エディター**でファイルが開きます。
+    **XML エディター** でファイルが開きます。
 
 3. ウィンドウを右クリックし、 **[プロパティ]** をクリックします。
 

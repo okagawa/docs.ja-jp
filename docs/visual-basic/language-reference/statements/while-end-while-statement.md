@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: While...End While ステートメント (Visual Basic)'
 title: While...End While ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - While statement [Visual Basic]
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-ms.openlocfilehash: e3ab95f43e101a9ad8abe6fa61b94ae7542e409c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: ab452e2d9446c9c44b952c6ebf026f7a6f9080cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869474"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787579"
 ---
 # <a name="whileend-while-statement-visual-basic"></a>While...End While ステートメント (Visual Basic)
 
@@ -61,7 +62,7 @@ End While
 
  [Exit While](exit-statement.md) ステートメントでは、`While` ループを終了する別の方法を提供できます。 `Exit While` では `End While` ステートメントの次のステートメントに制御が直ちに渡されます。  
   
- `Exit While` は一般に、何らかの条件を評価した (`If...Then...Else` ストラクチャなどで) 後に使用します。 誤った値や終了要求など、反復処理を続行することが不要になるか、不可能になる状況を検出した場合に、ループを終了させたいことがあります。 `Exit While` は、*無限ループ*を引き起こす可能性がある条件をテストする場合に使用できます。無限ループは、膨大な回数または無限に実行する可能性があるループです。 そこで、`Exit While` を使用すると、ループから抜け出すことができます。  
+ `Exit While` は一般に、何らかの条件を評価した (`If...Then...Else` ストラクチャなどで) 後に使用します。 誤った値や終了要求など、反復処理を続行することが不要になるか、不可能になる状況を検出した場合に、ループを終了させたいことがあります。 `Exit While` は、*無限ループ* を引き起こす可能性がある条件をテストする場合に使用できます。無限ループは、膨大な回数または無限に実行する可能性があるループです。 そこで、`Exit While` を使用すると、ループから抜け出すことができます。  
   
  `While` ループ内の任意の場所に、任意の数の `Exit While` ステートメントを配置できます。  
   

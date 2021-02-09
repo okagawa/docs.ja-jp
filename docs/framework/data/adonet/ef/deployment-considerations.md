@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 配置に関する注意事項 (Entity Framework)'
 title: 配置に関する注意事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
-ms.openlocfilehash: 034fb48050fb0e6a9aabf6c183f8721f0a7115e4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8dc8212736c6eb8cddbb5a6d88ae7c30c5304f06
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181129"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651003"
 ---
 # <a name="deployment-considerations-entity-framework"></a>配置に関する注意事項 (Entity Framework)
 

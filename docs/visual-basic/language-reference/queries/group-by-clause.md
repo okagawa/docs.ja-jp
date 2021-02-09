@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Group By 句 (Visual Basic)'
 title: Group By 句
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-ms.openlocfilehash: b60f6759ada845d8eab048bceb1e47f9546ee7d0
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: f5cfb76b0f4b1d191f959ae1812140c6872e93bb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869946"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700508"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By 句 (Visual Basic)
 
@@ -32,7 +33,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 ## <a name="parts"></a>指定項目  
   
-- `listField1`、`listField2`  
+- `listField1`, `listField2`  
   
      任意。 グループ化された結果に含めるフィールドを明示的に示す、クエリ変数の 1 つ以上のフィールドです。 フィールドを指定しない場合、グループ化された結果にはクエリ変数のすべてのフィールドが含まれます。  
   

@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: .NET Framework のファイル I/O とファイル システムで使用するクラス (Visual Basic)'
 title: .NET Framework のファイル I/O とファイル システムで使用するクラス
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: 2c696d5b8c83ae55caf61e4710630ad1e34c088d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a8cbe476044df92fcdbdd0421b91f3c7c098e063
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401772"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666330"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework のファイル I/O とファイル システムで使用するクラス (Visual Basic)
 
@@ -21,7 +22,7 @@ ms.locfileid: "84401772"
 
  次の表は、ファイル I/O に使用する主要なクラスの一覧と各クラスの説明です。  
   
-|クラス|[説明]|  
+|インスタンス|説明|  
 |-----------|-----------------|  
 |<xref:System.IO.Directory?displayProperty=nameWithType>|ディレクトリやサブディレクトリを作成、移動、および反復処理するための静的メソッドを提供します。|  
 |<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|ディレクトリやサブディレクトリを作成、移動、および反復処理するためのインスタンス メソッドを提供します。|  
@@ -39,7 +40,7 @@ ms.locfileid: "84401772"
 
  次の表は、ストリームの作成に使用する主要なクラスの一覧と各クラスの説明です。  
   
-|クラス|[説明]|  
+|インスタンス|説明|  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=nameWithType>|他のストリームの読み取りおよび書き込み操作に対してバッファリング レイヤーを追加します。|  
 |<xref:System.IO.FileStream?displayProperty=nameWithType>|<xref:System.IO.FileStream.Seek%2A> メソッドにより、ファイルへのランダム アクセスをサポートします。 <xref:System.IO.FileStream> は、既定では同期的にファイルを開きますが、非同期操作もサポートしています。|  
@@ -60,7 +61,7 @@ ms.locfileid: "84401772"
 |<xref:System.IO.StringReader?displayProperty=nameWithType>|`String` から文字を読み取ります。 出力は、任意のエンコーディングのストリームまたは `String` です。|  
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|`String` に文字を書き込みます。 出力は、任意のエンコーディングのストリームまたは `String` です。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ストリームの構成](../../../../standard/io/composing-streams.md)
 - [ファイルおよびストリーム入出力](../../../../standard/io/index.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: In (ジェネリック修飾子) (Visual Basic)'
 title: In (ジェネリック修飾子) - Visual Basic
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - contravariance, In keyword [Visual Basic]
 - In keyword [Visual Basic]
 ms.assetid: 59bb13c5-fe96-42b8-8286-86293d1661c5
-ms.openlocfilehash: 9c0f7d454767112e1e309af81407b5fdef22eee9
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: e6ac95a77253b28e45a4be8a29623bdd76a231f1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004869"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774539"
 ---
 # <a name="in-generic-modifier-visual-basic"></a>In (ジェネリック修飾子) (Visual Basic)
 

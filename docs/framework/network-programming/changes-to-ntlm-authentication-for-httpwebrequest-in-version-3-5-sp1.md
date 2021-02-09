@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: バージョン 3.5 SP1 における HttpWebRequest の NTLM 認証への変更'
 title: バージョン 3.5 SP1 における HttpWebRequest の NTLM 認証への変更
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-ms.openlocfilehash: 388e6dc648e1fd68e24a852cb08de107f09f9c9f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cdb17317dbafc167cce7a9b2785be68a35d3bd5b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "64754881"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791635"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>バージョン 3.5 SP1 における HttpWebRequest の NTLM 認証への変更
 
@@ -43,7 +44,7 @@ Version 3.5 SP1 の既定では、<xref:System.Net.AuthenticationManager.CustomT
 
 3. [MSV1_0] を右クリックし、[新規作成] をポイントし、[複数行文字列値] をクリックします。
 
-4. 「`BackConnectionHostNames`」と入力して Enter キーを押します。
+4. 「`BackConnectionHostNames`」と入力し、Enter キーを押します。
 
 5. `BackConnectionHostNames` を右クリックし、[変更] をクリックします。
 
@@ -53,7 +54,7 @@ Version 3.5 SP1 の既定では、<xref:System.Net.AuthenticationManager.CustomT
 
 <https://support.microsoft.com/kb/896861> で説明されているように、あまり安全ではない回避策はループ バック チェックを無効にすることです。 これによって、リフレクション攻撃に対する保護が無効になります。 そのため、実際に使用するコンピューターと想定するコンピューターにのみ、代替名のセットを制限することをお勧めします。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>
 - <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: モデリングとマッピング'
 title: モデリングとマッピング
 ms.date: 03/30/2017
 ms.assetid: ec8a9515-3708-4cde-a688-4d8e6975f150
-ms.openlocfilehash: 5592ce5301216c8c3e74231480997d9e44d71a7d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 063cac072b7a205a471cd808fc85ad9a3ac71288
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197756"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795002"
 ---
 # <a name="modeling-and-mapping"></a>モデリングとマッピング
 

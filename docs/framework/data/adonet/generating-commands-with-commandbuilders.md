@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: CommandBuilder でのコマンドの生成'
 title: CommandBuilder でのコマンドの生成
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: d88f5772e038766d49baf8c758c547e6d5667904
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 495312f57d497421182384eff23b621130447940
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200720"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724103"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>CommandBuilder でのコマンドの生成
 

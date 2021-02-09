@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: Entity SQL クイック リファレンス'
 title: Entity SQL クイック リファレンス
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-ms.openlocfilehash: 7ec3b6fc184b4f169d6f6489bda0ec8fa4abb4f5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ddac48bece1f0e9df737db295d4d028529ea290f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148141"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724558"
 ---
 # <a name="entity-sql-quick-reference"></a>Entity SQL クイック リファレンス
 

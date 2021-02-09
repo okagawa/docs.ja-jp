@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 定数と列挙型 (Visual Basic)'
 title: 定数と列挙体
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: 60cd1ddac9bca685ddc5778e7d289710245a183e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4306b007fc5cc881cbe1342a5f4bdd7802c252f0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374487"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675144"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>定数と列挙型 (Visual Basic)
 
@@ -25,7 +26,7 @@ Visual Basic には、開発者向けの定義済み定数と列挙型が多数�
   
 |**定数**|**説明**|  
 |---|---|  
-|`CONFIG`|**構成マネージャー**の **[アクティブ ソリューション構成]** ボックスの現在の設定に対応する文字列。|  
+|`CONFIG`|**構成マネージャー** の **[アクティブ ソリューション構成]** ボックスの現在の設定に対応する文字列。|  
 |`DEBUG`|**[プロジェクト プロパティ]** ダイアログ ボックスで設定できる `Boolean` 値。 既定では、プロジェクトのデバッグ構成によって `DEBUG` が定義されます。 `DEBUG` を定義すると、<xref:System.Diagnostics.Debug> クラスのメソッドは **[出力]** ウィンドウに出力を生成します。 これを定義しない場合、<xref:System.Diagnostics.Debug> クラスのメソッドはコンパイルされず、デバッグ出力も生成されません。|  
 |`TARGET`|プロジェクトの出力の種類、またはコマンド ラインの **-target** オプションの設定を表す文字列。 `TARGET` に指定できる値は次のとおりです。<br /><br /> - Windows アプリケーションの場合は "winexe"。<br />- コンソール アプリケーションの場合は "exe"。<br />- クラス ライブラリの場合は "library"。<br />- モジュールの場合は "module"。<br />- **-target** オプションは、Visual Studio 統合開発環境で設定できます。 詳細については、「[-target (Visual Basic)](../reference/command-line-compiler/target.md)」を参照してください。|  
 |`TRACE`|**[プロジェクト プロパティ]** ダイアログ ボックスで設定できる `Boolean` 値。 既定では、プロジェクトのすべての構成で `TRACE` が定義されます。 `TRACE` を定義すると、<xref:System.Diagnostics.Trace> クラスのメソッドは **[出力]** ウィンドウに出力を生成します。 これを定義しない場合、<xref:System.Diagnostics.Trace> クラスのメソッドはコンパイルされず、`Trace` 出力も生成されません。|  

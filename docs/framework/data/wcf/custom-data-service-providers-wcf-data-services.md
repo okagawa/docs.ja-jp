@@ -1,17 +1,20 @@
 ---
+description: '詳細情報: カスタム データ サービス プロバイダー (WCF Data Services)'
 title: カスタム データ サービス プロバイダー (WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: e702ecdb-3419-4743-92a9-c3c0e7d44082
-ms.openlocfilehash: 4c92bf2f4e75b78cd6236c023246cc6c999086fa
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: df0cafae46cfdbd71a96341686a9200f032a9938
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91186693"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766154"
 ---
 # <a name="custom-data-service-providers-wcf-data-services"></a>カスタム データ サービス プロバイダー (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services には、遅延バインディング データ型に基づいてデータ モデルを定義できるプロバイダーのセットが含まれています。  
   

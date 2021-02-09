@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Continue ステートメント (Visual Basic)'
 title: Continue ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Continue statement [Visual Basic]
 - loops, transferring to next iteration
 ms.assetid: 3ad00103-358b-4af3-a3a8-1b9ea0e995d3
-ms.openlocfilehash: cf73ea1b3d402609c9966980dcab9ddd9bc096c2
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: c6d67e766b2551956795803076efe639ba3c8c99
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874972"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673870"
 ---
 # <a name="continue-statement-visual-basic"></a>Continue ステートメント (Visual Basic)
 

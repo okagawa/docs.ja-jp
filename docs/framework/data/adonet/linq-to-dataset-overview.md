@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: LINQ to DataSet の概要'
 title: LINQ to DataSet の概要
 ms.date: 03/30/2017
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
-ms.openlocfilehash: f7659d03005df69d7debe604581ce49973f938cc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 73054a4f9b7397e3fa5d417d85afa2fa23aec643
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200616"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681696"
 ---
 # <a name="linq-to-dataset-overview"></a>LINQ to DataSet の概要
 

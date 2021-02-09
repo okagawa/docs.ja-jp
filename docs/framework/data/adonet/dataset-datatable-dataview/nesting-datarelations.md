@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DataRelation の入れ子化'
 title: DataRelation の入れ子化
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-ms.openlocfilehash: 8db75f486c7c08b6a02401af35c9edf9969f9063
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d998802a11fbb2bf414aa28b4beee95cac70a819
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201279"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651757"
 ---
 # <a name="nesting-datarelations"></a>DataRelation の入れ子化
 

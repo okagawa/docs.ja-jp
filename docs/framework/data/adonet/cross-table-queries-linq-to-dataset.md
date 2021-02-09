@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 複数テーブルにまたがるクエリ (LINQ to DataSet)'
 title: 複数テーブルにまたがるクエリ (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6819a16f-8656-41af-a54d-dfec0cb66366
-ms.openlocfilehash: a209cfe4142ad8ebdbce1d715a76ac27300f4e19
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c1fa31f6908808f3369987b9b180655f26092529
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202397"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663795"
 ---
 # <a name="cross-table-queries-linq-to-dataset"></a>複数テーブルにまたがるクエリ (LINQ to DataSet)
 

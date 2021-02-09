@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: クエリ射影 (WCF Data Services)'
 title: クエリ射影 (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
@@ -10,14 +11,16 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 764ea6a77ba267e691d48bc72d17c02f6b3c18ca
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 35427a4bc74691f366711c30cfa7af23de1caa35
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900971"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794963"
 ---
 # <a name="query-projections-wcf-data-services"></a>クエリ射影 (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 射影は Open Data Protocol (OData) の機能の 1 つであり、エンティティの特定のプロパティのみが応答で返されるように指定することで、クエリによって返されるフィードのデータの量を減らします。 詳細については、セクション「4.8. システム クエリ オプションの選択 ($select)」 (「[URI 規則 (OData バージョン 2.0)](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)」) を参照してください。
 
@@ -46,7 +49,7 @@ ms.locfileid: "75900971"
 
 クエリ結果をクライアント上のエンティティ型に射影する場合、<xref:System.Data.Services.Client.DataServiceContext> はそれらのオブジェクトを追跡し、<xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> メソッドが呼び出されるとデータ サービスに更新内容が送り返されます。 ただし、クライアント上のエンティティ型以外に射影されたデータの更新内容は、データ サービスに送り返すことはできません。 これは、エンティティ インスタンスを識別するキーがなければ、データ サービスはデータ ソース内の正しいエンティティを更新できないためです。 エンティティ型以外は <xref:System.Data.Services.Client.DataServiceContext> にはアタッチされません。
 
-データ サービスで定義されたエンティティ型の 1 つ以上のプロパティが、エンティティの射影先のクライアント型に含まれない場合、新しいエンティティの挿入には、これらの欠損しているプロパティは含まれません。 この場合、欠損しているこれらのプロパティは既存のエンティティに対する更新**にも**含まれません。 そのようなプロパティに対する値が存在する場合、データ ソースの定義に従い、更新ではその値がそのプロパティの既定値としてリセットされます。
+データ サービスで定義されたエンティティ型の 1 つ以上のプロパティが、エンティティの射影先のクライアント型に含まれない場合、新しいエンティティの挿入には、これらの欠損しているプロパティは含まれません。 この場合、欠損しているこれらのプロパティは既存のエンティティに対する更新 **にも** 含まれません。 そのようなプロパティに対する値が存在する場合、データ ソースの定義に従い、更新ではその値がそのプロパティの既定値としてリセットされます。
 
 ### <a name="creating-projected-types"></a>射影型の作成
 

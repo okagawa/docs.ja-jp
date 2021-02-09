@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DataSet への XSLT 変換の適用'
 title: DataSet への XSLT 変換の適用
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: 3f066f29b99ade6e92a263110fed8079208567b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c7fc25441091112f7fbb7e4c1f8dd210d8cd0c5d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151495"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725117"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>DataSet への XSLT 変換の適用
 

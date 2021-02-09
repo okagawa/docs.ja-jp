@@ -1,4 +1,5 @@
 ---
+description: "詳細情報: BC31122:'Custom' 修飾子は、明示的なデリゲート型なしで宣言されたイベントでは無効です。"
 title: "'Custom' 修飾子は、明示的なデリゲート型なしで宣言されたイベントでは無効です。"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-ms.openlocfilehash: a2277e3778c2c252fd4b1eaeb033d549f041c15c
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 6cbddd31dfa9c923038f8ea706bfc49233574cfb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160634"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796679"
 ---
 # <a name="bc31122-custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>BC31122:'Custom' 修飾子は、明示的なデリゲート型なしで宣言されたイベントでは無効です。
 

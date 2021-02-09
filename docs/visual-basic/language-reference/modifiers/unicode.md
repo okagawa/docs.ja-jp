@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Unicode (Visual Basic)'
 title: Unicode
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Unicode keyword [Visual Basic]
 - Unicode, marshaling strings
 ms.assetid: 0021d5ff-3209-444e-8497-420f3e6ee075
-ms.openlocfilehash: 2f415e70e6ffb5295d49c919383462b9f726f88a
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: b0c71d8fdefe3f0d240201e0d57265e5c6081d50
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867657"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700716"
 ---
 # <a name="unicode-visual-basic"></a>Unicode (Visual Basic)
 

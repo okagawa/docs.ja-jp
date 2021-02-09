@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: ADO.NET での side-by-side 実行'
 title: side-by-side 実行
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 609fc7b7cefd92e38ecfff54e5ac1651e855e4b7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ab55430382f49c40a577d5cac8501c0136c9f0a4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91188939"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718773"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET での side-by-side 実行
 

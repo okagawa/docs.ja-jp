@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: リレーションシップの推論'
 title: リレーションシップの推論
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-ms.openlocfilehash: ee691eee95c34afdb6374cdd7448d4b44ece3055
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a117581d512c1427c638ea862169ab3c7623d783
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177567"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652147"
 ---
 # <a name="inferring-relationships"></a>リレーションシップの推論
 

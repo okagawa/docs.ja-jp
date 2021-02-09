@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DataTable イベントの処理'
 title: DataTable イベントの処理
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: c00e5e42508160a210d16f058c46afbf62ae0ee0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 89519345ec0c9f2348153c480366396a66d37ae0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164728"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652355"
 ---
 # <a name="handling-datatable-events"></a>DataTable イベントの処理
 

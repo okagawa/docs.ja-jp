@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 標準クエリ演算子の変換'
 title: 標準クエリ演算子の変換
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: af22b6a895fef8037eb5c069ffb7cb23d1333531
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: e7e45e8f27f1e7d3c572f00ea014b4edb288b2b0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833678"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681527"
 ---
 # <a name="standard-query-operator-translation"></a>標準クエリ演算子の変換
 
@@ -76,10 +77,10 @@ ORDER BY [t0].[CustomerID]
 
 |演算子|理由|
 |---------------|---------------|
-|<xref:System.Linq.Enumerable.TakeWhile%2A>、<xref:System.Linq.Enumerable.SkipWhile%2A>|SQL クエリの操作の対象は、シーケンスではなく、マルチセットです。 結果に対して適用する最後の句が `ORDER BY` であることが必要です。 このため、これら 2 つのメソッドには、汎用的な変換がありません。|
+|<xref:System.Linq.Enumerable.TakeWhile%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A>|SQL クエリの操作の対象は、シーケンスではなく、マルチセットです。 結果に対して適用する最後の句が `ORDER BY` であることが必要です。 このため、これら 2 つのメソッドには、汎用的な変換がありません。|
 |<xref:System.Linq.Enumerable.Reverse%2A>|順序付けされたセットに対しては、このメソッドの変換が可能ですが、現在の [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では変換されません。|
-|<xref:System.Linq.Enumerable.Last%2A>、<xref:System.Linq.Enumerable.LastOrDefault%2A>|順序付けされたセットに対しては、これらのメソッドの変換が可能ですが、現在の [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では変換されません。|
-|<xref:System.Linq.Enumerable.ElementAt%2A>、<xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|SQL クエリの操作の対象は、インデックス可能なシーケンスではなくマルチセットです。|
+|<xref:System.Linq.Enumerable.Last%2A>, <xref:System.Linq.Enumerable.LastOrDefault%2A>|順序付けされたセットに対しては、これらのメソッドの変換が可能ですが、現在の [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では変換されません。|
+|<xref:System.Linq.Enumerable.ElementAt%2A>, <xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|SQL クエリの操作の対象は、インデックス可能なシーケンスではなくマルチセットです。|
 |<xref:System.Linq.Enumerable.DefaultIfEmpty%2A> (既定の引数のオーバーロード)|一般に、任意のタプルに対して既定値を指定することはできません。 場合によっては、外部結合を通じて、タプルに対する null 値の使用が可能です。|
 
 ## <a name="expression-translation"></a>式の変換

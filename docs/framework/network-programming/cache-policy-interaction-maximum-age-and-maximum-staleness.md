@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: キャッシュ ポリシーの相互作用 — 最大有効期間と最大期限延長'
 title: キャッシュ ポリシーの相互作用 — 最大有効期間と最大期限延長
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - staleness of cached resources
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
-ms.openlocfilehash: bdfa608b5169755b2b4daaaa26e562308ae2be01
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 909a7203d4c9813c90dc0dea9bae7f8a1f7336cf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250607"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791661"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>キャッシュ ポリシーの相互作用 — 最大有効期間と最大期限延長
 
@@ -36,11 +37,11 @@ ms.locfileid: "96250607"
   
 - キャッシュ ポリシーで `maxAge` = 1 日、`maxStale` = 1 日が設定されている場合、コンテンツは 1 月 2 日に再検証されます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ネットワーク アプリケーションのキャッシュ管理](cache-management-for-network-applications.md)
 - [キャッシュ ポリシー](cache-policy.md)
 - [場所ベースのキャッシュ ポリシー](location-based-cache-policies.md)
 - [時間ベースのキャッシュ ポリシー](time-based-cache-policies.md)
 - [ネットワーク アプリケーションでのキャッシュの構成](configuring-caching-in-network-applications.md)
-- [キャッシュ ポリシーの相互作用 - 最大有効期間と最小鮮度](cache-policy-interaction-maximum-age-and-minimum-freshness.md)
+- [キャッシュ ポリシーの相互作用 — 最大有効期間と最小鮮度](cache-policy-interaction-maximum-age-and-minimum-freshness.md)

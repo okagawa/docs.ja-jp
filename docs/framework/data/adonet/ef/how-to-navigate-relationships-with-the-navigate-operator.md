@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:Navigate 演算子でリレーションシップをナビゲートする'
 title: '方法: Navigate 演算子でリレーションシップをナビゲートする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 79996d2d-9b03-4a9d-82cc-7c5e7c2ad93d
-ms.openlocfilehash: 7d0dbb590555f3e525cd328e4f4b0ad3584f108b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ff419a959c2ec895a238d37caeedcf1f06812050
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198250"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697531"
 ---
 # <a name="how-to-navigate-relationships-with-the-navigate-operator"></a>方法: Navigate 演算子でリレーションシップをナビゲートする
 

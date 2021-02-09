@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 接続の確立'
 title: 接続の確立
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: bf38475711a193bc69176993154f87d455aefe7d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e7f8c837476a678f003eb0477934bb8bd08fd896
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156473"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724337"
 ---
 # <a name="establishing-the-connection"></a>接続の確立
 

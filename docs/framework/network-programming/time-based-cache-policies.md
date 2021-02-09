@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 時間ベースのキャッシュ ポリシー'
 title: 時間ベースのキャッシュ ポリシー
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-ms.openlocfilehash: 372621ce55891cb87594e6d059c7bbeeb99f6468
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 42a76be0da664899295a583d72477de0698cc39e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239420"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712299"
 ---
 # <a name="time-based-cache-policies"></a>時間ベースのキャッシュ ポリシー
 
-時間ベースのキャッシュ ポリシーは、リソースの取得時間、リソースと共に返されたヘッダー、現在時刻を利用し、キャッシュされているエントリの更新の確認間隔を定義します。 時間ベースのキャッシュ ポリシーを設定するとき、<xref:System.Net.Cache.HttpRequestCacheLevel.Default> 時間ベース キャッシュ ポリシーを利用するか、カスタマイズした時間ベース ポリシーを作成できます。 ハイパーテキスト転送プロトコル (HTTP) を利用して取得されるリソースに既定の時間ベース ポリシーを利用するとき、厳密なキャッシュ動作は、キャッシュされている応答に含まれているヘッダーと、RFC 2616 のセクション 13 とセクション 14 に指定されている動作で決定されます。RFC 2616 は [インターネット技術標準化委員会 (IETF)](https://www.ietf.org/) Web サイトで確認できます。 HTTP リソースの既定の時間ベース ポリシーを設定する方法を示すコード例については、「[How to: Set the Default Time-Based Cache Policy for an Application](how-to-set-the-default-time-based-cache-policy-for-an-application.md)」(方法: アプリケーションの既定の時間ベースのキャッシュ ポリシーを設定する) を参照してください。 キャッシュ ポリシーを作成し、利用する方法を示すコード例については、「[Configuring Caching in Network Applications](configuring-caching-in-network-applications.md)」(ネットワーク アプリケーションでのキャッシュの構成) を参照してください。  
+時間ベースのキャッシュ ポリシーは、リソースの取得時間、リソースと共に返されたヘッダー、現在時刻を利用し、キャッシュされているエントリの更新の確認間隔を定義します。 時間ベースのキャッシュ ポリシーを設定するとき、<xref:System.Net.Cache.HttpRequestCacheLevel.Default> 時間ベース キャッシュ ポリシーを利用するか、カスタマイズした時間ベース ポリシーを作成できます。 ハイパーテキスト転送プロトコル (HTTP) を利用して取得されるリソースに既定の時間ベース ポリシーを利用するとき、厳密なキャッシュ動作は、キャッシュされている応答に含まれているヘッダーと、RFC 2616 のセクション 13 とセクション 14 に指定されている動作で決定されます。RFC 2616 は [インターネット技術標準化委員会 (IETF)](https://www.ietf.org/) Web サイトで確認できます。 HTTP リソースの既定の時間ベース ポリシーを設定する方法を示すコード例については、「[How to: Set the Default Time-Based Cache Policy for an Application](how-to-set-the-default-time-based-cache-policy-for-an-application.md)」(方法: アプリケーションの既定の時間ベースのキャッシュ ポリシーを設定する) を参照してください。 キャッシュ ポリシーを作成し、利用する方法を示すコード例については、「[ネットワーク アプリケーションでのキャッシュの構成](configuring-caching-in-network-applications.md)」(ネットワーク アプリケーションでのキャッシュの構成) を参照してください。  
   
 ## <a name="criteria-to-determine-freshness-of-cached-entries"></a>キャッシュされたエントリの更新の確認間隔を決定する基準  
 
@@ -65,9 +66,9 @@ ms.locfileid: "96239420"
   
 - [キャッシュ ポリシーの相互作用 — 最大有効期間と最大期限延長](cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
   
-- [キャッシュ ポリシーの相互作用 - 最大有効期間と最小鮮度](cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
+- [キャッシュ ポリシーの相互作用 — 最大有効期間と最小鮮度](cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ネットワーク アプリケーションのキャッシュ管理](cache-management-for-network-applications.md)
 - [キャッシュ ポリシー](cache-policy.md)

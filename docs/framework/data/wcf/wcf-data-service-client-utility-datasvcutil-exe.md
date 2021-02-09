@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: WCF Data Service クライアント ユーティリティ (DataSvcUtil.exe)'
 title: WCF Data Service クライアント ユーティリティ (DataSvcUtil.exe)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,14 +7,16 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-ms.openlocfilehash: 600cb9a4f91ff2051f60ee86d4cb80cc5b404c61
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1e232538284072d82eed3f1b9e8d41f2ae950adf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544298"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791700"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF Data Service クライアント ユーティリティ (DataSvcUtil.exe)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 DataSvcUtil.exe は、WCF Data Services に付属するコマンドライン ツールです。このツールでは、Open Data Protocol (OData) フィードを使用して、.NET Framework クライアント アプリケーションのデータ サービスにアクセスするために必要なクライアント データ サービス クラスが生成されます。 このユーティリティでは、以下のメタデータ ソースを使用してデータ クラスを生成できます。
 

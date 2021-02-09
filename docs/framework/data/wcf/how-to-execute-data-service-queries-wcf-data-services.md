@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:データ サービス クエリを実行する (WCF Data Services)'
 title: '方法: データ サービス クエリを実行する (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -9,14 +10,16 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 62997821-e0c6-4c4d-9fb7-1273fb5e5d18
-ms.openlocfilehash: 11a37340df879db7c2f8fdeaa792c1466e4a75d0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0d78a5a82f23bb6035d21bd45d68a0b1bb76f34b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91184756"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765322"
 ---
 # <a name="how-to-execute-data-service-queries-wcf-data-services"></a>方法: データ サービス クエリを実行する (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services では、生成されたクライアント データ サービス クラスを使用して .NET Framework ベースのクライアント アプリケーションからデータ サービスをクエリできます。 次の方法のいずれかを使用してクエリを実行できます。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Nothing キーワード (Visual Basic)'
 title: Nothing キーワード
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-ms.openlocfilehash: 3bd4681341a33cc8db4ecbc2b284be243db56549
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c77f39c0a431dd05aabd24a235fb2dc88ea29e69
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344174"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674728"
 ---
 # <a name="nothing-keyword-visual-basic"></a>Nothing キーワード (Visual Basic)
 

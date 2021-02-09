@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: XSD としての DataSet スキーマ情報の書き込み'
 title: XSD としての DataSet スキーマ情報の書き込み
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4e530831-695e-49ff-8f0b-e5b0c526b8eb
-ms.openlocfilehash: 7634dfc8415b6f73fc60f2ebe59c92a0c31f83a2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e05188c74ca21e73ee5151da817e143102640a13
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173732"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651354"
 ---
 # <a name="writing-dataset-schema-information-as-xsd"></a>XSD としての DataSet スキーマ情報の書き込み
 

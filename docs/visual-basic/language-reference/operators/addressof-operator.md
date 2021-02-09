@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: AddressOf 演算子 (Visual Basic)'
 title: AddressOf 演算子
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - addresses, passing to API procedures
 ms.assetid: 8105a59d-60d8-4ab5-b221-5899cdfacbf4
-ms.openlocfilehash: edce7d4a2268bd311045ea4972672fe8fd2600ea
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 2aba8c26aa9581fe1070574b8c408e09bf063d1f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874895"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774383"
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf 演算子 (Visual Basic)
 

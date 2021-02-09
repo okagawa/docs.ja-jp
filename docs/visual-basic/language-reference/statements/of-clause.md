@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Of 句 (Visual Basic)'
 title: Of 句
 ms.date: 07/20/2015
 f1_keywords:
@@ -17,20 +18,20 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-ms.openlocfilehash: 0595356fb75fc0ac73a49622d71fe1d28fa7b648
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d6002041a2fe8db5b07e12e9e396a65fde30b716
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90865899"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768845"
 ---
 # <a name="of-clause-visual-basic"></a>Of 句 (Visual Basic)
 
-`Of` 句が導入されています。これは、*ジェネリック* クラス、構造体、インターフェイス、デリゲート、またはプロシージャの*型パラメーター*を識別します。 ジェネリック型については、「[Visual Basic におけるジェネリック型](../../programming-guide/language-features/data-types/generic-types.md)」を参照してください。  
+`Of` 句が導入されています。これは、*ジェネリック* クラス、構造体、インターフェイス、デリゲート、またはプロシージャの *型パラメーター* を識別します。 ジェネリック型については、「[Visual Basic におけるジェネリック型](../../programming-guide/language-features/data-types/generic-types.md)」を参照してください。  
   
 ## <a name="using-the-of-keyword"></a>Of キーワードの使用  
 
- 次のコード例では、`Of` キーワードを使用して、2 つの型パラメーターを受け取るクラスの概要を定義しています。 それは、<xref:System.IComparable> インターフェイスによって、`keyType` パラメーターを*制約*します。つまり、使用するコードで、<xref:System.IComparable> を実装する型引数を指定する必要があります。 これは、`add` プロシージャで <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> メソッドを呼び出せるようにするために必要です。 制約の詳細については、「 [Type List](type-list.md)」をご覧ください。  
+ 次のコード例では、`Of` キーワードを使用して、2 つの型パラメーターを受け取るクラスの概要を定義しています。 それは、<xref:System.IComparable> インターフェイスによって、`keyType` パラメーターを *制約* します。つまり、使用するコードで、<xref:System.IComparable> を実装する型引数を指定する必要があります。 これは、`add` プロシージャで <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> メソッドを呼び出せるようにするために必要です。 制約の詳細については、「 [Type List](type-list.md)」をご覧ください。  
   
 ```vb  
 Public Class Dictionary(Of entryType, keyType As IComparable)  

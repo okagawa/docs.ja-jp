@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:データベース値を上書きすることで競合を解決する'
 title: '方法: データベース値を上書きすることで競合を解決する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fd6db0b8-c29c-48ff-b768-31d28e7a148c
-ms.openlocfilehash: 1dc112350451bde28d27c63961733b96f6fc84be
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4eaa66b4bb49706bb1ca6449d24c688a89f2750b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91191711"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723505"
 ---
 # <a name="how-to-resolve-conflicts-by-overwriting-database-values"></a>方法: データベース値を上書きすることで競合を解決する
 

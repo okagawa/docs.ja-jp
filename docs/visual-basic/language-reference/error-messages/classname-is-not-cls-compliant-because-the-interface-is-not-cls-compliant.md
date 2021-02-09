@@ -1,4 +1,5 @@
 ---
+description: "詳細情報: BC40029: '<classname>' は継承元のインターフェイス '<interfacename>' が CLS に準拠していないため、CLS に準拠していません"
 title: "'<classname>' は継承元のインターフェイス '<interfacename>' が CLS に準拠していないため、CLS に準拠していません。"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40029
 ms.assetid: 178452f3-5575-4da0-9d6c-53bcddb6a338
-ms.openlocfilehash: 936bc78d87613a8492347df0f65688bbef6e2ca4
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 28264dd602bd20a6b33bebd965982ca12d402d01
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163182"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796770"
 ---
 # <a name="bc40029-classname-is-not-cls-compliant-because-the-interface-interfacename-it-implements-is-not-cls-compliant"></a>BC40029: '\<classname>' は継承元のインターフェイス '\<interfacename>' が CLS に準拠していないため、CLS に準拠していません
 

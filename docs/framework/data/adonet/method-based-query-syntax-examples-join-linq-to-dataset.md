@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: メソッド ベースのクエリ構文例:結合 (LINQ to DataSet)'
 title: メソッド ベースのクエリ構文例:結合 (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4fd5ed2c-b03a-4054-a3ed-3ddb380d7d9d
-ms.openlocfilehash: 9573b1bf9dad77567fee8801a5e612c7efd53b1e
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: f19921ceb874d120a3b50896f3ec82159ef03aac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98187809"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672700"
 ---
 # <a name="method-based-query-syntax-examples-join-linq-to-dataset"></a>メソッド ベースのクエリ構文例:結合 (LINQ to DataSet)
 

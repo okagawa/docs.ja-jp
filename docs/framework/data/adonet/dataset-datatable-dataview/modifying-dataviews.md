@@ -1,22 +1,23 @@
 ---
+description: '詳細情報: DataView の変更'
 title: DataView の変更
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 697a3991-b660-4a5a-8a54-1a2304ff158e
-ms.openlocfilehash: 8e3a3f92fe8ecc94a041fbcb1540bae18a41dbef
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e0f62c0b8553cd4b83c28da99b8bdec316c8a91d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203684"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651835"
 ---
 # <a name="modifying-dataviews"></a>DataView の変更
 
 <xref:System.Data.DataView> を使用して、データ行を基になるテーブルに追加、削除、または変更できます。 基になるテーブルのデータを **DataView** で変更できるかどうかは、**DataView** の 3 つのブール値プロパティで制御されます。 この 3 つのプロパティとは、<xref:System.Data.DataView.AllowNew%2A>、<xref:System.Data.DataView.AllowEdit%2A> および <xref:System.Data.DataView.AllowDelete%2A> です。 これらのプロパティの既定値は **true** です。  
   
- **AllowNew** が **true** の場合は、**DataView** の <xref:System.Data.DataView.AddNew%2A> メソッドを使用して新しい <xref:System.Data.DataRowView> を作成できます。 **DataRowView** の <xref:System.Data.DataRowView.EndEdit%2A> メソッドが呼び出されるまで、基になる <xref:System.Data.DataTable> に新しい行が実際に追加されることはないことに注意してください。 **DataRowView** の <xref:System.Data.DataRowView.CancelEdit%2A> メソッドが呼び出されると、新しい行は破棄されます。 また、一度に編集できる **DataRowView** は 1 つだけであることにも注意してください。 保留中の行がある間に、**DataRowView** の **AddNew** メソッドまたは **BeginEdit** メソッドを呼び出すと、保留中の行に対して **EndEdit** が暗黙的に呼び出されます。 **EndEdit** が呼び出されると、基になる **DataTable** に対して変更が適用されます。適用された変更をコミットするには **DataTable**、**DataSet**、または**DataRow** オブジェクトの **AcceptChanges** メソッドを使用し、拒否するにはこれらのオブジェクトの **RejectChanges** メソッドを使用します。 **AllowNew** が **false** の場合は、**DataRowView** の **AddNew** メソッドを呼び出すと例外がスローされます。  
+ **AllowNew** が **true** の場合は、**DataView** の <xref:System.Data.DataView.AddNew%2A> メソッドを使用して新しい <xref:System.Data.DataRowView> を作成できます。 **DataRowView** の <xref:System.Data.DataRowView.EndEdit%2A> メソッドが呼び出されるまで、基になる <xref:System.Data.DataTable> に新しい行が実際に追加されることはないことに注意してください。 **DataRowView** の <xref:System.Data.DataRowView.CancelEdit%2A> メソッドが呼び出されると、新しい行は破棄されます。 また、一度に編集できる **DataRowView** は 1 つだけであることにも注意してください。 保留中の行がある間に、**DataRowView** の **AddNew** メソッドまたは **BeginEdit** メソッドを呼び出すと、保留中の行に対して **EndEdit** が暗黙的に呼び出されます。 **EndEdit** が呼び出されると、基になる **DataTable** に対して変更が適用されます。適用された変更をコミットするには **DataTable**、**DataSet**、または **DataRow** オブジェクトの **AcceptChanges** メソッドを使用し、拒否するにはこれらのオブジェクトの **RejectChanges** メソッドを使用します。 **AllowNew** が **false** の場合は、**DataRowView** の **AddNew** メソッドを呼び出すと例外がスローされます。  
   
  **AllowEdit** が **true** の場合は、**DataRowView** を使用して **DataRow** の内容を変更できます。 基になる行の変更内容を確定するには **DataRowView.EndEdit** を使用し、変更内容を取り消すには **DataRowView.CancelEdit** を使用します。 一度に編集できるのは 1 行だけです。 保留中の行がある間に、**DataRowView** の **AddNew** メソッドまたは **BeginEdit** メソッドを呼び出すと、保留中の行に対して **EndEdit** が暗黙的に呼び出されます。 **EndEdit** が呼び出されると、基になる **DataRow** の **Current** 行バージョンに対して変更が適用されます。適用された変更をコミットするには **DataTable**、**DataSet**、または **DataRow** オブジェクトの **AcceptChanges** メソッドを使用し、拒否するにはこれらのオブジェクトの **RejectChanges** メソッドを使用します。 **AllowEdit** が **false** の場合、**DataView** の値を変更しようとすると、例外がスローされます。  
   

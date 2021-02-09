@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 文字型 (Char) (Visual Basic)'
 title: 文字型 (Char)
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: 3dbbf9f6a2c4079775e05f5d2dcd8704c1ec4259
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 371244ee4eae6d7dde20487dd7f38c09f3929cd8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387479"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792246"
 ---
 # <a name="char-data-type-visual-basic"></a>文字型 (Char) (Visual Basic)
 
-0 から 65535 までの値の範囲の符号なし 16 ビット (2 バイト) のコード ポイントを保持します。 各*コード ポイント* (文字コード) は、1 つの Unicode 文字を表します。
+0 から 65535 までの値の範囲の符号なし 16 ビット (2 バイト) のコード ポイントを保持します。 各 *コード ポイント* (文字コード) は、1 つの Unicode 文字を表します。
 
 ## <a name="remarks"></a>Remarks
 

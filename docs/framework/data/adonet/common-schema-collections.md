@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 共通のスキーマ コレクション'
 title: 共通のスキーマ コレクション
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-ms.openlocfilehash: f822de27e53554aba4011a701f59a8feda847c67
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 63aaf66fa3122f7d40e54ea47d3e9b1908b37ba9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91203814"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663953"
 ---
 # <a name="common-schema-collections"></a>共通のスキーマ コレクション
 

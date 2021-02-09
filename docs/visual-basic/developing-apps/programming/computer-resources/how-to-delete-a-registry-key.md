@@ -1,5 +1,6 @@
 ---
-title: '方法: レジストリ キーを削除する'
+description: '詳細情報: 方法:レジストリ キーを削除する (Visual Basic)'
+title: '方法: レジストリ キーの削除'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.DeleteSetting
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - registry [Visual Basic], deleting keys
 - examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
-ms.openlocfilehash: ea537d302f64933176f1a44fec2e27b804ff5809
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ca99855d30c2dd697c789bb4017429b906b3b63d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363320"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797719"
 ---
 # <a name="how-to-delete-a-registry-key-in-visual-basic"></a>方法: レジストリ キーを削除する (Visual Basic)
 
@@ -48,7 +49,7 @@ ms.locfileid: "84363320"
 
  必要なアクセス許可が実行時に与えられない (<xref:System.Security.Permissions.RegistryPermission>) 場合、またはユーザーが設定の作成や書き込みを行うための適切な (ACL によって決定された) アクセス権を持っていない場合、レジストリ呼び出しは失敗します。 たとえば、コード アクセス セキュリティのアクセス許可を持つローカル アプリケーションには、オペレーティング システムのアクセス許可がない可能性があります。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
 - <xref:Microsoft.Win32.RegistryKey>

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: Entity SQL の概要'
 title: Entity SQL の概要
 ms.date: 03/30/2017
 ms.assetid: f0bb8120-e709-40a3-ac1e-5520dc47477d
-ms.openlocfilehash: e9a5117984380938e48e0cd1113107c74389480f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: eb337ff3894b24d787d829838c9cf12c934a823c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148128"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724610"
 ---
 # <a name="entity-sql-overview"></a>Entity SQL の概要
 

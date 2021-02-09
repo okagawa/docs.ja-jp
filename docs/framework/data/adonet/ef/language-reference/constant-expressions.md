@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 定数式'
 title: 定数式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9d98a7be-b110-4edb-8eba-bed10f250b6d
-ms.openlocfilehash: 163f73a7682d444214caa213751cb35f8f0e8743
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3c040918df4af6a0302d2435e3564e395044108e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153041"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724831"
 ---
 # <a name="constant-expressions"></a>定数式
 

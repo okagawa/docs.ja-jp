@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: My で利用可能なオブジェクトのカスタマイズ (Visual Basic)'
 title: My で利用可能なオブジェクトのカスタマイズ
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-ms.openlocfilehash: 5245c129281bc8c7c1c6fe9215a221889380a901
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 065f7e645a5530db1e485ee3f8ea50f8a163f9e8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410219"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731436"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>My で利用可能なオブジェクトのカスタマイズ (Visual Basic)
 
@@ -36,7 +37,7 @@ ms.locfileid: "84410219"
 |Windows アプリケーション (カスタム `Sub Main` を使って起動する場合)|"WindowsFormsWithCustomSubMain"|  
 |Windows コントロール ライブラリ|"Windows"|  
 |Windows サービス|"Console"|  
-|空|"Empty"|  
+|Empty|"Empty"|  
   
 > [!NOTE]
 > すべての条件付きコンパイル文字列の比較では、`Option Compare` ステートメントの設定方法に関係なく、大文字と小文字が区別されます。  

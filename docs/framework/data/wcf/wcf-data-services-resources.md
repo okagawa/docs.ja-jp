@@ -1,17 +1,20 @@
 ---
+description: '詳細情報: WCF Data Services リソース'
 title: WCF Data Services リソース
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: 52de0dc16ea2363c48ed48291883352b02f2015c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: bbd4430430d64952aba4ac111033aaa4302c7f4f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202150"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748155"
 ---
 # <a name="wcf-data-services-resources"></a>WCF Data Services リソース
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services の概要に関するトピックは次の場所にあります。 これらのトピックの多くには、詳細情報が記載された関連トピックへのリンクも含まれています。  
   

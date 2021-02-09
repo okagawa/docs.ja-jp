@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: OLE DB、ODBC、および Oracle 接続プール'
 title: OLE DB、ODBC、および Oracle 接続プール
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 0ff3cbd89482645ff8d52e3144f1a82fd05d8013
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: da30d70f88c8d109d50716347e7deaacdc65991a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150688"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672648"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB、ODBC、および Oracle 接続プール
 

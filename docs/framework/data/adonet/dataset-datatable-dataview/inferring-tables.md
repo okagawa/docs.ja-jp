@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: テーブルの推論'
 title: テーブルの推論
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
-ms.openlocfilehash: 4a3d7b239dbc405cf2acae967b5be401dc772e38
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 00a24cbfc44aea4279b0a115214ec26d3eac59ad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177554"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652160"
 ---
 # <a name="inferring-tables"></a>テーブルの推論
 

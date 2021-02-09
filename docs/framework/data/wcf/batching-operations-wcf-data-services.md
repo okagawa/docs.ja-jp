@@ -1,17 +1,20 @@
 ---
+description: '詳細情報: バッチ処理 (WCF Data Services)'
 title: バッチ処理 (WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 962a49d1-cc11-4b96-bc7d-071dd6607d6c
-ms.openlocfilehash: 95524c1397172e645d682a6ef3f03b17bb3a639d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0f8f4043e35c872445f73483832311ed86989101
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166067"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766544"
 ---
 # <a name="batching-operations-wcf-data-services"></a>バッチ処理 (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 Open Data Protocol (OData) では、OData ベースのサービスへの要求のバッチ処理がサポートされています。 詳細については、[OData のバッチ処理](https://www.odata.org/documentation/odata-version-2-0/batch-processing/)に関するページを参照してください。 WCF Data Services では、<xref:System.Data.Services.Client.DataServiceContext> を使用する各操作 (クエリの実行や変更の保存など) は、データ サービスに個別に送信される要求になります。 操作セットの論理スコープを維持するために、操作バッチを明示的に定義する必要があります。 この定義により、バッチ内のすべての操作が 1 つの HTTP 要求でデータ サービスに送信され、サーバーが操作を自動的に処理できるようになり、データ サービスへのラウンド トリップの数が減少します。  
   

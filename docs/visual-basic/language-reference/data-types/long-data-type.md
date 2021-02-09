@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Long データ型 (Visual Basic)'
 title: Long 型
 ms.date: 01/31/2018
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
-ms.openlocfilehash: 7c076cd2198c85560f7c63c69e051697966c9524
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cb4a22fa3b9d1440f755c8a3412aa3a918b7f261
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415597"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792181"
 ---
 # <a name="long-data-type-visual-basic"></a>Long データ型 (Visual Basic)
 

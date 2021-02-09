@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: System.Uri での International Resource Identifier のサポート'
 title: System.Uri での International Resource Identifier のサポート
 ms.date: 03/30/2017
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
-ms.openlocfilehash: a3670c40a7a78e2ac8b521a4cb95477381848f36
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9aa22a42f45d149b56441e113e3e6cc00512c506
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253363"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801879"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>System.Uri での International Resource Identifier のサポート
 
@@ -45,7 +46,7 @@ ms.locfileid: "96253363"
   
  <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> 構成クラスと <xref:System.Configuration.IdnElement?displayProperty=nameWithType> 構成クラスの構成設定は、最初の <xref:System.Uri?displayProperty=nameWithType> クラスが構築されるときに 1 回、読み取られます。 それ以降の構成設定の変更は無視されます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
 - <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>

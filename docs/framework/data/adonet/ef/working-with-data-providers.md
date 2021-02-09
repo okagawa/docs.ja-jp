@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: データ プロバイダーの操作'
 title: データ プロバイダーの操作
 ms.date: 03/30/2017
 ms.assetid: b6ae53f4-34f8-4510-ad98-ff1e46621526
-ms.openlocfilehash: e4dcbf28048d02c1d6606c8488b5de0319fabe96
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 04f15331ed693b76532123061044dc2cc61f0be8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200876"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672999"
 ---
 # <a name="working-with-data-providers"></a>データ プロバイダーの操作
 

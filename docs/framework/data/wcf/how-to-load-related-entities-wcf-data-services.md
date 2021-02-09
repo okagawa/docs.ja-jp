@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:関連エンティティを読み込む (WCF Data Services)'
 title: '方法: 関連エンティティを読み込む (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 6f143d30-d997-4e6b-bcf0-d5c394ecb108
-ms.openlocfilehash: 1ef7fa93b5afdf664f22bd69d3fe3a3b17e98f18
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 004e52b17c399abe8564dd069dd251d7baf296cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180713"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765257"
 ---
 # <a name="how-to-load-related-entities-wcf-data-services"></a>方法: 関連エンティティを読み込む (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 関連付けられたエンティティを WCF Data Services で読み込む必要がある場合、<xref:System.Data.Services.Client.DataServiceContext> クラスの <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> メソッドを使用できます。 <xref:System.Data.Services.Client.DataServiceQuery%601> で <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> メソッドを使用して、関連エンティティが同じクエリ応答で集中的に読み込むよう要求することもできます。  
   

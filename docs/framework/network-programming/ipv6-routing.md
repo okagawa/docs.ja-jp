@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: IPv6 のルーティング'
 title: IPv6 のルーティング
 ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
-ms.openlocfilehash: 646eef4ec178472a99f60de4785fd53381296c3a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 75499a7380ab0ea7c38c83a6407a0c2a269b5fce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96258336"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672037"
 ---
 # <a name="ipv6-routing"></a>IPv6 のルーティング
 
@@ -35,7 +36,7 @@ ms.locfileid: "96258336"
   
 - リダイレクト。 送信元ノード向けに特定の宛先へのより良い次ホップ アドレスを示すために、ルーターによって送信されます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [インターネット プロトコル バージョン 6](internet-protocol-version-6.md)
 - [ソケット](sockets.md)

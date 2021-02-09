@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 属性ベースの対応付け'
 title: 属性ベースの対応付け
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: 986a5022ea9e70868689c898649067135eac944b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9dfe9fce10d7ba76281afd843385c734e86af245
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156109"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712728"
 ---
 # <a name="attribute-based-mapping"></a>属性ベースの対応付け
 
@@ -26,7 +27,7 @@ ms.locfileid: "91156109"
 
  この属性は、接続によってデータベースの名前が提供されない場合に、データベースの既定の名前を指定するために使用します。 この属性は省略可能ですが、この属性を使用する場合は、次の表に示されているように、<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> プロパティを適用する必要があります。  
   
-|プロパティ|種類|Default|説明|  
+|プロパティ|Type|Default|説明|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|String|「<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>」を参照してください。|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> プロパティを使用して、データベースの名前を指定します。|  
   
@@ -36,7 +37,7 @@ ms.locfileid: "91156109"
 
  この属性は、クラスを、データベース テーブルまたはビューに関連付けられたエンティティ クラスとして指定するために使用します。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、この属性を持つクラスを、永続的なクラスとして扱います。 次の表は、<xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> プロパティについての説明です。  
   
-|プロパティ|種類|Default|説明|  
+|プロパティ|Type|Default|説明|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>|String|クラス名と同じ文字列|クラスを、データベース テーブルに関連付けられたエンティティ クラスとして指定します。|  
   
@@ -50,7 +51,7 @@ ms.locfileid: "91156109"
   
  この属性のプロパティを次の表に示します。  
   
-|プロパティ|種類|Default|説明|  
+|プロパティ|Type|Default|説明|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|AutoSync|Never|共通言語ランタイム (CLR) に対して、挿入または更新操作の後に値を取得することを指示します。<br /><br /> オプション:Always、Never、OnUpdate、OnInsert。|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|ブール型|`true`|列に null 値を含めることができることを示します。|  
@@ -73,7 +74,7 @@ ms.locfileid: "91156109"
   
  この属性のプロパティを次の表に示します。  
   
-|プロパティ|種類|Default|説明|  
+|プロパティ|Type|Default|説明|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|ブール型|`false`|外部キー メンバーがすべて null 非許容の関連付けの場合、関連付けが null に設定されるとオブジェクトを削除します。|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|String|None|関連付けに削除の動作を追加します。|  
@@ -93,7 +94,7 @@ ms.locfileid: "91156109"
   
  この属性のプロパティを次の表に示します。  
   
-|プロパティ|種類|Default|説明|  
+|プロパティ|Type|Default|説明|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>|String|なし。 値を指定する必要があります。|識別子のコード値を指定します。|  
 |<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>|ブール型|`false`|true の場合、ストア内の識別子の値が、指定された値に一致しないときは、この型のオブジェクトをインスタンス化します。|  
@@ -107,7 +108,7 @@ ms.locfileid: "91156109"
   
  この属性のプロパティを次の表に示します。  
   
-|プロパティ|種類|Default|説明|  
+|プロパティ|Type|Default|説明|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>|ブール型|`false`|false の場合、ストアド プロシージャへの対応付けを表します。 true の場合、ユーザー定義関数への対応付けを表します。|  
 |<xref:System.Data.Linq.Mapping.FunctionAttribute.Name%2A>|String|データベース内の名前と同じ文字列|ストアド プロシージャまたはユーザー定義関数の名前を指定します。|  
@@ -120,7 +121,7 @@ ms.locfileid: "91156109"
   
  この属性のプロパティを次の表に示します。  
   
-|プロパティ|種類|Default|説明|  
+|プロパティ|Type|Default|説明|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|String|None|データベースの型を指定します。|  
 |<xref:System.Data.Linq.Mapping.ParameterAttribute.Name%2A>|String|データベース内のパラメーター名と同じ文字列|パラメーターの名前を指定します。|  
@@ -133,7 +134,7 @@ ms.locfileid: "91156109"
   
  この属性のプロパティを次の表に示します。  
   
-|プロパティ|種類|Default|説明|  
+|プロパティ|Type|Default|説明|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.ResultTypeAttribute.Type%2A>|種類|(なし)|<xref:System.Data.Linq.IMultipleResults> を返すストアド プロシージャに対応付けられているメソッドで使用します。 ストアド プロシージャの有効な型マッピングまたは期待される型マッピングを宣言します。|  
   
@@ -145,7 +146,7 @@ ms.locfileid: "91156109"
   
  この属性のプロパティを次の表に示します。  
   
-|プロパティ|種類|Default|説明|  
+|プロパティ|Type|Default|説明|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.DataAttribute.Name%2A>|String|データベース内の名前と同じ|テーブル、列などの名前を指定します。|  
 |<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>|String|パブリック アクセサー|基になるストレージ フィールドの名前を指定します。|  

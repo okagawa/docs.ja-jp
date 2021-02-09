@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 正規関数'
 title: 正規関数
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-ms.openlocfilehash: 11e22d527c4266f45ea5d26f2ec95926ebe46332
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6e84c4b5199d38e2efac44cf7e69c72abb1663f6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185250"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739509"
 ---
 # <a name="canonical-functions"></a>正規関数
 

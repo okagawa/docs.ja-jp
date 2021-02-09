@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 大きな UDT'
 title: 大きな UDT
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 032093244f51893cd3b0cf50ad81c79413aaa32e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e1a40330bb48d6320dc96533e764f1b856e0f410
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194545"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663184"
 ---
 # <a name="large-udts"></a>大きな UDT
 

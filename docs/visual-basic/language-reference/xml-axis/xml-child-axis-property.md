@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: XML 子軸プロパティ (Visual Basic)'
 title: XML Child Axis Property
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-ms.openlocfilehash: c6af9584931206fecde3154a91a60cfd38278ec0
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 54920ebd35635f215eb6cb58867be1e4a7acd847
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873063"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768793"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>XML 子軸プロパティ (Visual Basic)
 

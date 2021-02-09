@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 挿入、更新、および削除の各操作'
 title: 挿入、更新、および削除の各操作
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 26a43a4f-83c9-4732-806d-bb23aad0ff6b
-ms.openlocfilehash: fac89f905b85493bc0ec36a85635f369bb354266
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2d0470ed6abe654ca08f954c3de97de207adb75d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793057"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803816"
 ---
 # <a name="insert-update-and-delete-operations"></a>挿入、更新、および削除の各操作
 

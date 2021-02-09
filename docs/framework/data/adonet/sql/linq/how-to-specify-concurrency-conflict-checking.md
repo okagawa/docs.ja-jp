@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:コンカレンシーの競合のチェックを指定する'
 title: '方法: コンカレンシーの競合のチェックを指定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c2547fcb-58eb-4377-9948-1b8d76a0f3d7
-ms.openlocfilehash: 7adacdccd12c6493ff7c62c0e6a44058a9719d7d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a1c1c771dba95e558d86764d023625a63e9e53bc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197210"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785927"
 ---
 # <a name="how-to-specify-concurrency-conflict-checking"></a>方法: コンカレンシーの競合のチェックを指定する
 

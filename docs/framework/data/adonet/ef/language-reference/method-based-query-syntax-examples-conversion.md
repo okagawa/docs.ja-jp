@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: メソッド ベースのクエリ構文例:変換'
 title: メソッド ベースのクエリ構文例:変換
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 19f66872-d5ab-49f8-969f-e53f9632a13d
-ms.openlocfilehash: e2b5ae3b7c7733216f18914c497d080fe8d71a8e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 054ef9291a66216b14e2f03ecebd28fb24c6574d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192088"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99696751"
 ---
 # <a name="method-based-query-syntax-examples-conversion"></a>メソッド ベースのクエリ構文例:変換
 

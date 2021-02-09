@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: ODBC スキーマ コレクション'
 title: ODBC スキーマ コレクション
 ms.date: 03/30/2017
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
-ms.openlocfilehash: f0240e99d2420b0956d3c144f837b39e094bb78a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ceac67e49914db7010e315a2dfcdb630bea1e29f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794719"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786200"
 ---
 # <a name="odbc-schema-collections"></a>ODBC スキーマ コレクション
 

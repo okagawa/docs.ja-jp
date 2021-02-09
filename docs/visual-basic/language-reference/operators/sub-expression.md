@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 部分式 (Visual Basic)'
 title: 部分式
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-ms.openlocfilehash: e564fa3f717fc1a9f4e9961d9b3e961912a4d56b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: e47aa8f9707701b5fd9d90fb3fabb31e9c052b53
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873332"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795288"
 ---
 # <a name="sub-expression-visual-basic"></a>部分式 (Visual Basic)
 
@@ -37,7 +38,7 @@ End Sub
   
 ## <a name="remarks"></a>Remarks  
 
- *ラムダ式*は、1 つ以上のステートメントを実行する、名前のないサブルーチンです。 ラムダ式は、デリゲート型を使用できる場所であればどこでも使用できます。ただし、`RemoveHandler` の引数として使用することはできません。 デリゲートの詳細と、デリゲートでのラムダ式の使用の詳細については、「[Delegate ステートメント](../statements/delegate-statement.md)」と「[厳密でないデリゲート変換](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md)」をご覧ください。  
+ *ラムダ式* は、1 つ以上のステートメントを実行する、名前のないサブルーチンです。 ラムダ式は、デリゲート型を使用できる場所であればどこでも使用できます。ただし、`RemoveHandler` の引数として使用することはできません。 デリゲートの詳細と、デリゲートでのラムダ式の使用の詳細については、「[Delegate ステートメント](../statements/delegate-statement.md)」と「[厳密でないデリゲート変換](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md)」をご覧ください。  
   
 ## <a name="lambda-expression-syntax"></a>ラムダ式の構文  
 

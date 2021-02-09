@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 方法:null 値を許可する列として列を表す'
 title: '方法: null 値を許可する列として列を表す'
 ms.date: 03/30/2017
 ms.assetid: ebb71a37-1f4c-4fa7-b2d2-d903f13c4af1
-ms.openlocfilehash: ec88429ed9c1f91917476cc807bd6b53f0bcc3a3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 019affd13fa9c2629c6a0ec66c42f19842a4d824
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166366"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695906"
 ---
 # <a name="how-to-represent-columns-as-allowing-null-values"></a>方法: null 値を許可する列として列を表す
 

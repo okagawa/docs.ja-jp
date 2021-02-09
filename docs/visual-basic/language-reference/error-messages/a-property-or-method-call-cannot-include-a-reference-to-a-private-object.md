@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: プロパティまたはメソッドの呼び出しには、引数または戻り値としてプライベート オブジェクトへの参照を含めることはできません。'
 title: プロパティまたはメソッドの呼び出しには、引数または戻り値としてプライベート オブジェクトへの参照を含めることはできません。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID98
 ms.assetid: 059b43e1-202d-4fa2-806b-7bad63c1e7ca
-ms.openlocfilehash: 00237d795fb62fbae426e0015d8e64d5fabb4c32
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 8fe570c9ed789a5bac36aafa9b1ec2f507a55d51
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162675"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797199"
 ---
 # <a name="a-property-or-method-call-cannot-include-a-reference-to-a-private-object-either-as-an-argument-or-as-a-return-value"></a>プロパティまたはメソッドの呼び出しには、引数または戻り値としてプライベート オブジェクトへの参照を含めることはできません。
 

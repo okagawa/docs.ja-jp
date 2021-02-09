@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DataSet への既存の制約の追加'
 title: DataSet への既存の制約の追加
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
-ms.openlocfilehash: 267d6489d39f86fc06b35de8cf30dad74f501b0b
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: cad0dd1bd16747a5e76e10784d00c14cd9aa8c2a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523240"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729573"
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>DataSet への既存の制約の追加
 

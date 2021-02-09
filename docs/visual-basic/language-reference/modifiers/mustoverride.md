@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: MustOverride (Visual Basic)'
 title: New
 ms.date: 07/20/2015
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - MustOverride keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 6e9d9ad6-bb64-433f-b32b-3ef84293bf96
-ms.openlocfilehash: cf73f07b6e13d524281129e3c5d8dceceb90764c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: df7200a7f7ec4bfda34765747d6318bc50a38dd1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867943"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774526"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride (Visual Basic)
 
@@ -38,7 +39,7 @@ ms.locfileid: "90867943"
   
 - **シャドウとオーバーライド。** シャドウとオーバーライドは、どちらも継承された要素を再定義しますが、その方法は大きく異なります。 詳細については、「[Visual Basic におけるシャドウ](../../programming-guide/language-features/declared-elements/shadowing.md)」を参照してください。  
   
-- **代替用語。** オーバーライド以外で使用できない要素は、*純粋仮想*要素と呼ばれることもあります。  
+- **代替用語。** オーバーライド以外で使用できない要素は、*純粋仮想* 要素と呼ばれることもあります。  
   
  `MustOverride` 修飾子は、次のコンテキストで使用できます。  
   

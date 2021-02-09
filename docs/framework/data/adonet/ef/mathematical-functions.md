@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 数学関数'
 title: 数学関数
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: 4512aaa2eeb3e715a1d6f7a8655912eb15162124
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6bf1f116d6d88a8a188dc31cab91fbf26bdaea36
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149766"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795028"
 ---
 # <a name="mathematical-functions"></a>数学関数
 

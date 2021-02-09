@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: End <keyword> ステートメント (Visual Basic)'
 title: End <keyword> ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - End keyword [Visual Basic]
 ms.assetid: 42d6e088-ab0f-4cda-88e8-fdce3e5fcf4f
-ms.openlocfilehash: 87f4724cc036e6e0bdf0b558854a4034f45b9ab5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ba21d4ba68a054d77d4f29307d49ed8e82bb6b50
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343733"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769196"
 ---
-# <a name="end-keyword-statement-visual-basic"></a>End \<キーワード> ステートメント (Visual Basic)
+# <a name="end-keyword-statement-visual-basic"></a>End \<keyword> ステートメント (Visual Basic)
 
 追加のキーワードが後に続く場合に、そのキーワードによって導入されたステートメント ブロックの定義を終了します。
 

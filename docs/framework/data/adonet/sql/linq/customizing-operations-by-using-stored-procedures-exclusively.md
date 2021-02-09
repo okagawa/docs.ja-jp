@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: ストアド プロシージャのみによる操作のカスタマイズ'
 title: ストアド プロシージャのみによる操作のカスタマイズ
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 441e8ef3-998c-4d12-8825-ce66a178f90f
-ms.openlocfilehash: 78db5cf448a19056d7265ab84d97d055748c3faa
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4ddcc6b4face1abccb502e12617105a734bb5f0b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164325"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729550"
 ---
 # <a name="customizing-operations-by-using-stored-procedures-exclusively"></a>ストアド プロシージャのみによる操作のカスタマイズ
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Inherits Statement'
 title: Inherits Statement
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: dd8fbc71fdc859bb127764951464278267c0984c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: fba574ec207b384c1e7219341526a4a89c8a619c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875231"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768923"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
 

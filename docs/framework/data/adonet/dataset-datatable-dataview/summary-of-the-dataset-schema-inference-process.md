@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: DataSet スキーマの推論プロセスの概要'
 title: DataSet スキーマの推論プロセスの概要
 ms.date: 03/30/2017
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
-ms.openlocfilehash: 8d517487b96aa7f204ea9f25d326500db7df413a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 637e4325558708c15d6d4eb17de9c0cf13b3b256
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198510"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651562"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a>DataSet スキーマの推論プロセスの概要
 

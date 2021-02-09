@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 外部マップ'
 title: 外部マップ
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 79427cde0784746480e851cf1be56c8bce854919
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8c09e3bdf1798757bedfac9e568a0384a8e6bb49
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161387"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786083"
 ---
 # <a name="external-mapping"></a>外部マップ
 

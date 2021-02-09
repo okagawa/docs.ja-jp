@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: LINQ to DataSet クエリのデバッグ'
 title: LINQ to DataSet クエリのデバッグ
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: 638198ef4c78b84dd12c3d39f83bf8a015e566c1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f1293ba195c96d6868fdd5bfee50e8734f9cecc4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183196"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651224"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>LINQ to DataSet クエリのデバッグ
 

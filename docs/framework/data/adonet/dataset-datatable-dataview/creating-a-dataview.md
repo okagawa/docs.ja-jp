@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DataView の作成'
 title: DataView の作成
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b1cc02d1-23b1-4439-a998-0da1899f3442
-ms.openlocfilehash: 539e9763c8aa4affdb6f3bd219a99dbca50cee01
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e9614e7ee9aae58c4dc57f856a959bd3624dac03
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202344"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725026"
 ---
 # <a name="creating-a-dataview"></a>DataView の作成
 

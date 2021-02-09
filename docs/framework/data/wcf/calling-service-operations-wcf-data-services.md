@@ -1,18 +1,21 @@
 ---
+description: '詳細情報: サービス操作の呼び出し (WCF Data Services)'
 title: サービス操作の呼び出し (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: ac1b28665dcaaa9f8c6ae6a6611757f6c4969adb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 49b08581e42fcd20b9d560d73379eb43ebbf2eb4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152846"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766466"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>サービス操作の呼び出し (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 Open Data Protocol (OData) では、データ サービスのサービス操作が定義されています。 WCF Data Services では、データ サービスのメソッドとしてこのような操作を定義できます。 他のデータ サービス リソースと同様に、これらのサービス操作は URI によってアドレス指定できます。 サービス操作では、エンティティ型のコレクション、1 つのエンティティ型のインスタンス、およびプリミティブ型 (整数、文字列など) を返すことができます。 さらに、サービス操作では、`null` (Visual Basic の場合は `Nothing`) を返すこともできます。 WCF Data Services クライアント ライブラリを使用して、HTTP GET 要求をサポートするサービス操作にアクセスすることができます。 この種のサービス操作は、<xref:System.ServiceModel.Web.WebGetAttribute> が適用されたメソッドとして定義されます。 詳細については、「[サービス操作](service-operations-wcf-data-services.md)」を参照してください。  
   

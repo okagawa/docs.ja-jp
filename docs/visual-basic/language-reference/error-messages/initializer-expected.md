@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: BC30996:初期化子が必要です'
 title: 初期化子が必要です
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30996
 ms.assetid: 6e183fe0-8888-43ed-a062-01571079455f
-ms.openlocfilehash: cbe77bab3e4f8bf2094c70c1c16d95ee897c729e
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: a9859dc319ec53cb42785d71b21447a097ce30f6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163013"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796055"
 ---
 # <a name="bc30996-initializer-expected"></a>BC30996:初期化子が必要です
 

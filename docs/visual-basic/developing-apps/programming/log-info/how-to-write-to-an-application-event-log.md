@@ -1,5 +1,6 @@
 ---
-title: '方法 : アプリケーション イベント ログに書き込む'
+description: '詳細情報: 方法:アプリケーション イベント ログに書き込む (Visual Basic)'
+title: '方法: アプリケーション イベント ログに書き込む'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Computer.EventLog element
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - My.Computer.EventLog element
 - event logs, writing to
 ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
-ms.openlocfilehash: 298d6d85f8b21176b72db8e676617577eb03fada
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ea53ff84f1fcf175912e35eb7433ece26886cf44
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410037"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797290"
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>方法: アプリケーション イベント ログに書き込む (Visual Basic)
 
@@ -20,7 +21,7 @@ ms.locfileid: "84410037"
 
 セキュリティ ログに書き込むことはできません。 システム ログに書き込むためには、LocalSystem または Administrator アカウントのメンバーであることが必要です。
 
-イベント ログを参照するには、 **サーバー エクスプローラー** または **Windows イベント ビューアー**を使用できます。 詳細については、「 [.NET Framework の ETW イベント](../../../../framework/performance/etw-events.md)」を参照してください。
+イベント ログを参照するには、 **サーバー エクスプローラー** または **Windows イベント ビューアー** を使用できます。 詳細については、「 [.NET Framework の ETW イベント](../../../../framework/performance/etw-events.md)」を参照してください。
 
 ## <a name="to-add-and-configure-the-event-log-listener"></a>イベント ログ リスナーを追加および構成するには
 
@@ -67,11 +68,11 @@ ms.locfileid: "84410037"
 
 アセンブリに対してイベント ログ リスナーを設定すると、そのアセンブリで `My.Application.Log` が書き込んだすべてのメッセージを受け取ります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [アプリケーション ログの使用](working-with-application-logs.md)
-- [方法 : 例外をログに記録する](how-to-log-exceptions.md)
-- [チュートリアル : My.Application.Log による情報の書き込み先の確認](walkthrough-determining-where-my-application-log-writes-information.md)
+- [方法: 例外をログに記録する](how-to-log-exceptions.md)
+- [チュートリアル: My.Application.Log による情報の書き込み先の確認](walkthrough-determining-where-my-application-log-writes-information.md)

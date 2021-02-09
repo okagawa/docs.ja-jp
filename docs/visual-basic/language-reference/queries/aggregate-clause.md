@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Aggregate 句 (Visual Basic)'
 title: Aggregate Clause
 ms.date: 08/28/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: be2e401c7931b2637c14a3ea3b742a2c09917939
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 404cb4091bc11132450cf0d8d001ce426439ece7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869987"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700664"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate 句 (Visual Basic)
 

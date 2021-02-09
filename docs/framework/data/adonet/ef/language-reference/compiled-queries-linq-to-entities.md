@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: コンパイル済みクエリ (LINQ to Entities)'
 title: コンパイル済みクエリ (LINQ to Entities)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: b8bed63cda505ad8c26c9c69d880a077053b8d2e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: bed14f21b6f2b46bfa229dbca0aa7c31d9763af3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153054"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99696920"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>コンパイル済みクエリ (LINQ to Entities)
 

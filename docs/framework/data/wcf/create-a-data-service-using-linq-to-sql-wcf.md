@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:LINQ to SQL データ ソースを使用してデータ サービスを作成する (WCF Data Services)'
 title: '方法: LINQ to SQL データ ソースを使用してデータ サービスを作成する (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, LINQ to SQL
 - WCF Data Services, providers
 ms.assetid: 3b01c2fd-8c6e-4bf5-b38f-9e61bdc3c328
-ms.openlocfilehash: cde5b9903a1fd164ce106a6a408ac4bb79976642
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 18c59cc8a067372f2a5c5b4b25d9aec77515ad98
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802286"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766245"
 ---
 # <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>方法: LINQ to SQL データ ソースを使用してデータ サービスを作成する (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services は、エンティティ データをデータ サービスとして公開します。 リフレクション プロバイダーでは、<xref:System.Linq.IQueryable%601> の実装を返すメンバーを公開するクラスに基づいたデータ モデルを定義できます。 データ ソース内のデータに更新を加えるには、これらのクラスも <xref:System.Data.Services.IUpdatable> インターフェイスを実装する必要があります。 詳細については、「[Data Services プロバイダー](data-services-providers-wcf-data-services.md)」を参照してください。 このトピックでは、リフレクション プロバイダーを使用して Northwind サンプル データベースにアクセスする LINQ to SQL クラスを作成する方法と、これらのデータ クラスに基づくデータ サービスを作成する方法について説明します。
 
@@ -31,7 +34,7 @@ WCF Data Services は、エンティティ データをデータ サービスと
 
      Northwind.dbml ファイルがプロジェクトに追加され、オブジェクト リレーショナル デザイナー (O/R デザイナー) が開きます。
 
-5. **サーバー エクスプローラー**または**データベース エクスプローラー**で、Northwind の下にある **[テーブル]** を展開して、`Customers` テーブルをオブジェクト リレーショナル デザイナー (O/R デザイナー) にドラッグします。
+5. **サーバー エクスプローラー** または **データベース エクスプローラー** で、Northwind の下にある **[テーブル]** を展開して、`Customers` テーブルをオブジェクト リレーショナル デザイナー (O/R デザイナー) にドラッグします。
 
      `Customer` エンティティ クラスが作成され、デザイン サーフェイスに表示されます。
 
@@ -48,7 +51,7 @@ WCF Data Services は、エンティティ データをデータ サービスと
 
 ### <a name="to-create-a-data-service-by-using-a-linq-to-sql-based-data-model"></a>LINQ to SQL ベースのデータ モデルを使用してデータ サービスを作成するには
 
-1. **ソリューション エクスプローラー**で、ASP.NET プロジェクトの名前を右クリックし、 **[追加]**  >  **[新しい項目]** をクリックします。
+1. **ソリューション エクスプローラー** で、ASP.NET プロジェクトの名前を右クリックし、 **[追加]**  >  **[新しい項目]** をクリックします。
 
 2. **[新しい項目の追加]** ダイアログ ボックスで、 **[Web]** カテゴリの **[WCF Data Service]** テンプレートを選択します。
 

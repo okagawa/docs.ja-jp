@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: ビット単位の正規関数'
 title: ビット単位の正規関数
 ms.date: 03/30/2017
 ms.assetid: 993868ca-16e3-47b6-9915-c29cd63b0a21
-ms.openlocfilehash: 67ae0302f6faf0fb7284bc0c4a53a90ba6d55e08
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a811c707749af2d2fa9472ae2d1444c3f076aeec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185263"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697102"
 ---
 # <a name="bitwise-canonical-functions"></a>ビット単位の正規関数
 

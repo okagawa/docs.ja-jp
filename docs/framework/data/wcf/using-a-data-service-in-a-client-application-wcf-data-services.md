@@ -1,18 +1,21 @@
 ---
+description: '詳細情報: クライアント アプリケーションでのデータ サービスの使用 (WCF Data Services)'
 title: クライアント アプリケーションでのデータ サービスの使用 (WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: b921e78c1b3d3d90d9ac8b4a459df496cf6d14dd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f16b927a00aae55a3cb95630fc5d75a1c4c9e238
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180583"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791726"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>クライアント アプリケーションでのデータ サービスの使用 (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 Web ブラウザーに URI を入力することで、Open Data Protocol (OData) フィードを公開するサービスにアクセスできます。 URI はリソースのアドレスを提供し、要求メッセージがこれらのアドレスに送信されてリソースが表す基になるデータのアクセスまたは変更を行います。 ブラウザーは HTTP GET コマンドを発行して、要求されたリソースを OData フィードとして返します。 詳細については、「[Web ブラウザーからサービスへのアクセス](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)」を参照してください。  
   

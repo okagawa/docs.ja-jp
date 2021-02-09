@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 文字列型 (String) (Visual Basic)'
 title: 文字列型 (String)
 ms.date: 07/20/2015
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-ms.openlocfilehash: cd4b64c101ae56928e84a04649e49c17b6f4023c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6597a5c4b8ee0eb961d3e33bee52ae493068da35
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415506"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792116"
 ---
 # <a name="string-data-type-visual-basic"></a>文字列型 (String) (Visual Basic)
 
-0 から 65535 までの値の範囲の符号なし 16 ビット (2 バイト) のコード ポイントにシーケンスを保持します。 各*コード ポイント* (文字コード) は、1 つの Unicode 文字を表します。 文字列には、0 ～ 約 20 億 (2 ^ 31) の Unicode 文字を含めることができます。  
+0 から 65535 までの値の範囲の符号なし 16 ビット (2 バイト) のコード ポイントにシーケンスを保持します。 各 *コード ポイント* (文字コード) は、1 つの Unicode 文字を表します。 文字列には、0 ～ 約 20 億 (2 ^ 31) の Unicode 文字を含めることができます。  
   
 ## <a name="remarks"></a>Remarks  
 
@@ -59,7 +60,7 @@ MsgBox("Joe said """ & h & """ to me.")
   
 ## <a name="string-manipulations"></a>文字列の処理  
 
- 文字列を `String` 変数に割り当てた後、その文字列は*不変*になります。つまり、長さや内容を変更できなくなります。 文字列を何らかの方法で変更すると、Visual Basic によって新しい文字列が作成され、前の文字列が破棄されます。 その後、`String` 変数は新しい文字列を指します。  
+ 文字列を `String` 変数に割り当てた後、その文字列は *不変* になります。つまり、長さや内容を変更できなくなります。 文字列を何らかの方法で変更すると、Visual Basic によって新しい文字列が作成され、前の文字列が破棄されます。 その後、`String` 変数は新しい文字列を指します。  
   
  さまざまな文字列関数を使用することで、`String` 変数の内容を操作できます。 <xref:Microsoft.VisualBasic.Strings.Left%2A> 関数の例を次に示します  
   

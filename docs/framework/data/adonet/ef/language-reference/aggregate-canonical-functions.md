@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 集計正規関数'
 title: 集計正規関数
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: 3f4bb84c45e503fc0018e7869f3b41ddab4581a6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e26888ac15553a592f7d2cb9b1a0941161115615
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251353"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697297"
 ---
 # <a name="aggregate-canonical-functions"></a>集計正規関数
 

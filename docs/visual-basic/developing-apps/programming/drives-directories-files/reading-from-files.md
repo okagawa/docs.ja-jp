@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic でのファイルの読み取り'
 title: ファイルの読み取り
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - files [Visual Basic], reading
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
-ms.openlocfilehash: b94a92567c62efca37b1f0ec34f79fb3ceca54bc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d2ed1c46a1b3f11782dafa75bb5130433aec5acd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406639"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792311"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Visual Basic でのファイルの読み取り
 
@@ -67,5 +68,5 @@ ms.locfileid: "84406639"
  [チュートリアル: Visual Basic によるファイルとディレクトリの操作](walkthrough-manipulating-files-and-directories.md)  
  ファイルとディレクトリで `My` 機能を使用する方法について説明します。  
   
- [チュートリアル : .NET Framework のメソッドによるファイル操作](walkthrough-manipulating-files-by-using-net-framework-methods.md)  
+ [チュートリアル: .NET Framework のメソッドによるファイル操作](walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  ファイルとディレクトリで .NET Framework メソッドを使用する方法について説明します。

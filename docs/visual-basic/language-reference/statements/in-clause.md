@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: In 句 (Visual Basic)'
 title: In 句
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - In keyword [Visual Basic]
 ms.assetid: 2f003a85-8fb6-4280-822b-6ac12839b915
-ms.openlocfilehash: fe9444482d3ab17f7adcbd5a76fdb1f4759de2cd
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: f70ce60721b87b788e61e4b7fcffc488181d5c6b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866514"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768949"
 ---
 # <a name="in-clause-visual-basic"></a>In 句 (Visual Basic)
 

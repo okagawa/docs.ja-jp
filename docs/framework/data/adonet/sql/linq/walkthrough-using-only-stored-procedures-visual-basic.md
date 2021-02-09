@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: チュートリアル: ストアド プロシージャのみの使用 (Visual Basic)'
 title: 'チュートリアル: ストアド プロシージャのみの使用 (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 57ae5dba89a299365e1ce3c2d54d844da0102f31
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b368bdd5717c0f424192c3eabb8058d633cac61e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163949"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791765"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>チュートリアル: ストアド プロシージャのみの使用 (Visual Basic)
 
@@ -84,9 +85,9 @@ ms.locfileid: "91163949"
   
 ### <a name="to-add-systemdatalinqdll"></a>System.Data.Linq.dll を追加するには  
   
-1. **ソリューション エクスプローラー**で、 **[すべてのファイルを表示]** をクリックします。  
+1. **ソリューション エクスプローラー** で、 **[すべてのファイルを表示]** をクリックします。  
   
-2. **ソリューション エクスプローラー**で、 **[参照設定]** を右クリックし、 **[参照の追加]** をクリックします。  
+2. **ソリューション エクスプローラー** で、 **[参照設定]** を右クリックし、 **[参照の追加]** をクリックします。  
   
 3. **[参照の追加]** ダイアログ ボックスで、 **[.NET]** をクリックし、System.Data.Linq アセンブリをクリックします。次に、 **[OK]** をクリックします。  
   
@@ -110,7 +111,7 @@ ms.locfileid: "91163949"
   
 ### <a name="to-create-the-database-connection"></a>データベース接続を作成するには  
   
-1. **ソリューション エクスプローラー**で **[Form1.vb]** を右クリックし、 **[コードの表示]** をクリックします。  
+1. **ソリューション エクスプローラー** で **[Form1.vb]** を右クリックし、 **[コードの表示]** をクリックします。  
   
      コード エディターに `Class Form1` が表示されます。  
   

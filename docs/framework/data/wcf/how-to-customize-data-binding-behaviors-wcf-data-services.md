@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:データ バインディングの動作をカスタマイズする (WCF Data Services)'
 title: '方法: データ バインディングの動作をカスタマイズする (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, data binding
 ms.assetid: 40476b89-8941-4771-8d21-2fe430c85a9d
-ms.openlocfilehash: 13847923a5f31108e93ef12cf7775109be3cd9eb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 60c8808f90f8e0a824a8b2b641508c0fe33f14cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172516"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765686"
 ---
 # <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>方法: データ バインディングの動作をカスタマイズする (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services では、バインディング コレクションに対してオブジェクトが追加または削除されたときまたはプロパティの変更が検出されたときに <xref:System.Data.Services.Client.DataServiceCollection%601> によって呼び出されるカスタム ロジックを提供できます。 このカスタム ロジックは、<xref:System.Func%602> デリゲートと呼ばれるメソッドとして提供されています。これらは、カスタム メソッドの完了時にも既定の動作を実行する必要がある場合は `false` を返し、イベントの後続の処理を停止する必要がある場合は `true` を返します。  
   

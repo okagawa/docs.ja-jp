@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: クエリ式の例 (LINQ to DataSet)'
 title: クエリ式の例 (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: f743fbc7-faff-45e5-af1e-61577d87f0cc
-ms.openlocfilehash: 1671769871d8c224391a34f5a6294bb6015cafdc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1d1571a851fae685942cbdbd557b275e86e8b0d2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177372"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663691"
 ---
 # <a name="query-expression-examples-linq-to-dataset"></a>クエリ式の例 (LINQ to DataSet)
 

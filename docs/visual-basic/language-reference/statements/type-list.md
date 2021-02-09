@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 型リスト (Visual Basic)'
 title: 型リスト
 ms.date: 07/20/2015
 f1_keywords:
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-ms.openlocfilehash: 7e22ad6e32ec13f081391e1d47a80df8b1e65063
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d4c8bcab4a39af0ac0747d6be0d04408edd98a55
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84412989"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740900"
 ---
 # <a name="type-list-visual-basic"></a>型リスト (Visual Basic)
 
-*ジェネリック* プログラミング要素の*型パラメーター*を指定します。 複数のパラメーターはコンマで区切ります。 次に、1 つの型パラメーターの構文を示します。
+*ジェネリック* プログラミング要素の *型パラメーター* を指定します。 複数のパラメーターはコンマで区切ります。 次に、1 つの型パラメーターの構文を示します。
 
 ## <a name="syntax"></a>構文
 
@@ -59,7 +60,7 @@ ms.locfileid: "84412989"
 
 - **かっこ。** 型パラメーター リストを指定する場合は、かっこで囲む必要があります。また、[Of](of-clause.md) キーワードでリストを取り込む必要があります。 `Of` は、リストの開始で 1 回だけ使用します。
 
-- **制約。** 型パラメーターへの*制約*の一覧には、次の項目を任意の組み合わせで含めることができます。
+- **制約。** 型パラメーターへの *制約* の一覧には、次の項目を任意の組み合わせで含めることができます。
 
   - 任意の数のインターフェイス。 指定された型では、この一覧のすべてのインターフェイスを実装する必要があります。
 

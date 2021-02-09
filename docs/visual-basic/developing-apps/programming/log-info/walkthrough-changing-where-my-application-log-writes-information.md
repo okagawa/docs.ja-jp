@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: チュートリアル: My.Application.Log による情報の書き込み先の変更 (Visual Basic)'
 title: My.Application.Log による情報の書き込み先の変更
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: f9e45cdf4507840f62e32678f4c0a7be2c0be054
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: aa4e1b8ce33e2afd8dd51c68340feb3e85eb8966
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398293"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731423"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>チュートリアル: My.Application.Log による情報の書き込み先の変更 (Visual Basic)
 
@@ -18,7 +19,7 @@ ms.locfileid: "84398293"
 
 ## <a name="prerequisites"></a>前提条件
 
-`Log` オブジェクトは、複数のログ リスナーに情報を書き込むことができます。 ログ リスナーの構成を変更する前に、現在の構成を確認する必要があります。 詳細については、「 [Walkthrough: Determining Where My.Application.Log Writes Information](walkthrough-determining-where-my-application-log-writes-information.md)」を参照してください。
+`Log` オブジェクトは、複数のログ リスナーに情報を書き込むことができます。 ログ リスナーの構成を変更する前に、現在の構成を確認する必要があります。 詳しくは、「[チュートリアル: My.Application.Log による情報の書き込み先の確認](walkthrough-determining-where-my-application-log-writes-information.md)」をご覧ください。
 
 必要に応じて、「[方法 : イベント情報をテキスト ファイルに書き込む](how-to-write-event-information-to-a-text-file.md)」または「[方法 : アプリケーション イベント ログに書き込む](how-to-write-to-an-application-event-log.md)」を参照してください。
 
@@ -183,11 +184,11 @@ ms.locfileid: "84398293"
 
      `Microsoft.VisualBasic.Logging.FileLogTraceListener, Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a`
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>
 - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>
-- [方法 : イベント情報をテキスト ファイルに書き込む](how-to-write-event-information-to-a-text-file.md)
-- [方法 : アプリケーション イベント ログに書き込む](how-to-write-to-an-application-event-log.md)
+- [方法: イベント情報をテキスト ファイルに書き込む](how-to-write-event-information-to-a-text-file.md)
+- [方法: アプリケーション イベント ログに書き込む](how-to-write-to-an-application-event-log.md)

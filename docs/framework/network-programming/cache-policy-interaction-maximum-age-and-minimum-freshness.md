@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: キャッシュ ポリシーの相互作用 — 最大有効期間と最小鮮度'
 title: キャッシュ ポリシーの相互作用 — 最大有効期間と最小鮮度
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 6567d451-ecec-496c-95a3-a415b99ba52a
-ms.openlocfilehash: d4182268341f4a4334a627fc8c9e24fa235f003f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 882df93d44c0d745fcf30a7d9be3152797df4844
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287554"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791648"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>キャッシュ ポリシーの相互作用 — 最大有効期間と最小鮮度
 
@@ -29,7 +30,7 @@ ms.locfileid: "96287554"
   
 - キャッシュ ポリシーで `maxAge` = 2 日間と `minFresh` = 2 日間が設定されている場合、`maxAge` 値に従い、コンテンツは 1 月 3 日まで最新です。 `minFresh` 値に従い、コンテンツは 1 月 2 日まで最新です。 そのため、コンテンツは 1 月 2 日に再検証する必要があります。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ネットワーク アプリケーションのキャッシュ管理](cache-management-for-network-applications.md)
 - [キャッシュ ポリシー](cache-policy.md)

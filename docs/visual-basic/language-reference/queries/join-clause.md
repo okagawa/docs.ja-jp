@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Join 句 (Visual Basic)'
 title: Join 句
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: f73dc31bbbb9014a8a1a315de406c53fa58d1c65
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 69d808e68a32b3f8799dabbbc8abc53acae42b57
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359775"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700443"
 ---
 # <a name="join-clause-visual-basic"></a>Join 句 (Visual Basic)
 

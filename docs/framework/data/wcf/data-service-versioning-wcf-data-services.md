@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: データ サービスのバージョン管理 (WCF Data Services)'
 title: データ サービスのバージョン管理 (WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,14 +7,16 @@ helpviewer_keywords:
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: 8d7cc0f0033c75c05ac9c39cfbf1ce09dc032a4c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5b08d9d822fc9dd8be4cd4614f8a5536bf98fd43
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91182871"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766141"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>データ サービスのバージョン管理 (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 Open Data Protocol (OData) では、データ サービスを作成できます。これにより、クライアントは、データ モデルに基づく URI を使用してリソースとしてのデータにアクセスできます。 OData では、サービス操作の定義もサポートされます。 ビジネス ニーズの変化、情報テクノロジの要件、その他の問題への対処などのさまざまな理由により、サービスの初期導入後と、場合によっては有効期間中に数回、これらのデータ サービスを変更することが必要になる場合があります。 既存のデータ サービスに変更を加える場合は、新しいバージョンのデータ サービスを定義する必要性や、既存のクライアント アプリケーションへの影響を最小限に抑える最善の方法を検討する必要があります。 ここでは、新しいバージョンのデータ サービスをいつどのように作成するかに関するガイダンスを示します。 さらに、WCF Data Services によって OData プロトコルの異なるバージョンをサポートするクライアントとデータ サービスの間の交換をどのように処理するかについても説明します。
 

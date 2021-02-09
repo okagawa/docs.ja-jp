@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: クエリ結果のページング'
 title: クエリ結果のページング
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
-ms.openlocfilehash: 065b509d8385ee37b2a86587f520b5fd3207ceff
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ead2c74e19cfb81c83c7bf1e73b0c0d7a0a7cc67
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91186953"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672362"
 ---
 # <a name="paging-through-a-query-result"></a>クエリ結果のページング
 

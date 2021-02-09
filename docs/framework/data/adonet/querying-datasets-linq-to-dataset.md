@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: DataSet のクエリ (LINQ to DataSet)'
 title: DataSet のクエリ (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: bb68d2e4-623d-4d60-85e3-965254f6fee7
-ms.openlocfilehash: f42cd792772a4e2b9f24ea8f76ea588da10d9c51
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 609de99069d39317d8d372cb2a7f43ea301ada2d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91184977"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663457"
 ---
 # <a name="querying-datasets-linq-to-dataset"></a>DataSet のクエリ (LINQ to DataSet)
 

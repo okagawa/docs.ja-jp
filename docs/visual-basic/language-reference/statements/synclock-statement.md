@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: SyncLock ステートメント'
 title: SyncLock ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-ms.openlocfilehash: cc8706b95e0785459e36abe27ce915b5bab8711a
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 206c10c8bca85a496345576d0d5f9ff260db82e3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875200"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740978"
 ---
 # <a name="synclock-statement"></a>SyncLock ステートメント
 
@@ -45,7 +46,7 @@ End SyncLock
   
  `SyncLock` の最も一般的な使用方法は、複数のスレッドによってデータが同時に更新されないようにすることです。 データを操作するステートメントが中断せずに完了する必要がある場合は、`SyncLock` ブロック内に配置します。  
   
- 排他ロックによって保護されているステートメント ブロックは、*クリティカル セクション*と呼ばれることもあります。  
+ 排他ロックによって保護されているステートメント ブロックは、*クリティカル セクション* と呼ばれることもあります。  
   
 ## <a name="rules"></a>ルール  
   

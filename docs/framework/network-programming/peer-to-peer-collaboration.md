@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: ピアツーピア コラボレーション'
 title: ピアツーピア コラボレーション
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-ms.openlocfilehash: 7cf92f6bf3c269e584cb8b3cdcf910be5b89fd7e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 824ab3152c1ad765c2d19f5c6e719242255f606d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047382"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738281"
 ---
 # <a name="peer-to-peer-collaboration"></a>ピアツーピア コラボレーション
 
@@ -39,7 +40,7 @@ ms.locfileid: "71047382"
 
  Active Directory ドメインでは、ドメイン コントローラーが Kerberos を使用した認証サービスを提供します。 サーバーなしのピア環境では、ピアは独自の認証を提供する必要があります。 ピアツーピア ネットワーキングでは、どのノードも CA として活動できるため、各ピアの信頼されたルート ストアにルート証明書は不要です。 認証は、X.509 証明書として書式設定された自己署名証明書を使用して提供されます。 これらの証明書は各ピアによって作成されます。各ピアは、公開キーおよび秘密キーのペアと、秘密キーを使用して署名された証明書を生成します。 自己署名証明書は、認証のために、また、ピア エンティティについての情報を提供するために使用されます。 X.509 認証と同様に、ピア ネットワーキング認証は、信頼された公開キーまでさかのぼることができる証明書チェーンに基づいています。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Net.PeerToPeer.Collaboration>
 - [System.Net.PeerToPeer.Collaboration 名前空間について](about-the-system-net-peertopeer-collaboration-namespace.md)

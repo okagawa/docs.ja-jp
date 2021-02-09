@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ユーザー定義型'
 title: ユーザー定義型
 ms.date: 07/20/2015
 f1_keywords:
@@ -23,18 +24,18 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-ms.openlocfilehash: fbd9536a54d7fb471d6cb2e130b14a84e40a4940
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6eb94b38e2d29a4bbdfcf94de307bbe07a2c1b0c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415493"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774968"
 ---
 # <a name="user-defined-data-type"></a>ユーザー定義型
 
 定義した形式でデータを保持します。 `Structure` ステートメントは形式を定義します。
 
-以前のバージョンの Visual Basic はユーザー定義型 (UDT) をサポートします。 現在のバージョンでは、UDT が*構造体*に拡張されています。 構造体は、さまざまなデータ型の 1 つ以上の*メンバー*を連結したものです。 Visual Basic は、構造体を 1 つの単位として扱いますが、そのメンバーに個別にアクセスすることもできます。
+以前のバージョンの Visual Basic はユーザー定義型 (UDT) をサポートします。 現在のバージョンでは、UDT が *構造体* に拡張されています。 構造体は、さまざまなデータ型の 1 つ以上の *メンバー* を連結したものです。 Visual Basic は、構造体を 1 つの単位として扱いますが、そのメンバーに個別にアクセスすることもできます。
 
 ## <a name="remarks"></a>Remarks
 
@@ -54,7 +55,7 @@ ms.locfileid: "84415493"
 
 ## <a name="programming-tips"></a>プログラミングのヒント
 
-- **メモリの使用量。**  他のすべての複合データ型と同様に、構造体の総メモリ使用量を計算する場合、各メンバーのストレージ割り当ての公称サイズを単に合計しただけでは安全ではありません。 さらに、メモリ内に格納される順序が宣言の順序と同じであると仮定するのも安全ではありません。 構造体のストレージ レイアウトを制御する必要がある場合は、<xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性を `Structure` ステートメントに適用します。
+- **メモリの使用量。** 他のすべての複合データ型と同様に、構造体の総メモリ使用量を計算する場合、各メンバーのストレージ割り当ての公称サイズを単に合計しただけでは安全ではありません。 さらに、メモリ内に格納される順序が宣言の順序と同じであると仮定するのも安全ではありません。 構造体のストレージ レイアウトを制御する必要がある場合は、<xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性を `Structure` ステートメントに適用します。
 
 - **相互運用の考慮事項。** オートメーション オブジェクトや COM オブジェクトのように、.NET Framework 向けに作成されていないコンポーネントとやり取りする場合、他の環境のユーザー定義型は Visual Basic の構造体型と互換性がないことに注意してください。
 

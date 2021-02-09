@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: CLR ユーザー定義型'
 title: CLR ユーザー定義型
 ms.date: 03/30/2017
 ms.assetid: 9f70e0b0-3a0d-4eb1-b914-07a5d0c167c2
-ms.openlocfilehash: 84d588e0c415daa7de19ea695c817f3eb24f732f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f1732c254d3bf3cb8aa4ba727c420c46ef55c2cf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173589"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663366"
 ---
 # <a name="clr-user-defined-types"></a>CLR ユーザー定義型
 

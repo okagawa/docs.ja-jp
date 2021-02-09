@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:IIS 上で実行する WCF Data Service を開発する'
 title: '方法: IIS 上で実行する WCF Data Service を開発する'
 ms.date: 03/30/2017
 dev_langs:
@@ -9,14 +10,16 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 75dc18f3ee91ec077ed48c68ec62cb47910d9ddd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b4d7b322a00e3c9c43005a416c608e1b98f1ce51
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543486"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765478"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>方法: IIS 上で実行する WCF Data Service を開発する
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 この記事では、WCF Data Services を使用して、Northwind サンプル データベースに基づいてデータ サービスを作成する方法を示します。このサンプル データベースは、インターネット インフォメーション サービス (IIS) 上で実行されている ASP.NET Web アプリによってホストされます。 同じ Northwind データ サービスを ASP.NET 開発サーバーで実行する ASP.NET Web アプリとして作成する方法の例については、[WCF Data Services のクイックスタート](quickstart-wcf-data-services.md)を参照してください。
 
@@ -122,7 +125,7 @@ ms.locfileid: "90543486"
 
 ## <a name="define-the-data-model"></a>データ モデルを定義する
 
-1. **ソリューション エクスプローラー**で、ASP.NET プロジェクトの名前を右クリックし、 **[追加]**  >  **[新しい項目]** をクリックします。
+1. **ソリューション エクスプローラー** で、ASP.NET プロジェクトの名前を右クリックし、 **[追加]**  >  **[新しい項目]** をクリックします。
 
 2. **[新しい項目の追加]** ダイアログ ボックスで **[ADO.NET エンティティ データ モデル]** を選択します。
 
@@ -144,7 +147,7 @@ ms.locfileid: "90543486"
 
 ## <a name="create-the-data-service"></a>データ サービスを作成する
 
-1. **ソリューション エクスプローラー**で、ASP.NET プロジェクトの名前を右クリックし、 **[追加]**  >  **[新しい項目]** をクリックします。
+1. **ソリューション エクスプローラー** で、ASP.NET プロジェクトの名前を右クリックし、 **[追加]**  >  **[新しい項目]** をクリックします。
 
 2. **[新しい項目の追加]** ダイアログ ボックスで、 **[WCF Data Service]** をクリックします。
 
@@ -155,7 +158,7 @@ ms.locfileid: "90543486"
 
 3. サービスの名前として、「`Northwind`」と入力します。
 
-     Visual Studio で新しいサービスの XML マークアップおよびコード ファイルが作成されます。 既定では、コード エディターのウィンドウが開きます。 **ソリューション エクスプローラー**では、このサービスに Northwind という名前が付き、拡張子は .svc.cs または .svc.vb になります。
+     Visual Studio で新しいサービスの XML マークアップおよびコード ファイルが作成されます。 既定では、コード エディターのウィンドウが開きます。 **ソリューション エクスプローラー** では、このサービスに Northwind という名前が付き、拡張子は .svc.cs または .svc.vb になります。
 
 4. データ サービスのコードで、データ サービスを定義するクラスの定義にあるコメント `/* TODO: put your data source class name here */` をデータ モデルのエンティティ コンテナーである型 (この場合は `NorthwindEntities`) で置き換えます。 クラス定義は次のようになります。
 

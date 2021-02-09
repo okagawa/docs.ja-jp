@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 2 つのシーケンスの連結'
 title: 2 つのシーケンスの連結
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 76767e7c-0607-4e1d-9ca2-a94f311f45eb
-ms.openlocfilehash: 87d341357b8d11eafbc3f3867c45ac5a32270688
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5e48f3e2900bf53d042eb9c2aad6535bad9ec7e9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164403"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773174"
 ---
 # <a name="concatenate-two-sequences"></a>2 つのシーケンスの連結
 

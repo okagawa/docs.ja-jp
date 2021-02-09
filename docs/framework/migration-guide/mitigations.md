@@ -1,12 +1,13 @@
 ---
+description: '詳細情報: .NET Framework 4.6 以降の新しい動作を抑制する'
 title: .NET Framework の新しい動作を抑制する
 ms.date: 04/21/2020
-ms.openlocfilehash: bd0843ea21a0ff68c6f02b1351f66544dbb200bf
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 3b29441a017c5105925604f8ac64991c46155f1e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82103698"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748051"
 ---
 # <a name="mitigate-new-behaviors-in-net-framework-46-and-later"></a>.NET Framework 4.6 以降の新しい動作を抑制する
 

@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: メソッド ベースのクエリ構文例:プロジェクション (LINQ to DataSet)'
 title: メソッド ベースのクエリ構文例:プロジェクション (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0fc2c8f0-1967-4f30-8b20-39b8dccfb82f
-ms.openlocfilehash: 2790ed3e7f8fc2fe6a5c920be8a79402692d6282
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 380c35962ed122f5d4bbe85ba3fbd87cf7d7a3bf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91147906"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754382"
 ---
 # <a name="method-based-query-syntax-examples-projection-linq-to-dataset"></a>メソッド ベースのクエリ構文例:プロジェクション (LINQ to DataSet)
 

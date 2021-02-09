@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: コンピューターのポートへのアクセス (Visual Basic)'
 title: コンピューターのポートへのアクセス
 ms.date: 07/20/2015
 helpviewer_keywords:
 - serial ports
 - My.Computer.Ports object [Visual Basic], tasks
 ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
-ms.openlocfilehash: 4868514ab7ddb3c85686f4e71360791f458240a0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2338d784bcc51b31b465d346e2c08520671f58b0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410102"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797797"
 ---
 # <a name="accessing-the-computers-ports-visual-basic"></a>コンピューターのポートへのアクセス (Visual Basic)
 
@@ -18,16 +19,16 @@ ms.locfileid: "84410102"
   
 ## <a name="in-this-section"></a>このセクションの内容  
 
- [方法 : 利用可能なシリアル ポートを表示する](how-to-show-available-serial-ports.md)  
+ [方法: 利用可能なシリアル ポートを表示する](how-to-show-available-serial-ports.md)  
  利用可能なシリアル ポートを表示する方法について説明します。  
   
- [方法 : シリアル ポートに接続されているモデムをダイヤルする](how-to-dial-modems-attached-to-serial-ports.md)  
+ [方法: シリアル ポートに接続されているモデムをダイヤルする](how-to-dial-modems-attached-to-serial-ports.md)  
  コンピューターのシリアル ポートに接続されているモデムにダイヤルする方法について説明します。  
   
- [方法 : シリアル ポートに文字列を送信する](how-to-send-strings-to-serial-ports.md)  
+ [方法: シリアル ポートに文字列を送信する](how-to-send-strings-to-serial-ports.md)  
  コンピューターのシリアル ポートに文字列を送信する方法について説明します。  
   
- [方法 : シリアル ポートから文字列を受信する](how-to-receive-strings-from-serial-ports.md)  
+ [方法: シリアル ポートから文字列を受信する](how-to-receive-strings-from-serial-ports.md)  
  コンピューターのシリアル ポートから文字列を受信する方法について説明します。  
   
  [.NET Framework でのポート操作](port-operations-in-the-net-framework.md)  

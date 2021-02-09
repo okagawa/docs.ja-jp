@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Operator Statement'
 title: Operator Statement
 ms.date: 07/20/2015
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: f9e6ffe5a49715592399321ab471d73826e05d8e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f6a8ae2ac51e8bc8fe1be0de3549004b9dda4ef4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404396"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768819"
 ---
 # <a name="operator-statement"></a>Operator Statement
 
@@ -96,13 +97,13 @@ End Operator
 
 ## <a name="remarks"></a>Remarks
 
-`Operator` は、クラスまたは構造体でのみ使用できます。 つまり、演算子の*宣言コンテキスト*は、ソース ファイル、名前空間、モジュール、インターフェイス、プロシージャ、ブロックにすることができません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。
+`Operator` は、クラスまたは構造体でのみ使用できます。 つまり、演算子の *宣言コンテキスト* は、ソース ファイル、名前空間、モジュール、インターフェイス、プロシージャ、ブロックにすることができません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。
 
 すべての演算子は `Public Shared` である必要があります。 どのオペランドにも `ByRef`、`Optional`、`ParamArray` を指定することはできません。
 
 戻り値を保持するために、演算子シンボルや識別子を使用することはできません。 `Return` ステートメントを使用する必要があり、それによって値を指定する必要があります。 任意の数の `Return` ステートメントをプロシージャ内の任意の場所に記述できます。
 
-この方法で演算子を定義することは、`Overloads` キーワードを使用するかどうかにかかわらず、*演算子のオーバーロード*と呼ばれます。 定義可能な演算子を次の表に示します。
+この方法で演算子を定義することは、`Overloads` キーワードを使用するかどうかにかかわらず、*演算子のオーバーロード* と呼ばれます。 定義可能な演算子を次の表に示します。
 
 |種類|演算子|
 |----------|---------------|
@@ -160,7 +161,7 @@ End Operator
 
 ## <a name="widening-and-narrowing-conversions"></a>Widening and Narrowing Conversions
 
-*拡大変換*は実行時に常に成功しますが、*縮小変換*は実行時に失敗する可能性があります。 詳細については、「 [Widening and Narrowing Conversions](../../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。
+*拡大変換* は実行時に常に成功しますが、*縮小変換* は実行時に失敗する可能性があります。 詳細については、「 [Widening and Narrowing Conversions](../../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。
 
 変換プロシージャを `Widening` として宣言する場合、プロシージャ コードでエラーが発生しないようにする必要があります。 これは、次のことを意味します。
 

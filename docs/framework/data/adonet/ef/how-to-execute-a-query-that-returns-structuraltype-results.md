@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:StructuralType 結果を返すクエリを実行する'
 title: '方法: StructuralType 結果を返すクエリを実行する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2314f2a2-b1c3-40c4-95bb-cdf9b21a7b53
-ms.openlocfilehash: 4b3a63cb23851c6545f330ebd2371e1a34ff13e8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a5666fd84ed7253b58cc49babdfa5f5e4614146c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198315"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697544"
 ---
 # <a name="how-to-execute-a-query-that-returns-structuraltype-results"></a>方法: StructuralType 結果を返すクエリを実行する
 

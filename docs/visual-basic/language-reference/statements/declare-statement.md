@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Declare Statement'
 title: Declare Statement
 ms.date: 07/20/2015
 f1_keywords:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 8a5802583db53bfd0444ec9df0de9a0b9346d424
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8ad8169515bbb2889c0adbed4df4e30a0215d47d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545520"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673844"
 ---
 # <a name="declare-statement"></a>Declare Statement
 
@@ -72,7 +73,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 
 プロジェクトの外部のファイル (DLL やコード リソースなど) で定義されたプロシージャを呼び出す必要がある場合があります。 これを行う場合、Visual Basic のコンパイラはプロシージャを正しく呼び出すために必要な情報 (プロシージャがある場所、その識別方法、呼び出しシーケンスと戻り値の型、使用する文字列の文字セットなど) にアクセスできません。 `Declare` ステートメントは、外部プロシージャへの参照を作成し、この必要な情報を提供します。
 
-`Declare` は、モジュール レベルでのみ使用できます。 つまり、外部参照の*宣言コンテキスト*は、クラス、構造体、またはモジュールである必要があり、ソース ファイル、名前空間、インターフェイス、プロシージャ、またはブロックにすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。
+`Declare` は、モジュール レベルでのみ使用できます。 つまり、外部参照の *宣言コンテキスト* は、クラス、構造体、またはモジュールである必要があり、ソース ファイル、名前空間、インターフェイス、プロシージャ、またはブロックにすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。
 
 外部参照のアクセスは、既定で [Public](../modifiers/public.md) になります。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。
 
@@ -126,10 +127,10 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 
   - Windows NT、Windows 2000、Windows XP などの Unicode プラットフォームでは、最初に名前を変更せずに外部プロシージャを検索します。 失敗した場合は、外部プロシージャ名の末尾に "W" を付加して、もう一度検索します。
 
-- **メカニズム。** Visual Basic は、.NET Framework の*プラットフォーム呼び出し* (PInvoke) メカニズムを使用して、外部プロシージャを解決し、アクセスします。 `Declare` ステートメントと <xref:System.Runtime.InteropServices.DllImportAttribute> クラスでは、このメカニズムが自動的に使用されため、PInvoke に関する知識は必要ありません。 詳細については、「[チュートリアル:Windows API の呼び出し](../../programming-guide/com-interop/walkthrough-calling-windows-apis.md)」を参照してください。
+- **メカニズム。** Visual Basic は、.NET Framework の *プラットフォーム呼び出し* (PInvoke) メカニズムを使用して、外部プロシージャを解決し、アクセスします。 `Declare` ステートメントと <xref:System.Runtime.InteropServices.DllImportAttribute> クラスでは、このメカニズムが自動的に使用されため、PInvoke に関する知識は必要ありません。 詳細については、「[チュートリアル:Windows API の呼び出し](../../programming-guide/com-interop/walkthrough-calling-windows-apis.md)」を参照してください。
 
 > [!IMPORTANT]
-> 外部プロシージャが共通言語ランタイム (CLR) の外部で実行されている場合は、*アンマネージド コード*となります。 このようなプロシージャ (Windows API 関数や COM メソッドなど) を呼び出すと、アプリケーションがセキュリティ上のリスクにさらされる可能性があります。 詳細については、[アンマネージド コードの安全なコーディングのガイドライン](/previous-versions/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code)に関するページを参照してください。
+> 外部プロシージャが共通言語ランタイム (CLR) の外部で実行されている場合は、*アンマネージド コード* となります。 このようなプロシージャ (Windows API 関数や COM メソッドなど) を呼び出すと、アプリケーションがセキュリティ上のリスクにさらされる可能性があります。 詳細については、[アンマネージド コードの安全なコーディングのガイドライン](/previous-versions/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code)に関するページを参照してください。
 
 ## <a name="example"></a>例
 

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: DataTableReader'
 title: DataTableReader
 ms.date: 03/30/2017
 ms.assetid: 97546ae2-0e42-4d26-961d-e0b244d81ded
-ms.openlocfilehash: 911a45dad3d5d82ab5e5752b1c12f7d8a6ab1563
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b3e85ae05c07af18fe6219602b5b40f50a9fbc8a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202319"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652602"
 ---
 # <a name="datatablereaders"></a>DataTableReader
 

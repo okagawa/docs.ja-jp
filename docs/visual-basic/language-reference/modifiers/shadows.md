@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Shadows (Visual Basic)'
 title: Overloads
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
-ms.openlocfilehash: 7aed6bec21bd484cca019b061bd5915de13a9eb8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4a455a78c36e15db977936b81c22e7a5b03d107e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402708"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700846"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 
@@ -24,7 +25,7 @@ ms.locfileid: "84402708"
 
 ## <a name="remarks"></a>Remarks
 
-シャドウ (*名前による非表示*とも呼ばれます) の主な目的は、クラス メンバーの定義を保持することです。 基底クラスには、既に定義されているものと同じ名前の要素を作成する変更が含まれる場合があります。 この場合、`Shadows` 修飾子は、クラスによる参照が、新しい基底クラス要素ではなく定義したメンバーに強制的に解決されるようにします。
+シャドウ (*名前による非表示* とも呼ばれます) の主な目的は、クラス メンバーの定義を保持することです。 基底クラスには、既に定義されているものと同じ名前の要素を作成する変更が含まれる場合があります。 この場合、`Shadows` 修飾子は、クラスによる参照が、新しい基底クラス要素ではなく定義したメンバーに強制的に解決されるようにします。
 
 シャドウとオーバーライドは、どちらも継承された要素を再定義しますが、その方法は大きく異なります。 詳細については、「[Visual Basic におけるシャドウ](../../programming-guide/language-features/declared-elements/shadowing.md)」を参照してください。
 

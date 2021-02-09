@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:データ サービスの結果のページングを有効にする (WCF Data Services)'
 title: '方法: データ サービスの結果のページングを有効にする (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,14 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - paging output [WCF Data Services]
 ms.assetid: 9a316cbd-9612-4482-a541-a10bc78b2635
-ms.openlocfilehash: 1c8bb8fe757c35f6096b139da6ca939b1ce1c283
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 27a2b37f432d906022d06492b2f687681d9b9ac8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150623"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765335"
 ---
 # <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a>方法: データ サービスの結果のページングを有効にする (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services では、データ サービス クエリによって返されるエンティティの数を制限できます。 ページ制限は、サービスの初期化時に呼び出されるメソッドで定義され、エンティティ セットごとに設定できます。  
   

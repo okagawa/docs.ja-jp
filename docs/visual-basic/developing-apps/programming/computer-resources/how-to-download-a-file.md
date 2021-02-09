@@ -1,5 +1,6 @@
 ---
-title: '方法 : ファイルをダウンロードする'
+description: '詳細情報: 方法:Visual Basic でファイルをダウンロードする'
+title: '方法: ファイルをダウンロードする'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - downloading Internet resources [Visual Basic], files
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - files [Visual Basic], downloading
 - files [Visual Basic], transferring
 ms.assetid: ac479f81-c0e2-4b99-af73-217f446b73da
-ms.openlocfilehash: a5b379da00656f65476e4d9504457bf8b464beac
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dd296a5958431b74ccc8e0fb41a49073f4847ded
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411656"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797693"
 ---
 # <a name="how-to-download-a-file-in-visual-basic"></a>方法 : Visual Basic でファイルをダウンロードする
 
@@ -55,9 +56,9 @@ ms.locfileid: "84411656"
   > [!IMPORTANT]
   > `DownLoadFile` メソッドで使用される FTP プロトコルは、パスワードを含む情報をプレーンテキストで送信するため、重要な情報の送信には使用しないでください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.Devices.Network>
 - <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>
-- [方法 : ファイルをアップロードする](how-to-upload-a-file.md)
+- [方法: ファイルをアップロードする](how-to-upload-a-file.md)
 - [方法: ファイル パスを解析する](../drives-directories-files/how-to-parse-file-paths.md)

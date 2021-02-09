@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: ユーザー定義関数 (Entity SQL)'
 title: ユーザー定義関数 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 3f9e6bbd-8e5a-43e1-809f-f8a61338e522
-ms.openlocfilehash: 9e5ad1f6edb0e719733edd2518c5d62a7fc6bdf7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b5ebff087da08530e13f301e58509ba2d90c3605
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180973"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673207"
 ---
 # <a name="user-defined-functions-entity-sql"></a>ユーザー定義関数 (Entity SQL)
 

@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: スタートアップ フォームが指定されていません。'
 title: スタートアップ フォームが指定されていません。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_NoStartupForm
 ms.assetid: 8e04af49-4bef-49de-a7ec-e407e9873da7
-ms.openlocfilehash: 058deb1378ed9218274ae20c8340178f7c8fa58c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4b00890f07121ef55ce49978842010cc54aba29b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409908"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797186"
 ---
 # <a name="a-startup-form-has-not-been-specified"></a>スタートアップ フォームが指定されていません。
 

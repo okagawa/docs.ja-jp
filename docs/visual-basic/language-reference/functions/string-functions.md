@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: 文字列関数 (Visual Basic)'
 title: 文字列関数
 ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 778e57eadd75baf1aabd100f9d8d41a490f79a04
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1c121bc3de66caf748426b5cd04d049b30bf78bb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406289"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731138"
 ---
 # <a name="string-functions-visual-basic"></a>文字列関数 (Visual Basic)
 
@@ -17,8 +18,8 @@ Visual Basic で、文字列の検索と操作のために <xref:Microsoft.Visua
 
 |.NET Framework メソッド|説明|
 |---------------------------|-----------------|
-|<xref:Microsoft.VisualBasic.Strings.Asc%2A>、<xref:Microsoft.VisualBasic.Strings.AscW%2A>|文字に対応する文字コードを表す `Integer` 値を返します。|
-|<xref:Microsoft.VisualBasic.Strings.Chr%2A>、<xref:Microsoft.VisualBasic.Strings.ChrW%2A>|指定された文字コードに対応する文字を返します。|
+|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|文字に対応する文字コードを表す `Integer` 値を返します。|
+|<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|指定された文字コードに対応する文字を返します。|
 |<xref:Microsoft.VisualBasic.Strings.Filter%2A>|指定されたフィルター条件に基づいた文字列 (`String`) 配列のサブセットを含むゼロ ベースの配列を返します。|
 |<xref:Microsoft.VisualBasic.Strings.Format%2A>|書式指定文字列 (`String`) 式に含まれる指示に従って書式設定された文字列を返します。|
 |<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|システムの [コントロール パネル] で定義されている通貨記号を使って通貨形式の文字列に書式設定して返す文字列処理関数です。|

@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: スキーマの制限'
 title: スキーマの制限
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: c0a3cafef45341cd95fa0a4f65c818129e120e44
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 74ddfe5b8aaf9b8193e0c0b2a929ccde333eac26
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91147825"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719046"
 ---
 # <a name="schema-restrictions"></a>スキーマの制限
 

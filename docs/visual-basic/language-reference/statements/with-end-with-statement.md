@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: With...End With ステートメント (Visual Basic)'
 title: With...End With ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: 50f3bd0c6e96254274b429794901e2e4ac719ad0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 86393d5dee7a03b2b8396b34b31326d1b0ea3c28
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401382"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787566"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With ステートメント (Visual Basic)
 

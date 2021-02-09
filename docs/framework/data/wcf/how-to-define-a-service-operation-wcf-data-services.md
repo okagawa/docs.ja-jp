@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:サービス操作を定義する (WCF Data Services)'
 title: '方法: サービス操作を定義する (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - Service Operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
-ms.openlocfilehash: e9d15698c1e020f5b4179efb3e8492f3754ff02f
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 9fcad3a31ea5b439c248ba103cbf4ddd75b8109a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569130"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765621"
 ---
 # <a name="how-to-define-a-service-operation-wcf-data-services"></a>方法: サービス操作を定義する (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services では、サーバー上でサービス操作として定義されたメソッドが公開されます。 サービス操作では、データ サービスを使用して、サーバー上で定義されているメソッドに URI を介してアクセスできます。 サービス操作を定義するには、`WebGet]` 属性または `[WebInvoke]` 属性をメソッドに適用します。 クエリ演算子をサポートするには、サービス操作で <xref:System.Linq.IQueryable%601> インスタンスを返す必要があります。 サービス操作は、<xref:System.Data.Services.DataService%601.CurrentDataSource%2A> の <xref:System.Data.Services.DataService%601> プロパティを介して、基になるデータ ソースにアクセスできます。 詳細については、「[サービス操作](service-operations-wcf-data-services.md)」を参照してください。
 

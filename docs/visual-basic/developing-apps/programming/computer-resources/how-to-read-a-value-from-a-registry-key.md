@@ -1,5 +1,6 @@
 ---
-title: '方法 : レジストリ キーから値を読み取る'
+description: '詳細情報: 方法:Visual Basic で、レジストリ キーから値を読み取る'
+title: '方法: レジストリ キーから値を読み取る'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry keys [Visual Basic], determining if a value exists in
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], reading from
 - registry [Visual Basic], reading
 ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
-ms.openlocfilehash: 74069b111f4316eb81c74f5e62c1fbff6ab8f4b8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e062e40fe1c8876864e633079fc22e2c83cfb5d8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401850"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797680"
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>方法 : Visual Basic で、レジストリ キーから値を読み取る
 
@@ -31,7 +32,7 @@ ms.locfileid: "84401850"
   
      [!code-vb[VbResourceTasks#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#4)]  
   
- このコード例は IntelliSense コード スニペットとしても利用できます。 コード スニペット ピッカーでは、これは **[Windows オペレーティング システム] > [レジストリ]** に配置されます。 詳細については、「 [Code Snippets](/visualstudio/ide/code-snippets)」を参照してください。  
+ このコード例は、IntelliSense コード スニペットとしても利用できます。 コード スニペット ピッカーでは、これは **[Windows オペレーティング システム] > [レジストリ]** に配置されます。 詳細については、「[Code Snippets](/visualstudio/ide/code-snippets)」を参照してください。  
   
 ### <a name="to-determine-whether-a-value-exists-in-a-registry-key"></a>レジストリ キー内値が存在するかどうかを確認するには  
   
@@ -55,7 +56,7 @@ ms.locfileid: "84401850"
 
  このプロセスを実行するには、アセンブリに対して <xref:System.Security.Permissions.RegistryPermission> クラスで特権レベルが許可されている必要があります。 部分的に信頼されたコンテキストで実行している場合、プロセスは、特権がないために例外をスローする可能性があります。 同様に、ユーザーには、設定に対する作成や書き込みを行うための適切な ACL が必要です。 たとえば、コード アクセス セキュリティのアクセス許可を持つローカル アプリケーションには、オペレーティング システムのアクセス許可がない可能性があります。 詳しくは、「[コード アクセス セキュリティの基礎](../../../../framework/misc/code-access-security-basics.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
 - <xref:Microsoft.Win32.RegistryHive>

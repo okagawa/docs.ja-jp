@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: データの変更と変更の送信'
 title: データの変更と変更の送信
 ms.date: 03/30/2017
 ms.assetid: d68c2dc3-99b3-49ab-b547-2ca5b386429a
-ms.openlocfilehash: 18468c9a2018a28e85d87155d98b0853854013fd
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 260dab911057b45250d44ded7c254dd903e2aed7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792971"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695568"
 ---
 # <a name="making-and-submitting-data-changes"></a>データの変更と変更の送信
 

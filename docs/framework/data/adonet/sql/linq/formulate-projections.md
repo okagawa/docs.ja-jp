@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 射影の作成'
 title: 射影の作成
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 745742df-0eda-479b-83f8-29bd8a80db96
-ms.openlocfilehash: f0bc6dfcff7778ebc7156cbb039e13570c90467b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 591bc175426f08aa4273376e4c5efe370d2be756
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194402"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672076"
 ---
 # <a name="formulate-projections"></a>射影の作成
 

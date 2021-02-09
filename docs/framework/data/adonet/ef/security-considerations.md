@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: セキュリティに関する注意事項 (Entity Framework)'
 title: セキュリティに関する注意事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 5a2d96679c43528b86d3b1d7301b4520a38289aa
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: fc09fa519d6f357e2f684fd5666b233081cd19fe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156681"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673272"
 ---
 # <a name="security-considerations-entity-framework"></a>セキュリティに関する注意事項 (Entity Framework)
 

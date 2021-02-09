@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: シーケンスの最初の要素の取得'
 title: シーケンスの最初の要素の取得
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ccdc3777-b2c2-44e3-a627-abef8d79a555
-ms.openlocfilehash: 4506ef1a79c8f7e77160df4d55d0f93ee79f5a41
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 004e9a1f03677f6ba49916404b1c44408df40dfa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200343"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663015"
 ---
 # <a name="return-the-first-element-in-a-sequence"></a>シーケンスの最初の要素の取得
 
@@ -25,7 +26,7 @@ ms.locfileid: "91200343"
   
  Northwind サンプル データベースに対してこのクエリを実行すると、結果は次のようになります。  
   
- `ID = 1, Company = Speedy Express`。  
+ `ID = 1, Company = Speedy Express`.  
   
  [!code-csharp[DLinqQueryExamples#14](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#14)]
  [!code-vb[DLinqQueryExamples#14](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#14)]  

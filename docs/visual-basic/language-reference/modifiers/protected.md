@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Protected (Visual Basic)'
 title: Protected
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Protected access modifier
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
-ms.openlocfilehash: d66ed68004f8b6ef21ae703f02b317589814764b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 74a695e7c8ff06543a7118c935365e31af258171
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398221"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700937"
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
 
@@ -41,7 +42,7 @@ ms.locfileid: "84398221"
 
      保護されたアクセスは、フレンド アクセスのスーパーセットまたはサブセットではありません。
 
-- **アクセス修飾子。** アクセス レベルを指定するキーワードは、*アクセス修飾子*と呼ばれます。 アクセス修飾子の比較については、「[Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
+- **アクセス修飾子。** アクセス レベルを指定するキーワードは、*アクセス修飾子* と呼ばれます。 アクセス修飾子の比較については、「[Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
 
 `Protected` 修飾子は、次のコンテキストで使用できます。
 

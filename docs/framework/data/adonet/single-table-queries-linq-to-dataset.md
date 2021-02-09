@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 単一テーブルのクエリ (LINQ to DataSet)'
 title: 単一テーブルのクエリ (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 17a2fcf54cae64d9443b0cc0e8a37e1002bbd394
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a4b6ce2a60eeafc9221d838d1b86c9964774df60
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175357"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718760"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>単一テーブルのクエリ (LINQ to DataSet)
 

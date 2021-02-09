@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:コンカレンシーの競合を検査するメンバーを指定する'
 title: '方法: コンカレンシーの競合を検査するメンバーを指定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d2cda293-1e2f-4878-af0e-5aaf0d092120
-ms.openlocfilehash: e774935827934ae73873247def049b4045535272
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f2623c1e6afcf97ee2de62b94b80145ca2a5cad3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197145"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785857"
 ---
 # <a name="how-to-specify-which-members-are-tested-for-concurrency-conflicts"></a>方法: コンカレンシーの競合を検査するメンバーを指定する
 

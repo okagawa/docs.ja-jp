@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:Visual Basic でユーザー設定を永続化する'
 title: '方法: ユーザー設定を永続化する'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,14 +7,14 @@ helpviewer_keywords:
 - persistence [Visual Basic], persisting user settings [Visual Basic]
 - user settings [Visual Basic], persisting
 ms.assetid: 0e5e6415-b6e2-4602-9be0-a65fa167d007
-ms.openlocfilehash: 817111060259bdfbbb26d9f8eafeae439e1f651f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 43ca82442678356afacb8e05149a35d485603059
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410154"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797836"
 ---
-# <a name="how-to-persist-user-settings-in-visual-basic"></a>方法: Visual Basic でユーザー設定を永続化する
+# <a name="how-to-persist-user-settings-in-visual-basic"></a>方法 : Visual Basic でユーザー設定を永続化する
 
 `My.Settings.Save` メソッドを使用して、ユーザー設定の変更を永続化できます。  
   
@@ -22,7 +23,7 @@ ms.locfileid: "84410154"
  詳細については、「[My.Settings オブジェクト](../../../language-reference/objects/my-settings-object.md)」を参照してください。  
   
 > [!NOTE]
-> ユーザー スコープ設定の値は実行時に変更および保存できますが、アプリケーション スコープ設定は読み取り専用であり、プログラムで変更することはできません。 アプリケーション スコープの設定を変更するには、アプリケーションを作成するときに、**プロジェクト デザイナー**を使用するか、アプリケーションの構成ファイルを編集します。 詳細については、「[アプリケーションの設定の管理 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)」を参照してください。  
+> ユーザー スコープ設定の値は実行時に変更および保存できますが、アプリケーション スコープ設定は読み取り専用であり、プログラムで変更することはできません。 アプリケーション スコープの設定を変更するには、アプリケーションを作成するときに、**プロジェクト デザイナー** を使用するか、アプリケーションの構成ファイルを編集します。 詳細については、「[アプリケーションの設定の管理 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)」を参照してください。  
   
 ## <a name="example"></a>例  
 

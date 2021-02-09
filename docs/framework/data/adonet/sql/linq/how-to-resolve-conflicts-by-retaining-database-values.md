@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:データベース値を維持することで競合を解決する'
 title: '方法: データベース値を維持することで競合を解決する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b475cf72-9e64-4f6e-99c1-af7737bc85ef
-ms.openlocfilehash: b6f9b0308bcbf53a89ae0690ed44db0a364aef0c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ef47370768ce474ccb6d941bcec0e66807290599
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91191698"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723492"
 ---
 # <a name="how-to-resolve-conflicts-by-retaining-database-values"></a>方法: データベース値を維持することで競合を解決する
 

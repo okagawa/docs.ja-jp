@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: バイナリ データの取得'
 title: バイナリ データの取得
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
-ms.openlocfilehash: 11f7a81bc0d4b0e2a8d66387410d9a24503c7519
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4304dd19b8a861baf936686edb858d7cf4da5757
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150662"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663444"
 ---
 # <a name="retrieving-binary-data"></a>バイナリ データの取得
 

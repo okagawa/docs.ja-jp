@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 比較演算子 (Visual Basic)'
 title: 比較演算子
 ms.date: 07/20/2015
 f1_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basic
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-ms.openlocfilehash: fcbb9052a79fa4b20b5a0f8fdc15de73d55a4281
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 28eded0cfae54ec83ad9546b801243e4de0e45fc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873445"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774110"
 ---
 # <a name="comparison-operators-visual-basic"></a>比較演算子 (Visual Basic)
 

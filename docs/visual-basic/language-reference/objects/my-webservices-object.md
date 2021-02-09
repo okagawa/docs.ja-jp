@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: My.WebServices オブジェクト'
 title: My.WebServices オブジェクト
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-ms.openlocfilehash: 0b63b44c2cd9d55094fb83fed6c04e4de528a25c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: e8d7ef8b349fef6d69b92d9df4a23222bd3c912e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867198"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640538"
 ---
 # <a name="mywebservices-object"></a>My.WebServices オブジェクト
 
@@ -31,7 +32,7 @@ ms.locfileid: "90867198"
  `My.WebServices` オブジェクトの各プロパティにより、現在のプロジェクトで参照されている Web サービスのインスタンスにアクセスできます。 プロパティの名前は、プロパティがアクセスする Web サービスの名前と同じになり、プロパティの型は Web サービスの型と同じになります。  
   
 > [!NOTE]
-> 名前の競合がある場合、Web サービスにアクセスするためのプロパティ名は、*RootNamespace*_*Namespace*\_*ServiceName* になります。 たとえば、`Service1` という名前の 2 つの Web サービスがあるとします。 これらのサービスのいずれかがルート名前空間 `WindowsApplication1` および名前空間 `Namespace1` にある場合は、`My.WebServices.WindowsApplication1_Namespace1_Service1` を使用してそのサービスにアクセスします。  
+> 名前の競合がある場合、Web サービスにアクセスするためのプロパティ名は、*RootNamespace* _ *Namespace*\_*ServiceName* になります。 たとえば、`Service1` という名前の 2 つの Web サービスがあるとします。 これらのサービスのいずれかがルート名前空間 `WindowsApplication1` および名前空間 `Namespace1` にある場合は、`My.WebServices.WindowsApplication1_Namespace1_Service1` を使用してそのサービスにアクセスします。  
   
  `My.WebServices` オブジェクトのいずれかのプロパティに初めてアクセスすると、Web サービスの新しいインスタンスが作成され、保存されます。 そのプロパティのその後のアクセスでは、Web サービスのインスタンスが返されます。  
   

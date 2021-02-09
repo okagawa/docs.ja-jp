@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Call ステートメント (Visual Basic)'
 title: Call ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Call statement [Visual Basic]
 - procedures [Visual Basic], calling
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
-ms.openlocfilehash: 7de194ea23827e08c49f4519c1000708a4bd91b4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 70e6c109621c3710ad9476a952e9c384a142ba3d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350158"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674013"
 ---
 # <a name="call-statement-visual-basic"></a>Call ステートメント (Visual Basic)
 

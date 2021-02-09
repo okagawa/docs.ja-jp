@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:テキストのファイルへの書き込み (Visual Basic)'
 title: '方法: ファイルにテキストを書き込む'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - examples [Visual Basic], text files
 ms.assetid: 304956eb-530d-4df7-b48f-9b4d1f2581a0
-ms.openlocfilehash: f95a0c4df4a2eab0069a6dab0d4c3fa338d1d8ef
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3f94999c1d20002074ecf57577d3402c350248ec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411539"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797342"
 ---
 # <a name="how-to-write-text-to-files-in-visual-basic"></a>方法: ファイルにテキストを書き込む (Visual Basic)
 
@@ -38,7 +39,7 @@ ms.locfileid: "84411539"
 
  次の条件を満たす場合は、例外が発生する可能性があります。  
   
-- パスが正しくない。長さが 0 の文字列である、空白だけが含まれている、使用できない文字が含まれている、デバイス パスである (先頭が \\\\.\\)、のいずれかの理由が考えられる (<xref:System.ArgumentException>)。  
+- 次のいずれかの理由で、パスが正しくない。長さが 0 の文字列である、空白だけが含まれている、使用できない文字が含まれている、デバイス パスである (先頭が \\\\.\\) (<xref:System.ArgumentException>)。  
   
 - パスが `Nothing` であるため、有効でない (<xref:System.ArgumentNullException>)  
   
@@ -54,9 +55,9 @@ ms.locfileid: "84411539"
   
 - ディスクがいっぱいになっており、`WriteAllText` の呼び出しが失敗する (<xref:System.IO.IOException>)。  
   
- 部分的に信頼されているコンテキストで実行している場合は、特権不足のため例外がスローされることがあります。 詳しくは、「[コード アクセス セキュリティの基礎](../../../../framework/misc/code-access-security-basics.md)」をご覧ください。  
+ 部分的に信頼されたコンテキストで実行している場合、コードは、特権がないために例外をスローする可能性があります。 詳しくは、「[コード アクセス セキュリティの基礎](../../../../framework/misc/code-access-security-basics.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>

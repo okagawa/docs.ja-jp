@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: バイト (Byte) データ型 (Visual Basic)'
 title: バイト型 (Byte)
 ms.date: 01/31/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Byte data type
 - data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
-ms.openlocfilehash: 97acd1bc2ff29bac6588216b9ee4a4f187078815
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 983af36d8340b5df7ac44782bf56349901460c20
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374318"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731228"
 ---
 # <a name="byte-data-type-visual-basic"></a>バイト (Byte) データ型 (Visual Basic)
 

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: チュートリアル: リレーションシップを介したクエリの実行 (C#)'
 title: 'チュートリアル: リレーションシップを介したクエリの実行 (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: 9dfe34136f2d0a14a12f72e22a96d1882ddbce49
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 35811043ddd7ecc9aca5e1bd87a370abebf90853
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164013"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729446"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>チュートリアル: リレーションシップを介したクエリの実行 (C#)
 

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: ピア名と PNRP ID'
 title: ピア名と PNRP ID
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-ms.openlocfilehash: a56200d599d417dac549af000b35024338d43796
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ff9f77917ef05754f2373369d623b66e66b5a753
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239225"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801866"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>ピア名と PNRP ID
 
@@ -27,7 +28,7 @@ ms.locfileid: "96239225"
   
  PNRP ID は次の部分で構成されています。  
   
-- 上位 128 ビット (ピアツーピア (P2P) ID として知られる) は、エンドポイントに割り当てられたピア名のハッシュです。 ピア名は、*Authority.Classifier* の形式で指定されます。 セキュリティで保護された名前の場合、*Authority* は、ピア名の公開キーのセキュア ハッシュ アルゴリズム 1 (SHA1) ハッシュ (16 進数の数字で出力される) です。 セキュリティで保護されていない名前の場合、*Authority* は "0" です (単一文字)。 *Classifier* は、アプリケーションを識別する文字列です。 ピア名の分類子は、`null` ターミネータを含めて 149 文字より長くすることができます。  
+- 上位 128 ビット (ピアツーピア (P2P) ID として知られる) は、エンドポイントに割り当てられたピア名のハッシュです。 ピア名は、*Authority.Classifier* という形式です。 セキュリティで保護された名前の場合、*Authority* は、ピア名の公開キーのセキュア ハッシュ アルゴリズム 1 (SHA1) ハッシュ (16 進数の数字で出力される) です。 セキュリティで保護されていない名前の場合、*Authority* は "0" です (単一文字)。 *Classifier* は、アプリケーションを識別する文字列です。 ピア名の分類子は、`null` ターミネータを含めて 149 文字より長くすることができます。  
   
 - 下位 128 ビットは、サービスの場所に割り当てられています。同じクラウド内の同じ P2P ID を持つ異なるインスタンスを識別するために生成された数字です。  
   

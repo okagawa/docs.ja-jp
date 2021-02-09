@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DataView のパフォーマンス'
 title: DataView のパフォーマンス
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 90820e49-9d46-41f6-9a3d-6c0741bbd8eb
-ms.openlocfilehash: b2483becce31ab75d8b55b7a642c4ada83da59f6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6319eb3846f116b0297df701e9a6abc6c1deb2b3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183352"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651289"
 ---
 # <a name="dataview-performance"></a>DataView のパフォーマンス
 

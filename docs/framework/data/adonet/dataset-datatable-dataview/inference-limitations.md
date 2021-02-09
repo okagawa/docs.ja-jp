@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 推論の制限事項'
 title: 推論の制限事項
 ms.date: 03/30/2017
 ms.assetid: 78517994-5d57-44f8-9d20-38812977de09
-ms.openlocfilehash: 9d8191be137661200e1a6b84d68328c1202880ca
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 926e456acfc5eac2598be40490b72523facfd058
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172776"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652264"
 ---
 # <a name="inference-limitations"></a>推論の制限事項
 

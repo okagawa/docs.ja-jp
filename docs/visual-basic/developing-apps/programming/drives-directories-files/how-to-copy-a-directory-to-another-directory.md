@@ -1,5 +1,6 @@
 ---
-title: '方法 : ディレクトリを別のディレクトリにコピーする'
+description: '詳細情報: 方法:Visual Basic でディレクトリを別のディレクトリにコピーする'
+title: '方法: ディレクトリを別のディレクトリにコピーする'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], copying directories
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-ms.openlocfilehash: e28f50f6a812188ac7af801cea691818488bd6cd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 37eb63449ce355382c5ed058fda6c1142b7d3e3c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401720"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797654"
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>方法 : Visual Basic でディレクトリを別のディレクトリにコピーする
 
@@ -26,7 +27,7 @@ ms.locfileid: "84401720"
 
     [!code-vb[VbVbcnMyFileSystem#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#16)]
 
-    このコード例は IntelliSense コード スニペットとしても利用できます。 コード スニペット ピッカーでは、コード例は **[ファイル システム - ドライブ、フォルダー、およびファイルの処理]** にあります。 詳細については、「 [Code Snippets](/visualstudio/ide/code-snippets)」を参照してください。
+    このコード例は、IntelliSense コード スニペットとしても利用できます。 コード スニペット ピッカーでは、コード例は [**ファイル システム - ドライブ、フォルダー、およびファイルの処理**] にあります。 詳細については、「[Code Snippets](/visualstudio/ide/code-snippets)」を参照してください。
 
 ## <a name="robust-programming"></a>信頼性の高いプログラミング
 
@@ -34,7 +35,7 @@ ms.locfileid: "84401720"
 
 - ディレクトリに指定された新しい名前にコロン (:) またはスラッシュ (\ または /) が含まれている (<xref:System.ArgumentException>)。
 
-- パスが正しくない。長さが 0 の文字列である、空白だけが含まれている、使用できない文字が含まれている、デバイス パスである (先頭が \\\\.\\)、のいずれかの理由が考えられる (<xref:System.ArgumentException>)。
+- 次のいずれかの理由で、パスが正しくない。長さが 0 の文字列である、空白だけが含まれている、使用できない文字が含まれている、デバイス パスである (先頭が \\\\.\\) (<xref:System.ArgumentException>)。
 
 - パスが `Nothing` であるため、有効でない (<xref:System.ArgumentNullException>)
 
@@ -62,7 +63,7 @@ ms.locfileid: "84401720"
 
 - コピー先のファイルは存在するが、アクセスできない (<xref:System.UnauthorizedAccessException>)。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>
 - [方法: 特定のパターンに一致するサブディレクトリを検索する](how-to-find-subdirectories-with-a-specific-pattern.md)

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 安全なデータ アクセス'
 title: 安全なデータ アクセス
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 9e4af58ce845c0b57c433e4ad1b8dddf4ee2a0cb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0f14f271dda9d07ba1efdea2328a5b3e30d14849
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189020"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718890"
 ---
 # <a name="secure-data-access"></a>安全なデータ アクセス
 

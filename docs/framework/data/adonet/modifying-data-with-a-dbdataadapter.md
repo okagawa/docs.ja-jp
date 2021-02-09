@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DbDataAdapter を使用したデータの変更'
 title: DbDataAdapter を使用したデータの変更
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: 5272a53ae0b3ac1888d01dc2a59778c6c7231619
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 749c56e8db76a469d7ebf0e503508665c2fdbd94
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150766"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786252"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>DbDataAdapter を使用したデータの変更
 
@@ -36,7 +37,7 @@ ms.locfileid: "91150766"
   
 |データ プロバイダー|パラメーターの名前付け構文|  
 |-------------------|-----------------------------|  
-|`SqlClient`|`@`*parametername*形式の名前付きパラメーターが使用されます。|  
+|`SqlClient`|`@`*parametername* 形式の名前付きパラメーターが使用されます。|  
 |`OracleClient`|`:`*parmname* (または *parmname*) 形式の名前付きパラメーターが使用されます。|  
 |`OleDb`|疑問符 (`?`) で指定される位置パラメーター マーカーが使用されます。|  
 |`Odbc`|疑問符 (`?`) で指定される位置パラメーター マーカーが使用されます。|  

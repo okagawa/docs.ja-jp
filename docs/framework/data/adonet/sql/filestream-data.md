@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: FILESTREAM データ'
 title: FILESTREAM データ
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 87bed5dd345c240cc00b2c36aa976ec53fe63b93
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0110be6b867a07ec1cd204e2a3de371367bbfa36
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794099"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802048"
 ---
 # <a name="filestream-data"></a>FILESTREAM データ
 

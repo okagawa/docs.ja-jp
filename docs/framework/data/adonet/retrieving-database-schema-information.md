@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: データベース スキーマ情報の取得'
 title: データベース スキーマ情報の取得
 ms.date: 03/30/2017
 ms.assetid: 79038d52-f122-4fd4-9bfb-aaa22d6a114b
-ms.openlocfilehash: c0aaadc82771d1c2a36d797bc157d88b8d3cacdc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 84ac94a72b23d0b1d6924600f2fd33b2a285eab8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177359"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663405"
 ---
 # <a name="retrieving-database-schema-information"></a>データベース スキーマ情報の取得
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Delegate ステートメント'
 title: Delegate ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 29de4c174273c3c6c0d4f0cea1ee6dc254a1339b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 3fbf3d7b47b465fd0850f01170e02b19b7b93b4e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866661"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673818"
 ---
 # <a name="delegate-statement"></a>Delegate ステートメント
 

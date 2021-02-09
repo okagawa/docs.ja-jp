@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: クエリ式の構文例:集計演算子'
 title: クエリ式の構文例:集計演算子
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d729120c-4c1b-4f34-bbe9-33694fca2dde
-ms.openlocfilehash: 4842bdb3aeb024afc72bde43d056b48b0d8258b8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c0fd9c3faf770a00a54341cf3718c2dda91a4d7b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153002"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767935"
 ---
 # <a name="query-expression-syntax-examples-aggregate-operators"></a>クエリ式の構文例:集計演算子
 

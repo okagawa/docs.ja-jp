@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Await 演算子 (Visual Basic)'
 title: Await 演算子
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: 9d55ba82547dfcb0336c3a3fd12521c0dcb3eb58
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 04e32f31de970b389ae38fc3a4cdc6ab3f873f3d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371831"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774136"
 ---
 # <a name="await-operator-visual-basic"></a>Await 演算子 (Visual Basic)
 

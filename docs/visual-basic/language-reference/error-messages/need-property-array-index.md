@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: プロパティ配列のインデックスが必要です。'
 title: プロパティ配列のインデックスが必要です。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID385
 ms.assetid: 69ec6d59-ffc4-48ac-8a28-fe6853389843
-ms.openlocfilehash: b5f1b3f7a95ec2214dd4c526cfdfab87d813aeac
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 49f36d0cecc2710e16c0c2e17f28cd9c8aef9de4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871490"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795678"
 ---
 # <a name="need-property-array-index"></a>プロパティ配列のインデックスが必要です。
 

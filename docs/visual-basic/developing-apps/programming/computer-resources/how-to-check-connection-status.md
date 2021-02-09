@@ -1,5 +1,6 @@
 ---
-title: '方法 : 接続ステータスをチェックする'
+description: '詳細情報: 方法:Visual Basic で接続ステータスをチェックする'
+title: '方法: 接続状態をチェックする'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Web connections [Visual Basic]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - connections [Visual Basic], checking status
 - connection status [Visual Basic]
 ms.assetid: 4d9ee8ab-9a6f-4279-ace4-b75afc976a74
-ms.openlocfilehash: 89ef431759dac25bd213fd954db0712ad95434b0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c568e3be5d8fedb1ae12c748110b23218deaf069
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345879"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797745"
 ---
 # <a name="how-to-check-connection-status-in-visual-basic"></a>方法 : Visual Basic で接続ステータスをチェックする
 
@@ -26,9 +27,9 @@ ms.locfileid: "74345879"
   
      [!code-vb[VbResourceTasks#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#3)]  
   
-     このコード例は IntelliSense コード スニペットとしても利用できます。 コード スニペット ピッカーでは、これは **[接続とネットワーク]** にあります。 詳細については、「 [Code Snippets](/visualstudio/ide/code-snippets)」を参照してください。  
+     このコード例は、IntelliSense コード スニペットとしても利用できます。 コード スニペット ピッカーでは、これは **[接続とネットワーク]** にあります。 詳細については、「[Code Snippets](/visualstudio/ide/code-snippets)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable>

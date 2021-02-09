@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: SELECT (Entity SQL)'
 title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: 860e2a9a3e484e8d09cad282be8c0126c8235b46
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7feaf1d9a5101cb745e67afeba8d608104430e7f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202215"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791869"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 

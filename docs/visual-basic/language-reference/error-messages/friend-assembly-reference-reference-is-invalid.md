@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: BC31535:フレンド アセンブリ参照 <reference> は無効です'
 title: フレンド アセンブリ参照 <reference> は無効です
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31535
 ms.assetid: 6540c1d0-bb19-4051-a579-2e4f9094585e
-ms.openlocfilehash: a42dd99ffaa06dce4823ce5d022fac02ae99c6bd
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: e3e08edede9bee4710c415a61592857229ea4f35
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160712"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796198"
 ---
 # <a name="bc31535-friend-assembly-reference-reference-is-invalid"></a>BC31535:フレンド アセンブリ参照 \<reference> は無効です
 

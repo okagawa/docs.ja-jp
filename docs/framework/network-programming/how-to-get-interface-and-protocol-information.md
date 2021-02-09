@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: 方法:インターフェイス情報とプロトコル情報を取得する'
 title: '方法: インターフェイス情報とプロトコル情報を取得する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
-ms.openlocfilehash: 6e94914ec6312fad9a22cdbb4d145ed131d233da
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8db91bbd556a3d145674b00cd017d7c068936995
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250529"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785771"
 ---
 # <a name="how-to-get-interface-and-protocol-information"></a>方法: インターフェイス情報とプロトコル情報を取得する
 
@@ -74,4 +75,4 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 
  この例で必要な要素は次のとおりです。  
   
-- **System.Net** 名前空間の参照。
+- **System.Net** 名前空間への参照。

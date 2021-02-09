@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Enum ステートメント (Visual Basic)'
 title: Enum ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: 976cc68d67c69ec86918962ab2dd3406d15aed9a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dcaf28e949f8d34b8d72b07d8029ea10d6baeabf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404733"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769170"
 ---
 # <a name="enum-statement-visual-basic"></a>Enum ステートメント (Visual Basic)
 
@@ -98,13 +99,13 @@ End Enum
 
 列挙型には、名前、基になるデータ型、およびメンバーのセットが含まれます。 各メンバーは定数を表します。
 
-プロシージャの外部で、クラス、構造体、モジュール、またはインターフェイス レベルで宣言された列挙型は、*メンバー列挙型*です。 それを宣言するには、クラス、構造体、モジュール、またはインターフェイスのメンバーです。
+プロシージャの外部で、クラス、構造体、モジュール、またはインターフェイス レベルで宣言された列挙型は、*メンバー列挙型* です。 それを宣言するには、クラス、構造体、モジュール、またはインターフェイスのメンバーです。
 
 メンバー列挙型には、クラス、構造体、モジュール、またはインターフェイス内のどこからでもアクセスできます。 クラス、構造体、またはモジュールの外部のコードでは、メンバー列挙型の名前を、そのクラス、構造体、またはモジュールの名前で修飾する必要があります。 [Imports](imports-statement-net-namespace-and-type.md) ステートメントをソース ファイルに追加することで、完全修飾名を使用する必要がなくなります。
 
 クラス、構造体、モジュール、またはインターフェイスの外部で、名前空間レベルで宣言された列挙型は、それが表示される名前空間のメンバーになります。
 
-列挙型の*宣言コンテキスト*は、ソース ファイル、名前空間、クラス、構造体、モジュール、またはインターフェイスのいずれかである必要があり、プロシージャでは宣言できません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。
+列挙型の *宣言コンテキスト* は、ソース ファイル、名前空間、クラス、構造体、モジュール、またはインターフェイスのいずれかである必要があり、プロシージャでは宣言できません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。
 
 列挙型全体に属性を適用することはできますが、そのメンバーに個別に適用することはできません。 属性により、アセンブリのメタデータに情報が提供されます。
 

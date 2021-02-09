@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DataTable の編集'
 title: DataTable の編集
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-ms.openlocfilehash: 4fdb19e7fa014bf4a7c924b1fbae53fa44de6e3c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 983a4016fbdb71baa3bcd4ce8a34175d10b604d2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153262"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739470"
 ---
 # <a name="datatable-edits"></a>DataTable の編集
 

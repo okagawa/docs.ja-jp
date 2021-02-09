@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: BC36810:プロジェクトで、XML スキーマのコンパイル中にエラーが発生しました'
 title: プロジェクトで、XML スキーマのコンパイル中にエラーが発生しました
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36810
 ms.assetid: 9323b5d2-ba14-4e49-91f1-9ad647162144
-ms.openlocfilehash: 747c2c8cb1e5dc3d4fcae86a9acf84446c4e59c9
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 78e88208c0d3df12e7bad8ab46b1d91bce559923
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162038"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796484"
 ---
 # <a name="bc36810-errors-occurred-while-compiling-the-xml-schemas-in-the-project"></a>BC36810:プロジェクトで、XML スキーマのコンパイル中にエラーが発生しました
 
@@ -26,7 +27,7 @@ ms.locfileid: "92162038"
 
 - **[エラー一覧]** ウィンドウで警告をダブルクリックします。 Visual Basic により、警告の原因となった XSD ファイル内の場所に移動します。 XSD スキーマのエラーを修正します。
 
-- 必要な XSD スキーマ (.xsd) ファイルがすべてプロジェクトに含まれていることを確認します。 **ソリューション エクスプローラー**で .xsd ファイルを表示するには、 **[プロジェクト]** メニューの **[すべてのファイルを表示]** をクリックする必要がある場合があります。 .xsd ファイルを右クリックし、 **[プロジェクトに含める]** をクリックしてプロジェクトにファイルを含めます。
+- 必要な XSD スキーマ (.xsd) ファイルがすべてプロジェクトに含まれていることを確認します。 **ソリューション エクスプローラー** で .xsd ファイルを表示するには、 **[プロジェクト]** メニューの **[すべてのファイルを表示]** をクリックする必要がある場合があります。 .xsd ファイルを右クリックし、 **[プロジェクトに含める]** をクリックしてプロジェクトにファイルを含めます。
 
 - XML to Schema ウィザードを使用している場合は、同じソースからスキーマを複数回推論すると、このエラーが発生することがあります。 この場合、プロジェクトから既存の XSD スキーマ ファイルを削除し、新しい XML to Schema 項目テンプレートを追加してから、プロジェクトに適用できるすべての XML ソースを XML to Schema ウィザードに提供できます。
 

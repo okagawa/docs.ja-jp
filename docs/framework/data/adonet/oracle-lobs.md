@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: Oracle LOB'
 title: Oracle LOB
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: 072e3e3514c2dd32ddff0bac941da30788feae16
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f59e2326852233648b15cf6aa56ebed905fcb598
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91147841"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723687"
 ---
 # <a name="oracle-lobs"></a>Oracle LOB
 

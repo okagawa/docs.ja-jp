@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: データ サービスに対するクエリ (WCF Data Services)'
 title: データ サービスに対するクエリ (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
@@ -9,14 +10,16 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: 13334f6425c47e45d729d606d99602a99f35d8e6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7eb76b9d90273235d97318a70a4c880f869f249b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286159"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794937"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>データ サービスに対するクエリ (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services クライアント ライブラリを使用すると、言語統合クエリ (LINQ) を含め、使い慣れた .NET Framework プログラミング パターンを使用してデータ サービスに対してクエリを実行できます。 このクライアント ライブラリは、クライアント上で <xref:System.Data.Services.Client.DataServiceQuery%601> クラスのインスタンスとして定義されたクエリを HTTP GET 要求メッセージに変換します。 さらに応答メッセージを受け取り、クライアント データ サービス クラスのインスタンスに変換します。 これらのクラスは、<xref:System.Data.Services.Client.DataServiceContext> が属する <xref:System.Data.Services.Client.DataServiceQuery%601> によって追跡されます。
 

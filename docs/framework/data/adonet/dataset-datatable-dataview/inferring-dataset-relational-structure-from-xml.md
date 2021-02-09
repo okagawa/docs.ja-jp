@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: XML からの DataSet リレーショナル構造の推論'
 title: XML からの DataSet リレーショナル構造の推論
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
-ms.openlocfilehash: fca50491120346dea3e09c82324225f2114380fc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d89b6a42e7e1bc3d7514f180329e9c1d877a67ef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177580"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652225"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>XML からの DataSet リレーショナル構造の推論
 

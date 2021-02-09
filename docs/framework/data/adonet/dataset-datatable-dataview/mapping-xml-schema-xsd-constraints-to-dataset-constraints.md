@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: XML スキーマ (XSD) 制約の DataSet 制約への割り当て'
 title: XML スキーマ (XSD) 制約の DataSet 制約への割り当て
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
-ms.openlocfilehash: a2b28b0dcb2e2858c7328854650667f51e83166a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b1a958029e541b6ac95b5c509665005c9006adfa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185289"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651887"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>XML スキーマ (XSD) 制約の DataSet 制約への割り当て
 

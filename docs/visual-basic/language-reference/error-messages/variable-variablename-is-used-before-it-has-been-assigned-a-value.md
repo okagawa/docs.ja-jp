@@ -1,4 +1,5 @@
 ---
+description: "詳細情報: BC42104:変数 '<variablename>' は、値が割り当てられる前に参照によって使用されています。"
 title: 変数 '<variablename>' は、値が割り当てられる前に参照によって使用されています。
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42104
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
-ms.openlocfilehash: 6db8626701267f2051b289b267e7b2d9da51c283
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 501c3e3971c5ca0ebdba6981134f5029b77d0075
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162220"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701496"
 ---
 # <a name="bc42104-variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>BC42104:変数 '\<variablename>' は、値が割り当てられる前に参照によって使用されています。
 

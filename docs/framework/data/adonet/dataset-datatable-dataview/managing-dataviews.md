@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DataViews の管理'
 title: DataViews の管理
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-ms.openlocfilehash: c07f521b94f23b479281b0314d6b89a095ee9624
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: cdd9da9c4f67321dba36d22610704fc2e2561930
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181246"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652095"
 ---
 # <a name="managing-dataviews"></a>DataViews の管理
 

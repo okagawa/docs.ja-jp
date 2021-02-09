@@ -1,16 +1,17 @@
 ---
-title: '方法 : ファイルの名前を変更する'
+description: '詳細情報: 方法:Visual Basic でファイルの名前を変更する'
+title: '方法: ファイルの名前を変更する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], renaming files
 - files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
-ms.openlocfilehash: 3de41ee6627315f0e26964b75f564ff98fe472ec
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cf182fa94befdfdcb1568052a0193d483670cf49
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411591"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797407"
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>方法 : Visual Basic でファイルの名前を変更する
 
@@ -22,13 +23,13 @@ ms.locfileid: "84411591"
   
      [!code-vb[VbVbcnMyFileSystem#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#9)]  
   
- このコード例は IntelliSense コード スニペットとしても利用できます。 コード スニペット ピッカーでは、スニペットは **[ファイル システム - ドライブ、フォルダー、およびファイルの処理]** にあります。 詳細については、「 [Code Snippets](/visualstudio/ide/code-snippets)」を参照してください。  
+ このコード例は、IntelliSense コード スニペットとしても利用できます。 コード スニペット ピッカーでは、スニペットは [**ファイル システム - ドライブ、フォルダー、およびファイルの処理**] にあります。 詳細については、「[Code Snippets](/visualstudio/ide/code-snippets)」を参照してください。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
 
  次の条件を満たす場合は、例外が発生する可能性があります。  
   
-- パスが正しくない。長さが 0 の文字列である、空白だけが含まれている、使用できない文字が含まれている、デバイス パスである (先頭が \\\\.\\)、のいずれかの理由が考えられる (<xref:System.ArgumentException>)。  
+- 次のいずれかの理由で、パスが正しくない。長さが 0 の文字列である、空白だけが含まれている、使用できない文字が含まれている、デバイス パスである (先頭が \\\\.\\) (<xref:System.ArgumentException>)。  
   
 - `newName` にパス情報が含まれている (<xref:System.ArgumentException>)。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "84411591"
   
 - `newName` が `Nothing` または空の文字列である (<xref:System.ArgumentNullException>)。  
   
-- ソース ファイルが正しくないか、存在しない (<xref:System.IO.FileNotFoundException>)。  
+- ソース ファイルが正しくない、または存在しない (<xref:System.IO.FileNotFoundException>)。  
   
 - `newName` で指定された名前のファイルまたはディレクトリが既に存在する (<xref:System.IO.IOException>)。  
   
@@ -48,7 +49,7 @@ ms.locfileid: "84411591"
   
 - ユーザーに必要なアクセス許可がない (<xref:System.UnauthorizedAccessException>)。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>
 - [方法: ファイルを移動する](how-to-move-a-file.md)

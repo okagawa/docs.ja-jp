@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:コンカレンシー例外をいつスローするかを指定する'
 title: '方法: コンカレンシー例外をいつスローするかを指定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 344ae068-ff63-4a2e-8b00-af22e143675f
-ms.openlocfilehash: 9d71ca82c3fe1abd23a82d952d38c3ea23a7f1c0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d445cabfd2498f3599d874c2b7983a86c2c36c7d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197119"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785875"
 ---
 # <a name="how-to-specify-when-concurrency-exceptions-are-thrown"></a>方法: コンカレンシー例外をいつスローするかを指定する
 

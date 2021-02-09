@@ -1,15 +1,18 @@
 ---
+description: '詳細情報: データ サービス コンテキストの管理 (WCF Data Services)'
 title: データ サービス コンテキストの管理 (WCF Data Services)
 ms.date: 03/30/2017
 ms.assetid: 15b19d09-7de7-4638-9556-6ef396cc45ec
-ms.openlocfilehash: e67f7280bc85c7577f960707659890f59470e535
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 713136245ae2d7d27010cc527efad83979929761
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194298"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795015"
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>データ サービス コンテキストの管理 (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 <xref:System.Data.Services.Client.DataServiceContext> クラスは、特定のデータ サービスに対してサポートされている操作をカプセル化します。 OData サービスはステートレスですが、コンテキストはステートレスではありません。 このため <xref:System.Data.Services.Client.DataServiceContext> クラスを使用すると、変更管理などの機能をサポートするためにデータ サービスとの対話操作間におけるクライアントの状態を保持できます。 このクラスは、ID の管理と変更の追跡も行います。  
   

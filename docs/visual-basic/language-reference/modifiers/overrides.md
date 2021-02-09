@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Overrides (Visual Basic)'
 title: Overrides
 ms.date: 07/20/2015
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 - properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
-ms.openlocfilehash: 657f838b2959a5b6a7cef5ff18295a4ada709e9a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d118bf4e366ff8f84806586dfc3977612ed6eff4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392029"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730448"
 ---
 # <a name="overrides-visual-basic"></a>Overrides (Visual Basic)
 
@@ -30,7 +31,7 @@ ms.locfileid: "84392029"
 
 - **結合された修飾子。** 同じ宣言内で `Overrides` を `Shadows` または `Shared` と共に指定することはできません。 オーバーライドする要素は暗黙的にオーバーライド可能であるため、`Overridable` と `Overrides` を結合することはできません。
 
-- **シグネチャの一致。** この宣言のシグネチャは、オーバーライドされるプロパティまたはプロシージャの*シグネチャ*と完全に一致する必要があります。 つまり、パラメーター リストには、同じ数のパラメーターを、同じ順序、同じデータ型で指定する必要があります。
+- **シグネチャの一致。** この宣言のシグネチャは、オーバーライドされるプロパティまたはプロシージャの *シグネチャ* と完全に一致する必要があります。 つまり、パラメーター リストには、同じ数のパラメーターを、同じ順序、同じデータ型で指定する必要があります。
 
   オーバーライドする宣言は、シグネチャに加え、次の点でも完全に一致している必要があります。
 

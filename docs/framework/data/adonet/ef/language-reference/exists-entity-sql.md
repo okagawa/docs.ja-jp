@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: EXISTS (Entity SQL)'
 title: EXISTS (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d28ead43-4afb-4bdc-af64-efd2e05005d7
-ms.openlocfilehash: f08b3ea60a985e56e05e4686cd531f94e0bd4e18
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c6c5b86616d63b9cc3389365a96c382101463732
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166769"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786382"
 ---
 # <a name="exists-entity-sql"></a>EXISTS (Entity SQL)
 

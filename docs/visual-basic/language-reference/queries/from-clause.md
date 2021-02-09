@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: From 句 (Visual Basic)'
 title: From 句
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: 120ba6da11bffc3a0e81873d1fd606633724723d
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: e35188412deb7fd9f2d8306c85057d050a60d030
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875249"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700560"
 ---
 # <a name="from-clause-visual-basic"></a>From 句 (Visual Basic)
 
@@ -32,13 +33,13 @@ From element [ As type ] In collection [ _ ]
   
 |用語|定義|  
 |---|---|  
-|`element`|必須です。 コレクションの要素の反復処理に使用される*範囲変数*。 範囲変数は、クエリによって `collection` を反復処理するときに、`collection` の各メンバーを参照するために使用されます。 列挙可能な型である必要があります。|  
+|`element`|必須です。 コレクションの要素の反復処理に使用される *範囲変数*。 範囲変数は、クエリによって `collection` を反復処理するときに、`collection` の各メンバーを参照するために使用されます。 列挙可能な型である必要があります。|  
 |`type`|任意。 `element` の型。 `type` が指定されていない場合、`element` の型は `collection` から推論されます。|  
 |`collection`|必須です。 クエリ対象のコレクションを参照します。 列挙可能な型である必要があります。|  
   
 ## <a name="remarks"></a>Remarks  
 
- `From` 句は、クエリのソース データと、ソース コレクションの要素を参照するために使用される変数を識別するために使用します。 このような変数は*範囲変数*と呼ばれます。 `Aggregate` 句を使用して、集計結果のみを返すクエリを識別する場合を除き、クエリには `From` 句が必要です。 詳細については、「[Aggregate 句](aggregate-clause.md)」を参照してください。  
+ `From` 句は、クエリのソース データと、ソース コレクションの要素を参照するために使用される変数を識別するために使用します。 このような変数は *範囲変数* と呼ばれます。 `Aggregate` 句を使用して、集計結果のみを返すクエリを識別する場合を除き、クエリには `From` 句が必要です。 詳細については、「[Aggregate 句](aggregate-clause.md)」を参照してください。  
   
  クエリで複数の `From` 句を指定して、結合する複数のコレクションを識別できます。 複数のコレクションを指定している場合、それらは個別に反復処理するか、またはそれらが関連付けられている場合は結合できます。 コレクションは、`Select` 句を使用して暗黙的に結合することも、`Join` または `Group Join` 句を使用して明示的に結合することもできます。 または、1 つの `From` 句で、関連する各範囲変数とコレクションをそれぞれコンマで区切って、複数の範囲変数とコレクションを指定することもできます。 次のコード例に、`From` 句の両方の構文オプションを示しています。  
   

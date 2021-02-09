@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 文字列関数'
 title: 文字列関数
 ms.date: 03/30/2017
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
-ms.openlocfilehash: f5c9696da51591b7a44de14838313112bbc46c06
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1287d81075fd87fa730020b44dfd134a59827f8f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156525"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673116"
 ---
 # <a name="string-functions"></a>文字列関数
 

@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: My の参照 (Visual Basic)'
 title: My の参照
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My feature
 - My reference
 ms.assetid: 6f803bd7-21ff-4569-b1fe-b00a6678b1e3
-ms.openlocfilehash: 60dadc2918d4926c2b8bf1004a09d9b3a1ec56ab
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 8a0fb265f98c28b8cf37994d39fa210d63fd43c7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875574"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774695"
 ---
 # <a name="my-reference-visual-basic"></a>My の参照 (Visual Basic)
 

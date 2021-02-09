@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 方法:Visual Studio で LINQ to DataSet プロジェクトを作成する'
 title: Visual Studio で LINQ to DataSet プロジェクトを作成する
 ms.date: 08/15/2018
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
-ms.openlocfilehash: 91032766248b11e51b90aa788b1c64c140347c25
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 4ab626ddaa27780759df95462faac366be8beeff
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802027"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723830"
 ---
 # <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>方法: Visual Studio で LINQ to DataSet プロジェクトを作成する
 
@@ -26,7 +27,7 @@ LINQ to DataSet では、さらに *System.Data.dll* と *System.Data.DataSetExt
 
 1. **System.Core**、**System.Data**、**System.Data.DataSetExtensions** に対する参照を追加します。
 
-   **ソリューション エクスプローラー**で、 **[参照]** ノードを右クリックし、 **[参照の追加]** を選択します。 **[参照マネージャー]** ダイアログ ボックスで、**System.Core**、**System.Data**、**System.Data.DataSetExtensions** を選択します。 **[OK]** を選択します。
+   **ソリューション エクスプローラー** で、 **[参照]** ノードを右クリックし、 **[参照の追加]** を選択します。 **[参照マネージャー]** ダイアログ ボックスで、**System.Core**、**System.Data**、**System.Data.DataSetExtensions** を選択します。 **[OK]** を選択します。
 
 1. **System.Data** と **System.Linq** に対する [using](../../../csharp/language-reference/keywords/using-directive.md) ディレクティブ (Visual Basic では [Imports ステートメント](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)) を追加します。
 

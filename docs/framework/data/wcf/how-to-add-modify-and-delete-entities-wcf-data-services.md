@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:エンティティを追加、変更、および削除する (WCF Data Services)'
 title: '方法: エンティティを追加、変更、および削除する (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,14 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: a00f8933-b232-4445-95ba-adc634f055d8
-ms.openlocfilehash: 3d147f05e2911cdaa05c5fc2374e14c539235fda
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 300ec4d710b376979b77c02b2831bb6b64393709
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172529"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765738"
 ---
 # <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>方法: エンティティを追加、変更、および削除する (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services クライアント ライブラリでは、<xref:System.Data.Services.Client.DataServiceContext> のオブジェクトで同等のアクションを実行して、データ サービスのエンティティ データを作成、更新、および削除できます。 詳細については、「[データ サービスの更新](updating-the-data-service-wcf-data-services.md)」を参照してください。  
   

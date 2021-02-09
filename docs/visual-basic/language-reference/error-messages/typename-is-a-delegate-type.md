@@ -1,4 +1,5 @@
 ---
+description: "詳細情報: BC32008: '<typename>' はデリゲート型です"
 title: "'<typename>' はデリゲート型です。"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32008
 ms.assetid: dc6abba0-a9ad-450f-8899-87265bc84abc
-ms.openlocfilehash: dcb52188c53b38ac14de0002b5212bb33c9f7203
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 72aac48038c433b7938c54e7f1138a5b91bf7689
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161778"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675027"
 ---
 # <a name="bc32008-typename-is-a-delegate-type"></a>BC32008: '\<typename>' はデリゲート型です
 

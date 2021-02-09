@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: XML の DataSet スキーマ情報の読み込み'
 title: XML の DataSet スキーマ情報の読み込み
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-ms.openlocfilehash: b084590d7158024227a9f12da759b56ae2031373
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: dd3a327270d6f8e3086d7206dd6f44290415c55e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201344"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652108"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>XML の DataSet スキーマ情報の読み込み
 
@@ -76,7 +77,7 @@ xmlStream.Close();
 </NewDataSet>  
 ```  
   
- 前述の XML ドキュメントの要素に対して指定されている属性により、**XmlReadMode** が **InferSchema** の**ReadXmlSchema** メソッドと **ReadXml** メソッドでは、すべての要素 に対するテーブルが作成されます: **Categories**、**CategoryID**、**CategoryName**、**Description**、**Products**、**ProductID**、**ReorderLevel**、**Discontinued**。 (詳細については、「[XML からの DataSet リレーショナル構造の推論](inferring-dataset-relational-structure-from-xml.md)」を参照してください)。ただし、これより適切な方法としては、最初に **Categories** テーブルと **Products** テーブルだけを作成し、次に **Categories** テーブルの **CategoryID**、**CategoryName**、**Description** 列を作成し、**Products** テーブルの **ProductID**、**ReorderLevel**、**Discontinued** 列を作成します。 推論されたスキーマが、XML 要素に指定されている属性を無視するようにするには、**InferXmlSchema** メソッドを使用して **officedata** の XML 名前空間を無視するように指定します。この例を次に示します。  
+ 前述の XML ドキュメントの要素に対して指定されている属性により、**XmlReadMode** が **InferSchema** の **ReadXmlSchema** メソッドと **ReadXml** メソッドでは、すべての要素 に対するテーブルが作成されます: **Categories**、**CategoryID**、**CategoryName**、**Description**、**Products**、**ProductID**、**ReorderLevel**、**Discontinued**。 (詳細については、「[XML からの DataSet リレーショナル構造の推論](inferring-dataset-relational-structure-from-xml.md)」を参照してください)。ただし、これより適切な方法としては、最初に **Categories** テーブルと **Products** テーブルだけを作成し、次に **Categories** テーブルの **CategoryID**、**CategoryName**、**Description** 列を作成し、**Products** テーブルの **ProductID**、**ReorderLevel**、**Discontinued** 列を作成します。 推論されたスキーマが、XML 要素に指定されている属性を無視するようにするには、**InferXmlSchema** メソッドを使用して **officedata** の XML 名前空間を無視するように指定します。この例を次に示します。  
   
 ```vb  
 Dim dataSet As DataSet = New DataSet  

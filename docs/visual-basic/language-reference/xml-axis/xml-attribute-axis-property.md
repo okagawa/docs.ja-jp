@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: XML 属性軸プロパティ (Visual Basic)'
 title: XML Attribute Axis Property
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
-ms.openlocfilehash: 9eddd132b2d4dd6ffbd935a0c8c57a03a3d65435
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 2085ef2151e7aef7c5642e0ba9ac2e6fa90bfd4e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869439"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795171"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>XML 属性軸プロパティ (Visual Basic)
 

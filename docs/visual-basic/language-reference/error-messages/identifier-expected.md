@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: BC30203:識別子が必要です。'
 title: 識別子が必要です。
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30203
 ms.assetid: c05162ee-55d0-4d7f-84bb-e7758d4c5081
-ms.openlocfilehash: 8d993e120319d42f4948b525a82b7b1f08764c60
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: d2d0cf3a449912a44d78a887ab09f4ee69659fb6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162870"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796107"
 ---
 # <a name="bc30203-identifier-expected"></a>BC30203:識別子が必要です。
 

@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DataAdapter を使用したバッチ操作の実行'
 title: DataAdapter を使用したバッチ操作の実行
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.openlocfilehash: 9dd6abb91b3549e3bc8b4ae84cbb227171512ecb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d0472761a0a3893872f073cfe25921066a0f96bd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177424"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672336"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>DataAdapter を使用したバッチ操作の実行
 

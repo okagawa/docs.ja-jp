@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 数値演算子および比較演算子'
 title: 数値演算子および比較演算子
 ms.date: 03/30/2017
 ms.assetid: 25b4a26a-06f2-4f80-87a9-76705ed46197
-ms.openlocfilehash: 7e7af725864aa191f092055fa32b403093321aa5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5b17f19769436ac4e575ac974668eadc3b17b8f6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781286"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695529"
 ---
 # <a name="numeric-and-comparison-operators"></a>数値演算子および比較演算子
 

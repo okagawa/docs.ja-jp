@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: バルク コピー サンプルのセットアップ'
 title: バルク コピー サンプルのセットアップ
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: 562d36e0aee72fcc0619ec4ed7362622ba652337
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ae05dfa5f1ab19a3021b2b79ecd2bbee6a3ecae1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197483"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718552"
 ---
 # <a name="bulk-copy-example-setup"></a>バルク コピー サンプルのセットアップ
 

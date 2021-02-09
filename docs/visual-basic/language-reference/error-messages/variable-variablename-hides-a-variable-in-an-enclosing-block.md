@@ -1,4 +1,5 @@
 ---
+description: "詳細情報: BC30616:変数 '<variablename>' は、囲まれたブロック内の変数を非表示にします。"
 title: 変数 '<variablename>' は、囲まれたブロック内の変数を非表示にします。
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
-ms.openlocfilehash: 408acaafd5e266266b5191313611b94b72a5c270
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: a0b2a4d024ff0409b5617354b5e671ca6dc0305b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161349"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666122"
 ---
 # <a name="bc30616-variable-variablename-hides-a-variable-in-an-enclosing-block"></a>BC30616:変数 '\<variablename>' は、囲まれたブロック内の変数を非表示にします。
 

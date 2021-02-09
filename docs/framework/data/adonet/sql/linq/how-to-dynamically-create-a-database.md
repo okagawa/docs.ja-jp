@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:データベースを動的に作成する'
 title: '方法: データベースを動的に作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: 95073eed3e0534a74272ee426ac6e329954c85a6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b9addce6befc63f91358d6ecae57e40d6123b200
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173485"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738976"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>方法: データベースを動的に作成する
 

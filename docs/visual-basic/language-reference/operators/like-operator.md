@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Like 演算子 (Visual Basic)'
 title: Like 演算子
 ms.date: 07/20/2015
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-ms.openlocfilehash: 49dfe5cf5dbcf8dc6f79f569a92e36aa81806913
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: f1be174010b7acae5bface4fc0a2d0e606a90fca
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866771"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665589"
 ---
 # <a name="like-operator-visual-basic"></a>Like 演算子 (Visual Basic)
 
@@ -111,7 +112,7 @@ result = string Like pattern
   
 ## <a name="overloading"></a>オーバーロード  
 
- `Like` 演算子は "*オーバーロード*" できます。つまり、オペランドがクラスまたは構造体の型を持っているときに、クラスまたは構造体はその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ `Like` 演算子は "*オーバーロード*" できます。つまり、オペランドの型がクラスまたは構造体であるとき、そのクラスまたは構造体で、演算子の動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
 

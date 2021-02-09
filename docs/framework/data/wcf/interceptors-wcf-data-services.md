@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: インターセプター (WCF Data Services)'
 title: インターセプター (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-ms.openlocfilehash: 64c5c82f33daf677e58d49655897c392f1f7b7f9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f73ee498d0419df9e083248802ea52ed050a914b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204399"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765075"
 ---
 # <a name="interceptors-wcf-data-services"></a>インターセプター (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services では、アプリケーションで要求メッセージを先に取得して、操作にカスタム ロジックを追加することができます。 このカスタム ロジックを使用して、受信メッセージのデータを検証できます。 このカスタム ロジックを使用して、クエリ要求の範囲をさらに制限することもできます (カスタム認証ポリシーを要求ごとに挿入するなど)。  
   

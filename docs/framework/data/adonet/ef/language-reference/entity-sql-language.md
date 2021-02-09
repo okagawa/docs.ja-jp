@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: Entity SQL 言語'
 title: Entity SQL 言語
 ms.date: 03/30/2017
 ms.assetid: 9e7d8837-28c5-429d-a824-7bafb59724cf
-ms.openlocfilehash: 721a4cd9d4e5618c083392bbe1ae203f285f8feb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c05e561e5da3f9ee8788a25f8ca97b22444e109f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148115"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724571"
 ---
 # <a name="entity-sql-language"></a>Entity SQL 言語
 
@@ -29,11 +30,11 @@ Entity SQL は、ストレージに依存しない SQL と似たクエリ言語�
   
  [方法: EntityConnection の接続文字列を作成する](../how-to-build-an-entityconnection-connection-string.md)  
   
- [方法: PrimitiveType 結果を返すクエリを実行する](../how-to-execute-a-query-that-returns-primitivetype-results.md)  
+ [方法: PrimitiveType の結果を返すクエリを実行する](../how-to-execute-a-query-that-returns-primitivetype-results.md)  
   
- [方法: StructuralType 結果を返すクエリを実行する](../how-to-execute-a-query-that-returns-structuraltype-results.md)  
+ [方法: StructuralType の結果を返すクエリを実行する](../how-to-execute-a-query-that-returns-structuraltype-results.md)  
   
- [方法: RefType 結果を返すクエリを実行する](../how-to-execute-a-query-that-returns-reftype-results.md)  
+ [方法: RefType の結果を返すクエリを実行する](../how-to-execute-a-query-that-returns-reftype-results.md)  
   
  [方法: 複合型を返すクエリを実行する](../how-to-execute-a-query-that-returns-complex-types.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: New 演算子 (Visual Basic)'
 title: new 演算子
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-ms.openlocfilehash: 27b5b4516ef729045036c36fedc24b6c576a4f61
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f52dd7606127c7587173de8a78e618ceb3e4681d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348314"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665381"
 ---
 # <a name="new-operator-visual-basic"></a>New 演算子 (Visual Basic)
 

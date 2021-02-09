@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: ローカル トランザクション'
 title: ローカル トランザクション
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: a0b713ab0b81cb2f0661212dae22db34b7f9f3ae
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 998024a6b08ec9cb97c8bb8dbbe2c9d17f38f350
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175396"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681644"
 ---
 # <a name="local-transactions"></a>ローカル トランザクション
 

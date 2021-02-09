@@ -1,18 +1,21 @@
 ---
+description: '詳細情報: クイック スタート (WCF Data Services)'
 title: クイック スタート (WCF Data Services)
 ms.date: 08/24/2018
 helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: f945d33a4fc789b3c73c1c80040fc8527301758b
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 92a1b8882f6a7db2ed33f032ad434efd06400421
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121224"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794950"
 ---
 # <a name="quickstart-wcf-data-services"></a>クイック スタート (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 このクイックスタートでは、「[はじめに](getting-started-with-wcf-data-services.md)」のトピックをサポートする一連のタスクを通して WCF Data Services と Open Data Protocol (OData) を学習することができます。
 
@@ -26,7 +29,7 @@ ms.locfileid: "81121224"
 
 - Visual Studio
 
-- SQL Server のインスタンス。 これには SQL Server Express が含まれます。これは、Visual Studio 2015 の既定のインストールに含まれているか、または Visual Studio 2017 以降の**データ ストレージおよび処理**ワークロードの一部として含まれています。
+- SQL Server のインスタンス。 これには SQL Server Express が含まれます。これは、Visual Studio 2015 の既定のインストールに含まれているか、または Visual Studio 2017 以降の **データ ストレージおよび処理** ワークロードの一部として含まれています。
 
 - Northwind サンプル データベース。 データベースをインストールするには、[Microsoft SQL Serverの Northwind および pubs サンプル データベース](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)から Transact-SQL スクリプトを実行します。
 

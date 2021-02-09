@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: メソッド ベースのクエリ構文例:パーティション分割'
 title: メソッド ベースのクエリ構文例:パーティション分割
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b7b64874-c3c8-4bdb-862c-89a168d07827
-ms.openlocfilehash: 659c05f261b854b1f2bb9bc3bce7c2889650571f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 914dacb5b82b9ce452d4d1d7a97262de5803a9fa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91191893"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99696686"
 ---
 # <a name="method-based-query-syntax-examples-partitioning"></a>メソッド ベースのクエリ構文例:パーティション分割
 

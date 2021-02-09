@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: トラブルシューティング: テキスト ファイルの読み取りと書き込み (Visual Basic)'
 title: 'トラブルシューティング: テキスト ファイルの読み取りと書き込み'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic], troubleshooting
 - reading text files [Visual Basic], troubleshooting
 ms.assetid: a8e9b44d-facb-4718-8c0f-466537171182
-ms.openlocfilehash: 8af4160d09f39f2622a007aef793173d614a8b44
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1c01f7673ef021759a9c1892f685aa90ef1acdf6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406626"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675339"
 ---
 # <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a>トラブルシューティング: テキスト ファイルの読み取りと書き込み (Visual Basic)
 
@@ -36,7 +37,7 @@ ms.locfileid: "84406626"
 
  ファイル パス (特に相対パス) を解析するときに、間違ったデータを指定してしまうことがよくあります。 正しいパスを指定しているかどうかを確認することで、問題の多くを解決できます。 詳細については、「[方法: ファイル パスを解析する](how-to-parse-file-paths.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - [ファイルの読み取り](reading-from-files.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: パラメーターの一覧 (Visual Basic)'
 title: パラメーター リスト
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], Visual Basic
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
-ms.openlocfilehash: 706fc2414806db5608cce410bf4156839ec2d83e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f69063fac82887ba4da3119d8ec4fcac11b7f4c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404318"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741407"
 ---
 # <a name="parameter-list-visual-basic"></a>パラメーターの一覧 (Visual Basic)
 
@@ -58,9 +59,9 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
 
 パラメーターは、かっこで囲み、コンマで区切ります。 パラメーターは任意のデータ型で宣言できます。 `parametertype` を指定しない場合、既定で `Object` が設定されます。
 
-呼び出し元のコードでプロシージャを呼び出すと、各必須パラメーターに*引数*が渡されます。 詳細については、「[パラメーターと引数の違い](../../programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md)」を参照してください。
+呼び出し元のコードでプロシージャを呼び出すと、各必須パラメーターに *引数* が渡されます。 詳細については、「[パラメーターと引数の違い](../../programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md)」を参照してください。
 
-呼び出し元のコードから各パラメーターに渡される引数は、呼び出し元のコード内の基になる要素へのポインターです。 この要素が*変数でない* (定数、リテラル、列挙型、または式) 場合、どのコードでもそれを変更することはできません。 それが*変数*要素 (宣言された変数、フィールド、プロパティ、配列要素、または構造体要素) の場合は、呼び出し元のコードでそれを変更できます。 詳細については、「[変更できる引数と変更できない引数の違い](../../programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md)」を参照してください。
+呼び出し元のコードから各パラメーターに渡される引数は、呼び出し元のコード内の基になる要素へのポインターです。 この要素が *変数でない* (定数、リテラル、列挙型、または式) 場合、どのコードでもそれを変更することはできません。 それが *変数* 要素 (宣言された変数、フィールド、プロパティ、配列要素、または構造体要素) の場合は、呼び出し元のコードでそれを変更できます。 詳細については、「[変更できる引数と変更できない引数の違い](../../programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md)」を参照してください。
 
 変数要素が `ByRef` で渡された場合は、プロシージャでそれを変更できます。 詳細については、「[引数の値渡しと参照渡しの違い](../../programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md)」を参照してください。
 

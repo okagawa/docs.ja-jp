@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: データ サービス リソースへのアクセス (WCF Data Services)'
 title: データ サービス リソースへのアクセス (WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: 02e45f4e67a80d3afb600f44ea9fa6a5e175310c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b1b4d94b020dcbb942959dfbf3fb3fc26dcbf915
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91186679"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766648"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>データ サービス リソースへのアクセス (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services では、URI でアドレス指定できるリソースでデータをフィードとして公開するため、Open Data Protocol (OData) がサポートされています。 これらのリソースは、[Entity Data Model](../adonet/entity-data-model.md) のエンティティとリレーションシップの変換に従って表現されます。 このモデルでは、エンティティはアプリケーション ドメイン内のデータの操作単位 (データ型) を表します (顧客、注文、項目、製品など)。 エンティティ データは、Representational State Transfer (REST) のセマンティクス (特に、標準的な HTTP 動詞である GET、PUT、POST、および DELETE) を使用してアクセスおよび変更できます。  
   

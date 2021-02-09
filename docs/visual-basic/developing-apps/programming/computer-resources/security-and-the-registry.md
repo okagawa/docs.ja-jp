@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: セキュリティとレジストリ (Visual Basic)'
 title: セキュリティとレジストリ
 ms.date: 07/20/2015
 helpviewer_keywords:
 - security [Visual Basic], registry
 - registry [Visual Basic], security issues
 ms.assetid: 9980aff7-2f69-492b-8f66-29a9a76d3df5
-ms.openlocfilehash: 2eba9d177769b22de3f931bc7af4905a80e316b5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2dc6413328bc32c004d281b096ee095d4f827feb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359969"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666382"
 ---
 # <a name="security-and-the-registry-visual-basic"></a>セキュリティとレジストリ (Visual Basic)
 
@@ -41,7 +42,7 @@ ms.locfileid: "84359969"
 > [!IMPORTANT]
 > Web アプリケーションからレジストリを読み取るとき、現在のユーザーの ID は Web アプリケーションに実装されている認証と偽装によって決まります。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
 - [レジストリからの読み取りとレジストリへの書き込み](reading-from-and-writing-to-the-registry.md)

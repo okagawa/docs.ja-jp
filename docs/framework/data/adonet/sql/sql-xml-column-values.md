@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: SQL XML 列値'
 title: SQL XML 列値
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d97ce4da-f09c-4d1e-85b7-a0ccedd7246a
-ms.openlocfilehash: cd55e2263d4b71fe62910ac918e331ebe37833eb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 357d55e2ce497c9929b8e7e7459ebf23ccaafede
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177281"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767181"
 ---
 # <a name="sql-xml-column-values"></a>SQL XML 列値
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: BC30506:Handles 句には、含んでいる型またはその基本型の 1 つで定義した WithEvents 変数が必要です。'
 title: Handles 句には、含んでいる型またはその基本型の 1 つで定義した WithEvents 変数が必要です。
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30506
 ms.assetid: 5b66f6a8-f050-4e03-a57f-a64e85f80cb5
-ms.openlocfilehash: e16a157d0621d5baecb06ce118e3ab390bf68cf8
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 7253a4766b2015ccbe0ae62f64bc10aaca073dc3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162883"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796120"
 ---
 # <a name="bc30506-handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>BC30506:Handles 句には、含んでいる型またはその基本型の 1 つで定義した WithEvents 変数が必要です。
 

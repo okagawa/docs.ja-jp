@@ -1,18 +1,21 @@
 ---
+description: '詳細情報: 方法:ADO.NET Entity Framework データ ソースを使用してデータ サービスを作成する (WCF Data Services)'
 title: '方法: ADO.NET Entity Framework データ ソースを使用してデータ サービスを作成する (WCF Data Services)'
 ms.date: 08/24/2018
 helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 1e559488a3260fafe6c211ff47226a258fc1289a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: aea96c3953ec990b5f70a9702961512332330c6e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557698"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766208"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>方法: ADO.NET Entity Framework データ ソースを使用してデータ サービスを作成する (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services は、エンティティ データをデータ サービスとして公開します。 データ ソースがリレーショナル データベースの場合、このエンティティ データは ADO.NET Entity Framework によって提供されます。 このトピックでは、既存のデータベースに基づき、このデータ モデルを使用して新しいデータ サービスを作成する Visual Studio Web アプリケーションで Entity Framework ベースのデータ モデルを作成する方法について説明します。
 
@@ -51,9 +54,9 @@ Entity Framework は、Visual Studio プロジェクトの外部に Entity Frame
 
 1. データ モデルを表す .edmx ファイルを Visual Studio で開きます。
 
-2. **モデル ブラウザー**でモデルを右クリックし、 **[プロパティ]** をクリックしてエンティティ コンテナーの名前を確認します。
+2. **モデル ブラウザー** でモデルを右クリックし、 **[プロパティ]** をクリックしてエンティティ コンテナーの名前を確認します。
 
-3. **ソリューション エクスプローラー**で、ASP.NET プロジェクトの名前を右クリックし、 **[追加]**  >  **[新しい項目]** をクリックします。
+3. **ソリューション エクスプローラー** で、ASP.NET プロジェクトの名前を右クリックし、 **[追加]**  >  **[新しい項目]** をクリックします。
 
 4. **[新しい項目の追加]** ダイアログ ボックスで、 **[Web]** カテゴリの **[WCF Data Service]** テンプレートを選択します。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:データ サービス要求のクライアント資格情報を指定する (WCF Data Services)'
 title: '方法: データ サービス要求のクライアント資格情報を指定する (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,14 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: fd69d5f7eddf713612000b0ad677e7ada378553e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 45ccb237d310479d708b6ab0a7dcfe8812c1ea3f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180661"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773057"
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>方法: データ サービス要求のクライアント資格情報を指定する (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 既定では、OData サービスに要求を送信するとき、クライアント ライブラリから資格情報は提供されません。 ただし、<xref:System.Net.NetworkCredential> の <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> プロパティに <xref:System.Data.Services.Client.DataServiceContext> を設定することで、データ サービスへの要求を認証するために資格情報を送信するように指定できます。 詳細については、「 [Securing WCF Data Services](securing-wcf-data-services.md)」を参照してください。 このトピックの例では、データ サービスのデータを要求するときに WCF Data Services クライアントで使用する資格情報を明示的に提供する方法を示します。  
   

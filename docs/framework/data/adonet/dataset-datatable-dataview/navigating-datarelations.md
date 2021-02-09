@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DataRelation の移動'
 title: DataRelation の移動
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
-ms.openlocfilehash: 5eb2ee16712be5ccd5e9aa0af4dde22dcaaeea09
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 72d5bbb282b3b43434e528390769e1203519e8e2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148387"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651809"
 ---
 # <a name="navigating-datarelations"></a>DataRelation の移動
 

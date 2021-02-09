@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: チュートリアル: .NET Framework のメソッドによるファイル操作 (Visual Basic)'
 title: .NET Framework のメソッドによるファイル操作
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: 9abb87f3f6cdefefef29eb37c2c2d4d15155e93d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e59dca15660a981c487688234c864a818398af65
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406652"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775371"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>チュートリアル: .NET Framework のメソッドによるファイル操作 (Visual Basic)
 
@@ -36,19 +37,19 @@ Visual Studio を起動し、ユーザーが指定のファイルへの書き込
 
 1. **[ファイル]** メニューの **[新しいプロジェクト]** を選択します。
 
-2. **[新しいプロジェクト]** ペインで、 **[Windows アプリケーション]** をクリックします。
+2. **[新しいプロジェクト]** ペインで、**[Windows アプリケーション]** をクリックします。
 
 3. **[名前]** ボックスに `MyDiary` と入力して、 **[OK]** をクリックします。
 
-     Visual Studio の**ソリューション エクスプローラー**にプロジェクトが追加され、**Windows フォーム デザイナー**が開きます。
+     Visual Studio の **ソリューション エクスプローラー** にプロジェクトが追加され、**Windows フォーム デザイナー** が開きます。
 
 4. 次の表にあるコントロールをフォームに追加し、それらのプロパティに対応する値を設定します。
 
-|**Object**|**Properties**|**Value**|
+|**オブジェクト**|**プロパティ**|**Value**|
 |---|---|---|
-|<xref:System.Windows.Forms.Button>|**名前**<br /><br /> **テキスト**|`Submit`<br /><br /> **エントリの送信**|
-|<xref:System.Windows.Forms.Button>|**名前**<br /><br /> **テキスト**|`Clear`<br /><br /> **エントリのクリア**|
-|<xref:System.Windows.Forms.TextBox>|**名前**<br /><br /> **テキスト**<br /><br /> **Multiline**|`Entry`<br /><br /> **テキストを入力してください。**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**名前**<br /><br /> **Text**|`Submit`<br /><br /> **エントリの送信**|
+|<xref:System.Windows.Forms.Button>|**名前**<br /><br /> **Text**|`Clear`<br /><br /> **エントリのクリア**|
+|<xref:System.Windows.Forms.TextBox>|**名前**<br /><br /> **Text**<br /><br /> **Multiline**|`Entry`<br /><br /> **テキストを入力してください。**<br /><br /> `False`|
 
 ## <a name="writing-to-the-file"></a>ファイルへの書き込み
 
@@ -64,7 +65,7 @@ Visual Studio を起動し、ユーザーが指定のファイルへの書き込
 
      ファイルへの書き込みを行う前に、<xref:System.IO.StreamWriter> クラスのインスタンスを作成する必要があります。
 
-3. **[表示]** メニューの **[デザイナー]** を選択して、**Windows フォーム デザイナー**に戻ります。 `Submit` ボタンをダブルクリックして、ボタンの <xref:System.Windows.Forms.Control.Click> イベント ハンドラーを作成し、次のコードを追加します。
+3. **[表示]** メニューの **[デザイナー]** を選択して、**Windows フォーム デザイナー** に戻ります。 `Submit` ボタンをダブルクリックして、ボタンの <xref:System.Windows.Forms.Control.Click> イベント ハンドラーを作成し、次のコードを追加します。
 
      [!code-vb[VbVbcnMyFileSystem#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#36)]
 
@@ -93,12 +94,12 @@ Visual Studio を起動し、ユーザーが指定のファイルへの書き込
 
 チュートリアルのこのセクション用に、次の表にあるコントロールをフォームに追加し、それらのプロパティに対応する値を設定します。
 
-|Control|Properties|値|
+|コントロール|Properties|値|
 |-------------|----------------|------------|
 |<xref:System.Windows.Forms.TextBox>|**名前**<br /><br /> **[表示]**<br /><br /> **[サイズ]**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
-|<xref:System.Windows.Forms.Button>|**名前**<br /><br /> **テキスト**|`Display`<br /><br /> **表示**|
-|<xref:System.Windows.Forms.Button>|**名前**<br /><br /> **テキスト**|`GetEntries`<br /><br /> **エントリの取得**|
-|<xref:System.Windows.Forms.ComboBox>|**名前**<br /><br /> **テキスト**<br /><br /> **Enabled**|`PickEntries`<br /><br /> **エントリの選択**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**名前**<br /><br /> **Text**|`Display`<br /><br /> **ディスプレイ**|
+|<xref:System.Windows.Forms.Button>|**名前**<br /><br /> **Text**|`GetEntries`<br /><br /> **エントリの取得**|
+|<xref:System.Windows.Forms.ComboBox>|**名前**<br /><br /> **Text**<br /><br /> **Enabled**|`PickEntries`<br /><br /> **エントリの選択**<br /><br /> `False`|
 
 ### <a name="to-populate-the-combo-box"></a>コンボ ボックスを設定するには
 
@@ -106,7 +107,7 @@ Visual Studio を起動し、ユーザーが指定のファイルへの書き込
 
      [!code-vb[VbVbcnMyFileSystem#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#41)]
 
-2. コードをテストするには、F5 キーを押してアプリケーションをコンパイルし、 **[エントリの取得]** をクリックします。 <xref:System.Windows.Forms.ComboBox> でドロップダウンの矢印をクリックして、エントリの日付を表示します。
+2. コードをテストするには、F5 キーを押してアプリケーションをコンパイルし、**[エントリの取得]** をクリックします。 <xref:System.Windows.Forms.ComboBox> でドロップダウンの矢印をクリックして、エントリの日付を表示します。
 
 ### <a name="to-choose-and-display-individual-entries"></a>個別のエントリを選択して表示するには
 
@@ -114,7 +115,7 @@ Visual Studio を起動し、ユーザーが指定のファイルへの書き込
 
      [!code-vb[VbVbcnMyFileSystem#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#42)]
 
-2. コードをテストするには、F5 キーを押してアプリケーションをコンパイルし、エントリを送信します。 **[Get Entries] \(エントリの取得\)** をクリックし、<xref:System.Windows.Forms.ComboBox> からエントリを選択して、 **[表示]** をクリックします。 選択したエントリのコンテンツが、`DisplayEntry`<xref:System.Windows.Forms.TextBox> に表示されます。
+2. コードをテストするには、F5 キーを押してアプリケーションをコンパイルし、エントリを送信をクリックします。 **[Get Entries] (エントリの取得)** をクリックし、<xref:System.Windows.Forms.ComboBox> からエントリを選択して、**[表示]** をクリックします。 選択したエントリのコンテンツが、`DisplayEntry`<xref:System.Windows.Forms.TextBox> に表示されます。
 
 ## <a name="enabling-users-to-delete-or-modify-entries"></a>ユーザーがエントリの削除や変更を行えるようにする
 
@@ -122,11 +123,11 @@ Visual Studio を起動し、ユーザーが指定のファイルへの書き込
 
 次の表にあるコントロールをフォームに追加し、それらのプロパティに対応する値を設定します。
 
-|Control|Properties|値|
+|コントロール|Properties|値|
 |-------------|----------------|------------|
-|<xref:System.Windows.Forms.Button>|**名前**<br /><br /> **テキスト**<br /><br /> **Enabled**|`DeleteEntry`<br /><br /> **エントリの削除**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**名前**<br /><br /> **テキスト**<br /><br /> **Enabled**|`EditEntry`<br /><br /> **エントリの編集**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**名前**<br /><br /> **テキスト**<br /><br /> **Enabled**|`SubmitEdit`<br /><br /> **編集結果の送信**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**名前**<br /><br /> **Text**<br /><br /> **Enabled**|`DeleteEntry`<br /><br /> **エントリの削除**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**名前**<br /><br /> **Text**<br /><br /> **Enabled**|`EditEntry`<br /><br /> **エントリの編集**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**名前**<br /><br /> **Text**<br /><br /> **Enabled**|`SubmitEdit`<br /><br /> **編集結果の送信**<br /><br /> `False`|
 
 ### <a name="to-enable-deletion-and-modification-of-entries"></a>エントリの削除と変更を有効にするには
 
@@ -138,7 +139,7 @@ Visual Studio を起動し、ユーザーが指定のファイルへの書き込
 
      [!code-vb[VbVbcnMyFileSystem#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#44)]
 
-3. ユーザーがエントリが表示すると、`EditEntry` ボタンが有効になります。 `Display` ボタンの <xref:System.Windows.Forms.Control.Click> イベント (`DisplayEntry.Text = ReadString` の後) に、次のコードを追加します。
+3. ユーザーがエントリを表示すると、`EditEntry` ボタンが有効になります。 `Display` ボタンの <xref:System.Windows.Forms.Control.Click> イベント (`DisplayEntry.Text = ReadString` の後) に、次のコードを追加します。
 
      [!code-vb[VbVbcnMyFileSystem#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#45)]
 
@@ -150,9 +151,9 @@ Visual Studio を起動し、ユーザーが指定のファイルへの書き込
 
      [!code-vb[VbVbcnMyFileSystem#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#47)]
 
-コードをテストするには、F5 キーを押してアプリケーションをコンパイルします。 **[エントリの取得]** をクリックし、エントリを選択して、 **[表示]** をクリックします。 `DisplayEntry`<xref:System.Windows.Forms.TextBox> にエントリが表示されます。 **[エントリの編集]** をクリックします。 `Entry`<xref:System.Windows.Forms.TextBox> にエントリが表示されます。 `Entry`<xref:System.Windows.Forms.TextBox> でエントリを編集し、 **[Submit Edit] \(編集結果の送信\)** をクリックします。 `MyDiary.txt` ファイルを開いて修正結果を確認します。 確認したら、エントリを選択し、 **[エントリの削除]** をクリックします。 <xref:System.Windows.Forms.MessageBox> で確認を求められたら、 **[OK]** をクリックします。 アプリケーションを閉じ、`MyDiary.txt` を開いて削除を確認します。
+コードをテストするには、F5 キーを押してアプリケーションをコンパイルします。 **[エントリの取得]** をクリックし、エントリを選択して、**[表示]** をクリックします。 `DisplayEntry`<xref:System.Windows.Forms.TextBox> にエントリが表示されます。 **[エントリの編集]** をクリックします。 `Entry`<xref:System.Windows.Forms.TextBox> にエントリが表示されます。 `Entry`<xref:System.Windows.Forms.TextBox> でエントリを編集し、 **[Submit Edit] (編集結果の送信)** をクリックします。 `MyDiary.txt` ファイルを開いて修正結果を確認します。 確認したら、エントリを選択し、**[エントリの削除]** をクリックします。 <xref:System.Windows.Forms.MessageBox> で確認を求められたら、**[OK]** をクリックします。 アプリケーションを閉じ、`MyDiary.txt` を開いて削除を確認します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.IO.StreamReader>
 - <xref:System.IO.StreamWriter>

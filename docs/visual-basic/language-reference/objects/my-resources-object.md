@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: My.Resources オブジェクト'
 title: My.Resources オブジェクト
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-ms.openlocfilehash: 3d12524706f680434d5b6d8da39c89042bea3281
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: ecd8e79aacea85080dc341ae36b362a595893034
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867333"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640629"
 ---
 # <a name="myresources-object"></a>My.Resources オブジェクト
 
@@ -29,11 +30,11 @@ ms.locfileid: "90867333"
   
 ## <a name="properties"></a>プロパティ  
 
- `My.Resources` オブジェクトのプロパティは、アプリケーションのリソースへの読み取り専用アクセスを提供します。 リソースを追加または削除するには、**プロジェクト デザイナー**を使用します。 `My.Resources.`*resourceName* を使用することで、**プロジェクト デザイナー**を使用して追加されたリソースにアクセスできます。  
+ `My.Resources` オブジェクトのプロパティは、アプリケーションのリソースへの読み取り専用アクセスを提供します。 リソースを追加または削除するには、**プロジェクト デザイナー** を使用します。 `My.Resources.`*resourceName* を使用することで、**プロジェクト デザイナー** を使用して追加されたリソースにアクセスできます。  
   
- また、**ソリューション エクスプローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[新しい項目の追加]** または **[既存項目の追加]** をクリックして、リソース ファイルを追加または削除することもできます。 この方法で追加されたリソースには、`My.Resources.`*resourceFileName*`.`*resourceName* を使用してアクセスできます。  
+ また、**ソリューション エクスプローラー** でプロジェクトを選択し、 **[プロジェクト]** メニューの **[新しい項目の追加]** または **[既存項目の追加]** をクリックして、リソース ファイルを追加または削除することもできます。 この方法で追加されたリソースには、`My.Resources.`*resourceFileName*`.`*resourceName* を使用してアクセスできます。  
   
- 各リソースには名前、カテゴリ、および値が含まれ、これらのリソース設定によって、リソースにアクセスするためのプロパティが `My.Resources` オブジェクトにどのように表示されるかが決まります。 **プロジェクト デザイナー**で追加したリソースの場合:  
+ 各リソースには名前、カテゴリ、および値が含まれ、これらのリソース設定によって、リソースにアクセスするためのプロパティが `My.Resources` オブジェクトにどのように表示されるかが決まります。 **プロジェクト デザイナー** で追加したリソースの場合:  
   
 - 名前はプロパティの名前を決定します。  
   

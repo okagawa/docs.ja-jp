@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 数値演算正規関数'
 title: 数値演算正規関数
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
-ms.openlocfilehash: 9417ff9836912017c9d88bb24a18849aaac2836a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 55072099f5766d48ea3067a2e9eaa187a8b3f111
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250310"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739366"
 ---
 # <a name="math-canonical-functions"></a>数値演算正規関数
 

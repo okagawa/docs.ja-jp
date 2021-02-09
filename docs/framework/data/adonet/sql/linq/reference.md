@@ -1,13 +1,14 @@
 ---
-title: 関連項目
+description: '詳細情報: 関連項目'
+title: リファレンス
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 05ff05d165ad902eba0e984089ab1dde7f24fca7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7125cbea5cf8689a77823ff85b9652bc2ca31096
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91184860"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695224"
 ---
 # <a name="reference"></a>関連項目
 

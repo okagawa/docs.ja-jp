@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:データベース関数を呼び出す'
 title: '方法: データベース関数を呼び出す'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 79038efa-15bf-464a-83e2-35fe145252ce
-ms.openlocfilehash: a4cf77000af56ed2a6445beaef2d7856486b85db
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d5c5854d375546d1604b6e27e6f757f1e126f9b4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173667"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724519"
 ---
 # <a name="how-to-call-database-functions"></a>方法: データベース関数を呼び出す
 

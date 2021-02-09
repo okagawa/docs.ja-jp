@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: SQL Server のプロバイダー統計情報'
 title: SQL Server のプロバイダー統計情報
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: 21bf7662094d5bc8948a1ce6378c454713cacc62
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ece5a6214d438ecac64e8738755d5fb5d0ed7245
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183118"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767597"
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server のプロバイダー統計情報
 

@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: シーケンスの要素の並べ替え'
 title: シーケンスの要素の並べ替え
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-ms.openlocfilehash: b594e756b099aa94e1043fd4256da3eff46d0d95
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 337afe79826e9a9584a5fc3ed3980341dda1b4d8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155758"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803764"
 ---
 # <a name="sort-elements-in-a-sequence"></a>シーケンスの要素の並べ替え
 

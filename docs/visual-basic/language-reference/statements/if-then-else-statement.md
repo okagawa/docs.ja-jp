@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: If...Then...Else ステートメント (Visual Basic)'
 title: If...Then...Else ステートメント
 ms.date: 04/16/2018
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-ms.openlocfilehash: 0884b71c24742286e695e720add9d00dd4bfe52b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 83850771354b95f0e2d9c1bf1360a61d5264fe2e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404590"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769014"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>If...Then...Else ステートメント (Visual Basic)
 

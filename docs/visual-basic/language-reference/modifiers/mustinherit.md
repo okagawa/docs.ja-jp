@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: MustInherit (Visual Basic)'
 title: MustInherit
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], MustInherit class
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-ms.openlocfilehash: 6502da947ae331a26e66d8ce2dbcda46e4172a6e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 6ca11dd3fee8240f39ea1a3d278870d167d283d4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867959"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701041"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 
@@ -23,7 +24,7 @@ ms.locfileid: "90867959"
   
 ## <a name="remarks"></a>Remarks  
 
- *基底クラス* (*抽象クラス*とも呼ばれます) の目的は、このクラスから派生したすべてのクラスに共通の機能を定義することです。 これにより、派生クラスで共通の要素を再定義する必要がなくなります。 場合によっては、この共通機能は使用可能なオブジェクトを作成するのに十分ではなく、各派生クラスで不足している機能が定義されます。 このような場合は、使用しているコードで派生クラスからのみオブジェクトを作成する必要があります。 これを適用するには、基底クラスで `MustInherit` を使用します。  
+ *基底クラス* (*抽象クラス* とも呼ばれます) の目的は、このクラスから派生したすべてのクラスに共通の機能を定義することです。 これにより、派生クラスで共通の要素を再定義する必要がなくなります。 場合によっては、この共通機能は使用可能なオブジェクトを作成するのに十分ではなく、各派生クラスで不足している機能が定義されます。 このような場合は、使用しているコードで派生クラスからのみオブジェクトを作成する必要があります。 これを適用するには、基底クラスで `MustInherit` を使用します。  
   
  `MustInherit` クラスのもう 1 つの用途は、変数を関連するクラスのセットに制限することです。 基底クラスを定義し、そこから関連するすべてのクラスを派生させることができます。 基底クラスがすべての派生クラスに共通する機能を提供する必要はありませんが、変数に値を代入するためのフィルターとして使用できます。 使用しているコードが変数を基底クラスとして宣言している場合は、Visual Basic によって、派生クラスのいずれかからその変数にオブジェクトのみを割り当てることができます。  
   

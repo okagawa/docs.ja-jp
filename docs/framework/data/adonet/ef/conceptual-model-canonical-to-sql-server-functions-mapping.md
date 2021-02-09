@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 概念モデル正規関数と SQL Server 関数とのマッピング'
 title: 概念モデル正規関数と SQL Server 関数とのマッピング
 ms.date: 03/30/2017
 ms.assetid: 1a2631bc-a426-4c0a-ba8d-26d9c80d39e2
-ms.openlocfilehash: 495a662cbab84c2686e4c31945c30d6f82d117cb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 25e366a45e91db97693c42b3c8d2febd912320ab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153119"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651068"
 ---
 # <a name="conceptual-model-canonical-to-sql-server-functions-mapping"></a>概念モデル正規関数と SQL Server 関数とのマッピング
 

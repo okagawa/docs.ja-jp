@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Partial (Visual Basic)'
 title: Partial
 ms.date: 07/20/2015
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: 2482facadd0e0528ed1b71df6edb4a447947a902
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: bf2d8b06b83f4a90ec2f4edd52405b58695c26e2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867771"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701015"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 
@@ -28,7 +29,7 @@ ms.locfileid: "90867771"
  `Partial` キーワードを使用して、型の定義を複数の宣言に分割できます。 部分宣言は必要に応じていくつでも使用でき、複数のソース ファイルとして作成することもできます。 ただし、すべての宣言は同じアセンブリおよび同じ名前空間にある必要があります。  
   
 > [!NOTE]
-> Visual Basic では、*部分メソッド*をサポートしています。このメソッドは通常、部分クラスに実装されています。 詳細については、「[部分メソッド](../../programming-guide/language-features/procedures/partial-methods.md)」および「[Sub ステートメント](../statements/sub-statement.md)」を参照してください。  
+> Visual Basic では、*部分メソッド* をサポートしています。このメソッドは通常、部分クラスに実装されています。 詳細については、「[部分メソッド](../../programming-guide/language-features/procedures/partial-methods.md)」および「[Sub ステートメント](../statements/sub-statement.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -64,7 +65,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 ## <a name="remarks"></a>Remarks  
 
- Visual Basic では、部分クラス定義を使用して、生成されたコードとユーザーが作成したコードとを別々のソース ファイルに分離します。 たとえば、**Windows フォーム デザイナー**では、<xref:System.Windows.Forms.Form> などのコントロールに部分クラスを定義します。 これらのコントロールでは、生成されたコードを変更しないでください。  
+ Visual Basic では、部分クラス定義を使用して、生成されたコードとユーザーが作成したコードとを別々のソース ファイルに分離します。 たとえば、**Windows フォーム デザイナー** では、<xref:System.Windows.Forms.Form> などのコントロールに部分クラスを定義します。 これらのコントロールでは、生成されたコードを変更しないでください。  
   
  部分型を作成する際、クラス、構造体、インターフェイス、およびモジュールの作成に関するすべての規則 (修飾子の利用法や継承に関する規則など) が適用されます。  
   

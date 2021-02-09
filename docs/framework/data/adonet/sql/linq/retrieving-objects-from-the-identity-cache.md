@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: ID キャッシュからのオブジェクトの取得'
 title: ID キャッシュからのオブジェクトの取得
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: 457e11ddad16ca3be55f53f03c480b0e464ab38f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1f3d5f839a6fff33d62d4e0cb2281bd087f2d320
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200395"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695087"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>ID キャッシュからのオブジェクトの取得
 

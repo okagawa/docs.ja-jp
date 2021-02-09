@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: ローカル メソッド呼び出し'
 title: ローカル メソッド呼び出し
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c34b5012-aee9-4994-9364-1d99d12b7463
-ms.openlocfilehash: 25aded1aa961e182e8d2d472fca4c5a84b501af1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7f3870a700ac86e87e3464f0bc6aaccbb2525168
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166171"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695542"
 ---
 # <a name="local-method-calls"></a>ローカル メソッド呼び出し
 

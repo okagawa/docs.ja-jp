@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法: Visual Basic で固定幅のテキスト ファイルを読み取る'
 title: '方法: 固定幅のテキスト ファイルを読み取る'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - text files [Visual Basic], tasks
 - text files [Visual Basic], reading
 ms.assetid: 99be5692-967a-4e85-993e-cd18139a5a69
-ms.openlocfilehash: 77b2e0a4ebe36b68501f821ef5731935ee3b16a7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4f5868fa68009851cc65eeaf5ff6431ac22840d3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411630"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797459"
 ---
 # <a name="how-to-read-from-fixed-width-text-files-in-visual-basic"></a>方法: Visual Basic で固定幅のテキスト ファイルを読み取る
 
@@ -23,7 +24,7 @@ ms.locfileid: "84411630"
   
 ### <a name="to-parse-a-fixed-width-text-file"></a>固定幅のテキスト ファイルを解析するには  
   
-1. 新しい `TextFieldParser` を作成します。 次のコードは、`Reader` という名前の `TextFieldParser` を作成し、`test.log` ファイルを開きます。  
+1. 新しい `TextFieldParser` を作成します。 次のコードで `Reader` という名前の `TextFieldParser` を作成し、`test.log` ファイルを開きます。  
   
      [!code-vb[VbFileIORead#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#9)]  
   
@@ -59,7 +60,7 @@ ms.locfileid: "84411630"
   
 - ファイルにアクセスする十分なアクセス許可がユーザーにない (<xref:System.UnauthorizedAccessException>)。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
 - [方法: コンマ区切りのテキスト ファイルを読み取る](how-to-read-from-comma-delimited-text-files.md)

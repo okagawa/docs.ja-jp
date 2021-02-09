@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: オプティミスティック コンカレンシー'
 title: オプティミスティック コンカレンシー
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: 681044a9d905f052516ba240e25ffff84928e58e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1034720b2c57b863b87eef440424a7e2f4c2c6c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166639"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739145"
 ---
 # <a name="optimistic-concurrency"></a>オプティミスティック コンカレンシー
 

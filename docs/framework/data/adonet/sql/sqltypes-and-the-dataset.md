@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: SqlTypes と DataSet'
 title: SqlTypes と DataSet
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9172c20a-9876-4b3b-9c97-1963c02b1993
-ms.openlocfilehash: 04f95cd7d3f6e52f644f23dd8a32c77d56a5ddda
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 088c1cdc65b3c79a77e0bf724b5550c001a40554
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91147509"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766999"
 ---
 # <a name="sqltypes-and-the-dataset"></a>SqlTypes と DataSet
 

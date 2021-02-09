@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DataReader の作成'
 title: DataReader の作成
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49d4422a-7464-4ab8-8ec7-90185fde3ecf
-ms.openlocfilehash: 3af6ae3a8f4ecc3ec34c186ce55c1c77c27514a9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3a9f47ce90beaa3da4c2835f8b75e770a6179a9e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202332"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725104"
 ---
 # <a name="creating-a-datareader"></a>DataReader の作成
 

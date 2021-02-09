@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: SQL Server の共通言語ランタイム統合'
 title: SQL Server の共通言語ランタイム統合
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
-ms.openlocfilehash: d9fe0f03c88584607c6bc38fcbcff3f9424fd40c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 096bba0d183526ec8e5d272c5ea6a77ad0778e5f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183027"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767402"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>SQL Server の共通言語ランタイム統合
 

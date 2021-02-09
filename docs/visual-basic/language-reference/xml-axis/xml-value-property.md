@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: XML Value プロパティ (Visual Basic)'
 title: XML Value プロパティ
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-ms.openlocfilehash: 571d9130ef69df580bbba5d90bc8758b4b627196
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 49762c1fcc0059472a5be11726aa344a001807ea
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349418"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768767"
 ---
 # <a name="xml-value-property-visual-basic"></a>XML Value プロパティ (Visual Basic)
 

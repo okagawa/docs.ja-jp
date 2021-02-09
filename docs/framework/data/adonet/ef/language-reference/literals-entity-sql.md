@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: リテラル (Entity SQL)'
 title: リテラル (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 4402f4c6ee38432a0f606e39dd4a18639076ce04
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: cae2ec7ab8cf19166dc3100a85473fca2ed0a7be
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161777"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791882"
 ---
 # <a name="literals-entity-sql"></a>リテラル (Entity SQL)
 

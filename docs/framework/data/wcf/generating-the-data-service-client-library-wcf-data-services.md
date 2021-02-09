@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: データ サービス クライアント ライブラリの生成 (WCF Data Services)'
 title: データ サービス クライアント ライブラリの生成 (WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,14 +7,16 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: 050a791736e90b5daf46fd272197ca21a220afb0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3bac2459044ff910c8085ff56e60d9da6e0ba877
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172620"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765933"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>データ サービス クライアント ライブラリの生成 (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 Open Data Protocol (OData) が実装されているデータ サービスでは、OData フィードによって公開されているデータ モデルが記述されたサービス メタデータ ドキュメントが返されることがあります。 詳細については、「サービス メタデータ ドキュメント」セクション ([OData の概要](https://www.odata.org/documentation/odata-version-2-0/overview/)に関する記事) を参照してください。 Visual Studio の **[サービス参照の追加]** ダイアログを使用して、参照を OData ベースのサービスに追加できます。 このツールを使用してクライアント プロジェクト内の OData によって返されるメタデータに参照を追加すると、次のアクションが実行されます。  
   

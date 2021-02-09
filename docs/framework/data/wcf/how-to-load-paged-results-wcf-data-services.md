@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:ページングされた結果を読み込む (WCF Data Services)'
 title: '方法: ページングされた結果を読み込む (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: bb786ea4-f3ef-4ad3-9a41-3a0b7feb6a1f
-ms.openlocfilehash: c49e0b170743332d6cc3aaef7e5503eabab52d97
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2a5ba738a63de11045dec78f4381b93c844a4fc6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91182793"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765270"
 ---
 # <a name="how-to-load-paged-results-wcf-data-services"></a>方法: ページングされた結果を読み込む (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services では、1 つの応答フィードで返されるエンティティの数をデータ サービスで制限できます。 この処理を行うと、フィードの最終的なエントリには、データの次のページへのリンクが含まれます。 データの次のページへの URI は、<xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> が実行されたときに返される <xref:System.Data.Services.Client.QueryOperationResponse%601> の <xref:System.Data.Services.Client.DataServiceQuery%601> メソッドを呼び出すことによって取得されます。 このオブジェクトによって表される URI は、結果の次のページを読み込むために使用されます。 詳しくは、「[遅延コンテンツの読み込み](loading-deferred-content-wcf-data-services.md)」をご覧ください。  
   

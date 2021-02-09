@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Overridable (Visual Basic)'
 title: Overridable
 ms.date: 07/20/2015
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - Overridable keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 612581e7-8a4c-4a5d-beff-3402fffa6f35
-ms.openlocfilehash: 8506aba7e64f2dbd975cc275cefb7b5bb1aefda5
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: acbbd715113c836a3fb7f8a88bf74307c38ac682
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875000"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730500"
 ---
 # <a name="overridable-visual-basic"></a>Overridable (Visual Basic)
 
@@ -35,7 +36,7 @@ ms.locfileid: "90875000"
   
  シャドウまたはオーバーライドによって継承された要素を再定義できますが、この 2 つの方法には大きな違いがあります。 詳細については、「[Visual Basic におけるシャドウ](../../programming-guide/language-features/declared-elements/shadowing.md)」を参照してください。  
   
- オーバーライドできる要素は、*仮想*要素と呼ばれることもあります。 オーバーライドは可能でも、必要がない場合は、*具象*要素と呼ばれることもあります。  
+ オーバーライドできる要素は、*仮想* 要素と呼ばれることもあります。 オーバーライドは可能でも、必要がない場合は、*具象* 要素と呼ばれることもあります。  
   
  `Overridable` は、プロパティまたはプロシージャの宣言ステートメントでのみ使用できます。  
   

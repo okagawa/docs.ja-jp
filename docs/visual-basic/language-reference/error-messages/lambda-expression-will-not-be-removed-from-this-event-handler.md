@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: BC42326:ラムダ式はこのイベント ハンドラーから削除されません'
 title: ラムダ式はこのイベント ハンドラーから削除されません
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-ms.openlocfilehash: 5a30e63044b51f8176dfeebdcc9eb8fd517739ae
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 6feb8733a6413caa564d2c930b4d35dc5697b4fe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163117"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795951"
 ---
 # <a name="bc42326-lambda-expression-will-not-be-removed-from-this-event-handler"></a>BC42326:ラムダ式はこのイベント ハンドラーから削除されません
 

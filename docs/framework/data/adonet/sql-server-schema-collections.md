@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: SQL Server スキーマ コレクション'
 title: SQL Server スキーマ コレクション
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: ebb0cea20aede3d04e37536c7c615678e109337a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0299daada77b6968a0b1f875956da7bd2a221322
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197665"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718669"
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server スキーマ コレクション
 

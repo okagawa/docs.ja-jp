@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 数値演算関数 (Visual Basic)'
 title: 数学関数
 ms.date: 01/27/2020
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - math routines
 - Atn function
 ms.assetid: 4d2d82e7-6924-42fe-a4a7-b4dd5bebbd0c
-ms.openlocfilehash: ea30ae3b30484c1a13d6d540f121c03afb30ba26
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d6ab82e45a17c0b1e1ee9f7df54936cd5420ef2b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794592"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731151"
 ---
 # <a name="math-functions-visual-basic"></a>数値演算関数 (Visual Basic)
 

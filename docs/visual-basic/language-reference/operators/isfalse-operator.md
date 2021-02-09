@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IsFalse 演算子 (Visual Basic)'
 title: IsFalse 演算子
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - AndAlso operator [Visual Basic]
 - IsFalse operator [Visual Basic]
 ms.assetid: 37fc9dbf-e5cc-4570-b93f-7213447974df
-ms.openlocfilehash: bbcdb9bcf645a4e9cb54c657ccd46e04437d207e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 190399dd29ba2d643bd26dfe4f6191211c9a3740
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873381"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665706"
 ---
 # <a name="isfalse-operator-visual-basic"></a>IsFalse 演算子 (Visual Basic)
 
@@ -23,7 +24,7 @@ ms.locfileid: "90873381"
  コンパイラは、`IsFalse` と `IsTrue` の演算子を "*対応するペア*" と見なします。 つまり、そのいずれかを定義する場合は、もう一方も定義する必要があります。  
   
 > [!NOTE]
-> `IsFalse` 演算子は "*オーバーロード*" できます。つまり、オペランドがあるクラスまたは構造体の型を持っているときに、そのクラスまたは構造体はその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を必ず理解してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+> `IsFalse` 演算子は "*オーバーロード*" できます。つまり、オペランドがあるクラスまたは構造体の型を持っているときに、そのクラスまたは構造体はその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
 

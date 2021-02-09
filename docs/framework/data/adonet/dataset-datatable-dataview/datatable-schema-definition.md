@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: DataTable スキーマの定義'
 title: DataTable スキーマの定義
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: 0c14c6012c65039e1e2e7e2d2d8c38c4202b45a7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b1a48c8a129607dc8d683aa4735ea0e86ed32cc2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153249"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652615"
 ---
 # <a name="datatable-schema-definition"></a>DataTable スキーマの定義
 

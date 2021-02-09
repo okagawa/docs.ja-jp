@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: サービス操作 (WCF Data Services)'
 title: サービス操作 (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: c254a7362c7bc28f4b38fc0189ae0ea763bc90cc
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 3c811da86b1654f33675b46575d45884a6ba9b1f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568846"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773096"
 ---
 # <a name="service-operations-wcf-data-services"></a>サービス操作 (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services では、データ サービスでサービス操作を定義して、サーバーでメソッドを公開できます。 その他のデータ サービス リソースと同様に、サービス操作は URI によってアドレス指定できます。 サービス操作では、データ サービスでビジネス ロジックを公開できます (検証ロジックの実装、ロール ベースのセキュリティの適用、特殊なクエリ機能の公開など)。 サービス操作は、<xref:System.Data.Services.DataService%601> から派生するデータ クラスに追加されるメソッドです。 その他のすべてのデータ サービス リソースと同様に、パラメーターをサービス操作メソッドに指定できます。 たとえば、次のサービス操作 URI ([クイックスタート](quickstart-wcf-data-services.md) データ サービスに基づく) は、`London` という値を `city` パラメーターに渡します。
 

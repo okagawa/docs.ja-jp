@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Automatic Memory Management'
 title: Automatic Memory Management
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - managed heap
 - runtime, automatic memory management
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
-ms.openlocfilehash: a38a95073759fa95d19a2baf4add191103f9264a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1897167faecb112ffa4aa7b0dd0c8bb55b8d9459
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682017"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99629969"
 ---
 # <a name="automatic-memory-management"></a>Automatic Memory Management
 
@@ -54,7 +55,7 @@ ms.locfileid: "95682017"
 
  アプリケーションで作成されるオブジェクトの大部分については、ガベージ コレクターによって、必要なメモリ管理タスクを自動的に実行できます。 しかし、アンマネージ リソースでは、明示的なクリーンアップが必要です。 最も一般的な種類のアンマネージ リソースは、ファイル ハンドル、ウィンドウ ハンドル、ネットワーク接続などのオペレーティング システム リソースをラップしたオブジェクトです。 ガベージ コレクターは、アンマネージド リソースをカプセル化したマネージド オブジェクトの存続期間を追跡することはできますが、そのアンマネージド リソースのクリーンアップ方法については具体的な情報を持っていません。 アンマネージ リソースをカプセル化するオブジェクトを作成する場合は、そのアンマネージ リソースをクリーンアップするために必要なコードをパブリックな **Dispose** メソッドという形で提供することをお勧めします。 **Dispose** メソッドを提供すると、ユーザーがオブジェクトを使い終わったときに、そのオブジェクトのメモリを明示的に解放できます。 アンマネージ リソースをカプセル化するオブジェクトを使用する場合は、**Dispose** メソッドの存在を念頭に置き、必要に応じて呼び出すようにしてください。 アンマネージ リソースのクリーンアップの詳細と、**Dispose** を実装するためのデザイン パターンの例については、「[ガベージ コレクション](garbage-collection/index.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.GC>
 - [ガベージ コレクション](garbage-collection/index.md)

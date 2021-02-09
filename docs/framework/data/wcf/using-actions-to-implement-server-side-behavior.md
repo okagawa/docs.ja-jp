@@ -1,15 +1,18 @@
 ---
+description: '詳細情報: アクションを使用してサーバー側の動作を実装する'
 title: アクションを使用してサーバー側の動作を実装する
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 19139a7efd955448a1f97c492a7245c1bbfe6c3d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6decd6134184de860ae2865b6dcf34b3c0b81813
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180596"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791713"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>アクションを使用してサーバー側の動作を実装する
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 OData アクションを使用すると、OData サービスから取得したリソースに対する動作を実装できます。 たとえば、リソースとしてデジタル ムービーについて考えてみましょう。デジタル ムービーについては、チェックアウト、評価やコメント、チェックインなど、多様な操作が考えられます。 これらはすべて、デジタル ムービーを管理するために WCF Data Services で実装できるアクションの例です。 アクションは、そのアクションを呼び出すことのできる対象のリソースが含まれている OData 応答に記述します。 ユーザーが、デジタル ムービーを表すリソースを要求した場合、WCF Data Services から返される応答には、そのリソースに使用できるアクションに関する情報が含まれています。 アクションを使用できるかどうかは、データ サービスまたはリソースの状態によって変わる場合があります。 たとえば、デジタル ムービーがチェックアウトされている場合、それを別のユーザーがチェックアウトすることはできません。 クライアントは、URL を指定するだけでアクションを呼び出すことができます。 たとえば、`http://MyServer/MovieService.svc/Movies(6)` では特定のデジタル ムービーが示され、`http://MyServer/MovieService.svc/Movies(6)/Checkout` では特定のムービーに対するアクションが呼び出されます。 アクションを使用すると、データ モデルを公開することなくサービス モデルを公開することができます。 先ほどのムービー サービスを例とすると、評価データをリソースとして直接公開せずにムービーをユーザーが評価できるようにするというケースが考えられます。 そこで、たとえば Rate (評価) アクションを実装することにより、リソースとして評価データに直接アクセスせずに、ムービーをユーザーが評価できるようにすることができます。
 

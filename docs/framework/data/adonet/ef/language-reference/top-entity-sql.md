@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: TOP (Entity SQL)'
 title: TOP (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4a4a0954-82e2-4eae-bcaf-7c4552f3532d
-ms.openlocfilehash: 16be25336bac386c993eae7527c9377be1073d1e
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 51e4ce53cff4b47f6f57b6b856ccb09b38e639cf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319274"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673441"
 ---
 # <a name="top-entity-sql"></a>TOP (Entity SQL)
 

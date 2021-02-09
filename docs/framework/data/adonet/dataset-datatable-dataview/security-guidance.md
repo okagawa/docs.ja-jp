@@ -1,14 +1,15 @@
 ---
+description: '詳細情報: DataSet と DataTable のセキュリティ ガイダンス'
 title: DataSet と DataTable のセキュリティ ガイダンス
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: 8798c4542acc578c8f7f00c9b26cd01a0db20c42
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ec0130d5b5ad106cc3a0a26b45ebff34f73e31d9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726068"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651640"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>DataSet と DataTable のセキュリティ ガイダンス
 
@@ -475,9 +476,9 @@ public class MyClass
 
 ## <a name="deserialize-a-dataset-or-datatable-via-binaryformatter"></a>BinaryFormatter を使用して DataSet または DataTable を逆シリアル化する
 
-開発者は、`BinaryFormatter`、`NetDataContractSerializer`、`SoapFormatter`、または関連する "**安全でない**" フォーマッタを使用して、信頼されていないペイロードから `DataSet` または `DataTable` のインスタンスを逆シリアル化しないでください。
+開発者は、`BinaryFormatter`、`NetDataContractSerializer`、`SoapFormatter`、または関連する "***安全でない***" フォーマッタを使用して、信頼されていないペイロードから `DataSet` または `DataTable` のインスタンスを逆シリアル化しないでください。
 
-これは、完全なリモート コード実行攻撃の影響を受けやすくなります。
+* これは、完全なリモート コード実行攻撃の影響を受けやすくなります。
 * このような攻撃を防ぐには、カスタム `SerializationBinder` を使用するだけでは不十分です。
 
 ## <a name="safe-replacements"></a>安全な置換

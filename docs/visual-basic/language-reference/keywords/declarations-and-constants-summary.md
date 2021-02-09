@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 宣言と定数の概要 (Visual Basic)'
 title: 宣言と定数の概要
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - declaring constants [Visual Basic], keywords
 - declarations [Visual Basic], Visual Basic language elements
 ms.assetid: 79d64f3e-941d-4d39-bc5b-79f225d5be6e
-ms.openlocfilehash: b5ddf0146837ee7a2b4ee1eca6253dfd72d1db27
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 014eaf157502fc7b7a5a2c33f57653d606a8d1b9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869042"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730968"
 ---
 # <a name="declarations-and-constants-summary-visual-basic"></a>宣言と定数の概要 (Visual Basic)
 

@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: オブジェクト変数または With ブロック変数が設定されていません。'
 title: オブジェクト変数または With ブロック変数が設定されていません。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: 5eff7622ce2a35cf2846c5141cede98ea033d708
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: a20655c2219aa5b90015e025a38ea9dd02894a6c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92159886"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795574"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>オブジェクト変数または With ブロック変数が設定されていません。
 
@@ -41,7 +42,7 @@ ms.locfileid: "92159886"
     Option Strict On
     ```
 
-    プロジェクトを実行すると、**エラー一覧**に、型を使用せずに指定された任意の変数についてのコンパイラ エラーが表示されます。
+    プロジェクトを実行すると、**エラー一覧** に、型を使用せずに指定された任意の変数についてのコンパイラ エラーが表示されます。
 
 2. `Option Strict` を有効にしない場合、コードで、型を使用せずに指定されたすべての変数 (`Dim x As String` ではなく `Dim x`) を検索し、目的の型を宣言に追加します。
 

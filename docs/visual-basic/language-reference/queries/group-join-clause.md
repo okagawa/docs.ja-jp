@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Group Join 句 (Visual Basic)'
 title: Group Join 句
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-ms.openlocfilehash: 8d5f3ec80cb39825a3a283907d614b9be28e6e91
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 177dc2b41c923bc8c1ae0477c3905e8adad36fbe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869910"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700482"
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join 句 (Visual Basic)
 

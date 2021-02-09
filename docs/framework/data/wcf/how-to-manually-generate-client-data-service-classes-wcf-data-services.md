@@ -1,18 +1,21 @@
 ---
+description: '詳細情報: 方法:クライアント データ サービス クラスを手動で生成する (WCF Data Services)'
 title: '方法: クライアント データ サービス クラスを手動で生成する (WCF Data Services)'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
-ms.openlocfilehash: 368f2546652d21be44c0ffb4cc5f279c56beda51
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6fe878e1177055540a29fb84252eddaa4d97e536
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91165993"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765205"
 ---
 # <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>方法: クライアント データ サービス クラスを手動で生成する (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services を Visual Studio に統合すると、 **[サービス参照の追加]** ダイアログ ボックスを使用して参照を Visual Studio プロジェクト内のデータ サービスに追加するときに、クライアント データ サービス クラスを自動的に生成することが可能になります。 詳細については、[データ サービス参照を追加する](how-to-add-a-data-service-reference-wcf-data-services.md)」を参照してください。 コード生成ツールの `DataSvcUtil.exe` を使用して、同じクライアント データ サービス クラスを手動で生成することもできます。 WCF Data Services に含まれるこのツールでは、データ サービス定義から .NET Framework クラスが生成されます。 このツールを使用して、概念モデル (.csdl) ファイル、および Visual Studio プロジェクトの Entity Framework モデルを表す .edmx ファイルからデータ サービス クラスを生成することもできます。
 

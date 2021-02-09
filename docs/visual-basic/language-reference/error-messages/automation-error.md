@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: オートメーション エラーです。'
 title: オートメーション エラーです。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID440
 ms.assetid: 2c4be5c5-2f0d-4a2b-96fe-d1b24f08fc4c
-ms.openlocfilehash: d62ba57db8bffefb2cfebed705251d87fe285602
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e4d283b16b4c54e2488fedfc58d3c881cf6b0218
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409895"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797121"
 ---
 # <a name="automation-error"></a>オートメーション エラーです。
 

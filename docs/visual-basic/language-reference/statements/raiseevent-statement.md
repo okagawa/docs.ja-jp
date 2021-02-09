@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: RaiseEvent ステートメント'
 title: RaiseEvent ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: 13d86aad8b68391f7effe2f6637adc68d8a3b59a
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 9549eb64ef32147ed49ae8f805d01db8610b336e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90872012"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741342"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent ステートメント
 

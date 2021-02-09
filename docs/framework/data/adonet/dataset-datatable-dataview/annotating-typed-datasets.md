@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 型指定された DataSet の注釈'
 title: 型指定された DataSet の注釈
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 79d3913827d5df6f0ac4e77bfdb8f37b553a86d2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6f5838e94d88fd6c9b3a1991d4c8023d5892b784
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203749"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739704"
 ---
 # <a name="annotating-typed-datasets"></a>型指定された DataSet の注釈
 

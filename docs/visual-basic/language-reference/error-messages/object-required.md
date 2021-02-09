@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: オブジェクトが必要です。(Visual Basic)'
 title: オブジェクトが必要です。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID424
 ms.assetid: afdc660b-81a5-4c92-ac7e-9c3a3105fc16
-ms.openlocfilehash: 5384dc603d51b31c252c9cad0775a453210f29ff
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: b5f213641d9b7c52db15c47afbcf767f040c04f6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873639"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795587"
 ---
 # <a name="object-required-visual-basic"></a>オブジェクトが必要です。(Visual Basic)
 

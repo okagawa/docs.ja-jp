@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Private (Visual Basic)'
 title: Private
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: 59f1c1666ce38923a2861244fb377007cd0fa992
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 20dcd943856e20ccb1b7cb5c0603fa5f313d2421
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874982"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700950"
 ---
 # <a name="private-visual-basic"></a>Private (Visual Basic)
 
@@ -33,7 +34,7 @@ ms.locfileid: "90874982"
   
 - **アクセス レベル。** 宣言コンテキスト内のすべてのコードは、その `Private` 要素にアクセスできます。 これには、入れ子になったクラスや列挙内の代入式など、含まれている型内のコードが含まれます。 宣言コンテキストの外側のコードは、その `Private` 要素にアクセスすることはできません。  
   
-- **アクセス修飾子。** アクセス レベルを指定するキーワードは、*アクセス修飾子*と呼ばれます。 アクセス修飾子の比較については、「[Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
+- **アクセス修飾子。** アクセス レベルを指定するキーワードは、*アクセス修飾子* と呼ばれます。 アクセス修飾子の比較については、「[Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
  `Private` 修飾子は、次のコンテキストで使用できます。  
   

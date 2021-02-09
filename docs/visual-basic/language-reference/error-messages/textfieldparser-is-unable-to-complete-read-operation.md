@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: 最大バッファーサイズを超えたため、TextFieldParser は読み取り操作を完了できません。'
 title: 最大バッファーサイズを超えたため、TextFieldParser は読み取り操作を完了できません。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_BufferExceededMaxSize
 ms.assetid: 36565e82-8458-4a08-86af-d9a7a2c32937
-ms.openlocfilehash: 51a029366bfb467bb2a4e2bc70f942161a1480e3
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 8401739271c8f20cae54d9ac46e4387fe2240b89
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873568"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99641337"
 ---
 # <a name="textfieldparser-is-unable-to-complete-the-read-operation-because-maximum-buffer-size-has-been-exceeded"></a>最大バッファーサイズを超えたため、TextFieldParser は読み取り操作を完了できません。
 

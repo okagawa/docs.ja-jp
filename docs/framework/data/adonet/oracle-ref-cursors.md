@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: Oracle REF CURSOR'
 title: Oracle REF CURSOR
 ms.date: 03/30/2017
 ms.assetid: c6b25b8b-0bdd-41b2-9c7c-661f070c2247
-ms.openlocfilehash: cbf330ba381a825c2d16038c01d7bdc52bc8f482
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0a9c5e95a9f0d2da74fd6a3db19f15699a3e2787
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180882"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672453"
 ---
 # <a name="oracle-ref-cursors"></a>Oracle REF CURSOR
 

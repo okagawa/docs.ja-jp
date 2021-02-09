@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: セキュリティ (LINQ to DataSet)'
 title: セキュリティ (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 6116b2b8-75f4-4d8b-aea6-c13e55cda50b
-ms.openlocfilehash: 03a5f562cb6dda8579d7cbdca56a60c6da34a576
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 30a57980047e38ffca8af6ca5987517619ce0d45
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91186927"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718851"
 ---
 # <a name="security-linq-to-dataset"></a>セキュリティ (LINQ to DataSet)
 

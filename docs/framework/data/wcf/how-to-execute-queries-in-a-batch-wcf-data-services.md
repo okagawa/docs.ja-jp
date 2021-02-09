@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:クエリをバッチで実行する (WCF Data Services)'
 title: '方法: クエリをバッチで実行する (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,14 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, batch requests
 ms.assetid: 3b4db7df-bd33-43a1-8ea4-63a18e131f97
-ms.openlocfilehash: b9b18aabc8321d2f77c3781b836eeb6a0d320229
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: bcd95be57d2f3f2cea075a4b87fb6858c59ea41e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150597"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765296"
 ---
 # <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>方法: クエリをバッチで実行する (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services クライアント ライブラリを使用すると、データ サービスに対する複数のクエリを 1 つのバッチで実行できます。 詳細については、「[バッチ処理](batching-operations-wcf-data-services.md)」を参照してください。  
   

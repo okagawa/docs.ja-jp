@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: OracleDataReader の REF CURSOR パラメーター'
 title: OracleDataReader の REF CURSOR パラメーター
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 801dff0f-2508-45aa-9416-f45d6887740c
-ms.openlocfilehash: 0b9ded8c29dfa7d94b6f9b121a1004f2ad9ad6e0
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 94c4e1fe6eb6c065b8551e09c49b322b4728abeb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739504"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739158"
 ---
 # <a name="ref-cursor-parameters-in-an-oracledatareader"></a>OracleDataReader の REF CURSOR パラメーター
 

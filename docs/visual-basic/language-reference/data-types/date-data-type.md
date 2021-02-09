@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 日付型 (Date) (Visual Basic)'
 title: 日付型 (Date)
 ms.date: 07/20/2015
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: 46c25e14db56d4cc3c6d59ec7649b37c35676e2e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f6ea6aa99339d13824477bba99ecd211f826a3ad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387427"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775020"
 ---
 # <a name="date-data-type-visual-basic"></a>日付型 (Date) (Visual Basic)
 

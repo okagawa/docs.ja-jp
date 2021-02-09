@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 挿入、更新、および削除の各操作のカスタマイズ'
 title: 挿入、更新、および削除の各操作のカスタマイズ
 ms.date: 03/30/2017
 ms.assetid: 07eef055-8f6c-414d-850e-d323ff946cd0
-ms.openlocfilehash: 4b846d1e1f737cec85ecda75df5e3f66982def62
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 44bd76b61aff335019818b3c61040d10babe7301
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177346"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773213"
 ---
 # <a name="customizing-insert-update-and-delete-operations"></a>挿入、更新、および削除の各操作のカスタマイズ
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Using ステートメント (Visual Basic)'
 title: Using ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - resources [Visual Basic], disposing
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
-ms.openlocfilehash: 6ec0e228b3898f66f27e322b5db2dd7f3bf3d7d6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fea77a441182b7c3ecac58d4fe7f1297a87f086c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352756"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740887"
 ---
 # <a name="using-statement-visual-basic"></a>Using ステートメント (Visual Basic)
 
@@ -63,11 +64,11 @@ End Using
 
  `Using` ブロックには、取得、使用、破棄という 3 つの部分があります。
 
-- *取得*とは、変数を作成して、システム リソースを参照するようにそれを初期化することを意味します。 `Using` ステートメントでは 1 つ以上のリソースを取得できます。または、ブロックに入る前にリソースを 1 つだけ取得し、それを `Using` ステートメントに指定することもできます。 `resourceexpression` を指定する場合は、`Using` ステートメントに制御を渡す前にリソースを取得する必要があります。
+- *取得* とは、変数を作成して、システム リソースを参照するようにそれを初期化することを意味します。 `Using` ステートメントでは 1 つ以上のリソースを取得できます。または、ブロックに入る前にリソースを 1 つだけ取得し、それを `Using` ステートメントに指定することもできます。 `resourceexpression` を指定する場合は、`Using` ステートメントに制御を渡す前にリソースを取得する必要があります。
 
-- *使用*とは、リソースにアクセスし、それらによってアクションを実行することを意味します。 `Using` と `End Using` の間のステートメントは、リソースの使用を表します。
+- *使用* とは、リソースにアクセスし、それらによってアクションを実行することを意味します。 `Using` と `End Using` の間のステートメントは、リソースの使用を表します。
 
-- *破棄*は、`resourcename` 内のオブジェクトに対して <xref:System.IDisposable.Dispose%2A> メソッドを呼び出すことを意味します。 これにより、オブジェクトでそのリソースを完全に終了させることができます。 `End Using` ステートメントでは、`Using` ブロックの制御下にあるリソースが破棄されます。
+- *破棄* は、`resourcename` 内のオブジェクトに対して <xref:System.IDisposable.Dispose%2A> メソッドを呼び出すことを意味します。 これにより、オブジェクトでそのリソースを完全に終了させることができます。 `End Using` ステートメントでは、`Using` ブロックの制御下にあるリソースが破棄されます。
 
 ## <a name="behavior"></a>動作
 

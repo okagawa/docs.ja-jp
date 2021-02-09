@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: チュートリアル: My.Application.Log の出力のフィルター処理 (Visual Basic)'
 title: My.Application.Log の出力をフィルター処理する
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: e77a56b2be33555bc02157c8e643ac655b083bc3
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 0fa64bde27be17b1809e45bfe294e70c7dd33563
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282203"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792259"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>チュートリアル: My.Application.Log の出力のフィルター処理 (Visual Basic)
 
@@ -60,7 +61,7 @@ ms.locfileid: "93282203"
 |---|---|
 |`Critical`|`Critical`|
 |`Error`|`Critical` または `Error`|
-|`Warning`|`Critical`、`Error`、または `Warning`|
+|`Warning`|`Critical`、 `Error`、または `Warning`|
 |`Information`|`Critical`、`Error`、`Warning`、または `Information`|
 |`Verbose`|`Critical`、`Error`、`Warning`、`Information`、または `Verbose`|
 |`ActivityTracing`|`Start`、`Stop`、`Suspend`、`Resume`、または `Transfer`|

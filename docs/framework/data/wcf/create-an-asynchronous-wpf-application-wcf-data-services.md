@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:非同期 Windows Presentation Framework アプリケーションを作成する (WCF Data Services)'
 title: '方法: 非同期 Windows Presentation Framework アプリケーションを作成する (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,14 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 ms.assetid: 834614df-1427-4839-b0be-90f68e5afffd
-ms.openlocfilehash: 67f6e27e4042e1cddbef8b99a2235e1a21d270d2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8bc8045854ed0b73c06276e2c81e7e03a0ecc8d6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152743"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766187"
 ---
 # <a name="how-to-create-an-asynchronous-windows-presentation-framework-application-wcf-data-services"></a>方法: 非同期 Windows Presentation Framework アプリケーションを作成する (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services では、データ サービスから取得したデータを Windows Presentation Framework (WPF) アプリケーションの UI 要素にバインドできます。 詳細については、「[コントロールへのデータのバインド](binding-data-to-controls-wcf-data-services.md)」を参照してください。データ サービスに対して非同期で複数の操作を実行することもできます。この場合、アプリケーションは、データ サービス要求に対する応答を待機している間も引き続き応答できます。 データ サービスに非同期でアクセスするには、Silverlight 用のアプリケーションが必要です。 詳細については、「[非同期操作](asynchronous-operations-wcf-data-services.md)」をご覧ください。  
   

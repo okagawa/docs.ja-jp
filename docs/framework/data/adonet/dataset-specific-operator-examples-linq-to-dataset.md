@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DataSet 固有の演算子の例 (LINQ to DataSet)'
 title: DataSet 固有の演算子の例 (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8fdd64af-6ad0-46cd-91c8-dbe26620eeb1
-ms.openlocfilehash: 4cd99a103fabee3c87036a9933077a3a967f5a13
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2fd54453621ce180901aaf6fbb5b975067ad9831
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173693"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651328"
 ---
 # <a name="dataset-specific-operator-examples-linq-to-dataset"></a>DataSet 固有の演算子の例 (LINQ to DataSet)
 

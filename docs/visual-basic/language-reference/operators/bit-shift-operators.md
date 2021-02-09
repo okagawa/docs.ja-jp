@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ビット シフト演算子 (Visual Basic)'
 title: ビット シフト演算子
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - operators [Visual Basic], shift
 - bit shift operators [Visual Basic]
 ms.assetid: 64889319-a057-471b-85d8-69fcd4af6230
-ms.openlocfilehash: 986e641d7e3cdfb9dfeb5120c64271f5a54dc079
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: ec2a66b424e7c5c72d4c298700ddc9b2e2712471
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873430"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774123"
 ---
 # <a name="bit-shift-operators-visual-basic"></a>ビット シフト演算子 (Visual Basic)
 

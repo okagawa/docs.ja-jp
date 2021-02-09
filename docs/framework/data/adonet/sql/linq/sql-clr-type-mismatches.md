@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: SQL と CLR の型の不一致'
 title: SQL と CLR の型の不一致
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 27708f4bb8e191156f578132602570bc4a6337b0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9a2e1d360fc2a54f401572e46d92654f2b9284db
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781206"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803725"
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL と CLR の型の不一致
 

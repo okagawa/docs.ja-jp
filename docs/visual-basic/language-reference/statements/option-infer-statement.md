@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Option Infer ステートメント'
 title: Option Infer ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: 977e492c1c8ec5040c22169d91268c9c2241f6c4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d0c3de7bdafb7e9b361da7a8538046e3d76b5ce7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404357"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741589"
 ---
 # <a name="option-infer-statement"></a>Option Infer ステートメント
 
@@ -47,14 +48,14 @@ Option Infer { On | Off }
 
 ![Option Infer がオンの場合の IntelliSense ビューを示すスクリーンショット。](./media/option-infer-statement/option-infer-as-integer-on.png)
 
-次の図では、`Option Infer` がオフになっています。 宣言 `Dim someVar = 2` 内の変数は、型の推定によって `Object` として宣言されています。 この例では、[[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) で、**Option Strict** 設定が**オフ** に設定されています。
+次の図では、`Option Infer` がオフになっています。 宣言 `Dim someVar = 2` 内の変数は、型の推定によって `Object` として宣言されています。 この例では、[[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) で、**Option Strict** 設定が **オフ** に設定されています。
 
 次のスクリーンショットは、Option Infer がオフの場合の IntelliSense を示しています。
 
 ![Option Infer がオフの場合の IntelliSense ビューを示すスクリーンショット。](./media/option-infer-statement/option-infer-as-object-off.png)
 
 > [!NOTE]
-> 変数を `Object` として宣言すると、プログラムの実行中にランタイム型が変更される場合があります。 Visual Basic では、*ボックス化*と*ボックス化解除*という操作を実行して `Object` と値型との間で変換を行いますが、このために実行速度が低下します。 ボックス化とボックス化解除の詳細については、[Visual Basic 言語の仕様](~/_vblang/spec/conversions.md#value-type-conversions)に関するページを参照してください。
+> 変数を `Object` として宣言すると、プログラムの実行中にランタイム型が変更される場合があります。 Visual Basic では、*ボックス化* と *ボックス化解除* という操作を実行して `Object` と値型との間で変換を行いますが、このために実行速度が低下します。 ボックス化とボックス化解除の詳細については、[Visual Basic 言語の仕様](~/_vblang/spec/conversions.md#value-type-conversions)に関するページを参照してください。
 
 型の推定は、プロシージャ レベルで適用され、クラス、構造体、モジュール、またはインターフェイスのプロシージャの外側には適用されません。
 
@@ -66,7 +67,7 @@ Option Infer { On | Off }
 
 #### <a name="to-set-option-infer-in-the-ide"></a>IDE の Option Infer を設定するには
 
-1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。
+1. **ソリューション エクスプローラー** でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。
 
 2. **[コンパイル]** タブをクリックします。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コントロールへのデータのバインド (WCF Data Services)'
 title: コントロールへのデータのバインド (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
@@ -9,14 +10,16 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 178d77c225144497982487afa00f4493e17d1744
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 01ef24c2723bb690a8f441a315085c4312307b03
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805214"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766479"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>コントロールへのデータのバインド (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services では、`ComboBox` や `ListView` などのコントロールを <xref:System.Data.Services.Client.DataServiceCollection%601> クラスのインスタンスにバインドすることができます。 このコレクションは <xref:System.Collections.ObjectModel.ObservableCollection%601> クラスから継承され、Open Data Protocol (OData) フィードのデータが含まれます。 このクラスは、項目が追加または削除されたときに通知を行う動的なデータ コレクションを表します。 データ バインディングに <xref:System.Data.Services.Client.DataServiceCollection%601> のインスタンスを使用する場合、WCF Data Services クライアント ライブラリによって、これらのイベントが処理され、<xref:System.Data.Services.Client.DataServiceContext> で追跡されるオブジェクトとバインドされる UI 要素のデータとの同期が維持されます。  
   

@@ -1,18 +1,21 @@
 ---
+description: '詳細情報: アプリケーション シナリオ (WCF Data Services)'
 title: アプリケーション シナリオ (WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 842f560df5229fc8a2249e1317cb348b7ed3361a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: af772a3197e1fee312d70797c8a954434db6ffdf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556890"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766635"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>アプリケーション シナリオ (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services では、データを Open Data Protocol (OData) フィードとして公開および使用するための重要なシナリオがサポートされています。 このトピックでは、これらのシナリオに関連するトピックを紹介します。
 

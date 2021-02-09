@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: <inheritdoc> (C# プログラミング ガイド)'
 title: <inheritdoc> - C# プログラミング ガイド
 ms.date: 01/21/2020
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <inheritdoc> C# XML tag
 - inheritdoc C# XML tag
 ms.assetid: 46d329b1-5b84-4537-9e17-73ca97313e4e
-ms.openlocfilehash: 8c416275254892efdb9f15cd2ae0af5634c82357
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 960bdfbcec1e3f6a89675273f63b6d398e44947e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91184093"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719397"
 ---
 # <a name="inheritdoc-c-programming-guide"></a>\<inheritdoc> (C# プログラミング ガイド)
 
@@ -41,7 +42,7 @@ ms.locfileid: "91184093"
 
 [!code-csharp[csProgGuideDocComments#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#17)]  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [ドキュメント コメントとして推奨されるタグ](./recommended-tags-for-documentation-comments.md)

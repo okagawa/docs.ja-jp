@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:変更セットを表示する'
 title: '方法: 変更セットを表示する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 126e7245-c5a0-4ebf-800d-cc1fcf9cd0ab
-ms.openlocfilehash: 288920567db75dc1d4c7273f698467063af52ed6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e5ff7aebcc74ded1300433a3bf7b280db3a11b28
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180778"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786018"
 ---
 # <a name="how-to-display-a-changeset"></a>方法: 変更セットを表示する
 

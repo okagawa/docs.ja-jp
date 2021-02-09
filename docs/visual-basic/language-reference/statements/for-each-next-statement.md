@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: For Each...Next ステートメント (Visual Basic)'
 title: For Each...Next ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: 0feb938121a97b06509b472652e6a753841ab2b8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ff7afb5e3b505ebe2326343063a7884dc4f567b1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404655"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769105"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next ステートメント (Visual Basic)
 
@@ -104,7 +105,7 @@ Next [ element ]
 
 ## <a name="iterators"></a>Iterators
 
-*反復子*は、コレクションに対するカスタムの反復処理を実行するために使用します。 反復子は、関数または `Get` アクセサーのいずれかです。 これは、`Yield` ステートメントを使用して、コレクションの各要素を 1 回に 1 つ返します。
+*反復子* は、コレクションに対するカスタムの反復処理を実行するために使用します。 反復子は、関数または `Get` アクセサーのいずれかです。 これは、`Yield` ステートメントを使用して、コレクションの各要素を 1 回に 1 つ返します。
 
 `For Each...Next` ステートメントを使用して、反復子を呼び出します。 `For Each` ループの各イテレーションは、反復子を呼び出します。 `Yield` ステートメントが反復子に到達すると、`Yield` ステートメント内の式が返され、コードの現在の位置が保持されます。 次回、反復子が呼び出されると、この位置から実行が再開されます。
 

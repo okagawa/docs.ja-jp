@@ -1,4 +1,5 @@
 ---
+description: "詳細情報: BC32061: '<expression>' を型制約として使用することはできません"
 title: "'<expression>' を型制約として使用することはできません。"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-ms.openlocfilehash: 6e55bfdc175f285b335512e64f4c2407bdb0e8c7
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 3484c617b28ed068c917c83454b866f8dd50c5c8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163091"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796406"
 ---
 # <a name="bc32061-expression-cannot-be-used-as-a-type-constraint"></a>BC32061: '\<expression>' を型制約として使用することはできません
 

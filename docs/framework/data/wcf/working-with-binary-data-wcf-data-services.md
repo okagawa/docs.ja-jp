@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: バイナリ データの操作 (WCF Data Services)'
 title: バイナリ データの操作 (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 3c391e641df52d9143630406a40e17c6bc853865
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: dfcc5f03376d2f84267d8648acf55fb1aa96e318
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551752"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748103"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>バイナリ データの操作 (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services クライアント ライブラリを使用すると、次のいずれかの方法で、Open Data Protocol (OData) フィードからバイナリ データを取得して更新できます。
 

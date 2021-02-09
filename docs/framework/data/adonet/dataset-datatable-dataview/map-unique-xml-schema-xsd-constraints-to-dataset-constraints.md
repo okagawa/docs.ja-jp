@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: XML スキーマ (XSD) の UNIQUE 制約の DataSet 制約への割り当て'
 title: XML スキーマ (XSD) の UNIQUE 制約の DataSet 制約への割り当て
 ms.date: 03/30/2017
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
-ms.openlocfilehash: 3b2dad44176e52adcf32e2e3ccff3d82ba23f6ed
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 41a6e5424d67b092e57ac61d6e34a1f285fb8d0c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153236"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651926"
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>XML スキーマ (XSD) の UNIQUE 制約の DataSet 制約への割り当て
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: サービスとしてデータを公開する (WCF Data Services)'
 title: サービスとしてのデータの公開 (WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,14 +7,16 @@ helpviewer_keywords:
 - getting started, WCF Data Services
 - WCF Data Services, getting started
 ms.assetid: df0bbcee-f66f-4a88-abb4-4e73c8b9c908
-ms.openlocfilehash: 71f26d7d41d112e13e6a77f0927c61d51b176b27
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 496cf18b264672814295916467e1bff93feebdde
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975308"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765972"
 ---
 # <a name="expose-your-data-as-a-service-wcf-data-services"></a>サービスとしてデータを公開する (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services を Visual Studio に統合すると、サービスを簡単に定義し、Open Data Protocol (OData) フィードとしてデータを公開できます。 OData フィードを公開するデータ サービスを作成するには、次のような基本的な手順を実行します。
 

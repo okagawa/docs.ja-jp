@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: クエリ式の構文例:集計演算子 (LINQ to DataSet)'
 title: クエリ式の構文例:集計演算子 (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 85dafa07-e102-46e7-ab78-37bf06f257a6
-ms.openlocfilehash: 2277058c4dad4632f4f47a39e32463eaf77dcd5e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9076f81a21892f467355c86871e49ae3e1a793e9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164572"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663639"
 ---
 # <a name="query-expression-syntax-examples-aggregate-operators-linq-to-dataset"></a>クエリ式の構文例:集計演算子 (LINQ to DataSet)
 

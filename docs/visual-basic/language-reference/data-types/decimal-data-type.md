@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 10 進型 (Decimal) (Visual Basic)'
 title: 10 進型 (Decimal)
 ms.date: 07/20/2015
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-ms.openlocfilehash: 690c8061b6df1115aa24668520170b44edfa8287
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5806041e7737b8fe0f1c7ffa63f6cbadcbf92e42
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415648"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792233"
 ---
 # <a name="decimal-data-type-visual-basic"></a>10 進型 (Decimal) (Visual Basic)
 

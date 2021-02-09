@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: 方法:ファイルを移動する (Visual Basic)'
 title: '方法: ファイルを移動する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
-ms.openlocfilehash: 2dafeb3b5f8b8c3a8976b25c1a57f405aebb32b9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 31049d2b7f0516c056fc1f1620a3ad8c1f0a2e1c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401603"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797524"
 ---
 # <a name="how-to-move-a-file-in-visual-basic"></a>方法: ファイルを移動する (Visual Basic)
 
@@ -31,13 +32,13 @@ ms.locfileid: "84401603"
 
  次の条件を満たす場合は、例外が発生する可能性があります。  
   
-- パスが正しくない。長さが 0 の文字列である、空白だけが含まれている、使用できない文字が含まれている、デバイス パスである (先頭が \\\\.\\)、のいずれかの理由が考えられる (<xref:System.ArgumentException>)。  
+- 次のいずれかの理由で、パスが正しくない。長さが 0 の文字列である、空白だけが含まれている、使用できない文字が含まれている、デバイス パスである (先頭が \\\\.\\) (<xref:System.ArgumentException>)。  
   
 - パスが `Nothing` であるため、有効でない (<xref:System.ArgumentNullException>)  
   
 - `destinationFileName` が `Nothing` または空の文字列である (<xref:System.ArgumentNullException>)。  
   
-- ソース ファイルが正しくないか、存在しない (<xref:System.IO.FileNotFoundException>)。  
+- ソース ファイルが正しくない、または存在しない (<xref:System.IO.FileNotFoundException>)。  
   
 - パスを組み合わせると既存のディレクトリと同じになる、移動先のファイルが既に存在し `overwrite` が `False`に設定されている、移動先ディレクトリにある同じ名前のファイルが使用中である、またはユーザーがファイルにアクセスするのに必要なアクセス許可がない (<xref:System.IO.IOException>)。  
   
@@ -51,7 +52,7 @@ ms.locfileid: "84401603"
   
 - ユーザーに必要なアクセス許可がない (<xref:System.UnauthorizedAccessException>)。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>
 - [方法: ファイルの名前を変更する](how-to-rename-a-file.md)

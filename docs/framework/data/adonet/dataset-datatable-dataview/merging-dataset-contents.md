@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DataSet の内容のマージ'
 title: DataSet の内容のマージ
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: abc9183666602a7ef369e690e3ae499f8c7b8b11
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bdd7184d2b3a46f8ee59a052239dcd472db5e404
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784399"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651874"
 ---
 # <a name="merging-dataset-contents"></a>DataSet の内容のマージ
 

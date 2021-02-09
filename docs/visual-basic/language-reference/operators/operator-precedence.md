@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic における演算子の優先順位'
 title: 演算子の優先順位
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: b5649cd2a58fd8d300df58c563aebeed8976c4f5
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 7aa4677549328d450834f3a1ecb047d405893f69
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874780"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665290"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic における演算子の優先順位
 

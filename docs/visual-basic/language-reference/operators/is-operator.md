@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Is 演算子 (Visual Basic)'
 title: Is 演算子
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-ms.openlocfilehash: 1c2d87ef0a8202332c87af552f488d652c400213
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 0912ebd9bc9c33149568c6cea0197ef24c305ff2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812264"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665686"
 ---
 # <a name="is-operator-visual-basic"></a>Is 演算子 (Visual Basic)
 

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: バージョン 2.0 での System.Uri 名前空間の変更'
 title: バージョン 2.0 での System.Uri 名前空間の変更
 ms.date: 03/30/2017
 ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
-ms.openlocfilehash: 987010b8367069e8089df3f809d23f258bb68f2b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b5e2f2b3b59fba96e20e40a4df18273a2f6034f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "61642764"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791622"
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>バージョン 2.0 での System.Uri 名前空間の変更
 
@@ -71,6 +72,6 @@ ms.locfileid: "61642764"
 
 - URI パスの圧縮は、破損した URI がルートを越えてファイル システムを通過しないように修正されました。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Uri?displayProperty=nameWithType>

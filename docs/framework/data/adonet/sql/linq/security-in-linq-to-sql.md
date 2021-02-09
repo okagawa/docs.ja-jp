@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: LINQ to SQL におけるセキュリティ'
 title: LINQ to SQL におけるセキュリティ
 ms.date: 03/30/2017
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
-ms.openlocfilehash: 6260f0c565a25764c8fabd2770d4f06a987aa9bb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3d53def25aed83d96e0d32dfc964d9b49458fad7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173394"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662937"
 ---
 # <a name="security-in-linq-to-sql"></a>LINQ to SQL におけるセキュリティ
 

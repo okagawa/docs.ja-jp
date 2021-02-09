@@ -1,17 +1,20 @@
 ---
+description: '詳細情報: Entity Framework プロバイダー (WCF Data Services)'
 title: Entity Framework プロバイダー (WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 650b5eb6-c71d-4dc1-8b64-b6beaf752114
-ms.openlocfilehash: cb7bd7e793f73fc34057150ee5217dba6653237e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0c321ca49520c9b2957a807c01175bea8ee7ae3b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172646"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766050"
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>Entity Framework プロバイダー (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services と同様に、ADO.NET Entity Framework は、エンティティ リレーションシップ モデルの型である Entity Data Model をベースにしています。 Entity Framework では、Entity Data Model の実装 ("*概念モデル*" と呼ばれます) に対する操作が、データ ソースに対する同等の操作に変換されます。 このことから、Entity Framework はリレーショナル データに基づくデータ サービスの理想的なプロバイダーとして使用でき、また、Entity Framework をサポートするデータ プロバイダーが存在するデータベースであれば、WCF Data Services で使用できます。 現在 Entity Framework がサポートされているデータ ソースの一覧については、「[Entity Framework プロバイダー](/ef/ef6/fundamentals/providers/)」を参照してください。
   

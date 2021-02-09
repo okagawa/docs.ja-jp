@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:My Documents ディレクトリのファイルにテキストを書き込む (Visual Basic)'
 title: '方法: My Documents ディレクトリのファイルにテキストを書き込む'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - examples [Visual Basic], text files
 - writing to files [Visual Basic], in My Documents
 ms.assetid: 1c726124-781d-4976-9baa-ed46814ff3fe
-ms.openlocfilehash: bb3a9bdc44f86fbcdb3c56ee088740efdfebe95d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: da7472e9d8d4c39509dda814a18e7c0149236eeb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546459"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797368"
 ---
 # <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>方法: My Documents ディレクトリのファイルにテキストを書き込む (Visual Basic)
 
-`My.Computer.FileSystem.SpecialDirectories` オブジェクトを使うと、 **[MyDocuments]** ディレクトリなどの特別なディレクトリにアクセスできます。  
+`My.Computer.FileSystem.SpecialDirectories` オブジェクトを使うと、**[MyDocuments]** ディレクトリなどの特別なディレクトリにアクセスできます。  
   
 ## <a name="procedure"></a>プロシージャ  
   
@@ -44,11 +45,11 @@ ms.locfileid: "90546459"
   
 ## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
 
- 部分的に信頼されているコンテキストで実行している場合は、特権不足のため例外がスローされることがあります。 詳しくは、「[コード アクセス セキュリティの基礎](../../../../framework/misc/code-access-security-basics.md)」をご覧ください。  
+ 部分的に信頼されたコンテキストで実行している場合、コードは、特権がないために例外をスローする可能性があります。 詳しくは、「[コード アクセス セキュリティの基礎](../../../../framework/misc/code-access-security-basics.md)」をご覧ください。  
   
- この例では、新しいファイルを作成します。 アプリケーションでファイルを作成する必要がある場合、そのアプリケーションにはフォルダーに対する Create アクセス許可が必要です。 アクセス許可は、アクセス制御リストを使って設定します。 ファイルが既に存在する場合、アプリケーションに必要なのは低い権限の Write アクセス許可だけです。 可能な場合は、フォルダーに対する Create アクセス許可を付与するのではなく、展開の間にファイルを作成しておき、1 つのファイルの Read アクセス許可を付与するだけの方が安全です。 また、ルート フォルダーや **[Program Files]** フォルダーにデータを書き込むより、ユーザー フォルダーに書き込む方が安全です。 詳しくは、「[アクセス制御リスト (ACL: Access Control List) 技術の概要](/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100))」をご覧ください。  
+ この例では、新しいファイルを作成します。 アプリケーションでファイルを作成する必要がある場合、そのアプリケーションにはフォルダーに対する Create アクセス許可が必要です。 アクセス許可は、アクセス制御リストを使って設定します。 ファイルが既に存在する場合、アプリケーションに必要なのは低い権限の Write アクセス許可だけです。 可能な場合は、フォルダーに対する Create アクセス許可を付与するのではなく、展開の間にファイルを作成しておき、1 つのファイルの Read アクセス許可を付与するだけの方が安全です。 また、ルート フォルダーや **[Program Files]** フォルダーにデータを書き込むより、ユーザー フォルダーに書き込む方が安全です。 詳細については、「[アクセス制御リスト (ACL: Access Control List) 技術の概要](/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100))」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.IO.Path.Combine%2A?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Devices.Computer>

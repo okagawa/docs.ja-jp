@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 入れ子になった Entity SQL クエリの作成'
 title: 入れ子になった Entity SQL クエリの作成
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: 0c9a6a99ff49cfa847f4c1e7ea693fbb2611debd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 971625f0b1e82068192d4f8f74e2f1c55043d900
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153067"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724896"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>入れ子になった Entity SQL クエリの作成
 

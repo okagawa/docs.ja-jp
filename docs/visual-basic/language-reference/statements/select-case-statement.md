@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Select...Case ステートメント (Visual Basic)'
 title: Select...Case ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Select Case statements
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-ms.openlocfilehash: 750e765390ad223976b000fe64e656fa2d62a34b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 4f8edecd0a0b1afd59e182a372e308c3829a9b93
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871782"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741134"
 ---
 # <a name="selectcase-statement-visual-basic"></a>Select...Case ステートメント (Visual Basic)
 
@@ -73,7 +74,7 @@ End Select
  `Option Compare` の設定は、文字列比較に影響を与える可能性があります。 `Option Compare Text` では、文字列 "Apples" と "apples" は等しいものとして比較されますが、`Option Compare Binary` ではこれらは等しくありません。  
   
 > [!NOTE]
-> 複数の句を持つ `Case` ステートメントでは、*ショートサーキット*と呼ばれる動作が発生する可能性があります。 Visual Basic では句が左から右に評価され、いずれかが `testexpression` と一致する場合、残りの句は評価されません。 ショートサーキットはパフォーマンスを向上させることができますが、`expressionlist` 内のすべての式を評価する必要がある場合は、予期しない結果が生じる可能性があります。 ショートサーキットの詳細については、[ブール式](../../programming-guide/language-features/operators-and-expressions/boolean-expressions.md)に関するページを参照してください。  
+> 複数の句を持つ `Case` ステートメントでは、*ショートサーキット* と呼ばれる動作が発生する可能性があります。 Visual Basic では句が左から右に評価され、いずれかが `testexpression` と一致する場合、残りの句は評価されません。 ショートサーキットはパフォーマンスを向上させることができますが、`expressionlist` 内のすべての式を評価する必要がある場合は、予期しない結果が生じる可能性があります。 ショートサーキットの詳細については、[ブール式](../../programming-guide/language-features/operators-and-expressions/boolean-expressions.md)に関するページを参照してください。  
   
  `Case` または `Case Else` ステートメント ブロック内のコードがブロック内のステートメントをこれ以上実行する必要がない場合は、`Exit Select` ステートメントを使用してブロックを終了できます。 これは `End Select` の次のステートメントに制御を直ちに渡します。  
   

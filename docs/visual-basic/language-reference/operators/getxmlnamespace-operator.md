@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: GetXmlNamespace 演算子 (Visual Basic)'
 title: GetXmlNamespace 演算子
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - GetXmlNamespace operator [Visual Basic]
 - GetXmlNamespace keyword [Visual Basic]
 ms.assetid: d0d28cfd-0755-4896-ae0b-4981aa35517c
-ms.openlocfilehash: 660474c1193076755889fd885c1b78bec78f0a2c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 704ac22493a0d6ce1255d171ae3b418313b74f09
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873477"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665914"
 ---
 # <a name="getxmlnamespace-operator-visual-basic"></a>GetXmlNamespace 演算子 (Visual Basic)
 

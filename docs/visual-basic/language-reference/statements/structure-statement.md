@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Structure ステートメント'
 title: Structure ステートメント
 ms.date: 05/12/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-ms.openlocfilehash: 120f836b9d49c00e9c53af0d1fc832e22c8cbbb8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 338abe359491f02c25bdb33d996fb639f58f8b35
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346458"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741069"
 ---
 # <a name="structure-statement"></a>Structure ステートメント
 
@@ -47,23 +48,23 @@ End Structure
 |`typelist`|[Of](of-clause.md) キーワードを使用する場合は必須です。 この構造体の型パラメーター リストを指定します。 「[型リスト](type-list.md)」を参照してください。|
 |`Implements`|任意。 この構造体が、複数のインターフェイスのメンバーを実装していることを示します。 「[Implements ステートメント](implements-statement.md)」を参照してください。|
 |`interfacenames`|`Implements` ステートメントを使用する場合は必ず指定します。 この構造体が実装するインターフェイスの名前を指定します。|
-|`datamemberdeclarations`|必須です。 *構造体のデータ メンバー*を宣言する、0 個以上の `Const`、`Dim`、`Enum`、または `Event` ステートメント。|
-|`methodmemberdeclarations`|任意。 構造体の*メソッド メンバー*として機能する、`Function`、`Operator`、`Property`、または `Sub` プロシージャの 0 個以上の宣言。|
+|`datamemberdeclarations`|必須です。 *構造体のデータ メンバー* を宣言する、0 個以上の `Const`、`Dim`、`Enum`、または `Event` ステートメント。|
+|`methodmemberdeclarations`|任意。 構造体の *メソッド メンバー* として機能する、`Function`、`Operator`、`Property`、または `Sub` プロシージャの 0 個以上の宣言。|
 |`End Structure`|必須です。 `Structure` の定義を終了します。|
 
 ## <a name="remarks"></a>Remarks
 
-`Structure` ステートメントは、カスタマイズできる複合値型を定義します。 *構造体*は、以前のバージョンの Visual Basic にあったユーザー定義型 (UDT: User-Defined Type) を一般化したものです。 詳細については、「[構造体](../../programming-guide/language-features/data-types/structures.md)」を参照してください。
+`Structure` ステートメントは、カスタマイズできる複合値型を定義します。 *構造体* は、以前のバージョンの Visual Basic にあったユーザー定義型 (UDT: User-Defined Type) を一般化したものです。 詳細については、「[構造体](../../programming-guide/language-features/data-types/structures.md)」を参照してください。
 
 構造体は、クラスと同じ機能の多くをサポートします。 たとえば、構造体は、プロパティやプロシージャを持つことができ、インターフェイスを実装でき、パラメーター化されたコンストラクターを持つことができます。 ただし、継承、宣言、および使用方法に関しては、構造体とクラスの間には大きな違いがあります。 また、クラスは参照型ですが、構造体は値型です。 詳細については、「[構造体とクラス](../../programming-guide/language-features/data-types/structures-and-classes.md)」を参照してください。
 
-`Structure` は、名前空間またはモジュール レベルでのみ使用できます。 つまり、構造体の*宣言コンテキスト*は、ソース ファイル、名前空間、クラス、構造体、モジュール、またはインターフェイスのいずれかである必要があり、プロシージャまたはブロックでは宣言できません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。
+`Structure` は、名前空間またはモジュール レベルでのみ使用できます。 つまり、構造体の *宣言コンテキスト* は、ソース ファイル、名前空間、クラス、構造体、モジュール、またはインターフェイスのいずれかである必要があり、プロシージャまたはブロックでは宣言できません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。
 
 構造体は、既定で [Friend](../modifiers/friend.md) アクセスに設定されます。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 詳しくは、「[Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
 
 ## <a name="rules"></a>ルール
 
-- **入れ子。** 構造体の内部に別の構造体を定義できます。 外側の構造体は*包含構造体*と呼ばれ、内側の構造体は*入れ子構造体*と呼ばれます。 ただし、包含構造体をとおして入れ子構造体のメンバーにアクセスすることはできません。 入れ子構造体のメンバーにアクセスするには、入れ子構造体のデータ型の変数を宣言する必要があります。
+- **入れ子。** 構造体の内部に別の構造体を定義できます。 外側の構造体は *包含構造体* と呼ばれ、内側の構造体は *入れ子構造体* と呼ばれます。 ただし、包含構造体をとおして入れ子構造体のメンバーにアクセスすることはできません。 入れ子構造体のメンバーにアクセスするには、入れ子構造体のデータ型の変数を宣言する必要があります。
 
 - **メンバー宣言。** 構造体のすべてのメンバーを宣言する必要があります。 構造体からは何も継承できないため、構造体のメンバーを [Protected](../modifiers/protected.md) または `Protected Friend` にすることはできません。 ただし、構造体そのものを`Protected` または `Protected Friend` にすることはできます。
   
@@ -77,7 +78,7 @@ End Structure
 
 - **実装。** 構造体で [Implements ステートメント](implements-statement.md)を使用する場合、`interfacenames` に指定するすべてのインターフェイスによって定義されたすべてのメンバーを実装する必要があります。
 
-- **既定のプロパティ。** 構造体には、[Default](../modifiers/default.md) 修飾子を使って、最大で 1 つのプロパティをその*既定のプロパティ*として指定できます。 詳細については、「[Default](../modifiers/default.md)」を参照してください。
+- **既定のプロパティ。** 構造体には、[Default](../modifiers/default.md) 修飾子を使って、最大で 1 つのプロパティをその *既定のプロパティ* として指定できます。 詳細については、「[Default](../modifiers/default.md)」を参照してください。
 
 ## <a name="behavior"></a>動作
 

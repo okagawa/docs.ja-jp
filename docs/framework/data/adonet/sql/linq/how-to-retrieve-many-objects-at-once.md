@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:多くのオブジェクトを一度に取得する'
 title: '方法: 多くのオブジェクトを一度に取得する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 18aff4d8-bde8-461b-9960-ccabb24e9d22
-ms.openlocfilehash: 98827989f72b7922a325a9e13b5f46cb18ac5395
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2bc202e09c64f2a1956b8688be30cfd87fb655c0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197314"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802009"
 ---
 # <a name="how-to-retrieve-many-objects-at-once"></a>方法: 多くのオブジェクトを一度に取得する
 

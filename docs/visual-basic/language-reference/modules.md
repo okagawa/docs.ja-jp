@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: モジュール (Visual Basic)'
 title: モジュール
 ms.date: 07/20/2015
 helpviewer_keywords:
 - modules, Visual Basic
 ms.assetid: 370bfc90-e8f2-4942-bdec-9897ce605d31
-ms.openlocfilehash: df7e32a81746a97a78a4a2a28e57032affa73cc0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 59a7c1ba94f8ad013ad2c9b6e335d0e9f411058a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84386596"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674754"
 ---
 # <a name="modules-visual-basic"></a>モジュール (Visual Basic)
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Not 演算子 (Visual Basic)'
 title: Not 演算子
 ms.date: 07/20/2015
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - logical negation
 - operators [Visual Basic], negation
 ms.assetid: 8f2ea83c-d2ed-480a-a474-3042a1cad9b5
-ms.openlocfilehash: 7d0beea16a2ac00be090c6a241f9790a0ba33390
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 91f3525b52d6f38081b8e5ba208c193f714a4045
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874804"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665355"
 ---
 # <a name="not-operator-visual-basic"></a>Not 演算子 (Visual Basic)
 
@@ -64,7 +65,7 @@ result = Not expression
   
 ## <a name="overloading"></a>オーバーロード  
 
- `Not` 演算子は "*オーバーロード*" できます。つまり、オペランドがあるクラスまたは構造体の型を持っているときに、そのクラスまたは構造体はその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を必ず理解してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ `Not` 演算子は "*オーバーロード*" できます。つまり、オペランドがあるクラスまたは構造体の型を持っているときに、そのクラスまたは構造体はその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
 
@@ -84,7 +85,7 @@ result = Not expression
   
 ## <a name="see-also"></a>関連項目
 
-- [論理/ビット演算子 (Visual Basic)](logical-bitwise-operators.md)
+- [論理演算子とビット処理演算子 (Visual Basic)](logical-bitwise-operators.md)
 - [Visual Basic における演算子の優先順位](operator-precedence.md)
 - [機能別の演算子一覧](operators-listed-by-functionality.md)
-- [Visual Basic の論理演算子とビット演算子](../../programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic の論理演算子とビット処理演算子](../../programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

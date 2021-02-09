@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:EntityConnection の接続文字列を作成する'
 title: '方法: EntityConnection の接続文字列を作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5bd1a748-3df7-4d0a-a607-14f25e3175e9
-ms.openlocfilehash: bb72948ab6cde3734df8746bb093264f7d304a8c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 760ed9d1f362e08135586a56a6b900afcd2b13bd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204503"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650834"
 ---
 # <a name="how-to-build-an-entityconnection-connection-string"></a>方法: EntityConnection の接続文字列を作成する
 

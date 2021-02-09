@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Mod 演算子 (Visual Basic)'
 title: Mod 演算子
 ms.date: 04/24/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: 32065567799b023556a018ae2f5ba338796e0b49
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bfec39f54041714258e21f087a044dce24edcb6b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401512"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665433"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod 演算子 (Visual Basic)
 

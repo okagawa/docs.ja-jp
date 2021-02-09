@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: オブジェクトの使用'
 title: オブジェクトの使用
 ms.date: 03/30/2017
 ms.assetid: 338d8a55-05cc-46b0-bbb8-1379d77068e9
-ms.openlocfilehash: 4802949ac8c0fd40de1cef9dfbbc1be05bbcfb24
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c567b8665750ce4ef682bd0ecccdafcd1f139217
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200811"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672960"
 ---
 # <a name="working-with-objects"></a>オブジェクトの使用
 

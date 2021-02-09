@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: 機能別の演算子一覧 (Visual Basic)'
 title: 機能別の演算子一覧
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operators [Visual Basic]
 ms.assetid: d1fb027c-872b-4ccc-afc8-2380e3f65d4a
-ms.openlocfilehash: 7eaf7390e0c6ba1c9e350a6aab903c0a794e4e80
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: bd038192b08c94aefd32235a3a7cd5063b2cc43f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874772"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773876"
 ---
 # <a name="operators-listed-by-functionality-visual-basic"></a>機能別の演算子一覧 (Visual Basic)
 

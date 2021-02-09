@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Function ステートメント (Visual Basic)'
 title: Function ステートメント
 ms.date: 05/12/2018
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: 49cf4fead2c5594b7ac6815f82fea0dc995ea436
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e8a05b02c3a214f0572e85c1fc973cb9f03118ae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404629"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769066"
 ---
 # <a name="function-statement-visual-basic"></a>Function ステートメント (Visual Basic)
 

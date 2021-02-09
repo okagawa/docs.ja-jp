@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Throw ステートメント (Visual Basic)'
 title: Throw ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - exception handling, unstructured
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
-ms.openlocfilehash: 95572b1739490e90f53da6b6ec283bfb532c46d3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b7fa4183b5997e5dac8045502a8eed1afe66fc0d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404136"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740939"
 ---
 # <a name="throw-statement-visual-basic"></a>Throw ステートメント (Visual Basic)
 

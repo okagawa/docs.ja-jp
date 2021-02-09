@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Return ステートメント (Visual Basic)'
 title: Return ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Return statement [Visual Basic]
 - expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
-ms.openlocfilehash: 3ca705409bc8233bc2562c64b8e7704f08dd7641
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 62086090ede7e634b09d3edc3dc42feb28d15793
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871802"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741199"
 ---
 # <a name="return-statement-visual-basic"></a>Return ステートメント (Visual Basic)
 

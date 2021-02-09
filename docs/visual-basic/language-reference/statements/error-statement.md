@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Error ステートメント'
 title: Error ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: f3f9f5ecb96686fe525e98cf64672d81a3145796
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 6c152e9e4fb4fa3a937042761c7d776b337f4fef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873276"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769144"
 ---
 # <a name="error-statement"></a>Error ステートメント
 

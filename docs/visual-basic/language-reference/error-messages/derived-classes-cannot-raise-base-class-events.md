@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: BC30029:派生クラスで基本クラスのイベントを発生させることはできません。'
 title: 派生クラスで基本クラスのイベントを発生させることはできません。
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30029
 ms.assetid: 63afa1c6-2f93-4512-a2f0-372455979771
-ms.openlocfilehash: 7b86420466d77a6aa45b1201a9375b4433e4b5ec
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 68546f2654f7c34fcb309d5af68e237d5f1eac79
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163442"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796601"
 ---
 # <a name="bc30029-derived-classes-cannot-raise-base-class-events"></a>BC30029:派生クラスで基本クラスのイベントを発生させることはできません。
 

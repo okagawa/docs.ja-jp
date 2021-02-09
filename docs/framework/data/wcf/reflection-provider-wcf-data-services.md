@@ -1,17 +1,20 @@
 ---
+description: '詳細情報: リフレクション プロバイダー (WCF Data Services)'
 title: リフレクション プロバイダー (WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
-ms.openlocfilehash: 0eeb223093d709cfe2722c2ad7cf622164eab32f
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: e09c9a86bb940681d8de24f5082919aea897795d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568868"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794924"
 ---
 # <a name="reflection-provider-wcf-data-services"></a>リフレクション プロバイダー (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 Entity Framework を介してデータ モデルからデータを公開することに加えて、WCF Data Services では、エンティティ ベースのモデルで厳密に定義されていないデータを公開することもできます。 リフレクション プロバイダーは、<xref:System.Linq.IQueryable%601> インターフェイスを実装する型を返すクラスのデータを公開します。 WCF Data Services は、リフレクションを使用して、これらのクラスのデータ モデルを推論し、リソースに対するアドレス ベースのクエリを、公開されている <xref:System.Linq.IQueryable%601> 型に対する統合言語クエリ (LINQ) ベースのクエリに変換します。
 

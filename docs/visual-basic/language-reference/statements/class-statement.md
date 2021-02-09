@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Class ステートメント (Visual Basic)'
 title: Class ステートメント
 ms.date: 05/12/2018
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-ms.openlocfilehash: 3b64597fcd7453c20ed295fe263eeaa8783b20ae
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: de4541addc9f4755d973586c7d1b4410e4bf12ed
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866036"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673896"
 ---
 # <a name="class-statement-visual-basic"></a>Class ステートメント (Visual Basic)
 
@@ -57,9 +58,9 @@ End Class
   
 ## <a name="remarks"></a>Remarks  
 
- `Class` ステートメントは新しいデータ型を定義します。 *クラス*は、オブジェクト指向プログラミング (OOP) の基本的な構成要素です。 詳細については、[オブジェクトとクラス](../../programming-guide/language-features/objects-and-classes/index.md)に関するページを参照してください。  
+ `Class` ステートメントは新しいデータ型を定義します。 *クラス* は、オブジェクト指向プログラミング (OOP) の基本的な構成要素です。 詳細については、[オブジェクトとクラス](../../programming-guide/language-features/objects-and-classes/index.md)に関するページを参照してください。  
   
- `Class` は、名前空間またはモジュール レベルでのみ使用できます。 つまり、クラスの*宣言コンテキスト*は、ソース ファイル、名前空間、クラス、構造体、モジュール、またはインターフェイスのいずれかである必要があり、プロシージャまたはブロックでは宣言できません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。  
+ `Class` は、名前空間またはモジュール レベルでのみ使用できます。 つまり、クラスの *宣言コンテキスト* は、ソース ファイル、名前空間、クラス、構造体、モジュール、またはインターフェイスのいずれかである必要があり、プロシージャまたはブロックでは宣言できません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。  
   
  クラスの各インスタンスには、他のインスタンスに依存しない独自の有効期間があります。 この有効期間は、[New Operator](../operators/new-operator.md) 句によって、または <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A> などの関数によって作成された時点で開始されます。 これは、インスタンスを指すすべての変数が、[Nothing](../nothing.md)、または他のクラスのインスタンスに設定された時点で終了します。  
   
@@ -67,7 +68,7 @@ End Class
   
 ## <a name="rules"></a>ルール  
   
-- **入れ子。** クラスの内部に別のクラスを定義できます。 外側のクラスは、*含まれているクラス*と呼ばれ、内側のクラスは*入れ子になったクラス*と呼ばれます。  
+- **入れ子。** クラスの内部に別のクラスを定義できます。 外側のクラスは、*含まれているクラス* と呼ばれ、内側のクラスは *入れ子になったクラス* と呼ばれます。  
   
 - **継承。** クラスが [Inherits ステートメント](inherits-statement.md)を使用する場合、指定できる基底クラスまたはインターフェイスは 1 つだけです。 クラスは複数の要素からは継承できません。  
   
@@ -77,7 +78,7 @@ End Class
   
 - **実装。** クラスで [Implements ステートメント](implements-statement.md)を使用する場合、`interfacenames` に指定するすべてのインターフェイスによって定義されたすべてのメンバーを実装する必要があります。 この例外は、基底クラスのメンバーの再実装です。 詳細については、[Implements](implements-clause.md) に関するページの「再実装」を参照してください。  
   
-- **既定のプロパティ。** クラスは、その*既定のプロパティ*として、最大で 1 つのプロパティを指定できます。 詳細については、「[Default](../modifiers/default.md)」を参照してください。  
+- **既定のプロパティ。** クラスは、その *既定のプロパティ* として、最大で 1 つのプロパティを指定できます。 詳細については、「[Default](../modifiers/default.md)」を参照してください。  
   
 ## <a name="behavior"></a>動作  
   
@@ -99,7 +100,7 @@ End Class
 
  これらの要素には多くの類似点がありますが、重要な相違点もいくつかあります。  
   
-- **用語。** 以前のバージョンの Visual Basic は、*クラス モジュール* (.cls ファイル) と*標準モジュール* (.bas ファイル) の 2 種類のモジュールを認識します。 現在のバージョンでは、これらの*クラス*と*モジュール*をそれぞれ呼び出します。  
+- **用語。** 以前のバージョンの Visual Basic では、*クラス モジュール* (.cls ファイル) と *標準モジュール* (.bas ファイル) の 2 種類のモジュールを認識します。 現在のバージョンでは、これらの *クラス* と *モジュール* をそれぞれ呼び出します。  
   
 - **共有メンバー。** クラスのメンバーが共有メンバーかインスタンス メンバーかを制御できます。  
   

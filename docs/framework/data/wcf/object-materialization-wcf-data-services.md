@@ -1,18 +1,21 @@
 ---
+description: '詳細情報: オブジェクトの具体化 (WCF Data Services)'
 title: オブジェクトの具体化 (WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: 7a2b201e5690c4304e663e9429c54f377e05f556
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 4beb72b9fb4402ee9a751b870f012bfa2cf15951
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568904"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794976"
 ---
 # <a name="object-materialization-wcf-data-services"></a>オブジェクトの具体化 (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 **[サービス参照の追加]** ダイアログを使用して .NET Framework ベースのクライアント アプリケーションの Open Data Protocol (OData) フィードを使用すると、フィードによって公開されるデータ モデルの各エンティティ型に対して同等のデータ クラスが生成されます。 詳しくは、「[データ サービス クライアント ライブラリの生成](generating-the-data-service-client-library-wcf-data-services.md)」をご覧ください。 クエリによって返されるエンティティ データは、これらの生成されたクライアント データ サービス クラスのいずれかのインスタンスに具体化されます。 マージ オプションおよび追跡オブジェクトの ID 解決については、「[データ サービス コンテキストの管理](managing-the-data-service-context-wcf-data-services.md)」を参照してください。
 

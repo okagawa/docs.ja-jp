@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:PrimitiveType 結果を返すクエリを実行する'
 title: '方法: PrimitiveType 結果を返すクエリを実行する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7139d585-4034-4dfa-916f-2120a8b72792
-ms.openlocfilehash: 3f1d589a37eca0254ecd3da96cd5731087c5027a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e1493351b2c5923dc328b2ca65e784e76c5947ce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198380"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650613"
 ---
 # <a name="how-to-execute-a-query-that-returns-primitivetype-results"></a>方法: PrimitiveType 結果を返すクエリを実行する
 

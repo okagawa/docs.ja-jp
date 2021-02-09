@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Namespace ステートメント'
 title: Namespace ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - root namespaces
 - declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
-ms.openlocfilehash: cef339a66458ee9657dc1706082c3c5328746dc6
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 2c315947a26f72a90e03bc1f4bf1b5f647866b33
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875210"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768858"
 ---
 # <a name="namespace-statement"></a>Namespace ステートメント
 

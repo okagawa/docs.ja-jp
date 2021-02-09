@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: BC42324:ラムダ式内で繰り返し変数を使用すると、予期しない結果が発生する可能性があります。'
 title: ラムダ式内で繰り返し変数を使用すると、予期しない結果が発生する可能性があります。
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
-ms.openlocfilehash: d0deea94084565ea91debe2b6db30def4cd9e00e
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: a21e33c9a8737642d4d0764e92b1fbb2213f9602
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161492"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640876"
 ---
 # <a name="bc42324-using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>BC42324:ラムダ式内で繰り返し変数を使用すると、予期しない結果が発生する可能性があります。
 

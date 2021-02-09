@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:EntityCommand を使用してパラメーター化されたストアド プロシージャを実行する'
 title: '方法: EntityCommand を使用してパラメーター化されたストアド プロシージャを実行する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4f5639bf-bb7f-4982-bb1d-c7caa4348888
-ms.openlocfilehash: ec1ff7cdbdc83bc409b191f0aefe2b50cbad9225
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a45c9a276cc33037a4d353e05d1174c9748aab82
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192166"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650691"
 ---
 # <a name="how-to-execute-a-parameterized-stored-procedure-using-entitycommand"></a>方法: EntityCommand を使用してパラメーター化されたストアド プロシージャを実行する
 

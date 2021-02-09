@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 入力文字セット (Entity SQL)'
 title: 入力文字セット (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 13d291d3-e6bc-4719-b953-758b61a590b6
-ms.openlocfilehash: 94615a8f4aec51347f451d6f6a53b9d5b459a336
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b17b9b2022a49717aace3c9f642ac62a2f30b2b5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203658"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748516"
 ---
 # <a name="input-character-set-entity-sql"></a>入力文字セット (Entity SQL)
 

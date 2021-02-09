@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Function 式 (Visual Basic)'
 title: Function 式
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: 719969be23a6d94f22a1d86cb4ad3f37e4c3b254
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: bef5db7f167b615c2a0c20539521c186683da985
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873416"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666018"
 ---
 # <a name="function-expression-visual-basic"></a>Function 式 (Visual Basic)
 
@@ -37,7 +38,7 @@ End Function
   
 ## <a name="remarks"></a>Remarks  
 
- *ラムダ式*は、値を計算して返す、名前を持たない関数です。 ラムダ式は、デリゲート型を使用できる場所であればどこでも使用できます。ただし、`RemoveHandler` の引数として使用することはできません。 デリゲートの詳細と、デリゲートでのラムダ式の使用の詳細については、「[Delegate ステートメント](../statements/delegate-statement.md)」と「[厳密でないデリゲート変換](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md)」をご覧ください。  
+ *ラムダ式* は、値を計算して返す、名前を持たない関数です。 ラムダ式は、デリゲート型を使用できる場所であればどこでも使用できます。ただし、`RemoveHandler` の引数として使用することはできません。 デリゲートの詳細と、デリゲートでのラムダ式の使用の詳細については、「[Delegate ステートメント](../statements/delegate-statement.md)」と「[厳密でないデリゲート変換](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md)」をご覧ください。  
   
 ## <a name="lambda-expression-syntax"></a>ラムダ式の構文  
 

@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: メソッド ベースのクエリ構文例:要素演算子'
 title: メソッド ベースのクエリ構文例:要素演算子
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8438b995-bd07-4223-b22d-13adadef33fb
-ms.openlocfilehash: 96d393a34af69935e75582ef1954ddd661a355f0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8a83602c4d374ae02b4f39ee75821718f8b53f3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192049"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673584"
 ---
 # <a name="method-based-query-syntax-examples-element-operators"></a>メソッド ベースのクエリ構文例:要素演算子
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: データ サービスの構成 (WCF Data Services)'
 title: データ サービスの構成 (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
@@ -7,14 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: a30a8c2c731e8c5cb2b22c8d7f34ec32d149803c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 72bd0de5319cc4b19fd831f4ee302e073106c74b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152794"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766188"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>データ サービスの構成 (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services を使用すると、Open Data Protocol (OData) フィードを公開するデータ サービスを作成できます。 これらのフィードには、さまざまなデータ ソースからのデータが含まれることがあります。 WCF Data Services では、データ プロバイダーを使用して、このデータが OData フィードとして公開されます。 これらのプロバイダーには、Entity Framework プロバイダー、リフレクション プロバイダー、およびカスタム データ サービス プロバイダー インターフェイスのセットがあります。 プロバイダーの実装は、サービスのデータ モデルを定義します。 詳細については、「[Data Services プロバイダー](data-services-providers-wcf-data-services.md)」を参照してください。  
   

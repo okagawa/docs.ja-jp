@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Option Explicit ステートメント (Visual Basic)'
 title: Option Explicit ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: 44bf8205ec071710ee3660968ab3c3e9af33f74d
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 11f59508125167fde98b4fc359dde7fd7c539b75
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874935"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741615"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit ステートメント (Visual Basic)
 
@@ -51,7 +52,7 @@ Option Explicit { On | Off }
   
 #### <a name="to-set-option-explicit-in-the-ide"></a>IDE の Option Explicit を設定するには  
   
-1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
+1. **ソリューション エクスプローラー** でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
 2. **[コンパイル]** タブをクリックします。  
   

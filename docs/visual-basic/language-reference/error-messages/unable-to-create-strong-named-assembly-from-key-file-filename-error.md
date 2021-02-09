@@ -1,4 +1,5 @@
 ---
+description: "詳細情報: BC31026:キー ファイル '<filename>' から厳密な名前のアセンブリを作成できません : <error>"
 title: "キー ファイル '<filename>' から厳密な名前のアセンブリを作成できません : <error>"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31026
 ms.assetid: 5dd09785-bc10-4ae7-ba24-b795057aca31
-ms.openlocfilehash: 4778093cbc71307116dbebc0bef01b8e35fa99d2
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 04ade565ce8d1e43a12160c5b14c67cf230cf1ff
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161700"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674988"
 ---
 # <a name="bc31026-unable-to-create-strong-named-assembly-from-key-file-filename-error"></a>BC31026:キー ファイル '\<filename>' から厳密な名前のアセンブリを作成できません : \<error>
 

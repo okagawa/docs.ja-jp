@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Skip While 句 (Visual Basic)'
 title: Skip While 句
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Skip While clause [Visual Basic]
 - queries [Visual Basic], Skip While
 ms.assetid: 5dee8350-7520-4f1a-b00d-590cacd572d6
-ms.openlocfilehash: af722f7aee021f244b411cdc61619b7de3c20607
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 6f2785fde1a62c10c914904ccba51510dbb1a041
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866228"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773850"
 ---
 # <a name="skip-while-clause-visual-basic"></a>Skip While 句 (Visual Basic)
 

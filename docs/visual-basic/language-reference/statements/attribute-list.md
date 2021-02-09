@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 属性リスト (Visual Basic)'
 title: 属性リスト
 ms.date: 07/20/2015
 helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: e566239c56efa8ca8e83bff92486fec4c434e92b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: bde9387a48001a2696a6f69454edc311e7597bb6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874743"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674039"
 ---
 # <a name="attribute-list-visual-basic"></a>属性リスト (Visual Basic)
 
@@ -39,7 +40,7 @@ ms.locfileid: "90874743"
   
 ## <a name="rules"></a>ルール  
   
-- **配置。** ほとんどの宣言されたプログラミング要素に属性を適用できます。 1 つまたは複数の属性を適用するには、要素宣言の先頭に*属性ブロック*を配置します。 属性リストの各エントリは、適用する属性、および属性のこの呼び出しに使用する修飾子と引数を指定します。  
+- **配置。** ほとんどの宣言されたプログラミング要素に属性を適用できます。 1 つまたは複数の属性を適用するには、要素宣言の先頭に *属性ブロック* を配置します。 属性リストの各エントリは、適用する属性、および属性のこの呼び出しに使用する修飾子と引数を指定します。  
   
 - **山かっこ。** 属性リストを指定する場合は、山かっこ ("`<`" および "`>`") で囲む必要があります。  
   

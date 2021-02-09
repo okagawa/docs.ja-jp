@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DataTable の移動'
 title: DataTable の移動
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 202026a1-ec79-435e-b507-12a77f5011b2
-ms.openlocfilehash: 9b7ed4ef1dbe141d8f6a1b6c6b9af2fd89e6c7af
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0564af241adc082ef1b736f2e4a561328fbcc976
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148309"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651783"
 ---
 # <a name="navigating-datatables"></a>DataTable の移動
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:テキスト ファイルからデータを読み取る (Visual Basic)'
 title: '方法: テキスト ファイルからデータを読み取る'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - examples [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 735fe9d7-0f7a-4185-ba02-f35e580ec4b8
-ms.openlocfilehash: 0d99209ed123686355e8d49c82ba23f94084f895
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 76f8bbbb7a0064818d324fc6dd9f1f37f7271401
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411617"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797433"
 ---
 # <a name="how-to-read-from-text-files-in-visual-basic"></a>方法: テキスト ファイルからデータを読み取る (Visual Basic)
 
@@ -22,7 +23,7 @@ ms.locfileid: "84411617"
 読み取るファイルで拡張文字が使用されている場合、ファイル エンコーディングを指定する必要があります。
 
 > [!NOTE]
-> ファイルから 1 回に 1 行のテキストを読み取るには、<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.OpenTextFileReader%2A> オブジェクトの `My.Computer.FileSystem` メソッドを使用します。 `OpenTextFileReader` メソッドは <xref:System.IO.StreamReader> オブジェクトを返します。 <xref:System.IO.StreamReader.ReadLine%2A> オブジェクトの `StreamReader` メソッドを使用して、ファイルから 1 回に 1 行を読み取ることができます。 <xref:System.IO.StreamReader.EndOfStream%2A> オブジェクトの `StreamReader` メソッドを使用して、ファイルの最後かどうかをテストできます。
+> ファイルから 1 回に 1 行のテキストを読み取るには、<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.OpenTextFileReader%2A> オブジェクトの `My.Computer.FileSystem` メソッドを使用します。 `OpenTextFileReader` メソッドが <xref:System.IO.StreamReader> オブジェクトを返します。 <xref:System.IO.StreamReader.ReadLine%2A> オブジェクトの `StreamReader` メソッドを使用して、ファイルから 1 回に 1 行を読み取ることができます。 <xref:System.IO.StreamReader.EndOfStream%2A> オブジェクトの `StreamReader` メソッドを使用して、ファイルの最後かどうかをテストできます。
 
 ## <a name="to-read-from-a-text-file"></a>テキスト ファイルを読み取るには
 

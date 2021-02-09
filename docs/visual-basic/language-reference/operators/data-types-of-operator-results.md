@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 演算子の結果のデータ型 (Visual Basic)'
 title: 演算子の結果のデータ型
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: f7a1249cec159f98ede48b960fadc5e2ff4a75f3
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: ebc99d5d735c30124feb52232e28a5fe6fe5fd50
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867104"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773928"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>演算子の結果のデータ型 (Visual Basic)
 
@@ -63,7 +64,7 @@ Visual Basic では、オペランドのデータ型に基づいて、演算結�
 ||||||  
 |---|---|---|---|---|  
 ||`Decimal`|`Single`|`Double`|任意の整数型|  
-|`Decimal`|Decimal (10 進数型)|Single|Double|Decimal (10 進数型)|  
+|`Decimal`|Decimal (10 進数型)|Single|Double|Decimal|  
 |`Single`|Single|Single|Double|Single|  
 |`Double`|Double|Double|Double|Double|  
 |任意の整数型|Decimal (10 進数型)|Single|Double|Double|  
@@ -102,7 +103,7 @@ Visual Basic では、オペランドのデータ型に基づいて、演算結�
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`<<`、`>>`|Short|SByte|Byte|Short|UShort|整数型|UInteger|Long|ULong|  
+|`<<`, `>>`|Short|SByte|Byte|Short|UShort|整数型|UInteger|Long|ULong|  
   
  左オペランドが `Decimal`、`Single`、`Double`、または `String` の場合、演算前に Visual Basic により `Long` への変換が試行され、結果のデータ型は `Long` になります。 右オペランド (ビット位置のシフト数) は `Integer` であるか、`Integer` に拡大変換される型である必要があります。  
   

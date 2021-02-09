@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 型指定されたデータセットのクエリを実行する'
 title: 型指定された DataSet のクエリ
 ms.date: 08/15/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: ad712fa1-2baf-462a-b163-574cce6d376a
-ms.openlocfilehash: 55714c4dae73cd17a849cc35681797dfa4266e3b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5bcf8bb587a0ed0eaca1bbe9b3a7d7143757780e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782968"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723700"
 ---
 # <a name="query-typed-datasets"></a>型指定されたデータセットのクエリを実行する
 
@@ -18,7 +19,7 @@ ms.locfileid: "70782968"
 
 LINQ to DataSet では、型指定された <xref:System.Data.DataSet> に対するクエリもサポートされています。 型指定された <xref:System.Data.DataSet> では、列データにアクセスするために、ジェネリック メソッドの <xref:System.Data.DataRowExtensions.Field%2A> または <xref:System.Data.DataRowExtensions.SetField%2A> を使用する必要はありません。 <xref:System.Data.DataSet> に型情報が含まれているため、プロパティ名をコンパイル時に利用できます。 LINQ to DataSet では、適切な型として列の値にアクセスできるため、実行時ではなくコードのコンパイル時に型の不一致エラーがキャッチされます。
 
-型指定された <xref:System.Data.DataSet> に対してクエリを実行するには、Visual Studio の**データセット デザイナー**を使用してあらかじめクラスを生成しておく必要があります。 詳しくは、「[データセットを作成および構成する](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio)」をご覧ください。
+型指定された <xref:System.Data.DataSet> に対してクエリを実行するには、Visual Studio の **データセット デザイナー** を使用してあらかじめクラスを生成しておく必要があります。 詳しくは、「[データセットを作成および構成する](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio)」をご覧ください。
 
 ## <a name="example"></a>例
 

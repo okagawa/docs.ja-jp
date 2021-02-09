@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: CLR メソッドと正規関数とのマッピング'
 title: CLR メソッドと正規関数とのマッピング
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
-ms.openlocfilehash: 6f14ad8d9e8f919fe820447cc991b102319b38d5
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3a082f0b9bce63330e113e6ae9f50d15d71ce727
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251225"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697076"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>CLR メソッドと正規関数とのマッピング
 

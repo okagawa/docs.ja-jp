@@ -1,14 +1,15 @@
 ---
+description: '詳細情報: SQL Server データ型と ADO.NET'
 title: SQL Server データ型と ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: db4618ac624ea8401cab682a8c21d8f23c253d05
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 841fa5864bf54b5e4fc4dc24dab64e6ac1435c7e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155459"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767298"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server データ型と ADO.NET
 
@@ -53,7 +54,7 @@ SQL Server と .NET Framework は異なる型システムに基づいている�
  `SqlTypes` 名前空間およびそのすべてのメンバーについて説明します。  
   
  <xref:System.Data.SqlDbType>  
- `SqlDbType` 列挙体およびそのすべてのメンバーについて説明します。  
+ `SqlDbType` 列挙型およびそのすべてのメンバーについて説明します。  
   
  <xref:System.Data.DbType>  
  `DbType` 列挙型およびそのすべてのメンバーについて説明します。  

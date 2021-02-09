@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:レジストリ キーを作成し、その値を設定する (Visual Basic)'
 title: '方法: レジストリ キーを作成し、その値を設定する'
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: b51a14e5e9c69078330f5b2161f74cff8e4da332
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 73a6f5b2a092bb05df704fe6b9954ccbe13b5d90
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363449"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797732"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>方法: レジストリ キーを作成し、その値を設定する (Visual Basic)
 
@@ -74,7 +75,7 @@ Web アプリケーションからレジストリを読み取る際、現在の�
 
 このプロセスを実行するには、アセンブリに対して <xref:System.Security.Permissions.RegistryPermission> クラスで特権レベルが許可されている必要があります。 部分的に信頼されたコンテキストで実行している場合、プロセスは、特権がないために例外をスローする可能性があります。 同様に、ユーザーには、設定に対する作成や書き込みを行うための適切な ACL が必要です。 たとえば、コード アクセス セキュリティのアクセス許可を持つローカル アプリケーションには、オペレーティング システムのアクセス許可がない可能性があります。 詳しくは、「[コード アクセス セキュリティの基礎](../../../../framework/misc/code-access-security-basics.md)」をご覧ください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>

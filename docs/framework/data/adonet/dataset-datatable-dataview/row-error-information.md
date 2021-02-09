@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 行エラー情報'
 title: 行エラー情報
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-ms.openlocfilehash: 8673b7fbc2e4238f7047698376c53af991de9f1b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d3eb8b20893ad47720ebb03ad4ab61940f014bd3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181168"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651692"
 ---
 # <a name="row-error-information"></a>行エラー情報
 

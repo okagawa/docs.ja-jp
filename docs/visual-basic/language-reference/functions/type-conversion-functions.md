@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: データ型変換関数 (Visual Basic)'
 title: CString
 ms.date: 10/24/2018
 f1_keywords:
@@ -81,12 +82,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: 5c0cfae01da02222d0827e81ec1ed35ce353ead1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c2e701b522bbeb32f4f6f448acd78e09b0616f46
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415376"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731085"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>データ型変換関数 (Visual Basic)
 
@@ -141,7 +142,7 @@ CUShort(expression)
 |`CULng`|[ULong データ型](../data-types/ulong-data-type.md)|<xref:System.UInt64.MinValue?displayProperty=nameWithType> (0) から <xref:System.UInt64.MaxValue?displayProperty=nameWithType> (18,446,744,073,709,551,615)。小数部は丸められます。<sup>1</sup><br/><br/>Visual Basic 15.8 以降、Visual Basic では、`CULng` 関数による浮動小数点から符号なし長整数への変換のパフォーマンスが最適化されます。詳細については、「[解説](#remarks)」セクションを参照してください。 例については、「[CInt の例](#cint-example)」セクションを参照してください。|
 |`CUShort`|[UShort データ型](../data-types/ushort-data-type.md)|<xref:System.UInt16.MinValue?displayProperty=nameWithType> (0) から <xref:System.UInt16.MaxValue?displayProperty=nameWithType> (65,535) (符号なし)。小数部は丸められます。<sup>1</sup><br/><br/>Visual Basic 15.8 以降、Visual Basic では、`CUShort` 関数による浮動小数点から符号なし 16 ビット整数への変換のパフォーマンスが最適化されます。詳細については、「[解説](#remarks)」セクションを参照してください。 例については、「[CInt の例](#cint-example)」セクションを参照してください。|
 
-<sup>1</sup> 小数部は、*銀行型丸め*と呼ばれる特殊な種類の丸めの対象となる場合があります。 詳細については、「解説」を参照してください。
+<sup>1</sup> 小数部は、*銀行型丸め* と呼ばれる特殊な種類の丸めの対象となる場合があります。 詳細については、「解説」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
@@ -181,13 +182,13 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 
 - **小数部。** 非整数値を整数型に変換する場合、整数変換関数 (`CByte`、`CInt`、`CLng`、`CSByte`、`CShort`、`CUInt`、`CULng`、および `CUShort`) で、小数部を削除し、値を最も近い整数に丸めます。
 
-     小数部がちょうど 0.5 の場合、整数変換関数では、最も近い偶数の整数に丸められます。 たとえば、0.5 は 0 に丸められ、1.5 と 2.5 は両方とも 2 に丸められます。 これは、*銀行型丸め*と呼ばれることもあり、その目的は、そのような多数の数値を加算するときに累積する可能性があるバイアスを補正することです。
+     小数部がちょうど 0.5 の場合、整数変換関数では、最も近い偶数の整数に丸められます。 たとえば、0.5 は 0 に丸められ、1.5 と 2.5 は両方とも 2 に丸められます。 これは、*銀行型丸め* と呼ばれることもあり、その目的は、そのような多数の数値を加算するときに累積する可能性があるバイアスを補正することです。
 
      `CInt` と `CLng` は、<xref:Microsoft.VisualBasic.Conversion.Int%2A> 関数や <xref:Microsoft.VisualBasic.Conversion.Fix%2A> 関数とは異なり、数値の小数部を丸めるのではなく、切り捨てます。 さらに、`Fix` と `Int` は常に、渡された同じデータ型の値を返します。
 
 - **日付/時刻の変換。** <xref:Microsoft.VisualBasic.Information.IsDate%2A> 関数を使用して、値を日付と時刻に変換できるかどうかを判断します。 `CDate` は、日付リテラルと時刻リテラルを認識しますが、数値は認識しません。 Visual Basic 6.0 の `Date` 値を Visual Basic 2005 以降のバージョンの `Date` 値に変換するには、<xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> メソッドを使用できます。
 
-- **ニュートラル日付/時刻値。** [Date データ型](../data-types/date-data-type.md)には、常に日付と時刻の両方の情報が格納されます。 型変換の目的で、Visual Basic では、1/1/0001 (1 年の 1 月 1 日) を日付の*ニュートラル値*、00:00:00 (午前 0 時) を時刻のニュートラル値と見なします。 `Date` 値を文字列に変換する場合、`CStr` では、結果の文字列にニュートラル値が含まれません。 たとえば、`#January 1, 0001 9:30:00#` を文字列に変換した場合、結果は "9:30:00 AM" になります。日付情報は含まれません。 ただし、日付情報は元の `Date` 値には引き続き存在しているため、<xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> 関数などの関数を使用して回復できます。
+- **ニュートラル日付/時刻値。** [Date データ型](../data-types/date-data-type.md)には、常に日付と時刻の両方の情報が格納されます。 型変換の目的で、Visual Basic では、1/1/0001 (1 年の 1 月 1 日) を日付の *ニュートラル値*、00:00:00 (午前 0 時) を時刻のニュートラル値と見なします。 `Date` 値を文字列に変換する場合、`CStr` では、結果の文字列にニュートラル値が含まれません。 たとえば、`#January 1, 0001 9:30:00#` を文字列に変換した場合、結果は "9:30:00 AM" になります。日付情報は含まれません。 ただし、日付情報は元の `Date` 値には引き続き存在しているため、<xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> 関数などの関数を使用して回復できます。
 
 - **カルチャの感度。** 文字列に関連する型変換関数では、アプリケーションの現在のカルチャ設定に基づいて変換が実行されます。 たとえば、`CDate` では、システムのロケール設定に従って日付形式が認識されます。 ロケールの正しい順序で日、月、年を指定する必要があります。そうしないと、日付が正しく解釈されない場合があります。 "Wednesday" など、曜日の文字列が含まれている場合、長い日付形式は認識されません。
 
@@ -283,7 +284,7 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 
 [!code-vb[VbVbalrFunctions#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#15)]
 
-`CStr` では常に、現在のロケールの標準の短い形式 ("6/15/2003 4:35:47 PM" など) で `Date` 値がレンダリングされます。 ただし `CStr` では、日付の 1/1/0001 と時刻の 00:00:00 の*ニュートラル値*が含まれません。
+`CStr` では常に、現在のロケールの標準の短い形式 ("6/15/2003 4:35:47 PM" など) で `Date` 値がレンダリングされます。 ただし `CStr` では、日付の 1/1/0001 と時刻の 00:00:00 の *ニュートラル値* が含まれません。
 
 `CStr` によって返される値の詳細については、「[CStr 関数の戻り値](return-values-for-the-cstr-function.md)」を参照してください。
 

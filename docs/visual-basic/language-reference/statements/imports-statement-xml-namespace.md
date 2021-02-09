@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Imports ステートメント (XML 名前空間)'
 title: Imports ステートメント - XML 名前空間
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: a3184d68b0e4cdff5d4296a5a638e22b4e83bcde
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2ca285c9104c5a03b265dd15ce38a378e66d6916
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404538"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768962"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports ステートメント (XML 名前空間)
 
@@ -42,7 +43,7 @@ XML 名前空間プレフィックスは、同じ名前空間にある XML 要�
 
 名前空間プレフィックスを指定せずにグローバル XML 名前空間を定義した場合 (`Imports <xmlns="http://SomeNameSpace>"` など)、その名前空間は既定の XML 名前空間と見なされます。 既定の XML 名前空間は、名前空間を明示的に指定していない XML 要素リテラルまたは XML 属性軸プロパティに使用されます。 さらに既定の名前空間は、指定された名前空間が空の名前空間 (つまり、`xmlns=""`) の場合にも使用されます。 既定の XML 名前空間は、XML リテラルの XML 属性、または名前空間を持たない XML 属性軸プロパティには適用されません。
 
-XML リテラルに定義されている XML 名前空間は、*ローカル XML 名前空間*と呼ばれ、`Imports` ステートメントでグローバルとして定義されている XML 名前空間よりも優先されます。 `Imports` ステートメントで定義された XML 名前空間は、Visual Basic プロジェクトにインポートされた XML 名前空間よりも優先されます。 XML リテラルで XML 名前空間を定義している場合、そのローカル名前空間は埋め込み式に適用されません。
+XML リテラルに定義されている XML 名前空間は、*ローカル XML 名前空間* と呼ばれ、`Imports` ステートメントでグローバルとして定義されている XML 名前空間よりも優先されます。 `Imports` ステートメントで定義された XML 名前空間は、Visual Basic プロジェクトにインポートされた XML 名前空間よりも優先されます。 XML リテラルで XML 名前空間を定義している場合、そのローカル名前空間は埋め込み式に適用されません。
 
 グローバル XML 名前空間は .NET Framework 名前空間と同じスコープおよび定義ルールに従います。 そのため、.NET Framework 名前空間をインポート可能などこでも、`Imports` ステートメントを含めてグローバル XML 名前空間を定義できます。 これには、コード ファイルとプロジェクトレベルの両方でインポートされた名前空間が含まれます。 プロジェクトレベルでインポートされた名前空間については、「[[参照設定] ページ (プロジェクト デザイナー) (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)」を参照してください。
 

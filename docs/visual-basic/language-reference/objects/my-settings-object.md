@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: My.Settings オブジェクト'
 title: My.Settings オブジェクト
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: f3348e9eea5bdd7f4fd911150877c9aefdd66bcc
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 92323c5379d0c5a4dbf96cfdbe0becccc2bad7cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867292"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640603"
 ---
 # <a name="mysettings-object"></a>My.Settings オブジェクト
 
@@ -24,7 +25,7 @@ ms.locfileid: "90867292"
   
 ## <a name="properties"></a>プロパティ  
 
- `My.Settings` オブジェクトのプロパティを使用すると、アプリケーションの設定にアクセスできます。 設定を追加または削除するには、**設定デザイナー**を使用します。  
+ `My.Settings` オブジェクトのプロパティを使用すると、アプリケーションの設定にアクセスできます。 設定を追加または削除するには、**設定デザイナー** を使用します。  
   
  各設定には **[名前]** 、 **[型]** 、 **[スコープ]** 、および **[値]** が含まれ、これらの設定によって、各設定にアクセスするためのプロパティが `My.Settings` オブジェクトにどのように表示されるかが決まります。  
   

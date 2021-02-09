@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: BC36599:範囲変数の名前は、引数なしの簡易名または修飾名からのみ推論できます'
 title: 範囲変数の名前は、引数なしの簡易名または修飾名からのみ推論できます
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36599
 ms.assetid: 17763dbe-f74f-4ccb-8086-cb7e45ec4d12
-ms.openlocfilehash: 63990b7d37388057ff2cdb430d29878a1c7b39ba
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: b729b6786f9b7803a794b9a4e786d94fa41a57ec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162363"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792064"
 ---
 # <a name="bc36599-range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>BC36599:範囲変数の名前は、引数なしの簡易名または修飾名からのみ推論できます
 

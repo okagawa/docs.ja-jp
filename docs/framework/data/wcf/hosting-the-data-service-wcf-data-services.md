@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: データ サービスのホスティング (WCF Data Services)'
 title: データ サービスのホスティング (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: 5dfa1d9f02f660b55ecf6598ef5012174a1ba853
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 519adde3a3e054d68ff9a1b7acf7ff06c0ca7532
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172594"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765790"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>データ サービスのホスティング (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services を使用すると、Open Data Protocol (OData) フィードとしてデータを公開するデータ サービスを作成できます。 このデータ サービスは、<xref:System.Data.Services.DataService%601> から継承されたクラスとして定義されます。 このクラスは、OData からの要件に応じて、要求メッセージを処理し、データ ソースに基づいて更新し、応答メッセージを生成するための機能を提供します。 ただし、データ サービスは、HTTP 要求を受け付けるネットワーク ソケットにバインドしたり、このソケットでリッスンしたりすることはできません。 この機能要件のため、データ サービスはホスティング コンポーネントに依存します。
 

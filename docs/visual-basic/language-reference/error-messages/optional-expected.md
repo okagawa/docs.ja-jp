@@ -1,4 +1,5 @@
 ---
+description: "詳細情報: BC30202:'Optional' が必要です。"
 title: "'Optional' が必要です。"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30202
 ms.assetid: 6f75060c-2db4-4a79-b5d1-5780c09a74cd
-ms.openlocfilehash: 9c717cef2052722563e04595ef7a808ea103a75d
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 543dbf6226d4d298d46764ee506b55e770c91604
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92159821"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795548"
 ---
 # <a name="bc30202-optional-expected"></a>BC30202:'Optional' が必要です。
 

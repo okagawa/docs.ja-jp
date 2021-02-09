@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: AndAlso 演算子 (Visual Basic)'
 title: AndAlso 演算子
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-ms.openlocfilehash: aff4621b8f415b9441ad1edf537b9b0736892bb8
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: dcf6c2685bf8f9ffee27b00543786cd3b315b327
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874844"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774266"
 ---
 # <a name="andalso-operator-visual-basic"></a>AndAlso 演算子 (Visual Basic)
 
@@ -42,7 +43,7 @@ result = expression1 AndAlso expression2
   
  両方の式が `True` に評価される場合、`result` は `True` です。 次の表は、`result` の判定方法を示しています。  
   
-|`expression1` が次の場合|かつ、`expression2` が次の場合|`result` の値は次のとおり|  
+|`expression1` が次の場合|かつ、`expression2` が次の場合|`result` の値は次のようになります|  
 |---|---|---|  
 |`True`|`True`|`True`|  
 |`True`|`False`|`False`|  
@@ -73,7 +74,7 @@ result = expression1 AndAlso expression2
   
 ## <a name="see-also"></a>関連項目
 
-- [論理/ビット演算子 (Visual Basic)](logical-bitwise-operators.md)
+- [論理演算子とビット処理演算子 (Visual Basic)](logical-bitwise-operators.md)
 - [Visual Basic における演算子の優先順位](operator-precedence.md)
 - [機能別の演算子一覧](operators-listed-by-functionality.md)
 - [And 演算子](and-operator.md)

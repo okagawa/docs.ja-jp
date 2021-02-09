@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: Entity Framework データ プロバイダー'
 title: Entity Framework データ プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 5252e639-ff11-4818-82e7-07221ed6ae23
-ms.openlocfilehash: 8ab3946669eb0193c226a6f9691472b057539ff4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 439b04bd25684759d82b2187a324734fc44e6c04
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185198"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651055"
 ---
 # <a name="entity-framework-data-providers"></a>Entity Framework データ プロバイダー
 

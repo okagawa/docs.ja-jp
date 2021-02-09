@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Imports ステートメント (.NET 名前空間および型)'
 title: Imports ステートメント - .NET 名前空間および型
 ms.date: 07/20/2015
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - aliases [Visual Basic], import
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
-ms.openlocfilehash: 39fa4e74f973bcb575b5751c387c0b879f4e398d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 28b7608e250fdba9c39f0209154d5a3d8f725eea
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351066"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768975"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Imports ステートメント (.NET 名前空間および型)
 
@@ -39,7 +40,7 @@ Imports [ aliasname = ] namespace.element
 
 |用語|定義|
 |---|---|
-|`aliasname`|任意。 コードで完全修飾文字列の代わりに `namespace` を参照できる*インポート エイリアス*または名前。 「 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
+|`aliasname`|任意。 コードで完全修飾文字列の代わりに `namespace` を参照できる *インポート エイリアス* または名前。 「 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
 |`namespace`|必須です。 インポートする名前空間の完全修飾名。 任意のレベルに入れ子になった名前空間の文字列を指定できます。|
 |`element`|任意。 名前空間に宣言されているプログラミング要素の名前。 任意のコンテナー要素を指定できます。|
 
@@ -64,7 +65,7 @@ Imports System.Collections.Generic
 
 ## <a name="import-aliases"></a>インポート エイリアス
 
-*インポート エイリアス*では、名前空間または型のエイリアスを定義します。 インポート エイリアスは、1 つまたは複数の名前空間で宣言されている、同じ名前の項目を使用する必要がある場合に便利です。 詳細と例については、「[宣言された要素の参照](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)」の「要素名を修飾する」を参照してください。
+*インポート エイリアス* では、名前空間または型のエイリアスを定義します。 インポート エイリアスは、1 つまたは複数の名前空間で宣言されている、同じ名前の項目を使用する必要がある場合に便利です。 詳細と例については、「[宣言された要素の参照](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)」の「要素名を修飾する」を参照してください。
 
 モジュール レベルで `aliasname` と同じ名前のメンバーを宣言することはできません。 そうすると、Visual Basic コンパイラでは、宣言されたメンバーに対してのみ `aliasname` が使用され、それをインポート エイリアスとして認識されなくなります。
 

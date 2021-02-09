@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DataRelation の追加'
 title: DataRelation の追加
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a4a564fb-c1c4-4135-b6c2-b030e51195e4
-ms.openlocfilehash: 5fe2bd45e0abada1f9ec7071e3863da853479b51
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 56438c9b69fab71c4843582b6cfea50fa057eb44
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202384"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725221"
 ---
 # <a name="adding-datarelations"></a>DataRelation の追加
 

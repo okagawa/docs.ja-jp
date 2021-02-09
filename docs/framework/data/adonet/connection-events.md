@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 接続イベント'
 title: 接続イベント
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
-ms.openlocfilehash: fd935306a493bf5a20f5cd6cd61a175c02d8bbba
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: fcf131e41ce90db11e84fd241744e348f4ca739e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203762"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663808"
 ---
 # <a name="connection-events"></a>接続イベント
 

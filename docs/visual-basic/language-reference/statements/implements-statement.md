@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Implements ステートメント'
 title: Implements ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Implements statement [Visual Basic]
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-ms.openlocfilehash: b982057d2094f807b68d5190dfad388fb9a2c65a
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: aa53d1f3b4ba9d9111f5ffb09198a11511f8d9e9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873231"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768988"
 ---
 # <a name="implements-statement"></a>Implements ステートメント
 

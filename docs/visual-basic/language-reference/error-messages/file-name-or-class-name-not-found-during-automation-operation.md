@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: オートメーションの操作中にファイル名またはクラス名を見つけられませんでした。(Visual Basic)'
 title: オートメーションの操作中にファイル名またはクラス名を見つけられませんでした。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID432
 ms.assetid: 6883c208-de5e-44da-a525-b50122e5a170
-ms.openlocfilehash: b65dc38aac6f9ad1d37efd7be35d4ef593cc9091
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: ba082fd477958ad2c8113ccfe1d63d76157c8922
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874205"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796276"
 ---
 # <a name="file-name-or-class-name-not-found-during-automation-operation-visual-basic"></a>オートメーションの操作中にファイル名またはクラス名を見つけられませんでした。(Visual Basic)
 

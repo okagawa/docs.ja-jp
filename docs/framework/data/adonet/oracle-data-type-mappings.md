@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: Oracle データ型のマッピング'
 title: Oracle データ型のマッピング
 ms.date: 03/30/2017
 ms.assetid: ec34ae21-bbbb-4adb-b672-83865e2a8451
-ms.openlocfilehash: 71a85f82ea3535cf7aec8dd92fbda6726a36fb81
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1b5a130916a54049518b8b335fbf384d99035090
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166574"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754369"
 ---
 # <a name="oracle-data-type-mappings"></a>Oracle データ型のマッピング
 

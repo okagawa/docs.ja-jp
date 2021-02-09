@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DataView による並べ替え (LINQ to DataSet)'
 title: DataView による並べ替え (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: d80c00a4b06a31f61a521e7206c204c02106748a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ac07e5bc2c74a5724a4497d630d7352694ac9a7a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175279"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718682"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>DataView による並べ替え (LINQ to DataSet)
 

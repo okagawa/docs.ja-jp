@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: チュートリアル: 簡単なオブジェクト モデルとクエリ (Visual Basic)'
 title: 'チュートリアル: 簡単なオブジェクト モデルとクエリ (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: c21a187739ba19be2dc8e89b4dddc94ad799f036
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: def2fecf0d6d97841ebd47a1d675f85341053d39
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792121"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791804"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>チュートリアル: 簡単なオブジェクト モデルとクエリ (Visual Basic)
 
@@ -61,11 +62,11 @@ ms.locfileid: "70792121"
 
 ## <a name="adding-linq-references-and-directives"></a>LINQ の参照とディレクティブを追加する
 
-このチュートリアルで使用するアセンブリは、既定ではプロジェクトにインストールされていない場合があります。 `System.Data.Linq` がプロジェクトの参照 (**ソリューション エクスプローラー**で **[すべてのファイルを表示]** をクリックし、 **[参照設定]** ノードを展開) に表示されていない場合は、以下の手順に従って追加します。
+このチュートリアルで使用するアセンブリは、既定ではプロジェクトにインストールされていない場合があります。 `System.Data.Linq` がプロジェクトの参照 (**ソリューション エクスプローラー** で **[すべてのファイルを表示]** をクリックし、 **[参照設定]** ノードを展開) に表示されていない場合は、以下の手順に従って追加します。
 
 ### <a name="to-add-systemdatalinq"></a>System.Data.Linq を追加するには
 
-1. **ソリューション エクスプローラー**で、 **[参照設定]** を右クリックし、 **[参照の追加]** をクリックします。
+1. **ソリューション エクスプローラー** で、 **[参照設定]** を右クリックし、 **[参照の追加]** をクリックします。
 
 2. **[参照の追加]** ダイアログ ボックスで、 **[.NET]** をクリックし、System.Data.Linq アセンブリをクリックします。次に、 **[OK]** をクリックします。
 

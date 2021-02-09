@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 方法:EdmGen.exe を使用してオブジェクトレイヤー コードを生成する'
 title: '方法: EdmGen.exe を使用してオブジェクトレイヤー コードを生成する'
 ms.date: 03/30/2017
 ms.assetid: c44d2ebe-f66f-42cb-9741-4a3f0c2dcffb
-ms.openlocfilehash: a243a588dcb6f7e7001de331cb9011a23ee2fdbe
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1c1f614247f10c8819709b9494fb1ec04271b634
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198224"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697466"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-object-layer-code"></a>方法: EdmGen.exe を使用してオブジェクトレイヤー コードを生成する
 

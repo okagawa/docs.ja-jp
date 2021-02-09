@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Do...Loop ステートメント (Visual Basic)'
 title: Do...Loop ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - loops, exiting
 - Loop keyword [Visual Basic], Do...Loop statement
 ms.assetid: 892f9096-b3e2-4aee-834d-83bc4e2c379d
-ms.openlocfilehash: 86a702aefeea1e5e359a579a3f29e9c06f1c619c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d170074c44d1692517f6b51abd4a6b3d005941c0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90865935"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795184"
 ---
 # <a name="doloop-statement-visual-basic"></a>Do...Loop ステートメント (Visual Basic)
 
@@ -58,7 +59,7 @@ Loop { While | Until } condition
 |`Do`|必須です。 `Do` ループの定義を開始します。|  
 |`While`|`Until` を使用しない場合に、必ず指定します。 `condition` が `False` になるまでループを繰り返します。|  
 |`Until`|`While` を使用しない場合に、必ず指定します。 `condition` が `True` になるまでループを繰り返します。|  
-|`condition`|任意。 `Boolean` 式。 `condition` が `Nothing` の場合、Visual Basic はそれを `False` として扱います。|  
+|`condition`|任意。 `Boolean` 式。 `condition` が `Nothing` の場合、Visual Basic ではそれを `False` として扱います。|  
 |`statements`|任意。 `condition` が `True` である間、またはその状態になるまで繰り返される、1 つまたは複数のステートメント。|  
 |`Continue Do`|任意。 `Do` ループの次の反復に制御を渡します。|  
 |`Exit Do`|任意。 `Do` ループから制御を移します。|  
@@ -83,7 +84,7 @@ Loop { While | Until } condition
 
  [Exit Do](exit-statement.md) ステートメントを使用すると、別の方法で `Do…Loop` を終了させることができます。 `Exit Do` は `Loop` ステートメントの次のステートメントに制御を直ちに渡します。  
   
- `Exit Do` は、何らかの条件を評価した (`If...Then...Else` 構造など) 後によく使用されます。 誤った値や終了要求など、反復処理を続行することが不要であるか、不可能である状況が検出された場合に、ループを終了させることができます。 `Exit Do` の用途の 1 つとしては、*無限ループ*を引き起こす可能性がある条件をテストすることがあります。無限ループは、膨大な回数または無限に実行されるループです。 `Exit Do` を使用すると、ループを終了できます。  
+ `Exit Do` は、何らかの条件を評価した (`If...Then...Else` 構造など) 後によく使用されます。 誤った値や終了要求など、反復処理を続行することが不要であるか、不可能である状況が検出された場合に、ループを終了させることができます。 `Exit Do` の用途の 1 つとしては、*無限ループ* を引き起こす可能性がある条件をテストすることがあります。無限ループは、膨大な回数または無限に実行されるループです。 `Exit Do` を使用すると、ループを終了できます。  
   
  `Do…Loop` 内の任意の場所に、任意の数の `Exit Do` ステートメントを含めることができます。  
   
@@ -109,7 +110,7 @@ Loop { While | Until } condition
   
 ## <a name="example"></a>例  
 
- 次の例では、テキスト ファイル内のすべての行を読み取ります。 <xref:System.IO.File.OpenText%2A> メソッドは、ファイルを開いて、文字を読み取る <xref:System.IO.StreamReader> を返します。 `Do...Loop` 条件では、`StreamReader` の <xref:System.IO.StreamReader.Peek%2A> メソッドによって、追加の文字があるかどうかが判別されます。  
+ 次の例では、テキスト ファイル内のすべての行を読み取っています。 <xref:System.IO.File.OpenText%2A> メソッドは、ファイルを開いて、文字を読み取る <xref:System.IO.StreamReader> を返します。 `Do...Loop` 条件では、`StreamReader` の <xref:System.IO.StreamReader.Peek%2A> メソッドによって、追加の文字があるかどうかが判別されます。  
   
  [!code-vb[VbVbalrStatements#134](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#134)]  
   

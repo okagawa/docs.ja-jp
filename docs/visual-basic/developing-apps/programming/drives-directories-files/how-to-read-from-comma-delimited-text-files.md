@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法: Visual Basic でコンマ区切りのテキスト ファイルを読み取る'
 title: '方法: コンマ区切りのテキスト ファイルを読み取る'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - reading text files [Visual Basic], comma-delimited
 - text files [Visual Basic], reading
 ms.assetid: a8413fe4-0dba-49c8-8692-44fb67a9ec4f
-ms.openlocfilehash: ba62a0226a1a83326cbc7ab393d135763a7c7cb2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dc4d4d5a7639ab7b5aa342aa8646b02985e40797
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411643"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797485"
 ---
 # <a name="how-to-read-from-comma-delimited-text-files-in-visual-basic"></a>方法: Visual Basic でコンマ区切りのテキスト ファイルを読み取る
 
@@ -20,7 +21,7 @@ ms.locfileid: "84411643"
   
 ### <a name="to-parse-a-comma-delimited-text-file"></a>コンマ区切りテキスト ファイルを解析するには  
   
-1. 新しい `TextFieldParser` を作成します。 次のコードは、`MyReader` という名前の `TextFieldParser` を作成し、`test.txt` ファイルを開きます。  
+1. 新しい `TextFieldParser` を作成します。 次のコードで `MyReader` という名前の `TextFieldParser` を作成し、`test.txt` ファイルを開きます。  
   
      [!code-vb[VbFileIORead#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#15)]  
   
@@ -56,7 +57,7 @@ ms.locfileid: "84411643"
   
 - ファイルにアクセスする十分なアクセス許可がユーザーにない (<xref:System.UnauthorizedAccessException>)。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
 - [方法: 固定幅のテキスト ファイルを読み取る](how-to-read-from-fixed-width-text-files.md)

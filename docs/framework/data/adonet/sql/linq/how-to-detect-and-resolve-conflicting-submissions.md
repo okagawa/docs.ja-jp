@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:送信の競合を検出および解決する'
 title: '方法: 送信の競合を検出および解決する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 91e27206-01fb-4c7a-8afc-1383a6ac5067
-ms.openlocfilehash: 96e96208d9bb28092701164e6cd5943ef81515a5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7ccfc9aeba8a21c3f5e950569d7650af087416a4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91147724"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739041"
 ---
 # <a name="how-to-detect-and-resolve-conflicting-submissions"></a>方法: 送信の競合を検出および解決する
 

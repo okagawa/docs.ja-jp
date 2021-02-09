@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: My.Forms オブジェクト'
 title: My.Forms オブジェクト
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-ms.openlocfilehash: 001f6fbfae2467ea0af5e98ca041b694d1e7b8f9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 18ef8ee475163ff7eb177dfee590d959a242a88e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84372441"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774409"
 ---
 # <a name="myforms-object"></a>My.Forms オブジェクト
 
@@ -35,7 +36,7 @@ ms.locfileid: "84372441"
 `My.Forms` オブジェクトの各プロパティにより、現在のプロジェクトのフォームのインスタンスにアクセスできます。 プロパティの名前は、プロパティがアクセスするフォームの名前と同じになり、プロパティの型はフォームの型と同じになります。
 
 > [!NOTE]
-> 名前の競合がある場合、フォームにアクセスするためのプロパティ名は、*RootNamespace*_*Namespace*\_*FormName* になります。 たとえば、`Form1.` という名前の 2 つのフォームを考えてみます。これらのフォームのいずれかがルート名前空間 `WindowsApplication1` と名前空間 `Namespace1` にある場合、`My.Forms.WindowsApplication1_Namespace1_Form1` によってそのフォームにアクセスします。
+> 名前の競合がある場合、フォームにアクセスするためのプロパティ名は、*RootNamespace* _ *Namespace*\_*FormName* になります。 たとえば、`Form1.` という名前の 2 つのフォームを考えてみます。これらのフォームのいずれかがルート名前空間 `WindowsApplication1` と名前空間 `Namespace1` にある場合、`My.Forms.WindowsApplication1_Namespace1_Form1` によってそのフォームにアクセスします。
 
 `My.Forms` オブジェクトでは、起動時に作成されたアプリケーションのメイン フォームのインスタンスにアクセスできます。 その他のすべてのフォームの場合、`My.Forms` オブジェクトによって、アクセス時にフォームの新しいインスタンスが作成され、格納されます。 その後、そのプロパティにアクセスしようとすると、フォームのインスタンスが返されます。
 

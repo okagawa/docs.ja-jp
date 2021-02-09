@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: データベースとの通信'
 title: データベースとの通信
 ms.date: 03/30/2017
 ms.assetid: 659d9817-bcaa-457f-9639-169394177274
-ms.openlocfilehash: eddd19bea4384b8958950f83c8afb848a6c41efc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c9871ee5ba829700d3ddc39663e9a36db2e3dd41
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161413"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712572"
 ---
 # <a name="communicating-with-the-database"></a>データベースとの通信
 

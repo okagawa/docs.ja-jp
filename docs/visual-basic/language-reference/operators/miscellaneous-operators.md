@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: その他の演算子 (Visual Basic)'
 title: その他の演算子
 ms.date: 10/18/2018
 helpviewer_keywords:
 - operators [Visual Basic]
 - operators [Visual Basic], miscellaneous
 ms.assetid: 2423b3c5-fc3f-479c-bcd2-2c6ebe92814f
-ms.openlocfilehash: 6aa6887b27f332e0c3084c70b3928cc3954266e0
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 042c9c0c999017482ac8b83a63b2bfb36842829e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866754"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665459"
 ---
 # <a name="miscellaneous-operators-visual-basic"></a>その他の演算子 (Visual Basic)
 

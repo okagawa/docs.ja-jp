@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: SQL Server と System.Transactions の統合'
 title: SQL Server と System.Transactions の統合
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 5adf40f96854e08736cdef77300d69e452de5eea
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 977ff18600256613dabc0212c2f7aa1bc2650408
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91191685"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766778"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>SQL Server と System.Transactions の統合
 

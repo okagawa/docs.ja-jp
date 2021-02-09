@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: データ ソースのデータの更新'
 title: データ ソースのデータの更新
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: 6b0234337c85ace0797d75b72560ccb55635daae
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a55d6a53f4607908fa279474419803eac3963909
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177268"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766570"
 ---
 # <a name="updating-data-in-a-data-source"></a>データ ソースのデータの更新
 

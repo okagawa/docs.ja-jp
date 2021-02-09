@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DataAdapter のイベント処理'
 title: DataAdapter のイベント処理
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: a2c2dc71cc9e5c445fd05534dad5ad47fd66f436
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 045a48ae545ad4354844dd451ff58618b760a9a8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194727"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723947"
 ---
 # <a name="handling-dataadapter-events"></a>DataAdapter のイベント処理
 

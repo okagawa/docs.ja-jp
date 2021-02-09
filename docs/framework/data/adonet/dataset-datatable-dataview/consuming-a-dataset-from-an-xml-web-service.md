@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: XML Web サービスからの DataSet の使用'
 title: XML Web サービスからの DataSet の使用
 ms.date: 07/14/2020
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: d4f4d5d34698fbb9a7986f4628b282d4425da3f7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3c9112d259d5a6450a968ba87b33c4072f6dc44c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554698"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725130"
 ---
 # <a name="consume-a-dataset-from-an-xml-web-service"></a>XML Web サービスからの DataSet の使用
 

@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: チュートリアル: データの操作 (Visual Basic)'
 title: 'チュートリアル: データの操作 (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: dbf18273e69ff0977f5d16ff179b8659865ef696
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 22bef61c294a92984446402063bf14b06f5b2b2d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164052"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729524"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>チュートリアル: データの操作 (Visual Basic)
 
@@ -71,11 +72,11 @@ ms.locfileid: "91164052"
   
 ## <a name="adding-linq-references-and-directives"></a>LINQ の参照とディレクティブを追加する  
 
- このチュートリアルで使用するアセンブリは、既定ではプロジェクトにインストールされていない場合があります。 `System.Data.Linq` がプロジェクトの参照 (**ソリューション エクスプローラー**で **[すべてのファイルを表示]** をクリックし、 **[参照設定]** ノードを展開) に表示されていない場合は、以下の手順に従って追加します。  
+ このチュートリアルで使用するアセンブリは、既定ではプロジェクトにインストールされていない場合があります。 `System.Data.Linq` がプロジェクトの参照 (**ソリューション エクスプローラー** で **[すべてのファイルを表示]** をクリックし、 **[参照設定]** ノードを展開) に表示されていない場合は、以下の手順に従って追加します。  
   
 #### <a name="to-add-systemdatalinq"></a>System.Data.Linq を追加するには  
   
-1. **ソリューション エクスプローラー**で、 **[参照設定]** を右クリックし、 **[参照の追加]** をクリックします。  
+1. **ソリューション エクスプローラー** で、 **[参照設定]** を右クリックし、 **[参照の追加]** をクリックします。  
   
 2. **[参照の追加]** ダイアログ ボックスで、 **[.NET]** をクリックし、System.Data.Linq アセンブリをクリックします。次に、 **[OK]** をクリックします。  
   

@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: サポートされていない式'
 title: サポートされていない式 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5e79da7e-e78a-413c-8fb0-f3f9cd84f579
 dev_langs:
 - sql
-ms.openlocfilehash: 956fe117eb0c59392c3999046bc70deaed268ac6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ceb57dc78f9685a79de987d15f7fd57a583b75a0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248781"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673298"
 ---
 # <a name="unsupported-expressions"></a>サポートされていない式
 

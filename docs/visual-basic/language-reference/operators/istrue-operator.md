@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IsTrue 演算子 (Visual Basic)'
 title: IsTrue 演算子
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - IsTrue operator [Visual Basic]
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
-ms.openlocfilehash: 2e67a4adabe58ab12d317ae6318c0a2fac29da7d
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 50b618c888ce988da5241041fb2f728e0a581c70
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866941"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665654"
 ---
 # <a name="istrue-operator-visual-basic"></a>IsTrue 演算子 (Visual Basic)
 
@@ -39,7 +40,7 @@ ms.locfileid: "90866941"
  `Boolean` または `IsTrue` 演算子への変換を定義していない場合、コンパイラはエラーを通知します。  
   
 > [!NOTE]
-> `IsTrue` 演算子は "*オーバーロード*" できます。つまり、オペランドがあるクラスまたは構造体の型を持っているときに、そのクラスまたは構造体はその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を必ず理解してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+> `IsTrue` 演算子は "*オーバーロード*" できます。つまり、オペランドがあるクラスまたは構造体の型を持っているときに、そのクラスまたは構造体はその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
 

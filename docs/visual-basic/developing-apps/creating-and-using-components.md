@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: Visual Basic でのコンポーネントの作成および使用'
 title: コンポーネントの作成および使用
 ms.date: 07/20/2015
 helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-ms.openlocfilehash: 106b8791ee5cb3db95759ccca2fddd799661ef3c
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: f59b4774556d95dcbc1befb16409d68a51c50535
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282068"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666590"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Visual Basic でのコンポーネントの作成および使用
 
@@ -17,7 +18,7 @@ ms.locfileid: "93282068"
   
  コンポーネントの重要な特徴の 1 つは、コンポーネントがデザイン可能であるということです。つまり、コンポーネントであるクラスは Visual Studio 統合開発環境で使用できます。 コンポーネントは、ツールボックスへの追加、フォームへのドラッグ アンド ドロップ、デザイン サーフェイスでの操作が可能です。 .NET には、コンポーネントのベースのデザイン時サポートが組み込まれています。 コンポーネントの開発者は、ベースのデザイン時機能を利用するために、追加の作業を行う必要はありません。  
   
- デザイン可能という点では、" *コントロール* " もコンポーネントに似ています。 ただし、コントロールにはユーザー インターフェイスが用意されているのに対し、コンポーネントには用意されていません。 コントロールは基本コントロール クラスである <xref:System.Windows.Forms.Control> または <xref:System.Web.UI.Control> から派生する必要があります。  
+ デザイン可能という点では、"*コントロール*" もコンポーネントに似ています。 ただし、コントロールにはユーザー インターフェイスが用意されているのに対し、コンポーネントには用意されていません。 コントロールは基本コントロール クラスである <xref:System.Windows.Forms.Control> または <xref:System.Web.UI.Control> から派生する必要があります。  
   
 ## <a name="when-to-create-a-component"></a>コンポーネントを作成する状況  
 
@@ -39,7 +40,7 @@ ms.locfileid: "93282068"
   
 - <xref:System.ComponentModel.Component>. <xref:System.ComponentModel.IComponent> インターフェイスの基本実装。 このクラスにより、アプリケーション間でオブジェクトの共有が可能になります。  
   
-- <xref:System.ComponentModel.MarshalByValueComponent>. <xref:System.ComponentModel.IComponent> インターフェイスの基本実装。  
+- <xref:System.ComponentModel.MarshalByValueComponent>。 <xref:System.ComponentModel.IComponent> インターフェイスの基本実装。  
   
 - <xref:System.ComponentModel.Container>. <xref:System.ComponentModel.IContainer> インターフェイスの基本実装。 このクラスは、0 個以上のコンポーネントをカプセル化します。  
   
@@ -47,17 +48,17 @@ ms.locfileid: "93282068"
   
 - <xref:System.ComponentModel.License>. すべてのライセンスの抽象基底クラスです。 ライセンスは、コンポーネントの特定のインスタンスに付与されます。  
   
-- <xref:System.ComponentModel.LicenseManager>. コンポーネントにライセンスを追加し、<xref:System.ComponentModel.LicenseProvider> を管理するためのプロパティとメソッドを提供します。  
+- <xref:System.ComponentModel.LicenseManager>。 コンポーネントにライセンスを追加し、<xref:System.ComponentModel.LicenseProvider> を管理するためのプロパティとメソッドを提供します。  
   
-- <xref:System.ComponentModel.LicenseProvider>. ライセンス プロバイダーを実装するための抽象基底クラスです。  
+- <xref:System.ComponentModel.LicenseProvider>。 ライセンス プロバイダーを実装するための抽象基底クラスです。  
   
 - <xref:System.ComponentModel.LicenseProviderAttribute>. クラスで使用する <xref:System.ComponentModel.LicenseProvider> クラスを指定します。  
   
  コンポーネントの説明や永続化に一般的に使用するクラスを次に示します。  
   
-- <xref:System.ComponentModel.TypeDescriptor>. 属性、プロパティ、イベントなど、コンポーネントの特性に関する情報を提供します。  
+- <xref:System.ComponentModel.TypeDescriptor>。 属性、プロパティ、イベントなど、コンポーネントの特性に関する情報を提供します。  
   
-- <xref:System.ComponentModel.EventDescriptor>. イベントに関する情報を提供します。  
+- <xref:System.ComponentModel.EventDescriptor>。 イベントに関する情報を提供します。  
   
 - <xref:System.ComponentModel.PropertyDescriptor>. プロパティに関する情報を提供します。  
   

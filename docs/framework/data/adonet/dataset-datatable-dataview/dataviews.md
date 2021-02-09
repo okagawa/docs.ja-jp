@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: DataView'
 title: DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: c5692fcfd1863642bcdf87cbd495d793bce0cbe4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: dfc57c2ff9108f71d4dfa75447afc5f0ee8b9e54
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203710"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652563"
 ---
 # <a name="dataviews"></a>DataView
 

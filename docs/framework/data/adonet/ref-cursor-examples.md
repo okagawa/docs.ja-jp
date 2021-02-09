@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: REF CURSOR の例'
 title: REF CURSOR の例
 ms.date: 03/30/2017
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
-ms.openlocfilehash: b45ef971ccb6b785988cc351d02be9e0844f6e11
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e7cb411778b325400d37511b082032e590b339c0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200538"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773226"
 ---
 # <a name="ref-cursor-examples"></a>REF CURSOR の例
 

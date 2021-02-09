@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CType 関数 (Visual Basic)'
 title: CType Function
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - CType function
 - conversions [Visual Basic], expression
 ms.assetid: dd4b29e7-6fa1-428c-877e-69955420bb72
-ms.openlocfilehash: 88d609146648fe1b0c3124b99a65e85293fc0707
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9732f52b40e5f762769ba5dc340c000e7e1ba17a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406431"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701262"
 ---
 # <a name="ctype-function-visual-basic"></a>CType 関数 (Visual Basic)
 
@@ -46,7 +47,7 @@ CType(expression, typename)
 
 実行時に変換が失敗すると、適切な例外がスローされます。 縮小変換が失敗した場合、最もよくスローされるのは <xref:System.OverflowException> です。 変換が定義されていない場合、<xref:System.InvalidCastException> がスローされます。 たとえば、これは、`expression` が `Object` 型で、実行時の型が `typename` への変換を持たない場合に起こります。
 
-`expression` または `typename` のデータ型が、定義したクラスまたは構造体の場合、そのクラスまたは構造体に `CType` を変換演算子として定義できます。 これにより、`CType` は*オーバーロードされた演算子*として機能します。 この方法を利用する場合、定義したクラスまたは構造体からの変換、またはこのクラスまたは構造体への変換の動作 (スローする例外など) を制御できます。
+`expression` または `typename` のデータ型が、定義したクラスまたは構造体の場合、そのクラスまたは構造体に `CType` を変換演算子として定義できます。 これにより、`CType` は *オーバーロードされた演算子* として機能します。 この方法を利用する場合、定義したクラスまたは構造体からの変換、またはこのクラスまたは構造体への変換の動作 (スローする例外など) を制御できます。
 
 ## <a name="overloading"></a>オーバーロード
 

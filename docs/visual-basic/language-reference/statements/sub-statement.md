@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Sub ステートメント (Visual Basic)'
 title: Sub ステートメント
 ms.date: 05/12/2018
 f1_keywords:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: e50b79c31c92ac116d6c82bcececba3340894d74
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9be40c8284c677a151e4b1665f0b49e5f852bf00
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404175"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740991"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub ステートメント (Visual Basic)
 

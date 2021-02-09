@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: コード アクセス セキュリティと ADO.NET'
 title: コード アクセス セキュリティ
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: c4c18e8026dc230db896103d29d40426dbd11f16
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e7a6054cd7c222c700f5a83e46f5b44bfee23248
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203840"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664003"
 ---
 # <a name="code-access-security-and-adonet"></a>コード アクセス セキュリティと ADO.NET
 

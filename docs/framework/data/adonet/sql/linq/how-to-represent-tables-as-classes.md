@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:クラスとしてテーブルを表す'
 title: '方法: クラスとしてテーブルを表す'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 84dda12b-88a2-4cd2-92b3-8db87b28d14c
-ms.openlocfilehash: c02922351909b097dc06085eefbcc0f131350505
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9ec5b7309d7d10eaa6e4da6cd6fe4b1d03df1dd9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166223"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723583"
 ---
 # <a name="how-to-represent-tables-as-classes"></a>方法: クラスとしてテーブルを表す
 

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 入れ子になっているスキーマ要素間の暗黙的なリレーションの割り当て'
 title: 入れ子になっているスキーマ要素間の暗黙的なリレーションの割り当て
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 32f8bf67242143098717b47c3b7aa175317ba274
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 418dd1210674b2c592cf96c6d369bc43f8dcab9a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201318"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652017"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>入れ子になっているスキーマ要素間の暗黙的なリレーションの割り当て
 
@@ -15,7 +16,7 @@ XML スキーマ言語定義 (XSD) スキーマでは、複数の複合型を入
   
 - 複合型 (親および子) それぞれに対して 1 つのテーブル。  
   
-- 親に一意制約がない場合、テーブル定義ごとに 1 つの、*TableName*_Id という名前の追加主キー列。*TableName* は親テーブルの名前です、  
+- 親に一意制約がない場合、テーブル定義ごとに 1 つの、*TableName* _Id という名前の追加主キー列。*TableName* は親テーブルの名前です、  
   
 - 追加された列を主キーとする、親テーブルに対する主キー制約 (**IsPrimaryKey** プロパティを **True** に設定することで)。 制約には、Constraint\# (\# は、1、2、3 など) という名前が付けられます。 たとえば、最初の制約の既定の名前は Constraint1 となります。  
   

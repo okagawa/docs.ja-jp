@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: フィードのカスタマイズ (WCF Data Services)'
 title: フィードのカスタマイズ (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
@@ -10,14 +11,16 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: bf25737d98a880ac720318de18b687b4df5b0708
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9c9e0ead05c446b293fd728c3720472529a0cf0c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172633"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765959"
 ---
 # <a name="feed-customization-wcf-data-services"></a>フィードのカスタマイズ (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services では、Open Data Protocol (OData) を使用してデータがフィードとして公開されます。 OData では、データ フィード用に Atom 形式と JavaScript Object Notation (JSON) 形式の両方がサポートされています。 Atom フィードを使用する場合、OData では、エンティティやリレーションシップなどのデータを XML 形式にシリアル化する標準の方法が提供されます。この XML 形式は、HTTP メッセージの本文に含めることができます。 OData では、エンティティに含まれるデータと Atom 要素間のエンティティとプロパティの既定のマッピングが定義されています。 詳細については、[OData のAtom 形式](https://www.odata.org/documentation/odata-version-2-0/atom-format/)に関するページを参照してください。  
   

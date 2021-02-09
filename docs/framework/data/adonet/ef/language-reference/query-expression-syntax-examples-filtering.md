@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: クエリ式の構文例:フィルター処理'
 title: クエリ式の構文例:フィルター処理
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c27cb89c-1c1d-4988-9f38-950eda3cb275
-ms.openlocfilehash: feb05c0813587f8801aadd8bf64c4700badb2330
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f8bc2d08f7a8916ccbd2884ff9a9af616b2118f6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152976"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99696231"
 ---
 # <a name="query-expression-syntax-examples-filtering"></a>クエリ式の構文例:フィルター処理
 

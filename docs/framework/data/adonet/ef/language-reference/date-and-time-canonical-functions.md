@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 日付と時刻の正規関数'
 title: 日付と時刻の正規関数
 ms.date: 03/30/2017
 ms.assetid: 9628b74f-1585-436a-b385-8b02ed0cdd63
-ms.openlocfilehash: 9b7650990232face3a7c3673a6fb789912acf15c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3c57edc613e5ef871aa3359ef7609e6c0892efc4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148283"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724792"
 ---
 # <a name="date-and-time-canonical-functions"></a>日付と時刻の正規関数
 
@@ -19,18 +20,18 @@ ms.locfileid: "91148283"
   
 |関数|説明|  
 |--------------|-----------------|  
-|`AddNanoseconds(expression,number)`|指定されたナノ秒数を表す `number` を `expression` に追加します。<br /><br /> **引数**<br /><br /> `expression`、`DateTime`、`DateTimeOffset`、または `Time`。<br /><br /> `number`: `Int32`。<br /><br /> **戻り値**<br /><br /> `expression` の型。|  
-|`AddMicroseconds(expression,number)`|指定されたマイクロ秒数を表す `number` を `expression` に追加します。<br /><br /> **引数**<br /><br /> `expression`、`DateTime`、`DateTimeOffset`、または `Time`。<br /><br /> `number`: `Int32`。<br /><br /> **戻り値**<br /><br /> `expression` の型。|  
-|`AddMilliseconds(expression,number)`|指定されたミリ秒数を表す `number` を `expression` に追加します。<br /><br /> **引数**<br /><br /> `expression`、`DateTime`、`DateTimeOffset`、または `Time`。<br /><br /> `number`: `Int32`。<br /><br /> **戻り値**<br /><br /> `expression` の型。|  
-|`AddSeconds(expression,number)`|指定された秒数を表す `number` を `expression` に追加します。<br /><br /> **引数**<br /><br /> `expression`、`DateTime`、`DateTimeOffset`、または `Time`。<br /><br /> `number`: `Int32`。<br /><br /> **戻り値**<br /><br /> `expression` の型。|  
-|`AddMinutes(expression,number)`|指定された分数を表す `number` を `expression` に追加します。<br /><br /> **引数**<br /><br /> `expression`、`DateTime`、`DateTimeOffset`、または `Time`。<br /><br /> `number`: `Int32`。<br /><br /> **戻り値**<br /><br /> `expression` の型。|  
-|`AddHours(expression,number)`|指定された時間数を表す `number` を `expression` に追加します。<br /><br /> **引数**<br /><br /> `expression`、`DateTime`、`DateTimeOffset`、または `Time`。<br /><br /> `number`: `Int32`。<br /><br /> **戻り値**<br /><br /> `expression` の型。|  
-|`AddDays(expression,number)`|指定された日数を表す `number` を `expression` に追加します。<br /><br /> **引数**<br /><br /> `expression`: `DateTime` または `DateTimeOffset`。<br /><br /> `number`: `Int32`。<br /><br /> **戻り値**<br /><br /> `expression` の型。|  
-|`AddMonths(expression,number)`|指定された月数を表す `number` を `expression` に追加します。<br /><br /> **引数**<br /><br /> `expression`: `DateTime` または `DateTimeOffset`。<br /><br /> `number`: `Int32`。<br /><br /> **戻り値**<br /><br /> `expression` の型。|  
-|`AddYears(expression,number)`|指定された年数を表す `number` を `expression` に追加します。<br /><br /> **引数**<br /><br /> `expression`: `DateTime` または `DateTimeOffset`。<br /><br /> `number`: `Int32`。<br /><br /> **戻り値**<br /><br /> `expression` の型。|  
-|`CreateDateTime(year,month,day,hour,minute,second)`|サーバーのタイム ゾーンでのサーバーの現在の日時として新しい `DateTime` 値を返します。<br /><br /> **引数**<br /><br /> `year`、`month`、`day`、`hour`、`minute`: `Int16` および `Int32`。<br /><br /> `second`: `Double`。<br /><br /> **戻り値**<br /><br /> `DateTime`。|  
-|`CreateDateTimeOffset(year,month,day,hour,minute,second,tzoffset)`|世界協定時刻 (UTC) を基準としたサーバーの現在の日時として新しい `DateTimeOffset` 値を返します。<br /><br /> **引数**<br /><br /> `year`、`month`、`day`、`hour`、`minute`、`tzoffset`: `Int32`。<br /><br /> `second`: `Double`。<br /><br /> **戻り値**<br /><br /> `DateTimeOffset`。|  
-|`CreateTime(hour,minute,second)`|現在の時刻として新しい `Time` 値を返します。<br /><br /> **引数**<br /><br /> `hour` および `minute`: `Int32`。<br /><br /> `second`: `Double`。<br /><br /> **戻り値**<br /><br /> `Time`。|  
+|`AddNanoseconds(expression,number)`|指定されたナノ秒数を表す `number` を `expression` に追加します。<br /><br /> **引数**<br /><br /> `expression`、`DateTime`、`DateTimeOffset`、または `Time`。<br /><br /> `number`: `Int32`.<br /><br /> **戻り値**<br /><br /> `expression` の型。|  
+|`AddMicroseconds(expression,number)`|指定されたマイクロ秒数を表す `number` を `expression` に追加します。<br /><br /> **引数**<br /><br /> `expression`、`DateTime`、`DateTimeOffset`、または `Time`。<br /><br /> `number`: `Int32`.<br /><br /> **戻り値**<br /><br /> `expression` の型。|  
+|`AddMilliseconds(expression,number)`|指定されたミリ秒数を表す `number` を `expression` に追加します。<br /><br /> **引数**<br /><br /> `expression`、`DateTime`、`DateTimeOffset`、または `Time`。<br /><br /> `number`: `Int32`.<br /><br /> **戻り値**<br /><br /> `expression` の型。|  
+|`AddSeconds(expression,number)`|指定された秒数を表す `number` を `expression` に追加します。<br /><br /> **引数**<br /><br /> `expression`、`DateTime`、`DateTimeOffset`、または `Time`。<br /><br /> `number`: `Int32`.<br /><br /> **戻り値**<br /><br /> `expression` の型。|  
+|`AddMinutes(expression,number)`|指定された分数を表す `number` を `expression` に追加します。<br /><br /> **引数**<br /><br /> `expression`、`DateTime`、`DateTimeOffset`、または `Time`。<br /><br /> `number`: `Int32`.<br /><br /> **戻り値**<br /><br /> `expression` の型。|  
+|`AddHours(expression,number)`|指定された時間数を表す `number` を `expression` に追加します。<br /><br /> **引数**<br /><br /> `expression`、`DateTime`、`DateTimeOffset`、または `Time`。<br /><br /> `number`: `Int32`.<br /><br /> **戻り値**<br /><br /> `expression` の型。|  
+|`AddDays(expression,number)`|指定された日数を表す `number` を `expression` に追加します。<br /><br /> **引数**<br /><br /> `expression`: `DateTime` または `DateTimeOffset`。<br /><br /> `number`: `Int32`.<br /><br /> **戻り値**<br /><br /> `expression` の型。|  
+|`AddMonths(expression,number)`|指定された月数を表す `number` を `expression` に追加します。<br /><br /> **引数**<br /><br /> `expression`: `DateTime` または `DateTimeOffset`。<br /><br /> `number`: `Int32`.<br /><br /> **戻り値**<br /><br /> `expression` の型。|  
+|`AddYears(expression,number)`|指定された年数を表す `number` を `expression` に追加します。<br /><br /> **引数**<br /><br /> `expression`: `DateTime` または `DateTimeOffset`。<br /><br /> `number`: `Int32`.<br /><br /> **戻り値**<br /><br /> `expression` の型。|  
+|`CreateDateTime(year,month,day,hour,minute,second)`|サーバーのタイム ゾーンでのサーバーの現在の日時として新しい `DateTime` 値を返します。<br /><br /> **引数**<br /><br /> `year`、`month`、`day`、`hour`、`minute`: `Int16` および `Int32`。<br /><br /> `second`: `Double`.<br /><br /> **戻り値**<br /><br /> `DateTime`。|  
+|`CreateDateTimeOffset(year,month,day,hour,minute,second,tzoffset)`|世界協定時刻 (UTC) を基準としたサーバーの現在の日時として新しい `DateTimeOffset` 値を返します。<br /><br /> **引数**<br /><br /> `year`、`month`、`day`、`hour`、`minute`、`tzoffset`: `Int32`。<br /><br /> `second`: `Double`.<br /><br /> **戻り値**<br /><br /> `DateTimeOffset`。|  
+|`CreateTime(hour,minute,second)`|現在の時刻として新しい `Time` 値を返します。<br /><br /> **引数**<br /><br /> `hour` および `minute`: `Int32`。<br /><br /> `second`: `Double`.<br /><br /> **戻り値**<br /><br /> `Time`。|  
 |`CurrentDateTime()`|サーバーのタイム ゾーンでのサーバーの現在の日時として `DateTime` 値を返します。<br /><br /> **戻り値**<br /><br /> `DateTime`。|  
 |`CurrentDateTimeOffset()`|現在の日付、時刻、およびオフセットを `DateTimeOffset` として返します。<br /><br /> **戻り値**<br /><br /> `DateTimeOffset`。|  
 |`CurrentUtcDateTime()`|UTS タイム ゾーンでのサーバーの現在の日時として <xref:System.DateTime> 値を返します。<br /><br /> **戻り値**<br /><br /> `DateTime`。|  

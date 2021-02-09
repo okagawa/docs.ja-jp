@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic における `My` 名前空間の拡張'
 title: My 名前空間の拡張
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
-ms.openlocfilehash: 2a7b0b84061fccd9a333a68e4a19477bd19ca4ff
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 896e85da14e6e8a417c93560b1d3b78a5954b769
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330310"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797966"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Visual Basic における `My` 名前空間の拡張
 
@@ -53,7 +54,7 @@ Visual Basic の `My` 名前空間は、アプリケーションやコンピュ�
 
 ## <a name="adding-events-to-custom-my-objects"></a>カスタムの `My` オブジェクトへのイベントの追加
 
-`My.Application` オブジェクトを使用して、`My` 名前空間の `MyApplication` 部分クラスを拡張することによって、カスタムの `My` オブジェクトのイベントを公開できます。 Windows ベースのプロジェクトの場合、**ソリューション エクスプローラー**でプロジェクトの **[マイ プロジェクト]** ノードをダブルクリックできます。 Visual Basic の**プロジェクト デザイナー**で、 **[アプリケーション]** タブをクリックし、 **[アプリケーション イベントの表示]** ボタンをクリックします。 *ApplicationEvents.vb* という名前の新しいファイルが作成されます。 これには、`MyApplication` クラスを拡張するための次のコードが含まれています。
+`My.Application` オブジェクトを使用して、`My` 名前空間の `MyApplication` 部分クラスを拡張することによって、カスタムの `My` オブジェクトのイベントを公開できます。 Windows ベースのプロジェクトの場合、**ソリューション エクスプローラー** でプロジェクトの **[マイ プロジェクト]** ノードをダブルクリックできます。 Visual Basic の **プロジェクト デザイナー** で、 **[アプリケーション]** タブをクリックし、 **[アプリケーション イベントの表示]** ボタンをクリックします。 *ApplicationEvents.vb* という名前の新しいファイルが作成されます。 これには、`MyApplication` クラスを拡張するための次のコードが含まれています。
 
 [!code-vb[VbVbcnExtendingMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#5)]
 

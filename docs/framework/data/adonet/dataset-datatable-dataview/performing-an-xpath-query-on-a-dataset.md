@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DataSet に対する XPath クエリの実行'
 title: DataSet に対する XPath クエリの実行
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: d7897815874f2e9de2f4c24d3c141d464a296b31
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9febcc545f86f048b2d693f8aa6558a1b7883a60
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201240"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651718"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>DataSet に対する XPath クエリの実行
 

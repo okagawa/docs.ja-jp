@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Shared (Visual Basic)'
 title: Shared
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: b51c88e1af3a720912af8ba6aaf8ae4016af9cfa
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 0cc671c67486d01026f2283837448db7b00c1a0a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990192"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700755"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 
@@ -24,7 +25,7 @@ ms.locfileid: "84990192"
 
 ## <a name="when-to-use-shared"></a>Shared を使用する場面
 
-クラスまたは構造体のメンバーを共有すると、各インスタンスが独自のコピーを維持する*非共有*とは異なり、すべてのインスタンスでそれを使用できるようになります。 共有は、変数の値をアプリケーション全体に適用する場合などに便利です。 この変数を `Shared` として宣言すると、すべてのインスタンスが同じストレージの場所にアクセスするため、1 つのインスタンスで変数の値が変更されると、すべてのインスタンスが更新された値にアクセスするようになります。
+クラスまたは構造体のメンバーを共有すると、各インスタンスが独自のコピーを維持する *非共有* とは異なり、すべてのインスタンスでそれを使用できるようになります。 共有は、変数の値をアプリケーション全体に適用する場合などに便利です。 この変数を `Shared` として宣言すると、すべてのインスタンスが同じストレージの場所にアクセスするため、1 つのインスタンスで変数の値が変更されると、すべてのインスタンスが更新された値にアクセスするようになります。
 
 共有によってメンバーのアクセス レベルが変更されることはありません。 たとえば、クラス メンバーには、共有とプライベート (クラス内からのみアクセス可能)、または非共有とパブリックを指定できます。 詳しくは、「[Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
 

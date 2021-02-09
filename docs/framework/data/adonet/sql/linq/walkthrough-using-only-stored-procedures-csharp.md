@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: チュートリアル: ストアド プロシージャのみを使用する (C#)'
 title: 'チュートリアル: ストアド プロシージャのみを使用する (C#)'
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: f980402c976db9ee327a7b726e36a0a4d9d6d73f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 89cb6da9ec4e8d144726b6e3575a32c04d6aeec0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792096"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791778"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>チュートリアル: ストアド プロシージャのみを使用する (C#)
 
@@ -84,7 +85,7 @@ ms.locfileid: "70792096"
 
 ### <a name="to-add-systemdatalinqdll"></a>System.Data.Linq.dll を追加するには
 
-1. **ソリューション エクスプローラー**で、 **[参照設定]** を右クリックし、 **[参照の追加]** をクリックします。
+1. **ソリューション エクスプローラー** で、 **[参照設定]** を右クリックし、 **[参照の追加]** をクリックします。
 
 2. **[参照の追加]** ダイアログ ボックスで、 **[.NET]** をクリックし、System.Data.Linq アセンブリをクリックします。次に、 **[OK]** をクリックします。
 
@@ -108,7 +109,7 @@ ms.locfileid: "70792096"
 
 ### <a name="to-create-the-database-connection"></a>データベース接続を作成するには
 
-1. **ソリューション エクスプローラー**で **Form1.cs** を右クリックし、 **[コードの表示]** をクリックします。
+1. **ソリューション エクスプローラー** で **Form1.cs** を右クリックし、 **[コードの表示]** をクリックします。
 
 2. `Form1` クラスに次のコードを入力します。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 表記規則とコード規則 (Visual Basic)'
 title: 表記規則とコード規則
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - conventions [Visual Basic], documentation
 - Visual Basic code, conventions
 ms.assetid: 1916cd81-ea9d-4faa-81f7-4a0d864b60f4
-ms.openlocfilehash: 0e36d9d61b0dd2701210ce614d15fd38f08f5401
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 44e8445bb56f4f0c8b2f4eedddecda46ffcebb68
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401356"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768806"
 ---
 # <a name="typographic-and-code-conventions-visual-basic"></a>表記規則とコード規則 (Visual Basic)
 
@@ -33,7 +34,7 @@ Visual Basic のドキュメントでは、次の表記規則とコード規則�
 |{ `Public` &#124; `Friend` &#124; `Private` }|構文で、2 つ以上の項目のいずれかを選択する必要がある場合、項目は中かっこで囲まれ、縦棒で区切られます。<br /><br /> 項目を 1 つだけ選択する必要があります。|  
 |[ `Protected` &#124; `Friend` ]|構文で、2 つ以上の項目から任意で選択できる場合、項目は角かっこで囲まれ、縦棒で区切られます。<br /><br /> 項目は自由に組み合わせて選択でき、項目をまったく選択しないこともできます。|  
 |[{ `ByVal` &#124; `ByRef` }]|構文で、項目を 1 つのみ選択できるが、項目を完全に省略することもできる場合、これらの項目は、中かっこで囲まれて角かっこで囲まれ、縦棒で区切られます。|  
-|*memberName*1、*memberName*2、*memberName*3|同じプレースホルダーの複数のインスタンスは、例に示すように、添字により区別されます。|  
+|*memberName* 1、*memberName* 2、*memberName* 3|同じプレースホルダーの複数のインスタンスは、例に示すように、添字により区別されます。|  
 |*memberName1*<br /><br /> ...<br /><br /> *memberNameN*|構文では、省略記号 (...) を使用して、省略記号の直前にある種類の項目の数が不定であることを示します。<br /><br /> コード内の省略記号は、わかりやすくするために省略されたコードを示します。|  
 |ESC、ENTER|キーボードのキー名とキー シーケンスは、すべて大文字で表示されます。|  
 |Alt + F1|各キー名の間にプラス記号 (+) が表示されている場合は、一方のキーを押しながらもう一方のキーを押す必要があります。 たとえば、ALT + F1 は、ALT キーを押しながら F1 キーを押すことを意味します。|  

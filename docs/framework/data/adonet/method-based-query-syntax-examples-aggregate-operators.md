@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: メソッド ベースのクエリ構文例:集計演算子 (LINQ to DataSet)'
 title: メソッド ベースのクエリ構文例:集計演算子 (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5ed5f01d-acb2-4dd4-be60-f04c2d570fa8
-ms.openlocfilehash: f702506e648c73dc179cf1755a467b13afce4bc6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a404cde84266d4ef8c2118dd07644b28417e159a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164663"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681605"
 ---
 # <a name="method-based-query-syntax-examples-aggregate-operators-linq-to-dataset"></a>メソッド ベースのクエリ構文例:集計演算子 (LINQ to DataSet)
 

@@ -1,18 +1,21 @@
 ---
+description: '詳細情報: 方法:Entity Framework プロバイダーでフィードをカスタマイズする (WCF Data Services)'
 title: '方法: Entity Framework プロバイダーでフィードをカスタマイズする (WCF Data Services)'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, customizing feeds
 ms.assetid: fd16272e-36f2-415e-850e-8a81f2b17525
-ms.openlocfilehash: 76cc8da052ee51157857418cd81088a523f95ea2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b2d2432065ee0982822d0f332744f988d80add12
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91186593"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765673"
 ---
 # <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a>方法: Entity Framework プロバイダーでフィードをカスタマイズする (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services では、データ サービス応答の Atom シリアル化をカスタマイズして、AtomPub プロトコルで定義されている未使用の要素にエンティティのプロパティをマップできます。 このトピックでは、Entity Framework を使用して、.edmx ファイルで定義されているデータ モデルのエンティティ型のマッピング属性を定義する方法について説明します。 詳細については、「[フィードのカスタマイズ](feed-customization-wcf-data-services.md)」を参照してください。  
   
@@ -20,7 +23,7 @@ WCF Data Services では、データ サービス応答の Atom シリアル化�
   
 ### <a name="to-manually-modify-the-northwindedmx-file-to-add-feed-customization-attributes"></a>Northwind.edmx ファイルを手動で変更してフィードのカスタマイズ属性を追加するには  
   
-1. **ソリューション エクスプローラー**で `Northwind.edmx` ファイルを右クリックして、 **[プログラムから開く]** をクリックします。  
+1. **ソリューション エクスプローラー** で `Northwind.edmx` ファイルを右クリックして、 **[プログラムから開く]** をクリックします。  
   
 2. **[Northwind.edmx を開くアプリケーションの選択]** ダイアログ ボックスで、 **[XML エディター]** を選択し、 **[OK]** をクリックします。  
   

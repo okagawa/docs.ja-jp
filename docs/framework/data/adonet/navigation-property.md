@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: ナビゲーション プロパティ'
 title: ナビゲーション プロパティ
 ms.date: 03/30/2017
 ms.assetid: d0bf1a6a-1d84-484c-b7c3-b410fd8dc0b1
-ms.openlocfilehash: eaf22ad4dd24b4bf046f14ccabd435a9ecd1776f
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 4655c8ef1b18972697e41fa1c7c6185945335aa1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094385"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786239"
 ---
 # <a name="navigation-property"></a>ナビゲーション プロパティ
 

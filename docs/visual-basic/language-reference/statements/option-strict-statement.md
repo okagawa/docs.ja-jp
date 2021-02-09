@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Option Strict Statement'
 title: Option Strict Statement
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: ab1094961e2bc3aed0e975e40369a5f5c1ba93eb
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: a128aca1bdaa6ce8bd4c4cd8e63e05348f00e4d4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873132"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741433"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 
@@ -109,7 +110,7 @@ Option Strict { On | Off }
   
 ## <a name="when-an-option-strict-statement-is-not-present"></a>Option Strict ステートメントが指定されていない場合  
 
- ソース コードに `Option Strict` ステートメントが含まれていない場合は、[[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) の **[Option strict]** 設定が使用されます。 **[コンパイル] ページ**には、エラーを生成する条件をさらに制御するための設定があります。  
+ ソース コードに `Option Strict` ステートメントが含まれていない場合は、[[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) の **[Option strict]** 設定が使用されます。 **[コンパイル] ページ** には、エラーを生成する条件をさらに制御するための設定があります。  
   
  コマンドライン コンパイラを使用している場合は、[-optionstrict](../../reference/command-line-compiler/optionstrict.md) コンパイラ オプションを使用して `Option Strict` の設定を指定できます。  
   
@@ -117,7 +118,7 @@ Option Strict { On | Off }
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
+1. **ソリューション エクスプローラー** でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
 2. **[コンパイル]** タブで、 **[Option Strict]** ボックスの値を設定します。  
   
@@ -147,19 +148,19 @@ Option Strict { On | Off }
   
 ## <a name="example"></a>例  
 
- 次の例は、縮小変換である暗黙の型変換によって発生するコンパイル時のエラーを示しています。 このカテゴリのエラーは、 **[コンパイル] ページ**の **[暗黙的な変換]** 条件に対応しています。  
+ 次の例は、縮小変換である暗黙の型変換によって発生するコンパイル時のエラーを示しています。 このカテゴリのエラーは、 **[コンパイル] ページ** の **[暗黙的な変換]** 条件に対応しています。  
   
  [!code-vb[VbVbalrStatements#161](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#161)]  
   
 ## <a name="example"></a>例  
 
- 次の例は、遅延バインディングによって発生したコンパイル時エラーを示しています。 このカテゴリのエラーは、 **[コンパイル] ページ**の **[遅延バインディングです。呼び出しが実行時に失敗する可能性があります]** 条件に対応しています。  
+ 次の例は、遅延バインディングによって発生したコンパイル時エラーを示しています。 このカテゴリのエラーは、 **[コンパイル] ページ** の **[遅延バインディングです。呼び出しが実行時に失敗する可能性があります]** 条件に対応しています。  
   
  [!code-vb[VbVbalrStatements#162](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#162)]  
   
 ## <a name="example"></a>例  
 
- 次の例は、暗黙的な型の `Object` で宣言された変数によって発生するエラーを示しています。 このカテゴリのエラーは **[コンパイル] ページ**の **[暗黙的な型です。オブジェクトと見なされます]** 条件に対応しています。  
+ 次の例は、暗黙的な型の `Object` で宣言された変数によって発生するエラーを示しています。 このカテゴリのエラーは **[コンパイル] ページ** の **[暗黙的な型です。オブジェクトと見なされます]** 条件に対応しています。  
   
  [!code-vb[VbVbalrStatements#163](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#163)]  
   

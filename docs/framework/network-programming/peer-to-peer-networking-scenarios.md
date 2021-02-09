@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: ピアツーピア ネットワーキング シナリオ'
 title: ピアツーピア ネットワーキング シナリオ
 ms.date: 03/30/2017
 ms.assetid: d23b1a64-2e08-4014-882a-c1dd766bdcc2
-ms.openlocfilehash: 9b5d4d35085585fe04f2f0c0a105e6dff4b1fcc0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 097b006c5f260a91c1f134a443f7d2f63a1f7866
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "64623082"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738264"
 ---
 # <a name="peer-to-peer-networking-scenarios"></a>ピアツーピア ネットワーキング シナリオ
 
@@ -61,6 +62,6 @@ ms.locfileid: "64623082"
 
   ピアツーピア ネットワーキングを使用した分散処理のもう 1 つの方法として、アイドル プロセッサ時間に処理されるプログラムを各ピアで実行する方法があります。それらのプログラムは、集中管理サーバーによって調整される大規模なコンピューティング タスクの一部として実行されます。 複数のコンピューターのプロセッサを集約することによって、ピアツーピア ネットワーキングは、ピア コンピューターのグループを、大規模なコンピューティング タスクに適した大規模な 1 個の並列プロセッサに変えることができます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Net.PeerToPeer.Collaboration>

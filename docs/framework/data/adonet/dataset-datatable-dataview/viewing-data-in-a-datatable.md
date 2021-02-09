@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DataTable 内のデータの表示'
 title: DataTable 内のデータの表示
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
-ms.openlocfilehash: c13f0b802b2714a17ea4014625a65ebd1b0011f4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ffaa8283da17c98fc58486af8dad741a61bbafc8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785852"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651380"
 ---
 # <a name="viewing-data-in-a-datatable"></a>DataTable 内のデータの表示
 

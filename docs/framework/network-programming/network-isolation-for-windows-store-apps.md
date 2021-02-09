@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: Windows ストア アプリのネットワーク分離'
 title: Windows ストア アプリのネットワーク分離
 ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-ms.openlocfilehash: 0f9288b53b969838cac64c24d3c9861a0f841aca
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: cc805cb5d5d761bb79b6a307caef6c809aabed16
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558460"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785720"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Windows ストア アプリのネットワーク分離
 
@@ -27,7 +28,7 @@ Windows ストア アプリに対してネットワークの分離が適切に�
   
 ネットワーク機能の構成と、ネットワーク分離のトラブルシューティングに使用する分離ツールの詳細については、Windows 8.x Store 開発者向けドキュメントで、[ネットワーク分離の機能を構成する方法](/previous-versions/windows/apps/hh770532(v=win.10))に関するページを参照してください。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [Web サービスへの接続](/previous-versions/windows/apps/hh761504(v=win.10))
 - [ネットワーク分離のガイドラインとチェックリスト](/previous-versions/windows/apps/hh770532(v=win.10))

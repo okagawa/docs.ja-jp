@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:アプリケーションの既定の時間ベースのキャッシュ ポリシーを設定する'
 title: '方法: アプリケーションの既定の時間ベースのキャッシュ ポリシーを設定します。'
 ms.date: 03/30/2017
 dev_langs:
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - cache [.NET Framework], time-based policies
 - default time-based cache policy
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
-ms.openlocfilehash: e9398beee7051d88867600b79c615356c2d4cc28
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1ca9504d8a6df20d3824230d5fb96eb0f13636eb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96241695"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662768"
 ---
-# <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>方法: アプリケーションの既定の時間ベースのキャッシュ ポリシーを設定します。
+# <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>方法: アプリケーションの既定の時間ベースのキャッシュ ポリシーを設定する
 
 既定の時間ベースのキャッシュ ポリシーにより、キャッシュされたリソースと共に送信されるヘッダーによってアプリケーションでキャッシュの動作を定義することができます。RFC 2616 のセクション 13 と 14 で定義されているキャッシュの動作については、[Internet Engineering Task Force (IETF)](https://www.ietf.org/) に関するページをご覧ください。 これは、ほとんどのアプリケーションの適切なキャッシュの動作です。  
   
@@ -64,7 +65,7 @@ Public Shared Sub SetDefaultTimeBasedPolicy2()
 End Sub  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ネットワーク アプリケーションのキャッシュ管理](cache-management-for-network-applications.md)
 - [キャッシュ ポリシー](cache-policy.md)

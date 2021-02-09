@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: チュートリアル: Visual Basic によるファイルとディレクトリの操作'
 title: ファイルとディレクトリの操作
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: 4b77618e5cd525cf3ad012405f402681aa5bb52c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 315635ee43ee4d4956fc35b7f9bc635b374646f8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406665"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775384"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>チュートリアル : Visual Basic によるファイルとディレクトリの操作
 
 このチュートリアルでは、Visual Basic でのファイル I/O の基礎について概説します。 具体的には、ディレクトリ内のテキスト ファイルをリストして調査する小さなアプリケーションを作成する方法について説明します。 このアプリケーションは、選択された各テキスト ファイルについて、ファイルの属性とコンテンツの最初の行を取得します。 ログ ファイルに情報を書き込むオプションもあります。  
   
- このチュートリアルでは、Visual Basic で利用可能な、`My.Computer.FileSystem Object` のメンバーを使用します。 詳細については、「<xref:Microsoft.VisualBasic.FileIO.FileSystem>」を参照してください。 チュートリアルの最後では、<xref:System.IO> 名前空間のクラスを使用する同等の例を示します。  
+ このチュートリアルでは、Visual Basic で利用可能な、`My.Computer.FileSystem Object` のメンバーを使用します。 詳細については、「 <xref:Microsoft.VisualBasic.FileIO.FileSystem> 」を参照してください。 チュートリアルの最後では、<xref:System.IO> 名前空間のクラスを使用する同等の例を示します。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -36,20 +37,20 @@ ms.locfileid: "84406665"
   
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-2. **[インストールされたテンプレート]** ペインで、 **[Visual Basic]** を展開し、 **[Windows]** をクリックします。 中央の **[テンプレート]** ペインで、 **[Windows フォーム アプリケーション]** をクリックします。  
+2. **[インストールされたテンプレート]** ペインで、**[Visual Basic]** を展開し、**[Windows]** をクリックします。 中央の **[テンプレート]** ペインで、**[Windows フォーム アプリケーション]** をクリックします。  
   
-3. **[名前]** ボックスに「`FileExplorer`」と入力してプロジェクト名を設定し、 **[OK]** をクリックします。  
+3. **[名前]** ボックスに「`FileExplorer`」と入力してプロジェクト名を設定し、**[OK]** をクリックします。  
   
-     Visual Studio の**ソリューション エクスプローラー**にプロジェクトが追加され、Windows フォーム デザイナーが開きます。  
+     Visual Studio の **ソリューション エクスプローラー** にプロジェクトが追加され、Windows フォーム デザイナーが開きます。  
   
 4. 次の表にあるコントロールをフォームに追加し、それらのプロパティに対応する値を設定します。  
   
-    |Control|property|値|  
+    |コントロール|プロパティ|値|  
     |-------------|--------------|-----------|  
     |**ListBox**|**名前**|`filesListBox`|  
-    |**Button**|**名前**<br /><br /> **テキスト**|`browseButton`<br /><br /> **参照**|  
-    |**Button**|**名前**<br /><br /> **テキスト**|`examineButton`<br /><br /> **調査**|  
-    |**CheckBox**|**名前**<br /><br /> **テキスト**|`saveCheckBox`<br /><br /> **結果の保存**|  
+    |**Button**|**名前**<br /><br /> **Text**|`browseButton`<br /><br /> **[参照]**|  
+    |**Button**|**名前**<br /><br /> **Text**|`examineButton`<br /><br /> **調査**|  
+    |**CheckBox**|**名前**<br /><br /> **Text**|`saveCheckBox`<br /><br /> **結果の保存**|  
     |**FolderBrowserDialog**|**名前**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>フォルダーを選択し、フォルダー内のファイルをリストするには  
@@ -60,7 +61,7 @@ ms.locfileid: "84406665"
   
      [!code-vb[VbVbcnMyFileSystem#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#103)]  
   
-     `FolderBrowserDialog1.ShowDialog` 呼び出しにより、 **[フォルダーの参照]** ダイアログ ボックスが開きます。 ユーザーが **[OK]** をクリックすると、次の手順で追加する `ListFiles` メソッドに <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> プロパティが引数として渡されます。  
+     `FolderBrowserDialog1.ShowDialog` 呼び出しにより、**[フォルダーの参照]** ダイアログ ボックスが開きます。 ユーザーが **[OK]** をクリックすると、次の手順で追加する `ListFiles` メソッドに <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> プロパティが引数として渡されます。  
   
 3. 次の `ListFiles` メソッドを追加します。  
   
@@ -72,7 +73,7 @@ ms.locfileid: "84406665"
   
      その後、`GetFiles` メソッドによって返された文字列が、**ListBox** に追加されます。  
   
-4. アプリケーションを実行します。 **[参照]** ボタンをクリックします。 **[フォルダーの参照]** ダイアログ ボックスで、.txt ファイルが含まれているフォルダーを参照し、そのフォルダーを選択して **[OK]** をクリックします。  
+4. アプリケーションを実行します。 **[参照]** をクリックし、 **[フォルダーの参照]** ダイアログ ボックスで、.txt ファイルが含まれているフォルダーを参照し、そのフォルダーを選択して **[OK]** をクリックします。  
   
      `ListBox` に、選択したフォルダー内のファイルが追加されます。  
   
@@ -100,7 +101,7 @@ ms.locfileid: "84406665"
   
 4. アプリケーションを実行します。 **[参照]** をクリックし、.txt ファイルが含まれているフォルダーを参照します。 **[OK]** をクリックします。  
   
-     `ListBox` でファイルを選択し、 **[調査]** をクリックします。 `MessageBox` にファイル情報が表示されます。  
+     `ListBox` でファイルを選択し、**[調査]** をクリックします。 `MessageBox` にファイル情報が表示されます。  
   
 5. アプリケーションの実行を停止します。  
   
@@ -114,7 +115,7 @@ ms.locfileid: "84406665"
   
      `append` 引数を `True` に設定した <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> メソッドを使用して、ログ エントリを作成します。  
   
-2. アプリケーションを実行します。 テキスト ファイルを参照し、`ListBox` でファイルを選択して、 **[結果の保存]** チェック ボックスをオンにした後、 **[調査]** をクリックします。 ログ エントリが `log.txt` ファイルに書き込まれていることを確認します。  
+2. アプリケーションを実行します。 テキスト ファイルを参照し、`ListBox` でファイルを選択して、**[結果の保存]** チェック ボックスをオンにした後、**[調査]** をクリックします。 ログ エントリが `log.txt` ファイルに書き込まれていることを確認します。  
   
 3. アプリケーションの実行を停止します。  
   
@@ -128,7 +129,7 @@ ms.locfileid: "84406665"
   
      このコードは、フォルダー ブラウザーの既定のディレクトリを現在のディレクトリに設定します。  
   
-3. アプリケーションを実行します。 **[参照]** を最初にクリックすると、 **[フォルダーの参照]** ダイアログ ボックスが開き、現在のディレクトリが表示されます。  
+3. アプリケーションを実行します。 **[参照]** を最初にクリックすると、**[フォルダーの参照]** ダイアログ ボックスが開き、現在のディレクトリが表示されます。  
   
 4. アプリケーションの実行を停止します。  
   
@@ -162,9 +163,9 @@ ms.locfileid: "84406665"
   
  [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.IO>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>
-- [チュートリアル : .NET Framework のメソッドによるファイル操作](walkthrough-manipulating-files-by-using-net-framework-methods.md)
+- [チュートリアル: .NET Framework のメソッドによるファイル操作](walkthrough-manipulating-files-by-using-net-framework-methods.md)

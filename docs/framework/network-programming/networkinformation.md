@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: NetworkInformation'
 title: NetworkInformation
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
-ms.openlocfilehash: 550555be7cc95cafebabfd3ac230ced024a9202c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9092fd0593d9046f419018b882c08066a6bc654c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96261619"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785706"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 
@@ -27,7 +28,7 @@ ms.locfileid: "96261619"
 
  <xref:System.Net.NetworkInformation.Ping> クラスを使用して、リモート ホストがネットワークで稼働しているかどうか、また到達可能かどうかを確認できます。 詳細については、「[方法: ホストに対して ping を実行](how-to-ping-a-host.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ネットワーク プログラミングのサンプル](network-programming-samples.md)
 

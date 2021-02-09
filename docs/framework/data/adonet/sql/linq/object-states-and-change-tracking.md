@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: オブジェクトの状態と変更の追跡'
 title: オブジェクトの状態と変更の追跡
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: a9df200f4d2e5f64bf5883c7bc513ba7129dcaad
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5f3aa6197fa44d8b5ea9333c85255202cbfe519b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781275"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695503"
 ---
 # <a name="object-states-and-change-tracking"></a>オブジェクトの状態と変更の追跡
 

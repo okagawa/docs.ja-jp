@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Exit ステートメント (Visual Basic)'
 title: Exit ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - program termination
 - execution [Visual Basic], stopping
 ms.assetid: 760bfb32-5c3f-4bdb-a432-9a6001c92db7
-ms.openlocfilehash: 1bfe81428fd3c50663fd8978e05c6a945cd47df8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 54af7fbf908dbad829cf6f08bf442dfe85e35610
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345937"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769127"
 ---
 # <a name="exit-statement-visual-basic"></a>Exit ステートメント (Visual Basic)
 

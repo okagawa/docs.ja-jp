@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Or 演算子 (Visual Basic)'
 title: Or 演算子
 ms.date: 07/20/2015
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - logical disjunction
 - disjunction operator [Visual Basic]
 ms.assetid: 41ed6905-bf3d-468a-9e3b-03c10d461891
-ms.openlocfilehash: f6cfd1073ada42aa2db8be9b14c81319bc0db294
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: dfc50af2298c162707976e4b2eda9e9536aa64bc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874758"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730331"
 ---
 # <a name="or-operator-visual-basic"></a>Or 演算子 (Visual Basic)
 
@@ -71,13 +72,13 @@ result = expression1 Or expression2
   
 ## <a name="data-types"></a>データの種類  
 
- オペランドが 1 つの `Boolean` 式と 1 つの数値式で構成されている場合、Visual Basic は `Boolean` 式を数値に変換し (`True` の場合は 1、`False` の場合は 0)、ビットごとの演算を実行します。  
+ オペランドが 1 つの `Boolean` 式と 1 つの数値式で構成されている場合、Visual Basic では `Boolean` 式が数値に変換され (`True` の場合は –1、`False` の場合は 0)、ビットごとの演算が実行されます。  
   
- `Boolean` の比較の場合、結果のデータ型は `Boolean` になります。 ビットごとの比較の場合、結果のデータ型は `expression1` および `expression2` のデータ型に適した数値型になります。 「[演算子の結果のデータ型](data-types-of-operator-results.md)」の「関係とビットごとの比較」の表を参照してください。  
+ `Boolean` の比較の場合、結果のデータ型は `Boolean` になります。 ビットごとの比較の場合、結果のデータ型は `expression1` および `expression2` のデータ型に適した数値型になります。 [演算子の結果のデータ型](data-types-of-operator-results.md)に関するページ内の表 "関係とビットごとの比較" を参照してください。  
   
 ## <a name="overloading"></a>オーバーロード  
 
- `Or` 演算子は "*オーバーロード*" できます。つまり、オペランドがクラスまたは構造体の型を持っているときに、クラスまたは構造体はその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ `Or` 演算子は "*オーバーロード*" できます。つまり、オペランドの型がクラスまたは構造体であるとき、そのクラスまたは構造体で、演算子の動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
 
@@ -97,7 +98,7 @@ result = expression1 Or expression2
   
 ## <a name="see-also"></a>関連項目
 
-- [論理/ビット演算子 (Visual Basic)](logical-bitwise-operators.md)
+- [論理演算子とビット処理演算子 (Visual Basic)](logical-bitwise-operators.md)
 - [Visual Basic における演算子の優先順位](operator-precedence.md)
 - [機能別の演算子一覧](operators-listed-by-functionality.md)
 - [OrElse 演算子](orelse-operator.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Async (Visual Basic)'
 title: Async
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: 35df7a464937647c6d110142a3e2801cebbea505
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a20c80ace06e386e7c106acc2b7e6258abca13b2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373168"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701158"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
 
-`Async` 修飾子は、修飾するメソッドまたは[ラムダ式](../../programming-guide/language-features/procedures/lambda-expressions.md)が非同期であることを示します。 このようなメソッドは、*非同期メソッド*と呼ばれます。
+`Async` 修飾子は、修飾するメソッドまたは[ラムダ式](../../programming-guide/language-features/procedures/lambda-expressions.md)が非同期であることを示します。 このようなメソッドは、*非同期メソッド* と呼ばれます。
 
 非同期メソッドは、呼び出し元のスレッドをブロックすることなく、実行に時間のかかる可能性のある処理を行うことができる、便利な方法です。 非同期メソッドの呼び出し元は、非同期メソッドの完了を待たずに作業を再開できます。
 

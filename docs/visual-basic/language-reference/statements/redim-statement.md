@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ReDim ステートメント (Visual Basic)'
 title: ReDim ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: 17bc806f2e92c61f1dd7425de40b1a68f926a583
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 8f7525064c8b32748cf5ebb2df7d4a5dfc76f794
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90872027"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741329"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim ステートメント (Visual Basic)
 

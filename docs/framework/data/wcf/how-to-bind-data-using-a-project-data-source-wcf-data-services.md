@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:プロジェクト データ ソースを使用してデータをバインドする (WCF Data Services)'
 title: '方法: プロジェクト データ ソースを使用してデータをバインドする (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 85d5974f43349d91d56a1ab41b314521a6ee7348
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 42efbfcd241487e9e729c0d0bf2eba1f8f20d996
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780168"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765712"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>方法: プロジェクト データ ソースを使用してデータをバインドする (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 生成されたデータ オブジェクトに基づいて、WCF Data Services クライアント アプリケーション内にデータ ソースを作成できます。 **[サービス参照の追加]** ダイアログを使用して参照をデータ サービスに追加すると、生成されたクライアント データ クラスと一緒にプロジェクト データ ソースが作成されます。 データ サービスが公開する各エンティティ セットに対して 1 つのデータ ソースが作成されます。 **[データ ソース]** ウィンドウからデザイナーにこれらのデータ ソース項目をドラッグすることにより、サービスからデータを表示するフォームを作成できます。 これらの項目は、データ ソースにバインドされているコントロールになります。 実行中、このデータ ソースは <xref:System.Data.Services.Client.DataServiceCollection%601> クラスのインスタンスにバインドされます。このインスタンスには、データ サービスに対するクエリによって返されるオブジェクトが設定されます。 詳しくは、「[コントロールへのデータのバインド](binding-data-to-controls-wcf-data-services.md)」をご覧ください。
 

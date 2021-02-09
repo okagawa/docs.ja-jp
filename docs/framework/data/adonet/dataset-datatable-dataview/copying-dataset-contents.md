@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DataSet の内容のコピー'
 title: DataSet の内容のコピー
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: 1cadcacab6084bbf3caaf61d98b78fe3067d92f7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4b49ad367c96dd7c99363c7c4282930a6e4da37d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202371"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739691"
 ---
 # <a name="copying-dataset-contents"></a>DataSet の内容のコピー
 

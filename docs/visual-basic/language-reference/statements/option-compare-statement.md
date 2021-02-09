@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Option Compare ステートメント'
 title: Option Compare ステートメント
 ms.date: 07/20/2015
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 396770a2fc6996475d408cf8023a4eafdf6d3011
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: fba8b207c0077f95540485d79311b47f1b8c209c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869651"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741667"
 ---
 # <a name="option-compare-statement"></a>Option Compare ステートメント
 
@@ -68,7 +69,7 @@ Option Compare { Binary | Text }
   
 #### <a name="to-set-option-compare-in-the-ide"></a>IDE で Option Compare を設定するには  
   
-1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
+1. **ソリューション エクスプローラー** でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
 2. **[コンパイル]** タブをクリックします。  
   

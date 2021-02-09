@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: .NET Framework Data Provider for Oracle のシステム要件'
 title: .NET Framework Data Provider for Oracle のシステム要件
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-ms.openlocfilehash: dab3378d3022c01c674640201a67f3bdbb4f571f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6b48ab695fdb87b2f51f4fe29589305325329098
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174252"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766830"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>.NET Framework Data Provider for Oracle のシステム要件
 

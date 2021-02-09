@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Overloads (Visual Basic)'
 title: Overloads
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-ms.openlocfilehash: bd0931cab520f8580c0d7473a44e350752e287bb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7f0b440b537500595e465d8aabc7724671f3ae95
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392107"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730513"
 ---
 # <a name="overloads-visual-basic"></a>Overloads (Visual Basic)
 
@@ -23,7 +24,7 @@ ms.locfileid: "84392107"
 
 ## <a name="remarks"></a>Remarks
 
-*オーバーロード*とは、特定のプロパティ名またはプロシージャ名に対し、同じスコープ内で複数の定義を与えることです。 異なるシグネチャによるプロパティまたはプロシージャの再宣言は、*シグネチャによる隠ぺい*と呼ばれることがあります。
+*オーバーロード* とは、特定のプロパティ名またはプロシージャ名に対し、同じスコープ内で複数の定義を与えることです。 異なるシグネチャによるプロパティまたはプロシージャの再宣言は、*シグネチャによる隠ぺい* と呼ばれることがあります。
 
 ## <a name="rules"></a>ルール
 
@@ -31,7 +32,7 @@ ms.locfileid: "84392107"
 
 - **結合された修飾子。** 同じプロシージャ宣言内で `Overloads` を [Shadows](shadows.md) と共に指定することはできません。
 
-- **必要な相違点。** この宣言内の*シグネチャ*は、オーバーロードされるすべてのプロパティまたはプロシージャのシグネチャと異なる必要があります。 シグネチャは、プロパティまたはプロシージャの名前と以下の項目で構成されます。
+- **必要な相違点。** この宣言内の *シグネチャ* は、オーバーロードされるすべてのプロパティまたはプロシージャのシグネチャと異なる必要があります。 シグネチャは、プロパティまたはプロシージャの名前と以下の項目で構成されます。
 
   - パラメーターの数
 

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: Entity SQL リファレンス'
 title: Entity SQL リファレンス
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-ms.openlocfilehash: 987aa5c05b88d684e050721077d704b29e546aab
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 89a53d6d365d8cae99e16c52cc159c9d2ff57cfc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542125"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786421"
 ---
 # <a name="entity-sql-reference"></a>Entity SQL リファレンス
 

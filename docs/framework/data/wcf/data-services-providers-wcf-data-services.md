@@ -1,17 +1,20 @@
 ---
+description: '詳細情報: データ サービス プロバイダー (WCF Data Services)'
 title: データ サービス プロバイダー (WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: a0160b1b-3d9c-4cc8-8391-cb0986a60a41
-ms.openlocfilehash: dcca6023349148ac7f65f97028d876514ef31163
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ee28604b7e3e9e1558a7d80838b072b236572893
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91182836"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766115"
 ---
 # <a name="data-services-providers-wcf-data-services"></a>データ サービス プロバイダー (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services では、Open Data Protocol (OData) フィードとしてデータを公開する複数のプロバイダー モデルがサポートされています。 このトピックでは、データ ソースに最適な WCF Data Services プロバイダーを選択するための情報を示します。  
   

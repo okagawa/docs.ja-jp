@@ -1,18 +1,19 @@
 ---
-title: '方法 : ファイル パスを解析する'
+description: '詳細情報: 方法:Visual Basic でファイル パスを解析する'
+title: '方法: ファイル パスを解析する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file names [Visual Basic], parsing [Visual Basic]
 - parsing, file paths [Visual Basic]
 ms.assetid: c1bd99c9-8160-456a-b5ab-60a49139b923
-ms.openlocfilehash: eb7714a8594c0bce344eb2e48ebc5053dc3bfbb4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dff423679324974d64c613a292c253d99d668c7e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359943"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797498"
 ---
-# <a name="how-to-parse-file-paths-in-visual-basic"></a>方法: Visual Basic でファイル パスを解析する
+# <a name="how-to-parse-file-paths-in-visual-basic"></a>方法 : Visual Basic でファイル パスを解析する
 
 <xref:Microsoft.VisualBasic.FileIO.FileSystem> オブジェクトには、ファイル パスを解析するときに役立つメソッドがいくつか用意されています。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "84359943"
   
      [!code-vb[VbVbcnMyFileSystem#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#55)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A>

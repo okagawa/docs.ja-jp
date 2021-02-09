@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: XML スキーマ (XSD) のキー参照制約の DataSet 制約への割り当て'
 title: XML スキーマ (XSD) のキー参照制約の DataSet 制約への割り当て
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: fe53232b6818b5bb28b433c4a473b6381b8e9083
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f9925cf68e0c8fd1258eeeb509664e0527e58526
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198562"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651978"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>XML スキーマ (XSD) のキー参照制約の DataSet 制約への割り当て
 

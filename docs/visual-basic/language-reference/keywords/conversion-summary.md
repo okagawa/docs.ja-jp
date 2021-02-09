@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 変換の概要 (Visual Basic)'
 title: 変換の概要
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - conversions [Visual Basic], Visual Basic
 - type conversion [Visual Basic], keywords
 ms.assetid: ae2c79a7-2d62-4fbe-8585-14360d11f987
-ms.openlocfilehash: a1e4df718eeac3f547fa29c148d5fc81880e3336
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 3bc299e29cd4bee8ec99e17cbb71b779bd76f5d0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875643"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730890"
 ---
 # <a name="conversion-summary-visual-basic"></a>変換の概要 (Visual Basic)
 
@@ -20,17 +21,17 @@ Visual Basic 言語のキーワードとランタイム ライブラリ メン�
   
 |アクション|言語要素|  
 |------------|----------------------|  
-|ANSI 値から文字列への変換|<xref:Microsoft.VisualBasic.Strings.Chr%2A>、<xref:Microsoft.VisualBasic.Strings.ChrW%2A>|  
+|ANSI 値から文字列への変換|<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|  
 |文字列をすべて小文字または大文字に変換|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.LCase%2A>,<xref:Microsoft.VisualBasic.Strings.UCase%2A>|  
-|日付をシリアル値に変換|<xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>、<xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A>|  
-|10 進数を 16 進数または 8 進数に変換|<xref:Microsoft.VisualBasic.Conversion.Hex%2A>、<xref:Microsoft.VisualBasic.Conversion.Oct%2A>|  
-|数値を文字列に変換|<xref:Microsoft.VisualBasic.Strings.Format%2A>、<xref:Microsoft.VisualBasic.Conversion.Str%2A>|  
+|日付をシリアル値に変換|<xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A>|  
+|10 進数を 16 進数または 8 進数に変換|<xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A>|  
+|数値を文字列に変換|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Str%2A>|  
 |データ型間の変換|[CBool](../functions/type-conversion-functions.md)、[CByte](../functions/type-conversion-functions.md)、[CDate](../functions/type-conversion-functions.md)、[CDbl](../functions/type-conversion-functions.md)、[CDec](../functions/type-conversion-functions.md)、[CInt](../functions/type-conversion-functions.md)、[CLng](../functions/type-conversion-functions.md)、[CSng](../functions/type-conversion-functions.md)、[CShort](../functions/type-conversion-functions.md)、[CStr](../functions/type-conversion-functions.md)、[CType](../functions/ctype-function.md)、<xref:Microsoft.VisualBasic.Conversion.Fix%2A>、<xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
 |日付を日、月、曜日、または年に変換|<xref:Microsoft.VisualBasic.DateAndTime.Day%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Month%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Year%2A>|  
-|時刻を時、分、または秒に変換|<xref:Microsoft.VisualBasic.DateAndTime.Hour%2A>、<xref:Microsoft.VisualBasic.DateAndTime.Minute%2A>、<xref:Microsoft.VisualBasic.DateAndTime.Second%2A>|  
-|文字列を ASCII 値に変換|<xref:Microsoft.VisualBasic.Strings.Asc%2A>、<xref:Microsoft.VisualBasic.Strings.AscW%2A>|  
+|時刻を時、分、または秒に変換|<xref:Microsoft.VisualBasic.DateAndTime.Hour%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Minute%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Second%2A>|  
+|文字列を ASCII 値に変換|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|  
 |文字列を数値に変換|<xref:Microsoft.VisualBasic.Conversion.Val%2A>|  
-|時刻をシリアル値に変換|<xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>、<xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|  
+|時刻をシリアル値に変換|<xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|  
   
 ## <a name="see-also"></a>関連項目
 
