@@ -3,16 +3,16 @@ title: .NET Core での自己完結型アプリのデプロイにおけるラン
 description: 自己完結型展開における dotnet publish の変更について説明します。
 author: KathleenDollard
 ms.date: 05/31/2018
-ms.openlocfilehash: 22385c7b5d2bf87755fd51cd6268d21fe3431c74
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6bc578c63b28f51f1dd98e3e7e56fbe2c7a3e7cf
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75740782"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505909"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>自己完結型展開ランタイムのロール フォワード
 
-.NET Core [自己完結型のアプリケーション展開](index.md)には、.NET Core ライブラリと .NET Core ランタイムの両方が含まれます。 .NET Core 2.1 SDK (バージョン 2.1.300) 以降、自己完結型のアプリケーションのデプロイ[では、お使いのコンピューター上にある最新の修正プログラムのランタイムを発行するようになりました](https://github.com/dotnet/designs/pull/36)。 既定では、自己完結型展開のための [`dotnet publish`](../tools/dotnet-publish.md) では、発行マシン上に SDK の一部としてインストールされている最新バージョンが選択されます。 これにより、展開したアプリケーションを `publish` 時に利用可能なセキュリティ修正プログラム (およびその他の修正) と共に実行できます。 新しい修正プログラムを取得するには、アプリケーションを再発行する必要があります。 `dotnet publish` コマンドで `-r <RID>` を指定するか、プロジェクト ファイル (csproj / vbproj) 内またはコマンド ライン上で [ランタイム識別子 (RID)](../rid-catalog.md) を指定すると、自己完結型のアプリケーションが作成されます。
+.NET Core [自己完結型のアプリケーション展開](index.md)には、.NET Core ライブラリと .NET Core ランタイムの両方が含まれます。 .NET Core 2.1 SDK (バージョン 2.1.300) 以降、自己完結型のアプリケーションのデプロイ[では、お使いのコンピューター上にある最新の修正プログラムのランタイムを発行するようになりました](https://github.com/dotnet/designs/blob/main/accepted/2018/self-contained-roll-forward.md)。 既定では、自己完結型展開のための [`dotnet publish`](../tools/dotnet-publish.md) では、発行マシン上に SDK の一部としてインストールされている最新バージョンが選択されます。 これにより、展開したアプリケーションを `publish` 時に利用可能なセキュリティ修正プログラム (およびその他の修正) と共に実行できます。 新しい修正プログラムを取得するには、アプリケーションを再発行する必要があります。 `dotnet publish` コマンドで `-r <RID>` を指定するか、プロジェクト ファイル (csproj / vbproj) 内またはコマンド ライン上で [ランタイム識別子 (RID)](../rid-catalog.md) を指定すると、自己完結型のアプリケーションが作成されます。
 
 ## <a name="patch-version-roll-forward-overview"></a>修正プログラムのバージョンのロール フォワードの概要
 

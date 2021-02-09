@@ -1,14 +1,15 @@
 ---
-ms.openlocfilehash: 72b371dc2a6475efa2e0353f87dbdfa96c4c7c0e
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 15786e6c659a29c5089eee9c8ac365c55b22f7fb
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050398"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99531506"
 ---
 | .NET Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]              | [1.6]              | [2.0]               | [2.1] |
 |----------------------------|--------|--------|-------|-------|-------|--------------------|--------------------|---------------------|---------------------
-| .NET Core と .NET 5       | 1    | 1    | 1   | 1   | 1   | 1                | 1                | 2.0                 | 3.0 |
+| .NET                       | 5.0    | 5.0    | 5.0   | 5.0   | 5.0   | 5.0                | 5.0                | 5.0                 | 5.0 |
+| .NET Core                  | 1.0    | 1.0    | 1.0   | 1.0   | 1.0   | 1.0                | 1.0                | 2.0                 | 3.0 |
 | .NET Framework <sup>1</sup>| 4.5    | 4.5    | 4.5.1 | 4.6   | 4.6.1 | 4.6.1 <sup>2</sup> | 4.6.1 <sup>2</sup> | 4.6.1 <sup>2</sup>  | 該当なし<sup>3</sup> |
 | Mono                       | 4.6    | 4.6    | 4.6   | 4.6   | 4.6   | 4.6                | 4.6                | 5.4                 | 6.4 |
 | Xamarin.iOS                | 10.0   | 10.0   | 10.0  | 10.0  | 10.0  | 10.0               | 10.0               | 10.14               | 12.16 |
@@ -25,7 +26,7 @@ ms.locfileid: "92050398"
 
 - 列は .NET Standard バージョンです。 各見出しセルは、そのバージョンの .NET Standard に追加された API に関するドキュメントのリンクになっています。
 - 行は、各 .NET 実装です。
-- 各セルのバージョン番号は、その .NET Standard バージョンをターゲットにするために必要な*最小*バージョンの実装です。
+- 各セルのバージョン番号は、その .NET Standard バージョンをターゲットにするために必要な *最小* バージョンの実装です。
 - 対話型のテーブルについては、「[.NET Standard バージョン](https://dotnet.microsoft.com/platform/dotnet-standard#versions)」を参照してください。
 
 [1.0]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.0.md
