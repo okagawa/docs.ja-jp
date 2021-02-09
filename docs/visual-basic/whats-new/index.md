@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: ada336ee5fce317315bb5f3974e0366f7bca3985
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 111430bf32debfcb80ea12aa9eb89c52f695d3cb
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557104"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585690"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic の新機能
 
@@ -21,12 +21,15 @@ ms.locfileid: "94557104"
 
 ## <a name="current-version"></a>現在のバージョン
 
-Visual Basic 16.0 / Visual Studio 2019 バージョン 16.0\
-新機能については、「[Visual Basic 16.0](#visual-basic-160)」を参照してください。
+Visual Basic 16.9 / Visual Studio 2019 バージョン 16.9\
+新機能については、「[Visual Basic 16.9](#visual-basic-169)」を参照してください。
 
 最新の .NET SDK は [.NET のダウンロード ページ](https://dotnet.microsoft.com/download)でダウンロードできます。
 
 ## <a name="previous-versions"></a>以前のバージョン
+
+Visual Basic 16.0 / Visual Studio 2019 バージョン 16.0\
+新機能については、「[Visual Basic 16.0](#visual-basic-160)」を参照してください。
 
 Visual Basic 15.8 / Visual Studio 2017 バージョン 15.8\
 新機能については、「[Visual Basic 15.8](#visual-basic-158)」を参照してください。
@@ -63,6 +66,10 @@ Visual Basic / Visual Studio .NET 2003\
 
 Visual Basic / Visual Studio .NET 2002\
 Visual Basic .NET の最初のリリース
+
+## <a name="visual-basic-169"></a>Visual Basic 16.9
+
+Visual Basic 16.9 では、初期化専用プロパティを使用できます。
 
 ## <a name="visual-basic-160"></a>Visual Basic 16.0
 

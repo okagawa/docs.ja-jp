@@ -4,12 +4,12 @@ description: .NET Core、ASP.NET Core、C# 言語に関する、.NET の学習�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 02/01/2021
-ms.openlocfilehash: 3f54221f0b22b2ee24750c01885e39a6eec39e0e
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: c7bbb99eeb4e00771cd1e4a3ab33b7690620b194
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506410"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585729"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET サンプルおよびチュートリアル
 
@@ -33,7 +33,7 @@ ms.locfileid: "99506410"
 
 このチュートリアルでは、Visual Studio Code と .NET CLI を使用して .NET 用ライブラリを作成する方法について説明します。 プロジェクトの作成、コンパイル、実行などのプロジェクト タスクは、.NET CLI を使用して行われます。
 
-.NET チュートリアルについて詳しくは、[.NET および .NET SDK ツールの学習](../core/tutorials/index.md)に関する記事を参照してください。
+.NET チュートリアルの詳細については、[.NET および .NET SDK ツールの学習](../core/tutorials/index.md)に関する記事を参照してください。
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 

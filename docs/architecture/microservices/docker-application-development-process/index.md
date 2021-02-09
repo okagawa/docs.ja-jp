@@ -1,13 +1,13 @@
 ---
 title: Docker ベースのアプリケーションの開発プロセス
 description: Docker ベースのアプリケーションの開発のオプションに関する概要を確認します。 マルチ プラットフォームのサポート (Windows、macOS、Linux) のため、Windows 用 Visual Studio、Visual Studio for Mac、または Visual Studio Code のうち好みのものを使います。
-ms.date: 01/13/2021
-ms.openlocfilehash: 3a4f4078e745c52e8eca46473668e3319917bfd2
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/02/2021
+ms.openlocfilehash: e979fcd5277fb07f3b614b79fa8a384d61e08c47
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188297"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719657"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Docker ベースのアプリケーションの開発プロセス
 
@@ -19,7 +19,7 @@ ms.locfileid: "98188297"
 
 完全で強力な IDE または軽量でアジャイルなエディターのどちらを選んでも、Microsoft では Docker アプリケーションの開発に使用できるツールが用意されています。
 
-**Visual Studio (Windows 版)。** Visual Studio での Docker ベースの .NET 5 アプリケーションの開発には、Visual Studio 2019 バージョン 16.4 以降が必要です。 Visual Studio 2019 には、既に Docker 用のツールが組み込まれています。 Tools for Docker を使用して、ターゲットの Docker 環境で直接アプリケーションの開発、実行、および検証ができます。 F5 キーを押すと、Docker ホスト内で直接アプリケーション (1 つのコンテナー、または複数のコンテナー) を実行してデバックできます。または、CTRL キーを押しながら F5 キーを押すと、コンテナーを再構築しなくても、アプリケーションを編集して更新できます。 この IDE は、Docker ベース アプリを開発する場合の最も強力な選択肢です。
+**Visual Studio (Windows 版)。** Visual Studio での Docker ベースの .NET 5 アプリケーションの開発には、Visual Studio 2019 バージョン 16.8 以降が必要です。 Visual Studio 2019 には、既に Docker 用のツールが組み込まれています。 Tools for Docker を使用して、ターゲットの Docker 環境で直接アプリケーションの開発、実行、および検証ができます。 F5 キーを押すと、Docker ホスト内で直接アプリケーション (1 つのコンテナー、または複数のコンテナー) を実行してデバックできます。または、CTRL キーを押しながら F5 キーを押すと、コンテナーを再構築しなくても、アプリケーションを編集して更新できます。 この IDE は、Docker ベース アプリを開発する場合の最も強力な選択肢です。
 
 **Visual Studio for Mac。** これは macOS で動作する、Xamarin Studio を進化させた IDE です。 .NET 5 で開発する場合、バージョン 8.4 以降が必要です。 このツールは、強力な IDE を使用したい macOS コンピューターで作業する開発者にとって好ましい選択肢です。
 

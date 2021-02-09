@@ -1,17 +1,17 @@
 ---
 title: .NET マイクロサービス。 コンテナー化された .NET アプリケーションのアーキテクチャ
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービスはモジュール式で独自に展開可能なサービスです。 Docker コンテナー (Linux と Windows 向け) は、サービスとその依存関係を 1 つの単位にバンドル化する (その後、分離された環境で実行される) ことで、展開とテストを簡略化します。
-ms.date: 01/13/2021
-ms.openlocfilehash: a9017d2e9acbcbb861a35f0187632dc90c52e171
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/02/2021
+ms.openlocfilehash: e9862445414dbe0bf9a1c5d36d790b57710028f0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188375"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665310"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ
 
-![本の表紙](./media/cover-small.png)
+![本の表紙](./media/cover-large.png)
 
 **エディション v5.0** - ASP.NET Core 5.0 に更新されました
 
@@ -68,9 +68,9 @@ Docker は、コンテナー業界では事実上の標準になりつつあり�
 
 ### <a name="how-to-use-this-guide"></a>このガイドの使用方法
 
-このガイドの最初の部分では、Docker コンテナーを紹介し、開発フレームワークとして .NET Core または .NET Framework を選択する方法について説明し、マイクロサービスの概要を説明します。 このコンテンツは、概要は知りたいが、コード実装の詳細について詳しく知る必要がないアーキテクトおよび技術的意思決定者向けです。
+このガイドの最初の部分では、Docker コンテナーを紹介し、開発フレームワークとして .NET 5 または .NET Framework を選択する方法について説明し、マイクロサービスの概要を説明します。 このコンテンツは、概要は知りたいが、コード実装の詳細について詳しく知る必要がないアーキテクトおよび技術的意思決定者向けです。
 
-ガイドの 2 番目の部分は、「[Docker ベースのアプリケーションの開発プロセス](./docker-application-development-process/index.md)」セクションから始まります。 .NET Core と Docker を使用してアプリケーションを実装するための開発とマイクロサービスのパターンに焦点を当てています。 これは、コード、パターンおよび実装の詳細を重視する開発者やアーキテクトにとって最も関心が高いセクションです。
+ガイドの 2 番目の部分は、「[Docker ベースのアプリケーションの開発プロセス](./docker-application-development-process/index.md)」セクションから始まります。 .NET と Docker を使用してアプリケーションを実装するための開発とマイクロサービスのパターンに焦点を当てています。 これは、コード、パターンおよび実装の詳細を重視する開発者やアーキテクトにとって最も関心が高いセクションです。
 
 ## <a name="related-microservice-and-container-based-reference-application-eshoponcontainers"></a>関連するマイクロサービスとコンテナー ベースの参照アプリケーション: eShopOnContainers
 
@@ -162,7 +162,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2020 by Microsoft Corporation
+Copyright © 2021 by Microsoft Corporation
 
 All rights reserved. 本書のいかなる部分も、書面による発行者の許可なしに、いかなる形式または方法によっても、複製または伝送することを禁じます。
 
