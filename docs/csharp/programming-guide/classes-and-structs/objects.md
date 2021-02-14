@@ -1,17 +1,17 @@
 ---
 title: オブジェクト - C# プログラミング ガイド
 description: C# では、クラスまたは構造体の定義を使用して、オブジェクトの型を定義します。 C# などのオブジェクト指向言語では、プログラムは動的に対話するオブジェクトで構成されています。
-ms.date: 07/20/2015
+ms.date: 02/03/2021
 helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 61d79f5647fa05edade9aef90653544b08c20c83
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: df549b76c5bd49fa91424915928527ec14d7689c
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181831"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585715"
 ---
 # <a name="objects-c-programming-guide"></a>オブジェクト (C# プログラミング ガイド)
 
@@ -24,7 +24,7 @@ ms.locfileid: "91181831"
 
  クラスは参照型であるため、クラスのオブジェクトの変数は、マネージド ヒープ上のオブジェクトのアドレスへの参照を保持します。 同じ型の 2 番目のオブジェクトが最初のオブジェクトに割り当てられた場合、両方の変数がそのアドレスにあるオブジェクトを参照します。 この点については、後で詳しく説明します。  
   
- クラスのインスタンスは、[new 演算子](../../language-reference/operators/new-operator.md)を使って作成されます。 次の例では、`Person` が型で、`person1` と `person 2` がその型のインスタンスつまりオブジェクトです。  
+ クラスのインスタンスは、[new 演算子](../../language-reference/operators/new-operator.md)を使って作成されます。 次の例では、`Person` が型で、`person1` と `person2` がその型のインスタンスつまりオブジェクトです。  
   
  [!code-csharp[csProgGuideStatements#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#30)]  
   
@@ -47,8 +47,8 @@ ms.locfileid: "91181831"
   
  [!code-csharp[csProgGuideStatements#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#32)]  
   
- <xref:System.ValueType?displayProperty=nameWithType> での `Equals` の実装は、構造体に存在するフィールドを特定できる必要があるため、リフレクションを使います。 独自の構造体を作成するときは、`Equals` メソッドをオーバーライドして、独自の型に固有の効率的な等値アルゴリズムを提供します。  
-  
+ `Equals` による <xref:System.ValueType?displayProperty=nameWithType> の実装では、ボックス化とリフレクションが使用される場合があります。 型に固有の効率的な等価性アルゴリズムを提供する方法の詳細については、「[型の値の等価性を定義する方法](../statements-expressions-operators/how-to-define-value-equality-for-a-type.md)」を参照してください
+
 - クラスの 2 つのインスタンスのフィールドの値が等しいかどうかを調べるには、<xref:System.Object.Equals%2A> メソッドまたは [== 演算子](../../language-reference/operators/equality-operators.md#equality-operator-)を使用できる場合があります。 ただし、この方法を使用できるのは、その型のオブジェクトにおける "等値" の意味のカスタム定義が、クラスのオーバーライドまたはオーバーロードによって提供されている場合だけです。 クラスは、<xref:System.IEquatable%601> インターフェイスまたは <xref:System.Collections.Generic.IEqualityComparer%601> インターフェイスを実装することもできます。 どちらのインターフェイスも、値の等価性をテストするために使うことができるメソッドを提供します。 `Equals` をオーバーライドする独自のクラスを設計するときは、「[型の値の等価性を定義する方法](../statements-expressions-operators/how-to-define-value-equality-for-a-type.md)」および「<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>」に記載されているガイドラインに従ってください。
   
 ## <a name="related-sections"></a>関連項目  

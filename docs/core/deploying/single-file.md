@@ -4,12 +4,12 @@ description: 単一ファイル アプリケーションの概要、およびこ
 author: lakshanf
 ms.author: lakshanf
 ms.date: 12/17/2020
-ms.openlocfilehash: 10ffc947f6a3adcf2889a03edd2616007ce236f3
-ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
+ms.openlocfilehash: fb768fa6fe390fbe8390e441f4eb71c3172ad395
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98536139"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505427"
 ---
 # <a name="single-file-deployment-and-executable"></a>単一ファイルの配置と実行可能ファイル
 
@@ -168,8 +168,8 @@ Visual Studio を使用すると、アプリケーションの発行方法を制
 
 01. **[プロファイル設定]** ダイアログで、次のオプションを設定します。
 
-    - **[配置モード]** を **[自己完結]** に設定します。
-    - **[ターゲット ランタイム]** を発行先のプラットフォームに設定します。
+    - **[配置モード]** を **[自己完結]** または **[フレームワーク依存]** に設定します。
+    - **[ターゲット ランタイム]** を発行先のプラットフォームに設定します。 ( **[移植可能]** 以外にする必要があります)。
     - **[単一ファイルの作成]** を選択します。
 
     **[保存]** を選択して設定を保存し、 **[発行]** ダイアログに戻ります。

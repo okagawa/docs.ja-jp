@@ -1,54 +1,55 @@
 ---
+description: '詳細情報: 属性'
 title: 属性
 ms.date: 10/22/2008
 helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-ms.openlocfilehash: c02c41244fa74b686277c2f3c3940405fe2d95ba
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
-ms.translationtype: MT
+ms.openlocfilehash: 1557ba0945da0c8498c67f70ba4a01dd0bbe432e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95701368"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99642423"
 ---
 # <a name="attributes"></a>属性
 
-<xref:System.Attribute?displayProperty=nameWithType> は、カスタム属性を定義するために使用される基本クラスです。
+<xref:System.Attribute?displayProperty=nameWithType> は、カスタム属性を定義するために使用される基底クラスです。
 
- 属性は、アセンブリ、型、メンバー、パラメーターなどのプログラミング要素に追加できる注釈です。 これらは、アセンブリのメタデータに格納され、リフレクション Api を使用して実行時にアクセスできます。 たとえば、フレームワークはを定義してい <xref:System.ObsoleteAttribute> ます。これを型またはメンバーに適用して、型またはメンバーが非推奨とされたことを示すことができます。
+ 属性は、アセンブリ、型、メンバー、パラメーターなどのプログラミング要素に追加できる注釈です。 それらは、アセンブリのメタデータに格納され、リフレクション API を使用して実行時にアクセスできます。 たとえば、フレームワークによって定義されている <xref:System.ObsoleteAttribute> を型またはメンバーに適用して、その型またはメンバーが非推奨になったことを示すことができます。
 
- 属性には、属性に関連する追加データを格納する1つ以上のプロパティを含めることができます。 たとえば、に `ObsoleteAttribute` は、型またはメンバーが非推奨とされたリリースに関する追加情報が含まれており、新しい api の説明によって古い api が置き換えられています。
+ 属性には、属性に関連する追加データを保持する 1 つ以上のプロパティを設定できます。 たとえば、`ObsoleteAttribute` は、型またはメンバーが非推奨になったリリース、および古い API を置き換える新しい API の説明に関する追加情報を保持できます。
 
- 属性を適用するときは、属性の一部のプロパティを指定する必要があります。 これらは、位置指定コンストラクターパラメーターとして表現されるため、必須プロパティまたは必須の引数と呼ばれます。 たとえば、 <xref:System.Diagnostics.ConditionalAttribute.ConditionString%2A> のプロパティ <xref:System.Diagnostics.ConditionalAttribute> は必須プロパティです。
+ 属性の一部のプロパティは、属性を適用するときに指定する必要があります。 これらは、位置指定のコンストラクター パラメーターとして表されるため、必須プロパティまたは必須引数と呼ばれます。 たとえば、<xref:System.Diagnostics.ConditionalAttribute> の <xref:System.Diagnostics.ConditionalAttribute.ConditionString%2A> プロパティは必須プロパティです。
 
- 属性が適用されるときに必ずしも指定する必要がないプロパティは、省略可能なプロパティ (または省略可能な引数) と呼ばれます。 これらは、設定可能なプロパティによって表されます。 コンパイラは、属性が適用されるときにこれらのプロパティを設定するための特別な構文を提供します。 たとえば、プロパティは <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> 省略可能な引数を表します。
+ 属性が適用されるときに必ずしも指定する必要がないプロパティは、省略可能なプロパティ (または省略可能な引数) と呼ばれます。 それらは、設定可能なプロパティによって表されます。 コンパイラには、属性が適用されるときにこれらのプロパティを設定するための特別な構文が用意されています。 たとえば、<xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> プロパティは省略可能な引数を表します。
 
- カスタム属性クラスに "Attribute" というサフィックスを付ける✔️ます。
+ ✔️ カスタム属性クラスの名前には "Attribute" というサフィックスを付けます。
 
- ✔️ <xref:System.AttributeUsageAttribute> カスタム属性に適用します。
+ ✔️ カスタム属性には <xref:System.AttributeUsageAttribute> を適用します。
 
- ✔️オプションの引数に設定可能なプロパティを指定します。
+ ✔️ 省略可能な引数には設定可能なプロパティを提供します。
 
- ✔️は、必須の引数の取得専用プロパティを提供します。
+ ✔️ 必須の引数には取得専用のプロパティを提供します。
 
- 必須の引数に対応するプロパティを初期化するには、コンストラクターパラメーターを指定✔️ます。 各パラメーターには、対応するプロパティと同じ名前 (大文字と小文字が異なる) を指定する必要があります。
+ ✔️ 必須の引数に対応するプロパティを初期化するためのコンストラクター パラメーターを提供ます。 各パラメーターの名前は、対応するプロパティと同じにする必要があります (ただし、異なる大文字と小文字の使い分けで)。
 
- ❌ 省略可能な引数に対応するプロパティを初期化するコンストラクターパラメーターを指定しないでください。
+ ❌ 省略可能な引数に対応するプロパティを初期化するためのコンストラクター パラメーターは提供しないようにします。
 
- つまり、コンストラクターとセッターの両方で設定できるプロパティはありません。 このガイドラインでは、省略可能な引数と必須の引数を明確に指定します。これにより、2つの方法で同じことを行うことが回避されます。
+ つまり、コンストラクターとセッターの両方で設定できるプロパティがないようにします。 このガイドラインにより、省略可能な引数と必須の引数の区別が非常に明確になり、同じことを 2 つの方法で行うことが回避されます。
 
- ❌ カスタム属性コンストラクターのオーバーロードは避けてください。
+ ❌ カスタム属性コンストラクターをオーバーロードしないようにします。
 
- コンストラクターが1つだけの場合は、どの引数が必須であり、省略可能であるかをユーザーに明確に伝えます。
+ コンストラクターを 1 つだけにすると、どの引数が必須で、どれが省略可能であるかが、ユーザーに明確に伝わります。
 
- 可能であれば、カスタム属性クラスを封印✔️ます。 これにより、属性の参照が高速になります。
+ ✔️ 可能であれば、カスタム属性クラスをシールします。 これにより、属性の参照が高速になります。
 
- *部分 &copy; 2005、2009 Microsoft Corporation。すべての権限が予約されています。*
+ *Portions &copy; 2005, 2009 Microsoft Corporation.All rights reserved.*
 
  *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*
 
 ## <a name="see-also"></a>関連項目
 
-- [フレームワークデザインのガイドライン](index.md)
-- [使用に関するガイドライン](usage-guidelines.md)
+- [フレームワーク デザインのガイドライン](index.md)
+- [使用方法のガイドライン](usage-guidelines.md)

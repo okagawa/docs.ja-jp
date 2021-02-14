@@ -1,13 +1,13 @@
 ---
 title: dotnet publish コマンド
 description: dotnet publish コマンドを実行すると、.NET プロジェクトまたはソリューションがディレクトリに発行されます。
-ms.date: 11/11/2020
-ms.openlocfilehash: 3918c0708e207157ac33dd1a8fdefb993a1d6741
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/03/2021
+ms.openlocfilehash: 5391e56a88f782294c3a71c523d0fc27a09e0dd8
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98190066"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585677"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -146,6 +146,8 @@ dotnet publish -p:PublishProfile=FolderProfile
 - **`-p:PublishReadyToRun=true`**
 
   アプリケーション アセンブリは ReadyToRun (R2R) 形式にコンパイルされます。 R2R とは、Ahead-Of-Time (AOT) コンパイルの一種です。 詳細については、「[ReadyToRun イメージ](../deploying/ready-to-run.md)」を参照してください。 .NET Core 3.0 SDK 以降で使用できます。
+
+  実行時エラーの原因になる可能性のある足りない依存関係に関する警告を表示するには、`-p:PublishReadyToRunShowWarnings=true` を使用します。
 
   このオプションは、コマンド ラインではなく、発行プロファイルで指定することをお勧めします。 詳細については、「[MSBuild](#msbuild)」を参照してください。
 

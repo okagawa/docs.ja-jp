@@ -1,50 +1,54 @@
 ---
-title: .NET Core CLI を使用してアプリを発行する
-description: .NET Core CLI コマンドを使用して .NET Core アプリを発行する方法について説明します。
+title: .NET CLI を使用してアプリを公開する
+description: .NET CLI コマンドを使用して .NET アプリケーションを公開する方法について説明します。
 author: adegeo
 ms.author: adegeo
-ms.date: 12/12/2019
+ms.date: 02/05/2021
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: a592b397d1ffee5b224638a8d17ce6fa9e44eea2
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: af2198360670360f94f7fdf30d2890bc7dfd436d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325026"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773863"
 ---
-# <a name="publish-net-core-apps-with-the-net-core-cli"></a>.NET Core CLI を使用して .NET Core アプリを発行する
+# <a name="publish-net-apps-with-the-net-cli"></a>.NET CLI を使用した .NET アプリの発行
 
-この記事では、コマンド ラインから .NET Core アプリケーションを公開する方法を示します。 .NET Core では、アプリケーションを公開する方法が 3 つ用意されています。 フレームワークに依存する展開では、ローカル環境にインストールされている .NET Core ランタイムを使用するクロス プラットフォームの .dll ファイルが生成されます。 フレームワークに依存する実行可能ファイルでは、ローカル環境にインストールされている .NET Core ランタイムを使用するプラットフォーム固有の実行可能ファイルが生成されます。 自己完結型の実行可能ファイルでは、プラットフォーム固有の実行可能ファイルが生成されて、.NET Core ランタイムのローカル コピーが組み込まれます。
+この記事では、コマンド ラインから .NET アプリケーションを公開する方法を説明します。 .NET には、アプリケーションを公開する方法が 3 つ用意されています。 フレームワークに依存する展開を使用すると、ローカル環境にインストールされている .NET ランタイムを使用するクロスプラットフォームの .dll ファイルが生成されます。 フレームワークに依存する実行可能ファイルを使用すると、ローカル環境にインストールされている .NET ランタイムを使用するプラットフォーム固有の実行可能ファイルが生成されます。 自己完結型の実行可能ファイルを使用すると、プラットフォーム固有の実行可能ファイルが生成されて、.NET ランタイムのローカル コピーが組み込まれます。
 
-これらの公開モードの概要については、「[.NET Core アプリケーションの展開](index.md)」をご覧ください。
+これらの公開モードの概要については、[.NET アプリケーションの展開](index.md)に関するページを参照してください。
 
 CLI の使用方法について簡単にわかるヘルプをお探しですか。 次の表では、アプリの公開方法についての例を示します。 ターゲット フレームワークは、`-f <TFM>` パラメーターを使用するか、プロジェクト ファイルを編集して、指定することができます。 詳細については、「[公開の基礎](#publishing-basics)」をご覧ください。
 
-| 公開モード | SDK バージョン | command |
-| ------------ | ----------- | ------- |
-| フレームワークに依存する展開 | 2.x | `dotnet publish -c Release` |
-| フレームワークに依存する実行可能ファイル | 2.2 | `dotnet publish -c Release -r <RID> --self-contained false` |
-|                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained false` |
-|                                | 3.0* | `dotnet publish -c Release` |
-| 自己完結型の展開      | 2.1 | `dotnet publish -c Release -r <RID> --self-contained true` |
-|                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
-|                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
+| 公開モード                   | SDK バージョン | command                                                     |
+|--------------------------------|-------------|-------------------------------------------------------------|
+| [フレームワークに依存する展開](#framework-dependent-deployment) | 2.1         | `dotnet publish -c Release`                                 |
+|                                | 3.1         | `dotnet publish -c Release -p:UseAppHost=false`             |
+|                                | 5.0         | `dotnet publish -c Release -p:UseAppHost=false`             |
+| [フレームワークに依存する実行可能ファイル](#framework-dependent-executable) | 3.1         | `dotnet publish -c Release -r <RID> --self-contained false`<br>`dotnet publish -c Release` |
+|                                | 5.0         | `dotnet publish -c Release -r <RID> --self-contained false`<br>`dotnet publish -c Release` |
+| [自己完結型の展開](#self-contained-deployment)      | 2.1         | `dotnet publish -c Release -r <RID> --self-contained true`  |
+|                                | 3.1         | `dotnet publish -c Release -r <RID> --self-contained true`  |
+|                                | 5.0         | `dotnet publish -c Release -r <RID> --self-contained true`  |
 
-\* SDK バージョン 3.0 を使用する場合、基本的な `dotnet publish` コマンドを実行するときは、フレームワークに依存する実行可能ファイルが既定の公開モードです。 これは、プロジェクトのターゲットが **.NET Core 2.1** または **.NET Core 3.0** である場合にのみ適用されます。
+\* **SDK バージョン 3.1** 以降を使用する場合、基本的な `dotnet publish` コマンドを実行するときの既定の公開モードは、フレームワークに依存する実行可能ファイルです。
+
+> [!NOTE]
+> `-c Release` パラメーターは必要ありません。 アプリの **リリース** ビルドを公開することを明示するために提供されています。
 
 ## <a name="publishing-basics"></a>公開の基礎
 
-アプリを公開するときは、プロジェクト ファイルの設定 `<TargetFramework>` で既定のターゲット フレームワークを指定します。 任意の有効な[ターゲット フレームワーク モニカー (TFM)](../../standard/frameworks.md) にターゲット フレームワークを変更できます。 たとえば、プロジェクトで `<TargetFramework>netcoreapp2.2</TargetFramework>` を使用している場合は、.NET Core 2.2 をターゲットとするバイナリが作成されます。 この設定で指定されている TFM が、[`dotnet publish`](../tools/dotnet-publish.md) コマンドで使用される既定のターゲットになります。
+アプリを公開するときは、プロジェクト ファイルの設定 `<TargetFramework>` で既定のターゲット フレームワークを指定します。 任意の有効な[ターゲット フレームワーク モニカー (TFM)](../../standard/frameworks.md) にターゲット フレームワークを変更できます。 たとえば、プロジェクトで `<TargetFramework>netcoreapp2.1</TargetFramework>` を使用している場合は、.NET Core 2.1 をターゲットとするバイナリが作成されます。 この設定で指定されている TFM が、[`dotnet publish`](../tools/dotnet-publish.md) コマンドで使用される既定のターゲットになります。
 
-複数のフレームワークをターゲットにしたい場合は、セミコロンで区切ることにより設定 `<TargetFrameworks>` で複数の TFM 値を設定できます。 `dotnet publish -f <TFM>` コマンドではフレームワークの 1 つを公開できます。 たとえば、`<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` と設定して `dotnet publish -f netcoreapp2.1` を実行すると、.NET Core 2.1 をターゲットとするバイナリが作成されます。
+複数のフレームワークをターゲットにしたい場合は、セミコロンで区切ることにより、`<TargetFrameworks>` の設定で複数の TFM 値を設定できます。 アプリをビルドするときは、ターゲット フレームワークごとにビルドが生成されます。 ただし、アプリを公開するときは、`dotnet publish -f <TFM>` コマンドでターゲット フレームワークを指定する必要があります。
 
-他の値を設定しない限り、[`dotnet publish`](../tools/dotnet-publish.md) コマンドの出力ディレクトリは `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` です。 `-c` パラメーターで変更しない限り、**BUILD-CONFIGURATION** の既定のモードは **Debug** です。 たとえば、`dotnet publish -c Release -f netcoreapp2.1` と指定すると、`myfolder/bin/Release/netcoreapp2.1/publish/` に公開されます。
+他の値を設定しない限り、[`dotnet publish`](../tools/dotnet-publish.md) コマンドの出力ディレクトリは `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` です。 `-c` パラメーターで変更しない限り、**BUILD-CONFIGURATION** の既定のモードは **Debug** です。 たとえば、`dotnet publish -c Release -f netcoreapp2.1` と指定すると、`./bin/Release/netcoreapp2.1/publish/` に公開されます。
 
-.NET Core SDK 3.0 以降を使用する場合、.NET Core バージョン 2.1、2.2、3.0、またはそれ以降のバージョンをターゲットとするアプリの既定の公開モードは、フレームワークに依存する実行可能ファイルです。
+.NET Core SDK 3.1 以降を使用している場合、既定の公開モードはフレームワークに依存する "_実行可能ファイル_" です。
 
-.NET Core SDK 2.1 を使用する場合、.NET Core バージョン 2.1 および 2.2 をターゲットとするアプリの既定の公開モードは、フレームワークに依存する展開です。
+.NET Core SDK 2.1 を使用している場合、既定の公開モードはフレームワークに依存する "_展開_" です。
 
 ### <a name="native-dependencies"></a>ネイティブの依存関係
 
@@ -105,42 +109,53 @@ End Module
 
 ## <a name="framework-dependent-deployment"></a>フレームワークに依存する展開
 
-.NET Core SDK 2.x の CLI では、フレームワークに依存する展開 (FDD) が、基本的な `dotnet publish` コマンドの既定のモードです。
+.NET Core 2.1 SDK の CLI の場合、フレームワークに依存する展開 (FDD) が、基本的な `dotnet publish` コマンドの既定のモードです。 それより新しい SDK では、[フレームワークに依存する実行可能ファイル](#framework-dependent-executable)が既定値です。
 
 FDD としてアプリを公開すると、`./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` フォルダーに`<PROJECT-NAME>.dll` ファイルが作成されます。 アプリを実行するには、出力フォルダーに移動して、`dotnet <PROJECT-NAME>.dll` コマンドを使用します。
 
-アプリは、特定のバージョンの .NET Core をターゲットにするように構成されます。 アプリが実行されるすべてのマシンには、そのターゲットの .NET Core ランタイムが存在する必要があります。 たとえば、アプリのターゲットが .NET Core 2.2 である場合、アプリを実行するコンピューターには、.NET Core 2.2 ランタイムがインストールされている必要があります。 「[公開の基礎](#publishing-basics)」セクションで説明したように、プロジェクト ファイルを編集することで、既定のターゲット フレームワークを変更したり、複数のフレームワークをターゲットにしたりできます。
+アプリは、特定のバージョンの .NET をターゲットにするように構成されます。 アプリが実行されるすべてのコンピューターには、そのターゲットの .NET ランタイムが存在する必要があります。 たとえば、アプリのターゲットが .NET Core 3.1 である場合、アプリを実行するコンピューターには、.NET Core 3.1 ランタイムがインストールされている必要があります。 「[公開の基礎](#publishing-basics)」セクションで説明したように、プロジェクト ファイルを編集することで、既定のターゲット フレームワークを変更したり、複数のフレームワークをターゲットにしたりできます。
 
-FDD の公開では、アプリが実行されるシステムで使用できる最新の .NET Core セキュリティ更新プログラムまで自動的にロールフォワードするアプリが作成されます。 コンパイル時のバージョンのバインドの詳細については、「[使用する .NET Core のバージョンを選択する](../versions/selection.md#framework-dependent-apps-roll-forward)」をご覧ください。
+FDD を公開すると、アプリが実行されるシステムで使用できる最新の .NET セキュリティ更新プログラムまで自動的にロールフォワードするアプリが作成されます。 コンパイル時のバージョンのバインドの詳細については、「[使用する .NET のバージョンを選択する](../versions/selection.md#framework-dependent-apps-roll-forward)」を参照してください。
+
+| 公開モード                   | SDK バージョン | コマンド                                                     |
+|--------------------------------|-------------|-------------------------------------------------------------|
+| フレームワークに依存する展開 | 2.1         | `dotnet publish -c Release`                                 |
+|                                | 3.1         | `dotnet publish -c Release -p:UseAppHost=false`             |
+|                                | 5.0         | `dotnet publish -c Release -p:UseAppHost=false`             |
 
 ## <a name="framework-dependent-executable"></a>フレームワークに依存する実行可能ファイル
 
-.NET Core SDK 3.x の CLI では、フレームワークに依存する実行可能ファイル (FDE) が、基本的な `dotnet publish` コマンドの既定のモードです。 現在のオペレーティング システムをターゲットにする限り、他のパラメーターを指定する必要はありません。
+.NET 5 (および .NET Core 3.1) SDK の CLI の場合は、フレームワークに依存する実行可能ファイル (FDE) が、基本的な `dotnet publish` コマンドの既定のモードです。 現在のオペレーティング システムをターゲットにする限り、他のパラメーターを指定する必要はありません。
 
 このモードでは、クロスプラットフォーム アプリをホストするために、プラットフォームに固有の実行可能なホストが作成されます。 FDD では `dotnet` コマンドの形式でホストを要求するので、このモードは FDD と似ています。 ホストの実行可能ファイル名はプラットフォームごとに異なり、`<PROJECT-FILE>.exe` のような名前になります。 この実行可能ファイルは、`dotnet <PROJECT-FILE>.dll` を呼び出す (アプリの実行手段として引き続き使用可能) 代わりに、直接実行することができます。
 
-アプリは、特定のバージョンの .NET Core をターゲットにするように構成されます。 アプリが実行されるすべてのマシンには、そのターゲットの .NET Core ランタイムが存在する必要があります。 たとえば、アプリのターゲットが .NET Core 2.2 である場合、アプリを実行するコンピューターには、.NET Core 2.2 ランタイムがインストールされている必要があります。 「[公開の基礎](#publishing-basics)」セクションで説明したように、プロジェクト ファイルを編集することで、既定のターゲット フレームワークを変更したり、複数のフレームワークをターゲットにしたりできます。
+アプリは、特定のバージョンの .NET をターゲットにするように構成されます。 アプリが実行されるすべてのコンピューターには、そのターゲットの .NET ランタイムが存在する必要があります。 たとえば、アプリのターゲットが .NET Core 3.1 である場合、アプリを実行するコンピューターには、.NET Core 3.1 ランタイムがインストールされている必要があります。 「[公開の基礎](#publishing-basics)」セクションで説明したように、プロジェクト ファイルを編集することで、既定のターゲット フレームワークを変更したり、複数のフレームワークをターゲットにしたりできます。
 
-FDE の公開では、アプリが実行されるシステムで使用できる最新の .NET Core セキュリティ更新プログラムまで自動的にロールフォワードするアプリが作成されます。 コンパイル時のバージョンのバインドの詳細については、「[使用する .NET Core のバージョンを選択する](../versions/selection.md#framework-dependent-apps-roll-forward)」をご覧ください。
+FDE を公開すると、アプリが実行されるシステムで使用できる最新の .NET セキュリティ更新プログラムまで自動的にロールフォワードするアプリが作成されます。 コンパイル時のバージョンのバインドの詳細については、「[使用する .NET のバージョンを選択する](../versions/selection.md#framework-dependent-apps-roll-forward)」を参照してください。
 
-.NET Core 2.2 以前では、`dotnet publish` コマンドで次のスイッチを使用して、FDE を公開する必要があります。
+.NET 2.1 の場合は、`dotnet publish` コマンドで次のスイッチを使用して、FDE を公開する必要があります。
 
 - `-r <RID>` このスイッチでは、識別子 (RID) を使用してターゲット プラットフォームを指定します。 ランタイム識別子の一覧については、[ランタイム識別子 (RID) のカタログ](../rid-catalog.md)に関する記事をご覧ください。
 
 - `--self-contained false` このスイッチでは、識別子 (RID) を使用してターゲット プラットフォームを指定します。
 
+| 公開モード                   | SDK バージョン | コマンド                                                     |
+|--------------------------------|-------------|-------------------------------------------------------------|
+| フレームワークに依存する実行可能ファイル | 3.1         | `dotnet publish -c Release -r <RID> --self-contained false`<br>`dotnet publish -c Release` |
+|                                | 5.0         | `dotnet publish -c Release -r <RID> --self-contained false`<br>`dotnet publish -c Release` |
+
 `-r` スイッチを使用すると常に、出力フォルダーのパスが `./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/` に変わります
 
-[アプリの例](#sample-app)を使用する場合は、`dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false` を実行します。 このコマンドでは、実行可能ファイル `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe` が作成されます
+[アプリの例](#sample-app)を使用する場合は、`dotnet publish -f net5.0 -r win10-x64 --self-contained false` を実行します。 このコマンドでは、実行可能ファイル `./bin/Debug/net5.0/win10-x64/publish/apptest1.exe` が作成されます
 
 > [!NOTE]
-> **グローバリゼーション インバリアント モード**を有効にすることで、展開の合計サイズを小さくすることができます。 このモードは、全世界を意識するものではなく、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture)の書式設定規則、大文字/小文字の区別規則、文字列比較、並べ替え順序を使用できるアプリケーションにとって便利です。 **グローバリゼーション インバリアント モード**の詳細と、それを有効にする方法については、「[.NET Core Globalization Invariant Mode](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)」(.NET Core のグローバリゼーション インバリアント モード) を参照してください。
+> **グローバリゼーション インバリアント モード** を有効にすることで、展開の合計サイズを小さくすることができます。 このモードは、全世界を意識するものではなく、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture)の書式設定規則、大文字/小文字の区別規則、文字列比較、並べ替え順序を使用できるアプリケーションにとって便利です。 **グローバリゼーション インバリアント モード** の詳細と、それを有効にする方法については、[.NET のグローバリゼーション インバリアント モード](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)に関するページを参照してください。
 
 ## <a name="self-contained-deployment"></a>自己完結型の展開
 
-自己完結型の展開 (SCD) を公開すると、.NET Core SDK によってプラットフォーム固有の実行可能ファイルが作成されます。 SCD の公開には、アプリの実行に必要なすべての .NET Core ファイルが含まれますが、[.NET Core のネイティブの依存関係](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)は含まれません。 これらの依存関係は、アプリを実行する前に、システムに存在している必要があります。
+自己完結型の展開 (SCD) を公開すると、.NET SDK によってプラットフォーム固有の実行可能ファイルが作成されます。 SCD の公開には、アプリの実行に必要なすべての .NET ファイルが含まれますが、[.NET のネイティブの依存関係](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)は含まれません。 これらの依存関係は、アプリを実行する前に、システムに存在している必要があります。
 
-SCD の公開で作成されるアプリでは、使用可能な最新の .NET Core セキュリティ更新プログラムへのロールフォワードは行われません。 コンパイル時のバージョンのバインドの詳細については、「[使用する .NET Core のバージョンを選択する](../versions/selection.md#self-contained-deployments-include-the-selected-runtime)」をご覧ください。
+SCD の公開で作成されるアプリでは、使用可能な最新の .NET セキュリティ更新プログラムへのロールフォワードは行われません。 コンパイル時のバージョンのバインドの詳細については、「[使用する .NET のバージョンを選択する](../versions/selection.md#self-contained-deployments-include-the-selected-runtime)」を参照してください。
 
 `dotnet publish` コマンドで次のスイッチを使用して、SCD を公開する必要があります。
 
@@ -148,10 +163,16 @@ SCD の公開で作成されるアプリでは、使用可能な最新の .NET C
 
 - `--self-contained true` このスイッチでは、SCD として実行可能ファイルを作成するよう .NET Core SDK に指示されます。
 
+| 公開モード                   | SDK バージョン | コマンド                                                     |
+|--------------------------------|-------------|-------------------------------------------------------------|
+| 自己完結型の展開      | 2.1         | `dotnet publish -c Release -r <RID> --self-contained true`  |
+|                                | 3.1         | `dotnet publish -c Release -r <RID> --self-contained true`  |
+|                                | 5.0         | `dotnet publish -c Release -r <RID> --self-contained true`  |
+
 > [!NOTE]
-> **グローバリゼーション インバリアント モード**を有効にすることで、展開の合計サイズを小さくすることができます。 このモードは、全世界を意識するものではなく、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture)の書式設定規則、大文字/小文字の区別規則、文字列比較、並べ替え順序を使用できるアプリケーションにとって便利です。 **グローバリゼーション インバリアント モード**の詳細と、それを有効にする方法については、「[.NET Core Globalization Invariant Mode](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)」(.NET Core のグローバリゼーション インバリアント モード) を参照してください。
+> **グローバリゼーション インバリアント モード** を有効にすることで、展開の合計サイズを小さくすることができます。 このモードは、全世界を意識するものではなく、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture)の書式設定規則、大文字/小文字の区別規則、文字列比較、並べ替え順序を使用できるアプリケーションにとって便利です。 **グローバリゼーション インバリアント モード** の詳細と、それを有効にする方法については、「[.NET Core Globalization Invariant Mode](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)」(.NET Core のグローバリゼーション インバリアント モード) を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [.NET Core アプリケーションの展開の概要](index.md)
-- [.NET Core のランタイム識別子 (RID) のカタログ](../rid-catalog.md)
+- [.NET アプリケーションの展開の概要](index.md)
+- [.NET ランタイム識別子 (RID) カタログ](../rid-catalog.md)

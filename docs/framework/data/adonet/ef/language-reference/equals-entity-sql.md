@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: = (等しい) (Entity SQL)'
 title: = (等しい) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 948eb588-7080-4046-bb48-633b007393bf
-ms.openlocfilehash: 31299670d9f47ed7672b980a3415b8d214463b8e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 500c3fdde2377b3b5160436f23d051c2bcd0ee62
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148088"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786408"
 ---
 # <a name="-equals-entity-sql"></a>= (等しい) (Entity SQL)
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: /= 演算子 (Visual Basic)'
 title: /= 演算子
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - operator /=
 - compound assignment statements [Visual Basic]
 ms.assetid: a1e22d0e-8380-4761-9da1-84fb51c34821
-ms.openlocfilehash: d47a69e454305ce9417a46b5bbfbbb55a1ad1dc3
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 3020372be18f554df18fa6dac539ab9d0b2f725e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867076"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666031"
 ---
 # <a name="-operator-visual-basic"></a>/= 演算子 (Visual Basic)
 

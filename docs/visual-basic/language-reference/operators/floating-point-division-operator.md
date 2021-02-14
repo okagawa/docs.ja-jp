@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: / 演算子 (Visual Basic)'
 title: / 演算子
 ms.date: 07/20/2015
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-ms.openlocfilehash: 765a80d45908e0ecf17e4c21b748dbf6b2a4c0f5
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 717c8fdc6abae02de555040a3aadb92fed2bfbee
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867041"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666005"
 ---
 # <a name="-operator-visual-basic"></a>/ 演算子 (Visual Basic)
 

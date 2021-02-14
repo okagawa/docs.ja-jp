@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: / (除算) (Entity SQL)'
 title: '- (除算) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: ef48c368-f3ed-4275-8ada-4e9649781262
-ms.openlocfilehash: d7d25d8c5b91850b21e36ba8f6f668af7a7d0045
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4ac487c636c460401eeb147dc7ce1a8d8ba7f7ad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148162"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724636"
 ---
 # <a name="-divide-entity-sql"></a>/ (除算) (Entity SQL)
 

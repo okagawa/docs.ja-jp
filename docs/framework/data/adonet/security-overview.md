@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: セキュリティの概要'
 title: セキュリティの概要
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: ede9b24828da74c043bed103595073c4607c51f2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3aa6e5cbe444e9cfc417d79defce7e89a2034f71
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91188994"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718825"
 ---
 # <a name="security-overview"></a>セキュリティの概要
 

@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: データ バインディング'
 title: データ バインディング
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
-ms.openlocfilehash: c7048d292bdf5c1372d5f8f174f7f0e84efa7593
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: d5566fae505f5c5cd54b2a2990cf04169211003c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634717"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729563"
 ---
 # <a name="data-binding"></a>データ バインディング
 
@@ -82,7 +83,7 @@ Array には、T の `Array.Sort()` を使用できる並べ替えメソッド (
 
 System.Windows.Forms.BindingSource を使用して EntitySet\<TEntity> を System.Windows.Forms.BindingSource.DataSource にバインドした場合、BindingSource.List を更新するには EntitySet\<TEntity>.GetNewBindingList を呼び出す必要があります。
 
-System.Windows.Forms.BindingSource を使用して BindingSource.DataMember プロパティを設定し、BindingSource.DataMember で指定した、EntitySet\<TEntity> を公開するプロパティを持つクラスに BindingSource.DataSource を設定した場合、BindingSource.List を更新するときに EntitySet\<TEntity>.GetNewBindingList を呼び出す必要はありませんが、並べ替え機能が失われます。
+System.Windows.Forms.BindingSource を使用して BindingSource.DataMember プロパティを設定し、BindingSource.DataMember で指定した、EntitySet\<TEntity> を公開するプロパティを持つクラスに BindingSource.DataSource を設定した場合、BindingSource.List を更新する際に EntitySet\<TEntity>.GetNewBindingList を呼び出す必要はありませんが、並べ替え機能が失われます。
 
 ## <a name="caching"></a>キャッシュ
 

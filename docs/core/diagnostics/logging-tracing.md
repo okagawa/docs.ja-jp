@@ -2,12 +2,12 @@
 title: ログとトレース - .NET Core
 description: .NET Core のログとトレースの概要について説明します。
 ms.date: 10/12/2020
-ms.openlocfilehash: fac8eeed63e8737ad42699d81b421747b207c69a
-ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
+ms.openlocfilehash: a8c6d82ddb7bc3f8b4cc9eae9dd7aaf65732a0b8
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753628"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99548396"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core のログとトレース
 
@@ -72,6 +72,10 @@ ms.locfileid: "97753628"
   - Windows のみ。
   - Windows イベント ログにメッセージを書き込みます。
   - システム管理者は、致命的なアプリケーション エラー メッセージが Windows イベントログに記録されることを想定しています。
+
+## <a name="distributed-tracing"></a>分散トレース
+
+[分散トレース](./distributed-tracing.md)は、分散システムでトレース データを発行して監視する方法です。
 
 ## <a name="ilogger-and-logging-frameworks"></a>ILogger とログ記録フレームワーク
 

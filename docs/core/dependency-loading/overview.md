@@ -5,12 +5,12 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.topic: overview
-ms.openlocfilehash: 34deb802183f20cc92449c21eb7e149cc002850f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2eaa01fad3913272dc90891592d0e35cd89ad2ab
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84284223"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506319"
 ---
 # <a name="dependency-loading-in-net-core"></a>.NET Core での依存関係の読み込み
 
@@ -40,3 +40,7 @@ ms.locfileid: "84284223"
 ## <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>.NET Core でアセンブリのアンローダビリティを使用およびデバッグする方法
 
 「[.NET Core でアセンブリのアンローダビリティを使用およびデバッグする方法](../../standard/assembly/unloadability.md)」の記事は、ステップ バイ ステップのチュートリアルです。 ここでは、.NET Core アプリケーションを読み込んで実行し、アンロードする方法を示します。 この記事ではデバッグのヒントも示します。
+
+## <a name="collect-detailed-assembly-loading-information"></a>アセンブリの読み込みに関する詳細情報の収集
+
+「[アセンブリの読み込みに関する詳細情報の収集](collect-details.md)」の記事では、ランタイムでのマネージド アセンブリの読み込みに関する詳細情報を収集する方法が説明されています。 実行中のプロセスのトレースでアセンブリ ローダー イベントをキャプチャするために、[dotnet-trace](../diagnostics/dotnet-trace.md) ツールが使用されています。

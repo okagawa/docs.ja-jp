@@ -4,12 +4,12 @@ description: タプルとその他の型を分解する方法について説明�
 ms.technology: csharp-fundamentals
 ms.date: 11/23/2017
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 96168b729ae3ec11d7a38444b8c100bdbff4efbf
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 5aaf7157b87de4f67f6e4beba18794a6dd13b6d0
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439704"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585352"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>タプルとその他の型の分解
 
@@ -81,11 +81,7 @@ C# には、非タプル型を分解するためのサポートが組み込ま�
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class2.cs)]
 
-`Deconstruct` メソッドをオーバーロードすると、共通して 1 つのオブジェクトから抽出されたデータのグループを反映できるので、明確であいまいさのないシグネチャを使用して `Deconstruct` メソッドを定義するように気を付けてください。 異なる順序で同数の `out` パラメーター、または数と型が同じ `out` パラメーターを持つ `Deconstruct` メソッドが複数あると、混同する可能性があります。
-
-次のオーバーロードされた `Deconstruct` メソッドは、混同が生じる原因になりうる例を示しています。 1 つ目のオーバーロードは、`Person` オブジェクトの名、ミドル ネーム、姓、年齢の順に返します。 2 つ目のオーバーロードは、名前のみの情報と年収を返しますが、名、ミドル ネーム、姓は異なる順序です。 この場合、`Person` インスタンスを分解するときに引数の順序を間違えやすくなります。
-
-[!code-csharp[Deconstruct-ambiguity](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-ambiguous.cs)]
+パラメーター数が同じ `Deconstruct` メソッドが複数あると、あいまいになります。 異なる数のパラメーター、つまり "アリティ" を持つ `Deconstruct` メソッドを定義するように注意する必要があります。 オーバーロードの解決時に、パラメーター数が同じ `Deconstruct` メソッドを区別できません。
 
 ## <a name="deconstructing-a-user-defined-type-with-discards"></a>破棄によるユーザー定義型の分解
 

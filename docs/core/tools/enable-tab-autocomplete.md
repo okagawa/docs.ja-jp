@@ -1,22 +1,22 @@
 ---
 title: タブ補完を有効にする
-description: この記事では、PowerShell、Bash、および zsh 向けの .NET CLI のタブ補完を有効にする方法を説明します。
+description: この記事では、PowerShell、Bash、zsh、fish 向けの .NET CLI のタブ補完を有効にする方法を説明します。
 author: adegeo
 ms.author: adegeo
 ms.topic: how-to
 ms.date: 11/03/2019
-ms.openlocfilehash: 31bf5e74644680fc30ca5b79972fbed6367363e1
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: b5b63166faa1762d9fa82a93aa70aebb33167630
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634013"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585560"
 ---
 # <a name="how-to-enable-tab-completion-for-the-net-cli"></a>.NET CLI のタブ補完を有効にする方法
 
 **この記事の対象:** ✔️ .NET Core 2.1 SDK 以降のバージョン
 
-この記事では、3 つのシェル、PowerShell、Bash、および zsh のタブ補完を構成する方法について説明します。 他のシェルについては、タブ補完を構成する方法に関するシェルのドキュメントを参照してください。
+この記事では、4 つのシェル、PowerShell、Bash、zsh、fish のタブ補完を構成する方法について説明します。 他のシェルについては、タブ補完を構成する方法に関するシェルのドキュメントを参照してください。
 
 セットアップが完了したら、シェルに `dotnet` コマンドを入力した後、TAB キーを押すと、.NET CLI のタブ補完がトリガーされます。 現在のコマンド ラインが `dotnet complete` コマンドに送信され、結果がシェルによって処理されます。 何かを `dotnet complete` コマンドに直接送信することで、タブ補完を有効にせずに結果をテストすることができます。 次に例を示します。
 
@@ -97,4 +97,12 @@ _dotnet_zsh_complete()
 }
 
 compctl -K _dotnet_zsh_complete dotnet
+```
+
+## <a name="fish"></a>fish
+
+.NET CLI の **fish** シェルにタブ補完を追加するには、次のコードを `config.fish` ファイルに追加します。
+
+```fish
+complete -f -c dotnet -a "(dotnet complete)"
 ```

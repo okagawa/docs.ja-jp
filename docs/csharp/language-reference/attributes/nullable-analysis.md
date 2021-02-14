@@ -1,13 +1,13 @@
 ---
 title: C# の予約済み属性:Null 許容のスタティック分析
-ms.date: 04/14/2020
+ms.date: 02/02/2021
 description: これらの属性は、null 許容および null 非許容参照型に対するより適切な静的分析を提供するために、コンパイラによって解釈されます。
-ms.openlocfilehash: 6678cd21de23d4ed391eff089e33939b5adff0fa
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: c1c3e0a0fe1ee9000e0a1a85ee08e6e966200be5
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955604"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99548358"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>予約済み属性はコンパイラの null 状態の静的分析に寄与する
 
@@ -16,7 +16,7 @@ null 許容コンテキストの場合、コンパイラではコードの静的
 - *null 以外*:静的分析によって、変数に null 以外の値が割り当てられていることが判断されます。
 - *null の可能性あり*:静的分析では、変数に null 以外の値が割り当てられていることを判断できません。
 
-API のセマンティクスについての情報をコンパイラに提供する、いくつかの属性を適用できます。 この情報は、コンパイラで静的分析を実行し、変数が null でないかどうかを判断するのに役立ちます。 この記事では、これらの各属性とその使用方法について簡単に説明します。 すべての例では C# 8.0 以降を想定しており、コードは null 許容コンテキストに含まれています。
+API のセマンティクスについての情報をコンパイラに提供する属性を適用できます。 この情報は、コンパイラで静的分析を実行し、変数が null でないかどうかを判断するのに役立ちます。 この記事では、これらの各属性とその使用方法について簡単に説明します。 すべての例では C# 8.0 以降を想定しており、コードは null 許容コンテキストに含まれています。
 
 よくある例から始めましょう。 ライブラリに、リソース文字列を取得するための次の API があるとします。
 
@@ -45,10 +45,12 @@ API の規則は、`TryGetValue` API シナリオで見たとおり、より複�
 - [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute):指定されたパラメーターの引数が null でない場合、戻り値は null ではありません。
 - [DoesNotReturn](xref:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute):メソッドから制御が返されることはありません。 つまり、常に例外がスローされます。
 - [DoesNotReturnIf](xref:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute):関連付けられた `bool` パラメーターに指定された値がある場合、このメソッドから制御が返されることはありません。
+- [MemberNotNull](xref:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute):メソッドから戻ったときに、列挙されたメンバーは null になりません。
+- [MemberNotNullWhen](xref:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute):指定された `bool` 値がメソッドから返された場合、列挙されたメンバーは null になりません。
 
 前述の説明は、各属性動作に関するクイック リファレンスです。 次の各セクションでは、動作と意味について、より詳しく説明します。
 
-これらの属性を追加すると、API の規則に関する詳細情報がコンパイラに与えられます。 呼び出し元のコードが、null 許容が有効なコンテキストでコンパイルされると、呼び出し元がこれらの規則に違反したときに、コンパイラによって警告されます。 これらの属性では、実装に対する追加のチェックが有効になりません。
+これらの属性を追加すると、API の規則に関する詳細情報がコンパイラに与えられます。 呼び出し元のコードが、null 許容が有効なコンテキストでコンパイルされると、呼び出し元がこれらの規則に違反したときに、コンパイラによって警告されます。 このような属性では、実装に対するその他のチェックが有効になりません。
 
 ## <a name="specify-preconditions-allownull-and-disallownull"></a>事前条件を指定する: `AllowNull` と `DisallowNull`
 
@@ -63,7 +65,7 @@ public string ScreenName
 private string _screenName;
 ```
 
-null 許容の認識されないコンテキストで上記のコードをコンパイルする場合、何も問題はありません。 null 許容参照型を有効にすると、`ScreenName` プロパティが null 非許容参照になります。 これは `get` アクセサーでは正しい動作です。`null` が返されることはありません。 呼び出し元では、返されたプロパティで `null` をチェックする必要はありません。 しかし、ここでプロパティを `null` に設定すると、警告が生成されます。 この種類のコードを引き続きサポートするには、次のコードに示すように、<xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute?displayProperty=nameWithType> 属性をプロパティに追加します。
+null 許容の認識されないコンテキストで上記のコードをコンパイルする場合、何も問題はありません。 null 許容参照型を有効にすると、`ScreenName` プロパティが null 非許容参照になります。 これは `get` アクセサーでは正しい動作です。`null` が返されることはありません。 呼び出し元では、返されたプロパティで `null` をチェックする必要はありません。 しかし、ここでプロパティを `null` に設定すると、警告が生成されます。 この種類のコードをサポートするには、次のコードに示すように、<xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute?displayProperty=nameWithType> 属性をプロパティに追加します。
 
 ```csharp
 [AllowNull]
@@ -215,7 +217,7 @@ bool TryGetMessage(string key, [NotNullWhen(true)] out string? message)
 string GetTopLevelDomainFromFullUrl(string url);
 ```
 
-`url` 引数が null でない場合、出力は `null` ではありません。 null 許容参照を有効にすると、API で null 入力が受け入れられることがない場合、そのシグネチャは正常に機能します。 しかし、入力が null である可能性がある場合は、戻り値も null である可能性があります。 したがって、シグネチャを次のコードに変更できます。
+`url` 引数が null でない場合、出力は `null` ではありません。 null 許容参照を有効にすると、API で null 入力が受け入れられることがない場合、そのシグネチャは正常に機能します。 しかし、入力が null である可能性がある場合は、戻り値も null である可能性があります。 シグネチャを次のコードに変更できます。
 
 ```csharp
 string? GetTopLevelDomainFromFullUrl(string? url);
@@ -235,6 +237,16 @@ string? GetTopLevelDomainFromFullUrl(string? url);
 - [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute):メソッドから指定された `bool` 値が返された場合、null 非許容の入力引数は null である可能性があります。
 - [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute):メソッドから指定された `bool` 値が返された場合、null 許容の入力引数は null にはなりません。
 - [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute):指定されたパラメーターの入力引数が null でない場合、戻り値は null ではありません。
+
+## <a name="constructor-helper-methods-membernotnull-and-membernotnullwhen"></a>コンストラクターのヘルパー メソッド: `MemberNotNull` と `MemberNotNullWhen`
+
+これらの属性は、コンストラクターからヘルパー メソッドに共通コードをリファクタリングする際の目的を指定するために使用します。 C# コンパイラによって、コンストラクターとフィールド初期化子が分析され、各コンストラクターから戻る前に、すべての null 非許容参照フィールドが初期化されていることが確認されます。 ただし、C# コンパイラによって、すべてのヘルパー メソッドを介したフィールドの割り当てが追跡されるわけではありません。 コンストラクターで直接ではなく、ヘルパー メソッドでフィールドが初期化されると、コンパイラから警告 `CS8618` が発行されます。 メソッド内で null 以外の値に初期化されるフィールドには、メソッドの宣言に <xref:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute> を追加します。 たとえば、次の例を考えてみましょう。
+
+:::code language="csharp" source="snippets/InitializeMembers.cs" ID="MemberNotNullExample":::
+
+`MemberNotNull` 属性コンストラクターへの引数として複数のフィールド名を指定できます。
+
+<xref:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute> には `bool` 引数があります。 ヘルパー メソッドによってフィールドが初期化されたかどうかを示す `bool` がヘルパー メソッドから返される状況では、`MemberNotNullWhen` を使用します。
 
 ## <a name="verify-unreachable-code"></a>到達できないコードを検証する
 
@@ -285,7 +297,7 @@ public void SetState(object containedField)
 
 [!INCLUDE [C# version alert](../../includes/csharp-version-alert.md)]
 
-null 許容参照型を追加すると、`null` である可能性のある変数に関する API の予測を記述するための、最初のボキャブラリが提供されます。 追加の属性では、変数の null 状態を事前条件および事後条件として記述するために、より豊富なボキャブラリが提供されます。 これらの属性では、予測をより明確に記述し、API を使用して開発者により優れたエクスペリエンスを提供します。
+null 許容参照型を追加すると、`null` である可能性のある変数に関する API の予測を記述するための、最初のボキャブラリが提供されます。 属性には、変数の null 状態を事前条件および事後条件として記述するために、より豊富なボキャブラリが用意されています。 これらの属性では、予測をより明確に記述し、API を使用して開発者により優れたエクスペリエンスを提供します。
 
 null 許容コンテキストのライブラリを更新する際には、API のユーザーに正しい使用方法を示すために、これらの属性を追加します。 これらの属性は、入力引数と戻り値の null 状態を完全に記述するのに役立ちます。
 

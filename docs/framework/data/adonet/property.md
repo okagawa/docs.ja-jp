@@ -1,17 +1,18 @@
 ---
+description: '詳細情報: プロパティ'
 title: property
 ms.date: 03/30/2017
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
-ms.openlocfilehash: 6aeb29c5aa608987466ec858416a4ac141ff1da3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8b25c19b0673817945fa6cc786589346462f7e61
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180921"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754327"
 ---
 # <a name="property"></a>property
 
-"*プロパティ*" は、[エンティティ型](entity-type.md)および[複合型](complex-type.md)に不可欠な構成要素です。 プロパティは、エンティティ型または複合型のインスタンスに含まれるデータの形と特性を定義します。 概念モデルのプロパティは、クラスに定義されるプロパティに似ています。 クラスのプロパティがクラスの構造を定義し、オブジェクトに関する情報を伝達するのと同様に、概念モデルのプロパティはエンティティ型の構造を定義し、エンティティ型のインスタンスに関する情報を伝達します。  
+"*プロパティ*" は、[エンティティ型](entity-type.md)および [複合型](complex-type.md)に不可欠な構成要素です。 プロパティは、エンティティ型または複合型のインスタンスに含まれるデータの形と特性を定義します。 概念モデルのプロパティは、クラスに定義されるプロパティに似ています。 クラスのプロパティがクラスの構造を定義し、オブジェクトに関する情報を伝達するのと同様に、概念モデルのプロパティはエンティティ型の構造を定義し、エンティティ型のインスタンスに関する情報を伝達します。  
   
 > [!NOTE]
 > このトピックで説明するプロパティは、ナビゲーション プロパティとは異なります。 詳しくは、「[ナビゲーション プロパティ](navigation-property.md)」をご覧ください。  

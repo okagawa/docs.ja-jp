@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: < (より小さい) (Entity SQL)'
 title: < (より小さい) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 1fc2a039-3ad6-4b3c-b41d-09932e803f86
-ms.openlocfilehash: 389c50a697c90dadb075369fe696f7382caf3cff
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 523defa6c19ca43a5827258277bbe3f489b9b8c2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161920"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748285"
 ---
 # <a name="-less-than-entity-sql"></a>\< (より小さい) (Entity SQL)
 

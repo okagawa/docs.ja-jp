@@ -4,12 +4,12 @@ description: Linux でパッケージ マネージャーを使用せずに .NET 
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 5879d4d66aba8bfa00caadbe3c33d6df0d7da59a
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 14789587a58c7b9d5ef2c9251ed599ce18a48f24
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970931"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505577"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-manually"></a>手動で .NET SDK または .NET ランタイムをインストールする
 
@@ -119,20 +119,15 @@ SDK の代わりに .NET ランタイムをインストールするには、`--r
 
 ランタイムを抽出し、.NET CLI コマンドをターミナルで使用できるようにするには、最初に .NET のバイナリ リリースをダウンロードします。 次に、ターミナルを開き、ファイルが保存されているディレクトリから次のコマンドを実行します。 アーカイブ ファイル名は、ダウンロードした内容によって異なる場合があります。
 
-**次のコマンドを使用して、ランタイムを抽出します**。
+**次のコマンドを使用して、ダウンロードしたランタイムまたは SDK を抽出します。** 必ず `DOTNET_FILE` の値を実際のファイル名に変更してください。
 
 ```bash
-mkdir -p "$HOME/dotnet" && tar zxf aspnetcore-runtime-5.0.0-linux-x64.tar.gz -C "$HOME/dotnet"
+DOTNET_FILE=dotnet-sdk-5.0.102-linux-x64.tar.gz
 export DOTNET_ROOT=$HOME/dotnet
-export PATH=$PATH:$HOME/dotnet
-```
 
-**次のコマンドを使用して、SDK を抽出します**。
+mkdir -p "$DOTNET_ROOT" && tar zxf "$DOTNET_FILE" -C "$DOTNET_ROOT"
 
-```bash
-mkdir -p "$HOME/dotnet" && tar zxf dotnet-sdk-5.0.100-linux-x64.tar.gz -C "$HOME/dotnet"
-export DOTNET_ROOT=$HOME/dotnet
-export PATH=$PATH:$HOME/dotnet
+export PATH=$PATH:$DOTNET_ROOT
 ```
 
 > [!TIP]

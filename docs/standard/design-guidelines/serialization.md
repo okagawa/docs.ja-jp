@@ -1,91 +1,92 @@
 ---
+description: '詳細情報: シリアル化'
 title: シリアル化
 ms.date: 10/22/2008
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
-ms.openlocfilehash: 58ed937df5b60daf9fcbcb7610d6026c5e9805fc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
-ms.translationtype: MT
+ms.openlocfilehash: a12163c01da2f9eed19de05b0434c02d05ca99b1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730930"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713300"
 ---
 # <a name="serialization"></a>シリアル化
 
-シリアル化は、オブジェクトを、簡単に永続化または転送できる形式に変換するプロセスです。 たとえば、オブジェクトをシリアル化し、HTTP を使用してインターネット経由で転送し、ターゲットコンピューターで逆シリアル化することができます。
+シリアル化とは、簡単に永続化または転送できる形式にオブジェクトを変換するプロセスのことです。 たとえば、オブジェクトをシリアル化し、HTTP を使用してインターネット経由で転送して、転送先のコンピューターで逆シリアル化することができます。
 
- .NET Framework には、さまざまなシリアル化シナリオ用に最適化された3つの主要なシリアル化テクノロジがあります。 これらのテクノロジ、およびテクノロジに関連した主な Framework 型を次の表に示します。
+ .NET Framework には、さまざまなシリアル化シナリオに合わせて最適化できる 3 つの主なシリアル化テクノロジがあります。 これらのテクノロジ、およびテクノロジに関連した主な Framework 型を次の表に示します。
 
 |**テクノロジ名**|**主要な型**|**シナリオ**|
 |-------------------------|--------------------|-------------------|
 |**データ コントラクトのシリアル化**|<xref:System.Runtime.Serialization.DataContractAttribute> <br /> <xref:System.Runtime.Serialization.DataMemberAttribute> <br /> <xref:System.Runtime.Serialization.DataContractSerializer> <br /> <xref:System.Runtime.Serialization.NetDataContractSerializer> <br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> <br /> <xref:System.Runtime.Serialization.ISerializable>|永続化全般<br />Web サービス<br />JSON|
-|**XML シリアル化**|<xref:System.Xml.Serialization.XmlSerializer>|Xml の構造を完全に制御する XML 形式|
-|**ランタイムのシリアル化 (バイナリおよび SOAP)**|<xref:System.SerializableAttribute> <br /> <xref:System.Runtime.Serialization.ISerializable> <br /> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <br /> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>|.NET リモート処理|
+|**XML シリアル化**|<xref:System.Xml.Serialization.XmlSerializer>|XML の構造を完全に制御する XML 形式|
+|**ランタイム シリアル化 (バイナリおよび SOAP)**|<xref:System.SerializableAttribute> <br /> <xref:System.Runtime.Serialization.ISerializable> <br /> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <br /> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>|.NET リモート処理|
 
- 新しい型を設計する際には、シリアル化について考え✔️ます。
+ ✔️ 新しい型を設計するときは、シリアル化について考えます。
 
 ## <a name="choosing-the-right-serialization-technology-to-support"></a>サポートする適切なシリアル化テクノロジの選択
 
- 型のインスタンスを永続化したり、Web サービスで使用したりする必要がある場合は、データコントラクトのシリアル化をサポートする✔️ます。
+ ✔️ 型のインスタンスを Web サービスで永続化または使用する必要がある場合は、データ コントラクトのシリアル化をサポートすることを検討します。
 
- 型をシリアル化するときに生成される XML 形式をより詳細に制御する必要がある場合は、データコントラクトのシリアル化に加えて、またはデータコントラクトのシリアル化の代わりに XML シリアル化をサポートすることを✔️してください。
+ ✔️ 型をシリアル化するときに作成される XML 形式の制御を強化する必要がある場合は、データ コントラクトのシリアル化の代わり、またはそれに加えて、XML シリアル化をサポートすることを検討します。
 
- これは、データコントラクトのシリアル化でサポートされていない XML コンストラクトを使用する必要がある場合 (XML 属性を生成する場合など) に必要になることがあります。
+ これは、たとえば XML 属性を作成するために、データ コントラクトのシリアル化ではサポートされていない XML コンストラクトを使用する必要がある一部の相互運用性シナリオで、必要になることがあります。
 
- 型のインスタンスが .NET リモート処理の境界を越えて移動する必要がある場合は、ランタイムシリアル化のサポートを検討✔️。
+ ✔️ 型のインスタンスが .NET リモート処理の境界を超えて移動する必要がある場合は、ランタイムのシリアル化をサポートすることを検討します。
 
- ❌ 一般的な永続化のために、ランタイムシリアル化または XML シリアル化をサポートしないようにします。 代わりに、データコントラクトのシリアル化を優先します。
+ ❌ 一般的な永続化のために、ランタイムのシリアル化や XML のシリアル化をサポートしないでください。 代わりに、データ コントラクトのシリアル化を使用してください。
 
 ## <a name="supporting-data-contract-serialization"></a>データ コントラクトのシリアル化のサポート
 
- 型にを適用することにより、型 <xref:System.Runtime.Serialization.DataContractAttribute> <xref:System.Runtime.Serialization.DataMemberAttribute> のメンバー (フィールドおよびプロパティ) にを適用することで、データコントラクトのシリアル化をサポートできます。
+ <xref:System.Runtime.Serialization.DataContractAttribute> を型に適用し、<xref:System.Runtime.Serialization.DataMemberAttribute> をその型のメンバー (フィールドおよびプロパティ) に適用することによって、型でデータ コントラクトのシリアル化をサポートすることができます。
 
- 型を部分信頼で使用できる場合は、型のデータメンバーをパブリックとしてマークする✔️ます。
+ ✔️ 型を部分信頼で使用できる場合は、型のデータ メンバーをパブリックにすることを検討します。
 
- 完全信頼では、データコントラクトシリアライザーは、非パブリックな型とメンバーをシリアル化および逆シリアル化できますが、部分信頼でシリアル化および逆シリアル化できるのはパブリックメンバーだけです。
+ 完全な信頼では、データ コントラクト シリアライザーで非パブリックの型とメンバーをシリアル化および逆シリアル化できますが、部分信頼の場合は、パブリック メンバーのみをシリアル化および逆シリアル化できます。
 
- を持つすべてのプロパティに getter および setter を実装✔️ <xref:System.Runtime.Serialization.DataMemberAttribute> ます。 データコントラクトシリアライザーでは、型の getter と setter の両方がシリアル化可能と見なされる必要があります。 (.NET Framework 3.5 SP1 では、一部のコレクションプロパティを取得専用にすることができます)。型が部分信頼で使用されない場合、プロパティアクセサーの一方または両方を非パブリックにすることができます。
+ ✔️ <xref:System.Runtime.Serialization.DataMemberAttribute> を持つすべてのプロパティで、ゲッターとセッターを実装します。 データ コントラクト シリアライザーにより、この型のゲッターとセッターの両方がシリアル化可能と見なされる必要があります。 (.NET Framework 3.5 SP1 では、一部のコレクション プロパティを取得専用にすることができます)。型を部分信頼で使用しない場合は、1 つまたは両方のプロパティ アクセサーを非パブリックにできます。
 
- 逆シリアル化されたインスタンスの初期化には、シリアル化コールバックの使用を検討✔️。
+ ✔️ 逆シリアル化されたインスタンスの初期化には、シリアル化コールバックを使用することを検討します。
 
- オブジェクトの逆シリアル化時にはコンストラクターは呼び出されません。 (規則には例外があります。 でマークされたコレクションのコンストラクター <xref:System.Runtime.Serialization.CollectionDataContractAttribute> は、逆シリアル化中に呼び出されます。)したがって、通常の構築時に実行されるすべてのロジックは、シリアル化コールバックの1つとして実装する必要があります。
+ オブジェクトの逆シリアル化時にはコンストラクターは呼び出されません。 (このルールには例外があります。 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> でマークされたコレクションのコンストラクターは、逆シリアル化の間に呼び出されます)。このため、通常の構築時に実行されるすべてのロジックを、シリアル化コールバックの 1 つとして実装する必要があります。
 
- `OnDeserializedAttribute` 最もよく使用されるコールバック属性です。 その他の属性には、<xref:System.Runtime.Serialization.OnDeserializingAttribute>、<xref:System.Runtime.Serialization.OnSerializingAttribute>、および <xref:System.Runtime.Serialization.OnSerializedAttribute> があります。 これらを使用して、逆シリアル化前、シリアル化前、およびシリアル化後に実行されるコールバックをマークすることができます。
+ `OnDeserializedAttribute` は最もよく使用されるコールバック属性です。 その他の属性には、<xref:System.Runtime.Serialization.OnDeserializingAttribute>、<xref:System.Runtime.Serialization.OnSerializingAttribute>、および <xref:System.Runtime.Serialization.OnSerializedAttribute> があります。 これらを使用して、逆シリアル化前、シリアル化前、およびシリアル化後に実行されるコールバックをマークすることができます。
 
- <xref:System.Runtime.Serialization.KnownTypeAttribute>複雑なオブジェクトグラフを逆シリアル化するときに使用する具象型を示すには、を使用することを✔️してください。
+ ✔️ 複雑なオブジェクト グラフを逆シリアル化する場合は、<xref:System.Runtime.Serialization.KnownTypeAttribute> を使用して、使用する必要がある具象型を示すことを検討します。
 
- シリアル化可能な型を作成または変更するときに、後方互換性と上位互換性を考慮する✔️。
+ ✔️ シリアル化可能な型を作成または変更するときは、下位互換性と上位互換性を考慮します。
 
  シリアル化した型の将来のバージョンは、現在のバージョンの型に逆シリアル化でき、その逆も可能であることを念頭に置いてください。
 
- データコントラクト属性への明示的なパラメーターを使用してコントラクトを保持する特別な注意を払う場合を除き、データメンバー (プライベートおよび内部でも) では、その名前、型、および将来のバージョンの型を変更することはできないことを理解しておく必要があります。
+ 明示的なパラメーターを使用してデータ コントラクト属性にコントラクトを保存する特別な措置を取らない限り、データ メンバーはプライベートで内部データであっても、型の将来のバージョンで名前、型、順序を変更することはできないことを理解しておいてください。
 
- シリアル化可能な型に変更を加えるときに、シリアル化の互換性をテストします。 新しいバージョンを古いバージョンに逆シリアル化したり、その逆も試してみてください。
+ シリアル化可能な型を変更するときは、シリアル化の互換性をテストします。 新しいバージョンを古いバージョンに逆シリアル化したり、その逆も試してみてください。
 
- を実装して <xref:System.Runtime.Serialization.IExtensibleDataObject> 、異なるバージョンの型の間でラウンドトリップできるようにする✔️ます。
+ ✔️ 異なるバージョンの型の間でラウンドトリッピングができるように、<xref:System.Runtime.Serialization.IExtensibleDataObject> を実装することを検討します。
 
- インターフェイスを使用すると、ラウンドトリッピングの間にデータが失われないようにシリアライザーで確認することができます。 プロパティは、 <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A?displayProperty=nameWithType> 現在のバージョンでは不明な型の将来のバージョンからデータを格納するために使用されます。そのため、データメンバーに格納することはできません。 現在のバージョンを後でシリアル化および逆シリアル化した後に、シリアル化されたストリームで使用できるようになります。
+ インターフェイスを使用すると、ラウンドトリッピングの間にデータが失われないようにシリアライザーで確認することができます。 <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A?displayProperty=nameWithType> プロパティは、現在のバージョンでは未知である、将来のバージョンの型のデータを格納するために使用されるため、そのデータ メンバーにはそれを格納できません。 現在のバージョンを、後で将来のバージョンにシリアル化または逆シリアル化するときに、シリアル化されたストリームで追加データを使用できます。
 
 ## <a name="supporting-xml-serialization"></a>XML シリアル化のサポート
 
- データコントラクトのシリアル化は .NET Framework の主要な (既定の) シリアル化テクノロジですが、データコントラクトのシリアル化でサポートされていないシリアル化のシナリオがあります。 たとえば、シリアライザーによって作成または使用された XML の形状は完全に制御できません。 このような細かい制御が必要な場合は、XML シリアル化を使用する必要があり、このシリアル化テクノロジをサポートするために型をデザインする必要があります。
+ データ コントラクトのシリアル化は .NET Framework の主な (既定の) シリアル化テクノロジですが、データ コントラクトのシリアル化ではサポートされないシリアル化シナリオがあります。 たとえば、シリアライザーによって作成または使用された XML の形状は完全に制御できません。 そのような微調整が必要な場合は、XML シリアル化を使用する必要があり、このシリアル化テクノロジをサポートするように型を設計する必要があります。
 
- ❌ 生成される XML の構造を厳密に制御する理由がない限り、XML シリアル化専用の型を設計しないでください。 このシリアル化テクノロジは、前のセクションで説明したデータ コントラクトのシリアル化よりも優先されます。
+ ❌ 作成された XML の形状を制御しなければならない強力な理由がない限り、XML シリアル化のために特別に型を設計することは避けてください。 このシリアル化テクノロジは、前のセクションで説明したデータ コントラクトのシリアル化よりも優先されます。
 
- <xref:System.Xml.Serialization.IXmlSerializable>Xml シリアル化属性を適用した場合よりも、シリアル化された xml の構造をさらに細かく制御する場合は、インターフェイスを実装することを✔️してください。 2 つのインターフェイスのメソッド、<xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> と <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> を使用することで、シリアル化された XML ストリームを完全制御できます。 を適用して、型に対して生成される XML スキーマを制御することもでき `XmlSchemaProviderAttribute` ます。
+ ✔️ XML シリアル化属性を適用することで提供されるものより細かく、シリアル化された XML の形状を制御する必要がある場合は、<xref:System.Xml.Serialization.IXmlSerializable> インターフェイスを実装することを検討します。 2 つのインターフェイスのメソッド、<xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> と <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> を使用することで、シリアル化された XML ストリームを完全制御できます。 また、`XmlSchemaProviderAttribute` を適用することで、その型用に生成される XML スキーマを制御することもできます。
 
 ## <a name="supporting-runtime-serialization"></a>ランタイム シリアル化のサポート
 
- ランタイムシリアル化は、.NET リモート処理で使用されるテクノロジです。 .NET リモート処理を使用して型が転送されると思われる場合は、ランタイムシリアル化をサポートしていることを確認する必要があります。
+ ランタイム シリアル化は、.NET リモート処理で使用されるテクノロジです。 .NET リモート処理を使用して型が転送されると考えられる場合は、ランタイム シリアル化をサポートする必要があります。
 
- ランタイムシリアル化の基本的なサポートは、を適用することによって実現できます <xref:System.SerializableAttribute> 。また、より高度なシナリオでは、単純なランタイムシリアル化可能パターンの実装 ( <xref:System.Runtime.Serialization.ISerializable> シリアル化コンストラクターの実装と提供) が必要になります。
+ ランタイム シリアル化の基本的なサポートは、<xref:System.SerializableAttribute> を適用することで提供でき、より高度なシナリオでは、単純なランタイム シリアル化可能パターンの実装が必要になります (<xref:System.Runtime.Serialization.ISerializable> を実装してシリアル化コンストラクターを提供します)。
 
- 型が .NET リモート処理で使用される場合は、ランタイムシリアル化のサポートを検討✔️。 たとえば、 <xref:System.AddIn?displayProperty=nameWithType> 名前空間は .Net リモート処理を使用するため、アドイン間で交換されるすべての型で `System.AddIn` ランタイムシリアル化をサポートする必要があります。
+ ✔️ 型が .NET リモート処理で使用される場合は、ランタイム シリアル化をサポートすることを検討します。 たとえば、<xref:System.AddIn?displayProperty=nameWithType> 名前空間では .NET リモート処理が使用されるため、`System.AddIn` アドインの間で交換されるすべての型で、ランタイム シリアル化をサポートする必要があります。
 
- シリアル化プロセスを完全に制御する必要がある場合は、ランタイムシリアル化可能パターンを実装することを✔️してください。 たとえば、シリアル化または逆シリアル化されたデータを変換したいとします。
+ ✔️ シリアル化プロセスを完全に制御する必要がある場合は、ランタイム シリアル化可能パターンを実装することを検討します。 たとえば、シリアル化または逆シリアル化されたデータを変換したいとします。
 
  パターンは単純です。 必要な作業は、<xref:System.Runtime.Serialization.ISerializable> インターフェイスを実装し、オブジェクトを逆シリアル化するときに使用する特別なコンストラクターを指定するだけです。
 
- このサンプルで示すように、シリアル化コンストラクターを保護し、2つのパラメーターを型指定して名前を指定して、この例では✔️します。
+ ✔️ このサンプルで示されているように、シリアル化コンストラクターを保護し、型と名前を厳密に指定した 2 つのパラメーターを提供します。
 
 ```csharp
 [Serializable]
@@ -100,13 +101,13 @@ public class Person : ISerializable
 
  ✔️ <xref:System.Runtime.Serialization.ISerializable> メンバーを明示的に実装します。
 
- ✔️実装にリンク確認要求を適用 <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=nameWithType> します。 これにより、完全に信頼されたコアとランタイムシリアライザーだけがメンバーにアクセスできるようになります。
+ ✔️ <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=nameWithType> の実装にはリンク確認要求を適用します。 こうすることで、完全に信頼できるコアとランタイム シリアライザーだけが、メンバーにアクセスできるようになります。
 
- *©2005、2009 Microsoft Corporation の部分。すべての権限が予約されています。*
+ *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*
 
  *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*
 
 ## <a name="see-also"></a>関連項目
 
-- [フレームワークデザインのガイドライン](index.md)
-- [使用に関するガイドライン](usage-guidelines.md)
+- [フレームワーク デザインのガイドライン](index.md)
+- [使用方法のガイドライン](usage-guidelines.md)

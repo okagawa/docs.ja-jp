@@ -4,12 +4,12 @@ description: このチュートリアルでは、Docker を使って .NET Core �
 ms.date: 04/27/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7605f847a76907f4f9d0a451ba69332d6d174615
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c92f5823f56f74941afdd28638d30e759b2c51c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724729"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740757"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>チュートリアル: NET Core アプリのコンテナー化
 
@@ -33,7 +33,7 @@ ms.locfileid: "95724729"
 
 次の前提条件をインストールします。
 
-- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download)\
+- [.NET Core 5.0 SDK](https://dotnet.microsoft.com/download)\
 .NET Core をインストールしてある場合、どの SDK を使っているか確認するには、`dotnet --info` コマンドを使います。
 - [Docker Community Edition](https://www.docker.com/products/docker-desktop)
 - *Dockerfile* と .NET Core サンプル アプリ用の一時作業フォルダー。 このチュートリアルでは、作業フォルダーに *docker-working* の名前が使用されます。
@@ -144,16 +144,16 @@ Counter: 4
 dotnet publish -c Release
 ```
 
-このコマンドでは、*publish* フォルダーにアプリがコンパイルされます。 作業フォルダーから *publish* フォルダーへのパスは `.\App\bin\Release\netcoreapp3.1\publish\` です
+このコマンドでは、*publish* フォルダーにアプリがコンパイルされます。 作業フォルダーから *publish* フォルダーへのパスは `.\App\bin\Release\net5.0\publish\` です
 
 #### <a name="windows"></a>[Windows](#tab/windows)
 
 "*App*" フォルダーから、publish フォルダーのディレクトリ一覧を表示し、"*NetCore.Docker.dll*" ファイルが作成されたことを確認します。
 
 ```powershell
-dir .\bin\Release\netcoreapp3.1\publish\
+dir .\bin\Release\net5.0\publish\
 
-    Directory: C:\Users\dapine\App\bin\Release\netcoreapp3.1\publish
+    Directory: C:\Users\dapine\App\bin\Release\net5.0\publish
 
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
@@ -169,7 +169,7 @@ Mode                LastWriteTime         Length Name
 `ls` コマンドを使用してディレクトリ一覧を表示し、"*NetCore.Docker.dll*" ファイルが作成されたことを確認します。
 
 ```bash
-me@DESKTOP:/docker-working/app$ ls bin/Release/netcoreapp3.1/publish
+me@DESKTOP:/docker-working/app$ ls bin/Release/net5.0/publish
 NetCore.Docker.deps.json  NetCore.Docker.dll  NetCore.Docker.pdb  NetCore.Docker.runtimeconfig.json
 ```
 
@@ -182,13 +182,13 @@ NetCore.Docker.deps.json  NetCore.Docker.dll  NetCore.Docker.pdb  NetCore.Docker
 " *.csproj*" が含まれるディレクトリに "*Dockerfile*" という名前のファイルを作成し、テキスト エディターで開きます。 このチュートリアルでは、(.NET Core ランタイム イメージを含む) ASP.NET Core ランタイム イメージを使用して、.NET Core コンソール アプリケーションに対応します。
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/aspnet:3.1
+FROM mcr.microsoft.com/dotnet/aspnet:5.0
 ```
 
 > [!NOTE]
-> `mcr.microsoft.com/dotnet/runtime:3.1` イメージが使用されている可能性もありますが、ここでは ASP.NET Core ランタイム イメージを意図的に使用します。
+> `mcr.microsoft.com/dotnet/runtime:5.0` イメージが使用されている可能性もありますが、ここでは ASP.NET Core ランタイム イメージを意図的に使用します。
 
-`FROM` キーワードには、完全修飾 Docker コンテナー イメージ名が必要です。 Microsoft Container Registry (MCR、mcr.microsoft.com) は、パブリック アクセスが可能なコンテナーをホストする Docker Hub のシンジケートです。 `dotnet/core` セグメントはコンテナー リポジトリで、`aspnet` セグメントはコンテナー イメージの名前です。 イメージには `3.1` のタグが付けられ、バージョン管理に使用されます。 このため、`mcr.microsoft.com/dotnet/aspnet:3.1` は .NET Core 3.1 ランタイムです。 必ず、SDK のターゲットのランタイムと一致するランタイム バージョンをプルしてください。 たとえば、前のセクションで作成したアプリは .NET Core 3.1 SDK を使用しているため、*Dockerfile* で参照される基本イメージは **3.1** でタグ付けされます。
+`FROM` キーワードには、完全修飾 Docker コンテナー イメージ名が必要です。 Microsoft Container Registry (MCR、mcr.microsoft.com) は、パブリック アクセスが可能なコンテナーをホストする Docker Hub のシンジケートです。 `dotnet/core` セグメントはコンテナー リポジトリで、`aspnet` セグメントはコンテナー イメージの名前です。 イメージには `5.0` のタグが付けられ、バージョン管理に使用されます。 このため、`mcr.microsoft.com/dotnet/aspnet:5.0` は .NET Core 5.0 ランタイムです。 必ず、SDK のターゲットのランタイムと一致するランタイム バージョンをプルしてください。 たとえば、前のセクションで作成したアプリでは .NET Core 5.0 SDK が使用されているため、*Dockerfile* で参照される基本イメージは **5.0** でタグ付けされます。
 
 *Dockerfile* ファイルを保存します。 作業フォルダーのディレクトリ構造は次のようになります。 一部のより深いレベルのファイルとフォルダーは、スペース削減のためこの記事では省略されています。
 
@@ -200,7 +200,7 @@ docker-working
         ├──Program.cs
         ├──bin
         │   └──Release
-        │       └──netcoreapp3.1
+        │       └──net5.0
         │           └──publish
         │               ├──NetCore.Docker.deps.json
         │               ├──NetCore.Docker.exe
@@ -223,13 +223,13 @@ Docker により *Dockerfile* 内の各行が処理されます。 `docker build
 docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
 counter-image                           latest              e6780479db63        4 days ago          190MB
-mcr.microsoft.com/dotnet/aspnet         3.1                 e6780479db63        4 days ago          190MB
+mcr.microsoft.com/dotnet/aspnet         5.0                 e6780479db63        4 days ago          190MB
 ```
 
 2 つのイメージで同じ **IMAGE ID** 値が共有されていることに注意してください。 *Dockerfile* での唯一のコマンドが既存のイメージを新しいイメージの基にするものであったため、両方のイメージで値が同じになっています。 3 つのコマンドを "*Dockerfile*" に追加してみましょう。 各コマンドでは、**counter-image** リポジトリ エントリが指し示すイメージを表す最後のコマンドで新しいイメージ レイヤーが作成されます。
 
 ```dockerfile
-COPY bin/Release/netcoreapp3.1/publish/ App/
+COPY bin/Release/net5.0/publish/ App/
 WORKDIR /App
 ENTRYPOINT ["dotnet", "NetCore.Docker.dll"]
 ```
@@ -245,9 +245,9 @@ ENTRYPOINT ["dotnet", "NetCore.Docker.dll"]
 ```console
 docker build -t counter-image -f Dockerfile .
 Sending build context to Docker daemon  1.117MB
-Step 1/4 : FROM mcr.microsoft.com/dotnet/aspnet:3.1
+Step 1/4 : FROM mcr.microsoft.com/dotnet/aspnet:5.0
  ---> e6780479db63
-Step 2/4 : COPY bin/Release/netcoreapp3.1/publish/ App/
+Step 2/4 : COPY bin/Release/net5.0/publish/ App/
  ---> d1732740eed2
 Step 3/4 : WORKDIR /App
  ---> Running in b1701a42f3ff
@@ -263,7 +263,7 @@ Successfully tagged counter-image:latest
 docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
 counter-image                           latest              cd11c3df9b19        41 seconds ago      190MB
-mcr.microsoft.com/dotnet/aspnet         3.1                 e6780479db63        4 days ago          190MB
+mcr.microsoft.com/dotnet/aspnet         5.0                 e6780479db63        4 days ago          190MB
 ```
 
 *Dockerfile* 内の各コマンドによってレイヤーが生成され、**IMAGE ID** が作成されます。 最後の **IMAGE ID** は **cd11c3df9b19** であり (個々に異なります)、次にこのイメージを基にしてコンテナーを作成します。
@@ -470,7 +470,7 @@ Docker には、コンテナーとイメージを作成、管理、操作する�
 
 ```console
 docker rmi counter-image:latest
-docker rmi mcr.microsoft.com/dotnet/aspnet:3.1
+docker rmi mcr.microsoft.com/dotnet/aspnet:5.0
 ```
 
 インストールされているイメージの一覧を表示するには、`docker images` コマンドを使います。

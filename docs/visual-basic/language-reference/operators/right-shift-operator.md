@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: >> 演算子 (Visual Basic)'
 title: '>> 演算子'
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - operator >>
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
-ms.openlocfilehash: 00f43bc9bae6d550ed175906777ac273fc8e9a23
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 125b93f129734d196bd1f7f9c4fde86ab5d66319
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873343"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795301"
 ---
 # <a name="-operator-visual-basic"></a>>> 演算子 (Visual Basic)
 
@@ -48,10 +49,10 @@ result = pattern >> amount
   
 |`pattern` のデータ型|サイズ マスク (10 進数)|サイズ マスク (16 進数)|  
 |----------------------------|---------------------------|-------------------------------|  
-|`SByte`、`Byte`|7|&H00000007|  
-|`Short`、`UShort`|15|&H0000000F|  
-|`Integer`、`UInteger`|31|&H0000001F|  
-|`Long`、`ULong`|63|&H0000003F|  
+|`SByte`, `Byte`|7|&H00000007|  
+|`Short`, `UShort`|15|&H0000000F|  
+|`Integer`, `UInteger`|31|&H0000001F|  
+|`Long`, `ULong`|63|&H0000003F|  
   
  `amount` が 0 の場合、`result` の値は `pattern` の値と同じになります。 `amount` が負の場合は、符号なしの値として扱われ、適切なサイズ マスクでマスクされます。  
   
@@ -59,7 +60,7 @@ result = pattern >> amount
   
 ## <a name="overloading"></a>オーバーロード  
 
- `>>` 演算子は "*オーバーロード*" できます。つまり、オペランドがクラスまたは構造体の型を持っているときに、クラスまたは構造体はその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ `>>` 演算子は "*オーバーロード*" できます。つまり、オペランドの型がクラスまたは構造体であるとき、そのクラスまたは構造体で、演算子の動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
 

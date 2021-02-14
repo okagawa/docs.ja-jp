@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: DiffGrams'
 title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: aff9c2347fab51d853e19bd9dc16666c4ed549b5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: df00bbfb2c25014ff4e73a2777511bd3593ff8a4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172802"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652511"
 ---
 # <a name="diffgrams"></a>DiffGrams
 
@@ -69,14 +70,14 @@ DiffGram は、データ要素の現在のバージョンと元のバージョ�
   
  DiffGram 形式を構成するデータ ブロックについて次に説明します。  
   
- **\<**  ***DataInstance***  **>**  
- この要素の名前 ***DataInstance*** は、このドキュメントでの説明用に使用するものです。 ***DataInstance*** 要素は、<xref:System.Data.DataTable> の <xref:System.Data.DataSet> または行を表します。 実際には *DataInstance* の代わりに、<xref:System.Data.DataSet> または <xref:System.Data.DataTable> の名前がこの要素に含まれます。 DiffGram 形式のこのブロックには現在のデータが含まれています。現在のデータは、変更されている場合と未変更の場合があります。 変更されている要素 (行) を識別するため、このような要素には **diffgr:hasChanges** 注釈が付きます。  
+ **\<**  **_DataInstance_*_  _*>**  
+ この要素の名前 ***DataInstance** _ は、このドキュメントでの説明用に使用するものです。 _*_DataInstance_*_ 要素は、<xref:System.Data.DataTable> の <xref:System.Data.DataSet> または行を表します。 _DataInstance* の代わりに、<xref:System.Data.DataSet> または <xref:System.Data.DataTable> の名前がこの要素に含まれます。 DiffGram 形式のこのブロックには現在のデータが含まれています。現在のデータは、変更されている場合と未変更の場合があります。 変更されている要素 (行) を識別するため、このような要素には **diffgr:hasChanges** 注釈が付きます。  
   
  **\<diffgr:before>**  
- DiffGram 形式のこのブロックには、行の元の内容が含まれています。 このブロックの要素は、**diffgr:id** 注釈を使用して ***DataInstance*** ブロックの内容と対応しています。  
+ DiffGram 形式のこのブロックには、行の元の内容が含まれています。 このブロックの要素は、_ *diffgr:id** 注釈を使用して ***DataInstance** _ ブロックの内容と対応しています。  
   
  **\<diffgr:errors>**  
- DiffGram 形式のこのブロックには、***DataInstance*** ブロックの特定の行に関するエラー情報が含まれています。 このブロックの要素は、**diffgr:id** 注釈を使用して ***DataInstance*** ブロックの内容と対応しています。  
+ DiffGram 形式のこのブロックには、***DataInstance** _ ブロックの特定の行に関するエラー情報が含まれています。 このブロックの要素は、_ *diffgr:id** 注釈を使用して _*_DataInstance_*_ ブロックの内容と対応しています。  
   
 ## <a name="diffgram-annotations"></a>DiffGram 注釈  
 
@@ -86,10 +87,10 @@ DiffGram は、データ要素の現在のバージョンと元のバージョ�
   
 |注釈|説明|  
 |----------------|-----------------|  
-|**id**|**\<diffgr:before>** および **\<diffgr:errors>** ブロックの要素を **\<** ***DataInstance*** **>** ブロックの要素と対応させるために使用されます。 **diffgr:id** 注釈の値は *[TableName][RowIdentifier]* という形式で指定されます。 たとえば、`<Customers diffgr:id="Customers1">` のように指定します。|  
-|**parentId**|現在の要素の親要素である **\<** ***DataInstance*** **>** ブロックの要素を識別します。 **diffgr:parentId** 注釈の値は *[TableName][RowIdentifier]* という形式で指定されます。 たとえば、`<Orders diffgr:parentId="Customers1">` のように指定します。|  
-|**hasChanges**|**\<** ***DataInstance*** **>** ブロックの行を変更済みとして識別します。 **hasChanges** 注釈には、次の 2 つのうち、いずれかの値を指定できます。<br /><br /> **inserted**<br /> **Added** 行を識別します。<br /><br /> **modified**<br /> **Original** 行バージョンが **\<diffgr:before>** ブロックに含まれている **Modified** 行を識別します。 **Deleted** 行の場合、**Original** 行バージョンが **\<diffgr:before>** ブロックには存在しますが、 **\<** ***DataInstance*** **>** ブロックには注釈付き要素が存在しないことに注意してください。|  
-|**hasErrors**|**\<** ***DataInstance*** **>** ブロック内で **RowError** がある行を識別します。 エラー要素は **\<diffgr:errors>** ブロックに挿入されます。|  
+|**id**|**\<diffgr:before>** および **\<diffgr:errors>** ブロックの要素を **\<** **_DataInstance_*_ _*>** ブロックの要素と対応させるために使用されます。 **diffgr:id** 注釈の値は *[TableName][RowIdentifier]* という形式で指定されます。 たとえば、`<Customers diffgr:id="Customers1">` のように指定します。|  
+|**parentId**|現在の要素の親要素である **\<** **_DataInstance_*_ _*>** ブロックの要素を識別します。 **diffgr:parentId** 注釈の値は *[TableName][RowIdentifier]* という形式で指定されます。 たとえば、`<Orders diffgr:parentId="Customers1">` のように指定します。|  
+|**hasChanges**|**\<** **_DataInstance_*_ _*>** ブロックの行を変更済みとして識別します。 **hasChanges** 注釈には、次の 2 つのうち、いずれかの値を指定できます。<br /><br /> **inserted**<br /> **Added** 行を識別します。<br /><br /> **modified**<br /> **Original** 行バージョンが **\<diffgr:before>** ブロックに含まれている **Modified** 行を識別します。 **Deleted** 行の場合、**Original** 行バージョンが **\<diffgr:before>** ブロックには存在しますが、 **\<** **_DataInstance_*_ _*>** ブロックには注釈付き要素が存在しないことに注意してください。|  
+|**hasErrors**|**\<** **_DataInstance_*_ _*>** ブロック内で **RowError** がある行を識別します。 エラー要素は **\<diffgr:errors>** ブロックに挿入されます。|  
 |**Error**|**\<diffgr:errors>** ブロック内の特定の要素に関する **RowError** のテキストが含まれています。|  
   
  <xref:System.Data.DataSet> の内容が DiffGram として読み取られる、または書き込まれるときには、上記以外の注釈も含まれます。 名前空間 **urn:schemas-microsoft-com:xml-msdata** で定義されている追加の注釈を次の表に示します。  
@@ -101,7 +102,7 @@ DiffGram は、データ要素の現在のバージョンと元のバージョ�
   
 ## <a name="sample-diffgram"></a>DiffGram のサンプル  
 
- DiffGram 形式の例を次に示します。 この例では、変更のコミット前のテーブル内の行に対する更新結果が示されています。 CustomerID の "ALFKI" である行は変更されていますが、更新されていません。 このため、 **\<** ***DataInstance*** **>** ブロックに **diffgr:id** が "Customers1" の **Current** 行があり、 **\<diffgr:before>** ブロックに **diffgr:id** が "Customers1" の **Original** 行があります。 CustomerID が "ANATR" である行には **RowError** が含まれているため、`diffgr:hasErrors="true"` という注釈が付いています。また、 **\<diffgr:errors>** ブロックに関連する要素があります。  
+ DiffGram 形式の例を次に示します。 この例では、変更のコミット前のテーブル内の行に対する更新結果が示されています。 CustomerID の "ALFKI" である行は変更されていますが、更新されていません。 このため、 **\<** **_DataInstance_*_ _*>** ブロックに **diffgr:id** が "Customers1" の **Current** 行があり、 **\<diffgr:before>** ブロックに **diffgr:id** が "Customers1" の **Original** 行があります。 CustomerID が "ANATR" である行には **RowError** が含まれているため、`diffgr:hasErrors="true"` という注釈が付いています。また、 **\<diffgr:errors>** ブロックに関連する要素があります。  
   
 ```xml  
 <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">  
