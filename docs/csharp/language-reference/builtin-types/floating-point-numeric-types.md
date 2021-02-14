@@ -1,7 +1,7 @@
 ---
 title: 浮動小数点数値型 - C# リファレンス
 description: 組み込みの C# 浮動小数点型 (float、double、decimal) について説明します
-ms.date: 02/10/2020
+ms.date: 02/04/2021
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: a1142d1aa04003ae1942902672cfc7a05edc99c0
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: a086e8de60bbb63408c3f2cd557feb36c4baa0f8
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662668"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585755"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>浮動小数点数値型 (C# リファレンス)
 
@@ -48,7 +48,7 @@ System.Double b = 12.3;
 
 各浮動小数点型の既定値はゼロ `0` です。 各浮動小数点型には、その型の最小および最大有限値を指定する `MinValue` および `MaxValue` 定数があります。 `float` および `double` 型では、数字ではない値や無限値を表す定数も提供されています。 たとえば、`double` 型では、定数 <xref:System.Double.NaN?displayProperty=nameWithType>、<xref:System.Double.NegativeInfinity?displayProperty=nameWithType>、<xref:System.Double.PositiveInfinity?displayProperty=nameWithType> が提供されています。
 
-`decimal` 型は、`float` と `double` の両方よりも有効桁数が多く、範囲が狭いため、財務や金融の計算に適しています。
+`decimal` 型は、必要な精度が小数点の右側の桁数によって決まる場合に適しています。 このような数値は、財務アプリケーションで金額 ($1.00 など) や金利 (2.625% など) などによく使用されます。 1 つの 10 進数字だけで表される数値でさえも、`decimal` 型を使用するとより正確に処理されます。たとえば、0.1 は `decimal` インスタンスでは正確に表すことができますが、0.1 が正確に表される `double` または `float` のインスタンスは存在しません。 このような数値型の違いにより、10 進データに `double` または `float` を使用すると、算術計算で予期しない丸めエラーが発生する可能性があります。 精度を保証するよりパフォーマンスを最適化する方が重要な場合は、`decimal` ではなく `double` を使用することができます。 ただし、大量の計算処理が必要なアプリケーションでもない限り、パフォーマンスの違いに気付くことはありません。 `decimal` を避ける理由としてもう 1 つ考えられるのは、必要な記憶域を最小限に抑えることです。 たとえば、データ セットが非常に大きい場合は 4 バイトと 16 バイトの差が積み重なって意味を持つようになるため、[ML.NET](../../../machine-learning/how-does-mldotnet-work.md) では `float` が使用されています。 詳細については、「<xref:System.Decimal?displayProperty=nameWithType>」を参照してください。
 
 [整数](integral-numeric-types.md)型と `float` および `double` 型を 1 つの式の中で混在させることができます。 この場合、整数型は、浮動小数点型の 1 つに暗黙的に変換されます。また、必要に応じて、`float` 型は `double` に暗黙的に変換されます。 この式は、次のように評価されます。
 

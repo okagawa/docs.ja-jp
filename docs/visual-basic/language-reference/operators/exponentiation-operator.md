@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ^ 演算子 (Visual Basic)'
 title: ^ 演算子
 ms.date: 07/20/2015
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - powers
 - arithmetic operators [Visual Basic], exponentiation
 ms.assetid: d89a1ca8-83da-4784-a87b-a9d7dceb3f62
-ms.openlocfilehash: e139becf74ae367266a23513e18d0bdbdd24cdea
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9333eec7236c363417be7323b673231509da8f1f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371389"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666044"
 ---
 # <a name="-operator-visual-basic"></a>^ 演算子 (Visual Basic)
 
@@ -45,7 +46,7 @@ number ^ exponent
 
 ## <a name="supported-types"></a>サポートされている型
 
-`Double`。 異なる型のオペランドはすべて `Double` に変換されます。
+`Double`. 異なる型のオペランドはすべて `Double` に変換されます。
 
 ## <a name="remarks"></a>Remarks
 

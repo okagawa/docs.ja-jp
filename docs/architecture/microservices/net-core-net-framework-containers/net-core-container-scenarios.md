@@ -1,13 +1,13 @@
 ---
 title: Docker コンテナー用 .NET 5 を選択するタイミング
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | Docker コンテナー用 .Net を選択するタイミング'
-ms.date: 01/13/2021
-ms.openlocfilehash: 61909c91d795582af499456c65ae0d7b4f2911e2
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/02/2021
+ms.openlocfilehash: d0480ac43c0090b72185bd23bbd11ac7e26001e6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189279"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99653421"
 ---
 # <a name="when-to-choose-net-for-docker-containers"></a>Docker コンテナー用 .Net を選択するタイミング
 
@@ -33,7 +33,7 @@ IDE とエディターだけでなく、サポートされているすべての�
 
 ## <a name="using-containers-for-new-green-field-projects"></a>新しい ("グリーン フィールド") プロジェクトにコンテナーを使用する
 
-一般的に、コンテナーはマイクロサービス アーキテクチャと併用されますが、アーキテクチャ パターンに従う Web アプリやサービスをコンテナー化するために使用することもできます。 Windows コンテナーで .NET Framework を使用できますが、モジュール性があり、軽量な .NET 5 はコンテナーとマイクロサービス アーキテクチャに最適です。 コンテナーを作成して展開すると、そのイメージは .NET Framework の場合よりも .NET Core の方がはるかに小さくなります。
+一般的に、コンテナーはマイクロサービス アーキテクチャと併用されますが、アーキテクチャ パターンに従う Web アプリやサービスをコンテナー化するために使用することもできます。 Windows コンテナーで .NET Framework を使用できますが、モジュール性があり、軽量な .NET 5 はコンテナーとマイクロサービス アーキテクチャに最適です。 コンテナーを作成して展開すると、そのイメージは .NET Framework の場合より .NET 5 の方がはるかに小さくなります。
 
 ## <a name="create-and-deploy-microservices-on-containers"></a>マイクロサービスを作成してコンテナーに配置する
 

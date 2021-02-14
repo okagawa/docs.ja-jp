@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: >= (以上) (Entity SQL)'
 title: '>= (以上) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 70780ac4-0123-4da8-b731-8af856daffe3
-ms.openlocfilehash: 02e03d6d2da321bd02ea2b14e45a910853d39c4d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d05685123e3262a2d2ae01553c7c5334a7e53c40
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158423"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786278"
 ---
 # <a name="-greater-than-or-equal-to-entity-sql"></a>>= (以上) (Entity SQL)
 

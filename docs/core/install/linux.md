@@ -4,12 +4,12 @@ description: Linux への .NET のインストールをサポートしている 
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 3834bd7d977bb13e9543d511bee7170161a755ac
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 27be7151d95810d8cc607564d5c0ce8dfe5b9ed8
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970734"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506280"
 ---
 # <a name="install-net-on-linux"></a>Linux に .NET をインストールする
 
@@ -34,6 +34,16 @@ ms.locfileid: "97970734"
 - 2.0
 
 これらのサポートされていないバージョンについては、以下のセクションでは詳しく説明しません。これらをインストールしようとする場合、実現できることが変動する可能性があります。
+
+## <a name="manual-installation"></a>手動インストール
+
+パッケージ マネージャーを使用して Linux に .NET をインストールしない場合は、次のいずれかの方法で .NET をインストールできます。
+
+- [Snap パッケージ](linux-snap.md)
+- [_install-dotnet.sh_ でスクリプト化されたインストール](linux-scripted-manual.md#scripted-install)
+- [手動によるバイナリ抽出](linux-scripted-manual.md#manual-install)
+
+手動でインストールするときに、欠落する可能性のある必要な依存関係の詳細については、該当する配布ページを確認してください。
 
 ## <a name="alpine"></a>Alpine
 

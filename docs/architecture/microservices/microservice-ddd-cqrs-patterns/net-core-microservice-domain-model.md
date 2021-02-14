@@ -1,15 +1,15 @@
 ---
 title: .NET でマイクロサービス ドメイン モデルを実装する
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | DDD 指向ドメイン モデルの実装の詳細について
-ms.date: 01/13/2021
-ms.openlocfilehash: 9689058b77701eee35ef018ed2e3f18bd648b0f4
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/02/2021
+ms.openlocfilehash: 87d832101d95f3ab69d1a40bbdc820e1e09af5db
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188271"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665277"
 ---
-# <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core でマイクロサービス ドメイン モデルを実装する
+# <a name="implement-a-microservice-domain-model-with-net"></a>.NET でマイクロサービス ドメイン モデルを実装する
 
 前のセクションでは、ドメイン モデルの基本的な設計原則と設計パターンを説明しました。 ここでは、.NET (プレーンな C\# コード) と EF Core を使用してドメイン モデルを実装するために可能な手段を確認します。 ドメイン モデルは、自分が書くコードのみで構成されます。 EF Core モデルの要件があるだけで、EF に対する実際の依存関係は存在しません。 ドメイン モデルには EF Core または他の ORM への緊密な依存関係や参照を含めないでください。
 

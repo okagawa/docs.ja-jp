@@ -1,17 +1,18 @@
 ---
+description: '詳細情報: アソシエーション セット End'
 title: アソシエーション セット End
 ms.date: 03/30/2017
 ms.assetid: fe4bf1d3-047a-4a37-98c5-a66e70811346
-ms.openlocfilehash: bd104ffb46cbd02a886ce87822ddc37159961174
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 12e01a3fb947f6fabd5e1a93ef475132418963df
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198796"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697674"
 ---
 # <a name="association-set-end"></a>アソシエーション セット End
 
-"*アソシエーション セット End*" は、[アソシエーション セット](association-set.md)の End にある[エンティティ型](entity-type.md)と[エンティティ セット](entity-set.md)を識別します。 アソシエーション セット End はアソシエーション セットの一部として定義されます。アソシエーション セットには、アソシエーション セット End が 2 つ必要です。  
+"*アソシエーション セット End*" は、[アソシエーション セット](association-set.md)の End にある [エンティティ型](entity-type.md)と [エンティティ セット](entity-set.md)を識別します。 アソシエーション セット End はアソシエーション セットの一部として定義されます。アソシエーション セットには、アソシエーション セット End が 2 つ必要です。  
   
  アソシエーション セット End の定義には、次の情報が含まれます。  
   

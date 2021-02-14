@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: aba7b473af7685aa45f7e093a2f75311687593df
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 3275865cf7f4669ba7deaacea320136d02f64dda
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506986"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99804236"
 ---
 
 "**パッケージ {dotnet-package} が見つかりません**" や "**一部のパッケージをインストールできませんでした**" のようなエラー メッセージが表示される場合は、次のコマンドを実行します。
@@ -15,7 +15,7 @@ ms.locfileid: "94506986"
 これは、`aspnetcore-runtime-3.1` など、インストールする .NET パッケージを表します。 これは、次の `sudo apt-get install` コマンドで使用されます。
 
 - `{os-version}`\
-これは、使用している Linux のバージョンを表します。 これは、次の `wget` コマンドで使用されます。
+これは、使用しているディストリビューションのバージョンを表します。 これは、次の `wget` コマンドで使用されます。 ディストリビューションのバージョンは、Ubuntu での `20.04` や Debian での `10` などの数値です。
 
 まず、パッケージ リストを消去してみてください。
 

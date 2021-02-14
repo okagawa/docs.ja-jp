@@ -4,12 +4,12 @@ description: .NET SDK によって認識される MSBuild のプロパティと�
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 21bbe46cf60540c01344cc8fcb82c62ff0fbbee5
-ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
+ms.openlocfilehash: e140491c694291438fe1db7fd60d581ffed0319d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98692710"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802672"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK プロジェクトの MSBuild リファレンス
 
@@ -344,7 +344,12 @@ MSBuild 項目の `CopyToPublishDirectory` メタデータにより、項目が�
 
 ### <a name="analysislevel"></a>AnalysisLevel
 
-`AnalysisLevel` プロパティを使用すると、コード分析レベルを指定できます。 たとえば、プレビューのコード アナライザーにアクセスする場合は、`AnalysisLevel` を `preview` に設定します。 既定値は `latest` です。
+`AnalysisLevel` プロパティを使用すると、コード分析レベルを指定できます。 たとえば、プレビューのコード アナライザーにアクセスする場合は、`AnalysisLevel` を `preview` に設定します。
+
+既定値:
+
+- プロジェクトのターゲットが .NET 5.0 以降の場合、または [AnalysisMode](#analysismode) プロパティを追加した場合、既定値は `latest` になります。
+- それ以外の場合、このプロパティは、プロジェクト ファイルに明示的に追加されていない限り省略されます。
 
 ```xml
 <PropertyGroup>
@@ -398,9 +403,6 @@ MSBuild 項目の `CopyToPublishDirectory` メタデータにより、項目が�
   <EnableNETAnalyzers>true</EnableNETAnalyzers>
 </PropertyGroup>
 ```
-
-> [!TIP]
-> .Net 5.0 より前の .NET バージョンを対象とするプロジェクトで .NET コード分析を有効にするもう 1 つの方法は、[AnalysisLevel](#analysislevel) プロパティを `latest` に設定することです。
 
 ### <a name="enforcecodestyleinbuild"></a>EnforceCodeStyleInBuild
 

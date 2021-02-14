@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: ファセット'
 title: facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
-ms.openlocfilehash: b9ef2276f988923fe83cefce910e8c3685cb9da9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 195cb34b6de603859d592ee24140aec27a51418f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156447"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724311"
 ---
 # <a name="facet"></a>facet
 
@@ -23,10 +24,10 @@ ms.locfileid: "91156447"
 |`Collation`|プロパティの値に対して比較と順序付け操作を行うときに使用する照合シーケンス (または並べ替え順序) を指定します。|`String`|  
 |`ConcurrencyMode`|プロパティの値をオプティミスティック コンカレンシー チェックに使用することを指定します。|すべてのプリミティブ型のプロパティ|  
 |`Default`|インスタンス化で値が指定されない場合のプロパティの既定値を指定します。|すべてのプリミティブ型のプロパティ|  
-|`FixedLength`|プロパティ値の長さを可変とすることができるかどうかを指定します。|`Binary`、`String`|  
-|`MaxLength`|プロパティ値の最大長を指定します。|`Binary`、`String`|  
+|`FixedLength`|プロパティ値の長さを可変とすることができるかどうかを指定します。|`Binary`, `String`|  
+|`MaxLength`|プロパティ値の最大長を指定します。|`Binary`, `String`|  
 |`Nullable`|プロパティに null 値を指定できるかどうかを指定します。|すべてのプリミティブ型のプロパティ|  
-|`Precision`|`Decimal` 型のプロパティには、プロパティ値の桁数を指定します。 `Time` 型、`DateTime` 型、および `DateTimeOffset` 型のプロパティには、プロパティ値の秒の小数点以下の有効桁数を指定します。|`DateTime`、`DateTimeOffset`、`Decimal`、`Time`|  
+|`Precision`|`Decimal` 型のプロパティには、プロパティ値の桁数を指定します。 `Time` 型、`DateTime` 型、および `DateTimeOffset` 型のプロパティには、プロパティ値の秒の小数点以下の有効桁数を指定します。|`DateTime`, `DateTimeOffset`, `Decimal`, `Time`,|  
 |`Scale`|プロパティ値の小数点の右側の桁数を指定します。|Decimal (10 進数型)|  
 |`Unicode`|プロパティ値を Unicode として保存するかどうかを指定します。|`String`|  
   

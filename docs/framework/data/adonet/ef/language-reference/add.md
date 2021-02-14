@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: + (加算)'
 title: + (追加)
 ms.date: 03/30/2017
 ms.assetid: 51769b02-a8f7-4177-9e99-bbd10e77092c
-ms.openlocfilehash: b86d273658362c3bb204d5220ff5e9db1f8de9fe
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b8ec9f50b349fe971513f399b7e9984e9044cf58
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198055"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697310"
 ---
 # <a name="-add"></a>+ (加算)
 

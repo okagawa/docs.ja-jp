@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: += 演算子 (Visual Basic)'
 title: += 演算子
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - += operator [Visual Basic], appending strings
 - compound assignment statements [Visual Basic]
 ms.assetid: d3e959f4-85d4-4e47-87c4-77b62335a5b3
-ms.openlocfilehash: a3a37798a3ddb480ac5322c4b2d3e9396e739aa6
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: e5a6b8fcc75e44c00ee18fec9cd57e68b1218de7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873483"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640473"
 ---
 # <a name="-operator-visual-basic"></a>+= 演算子 (Visual Basic)
 
@@ -50,7 +51,7 @@ variableorproperty += expression
   
 ## <a name="overloading"></a>オーバーロード  
 
- `+` 演算子は "*オーバーロード*" できます。つまり、オペランドがクラスまたは構造体の型を持っているときに、このクラスまたは構造体はその動作を再定義できます。 `+` 演算子をオーバーロードすると、`+=` 演算子の動作に影響します。 コードで、`+` をオーバーロードするクラスまたは構造体に `+=` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ `+` 演算子は "*オーバーロード*" できます。つまり、オペランドの型がクラスまたは構造体であるとき、そのクラスまたは構造体で、演算子の動作を再定義できます。 `+` 演算子をオーバーロードすると、`+=` 演算子の動作に影響します。 コードで、`+` をオーバーロードするクラスまたは構造体で `+=` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
 
