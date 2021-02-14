@@ -1,15 +1,16 @@
 ---
+description: "詳細情報: 配列ディメンションが ' VBFixedArray ' 属性で指定された次元と一致しません"
 title: 配列の次元が、'VBFixedArray' 属性で指定された次元と一致しません
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_ArrayDimensionsDontMatch
 ms.assetid: 71809e3b-8147-4314-9c4c-e4a5bc9a5530
-ms.openlocfilehash: e48a3c843d245e97f6ddaf948ef893b056bc66dd
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f220d1ce626fee1db86927313c2f242dac972bba
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91079673"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100424906"
 ---
 # <a name="array-dimensions-do-not-match-those-specified-in-the-vbfixedarray-attribute"></a>配列の次元が、'VBFixedArray' 属性で指定された次元と一致しません
 
@@ -19,7 +20,7 @@ ms.locfileid: "91079673"
   
 - 配列の `Dim` ステートメントの配列次元が `VBFixedArray` 属性で指定された次元と一致するようにします。  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [Visual Basic における配列](../programming-guide/language-features/arrays/index.md)
 - [ReDim ステートメント](../language-reference/statements/redim-statement.md)
