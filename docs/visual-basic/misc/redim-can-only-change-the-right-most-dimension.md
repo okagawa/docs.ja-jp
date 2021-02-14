@@ -1,15 +1,16 @@
 ---
+description: "詳細情報: ' ReDim ' は右端の次元のみを変更できます"
 title: "'ReDim' では最も右にある次元のみ変更できます"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArray_TypeMismatch
 ms.assetid: d53cf41b-7a7a-466c-a29a-920d99698fa9
-ms.openlocfilehash: c3a18bb93d1253628d73919b18fe4614d742d280
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 6816e5b2e9c7c079b78ce53e168f46b337831512
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077385"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100454691"
 ---
 # <a name="redim-can-only-change-the-right-most-dimension"></a>'ReDim' では最も右にある次元のみ変更できます
 
@@ -19,7 +20,7 @@ ms.locfileid: "91077385"
   
 - `Preserve` キーワードを削除します。  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [Visual Basic における配列](../programming-guide/language-features/arrays/index.md)
 - [Visual Basic 内の配列の次元](../programming-guide/language-features/arrays/array-dimensions.md)

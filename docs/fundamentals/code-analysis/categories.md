@@ -5,16 +5,16 @@ ms.date: 02/05/2021
 ms.topic: reference
 helpviewer_keywords:
 - code analysis, categories
-ms.openlocfilehash: 3eaff57a7ea175fbe0895fb7bb8d8d0d8df1365d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: fdb4662f52a13906a2d9bcb3fd9a90860e394e72
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99804190"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100467330"
 ---
 # <a name="rule-categories"></a>ルール カテゴリ
 
-各コード分析ルールは、ルールのカテゴリに属しています。 たとえば、設計規則は .NET デザインガイドラインへの準拠をサポートし、セキュリティ規則はセキュリティの欠陥を防ぐのに役立ちます。 ルールの [カテゴリ全体を無効または有効に](configuration-options.md#scope) することができます。 カテゴリごとに [追加のオプションを構成](code-quality-rule-options.md#category-of-rules) することもできます。
+各コード分析ルールは、ルールのカテゴリに属しています。 たとえば、設計規則は .NET デザインガイドラインへの準拠をサポートし、セキュリティ規則はセキュリティの欠陥を防ぐのに役立ちます。 ルールのカテゴリ全体の [重大度レベルを構成](configuration-options.md#scope) することができます。 カテゴリごとに [追加のオプションを構成](code-quality-rule-options.md#category-of-rules) することもできます。
 
 次の表に、さまざまなコード分析規則のカテゴリと、各カテゴリの規則へのリンクを示します。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: #Region ディレクティブ'
 title: '#Region ディレクティブ'
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - region directive (#region)
 - '#Region keyword [Visual Basic]'
 ms.assetid: 90a6a104-3cbf-47d0-bdc4-b585d0921b87
-ms.openlocfilehash: cd53a6079c1564a8c73a0a1a6273fc166d18d3e6
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4ba1645cfc51a69d39e6a60b5ea236dd65883e1c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409942"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797225"
 ---
 # <a name="region-directive"></a>#Region ディレクティブ
 
