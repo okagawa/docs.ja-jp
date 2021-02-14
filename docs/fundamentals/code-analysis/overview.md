@@ -8,21 +8,21 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 2cda5a23bbc90ca5dc2305b5d7023e8ea6120b79
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: eb978d6af6695fd2e4b5473ac5c0dc216e726e52
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99643073"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100459956"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET ソース コード分析の概要
 
-.NET のコンパイラ プラットフォーム (Roslyn) アナライザーでは、お使いの C# または Visual Basic コードについて、コード品質やコード スタイルに関する問題を検査できます。 .NET 5.0 以降、これらのアナライザーは .NET SDK に含まれており、個別にインストールする必要はありません。 プロジェクトが .NET 5 以降を対象としている場合は、既定でコード分析が有効になります。 プロジェクトが .NET Core、.NET Standard、.NET Framework などの別の .NET 実装をターゲットにしている場合は、 [Enablenetanalyzers](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) プロパティをに設定することによって、手動でコード分析を有効にする必要があり `true` ます。
+.NET compiler platform (Roslyn) アナライザーは、コードの品質とスタイルの問題について、C# または Visual Basic コードを検査します。 .NET 5.0 以降、これらのアナライザーは .NET SDK に含まれており、個別にインストールする必要はありません。 プロジェクトが .NET 5 以降を対象としている場合は、既定でコード分析が有効になります。 プロジェクトが .NET Core、.NET Standard、.NET Framework などの別の .NET 実装を対象としている場合は、 [Enablenetanalyzers](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) プロパティをに設定することによって、手動でコード分析を有効にする必要があり `true` ます。
 
-.NET 5 + SDK に移行しない場合、または NuGet パッケージベースのモデルを使用する場合は、 [Microsoft の CodeAnalysis. Netanalyzers nuget パッケージ](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)でアナライザーを使用することもできます。 オンデマンドバージョン更新には、パッケージベースのモデルを使用することをお勧めします。
+.NET 5 + SDK に移行しない場合、SDK 形式以外の .NET Framework プロジェクトを使用する場合、または NuGet パッケージベースのモデルを使用する場合は、 [Microsoft の CodeAnalysis. Netanalyzers NuGet パッケージ](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)でアナライザーを使用することもできます。 オンデマンドバージョン更新には、パッケージベースのモデルを使用することをお勧めします。
 
 > [!NOTE]
-> .NET アナライザーは、ターゲットフレームワークに依存しません。 つまり、プロジェクトは特定の .NET 実装をターゲットにする必要がありません。 アナライザーは、やなど、以前のバージョンの .NET を対象とするプロジェクトでも機能し `net5.0` `netcoreapp3.1` `net472` ます。
+> .NET アナライザーは、ターゲットフレームワークに依存しません。 つまり、プロジェクトは特定の .NET 実装をターゲットにする必要がありません。 アナライザーは、やなど、以前のバージョンの .NET を対象とするプロジェクトでも機能し `net5.0` `netcoreapp3.1` `net472` ます。 ただし、 [Enablenetanalyzers](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) プロパティを使用してコード分析を有効にするには、プロジェクトで [プロジェクト SDK](../../core/project-sdk/overview.md)を参照する必要があります。
 
 ルール違反が analyzer によって検出されると、各ルールの [構成](configuration-options.md)方法に応じて、候補、警告、またはエラーとして報告されます。 コード分析違反は、コンパイラエラーと区別するために "CA" または "IDE" というプレフィックスで示されます。
 
@@ -40,7 +40,7 @@ ms.locfileid: "99643073"
 
 次の規則は、既定では .NET 5.0 で有効になっています。
 
-| 診断 ID | カテゴリ | 重大度 | 説明 |
+| 診断 ID | カテゴリ | 重大度 | [説明] |
 | - | - | - | - |
 | [CA1416](/visualstudio/code-quality/ca1416) | 相互運用性 | 警告 | プラットフォーム互換性アナライザー |
 | [CA1417](/visualstudio/code-quality/ca1417) | 相互運用性 | 警告 | `OutAttribute`P/invoke に文字列パラメーターを使用しない |
@@ -58,9 +58,9 @@ ms.locfileid: "99643073"
 
 ### <a name="enable-additional-rules"></a>追加のルールを有効にする
 
-*分析モード* とは、定義されていないコード分析構成を意味します。この構成では、すべての規則が有効になっていません。 既定の分析モードでは、いくつかのルールのみが [ビルド警告として有効になり](#enabled-rules)ます。 プロジェクトファイルの [AnalysisMode](../../core/project-sdk/msbuild-props.md#analysismode) プロパティを設定することにより、プロジェクトの分析モードを変更できます。 使用できる値は次のとおりです。
+*分析モード* とは、定義されていないコード分析構成を意味します。この構成では、すべての規則が有効になっていません。 既定の分析モードでは、いくつかのルールのみが [ビルド警告として有効になり](#enabled-rules)ます。 プロジェクトファイルでプロパティを設定することにより、プロジェクトの分析モードを変更でき [\<AnalysisMode>](../../core/project-sdk/msbuild-props.md#analysismode) ます。 使用できる値は次のとおりです。
 
-| 値 | 説明 |
+| [値] | [説明] |
 | - | - |
 | `AllDisabledByDefault` | これは最も控えめなモードです。 既定では、すべてのルールが無効になっています。 個々のルールを選択的に[オプトイン](configuration-options.md)して有効にすることができます。<br /><br />`<AnalysisMode>AllDisabledByDefault</AnalysisMode>` |
 | `AllEnabledByDefault` | これは最も積極的なモードです。 すべてのルールがビルド警告として有効になります。 個別 [の](configuration-options.md) ルールを選択して無効にすることができます。<br /><br />`<AnalysisMode>AllEnabledByDefault</AnalysisMode>` |

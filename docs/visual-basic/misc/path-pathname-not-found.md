@@ -1,15 +1,16 @@
 ---
+description: 詳細については、パス ' <pathname> ' が見つかりません
 title: パス '<pathname>' が見つかりません
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_PathNotFound1
 ms.assetid: 184d09ab-771f-4298-bd71-94b33efc325b
-ms.openlocfilehash: c9b10aecd906b0a132f3c34d5f4d9c085ff96b32
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5b30a87f2c68ea99a0a6b038db5a4f9d516c29ab
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078763"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100486785"
 ---
 # <a name="path-pathname-not-found"></a>パス '\<pathname>' が見つかりません
 
@@ -19,7 +20,7 @@ ms.locfileid: "91078763"
   
 1. パスに必要な要素が含まれていることを確認します。  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [マイファイル (コンピューター)](xref:Microsoft.VisualBasic.FileIO.FileSystem)
 - [方法: ファイル パスを解析する](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

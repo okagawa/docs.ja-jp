@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「」を参照してください。の値は <argumentname> 1000 以上である必要があります
 title: <argumentname> の値は 1000 以上でなければなりません。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrApplicationLogNumberTooSmall
 ms.assetid: 81aed143-1abb-41c2-9922-8e83711100e3
-ms.openlocfilehash: 3dc94fb38b37aa51e61913621c97d01ffc330815
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c928986a1d55af72b5dd9f8eb3b9a35d37c75b8c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095721"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428000"
 ---
 # <a name="the-value-of-argumentname-must-be-greater-than-or-equal-to-1000"></a>\<argumentname> の値は 1000 以上でなければなりません。
 
@@ -21,7 +22,7 @@ ms.locfileid: "91095721"
   
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> プロパティに 1000 以上の数を設定します。  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A>
 - [.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
