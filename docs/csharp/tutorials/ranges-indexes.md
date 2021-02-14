@@ -4,12 +4,12 @@ description: この詳細なチュートリアルでは、一連の連続する�
 ms.date: 09/11/2020
 ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: cf6c83484332ed517b2326b3fd9d7458f191227e
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: c0484a42233466e3a2a70a673aee81fce91fe31b
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "90738867"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585404"
 ---
 # <a name="indices-and-ranges"></a>インデックスと範囲
 
@@ -93,7 +93,7 @@ string[] words = new string[]
 
 たとえば、次の .NET 型ではインデックスと範囲の両方がサポートされています: <xref:System.String>、<xref:System.Span%601>、および <xref:System.ReadOnlySpan%601>。 <xref:System.Collections.Generic.List%601> はインデックスをサポートしていますが、範囲はサポートしていません。
 
-<xref:System.Array> には、より微妙な動作があります。 1 次元配列では、インデックスと範囲の両方がサポートされます。 多次元配列ではそうではありません。 多次元配列のインデクサーには、1 つのパラメーターではなく、複数のパラメーターがあります。 配列の配列とも呼ばれるジャグ配列では、範囲とインデクサーの両方がサポートされます。 次の例では、ジャグ配列の四角形サブセクションを反復処理する方法を示しています。 最初と最後の 3 つの行と、選択された各行の最初と最後の 2 つの列を除いて、中央のセクションが反復処理されます。
+<xref:System.Array> には、より微妙な動作があります。 1 次元配列では、インデックスと範囲の両方がサポートされます。 多次元配列では、インデクサーまたは範囲はサポートされていません。 多次元配列のインデクサーには、1 つのパラメーターではなく、複数のパラメーターがあります。 配列の配列とも呼ばれるジャグ配列では、範囲とインデクサーの両方がサポートされます。 次の例では、ジャグ配列の四角形サブセクションを反復処理する方法を示しています。 最初と最後の 3 つの行と、選択された各行の最初と最後の 2 つの列を除いて、中央のセクションが反復処理されます。
 
 [!code-csharp[JaggedArrays](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_JaggedArrays)]
 

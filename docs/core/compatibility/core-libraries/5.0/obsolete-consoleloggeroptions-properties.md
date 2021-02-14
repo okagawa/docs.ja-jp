@@ -2,12 +2,12 @@
 title: 破壊的変更:ConsoleLoggerOptions の古いプロパティ
 description: Core .NET ライブラリにおける .NET 5.0 の破壊的変更について学習します。ConsoleLoggerFormat 型と ConsoleLoggerOptions のいくつかのプロパティは、古くなりました。
 ms.date: 11/01/2020
-ms.openlocfilehash: e38ba3bda371c713a8b2cb4cda8b4c585dac29f5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bd039dfa84ae3399d7fb36f992010a9a3c9f6ddf
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759926"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99548384"
 ---
 # <a name="obsolete-properties-on-consoleloggeroptions"></a>ConsoleLoggerOptions の古いプロパティ
 
@@ -53,12 +53,23 @@ ms.locfileid: "95759926"
   - `"Format": "Systemd"` は `"FormatterName": "Systemd"` にマップされます。
   - `"Format": "Default"` は `"FormatterName": "Simple"` にマップされます。
 
-- <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.DisableColors>、<xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.IncludeScopes>、<xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.TimestampFormat>、<xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.UseUtcTimestamp> の各プロパティについては、新しい <xref:Microsoft.Extensions.Logging.Console.ConsoleFormatterOptions> 型、<xref:Microsoft.Extensions.Logging.Console.JsonConsoleFormatterOptions> 型、または <xref:Microsoft.Extensions.Logging.Console.SimpleConsoleFormatterOptions> 型の対応するプロパティを代わりに使用します。 次に例を示します。
+- <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.DisableColors>、<xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.IncludeScopes>、<xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.TimestampFormat>、<xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.UseUtcTimestamp> の各プロパティについては、新しい <xref:Microsoft.Extensions.Logging.Console.ConsoleFormatterOptions> 型、<xref:Microsoft.Extensions.Logging.Console.JsonConsoleFormatterOptions> 型、または <xref:Microsoft.Extensions.Logging.Console.SimpleConsoleFormatterOptions> 型の対応するプロパティを代わりに使用します。 たとえば、<xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.DisableColors?displayProperty=nameWithType> の対応する設定は <xref:Microsoft.Extensions.Logging.Console.SimpleConsoleFormatterOptions.ColorBehavior?displayProperty=nameWithType> です。
+
+  以前のコード:
+
+  ```csharp
+  loggingBuilder.AddConsole(options =>
+  {
+      options.DisableColors = true;
+  });
+  ```
+
+  新しいコード:
 
   ```csharp
   loggingBuilder.AddSimpleConsole(options =>
   {
-      options.DisableColors = true;
+      options.ColorBehavior = LoggerColorBehavior.Disabled;
   });
   ```
 

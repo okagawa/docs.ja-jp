@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: この操作は、ファイルが閉じられている場合にのみ実行できます'
 title: この操作は、ファイルが閉じられているときにのみ実行することができます
 ms.date: 07/20/2015
 ms.assetid: 79fe95ae-4aff-469f-beda-d5a85c91d421
-ms.openlocfilehash: 45afaa585591f16e10d42a6792719c201a5d1709
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 1f408eb2fd9a7300a83fee981e9026f90845b2c1
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91060434"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462296"
 ---
 # <a name="this-operation-can-only-be-done-when-the-file-is-closed"></a>この操作は、ファイルが閉じられているときにのみ実行することができます
 
@@ -17,7 +18,7 @@ ms.locfileid: "91060434"
   
 - ファイルを閉じて、操作をやり直します。  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Security.Permissions.FileIOPermission>
 - <xref:Microsoft.VisualBasic.FileSystem.FileClose%2A>

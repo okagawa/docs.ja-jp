@@ -4,12 +4,12 @@ description: .NET CLI を使用して .NET ライブラリを作成する方法�
 author: cartermp
 ms.topic: how-to
 ms.date: 12/14/2020
-ms.openlocfilehash: 6f4c1feac7630a6a0250e4b0b39ef01152f5a400
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 76d08007e191fe9090f3f14c906a40e84e37bd19
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633677"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99548410"
 ---
 # <a name="develop-libraries-with-the-net-cli"></a>.NET CLI を使用してライブラリを開発する
 
@@ -17,11 +17,11 @@ ms.locfileid: "97633677"
 
 ## <a name="prerequisites"></a>前提条件
 
-[.NET SDK と CLI](https://dotnet.microsoft.com/download) がコンピューターにインストールされている必要があります。
+[.NET SDK](https://dotnet.microsoft.com/download) がマシンにインストールされている必要があります。
 
-このドキュメントで [.NET Framework](https://dotnet.microsoft.com) バージョンについて扱うセクションでは、.NET Framework が Windows コンピューターにインストールされている必要があります。
+このドキュメントで [.NET Framework](https://dotnet.microsoft.com/download/dotnet-framework) バージョンについて扱うセクションでは、.NET Framework が Windows コンピューターにインストールされている必要があります。
 
-また、古い .NET Framework ターゲットをサポートする場合、[.NET ダウンロードのアーカイブ ページ](https://dotnet.microsoft.com/download/archives)から Targeting Pack または Developer Pack をインストールする必要があります。 次の表を参照してください。
+また、古い .NET Framework ターゲットをサポートする場合、[.NET Framework のダウンロード ページ](https://dotnet.microsoft.com/download/dotnet-framework)から Targeting Pack または Developer Pack をインストールする必要があります。 次の表を参照してください。
 
 | .NET Framework のバージョン | ダウンロードするもの                                       |
 | ---------------------- | ------------------------------------------------------ |

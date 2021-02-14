@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: #Const ディレクティブ'
 title: '#Const ディレクティブ'
 ms.date: 07/20/2015
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: 91152771a4ef5ec74a7408511ccc2afe28dd442e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9597666ee1320f5dfda226040f93a84eb60a3deb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415467"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797277"
 ---
 # <a name="const-directive"></a>#Const ディレクティブ
 

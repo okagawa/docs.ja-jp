@@ -1,13 +1,13 @@
 ---
 title: Docker アプリの開発ワークフロー
 description: Docker ベースのアプリケーションを開発するためのワークフローの詳細を理解します。 まず、段階的に見ていき、Dockerfile の最適化について詳しく確認し、最終的には Visual Studio を使用する際に利用できる簡略化されたワークフローを理解します。
-ms.date: 01/13/2021
-ms.openlocfilehash: fff0a59bb6001eeb50c31c68bfeceeb71c439223
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/02/2021
+ms.openlocfilehash: 678ff76575c70a253fbb06253fadb2f721f16831
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189546"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719976"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker アプリの開発ワークフロー
 
@@ -53,7 +53,7 @@ Docker アプリケーションの開発方法は、Docker を使用しないア
 
 [Get started with Docker CE for Windows](https://docs.docker.com/docker-for-windows/) (Windows 用の Docker CE の概要)
 
-さらに、図 5-2 に示すように、 **.NET Core クロスプラットフォーム開発** ワークロードがインストールされた Visual Studio 2019 バージョン 16.4 以降が必要です。
+さらに、図 5-2 に示すように、 **.NET Core クロスプラットフォーム開発** ワークロードがインストールされた Visual Studio 2019 バージョン 16.8 が必要です。
 
 ![.NET Core クロスプラットフォーム開発の選択のスクリーンショット。](./media/docker-app-development-workflow/dotnet-core-cross-platform-development.png)
 
@@ -132,7 +132,7 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 
 ### <a name="using-multi-arch-image-repositories"></a>マルチアーキテクチャ イメージ リポジトリの使用
 
-単一のリポジトリには、Linux イメージや Windows イメージなどのプラットフォーム バリアントを含めることができます。 この機能では、Microsoft (基本イメージの作成者) などのベンダーが、複数のプラットフォーム (つまり、Linux および Windows) に対応できるリポジトリを 1 つ作成できます。 たとえば、Docker Hub レジストリにある [dotnet/core](https://hub.docker.com/_/microsoft-dotnet/) リポジトリでは、同じリポジトリ名を使用して Linux および Windows Nano Server をサポートしています。
+単一のリポジトリには、Linux イメージや Windows イメージなどのプラットフォーム バリアントを含めることができます。 この機能では、Microsoft (基本イメージの作成者) などのベンダーが、複数のプラットフォーム (つまり、Linux および Windows) に対応できるリポジトリを 1 つ作成できます。 たとえば、Docker Hub レジストリにある [.NET](https://hub.docker.com/_/microsoft-dotnet/) リポジトリでは、同じリポジトリ名を使用して Linux と Windows Nano Server がサポートされています。
 
 タグを指定する場合、次の場合のように、明示的にプラットフォームを指定できます。
 
@@ -506,7 +506,7 @@ docker-compose up および docker run コマンド (または Visual Studio で
 
 ## <a name="step-6-test-your-docker-application-using-your-local-docker-host"></a>手順 6. ローカル Docker ホストを使用した Docker アプリケーションのテスト
 
-この手順は、アプリケーションで何が実行されているかによって異なります。 単一のコンテナーやサービスとして展開された単純な .NET Core Web アプリケーションでは、図 5-13 に示すように、Docker ホストでブラウザーを開き、サイトに移動して、サービスにアクセスできます。 (Dockerfile の構成で、コンテナーがホストの 80 以外のポートにマップされる場合、この URL にホスト ポストを含めます。)
+この手順は、アプリケーションで何が実行されているかによって異なります。 単一のコンテナーまたはサービスとして展開される単純な .NET Web アプリケーションでは、図 5-13 に示すように、Docker ホストでブラウザーを開いてサイトに移動することにより、サービスにアクセスできます。 (Dockerfile の構成で、コンテナーがホストの 80 以外のポートにマップされる場合、この URL にホスト ポストを含めます。)
 
 ![localhost/API/values からの応答のスクリーンショット。](./media/docker-app-development-workflow/test-docker-app-locally-localhost.png)
 

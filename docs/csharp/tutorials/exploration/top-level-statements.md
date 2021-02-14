@@ -2,12 +2,12 @@
 title: 最上位レベルのステートメント - C# チュートリアル
 description: このチュートリアルでは、最上位レベルのステートメントを使用して、アイデアを探索しながら概念を試して証明する方法を示します
 ms.date: 10/28/2020
-ms.openlocfilehash: 5e5dc6cec382baa69ac8cb4625684315bb2cd5e0
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: c56a40e7a9715ff0265a897c494b457a32e52df2
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282259"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585625"
 ---
 # <a name="tutorial-explore-ideas-using-top-level-statements-to-build-code-as-you-learn"></a>チュートリアル: 学習しながらコードをビルドするために最上位レベルのステートメントを使用してアイデアを探索する
 
@@ -84,7 +84,7 @@ System.String[]
 
 コンソールに質問を書き込むには、引数を列挙し、それらをスペースで区切る必要があります。 `WriteLine` 呼び出しを次のコードに置き換えます。
 
-:::code language="csharp" source="snippets/top-level-statements/Program.cs" ID="EchoInput":::
+:::code language="csharp" source="snippets/top-level-statements/ProgramSnippets.cs" ID="EchoInput":::
 
 これで、プログラムを実行すると、質問が引数の文字列として正しく表示されるようになります。
 
@@ -92,11 +92,11 @@ System.String[]
 
 質問を問い返した後、ランダムな回答を生成するコードを追加できます。 まず、考えられる答えの配列を追加します。
 
-:::code language="csharp" source="snippets/top-level-statements/Program.cs" ID="Answers":::
+:::code language="csharp" source="snippets/top-level-statements/ProgramSnippets.cs" ID="Answers":::
 
 この配列には 12 個の答えが含まれており、6 個は肯定的であいまいなものであり、残りの 6 個は否定的なものです。 次に、配列からランダムな回答を生成して表示する以下のコードを追加します。
 
-:::code language="csharp" source="snippets/top-level-statements/Program.cs" ID="GenerateAnswer":::
+:::code language="csharp" source="snippets/top-level-statements/ProgramSnippets.cs" ID="GenerateAnswer":::
 
 アプリケーションをもう一度実行して、結果を確認することができます。 次の出力のようになるはずです。
 
@@ -212,7 +212,11 @@ static async Task ShowConsoleAnimation()
 
 :::code language="csharp" source="snippets/top-level-statements/Utilities.cs" ID="Animation":::
 
-これでアプリケーションが完成し、後で使用するために再利用可能な部分がリファクタリングされました。
+これでアプリケーションが完成し、後で使用するために再利用可能な部分がリファクタリングされました。 以下のメイン プログラムの完成版で示されているように、最上位レベルのステートメントから新しいユーティリティ メソッドを呼び出すことができます。
+
+:::code language="csharp" source="snippets/top-level-statements/Program.cs":::
+
+これにより、`Utilities.ShowConsoleAnimation` の呼び出しが追加され、別の `using` ステートメントが追加されます。
 
 ## <a name="summary"></a>まとめ
 

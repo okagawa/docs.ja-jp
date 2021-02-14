@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 例外とパフォーマンス'
 title: 例外とパフォーマンス
 ms.date: 10/22/2008
 helpviewer_keywords:
@@ -8,31 +9,31 @@ helpviewer_keywords:
 - exceptions, performance
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
-ms.openlocfilehash: babe378e0d61357709006e08f71ff578492f116c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
-ms.translationtype: MT
+ms.openlocfilehash: 72b35ccca5514e56dcc04fc0a07d1f9887c4a2f7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734752"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99642124"
 ---
 # <a name="exceptions-and-performance"></a>例外とパフォーマンス
 
-例外に関する一般的な懸念事項の1つとして、定期的に失敗するコードに例外を使用すると、実装のパフォーマンスが許容されなくなることがあります。 これはもっともな心配です。 メンバーが例外をスローすると、パフォーマンスが低下することがあります。 ただし、エラーコードの使用を禁止する例外ガイドラインに厳密に準拠しながら、パフォーマンスを向上させることができます。 このセクションで説明する2つのパターンは、この方法を示しています。
+例外に関する一般的な懸念の 1 つとして、日常的に失敗するコードに例外を使用すると、実装のパフォーマンスが許容できないものになるだろうということがあります。 これはもっともな心配です。 メンバーによって例外がスローされる場合、そのパフォーマンスが桁違いに低下する可能性があります。 ただし、エラー コードの使用を禁止する例外ガイドラインに厳密に準拠しながら、優れたパフォーマンスを達成することができます。 このセクションで説明する 2 つのパターンは、これを行う方法を提案しています。
 
- ❌ エラーコードは、例外がパフォーマンスに悪影響を与える可能性があるため、使用しないでください。
+ ❌ 例外によるパフォーマンスへの悪影響の可能性が心配であるという理由で、エラー コードを使用しないでください。
 
- パフォーマンスを向上させるには、次の2つのセクションで説明するように、Tester-Doer パターンまたは Try-Parse パターンを使用することができます。
+ パフォーマンスを向上させるために、次の 2 つのセクションで説明する、Tester-Doer パターンまたは Try-Parse パターンを使用できます。
 
 ## <a name="tester-doer-pattern"></a>Tester-Doer パターン
 
- メンバーを2つに分割すると、例外スローメンバーのパフォーマンスを向上させることができます。 では、インターフェイスのメソッドを見てみましょう <xref:System.Collections.Generic.ICollection%601.Add%2A> <xref:System.Collections.Generic.ICollection%601> 。
+ 例外をスローするメンバーを 2 つに分割することで、メンバーのパフォーマンスを向上させることができる可能性があります。 <xref:System.Collections.Generic.ICollection%601> インターフェイスの <xref:System.Collections.Generic.ICollection%601.Add%2A> メソッドを見てみましょう。
 
 ```csharp
 ICollection<int> numbers = ...
 numbers.Add(1);
 ```
 
- コレクションが読み取り専用の場合、メソッドはを `Add` スローします。 これは、メソッドの呼び出しが頻繁に失敗することが予想されるシナリオでパフォーマンスの問題になる可能性があります。 問題を軽減する方法の1つは、値を追加する前に、コレクションが書き込み可能かどうかをテストすることです。
+ コレクションが読み取り専用の場合、メソッド `Add` によって (例外が) スローされます。 これは、このメソッドの呼び出しが頻繁に失敗することが予想されるシナリオでは、パフォーマンスの問題になる可能性があります。 この問題を軽減する方法の 1 つは、値を追加する前に、コレクションが書き込み可能かどうかをテストすることです。
 
 ```csharp
 ICollection<int> numbers = ...
@@ -43,13 +44,13 @@ if (!numbers.IsReadOnly)
 }
 ```
 
- 条件をテストするために使用されるメンバー (この例ではプロパティ) は、テスト `IsReadOnly` 担当者と呼ばれています。 スローされる可能性のある操作を実行するために使用するメンバーは、この `Add` 例のメソッドを doer と呼びます。
+ 条件をテストするために使用されるメンバー (この例では `IsReadOnly` プロパティ) を Tester と呼びます。 可能性があるスロー操作を実行するために使用されるメンバー (この例では `Add` メソッド) を Doer と呼びます。
 
- ✔️例外に関連するパフォーマンスの問題を回避するために、一般的なシナリオで例外をスローする可能性のあるメンバーの Tester-Doer パターンを検討してください。
+ ✔️ 例外に関連するパフォーマンスの問題を回避するために、一般的なシナリオで例外をスローする可能性のあるメンバーに対して Tester-Doer パターンを使用することを検討してください。
 
 ## <a name="try-parse-pattern"></a>Try-Parse パターン
 
- パフォーマンスが非常に重要な Api では、前のセクションで説明した Tester-Doer パターンよりも高速なパターンを使用する必要があります。 このパターンでは、メンバー名を調整して、適切に定義されたテストケースをメンバーセマンティクスの一部にするためのを呼び出します。 たとえば、は、 <xref:System.DateTime> <xref:System.DateTime.Parse%2A> 文字列の解析が失敗した場合に例外をスローするメソッドを定義します。 また、解析を試行する対応するメソッドも定義 <xref:System.DateTime.TryParse%2A> しますが、解析が失敗した場合は false を返し、パラメーターを使用して解析の成功の結果を返し `out` ます。
+ パフォーマンスが非常に重要な API では、前のセクションで説明した Tester-Doer パターンよりも高速なパターンを使用する必要があります。 このパターンでは、メンバー名を調整して、適切に定義されたテスト ケースをメンバー セマンティクスの一部にするための呼び出しが行われます。 たとえば、<xref:System.DateTime> では、文字列の解析が失敗した場合に例外をスローする <xref:System.DateTime.Parse%2A> メソッドが定義されます。 解析を試行する対応する <xref:System.DateTime.TryParse%2A> メソッドも定義されますが、解析が失敗した場合は false が返され、解析が成功した場合はその結果が `out` パラメーターを使用して返されます。
 
 ```csharp
 public struct DateTime
@@ -65,19 +66,19 @@ public struct DateTime
 }
 ```
 
- このパターンを使用する場合は、厳密な用語で try 機能を定義することが重要です。 明確に定義された try 以外の理由でメンバーが失敗した場合でも、メンバーは対応する例外をスローする必要があります。
+ このパターンを使用する場合は、Try 機能を厳しい条件で定義することが重要です。 明確に定義された Try 以外の理由でメンバーが失敗した場合でも、メンバーによって対応する例外がスローされる必要があります。
 
- ✔️例外に関連するパフォーマンスの問題を回避するために、一般的なシナリオで例外をスローする可能性のあるメンバーの Try-Parse パターンを検討してください。
+ ✔️ 例外に関連するパフォーマンスの問題を回避するには、一般的なシナリオで例外をスローする可能性のあるメンバーに対して Try-Parse パターンを使用することを検討してください。
 
- このパターンを実装するメソッドには、"Try" というプレフィックスとブール型の戻り値の型を使用✔️ます。
+ ✔️ このパターンを実装するメソッドには、"Try" というプレフィックスとブール型の戻り値を使用してください。
 
- ✔️は、Try-Parse パターンを使用して、各メンバーに例外スローメンバーを提供します。
+ ✔️ Try-Parse パターンを使用して、メンバーごとに例外をスローするメンバーを用意してください。
 
- *©2005、2009 Microsoft Corporation の部分。すべての権限が予約されています。*
+ *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*
 
  *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*
 
 ## <a name="see-also"></a>関連項目
 
-- [フレームワークデザインのガイドライン](index.md)
+- [フレームワーク デザインのガイドライン](index.md)
 - [例外のデザインのガイドライン](exceptions.md)
