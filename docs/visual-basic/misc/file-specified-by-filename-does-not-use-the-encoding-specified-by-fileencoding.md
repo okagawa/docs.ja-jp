@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: FileName で指定されたファイルが FileEncoding で指定されたエンコーディングを使用していません'
 title: FileName で指定されたファイルは FileEncoding で指定されたエンコーディングを使用していません
 ms.date: 07/20/2015
 ms.assetid: 2129f8df-96cd-4c2e-a4ca-f08a49f07d3f
-ms.openlocfilehash: 4e942033d3704cda5c57dd3a041316d5680caa18
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 893c51181436917c2518f4e03cb25aac12249c53
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91060680"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429391"
 ---
 # <a name="file-specified-by-filename-does-not-use-the-encoding-specified-by-fileencoding"></a>FileName で指定されたファイルは FileEncoding で指定されたエンコーディングを使用していません
 
@@ -17,9 +18,9 @@ ms.locfileid: "91060680"
   
 - 正しいファイルのエンコーディングを指定していることを確認します。  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [My. System.io.file.readalltext](xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A)
 - [マイファイル (コンピューター)](xref:Microsoft.VisualBasic.FileIO.FileSystem)
 - [ファイル エンコーディング](../developing-apps/programming/drives-directories-files/file-encodings.md)
-- [方法: テキストファイルを読み取る](../developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
+- [方法: テキスト ファイルからデータを読み取る](../developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)

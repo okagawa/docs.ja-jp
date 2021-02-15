@@ -1,15 +1,16 @@
 ---
+description: 詳細については、EscapeQuotes が True に設定されている場合、二重引用符が有効な区切り記号ではないため、区切られたフィールドを読み取ることができません。
 title: EscapeQuotes が True に設定されている場合、二重引用符は有効な区切り記号でないため、区切り記号で分けられたフィールドを読み取れません
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_IllegalDelimiter
 ms.assetid: ab8a0c3a-b89c-4617-9e31-7e81f5dca433
-ms.openlocfilehash: 29682edb78b848897ac2999f2d84dc1a9c1a3367
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 066b5110eaddad74b64f1d86683d7ca2a0a619f7
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100359"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474396"
 ---
 # <a name="unable-to-read-delimited-fields-because-a-double-quote-is-not-a-legal-delimiter-when-escapequotes-is-set-to-true"></a>EscapeQuotes が True に設定されている場合、二重引用符は有効な区切り記号でないため、区切り記号で分けられたフィールドを読み取れません
 

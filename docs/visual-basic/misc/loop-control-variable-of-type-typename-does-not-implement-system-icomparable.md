@@ -1,15 +1,16 @@
 ---
+description: "詳細情報: 型 ' ' の Loop コントロール変数 <typename> は ' system.icomparable ' インターフェイスを実装していません"
 title: 型 '<typename>' の Loop コントロール変数は 'System.IComparable' インターフェイスを実装していません。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_IComparable2
 ms.assetid: 8dba1270-380a-4f05-8bad-1031e6a9cc90
-ms.openlocfilehash: 463dffbb008e60fb30cbe456146196be7a633b19
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d353e5a845786bb02a7b17d1e1bc3be18f41e09a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91076150"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429989"
 ---
 # <a name="loop-control-variable-of-type-typename-does-not-implement-the-systemicomparable-interface"></a>型 '\<typename>' の Loop コントロール変数は 'System.IComparable' インターフェイスを実装していません。
 

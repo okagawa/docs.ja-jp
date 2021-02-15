@@ -1,15 +1,16 @@
 ---
+description: "詳細情報: ロケール ID ' <name> ' はこのシステムではサポートされていません"
 title: ロケール ID '<name>' はこのシステムでサポートされていません。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_LCIDNotSupported1
 ms.assetid: 62701434-0ac2-45b8-8b40-a9adc09ae6df
-ms.openlocfilehash: 29226ba4e666bab16e8e4747b5ac7fcdeaf7e502
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 303a907cb912402f1e2c52e7f58b02439405995d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91076189"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429976"
 ---
 # <a name="locale-id-name-is-not-supported-on-this-system"></a>ロケール ID '\<name>' はこのシステムでサポートされていません。
 
@@ -19,7 +20,7 @@ ms.locfileid: "91076189"
   
 1. ロケールをサポートするためにコンピューターをアップグレードするか、または指定したロケールをサポートするコンピューターでアプリケーションを実行します。  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Globalization>
 - [.NET Framework ベースの国際対応アプリケーションの概要](/visualstudio/ide/globalizing-and-localizing-applications)

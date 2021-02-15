@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「プロパティ値が無効です」を参照してください。
 title: プロパティの値が無効です
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID380
 ms.assetid: 38540ad2-e02c-49aa-a2b7-b4c82d719cf1
-ms.openlocfilehash: edf91cc62867b922a4c9fae69f19be5e38fc21c8
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 68a01afe4e62b88055f9b11409a922d031a0076b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090548"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100454704"
 ---
 # <a name="property-value-is-not-valid"></a>プロパティの値が無効です
 
