@@ -3,12 +3,12 @@ description: 詳細については、「Windows ストアアプリを .NET Nativ
 title: Windows ストア アプリの .NET ネイティブへの移行
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 39f8427474b37c42d856366bf4e4d677ba77e7f1
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 7a9e8f7108ca21dbbae7ca0097b15af078c8c6bb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99738716"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100464678"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>Windows ストアアプリを .NET Native に移行する
 
@@ -160,7 +160,7 @@ Windows ストアアプリ用 .NET と .NET Native の動作には、リフレ�
 
 - [](xref:System.Type.GUID) <xref:System.PlatformNotSupportedException> <xref:System.Runtime.InteropServices.GuidAttribute> 属性が型に適用されていない場合、TypeInfo プロパティは例外をスローします。 GUID は主に COM サポートで使用されます。
 
-- メソッドは、 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> .NET Native の短い日付を含む文字列を正しく解析します。 ただし、Microsoft サポート技術情報の記事 [KB2803771](https://support.microsoft.com/kb/2803771) と [KB2803755](https://support.microsoft.com/kb/2803755)で説明されている日付と時刻の解析の変更に対する互換性は保持されません。
+- メソッドは、 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> .NET Native の短い日付を含む文字列を正しく解析します。 ただし、日付と時刻の解析の特定の変更との互換性は維持されません。
 
 - <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType>`("E")`が .NET Native で正しく丸められています。 CLR の一部のバージョンでは、結果の文字列が丸められるのではなく、切り捨てられます。
 

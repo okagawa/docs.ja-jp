@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 操作中に例外が発生した一部のファイルとフォルダー'
 title: 操作中に、一部のファイルとフォルダーが例外を発生させました
 ms.date: 07/20/2015
 ms.assetid: b0471302-907c-42a6-a326-8d3d805ebe98
-ms.openlocfilehash: 8ccde6a91e8568ed86b79709c16f57a9ba577b75
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: bd3e43293d4e0634d5c6afcafd31a358ce408625
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91060459"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438191"
 ---
 # <a name="some-files-and-folders-caused-exceptions-during-the-operation"></a>操作中に、一部のファイルとフォルダーが例外を発生させました
 
