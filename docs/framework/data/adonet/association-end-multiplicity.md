@@ -1,17 +1,18 @@
 ---
+description: '詳細情報: アソシエーション End の多重度'
 title: アソシエーション End の多重度
 ms.date: 03/30/2017
 ms.assetid: 340926ee-aefb-4bef-92cc-453e5251fd03
-ms.openlocfilehash: cf9e6b5af0dc6a33af364901c631b4ce66fe0480
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4b708406192e8a6e34119b47261d8986829f2a43
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153509"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697700"
 ---
 # <a name="association-end-multiplicity"></a>アソシエーション End の多重度
 
-"*アソシエーション End の多重度*" は、[アソシエーション](association-type.md)の 1 つの End に存在できる[エンティティ型](entity-type.md)のインスタンス数を定義します。  
+"*アソシエーション End の多重度*" は、[アソシエーション](association-type.md)の 1 つの End に存在できる [エンティティ型](entity-type.md)のインスタンス数を定義します。  
   
  アソシエーション End の多重度には、次のいずれかの値を指定できます。  
   

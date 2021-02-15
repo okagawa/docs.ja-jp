@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: + 演算子 (Visual Basic)'
 title: + 演算子
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-ms.openlocfilehash: bc31e4c66c64d891e3fffd809b7ae99b9c9a0520
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 9a6517847945cb2edcbd97adac6a013498dde174
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873452"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700690"
 ---
 # <a name="-operator-visual-basic"></a>+ 演算子 (Visual Basic)
 

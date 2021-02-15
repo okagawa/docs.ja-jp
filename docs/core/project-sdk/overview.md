@@ -4,12 +4,12 @@ titleSuffix: ''
 description: .NET プロジェクト SDK について説明します。
 ms.date: 09/17/2020
 ms.topic: conceptual
-ms.openlocfilehash: 2adb0713fabda142d071425a2affe66cc9d4c172
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: d0eb4291f4def9263f37d2d09f09ef43d40dfbac
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189669"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506397"
 ---
 # <a name="net-project-sdks"></a>.NET プロジェクト SDK
 
@@ -131,6 +131,30 @@ MSBuild では、`dotnet msbuild -preprocess` コマンドを使用して、SDK 
   ```
 
   `Compile` glob のみを無効にすると、Visual Studio のソリューション エクスプローラーに \*.cs 項目がプロジェクトの一部として (`None` 項目として組み込まれて) 引き続き表示されます。 暗黙的な `None` glob を無効にするには、`EnableDefaultNoneItems` も `false` に設定します。
+
+## <a name="implicit-package-references"></a>暗黙的なパッケージ参照
+
+.NET Core 1.0 から 2.2 または .NET Standard 1.0 から 2.0 をターゲットとする場合、.NET SDK により、特定の *メタパッケージ* への暗黙的な参照が追加されます。 メタパッケージは、他のパッケージの依存関係のみで構成されるフレームワーク ベースのパッケージです。 メタパッケージは、プロジェクト ファイルの [TargetFramework](msbuild-props.md#targetframework) または [TargetFrameworks](msbuild-props.md#targetframeworks) プロパティで指定されたターゲット フレームワークに基づいて暗黙的に参照されます。
+
+```xml
+<PropertyGroup>
+  <TargetFramework>netcoreapp2.1</TargetFramework>
+</PropertyGroup>
+```
+
+```xml
+<PropertyGroup>
+  <TargetFrameworks>netcoreapp2.1;net462</TargetFrameworks>
+</PropertyGroup>
+```
+
+必要に応じて、[DisableImplicitFrameworkReferences](msbuild-props.md#disableimplicitframeworkreferences) プロパティを使用して暗黙的なパッケージ参照を無効にし、必要なフレームワークまたはパッケージのみに明示的な参照を追加することができます。
+
+推奨事項:
+
+- .NET Framework、.NET Core 1.0 から 2.2、または .NET Standard 1.0 から 2.0 をターゲットとする場合は、プロジェクト ファイルの `<PackageReference>` アイテム経由で `Microsoft.NETCore.App` または `NETStandard.Library` メタパッケージを明示的に参照しないようにします。 .NET Core 1.0 から 2.2 および .NET Standard 1.0 から 2.0 のプロジェクトの場合、このようなメタパッケージは暗黙的に参照されます。 .NET Framework プロジェクトの場合、.NET Standard ベースの NuGet パッケージを使用する場合、何らかのバージョンの `NETStandard.Library` が必要であれば、NuGet はそのバージョンを自動的にインストールします。
+- .NET Core 1.0 から 2.2 をターゲットとする場合、特定バージョンのランタイムが必要であれば、メタパッケージを参照するのではなく、プロジェクト内で `<RuntimeFrameworkVersion>` プロパティを使用します (`1.0.4` など)。 たとえば、[自己完結の配置](../deploying/index.md#publish-self-contained)を使用している場合は、1.0.0 LTS ランタイムの特定のパッチ バージョンが必要になることがあります。
+- .NET Standard 1.0 から 2.0 をターゲットとする場合、特定バージョンの `NETStandard.Library` メタパッケージが必要であれば、`<NetStandardImplicitPackageVersion>` プロパティを使用し、必要なバージョンを設定できます。
 
 ## <a name="build-events"></a>ビルド イベント
 

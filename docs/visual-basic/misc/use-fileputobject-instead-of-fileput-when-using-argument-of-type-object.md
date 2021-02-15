@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「' Object ' 型の引数を使用する場合は、' FilePut ' ではなく ' FilePutObject ' を使用する」を参照してください。
 title: 型 'Object' の引数を使う場合は、'FilePut' ではなく 'FilePutObject' を使用してください。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrUseFilePutObject
 ms.assetid: d207b9b7-5898-4c13-8b03-9feefac5f726
-ms.openlocfilehash: c6ae755ad3eca4b1c50b83049885b6cf66f13c07
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5e5822999aa39bff4d43f83a2719341034cdcadc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100335"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100460099"
 ---
 # <a name="use-fileputobject-instead-of-fileput-when-using-argument-of-type-object"></a>型 'Object' の引数を使う場合は、'FilePut' ではなく 'FilePutObject' を使用してください。
 
