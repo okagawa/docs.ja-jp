@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: 現在の <number> 区切り記号を使用して行を解析できません'
 title: 現在の区切り記号を使用して、行 <number> を解析できません。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_MalFormedDelimitedLine
 ms.assetid: 1f8d4c2d-0334-4da8-acff-5460159835b3
-ms.openlocfilehash: 0f8a60f698ef19c1b039544cb085d757e26d4024
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: b7b24ac18e6a2d7503db8ce5bc883df8b5980eb7
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090600"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430184"
 ---
 # <a name="line-number-cannot-be-parsed-using-the-current-delimiters"></a>現在の区切り記号を使用して、行 \<number> を解析できません。
 
