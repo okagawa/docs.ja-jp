@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic の定数と列挙体'
 title: 定数と列挙体
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], constants
 - Visual Basic code, improving readability with constants
 ms.assetid: c8aba36e-fa47-4a33-8b68-cb2009218270
-ms.openlocfilehash: aad4f8b24a43ecc51c372916b438daee72adc405
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 78436f1e00c95c33d547fb9819b21bbe8ebafc2c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058691"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468448"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Visual Basic の定数と列挙体
 

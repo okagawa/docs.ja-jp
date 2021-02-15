@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: ファイルが存在しない場合、ファイル情報を照会することはできません。'
 title: ファイルが存在しない場合、ファイル情報を照会することはできません
 ms.date: 07/20/2015
 ms.assetid: 2bf50d79-2a74-403f-833c-6cabd2c213ce
-ms.openlocfilehash: a23fcb01196588618cdb1b87a11924c9812d164f
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d0ad7d2d0ca7bb00e2a7fc5ff0f2e3933f66a258
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090912"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480857"
 ---
 # <a name="file-information-cannot-be-queried-if-the-file-does-not-exist"></a>ファイルが存在しない場合、ファイル情報を照会することはできません
 
@@ -17,7 +18,7 @@ ms.locfileid: "91090912"
   
 - 正しいファイル名を指定していることを確認します。  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [マイファイル (コンピューター)](xref:Microsoft.VisualBasic.FileIO.FileSystem)
 - [方法: Visual Basic でファイルについての情報を取得する](/previous-versions/visualstudio/visual-studio-2010/abtzf6f7(v=vs.100))

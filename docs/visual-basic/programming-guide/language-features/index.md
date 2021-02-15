@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: Visual Basic 言語の機能'
 title: 言語機能
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: ae226520ecd7dff09023bcc88e610ff400c4019d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 9d02d6e17c0f2bea852130c5e975a1ed315a0aba
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91057859"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468474"
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic 言語の機能
 

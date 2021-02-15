@@ -2,16 +2,16 @@
 title: 型プロバイダー
 description: F# 型プロバイダーが、プログラムで使用する型、プロパティ、およびメソッドを指定するどのようなコンポーネントかを説明します。
 ms.date: 04/02/2018
-ms.openlocfilehash: eae64d2e318ee93f0b8d5b91f0c6da6c91743527
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: f01e207407b2282005d5722bed798df1d49d3ef6
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202110"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468227"
 ---
 # <a name="type-providers"></a>型プロバイダー
 
-F# 型プロバイダーは、プログラムで使用する型、プロパティ、およびメソッドを指定するコンポーネントです。 型プロバイダーは、F# コンパイラによって生成され、外部データ ソースに基づく、**指定型**と呼ばれるものを生成します。
+F# 型プロバイダーは、プログラムで使用する型、プロパティ、およびメソッドを指定するコンポーネントです。 型プロバイダーは、F# コンパイラによって生成され、外部データ ソースに基づく、**指定型** と呼ばれるものを生成します。
 
 たとえば、SQL 向けの F# 型プロバイダーは、リレーショナル データベース内のテーブルと列を表す型を生成できます。 実際、[SQLProvider](https://fsprojects.github.io/SQLProvider/) 型プロバイダーはこのような処理を行います。
 
@@ -29,7 +29,7 @@ F# 型プロバイダーは、プログラムで使用する型、プロパテ�
 
 広く使用されている次のライブラリには、さまざまな用途の型プロバイダーが含まれています。
 
-- [FSharp.Data](https://fsharp.github.io/FSharp.Data/) には、JSON、XML、CSV、HTML のドキュメント形式とリソースの型プロバイダーが含まれています。
+- FSharp.Data には、JSON、XML、CSV、HTML のドキュメント形式とリソースの型プロバイダーが含まれています。
 - [SQLProvider](https://fsprojects.github.io/SQLProvider/) は、これらのデータ ソースに対するオブジェクト マッピングと F# LINQ クエリを通じて、リレーショナル データベースへの厳密に型指定されたアクセスを提供します。
 - [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) には、F# の T-SQL のコンパイル時チェック埋め込み用の型プロバイダーのセットがあります。
 - [Azure Storage 型プロバイダー](https://fsprojects.github.io/AzureStorageTypeProvider/)は、Azure BLOB、テーブル、およびキューの型を提供します。これにより、プログラム全体で、リソース名を文字列として指定しなくても、これらのリソースにアクセスできるようになります。

@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: Visual Basic における変数'
 title: 変数
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic]
 - values [Visual Basic], storing
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
-ms.openlocfilehash: bd6417033a6c2626d17ad003de6c637dd1e8adaa
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d00907e451fa09c6e9b6be990a24a4d39b386622
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91080219"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481715"
 ---
 # <a name="variables-in-visual-basic"></a>Visual Basic における変数
 
@@ -18,7 +19,7 @@ Visual Basic で計算を行う場合、しばしば値を格納する必要が�
   
 ## <a name="usage"></a>使用方法  
 
- 他のほとんどのプログラミング言語と同じように、Visual Basic では値の格納に変数を使用します。 *変数*には (変数に含まれる値を参照するために使用する語である) 名前があります。 変数には、(変数に格納できるデータの種類を決定する) データ型もあります。 密接に関連するデータ項目のインデックス セットを格納する必要がある場合、変数で配列を表現することもできます。  
+ 他のほとんどのプログラミング言語と同じように、Visual Basic では値の格納に変数を使用します。 *変数* には (変数に含まれる値を参照するために使用する語である) 名前があります。 変数には、(変数に格納できるデータの種類を決定する) データ型もあります。 密接に関連するデータ項目のインデックス セットを格納する必要がある場合、変数で配列を表現することもできます。  
   
  ローカル型推論では、データ型を明示的に指定せずに変数を宣言できます。 代わりに、コンパイラは、初期化式の型から変数の型を推測します。 詳細については、「[ローカル型の推論](local-type-inference.md)」と「[Option Infer ステートメント](../../../language-reference/statements/option-infer-statement.md)」を参照してください。  
   
@@ -35,7 +36,7 @@ Visual Basic で計算を行う場合、しばしば値を格納する必要が�
   
 ## <a name="variables-and-properties"></a>変数とプロパティ  
 
- 変数と同様に、*プロパティ*はアクセス可能な値です。 ただし、変数よりも複雑です。 プロパティは、その値を設定し取得する方法を制御するコード ブロックを使用します。 詳細については、「[Visual Basic のプロパティと変数の違い](../procedures/differences-between-properties-and-variables.md)」を参照してください。  
+ 変数と同様に、*プロパティ* はアクセス可能な値です。 ただし、変数よりも複雑です。 プロパティは、その値を設定し取得する方法を制御するコード ブロックを使用します。 詳細については、「[Visual Basic のプロパティと変数の違い](../procedures/differences-between-properties-and-variables.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
