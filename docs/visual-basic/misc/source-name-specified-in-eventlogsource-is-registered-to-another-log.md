@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: EventLogSource で指定されたソース名が、EventLogName で指定されたログ以外のログに登録されています。'
 title: EventLogSource で指定したソース名は、EventLogName で指定したログ以外のログに登録されています
 ms.date: 07/20/2015
 ms.assetid: 7317e100-098b-408d-86e5-7c74cf8558c7
-ms.openlocfilehash: 1b577e3b0613001b6241dcfdc59c8c84029197d2
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d6b9c1265276f94369d37e6ac55604b761fb9bcc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058931"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455458"
 ---
 # <a name="source-name-specified-in-eventlogsource-is-registered-to-a-log-other-than-that-specified-in-eventlogname"></a>EventLogSource で指定したソース名は、EventLogName で指定したログ以外のログに登録されています
 
@@ -19,7 +20,7 @@ ms.locfileid: "91058931"
   
 - ソースが、正しいログに登録されていることを確認します。 これを行うには、 <xref:System.Diagnostics.EventLog.CreateEventSource%2A> メソッドまたをそのオーバーロードのいずれかを使用して、コンポーネントを一意に識別する文字列をイベント ログに指定します。  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [イベントログの管理](/previous-versions/visualstudio/visual-studio-2008/4f69axw4(v=vs.90))
 - [イベント ログの参照](/previous-versions/visualstudio/visual-studio-2008/k43k9z2a(v=vs.90))

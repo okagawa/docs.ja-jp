@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: ファイルのオープンモードが有効な値に設定されることがない'
 title: ファイルのオープン モードが有効な値に設定されていませんでした。
 ms.date: 07/20/2015
 ms.assetid: 969541f6-9ff6-4804-ba61-0d17370060ef
-ms.openlocfilehash: d3ced7efa8169a6f29dfb9c307123699ef42527b
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 75026589c18a209f4a512bf4ddb706eae2d51ca8
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090821"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429404"
 ---
 # <a name="files-open-mode-wasnt-set-to-a-valid-value"></a>ファイルのオープン モードが有効な値に設定されていませんでした。
 
@@ -25,7 +26,7 @@ ms.locfileid: "91090821"
   
 - ファイルのオープン モードに指定された値を確認します。  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [マイファイル (コンピューター)](xref:Microsoft.VisualBasic.FileIO.FileSystem)
 - [ファイルの読み取り](../developing-apps/programming/drives-directories-files/reading-from-files.md)
