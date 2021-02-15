@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: サブキーがあるため、キーを削除できません'
 title: サブキーがあるためキーを削除できません
 ms.date: 07/20/2015
 ms.assetid: 71d7f28f-42ef-4eb7-a39e-512c40b79977
-ms.openlocfilehash: 84a5e5dd4f3fa435ff59c10e5fbee5c913b8a8bd
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4573dfa85cfb0e8fbc9ba159500f5798bf30ef29
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090639"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462036"
 ---
 # <a name="key-cannot-be-deleted-because-it-has-subkeys"></a>サブキーがあるためキーを削除できません
 
@@ -17,8 +18,8 @@ ms.locfileid: "91090639"
   
 - この操作を実行する前に、指定したキーのサブキーを特定し、削除します。  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
-- [方法: レジストリ キーの削除](../developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)
+- [方法: レジストリ キーを削除する](../developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)
 - [レジストリからの読み取りとレジストリへの書き込み (Visual Basic)](../developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
