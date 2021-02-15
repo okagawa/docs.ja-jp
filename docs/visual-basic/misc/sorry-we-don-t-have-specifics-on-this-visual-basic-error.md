@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 申し訳ございません。この Visual Basic エラーについての詳細はありません'
 title: 申し訳ありませんが、Visual Basic エラーに関する特定の情報はありません
 ms.date: 07/20/2015
 f1_keywords:
@@ -3044,12 +3045,12 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: d96f2512e2fae038853baedfb78fcf2feb84542b
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 51cd9e21ba40677953fc63d64758dd9c122bc69c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059640"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100431146"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>申し訳ありませんが、Visual Basic エラーに関する特定の情報はありません
 
@@ -3070,7 +3071,7 @@ ms.locfileid: "91059640"
  [StackOverflow](https://stackoverflow.com/questions/tagged/vb.net)  
  Visual Basic に関する質問や問題のあるフォーラムを提供します。  
   
- 関連項目:  
+ こちらもご覧ください。  
  [Visual Basic プログラマのための追加リソース](../getting-started/additional-resources.md)  
   
 ## <a name="see-also"></a>関連項目

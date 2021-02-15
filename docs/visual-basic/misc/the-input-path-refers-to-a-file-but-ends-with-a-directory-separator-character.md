@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 入力パスはファイルを参照しますが、ディレクトリの区切り記号で終わっています'
 title: ファイルを参照している入力パスが、ディレクトリの区切り記号で終わっています
 ms.date: 07/20/2015
 ms.assetid: 319181c1-a015-4038-a23f-f53c0d91d806
-ms.openlocfilehash: a23bf75dec58dd07c4cc9ebf30a541ea36e153e0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 30cedf7286fd505bbe11745aaf14ae4bb3859914
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078464"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430808"
 ---
 # <a name="the-input-path-refers-to-a-file-but-ends-with-a-directory-separator-character"></a>ファイルを参照している入力パスが、ディレクトリの区切り記号で終わっています
 
@@ -19,7 +20,7 @@ ms.locfileid: "91078464"
   
 - 余分な文字を削除します。  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [方法: ファイル パスを解析する](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
 - [ファイルの読み取り](../developing-apps/programming/drives-directories-files/reading-from-files.md)

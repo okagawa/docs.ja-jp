@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「ソースフォルダーとターゲットフォルダーが同じ」を参照してください。
 title: ソース フォルダーとターゲット フォルダーが同じです
 ms.date: 07/20/2015
 ms.assetid: d4e6f996-8bbe-45f2-b662-f26b4474f44d
-ms.openlocfilehash: 011c24b4c0a53b2fb5507ffc7efa21900c370103
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 53aa98fc9e12874ec286ef310d4fe259187fc209
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078737"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100431094"
 ---
 # <a name="source-folder-and-target-folder-are-the-same"></a>ソース フォルダーとターゲット フォルダーが同じです
 
@@ -17,7 +18,7 @@ ms.locfileid: "91078737"
   
 - 適切なソース ディレクトリとターゲット ディレクトリを指定したことを確認してください。  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [My. My.computer.filesystem.movefile](xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A)
 - [My. CopyFile](xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A)

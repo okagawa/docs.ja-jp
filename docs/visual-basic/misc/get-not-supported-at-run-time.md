@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「実行時に Get がサポートされない」を参照してください。
 title: Get は実行時にはサポートされません
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID393
 ms.assetid: b527c5a8-3f24-42e9-871f-e6305c9f514b
-ms.openlocfilehash: 8fe3bf37c28ed34265e82a05b74928cb620c729f
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 6f4a78da9c3cfc76ebe3d671c698e6a6ca41995b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100413"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462941"
 ---
 # <a name="get-not-supported-at-run-time"></a>Get は実行時にはサポートされません
 
@@ -21,6 +22,6 @@ ms.locfileid: "91100413"
   
 2. プロパティへの参照を削除します。  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

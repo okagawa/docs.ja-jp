@@ -1,13 +1,14 @@
 ---
+description: 詳細については、次を参照してください。:、0より大きい必要があります。
 title: データビットは 0 より大きくなければなりません
 ms.date: 07/20/2015
 ms.assetid: b0e1d53f-ed19-47bf-b7ef-06479aa76338
-ms.openlocfilehash: 97fbc431770246adb1e6207fa2941ac4e3918d62
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 88069bbe1cd1527cf906577acec196f9975ae11d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91079062"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100463074"
 ---
 # <a name="databits-must-be-greater-than-0"></a>データビットは 0 より大きくなければなりません
 
@@ -17,6 +18,6 @@ ms.locfileid: "91079062"
   
 - `DataBits` 引数の値を正の数値に変更します。  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [マイ. Microsoft.visualbasic.devices.ports.openserialport](xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A)
