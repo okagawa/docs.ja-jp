@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: クラスコンストラクターでクラスの既定のインスタンスを使用すると、無限の再帰呼び出しが発生する可能性がある'
 title: クラス コンストラクター内のクラスの既定のインスタンスを使用すると、無限の再帰呼び出しを引き起こす能性があります。
 ms.date: 07/20/2015
 ms.assetid: 9645b47f-7de5-46d0-bb45-d5fdaa8aaa2a
-ms.openlocfilehash: 5d239fdb7dcc5c488bf0341043b810ec7dadc083
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f65956c92f7d391aa77734d7afd5adf3bea1f906
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100322"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475683"
 ---
 # <a name="use-of-default-instance-of-a-class-in-the-class-constructor-could-lead-to-infinite-recursive-call"></a>クラス コンストラクター内のクラスの既定のインスタンスを使用すると、無限の再帰呼び出しを引き起こす能性があります。
 
@@ -17,6 +18,6 @@ ms.locfileid: "91100322"
   
 - クラス コンストラクターから、既定のインスタンスを削除します。  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [コンストラクター](../programming-guide/concepts/object-oriented-programming.md#constructors)

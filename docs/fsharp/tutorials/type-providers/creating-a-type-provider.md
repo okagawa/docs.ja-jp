@@ -2,12 +2,12 @@
 title: 'チュートリアル: 型プロバイダーを作成する'
 description: 'いくつかの単純型プロバイダーを調べて基本的な概念を説明することで、F # 3.0 で独自の F # 型プロバイダーを作成する方法について説明します。'
 ms.date: 11/04/2019
-ms.openlocfilehash: 65cb9616f66b5850135dbfcdd9b9a9dad30421de
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 803b6ea141ed4404daf5daccd1a53212d8b42234
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739699"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468305"
 ---
 # <a name="tutorial-create-a-type-provider"></a>チュートリアル: 型プロバイダーを作成する
 
@@ -15,7 +15,7 @@ F # の型プロバイダーのメカニズムは、情報豊富なプログラ�
 
 F # エコシステムには、一般的に使用されるインターネットおよびエンタープライズデータサービス用のさまざまな種類のプロバイダーが含まれています。 次に例を示します。
 
-- Fsharp.core には、JSON、XML、CSV、HTML ドキュメント形式の型プロバイダーが含まれてい[ます。](https://fsharp.github.io/FSharp.Data/)
+- Fsharp.core には、JSON、XML、CSV、HTML ドキュメント形式の型プロバイダーが含まれています。
 
 - [Sqlprovider](https://fsprojects.github.io/SQLProvider/) は、これらのデータソースに対するオブジェクトマッピングと F # LINQ クエリを使用して、SQL データベースへの厳密に型指定されたアクセスを提供します。
 
@@ -1136,7 +1136,7 @@ devenv /debugexe fsc.exe script.fsx
 
   stdout への出力のログを使用できます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [型プロバイダー](index.md)
 - [型プロバイダー SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK)
