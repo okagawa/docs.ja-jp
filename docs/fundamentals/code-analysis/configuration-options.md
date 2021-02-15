@@ -5,12 +5,12 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: 8f76c9c86c202ef1bad23bffe8379b0b93a53f17
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 9c09fc381a161a9deea012d98d06ab57f2f7345e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99787722"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480545"
 ---
 # <a name="configuration-options-for-code-analysis"></a>コード分析の構成オプション
 
@@ -60,19 +60,19 @@ generated_code = true
 
 次の表は、 [コード品質](quality-rules/index.md) や [コードスタイル](style-rules/index.md) の規則など、すべてのアナライザーの規則に対して構成できるさまざまな規則の重大度を示しています。
 
-| 重大度 | ビルド時の動作 |
+| 重要度の構成値 | ビルド時の動作 |
 |-|-|
 | `error` | 違反はビルド *エラー* として表示され、ビルドが失敗します。|
 | `warning` | 違反はビルドの *警告* として表示されますが、ビルドが失敗することはありません (警告をエラーとして扱うオプションが設定されていない場合)。 |
 | `suggestion` | 違反は、Visual Studio IDE のビルド *メッセージ* および提案として表示されます。 |
 | `silent` | 違反はユーザーに表示されません。 |
 | `none` | 規則は完全に抑制されます。 |
-| `default` | ルールの既定の重要度が使用されます。 |
+| `default` | ルールの既定の重要度が使用されます。 各 .NET リリースの既定の重大度は、 [roslyn リポジトリ](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)に記載されています。 このテーブルでは、"Disabled" はに相当し、"Hidden" はに相当 `none` `silent` し、"Info" はに相当し `suggestion` ます。 |
 
 > [!TIP]
 > Visual Studio でのルールの重大度の詳細については、「 [重大度レベル](/visualstudio/ide/editorconfig-language-conventions#severity-levels)」を参照してください。
 
-#### <a name="scope"></a>Scope
+#### <a name="scope"></a>スコープ
 
 ルールの重要度を1つのルールに設定するには、次の構文を使用します。
 
@@ -91,6 +91,12 @@ dotnet_analyzer_diagnostic.category-<rule category>.severity = <severity value>
 ```ini
 dotnet_analyzer_diagnostic.severity = <severity value>
 ```
+
+> [!IMPORTANT]
+> 規則の *カテゴリ* または *すべて* の規則に対して、1つのエントリを持つ複数の規則の重大度レベルを構成すると、 [既定で有効になっ](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)ている規則にのみ重大度が適用されます。 既定で無効になっている規則を有効にするには、次のいずれかを実行する必要があります。
+>
+> - `dotnet_diagnostic.<rule ID>.severity = <severity>`各ルールの明示的な構成エントリを追加します。
+> - をに設定して、 *すべて* のルールを有効に [\<AnalysisMode>](../../core/project-sdk/msbuild-props.md#analysismode) `AllEnabledByDefault` します。
 
 #### <a name="precedence"></a>優先順位
 

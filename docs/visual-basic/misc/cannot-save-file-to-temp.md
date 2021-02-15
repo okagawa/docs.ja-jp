@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「ファイルを TEMP に保存できません」を参照してください。
 title: ファイルを TEMP に保存できません
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID735
 ms.assetid: 1055fc15-9641-43b2-a40c-a0a9fbbb34b2
-ms.openlocfilehash: c17e4ba30a06866b4ae034094c8f53619c1123bb
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 68e6d4daf2c016644a71906cbeaebc63490c8679
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91076307"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100457889"
 ---
 # <a name="cannot-save-file-to-temp"></a>ファイルを TEMP に保存できません
 
