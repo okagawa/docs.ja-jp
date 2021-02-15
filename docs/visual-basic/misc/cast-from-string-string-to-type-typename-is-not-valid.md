@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「文字列から &quot; <string> &quot; 型 ' ' へのキャスト <typename> は有効ではありません」を参照してください。
 title: 文字列から &quot; <string> &quot; 型 ' ' へのキャスト <typename> は有効ではありません。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrInvalidCast_FromStringTo
 ms.assetid: a7382c0a-e8a4-4125-9690-db3fa030a06a
-ms.openlocfilehash: 71e91c2359f4a791edcdc2666ad3f1df78e218d6
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2dd4bb8e97ff05403647b78aa92a37cbf9252a23
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91060914"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100473048"
 ---
 # <a name="cast-from-string-quotstringquot-to-type-typename-is-not-valid"></a>文字列から &quot; \<string> &quot; 型 ' ' へのキャスト \<typename> は有効ではありません。
 
