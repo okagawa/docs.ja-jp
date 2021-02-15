@@ -1,15 +1,16 @@
 ---
+description: 詳細について <fieldname> は、「型 ' ' のフィールド ' ' <typename> は ' ReadOnly '」を参照してください。
 title: 型 '<typename>' のフィールド '<fieldname>' は 'ReadOnly' です。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrMissingMember_ReadOnlyField2
 ms.assetid: fb51f54b-f12d-4aea-9a6e-6e070721c010
-ms.openlocfilehash: 3b51be2309e4bf25bf55edb3fc8a34bb3bfd0ffd
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 70ee620927fe8f7a23309fc15c45f98a98056b33
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077528"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100458962"
 ---
 # <a name="field-fieldname-of-type-typename-is-readonly"></a>型 '\<typename>' のフィールド '\<fieldname>' は 'ReadOnly' です。
 

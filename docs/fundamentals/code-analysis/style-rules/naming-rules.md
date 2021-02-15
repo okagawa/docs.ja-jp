@@ -16,22 +16,24 @@ helpviewer_keywords:
 - naming code style rules [EditorConfig]
 - naming rules
 - EditorConfig naming conventions
-ms.openlocfilehash: 1fce275204b729b4d23729ca432e06a5a249620d
-ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
+ms.openlocfilehash: df2cbc8299d853b5730bc39eb25c6f97b6575655
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99065136"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429209"
 ---
 # <a name="naming-rules"></a>名前付け規則
 
-ファイルでは `.editorconfig` 、クラス、プロパティ、メソッドなどの .net プログラミング言語コード要素の名前付け方法に関する **名前付け規則** を定義でき &mdash; &mdash; ます。 たとえば、パブリックメンバーを大文字にする必要がある場合や、プライベートフィールドの先頭がであることを指定でき `_` ます。
+ファイルでは `.editorconfig` 、クラス、プロパティ、メソッドなどの .net プログラミング言語コード要素の名前付け方法を指定し、適用する **名前付け規則** を定義でき &mdash; &mdash; ます。 たとえば、パブリックメンバーを大文字にする必要がある場合や、プライベートフィールドの先頭がであることを指定でき `_` ます。
 
 名前付け規則には、次の3つのコンポーネントがあります。
 
-* **シンボルグループ** は、 &mdash; ルールが適用されるシンボルのグループです。
-* 規則に関連付ける **名前付けスタイル** 。
+* 規則が適用される **シンボルグループ** (パブリックメンバー、プライベートフィールドなど)。
+* 規則に関連付ける名前 **付けスタイル** 。たとえば、名前が大文字であるか、アンダースコアで始まる必要があります。
 * 規則を適用するための重大度。
+
+まず、シンボルグループと名前付けスタイルを指定し、それぞれにタイトルを付ける必要があります。 次に、すべてをリンクする名前付け規則を指定します。
 
 ## <a name="general-syntax"></a>一般的な構文
 
@@ -73,7 +75,7 @@ dotnet_naming_symbols.types.applicable_accessibilities = public, internal, priva
 
 ルールを有効にするには、すべての名前付けルールプロパティが必要です。
 
-| プロパティ | 説明 |
+| プロパティ | [説明] |
 | -- | -- |
 | `symbols` | シンボルグループのタイトル。このグループのシンボルには名前付け規則が適用されます |
 | `style` | この規則に関連付ける必要がある名前付けスタイルのタイトル |

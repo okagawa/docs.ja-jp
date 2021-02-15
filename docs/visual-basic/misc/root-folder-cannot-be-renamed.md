@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: ルートフォルダーの名前を変更することはできません'
 title: ルート フォルダーの名前は変更できません。
 ms.date: 07/20/2015
 ms.assetid: 325eb73c-d5fe-4b65-8926-5dabff007277
-ms.openlocfilehash: 80765a5b1cea5993d555068a01a77cd093cc341a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a940853341eeeb9c92d29db4f7138323c8db231b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086661"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100435617"
 ---
 # <a name="root-folder-cannot-be-renamed"></a>ルート フォルダーの名前は変更できません。
 
@@ -17,7 +18,7 @@ ms.locfileid: "91086661"
   
 - ファイル パスが正しいことを確認します。  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [My. コンピューター. ファイルシステム (RenameDirectory)](xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.RenameDirectory%2A)
 - [My. コンピューター. ファイルシステム (RenameFile)](xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.RenameFile%2A)
