@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic における名前空間'
 title: 名前空間
 ms.date: 07/20/2015
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: f4521fa10c3bb9e8e121e3c228a23061becd1741
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2f7c0bfd29bf6fe104252aa125b4ddff1259b50a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072198"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100460749"
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic における名前空間
 
@@ -33,7 +34,7 @@ ms.locfileid: "91072198"
   
 ## <a name="avoiding-name-collisions"></a>名前の競合の回避  
 
- .NET Framework の名前空間は、別のライブラリで似た名前が使用されている場合にクラス ライブラリの開発者が遭遇する、"*名前空間の汚染*" と呼ばれる問題に対処しています。 このような既存コンポーネントとの競合は、 *名前の競合*とも呼ばれます。  
+ .NET Framework の名前空間は、別のライブラリで似た名前が使用されている場合にクラス ライブラリの開発者が遭遇する、"*名前空間の汚染*" と呼ばれる問題に対処しています。 このような既存コンポーネントとの競合は、 *名前の競合* とも呼ばれます。  
   
  たとえば、 `ListBox`という名前の新しいクラスを作成した場合、プロジェクト内ではこのクラスを修飾子を付けずに使用できます。 ただし、同じプロジェクトで .NET Framework の <xref:System.Windows.Forms.ListBox> クラスを使用する場合は、完全修飾参照を使用して参照を一意にする必要があります。 参照が一意でない場合、Visual Basic では名前があいまいであることを示すエラーが生成されます。 次のコード例では、これらのオブジェクトを宣言する方法を示しています。  
   
@@ -53,7 +54,7 @@ ms.locfileid: "91072198"
   
  [!code-vb[VbVbalrApplication#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#8)]  
   
- 完全修飾名を使用すると、どのオブジェクトを使用するかをコンパイラが認識できるため、名前の競合を防止できます。 ただし、名前自体が長くなるため、使いにくくなります。 この問題を回避するには、 `Imports` ステートメントを使って *エイリアス*を定義します。エイリアスとは、完全修飾名の代わりに使用できる短い名前です。 たとえば、次のコード例では、2 つの完全修飾名に対してエイリアスを作成し、作成したエイリアスを使って 2 つのオブジェクトを定義しています。  
+ 完全修飾名を使用すると、どのオブジェクトを使用するかをコンパイラが認識できるため、名前の競合を防止できます。 ただし、名前自体が長くなるため、使いにくくなります。 この問題を回避するには、 `Imports` ステートメントを使って *エイリアス* を定義します。エイリアスとは、完全修飾名の代わりに使用できる短い名前です。 たとえば、次のコード例では、2 つの完全修飾名に対してエイリアスを作成し、作成したエイリアスを使って 2 つのオブジェクトを定義しています。  
   
  [!code-vb[VbVbalrApplication#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#9)]  
   

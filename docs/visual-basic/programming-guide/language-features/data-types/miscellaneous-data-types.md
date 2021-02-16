@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: その他のデータ型 (Visual Basic)'
 title: その他のデータ型
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Object data type [Visual Basic], data types
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
-ms.openlocfilehash: 45b44abc24b968f19b456cbe0be0f25efc8f0ce8
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3875a3fc3027d573013470cb96c9482a0be6cbbf
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095461"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100461997"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>その他のデータ型 (Visual Basic)
 

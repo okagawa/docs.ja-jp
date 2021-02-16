@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 文字データ型 (Visual Basic)'
 title: 文字データ型
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character data types
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
-ms.openlocfilehash: 5fde5eff40d83bdd7d90cd611bd6749106db6e16
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2197c0210cb0c2287baff9856889334f5f95bd4d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077177"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466394"
 ---
 # <a name="character-data-types-visual-basic"></a>文字データ型 (Visual Basic)
 

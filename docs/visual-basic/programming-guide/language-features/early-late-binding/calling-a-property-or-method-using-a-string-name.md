@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 文字列名によるプロパティまたはメソッドの呼び出し (Visual Basic)'
 title: 文字列名によるプロパティまたはメソッドの呼び出し
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: 9f28548c27545d94dde38cef3e9c56f98a69b259
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ad14f66ef4e3e06b969cb39a0203442cb0a4f1bb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086089"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434421"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>文字列名によるプロパティまたはメソッドの呼び出し (Visual Basic)
 

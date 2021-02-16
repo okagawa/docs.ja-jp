@@ -2,12 +2,12 @@
 title: 遅延式
 description: 'F # のレイジー式を使用して、アプリとライブラリのパフォーマンスを向上させる方法について説明します。'
 ms.date: 08/15/2020
-ms.openlocfilehash: 71c466ca3b74c9e92b81a3c268e07438ec944905
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 0b8496467295ce6793f80c341af88bb1819f4a47
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558089"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100425504"
 ---
 # <a name="lazy-expressions"></a>遅延式
 
@@ -19,9 +19,9 @@ ms.locfileid: "88558089"
 let identifier = lazy ( expression )
 ```
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
-前の構文では、 *expression* は結果が必要な場合にのみ評価されるコードであり、 *identifier* は結果を格納する値です。 値は型であり [`Lazy<'T>`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-lazy-1-0.html) 、に使用される実際の型 `'T` は、式の結果から決定されます。
+前の構文では、 *expression* は結果が必要な場合にのみ評価されるコードであり、 *identifier* は結果を格納する値です。 値は型であり `Lazy<'T>` 、に使用される実際の型 `'T` は、式の結果から決定されます。
 
 レイジー式を使用すると、式の実行を、結果が必要な状況のみに制限することで、パフォーマンスを向上させることができます。
 

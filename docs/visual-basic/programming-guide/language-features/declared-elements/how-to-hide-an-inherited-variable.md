@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:継承された変数を非表示にする (Visual Basic)'
 title: '方法: 継承された変数を隠す'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: f49bba0497f9f4f2774b01284c815bba9aaed119
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: be2de980e27b318151c795ae36bd92a01d47d55e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357271"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429898"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>方法: 継承された変数を非表示にする (Visual Basic)
 
-派生クラスは、その基底クラスのすべての定義を継承します。 基底クラスの要素と同じ名前を使用して変数を定義する場合は、派生クラスで変数を定義するときに、その基底クラスの要素を非表示にする (*シャドウ*する) ことができます。 これを行うと、シャドウのメカニズムを明示的にバイパスしない限り、派生クラスのコードは変数にアクセスします。
+派生クラスは、その基底クラスのすべての定義を継承します。 基底クラスの要素と同じ名前を使用して変数を定義する場合は、派生クラスで変数を定義するときに、その基底クラスの要素を非表示にする (*シャドウ* する) ことができます。 これを行うと、シャドウのメカニズムを明示的にバイパスしない限り、派生クラスのコードは変数にアクセスします。
 
 継承された変数を非表示にするもう 1 つの理由は、基底クラスの改訂から保護するためです。 基底クラスには、継承している要素を変える変更が加えられる場合があります。 この場合、`Shadows` 修飾子は、派生クラスからの参照が、基底クラス要素ではなく変数に強制的に解決されるようにします。
 

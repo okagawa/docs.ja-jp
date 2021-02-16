@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: Visual Basic においてカルチャが文字列に与える影響'
 title: カルチャが文字列に与える影響
 ms.date: 07/20/2015
 helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 878e028f7c7f0e93752765272e93baa3ffe1426d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e1d330c9bf879ad174f58d7a91c0ddac7e68c0dd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059216"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100459969"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Visual Basic においてカルチャが文字列に与える影響
 

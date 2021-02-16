@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic における LINQ の概要'
 title: LINQ の概要
 ms.date: 08/28/2018
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 00022fc7790548dbc0ed8018f202e136bdbcc033
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 6dc260f7c7305dc3380cbd7c7c9f2402e000b986
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075253"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438802"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic における LINQ の概要
 
@@ -180,7 +181,7 @@ LINQ によって提供される列挙可能でクエリ可能な型のメンバ
 
  Visual Basic では、アクセスする SQL Server データベース オブジェクト (テーブル、ビュー、ストアド プロシージャなど) を、LINQ to SQL ファイルを使用して識別します。 LINQ to SQL ファイルには、.dbml という拡張子が付きます。  
   
- SQL Server データベースへの有効な接続が存在する場合は、**LINQ to SQL クラス**項目テンプレートをプロジェクトに追加できます。 これを行うと、オブジェクト リレーショナル デザイナー (O/R デザイナー) が表示されます。 O/R デザイナーを使用して、コード内でアクセスする項目を、**サーバー エクスプローラー**/**データベース エクスプローラー**からデザイナー画面にドラッグできます。 LINQ to SQL ファイルは、<xref:System.Data.Linq.DataContext> オブジェクトをプロジェクトに追加します。 このオブジェクトには、アクセスするテーブルとビューのプロパティおよびコレクションと、呼び出すストアド プロシージャのメソッドが格納されます。 変更を LINQ to SQL (.dbml) ファイルに保存した後、O/R デザイナーで定義された <xref:System.Data.Linq.DataContext> オブジェクトを参照することで、コード内でこれらのオブジェクトにアクセスできます。 プロジェクトの <xref:System.Data.Linq.DataContext> オブジェクトには、LINQ to SQL ファイルの名前に基づいて名前が付けられます。 たとえば、Northwind.dbml という名前の LINQ to SQL ファイルの場合は、<xref:System.Data.Linq.DataContext> という名前の `NorthwindDataContext` オブジェクトが作成されます。  
+ SQL Server データベースへの有効な接続が存在する場合は、**LINQ to SQL クラス** 項目テンプレートをプロジェクトに追加できます。 これを行うと、オブジェクト リレーショナル デザイナー (O/R デザイナー) が表示されます。 O/R デザイナーを使用して、コード内でアクセスする項目を、**サーバー エクスプローラー**/**データベース エクスプローラー** からデザイナー画面にドラッグできます。 LINQ to SQL ファイルは、<xref:System.Data.Linq.DataContext> オブジェクトをプロジェクトに追加します。 このオブジェクトには、アクセスするテーブルとビューのプロパティおよびコレクションと、呼び出すストアド プロシージャのメソッドが格納されます。 変更を LINQ to SQL (.dbml) ファイルに保存した後、O/R デザイナーで定義された <xref:System.Data.Linq.DataContext> オブジェクトを参照することで、コード内でこれらのオブジェクトにアクセスできます。 プロジェクトの <xref:System.Data.Linq.DataContext> オブジェクトには、LINQ to SQL ファイルの名前に基づいて名前が付けられます。 たとえば、Northwind.dbml という名前の LINQ to SQL ファイルの場合は、<xref:System.Data.Linq.DataContext> という名前の `NorthwindDataContext` オブジェクトが作成されます。  
   
  詳細な手順を示した例については、「[方法: データベースに対してクエリを実行する](how-to-query-a-database-by-using-linq.md)」と「[方法: ストアド プロシージャの呼び出し](how-to-call-a-stored-procedure-by-using-linq.md)」を参照してください。  
   

@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: 定数の概要 (Visual Basic)'
 title: 定数の概要
 ms.date: 07/20/2015
 helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
-ms.openlocfilehash: 7f2a2dc140352588246d80a7feb46ce1f609b358
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: af5a64339c04306538fe1b9dc195a044aa89ab9f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086284"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475449"
 ---
 # <a name="constants-overview-visual-basic"></a>定数の概要 (Visual Basic)
 

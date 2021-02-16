@@ -2,12 +2,12 @@
 title: Ocelot を使った API ゲートウェイの実装
 description: Ocelot を使用して API ゲートウェイを実装する方法と、コンテナー ベースの環境で Ocelot を使用する方法について説明します。
 ms.date: 03/02/2020
-ms.openlocfilehash: 5da8533eff394b587d123970742727484a7236ad
-ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
+ms.openlocfilehash: 3f8fcaac162d2bffd221f07b2e5061455d73e1bd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97678130"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429300"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Ocelot を使った API ゲートウェイの実装
 
@@ -196,7 +196,7 @@ namespace OcelotApiGw
 
 構成には 2 つのセクションがあります。 ReRoute の配列と GlobalConfiguration です。 ReRoute は、Ocelot にアップストリーム要求の処理方法を指示するオブジェクトです。 グローバル構成を使用すると、ReRoute 固有の設定をオーバーライドできます。 ReRoute 固有の設定をたくさん管理しない場合に便利です。
 
-eShopOnContainers のうちの 1 つの API ゲートウェイから、[ReRoute 構成ファイル](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/ApiGateways/Web.Bff.Shopping/apigw/configuration.json)の単純な例を次に示します。
+eShopOnContainers のうちの 1 つの API ゲートウェイから、[ReRoute 構成ファイル](https://github.com/dotnet-architecture/eShopOnContainers/blob/main/src/ApiGateways/Mobile.Bff.Shopping/apigw/configuration.json)の単純な例を次に示します。
 
 ```json
 {

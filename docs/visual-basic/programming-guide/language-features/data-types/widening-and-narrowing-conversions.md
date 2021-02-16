@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 拡大変換と縮小変換 (Visual Basic)'
 title: Widening and Narrowing Conversions
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: c0e10f5593ce5c81002233516444e415571541f3
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2ccd7d51b811aaf0f3e29dc0dc1730dffad2106b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058535"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468435"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>拡大変換と縮小変換 (Visual Basic)
 
@@ -41,7 +42,7 @@ ms.locfileid: "91058535"
 |データの種類|拡大変換先のデータ型<sup>1</sup>|  
 |---|---|  
 |[SByte](../../../language-reference/data-types/sbyte-data-type.md)|`SByte`, `Short`, `Integer`, `Long`, `Decimal`, `Single`, `Double`|  
-|[Byte](../../../language-reference/data-types/byte-data-type.md)|`Byte`、`Short`、`UShort`、`Integer`、`UInteger`、`Long`、`ULong`、`Decimal`、`Single`、`Double`|  
+|[Byte](../../../language-reference/data-types/byte-data-type.md)|`Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, `Double`|  
 |[Short](../../../language-reference/data-types/short-data-type.md)|`Short`, `Integer`, `Long`, `Decimal`, `Single`, `Double`|  
 |[UShort](../../../language-reference/data-types/ushort-data-type.md)|`UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, `Double`|  
 |[Integer](../../../language-reference/data-types/integer-data-type.md)|`Integer`、`Long`、`Decimal`、`Single`、`Double`<sup>2</sup>|  
@@ -49,10 +50,10 @@ ms.locfileid: "91058535"
 |[Long](../../../language-reference/data-types/long-data-type.md)|`Long`、`Decimal`、`Single`、`Double`<sup>2</sup>|  
 |[ULong](../../../language-reference/data-types/ulong-data-type.md)|`ULong`、`Decimal`、`Single`、`Double`<sup>2</sup>|  
 |[Decimal](../../../language-reference/data-types/decimal-data-type.md)|`Decimal`、`Single`、`Double`<sup>2</sup>|  
-|[Single](../../../language-reference/data-types/single-data-type.md)|`Single`、`Double`|  
+|[Single](../../../language-reference/data-types/single-data-type.md)|`Single`, `Double`|  
 |[Double](../../../language-reference/data-types/double-data-type.md)|`Double`|  
 |任意の列挙型 ([Enum](../../../language-reference/statements/enum-statement.md))|基になる整数型、および基になる型が拡大変換される任意の型。|  
-|[Char](../../../language-reference/data-types/char-data-type.md)|`Char`、`String`|  
+|[Char](../../../language-reference/data-types/char-data-type.md)|`Char`, `String`|  
 |`Char` 配列|`Char` 配列、`String`|  
 |任意の型|[オブジェクト](../../../language-reference/data-types/object-data-type.md)|  
 |任意の派生型|派生元の任意の基本型<sup>3</sup>|  

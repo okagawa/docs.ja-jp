@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: LINQ の概要 (Visual Basic)'
 title: LINQ の概要
 ms.date: 07/20/2015
 ms.assetid: c6339c12-9b2d-433e-961c-0d2b7f0091c2
-ms.openlocfilehash: e99da74eb69511b92ddccfb42f8002adc7be83d1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: b6be93bbf9b458ca19068961617ee08f67601edc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91098282"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100426791"
 ---
 # <a name="introduction-to-linq-visual-basic"></a>LINQ の概要 (Visual Basic)
 

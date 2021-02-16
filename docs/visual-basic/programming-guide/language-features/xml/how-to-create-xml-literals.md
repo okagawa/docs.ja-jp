@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: 方法:XML リテラルを作成する (Visual Basic)'
 title: '方法: XML リテラルを作成する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-ms.openlocfilehash: c7ad8d684dde31550b6e1b74c098d152b227f6c1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 0e57b037d0567002fd570025e147771c4fab38f4
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058223"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433292"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>方法: XML リテラルを作成する (Visual Basic)
 

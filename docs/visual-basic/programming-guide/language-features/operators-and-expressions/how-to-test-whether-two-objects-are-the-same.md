@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:2 つのオブジェクトが等しいかどうかをテストする (Visual Basic)'
 title: '方法: 2 つのオブジェクトが等しいかどうかをテストする'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - objects [Visual Basic], variables referring to same
 - Visual Basic code, operators
 ms.assetid: f760e828-8704-4256-bc2d-c22a4c93b524
-ms.openlocfilehash: d29d1b0026b3f62d47859cd5b4b7a601532e27b8
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a0136d9db487ad0ce70b9d55ff8ee014ec30b05a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071691"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100435539"
 ---
 # <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>方法: 2 つのオブジェクトが等しいかどうかをテストする (Visual Basic)
 

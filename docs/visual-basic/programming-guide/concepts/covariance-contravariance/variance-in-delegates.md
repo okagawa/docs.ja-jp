@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: デリゲートの変性 (Visual Basic)'
 title: デリゲートの分散
 ms.date: 07/20/2015
 ms.assetid: 38e9353f-74f8-4211-a8f0-7a495414df4a
-ms.openlocfilehash: 86ea9f3f744381bcff71a88e9d88485cafa4a568
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d47f05a5ce3f3e59223f1f37ab09fb8a21e6e7ba
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84375617"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100458963"
 ---
 # <a name="variance-in-delegates-visual-basic"></a>デリゲートの変性 (Visual Basic)
 
@@ -154,7 +155,7 @@ Public Delegate Sub DContravariant(Of In A)(ByVal a As A)
 > [!IMPORTANT]
 > Visual Basic の `ByRef` パラメーターを、バリアントとしてマークすることはできません。
 
-同じデリゲートで、型パラメーターが異なる場合は、変性と共変性の両方をサポートすることもできます。 次の例を参照してください。
+同じデリゲートで、型パラメーターが異なる場合は、変性と共変性の両方をサポートすることもできます。 これを次の例に示します。
 
 ```vb
 Public Delegate Function DVariant(Of In A, Out R)(ByVal a As A) As R

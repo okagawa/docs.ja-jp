@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:演算子を定義するクラスを使用する (Visual Basic)'
 title: '方法: 演算子を定義するクラスを使用する'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-ms.openlocfilehash: 083916a420bf4ad182536363ea46448f6b4c1da5
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4bf5321fbf1868ad0214d0f4781df30dc8f92ac9
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071353"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455744"
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>方法: 演算子を定義するクラスを使用する (Visual Basic)
 

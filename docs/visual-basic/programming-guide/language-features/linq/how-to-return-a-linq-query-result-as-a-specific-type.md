@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:特定の型での LINQ クエリ結果の取得 (Visual Basic)'
 title: '方法: 特定の型での LINQ クエリ結果の取得'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-ms.openlocfilehash: 249c3eebaeec3d09a297fead07ab056caff1b618
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 8abeb3b5f174b1671415cbb55f35952e3bc77e7d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071808"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100425660"
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>方法: 特定の型での LINQ クエリ結果の取得 (Visual Basic)
 
@@ -42,7 +43,7 @@ ms.locfileid: "91071808"
   
 3. そのファイルに `northwind.dbml` という名前を付けます。 **[追加]** をクリックします。 オブジェクト リレーショナル デザイナー (O/R デザイナー) が northwind.dbml ファイル用に開きます。  
   
-### <a name="to-add-tables-to-query-to-the-or-designer"></a>O/R デザイナーにクエリを実行する対象のテーブルを追加するには  
+### <a name="to-add-tables-to-query-to-the-or-designer"></a>O/R デザイナーにクエリを実行するテーブルを追加するには  
   
 1. **[サーバー エクスプローラー]** / **[データベース エクスプローラー]** で、Northwind データベースへの接続を展開します。 **[テーブル]** フォルダーを展開します。  
   

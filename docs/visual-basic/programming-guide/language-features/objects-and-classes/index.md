@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: Visual Basic のオブジェクトとクラス'
 title: オブジェクトとクラス
 ms.date: 05/26/2020
 helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: 9e3cf262ef617a1ae5ee92bcc3d6fd5c691602f9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9cefcc117c9dd4ac42940f342dbf75d8ddb4f41d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "85503845"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462725"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Visual Basic のオブジェクトとクラス
 
@@ -57,7 +58,7 @@ Visual Basic 内の各オブジェクトは、"*クラス*" によって定義�
    ```
 
 > [!NOTE]
-> 可能であれば、変数は、変数に割り当てる予定のクラスの型で宣言する必要があります。 これは、*事前バインディング*と呼ばれます。 コンパイル時にクラスの型を把握していない場合は、変数を [Object データ型](../../../language-reference/data-types/object-data-type.md)で宣言することで、*遅延バインディング*を呼び出すことができます。 ただし、遅延バインディングでは、パフォーマンスが低下し、実行時のオブジェクトのメンバーへのアクセスが制限される可能性があります。 詳細については、「[オブジェクト変数の宣言](../variables/object-variable-declaration.md)」を参照してください。
+> 可能であれば、変数は、変数に割り当てる予定のクラスの型で宣言する必要があります。 これは、*事前バインディング* と呼ばれます。 コンパイル時にクラスの型を把握していない場合は、変数を [Object データ型](../../../language-reference/data-types/object-data-type.md)で宣言することで、*遅延バインディング* を呼び出すことができます。 ただし、遅延バインディングでは、パフォーマンスが低下し、実行時のオブジェクトのメンバーへのアクセスが制限される可能性があります。 詳細については、「[オブジェクト変数の宣言](../variables/object-variable-declaration.md)」を参照してください。
 
 ### <a name="multiple-instances"></a>複数インスタンス
 
@@ -65,7 +66,7 @@ Visual Basic 内の各オブジェクトは、"*クラス*" によって定義�
 
 ## <a name="object-members"></a>オブジェクトのメンバー
 
-オブジェクトはアプリケーションの要素であり、クラスの "*インスタンス*" を表しています。 フィールド、プロパティ、メソッド、およびイベントは、オブジェクトの構成要素であり、オブジェクトの*メンバー*を構成します。
+オブジェクトはアプリケーションの要素であり、クラスの "*インスタンス*" を表しています。 フィールド、プロパティ、メソッド、およびイベントは、オブジェクトの構成要素であり、オブジェクトの *メンバー* を構成します。
 
 ### <a name="member-access"></a>メンバー アクセス
 

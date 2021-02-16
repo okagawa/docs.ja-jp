@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:Visual Basic でファイル名とパスを検証する'
 title: '方法: ファイル名とパスを検証する'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Boolean values [Visual Basic]
 - paths [Visual Basic], validating
 ms.assetid: f673462d-57b7-4120-b13a-6a7592f7ab2c
-ms.openlocfilehash: b722222ea8b8088a6b326eef27147c08f8419272
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 02a48ea7cbf3291cb2fe1c64c4e636a273842546
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072653"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429741"
 ---
 # <a name="how-to-validate-file-names-and-paths-in-visual-basic"></a>方法: Visual Basic でファイル名とパスを検証する
 

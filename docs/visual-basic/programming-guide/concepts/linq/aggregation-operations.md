@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 集計操作 (Visual Basic)'
 title: 集計操作
 ms.date: 07/20/2015
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
-ms.openlocfilehash: 1cf82d8acfdb1f8b0fc33c324064574b0dd01f4a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2ef41faf03100814e062ec98afb8fe17b1ef64bc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078399"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462166"
 ---
 # <a name="aggregation-operations-visual-basic"></a>集計操作 (Visual Basic)
 

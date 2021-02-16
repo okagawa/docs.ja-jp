@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:プロシージャの複数のバージョンを定義する (Visual Basic)'
 title: '方法: プロシージャの複数のバージョンを定義する'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: 2661603ba33dd0bc28ac1a192794a4534225b641
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4b470e478c22c3a827f71b9b28056e16d6d9b7cd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071639"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100456030"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>方法: プロシージャの複数のバージョンを定義する (Visual Basic)
 

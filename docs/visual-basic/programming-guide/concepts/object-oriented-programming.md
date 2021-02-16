@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: オブジェクト指向プログラミング (Visual Basic)'
 title: オブジェクト指向プログラミング
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
-ms.openlocfilehash: f7e222cde8ce80d4c52cc8b4b111c576eb4041b9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: af2fbac16bfefc90876bf22bb8c67de162ee6459
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413194"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100486798"
 ---
 # <a name="object-oriented-programming-visual-basic"></a>オブジェクト指向プログラミング (Visual Basic)
 

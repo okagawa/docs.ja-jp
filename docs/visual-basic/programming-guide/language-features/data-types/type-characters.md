@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 型文字 (Visual Basic)'
 title: 型文字
 ms.date: 01/31/2018
 helpviewer_keywords:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - UL literal type characters [Visual Basic]
 - literal types [Visual Basic], default
 ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
-ms.openlocfilehash: a48260694c1dfcbbb8f804f220fe89b1663c7319
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d1afccb821d2ffb4dfabe3c38e0db4a7f902c164
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393079"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100454548"
 ---
 # <a name="type-characters-visual-basic"></a>型文字 (Visual Basic)
 

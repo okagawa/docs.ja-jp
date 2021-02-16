@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:LINQ を使用したデータの数、合計、または平均の算出 (Visual Basic)'
 title: '方法: LINQ を使用したデータの数、合計、または平均の算出'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - count operator [LINQ in Visual Basic]
 ms.assetid: 51ca1f59-7770-4884-8b76-113002e54fc0
-ms.openlocfilehash: 617c6959e2d3add6d36266b0827ef7281b0c77a9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 1759a2f990c2e61a862d032f2a09f29f65a05103
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059250"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100422796"
 ---
 # <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>方法: LINQ を使用したデータの数、合計、または平均の算出 (Visual Basic)
 
@@ -48,7 +49,7 @@ ms.locfileid: "91059250"
   
 3. そのファイルに `northwind.dbml` という名前を付けます。 **[追加]** をクリックします。 オブジェクト リレーショナル デザイナー (O/R デザイナー) が northwind.dbml ファイル用に開きます。  
   
-### <a name="to-add-tables-to-query-to-the-or-designer"></a>O/R デザイナーにクエリを実行する対象のテーブルを追加するには  
+### <a name="to-add-tables-to-query-to-the-or-designer"></a>O/R デザイナーにクエリを実行するテーブルを追加するには  
   
 1. **[サーバー エクスプローラー]** / **[データベース エクスプローラー]** で、Northwind データベースへの接続を展開します。 **[テーブル]** フォルダーを展開します。  
   
@@ -56,7 +57,7 @@ ms.locfileid: "91059250"
   
 2. Customers テーブルをクリックし、デザイナーの左ペインにドラッグします。 Orders テーブルをクリックし、デザイナーの左ペインにドラッグします。  
   
-     デザイナーによって、プロジェクトの新しい `Customer` と `Order` オブジェクトが作成されます。 デザイナーがテーブル間のリレーションシップを自動的に検出し、関連するオブジェクトの子プロパティを作成することに注意してください。 たとえば、IntelliSense は、`Customer` オブジェクトに、その顧客に関連するすべての注文のための `Orders` プロパティがあることを示します。  
+     デザイナーによって、プロジェクトの新しい `Customer` と `Order` オブジェクトが作成されます。 デザイナーによってテーブル間のリレーションシップが自動的に検出され、関連するオブジェクトの子プロパティが作成されることに注目してください。 たとえば、IntelliSense では、`Customer` オブジェクトに、その顧客に関連するすべての注文の `Orders` プロパティがあることを示します。  
   
 3. 変更を保存し、デザイナーを閉じます。  
   
@@ -66,7 +67,7 @@ ms.locfileid: "91059250"
   
 1. **[ツールボックス]** から、プロジェクトの既定の Windows フォームである Form1 に <xref:System.Windows.Forms.DataGridView> コントロールをドラッグします。  
   
-2. Form1 をダブルクリックして、フォームの `Load` イベントにコードを追加します。  
+2. Form1 をダブルクリックして、コードをフォームの `Load` イベントに追加します。  
   
 3. テーブルを O/R デザイナーに追加したときに、デザイナーによって <xref:System.Data.Linq.DataContext> オブジェクトがプロジェクトに追加されました。 このオブジェクトには、これらのテーブルにアクセスするため、および各テーブルの個々のオブジェクトとコレクションにアクセスするために必要なコードが含まれます。 プロジェクトの <xref:System.Data.Linq.DataContext> オブジェクトの名前は、.dbml ファイルの名前に基づいて付けられます。 このプロジェクトでは、<xref:System.Data.Linq.DataContext> オブジェクトに `northwindDataContext` という名前が付けられています。  
   

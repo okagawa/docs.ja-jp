@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: チュートリアル: COM オブジェクトによる継承の実装 (Visual Basic)'
 title: 'チュートリアル: COM オブジェクトによる継承の実装'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: bdb891e1a150f0d7b79aefcc3db1f18dc8e84be4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dc16990f25126cba52ef3ea457e8c3157c987c60
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396728"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438945"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>チュートリアル: COM オブジェクトによる継承の実装 (Visual Basic)
 
@@ -26,15 +27,15 @@ ms.locfileid: "84396728"
 
 1. Visual Basic 6.0 で、新しい ActiveX DLL プロジェクトを開きます。 `Project1` という名前のプロジェクトが作成されます。 これには `Class1` という名前のクラスが含まれています。
 
-2. **プロジェクト エクスプローラー**で **[Project1]** を右クリックし、 **[Project1 Properties] (Project1 のプロパティ)** をクリックします。 **[プロジェクトのプロパティ]** ダイアログ ボックスが表示されます。
+2. **プロジェクト エクスプローラー** で **[Project1]** を右クリックし、 **[Project1 Properties] (Project1 のプロパティ)** をクリックします。 **[プロジェクトのプロパティ]** ダイアログ ボックスが表示されます。
 
 3. **[プロジェクトのプロパティ]** ダイアログ ボックスの **[全般]** タブで、 **[プロジェクト名]** フィールドに「`ComObject1`」と入力してプロジェクト名を変更します。
 
-4. **プロジェクト エクスプローラー**で `Class1` を右クリックし、 **[プロパティ]** をクリックします。 クラスの **[プロパティ]** ウィンドウが表示されます。
+4. **プロジェクト エクスプローラー** で `Class1` を右クリックし、 **[プロパティ]** をクリックします。 クラスの **[プロパティ]** ウィンドウが表示されます。
 
 5. `Name` プロパティを `MathFunctions` に変更します。
 
-6. **プロジェクト エクスプローラー**で `MathFunctions` を右クリックし、 **[コードの表示]** をクリックします。 **[コード エディター]** が表示されます。
+6. **プロジェクト エクスプローラー** で `MathFunctions` を右クリックし、 **[コードの表示]** をクリックします。 **[コード エディター]** が表示されます。
 
 7. プロパティ値を保持するためにローカル変数を追加します。
 
