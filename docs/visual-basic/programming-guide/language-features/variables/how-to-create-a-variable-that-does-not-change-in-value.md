@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:値の変わらない変数を作成する (Visual Basic)'
 title: '方法: 値の変わらない変数を作成する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: 04e08784b5cfbdeb6db73b9b00fe9afa201bd06d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0392a27249de3bf604a73c8f8aaa16caf6f1c3e2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410517"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481936"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>方法: 値の変わらない変数を作成する (Visual Basic)
 

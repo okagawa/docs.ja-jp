@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30154
 ms.assetid: 259afdfa-3608-4760-adcb-88ec0da5020d
-ms.openlocfilehash: fc47aaef0477638e0e1a566bca23e9c35cf514f9
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: fc0cf8544984ddf41f1f91cb0bca90b630d9614d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99641146"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100473564"
 ---
 # <a name="bc30154-type1typename-must-implement-membername-for-interface-interfacename"></a>BC30154: \<type1>'\<typename>' はインターフェイス '\<interfacename>' に対して '\<membername>' を実装しなければなりません
 

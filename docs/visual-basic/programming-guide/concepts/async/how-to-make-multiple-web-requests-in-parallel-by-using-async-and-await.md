@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 方法:Async と Await を使用して複数の Web 要求を並列実行する (Visual Basic)'
 title: '方法: Async と Await を使用して複数の Web 要求を並列実行する'
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 40bab392af94ba941c2562e885a8d2e08aeea5b9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e1137424911b77ba94a760a4b4b034e45ef83462
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396585"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474344"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>方法: Async と Await を使用して複数の Web 要求を並列実行する (Visual Basic)
 
@@ -205,7 +206,7 @@ Class MainWindow
 End Class
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [チュートリアル: Async と Await を使用した Web へのアクセス (Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Async および Await を使用した非同期プログラミング (Visual Basic)](index.md)

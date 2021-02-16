@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 方法:拡張機能でファイルをグループ化する (LINQ) (Visual Basic)'
 title: '方法: 拡張子別にファイルをグループ化する (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-ms.openlocfilehash: 3b1b02283dc65148b8a44952ce39659cc92b483a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 6736b4ff99d88f8e5b2b40aeb670d88589db02b1
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077307"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472996"
 ---
 # <a name="how-to-group-files-by-extension-linq-visual-basic"></a>方法: 拡張機能でファイルをグループ化する (LINQ) (Visual Basic)
 

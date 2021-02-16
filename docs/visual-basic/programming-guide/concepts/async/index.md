@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: Async および Await を使用した非同期プログラミング (Visual Basic)'
 title: Async および Await を使用した非同期プログラミング
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-ms.openlocfilehash: b4f35b482b4ee3fc7e08c296cf3815fb2bdd6874
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e0723490a5f3863dc05acd49d6e3e91133413420
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555381"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474357"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Async および Await を使用した非同期プログラミング (Visual Basic)
 

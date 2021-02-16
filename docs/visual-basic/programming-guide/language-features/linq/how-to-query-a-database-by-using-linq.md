@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:LINQ を使用してデータベースを照会する (Visual Basic)'
 title: '方法: LINQ を使用してデータベースを照会する'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: bcf5e9c3-a236-4399-9a7f-3991eca7cf56
-ms.openlocfilehash: 60dbe3b4e164e266202cac4abaea009869d08cc4
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 9a5577b52fc9bb313717386ce921421a34928a4c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075266"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430600"
 ---
 # <a name="how-to-query-a-database-by-using-linq-visual-basic"></a>方法: LINQ を使用してデータベースを照会する (Visual Basic)
 

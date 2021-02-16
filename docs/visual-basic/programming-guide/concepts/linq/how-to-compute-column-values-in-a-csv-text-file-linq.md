@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 方法:CSV テキスト ファイルの列値を計算する (LINQ) (Visual Basic)'
 title: '方法: CSV テキスト ファイルの列値を計算する (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 679d53787b1392181696c05e0327ca1b1b910015
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f2bed49cf69d812659aae0cee398a735b3b42dbe
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357505"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100484185"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>方法: CSV テキスト ファイルの列値を計算する (LINQ) (Visual Basic)
 

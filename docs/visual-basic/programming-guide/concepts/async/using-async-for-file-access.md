@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: ファイル アクセスにおける非同期の使用 (Visual Basic)'
 title: ファイル アクセスにおける非同期の使用
 ms.date: 07/20/2015
 ms.assetid: c989305f-08e3-4687-95c3-948465cda202
-ms.openlocfilehash: 2e7fa4a78363a08f2ff25e6a961868e85994e200
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f065ef8d8672569921e1652e62d24c10a506f828
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077359"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474214"
 ---
 # <a name="using-async-for-file-access-visual-basic"></a>ファイル アクセスにおける非同期の使用 (Visual Basic)
 
@@ -27,7 +28,7 @@ ms.locfileid: "91077359"
   
 ## <a name="running-the-examples"></a>例の実行  
 
- このトピックの例を実行するには、**WPF アプリケーション**または **Windows フォーム アプリケーション**を作成し、**ボタン**を追加します。 ボタンの `Click` イベントに、それぞれの例で最初のメソッドの呼び出しを追加してください。  
+ このトピックの例を実行するには、**WPF アプリケーション** または **Windows フォーム アプリケーション** を作成し、**ボタン** を追加します。 ボタンの `Click` イベントに、それぞれの例で最初のメソッドの呼び出しを追加してください。  
   
  以降の例には、次の `Imports` ステートメントを含めてください。  
   

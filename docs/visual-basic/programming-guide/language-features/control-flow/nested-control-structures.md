@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 入れ子になった制御構造 (Visual Basic)'
 title: 入れ子になった制御構造
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: 290366d9d9428cefee108ac472fbe7c0eb66d82e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 086e1201cab3ea133b01a003de58f8d3e67bfc44
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084165"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100473603"
 ---
 # <a name="nested-control-structures-visual-basic"></a>入れ子になった制御構造 (Visual Basic)
 

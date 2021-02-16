@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ループ構造 (Visual Basic)'
 title: ループ構造
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-ms.openlocfilehash: 5019eaf219ad70f9c667356636d05ab69fc5a187
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 82ff36d8f5c05501fcff0f1d564e2613c9b78953
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077216"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480649"
 ---
 # <a name="loop-structures-visual-basic"></a>ループ構造 (Visual Basic)
 

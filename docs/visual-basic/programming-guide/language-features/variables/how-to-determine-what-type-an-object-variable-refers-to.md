@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:オブジェクト変数で参照している型を確認する (Visual Basic)'
 title: '方法: オブジェクト変数で参照している型を確認する'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: d3224000f5958a8619e38c4d2f6dc5dbb275ad45
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 699a8c5c075fc923a61a66f617c255f193cd8797
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410491"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481923"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>方法: オブジェクト変数で参照している型を確認する (Visual Basic)
 

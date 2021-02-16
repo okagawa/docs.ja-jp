@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:LINQ を使用して XML を変換する (Visual Basic)'
 title: '方法: LINQ を使用した XML の変換'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [Visual Basic], transforming
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
-ms.openlocfilehash: dab394ec45567589e002b5d2ac76ec19fb0f76c6
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 67e6f5f94cd71d960f742b660d3f223137bbd6d4
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374883"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483639"
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>方法: LINQ を使用して XML を変換する (Visual Basic)
 

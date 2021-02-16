@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 方法:Task.WhenAll を使用して非同期のチュートリアルを拡張する (Visual Basic)'
 title: '方法: Task.WhenAll を使用して AsyncWalkthrough を拡張する'
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
-ms.openlocfilehash: fb323852c83b1edf51396a0b800c2d54a833d0c0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fc303d6b2ed64cb2003c06724fcd21000d0b3abf
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396624"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474383"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>方法: Task.WhenAll を使用して非同期のチュートリアルを拡張する (Visual Basic)
 
@@ -422,7 +423,7 @@ Class MainWindow
 End Class
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>
 - [チュートリアル: Async と Await を使用した Web へのアクセス (Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md)

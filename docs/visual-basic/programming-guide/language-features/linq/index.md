@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: LINQ (Visual Basic における)'
 title: LINQ
 ms.date: 07/20/2015
 helpviewer_keywords:
 - what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
-ms.openlocfilehash: 25e118f7c2e08420326783b788df480373ba4270
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e4413a5d6103aefc4bcf303326dcadc7dfc28cc5
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085764"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430548"
 ---
 # <a name="linq-in-visual-basic"></a>LINQ (Visual Basic における)
 

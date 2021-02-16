@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 自動実装プロパティ (Visual Basic)'
 title: 自動実装プロパティ
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: f50b1f40ef9843391c6622561bfd8a8eaae6fc17
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 61f6565f9d4e7ea8731bb09c59cd6d942ab8c129
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090055"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472697"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>自動実装プロパティ (Visual Basic)
 

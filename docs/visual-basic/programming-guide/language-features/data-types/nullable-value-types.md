@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: null 許容値型 (Visual Basic)'
 title: null 許容値型
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: beed8262c50dc68330b8f03aa3d864ed2f8df0d5
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: acc91d98a3ed288a9bf0bcf6abbd3d8a516bd699
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249683"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483886"
 ---
 # <a name="nullable-value-types-visual-basic"></a>null 許容値型 (Visual Basic)
 

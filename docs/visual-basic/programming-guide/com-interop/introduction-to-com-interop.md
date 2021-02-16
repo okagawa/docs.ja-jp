@@ -1,28 +1,29 @@
 ---
+description: '詳細情報: COM 相互運用の概要 (Visual Basic)'
 title: COM 相互運用の概要
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-ms.openlocfilehash: 7bfbf0c6de8519e91a458ab4cbb5693024cdbeb2
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 86741958e63263f0788384a1261063d71d16df16
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090392"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480792"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM 相互運用の概要 (Visual Basic)
 
 コンポーネント オブジェクト モデル (COM) により、オブジェクトがその機能を他のコンポーネントに公開し、アプリケーションをホストできます。 COM オブジェクトは長年にわたって Windows プログラミングの基本となってきましたが、共通言語ランタイム (CLR) 用に設計されたアプリケーションには多くの利点があります。  
   
- .NET Framework アプリケーションによって、最終的に COM で開発されたものが置き換えられます。 それまでは、Visual Studio を使用して COM オブジェクトを使用するか、作成する必要がある可能性があります。 COM との相互運用性、つまり *COM 相互運用*により、自分のペースで .NET Framework に移行しながら、既存の COM オブジェクトを使用できます。  
+ .NET Framework アプリケーションによって、最終的に COM で開発されたものが置き換えられます。 それまでは、Visual Studio を使用して COM オブジェクトを使用するか、作成する必要がある可能性があります。 COM との相互運用性、つまり *COM 相互運用* により、自分のペースで .NET Framework に移行しながら、既存の COM オブジェクトを使用できます。  
   
  .NET Framework を使用して COM コンポーネントを作成することにより、登録を必要としない COM 相互運用を使用できます。 これにより、コンピューターに複数のバージョンがインストールされている場合に有効にする DLL バージョンを制御でき、エンド ユーザーは、XCOPY または FTP を使用して、アプリケーションを、それが実行可能なコンピューター上の適切なディレクトリにコピーできます。 詳細については、「[登録を必要としない COM 相互運用機能](../../../framework/interop/registration-free-com-interop.md)」を参照してください。  
   
 ## <a name="managed-code-and-data"></a>マネージド コードとデータ  
 
- .NET Framework 用に開発されたコードは*マネージド コード*と呼ばれ、CLR によって使用されるメタデータが含まれます。 .NET Framework アプリケーションによって使用されるデータは、*マネージド データ*と呼ばれます。ランタイムによって、メモリの割り当てや解放、型チェックの実行などのデータ関連タスクが管理されるためです。 既定で Visual Basic .NET ではマネージド コードとデータが使用されますが、相互運用アセンブリを使用して、COM オブジェクトのアンマネージド コードとデータにアクセスできます (このページで後述しています)。  
+ .NET Framework 用に開発されたコードは *マネージド コード* と呼ばれ、CLR によって使用されるメタデータが含まれます。 .NET Framework アプリケーションによって使用されるデータは、*マネージド データ* と呼ばれます。ランタイムによって、メモリの割り当てや解放、型チェックの実行などのデータ関連タスクが管理されるためです。 既定で Visual Basic .NET ではマネージド コードとデータが使用されますが、相互運用アセンブリを使用して、COM オブジェクトのアンマネージド コードとデータにアクセスできます (このページで後述しています)。  
   
 ## <a name="assemblies"></a>アセンブリ  
 
@@ -56,7 +57,7 @@ ms.locfileid: "91090392"
   
 ## <a name="interoperability-marshaling"></a>相互運用マーシャリング  
 
- すべての .NET Framework アプリケーションでは、使用するプログラミング言語に関係なく、オブジェクトの相互運用性を実現する一連の共通型を共有します。 COM オブジェクトのパラメーターと戻り値に、マネージド コードで使用されているものと異なるデータ型が使われている場合があります。 *相互運用マーシャリング*は、パラメーターと戻り値を、COM オブジェクトとの間で移動するときと同等のデータ型にパッケージ化するプロセスです。 詳細については、「[相互運用マーシャリング](../../../framework/interop/interop-marshaling.md)」を参照してください。  
+ すべての .NET Framework アプリケーションでは、使用するプログラミング言語に関係なく、オブジェクトの相互運用性を実現する一連の共通型を共有します。 COM オブジェクトのパラメーターと戻り値に、マネージド コードで使用されているものと異なるデータ型が使われている場合があります。 *相互運用マーシャリング* は、パラメーターと戻り値を、COM オブジェクトとの間で移動するときと同等のデータ型にパッケージ化するプロセスです。 詳細については、「[相互運用マーシャリング](../../../framework/interop/interop-marshaling.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

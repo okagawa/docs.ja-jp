@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic におけるデータ型'
 title: データの種類
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - Visual Basic code, data types
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
-ms.openlocfilehash: 8cb9642c1d7e6876030efe17f5c09e4888700a24
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f431b501b40d2fafd4422b1f3fa1ea3a2ebf56fb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095591"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483938"
 ---
 # <a name="data-types-in-visual-basic"></a>Visual Basic におけるデータ型
 
-プログラミング要素の*データ型*は、保持できるデータの種類やデータの格納方法を示します。 データ型は、コンピューターのメモリに格納できるすべての値に適用され、式の評価にも関与します。 変数、リテラル、定数、列挙値、プロパティ、プロシージャのパラメーター、プロシージャの引数、およびプロシージャの戻り値にはすべてデータ型があります。  
+プログラミング要素の *データ型* は、保持できるデータの種類やデータの格納方法を示します。 データ型は、コンピューターのメモリに格納できるすべての値に適用され、式の評価にも関与します。 変数、リテラル、定数、列挙値、プロパティ、プロシージャのパラメーター、プロシージャの引数、およびプロシージャの戻り値にはすべてデータ型があります。  
   
 ## <a name="declared-data-types"></a>宣言済みデータ型  
 

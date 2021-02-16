@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: チュートリアル: Async と Await を使用した Web へのアクセス (Visual Basic)'
 title: 'チュートリアル: Async と Await を使用した Web へのアクセス'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 41ededd4d4335b78b8d7a33e8fe387c7d632cbee
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 08488d4909e4fbc40cc11213eb293c2693fdec71
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400746"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474162"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>チュートリアル: Async と Await を使用した Web へのアクセス (Visual Basic)
 
@@ -53,7 +54,7 @@ async/await 機能を使用することで、非同期プログラムをより�
 
 4. **[名前]** ボックスに「`AsyncExampleWPF`」と入力して、 **[OK]** を選択します。
 
-    **ソリューション エクスプローラー**に新しいプロジェクトが表示されます。
+    **ソリューション エクスプローラー** に新しいプロジェクトが表示されます。
 
 ## <a name="design-a-simple-wpf-mainwindow"></a>単純な WPF MainWindow をデザインする
 
@@ -85,7 +86,7 @@ async/await 機能を使用することで、非同期プログラムをより�
 
 ## <a name="add-a-reference"></a>参照を追加する
 
-1. **ソリューション エクスプローラー**で、プロジェクトの名前を強調表示します。
+1. **ソリューション エクスプローラー** で、プロジェクトの名前を強調表示します。
 
 2. メニュー バーで、 **[プロジェクト]** 、 **[参照の追加]** の順に選択します。
 
@@ -101,7 +102,7 @@ async/await 機能を使用することで、非同期プログラムをより�
 
 ## <a name="add-necessary-imports-statements"></a>必要な Imports ステートメントを追加する
 
-1. **ソリューション エクスプローラー**で MainWindow.xaml.vb のショートカット メニューを開き、 **[コードの表示]** を選択します。
+1. **ソリューション エクスプローラー** で MainWindow.xaml.vb のショートカット メニューを開き、 **[コードの表示]** を選択します。
 
 2. 次の `Imports` ステートメントが存在しない場合は、コード ファイルの先頭に追加します。
 
@@ -251,7 +252,7 @@ async/await 機能を使用することで、非同期プログラムをより�
     Using response As WebResponse = webReq.GetResponseAsync()
     ```
 
-2. `GetResponseAsync` は、<xref:System.Threading.Tasks.Task%601> を返します。 この場合、*タスク戻り変数*の `TResult` の型は <xref:System.Net.WebResponse> です。 このタスクは、要求されたデータのダウンロードが完了し、タスクが最後まで実行された後に、実際の `WebResponse` オブジェクトを生成するという約束です。
+2. `GetResponseAsync` は、<xref:System.Threading.Tasks.Task%601> を返します。 この場合、*タスク戻り変数* の `TResult` の型は <xref:System.Net.WebResponse> です。 このタスクは、要求されたデータのダウンロードが完了し、タスクが最後まで実行された後に、実際の `WebResponse` オブジェクトを生成するという約束です。
 
     タスクから `WebResponse` 値を取得するには、次のコードに示すように、[Await](../../../language-reference/operators/await-operator.md) 演算子を `GetResponseAsync` への呼び出しに適用します。
 
@@ -293,7 +294,7 @@ async/await 機能を使用することで、非同期プログラムをより�
         Await copyTask
         ```
 
-4. `GetURLContents` 内で必要な作業として残っているのは、メソッド シグネチャの調整のみです。 `Await` 演算子は、[Async](../../../language-reference/modifiers/async.md) 修飾子でマークされているメソッドでのみ使用できます。 次のコードに示すように、修飾子を追加し、メソッドを*非同期メソッド*としてマークします。
+4. `GetURLContents` 内で必要な作業として残っているのは、メソッド シグネチャの調整のみです。 `Await` 演算子は、[Async](../../../language-reference/modifiers/async.md) 修飾子でマークされているメソッドでのみ使用できます。 次のコードに示すように、修飾子を追加し、メソッドを *非同期メソッド* としてマークします。
 
     ```vb
     Private Async Function GetURLContents(url As String) As Byte()
@@ -409,7 +410,7 @@ async/await 機能を使用することで、非同期プログラムをより�
 
     - 処理の完了後に、すべての結果が同時に表示されることはありません。 たとえば、両方のプログラムの `startButton_Click` には、テキスト ボックスをクリアする行が含まれています。 この目的は、実行ごとにテキスト ボックスをクリアすることです。1 つの結果セットが表示された後に、もう一度 **[Start]** ボタンをクリックすると、テキスト ボックスがクリアされます。 同期バージョンでは、2 回目のカウントが表示される直前、ダウンロードが完了して UI スレッドが他の処理を実行できる状態になったときにテキスト ボックスがクリアされます。 非同期バージョンでは、 **[Start]** ボタンをクリックした直後にテキスト ボックスがクリアされます。
 
-    - 最も重要な点は、ダウンロード中に UI スレッドがブロックされないことです。 Web リソースをダウンロード、カウント、および表示している間に、ウィンドウの移動やサイズ変更を行うことができます。 いずれかの Web サイトの処理が遅い、または応答しない場合、**閉じる**ボタン (右上隅の赤色のフィールドにある [x]) をクリックすることで、操作を取り消すことができます。
+    - 最も重要な点は、ダウンロード中に UI スレッドがブロックされないことです。 Web リソースをダウンロード、カウント、および表示している間に、ウィンドウの移動やサイズ変更を行うことができます。 いずれかの Web サイトの処理が遅い、または応答しない場合、**閉じる** ボタン (右上隅の赤色のフィールドにある [x]) をクリックすることで、操作を取り消すことができます。
 
 ## <a name="replace-the-geturlcontentsasync-method-with-a-net-framework-method"></a>GetURLContentsAsync メソッドを .NET Framework メソッドに置き換える
 

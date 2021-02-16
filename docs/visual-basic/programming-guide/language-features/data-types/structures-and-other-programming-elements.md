@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 構造体およびその他のプログラミング要素 (Visual Basic)'
 title: 構造体とその他のプログラミング要素
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: 26c98adda7305783b0220141db35b08285b21554
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 62052389b617849566a3cd0c475a2eb5da9e61ca
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084087"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430587"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>構造体およびその他のプログラミング要素 (Visual Basic)
 

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 方法:2 つのリストの差集合を見つける (LINQ) (Visual Basic)'
 title: '方法: 2 つのリストの差集合を見つける (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-ms.openlocfilehash: 1671cd32c0c0b8a3ff7fa6be87bd43dde9750776
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c877be03c3ff82d4be4814035a6401385d907e60
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100218"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483691"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>方法: 2 つのリストの差集合を見つける (LINQ) (Visual Basic)
 
