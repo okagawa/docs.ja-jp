@@ -2,18 +2,18 @@
 title: 基本型
 description: 'F # 言語で使用される基本的な基本型について説明します。'
 ms.date: 08/15/2020
-ms.openlocfilehash: 659ac8424c62985affcca1741e1b2a74c9c3ee8d
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 2bfc9ba9370cb8ba1fcc1d42369c2551cbb57623
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557699"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100456914"
 ---
 # <a name="basic-types"></a>基本型
 
 このトピックでは、F # 言語で定義されている基本型の一覧を示します。 これらの型は F # で最も基本的なものであり、ほぼすべての F # プログラムの基礎となります。 これらは、.NET プリミティブ型のスーパーセットです。
 
-|Type|.NET の種類|説明|例|
+|Type|.NET の種類|[説明]|例|
 |----|---------|-----------|-------|
 |`bool`|<xref:System.Boolean>|設定可能な値は `true` および `false` です。|`true`/`false`|
 |`byte`|<xref:System.Byte>|0 ~ 255 の値。|`1uy`|
@@ -34,7 +34,7 @@ ms.locfileid: "88557699"
 |`unit`|適用外|実際の値が存在しないことを示します。 型には、示されている仮値が1つだけあり `()` ます。 単位値は、 `()` 値が必要であるものの、実際の値を使用できない、または意味を持つプレースホルダーとしてよく使用されます。|`()`|
 
 > [!NOTE]
-> [Bigint](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-bigint.html)型を使用して、整数値が64ビット整数型に対して大きすぎる計算を実行できます。 `bigint` は基本的な型とは見なされません。これは、の省略形です `System.Numerics.BigInteger` 。
+> 型を使用して、整数値が64ビット整数型に対して大きすぎる計算を実行でき `bigint` ます。 `bigint` は基本的な型とは見なされません。これは、の省略形です `System.Numerics.BigInteger` 。
 
 ## <a name="see-also"></a>関連項目
 

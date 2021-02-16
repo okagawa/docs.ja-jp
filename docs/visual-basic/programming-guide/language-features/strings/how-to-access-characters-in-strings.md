@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:Visual Basic で文字列の文字にアクセスする'
 title: '方法: 文字列の文字にアクセスする'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], accessing characters
 - characters [Visual Basic], accessing in strings
 ms.assetid: 02c5206c-ffab-494d-b648-3b2ea358dc34
-ms.openlocfilehash: 4ea37c4393a8ece5513327b22c6c0ba4b027c781
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 373005699483dbae92df3a6fe73cc9b6318a9c61
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059185"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476164"
 ---
 # <a name="how-to-access-characters-in-strings-in-visual-basic"></a>方法: Visual Basic で文字列の文字にアクセスする
 

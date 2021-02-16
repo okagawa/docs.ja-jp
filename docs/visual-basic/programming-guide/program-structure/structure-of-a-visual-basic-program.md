@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic プログラムの構造'
 title: Visual Basic プログラムの構造
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: 90bc1fd62a05f670424e1fac368376401d1030c0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e5941b1cbdfdc460e3e860a5449e8ccae0673612
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91097775"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468201"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic プログラムの構造
 

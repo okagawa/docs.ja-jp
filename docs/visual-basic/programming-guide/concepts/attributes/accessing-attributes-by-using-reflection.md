@@ -1,17 +1,18 @@
 ---
+description: '詳細情報: リフレクションを使用した属性へのアクセス (Visual Basic)'
 title: リフレクションを使用した属性へのアクセス
 ms.date: 07/20/2015
 ms.assetid: c56e41da-5433-464f-a7bf-2a722e78bc9f
-ms.openlocfilehash: c0da5c4ae00eb2bc80b10f63f4bfd39763445e55
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e585bb427456f1187eaf8c39937eaa67651d9309
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400759"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100437866"
 ---
 # <a name="accessing-attributes-by-using-reflection-visual-basic"></a>リフレクションを使用した属性へのアクセス (Visual Basic)
 
-カスタム属性を定義し、それらをソース コード内に配置することができても、その情報を取得して操作する手段がなければ、ほとんど価値はありません。 リフレクションを使用すれば、カスタム属性を使用して定義された情報を取得することができます。 鍵となるメソッドは `GetCustomAttributes` です。このメソッドは、ソース コード属性の実行時の等価オブジェクトを配列で返します。 このメソッドには、いくつかのオーバー ロード バージョンがあります。 詳細については、<xref:System.Attribute> を参照してください。
+カスタム属性を定義し、それらをソース コード内に配置することができても、その情報を取得して操作する手段がなければ、ほとんど価値はありません。 リフレクションを使用すれば、カスタム属性を使用して定義された情報を取得することができます。 鍵となるメソッドは `GetCustomAttributes` です。このメソッドは、ソース コード属性の実行時の等価オブジェクトを配列で返します。 このメソッドには、いくつかのオーバー ロード バージョンがあります。 詳細については、「<xref:System.Attribute>」を参照してください。
 
 次のような属性指定は、
 
@@ -101,7 +102,7 @@ Class TestAuthorAttribute
 End Class
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>

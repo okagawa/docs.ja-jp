@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コード内のコメント (Visual Basic)'
 title: コード内のコメント
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: b0077bdae3bad1d67c3d26e503d05f318982eb80
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 66e12a18c2532bb5b694affccb84153f01bcddd5
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91099022"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100461932"
 ---
 # <a name="comments-in-code-visual-basic"></a>コード内のコメント (Visual Basic)
 

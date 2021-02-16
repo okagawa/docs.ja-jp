@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Property プロシージャ (Visual Basic)'
 title: Property プロシージャ
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-ms.openlocfilehash: cb5b0e12512e476b7c96bbfb19f8e4f470f6b498
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 55588278cdb8423a4f13a4e7ecc02f7ea692a618
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363734"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466589"
 ---
 # <a name="property-procedures-visual-basic"></a>Property プロシージャ (Visual Basic)
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コマンド ラインからのビルド (Visual Basic)'
 title: コマンド ラインからのビルド
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-ms.openlocfilehash: ec6ae3328c2042af950d1ee78a33d3de97219f10
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5f0f8dd61bd5b79987cc1e59dcf4bfd8071a925e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414299"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468266"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>コマンド ラインからのビルド (Visual Basic)
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: チュートリアル: イベントの処理 (Visual Basic)'
 title: イベントの処理
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 4489f75e50a783a9b1acfb9c30568fdec6614488
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5101bd2287c81e03efb69b398d6cc961d3e6d9dc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91057911"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100436176"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>チュートリアル: イベントの処理 (Visual Basic)
 
@@ -36,16 +37,16 @@ ms.locfileid: "91057911"
   
 ## <a name="writing-code-to-handle-an-event"></a>イベントを処理するコードの作成  
 
- `WithEvents` を使用して変数を宣言すると、このクラスの**コード エディター**の左側にあるドロップダウン リストに、その変数の名前が表示されます。 `mWidget` を選択すると、右側のドロップダウン リストに `Widget` クラスのイベントが表示されます。 イベントを選択すると、対応するイベント プロシージャが、接頭辞 `mWidget` とアンダースコア付きで表示されます。 `WithEvents` 変数に関連するすべてのイベント プロシージャに、変数名が接頭辞として付与されます。  
+ `WithEvents` を使用して変数を宣言すると、このクラスの **コード エディター** の左側にあるドロップダウン リストに、その変数の名前が表示されます。 `mWidget` を選択すると、右側のドロップダウン リストに `Widget` クラスのイベントが表示されます。 イベントを選択すると、対応するイベント プロシージャが、接頭辞 `mWidget` とアンダースコア付きで表示されます。 `WithEvents` 変数に関連するすべてのイベント プロシージャに、変数名が接頭辞として付与されます。  
   
 #### <a name="to-handle-an-event"></a>イベントを処理するには  
   
-1. **コード エディター**の左側のドロップダウン リストで、[`mWidget`] を選択します。  
+1. **コード エディター** の左側のドロップダウン リストで、[`mWidget`] を選択します。  
   
-2. 右側のドロップダウン リストで `PercentDone` イベントを選択します。 **コード エディター**に `mWidget_PercentDone` イベント プロシージャが表示されます。  
+2. 右側のドロップダウン リストで `PercentDone` イベントを選択します。 **コード エディター** に `mWidget_PercentDone` イベント プロシージャが表示されます。  
   
     > [!NOTE]
-    > 新しいイベント ハンドラーを挿入する場合、**コード エディター**は便利ですが、使用は必須ではありません。 今回のチュートリアルでは、コードにイベント ハンドラーを直接コピーする方が簡単です。  
+    > 新しいイベント ハンドラーを挿入する場合、**コード エディター** は便利ですが、使用は必須ではありません。 今回のチュートリアルでは、コードにイベント ハンドラーを直接コピーする方が簡単です。  
   
 3. `mWidget_PercentDone` イベント ハンドラーに次のコードを追加します。  
   
@@ -67,9 +68,9 @@ ms.locfileid: "91057911"
   
 #### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>オブジェクトを作成して参照を割り当てるには  
   
-1. **コード エディター**の左側のドロップダウン リストで、 **[(Form1 イベント)]** を選択します。  
+1. **コード エディター** の左側のドロップダウン リストで、 **[(Form1 イベント)]** を選択します。  
   
-2. 右側のドロップダウン リストで `Load` イベントを選択します。 **コード エディター**に `Form1_Load` イベント プロシージャが表示されます。  
+2. 右側のドロップダウン リストで `Load` イベントを選択します。 **コード エディター** に `Form1_Load` イベント プロシージャが表示されます。  
   
 3. `Form1_Load` イベント プロシージャに、`Widget` を作成する次のコードを追加します。  
   

@@ -1,15 +1,16 @@
 ---
+description: "詳細情報: ファイル ' <filename> ' は開いているため削除できません"
 title: ファイル '<filename>' が開いているため、削除できません。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_FileAlreadyOpen1
 ms.assetid: e1cbc46a-1db0-412d-8109-31342ec9d327
-ms.openlocfilehash: 1bfb54c046bda3c797b4620e51e4a457ba222055
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3bbdfce899b5ba49e2898a197705d2f321214c71
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91060695"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100459020"
 ---
 # <a name="file-filename-cannot-be-deleted-because-it-is-open"></a>ファイル '\<filename>' が開いているため、削除できません。
 
@@ -19,7 +20,7 @@ ms.locfileid: "91060695"
   
 - ファイルを閉じてから削除します。  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [My. DeleteFile](xref:Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile%2A)
 - [マイファイル (コンピューター)](xref:Microsoft.VisualBasic.FileIO.FileSystem)

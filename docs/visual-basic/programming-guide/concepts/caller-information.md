@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 呼び出し元情報 (Visual Basic)'
 title: 呼び出し元情報
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 33c7367626d66d1db2705fc2882ca0780d1b867f
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: bcb4f553a9840a76f24825c3c2b7e2e98914abc2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090353"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100437710"
 ---
 # <a name="caller-information-visual-basic"></a>呼び出し元情報 (Visual Basic)
 
@@ -60,7 +61,7 @@ End Sub
   
 ### <a name="member-names"></a><a name="MEMBERNAMES"></a>メンバー名  
 
- `CallerMemberName` 属性を使用して、呼び出されたメソッドにメンバー名を `String` 引数として指定することを回避できます。 この方法を使用すると、**リファクタリングの名前の変更**で `String` 値が変更されないという問題が発生しなくなります。 この利点は、次のタスクで役立ちます。  
+ `CallerMemberName` 属性を使用して、呼び出されたメソッドにメンバー名を `String` 引数として指定することを回避できます。 この方法を使用すると、**リファクタリングの名前の変更** で `String` 値が変更されないという問題が発生しなくなります。 この利点は、次のタスクで役立ちます。  
   
 - トレース ルーチンと診断ルーチンの使用。  
   

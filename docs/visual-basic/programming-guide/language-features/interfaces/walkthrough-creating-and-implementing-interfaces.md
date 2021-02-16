@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: チュートリアル: インターフェイスの作成と実装 (Visual Basic)'
 title: インターフェイスの作成と実装
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - interface implementation [Visual Basic], walkthrough
 - interfaces [Visual Basic], creating
 ms.assetid: ded82af2-9f52-4232-98ef-fe458180f112
-ms.openlocfilehash: 89e8f91a04b25b84bc783d5c4f4b91cf12426f72
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 058011d311fdecba626a59228816f9bced319c97
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405068"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468422"
 ---
 # <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a>チュートリアル: インターフェイスの作成と実装 (Visual Basic)
 
@@ -33,7 +34,7 @@ ms.locfileid: "84405068"
   
 3. 新しいモジュールに `Module1.vb` という名前を付け、 **[追加]** をクリックします。 新しいモジュールのコードが表示されます。  
   
-4. `Module` ステートメントと `End Module` ステートメントの間に `Interface TestInterface` と入力し、ENTER キーを押して、`Module1` 内に `TestInterface` という名前のインターフェイスを定義します。 **コード エディター**によって `Interface` キーワードがインデントされ、`End Interface` ステートメントが追加されて、コード ブロックが形成されます。  
+4. `Module` ステートメントと `End Module` ステートメントの間に `Interface TestInterface` と入力し、ENTER キーを押して、`Module1` 内に `TestInterface` という名前のインターフェイスを定義します。 **コード エディター** によって `Interface` キーワードがインデントされ、`End Interface` ステートメントが追加されて、コード ブロックが形成されます。  
   
 5. `Interface` ステートメントと `End Interface` ステートメントの間に次のコードを配置して、インターフェイスのプロパティ、メソッド、およびイベントを定義します。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "84405068"
   
      [!code-vb[VbVbalrOOP#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#99)]
   
-     統合開発環境内で作業している場合は、ENTER キーを押すと、**コード エディター**によって対応する `End Class` ステートメントが提供されます。  
+     統合開発環境内で作業している場合は、ENTER キーを押すと、**コード エディター** によって対応する `End Class` ステートメントが提供されます。  
   
 2. 次の `Implements` ステートメントを `ImplementationClass` に追加します。これにより、クラスで実装するインターフェイスに名前が付けられます。  
   
@@ -57,7 +58,7 @@ ms.locfileid: "84405068"
   
      `Implements` ステートメントが、クラスまたは構造体の先頭にある他の項目とは別にリストされている場合、そのステートメントは、クラスまたは構造体がインターフェイスを実装していることを示します。  
   
-     統合開発環境内で作業している場合は、ENTER キーを押すと、**コード エディター**によって `TestInterface` に必要なクラス メンバーが実装され、次の手順をスキップできます。  
+     統合開発環境内で作業している場合は、ENTER キーを押すと、**コード エディター** によって `TestInterface` に必要なクラス メンバーが実装され、次の手順をスキップできます。  
   
 3. 統合開発環境内で作業していない場合は、`MyInterface` インターフェイスのすべてのメンバーを実装する必要があります。 次のコードを `ImplementationClass` に追加して、`Event1`、`Method1`、および `Prop1` を実装します。  
   
@@ -83,7 +84,7 @@ ms.locfileid: "84405068"
   
 ### <a name="to-test-the-implementation-of-the-interface"></a>インターフェイスの実装をテストするには
   
-1. **ソリューション エクスプローラー**でプロジェクトのスタートアップ フォームを右クリックし、 **[コードの表示]** をクリックします。 エディターにスタートアップ フォームのクラスが表示されます。 既定では、スタートアップ フォームは `Form1` という名前です。  
+1. **ソリューション エクスプローラー** でプロジェクトのスタートアップ フォームを右クリックし、 **[コードの表示]** をクリックします。 エディターにスタートアップ フォームのクラスが表示されます。 既定では、スタートアップ フォームは `Form1` という名前です。  
   
 2. 次の `testInstance` フィールドを `Form1` クラスに追加します。  
   

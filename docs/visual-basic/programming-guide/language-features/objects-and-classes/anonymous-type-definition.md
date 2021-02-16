@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: 匿名型の定義 (Visual Basic)'
 title: 匿名型の定義
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-ms.openlocfilehash: 952eb295cc71eab5d0ad6e18f2b697a9b701b434
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2e3f847f5f844e3ed6e036c26efc330a237d193f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404902"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100436917"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>匿名型の定義 (Visual Basic)
 

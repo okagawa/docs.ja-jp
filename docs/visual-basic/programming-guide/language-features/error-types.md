@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: エラーの種類 (Visual Basic)'
 title: エラーの種類
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-ms.openlocfilehash: caeaab9a358e3e3a995c1df7274d16daaff7a667
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: cc4fce5e0ce77a4e402ba832fd6f4e36e6feed07
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91083996"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100423772"
 ---
 # <a name="error-types-visual-basic"></a>エラーの種類 (Visual Basic)
 

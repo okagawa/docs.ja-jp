@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 方法:指定された単語のセットを含む文章を照会する (LINQ) (Visual Basic)'
 title: '方法: 指定された単語のセットを含む文章を照会する (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: a5ae8ced-61fe-4c10-bb8a-95630e50f603
-ms.openlocfilehash: ce88bf001346f90eb9b08ca1ff14afc7dcb04fa0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b6d2f428e499b8b22fa5bc13015f2405430c1bbd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397961"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100435097"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a>方法: 指定された単語のセットを含む文章を照会する (LINQ) (Visual Basic)
 

@@ -1,20 +1,21 @@
 ---
+description: '詳細情報: 方法:ActiveX コントロールを操作する (Visual Basic)'
 title: '方法: ActiveX コントロールを操作する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Toolbox, adding controls
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
-ms.openlocfilehash: d1346d362bf030e794212d74040f1ff0845eb704
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3c38a38bf573ecee8425a837ce472cee60fb031f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91083255"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438984"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>方法: ActiveX コントロールを操作する (Visual Basic)
 
-ActiveX コントロールとは、他のユーザーがプログラミングしたパッケージ機能を再利用するために、Web ページまたは他のアプリケーションに挿入できる COM コンポーネントまたはオブジェクトです。 Visual Basic 6.0 以前のバージョン用に開発された ActiveX コントロールを使用して、Visual Studio の**ツールボックス**に機能を追加できます。  
+ActiveX コントロールとは、他のユーザーがプログラミングしたパッケージ機能を再利用するために、Web ページまたは他のアプリケーションに挿入できる COM コンポーネントまたはオブジェクトです。 Visual Basic 6.0 以前のバージョン用に開発された ActiveX コントロールを使用して、Visual Studio の **ツールボックス** に機能を追加できます。  
   
 ### <a name="to-add-activex-controls-to-the-toolbox"></a>ActiveX コントロールをツールボックスに追加するには  
   
@@ -26,7 +27,7 @@ ActiveX コントロールとは、他のユーザーがプログラミングし
   
 3. 使用する ActiveX コントロールの隣のチェック ボックスをオンにして、 **[OK]** をクリックします。  
   
-     新しいコントロールが、**ツールボックス**に他のツールと共に表示されます。  
+     新しいコントロールが、**ツールボックス** に他のツールと共に表示されます。  
   
     > [!NOTE]
     > Aximp ユーティリティを使用して、ActiveX コントロールの相互運用アセンブリを手動で使用できます。 詳細については、「[Aximp.exe (Windows フォーム ActiveX コントロール インポーター)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)」をご覧ください。  

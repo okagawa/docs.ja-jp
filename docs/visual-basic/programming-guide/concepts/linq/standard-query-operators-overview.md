@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 標準クエリ演算子の概要 (Visual Basic)'
 title: 標準クエリ演算子の概要
 ms.date: 07/20/2015
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-ms.openlocfilehash: 7c229a576f6695282473352d6253d2c699c76604
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: febf0fa85c020504858587bdb080c1bd6725158e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406782"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434902"
 ---
 # <a name="standard-query-operators-overview-visual-basic"></a>標準クエリ演算子の概要 (Visual Basic)
 

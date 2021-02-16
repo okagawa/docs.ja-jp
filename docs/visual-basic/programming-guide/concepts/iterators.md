@@ -1,17 +1,18 @@
 ---
+description: '詳細情報: 反復子 (Visual Basic)'
 title: Iterators
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: e638d35aeb86837d91fb14681d300772e3c2375a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9d12bd436a976e3f84dbd063ca746fc7e3b17bfb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410930"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462153"
 ---
 # <a name="iterators-visual-basic"></a>反復子 (Visual Basic)
 
-*反復子*を使用して、リストや配列などのコレクションをステップ実行することができます。
+*反復子* を使用して、リストや配列などのコレクションをステップ実行することができます。
 
 iterator メソッドまたは `get` アクセサーは、コレクションに対するカスタム イテレーションを実行します。 iterator メソッドは、[Yield](../../language-reference/statements/yield-statement.md) ステートメントを使用して、各要素を 1 回に 1 つ返します。 `Yield` ステートメントに達すると、コードの現在の場所が記憶されます。 次回、iterator 関数が呼び出されると、この位置から実行が再開されます。
 

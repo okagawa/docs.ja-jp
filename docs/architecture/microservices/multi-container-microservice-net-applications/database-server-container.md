@@ -2,12 +2,12 @@
 title: コンテナーとして実行するデータベース サーバーの使用
 description: コンテナーとして実行されているデータベース サーバーの使用は開発時に限定することの重要性を理解します。 運用環境向けではありません。
 ms.date: 01/13/2021
-ms.openlocfilehash: 1292bf37e3baaeb6284f6fba15b4bc7c9c17b4a7
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: f24e9561c2d3d950fd017403ff91d961e134d11f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188739"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100424308"
 ---
 # <a name="use-a-database-server-running-as-a-container"></a>コンテナーとして実行するデータベース サーバーの使用
 
@@ -15,7 +15,7 @@ ms.locfileid: "98188739"
 
 ## <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a>マイクロサービスに関連するデータベースを含むコンテナーとして実行している SQL Server
 
-eShopOnContainers には、[docker-compose.yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) ファイルに定義される `sqldata` という名前のコンテナーがあり、これによって Linux インスタンス用の SQL サーバーとすべてのマイクロサービスに必要な SQL データベースが実行されます。
+eShopOnContainers には、[docker-compose.yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/main/src/docker-compose.yml) ファイルに定義される `sqldata` という名前のコンテナーがあり、これによって Linux インスタンス用の SQL サーバーとすべてのマイクロサービスに必要な SQL データベースが実行されます。
 
 マイクロサービスの重要な点は、各マイクロサービスで関連データが所有されるため、専用のデータベースを用意する必要があることです。 ただし、データベースは任意の場所に置くことができます。 ここでは、Docker のメモリ要件をできるだけ低く保つために、これらはすべて同じコンテナー内にあります。 これは開発にとって (おそらくテストにとっても) 十分なソリューションですが、運用環境には適していないことに留意してください。
 

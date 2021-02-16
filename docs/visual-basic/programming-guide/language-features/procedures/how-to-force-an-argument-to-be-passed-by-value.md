@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:引数の値渡しを強制する (Visual Basic)'
 title: '方法: 引数の値渡しを強制する'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 0be49e7d4aacbb30956bda7f6ee8494a7ded8b78
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 471ddbf8993ad671dc4285729a11f5b17a5b19dc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071626"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475423"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>方法: 引数の値渡しを強制する (Visual Basic)
 

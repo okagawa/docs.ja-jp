@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 射影操作 (Visual Basic)'
 title: 射影操作
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
-ms.openlocfilehash: 4795bdaba53949b34fe380ea9c51025ce43c40db
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5531bec915f3a9ee521e0d67941b8f1d49e90524
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396338"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466459"
 ---
 # <a name="projection-operations-visual-basic"></a>射影操作 (Visual Basic)
 

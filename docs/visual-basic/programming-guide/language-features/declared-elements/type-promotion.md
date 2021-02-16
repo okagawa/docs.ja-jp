@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 型の上位変換 (Visual Basic)'
 title: 型の上位変換
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-ms.openlocfilehash: 6c28ca22e96616ff09e147400bfdb2adb922ff0e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: fd8a30fb7e442d82222ae55daabf70bd8e532138
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085803"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434720"
 ---
 # <a name="type-promotion-visual-basic"></a>型の上位変換 (Visual Basic)
 
-モジュールでプログラミング要素を宣言すると、Visual Basic によって、そのスコープがモジュールを含む名前空間に昇格されます。 これは*型の上位変換*と呼ばれます。  
+モジュールでプログラミング要素を宣言すると、Visual Basic によって、そのスコープがモジュールを含む名前空間に昇格されます。 これは *型の上位変換* と呼ばれます。  
   
  次の例では、モジュールのスケルトン定義とそのモジュールの 2 つのメンバーを示しています。  
   

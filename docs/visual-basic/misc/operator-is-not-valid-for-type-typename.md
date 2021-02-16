@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「演算子は型 ' ' に対して無効です」を参照してください。 <typename>
 title: 演算子は型 ' ' に対して有効ではありません。 <typename>
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNoValidOperator_OneOperand
 ms.assetid: 9d5e01db-d3e7-446a-8d39-6600c73fea20
-ms.openlocfilehash: 806af64df1de1e5afe1f20f146b7a290fa947c5f
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 304828d10fbbe1da0f8f5fac16652b5ececf5f16
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084217"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100423123"
 ---
 # <a name="operator-is-not-valid-for-type-typename"></a>演算子は型 ' ' に対して有効ではありません。 \<typename>
 
