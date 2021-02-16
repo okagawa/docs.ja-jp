@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic での XML の作成'
 title: XML の作成
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], creating XML
 - XML literals [Visual Basic], creating
 ms.assetid: 8ae29ec5-e5fb-4137-9df5-60a288df7045
-ms.openlocfilehash: a6a927c8dc1a4f3e38a99a1f730be68a2566d048
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 9511253791720d1f45e00669b0abc41a45237f63
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090028"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100431647"
 ---
 # <a name="creating-xml-in-visual-basic"></a>Visual Basic での XML の作成
 

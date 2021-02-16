@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:ラムダ式を作成する (Visual Basic)'
 title: '方法: ラムダ式を作成する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: cc2de38f7375848d104edff6f419656d9caa9cb2
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 386d40c1e2021c9b02b2f785300c4e978b4da87d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071925"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472567"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>方法: ラムダ式を作成する (Visual Basic)
 

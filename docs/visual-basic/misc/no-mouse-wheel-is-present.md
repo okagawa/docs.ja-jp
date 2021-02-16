@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「マウスホイールが存在しません」を参照してください。
 title: マウスのホイールが存在しません
 ms.date: 07/20/2015
 f1_keywords:
 - vbrMouse_NoWheelIsPresent
 ms.assetid: e924ffba-4af1-4247-9a6f-d19a03738f62
-ms.openlocfilehash: a9b468d876945a177f3e326a7dc37e6c8a80285d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c712903f41aa9f7c37c0cf1e3ffdc76edfd85b7f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078841"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100479102"
 ---
 # <a name="no-mouse-wheel-is-present"></a>マウスのホイールが存在しません
 
@@ -23,7 +24,7 @@ ms.locfileid: "91078841"
   
 - スクロール ホイールのあるマウスをコンピュータにインストールします。  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [マイ. My.computer.mouse.wheelscrolllines](xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines)
 - [マイ. My.computer.mouse.wheelexists](xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:文字列がパターンに一致するかどうかを調べる (Visual Basic)'
 title: '方法: 文字列がパターンに一致するかを調べる'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: d8a3c363d1a443db4a0b7633e380562af1913aca
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f3e3426f85d420726571f03c88546d181cdccf97
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403447"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100461945"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>方法: 文字列がパターンに一致するかどうかを調べる (Visual Basic)
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic での XML の操作'
 title: XML の操作
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - Visual Basic code, XML
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
-ms.openlocfilehash: 52c8822c34a85af81dde505d36e6e159745a0d12
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 34ac12d522b0b4e2d6a78a1117984cfd8de33fdb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085692"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483626"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Visual Basic での XML の操作
 
-*XML リテラル*を使用すると、文字列、ファイル、ストリームなどの外部ソースから XML を読み込むことができます。 さらに、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用して XML を操作し、統合言語クエリ (LINQ) を使用して XML をクエリできます。  
+*XML リテラル* を使用すると、文字列、ファイル、ストリームなどの外部ソースから XML を読み込むことができます。 さらに、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用して XML を操作し、統合言語クエリ (LINQ) を使用して XML をクエリできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
 

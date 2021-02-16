@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: チュートリアル: クラスの定義 (Visual Basic)'
 title: クラスの定義
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - Terminate event [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 07018828-2d49-4cf5-a44b-19fb15d9efea
-ms.openlocfilehash: 646c6ce307131f3edba194af19920eade9c1753c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a97e04b92db3387966afa410d5697a05b482ae09
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84389115"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438789"
 ---
 # <a name="walkthrough-defining-classes-visual-basic"></a>チュートリアル: クラスの定義 (Visual Basic)
 
@@ -43,7 +44,7 @@ ms.locfileid: "84389115"
      [!code-vb[VbVbalrOOP#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#5)]
   
     > [!NOTE]
-    > Visual Basic **コード エディター**を使用すると、`Class` キーワードに続けて新しいクラスの名前を入力することで、クラスをスタートアップ フォームに追加できます。 **コードエディター**には、対応する `End Class` ステートメントが用意されています。  
+    > Visual Basic **コード エディター** を使用すると、`Class` キーワードに続けて新しいクラスの名前を入力することで、クラスをスタートアップ フォームに追加できます。 **コードエディター** には、対応する `End Class` ステートメントが用意されています。  
   
 6. `Class` ステートメントと `End Class` ステートメントの間に次のコードを追加して、クラスのプライベート フィールドを定義します。  
   
@@ -67,7 +68,7 @@ ms.locfileid: "84389115"
   
 ## <a name="to-create-a-button-to-test-the-class"></a>クラスをテストするボタンを作成するには
   
-1. **ソリューション エクスプローラー**で名前を右クリックし、 **[ビュー デザイナー]** をクリックして、スタートアップ フォームをデザイン モードに変更します。 既定では、Windows アプリケーション プロジェクトのスタートアップ フォームには、Form1.vb という名前が付けられています。 メイン フォームが表示されます。  
+1. **ソリューション エクスプローラー** で名前を右クリックし、 **[ビュー デザイナー]** をクリックして、スタートアップ フォームをデザイン モードに変更します。 既定では、Windows アプリケーション プロジェクトのスタートアップ フォームには、Form1.vb という名前が付けられています。 メイン フォームが表示されます。  
   
 2. メイン フォームにボタンを追加し、それをダブルクリックして、`Button1_Click` イベント ハンドラーのコードを表示します。 テスト プロシージャを呼び出す次のコードを追加します。  
   

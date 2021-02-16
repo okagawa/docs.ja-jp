@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic におけるジェネリック プロシージャ'
 title: ジェネリック プロシージャ
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: 558601f038fccdcb9b94acb7c796e2b49fb6e6f4
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c8f26d66f7b657e00382ea94ed0d6093211a3e96
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059198"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434707"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Visual Basic におけるジェネリック プロシージャ
 

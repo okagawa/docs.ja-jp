@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:値を返さないプロシージャを呼び出す (Visual Basic)'
 title: '方法: 値を返さないプロシージャを呼び出す'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
-ms.openlocfilehash: 2686a4d9dc10cde209f558771feeb5ba4f4ccb21
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3aaa6b4358f0585323e6c8321eea7dbaa4906a44
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075006"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466771"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>方法: 値を返さないプロシージャを呼び出す (Visual Basic)
 

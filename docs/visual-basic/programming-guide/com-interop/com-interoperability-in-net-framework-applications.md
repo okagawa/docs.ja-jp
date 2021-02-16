@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: .NET Framework アプリケーションにおける COM 相互運用性 (Visual Basic)'
 title: .NET Framework アプリケーションにおける COM 相互運用性
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-ms.openlocfilehash: 377958a21886fe0257633ea19417f9a19bd51ff3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ad531ab689db104ff7f1ed8639f3c65eeed717d1
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396870"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483730"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>.NET Framework アプリケーションにおける COM 相互運用性 (Visual Basic)
 

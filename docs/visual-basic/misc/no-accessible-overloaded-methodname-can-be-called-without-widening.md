@@ -1,15 +1,16 @@
 ---
+description: 詳細については <methodname> 、拡大変換せずに、これらの引数を指定して呼び出すことができるアクセス可能なオーバーロードされた ' ' はありません。 <list>
 title: "上位変換しないで、これらの引数と共に呼び出せるオーバーロードされたアクセス可能な '<methodname>' はありません:  <list>"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAmbiguousCall_WideningConversion2
 ms.assetid: 5e74f5cf-80bd-4b48-b58a-465f981ec694
-ms.openlocfilehash: cd4e53a7e7add983eefbf9c7176ebd7841e00563
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 68e3ecf16aac19ef644b0060b49b2b316f72e22e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078906"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100479154"
 ---
 # <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-widening-conversion-list"></a>上位変換しないで、これらの引数と共に呼び出せるオーバーロードされたアクセス可能な '\<methodname>' はありません: \<list>
 

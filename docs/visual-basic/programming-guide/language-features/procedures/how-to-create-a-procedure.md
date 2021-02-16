@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:プロシージャを作成する (Visual Basic)'
 title: '方法: プロシージャを作成する'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - procedure declarations
 - procedures [Visual Basic], about procedures
 ms.assetid: 4f779247-0b50-47e8-9e5c-ab5cf39ac0d2
-ms.openlocfilehash: a831814c18f97991fca8067f1c9c8e491da1b665
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bca5ad24e845600642429273f6053787dd290b88
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344907"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472541"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>方法: プロシージャを作成する (Visual Basic)
 

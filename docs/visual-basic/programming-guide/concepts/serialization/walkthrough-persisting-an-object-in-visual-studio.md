@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: チュートリアル: Visual Studio でのオブジェクトの永続化 (Visual Basic)'
 title: オブジェクトの永続化 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 0b2fff171164a29e6066839371fc95ad41b452f1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4145f84d14eadae6a305a4a1f5860cdcc38450c8
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086466"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100486863"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>チュートリアル: Visual Studio でのオブジェクトの永続化 (Visual Basic)
 
@@ -35,7 +36,7 @@ ms.locfileid: "91086466"
   
 1. 新しいクラス ライブラリ プロジェクトを作成して、"LoanClass" という名前を付けます。 詳細については、「[ソリューションとプロジェクトの作成](/visualstudio/ide/creating-solutions-and-projects)」を参照してください。  
   
-2. **ソリューション エクスプローラー**で、Class1 ファイルのショートカット メニューを開き、 **[名前の変更]** を選択します。 ファイルの名前を `Loan` に変更し、Enter キーを押します。 ファイルの名前を変更すると、クラスの名前も `Loan` に変更されます。  
+2. **ソリューション エクスプローラー** で、Class1 ファイルのショートカット メニューを開き、 **[名前の変更]** を選択します。 ファイルの名前を `Loan` に変更し、Enter キーを押します。 ファイルの名前を変更すると、クラスの名前も `Loan` に変更されます。  
   
 3. クラスに次のパブリック メンバーを追加します。  
   

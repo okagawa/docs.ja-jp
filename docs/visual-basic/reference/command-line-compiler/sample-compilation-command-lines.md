@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイル コマンド ラインのサンプル (Visual Basic)'
 title: コンパイル コマンド ラインのサンプル
 ms.date: 03/13/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - compiling source code [Visual Basic], from command line
 - Visual Basic compiler, sample command lines
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
-ms.openlocfilehash: 496627d3b77b0382ae7d15c8225a6fbd41f1db73
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fbd35b7f12b3bee9690698a24dcb70d850081f95
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403123"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474006"
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>コンパイル コマンド ラインのサンプル (Visual Basic)
 

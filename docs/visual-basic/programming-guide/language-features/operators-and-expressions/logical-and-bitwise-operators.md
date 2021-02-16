@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic の論理演算子とビット処理演算子'
 title: 論理演算子とビット処理演算子
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-ms.openlocfilehash: c15b9337f262563941699c0ff8fe5219ca6a5c93
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 55d9567813a9114573e1e3f70fe181cb8621b350
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085998"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472723"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic の論理演算子とビット処理演算子
 

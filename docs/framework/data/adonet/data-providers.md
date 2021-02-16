@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: b61fede9144e554ee68f0b41adac36209adb7288
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ff5ee6569d8526f44ca489ddc48b09b02f6f8804
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177803"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100461659"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework データ プロバイダー
 
@@ -129,7 +129,7 @@ using System.Data.Odbc;
 ```  
   
 > [!NOTE]
-> .NET Framework Data Provider for ODBC を使用する場合、MDAC 2.6 以降が必要となります。MDAC 2.8 SP1 をお勧めします。 MDAC 2.8 SP1 は、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=5793)からダウンロードできます。
+> .NET Framework Data Provider for ODBC を使用する場合、MDAC 2.6 以降が必要となります。MDAC 2.8 SP1 をお勧めします。
   
 ## <a name="net-framework-data-provider-for-oracle"></a>.NET Framework Oracle 用データ プロバイダー  
 

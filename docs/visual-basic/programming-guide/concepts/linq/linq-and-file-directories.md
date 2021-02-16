@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: LINQ とファイル ディレクトリ (Visual Basic)'
 title: LINQ とファイル ディレクトリ
 ms.date: 07/20/2015
 ms.assetid: 159fd5c3-3926-4071-ae78-d8e423287eb7
-ms.openlocfilehash: 670611cd285a1b1f2602e2c700c2bdeb56db943f
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ed7f4151acde51794269e5028820397f9a3bb3f9
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100166"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100426765"
 ---
 # <a name="linq-and-file-directories-visual-basic"></a>LINQ とファイル ディレクトリ (Visual Basic)
 

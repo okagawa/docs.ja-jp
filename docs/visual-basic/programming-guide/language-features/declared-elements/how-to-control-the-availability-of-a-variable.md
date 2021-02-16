@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:変数の可用性を制御する (Visual Basic)'
 title: '方法: 変数の可用性を制御する'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: e6173a0eaa0bf84abb1979711c6df932533c5ce9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3fa21a804008f31da9003aa847752f749154d602
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086115"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429885"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>方法: 変数の可用性を制御する (Visual Basic)
 
-変数の可用性を制御するには、その*アクセス レベル*を指定します。 アクセス レベルによって、変数への読み取りまたは書き込みのアクセス許可を持つコードが決まります。  
+変数の可用性を制御するには、その *アクセス レベル* を指定します。 アクセス レベルによって、変数への読み取りまたは書き込みのアクセス許可を持つコードが決まります。  
   
 - *メンバー変数* (モジュール レベルのプロシージャの外部で定義される) は、既定でパブリック アクセスになります。これは、それらを参照できるすべてのコードで、それらにアクセスできることを意味します。 これを変更するには、アクセス修飾子を指定します。  
   

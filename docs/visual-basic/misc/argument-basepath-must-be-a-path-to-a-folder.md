@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「引数 BasePath はフォルダーへのパスでなければなりません」を参照してください。
 title: 引数 BasePath はフォルダーへのパスである必要があります
 ms.date: 07/20/2015
 ms.assetid: b180ce60-ad57-41a6-a313-491d86d84cc7
-ms.openlocfilehash: 3c8d17db7cc03490ff437c91814db967612942a0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 314ccd8510a286fc7f01518600a625cac48e10af
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91079751"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472306"
 ---
 # <a name="argument-basepath-must-be-a-path-to-a-folder"></a>引数 BasePath はフォルダーへのパスである必要があります
 
@@ -17,7 +18,7 @@ ms.locfileid: "91079751"
   
 - `BasePath` に指定している値を確認して、必ずフォルダーへの有効なパスにします。  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - <xref:System.CodeDom.Compiler.TempFileCollection.BasePath%2A>
 - <xref:System.Resources.ResXResourceWriter.BasePath%2A>

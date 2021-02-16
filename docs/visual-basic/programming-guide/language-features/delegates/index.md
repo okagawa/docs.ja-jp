@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: デリゲート (Visual Basic)'
 title: デリゲート
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [Visual Basic]
 - Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
-ms.openlocfilehash: 1f161248fa04f8fab0e5335413e69ca565732f71
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: aba3c1483f2875600d925ec3edb0167ddfb18125
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "85503822"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434434"
 ---
 # <a name="delegates-visual-basic"></a>デリゲート (Visual Basic)
 

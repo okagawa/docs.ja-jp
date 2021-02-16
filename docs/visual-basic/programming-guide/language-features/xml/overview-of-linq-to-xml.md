@@ -1,20 +1,21 @@
 ---
+description: '詳細情報: Visual Basic における LINQ to XML の概要'
 title: LINQ to XML の概要
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ to XML [Visual Basic], about LINQ to XML
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
-ms.openlocfilehash: 4ec1c96bdca96a6e9b68b240c147b70536514d85
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e70998706f62076a2528ac646df29e0c7081cb3d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91099191"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480220"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Visual Basic における LINQ to XML の概要
 
-Visual Basic は、XML リテラルおよび XML 軸プロパティを使用した [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] のサポートを提供しています。 これにより、使い慣れた便利な構文を使用して、Visual Basic コードで XML を操作できます。 *XML リテラル*を使用すると、コードに XML を直接含めることができます。 *XML 軸プロパティ*を使用すると、XML リテラルの子ノード、子孫ノード、および属性にアクセスできます。 詳細については、「[XML リテラルの概要](xml-literals-overview.md)」と「[Visual Basic での XML へのアクセス](accessing-xml.md)」を参照してください。  
+Visual Basic は、XML リテラルおよび XML 軸プロパティを使用した [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] のサポートを提供しています。 これにより、使い慣れた便利な構文を使用して、Visual Basic コードで XML を操作できます。 *XML リテラル* を使用すると、コードに XML を直接含めることができます。 *XML 軸プロパティ* を使用すると、XML リテラルの子ノード、子孫ノード、および属性にアクセスできます。 詳細については、「[XML リテラルの概要](xml-literals-overview.md)」と「[Visual Basic での XML へのアクセス](accessing-xml.md)」を参照してください。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] は、統合言語クエリ (LINQ) を利用するために設計された、メモリ内の XML プログラミング API です。 LINQ API は直接呼び出すことができますが、XML リテラルを宣言して XML 軸プロパティに直接アクセスできるのは、Visual Basic だけです。  
   

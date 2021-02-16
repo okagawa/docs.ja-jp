@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 補間文字列 (Visual Basic リファレンス)'
 title: 補間文字列
 ms.date: 10/31/2017
-ms.openlocfilehash: c427b48ce58a59ff3878f24f1989db6ac8c8239a
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: c054401070079bdf85181619ef43c246feea5e18
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805279"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429663"
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>補間文字列 (Visual Basic リファレンス)
 
-文字列の作成に使用されます。  挿入文字列は、*挿入式*が含まれているテンプレート文字列のように見えます。  挿入文字列は、含まれる挿入式をその文字列表現に置き換えた文字列を返します。 この機能は、Visual Basic 14 以降のバージョンで使用できます。
+文字列の作成に使用されます。  挿入文字列は、*挿入式* が含まれているテンプレート文字列のように見えます。  挿入文字列は、含まれる挿入式をその文字列表現に置き換えた文字列を返します。 この機能は、Visual Basic 14 以降のバージョンで使用できます。
 
 挿入文字列の引数は、[複合書式指定文字列](../../../../standard/base-types/composite-formatting.md#composite-format-string)よりもわかりやすいものです。  たとえば、挿入文字列には、
 
