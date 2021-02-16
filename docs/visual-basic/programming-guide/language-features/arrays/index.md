@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic における配列'
 title: 配列
 ms.date: 12/06/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - arrays [Visual Basic]
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-ms.openlocfilehash: 5093f28f05c5b72294dce9a4e69723acafb31a9f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b6e8349fe02e77f12fb827618f84d44288914b62
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "85503829"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100454600"
 ---
 # <a name="arrays-in-visual-basic"></a>Visual Basic における配列
 

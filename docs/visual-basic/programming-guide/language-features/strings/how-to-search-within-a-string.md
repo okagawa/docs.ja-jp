@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法 : 文字列内を検索する (Visual Basic)'
 title: '方法: 文字列内を検索する'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - strings [Visual Basic], searching
 - examples [Visual Basic], strings
 ms.assetid: ae4c79e0-08ea-489f-bdb2-5eb6d355f284
-ms.openlocfilehash: 655f746e4e496e1935afcd2a9f9fe36d9e3a2564
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: dab9faf91eef2e6d845805693227e1a6735ec796
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348419"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429729"
 ---
 # <a name="how-to-search-within-a-string-visual-basic"></a>方法 : 文字列内を検索する (Visual Basic)
 

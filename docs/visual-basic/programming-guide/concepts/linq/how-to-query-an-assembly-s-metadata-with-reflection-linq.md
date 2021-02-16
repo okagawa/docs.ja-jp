@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 方法:リフレクションを使用してアセンブリのメタデータにクエリを実行する (LINQ) (Visual Basic)'
 title: '方法: リフレクションを使用してアセンブリのメタデータをクエリする (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 53caa336-ab83-4181-b0f6-5c87c5f9e4ee
-ms.openlocfilehash: fda27f41d31bf8aa3931bf5923ff4011628107fe
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2e0f242112ddbac3d88d7d0173550978f8784cef
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075331"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100477542"
 ---
 # <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-visual-basic"></a>方法: リフレクションを使用してアセンブリのメタデータにクエリを実行する (LINQ) (Visual Basic)
 

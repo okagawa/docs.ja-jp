@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 引数の値渡しと参照渡し (Visual Basic)'
 title: 引数の値渡しと参照渡し
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-ms.openlocfilehash: b7430b209f53a0a924ec587a0097178baf0075e3
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: dbe020a7fffd48c14d377fff740f57e4bcc43ed2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059221"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466680"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>引数の値渡しと参照渡し (Visual Basic)
 

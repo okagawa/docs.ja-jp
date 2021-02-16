@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: フォルダー内のファイルの内容を照会する方法 (LINQ) (Visual Basic)'
 title: フォルダー内のファイルの内容を照会する方法 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: edacbcd3-f3e4-4429-a8be-28a58dc0dd70
-ms.openlocfilehash: 3ad5fd6c893d590d46be67e6320ac5b915829f4b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5043f64a0bb38811b6155394b18a88f702515cc5
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346045"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434993"
 ---
 # <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a>フォルダー内のファイルの内容を照会する方法 (LINQ) (Visual Basic)
 

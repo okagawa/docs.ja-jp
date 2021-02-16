@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: Visual Basic での条件付きコンパイル'
 title: 条件付きコンパイル
 ms.date: 07/20/2015
 helpviewer_keywords:
 - conditional compilation [Visual Basic], about conditional compilation
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
-ms.openlocfilehash: e59296882edc018259816c73b6ae861b3b296783
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e9cb8a5af4dfbf2ffadef8edd8f6583614188391
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91098970"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476138"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Visual Basic での条件付きコンパイル
 
@@ -31,7 +32,7 @@ ms.locfileid: "91098970"
 
  条件付きコンパイル定数は、次の 3 つの方法のいずれかで設定できます。  
   
-- **プロジェクト デザイナー**内  
+- **プロジェクト デザイナー** 内  
   
 - コマンド ライン (コマンド ライン コンパイラを使用する場合)  
   
@@ -47,11 +48,11 @@ ms.locfileid: "91098970"
   
 |プロジェクト デザイナーで定数を設定するには|  
 |---|  
-|-   実行可能ファイルを作成する前に、「[プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)」に記載されている手順に従って、**プロジェクト デザイナー**で定数を設定します。|  
+|-   実行可能ファイルを作成する前に、「[プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)」に記載されている手順に従って、**プロジェクト デザイナー** で定数を設定します。|  
   
 |コマンド ラインで定数を設定するには|  
 |---|  
-|-   次の例のように、 **-d** スイッチを使用して条件付きコンパイル定数を入力します。<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     **-d** スイッチと最初の定数の間にスペースは不要です。 詳細については、「[-define (Visual Basic)](../../reference/command-line-compiler/define.md)」をご覧ください。<br />     コマンド ラインの宣言は、**プロジェクト デザイナー**で入力された宣言をオーバーライドしますが、それらを消去するわけではありません。 **プロジェクト デザイナー**で設定した引数は、後続のコンパイルでも有効です。<br />     コード自体に定数を記述する場合、定数のスコープはそれらが宣言されているモジュール全体であるため、配置に関して厳密な規則はありません。|  
+|-   次の例のように、 **-d** スイッチを使用して条件付きコンパイル定数を入力します。<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     **-d** スイッチと最初の定数の間にスペースは不要です。 詳細については、「[-define (Visual Basic)](../../reference/command-line-compiler/define.md)」をご覧ください。<br />     コマンド ラインの宣言は、**プロジェクト デザイナー** で入力された宣言をオーバーライドしますが、それらを消去するわけではありません。 **プロジェクト デザイナー** で設定した引数は、後続のコンパイルでも有効です。<br />     コード自体に定数を記述する場合、定数のスコープはそれらが宣言されているモジュール全体であるため、配置に関して厳密な規則はありません。|  
   
 |コードで定数を設定するには|  
 |---|  

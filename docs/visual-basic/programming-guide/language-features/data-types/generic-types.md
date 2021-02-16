@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic におけるジェネリック型 (Visual Basic)'
 title: ジェネリック型
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: f9b343c664baaf316e5cd6df72da8dcf56222382
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 1164513825240b1e83fbce2aeb6478430b0bc250
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090262"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428546"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic におけるジェネリック型 (Visual Basic)
 
@@ -67,11 +68,11 @@ ms.locfileid: "91090262"
   
  [!code-vb[VbVbalrDataTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#2)]  
   
- このスケルトンでは、 `t` は *型パラメーター*です。これはプレースホルダーなので、このクラスを宣言するときにはデータ型で置き換えます。 コードの他の部分では、 `classHolder` をさまざまなデータ型で置き換えることにより、 `t`のさまざまなバージョンを宣言できます。 このようにして宣言した 2 つのクラスを次の例に示します。  
+ このスケルトンでは、 `t` は *型パラメーター* です。これはプレースホルダーなので、このクラスを宣言するときにはデータ型で置き換えます。 コードの他の部分では、 `classHolder` をさまざまなデータ型で置き換えることにより、 `t`のさまざまなバージョンを宣言できます。 このようにして宣言した 2 つのクラスを次の例に示します。  
   
  [!code-vb[VbVbalrDataTypes#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#3)]  
   
- このステートメントでは、 *構成されるクラス*を宣言し、その中で型パラメーターを特定の型に置き換えています。 この置き換えは、構成されるクラスのコード全体に反映されます。 次の例は、 `processNewItem` の `integerClass`プロシージャがどのようなコードになるかを示しています。  
+ このステートメントでは、 *構成されるクラス* を宣言し、その中で型パラメーターを特定の型に置き換えています。 この置き換えは、構成されるクラスのコード全体に反映されます。 次の例は、 `processNewItem` の `integerClass`プロシージャがどのようなコードになるかを示しています。  
   
  [!code-vb[VbVbalrDataTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#4)]  
   
@@ -129,7 +130,7 @@ ms.locfileid: "91090262"
   
 - 型引数はパラメーターなしのコンストラクターを公開し、そのコンストラクターからオブジェクトを作成するコードで使用できる必要があります  
   
-- 型引数は、 *参照型*である、または *値型*である必要があります  
+- 型引数は、 *参照型* である、または *値型* である必要があります  
   
  複数の要件を指定する場合は、コンマで区切られた *制約リスト* を中かっこ (`{ }`) で囲みます。 アクセス可能なコンストラクターを必須とするには、[New 演算子](../../../language-reference/operators/new-operator.md)のキーワードをリストに追加します。 参照型であることを必須とするには、 `Class` キーワードを追加し、値型であることを必須とするには、 `Structure` キーワードを追加します。  
   

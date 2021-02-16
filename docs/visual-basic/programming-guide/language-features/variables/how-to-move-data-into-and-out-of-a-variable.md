@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:変数に値を格納する、および変数から値を取得する (Visual Basic)'
 title: '方法: 変数に値を格納する、および変数から値を取得する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], retrieving values
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
-ms.openlocfilehash: fe19a6160623aa9ea867becdf7a15b51319abf45
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e75be83f82a3e1418099375eb52a2d2cc4fdbd18
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410439"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481819"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>方法: 変数に値を格納する、および変数から値を取得する (Visual Basic)
 

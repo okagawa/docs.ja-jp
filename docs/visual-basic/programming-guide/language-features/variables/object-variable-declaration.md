@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: オブジェクト変数の宣言 (Visual Basic)'
 title: オブジェクト変数の宣言
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - declaring classes [Visual Basic]
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
-ms.openlocfilehash: 74b1401df3dbb2d744de74734d10cbcd92e9689e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 853f9e775976022e52121c164884fd91ef0a831c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077047"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100463716"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>オブジェクト変数の宣言 (Visual Basic)
 
@@ -47,7 +48,7 @@ Dim objC As System.OperatingSystem
 
  場合によっては、コードを実行するまで特定のクラスが不明な場合があります。 この場合は、`Object` データ型を使用して、オブジェクト変数を宣言する必要があります。 これにより、オブジェクトの任意の型への一般的な参照が作成され、特定のクラスが実行時に割り当てられます。 これは "*遅延バインディング*" と呼ばれます。 遅延バインディングでは、追加の実行時間が必要です。 また、コードは、最後に割り当てたクラスのメソッドとプロパティに限定されます。 これにより、コードが別のクラスのメンバーにアクセスしようとした場合に、実行時エラーが発生する可能性があります。  
   
- コンパイル時に特定のクラスがわかっている場合は、そのクラスのオブジェクト変数を宣言する必要があります。 これは、*事前バインディング*と呼ばれます。 事前バインディングにより、パフォーマンスが向上し、コードが特定のクラスのすべてのメソッドとプロパティにアクセスできるようになります。 前の例の宣言では、変数 `objA` がクラス <xref:System.Windows.Forms.Label?displayProperty=nameWithType> のオブジェクトのみを使用する場合、その宣言で `As System.Windows.Forms.Label` を指定する必要があります。  
+ コンパイル時に特定のクラスがわかっている場合は、そのクラスのオブジェクト変数を宣言する必要があります。 これは、*事前バインディング* と呼ばれます。 事前バインディングにより、パフォーマンスが向上し、コードが特定のクラスのすべてのメソッドとプロパティにアクセスできるようになります。 前の例の宣言では、変数 `objA` がクラス <xref:System.Windows.Forms.Label?displayProperty=nameWithType> のオブジェクトのみを使用する場合、その宣言で `As System.Windows.Forms.Label` を指定する必要があります。  
   
 ### <a name="advantages-of-early-binding"></a>事前バインディングの利点  
 

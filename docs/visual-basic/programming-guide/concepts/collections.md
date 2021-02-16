@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: コレクション (Visual Basic)'
 title: コレクション
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 91c6048caf622f21a02032bac31cb2ba5565c54c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8189eb6d3b95ef81b47f5694092a20a18894103c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551068"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100435110"
 ---
 # <a name="collections-visual-basic"></a>コレクション (Visual Basic)
 
@@ -47,7 +48,7 @@ Next
 'Output: chinook coho pink sockeye
 ```
 
-コレクションのコンテンツが既知の場合、コレクションの初期化に*コレクション初期化子*を使用できます。 詳細については、「[コレクション初期化子](../language-features/collection-initializers/index.md)」を参照してください。
+コレクションのコンテンツが既知の場合、コレクションの初期化に *コレクション初期化子* を使用できます。 詳細については、「[コレクション初期化子](../language-features/collection-initializers/index.md)」を参照してください。
 
 次の例は、コレクションへの要素の追加にコレクション初期化子を使用する以外、前の例と同じです。
 
@@ -538,7 +539,7 @@ End Class
 
 ## <a name="iterators"></a>Iterators
 
-*反復子*は、コレクションに対するカスタム イテレーションを実行するために使用されます。 反復子は、メソッドまたは `get` アクセサーのいずれかです。 反復子は、[Yield](../../language-reference/statements/yield-statement.md) ステートメントを使用して、コレクションの各要素を 1 回に 1 つ返します。
+*反復子* は、コレクションに対するカスタム イテレーションを実行するために使用されます。 反復子は、メソッドまたは `get` アクセサーのいずれかです。 反復子は、[Yield](../../language-reference/statements/yield-statement.md) ステートメントを使用して、コレクションの各要素を 1 回に 1 つ返します。
 
 [For Each…Next](../../language-reference/statements/for-each-next-statement.md) ステートメントを使用して、反復子を呼び出します。 `For Each` ループの各イテレーションは、反復子を呼び出します。 `Yield` ステートメントが反復子に到達すると、式が戻され、コードの現在の位置が保持されます。 次回、反復子が呼び出されると、この位置から実行が再開されます。
 

@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 遅延読み込みと即時読み込み'
 title: 遅延読み込みと即時読み込み
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-ms.openlocfilehash: 4e2cb7c90eb703985cbb1b8673522a9e253564d0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8c2237bd726ca79c7c168040e2a701f51ec3d238
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164299"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100464756"
 ---
 # <a name="deferred-versus-immediate-loading"></a>遅延読み込みと即時読み込み
 

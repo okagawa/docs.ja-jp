@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Sub プロシージャ (Visual Basic)'
 title: Sub プロシージャ
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-ms.openlocfilehash: 9ca1d302a0bc8e989e0b2dddf8cce68e89211d57
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: fe9d26fb2d18fbd29820af7aca96b826d7b45d0b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163814"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466511"
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub プロシージャ (Visual Basic)
 

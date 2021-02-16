@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic の連結演算子'
 title: 連結演算子
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - + operator [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: e59908c3-89e0-41ae-933d-3e8826c16a04
-ms.openlocfilehash: c123438a86a2c3293a99770107d970535fcdbdf8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7d007a830e4547f87e937cc7313c248485b4b574
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388791"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476398"
 ---
 # <a name="concatenation-operators-in-visual-basic"></a>Visual Basic の連結演算子
 

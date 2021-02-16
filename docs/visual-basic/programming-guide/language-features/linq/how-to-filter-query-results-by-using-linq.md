@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:LINQ を使用してクエリ結果をフィルター処理する (Visual Basic)'
 title: '方法: LINQ を使用してクエリ結果をフィルター処理する'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - filtering data [Visual Basic]
 ms.assetid: ef103092-9bed-4134-97f4-2db696e83c12
-ms.openlocfilehash: 4d91783429f24abfe4149217542f8f7a6073bfef
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b3f861d9a7fb7b601606f190ad3bfbeef054cad7
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404992"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100422797"
 ---
 # <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>方法: LINQ を使用してクエリ結果をフィルター処理する (Visual Basic)
 

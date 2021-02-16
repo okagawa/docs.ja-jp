@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 初めての LINQ クエリの作成 (Visual Basic)'
 title: 初めての LINQ クエリの作成
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: c7d0595b991bdad6ef05b567f95ead8c7fccdbc2
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: cb57ae3c22b7e2ee2c3b66a8f033eda6fd72e16a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077281"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100477516"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>初めての LINQ クエリの作成 (Visual Basic)
 
@@ -44,7 +45,7 @@ ms.locfileid: "91077281"
   
 ## <a name="the-data-source"></a>データ ソース  
 
- 前の例では、データ ソースが配列であるため、暗黙的にジェネリック <xref:System.Collections.Generic.IEnumerable%601> インターフェイスがサポートされます。 配列を LINQ クエリのデータ ソースとして使用できるのは、そのためです。 <xref:System.Collections.Generic.IEnumerable%601> をサポートする型や、ジェネリック <xref:System.Linq.IQueryable%601> などの派生インターフェイスは、*クエリ可能型*と呼ばれます。  
+ 前の例では、データ ソースが配列であるため、暗黙的にジェネリック <xref:System.Collections.Generic.IEnumerable%601> インターフェイスがサポートされます。 配列を LINQ クエリのデータ ソースとして使用できるのは、そのためです。 <xref:System.Collections.Generic.IEnumerable%601> をサポートする型や、ジェネリック <xref:System.Linq.IQueryable%601> などの派生インターフェイスは、*クエリ可能型* と呼ばれます。  
   
  配列は、暗黙的なクエリ可能型として、変更や特別な処理を行わなくても、LINQ データ ソースとして使用できます。 同じことは、ジェネリックである <xref:System.Collections.Generic.List%601> や <xref:System.Collections.Generic.Dictionary%602>、その他 .NET Framework クラス ライブラリのクラスなど、<xref:System.Collections.Generic.IEnumerable%601> をサポートするすべてのコレクション型に言えます。  
   

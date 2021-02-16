@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: XML リテラルの概要 (Visual Basic)'
 title: XML リテラルの概要
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-ms.openlocfilehash: c65cac4f6e8f5f314587f20d5c373c92ea0c51e5
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5544c0238b117ed5b9b2f9cdab312127736e97d7
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085387"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100423850"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>XML リテラルの概要 (Visual Basic)
 
-*XML リテラル*を使用すると、Visual Basic コード内に直接 XML を組み込むことができます。 XML リテラル構文は [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] オブジェクトを表し、XML 1.0 構文に似ています。 これにより、コードが最終的な XML と同じ構造を持つため、XML 要素およびドキュメントをプログラムで簡単に作成できます。  
+*XML リテラル* を使用すると、Visual Basic コード内に直接 XML を組み込むことができます。 XML リテラル構文は [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] オブジェクトを表し、XML 1.0 構文に似ています。 これにより、コードが最終的な XML と同じ構造を持つため、XML 要素およびドキュメントをプログラムで簡単に作成できます。  
   
  Visual Basic は、XML リテラルを [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] オブジェクト内にコンパイルします。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] には、XML を作成および操作するための簡単なオブジェクト モデルが用意されています。このモデルは、統合言語クエリ (LINQ) と統合されています。 詳細については、「<xref:System.Xml.Linq.XElement>」を参照してください。  
   

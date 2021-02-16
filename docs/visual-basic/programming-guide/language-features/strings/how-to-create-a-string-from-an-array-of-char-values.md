@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:方法: char 値の配列から文字列を作成する (Visual Basic)'
 title: '方法: Char 値の配列から文字列を作成する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - examples [Visual Basic], arrays
 - examples [Visual Basic], Char data type
 ms.assetid: 69f94e85-d57c-4ccc-a62a-426e829f5c5e
-ms.openlocfilehash: 08ad2f1c9455853e92533a7f00726c73b6adb87e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 67b675f5f02c92b785e374b99f49248d43d12fb4
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071158"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429833"
 ---
 # <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a>方法: 方法: char 値の配列から文字列を作成する (Visual Basic)
 

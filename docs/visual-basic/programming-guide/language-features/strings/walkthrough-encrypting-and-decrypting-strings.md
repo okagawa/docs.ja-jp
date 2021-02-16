@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: チュートリアル: Visual Basic での文字列の暗号化と暗号化解除'
 title: 文字列の暗号化と複合化
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - decryption [Visual Basic], strings
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
-ms.openlocfilehash: e0e3fc332bf9430b1fa56dbb7630f849d3a29c2e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: afc1eeaec85b2e430aead7f16401289b6e2e9e49
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072406"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471085"
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>チュートリアル: Visual Basic での文字列の暗号化と暗号化解除
 

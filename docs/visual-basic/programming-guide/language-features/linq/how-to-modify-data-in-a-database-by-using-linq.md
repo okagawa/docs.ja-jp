@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:LINQ を使用してデータベースのデータを変更する (Visual Basic)'
 title: '方法: LINQ を使用してデータベースのデータを変更する'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: eb076d9156fa66858f2e560422eef0dc61ba22b5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b58ca542fbc6f4d63705e45b53edc8ded83ab88b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403486"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100422771"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>方法: LINQ を使用してデータベースのデータを変更する (Visual Basic)
 

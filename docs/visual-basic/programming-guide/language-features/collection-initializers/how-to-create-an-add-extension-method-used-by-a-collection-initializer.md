@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: 方法:コレクション初期化子によって使用される拡張メソッドを作成して追加する (Visual Basic)'
 title: '方法: コレクション初期化子によって使用される Add 拡張メソッドを作成する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: f64b52c7-8b11-4410-93a6-cb3aeebcc772
-ms.openlocfilehash: c36fab6635a9f7820c52c5f73c20487b92879b9a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 1fbe6f438c4761ae668a6bd6a0a2c38c8efdb439
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086349"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475475"
 ---
 # <a name="how-to-create-an-add-extension-method-used-by-a-collection-initializer-visual-basic"></a>方法: コレクション初期化子によって使用される拡張メソッドを作成して追加する (Visual Basic)
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: データ型のトラブルシューティング (Visual Basic)'
 title: データ型のトラブルシューティング
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: 239e1c2f908a9023aeca6e92aff4633b60f27b69
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 417a71e88dcd0bfb0c6582ee6304a64871640255
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393404"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100463846"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>データ型のトラブルシューティング (Visual Basic)
 

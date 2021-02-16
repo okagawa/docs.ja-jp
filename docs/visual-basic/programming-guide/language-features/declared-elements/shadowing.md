@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic におけるシャドウ'
 title: シャドウ
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 81e54875a3c1a4bbc5f5631e7ebac649a2e5afaf
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 468ad72808d689016cacb8d2be56fa9f9fcd1eec
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085894"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434824"
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic におけるシャドウ
 
-2 つのプログラミング要素が同じ名前を共有している場合、それらのうちの 1 つで他方を非表示にしたり、*シャドウ*したりすることができます。 このような状況では、シャドウされた要素を参照することはできません。代わりに、コードで要素名を使用すると、Visual Basic コンパイラによって、それがシャドウする要素に解決されます。  
+2 つのプログラミング要素が同じ名前を共有している場合、それらのうちの 1 つで他方を非表示にしたり、*シャドウ* したりすることができます。 このような状況では、シャドウされた要素を参照することはできません。代わりに、コードで要素名を使用すると、Visual Basic コンパイラによって、それがシャドウする要素に解決されます。  
   
 ## <a name="purpose"></a>目的  
 
@@ -35,7 +36,7 @@ ms.locfileid: "91085894"
   
 ## <a name="types-of-shadowing"></a>シャドウの種類  
 
- 要素では、2 つの異なる方法で別の要素をシャドウできます。 シャドウする要素は、シャドウされる要素を含む領域のサブ領域内で宣言できます。この場合、シャドウは*スコープによって*実現されます。 または、派生クラスで、基底クラスのメンバーを再定義できます。この場合、シャドウは*継承によって*行われます。  
+ 要素では、2 つの異なる方法で別の要素をシャドウできます。 シャドウする要素は、シャドウされる要素を含む領域のサブ領域内で宣言できます。この場合、シャドウは *スコープによって* 実現されます。 または、派生クラスで、基底クラスのメンバーを再定義できます。この場合、シャドウは *継承によって* 行われます。  
   
 ### <a name="shadowing-through-scope"></a>スコープによるシャドウ  
 

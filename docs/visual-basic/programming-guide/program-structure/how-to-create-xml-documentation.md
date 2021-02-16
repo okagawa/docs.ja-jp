@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:Visual Basic で XML ドキュメントを作成する'
 title: '方法: XML ドキュメントを作成する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
-ms.openlocfilehash: 1421cc85beba42b3cf3656c34b1d02347fbaf164
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d54c79d820a170b246e5c85d7562487fbe66f39c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403240"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475956"
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>方法: Visual Basic で XML ドキュメントを作成する
 
@@ -20,11 +21,11 @@ ms.locfileid: "84403240"
 
 ## <a name="to-create-xml-documentation-for-a-type-or-member"></a>型またはメンバーの XML ドキュメントを作成するには
 
-1. **コード エディター**で、ドキュメントを作成する型またはメンバーの上の行にカーソルを置きます。
+1. **コード エディター** で、ドキュメントを作成する型またはメンバーの上の行にカーソルを置きます。
 
 2. `'''` (3 つの単一引用符) を入力します。
 
-    型またはメンバーの XML スケルトンが**コード エディター**に追加されます。
+    型またはメンバーの XML スケルトンが **コード エディター** に追加されます。
 
 3. 適切なタグの間に説明情報を追加します。
 

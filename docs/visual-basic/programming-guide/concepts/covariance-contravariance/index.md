@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 共変性と反変性 (Visual Basic)'
 title: 共変性と反変性
 ms.date: 07/20/2015
 ms.assetid: 59224c46-9931-466b-8c6e-3648c3e609c6
-ms.openlocfilehash: 11dd71a8cfde12b7af1de79e3f5a095f79d8aa6e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6569b2c6c4790a5fcf53a9991543286ad6c4314c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "85503791"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100485251"
 ---
 # <a name="covariance-and-contravariance-visual-basic"></a>共変性と反変性 (Visual Basic)
 
@@ -88,7 +89,7 @@ Dim strings As IEnumerable(Of String) = New List(Of String)
 Dim objects As IEnumerable(Of Object) = strings
 ```
 
-ジェネリック インターフェイスや汎用デリゲートは、そのジェネリック パラメーターが共変または反変として宣言されている場合、*バリアント*と呼ばれます。 Visual Basic では、独自のバリアント インターフェイスおよびデリゲートを作成できます。 詳細については、「[Creating Variant Generic Interfaces (Visual Basic)](creating-variant-generic-interfaces.md)」(バリアント ジェネリック インターフェイスの作成 (Visual Basic)) および「[Variance in Delegates (Visual Basic)](variance-in-delegates.md)」(デリゲートの分散 (Visual Basic)) を参照してください。
+ジェネリック インターフェイスや汎用デリゲートは、そのジェネリック パラメーターが共変または反変として宣言されている場合、*バリアント* と呼ばれます。 Visual Basic では、独自のバリアント インターフェイスおよびデリゲートを作成できます。 詳細については、「[Creating Variant Generic Interfaces (Visual Basic)](creating-variant-generic-interfaces.md)」(バリアント ジェネリック インターフェイスの作成 (Visual Basic)) および「[Variance in Delegates (Visual Basic)](variance-in-delegates.md)」(デリゲートの分散 (Visual Basic)) を参照してください。
 
 ## <a name="related-topics"></a>関連トピック
 

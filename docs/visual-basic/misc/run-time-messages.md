@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「Visual Basic Run-Time メッセージ」を参照してください。
 title: ランタイム メッセージ
 ms.date: 07/20/2015
 helpviewer_keywords:
 - errors [Visual Basic], run-time
 - run-time errors [Visual Basic], Visual Basic
 ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
-ms.openlocfilehash: 88c9d341064f5c8d85d4c27b7d9bc79114642610
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 6e6367c8094d5a1d3eb3554cbc56e09cc5c8034a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91060705"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100485810"
 ---
 # <a name="visual-basic-run-time-messages"></a>Visual Basic ランタイム メッセージ
 
@@ -366,7 +367,7 @@ ms.locfileid: "91060705"
   
  [パスが見つかりません。](../language-reference/error-messages/path-not-found.md)  
   
- [パス/ファイルアクセスエラー](../language-reference/error-messages/path-file-access-error.md)  
+ [パス/ファイル アクセス エラー](../language-reference/error-messages/path-file-access-error.md)  
   
  [アクセス許可は拒否されました。(Visual Basic)](../language-reference/error-messages/permission-denied.md)  
   
@@ -554,6 +555,6 @@ ms.locfileid: "91060705"
   
  [現在のフォルダーの下のパスか、そのフォルダーのサブフォルダー 1 つを指定する必要があります](you-must-specify-path-that-is-under-the-current-folder-or-one-of-sub-folders.md)  
   
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [エラー メッセージ](../language-reference/error-messages/index.md)

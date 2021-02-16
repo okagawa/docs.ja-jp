@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 等値演算 (Visual Basic)'
 title: 等値演算
 ms.date: 07/20/2015
 ms.assetid: 1f2fcf87-6f52-4830-b9af-861f9ad999dc
-ms.openlocfilehash: d91627a8566e5c04ff3fd930543066fed5b58384
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f9bfe826c856e8471de3894f09438c651e012d0f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078295"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428649"
 ---
 # <a name="equality-operations-visual-basic"></a>等値演算 (Visual Basic)
 

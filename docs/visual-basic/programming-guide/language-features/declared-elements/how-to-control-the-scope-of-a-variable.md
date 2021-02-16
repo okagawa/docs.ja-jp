@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:変数のスコープを制御する (Visual Basic)'
 title: '方法: 変数のスコープを制御する'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: 2ce7c1700eec54542719e6e0880466ca136e86f6
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c6da599f76883cba545efbdf9570aa05770602a2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095434"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429872"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>方法: 変数のスコープを制御する (Visual Basic)
 
-通常、変数は、*スコープ*内にあります。つまり、それを宣言した領域全体で可視になり参照できます。 場合によって、変数の*アクセス レベル*がそのスコープに影響を与えることがあります。  
+通常、変数は、*スコープ* 内にあります。つまり、それを宣言した領域全体で可視になり参照できます。 場合によって、変数の *アクセス レベル* がそのスコープに影響を与えることがあります。  
   
  詳細については、「 [Scope in Visual Basic](scope.md)」を参照してください。  
   
@@ -41,7 +42,7 @@ ms.locfileid: "91095434"
   
 ## <a name="scope-at-module-or-namespace-level"></a>モジュールまたは名前空間レベルのスコープ  
 
- 便宜上、*モジュール レベル*という 1 つの用語は、モジュール、クラス、および構造体に等しく適用されます。 モジュール レベル変数のアクセスレベルによってそのスコープが決まります。 モジュール、クラス、または構造体を含む名前空間もスコープに影響します。  
+ 便宜上、*モジュール レベル* という 1 つの用語は、モジュール、クラス、および構造体に等しく適用されます。 モジュール レベル変数のアクセスレベルによってそのスコープが決まります。 モジュール、クラス、または構造体を含む名前空間もスコープに影響します。  
   
 #### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>変数をモジュール、クラス、または構造体全体で可視にするには  
   

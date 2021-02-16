@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 非同期タスクまたはタスクの一覧のキャンセル (Visual Basic)'
 title: 非同期タスクまたはタスクの一覧のキャンセル
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 932bf46f1e3aee220d0412f1688e961faaef3459
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d61db65db62c62e93abf0a5036533dd2967fe917
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396702"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100467083"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>非同期タスクまたはタスクの一覧のキャンセル (Visual Basic)
 
@@ -32,7 +33,7 @@ ms.locfileid: "84396702"
 
 3. **[プロジェクトを開く]** ダイアログ ボックスで、圧縮解除したサンプル コードを含むフォルダーを開き、AsyncFineTuningVB 用のソリューション (.sln) ファイルを開きます。
 
-4. **ソリューション エクスプローラー**で、**CancelATask** プロジェクトのショートカット メニューを開き、 **[スタートアップ プロジェクトに設定]** をクリックします。
+4. **ソリューション エクスプローラー** で、**CancelATask** プロジェクトのショートカット メニューを開き、 **[スタートアップ プロジェクトに設定]** をクリックします。
 
 5. F5 キーを押してプロジェクトを実行します。
 
@@ -42,7 +43,7 @@ ms.locfileid: "84396702"
 
 ### <a name="building-the-example"></a>例のビルド
 
-次の変更は、Web サイトをダウンロードするアプリケーションに**キャンセル** ボタンを追加します。 この例のダウンロードまたはビルドをしない場合は、このトピックの最後にある「コード例全体」のセクションで最終製品をレビューできます。 アスタリスクはコードの変更点を示しています。
+次の変更は、Web サイトをダウンロードするアプリケーションに **キャンセル** ボタンを追加します。 この例のダウンロードまたはビルドをしない場合は、このトピックの最後にある「コード例全体」のセクションで最終製品をレビューできます。 アスタリスクはコードの変更点を示しています。
 
 この例を自分でビルドするには、「例をダウンロードする」のセクションの詳細な手順の指示に従いますが、 **[スタートアップ プロジェクト]** として、 **[CancelATask]** の代わりに **[StarterCode]** を選択します。
 
@@ -57,7 +58,7 @@ ms.locfileid: "84396702"
         Dim cts As CancellationTokenSource
     ```
 
-2. 次のような**キャンセル** ボタンのイベント ハンドラーのコードを追加します。 ユーザーが取り消しを要求すると、イベント ハンドラーは <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> メソッドを使って `cts` に通知します。
+2. 次のような **キャンセル** ボタンのイベント ハンドラーのコードを追加します。 ユーザーが取り消しを要求すると、イベント ハンドラーは <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> メソッドを使って `cts` に通知します。
 
     ```vb
     ' ***Add an event handler for the Cancel button.
@@ -69,7 +70,7 @@ ms.locfileid: "84396702"
     End Sub
     ```
 
-3. **開始**ボタン `startButton_Click` のためのイベント ハンドラーに次の変更を行います。
+3. **開始** ボタン `startButton_Click` のためのイベント ハンドラーに次の変更を行います。
 
     - `CancellationTokenSource`、`cts` をインスタンス化します。
 
@@ -97,7 +98,7 @@ ms.locfileid: "84396702"
       End Try
       ```
 
-4. `AccessTheWebAsync` では、Web サイトのコンテンツをダウンロードするために <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 型の `GetAsync` メソッドの <xref:System.Net.Http.HttpClient> オーバーロードを使用します。 2 番目の引数として、`ct` の <xref:System.Threading.CancellationToken> パラメーターである `AccessTheWebAsync` を渡します。 ユーザーが**キャンセル** ボタンをクリックすると、トークンがメッセージを送信します。
+4. `AccessTheWebAsync` では、Web サイトのコンテンツをダウンロードするために <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 型の `GetAsync` メソッドの <xref:System.Net.Http.HttpClient> オーバーロードを使用します。 2 番目の引数として、`ct` の <xref:System.Threading.CancellationToken> パラメーターである `AccessTheWebAsync` を渡します。 ユーザーが **キャンセル** ボタンをクリックすると、トークンがメッセージを送信します。
 
     次のコードは、`AccessTheWebAsync` の変更点を示しています。
 
@@ -131,7 +132,7 @@ ms.locfileid: "84396702"
     Length of the downloaded string: 158125.
     ```
 
-    プログラムがコンテンツのダウンロードを終了する前に**キャンセル** ボタンをクリックすると、プログラムは次の出力を生成します。
+    プログラムがコンテンツのダウンロードを終了する前に **キャンセル** ボタンをクリックすると、プログラムは次の出力を生成します。
 
     ```console
     Ready to download.
@@ -152,7 +153,7 @@ ms.locfileid: "84396702"
 
 3. **[プロジェクトを開く]** ダイアログ ボックスで、圧縮解除したサンプル コードを含むフォルダーを開き、AsyncFineTuningVB 用のソリューション (.sln) ファイルを開きます。
 
-4. **ソリューション エクスプローラー**で、**CancelAListOfTasks** プロジェクトのショートカット メニューを開き、 **[スタートアップ プロジェクトに設定]** をクリックします。
+4. **ソリューション エクスプローラー** で、**CancelAListOfTasks** プロジェクトのショートカット メニューを開き、 **[スタートアップ プロジェクトに設定]** をクリックします。
 
 5. F5 キーを押してプロジェクトを実行します。
 
@@ -241,7 +242,7 @@ ms.locfileid: "84396702"
     Downloads complete.
     ```
 
-    ダウンロードが完了する前に**キャンセル** ボタンをクリックすると、出力には取り消しの前に完了したダウンロードの長さが含まれています。
+    ダウンロードが完了する前に **キャンセル** ボタンをクリックすると、出力には取り消しの前に完了したダウンロードの長さが含まれています。
 
     ```console
     Length of the downloaded string: 35939.

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 非同期の戻り値の型 (Visual Basic)'
 title: 非同期の戻り値の型
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 5d19fc9831580412da24333be0885fce55384658
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 12a7f577a89ff8f8037de879f9e37d6fdb917aa8
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396715"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438919"
 ---
 # <a name="async-return-types-visual-basic"></a>非同期の戻り値の型 (Visual Basic)
 
@@ -165,11 +166,11 @@ End Sub
 
 4. プロジェクトの名前として「`AsyncReturnTypes`」と入力し、 **[OK]** をクリックします。
 
-     **ソリューション エクスプローラー**に新しいプロジェクトが表示されます。
+     **ソリューション エクスプローラー** に新しいプロジェクトが表示されます。
 
 5. Visual Studio コード エディターで、 **[MainWindow.xaml]** タブをクリックします。
 
-     タブが表示されない場合は、**ソリューション エクスプローラー**で MainWindow.xaml のショートカット メニューを開き、 **[開く]** をクリックします。
+     タブが表示されない場合は、**ソリューション エクスプローラー** で MainWindow.xaml のショートカット メニューを開き、 **[開く]** をクリックします。
 
 6. MainWindow.xaml の **[XAML]** ウィンドウで、コードを次のコードに置き換えます。
 
@@ -188,7 +189,7 @@ End Sub
 
      テキスト ボックスとボタンを含むシンプルなウィンドウが、MainWindow.xaml の **[デザイン]** ウィンドウに表示されます。
 
-7. **ソリューション エクスプローラー**で MainWindow.xaml.vb のショートカット メニューを開き、 **[コードの表示]** を選択します。
+7. **ソリューション エクスプローラー** で MainWindow.xaml.vb のショートカット メニューを開き、 **[コードの表示]** を選択します。
 
 8. MainWindow.xaml.vb のコードを次のコードに置き換えます。
 

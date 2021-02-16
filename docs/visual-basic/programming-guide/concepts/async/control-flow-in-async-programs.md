@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 非同期プログラムにおける制御フロー (Visual Basic)'
 title: 非同期プログラムにおける制御フロー
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 0c479b9dd2a691b1b353fac54ee3320a895b1c7f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bf0ca6a083971cb02cfb6dff2dfcaaabd5405b36
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396663"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428247"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>非同期プログラムにおける制御フロー (Visual Basic)
 
@@ -125,11 +126,11 @@ Length of the downloaded string: 33946.
 
 4. プロジェクトの名前として「`AsyncTracer`」と入力し、 **[OK]** をクリックします。
 
-    **ソリューション エクスプローラー**に新しいプロジェクトが表示されます。
+    **ソリューション エクスプローラー** に新しいプロジェクトが表示されます。
 
 5. Visual Studio コード エディターで、 **[MainWindow.xaml]** タブをクリックします。
 
-    タブが表示されない場合は、**ソリューション エクスプローラー**で MainWindow.xaml のショートカット メニューを開き、 **[コードの表示]** を選択します。
+    タブが表示されない場合は、**ソリューション エクスプローラー** で MainWindow.xaml のショートカット メニューを開き、 **[コードの表示]** を選択します。
 
 6. MainWindow.xaml の **XAML** ビューで、コードを次のコードに置き換えます。
 
@@ -147,11 +148,11 @@ Length of the downloaded string: 33946.
     </Window>
     ```
 
-    テキスト ボックスとボタンを含む簡単なウィンドウが、MainWindow.xaml の**デザイン** ビューに表示されます。
+    テキスト ボックスとボタンを含む簡単なウィンドウが、MainWindow.xaml の **デザイン** ビューに表示されます。
 
 7. <xref:System.Net.Http> への参照を追加します。
 
-8. **ソリューション エクスプローラー**で MainWindow.xaml.vb のショートカット メニューを開き、 **[コードの表示]** を選択します。
+8. **ソリューション エクスプローラー** で MainWindow.xaml.vb のショートカット メニューを開き、 **[コードの表示]** を選択します。
 
 9. MainWindow.xaml.vb のコードを次のコードに置き換えます。
 

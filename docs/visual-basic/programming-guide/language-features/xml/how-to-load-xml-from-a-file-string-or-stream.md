@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:ファイル、文字列、またはストリームから XML を読み込む (Visual Basic)'
 title: '方法: ファイル、文字列、またはストリームからの XML の読み込み'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [Visual Basic], loading
 - LINQ to XML [Visual Basic], loading XML from files
 ms.assetid: 2b02dcec-4cca-4575-b4ad-89ceb87b984c
-ms.openlocfilehash: 7f2a961ebb7ecd4fc0512e141b4a437be87bec0e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 375190642c93d929abe2ae10bb6ccba927e3bc8a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392289"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480064"
 ---
 # <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>方法: ファイル、文字列、またはストリームから XML を読み込む (Visual Basic)
 

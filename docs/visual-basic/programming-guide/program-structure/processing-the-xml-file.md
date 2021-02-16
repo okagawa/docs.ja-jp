@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: XML ファイルの処理 (Visual Basic)'
 title: XML ファイルの処理
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-ms.openlocfilehash: 9e12f6f5d86957a7f9aaea6047a79957fac8ce1e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2314e7dafbd747f9a19b73d06d71c73631e53861
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072133"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468396"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>XML ファイルの処理 (Visual Basic)
 

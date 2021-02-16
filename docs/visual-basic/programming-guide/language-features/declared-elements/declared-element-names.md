@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 宣言された要素の名前 (Visual Basic)'
 title: 宣言された要素の名前
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-ms.openlocfilehash: 327a18644c1dc1d8dae59016b8e30600357d2ca9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ba0a6d6b236c0c4e9ce81c37a1cca4e709cc5588
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086180"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100425686"
 ---
 # <a name="declared-element-names-visual-basic"></a>宣言された要素の名前 (Visual Basic)
 
-宣言されたすべての要素には名前が付いています。これは*識別子*とも呼ばれ、コードが参照するために使用するものです。  
+宣言されたすべての要素には名前が付いています。これは *識別子* とも呼ばれ、コードが参照するために使用するものです。  
   
 ## <a name="rules"></a>ルール  
 
@@ -75,7 +76,7 @@ ms.locfileid: "91086180"
   
 ## <a name="escaped-names"></a>エスケープされた名前  
 
- 一般に、要素名は、Visual Basic によって予約されているキーワード (`Case` や `Friend` など) と一致しないようにする必要があります。 ただし、*エスケープされた名前*を定義できます。これは、角かっこ (`[ ]`) で囲まれています。 エスケープされた名前は、角かっこによってあいまいさが解消されるため、どの Visual Basic キーワードとも一致させることができます。 また、コード内で後で名前を参照するときにも、角かっこを使用します。  
+ 一般に、要素名は、Visual Basic によって予約されているキーワード (`Case` や `Friend` など) と一致しないようにする必要があります。 ただし、*エスケープされた名前* を定義できます。これは、角かっこ (`[ ]`) で囲まれています。 エスケープされた名前は、角かっこによってあいまいさが解消されるため、どの Visual Basic キーワードとも一致させることができます。 また、コード内で後で名前を参照するときにも、角かっこを使用します。  
   
  通常、エスケープされた名前は、次の場合にのみ使用してください。  
   

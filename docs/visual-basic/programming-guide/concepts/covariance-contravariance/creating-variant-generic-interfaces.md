@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: バリアント ジェネリック インターフェイスの作成 (Visual Basic)'
 title: バリアント ジェネリック インターフェイスの作成
 ms.date: 07/20/2015
 ms.assetid: d4037dd2-dfe9-4811-9150-93d4e8b20113
-ms.openlocfilehash: 884349159d2738d8481b217f9dab383483616f2b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 41da9040709ff053ba05cc7c44be989b7fa39c44
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400643"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100485264"
 ---
 # <a name="creating-variant-generic-interfaces-visual-basic"></a>バリアント ジェネリック インターフェイスの作成 (Visual Basic)
 

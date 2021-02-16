@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:Visual Basic で配列変数を初期化する'
 title: '方法: 配列変数を初期化する'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-ms.openlocfilehash: 1add054a6cb6468f4581f92ca3a258c5b0cdc77d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 05cca98457a56db52ee99cfc4ac93c860da7a51d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058860"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100427610"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>方法: Visual Basic で配列変数を初期化する
 

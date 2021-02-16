@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic の Main プロシージャ'
 title: メインのプロシージャ
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: d6708ee13963aaae43a73b159032f64f0fffac10
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: b25190ef216fe4219923a27d6bbe0acff4536685
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072211"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100432807"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic の Main プロシージャ
 

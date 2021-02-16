@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:コードのセクションを折りたたんで非表示にする (Visual Basic)'
 title: '方法: コードのセクションを折りたたんで非表示にする'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic, code hiding
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
-ms.openlocfilehash: c11affe9c4dd4251ba8ff4b87029d314970b5fcb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b93a2190bd6266c6f9fa5cb06eb249ca174c8067
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404850"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475969"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>方法: コードのセクションを折りたたんで非表示にする (Visual Basic)
 

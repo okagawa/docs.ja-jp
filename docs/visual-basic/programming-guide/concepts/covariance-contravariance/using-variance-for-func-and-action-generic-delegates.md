@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: Func および Action 汎用デリゲートでの変性の使用 (Visual Basic)'
 title: Func および Action 汎用デリゲートでの分散の使用
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-ms.openlocfilehash: f824d2422d67f1395d21a0863ca8c95d9f108989
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4a445d9ad1cf1bd6ca6e13bdd2e40545c6b28fe8
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84375759"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100485238"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Func および Action 汎用デリゲートでの変性の使用 (Visual Basic)
 

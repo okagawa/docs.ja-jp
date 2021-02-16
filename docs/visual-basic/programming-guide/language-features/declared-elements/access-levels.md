@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic でのアクセス レベル'
 title: アクセス レベル
 ms.date: 05/10/2018
 helpviewer_keywords:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: 33a218a2acc3c876428d6c9a887280a559f84323
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bd26dce5490fde915aeef0a1293ee504a9d4984c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348679"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100464743"
 ---
 # <a name="access-levels-in-visual-basic"></a>Visual Basic でのアクセス レベル
 
-宣言された要素の*アクセス レベル*は、それにアクセスする機能の範囲、つまり、読み取りまたは書き込みのアクセス許可があるコードです。 これは、要素自体を宣言する方法だけでなく、要素のコンテナーのアクセス レベルによっても決定されます。 コンテナー要素にアクセスできないコードは、`Public` として宣言されていても、格納されている要素のいずれにもアクセスできません。 たとえば、`Private` 構造体の `Public` 変数は、構造体を含むクラス内からアクセスできますが、そのクラスの外部からはアクセスできません。
+宣言された要素の *アクセス レベル* は、それにアクセスする機能の範囲、つまり、読み取りまたは書き込みのアクセス許可があるコードです。 これは、要素自体を宣言する方法だけでなく、要素のコンテナーのアクセス レベルによっても決定されます。 コンテナー要素にアクセスできないコードは、`Public` として宣言されていても、格納されている要素のいずれにもアクセスできません。 たとえば、`Private` 構造体の `Public` 変数は、構造体を含むクラス内からアクセスできますが、そのクラスの外部からはアクセスできません。
 
 ## <a name="public"></a>Public
 
@@ -109,7 +110,7 @@ Private Protected internalValue As Integer
 
 ## <a name="access-modifiers"></a>アクセス修飾子
 
-アクセス レベルを指定するキーワードは、*アクセス修飾子*と呼ばれます。 アクセス修飾子の比較を次の表に示します。
+アクセス レベルを指定するキーワードは、*アクセス修飾子* と呼ばれます。 アクセス修飾子の比較を次の表に示します。
 
 |アクセス修飾子|付与されたアクセス レベル|このアクセス レベルで宣言できる要素|この修飾子を使用できる宣言コンテキスト|
 |---------------------|--------------------------|-----------------------------------------------------|----------------------------------------------------------------|

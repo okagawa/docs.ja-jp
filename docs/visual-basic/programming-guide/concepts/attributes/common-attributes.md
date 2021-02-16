@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 一般的な属性 (Visual Basic)'
 title: 共通の属性
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 57ef8f103d64a51d896f46d2889d78ec99ff3223
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 875554b69a23640c2d67367c93b56c34c286df37
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400720"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100437788"
 ---
 # <a name="common-attributes-visual-basic"></a>一般的な属性 (Visual Basic)
 

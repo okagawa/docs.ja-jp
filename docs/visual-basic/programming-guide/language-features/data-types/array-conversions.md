@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 配列の変換 (Visual Basic)'
 title: 配列の変換
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - conversions [Visual Basic], array types
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-ms.openlocfilehash: 375c75c954f3be535272d674d9b786cad46b1a01
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 1600042e1d41cbc2bd52468544db0e806e776d9c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077190"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466407"
 ---
 # <a name="array-conversions-visual-basic"></a>配列の変換 (Visual Basic)
 

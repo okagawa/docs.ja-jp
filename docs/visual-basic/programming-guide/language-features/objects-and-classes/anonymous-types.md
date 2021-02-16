@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 匿名型 (Visual Basic)'
 title: 匿名型
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,22 +9,22 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: 5ab3cf8c3c02ff35890f71ad6c7f314b51b87133
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 447ca914726d4b426ad4ba2ec370a4bbe9589b81
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075240"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100425621"
 ---
 # <a name="anonymous-types-visual-basic"></a>匿名型 (Visual Basic)
 
-Visual Basic では匿名型がサポートされています。これを使用すると、データ型のクラス定義を記述せずにオブジェクトを作成できます。 クラスは、コンパイラによって生成されます。 このクラスには使用可能な名前がなく、<xref:System.Object> から直接継承され、オブジェクトの宣言時に指定したプロパティが格納されます。 データ型の名前を指定しないため、*匿名型*と呼ばれます。  
+Visual Basic では匿名型がサポートされています。これを使用すると、データ型のクラス定義を記述せずにオブジェクトを作成できます。 クラスは、コンパイラによって生成されます。 このクラスには使用可能な名前がなく、<xref:System.Object> から直接継承され、オブジェクトの宣言時に指定したプロパティが格納されます。 データ型の名前を指定しないため、*匿名型* と呼ばれます。  
   
  次の例では、`Name` と `Price` の 2 つのプロパティを持つ匿名型のインスタンスとして、変数 `product` を宣言して作成します。  
   
  [!code-vb[VbVbalrAnonymousTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#1)]  
   
- *クエリ式*は、匿名型を使用して、クエリによって選択されたデータの列を結合します。 特定のクエリによって選択される可能性のある列を予測できないため、結果の型を事前に定義することはできません。 匿名型を使用すると、任意の数の列を任意の順序で選択するクエリを記述できます。 コンパイラは、指定されたプロパティと指定された順序に一致するデータ型を作成します。  
+ *クエリ式* は、匿名型を使用して、クエリによって選択されたデータの列を結合します。 特定のクエリによって選択される可能性のある列を予測できないため、結果の型を事前に定義することはできません。 匿名型を使用すると、任意の数の列を任意の順序で選択するクエリを記述できます。 コンパイラは、指定されたプロパティと指定された順序に一致するデータ型を作成します。  
   
  次の例では、`products` は Product オブジェクトの一覧であり、それぞれに多くのプロパティがあります。 変数 `namePriceQuery` は、実行されると `Name` と `Price` の 2 つのプロパティを持つ匿名型のインスタンスのコレクションを返すクエリの定義を保持します。  
   
@@ -62,7 +63,7 @@ Visual Basic では匿名型がサポートされています。これを使用�
   
 - コンパイラによって生成された匿名型のハッシュ コード アルゴリズムには、キー プロパティ値のみが含まれます。  
   
-### <a name="equality"></a>等式  
+### <a name="equality"></a>等価比較  
 
  匿名型のインスタンスは、同じ匿名型のインスタンスである場合にのみ等しくすることができます。 コンパイラは、次の条件を満たす場合、2 つのインスタンスを同じ型のインスタンスとして扱います。  
   

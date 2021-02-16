@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:プロパティ プロシージャを呼び出す (Visual Basic)'
 title: '方法: プロパティ プロシージャを呼び出す'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-ms.openlocfilehash: 0b35751136937d4cee5b3ca9669b43d3fbdf71a1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 541768cb6381aa3d2b1bf75267c5b34a82a3d2ab
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071953"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466758"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>方法: プロパティ プロシージャを呼び出す (Visual Basic)
 

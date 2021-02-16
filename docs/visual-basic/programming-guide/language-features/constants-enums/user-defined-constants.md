@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ユーザー定義定数 (Visual Basic)'
 title: ユーザー定義定数
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-ms.openlocfilehash: 351bdb6963e278341c13e53ef19aea0876010aa9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 290d4122249315ae3c6dc5e18ca4faefecb72044
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095643"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100485225"
 ---
 # <a name="user-defined-constants-visual-basic"></a>ユーザー定義定数 (Visual Basic)
 

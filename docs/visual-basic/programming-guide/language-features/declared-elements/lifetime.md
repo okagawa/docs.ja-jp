@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic における有効期間'
 title: 有効期間
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 67fe63eecd2aa0c134682708cdeddb21ba06db12
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 7c95358209c61b42862f4e995d02a97dfb6e8487
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91087493"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471462"
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic における有効期間
 
-宣言された要素の *有効期間*は、それを使用できる期間です。 変数は、有効期間がある唯一の要素です。 このため、コンパイラでは、プロシージャのパラメーターと関数の戻り値が変数の特殊なケースとして扱われます。 変数の有効期間は、それが値を保持できる期間を表します。 その値は有効期間を通じて変更される可能性がありますが、常に何らかの値が保持されます。  
+宣言された要素の *有効期間* は、それを使用できる期間です。 変数は、有効期間がある唯一の要素です。 このため、コンパイラでは、プロシージャのパラメーターと関数の戻り値が変数の特殊なケースとして扱われます。 変数の有効期間は、それが値を保持できる期間を表します。 その値は有効期間を通じて変更される可能性がありますが、常に何らかの値が保持されます。  
   
 ## <a name="different-lifetimes"></a>さまざまな有効期間  
 

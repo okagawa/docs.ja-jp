@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: リフレクション (Visual Basic)'
 title: リフレクション
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
-ms.openlocfilehash: 79603e0951732c7d0d0031d4fc44ddd7dbd392c9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 532087f2ac32242b473d4524a6026519951d96d2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077255"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100486811"
 ---
 # <a name="reflection-visual-basic"></a>リフレクション (Visual Basic)
 

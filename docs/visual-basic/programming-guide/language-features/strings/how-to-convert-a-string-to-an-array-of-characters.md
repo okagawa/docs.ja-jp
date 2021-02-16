@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:Visual Basic で文字列を文字の配列に変換する'
 title: '方法: 文字列を文字の配列に変換する'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - strings [Visual Basic], converting to arrays
 - string conversion [Visual Basic], arrays
 ms.assetid: 1b54b686-ab29-413b-adce-6bd5422376eb
-ms.openlocfilehash: e1f634fcdb23f16e794449f8fe7b53c451c8c5b8
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f85b0801cf013e207eacd70a256a3ed0a8dc7887
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059172"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476151"
 ---
 # <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>方法: Visual Basic で文字列を文字の配列に変換する
 

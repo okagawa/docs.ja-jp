@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 方法:LINQ を使用して ArrayList を照会する (Visual Basic)'
 title: '方法: LINQ を使用して ArrayList を照会する'
 ms.date: 07/20/2015
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
-ms.openlocfilehash: b7b75e017fb314b5e5998b743dbf922f34fd9b7c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: df7c6e1cee6d8e37074ce209f3bea97a402d8dbe
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396468"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428520"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>方法: LINQ を使用して ArrayList を照会する (Visual Basic)
 

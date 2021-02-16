@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: Visual Basic における変数のトラブルシューティング'
 title: 変数のトラブルシューティング
 ms.date: 07/20/2015
 helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-ms.openlocfilehash: e2bcf0b779d98ea4b109ea6d33b69a15110d423c
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c6348ee8eb13ccd19d83c2809d1684396b94be67
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91080167"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481637"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Visual Basic における変数のトラブルシューティング
 

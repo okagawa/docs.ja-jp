@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic でイベント ハンドラーを呼び出す方法'
 title: イベント ハンドラーを呼び出す方法
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 no-loc:
 - WithEvents
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-ms.openlocfilehash: 3762c79dd3d883ae2ccfe76b335cf98ac87d4246
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 7e65b36d392211be533bb4881658b1cdb8057d5d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89464962"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476255"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Visual Basic でイベント ハンドラーを呼び出す方法
 
@@ -27,7 +28,7 @@ Visual Basic のイベント ハンドラーは `Sub` プロシージャです�
 
 複数のイベント ハンドラーを同じイベントに関連付けることができます。 場合によっては、ハンドラーとイベントとの関連付けを解除することができます。 詳細については、「[イベント](../events/index.md)」を参照してください。
 
-## <a name="call-an-event-handler-using-no-loc-texthandles-and-no-locwithevents"></a>:::no-loc text="Handles"::: と WithEvents を使用してイベント ハンドラーを呼び出す
+## <a name="call-an-event-handler-using-no-loc-texthandles-and-withevents"></a>:::no-loc text="Handles"::: と WithEvents を使用してイベント ハンドラーを呼び出す
 
 1. [Event ステートメント](../../../language-reference/statements/event-statement.md)を使用してイベントが宣言されていることを確認します。
 

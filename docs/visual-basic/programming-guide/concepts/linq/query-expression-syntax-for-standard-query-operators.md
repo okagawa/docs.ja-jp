@@ -1,17 +1,18 @@
 ---
+description: '詳細情報: 標準クエリ演算子のクエリ式構文 (Visual Basic)'
 title: 標準クエリ演算子のクエリ式構文
 ms.date: 07/20/2015
 ms.assetid: eb978d86-d3b5-497b-95ce-a054bea8f510
-ms.openlocfilehash: 57a08f6540cbf3e091ee1b2e202e0e181487e3be
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c891482506f45278d9ecbe037a516b3de3fe97b7
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090249"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100477490"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-visual-basic"></a>標準クエリ演算子のクエリ式構文 (Visual Basic)
 
-頻繁に使用される標準クエリ演算子の中には、Visual Basic 言語専用のキーワード構文が使用されているものがあります。こうした構文では、標準クエリ演算子を、"*クエリ式*" の一部として呼び出すことができます。 クエリ式は*メソッド ベース*の方法とは異なり、より読み取りやすいクエリの表現形式です。 クエリ式の句は、コンパイル時にクエリ メソッドへの呼び出しに変換されます。  
+頻繁に使用される標準クエリ演算子の中には、Visual Basic 言語専用のキーワード構文が使用されているものがあります。こうした構文では、標準クエリ演算子を、"*クエリ式*" の一部として呼び出すことができます。 クエリ式は *メソッド ベース* の方法とは異なり、より読み取りやすいクエリの表現形式です。 クエリ式の句は、コンパイル時にクエリ メソッドへの呼び出しに変換されます。  
   
 ## <a name="query-expression-syntax-table"></a>クエリ式の構文表  
 

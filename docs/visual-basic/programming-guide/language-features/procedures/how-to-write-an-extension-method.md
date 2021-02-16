@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:拡張メソッドを作成する (Visual Basic)'
 title: '方法: 拡張メソッドを作成する'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: 697508f86ff4ff0a89150b65782121395d0fed12
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4c5d88976e55288ccb350ab82d459db0a23f468e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346013"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476190"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>方法: 拡張メソッドを作成する (Visual Basic)
 

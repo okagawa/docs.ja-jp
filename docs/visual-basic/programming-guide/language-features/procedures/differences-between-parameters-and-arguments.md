@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: パラメーターと引数の違い (Visual Basic)'
 title: パラメーターと引数の違い
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - procedure parameters
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-ms.openlocfilehash: 0ad9104f347205cebc6e078aac246a413c0d9b78
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 01efc7dc3f451d6aae20cfd091355f531af4431c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91057846"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438763"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>パラメーターと引数の違い (Visual Basic)
 

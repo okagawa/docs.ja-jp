@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 暗黙の型変換と明示的な型変換 (Visual Basic)'
 title: 暗黙の型変換と明示的な型変換
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], implicit
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-ms.openlocfilehash: 2858dafd2531bd846ad89672348d103f385c4511
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6a53c0998025cc8c19274c67d9dfe1c50a4f1373
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393832"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483951"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>暗黙の型変換と明示的な型変換 (Visual Basic)
 
@@ -58,8 +59,8 @@ k = CInt(q)
 |---|---|---|
 |`CBool`|[Boolean データ型](../../../language-reference/data-types/boolean-data-type.md)|任意の数値型 (`Byte`、`SByte`、列挙型など)、`String`、`Object`|
 |`CByte`|[Byte データ型](../../../language-reference/data-types/byte-data-type.md)|任意の数値型 (`SByte` や列挙型など)、`Boolean`、`String`、`Object`|
-|`CChar`|[Char データ型](../../../language-reference/data-types/char-data-type.md)|`String`、`Object`|
-|`CDate`|[Date データ型](../../../language-reference/data-types/date-data-type.md)|`String`、`Object`|
+|`CChar`|[Char データ型](../../../language-reference/data-types/char-data-type.md)|`String`, `Object`|
+|`CDate`|[Date データ型](../../../language-reference/data-types/date-data-type.md)|`String`, `Object`|
 |`CDbl`|[Double 型](../../../language-reference/data-types/double-data-type.md)|任意の数値型 (`Byte`、`SByte`、列挙型など)、`Boolean`、`String`、`Object`|
 |`CDec`|[Decimal データ型](../../../language-reference/data-types/decimal-data-type.md)|任意の数値型 (`Byte`、`SByte`、列挙型など)、`Boolean`、`String`、`Object`|
 |`CInt`|[Integer データ型](../../../language-reference/data-types/integer-data-type.md)|任意の数値型 (`Byte`、`SByte`、列挙型など)、`Boolean`、`String`、`Object`|

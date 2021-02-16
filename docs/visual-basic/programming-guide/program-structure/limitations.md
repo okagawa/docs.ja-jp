@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic の制限事項'
 title: 制限事項
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-ms.openlocfilehash: abe4acd5850aa6065bf4f6fd41bc610ede7ad13f
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 9182c5fe475e4350cb17ed3e4b734e3924bb9f7b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91097957"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100432846"
 ---
 # <a name="visual-basic-limitations"></a>Visual Basic の制限事項
 

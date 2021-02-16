@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic におけるステートメント'
 title: ステートメント
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - variables [Visual Basic], defining
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
-ms.openlocfilehash: 09fe53f4bc2b6d025b762c6595c5337263456bae
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9da27c77c858075e413580047b7ed688b328c87f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401980"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100436891"
 ---
 # <a name="statements-in-visual-basic"></a>Visual Basic におけるステートメント
 
@@ -28,7 +29,7 @@ Visual Basic におけるステートメントは完全な命令です。 キー
 
 - **宣言ステートメント**。変数、定数、またはプロシージャの名前を指定します。データ型を指定することもできます。
 
-- **実行可能なステートメント**。アクションを開始します。 これらのステートメントでは、メソッドまたは関数を呼び出すことができ、コードのブロックをループまたは分岐できます。 実行可能なステートメントには、変数または定数に値または式を代入する、**代入ステートメント**が含まれます。
+- **実行可能なステートメント**。アクションを開始します。 これらのステートメントでは、メソッドまたは関数を呼び出すことができ、コードのブロックをループまたは分岐できます。 実行可能なステートメントには、変数または定数に値または式を代入する、**代入ステートメント** が含まれます。
 
 このトピックでは、各カテゴリについて説明します。 また、このトピックでは、複数のステートメントを 1 行に結合する方法と、複数の行にわたってステートメントを続ける方法について説明します。
 

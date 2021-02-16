@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 方法:XML ファイルからオブジェクト データを読み込む (Visual Basic)'
 title: '方法: XML ファイルからオブジェクト データを読み込む'
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
-ms.openlocfilehash: 7677b32f76bee3fe579f96715b6c748c08c83a82
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d281997a0dd96ad6263fe03cea84b3e84005a3ad
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077242"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100486824"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>方法: XML ファイルからオブジェクト データを読み込む (Visual Basic)
 

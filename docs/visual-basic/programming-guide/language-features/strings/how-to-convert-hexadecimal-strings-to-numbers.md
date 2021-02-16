@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:16 進数文字列を数値に変換する (Visual Basic)'
 title: '方法: 16 進文字列を数値に変換する'
 ms.date: 01/31/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - decimals [Visual Basic], hexadecimals
 - string conversion [Visual Basic], hexadecimal to numbers
 ms.assetid: 76675807-eadb-4c08-bd50-e6c6ff4b8ced
-ms.openlocfilehash: f0a97a0c212a64bfa4db4606ee526b666f07877a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: cf1648b5f85f189f203f56cf569041e4f2db5ac3
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347172"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100425544"
 ---
 # <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>方法: 16 進数文字列を数値に変換する (Visual Basic)
 

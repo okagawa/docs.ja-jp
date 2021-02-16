@@ -1,5 +1,5 @@
 ---
-description: "詳細情報: BC30420:'Sub Main' が、'<name>' に見つかりませんでした"
+description: "詳細情報: BC30420:'Sub Main' が、'<name>' に見つかりませんでした。"
 title: "'Sub Main' が、'<name>' に見つかりませんでした。"
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - BC30420
 - Sub Main error message
 ms.assetid: a006d57d-4dd3-46a7-9026-ca9a31470da7
-ms.openlocfilehash: b0cc56f432af191850d4a20de46a43084299e13f
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 4804c858503fd885b2c2ed6e298dbdc8aaf8715c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99641435"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100457850"
 ---
 # <a name="bc30420-sub-main-was-not-found-in-name"></a>BC30420:'Sub Main' が、'\<name>' に見つかりませんでした。
 

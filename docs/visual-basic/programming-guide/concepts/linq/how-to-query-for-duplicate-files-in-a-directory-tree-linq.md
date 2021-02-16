@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 方法:ディレクトリツリーで重複するファイルを照会する (LINQ) (Visual Basic)'
 title: '方法: ディレクトリ ツリーで重複するファイルをクエリする (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 387d7c97-95dd-4a50-9761-7e9cf8ae9e6a
-ms.openlocfilehash: 71c656fba3962f08733e27279ac9bfa94d957aa8
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 1029fc81b5e0be039c3dffee843d6ce5518e718f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058912"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100425738"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>方法: ディレクトリツリーで重複するファイルを照会する (LINQ) (Visual Basic)
 

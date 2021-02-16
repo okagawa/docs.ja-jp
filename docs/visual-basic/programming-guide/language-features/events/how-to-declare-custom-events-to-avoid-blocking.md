@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:カスタム イベントを宣言してブロックを回避する (Visual Basic)'
 title: '方法: カスタム イベントを宣言してブロックを回避する'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - events [Visual Basic], custom
 - custom events [Visual Basic]
 ms.assetid: 998b6a90-67c5-4d2c-8b11-366d3e355505
-ms.openlocfilehash: a9350470836652f65532068402c78375b4c5495c
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a4ad3162e8f95ebbf7567d427ea00060b19b2235
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077099"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100469722"
 ---
 # <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>方法: カスタム イベントを宣言してブロックを回避する (Visual Basic)
 

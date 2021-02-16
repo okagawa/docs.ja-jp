@@ -2,12 +2,12 @@
 title: 回復性があるアプリケーションを実装する
 description: マイクロサービスのアーキテクチャで中核となる概念である、回復性について説明します。 一時的な障害が発生したときのために、それらを適切に処理する方法を知っておく必要があります。
 ms.date: 01/30/2020
-ms.openlocfilehash: 46276a6b9b36a494bfae657275692ca9d5554d86
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3ed4474eaa1225e80f05db86965e4ba53b5d2301
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78847233"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429326"
 ---
 # <a name="implement-resilient-applications"></a>回復性があるアプリケーションを実装する
 
@@ -20,7 +20,7 @@ ms.locfileid: "78847233"
 アプリケーションの多くの個々のコンポーネントにも、正常性監視機能を組み込むも必要があります。 この章のガイドラインに従うと、複雑で、クラウド ベースの展開で発生する一時的なダウンタイムや定期的な障害があってもスムーズに動作するアプリケーションを作成できます。
 
 >[!IMPORTANT]
-> eShopOnContainer では、リリース 3.0.0 まで、[型指定されたクライアント](./use-httpclientfactory-to-implement-resilient-http-requests.md)を使用した回復性の実装に [Polly ライブラリ](http://www.thepollyproject.org/)を使用していました。
+> eShopOnContainer では、リリース 3.0.0 まで、[型指定されたクライアント](./use-httpclientfactory-to-implement-resilient-http-requests.md)を使用した回復性の実装に [Polly ライブラリ](https://thepollyproject.azurewebsites.net/)を使用していました。
 >
 > リリース 3.0.0 以降では、再試行をコード内で処理するのではなく、Kubernetes クラスター内で透過的で構成可能な方法で処理される [Linkerd のメッシュ](https://linkerd.io/)を使用した HTTP 呼び出しの回復性が実装されています。
 >

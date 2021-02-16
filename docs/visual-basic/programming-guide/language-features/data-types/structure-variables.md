@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 構造体の変数 (Visual Basic)'
 title: 構造体の変数
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: 270e8ca26185e4a68def3b95f4ce6ab4c57a629c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 64c53b06369bc7d7d0c46bc87d4c73ce90b4011f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393586"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100484159"
 ---
 # <a name="structure-variables-visual-basic"></a>構造体の変数 (Visual Basic)
 

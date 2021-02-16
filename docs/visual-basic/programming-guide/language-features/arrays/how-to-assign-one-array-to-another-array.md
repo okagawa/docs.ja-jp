@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:配列を別の配列に代入する (Visual Basic)'
 title: '方法: 配列を別の配列に代入する'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: c38def1ba9f3720bc760d6f6e4264510c884c930
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dc86225c1f25c207e793e33a048d948646ac77b6
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413080"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434733"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>方法: 配列を別の配列に代入する (Visual Basic)
 

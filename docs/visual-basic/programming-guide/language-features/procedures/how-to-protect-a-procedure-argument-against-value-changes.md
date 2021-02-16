@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:プロシージャ引数の値が変更されないように保護する (Visual Basic)'
 title: '方法: プロシージャ引数の値が変化しないようにする'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-ms.openlocfilehash: 84eadf3d364b69120221d80e464b1175b1602e13
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2e47a584632f124a001617770aeae5104ef20abe
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071483"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476216"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>方法: プロシージャ引数の値が変更されないように保護する (Visual Basic)
 

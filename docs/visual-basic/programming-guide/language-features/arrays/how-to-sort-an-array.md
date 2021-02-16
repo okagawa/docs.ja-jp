@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic で配列を並べ替える'
 title: '方法: 配列を並べ替える'
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], sorting
 - examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
-ms.openlocfilehash: 3fb9af8de0fc86075fdccd64506c855c1c720660
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ea030b63dbbb5f5ea1d6160757afe2e9b58f7c21
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351852"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462764"
 ---
 # <a name="how-to-sort-an-array-in-visual-basic"></a>Visual Basic で配列を並べ替える
 

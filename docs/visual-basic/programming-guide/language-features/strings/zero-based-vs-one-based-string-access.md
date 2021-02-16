@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: 0 から始まる文字列アクセスと1 から始まる文字列アクセスの比較 (Visual Basic)'
 title: 0 から始まる文字列アクセスと1 から始まる文字列アクセスの比較
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], indexing
 ms.assetid: 0ed39f35-d68e-421d-ae14-460a5c0373b8
-ms.openlocfilehash: 91d3fb9d7bfdf3d5af27fc6499583640946a802f
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: adab6954c4329ae0a547d136f26f6c3115dc5890
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072289"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100463833"
 ---
 # <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>0 から始まる文字列アクセスと1 から始まる文字列アクセスの比較 (Visual Basic)
 

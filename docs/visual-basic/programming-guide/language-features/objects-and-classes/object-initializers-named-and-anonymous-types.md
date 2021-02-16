@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: オブジェクト初期化子:名前付きの型と匿名型 (Visual Basic)'
 title: オブジェクト初期化子:名前付きの型と匿名型
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 724407fed5bf90ed6e3e470cbabc9e42856cb99a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 47182653e74b16b9911f4b727eb1595bf3eceba6
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91087480"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455250"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>オブジェクト初期化子:名前付きの型と匿名型 (Visual Basic)
 
@@ -99,7 +100,7 @@ ms.locfileid: "91087480"
   
 ## <a name="anonymous-types"></a>匿名型  
 
- 匿名型では、オブジェクト初期化子を使用して、明示的に定義して名前を付けない新しい型のインスタンスを作成します。 代わりに、コンパイラによって、オブジェクト初期化子リストに指定したプロパティに従って型が生成されます。 型の名前を指定しないため、*匿名型*と呼ばれます。 たとえば、次の宣言を先述の `cust6` の宣言と比較します。  
+ 匿名型では、オブジェクト初期化子を使用して、明示的に定義して名前を付けない新しい型のインスタンスを作成します。 代わりに、コンパイラによって、オブジェクト初期化子リストに指定したプロパティに従って型が生成されます。 型の名前を指定しないため、*匿名型* と呼ばれます。 たとえば、次の宣言を先述の `cust6` の宣言と比較します。  
   
  [!code-vb[VbVbalrObjectInit#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#13)]  
   

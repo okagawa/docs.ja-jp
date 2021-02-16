@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:長い修飾パスを持つオブジェクトに対するアクセス時間を短縮する (Visual Basic)'
 title: '方法: 長い修飾パスを持つオブジェクトへのアクセス時間を短縮する'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - With block
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
-ms.openlocfilehash: fe93e7bac2a21f1060d1f93765eb35e1ad0c7eb0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8e0b5dc2ab6c23d57a4e9d905cfd711a79843185
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410413"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100467044"
 ---
 # <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>方法: 長い修飾パスを持つオブジェクトに対するアクセス時間を短縮する (Visual Basic)
 

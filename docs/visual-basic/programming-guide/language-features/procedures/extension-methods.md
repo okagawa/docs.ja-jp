@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 拡張メソッド (Visual Basic)'
 title: 拡張メソッド
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: a88756fce9137f89db1b6b8b007d528e98381830
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5a1482502b144524c0be90e1c83a38f49b4a4d26
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74341172"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434356"
 ---
 # <a name="extension-methods-visual-basic"></a>拡張メソッド (Visual Basic)
 

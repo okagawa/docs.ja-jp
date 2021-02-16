@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:新しい変数を作成する (Visual Basic)'
 title: '方法: 新しい変数を作成する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Dim statement [Visual Basic]
 - variables [Visual Basic], creating
 ms.assetid: 35300be3-77b0-4bef-a156-034d3cdedde0
-ms.openlocfilehash: 501c8f3aff4c5b204d231bdc26213e13d125a7cf
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b473a247bc5b4d9c1d65f4721ecba3621b232e27
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410530"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481962"
 ---
 # <a name="how-to-create-a-new-variable-visual-basic"></a>方法: 新しい変数を作成する (Visual Basic)
 

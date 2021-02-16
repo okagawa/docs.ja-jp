@@ -1,17 +1,18 @@
 ---
+description: '詳細情報: ジェネリック インターフェイスの変性 (Visual Basic)'
 title: ジェネリック インターフェイスの分散
 ms.date: 07/20/2015
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
-ms.openlocfilehash: df28a9f24518f24d1be89acba726da7dfbbf9570
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 42257f80cb929756583b1e488cd315450b9db35e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84375591"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100469839"
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>ジェネリック インターフェイスの変性 (Visual Basic)
 
-.NET Framework 4 では、既存のいくつかのジェネリック インターフェイスに対して、変性のサポートが導入されています。 分散のサポートにより、これらのインターフェイスを実装するクラスの暗黙的な変換が可能になりました。 次のインターフェイスは、新たにバリアントになりました。
+.NET Framework 4 では、既存のいくつかのジェネリック インターフェイスに対して、変性のサポートが導入されています。 変性のサポートにより、これらのインターフェイスを実装するクラスの暗黙的な変換が可能になりました。 次のインターフェイスは、新たにバリアントになりました。
 
 - <xref:System.Collections.Generic.IEnumerable%601> (T は共変です)
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 参照戻り値のサポート (Visual Basic)'
 title: 参照戻り値
 ms.date: 04/28/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - ref return values [Visual Basic]
 - ref returns [Visual Basic]
 ms.assetid: 5ef0cc69-eb3a-4a67-92a2-78585f223cb5
-ms.openlocfilehash: f2a92c584dbb12a322e28435d797fa4d7c2f6dbb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 215a647c68eb7eadd394a1a7842ceb98c46e04a5
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186933"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466550"
 ---
 # <a name="support-for-reference-return-values-visual-basic"></a>参照戻り値のサポート (Visual Basic)
 

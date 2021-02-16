@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法: Visual Basic の StringBuilder を使用して文字列を作成する'
 title: '方法: StringBuilder を使用して文字列を作成する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - StringBuilder class
 - strings [Visual Basic], using StringBuilder
 ms.assetid: 9c042880-aa16-432e-9ccb-cd00abda9ae3
-ms.openlocfilehash: c41db584df83782dab99b90043045aa2cabcb6ff
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 6def32517f71ec3c2a7795c3395e3e572903ce1e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645325"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429820"
 ---
 # <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>方法: Visual Basic の StringBuilder を使用して文字列を作成する
 

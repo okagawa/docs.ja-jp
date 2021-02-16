@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 再帰プロシージャ (Visual Basic)'
 title: 再帰プロシージャ
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: 646d4e29ed7a0b6367d4b35a7f8641bcf659e616
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 378b279a6664cd494fb2e26ff3276afcea56cc16
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352552"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466563"
 ---
 # <a name="recursive-procedures-visual-basic"></a>再帰プロシージャ (Visual Basic)
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:オブジェクト初期化子を使用してオブジェクトを宣言する (Visual Basic)'
 title: '方法: オブジェクト初期化子を使用してオブジェクトを宣言する'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: 61f520a528c3d40b9d34807d517a9bf27ad40da8
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 12f64dc4d1efb3ed2654084203241e6606ad4da6
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075227"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483912"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>方法: オブジェクト初期化子を使用してオブジェクトを宣言する (Visual Basic)
 

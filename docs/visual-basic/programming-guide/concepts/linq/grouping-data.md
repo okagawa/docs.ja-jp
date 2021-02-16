@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: データのグループ化 (Visual Basic)'
 title: データのグループ化
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: aae48543472ee71990d0bc96defa9ad6a6ab4c0d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: fa6dbcc22c7d991d48775c3974cfc529840ef933
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084204"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100469800"
 ---
 # <a name="grouping-data-visual-basic"></a>データのグループ化 (Visual Basic)
 
