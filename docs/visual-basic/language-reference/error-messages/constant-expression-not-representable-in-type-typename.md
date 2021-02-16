@@ -1,5 +1,5 @@
 ---
-description: "詳細情報: BC30439:定数式は、型 '<typename>' では表現できません"
+description: "詳細情報: BC30439:定数式は、型 '<typename>' では表現できません。"
 title: 定数式は、型 '<typename>' では表現できません。
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30439
 ms.assetid: 0a842906-3bc5-4946-8a37-3e3da883ef63
-ms.openlocfilehash: 763ed8a414d8dda3e950ae85a4b1152a459518a5
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 034278523fc25cea2e8bb6c749d4c6d412620372
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99796744"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471371"
 ---
 # <a name="bc30439-constant-expression-not-representable-in-type-typename"></a>BC30439:定数式は、型 '\<typename>' では表現できません。
 

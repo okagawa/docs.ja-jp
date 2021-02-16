@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic における配列の次元'
 title: 配列の次元
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: f971f0c3693177adbcb8869d487e3ad41d49ddc2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 055a3efc1410bf80daf3804453adc2c20266733c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413105"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100486551"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Visual Basic における配列の次元
 

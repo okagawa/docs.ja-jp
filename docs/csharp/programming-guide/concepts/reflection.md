@@ -3,12 +3,12 @@ title: リフレクション (C#)
 description: C# では、リフレクションによって、アセンブリ、モジュール、および型を記述するオブジェクトが提供されます。 コードに属性が含まれている場合は、リフレクションを使用してそれらにアクセスできます。
 ms.date: 07/20/2015
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
-ms.openlocfilehash: 4d4f4c082dd2d58e212bae53524e5dd4fd06fb75
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 91d6d9bbd54199f3468f867d8804596f4a7546d9
+ms.sourcegitcommit: 38999dc0ec4f7c4404de5ce0951b64c55997d9ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302803"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99427062"
 ---
 # <a name="reflection-c"></a>リフレクション (C#)
 
@@ -39,7 +39,7 @@ Console.WriteLine(info);
 出力は `System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e` になります。
 
 > [!NOTE]
-> C# の `protected` キーワードと `internal` キーワードは、IL では意味を持たないため、リフレクション API でも使用されません。 IL では、"*ファミリ*" および "*アセンブリ*" という用語がこれに相当します。 リフレクションを使用して `internal` メソッドを指定するには、<xref:System.Reflection.MethodBase.IsAssembly%2A> プロパティを使用します。 `protected internal` メソッドを指定するには、<xref:System.Reflection.MethodBase.IsFamilyOrAssembly%2A> を使用します。
+> C# のキーワード `protected` と `internal` は、中間言語 (IL) では意味を持たないため、リフレクション API でも使用されません。 IL では、"*ファミリ*" および "*アセンブリ*" という用語がこれに相当します。 リフレクションを使用して `internal` メソッドを指定するには、<xref:System.Reflection.MethodBase.IsAssembly%2A> プロパティを使用します。 `protected internal` メソッドを指定するには、<xref:System.Reflection.MethodBase.IsFamilyOrAssembly%2A> を使用します。
 
 ## <a name="reflection-overview"></a>リフレクションの概要
 

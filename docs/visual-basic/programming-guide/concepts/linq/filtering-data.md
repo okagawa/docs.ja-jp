@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: データのフィルター処理 (Visual Basic)'
 title: データのフィルター処理
 ms.date: 07/20/2015
 ms.assetid: 7749519a-7edc-49fe-aef9-6a353864af6c
-ms.openlocfilehash: f7a1aa76dc93cc03952e55f5f8fc3f75176a3f9f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2e259209df35a89eb4730f79ffccfee7cb64b9e9
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84383418"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428598"
 ---
 # <a name="filtering-data-visual-basic"></a>データのフィルター処理 (Visual Basic)
 

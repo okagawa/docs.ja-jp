@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 方法:複数のソースからオブジェクトコレクションにデータを設定する (LINQ) (Visual Basic)'
 title: '方法: 複数のソースからオブジェクト コレクションにデータを設定する (LINQ)'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 9c6d8ff5165bf886d8aad87b64305819e65361ab
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a1a02382efb31895edb880d2137f08d79dc4e97b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396520"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100477555"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>方法: 複数のソースからオブジェクトコレクションにデータを設定する (LINQ) (Visual Basic)
 

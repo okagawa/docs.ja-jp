@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 基本的なクエリ操作 (Visual Basic)'
 title: クエリの基本操作
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: 6f4c58b15c33d8d2007069df88b2984e692df0a8
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 1f8fbda83c21fe9032415d96ff2d7e184083a839
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078373"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428689"
 ---
 # <a name="basic-query-operations-visual-basic"></a>基本的なクエリ操作 (Visual Basic)
 
@@ -74,7 +75,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
 ## <a name="selecting-data-select"></a>データを選択する (Select)  
 
- `Select` 句は、返された要素の形式と内容を指定します。 たとえば、`Customer` オブジェクト全体、1 つの `Customer` プロパティのみ、プロパティのサブセット、各種データ ソースのプロパティの組み合わせ、計算に基づくなんらかの新しい結果型のいずれで結果が構成されるかを指定できます。 `Select` 句でソース要素のコピー以外のものを生成する場合、その操作は*投影*と呼ばれます。  
+ `Select` 句は、返された要素の形式と内容を指定します。 たとえば、`Customer` オブジェクト全体、1 つの `Customer` プロパティのみ、プロパティのサブセット、各種データ ソースのプロパティの組み合わせ、計算に基づくなんらかの新しい結果型のいずれで結果が構成されるかを指定できます。 `Select` 句でソース要素のコピー以外のものを生成する場合、その操作は *投影* と呼ばれます。  
   
  `Customer` オブジェクト全体から成るコレクションを取得するには、範囲変数自体を選択します。  
   

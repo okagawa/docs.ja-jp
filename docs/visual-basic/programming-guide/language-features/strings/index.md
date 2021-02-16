@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: Visual Basic における文字列'
 title: 文字列
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, strings
 - strings [Visual Basic], Visual Basic
 ms.assetid: 7e4c777c-ad69-46e2-8b9e-9be4033b1c96
-ms.openlocfilehash: 60755b7aa8911f9c13eba80080b388a812f29475
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 11e2268dfb6e4f772615655a3c691910f6858fab
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072588"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429652"
 ---
 # <a name="strings-in-visual-basic"></a>Visual Basic における文字列
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: チュートリアル: Visual Basic での COM オブジェクトの作成'
 title: 'チュートリアル: COM オブジェクトの作成'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 90a21b70b45902a9f4fd559a97e777f26043fffb
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 469466189e264253f3588a0a2735afe651bbd36f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075617"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100427272"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>チュートリアル: Visual Basic での COM オブジェクトの作成
 
@@ -50,7 +51,7 @@ ms.locfileid: "91075617"
   
 2. **[新しいプロジェクト]** ダイアログ ボックスの **[プロジェクトの種類]** フィールドで、[Windows] が選択されていることを確認します。 **[テンプレート]** の一覧から **[クラス ライブラリ]** を選択し、 **[OK]** をクリックします。 新しいプロジェクトが表示されます。  
   
-3. **ソリューション エクスプローラー**で、プロジェクトを右クリックして、 **[プロパティ]** をクリックします。 **プロジェクト デザイナー**が表示されます。  
+3. **ソリューション エクスプローラー** で、プロジェクトを右クリックして、 **[プロパティ]** をクリックします。 **プロジェクト デザイナー** が表示されます。  
   
 4. **[コンパイル]** タブをクリックします。  
   
@@ -58,7 +59,7 @@ ms.locfileid: "91075617"
   
 #### <a name="to-set-up-the-code-in-your-class-to-create-a-com-object"></a>COM オブジェクトを作成するためにクラス内のコードを設定するには  
   
-1. **ソリューション エクスプローラー**で、 **[Class1.vb]** をダブルクリックしてコードを表示します。  
+1. **ソリューション エクスプローラー** で、 **[Class1.vb]** をダブルクリックしてコードを表示します。  
   
 2. クラスの名前を `ComClass1` に変更します。  
   

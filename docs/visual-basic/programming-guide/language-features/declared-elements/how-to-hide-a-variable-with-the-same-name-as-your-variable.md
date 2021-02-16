@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:自分で宣言した変数と同じ名前の変数を隠す (Visual Basic)'
 title: '方法: 自分で宣言した変数と同じ名前の変数を隠す'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-ms.openlocfilehash: c1f4c2fbf339358be77e76468b1db94616bf04a2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c6699abdc163c6ae1a78f6035cd08439d1b029f0
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357233"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429858"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>方法: 自分で宣言した変数と同じ名前の変数を隠す (Visual Basic)
 
-変数を隠すには、それを*シャドウ*します。つまり、同じ名前の変数でそれを再定義します。 隠す変数は、次の 2 つの方法でシャドウできます。
+変数を隠すには、それを *シャドウ* します。つまり、同じ名前の変数でそれを再定義します。 隠す変数は、次の 2 つの方法でシャドウできます。
 
 - **スコープによるシャドウ。** スコープによってそれをシャドウするには、隠す変数が含まれている領域のサブ領域内でそれを再宣言します。
 

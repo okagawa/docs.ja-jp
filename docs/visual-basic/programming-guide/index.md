@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic のプログラミング ガイド'
 title: プログラミング ガイド
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic, programming in
 - Visual Basic, language reference
 ms.assetid: 640e5796-2796-433c-af37-4d2a2334895b
-ms.openlocfilehash: 60c7ffbb1f9abb89d8efa946eee9db6cb70df5be
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 53ee4c2e3ebd4a3bb54a99e5b1cc78a62cf1872b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086440"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100486538"
 ---
 # <a name="visual-basic-programming-guide"></a>Visual Basic のプログラミング ガイド
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Basic における算術演算子'
 title: 算術演算子
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 023e479736285aa2d04509e05f49fe930cb4721d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3a7005b0a44f9b0358e393d8580a2a19a9a19881
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090080"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100465328"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic における算術演算子
 
@@ -96,7 +97,7 @@ ms.locfileid: "91090080"
 
  通常、オペランドは同じ型である必要があります。 たとえば、`Integer` 変数を使用して加算を行う場合は、それを別の `Integer` 変数に追加し、その結果を `Integer` 型の変数にも代入する必要があります。  
   
- タイプセーフなコーディングを確実に行うための 1 つの方法として、[Option Strict ステートメント](../../../language-reference/statements/option-strict-statement.md)を使用する方法があります。 `Option Strict On` を設定すると、Visual Basic では、*タイプセーフな*変換が自動的に実行されます。 たとえば、`Double` 変数に `Integer` 変数を追加し、その値を `Double` 変数に代入しようとすると、データを失うことなく `Integer` 値を `Double` に変換できるため、操作は正常に続行されます。 一方、タイプセーフでない変換では、`Option Strict On` でコンパイラ エラーが発生します。 たとえば、`Double` 変数に `Integer` 変数を追加し、その値を `Integer` 変数に代入しようとすると、コンパイラ エラーが発生します。これは、`Double` 変数を型 `Integer` に暗黙的に変換できないためです。  
+ タイプセーフなコーディングを確実に行うための 1 つの方法として、[Option Strict ステートメント](../../../language-reference/statements/option-strict-statement.md)を使用する方法があります。 `Option Strict On` を設定すると、Visual Basic では、*タイプセーフな* 変換が自動的に実行されます。 たとえば、`Double` 変数に `Integer` 変数を追加し、その値を `Double` 変数に代入しようとすると、データを失うことなく `Integer` 値を `Double` に変換できるため、操作は正常に続行されます。 一方、タイプセーフでない変換では、`Option Strict On` でコンパイラ エラーが発生します。 たとえば、`Double` 変数に `Integer` 変数を追加し、その値を `Integer` 変数に代入しようとすると、コンパイラ エラーが発生します。これは、`Double` 変数を型 `Integer` に暗黙的に変換できないためです。  
   
  ただし、`Option Strict Off` を設定した場合、Visual Basic は暗黙的な縮小変換を行うことができますが、予期しないデータまたは精度の損失が発生する可能性があります。 このため、運用コードを記述するときには `Option Strict On` を使用することをお勧めします。 詳細については、「 [Widening and Narrowing Conversions](../data-types/widening-and-narrowing-conversions.md)」を参照してください。  
   

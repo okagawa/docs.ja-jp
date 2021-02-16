@@ -2,12 +2,12 @@
 title: IHttpClientFactory を使用して回復力の高い HTTP 要求を実装する
 description: .NET Core 2.1 以降で使用できる IHttpClientFactory を使用して、`HttpClient` インスタンスを作成し、それをアプリケーションで簡単に使用できるようにする方法について説明します。
 ms.date: 01/13/2021
-ms.openlocfilehash: 056a8982fe4331e7e680b33cf1f43785b48da7d6
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: fc5da088b1ed7573532dff101aff03d39a02a6f4
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188999"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429313"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>IHttpClientFactory を使用して回復力の高い HTTP 要求を実装する
 
@@ -27,7 +27,7 @@ ms.locfileid: "98188999"
 
 上記の問題に対処し、`HttpClient` インスタンスを管理しやすくするために、.NET Core 2.1 では、<xref:System.Net.Http.IHttpClientFactory> インターフェイスが導入されました。これを使用すれば、依存関係の挿入 (DI) を介してアプリ内で `HttpClient` インスタンスを構成および作成することができます。 HttpClient でのハンドラーのデリゲートを利用するために、Polly ベースのミドルウェアに対する拡張機能も提供されます。
 
-[Polly](http://www.thepollyproject.org/) は、事前に定義されたポリシーを緩やかでスレッドセーフな方法で使用することにより、開発者がアプリケーションに回復性を追加できるようにするための一時的な障害処理ライブラリです。
+[Polly](https://thepollyproject.azurewebsites.net/) は、事前に定義されたポリシーを緩やかでスレッドセーフな方法で使用することにより、開発者がアプリケーションに回復性を追加できるようにするための一時的な障害処理ライブラリです。
 
 ## <a name="benefits-of-using-ihttpclientfactory"></a>IHttpClientFactory を使用する利点
 
@@ -197,7 +197,7 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
   <https://github.com/dotnet/extensions/tree/v3.1.8/src/HttpClientFactory>
 
 - **Polly (.NET の復元および一時的な障害処理ライブラリ)**  
-  <http://www.thepollyproject.org/>
+  <https://thepollyproject.azurewebsites.net/>
   
 - **依存関係挿入なしで IHttpClientFactory を使用する (GitHub の問題)**  
   <https://github.com/dotnet/extensions/issues/1345>

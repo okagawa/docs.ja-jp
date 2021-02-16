@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:列挙型のメンバーを参照する (Visual Basic)'
 title: '方法: 列挙型のメンバーを参照する'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - enumeration members
 - constants [Visual Basic], enumerated
 ms.assetid: bbb5c3cc-7cdb-4814-8d6a-a6d91546ed1e
-ms.openlocfilehash: d1b239e7d6be3ebf1e64d6589a4cc14dce8946f5
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 339ea8292eea1b39e2c6e5879b98a083800fb1fc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095669"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471527"
 ---
 # <a name="how-to-refer-to-an-enumeration-member-visual-basic"></a>方法: 列挙型のメンバーを参照する (Visual Basic)
 

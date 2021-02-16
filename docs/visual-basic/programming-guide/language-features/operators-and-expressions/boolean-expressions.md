@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Boolean 式 (Visual Basic)'
 title: Boolean 式
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-ms.openlocfilehash: 51340bf95795d837c055df796424f3cad912adc7
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3b752e2146755e1272b261f32931e3022e8ef354
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085751"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100465315"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Boolean 式 (Visual Basic)
 
-*ブール式*は、[ブール データ型](../../../language-reference/data-types/boolean-data-type.md) (`True` または `False`) の値に評価される式です。 `Boolean` 式では、複数の形式を使用できます。 最もシンプルなのは、次の例に示すように、`Boolean` 変数の値を `Boolean` リテラルに対して直接比較することです。  
+*ブール式* は、[ブール データ型](../../../language-reference/data-types/boolean-data-type.md) (`True` または `False`) の値に評価される式です。 `Boolean` 式では、複数の形式を使用できます。 最もシンプルなのは、次の例に示すように、`Boolean` 変数の値を `Boolean` リテラルに対して直接比較することです。  
   
  [!code-vb[VbVbalrOperators#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#87)]  
   
@@ -53,7 +54,7 @@ ms.locfileid: "91085751"
   
 ## <a name="short-circuiting-operators"></a>ショートサーキット演算子  
 
- 論理演算子 `AndAlso` および `OrElse` では、*ショートサーキット*と呼ばれる動作が見られます。 ショートサーキット演算子では、左オペランドが最初に評価されます。 左オペランドで式全体の値が判断された場合、右の式を評価せずにプログラムの実行が続行されます。 次の例を使って説明します。  
+ 論理演算子 `AndAlso` および `OrElse` では、*ショートサーキット* と呼ばれる動作が見られます。 ショートサーキット演算子では、左オペランドが最初に評価されます。 左オペランドで式全体の値が判断された場合、右の式を評価せずにプログラムの実行が続行されます。 次の例を使って説明します。  
   
  [!code-vb[VbVbalrOperators#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#89)]  
   
