@@ -6,19 +6,19 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: a249f0de00c45b1588762ffa0f826e890f961334
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 45df7b2c4dad1aa84ad39ca38fba8d2ec16c8fb3
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91607773"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100585345"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>方法: 開発中に使用する一時的な証明書を作成する
 
 Windows Communication Foundation (WCF) を使用してセキュリティで保護されたサービスまたはクライアントを開発する場合、資格情報として使用される x.509 証明書を指定することが必要になることがよくあります。 証明書は通常、単独ではなく、いくつもの証明書が信頼チェーンとしてつながった形で存在しており、その最上位に位置するルート証明機関の証明書は、各コンピューターの [信頼されたルート証明機関] の証明書ストアに格納されています。 証明書を調べて順に信頼チェーンをたどっていくと、たとえば所属する会社や事業部門が運営する、ルート証明機関に到達します。 開発時にこの過程をエミュレートするためには、セキュリティ要件を満たす 2 種類の証明書を作る必要があります。 1 つは自己署名証明書で、[信頼されたルート証明機関] の証明書ストアに配置します。もう 1 つは、先の自己署名証明書を使って署名を施した証明書で、[ローカル コンピューター] の [個人] ストア、または [現在のユーザー] の [個人] ストアに配置します。 このトピックでは、PowerShell の [新しい SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) コマンドレットを使用して、これら2つの証明書を作成する手順について説明します。
 
 > [!IMPORTANT]
-> 新しい SelfSignedCertificate コマンドレットによって生成される証明書は、テスト目的でのみ提供されます。 実際にサービスやクライアントを業務に使用する際には、証明機関から取得した、適切な証明書が必要です。 これは、組織内の Windows Server 証明書サーバーまたはサードパーティのいずれかになります。
+> New-SelfSignedCertificate コマンドレットによって生成される証明書は、テスト目的でのみ提供されます。 実際にサービスやクライアントを業務に使用する際には、証明機関から取得した、適切な証明書が必要です。 これは、組織内の Windows Server 証明書サーバーまたはサードパーティのいずれかになります。
 >
 > 既定では、 [新しい-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) コマンドレットは、自己署名の証明書を作成しますが、これらの証明書は安全ではありません。 自己署名証明書を信頼されたルート証明機関ストアに配置すると、展開環境をより厳密にシミュレートする開発環境を作成できます。
 
@@ -29,15 +29,15 @@ Windows Communication Foundation (WCF) を使用してセキュリティで保�
 次のコマンドは、現在のユーザーの個人用ストアでサブジェクト名が "RootCA" の自己署名証明書を作成します。
 
 ```powershell
-$rootcert = New-SelfSignedCertificate -CertStoreLocation Cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.19={text}CA=true") -KeyUsage CertSign,CrlSign,DigitalSignature
+$rootCert = New-SelfSignedCertificate -CertStoreLocation Cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.19={text}CA=true") -KeyUsage CertSign,CrlSign,DigitalSignature
 ```
 
 証明書を PFX ファイルにエクスポートして、後の手順で必要な場所にインポートできるようにする必要があります。 証明書を秘密キーと共にエクスポートする場合は、パスワードを保護するためにパスワードが必要です。 パスワードをに保存し、 `SecureString` [get-pfxcertificate](/powershell/module/pkiclient/export-pfxcertificate) コマンドレットを使用して、関連付けられている秘密キーを持つ証明書を PFX ファイルにエクスポートします。 また、 [証明書のエクスポート](/powershell/module/pkiclient/export-certificate) コマンドレットを使用して、公開証明書のみを CRT ファイルに保存します。
 
 ```powershell
-[System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
-[String]$rootCertPath = Join-Path -Path 'cert:\CurrentUser\My\' -ChildPath "$($rootcert.Thumbprint)"
-Export-PfxCertificate -Cert $rootCertPath -FilePath 'RootCA.pfx' -Password $rootcertPassword
+[System.Security.SecureString]$rootCertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
+[String]$rootCertPath = Join-Path -Path 'cert:\CurrentUser\My\' -ChildPath "$($rootCert.Thumbprint)"
+Export-PfxCertificate -Cert $rootCertPath -FilePath 'RootCA.pfx' -Password $rootCertPassword
 Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 ```
 
@@ -53,7 +53,7 @@ $testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -
 
 ```powershell
 [String]$testCertPath = Join-Path -Path 'cert:\LocalMachine\My\' -ChildPath "$($testCert.Thumbprint)"
-Export-PfxCertificate -Cert $testCertPath -FilePath testcert.pfx -Password $rootcertPassword
+Export-PfxCertificate -Cert $testCertPath -FilePath testcert.pfx -Password $rootCertPassword
 Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 ```
 
