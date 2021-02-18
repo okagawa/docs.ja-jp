@@ -12,12 +12,12 @@ helpviewer_keywords:
 - uninstalling Windows services
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
-ms.openlocfilehash: 6b7cfd8b241df4fe01c9c2a08888c88a1c749d13
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 0803d9908a9b92df0d17537ee4db2d798a2a07cc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609682"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433422"
 ---
 # <a name="how-to-install-and-uninstall-windows-services"></a>方法: Windows サービスをインストールおよびアンインストールする
 
@@ -31,9 +31,9 @@ ms.locfileid: "91609682"
 Windows サービス プロジェクトを、F5 キーを押して Visual Studio 開発環境から直接実行することはできません。 プロジェクトを実行するには、プロジェクトにサービスを事前にインストールする必要があります。
 
 > [!TIP]
-> **サーバー エクスプローラー**を使用して、サービスがインストールまたはアンインストールされているかどうかを確認できます。 詳細については、[Visual Studio でのサーバー エクスプローラーの使用方法](https://support.microsoft.com/help/316649/how-to-use-the-server-explorer-in-visual-studio-net-and-visual-studio)に関するページを参照してください。
+> **サーバー エクスプローラー** を使用して、サービスがインストールまたはアンインストールされているかどうかを確認できます。
 
-### <a name="install-your-service-manually-using-installutilexe-utility"></a>Installutil.exe ユーティリティを使用してサービスを手動でインストールする
+## <a name="install-using-installutilexe-utility"></a>InstallUtil.exe ユーティリティを使用してインストールする
 
 1. **[スタート]** メニューから **[Visual Studio \<*version*>]** ディレクトリを選択し、 **[VS 用開発者コマンド プロンプト\<*version*>]** を選択します。
 
@@ -53,7 +53,7 @@ Windows サービス プロジェクトを、F5 キーを押して Visual Studio
      - 32 ビット バージョンの .NET Framework 4 または 4.5 以降では、Windows のインストール ディレクトリが *C:\Windows* の場合、既定のパスは *C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe* です。
      - 64 ビット バージョンの .NET Framework 4 または 4.5 以降では、既定のパスは *C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe* です。
 
-### <a name="uninstall-your-service-manually-using-installutilexe-utility"></a>Installutil.exe ユーティリティを使用してサービスを手動でアンインストールする
+## <a name="uninstall-using-installutilexe-utility"></a>InstallUtil.exe ユーティリティを使用してアンインストールする
 
 1. **[スタート]** メニューから **[Visual Studio \<*version*>]** ディレクトリを選択し、 **[VS 用開発者コマンド プロンプト\<*version*>]** を選択します。
 
@@ -67,7 +67,7 @@ Windows サービス プロジェクトを、F5 キーを押して Visual Studio
 
 3. 実行可能ファイルを削除した後も、レジストリ内にサービスが存在したままになることがあります。 このような場合は、コマンド [sc delete](/windows-server/administration/windows-commands/sc-delete) を使って、レジストリからサービスのエントリを削除します。
 
-### <a name="install-your-service-manually-using-powershell"></a>PowerShell を使用してサービスを手動でインストールする
+## <a name="install-using-powershell"></a>PowerShell を使用してインストールする
 
 1. **スタート** メニューから、**Windows PowerShell** ディレクトリを選択し、 **[Windows PowerShell]** を選択します。
 
@@ -79,7 +79,7 @@ Windows サービス プロジェクトを、F5 キーを押して Visual Studio
     New-Service -Name "YourServiceName" -BinaryPathName <yourproject>.exe
     ```
 
-### <a name="uninstall-your-service-manually-using-powershell"></a>PowerShell を使用してサービスを手動でアンインストールする
+## <a name="uninstall-using-powershell"></a>PowerShell を使用してアンインストールする
 
 1. **スタート** メニューから、**Windows PowerShell** ディレクトリを選択し、 **[Windows PowerShell]** を選択します。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: -quiet'
 title: -quiet
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - /quiet compiler option [Visual Basic]
 - quiet compiler option [Visual Basic]
 ms.assetid: 5d77fa23-4c50-4708-8535-649912b098e8
-ms.openlocfilehash: f894ed6a778e026ffd3976a63fe3b677eb6a9557
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 23e1b6472e80ac6ca2ecea5c4390b43722ccebb6
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400527"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100432729"
 ---
 # <a name="-quiet"></a>-quiet
 

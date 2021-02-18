@@ -2,12 +2,12 @@
 title: C# の予約済み属性:Null 許容のスタティック分析
 ms.date: 02/02/2021
 description: これらの属性は、null 許容および null 非許容参照型に対するより適切な静的分析を提供するために、コンパイラによって解釈されます。
-ms.openlocfilehash: c1c3e0a0fe1ee9000e0a1a85ee08e6e966200be5
-ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
+ms.openlocfilehash: 91bba16506e2e8bbac9fdef2d1c4badcf59c1546
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99548358"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100432570"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>予約済み属性はコンパイラの null 状態の静的分析に寄与する
 
@@ -240,7 +240,7 @@ string? GetTopLevelDomainFromFullUrl(string? url);
 
 ## <a name="constructor-helper-methods-membernotnull-and-membernotnullwhen"></a>コンストラクターのヘルパー メソッド: `MemberNotNull` と `MemberNotNullWhen`
 
-これらの属性は、コンストラクターからヘルパー メソッドに共通コードをリファクタリングする際の目的を指定するために使用します。 C# コンパイラによって、コンストラクターとフィールド初期化子が分析され、各コンストラクターから戻る前に、すべての null 非許容参照フィールドが初期化されていることが確認されます。 ただし、C# コンパイラによって、すべてのヘルパー メソッドを介したフィールドの割り当てが追跡されるわけではありません。 コンストラクターで直接ではなく、ヘルパー メソッドでフィールドが初期化されると、コンパイラから警告 `CS8618` が発行されます。 メソッド内で null 以外の値に初期化されるフィールドには、メソッドの宣言に <xref:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute> を追加します。 たとえば、次の例を考えてみましょう。
+これらの属性は、コンストラクターからヘルパー メソッドに共通コードをリファクタリングする際の目的を指定するために使用します。 C# コンパイラによって、コンストラクターとフィールド初期化子が分析され、各コンストラクターから戻る前に、すべての null 非許容参照フィールドが初期化されていることが確認されます。 ただし、C# コンパイラによって、すべてのヘルパー メソッドを介したフィールドの割り当てが追跡されるわけではありません。 コンストラクターで直接ではなく、ヘルパー メソッドでフィールドが初期化されると、コンパイラから警告 `CS8618` が発行されます。 メソッドの宣言に <xref:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute> を追加し、メソッド内で null 以外の値に初期化されるフィールドを指定します。 たとえば、次の例を考えてみましょう。
 
 :::code language="csharp" source="snippets/InitializeMembers.cs" ID="MemberNotNullExample":::
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: -define (Visual Basic)'
 title: -define
 ms.date: 03/10/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: cb56e727479fd249cb0d7e5e7c3c50d5b68b3a72
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 9d6394ecad8e59d64ef3c51312ac85562ba3ec2c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072016"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466979"
 ---
 # <a name="-define-visual-basic"></a>-define (Visual Basic)
 
@@ -34,7 +35,7 @@ or
   
 ## <a name="arguments"></a>引数  
   
-|期間|定義|  
+|用語|定義|  
 |---|---|  
 |`symbol`|必須です。 定義する記号。|  
 |`value`|任意。 `symbol` に代入する値。 `value` が文字列の場合、引用符ではなく、バックスラッシュと引用符のシーケンス (\\") で囲む必要があります。 値が指定されていない場合は、True として処理されます。|  
@@ -51,7 +52,7 @@ or
   
 |Visual Studio 統合開発環境で -define を設定するには|  
 |---|  
-|1.**ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[コンパイル]** タブをクリックします。<br />3. **[詳細設定]** をクリックします。<br />4. **[カスタム定数]** ボックス内の値を変更します。|  
+|1.**ソリューション エクスプローラー** でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[コンパイル]** タブをクリックします。<br />3. **[詳細設定]** をクリックします。<br />4. **[カスタム定数]** ボックス内の値を変更します。|  
   
 ## <a name="example"></a>例  
 

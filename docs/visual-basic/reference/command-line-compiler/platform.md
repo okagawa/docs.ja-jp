@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: -platform (Visual Basic)'
 title: -platform
 ms.date: 03/13/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: 488a1da6b25bcb4b42f0d355c6faee542046d0f5
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 51d7c7882c29310ef1e0c0f5790a63da3bfb91b8
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91098892"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100432742"
 ---
 # <a name="-platform-visual-basic"></a>-platform (Visual Basic)
 
@@ -25,7 +26,7 @@ ms.locfileid: "91098892"
   
 ## <a name="arguments"></a>引数  
   
-|期間|定義|  
+|用語|定義|  
 |---|---|  
 |`x86`|32 ビット x86 互換 CLR で実行されるように、アセンブリをコンパイルします。|  
 |`x64`|AMD64 または EM64T 命令セットをサポートするコンピューター上の 64 ビット CLR で実行されるように、アセンブリをコンパイルします。|  
@@ -70,7 +71,7 @@ ms.locfileid: "91098892"
   
 ### <a name="to-set--platform-in-the-visual-studio-ide"></a>Visual Studio IDE で -platform を設定するには  
   
-1. **ソリューション エクスプローラー**で、プロジェクトを選択し、 **[プロジェクト]** メニューを開いてから、 **[プロパティ]** をクリックします。  
+1. **ソリューション エクスプローラー** で、プロジェクトを選択し、 **[プロジェクト]** メニューを開いてから、 **[プロパティ]** をクリックします。  
   
 2. **[コンパイル]** タブで、 **[32 ビットを優先]** チェック ボックスをオンまたはオフにするか、 **[対象の CPU]** 一覧で値を選択します。  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: -errorreport'
 title: -errorreport
 ms.date: 08/14/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - /errorreport compiler option [Visual Basic]
 - errorreport compiler option [Visual Basic]
 ms.assetid: a7fe83a2-a6d8-460c-8dad-79a8f433f501
-ms.openlocfilehash: b6a1c8fce17e3e5a54366c2ff4dff4e6aa668f56
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b6fa10482e6852a819303074b4662f02eb8d1f88
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408661"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475943"
 ---
 # <a name="-errorreport"></a>-errorreport
 

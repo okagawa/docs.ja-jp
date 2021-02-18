@@ -1,15 +1,19 @@
 ---
-title: '破壊的変更: Blazor: ブラウザー サポートの更新'
+title: '破壊的変更: Blazor:ブラウザー サポートの更新'
 description: 'ASP.NET Core 5.0 での破壊的変更について学習します。タイトル: Blazor:ブラウザー サポートの更新'
 author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: 63b35aa8cb73bfb82c565007704375bac3737299
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+no-loc:
+- Blazor
+- Blazor WebAssembly
+- Blazor Server
+ms.openlocfilehash: a14ab8d1afd4b662f61e30136d23e28ffbe2d496
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759987"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100431478"
 ---
 # <a name="blazor-updated-browser-support"></a>Blazor: ブラウザー サポートの更新
 
@@ -23,11 +27,11 @@ ASP.NET Core 5.0 には、[新しい Blazor 機能](https://github.com/dotnet/as
 
 ## <a name="old-behavior"></a>以前の動作
 
-Blazor Server は、十分なポリフィルを備えた Microsoft Internet Explorer 11 をサポートしています。 Blazor Server と Blazor WebAssembly は、[Microsoft Edge レガシ](https://support.microsoft.com/help/4533505/what-is-microsoft-edge-legacy)でも機能します。
+Blazor Server は、十分なポリフィルを備えた Microsoft Internet Explorer 11 をサポートしています。 Blazor Server および Blazor WebAssembly は、[Microsoft Edge レガシ](https://support.microsoft.com/help/4533505/what-is-microsoft-edge-legacy)でも機能します。
 
 ## <a name="new-behavior"></a>新しい動作
 
-ASP.NET Core 5.0 の Blazor Server は、Microsoft Internet Explorer 11 ではサポートされていません。 Blazor Server と Blazor WebAssembly は、Microsoft Edge レガシでは完全には機能しません。
+ASP.NET Core 5.0 の Blazor Server は、Microsoft Internet Explorer 11 ではサポートされていません。 Blazor Server および Blazor WebAssembly は、Microsoft Edge レガシで完全には機能しません。
 
 ## <a name="reason-for-change"></a>変更理由
 

@@ -3,12 +3,12 @@ title: C# の歴史 - C# ガイド
 description: この言語の最初のバージョンがどのようなものであったか、そしてそれ以降どのように進化してきたかについて説明します。
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: 7258dc8b8fcfbd6354b5ceee4183429bfee14038
-ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
+ms.openlocfilehash: 0f6739ba7a2dd0488c52b917c4a60a1b3f04a930
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97110729"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100456420"
 ---
 # <a name="the-history-of-c"></a>C\# の歴史
 
@@ -70,7 +70,7 @@ Visual Studio .NET 2003 に付属の C# バージョン 1.2。 言語に対す�
 
 C# は汎用的なオブジェクト指向 (OO) 言語として始まったかもしれませんが、C# バージョン 2.0 ではそれが急速に変化しました。 マイクロソフトが本腰を入れると、いくつかの開発者の重大な問題点を追究しました。 そしてその問題点を著しく追究しました。
 
-ジェネリックでは、型とメソッドがタイプ セーフを維持しながら任意の型に対して操作を行えます。 たとえば、<xref:System.Collections.Generic.List%601> があると、`List<string>` または `List<int>` を使用し、これらの文字列または整数に対してタイプ セーフ操作を実行しながら、これらを反復処理することができます。 ジェネリックの使用は、すべての操作で `ArrayList` から派生する `ListInt` を作成する方法や、`Object` からキャストする方法よりも優れています。
+ジェネリックでは、型とメソッドがタイプ セーフを維持しながら任意の型に対して操作を行えます。 たとえば、<xref:System.Collections.Generic.List%601> があると、`List<string>` または `List<int>` を使用し、これらの文字列または整数に対してタイプ セーフ操作を実行しながら、これらを反復処理することができます。 ジェネリックを使用する方が、`ArrayList` から派生する `ListInt` 型を作成したり、すべての操作で `Object` からキャストしたりするよりも優れています。
 
 C# バージョン 2.0 で、反復子が導入されました。 手短に言うと、反復子を使用すると、`List` 内のすべての項目 (またはその他の列挙可能な型) を `foreach` ループで確認することができます。 反復子を言語のファーストクラスの部分として持つことで、言語の読みやすさと、ユーザーのコードについて推論する能力が劇的に高まりました。
 

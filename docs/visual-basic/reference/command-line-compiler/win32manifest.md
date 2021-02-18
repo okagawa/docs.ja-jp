@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: -win32manifest (Visual Basic)'
 title: -win32manifest
 ms.date: 03/13/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-ms.openlocfilehash: f8329ce2e7597f802d75ec85a580f1a3bd5cfc97
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d8b674d3eb101fdaa05cca7fa67ba0a43999ca37
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91098879"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433511"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 

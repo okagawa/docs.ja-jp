@@ -4,12 +4,12 @@ description: .NET SDK によって認識される MSBuild のプロパティと�
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: e140491c694291438fe1db7fd60d581ffed0319d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 9cd387a4a8ad7f5b31a797d4d019a53799d926ff
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99802672"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100432703"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK プロジェクトの MSBuild リファレンス
 
@@ -366,6 +366,9 @@ MSBuild 項目の `CopyToPublishDirectory` メタデータにより、項目が�
 | `5.0` | 新しいルールが使用可能な場合でも、.NET 5.0 リリースで有効になっていた一連のルールが使用されます。 |
 | `5` | 新しいルールが使用可能な場合でも、.NET 5.0 リリースで有効になっていた一連のルールが使用されます。 |
 
+> [!NOTE]
+> このプロパティは、[プロジェクト SDK](overview.md) を参照しないプロジェクト (たとえば、Microsoft. CodeAnalysis. NetAnalyzers NuGet パッケージを参照するレガシ .NET Framework プロジェクト) のコード分析には影響しません。
+
 ### <a name="analysismode"></a>AnalysisMode
 
 .NET 5.0 以降、.NET SDK には、すべての ["CA" コード品質ルール](../../fundamentals/code-analysis/quality-rules/index.md)が付属しています。 既定では、ビルド警告として[一部のルールが有効](../../fundamentals/code-analysis/overview.md#enabled-rules)になっています。 `AnalysisMode` プロパティを使用すると、既定で有効になるルールのセットをカスタマイズできます。 より積極的な (オプトアウト) 分析モード、またはより保守的な (オプトイン) 分析モードに切り替えることができます。 たとえば、既定ですべてのルールをビルド警告として有効にする場合は、値を `AllEnabledByDefault` に設定します。
@@ -384,6 +387,9 @@ MSBuild 項目の `CopyToPublishDirectory` メタデータにより、項目が�
 | `AllEnabledByDefault` | 積極的な (オプトアウト) モード。すべてのルールが既定でビルド警告として有効になっています。 個々のルールを選択的に[オプトアウト](../../fundamentals/code-analysis/configuration-options.md)して無効にすることができます。 |
 | `AllDisabledByDefault` | 保守的な (オプトイン) モード。すべてのルールが既定で無効になっています。 個々のルールを選択的に[オプトイン](../../fundamentals/code-analysis/configuration-options.md)して有効にすることができます。 |
 
+> [!NOTE]
+> このプロパティは、[プロジェクト SDK](overview.md) を参照しないプロジェクト (たとえば、Microsoft. CodeAnalysis. NetAnalyzers NuGet パッケージを参照するレガシ .NET Framework プロジェクト) のコード分析には影響しません。
+
 ### <a name="codeanalysistreatwarningsaserrors"></a>CodeAnalysisTreatWarningsAsErrors
 
 `CodeAnalysisTreatWarningsAsErrors` プロパティを使用すると、コード品質分析の警告 (CAxxxx) を警告として扱い、ビルドを中断するかどうかを構成できます。 プロジェクトをビルドするときに `-warnaserror` フラグを使用すると、[.NET コード品質分析](../../fundamentals/code-analysis/overview.md#code-quality-analysis)の警告もエラーとして扱われます。 コード品質分析の警告がエラーとして扱われないようにするには、プロジェクト ファイル内の `CodeAnalysisTreatWarningsAsErrors` MSBuild プロパティを `false` に設定します。
@@ -396,7 +402,7 @@ MSBuild 項目の `CopyToPublishDirectory` メタデータにより、項目が�
 
 ### <a name="enablenetanalyzers"></a>EnableNETAnalyzers
 
-.NET 5.0 以降をターゲットとするプロジェクトでは、[.NET コード品質分析](../../fundamentals/code-analysis/overview.md#code-quality-analysis)が既定で有効になっています。 以前のバージョンの .NET をターゲットとするプロジェクトで .NET コード分析を有効にするには、`EnableNETAnalyzers` プロパティを `true` に設定します。 任意のプロジェクトでコード分析を無効にするには、このプロパティを `false` に設定します。
+.NET 5.0 以降をターゲットとするプロジェクトでは、[.NET コード品質分析](../../fundamentals/code-analysis/overview.md#code-quality-analysis)が既定で有効になっています。 以前のバージョンの .NET をターゲットとする SDK スタイルのプロジェクトで .NET コード分析を有効にするには、`EnableNETAnalyzers` プロパティを `true` に設定します。 任意のプロジェクトでコード分析を無効にするには、このプロパティを `false` に設定します。
 
 ```xml
 <PropertyGroup>

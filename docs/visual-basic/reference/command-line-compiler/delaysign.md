@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: -delaysign'
 title: -delaysign
 ms.date: 03/10/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-ms.openlocfilehash: c9bb302e2b34ebe1f51cf39bb3db1094d420d7f4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fc3e52f63431da870355e369e6ffeb8b7b14c5ab
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408700"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100461503"
 ---
 # <a name="-delaysign"></a>-delaysign
 
@@ -40,7 +41,7 @@ ms.locfileid: "84408700"
 
 ### <a name="to-set--delaysign-in-the-visual-studio-integrated-development-environment"></a>Visual Studio 統合開発環境で -delaysign を設定するには
 
-1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。
+1. **ソリューション エクスプローラー** でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。
 
 2. **[署名]** タブをクリックします。
 

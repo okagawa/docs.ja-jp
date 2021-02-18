@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: -debug (Visual Basic)'
 title: -debug
 ms.date: 03/10/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - -debug compiler option [Visual Basic]
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
-ms.openlocfilehash: 60c6e512a648f093bb9c70b5af86d5719e544adc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 44f1c1d233ff8ed38b6e96ef316bc118c269316b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408726"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100467031"
 ---
 # <a name="-debug-visual-basic"></a>-debug (Visual Basic)
 
@@ -32,7 +33,7 @@ or
 
 ## <a name="arguments"></a>引数
 
-|項目|定義|
+|用語|定義|
 |---|---|
 |`+` &#124; `-`|任意。 `+` または `-debug` を指定すると、コンパイラによってデバッグ情報が生成され、.pdb ファイルに配置されます。 `-` を指定することは、`-debug` を指定しない場合と同じ効果があります。|
 |`full` &#124; `pdbonly`|任意。 コンパイラによって生成されるデバッグ情報の種類を指定します。 `-debug:pdbonly` を指定しない場合、既定値は `full` になります。これにより、実行中のプログラムにデバッガーをアタッチできます。 `pdbonly` 引数を指定すると、プログラムがデバッガーで開始されたときに、ソースコードのデバッグが可能になりますが、実行中のプログラムがデバッガーにアタッチされているときにのみアセンブリ言語コードが表示されます。|
@@ -47,7 +48,7 @@ or
 
 |Visual Studio 統合開発環境で -debug を設定するには|
 |---|
-|1.**ソリューション エクスプローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[コンパイル]** タブをクリックします。<br />3. **[詳細コンパイル オプション]** をクリックします。<br />4. **[デバッグ情報を作成]** ボックスで値を変更します。|
+|1.**ソリューション エクスプローラー** でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[コンパイル]** タブをクリックします。<br />3. **[詳細コンパイル オプション]** をクリックします。<br />4. **[デバッグ情報を作成]** ボックスで値を変更します。|
 
 ## <a name="example"></a>例
 

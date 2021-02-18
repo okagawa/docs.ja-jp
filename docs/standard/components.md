@@ -3,12 +3,12 @@ title: .NET アーキテクチャ コンポーネント
 description: .NET Standard、.NET 実装、.NET ランタイム、ツールなど、.NET アーキテクチャ コンポーネントについて説明します。
 author: cartermp
 ms.date: 10/05/2020
-ms.openlocfilehash: 00d05ee328087042f7603779438436656c45be48
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c5f174034ce0cd0e1cf0b799c7b3f4bff99447a2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819423"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100423136"
 ---
 # <a name="net-architectural-components"></a>.NET アーキテクチャ コンポーネント
 
@@ -106,8 +106,8 @@ C# 言語および共通言語基盤 (CLI) の仕様は、[エクマ インタ�
 [C#](http://www.ecma-international.org/publications/standards/Ecma-334.htm) および [CLI](http://www.ecma-international.org/publications/standards/Ecma-335.htm) ([TR-84](http://www.ecma-international.org/publications/techreports/E-TR-084.htm)) については、次の公式の Ecma ドキュメントを入手できます。
 
 - **The C# Language Standard (version 5.0)** (C# 言語標準 (バージョン 5.0)):[ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
-- **The Common Language Infrastructure** (共通言語基盤):[pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) 形式と [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) 形式で入手可能。
-- **Information Derived from the Partition IV XML File** (Partition IV XML ファイルから派生した情報):[pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) 形式と [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) 形式で入手可能。
+- **The Common Language Infrastructure** (共通言語基盤):[ECMA-335.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf)。
+- **Information Derived from the Partition IV XML File** (Partition IV XML ファイルから派生した情報):[ECMA-084.pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) 形式。
 
 公式の ISO/IEC ドキュメントは、ISO/IEC の「[Publicly Available Standards](https://standards.iso.org/ittf/PubliclyAvailableStandards/)」(公開されている標準) ページから入手できます。 そのページのリンクを次に示します。
 

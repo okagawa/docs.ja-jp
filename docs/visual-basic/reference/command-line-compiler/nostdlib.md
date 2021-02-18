@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: -nostdlib (Visual Basic)'
 title: -nostdlib
 ms.date: 03/13/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [Visual Basic]
 - /nostdlib compiler option [Visual Basic]
 ms.assetid: 140381b8-dc96-4ad5-ae11-792c9ed0be4d
-ms.openlocfilehash: 4fcc5305985f5ba32b3e6ffb740c0611821215d3
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4a00ad21bc0038a6bf42f1dd6943ccc15c1a8abb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91097658"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434876"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: -linkresource (Visual Basic)'
 title: -linkresource
 ms.date: 03/10/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: 8c4f753f94aedaf0a4f997a3f9b99fb3f417abf8
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 21fc47ecff44230bda0f445bc695706b5ae91eff
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91065685"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100463703"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
 

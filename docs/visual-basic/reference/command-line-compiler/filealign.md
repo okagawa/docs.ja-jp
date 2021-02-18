@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: -filealign'
 title: -filealign
 ms.date: 03/10/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - /filealign compiler option [Visual Basic]
 - filealign compiler option [Visual Basic]
 ms.assetid: cc61ec3d-ad38-4b28-9659-099d73cad099
-ms.openlocfilehash: 809b7ad005b6bb5f127f84425b5d2beb980df471
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f32ae370c0ef832b501f085351eadb9b6156c730
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058132"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100470292"
 ---
 # <a name="-filealign"></a>-filealign
 

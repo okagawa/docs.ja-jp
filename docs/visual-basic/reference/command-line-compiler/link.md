@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: -link (Visual Basic)'
 title: -link
 ms.date: 03/10/2018
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: 3c02c914a27e6095f8f6bc34e29e2447a1a373e5
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 31d98d2c0fb0cbd8e8baff82869501a7ff0ea270
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91065724"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475137"
 ---
 # <a name="-link-visual-basic"></a>-link (Visual Basic)
 

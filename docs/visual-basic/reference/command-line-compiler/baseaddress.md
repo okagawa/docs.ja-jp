@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: -baseaddress'
 title: -baseaddress
 ms.date: 08/09/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - /baseaddress compiler option [Visual Basic]
 - baseaddress compiler option [Visual Basic]
 ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
-ms.openlocfilehash: c794d1fc1c9d20e22ffa747e3175c846341ad8ad
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: eaa2992c126ebb83b20cfdbef3ab995a30ee25fd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91097762"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468318"
 ---
 # <a name="-baseaddress"></a>-baseaddress
 
@@ -44,7 +45,7 @@ DLL を作成するときの既定のベース アドレスを指定します。
   
 |Visual Studio IDE で -baseaddress を設定するには|  
 |---|  
-|1.**ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[コンパイル]** タブをクリックします。<br />3. **[詳細設定]** をクリックします。<br />4. **[DLL ベース アドレス]** ボックスの値を変更します。 **注:**    **[DLL ベース アドレス]** ボックスは、ターゲットが DLL の場合を除き、読み取り専用です。|  
+|1.**ソリューション エクスプローラー** でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[コンパイル]** タブをクリックします。<br />3. **[詳細設定]** をクリックします。<br />4. **[DLL ベース アドレス]** ボックスの値を変更します。 **注:**    **[DLL ベース アドレス]** ボックスは、ターゲットが DLL の場合を除き、読み取り専用です。|  
   
 ## <a name="see-also"></a>関連項目
 

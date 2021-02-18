@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: -optioncompare'
 title: -optioncompare
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -optioncompare compiler option [Visual Basic]
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
-ms.openlocfilehash: ed9adc7cddd9eb204937b9819e4eeff176821e95
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9be4867c75cc16a8f699cf492dc41e9d08b96495
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400560"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475930"
 ---
 # <a name="-optioncompare"></a>-optioncompare
 
@@ -40,7 +41,7 @@ Microsoft Windows では、現在のコード ページによってバイナリ�
 
 ### <a name="to-set--optioncompare-in-the-visual-studio-ide"></a>Visual Studio IDE で -optioncompare を設定するには
 
-1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。
+1. **ソリューション エクスプローラー** でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。
 
 2. **[コンパイル]** タブをクリックします。
 

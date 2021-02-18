@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: -target (Visual Basic)'
 title: -target
 ms.date: 03/13/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: 0ab28d55b2426a4efda112ab84da5e790909d565
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6f07bd081131934b9d7046f0db7b8a35acfce5fe
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403071"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483600"
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 
@@ -44,7 +45,7 @@ Vbc.exe の各インスタンスで生成される出力ファイルは、多く
 
 ### <a name="to-set--target-in-the-visual-studio-ide"></a>Visual Studio IDE で -target を設定するには
 
-1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。
+1. **ソリューション エクスプローラー** でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。
 
 2. **[アプリケーション]** タブをクリックします。
 

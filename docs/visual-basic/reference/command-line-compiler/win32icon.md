@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: -win32icon'
 title: -win32icon
 ms.date: 03/13/2018
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - -win32icon compiler option [Visual Basic]
 - /win32icon compiler option [Visual Basic]
 ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
-ms.openlocfilehash: c6d5e054063592db5777a76fe19da79337ed5034
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 32a46771012708a42beb5450d28daf2fbab3f1c0
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084958"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433550"
 ---
 # <a name="-win32icon"></a>-win32icon
 
-.ico ファイルを出力ファイルに挿入します。 この .ico ファイルは、**エクスプローラー**では出力ファイルを表します。  
+.ico ファイルを出力ファイルに挿入します。 この .ico ファイルは、**エクスプローラー** では出力ファイルを表します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,7 +38,7 @@ ms.locfileid: "91084958"
   
 |Visual Studio IDE で -win32icon を設定するには|  
 |---|  
-|1.**ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[アプリケーション]** タブをクリックします。<br />3. **[アイコン]** ボックスの値を変更します。|  
+|1.**ソリューション エクスプローラー** でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[アプリケーション]** タブをクリックします。<br />3. **[アイコン]** ボックスの値を変更します。|  
   
 ## <a name="example"></a>例  
 

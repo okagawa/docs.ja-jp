@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: -keyfile'
 title: -keyfile
 ms.date: 03/10/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - keyfile compiler option [Visual Basic]
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
-ms.openlocfilehash: c81486243195f7d022bd474ef6db20d069b3a018
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 6d19f136d5961e8a933380164a3a77055e1da329
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085153"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466940"
 ---
 # <a name="-keyfile"></a>-keyfile
 

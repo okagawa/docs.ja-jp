@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: -recurse'
 title: -recurse
 ms.date: 03/13/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - -recurse compiler option [Visual Basic]
 - recurse compiler option [Visual Basic]
 ms.assetid: 84a0b670-33ae-44c4-a46a-b90388809317
-ms.openlocfilehash: 7ded2b7d102430d8d4e545da5ab6ce8bafe3609e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2c0f1788c3811e24e2d51ff30e4cb2842aa0bd7a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095423"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475878"
 ---
 # <a name="-recurse"></a>-recurse
 

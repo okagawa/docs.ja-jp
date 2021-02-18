@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: -reference (Visual Basic)'
 title: -reference
 ms.date: 03/13/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: b489a164e56a5e3bdbf7e3cdf24ec330fadedf38
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e84cdf447294a299c26a775327528a94ebba03da
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91097554"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474149"
 ---
 # <a name="-reference-visual-basic"></a>-reference (Visual Basic)
 
@@ -34,7 +35,7 @@ or
   
 ## <a name="arguments"></a>引数  
   
-|期間|定義|  
+|用語|定義|  
 |---|---|  
 |`fileList`|必須です。 アセンブリ ファイル名のコンマ区切りリスト。 ファイル名に空白が含まれている場合は、名前を二重引用符で囲みます。|  
   

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: -refonly (Visual Basic)'
 title: -refonly
 ms.date: 03/16/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - /refonly compiler option [Visual Basic]
 - -refonly compiler option [Visual Basic]
 - refonly compiler option [Visual Basic]
-ms.openlocfilehash: b906178abf8d159083d95e41448596d512e857de
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 283aa75fceead38c62c4cf10c1ffe08151aeac9c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348573"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474136"
 ---
 # <a name="-refonly-visual-basic"></a>-refonly (Visual Basic)
 

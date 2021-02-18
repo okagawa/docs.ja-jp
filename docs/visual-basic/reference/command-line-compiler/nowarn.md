@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: -nowarn'
 title: -nowarn
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - /nowarn compiler option [Visual Basic]
 - -nowarn compiler option [Visual Basic]
 ms.assetid: 7ebf2106-0652-4fdc-bf60-70fc86465d83
-ms.openlocfilehash: cde96fff975a65d6303ee62e6a811bfd83d5ff97
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4fb7d39aef48ff1443c342367f9e20bb37f9c5e0
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91097684"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434863"
 ---
 # <a name="-nowarn"></a>-nowarn
 
@@ -39,7 +40,7 @@ ms.locfileid: "91097684"
   
 |Visual Studio 統合開発環境で -nowarn を設定するには|  
 |---|  
-|1.**ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[コンパイル]** タブをクリックします。<br />3.警告をすべて無効にするには、 **[すべての警告を表示しない]** チェック ボックスをオンにします。<br />     または<br />     特定の警告を無効にするには、その警告の隣のドロップダウン リストから **[なし]** をクリックします。|  
+|1.**ソリューション エクスプローラー** でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[コンパイル]** タブをクリックします。<br />3.警告をすべて無効にするには、 **[すべての警告を表示しない]** チェック ボックスをオンにします。<br />     または<br />     特定の警告を無効にするには、その警告の隣のドロップダウン リストから **[なし]** をクリックします。|  
   
 ## <a name="example"></a>例  
 

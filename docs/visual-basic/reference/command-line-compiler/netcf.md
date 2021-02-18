@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: -netcf'
 title: -netcf
 ms.date: 03/13/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-ms.openlocfilehash: 16fb6b3b63c848ea6c09cc18b0fcc488670f0926
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 053e177d8d7008b10bfa552ee60cbbd2d5dda565
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397476"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434915"
 ---
 # <a name="-netcf"></a>-netcf
 

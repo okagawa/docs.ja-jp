@@ -3,18 +3,20 @@ title: メモリ リークのデバッグ チュートリアル
 description: .NET Core でメモリ リークをデバッグする方法について説明します。
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: 7fa87a411606e81ffe91348c3cbce5f258a6e4e2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6764663eedc28cd75f9f68927a12ae5b2255d11b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538593"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100431452"
 ---
 # <a name="debug-a-memory-leak-in-net-core"></a>.NET Core でメモリ リークをデバッグする
 
 **この記事の対象:** ✔️ .NET Core 3.1 SDK 以降のバージョン
 
-このチュートリアルでは、.NET Core のメモリ リークを分析するためのツールについて説明します。
+アプリで必要なタスクを実行する必要がなくなったオブジェクトを参照すると、メモリ リークが発生することがあります。 このようなオブジェクトを参照すると、ガベージ コレクターが使用済みメモリを再利用できなくなるため、多くの場合、パフォーマンスが低下し、<xref:System.OutOfMemoryException> がスローされる可能性があります。
+
+このチュートリアルでは、.NET 診断 CLI ツールを使用して .NET Core アプリのメモリ リークを分析するためのツールについて説明します。 Windows を使用している場合は、[Visual Studio のメモリ診断ツール](/visualstudio/profiling/memory-usage)を使用して、メモリ リークをデバッグすることができます。
 
 このチュートリアルでは、意図的にメモリをリークするように設計されたサンプル アプリを使用します。 このサンプルは演習として提供されています。 意図せずにメモリをリークしているアプリも分析できます。
 
@@ -238,6 +240,7 @@ Found 2 roots.
 - [dotnet-counters](dotnet-counters.md) を使ってマネージド メモリ使用量を確認する
 - [dotnet-dump](dotnet-dump.md) を使ってダンプ ファイルを収集して分析する
 - [dotnet/診断](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)
+- [Visual Studio を使用してメモリ リークをデバッグする](/visualstudio/profiling/memory-usage)
 
 ## <a name="next-steps"></a>次の手順
 

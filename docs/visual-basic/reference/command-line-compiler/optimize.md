@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: -optimize'
 title: -optimize
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - optimization [Visual Basic], enabling
 - -optimize compiler option [Visual Basic]
 ms.assetid: fcba4a97-3622-4b87-a891-0f77deab4998
-ms.openlocfilehash: d4b50d56373676bf78a7591102095209401c907d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 812eaa544dd874fd3871e58f366a34ee8176273a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91097593"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100426700"
 ---
 # <a name="-optimize"></a>-optimize
 
@@ -26,7 +27,7 @@ ms.locfileid: "91097593"
   
 ## <a name="arguments"></a>引数  
   
-|期間|定義|  
+|用語|定義|  
 |---|---|  
 |`+` &#124; `-`|任意。 `-optimize-` オプションにより、コンパイラ最適化が無効になります。 `-optimize+` オプションにより、最適化が有効になります。 既定では、最適化が無効になります。|  
   
@@ -40,7 +41,7 @@ ms.locfileid: "91097593"
   
 |Visual Studio 統合開発環境で -optimize を設定するには|  
 |---|  
-|1.**ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。<br />     <br />2. **[コンパイル]** タブをクリックします。<br />3. **[詳細設定]** ボタンをクリックします。<br />4. **[最適化を有効にする]** チェック ボックスを変更します。|  
+|1.**ソリューション エクスプローラー** でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。<br />     <br />2. **[コンパイル]** タブをクリックします。<br />3. **[詳細設定]** ボタンをクリックします。<br />4. **[最適化を有効にする]** チェック ボックスを変更します。|  
   
 ## <a name="example"></a>例  
 

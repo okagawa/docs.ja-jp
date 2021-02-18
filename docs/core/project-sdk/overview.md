@@ -4,12 +4,16 @@ titleSuffix: ''
 description: .NET プロジェクト SDK について説明します。
 ms.date: 09/17/2020
 ms.topic: conceptual
-ms.openlocfilehash: d0eb4291f4def9263f37d2d09f09ef43d40dfbac
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+no-loc:
+- EmbeddedResource
+- Compile
+- None
+ms.openlocfilehash: e5a6d0a1c988818e507936b567fa0188675cedc3
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506397"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100432648"
 ---
 # <a name="net-project-sdks"></a>.NET プロジェクト SDK
 
@@ -25,7 +29,7 @@ ms.locfileid: "99506397"
 | `Microsoft.NET.Sdk.Web` | .NET [Web SDK](/aspnet/core/razor-pages/web-sdk) | <https://github.com/dotnet/sdk> |
 | `Microsoft.NET.Sdk.Razor` | .NET [Razor SDK](/aspnet/core/razor-pages/sdk) |
 | `Microsoft.NET.Sdk.Worker` | .NET Worker Service SDK |
-| `Microsoft.NET.Sdk.WindowsDesktop` | WinForms および WPF SDK\* | <https://github.com/dotnet/winforms> および <https://github.com/dotnet/wpf> |
+| `Microsoft.NET.Sdk.WindowsDesktop` | .NET [デスクトップ SDK](msbuild-props-desktop.md)。これには Windows フォーム (WinForms) と Windows Presentation Foundation (WPF) が含まれています。\* | <https://github.com/dotnet/winforms> および <https://github.com/dotnet/wpf> |
 
 .NET SDK は、.NET の基本 SDK です。 その他の SDK からは .NET SDK が参照され、その他の SDK に関連付けられているプロジェクトでは、すべての .NET SDK プロパティが使用可能になります。 たとえば、Web SDK は、.NET SDK と Razor SDK の両方に依存しています。
 
@@ -98,13 +102,15 @@ MSBuild では、`dotnet msbuild -preprocess` コマンドを使用して、SDK 
 > [!NOTE]
 > `./bin` フォルダーと `./obj` フォルダーは、`$(BaseOutputPath)` と `$(BaseIntermediateOutputPath)` の MSBuild プロパティによって表され、既定で glob から除外されます。 除外されるものは、[DefaultItemExcludes プロパティ](msbuild-props.md#defaultitemexcludes)によって表されます。
 
+.NET デスクトップ SDK には、さらに多くの WPF に含まれるものと除外されるものが含まれています。 詳細については、「[WPF に含まれるものと除外されるもの](msbuild-props-desktop.md#wpf-default-includes-and-excludes)」を参照してください。
+
 ### <a name="build-errors"></a>ビルド エラー
 
 これらの項目をプロジェクト ファイルに明示的に定義すると、次のような "NETSDK1022" ビルド エラーが発生する可能性があります。
 
-  > 重複する 'Compile' 項目が含まれていました。 .NET SDK には、既定でプロジェクト ディレクトリの 'Compile' 項目が含まれています。 これらの項目をプロジェクト ファイルから削除するか、プロジェクト ファイルに明示的に含める場合は 'EnableDefaultCompileItems' プロパティを 'false' に設定することができます。
+> 重複する 'Compile' 項目が含まれていました。 .NET SDK には、既定でプロジェクト ディレクトリの 'Compile' 項目が含まれています。 これらの項目をプロジェクト ファイルから削除するか、プロジェクト ファイルに明示的に含める場合は 'EnableDefaultCompileItems' プロパティを 'false' に設定することができます。
 
-  > 重複する 'EmbeddedResource' 項目が含まれていました。 .NET SDK には、既定でプロジェクト ディレクトリの 'EmbeddedResource' 項目が含まれています。 これらの項目をプロジェクト ファイルから削除するか、プロジェクト ファイルに明示的に含める場合は 'EnableDefaultEmbeddedResourceItems' プロパティを 'false' に設定することができます。
+> 重複する 'EmbeddedResource' 項目が含まれていました。 .NET SDK には、既定でプロジェクト ディレクトリの 'EmbeddedResource' 項目が含まれています。 これらの項目をプロジェクト ファイルから削除するか、プロジェクト ファイルに明示的に含める場合は 'EnableDefaultEmbeddedResourceItems' プロパティを 'false' に設定することができます。
 
 このエラーを解決するには、次のいずれかの操作を行います。
 
@@ -120,7 +126,7 @@ MSBuild では、`dotnet msbuild -preprocess` コマンドを使用して、SDK 
 
   アプリで発行する一部のファイルを指定する必要がある場合は、そのために既知の MSBuild のしくみ (たとえば `Content` 要素) を引き続き使用できます。
 
-- `Compile`、`EmbeddedResource`、または `None` glob を選択的に無効にするには、[EnableDefaultCompileItems](msbuild-props.md#enabledefaultcompileitems)、[EnableDefaultEmbeddedResourceItems](msbuild-props.md#enabledefaultembeddedresourceitems)、または [EnableDefaultNoneItems](msbuild-props.md#enabledefaultnoneitems) プロパティを `false` に設定します。
+- `Compile`、`EmbeddedResource`、または `None` glob のみを選択的に無効にするには、[EnableDefaultCompileItems](msbuild-props.md#enabledefaultcompileitems)、[EnableDefaultEmbeddedResourceItems](msbuild-props.md#enabledefaultembeddedresourceitems)、または [EnableDefaultNoneItems](msbuild-props.md#enabledefaultnoneitems) のプロパティを `false` に設定します。
 
   ```xml
   <PropertyGroup>

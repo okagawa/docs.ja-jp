@@ -2,12 +2,12 @@
 title: '破壊的変更: WPF アプリと WinForms アプリで OutputType が WinExe に設定されている'
 description: .NET SDK 5.0.100 での破壊的変更について学習します。Windows フォーム アプリで OutputType が自動的に WinExe に設定されます。
 ms.date: 09/18/2020
-ms.openlocfilehash: 0b56db57d5242f2fb001c4de339a7f696c088dfc
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 38d9b910374f9e44f7e35296808930c6a6d45f0d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633858"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100431465"
 ---
 # <a name="outputtype-set-to-winexe-for-wpf-and-winforms-apps"></a>WPF アプリと WinForms アプリで OutputType が WinExe に設定されている
 
@@ -23,13 +23,15 @@ ms.locfileid: "97633858"
 </PropertyGroup>
 ```
 
-.NET SDK の 5.0.100 バージョンより、.NET Framework を含むあらゆるフレームワーク バージョンを対象にする WPF アプリと Windows フォーム アプリには `OutputType` が自動的に `WinExe` に設定されます。 次に例を示します。
+.NET SDK の 5.0.100 バージョンからは、`OutputType` を `Exe` に設定すると、.NET Framework を含むあらゆるフレームワーク バージョンを対象にする WPF アプリと Windows フォーム アプリの場合、自動的に `WinExe` に変更されます。
 
 ```xml
 <PropertyGroup>
   <OutputType>WinExe</OutputType>
 </PropertyGroup>
 ```
+
+ `OutputType` がプロジェクト ファイルで指定されていない場合は、既定値の `Library` になり、その値は変更されません。
 
 ## <a name="reason-for-change"></a>変更理由
 

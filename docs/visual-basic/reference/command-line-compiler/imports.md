@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: -imports (Visual Basic)'
 title: -imports
 ms.date: 03/10/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - imports compiler option [Visual Basic]
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
-ms.openlocfilehash: 69781dff1474e42ae5f735fdefd694c6447636b5
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 8c6744ff857a15da9362b724a62fcf053e9fd8f0
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085257"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100470201"
 ---
 # <a name="-imports-visual-basic"></a>-imports (Visual Basic)
 
@@ -37,7 +38,7 @@ ms.locfileid: "91085257"
   
 |Visual Studio 統合開発環境で -imports を設定するには|  
 |---|  
-|1.**ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[参照]** タブをクリックします。<br />3. **[ユーザー インポートの追加]** ボタンの横にあるボックスに、名前空間の名前を入力します。<br />4. **[ユーザー インポートの追加]** ボタンをクリックします。|  
+|1.**ソリューション エクスプローラー** でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[参照]** タブをクリックします。<br />3. **[ユーザー インポートの追加]** ボタンの横にあるボックスに、名前空間の名前を入力します。<br />4. **[ユーザー インポートの追加]** ボタンをクリックします。|  
   
 ## <a name="example"></a>例  
 
