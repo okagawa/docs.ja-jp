@@ -21,7 +21,7 @@ F # 5.0 は、すべての .NET Core ディストリビューションと Visual
 
 ## <a name="package-references-in-f-scripts"></a>F # スクリプトでのパッケージ参照
 
-F # 5 では、構文を使用して F # スクリプトにパッケージ参照がサポートさ `#r "nuget:..."` れます。 たとえば、次のパッケージ参照を考えてみます。
+F # 5 では、 `#r "nuget:..."` 構文を使用して F # スクリプトにパッケージ参照がサポートされます。 たとえば、次のパッケージ参照を考えてみます。
 
 ```fsharp
 #r "nuget: Newtonsoft.Json"
@@ -41,7 +41,7 @@ printfn $"{JsonConvert.SerializeObject o}"
 
 パッケージ参照は、ML.NET などのネイティブ依存関係を含むパッケージをサポートします。
 
-パッケージ参照は、依存するを参照するための特別な要件を持つパッケージもサポート `.dll` します。 たとえば、ユーザーが F# インタラクティブで参照される前に、その依存が先に参照されていることをユーザーが手動で確認するように要求するために使用される [Fparsec](https://www.nuget.org/packages/FParsec/) パッケージなど `FParsecCS.dll` `FParsec.dll` です。 これは不要になったため、次のようにしてパッケージを参照できます。
+パッケージ参照は、依存する `.dll` を参照するための特別な要件を持つパッケージもサポートします。 たとえば、 [Fparsec](https://www.nuget.org/packages/FParsec/) パッケージでは、 F# インタラクティブで `FParsec.dll` が参照される前に、依存する `FParsecCS.dll` が最初に参照されていることをユーザーが手動で確認する必要がありました。このような事は不要になり、次のようにしてパッケージを参照する事ができます。
 
 ```fsharp
 #r "nuget: FParsec"
@@ -56,7 +56,7 @@ let test p str =
 test pfloat "1.234"
 ```
 
-この機能は [、F # ツーリング RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md)を実装します。 パッケージ参照の詳細については、 [F# インタラクティブ](../tools/fsharp-interactive/index.md) チュートリアルを参照してください。
+この機能は、 [F # ツーリング RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md)を実装します。 パッケージ参照の詳細については、 [F# インタラクティブ](../tools/fsharp-interactive/index.md) チュートリアルを参照してください。
 
 ## <a name="string-interpolation"></a>文字列補間
 
@@ -70,7 +70,7 @@ printfn $"Name: {name}, Age: {age}"
 printfn $"I think {3.0 + 0.14} is close to {System.Math.PI}!"
 ```
 
-ただし、F # の補間文字列では、関数と同様に、型指定された補間を使用して、 `sprintf` 補間されたコンテキスト内の式が特定の型に準拠するようにすることもできます。 同じ書式指定子を使用します。
+ただし、F # の補間文字列では、 `sprintf` 関数と同様に、型つきの補間を使用して、補間されたコンテキスト内の式が特定の型に準拠するようにすることもできます。 同じ書式指定子を使用します。
 
 ```fsharp
 let name = "Phillip"
@@ -82,7 +82,7 @@ printfn $"Name: %s{name}, Age: %d{age}"
 printfn $"Name: %s{age}, Age: %d{name}"
 ```
 
-前の型指定された補間の例では、で補間が型である必要がありますが、では補間がである必要があり `%s` `string` `%d` `integer` ます。
+上の型つきの補間の例では、`%s` で補間が `string` 型である必要がありますが、`%d` では補間が `integer` である必要があります。
 
 また、任意の F # 式 (または式) を補間コンテキストの側に配置することもできます。 次のように、より複雑な式を記述することもできます。
 
@@ -103,11 +103,11 @@ let str =
 
 ただし、これはあまり実践されていません。
 
-この機能は [、F # RFC FS-1001](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1001-StringInterpolation.md)を実装します。
+この機能は、 [F # RFC FS-1001](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1001-StringInterpolation.md)を実装します。
 
-## <a name="support-for-nameof"></a>のためのサポート
+## <a name="support-for-nameof"></a>nameof のサポート
 
-F # 5 では演算子がサポートされてい `nameof` ます。この演算子は、で使用されているシンボルを解決し、f # ソースでその名前を生成します。 これは、ログ記録などのさまざまなシナリオで役立ち、ソースコードの変更に対するログ記録を保護します。
+F # 5 では `nameof` 演算子がサポートされています。この演算子は、使用されているシンボルを解決し、F # ソースでその名前を生成します。 これは、ログ記録などのさまざまなシナリオで役立ち、ソースコードの変更に対するログ記録を保護します。
 
 ```fsharp
 let months =
@@ -157,9 +157,9 @@ type C<'TType> =
     member _.TypeName = nameof<'TType>
 ```
 
-これは、 `typeof<'T>` 演算子および演算子に似てい `typedefof<'T>` ます。
+これは、 `typeof<'T>` 演算子および `typedefof<'T>` 演算子に似ています。
 
-F # 5 では、 `nameof` 式で使用できるパターンのサポートも追加されてい `match` ます。
+F # 5 では、  `match` 式で使用できる `nameof` パターンのサポートも追加されています。
 
 ```fsharp
 [<Struct; IsByRefLike>]
@@ -178,13 +178,13 @@ let deserialize (e: RecordedEvent) : MyEvent =
 
 上記のコードでは、match 式の文字列リテラルではなく、' 文字列 ' を使用しています。
 
-この機能は [、F # RFC FS-1003](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1003-nameof-operator.md)を実装します。
+この機能は、 [F # RFC FS-1003](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1003-nameof-operator.md)を実装します。
 
 ## <a name="open-type-declarations"></a>オープン型の宣言
 
 F # 5 では、オープン型の宣言のサポートも追加されています。 オープン型の宣言は、C# で静的クラスを開くのと似ています。ただし、F # のセマンティクスに適合するように、構文や動作が少し異なります。
 
-オープン型の宣言では、 `open` 任意の型を使用して、静的な内容をその中に公開できます。 さらに、 `open` F # で定義された共用体とレコードを使用して、その内容を公開できます。 たとえば、モジュールで共用体が定義されていて、そのケースにアクセスするが、モジュール全体を開かないようにする場合に便利です。
+オープン型を宣言すると、任意の型を `open` して、静的な内容をその中に公開できます。 さらに、F # で定義された共用体とレコードを `open` して、その内容を公開できます。 たとえば、モジュールで共用体が定義されていて、そのケースにアクセスするが、モジュール全体を開かないようにする場合に便利です。
 
 ```fsharp
 open type System.Math
@@ -202,9 +202,9 @@ open type M.DU
 printfn $"{A}"
 ```
 
-C# とは異なり、 `open type` 同じ名前を持つメンバーを公開する2つの型がある場合、最後の型のメンバーは、 `open` 他の名前をシャドウします。 これは、既に存在するシャドウ処理に関する F # のセマンティクスと一致します。
+C# とは異なり、同じ名前を持つメンバーを公開する2つの型を `open type` する場合、 `open` された最後の型のメンバーは、他方の名前を隠蔽します。 これは、既に存在する隠蔽処理に関する F # のセマンティクスと一致します。
 
-この機能は [、F # RFC FS-1068](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1068-open-type-declaration.md)を実装します。
+この機能は、 [F # RFC FS-1068](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1068-open-type-declaration.md)を実装します。
 
 ## <a name="consistent-slicing-behavior-for-built-in-data-types"></a>組み込みデータ型のスライス動作の一貫性
 
@@ -228,7 +228,7 @@ let emptyArray = a.[-2..(-1)]
 let emptyString = s.[-2..(-1)]
 ```
 
-この機能は [、F # RFC FS-1077](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1077-tolerant-slicing.md)を実装します。
+この機能は、 [F # RFC FS-1077](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1077-tolerant-slicing.md)を実装します。
 
 ## <a name="fixed-index-slices-for-3d-and-4d-arrays-in-fsharpcore"></a>Fsharp.core の3D および4D 配列の固定インデックススライス
 
@@ -248,7 +248,7 @@ F # 5.0 では、組み込みの3D および4D 配列型の固定インデック
 | **0** | 4 | 5 |
 | **1** | 6 | 7 |
 
-配列からスライスを抽出する場合はどうすればよい `[| 4; 5 |]` でしょうか。 これは非常に単純です。
+配列から `[| 4; 5 |]` スライスを抽出する場合はどうすればよいでしょうか。 これは非常に単純です。
 
 ```fsharp
 // First, create a 3D array to slice
@@ -268,7 +268,7 @@ for z in 0..dim-1 do
 m.[*, 0, 1]
 ```
 
-この機能は [、F # RFC FS-1077b](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1077-3d-4d-fixed-index-slicing.md)を実装します。
+この機能は、 [F # RFC FS-1077b](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1077-3d-4d-fixed-index-slicing.md)を実装します。
 
 ## <a name="f-quotations-improvements"></a>F # による引用符の機能強化
 
@@ -285,9 +285,9 @@ let inline negate x = -x
 <@ negate 1.0 @>  |> eval
 ```
 
-関数によって生成される制約は、コードの引用符で囲まれて `inline` 保持されます。 関数の順序によって表さ `negate` れるフォームを評価できるようになりました。
+ `inline` 関数によって生成される制約は、コードの引用符で囲まれて保持されます。  `negate` 関数の順序によって表されるフォームを評価できるようになりました。
 
-この機能は [、F # RFC FS-1071](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1071-witness-passing-quotations.md)を実装します。
+この機能は、 [F # RFC FS-1071](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1071-witness-passing-quotations.md)を実装します。
 
 ## <a name="applicative-computation-expressions"></a>アプリケーションの計算式
 
@@ -295,7 +295,7 @@ let inline negate x = -x
 
 F # 5 では、別の計算モデルを提供するアプリケーションアプリケーションが導入されています。 アプリケーションを使用すると、すべての計算が独立しており、結果が最終的に蓄積されるため、より効率的な計算を行うことができます。 計算が相互に独立している場合は、それらも簡単に並列化できます。これにより、CE の作成者はより効率的なライブラリを記述できるようになります。 ただし、この特典には制限がありますが、以前に計算された値に依存する計算は許可されません。
 
-次の例は、型の基本的なアプリケーションを示して `Result` います。
+次の例は、 `Result` 型の基本的なアプリケーションを示しています。
 
 ```fsharp
 // First, define a 'zip' function
@@ -338,7 +338,7 @@ let printApplicatives () =
 
 現在ライブラリで CEs を公開しているライブラリの作成者は、注意する必要がある追加の考慮事項がいくつかあります。
 
-この機能は [、F # RFC FS-1063](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1063-support-letbang-andbang-for-applicative-functors.md)を実装します。
+この機能は、 [F # RFC FS-1063](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1063-support-letbang-andbang-for-applicative-functors.md)を実装します。
 
 ## <a name="interfaces-can-be-implemented-at-different-generic-instantiations"></a>インターフェイスは異なる汎用インスタンス化で実装できます。
 
@@ -362,7 +362,7 @@ iaInt.Get() // 1
 iaString.Get() // "hello"
 ```
 
-この機能は [、F # RFC FS-1031](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1031-Allow%20implementing%20the%20same%20interface%20at%20different%20generic%20instantiations%20in%20the%20same%20type.md)を実装します。
+この機能は、 [F # RFC FS-1031](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1031-Allow%20implementing%20the%20same%20interface%20at%20different%20generic%20instantiations%20in%20the%20same%20type.md)を実装します。
 
 ## <a name="default-interface-member-consumption"></a>既定のインターフェイスメンバーの消費
 
@@ -403,11 +403,11 @@ printfn $"DIM from C# but via Object Expression: %d{md'.Z}"
 
 これにより、ユーザーが既定の実装を使用できることが期待される場合に、最新の c# で記述された C# コードと .NET コンポーネントを安全に利用できます。
 
-この機能は [、F # RFC FS-1074](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1074-default-interface-member-consumption.md)を実装します。
+この機能は、 [F # RFC FS-1074](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1074-default-interface-member-consumption.md)を実装します。
 
 ## <a name="simplified-interop-with-nullable-value-types"></a>単純化と null 許容の値型との相互運用
 
-[Null 許容型 (値) 型](/dotnet/api/system.nullable-1) (以前は Null 許容型と呼ばれます) は F # でサポートされていますが、通常 `Nullable` は、値を渡すたびにまたはラッパーを構築する必要があるため、これらの型を操作するのはかなり困難でした `Nullable<SomeType>` 。 これで、 `Nullable<ThatValueType>` ターゲットの型がと一致する場合、コンパイラは値型をに暗黙的に変換します。 現在、次のコードを使用できます。
+[Null 許容型 (値) 型](/dotnet/api/system.nullable-1) (以前は Null 許容型と呼ばれます) は F # でサポートされていますが、通常は、値を渡すたびに `Nullable` または `Nullable<SomeType>` ラッパーを構築する必要があるため、これらの型を操作するのはかなり困難でした。 これで、 ターゲットの型がと一致する場合、コンパイラは値型を`Nullable<ThatValueType>` に暗黙的に変換します。 現在、次のコードを使用できます。
 
 ```fsharp
 #r "nuget: Microsoft.Data.Analysis"
@@ -423,7 +423,7 @@ dateTimes.Append(DateTime.Parse("2019/01/01"))
 dateTimes.Append(Nullable<DateTime>(DateTime.Parse("2019/01/01")))
 ```
 
-この機能は [、F # RFC FS-1075](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1075-nullable-interop.md)を実装します。
+この機能は、 [F # RFC FS-1075](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1075-nullable-interop.md)を実装します。
 
 ## <a name="preview-reverse-indexes"></a>プレビュー: インデックスの反転
 
@@ -450,7 +450,7 @@ lastTwoOldStyle = lastTwoNewStyle // true
 GetReverseIndex: dimension: int -> offset: int
 ```
 
-型の例を次に示し `Span<'T>` ます。
+ `Span<'T>` 型の例を次に示します。
 
 ```fsharp
 open System
@@ -484,7 +484,7 @@ let run () =
 run() // Prints the same thing twice
 ```
 
-この機能は [、F # RFC FS-1076](https://github.com/fsharp/fslang-design/blob/master/preview/FS-1076-from-the-end-slicing.md)を実装します。
+この機能は、 [F # RFC FS-1076](https://github.com/fsharp/fslang-design/blob/master/preview/FS-1076-from-the-end-slicing.md)を実装します。
 
 ## <a name="preview-overloads-of-custom-keywords-in-computation-expressions"></a>プレビュー: コンピュテーション式におけるカスタムキーワードのオーバーロード
 
@@ -556,6 +556,6 @@ let password =
     }
 ```
 
-この変更の前には、型をそのまま記述でき `InputBuilder` ますが、この例で使用する方法を使用することはできませんでした。 オーバーロード、省略可能なパラメーター、および現在の `System.ParamArray` 型は許可されているため、期待どおりに機能するだけです。
+この変更の前には、 `InputBuilder` 型をそのまま記述できますが、この例で使用する方法を使用することはできませんでした。 オーバーロード、省略可能なパラメーター、および現在の `System.ParamArray` 型は許可されているため、期待どおりに機能するだけです。
 
-この機能は [、F # RFC FS-1056](https://github.com/fsharp/fslang-design/blob/master/preview/FS-1056-allow-custom-operation-overloads.md)を実装します。
+この機能は、 [F # RFC FS-1056](https://github.com/fsharp/fslang-design/blob/master/preview/FS-1056-allow-custom-operation-overloads.md)を実装します。
